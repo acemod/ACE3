@@ -1,7 +1,7 @@
 class CfgAmmo {
     class MissileBase;
     class M_Titan_AT: MissileBase {};
-    class GVAR(at): M_Titan_AT {
+    class GVAR(lr): M_Titan_AT {
         timeToLive = 120;
 
         manualControl = 0;

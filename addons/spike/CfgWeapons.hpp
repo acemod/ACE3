@@ -10,7 +10,7 @@ class CfgWeapons {
     class GVAR(launcher): GVAR(base) {
 		scope = 2;
         GVAR(enabled) = 1;
-        //weaponInfoType = "ACE_RscOptics_javelin";
+        weaponInfoType = "ACE_RscOptics_spike";
         //modelOptics = QPATHTOF(data\reticle_titan.p3d);
 
         canLock = 0;
@@ -21,7 +21,7 @@ class CfgWeapons {
 		displayName = "Spike AT";
 		displayNameShort = "Spike AT";
 
-		magazines[] = {QGVAR(at)};
+		magazines[] = {QGVAR(lr)};
     };
 };
 

@@ -19,8 +19,6 @@ params ["_key", "_down"];
 
 if !([objNull] call FUNC(camera_userInCamera)) exitWith {};
 
-playSound "ACE_Sound_Click";
-
 private _return = false;
 private _lookInput = GVAR(activeCamera) getVariable [QGVAR(lookInput), [0, 0, 0, 0]];
 private _designateInput = GVAR(activeCamera) getVariable [QGVAR(designateInput), [0]];

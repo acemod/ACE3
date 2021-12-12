@@ -40,6 +40,6 @@
 #define CRUISE_PRO_GAIN 0.3
 #define CRUISE_DER_GAIN 3
 
-#define BATTERY_LIFE 30
+#define BATTERY_LIFE (43 + random 10)
 
 #define GIMBAL_LOGIC_OFFSET 10

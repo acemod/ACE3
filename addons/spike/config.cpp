@@ -14,8 +14,19 @@ class CfgPatches {
     };
 };
 
+class RscOpticsValue;
+class RscControlsGroupNoScrollbars;
+class RscPicture;
+class RscLine;
+class RscMapControl;
+class RscText;
+
+#define COLOR_WHITE {0.8745,0.8745,0.8745,1}
+#define COLOR_BLACK {0,0,0,1}
+
 #include "ACE_GuidanceConfig.hpp"
 #include "RscTitles.hpp"
+#include "RscInGameUI.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"

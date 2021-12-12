@@ -15,7 +15,7 @@
  *
  * Public: No
  */
-params ["_projectile", "_cameraArray", "_shooter"];
+params ["_projectile", "_cameraArray", "_shooter", "_switchOnFireInit"];
 _cameraArray params ["_enabled", "_fovLevels", "_initialFOV", "_thermalTypes", "_initialThermalType", "_switchOnFire", "_lerpFOV", "_fovChangeTime", "", "_gimbalData", "_reticleData", "_designating"];
 _gimbalData params ["_hasGimbal", "_maxGimbalX", "_maxGimbalY", "_gimbalSpeedX", "_gimbalSpeedY", "_initGimbalAngleX", "_initGimbalAngleY", "_gimbalZoomSpeedModifiers"];
  
@@ -78,7 +78,7 @@ _activeCameraNamespace setVariable [QGVAR(logic), _logic];
 _activeCameraNamespace setVariable [QGVAR(missile), _projectile];
 _activeCameraNamespace setVariable [QGVAR(logicPos), _projectile vectorModelToWorldVisual _logicPosition];
 
-if (_switchOnFire) then {
+if (_switchOnFire && _switchOnFireInit) then {
     [_activeCameraNamespace] call FUNC(camera_switchTo);
 };
 

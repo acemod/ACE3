@@ -67,8 +67,9 @@ if (!(_cameraConfig isEqualTo configNull) && { (getNumber (_cameraConfig >> "ena
     _cameraArray set [12, (getNumber (_cameraConfig >> "canStopDesignating")) == 1];
 };
 
-private _camera = [_projectile, _cameraArray, _shooter] call FUNC(camera_init);
-GVAR(projectileHashMap) set [hashValue _projectile, _camera];
+private _preTarget = +(ACE_PLAYER getVariable [QGVAR(target), [0, 0, 0]]);
+private _camera = [_projectile, _cameraArray, _shooter, _preTarget isEqualTo [0, 0, 0]] call FUNC(camera_init);
+GVAR(projectileHashMap) set [hashValue _projectile, [_camera, _preTarget]];
 [{
     params ["_args", "_pfID"];
     _args params ["_firedEH", "_cameraArray", "_lastUpdate", "_camera", "_projectileHash"];

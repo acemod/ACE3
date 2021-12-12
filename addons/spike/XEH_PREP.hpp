@@ -3,7 +3,6 @@ PREP(camera_cycleViewMode);
 PREP(camera_destroy);
 PREP(camera_handleKeyPress);
 PREP(camera_init);
-PREP(camera_preTrack);
 PREP(camera_setViewMode);
 PREP(camera_setZoom);
 PREP(camera_switchAway);
@@ -16,4 +15,6 @@ PREP(onFired);
 PREP(seeker);
 PREP(navigation);
 PREP(midCourseTransition);
+PREP(mapHelperDraw);
+PREP(getTargetPosition);
 

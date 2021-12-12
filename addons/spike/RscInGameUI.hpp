@@ -1,38 +1,28 @@
 
-class RscTitles {
-    class ACE_guidance_spike {
-        idd = 1299230000;
-        controls[] = { "reticle", "manualText" };
-        duration = 100000;
-        fadein = 0;
-        fadeout = 0;
-        name = "spike_reticle";
-        onLoad = QUOTE(with uiNamespace do {ACE_guidance_camera_reticle = _this select 0;};);
+// Taken from AGM for optics management.
 
-        class manualText: RscText {
-            idc = 241000;
-            x = "safeZoneX + safeZoneW * 0.425";
-            y = "safeZoneY + safeZoneH * 0.2";
-            w = "safeZoneW * 0.15";
-            h = "safeZoneH * 0.05";
-            style = "0 + 2";
-            text = "MANUAL";
-            colorBackground[] = {0,0,0,0};
-            colorText[] = COLOR_WHITE;
-            font = "LucidaConsoleB";
-            sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2.2);
-            enabled = 1;         
-            show = 1;
+class RscInGameUI {
+    class ACE_RscOptics_spike {
+        idd = 141000;
+        controls[] = { reticle, GVAR(mapHelper) };
+        onLoad = QUOTE(with uiNamespace do {ACE_RscOptics_spike = _this select 0;};);
+
+        class GVAR(mapHelper): RscMapControl {
+            onDraw = QUOTE(_this call FUNC(mapHelperDraw););
+            x = 0;
+            y = 0;
+            w = 0;
+            h = 0;
         };
 
-        class reticle: RscControlsGroupNoScrollbars {
-            idc = 242000;
+       	class reticle: RscControlsGroupNoScrollbars {
+			idc = 242000;
             x = "safeZoneX";
             y = "safeZoneY";
             w = "safeZoneW-safeZoneX";
             h = "safeZoneH-safeZoneY";
             enabled = 1;         
-            show = 1;
+            show = 0;
             class controls {
                 class lineV: RscControlsGroupNoScrollbars {
                     idc = 243100;
@@ -122,7 +112,7 @@ class RscTitles {
                     };
                 };
             };
-        };
+        }; 
     };
 };
 

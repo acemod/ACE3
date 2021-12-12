@@ -1,8 +1,8 @@
 class CfgMagazines {
     class Titan_AT;
-	class GVAR(at): Titan_AT {
+	class GVAR(lr): Titan_AT {
 		author = "Brandon (TCVM)";
-		ammo = QGVAR(at);
+		ammo = QGVAR(lr);
 
 		displayName = "Spike AT";
 		displayNameShort = "foo";
