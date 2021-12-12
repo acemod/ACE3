@@ -540,7 +540,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     if (_currentAmmoCount < 1) exitWith {false};
 
     // Statement:
-    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount, false] call FUNC(unloadWeaponMan);
+    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount, false] call FUNC(unloadUnitWeapon);
     true
 }, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; //ALT + R Key
 

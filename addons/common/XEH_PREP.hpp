@@ -187,7 +187,7 @@ PREP(uniqueElements);
 PREP(uniqueItems);
 PREP(unloadPerson);
 PREP(unloadPersonLocal);
-PREP(unloadWeaponMan);
+PREP(unloadUnitWeapon);
 PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
