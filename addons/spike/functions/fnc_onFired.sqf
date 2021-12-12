@@ -67,7 +67,7 @@ if (!(_cameraConfig isEqualTo configNull) && { (getNumber (_cameraConfig >> "ena
     _cameraArray set [12, (getNumber (_cameraConfig >> "canStopDesignating")) == 1];
 };
 
-private _camera = [_projectile, _cameraArray, _shooter, false] call FUNC(camera_init);
+private _camera = [_projectile, _cameraArray, _shooter] call FUNC(camera_init);
 GVAR(projectileHashMap) set [hashValue _projectile, _camera];
 [{
     params ["_args", "_pfID"];

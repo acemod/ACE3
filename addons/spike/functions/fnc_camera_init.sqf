@@ -15,7 +15,7 @@
  *
  * Public: No
  */
-params ["_projectile", "_cameraArray", "_shooter", "_preTrack"];
+params ["_projectile", "_cameraArray", "_shooter"];
 _cameraArray params ["_enabled", "_fovLevels", "_initialFOV", "_thermalTypes", "_initialThermalType", "_switchOnFire", "_lerpFOV", "_fovChangeTime", "", "_gimbalData", "_reticleData", "_designating"];
 _gimbalData params ["_hasGimbal", "_maxGimbalX", "_maxGimbalY", "_gimbalSpeedX", "_gimbalSpeedY", "_initGimbalAngleX", "_initGimbalAngleY", "_gimbalZoomSpeedModifiers"];
  
@@ -48,86 +48,38 @@ _shooter setVariable [QGVAR(missileCamera), _activeCameraNamespace];
 _activeCameraNamespace setVariable [QGVAR(shooter), _shooter];
 [_activeCameraNamespace, _initialThermalType] call FUNC(camera_setViewMode);
 
-if (_preTrack) then {
-    private _pos = _projectile;
+private _pos = getPosASL _projectile;
 
-    private _lookDirection = if !(_shooter isKindOf "CAManBase" || {_shooter isKindOf "StaticWeapon"}) then {
-        private _finalLookDirection = if (_shooter isKindOf "Plane") then {
-            _pos = _shooter modelToWorldVisual getPilotCameraPosition _shooter;
-            private _trackingTarget = getPilotCameraTarget _shooter;
-            _trackingTarget params ["_isTracking", "_trackingPos"];
-            // Because ARMA doesnt update the camera rotation if you are locked on immediatly, we have to calculate the look direction manually or else the SACLOS target will be wrong, especially if shooter is moving
-            if (_isTracking) then {
-                vectorNormalized (_trackingPos vectorDiff _pos);
-            } else {
-                _shooter vectorModelToWorldVisual getPilotCameraDirection _shooter;
-            };
-        } else {
-            private _gBody = -deg(_shooter animationPhase _animationSourceBody);
-            private _gGun = deg(_shooter animationPhase _animationSourceGun);
-            _shooter vectorModelToWorldVisual ([1, _gBody, _gGun] call CBA_fnc_polar2vect);
-        };
-        _finalLookDirection
-    } else {
-        _pos = ASLtoAGL eyePos _shooter;
-        _shooter weaponDirection currentWeapon _shooter
-    };
+private _camera = "camera" camCreate _pos;
+private _logic = "Logic" createVehicleLocal _pos;
 
-    private _camera = "camera" camCreate _pos;
-    private _logic = "Logic" createVehicleLocal _pos;
+private _initPosX = (tan _initGimbalAngleX) * GIMBAL_LOGIC_OFFSET;
+private _initPosY = (tan _initGimbalAngleY) * GIMBAL_LOGIC_OFFSET;
 
-    _activeCameraNamespace setVariable [QGVAR(projectileSize), 0];
+private _projectileBounds = (1 boundingBoxReal _projectile);
+private _projectileSize = (_projectileBounds#1) vectorDiff (_projectileBounds#0);
+_activeCameraNamespace setVariable [QGVAR(projectileSize), _projectileSize#1];
 
-    private _logicPosition = (AGLtoASL _pos) vectorAdd (_lookDirection vectorMultiply GIMBAL_LOGIC_OFFSET);
-    _logic setPosASL _logicPosition;
-    _logic setVectorDir _lookDirection;
+private _logicPosition = [_initPosX, GIMBAL_LOGIC_OFFSET, _initPosY] vectorAdd [0, _projectileSize#1, 0];
 
-    _camera camSetTarget _logic;
-    _camera setPos _pos;
-    _camera camSetFOV _initialFOV;
+_logic setPosASL (_projectile modelToWorldVisualWorld _logicPosition);
 
-    _camera camCommit 0;
-    showCinemaBorder false;
-    camUseNVG false;
+_camera camSetTarget _logic;
+_camera setPos (_projectile modelToWorldVisual ((_projectile worldToModelVisual (ASLtoATL getPosASL _projectile)) vectorAdd [0, _projectileSize#1, 0]));
+_camera camSetFOV _initialFOV;
 
-    _activeCameraNamespace setVariable [QGVAR(camera), _camera];
-    _activeCameraNamespace setVariable [QGVAR(logic), _logic];
-    _activeCameraNamespace setVariable [QGVAR(missile), objNull];
-    _activeCameraNamespace setVariable [QGVAR(logicPos), _shooter worldToModelVisual _logicPosition];
-} else {
-    private _pos = getPosASL _projectile;
+_camera camCommit 0;
+showCinemaBorder false;
+camUseNVG false;
 
-    private _camera = "camera" camCreate _pos;
-    private _logic = "Logic" createVehicleLocal _pos;
+_activeCameraNamespace setVariable [QGVAR(lastMissileOrientation), vectorNormalized velocity _projectile];
+_activeCameraNamespace setVariable [QGVAR(camera), _camera];
+_activeCameraNamespace setVariable [QGVAR(logic), _logic];
+_activeCameraNamespace setVariable [QGVAR(missile), _projectile];
+_activeCameraNamespace setVariable [QGVAR(logicPos), _projectile vectorModelToWorldVisual _logicPosition];
 
-    private _initPosX = (tan _initGimbalAngleX) * GIMBAL_LOGIC_OFFSET;
-    private _initPosY = (tan _initGimbalAngleY) * GIMBAL_LOGIC_OFFSET;
-
-    private _projectileBounds = (1 boundingBoxReal _projectile);
-    private _projectileSize = (_projectileBounds#1) vectorDiff (_projectileBounds#0);
-    _activeCameraNamespace setVariable [QGVAR(projectileSize), _projectileSize#1];
-
-    private _logicPosition = [_initPosX, GIMBAL_LOGIC_OFFSET, _initPosY] vectorAdd [0, _projectileSize#1, 0];
-
-    _logic setPosASL (_projectile modelToWorldVisualWorld _logicPosition);
-
-    _camera camSetTarget _logic;
-    _camera setPos (_projectile modelToWorldVisual ((_projectile worldToModelVisual (ASLtoATL getPosASL _projectile)) vectorAdd [0, _projectileSize#1, 0]));
-    _camera camSetFOV _initialFOV;
-
-    _camera camCommit 0;
-    showCinemaBorder false;
-    camUseNVG false;
-
-    _activeCameraNamespace setVariable [QGVAR(lastMissileOrientation), vectorNormalized velocity _projectile];
-    _activeCameraNamespace setVariable [QGVAR(camera), _camera];
-    _activeCameraNamespace setVariable [QGVAR(logic), _logic];
-    _activeCameraNamespace setVariable [QGVAR(missile), _projectile];
-    _activeCameraNamespace setVariable [QGVAR(logicPos), _projectile vectorModelToWorldVisual _logicPosition];
-
-    if (_switchOnFire) then {
-        [_activeCameraNamespace] call FUNC(camera_switchTo);
-    };
+if (_switchOnFire) then {
+    [_activeCameraNamespace] call FUNC(camera_switchTo);
 };
 
 _activeCameraNamespace
