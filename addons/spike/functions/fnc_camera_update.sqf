@@ -149,8 +149,6 @@ if (_cameraAzimuth > _maxGimbalX) then {
         _maxDirection = (direction _projectile) - _maxGimbalX;
     };
 
-    systemChat str _maxDirection;
-
     if (_maxDirection >= 360) then {
         _maxDirection = _maxDirection - 360;
     };
