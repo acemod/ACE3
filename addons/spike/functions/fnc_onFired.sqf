@@ -1,0 +1,85 @@
+#include "script_component.hpp"
+/*
+ * Author: Brandon (TCVM)
+ * Initialises SPIKE camera
+ *
+ * Arguments:
+ * 0: Guidance Arg Array <ARRAY>
+ * 1: PFID <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [[], 0] call ace_missileguidance_fnc_guidancePFH;
+ *
+ * Public: No
+ */
+params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
+
+private _missileGuidanceConfig = (configOf _projectile) >> "ace_missileguidance";
+// Setup camera array
+private _cameraConfig = _missileGuidanceConfig >> "camera";
+private _cameraArray = [false];
+if (!(_cameraConfig isEqualTo configNull) && { (getNumber (_cameraConfig >> "enabled")) == 1 }) then {
+    _cameraArray set [0, true];
+    _cameraArray set [1, getArray (_cameraConfig >> "fovLevels")];
+    _cameraArray set [2, getNumber (_cameraConfig >> "initialFOV")];
+    
+    _cameraArray set [3, getArray (_cameraConfig >> "enabledThermalTypes")];
+    _cameraArray set [4, getText (_cameraConfig >> "initialThermalType")];
+    
+    _cameraArray set [5, (getNumber (_cameraConfig >> "switchOnFire")) == 1];
+    
+    _cameraArray set [6, getNumber (_cameraConfig >> "lerpFOV")];
+    _cameraArray set [7, getNumber (_cameraConfig >> "fovChangeTime")];
+    
+    _cameraArray set [8, [[0, 0, 0], [0, 0, 0], [0, 0, 0], false, false]]; // camera view data. [look direction, ground pos, point pos, moving camera x, moving camera y]
+    
+    _cameraArray set [9, [
+        getNumber (_cameraConfig >> "gimbal" >> "enabled") == 1,
+        getNumber (_cameraConfig >> "gimbal" >> "gimbalAngleX"),
+        getNumber (_cameraConfig >> "gimbal" >> "gimbalAngleY"),
+        getNumber (_cameraConfig >> "gimbal" >> "gimbalSpeedX"),
+        getNumber (_cameraConfig >> "gimbal" >> "gimbalSpeedY"),
+        getNumber (_cameraConfig >> "gimbal" >> "gimbalInitOffsetX"),
+        getNumber (_cameraConfig >> "gimbal" >> "gimbalInitOffsetY"),
+        getArray (_cameraConfig >> "gimbal" >> "fovGimbalSpeedModifiers"),
+        getNumber (_cameraConfig >> "gimbal" >> "stabilizeWhenMoving") == 1,
+        getNumber (_cameraConfig >> "gimbal" >> "designateWhenStationary") == 1,
+        getNumber (_cameraConfig >> "gimbal" >> "trackLockedPosition") == 1
+    ]];
+    
+    _cameraArray set [10, [
+        getText (_cameraConfig >> "reticle" >> "titleRsc"),
+        getNumber (_cameraConfig >> "reticle" >> "centerReticle"),
+        getArray (_cameraConfig >> "reticle" >> "controlsToDisappearOnLock"),
+        getArray (_cameraConfig >> "reticle" >> "controlsToAppearOnLock"),
+        getNumber (_cameraConfig >> "reticle" >> "leftGate"),
+        getNumber (_cameraConfig >> "reticle" >> "rightGate"),
+        getNumber (_cameraConfig >> "reticle" >> "topGate"),
+        getNumber (_cameraConfig >> "reticle" >> "bottomGate"),
+        getText (_cameraConfig >> "reticle" >> "uiNamespaceDialogVariable"),
+        getNumber (_cameraConfig >> "reticle" >> "reticleMovesWithTrack") == 1
+    ]];
+    
+    _cameraArray set [11, (getNumber (_cameraConfig >> "alwaysDesignate")) == 1];
+    _cameraArray set [12, (getNumber (_cameraConfig >> "canStopDesignating")) == 1];
+};
+
+[_projectile, _cameraArray, _shooter, false] call FUNC(camera_init);
+[{
+    params ["_args", "_pfID"];
+    _args params ["_firedEH", "_cameraArray", "_lastUpdate"];
+
+    _firedEH params ["_shooter","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
+
+    if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
+        [[_projectile] call FUNC(camera_getCameraNamespaceFromProjectile)] call FUNC(camera_destroy);
+        [_pfID] call CBA_fnc_removePerFrameHandler;
+    };
+
+    [_cameraArray, _projectile, CBA_missionTime - _lastUpdate] call FUNC(camera_update);
+
+    _args set [2, CBA_missionTime];
+}, 0, [_this, _cameraArray, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
