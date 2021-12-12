@@ -133,17 +133,26 @@ _relativePos = _expectedPos;
 (_relativePos call CBA_fnc_vect2polar) params ["", "_azimuth", "_elevation"];
 (_missileDirection call CBA_fnc_vect2polar) params ["", "", "_missilePitch"];
 
-private _cameraAzimuth = (direction _projectile) - _azimuth;
+private _projectileDir = vectorDirVisual _projectile;
+_projectileDir set [2, 0];
+
+private _2dRelativePos = [_relativePos#0, _relativePos#1, 0];
+
+private _cameraAzimuth = acos (_projectileDir vectorCos _2dRelativePos);
 private _cameraElevation = _missilePitch - _elevation;
 
-if (abs(_cameraAzimuth) > _maxGimbalX) then {
+if (_cameraAzimuth > _maxGimbalX) then {
     private _maxDirection = (direction _projectile) + _maxGimbalX;
-    if (_cameraAzimuth > 0) then {
+
+    private _crossProductSign = (_2dRelativePos vectorCrossProduct _projectileDir)#2;
+    if (_crossProductSign < 0) then {
         _maxDirection = (direction _projectile) - _maxGimbalX;
     };
 
+    systemChat str _maxDirection;
+
     if (_maxDirection >= 360) then {
-        _maxDirection = 360 - _maxDirection;
+        _maxDirection = _maxDirection - 360;
     };
 
     if (_maxDirection < 0) then {
