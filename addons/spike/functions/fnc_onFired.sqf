@@ -68,6 +68,7 @@ if (!(_cameraConfig isEqualTo configNull) && { (getNumber (_cameraConfig >> "ena
 };
 
 private _preTarget = +(ACE_PLAYER getVariable [QGVAR(target), [0, 0, 0]]);
+ACE_PLAYER setVariable [QGVAR(target), [0, 0, 0]];
 private _camera = [_projectile, _cameraArray, _shooter, _preTarget isEqualTo [0, 0, 0]] call FUNC(camera_init);
 GVAR(projectileHashMap) set [hashValue _projectile, [_camera, _preTarget]];
 [{

@@ -53,7 +53,9 @@ if (cameraView isEqualTo "GUNNER") then {
 
     private _designating = __SPIKE_DISPLAY getVariable [QGVAR(designate), 0];
     if (_currentAmmo != 0 && { _designating == 1 || _targetPosition isNotEqualTo [0, 0, 0] }) then {
-        _targetPosition = [eyePos _currentShooter, getCameraViewDirection _currentShooter, _designating, _targetPosition, _currentShooter] call FUNC(getTargetPosition);
+        private _viewASL = AGLtoASL positionCameraToWorld [0,0,0];
+        private _viewDir = _viewASL vectorFromTo (AGLtoASL positionCameraToWorld [0,0,1]);
+        _targetPosition = [_viewASL, _viewDir, _designating, _targetPosition, _currentShooter] call FUNC(getTargetPosition);
         GVAR(arguments) set [1, _targetPosition];
     };
 

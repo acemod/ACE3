@@ -24,6 +24,8 @@ private _intersections = lineIntersectsSurfaces [_origin, _origin vectorAdd (_di
 if (_intersections isNotEqualTo []) then {
     (_intersections#0) params ["_intersectPos", "", "_object"];
 
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _intersectPos, 0.75, 0.75, 0, "", 1, 0.025, "TahomaB"];
+
     if (_designateInput == 1) then {
         _seekerTargetPos = _intersectPos;
     };
