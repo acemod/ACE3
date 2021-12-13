@@ -42,8 +42,7 @@ if ((_seekerTargetPos isNotEqualTo [0, 0, 0]) || { (_designateInput == 1) }) the
 _cameraNamespace setVariable [QGVAR(seekerTargetPos), _seekerTargetPos];
 _cameraNamespace setVariable [QGVAR(seekerTargetInfo), _seekerTargetInfo];
 
-private _velocity = [0, 0, 0];
-_seekerStateParams params [["_lastPositions", []], ["_lastAveragePosition", [0, 0, 0]]];
+_seekerStateParams params [["_lastPositions", []], ["_lastAveragePosition", [0, 0, 0]], ["_velocity", [0, 0, 0]], ["_lastTimeCalculated", 0]];
 if (5 < count _lastPositions) then {
     private _averagePosition = [0, 0, 0];
     {
@@ -53,10 +52,12 @@ if (5 < count _lastPositions) then {
     _averagePosition = _averagePosition vectorMultiply (1 / count _lastPositions);
 
     if (_lastAveragePosition isNotEqualTo [0, 0, 0]) then {
-        if (_timestep == 0) then {
+        private _dt = CBA_missionTime - _lastTimeCalculated;
+        if (_dt == 0) then {
             _velocity = [0, 0, 0];
         } else {
-            _velocity = (_averagePosition vectorDiff _lastAveragePosition) vectorMultiply (1 / _timestep);
+            _velocity = (_averagePosition vectorDiff _lastAveragePosition) vectorMultiply (1 / _dt);
+            _seekerStateParams set [3, CBA_missionTime];
         }
     };
     _seekerStateParams set [1, _averagePosition];
@@ -69,6 +70,7 @@ _targetData set [3, _velocity];
 
 _lastPositions pushBack _seekerTargetPos;
 _seekerStateParams set [0, _lastPositions];
+_seekerStateParams set [2, _velocity];
 
 _seekerTargetPos
 
