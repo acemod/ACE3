@@ -48,7 +48,21 @@ class cfgMagazines {
 
     class gm_explosive_plnp_charge_base;
     class gm_explosive_plnp_charge: gm_explosive_plnp_charge_base {
+        EGVAR(explosives,DelayTime) = 1;
+        EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_gm_explosive_plnp";
+        useAction = 0;
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+            class DeadmanSwitch: Command {};
+        };
     };
 
     class gm_mine_at_base;
