@@ -55,7 +55,7 @@ if (cameraView isEqualTo "GUNNER") then {
     if (_currentAmmo != 0 && { _designating == 1 || _targetPosition isNotEqualTo [0, 0, 0] }) then {
         private _viewASL = AGLtoASL positionCameraToWorld [0,0,0];
         private _viewDir = _viewASL vectorFromTo (AGLtoASL positionCameraToWorld [0,0,1]);
-        _targetPosition = [_viewASL, _viewDir, _designating, _targetPosition, _currentShooter] call FUNC(getTargetPosition);
+        _targetPosition = [_viewASL, _viewDir, _designating, _targetPosition, _currentShooter, _currentShooter] call FUNC(getTargetPosition);
         GVAR(arguments) set [1, _targetPosition];
     };
 

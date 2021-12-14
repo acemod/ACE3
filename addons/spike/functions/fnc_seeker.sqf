@@ -17,7 +17,8 @@
  */
 
 params ["", "_args", "_seekerStateParams", "", "_timestep"];
-_args params ["_firedEH", "", "", "", "", "_targetData"];
+_args params ["_firedEH", "", "", "_seekerParams", "", "_targetData"];
+_seekerParams params ["_seekerAngle", "", "_seekerMaxRange", "_seekerMinRange"];
 _firedEH params ["","","","","","","_projectile"];
 
 (GVAR(projectileHashMap) get hashValue _projectile) params ["_cameraNamespace", "_preTarget"];
@@ -36,7 +37,7 @@ if (_seekerTargetPos isEqualTo [0, 0, 0]) then {
 };
 
 if ((_seekerTargetPos isNotEqualTo [0, 0, 0]) || { (_designateInput == 1) }) then {
-    _seekerTargetPos = [_cameraPos, vectorNormalized _logicPos, _designateInput, _seekerTargetPos] call FUNC(getTargetPosition);
+    _seekerTargetPos = [_cameraPos, vectorNormalized _logicPos, _designateInput, _seekerTargetPos, _projectile] call FUNC(getTargetPosition);
 };
 
 _cameraNamespace setVariable [QGVAR(seekerTargetPos), _seekerTargetPos];

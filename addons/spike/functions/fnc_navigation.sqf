@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+#define ARM_TIME 0.5
 params ["_args", "_timestep", "", "_profileAdjustedTargetPos", "", "_navigationParams"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData", "_navigationStateData"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
@@ -95,8 +96,15 @@ switch (_stage) do {
     default {};
 };
 
-(_directionToTarget call CBA_fnc_vect2polar) params ["", "", "_elevationToTarget"];
-if (_stage >= STAGE_LAUNCH && { _profileAdjustedTargetPos isNotEqualTo [0, 0, 0] } && { -_elevationToTarget >= 30 }) then {
+private _distance = _launchPos vectorDistance _profileAdjustedTargetPos;
+
+private _los = _projectilePos vectorFromTo _profileAdjustedTargetPos;
+// subtract 500 so we dont get a perfect top-attack angle
+private _ttgo = ((_projectilePos distance2D _profileAdjustedTargetPos) - 500) / (vectorMagnitude velocity _projectile);
+private _angleToTarget = acos ((vectorDir _projectile) vectorCos _los);
+private _atMinRotationAngle = _angleToTarget >= (_pitchRate * _ttgo);
+
+if (_met >= ARM_TIME && { _stage >= STAGE_LAUNCH } && { _profileAdjustedTargetPos isNotEqualTo [0, 0, 0] } && { _atMinRotationAngle }) then {
     _navigationParams set [0, STAGE_TERMINAL];
 };
 

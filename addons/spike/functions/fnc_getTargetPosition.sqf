@@ -16,43 +16,36 @@
  *
  * Public: No
  */
-#define CHECK_DISTANCE 25
-params ["_origin", "_direction", "_designateInput", "_seekerTargetPos", ["_ignoreObject", objNull]];
+#define CHECK_DISTANCE 10
+#define SEEKER_BIAS 50
+params ["_origin", "_direction", "_designateInput", "_seekerTargetPos", "_seeker", ["_ignoreObject", objNull]];
 
 scopeName "main";
 private _nearObjects = [];
 
-if (cursorObject isKindOf "AllVehicles") then {
-    private _intersectionsToCursorTarget = lineIntersectsSurfaces [_origin, aimPos cursorObject, _ignoreObject, cursorObject, true, 1];
-    if (_intersectionsToCursorTarget isEqualTo []) then {
-        _nearObjects pushBack cursorObject;
-    };
-};
-
+private _desiredObject = objNull;
 private _intersections = lineIntersectsSurfaces [_origin, _origin vectorAdd (_direction vectorMultiply 5000), _ignoreObject, objNull, true, 1, "FIRE", "VIEW", true];
 if (_intersections isNotEqualTo []) then {
     (_intersections#0) params ["_intersectPos", "", "_object"];
-
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _intersectPos, 0.75, 0.75, 0, "", 1, 0.025, "TahomaB"];
 
     if (_designateInput == 1) then {
         _seekerTargetPos = _intersectPos;
     };
 
-    _nearObjects = (ASLtoAGL _seekerTargetPos) nearObjects ["AllVehicles", 5];
+    _nearObjects = (ASLtoAGL _seekerTargetPos) nearObjects ["AllVehicles", CHECK_DISTANCE];
 
-    if (_designateInput == 1 && { !isNull _object }) then {
+    if (_designateInput == 1 && { !isNull _object } && { _object isKindOf "Building" }) then {
         _nearObjects pushBack _object;
+        if (isNull _desiredObject) then {
+            _desiredObject = _object;
+        };
     };
 };
 
 if (_nearObjects isNotEqualTo []) then {
     // I want to prefer the designated position on the object moreso than the bounds of the object
-    private _averagePosition = _seekerTargetPos vectorMultiply 15;
-    private _averagePositionCounter = 15;
-
-    private _highestMagnitude = 0;
-    private _closestDistance = 1e10;
+    private _averagePosition = _seekerTargetPos vectorMultiply SEEKER_BIAS;
+    private _averagePositionCounter = SEEKER_BIAS;
     
     private _bestScore = 0;
     private _bestObject = objNull;
@@ -61,12 +54,13 @@ if (_nearObjects isNotEqualTo []) then {
         private _tiMagnitude = (vectorMagnitude getVehicleTIPars _x) / 1.74; // 1.74 = sqrt(3) = max magnitude of [1, 1, 1]
         private _distance = (getPosASLVisual _x) vectorDistanceSqr _seekerTargetPos;
 
-        if (_distance <= CHECK_DISTANCE * CHECK_DISTANCE) then {
-            private _score = 8 * _tiMagnitude + (_distance / (CHECK_DISTANCE * CHECK_DISTANCE));
-            if (_score > _bestScore) then {
-                _bestScore = _score;
-                _bestObject = _x;
-            };
+        private _score = 4 * _tiMagnitude + (_distance / (CHECK_DISTANCE * CHECK_DISTANCE));
+        if (_desiredObject isEqualTo _x) then {
+            _score = _score * 2;
+        };
+        if (_score > _bestScore) then {
+            _bestScore = _score;
+            _bestObject = _x;
         };
     } forEach _nearObjects;
 
