@@ -401,25 +401,27 @@ GVAR(reloadMutex_lastGesture) = "";
 
 ["CAManBase", "GestureChanged", {
     params ["_unit", "_gesture"];
-    if (_unit isNotEqualTo ACE_Player) exitWith {};
-    if (_gesture isEqualTo "") exitWith {};
+    if (
+        (GVAR(isReloading)) ||
+        {_unit isNotEqualTo ACE_Player} ||
+        {(weaponState ACE_Player) select 6 == 0} ||
+    ) exitWith {};
 
-    if ((weaponState ACE_Player) select 6 != 0) exitWith {
-        TRACE_2("Reloading, blocking gestures",_weapon,_gesture);
-        GVAR(isReloading) = true;
-        GVAR(reloadMutex_lastGesture) = _gesture;
-    };
+    TRACE_2("Reloading, blocking gestures",_weapon,_gesture);
+    GVAR(isReloading) = true;
+    GVAR(reloadMutex_lastGesture) = _gesture;
 }] call CBA_fnc_addClassEventHandler;
 
 ["CAManBase", "GestureDone", {
     params ["_unit", "_gesture"];
-    if (_unit isNotEqualTo ACE_Player) exitWith {};
-    if (_gesture isEqualTo "" || {_gesture isNotEqualTo GVAR(reloadMutex_lastGesture)}) exitWith {};
+    if (
+        (!GVAR(isReloading)) ||
+        {_unit isNotEqualTo ACE_Player} ||
+        {_gesture isNotEqualTo GVAR(reloadMutex_lastGesture)}
+    ) exitWith {};
 
-    if ((weaponState ACE_Player) select 6 == 0) exitWith {
-        GVAR(isReloading) = false;
-        GVAR(reloadMutex_lastGesture) = "";
-    };
+    GVAR(isReloading) = false;
+    GVAR(reloadMutex_lastGesture) = "";
 }] call CBA_fnc_addClassEventHandler;
 
 //////////////////////////////////////////////////
