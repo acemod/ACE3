@@ -577,5 +577,11 @@ class CfgVehicles {
     class rhsusf_props_JerryCan_Base: Items_base_F {
         EGVAR(cargo,canLoad) = 1;
         EGVAR(cargo,size) = 1;
+        EGVAR(dragging,canCarry) = 1;
+    };
+
+    class rhsusf_props_ScepterMWC_Base: rhsusf_props_JerryCan_Base {
+        EXGVAR(field_rations,waterSupply) = 20;
+        EXGVAR(field_rations,offset)[] = {-0.13, 0, 0.2};
     };
 };
