@@ -65,11 +65,11 @@ private _numTransferredHC3 = 0;
 // Transfer AI groups
 {
     // No transfer if empty group
-    private _transfer = !(units _x isEqualTo []) && {!(_x getVariable [QXGVAR(blacklist), false])};
+    private _transfer = ((units _x) isNotEqualTo []) && {!(_x getVariable [QXGVAR(blacklist), false])};
     if (_transfer) then {
         // No transfer if waypoints with synchronized triggers exist for the group
-        private _allWaypointsWithTriggers = (waypoints _x) select {!((synchronizedTriggers _x) isEqualTo [])};
-        if !(_allWaypointsWithTriggers isEqualTo []) exitWith {
+        private _allWaypointsWithTriggers = (waypoints _x) select {(synchronizedTriggers _x) isNotEqualTo []};
+        if (_allWaypointsWithTriggers isNotEqualTo []) exitWith {
             _transfer = false;
         };
 

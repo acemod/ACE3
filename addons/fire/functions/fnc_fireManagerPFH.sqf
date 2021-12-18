@@ -28,7 +28,7 @@ params ["_args", "_handle"];
     _value params ["_source", "_radius", "_intensity"];
     private _attachedObject = attachedTo _source;
     private _sourcePos = getPosATL _source;
-    if !(_attachedObject isEqualTo objNull) then {
+    if (_attachedObject isNotEqualTo objNull) then {
         _sourcePos = getPosATL _attachedObject;
     };
 

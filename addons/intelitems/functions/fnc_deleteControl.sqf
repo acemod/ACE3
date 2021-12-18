@@ -27,7 +27,7 @@ ctrlPosition _controlsGroup params ["_posX", "_posY"];
 private _ctrlContent = _controlsGroup controlsGroupCtrl IDC_CONTENT;
 private _data = ctrlText _ctrlContent;
 
-if !(_data isEqualTo GET_DATA(_index)) then {
+if (_data isNotEqualTo GET_DATA(_index)) then {
     SET_DATA(_index,_data);
 };
 
