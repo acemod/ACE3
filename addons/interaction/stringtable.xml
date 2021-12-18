@@ -330,6 +330,7 @@
             <Russian>Переименовать группу</Russian>
             <German>Gruppe umbenennen</German>
             <Polish>Zmień nazwę grupy</Polish>
+            <Chinesesimp>小队重命名</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
@@ -338,6 +339,7 @@
             <Russian>Данное имя группы уже используется.</Russian>
             <German>Dieser Gruppenname ist bereits in Verwendung.</German>
             <Polish>Ta nazwa grupy jest już w użyciu.</Polish>
+            <Chinesesimp>该小队名称已被使用</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
@@ -346,6 +348,7 @@
             <Russian>НОВОЕ ИМЯ ГРУППЫ</Russian>
             <German>NEUER GRUPPENNAME:</German>
             <Polish>NOWA NAZWA GRUPY:</Polish>
+            <Chinesesimp>新的小队名：</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -930,6 +933,7 @@
             <Russian>Перевернуть</Russian>
             <Japanese>ひっくり返す</Japanese>
             <Chinese>拋</Chinese>
+            <Chinesesimp>翻动</Chinesesimp>
             <Italian>Gira</Italian>
             <Polish>Przewróć</Polish>
             <Portuguese>Virar</Portuguese>
@@ -1226,6 +1230,7 @@
             <Chinese>踹開擋風玻璃</Chinese>
             <Spanish>Romper parabrisas</Spanish>
             <Turkish>Ön camı parçala</Turkish>
+            <Chinesesimp>砸碎挡风玻璃</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
             <English>Attach %1</English>
@@ -1235,6 +1240,7 @@
             <French>Fixer %1</French>
             <Polish>Przyczep %1</Polish>
             <German>Befestige %1</German>
+            <Chinesesimp>附加 %1</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
             <English>Detach %1</English>
@@ -1244,6 +1250,7 @@
             <French>Retirer %1</French>
             <Polish>Odczep %1</Polish>
             <German>Löse %1</German>
+            <Chinesesimp>拆卸 %1</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1253,6 +1260,7 @@
             <French>Cette option permet de fixer/retirer des accessoires d'arme à partir du menu d'interaction personnel.</French>
             <Polish>Włącza akcje przyczepienia/odczepienia dodatków dla obecnej broni</Polish>
             <German>Aktiviert das Befestigen/Lösen von Waffenausätzen an der aktuellen Waffe.</German>
+            <Chinesesimp>启用当前武器的附加/拆卸武器配件的动作。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
             <English>Allow group rename</English>
@@ -1261,6 +1269,7 @@
             <Russian>Разрешить переименование группы</Russian>
             <German>Erlaube das Umbenennen der Gruppe</German>
             <Polish>Zezwól na zmianę nazwy grupy</Polish>
+            <Chinesesimp>允许小队重命名</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
@@ -1269,6 +1278,7 @@
             <Russian>Разрешить лидеру группы её переименование, если имя не занято.</Russian>
             <German>Erlaube Gruppenführer das Umbenennen Ihrer Gruppe, wenn der Name nicht bereits vergeben ist.</German>
             <Polish>Pozwala liderowi grupy na zmianę jej nazwy, jeżeli ta nazwa nie jest już w użyciu.</Polish>
+            <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1277,6 +1287,7 @@
             <Japanese>警告: 一部のオブジェクトが干渉する可能性があります。</Japanese>
             <German>Achtung: einige Objekte könnten mit anderen Kollidieren.</German>
             <Polish>Uwaga: niektóre obiekty mogą kolidować z innymi.</Polish>
+            <Chinesesimp>警告：会导致一些物体与其他物体发生碰撞。</Chinesesimp>
         </Key>
     </Package>
 </Project>

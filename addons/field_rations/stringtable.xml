@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_Field_Rations_DisplayName">
             <English>ACE Field Rations</English>
             <Chinese>ACE 戰地口糧</Chinese>
-            <Chinesesimp>ACE 干粮</Chinesesimp>
+            <Chinesesimp>ACE 野战军粮</Chinesesimp>
             <Czech>ACE Poměrové pole</Czech>
             <French>ACE Rations sur le terrain</French>
             <German>ACE Feld Rationen</German>
@@ -22,6 +22,7 @@
             <English>ACE Field Rations HUD</English>
             <German>ACE Feldrationen HUD</German>
             <Chinese>ACE 戰地口糧界面</Chinese>
+            <Chinesesimp>ACE 野战军粮界面</Chinesesimp>
             <Japanese>ACE フィールド レーション HUD</Japanese>
             <Polish>ACE HUD Racji Polowych</Polish>
             <Russian>Индикаторы жажды и голода</Russian>
@@ -30,7 +31,7 @@
         <Key ID="STR_ACE_Field_Rations_IGUI_Description">
             <English>Indicates current hunger and thirst status.</English>
             <Chinese>顯示目前的飲食需求程度。</Chinese>
-            <Chinesesimp>指示当前的饥饿和渴望状态。</Chinesesimp>
+            <Chinesesimp>显示当前的饥饿和渴望状态。</Chinesesimp>
             <Czech>Označuje aktuální stav hladovění a žízní.</Czech>
             <French>Indique l'état actuel de la faim et de la soif.</French>
             <German>Zeigt den aktuellen Hunger- und Durststatus an.</German>
@@ -68,11 +69,12 @@
             <Russian>Есть/Пить</Russian>
             <Turkish>Yeme / Içme</Turkish>
             <Japanese>食べる/飲む</Japanese>
+            <Chinesesimp>吃/喝</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Enabled_Description">
             <English>Enable/Disable Field Rations</English>
             <Chinese>啟用/禁用戰地口糧。</Chinese>
-            <Chinesesimp>启用/禁用字段口粮</Chinesesimp>
+            <Chinesesimp>启用/禁用野战军粮</Chinesesimp>
             <Czech>Povolit / zakázat příděly v polích</Czech>
             <French>Activer / désactiver les rations de champ</French>
             <German>Feldrationen aktivieren / deaktivieren</German>
@@ -89,7 +91,7 @@
         <Key ID="STR_ACE_Field_Rations_TimeWithoutWater_DisplayName">
             <English>Time Without Water</English>
             <Chinese>水份需時</Chinese>
-            <Chinesesimp>没有水的时候</Chinesesimp>
+            <Chinesesimp>脱水时间</Chinesesimp>
             <Czech>Czas bez wody</Czech>
             <French>Temps sans eau</French>
             <German>Zeit ohne Wasser</German>
@@ -106,7 +108,7 @@
         <Key ID="STR_ACE_Field_Rations_TimeWithoutWater_Description">
             <English>How long should a person be able to go without water (hours).</English>
             <Chinese>一個單位脫水之前能支撐多久（單位為小時）。</Chinese>
-            <Chinesesimp>一个单位能够没有水的时间多少（小时）</Chinesesimp>
+            <Chinesesimp>一个单位在脱水的情况下能够支撑多久（小时）</Chinesesimp>
             <Czech>Jak dlouho by měla jednotka jít bez vody (hodiny)</Czech>
             <French>Combien de temps une unité devrait-elle pouvoir se passer d'eau (heures)?</French>
             <German>Wie lange sollte eine Einheit ohne Wasser auskommen (Stunden)?</German>
@@ -123,7 +125,7 @@
         <Key ID="STR_ACE_Field_Rations_TimeWithoutFood_DisplayName">
             <English>Time Without Food</English>
             <Chinese>飢餓需時</Chinese>
-            <Chinesesimp>没有食物的时间</Chinesesimp>
+            <Chinesesimp>饥饿时间</Chinesesimp>
             <Czech>Čas bez jídla</Czech>
             <French>Temps sans nourriture</French>
             <German>Zeit ohne Essen</German>
@@ -140,7 +142,7 @@
         <Key ID="STR_ACE_Field_Rations_TimeWithoutFood_Description">
             <English>How long should a person be able to go without food (hours).</English>
             <Chinese>一個單位挨餓之前能支撐多久（單位為小時）。</Chinese>
-            <Chinesesimp>一个单位能够没有食物的时间多少（小时）</Chinesesimp>
+            <Chinesesimp>一个单位挨饿的情况下能够支撑多久（小时）</Chinesesimp>
             <Czech>Jak dlouho by měla jednotka jít bez jídla (hodiny)</Czech>
             <French>Combien de temps une unité doit-elle pouvoir se passer de nourriture (heures)?</French>
             <German>Wie lange sollte eine Einheit ohne Essen gehen können (Stunden)?</German>
@@ -158,6 +160,7 @@
             <English>Thirst Quenched</English>
             <German>Durst gestillt</German>
             <Chinese>止渴程度</Chinese>
+            <Chinesesimp>解渴程度</Chinesesimp>
             <Japanese>乾きの満たし</Japanese>
             <Russian>Утоление жажды</Russian>
             <Polish>Pragnienie zaspokojone</Polish>
@@ -167,6 +170,7 @@
             <English>Coefficient for the amount of thirst quenched from drinking.</English>
             <German>Koeffizient für die Menge des Dursts, der durch Trinken gestillt wird.</German>
             <Chinese>從飲用中能夠攝取多少水份。</Chinese>
+            <Chinesesimp>通过喝水能够补充多少水份。</Chinesesimp>
             <Japanese>飲むことによって得られる乾きの満たし量の係数を設定します</Japanese>
             <Russian>Коэффициент утоления жажды от питья</Russian>
             <Polish>Współczynnik ilości zaspokojnego pragnienia od picia</Polish>
@@ -176,6 +180,7 @@
             <English>Hunger Satiated</English>
             <German>Hunger gesättigt</German>
             <Chinese>飽足感</Chinese>
+            <Chinesesimp>饱腹感</Chinesesimp>
             <Japanese>満腹感</Japanese>
             <Russian>Утоление голода</Russian>
             <Polish>Głód Zaspokojony</Polish>
@@ -185,6 +190,7 @@
             <English>Coefficient for the amount of hunger satiated from eating.</English>
             <German>Koeffizient für die Menge des Hungers, der durch essen gesättigt wird.</German>
             <Chinese>從飲食中獲取多少飽食感。</Chinese>
+            <Chinesesimp>通过饮食能够补充多少能量。</Chinesesimp>
             <Japanese>食べることによって得られる満腹感の量の係数を設定します</Japanese>
             <Russian>Коэффициент утоления голода от принятия пищи</Russian>
             <Polish>Współczynnik ilosci zaspokojnego głodu od jedzenia</Polish>
@@ -197,6 +203,7 @@
             <Turkish>Su Içme Animasyonu</Turkish>
             <Japanese>水源動作</Japanese>
             <German>Wasserquellen-Aktionen</German>
+            <Chinesesimp>水源动作</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_Description">
             <English>Controls what actions are available on water sources.</English>
@@ -205,6 +212,7 @@
             <Turkish>Su içerken hangi animasyonu yapacağını belirler</Turkish>
             <Japanese>水源で可能な動作を設定します。</Japanese>
             <German>Bestimmt, welche Aktionen an Wasserquellen verfügbar sind.</German>
+            <Chinesesimp>控制对水源可用的动作。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RefillOnly">
             <English>Refill Only</English>
@@ -213,6 +221,7 @@
             <Turkish>Sadece içeceği iç</Turkish>
             <Japanese>汲むだけ</Japanese>
             <German>Nur Befüllen</German>
+            <Chinesesimp>仅限取水</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_DisplayName">
             <English>Terrain Object Actions</English>
@@ -221,6 +230,7 @@
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
             <Japanese>マップ オブジェクト動作</Japanese>
             <German>Geländeobjekt-Aktionen</German>
+            <Chinesesimp>地形对象动作</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_Description">
             <English>Enables water source actions for terrain objects.</English>
@@ -229,11 +239,13 @@
             <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
             <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
             <German>Aktiviert Wasserquellen-Aktionen für Geländeobjekte.</German>
+            <Chinesesimp>为地形对象启用水源动作。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
             <English>Affect Advanced Fatigue</English>
             <German>Beeinflusst die erweiterte Ausdauer</German>
             <Chinese>與進階疲勞聯動</Chinese>
+            <Chinesesimp>与进阶疲劳联动</Chinesesimp>
             <Japanese>アドバンスド ファティーグへの影響</Japanese>
             <Russian>Влияние на продвинутую усталость</Russian>
             <Polish>Wpływ na zaawansowane zmęczenie</Polish>
@@ -243,6 +255,7 @@
             <English>Controls if thirst and hunger should affect ACE Advanced Fatigue.</English>
             <German>Bestimmt, ob Durst und Hunger ACE Erweiterte Ausdauer beeinflussen sollen.</German>
             <Chinese>是否讓飲食影響到ACE的進階疲勞。</Chinese>
+            <Chinesesimp>是否让饮食影响到ACE的进阶疲劳。</Chinesesimp>
             <Japanese>喉の渇きと空腹感が ACE アドバンスド ファティーグへ与える影響を決定します</Japanese>
             <Russian>Определяет, будет ли жажда и голод влиять на продвинутую усталость ACE.</Russian>
             <Polish>Kontroluje czy pragnienie i głód mają wpływ na zaawansowane zmęczenie ACE.</Polish>
@@ -252,6 +265,7 @@
             <English>HUD Type</English>
             <German>HUD Typ</German>
             <Chinese>界面類型</Chinese>
+            <Chinesesimp>界面类型</Chinesesimp>
             <Japanese>HUD タイプ</Japanese>
             <Polish>Typ HUD</Polish>
             <Russian>Тип индикаторов</Russian>
@@ -261,6 +275,7 @@
             <English>Selects which HUD style will be used.</English>
             <German>Wählt, welcher HUD Stil benutzt wird.</German>
             <Chinese>選擇妳想使用的界面類型。</Chinese>
+            <Chinesesimp>选择你想使用的界面类型。</Chinesesimp>
             <Japanese>使用する HUD のタイプを選択できます</Japanese>
             <Polish>Wybierz który styl HUD będzie używany</Polish>
             <Russian>Выберите какой стиль индикаторов будет использован.</Russian>
@@ -270,6 +285,7 @@
             <English>Colored Icons</English>
             <German>Farbige Icons</German>
             <Chinese>顏色化圖示</Chinese>
+            <Chinesesimp>彩色图标</Chinesesimp>
             <Japanese>色付きアイコン</Japanese>
             <Polish>Kolorowe ikony</Polish>
             <Russian>Цветные иконки</Russian>
@@ -279,6 +295,7 @@
             <English>Draining Icons</English>
             <German>Farblose Icons</German>
             <Chinese>增減化圖示</Chinese>
+            <Chinesesimp>渐化图标</Chinesesimp>
             <Japanese>ドレイン アイコン</Japanese>
             <Polish>Ubywające ikony</Polish>
             <Russian>Исчезающие иконки</Russian>
@@ -288,6 +305,7 @@
             <English>HUD Show Level</English>
             <German>HUD zeigen Level</German>
             <Chinese>界面顯示程度</Chinese>
+            <Chinesesimp>界面显示程度</Chinesesimp>
             <Japanese>HUD 表示レベル</Japanese>
             <Polish>Widok HUD</Polish>
             <Russian>Уровень для отображения иконок</Russian>
@@ -297,6 +315,7 @@
             <English>Automatically show the HUD when either thirst or hunger are above this level.</English>
             <German>Zeigt automatisch das HUD an, sobald Durst oder Hunger über diesem Level sind.</German>
             <Chinese>在飲食低於多少程度時顯示界面。</Chinese>
+            <Chinesesimp>在饮食能量低于多少程度时显示界面。</Chinesesimp>
             <Japanese>この値以上に空腹感か乾きを感じると自動的に HUD を表示します</Japanese>
             <Polish>Automatycznie pokaż HUD kiedy pragnienie albo głód przekroczy ten poziom</Polish>
             <Russian>Автоматически отображает иконки при достижении определенных уровней голода и жажды.</Russian>
@@ -323,6 +342,7 @@
             <English>Colored Icons - Transparency</English>
             <German>Farbige Icons - Transparenz</German>
             <Chinese>顏色化圖示 - 透明度</Chinese>
+            <Chinesesimp>彩色图标 - 透明度</Chinesesimp>
             <Japanese>色付きアイコン - 透明度</Japanese>
             <Polish>Kolorowe ikony - transparentność</Polish>
             <Russian>Прозрачность цветных иконок</Russian>
@@ -332,6 +352,7 @@
             <English>Controls the transparency of the Colored Icons HUD. Dynamic setting makes the HUD less transparent as thirst or hunger increase.</English>
             <German>Bestimmt die Tranzparenz der farbigen HUD Icons. Die Dynamische Einstellung macht das HUD weniger transparent, wenn Hunger oder Durst steigen.</German>
             <Chinese>控制顏色化圖示的透明度。設定為動態使其界面透明度與飲食需求一樣，越透明越需要。</Chinese>
+            <Chinesesimp>控制彩色图标HUD的透明度。动态设置使HUD的透明度随着口渴或饥饿的增加而减弱。</Chinesesimp>
             <Polish>Kontroluje transparentność kolorowych ikon HUD. Dynamiczne ustawienie zmniejsza przejrzystość wraz z zwiększeniem głodu czy pragnienia.</Polish>
             <Japanese>色付きアイコンの透明度を決定できます。動的に設定されると、喉の渇きや空腹感が増すにつれて、アイコンの透明度を下げます。</Japanese>
             <Russian>Настраивает прозрачность цветных иконок. «Динамическая» делает иконки менее прозрачными при увеличении жажды и голода.</Russian>
@@ -358,6 +379,7 @@
             <English>Water Supply</English>
             <German>Wasservorrat</German>
             <Chinese>飲用水補給</Chinese>
+            <Chinesesimp>饮用水补给</Chinesesimp>
             <Japanese>水資源</Japanese>
             <Russian>Водные ресурсы</Russian>
             <Polish>Źródło wody</Polish>
@@ -366,6 +388,7 @@
             <English>The amount of water available for ACE Field Rations water source actions (-1 disabled, -10 infinite)</English>
             <German>Die Menge des für ACE Feldrationen Wasserquellenaktionen verfügbaren Wassers (-1 ausgeschaltet, -10 unendlich)</German>
             <Chinese>水源可供補充飲用水的次數（-1為關閉，-10為無限次）。</Chinese>
+            <Chinesesimp>水源可供取水的次数（-1为关闭，-10为无限次）。</Chinesesimp>
             <Japanese>ACE フィールド レーションで利用できる水源の量を設定できます。(-1で無効化、-10で無限)</Japanese>
             <Russian>Количество воды, доступной для использования в ACE Полевые рационы. (-1 - отключено, -10 - бесконечно)</Russian>
             <Polish>Ilość wody dostępnej dla Akcji ACE Źródła wody (-1 wyłączone, -10 nieskończone)</Polish>
@@ -374,6 +397,7 @@
             <English>Water Source</English>
             <German>Wasserquelle</German>
             <Chinese>水源</Chinese>
+            <Chinesesimp>水源</Chinesesimp>
             <Japanese>水源</Japanese>
             <Polish>Źródło wody</Polish>
             <Russian>Источник воды</Russian>
@@ -383,6 +407,7 @@
             <English>Check Remaining Water</English>
             <German>Überprüfe verbleibendes Wasser</German>
             <Chinese>檢查剩餘飲用水</Chinese>
+            <Chinesesimp>检查剩余饮用水</Chinesesimp>
             <Japanese>残っている水を確認</Japanese>
             <Polish>Sprawdź ilość wody</Polish>
             <Russian>Проверить остаток воды</Russian>
@@ -392,6 +417,7 @@
             <English>Checking remaining water...</English>
             <German>Überprüfe verbleibendes Wasser...</German>
             <Chinese>檢查剩下的飲用水...</Chinese>
+            <Chinesesimp>检查剩余饮用水中...</Chinesesimp>
             <Japanese>残っている水量を確認中です・・・</Japanese>
             <Polish>Sprawdzanie ilości wody</Polish>
             <Russian>Проверяется остаток воды...</Russian>
@@ -401,6 +427,7 @@
             <English>There are %1 litres left.</English>
             <German>Es sind %1 Liter übrig.</German>
             <Chinese>那還有 %1 公升</Chinese>
+            <Chinesesimp>还剩下 %1 升</Chinesesimp>
             <Japanese>残り %1 リットル残っています。</Japanese>
             <Polish>Pozostało %1 litrów.</Polish>
             <Russian>Осталось %1 л воды</Russian>
@@ -410,6 +437,7 @@
             <English>There is no water left.</English>
             <German>Es ist kein Wasser mehr übrig.</German>
             <Chinese>水已經用完了</Chinese>
+            <Chinesesimp>水已经喝完了。</Chinesesimp>
             <Japanese>水はもうありません。</Japanese>
             <Polish>Nie ma wody</Polish>
             <Russian>Воды больше не осталось</Russian>
@@ -422,11 +450,12 @@
             <Polish>Pij z źródła wody</Polish>
             <Turkish>Mataradan Iç</Turkish>
             <Japanese>水源から飲む</Japanese>
+            <Chinesesimp>从水源处喝水</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Refill">
             <English>Refill</English>
             <Chinese>重新補充</Chinese>
-            <Chinesesimp>笔芯</Chinesesimp>
+            <Chinesesimp>重新取水</Chinesesimp>
             <Czech>Doplňte</Czech>
             <French>Recharge</French>
             <German>Nachfüllung</German>
@@ -443,7 +472,7 @@
         <Key ID="STR_ACE_Field_Rations_Refilling">
             <English>Refilling...</English>
             <Chinese>補充中...</Chinese>
-            <Chinesesimp>加...</Chinesesimp>
+            <Chinesesimp>取水中...</Chinesesimp>
             <Czech>Doplňování...</Czech>
             <French>Remplissage ...</French>
             <German>Nachfüllen...</German>
@@ -460,7 +489,7 @@
         <Key ID="STR_ACE_Field_Rations_ItemRefilled">
             <English>Item Refilled</English>
             <Chinese>物品重新補充</Chinese>
-            <Chinesesimp>项目重新填充</Chinesesimp>
+            <Chinesesimp>物品已重新补充</Chinesesimp>
             <Czech>Položka je vyplněna</Czech>
             <French>Article rechargé</French>
             <German>Artikel nachgefüllt</German>
@@ -478,6 +507,7 @@
             <English>Eating %1...</English>
             <German>Esse %1...</German>
             <Chinese>食用 %1...</Chinese>
+            <Chinesesimp>食用 %1...</Chinesesimp>
             <Japanese>%1を食べています・・・</Japanese>
             <Polish>Jedzenie %1...</Polish>
             <Russian>Поедание %1...</Russian>
@@ -487,6 +517,7 @@
             <English>Drinking %1...</English>
             <German>Trinke %1...</German>
             <Chinese>飲用自 %1...</Chinese>
+            <Chinesesimp>饮用 %1...</Chinesesimp>
             <Japanese>%1を飲んでいます・・・</Japanese>
             <Polish>Picie %1...</Polish>
             <Russian>Выпивание %1...</Russian>
@@ -496,6 +527,7 @@
             <English>Drinking from %1...</English>
             <German>Trinke von %1...</German>
             <Chinese>飲用%1的水中...</Chinese>
+            <Chinesesimp>从%1饮用中...</Chinesesimp>
             <Japanese>%1から飲んでいます・・・</Japanese>
             <Polish>Picie z %1...</Polish>
             <Russian>Выпивание из %1...</Russian>
@@ -508,11 +540,12 @@
             <Turkish>Mataradan Içiliyor...</Turkish>
             <Japanese>水源から飲んでいます・・・</Japanese>
             <German>Trinke von Quelle...</German>
+            <Chinesesimp>从水源处喝水中...</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottle_DisplayName">
             <English>Water Bottle</English>
             <Chinese>飲用水</Chinese>
-            <Chinesesimp>水瓶</Chinesesimp>
+            <Chinesesimp>矿泉水</Chinesesimp>
             <Czech>Láhev na vodu</Czech>
             <French>Bouteille d'eau</French>
             <German>Wasserflasche</German>
@@ -529,7 +562,7 @@
         <Key ID="STR_ACE_Field_Rations_WaterBottle_Description">
             <English>A water bottle</English>
             <Chinese>一罐裝滿水的寶特瓶</Chinese>
-            <Chinesesimp>一个水瓶</Chinesesimp>
+            <Chinesesimp>一罐装满水的矿泉水瓶</Chinesesimp>
             <Czech>Láhev s vodou</Czech>
             <French>Une bouteille d'eau</French>
             <German>Eine Wasserflasche</German>
@@ -546,7 +579,7 @@
         <Key ID="STR_ACE_Field_Rations_WaterBottleHalf_DisplayName">
             <English>Water Bottle (Half)</English>
             <Chinese>飲用水（半罐）</Chinese>
-            <Chinesesimp>水瓶（一半）</Chinesesimp>
+            <Chinesesimp>矿泉水（半瓶）</Chinesesimp>
             <Czech>Vodní láhev (poloviční)</Czech>
             <French>Bouteille d'eau (la moitié)</French>
             <German>Wasserflasche (Hälfte)</German>
@@ -563,7 +596,7 @@
         <Key ID="STR_ACE_Field_Rations_WaterBottleHalf_Description">
             <English>A half full water bottle</English>
             <Chinese>一罐裝滿半罐水的寶特瓶</Chinese>
-            <Chinesesimp>半满水瓶</Chinesesimp>
+            <Chinesesimp>半瓶矿泉水</Chinesesimp>
             <Czech>Polní plná láhev s vodou</Czech>
             <French>Une bouteille d'eau à moitié pleine</French>
             <German>Eine halbvolle Wasserflasche</German>
@@ -580,7 +613,7 @@
         <Key ID="STR_ACE_Field_Rations_WaterBottleEmpty_DisplayName">
             <English>Water Bottle (Empty)</English>
             <Chinese>空寶特瓶</Chinese>
-            <Chinesesimp>水瓶（空）</Chinesesimp>
+            <Chinesesimp>矿泉水（空）</Chinesesimp>
             <Czech>Láhev s vodou (prázdné)</Czech>
             <French>Bouteille d'eau (vide)</French>
             <German>Wasserflasche (leer)</German>
@@ -597,7 +630,7 @@
         <Key ID="STR_ACE_Field_Rations_WaterBottleEmpty_Description">
             <English>An empty water bottle</English>
             <Chinese>一個空寶特瓶</Chinese>
-            <Chinesesimp>一个空的水瓶</Chinesesimp>
+            <Chinesesimp>一个空的矿泉水瓶</Chinesesimp>
             <Czech>Prázdná láhev s vodou</Czech>
             <French>Une bouteille d'eau vide</French>
             <German>Eine leere Wasserflasche</German>
@@ -614,7 +647,7 @@
         <Key ID="STR_ACE_Field_Rations_Canteen_DisplayName">
             <English>Canteen</English>
             <Chinese>水壺</Chinese>
-            <Chinesesimp>食堂</Chinesesimp>
+            <Chinesesimp>水壶</Chinesesimp>
             <Czech>Jídelna</Czech>
             <French>Cantine</French>
             <German>Feldflasche</German>
@@ -631,7 +664,7 @@
         <Key ID="STR_ACE_Field_Rations_Canteen_Description">
             <English>A canteen filled with water</English>
             <Chinese>一個裝滿水的水壺</Chinese>
-            <Chinesesimp>一个装满水的食堂</Chinesesimp>
+            <Chinesesimp>一个装满水的水壶</Chinesesimp>
             <Czech>Jídelna naplněná vodou</Czech>
             <French>Une cantine remplie d'eau</French>
             <German>Eine Feldflasche mit Wasser gefüllt</German>
@@ -648,7 +681,7 @@
         <Key ID="STR_ACE_Field_Rations_CanteenHalf_DisplayName">
             <English>Canteen (Half)</English>
             <Chinese>水壺（半罐）</Chinese>
-            <Chinesesimp>食堂（一半）</Chinesesimp>
+            <Chinesesimp>水壶（半壶）</Chinesesimp>
             <Czech>Jídelna (poloviční)</Czech>
             <French>Cantine (Demi)</French>
             <German>Feldflasche (halb)</German>
@@ -665,7 +698,7 @@
         <Key ID="STR_ACE_Field_Rations_CanteenHalf_Description">
             <English>A canteen half filled with water</English>
             <Chinese>剩下一半水的水壺</Chinese>
-            <Chinesesimp>食堂一半装满了水</Chinesesimp>
+            <Chinesesimp>剩一半水的水壶</Chinesesimp>
             <Czech>Jídelna naplněná vodou</Czech>
             <French>Une cantine à moitié remplie d'eau</French>
             <German>Eine Feldflasche zur Hälfte mit Wasser gefüllt</German>
@@ -682,7 +715,7 @@
         <Key ID="STR_ACE_Field_Rations_CanteenEmpty_DisplayName">
             <English>Canteen (Empty)</English>
             <Chinese>水壺（空）</Chinese>
-            <Chinesesimp>食堂（空）</Chinesesimp>
+            <Chinesesimp>水壶（空）</Chinesesimp>
             <Czech>Jídelna (prázdné)</Czech>
             <French>Cantine (Vide)</French>
             <German>Feldflasche (leer)</German>
@@ -699,7 +732,7 @@
         <Key ID="STR_ACE_Field_Rations_CanteenEmpty_Description">
             <English>An empty canteen</English>
             <Chinese>一個空的水壺</Chinese>
-            <Chinesesimp>一个空的食堂</Chinesesimp>
+            <Chinesesimp>一个空的水壶</Chinesesimp>
             <Czech>Prázdná jídelna</Czech>
             <French>Une cantine vide</French>
             <German>Eine leere Feldflasche</German>
@@ -717,6 +750,7 @@
             <English>Refreshing lemon and lime flavored soft drink</English>
             <German>Ein erfrischender Softdrink mit Zitronen- und Limettengeschmack.</German>
             <Chinese>清新檸檬以及有著酸橙味的汽水</Chinese>
+            <Chinesesimp>清爽的柠檬和青柠味汽水</Chinesesimp>
             <Japanese>新鮮なレモンとライムの風味を味わえるソフト ドリンク</Japanese>
             <Polish>Odświeżający napój cytronowo-limonkowy</Polish>
             <Russian>Освежающий напиток со вкусом лимона и лайма</Russian>
@@ -726,6 +760,7 @@
             <English>Orange flavored soft drink with a tingly, fruity taste</English>
             <German>Ein nach Orange schmeckender Softdrink mit einem prickelndem und fruchtigem Geschmack</German>
             <Chinese>有著微微的橘子水果味的汽水</Chinese>
+            <Chinesesimp>橙子味汽水，有刺鼻的水果味</Chinesesimp>
             <Japanese>口いっぱいに果物を感じるオレンジ風味のソフト ドリンク</Japanese>
             <Polish>Napój pomarańczowy</Polish>
             <Russian>Напиток с апельсиновым вкусом</Russian>
@@ -735,6 +770,7 @@
             <English>Red Gull gives you wings</English>
             <German>Red Gull verleiht Flügel</German>
             <Chinese>紅鷹讓你猛虎添翼</Chinese>
+            <Chinesesimp>红鹰让你猛虎添翼</Chinesesimp>
             <Japanese>レッドガルは翼をさずける</Japanese>
             <Polish>Red Gull doda ci skrzydeł</Polish>
             <Russian>Рэд Гулл окрыляет!</Russian>
@@ -743,7 +779,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_DisplayName">
             <English>MRE Lamb Curry</English>
             <Chinese>軍糧 羊肉咖哩</Chinese>
-            <Chinesesimp>MRE羊肉咖喱</Chinesesimp>
+            <Chinesesimp>MRE羊肉咖喱饭</Chinesesimp>
             <Czech>MRE jehněčí kari</Czech>
             <French>MRE Curry d'agneau</French>
             <German>EPA Lamm Curry</German>
@@ -760,7 +796,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_Description">
             <English>An MRE containing Lamb Curry. Heat for best effect</English>
             <Chinese>含有羊肉咖哩的軍用口糧。加熱以達到最佳效果</Chinese>
-            <Chinesesimp>含有羊肉咖喱的MRE。加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>含有羊肉咖喱饭的MRE。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE obsahující Lamb Curry. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE contenant du Curry d'agneau. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Lamm Curry. Für den besten Geschmack erhitzen.</German>
@@ -778,6 +814,7 @@
             <English>MRE Beef Stew</English>
             <German>EPA Rindereintopf</German>
             <Chinese>軍糧 牛肉燉湯</Chinese>
+            <Chinesesimp>MRE炖牛肉汤</Chinesesimp>
             <Japanese>MRE ビーフ シチュー</Japanese>
             <Polish>MRE Gulasz wołowy</Polish>
             <Russian>ИРП Тушеная говядина</Russian>
@@ -787,6 +824,7 @@
             <English>An MRE containing Beef Stew. Heat for best effect</English>
             <German>Eine EPA, welche Rindereintopf beeinhaltet. Für den besten Geschmack erhitzen.</German>
             <Chinese>含有牛肉燉湯的軍用口糧。加熱以達到最佳效果</Chinese>
+            <Chinesesimp>含有牛肉炖汤的MRE。加热以达到最佳效果</Chinesesimp>
             <Japanese>ビーフ シチューの MRE。温めるとなお美味しい</Japanese>
             <Polish>MRE zawierające gulasz wołowy. Podgrzej dla najlepszego efektu</Polish>
             <Russian>Сухой паёк, содержащий тушеную говядину. Перед употреблением рекомендуется разогреть</Russian>
@@ -812,7 +850,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_CreamTomatoSoup_Description">
             <English>An MRE containing Cream Tomato Soup. Mix with water and heat for best effect</English>
             <Chinese>含有奶油番茄湯的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
-            <Chinesesimp>含有奶油番茄汤的MRE。 用水和热混合以获得最佳效果</Chinesesimp>
+            <Chinesesimp>含有奶油番茄汤的MRE。添水加热以获得最佳效果</Chinesesimp>
             <Czech>MRE obsahující krémovou rajčatovou polévku. Směs s vodou a teplem pro nejlepší efekt</Czech>
             <French>Un MRE contenant de la soupe à la tomate et à la crème. Mélanger avec de l'eau et chauffer pour obtenir le meilleur effet</French>
             <German>Eine EPA mit Creme Tomatensuppe. Für beste Wirkung mit Wasser und Hitze mischen.</German>
@@ -846,7 +884,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_CreamChickenSoup_Description">
             <English>An MRE containing Chicken Soup. Mix with water and heat for best effect</English>
             <Chinese>含有雞湯的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
-            <Chinesesimp>含有鸡汤的MRE。 用水和热混合以获得最佳效果</Chinesesimp>
+            <Chinesesimp>含有鸡汤的MRE。添水加热以获得最佳效果</Chinesesimp>
             <Czech>MRE obsahující kuřecí polévku. Směs s vodou a teplem pro nejlepší efekt</Czech>
             <French>Un MRE contenant une soupe au poulet. Mélanger avec de l'eau et chauffer pour obtenir le meilleur effet</French>
             <German>Eine EPA mit Hühnersuppe. Für beste Wirkung mit Wasser und Hitze mischen.</German>
@@ -880,7 +918,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenTikkaMasala_Description">
             <English>An MRE with Chicken Tikka Masala. Heat for best effect</English>
             <Chinese>含有瑪撒拉雞的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
-            <Chinesesimp>与鸡Tikka马萨拉MRE。 加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>与鸡Tikka马萨拉MRE。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE s kuřecím masem Tikka Masala. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE avec du poulet Tikka Masala. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Hühnchen Tikka Masala. Für den besten Geschmack erhitzen.</German>
@@ -914,7 +952,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_SteakVegetables_Description">
             <English>An MRE containing Steak and Vegetables. Heat for best effect</English>
             <Chinese>包含牛排和蔬菜的軍用口糧。 加熱以達到最佳效果</Chinese>
-            <Chinesesimp>包含牛排和蔬菜的MRE。 加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>包含牛排和蔬菜的MRE。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE obsahující steak a zeleninu. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE contenant du bifteck et des légumes. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Steak und Gemüse. Für den besten Geschmack erhitzen.</German>
@@ -948,7 +986,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_MeatballsPasta_Description">
             <English>An MRE containing Meatballs and Pasta. Heat for best effect</English>
             <Chinese>含有肉丸和意大利麵的軍用口糧。 加熱以達到最佳效果</Chinese>
-            <Chinesesimp>含有肉丸和意大利面的MRE。 加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>含有肉丸和意大利面的MRE。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE obsahující maso a těstoviny. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE contenant des boulettes de viande et des pâtes. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Fleischbällchen und Pasta. Für den besten Geschmack erhitzen.</German>
@@ -982,7 +1020,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenHerbDumplings_Description">
             <English>An MRE containing Chicken with Herb Dumplings. Heat for best effect</English>
             <Chinese>含有雞肉和香草餃子的軍用口糧。 加熱以達到最佳效果</Chinese>
-            <Chinesesimp>含有鸡肉和香草饺子的MRE。 加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>含有鸡肉和香草饺子的MRE。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE obsahující kuře s bylinkovými knedlíky. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE contenant du poulet et des dumplings aux fines herbes. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Hühnchen mit Kräuterknödeln. Für den besten Geschmack erhitzen.</German>
@@ -999,7 +1037,7 @@
         <Key ID="STR_ACE_Field_Rations_Humanitarian_Ration_DisplayName">
             <English>Humanitarian Ration</English>
             <Chinese>人道主義口糧</Chinese>
-            <Chinesesimp>人道主义配给</Chinesesimp>
+            <Chinesesimp>人道主义口粮</Chinesesimp>
             <Czech>Humanitární poměr</Czech>
             <French>Ration humanitaire</French>
             <German>Humanitäre Ration</German>
@@ -1015,7 +1053,7 @@
         <Key ID="STR_ACE_Field_Rations_Humanitarian_Ration_Description">
             <English>A Humanitarian Ration intended to serve as a person's food supply during crises</English>
             <Chinese>人道主義口糧意圖在危機期間充當人的食物供應</Chinese>
-            <Chinesesimp>人道主义配额意图在危机期间充当人的食物供应</Chinesesimp>
+            <Chinesesimp>用于危机期间个人食物供应的人道主义口粮。</Chinesesimp>
             <Czech>Humanitární rada, která má sloužit jako zásobování potravinami během krizí</Czech>
             <French>Une ration humanitaire destinée à servir d'approvisionnement alimentaire en cas de crise</French>
             <German>Eine humanitäre Ration, die dazu bestimmt ist, in Krisenzeiten als Nahrung für eine Person zu dienen</German>

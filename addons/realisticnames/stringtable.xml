@@ -1332,6 +1332,7 @@
             <Russian>M183 Комплектный подрывной заряд (Бросаемый)</Russian>
             <Polish>Ładunek burzący M183 (Rzucany)</Polish>
             <German>M183 Geballte Sprengladung (Werfbar)</German>
+            <Chinesesimp>M183炸药包（可投掷）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1359,6 +1360,7 @@
             <Russian>M112 подрывной заряд (Бросаемый)</Russian>
             <Polish>Ładunek burzący M112 (Rzucany)</Polish>
             <German>M112 Sprengladung (Werfbar)</German>
+            <Chinesesimp>M112塑性炸药（可投掷）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -1390,6 +1392,7 @@
             <Czech>V40 Mini-Granát</Czech>
             <Spanish>Mini Granada V40</Spanish>
             <Turkish>V40 Mini-El Bombası</Turkish>
+            <Chinesesimp>V40迷你手榴弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -3952,6 +3955,7 @@
             <French>ELCAN SpecterOS (Forêt)</French>
             <Japanese>ELCAN SpecterOS (緑地)</Japanese>
             <German>ELCAN SpecterOS (Grün)</German>
+            <Chinesesimp>ELCAN SpecterOS (繁茂)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
@@ -3959,6 +3963,7 @@
             <French>ELCAN SpecterOS (Désert)</French>
             <Japanese>ELCAN SpecterOS (乾燥地帯)</Japanese>
             <German>ELCAN SpecterOS (Trocken)</German>
+            <Chinesesimp>ELCAN SpecterOS (干旱)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
@@ -3966,6 +3971,7 @@
             <French>ELCAN SpecterOS 7.62 (Noire)</French>
             <Japanese>ELCAN SpecterOS 7.62 (ブラック)</Japanese>
             <German>ELCAN SpecterOS 7.62 (Schwarz)</German>
+            <Chinesesimp>ELCAN SpecterOS 7.62 (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
@@ -3973,6 +3979,7 @@
             <French>ELCAN SpecterOS 7.62 (Forêt)</French>
             <Japanese>ELCAN SpecterOS 7.62 (緑地)</Japanese>
             <German>ELCAN SpecterOS 7.62 (Grün)</German>
+            <Chinesesimp>ELCAN SpecterOS 7.62 (繁茂)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
@@ -3980,6 +3987,7 @@
             <French>ELCAN SpecterOS 7.62 (Désert)</French>
             <Japanese>ELCAN SpecterOS 7.62 (乾燥地帯)</Japanese>
             <German>ELCAN SpecterOS 7.62 (Trocken)</German>
+            <Chinesesimp>ELCAN SpecterOS 7.62 (干旱)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4242,6 +4250,7 @@
             <French>Burris XTR II (Usée)</French>
             <Japanese>Burris XTR II (使い古し)</Japanese>
             <German>Burris XTR II (Alt)</German>
+            <Chinesesimp>Burris XTR II (陈旧)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
@@ -4249,6 +4258,7 @@
             <French>Burris XTR II (ASP-1 Kir)</French>
             <Japanese>Burris XTR II (ASP-1 Kir)</Japanese>
             <German>Burris XTR II (ASP-1 Kir)</German>
+            <Chinesesimp>Burris XTR II (ASP-1 Kir)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4301,6 +4311,7 @@
             <French>EOTech XPS3 (Forêt)</French>
             <Japanese>EOTech XPS3 (緑地)</Japanese>
             <German>EOTech XPS3 (Grün)</German>
+            <Chinesesimp>EOTech XPS3 (繁茂)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
@@ -4308,6 +4319,7 @@
             <French>EOTech XPS3 (Désert)</French>
             <Japanese>EOTech XPS3 (乾燥地帯)</Japanese>
             <German>EOTech XPS3 (Trocken)</German>
+            <Chinesesimp>EOTech XPS3 (干旱)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4487,7 +4499,7 @@
             <Portuguese>P90 TR (Preto)</Portuguese>
             <Japanese>P90 TR (ブラック)</Japanese>
             <Chinese>P90 TR (黑色)</Chinese>
-            <Chinesesimp>P90 TR (黑色)</Chinesesimp>
+            <Chinesesimp>P90 TR (黑色)</Chinesesimp>
             <Korean>P90 TR (Black)</Korean>
             <Turkish>P90 TR (Siyah)</Turkish>
         </Key>
@@ -4759,7 +4771,7 @@
             <Russian>Магазин из 50-ти 5,7 мм</Russian>
             <Japanese>5.7mm 50 発入り弾倉</Japanese>
             <Chinese>5.7mm 50發 彈匣</Chinese>
-            <Chinesesimp>5.7mm 50发 弹匣</Chinesesimp>
+            <Chinesesimp>5.7mm 50发 弹匣</Chinesesimp>
             <Korean>5.7mm 50Rnd Mag</Korean>
             <Turkish>5.7mm 50Rnd Şarjör</Turkish>
         </Key>
@@ -5030,7 +5042,7 @@
             <Czech>M14 (klasický)</Czech>
             <Portuguese>M14 (clássico)</Portuguese>
             <Korean>M14 (표준)</Korean>
-            <Chinesesimp>M14 (經典)</Chinesesimp>
+            <Chinesesimp>M14 (经典)</Chinesesimp>
             <Japanese>M14 (クラシック)</Japanese>
             <Turkish>M14 (klasik)</Turkish>
             <Hungarian>M14 (klasszikus)</Hungarian>
