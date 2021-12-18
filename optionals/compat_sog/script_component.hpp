@@ -5,5 +5,7 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#include "\z\ace\addons\refuel\defines.hpp"
+
 #define EXPLOSIVES_PLACE(CLASS) EGVAR(explosives,DOUBLES(Place,CLASS))
 #define QEXPLOSIVES_PLACE(CLASS) QUOTE(EXPLOSIVES_PLACE(CLASS))
