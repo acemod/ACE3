@@ -1166,8 +1166,8 @@
             <Russian>Поддерживается доп. прицелом</Russian>
             <Portuguese>Secundária suportada</Portuguese>
             <French>Secondaire supportée</French>
-            <Chinese>副武器支援</Chinese>
-            <Chinesesimp></Chinesesimp>
+            <Chinese>次要武器支援</Chinese>
+            <Chinesesimp>副武器支援</Chinesesimp>
             <Czech>Vedlejší část hledí podporuje</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
