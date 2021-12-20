@@ -265,13 +265,6 @@ class ACE_Medical_Injuries {
                 weighting[] = {{0.30, 1}};
             };
         };
-        class burn {
-            thresholds[] = {{0, 1}};
-            selectionSpecific = 0;
-            class ThermalBurn {
-                weighting[] = {{0, 1}};
-            };
-        };
         class drowning {
             //No related wounds as drowning should not cause wounds/bleeding. Can be extended for internal injuries if they are added.
             thresholds[] = {{0, 0}};
@@ -283,10 +276,10 @@ class ACE_Medical_Injuries {
             woundsHandler = QFUNC(woundsHandlerBurning);
         };
         class burn {
-            thresholds[] = {{0.01, 1}, {0.01, 0}};
+            thresholds[] = {{0, 1}};
             selectionSpecific = 0;
             class ThermalBurn {
-                weighting[] = {{0.01, 1}, {0.01, 0}};
+                weighting[] = {{0, 1}};
             };
         };
         class unknown {
