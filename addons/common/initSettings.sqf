@@ -1,4 +1,5 @@
-private _category = localize LSTRING(ACEKeybindCategoryCommon);
+private _category = LLSTRING(ACEKeybindCategoryCommon);
+private _categoryColors = [_category, format ["| %1 |", LELSTRING(common,subcategory_colors)]];
 
 [
     QGVAR(checkPBOsAction),
@@ -49,7 +50,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     QGVAR(displayTextColor),
     "COLOR",
     [LSTRING(SettingDisplayTextColorName),LSTRING(SettingDisplayTextColorDesc)],
-    _category,
+    _categoryColors,
     [0, 0, 0, 0.1],
     0
 ] call CBA_fnc_addSetting;
@@ -58,7 +59,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     QGVAR(displayTextFontColor),
     "COLOR",
     [LSTRING(SettingDisplayTextFontColorName),LSTRING(SettingDisplayTextFontColorDesc)],
-    _category,
+    _categoryColors,
     [1, 1, 1, 1],
     0
 ] call CBA_fnc_addSetting;

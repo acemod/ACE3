@@ -196,6 +196,7 @@
             <Polish>Akcje przy źrodle wody</Polish>
             <Turkish>Su Içme Animasyonu</Turkish>
             <Japanese>水源動作</Japanese>
+            <German>Wasserquellen-Aktionen</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_Description">
             <English>Controls what actions are available on water sources.</English>
@@ -203,6 +204,7 @@
             <Polish>Kontroluje jakie akcje są dostępne przy źrodle wody.</Polish>
             <Turkish>Su içerken hangi animasyonu yapacağını belirler</Turkish>
             <Japanese>水源で可能な動作を設定します。</Japanese>
+            <German>Bestimmt, welche Aktionen an Wasserquellen verfügbar sind.</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RefillOnly">
             <English>Refill Only</English>
@@ -210,6 +212,7 @@
             <Polish>Tylko napełnij</Polish>
             <Turkish>Sadece içeceği iç</Turkish>
             <Japanese>汲むだけ</Japanese>
+            <German>Nur Befüllen</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_DisplayName">
             <English>Terrain Object Actions</English>
@@ -217,6 +220,7 @@
             <Polish>Akcje Objektu terenu</Polish>
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
             <Japanese>マップ オブジェクト動作</Japanese>
+            <German>Geländeobjekt-Aktionen</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_Description">
             <English>Enables water source actions for terrain objects.</English>
@@ -224,6 +228,7 @@
             <Polish>Umożliwia akcje przy źrodle wody na obiektach terenu.</Polish>
             <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
             <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
+            <German>Aktiviert Wasserquellen-Aktionen für Geländeobjekte.</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
             <English>Affect Advanced Fatigue</English>
@@ -502,6 +507,7 @@
             <Polish>Picie z źródła </Polish>
             <Turkish>Mataradan Içiliyor...</Turkish>
             <Japanese>水源から飲んでいます・・・</Japanese>
+            <German>Trinke von Quelle...</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottle_DisplayName">
             <English>Water Bottle</English>

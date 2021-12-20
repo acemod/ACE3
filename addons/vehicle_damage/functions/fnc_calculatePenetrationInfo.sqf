@@ -26,13 +26,13 @@ _projectileData params ["_projectileType", "_projectileConfig"];
     Perforation Calculation of APFSDS:
         Tungsten/Depleted Uranium: Rods
             P/Lw = a * (1 / tanh(b0 + b1 * (Lw/D))) * cos^m (theta) * sqrt (Pp / Pt) * e^((-(c0 + c1 * BHNT) * BHNT) / (Pp * Vt^2))
-            
+
         Steel Rods
             P/Lw = a * (1 / tanh(b0 + b1 * (Lw/D))) * cos^m (theta) * sqrt (Pp / Pt) * e^((-c * BHNT^k * BHNP^n) / (Pp * Vt^2))
-            
+
     Penetration Calculation of Tungsten APFSDS (Used for all penetrators):
         P/Lw = a * (1 / tanh(b0 + b1 * (Lw/D))) sqrt (Pp / Pt) * e^((-(c0 + c1 * BHNT) * BHNT) / (Pp * Vt^2))
-        
+
     where:
         Penetrator:
             D = Diameter of penetrator rod (always 22mm)
@@ -42,33 +42,33 @@ _projectileData params ["_projectileType", "_projectileConfig"];
             theta = NATO Obliquity angle of Penetration
             Pp = Penetrator Density in kg/m^3
             BHNP = Brinell hardness number of penetrator
-            
+
         Target:
             Pt = target density in kg/m^3 (always 7840kg/m^3)
             d = plate thickness in millimeters
             BHNT = Brinell hardness number of target (always 350)
-        
+
         Material Data:
             Tungsten:
                 Pp = 19300
                 BHNP = N/A
-                
+
                 a = 0.994
                 c0 = 134.5
                 c1 = -0.148
-                
+
             Depleted Uranium:
                 Pp = 18600
                 BHNP = N/A
-                
+
                 a = 0.825
                 c0 = 90.0
                 c1 = -0.0849
-            
+
             Steel:
                 Pp = 7850
                 BHNP = 500
-                
+
                 a = 1.104
                 c = 9874
                 k = 0.3598

@@ -274,7 +274,7 @@ class CfgAmmo {
     class rhs_ammo_ap_penetrator: Sh_125mm_APFSDS {
         EGVAR(vehicle_damage,incendiary) = 0.1;
     };
-    
+
     class M_Titan_AT;
     class rhs_ammo_atgmCore_base: M_Titan_AT {
         EGVAR(vehicle_damage,incendiary) = 1.0;
@@ -282,17 +282,17 @@ class CfgAmmo {
     class rhs_ammo_atgmBase_base: M_Titan_AT {
         EGVAR(vehicle_damage,incendiary) = 1.0;
     };
-    
+
     class rhs_ammo_rpgShell_base;
     class rhs_ammo_og9v: rhs_ammo_rpgShell_base {
         EGVAR(vehicle_damage,incendiary) = 0.1;
     };
-    
+
     class rhs_ammo_rpg15Shell_base;
     class rhs_ammo_og15v: rhs_ammo_rpg15Shell_base {
         EGVAR(vehicle_damage,incendiary) = 0.1;
     };
-    
+
     class B_30mm_AP;
     class rhs_ammo_30x165mm_base: B_30mm_AP {
         EGVAR(vehicle_damage,incendiary) = 0.2;

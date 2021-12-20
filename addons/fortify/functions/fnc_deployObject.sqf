@@ -43,7 +43,7 @@ private _icons = [["alt", localize "str_3den_display3den_entitymenu_movesurface_
 [_lmb, _rmb, _wheel, _icons] call EFUNC(interaction,showMouseHint);
 
 private _mouseClickID = [_player, "DefaultAction", {GVAR(isPlacing) == PLACE_WAITING}, {GVAR(isPlacing) = PLACE_APPROVE}] call EFUNC(common,addActionEventHandler);
-[QGVAR(onDeployStart), [_player, _object, _cost]] call CBA_fnc_localEvent;
+[QXGVAR(onDeployStart), [_player, _object, _cost]] call CBA_fnc_localEvent;
 
 [{
     params ["_args", "_pfID"];

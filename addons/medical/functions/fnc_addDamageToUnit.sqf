@@ -9,6 +9,8 @@
  * 2: Body part ("Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg") <STRING>
  * 3: Projectile Type <STRING>
  * 4: Source <OBJECT>
+ * 5: Unused parameter maintained for backwards compatibility <ARRAY> (default: [])
+ * 6: Override Invulnerability <BOOL> (default: true)
  *
  * Return Value:
  * Successful <BOOL>
@@ -21,8 +23,16 @@
  */
 // #define DEBUG_TESTRESULTS
 
-params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_bodyPart", "", [""]], ["_typeOfDamage", "", [""]], ["_instigator", objNull, [objNull]]];
-TRACE_5("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator);
+params [
+    ["_unit", objNull, [objNull]],
+    ["_damageToAdd", -1, [0]],
+    ["_bodyPart", "", [""]],
+    ["_typeOfDamage", "", [""]],
+    ["_instigator", objNull, [objNull]],
+    "_",
+    ["_overrideInvuln", true, [true]]
+];
+TRACE_7("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray,_overrideInvuln);
 
 _bodyPart = toLower _bodyPart;
 private _bodyPartIndex = ALL_BODY_PARTS find _bodyPart;
@@ -30,6 +40,10 @@ if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }
 if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1", _this); false};
 if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]", _this, local _unit); false};
 if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this); false};
+
+if (!_overrideInvuln && {!((isDamageAllowed _unit) && {_unit getVariable [QEGVAR(medical,allowDamage), true]})}) exitWith {
+    ERROR_1("addDamageToUnit - unit invulnerable %1", _this); false
+};
 
 // Extension is case sensitive and expects this format (different from ALL_BODY_PARTS)
 _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;

@@ -1891,5 +1891,9 @@
             <French>Aucune cargaison chargée</French>
             <Turkish>Kargo yüklenmedi</Turkish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleBurn_DisplayName">
+            <English>Burn Unit</English>
+            <German>Einheit anzünden</German>
+        </Key>
     </Package>
 </Project>

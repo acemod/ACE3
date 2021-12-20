@@ -71,7 +71,7 @@ class GVAR(m1919a4_carry): Launcher_Base_F {
 };
 
 class GVAR(m1919a6_carry): Launcher_Base_F {
-    displayName = CSTRING(csw_m1919a4);
+    displayName = CSTRING(csw_m1919a6);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);

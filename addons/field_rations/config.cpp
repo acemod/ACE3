@@ -51,7 +51,7 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 
-    class XADDON: ADDON {};
+    BWC_CONFIG(XADDON);
 };
 
 #include "CfgEventHandlers.hpp"

@@ -28,7 +28,7 @@ private _fnc_onFinish = {
     params ["_args"];
     _args params ["_player", "_target", "_weapon", "_tempVarName"];
 
-    private _water = _target call acex_field_rations_fnc_getRemainingWater;
+    private _water = _target call EFUNC(field_rations,getRemainingWater);
 
     if (_water <= 0 && {_water != -10}) exitWith {
         [
@@ -46,7 +46,7 @@ private _fnc_condition = {
     _args params ["_player", "_target", "_weapon", "_tempVarName"];
 
     private _temperature = _player getVariable [_tempVarName, 0];
-    private _water = _target call acex_field_rations_fnc_getRemainingWater;
+    private _water = _target call EFUNC(field_rations,getRemainingWater);
 
     if (_water <= 0 && {_water != -10}) exitWith {false};
 
@@ -55,11 +55,11 @@ private _fnc_condition = {
 
         //Remove water from the source, unless it's unlimited
         if (_water != -10) then {
-            [_target, _water - 1] call acex_field_rations_fnc_setRemainingWater;
+            [_target, _water - 1] call EFUNC(field_rations,setRemainingWater);
         };
 
         //Cool the weapon down
-        private _barrelMass = _weapon call FUNC(getBarrelMass);
+        private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
         _temperature = [_temperature, _barrelMass, 20] call FUNC(calculateCooling);
         [_player, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 

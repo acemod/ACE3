@@ -19,13 +19,13 @@ class CfgMagazines {
         displayName = CSTRING(GatlingDescriptionAP);
         displayNameShort = CSTRING(GatlingDescriptionShortAP);
     };
-    
+
     class ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM41: 1000Rnd_Gatling_30mm_Plane_CAS_01_F {
         ammo = "ACE_Gatling_30mm_Sub_CM41";
         displayName = CSTRING(GatlingDescriptionCM41);
         displayNameShort = CSTRING(GatlingDescriptionShortCM41);
     };
-   
+
     class ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM51: 1000Rnd_Gatling_30mm_Plane_CAS_01_F {
         ammo = "ACE_Gatling_30mm_Sub_CM51";
         displayName = CSTRING(GatlingDescriptionCM51);

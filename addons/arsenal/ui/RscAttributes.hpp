@@ -492,7 +492,7 @@ class GVAR(display) {
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             h = QUOTE(safezoneH - 28 * GRID_H);
         };
-        class rightTabContentListnBox : RscListNBox {
+        class rightTabContentListnBox: RscListNBox {
             idc = IDC_rightTabContentListnBox;
             colorBackground[]={0,0,0,0};
             colorSelectBackground[]={1,1,1,0.5};

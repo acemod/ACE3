@@ -34,7 +34,7 @@ class CfgAmmo {
         cost = 500;
         simulationStep = 0.005;
         maxControlRange = 1500;
-        
+
         EGVAR(vehicle_damage,incendiary) = 1.0;
 
         class ace_missileguidance {
@@ -72,7 +72,7 @@ class CfgAmmo {
         };
     };
 
-    class GVAR(super) : GVAR(dragonBase) {
+    class GVAR(super): GVAR(dragonBase) {
         submunitionAmmo = QGVAR(penetrator_super);
         submunitionDirectionType = "SubmunitionModelDirection";
         submunitionInitSpeed = 1000;
@@ -110,7 +110,7 @@ class CfgAmmo {
     };
 
     class ShellBase;
-    class GVAR(serviceCharge) : ShellBase {
+    class GVAR(serviceCharge): ShellBase {
         hit = 1;
         indirectHit = 2;
         indirectHitRange = 1;

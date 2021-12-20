@@ -1134,9 +1134,10 @@ See the make.cfg file for additional build options.
                 if ret == 0:
                     print_green("Created: {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
                     print("Removing any old signature keys...")
-                    purge(os.path.join(module_root, release_dir, project, "addons"), "^.*\.bisign$","*.bisign")
-                    purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
-                    purge(os.path.join(module_root, release_dir, project, "keys"), "^.*\.bikey$","*.bikey")
+                    for root, _dirs, files in os.walk(os.path.join(module_root, release_dir)):
+                        for file in files:
+                            if file.endswith(".bisign") or file.endswith(".bikey"):
+                                os.remove(os.path.join(root, file))
                 else:
                     print_error("Failed to create key!")
 

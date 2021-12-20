@@ -4,7 +4,7 @@ class ACE_Settings {
     };
     class GVAR(muzzleVelocityVariationEnabled) {
         movedToSQF = 1;
-    }; 
+    };
     class GVAR(ammoTemperatureEnabled) {
         movedToSQF = 1;
     };

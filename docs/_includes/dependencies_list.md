@@ -211,7 +211,7 @@
 {% endif %}
 
 {% if include.component == "killtracker" %}
-`ace_medical`
+`ace_common`
 {% endif %}
 
 {% if include.component == "laser" %}

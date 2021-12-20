@@ -12,14 +12,6 @@ ace:
     patch: 2
     build: 49
 
-acex:
-  githubUrl: https://github.com/acemod/ACEX
-  version:
-    major: 3
-    minor: 5
-    patch: 2
-    build: 19
-
 
 markdown: kramdown
 kramdown:
