@@ -4096,21 +4096,21 @@
             <Chinese>你正開始對 %1 (%2) 縫合傷口中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Stitching">
-            <English>Stitching</English>
-            <Russian>Наложение швов</Russian>
-            <Spanish>Suturando</Spanish>
-            <German>Nähen</German>
+            <English>Stitching...</English>
+            <Russian>Наложение швов...</Russian>
+            <Spanish>Suturando...</Spanish>
+            <German>Nähen...</German>
             <French>Suture en cours...</French>
-            <Polish>Szycie</Polish>
-            <Hungarian>Összevarrás</Hungarian>
-            <Italian>Suturando</Italian>
-            <Portuguese>Suturando</Portuguese>
-            <Czech>Šití</Czech>
-            <Japanese>縫合中</Japanese>
-            <Korean>붕합중</Korean>
-            <Chinesesimp>正在缝合</Chinesesimp>
-            <Chinese>縫合中</Chinese>
-            <Turkish>Dikiş</Turkish>
+            <Polish>Szycie...</Polish>
+            <Hungarian>Összevarrás...</Hungarian>
+            <Italian>Suturando...</Italian>
+            <Portuguese>Suturando...</Portuguese>
+            <Czech>Šití...</Czech>
+            <Japanese>縫合中...</Japanese>
+            <Korean>붕합중...</Korean>
+            <Chinesesimp>正在缝合...</Chinesesimp>
+            <Chinese>縫合中...</Chinese>
+            <Turkish>Dikiş...</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_You_Treat_Airway">
             <English>You treat the airway of %1</English>
