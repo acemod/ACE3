@@ -31,42 +31,39 @@ if (_openWounds isEqualTo []) exitWith {};
 if (_bandageRemaining == 0) exitWith {};
 
 // Figure out which injury for this bodypart is the best choice to bandage
-private _targetWound = [_patient, _bandage, _partIndex, _bandageRemaining] call FUNC(findMostEffectiveWound);
-_targetWound params ["_wound", "_woundIndex", "_effectiveness"];
+private _targetWounds = [_patient, _bandage, _partIndex, _bandageRemaining] call FUNC(findMostEffectiveWound);
 
 // Everything is patched up on this body part already
-if (_effectiveness == -1) exitWith {};
+if (_targetWounds isEqualTo createHashMap) exitWith {};
 
-// Find the impact this bandage has and reduce the amount this injury is present
-private _amountOf = _wound select 2;
-private _impact = _effectiveness min _amountOf;
-_amountOf = _amountOf - _impact;
-_wound set [2, _amountOf];
-_openWounds set [_woundIndex, _wound];
+private _treatedDamageOf = 0;
+{
+    private _wound = _x;
+    _wound params ["_classID", "", "_amountOf", "_bleeding", "_damage"];
+    _y params ["_effectiveness", "_woundIndex", "_impact"];
+
+    // Reduce the amount this injury is present
+    _openWounds set [_woundIndex, [_classID, _partIndex, _amountOf - _impact, _bleeding, _damage]];
+    // Store treated damage for clearing trauma
+    _treatedDamageOf = _treatedDamageOf + (_impact * _damage);
+
+    // Handle the reopening of bandaged wounds
+    if (_impact > 0 && {GVAR(advancedBandages) == 2}) then {
+        [_patient, _impact, _partIndex, _woundIndex, _wound, _bandage] call FUNC(handleBandageOpening);
+    };
+} forEach _targetWounds;
 
 _patient setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
-// Percentage of bandage remaining, to be used on other wounds
-private _remainingEffectivenessCoef = 1 - _impact / _effectiveness;
-if (_remainingEffectivenessCoef > 0) then {
-    [QGVAR(bandageLocal), [_patient, _bodyPart, _bandage, _remainingEffectivenessCoef], _patient] call CBA_fnc_targetEvent;
-};
-
-// Handle the reopening of bandaged wounds
-if (_impact > 0 && {GVAR(advancedBandages) == 2}) then {
-    [_patient, _impact, _partIndex, _woundIndex, _wound, _bandage] call FUNC(handleBandageOpening);
-};
-
 // Check if we fixed limping from this treatment
-if (EGVAR(medical,limping) == 1 && {_partIndex > 3} && {_amountOf <= 0} && {_patient getVariable [QEGVAR(medical,isLimping), false]}) then {
+if (EGVAR(medical,limping) == 1 && {_partIndex > 3} && {_patient getVariable [QEGVAR(medical,isLimping), false]}) then {
     [_patient] call EFUNC(medical_engine,updateDamageEffects);
 };
 
 if (GVAR(clearTrauma) == 2) then {
     TRACE_2("clearTrauma - clearing trauma after bandage",_partIndex,_openWounds);
-    private _treatedDamageOf = (_wound select 4) * _impact;
     private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
     private _newDam = (_bodyPartDamage select _partIndex) - _treatedDamageOf;
     if (_newDam < 0.05) then { // Prevent obscenely small damage from lack of floating precision
@@ -86,7 +83,7 @@ if (GVAR(clearTrauma) == 2) then {
     };
 };
 
-if (_amountOf <= 0) then { // Reset treatment condition cache for nearby players if we stopped all bleeding
+if (count _targetWounds > 0) then { // Reset treatment condition cache for nearby players if we stopped all bleeding
     private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call EFUNC(common,isPlayer)};
     TRACE_1("clearConditionCaches: bandage",_nearPlayers);
     [QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
