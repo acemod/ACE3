@@ -24,7 +24,7 @@ private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 if (_partIndex < 0) exitWith { ERROR_1("invalid partIndex - %1",_this); 0 };
 
 private _targetWounds = [_patient, _bandage, _partIndex] call FUNC(findMostEffectiveWound);
-TRACE_3("findMostEffectiveWound",_wound,_woundIndex,_effectiveness);
+TRACE_1("findMostEffectiveWound",_targetWounds);
 
 // Everything is patched up on this body part already
 if (_targetWounds isEqualTo createHashMap) exitWith {0};
@@ -38,7 +38,6 @@ private _bandageTime = 0;
     _wound params ["_classID", "", "_amountOf"];
     _y params ["_effectiveness", "", "_impact"];
     private _category = (_classID % 10);
-    systemChat str _category;
 
     // Base bandage time is based on wound size and remaining percentage
     private _woundTime = _bandageTimeArray select _category;
