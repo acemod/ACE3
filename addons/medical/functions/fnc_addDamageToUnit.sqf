@@ -29,7 +29,7 @@ params [
     ["_bodyPart", "", [""]],
     ["_typeOfDamage", "", [""]],
     ["_instigator", objNull, [objNull]],
-    "_",
+    "",
     ["_overrideInvuln", true, [true]]
 ];
 TRACE_7("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray,_overrideInvuln);
