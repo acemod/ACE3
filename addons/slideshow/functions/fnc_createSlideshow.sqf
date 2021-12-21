@@ -10,6 +10,7 @@
  * 3: Action Names <ARRAY>
  * 4: Slide Duration <NUMBER> (0 disables automatic transitions)
  * 5: Set Name <STRING> (default: localized "Slides")
+ * 6: Texture Selection <NUMBER> (default: 0)
  *
  * Return Value:
  * Slideshow ID <NUMBER>
@@ -26,7 +27,8 @@ params [
     ["_images", [], [[]] ],
     ["_names", [], [[]] ],
     ["_duration", 0, [0]],
-    ["_setName", localize LSTRING(Interaction), [""]]
+    ["_setName", localize LSTRING(Interaction), [""]],
+    ["_selection", 0, [0]]
 ];
 
 // Verify data
@@ -47,7 +49,7 @@ TRACE_5("Information",_objects,_controllers,_images,_names,_setName);
 if (isServer) then {
     // Default images on whiteboards (first image)
     {
-        _x setObjectTextureGlobal [0, _images select 0];
+        _x setObjectTextureGlobal [_selection, _images select 0];
     } count _objects;
 };
 
@@ -82,7 +84,7 @@ if (_duration == 0) then {
             {},
             {true},
             {(_this select 2) call FUNC(addSlideActions)},
-            [_objects, _images, _names, _x, _currentSlideshow],
+            [_objects, _images, _names, _x, _currentSlideshow, _selection],
             [0, 0, 0],
             2
         ] call EFUNC(interact_menu,createAction);
@@ -100,7 +102,7 @@ if (_duration == 0) then {
     missionNamespace setVariable [_varString, 0];
 
     // Automatic transitions handler
-    [FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration], _duration] call CBA_fnc_waitAndExecute;
+    [FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration, _selection], _duration] call CBA_fnc_waitAndExecute;
 };
 
 _currentSlideshow

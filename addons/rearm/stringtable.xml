@@ -656,6 +656,7 @@
             <Russian>Боеприпасы для перевооружения</Russian>
             <Portuguese>Carga de Rearme</Portuguese>
             <Chinese>整裝用貨物</Chinese>
+            <Chinesesimp>重整军备货物</Chinesesimp>
             <French>Stock de munitions</French>
             <Czech>Sklad munice</Czech>
             <Spanish>Cargar munición</Spanish>
@@ -669,6 +670,7 @@
             <Russian>Объем боеприпасов для перевооружения (-1 для отмены)</Russian>
             <Portuguese>A Carga para Rearmamento (-1 para desativar)</Portuguese>
             <Chinese>貨物可以提高多少次整裝（-1為停用）</Chinese>
+            <Chinesesimp>重新武装的货物(-1禁用)</Chinesesimp>
             <French>Le quantité de munitions (en points), qui est disponible pour du réarmement (-1 pour désactiver).</French>
             <Czech>Objekt pro přezbrojování (-1 pro vypnutí)</Czech>
             <Spanish>Cantidad de munición restante para rearmado (-1 para deshabilitar)</Spanish>
@@ -680,6 +682,7 @@
             <Portuguese>Distância para Rearmar</Portuguese>
             <Japanese>再武装距離</Japanese>
             <Chinese>整裝距離</Chinese>
+            <Chinesesimp>整装距离</Chinesesimp>
             <Italian>Distanza di riarmo</Italian>
             <Czech>Přezbrojovací vzdálenost</Czech>
             <Polish>Odległość przezbrojenia</Polish>
@@ -693,6 +696,7 @@
             <Portuguese>A distância máxima que um veículo pode ser rearmado/municiado.</Portuguese>
             <Japanese>車両から再武装できる範囲を決定します。</Japanese>
             <Chinese>與載具之最大可整裝距離</Chinese>
+            <Chinesesimp>车辆可重新整装的最大距离</Chinesesimp>
             <Italian>La distanza massima a cui un veicolo può essere riarmato</Italian>
             <Czech>Maximální vzdálenost na jakou může být vozidlo přezbrojeno</Czech>
             <Polish>Maksymalna odległość na jakiej pojazd może zostać przezbrojony</Polish>

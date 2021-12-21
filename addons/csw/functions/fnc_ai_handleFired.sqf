@@ -56,7 +56,7 @@ private _reloadNeededAmmo = -1;
             };
         } forEach _cswMagazines;
     } forEach _compatibleMags;
-} forEach ([_gunner] + (_staticWeapon nearEntities [["groundWeaponHolder", "ReammoBox_F"], 10]));
+} forEach ([_gunner] + (_staticWeapon nearSupplies 10));
 if (_reloadMag == "") exitWith {TRACE_1("could not find mag",_reloadMag);};
 
 // Figure out what we can add from the magazines we have
@@ -74,11 +74,7 @@ TRACE_4("",_reloadSource,_reloadMag,_reloadNeededAmmo,_bestAmmoToSend);
 if (_bestAmmoToSend == -1) exitWith {ERROR("No ammo");};
 
 // Remove the mag from the source
-if (_reloadSource isKindOf "CaManBase") then {
-    [_reloadSource, _reloadMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
-} else {
-    [_reloadSource, _reloadMag, 1, _bestAmmoToSend] call CBA_fnc_removeMagazineCargo;
-};
+[_reloadSource, _reloadMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
 
 private _timeToLoad = 1;
 if (!isNull(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime")) then {

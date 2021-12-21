@@ -158,6 +158,7 @@
             <English>CTS 7290 9-bang Flash Grenade</English>
             <German>CTS 7290 9-fach Blendgranate</German>
             <Chinese>CTS 7290-9 9閃 閃光彈</Chinese>
+            <Chinesesimp>CTS 7290 9闪 闪光弹</Chinesesimp>
             <Italian>CTS 7290 9- Flash bang Grenade</Italian>
             <Czech>CTS 7290 9 ranný oslepující granát</Czech>
             <Japanese>CTS 7290 9-bang 閃光手榴弾</Japanese>
@@ -446,6 +447,7 @@
             <Russian>Тип: Осветительная ракета - звезда на парашюте</Russian>
             <Portuguese>Tipo: Sinalizador de pára-quedas estrela</Portuguese>
             <Chinese>類型：星式帶傘照明彈</Chinese>
+            <Chinesesimp>类型：星式带伞照明弹</Chinesesimp>
             <French>Type : Fusée éclairante à parachute</French>
             <Czech>Typ: Světlice s padákem</Czech>
             <Turkish>Tür: Yıldız Paraşüt Fişeği</Turkish>
@@ -460,6 +462,7 @@
             <Russian>M583 Осветит. ракета (Белая)</Russian>
             <Portuguese>M583 Sinalizador de Iluminação (Branco)</Portuguese>
             <Chinese>M583 照明彈（白色）</Chinese>
+            <Chinesesimp>M583 照明弹（白色）</Chinesesimp>
             <French>M583 Fusée éclairante (Blanche)</French>
             <Czech>M583 Světlice (Bílá)</Czech>
             <Turkish>M583 Aydınlatma Fişeği (Beyaz)</Turkish>
@@ -474,6 +477,7 @@
             <Russian>M662 Осветит. ракета (Красная)</Russian>
             <Portuguese>M662 Sinalizador de Iluminação (Vermelho)</Portuguese>
             <Chinese>M662 照明彈（紅色）</Chinese>
+            <Chinesesimp>M662 照明弹（红色）</Chinesesimp>
             <French>M662 Fusée éclairante (Rouge)</French>
             <Czech>M662 Světlice (Červená)</Czech>
             <Turkish>M662 Aydınlatma Fişeği (Kırmızı)</Turkish>
@@ -488,6 +492,7 @@
             <Russian>M661 Осветит. ракета (Зеленая)</Russian>
             <Portuguese>M661 Sinalizador de Iluminação (Verde)</Portuguese>
             <Chinese>M661 照明彈（綠色）</Chinese>
+            <Chinesesimp>M661 照明弹（绿色）</Chinesesimp>
             <French>M661 Fusée éclairante (Verte)</French>
             <Czech>M661 Světlice (Zelená)</Czech>
             <Turkish>M661 Aydınlatma Fişeği (Yeşil)</Turkish>
@@ -502,6 +507,7 @@
             <Russian>Тип: ИК-осветительная ракета на парашюте</Russian>
             <Portuguese>Tipo: Sinalizador Infravermelho de Pára-quedas</Portuguese>
             <Chinese>類型：帶傘型紅外線照明彈</Chinese>
+            <Chinesesimp>类型：带伞型红外照明弹</Chinesesimp>
             <French>Type : Fusée IR à parachute</French>
             <Czech>Typ: Infračervená světlice s padákem</Czech>
             <Turkish>Tip : Paraşüt IR Flare</Turkish>
@@ -516,6 +522,7 @@
             <Russian>M992 ИК-осветительная ракета</Russian>
             <Portuguese>M992 Sinalizador de Iluminação Infravermelho</Portuguese>
             <Chinese>M992 紅外線照明彈</Chinese>
+            <Chinesesimp>M992 红外照明弹</Chinesesimp>
             <French>M992 Fusée IR</French>
             <Czech>M992 Infračervená světlice</Czech>
             <Turkish>M992 Illumination IR Flare</Turkish>
@@ -527,6 +534,9 @@
             <French>Charge en sacoche (lançable)</French>
             <Japanese>梱包爆薬 (投てき仕様)</Japanese>
             <Spanish>Carga de mochila explosiva (Lanzable)</Spanish>
+            <Polish>Pakiet ładunków wybuchowych (Rzucany)</Polish>
+            <German>Rucksackladung (Werfbar)</German>
+            <Chinesesimp>炸药包（可投掷）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
@@ -534,6 +544,9 @@
             <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : à balancer sur des trucs qui doivent mourir</French>
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
             <Spanish>Tipo: Carga&lt;br /&gt;Unidades: 1&lt;br /&gt;Usada: Cosas que necesitan morir</Spanish>
+            <Polish>Typ: Ładunek&lt;br/&gt;Naboje: 1&lt;br/&gt;Użycie: Na rzeczach które mają zginąć</Polish>
+            <German>Typ: Ladung &lt;br/&gt;Patronen:1&lt;br/&gt;Benutzt für: Dinge die Sterben müssen</German>
+            <Chinesesimp>类型：炸药&lt;br /&gt;数量：1&lt;br /&gt;用于：需要死亡的事物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
@@ -541,6 +554,9 @@
             <French>Charge explosive lançable. Détonation après 7 secondes.</French>
             <Japanese>投げられる梱包爆薬。起爆までの時間は 7 秒間</Japanese>
             <Spanish>Carga de mochila explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
+            <Polish>Rzucany pakiet ładunków wybuchowych. 7 sekundowy zapalnik</Polish>
+            <German>Werfbare Rucksackladung. 7 Sekunden Zeitzünder</German>
+            <Chinesesimp>一个可投掷的炸药包。7秒定时引信</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
@@ -548,6 +564,9 @@
             <French>Charge explosive (lançable)</French>
             <Japanese>爆薬ブロック (投てき仕様)</Japanese>
             <Spanish>Carga explosiva (Lanzable)</Spanish>
+            <Polish>Ładunek wybuchowy (Rzucany)</Polish>
+            <German>Sprengladung (Werfbar)</German>
+            <Chinesesimp>炸药块（可投掷）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
@@ -555,6 +574,9 @@
             <French>Bloc explosif lançable. Détonation après 7 secondes.</French>
             <Japanese>投げられる爆薬ブロック。起爆までの時間は 7 秒間</Japanese>
             <Spanish>Carga explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
+            <Polish>Rzucany ładunkek wybuchowy. 7 sekundowy zapalnik</Polish>
+            <German>Werfbare Sprengladung. 7 Sekunden Zeitzünder</German>
+            <Chinesesimp>一个可投掷的炸药块。7秒定时引信</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
@@ -562,6 +584,9 @@
             <French>Appliquer une mèche</French>
             <Japanese>短信管へ変更</Japanese>
             <Spanish>Convertir a espoleta corta</Spanish>
+            <Polish>Konwertuj na krótki zapalnik</Polish>
+            <German>Zündschnur verkürzen</German>
+            <Chinesesimp>切换为短引信</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
@@ -569,6 +594,9 @@
             <French>Retirer la mèche</French>
             <Japanese>短信管を削除</Japanese>
             <Spanish>Quitar espoleta corta</Spanish>
+            <Polish>Usuń krótki zapalnik</Polish>
+            <German>Kurze Zündschnur entfernen</German>
+            <Chinesesimp>去除短引信</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -592,6 +620,9 @@
             <French>Autoriser les mèches (charges lançables)</French>
             <Japanese>爆薬変更を許可</Japanese>
             <Spanish>Permitir conversión de explosivos</Spanish>
+            <Polish>Pozwól na konwersję ładunków wybuchowych</Polish>
+            <German>Erlaube die Umwandlung von Sprengstoffen</German>
+            <Chinesesimp>允许爆炸性切换</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
@@ -599,6 +630,9 @@
             <French>Cette option permet de rendre les charges explosives lançables, à la manière des grenades.\nPour celà, ouvrir l'inventaire et double-cliquer sur les charges, afin de leur appliquer une mèche.\nLa mèche peut se retirer en suivant la même procédure.</French>
             <Japanese>爆発物を投てき仕様へ交換できるようにします。</Japanese>
             <Spanish>Permitir convertir explosivos a lanzables</Spanish>
+            <Polish>Zezwala na konwersje ładunków wybuchowych na rzucane wersje</Polish>
+            <German>Erlaube die Umwandlung von Sprengstoffen in werfbare Ladungen</German>
+            <Chinesesimp>允许将炸药转换为可投掷物</Chinesesimp>
         </Key>
     </Package>
 </Project>

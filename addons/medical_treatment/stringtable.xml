@@ -9,6 +9,7 @@
             <French>Traitement</French>
             <Portuguese>Tratamento</Portuguese>
             <Chinese>治療</Chinese>
+            <Chinesesimp>治疗</Chinesesimp>
             <Italian>Trattamento</Italian>
             <Czech>Léčba</Czech>
             <Polish>Leczenie</Polish>
@@ -22,6 +23,7 @@
             <Russian>Медицинский мусор</Russian>
             <Portuguese>Lixo</Portuguese>
             <Chinese>醫療用廢棄物</Chinese>
+            <Chinesesimp>医疗废弃物</Chinesesimp>
             <Italian>Rifiuti</Italian>
             <Czech>Odpadky</Czech>
             <Polish>Śmieci</Polish>
@@ -37,6 +39,7 @@
             <French>Diagnostic avancé</French>
             <Portuguese>Diagnóstico Avançado</Portuguese>
             <Chinese>進階診斷</Chinese>
+            <Chinesesimp>进阶诊断</Chinesesimp>
             <Italian>Diagnosi avanzata</Italian>
             <Czech>Pokročilá diagnóza</Czech>
             <Polish>Zaawansowana Diagnoza</Polish>
@@ -50,6 +53,7 @@
             <Russian>Включает действия «Проверить пульс», «Проверить давление» и «Проверить реакцию» вместо общего действия «Диагностика».</Russian>
             <Portuguese>Ativa as opções de Verificar Pulso, Verificar Pressão Sanguínea e Verificar Resposta, ao invés do diagnóstico geral.</Portuguese>
             <Chinese>啟用檢查脈搏、血壓以及病患反應的動作而非一般的診斷動作。\n當停用時，CPR只會在需要時出現。\n當這個選項啟用時必須診斷病患是否無意識或者心搏停止。</Chinese>
+            <Chinesesimp>启用后，可以检查脉搏、血压和反应治疗，而不是通用诊断。\n禁用时，心肺复苏操作将仅在适当时显示。\n此设置操作启用后必须需要先确定一个人是失去知觉还是心脏骤停。</Chinesesimp>
             <Italian>Abilita le azioni di controllo del polso, controllo della pressione sanguigna e controllo della risposta al trattamento invece dell'azione generica Diagnose.\ Se disabilitata, l'azione di RCP sarà mostrata solo quando l'esecuzione della RCP è appropriata.\Le azioni abilitate da questa impostazione sono necessarie per determinare se una persona è in stato di incoscienza o in arresto cardiaco.</Italian>
             <Czech>Povoluje kontrolu srdečního tepu, krevního tlaku a reakce pacienta namísto univerzální diagnózy.\nKdyž je tato možnost vypnuta, CPR akce bude dostupná pouze pokud je vhodné ji provést.\nAkce které tato možnost zapíná jsou nutné k určení zda je pacient v bezvědomí nebo má srdeční zástavu.</Czech>
             <Polish>Włącza opcje sprawdzania Pulsu, Ciśnienia Tętniczego Krwi i Reakcje Na Ból, zamiast bardziej ogólnej akcji Diagnozuj.\n Po wyłączeniu tej opcji akcja RKO będzie wyświetlana tylko wtedy, gdy jej wykonanie będzie odpowiednie.\n Opcja, która włącza to ustawienie jest potrzebna do ustalenia, czy osoba jest nieprzytomna lub ma zatrzymanie krążenia.</Polish>
@@ -59,6 +63,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
+            <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
+            <Polish>Włączone i pozwala zdiagnozować Śmierć/Zatrzymanie Akcji Serca</Polish>
+            <Japanese>死亡/心停止状態でも診断許可</Japanese>
+            <Russian>Включено &amp; Может диагностировать смерть/остановку сердца</Russian>
+            <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren</German>
+            <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -68,6 +78,7 @@
             <French>Médication avancée</French>
             <Portuguese>Medicação Avançada</Portuguese>
             <Chinese>進階醫療用品</Chinese>
+            <Chinesesimp>进阶医疗用品</Chinesesimp>
             <Czech>Pokročilé léky</Czech>
             <Italian>Medicazione avanzata</Italian>
             <Polish>Zaawansowane leki</Polish>
@@ -81,6 +92,7 @@
             <French>Permet une manipulation étendue et plus approfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine.</French>
             <Portuguese>Ativa a manipulação avançada de medicações. Também permite o uso de Adenosina e Atropina.</Portuguese>
             <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
+            <Chinesesimp>可以扩展、更深入地使用药物。同时，能够使用腺苷以及阿托品。</Chinesesimp>
             <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
             <Italian>Abilita una gestione della medicazione più estesa e approfondita. Permette inoltre l'utilizzo dell'Adenosina.</Italian>
             <German>Ermöglicht erweiterte, mehr tiefgründigere Anwendung von Medikationen. Ebenso ermöglicht es die Benutzung von Adenosin.</German>
@@ -95,6 +107,7 @@
             <French>Pansements avancés</French>
             <Portuguese>Ataduras Avançadas</Portuguese>
             <Chinese>進階包紮</Chinese>
+            <Chinesesimp>进阶包扎</Chinesesimp>
             <Italian>Bendaggi avanzati</Italian>
             <Czech>Pokročilé obvazy</Czech>
             <Polish>Zaawansowane Bandaże</Polish>
@@ -109,6 +122,7 @@
             <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
             <Portuguese>Ativa o uso de tipos diferentes de ataduras ao invés de apenas a atadura básica.</Portuguese>
             <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
+            <Chinesesimp>启用不同绷带类型的治疗操作，而不是通用的绷带操作。\n此外，也可以启用包扎伤口开裂。</Chinesesimp>
             <Italian>Permette azioni di trattamento per diversi tipi di bendaggio al posto del bendaggio generico.</Italian>
             <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
             <Polish>Umożliwia wybranie konkretnego rodzaju bandaża zamiast ogólnej akcji bandażowania.</Polish>
@@ -124,6 +138,8 @@
             <Polish>Aktywne &amp; możliwe ponowne otwarcie</Polish>
             <Turkish>Etkinleştirildi ve Yeniden Açılabilir</Turkish>
             <Spanish>Habilitada y pueden reabrirse</Spanish>
+            <German>Aktiviert und können sich wieder öffnen</German>
+            <Chinesesimp>已启用 &amp; 可以伤口开裂</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_DisplayName">
             <English>Wound Reopening Coefficient</English>
@@ -135,6 +151,7 @@
             <Japanese>再開放係数</Japanese>
             <Turkish>Yara Yeniden Açılma Katsayısı</Turkish>
             <Spanish>Coeficiente de reapertura de heridas</Spanish>
+            <Chinesesimp>伤口开裂系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_Description">
             <English>Coefficient for controlling the wound reopening chance. The final reopening chance is determined by multiplying this value with the specific reopening chance for the wound type and bandage used.</English>
@@ -146,48 +163,43 @@
             <Japanese>傷が再開放する確率の係数を設定できます。再開放は、この数値と傷の種類、そして使用した包帯に応じて左右されます。</Japanese>
             <Turkish>Yaranın yeniden açılma şansını kontrol etme katsayısı. Son yeniden açılma şansı, bu değerin kullanılan yara tipi ve bandaj için spesifik yeniden açılma şansı ile çarpılmasıyla belirlenir.</Turkish>
             <Spanish>Coeficiente que controla la probabilidad de reapertura de heridas. La probabilidad final de reapertura de heridas queda determinada multiplicando este valor por la probabilidad específica del tipo de herida y venda usada.</Spanish>
+            <Chinesesimp>用于控制伤口开裂概率的系数。最终的重开放概率=该值x伤口类型x所使用的绷带的具体开裂概率。</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
-            <English>Clear Trauma After Bandage</English>
-            <Japanese>治療後に外傷を削除</Japanese>
-            <Chinese>包紮即痊癒</Chinese>
-            <French>Guérir les blessures pansées</French>
-            <Czech>Odebrat úraz po obvázání</Czech>
-            <Polish>Usuń uraz po zabandażowaniu</Polish>
-            <Italian>Rimozione ferite bendate</Italian>
-            <German>Entferne Trauma nach Bandagierung.</German>
-            <Russian>Удалять травму после перевязки</Russian>
-            <Turkish>Bandaj Sonrası Travmayı Temizle</Turkish>
-            <Spanish>Quitar trauma despues de vendaje</Spanish>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_DisplayName">
+            <English>Clear Trauma</English>
+            <Japanese>外傷の削除</Japanese>
+            <French>Soigner les blessures</French>
+            <Russian>Очистить рану</Russian>
+            <German>Traumata entfernen</German>
+            <Polish>Leczenie ran</Polish>
+            <Chinesesimp>清理创伤</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
-            <English>Controls whether fully bandaged body parts are healed.</English>
-            <Japanese>全ての傷に対して包帯を巻いた部分を治癒するかどうかを決定します。</Japanese>
-            <Polish>Kontroluje czy w pełni zabandażowane części ciała są uleczone.</Polish>
-            <French>Définit s'il faut guérir les parties du corps entièrement bandées.</French>
-            <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
-            <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
-            <Chinese>控制說當傷口處理好的時候是否直接痊癒。</Chinese>
-            <Czech>Nastavuje zda jsou plně obvázané části těla vyléčena.</Czech>
-            <Russian>Контролирует то, что полностью перевязанные раны целиком исцеляют часть тела.</Russian>
-            <Turkish>Tamamen sargılı vücut kısımlarının iyileşip iyileşmediğini kontrol eder.</Turkish>
-            <Spanish>Controla si las partes del cuerpo completamente vendadas se curan.</Spanish>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_Description">
+            <English>Controls when hitpoint damage from wounds is healed.</English>
+            <Japanese>治療後に負傷箇所にある外傷の状態を決定できます。</Japanese>
+            <French>Définit à quel moment les blessures sont entièrement soignées.</French>
+            <Russian>Определяет, когда исцеляется урон от ран.</Russian>
+            <German>Steuert, wann Trefferpunktschaden von Wunden geheilt wird.</German>
+            <Polish>Kontroluje kiedy punkty obrażeń od odniesionych ran są w pełni wyleczone.</Polish>
+            <Chinesesimp>控制伤口治疗后确定受伤部位的受伤情况。</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
-            <English>Locations Boost Training</English>
-            <Czech>Zdravotnická místa zvyšují zdravotnickou úrovně</Czech>
-            <Italian>Sedi per potenziare la formazione</Italian>
-            <German>Örtliche Trainingssteigerung</German>
-            <Spanish>Ubicación mejora entrenamiento.</Spanish>
-            <Polish>Miejsca zwiększają wyszkolenie</Polish>
-            <Portuguese>Localização melhora treinamento</Portuguese>
-            <French>Le lieu améliore l'efficacité</French>
-            <Russian>Места ускоренного обучения</Russian>
-            <Japanese>衛生能力の上昇位置</Japanese>
-            <Korean>교육 증가 지역</Korean>
-            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
-            <Chinese>受所在位置影響提升醫療能力</Chinese>
-            <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterBandage">
+            <English>After Bandage</English>
+            <Japanese>包帯を巻いた後</Japanese>
+            <French>Après bandage</French>
+            <Russian>После перевязки</Russian>
+            <German>Nach dem Bandagieren</German>
+            <Polish>Po zabandażowaniu</Polish>
+            <Chinesesimp>包扎后</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
+            <English>After Stitch</English>
+            <Japanese>縫合後</Japanese>
+            <French>Après suture</French>
+            <Russian>После наложения швов</Russian>
+            <German>Nach dem Nähen</German>
+            <Polish>Po zszyciu</Polish>
+            <Chinesesimp>缝合后</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
@@ -196,6 +208,7 @@
             <Russian>Увеличивает уровень медподготовки при нахождении в медицинской технике или госпитале. Неподготовленный становится Медиком, Медик становится Доктором.</Russian>
             <Portuguese>Aumenta a qualidade do tratamento quando dentro de veículos ou instalações médicas. Destreinados se tornam médicos, médicos se tornam doutores.</Portuguese>
             <Chinese>在醫療設施或者載具旁時增加醫療能力。未受訓練的將會成為醫療兵，醫療兵將會成為軍醫。</Chinese>
+            <Chinesesimp>在医疗设施或载具旁时提升医疗训练。未受训练者将会成为医疗兵，医疗兵将会晋升为军医。</Chinesesimp>
             <Italian>Aumentare la formazione medica quando si è in veicoli o strutture mediche. Se non addestrato diventa medico, il medico diventa dottore.</Italian>
             <Czech>Zvyšuje zdravotnickou úroveň v zdravotnických objektech a vozidlech. Nevycvičení se stávají mediky a medici se stávají doktory.</Czech>
             <Polish>Zwiększ wyszkolenie medyczne w pojazdach lub obiektach medycznych. Niewytrenowana jednostka zostaje medykiem, medyk zostaje lekarzem.</Polish>
@@ -210,6 +223,7 @@
             <Russian>Разрешить общие медикаменты</Russian>
             <Portuguese>Permitir Compartilhar Itens Médicos</Portuguese>
             <Chinese>允許共享設備</Chinese>
+            <Chinesesimp>允许共享装备</Chinesesimp>
             <Italian>Consentire la condivisione di attrezzature</Italian>
             <Czech>Povolit sdílení vybavení</Czech>
             <Polish>Zezwalaj na współdzielenie sprzętu</Polish>
@@ -224,6 +238,7 @@
             <Russian>Контролирует, можно ли разделить медикаменты между пациентом и врачом.</Russian>
             <Portuguese>Controla se um item médico pode ser compartilhado entre médico e paciente.</Portuguese>
             <Chinese>控制是否病患與醫療兵之間能否共享醫療物資</Chinese>
+            <Chinesesimp>控制伤员和医疗兵之间是否可以共享医疗装备。</Chinesesimp>
             <Italian>Controlla se le attrezzature mediche possono essere condivise tra il paziente e il medico.</Italian>
             <Czech>Nastavuje zda jak je zdravotnické vybavení sdíleno mezi medikem a pacientem.</Czech>
             <Polish>Kontroluje, czy sprzęt medyczny ma być dzielony między pacjentem a medykiem.</Polish>
@@ -238,6 +253,7 @@
             <Russian>Сначала медикаменты пациента</Russian>
             <Portuguese>Usar do Paciente Primeiro</Portuguese>
             <Chinese>優先使用患者的醫療物資</Chinese>
+            <Chinesesimp>优先消耗伤员装备</Chinesesimp>
             <Italian>L'attrezzatura del paziente prima di tutto</Italian>
             <Czech>Prvně pacientovo vybavení</Czech>
             <Polish>Najpierw sprzęt pacjenta</Polish>
@@ -252,6 +268,7 @@
             <Russian>Сначала медикаменты врача</Russian>
             <Portuguese>Usar do Médico Primeiro</Portuguese>
             <Chinese>優先使用醫療兵的醫療物資</Chinese>
+            <Chinesesimp>优先消耗医疗兵装备</Chinesesimp>
             <Italian>Prima le attrezzature mediche</Italian>
             <Czech>Prvně medikovo vybavení</Czech>
             <Polish>Najpierw sprzęt medyka</Polish>
@@ -265,6 +282,9 @@
             <Japanese>注射器の使用時間</Japanese>
             <Spanish>Tiempo de tratamiento de autoinyección</Spanish>
             <Russian>Время ввода автоинъектора</Russian>
+            <Polish>Czas aplikacji autostrzykawki</Polish>
+            <German>Behandlungszeit des Autoinjektors</German>
+            <Chinesesimp>自动注射器治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
@@ -272,6 +292,9 @@
             <Japanese>注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para administrar medicación utilizando un autoinyectador.</Spanish>
             <Russian>Время, необходимое для введения медикаментов автоинъектором (в секундах).</Russian>
+            <Polish>Czas w sekundach potrzebny do aplikacji medykamentów za pomocą autostrzykawki.</Polish>
+            <German>Zeit in Sekunden, die benötigt wird, um Medikamente mittels Autoinjektor zu verabreichen.</German>
+            <Chinesesimp>使用自动注射器给药所需的时间(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
@@ -280,6 +303,8 @@
             <Japanese>止血帯の使用時間</Japanese>
             <Spanish>Tiempo de tratamiento de torniquete</Spanish>
             <Russian>Время наложения/снятия жгута</Russian>
+            <Polish>Czas aplikacji stazy</Polish>
+            <Chinesesimp>止血带治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
@@ -288,6 +313,8 @@
             <Japanese>止血帯の使用/排除に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para aplicar/quitar un torniquete.</Spanish>
             <Russian>Время, необходимое для наложения/снятия жгута (в секундах).</Russian>
+            <Polish>Czas w sekundach potrzebny do założenia/zdjęcia stazy.</Polish>
+            <Chinesesimp>使用/移除止血带所需的时间(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
@@ -296,6 +323,8 @@
             <Japanese>点滴の使用時間</Japanese>
             <Spanish>Tiempo de tratamiento de bolsa de IV</Spanish>
             <Russian>Время применения пакета внутривенного переливания</Russian>
+            <Polish>Czas aplikacji IV</Polish>
+            <Chinesesimp>静脉输液袋治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
@@ -304,6 +333,8 @@
             <Japanese>点滴の投与に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para administrar una bolsa de IV.</Spanish>
             <Russian>Время, необходимое для применения пакета внутривенного переливания (в секундах).</Russian>
+            <Polish>Czas w sekundach potrzebny na aplikację transfuzji IV.</Polish>
+            <Chinesesimp>使用静脉输液所需的时间(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
@@ -312,6 +343,8 @@
             <Japanese>添え木の使用時間</Japanese>
             <Spanish>TIempo de tratamiento de férula</Spanish>
             <Russian>Время наложения шины</Russian>
+            <Polish>Czas aplikacji szyny</Polish>
+            <Chinesesimp>夹板治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
@@ -320,6 +353,8 @@
             <Japanese>添え木の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>TIempo, en segundos, requerido para aplicar una férula.</Spanish>
             <Russian>Время, необходимое для наложения шины (в секундах).</Russian>
+            <Polish>Czas w sekundach potrzebny na aplikację szyny.</Polish>
+            <Chinesesimp>使用夹板所需的时间(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
@@ -328,6 +363,8 @@
             <Japanese>死体袋の使用時間</Japanese>
             <Spanish>TIempo de uso de bolsa para cuerpos</Spanish>
             <Russian>Время использования мешка для трупов</Russian>
+            <Polish>Czas użycia worka na ciało</Polish>
+            <Chinesesimp>尸袋使用时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
@@ -336,6 +373,8 @@
             <Japanese>死体袋の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para poner a un paciente en una bolsa para cuerpos.</Spanish>
             <Russian>Время, необходимое для того чтобы упаковать труп в мешок (в секундах).</Russian>
+            <Polish>Czas w sekundach potrzebny na spakowanie ciała do worka na ciało.</Polish>
+            <Chinesesimp>装入裹尸袋时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -360,6 +399,7 @@
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar epinefrina.</Portuguese>
             <Chinese>要受過何種程度的醫療訓練才可以使用腎上腺素</Chinese>
+            <Chinesesimp>使用肾上腺素所需的医疗水平。</Chinesesimp>
             <Italian>Livello di addestramento richiesto per usare l'Epinefrina.</Italian>
             <Czech>Úroveň výcviku pro použití epinefrinu</Czech>
             <Polish>Poziom wyszkolenia wymagany do korzystania z epinefryny.</Polish>
@@ -390,6 +430,7 @@
             <Russian>Контролирует, где можно использовать Адреналин.</Russian>
             <Portuguese>Controla onde Epinefrina pode ser utilizada.</Portuguese>
             <Chinese>控制何處能使用腎上腺素</Chinese>
+            <Chinesesimp>控制何地能使用肾上腺素。</Chinesesimp>
             <Italian>Controlli dove si può usare l'Epinefrina.</Italian>
             <Czech>Nastavuje kde může být epinefrin použit</Czech>
             <Polish>Kontroluje, gdzie można stosować epinefrynę.</Polish>
@@ -421,6 +462,7 @@
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
             <Chinese>要受過何種程度的醫療訓練才可以使用個人急救包</Chinese>
+            <Chinesesimp>使用个人急救包所需的医疗水平。</Chinesesimp>
             <Italian>Livello di formazione richiesto per l'utilizzo di un PAK.</Italian>
             <Czech>Úroveň výcviku pro použití osobní lékárničky (PAK).</Czech>
             <Polish>Poziom wyszkolenia wymagany do korzystania z apteczek osobistych.</Polish>
@@ -452,6 +494,7 @@
             <Russian>Контролирует, где можно использовать Аптечку.</Russian>
             <Portuguese>Controla onde o KPS pode ser utilizado.</Portuguese>
             <Chinese>控制何處能使用個人急救包</Chinese>
+            <Chinesesimp>控制何地能使用个人急救包。</Chinesesimp>
             <Italian>Controlla dove può essere usato un PAK.</Italian>
             <Czech>Nastavuje kde může být osobní lékárnička (PAK) použita.</Czech>
             <Polish>Kontroluje, gdzie można korzystać z apteczek osobistych.</Polish>
@@ -466,6 +509,7 @@
             <Russian>Израсходовать Аптечку</Russian>
             <Portuguese>KPS Descartável</Portuguese>
             <Chinese>個人急救包為消耗品</Chinese>
+            <Chinesesimp>个人急救包会被消耗</Chinesesimp>
             <Italian>Consumare PAK</Italian>
             <Czech>Spotřebuj osobní lékárničku (PAK)</Czech>
             <Polish>Zużycie apteczek osobistych</Polish>
@@ -480,6 +524,7 @@
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
             <Portuguese>Controla se o KPS deve ser descartado/consumido após o uso.</Portuguese>
             <Chinese>設定個人急救包是否為消耗品</Chinese>
+            <Chinesesimp>设置个人急救包是否会被消耗</Chinesesimp>
             <Italian>Controlla se un PAK deve essere consumato dopo l'uso.</Italian>
             <Czech>Nastavuje zda má být osobní lékárnička (PAK) spotřebována po použití.</Czech>
             <Polish>Kontroluje, czy apteczka osobista powinna być zużyta po użyciu.</Polish>
@@ -492,6 +537,7 @@
             <Italian>Utilizzo del kit di pronto soccorso su se stessi</Italian>
             <German>Erste-Hilfe-Set Selbstanwendung</German>
             <Chinese>自我使用急救包</Chinese>
+            <Chinesesimp>自我使用急救包</Chinesesimp>
             <French>Utilisation de la trousse sanitaire sur soi-même</French>
             <Polish>Używanie apteczki osobistej na sobie</Polish>
             <Japanese>応急処置キットの自己使用</Japanese>
@@ -505,6 +551,7 @@
             <Italian>Abilita l'utilizzo del kit di pronto soccorso su se stessi.</Italian>
             <German>Erlaubt die Benutzung des Erste-Hilfe-Sets, um sich selbst zu heilen.</German>
             <Chinese>啟用個人急救包能對自己使用。</Chinese>
+            <Chinesesimp>启用自身能使用个人急救包。</Chinesesimp>
             <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
             <Polish>Pozwala na użycie apteczki osobistej na sobie</Polish>
             <Japanese>応急処置キットを使って、自分を治療できるようにします。</Japanese>
@@ -520,6 +567,7 @@
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
             <Portuguese>Coeficiente de Tempo do KPS</Portuguese>
             <Chinese>個人急救包的時間係數</Chinese>
+            <Chinesesimp>个人急救包时间系数</Chinesesimp>
             <Italian>Coefficiente temporale PAK</Italian>
             <Czech>Časový koeficient pro osobní lékárničku (PAK)</Czech>
             <Polish>Współczynnik czasu apteczek osobistych</Polish>
@@ -534,6 +582,7 @@
             <Russian>Изменяет быстроту применения Аптечки.\nВремя лечения зависит от общего повреждения частей тела, умноженного на данный коэффициент (минимум 10 сек.).</Russian>
             <Portuguese>Modifica quanto tempo o KPS leva para ser aplicado.\nO tempo de tratamento é baseado no total de dano do corpo, multiplicado por esse coeficiente, com um mínimo de 10 segundos.</Portuguese>
             <Chinese>修改個人急救包要使用多久才能完成。\n醫療時間是依照全身的肢體狀況並乘上該係數而決定的，至少十秒。</Chinese>
+            <Chinesesimp>修改个人急救包应用时间。 \n治疗时间=全身的总伤害x该系数，至少十秒。</Chinesesimp>
             <Italian>Il tempo di trattamento si basa sul danno totale della parte del corpo moltiplicato per questo coefficiente, con un minimo di 10 secondi.</Italian>
             <Czech>Upravuje jak dlouho trvá léčba pomocí osobní lékárničky (PAK).\nDoba léčby závisí na celkovém poškození částí těla vynásobeném tímto koeficientem, přičemž minimum je 10 vteřin.</Czech>
             <Polish>Zmienia czas potrzebny na zastosowanie apteczki osobistej.\n Czas leczenia jest oparty na całkowitym uszkodzeniu części ciała pomnożonym przez ten współczynnik, wynosi minimum 10 sekund.</Polish>
@@ -548,6 +597,7 @@
             <Russian>Разрешить Хирургический набор</Russian>
             <Portuguese>Permitir Kit Cirúrgico</Portuguese>
             <Chinese>允許使用手術包</Chinese>
+            <Chinesesimp>允许使用手术包</Chinesesimp>
             <Italian>Permettere il kit chirurgico</Italian>
             <Czech>Povolit sešívací sadu</Czech>
             <Polish>Ograniczenia Użycia Zestawu Chirurgicznego</Polish>
@@ -562,6 +612,7 @@
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
+            <Chinesesimp>使用手术包所需的医疗水平。</Chinesesimp>
             <Italian>Livello di formazione richiesto per l'utilizzo di un kit chirurgico.</Italian>
             <Czech>Úroveň výcviku pro použití sešívací sady.</Czech>
             <Polish>Poziom wyszkolenia wymagany do korzystania z Zestawu Chirurgicznego.</Polish>
@@ -576,6 +627,7 @@
             <Russian>Места использования Хирургического набора</Russian>
             <Portuguese>Locais para Kit Cirúrgico</Portuguese>
             <Chinese>手術包使用地點</Chinese>
+            <Chinesesimp>手术包使用地点</Chinesesimp>
             <Italian>Luoghi Kit chirurgico</Italian>
             <Czech>Nastavuje kde může být sešívací sada použita</Czech>
             <Polish>Miejsca użycia Zestawu Chirurgicznego</Polish>
@@ -590,6 +642,7 @@
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
             <Portuguese>Controle onde o Kit Cirúrgico pode ser utilizado.</Portuguese>
             <Chinese>控制何處能使用手術包</Chinese>
+            <Chinesesimp>控制何地能使用手术包</Chinesesimp>
             <Italian>Controlla dove può essere usato un kit chirurgico.</Italian>
             <Czech>Nastavuje zda má být sešívací sada spotřebována po použití.</Czech>
             <Polish>Kontroluje, gdzie można użyć Zestawu Chirurgicznego.</Polish>
@@ -604,6 +657,7 @@
             <Russian>Израсходовать Хирургический набор</Russian>
             <Portuguese>Kit Cirúrgico Consumível</Portuguese>
             <Chinese>手術包為消耗品</Chinese>
+            <Chinesesimp>手术包是否被消耗</Chinesesimp>
             <Italian>Consumare Kit Chirurgico</Italian>
             <Czech>Spotřebuj sešívací sadu</Czech>
             <Polish>Zużycie Zestawów Chirurgicznych</Polish>
@@ -617,6 +671,7 @@
             <Russian>Контролирует, следует ли израсходовать Хирургический набор после использования.</Russian>
             <Portuguese>Controla se o Kit Cirúrgico deve ser descartado/consumido após o uso.</Portuguese>
             <Chinese>設定手術包是否為消耗品</Chinese>
+            <Chinesesimp>设置手术包是否使用后会被消耗</Chinesesimp>
             <Italian>Controlla se un kit chirurgico deve essere consumato dopo l'uso.</Italian>
             <Czech>Nastavuje </Czech>
             <Polish>Kontroluje, czy Zestaw Chirurgiczny powinien być zużyty po użyciu.</Polish>
@@ -629,6 +684,7 @@
             <Portuguese>Auto-Cirurgia</Portuguese>
             <Japanese>自己縫合</Japanese>
             <Chinese>自我縫合</Chinese>
+            <Chinesesimp>自我缝合</Chinesesimp>
             <Italian>Auto cucitura</Italian>
             <Czech>Samo-zašívání</Czech>
             <Polish>Zszywanie własnych ran</Polish>
@@ -642,6 +698,7 @@
             <Portuguese>Permite o uso de Kit Cirúrgico em si mesmo.</Portuguese>
             <Japanese>縫合キットを使い自らを縫合できるようにします。</Japanese>
             <Chinese>啟用是否能自己使用手術包來縫合自己的傷口。</Chinese>
+            <Chinesesimp>启用是否能够使用手术包进行自我缝合。</Chinesesimp>
             <Czech>Umožňuje použití sešívací sady na sebe sama.</Czech>
             <Polish>Umożliwia użycie Zestawu Chirurgicznego na sobie.</Polish>
             <Italian>Permette l'uso di kit chirurgici per ricucirsi.</Italian>
@@ -655,6 +712,9 @@
             <Japanese>縫合時間</Japanese>
             <Spanish>Tiempo de sutura de herida</Spanish>
             <Russian>Время зашивания ран</Russian>
+            <Polish>Czas szycia rany</Polish>
+            <German>Benötigte Zeit, um Wunden zu nähen</German>
+            <Chinesesimp>伤口缝合时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
@@ -662,6 +722,9 @@
             <Japanese>縫合に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para suturar una única herida.</Spanish>
             <Russian>Время, необходимое для зашивания одной раны (в секундах).</Russian>
+            <Polish>Czas w sekundach potrzebny na zaszycie pojedyńczej rany.</Polish>
+            <German>Zeit in Sekunden, um eine einzelne Wunde zu nähen.</German>
+            <Chinesesimp>缝合一个伤口所需的时间（秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -671,6 +734,7 @@
             <French>Pose d'IV sur soi-même</French>
             <Portuguese>Autotransfusão de IV</Portuguese>
             <Chinese>自我注射點滴</Chinese>
+            <Chinesesimp>自我静脉输液</Chinesesimp>
             <Czech>Samoaplikace IV transfuze</Czech>
             <Polish>Samotransfuzja IV</Polish>
             <Italian>Trasfusione endovena su se stessi</Italian>
@@ -684,6 +748,7 @@
             <French>Active la possibilité de s'auto-poser des IVs.</French>
             <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
+            <Chinesesimp>启用是否能够自我静脉输液</Chinesesimp>
             <Czech>Umožňuje aplikovat IV transfuze na sama sebe.</Czech>
             <Polish>Pozwala przetoczyć płyny IV samemu sobie</Polish>
             <Italian>Abilita la trasfusione in endovena su se stessi.</Italian>
@@ -695,6 +760,9 @@
             <Japanese>無意識者を死体袋に</Japanese>
             <Spanish>Permitir bolsa para cuerpos inconsciente</Spanish>
             <Russian>Разрешить упаковывать пациентов без сознания в мешки для трупов</Russian>
+            <Polish>Nieprzytomni w worku na ciało</Polish>
+            <German>Erlaube Benutzung des Leichensackes mit bewusstlosen Personen</German>
+            <Chinesesimp>允许昏迷者装入尸袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
@@ -702,6 +770,9 @@
             <Japanese>気絶しているプレイヤーを死体袋へ入れられるかどうかを決定します。</Japanese>
             <Spanish>Permitir colocar a un paciente inconsciente en una bolsa para cuerpos.</Spanish>
             <Russian>Разрешает упаковывать пациентов без сознания в мешки для трупов.</Russian>
+            <Polish>Zezwalaj na pakowanie nieprzytomnych osób do worka na ciało.</Polish>
+            <German>Aktiviert, Bewusstlose in Leichensack zu legen.</German>
+            <Chinesesimp>能够将昏迷的伤员装入尸袋中。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -709,6 +780,7 @@
             <Polish>Zezwalaj na przetaczanie płynów IV</Polish>
             <French>Pose de perfusions autorisée pour</French>
             <Chinese>允許操作點滴</Chinese>
+            <Chinesesimp>允许静脉输液</Chinesesimp>
             <Japanese>IV 輸血の制限</Japanese>
             <Czech>Povolit IV transfuzi</Czech>
             <Russian>Разрешить внутривенное переливание</Russian>
@@ -720,6 +792,7 @@
             <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
             <French>Définit la qualification médicale requise pour poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
+            <Chinesesimp>静脉输液所需的医疗水平。</Chinesesimp>
             <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
             <Russian>Уровень навыка, требуемый для осуществления внутривенного переливания.</Russian>
@@ -731,6 +804,9 @@
             <Spanish>Ubicación para transfusiones IV</Spanish>
             <French>Lieux perfusions IV</French>
             <Russian>Места введения пакетов внутривенного переливания</Russian>
+            <Polish>Miejsca do transfuzji IV</Polish>
+            <German>Orte an denen IV-Transfusionen angelegt werden können</German>
+            <Chinesesimp>静脉输液地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
@@ -738,6 +814,9 @@
             <Spanish>Controla dónde pueden ser realizadas las transfusiones IV.</Spanish>
             <French>Définit les lieux où la pose de perfusions est autorisée.</French>
             <Russian>Определяет к каким частям тела разрешено применять пакеты внутренного переливания.</Russian>
+            <Polish>Kontroluje w jakich miejscach można robić transfuzje IV.</Polish>
+            <German>Kontrolliert, wo IV-Transfusionen durchgeführt werden können.</German>
+            <Chinesesimp>控制何地可以静脉输液</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -747,6 +826,7 @@
             <French>Convertir les objets vanilla</French>
             <Portuguese>Converter itens vanilla</Portuguese>
             <Chinese>轉換原版物品</Chinese>
+            <Chinesesimp>转换原版物品</Chinesesimp>
             <Italian>Converti oggetti vanilla</Italian>
             <Czech>Přeměnit zdravotnické předměty ze základní hry</Czech>
             <Polish>Konwertuj przedmioty z vanili</Polish>
@@ -760,6 +840,7 @@
             <Russian>Определяет, что делать с ванильными медикаментами: преобразовать в медикаменты ACE, удалить или проигнорировать.</Russian>
             <Portuguese>Controla se itens médicos vanilla serão convertidos para itens do ACE, removidos ou ignorados.</Portuguese>
             <Chinese>控制是否轉換原版的醫療物資成ACE的醫療物資，或者單純移除或無視。</Chinese>
+            <Chinesesimp>控制是否转换原版的医疗物品成ACE的医疗物品，或者单纯移除/无视。</Chinesesimp>
             <Italian>Controlla se gli articoli medicali vanilla vengono convertiti in articoli medicali ACE, rimossi o ignorati.</Italian>
             <Czech>Nastavuje zda zdravotnické předměty ze základní hry budou přeměněny na ACE předměty, odstraněny nebo ignorovány.</Czech>
             <Polish>Kontroluje, czy podstawowe przedmioty medyczne z Arma są konwertowane na przedmioty medyczne ACE, tylko usuwane lub ignorowane.</Polish>
@@ -772,6 +853,7 @@
             <Russian>Удалять</Russian>
             <Portuguese>Apenas Remover</Portuguese>
             <Chinese>單純移除</Chinese>
+            <Chinesesimp>仅移除</Chinesesimp>
             <Italian>Rimuovere solo</Italian>
             <Czech>Pouze odstranit</Czech>
             <Polish>Tylko Usuwaj</Polish>
@@ -791,6 +873,7 @@
             <Italian>Abilita rifiuti</Italian>
             <Japanese>廃棄物の有効化</Japanese>
             <Chinese>啟用醫療用廢棄物</Chinese>
+            <Chinesesimp>启用医疗废弃物</Chinesesimp>
             <Turkish>Çöpleri Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
@@ -800,6 +883,7 @@
             <Russian>Разрешает создание медицинского мусора при лечении.</Russian>
             <Portuguese>Permite a criação de lixo médico durante o tratamento.</Portuguese>
             <Chinese>啟用醫療後剩下的醫療用廢棄物。</Chinese>
+            <Chinesesimp>启用在治疗后能够产生医疗垃圾。</Chinesesimp>
             <Italian>Permette la creazione di rifiuti al momento del trattamento.</Italian>
             <Czech>Umožňuje vytvořit odpadky při léčbě.</Czech>
             <Polish>Umożliwia tworzenie śmieci po przeprowadzaniu zabiegu.</Polish>
@@ -813,6 +897,7 @@
             <Russian>Макс. кол-во мусора</Russian>
             <Portuguese>Máximo de Objetos de Lixo</Portuguese>
             <Chinese>最大醫療用廢棄物數量</Chinese>
+            <Chinesesimp>最大医疗垃圾数量</Chinesesimp>
             <Italian>Numero massimo di rifiuti</Italian>
             <Czech>Maximum odpadků</Czech>
             <Polish>Maksymalna Ilość Śmieci</Polish>
@@ -827,6 +912,7 @@
             <Russian>Устанавливает максимальное количество создаваемых объектов мусора. Чрезмерное значение может вызвать задержку FPS.</Russian>
             <Portuguese>Define o limite máximo de objetos de lixo que podem ser criados, quantidade excessivas podem causar lag de FPS.</Portuguese>
             <Chinese>設定最大可以產生的醫療用廢棄物數量，極端的數量的話可能導致幀數下降。</Chinese>
+            <Chinesesimp>设置可以生成的最大垃圾数量，数量过多会导致FPS延迟。</Chinesesimp>
             <Italian>Imposta il numero massimo di rifiuti che possono essere generati, quantità eccessive possono diminuire gli FPS.</Italian>
             <Czech>Nastavuje maximum odpadků, které se mohou objevit. Vysoká hodnota m§že negativně ovlivnit FPS.</Czech>
             <Polish>Definiuje maksymalną liczbę śmieci, które mogą zostać stworzone, nadmierne ilości mogą powodować spadki FPS.</Polish>
@@ -840,6 +926,7 @@
             <Russian>Время жизни мусора</Russian>
             <Portuguese>Duração de Lixo</Portuguese>
             <Chinese>醫療用廢棄物時長</Chinese>
+            <Chinesesimp>医疗垃圾寿命</Chinesesimp>
             <Italian>Tempo rifiuti</Italian>
             <Czech>Životnost odpadků</Czech>
             <Polish>Czas trwania Śmieci</Polish>
@@ -854,6 +941,7 @@
             <Russian>Управляет временем жизни объектов мусора в секундах. -1 означает Навсегда.</Russian>
             <Portuguese>Controla o tempo de vida de objetos de lixo criados em segundos. -1 é para sempre.</Portuguese>
             <Chinese>控制醫療用廢棄物的時長，以秒為單位。設定為-1則是永不刪除。</Chinese>
+            <Chinesesimp>控制医疗垃圾物体的生命周期，以秒为单位。-1则是永不删除。</Chinesesimp>
             <Italian>Controlla la durata di vita dei rifiuti in secondi. -1 è per sempre.</Italian>
             <Czech>Nastavuje za jak dlouho zdravotnické odpadky zmizí. -1 je navždy.</Czech>
             <Polish>Kontroluje czas trwania śmieci w sekundach. -1 pozostawia je na zawsze.</Polish>
@@ -884,6 +972,7 @@
             <Russian>Медики</Russian>
             <Portuguese>Médicos</Portuguese>
             <Chinese>醫療兵</Chinese>
+            <Chinesesimp>医疗兵</Chinesesimp>
             <Italian>Medici</Italian>
             <Czech>Medikové</Czech>
             <Polish>Medycy</Polish>
@@ -898,6 +987,7 @@
             <Russian>Доктора</Russian>
             <Portuguese>Doutores</Portuguese>
             <Chinese>軍醫</Chinese>
+            <Chinesesimp>军医</Chinesesimp>
             <Italian>Dottori</Italian>
             <Czech>Doktoři</Czech>
             <Polish>Doktorzy</Polish>
@@ -912,6 +1002,7 @@
             <Russian>Госпитали</Russian>
             <Portuguese>Instalações Médicas</Portuguese>
             <Chinese>醫療設施</Chinese>
+            <Chinesesimp>医疗设施</Chinesesimp>
             <Italian>Strutture mediche</Italian>
             <Czech>Zdravotnické zařízení</Czech>
             <Polish>Obiekty Medyczne</Polish>
@@ -926,6 +1017,7 @@
             <Russian>Техника и госпитали</Russian>
             <Portuguese>Veículos e Instalações Médicas</Portuguese>
             <Chinese>車輛與設施</Chinese>
+            <Chinesesimp>载具&amp;设施</Chinesesimp>
             <Czech>Zdravotnická zařízení a vozidla</Czech>
             <Italian>Veicoli e strutture</Italian>
             <Polish>Pojazdy i Obiekty</Polish>
@@ -937,28 +1029,47 @@
             <English>CPR Success Chance Minimum</English>
             <French>RCP - Chance minimale de réussite</French>
             <Russian>Минимальные шансы успеха СЛР</Russian>
+            <Polish>Szansa na powodzenie CPR - Minimum</Polish>
+            <Japanese>心肺蘇生の最低成功確率</Japanese>
+            <German>HLW Minimale Erfolgschance</German>
+            <Chinesesimp>心肺复苏的最低成功率</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
             <English>CPR Success Chance Maximum</English>
             <French>RCP - Chance maximale de réussite</French>
             <Russian>Максимальные шансы успеха СЛР</Russian>
+            <Polish>Szansa na powodzenie CPR - Maksimum</Polish>
+            <Japanese>心肺蘇生の最高成功確率</Japanese>
+            <German>HLW Maximale Erfolgschance</German>
+            <Chinesesimp>心肺复苏的最高成功率</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
             <English>Minimum probability that performing CPR will restore heart rhythm.\nThis minimum value is used when the patient has at least "Lost a fatal amount of blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
             <French>Probabilité minimale de rétablir un rythme cardiaque suite à une RCP.\nCette valeur minimale est définie pour un patient à l'état "A perdu une quantité critique de sang".\nUne interpolation est faite entre la chance minimale et maximale, en fonction du volume sanguin du patient.</French>
             <Russian>Минимальная вероятность того, что выполнение искусственного дыхания восстановит сердечный ритм.\nЭто минимальное значение используется, когда пациент, по крайней мере, получил статус "Фатальная кровопотеря".\n Интерполированная вероятность используется, когда объем крови пациента находится между минимальным и максимальным порогами.</Russian>
+            <Polish>Minimalna wartość szansy na to że CPR przywróci bicie serca.\nTa minimalna wartość jest używana gdy pacjent ma status "Stracił krytyczną ilość krwi".\nInterpolowana wartość szansy jest używana gdy pacjent ma poziom krwi będący pomiędzy minimum a maksimum.</Polish>
+            <Japanese>心肺蘇生を行うことで心拍が回復する最低成功確率を設定します。\nこの値は患者が"致命的な程失血している"時に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
+            <German>Minimale Wahrscheinlichkeit, dass die Durchführung einer HLW den Herzrhythmus wiederherstellt.\nDieser Mindestwert wird verwendet, wenn der Patient mindestens "eine tödliche Menge Blut verloren" hat.\nEine interpolierte Wahrscheinlichkeit wird verwendet, wenn das Blutvolumen des Patienten zwischen dem minimalen und dem maximalen Schwellenwert liegt.</German>
+            <Chinesesimp>实施心肺复苏恢复心律的最小可能性。\n当伤员至少有"致命失血量"时，就取该最小值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
             <English>Maximum probability that performing CPR will restore heart rhythm.\nThis maximum value is used when the patient has at most "Lost some blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
             <French>Probabilité maximale de rétablir un rythme cardiaque suite à une RCP.\nCette valeur maximale est définie pour un patient à l'état "A perdu une faible quantité de sang".\nUne interpolation est faite entre la chance minimale et maximale, en fonction du volume sanguin du patient.</French>
             <Russian>Максимальная вероятность того, что выполнение искусственного дыхания восстановит сердечный ритм.\nЭто максимальное значение используется, когда пациент, по крайней мере, получил статус "Фатальная кровопотеря".\n Интерполированная вероятность используется, когда объем крови пациента находится между минимальным и максимальным порогами.</Russian>
+            <Polish>Maksymalna wartość szansy na to że CPR przywróci bicie serca.\nTa maksymalna wartość jest używana gdy pacjent ma status "Stracił trochę krwi".\nInterpolowana wartość szansy jest używana gdy pacjent ma poziom krwi będący pomiędzy minimum a maksimum.</Polish>
+            <Japanese>心肺蘇生を行うことで心拍が回復する最高成功確率を設定します。\nこの値は患者が"いくらか失血している"時以上の場合に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
+            <German>Maximale Wahrscheinlichkeit, dass die Durchführung einer HLW den Herzrhythmus wiederherstellt.\nDieser Maximalwert wird verwendet, wenn der Patient höchstens "Blut verloren" hat.\nEine interpolierte Wahrscheinlichkeit wird verwendet, wenn das Blutvolumen des Patienten zwischen dem minimalen und dem maximalen Schwellenwert liegt.</German>
+            <Chinesesimp>实施心肺复苏恢复心律的最大可能性。\n当伤员最多“失血一些”时，就取该最大值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
             <French>RCP - Durée d'interaction</French>
-            <Japanese>CPR の動作時間</Japanese>
+            <Japanese>心肺蘇生の動作時間</Japanese>
             <Spanish>Tiempo de tratamiento de RCP</Spanish>
             <Russian>Время проведения СЛР</Russian>
+            <Polish>Czas potrzebny na wykonanie CPR</Polish>
+            <German>HLW Behandlungsdauer</German>
+            <Chinesesimp>心肺复苏时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
@@ -966,11 +1077,15 @@
             <Japanese>心肺蘇生にかかる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para realizar RCP en un paciente.</Spanish>
             <Russian>Время, необходимое для проведения сердечно-лёгочной реанимации (СЛР) (в секундах).</Russian>
+            <Polish>Czas w sekundach jaki jest potrzebny do wykonania CPR na pacjencie.</Polish>
+            <German>Zeit in Sekunden, die benötigt wird, um eine HLW durzuführen.</German>
+            <Chinesesimp>对伤员实施心肺复苏所需的时间（秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
             <Japanese>武器の扱い</Japanese>
             <Chinese>需要收起武器</Chinese>
+            <Chinesesimp>需要收起武器</Chinesesimp>
             <French>Rengainer obligatoirement</French>
             <Italian>Fondina richiesta</Italian>
             <Czech>Vyžadováno schování zbraně</Czech>
@@ -983,6 +1098,7 @@
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
             <Japanese>何らかの治療をするには武器を下げるか収めるかどうかを決定します。\nなお次の診断行動は設定で例外できます: 心拍確認、血圧測定、反応確認</Japanese>
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
+            <Chinesesimp>控制是否要先放下或把武器放起才能做出医疗行为。\n除了诊断 - 允许未放下或未收起的情况下进行一连串的诊断（检查脉搏，血压，反应）。</Chinesesimp>
             <French>Définit si les armes doivent être rengainées ou abaissées avant de pouvoir effectuer des actes médicaux.\nLes options "sauf examens" autorisent les examens (vérification du pouls, de la tension artérielle, de l'état de conscience) en toutes circonstances.</French>
             <Czech>Nastavuje zda musí být zbraň schovaná/snížená pro provádění zdravotnických úkonů.\nKromě Diagnózy - Umožňuje diagnostické akce (kontrola srdečního tepu, tlaku krve a reakci pacienta) vždy bez ohledu na nastavení schování zbraně.</Czech>
             <Polish>Kontroluje, czy broń musi być schowana/opuszczona w celu wykonania leczenia pacjenta.\n Za wyjątkiem diagnozowania - umożliwia wykonywanie czynności kontrolnych (sprawdzanie tętna, ciśnienia krwi, reakcji) przez cały czas, niezależnie od ustawienia Wymagana broń w kaburze.</Polish>
@@ -995,6 +1111,7 @@
             <English>Lowered or Holstered</English>
             <Japanese>下げるか収める</Japanese>
             <Chinese>放低或者收起</Chinese>
+            <Chinesesimp>放低或者收起</Chinesesimp>
             <French>Abaisser ou rengainer</French>
             <Italian>Abbassato o con fondina</Italian>
             <Czech>Snížena nebo Schována</Czech>
@@ -1007,6 +1124,7 @@
             <English>Lowered or Holstered (Except Exam)</English>
             <Japanese>下げるか収める (診断行動は除外)</Japanese>
             <Chinese>放低或者收起（除了診斷）</Chinese>
+            <Chinesesimp>放低或者收起（除了诊断）</Chinesesimp>
             <French>Abaisser ou rengainer (sauf examens)</French>
             <Italian>Abbassato o con la fondina (eccetto l'esame)</Italian>
             <Czech>Snížena nebo Schována (kromě Diagnózy)</Czech>
@@ -1019,6 +1137,7 @@
             <English>Holstered Only</English>
             <Japanese>収めた時のみ</Japanese>
             <Chinese>只能收起</Chinese>
+            <Chinesesimp>只能收起</Chinesesimp>
             <French>Rengainer seulement</French>
             <Italian>Solo con la fondina</Italian>
             <Czech>Pouze Schována</Czech>
@@ -1031,6 +1150,7 @@
             <English>Holstered Only (Except Exam)</English>
             <Japanese>収めた時のみ (診断行動は除外)</Japanese>
             <Chinese>只能收起（除了診斷）</Chinese>
+            <Chinesesimp>只能收起（除了诊断）</Chinesesimp>
             <French>Rengainer seulement (sauf examens)</French>
             <Italian>Solo fondina (eccetto esame)</Italian>
             <Czech>Pouze Schována (kromě Diagnózy)</Czech>
@@ -3743,9 +3863,19 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
+            <French>%1 est inconscient, respire par intermittence et convulse.</French>
+            <Polish>%1 jest nieresponsywny, ma płytki oddech oraz jest w konwulsjach</Polish>
+            <Japanese>%1 は反応せず、浅い呼吸とけいれんをしている</Japanese>
+            <German>%1 reagiert nicht, schnappt nach Luft und verkrampft</German>
+            <Chinesesimp>%1没有反应，微软的喘着气和抽搐</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
+            <French>%1 est inconscient, inanimé et froid.</French>
+            <Polish>%1 jest nieresponsywny, nieruchomy oraz zimny</Polish>
+            <Japanese>%1 は反応せず、動かず冷たくなっている</Japanese>
+            <German>%1 reagiert nicht, ist regungslos und kalt</German>
+            <Chinesesimp>%1没有反应，一动不动，身体冰凉</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -4435,6 +4565,9 @@
             <French>L'unité a bougé et n'est peut-être pas morte !</French>
             <Japanese>身体が動き死んでないようだ!</Japanese>
             <Spanish>¡El cuerpo se retorció y puede que no esté muerto!</Spanish>
+            <Polish>Ciało drgnęło i może nie być martwe!</Polish>
+            <German>Der Körper zuckte und kann nicht tot sein!</German>
+            <Chinesesimp>身体抽搐了一下，可能还没死!</Chinesesimp>
         </Key>
     </Package>
 </Project>

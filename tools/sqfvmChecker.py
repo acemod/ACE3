@@ -42,7 +42,7 @@ def process_file(filePath, skipA3Warnings=True):
     # cmd.append("-V")
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, universal_newlines=True)
     try:
-        ret = proc.wait(7)  # max wait - seconds
+        ret = proc.wait(12)  # max wait - seconds
     except Exception as _e:
         print("sqfvm timed out: {}".format(filePath))
         return True

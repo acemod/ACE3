@@ -825,7 +825,7 @@
             <Italian>Punisci non-specialisti?</Italian>
             <Japanese>非特技兵へ足かせ</Japanese>
             <Korean>비-전문가에 불이익을 줍니까?</Korean>
-            <Chinesesimp>折磨非专业人员?</Chinesesimp>
+            <Chinesesimp>惩罚非专业人士？</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_Description">
@@ -1054,6 +1054,7 @@
             <Portuguese>Timer de explosão</Portuguese>
             <French>Minuteur pour explosifs</French>
             <Chinese>引爆倒數</Chinese>
+            <Chinesesimp>定时爆炸</Chinesesimp>
             <Czech>Časovač exploze</Czech>
             <Turkish>Patlayıcı Zamanlayıcı</Turkish>
             <Spanish>Temporizador de explosivo</Spanish>
@@ -1064,6 +1065,7 @@
             <Japanese>EOD に</Japanese>
             <French>Spécialiste en explosifs</French>
             <Chinese>是EOD</Chinese>
+            <Chinesesimp>爆破专家</Chinesesimp>
             <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
             <Polish>Jest EOD</Polish>
@@ -1076,6 +1078,7 @@
             <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
             <French>Définit si l'unité est un spécialiste en explosifs.</French>
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
+            <Chinesesimp>控制该单位是否是爆破专家</Chinesesimp>
             <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
@@ -1088,6 +1091,9 @@
             <French>Durée minimale</French>
             <Japanese>最短時間</Japanese>
             <Spanish>Tiempo mínimo</Spanish>
+            <Polish>Minimalny czas</Polish>
+            <German>Minimale Zeit</German>
+            <Chinesesimp>最短时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
@@ -1095,6 +1101,9 @@
             <French>Durée maximale</French>
             <Japanese>最長時間</Japanese>
             <Spanish>Tiempo máximo</Spanish>
+            <Polish>Maksymalny czas</Polish>
+            <German>Maximale Zeit</German>
+            <Chinesesimp>最长时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
@@ -1102,6 +1111,9 @@
             <French>Durée par défaut</French>
             <Japanese>標準時間</Japanese>
             <Spanish>Tiempo por defecto</Spanish>
+            <Polish>Domyślny czas</Polish>
+            <German>Standardmäßige Zeit</German>
+            <Chinesesimp>默认时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
@@ -1109,6 +1121,9 @@
             <French>Définit la durée minimale paramétrable sur le minuteur.</French>
             <Japanese>起爆タイマーの最低時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
+            <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Chinesesimp>定时爆炸的最短时间（单位：秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
@@ -1116,6 +1131,9 @@
             <French>Définit la durée maximale paramétrable sur le minuteur.</French>
             <Japanese>起爆タイマーの最長時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
+            <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Chinesesimp>定时爆炸的最长时间（单位：秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
@@ -1123,6 +1141,9 @@
             <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
             <Japanese>起爆タイマーの標準時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
+            <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Chinesesimp>定时爆炸的默认时间（单位：秒）</Chinesesimp>
         </Key>
     </Package>
 </Project>

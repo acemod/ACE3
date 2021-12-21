@@ -17,7 +17,7 @@ class Cfg3DEN {
             attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel (((_value + 1) min 3) max 0);";
             attributeSave = "(lbCurSel (_this controlsGroupCtrl 100)) - 1";
             class Controls: Controls {
-                class Title: Title{};
+                class Title: Title {};
                 class Value: ctrlToolbox {
                     idc = 100;
                     style = "0x02";

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Grenades
+component: grenades
 description: Different throwing modes for grenades, a flashbang, incendiary grenade and hand flares.
 group: feature
 category: equipment
@@ -39,7 +40,3 @@ Adds the AN-M14 incendiary grenade. This grenade has a thermate filler and is pr
 ### 2.2 Switching between grenades
 - Press <kbd>6</kbd> (ACE3 default key bind `Select frag`) to switch between `LETHAL` grenades
 - Press <kbd>7</kbd> (ACE3 default key bind `Select non-frag`) to switch between `NON LETHAL` grenades
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="grenades" %}

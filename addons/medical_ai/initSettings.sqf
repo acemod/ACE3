@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_medical_ai]:
-
 private _categoryArray = [ELSTRING(medical,Category), "STR_TEAM_SWITCH_AI"];
 
 [

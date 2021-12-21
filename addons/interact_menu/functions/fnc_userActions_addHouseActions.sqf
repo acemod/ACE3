@@ -66,7 +66,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
             _args set [0, (getPosASL ace_player)];
         } else {
-            _houseBeingScaned = _housesToScanForActions deleteAt 0;
+            private _houseBeingScaned = _housesToScanForActions deleteAt 0;
             private _typeOfHouse = typeOf _houseBeingScaned;
             //Skip this house for now if we are outside of it's radius
             //(we have to scan far out for the big houses, but we don't want to waste time adding actions on every little shack)
@@ -79,7 +79,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
             // systemChat format ["Add Actions for [%1] (count %2) @ %3", _typeOfHouse, (count _memPoints), diag_tickTime];
             {
-                private _helperPos = AGLtoASL (_houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x));
+                private _helperPos = _houseBeingScaned modelToWorldWorld (_houseBeingScaned selectionPosition _x);
                 private _helperObject = "ACE_LogicDummy" createVehicleLocal [0,0,0];
                 _addedHelpers pushBack _helperObject;
                 _helperObject setVariable [QGVAR(building), _houseBeingScaned];

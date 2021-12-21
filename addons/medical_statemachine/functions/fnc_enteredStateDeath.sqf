@@ -22,6 +22,7 @@ if (isNull _unit) exitWith {};
 TRACE_3("enteredStateDeath",_this,_thisOrigin,_thisTransition);
 
 private _causeOfDeath = format ["%1:%2", _thisOrigin, _thisTransition];
+private _instigator = _unit getVariable [QEGVAR(medical,lastInstigator), objNull];
 
 // could delay a frame here to fix the double killed EH, but we lose it being a "native" kill (scoreboard / rating)
-[_unit, _causeOfDeath] call EFUNC(medical_status,setDead);
+[_unit, _causeOfDeath, _instigator] call EFUNC(medical_status,setDead);

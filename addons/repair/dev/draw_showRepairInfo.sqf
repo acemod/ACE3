@@ -14,7 +14,7 @@ addMissionEventHandler ["Draw3D", {
     ([cursorObject] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
     private _output = [];
-    
+
     {
         private _selection = _x;
         private _hitpoint = _hitPoints select _forEachIndex;

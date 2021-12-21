@@ -54,7 +54,7 @@ class RangeCard_RscListNBox: RscListNBox {
         colorDisabled[]={1,1,1,0.3};
     };
 
-    class ListScrollBar : ScrollBar {
+    class ListScrollBar: ScrollBar {
     };
 };
 

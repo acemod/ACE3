@@ -212,6 +212,7 @@
             <Japanese>最大追随距離</Japanese>
             <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
             <Chinese>最大跟隨距離</Chinese>
+            <Chinesesimp>最大跟随距离</Chinesesimp>
             <French>Distance maximale de suivi</French>
             <Italian>Distanza massima per seguire</Italian>
             <Czech>Maximální vzdálenost sledování objektu</Czech>
@@ -225,6 +226,7 @@
             <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
             <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
+            <Chinesesimp>摄影机能追随目标的最大距离</Chinesesimp>
             <Italian>Distanza massima che la telecamera seguente può percorrere dall'obiettivo</Italian>
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
