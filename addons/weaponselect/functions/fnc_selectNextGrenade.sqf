@@ -18,27 +18,20 @@
 
 params ["_unit", ["_type", 0]];
 
-// get currently selected grenade
-private _currentGrenade = currentThrowable _unit;
-
-// get correct array format if no grenade is selected
-if (_currentGrenade isEqualTo []) then {
-    _currentGrenade = ["", ""];
-};
-
-_currentGrenade = _currentGrenade select 0;
+// get currently selected grenade & correct format if no grenade is selected
+private _currentGrenade = (currentThrowable _unit) param [0, ""];
 
 // get available magazines for that unit
 private _magazines = magazines _unit;
+private _grenadeTypes = [
+    GVAR(GrenadesAll),
+    GVAR(GrenadesFrag),
+    GVAR(GrenadesNonFrag),
+    GVAR(GrenadesFlash),
+    GVAR(GrenadesIncendiary)
+] select _type;
 
-private _grenades = [];
-
-{
-    if (_x in _magazines) then {
-        _grenades pushBack _x;
-    };
-    false
-} count ([GVAR(GrenadesAll), GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select _type);
+private _grenades = _grenadeTypes select {_x in _magazines};
 
 // abort if no grenades are available
 if (_grenades isEqualTo []) exitWith {false};
@@ -62,14 +55,12 @@ private _vestGrenades =     vestItems     _unit select {_x in GVAR(GrenadesAll) 
 private _backpackGrenades = backpackItems _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
 
 // remove all grenades except those we are switching to --> this breaks the selector
-{_unit removeItemFromUniform  _x; false} count _uniformGrenades;
-{_unit removeItemFromVest     _x; false} count _vestGrenades;
-{_unit removeItemFromBackpack _x; false} count _backpackGrenades;
+{ _unit removeItem _x } forEach (magazines _unit) select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
 
 // readd grenades
-{_unit addItemToUniform  _x; false} count _uniformGrenades;
-{_unit addItemToVest     _x; false} count _vestGrenades;
-{_unit addItemToBackpack _x; false} count _backpackGrenades;
+{_unit addItemToUniform  _x} forEach _uniformGrenades;
+{_unit addItemToVest     _x} forEach _vestGrenades;
+{_unit addItemToBackpack _x} forEach _backpackGrenades;
 
 [_nextGrenade, {_x == _nextGrenade} count _magazines] call FUNC(displayGrenadeTypeAndNumber);
 

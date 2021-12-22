@@ -40,3 +40,4 @@ Adds the AN-M14 incendiary grenade. This grenade has a thermate filler and is pr
 ### 2.2 Switching between grenades
 - Press <kbd>6</kbd> (ACE3 default key bind `Select frag`) to switch between `LETHAL` grenades
 - Press <kbd>7</kbd> (ACE3 default key bind `Select non-frag`) to switch between `NON LETHAL` grenades
+- Additional grenade selection keybinds can be found under `Controls > Addon Options > ACE3 Weapons`

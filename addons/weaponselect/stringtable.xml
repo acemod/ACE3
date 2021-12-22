@@ -288,6 +288,12 @@
             <Chinese>選擇非破片手榴彈</Chinese>
             <Turkish>El Bombası Dışındakileri Seç</Turkish>
         </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFlash">
+            <English>Select Flashbang</English>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectGrenadeIncendiary">
+            <English>Select Incendiary Grenade</English>
+        </Key>
         <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
             <English>Throw Selected Grenade</English>
             <German>Gewählte Granate werfen</German>
