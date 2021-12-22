@@ -22,4 +22,4 @@ private _affectedUnits = (_trap nearEntities ["CAManBase", _radius]) select {isD
 
 if (_affectedUnits isEqualTo []) exitWith {};
 
-[QGVAR(handlePunjiTrapDamage), _affectedUnits] call CBA_fnc_addEventHandler;
+[QGVAR(handlePunjiTrapDamage), _affectedUnits] call CBA_fnc_targetEvent;
