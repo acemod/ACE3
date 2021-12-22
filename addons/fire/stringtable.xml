@@ -22,14 +22,14 @@
             <Chinesesimp>灭火</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PerformingPatDown">
-            <English>Patting Down Fire</English>
-            <Japanese>火を叩き消しています</Japanese>
+            <English>Patting down fire...</English>
+            <Japanese>火を叩き消しています...</Japanese>
             <French>Feu en cours d'extinction...</French>
-            <Russian>Тушение</Russian>
+            <Russian>Тушение...</Russian>
             <German>Feuer wird gelöscht...</German>
-            <Polish>Gaszenie ognia</Polish>
-            <Spanish>Extinguiendo el Fuego</Spanish>
-            <Chinesesimp>正在灭火</Chinesesimp>
+            <Polish>Gaszenie ognia...</Polish>
+            <Spanish>Extinguiendo el fuego...</Spanish>
+            <Chinesesimp>正在灭火...</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_Description">
             <English>Allow units to catch fire</English>
