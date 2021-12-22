@@ -16,13 +16,7 @@
  */
 params ["_trap"];
 
-if (isNull (configFile >> "CfgPatches" >> "ace_medical")) exitWith {};
-
-private _radius = getNumber (configOf _trap >> "indirectHitRange");
-private _affectedUnits = (_trap nearEntities ["CAManBase", _radius]) select {local _x} select {isDamageAllowed _x};
 (getShotParents _trap) params ["", "_instigator"];
-
-if (_affectedUnits isEqualTo []) exitWith {};
 
 private _bodyParts = [];
 private _stabCount = 0;
