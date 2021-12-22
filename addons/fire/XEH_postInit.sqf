@@ -23,7 +23,7 @@
         private _radius = 1.5 * ((boundingBoxReal _vehicle) select 2);
         private _intensity = (fuel _vehicle) * 10;
 
-        [QGVAR(addFireSource), [_vehicle, _radius, _intensity, _vehicle, {fuel (_this select 0) == 0}, [_vehicle]]] call CBA_fnc_serverEvent;
+        [QGVAR(addFireSource), [_vehicle, _radius, _intensity, _vehicle, {fuel (_this select 0) != 0}, [_vehicle]]] call CBA_fnc_serverEvent;
     }, true, ["Man"]] call CBA_fnc_addClassEventHandler;
 
     if (isServer) then {
