@@ -25,12 +25,12 @@ if (isNull _projectile) then {
     _projectile = nearestObject [_unit, _ammo];
 };
 
-private _config = configFile >> "CfgAmmo" >> _ammo;
+private _config = configOf _projectile;
 
 // handle special grenades and sounds
 if (local _unit) then {
     // handle priming sound, if present
-    private _soundConfig = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(pullPinSound));
+    private _soundConfig = getArray (_config >> QGVAR(pullPinSound));
     if (_soundConfig isNotEqualTo []) then {
         _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
         playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
