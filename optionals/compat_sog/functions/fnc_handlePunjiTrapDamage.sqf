@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Punji trap <OBJECT>
+ * 1: Affected units <ARRAY of OBJECT>
  *
  * Return Value:
  * None
@@ -14,7 +15,7 @@
  *
  * Public: No
  */
-params ["_trap"];
+params ["_trap", "_affectedUnits"];
 
 (getShotParents _trap) params ["", "_instigator"];
 
@@ -43,4 +44,4 @@ switch (typeOf _trap select [0, 16]) do {
     for "_i" from 0 to _stabCount do {
         [_x, random [1, 2, 3], selectRandom _bodyParts, "stab", _instigator] call EFUNC(medical,addDamageToUnit);
     };
-} forEach _affectedUnits;
+} forEach _affectedUnits select {local _x};
