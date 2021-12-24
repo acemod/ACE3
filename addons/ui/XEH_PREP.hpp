@@ -1,4 +1,5 @@
 PREP(compileConfigUI);
+PREP(createSpeedIndicator);
 PREP(handlePlayerChanged);
 PREP(handleSpeedIndicator);
 PREP(moduleInit);

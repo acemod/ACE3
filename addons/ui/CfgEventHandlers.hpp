@@ -16,6 +16,12 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayMission {
+        ADDON = QUOTE(call FUNC(createSpeedIndicator));
+    };
+};
+
 // Closing diary resets showHUD
 class Extended_DisplayUnload_EventHandlers {
     class RscDiary {

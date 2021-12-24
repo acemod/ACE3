@@ -20,5 +20,5 @@ class CfgPatches {
 #include "ACE_UI.hpp"
 
 #include "RscChat.hpp"
-#include "RscInGameUI.hpp"
 #include "RscVignette.hpp"
+#include "Dialog.hpp"
