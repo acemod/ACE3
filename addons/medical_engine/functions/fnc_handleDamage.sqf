@@ -181,7 +181,6 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     // No wounds for minor damage
     if (_receivedDamage > 1E-3) then {
         TRACE_3("received",_receivedDamage,_woundedHitPoint,_damageSelectionArray);
-        systemChat str _ammo;
         [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo, _damageSelectionArray]] call CBA_fnc_localEvent;
     };
 
