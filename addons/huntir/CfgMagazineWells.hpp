@@ -4,5 +4,5 @@ class CfgMagazineWells {
     };
     class UGL_40x36 { //Vanilla and RHS [rhsusf\addons\rhsusf_c_weapons\cfgMagazineWells.hpp]
         ADDON[] = {"ACE_HuntIR_M203"};
-    };    
+    };
 };

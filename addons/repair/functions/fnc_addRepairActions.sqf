@@ -40,7 +40,7 @@ private _hitPointsAddedAmount = [];
 private _processedSelections = [];
 private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 
-private _vehCfg = configFile >> "CfgVehicles" >> _type;
+private _vehCfg = configOf _vehicle;
 // Custom position can be defined via config for associated hitpoint
 private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
 // Get turret paths

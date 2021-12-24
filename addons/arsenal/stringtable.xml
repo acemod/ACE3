@@ -159,22 +159,6 @@
             <Czech>[Shift+Klik pro uložení jako standardního vybavení pro misi]</Czech>
             <Turkish>[Shift+Click varsayılan kıyafetlere kaydet]</Turkish>
         </Key>
-        <Key ID="STR_ACE_Arsenal_buttonRenameText">
-            <English>Rename</English>
-            <Spanish>Renombrar</Spanish>
-            <French>Renommer</French>
-            <German>Umbenennen</German>
-            <Polish>Zmień nazwę</Polish>
-            <Japanese>改名</Japanese>
-            <Italian>Rinomina</Italian>
-            <Korean>이름바꾸기</Korean>
-            <Chinese>重新命名</Chinese>
-            <Chinesesimp>重新命名</Chinesesimp>
-            <Russian>Переименовать</Russian>
-            <Portuguese>Renomear</Portuguese>
-            <Czech>Přejmenovat</Czech>
-            <Turkish>Yeniden adlandır</Turkish>
-        </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
             <Spanish>Renombrar el equipamiento seleccionado</Spanish>
@@ -390,6 +374,7 @@
             <Japanese>容量で並び替え</Japanese>
             <Spanish>Ordenar por capacidad</Spanish>
             <Russian>Сортировка по вместимости</Russian>
+            <Polish>Sortuj po rozmiarze</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
             <English>Sort by accuracy</English>
@@ -399,6 +384,7 @@
             <Turkish>Isabet doğruluğuna göre sırala</Turkish>
             <Spanish>Ordenar por precisión</Spanish>
             <Russian>Сортировка по точности</Russian>
+            <Polish>Sortuj po celności</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
             <English>Sort by rate of fire</English>
@@ -408,6 +394,7 @@
             <Turkish>Atış hızına göre sırala</Turkish>
             <Spanish>Ordenar por cadencia de tiro</Spanish>
             <Russian>Сортировка по темпу стрельбы</Russian>
+            <Polish>Sortuj po szybkostrzelności</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
@@ -416,6 +403,7 @@
             <Japanese>倍率で並び替え</Japanese>
             <Spanish>Ordenar por magnificación</Spanish>
             <Russian>Сортировка по кратности приближения</Russian>
+            <Polish>Sortuj po przybliżeniu</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagCountText">
             <English>Sort by ammo count</English>
@@ -425,6 +413,7 @@
             <Turkish>Mermi sayısına göre sırala</Turkish>
             <Spanish>Ordenar por cantidad de munición</Spanish>
             <Russian>Сортировка по количеству боеприпасов</Russian>
+            <Polish>Sortuj po ilości amunicji</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
@@ -432,6 +421,8 @@
             <Japanese>防弾性能で並び替え</Japanese>
             <Spanish>Ordenar por protección balística</Spanish>
             <Russian>Сортировка по баллистической защите</Russian>
+            <Polish>Sortuj po ochronie balistycznej</Polish>
+            <German>Nach ballistischem Schutz sortieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
@@ -439,6 +430,8 @@
             <Japanese>防爆性能で並び替え</Japanese>
             <Spanish>Ordenar por protección de explosivos</Spanish>
             <Russian>Сортировка по защите от взрывов</Russian>
+            <Polish>Sortuj po ochronie przeciw wybuchom</Polish>
+            <German>Nach Explosionsschutz sortieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -1145,6 +1138,7 @@
             <Portuguese>Suporte de Visão Noturna</Portuguese>
             <French>Support JVN</French>
             <Chinese>夜視鏡支援</Chinese>
+            <Chinesesimp>夜视仪支援</Chinesesimp>
             <Czech>Podpora nočního vidění</Czech>
             <Turkish>Gece Görüş Desteği</Turkish>
         </Key>
@@ -1159,6 +1153,7 @@
             <Portuguese>Primária suportada</Portuguese>
             <French>Primaire supportée</French>
             <Chinese>主武器支援</Chinese>
+            <Chinesesimp>主武器支援</Chinesesimp>
             <Czech>Hlavní část hledí podporuje</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
@@ -1172,6 +1167,7 @@
             <Portuguese>Secundária suportada</Portuguese>
             <French>Secondaire supportée</French>
             <Chinese>次要武器支援</Chinese>
+            <Chinesesimp>副武器支援</Chinesesimp>
             <Czech>Vedlejší část hledí podporuje</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
@@ -1185,6 +1181,7 @@
             <Portuguese>Primária integrada</Portuguese>
             <French>Primaire intégrée</French>
             <Chinese>整合主武器</Chinese>
+            <Chinesesimp>整合主武器</Chinesesimp>
             <Czech>Integrováno do hlavní části hledí</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
@@ -1198,6 +1195,7 @@
             <Portuguese>Não suportado</Portuguese>
             <French>Non supporté</French>
             <Chinese>不支援</Chinese>
+            <Chinesesimp>无支援</Chinesesimp>
             <Czech>Není podporováno</Czech>
             <Turkish>Desteklenmiyor</Turkish>
         </Key>
@@ -1222,7 +1220,7 @@
             <German>Aktiviere die Gesichter-, Stimmen- und Abzeichenübersicht</German>
             <French>Activer les onglets visages/voix/insignes</French>
             <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
-            <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
+            <Chinesesimp>启用脸谱/声音/徽章选项 </Chinesesimp>
             <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
             <Italian>Abilita volti, voci e insegne</Italian>
             <Polish>Aktywuj zakładki twarz / głos / insygnia</Polish>
@@ -1303,6 +1301,7 @@
             <Portuguese>Lista Negra</Portuguese>
             <French>Liste noire</French>
             <Chinese>黑名單</Chinese>
+            <Chinesesimp>黑名单</Chinesesimp>
             <Czech>Seznam zakázaných</Czech>
             <Turkish>Kara Liste</Turkish>
         </Key>
@@ -1333,6 +1332,7 @@
             <Russian>Экспорт текущего списка предметов в виде массива для использования в скриптах</Russian>
             <French>Exporte l'équipement actuel dans le presse-papier, sous la forme d'un tableau à utiliser dans les scripts.</French>
             <Chinese>匯出目前的物品列表為陣列用於腳本編寫</Chinese>
+            <Chinesesimp>导出目前的物品列表为排列以用于脚本编写</Chinesesimp>
             <Czech>Exportovat současný seznam předmětů jako pole pro použití ve skriptech</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeImport_Tooltip">
@@ -1345,6 +1345,7 @@
             <Portuguese>Importar lista de itens da área de transferência (deve estar no mesmo formato que uma lista exportada)</Portuguese>
             <French>Importe un tableau d'équipements depuis le presse-papier (le format doit être identique à celui de l'exportation).</French>
             <Chinese>從剪貼簿匯入物品列表之陣列（應該與匯出的格式一樣）</Chinese>
+            <Chinesesimp>从剪贴板导入物品列表排列（应该与汇出的格式一样）</Chinesesimp>
             <Italian>Importa elenco appunti (deve essere nello stesso formato di un elenco esportato)</Italian>
             <Czech>Importovat pole se seznamem předmětů ze schránky (měl by být ve stejném formátu jako export)</Czech>
         </Key>
@@ -1358,6 +1359,7 @@
             <Portuguese>Adicionar itens compatíveis</Portuguese>
             <French>Ajouter des objets compatibles</French>
             <Chinese>增加相容的物品</Chinese>
+            <Chinesesimp>添加兼容物品</Chinesesimp>
             <Italian>Aggiungi Oggetti Compatibili</Italian>
             <Czech>Přidat kompatibilní předměty</Czech>
         </Key>
@@ -1371,6 +1373,7 @@
             <Portuguese>Irá automaticamente adicionar acessórios ou carregadores (baseado na categoria selecionada) para todas as armas na lista de itens atual</Portuguese>
             <French>Ajoute automatiquement des accessoires ou des chargeurs compatibles (en fonction de la catégorie sélectionnée), pour toutes les armes de la liste actuelle.</French>
             <Chinese>將會自動增加相容的配件以及彈匣（基於選擇的類型）至妳目前物品列表中的全部武器</Chinese>
+            <Chinesesimp>将自动为当前物品列表中的所有武器添加兼容的配件或弹夹（基于选定的类别）</Chinesesimp>
             <Italian>Aggiungerà automaticamente accessori o caricatori (in base alla categoria selezionata) per tutte le armi nell'elenco degli oggetti correnti</Italian>
             <Czech>Automaticky přídá kompatibilní zásobníky (na základě vybrané kategorie) ro všechny zbraně v současném seznamu předmětů</Czech>
         </Key>
@@ -1385,6 +1388,7 @@
             <Russian>Время действия</Russian>
             <Portuguese>Time to live</Portuguese>
             <Chinese>有效時間</Chinese>
+            <Chinesesimp>有效时间</Chinesesimp>
             <Czech>Time to live</Czech>
             <Turkish>Bitme Süresi</Turkish>
         </Key>
@@ -1395,6 +1399,8 @@
             <Polish>Opoźnienie zapalnika</Polish>
             <Japanese>信管設定時間</Japanese>
             <Spanish>Tiempo de espoleta</Spanish>
+            <German>Detonationsverzögerung</German>
+            <Chinesesimp>引信设定时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
@@ -1404,6 +1410,7 @@
             <Polish>Detonuj przy uderzeniu</Polish>
             <Japanese>着発信管</Japanese>
             <Spanish>Detona mediante impacto</Spanish>
+            <Chinesesimp>击发引信</Chinesesimp>
         </Key>
     </Package>
 </Project>

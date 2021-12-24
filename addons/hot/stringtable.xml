@@ -10,6 +10,7 @@
             <Russian>Проводное управление</Russian>
             <Portuguese>Guiado por Fio</Portuguese>
             <Chinese>有線制導</Chinese>
+            <Chinesesimp>有线制导</Chinesesimp>
             <French>Filoguidé</French>
             <Czech>Drátem naváděné</Czech>
             <Turkish>Tel-Güdümlü</Turkish>
@@ -24,6 +25,7 @@
             <Russian>Полуавтоматическое командное наведение по линии визирования (SACLOS)</Russian>
             <Portuguese>Comando semi-automático para a linha de visão (SACLOS)</Portuguese>
             <Chinese>視線內半自動指令</Chinese>
+            <Chinesesimp>视线内半自动指令</Chinesesimp>
             <French>Contrôle semi-automatique par contact visuel (SACLOS)</French>
             <Czech>Poloautomatický povelový systém dalkového navedení pro záměrné cíle (SACLOS)</Czech>
             <Spanish>Control semi-automático por línea de visión</Spanish>
@@ -38,6 +40,7 @@
             <Russian>Ракета с проводным управлением</Russian>
             <Portuguese>Míssil Guiado por Fio</Portuguese>
             <Chinese>有線制導飛彈</Chinese>
+            <Chinesesimp>线导导弹</Chinesesimp>
             <French>Missile filoguidé</French>
             <Czech>Drátem naváděná střela</Czech>
             <Turkish>Tel Güdümlü Füze</Turkish>
@@ -52,6 +55,7 @@
             <Russian>Ракета HOT</Russian>
             <Portuguese>Míssil HOT</Portuguese>
             <Chinese>高次音速(HOT)飛彈</Chinese>
+            <Chinesesimp>高次音速(HOT)导弹</Chinesesimp>
             <French>Missile HOT</French>
             <Czech>HOT Střela</Czech>
             <Turkish>HOT Missile</Turkish>
@@ -67,6 +71,7 @@
             <Portuguese>HOT 1</Portuguese>
             <French>HOT 1</French>
             <Chinese>HOT 1</Chinese>
+            <Chinesesimp>HOT 1</Chinesesimp>
             <Czech>HOT 1</Czech>
             <Turkish>HOT 1</Turkish>
             <Spanish>HOT 1</Spanish>
@@ -81,6 +86,7 @@
             <Portuguese>HOT 2</Portuguese>
             <French>HOT 2</French>
             <Chinese>HOT 2</Chinese>
+            <Chinesesimp>HOT 2</Chinesesimp>
             <Czech>HOT 2</Czech>
             <Turkish>HOT 2</Turkish>
             <Spanish>HOT 2</Spanish>
@@ -95,6 +101,7 @@
             <Portuguese>HOT 2MP</Portuguese>
             <French>HOT 2MP</French>
             <Chinese>HOT 2MP</Chinese>
+            <Chinesesimp>HOT 2MP</Chinesesimp>
             <Czech>HOT 2MP</Czech>
             <Turkish>HOT 2MP</Turkish>
             <Spanish>HOT 2MP</Spanish>
@@ -109,6 +116,7 @@
             <Portuguese>HOT 3</Portuguese>
             <French>HOT 3</French>
             <Chinese>HOT 3</Chinese>
+            <Chinesesimp>HOT 3</Chinesesimp>
             <Czech>HOT 3</Czech>
             <Turkish>HOT 3</Turkish>
             <Spanish>HOT 3</Spanish>
@@ -122,6 +130,7 @@
             <Russian>Ракета с проводным управлением (Противопехотная)</Russian>
             <Portuguese>Míssil Guiado por Fio (Anti-Pessoal)</Portuguese>
             <Chinese>有線制導飛彈（反步兵）</Chinese>
+            <Chinesesimp>线导导弹（反人员）</Chinesesimp>
             <French>Missile filoguidé (antipersonnel)</French>
             <Czech>Drátem naváděná střela (protipěchotní)</Czech>
             <Turkish>Tel Güdümlü Füze (Anti-Personelı)</Turkish>
@@ -137,6 +146,7 @@
             <Portuguese>1x HOT 1 [ACE]</Portuguese>
             <French>1x HOT 1 [ACE]</French>
             <Chinese>1x HOT 1 [ACE]</Chinese>
+            <Chinesesimp>1x HOT 1 [ACE]</Chinesesimp>
             <Czech>1x HOT 1 [ACE]</Czech>
             <Turkish>1x HOT 1 [ACE]</Turkish>
             <Spanish>1x HOT 1 [ACE]</Spanish>
@@ -151,6 +161,7 @@
             <Portuguese>3x HOT 1 [ACE]</Portuguese>
             <French>3x HOT 1 [ACE]</French>
             <Chinese>3x HOT 1 [ACE]</Chinese>
+            <Chinesesimp>3x HOT 1 [ACE]</Chinesesimp>
             <Czech>3x HOT 1 [ACE]</Czech>
             <Turkish>3x HOT 1 [ACE]</Turkish>
             <Spanish>3x HOT 1 [ACE]</Spanish>
@@ -165,6 +176,7 @@
             <Portuguese>4x HOT 1 [ACE]</Portuguese>
             <French>4x HOT 1 [ACE]</French>
             <Chinese>4x HOT 1 [ACE]</Chinese>
+            <Chinesesimp>4x HOT 1 [ACE]</Chinesesimp>
             <Czech>4x HOT 1 [ACE]</Czech>
             <Turkish>4x HOT 1 [ACE]</Turkish>
             <Spanish>4x HOT 1 [ACE]</Spanish>
@@ -179,6 +191,7 @@
             <Portuguese>1x HOT 2 [ACE]</Portuguese>
             <French>1x HOT 2 [ACE]</French>
             <Chinese>1x HOT 2 [ACE]</Chinese>
+            <Chinesesimp>1x HOT 2 [ACE]</Chinesesimp>
             <Czech>1x HOT 2 [ACE]</Czech>
             <Turkish>1x HOT 2 [ACE]</Turkish>
             <Spanish>1x HOT 2 [ACE]</Spanish>
@@ -193,6 +206,7 @@
             <Portuguese>3x HOT 2 [ACE]</Portuguese>
             <French>3x HOT 2 [ACE]</French>
             <Chinese>3x HOT 2 [ACE]</Chinese>
+            <Chinesesimp>3x HOT 2 [ACE]</Chinesesimp>
             <Czech>3x HOT 2 [ACE]</Czech>
             <Turkish>3x HOT 2 [ACE]</Turkish>
             <Spanish>3x HOT 2 [ACE]</Spanish>
@@ -207,6 +221,7 @@
             <Portuguese>4x HOT 2 [ACE]</Portuguese>
             <French>4x HOT 2 [ACE]</French>
             <Chinese>4x HOT 2 [ACE]</Chinese>
+            <Chinesesimp>4x HOT 2 [ACE]</Chinesesimp>
             <Czech>4x HOT 2 [ACE]</Czech>
             <Turkish>4x HOT 2 [ACE]</Turkish>
             <Spanish>4x HOT 2 [ACE]</Spanish>
@@ -221,6 +236,7 @@
             <Portuguese>1x HOT 2MP [ACE]</Portuguese>
             <French>1x HOT 2MP [ACE]</French>
             <Chinese>1x HOT 2MP [ACE]</Chinese>
+            <Chinesesimp>1x HOT 2MP [ACE]</Chinesesimp>
             <Czech>1x HOT 2MP [ACE]</Czech>
             <Turkish>1x HOT 2MP [ACE]</Turkish>
             <Spanish>1x HOT 2MP [ACE]</Spanish>
@@ -235,6 +251,7 @@
             <Portuguese>3x HOT 2MP [ACE]</Portuguese>
             <French>3x HOT 2MP [ACE]</French>
             <Chinese>3x HOT 2MP [ACE]</Chinese>
+            <Chinesesimp>3x HOT 2MP [ACE]</Chinesesimp>
             <Czech>3x HOT 2MP [ACE]</Czech>
             <Turkish>3x HOT 2MP [ACE]</Turkish>
             <Spanish>3x HOT 2MP [ACE]</Spanish>
@@ -249,6 +266,7 @@
             <Portuguese>4x HOT 2MP [ACE]</Portuguese>
             <French>4x HOT 2MP [ACE]</French>
             <Chinese>4x HOT 2MP [ACE]</Chinese>
+            <Chinesesimp>4x HOT 2MP [ACE]</Chinesesimp>
             <Czech>4x HOT 2MP [ACE]</Czech>
             <Turkish>4x HOT 2MP [ACE]</Turkish>
             <Spanish>4x HOT 2MP [ACE]</Spanish>
@@ -263,6 +281,7 @@
             <Portuguese>1x HOT 3 [ACE]</Portuguese>
             <French>1x HOT 3 [ACE]</French>
             <Chinese>1x HOT 3 [ACE]</Chinese>
+            <Chinesesimp>1x HOT 3 [ACE]</Chinesesimp>
             <Czech>1x HOT 3 [ACE]</Czech>
             <Turkish>1x HOT 3 [ACE]</Turkish>
             <Spanish>1x HOT 3 [ACE]</Spanish>
@@ -277,6 +296,7 @@
             <Portuguese>4x HOT 3 [ACE]</Portuguese>
             <French>4x HOT 3 [ACE]</French>
             <Chinese>4x HOT 3 [ACE]</Chinese>
+            <Chinesesimp>4x HOT 3 [ACE]</Chinesesimp>
             <Czech>4x HOT 3 [ACE]</Czech>
             <Turkish>4x HOT 3 [ACE]</Turkish>
             <Spanish>4x HOT 3 [ACE]</Spanish>
@@ -291,6 +311,7 @@
             <Portuguese>3x HOT 3 [ACE]</Portuguese>
             <French>3x HOT 3 [ACE]</French>
             <Chinese>3x HOT 3 [ACE]</Chinese>
+            <Chinesesimp>3x HOT 3 [ACE]</Chinesesimp>
             <Czech>3x HOT 3 [ACE]</Czech>
             <Turkish>3x HOT 3 [ACE]</Turkish>
             <Spanish>3x HOT 3 [ACE]</Spanish>

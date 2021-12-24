@@ -1,9 +1,10 @@
 
-PREP(handleDamage);
+PREP(handleDamageBox);
 PREP(engineFire);
 PREP(cookOff);
+PREP(smoke);
+PREP(cookOffEffect);
 PREP(cookOffBox);
-PREP(blowOffTurret);
 PREP(detonateAmmunition);
 PREP(getVehicleAmmo);
-PREP(handleDamageEjectIfDestroyed);
+

@@ -324,6 +324,13 @@ class CfgVehicles {
     class ModuleArsenal_F: Module_F {
         function=QFUNC(bi_moduleArsenal);
     };
+    class GVAR(moduleBurn): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Medical);
+        displayName = CSTRING(ModuleBurn_DisplayName);
+        function = QFUNC(moduleBurn);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Burn_ca.paa);
+    };
 
     class Man;
     class CAManBase: Man {

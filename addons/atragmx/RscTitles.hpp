@@ -126,7 +126,7 @@ class ATragMX_RscListBox {
         thumb="\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
     };
 
-    class ListScrollBar : ScrollBar {
+    class ListScrollBar: ScrollBar {
     };
 };
 class ATragMX_RscListNBox: ATragMX_RscListBox {

@@ -261,6 +261,15 @@
             <Chinese>維修載具中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
+            <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
+            <French>Améliore les compétences en ingénierie des unités en fonction du lieu où elles se trouvent ; notamment dans les véhicules de réparation ou les ateliers.\nUn soldat non formé devient ingénieur, un ingénieur devient ingénieur avancé.</French>
+            <Japanese>修理車両か施設内では工兵能力を上昇させます。兵士は工兵になり、工兵は上級工兵になります。</Japanese>
+            <Russian>Повысьте подготовку инженеров при ремонте транспортных средств или объектов. Нетренированный становится инженером, инженер становится продвинутым инженером.</Russian>
+            <German>Steigert die Ausbildung von Pionieren, wenn Sie sich in Reparaturfahrzeugen oder -einrichtungen befinden. Aus Ungelerntem wird Pionier, aus Pionier wird ein fortgeschrittener Pionier.</German>
+            <Polish>Zwiększ wyszkolenie inżynierów w pojazdach i budynkach naprawczych. Niewyszkoleni zostają inżynierami, inżynierowie zostają zaawansowanymi inżynierami.</Polish>
+            <Chinesesimp>在修理车辆或设施时，提升工程师训练。未受过训练的变成工程师，工程师晋升为高级工程师。</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
             <German>Möglichkeit zur vollständigen Reperatur</German>
@@ -1879,6 +1888,7 @@
             <German>Sonstige Reparaturbedingungen</German>
             <Japanese>部分修理条件</Japanese>
             <Chinese>額外修理條件</Chinese>
+            <Chinesesimp>部分全面维修条件</Chinesesimp>
             <French>Exigences pour réparations diverses</French>
             <Italian>Requisiti di riparazione vari</Italian>
             <Czech>Požadavky pro částečnou opravu</Czech>
@@ -1892,6 +1902,7 @@
             <German>Gegenstände die benötigt werden, um eine spezifische Fahrzeugkomponente oder eine Kette zu entfernen/auszutauschen.</German>
             <Japanese>車両の特定コンポーネントか履帯の除去/交換にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
+            <Chinesesimp>维修特定车辆部件或拆除/更换轨道所需的物品。</Chinesesimp>
             <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
             <Czech>Předměty potřebné k provedení opravy konkrétní části vozidla nebo sundání/výměny pásů.</Czech>
             <Polish>Przedmioty wymagane do naprawy określonego elementu pojazdu lub usunięcia/wymiany gąsienicy.</Polish>
@@ -1905,6 +1916,7 @@
             <German>Bedingungen für vollständige Reparatur</German>
             <Japanese>完全修理条件</Japanese>
             <Chinese>完整修復條件</Chinese>
+            <Chinesesimp>全面维修条件</Chinesesimp>
             <French>Exigences pour réparations complètes</French>
             <Italian>Requisiti per la riparazione completa</Italian>
             <Czech>Požadavky pro plnou opravu</Czech>
@@ -1918,6 +1930,7 @@
             <German>Gegenstände die benötigt werden um ein Fahrzeug vollständig zu reparieren.</German>
             <Japanese>車両の完全修理にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來完整修復載具</Chinese>
+            <Chinesesimp>进行全面车辆维修所需的物品。</Chinesesimp>
             <French>Outils nécessaires pour effectuer une réparation complète des véhicules.</French>
             <Czech>Předměty potřebné k provedení plné opravy vozidla.</Czech>
             <Polish>Przedmioty wymagane do przeprowadzenia pełnej naprawy pojazdu.</Polish>

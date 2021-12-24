@@ -69,6 +69,13 @@ class ACE_Medical_Injuries {
             minDamage = 0.02;
             causeLimping = 1;
         };
+        // Pain wound that is caused by making or being in contact with heat
+        class ThermalBurn {
+            causes[] = {"burn"};
+            bleeding = 0;
+            pain = 0.7;
+            minDamage = 0;
+        };
     };
     class damageTypes {
         // thresholds[] {{<min damage>, <max number of wounds>}, {...}}
@@ -119,6 +126,10 @@ class ACE_Medical_Injuries {
         class ropeburn {
             thresholds[] = {{0.1, 1}};
             selectionSpecific = 1;
+        };
+        class burn {
+            thresholds[] = {{0, 1}};
+            selectionSpecific = 0;
         };
         //No related wounds as drowning should not cause wounds/bleeding. Can be extended for internal injuries if they are added.
         class drowning {

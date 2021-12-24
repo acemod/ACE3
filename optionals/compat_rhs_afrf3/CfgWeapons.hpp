@@ -58,7 +58,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 4.3348;
     };
     class rhs_weap_rpk_base;
-    class rhs_weap_rpk74_base : rhs_weap_rpk_base {
+    class rhs_weap_rpk74_base: rhs_weap_rpk_base {
         ACE_barrelLength = 590.00;
         ACE_barrelTwist = 195.072;
     };
@@ -125,8 +125,9 @@ class CfgWeapons {
     class rhs_tsh4: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
-    
-    class rhs_6b48: H_HelmetB {
+
+    class rhs_6b47_bare;
+    class rhs_6b48: rhs_6b47_bare {
         HEARING_PROTECTION_VICCREW
     };
 
@@ -337,7 +338,7 @@ class CfgWeapons {
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_Kornet_9M133_2_msv_ca.paa";
     };
-    
+
     class rhs_uniform_flora;
     class rhs_uniform_df15: rhs_uniform_flora {
         ACE_GForceCoef = 0.8;

@@ -1,5 +1,8 @@
 class CfgWeapons {
-    class Rifle_Base_F;
+    class Rifle;
+    class Rifle_Base_F: Rifle {
+        class WeaponSlotsInfo;
+    };
     class Rifle_Long_Base_F: Rifle_Base_F {
         class WeaponSlotsInfo;
     };
@@ -112,6 +115,87 @@ class CfgWeapons {
         };
     };
 
+    // - HK416A5 --------------------------------------------------------------
+    class arifle_SPAR_01_base_F: Rifle_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 68.8;
+        };
+    };
+    class arifle_SPAR_01_GL_base_F: arifle_SPAR_01_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 96.8;
+        };
+    };
+    class arifle_SPAR_02_base_F: Rifle_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 76.9;
+        };
+    };
+
+    // - HK417A2 --------------------------------------------------------------
+    class arifle_SPAR_03_base_F: Rifle_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 104.5;
+        };
+    };
+
+    // - AK15 - Weights taken from the 2020 AK-15 -----------------------------
+    class arifle_AK12_base_F: Rifle_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 82.5;
+        };
+    };
+    class arifle_AK12_GL_base_F: arifle_AK12_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 113.5;
+        };
+    };
+    class arifle_AK12U_base_F: arifle_AK12_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 65;
+        };
+    };
+    class arifle_RPK12_base_F: arifle_AK12_base_F { // Estimated difference by comparing RPK to AKM (+1.5kg)
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 115.5;
+        };
+    };
+
+    // - AKM ------------------------------------------------------------------
+    class arifle_AKM_base_F: Rifle_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 67;
+        };
+    };
+
+    // - AKS-74U --------------------------------------------------------------
+    class arifle_AKS_base_F: Rifle_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 60;
+        };
+    };
+
+    // - MSBS -----------------------------------------------------------------
+    class arifle_MSBS65_base_F: Rifle_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 82.7;
+        };
+    };
+    class arifle_MSBS65_GL_base_F: arifle_MSBS65_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 124.5;
+        };
+    };
+    class arifle_MSBS65_UBS_base_F: arifle_MSBS65_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 115.7;
+        };
+    };
+    class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F {
+        class WeaponSlotsInfo {
+            mass = 101;
+        };
+    };
 
 // - LMGs ---------------------------------------------------------------------
 
@@ -126,6 +210,13 @@ class CfgWeapons {
     class LMG_Zafir_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 163;
+        };
+    };
+
+    // - FN Minimi SPW --------------------------------------------------------
+    class LMG_03_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+          mass = 154.4;
         };
     };
 
@@ -250,6 +341,27 @@ class CfgWeapons {
         };
     };
 
+    // - RPG-7 ----------------------------------------------------------------
+    class launch_RPG7_F: Launcher_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 139;
+        };
+    };
+
+    // - MAAWS Mk4 ------------------------------------------------------------
+    class launch_MRAWS_base_F: Launcher_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 145.5;
+        };
+    };
+
+    // - Metis-M --------------------------------------------------------------
+    class launch_Vorona_base_F: Launcher_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 224.8;
+        };
+    };
+
 
 // - Pistols ------------------------------------------------------------------
 
@@ -323,9 +435,6 @@ class CfgWeapons {
 
     // - M14 ------------------------------------------------------------------
     class DMR_06_base_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo;
-    };
-    class srifle_DMR_06_camo_F: DMR_06_base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 92;
         };

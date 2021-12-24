@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Map Tools
+component: maptools
 description: Map tools, a roamer and pens.
 group: feature
 category: equipment
@@ -38,7 +39,3 @@ If you are equipped with a vanilla GPS it will be shown on the map. (You don't n
 - Press <kbd>ALT</kbd> + <kbd>LMB</kbd> to start the line, left click again to end it.
 - To delete a line press <kbd>Del</kbd> around the center of the line.
 - Note that you can change the color of the lines by clicking on one of the coloured column on top of the screen (While the map is opened).
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="maptools" %}

@@ -29,4 +29,4 @@ private _return = true;
     };
 } forEach _items;
 
-_return;
+_return

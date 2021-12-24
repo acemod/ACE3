@@ -20,6 +20,7 @@ PREP(getFullRepairTime);
 PREP(getHitPointString);
 PREP(getHitPointsToIgnore);
 PREP(getPostRepairDamage);
+PREP(getRepairItems);
 PREP(getWheelHitPointsWithSelections);
 PREP(hasItems);
 PREP(isEngineer);
