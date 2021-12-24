@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: veteran29
+ * Author: veteran29, modified by GhostIsSpooky
  * Handles visual changes of the speed indicator.
  *
  * Arguments:
@@ -25,4 +25,5 @@ private _isProne = _animState select [5, 3] isEqualTo "pne";
 private _icon = GVAR(speedIndicatorIconHash) getOrDefault [[_animSpeed, _isProne], ""];
 
 private _speedIndicator = uiNamespace getVariable [QGVAR(speedIndicator), controlNull];
+
 _speedIndicator ctrlSetText _icon;
