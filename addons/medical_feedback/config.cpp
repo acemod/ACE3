@@ -19,4 +19,4 @@ class CfgPatches {
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "RscTitles.hpp"
-#include "RscInGameUI.hpp"
+#include "Dialog.hpp"

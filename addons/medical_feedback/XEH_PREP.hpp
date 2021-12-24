@@ -1,3 +1,4 @@
+PREP(createHUDIndicators);
 PREP(effectBleeding);
 PREP(effectBloodVolume);
 PREP(effectBloodVolumeIcon);

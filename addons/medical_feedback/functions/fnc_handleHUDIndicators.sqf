@@ -17,6 +17,7 @@
  */
 params [["_dropAllIndicators", false]];
 
+private _hudContainer = uiNamespace getVariable [QGVAR(HUDIndicatorsContainer), controlNull];
 private _indicatorSlots = [
     uiNamespace getVariable [QGVAR(stateIndicator1), controlNull],
     uiNamespace getVariable [QGVAR(stateIndicator2), controlNull],
@@ -28,6 +29,7 @@ if (_dropAllIndicators) exitWith {
     {
         _x ctrlSetText "";
     } forEach _indicatorSlots;
+    _hudContainer ctrlCommit 0;
 };
 
 // --- Tourniquets
@@ -62,3 +64,5 @@ private _icons = [
 {
     _x ctrlSetText (_icons param [_forEachIndex, ""]);
 } forEach _indicatorSlots;
+
+_hudContainer ctrlCommit 0;
