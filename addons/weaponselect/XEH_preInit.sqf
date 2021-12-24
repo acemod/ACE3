@@ -20,9 +20,8 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 
 {
     private _magazines = getArray (_cfgWeaponsThrow >> _x >> "magazines");
+    GVAR(GrenadesAll) append _magazines;
     {
-        GVAR(GrenadesAll) pushBack _x;
-
         private _ammo = getText (_cfgMagazines >> _x >> "ammo");
 
         private _explosive = getNumber (_cfgAmmo >> _ammo >> "explosive") > 0;
