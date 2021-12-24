@@ -172,7 +172,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
             // Leave fire handling to fire component if it's enabled
             // Burn intensity works on 1-10 scale, scale down to 3/4 because humans aren't made out of gasoline
-            if (missionNamespace getVariable [QEGVAR(fire,enabled), false] ) exitWith {
+            if (missionNamespace getVariable [QEGVAR(fire,enabled), false]) exitWith {
                 [QEGVAR(fire,burn), [_unit, _receivedDamage * 7.5]] call CBA_fnc_globalEvent;
             };
         };
