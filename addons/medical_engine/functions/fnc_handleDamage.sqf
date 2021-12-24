@@ -151,7 +151,8 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             };
         } else {
             // Anything else is almost guaranteed to be fire damage
-            _damageSelectionArray = [HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 2, HITPOINT_INDEX_RARM, 2, HITPOINT_INDEX_LLEG, 3, HITPOINT_INDEX_RLEG, 3];
+            // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
+            _damageSelectionArray = [HITPONT_INDEX_HEAD, 0.77, HITPOINT_INDEX_BODY, 0.5, HITPOINT_INDEX_LARM, 0.8, HITPOINT_INDEX_RARM, 0.8, HITPOINT_INDEX_LLEG, 0.3, HITPOINT_INDEX_RLEG, 0.3];
             _ammo = "burn"; // non-selectionSpecific so only _damageSelectionArray matters
 
             // Fire damage can occur as lots of minor damage events
