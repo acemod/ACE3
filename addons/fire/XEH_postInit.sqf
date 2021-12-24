@@ -13,6 +13,19 @@
     TRACE_1("settingsInit", GVAR(enabled));
     if (!GVAR(enabled)) exitWith {};
 
+    ["AllVehicles", "Killed", {
+        params ["_vehicle", "_killer"];
+
+        if !(local _vehicle) exitWith {};
+
+        if (getText (configOf _vehicle >> "destrType") == "") exitWith {};
+
+        private _radius = 1.5 * ((boundingBoxReal _vehicle) select 2);
+        private _intensity = (fuel _vehicle) * 10;
+
+        [QGVAR(addFireSource), [_vehicle, _radius, _intensity, _vehicle, {fuel (_this select 0) != 0}, [_vehicle]]] call CBA_fnc_serverEvent;
+    }, true, ["Man"]] call CBA_fnc_addClassEventHandler;
+
     if (isServer) then {
         [QGVAR(addFireSource), {
             params ["_source", "_radius", "_intensity", "_key", ["_condition", { true }], ["_conditionArgs", []]];
