@@ -1,7 +1,5 @@
 PREP(compileConfigUI);
-PREP(createSpeedIndicator);
 PREP(handlePlayerChanged);
-PREP(handlePlayerVehicle);
 PREP(handleSpeedIndicator);
 PREP(moduleInit);
 PREP(onAnimChanged);

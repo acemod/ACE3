@@ -37,7 +37,7 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
         params ["_name", "_value"];
         if (_name select [0, 7] != "ace_ui_") exitWith {};
 
-        if (_name == QGVAR(enableSpeedIndicator)) then {
+        if (_name == QGVAR(enableSpeedIndicator)) exitWith {
             private _speedIndicator = uiNamespace getVariable [QGVAR(speedIndicator), controlNull];
             _speedIndicator ctrlShow (_value && {(vehicle ACE_Player) isEqualTo ACE_Player});
         };
@@ -55,4 +55,3 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
 }] call CBA_fnc_addEventHandler;
 
 ["unit", LINKFUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
-["vehicle", LINKFUNC(handlePlayerVehicle), true] call CBA_fnc_addPlayerEventHandler;

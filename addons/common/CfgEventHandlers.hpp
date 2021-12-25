@@ -24,6 +24,21 @@ class Extended_DisplayLoad_EventHandlers {
     class RscUnitInfo {
         ADDON = QUOTE([ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Any')])] call CBA_fnc_localEvent;);
     };
+    class RscDisplayInterrupt {
+        ADDON = QUOTE([true] call FUNC(hideHUDHelper));
+    };
+    class RscDisplayMPInterrupt {
+        ADDON = QUOTE([true] call FUNC(hideHUDHelper));
+    };
+};
+
+class Extended_DisplayUnload_EventHandlers {
+    class RscDisplayInterrupt {
+        ADDON = QUOTE([false] call FUNC(hideHUDHelper));
+    };
+    class RscDisplayMPInterrupt {
+        ADDON = QUOTE([false] call FUNC(hideHUDHelper));
+    };
 };
 
 class Extended_InitPost_EventHandlers {

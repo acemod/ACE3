@@ -14,10 +14,6 @@
 #define WIDTH (16 * GUI_GRID_W)
 #define HEIGHT (0.5 * GUI_GRID_H)
 
-class RscText;
-class RscPicture;
-class RscControlsGroupNoScrollbars;
-
 class GVAR(CompassControl): RscControlsGroupNoScrollbars {
     onLoad = QUOTE(\
         params ['_control'];\

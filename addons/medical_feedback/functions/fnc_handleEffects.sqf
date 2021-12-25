@@ -48,7 +48,7 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
     linearConversion [BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE, _bloodVolume, 0, 1, true]
 ] call FUNC(effectBloodVolume);
 [
-    !(_inVehicle),
+    true,
     ceil linearConversion [
         BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE,
         _bloodVolume,
@@ -61,7 +61,7 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 
 // - Tourniquets, fractures and splints indication ---------------------------------------
 if (GVAR(enableHUDIndicators)) then {
-    [_inVehicle] call FUNC(handleHUDIndicators);
+    [] call FUNC(handleHUDIndicators);
 };
 
 END_COUNTER(handleEffects);

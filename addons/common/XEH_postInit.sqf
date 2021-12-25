@@ -264,11 +264,20 @@ call FUNC(assignedItemFix);
 // @todo remove?
 enableCamShake true;
 
+//////////////////////////////////////////////////
+// Set up HUD Helper
+//////////////////////////////////////////////////
+
+GVAR(hudHelperHash) = createHashMap;
+"ACE_RscHUDHelper" cutRsc ["ACE_RscHUDHelper", "PLAIN", 0.01, false];
 
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
     if (GVAR(showHudHash) isNotEqualTo createHashMap) then {
         [] call FUNC(showHud);
+    };
+    if (GVAR(hudHelperHash) isNotEqualTo createHashMap) then {
+        [false] call FUNC(hideHUDHelper);
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -305,12 +314,13 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
     GVAR(uniqueItemsCache) = nil;
 }] call CBA_fnc_addPlayerEventHandler;
 
-// Backwards compatiblity for old ace event
+// Backwards compatiblity for old ace event & hide HUD helper
 GVAR(OldIsCamera) = false;
 ["featureCamera", {
     params ["_player", "_cameraName"];
     GVAR(OldIsCamera) = _cameraName != "";
     ["ace_activeCameraChanged", [_player, GVAR(OldIsCamera)]] call CBA_fnc_localEvent;
+    [GVAR(OldIsCamera)] call FUNC(hideHUDHelper);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 // Add event handler for UAV control change
