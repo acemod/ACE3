@@ -33,6 +33,7 @@ private _bloodVolume      = GET_BLOOD_VOLUME(ACE_player);
 private _unconscious      = IS_UNCONSCIOUS(ACE_player);
 private _heartRate        = GET_HEART_RATE(ACE_player);
 private _pain             = GET_PAIN_PERCEIVED(ACE_player);
+private _inVehicle        = (vehicle ACE_player) isNotEqualTo ACE_player;
 
 if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) || {_heartRate < 60}}) then {
     TRACE_1("Starting heart beat effect",_heartRate);
@@ -47,7 +48,7 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
     linearConversion [BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE, _bloodVolume, 0, 1, true]
 ] call FUNC(effectBloodVolume);
 [
-    true,
+    !(_inVehicle),
     ceil linearConversion [
         BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE,
         _bloodVolume,
@@ -60,7 +61,7 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 
 // - Tourniquets, fractures and splints indication ---------------------------------------
 if (GVAR(enableHUDIndicators)) then {
-    [] call FUNC(handleHUDIndicators);
+    [_inVehicle] call FUNC(handleHUDIndicators);
 };
 
 END_COUNTER(handleEffects);

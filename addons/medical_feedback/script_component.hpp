@@ -59,3 +59,8 @@
 #define ICON_TOURNIQUET_PATH QPATHTOF(data\tourniquet.paa)
 #define ICON_SPLINT_PATH QPATHTOF(data\splint.paa)
 #define ICON_FRACTURE_PATH QPATHTOF(data\fracture.paa)
+
+#define IDC_BLOODVOLUME 10
+#define IDC_TOURNIQUET  11
+#define IDC_SPLINT      12
+#define IDC_FRACTURE    13
