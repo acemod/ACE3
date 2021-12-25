@@ -4,16 +4,15 @@
  * Creates the HUD indicators.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call ace_medical_feedback_fnc_createHUDIndicators
+ * call ace_medical_feedback_fnc_createHUDIndicators
  *
  * Public: No
  */
-params ["_display"];
 
 QGVAR(HUDIndicators) cutRsc [QGVAR(HUDIndicatorsDisplay), "PLAIN", 0.01, false];
