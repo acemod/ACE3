@@ -16,7 +16,4 @@
  */
 params ["_display"];
 
-private _hudContainer = _display ctrlCreate [QGVAR(HUDIndicatorsContainer), -1];
-uiNamespace setVariable [QGVAR(HUDIndicatorsContainer), _hudContainer];
-
-_hudContainer ctrlCommit 0;
+QGVAR(HUDIndicators) cutRsc [QGVAR(HUDIndicatorsDisplay), "PLAIN", 0.01, false];

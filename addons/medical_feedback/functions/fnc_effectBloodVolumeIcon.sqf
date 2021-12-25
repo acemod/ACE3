@@ -18,12 +18,10 @@
 
 params ["_enable", "_intensity"];
 
-private _hudContainer = uiNamespace getVariable [QGVAR(HUDIndicatorsContainer), controlNull];
 private _indicatorCtrl = uiNamespace getVariable [QGVAR(bloodVolumeIndicator), controlNull];
 
 if (!_enable || !GVAR(showBloodVolumeIcon)) exitWith {
     _indicatorCtrl ctrlSetText "";
-    _hudContainer ctrlCommit 0;
 };
 
 private _text = "";
@@ -41,4 +39,3 @@ if (_intensity > 0) then {
 // --- Affecting UI icon with proper image and color
 _indicatorCtrl ctrlSetText _text;
 _indicatorCtrl ctrlSetTextColor _color;
-_hudContainer ctrlCommit 0;
