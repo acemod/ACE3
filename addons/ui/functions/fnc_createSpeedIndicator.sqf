@@ -4,20 +4,18 @@
  * Creates the speed indicator.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [DISPLAY] call ace_ui_fnc_createSpeedIndicator
+ * call ace_ui_fnc_createSpeedIndicator
  *
  * Public: No
  */
-params ["_display"];
 
-private _speedIndicator = _display ctrlCreate [QGVAR(SpeedIndicatorContainer), -1];
-uiNamespace setVariable [QGVAR(speedIndicatorContainer), _speedIndicator];
+QGVAR(speedIndicator) cutRsc [QGVAR(speedIndicatorDisplay), "PLAIN", 0.01, false];
 
-_speedIndicator ctrlSetFade 1;
-_speedIndicator ctrlCommit 0;
+private _speedIndicator = uiNamespace getVariable [QGVAR(speedIndicator), controlNull];
+_speedIndicator ctrlShow GVAR(enableSpeedIndicator);

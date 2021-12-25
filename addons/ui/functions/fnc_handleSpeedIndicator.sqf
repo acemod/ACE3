@@ -24,8 +24,6 @@ private _isProne = _animState select [5, 3] isEqualTo "pne";
 
 private _icon = GVAR(speedIndicatorIconHash) getOrDefault [[_animSpeed, _isProne], ""];
 
-private _speedIndicatorContainer = uiNamespace getVariable [QGVAR(speedIndicatorContainer), controlNull];
-(_speedIndicatorContainer controlsGroupCtrl 10) ctrlSetText _icon;
+private _speedIndicator = uiNamespace getVariable [QGVAR(speedIndicator), controlNull];
 
-_speedIndicatorContainer ctrlSetFade 0;
-_speedIndicatorContainer ctrlCommit 0
+_speedIndicator ctrlSetText _icon;
