@@ -277,7 +277,7 @@ GVAR(hudHelperHash) = createHashMap;
         [] call FUNC(showHud);
     };
     if (GVAR(hudHelperHash) isNotEqualTo createHashMap) then {
-        [false] call FUNC(hideHUDHelper);
+        [true] call FUNC(showHUDHelper);
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -320,7 +320,7 @@ GVAR(OldIsCamera) = false;
     params ["_player", "_cameraName"];
     GVAR(OldIsCamera) = _cameraName != "";
     ["ace_activeCameraChanged", [_player, GVAR(OldIsCamera)]] call CBA_fnc_localEvent;
-    [GVAR(OldIsCamera)] call FUNC(hideHUDHelper);
+    [!GVAR(OldIsCamera)] call FUNC(showHUDHelper);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 // Add event handler for UAV control change

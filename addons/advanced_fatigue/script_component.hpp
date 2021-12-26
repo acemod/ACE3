@@ -3,7 +3,7 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+#define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_ADVANCED_FATIGUE
@@ -15,6 +15,9 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#include "\a3\ui_f\hpp\defineResincl.inc"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
 
 #define ANTPERCENT 0.8
 #define SIM_BODYMASS 70

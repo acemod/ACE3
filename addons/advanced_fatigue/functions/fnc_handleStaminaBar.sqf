@@ -4,7 +4,7 @@
  * Handles visual changes of the stamina bar.
  *
  * Arguments:
- * Percent of stamina remaining <NUMBER>
+ * None
  *
  * Return Value:
  * None
@@ -14,23 +14,26 @@
  *
  * Public: No
  */
-params ["_stamina"];
 
-private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+private _staminaBar = uiNamespace getVariable [QGVAR(staminaBar), controlNull];
+if !(ctrlShown _staminaBar) exitWith {};
+
+
+private _stamina = GVAR(anReserve) / AN_MAXRESERVE;
 
 // - Size ---------------------------------------------------------------------
-// Shrink the container to cut off the image (other wise it would just get stretched)
-private _posAndSize = ctrlPosition _staminaBarContainer;
-_posAndSize set [2, _stamina * GVAR(staminaBarWidth)];
-_staminaBarContainer ctrlSetPosition _posAndSize;
+_staminaBar progressSetPosition _stamina;
+systemChat str _stamina;
 
 // - Opacity ------------------------------------------------------------------
 if (GVAR(fadeStaminaBar)) then {
     if (_stamina >= 0.8) then {
-        _staminaBarContainer ctrlSetFade (0.9 + 0.1 * (_stamina - 0.8) / 0.2);
+        _staminaBar ctrlSetFade (0.9 + 0.1 * (_stamina - 0.8) / 0.2);
     } else {
-        _staminaBarContainer ctrlSetFade (0.9 * _stamina / 0.8);
+        _staminaBar ctrlSetFade (0.9 * _stamina / 0.8);
     };
+} else {
+    _staminaBar ctrlSetFade 0;
 };
 
 // - Color --------------------------------------------------------------------
@@ -46,6 +49,5 @@ if (_stamina < 0.6) then {
     };
 };
 _color pushBack 1;
-(_staminaBarContainer controlsGroupCtrl 10) ctrlSetTextColor _color;
+_staminaBar ctrlSetTextColor _color;
 
-_staminaBarContainer ctrlCommit 1;

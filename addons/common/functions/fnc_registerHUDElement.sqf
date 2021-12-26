@@ -28,3 +28,7 @@ if (_condition != "") then {
 
 uiNamespace setVariable [_id, _ctrl];
 GVAR(hudHelperHash) set [_id, _condition];
+
+private _info = format ["Addon %1 registered HUD element with id: %2", (configSourceAddonList _config) select 0, _id];
+
+INFO(_info);

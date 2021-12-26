@@ -1,20 +1,20 @@
 #include "script_component.hpp"
 /*
  * Author: GhostIsSpooky
- * Handles pause menu being opened or closed.
+ * Handles showing/hiding registered HUD elements.
  *
  * Arguments:
- * 0: Hide? <BOOL>
+ * 0: Show? <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [true] call ace_common_fnc_hideHUDHelper
+ * [true] call ace_common_fnc_showHUDHelper
  *
  * Public: Yes
  */
-params ["_hide"];
+params ["_show"];
 
 private _uiHelper = uiNamespace getVariable ["ACE_RscHUDHelper", displayNull];
 if (isNull _uiHelper) exitWith {};
@@ -24,6 +24,6 @@ if (isNull _uiHelper) exitWith {};
 
     private _id = ctrlClassName _x;
     private _condition = GVAR(hudHelperHash) get _id;
-
-    _x ctrlShow (!_hide) && _condition;
+    private _hide = _show && _condition;
+    _x ctrlShow _hide;
 } forEach (allControls _uiHelper);
