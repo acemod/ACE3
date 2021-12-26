@@ -23,7 +23,6 @@ private _stamina = GVAR(anReserve) / AN_MAXRESERVE;
 
 // - Size ---------------------------------------------------------------------
 _staminaBar progressSetPosition _stamina;
-systemChat str _stamina;
 
 // - Opacity ------------------------------------------------------------------
 if (GVAR(fadeStaminaBar)) then {

@@ -18,6 +18,7 @@ params [["_ctrl", controlNull, [controlNull]]];
 if (isNull _ctrl) exitWith {};
 
 private _id = ctrlClassName _ctrl;
+if !(_id in GVAR(hudHelperHash)) exitWith {};
 
 uiNamespace setVariable [_id, nil];
 ctrlDelete _ctrl;
