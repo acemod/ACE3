@@ -15,14 +15,18 @@
  * Public: No
  */
 
-private _staminaBar = uiNamespace getVariable [QGVAR(staminaBar), controlNull];
-if !(ctrlShown _staminaBar) exitWith {};
+private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+if !(ctrlShown _staminaBarContainer) exitWith {};
 
+private _staminaBar =  uiNamespace getVariable [QGVAR(staminaBar), controlNull];
 
 private _stamina = GVAR(anReserve) / AN_MAXRESERVE;
 
 // - Size ---------------------------------------------------------------------
-_staminaBar progressSetPosition _stamina;
+// Change size of container to cut-off bar picture
+private _sizeAndPos = ctrlPosition _staminaBarContainer;
+_sizeAndPos set [2, _stamina * STAMINA_BAR_WIDTH];
+_staminaBarContainer ctrlSetPosition _sizeAndPos;
 
 // - Opacity ------------------------------------------------------------------
 if (GVAR(fadeStaminaBar)) then {
@@ -49,4 +53,6 @@ if (_stamina < 0.6) then {
 };
 _color pushBack 1;
 _staminaBar ctrlSetTextColor _color;
+_staminaBar ctrlCommit 0;
+_staminaBarContainer ctrlCommit 1;
 

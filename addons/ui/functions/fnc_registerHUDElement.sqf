@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_ctrl] call ace_common_fnc_registerHUDElement
+ * [_ctrl] call ace_ui_fnc_registerHUDElement
  *
  * Public: No
  */

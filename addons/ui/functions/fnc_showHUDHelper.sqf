@@ -10,11 +10,11 @@
  * None
  *
  * Example:
- * [true] call ace_common_fnc_showHUDHelper
+ * [true] call ace_ui_fnc_showHUDHelper
  *
  * Public: Yes
  */
-params ["_show"];
+params [["_show", true, [true]]];
 
 private _uiHelper = uiNamespace getVariable ["ACE_RscHUDHelper", displayNull];
 if (isNull _uiHelper) exitWith {};

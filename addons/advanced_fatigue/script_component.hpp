@@ -3,7 +3,7 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+#define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_ADVANCED_FATIGUE
@@ -18,6 +18,8 @@
 
 #include "\a3\ui_f\hpp\defineResincl.inc"
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
+
+#define STAMINA_BAR_WIDTH (10 * IGUI_GRID_STAMINA_W)
 
 #define ANTPERCENT 0.8
 #define SIM_BODYMASS 70

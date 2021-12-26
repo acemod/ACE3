@@ -15,6 +15,9 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     // Initial settings
     [false] call FUNC(setElements);
 
+    GVAR(hudHelperHash) = createHashMap;
+    "ACE_RscHUDHelper" cutRsc ["ACE_RscHUDHelper", "PLAIN", 0.01, false];
+
     // On load and entering/exiting a vehicle
     ["ace_infoDisplayChanged", {
         // Selective UI Advanced
@@ -24,6 +27,9 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
             [_x, missionNamespace getVariable (format [QGVAR(%1), _x]), false, _force] call FUNC(setAdvancedElement);
         } forEach (allVariables GVAR(configCache));
 
+        // HUD Helper, needs to run on every UI update
+        [!EGVAR(common,oldIsCamera)] call FUNC(showHUDHelper);
+
         // Execute local event for when it's safe to modify UI through this API
         // infoDisplayChanged can execute multiple times, make sure it only happens once
         if (!GVAR(interfaceInitialized)) then {
@@ -31,6 +37,10 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
             GVAR(interfaceInitialized) = true;
         };
     }] call CBA_fnc_addEventHandler;
+
+    ["featureCamera", {
+        [!EGVAR(common,oldIsCamera)] call FUNC(showHUDHelper);
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
     // On changing settings
     ["CBA_SettingChanged", {

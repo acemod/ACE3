@@ -29,7 +29,7 @@ class RscTitles {
         class controls {
             class GVAR(bloodVolumeIndicator): RscPictureKeepAspect { // Classname is also used as uiNamespace variable name.
                 idc = -1; // Recommended. Access control through 'uiNamespace getVariable [QGVAR(bloodVolumeIndicator), controlNull]';
-                onLoad = QUOTE(_this call EFUNC(common,registerHUDElement)); //Required. Registers control as a HUD element.
+                onLoad = QUOTE(_this call EFUNC(ui,registerHUDElement)); //Required. Registers control as a HUD element.
                 condition = ""; // Condition for showing HUD element. Can be function, missionNamespace variable, or code. "" = always shown.
                 x = IGUI_GRID_STANCE_X; // X position of the control. safeZoneX is the left of the screen.
                 y = IGUI_GRID_STANCE_Y; // Y position of the control. safeZoneY is the top of the screen.
@@ -56,11 +56,11 @@ class RscTitles {
 
 ## 2. Removing a HUD Element
 
-As simple as passing the HUD Element to `ace_common_fnc_removeHUDElement`.
+As simple as passing the HUD Element to `ace_ui_fnc_removeHUDElement`.
 
 ### 2.1 fnc_removeHUDElement
 
-`ace_common_fnc_removeHUDElement`
+`ace_ui_fnc_removeHUDElement`
 
 ```sqf
 /*
@@ -73,5 +73,5 @@ As simple as passing the HUD Element to `ace_common_fnc_removeHUDElement`.
 
 ```sqf
 _ctrl = uiNamespace getVariable ["ace_medical_feedback_bloodVolumeIndicator", controlNull];
-[_ctrl] call ace_common_fnc_removeHUDElement;
+[_ctrl] call ace_ui_fnc_removeHUDElement;
 ```

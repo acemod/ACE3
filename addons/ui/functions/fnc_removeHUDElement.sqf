@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_ctrl] call ace_common_fnc_removeHUDElement
+ * [_ctrl] call ace_ui_fnc_removeHUDElement
  *
  * Public: Yes
  */
