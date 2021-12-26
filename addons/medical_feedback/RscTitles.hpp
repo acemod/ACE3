@@ -24,6 +24,7 @@ class RscTitles {
             class GVAR(bloodVolumeIndicator): RscPictureKeepAspect {
                 idc = -1;
                 onLoad = QUOTE(_this call EFUNC(common,registerHUDElement));
+                onUnload = QUOTE(_this call EFUNC(common,removeHUDElement));
                 condition = "";
                 x = IGUI_GRID_STANCE_X;
                 y = IGUI_GRID_STANCE_Y;

@@ -9,6 +9,7 @@ class RscTitles {
         class controls {
             class GVAR(speedIndicator): RscPictureKeepAspect {
                 onLoad = QUOTE(_this call EFUNC(common,registerHUDElement));
+                onUnload = QUOTE(_this call EFUNC(common,removeHUDElement));
                 condition = QUOTE(GVAR(enableSpeedIndicator) && {(vehicle ACE_player) == ACE_player});
                 idc = -1;
                 x = IGUI_GRID_STANCE_X + IGUI_GRID_STANCE_WAbs / 2 - SPEED_INDICATOR_W / 2;

@@ -13,7 +13,7 @@
  * Example:
  * [_ctrl] call ace_common_fnc_registerHUDElement
  *
- * Public: Yes
+ * Public: No
  */
 params [["_ctrl", controlNull, [controlNull]], ["_config", configNull, [configNull]]];
 if (isNull _ctrl) exitWith {};
