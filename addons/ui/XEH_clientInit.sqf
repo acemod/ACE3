@@ -37,11 +37,6 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
         params ["_name", "_value"];
         if (_name select [0, 7] != "ace_ui_") exitWith {};
 
-        if (_name == QGVAR(enableSpeedIndicator)) exitWith {
-            private _speedIndicator = uiNamespace getVariable [QGVAR(speedIndicator), controlNull];
-            _speedIndicator ctrlShow (_value && {(vehicle ACE_Player) isEqualTo ACE_Player});
-        };
-
         if (_name in ELEMENTS_BASIC) then {
             [true] call FUNC(setElements);
         } else {
