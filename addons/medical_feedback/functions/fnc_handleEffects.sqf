@@ -33,7 +33,6 @@ private _bloodVolume      = GET_BLOOD_VOLUME(ACE_player);
 private _unconscious      = IS_UNCONSCIOUS(ACE_player);
 private _heartRate        = GET_HEART_RATE(ACE_player);
 private _pain             = GET_PAIN_PERCEIVED(ACE_player);
-private _inVehicle        = (vehicle ACE_player) isNotEqualTo ACE_player;
 
 if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) || {_heartRate < 60}}) then {
     TRACE_1("Starting heart beat effect",_heartRate);
