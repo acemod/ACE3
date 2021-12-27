@@ -140,6 +140,7 @@
             <Japanese>開傘失敗率</Japanese>
             <Polish>Szansa na nieotwarcie się spadochronu</Polish>
             <German>Wahrscheinlichkeit, dass ein Fallschirm sich nicht öffnet</German>
+            <Chinesesimp>开伞失败率</Chinesesimp>
         </Key>
     </Package>
 </Project>

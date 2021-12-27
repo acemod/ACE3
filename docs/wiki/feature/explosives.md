@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Explosives
+component: explosives
 description: Adds numerous improvements to using and handling explosives.
 group: feature
 category: interaction
@@ -42,7 +43,3 @@ Enables attaching explosives to vehicles.
 - You are safe to pick it up after the action has completed.
 
 **Tip:** To increase the success rate when defusing, make sure you crawl up to the IED.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="explosives" %}

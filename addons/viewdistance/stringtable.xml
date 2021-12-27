@@ -120,6 +120,7 @@
         </Key>
         <Key ID="STR_ACE_ViewDistance_sliderExtraDescription">
             <English>Setting to 0 will use default video settings</English>
+            <Chinesesimp>设置为0将使用默认的视频设置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>

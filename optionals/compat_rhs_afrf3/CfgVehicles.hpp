@@ -187,7 +187,7 @@ class CfgVehicles {
         ace_rearm_defaultSupply = 1200;
     };
 
-    class rhs_kamaz5350: rhs_truck {};
+    class rhs_kamaz5350;
     class rhs_kamaz5350_ammo_base: rhs_kamaz5350 {
         transportAmmo = 0;
         ace_rearm_defaultSupply = 1200;

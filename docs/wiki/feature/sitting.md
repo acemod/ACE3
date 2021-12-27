@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Sitting
+component: sitting
 description: Ability to sit on chairs.
 group: feature
 category: interaction
@@ -23,7 +24,3 @@ Please note that to be able to use this function the sitting module need to be p
 - Look at the chair and press the interaction key <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Sit Down`.
 - To stand up press the self interaction key <kbd>⊞&nbsp;Win</kbd> (ACE3 default) and select `Stand Up`.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="sitting" %}

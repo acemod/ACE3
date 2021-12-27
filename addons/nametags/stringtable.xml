@@ -531,6 +531,7 @@
             <French>Coefficient de luminosité ambiante</French>
             <German>Spielernamen Umgebungshelligkeitskoeffizient</German>
             <Polish>Współczynnik jasności otoczenia </Polish>
+            <Chinesesimp>铭牌的环境亮度系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">
             <English>Adjusts how strongly ambient brightness affects nametag view distance.</English>
@@ -539,6 +540,7 @@
             <French>Définit à quel point le manque de lumière ambiante abaisse la distance de visibilité du nom des joueurs.</French>
             <German>Stellt ein, wie stark sich die Umgebungshelligkeit auf die Sichtweite der Spielernamen auswirkt.</German>
             <Polish>Definiuje jak bardzo jasność otoczenia wpływa na zasięg wyświetlania imion postaci.</Polish>
+            <Chinesesimp>调整环境亮度对铭牌查看距离的影响程度。</Chinesesimp>
         </Key>
     </Package>
 </Project>

@@ -52,6 +52,7 @@
             <Turkish>Inşa etme sistemini bazı temel parametrelerle başlatır. &lt;br/&gt; Ön ayarlar configFile ve missionConfigFile'dan alınır, format için wiki'ye bakın.</Turkish>
             <Japanese>要塞システムを初期設定に戻します。&lt;br/&gt;プリセットは configfile と missionConfigFile から参照されます。詳細は wiki を参照してください。</Japanese>
             <German>Initialisiert das Verstärken-System, mit grundlegenden Einstellungen &lt;br/&gt;Vorseinstellungen werden aus der configFile und der missionConfigFile gezogen, für mehr Informationen: siehe das ACE Wiki.</German>
+            <Chinesesimp>使用一些基本参数初始化要塞系统。&lt;br/&gt;预设从configFile和missionConfigFile中提取，参见wiki的格式。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_rotate">
             <English>Rotate</English>
@@ -159,24 +160,31 @@
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint_timeCostCoefficient">
             <English>Time-Cost Coefficient</English>
+            <Chinesesimp>时间-成本系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeCostCoefficient">
             <English>Coefficient used to determine time to build structure.&lt;br/&gt;A in Ax + b where x is cost of object</English>
+            <Chinesesimp>用于确定建造建筑所需时间的系数。&lt;br/&gt;A是Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint_timeMin">
             <English>Minimum Build Time</English>
+            <Chinesesimp>最短建造时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeMin">
             <English>Minimum time to build any structure.&lt;br/&gt;b in Ax + b where x is cost of object</English>
+            <Chinesesimp>建造任何建筑的最短时间。&lt;br/&gt;b是Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_progressBarTitle">
             <English>Building</English>
+            <Chinesesimp>建造</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
+            <Chinesesimp>创建地图标记</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
             <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
+            <Chinesesimp>在放置静态防御工事时，创建看起来像地形建筑的地图标记</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapNone">
             <English>Never</English>
@@ -196,6 +204,7 @@
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapFriendly">
             <English>For units friendly to the placer</English>
+            <Chinesesimp>对放置者友军单位</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
             <English>For everyone</English>
@@ -220,6 +229,7 @@
             <Turkish>Küçük</Turkish>
             <Japanese>小型</Japanese>
             <German>Klein</German>
+            <Chinesesimp>小型</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_smallGreen">
             <English>Small (Green)</English>
@@ -228,6 +238,7 @@
             <Turkish>Küçük (Yeşil)</Turkish>
             <Japanese>小型 (グリーン)</Japanese>
             <German>Klein (Grün)</German>
+            <Chinesesimp>小型(绿色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_medium">
             <English>Medium</English>
@@ -236,6 +247,7 @@
             <Turkish>Orta</Turkish>
             <Japanese>中型</Japanese>
             <German>Mittel</German>
+            <Chinesesimp>中型</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_mediumGreen">
             <English>Medium (Green)</English>
@@ -244,6 +256,7 @@
             <Turkish>Orta (Yeşil)</Turkish>
             <Japanese>中型 (グリーン)</Japanese>
             <German>Mittel (Grün)</German>
+            <Chinesesimp>中型(绿色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_big">
             <English>Big</English>
@@ -252,6 +265,7 @@
             <Turkish>Büyük</Turkish>
             <Japanese>大型</Japanese>
             <German>Groß</German>
+            <Chinesesimp>大型</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Fortify_bigGreen">
             <English>Big (Green)</English>
@@ -260,6 +274,7 @@
             <Turkish>Büyük (Yeşil)</Turkish>
             <Japanese>大型 (グリーン)</Japanese>
             <German>Groß (Grün)</German>
+            <Chinesesimp>大型(绿色)</Chinesesimp>
         </Key>
     </Package>
 </Project>

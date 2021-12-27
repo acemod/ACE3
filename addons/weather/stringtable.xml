@@ -172,6 +172,7 @@
             <English>Check Air Temperature</English>
             <German>Überprüfe Lufttemperatur</German>
             <Chinese>檢查氣溫</Chinese>
+            <Chinesesimp>检查气温</Chinesesimp>
             <Italian>Controllare la temperatura dell'aria</Italian>
             <Czech>Zkontrolovat teplotu vzduchu</Czech>
             <Japanese>気温を確認</Japanese>
@@ -186,6 +187,7 @@
             <English>Show Check Air Temperature Action</English>
             <German>Zeige "Überprüfe Lufttemperatur" im Selbstinteraktionsmenü</German>
             <Chinese>顯示檢查氣溫動作</Chinese>
+            <Chinesesimp>显示检查气温选项</Chinesesimp>
             <Italian>Mostra Controlla l'azione della temperatura dell'aria</Italian>
             <Czech>Ukázat akci kontroly teploty vzduchu</Czech>
             <Japanese>気温の確認動作を表示</Japanese>

@@ -7,6 +7,7 @@
             <French>ACE Dégâts de véhicule avancés</French>
             <German>ACE Erweiterter Fahrzeugsschaden</German>
             <Polish>ACE Zaawansowany system uszkodzeń pojazdów</Polish>
+            <Chinesesimp>ACE高级载具损坏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
@@ -14,6 +15,7 @@
             <French>Active les dégâts de véhicule avancés.</French>
             <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden</German>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia pojazdów</Polish>
+            <Chinesesimp>启用/禁用高级载具损坏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
             <English>Enable/Disable advanced car damage (Experimental)</English>
@@ -21,6 +23,7 @@
             <French>Active les dégâts avancés sur les voitures (expérimental).</French>
             <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden (Experimentell)</German>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia w samochodach (eksperymentalne)</Polish>
+            <Chinesesimp>启用/禁用高级车辆损坏（实验性）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable/Disable advanced Car Damage</English>
@@ -28,6 +31,7 @@
             <French>Dégâts de voiture avancés</French>
             <German>Aktiviert/Deaktiviert erweiterten Autoschaden</German>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia w samochodach</Polish>
+            <Chinesesimp>启用/禁用高级车辆损坏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_description">
             <English>Removes all vehicle ammo after cook-off</English>
@@ -35,6 +39,7 @@
             <French>Retire toutes les munitions des véhicules après une auto-inflammation.</French>
             <German>Entfernt die gesamte Munition nach dem Durchzünden der Munition eines Fahrzeuges.</German>
             <Polish>Usuwa całą amunicję z pojazdu po samozapłonie</Polish>
+            <Chinesesimp>殉爆后移除所有车辆弹药</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_enable">
             <English>Enable/Disable Ammo Removal During Cook-Off</English>
@@ -42,6 +47,7 @@
             <French>Retirer les munitions durant l'auto-inflammation</French>
             <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
             <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
+            <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>

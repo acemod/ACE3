@@ -79,7 +79,7 @@
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
             <Japanese>プレイヤーが Zeus になる際、全体へポップアップ表示を行います。</Japanese>
             <Korean>플레이어가 Zeus 될 시 서버에 이를 알리는 팝업이 등장합니다.</Korean>
-            <Chinesesimp>当一位玩家被指定为宙斯时显示全域讯息</Chinesesimp>
+            <Chinesesimp>当一位玩家被指定为宙斯时显示全局讯息</Chinesesimp>
             <Chinese>當一位玩家被指定為宙斯時顯示全域訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
@@ -295,6 +295,7 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
             <Chinese>編輯模式</Chinese>
+            <Chinesesimp>编辑模式</Chinesesimp>
             <Italian>Modalità per editare</Italian>
             <German>Bearbeitungsmodus</German>
             <Japanese>編集モード</Japanese>
@@ -308,6 +309,7 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
             <Chinese>新增或移除可編輯物件給宙斯</Chinese>
+            <Chinesesimp>添加或删除宙斯的可编辑对象</Chinesesimp>
             <German>Aktiviere oder deaktiviere zu bearbeitende Objekte von Zeus</German>
             <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
             <Japanese>Zeus から編集可能オブジェクトの追加と削除をする</Japanese>
@@ -322,6 +324,7 @@
             <English>Add Objects</English>
             <German>Füge Objekte hinzu</German>
             <Chinese>新增物件</Chinese>
+            <Chinesesimp>新增物体</Chinesesimp>
             <Italian>Aggiungi Oggetti</Italian>
             <Japanese>オブジェクト追加</Japanese>
             <Polish>Dodaj obiekty</Polish>
@@ -356,7 +359,7 @@
             <Polish>Wszyscy kuratorzy</Polish>
             <French>Tous les curateurs</French>
             <Italian>Tutti i Moderatori</Italian>
-            <Chinesesimp>所有编辑者</Chinesesimp>
+            <Chinesesimp>所有宙斯</Chinesesimp>
             <Chinese>所有編輯者</Chinese>
             <Russian>Все кураторы</Russian>
             <Portuguese>Todos os Curadores</Portuguese>
@@ -371,7 +374,7 @@
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
             <French>Applique les changements à tous les curateurs.</French>
             <Italian>Applica i cambiamenti a tutti i moderatori</Italian>
-            <Chinesesimp>确认变更给所有编辑者</Chinesesimp>
+            <Chinesesimp>确认变更给所有宙斯</Chinesesimp>
             <Chinese>確認變更給所有編輯者</Chinese>
             <Russian>Применить изменения ко всем кураторам</Russian>
             <Portuguese>Aplicar mudanças à todos os Curadores</Portuguese>
@@ -388,6 +391,7 @@
             <Portuguese>Objetos adicionais</Portuguese>
             <Czech>Další objekty</Czech>
             <Chinese>額外物件</Chinese>
+            <Chinesesimp>额外物体</Chinesesimp>
             <French>Objets supplémentaires</French>
             <Spanish>Objetos adicionales</Spanish>
         </Key>
@@ -401,6 +405,7 @@
             <Portuguese>Objetos adicionais para incluir na ação, ignorando a distância da tarefa</Portuguese>
             <Czech>Další objekty, které mají být zahrnuty do akce, bez ohledu na poloměr úlohy</Czech>
             <Chinese>無論任務範圍何處，都在行動中包含著額外的物件</Chinese>
+            <Chinesesimp>确认变更给所有宙斯</Chinesesimp>
             <French>Objets supplémentaires à intégrer dans l'action, quel que soit le rayon de la tâche.</French>
             <Spanish>Objetos adicionales para incluir en la acción al margen del Radio de Tarea</Spanish>
         </Key>
@@ -1097,6 +1102,7 @@
             <Portuguese>Nenhum</Portuguese>
             <Spanish>Ninguno</Spanish>
             <Chinese>無</Chinese>
+            <Chinesesimp>无</Chinesesimp>
             <Czech>Nikdo</Czech>
             <French>Aucun</French>
             <Turkish>Hiçbiri</Turkish>
@@ -1111,6 +1117,7 @@
             <Portuguese>Jogadores</Portuguese>
             <Spanish>Jugadores</Spanish>
             <Chinese>玩家</Chinese>
+            <Chinesesimp>玩家</Chinesesimp>
             <Czech>Hráči</Czech>
             <French>Joueurs</French>
             <Turkish>Oyuncular</Turkish>
@@ -1125,6 +1132,7 @@
             <Portuguese>Jogadores e IA</Portuguese>
             <Spanish>Jugadores e IA</Spanish>
             <Chinese>玩家與AI</Chinese>
+            <Chinesesimp>玩家与AI</Chinesesimp>
             <Czech>Hráči a AI</Czech>
             <French>Joueurs et IA</French>
             <Turkish>Oyuncular ve AI</Turkish>
@@ -1141,7 +1149,7 @@
             <German>Fügt Objekte zum Kurator hinzu</German>
             <Japanese>キュレーターにオブジェクトを追加</Japanese>
             <Korean>큐레이터에 물체 추가</Korean>
-            <Chinesesimp>增加物件给任务策划人</Chinesesimp>
+            <Chinesesimp>增加物件给任务宙斯</Chinesesimp>
             <Chinese>增加物件給任務策劃人</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
@@ -1156,7 +1164,7 @@
             <German>Fügt jedes gespawnte Objekt allen Kuratoren der Mission hinzu</German>
             <Japanese>ミッション内で作成されたオブジェクトに全キュレーターを追加</Japanese>
             <Korean>미션 내 큐레이터에 모든 생성 물체 추가</Korean>
-            <Chinesesimp>在任务中生成物件给所有的任务策划人</Chinesesimp>
+            <Chinesesimp>在任务中生成物件给所有的任务宙斯</Chinesesimp>
             <Chinese>在任務中生成物件給所有的任務策劃人</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">
@@ -1179,6 +1187,7 @@
             <English>Select cargo to unload</English>
             <German>Ladung zum ausladen auswählen</German>
             <Chinese>選擇要卸載的貨物</Chinese>
+            <Chinesesimp>选择要卸载的货物</Chinesesimp>
             <Italian>Scegli il carico da scaricare</Italian>
             <Japanese>選択したカーゴを降ろす</Japanese>
             <Polish>Wybierz ładunek do wyładowania</Polish>
@@ -1831,6 +1840,7 @@
             <Portuguese>Criar Zeus</Portuguese>
             <Spanish>Crear Zeus</Spanish>
             <Chinese>新增宙斯</Chinese>
+            <Chinesesimp>新增宙斯</Chinesesimp>
             <Czech>Vytvořit Zeuse</Czech>
             <French>Créer Zeus</French>
             <Turkish>Zeus oluştur</Turkish>
@@ -1845,6 +1855,7 @@
             <Portuguese>Apagar Zeus</Portuguese>
             <Spanish>Eliminar Zeus</Spanish>
             <Chinese>刪除宙斯</Chinese>
+            <Chinesesimp>删除宙斯</Chinesesimp>
             <Czech>Smazat Zeuse</Czech>
             <French>Supprimer Zeus</French>
             <Turkish>Zeus sil</Turkish>
@@ -1858,6 +1869,7 @@
             <Italian>menu "%1"</Italian>
             <Portuguese>Menu "%1"</Portuguese>
             <Chinese>選單 %1</Chinese>
+            <Chinesesimp>菜单"%1"</Chinesesimp>
             <Czech>"%1" menu</Czech>
             <French>Menu "%1"</French>
             <Turkish>"%1" menü</Turkish>
@@ -1871,6 +1883,7 @@
             <Russian>Десантировать груз</Russian>
             <Portuguese>Soltar carga de paraquedas</Portuguese>
             <Chinese>空投貨物</Chinese>
+            <Chinesesimp>空投货物</Chinesesimp>
             <Italian>Paradrop Cargo</Italian>
             <Czech>Výsadek nákladu</Czech>
             <French>Paralargage de cargaison</French>
@@ -1886,6 +1899,7 @@
             <Portuguese>Nenhuma carga carregada</Portuguese>
             <Spanish>No hay carga cargada</Spanish>
             <Chinese>沒有貨物裝載</Chinese>
+            <Chinesesimp>没有装载货物</Chinesesimp>
             <Italian>Nessun carico caricato</Italian>
             <Czech>Žádný náklad není naložen</Czech>
             <French>Aucune cargaison chargée</French>
@@ -1894,6 +1908,7 @@
         <Key ID="STR_ACE_Zeus_ModuleBurn_DisplayName">
             <English>Burn Unit</English>
             <German>Einheit anzünden</German>
+            <Chinesesimp>焚烧单位</Chinesesimp>
         </Key>
     </Package>
 </Project>

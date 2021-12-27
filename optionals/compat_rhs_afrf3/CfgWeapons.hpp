@@ -126,7 +126,8 @@ class CfgWeapons {
         HEARING_PROTECTION_VICCREW
     };
 
-    class rhs_6b48: H_HelmetB {
+    class rhs_6b47_bare;
+    class rhs_6b48: rhs_6b47_bare {
         HEARING_PROTECTION_VICCREW
     };
 

@@ -94,7 +94,7 @@ def main():
 
             jekyll_statement = "".join([
                 "{% if include.component == \"" + folder + "\" %}\n",
-                "{}\n".format(data),
+                "- {}\n".format(data.replace(", ", "\n- ")),
                 "{% endif %}\n"
             ])
 

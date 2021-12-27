@@ -315,6 +315,7 @@
             <Russian>Химсвет (Ярко-Синий)</Russian>
             <Portuguese>Bastão de Luz (Azul Forte)</Portuguese>
             <Chinese>螢光棒（超亮藍色）</Chinese>
+            <Chinesesimp>萤光棒（超亮蓝色）</Chinesesimp>
             <Czech>Chemické světlo (Modré jasné)</Czech>
             <Spanish>Luz química (Azul Hi)</Spanish>
             <Turkish>Işık Çubuğu (Mavi)</Turkish>
@@ -329,6 +330,7 @@
             <Russian>Яркий Синий свет</Russian>
             <Portuguese>Luz forte azul</Portuguese>
             <Chinese>超亮藍色光</Chinese>
+            <Chinesesimp>超亮蓝色光</Chinesesimp>
             <Czech>Modré jasné světlo</Czech>
             <Spanish>Luz azul Hi</Spanish>
             <Turkish>Mavi Yüksek Işık</Turkish>
@@ -343,6 +345,7 @@
             <Russian>Тип: Свет - Ярко-Синий (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Azul Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 超亮藍色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 超亮蓝色 (30分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
             <Czech>Typ: Světlo - Modré jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
             <Spanish>Tipo: Luz - Azul Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
             <Turkish>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
@@ -357,6 +360,7 @@
             <Russian>Химсвет (Ярко-Зеленый)</Russian>
             <Portuguese>Bastão de Luz (Verde Forte)</Portuguese>
             <Chinese>螢光棒（超亮綠色）</Chinese>
+            <Chinesesimp>萤光棒（超亮绿色）</Chinesesimp>
             <Czech>Chemické světlo (Zelené jasné)</Czech>
             <Spanish>Luz química (Verde Hi)</Spanish>
             <Turkish>Işık Çubuğu (Yeşil)</Turkish>
@@ -371,6 +375,7 @@
             <Russian>Яркий Зеленый свет</Russian>
             <Portuguese>Luz forte verde</Portuguese>
             <Chinese>超亮綠色光</Chinese>
+            <Chinesesimp>超亮绿色光</Chinesesimp>
             <Czech>Zelené jasné světlo</Czech>
             <Spanish>Luz verde Hi</Spanish>
             <Turkish>Yeşil Yüksek Işık</Turkish>
@@ -385,6 +390,7 @@
             <Russian>Тип: Свет - Ярко-Зеленый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Verde Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 超亮綠色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 超亮绿色 (30分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
             <Czech>Typ: Světlo - Zelené jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
             <Spanish>Tipo: Luz - Verde Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
             <Turkish>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
@@ -399,6 +405,7 @@
             <Russian>Химсвет (Ультраяркий Оранжевый)</Russian>
             <Portuguese>Bastão de Luz (Laranja Ultra Forte)</Portuguese>
             <Chinese>螢光棒（極亮橘色）</Chinese>
+            <Chinesesimp>萤光棒（极亮橘色）</Chinesesimp>
             <Czech>Chemické světlo (Oranžové velmi jasné)</Czech>
             <Spanish>Luz química (Naranja Ultra-Hi)</Spanish>
             <Turkish>Işık Çubuğu (Turuncu)</Turkish>
@@ -413,6 +420,7 @@
             <Russian>Ультраяркий Оранжевый свет</Russian>
             <Portuguese>Luz ultra forte laranja</Portuguese>
             <Chinese>極亮橘色光</Chinese>
+            <Chinesesimp>极亮橘色光</Chinesesimp>
             <Czech>Oranžové velmi jasné světlo</Czech>
             <Spanish>Luz naranja Ultra-Hi</Spanish>
             <Turkish>Turuncu Yüksek Işık</Turkish>
@@ -427,6 +435,7 @@
             <Russian>Тип: Свет - Ультраяркий Оранжевый (5 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Laranja Ultra Forte (5 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 極亮橘色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 极亮橘色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
             <Czech>Typ: Světlo - Oranžové velmi jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
             <Spanish>Tipo: Luz - Naranja Ultra-Hi (5 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
             <Turkish>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Medical System
+component: medical
 description: ACE3 provides users with a more realistic medical system.
 group: feature
 order: 4
@@ -255,7 +256,3 @@ force ace_medical_treatment_clearTraumaAfterBandage = true; // to increase the f
 ```
 
 _more tbd_
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="medical" %}

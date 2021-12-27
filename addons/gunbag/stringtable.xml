@@ -74,6 +74,7 @@
             <Turkish>Silah çantasında silah değişimi</Turkish>
             <Spanish>Intercambiar arma en funda de arma</Spanish>
             <German>Waffe in Waffentasche tauschen</German>
+            <Chinesesimp>交换枪袋中的武器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_DisplayName">
             <English>Enable Weapon Swap</English>
@@ -84,6 +85,7 @@
             <Turkish>Silah Değiştirmeyi Etkinleştir</Turkish>
             <Spanish>Habilitar cambio de arma</Spanish>
             <German>Aktiviere Tauschen von Waffen</German>
+            <Chinesesimp>启用武器互换</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_Description">
             <English>Allows interaction to directly swap the primary weapon and stored weapon.</English>
@@ -94,6 +96,7 @@
             <Turkish>Etkileşimin doğrudan birincil silahı ve depolanan silahı değiştirmesine izin verir.</Turkish>
             <Spanish>Permitir interacción para intercambiar el arma principal y el arma guardada.</Spanish>
             <German>Erlaube den direkten Wechsel von Primärer und verstauter Waffe über das Interaktionsmenü.</German>
+            <Chinesesimp>允许互动直接切换主武器和存储武器。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>

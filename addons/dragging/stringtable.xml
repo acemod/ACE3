@@ -61,6 +61,7 @@
             <Turkish>Objeyi Taşı/Bırak</Turkish>
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
             <German>Objekt tragen/loslassen</German>
+            <Chinesesimp>背负/释放物体</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -106,6 +107,7 @@
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
             <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
+            <Chinesesimp>抬起/放低 | (Ctrl + 鼠标滚轮) 旋转</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
             <English>ACE Dragging</English>
@@ -116,6 +118,7 @@
             <Spanish>ACE Arrastrar</Spanish>
             <Polish>ACE Przeciąganie</Polish>
             <Japanese>ACE ドラッグ</Japanese>
+            <Chinesesimp>ACE拖曳系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
@@ -126,6 +129,7 @@
             <Spanish>Permitir disparar mientras se arrastra</Spanish>
             <Polish>Pozwól na strzelanie podczas przeciągania</Polish>
             <Japanese>搬送中に射撃許可</Japanese>
+            <Chinesesimp>允许在拖动时开火</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
@@ -136,6 +140,7 @@
             <Spanish>Permite al jugador disparar mientras está arrastrando.</Spanish>
             <Polish>Pozwala graczom strzelać z broni podczas przeciągania obiektów.</Polish>
             <Japanese>プレイヤーが引きずっている最中でも射撃できるようにします。</Japanese>
+            <Chinesesimp>允许玩家在拖动时开火。</Chinesesimp>
         </Key>
     </Package>
 </Project>
