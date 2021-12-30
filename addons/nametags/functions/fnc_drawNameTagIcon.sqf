@@ -42,6 +42,8 @@ _fnc_parameters = {
                 } else {
                     _icon = format ["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", rank _target];
                 };
+            } else {
+                _icon = "";
             };
         };
     };
