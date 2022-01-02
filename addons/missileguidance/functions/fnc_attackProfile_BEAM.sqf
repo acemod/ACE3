@@ -17,19 +17,26 @@
  * Public: No
  */
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
-_args params ["_firedEH"];
+_args params ["_firedEH", "", "", "", "", "_targetData"];
 _firedEH params ["_shooter","","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_distanceAheadOfMissile"];
+_attackProfileStateParams params ["_maxCorrectableDistance", "_wireCut", "_lastInput", "_crosshairOffset", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_distanceAheadOfMissile"];
 
 private _projectilePos = getPosASL _projectile;
 private _shooterPos = getPosASL _shooter;
 
 private _distanceToProjectile = _shooterPos vectorDistanceSqr _projectilePos;
 
-if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
-    // return position 50m infront of projectile and a bit up to get out of the way of the ground
-    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 3])
+if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
+    // wire snap, random direction
+    if !(_wireCut) then {
+        _attackProfileStateParams set [1, true];
+    };
+    _lastInput
 };
 
-_seekerTargetPos vectorAdd _crosshairOffset
+private _final = _seekerTargetPos vectorAdd _crosshairOffset;
+_attackProfileStateParams set [2, _final];
 
+_targetData set [0, _projectilePos vectorFromTo _final];
+
+_final

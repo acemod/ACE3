@@ -22,7 +22,7 @@ _seekerParams params ["_seekerAngle"];
 _stateParams params ["", "_seekerStateParams"];
 _seekerStateParams params ["_memoryPointGunnerOptics", "_animationSourceBody", "_animationSourceGun", "_usePilotCamera"];
 
-private _shooterPos = AGLToASL (_shooter modelToWorld(_shooter selectionPosition _memoryPointGunnerOptics));
+private _shooterPos = AGLToASL (_shooter modelToWorldVisual (_shooter selectionPosition _memoryPointGunnerOptics));
 private _projPos = getPosASL _projectile;
 
 private _lookDirection = if !(_shooter isKindOf "CAManBase" || {_shooter isKindOf "StaticWeapon"}) then {
@@ -60,7 +60,7 @@ if ((_testDotProduct < (cos _seekerAngle)) || {_testIntersections isNotEqualTo [
 
 private _returnPos = _shooterPos vectorAdd (_lookDirection vectorMultiply _distanceToProj);
 
-_targetData set [0, _lookDirection];
+_targetData set [0, _projPos vectorFromTo _returnPos];
 _targetData set [2, _returnPos vectorDistance getPosASLVisual _projectile];
 
 _returnPos

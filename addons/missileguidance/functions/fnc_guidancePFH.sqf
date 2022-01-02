@@ -200,7 +200,7 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
         _projectile setVectorDirAndUp [_dir, _up];
 
         //[_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
-
+        
         _guidanceParameters set [0, _yaw];
         _guidanceParameters set [2, _pitch];
 

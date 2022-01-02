@@ -58,8 +58,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 15;          // Minium flap deflection for guidance
-            yawRate = 15;            // Maximum flap deflection for guidance
+            pitchRate = 45;          // Minium flap deflection for guidance
+            yawRate = 45;            // Maximum flap deflection for guidance
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -75,8 +75,10 @@ class CfgAmmo {
             defaultNavigationType = "Line";
             navigationTypes[] = { "Line" };
 
-            lineGainP = 15;
-            lineGainD = 15;
+            lineGainP = 35;
+            lineGainD = 30;
+
+            initialPitch = 2;
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 30;           // Angle from the shooter's view that can track the missile
@@ -85,7 +87,7 @@ class CfgAmmo {
             seekerMinRange = 75;
             seekerMaxRange = 4000;      // Range from the missile which the seeker can visually search
 
-            correctionDistance = 15; // distance from center of crosshair where missile slows down
+            correctionDistance = 30; // distance from center of crosshair where missile slows down
             offsetFromCrosshair[] = { 0, 0, 0.5 }; // where the missile wants to stay in relation to the center of the crosshair.
 
             // Attack profile type selection

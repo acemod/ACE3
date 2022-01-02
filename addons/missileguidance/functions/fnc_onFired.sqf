@@ -140,8 +140,12 @@ if (_states isNotEqualTo []) then {
     } forEach _states;
 };
 
+private _initialRoll = getNumber (_config >> "initialRoll");
+private _initialYaw = getNumber (_config >> "initialYaw");
+private _initialPitch = getNumber (_config >> "initialPitch");
 
-private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
+private _yawRollPitch = (vectorDir _projectile) call CBA_fnc_vect2Polar;
+
 TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
 private _args = [_this,
             [   _shooter,
@@ -165,7 +169,7 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_pitchYaw select 1, 0, _pitchYaw select 2]],
+            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_initialYaw + (_yawRollPitch select 1), _initialRoll, _initialPitch + (_yawRollPitch select 2)]],
             [
                 // target data from missile. Must be filled by seeker for navigation to work
                 [0, 0, 0],  // direction to target

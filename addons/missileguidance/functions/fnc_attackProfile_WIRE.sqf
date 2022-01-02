@@ -17,9 +17,9 @@
  * Public: No
  */
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
-_args params ["_firedEH"];
+_args params ["_firedEH", "", "", "", "", "_targetData"];
 _firedEH params ["_shooter","","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_distanceAheadOfMissile"];
+_attackProfileStateParams params ["_maxCorrectableDistance", "_wireCut", "_lastInput", "_crosshairOffset", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_distanceAheadOfMissile"];
 
 private _projectilePos = getPosASL _projectile;
 private _shooterPos = getPosASL _shooter;
@@ -28,22 +28,17 @@ private _distanceToProjectile = _shooterPos vectorDistanceSqr _projectilePos;
 
 if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
     // wire snap, random direction
-    if (_randomVector isEqualTo [0, 0, 0]) then {
-        _randomVector = RANDOM_VECTOR_3D vectorMultiply 300;
+    if !(_wireCut) then {
         _attackProfileStateParams set [1, true];
-        _attackProfileStateParams set [2, _randomVector];
-
         playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLtoASL (_shooter modelToWorld _wireCutSource), 5, 1, 150];
     };
-    private _randomDir = _projectilePos vectorAdd _randomVector;
-    _targetData set [0, _projectilePos vectorFromTo _randomDir];
-    _targetData set [2, _randomDir distance _projectilePos];
-    _randomDir
+    _lastInput
 };
 
-if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
-    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 5, 5])
-};
+private _final = _seekerTargetPos vectorAdd _crosshairOffset;
+_attackProfileStateParams set [2, _final];
 
-_seekerTargetPos vectorAdd _crosshairOffset
+_targetData set [0, _projectilePos vectorFromTo _final];
+
+_final
 
