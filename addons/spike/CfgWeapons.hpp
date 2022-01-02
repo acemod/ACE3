@@ -1,9 +1,10 @@
-class Mode_SemiAuto;
 class CfgWeapons {
-    class launch_Titan_base;
-	class launch_B_Titan_short_F;
+    class launch_Titan_short_base;
+	class launch_B_Titan_short_F: launch_Titan_short_base {
+        class Single;
+    };
 	class GVAR(base): launch_B_Titan_short_F {
-        class Single: Mode_SemiAuto {
+        class Single: Single {
             EGVAR(missileGuidance,attackProfile) = "SPIKE_TOP";
         };
     };
@@ -11,17 +12,18 @@ class CfgWeapons {
 		scope = 2;
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_spike";
-        //modelOptics = QPATHTOF(data\reticle_titan.p3d);
+        modelOptics = QPATHTOF(data\reticle_titan.p3d);
 
         canLock = 0;
 
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
 
-		displayName = "Spike AT";
-		displayNameShort = "Spike AT";
+		displayName = CSTRING(LR);
+		displayNameShort = CSTRING(LR_Short);
 
 		magazines[] = {QGVAR(lr)};
+        magazineWell[] = {};
     };
 };
 

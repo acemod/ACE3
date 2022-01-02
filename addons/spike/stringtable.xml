@@ -25,5 +25,11 @@
         <Key ID="STR_ACE_Spike_Manual">
             <English>MANUAL</English>
         </Key>
+        <Key ID="STR_ACE_Spike_LR">
+            <English>Spike LR</English>
+        </Key>
+        <Key ID="STR_ACE_Spike_LR_Short">
+            <English>LR</English>
+        </Key>
     </Package>
 </Project>

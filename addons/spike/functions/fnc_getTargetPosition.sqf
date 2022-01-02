@@ -19,7 +19,7 @@
 #define CHECK_DISTANCE 10
 #define SEEKER_BIAS 50
 #define SEEKER_GRID_RADIUS 2
-#define MAX_RANGE 5000
+#define MAX_RANGE 4000
 params ["_origin", "_direction", "_designateInput", "_seekerTargetPos", "_seeker", ["_ignoreObject", objNull]];
 
 scopeName "main";

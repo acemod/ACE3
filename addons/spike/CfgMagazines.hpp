@@ -4,9 +4,9 @@ class CfgMagazines {
 		author = "Brandon (TCVM)";
 		ammo = QGVAR(lr);
 
-		displayName = "Spike AT";
-		displayNameShort = "foo";
-		mass = 1;
+		displayName = CSTRING(LR);
+		displayNameShort = CSTRING(LR_Short);
+		mass = 300;
 	};
 };
 
