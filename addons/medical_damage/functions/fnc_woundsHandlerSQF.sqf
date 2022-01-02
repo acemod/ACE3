@@ -207,3 +207,5 @@ if (_createdWounds) then {
 
     TRACE_4("exit",_unit,_painLevel,GET_PAIN(_unit),GET_OPEN_WOUNDS(_unit));
 };
+
+[] //return, no further damage handling

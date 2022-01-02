@@ -21,10 +21,19 @@ params ["_unit", "_allDamages", "_shooter", "_ammo"];
 
 private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
 if (_typeOfDamage in GVAR(damageTypeDetails)) then {
-    (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "_selectionSpecific", "_woundsHandler", ""];
+    (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "_selectionSpecific", "_woundHandlers", ""];
 
     if (_selectionSpecific > 0) then {
         _allDamages = [_allDamages select 0];
     };
-    [_unit, _allDamages, _typeOfDamage, _shooter] call _woundsHandler;
+    
+    private _damageData = [_unit, _allDamages, _typeOfDamage];
+    {
+        _damageData = _damageData call _x;
+        TRACE_1("Wound handler returned", _damageData);
+        if !(_damageData isEqualType [] && {(count _damageData) >= 3}) exitWith {
+            TRACE_1("Return invalid, terminating wound handling", _damageData);
+        };
+    } forEach _woundHandlers;
+    
 };

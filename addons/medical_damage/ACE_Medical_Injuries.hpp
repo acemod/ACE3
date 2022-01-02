@@ -69,9 +69,12 @@ class ACE_Medical_Injuries {
         // if 1, wounds are only applied to the hitpoint that took the most damage. othewrise, wounds are applied to all damaged hitpoints
         selectionSpecific = 1;
         
-        // SQF expression that returns a function - see documentation
+        // list of damage handlers, which will be called in reverse order
+        // each entry should be a SQF expression that returns a function
         // this can also be overridden for each damage type
-        woundsHandler = QFUNC(woundsHandlerActive);
+        class woundHandlers {
+            ADDON = QFUNC(woundsHandlerActive);
+        };
 
         class bullet {
             // bullets only create multiple wounds when the damage is very high
@@ -167,7 +170,10 @@ class ACE_Medical_Injuries {
         class vehiclecrash {
             thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
-            woundsHandler = QFUNC(woundsHandlerVehiclecrash);
+            class woundHandlers {
+                ADDON = QFUNC(woundsHandlerActive);
+                GVAR(vehiclecrash) = QFUNC(woundsHandlerVehiclecrash);
+            };
             class Abrasion {
                 weighting[] = {{0.30, 0}, {0.30, 1}};
             };
@@ -268,12 +274,14 @@ class ACE_Medical_Injuries {
         class drowning {
             //No related wounds as drowning should not cause wounds/bleeding. Can be extended for internal injuries if they are added.
             thresholds[] = {{0, 0}};
-            woundsHandler = "{}";
+            class woundHandlers {};
         };
         class fire {
             // custom handling for environmental fire sources
             // passes damage to "burn" so doesn't need its own wound stats
-            woundsHandler = QFUNC(woundsHandlerBurning);
+            class woundHandlers {
+                ADDON = QFUNC(woundsHandlerBurning);
+            };
         };
         class burn {
             thresholds[] = {{0, 1}};

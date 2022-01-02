@@ -18,6 +18,8 @@
  */
 params ["_unit", "_allDamages", "_typeOfDamage"];
 
+#define FIRE_DAMAGE_INTERVAL 1
+
 {
     _x params ["_damage", "_bodyPart"];
 
@@ -39,8 +41,10 @@ params ["_unit", "_allDamages", "_typeOfDamage"];
             [QEGVAR(medical,woundReceived), [_unit, [[_storedDamage, _bodyPart, _storedDamage]], _unit, "burn"]] call CBA_fnc_localEvent;
             _unit setVariable [QGVAR(storedBurnDamage), 0, true];
         },
-        [_unit], 1] call CBA_fnc_waitAndExecute;
+        [_unit], FIRE_DAMAGE_INTERVAL] call CBA_fnc_waitAndExecute;
     };
 
     _unit setVariable [QGVAR(storedBurnDamage), _newDamage];
 } forEach _allDamages;
+
+[] //return, no further damage handling for this event
