@@ -22,5 +22,8 @@
         <Key ID="STR_ACE_Spike_CycleVisionMode">
             <English>Cycle Camera Vision Mode</English>
         </Key>
+        <Key ID="STR_ACE_Spike_Manual">
+            <English>MANUAL</English>
+        </Key>
     </Package>
 </Project>

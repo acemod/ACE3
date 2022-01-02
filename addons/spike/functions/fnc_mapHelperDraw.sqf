@@ -68,10 +68,14 @@ if (cameraView isEqualTo "GUNNER") then {
             (__SPIKE_DISPLAY displayCtrl 243101) ctrlShow false;
             (__SPIKE_DISPLAY displayCtrl 243201) ctrlShow false;
             (__SPIKE_DISPLAY displayCtrl 243301) ctrlShow false;
+
+            (__SPIKE_DISPLAY displayCtrl 241000) ctrlShow true;
         } else {
             (__SPIKE_DISPLAY displayCtrl 243101) ctrlShow true;
             (__SPIKE_DISPLAY displayCtrl 243201) ctrlShow true;
             (__SPIKE_DISPLAY displayCtrl 243301) ctrlShow true;
+
+            (__SPIKE_DISPLAY displayCtrl 241000) ctrlShow false;
 
             _seekerPositionScreen = worldToScreen ASLtoAGL _targetPosition;
             if (_seekerPositionScreen isEqualTo []) then {
@@ -92,5 +96,6 @@ if (cameraView isEqualTo "GUNNER") then {
     __SPIKE_RETICLE ctrlCommit 0;
 } else {
     __SPIKE_RETICLE ctrlShow false;
+    (__SPIKE_DISPLAY displayCtrl 241000) ctrlShow false;
 };
 

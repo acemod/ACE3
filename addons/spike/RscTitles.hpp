@@ -16,7 +16,7 @@ class RscTitles {
             w = "safeZoneW * 0.15";
             h = "safeZoneH * 0.05";
             style = "0 + 2";
-            text = "MANUAL";
+            text = CSTRING(Manual);
             colorBackground[] = {0,0,0,0};
             colorText[] = COLOR_WHITE;
             font = "LucidaConsoleB";

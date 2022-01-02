@@ -4,7 +4,7 @@
 class RscInGameUI {
     class ACE_RscOptics_spike {
         idd = 141000;
-        controls[] = { reticle, GVAR(mapHelper) };
+        controls[] = { reticle, manualText, GVAR(mapHelper) };
         onLoad = QUOTE(with uiNamespace do {ACE_RscOptics_spike = _this select 0;};);
 
         class GVAR(mapHelper): RscMapControl {
@@ -13,6 +13,22 @@ class RscInGameUI {
             y = 0;
             w = 0;
             h = 0;
+        };
+
+        class manualText: RscText {
+            idc = 241000;
+            x = "safeZoneX + safeZoneW * 0.425";
+            y = "safeZoneY + safeZoneH * 0.2";
+            w = "safeZoneW * 0.15";
+            h = "safeZoneH * 0.05";
+            style = "0 + 2";
+            text = CSTRING(Manual);
+            colorBackground[] = {0,0,0,0};
+            colorText[] = COLOR_WHITE;
+            font = "LucidaConsoleB";
+            sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2.2);
+            enabled = 1;         
+            show = 1;
         };
 
        	class reticle: RscControlsGroupNoScrollbars {
