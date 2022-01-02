@@ -3,6 +3,7 @@ PREP(calculateCooling);
 PREP(canUnjam);
 PREP(canSwapBarrel);
 PREP(canCheckSpareBarrelsTemperatures);
+PREP(canCoolWeaponWithItem);
 PREP(checkSpareBarrelsTemperatures);
 PREP(checkTemperature);
 PREP(clearJam);

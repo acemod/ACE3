@@ -25,6 +25,7 @@
             <Japanese>セミ アクティブ レーダー誘導の対戦車弾頭</Japanese>
             <Polish>Rakieta naprowadzana laserowo z głowicą przeciwpancerną</Polish>
             <German>Halbaktive Laser-Zielsuchrakete mit HEAT-Gefechtskopf</German>
+            <Chinesesimp>高爆反坦克弹头半主动激光制导导弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hellfire_LDescriptionShort">
             <English>Millimeter-wave radar guided missile with high explosive anti-tank warhead</English>
@@ -34,6 +35,7 @@
             <Japanese>ミリ波レーダー誘導の対戦車弾頭</Japanese>
             <Polish>Rakieta namierzana radarowo z głowicą przeciwpancerną</Polish>
             <German>Millimeterwellenradar-Lenkflugkörper mit HEAT-Gefechtskopf</German>
+            <Chinesesimp>毫米波雷达制导高爆反坦克弹头导弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hellfire_NDescriptionShort">
             <English>Semi-active laser homing missile with metal augmented charge anti-personnel warhead</English>
@@ -43,6 +45,7 @@
             <Japanese>セミ アクティブ レーダー誘導の対人弾</Japanese>
             <Polish>Rakieta naprowadzana laserowo z głowicą odłamkową</Polish>
             <German>Halbaktive Laser-Zielsuchrakete mit metallverstärktem Antipersonen-Gefechtskopf</German>
+            <Chinesesimp>带金属增强装药人员杀伤弹头的半主动激光制导导弹</Chinesesimp>
         </Key>
     </Package>
 </Project>

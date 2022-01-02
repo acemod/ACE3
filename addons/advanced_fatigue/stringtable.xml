@@ -248,6 +248,7 @@
             <Russian>Скрыть шкалу усталости автоматически</Russian>
             <German>Blende Ausdauerleiste automatisch aus</German>
             <Chinese>體力條自動淡去</Chinese>
+            <Chinesesimp>自动淡化体力条</Chinesesimp>
             <Italian>Dissolvenza automatica della barra della stamina</Italian>
             <Czech>Automaticky schovat lištu výdrže</Czech>
             <French>Fondu automatique de la barre d'endurance</French>
@@ -262,6 +263,7 @@
             <Russian>Регулирует прозрачность шкалы в зависимости от статуса выносливости.</Russian>
             <German>Passt die Transparenz der Ausdauerleiste abhängig vom Ausdauerstatus an.</German>
             <Chinese>依照目前的體力程度調整體力條之透明度</Chinese>
+            <Chinesesimp>根据体力状况调整体力条的透明度</Chinesesimp>
             <Italian>Regola la trasparenza della barra in base allo stato di affaticamento.</Italian>
             <Czech>Upravuje průhlednost lišty v závislosti na současném stavu výdrže</Czech>
             <French>Règle la transparence de la barre en fonction de l'état d'endurance.</French>

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Fortify
+component: fortify
 description: Enables player to build fortifications.
 group: feature
 category: interaction
@@ -36,7 +37,3 @@ Please note that to use this function the Fortify module needs to be placed down
 - Using <kbd>Alt</kbd> / <kbd>Ctrl</kbd> / <kbd>Shift</kbd> + <kbd>Scroll Wheel</kbd> you can rotate object on different axis.
 - You can use planks to get up on rooftops.
 - Holding <kbd>Ctrl</kbd> while placing allows for placing multiple objects of the same type.
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="fortify" %}

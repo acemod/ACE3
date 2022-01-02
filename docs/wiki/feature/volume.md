@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Volume Toggle
+component: volume
 description: Ability to toggle volume of game and music.
 group: feature
 category: general
@@ -29,7 +30,3 @@ Adds the possibility of setting a keybind to toggle volume of game and music. It
 1. Set the keybind in ACE controls
 2. Enable the feature in ACE options
 3. Change the options to your liking
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="volume" %}

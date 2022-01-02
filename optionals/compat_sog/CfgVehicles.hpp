@@ -20,4 +20,6 @@ class CfgVehicles {
     #include "CfgVehicles\turrets.hpp"
     #include "CfgVehicles\units.hpp"
     #include "CfgVehicles\wheeled.hpp"
+    #include "CfgVehicles\land.hpp"
+    #include "CfgVehicles\vn_boxes.hpp"
 };

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: FCS (Fire Control System)
+component: fcs
 description: Fire control system for armoured vehicles and helicopters.
 category: equipment
 group: feature
@@ -36,7 +37,3 @@ Anti air cannons can now use airburst ammunition. It will explode on the FCS' ze
 - Place the crosshair on the object to range.
 - Tap <kbd>Tab&nbsp;↹</kbd>
 - The optic is now adjusted.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="fcs" %}
