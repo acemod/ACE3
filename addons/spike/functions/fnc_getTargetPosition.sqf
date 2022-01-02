@@ -18,15 +18,34 @@
  */
 #define CHECK_DISTANCE 10
 #define SEEKER_BIAS 50
+#define SEEKER_GRID_RADIUS 2
+#define MAX_RANGE 5000
 params ["_origin", "_direction", "_designateInput", "_seekerTargetPos", "_seeker", ["_ignoreObject", objNull]];
 
 scopeName "main";
 private _nearObjects = [];
 
 private _desiredObject = objNull;
-private _intersections = lineIntersectsSurfaces [_origin, _origin vectorAdd (_direction vectorMultiply 5000), _ignoreObject, objNull, true, 1, "FIRE", "VIEW", true];
+private _intersections = [];
+if (_designateInput == 1) then {
+    for "_xOffset" from -SEEKER_GRID_RADIUS to SEEKER_GRID_RADIUS do {
+        for "_yOffset" from -SEEKER_GRID_RADIUS to SEEKER_GRID_RADIUS do {
+            private _testPosASL = AGLtoASL (positionCameraToWorld [_xOffset, _yOffset, MAX_RANGE]);
+            private _intersectionsToCursorTarget = lineIntersectsSurfaces [_origin, _testPosASL, _ignoreObject, objNull, true, 1, "FIRE", "VIEW", true];
+            #ifdef DEBUG_MODE_FULL
+            drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [0,1,0,1], ASLtoAGL _testPosASL, 0.25, 0.25, 0, "", 0.5, 0.025, "TahomaB"];
+            #endif
+            if (_intersectionsToCursorTarget isNotEqualTo []) then {
+                _intersections append _intersectionsToCursorTarget;
+            };
+        };
+    };
+} else {
+    _intersections = lineIntersectsSurfaces [_origin, _origin vectorAdd (_direction vectorMultiply MAX_RANGE), _ignoreObject, objNull, true, 1, "FIRE", "VIEW", true]
+};
+
 if (_intersections isNotEqualTo []) then {
-    (_intersections#0) params ["_intersectPos", "", "_object"];
+    (_intersections select 0) params ["_intersectPos", "", "_object"];
 
     if (_designateInput == 1) then {
         _seekerTargetPos = _intersectPos;
