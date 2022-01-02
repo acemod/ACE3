@@ -32,9 +32,9 @@ _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 // Cookoffs only happen on Fire and Dud, dud rounds are lost on jam clear.
 // Reduce chance of duds as temp increases (functionally increasing the chance of the others but with fewer commands)
 private _temp = 1 max (_unit getVariable [format [QGVAR(%1_temp), _weapon], 0]);
-private _jamTypesAllowed = getArray (configFile >> 'CfgWeapons' >> currentWeapon _player >> QGVAR(jamTypesAllowed));
+private _jamTypesAllowed = getArray (configFile >> 'CfgWeapons' >> currentWeapon _unit >> QGVAR(jamTypesAllowed));
 
-if (_jamTypesAllowed == []) then {
+if (_jamTypesAllowed isEqualTo []) then {
     _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
 } else {
     for "_i" from count _jamTypesAllowed to 1 step -1 do {
@@ -51,7 +51,9 @@ if (_jamTypesAllowed == []) then {
     };
 };
 
-_unit setVariable [format [QGVAR(%1_jamType), _weapon], selectRandomWeighted _jamTypesAllowed];
+private _jamType = selectRandomWeighted _jamTypesAllowed;
+_unit setVariable [format [QGVAR(%1_jamType), _weapon], _jamType];
+
 
 // Stop current burst
 _unit setAmmo [_weapon, 0];
@@ -72,7 +74,7 @@ if (_weapon == primaryWeapon _unit) then {
 // only display the hint once, after you try to shoot an already jammed weapon
 GVAR(knowAboutJam) = false;
 
-["ace_weaponJammed", [_unit,_weapon]] call CBA_fnc_localEvent;
+["ace_weaponJammed", [_unit, _weapon, _jamType]] call CBA_fnc_localEvent;
 
 if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
 

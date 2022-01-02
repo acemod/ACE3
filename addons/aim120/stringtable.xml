@@ -37,5 +37,8 @@
         <Key ID="STR_ACE_AIM120_direct">
             <English>Direct</English>
         </Key>
+        <Key ID="STR_ACE_AIM120_loft">
+            <English>Loft</English>
+        </Key>
     </Package>
 </Project>

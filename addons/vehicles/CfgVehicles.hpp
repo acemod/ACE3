@@ -112,14 +112,14 @@ class CfgVehicles {
             };
         };
     };
-    
-    
-    
+
+
+
     class MBT_02_base_F: Tank_F {
         fuelCapacity = 600 * FUEL_FACTOR; // again, couldn't find proper data
     };
 
-    
+
     // Change boat minigun ammo to 7.62
 
     class Ship_F: Ship {};
@@ -154,7 +154,7 @@ class CfgVehicles {
     class MRAP_02_base_F: Car_F {
         fuelCapacity = 500 * FUEL_FACTOR; // couldn't find any data for the punisher
     };
-    
+
     class MRAP_03_base_F: Car_F {
         fuelCapacity = 860 * FUEL_FACTOR;
         smokeLauncherGrenadeCount = 3;

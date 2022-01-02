@@ -45,7 +45,7 @@ private _fnc_selectRight = {
 if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
 
     [
-        _item, 
+        _item,
         ["CfgWeapons", "CfgMagazines"] select (GVAR(currentRightPanel) in [IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut])
     ] call _fnc_selectRight;
 };

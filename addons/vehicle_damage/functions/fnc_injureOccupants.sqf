@@ -53,7 +53,7 @@ private _injuryCount = 0;
             _indexToInjure = _forEachIndex;
         };
     } forEach _crewInjuryIndices;
-    
+
     if (_indexToInjure >= 0) then {
         private _casualty = _vehicleCrew select (_crewInjuryIndices select _indexToInjure);
         if (alive _casualty) then {
@@ -61,7 +61,7 @@ private _injuryCount = 0;
             private _indexCount = count _crewInjuryIndices;
             if (_indexCount >= 0) then {
                 _crewInjuryIndices deleteAt _indexToInjure;
-                
+
                 // arbitrary percentages
                 private _injuredBodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.3, 0.8, 0.5, 0.5, 0.3, 0.3];
                 private _currentUnitDamage = _casualty getHitpointDamage _injuredBodyPart;
@@ -71,6 +71,6 @@ private _injuryCount = 0;
             };
         };
     };
-    
+
     if (_injuryCount >= _count) exitWith {};
 } forEach _vehicleCrew;

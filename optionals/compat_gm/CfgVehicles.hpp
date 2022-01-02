@@ -97,17 +97,6 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
     };
 
-    // TOOLKIT
-
-    class ACE_Module;
-    class ACE_moduleRepairSettings: ACE_Module {
-        class wheelRepairRequiredItems {
-            class values {
-                class gm_repairkit_01 { name = "RepairKit"; value = 1; };
-            };
-        };
-    };
-
     // STATIC
 
     class gm_ge_army_shelteraceII_repair_base;
@@ -214,17 +203,19 @@ class CfgVehicles {
         EGVAR(medical,medicClass) = 1;
     };
 
-    class gm_kat1_base;
-    class gm_kat1_451_base: gm_kat1_base {
+    class gm_kat1_base: gm_wheeled_truck_base {
         EGVAR(refuel,fuelCapacity) = 270;
     };
+
+    class gm_kat1_451_base;
     class gm_kat1_451_refuel_base: gm_kat1_451_base {
         gm_InsigniasDefaultHazardSign = "gm_insignia_hazard_fuelF54_wht";
         EGVAR(refuel,fuelCargo) = 4600;
         EGVAR(refuel,hooks)[] = {{-0.60,-3.44,-0.919689},{0.60,-3.44,-0.919689}};
     };
 
-    class gm_kat1_454_cargo_base: gm_kat1_451_base {
+    class gm_kat1_454_base;
+    class gm_kat1_454_cargo_base: gm_kat1_454_base {
         EGVAR(cargo,space) = 10;
     };
 
@@ -280,7 +271,7 @@ class CfgVehicles {
         EGVAR(cookoff,cookoffSelections)[] = {"mainturret_hatch","commanderturret_hatch"};
     };
 
-    class gm_pt76_base: gm_tracked_APC_base {
+    class gm_pt76_base: gm_tracked_Tank_base {
         EGVAR(refuel,fuelCapacity) = 250;
     };
 
@@ -395,7 +386,7 @@ class CfgVehicles {
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
     };
 
-    class gm_ch53_base:gm_helicopter_base {
+    class gm_ch53_base: gm_helicopter_base {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{0.6, -5.2, -0.8},{-0.6, -5.2, -0.8}};
@@ -409,7 +400,7 @@ class CfgVehicles {
     };
 
     // EAST
-    class gm_mi2_base:gm_helicopter_base {
+    class gm_mi2_base: gm_helicopter_base {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{-1.17969,0.0205078,-0.178533}};
@@ -431,7 +422,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 1076;
     };
 
-    class gm_mi2platan_base: gm_mi2_base{
+    class gm_mi2platan_base: gm_mi2_base {
         EGVAR(refuel,fuelCapacity) = 1076;
     };
 

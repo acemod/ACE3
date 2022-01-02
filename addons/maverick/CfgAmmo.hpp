@@ -44,7 +44,7 @@ class CfgAmmo {
         };
     };
 
-    class GVAR(L) : Missile_AGM_02_F {
+    class GVAR(L): Missile_AGM_02_F {
         author = "xrufix";
         autoSeekTarget = 0;
         irLock = 0;

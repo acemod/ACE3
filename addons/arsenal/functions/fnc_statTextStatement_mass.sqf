@@ -8,7 +8,7 @@
  * 1: item config path (CONFIG)
  *
  * Return Value:
- * String to display 
+ * String to display
  *
  * Public: No
 */

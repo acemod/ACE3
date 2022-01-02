@@ -19,3 +19,5 @@
 #define TRACK_HITPOINTS ["hitltrack", "hitrtrack"]
 
 #define DAMAGE_COLOR_SCALE ["#FFFFFF", "#FFFF7E", "#FFEC4D", "#FFD52C", "#FCB121", "#FF9916", "#FF7D16", "#FF4400", "#FF0000"]
+
+#define ANY_TOOLKIT_FAKECLASS QGVAR(anyToolKit)

@@ -89,7 +89,7 @@ GVAR(isOpeningDoor) = false;
     if (!GVAR(interactWithTerrainObjects)) exitWith {};
     {
         if (
-            isObjectHidden _x // after hiding on server 
+            isObjectHidden _x // after hiding on server
             || {_x getVariable [QGVAR(terrainObjectReplaced), false]} // after checking but before hiding
             || {typeOf _x isNotEqualTo ""}
         ) then {continue};

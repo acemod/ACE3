@@ -3,36 +3,91 @@
     <Package name="Towing">
         <Key ID="STR_ACE_Towing_displayName">
             <English>Towing</English>
+            <Japanese>けん引</Japanese>
+            <French>Remorquage</French>
+            <Russian>Буксирование</Russian>
+            <German>Abschleppen</German>
+            <Polish>Holowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_attach">
             <English>Attach Tow Rope</English>
+            <Japanese>けん引ロープを取り付け</Japanese>
+            <French>Attacher la corde de remorquage</French>
+            <Russian>Прикрепить буксировочный канат</Russian>
+            <German>Abschleppseil befestigen</German>
+            <Polish>Przypnij linkę holowniczą</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_canceled">
             <English>Attaching Cancelled</English>
+            <Japanese>取り付けを中止しました</Japanese>
+            <French>Attachage annulé</French>
+            <Russian>Прикрепление отменено</Russian>
+            <German>Befestigen Abgebrochen</German>
+            <Polish>Przyczepianie anulowane</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_start3">
             <English>Attach Tow Rope (3.2m)</English>
+            <Japanese>けん引ロープ (3.2m) を取り付け</Japanese>
+            <French>Attacher la corde (3,2 m)</French>
+            <Russian>Прикрепить буксировочный канат (3.2м)</Russian>
+            <German>Befestige Seil (3.2m)</German>
+            <Polish>Przypnij linkę holowniczą (3,2m)</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_start6">
             <English>Attach Tow Rope (6.2m)</English>
+            <Japanese>けん引ロープ (6.2m) を取り付け</Japanese>
+            <French>Attacher la corde (6,2 m)</French>
+            <Russian>Прикрепить буксировочный канат (6.2м)</Russian>
+            <German>Befestige Seil (6.2m)</German>
+            <Polish>Przypnij linkę holowniczą (6,2m)</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_start12">
             <English>Attach Tow Rope (12.2m)</English>
+            <Japanese>けん引ロープ (12.2m) を取り付け</Japanese>
+            <French>Attacher la corde (12,2 m)</French>
+            <Russian>Прикрепить буксировочный канат (12.2м)</Russian>
+            <German>Befestige Seil (12.2m)</German>
+            <Polish>Przypnij linkę holowniczą (12,2m)</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_start15">
             <English>Attach Tow Rope (15.2m)</English>
+            <Japanese>けん引ロープ (15.2m) を取り付け</Japanese>
+            <French>Attacher la corde (15,2 m)</French>
+            <Russian>Прикрепить буксировочный канат (15.2м)</Russian>
+            <German>Befestige Seil (15.2m)</German>
+            <Polish>Przypnij linkę holowniczą (15,2m)</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_start18">
-            <English>Attach Tow Rope (18.2m)</English>
+            <English>Attach Tow Rope (18.3m)</English>
+            <Japanese>けん引ロープ (18.3m) を取り付け</Japanese>
+            <French>Attacher la corde (18,3 m)</French>
+            <Russian>Прикрепить буксировочный канат (18.3м)</Russian>
+            <German>Befestige Seil (18.3m)</German>
+            <Polish>Przypnij linkę holowniczą (18,3m)</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_start27">
-            <English>Attach Tow Rope (27.2m)</English>
+            <English>Attach Tow Rope (27.4m)</English>
+            <Japanese>けん引ロープ (27.4m) を取り付け</Japanese>
+            <French>Attacher la corde (27,4 m)</French>
+            <Russian>Прикрепить буксировочный канат (27.4м)</Russian>
+            <German>Befestige Seil (27.4m)</German>
+            <Polish>Przypnij linkę holowniczą (27,4m)</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_start36">
-            <English>Attach Tow Rope (36.2m)</English>
+            <English>Attach Tow Rope (36.6m)</English>
+            <Japanese>けん引ロープ (36.6m) を取り付け</Japanese>
+            <French>Attacher la corde (36,6 m)</French>
+            <Russian>Прикрепить буксировочный канат (36.6м)</Russian>
+            <German>Befestige Seil (36.6m)</German>
+            <Polish>Przypnij linkę holowniczą (36,6m)</Polish>
         </Key>
         <Key ID="STR_ACE_Towing_detach">
             <English>Detach Tow Rope</English>
+            <Japanese>けん引ロープを外す</Japanese>
+            <French>Détacher la corde</French>
+            <Russian>Отцепить буксировочный канат</Russian>
+            <German>Entferne Abschleppseil</German>
+            <Polish>Odepnij linkę holowniczą</Polish>
         </Key>
     </Package>
 </Project>

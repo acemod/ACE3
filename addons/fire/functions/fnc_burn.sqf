@@ -37,13 +37,13 @@ if (_isBurning) exitWith {};
     // looped function
     (_this getVariable "params") params ["_unit", "", "_instigator"];
     private _unitPos = getPosASL _unit;
-    
+
     _intensity = _unit getVariable [QGVAR(intensity), 0];
-    
+
     if (surfaceIsWater _unitPos && {(_unitPos#2) < 1}) then {
         _intensity = 0;
     };
-    
+
     _fireParticle setDropInterval (0.01 max linearConversion [MAX_INTENSITY, MIN_INTENSITY, _intensity, 0.03, 0.1, false]);
     _fireParticle setParticleParams [
         ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 10, 32], // sprite sheet values
@@ -86,7 +86,7 @@ if (_isBurning) exitWith {};
         0, // random direction period
         0 // random direction intensity
     ];
-    
+
     _smokeParticle setParticleCircle [0, [0, 0, 0]];
     _smokeParticle setParticleRandom [
         0, // life time
@@ -124,18 +124,18 @@ if (_isBurning) exitWith {};
         _unit // particle source
     ];
     _smokeParticle setDropInterval 0.15;
-    
+
     _fireLight setLightBrightness ((_intensity * 3) / 10);
     _lightFlare setLightBrightness (_intensity / 30);
-    
+
     private _distanceToUnit = (_unit distance ace_player);
     _fireLight setLightAttenuation [1, 10 max (5 min (10 - _intensity)), 0, 15];
     _lightFlare setLightFlareSize (_intensity * (3 / 4)) * FLARE_SIZE_MODIFIER;
-    
+
     if (!GVAR(enableFlare)) then {
         _lightFlare setLightFlareSize 0;
     };
-    
+
     // always keep flare visible to perceiving unit as long as it isnt the player
     if !(_unit isEqualTo ace_player) then {
         private _relativeAttachPoint = [0, 0, 0.3];
@@ -145,14 +145,14 @@ if (_isBurning) exitWith {};
         };
         _lightFlare attachTo [_unit, _relativeAttachPoint];
     };
-    
+
     if (!isGamePaused) then {
         // If the unit goes to spectator alive _unit == true and they will be on fire and still take damage
         // Only workaround I could think of, kinda clunky
         if (_isThisUnitAlive) then {
             _isThisUnitAlive = (alive _unit) && { getNumber ((configOf _unit) >> "isPlayableLogic") != 1 };
         };
-    
+
         // propagate fire
         if ((CBA_missionTime - _lastPropogateUpdate) >= BURN_PROPOGATE_UPDATE) then {
             _lastPropogateUpdate = CBA_missionTime;
@@ -178,7 +178,7 @@ if (_isBurning) exitWith {};
                 };
             };
         };
-    
+
         // update intensity/fire reactions
         if ((CBA_missionTime - _lastIntensityUpdate) >= INTENSITY_UPDATE) then {
             _lastIntensityUpdate = CBA_missionTime;
@@ -203,7 +203,7 @@ if (_isBurning) exitWith {};
                             } else {
                                 private _group = (group _unit);
                                 private _vehicle = vehicle _unit;
-                                
+
                                 if (_vehicle != _unit) then {
                                     TRACE_1("Ejecting", _unit);
                                     _unit leaveVehicle _vehicle;
@@ -227,16 +227,10 @@ if (_isBurning) exitWith {};
                                 _intensity = _intensity - (1 / _intensity);
                             };
                         };
-                    
-                        if ((_unit isEqualTo vehicle _unit) && { !(currentWeapon _unit isEqualTo "") }) then {
-                            [_unit] call EFUNC(hitreactions,throwWeapon);
-                        };
-                        
-                        private _soundID = floor (1 + random 15);
-                        private _sound = format [QGVAR(scream_%1), _soundID];
-                        [QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
+
+                        [_unit] call FUNC(burnReaction);
                     };
-                    
+
                     // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
                     private _woundSelection = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
                     if (GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)) then {
@@ -249,7 +243,7 @@ if (_isBurning) exitWith {};
                 _unit setVariable [QGVAR(intensity), _intensity, true]; // globally sync intensity across all clients to make sure simulation is deterministic
             };
         };
-        
+
         private _burnIndicatorPFH = _unit getVariable [QGVAR(burnUIPFH), -1];
         if (_unit isEqualTo ace_player && { _isThisUnitAlive } && { _burnIndicatorPFH < 0 }) then {
             _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
@@ -261,30 +255,30 @@ if (_isBurning) exitWith {};
     // init function
     private _params = _this getVariable "params";
     _params params ["_unit", "_startingIntensity"];
-    
+
     _intensity = _startingIntensity;
     private _unitPos = getPos _unit;
-    
+
     _fireParticle = "#particlesource" createVehicleLocal _unitPos;
     _fireParticle attachTo [_unit, [0, 0, 0]];
     _fireParticle setDropInterval 0.03;
-    
+
     _smokeParticle = "#particlesource" createVehicleLocal _unitPos;
-    
+
     _fireLight = "#lightpoint" createVehicleLocal _unitPos;
     _fireLight setLightIntensity 0;
     _fireLight setLightAmbient [0.8, 0.6, 0.2];
     _fireLight setLightColor [1, 0.5, 0.4];
     _fireLight attachTo [_unit, [0, 0, 0]];
     _fireLight setLightDayLight false;
-    
+
     _lightFlare = "#lightpoint" createVehicleLocal _unitPos;
     _lightFlare setLightIntensity 0;
     _lightFlare setLightColor [1, 0.8, 0.8];
     _lightFlare setLightUseFlare true;
     _lightFlare setLightFlareMaxDistance 100;
     _lightFlare setLightFlareSize 0;
-    
+
     if !(_unit isEqualTo ace_player) then {
         private _relativeAttachPoint = (vectorNormalized (_unit worldToModelVisual (getPos ace_player))) vectorMultiply 1;
         _relativeAttachPoint set [2, 0.5];
@@ -292,30 +286,28 @@ if (_isBurning) exitWith {};
     } else {
         _lightFlare attachTo [_unit, [0, 0, 0.3]];
     };
-    
+
     if (isServer) then {
         _fireSound = createSoundSource ["Sound_Fire", _unitPos, [], 0];
         _fireSound attachTo [_unit, [0, 0, 0], "destructionEffect1"];
     };
-    
+
     _unit setVariable [QGVAR(burning), true];
     _unit setVariable [QGVAR(intensity), _intensity];
     _unit setVariable [QGVAR(burnUIPFH), -1];
-    
+
     if (local _unit) then {
         if (_unit isEqualTo ace_player) then {
             private _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
-        
-        private _soundID = floor (1 + random 15);
-        private _sound = format [QGVAR(scream_%1), _soundID];
-        [QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
+
+        [_unit, false] call FUNC(burnReaction);
     };
-    
+
     _lastIntensityUpdate = 0;
     _lastPropogateUpdate = 0;
-    
+
     _isThisUnitAlive = true;
 }, {
     (_this getVariable "params") params ["_unit"];
@@ -326,7 +318,7 @@ if (_isBurning) exitWith {};
     deleteVehicle _fireLight;
     deleteVehicle _lightFlare;
     deleteVehicle _fireSound;
-    
+
     if (local _unit) then {
         if (!isPlayer _unit) then {
             _unit setUnitPos "AUTO";
@@ -340,9 +332,9 @@ if (_isBurning) exitWith {};
 }, {
     // exit condition
     (_this getVariable "params") params ["_unit"];
-    
+
     private _unitAlive = (alive _unit) && { getNumber ((configOf _unit) >> "isPlayableLogic") != 1 };
     private _unitIsUnit = { (_unit != vehicle _unit) && { isNull vehicle _unit } };
-    
+
     !_unitAlive || _unitIsUnit || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) }
 }, ["_intensity", "_fireParticle", "_smokeParticle", "_fireLight", "_fireSound", "_lightFlare", "_lastIntensityUpdate", "_lastPropogateUpdate", "_isThisUnitAlive"]] call CBA_fnc_createPerFrameHandlerObject;

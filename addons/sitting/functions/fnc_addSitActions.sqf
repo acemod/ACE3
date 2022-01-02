@@ -25,7 +25,7 @@ if (_seat isEqualType objNull) then {
 private _configFile = configFile >> "CfgVehicles" >> _type;
 
 // Exit if sitting disabled or the object is not specified as a seat
-if (!XGVAR(enable) || {getNumber (_configFile >> QGVAR(canSit)) != 1}) exitWith {};
+if (!XGVAR(enable) || {getNumber (_configFile >> QXGVAR(canSit)) != 1}) exitWith {};
 
 // Exit if class already initialized
 if (_type in GVAR(initializedClasses)) exitWith {};
@@ -33,8 +33,8 @@ GVAR(initializedClasses) pushBack _type;
 
 TRACE_1("Adding Sit Action",_type);
 
-private _sitPosition = getArray (_configFile >> QGVAR(sitPosition));
-private _interactPosition = getArray (_configFile >> QGVAR(interactPosition));
+private _sitPosition = getArray (_configFile >> QXGVAR(sitPosition));
+private _interactPosition = getArray (_configFile >> QXGVAR(interactPosition));
 
 if (count _sitPosition != count _interactPosition) exitWith {
     WARNING_1("Invalid sitting configuration of %1!",_type);
