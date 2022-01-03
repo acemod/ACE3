@@ -55,7 +55,7 @@ private _vestGrenades =     vestItems     _unit select {_x in GVAR(GrenadesAll) 
 private _backpackGrenades = backpackItems _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
 
 // remove all grenades except those we are switching to --> this breaks the selector
-{ _unit removeItem _x } forEach (magazines _unit) select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
+{ _unit removeItem _x } forEach ((magazines _unit) select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}});
 
 // readd grenades
 {_unit addItemToUniform  _x} forEach _uniformGrenades;
