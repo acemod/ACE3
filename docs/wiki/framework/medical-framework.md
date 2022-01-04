@@ -37,9 +37,11 @@ Damage types which are non-selection-specific create wounds on every body part t
 The `woundReceived` event is passed all the damage and the default event handler added by ACE Medical Damage checks the damage type config to decide whether to pass on all of the damage, or just one part.
 
 ### 2.2 Wound Handlers
-To convert these raw damage numbers into discrete wounds, ACE uses a collection of functions called wound handlers. Each [damage type](#43-acemedicalinjuries--damagetypes) may specify its own wound handler, or if it does not the default handler defined in `ACE_Medical_Injuries >> damageTypes` will be used. This function is stored in `ace_medical_damage_fnc_defaultWoundHandler` so that other code can refer to the configured default handler instead of hard-coding a reference.
+To convert these raw damage numbers into discrete wounds, ACE uses a collection of functions called wound handlers. Each [damage type](#43-acemedicalinjuries--damagetypes) may specify its own list of wound handlers under a `woundHandlers` class, or if it does not the default handlers defined in `ACE_Medical_Injuries >> "damageTypes" >> "woundHandlers"` will be used.
 
-ACE comes with a built-in wound handler that does all the work of creating wounds, checking for death or unconsciousness and updating important effects (like the blood visuals that appear on body parts). ACE also uses some custom wound handlers which usually perform additional processing and then call the default handler to re-use its logic - a good example of this is `ace_medical_damage_fnc_woundsHandlerBurning`. If you need to add custom handling for a damage type it is recommended to use this pattern to avoid breaking existing functionality - ACE will only ever call one handler function for each damage type, so if you do add a custom handler you must ensure that all the necessary processing is done.
+All wound handlers defined for a particular damage type will be called, and they are called in the _opposite_ order they were added. The value returned by each handler is what will be passed as parameters to the next one - if the return is not valid (not an array, or not enough arguments) handling will be terminated and no other handler functions will be called. This allows custom wound handlers to selectively handle damage and either block the built-in handling or pass modified damage data.
+
+ACE comes with a built-in wound handler that does all the work of creating wounds, checking for death or unconsciousness and updating important effects (like the blood visuals that appear on body parts). ACE also uses some custom wound handlers which usually perform additional processing and then pass the result on to be used by the default handler - a good example of this is `ace_medical_damage_fnc_woundsVehicleCrash`. If you need to add custom handling for a damage type it is recommended to use this pattern to avoid breaking existing functionality; if you choose not to pass damage on to the default handler, you must ensure that all the necessary processing is done.
 
 ## 3. Extending ACE Medical
 
@@ -56,7 +58,7 @@ To allow your wound to be bandaged or treated in other ways, look into the [ACE 
 ### 3.3 Adding new damage types
 To create a new damage type, create a new [damage type class](#43-acemedicalinjuries--damagetypes) and define a class within it for each type of wound you want it to be able to create. All the properties listed are optional and most can be left at their default values or tweaked to produce special behaviour, but you will probably want to change the `thresholds` and `weighting`.
 
-If you want to add custom wound handling, define the `woundsHandler` property and create a [handler function](#44-wound-handler-function).
+If you want to add custom wound handling, define the `woundHandlers` class and create a [handler function](#44-wound-handler-function). Your `woundHandlers` class may inherit from the default one to automatically add the default wound handlers to it.
 
 #### 3.3.1 Thresholds
 This entry is used to determine how many individual wounds that type of damage will create. Its format is:
@@ -147,7 +149,13 @@ class ACE_Medical_Injuries {
         // default values used if a damage type does not define them itself
         thresholds[] = {{0.1, 1}};
         selectionSpecific = 1;
-        woundsHandler = QFUNC(woundsHandlerActive);
+
+        // list of damage handlers, which will be called in reverse order
+        // each entry should be a SQF expression that returns a function
+        // this can also be overridden for each damage type
+        class woundHandlers {
+            ace_medical_damage = "ace_medical_damage_fnc_woundsHandlerActive";
+        };
 
         // each sub-class defines a valid damage type
         class MY_custom_damageType {
@@ -157,8 +165,11 @@ class ACE_Medical_Injuries {
             // if 1, wounds are only applied to the most-damaged body part. if 0, wounds are applied to all damaged parts
             selectionSpecific = 1;
 
-            // SQF expression that returns the wound handler function for this damage type
-            woundsHandler = "MY_fnc_woundsHandler";
+            // custom handling for this damage type
+            // inherits from the default handlers - the function(s) defined here will be called first, then the default one(s)
+            class woundHandlers: woundHandlers {
+                my_addon = "my_fnc_customDamageHandler";
+            };
 
             // one class for each type of wound this damage type is allowed to create
             // must match a wound type defined above
@@ -203,8 +214,7 @@ Custom wound handlers should follow the same spec as the built-in handler:
 0  | Unit that was hit | Object | Required
 1  | Array of damage dealt to each body part | Array | Required
 2  | Type of damage | String | Required
-3  | Person or vehicle that dealt the damage | Object | Optional (currently unused)
-**R** | None | None | Ignored
+**R** | Parameters to be passed to the next handler in the list, e.g. `_this` or a modified copy of it. Return `[]` to prevent further handling. | Array | Required
 
 The damage elements are sorted in descending order according to how much damage was dealt to each body part _before armor was taken into account_, but the actual damage values are _after armor_.
 If the damage type is configured as selection-specific, this array will be length 1.

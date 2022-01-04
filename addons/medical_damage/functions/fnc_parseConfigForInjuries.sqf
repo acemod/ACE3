@@ -58,12 +58,7 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 
 private _defaultWoundHandlers = [];
 if (isClass (_damageTypesConfig >> "woundHandlers")) then {
-    {
-        private _handler = call compile getText _x;
-        if !(isNil "_handler") then {
-            _defaultWoundHandlers pushBack _handler;
-        }
-    } forEach configProperties [_damageTypesConfig >> "woundHandlers", "isText _x", true];
+    _defaultWoundHandlers = [_damageTypesConfig >> "woundHandlers"] call FUNC(parseWoundHandlersCfg);
     reverse _defaultWoundHandlers;
 };
 TRACE_1("Found default wound handlers", count _defaultWoundHandlers);
@@ -85,12 +80,7 @@ TRACE_1("Found default wound handlers", count _defaultWoundHandlers);
     
     private _woundHandlers = [];
     if (isClass (_damageTypeSubClassConfig >> "woundHandlers")) then {
-        {
-            private _handler = call compile getText _x;
-            if !(isNil "_handler") then {
-                _woundHandlers pushBack _handler;
-            }
-        } forEach configProperties [_damageTypeSubClassConfig >> "woundHandlers", "isText _x", true];
+        _woundHandlers = [_damageTypeSubClassConfig >> "woundHandlers"] call FUNC(parseWoundHandlersCfg);
         reverse _woundHandlers;
         TRACE_2("Damage type found wound handlers", _className, count _woundHandlers);
     } else {

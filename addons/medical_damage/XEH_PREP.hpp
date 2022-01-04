@@ -4,6 +4,7 @@ PREP(getTypeOfDamage);
 PREP(handleIncapacitation);
 PREP(interpolatePoints);
 PREP(parseConfigForInjuries);
+PREP(parseWoundHandlersCfg);
 PREP(woundReceived);
 PREP(woundsHandler);
 PREP(woundsHandlerBurning);

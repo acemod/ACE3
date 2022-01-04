@@ -170,8 +170,7 @@ class ACE_Medical_Injuries {
         class vehiclecrash {
             thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
-            class woundHandlers {
-                ADDON = QFUNC(woundsHandlerActive);
+            class woundHandlers: woundHandlers {
                 GVAR(vehiclecrash) = QFUNC(woundsHandlerVehiclecrash);
             };
             class Abrasion {
