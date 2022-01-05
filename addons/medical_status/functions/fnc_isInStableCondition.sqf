@@ -27,12 +27,12 @@ private _requiredBloodVolume = DEFAULT_BLOOD_VOLUME * (EGVAR(medical_treatment,m
 if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith {false};
 
 if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith {false};
-if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { (GET_FRACTURES(_unit) isNotEqualTo []) }) exitWith {false};
+if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { GET_FRACTURES(_unit) isNotEqualTo [] }) exitWith {false};
 
-// Bangaded wounds required.
-if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1) && {(GET_OPEN_WOUNDS(_unit) findIf {_x select 2 > 0}) != -1} exitWith {false};
+// Bangaded wounds required. This means there can be no open wounds.
+if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1) && { (GET_OPEN_WOUNDS(_unit) findIf {_x select 2 > 0} ) != -1 } exitWith {false};
 
-// Stitched wounds required.
-if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && {(GET_BANDAGED_WOUNDS(_unit) findIf {_x select 2 > 0}) != -1 }) exitWith {false};
+// Stitched wounds required. This means there can be no bandaged wounds.
+if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && { GET_BANDAGED_WOUNDS(_unit) isNotEqualTo [] }) exitWith {false};
 
 true
