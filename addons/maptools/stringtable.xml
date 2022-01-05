@@ -216,6 +216,7 @@
             <Chinese>修改旋轉地圖工具的按鍵</Chinese>
             <Portuguese>Tecla de Modificador para permitir girar as ferramentas de mapa</Portuguese>
             <Czech>Klávesa která umožnuje otáčení pomůcky k mapě</Czech>
+            <Turkish>Dönen harita araçlarına izin veren değiştirici tuş</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_displayName">
             <English>Draw straight lines with maptools</English>
@@ -230,6 +231,7 @@
             <Russian>Прямые линии с инструментами карты</Russian>
             <Portuguese>Desenhar linhas retas com as ferramentas de mapa</Portuguese>
             <Czech>Kreslit rovné čáry s pomůckou k mapě</Czech>
+            <Turkish>Maptools ile düz çizgiler çizme</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
@@ -244,6 +246,7 @@
             <Russian>Рисуйте по краю инструмента карты, чтобы провести прямые линии. Примечание: при удалении линии размещайте курсор над ее серединой</Russian>
             <Portuguese>Desenhe no canto da ferramenta de mapa para desenhar linhas retas. Observação: Sobreponha o meio com o mouse para deletar.</Portuguese>
             <Czech>Povolit kreslení rovných čar při kreslení na okraji pomůcky k mapě. Poznámka: Pro smazání musíte mít kurzor nad středem čáry.</Czech>
+            <Turkish>Düz çizgiler çizmek için maptools'un kenarına çizin. Not: Silmek için orta noktada fareyle üzerine gelmeniz gerekir.</Turkish>
         </Key>
     </Package>
 </Project>

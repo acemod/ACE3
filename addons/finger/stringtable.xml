@@ -15,6 +15,7 @@
             <Portuguese>Apontando</Portuguese>
             <Czech>Ukazování </Czech>
             <Spanish>Señalando</Spanish>
+            <Turkish>Işaretleme</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_enabled_displayName">
             <English>Pointing Enabled</English>
@@ -31,6 +32,7 @@
             <Chinesesimp>指向系统启动</Chinesesimp>
             <Chinese>指向系統啟動</Chinese>
             <Spanish>Señalado permitido</Spanish>
+            <Turkish>Işaretleme Etkin</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_enabled_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
@@ -47,6 +49,7 @@
             <Korean>당신이 보는것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른채로 유지할 수 있습니다.</Korean>
             <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
             <Chinese>當按下此按鍵後，你附近的單位即可看見一個虛擬圖示，標明你正在指向的位置。此按鍵可以被按住來持續顯示。</Chinese>
+            <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir. </Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_maxRange_displayName">
             <English>Pointing Max Range</English>
@@ -63,6 +66,7 @@
             <Korean>가리키기 최대 범위</Korean>
             <Chinesesimp>指向标记最大显示距离</Chinesesimp>
             <Chinese>指向指示器最大顯示距離</Chinese>
+            <Turkish>Işaretleme maksimum uzaklığı</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
@@ -79,6 +83,7 @@
             <Korean>플레이어 사이에서 가리키기 표시를  보이게 하는 최대거리를 설정합니다[기본설정: 4 미터]</Korean>
             <Chinesesimp>设定指向标记最大显示距离。[预设: 4公尺]</Chinesesimp>
             <Chinese>設定指向指示器最大顯示距離。[預設: 4公尺]</Chinese>
+            <Turkish>Hangi uzaklıktakilerin sanal daireyi görmesini seçin. [Varsayılan : 4 metre] </Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
@@ -95,6 +100,7 @@
             <Korean>자신이 가리키는곳을 보여줍니다</Korean>
             <Chinesesimp>在自己身边显示指向标记</Chinesesimp>
             <Chinese>顯示指向指示器給自己</Chinese>
+            <Turkish>Sanal daireyi işaretleyen kişiye göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
@@ -127,6 +133,7 @@
             <Korean>가리키기 표시기</Korean>
             <Chinesesimp>指向标记</Chinesesimp>
             <Chinese>指向指示器</Chinese>
+            <Turkish>Daire Rengi</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
@@ -143,6 +150,7 @@
             <Korean>가리키기의 원형 색상</Korean>
             <Chinesesimp>指向标记颜色</Chinesesimp>
             <Chinese>指向指示器顏色</Chinese>
+            <Turkish>Sanal dairenin rengini belirleyin</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_keyComb">
             <English>Action "point a finger at"</English>
@@ -175,6 +183,7 @@
             <Korean>당신이 보는것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른채로 유지할 수 있습니다.</Korean>
             <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
             <Chinese>當按下此按鍵後，你附近的單位即可看見一個虛擬圖示，標明你正在指向的位置。此按鍵可以被按住來持續顯示。</Chinese>
+            <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir. </Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
@@ -191,6 +200,7 @@
             <Korean>가리키기 설정</Korean>
             <Chinesesimp>指向设定</Chinesesimp>
             <Chinese>指向設定</Chinese>
+            <Turkish>Işaretleme Ayarları</Turkish>
         </Key>
     </Package>
 </Project>

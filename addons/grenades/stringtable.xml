@@ -67,6 +67,7 @@
             <Korean>정확한 던지기</Korean>
             <Chinesesimp>精准投掷</Chinesesimp>
             <Chinese>精準投擲</Chinese>
+            <Turkish>Yakına Fırlatma</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_RollGrenade">
             <English>Roll Grenade</English>
@@ -117,6 +118,7 @@
             <Korean>M84 섬광 수류탄</Korean>
             <Chinesesimp>M84 震撼弹</Chinesesimp>
             <Chinese>M84 震撼彈</Chinese>
+            <Turkish>M84 Sersemletici El Bombası</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_NameShort">
             <English>M84</English>
@@ -150,6 +152,7 @@
             <Korean>플래시뱅이라고도 알려져있습니다. 사용즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
             <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
             <Chinese>也被稱為閃光彈，會造成暫時性失明，耳聾，耳鳴等效果</Chinese>
+            <Turkish>Flashbang olarak da bilinir. Ani flaş körlüğü, sağırlık, kulak çınlaması ve iç kulak rahatsızlığına neden olur.</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_Name">
             <English>CTS 7290 9-bang Flash Grenade</English>
@@ -161,6 +164,8 @@
             <Polish>CTS 7290 9-bang Granat Hukowy</Polish>
             <French>CTS 7290 9-bang Grenade incapacitante</French>
             <Portuguese>Granada de Luz CTS 7290 9-Explosões</Portuguese>
+            <Turkish>CTS 7290 9- Flaş Bombası</Turkish>
+            <Russian>CTS 7290-9 Светошумовая граната</Russian>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_NameShort">
             <English>CTS 7290-9</English>
@@ -177,6 +182,7 @@
             <Korean>CTS 7290-9</Korean>
             <Chinesesimp>CTS 7290-9</Chinesesimp>
             <Chinese>CTS 7290-9</Chinese>
+            <Turkish>CTS 7290-9</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Name">
             <English>M127A1 Hand Held Signal (White)</English>
@@ -193,6 +199,7 @@
             <Korean>M127A1 신호탄 (하얀색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹 (白色)</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (白色)</Chinese>
+            <Turkish>M127A1 El Sinyali (Beyaz)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_Name">
             <English>M127A1 Hand Held Signal (Red)</English>
@@ -209,6 +216,7 @@
             <Korean>M127A1 신호탄 (빨간색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹 (红色)</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (紅色)</Chinese>
+            <Turkish>M127A1 El Sinyali (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_Name">
             <English>M127A1 Hand Held Signal (Green)</English>
@@ -225,6 +233,7 @@
             <Korean>M127A1 신호탄 (초록색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹 (绿色)</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (綠色)</Chinese>
+            <Turkish>M127A1 El Sinyali (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_Name">
             <English>M127A1 Hand Held Signal (Yellow)</English>
@@ -241,6 +250,7 @@
             <Korean>M127A1 신호탄 (노란색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹 (黄色)</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (黃色)</Chinese>
+            <Turkish>M127A1 El Sinyali (Sarı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Description">
             <English>White Hand Flare</English>
@@ -257,6 +267,7 @@
             <Korean>하얀색 불꽃신호기</Korean>
             <Chinesesimp>白色手持式信号弹</Chinesesimp>
             <Chinese>白色手持式信號彈</Chinese>
+            <Turkish>Beyaz el işaret fişeği</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_Description">
             <English>Red Hand Flare</English>
@@ -273,6 +284,7 @@
             <Korean>빨간색 불꽃신호기</Korean>
             <Chinesesimp>红色手持式信号弹</Chinesesimp>
             <Chinese>紅色手持式信號彈</Chinese>
+            <Turkish>Kırmızı el işaret fişeği</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_Description">
             <English>Green Hand Flare</English>
@@ -289,6 +301,7 @@
             <Korean>초록색 불꽃신호기</Korean>
             <Chinesesimp>绿色手持式信号弹</Chinesesimp>
             <Chinese>綠色手持式信號彈</Chinese>
+            <Turkish>Yeşil el işaret fişeği</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_Description">
             <English>Yellow Hand Flare</English>
@@ -305,6 +318,7 @@
             <Korean>노란색 불꽃신호기</Korean>
             <Chinesesimp>黄色手持式信号弹</Chinesesimp>
             <Chinese>黃色手持式信號彈</Chinese>
+            <Turkish>Sarı el işaret fişeği</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_NameShort">
             <English>M127A1 (White)</English>
@@ -321,6 +335,7 @@
             <Korean>M127A1 (하양)</Korean>
             <Chinesesimp>M127A1 (白色)</Chinesesimp>
             <Chinese>M127A1 (白色)</Chinese>
+            <Turkish>M127A1 (Beyaz)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_NameShort">
             <English>M127A1 (Red)</English>
@@ -337,6 +352,7 @@
             <Korean>M127A1 (빨강)</Korean>
             <Chinesesimp>M127A1 (红色)</Chinesesimp>
             <Chinese>M127A1 (紅色)</Chinese>
+            <Turkish>M127A1 (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_NameShort">
             <English>M127A1 (Green)</English>
@@ -353,6 +369,7 @@
             <Korean>M127A1 (초록)</Korean>
             <Chinesesimp>M127A1 (绿色)</Chinesesimp>
             <Chinese>M127A1 (綠色)</Chinese>
+            <Turkish>M127A1 (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_NameShort">
             <English>M127A1 (Yellow)</English>
@@ -369,6 +386,7 @@
             <Korean>M127A1 (노랑)</Korean>
             <Chinesesimp>M127A1 (黄色)</Chinesesimp>
             <Chinese>M127A1 (黃色)</Chinese>
+            <Turkish>M127A1 (Sarı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Name">
             <English>AN-M14 Incendiary Grenade</English>
@@ -397,6 +415,7 @@
             <Chinese>AN-M14</Chinese>
             <Portuguese>AN-M14</Portuguese>
             <Czech>AN-M14</Czech>
+            <Turkish>AN-M14</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Description">
             <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
@@ -435,6 +454,7 @@
             <Chinese>M583 照明彈（白色）</Chinese>
             <French>M583 Fusée éclairante (Blanche)</French>
             <Czech>M583 Světlice (Bílá)</Czech>
+            <Turkish>M583 Aydınlatma Fişeği (Beyaz)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
@@ -447,6 +467,7 @@
             <Chinese>M662 照明彈（紅色）</Chinese>
             <French>M662 Fusée éclairante (Rouge)</French>
             <Czech>M662 Světlice (Červená)</Czech>
+            <Turkish>M662 Aydınlatma Fişeği (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
@@ -459,6 +480,7 @@
             <Chinese>M661 照明彈（綠色）</Chinese>
             <French>M661 Fusée éclairante (Verte)</French>
             <Czech>M661 Světlice (Zelená)</Czech>
+            <Turkish>M661 Aydınlatma Fişeği (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
@@ -471,6 +493,7 @@
             <Chinese>類型：帶傘型紅外線照明彈</Chinese>
             <French>Type : Fusée IR à parachute</French>
             <Czech>Typ: Infračervená světlice s padákem</Czech>
+            <Turkish>Tip : Paraşüt IR Flare</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
@@ -483,6 +506,7 @@
             <Chinese>M992 紅外線照明彈</Chinese>
             <French>M992 Fusée IR</French>
             <Czech>M992 Infračervená světlice</Czech>
+            <Turkish>M992 Illumination IR Flare</Turkish>
         </Key>
     </Package>
 </Project>

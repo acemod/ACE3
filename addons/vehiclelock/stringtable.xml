@@ -339,6 +339,7 @@
             <Korean>기본 해정도구 설정</Korean>
             <Chinesesimp>预设开锁能力</Chinesesimp>
             <Chinese>預設開鎖能力</Chinese>
+            <Turkish>Varsayılan Maymuncuk Gücü</Turkish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_Description">
             <English>Default Time to lockpick (in seconds). Default: 10</English>

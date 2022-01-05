@@ -15,6 +15,7 @@
             <Portuguese>Contador da Simulação de Dispersão de Laser</Portuguese>
             <Czech>Počet simulace disperze laseru</Czech>
             <Spanish>Número de dispersión en la simulación del láser</Spanish>
+            <Turkish>Laser Dispersion Simulation Count</Turkish>
         </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>
@@ -48,6 +49,7 @@
             <Korean>레이저 - 코드 순환 위</Korean>
             <Chinesesimp>雷射 - 循环切换雷射码 上</Chinesesimp>
             <Chinese>雷射 - 循環切換雷射碼 上</Chinese>
+            <Turkish>Lazer - Çevrim Kodu Yukarı</Turkish>
         </Key>
         <Key ID="STR_ACE_Laser_laserCodeDown">
             <English>Laser - Cycle Code Down</English>
@@ -64,6 +66,7 @@
             <Korean>레이저 - 코드 순환 아래</Korean>
             <Chinesesimp>雷射 - 循环切换雷射码 下</Chinesesimp>
             <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
+            <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
         </Key>
     </Package>
 </Project>

@@ -45,6 +45,7 @@
             <Korean>패스트로프 준비</Korean>
             <Chinesesimp>准备快速绳降系统</Chinesesimp>
             <Chinese>準備快速繩降系統</Chinese>
+            <Turkish>Halatla inme sistemini hazırla</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_stowFRIES">
             <English>Stow fast roping system</English>
@@ -327,6 +328,9 @@
             <Japanese>ファスト ロープ</Japanese>
             <Spanish>Cuerdas rápidas</Spanish>
             <Polish>Zjazd na linach</Polish>
+            <Turkish>Halatla Kayma</Turkish>
+            <Czech>Slaňování</Czech>
+            <Russian>Спуск по канату</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -340,6 +344,7 @@
             <Italian>Richiede una corda per il dispigamento</Italian>
             <Czech>Požadovat předmět lana pro slaňování</Czech>
             <Spanish>Requiere una cuerda para desplegar</Spanish>
+            <Turkish>Halatla kaymak için halat gerekli</Turkish>
         </Key>
     </Package>
 </Project>

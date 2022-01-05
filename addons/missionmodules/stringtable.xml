@@ -165,6 +165,7 @@
             <Korean>재생된 소리간 최소 지연시간</Korean>
             <Chinesesimp>设定每个声音档案中间最少间隔多久再进行播放</Chinesesimp>
             <Chinese>設定每個聲音檔案中間最少間隔多久再進行播放</Chinese>
+            <Turkish>Çalınan sesler arasında minimum gecikme</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName">
             <English>Maximum Delay</English>
@@ -198,6 +199,7 @@
             <Korean>재생된 소리간 최대 지연시간</Korean>
             <Chinesesimp>设定每个声音档案中间最多间隔多久再进行播放</Chinesesimp>
             <Chinese>設定每個聲音檔案中間最多間隔多久再進行播放</Chinese>
+            <Turkish>Çalınan sesler arasında maksimum gecikme</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName">
             <English>Follow Players</English>
@@ -231,6 +233,7 @@
             <Korean>플레이어를 따라갑니다. 거짓으로 설정될경우 오직 한 자리에서만 반복해서 소리를 재생합니다.</Korean>
             <Chinesesimp>设定声音是否会在玩家的附近产生。假如关闭此功能，声音只会在模块的位置产生。</Chinesesimp>
             <Chinese>設定聲音是否會在玩家的附近產生。假如關閉此功能，聲音只會在模塊的位置產生。</Chinese>
+            <Turkish>Eğer devde dışı bırakılırsa sesler oyuncuyu takip etmez</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">
             <English>Volume</English>
@@ -247,6 +250,7 @@
             <Korean>볼륨</Korean>
             <Chinesesimp>音量</Chinesesimp>
             <Chinese>音量</Chinese>
+            <Turkish>Ses</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description">
             <English>The volume of the sounds played</English>

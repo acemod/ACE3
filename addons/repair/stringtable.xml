@@ -1885,6 +1885,7 @@
             <Polish>Rózne wymagania do naprawy</Polish>
             <Portuguese>Requerimentos para reparo miscelâneo</Portuguese>
             <Spanish>Requisitos de objetos misceláneos de reparación</Spanish>
+            <Russian>Требования к разному ремонту</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
@@ -1897,6 +1898,7 @@
             <Portuguese>Items necessários para reparar uma peça específica ou remover/substituir lagarta.</Portuguese>
             <Spanish>Objetos necesarios para reparar un componente específico del vehículo o quitar/reemplazar las orugas.</Spanish>
             <Italian>Elementi necessari per riparare un componente specifico del veicolo o per rimuovere/sostituire i cingoli</Italian>
+            <Russian>Предметы, необходимые для ремонта отдельных компонентов или снятия/замены гусеницы.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
@@ -1909,6 +1911,7 @@
             <Polish>Wymagania pełnej naprawy</Polish>
             <Portuguese>Requerimentos de Reparo Completo</Portuguese>
             <Spanish>Requisitos para reparación completa</Spanish>
+            <Russian>Требования к полному ремонту</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
@@ -1921,6 +1924,7 @@
             <Portuguese>Itens requeridos para realizar um reparo veicular completo.</Portuguese>
             <Spanish>Objetos requeridos para una reparación completa</Spanish>
             <Italian>Elementi necessari per eseguire una riparazione completa del veicolo.</Italian>
+            <Russian>Предметы, необходимые для полного ремонта техники.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>

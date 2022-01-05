@@ -509,6 +509,7 @@
             <Russian>%1D</Russian>
             <Portuguese>%1D</Portuguese>
             <Czech>%1D</Czech>
+            <Turkish>%1D</Turkish>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
             <English>%1L</English>
@@ -523,6 +524,7 @@
             <Russian>%1L</Russian>
             <Portuguese>%1L</Portuguese>
             <Czech>%1L</Czech>
+            <Turkish>%1L</Turkish>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
             <English>%1R</English>
@@ -537,6 +539,7 @@
             <Russian>%1R</Russian>
             <Portuguese>%1R</Portuguese>
             <Czech>%1R</Czech>
+            <Turkish>%1R</Turkish>
         </Key>
         <Key ID="STR_ACE_Scopes_statHorizontalLimits">
             <English>Horizontal limits</English>

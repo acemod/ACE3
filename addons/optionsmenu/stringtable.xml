@@ -151,6 +151,7 @@
             <Korean>오른쪽 위에서 아래로</Korean>
             <Chinesesimp>右上角，向下</Chinesesimp>
             <Chinese>右上角，向下</Chinese>
+            <Turkish>Sağ üst, aşağı</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
@@ -167,6 +168,7 @@
             <Korean>오른쪽 위에서 왼쪽으로</Korean>
             <Chinesesimp>右上角，向左</Chinesesimp>
             <Chinese>右上角，向左</Chinese>
+            <Turkish>Sağ üstte, solda</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
@@ -183,6 +185,7 @@
             <Korean>왼쪽 위에서 아래로</Korean>
             <Chinesesimp>左上角，向下</Chinesesimp>
             <Chinese>左上角，向下</Chinese>
+            <Turkish>Sol üst, aşağı</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
             <English>Top left, to the right</English>
@@ -199,6 +202,7 @@
             <Korean>왼쪽 위에서 오른쪽으로</Korean>
             <Chinesesimp>左上角，向右</Chinesesimp>
             <Chinese>左上角，向右</Chinese>
+            <Turkish>Sol üst, sağa</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>

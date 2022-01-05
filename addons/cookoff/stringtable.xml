@@ -3,6 +3,7 @@
     <Package name="CookOff">
         <Key ID="STR_ACE_CookOff_category_displayName">
             <English>ACE Cook off</English>
+            <Spanish>ACE Detonación inducida por calor</Spanish>
             <Italian>ACE Esplosione</Italian>
             <Chinese>ACE 殉爆效果</Chinese>
             <Chinesesimp>ACE 殉爆效果</Chinesesimp>
@@ -17,6 +18,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_name">
             <English>Damage handling and turret effects</English>
+            <Spanish>Daño y efectos de torreta</Spanish>
             <German>Schadensberechnung und Geschützturmeffekte</German>
             <Japanese>損傷処理と砲塔の効果</Japanese>
             <Russian>Обработка урона и эффектов срыва башни</Russian>
@@ -29,6 +31,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_tooltip">
             <English>Changes damage handling for cook off and turret explosion effects</English>
+            <Spanish>Cambia el daño de la detonación inducida por calor y los efectos de la explosión de la torreta</Spanish>
             <German>Ändert die Schadensberechnung für die Durchzündung und die Explosionseffekte des Geschützturmes</German>
             <Japanese>誘爆の損傷処理と砲塔の爆発効果を変更します。</Japanese>
             <Russian>Изменяет обработку урона для возгорания и эффекта срыва башни</Russian>
@@ -56,6 +59,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook off</English>
+            <Spanish>Habilitar detonación inducida por calor en las cajas de munición</Spanish>
             <Japanese>弾薬箱に誘爆を有効化</Japanese>
             <German>Durchzündung für Munitionskisten ermöglichen</German>
             <Korean>탄약 상자 쿡오프 현상 활성화</Korean>
@@ -70,6 +74,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
+            <Spanish>Habilita la detonación inducida por calor en las cajas de munición</Spanish>
             <Japanese>弾薬箱が誘爆するようになります。</Japanese>
             <German>Ermöglicht Durchzündung von Munitionskisten.</German>
             <Korean>탄약 상자에 쿡오프 현상을 적용합니다.</Korean>
@@ -84,6 +89,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable Ammunition cook off</English>
+            <Spanish>Habilitar la detonación inducida por calor en la munición</Spanish>
             <Japanese>弾薬の誘爆を有効化</Japanese>
             <German>Durchzündung für Munition ermöglichen</German>
             <Korean>탄약 쿡오프 현상 활성화</Korean>
@@ -98,6 +104,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
+            <Spanish>Habilita la detonación inducida por calor en la munición. Dispara proyectiles de munición mientras el vehículo está ardiendo y tiene munición</Spanish>
             <Japanese>弾薬が誘爆します。車両が燃えると、搭載している弾薬が激しく燃え上がります。</Japanese>
             <German>Ermöglicht Durchzündung von Munition. Feuert Projektile der Munition ab, solange das Fahrzeug brennt und Munition besitzt.</German>
             <Polish>Aktywuje samozapłon amunicji. Wystrzeliwuje pociski podczas gdy pojazd płonie i posiada amunicję.</Polish>
@@ -112,6 +119,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammunition cook off duration</English>
+            <Spanish>Duración de la detonación inducida por calor de la munición</Spanish>
             <German>Munitionsdurchzündungsdauer</German>
             <Polish>Czas trwania samozapłonu amunicji</Polish>
             <Japanese>弾薬の誘爆持続時間</Japanese>
@@ -126,6 +134,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
+            <Spanish>Multiplicador de cuanto dura la detonación inducida por calor [Ponerlo a cero la deshabilita]</Spanish>
             <German>Faktor für die Munitionsdurchzündungsdauer [0 zum Deaktivieren]</German>
             <French>Multiplicateur permettant de régler la durée durant laquelle les munitions continuent d'exploser [Une valeur de 0 désactive l'auto-inflammation].</French>
             <Polish>Mnożnik decydujący jak długo ma trwać samozapłon amunicji [Ustawienie na 0 spowoduje wyłącznie samozapłonu]</Polish>
@@ -140,6 +149,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
             <English>Cook-off probability coefficient</English>
+            <Spanish>Coeficiente de probabilidad de detonación inducida por calor</Spanish>
             <Japanese>誘爆の可能性係数</Japanese>
             <Italian>Coefficiente probabilità esplosione</Italian>
             <German>Faktor für Wahrscheinlichkeit der Durchzündung</German>
@@ -153,6 +163,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
+            <Spanish>Multiplicador de probabilidad de detonación inducida por calor. Valores más altos producen mayor probabilidad</Spanish>
             <Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
             <Italian>Moltiplicatore per la probabilità dell'esplosione. Un valore più alto aumenta la probabilità dell'esplosione</Italian>
             <German>Faktor für Wahrscheinlichkeit der Durchzündung. Ein höherer Wert führt zu höherer Durchzündungswahrscheinlichkeit.</German>

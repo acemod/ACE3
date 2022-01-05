@@ -221,6 +221,7 @@
             <Korean>%1&lt;br/&gt;이 실릴 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被裝載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被装载</Chinesesimp>
+            <Turkish>%1&lt;br/&gt; kargo yüklenemedi</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
@@ -236,6 +237,7 @@
             <Korean>%1&lt;br/&gt;이 내려질 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
+            <Turkish>%1&lt;br/&gt; kargo boşaltılamadı</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>

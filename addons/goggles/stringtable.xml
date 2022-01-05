@@ -127,6 +127,7 @@
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
+            <Russian>Показывать Протереть очки в меню взаимодействия с собой</Russian>
         </Key>
     </Package>
 </Project>

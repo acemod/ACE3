@@ -33,6 +33,7 @@
             <Korean>50 미터 늘리기 -- MRAD/MRAD (조준선/포탑)</Korean>
             <Chinesesimp>50公尺增量 -- 毫弧度/毫弧度 (瞄镜分划线/调整纽)</Chinesesimp>
             <Chinese>50公尺增量 -- 毫弧度/毫弧度 (瞄鏡分劃線/調整紐)</Chinese>
+            <Turkish>50 METER increments -- MRAD/MRAD (reticle/turrets)</Turkish>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>

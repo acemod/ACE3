@@ -47,6 +47,7 @@
             <Portuguese>Não há posições suficientes para colocar todas as unidades.</Portuguese>
             <Spanish>No hay suficientes posiciones para colocar todas las unidades.</Spanish>
             <Czech>Není dostatek pozic pro všechny jednotky.</Czech>
+            <Turkish>Tüm birimleri yerleştirmek için yeterli konum yok.</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNoBuilding">
             <English>No building found.</English>
