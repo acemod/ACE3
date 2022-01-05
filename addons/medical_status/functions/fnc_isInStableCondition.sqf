@@ -33,7 +33,6 @@ if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { (GET_FRACTURES(_unit) i
 if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1) && {(GET_OPEN_WOUNDS(_unit) findIf {_x select 2 > 0}) != -1} exitWith {false};
 
 // Stitched wounds required.
-//if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && { !(count GET_OPEN_WOUNDS(_unit) ==  count GET_STITCHED_WOUNDS(_unit)) }) exitWith {false};
 if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && {(GET_BANDAGED_WOUNDS(_unit) findIf {_x select 2 > 0}) != -1 }) exitWith {false};
 
 true
