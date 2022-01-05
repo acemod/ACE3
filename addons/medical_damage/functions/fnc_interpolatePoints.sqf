@@ -34,12 +34,8 @@ _lower = _points select _lower;
 _output = linearConversion [_lower select 0, _upper select 0, _input, _lower select 1, _upper select 1, true];
 
 if (_randomRound) then {
-    _chanceCeil = _output - floor _output;
-    if (_chanceCeil > random 1) then {
-        _output = ceil _output;
-    } else {
-        _output = floor _output;
-    };
+    // chance to round up is equal to the decimal part
+    _output = ceil (_output - random 1);
 };
 
 _output //return
