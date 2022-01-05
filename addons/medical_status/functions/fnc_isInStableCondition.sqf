@@ -27,12 +27,13 @@ private _requiredBloodVolume = DEFAULT_BLOOD_VOLUME * (EGVAR(medical_treatment,m
 if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith {false};
 
 if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith {false};
-if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { !(GET_FRACTURES(_unit) isEqualTo []) }) exitWith {false};
+if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { (GET_FRACTURES(_unit) isNotEqualTo []) }) exitWith {false};
 
-
+// Bangaded wounds required.
 if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1) && {(GET_OPEN_WOUNDS(_unit) findIf {_x select 2 > 0}) != -1} exitWith {false};
 
-// Require stitched wounds.
-if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && { !(count GET_OPEN_WOUNDS(_unit) ==  count GET_STITCHED_WOUNDS(_unit)) }) exitWith {false};
+// Stitched wounds required.
+//if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && { !(count GET_OPEN_WOUNDS(_unit) ==  count GET_STITCHED_WOUNDS(_unit)) }) exitWith {false};
+if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && {(GET_BANDAGED_WOUNDS(_unit) findIf {_x select 2 > 0}) != -1 }) exitWith {false};
 
 true
