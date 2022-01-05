@@ -16,7 +16,6 @@
             <Korean>철조망</Korean>
             <Chinese>鐵絲網</Chinese>
             <Chinesesimp>铁丝网</Chinesesimp>
-            <Turkish>Bıçaklı Tel</Turkish>
         </Key>
         <Key ID="STR_ACE_Concertina_Wire_Coil_DisplayName">
             <English>Concertina Wire Coil</English>
@@ -33,7 +32,6 @@
             <Korean>윤형 철조망</Korean>
             <Chinese>鐵絲網捲</Chinese>
             <Chinesesimp>铁丝网卷</Chinesesimp>
-            <Turkish>Bıçaklı Tel Rulo</Turkish>
         </Key>
         <Key ID="STR_ACE_Concertina_Wire_UnrollWire">
             <English>Dismount Concertina Wire</English>
@@ -50,7 +48,6 @@
             <Korean>철조망 해체</Korean>
             <Chinese>卸下鐵絲網</Chinese>
             <Chinesesimp>卸下铁丝网</Chinesesimp>
-            <Turkish>Bıçaklı Telleri Sök</Turkish>
         </Key>
         <Key ID="STR_ACE_Concertina_Wire_RollWire">
             <English>Deploy Concertina Wire</English>
@@ -67,7 +64,6 @@
             <Korean>철조망 배치</Korean>
             <Chinese>佈署鐵絲網</Chinese>
             <Chinesesimp>布署铁丝网</Chinesesimp>
-            <Turkish>Bıçaklı Telleri Yerleştir</Turkish>
         </Key>
     </Package>
 </Project>

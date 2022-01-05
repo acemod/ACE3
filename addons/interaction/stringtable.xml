@@ -847,7 +847,6 @@
             <Korean>키 할당하기</Korean>
             <Chinesesimp>编辑按键</Chinesesimp>
             <Chinese>編輯按鍵</Chinese>
-            <Turkish>Modifiye Tuşu</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_NotInRange">
             <English>Not in Range</English>
