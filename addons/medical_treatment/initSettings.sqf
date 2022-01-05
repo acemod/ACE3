@@ -130,7 +130,7 @@
     "LIST",
     [LSTRING(RequiredWoundStatePAK_DisplayName), LSTRING(RequiredWoundStatePAK_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1, 2], [LSTRING(RequiredWoundStatePAK_Open), LSTRING(Bandaged), LSTRING(RequiredWoundStatePAK_Stitched)], 0],
+    [[0, 1, 2], [LSTRING(RequiredWoundStatePAK_Open), LSTRING(Bandaged), LSTRING(RequiredWoundStatePAK_Stitched)], 1],
     true
 ] call CBA_fnc_addSetting;
 
