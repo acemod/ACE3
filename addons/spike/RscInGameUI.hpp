@@ -31,8 +31,8 @@ class RscInGameUI {
             show = 1;
         };
 
-       	class reticle: RscControlsGroupNoScrollbars {
-			idc = 242000;
+           class reticle: RscControlsGroupNoScrollbars {
+            idc = 242000;
             x = "safeZoneX";
             y = "safeZoneY";
             w = "safeZoneW-safeZoneX";

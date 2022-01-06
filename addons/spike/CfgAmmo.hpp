@@ -10,30 +10,30 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
             
-			pitchRate = 30;
-			yawRate = 30;
+            pitchRate = 30;
+            yawRate = 30;
 
-			canVanillaLock = 0;
+            canVanillaLock = 0;
 
-			defaultSeekerType = "SPIKE";
-			seekerTypes[] = {"SPIKE"};
-			
-			defaultSeekerLockMode = "LOAL";
-			seekerLockModes[] = { "LOAL" };
+            defaultSeekerType = "SPIKE";
+            seekerTypes[] = {"SPIKE"};
+            
+            defaultSeekerLockMode = "LOAL";
+            seekerLockModes[] = { "LOAL" };
 
-			defaultNavigationType = "SPIKE";
-			navigationTypes[] = { "SPIKE", "ZeroEffortMiss" };
+            defaultNavigationType = "SPIKE";
+            navigationTypes[] = { "SPIKE", "ZeroEffortMiss" };
 
-			seekLastTargetPos = 0;
-			seekerAngle = 20;
-			seekerAccuracy = 1;
+            seekLastTargetPos = 0;
+            seekerAngle = 20;
+            seekerAccuracy = 1;
 
-			seekerMinRange = 50;
-			seekerMaxRange = 2500;
+            seekerMinRange = 50;
+            seekerMaxRange = 2500;
 
-			defaultAttackProfile = "DIR";
-			attackProfiles[] = {"DIR"};
-			useModeForAttackProfile = 0;
+            defaultAttackProfile = "DIR";
+            attackProfiles[] = {"DIR"};
+            useModeForAttackProfile = 0;
 
             class navigationStates {
                 class initial {
