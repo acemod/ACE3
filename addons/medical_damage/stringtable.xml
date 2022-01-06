@@ -263,7 +263,7 @@
             <Chinesesimp>重度挫伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush">
-            <English>Crushed tissue</English>
+            <English>Crushed Tissue</English>
             <German>Quetschverletzung</German>
             <Italian>Tessuto Schiacciato</Italian>
             <Russian>Компрессионная травма</Russian>
@@ -280,7 +280,7 @@
             <Chinesesimp>挤压伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Minor">
-            <English>Minor crushed tissue</English>
+            <English>Minor Crushed Tissue</English>
             <German>Kleine Quetschverletzung</German>
             <Italian>Minimo Tessuto Schiacciato</Italian>
             <Russian>Слабая компрессионная травма</Russian>
@@ -297,7 +297,7 @@
             <Chinesesimp>轻度挤压伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Medium">
-            <English>Medium crushed tissue</English>
+            <English>Medium Crushed Tissue</English>
             <German>Mittlere Quetschverletzung</German>
             <Italian>Medio Tessuto Schiacciato</Italian>
             <Russian>Умеренная компрессионная травма</Russian>
@@ -314,7 +314,7 @@
             <Chinesesimp>中度挤压伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Large">
-            <English>Large crushed tissue</English>
+            <English>Large Crushed Tissue</English>
             <German>Große Quetschverletzung</German>
             <Italian>Alto Tessuto Schiacciato</Italian>
             <Russian>Сильная компрессионная травма</Russian>
