@@ -289,10 +289,20 @@
             <Turkish>El Bombası Dışındakileri Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFlash">
-            <English>Select Flashbang</English>
+            <English>Select Flashbang Grenade</English>
+            <Russian>Выбрать светошумовую гранату</Russian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeIncendiary">
             <English>Select Incendiary Grenade</English>
+            <Russian>Выбрать зажигательную гранату</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectGrenadeSmoke">
+            <English>Select Smoke Grenade</English>
+            <Russian>Выбрать дымовую гранату</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFlare">
+            <English>Select Flare Grenade</English>
+            <Russian>Выбрать осветительную гранату</Russian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
             <English>Throw Selected Grenade</English>
