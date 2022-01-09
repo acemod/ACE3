@@ -14,6 +14,7 @@
             <Portuguese>Rearme</Portuguese>
             <Czech>Přezbrojení</Czech>
             <Spanish>Rearmar</Spanish>
+            <Korean>재보급</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>
@@ -660,6 +661,7 @@
             <French>Stock de munitions</French>
             <Czech>Sklad munice</Czech>
             <Spanish>Cargar munición</Spanish>
+            <Korean>화물 재무장</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_rearmCargo_edenDesc">
             <English>The cargo for rearming (-1 disable)</English>
@@ -674,6 +676,7 @@
             <French>Le quantité de munitions (en points), qui est disponible pour du réarmement (-1 pour désactiver).</French>
             <Czech>Objekt pro přezbrojování (-1 pro vypnutí)</Czech>
             <Spanish>Cantidad de munición restante para rearmado (-1 para deshabilitar)</Spanish>
+            <Korean>화물을 재무장합니다 (-1 설정시 비활성화)</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_distance_DisplayName">
             <English>Rearm distance</English>
@@ -688,6 +691,7 @@
             <Polish>Odległość przezbrojenia</Polish>
             <Russian>Дистанция перевооружения</Russian>
             <Spanish>Distancia de rearmado</Spanish>
+            <Korean>재무장 거리</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_distance_Description">
             <English>The maximum distance a vehicle can be rearmed at</English>
@@ -702,6 +706,7 @@
             <Polish>Maksymalna odległość na jakiej pojazd może zostać przezbrojony</Polish>
             <Russian>Максимальная дистанция для перевооружения</Russian>
             <Spanish>Máxima distancia a la que un vehículo puede ser rearmado</Spanish>
+            <Korean>차량이 재무장 할 수 있는 최대 거리를 설정합니다.</Korean>
         </Key>
     </Package>
 </Project>

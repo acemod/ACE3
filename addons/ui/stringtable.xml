@@ -166,6 +166,7 @@
             <Japanese>開発版ウォーターマーク</Japanese>
             <German>Wasserzeichen für Entwicklungsversion</German>
             <Chinesesimp>开发建设水印</Chinesesimp>
+            <Korean>개발용빌드 워터마크</Korean>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -350,7 +351,7 @@
             <Japanese>体力バー</Japanese>
             <Polish>Pasek staminy</Polish>
             <German>Ausdaueranzeige</German>
-            <Korean>체력 막대</Korean>
+            <Korean>지구력 막대</Korean>
             <Italian>Barra Stamina</Italian>
             <Chinesesimp>体力栏</Chinesesimp>
             <Chinese>體力欄</Chinese>
@@ -675,6 +676,7 @@
             <Russian>Включить индикатор скорости передвижения</Russian>
             <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
             <Chinesesimp>启用移动速度指示器</Chinesesimp>
+            <Korean>이동속도 표시기 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
@@ -684,6 +686,7 @@
             <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
             <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
             <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
+            <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화 합니다.</Korean>
         </Key>
     </Package>
 </Project>

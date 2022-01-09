@@ -47,6 +47,7 @@
             <French>Portée du backblast</French>
             <Czech>Dosah zpětné tlakové vlny (backblast)</Czech>
             <Spanish>Alcance del cono de fuego</Spanish>
+            <Korean>후폭풍 거리</Korean>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastAngle">
             <English>Backblast angle</English>
@@ -62,6 +63,7 @@
             <French>Angle du backblast</French>
             <Czech>Úhel zpětné tlakové vlny (backblast)</Czech>
             <Spanish>Ángulo del cono de fuego</Spanish>
+            <Korean>후폭풍 각도</Korean>
         </Key>
     </Package>
 </Project>

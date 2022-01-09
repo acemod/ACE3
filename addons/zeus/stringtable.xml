@@ -305,6 +305,7 @@
             <Czech>Režim úprav</Czech>
             <French>Mode d'édition</French>
             <Spanish>Modo de edición</Spanish>
+            <Korean>편집 모드</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
@@ -319,6 +320,7 @@
             <Czech>Přidej nebo odeber upravitelné objekty ze Zeusu</Czech>
             <French>Ajoute ou supprime les objets modifiables depuis Zeus.</French>
             <Spanish>Añadir o eliminar objetos editables desde Zeus</Spanish>
+            <Korean>제우스가 편집 가능한 물체를 추가하거나 제거합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
@@ -334,6 +336,7 @@
             <French>Ajouter des objets</French>
             <Turkish>Obje Ekle</Turkish>
             <Spanish>Añadir objetos</Spanish>
+            <Korean>물체 추가</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -394,6 +397,7 @@
             <Chinesesimp>额外物体</Chinesesimp>
             <French>Objets supplémentaires</French>
             <Spanish>Objetos adicionales</Spanish>
+            <Korean>추가 목표</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
@@ -408,6 +412,7 @@
             <Chinesesimp>确认变更给所有宙斯</Chinesesimp>
             <French>Objets supplémentaires à intégrer dans l'action, quel que soit le rayon de la tâche.</French>
             <Spanish>Objetos adicionales para incluir en la acción al margen del Radio de Tarea</Spanish>
+            <Korean>목표 반경 상관없이 추가 목표를 추가합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -1106,6 +1111,7 @@
             <Czech>Nikdo</Czech>
             <French>Aucun</French>
             <Turkish>Hiçbiri</Turkish>
+            <Korean>없음</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
@@ -1121,6 +1127,7 @@
             <Czech>Hráči</Czech>
             <French>Joueurs</French>
             <Turkish>Oyuncular</Turkish>
+            <Korean>플레이어</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
@@ -1136,6 +1143,7 @@
             <Czech>Hráči a AI</Czech>
             <French>Joueurs et IA</French>
             <Turkish>Oyuncular ve AI</Turkish>
+            <Korean>플레이어와 인공지능</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -1197,6 +1205,7 @@
             <French>Sélectionner une cargaison à décharger</French>
             <Turkish>Seçilen kargo boşaltıldı</Turkish>
             <Spanish>Seleccionar carga para descargar:</Spanish>
+            <Korean>내릴 화물을 선택하세요</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1365,6 +1374,7 @@
             <Spanish>Objetivo de palanca</Spanish>
             <Czech>Přepnout cíl</Czech>
             <French>Unités cible</French>
+            <Korean>타겟 토글</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
@@ -1379,6 +1389,7 @@
             <Czech>Jednotky ovlivněné přepnutím</Czech>
             <French>Unités affectées par le changement.</French>
             <Spanish>Unidades afectadas por esta alternancia</Spanish>
+            <Korean>유닛은 토글에 영향받습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1793,7 +1804,7 @@
             <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
             <Italian>L'unità è già un kamikaze</Italian>
             <Japanese>既に自爆ユニットです</Japanese>
-            <Korean>유닛은 이미 자살 폭탄 테러범이다.</Korean>
+            <Korean>유닛은 이미 자살 폭탄 테러범입니다.</Korean>
             <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
             <Portuguese>A unidade já é um suicida</Portuguese>
             <Russian>Единица уже является террористом-смертником</Russian>
@@ -1814,6 +1825,7 @@
             <Czech>Přidat plný ACE Arzenál</Czech>
             <French>Ajouter arsenal ACE complet</French>
             <Turkish>ACE Arsenal ekle</Turkish>
+            <Korean>전체 ACE 아스널 추가</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
@@ -1829,6 +1841,7 @@
             <Czech>Odebrat plný ACE Arzenál</Czech>
             <French>Retirer un arsenal ACE</French>
             <Turkish>ACE Arsenali sil </Turkish>
+            <Korean>전체 ACE 아스널 제거</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_CreateZeus">
             <English>Create Zeus</English>
@@ -1844,6 +1857,7 @@
             <Czech>Vytvořit Zeuse</Czech>
             <French>Créer Zeus</French>
             <Turkish>Zeus oluştur</Turkish>
+            <Korean>제우스 생성</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
@@ -1859,6 +1873,7 @@
             <Czech>Smazat Zeuse</Czech>
             <French>Supprimer Zeus</French>
             <Turkish>Zeus sil</Turkish>
+            <Korean>제우스 제거</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
@@ -1874,6 +1889,7 @@
             <French>Menu "%1"</French>
             <Turkish>"%1" menü</Turkish>
             <Spanish>"%1" menu</Spanish>
+            <Korean>"%1" 메뉴</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
@@ -1889,6 +1905,7 @@
             <French>Paralargage de cargaison</French>
             <Turkish>Paraşüt Kargosu</Turkish>
             <Spanish>Carga mediante paracaidas</Spanish>
+            <Korean>화물 공수</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
@@ -1904,11 +1921,13 @@
             <Czech>Žádný náklad není naložen</Czech>
             <French>Aucune cargaison chargée</French>
             <Turkish>Kargo yüklenmedi</Turkish>
+            <Korean>화물이 실려있지 않습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleBurn_DisplayName">
             <English>Burn Unit</English>
             <German>Einheit anzünden</German>
             <Chinesesimp>焚烧单位</Chinesesimp>
+            <Korean>유닛 불로 태우기</Korean>
         </Key>
     </Package>
 </Project>
