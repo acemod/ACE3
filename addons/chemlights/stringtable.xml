@@ -6,7 +6,7 @@
             <Japanese>ケミライト</Japanese>
             <Polish>Świetliki</Polish>
             <German>Knicklichter</German>
-            <Korean>켐라이트</Korean>
+            <Korean>화학조명</Korean>
             <French>Cyalumes</French>
             <Italian>Luce chimica</Italian>
             <Chinese>螢光棒</Chinese>
@@ -54,7 +54,7 @@
             <Japanese>[ACE] ケミライト</Japanese>
             <Polish>[ACE] Świetliki</Polish>
             <German>[ACE] Knicklichter</German>
-            <Korean>[ACE] 켐라이트</Korean>
+            <Korean>[ACE] 화학조명</Korean>
             <French>[ACE] Cyalumes</French>
             <Italian>[ACE] Luci chimiche</Italian>
             <Chinese>[ACE] 螢光棒</Chinese>
@@ -118,7 +118,7 @@
             <Japanese>ケミライト (白)</Japanese>
             <Polish>Świetlik (biały)</Polish>
             <German>Knicklicht (weiß)</German>
-            <Korean>켐라이트 (하양)</Korean>
+            <Korean>화학조명 (하양)</Korean>
             <French>Cyalume (blanc)</French>
             <Italian>Luce chimica (Bianca)</Italian>
             <Chinese>螢光棒 (白色)</Chinese>
@@ -166,7 +166,7 @@
             <Japanese>ケミライト (高輝度 赤)</Japanese>
             <Polish>Świetlik (jaskrawy czerwony)</Polish>
             <German>Knicklicht (rot, hell)</German>
-            <Korean>켐라이트 (밝은 빨간색)</Korean>
+            <Korean>화학조명 (밝은 빨간색)</Korean>
             <French>Cyalume HL (rouge)</French>
             <Italian>Luce chimica (Hi Rossa)</Italian>
             <Chinese>螢光棒 (超亮紅色)</Chinese>
@@ -214,7 +214,7 @@
             <Japanese>ケミライト (高輝度 黄)</Japanese>
             <Polish>Świetlik (jaskrawy żółty)</Polish>
             <German>Knicklicht (gelb, hell)</German>
-            <Korean>켐라이트 (밝은 노란색)</Korean>
+            <Korean>화학조명 (밝은 노란색)</Korean>
             <French>Cyalume HL (jaune)</French>
             <Italian>Luce chimica (Hi Gialla)</Italian>
             <Chinese>螢光棒 (超亮黃色)</Chinese>
@@ -262,7 +262,7 @@
             <Japanese>ケミライト (高輝度 白)</Japanese>
             <Polish>Świetlik (jaskrawy biały)</Polish>
             <German>Knicklicht (weiß, hell)</German>
-            <Korean>켐라이트 (밝은 하얀색)</Korean>
+            <Korean>화학조명 (밝은 하얀색)</Korean>
             <French>Cyalume HL (blanc)</French>
             <Italian>Luce chimica (Hi Bianca)</Italian>
             <Chinese>螢光棒 (超亮白色)</Chinese>
@@ -319,6 +319,7 @@
             <Czech>Chemické světlo (Modré jasné)</Czech>
             <Spanish>Luz química (Azul Hi)</Spanish>
             <Turkish>Işık Çubuğu (Mavi)</Turkish>
+            <Korean>화학조명 (밝은 파란색)</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DisplayNameShort">
             <English>Blue Hi Light</English>
@@ -334,6 +335,7 @@
             <Czech>Modré jasné světlo</Czech>
             <Spanish>Luz azul Hi</Spanish>
             <Turkish>Mavi Yüksek Işık</Turkish>
+            <Korean>밝은 파란색</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DescriptionShort">
             <English>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -349,6 +351,7 @@
             <Czech>Typ: Světlo - Modré jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
             <Spanish>Tipo: Luz - Azul Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
             <Turkish>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Korean>종류: 밝은 파란색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DisplayName">
             <English>Chemlight (Hi Green)</English>
@@ -364,6 +367,7 @@
             <Czech>Chemické světlo (Zelené jasné)</Czech>
             <Spanish>Luz química (Verde Hi)</Spanish>
             <Turkish>Işık Çubuğu (Yeşil)</Turkish>
+            <Korean>화학조명 (밝은 초록색)</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DisplayNameShort">
             <English>Green Hi Light</English>
@@ -379,6 +383,7 @@
             <Czech>Zelené jasné světlo</Czech>
             <Spanish>Luz verde Hi</Spanish>
             <Turkish>Yeşil Yüksek Işık</Turkish>
+            <Korean>밝은 초록색</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DescriptionShort">
             <English>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -394,6 +399,7 @@
             <Czech>Typ: Světlo - Zelené jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
             <Spanish>Tipo: Luz - Verde Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
             <Turkish>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Korean>종류: 밝은 초록색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayName">
             <English>Chemlight (Ultra-Hi Orange)</English>
@@ -409,6 +415,7 @@
             <Czech>Chemické světlo (Oranžové velmi jasné)</Czech>
             <Spanish>Luz química (Naranja Ultra-Hi)</Spanish>
             <Turkish>Işık Çubuğu (Turuncu)</Turkish>
+            <Korean>화학조명 (밝은 주황색)</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayNameShort">
             <English>Orange Ultra-Hi Light</English>
@@ -424,6 +431,7 @@
             <Czech>Oranžové velmi jasné světlo</Czech>
             <Spanish>Luz naranja Ultra-Hi</Spanish>
             <Turkish>Turuncu Yüksek Işık</Turkish>
+            <Korean>밝은 주황색</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DescriptionShort">
             <English>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -439,13 +447,14 @@
             <Czech>Typ: Světlo - Oranžové velmi jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
             <Spanish>Tipo: Luz - Naranja Ultra-Hi (5 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
             <Turkish>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Korean>종류: 밝은 주황색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
             <English>Chemlight (IR)</English>
             <Japanese>ケミライト (IR)</Japanese>
             <Polish>Świetlik (podczerwony)</Polish>
             <German>Knicklicht (IR)</German>
-            <Korean>켐라이트 (적외선)</Korean>
+            <Korean>화학조명 (적외선)</Korean>
             <French>Cyalume (IR)</French>
             <Italian>Luce chimica (IR)</Italian>
             <Chinese>螢光棒 (紅外線)</Chinese>
@@ -461,7 +470,7 @@
             <Japanese>赤外線光</Japanese>
             <Polish>Światło podczerwone</Polish>
             <German>IR-Knicklicht</German>
-            <Korean>적외선 켐라이트</Korean>
+            <Korean>적외선 화학조명</Korean>
             <French>Lum. IR</French>
             <Italian>Luce IR</Italian>
             <Chinese>紅外線光</Chinese>
@@ -493,7 +502,7 @@
             <Japanese>ケミライト シールド (空)</Japanese>
             <Polish>Osłona na świetlik (pusta)</Polish>
             <German>Knicklicht-Abschirmung (leer)</German>
-            <Korean>켐라이트 쉴드 (비어있음)</Korean>
+            <Korean>화학조명 가림막 (비어있음)</Korean>
             <French>Etui cyalume (vide)</French>
             <Italian>Scudo Luce chimica (Vuoto)</Italian>
             <Chinese>螢光棒保護殼 (空)</Chinese>
@@ -509,7 +518,7 @@
             <Japanese>ケミライトを入れられます。シールドとケミライトを組み合わせることで、照明にもなりえます。</Japanese>
             <Polish>Osłona na świetliki. Połącz ją ze świetlikiem by stworzyć lampkę do czytania.</Polish>
             <German>Abschirmung für Knicklichter. Mit Knicklicht kombinieren, um Leselicht zu erhalten.</German>
-            <Korean>켐라이트를 위한 가림막입니다. 켐라이트와 같이 사용하여  읽을 때 씁니다.</Korean>
+            <Korean>화학조명을 위한 가림막입니다. 화학조명과 같이 사용하여  읽을 때 씁니다.</Korean>
             <French>Étui pour cyalume. Le combiner avec un cyalume pour obtenir une lampe de lecture.</French>
             <Italian>Scudo per luci chimiche. Combina con una luce chimica per una luce da lettura.</Italian>
             <Chinese>螢光棒的保護殼. 與螢光棒結合後可充當閱讀燈</Chinese>
@@ -525,7 +534,7 @@
             <Japanese>ケミライト シールド (緑)</Japanese>
             <Polish>Osłona na świetlik (zielona)</Polish>
             <German>Knicklicht-Abschirmung (grün)</German>
-            <Korean>켐라이트 쉴드 (초록)</Korean>
+            <Korean>화학조명 가림막 (초록)</Korean>
             <French>Etui avec cyalume (vert)</French>
             <Italian>Scudo Luce Chimica (Verde)</Italian>
             <Chinese>螢光棒保護殼 (綠色)</Chinese>
@@ -557,7 +566,7 @@
             <Japanese>ケミライト シールド (赤)</Japanese>
             <Polish>Osłona na świetlik (czerwona)</Polish>
             <German>Knicklicht-Abschirmung (rot)</German>
-            <Korean>켐라이트 쉴드 (빨강)</Korean>
+            <Korean>화학조명 가림막 (빨강)</Korean>
             <French>Etui avec cyalume (rouge)</French>
             <Italian>Scudo Luce Chimica (Rossa)</Italian>
             <Chinese>螢光棒保護殼 (紅色)</Chinese>
@@ -589,7 +598,7 @@
             <Japanese>ケミライト シールド (青)</Japanese>
             <Polish>Osłona na świetlik (niebieska)</Polish>
             <German>Knicklicht-Abschirmung (blau)</German>
-            <Korean>켐라이트 쉴드 (파랑)</Korean>
+            <Korean>화학조명 가림막 (파랑)</Korean>
             <French>Etui avec cyalume (bleu)</French>
             <Italian>Scudo Luce Chimica (Blu)</Italian>
             <Chinese>螢光棒保護殼 (藍色)</Chinese>
@@ -621,7 +630,7 @@
             <Japanese>ケミライト シールド (黄)</Japanese>
             <Polish>Osłona na świetlik (żółta)</Polish>
             <German>Knicklicht-Abschirmung (gelb)</German>
-            <Korean>켐라이트 쉴드 (노랑)</Korean>
+            <Korean>화학조명 가림막 (노랑)</Korean>
             <French>Etui avec cyalume (jaune)</French>
             <Italian>Scudo Luce Chimica (Gialla)</Italian>
             <Chinese>螢光棒保護殼 (黃色)</Chinese>
@@ -653,7 +662,7 @@
             <Japanese>ケミライト シールド (オレンジ)</Japanese>
             <Polish>Osłona na świetlik (pomarańczowa)</Polish>
             <German>Knicklicht-Abschirmung (orange)</German>
-            <Korean>켐라이트 쉴드 (주황)</Korean>
+            <Korean>화학조명 가림막 (주황)</Korean>
             <French>Etui avec cyalume (orange)</French>
             <Italian>Scudo Luce Chimica (Arancione)</Italian>
             <Chinese>螢光棒保護殼 (橘色)</Chinese>
@@ -685,7 +694,7 @@
             <Japanese>ケミライト シールド (白)</Japanese>
             <Polish>Osłona na świetlik (biała)</Polish>
             <German>Knicklicht-Abschirmung (weiß)</German>
-            <Korean>켐라이트 쉴드 (하양)</Korean>
+            <Korean>화학조명 가림막 (하양)</Korean>
             <French>Etui avec cyalume (blanc)</French>
             <Italian>Scudo Luce Chimica (Bianca)</Italian>
             <Chinese>螢光棒保護殼 (白色)</Chinese>

@@ -12,7 +12,7 @@
             <Portuguese>Equipar FRIES</Portuguese>
             <Russian>Десантирование по канатам</Russian>
             <Japanese>FRIES を装備</Japanese>
-            <Korean>FRIES 장착</Korean>
+            <Korean>패스트로프 시스템 장착</Korean>
             <Chinesesimp>启用快速绳降及撤离系统</Chinesesimp>
             <Chinese>啟用快速繩降及撤離系統</Chinese>
         </Key>
@@ -54,7 +54,7 @@
             <Japanese>ファスト ロープのシステムを収容</Japanese>
             <Chinese>收起快速繩降系統</Chinese>
             <Chinesesimp>收起快速绳降系统</Chinesesimp>
-            <Korean>패스트 로프 시스템 보관</Korean>
+            <Korean>패스트로프 시스템 보관</Korean>
             <Polish>Schowaj system zjazdu na linach</Polish>
             <Russian>Спрятать систему спуска</Russian>
             <Portuguese>Recolher o sistema de descida rápida</Portuguese>
@@ -74,7 +74,7 @@
             <Portuguese>Jogar cordas</Portuguese>
             <Russian>Зацепить канаты</Russian>
             <Japanese>ロープを展開</Japanese>
-            <Korean>줄 배치</Korean>
+            <Korean>줄 내리기</Korean>
             <Chinesesimp>部属绳索</Chinesesimp>
             <Chinese>部屬繩索</Chinese>
             <Turkish>Halatları sal</Turkish>
@@ -90,7 +90,7 @@
             <Portuguese>Descida rápida</Portuguese>
             <Russian>Спуститься по канату</Russian>
             <Japanese>ファスト ロープをする</Japanese>
-            <Korean>강하하기</Korean>
+            <Korean>패스트로프</Korean>
             <Chinesesimp>快速绳降</Chinesesimp>
             <Chinese>快速繩降</Chinese>
             <Turkish>Halatla in</Turkish>
@@ -122,7 +122,7 @@
             <Portuguese>Equipar helicóptero com FRIES</Portuguese>
             <Russian>Снарядить вертолет канатами для спуска</Russian>
             <Japanese>ヘリコプターへ FRIES を装備</Japanese>
-            <Korean>헬리콥터에 FRIES 장착</Korean>
+            <Korean>헬리콥터에 패스트로프 시스템 장착</Korean>
             <Chinesesimp>启用快速绳降及撤离系统给指定的直升机</Chinesesimp>
             <Chinese>啟用快速繩降及撤離系統給指定的直升機</Chinese>
         </Key>
@@ -152,7 +152,7 @@
             <Polish>ZJAZD NA LINACH</Polish>
             <Chinesesimp>让单位快速绳降</Chinesesimp>
             <Chinese>讓單位快速繩降</Chinese>
-            <Korean>패스트 로프를 놓음</Korean>
+            <Korean>유닛 패스트로프 시키기</Korean>
             <Czech>UMOŽNIT JEDNOTKÁM SLAŇOVAT</Czech>
             <Spanish>INDICAR A LAS UNIDADES DESCENDER POR LA CUERDA</Spanish>
         </Key>
@@ -170,6 +170,7 @@
             <Japanese>3m ロープを展開</Japanese>
             <Chinese>部屬3公尺長之繩索</Chinese>
             <Chinesesimp>部署3米长的绳索</Chinesesimp>
+            <Korean>3m 줄 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes6">
             <English>Deploy 6m ropes</English>
@@ -185,6 +186,7 @@
             <Japanese>6m ロープを展開</Japanese>
             <Chinese>部屬6公尺長之繩索</Chinese>
             <Chinesesimp>部署6米长的绳索</Chinesesimp>
+            <Korean>6m 줄 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>
@@ -200,6 +202,7 @@
             <Czech>Připravit 12m lana</Czech>
             <Turkish>12m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 12m</Spanish>
+            <Korean>12m 줄 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
             <English>Deploy 15m ropes</English>
@@ -215,6 +218,7 @@
             <Czech>Připravit 15m lana</Czech>
             <Turkish>15m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 15m</Spanish>
+            <Korean>15m 줄 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
             <English>Deploy 18m ropes</English>
@@ -230,6 +234,7 @@
             <Czech>Připravit 18m lana</Czech>
             <Turkish>18m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 18m</Spanish>
+            <Korean>18m 줄 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
             <English>Deploy 27m ropes</English>
@@ -245,6 +250,7 @@
             <Czech>Připravit 27m lana</Czech>
             <Turkish>27m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 27m</Spanish>
+            <Korean>27m 줄 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
             <English>Deploy 36m ropes</English>
@@ -260,6 +266,7 @@
             <Czech>Připravit 36m lana</Czech>
             <Turkish>36m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 36m</Spanish>
+            <Korean>36m 줄 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Ropesupply">
             <English>[ACE] Ropes Supply crate</English>
@@ -275,6 +282,7 @@
             <Czech>[ACE] Bedna s lany</Czech>
             <Turkish>[ACE] Halat Sandığı</Turkish>
             <Spanish>[ACE] Caja de suministros - cuerdas</Spanish>
+            <Korean>[ACE] 하강줄 보급 상자</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_categoryMenu_displayName">
             <English>Fast-roping</English>
@@ -288,6 +296,7 @@
             <Czech>Slaňování</Czech>
             <Russian>Спуск по канату</Russian>
             <German>Schnelles-Abseilen</German>
+            <Korean>패스트로프</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -303,6 +312,7 @@
             <Czech>Požadovat předmět lana pro slaňování</Czech>
             <Spanish>Requiere una cuerda para desplegar</Spanish>
             <Turkish>Halatla kaymak için halat gerekli</Turkish>
+            <Korean>줄이 필요합니다</Korean>
         </Key>
     </Package>
 </Project>

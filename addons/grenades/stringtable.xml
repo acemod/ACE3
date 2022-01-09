@@ -13,7 +13,7 @@
             <Italian>Cambia tipo di granata</Italian>
             <Portuguese>Alternar Modo de Granada</Portuguese>
             <Japanese>投てき方法を切り替え</Japanese>
-            <Korean>투척 종류 전환</Korean>
+            <Korean>투척 방법 전환</Korean>
             <Chinesesimp>切换投掷模式</Chinesesimp>
             <Chinese>切換投擲模式</Chinese>
             <Turkish>Bomba fırlatma modunu değiştir</Turkish>
@@ -149,7 +149,7 @@
             <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
             <Portuguese>Também conhecida como flashbang. Causa uma clarão imediato, cegueira, surdez, zumbido e distúrbio no tímpano.</Portuguese>
             <Japanese>フラッシュバンとも知られています。即時に失明と難聴、耳鳴り、内耳障害を引き起こします。</Japanese>
-            <Korean>플래시뱅이라고도 알려져있습니다. 사용즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
+            <Korean>플래시뱅이라고도 알려져있습니다. 사용 즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
             <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
             <Chinese>也被稱為閃光彈，會造成暫時性失明，耳聾，耳鳴等效果</Chinese>
             <Turkish>Flashbang olarak da bilinir. Ani flaş körlüğü, sağırlık, kulak çınlaması ve iç kulak rahatsızlığına neden olur.</Turkish>
@@ -168,6 +168,7 @@
             <Turkish>CTS 7290 9- Flaş Bombası</Turkish>
             <Russian>CTS 7290-9 Светошумовая граната</Russian>
             <Spanish>Granada aturdidora CTS 7290 9-explosiones</Spanish>
+            <Korean>CTS 7290 9-뱅 섬광 수류탄</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_NameShort">
             <English>CTS 7290-9</English>
@@ -198,7 +199,7 @@
             <Spanish>Bengala M127A1 (Blanca)</Spanish>
             <French>M127A1 Feu à main (Blanc)</French>
             <Japanese>M127A1 信号弾 (白)</Japanese>
-            <Korean>M127A1 신호탄 (하얀색)</Korean>
+            <Korean>M127A1 수타식 신호탄 (하얀색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹 (白色)</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (白色)</Chinese>
             <Turkish>M127A1 El Sinyali (Beyaz)</Turkish>
@@ -215,7 +216,7 @@
             <Spanish>Bengala M127A1 (Roja)</Spanish>
             <French>M127A1 Feu à main (Rouge)</French>
             <Japanese>M127A1 信号弾 (赤)</Japanese>
-            <Korean>M127A1 신호탄 (빨간색)</Korean>
+            <Korean>M127A1 수타식 신호탄 (빨간색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹 (红色)</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (紅色)</Chinese>
             <Turkish>M127A1 El Sinyali (Kırmızı)</Turkish>
@@ -232,7 +233,7 @@
             <Spanish>Bengala M127A1 (Verde)</Spanish>
             <French>M127A1 Feu à main (Vert)</French>
             <Japanese>M127A1 信号弾 (緑)</Japanese>
-            <Korean>M127A1 신호탄 (초록색)</Korean>
+            <Korean>M127A1 수타식 신호탄 (초록색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹 (绿色)</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (綠色)</Chinese>
             <Turkish>M127A1 El Sinyali (Yeşil)</Turkish>
@@ -249,7 +250,7 @@
             <Spanish>Bengala M127A1 (Amarilla)</Spanish>
             <French>M127A1 Feu à main (Jaune)</French>
             <Japanese>M127A1 信号弾 (黄)</Japanese>
-            <Korean>M127A1 신호탄 (노란색)</Korean>
+            <Korean>M127A1 수타식 신호탄 (노란색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹 (黄色)</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (黃色)</Chinese>
             <Turkish>M127A1 El Sinyali (Sarı)</Turkish>
@@ -452,6 +453,7 @@
             <Czech>Typ: Světlice s padákem</Czech>
             <Turkish>Tür: Yıldız Paraşüt Fişeği</Turkish>
             <Spanish>Tipo: Bengala de paracaidas</Spanish>
+            <Korean>종류: 낙하식 조명탄</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
@@ -467,6 +469,7 @@
             <Czech>M583 Světlice (Bílá)</Czech>
             <Turkish>M583 Aydınlatma Fişeği (Beyaz)</Turkish>
             <Spanish>M583 Bengala de iluminación (Blanca)</Spanish>
+            <Korean>M583 조명탄 (하양)</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
@@ -482,6 +485,7 @@
             <Czech>M662 Světlice (Červená)</Czech>
             <Turkish>M662 Aydınlatma Fişeği (Kırmızı)</Turkish>
             <Spanish>M662 Bengala de iluminación (Roja)</Spanish>
+            <Korean>M662 조명탄 (빨강)</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
@@ -497,6 +501,7 @@
             <Czech>M661 Světlice (Zelená)</Czech>
             <Turkish>M661 Aydınlatma Fişeği (Yeşil)</Turkish>
             <Spanish>M661 Bengala de iluminación (Verde)</Spanish>
+            <Korean>M661 조명탄 (초록)</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
@@ -512,6 +517,7 @@
             <Czech>Typ: Infračervená světlice s padákem</Czech>
             <Turkish>Tip : Paraşüt IR Flare</Turkish>
             <Spanish>Tipo: Bengala infrarroja de paracaidas</Spanish>
+            <Korean>종류: 낙하식 적외선 조명탄</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
@@ -527,6 +533,7 @@
             <Czech>M992 Infračervená světlice</Czech>
             <Turkish>M992 Illumination IR Flare</Turkish>
             <Spanish>M992 Bengala de iluminación infrarroja</Spanish>
+            <Korean>M992 적외선 조명탄</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Remote_Mag_Throwable">
             <English>Explosive Satchel (Throwable)</English>
@@ -537,6 +544,7 @@
             <Polish>Pakiet ładunków wybuchowych (Rzucany)</Polish>
             <German>Rucksackladung (Werfbar)</German>
             <Chinesesimp>炸药包（可投掷）</Chinesesimp>
+            <Korean>폭파 장약 (투척)</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
@@ -547,6 +555,7 @@
             <Polish>Typ: Ładunek&lt;br/&gt;Naboje: 1&lt;br/&gt;Użycie: Na rzeczach które mają zginąć</Polish>
             <German>Typ: Ladung &lt;br/&gt;Patronen:1&lt;br/&gt;Benutzt für: Dinge die Sterben müssen</German>
             <Chinesesimp>类型：炸药&lt;br /&gt;数量：1&lt;br /&gt;用于：需要死亡的事物</Chinesesimp>
+            <Korean>종류: 장약&lt;br /&gt;갯수: 1&lt;br /&gt;사용처: 죽여야 할 곳에</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
@@ -557,6 +566,7 @@
             <Polish>Rzucany pakiet ładunków wybuchowych. 7 sekundowy zapalnik</Polish>
             <German>Werfbare Rucksackladung. 7 Sekunden Zeitzünder</German>
             <Chinesesimp>一个可投掷的炸药包。7秒定时引信</Chinesesimp>
+            <Korean>던질 수 있는 폭파 장약 입니다. 던지고 7초 후에 터집니다</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
@@ -567,6 +577,7 @@
             <Polish>Ładunek wybuchowy (Rzucany)</Polish>
             <German>Sprengladung (Werfbar)</German>
             <Chinesesimp>炸药块（可投掷）</Chinesesimp>
+            <Korean>폭파 블럭 (투척)</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
@@ -577,6 +588,7 @@
             <Polish>Rzucany ładunkek wybuchowy. 7 sekundowy zapalnik</Polish>
             <German>Werfbare Sprengladung. 7 Sekunden Zeitzünder</German>
             <Chinesesimp>一个可投掷的炸药块。7秒定时引信</Chinesesimp>
+            <Korean>던질 수 있는 폭파 블럭 입니다. 던지고 7초 후에 터집니다</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
@@ -587,6 +599,7 @@
             <Polish>Konwertuj na krótki zapalnik</Polish>
             <German>Zündschnur verkürzen</German>
             <Chinesesimp>切换为短引信</Chinesesimp>
+            <Korean>단축 신관으로 바꾸기</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
@@ -597,6 +610,7 @@
             <Polish>Usuń krótki zapalnik</Polish>
             <German>Kurze Zündschnur entfernen</German>
             <Chinesesimp>去除短引信</Chinesesimp>
+            <Korean>단축 신관 제거하기</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -623,6 +637,7 @@
             <Polish>Pozwól na konwersję ładunków wybuchowych</Polish>
             <German>Erlaube die Umwandlung von Sprengstoffen</German>
             <Chinesesimp>允许爆炸性切换</Chinesesimp>
+            <Korean>폭발물 변경 가능여부</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
@@ -633,6 +648,7 @@
             <Polish>Zezwala na konwersje ładunków wybuchowych na rzucane wersje</Polish>
             <German>Erlaube die Umwandlung von Sprengstoffen in werfbare Ladungen</German>
             <Chinesesimp>允许将炸药转换为可投掷物</Chinesesimp>
+            <Korean>폭발물을 던질 수 있게 개조를 허락합니다</Korean>
         </Key>
     </Package>
 </Project>

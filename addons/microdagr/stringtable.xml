@@ -513,6 +513,7 @@
             <Chinesesimp>微型军用GPS接收器 - 航点精度</Chinesesimp>
             <Czech>MicroDAGR - přesnost Waypointů</Czech>
             <Spanish>Micro DAGR - precisión del waypoint</Spanish>
+            <Korean>MicroDAGR - 웨이포인트 정확도</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>
@@ -527,6 +528,7 @@
             <Chinesesimp>控制显示航点距离的精确程度。</Chinesesimp>
             <Czech>Nastavuje jak přesně je vzdálenost waypointů zobrazena.</Czech>
             <Spanish>Controla cómo de precisa se mostrará la distancia al waypoint</Spanish>
+            <Korean>웨이포인트 거리가 얼마나 정확하게 표시되는지를 결정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
@@ -542,6 +544,7 @@
             <Czech>100 m</Czech>
             <Turkish>100m</Turkish>
             <Spanish>100m</Spanish>
+            <Korean>100m</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -557,6 +560,7 @@
             <Czech>10 m</Czech>
             <Turkish>10m</Turkish>
             <Spanish>10m</Spanish>
+            <Korean>10m</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -572,6 +576,7 @@
             <Czech>1 m</Czech>
             <Turkish>1m</Turkish>
             <Spanish>1m</Spanish>
+            <Korean>1m</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>
@@ -598,6 +603,7 @@
             <German>MicroDAGR - vorheriger Modus</German>
             <Polish>MicroDAGR - Poprzedni Tryb</Polish>
             <Chinesesimp>微型GPS接收器 - 上一个模式</Chinesesimp>
+            <Korean>MicroDAGR - 이전 모드</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_nextMode">
             <English>MicroDAGR - Next Mode</English>
@@ -608,6 +614,7 @@
             <German>MicroDAGR - nächster Modus</German>
             <Polish>MicroDAGR - Kolejny Tryb</Polish>
             <Chinesesimp>微型GPS接收器 - 下一个模式</Chinesesimp>
+            <Korean>MicroDAGR - 다음 모드</Korean>
         </Key>
     </Package>
 </Project>

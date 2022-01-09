@@ -60,7 +60,7 @@
             <Italian>Mini-torcia bianca. Da usare in mappa.</Italian>
             <French>Mini lampe torche blanche. Pour utilisation sur carte.</French>
             <Japanese>白色光の小さなフラッシュライト。地図上で使用します。</Japanese>
-            <Korean>하얀색 조그마한 손전등. 지도를 비출때 씁니다.</Korean>
+            <Korean>조그마한 하얀색 손전등. 지도를 비출때 씁니다.</Korean>
             <Chinesesimp>白色的迷你手电筒。用来照亮地图。</Chinesesimp>
             <Chinese>白色的迷你手電筒。用來照亮地圖。</Chinese>
             <Turkish>Beyaz küçük el feneri. Harita üzerin de kullanım için.</Turkish>
@@ -111,6 +111,7 @@
             <Czech>Barva svítilny na mapě</Czech>
             <Turkish>Harita ışık rengi</Turkish>
             <Spanish>Color de luz sobre el mapa</Spanish>
+            <Korean>지도상 색상</Korean>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_DisplayName">
             <English>Maglite ML300L</English>
@@ -125,6 +126,7 @@
             <Turkish>Maglite ML300L</Turkish>
             <Spanish>Maglite ML300L</Spanish>
             <Russian>Maglite ML300L</Russian>
+            <Korean>Maglite ML300L</Korean>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
             <English>Powerful LED flashlight.</English>
@@ -139,6 +141,7 @@
             <Turkish>Güçlü LED el feneri</Turkish>
             <Spanish>Linterna LED potente</Spanish>
             <Russian>Мощный светодиодный фонарь.</Russian>
+            <Korean>고휘도 LED 손전등.</Korean>
         </Key>
     </Package>
 </Project>

@@ -141,6 +141,7 @@
             <Chinesesimp>装备转移</Chinesesimp>
             <Russian>Передавать снаряжение</Russian>
             <Polish>Transfer Wyposażenia</Polish>
+            <Korean>로드아웃 전송</Korean>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutDesc">
             <English>Transfer loadout of units attempts to work around an issue where units appear naked after transferring to a Headless Client.</English>
@@ -150,6 +151,7 @@
             <Chinese>裝備傳輸用於試著暫時應付單位透過無頭客戶端傳輸時所導致裸裝之問題。</Chinese>
             <Chinesesimp>装备转移用于试着暂时应付单位透过无头客户端传输时所导致裸装之问题。</Chinesesimp>
             <Polish>Transfer Wyposażenia jednostek usiłuje uniknąć problemu z nagimi jednostkami po transferze do Headless Clienta</Polish>
+            <Korean>헤드리스 클라이언트로 넘어갈때 유닛이 벌거벗고 있는 상황을 해결하기 위해 로드아웃을 유닛에 전송합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutCurrent">
             <English>Current Loadout</English>
@@ -159,6 +161,7 @@
             <Chinesesimp>当前装备</Chinesesimp>
             <Russian>Текущее снаряжение</Russian>
             <Polish>Obecne wyposażenie</Polish>
+            <Korean>현재 로드아웃</Korean>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutConfig">
             <English>Config Loadout</English>
@@ -168,6 +171,7 @@
             <Chinesesimp>设置装备</Chinesesimp>
             <Russian>Снаряжение из настроек</Russian>
             <Polish>Konfiguracja Wyposażenia</Polish>
+            <Korean>로드아웃 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Headless_BlacklistEden">
             <English>Headless Blacklist</English>

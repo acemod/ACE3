@@ -15,6 +15,7 @@
             <Spanish>Tabla de distancias de artillería</Spanish>
             <Turkish>Topçu Menzil Tablosu</Turkish>
             <Russian>Артиллерийская баллистическая таблица</Russian>
+            <Korean>포병 사격거리표</Korean>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
@@ -30,6 +31,7 @@
             <Spanish>Tabla de distancias universal de artillería</Spanish>
             <Turkish>Uluslar arası Topçu Menzil Tablosu</Turkish>
             <Russian>Универсальная артиллерийская баллистическая таблица</Russian>
+            <Korean>범용 포병 사격거리표</Korean>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -79,6 +81,7 @@
             <Spanish>Computadora de artillería deshabilitada</Spanish>
             <Turkish>Topçu Bilgisayarı Devre Dışı</Turkish>
             <Russian>Артиллерийский Компьютер Отключён</Russian>
+            <Korean>탄도계산컴퓨터 비활성화</Korean>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
@@ -94,6 +97,7 @@
             <Spanish>Deshabilita la computadora de artillería por defecto de Arma 3</Spanish>
             <Turkish>Topçu bilgisayarını devre dışı bırak</Turkish>
             <Russian>Отключить ванильный артиллерийский компьютер</Russian>
+            <Korean>바닐라 탄도계산컴퓨터를 비활성화 합니다.</Korean>
         </Key>
     </Package>
 </Project>

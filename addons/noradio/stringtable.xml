@@ -15,6 +15,7 @@
             <Czech>Ztlumit hráče</Czech>
             <Turkish>Oyuncuyu Sustur</Turkish>
             <Spanish>Ensordecer jugador</Spanish>
+            <Korean>플레이어 음소거</Korean>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting_tooltip">
             <English>Mutes the controlled player avatar.</English>
@@ -30,6 +31,7 @@
             <Czech>Vypne hlas charakteru hráče.</Czech>
             <Turkish>Oyuncuları Susturur</Turkish>
             <Spanish>Ensordecer el avatar del jugador controlado</Spanish>
+            <Korean>플레이어 아바타를 음소거합니다</Korean>
         </Key>
     </Package>
 </Project>

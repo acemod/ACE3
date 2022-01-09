@@ -15,6 +15,7 @@
             <Polish>Medyk AI</Polish>
             <Spanish>Médico para IA</Spanish>
             <Turkish>Medikal AI</Turkish>
+            <Korean>인공지능 의무병</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
@@ -29,6 +30,7 @@
             <Czech>UI reaguje na zranění a bezvědomí</Czech>
             <Polish>AI zareaguje na obrażenia i utratę przytomności</Polish>
             <Spanish>La IA responderá a heridas e inconsciencia</Spanish>
+            <Korean>인공지능이 기절이나 부상에 대응합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>

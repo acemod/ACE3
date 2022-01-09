@@ -167,6 +167,7 @@
             <Russian>Фактор колебания прицела</Russian>
             <Portuguese>Fator de Balanço de Mira</Portuguese>
             <Czech>Faktor kývání</Czech>
+            <Korean>손떨림 정도</Korean>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
             <English>Influences the amount of weapon sway. Higher means more sway.</English>
@@ -181,6 +182,7 @@
             <Russian>Влияет на колебания прицела оружия. Чем выше - тем больше.</Russian>
             <Portuguese>Influencia a quantidade de balanço da mira da arma. Quanto maior, mais balanço.</Portuguese>
             <Czech>Ovlivňuje množství kývání zbraní. Vyšší znamená více kývání.</Czech>
+            <Korean>손떨림의 정도를 정합니다. 높을 수록 많이 휘적입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
@@ -256,6 +258,7 @@
             <Polish>Chowaj pasek wytrzymałości automatycznie</Polish>
             <Portuguese>Barra de stamina some automaticamente</Portuguese>
             <Turkish>Dayanıklılık çubuğunu otomatik olarak soldur</Turkish>
+            <Korean>자동으로 피로도 막대 숨기기</Korean>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
@@ -270,6 +273,7 @@
             <Japanese>スタミナの状態に応じて、自動的にバーの透明度を調整します。</Japanese>
             <Polish>Dostosowuje przezroczystość paska na podstawie stanu wytrzymałości.</Polish>
             <Portuguese>Ajusta a transparência da barra baseado no status da stamina</Portuguese>
+            <Korean>피로도에 따라 피로도 막대의 투명도를 조절합니다.</Korean>
         </Key>
     </Package>
 </Project>

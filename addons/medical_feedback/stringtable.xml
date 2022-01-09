@@ -15,6 +15,7 @@
             <Polish>Informacje Zwrotne</Polish>
             <Spanish>Reacción</Spanish>
             <Turkish>Geri Bildirim</Turkish>
+            <Korean>피드백</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -47,6 +48,7 @@
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
             <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
             <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
+            <Korean>고통 시 어떤 효과로 나타낼지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -62,6 +64,7 @@
             <Polish>Miganie na biało</Polish>
             <Spanish>Destello blanco</Spanish>
             <Turkish>Beyaz Yanıp Sönüyor</Turkish>
+            <Korean>반짝이는 하얀색</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -77,6 +80,7 @@
             <Polish>Pulsujące rozmycie</Polish>
             <Spanish>Enborronamiento pulsante</Spanish>
             <Turkish>Titreşimli Bulanıklık</Turkish>
+            <Korean>두근대는 흐려짐</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
             <English>Chromatic Aberration</English>
@@ -109,6 +113,7 @@
             <Turkish>Sadece yüksek ağrı etkisi</Turkish>
             <German>Nur bei starken Schmerzen</German>
             <Russian>Эффект только сильной боли</Russian>
+            <Korean>강한 고통 때만 보여짐</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
             <English>Low Blood Volume Effect Type</English>
@@ -121,6 +126,7 @@
             <Spanish>Tipo de efecto por volumen bajo de sangre</Spanish>
             <German>Effektart für "Niedriges Blutvolumen"</German>
             <Chinesesimp>低血容量影响类型</Chinesesimp>
+            <Korean>혈액량 부족 시 효과 종류</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
             <English>Selects the used low blood volume effect type.</English>
@@ -133,6 +139,7 @@
             <Spanish>Selecciona el tipo de efecto a causa de un volumen bajo de sangre.</Spanish>
             <German>Wählt die verwendete Effektart für niedriges Blutvolumen.</German>
             <Chinesesimp>选择低血容量下的效果类型。</Chinesesimp>
+            <Korean>혈액량이 부족할 때 어떤 효과로 나타낼지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>
@@ -145,6 +152,7 @@
             <Spanish>Atenuación del color</Spanish>
             <German>Farbverblassen</German>
             <Chinesesimp>褪色</Chinesesimp>
+            <Korean>색 물빠짐</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
@@ -157,6 +165,7 @@
             <Spanish>Icono</Spanish>
             <German>Symbol</German>
             <Chinesesimp>图标</Chinesesimp>
+            <Korean>아이콘</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
             <English>Icon + Color Fading</English>
@@ -169,6 +178,7 @@
             <Spanish>Icono + Atenuación del color</Spanish>
             <German>Symbol + Farbverblassen</German>
             <Chinesesimp>图标+褪色</Chinesesimp>
+            <Korean>아이콘 및 색 물빠짐</Korean>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
@@ -213,6 +223,7 @@
                 <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
                 <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
                 <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
+                <Korean>골절/지혈대/부목 표시 활서오하</Korean>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
@@ -222,6 +233,7 @@
                 <German>Aktiviert Indikatoren für Frakturen mit angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
                 <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
                 <Chinesesimp>在姿态指示器上启用骨折、应用止血带和夹板指示器。</Chinesesimp>
+                <Korean>자세 표시기 옆에 골절, 지혈대, 부목의 여부를 표시합니다.</Korean>
             </Key>
         </Container>
     </Package>

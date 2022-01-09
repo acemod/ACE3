@@ -15,6 +15,7 @@
             <Czech>ACE Noční vidění</Czech>
             <Turkish>ACE Gece Görüşü</Turkish>
             <Spanish>ACE visión nocturna</Spanish>
+            <Korean>ACE 야간투시</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_brown">
             <English>NV Goggles (Gen1, Brown)</English>
@@ -24,6 +25,7 @@
             <Polish>Gogle noktowizyjne (Gen 1, Brązowe)</Polish>
             <German>NS-Brille (1. Gen., braun)</German>
             <Chinesesimp>夜视仪（一代，棕色）</Chinesesimp>
+            <Korean>아투경 (1세대, 갈색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_black">
             <English>NV Goggles (Gen1, Black)</English>
@@ -33,6 +35,7 @@
             <Polish>Gogle noktowizyjne (Gen 1, Czarne)</Polish>
             <German>NS-Brille (1. Gen., schwarz)</German>
             <Chinesesimp>夜视仪（一代，黑色）</Chinesesimp>
+            <Korean>아투경 (1세대, 검정색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_green">
             <English>NV Goggles (Gen1, Green)</English>
@@ -42,6 +45,7 @@
             <Polish>Gogle noktowizyjne (Gen 1, Zielone)</Polish>
             <German>NS-Brille (1. Gen., grün)</German>
             <Chinesesimp>夜视仪（一代，绿色）</Chinesesimp>
+            <Korean>아투경 (1세대, 녹색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_brown">
             <English>NV Goggles (Gen2, Brown)</English>
@@ -51,6 +55,7 @@
             <Polish>Gogle noktowizyjne (Gen 2, Brązowe)</Polish>
             <German>NS-Brille (2. Gen., braun)</German>
             <Chinesesimp>夜视仪（二代，棕色）</Chinesesimp>
+            <Korean>아투경 (2세대, 갈색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_black">
             <English>NV Goggles (Gen2, Black)</English>
@@ -60,6 +65,7 @@
             <Polish>Gogle noktowizyjne (Gen 2, Czarne)</Polish>
             <German>NS-Brille (2. Gen., schwarz)</German>
             <Chinesesimp>夜视仪（二代，黑色）</Chinesesimp>
+            <Korean>아투경 (2세대, 검정색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_green">
             <English>NV Goggles (Gen2, Green)</English>
@@ -69,6 +75,7 @@
             <Polish>Gogle noktowizyjne (Gen 2, Zielone)</Polish>
             <German>NS-Brille (2. Gen., grün)</German>
             <Chinesesimp>夜视仪（二代，绿色）</Chinesesimp>
+            <Korean>아투경 (2세대, 녹색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -146,6 +153,7 @@
             <Polish>Gogle noktowizyjne (Gen 4, Brązowe)</Polish>
             <German>NS-Brille (4. Gen., braun)</German>
             <Chinesesimp>夜视仪 (四代, 棕色)</Chinesesimp>
+            <Korean>야투경 (4세대, 갈색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
             <English>NV Goggles (Gen4, Black)</English>
@@ -155,6 +163,7 @@
             <Polish>Gogle noktowizyjne (Gen 4, Czarne)</Polish>
             <German>NS-Brille (4. Gen., schwarz)</German>
             <Chinesesimp>夜视仪 (四代, 黑色)</Chinesesimp>
+            <Korean>야투경 (4세대, 검정색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
             <English>NV Goggles (Gen4, Green)</English>
@@ -164,6 +173,7 @@
             <Polish>Gogle noktowizyjne (Gen 4, Zielone)</Polish>
             <German>NS-Brille (4. Gen., grün)</German>
             <Chinesesimp>夜视仪 (四代, 绿色)</Chinesesimp>
+            <Korean>야투경 (4세대, 녹색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
             <English>NV Goggles (Wide, Brown)</English>
@@ -173,6 +183,7 @@
             <Polish>Gogle noktowizyjne (Szerokie, Brązowe)</Polish>
             <German>NS-Brille (Weit, braun)</German>
             <Chinesesimp>夜视仪 (宽, 棕色)</Chinesesimp>
+            <Korean>야투경 (넓음, 갈색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
             <English>NV Goggles (Wide, Black)</English>
@@ -182,6 +193,7 @@
             <Polish>Gogle noktowizyjne (Szerokie, Czarne)</Polish>
             <German>NS-Brille (Weit, schwarz)</German>
             <Chinesesimp>夜视仪 (宽, 黑色)</Chinesesimp>
+            <Korean>야투경 (넓음, 검정색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
             <English>NV Goggles (Wide, Green)</English>
@@ -191,6 +203,7 @@
             <Polish>Gogle noktowizyjne (Szerokie, Zielone)</Polish>
             <German>NS-Brille (Weit, grün)</German>
             <Chinesesimp>夜视仪 (宽, 绿色)</Chinesesimp>
+            <Korean>야투경 (넓음, 녹색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -319,6 +332,7 @@
             <Portuguese>Escala de Névoa na NVG</Portuguese>
             <Czech>Míra mlhy pro noktovizor</Czech>
             <Spanish>Escala de niebla NVG</Spanish>
+            <Korean>야투경 안개 정도</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_Description">
             <English>Fog is used to limit visibility.</English>
@@ -333,6 +347,7 @@
             <Portuguese>Névoa é usada para limitar visibilidade.</Portuguese>
             <Czech>Mlha je použita pro omezení dohledu.</Czech>
             <Spanish>Niebla es usada para limitar la visibilidad</Spanish>
+            <Korean>안개로 시야를 제한합니다</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
             <English>NVG Effect Scale</English>
@@ -347,6 +362,7 @@
             <Portuguese>Intensidade de efeito da Visão Noturna</Portuguese>
             <Czech>Míra efektu pro noktovizor</Czech>
             <Spanish>Escala del efecto NVG</Spanish>
+            <Korean>야투경 효과 정도</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
@@ -361,6 +377,7 @@
             <Portuguese>Efeitos de borrão e brilho [Definir 0 desativa TODOS os efeitos da Visão Noturna]</Portuguese>
             <Czech>Rozostření a jas [Nastavení na 0 vypne VŠECHNY efekty nočního vidění]</Czech>
             <Spanish>Efectos de emborronado y brillo [Configuración a 0 deshabilita todos los efectos de visión nocturna]</Spanish>
+            <Korean>흐림과 밝기 효과 [0으로 설정하면 효과를 제거합니다]</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
@@ -375,6 +392,7 @@
             <Portuguese>Borrão ao mirar</Portuguese>
             <Czech>Rozostření při použití mířidel</Czech>
             <Spanish>Emborronado al mirar</Spanish>
+            <Korean>조준시 조준경 흐림 정도</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_DisplayName">
             <English>NVG Noise Scale</English>
@@ -389,6 +407,7 @@
             <Portuguese>Intensidade de Ruído/Efeito Granulado</Portuguese>
             <Czech>Míra šumu pro noktovizor</Czech>
             <Spanish>Escala de ruido/granulado NVG</Spanish>
+            <Korean>야투경 노이즈 정도</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
@@ -403,6 +422,7 @@
             <Portuguese>Intensidade de Ruído de Imagem ao utilizar Visão Noturna</Portuguese>
             <Czech>Intezita šumu při používání noktovizoru</Czech>
             <Spanish>Intensidad de ruido de la imagen cuando se usa NVG</Spanish>
+            <Korean>야투경 착용시 보여지는 노이즈의 정도를 조절합니다</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
@@ -417,6 +437,7 @@
             <Portuguese>Efeito de Obturador</Portuguese>
             <Czech>Efekt závěrky</Czech>
             <Spanish>Efecto de obturador</Spanish>
+            <Korean>셔터효과 </Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
@@ -431,6 +452,7 @@
             <Portuguese>Efeito de rolamento de Obturador de flashes de focinho</Portuguese>
             <Czech>Efekt závěrky z důsledku výšlehu při střelbě</Czech>
             <Spanish>Efecto obturador por los fogonazos de la boca del cañón</Spanish>
+            <Korean>총구화염에 의한 셔터효과를 구현합니다</Korean>
         </Key>
     </Package>
 </Project>

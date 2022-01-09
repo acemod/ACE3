@@ -1043,6 +1043,7 @@
             <Czech>Dosah exploze</Czech>
             <Turkish>Patlayıcı menzili</Turkish>
             <Spanish>Alcance explosivo</Spanish>
+            <Korean>폭발 범위</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
@@ -1058,6 +1059,7 @@
             <Czech>Časovač exploze</Czech>
             <Turkish>Patlayıcı Zamanlayıcı</Turkish>
             <Spanish>Temporizador de explosivo</Spanish>
+            <Korean>폭발 타이머</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
@@ -1071,6 +1073,7 @@
             <Polish>Jest EOD</Polish>
             <Russian>Сапёр</Russian>
             <Spanish>¿Es EOD?</Spanish>
+            <Korean>폭발물 처리반</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1084,6 +1087,7 @@
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
             <Russian>Определяет, является ли юнит сапёром.</Russian>
             <Spanish>Controla si la unidad es un especialista en explosivos</Spanish>
+            <Korean>유닛이 폭발물 처리반인지 결정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
@@ -1094,6 +1098,7 @@
             <Polish>Minimalny czas</Polish>
             <German>Minimale Zeit</German>
             <Chinesesimp>最短时间</Chinesesimp>
+            <Korean>최소 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
@@ -1104,6 +1109,7 @@
             <Polish>Maksymalny czas</Polish>
             <German>Maximale Zeit</German>
             <Chinesesimp>最长时间</Chinesesimp>
+            <Korean>최대 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
@@ -1114,6 +1120,7 @@
             <Polish>Domyślny czas</Polish>
             <German>Standardmäßige Zeit</German>
             <Chinesesimp>默认时间</Chinesesimp>
+            <Korean>기본 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
@@ -1124,6 +1131,7 @@
             <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
             <Chinesesimp>定时爆炸的最短时间（单位：秒）</Chinesesimp>
+            <Korean>초 단위로, 폭발 타이머의 최소 시간을 정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
@@ -1134,6 +1142,7 @@
             <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
             <Chinesesimp>定时爆炸的最长时间（单位：秒）</Chinesesimp>
+            <Korean>초 단위로, 폭발 타이머의 최대 시간을 정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
@@ -1144,6 +1153,7 @@
             <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>
             <Chinesesimp>定时爆炸的默认时间（单位：秒）</Chinesesimp>
+            <Korean>초 단위로, 기본 폭발 타이머 시간을 정합니다</Korean>
         </Key>
     </Package>
 </Project>

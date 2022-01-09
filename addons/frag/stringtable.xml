@@ -13,7 +13,7 @@
             <Russian>Симуляция осколков</Russian>
             <Italian>Simulazione Frammentazione</Italian>
             <Japanese>破片シミュレーション</Japanese>
-            <Korean>조각 시뮬레이션</Korean>
+            <Korean>파편화 시뮬레이션</Korean>
             <Chinesesimp>模拟碎片</Chinesesimp>
             <Chinese>模擬碎片</Chinese>
         </Key>
@@ -29,7 +29,7 @@
             <Russian>Симуляция осколков</Russian>
             <Italian>Simulazione Frammentazione</Italian>
             <Japanese>破片シミュレーション</Japanese>
-            <Korean>조각 시뮬레이션</Korean>
+            <Korean>파편화 시뮬레이션</Korean>
             <Chinesesimp>模拟碎片</Chinesesimp>
             <Chinese>模擬碎片</Chinese>
         </Key>
@@ -45,7 +45,7 @@
             <Russian>Включить симуляцию осколков ACE</Russian>
             <Italian>Abilita la Simulazione Frammentazione di ACE</Italian>
             <Japanese>ACE 破片シミュレーションを有効化</Japanese>
-            <Korean>ACE 조각 시뮬레이션을 적용합니다.</Korean>
+            <Korean>ACE 파편화 시뮬레이션을 적용합니다.</Korean>
             <Chinesesimp>启用ACE模拟碎片</Chinesesimp>
             <Chinese>啟用ACE模擬碎片</Chinese>
         </Key>
@@ -61,7 +61,7 @@
             <Russian>Симуляция обломков</Russian>
             <Italian>Simulazione Spalling</Italian>
             <Japanese>剥離シミュレーション</Japanese>
-            <Korean>파편 시뮬레이션</Korean>
+            <Korean>조각 시뮬레이션</Korean>
             <Chinesesimp>模拟剥落</Chinesesimp>
             <Chinese>模擬剝落</Chinese>
         </Key>
@@ -77,7 +77,7 @@
             <Russian>Включить симуляцию обломков ACE</Russian>
             <Italian>Abilita la Simulazione Spalling di ACE</Italian>
             <Japanese>ACE 剥離シミュレーションを有効化</Japanese>
-            <Korean>ACE 파편 시뮬레이션을 적용합니다.</Korean>
+            <Korean>ACE 조각 시뮬레이션을 적용합니다.</Korean>
             <Chinesesimp>启用ACE模拟剥落</Chinesesimp>
             <Chinese>啟用ACE模擬剝落</Chinese>
         </Key>
