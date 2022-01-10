@@ -79,14 +79,14 @@ class CfgVehicles {
 
     class B_Soldier_VR_F;
     class GVAR(dummy): B_Soldier_VR_F {
-    	author = "Ampersand";
-    	_generalMacro = QGVAR(dummy);
-    	model = QPATHTOF(data\dummy.p3d);
-    	modelSides[] = {6};
-    	picture = "";
-    	Icon = "iconManVirtual";
-    	role = "Unarmed";
-    	displayName = "";
+        author = "Ampersand";
+        _generalMacro = QGVAR(dummy);
+        model = QPATHTOF(data\dummy.p3d);
+        modelSides[] = {6};
+        picture = "";
+        Icon = "iconManVirtual";
+        role = "Unarmed";
+        displayName = "";
     };
 
     class ReammoBox_F;
