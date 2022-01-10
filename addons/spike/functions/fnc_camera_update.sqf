@@ -16,7 +16,6 @@
  * Public: No
  */
 params ["_cameraArray", "_projectile", "_deltaTime", "_cameraNamespace"];
-_extractedInfo params ["", "", "", "", "", "", "", "_miscManeuvering", "", "_miscSeeker", "", "", "_cameraArray"];
 _cameraArray params ["_hasCamera", "", "", "", "", "", "", "", "_viewData", "_gimbalData", "", "_designating", "_canStopDesignating"];
 _viewData params ["_lookDir", "_groundPos", "_pointPos", "_movingCameraX", "_movingCameraY"];
 _gimbalData params ["_hasGimbal", "_maxGimbalX", "_maxGimbalY", "_gimbalSpeedX", "_gimbalSpeedY", "", "", "_gimbalZoomSpeedModifiers", "_stabilizeWhenMoving", "_designateWhenStationary", "_trackLockedPosition"];
