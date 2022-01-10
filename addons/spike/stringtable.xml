@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SPIKE">
-        <Key ID="STR_ACE_Spike_PanLeft">
+        <Key ID="STR_ACE_SPIKE_PanLeft">
             <English>Pan Camera Left</English>
         </Key>
-        <Key ID="STR_ACE_Spike_PanRight">
+        <Key ID="STR_ACE_SPIKE_PanRight">
             <English>Pan Camera Right</English>
         </Key>
-        <Key ID="STR_ACE_Spike_PanUp">
+        <Key ID="STR_ACE_SPIKE_PanUp">
             <English>Pan Camera Up</English>
         </Key>
-        <Key ID="STR_ACE_Spike_PanDown">
+        <Key ID="STR_ACE_SPIKE_PanDown">
             <English>Pan Camera Down</English>
         </Key>
-        <Key ID="STR_ACE_Spike_ZoomIn">
+        <Key ID="STR_ACE_SPIKE_ZoomIn">
             <English>Zoom Camera In</English>
         </Key>
-        <Key ID="STR_ACE_Spike_ZoomOut">
+        <Key ID="STR_ACE_SPIKE_ZoomOut">
             <English>Zoom Camera Out</English>
         </Key>
-        <Key ID="STR_ACE_Spike_CycleVisionMode">
+        <Key ID="STR_ACE_SPIKE_Camera_ViewModeCycle">
             <English>Cycle Camera Vision Mode</English>
         </Key>
-        <Key ID="STR_ACE_Spike_Manual">
+        <Key ID="STR_ACE_SPIKE_Manual">
             <English>MANUAL</English>
         </Key>
-        <Key ID="STR_ACE_Spike_LR">
+        <Key ID="STR_ACE_SPIKE_LR">
             <English>Spike LR</English>
         </Key>
-        <Key ID="STR_ACE_Spike_LR_Short">
+        <Key ID="STR_ACE_SPIKE_LR_Short">
             <English>LR</English>
+        </Key>
+        <Key ID="STR_ACE_SPIKE_designate">
+            <English>Designate</English><!-- Check this -->
+        </Key>
+        <Key ID="STR_ACE_SPIKE_LeaveCamera">
+            <English>Leave Camera</English><!-- Check this -->
         </Key>
     </Package>
 </Project>

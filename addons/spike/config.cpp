@@ -27,7 +27,7 @@ class RscText;
 #include "ACE_GuidanceConfig.hpp"
 #include "RscTitles.hpp"
 #include "RscInGameUI.hpp"
-#include "CfgEventhandlers.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
