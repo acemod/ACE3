@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
- * 2: Temperature <STRING>
+ * 2: Temperature <NUMBER>
  *
  * Return Value:
  * None
@@ -19,6 +19,6 @@
 
 params ["_unit", "_weapon", "_temp"];
 
-private _ammoTempVarName = format [QGVAR(%1_ammoTemp), _weapon];
+private _weaponTempVarName = format [QGVAR(%1_temp), _weapon];
 
-_unit setVariable [_ammoTempVarName, _temp];
+_unit setVariable [_weaponTempVarName, _temp];
