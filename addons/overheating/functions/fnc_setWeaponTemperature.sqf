@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, currentWeapon player] call ace_overheating_fnc_setWeaponTemperature
+ * [player, currentWeapon player, 123] call ace_overheating_fnc_setWeaponTemperature
  *
  * Public: Yes
  */
