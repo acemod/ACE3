@@ -67,18 +67,22 @@
         <Key ID="STR_ACE_Overheating_coolingCoef_displayName">
             <English>Cooling Coefficient</English>
             <Chinesesimp>冷却系数</Chinesesimp>
+            <German>Abkühlungskoeffizienten</German>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
             <Chinesesimp>武器冷却速度系数。\n数值越高，冷却速度越快。</Chinesesimp>
+            <German>Koeffizient, der angibt, wie schnell eine Waffe abkühlt.\nEin höherer Wert erhöht die Abkühlgeschwindigkeit.</German>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
             <English>Suppressor Coefficient</English>
             <Chinesesimp>消音器系数</Chinesesimp>
+            <German>Schalldämpfer-Koeffizient</German>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
             <Chinesesimp>附加了消音器后，产生的额外热量系数。\n数值越高，热量越高，0意味着消音器不产生额外热量。</Chinesesimp>
+            <German>Koeffizient, der angibt, wie viel zusätzliche Wärme durch das Anbringen eines Schalldämpfers hinzugefügt wird. Ein höherer Wert erhöht die Wärme, 0 bedeutet keine zusätzliche Wärme durch den Schalldämpfer.</German>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>
@@ -301,6 +305,7 @@
             <Russian>Замена ствола устраняет заклинивание оружия.</Russian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
             <Chinesesimp>更换枪管清除卡弹</Chinesesimp>
+            <German>Ladehemmung beim Wechseln des Laufes beheben.</German>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
             <English>Controls whether swapping barrels clears a weapon jam.</English>
