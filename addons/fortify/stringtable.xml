@@ -161,30 +161,37 @@
         <Key ID="STR_ACE_Fortify_settingHint_timeCostCoefficient">
             <English>Time-Cost Coefficient</English>
             <Chinesesimp>时间-成本系数</Chinesesimp>
+            <German>Zeit-Kosten-Koeffizient</German>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeCostCoefficient">
             <English>Coefficient used to determine time to build structure.&lt;br/&gt;A in Ax + b where x is cost of object</English>
             <Chinesesimp>用于确定建造建筑所需时间的系数。&lt;br/&gt;A是Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
+            <German>Koeffizient zur Bestimmung der Bauzeit &lt;br/&gt;A in Ax + b, wobei x die Kosten des Objekts sind.</German>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint_timeMin">
             <English>Minimum Build Time</English>
             <Chinesesimp>最短建造时间</Chinesesimp>
+            <German>Minimale Bauzeit</German>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeMin">
             <English>Minimum time to build any structure.&lt;br/&gt;b in Ax + b where x is cost of object</English>
             <Chinesesimp>建造任何建筑的最短时间。&lt;br/&gt;b是Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
+            <German>Mindestzeit für den Bau eines beliebigen Bauwerks.&lt;br/&gt;b in Ax + b, wobei x die Kosten des Objekts sind.</German>
         </Key>
         <Key ID="STR_ACE_Fortify_progressBarTitle">
             <English>Building</English>
             <Chinesesimp>建造</Chinesesimp>
+            <German>Bauwerk</German>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
             <Chinesesimp>创建地图标记</Chinesesimp>
+            <German>Kartenmarkierungen erstellen</German>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
             <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
             <Chinesesimp>在放置静态防御工事时，创建看起来像地形建筑的地图标记</Chinesesimp>
+            <German>Erstellen von Kartenmarkierungen, die wie Gebäude im Gelände aussehen, wenn statische Befestigungen platziert werden</German>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapNone">
             <English>Never</English>
@@ -205,6 +212,7 @@
         <Key ID="STR_ACE_Fortify_markObjectsOnMapFriendly">
             <English>For units friendly to the placer</English>
             <Chinesesimp>对放置者友军单位</Chinesesimp>
+            <German>Für Einheiten, die freundlich zum Platzierer stehen.</German>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
             <English>For everyone</English>
