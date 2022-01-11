@@ -212,7 +212,7 @@
         <Key ID="STR_ACE_Fortify_markObjectsOnMapFriendly">
             <English>For units friendly to the placer</English>
             <Chinesesimp>对放置者友军单位</Chinesesimp>
-            <German>Für Einheiten, die freundlich zum Platzierer stehen.</German>
+            <German>Für, zum Erbauer, verbündete Einheiten.</German>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
             <English>For everyone</English>
