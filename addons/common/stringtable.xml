@@ -1318,6 +1318,7 @@
             <English>ACE Uncategorized</English>
             <Chinesesimp>未分类的ACE </Chinesesimp>
             <Korean>ACE 무분류</Korean>
+            <German>ACE Unkategorisiert</German>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1488,6 +1489,7 @@
             <English>AI only</English>
             <Polish>Tylko dla AI</Polish>
             <Korean>인공지능만</Korean>
+            <German>Nur KI</German>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
