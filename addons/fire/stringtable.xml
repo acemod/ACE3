@@ -65,23 +65,27 @@
             <English>Enable screams by units on fire</English>
             <Spanish>Habilitar los gritos de las unidades en llamas</Spanish>
             <Chinesesimp>启用着火单位发出惨叫声</Chinesesimp>
+            <German>Schreie von brennenden Einheiten aktivieren</German>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
             <English>Enables if units on fire will play the screaming sound</English>
             <Spanish>Habilita si las unidades en llamas reproducirán el sonido de los gritos</Spanish>
             <Chinesesimp>启用着火的单位是否会发出惨叫声。</Chinesesimp>
+            <German>Aktiviert, ob brennende Einheiten den Schrei-Ton abspielen</German>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
             <English>Drop Weapons When on Fire</English>
             <Spanish>Soltar armas cuando esté en llamas</Spanish>
             <Polish>Włącz wyrzucanie broni podczas płonięcia</Polish>
             <Chinesesimp>着火时扔掉武器</Chinesesimp>
+            <German>Waffen fallen lassen, wenn in Brand geraten.</German>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
             <English>Controls whether units drop their weapons when on fire.</English>
             <Spanish>Controla si las unidades dejan caer sus armas cuando están en llamas</Spanish>
             <Polish>Powoduje że jednostki wyrzucają swoją broń gdy płoną.</Polish>
             <Chinesesimp>控制单位在着火时是否丢掉武器。</Chinesesimp>
+            <German>Steuert, ob Einheiten ihre Waffen fallen lassen, wenn sie brennen.</German>
         </Key>
     </Package>
 </Project>

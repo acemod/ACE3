@@ -1310,6 +1310,7 @@
         <Key ID="STR_ACE_Common_categoryUncategorized">
             <English>ACE Uncategorized</English>
             <Chinesesimp>未分类的ACE </Chinesesimp>
+            <German>ACE Unkategorisiert</German>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1475,6 +1476,7 @@
         <Key ID="STR_ACE_Common_aiOnly">
             <English>AI only</English>
             <Polish>Tylko dla AI</Polish>
+            <German>Nur KI</German>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
