@@ -218,6 +218,7 @@
             <Czech>Maximální vzdálenost sledování objektu</Czech>
             <Polish>Maksymalna odległość śledzenia</Polish>
             <Spanish>Distancia máxima de seguimiento</Spanish>
+            <Korean>최대 추적 거리</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
@@ -232,6 +233,7 @@
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
             <Polish>Maksymalna odległość na jakiej kamera może podążać od celu</Polish>
             <Spanish>Distancia máxima que la cámara de seguimiento puede estar del objetivo</Spanish>
+            <Korean>카메라가 목표를 따라갈 수 있는 최대 거리를 설정합니다.</Korean>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">

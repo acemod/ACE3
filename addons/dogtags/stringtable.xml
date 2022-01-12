@@ -111,6 +111,7 @@
             <French>Affichage à l'écran pour le contrôle des plaques.</French>
             <Czech>Okno na obrazovce pro kontrolu známek</Czech>
             <Turkish>Künye gösteriliyor</Turkish>
+            <Korean>군번줄 확인 시 화면에 보여줍니다</Korean>
         </Key>
     </Package>
 </Project>

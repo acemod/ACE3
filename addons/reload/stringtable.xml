@@ -46,6 +46,7 @@
             <Russian>Всегда показывать проверку боеприпасов в меню взаимодействия с собой</Russian>
             <Spanish>Mostrar siempre la autointeracción de comprobar munición</Spanish>
             <German>Zeige immer die Selbstinteraktion zur Prüfung der Munition an.</German>
+            <Korean>상호작용에 탄약 확인을 항상 띄우기</Korean>
         </Key>
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelfDesc">
             <English>Shows check ammo self interaction even when not in static weapons.</English>
@@ -60,6 +61,7 @@
             <Russian>Показывать проверку боеприпасов даже вне стационарного орудия</Russian>
             <Spanish>Mostrar la comprobación de la munición incluso cuando no está en armas estáticas</Spanish>
             <German>Zeigt die Selbstinteraktion der Munitionsüberprüfung an, auch wenn nicht in statischen Waffen.</German>
+            <Korean>탄약 확인을 상호작용에서 할 수 있도록 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>
