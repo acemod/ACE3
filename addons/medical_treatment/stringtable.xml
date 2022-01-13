@@ -316,7 +316,7 @@
             <Russian>Время, необходимое для введения медикаментов автоинъектором (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny do aplikacji medykamentów za pomocą autostrzykawki.</Polish>
             <German>Zeit in Sekunden, die benötigt wird, um Medikamente mittels Autoinjektor zu verabreichen.</German>
-            <Chinesesimp>使用自动注射器给药所需的时间(秒)</Chinesesimp>
+            <Chinesesimp>使用自动注射器给药所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 주사기를 사용하는데 걸리는 시간을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
@@ -338,7 +338,7 @@
             <Spanish>Tiempo, en segundos, requerido para aplicar/quitar un torniquete.</Spanish>
             <Russian>Время, необходимое для наложения/снятия жгута (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny do założenia/zdjęcia stazy.</Polish>
-            <Chinesesimp>使用/移除止血带所需的时间(秒)</Chinesesimp>
+            <Chinesesimp>使用/移除止血带所需的时间（秒）</Chinesesimp>
             <Korean>초단위로 지혈대를 사용/제거 하는데 걸리는 시간을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
@@ -360,7 +360,7 @@
             <Spanish>Tiempo, en segundos, requerido para administrar una bolsa de IV.</Spanish>
             <Russian>Время, необходимое для применения пакета внутривенного переливания (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na aplikację transfuzji IV.</Polish>
-            <Chinesesimp>使用静脉输液所需的时间(秒)</Chinesesimp>
+            <Chinesesimp>使用静脉输液所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 수액용기를 사용하는데 걸리는 시간을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
@@ -382,7 +382,7 @@
             <Spanish>TIempo, en segundos, requerido para aplicar una férula.</Spanish>
             <Russian>Время, необходимое для наложения шины (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na aplikację szyny.</Polish>
-            <Chinesesimp>使用夹板所需的时间(秒)</Chinesesimp>
+            <Chinesesimp>使用夹板所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 부목을 사용하는데 걸리는 시간을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
@@ -900,7 +900,7 @@
             <Russian>Определяет, что делать с ванильными медикаментами: преобразовать в медикаменты ACE, удалить или проигнорировать.</Russian>
             <Portuguese>Controla se itens médicos vanilla serão convertidos para itens do ACE, removidos ou ignorados.</Portuguese>
             <Chinese>控制是否轉換原版的醫療物資成ACE的醫療物資，或者單純移除或無視。</Chinese>
-            <Chinesesimp>控制是否转换原版的医疗物品成ACE的医疗物品，或者单纯移除/无视。</Chinesesimp>
+            <Chinesesimp>控制是否转换原版的医疗物品成 ACE 的医疗物品，或者单纯移除/无视。</Chinesesimp>
             <Italian>Controlla se gli articoli medicali vanilla vengono convertiti in articoli medicali ACE, rimossi o ignorati.</Italian>
             <Czech>Nastavuje zda zdravotnické předměty ze základní hry budou přeměněny na ACE předměty, odstraněny nebo ignorovány.</Czech>
             <Polish>Kontroluje, czy podstawowe przedmioty medyczne z Arma są konwertowane na przedmioty medyczne ACE, tylko usuwane lub ignorowane.</Polish>
@@ -977,7 +977,7 @@
             <Russian>Устанавливает максимальное количество создаваемых объектов мусора. Чрезмерное значение может вызвать задержку FPS.</Russian>
             <Portuguese>Define o limite máximo de objetos de lixo que podem ser criados, quantidade excessivas podem causar lag de FPS.</Portuguese>
             <Chinese>設定最大可以產生的醫療用廢棄物數量，極端的數量的話可能導致幀數下降。</Chinese>
-            <Chinesesimp>设置可以生成的最大垃圾数量，数量过多会导致FPS延迟。</Chinesesimp>
+            <Chinesesimp>设置可以生成的最大垃圾数量，数量过多会导致 FPS 延迟。</Chinesesimp>
             <Italian>Imposta il numero massimo di rifiuti che possono essere generati, quantità eccessive possono diminuire gli FPS.</Italian>
             <Czech>Nastavuje maximum odpadků, které se mohou objevit. Vysoká hodnota m§že negativně ovlivnit FPS.</Czech>
             <Polish>Definiuje maksymalną liczbę śmieci, które mogą zostać stworzone, nadmierne ilości mogą powodować spadki FPS.</Polish>
@@ -1177,7 +1177,7 @@
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
             <Japanese>何らかの治療をするには武器を下げるか収めるかどうかを決定します。\nなお次の診断行動は設定で例外できます: 心拍確認、血圧測定、反応確認</Japanese>
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
-            <Chinesesimp>控制是否要先放下或把武器放起才能做出医疗行为。\n除了诊断 - 允许未放下或未收起的情况下进行一连串的诊断（检查脉搏，血压，反应）。</Chinesesimp>
+            <Chinesesimp>控制是否要先放下或把武器放起才能做出医疗行为。\n除了诊断—允许未放下或未收起的情况下进行一连串的诊断（检查脉搏，血压，反应）。</Chinesesimp>
             <French>Définit si les armes doivent être rengainées ou abaissées avant de pouvoir effectuer des actes médicaux.\nLes options "sauf examens" autorisent les examens (vérification du pouls, de la tension artérielle, de l'état de conscience) en toutes circonstances.</French>
             <Czech>Nastavuje zda musí být zbraň schovaná/snížená pro provádění zdravotnických úkonů.\nKromě Diagnózy - Umožňuje diagnostické akce (kontrola srdečního tepu, tlaku krve a reakci pacienta) vždy bez ohledu na nastavení schování zbraně.</Czech>
             <Polish>Kontroluje, czy broń musi być schowana/opuszczona w celu wykonania leczenia pacjenta.\n Za wyjątkiem diagnozowania - umożliwia wykonywanie czynności kontrolnych (sprawdzanie tętna, ciśnienia krwi, reakcji) przez cały czas, niezależnie od ustawienia Wymagana broń w kaburze.</Polish>
@@ -1256,7 +1256,7 @@
             <Italian>[ACE] Cassa Rifornimenti Medici (Basico)</Italian>
             <Japanese>[ACE] 医療物資箱 (ベーシック)</Japanese>
             <Korean>[ACE] 의료 물자 (기본)</Korean>
-            <Chinesesimp>[ACE] 医疗补给箱 (基础)</Chinesesimp>
+            <Chinesesimp>[ACE] 医疗补给箱（基础）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（基本）</Chinese>
             <Turkish>[ACE] Tıbbi Malzeme Kutusu (Temel)</Turkish>
         </Key>
@@ -1273,7 +1273,7 @@
             <Italian>[ACE] Cassa Rifornimenti Medici (Avanzato)</Italian>
             <Japanese>[ACE] 医療物資箱 (アドバンスド)</Japanese>
             <Korean>[ACE] 의료 물자 (고급)</Korean>
-            <Chinesesimp>[ACE] 医疗补给箱 (高级)</Chinesesimp>
+            <Chinesesimp>[ACE] 医疗补给箱（高级）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（進階）</Chinese>
             <Turkish>[ACE] Tıbbi Malzeme Kutusu (Gelişmiş)</Turkish>
         </Key>
@@ -1288,7 +1288,7 @@
             <Russian>Будет ли объект считаться медицинским транспортом.</Russian>
             <Japanese>どれでも、またはオブジェクトを医療車両として割り当てます。</Japanese>
             <Korean>이 물체는 의료 차량이 됩니다.</Korean>
-            <Chinesesimp>是否使该载具为医疗载具?</Chinesesimp>
+            <Chinesesimp>是否使该载具为医疗载具？</Chinesesimp>
             <Chinese>是否使該載具為醫療載具?</Chinese>
             <Czech>Rozhoduje zda bude objekt zdravotnickým vozidlem.</Czech>
         </Key>
@@ -1423,7 +1423,7 @@
             <Italian>Registra un oggetto come struttura medica</Italian>
             <Japanese>オブジェクトを医療施設として割り当てる</Japanese>
             <Korean>물체를 의료시설로 등록합니다</Korean>
-            <Chinesesimp>指定一个物件作为医疗设施</Chinesesimp>
+            <Chinesesimp>指定一个物体作为医疗设施</Chinesesimp>
             <Chinese>指定一個物件作為醫療設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_doctor">
@@ -1439,7 +1439,7 @@
             <Italian>Dottore (Solo Medici Avanzati)</Italian>
             <Japanese>医師 (アドバンスド医療のみ)</Japanese>
             <Korean>군의관 (오직 고급 의료에서만)</Korean>
-            <Chinesesimp>军医 (只限进阶医疗系统)</Chinesesimp>
+            <Chinesesimp>军医（只限进阶医疗系统）</Chinesesimp>
             <Chinese>軍醫 (只限進階醫療系統)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_doctorShort">
@@ -1472,7 +1472,7 @@
             <Portuguese>Bandagem(Básico)</Portuguese>
             <Japanese>包帯 (緊急圧迫)</Japanese>
             <Korean>붕대 (기본)</Korean>
-            <Chinesesimp>绷带 (基础型)</Chinesesimp>
+            <Chinesesimp>绷带（基础型）</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
             <Turkish>Bandaj (Basit)</Turkish>
         </Key>
@@ -1506,7 +1506,7 @@
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
             <Japanese>傷口を血液凝固剤で塞ぐようにできていて、使うと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
-            <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
+            <Chinesesimp>用于覆盖伤口以防止出血，透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
             <Turkish>Bir yarayı örtmek için kullanılan ve kanama başladıktan sonra yaranın üzerine uygulanan özel bir malzeme olan bir pansuman.</Turkish>
         </Key>
@@ -1523,7 +1523,7 @@
             <Czech>Obvaz (Tlakový)</Czech>
             <Japanese>弾性包帯</Japanese>
             <Korean>붕대 (거즈)</Korean>
-            <Chinesesimp>绷带 (包扎型)</Chinesesimp>
+            <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Chinese>繃帶（包紮型）</Chinese>
             <Turkish>Bandaj (Paket)</Turkish>
         </Key>
@@ -1540,7 +1540,7 @@
             <Czech>Používá se k zastavení středních až silnějších krvácení</Czech>
             <Japanese>粘着フィルム状で、普通から大きめなケガに使い止血します。</Japanese>
             <Korean>중형 또는 대형 상처를 채우고 출혈을 막기위해 쓰입니다</Korean>
-            <Chinesesimp>用于包扎中到大型伤口, 并防止出血</Chinesesimp>
+            <Chinesesimp>用于包扎中到大型伤口，并防止出血</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血</Chinese>
             <Turkish>Orta ila büyük yaraları sarmak ve kanamayı durdurmak için kullanılır</Turkish>
         </Key>
@@ -1557,7 +1557,7 @@
             <Czech>Tlakový obvaz se skládá se ze sterilní krycí vrstvy, na kterou je přiložena silná vrstva savého materiálu stlačující cévu v ráně a která je přitlačována k ráně a připevněna obinadlem. Slouží k zastavení silnějších krvácení.</Czech>
             <Japanese>包帯を使うと出血元を塞ぎ、怪我の治癒を促進させます。また大きめ多発性外傷に対しても使えます。</Japanese>
             <Korean>출혈을 막고 상처를 치유하기 위한 붕대. 다발성외상의 경우 상처를 채우는것도 한 가지 방법입니다.</Korean>
-            <Chinesesimp>用于包扎中到大型伤口, 并防止出血, 为在大型多处性伤口的选项之一!</Chinesesimp>
+            <Chinesesimp>用于包扎中到大型伤口，并防止出血, 为在大型多处性伤口的选项之一！</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血, 為在大型多處性傷口的選項之一!</Chinese>
             <Turkish>Kanamayı durdurmak ve yara iyileşmesini kolaylaştırmak için yarayı sarmak için kullanılan bir bandaj.</Turkish>
         </Key>
@@ -1574,7 +1574,7 @@
             <Portuguese>Bandagem (Elástica)</Portuguese>
             <Japanese>包帯 (伸縮)</Japanese>
             <Korean>붕대 (압박)</Korean>
-            <Chinesesimp>绷带 (弹性型)</Chinesesimp>
+            <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Chinese>繃帶（彈性型）</Chinese>
             <Turkish>Bandaj (Elastik)</Turkish>
         </Key>
@@ -1591,7 +1591,7 @@
             <Czech>Sada obvazů, Elastická</Czech>
             <Japanese>包帯キット (伸縮)</Japanese>
             <Korean>붕대, 압박</Korean>
-            <Chinesesimp>绷带 (弹性型)</Chinesesimp>
+            <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Chinese>一個彈性繃帶包</Chinese>
             <Turkish>Bandaj kiti, Elastik</Turkish>
         </Key>
@@ -1625,7 +1625,7 @@
             <Portuguese>Torniquete (CAT)</Portuguese>
             <Japanese>止血帯 (CAT)</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <Chinesesimp>止血带 (军用型)</Chinesesimp>
+            <Chinesesimp>止血带（军用型）</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
             <Turkish>Turnike (CAT)</Turkish>
         </Key>
@@ -1659,7 +1659,7 @@
             <Czech>Zařízení používané ke stlačení venózního a arteriálního oběhu. V důsledku dochází ke zpomalení toku krve a tedy i snížení ztrát krve.</Czech>
             <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れを遅し失血を防ぎます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
-            <Chinesesimp>用于压迫静脉与动脉的血液流动, 以达到减缓失血速度的目的</Chinesesimp>
+            <Chinesesimp>用于压迫静脉与动脉的血液流动，以达到减缓失血速度的目的</Chinesesimp>
             <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的</Chinese>
             <Turkish>Kan akışını engelleyen veya yavaşlatan ve dolayısıyla kan kaybını azaltan venöz ve arteriyel dolaşımı sıkıştırmak için kullanılan bir daraltıcı cihaz.</Turkish>
         </Key>
@@ -1836,7 +1836,7 @@
             <Czech>Atropin slouží jako protijed na otravu organofosfátovými insekticidy (diazinon) a nervovými plyny.</Czech>
             <Japanese>核・生物・化学兵器による汚染環境下にて使います。</Japanese>
             <Korean>화생방 상황에 쓰이는 군용 약품</Korean>
-            <Chinesesimp>军用神经解毒针, 用来应付核生化污染的情况.</Chinesesimp>
+            <Chinesesimp>军用神经解毒针，用来应付核生化污染的情况。</Chinesesimp>
             <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Epinephrine_Display">
@@ -1885,7 +1885,7 @@
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
             <Japanese>気管支を拡張するよう交感神経を拡張させ、心拍数を増加させます。それにアレルギー反応を収める効果もあります (アナフィラキシー ショック)。得られる効果は少ないですが、心停止している場合などにも使われます。</Japanese>
             <Korean>기관지를 확장시키는 교감 신경 반응을 이끌어내는 약물로써, 심박을 높이고 알러지 효과에 대응합니다(아나필락시스). 심폐가 정지하는 경우 호전이 되지않을때 사용합니다.</Korean>
-            <Chinesesimp>俗称强心针, 为一种支气管扩张药物, 会增加心跳速率并减缓过敏反应(过敏性休克), 在心跳骤停时有恢复心跳的效果!</Chinesesimp>
+            <Chinesesimp>俗称强心针，为一种支气管扩张药物, 会增加心跳速率并减缓过敏反应（过敏性休克）, 在心跳骤停时有恢复心跳的效果！</Chinesesimp>
             <Chinese>俗稱強心針, 為一種支氣管擴張藥物, 會增加心跳速率並減緩過敏反應(過敏性休克), 在心跳驟停時有恢復心跳的效果!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Plasma_IV">
@@ -1901,7 +1901,7 @@
             <Czech>Krevní plazma (1000ml)</Czech>
             <Japanese>血しょう IV (1000ml)</Japanese>
             <Korean>혈장 IV (250ml)</Korean>
-            <Chinesesimp>血浆 (1000毫升)</Chinesesimp>
+            <Chinesesimp>血浆（1000毫升）</Chinesesimp>
             <Chinese>血漿 (1000毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Plasma_IV_Desc_Short">
@@ -1949,7 +1949,7 @@
             <Czech>Krevní plazma (500ml)</Czech>
             <Japanese>血しょう IV (500ml)</Japanese>
             <Korean>혈장 IV (500ml)</Korean>
-            <Chinesesimp>血浆 (500毫升)</Chinesesimp>
+            <Chinesesimp>血浆（500毫升）</Chinesesimp>
             <Chinese>點滴 (血漿 500毫升)</Chinese>
             <Turkish>Plasma IV (500ml)</Turkish>
         </Key>
@@ -1966,7 +1966,7 @@
             <Czech>Krevní plazma (250ml)</Czech>
             <Japanese>血しょう IV (250ml)</Japanese>
             <Korean>혈장 IV (250ml)</Korean>
-            <Chinesesimp>血浆 (250毫升)</Chinesesimp>
+            <Chinesesimp>血浆（250毫升）</Chinesesimp>
             <Chinese>點滴 (血漿 250毫升)</Chinese>
             <Turkish>Plasma IV (250ml)</Turkish>
         </Key>
@@ -1983,7 +1983,7 @@
             <Czech>Krevní transfúze (1000ml)</Czech>
             <Japanese>血液 IV (1000ml)</Japanese>
             <Korean>혈액 IV (1000ml)</Korean>
-            <Chinesesimp>血液 (1000毫升)</Chinesesimp>
+            <Chinesesimp>血液（1000毫升）</Chinesesimp>
             <Chinese>點滴 (血液 1000毫升)</Chinese>
             <Turkish>Kan IV (1000ml)</Turkish>
         </Key>
@@ -2000,7 +2000,7 @@
             <Czech>Krevní transfuze pro doplnění pacientovi krve</Czech>
             <Japanese>血液 IV は、患者へ血液を補給します。</Japanese>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다.</Korean>
-            <Chinesesimp>血液, 用于补充伤者流失的血液</Chinesesimp>
+            <Chinesesimp>血液，用于补充伤者流失的血液</Chinesesimp>
             <Chinese>血液, 用於補充傷者流失的血液</Chinese>
             <Turkish>Kan IV, bir hastanın kanını geri enjekte etmek için</Turkish>
         </Key>
@@ -2017,7 +2017,7 @@
             <Czech>0 Rh negativní krev se používá v vzácných případech k doplnění pacientovy hladiny krve, obvykle při převozu zraněné osoby do nemocnice.</Czech>
             <Japanese>O 型への輸血はまれで厳格であり、通常は治療のための輸送段階で輸血をおこないます。</Japanese>
             <Korean>O- 형 혈액 투여는 매우 엄격하고 드문 혈액보급의 경우에 쓰이는데 주로 치료의 운송단계에서 사용됩니다.</Korean>
-            <Chinesesimp>O型负值注射用血液, 在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>
+            <Chinesesimp>O型负值注射用血液，在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>
             <Chinese>O型陰性注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_500">
@@ -2033,7 +2033,7 @@
             <Czech>Krevní transfúze (500ml)</Czech>
             <Japanese>血液 IV (500ml)</Japanese>
             <Korean>혈액 IV (500ml)</Korean>
-            <Chinesesimp>血液 (500毫升)</Chinesesimp>
+            <Chinesesimp>血液（500毫升）</Chinesesimp>
             <Chinese>點滴 (血液 500毫升)</Chinese>
             <Turkish>Kan IV (500ml)</Turkish>
         </Key>
@@ -2050,7 +2050,7 @@
             <Czech>Krevní transfúze (250ml)</Czech>
             <Japanese>血液 IV (250ml)</Japanese>
             <Korean>혈액 IV (250ml)</Korean>
-            <Chinesesimp>血液 (250毫升)</Chinesesimp>
+            <Chinesesimp>血液（250毫升）</Chinesesimp>
             <Chinese>點滴 (血液 250毫升)</Chinese>
             <Turkish>Kan IV (250ml)</Turkish>
         </Key>
@@ -2067,7 +2067,7 @@
             <Czech>Fyziologický roztok (1000ml)</Czech>
             <Japanese>生理食塩水 IV (1000ml)</Japanese>
             <Korean>생리식염수 IV (1000ml)</Korean>
-            <Chinesesimp>生理盐水 (1000毫升)</Chinesesimp>
+            <Chinesesimp>生理盐水（1000毫升）</Chinesesimp>
             <Chinese>點滴 (食鹽水 1000毫升)</Chinese>
             <Turkish>Serum IV (1000ml)</Turkish>
         </Key>
@@ -2084,7 +2084,7 @@
             <Czech>Fyziologický roztok se aplikuje intravenózně a slouží k obnově pacientovi krve</Czech>
             <Japanese>生理食塩水 IV は、患者の血液量を補助します</Japanese>
             <Korean>생리식염수, 환자의 혈액량을 보충할때 쓰입니다</Korean>
-            <Chinesesimp>生理盐水, 用于恢复伤者血液</Chinesesimp>
+            <Chinesesimp>生理盐水，用于恢复伤者血液</Chinesesimp>
             <Chinese>生理食鹽水, 用於恢復傷者血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_Desc_Use">
@@ -2100,7 +2100,7 @@
             <Czech>Fyziologický roztok se využívá nejčastěji jako infuze při dehydrataci organismu.</Czech>
             <Japanese>生理食塩水 IV を静脈へ投与し、血液量を増加させることができます。</Japanese>
             <Korean>혈류에 IV로 투여되는 의료 용적 대체 요법</Korean>
-            <Chinesesimp>利用静脉注射进入人体血液系统, 帮助伤者血液恢复</Chinesesimp>
+            <Chinesesimp>利用静脉注射进入人体血液系统，帮助伤者血液恢复</Chinesesimp>
             <Chinese>利用靜脈注射進入人體血液系統, 幫助傷者血液恢復</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_500">
@@ -2116,7 +2116,7 @@
             <Czech>Fyziologický roztok (500ml)</Czech>
             <Japanese>生理食塩水 IV (500ml)</Japanese>
             <Korean>생리식염수 IV (500ml)</Korean>
-            <Chinesesimp>生理盐水 (500毫升)</Chinesesimp>
+            <Chinesesimp>生理盐水（500毫升）</Chinesesimp>
             <Chinese>點滴 (食鹽水 500毫升)</Chinese>
             <Turkish>Serum IV (500ml)</Turkish>
         </Key>
@@ -2133,7 +2133,7 @@
             <Czech>Fyziologický roztok (250ml)</Czech>
             <Japanese>生理食塩水 IV (250ml)</Japanese>
             <Korean>생리식염수 IV (250ml)</Korean>
-            <Chinesesimp>生理盐水 (250毫升)</Chinesesimp>
+            <Chinesesimp>生理盐水（250毫升）</Chinesesimp>
             <Chinese>點滴 (食鹽水 250毫升)</Chinese>
             <Turkish>Serum IV (250ml)</Turkish>
         </Key>
@@ -2150,7 +2150,7 @@
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
             <Japanese>緊急圧迫止血包帯 (クイッククロット)</Japanese>
             <Korean>붕대 (퀵 클롯)</Korean>
-            <Chinesesimp>绷带 (止血型)</Chinesesimp>
+            <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Chinese>繃帶 (止血粉)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Desc_Short">
@@ -2166,7 +2166,7 @@
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
             <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯 붕대</Korean>
-            <Chinesesimp>绷带 (止血型)</Chinesesimp>
+            <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Chinese>止血粉繃帶</Chinese>
             <Turkish>QuikClot bandaj</Turkish>
         </Key>
@@ -2183,7 +2183,7 @@
             <Czech>Hemostatický obvaz určený k zástavě krvácení</Czech>
             <Japanese>血液凝固剤を含む包帯により、止血できます。</Japanese>
             <Korean>지혈시 사용하는 붕대로 혈액 응고제를 포함하고있습니다.</Korean>
-            <Chinesesimp>包含止血粉成分的止血绷带, 可用于止血</Chinesesimp>
+            <Chinesesimp>包含止血粉成分的止血绷带，可用于止血</Chinesesimp>
             <Chinese>包含止血粉成分的止血繃帶, 可用於止血</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Aid_Kit_Display">
@@ -2216,7 +2216,7 @@
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných</Czech>
             <Japanese>縫合や高度な処置に必要とされる、様々な治療器具が含まれています。</Japanese>
             <Korean>봉합및 고급 조치에 필요한 다양한 치료 도구가 있습니다.</Korean>
-            <Chinesesimp>包含各种医疗套件, 以及进阶伤口系统需要的缝合用品</Chinesesimp>
+            <Chinesesimp>包含各种医疗套件，以及进阶伤口系统需要的缝合用品</Chinesesimp>
             <Chinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品</Chinese>
             <Turkish>Dikiş veya gelişmiş tedavi için gerekli çeşitli tedavi malzemelerini içerir</Turkish>
         </Key>
@@ -2284,7 +2284,7 @@
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>縫合キットは戦場で高度な処置をする為に使われます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
-            <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统)</Chinesesimp>
+            <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合</Chinese>
             <Turkish>Sahada gelişmiş tıbbi tedavi için Cerrahi Kit</Turkish>
         </Key>
@@ -2301,7 +2301,7 @@
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>縫合キットは戦場で高度な処置をする為に使われます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
-            <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统)</Chinesesimp>
+            <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合</Chinese>
             <Turkish>Sahada gelişmiş tıbbi tedavi için Cerrahi Kit</Turkish>
         </Key>
@@ -2809,7 +2809,7 @@
             <Portuguese>Curativo de Campo</Portuguese>
             <Japanese>緊急圧迫包帯を巻く</Japanese>
             <Korean>필드 드레싱</Korean>
-            <Chinesesimp>绷带 (基础型)</Chinesesimp>
+            <Chinesesimp>绷带（基础型）</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_PackingBandage">
@@ -2825,7 +2825,7 @@
             <Czech>Obvaz Tlakový</Czech>
             <Japanese>弾性包帯を巻く</Japanese>
             <Korean>거즈 붕대</Korean>
-            <Chinesesimp>绷带 (包扎型)</Chinesesimp>
+            <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Chinese>包紮繃帶</Chinese>
             <Turkish>Paket Bandaj</Turkish>
         </Key>
@@ -2842,7 +2842,7 @@
             <Portuguese>Bandagem Elástica</Portuguese>
             <Japanese>伸縮包帯を巻く</Japanese>
             <Korean>압박 붕대</Korean>
-            <Chinesesimp>绷带 (弹性型)</Chinesesimp>
+            <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
             <Turkish>Elastik Bandaj</Turkish>
         </Key>
@@ -2859,7 +2859,7 @@
             <Portuguese>QuikClot</Portuguese>
             <Japanese>クイッククロットを巻く</Japanese>
             <Korean>퀵 클롯</Korean>
-            <Chinesesimp>绷带 (止血型)</Chinesesimp>
+            <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Chinese>止血粉</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_CheckPulse">
@@ -3026,7 +3026,7 @@
             <Portuguese>SBV</Portuguese>
             <Japanese>心肺蘇生</Japanese>
             <Korean>심폐소생술</Korean>
-            <Chinesesimp>心肺复苏(CPR)</Chinesesimp>
+            <Chinesesimp>心肺复苏（CPR）</Chinesesimp>
             <Chinese>心肺復甦術</Chinese>
             <Turkish>CPR</Turkish>
         </Key>
@@ -3060,7 +3060,7 @@
             <Portuguese>Administrar Sangue IV (1000ml)</Portuguese>
             <Japanese>血液 IV (1000ml) を投与</Japanese>
             <Korean>IV 혈액 수혈 (1000ml)</Korean>
-            <Chinesesimp>静脉输血 (1000毫升)</Chinesesimp>
+            <Chinesesimp>静脉输血（1000毫升）</Chinesesimp>
             <Chinese>輸血液 (1000毫升)</Chinese>
             <Turkish>Kan IV (1000ml) Ver</Turkish>
         </Key>
@@ -3077,7 +3077,7 @@
             <Portuguese>Administrar Sangue IV (500ml)</Portuguese>
             <Japanese>血液 IV (500ml) を投与</Japanese>
             <Korean>IV 혈액 수혈 (500ml)</Korean>
-            <Chinesesimp>静脉输血 (500毫升)</Chinesesimp>
+            <Chinesesimp>静脉输血（500毫升）</Chinesesimp>
             <Chinese>輸血液 (500毫升)</Chinese>
             <Turkish>Kan IV (500ml) Ver</Turkish>
         </Key>
@@ -3094,7 +3094,7 @@
             <Portuguese>Administrar Sangue IV (250ml)</Portuguese>
             <Japanese>血液 IV (250ml) を投与</Japanese>
             <Korean>IV 혈액 수혈 (250ml)</Korean>
-            <Chinesesimp>静脉输血 (250毫升)</Chinesesimp>
+            <Chinesesimp>静脉输血（250毫升）</Chinesesimp>
             <Chinese>輸血液 (250毫升)</Chinese>
             <Turkish>Kan IV (250ml) Ver</Turkish>
         </Key>
@@ -3111,7 +3111,7 @@
             <Portuguese>Administrar Plasma IV (1000ml)</Portuguese>
             <Japanese>血しょう IV (1000ml) を投与</Japanese>
             <Korean>IV 혈장 수혈 (1000ml)</Korean>
-            <Chinesesimp>静脉注射血浆 (1000毫升)</Chinesesimp>
+            <Chinesesimp>静脉注射血浆（1000毫升）</Chinesesimp>
             <Chinese>輸血漿 (1000毫升)</Chinese>
             <Turkish>Plasma IV (1000ml) Ver</Turkish>
         </Key>
@@ -3128,7 +3128,7 @@
             <Portuguese>Administrar Plasma IV (500ml)</Portuguese>
             <Japanese>血しょう IV (500ml) を投与</Japanese>
             <Korean>IV 혈장 수혈 (500ml)</Korean>
-            <Chinesesimp>静脉注射血浆 (500毫升)</Chinesesimp>
+            <Chinesesimp>静脉注射血浆（500毫升）</Chinesesimp>
             <Chinese>輸血漿 (500毫升)</Chinese>
             <Turkish>Plasma IV (500ml) Ver</Turkish>
         </Key>
@@ -3145,7 +3145,7 @@
             <Portuguese>Administrar Plasma IV (250ml)</Portuguese>
             <Japanese>血しょう IV (250ml) を投与</Japanese>
             <Korean>IV 혈장 수혈 (250ml)</Korean>
-            <Chinesesimp>静脉注射血浆 (250毫升)</Chinesesimp>
+            <Chinesesimp>静脉注射血浆（250毫升）</Chinesesimp>
             <Chinese>輸血漿 (250毫升)</Chinese>
             <Turkish>Plasma IV (250ml) Ver</Turkish>
         </Key>
@@ -3162,7 +3162,7 @@
             <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
             <Japanese>生理食塩水 IV (1000ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
-            <Chinesesimp>静脉注射生理盐水 (1000毫升)</Chinesesimp>
+            <Chinesesimp>静脉注射生理盐水（1000毫升）</Chinesesimp>
             <Chinese>注射生理食鹽水 (1000毫升)</Chinese>
             <Turkish>Serum IV (1000ml) Ver</Turkish>
         </Key>
@@ -3179,7 +3179,7 @@
             <Portuguese>Administrar Soro IV (500ml)</Portuguese>
             <Japanese>生理食塩水 IV (500ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
-            <Chinesesimp>静脉注射生理盐水 (500毫升)</Chinesesimp>
+            <Chinesesimp>静脉注射生理盐水（500毫升）</Chinesesimp>
             <Chinese>注射生理食鹽水 (500毫升)</Chinese>
             <Turkish>Serum IV (500ml) Ver</Turkish>
         </Key>
@@ -3196,7 +3196,7 @@
             <Portuguese>Administrar Soro IV (250ml)</Portuguese>
             <Japanese>生理食塩水 IV (250ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
-            <Chinesesimp>静脉注射生理盐水 (250毫升)</Chinesesimp>
+            <Chinesesimp>静脉注射生理盐水（250毫升）</Chinesesimp>
             <Chinese>注射生理食鹽水 (250毫升)</Chinese>
             <Turkish>Serum IV (250ml) Ver</Turkish>
         </Key>
@@ -3411,7 +3411,7 @@
             <Portuguese>Torniquete [CAT]</Portuguese>
             <Japanese>止血帯 [CAT]</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <Chinesesimp>止血带 (军用型)</Chinesesimp>
+            <Chinesesimp>止血带（军用型）</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
             <Turkish>Turnike [CAT]</Turkish>
         </Key>
@@ -4353,7 +4353,7 @@
             <French>%1 est conscient et ne peut être embarqué.</French>
             <Japanese>患者 (%1) は意識があり、積み込めない</Japanese>
             <Korean>이 사람 (%1) 은(는) 의식이 있어 태우지 못합니다</Korean>
-            <Chinesesimp>此人(%1)处于清醒状态, 因此无法被装载</Chinesesimp>
+            <Chinesesimp>此人（%1）处于清醒状态，因此无法被装载</Chinesesimp>
             <Chinese>此人(%1)是清醒且不能被裝載</Chinese>
             <Turkish>Bu kişi (% 1) uyanık ve yüklenemiyor</Turkish>
         </Key>
@@ -4649,7 +4649,7 @@
             <French>Il n'y a pas de garrot sur ce membre !</French>
             <Japanese>身体には止血帯が無い!</Japanese>
             <Korean>이 부위에는 지혈대가 없습니다!</Korean>
-            <Chinesesimp>该部位没有使用止血带!</Chinesesimp>
+            <Chinesesimp>该部位没有使用止血带！</Chinesesimp>
             <Chinese>這部位沒有止血帶!</Chinese>
             <Turkish>Bu vücut kısmında turnike yok!</Turkish>
         </Key>
@@ -4661,7 +4661,7 @@
             <Spanish>¡El cuerpo se retorció y puede que no esté muerto!</Spanish>
             <Polish>Ciało drgnęło i może nie być martwe!</Polish>
             <German>Der Körper zuckte und kann nicht tot sein!</German>
-            <Chinesesimp>身体抽搐了一下，可能还没死!</Chinesesimp>
+            <Chinesesimp>身体抽搐了一下，可能还没死！</Chinesesimp>
             <Korean>꿈틀대는걸 보니 죽은것 같지는 않습니다!</Korean>
         </Key>
     </Package>

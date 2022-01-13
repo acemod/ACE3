@@ -200,7 +200,7 @@
             <French>M127A1 Feu à main (Blanc)</French>
             <Japanese>M127A1 信号弾 (白)</Japanese>
             <Korean>M127A1 수타식 신호탄 (하얀색)</Korean>
-            <Chinesesimp>M127A1 手持式信号弹 (白色)</Chinesesimp>
+            <Chinesesimp>M127A1 手持式信号弹（白色）</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (白色)</Chinese>
             <Turkish>M127A1 El Sinyali (Beyaz)</Turkish>
         </Key>
@@ -217,7 +217,7 @@
             <French>M127A1 Feu à main (Rouge)</French>
             <Japanese>M127A1 信号弾 (赤)</Japanese>
             <Korean>M127A1 수타식 신호탄 (빨간색)</Korean>
-            <Chinesesimp>M127A1 手持式信号弹 (红色)</Chinesesimp>
+            <Chinesesimp>M127A1 手持式信号弹（红色）</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (紅色)</Chinese>
             <Turkish>M127A1 El Sinyali (Kırmızı)</Turkish>
         </Key>
@@ -234,7 +234,7 @@
             <French>M127A1 Feu à main (Vert)</French>
             <Japanese>M127A1 信号弾 (緑)</Japanese>
             <Korean>M127A1 수타식 신호탄 (초록색)</Korean>
-            <Chinesesimp>M127A1 手持式信号弹 (绿色)</Chinesesimp>
+            <Chinesesimp>M127A1 手持式信号弹（绿色）</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (綠色)</Chinese>
             <Turkish>M127A1 El Sinyali (Yeşil)</Turkish>
         </Key>
@@ -251,7 +251,7 @@
             <French>M127A1 Feu à main (Jaune)</French>
             <Japanese>M127A1 信号弾 (黄)</Japanese>
             <Korean>M127A1 수타식 신호탄 (노란색)</Korean>
-            <Chinesesimp>M127A1 手持式信号弹 (黄色)</Chinesesimp>
+            <Chinesesimp>M127A1 手持式信号弹（黄色）</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (黃色)</Chinese>
             <Turkish>M127A1 El Sinyali (Sarı)</Turkish>
         </Key>
@@ -336,7 +336,7 @@
             <Spanish>M127A1 (Blanca)</Spanish>
             <Japanese>M127A1 (白)</Japanese>
             <Korean>M127A1 (하양)</Korean>
-            <Chinesesimp>M127A1 (白色)</Chinesesimp>
+            <Chinesesimp>M127A1（白色）</Chinesesimp>
             <Chinese>M127A1 (白色)</Chinese>
             <Turkish>M127A1 (Beyaz)</Turkish>
         </Key>
@@ -353,7 +353,7 @@
             <Spanish>M127A1 (Roja)</Spanish>
             <Japanese>M127A1 (赤)</Japanese>
             <Korean>M127A1 (빨강)</Korean>
-            <Chinesesimp>M127A1 (红色)</Chinesesimp>
+            <Chinesesimp>M127A1（红色）</Chinesesimp>
             <Chinese>M127A1 (紅色)</Chinese>
             <Turkish>M127A1 (Kırmızı)</Turkish>
         </Key>
@@ -370,7 +370,7 @@
             <Spanish>M127A1 (Verde)</Spanish>
             <Japanese>M127A1 (緑)</Japanese>
             <Korean>M127A1 (초록)</Korean>
-            <Chinesesimp>M127A1 (绿色)</Chinesesimp>
+            <Chinesesimp>M127A1（绿色）</Chinesesimp>
             <Chinese>M127A1 (綠色)</Chinese>
             <Turkish>M127A1 (Yeşil)</Turkish>
         </Key>
@@ -387,7 +387,7 @@
             <Spanish>M127A1 (Amarilla)</Spanish>
             <Japanese>M127A1 (黄)</Japanese>
             <Korean>M127A1 (노랑)</Korean>
-            <Chinesesimp>M127A1 (黄色)</Chinesesimp>
+            <Chinesesimp>M127A1（黄色）</Chinesesimp>
             <Chinese>M127A1 (黃色)</Chinese>
             <Turkish>M127A1 (Sarı)</Turkish>
         </Key>
@@ -636,7 +636,7 @@
             <Spanish>Permitir conversión de explosivos</Spanish>
             <Polish>Pozwól na konwersję ładunków wybuchowych</Polish>
             <German>Erlaube die Umwandlung von Sprengstoffen</German>
-            <Chinesesimp>允许爆炸性切换</Chinesesimp>
+            <Chinesesimp>允许转换炸药</Chinesesimp>
             <Korean>폭발물 변경 가능여부</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">

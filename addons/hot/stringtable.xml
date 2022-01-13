@@ -26,7 +26,7 @@
             <Russian>Полуавтоматическое командное наведение по линии визирования (SACLOS)</Russian>
             <Portuguese>Comando semi-automático para a linha de visão (SACLOS)</Portuguese>
             <Chinese>視線內半自動指令</Chinese>
-            <Chinesesimp>视线内半自动指令</Chinesesimp>
+            <Chinesesimp>半自动指令到视线（SACLOS）</Chinesesimp>
             <French>Contrôle semi-automatique par contact visuel (SACLOS)</French>
             <Czech>Poloautomatický povelový systém dalkového navedení pro záměrné cíle (SACLOS)</Czech>
             <Spanish>Control semi-automático por línea de visión</Spanish>
@@ -58,7 +58,7 @@
             <Russian>Ракета HOT</Russian>
             <Portuguese>Míssil HOT</Portuguese>
             <Chinese>高次音速(HOT)飛彈</Chinese>
-            <Chinesesimp>高次音速(HOT)导弹</Chinesesimp>
+            <Chinesesimp>高次音速（HOT）导弹</Chinesesimp>
             <French>Missile HOT</French>
             <Czech>HOT Střela</Czech>
             <Turkish>HOT Missile</Turkish>

@@ -6,7 +6,7 @@
             <German>Fingerzeig</German>
             <Italian>Puntamento</Italian>
             <Chinese>指向指示器</Chinese>
-            <Chinesesimp>指向标记器</Chinesesimp>
+            <Chinesesimp>指向标记</Chinesesimp>
             <Japanese>指差し</Japanese>
             <Korean>가리키기</Korean>
             <French>Pointage du doigt</French>
@@ -29,7 +29,7 @@
             <Italian>Puntamento abilitato</Italian>
             <Japanese>指差しを有効</Japanese>
             <Korean>가리키기 활성화</Korean>
-            <Chinesesimp>指向系统启动</Chinesesimp>
+            <Chinesesimp>启用指向系统</Chinesesimp>
             <Chinese>指向系統啟動</Chinese>
             <Spanish>Señalado permitido</Spanish>
             <Turkish>Işaretleme Etkin</Turkish>
@@ -81,7 +81,7 @@
             <Italian>Distanza massima tra giocatori per mostrare l'indicatore di puntamento [default: 4 metri]</Italian>
             <Japanese>指差し表記が他のプレイヤーに表示される範囲を決定できます。(標準 4 メートル)</Japanese>
             <Korean>플레이어 사이에서 가리키기 표시를  보이게 하는 최대거리를 설정합니다[기본설정: 4 미터]</Korean>
-            <Chinesesimp>设定指向标记最大显示距离。[预设: 4公尺]</Chinesesimp>
+            <Chinesesimp>设定指向标记最大显示距离。[预设：4米]</Chinesesimp>
             <Chinese>設定指向指示器最大顯示距離。[預設: 4公尺]</Chinese>
             <Turkish>Hangi uzaklıktakilerin sanal daireyi görmesini seçin. [Varsayılan : 4 metre] </Turkish>
         </Key>
