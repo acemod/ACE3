@@ -22,4 +22,5 @@ _unit removeItem _flag;
 private _pos = _unit modelToWorld [0, 1, 0];
 private _flag = _flag createVehicle _pos;
 _flag setPos _pos;
+[QGVAR(placed), [_unit, _flag]] call CBA_fnc_localEvent;
 [_unit, "PutDown"] call EFUNC(common,doGesture);
