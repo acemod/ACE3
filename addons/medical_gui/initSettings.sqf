@@ -114,5 +114,6 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
     "CHECKBOX",
     [LSTRING(ShowBloodlossEntry_DisplayName), LSTRING(ShowBloodlossEntry_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    true
+    true,
+    true // isGlobal
 ] call CBA_fnc_addSetting;
