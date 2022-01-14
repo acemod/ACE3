@@ -16,9 +16,3 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_FiredBIS_EventHandlers {
-    class All {
-        ADDON = QUOTE(_this call FUNC(onFired));
-    };
-};
-

@@ -17,6 +17,8 @@
  */
 params ["_key", "_down"];
 
+if ((currentWeapon ACE_PLAYER) != QGVAR(launcher)) exitWith {};
+
 if (_key == SPIKE_KEY_DESIGNATE) then {
     if (cameraView == "GUNNER") then {
         playSound "ACE_Sound_Click";

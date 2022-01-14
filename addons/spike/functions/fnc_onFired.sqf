@@ -15,7 +15,8 @@
  *
  * Public: No
  */
-params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
+params ["_firedEH"];
+_firedEH params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
 
 private _missileGuidanceConfig = (configOf _projectile) >> "ace_missileguidance";
 // Setup camera array
@@ -86,4 +87,4 @@ GVAR(projectileHashMap) set [hashValue _projectile, [_camera, _preTarget]];
     [_cameraArray, _projectile, CBA_missionTime - _lastUpdate, _camera] call FUNC(camera_update);
 
     _args set [2, CBA_missionTime];
-}, 0, [_this, _cameraArray, CBA_missionTime, _camera, hashValue _projectile]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_firedEH, _cameraArray, CBA_missionTime, _camera, hashValue _projectile]] call CBA_fnc_addPerFrameHandler;

@@ -35,6 +35,8 @@ class CfgAmmo {
             attackProfiles[] = {"DIR"};
             useModeForAttackProfile = 0;
 
+            onFired = QFUNC(onFired);
+
             class navigationStates {
                 class initial {
                     transitionCondition = QFUNC(midCourseTransition);
