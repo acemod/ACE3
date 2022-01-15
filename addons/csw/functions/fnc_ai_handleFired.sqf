@@ -60,7 +60,10 @@ private _cfgMagGroups = configFile >> QGVAR(groups);
             };
         } forEach _cswMagazines;
     } forEach _compatibleMags;
-} forEach ([_gunner] + ((_staticWeapon nearSupplies 10) select {!([_x] call EFUNC(common,isPlayer))}));
+} forEach ([_gunner] + ((_staticWeapon nearSupplies 10) select {
+    !([_x] call EFUNC(common,isPlayer)) &&
+    {(side group _x isEqualTo sideUnknown) || {[side group _gunner, side group _x] call BIS_fnc_sideIsFriendly}}
+}));
 if (_reloadMag == "") exitWith {TRACE_1("could not find mag",_reloadMag);};
 
 // Figure out what we can add from the magazines we have

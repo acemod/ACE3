@@ -22,8 +22,11 @@ params ["_vehicle", "_player"];
 private _magGroupsConfig = configFile >> QGVAR(groups); // so we don't solve in loop every time
 private _availableMagazines = createHashMap; // slower than array, still needed for setting source of magazine
 
-// filter player units while allowing pulling from AI ammo bearers, crates, etc
-private _nearSupplies = ((_vehicle nearSupplies 10) select {!([_x] call EFUNC(common,isPlayer))});
+// filter enemy & player units while allowing pulling from friendly AI, crates, etc
+private _nearSupplies = ((_vehicle nearSupplies 10) select {
+    !([_x] call EFUNC(common,isPlayer)) &&
+    {(side group _x isEqualTo sideUnknown) || {[side group _player, side group _x] call BIS_fnc_sideIsFriendly}}
+});
 
 // backpacks/uniforms/etc need to be added manually.
 // array can't be modified while iterating, use copy
