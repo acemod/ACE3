@@ -446,6 +446,7 @@ class CfgVehicles {
     };
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2;
+        GVAR(noRename) = 1;
     };
 
     class Lamps_base_F;
