@@ -39,9 +39,9 @@ if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {};
 
 // Try to use existing container
 private _container = _unloadTo getVariable [QGVAR(container), objNull];
-if ((_container distance _unloadTo) > 4) then { _container = objNull; };
+if ((_container distance _unloadTo) > 10) then { _container = objNull; };
 if (isNull _container) then {
-    _container = (nearestObjects [_unloadTo, ["groundWeaponHolder"], 4]) param [0, objNull];
+    _container = (nearestObjects [_unloadTo, [QGVAR(ammo_holder)], 10]) param [0, objNull];
 };
 
 
@@ -49,8 +49,7 @@ if (isNull _container) then {
     // Create ground weapon holder container
     private _weaponRelPos = _unloadTo getRelPos RELATIVE_DIRECTION(270);
     _weaponRelPos set [2, ((getPosATL _unloadTo) select 2) + 0.05];
-    _container = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
-    // ToDo: Unload to ammo box??
+    _container = createVehicle [QGVAR(ammo_holder), [0, 0, 0], [], 0, "NONE"];
     _unloadTo setVariable [QGVAR(container), _container, true];
     _container setDir random [0, 180, 360];
     _container setPosATL _weaponRelPos;

@@ -41,11 +41,11 @@
         {
             _x params ["_xMag", "", "_xAmmo"];
 
-            private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
+            private _carryMag = GVAR(vehicleMagCache) get _xMag;
             if (isNil "_carryMag") then {
                 private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
                 _carryMag = configName (_groups param [0, configNull]);
-                GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
+                GVAR(vehicleMagCache) set [_xMag, _carryMag];
                 TRACE_2("setting cache",_xMag,_carryMag);
             };
             if ((_xAmmo > 0) && {_carryMag != ""}) then {
@@ -93,4 +93,3 @@
 
     [TIME_PROGRESSBAR(_pickupTime), [_staticWeapon, _player, _carryWeaponClassname, _turretClassname, _onDisassembleFunc], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
-

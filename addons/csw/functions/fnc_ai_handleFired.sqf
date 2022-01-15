@@ -28,6 +28,8 @@ private _reloadSource = objNull;
 private _reloadMag = "";
 private _reloadNeededAmmo = -1;
 
+private _cfgMagGroups = configFile >> QGVAR(groups);
+
 // Find if there is anything we can reload with
 {
     scopeName "findSource";
@@ -35,8 +37,10 @@ private _reloadNeededAmmo = -1;
 
     private _cswMagazines  = [];
     {
-        if (isClass (configFile >> QGVAR(groups) >> _x)) then { _cswMagazines pushBackUnique _x; };
-    } forEach (if (_xSource isKindOf "CaManBase") then {magazines _x} else {magazineCargo _x});
+        _cswMagazines pushBackUnique _x;
+    } forEach ((
+        if (_xSource isKindOf "CaManBase") then {magazines _x} else {magazineCargo _x}
+    ) select {isClass (_cfgMagGroups >> _x)});
     TRACE_2("",_xSource,_cswMagazines);
 
     private _compatibleMags = [_magazine] + ([_weapon] call CBA_fnc_compatibleMagazines); // Check current mag first
@@ -44,8 +48,8 @@ private _reloadNeededAmmo = -1;
     {
         private _xWeaponMag = _x;
         {
-            if ((getNumber (configFile >> QGVAR(groups) >> _x >> _xWeaponMag)) == 1) then {
-                private _loadInfo = [_staticWeapon, _turretPath, _reloadMag, objNull] call FUNC(reload_canLoadMagazine);
+            if ((getNumber (_cfgMagGroups >> _x >> _xWeaponMag)) == 1) then {
+                private _loadInfo = [_staticWeapon, _turretPath, _reloadMag, _xSource] call FUNC(reload_canLoadMagazine);
                 if (_loadInfo select 0) then {
                     _reloadMag = _x;
                     _reloadSource = _xSource;
@@ -56,7 +60,7 @@ private _reloadNeededAmmo = -1;
             };
         } forEach _cswMagazines;
     } forEach _compatibleMags;
-} forEach ([_gunner] + (_staticWeapon nearSupplies 10));
+} forEach ([_gunner] + ((_staticWeapon nearSupplies 10) select {!([_x] call EFUNC(common,isPlayer))}));
 if (_reloadMag == "") exitWith {TRACE_1("could not find mag",_reloadMag);};
 
 // Figure out what we can add from the magazines we have

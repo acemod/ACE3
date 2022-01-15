@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-GVAR(vehicleMagCache) = call CBA_fnc_createNamespace;
+GVAR(vehicleMagCache) = createHashMap;
 
 ["CBA_settingsInitialized", {
     TRACE_3("settingsInit",GVAR(defaultAssemblyMode),GVAR(handleExtraMagazines),GVAR(ammoHandling));
