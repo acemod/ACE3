@@ -7,13 +7,11 @@ class CfgWeapons {
     class MedikitItem;
 
     class FirstAidKit: ItemCore {
-        type = 0;
         class ItemInfo: InventoryFirstAidKitItem_Base_F {
             mass = 4;
         };
     };
     class Medikit: ItemCore {
-        type = 0;
         class ItemInfo: MedikitItem {
             mass = 60;
         };
