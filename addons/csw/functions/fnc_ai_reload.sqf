@@ -24,8 +24,8 @@ private _reloadNeededAmmo = -1;
 private _cfgMagGroups = configFile >> QGVAR(groups);
 
 private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
-    !([_x] call EFUNC(common,isPlayer)) &&
-    {(side group _x isEqualTo sideUnknown) || {[side group _gunner, side group _x] call BIS_fnc_sideIsFriendly}}
+    isNull (group _x) ||
+    {!([_x] call EFUNC(common,isPlayer)) && {[side group _gunner, side group _x] call BIS_fnc_sideIsFriendly}}
 });
 
 // Find if there is anything we can reload with

@@ -24,8 +24,8 @@ private _availableMagazines = createHashMap; // slower than array, still needed 
 
 // filter enemy & player units while allowing pulling from friendly AI, crates, etc
 private _nearSupplies = ((_vehicle nearSupplies 10) select {
-    !([_x] call EFUNC(common,isPlayer)) &&
-    {(side group _x isEqualTo sideUnknown) || {[side group _player, side group _x] call BIS_fnc_sideIsFriendly}}
+    isNull (group _x) ||
+    {!([_x] call EFUNC(common,isPlayer)) && {[side group _player, side group _x] call BIS_fnc_sideIsFriendly}}
 });
 
 // backpacks/uniforms/etc need to be added manually.
