@@ -165,6 +165,7 @@
             <Portuguese>Ativar Menu de Pylon para Zeus</Portuguese>
             <Czech>Povolit menu s pylony pro Zeuse</Czech>
             <Spanish>Habilitar menú de pilones para Zeus</Spanish>
+            <Korean>제우스 파일런 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
             <English>Enables use of the zeus module.</English>
@@ -179,6 +180,7 @@
             <Portuguese>Permite usar o módulo de Zeus</Portuguese>
             <Czech>Povoluje použití daného Zeus modulu.</Czech>
             <Spanish>Habilita el uso del módulo de Zeus.</Spanish>
+            <Korean>제우스 파일런 메뉴를 사용할 수 있게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
             <English>Enable Pylons Menu from Ammo Trucks</English>
@@ -193,6 +195,7 @@
             <Portuguese>Ativar Menu de Pylons de Caminhões de Munição</Portuguese>
             <Czech>Povolit menu s pylony z muničních náklaďáků.</Czech>
             <Spanish>Habilitar menú de pilones desde camiones de munición</Spanish>
+            <Korean>탄약 차량 파일런 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
             <English>Enables use of pylons menu from ammo trucks.</English>
@@ -207,6 +210,7 @@
             <Portuguese>Permite abrir o menu de pylons através de veículos de munição.</Portuguese>
             <Czech>Povoluje použití menu na nastavení pylonů z náklaďáků s municí.</Czech>
             <Spanish>Habilita el uso del menú de pilones desde camiones de munición.</Spanish>
+            <Korean>탄약 차량에서 파일런 메뉴를 불러올 수 있게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
             <English>This aircraft doesn't have pylons</English>
@@ -221,6 +225,7 @@
             <Portuguese>Essa aeronave não possui pylons</Portuguese>
             <Czech>Toto letadlo nemá pylony</Czech>
             <Spanish>Esta aeronave no tiene pilones</Spanish>
+            <Korean>이 비행기는 파일런이 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
             <English>Configure pylons module is disabled for zeus</English>
@@ -235,6 +240,7 @@
             <Portuguese>O Módulo de configurar pylons está desativado para o Zeus</Portuguese>
             <Czech>Nastavení pylonů je vypnuto pro Zeuse</Czech>
             <Spanish>La configuración del módulo de pilones está deshabilitada para Zeus</Spanish>
+            <Korean>제우스 파일런 모듈 설정이 비활성화 되어있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>

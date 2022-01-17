@@ -19,9 +19,9 @@ This page describes how you can setup your development environment for ACE3, all
 - [Python 3.x](https://www.python.org/)
 - [Mikero Tools](https://mikero.bytex.digital/Downloads): DePbo, DeOgg, Rapify, MakePbo, PboProject >=3.16
   - `*.hpp` removed from PboProject's "Exclude From Pbo" list
-  - `-F rebuild RequiredAddons` disabled
 - Python, Mikero Tools and Git in PATH environment variable
 - [CBA](https://github.com/CBATeam/CBA_A3/releases/latest) mod (release or development version)
+- [HEMTT](https://github.com/BrettMayson/HEMTT) is needed for "file patching" dev builds using build.py. Put hemtt.exe in root ace folder
 
 
 ## 2. Why so complicated?

@@ -582,6 +582,7 @@
             <French>Limites horizontales</French>
             <Czech>Horizontální limity</Czech>
             <Spanish>Límites horizontales</Spanish>
+            <Korean>수평 한계</Korean>
         </Key>
         <Key ID="STR_ACE_Scopes_statVerticalLimits">
             <English>Vertical limits</English>
@@ -596,6 +597,7 @@
             <French>Limites verticales</French>
             <Czech>Vertikální limity</Czech>
             <Spanish>Límites verticales</Spanish>
+            <Korean>수직 한계</Korean>
         </Key>
     </Package>
 </Project>

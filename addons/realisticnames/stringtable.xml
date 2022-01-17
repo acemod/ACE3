@@ -712,6 +712,7 @@
             <Czech>KamAZ MRL (raketové dělostřelectvo)</Czech>
             <Spanish>KamAZ MRL</Spanish>
             <Turkish>KamAZ </Turkish>
+            <Korean>KamAZ MRL</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -1333,6 +1334,7 @@
             <Polish>Ładunek burzący M183 (Rzucany)</Polish>
             <German>M183 Geballte Sprengladung (Werfbar)</German>
             <Chinesesimp>M183炸药包（可投掷）</Chinesesimp>
+            <Korean>M183 폭파 장약 (투척)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1361,6 +1363,7 @@
             <Polish>Ładunek burzący M112 (Rzucany)</Polish>
             <German>M112 Sprengladung (Werfbar)</German>
             <Chinesesimp>M112塑性炸药（可投掷）</Chinesesimp>
+            <Korean>M112 폭파 장약 (투척)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -1393,6 +1396,7 @@
             <Spanish>Mini Granada V40</Spanish>
             <Turkish>V40 Mini-El Bombası</Turkish>
             <Chinesesimp>V40迷你手榴弹</Chinesesimp>
+            <Korean>V40 소형 수류탄</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1799,6 +1803,7 @@
             <Czech>Metis-M</Czech>
             <Turkish>Metis-M</Turkish>
             <Spanish>Metis-M</Spanish>
+            <Korean>Metis-M</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
             <English>Metis-M (Brown)</English>
@@ -1814,6 +1819,7 @@
             <Czech>Metis-M (hnědý)</Czech>
             <Spanish>Metis-M (Marrón)</Spanish>
             <Turkish>Metis-M (Kahverengi)</Turkish>
+            <Korean>Metis-M (갈색)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
@@ -1829,6 +1835,7 @@
             <Czech>Metis-M (zelený)</Czech>
             <Spanish>Metis-M (Verde)</Spanish>
             <Turkish>Metis-M (Yeşil)</Turkish>
+            <Korean>Metis-M (녹색)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -2959,7 +2966,7 @@
             <Hungarian>Jeep Wrangler</Hungarian>
             <Portuguese>Jeep Wrangler</Portuguese>
             <Japanese>ジープ ラングラー</Japanese>
-            <Korean>Jeep Wrangler</Korean>
+            <Korean>지프 랭글러</Korean>
             <Chinese>"牧馬人"吉普車</Chinese>
             <Chinesesimp>"牧马人"吉普车</Chinesesimp>
             <Turkish>Jeep Wrangler</Turkish>
@@ -2978,6 +2985,7 @@
             <Czech>Jeep Wrangler (SPG-9)</Czech>
             <Turkish>Jeep Wrangler (SPG-9)</Turkish>
             <Spanish>Jeep Wrangler (SPG-9)</Spanish>
+            <Korean>지프 랭글러 (SPG-9)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
             <English>Jeep Wrangler (LMG)</English>
@@ -2993,6 +3001,7 @@
             <Czech>Jeep Wrangler (LMG)</Czech>
             <Turkish>Jeep Wrangler (LMG)</Turkish>
             <Spanish>Jeep Wrangler (LMG)</Spanish>
+            <Korean>지프 랭글러 (경기관총)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
@@ -3603,6 +3612,7 @@
             <Czech>Polaris DAGOR (XM312)</Czech>
             <Turkish>Polaris DAGOR (XM312)</Turkish>
             <Spanish>Polaris DAGOR (XM312)</Spanish>
+            <Korean>Polaris DAGOR (XM312)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
@@ -3618,6 +3628,7 @@
             <Czech>Polaris DAGOR (Mini-Spike AT)</Czech>
             <Turkish>Polaris DAGOR (Mini-Spike AT)</Turkish>
             <Spanish>Polaris DAGOR (Mini-Spike AT)</Spanish>
+            <Korean>Polaris DAGOR (Mini-Spike 대전차)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3633,6 +3644,7 @@
             <Czech>Polaris DAGOR</Czech>
             <Turkish>Polaris DAGOR</Turkish>
             <Spanish>Polaris DAGOR</Spanish>
+            <Korean>Polaris DAGOR</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
@@ -3648,6 +3660,7 @@
             <Czech>Polaris DAGOR (lehký)</Czech>
             <Turkish>Polaris DAGOR (light)</Turkish>
             <Spanish>Polaris DAGOR (ligero)</Spanish>
+            <Korean>Polaris DAGOR (경량)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
@@ -3663,6 +3676,7 @@
             <Czech>LSV Mk. II (M134)</Czech>
             <Turkish>LSV Mk. II (M134)</Turkish>
             <Spanish>LSV Mk. II (M134)</Spanish>
+            <Korean>LSV Mk. II (M134)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -3678,6 +3692,7 @@
             <Czech>LSV Mk. II (Metis-M)</Czech>
             <Turkish>LSV Mk. II (Metis-M)</Turkish>
             <Spanish>LSV Mk. II (Metis-M)</Spanish>
+            <Korean>LSV Mk. II (Metis-M)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -3693,6 +3708,7 @@
             <Czech>LSV Mk. II</Czech>
             <Turkish>LSV Mk. II</Turkish>
             <Spanish>LSV Mk. II</Spanish>
+            <Korean>LSV Mk. II</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -3708,6 +3724,7 @@
             <Czech>Rooikat 120</Czech>
             <Turkish>Rooikat 120</Turkish>
             <Spanish>Rooikat 120</Spanish>
+            <Korean>Rooikat 120</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01_up">
             <English>Rooikat 120 UP</English>
@@ -3723,6 +3740,7 @@
             <Czech>Rooikat 120 UP</Czech>
             <Turkish>Rooikat 120 UP</Turkish>
             <Spanish>Rooikat 120 UP</Spanish>
+            <Korean>Rooikat 120 UP</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
@@ -3738,6 +3756,7 @@
             <Czech>T-14 Armata</Czech>
             <Turkish>T-14 Armata</Turkish>
             <Spanish>T-14 Armata</Spanish>
+            <Korean>T-14 Armata</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_command">
             <English>T-14K Armata</English>
@@ -3753,6 +3772,7 @@
             <Czech>T-14K Armata</Czech>
             <Turkish>T-14K Armata</Turkish>
             <Spanish>T-14K Armata</Spanish>
+            <Korean>T-14K Armata</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
@@ -3768,6 +3788,7 @@
             <Czech>Wiesel 2 Ozelot (AA)</Czech>
             <Turkish>Wiesel 2 Ozelot (AA)</Turkish>
             <Spanish>Wiesel 2 Ozelot (AA)</Spanish>
+            <Korean>Wiesel 2 Ozelot (대공)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
@@ -3783,6 +3804,7 @@
             <Czech>Wiesel 2 (ATGM)</Czech>
             <Turkish>Wiesel 2 (ATGM)</Turkish>
             <Spanish>Wiesel 2 (ATGM)</Spanish>
+            <Korean>Wiesel 2 (대전차유도)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
@@ -3798,6 +3820,7 @@
             <Czech>Wiesel 2 (MK20)</Czech>
             <Turkish>Wiesel 2 (MK20)</Turkish>
             <Spanish>Wiesel 2 (MK20)</Spanish>
+            <Korean>Wiesel 2 (MK20)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_scout">
             <English>Wiesel 2 RFCV (Radar)</English>
@@ -3813,6 +3836,7 @@
             <Czech>Wiesel 2 RFCV (Radar)</Czech>
             <Turkish>Wiesel 2 RFCV (Radar)</Turkish>
             <Spanish>Wiesel 2 RFCV (Radar)</Spanish>
+            <Korean>Wiesel 2 RFCV (레이다)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -3828,6 +3852,7 @@
             <Czech>Leupold Mark 4 HAMR</Czech>
             <Turkish>Leupold Mark 4 HAMR</Turkish>
             <Spanish>Leupold Mark 4 HAMR</Spanish>
+            <Korean>Leupold Mark 4 HAMR</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
             <English>Leupold Mark 4 HAMR (Khaki)</English>
@@ -3843,6 +3868,7 @@
             <Czech>Leupold Mark 4 HAMR (Khaki)</Czech>
             <Turkish>Leupold Mark 4 HAMR (Haki)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (Caqui)</Spanish>
+            <Korean>Leupold Mark 4 HAMR (Khaki)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_2d">
             <English>Leupold Mark 4 HAMR (2D)</English>
@@ -3858,6 +3884,7 @@
             <Czech>Leupold Mark 4 HAMR (2D)</Czech>
             <Turkish>Leupold Mark 4 HAMR (2D)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (2D)</Spanish>
+            <Korean>Leupold Mark 4 HAMR (2D)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_pip">
             <English>Leupold Mark 4 HAMR (PIP)</English>
@@ -3873,6 +3900,7 @@
             <Czech>Leupold Mark 4 HAMR (PIP)</Czech>
             <Turkish>Leupold Mark 4 HAMR (PIP)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (PIP)</Spanish>
+            <Korean>Leupold Mark 4 HAMR (PIP)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
@@ -3888,6 +3916,7 @@
             <Czech>ELCAN SpecterOS (Žlutohnědá)</Czech>
             <Turkish>ELCAN SpecterOS (Tan)</Turkish>
             <Spanish>ELCAN SpecterOS (Tan)</Spanish>
+            <Korean>ELCAN SpecterOS (황갈)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_blk">
             <English>ELCAN SpecterOS (Black)</English>
@@ -3903,6 +3932,7 @@
             <Czech>ELCAN SpecterOS (Černá)</Czech>
             <Turkish>ELCAN SpecterOS (Siyah)</Turkish>
             <Spanish>ELCAN SpecterOS (Negra)</Spanish>
+            <Korean>ELCAN SpecterOS (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
             <English>ELCAN SpecterOS (Green Hex)</English>
@@ -3918,6 +3948,7 @@
             <Turkish>ELCAN SpecterOS (Yeşil Hex)</Turkish>
             <Spanish>ELCAN SpecterOS (Verde Hex)</Spanish>
             <German>ELCAN SpecterOS (Hex Grün)</German>
+            <Korean>ELCAN SpecterOS (초록육각)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_2d">
             <English>ELCAN SpecterOS (2D)</English>
@@ -3933,6 +3964,7 @@
             <Czech>ELCAN SpecterOS (2D)</Czech>
             <Turkish>ELCAN SpecterOS (2D)</Turkish>
             <Spanish>ELCAN SpecterOS (2D)</Spanish>
+            <Korean>ELCAN SpecterOS (2D)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_pip">
             <English>ELCAN SpecterOS (PIP)</English>
@@ -3948,6 +3980,7 @@
             <Czech>ELCAN SpecterOS (PIP)</Czech>
             <Turkish>ELCAN SpecterOS (PIP)</Turkish>
             <Spanish>ELCAN SpecterOS (PIP)</Spanish>
+            <Korean>ELCAN SpecterOS (PIP)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
             <English>ELCAN SpecterOS (Lush)</English>
@@ -3956,6 +3989,7 @@
             <Japanese>ELCAN SpecterOS (緑地)</Japanese>
             <German>ELCAN SpecterOS (Grün)</German>
             <Chinesesimp>ELCAN SpecterOS (繁茂)</Chinesesimp>
+            <Korean>ELCAN SpecterOS (초목)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
@@ -3964,6 +3998,7 @@
             <Japanese>ELCAN SpecterOS (乾燥地帯)</Japanese>
             <German>ELCAN SpecterOS (Trocken)</German>
             <Chinesesimp>ELCAN SpecterOS (干旱)</Chinesesimp>
+            <Korean>ELCAN SpecterOS (건조)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
@@ -3972,6 +4007,7 @@
             <Japanese>ELCAN SpecterOS 7.62 (ブラック)</Japanese>
             <German>ELCAN SpecterOS 7.62 (Schwarz)</German>
             <Chinesesimp>ELCAN SpecterOS 7.62 (黑色)</Chinesesimp>
+            <Korean>ELCAN SpecterOS 7.62 (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
@@ -3980,6 +4016,7 @@
             <Japanese>ELCAN SpecterOS 7.62 (緑地)</Japanese>
             <German>ELCAN SpecterOS 7.62 (Grün)</German>
             <Chinesesimp>ELCAN SpecterOS 7.62 (繁茂)</Chinesesimp>
+            <Korean>ELCAN SpecterOS 7.62 (초목)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
@@ -3988,6 +4025,7 @@
             <Japanese>ELCAN SpecterOS 7.62 (乾燥地帯)</Japanese>
             <German>ELCAN SpecterOS 7.62 (Trocken)</German>
             <Chinesesimp>ELCAN SpecterOS 7.62 (干旱)</Chinesesimp>
+            <Korean>ELCAN SpecterOS 7.62 (건조)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4003,6 +4041,7 @@
             <Czech>SIG BRAVO4 / ROMEO3 (Černá)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Siyah)</Turkish>
             <Spanish>SIG BRAVO4 / ROMEO3 (Negra)</Spanish>
+            <Korean>SIG BRAVO4 / ROMEO3 (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
             <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
@@ -4018,6 +4057,7 @@
             <Czech>SIG BRAVO4 / ROMEO3 (Khaki)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Haki)</Turkish>
             <Spanish>SIG BRAVO4 / ROMEO3 (Caqui)</Spanish>
+            <Korean>SIG BRAVO4 / ROMEO3 (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -4033,6 +4073,7 @@
             <Czech>SIG BRAVO4 / ROMEO3 (Písková)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Kum)</Turkish>
             <Spanish>SIG BRAVO4 / ROMEO3 (Arena)</Spanish>
+            <Korean>SIG BRAVO4 / ROMEO3 (사막)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
@@ -4048,6 +4089,7 @@
             <Turkish>Nightforce NXS</Turkish>
             <Spanish>Nightforce NXS</Spanish>
             <German>Nightforce NXS</German>
+            <Korean>Nightforce NXS</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
@@ -4063,6 +4105,7 @@
             <Turkish>Nightforce NXS (Yeşil Hex)</Turkish>
             <Spanish>Nightforce NXS (Verde Hex)</Spanish>
             <German>Nightforce NXS (Hex Grün)</German>
+            <Korean>Nightforce NXS (초록육각)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -4078,6 +4121,7 @@
             <Czech>Nightforce NXS (Džungle)</Czech>
             <Turkish>Nightforce NXS (Orman)</Turkish>
             <Spanish>Nightforce NXS (Jungla)</Spanish>
+            <Korean>Nightforce NXS (정글)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_2d">
             <English>Nightforce NXS (2D)</English>
@@ -4093,6 +4137,7 @@
             <Turkish>Nightforce NXS (2D)</Turkish>
             <Spanish>Nightforce NXS (2D)</Spanish>
             <German>Nightforce NXS (2D)</German>
+            <Korean>Nightforce NXS (2D)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_pip">
             <English>Nightforce NXS (PIP)</English>
@@ -4108,6 +4153,7 @@
             <Turkish>Nightforce NXS (PIP)</Turkish>
             <Spanish>Nightforce NXS (PIP)</Spanish>
             <German>Nightforce NXS (BIB)</German>
+            <Korean>Nightforce NXS (PIP)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -4123,6 +4169,7 @@
             <Turkish>US Optics MR-10 (Siyah)</Turkish>
             <Spanish>US Optics MR-10 (Negra)</Spanish>
             <German>US Optics MR-10 (Schwarz)</German>
+            <Korean>US Optics MR-10 (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -4138,6 +4185,7 @@
             <Turkish>US Optics MR-10 (Haki)</Turkish>
             <Spanish>US Optics MR-10 (Caqui)</Spanish>
             <German>US Optics MR-10 (Khaki)</German>
+            <Korean>US Optics MR-10 (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -4153,6 +4201,7 @@
             <Turkish>US Optics MR-10 (Kum)</Turkish>
             <Spanish>US Optics MR-10 (Arena)</Spanish>
             <German>US Optics MR-10 (Sand)</German>
+            <Korean>US Optics MR-10 (사막)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -4168,6 +4217,7 @@
             <Turkish>KAHLES Helia (Siyah)</Turkish>
             <Spanish>KAHLES Helia (Negra)</Spanish>
             <German>KAHLES Helia (Schwarz)</German>
+            <Korean>KAHLES Helia (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -4183,6 +4233,7 @@
             <Turkish>KAHLES Helia (Hex)</Turkish>
             <Spanish>KAHLES Helia (Hex)</Spanish>
             <German>KAHLES Helia (Hex)</German>
+            <Korean>KAHLES Helia (육각)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -4198,6 +4249,7 @@
             <Turkish>KAHLES Helia (Eski)</Turkish>
             <Spanish>KAHLES Helia (Vieja)</Spanish>
             <German>KAHLES Helia (Alt)</German>
+            <Korean>KAHLES Helia (낡음)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -4213,6 +4265,7 @@
             <Turkish>KAHLES Helia (Tan)</Turkish>
             <Spanish>KAHLES Helia (Tan)</Spanish>
             <German>KAHLES Helia (Tan)</German>
+            <Korean>KAHLES Helia (황갈)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
@@ -4228,6 +4281,7 @@
             <Turkish>Burris XTR II</Turkish>
             <Spanish>Burris XTR II</Spanish>
             <German>Burris XTR II</German>
+            <Korean>Burris XTR II</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
@@ -4243,6 +4297,7 @@
             <Turkish>Burris XTR II (Yeşil Hex)</Turkish>
             <Spanish>Burris XTR II (Verde Hex)</Spanish>
             <German>Burris XTR II (Hex Grün)</German>
+            <Korean>Burris XTR II (초록육각)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
             <English>Burris XTR II (Old)</English>
@@ -4251,6 +4306,7 @@
             <Japanese>Burris XTR II (使い古し)</Japanese>
             <German>Burris XTR II (Alt)</German>
             <Chinesesimp>Burris XTR II (陈旧)</Chinesesimp>
+            <Korean>Burris XTR II (낡음)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
@@ -4259,6 +4315,7 @@
             <Japanese>Burris XTR II (ASP-1 Kir)</Japanese>
             <German>Burris XTR II (ASP-1 Kir)</German>
             <Chinesesimp>Burris XTR II (ASP-1 Kir)</Chinesesimp>
+            <Korean>Burris XTR II (ASP-1 Kir)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4274,6 +4331,7 @@
             <Czech>EOTech XPS3 (Žlutohnědá)</Czech>
             <Turkish>EOTech XPS3 (Tan)</Turkish>
             <Spanish>EOTech XPS3 (Tan)</Spanish>
+            <Korean>EOTech XPS3 (황갈)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_blk">
             <English>EOTech XPS3 (Black)</English>
@@ -4289,6 +4347,7 @@
             <Czech>EOTech XPS3 (Černá)</Czech>
             <Turkish>EOTech XPS3 (Siyah)</Turkish>
             <Spanish>EOTech XPS3 (Negra)</Spanish>
+            <Korean>EOTech XPS3 (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_khk">
             <English>EOTech XPS3 (Khaki)</English>
@@ -4304,6 +4363,7 @@
             <Czech>EOTech XPS3 (Khaki)</Czech>
             <Turkish>EOTech XPS3 (Haki)</Turkish>
             <Spanish>EOTech XPS3 (Caqui)</Spanish>
+            <Korean>EOTech XPS3 (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_lush">
             <English>EOTech XPS3 (Lush)</English>
@@ -4312,6 +4372,7 @@
             <Japanese>EOTech XPS3 (緑地)</Japanese>
             <German>EOTech XPS3 (Grün)</German>
             <Chinesesimp>EOTech XPS3 (繁茂)</Chinesesimp>
+            <Korean>EOTech XPS3 (초목)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
@@ -4320,6 +4381,7 @@
             <Japanese>EOTech XPS3 (乾燥地帯)</Japanese>
             <German>EOTech XPS3 (Trocken)</German>
             <Chinesesimp>EOTech XPS3 (干旱)</Chinesesimp>
+            <Korean>EOTech XPS3 (건조)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4335,6 +4397,7 @@
             <Czech>EOTech XPS3 SMG (Žlutohnědá)</Czech>
             <Turkish>EOTech XPS3 SMG (Tan)</Turkish>
             <Spanish>EOTech XPS3 SMG (Tan)</Spanish>
+            <Korean>EOTech XPS3 SMG (황갈)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_blk">
             <English>EOTech XPS3 SMG (Black)</English>
@@ -4350,6 +4413,7 @@
             <Czech>EOTech XPS3 SMG (Černá)</Czech>
             <Turkish>EOTech XPS3 SMG (Siyah)</Turkish>
             <Spanish>EOTech XPS3 SMG (Negra)</Spanish>
+            <Korean>EOTech XPS3 SMG (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_khk">
             <English>EOTech XPS3 SMG (Khaki)</English>
@@ -4365,6 +4429,7 @@
             <Czech>EOTech XPS3 SMG (Khaki)</Czech>
             <Turkish>EOTech XPS3 SMG (Hakii)</Turkish>
             <Spanish>EOTech XPS3 SMG (Caqui)</Spanish>
+            <Korean>EOTech XPS3 SMG (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
@@ -4380,6 +4445,7 @@
             <Turkish>IOR-Valdada Pitbull 2</Turkish>
             <Spanish>IOR-Valdada Pitbull 2</Spanish>
             <German>IOR-Valdada Pitbull 2</German>
+            <Korean>IOR-Valdada Pitbull 2</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_2d">
             <English>IOR-Valdada Pitbull 2 (2D)</English>
@@ -4395,6 +4461,7 @@
             <Turkish>IOR-Valdada Pitbull 2 (2D)</Turkish>
             <Spanish>IOR-Valdada Pitbull 2 (2D)</Spanish>
             <German>IOR-Valdada Pitbull 2 (2D)</German>
+            <Korean>IOR-Valdada Pitbull 2 (2D)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_pip">
             <English>IOR-Valdada Pitbull 2 (PIP)</English>
@@ -4410,6 +4477,7 @@
             <Turkish>IOR-Valdada Pitbull 2 (PIP)</Turkish>
             <Spanish>IOR-Valdada Pitbull 2 (PIP)</Spanish>
             <German>IOR-Valdada Pitbull 2 (BIB)</German>
+            <Korean>IOR-Valdada Pitbull 2 (PIP)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -4425,6 +4493,7 @@
             <Turkish>Burris FastFire 2</Turkish>
             <Spanish>Burris FastFire 2</Spanish>
             <German>Burris FastFire 2</German>
+            <Korean>Burris FastFire 2</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>
@@ -4440,6 +4509,7 @@
             <Czech>C-More Railway (Červený)</Czech>
             <Turkish>C-More Railway (Kırmızı)</Turkish>
             <Spanish>C-More Railway (Roja)</Spanish>
+            <Korean>C-More Railway (빨강)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn">
             <English>C-More Railway (Green)</English>
@@ -4455,6 +4525,7 @@
             <Czech>C-More Railway (Zelený)</Czech>
             <Turkish>C-More Railway (Yeşil)</Turkish>
             <Spanish>C-More Railway (Verde)</Spanish>
+            <Korean>C-More Railway (초록)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_smg">
             <English>C-More Railway SMG (Red)</English>
@@ -4470,6 +4541,7 @@
             <Czech>C-More Railway SMG (Červený)</Czech>
             <Turkish>C-More Railway SMG (Kırmızı)</Turkish>
             <Spanish>C-More Railway SMG (Roja)</Spanish>
+            <Korean>C-More Railway SMG (빨강)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn_smg">
             <English>C-More Railway SMG (Green)</English>
@@ -4485,6 +4557,7 @@
             <Czech>C-More Railway SMG (Zelený)</Czech>
             <Turkish>C-More Railway SMG (Yeşil)</Turkish>
             <Spanish>C-More Railway SMG (Verde)</Spanish>
+            <Korean>C-More Railway SMG (초록)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Black_Name">
             <English>P90 TR (Black)</English>
@@ -5126,7 +5199,7 @@
             <German>MSBS Grot (Sandfarben)</German>
             <Czech>MSBS Grot (Písková)</Czech>
             <Portuguese>MSBS Grot (Deserto)</Portuguese>
-            <Korean>MSBS Grot (모래)</Korean>
+            <Korean>MSBS Grot (사막)</Korean>
             <Chinesesimp>MSBS Grot(沙色)</Chinesesimp>
             <Japanese>MSBS グロート (サンド)</Japanese>
             <Turkish>MSBS Grot (Kum)</Turkish>
@@ -5194,7 +5267,7 @@
             <German>MSBS Grot GL (Sandfarben)</German>
             <Czech>MSBS Grot GL (Písková)</Czech>
             <Portuguese>MSBS Grot GL (Deserto)</Portuguese>
-            <Korean>MSBS Grot GL (모래)</Korean>
+            <Korean>MSBS Grot GL (사막)</Korean>
             <Chinesesimp>MSBS Grot GL(沙色)</Chinesesimp>
             <Japanese>MSBS グロート GL (サンド)</Japanese>
             <Turkish>MSBS Grot GL (Kum)</Turkish>
@@ -5262,7 +5335,7 @@
             <German>MSBS Grot MR (Sandfarben)</German>
             <Czech>MSBS Grot MR (Písková)</Czech>
             <Portuguese>MSBS Grot MR (Deserto)</Portuguese>
-            <Korean>MSBS Grot MR (모래)</Korean>
+            <Korean>MSBS Grot MR (사막)</Korean>
             <Chinesesimp>MSBS Grot MR(沙色)</Chinesesimp>
             <Japanese>MSBS グロート MR (サンド)</Japanese>
             <Turkish>MSBS Grot MR (Kum)</Turkish>
@@ -5330,7 +5403,7 @@
             <German>MSBS Grot SG (Sandfarben)</German>
             <Czech>MSBS Grot SG (Písková)</Czech>
             <Portuguese>MSBS Grot SG (Deserto)</Portuguese>
-            <Korean>MSBS Grot SG (모래)</Korean>
+            <Korean>MSBS Grot SG (사막)</Korean>
             <Chinesesimp>MSBS Grot SG(沙色)</Chinesesimp>
             <Japanese>MSBS グロート SG (サンド)</Japanese>
             <Turkish>MSBS Grot SG (Kum)</Turkish>

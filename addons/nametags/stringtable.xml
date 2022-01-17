@@ -387,6 +387,7 @@
             <Czech>Průhlednost jmenovek</Czech>
             <Spanish>Transparencia de etiquetas de jugadores</Spanish>
             <Turkish>Oyuncu etiketlerinde şeffaflık</Turkish>
+            <Korean>플레이어 이름 투명도</Korean>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
@@ -532,6 +533,7 @@
             <German>Spielernamen Umgebungshelligkeitskoeffizient</German>
             <Polish>Współczynnik jasności otoczenia </Polish>
             <Chinesesimp>铭牌的环境亮度系数</Chinesesimp>
+            <Korean>이름표 배경 밝기 계수</Korean>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">
             <English>Adjusts how strongly ambient brightness affects nametag view distance.</English>
@@ -541,6 +543,7 @@
             <German>Stellt ein, wie stark sich die Umgebungshelligkeit auf die Sichtweite der Spielernamen auswirkt.</German>
             <Polish>Definiuje jak bardzo jasność otoczenia wpływa na zasięg wyświetlania imion postaci.</Polish>
             <Chinesesimp>调整环境亮度对铭牌查看距离的影响程度。</Chinesesimp>
+            <Korean>배경 밝기가 이름표를 보는 거리에 얼마나 영향을 끼치는지를 조절합니다.</Korean>
         </Key>
     </Package>
 </Project>

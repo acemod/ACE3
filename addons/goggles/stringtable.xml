@@ -145,6 +145,7 @@
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
             <Russian>Показывать Протереть очки в меню взаимодействия с собой</Russian>
+            <Korean>자기상호작용에 고글 닦기 선택 보이기</Korean>
         </Key>
     </Package>
 </Project>
