@@ -164,7 +164,7 @@
             <English>Destroy Vehicles After Cook-Off</English>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
-            <English>Whether or not vehicles will always be destroyed after cooking off. Depending on the cookoff the vehicle may explode, or may simply be killed without effects</English>
+            <English>Controls whether vehicles will always be destroyed after cooking off. Depending on the cookoff, the vehicle may explode or may simply be killed without effects.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>
