@@ -63,7 +63,7 @@
             <Russian>Включает ограничитель дальности видимости ACE</Russian>
             <Italian>Abilita distanza visiva ACE</Italian>
             <Japanese>ACE 視界距離を有効化</Japanese>
-            <Korean>ACE 시야 활성화</Korean>
+            <Korean>ACE 시야를 활성화 합니다.</Korean>
             <Chinesesimp>启用ACE视距</Chinesesimp>
             <Chinese>啟用ACE視距</Chinese>
             <Turkish>ACE Görüş Uzaklığını Aktif Et</Turkish>
@@ -114,13 +114,15 @@
             <Russian>Предел дальности видимости клиентов устанавливается здесь и может быть переопределен модулем</Russian>
             <Italian>Limite per la distanza visiva del client impostato qui e può essere scavalcato dal modulo</Italian>
             <Japanese>クライアントへの視界距離の設定や、それをモジュールにより上書きできます</Japanese>
-            <Korean>클라이언트의 시야를 이 모듈로 치환할 수 있습니다.</Korean>
+            <Korean>클라이언트의 시야를 이 모듈로 덮어씌울 수 있습니다.</Korean>
             <Chinesesimp>玩家的视距限制可在此设定，也可透过模块改写</Chinesesimp>
             <Chinese>玩家的視距限制可在此設定，也可透過模塊改寫</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_sliderExtraDescription">
             <English>Setting to 0 will use default video settings</English>
             <Chinesesimp>设置为0将使用默认的视频设置</Chinesesimp>
+            <Korean>0으로 설정시 기존 비디오 설정을 사용합니다.</Korean>
+            <German>Bei Einstellung auf 0 werden die Standard-Videoeinstellungen verwendet.</German>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
@@ -252,7 +254,7 @@
             <Russian>Устанавливает дальность отрисовки объектов как коэффициент от общей дальности видимости.</Russian>
             <Italian>Imposta la distanza visiva degli oggetti come un coefficiente basato sulla distanza visiva oppure basato sul campo visivo.</Italian>
             <Japanese>視野角を元にするか、視界距離によるオブジェクト描画距離を決定します。視野角を元にするオプションを有効化した場合、視野角により最低と最高値が変動します。</Japanese>
-            <Korean>설정된 시야 혹은 시계(FoV)에 계수를 적용해 물체 시야를 적용합니다. 시계를 바탕으로 하는 옵션을 활성화할 경우 시계에 의한 최저와 최고치가 변동됩니다.</Korean>
+            <Korean>설정된 시야 혹은 시야각(FoV)에 계수를 적용해 물체 시야를 적용합니다. 시계를 바탕으로 하는 옵션을 활성화할 경우 시계에 의한 최저와 최고치가 변동됩니다.</Korean>
             <Chinesesimp>设定物件可被观察的距离，透过视野距离或是视野角度来决定。</Chinesesimp>
             <Chinese>設定物件可被觀察的距離，透過視野距離或是視野角度來決定。</Chinese>
         </Key>
@@ -369,7 +371,7 @@
             <Spanish>Basada en campo de visión</Spanish>
             <French>Basée sur le champ de vision</French>
             <Japanese>視野角を元にする</Japanese>
-            <Korean>시계(FoV)</Korean>
+            <Korean>시야각(FoV)</Korean>
             <Chinesesimp>由视野角度决定</Chinesesimp>
             <Chinese>由視野角度決定</Chinese>
         </Key>
@@ -402,7 +404,7 @@
             <Russian>Дальность видимости объектов:</Russian>
             <Italian>Distanza Visiva Oggetti è</Italian>
             <Japanese>オブジェクト描画距離は</Japanese>
-            <Korean>동적 물체 시야는</Korean>
+            <Korean>물체 시야는</Korean>
             <Chinesesimp>物件视野距离为</Chinesesimp>
             <Chinese>物件視野距離為</Chinese>
         </Key>

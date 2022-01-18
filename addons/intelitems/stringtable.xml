@@ -10,6 +10,7 @@
             <Russian>ACE Предметы с данными</Russian>
             <Polish>ACE Przedmioty Wywiadu</Polish>
             <Turkish>ACE Istihbarat Eşyaları</Turkish>
+            <Korean>ACE 정보 아이템</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_DisplayName">
             <English>Intel Items</English>
@@ -20,6 +21,7 @@
             <Russian>Предметы с данными</Russian>
             <Polish>Przedmioty Wywiadu</Polish>
             <Turkish>Istihbarat Eşyaları</Turkish>
+            <Korean>정보 아이템</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_DisplayName">
             <English>Notepad</English>
@@ -30,6 +32,7 @@
             <Russian>Блокнот</Russian>
             <Polish>Notes</Polish>
             <Turkish>Not Defteri</Turkish>
+            <Korean>노트패드</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_Description">
             <English>Notepad - Can access from the map screen</English>
@@ -40,6 +43,7 @@
             <Russian>Блокнот - Можно получить доступ с экрана карты</Russian>
             <Polish>Notes - Dostępne z mapy</Polish>
             <Turkish>Not Defteri - Haritadan erişim sağlanabilinir</Turkish>
+            <Korean>노트패드 - 지도에서 확인 가능합니다</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Document_DisplayName">
             <English>Document</English>
@@ -50,6 +54,7 @@
             <Russian>Документ</Russian>
             <Polish>Dokument</Polish>
             <Turkish>Döküman</Turkish>
+            <Korean>문서</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Document_Description">
             <English>Printed Document - Can access from the map screen</English>
@@ -60,6 +65,7 @@
             <Russian>Распечатанный документ - Можно получить доступ с экрана карты</Russian>
             <Polish>Wydrukowane Dokumenty - Dostępne z mapy</Polish>
             <Turkish>Yazılı Döküman - Haritadan erişim sağlanabilinir</Turkish>
+            <Korean>문서들 - 지도에서 확인 가능합니다</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_DisplayName">
             <English>Photo</English>
@@ -70,6 +76,7 @@
             <Russian>Фотография</Russian>
             <Polish>Zdjęcie</Polish>
             <Turkish>Fotoğraf</Turkish>
+            <Korean>사진</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_Description">
             <English>Photo - Can access from the map screen</English>
@@ -80,6 +87,7 @@
             <Russian>Фотография - Можно получить доступ с экрана карты</Russian>
             <Polish>Zdjęcie - Dostępne z mapy</Polish>
             <Turkish>Fotoğraf - Haritadan erişim sağlanabilinir</Turkish>
+            <Korean>사진 - 지도에서 확인 가능합니다</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Text">
             <English>Text</English>
@@ -95,6 +103,7 @@
             <Chinesesimp>文字</Chinesesimp>
             <Japanese>テキスト</Japanese>
             <Turkish>Yazı</Turkish>
+            <Korean>문자</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_Filename">
             <English>Photo Filename</English>
@@ -105,6 +114,7 @@
             <Russian>Имя файла фотографии</Russian>
             <Polish>Zdjęcie Nazwa Pliku</Polish>
             <Turkish>Fotoğraf Dosya Adı</Turkish>
+            <Korean>사진명</Korean>
         </Key>
         <Key ID="STR_ACE_IntelItems_Pickup">
             <English>Pick Up</English>
@@ -120,6 +130,7 @@
             <Chinesesimp>捡起</Chinesesimp>
             <Japanese>拾う</Japanese>
             <Turkish>Al</Turkish>
+            <Korean>줍기</Korean>
         </Key>
     </Package>
 </Project>

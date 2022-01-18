@@ -255,6 +255,7 @@
             <Chinesesimp>保留载具的视野模式</Chinesesimp>
             <Polish>Zachowaj ustawienie widoku dla pojazdów</Polish>
             <Turkish>Araç türleri için görünümü koru</Turkish>
+            <Korean>차량 타입에 따른 시야 정보 저장</Korean>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewDesc">
             <English>Switch view on vehicle change to last used in this vehicle type (Requires Mode: Disabled)</English>
@@ -265,6 +266,7 @@
             <Chinesesimp>切换到载具时自动切换到上次最后使用的视野模式(需求模式:关闭)</Chinesesimp>
             <Polish>Zmień widok podczas zmiany pojazdu na ustawienie widoku z ostatniego używanego pojazdu tego typu (Wymaga Tryb: Wyłączony</Polish>
             <Turkish>Araçlar için en son kullanılan bakış  türünü kaydet.</Turkish>
+            <Korean>해당 차량 타입에서 마지막으로 사용했던 시야로 설정하여 봅니다 (모드 - 사용 안함 필요)</Korean>
         </Key>
     </Package>
 </Project>

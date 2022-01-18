@@ -269,6 +269,7 @@
             <German>Steigert die Ausbildung von Pionieren, wenn Sie sich in Reparaturfahrzeugen oder -einrichtungen befinden. Aus Ungelerntem wird Pionier, aus Pionier wird ein fortgeschrittener Pionier.</German>
             <Polish>Zwiększ wyszkolenie inżynierów w pojazdach i budynkach naprawczych. Niewyszkoleni zostają inżynierami, inżynierowie zostają zaawansowanymi inżynierami.</Polish>
             <Chinesesimp>在修理车辆或设施时，提升工程师训练。未受过训练的变成工程师，工程师晋升为高级工程师。</Chinesesimp>
+            <Korean>수리 차량이나 시설 주위에 있으면 수리 수준을 높입니다. 정비병이 아닌 사람은 정비병이 되고, 정비병은 정비사가 됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
@@ -1879,7 +1880,7 @@
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
             <French>Outils nécessaires pour le démontage ou le remplacement des roues.</French>
             <Japanese>タイヤの除去と交換にアイテムを必要としますか?</Japanese>
-            <Korean>바퀴를 제거/교체하는데 필요한 물건</Korean>
+            <Korean>바퀴를 제거/교체하는데 필요한 물건을 정합니다.</Korean>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
         </Key>
@@ -1896,6 +1897,7 @@
             <Portuguese>Requerimentos para reparo miscelâneo</Portuguese>
             <Spanish>Requisitos de objetos misceláneos de reparación</Spanish>
             <Russian>Требования к разному ремонту</Russian>
+            <Korean>기타 수리 요구사항</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
@@ -1910,6 +1912,7 @@
             <Spanish>Objetos necesarios para reparar un componente específico del vehículo o quitar/reemplazar las orugas.</Spanish>
             <Italian>Elementi necessari per riparare un componente specifico del veicolo o per rimuovere/sostituire i cingoli</Italian>
             <Russian>Предметы, необходимые для ремонта отдельных компонентов или снятия/замены гусеницы.</Russian>
+            <Korean>차량의 궤도나 부품을 제거/교체할 때 필요한 아이템을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
@@ -1924,6 +1927,7 @@
             <Portuguese>Requerimentos de Reparo Completo</Portuguese>
             <Spanish>Requisitos para reparación completa</Spanish>
             <Russian>Требования к полному ремонту</Russian>
+            <Korean>완전 수리 요구사항</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
@@ -1938,6 +1942,7 @@
             <Spanish>Objetos requeridos para una reparación completa</Spanish>
             <Italian>Elementi necessari per eseguire una riparazione completa del veicolo.</Italian>
             <Russian>Предметы, необходимые для полного ремонта техники.</Russian>
+            <Korean>차량 완전 수리 시 필요한 아이템을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
@@ -1967,6 +1972,7 @@
             <French>Chenilles de rechange</French>
             <Czech>Náhradní pásy</Czech>
             <Spanish>Orugas de repuesto</Spanish>
+            <Korean>여분 궤도</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
@@ -1981,6 +1987,7 @@
             <French>Nombre de chenilles de rechange dans la cargaison.</French>
             <Czech>Počet náhradních pásů v nákladovém prostoru vozidla.</Czech>
             <Spanish>Número de orugas de repuesto en la carga</Spanish>
+            <Korean>화물칸 안에 여분 궤도 수</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
@@ -1995,6 +2002,7 @@
             <French>Roues de secours</French>
             <Czech>Náhradní kola</Czech>
             <Spanish>Ruedas de repuesto</Spanish>
+            <Korean>여분 바퀴</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
@@ -2009,6 +2017,7 @@
             <French>Nombre de roues de secours dans la cargaison.</French>
             <Czech>Počet náhradních kol v nákladovém prostoru vozidla.</Czech>
             <Spanish>Número de ruedas de repuesto en la carga</Spanish>
+            <Korean>화물칸 안에 여분 바퀴 수</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
@@ -2023,6 +2032,7 @@
             <French>Arrêt auto du moteur lors d'une réparation</French>
             <Czech>Automaticky vypnout motor při opravách</Czech>
             <Spanish>Apagar el motor automáticamente al reparar</Spanish>
+            <Korean>수리 시 엔진 자동 끄기</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
@@ -2037,6 +2047,7 @@
             <French>Coupe automatiquement le moteur lorsque des réparations sont effectuées.</French>
             <Czech>Automaticky vypne motor při zahájení oprav.</Czech>
             <Spanish>Apagar el motor automáticamente al efectuar una reparación</Spanish>
+            <Korean>수리 시 엔진을 자동으로 끕니다.</Korean>
         </Key>
     </Package>
 </Project>
