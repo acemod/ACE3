@@ -22,7 +22,7 @@
     QGVAR(destroyVehicleAfterCookoff), "CHECKBOX",
     [LSTRING(destroyVehicleAfterCookoff_name), LSTRING(destroyVehicleAfterCookoff_tooltip)],
     LSTRING(category_displayName),
-    true, // default value
+    false, // default value
     true, // isGlobal
     {[QGVAR(destroyVehicleAfterCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // Needs mission restart
