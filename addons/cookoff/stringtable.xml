@@ -161,7 +161,7 @@
             <Czech>Multiplikátor pro pravděpodobnost vznícení munice. Vyšší hodnota znamená vyšší šanci vznícení munice.</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
-            <English>Destroy Vehicles After Cook-Off</English>
+            <English>Destroy Vehicles After Cook-off</English>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
             <English>Controls whether vehicles will always be destroyed after cooking off. Depending on the cookoff, the vehicle may explode or may simply be killed without effects.</English>
