@@ -392,88 +392,88 @@
             <Turkish>Lazer Güdümlü HE Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
-            <English>82mm HE Round</English>
-            <German>82mm Sprengpatrone</German>
-            <Spanish>Ronda 82mm HE</Spanish>
-            <Polish>Pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE</French>
-            <Italian>Proiettile da 82mm HE</Italian>
-            <Czech>82mm HE náboj</Czech>
-            <Portuguese>Munição 82mm HE</Portuguese>
-            <Russian>Фугасный снаряд 82мм</Russian>
-            <Japanese>82mm りゅう弾</Japanese>
-            <Korean>82mm 고폭탄</Korean>
-            <Chinesesimp>82mm高爆弹</Chinesesimp>
-            <Chinese>82毫米高爆彈</Chinese>
-            <Turkish>82mm HE Mermisi</Turkish>
+            <English>[CSW] 82mm HE Round</English>
+            <German>[CSW] 82mm Sprengpatrone</German>
+            <Spanish>[CSW] Ronda 82mm HE</Spanish>
+            <Polish>[CSW] Pocisk wybuchowy kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm HE</French>
+            <Italian>[CSW] Proiettile da 82mm HE</Italian>
+            <Czech>[CSW] 82mm HE náboj</Czech>
+            <Portuguese>[CSW] Munição 82mm HE</Portuguese>
+            <Russian>[CSW] Фугасный снаряд 82мм</Russian>
+            <Japanese>[CSW] 82mm りゅう弾</Japanese>
+            <Korean>[CSW] 82mm 고폭탄</Korean>
+            <Chinesesimp>[CSW] 82mm高爆弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米高爆彈</Chinese>
+            <Turkish>[CSW] 82mm HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
-            <English>82mm Smoke Round</English>
-            <German>82mm Nebelpatrone</German>
-            <Spanish>Ronda 82mm Humo</Spanish>
-            <Polish>Pocisk dymny kal. 82mm</Polish>
-            <French>Obus de 82 mm fumigène</French>
-            <Italian>Proiettile Fumogeno da 82mm</Italian>
-            <Czech>82mm Kouřový náboj</Czech>
-            <Portuguese>Munição 82mm Fumaça</Portuguese>
-            <Russian>Дымовой снаряд 82мм</Russian>
-            <Japanese>82mm 発煙弾</Japanese>
-            <Korean>82mm 연막탄</Korean>
-            <Chinesesimp>82mm烟雾弹</Chinesesimp>
-            <Chinese>82毫米煙霧彈</Chinese>
-            <Turkish>82mm Sis Mermisi</Turkish>
+            <English>[CSW] 82mm Smoke Round</English>
+            <German>[CSW] 82mm Nebelpatrone</German>
+            <Spanish>[CSW] Ronda 82mm Humo</Spanish>
+            <Polish>[CSW] Pocisk dymny kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm fumigène</French>
+            <Italian>[CSW] Proiettile Fumogeno da 82mm</Italian>
+            <Czech>[CSW] 82mm Kouřový náboj</Czech>
+            <Portuguese>[CSW] Munição 82mm Fumaça</Portuguese>
+            <Russian>[CSW] Дымовой снаряд 82мм</Russian>
+            <Japanese>[CSW] 82mm 発煙弾</Japanese>
+            <Korean>[CSW] 82mm 연막탄</Korean>
+            <Chinesesimp>[CSW] 82mm烟雾弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米煙霧彈</Chinese>
+            <Turkish>[CSW] 82mm Sis Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
-            <English>82mm Illumination Round</English>
-            <German>82mm Leuchtpatrone</German>
-            <Spanish>Ronda 82mm Iluminación</Spanish>
-            <Polish>Pocisk oświetlający kal. 82mm</Polish>
-            <French>Obus de 82 mm éclairant</French>
-            <Italian>Proiettile illuminante da 82mm</Italian>
-            <Czech>82mm Osvětlovací náboj</Czech>
-            <Portuguese>Munição 82mm Iluminação</Portuguese>
-            <Russian>Осветительный снаряд 82мм</Russian>
-            <Japanese>82mm 照明弾</Japanese>
-            <Korean>82mm 조명탄</Korean>
-            <Chinesesimp>82mm照明弹</Chinesesimp>
-            <Chinese>82毫米照明彈</Chinese>
-            <Turkish>82mm Işık Mermisi</Turkish>
+            <English>[CSW] 82mm Illumination Round</English>
+            <German>[CSW] 82mm Leuchtpatrone</German>
+            <Spanish>[CSW] Ronda 82mm Iluminación</Spanish>
+            <Polish>[CSW] Pocisk oświetlający kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm éclairant</French>
+            <Italian>[CSW] Proiettile illuminante da 82mm</Italian>
+            <Czech>[CSW] 82mm Osvětlovací náboj</Czech>
+            <Portuguese>[CSW] Munição 82mm Iluminação</Portuguese>
+            <Russian>[CSW] Осветительный снаряд 82мм</Russian>
+            <Japanese>[CSW] 82mm 照明弾</Japanese>
+            <Korean>[CSW] 82mm 조명탄</Korean>
+            <Chinesesimp>[CSW] 82mm照明弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米照明彈</Chinese>
+            <Turkish>[CSW] 82mm Işık Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
-            <English>82mm Guided HE Round</English>
-            <German>82mm gelenkte Sprengpatrone</German>
-            <Spanish>Ronda 82mm Guiada</Spanish>
-            <Polish>Kierowany pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE guidé</French>
-            <Italian>Proiettile HE guidato</Italian>
-            <Czech>82mm HE náboj (naváděný)</Czech>
-            <Portuguese>Munição 82mm HE Guiada</Portuguese>
-            <Russian>Фугасный снаряд управляемый 82мм</Russian>
-            <Japanese>82mm 誘導りゅう弾</Japanese>
-            <Korean>82mm 유도 고폭탄</Korean>
-            <Chinesesimp>82mm导引高爆弹</Chinesesimp>
-            <Chinese>82毫米導引高爆彈</Chinese>
-            <Turkish>82mm Güdümlü HE Mermisi</Turkish>
+            <English>[CSW] 82mm Guided HE Round</English>
+            <German>[CSW] 82mm gelenkte Sprengpatrone</German>
+            <Spanish>[CSW] Ronda 82mm Guiada</Spanish>
+            <Polish>[CSW] Kierowany pocisk wybuchowy kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm HE guidé</French>
+            <Italian>[CSW] Proiettile HE guidato</Italian>
+            <Czech>[CSW] 82mm HE náboj (naváděný)</Czech>
+            <Portuguese>[CSW] Munição 82mm HE Guiada</Portuguese>
+            <Russian>[CSW] Фугасный снаряд управляемый 82мм</Russian>
+            <Japanese>[CSW] 82mm 誘導りゅう弾</Japanese>
+            <Korean>[CSW] 82mm 유도 고폭탄</Korean>
+            <Chinesesimp>[CSW] 82mm导引高爆弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米導引高爆彈</Chinese>
+            <Turkish>[CSW] 82mm Güdümlü HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
-            <English>82mm Laser Guided HE Round</English>
-            <German>82mm lasergelenkte Sprengpatrone</German>
-            <Spanish>Ronda 82mm Guiada por Laser</Spanish>
-            <Polish>Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE guidé au laser</French>
-            <Italian>Proiettile HE a guida laser</Italian>
-            <Czech>82mm HE náboj (naváděný laserem)</Czech>
-            <Portuguese>Munição 82mm HE Guiada por Laser </Portuguese>
-            <Russian>Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
-            <Japanese>82mm レーザ誘導りゅう弾</Japanese>
-            <Korean>82mm 레이저 유도 고폭탄</Korean>
-            <Chinesesimp>82mm雷射导引高爆弹</Chinesesimp>
-            <Chinese>82毫米雷射導引高爆彈</Chinese>
-            <Turkish>82mm Lazer Güdümlü HE Mermisi</Turkish>
+            <English>[CSW] 82mm Laser Guided HE Round</English>
+            <German>[CSW] 82mm lasergelenkte Sprengpatrone</German>
+            <Spanish>[CSW] Ronda 82mm Guiada por Laser</Spanish>
+            <Polish>[CSW] Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm HE guidé au laser</French>
+            <Italian>[CSW] Proiettile HE a guida laser</Italian>
+            <Czech>[CSW] 82mm HE náboj (naváděný laserem)</Czech>
+            <Portuguese>[CSW] Munição 82mm HE Guiada por Laser </Portuguese>
+            <Russian>[CSW] Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
+            <Japanese>[CSW] 82mm レーザ誘導りゅう弾</Japanese>
+            <Korean>[CSW] 82mm 레이저 유도 고폭탄</Korean>
+            <Chinesesimp>[CSW] 82mm雷射导引高爆弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米雷射導引高爆彈</Chinese>
+            <Turkish>[CSW] 82mm Lazer Güdümlü HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
-            <English>Used in Mk6 mortar</English>
-            <German>Wird im Mk6 Mörser verwendet</German>
+            <English>Used in Mk6 Mortar</English>
+            <German>Wird im Mk6-Mörser verwendet</German>
             <Spanish>Usada en el mortero Mk6</Spanish>
             <Polish>Używany w moździerzu Mk6</Polish>
             <French>Utilisé dans le mortier Mk6.</French>
