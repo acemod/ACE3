@@ -448,7 +448,7 @@
             <Russian>Не удалось достать.</Russian>
             <German>Hülse wurde nicht ausgeworfen.</German>
             <Polish>Nie udało się wyrzucić łuski.</Polish>
-            <Chinesesimp>弹出失败。</Chinesesimp>
+            <Chinesesimp>抛壳失败。</Chinesesimp>
             <Korean>탄피가 약실에 낌.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToExtract">
@@ -458,7 +458,7 @@
             <Russian>Не удалось извлечь.</Russian>
             <German>Hülse wurde nicht ausgezogen.</German>
             <Polish>Nie udało się wyjąć łuski.</Polish>
-            <Chinesesimp>未能抽出。</Chinesesimp>
+            <Chinesesimp>抽壳失败。</Chinesesimp>
             <Korean>탄피가 배출되지 않음.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFeed">
@@ -468,7 +468,7 @@
             <Russian>Не удалось подать.</Russian>
             <German>Patrone wurde nicht zugeführt.</German>
             <Polish>Nie udało się załadować naboju.</Polish>
-            <Chinesesimp>未能进食。</Chinesesimp>
+            <Chinesesimp>供弹失败。</Chinesesimp>
             <Korean>탄이 장전 중 걸림.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFire">

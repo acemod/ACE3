@@ -422,7 +422,7 @@
             <French>[CSW] Lanceur statique Mini-Spike (AT)</French>
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AT)</Japanese>
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對地）</Chinese>
-            <Chinesesimp>[班组武器] 固定式"迷你长钉"导弹发射器（AT）</Chinesesimp>
+            <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（AT）</Chinesesimp>
             <Italian>[CSW] Static Mini-Spike Launcher (AT)</Italian>
             <Czech>[CSW] Statický raketomet Mini-Spike (protitankový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AT)</Turkish>
@@ -438,7 +438,7 @@
             <French>[CSW] Lanceur statique Mini-Spike (AA)</French>
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AA)</Japanese>
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對空）</Chinese>
-            <Chinesesimp>[班组武器] 固定式"迷你长钉"导弹发射器（AA）</Chinesesimp>
+            <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（AA）</Chinesesimp>
             <Italian>[CSW] Static Mini-Spike Launcher (AA)</Italian>
             <Czech>[CSW] Statický raketomet Mini-Spike (protiletadlový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AA)</Turkish>
@@ -454,7 +454,7 @@
             <French>[CSW] Mitrailleuse statique XM312</French>
             <Japanese>[CSW] 設置型 XM312</Japanese>
             <Chinese>[CSW] 固定型 XM312重機槍</Chinese>
-            <Chinesesimp>[班组武器] 固定式 XM312 重机枪</Chinesesimp>
+            <Chinesesimp>[班组] 固定式 XM312 重机枪</Chinesesimp>
             <Italian>[CSW] Static XM312 Gun</Italian>
             <Czech>[CSW] Statická zbraň XM312</Czech>
             <Turkish>[CSW] Static XM312 Gun</Turkish>
@@ -471,7 +471,7 @@
             <Russian>[CSW] Станковый M2 со щитом</Russian>
             <Japanese>[CSW] 設置型 防盾付き M2</Japanese>
             <German>[CSW] Statisches M2 mit Schild</German>
-            <Chinesesimp>[班组武器] 固定式防盾型 M2 重机枪</Chinesesimp>
+            <Chinesesimp>[班组] 固定式防盾型 M2 重机枪</Chinesesimp>
             <Korean>[CSW] 거치형 M2 (방패)</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
@@ -482,7 +482,7 @@
             <French>[CSW] Mitrailleuse statique XM312 (Autonome)</French>
             <Japanese>[CSW] 設置型 XM312 (自律型)</Japanese>
             <Chinese>[CSW] 固定型 XM312重機槍（自主型）</Chinese>
-            <Chinesesimp>[班组武器] 固定式 XM312 重机枪（自主）</Chinesesimp>
+            <Chinesesimp>[班组] 固定式 XM312 重机枪（自主）</Chinesesimp>
             <Italian>[CSW] Static XM312 Gun (Autonomo)</Italian>
             <Czech>[CSW] Statická zbraň XM312 (autonomická)</Czech>
             <Turkish>[CSW] Static XM312 Gun (Autonomous)</Turkish>
@@ -498,7 +498,7 @@
             <French>[CSW] Lance-grenades statique XM307</French>
             <Japanese>[CSW] 設置型 XM307</Japanese>
             <Chinese>[CSW] 固定型XM307榴彈機槍</Chinese>
-            <Chinesesimp>[班组武器] 固定式 XM307 榴弹发射器</Chinesesimp>
+            <Chinesesimp>[班组] 固定式 XM307 榴弹发射器</Chinesesimp>
             <Italian>[CSW] Static XM307 Gun</Italian>
             <Czech>[CSW] Statická zbraň XM307</Czech>
             <Turkish>[CSW] Static XM307 Gun</Turkish>
@@ -514,7 +514,7 @@
             <French>[CSW] Lance-grenades statique XM307 (Autonome)</French>
             <Japanese>[CSW] 設置型 XM307 (自律型)</Japanese>
             <Chinese>[CSW] 固定型 XM307榴彈機槍（自主型）</Chinese>
-            <Chinesesimp>[班组武器] 固定式 XM307 榴弹发射器（自主）</Chinesesimp>
+            <Chinesesimp>[班组] 固定式 XM307 榴弹发射器（自主）</Chinesesimp>
             <Italian>[CSW] Static XM307 Gun (Autonomo)</Italian>
             <Czech>[CSW] Statická zbraň XM307 (autonomická)</Czech>
             <Turkish>[CSW] Static XM307 Gun (Autonomous)</Turkish>
@@ -530,7 +530,7 @@
             <French>[CSW] Bande 12,7x108 mm HMG</French>
             <Japanese>[CSW] 12.7x108 mm HMG ベルト</Japanese>
             <Chinese>[CSW]12.7x108毫米 重機槍彈鏈</Chinese>
-            <Chinesesimp>[班组武器]12.7x108 mm 重机枪弹链</Chinesesimp>
+            <Chinesesimp>[班组]12.7x108 mm 重机枪弹链</Chinesesimp>
             <Italian>[CSW] 12.7x108mm HMG Belt</Italian>
             <Czech>[CSW] Pás 12.7×108mm pro těžký kulomet</Czech>
             <Turkish>[CSW] 12.7x108mm HMG Belt</Turkish>
@@ -546,7 +546,7 @@
             <French>[CSW] Bande 12,7x99 mm HMG</French>
             <Japanese>[CSW] 12.7x99 mm HMG ベルト</Japanese>
             <Chinese>[CSW]12.7x99毫米 重機槍彈鏈</Chinese>
-            <Chinesesimp>[班组武器]12.7x99 mm 重机枪弹链</Chinesesimp>
+            <Chinesesimp>[班组]12.7x99 mm 重机枪弹链</Chinesesimp>
             <Italian>[CSW] 12.7x99mm HMG Belt</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet</Czech>
             <Turkish>[CSW] 12.7x99mm HMG Belt</Turkish>
@@ -562,7 +562,7 @@
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Rouges)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (赤)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（紅色）</Chinese>
-            <Chinesesimp>[班组武器] 12.7x99 mm 重机枪曳光弹链（红）</Chinesesimp>
+            <Chinesesimp>[班组] 12.7x99 mm 重机枪曳光弹链（红）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (červená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Turkish>
@@ -578,7 +578,7 @@
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Vertes)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (緑)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（綠色）</Chinese>
-            <Chinesesimp>[班组武器] 12.7x99 mm 重机枪曳光弹链（绿）</Chinesesimp>
+            <Chinesesimp>[班组] 12.7x99 mm 重机枪曳光弹链（绿）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (zelená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Turkish>
@@ -594,7 +594,7 @@
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Jaunes)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (黄)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（黃色）</Chinese>
-            <Chinesesimp>[班组武器] 12.7x99 mm 重机枪曳光弹链（黄）</Chinesesimp>
+            <Chinesesimp>[班组] 12.7x99 mm 重机枪曳光弹链（黄）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (žlutá stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Turkish>
@@ -610,7 +610,7 @@
             <French>[CSW] Bande grenades 20 mm GMG</French>
             <Japanese>[CSW] 20 mm てき弾 GMG ベルト</Japanese>
             <Chinese>[CSW]20毫米 榴彈 榴彈機槍彈鏈</Chinese>
-            <Chinesesimp>[班组武器] 20 mm 榴弹发射器弹链</Chinesesimp>
+            <Chinesesimp>[班组] 20 mm 榴弹发射器弹链</Chinesesimp>
             <Italian>[CSW] 20mm Grenade GMG Belt</Italian>
             <Czech>[CSW] Pás 20mm granátů pro granátomet</Czech>
             <Turkish>[CSW] 20mm Grenade GMG Belt</Turkish>
@@ -642,7 +642,7 @@
             <French>[CSW] 6P57 Trépied déployable</French>
             <Japanese>[CSW] 6P57 設置型三脚</Japanese>
             <Chinese>[CSW] 6P57 部署型三腳架</Chinese>
-            <Chinesesimp>[班组武器] 6P57 部署型三脚架</Chinesesimp>
+            <Chinesesimp>[班组] 6P57 部署型三脚架</Chinesesimp>
             <Italian>[CSW] 6P57 Deployable Tripod</Italian>
             <Czech>[CSW] 6P57 trojnožka</Czech>
             <Turkish>[CSW] 6P57 Deployable Tripod</Turkish>
@@ -658,7 +658,7 @@
             <French>[CSW] 6P57 Trépied déployable (Bas)</French>
             <Japanese>[CSW] 6P57 設置型三脚 (低座)</Japanese>
             <Chinese>[CSW] 6P57 部署型（低位）</Chinese>
-            <Chinesesimp>[班组武器] 6P57 部署型（低）</Chinesesimp>
+            <Chinesesimp>[班组] 6P57 部署型（低）</Chinesesimp>
             <Italian>[CSW] 6P57 Deployable Tripod (Low)</Italian>
             <Czech>[CSW] 6P57 trojnožka (nízká)</Czech>
             <Turkish>[CSW] 6P57 Deployable Tripod (Low)</Turkish>
@@ -674,7 +674,7 @@
             <French>[CSW] M220 Trépied déployable</French>
             <Japanese>[CSW] M220 設置型三脚</Japanese>
             <Chinese>[CSW] M220 部署型三腳架</Chinese>
-            <Chinesesimp>[班组武器] M220 部署型三脚架</Chinesesimp>
+            <Chinesesimp>[班组] M220 部署型三脚架</Chinesesimp>
             <Italian>[CSW] M220 Deployable Tripod</Italian>
             <Czech>[CSW] M220 trojnožka</Czech>
             <Turkish>[CSW] M220 Deployable Tripod</Turkish>
@@ -690,7 +690,7 @@
             <French>[CSW] SAG-30 Trépied déployable</French>
             <Japanese>[CSW] SAG-30 設置型三脚</Japanese>
             <Chinese>[CSW] SAG-30 部署型三腳架</Chinese>
-            <Chinesesimp>[班组武器] SAG-30 部署型三脚架</Chinesesimp>
+            <Chinesesimp>[班组] SAG-30 部署型三脚架</Chinesesimp>
             <Italian>[CSW] SAG-30 Deployable Tripod</Italian>
             <Czech>[CSW] SAG-30 trojnožka</Czech>
             <Turkish>[CSW] SAG-30 Deployable Tripod</Turkish>
@@ -754,7 +754,7 @@
             <French>[CSW] M3 Trépied déployable</French>
             <Japanese>[CSW] M3 設置型三脚</Japanese>
             <Chinese>[CSW] M3 部屬型三腳架</Chinese>
-            <Chinesesimp>[班组武器] M3 部属型三脚架</Chinesesimp>
+            <Chinesesimp>[班组] M3 部属型三脚架</Chinesesimp>
             <Italian>[CSW] M3 Deployable Tripod</Italian>
             <Czech>[CSW] M3 trojnožka</Czech>
             <Turkish>[CSW] M3 Deployable Tripod</Turkish>
@@ -770,7 +770,7 @@
             <French>[CSW] M3 Trépied déployable (Bas)</French>
             <Japanese>[CSW] M3 設置型三脚 (低座)</Japanese>
             <Chinese>[CSW] M3 部署型三腳架（低位）</Chinese>
-            <Chinesesimp>[班组武器] M3 部署型三脚架（低）</Chinesesimp>
+            <Chinesesimp>[班组] M3 部署型三脚架（低）</Chinesesimp>
             <Italian>[CSW] M3 Deployable Tripod (Low)</Italian>
             <Czech>[CSW] M3 trojnožka (nízká)</Czech>
             <Turkish>[CSW] M3 Deployable Tripod (Low)</Turkish>
@@ -786,7 +786,7 @@
             <French>[CSW] Plaque de base pour mortier</French>
             <Japanese>[CSW] 迫撃砲基盤</Japanese>
             <Chinese>[CSW] 迫擊炮基座</Chinese>
-            <Chinesesimp>[班组武器] 迫击炮底座</Chinesesimp>
+            <Chinesesimp>[班组] 迫击炮底座</Chinesesimp>
             <Italian>[CSW] Mortar Baseplate</Italian>
             <Czech>[CSW] Podstavec pro minomet</Czech>
             <Turkish>[CSW] Mortar Baseplate</Turkish>
@@ -818,7 +818,7 @@
             <French>[CSW] Tube mortier Mk6</French>
             <Japanese>[CSW] Mk6 迫撃砲発射筒</Japanese>
             <Chinese>[CSW] Mk6 迫擊炮炮管</Chinese>
-            <Chinesesimp>[班组武器] Mk6 迫击炮管</Chinesesimp>
+            <Chinesesimp>[班组] Mk6 迫击炮管</Chinesesimp>
             <Italian>[CSW] Mk6 Mortar Tube</Italian>
             <Czech>[CSW] Minomet Mk6 hlaveň</Czech>
             <Turkish>[CSW] Mk6 Mortar Tube</Turkish>
@@ -834,7 +834,7 @@
             <French>[CSW] Sac tube M252</French>
             <Japanese>[CSW] M252 発射筒バッグ</Japanese>
             <Chinese>[CSW] M252 炮管袋</Chinese>
-            <Chinesesimp>[班组武器] M252 炮管包</Chinesesimp>
+            <Chinesesimp>[班组] M252 炮管包</Chinesesimp>
             <Italian>[CSW] M252 Tube Bag</Italian>
             <Czech>[CSW] M252 minometná hlaveň v pouzdře</Czech>
             <Turkish>[CSW] M252 Tube Bag</Turkish>
@@ -850,7 +850,7 @@
             <French>[CSW] Sac M2</French>
             <Japanese>[CSW] M2 ガン バッグ</Japanese>
             <Chinese>[CSW] M2槍械袋</Chinese>
-            <Chinesesimp>[班组武器] M2 枪械包</Chinesesimp>
+            <Chinesesimp>[班组] M2 枪械包</Chinesesimp>
             <Italian>[CSW] M2 Gun Bag</Italian>
             <Czech>[CSW] M2 zbraň v pouzdře</Czech>
             <Turkish>[CSW] M2 Gun Bag</Turkish>
@@ -866,7 +866,7 @@
             <French>[CSW] Sac MK19</French>
             <Japanese>[CSW] Mk19 ガン バッグ</Japanese>
             <Chinese>[CSW] Mk19槍械袋</Chinese>
-            <Chinesesimp>[班组武器] Mk19 枪械包</Chinesesimp>
+            <Chinesesimp>[班组] Mk19 枪械包</Chinesesimp>
             <Italian>[CSW] MK19 Gun Bag</Italian>
             <Czech>[CSW] MK19 zbraň v pouzdře</Czech>
             <Turkish>[CSW] MK19 Gun Bag</Turkish>
@@ -882,7 +882,7 @@
             <French>[CSW] Sac lanceur BGM-71 TOW</French>
             <Japanese>[CSW] BGM-71 TOW ランチャー バッグ</Japanese>
             <Chinese>[CSW] BGM-71 拖式飛彈發射器袋</Chinese>
-            <Chinesesimp>[班组武器] BGM-71 陶式导弹发射器包</Chinesesimp>
+            <Chinesesimp>[班组] BGM-71 陶式导弹发射器包</Chinesesimp>
             <Italian>[CSW] BGM-71 TOW Launcher Bag</Italian>
             <Czech>[CSW] BGM-71 TOW raketomet v pouzdře</Czech>
             <Turkish>[CSW] BGM-71 TOW Launcher Bag</Turkish>
@@ -898,7 +898,7 @@
             <French>[CSW] Sac DSHK</French>
             <Japanese>[CSW] DShK ガン バッグ</Japanese>
             <Chinese>[CSW]DShK 槍械袋</Chinese>
-            <Chinesesimp>[班组武器]DShK 枪械包</Chinesesimp>
+            <Chinesesimp>[班组]DShK 枪械包</Chinesesimp>
             <Italian>[CSW] DSHK Gun Bag</Italian>
             <Czech>[CSW] DSHK zbraň v pouzdře</Czech>
             <Turkish>[CSW] DSHK Gun Bag</Turkish>
@@ -914,7 +914,7 @@
             <French>[CSW] Sac tube 2B14</French>
             <Japanese>[CSW] 2B14 発射筒バッグ</Japanese>
             <Chinese>[CSW] 2B14 炮管袋</Chinese>
-            <Chinesesimp>[班组武器] 2B14 炮管包</Chinesesimp>
+            <Chinesesimp>[班组] 2B14 炮管包</Chinesesimp>
             <Italian>[CSW] 2B14 Tube Bag</Italian>
             <Czech>[CSW] 2B14 minometná hlaveň v pouzdře</Czech>
             <Turkish>[CSW] 2B14 Tube Bag</Turkish>
@@ -930,7 +930,7 @@
             <French>[CSW] Sac NSV</French>
             <Japanese>[CSW] NSV ガン バッグ</Japanese>
             <Chinese>[CSW] NSV 槍械袋</Chinese>
-            <Chinesesimp>[班组武器] NSV 枪械包</Chinesesimp>
+            <Chinesesimp>[班组] NSV 枪械包</Chinesesimp>
             <Italian>[CSW] NSV Gun Bag</Italian>
             <Czech>[CSW] NSV zbraň v pouzdře</Czech>
             <Turkish>[CSW] NSV Gun Bag</Turkish>
@@ -946,7 +946,7 @@
             <French>[CSW] Sac KORD</French>
             <Japanese>[CSW] KORD ガン バッグ</Japanese>
             <Chinese>[CSW] KORD 槍械袋</Chinese>
-            <Chinesesimp>[班组武器] KORD 枪械包</Chinesesimp>
+            <Chinesesimp>[班组] KORD 枪械包</Chinesesimp>
             <Italian>[CSW] KORD Gun Bag</Italian>
             <Czech>[CSW] KORD zbraň v pouzdře</Czech>
             <Turkish>[CSW] KORD Gun Bag</Turkish>
@@ -962,7 +962,7 @@
             <French>[CSW] Sac AGS-30</French>
             <Japanese>[CSW] AGS-30 バッグ</Japanese>
             <Chinese>[CSW] AGS-30 槍械袋</Chinese>
-            <Chinesesimp>[班组武器] AGS-30 枪械包</Chinesesimp>
+            <Chinesesimp>[班组] AGS-30 枪械包</Chinesesimp>
             <Italian>[CSW] AGS-30 Gun Bag</Italian>
             <Czech>[CSW] ASG-30 zbraň v pouzdře</Czech>
             <Turkish>[CSW] AGS-30 Gun Bag</Turkish>
@@ -978,7 +978,7 @@
             <French>[CSW] Sac lanceur 9K115 Metis</French>
             <Japanese>[CSW] 9K115 メティス ランチャー バッグ</Japanese>
             <Chinese>[CSW] 9K115 麥士蒂索人發射器袋</Chinese>
-            <Chinesesimp>[班组武器] 9K115 麦士蒂索人反坦克发射器包</Chinesesimp>
+            <Chinesesimp>[班组] 9K115 麦士蒂索人反坦克发射器包</Chinesesimp>
             <Italian>[CSW] 9K115 Metis Launcher Bag</Italian>
             <Czech>[CSW] 9K115 Metis raketomet v pouzdře</Czech>
             <Polish>[CSW] Torba na 9K115 Metis</Polish>
@@ -994,7 +994,7 @@
             <French>[CSW] Sac lanceur 9M113 Kornet</French>
             <Japanese>[CSW] 9M113 コルネット ランチャー バッグ</Japanese>
             <Chinese>[CSW] 9M113 短號發射器</Chinese>
-            <Chinesesimp>[班组武器] 9M113 短号发射器</Chinesesimp>
+            <Chinesesimp>[班组] 9M113 短号发射器</Chinesesimp>
             <Italian>[CSW] 9M113 Kornet Launcher</Italian>
             <Czech>[CSW] 9M113 Kornet raketomet</Czech>
             <Polish>[CSW] Wyrzutnia 9M113 Kornet</Polish>
@@ -1026,7 +1026,7 @@
             <French>[CSW] SPG-9 Trépied déployable</French>
             <Japanese>[CSW] SPG-9 設置型三脚</Japanese>
             <Chinese>[CSW] SPG-9 部署型三腳架</Chinese>
-            <Chinesesimp>[班组武器] SPG-9 部署型三脚架</Chinesesimp>
+            <Chinesesimp>[班组] SPG-9 部署型三脚架</Chinesesimp>
             <Italian>[CSW] SPG-9 Deployable Tripod</Italian>
             <Czech>[CSW] SPG-9 trojnožka</Czech>
             <Turkish>[CSW] SPG-9 Deployable Tripod</Turkish>
@@ -1042,7 +1042,7 @@
             <French>[CSW] Sac lanceur SPG-9</French>
             <Japanese>[CSW] SPG-9 ランチャー バッグ</Japanese>
             <Chinese>[CSW] SPG-9 發射器袋</Chinese>
-            <Chinesesimp>[班组武器] SPG-9 发射器包</Chinesesimp>
+            <Chinesesimp>[班组] SPG-9 发射器包</Chinesesimp>
             <Italian>[CSW] SPG-9 Launcher Bag</Italian>
             <Czech>[CSW] SPG-9 raketomet v pouzdře</Czech>
             <Turkish>[CSW] SPG-9 Launcher Bag</Turkish>
@@ -1058,7 +1058,7 @@
             <French>[CSW] Sac lanceur SPG-9M</French>
             <Japanese>[CSW] SPG-9M ランチャー バッグ</Japanese>
             <Chinese>[CSW] SPG-9M 發射器袋</Chinese>
-            <Chinesesimp>[班组武器] SPG-9M 发射器包</Chinesesimp>
+            <Chinesesimp>[班组] SPG-9M 发射器包</Chinesesimp>
             <Italian>[CSW] SPG-9M Launcher Bag</Italian>
             <Czech>[CSW] SPG-9M raketomet v pouzdře</Czech>
             <Turkish>[CSW] SPG-9M Launcher Bag</Turkish>
