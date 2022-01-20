@@ -15,7 +15,7 @@
             <Japanese>M49A2 60mm りゅう弾</Japanese>
             <Polish>M49A2 60mm HE</Polish>
             <Korean>M49A2 60mm 고폭</Korean>
-            <Chinesesimp>M49A2 60mm 高爆弹</Chinesesimp>
+            <Chinesesimp>M49A2 60 mm 高爆弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_WP">
             <English>M302 60mm WP</English>
@@ -23,7 +23,7 @@
             <Japanese>M302 60mm 白リン弾</Japanese>
             <Polish>M302 60mm WP</Polish>
             <Korean>M302 60mm 백린</Korean>
-            <Chinesesimp>M302 60mm 白磷弹</Chinesesimp>
+            <Chinesesimp>M302 60 mm 白磷弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_Lume">
             <English>M83 60mm Lume</English>
@@ -31,7 +31,7 @@
             <Japanese>M83 60mm 照明弾</Japanese>
             <Polish>M83 60mm ILUM</Polish>
             <Korean>M83 60mm 조명</Korean>
-            <Chinesesimp>M83 60mm 照明弹</Chinesesimp>
+            <Chinesesimp>M83 60 mm 照明弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_HE">
             <English>M374 81mm HE</English>
@@ -39,7 +39,7 @@
             <Japanese>M374 81mm りゅう弾</Japanese>
             <Polish>M374 81mm HE</Polish>
             <Korean>M374 81mm 고폭</Korean>
-            <Chinesesimp>M374 81mm 高爆弹</Chinesesimp>
+            <Chinesesimp>M374 81 mm 高爆弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_WP">
             <English>M375 81mm WP</English>
@@ -47,7 +47,7 @@
             <Japanese>M375 81mm 白リン弾</Japanese>
             <Polish>M375 81mm WP</Polish>
             <Korean>M375 81mm 백린</Korean>
-            <Chinesesimp>M375 81mm 白磷弹</Chinesesimp>
+            <Chinesesimp>M375 81 mm 白磷弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Lume">
             <English>M301A3 81mm Lume</English>
@@ -55,7 +55,7 @@
             <Japanese>M301A3 81mm 照明弾</Japanese>
             <Polish>M301A3 81mm ILUM</Polish>
             <Korean>M301A3 81mm 조명</Korean>
-            <Chinesesimp>M301A3 81mm 照明弹</Chinesesimp>
+            <Chinesesimp>M301A3 81 mm 照明弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Smoke">
             <English>M57 81mm Smoke</English>
@@ -63,7 +63,7 @@
             <Japanese>M57 81mm 発煙弾</Japanese>
             <Polish>M57 81mm Dymny</Polish>
             <Korean>M57 81mm 연막</Korean>
-            <Chinesesimp>M57 81mm 烟雾弹</Chinesesimp>
+            <Chinesesimp>M57 81 mm 烟雾弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_HE">
             <English>O-832D 82mm HE</English>
@@ -71,7 +71,7 @@
             <Japanese>O-832D 82mm りゅう弾</Japanese>
             <Polish>O-832D 82mm HE</Polish>
             <Korean>O-832D 82mm 고폭</Korean>
-            <Chinesesimp>O-832D 82mm 高爆弹</Chinesesimp>
+            <Chinesesimp>O-832D 82 mm 高爆弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_WP">
             <English>D-832 82mm WP</English>
@@ -79,7 +79,7 @@
             <Japanese>D-832 82mm 白リン弾</Japanese>
             <Polish>D-832 82mm WP</Polish>
             <Korean>D-832 82mm 백린</Korean>
-            <Chinesesimp>D-832 82mm 白磷弹</Chinesesimp>
+            <Chinesesimp>D-832 82 mm 白磷弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_Lume">
             <English>S-832S 82mm Lume</English>
@@ -87,7 +87,7 @@
             <Japanese>S-832S 82mm 照明弾</Japanese>
             <Polish>S-832S 82mm ILUM</Polish>
             <Korean>S-832S 82mm 조명</Korean>
-            <Chinesesimp>S-832S 82mm 照明弹</Chinesesimp>
+            <Chinesesimp>S-832S 82 mm 照明弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_HE">
             <English>[ACE] M49A2 60mm HE Box</English>
@@ -95,7 +95,7 @@
             <Japanese>[ACE] M49A2 60mm りゅう弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia M49A2 60mm HE</Polish>
             <Korean>[ACE] M49A2 60mm 고폭 상자</Korean>
-            <Chinesesimp>[ACE] M49A2 60mm 高爆弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] M49A2 60 mm 高爆弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_WP">
             <English>[ACE] M302 60mm WP Box</English>
@@ -103,7 +103,7 @@
             <Japanese>[ACE] M302 60mm 白リン弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia M302 60mm WP</Polish>
             <Korean>[ACE] M302 60mm 백린 상자</Korean>
-            <Chinesesimp>[ACE] M302 60mm 白磷弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] M302 60 mm 白磷弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_Lume">
             <English>[ACE] M83 60mm Lume Box</English>
@@ -111,7 +111,7 @@
             <Japanese>[ACE] M83 60mm 照明弾弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia ILUM M83 60mm</Polish>
             <Korean>[ACE] M83 60mm 조명 상자</Korean>
-            <Chinesesimp>[ACE] M83 60mm 照明弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] M83 60 mm 照明弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_HE">
             <English>[ACE] M374 81mm HE Box</English>
@@ -119,7 +119,7 @@
             <Japanese>[ACE] M374 81mm りゅう弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia M374 81mm HE</Polish>
             <Korean>[ACE] M374 81mm 고폭 상자</Korean>
-            <Chinesesimp>[ACE] M374 81mm 高爆弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] M374 81 mm 高爆弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_WP">
             <English>[ACE] M375 81mm WP Box</English>
@@ -127,7 +127,7 @@
             <Japanese>[ACE] M375 81mm 白リン弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia M375 81mm WP</Polish>
             <Korean>[ACE] M375 81mm 백린 상자</Korean>
-            <Chinesesimp>[ACE] M375 81mm 白磷弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] M375 81 mm 白磷弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_Lume">
             <English>[ACE] M301A3 81mm Lume Box</English>
@@ -135,7 +135,7 @@
             <Japanese>[ACE] M301A1 81mm 照明弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia M301A3 81mm ILUM</Polish>
             <Korean>[ACE] M301A3 81mm 조명 상자</Korean>
-            <Chinesesimp>[ACE] M301A3 81mm 照明弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] M301A3 81 mm 照明弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_Smoke">
             <English>[ACE] M57 81mm Smoke Box</English>
@@ -143,7 +143,7 @@
             <Japanese>[ACE] M57 81mm 煙幕弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia M57 81mm Dymny</Polish>
             <Korean>[ACE] M57 81mm 연막 상자</Korean>
-            <Chinesesimp>[ACE] M57 81mm 烟雾弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] M57 81 mm 烟雾弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_HE">
             <English>[ACE] O-832D 82mm HE Box</English>
@@ -151,7 +151,7 @@
             <Japanese>[ACE] O-832D 82mm りゅう弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia O-832D 82mm HE</Polish>
             <Korean>[ACE] O-832D 82mm 고폭 상자</Korean>
-            <Chinesesimp>[ACE] O-832D 82mm 高爆弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] O-832D 82 mm 高爆弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_WP">
             <English>[ACE] D-832 82mm WP Box</English>
@@ -159,7 +159,7 @@
             <Japanese>[ACE] D-832 82mm 白リン弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia D-832 82mm WP</Polish>
             <Korean>[ACE] D-832 82mm 백린 상자</Korean>
-            <Chinesesimp>[ACE] D-832 82mm 白磷弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] D-832 82 mm 白磷弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_Lume">
             <English>[ACE] S-832S 82mm Lume Box</English>
@@ -167,7 +167,7 @@
             <Japanese>[ACE] S-832S 82mm 照明弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia S-832S 82mm ILUM</Polish>
             <Korean>[ACE] S-832S 82mm 조명 상자</Korean>
-            <Chinesesimp>[ACE] S-832S 82mm 照明弹弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] S-832S 82 mm 照明弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderhole">
             <English>Dig Spiderhole</English>

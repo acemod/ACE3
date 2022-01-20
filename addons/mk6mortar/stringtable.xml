@@ -14,7 +14,7 @@
             <Italian>Tavola di tiro 82mm</Italian>
             <Japanese>82mm 射表</Japanese>
             <Korean>82mm 사거리표</Korean>
-            <Chinesesimp>82mm 迫击炮射表</Chinesesimp>
+            <Chinesesimp>82 mm 迫击炮射表</Chinesesimp>
             <Chinese>82毫米迫擊炮射表</Chinese>
             <Turkish>82mm Menzil Tablosu</Turkish>
         </Key>
@@ -31,7 +31,7 @@
             <Italian>Tavola di tiro per il mortaio calibro 82mm Mk6</Italian>
             <Japanese>Mk6 82mm 迫撃砲の射表</Japanese>
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
-            <Chinesesimp>MK6 82mm 迫击炮射表</Chinesesimp>
+            <Chinesesimp>MK6 82 mm 迫击炮射表</Chinesesimp>
             <Chinese>MK6 82毫米迫擊炮射表</Chinese>
             <Turkish>Mk6 82mm için Menzil Tablosu</Turkish>
         </Key>
@@ -48,7 +48,7 @@
             <Italian>Apri la tavola di tiro 82mm</Italian>
             <Japanese>82mm 射表を開く</Japanese>
             <Korean>82mm 사거리표 열기</Korean>
-            <Chinesesimp>开启82mm 迫击炮射表</Chinesesimp>
+            <Chinesesimp>开启82 mm 迫击炮射表</Chinesesimp>
             <Chinese>開啟82毫米迫擊炮射表</Chinese>
             <Turkish>82mm Menzil Tablosunu Aç</Turkish>
         </Key>
@@ -403,7 +403,7 @@
             <Russian>[CSW] Фугасный снаряд 82мм</Russian>
             <Japanese>[CSW] 82mm りゅう弾</Japanese>
             <Korean>[CSW] 82mm 고폭탄</Korean>
-            <Chinesesimp>[CSW] 82mm 高爆弹</Chinesesimp>
+            <Chinesesimp>[班组] 82 mm 高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米高爆彈</Chinese>
             <Turkish>[CSW] 82mm HE Mermisi</Turkish>
         </Key>
@@ -419,7 +419,7 @@
             <Russian>[CSW] Дымовой снаряд 82мм</Russian>
             <Japanese>[CSW] 82mm 発煙弾</Japanese>
             <Korean>[CSW] 82mm 연막탄</Korean>
-            <Chinesesimp>[CSW] 82mm 烟雾弹</Chinesesimp>
+            <Chinesesimp>[班组] 82 mm 烟雾弹</Chinesesimp>
             <Chinese>[CSW] 82毫米煙霧彈</Chinese>
             <Turkish>[CSW] 82mm Sis Mermisi</Turkish>
         </Key>
@@ -435,7 +435,7 @@
             <Russian>[CSW] Осветительный снаряд 82мм</Russian>
             <Japanese>[CSW] 82mm 照明弾</Japanese>
             <Korean>[CSW] 82mm 조명탄</Korean>
-            <Chinesesimp>[CSW] 82mm 照明弹</Chinesesimp>
+            <Chinesesimp>[班组] 82 mm 照明弹</Chinesesimp>
             <Chinese>[CSW] 82毫米照明彈</Chinese>
             <Turkish>[CSW] 82mm Işık Mermisi</Turkish>
         </Key>
@@ -451,7 +451,7 @@
             <Russian>[CSW] Фугасный снаряд управляемый 82мм</Russian>
             <Japanese>[CSW] 82mm 誘導りゅう弾</Japanese>
             <Korean>[CSW] 82mm 유도 고폭탄</Korean>
-            <Chinesesimp>[CSW] 82mm 制导高爆弹</Chinesesimp>
+            <Chinesesimp>[班组] 82 mm 制导高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米導引高爆彈</Chinese>
             <Turkish>[CSW] 82mm Güdümlü HE Mermisi</Turkish>
         </Key>
@@ -467,7 +467,7 @@
             <Russian>[CSW] Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
             <Japanese>[CSW] 82mm レーザ誘導りゅう弾</Japanese>
             <Korean>[CSW] 82mm 레이저 유도 고폭탄</Korean>
-            <Chinesesimp>[CSW] 82mm 激光制导高爆弹</Chinesesimp>
+            <Chinesesimp>[班组] 82 mm 激光制导高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米雷射導引高爆彈</Chinese>
             <Turkish>[CSW] 82mm Lazer Güdümlü HE Mermisi</Turkish>
         </Key>
@@ -498,7 +498,7 @@
             <Russian>[ACE] Ящик фугасных снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm りゅう弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 고폭탄 상자</Korean>
-            <Chinesesimp>[ACE] 82mm 高爆弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] 82 mm 高爆弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米高爆彈藥箱</Chinese>
             <Turkish>[ACE] 82mm HE Mermisi Kutusu</Turkish>
         </Key>
@@ -514,7 +514,7 @@
             <Russian>[ACE] Ящик дымовых снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm 発煙弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 연막탄 상자</Korean>
-            <Chinesesimp>[ACE] 82mm 烟雾弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] 82 mm 烟雾弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米煙霧彈藥箱</Chinese>
             <Turkish>[ACE] 82mm Sis Mermisi Kutusu</Turkish>
         </Key>
@@ -530,7 +530,7 @@
             <Russian>[ACE] Ящик осветительных снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm 照明弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 조명탄 상자</Korean>
-            <Chinesesimp>[ACE] 82mm 照明弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] 82 mm 照明弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米照明彈藥箱</Chinese>
             <Turkish>[ACE] 82mm Işık Mermisi Kutusu</Turkish>
         </Key>
@@ -546,7 +546,7 @@
             <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>
             <Japanese>[ACE] 82mm 保管箱</Japanese>
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
-            <Chinesesimp>[ACE] 82mm 预设弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] 82 mm 预设弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>
             <Turkish>[ACE] 82mm Varsayılan Teçhizat Kutusu</Turkish>
         </Key>
