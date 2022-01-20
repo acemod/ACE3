@@ -66,4 +66,14 @@ class EGVAR(arsenal,stats) {
         textStatement = QUOTE([ARR_2(_this select 0, _this select 1)] call FUNC(statTextStatement_weaponMuzzleVelocity));
         tabs[] = {{0,1}, {}};
     };
+    class ACE_magazineAiUsage: statBase {
+        scope = 2;
+        priority = 0;
+        stats[] = {"aiAmmoUsageFlags"};
+        displayName= "AI Usage";
+        showText= 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_magazineAiUsage));
+        condition = QUOTE(is3DEN || {!isNull getAssignedCuratorLogic player} || {missionName == 'Arsenal'});
+        tabs[] = {{}, {4}};
+    };
 };

@@ -77,7 +77,6 @@ PREP(statBarStatement_impact);
 PREP(statBarStatement_rateOfFIre);
 PREP(statTextStatement_accuracy);
 PREP(statTextStatement_explosionTime);
-PREP(statTextStatement_magazineAiUsage);
 PREP(statTextStatement_mass);
 PREP(statTextStatement_rateOfFire);
 PREP(statTextStatement_scopeMag);
