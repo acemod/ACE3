@@ -559,7 +559,7 @@
             <Japanese>レオパルド 2SG</Japanese>
             <Korean>Leopard 2SG</Korean>
             <Chinese>"豹2型新加坡版"主戰坦克</Chinese>
-            <Chinesesimp>"豹"2新加坡版</Chinesesimp>
+            <Chinesesimp>"豹"2 新加坡版</Chinesesimp>
             <Turkish>Leopard 2SG</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_tracked_03_cannon_Name">
@@ -1253,7 +1253,7 @@
             <Japanese>Yak-130</Japanese>
             <Korean>Yak-130</Korean>
             <Chinese>Yak-130 "手套"攻擊機</Chinese>
-            <Chinesesimp>Yak-130 "手套"</Chinesesimp>
+            <Chinesesimp>Yak-130</Chinesesimp>
             <Turkish>Yak-130</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_civil_Name">
@@ -1304,7 +1304,7 @@
             <Japanese>M18A1 クレイモア</Japanese>
             <Korean>M18A1 클레이모어</Korean>
             <Chinese>M18A1 "闊刀"地雷</Chinese>
-            <Chinesesimp>M18A1 "阔刀"地雷</Chinesesimp>
+            <Chinesesimp>M18A1 "阔剑"</Chinesesimp>
             <Turkish>M18A1 Claymore</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SatchelCharge_Name">
@@ -1333,7 +1333,7 @@
             <Russian>M183 Комплектный подрывной заряд (Бросаемый)</Russian>
             <Polish>Ładunek burzący M183 (Rzucany)</Polish>
             <German>M183 Geballte Sprengladung (Werfbar)</German>
-            <Chinesesimp>M183炸药包（可投掷）</Chinesesimp>
+            <Chinesesimp>M183 炸药包（可投掷）</Chinesesimp>
             <Korean>M183 폭파 장약 (투척)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
@@ -1362,7 +1362,7 @@
             <Russian>M112 подрывной заряд (Бросаемый)</Russian>
             <Polish>Ładunek burzący M112 (Rzucany)</Polish>
             <German>M112 Sprengladung (Werfbar)</German>
-            <Chinesesimp>M112塑性炸药（可投掷）</Chinesesimp>
+            <Chinesesimp>M112 塑性炸药（可投掷）</Chinesesimp>
             <Korean>M112 폭파 장약 (투척)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
@@ -4387,7 +4387,7 @@
             <English>EOTech XPS3 SMG (Tan)</English>
             <German>EOTech XPS3 SMG (Beige)</German>
             <Chinese>EOTech XPS3 SMG (黃褐色)</Chinese>
-            <Chinesesimp>EOTech XPS3 SMG（沙色）</Chinesesimp>
+            <Chinesesimp>EOTech XPS3（冲锋枪用，沙色）</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (タン)</Japanese>
             <Italian>EOTech XPS3 SMG (Tan)</Italian>
             <Polish>EOTech XPS3 SMG (Tan)</Polish>
@@ -4403,7 +4403,7 @@
             <English>EOTech XPS3 SMG (Black)</English>
             <German>EOTech XPS3 SMG (Schwarz)</German>
             <Chinese>EOTech XPS3 SMG (黑色)</Chinese>
-            <Chinesesimp>EOTech XPS3 SMG（黑色）</Chinesesimp>
+            <Chinesesimp>EOTech XPS3（冲锋枪用，黑色）</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (ブラック)</Japanese>
             <Italian>EOTech XPS3 SMG (Nero)</Italian>
             <Polish>EOTech XPS3 SMG (Czarny)</Polish>
@@ -4419,7 +4419,7 @@
             <English>EOTech XPS3 SMG (Khaki)</English>
             <German>EOTech XPS3 SMG (Khaki)</German>
             <Chinese>EOTech XPS3 SMG (卡其色)</Chinese>
-            <Chinesesimp>EOTech XPS3 SMG（卡其色）</Chinesesimp>
+            <Chinesesimp>EOTech XPS3（冲锋枪用，卡其色）</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (カーキ)</Japanese>
             <Italian>EOTech XPS3 SMG (Khaki)</Italian>
             <Polish>EOTech XPS3 SMG (Khaki)</Polish>
@@ -4531,7 +4531,7 @@
             <English>C-More Railway SMG (Red)</English>
             <German>C-More Railway SMG (Rot)</German>
             <Chinese>C-More Railway SMG (紅色)</Chinese>
-            <Chinesesimp>C-More Railway SMG（红色）</Chinesesimp>
+            <Chinesesimp>C-More Railway（冲锋枪用，红色）</Chinesesimp>
             <Japanese>C-More レイルウェイ SMG (レッド)</Japanese>
             <Italian>C-More Railway SMG (Rosso)</Italian>
             <Polish>C-More Railway SMG (Czerwony)</Polish>
@@ -4547,7 +4547,7 @@
             <English>C-More Railway SMG (Green)</English>
             <German>C-More Railway SMG (Grün)</German>
             <Chinese>C-More Railway SMG (綠色)</Chinese>
-            <Chinesesimp>C-More Railway SMG（绿色）</Chinesesimp>
+            <Chinesesimp>C-More Railway（冲锋枪用，绿色）</Chinesesimp>
             <Japanese>C-More レイルウェイ SMG (グリーン)</Japanese>
             <Italian>C-More Railway SMG (Verde)</Italian>
             <Polish>C-More Railway SMG (Zielony)</Polish>
