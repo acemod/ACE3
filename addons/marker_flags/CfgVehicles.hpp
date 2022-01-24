@@ -18,34 +18,34 @@ class CfgVehicles {
         scopeCurator = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(white);
-        hiddenSelectionTextures[] = {"#(argb,8,8,3)color(1,1,1,1,co)"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(1,1,1,1,co)"};
     };
     class GVAR(black): GVAR(white) {
         displayName = CSTRING(black);
-        hiddenSelectionTextures[] = {"#(argb,8,8,3)color(0,0,0,1,co)"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(0,0,0,1,co)"};
     };
     class GVAR(red): GVAR(white) {
         displayName = CSTRING(red);
-        hiddenSelectionTextures[] = {"#(argb,8,8,3)color(1,0,0,1,co)"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(1,0,0,1,co)"};
     };
     class GVAR(green): GVAR(white) {
         displayName = CSTRING(green);
-        hiddenSelectionTextures[] = {"#(argb,8,8,3)color(0,1,0,1,co)"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(0,1,0,1,co)"};
     };
     class GVAR(blue): GVAR(white) {
         displayName = CSTRING(blue);
-        hiddenSelectionTextures[] = {"#(argb,8,8,3)color(0,0,1,1,co)"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(0,0,1,1,co)"};
     };
     class GVAR(yellow): GVAR(white) {
         displayName = CSTRING(yellow);
-        hiddenSelectionTextures[] = {"#(argb,8,8,3)color(1,1,0,1,co)"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(1,1,0,1,co)"};
     };
     class GVAR(orange): GVAR(white) {
         displayName = CSTRING(orange);
-        hiddenSelectionTextures[] = {"#(argb,8,8,3)color(1,0.5,0,1,co)"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(1,0.5,0,1,co)"};
     };
     class GVAR(purple): GVAR(white) {
         displayName = CSTRING(purple);
-        hiddenSelectionTextures[] = {"#(argb,8,8,3)color(0.5,0,0.5,1,co)"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(0.5,0,0.5,1,co)"};
     };
 };
