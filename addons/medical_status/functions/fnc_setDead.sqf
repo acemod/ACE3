@@ -26,6 +26,12 @@ _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
 // Send a local event before death
 [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
 
+// Update the state machine if necessary (forced respawn, scripted death, etc)
+private _unitState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
+if (_unitState isNotEqualTo "Dead") then {
+    [_unit, EGVAR(medical,STATE_MACHINE), _unitState, "Dead"] call CBA_statemachine_fnc_manualTransition;
+};
+
 // Kill the unit without changing visual apperance
 private _prevDamage = _unit getHitPointDamage "HitHead";
 

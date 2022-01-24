@@ -16,5 +16,6 @@
  */
 
 params ["_unit"];
+if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) exitWith {};
 
 [QEGVAR(medical,FatalInjuryInstantTransition), _unit] call CBA_fnc_localEvent;
