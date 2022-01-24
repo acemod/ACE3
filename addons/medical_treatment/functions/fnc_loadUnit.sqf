@@ -38,7 +38,7 @@ private _preferredSeats = if (!isNull _vehicle) then {
     []
 };
 
-private _vehicle = [_medic, _patient, _vehicle, _preferredSeats] call EFUNC(common,loadPerson);
+private _vehicle = [_medic, _patient, _vehicle, _preferredSeats, true] call EFUNC(common,loadPerson);
 
 if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
 
