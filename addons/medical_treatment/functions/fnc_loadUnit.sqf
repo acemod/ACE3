@@ -32,7 +32,13 @@ if (_patient call EFUNC(medical_status,isBeingDragged)) then {
     [_medic, _patient] call EFUNC(dragging,dropObject);
 };
 
-private _vehicle = [_medic, _patient, _vehicle] call EFUNC(common,loadPerson);
+private _preferredSeats = if (!isNull _vehicle) then {
+    getArray (configOf _vehicle >> QGVAR(patientSeats))
+} else {
+    []
+};
+
+private _vehicle = [_medic, _patient, _vehicle, _preferredSeats] call EFUNC(common,loadPerson);
 
 if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
 
