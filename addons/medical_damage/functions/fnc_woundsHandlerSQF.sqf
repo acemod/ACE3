@@ -26,7 +26,7 @@ if !(_typeOfDamage in GVAR(damageTypeDetails)) then {
     _typeOfDamage = "unknown";
 };
 
-GVAR(damageTypeDetails) get _typeOfDamage params ["_thresholds", "", "", "_damageWoundDetails"];
+GVAR(damageTypeDetails) get _typeOfDamage params ["_thresholds", "_selectionSpecific", "", "_damageWoundDetails"];
 
 // Administration for open wounds and ids
 private _openWounds = GET_OPEN_WOUNDS(_unit);
@@ -184,6 +184,11 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             _openWounds pushBack _injury;
         };
         _createdWounds = true;
+    };
+
+    // selection-specific damage only hits the first part
+    if (_selectionSpecific) then {
+        break;
     };
 } forEach _allDamages;
 
