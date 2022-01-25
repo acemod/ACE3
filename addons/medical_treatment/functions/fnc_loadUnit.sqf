@@ -38,7 +38,13 @@ private _preferredSeats = if (!isNull _vehicle) then {
     []
 };
 
-private _vehicle = [_medic, _patient, _vehicle, _preferredSeats, true] call EFUNC(common,loadPerson);
+private _vehicle = [
+    _medic,
+    _patient,
+    _vehicle,
+    _preferredSeats,
+    ([configOf _vehicle >> QGVAR(patientReverseFill), "NUMBER", 1] call CBA_fnc_getConfigEntry) > 0
+] call EFUNC(common,loadPerson);
 
 if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
 

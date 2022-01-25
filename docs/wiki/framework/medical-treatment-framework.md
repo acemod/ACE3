@@ -25,3 +25,16 @@ class CfgVehicles {
     };
 };
 ```
+
+### 1.2 Patient Reverse Fill
+
+When no patient seats are available, by default patients will be filled from the highest cargo index to the lowest.
+This can be changed to fill from the lowest to the highest.
+
+```cpp
+class CfgVehicles {
+    class MyCar {
+        ace_medical_treatment_patientReverseFill = 0;
+    };
+};
+```
