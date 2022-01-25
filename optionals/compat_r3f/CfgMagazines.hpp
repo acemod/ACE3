@@ -15,4 +15,10 @@ class CfgMagazines {
     class R3F_5Rnd_127x99_TAC50: CA_magazine { // AtragMx GunList: R3F TAC50 AMAX
         initSpeed = 823; // 2700 fps according with the McMillan Tactical Products specification and the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C), R3F default value 820
     };
+    class R3F_200Rnd_556x45_MINIMI: CA_magazine {
+        ACE_isBelt = 1;
+    };
+    class R3F_100Rnd_762x51_MINIMI: CA_magazine {
+        ACE_isBelt = 1;
+    };
 };
