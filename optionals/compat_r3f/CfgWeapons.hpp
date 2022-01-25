@@ -1,33 +1,59 @@
 class Mode_SemiAuto;
 
 class CfgWeapons {
-    class Pistol_Base_F;
-    class Rifle_Base_F;
-    class Rifle_Long_Base_F;
+    class Pistol;
+    class Pistol_Base_F: Pistol {
+        class WeaponSlotsInfo;
+    };
+    class Rifle;
+    class Rifle_Base_F: Rifle {
+        class WeaponSlotsInfo;
+    };
+    class Rifle_Long_Base_F: Rifle_Base_F {
+        class WeaponSlotsInfo;
+    };
     class R3F_Famas_F1: Rifle_Base_F {
         ACE_RailHeightAboveBore = 10.1796;
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 488.0;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 83.3;
+        };
     };
     class R3F_Famas_F1_M203: R3F_Famas_F1 {
         muzzles[] = {"this","Lance_Grenades"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 113.3;
+        };
     };
     class R3F_Famas_surb: R3F_Famas_F1 { // R3F FAMAS Surbaissé, should be FAMAS Valorisé: http://narval34.free.fr/fiche_tech_famas.pdf
         ACE_RailHeightAboveBore = 5.08219;
         ACE_barrelTwist = 177.8; // 1:7" FAMAS Valorisé
         ACE_barrelLength = 450.0; // 3D model with Beretta barrel : FAMAS Valorisé
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 79;
+        };
     };
     class R3F_Famas_surb_M203: R3F_Famas_surb {
         muzzles[] = {"this","Lance_Grenades"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 109;
+        };
     };
     class R3F_Famas_G2: R3F_Famas_F1 {
         ACE_RailHeightAboveBore = 10.1808;
         ACE_barrelTwist = 228.6; // 1:9"
         ACE_barrelLength = 488.0;
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 82.6;
+        };
     };
     class R3F_Famas_G2_M203: R3F_Famas_G2 {
         muzzles[] = {"this","Lance_Grenades"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 112.6;
+        };
     };
     class R3F_Famas_felin: R3F_Famas_G2 {
         ACE_RailHeightAboveBore = 5.14504;
@@ -46,72 +72,117 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow"
         };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 81.1;
+        };
     };
     class R3F_FRF2: Rifle_Base_F {
         ACE_RailHeightAboveBore = 1.79013;
         ACE_barrelTwist = 294.6;
         ACE_barrelLength = 650.0;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 112.4;
+        };
     };
     class R3F_PGM_Hecate_II: Rifle_Base_F {
         ACE_RailHeightAboveBore = 1.84858;
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 700.0;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 337.3; // 15.3 kg: PGM Hécate 2 official manual
+        };
     };
     class R3F_M107: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.13099;
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 287;
+        };
     };
     class R3F_TAC50: Rifle_Base_F {
         ACE_RailHeightAboveBore = 2.99563;
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 260;
+        };
     };
     class R3F_Minimi: Rifle_Base_F { // FN HERSTAL Minimi 5.56 Mk3 https://www.fnherstal.com/sites/default/files/2020-06/technical-data-fn-minimi-556-mk3.pdf
         ACE_RailHeightAboveBore = 3.81385;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 349;
+        GVAR(allowSwapBarrel) = 1;
+        GVAR(closedBolt) = 0;
+        GVAR(dispersion) = 0.75;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 176.3;
+        };
     };
     class R3F_Minimi_762: R3F_Minimi { // FN HERSTAL Minimi 7.62 Mk3 https://www.fnherstal.com/sites/default/files/2020-06/technical-data-fn-minimi-762-mk3.pdf
         ACE_RailHeightAboveBore = 3.80834;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 422;
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 194;
+        };
     };
     class R3F_HK417M: Rifle_Base_F { // https://www.heckler-koch.com/
         ACE_RailHeightAboveBore = 3.23377;
         ACE_barrelTwist = 279.4;
         ACE_barrelLength = 406.4;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 97;
+        };
     };
     class R3F_HK417S_HG: R3F_HK417M {
         ACE_barrelLength = 304.8;
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 93;
+        };
     };
     class R3F_HK417L: R3F_HK417M {
         ACE_barrelLength = 508.0;
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 104.5;
+        };
     };
     class R3F_HK416M: Rifle_Base_F {
         ACE_RailHeightAboveBore = 2.84776;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.3;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 76.9;
+        };
     };
     class R3F_HK416M_M203: R3F_HK416M {
         muzzles[] = {"this","Lance_Grenades"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 106.9;
+        };
     };
     class R3F_HK416M_HG: R3F_HK416M {};
     class R3F_HK416S_HG: R3F_HK416M_HG {
         ACE_barrelLength = 279.4;
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 68.8;
+        };
     };
     class R3F_SIG551: Rifle_Base_F { // http://www.sigsauer.swiss
         ACE_RailHeightAboveBore = 3.95288;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 363.5; // SG551 SB http://www.sigsauer.swiss/en/accessories-conversion-kits.php
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 75;
+        };
     };
     class R3F_MP5SD: Rifle_Base_F { // https://www.heckler-koch.com/en/products/military/submachine-guns/mp5/mp5sd/overview.html
         ACE_RailHeightAboveBore = 4.21816;
@@ -119,19 +190,28 @@ class CfgWeapons {
         ACE_barrelLength = 146;
         initSpeed = -0.94; // 400*0.94= 376 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C), R3F default value 0
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 75;
+        };
     };
     class R3F_MP5A5: R3F_MP5SD { // https://www.heckler-koch.com/en/products/military/submachine-guns/mp5/mp5/overview.html
         ACE_barrelLength = 225;
         initSpeed = -1; // 400 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C), R3F default value 0
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 68.3;
+        };
     };
     class R3F_M4S90: Rifle_Base_F { // https://www.benelli.it
         ACE_RailHeightAboveBore = 1.86213;
         ACE_twistDirection = 0;
         ACE_barrelTwist = 0;
         ACE_barrelLength = 470;
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 83.8;
+        };
     };
-    class R3F_SCAR_H_PR_20cps_base: Rifle_Base_F { // FN HERSTAL https://www.fnherstal.com/sites/default/files/2020-06/technical-data-fn-scar-h-pr_0.pdf
+    class R3F_SCAR_H_PR_20cps_base: Rifle_Base_F { // FN SCAR®-H PR 20"  https://fnherstal.com/app/uploads/technical-data-fn-scar-h-pr_0.pdf
         ACE_barrelTwist = 279.4;
         ACE_barrelLength = 508;
         muzzles[] = {"this"};
@@ -141,44 +221,104 @@ class CfgWeapons {
         ACE_barrelLength = 508;
         muzzles[] = {"this"};
     };
-    class R3F_SCAR_H_CAM_base: Rifle_Base_F { // FN HERSTAL https://www.fnherstal.com/sites/default/files/2020-06/technical-data-fn-scar-h_0.pdf
+    class R3F_SCAR_H_PR_20pcs_TAN: R3F_SCAR_H_PR_20cps_base {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 99.2;
+        };
+    };
+    class R3F_SCAR_H_PR_20pcs_recup_TAN: R3F_SCAR_H_PR_20cps_recup_base {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 108; // 4.5 kg + 400 g = 10.8 lb https://bt-ag.ch/en/produkt/bt-brass-catcher-for-fn-scar/
+        };
+    };
+    class R3F_SCAR_H_TPR_20pcs_cam: R3F_SCAR_H_PR_20cps_base { // FN SCAR®-H TPR 20" https://fnherstal.com/app/uploads/technical-data-fn-scar-h-pr_0.pdf
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 110.2;
+        };
+    };
+    class R3F_SCAR_H_TPR_20pcs_blk: R3F_SCAR_H_TPR_20pcs_cam {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 110.2;
+        };
+    };
+    class R3F_SCAR_H_TPR_20pcs_cam_ghillie: R3F_SCAR_H_TPR_20pcs_cam {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 110.2;
+        };
+    };
+    class R3F_SCAR_H_CAM_base: Rifle_Base_F { // FN SCAR®-H Mk2 CQC https://fnherstal.com/app/uploads/technical-data-fn-scar-h-mk2.pdf
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 330.2;
         muzzles[] = {"this"};
     };
+    class R3F_SCAR_H_CAM: R3F_SCAR_H_CAM_base {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 82;
+        };
+    };
     class R3F_SCAR_H_CAM_LG_GHILLIE: R3F_SCAR_H_CAM_base {
         muzzles[] = {"this", "EGLM"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 112.2; // FN HERSTAL FN40GL-H Mk2 https://fnherstal.com/app/uploads/technical-data-fn40gl_0-1.pdf
+        };
     };
     class R3F_SCAR_H_CAM_LG: R3F_SCAR_H_CAM_base {
         muzzles[] = {"this", "EGLM"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 112.2;
+        };
     };
-    class R3F_SCAR_L_CAM_base: Rifle_Base_F { // FN HERSTAL https://www.fnherstal.com/sites/default/files/2020-06/technical-data-fn-scar-l_1.pdf
+    class R3F_SCAR_H_BLACK: R3F_SCAR_H_CAM_base {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 82;
+        };
+    };
+    class R3F_SCAR_L_CAM_base: Rifle_Base_F { // FN SCAR®-L STD https://fnherstal.com/app/uploads/technical-data-fn-scar-l-mk2.pdf
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.3;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 77.2;
+        };
     };
     class R3F_SCAR_L_CAM_ghillie_LG: R3F_SCAR_L_CAM_base {
         muzzles[] = {"this", "EGLM"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 108.1; // FN HERSTAL FN40GL-L Mk2 https://fnherstal.com/app/uploads/technical-data-fn40gl_0-1.pdf
+        };
     };
-    class R3F_SCAR_L_CQC_CAM: R3F_SCAR_L_CAM_base {
+    class R3F_SCAR_L_CQC_CAM: R3F_SCAR_L_CAM_base { // FN SCAR®-L CQC https://fnherstal.com/app/uploads/technical-data-fn-scar-l-mk2.pdf
         ACE_barrelLength = 254;
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 72.8;
+        };
     };
     class R3F_SCAR_L_CQC_LG_CAM: R3F_SCAR_L_CAM_base {
         ACE_barrelLength = 254;
         muzzles[] = {"this", "EGLM"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 103.7;
+        };
     };
     class R3F_FN_MAG58: Rifle_Long_Base_F { // FN HERSTAL https://www.fnherstal.com/sites/default/files/2020-10/technical-data-fn-mag-1.pdf
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 630;
+        GVAR(allowSwapBarrel) = 1;
         muzzles[] = {"this"};
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 260.1;
+        };
     };
     class R3F_PAMAS: Pistol_Base_F {
         ACE_barrelTwist = 250.0;
         ACE_barrelLength = 125.0;
         muzzles[] = {"this"};
         initSpeed = -1.0; // default 410
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 18.2;
+        };
         class Single: Mode_SemiAuto {
-            dispersion=0.0025; // 8.59 MOA (a square of 6.25/6.25cm at 25 meters), R3F default value 0.025 (85.94 MOA)
+            dispersion = 0.0025; // 8.59 MOA (a square of 6.25/6.25cm at 25 meters), R3F default value 0.025 (85.94 MOA)
         };
     };
     class R3F_HKUSP: Pistol_Base_F {
@@ -186,8 +326,11 @@ class CfgWeapons {
         ACE_barrelLength = 121.0;
         muzzles[] = {"this"};
         initSpeed = -1.0; // default 410
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 15.8;
+        };
         class Single: Mode_SemiAuto {
-            dispersion=0.002; // 6.88 MOA (a square of 5/5cm at 25 meters), R3F default value 0.02 (68.75 MOA)
+            dispersion = 0.002; // 6.88 MOA (a square of 5/5cm at 25 meters), R3F default value 0.02 (68.75 MOA)
         };
     };
     class R3F_G17: Pistol_Base_F {
@@ -195,6 +338,9 @@ class CfgWeapons {
         ACE_barrelLength = 114.0;
         muzzles[] = {"this"};
         initSpeed = -1.0; // default 410
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 13.9;
+        };
     };
     class ItemCore;
     class InventoryOpticsItem_Base_F;
