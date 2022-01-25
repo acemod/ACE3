@@ -32,17 +32,11 @@ if (_patient call EFUNC(medical_status,isBeingDragged)) then {
     [_medic, _patient] call EFUNC(dragging,dropObject);
 };
 
-private _preferredSeats = if (!isNull _vehicle) then {
-    getArray (configOf _vehicle >> QGVAR(patientSeats))
-} else {
-    []
-};
-
 private _vehicle = [
     _medic,
     _patient,
     _vehicle,
-    _preferredSeats,
+    getArray (configOf _vehicle >> QGVAR(patientSeats)),
     ([configOf _vehicle >> QGVAR(patientReverseFill), "NUMBER", 1] call CBA_fnc_getConfigEntry) > 0
 ] call EFUNC(common,loadPerson);
 
