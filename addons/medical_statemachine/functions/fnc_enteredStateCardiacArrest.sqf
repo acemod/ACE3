@@ -17,7 +17,9 @@
  */
 
 params ["_unit"];
-if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) exitWith {};
+if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) exitWith {
+    WARNING_1("State transition on dead or null unit - %1",_unit);
+};
 
 // 10% possible variance in cardiac arrest time
 private _time = GVAR(cardiacArrestTime);
