@@ -87,9 +87,11 @@ class CfgWeapons {
     };
 
     class rhs_weap_mg42_base: Rifle_Base_F {
-        ACE_Overheating_allowSwapBarrel = 1;
         ACE_barrelTwist = 305.0;
         ACE_barrelLength = 530.0;
+        GVAR(allowSwapBarrel) = 1;
+        GVAR(closedBolt) = 0;
+        GVAR(dispersion) = 0.75;
     };
 
     class rhs_weap_MP44_base: Rifle_Base_F {
