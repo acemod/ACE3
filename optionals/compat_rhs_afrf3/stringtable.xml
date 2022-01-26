@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="RHSAFRF Compat">
+    <Package name="compat_rhs_afrf3">
         <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG17M_displayName">
-            <Original>[CSW] VOG17M</Original>
             <English>[CSW] VOG17M</English>
             <Czech>[CSW] VOG17M</Czech>
             <French>[CSW] VOG17M</French>
@@ -14,7 +13,6 @@
             <German>[CSW] VOG17M</German>
         </Key>
         <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG30_displayName">
-            <Original>[CSW] VOG30</Original>
             <English>[CSW] VOG30</English>
             <Czech>[CSW] VOG30</Czech>
             <French>[CSW] VOG30</French>
@@ -26,7 +24,6 @@
             <German>[CSW] VOG30</German>
         </Key>
         <Key ID="ACE_Compat_RHS_AFRF3_mag_GPD30_displayName">
-            <Original>[CSW] GPD30</Original>
             <English>[CSW] GPD30</English>
             <Czech>[CSW] GPD30</Czech>
             <French>[CSW] GPD30</French>
@@ -37,8 +34,7 @@
             <Russian>[CSW] ГПД30</Russian>
             <German>[CSW] GPD30</German>
         </Key>
-        <Key ID="ACE_Compat_RHS_AFRF3_mag_SH_VOG17M_displayName">
-            <Original>[CSW] VOG17M</Original>
+        <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG17M_displayName">
             <English>[CSW] VOG17M</English>
             <Czech>[CSW] VOG17M</Czech>
             <French>[CSW] VOG17M</French>
@@ -49,8 +45,7 @@
             <Russian>[CSW] ВОГ17М</Russian>
             <German>[CSW] VOG17M</German>
         </Key>
-        <Key ID="ACE_Compat_RHS_AFRF3_mag_SH_VOG30_displayName">
-            <Original>[CSW] VOG30</Original>
+        <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG30_displayName">
             <English>[CSW] VOG30</English>
             <Czech>[CSW] VOG30</Czech>
             <French>[CSW] VOG30</French>
@@ -62,7 +57,6 @@
             <German>[CSW] VOG30</German>
         </Key>
         <Key ID="ACE_Compat_RHS_AFRF3_mag_SH_GPD30_displayName">
-            <Original>[CSW] GPD30</Original>
             <English>[CSW] GPD30</English>
             <Czech>[CSW] GPD30</Czech>
             <French>[CSW] GPD30</French>
@@ -74,7 +68,6 @@
             <German>[CSW] GPD30</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131M_displayName">
-            <Original>[CSW] ATGM 9M131M</Original>
             <English>[CSW] ATGM 9M131M</English>
             <Czech>[CSW] ATGM 9M131M</Czech>
             <French>[CSW] ATGM 9M131M</French>
@@ -86,7 +79,6 @@
             <German>[CSW] ATGM 9M131M</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131F_displayName">
-            <Original>[CSW] ATGM 9M131F</Original>
             <English>[CSW] ATGM 9M131F</English>
             <Czech>[CSW] ATGM 9M131F</Czech>
             <French>[CSW] ATGM 9M131F</French>
@@ -98,7 +90,6 @@
             <German>[CSW] ATGM 9M131F</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133F_displayName">
-            <Original>[CSW] ATGM 9M133F</Original>
             <English>[CSW] ATGM 9M133F</English>
             <Czech>[CSW] ATGM 9M133F</Czech>
             <French>[CSW] ATGM 9M133F</French>
@@ -110,7 +101,6 @@
             <German>[CSW] ATGM 9M133F</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M1331_displayName">
-            <Original>[CSW] ATGM 9M133-1</Original>
             <English>[CSW] ATGM 9M133-1</English>
             <Czech>[CSW] ATGM 9M133-1</Czech>
             <French>[CSW] ATGM 9M133-1</French>
@@ -122,7 +112,6 @@
             <German>[CSW] ATGM 9M133-1</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133M2_displayName">
-            <Original>[CSW] ATGM 9M133M2</Original>
             <English>[CSW] ATGM 9M133M2</English>
             <Czech>[CSW] ATGM 9M133M2</Czech>
             <French>[CSW] ATGM 9M133M2</French>
@@ -134,7 +123,6 @@
             <German>[CSW] ATGM 9M133M2</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9V_displayName">
-            <Original>[CSW] HEAT PG9V</Original>
             <English>[CSW] HEAT PG9V</English>
             <Czech>[CSW] HEAT PG9V</Czech>
             <French>[CSW] HEAT PG9V</French>
@@ -146,7 +134,6 @@
             <German>[CSW] HEAT PG9V</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9N_displayName">
-            <Original>[CSW] HEAT PG9N</Original>
             <English>[CSW] HEAT PG9N</English>
             <Czech>[CSW] HEAT PG9N</Czech>
             <French>[CSW] HEAT PG9N</French>
@@ -158,7 +145,6 @@
             <German>[CSW] HEAT PG9N</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9VNT_displayName">
-            <Original>[CSW] HEAT PG9VNT</Original>
             <English>[CSW] HEAT PG9VNT</English>
             <Czech>[CSW] HEAT PG9VNT</Czech>
             <French>[CSW] HEAT PG9VNT</French>
@@ -170,7 +156,6 @@
             <German>[CSW] HEAT PG9VNT</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9V_displayName">
-            <Original>[CSW] HE-FRAG OG9V</Original>
             <English>[CSW] HE-FRAG OG9V</English>
             <Czech>[CSW] HE-FRAG OG9V</Czech>
             <French>[CSW] HE-FRAG OG9V</French>
@@ -182,7 +167,6 @@
             <German>[CSW] HE-FRAG OG9V</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9VM_displayName">
-            <Original>[CSW] HE-FRAG OG9VM</Original>
             <English>[CSW] HE-FRAG OG9VM</English>
             <Czech>[CSW] HE-FRAG OG9VM</Czech>
             <French>[CSW] HE-FRAG OG9VM</French>

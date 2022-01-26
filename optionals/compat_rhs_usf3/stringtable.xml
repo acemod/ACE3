@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="RHSUSAF Compat">
+    <Package name="compat_rhs_usf3">
         <Key ID="STR_ACE_RHS_Compat_USF3_mag_TOW_displayName">
-            <Original>[CSW] BGM-71A TOW</Original>
+            <English>[CSW] BGM-71A TOW</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_mag_TOWB_displayName">
-            <Original>[CSW] BGM-71B TOW</Original>
+            <English>[CSW] BGM-71B TOW</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_mag_ITOW_displayName">
-            <Original>[CSW] BGM-71C ITOW</Original>
+            <English>[CSW] BGM-71C ITOW</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_mag_TOW2_displayName">
-            <Original>[CSW] BGM-71D TOW-2</Original>
+            <English>[CSW] BGM-71D TOW-2</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_mag_TOW2A_displayName">
-            <Original>[CSW] BGM-71E TOW-2A</Original>
+            <English>[CSW] BGM-71E TOW-2A</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_mag_TOW2b_displayName">
-            <Original>[CSW] BGM-71F TOW-2B</Original>
+            <English>[CSW] BGM-71F TOW-2B</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_mag_TOW2b_aero_displayName">
-            <Original>[CSW] BGM-71F-3 TOW-2B AERO</Original>
+            <English>[CSW] BGM-71F-3 TOW-2B AERO</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_mag_TOW2bb_displayName">
-            <Original>[CSW] BGM-71H Bunker Buster</Original>
+            <English>[CSW] BGM-71H Bunker Buster</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_48Rnd_40mm_MK19_displayName">
-            <Original>[CSW] Mk. 19 40mm M384 HE</Original>
+            <English>[CSW] Mk. 19 40mm M384 HE</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_48Rnd_40mm_MK19_M430I_displayName_displayName">
-            <Original>[CSW] Mk. 19 40mm M430I HEDP</Original>
+            <English>[CSW] Mk. 19 40mm M430I HEDP</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_48Rnd_40mm_MK19_M430A1_displayName_displayName">
-            <Original>[CSW] Mk. 19 40mm M430A1 HEDP</Original>
+            <English>[CSW] Mk. 19 40mm M430A1 HEDP</English>
         </Key>
         <Key ID="STR_ACE_RHS_Compat_USF3_48Rnd_40mm_MK19_M1001_displayName_displayName">
-            <Original>[CSW] Mk. 19 40mm M1001 Canister</Original>
+            <English>[CSW] Mk. 19 40mm M1001 Canister</English>
         </Key>
     </Package>
 </Project>
