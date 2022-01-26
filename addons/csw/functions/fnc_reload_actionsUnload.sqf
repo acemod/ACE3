@@ -58,12 +58,12 @@ private _handeledMagTypes = [];
 
     if ((_xAmmo > 0) && {!(_xMag in _handeledMagTypes)}) then {
         _handeledMagTypes pushBack _xMag;
-        private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
+        private _carryMag = GVAR(vehicleMagCache) get _xMag;
 
         if (isNil "_carryMag") then {
             private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
             _carryMag = configName (_groups param [0, configNull]);
-            GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
+            GVAR(vehicleMagCache) set [_xMag, _carryMag];
             TRACE_2("setting cache",_xMag,_carryMag);
         };
         if (_carryMag == "") exitWith {};
@@ -78,4 +78,3 @@ private _handeledMagTypes = [];
 
 TRACE_1("unloadActions",count _actions);
 _actions
-

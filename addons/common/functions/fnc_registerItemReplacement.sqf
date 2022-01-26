@@ -45,17 +45,17 @@ private _fnc_replaceItems = {
         } forEach [uniformItems _unit, vestItems _unit, backpackItems _unit];
 
         // Determine replacement items: direct replacements, ...
-         private _replacements = GVAR(itemReplacements) getVariable [_item, []];
+         private _replacements = GVAR(itemReplacements) getOrDefault [_item, []];
 
         // ... item type replacements ...
         private _type = getNumber (_cfgWeapons >> _item >> "ItemInfo" >> "type");
-        private _typeReplacements = GVAR(itemReplacements) getVariable ["$" + str _type, []];
+        private _typeReplacements = GVAR(itemReplacements) getOrDefault ["$" + str _type, []];
         _replacements append _typeReplacements;
 
         // ... and inherited replacements
         {
             if (_item isKindOf [_x, _cfgWeapons]) then {
-                private _inheritedReplacements = GVAR(itemReplacements) getVariable [_x, []];
+                private _inheritedReplacements = GVAR(itemReplacements) getOrDefault [_x, []];
                 _replacements append _inheritedReplacements;
             };
         } forEach GVAR(inheritedReplacements);
@@ -86,7 +86,7 @@ private _fnc_replaceItems = {
 
 // Setup on first run
 if (isNil QGVAR(itemReplacements)) then {
-    GVAR(itemReplacements) = [] call CBA_fnc_createNamespace;
+    GVAR(itemReplacements) = createHashMap;
     GVAR(inheritedReplacements) = [];
     GVAR(oldItems) = [];
     ["loadout", _fnc_replaceItems] call CBA_fnc_addPlayerEventHandler;
@@ -105,9 +105,9 @@ if (_newItems isEqualType "") then {
     _newItems = [_newItems];
 };
 
-private _oldReplacements = GVAR(itemReplacements) getVariable [_oldItem, []];
+private _oldReplacements = GVAR(itemReplacements) get [_oldItem, []];
 _oldReplacements append _newItems;
-GVAR(itemReplacements) setVariable [_oldItem, _oldReplacements];
+GVAR(itemReplacements) set [_oldItem, _oldReplacements];
 
 // Force item scan when new replacement was registered in PostInit
 if (!isNull ACE_player) then {
