@@ -133,7 +133,7 @@
             <Russian>[CSW] ПТРК 9М133M2</Russian>
             <German>[CSW] ATGM 9M133M2</German>
         </Key>
-        <Key ID="STR_RHS_MAG_PG9V">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9V_displayName">
             <Original>[CSW] HEAT PG9V</Original>
             <English>[CSW] HEAT PG9V</English>
             <Czech>[CSW] HEAT PG9V</Czech>
@@ -145,7 +145,7 @@
             <Russian>[CSW] ПГ9В</Russian>
             <German>[CSW] HEAT PG9V</German>
         </Key>
-        <Key ID="STR_RHS_MAG_PG9N">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9N_displayName">
             <Original>[CSW] HEAT PG9N</Original>
             <English>[CSW] HEAT PG9N</English>
             <Czech>[CSW] HEAT PG9N</Czech>
@@ -157,7 +157,7 @@
             <Russian>[CSW] ПГ9Н</Russian>
             <German>[CSW] HEAT PG9N</German>
         </Key>
-        <Key ID="STR_RHS_MAG_PG9VNT">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9VNT_displayName">
             <Original>[CSW] HEAT PG9VNT</Original>
             <English>[CSW] HEAT PG9VNT</English>
             <Czech>[CSW] HEAT PG9VNT</Czech>
@@ -169,7 +169,7 @@
             <Russian>[CSW] ПГ9ВНТ</Russian>
             <German>[CSW] HEAT PG9VNT</German>
         </Key>
-        <Key ID="STR_RHS_MAG_OG9V">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9V_displayName">
             <Original>[CSW] HE-FRAG OG9V</Original>
             <English>[CSW] HE-FRAG OG9V</English>
             <Czech>[CSW] HE-FRAG OG9V</Czech>
@@ -181,7 +181,7 @@
             <Russian>[CSW] ОГ9В</Russian>
             <German>[CSW] HE-FRAG OG9V</German>
         </Key>
-        <Key ID="STR_RHS_MAG_OG9VM">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9VM_displayName">
             <Original>[CSW] HE-FRAG OG9VM</Original>
             <English>[CSW] HE-FRAG OG9VM</English>
             <Czech>[CSW] HE-FRAG OG9VM</Czech>
