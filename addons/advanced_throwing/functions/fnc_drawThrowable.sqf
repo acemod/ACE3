@@ -44,7 +44,7 @@ if ((!_primed) && {!((_throwableMag in (uniformItems ACE_player)) || {_throwable
 // Get correct throw power for primed grenade
 if (_primed) then {
     private _ammoType = typeOf _activeThrowable;
-    _throwableMag = GVAR(ammoMagLookup) getVariable _ammoType;
+    _throwableMag = GVAR(ammoMagLookup) get _ammoType;
     if (isNil "_throwableMag") then {
         // What we're trying to throw must not be a normal throwable because it is not in our lookup hash (e.g. 40mm smoke)
         // Just use HandGrenade as it has an average initSpeed value
