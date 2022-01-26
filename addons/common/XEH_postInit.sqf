@@ -404,7 +404,7 @@ GVAR(reloadMutex_lastGesture) = "";
     if (
         (GVAR(isReloading)) ||
         {_unit isNotEqualTo ACE_Player} ||
-        {(weaponState ACE_Player) select 6 == 0} ||
+        {(weaponState ACE_Player) select 6 == 0}
     ) exitWith {};
 
     TRACE_2("Reloading, blocking gestures",_weapon,_gesture);
