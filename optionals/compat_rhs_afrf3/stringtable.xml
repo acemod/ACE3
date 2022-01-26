@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="RHSAFRF Compat">
+        <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG17M_displayName">
+            <Original>[CSW] VOG17M</Original>
+            <English>[CSW] VOG17M</English>
+            <Czech>[CSW] VOG17M</Czech>
+            <French>[CSW] VOG17M</French>
+            <Spanish>[CSW] VOG17M</Spanish>
+            <Italian>[CSW] VOG17M</Italian>
+            <Polish>[CSW] WOG17M</Polish>
+            <Portuguese>[CSW] VOG17M</Portuguese>
+            <Russian>[CSW] ВОГ17М</Russian>
+            <German>[CSW] VOG17M</German>
+        </Key>
+        <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG30_displayName">
+            <Original>[CSW] VOG30</Original>
+            <English>[CSW] VOG30</English>
+            <Czech>[CSW] VOG30</Czech>
+            <French>[CSW] VOG30</French>
+            <Spanish>[CSW] VOG30</Spanish>
+            <Italian>[CSW] VOG30</Italian>
+            <Polish>[CSW] WOG30</Polish>
+            <Portuguese>[CSW] VOG30</Portuguese>
+            <Russian>[CSW] ВОГ30</Russian>
+            <German>[CSW] VOG30</German>
+        </Key>
+        <Key ID="ACE_Compat_RHS_AFRF3_mag_GPD30_displayName">
+            <Original>[CSW] GPD30</Original>
+            <English>[CSW] GPD30</English>
+            <Czech>[CSW] GPD30</Czech>
+            <French>[CSW] GPD30</French>
+            <Spanish>[CSW] GPD30</Spanish>
+            <Italian>[CSW] GPD30</Italian>
+            <Polish>[CSW] GPD30</Polish>
+            <Portuguese>[CSW] GPD30</Portuguese>
+            <Russian>[CSW] ГПД30</Russian>
+            <German>[CSW] GPD30</German>
+        </Key>
+        <Key ID="ACE_Compat_RHS_AFRF3_mag_SH_VOG17M_displayName">
+            <Original>[CSW] VOG17M</Original>
+            <English>[CSW] VOG17M</English>
+            <Czech>[CSW] VOG17M</Czech>
+            <French>[CSW] VOG17M</French>
+            <Spanish>[CSW] VOG17M</Spanish>
+            <Italian>[CSW] VOG17M</Italian>
+            <Polish>[CSW] WOG17M</Polish>
+            <Portuguese>[CSW] VOG17M</Portuguese>
+            <Russian>[CSW] ВОГ17М</Russian>
+            <German>[CSW] VOG17M</German>
+        </Key>
+        <Key ID="ACE_Compat_RHS_AFRF3_mag_SH_VOG30_displayName">
+            <Original>[CSW] VOG30</Original>
+            <English>[CSW] VOG30</English>
+            <Czech>[CSW] VOG30</Czech>
+            <French>[CSW] VOG30</French>
+            <Spanish>[CSW] VOG30</Spanish>
+            <Italian>[CSW] VOG30</Italian>
+            <Polish>[CSW] WOG30</Polish>
+            <Portuguese>[CSW] VOG30</Portuguese>
+            <Russian>[CSW] ВОГ30</Russian>
+            <German>[CSW] VOG30</German>
+        </Key>
+        <Key ID="ACE_Compat_RHS_AFRF3_mag_SH_GPD30_displayName">
+            <Original>[CSW] GPD30</Original>
+            <English>[CSW] GPD30</English>
+            <Czech>[CSW] GPD30</Czech>
+            <French>[CSW] GPD30</French>
+            <Spanish>[CSW] GPD30</Spanish>
+            <Italian>[CSW] GPD30</Italian>
+            <Polish>[CSW] GPD30</Polish>
+            <Portuguese>[CSW] GPD30</Portuguese>
+            <Russian>[CSW] ГПД30</Russian>
+            <German>[CSW] GPD30</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131M_displayName">
+            <Original>[CSW] ATGM 9M131M</Original>
+            <English>[CSW] ATGM 9M131M</English>
+            <Czech>[CSW] ATGM 9M131M</Czech>
+            <French>[CSW] ATGM 9M131M</French>
+            <Spanish>[CSW] ATGM 9M131M</Spanish>
+            <Italian>[CSW] ATGM 9M131M</Italian>
+            <Polish>[CSW] ATGM 9M131M</Polish>
+            <Portuguese>[CSW] ATGM 9M131M</Portuguese>
+            <Russian>[CSW] ПТРК 9М131М</Russian>
+            <German>[CSW] ATGM 9M131M</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131F_displayName">
+            <Original>[CSW] ATGM 9M131F</Original>
+            <English>[CSW] ATGM 9M131F</English>
+            <Czech>[CSW] ATGM 9M131F</Czech>
+            <French>[CSW] ATGM 9M131F</French>
+            <Spanish>[CSW] ATGM 9M131F</Spanish>
+            <Italian>[CSW] ATGM 9M131F</Italian>
+            <Polish>[CSW] ATGM 9M131F</Polish>
+            <Portuguese>[CSW] ATGM 9M131F</Portuguese>
+            <Russian>[CSW] ПТРК 9М131ф</Russian>
+            <German>[CSW] ATGM 9M131F</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133F_displayName">
+            <Original>[CSW] ATGM 9M133F</Original>
+            <English>[CSW] ATGM 9M133F</English>
+            <Czech>[CSW] ATGM 9M133F</Czech>
+            <French>[CSW] ATGM 9M133F</French>
+            <Spanish>[CSW] ATGM 9M133F</Spanish>
+            <Italian>[CSW] ATGM 9M133F</Italian>
+            <Polish>[CSW] ATGM 9M133F</Polish>
+            <Portuguese>[CSW] ATGM 9M133F</Portuguese>
+            <Russian>[CSW] ПТРК 9М133ф</Russian>
+            <German>[CSW] ATGM 9M133F</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M1331_displayName">
+            <Original>[CSW] ATGM 9M133-1</Original>
+            <English>[CSW] ATGM 9M133-1</English>
+            <Czech>[CSW] ATGM 9M133-1</Czech>
+            <French>[CSW] ATGM 9M133-1</French>
+            <Spanish>[CSW] ATGM 9M133-1</Spanish>
+            <Italian>[CSW] ATGM 9M133-1</Italian>
+            <Polish>[CSW] ATGM 9M133-1</Polish>
+            <Portuguese>[CSW] ATGM 9M133-1</Portuguese>
+            <Russian>[CSW] ПТРК 9М133-1</Russian>
+            <German>[CSW] ATGM 9M133-1</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133M2_displayName">
+            <Original>[CSW] ATGM 9M133M2</Original>
+            <English>[CSW] ATGM 9M133M2</English>
+            <Czech>[CSW] ATGM 9M133M2</Czech>
+            <French>[CSW] ATGM 9M133M2</French>
+            <Spanish>[CSW] ATGM 9M133M2</Spanish>
+            <Italian>[CSW] ATGM 9M133M2</Italian>
+            <Polish>[CSW] ATGM 9M133M2</Polish>
+            <Portuguese>[CSW] ATGM 9M133M2</Portuguese>
+            <Russian>[CSW] ПТРК 9М133M2</Russian>
+            <German>[CSW] ATGM 9M133M2</German>
+        </Key>
+        <Key ID="STR_RHS_MAG_PG9V">
+            <Original>[CSW] HEAT PG9V</Original>
+            <English>[CSW] HEAT PG9V</English>
+            <Czech>[CSW] HEAT PG9V</Czech>
+            <French>[CSW] HEAT PG9V</French>
+            <Spanish>[CSW] AEAT PG9V</Spanish>
+            <Italian>[CSW] HEAT PG9V</Italian>
+            <Polish>[CSW] HEAT PG9V</Polish>
+            <Portuguese>[CSW] HEAT PG9V</Portuguese>
+            <Russian>[CSW] ПГ9В</Russian>
+            <German>[CSW] HEAT PG9V</German>
+        </Key>
+        <Key ID="STR_RHS_MAG_PG9N">
+            <Original>[CSW] HEAT PG9N</Original>
+            <English>[CSW] HEAT PG9N</English>
+            <Czech>[CSW] HEAT PG9N</Czech>
+            <French>[CSW] HEAT PG9N</French>
+            <Spanish>[CSW] AEAT PG9N</Spanish>
+            <Italian>[CSW] HEAT PG9N</Italian>
+            <Polish>[CSW] HEAT PG9N</Polish>
+            <Portuguese>[CSW] HEAT PG9N</Portuguese>
+            <Russian>[CSW] ПГ9Н</Russian>
+            <German>[CSW] HEAT PG9N</German>
+        </Key>
+        <Key ID="STR_RHS_MAG_PG9VNT">
+            <Original>[CSW] HEAT PG9VNT</Original>
+            <English>[CSW] HEAT PG9VNT</English>
+            <Czech>[CSW] HEAT PG9VNT</Czech>
+            <French>[CSW] HEAT PG9VNT</French>
+            <Spanish>[CSW] AEAT PG9VNT</Spanish>
+            <Italian>[CSW] HEAT PG9VNT</Italian>
+            <Polish>[CSW] HEAT PG9VNT</Polish>
+            <Portuguese>[CSW] HEAT PG9VNT</Portuguese>
+            <Russian>[CSW] ПГ9ВНТ</Russian>
+            <German>[CSW] HEAT PG9VNT</German>
+        </Key>
+        <Key ID="STR_RHS_MAG_OG9V">
+            <Original>[CSW] HE-FRAG OG9V</Original>
+            <English>[CSW] HE-FRAG OG9V</English>
+            <Czech>[CSW] HE-FRAG OG9V</Czech>
+            <French>[CSW] HE-FRAG OG9V</French>
+            <Spanish>[CSW] AE-FRAG OG9V</Spanish>
+            <Italian>[CSW] HE-FRAG OG9V</Italian>
+            <Polish>[CSW] HE-FRAG OG9V</Polish>
+            <Portuguese>[CSW] HE-FRAG OG9V</Portuguese>
+            <Russian>[CSW] ОГ9В</Russian>
+            <German>[CSW] HE-FRAG OG9V</German>
+        </Key>
+        <Key ID="STR_RHS_MAG_OG9VM">
+            <Original>[CSW] HE-FRAG OG9VM</Original>
+            <English>[CSW] HE-FRAG OG9VM</English>
+            <Czech>[CSW] HE-FRAG OG9VM</Czech>
+            <French>[CSW] HE-FRAG OG9VM</French>
+            <Spanish>[CSW] AE-FRAG OG9VM</Spanish>
+            <Italian>[CSW] HE-FRAG OG9VM</Italian>
+            <Polish>[CSW] HE-FRAG OG9VM</Polish>
+            <Portuguese>[CSW] HE-FRAG OG9VM</Portuguese>
+            <Russian>[CSW] ОГ9ВМ</Russian>
+            <German>[CSW] HE-FRAG OG9VM</German>
+        </Key>
+    </Package>
+</Project>
