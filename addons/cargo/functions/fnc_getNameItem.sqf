@@ -18,8 +18,10 @@
 
 params ["_object", ["_addCustomPart", false]];
 
-private _displayName = if (_object isEqualType "") then {_object} else {
-    getText ((configOf _object) >> "_displayName");
+private _displayName = if (_object isEqualType "") then {
+    getText (configFile >> "CfgVehicles" >> _object >> "displayName")
+} else {
+    getText ((configOf _object) >> "displayName")
 };
 
 if (_addCustomPart && {!(_object isEqualType "")}) then {
