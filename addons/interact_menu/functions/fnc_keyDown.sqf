@@ -15,18 +15,14 @@
  * Public: No
  */
 
+#define CT_EDIT 2
+
 params ["_menuType"];
 
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
 // Conditions: Don't open when editing a text box
-private _isTextEditing = false;
-{
-    if (ctrlType (focusedCtrl _x) == 2) then {
-        _isTextEditing = true;
-        break;
-    };
-} forEach (allDisplays select {!isNull (focusedCtrl _x)});
+private _isTextEditing = (allDisplays findIf {(ctrlType (focusedCtrl _x)) == CT_EDIT}) != -1;
 
 // Conditions: canInteract (these don't apply to zeus)
 if (
