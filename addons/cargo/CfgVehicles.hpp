@@ -320,14 +320,12 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
-        GVAR(noRename) = 1;
     };
 
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
-        GVAR(noRename) = 1;
     };
 
     // Ammo boxes
