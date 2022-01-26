@@ -27,7 +27,7 @@ GVAR(loadoutAction) = [ // create action
     private _typeOf = typeOf _vehicle;
 
     if (_typeOf in GVAR(aircraftWithPylons)) exitWith {};
-    if (!isClass (configFile >> "CfgVehicles" >> _typeOf >> 'Components' >> 'TransportPylonsComponent')) exitWith {};
+    if (!isClass ((configOf _vehicle) >> 'Components' >> 'TransportPylonsComponent')) exitWith {};
 
     GVAR(aircraftWithPylons) pushBack _typeOf;
     [_typeOf, 0, ["ACE_MainActions"], GVAR(loadoutAction)] call EFUNC(interact_menu,addActionToClass);
