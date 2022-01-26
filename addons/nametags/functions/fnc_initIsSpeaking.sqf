@@ -37,14 +37,14 @@ if (!hasInterface) exitWith {};
 }] call CBA_fnc_addPlayerEventHandler;
 
 switch (true) do {
-    case (["acre_api"] call EFUNC(common,isModLoaded): {
+    case (["acre_api"] call EFUNC(common,isModLoaded)): {
         INFO("ACRE Detected.");
         DFUNC(isSpeaking) = {
             params ["_unit"];
             ([_unit] call acre_api_fnc_isSpeaking) && {!(_unit getVariable ["ACE_isUnconscious", false])}
         };
     };
-    case (["task_force_radio"] call EFUNC(common,isModLoaded): {
+    case (["task_force_radio"] call EFUNC(common,isModLoaded)): {
         INFO("TFAR Detected.");
         DFUNC(isSpeaking) =     {
             params ["_unit"];
