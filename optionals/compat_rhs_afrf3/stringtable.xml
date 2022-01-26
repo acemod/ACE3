@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Compat_RHS_AFRF3">
-        <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG17M_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG17M_displayName">
             <English>[CSW] VOG17M</English>
             <Czech>[CSW] VOG17M</Czech>
             <French>[CSW] VOG17M</French>
@@ -12,7 +12,7 @@
             <Russian>[CSW] ВОГ17М</Russian>
             <German>[CSW] VOG17M</German>
         </Key>
-        <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG30_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG30_displayName">
             <English>[CSW] VOG30</English>
             <Czech>[CSW] VOG30</Czech>
             <French>[CSW] VOG30</French>
@@ -23,7 +23,7 @@
             <Russian>[CSW] ВОГ30</Russian>
             <German>[CSW] VOG30</German>
         </Key>
-        <Key ID="ACE_Compat_RHS_AFRF3_mag_GPD30_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_GPD30_displayName">
             <English>[CSW] GPD30</English>
             <Czech>[CSW] GPD30</Czech>
             <French>[CSW] GPD30</French>
