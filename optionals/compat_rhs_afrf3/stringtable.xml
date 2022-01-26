@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="compat_rhs_afrf3">
+    <Package name="Compat_RHS_AFRF3">
         <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG17M_displayName">
             <English>[CSW] VOG17M</English>
             <Czech>[CSW] VOG17M</Czech>
@@ -24,39 +24,6 @@
             <German>[CSW] VOG30</German>
         </Key>
         <Key ID="ACE_Compat_RHS_AFRF3_mag_GPD30_displayName">
-            <English>[CSW] GPD30</English>
-            <Czech>[CSW] GPD30</Czech>
-            <French>[CSW] GPD30</French>
-            <Spanish>[CSW] GPD30</Spanish>
-            <Italian>[CSW] GPD30</Italian>
-            <Polish>[CSW] GPD30</Polish>
-            <Portuguese>[CSW] GPD30</Portuguese>
-            <Russian>[CSW] ГПД30</Russian>
-            <German>[CSW] GPD30</German>
-        </Key>
-        <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG17M_displayName">
-            <English>[CSW] VOG17M</English>
-            <Czech>[CSW] VOG17M</Czech>
-            <French>[CSW] VOG17M</French>
-            <Spanish>[CSW] VOG17M</Spanish>
-            <Italian>[CSW] VOG17M</Italian>
-            <Polish>[CSW] WOG17M</Polish>
-            <Portuguese>[CSW] VOG17M</Portuguese>
-            <Russian>[CSW] ВОГ17М</Russian>
-            <German>[CSW] VOG17M</German>
-        </Key>
-        <Key ID="ACE_Compat_RHS_AFRF3_mag_VOG30_displayName">
-            <English>[CSW] VOG30</English>
-            <Czech>[CSW] VOG30</Czech>
-            <French>[CSW] VOG30</French>
-            <Spanish>[CSW] VOG30</Spanish>
-            <Italian>[CSW] VOG30</Italian>
-            <Polish>[CSW] WOG30</Polish>
-            <Portuguese>[CSW] VOG30</Portuguese>
-            <Russian>[CSW] ВОГ30</Russian>
-            <German>[CSW] VOG30</German>
-        </Key>
-        <Key ID="ACE_Compat_RHS_AFRF3_mag_SH_GPD30_displayName">
             <English>[CSW] GPD30</English>
             <Czech>[CSW] GPD30</Czech>
             <French>[CSW] GPD30</French>
