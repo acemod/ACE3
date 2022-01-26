@@ -4,14 +4,14 @@
  * Dragging integration. Unloader starts carrying unloaded object.
  *
  * Arguments:
- * 0: Item <OBJECT or STRING>
- * 1: Unloader <OBJECT> (default: objNull)
+ * 0: Unloader <OBJECT>
+ * 1: Item <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [object, vehicle] call ace_cargo_fnc_unloadCarryItem
+ * [player, object] call ace_cargo_fnc_unloadCarryItem
  *
  * Public: No
  */
