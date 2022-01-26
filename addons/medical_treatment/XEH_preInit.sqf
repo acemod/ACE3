@@ -12,11 +12,7 @@ PREP_RECOMPILE_END;
 // adjusting these is trail and error
 // if the animation is cut of ingame, increase these values
 // if the unit idles too much, decrease them
-GVAR(animDurations) = [] call CBA_fnc_createNamespace;
-
-{
-    GVAR(animDurations) setVariable _x;
-} forEach [
+GVAR(animDurations) = createHashMapFromArray [
     ["AinvPknlMstpSlayWnonDnon_medic", 7.5],
     ["AinvPpneMstpSlayWnonDnon_medic", 7],
     ["AinvPknlMstpSlayWrflDnon_medic", 7],
