@@ -56,12 +56,13 @@ if (!hasInterface) exitWith {};
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);
     };
-        if (missionNamespace getVariable [QEGVAR(weather,enabled), false]) then { // Weather has an off switch, Dragging & Medical don't.
+    // Weather has an off switch, Dragging & Medical don't.
+    if (missionNamespace getVariable [QEGVAR(weather,enabled), false]) then {
         [QEGVAR(weather,temperature), { // 35->1, 45->2
             linearConversion [35, 45, (missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]), 1, 2, true];
         }] call FUNC(addDutyFactor);
     };
 
     // - Add main loop at 1 second interval -------------------------------------------------------------
-    [FUNC(mainLoop), 1] call CBA_fnc_addPerFrameHandler;
+    [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
