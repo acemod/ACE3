@@ -15,7 +15,7 @@
  * Public: No
  */
 
-// Dead people don't breath, Will also handle null (Map intros)
+// Dead people don't breathe, will also handle null (map intros)
 if (!alive ACE_player) exitWith {
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
     private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
