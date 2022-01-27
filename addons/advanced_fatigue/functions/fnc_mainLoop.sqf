@@ -80,4 +80,4 @@ if (GVAR(enableStaminaBar)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);
 };
 
-[FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute
+[FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
