@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Kills a local unit.
+ * Kills a unit.
  *
  * Arguments:
  * 0: The unit <OBJECT>
@@ -19,6 +19,7 @@ TRACE_3("setDead",_unit,_reason,_instigator);
 
 if !(local _unit) exitWith {
     WARNING_1("setDead executed on non-local unit - %1",_this);
+    [QGVAR(setDead), _this, _unit] call CBA_fnc_targetEvent;
 };
 
 // No heart rate or blood pressure to measure when dead

@@ -2,3 +2,6 @@
 
 // Handle pain changes on injury
 [QEGVAR(medical,injured), LINKFUNC(adjustPainLevel)] call CBA_fnc_addEventHandler;
+
+// Remote setDead
+[QGVAR(setDead), LINKFUNC(setDead)] call CBA_fnc_addEventHandler;
