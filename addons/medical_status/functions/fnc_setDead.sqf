@@ -22,6 +22,11 @@ if !(local _unit) exitWith {
     [QGVAR(setDead), _this, _unit] call CBA_fnc_targetEvent;
 };
 
+if !(isDamageAllowed _unit) then {
+    WARNING_1("setDead executed on unit with damage blocked - %1",_this);
+    _unit allowDamage true;
+};
+
 // No heart rate or blood pressure to measure when dead
 _unit setVariable [VAR_HEART_RATE, 0, true];
 _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
