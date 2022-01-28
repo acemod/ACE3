@@ -133,7 +133,7 @@
             <Japanese>北北東</Japanese>
             <Korean>북북동</Korean>
             <Chinese>北北東</Chinese>
-            <Chinesesimp>北北东</Chinesesimp>
+            <Chinesesimp>东北偏北</Chinesesimp>
             <Turkish>KKD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NE">
@@ -167,7 +167,7 @@
             <Japanese>東北東</Japanese>
             <Korean>동북동</Korean>
             <Chinese>東北東</Chinese>
-            <Chinesesimp>东北东</Chinesesimp>
+            <Chinesesimp>东北偏东</Chinesesimp>
             <Turkish>DKD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_E">
@@ -201,7 +201,7 @@
             <Japanese>東南東</Japanese>
             <Korean>동남동</Korean>
             <Chinese>東南東</Chinese>
-            <Chinesesimp>东南东</Chinesesimp>
+            <Chinesesimp>东南偏东</Chinesesimp>
             <Turkish>DGD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_SE">
@@ -235,7 +235,7 @@
             <Japanese>南南東</Japanese>
             <Korean>남남동</Korean>
             <Chinese>南南東</Chinese>
-            <Chinesesimp>南南东</Chinesesimp>
+            <Chinesesimp>东南偏南</Chinesesimp>
             <Turkish>GGD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_S">
@@ -269,7 +269,7 @@
             <Japanese>南南西</Japanese>
             <Korean>남남서</Korean>
             <Chinese>南南西</Chinese>
-            <Chinesesimp>南南西</Chinesesimp>
+            <Chinesesimp>西南偏南</Chinesesimp>
             <Turkish>GGB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_SW">
@@ -303,7 +303,7 @@
             <Japanese>西南西</Japanese>
             <Korean>서남서</Korean>
             <Chinese>西南西</Chinese>
-            <Chinesesimp>西南西</Chinesesimp>
+            <Chinesesimp>西南偏西</Chinesesimp>
             <Turkish>BGB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_W">
@@ -337,7 +337,7 @@
             <Japanese>北北西</Japanese>
             <Korean>서북서</Korean>
             <Chinese>西北西</Chinese>
-            <Chinesesimp>西北西</Chinesesimp>
+            <Chinesesimp>西北偏西</Chinesesimp>
             <Turkish>BKB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NW">
@@ -371,7 +371,7 @@
             <Japanese>北北西</Japanese>
             <Korean>북북서</Korean>
             <Chinese>北北西</Chinese>
-            <Chinesesimp>北北西</Chinesesimp>
+            <Chinesesimp>西北偏北</Chinesesimp>
             <Turkish>KKB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ActionAborted">
@@ -473,7 +473,7 @@
             <Japanese>音声なし</Japanese>
             <Korean>무음</Korean>
             <Chinese>無語音</Chinese>
-            <Chinesesimp>没声音</Chinesesimp>
+            <Chinesesimp>无语音</Chinesesimp>
             <Turkish>Ses yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
@@ -762,7 +762,7 @@
             <Japanese>甘蕉は食べられる果物でバショウ科バショウ属のうち、果実を食用とする品種群の総称。また、その果実のこと。いくつかの原種から育種された多年草。種によっては熟すまでは毒を持つものもある。</Japanese>
             <Korean>바나나는 식용 과일로써 식물학적으로 열매류이며 여러 종류의 개화가능한 초본의 파초과로 부터 생산됩니다.</Korean>
             <Chinese>香蕉(學名: Musa × paradisiaca)，為芭蕉科芭蕉屬小果野蕉及野蕉的人工栽培雜交種，為多年生草本植物。果實長有棱; 果皮黃色，果肉白色，味道香甜。主要生長在熱帶、亞熱帶地區。原產於亞洲東南部熱帶、亞熱帶地區</Chinese>
-            <Chinesesimp>香蕉（学名：Musa × paradisiaca），为芭蕉科芭蕉属小果野蕉及野蕉的人工栽培杂交种，为多年生草本植物。果实长有棱; 果皮黄色，果肉白色，味道香甜。主要生长在热带、亚热带地区。原产于亚洲东南部热带、亚热带地区。</Chinesesimp>
+            <Chinesesimp>香蕉（学名：Musa paradisiaca），为芭蕉科芭蕉属小果野蕉及野蕉的人工栽培杂交种，为多年生草本植物。果实长有棱; 果皮黄色，果肉白色，味道香甜。主要生长在热带、亚热带地区。原产于亚洲东南部热带、亚热带地区。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_DisplayName">
             <English>Check PBOs</English>
@@ -941,7 +941,7 @@
             <Japanese>どのようなアドオンを許可しますか?</Japanese>
             <Korean>허가되는 에드온은 어느것입니까?</Korean>
             <Chinese>哪些模組是可被允許/忽略的?</Chinese>
-            <Chinesesimp>哪些模组是可被允许/忽略的？</Chinesesimp>
+            <Chinesesimp>无论如何都允许的附加组件</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>

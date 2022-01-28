@@ -530,7 +530,7 @@
             <French>[CSW] Bande 12,7x108 mm HMG</French>
             <Japanese>[CSW] 12.7x108 mm HMG ベルト</Japanese>
             <Chinese>[CSW]12.7x108毫米 重機槍彈鏈</Chinese>
-            <Chinesesimp>[班组]12.7x108 mm 重机枪弹链</Chinesesimp>
+            <Chinesesimp>[班组] 12.7x108 mm 重机枪弹链</Chinesesimp>
             <Italian>[CSW] 12.7x108mm HMG Belt</Italian>
             <Czech>[CSW] Pás 12.7×108mm pro těžký kulomet</Czech>
             <Turkish>[CSW] 12.7x108mm HMG Belt</Turkish>
@@ -546,7 +546,7 @@
             <French>[CSW] Bande 12,7x99 mm HMG</French>
             <Japanese>[CSW] 12.7x99 mm HMG ベルト</Japanese>
             <Chinese>[CSW]12.7x99毫米 重機槍彈鏈</Chinese>
-            <Chinesesimp>[班组]12.7x99 mm 重机枪弹链</Chinesesimp>
+            <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链</Chinesesimp>
             <Italian>[CSW] 12.7x99mm HMG Belt</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet</Czech>
             <Turkish>[CSW] 12.7x99mm HMG Belt</Turkish>
@@ -562,7 +562,7 @@
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Rouges)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (赤)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（紅色）</Chinese>
-            <Chinesesimp>[班组] 12.7x99 mm 重机枪曳光弹链（红）</Chinesesimp>
+            <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，红）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (červená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Turkish>
@@ -578,7 +578,7 @@
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Vertes)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (緑)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（綠色）</Chinese>
-            <Chinesesimp>[班组] 12.7x99 mm 重机枪曳光弹链（绿）</Chinesesimp>
+            <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，绿）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (zelená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Turkish>
@@ -594,7 +594,7 @@
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Jaunes)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (黄)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（黃色）</Chinese>
-            <Chinesesimp>[班组] 12.7x99 mm 重机枪曳光弹链（黄）</Chinesesimp>
+            <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，黄）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (žlutá stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Turkish>
@@ -898,7 +898,7 @@
             <French>[CSW] Sac DSHK</French>
             <Japanese>[CSW] DShK ガン バッグ</Japanese>
             <Chinese>[CSW]DShK 槍械袋</Chinese>
-            <Chinesesimp>[班组]DShK 枪械包</Chinesesimp>
+            <Chinesesimp>[班组] DShK 枪械包</Chinesesimp>
             <Italian>[CSW] DSHK Gun Bag</Italian>
             <Czech>[CSW] DSHK zbraň v pouzdře</Czech>
             <Turkish>[CSW] DSHK Gun Bag</Turkish>
