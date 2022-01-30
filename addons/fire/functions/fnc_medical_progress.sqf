@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Checks if patient is still burning for medical progress to continue.
  *
  * Arguments:

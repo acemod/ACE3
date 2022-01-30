@@ -28,7 +28,7 @@
             <Hungarian>ACE-Team</Hungarian>
             <Italian>ACE-Team</Italian>
             <Japanese>ACE チーム</Japanese>
-            <Korean>ACE-Team</Korean>
+            <Korean>ACE-팀</Korean>
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
             <Turkish>ACE-Takımı</Turkish>
@@ -420,7 +420,7 @@
             <Italian>Disabilita menù di comando</Italian>
             <Portuguese>Desabilitar menu de comando</Portuguese>
             <Japanese>指揮メニューを無効化</Japanese>
-            <Korean>지휘 메뉴 종료</Korean>
+            <Korean>지휘 메뉴 비활성화</Korean>
             <Chinese>關閉命令選單</Chinese>
             <Chinesesimp>关闭命令选单</Chinesesimp>
             <Turkish>Komut Menüsünü Devre Dışı Bırak</Turkish>
@@ -501,6 +501,7 @@
             <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
             <Russian>Определяет, какое действие будет предпринято, если игрок не имеет корректные PBO.</Russian>
             <German>Definiert, was passieren soll, wenn ein Spieler nicht die korrekten PBOs nutzt.</German>
+            <Korean>플레이어가 같은 PBO를 가지고 있지 않을 시 취할 행동을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -528,6 +529,7 @@
             <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
             <Russian>Проверять все аддоны, а не только ACE.</Russian>
             <German>Überprüft alle Erweiterungen, nicht nur die von ACE.</German>
+            <Korean>ACE뿐만이 아닌 다른 PBO 모두 검사합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -536,7 +538,7 @@
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查PBO白名单</Chinesesimp>
             <Japanese>許可リスト内の PBO を検査</Japanese>
-            <Korean>검사 제외 PBO</Korean>
+            <Korean>화이트리스트 PBO</Korean>
             <Polish>Sprawdź białą listę PBO</Polish>
             <Russian>Белый список для проверки PBO</Russian>
             <Portuguese>Lista Branca de PBO</Portuguese>
@@ -555,6 +557,7 @@
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
             <Russian>Задать список непроверяемых аддонов.</Russian>
             <German>Ermöglicht das Erstellen einer Liste von immer erlaubten Erweiterungen.</German>
+            <Korean>허용할 에드온의 목록입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -696,6 +699,7 @@
             <Spanish>Colores</Spanish>
             <Japanese>色</Japanese>
             <Chinesesimp>颜色</Chinesesimp>
+            <Korean>색상</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
             <English>Persistent weapon laserpointer/flashlight</English>
@@ -1064,6 +1068,7 @@
             <Polish>Zawsze</Polish>
             <Turkish>Her Zaman</Turkish>
             <Chinesesimp>总是</Chinesesimp>
+            <Korean>항상</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1164,6 +1169,7 @@
             <Czech>Potvrdit</Czech>
             <Polish>Potwierdź</Polish>
             <Turkish>Onayla</Turkish>
+            <Korean>확인</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1179,6 +1185,7 @@
             <Czech>Nikdy</Czech>
             <Polish>Nigdy</Polish>
             <Turkish>Hiçbir zaman</Turkish>
+            <Korean>안함</Korean>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1310,6 +1317,8 @@
         <Key ID="STR_ACE_Common_categoryUncategorized">
             <English>ACE Uncategorized</English>
             <Chinesesimp>未分类的ACE </Chinesesimp>
+            <Korean>ACE 무분류</Korean>
+            <German>ACE Unkategorisiert</German>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1324,7 +1333,7 @@
             <Japanese>降ろすための空間がありません</Japanese>
             <Chinese>沒有空間可卸載</Chinese>
             <Chinesesimp>没有空间可卸载</Chinesesimp>
-            <Korean>언로드 할 공간이 없습니다.</Korean>
+            <Korean>내릴 공간이 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Inventory_Full">
             <English>No inventory space</English>
@@ -1338,7 +1347,7 @@
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>В инвентаре нет места</Russian>
             <Japanese>インベントリに空きがない</Japanese>
-            <Korean>넣을 공간이 없음</Korean>
+            <Korean>넣을 공간이 없습니다</Korean>
             <Chinese>無可用空間</Chinese>
             <Chinesesimp>无可用空间</Chinesesimp>
             <Turkish>Envanter de alan yok</Turkish>
@@ -1416,6 +1425,7 @@
             <Polish>Tryb dla epileptyków</Polish>
             <French>Mode adapté à l'épilepsie</French>
             <Chinesesimp>癫痫病友好模式</Chinesesimp>
+            <Korean>광과민 친화적 모드</Korean>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
@@ -1424,6 +1434,7 @@
             <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
             <French>Désactive certains effets de lumière clignotante afin de réduire les risques de crise d'épilepsie.</French>
             <Chinesesimp>禁用一些闪烁的灯光效果，以降低癫痫发作的风险。</Chinesesimp>
+            <Korean>반짝거리는 빛으로 인해 일어날 발작 상황을 줄여줍니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1439,6 +1450,7 @@
             <Czech>Vlajka (ACE - Černá)</Czech>
             <Turkish>Bayrak (ACE- Siyah)</Turkish>
             <Spanish>Bandera (ACE - Negra)</Spanish>
+            <Korean>깃발 (ACE 검정)</Korean>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -1454,6 +1466,7 @@
             <Czech>Vlajka (ACE - Bílá)</Czech>
             <Turkish>Bayrak (ACE - Beyaz)</Turkish>
             <Spanish>Bandera (ACE - Blanca)</Spanish>
+            <Korean>깃발 (ACE 하양)</Korean>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -1475,6 +1488,8 @@
         <Key ID="STR_ACE_Common_aiOnly">
             <English>AI only</English>
             <Polish>Tylko dla AI</Polish>
+            <Korean>인공지능만</Korean>
+            <German>Nur KI</German>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
@@ -1507,6 +1522,7 @@
             <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
             <Turkish>Kendi etkileşimim menüsünde animasyonları göster</Turkish>
             <German>Zeigt die Aktion im Selbstinteraktionsmenü</German>
+            <Korean>자기 상호작용 메뉴에서 행동을 보여줍니다</Korean>
         </Key>
         <Key ID="STR_ACE_Common_both">
             <English>Both</English>
@@ -1517,6 +1533,7 @@
             <German>Beide</German>
             <Polish>Oba</Polish>
             <Chinesesimp>两方</Chinesesimp>
+            <Korean>둘 다</Korean>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
@@ -1526,6 +1543,7 @@
             <German>Zusätzliche Informationen beim Fortschrittsbalken</German>
             <Polish>Dodatkowe informacje na pasku postępu </Polish>
             <Chinesesimp>额外的进度条信息</Chinesesimp>
+            <Korean>추가 진행 막대 정보</Korean>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
@@ -1535,6 +1553,7 @@
             <German>Kontrolliert zusätzliche Informationen beim Fortschrittsbalkens</German>
             <Polish>Kontroluje dodatkowe informacje na pasku postępu.</Polish>
             <Chinesesimp>控制进度条中显示的额外信息。</Chinesesimp>
+            <Korean>진행 막대에 추가적인 정보를 보여주는걸 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
@@ -1544,6 +1563,7 @@
             <German>Prozent</German>
             <Polish>Procent</Polish>
             <Chinesesimp>百分比</Chinesesimp>
+            <Korean>퍼센트</Korean>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
@@ -1553,6 +1573,7 @@
             <German>Zeit verbleibend</German>
             <Polish>Pozostały czas</Polish>
             <Chinesesimp>剩余时间</Chinesesimp>
+            <Korean>남은 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
@@ -1594,6 +1615,7 @@
             <German>Zeit übrig %1s</German>
             <Polish>Pozostały czas: %1s</Polish>
             <Chinesesimp>剩余时间: %1秒</Chinesesimp>
+            <Korean>남은 시간: %1초</Korean>
         </Key>
         <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>

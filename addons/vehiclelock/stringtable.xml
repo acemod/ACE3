@@ -286,6 +286,7 @@
             <Japanese>あいまいな鍵の状態を削除</Japanese>
             <German>Unklaren Sperrzustand entfernen</German>
             <Chinesesimp>移除不明确的上锁状态</Chinesesimp>
+            <Korean>어정쩡한 잠금상태 제거</Korean>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>

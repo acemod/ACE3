@@ -11,6 +11,7 @@
                 <Portuguese>Recarregar magazine de 150 balas tracejantes (verde)</Portuguese>
                 <Japanese>5.56 mm 150発入り 残通知 曳光弾 (緑) マガジン</Japanese>
                 <Spanish>Cargador de 150 Cartuchos 5.56 mm Trazadora de recarga (Verde)</Spanish>
+                <Korean>5.56mm 150발들이 재장전알림 예광탄 (초록) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_yellow">
                 <English>5.56 mm 150Rnd Reload Tracer (Yellow) Mag</English>
@@ -21,6 +22,7 @@
                 <Portuguese>Recarregar magazine 150 balas tracejantes (Amarelo)</Portuguese>
                 <Japanese>5.56 mm 150発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 150 Cartuchos 5.56 mm Trazadora de recarga (Amarilla)</Spanish>
+                <Korean>5.56mm 150발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_green">
                 <English>5.56 mm 150Rnd Tracer (Green) Mag</English>
@@ -31,6 +33,7 @@
                 <Portuguese>Magazine 5.56mm Tracejante (verde)</Portuguese>
                 <Japanese>5.56 mm 150発入り 曳光弾 (緑) マガジン</Japanese>
                 <Spanish>Cargador de 150 Cartuchos 5.56 mm Trazadora (Verde)</Spanish>
+                <Korean>5.56mm 150발들이 예광탄 (초록) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_green_description">
                 <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
@@ -41,6 +44,7 @@
                 <Portuguese>Calibre 5.56x45mm Tracejante - Verde&lt;br/&gt;Balas:150&lt;br/&gt;Usado em: Spar-16S</Portuguese>
                 <Japanese>口径: 5.56x45 mm 曳光弾 - 緑&lt;br /&gt;弾数: 150&lt;br /&gt;使用武器: SPAR-16S</Japanese>
                 <Spanish>Calibre: 5.56x45 mm Trazadora - Verde&lt;br /&gt;Cartuchos: 150&lt;br /&gt;Usada en:: SPAR-16S</Spanish>
+                <Korean>구경: 5.56x45mm 예광탄 - 초록&lt;br /&gt;장탄수: 150발&lt;br /&gt;사용처: SPAR-16S</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_yellow">
                 <English>5.56 mm 150Rnd Tracer (Yellow) Mag</English>
@@ -51,6 +55,7 @@
                 <Portuguese>Magazine 5.56mm 150 balas tracejante (amarelo)</Portuguese>
                 <Japanese>5.56 mm 150発入り 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 150 Cartuchos 5.56 mm Trazadora (Amarilla)</Spanish>
+                <Korean>5.56mm 150발들이 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_yellow_description">
                 <English>Caliber: 5.56x45 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
@@ -61,6 +66,7 @@
                 <Portuguese>Calibre: 5.56x45mm Tracejante - Amarelo &lt;br/&gt;Balas:150&lt;br/&gt;Usado em:Spar-16S</Portuguese>
                 <Japanese>口径: 5.56x45 mm 曳光弾 - 黄&lt;br /&gt;弾数: 150&lt;br /&gt;使用武器: SPAR-16S</Japanese>
                 <Spanish>Calibre: 5.56x45 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 150&lt;br /&gt;Usada en: SPAR-16S</Spanish>
+                <Korean>구경: 5.56x45mm 예광탄 - 노랑&lt;br /&gt;장탄수: 150발&lt;br /&gt;사용처: SPAR-16S</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_green">
                 <English>5.56 mm 200Rnd Reload Tracer (Green) Box</English>
@@ -71,6 +77,7 @@
                 <Portuguese>Recarregar Caixa 5.56mm 200 Balas tracejantes (verdes)</Portuguese>
                 <Japanese>5.56 mm 200発入り 残通知 曳光弾 (緑) ボックス</Japanese>
                 <Spanish>Caja de 200 Cartuchos 5.56 mm Trazadora de recarga (Verde)</Spanish>
+                <Korean>5.56mm 150발들이 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_tracer_green">
                 <English>5.56 mm 200Rnd Tracer (Green) Box</English>
@@ -81,6 +88,7 @@
                 <Portuguese>Caixa 5.56mm 200 balas tracejantes (verdes) </Portuguese>
                 <Japanese>5.56 mm 200発入り 曳光弾 (緑) ボックス</Japanese>
                 <Spanish>Caja de 200 Cartuchos 5.56 mm Trazadora (Verde)</Spanish>
+                <Korean>5.56mm 200발들이 예광탄 (초록) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_tracer_green_description">
                 <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: LIM-85</English>
@@ -91,6 +99,7 @@
                 <Portuguese>Calibre:5.56x45 mm Tracejante - Verde &lt;br/&gt;Balas: 200&lt;br/&gt;Usado em:LIM-85</Portuguese>
                 <Japanese>口径: 5.56x45 mm 曳光弾 - 緑&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: LIM-85</Japanese>
                 <Spanish>Calibre: 5.56x45 mm Trazadora - Verde&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usada en: LIM-85</Spanish>
+                <Korean>구경: 5.56x45mm 예광탄 - 초록&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: LIM-85</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_red">
                 <English>5.8 mm 30Rnd Reload Tracer (Red) Mag</English>
@@ -101,6 +110,7 @@
                 <Portuguese>Recarregar magazine 5.8mm 30 Balas tracejantes (vermelho)</Portuguese>
                 <Japanese>5.8 mm 30発入り 残通知 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 5.8 mm Trazadora de recarga (Roja)</Spanish>
+                <Korean>5.8mm 30발들이 재장전알림 예광탄 (빨강) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_yellow">
                 <English>5.8 mm 30Rnd Reload Tracer (Yellow) Mag</English>
@@ -111,6 +121,7 @@
                 <Portuguese>Recarregar magazine 5.8mm 30 Balas tracejantes (amarelo)</Portuguese>
                 <Japanese>5.8 mm 30発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 5.8 mm Trazadora de recarga (Amarilla)</Spanish>
+                <Korean>5.8mm 30발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_red">
                 <English>5.8 mm 30Rnd Tracer (Red) Mag</English>
@@ -121,6 +132,7 @@
                 <Portuguese>Magazine 5.8 mm 30 balas tracejantes (vermelho)</Portuguese>
                 <Japanese>5.8 mm 30発入り 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 5.8 mm Trazadora (Roja)</Spanish>
+                <Korean>5.8mm 30발들이 예광탄 (빨강) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_red_description">
                 <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
@@ -131,6 +143,7 @@
                 <Portuguese>Calibre: 5.8x42 mm Tracejante - Vermelho&lt;br/&gt;Balas:30&lt;br/&gt;Usado em CAR-95, CAR-95 GL</Portuguese>
                 <Japanese>口径: 5.8x42 mm 曳光弾 - 赤&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: CAR-95, CAR-95 GL</Japanese>
                 <Spanish>Calibre: 5.8x42 mm Trazadora - Roja&lt;br /&gt;Cartuchos: 30&lt;br /&gt;Usada en: CAR-95, CAR-95 GL</Spanish>
+                <Korean>구경: 5.8x42mm 예광탄 - 빨강&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: CAR-95, CAR-95GL</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_yellow">
                 <English>5.8 mm 30Rnd Tracer (Yellow) Mag</English>
@@ -141,6 +154,7 @@
                 <Portuguese>Magazine 5.8 mm 30 balas tracejante (amarelo)</Portuguese>
                 <Japanese>5.8 mm 30発入り 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 5.8 mm Trazadora (Amarilla)</Spanish>
+                <Korean>5.8mm 30발들이 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_yellow_description">
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
@@ -151,6 +165,7 @@
                 <Portuguese>Calibre: 5.8x42 mm Tracejante - Amarelo &lt;br/&gt;Balas: 30&lt;br/&gt;Usado em: CAR-95, CAR-95 GL</Portuguese>
                 <Japanese>口径: 5.8x42 mm 曳光弾 - 黄&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: CAR-95, CAR-95 GL</Japanese>
                 <Spanish>Calibre: 5.8x42 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 30&lt;br /&gt;Usada en: CAR-95, CAR-95 GL</Spanish>
+                <Korean>구경: 5.8x42mm 예광탄 - 노랑&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: CAR-95, CAR-95GL</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_red">
                 <English>5.8 mm 100Rnd Reload Tracer (Red) Mag</English>
@@ -161,6 +176,7 @@
                 <Portuguese>Recarregar magazine 5.8 mm 100 balas tracejante (vermelho)</Portuguese>
                 <Japanese>5.8 mm 100発入り 残通知 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 100 Cartuchos 5.8 mm Trazadora de recarga (Roja)</Spanish>
+                <Korean>5.8mm 100발들이 재장전알림 예광탄 (빨강) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_yellow">
                 <English>5.8 mm 100Rnd Reload Tracer (Yellow) Mag</English>
@@ -171,6 +187,7 @@
                 <Portuguese>Recarregar magazine 5.8 mm 100 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>5.8 mm 100発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 100 Cartuchos 5.8 mm Trazadora de recarga (Amarilla)</Spanish>
+                <Korean>5.8mm 100발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_red">
                 <English>5.8 mm 100Rnd Tracer (Red) Mag</English>
@@ -181,6 +198,7 @@
                 <Portuguese>Magazine 5.8 mm 100 balas tracejantes (vermelho)</Portuguese>
                 <Japanese>5.8 mm 100発入り 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 100 Cartuchos 5.8 mm Trazadora (Roja)</Spanish>
+                <Korean>5.8mm 100발들이 예광탄 (빨강) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_red_description">
                 <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
@@ -191,6 +209,7 @@
                 <Portuguese>Calibre: 5.8x42 mm Tracejante - Vermelho&lt;br/&gt;Balas:100&lt;br/&gt;Usado em CAR-95-1</Portuguese>
                 <Japanese>口径: 5.8x42 mm 曳光弾 - 赤&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: CAR-95-1</Japanese>
                 <Spanish>Calibre: 5.8x42 mm Trazadora - Roja&lt;br /&gt;Cartuchos: 100&lt;br /&gt;Usada en: CAR-95-1</Spanish>
+                <Korean>구경: 5.8x42mm 예광탄 - 빨강&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: CAR-95-1</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow">
                 <English>5.8 mm 100Rnd Tracer (Yellow) Mag</English>
@@ -201,6 +220,7 @@
                 <Portuguese>Magazine 5.8 mm 100 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>5.8 mm 100発入り 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 100 Cartuchos 5.8 mm Trazadora (Amarilla)</Spanish>
+                <Korean>5.8mm 100발들이 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow_description">
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
@@ -211,6 +231,7 @@
                 <Portuguese>Calibre: 5.8x42 mm Tracejante - Amarelo&lt;br/&gt;Balas:100&lt;br/&gt;Usado em CAR-95-1</Portuguese>
                 <Japanese>口径: 5.8x42 mm 曳光弾 - 黄&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: CAR-95-1</Japanese>
                 <Spanish>Calibre: 5.8x42 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 100&lt;br /&gt;Usada en: CAR-95-1</Spanish>
+                <Korean>구경: 5.8x42mm 예광탄 - 노랑&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: CAR-95-1</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_green">
                 <English>6.5mm 30Rnd Reload Tracer (Green) Mag</English>
@@ -221,6 +242,7 @@
                 <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (verde)</Portuguese>
                 <Japanese>6.5 mm 30発入り 残通知 曳光弾 (緑) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora de recarga (Verde)</Spanish>
+                <Korean>6.5mm 30발들이 재장전알림 예광탄 (초록) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -231,6 +253,7 @@
                 <Portuguese>Calibre: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 緑&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 초록&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_yellow">
                 <English>6.5mm 30Rnd Reload Tracer (Yellow) Mag</English>
@@ -241,6 +264,7 @@
                 <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>6.5 mm 30発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora de recarga (Amarilla)</Spanish>
+                <Korean>6.5mm 30발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -251,6 +275,7 @@
                 <Portuguese>Calibre: 6.5x39 mm Tracejante - Amarelo&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 黄&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 30&lt;br /&gt;Usada en: MX/C/M/SW/3GL</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 노랑&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_green">
                 <English>6.5mm 30Rnd Tracer (Green) Mag</English>
@@ -261,6 +286,7 @@
                 <Portuguese>Magazine 6.5mm 30 balas tracejantes (verde)</Portuguese>
                 <Japanese>6.5 mm 30発入り 曳光弾 (緑) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora (Verde)</Spanish>
+                <Korean>6.5mm 30발들이 예광탄 (초록) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -271,6 +297,7 @@
                 <Portuguese>Calibre: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 緑&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora - Verde&lt;br /&gt;Cartuchos: 30&lt;br /&gt;Usada en: MX/C/M/SW/3GL</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 초록&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_yellow">
                 <English>6.5mm 30Rnd Tracer (Yellow) Mag</English>
@@ -281,6 +308,7 @@
                 <Portuguese>Magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>6.5 mm 30発入り 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora (Amarilla)</Spanish>
+                <Korean>6.5mm 30발들이 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -291,6 +319,7 @@
                 <Portuguese>Calibre: 6.5x39 mm Tracejante - Amarelo&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 黄&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 30&lt;br /&gt;Usada en: MX/C/M/SW/3GL</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 노랑&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_green">
                 <English>6.5mm 100Rnd Mixed Mag (Green)</English>
@@ -301,6 +330,7 @@
                 <Portuguese>Magazine 6.5mm 100 balas misturadas (verde)</Portuguese>
                 <Japanese>6.5 mm 100発入り 混合 (緑) マガジン</Japanese>
                 <Spanish>Cargador de 100 cartuchos 6.5 mm Mezcla (Verde)</Spanish>
+                <Korean>6.5mm 100발들이 혼합탄 (초록) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_yellow">
                 <English>6.5mm 100Rnd Mixed Mag (Yellow)</English>
@@ -311,6 +341,7 @@
                 <Portuguese>Magazine 6.5mm 100 balas misturadas (amarelo)</Portuguese>
                 <Japanese>6.5 mm 100発入り 混合 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 100 cartuchos 6.5 mm Mezcla (Amarilla)</Spanish>
+                <Korean>6.5mm 100발들이 혼합탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_green">
                 <English>6.5mm 100Rnd Mag Tracer (Green)</English>
@@ -321,6 +352,7 @@
                 <Portuguese>Magazine 6.5mm 100 balas tracejantes</Portuguese>
                 <Japanese>6.5 mm 100発入り (緑) マガジン</Japanese>
                 <Spanish>Cargador de 100 cartuchos 6.5 mm Trazadora (Verde)</Spanish>
+                <Korean>6.5mm 100발들이 예광탄 (초록) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
@@ -331,6 +363,7 @@
                 <Portuguese>Calibre: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas: 100&lt;br/&gt;Usado em: MX SW</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 緑&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: MX SW</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora - Verde&lt;br /&gt;Cartuchos: 100&lt;br /&gt;Usada en: MX SW</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 초록&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: MX SW</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_yellow">
                 <English>6.5mm 100Rnd Mag Tracer (Yellow)</English>
@@ -341,6 +374,7 @@
                 <Portuguese>Magazine 6.5mm 100 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>6.5 mm 100発入り 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 100 cartuchos 6.5 mm Trazadora (Amarilla)</Spanish>
+                <Korean>6.5mm 100발들이 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
@@ -351,6 +385,7 @@
                 <Portuguese>Calibre: 6.5x39 mm Tracejante - Amarelo&lt;br/&gt;Balas: 100&lt;br/&gt;Usado em: MX SW</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 黄&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: MX SW</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 100&lt;br /&gt;Usada en: MX SW</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 노랑&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: MX SW</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_red">
                 <English>6.5mm 30Rnd Reload Tracer (Red) Mag</English>
@@ -361,6 +396,7 @@
                 <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (vermelho)</Portuguese>
                 <Japanese>6.5 mm 30発入り 残通知 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora de recarga (Roja)</Spanish>
+                <Korean>6.5mm 30발들이 재장전알림 예광탄 (빨강) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_yellow">
                 <English>6.5mm 30Rnd Reload Tracer (Yellow) Mag</English>
@@ -371,6 +407,7 @@
                 <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>6.5 mm 30発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora de recarga (Amarilla)</Spanish>
+                <Korean>6.5mm 30발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_red">
                 <English>6.5mm 30Rnd Tracer (Red) Mag</English>
@@ -381,6 +418,7 @@
                 <Portuguese>Magazine 6.5mm 30 balas tracejantes (vermelho)</Portuguese>
                 <Japanese>6.5 mm 30発入り 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora (Roja)</Spanish>
+                <Korean>6.5mm 30발들이 예광탄 (빨강) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_red_description">
                 <English>Caliber: 6.5x39 mm Tracer (Red) - Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba, Type 115</English>
@@ -391,6 +429,7 @@
                 <Portuguese>Calibre: 6.5x39 mm Tracejante (Vermelho) - Sem Cartucho&lt;br/&gt;Balas: 30&lt;br/&gt;Usado em: Katiba, Type 115</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 赤 (ケースレス)&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: Katiba, Type 115</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora (Roja) - Sin casquillo&lt;br /&gt;Cartuchos: 30&lt;br /&gt;Usada en: Katiba, Type 115</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 빨강&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: Katiba, Type 115</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_yellow">
                 <English>6.5mm 30Rnd Tracer (Yellow) Mag</English>
@@ -401,6 +440,7 @@
                 <Portuguese>Magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>6.5 mm 30発入り 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora (Amarilla)</Spanish>
+                <Korean>6.5mm 30발들이 예광탄 (노랑) 탄창 </Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer (Yellow) - Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba, Type 115</English>
@@ -411,6 +451,7 @@
                 <Portuguese>Caliber: 6.5x39 mm Tracejante (Vermelho) - Sem Cartucho&lt;br/&gt;Balas: 30&lt;br/&gt;Usado em: Katiba, Type 115</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 黄 (ケースレス)&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: Katiba, Type 115</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora (Amarilla) - Sin casquillo&lt;br /&gt;Cartuchos: 30&lt;br /&gt;Usada en: Katiba, Type 115</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 노랑&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: Katiba, Type 115</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green">
                 <English>6.5 mm 200Rnd Belt Case Mixed (Green)</English>
@@ -421,6 +462,7 @@
                 <Portuguese>Caixa de Cinto 6.5 mm 200 Balas Misturados (Verde) </Portuguese>
                 <Japanese>6.5 mm 200発入り 混合 (緑) ベルト ケース </Japanese>
                 <Spanish>Caja con cinta de 200 cartuchos 6.5 mm Mezcla (Verde)</Spanish>
+                <Korean>6.5mm 200발들이 혼합탄 (초록) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green_description">
                 <English>Caliber: 6.5x39 mm Mixed - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
@@ -431,6 +473,7 @@
                 <Portuguese>Calibre: 6.5x39 mm Misturado - Verde&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
                 <Japanese>口径: 6.5x39 mm 混合 - 緑&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: Mk200</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Mezcla - Verde&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usada en: Mk200</Spanish>
+                <Korean>구경: 6.5x39mm 혼합탄 - 초록&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: Mk200</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_red">
                 <English>6.5 mm 200Rnd Belt Case Mixed (Red)</English>
@@ -441,6 +484,7 @@
                 <Portuguese>Caixa de Cinto 6.5 mm 200 balas misturadas (Vermelho)</Portuguese>
                 <Japanese>6.5 mm 200発入り 混合 (赤) ベルト ケース </Japanese>
                 <Spanish>Caja con cinta de 200 cartuchos 6.5 mm Mezcla (Roja)</Spanish>
+                <Korean>6.5mm 200발들이 혼합탄 (빨강) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_red_description">
                 <English>Caliber: 6.5x39 mm Mixed - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
@@ -451,6 +495,7 @@
                 <Portuguese>Caliber: 6.5x39 mm Misturado - Vermelho&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
                 <Japanese>口径: 6.5x39 mm 混合 - 赤&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: Mk200</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Mezcla - Roja&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usada en: Mk200</Spanish>
+                <Korean>구경: 6.5x39mm 혼합탄 - 빨강&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: Mk200</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_green">
                 <English>6.5 mm 200Rnd Belt Case Tracer (Green)</English>
@@ -461,6 +506,7 @@
                 <Portuguese>Caixa de Cinto 6;5 mm 200 balas tracejantes (Verde)</Portuguese>
                 <Japanese>6.5 mm 200発入り 混合 (緑) ベルト ケース </Japanese>
                 <Spanish>Caja con cinta de 200 cartuchos 6.5 mm Trazadora (Verde)</Spanish>
+                <Korean>6.5mm 200발들이 예광탄 (초록) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
@@ -472,6 +518,7 @@
                 <Portuguese>Caliber: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 緑&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: Mk200</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora - Verde&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usada en: Mk200</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 초록&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: Mk200</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red">
                 <English>6.5 mm 200Rnd Belt Case Tracer (Red)</English>
@@ -483,6 +530,7 @@
                 <Portuguese>Caixa de Cinto 6.5 mm 200 Balas Tracejantes (Vermelho)</Portuguese>
                 <Japanese>6.5 mm 200発入り 曳光弾 (赤) ベルト ケース </Japanese>
                 <Spanish>Caja con cinta de 200 cartuchos 6.5 mm Trazadora (Roja)</Spanish>
+                <Korean>6.5mm 200발들이 예광탄 (빨강) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red_description">
                 <English>Caliber: 6.5x39 mm Tracer - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
@@ -494,6 +542,7 @@
                 <Portuguese>Caliber: 6.5x39 mm Tracejante - Vermelho&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
                 <Japanese>口径: 6.5x39 mm 曳光弾 - 赤&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: Mk200</Japanese>
                 <Spanish>Calibre: 6.5x39 mm Trazadora - Roja&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usada en: Mk200</Spanish>
+                <Korean>구경: 6.5x39mm 예광탄 - 빨강&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: Mk200</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green">
                 <English>7.62 mm 20Rnd Tracer (Green) Mag</English>
@@ -505,6 +554,7 @@
                 <Portuguese>Magazine 7.62 mm 20 Balas Tracejantes (verdes)</Portuguese>
                 <Japanese>7.62 mm 20発入り 曳光弾 (緑) マガジン</Japanese>
                 <Spanish>Cargador de 20 cartuchos 7.62 mm Trazadora (Verde)</Spanish>
+                <Korean>7.62mm 20발들이 예광탄 (초록) 탄창</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green_description">
                 <English>Caliber: 7.62x51 mm NATO Tracer - Green&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
@@ -516,6 +566,7 @@
                 <Portuguese>Calibre: 7.62x51 mm NATO Tracejante - Verde&lt;br/&gt;Balas: 20&lt;br/&gt;Usado em: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Portuguese>
                 <Japanese>口径: 7.62x51 mm NATO 曳光弾 - 緑&lt;br /&gt;弾数: 20&lt;br /&gt;使用武器: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Japanese>
                 <Spanish>Calibre: 7.62x51 mm NATO Trazadora - Verde&lt;br /&gt;Cartuchos: 20&lt;br /&gt;Usada en: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Spanish>
+                <Korean>구경: 7.62x51mm 나토 예광탄 - 초록&lt;br /&gt;장탄수: 20발&lt;br /&gt;사용처: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow">
                 <English>7.62 mm 20Rnd Tracer (Yellow) Mag</English>
@@ -527,6 +578,7 @@
                 <Portuguese>Magazine 7.62 mm 20 Balas Tracejantes (Amarelo)</Portuguese>
                 <Japanese>7.62 mm 20発入り 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 20 cartuchos 7.62 mm Trazadora (Amarilla)</Spanish>
+                <Korean>7.62mm 20발들이 예광탄 (노랑) 탄창</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow_description">
                 <English>Caliber: 7.62x51 mm NATO Tracer - Yellow&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
@@ -538,6 +590,7 @@
                 <Portuguese>Calibre: 7.62x51 mm NATO Tracejante - Amarelo&lt;br/&gt;Balas: 20&lt;br/&gt;Usado em: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Portuguese>
                 <Japanese>口径: 7.62x51 mm NATO 曳光弾 - 黄&lt;br /&gt;弾数: 20&lt;br /&gt;使用武器: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Japanese>
                 <Spanish>Calibre: 7.62x51 mm NATO Trazadora - Amarilla&lt;br /&gt;Cartuchos: 20&lt;br /&gt;Usada en: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Spanish>
+                <Korean>구경: 7.62x51mm 나토 예광탄 - 노랑&lt;br /&gt;장탄수: 20발&lt;br /&gt;사용처: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_red">
                 <English>7.62mm 150Rnd Box Mixed (Red)</English>
@@ -549,6 +602,7 @@
                 <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Vermelho)</Portuguese>
                 <Japanese>7.62 mm 150発入り 混合 (緑) ボックス</Japanese>
                 <Spanish>Caja de 150 cartuchos 7.62 mm Mezcla (Roja)</Spanish>
+                <Korean>7.62mm 150발들이 혼합탄 (빨강) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_yellow">
                 <English>7.62mm 150Rnd Box Mixed (Yellow)</English>
@@ -560,6 +614,7 @@
                 <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Amarelo)</Portuguese>
                 <Japanese>7.62 mm 150発入り 混合 (黄) ボックス</Japanese>
                 <Spanish>Caja de 150 cartuchos 7.62 mm Mezcla (Amarilla)</Spanish>
+                <Korean>7.62mm 150발들이 혼합탄 (노랑) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red">
                 <English>7.62mm 150Rnd Box Tracer (Red)</English>
@@ -571,6 +626,7 @@
                 <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Vermelho)</Portuguese>
                 <Japanese>7.62 mm 150発入り 曳光弾 (赤) ボックス</Japanese>
                 <Spanish>Caja de 150 cartuchos 7.62 mm Trazadora (Roja)</Spanish>
+                <Korean>7.62mm 150발들이 예광탄 (빨강) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red_description">
                 <English>Caliber: 7.62x54 mm Tracer - Red&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
@@ -582,6 +638,7 @@
                 <Portuguese>Calibre: 7.62x54 mm Tracejante - Vermelho&lt;br/&gt;Balas: 150&lt;br/&gt;Usado em:Zafir</Portuguese>
                 <Japanese>口径: 7.62x54 mm 曳光弾 - 赤&lt;br /&gt;弾数: 150&lt;br /&gt;使用武器: ザフィル</Japanese>
                 <Spanish>Calibre: 7.62x54 mm Trazadora - Roja&lt;br /&gt;Cartuchos: 150&lt;br /&gt;Usada en: Zafir</Spanish>
+                <Korean>구경: 7.62x54mm 예광탄 - 빨강&lt;br /&gt;장탄수: 150발&lt;br /&gt;사용처: Zafir</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow">
                 <English>7.62mm 150Rnd Box Tracer (Yellow)</English>
@@ -593,6 +650,7 @@
                 <Portuguese>Caixa 7.62mm 150 Balas Tracejantes (Amarelo)</Portuguese>
                 <Japanese>7.62 mm 150発入り 曳光弾 (緑) ボックス</Japanese>
                 <Spanish>Caja de 150 cartuchos 7.62 mm Trazadora (Amarilla)</Spanish>
+                <Korean>7.62mm 150발들이 예광탄 (노랑) 탄상자</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow_description">
                 <English>Caliber: 7.62x54 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
@@ -604,6 +662,7 @@
                 <Portuguese>Calibre: 7.62x54 mm Tracejante - Amarelo&lt;br/&gt;Balas: 150&lt;br/&gt;Usado em:Zafir</Portuguese>
                 <Japanese>口径: 7.62x54 mm 曳光弾 - 黄&lt;br /&gt;弾数: 150&lt;br /&gt;使用武器: ザフィル</Japanese>
                 <Spanish>Calibre: 7.62x54 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 150&lt;br /&gt;Usada en: Zafir</Spanish>
+                <Korean>구경: 7.62x54mm 예광탄 - 노랑&lt;br /&gt;장탄수: 150발&lt;br /&gt;사용처: Zafir</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_yellow">
                 <English>9.3mm 150Rnd Belt Mixed (Yellow)</English>
@@ -615,6 +674,7 @@
                 <Portuguese>Cinto 9.3mm 150 Balas Misturadas (Amarelo)</Portuguese>
                 <Japanese>9.3 mm 150発入り 混合 (黄) ベルト</Japanese>
                 <Spanish>Cinta de 150 cartuchos 9.3 mm Mezcla (Amarilla)</Spanish>
+                <Korean>9.3mm 150발 혼합탄 (노랑) 탄띠</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_red">
                 <English>9.3mm 150Rnd Belt Mixed (Red)</English>
@@ -626,6 +686,7 @@
                 <Portuguese>Cinto 9.3mm 150 Balas Misturadas (Vermelho)</Portuguese>
                 <Japanese>9.3 mm 150発入り 混合 (赤) ベルト</Japanese>
                 <Spanish>Cinta de 150 cartuchos 9.3 mm Mezcla (Roja)</Spanish>
+                <Korean>9.3mm 150발 혼합탄 (빨강) 탄띠</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_yellow">
                 <English>.338 NM 130Rnd Belt Mixed (Yellow)</English>
@@ -637,6 +698,7 @@
                 <Portuguese>Cinto .338 NM Misturado (Amarelo)</Portuguese>
                 <Japanese>.338 NM 130発入り 混合 (黄) ベルト</Japanese>
                 <Spanish>Cinta de 130 cartuchos .338 NM Mezcla (Amarilla)</Spanish>
+                <Korean>.338 130발들이 혼합탄 (노랑) 탄띠</Korean>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_green">
                 <English>.338 NM 130Rnd Belt Mixed (Green)</English>
@@ -648,6 +710,7 @@
                 <Portuguese>Cinto .338 NM 130 Balas Misturados (Verde)</Portuguese>
                 <Japanese>.338 NM 130発入り 混合 (緑) ベルト</Japanese>
                 <Spanish>Cinta de 130 cartuchos .338 NM Mezcla (Verde)</Spanish>
+                <Korean>.338 130발들이 혼합탄 (초록) 탄띠</Korean>
             </Key>
         </Container>
     </Package>

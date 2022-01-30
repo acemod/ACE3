@@ -331,6 +331,7 @@
             <German>Gruppe umbenennen</German>
             <Polish>Zmień nazwę grupy</Polish>
             <Chinesesimp>小队重命名</Chinesesimp>
+            <Korean>그룹 명칭 다시짓기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
@@ -340,6 +341,7 @@
             <German>Dieser Gruppenname ist bereits in Verwendung.</German>
             <Polish>Ta nazwa grupy jest już w użyciu.</Polish>
             <Chinesesimp>该小队名称已被使用</Chinesesimp>
+            <Korean>그 명칭은 이미 사용 중 입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
@@ -349,6 +351,7 @@
             <German>NEUER GRUPPENNAME:</German>
             <Polish>NOWA NAZWA GRUPY:</Polish>
             <Chinesesimp>新的小队名：</Chinesesimp>
+            <Korean>새 그룹 명칭:</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -379,7 +382,7 @@
             <Portuguese>Parar de dançar</Portuguese>
             <Italian>Smetti di ballare</Italian>
             <Japanese>踊るのを止める</Japanese>
-            <Korean>춤 멈추기</Korean>
+            <Korean>춤 그만 추기</Korean>
             <Chinesesimp>停止跳舞</Chinesesimp>
             <Chinese>停止跳舞</Chinese>
             <Turkish>Dans Etmeyi Durdur</Turkish>
@@ -941,6 +944,7 @@
             <Czech>Otočit</Czech>
             <Spanish>Voltear</Spanish>
             <Turkish>Döndür</Turkish>
+            <Korean>뒤집기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -1206,7 +1210,7 @@
             <Russian>Вытащить тело</Russian>
             <Japanese>身体を引き出す</Japanese>
             <Italian>Estrai il corpo</Italian>
-            <Korean>시체 끌기</Korean>
+            <Korean>인원 꺼내기</Korean>
             <Chinese>拿出屍體</Chinese>
             <Chinesesimp>拿出尸体</Chinesesimp>
             <Polish>Wyciągnij ciało</Polish>
@@ -1231,6 +1235,7 @@
             <Spanish>Romper parabrisas</Spanish>
             <Turkish>Ön camı parçala</Turkish>
             <Chinesesimp>砸碎挡风玻璃</Chinesesimp>
+            <Korean>전면유리 부수기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
             <English>Attach %1</English>
@@ -1241,6 +1246,7 @@
             <Polish>Przyczep %1</Polish>
             <German>Befestige %1</German>
             <Chinesesimp>附加 %1</Chinesesimp>
+            <Korean>%1 붙이기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
             <English>Detach %1</English>
@@ -1251,6 +1257,7 @@
             <Polish>Odczep %1</Polish>
             <German>Löse %1</German>
             <Chinesesimp>拆卸 %1</Chinesesimp>
+            <Korean>%1 떼내기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1261,6 +1268,7 @@
             <Polish>Włącza akcje przyczepienia/odczepienia dodatków dla obecnej broni</Polish>
             <German>Aktiviert das Befestigen/Lösen von Waffenausätzen an der aktuellen Waffe.</German>
             <Chinesesimp>启用当前武器的附加/拆卸武器配件的动作。</Chinesesimp>
+            <Korean>현재 사용하고 있는 무기에서 부착물을 붙이거나 떼냅니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
             <English>Allow group rename</English>
@@ -1270,6 +1278,7 @@
             <German>Erlaube das Umbenennen der Gruppe</German>
             <Polish>Zezwól na zmianę nazwy grupy</Polish>
             <Chinesesimp>允许小队重命名</Chinesesimp>
+            <Korean>그룹 이름 재설정 허가</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
@@ -1279,6 +1288,7 @@
             <German>Erlaube Gruppenführer das Umbenennen Ihrer Gruppe, wenn der Name nicht bereits vergeben ist.</German>
             <Polish>Pozwala liderowi grupy na zmianę jej nazwy, jeżeli ta nazwa nie jest już w użyciu.</Polish>
             <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
+            <Korean>그룹 리더가 그룹 이름을 재설정 하는것을 허가합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1288,6 +1298,7 @@
             <German>Achtung: einige Objekte könnten mit anderen Kollidieren.</German>
             <Polish>Uwaga: niektóre obiekty mogą kolidować z innymi.</Polish>
             <Chinesesimp>警告：会导致一些物体与其他物体发生碰撞。</Chinesesimp>
+            <Korean>주의: 물체 끼리 충돌하는 현상이 있을 수 있음.</Korean>
         </Key>
     </Package>
 </Project>

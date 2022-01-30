@@ -6,13 +6,13 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
- * 2: Temperature <STRING>
+ * 2: Temperature <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, currentWeapon player] call ace_overheating_fnc_setAmmoTemperature
+ * [player, currentWeapon player, 123] call ace_overheating_fnc_setAmmoTemperature
  *
  * Public: Yes
  */
