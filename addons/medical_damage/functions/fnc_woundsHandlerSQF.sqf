@@ -187,7 +187,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     };
 
     // selection-specific damage only hits the first part
-    if (_selectionSpecific) then {
+    if (_selectionSpecific > 0) then {
         break;
     };
 } forEach _allDamages;

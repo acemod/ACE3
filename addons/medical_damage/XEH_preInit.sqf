@@ -25,6 +25,6 @@ addMissionEventHandler ["Loaded",{
     call FUNC(parseConfigForInjuries);
 }];
 
-[QEGVAR(medical,woundReceived), FUNC(woundReceived)] call CBA_fnc_addEventHandler;
+[QEGVAR(medical,woundReceived), LINKFUNC(woundReceived)] call CBA_fnc_addEventHandler;
 
 ADDON = true;

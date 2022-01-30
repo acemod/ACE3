@@ -217,7 +217,6 @@ Custom wound handlers should follow the same spec as the built-in handler:
 **R** | Parameters to be passed to the next handler in the list, e.g. `_this` or a modified copy of it. Return `[]` to prevent further handling. | Array | Required
 
 The damage elements are sorted in descending order according to how much damage was dealt to each body part _before armor was taken into account_, but the actual damage values are _after armor_.
-If the damage type is configured as selection-specific, this array will be length 1.
 
 ### Example
 `[player, [[0.5, "Body", 1], [0.3, "Head", 0.6]], "grenade"] ace_medical_damage_fnc_woundsHandlerSQF`
