@@ -18,7 +18,7 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_Engine_EventHandlers {
-    class Car {
+    class AllVehicles {
         class ACE_EngineStartDelay {
             clientEngine = QUOTE(if (local driver (_this select 0)) then {_this call FUNC(startEngine)};);
         };
