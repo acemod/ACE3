@@ -28,8 +28,8 @@ class CfgVehicles {
 ### 1.2 Making an object loadable
 
 ```cpp
-class staticBananaLauncher {
-    class yourVehicleBaseClass {
+class CfgVehicles {
+    class staticBananaLauncher {
         ace_cargo_size = 4;  // Cargo space the object takes
         ace_cargo_canLoad = 1;  // Enables the object to be loaded (1-yes, 0-no)
         ace_cargo_noRename = 1;  // Blocks renaming object (1-blocked, 0-allowed)
@@ -161,4 +161,10 @@ Note first arg can be a in-game object or a classname of an object type.
  * Example:
  * ["ACE_Wheel", vehicle, 2] call ace_cargo_fnc_removeCargoItem
  * [crate_7, truck] call ace_cargo_fnc_removeCargoItem
+```
+
+### 4.7 Disable cargo renaming via script
+
+```sqf
+cargoBox setVariable ["ace_cargo_noRename", true]
 ```
