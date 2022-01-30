@@ -16,7 +16,7 @@ version:
 
 ### 1.1 Vehicle Patient Seats
 
-Defines the seats that will be prioritized when loading patients into vehicles.
+Defines the seats that will be prioritized when loading patients into vehicles. Uses `moveInCargo` indexes.
 
 ```cpp
 class CfgVehicles {
