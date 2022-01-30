@@ -422,7 +422,7 @@
             <French>[CSW] Lanceur statique Mini-Spike (AT)</French>
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AT)</Japanese>
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對地）</Chinese>
-            <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（AT）</Chinesesimp>
+            <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（反坦）</Chinesesimp>
             <Italian>[CSW] Static Mini-Spike Launcher (AT)</Italian>
             <Czech>[CSW] Statický raketomet Mini-Spike (protitankový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AT)</Turkish>
@@ -438,7 +438,7 @@
             <French>[CSW] Lanceur statique Mini-Spike (AA)</French>
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AA)</Japanese>
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對空）</Chinese>
-            <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（AA）</Chinesesimp>
+            <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（防空）</Chinesesimp>
             <Italian>[CSW] Static Mini-Spike Launcher (AA)</Italian>
             <Czech>[CSW] Statický raketomet Mini-Spike (protiletadlový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AA)</Turkish>

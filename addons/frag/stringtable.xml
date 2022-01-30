@@ -156,7 +156,7 @@
             <Italian>Numero massimo di proiettili per Frame</Italian>
             <Japanese>フレームごとの最大弾頭数</Japanese>
             <Korean>프레임당 최대 발사체 수</Korean>
-            <Chinesesimp>每一帧数（FPS）最大破片粒子数量</Chinesesimp>
+            <Chinesesimp>每帧最大破片粒子数量</Chinesesimp>
             <Chinese>每一幀數(FPS)最大碎片/剝落粒子數量</Chinese>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame_Desc">
