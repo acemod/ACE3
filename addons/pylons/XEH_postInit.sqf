@@ -14,7 +14,7 @@ GVAR(loadoutAction) = [ // create action
         private _isRearmVehicle = if (["ace_rearm"] call EFUNC(common,isModLoaded)) then {
             _vehicles findIf {[_x] call EFUNC(rearm,isSource)} != -1;
         } else {
-            _vehicles findIf {getNumber (configOf _x >> "transportAmmo") > 0} != -1;
+            _vehicles findIf {getNumber ((configOf _x) >> "transportAmmo") > 0} != -1;
         };
 
         (_isRearmVehicle && {[ace_player, _target] call FUNC(canConfigurePylons)})
