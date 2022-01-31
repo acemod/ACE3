@@ -25,5 +25,5 @@ if !(isNull _configOf) then {
     getNumber (_configOf >> QGVAR(isFence)) == 1 // return
 } else {
     // Check the p3d name against list (in script_component.hpp)
-    (getModelInfo _object select 0) in FENCE_P3DS
+    (getModelInfo _object select 0) in FENCE_P3DS // return
 };
