@@ -34,14 +34,14 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
         [_pfID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent Rare Error when ending mission with interact key down:
-        if (isNull ace_player) exitWith {};
+        if (isNull ACE_player) exitWith {};
 
-        //Make the common case fast (cursorObject is looking at a door):
-        if ((!isNull cursorObject) && {cursorObject isKindOf "Static"} && {!(cursorObject in _housesScanned)}) then {
-            if (((count (configOf cursorObject >> "UserActions")) > 0) || {(count (getArray (configOf cursorObject >> "ladders"))) > 0}) then {
-                _housesToScanForActions = [cursorObject];
+        //Make the common case fast (cursorTarget is looking at a door):
+        if ((!isNull cursorTarget) && {cursorTarget isKindOf "Static"} && {!(cursorTarget in _housesScanned)}) then {
+            if (((count (configOf cursorTarget >> "UserActions")) > 0) || {(count (getArray (configOf cursorTarget >> "ladders"))) > 0}) then {
+                _housesToScanForActions = [cursorTarget];
             } else {
-                _housesScanned pushBack cursorObject;
+                _housesScanned pushBack cursorTarget;
             };
         };
 
@@ -51,9 +51,9 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
         if (_housesToScanForActions isEqualTo []) then {
             //If player moved >2 meters from last pos, then rescan
-            if (((getPosASL ace_player) distance _setPosition) < 2) exitWith {};
+            if (((getPosASL ACE_player) distance _setPosition) < 2) exitWith {};
 
-            private _nearBuidlings = nearestObjects [ace_player, ["Static"], 30];
+            private _nearBuidlings = nearestObjects [ACE_player, ["Static"], 30];
             {
                 private _configOfHouse = configOf _x;
                 if (((count (_configOfHouse >> "UserActions")) == 0) && {(count (getArray (_configOfHouse >> "ladders"))) == 0}) then {
@@ -63,12 +63,12 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
                 };
             } forEach (_nearBuidlings - _housesScanned);
 
-            _args set [0, (getPosASL ace_player)];
+            _args set [0, (getPosASL ACE_player)];
         } else {
             private _houseBeingScanned = _housesToScanForActions deleteAt 0;
             //Skip this house for now if we are outside of it's radius
             //(we have to scan far out for the big houses, but we don't want to waste time adding actions on every little shack)
-            if ((_houseBeingScanned != cursorObject) && {((ACE_player distance _houseBeingScanned) - ((boundingBoxReal _houseBeingScanned) select 2)) > 4}) exitWith {};
+            if ((_houseBeingScanned != cursorTarget) && {((ACE_player distance _houseBeingScanned) - ((boundingBoxReal _houseBeingScanned) select 2)) > 4}) exitWith {};
 
             _housesScanned pushBack _houseBeingScanned;
 
@@ -90,4 +90,4 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
             } forEach _memPoints;
         };
     };
-}, 0, [((getPosASL ace_player) vectorAdd [-100,0,0]), [], [], []]] call CBA_fnc_addPerFrameHandler;
+}, 0, [((getPosASL ACE_player) vectorAdd [-100,0,0]), [], [], []]] call CBA_fnc_addPerFrameHandler;
