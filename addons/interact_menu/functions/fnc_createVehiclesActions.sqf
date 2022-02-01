@@ -26,7 +26,7 @@ _vehicles apply {
     if ("" != _ownerName) then {
         _name = format ["%1 (%2)", _name, _ownerName];
     };
-    private _icon = [typeOf _x] call EFUNC(common,getVehicleIcon);
+    private _icon = [_x] call EFUNC(common,getVehicleIcon);
     private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
     [_action, [], _target]
 }
