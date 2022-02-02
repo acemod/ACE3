@@ -1179,7 +1179,7 @@
             <German>Schadensfarbe %1</German>
             <Polish>Obrażenia - kolor %1</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_ShowBloodEntry_DisplayName">
+        <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_DisplayName">
             <English>Show Blood Loss</English>
             <German>Blutverlust anzeigen</German>
         </Key>
