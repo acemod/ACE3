@@ -1934,21 +1934,21 @@
             <Turkish>6.5 mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimDescription">
-            <English>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
+            <English>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: KAC LAMG</English>
             <Polish>Magazynek 6,5 mm 200rd Smugacz IR-DIM</Polish>
-            <French>Bande 6,5 mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
+            <French>Bande 6,5 mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: KAC LAMG</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5 mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
-            <German>6,5 mm 200-Patronen-Gurt IR-DIM Leuchtspur&lt;br /&gt;Patronen: 200&lt;br /&gt;Eingesetzt von: Stoner 99 LMG</German>
-            <Italian>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Munizioni: 200&lt;br /&gt;In uso su: Stoner 99 LMG</Italian>
-            <Czech>6.5 mm 200náb. Svítící IR-DIM Pás&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použití u: Stoner 99 LMG</Czech>
-            <Portuguese>Cinto de munição traçante 6.5 mm IR-DIM com 200 cartuchos&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usado em: Stoner 99 LMG</Portuguese>
-            <Hungarian>6.5 mm 200-lövedékes infravörös nyomkövető heveder&lt;br /&gt;Lövedékek: 200&lt;br /&gt;Használható: Stoner 99 LMG</Hungarian>
-            <Japanese>6.5 mm 200発入り IR-DIM曳光弾ベルト&lt;br /&gt;装填数: 200&lt;br /&gt;次で使用: Stoner 99 LMG</Japanese>
-            <Korean>200발들이 6.5 mm IR-DIM 예광탄 벨트&lt;br /&gt;장탄수: 200&lt;br /&gt;사용처: Stoner 99 LMG</Korean>
-            <Chinese>6.5毫米 200發 低視度紅外線曳光彈&lt;br /&gt;發數: 200&lt;br /&gt;使用於: Stoner 99 重機槍</Chinese>
-            <Chinesesimp>6.5 mm 200发 低视度红外线曳光弹&lt;br /&gt;发数: 200&lt;br /&gt;使用于: Stoner 99 LMG</Chinesesimp>
-            <Turkish>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Mermi: 200&lt;br /&gt;Kullanıyor: Stoner 99 LMG</Turkish>
+            <German>6,5 mm 200-Patronen-Gurt IR-DIM Leuchtspur&lt;br /&gt;Patronen: 200&lt;br /&gt;Eingesetzt von: KAC LAMG</German>
+            <Italian>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Munizioni: 200&lt;br /&gt;In uso su: KAC LAMG</Italian>
+            <Czech>6.5 mm 200náb. Svítící IR-DIM Pás&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použití u: KAC LAMG</Czech>
+            <Portuguese>Cinto de munição traçante 6.5 mm IR-DIM com 200 cartuchos&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usado em: KAC LAMG</Portuguese>
+            <Hungarian>6.5 mm 200-lövedékes infravörös nyomkövető heveder&lt;br /&gt;Lövedékek: 200&lt;br /&gt;Használható: KAC LAMG</Hungarian>
+            <Japanese>6.5 mm 200発入り IR-DIM曳光弾ベルト&lt;br /&gt;装填数: 200&lt;br /&gt;次で使用: KAC LAMG</Japanese>
+            <Korean>200발들이 6.5 mm IR-DIM 예광탄 벨트&lt;br /&gt;장탄수: 200&lt;br /&gt;사용처: KAC LAMG</Korean>
+            <Chinese>6.5毫米 200發 低視度紅外線曳光彈&lt;br /&gt;發數: 200&lt;br /&gt;使用於: KAC 輕型突擊機槍</Chinese>
+            <Chinesesimp>6.5 mm 200发 低视度红外线曳光弹&lt;br /&gt;发数: 200&lt;br /&gt;使用于: KAC LAMG</Chinesesimp>
+            <Turkish>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Mermi: 200&lt;br /&gt;Kullanıyor: KAC LAMG</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_Name">
             <English>5.56 mm 30Rnd Mag (Mk262)</English>

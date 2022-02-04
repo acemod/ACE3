@@ -2360,21 +2360,21 @@
             <Turkish>RFB SDAR</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_Name">
-            <English>Stoner 99 LMG</English>
-            <German>Stoner 99 LMG</German>
-            <Czech>Stoner 99 LMG</Czech>
-            <Polish>Stoner 99 LMG</Polish>
-            <French>Stoner 99 LMG</French>
-            <Hungarian>Stoner 99 Könnyűgéppuska</Hungarian>
-            <Spanish>Stoner 99 LMG</Spanish>
-            <Russian>Stoner 99 LMG</Russian>
-            <Portuguese>Stoner 99 LMG</Portuguese>
-            <Italian>Stoner 99 LMG</Italian>
-            <Japanese>ストーナー 99 LMG</Japanese>
-            <Korean>Stoner 99 LMG</Korean>
+            <English>KAC LAMG</English>
+            <German>KAC LAMG</German>
+            <Czech>KAC LAMG</Czech>
+            <Polish>KAC LAMG</Polish>
+            <French>KAC LAMG</French>
+            <Hungarian>KAC Könnyűrohamgéppuska</Hungarian>
+            <Spanish>KAC LAMG</Spanish>
+            <Russian>KAC LAMG</Russian>
+            <Portuguese>KAC LAMG</Portuguese>
+            <Italian>KAC LAMG</Italian>
+            <Japanese>KAC LAMG</Japanese>
+            <Korean>KAC LAMG</Korean>
             <Chinese>斯通納99輕機槍</Chinese>
             <Chinesesimp>斯通纳99轻机枪</Chinesesimp>
-            <Turkish>Stoner 99 LMG</Turkish>
+            <Turkish>KAC LAMG</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Zafir_Name">
             <English>Negev NG7</English>
@@ -5121,21 +5121,21 @@
             <Hungarian>M14 (klasszikus)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_black">
-            <English>Stoner 99 LMG (Black)</English>
+            <English>KAC LAMG (Black)</English>
             <Chinese>斯通納99輕機槍(黑色)</Chinese>
-            <French>Stoner 99 LMG (Noire)</French>
-            <Spanish>Stoner 99 LMG (Negro)</Spanish>
-            <Italian>Stoner 99 LMG (Nero)</Italian>
-            <Polish>Stoner 99 LMG (Czarny)</Polish>
-            <Russian>Stoner 99 LMG (Чёрный)</Russian>
-            <German>Stoner 99 LMG (Schwarz)</German>
-            <Czech>Stoner 99 LMG (Černá)</Czech>
-            <Portuguese>Stoner 99 LMG (Preto)</Portuguese>
-            <Korean>Stoner 99 LMG (검정)</Korean>
+            <French>KAC LAMG (Noire)</French>
+            <Spanish>KAC LAMG (Negro)</Spanish>
+            <Italian>KAC LAMG (Nero)</Italian>
+            <Polish>KAC LAMG (Czarny)</Polish>
+            <Russian>KAC LAMG (Чёрный)</Russian>
+            <German>KAC LAMG (Schwarz)</German>
+            <Czech>KAC LAMG (Černá)</Czech>
+            <Portuguese>KAC LAMG (Preto)</Portuguese>
+            <Korean>KAC LAMG (검정)</Korean>
             <Chinesesimp>斯通纳99轻机枪(黑色)</Chinesesimp>
-            <Japanese>ストーナー 99 LMG(ブラック)</Japanese>
-            <Turkish>Stoner 99 LMG (Siyah)</Turkish>
-            <Hungarian>Stoner 99 Könnyűgéppuska (Fekete)</Hungarian>
+            <Japanese>KAC LAMG(ブラック)</Japanese>
+            <Turkish>KAC LAMG (Siyah)</Turkish>
+            <Hungarian>KAC Könnyűrohamgéppuska (Fekete)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65">
             <English>MSBS Grot</English>
