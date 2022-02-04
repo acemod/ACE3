@@ -23,6 +23,13 @@ class CfgWeapons {
         ACE_barrelTwist = 199.898;
         ACE_barrelLength = 414.02;
     };
+    class rhs_weap_ak103_base;
+    class rhs_weap_ak104: rhs_weap_ak103_base {
+        ACE_barrelLength = 314.96;
+    };
+    class rhs_weap_ak105: rhs_weap_ak74m {
+        ACE_barrelLength = 314.96;
+    };
     class rhs_weap_akm: rhs_weap_ak74m {
         ACE_RailHeightAboveBore = -0.456233;//from rhs_weap_akmn and rhs_weap_ak74m
         ACE_barrelTwist = 199.898;
