@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Kills a unit.
+ * Kills a local unit.
  *
  * Arguments:
  * 0: The unit <OBJECT>
@@ -16,11 +16,6 @@
 
 params ["_unit", ["_reason", "#setDead"], ["_instigator", objNull]];
 TRACE_3("setDead",_unit,_reason,_instigator);
-
-if !(local _unit) exitWith {
-    WARNING_1("setDead executed on non-local unit - %1",_this);
-    [QGVAR(setDead), _this, _unit] call CBA_fnc_targetEvent;
-};
 
 if !(isDamageAllowed _unit) then {
     WARNING_1("setDead executed on unit with damage blocked - %1",_this);
@@ -41,9 +36,4 @@ private _prevDamage = _unit getHitPointDamage "HitHead";
 
 _unit setHitPointDamage ["HitHead", 1, true, _instigator];
 
-if (alive _unit) then {
-    WARNING_1("setDead failed to kill unit - %1",_this);
-};
-
-// Delay a frame to prevent any weirdness ("zombie" units)
-[{(_this select 0) setHitPointDamage ["HitHead", (_this select 1)]}, [_unit, _prevDamage]] call CBA_fnc_execNextFrame;
+_unit setHitPointDamage ["HitHead", _prevDamage];
