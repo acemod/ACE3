@@ -15,7 +15,7 @@
  * Public: No
  */
 
-#define CT_EDIT 2
+#include "\a3\ui_f\hpp\defineResincl.inc"
 
 params ["_menuType"];
 
