@@ -17,11 +17,6 @@
 params ["_unit", ["_reason", "#setDead"], ["_instigator", objNull]];
 TRACE_3("setDead",_unit,_reason,_instigator);
 
-if !(isDamageAllowed _unit) then {
-    WARNING_1("setDead executed on unit with damage blocked - %1",_this);
-    _unit allowDamage true;
-};
-
 // No heart rate or blood pressure to measure when dead
 _unit setVariable [VAR_HEART_RATE, 0, true];
 _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
@@ -30,6 +25,13 @@ _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
 
 // Send a local event before death
 [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
+
+// (#8803) Reenable damage if disabled to prevent having live units in dead state
+// Keep this after death event for compatibility with third party hooks
+if !(isDamageAllowed _unit) then {
+    WARNING_1("setDead executed on unit with damage blocked - %1",_this);
+    _unit allowDamage true;
+};
 
 // Kill the unit without changing visual apperance
 private _prevDamage = _unit getHitPointDamage "HitHead";
