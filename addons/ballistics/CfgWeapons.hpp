@@ -99,7 +99,7 @@ class CfgWeapons {
     };
 
     // Rifle_Long_Base_F MG
-    // KAC LAMG
+    // Stoner 99 LMG
     class LMG_Mk200_F: Rifle_Long_Base_F {
         ACE_barrelLength = 381;
         ACE_barrelTwist = 177.8;

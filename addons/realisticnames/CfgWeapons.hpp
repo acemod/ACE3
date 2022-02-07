@@ -1069,7 +1069,7 @@ class CfgWeapons {
         displayName = CSTRING(srifle_DMR_06_hunter);
     };
 
-    // KAC LAMG (Black)
+    // Stoner 99 LMG (Black)
     class LMG_Mk200_black_F: LMG_Mk200_F {
         displayName = CSTRING(LMG_Mk200_black);
     };
