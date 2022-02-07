@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Compat_RHS_AFRF3">
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG17M_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG17m_30_displayName">
             <English>[CSW] VOG-17M</English>
             <Czech>[CSW] VOG-17M</Czech>
             <French>[CSW] VOG-17M</French>
@@ -12,7 +12,7 @@
             <Russian>[CSW] ВОГ-17М</Russian>
             <German>[CSW] VOG-17M</German>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG30_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG30_30_displayName">
             <English>[CSW] VOG-30</English>
             <Czech>[CSW] VOG-30</Czech>
             <French>[CSW] VOG-30</French>
@@ -23,7 +23,7 @@
             <Russian>[CSW] ВОГ-30</Russian>
             <German>[CSW] VOG-30</German>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_GPD30_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_GPD30_30_displayName">
             <English>[CSW] GPD-30</English>
             <Czech>[CSW] GPD-30</Czech>
             <French>[CSW] GPD-30</French>
@@ -66,6 +66,17 @@
             <Portuguese>[CSW] ATGM 9M133F</Portuguese>
             <Russian>[CSW] ПТРК 9М133Ф</Russian>
             <German>[CSW] ATGM 9M133F</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133_displayName">
+            <English>[CSW] ATGM 9M133</English>
+            <Czech>[CSW] ATGM 9M133</Czech>
+            <French>[CSW] ATGM 9M133</French>
+            <Spanish>[CSW] ATGM 9M133</Spanish>
+            <Italian>[CSW] ATGM 9M133</Italian>
+            <Polish>[CSW] ATGM 9M133</Polish>
+            <Portuguese>[CSW] ATGM 9M133</Portuguese>
+            <Russian>[CSW] ПТРК 9М133</Russian>
+            <German>[CSW] ATGM 9M133</German>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M1331_displayName">
             <English>[CSW] ATGM 9M133-1</English>
