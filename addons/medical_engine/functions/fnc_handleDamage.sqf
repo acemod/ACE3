@@ -102,20 +102,20 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     private _damageRightLeg = _unit getVariable [QGVAR($HitRightLeg), [0,0]];
 
     // Find hit point that received the maxium damage
-    // Priority used for sorting if incoming damage is equivalent (e.g. max which is 4)
+    // Priority used for sorting if incoming damage is equal
     private _allDamages = [
-        _damageHead       + [PRIORITY_HEAD,       "Head"],
-        _damageBody       + [PRIORITY_BODY,       "Body"],
-        _damageLeftArm    + [PRIORITY_LEFT_ARM,   "LeftArm"],
-        _damageRightArm   + [PRIORITY_RIGHT_ARM,  "RightArm"],
-        _damageLeftLeg    + [PRIORITY_LEFT_LEG,   "LeftLeg"],
-        _damageRightLeg   + [PRIORITY_RIGHT_LEG,  "RightLeg"],
-        _damageStructural + [PRIORITY_STRUCTURAL, "#structural"]
+        [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       "Head"],
+        [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 1,       "Body"],
+        [_damageLeftArm select 0,    PRIORITY_LEFT_ARM,   _damageLeftArm select 1,    "LeftArm"],
+        [_damageRightArm select 0,   PRIORITY_RIGHT_ARM,  _damageRightArm select 1,   "RightArm"],
+        [_damageLeftLeg select 0,    PRIORITY_LEFT_LEG,   _damageLeftLeg select 1,    "LeftLeg"],
+        [_damageRightLeg select 0,   PRIORITY_RIGHT_LEG,  _damageRightLeg select 1,   "RightLeg"],
+        [_damageStructural select 0, PRIORITY_STRUCTURAL, _damageStructural select 1, "#structural"]
     ];
     TRACE_2("incoming",_allDamages,_damageStructural);
 
     _allDamages sort false;
-    _allDamages = _allDamages apply {[_x select 1, _x select 3, _x select 0]};
+    _allDamages = _allDamages apply {[_x select 2, _x select 3, _x select 0]};
     
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them
