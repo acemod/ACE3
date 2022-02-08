@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_advanced_ballistics_fnc_preComputeExtensionDataToClipboard
+ * [] spawn ace_advanced_ballistics_fnc_preComputeExtensionDataToClipboard
  *
  * Public: Yes
  */
