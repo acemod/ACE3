@@ -33,6 +33,21 @@ private _gridCells = _mapGrids * _mapGrids;
 
 GVAR(currentGrid) = 0;
 
+// Indexing some maps can be really expensive and slow down game for several minutes, those maps can come with pre-computed data to speed up things
+// Data can be realy heavy, to avoid slow down config transversal, isolate it into a specific hierarchy
+private _extensionData = configFile >> "AceAdvancedBallistics"  >> worldName  >> "extensionData";
+// XXX: For reviewers :
+// - Alternative config hierachy to consider : configFile >> "CfgWorlds"  >> worldName >> "AceAdvancedBallistics" >> "extensionData";
+// - Add a config to make it optional ? As it does not consider objects added within mission file. Anyway on affected maps performance cost is so high, I think it's not required
+if ( isArray _extensionData ) exitWith {
+    INFO_2("Starting Terrain Extension using pre-computed data from config [cells: %1] [world: %2]", _gridCells, worldName);
+	{
+		"ace_advanced_ballistics" callExtension format (["set:%1:%2:%3"] + _x);
+	} forEach (getArray _extensionData);
+    GVAR(currentGrid) = _gridCells; // Some third party scripts may rely on this global variable
+    INFO_2("Finished terrain initialization in %1 seconds [world: %2]", (diag_tickTime - _initStartTime) toFixed 2, worldName);
+};
+
 INFO_2("Starting Terrain Extension [cells: %1] [world: %2]", _gridCells, worldName);
 
 [{

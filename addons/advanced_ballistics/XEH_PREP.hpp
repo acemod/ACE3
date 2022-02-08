@@ -12,3 +12,4 @@ PREP(initModuleSettings);
 PREP(readAmmoDataFromConfig);
 PREP(readWeaponDataFromConfig);
 PREP(handleFirePFH);
+PREP(preComputeExtensionDataToClipboard);
