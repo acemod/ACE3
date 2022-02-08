@@ -38,7 +38,7 @@ _fnc_parameters = {
 
         case !_drawRank: {""};
         case !isNil "_targetIcon": {_targetIcon};
-        case rank _target == "": {""};
+        case (rank _target == ""): {""};
 
         default {
             private _targetFaction = _target getVariable [QGVAR(faction), faction _target];
