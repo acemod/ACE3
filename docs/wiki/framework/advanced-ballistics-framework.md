@@ -82,3 +82,26 @@ class CfgAmmo {
     };
 };
 ```
+
+## 2. Map Data
+
+Some maps can be really slow to index, leading to framerate drop for several miniutes. To avoid this problem you can pre-compute advanced ballistics data, and bundle it with your map.
+
+Within 3DEN or in-game console, executes the following script : 
+```sqf
+[] spawn ace_advanced_ballistics_fnc_preComputeExtensionDataToClipboard
+```
+
+Paste generated data, replace all `[` by `{`, and all  `]` by `}`, then add the following class to your configuration file :
+
+```cpp
+class AceAdvancedBallistics
+{
+	class yourWorldName
+	{
+		extensionData[] = {{..., ..., ...}, ... }; // Generated data hehre
+    };
+};
+```
+
+On a map like X-Cam Taunus, you can reduce Advanced Ballistics indexing from up to 10 minutes to 0.5 seconds.
