@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Starts vehicle barrel smoke effect.
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [vehicle player, ["commander_turret"]] call ace_cookoff_fnc_barrelSmoke
+ * [vehicle player, ["commander_turret"]] call ace_cookoff_fnc_smoke
  *
  * Public: No
  */
