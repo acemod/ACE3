@@ -11,6 +11,7 @@ class GVAR(tow_missile): vn_missile_tow_mag_x1 {
 class vn_m1919_v_250_mag;
 class GVAR(m1919_250): vn_m1919_v_250_mag {
     scope = 2;
+    scopeArsenal = 2;
     type = 256;
     count = 250;
     model = "\vn\objects_f_vietnam\supply\a2_ammo\macv\vn_us_30cal.p3d";
