@@ -53,7 +53,7 @@ if (GVAR(isSpeedLimiter)) exitWith {
 if (_speedLimit != 0) exitWith { TRACE_1("speed limit set by external source",_speedLimit); };
 
 [localize (
-    if (_cruiseControl) then { LSTRING(OnCruise) } else { LSTRING(On) }
+    [LSTRING(On), LSTRING(OnCruise)] select _cruiseControl
 )] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
