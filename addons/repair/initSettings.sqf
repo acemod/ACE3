@@ -124,3 +124,21 @@
     true, // isGlobal
     {[QGVAR(autoShutOffEngineWhenStartingRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
+
+
+[
+    QGVAR(patchWheelEnabled), "CHECKBOX",
+    [LSTRING(patchWheelEnabled_name), LSTRING(patchWheelEnabled_description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    true, // default value
+    true // isGlobal
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(patchWheelTime),
+    "SLIDER",
+    [LSTRING(patchWheelTime_DisplayName), LSTRING(patchWheelTime_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [0.1, 60, 5, 1],
+    true
+] call CBA_fnc_addSetting;
