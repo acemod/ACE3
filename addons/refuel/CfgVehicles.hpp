@@ -82,6 +82,37 @@ class CfgVehicles {
         model = QPATHTOF(data\nozzle.p3d);
         destrType = "DestructNo";
     };
+    class GVAR(Fuel_Bottle): ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        MACRO_NOZZLE_ACTIONS
+        displayName = QGVAR(Fuel_Bottle)
+        scope = 2;
+        scopeCurator = 2
+        model = QPATHTOF(data\fuel_bottle.p3d);
+        destrType = "DestructNo";
+    };
+        class ACE_Actions {
+        class ACE_MainActions {
+            selection = "";
+            distance = 5;
+            condition = "(true)";
+
+            class ACE_Pickup {
+                selection = "";
+                displayName = CSTRING(PickUp);
+                distance = 5;
+                condition = "(true)";
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
+                showDisabled = 0;
+                exceptions[] = {};
+                icon = QPATHTOF(ui\fuel_bottle_co.paa);
+             };
+        };
+    };
+};
+
 
     class All;
     class Static: All {};
