@@ -7,7 +7,7 @@ class CfgWeapons {
         displayName = CSTRING(DisplayName);
         descriptionShort = "One Liter Fuel Bottle";
         model = QPATHTOF(data\fuel_bottle.p3d);
-        picture = QPATHTOF(UI\fuel_bottle_co.paa);
+        picture = QPATHTOF(ui\fuel_bottle_co.paa);
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
