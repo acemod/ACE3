@@ -5,7 +5,7 @@ class GVAR(tow_missile): vn_missile_tow_mag_x1 {
     count = 1;
     model = "\vn\static_f_vietnam\tow\vn_static_tow_mag.p3d";
     picture = QPATHTOF(UI\ammo_1rnd_tow_ca.paa);
-    mass = 563;
+    mass = 220;  // to Arma, weight and volume are all the same which makes real life values unusable
 };
 
 class vn_m1919_v_250_mag;
