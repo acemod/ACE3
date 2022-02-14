@@ -15,7 +15,7 @@
             <Japanese>引きずる</Japanese>
             <Korean>끌기</Korean>
             <Chinese>拖拉</Chinese>
-            <Chinesesimp>拖拉</Chinesesimp>
+            <Chinesesimp>拖动</Chinesesimp>
             <Turkish>Sürükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
@@ -49,7 +49,7 @@
             <Japanese>オブジェクトを引きずる/離す</Japanese>
             <Korean>물건 끌기/놓기</Korean>
             <Chinese>拖拉/放開物品</Chinese>
-            <Chinesesimp>拖拉/放开物品</Chinesesimp>
+            <Chinesesimp>拖动/放开物品</Chinesesimp>
             <Turkish>Objeyi Sürükle/Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_CarryKeybind">
@@ -108,7 +108,7 @@
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
             <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
-            <Chinesesimp>抬起/放低 | (Ctrl + 鼠标滚轮) 旋转</Chinesesimp>
+            <Chinesesimp>抬起/放低 |（Ctrl + 鼠标滚轮）旋转</Chinesesimp>
             <Korean>높이기/내리기 | (컨트롤 + 스크롤) 회전</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
@@ -120,7 +120,7 @@
             <Spanish>ACE Arrastrar</Spanish>
             <Polish>ACE Przeciąganie</Polish>
             <Japanese>ACE ドラッグ</Japanese>
-            <Chinesesimp>ACE拖曳系统</Chinesesimp>
+            <Chinesesimp>ACE 拖曳</Chinesesimp>
             <Korean>ACE 끌기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">

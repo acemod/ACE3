@@ -47,7 +47,7 @@
             <Italian>Laser - Cambia codice +</Italian>
             <Japanese>レーザ - コードの数値を増やす</Japanese>
             <Korean>레이저 - 코드 순환 위</Korean>
-            <Chinesesimp>激光 - 循环切换激光码 上</Chinesesimp>
+            <Chinesesimp>激光—循环切换激光码 上</Chinesesimp>
             <Chinese>雷射 - 循環切換雷射碼 上</Chinese>
             <Turkish>Lazer - Çevrim Kodu Yukarı</Turkish>
         </Key>
@@ -64,7 +64,7 @@
             <Italian>Laser - Cambia codice -</Italian>
             <Japanese>レーザ - コードの数値を減らす</Japanese>
             <Korean>레이저 - 코드 순환 아래</Korean>
-            <Chinesesimp>激光 - 循环切换激光码 下</Chinesesimp>
+            <Chinesesimp>激光—循环切换激光码 下</Chinesesimp>
             <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
             <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
         </Key>

@@ -13,7 +13,7 @@
             <Hungarian>ACE Orvosi Rendszer</Hungarian>
             <Italian>ACE Medical</Italian>
             <Korean>ACE 의료</Korean>
-            <Chinesesimp>ACE 医疗系统</Chinesesimp>
+            <Chinesesimp>ACE 医疗</Chinesesimp>
             <Chinese>ACE 醫療系統</Chinese>
             <Turkish>ACE Medikal</Turkish>
             <Japanese>ACE 医療</Japanese>
@@ -164,7 +164,7 @@
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
             <Japanese>医療機能で骨折に添え木効果を使うかどうかを決定できます。\n無効化すると、骨折効果は表れません。</Japanese>
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
-            <Chinesesimp>控制是否让固定版能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
+            <Chinesesimp>控制是否让固定板能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
             <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
             <Italian>Controlla l'effetto dell'utilizzo di stecche per curare le fratture. Quando disabilitato, le lesioni non causano fratture.</Italian>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
@@ -199,7 +199,7 @@
             <French>Les attelles guérissent les fractures, mais empêchent de sprinter</French>
             <Portuguese>Talas curam (mas não consegue correr)</Portuguese>
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
-            <Chinesesimp>固定版能治愈骨折，但无法奔跑</Chinesesimp>
+            <Chinesesimp>固定板能治愈骨折，但无法奔跑</Chinesesimp>
             <Italian>Le gessature curano, ma non puoi correre</Italian>
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
             <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
@@ -218,6 +218,7 @@
             <Polish>Szyny leczą, ale uniemożliwiają trucht</Polish>
             <German>Schiene heilt, aber verhindert Sprinten</German>
             <Korean>부목이 치료는 하지만 빨리 걷지 못함</Korean>
+            <Chinesesimp>固定板能治愈骨折，但无法慢跑</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
@@ -275,7 +276,7 @@
             <Italian>Seleziona per quali unità verrà abilitato il sistema medico avanzato</Italian>
             <Japanese>選択されたユニットが、アドバンスド医療が使えるようになります</Japanese>
             <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시요.</Korean>
-            <Chinesesimp>选择进阶医疗系统影响的对象</Chinesesimp>
+            <Chinesesimp>选择进阶医疗系统影响的物体</Chinesesimp>
             <Chinese>選擇進階醫療系統影響的對象</Chinese>
             <Turkish>Gelişmiş tıbbi sistemin hangi üniteler için etkinleştirileceğini seçin</Turkish>
         </Key>
@@ -309,7 +310,7 @@
             <Italian>Giocatori ed IA</Italian>
             <Japanese>プレイヤーと AI</Japanese>
             <Korean>플레이어 및 인공지능</Korean>
-            <Chinesesimp>玩家与AI</Chinesesimp>
+            <Chinesesimp>玩家与 AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
             <Turkish>Oyuncular ve AI</Turkish>
         </Key>
@@ -343,7 +344,7 @@
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
             <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか?</Japanese>
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
-            <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
+            <Chinesesimp>设定人员是否会因为载具冲撞别的物体而产生伤害？</Chinesesimp>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
             <Turkish>Birimler bir araç kazasından hasar alır mı?</Turkish>
         </Key>

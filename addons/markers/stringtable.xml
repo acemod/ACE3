@@ -9,7 +9,7 @@
             <Japanese>スケール: %1</Japanese>
             <Polish>Skala: %1</Polish>
             <German>Skalierung: %1</German>
-            <Chinesesimp>规模: %1°</Chinesesimp>
+            <Chinesesimp>规模：%1°</Chinesesimp>
             <Korean>크기: %1</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
@@ -25,7 +25,7 @@
             <Portuguese>Direção %1</Portuguese>
             <Japanese>方位: %1°</Japanese>
             <Korean>방위: %1°</Korean>
-            <Chinesesimp>方位: %1°</Chinesesimp>
+            <Chinesesimp>方位：%1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>
             <Turkish>Yön: %1°</Turkish>
         </Key>
@@ -76,7 +76,7 @@
             <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をできるか制限できます。</Japanese>
             <Korean>Alt 키를 누른 상태에서 마커를 움직일 수있는 플레이어를 제한합니다.</Korean>
             <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
-            <Chinesesimp>设定谁可以透过按住Alt键来移动标识。</Chinesesimp>
+            <Chinesesimp>设定谁可以透过按住 Alt 键来移动标识。</Chinesesimp>
             <Italian>Limita quali giocatori possono spostare i marcatori mentre premono il tasto Alt.</Italian>
             <Polish>Ogranicz którzy gracze mogą poruszać znacznikami podczas trzymania przycisku Alt.</Polish>
             <Russian>Устанавливает ограничение на перемещения маркеров игроками при помощи клавиши Alt</Russian>
@@ -256,7 +256,7 @@
             <Spanish>"HH" - Hora</Spanish>
             <Polish>"HH" - Godziny</Polish>
             <German>"HH" - Stunden</German>
-            <Chinesesimp>"HH" - 时</Chinesesimp>
+            <Chinesesimp>"HH"—时</Chinesesimp>
             <Korean>"HH" - 시</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
@@ -267,7 +267,7 @@
             <Spanish>"MM" - Minuto</Spanish>
             <Polish>"MM" - Minuty</Polish>
             <German>"MM" - Minuten</German>
-            <Chinesesimp>"MM" - 分</Chinesesimp>
+            <Chinesesimp>"MM"—分</Chinesesimp>
             <Korean>"MM" - 분</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
@@ -278,7 +278,7 @@
             <Spanish>"SS" - Segundos</Spanish>
             <Polish>"SS" - Sekundy</Polish>
             <German>"SS" - Sekunden</German>
-            <Chinesesimp>"SS" - 秒</Chinesesimp>
+            <Chinesesimp>"SS"—秒</Chinesesimp>
             <Korean>"SS" - 초</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
@@ -289,7 +289,7 @@
             <Spanish>"MM" - Milisegundos</Spanish>
             <Polish>"MM" - Milisekundy</Polish>
             <German>"MS" - Milisekunden</German>
-            <Chinesesimp>"MS" - 毫秒</Chinesesimp>
+            <Chinesesimp>"MS"—毫秒</Chinesesimp>
             <Korean>"MS" - 밀리초</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">

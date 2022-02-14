@@ -104,7 +104,7 @@
             <Italian>Visualizza testo in caso di inceppamento</Italian>
             <Japanese>弾詰りを文章で表示</Japanese>
             <Korean>탄걸림의 경우 화면에 표시</Korean>
-            <Chinesesimp>在卡弹时显示提示讯息</Chinesesimp>
+            <Chinesesimp>在卡弹时显示提示信息</Chinesesimp>
             <Chinese>在卡彈時顯示提示訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_description">
@@ -120,7 +120,7 @@
             <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
             <Japanese>持っている武器が弾詰りをすると、通知を表示します</Japanese>
             <Korean>총알이 무기에 걸릴경우 화면에 알림을 띄웁니다</Korean>
-            <Chinesesimp>当武器卡弹时显示提示讯息</Chinesesimp>
+            <Chinesesimp>当武器卡弹时显示提示信息</Chinesesimp>
             <Chinese>當武器卡彈時顯示提示訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_displayName">
@@ -236,7 +236,7 @@
             <Russian>Дистанция в метрах, с которой видны эффекты частиц и разброса при перегреве.</Russian>
             <German>Der Abstand in Metern vom Spieler, in dem Überhitzungspartikeleffekte und Dispersion sichtbar sind.</German>
             <Polish>Określa odległość w metrach, do której widoczne są efekty cząsteczkowe i rozproszenie.</Polish>
-            <Chinesesimp>距离玩家的距离(米)，在这个距离内可以看到过热的粒子效应和扩散。</Chinesesimp>
+            <Chinesesimp>距离玩家的距离（米），在这个距离内可以看到过热的粒子效应和扩散。</Chinesesimp>
             <Korean>미터 단위로, 과열 시 입자효과와 분산정도가 플레이어로 부터 얼마나 떨어진 곳까지 보여지는지를 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
@@ -370,7 +370,7 @@
             <Russian>Коеффициент возгорания при перегреве</Russian>
             <German>Selbstzündungskoeffizient bei Überhitzung</German>
             <Polish>Współczynnik samozapłonu</Polish>
-            <Chinesesimp>过热炸膛系数</Chinesesimp>
+            <Chinesesimp>过热诱发系数</Chinesesimp>
             <Korean>과열 쿡오프 계수</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_description">
@@ -380,7 +380,7 @@
             <Russian>Коеффициент нагрева, при котором возникает возгорание.</Russian>
             <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
             <Polish>Współczynnik modyfikujący ilość ciepła wymaganego do samozapłonu amunicji w komorze broni.\nIm wyższa wartość, tym gorętsza musi być broń, aby amunicja uległa samozapłonowi\nUstaw 0, aby wyłączyć samozapłon.</Polish>
-            <Chinesesimp>发生炸膛的过热系数。\n数值越高，炸膛所需要的过热值越高。\n设置为0禁用炸膛。</Chinesesimp>
+            <Chinesesimp>发生热诱发的过热系数。\n数值越高，热诱发所需要的过热值越高。\n设置为0禁用热诱发。</Chinesesimp>
             <Korean>쿡오프가 되기위해 얼마나 과열되는가를 결정합니다. \n높을 수록 쿡오프 되기위해 더 뜨거운 열을 필요로 합니다.\n 0으로 설정하면 쿡오프 현상이 없어집니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
@@ -428,7 +428,7 @@
             <Italian>Arma inceppata!</Italian>
             <Japanese>武器が詰まった!</Japanese>
             <Korean>기능고장!</Korean>
-            <Chinesesimp>武器卡弹!</Chinesesimp>
+            <Chinesesimp>武器卡弹！</Chinesesimp>
             <Chinese>武器卡彈!</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_WeaponCookedOff">
@@ -438,7 +438,7 @@
             <Russian>Оружие сдетонировало!</Russian>
             <German>Munition durchgezündet!</German>
             <Polish>Samozapłon amunicji!</Polish>
-            <Chinesesimp>武器炸膛！</Chinesesimp>
+            <Chinesesimp>武器发生热诱发！</Chinesesimp>
             <Korean>쿡오프가 일어납니다!</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToEject">
@@ -448,7 +448,7 @@
             <Russian>Не удалось достать.</Russian>
             <German>Hülse wurde nicht ausgeworfen.</German>
             <Polish>Nie udało się wyrzucić łuski.</Polish>
-            <Chinesesimp>弹出失败。</Chinesesimp>
+            <Chinesesimp>抛壳失败。</Chinesesimp>
             <Korean>탄피가 약실에 낌.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToExtract">
@@ -458,7 +458,7 @@
             <Russian>Не удалось извлечь.</Russian>
             <German>Hülse wurde nicht ausgezogen.</German>
             <Polish>Nie udało się wyjąć łuski.</Polish>
-            <Chinesesimp>未能抽出。</Chinesesimp>
+            <Chinesesimp>抽壳失败。</Chinesesimp>
             <Korean>탄피가 배출되지 않음.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFeed">
@@ -468,7 +468,7 @@
             <Russian>Не удалось подать.</Russian>
             <German>Patrone wurde nicht zugeführt.</German>
             <Polish>Nie udało się załadować naboju.</Polish>
-            <Chinesesimp>未能进食。</Chinesesimp>
+            <Chinesesimp>供弹失败。</Chinesesimp>
             <Korean>탄이 장전 중 걸림.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFire">
@@ -802,7 +802,7 @@
             <German>Extrem heiße Wechselläufe</German>
             <Korean>엄청나게 뜨거운 예비 총열</Korean>
             <Italian>Canna/e di Ricambio Rovente</Italian>
-            <Chinesesimp>备用枪管温度超级热</Chinesesimp>
+            <Chinesesimp>备用枪管温度非常热</Chinesesimp>
             <Chinese>備用槍管溫度超級熱</Chinese>
         </Key>
     </Package>
