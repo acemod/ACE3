@@ -21,7 +21,7 @@ params ["_unit", "_allDamages", "_shooter", "_ammo"];
 
 private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
 if (_typeOfDamage in GVAR(damageTypeDetails)) then {
-    (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers", ""];
+    (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers"];
     
     private _damageData = [_unit, _allDamages, _typeOfDamage];
     {
