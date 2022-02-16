@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="x\fuel\fuel_bottle_nohq.paa";
+	texture="z\ace\addons\refuel\data\fuel_bottle_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -44,12 +44,12 @@ class Stage3
 };
 class Stage4
 {
-	texture="x\fuel\fuel_bottle_as.paa";
+	texture="z\ace\addons\refuel\data\fuel_bottle_as.paa";
 	uvSource="tex1";
 };
 class Stage5
 {
-	texture="x\fuel\fuel_bottle_smdi.paa";
+	texture="z\ace\addons\refuel\data\fuel_bottle_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -66,7 +66,7 @@ class Stage6
 };
 class Stage7
 {
-	texture="x\fuel\fuel_bottle_co.paa";
+	texture="z\ace\addons\refuel\data\fuel_bottle_co.paa";
 	useWorldEnvMap="true";
 	uvSource="tex";
 	class uvTransform
