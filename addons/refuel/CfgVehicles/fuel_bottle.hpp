@@ -34,7 +34,7 @@ class ACE_Fuel_Bottle: ThingX {
         };
     };
     };
-	displayName = CSTRING(Fuel_Bottle_DisplayName);
+    displayName = CSTRING(Fuel_Bottle_DisplayName);
     scope = 1;
     scopeCurator = 1;
     model = QPATHTOF(data\fuel_bottle.p3d);
