@@ -152,6 +152,10 @@ if !(isNull _target) then {
     _projectile setMissileTarget _target;
 };
 
+if (_expectedTargetPos isEqualTo [0, 0, 0]) then {
+    _expectedTargetPos = (getPosASLVisual _projectile) vectorAdd velocity _projectile;
+};
+
 _targetData set [0, (getPosASLVisual _projectile) vectorFromTo _expectedTargetPos];
 
 _seekerStateParams set [3, _expectedTargetPos];

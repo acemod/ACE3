@@ -12,8 +12,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 25;          // Minium flap deflection for guidance
-            yawRate = 25;            // Maximum flap deflection for guidance
+            pitchRate = 35;          // Minium flap deflection for guidance
+            yawRate = 35;            // Maximum flap deflection for guidance
 
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -56,8 +56,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 40;          // Minium flap deflection for guidance
-            yawRate = 40;            // Maximum flap deflection for guidance
+            pitchRate = 90;          // Minium flap deflection for guidance
+            yawRate = 90;            // Maximum flap deflection for guidance
 
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -71,8 +71,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
 
-            defaultNavigationType = "AugmentedProportionalNavigation";
-            navigationTypes[] = { "AugmentedProportionalNavigation" };
+            defaultNavigationType = "ZeroEffortMiss";
+            navigationTypes[] = { "ZeroEffortMiss" };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 120;           // Angle from the shooter's view that can track the missile
@@ -101,8 +101,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 40;          // Minium flap deflection for guidance
-            yawRate = 40;            // Maximum flap deflection for guidance
+            pitchRate = 100;          // Minium flap deflection for guidance
+            yawRate = 100;            // Maximum flap deflection for guidance
 
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -146,8 +146,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 25;          // Minium flap deflection for guidance
-            yawRate = 25;            // Maximum flap deflection for guidance
+            pitchRate = 35;          // Minium flap deflection for guidance
+            yawRate = 35;            // Maximum flap deflection for guidance
 
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -190,8 +190,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 40;          // Minium flap deflection for guidance
-            yawRate = 40;            // Maximum flap deflection for guidance
+            pitchRate = 50;          // Minium flap deflection for guidance
+            yawRate = 50;            // Maximum flap deflection for guidance
 
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 

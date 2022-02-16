@@ -34,7 +34,8 @@ _seekerStateParams params ["_flareDistanceFilter", "_flareAngleFilter", "_tracki
 
 private _distanceFromLaunch = _launchPos distanceSqr getPosASLVisual _projectile;
 if (_distanceFromLaunch <= _seekerMinRange * _seekerMinRange) exitWith {
-    [0, 0, 0]
+    private _dir = _launchPos vectorFromTo getPosASLVisual _projectile;
+    _dir vectorAdd getPosASLVisual _projectile
 };
 
 private _withinView = [_projectile, getPosASLVisual _trackingTarget, _seekerAngle] call FUNC(checkSeekerAngle);
@@ -82,6 +83,16 @@ if (true || {accTime > 0 && !isGamePaused}) then {
         (_x isEqualTo _target && _trackingTarget isNotEqualTo _target) || { (_withinView && _canSee && _isFlare) }
     };
 
+    private _frontAspectMultiplier = 1;
+    if (_trackingTarget isKindOf "Air") then {
+        private _targetVelocity = velocity _trackingTarget;
+        
+        private _directionToTarget = (getPosASLVisual _projectile) vectorFromTo getPosASLVisual _trackingTarget;
+        private _angle = acos (_directionToTarget vectorCos _targetVelocity);
+
+        _frontAspectMultiplier = (((_angle / 60) min 1) max 0.3);
+    };
+
     private _relativeTargetVelocity = _projectile vectorWorldToModelVisual velocity _trackingTarget;
     _relativeTargetVelocity set [1, 0];
     private _foundDecoy = false;
@@ -93,7 +104,7 @@ if (true || {accTime > 0 && !isGamePaused}) then {
             _flareRelativeVelocity set [1, 0];
             private _angleBetweenVelocities = acos (_relativeTargetVelocity vectorCos _flareRelativeVelocity);
             // further away targets are filtered out by assumption that target cant move instantenously
-            private _chanceToDecoy = 1 - (_trackingTarget distance _x) / _flareDistanceFilter;
+            private _chanceToDecoy = 1 - (_trackingTarget distance _x) / (_flareDistanceFilter * _frontAspectMultiplier);
             if !(_foundDecoy) then {
                 if (_angleBetweenVelocities <= _flareAngleFilter) then {
                         _considering = true;
@@ -124,8 +135,20 @@ if (true || {accTime > 0 && !isGamePaused}) then {
 
 private _targetPosition = _trackingTarget modelToWorldVisualWorld getCenterOfMass _trackingTarget;
 
+if (GVAR(debug_drawGuidanceInfo) && { _targetPosition isNotEqualTo [0, 0, 0] }) then {
+    if (!isGamePaused && accTime > 0) then {
+        private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _targetPosition);
+        _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 0], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[0, 0, 1, 1], [0, 0, 1, 1], [0, 0, 1, 1]], [1], 1, 0, "", "", nil];
+        _PS setDropInterval 1.0;
+    };
+};
+
 _targetData set [0, (getPosASL _projectile) vectorFromTo _targetPosition];
 _targetData set [2, 0];
 _targetData set [3, velocity _trackingTarget];
+
+if (_targetPosition isEqualTo [0, 0, 0]) then {
+    _targetPosition = (velocity _projectile) vectorAdd getPosASLVisual _projectile
+};
 
 _targetPosition
