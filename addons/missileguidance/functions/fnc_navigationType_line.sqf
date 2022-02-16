@@ -22,9 +22,9 @@ _flightParams params ["_pitchRate", "_yawRate"];
 _navigationParams params ["_proportionalGain", "", "_derivativeGain", "_lastErrorX", "_lastErrorY", "_correctionDistance"];
 private _targetDistance = _projectile vectorWorldToModelVisual (_targetDir vectorMultiply _distance);
 
-_proportionalGain = 30;
-_derivativeGain = 30;
-_correctionDistance = 3;
+//_proportionalGain = 30;
+//_derivativeGain = 30;
+//_correctionDistance = 3;
 private _errorX = _targetDistance#0 / _correctionDistance;
 private _errorY = _targetDistance#2 / _correctionDistance;
 
