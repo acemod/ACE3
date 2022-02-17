@@ -9,7 +9,7 @@
  * 2: Body part ("Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg") <STRING>
  * 3: Projectile Type <STRING>
  * 4: Source <OBJECT>
- * 5: Non-directional damage source array <ARRAY> (default: [])
+ * 5: Unused parameter maintained for backwards compatibility <ARRAY> (default: [])
  * 6: Override Invulnerability <BOOL> (default: true)
  *
  * Return Value:
@@ -29,7 +29,7 @@ params [
     ["_bodyPart", "", [""]],
     ["_typeOfDamage", "", [""]],
     ["_instigator", objNull, [objNull]],
-    ["_damageSelectionArray", [], [[]]],
+    "",
     ["_overrideInvuln", true, [true]]
 ];
 TRACE_7("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray,_overrideInvuln);
@@ -48,10 +48,6 @@ if (!_overrideInvuln && {!((isDamageAllowed _unit) && {_unit getVariable [QEGVAR
 // Extension is case sensitive and expects this format (different from ALL_BODY_PARTS)
 _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;
 
-if (_damageSelectionArray isEqualTo []) then { // this will only be used if damage type is not location specific
-    _damageSelectionArray = [HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1, HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1];
-};
-
 if (!isNull _instigator) then {
     _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
@@ -62,7 +58,7 @@ private _startDmg = +(_unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,
 private _startPain = GET_PAIN(_unit);
 #endif
 
-[QEGVAR(medical,woundReceived), [_unit, _bodyPart, _damageToAdd, _instigator, _typeOfDamage, _damageSelectionArray]] call CBA_fnc_localEvent;
+[QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, _typeOfDamage]] call CBA_fnc_localEvent;
 
 #ifdef DEBUG_TESTRESULTS
 private _endDmg = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];

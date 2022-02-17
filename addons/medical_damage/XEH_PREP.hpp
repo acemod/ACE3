@@ -1,6 +1,12 @@
+PREP(debug_explosiveTest);
 PREP(determineIfFatal);
 PREP(getTypeOfDamage);
 PREP(handleIncapacitation);
+PREP(interpolatePoints);
 PREP(parseConfigForInjuries);
+PREP(parseWoundHandlersCfg);
+PREP(woundReceived);
 PREP(woundsHandler);
+PREP(woundsHandlerBurning);
 PREP(woundsHandlerSQF);
+PREP(woundsHandlerVehiclecrash);
