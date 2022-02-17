@@ -18,7 +18,6 @@
 
 params["_unit","_fuelBottle"];
 
-
 // check fuel bottle
 private _fuelAmount = [_fuelBottle] call FUNC(getFuel);
 if(_fuelAmount isNotEqualTo 1) exitWith {

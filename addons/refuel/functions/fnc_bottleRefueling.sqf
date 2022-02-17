@@ -16,14 +16,10 @@
  * Public: No
  */
 
-params["_unit","_fuelBottleItem"];
-
-
+params ["_unit","_fuelBottleItem"];
 
 //remove item
 _unit removeItem _fuelBottleItem;
-
-
 
 [{
     params ["_unit"];
