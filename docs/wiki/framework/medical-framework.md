@@ -75,9 +75,12 @@ When damage of this type is dealt, the wound handler scans through this array to
 For specific details, look at `ace_medical_damage_fnc_interpolatePoints`.
 
 Example:
+{% raw %}
 ```cpp
 thresholds[] = {{0.7, 3}, {0.5, 2}, {0.3, 1}};
 ```
+{% endraw %}
+
 - `damage = 0.65`
 - 0.65 75% of the way from 0.5 to 0.7, so the interpolated value is 2.75
 - this has a 75% chance to create 3 wounds, and a 25% chance to create 2 wounds
@@ -95,6 +98,7 @@ This entry is used to determine the chance for a damage type to produce each wou
 - The damage value used is the damage _per wound_, which is the total damage divided by the number of wounds.
 
 Example:
+{% raw %}
 ```cpp
 class Contusion {
     weighting[] = {{0.35, 0}, {0, 2}};
@@ -103,6 +107,7 @@ class VelocityWound {
     weighting[] = {{0.35, 2}, {0, 0}};
 };
 ```
+{% endraw %}
 
 - `damage = 0.6` and `nWounds = 3`, therefore `damagePerWound = 0.2`
 - 0.2 is 4/7 of the way from 0 to 0.35
@@ -143,6 +148,7 @@ class ACE_Medical_Injuries {
 
 ### 4.3 ACE_Medical_Injuries >> damageTypes
 See above for full explanations of [thresholds](#331-thresholds) and [weighting](#332-weighting).
+{% raw %}
 ```cpp
 class ACE_Medical_Injuries {
     class damageTypes {
@@ -203,6 +209,7 @@ class ACE_Medical_Injuries {
     };
 };
 ```
+{% endraw %}
 
 ## 4.4 Wound Handler Function
 Custom wound handlers should follow the same spec as the built-in handler:
