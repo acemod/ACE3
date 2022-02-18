@@ -214,7 +214,7 @@ class ACE_Medical_Injuries {
 ## 4.4 Wound Handler Function
 Custom wound handlers should follow the same spec as the built-in handler:
 
-`ace_medical_damage_fnc_woundsHandlerSQF`
+`ace_medical_damage_fnc_woundsHandlerActive`
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -226,7 +226,7 @@ Custom wound handlers should follow the same spec as the built-in handler:
 The damage elements are sorted in descending order according to how much damage was dealt to each body part _before armor was taken into account_, but the actual damage values are _after armor_.
 
 ### Example
-`[player, [[0.5, "Body", 1], [0.3, "Head", 0.6]], "grenade"] ace_medical_damage_fnc_woundsHandlerSQF`
+`[player, [[0.5, "Body", 1], [0.3, "Head", 0.6]], "grenade"] ace_medical_damage_fnc_woundsHandlerActive`
 
    | Arguments | Explanation
 ---| --------- | -----------
