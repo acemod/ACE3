@@ -517,9 +517,9 @@ class CfgWeapons {
         };
     };
 
-    class LMG_Minigun_heli: LMG_RCWS {
+    class LMG_Minigun_heli: LMG_Minigun {
         displayName = "M134 Minigun";
-        class manual: MGun {
+        class manual: manual {
             displayName = "M134 Minigun";
         };
     };
