@@ -34,6 +34,7 @@ class ACE_Fuel_Bottle: ThingX {
             };
         };
     };
+    author = "Killerswin2";
     displayName = CSTRING(Fuel_Bottle_DisplayName);
     scope = 1;
     scopeCurator = 1;
