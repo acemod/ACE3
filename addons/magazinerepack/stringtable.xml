@@ -189,7 +189,7 @@
         <Key ID="STR_ACE_MagazineRepack_repackAnimation">
             <English>Repack Animation</English>
             <French>Remplir l'animation</French>
-            <German>Animation umpacken</German>
+            <German>Animation für Umpacken</German>
             <Polish>Animacja przepakowywania</Polish>
         </Key>
     </Package>
