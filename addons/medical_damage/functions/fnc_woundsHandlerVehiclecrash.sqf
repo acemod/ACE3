@@ -17,6 +17,7 @@
  * Public: No
  */
 params ["_unit", "_allDamages", "_typeOfDamage"];
+TRACE_3("woundsHandlerVehicleCrash",_unit,_allDamages,_typeOfDamage);
 
 // randomise all hit selections
 private _newDamages = _allDamages apply {
