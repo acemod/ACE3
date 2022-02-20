@@ -5,9 +5,9 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Body Part (not used) <STRING>
- * 2: Damage <NUMBER>
- * 3: Shooter <OBJECT>
+ * 1: Damage done to each body part <ARRAY>
+ * 2: Shooter <OBJECT>
+ * 3: Ammo classname or damage type <STRING>
  *
  * Return Value:
  * None

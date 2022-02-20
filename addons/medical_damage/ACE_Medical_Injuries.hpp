@@ -73,7 +73,7 @@ class ACE_Medical_Injuries {
         // each entry should be a SQF expression that returns a function
         // this can also be overridden for each damage type
         class woundHandlers {
-            ADDON = QFUNC(woundsHandlerActive);
+            ADDON = QFUNC(woundsHandlerBase);
         };
 
         class bullet {

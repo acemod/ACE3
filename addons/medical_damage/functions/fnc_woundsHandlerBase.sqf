@@ -12,13 +12,13 @@
  * None
  *
  * Example:
- * [player, [[0.5, "Body", 1]], "bullet"] call ace_medical_damage_fnc_woundsHandlerSQF
+ * [player, [[0.5, "Body", 1]], "bullet"] call ace_medical_damage_fnc_woundsHandlerBase
  *
  * Public: No
  */
 
 params ["_unit", "_allDamages", "_typeOfDamage"];
-TRACE_4("woundsHandlerSQF",_unit,_allDamages,_typeOfDamage);
+TRACE_3("woundsHandlerBase",_unit,_allDamages,_typeOfDamage);
 
 
 if !(_typeOfDamage in GVAR(damageTypeDetails)) then {

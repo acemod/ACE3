@@ -160,7 +160,7 @@ class ACE_Medical_Injuries {
         // each entry should be a SQF expression that returns a function
         // this can also be overridden for each damage type
         class woundHandlers {
-            ace_medical_damage = "ace_medical_damage_fnc_woundsHandlerActive";
+            ace_medical_damage = "ace_medical_damage_fnc_woundsHandlerBase";
         };
 
         // each sub-class defines a valid damage type
@@ -214,7 +214,7 @@ class ACE_Medical_Injuries {
 ## 4.4 Wound Handler Function
 Custom wound handlers should follow the same spec as the built-in handler:
 
-`ace_medical_damage_fnc_woundsHandlerSQF`
+`ace_medical_damage_fnc_woundsHandlerBase`
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -226,7 +226,7 @@ Custom wound handlers should follow the same spec as the built-in handler:
 The damage elements are sorted in descending order according to how much damage was dealt to each body part _before armor was taken into account_, but the actual damage values are _after armor_.
 
 ### Example
-`[player, [[0.5, "Body", 1], [0.3, "Head", 0.6]], "grenade"] ace_medical_damage_fnc_woundsHandlerSQF`
+`[player, [[0.5, "Body", 1], [0.3, "Head", 0.6]], "grenade"] ace_medical_damage_fnc_woundsHandlerBase`
 
    | Arguments | Explanation
 ---| --------- | -----------

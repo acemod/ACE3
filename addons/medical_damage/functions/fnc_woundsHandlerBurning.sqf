@@ -17,6 +17,7 @@
  * Public: No
  */
 params ["_unit", "_allDamages", "_typeOfDamage"];
+TRACE_3("woundsHandlerBurning",_unit,_allDamages,_typeOfDamage);
 
 #define FIRE_DAMAGE_INTERVAL 1
 
