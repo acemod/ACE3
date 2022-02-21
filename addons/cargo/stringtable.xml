@@ -63,6 +63,22 @@
             <Chinesesimp>距离 |（Ctrl + 鼠标滚轮 旋转 | (Alt + 鼠标滚轮 旋转) 高度</Chinesesimp>
             <Korean>거리 | (컨트롤 + 스크롤) 돌리기 | (Alt + 스크롤) 고도</Korean>
         </Key>
+        <Key ID="STR_ACE_Cargo_BlockedAction">
+            <English>Blocked</English>
+            <Spanish>Obstruido</Spanish>
+            <Portuguese>Bloqueado</Portuguese>
+            <Russian>Заблокировано</Russian>
+            <Czech>Blokováno</Czech>
+            <Polish>Zablokowany</Polish>
+            <Italian>Bloccato</Italian>
+            <German>Blockiert</German>
+            <French>Bloqué</French>
+            <Japanese>取り付け不可</Japanese>
+            <Korean>막힘</Korean>
+            <Chinesesimp>断开</Chinesesimp>
+            <Chinese>斷開</Chinese>
+            <Turkish>Bloke Edilmiş</Turkish>
+        </Key>
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
             <Japanese>名前を次に変更:&lt;br/&gt;%1</Japanese>

@@ -15,6 +15,8 @@
  * Public: No
  */
 
+if (!GVAR(canDeploy)) exitWith{};
+
 params ["_unit"];
 
 // enable running again
@@ -23,14 +25,14 @@ params ["_unit"];
 
 // delete placement dummy and unload real item from cargo at dummy position
 [{
-    if (isNull GVAR(dummyObject)) exitWith {};
+    if (isNull GVAR(itemPreviewObject)) exitWith {};
 
     params ["_unit", "_item"];
 
-    private _position = ASLToAGL (getPosASL GVAR(dummyObject));
-    private _direction = getDir GVAR(dummyObject);
+    private _position = ASLToAGL (getPosASL GVAR(itemPreviewObject));
+    private _direction = getDir GVAR(itemPreviewObject);
 
-    deleteVehicle GVAR(dummyObject);
+    deleteVehicle GVAR(itemPreviewObject);
 
     private _size = [_item] call FUNC(getSizeItem);
 
@@ -51,8 +53,8 @@ params ["_unit"];
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
 
-    GVAR(dummyObject) = objNull;
-}, [_unit, GVAR(objectToDeploy)], 1] call CBA_fnc_waitAndExecute;
+    GVAR(itemPreviewObject) = objNull;
+}, [_unit, GVAR(selectedItem)], 1] call CBA_fnc_waitAndExecute;
 
 // remove deployment pfh
 [GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;

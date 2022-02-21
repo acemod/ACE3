@@ -31,15 +31,15 @@ if (2 == count _place) then {
     // this covers testing vehicle stability and finding a safe position
     _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
     TRACE_1("findUnloadPosition",_emptyPosAGL);
+};
 
-    if ((count _emptyPosAGL) != 3) exitWith {
-        TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
-        if ((!isNull _unloader) && {_unloader == ACE_player}) then {
-            //display text saying there are no safe places to exit the vehicle
-            [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
-        };
-        false
+if ((count _emptyPosAGL) != 3) exitWith {
+    TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
+    if ((!isNull _unloader) && {_unloader == ACE_player}) then {
+        //display text saying there are no safe places to exit the vehicle
+        [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
     };
+    false
 };
 
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];

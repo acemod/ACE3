@@ -25,9 +25,9 @@ if (cba_events_control) exitWith {
 };
 
 if (cba_events_alt) exitWith {
-    GVAR(deployHeight) = GVAR(deployHeight) + (_scroll * 0.2);
+    GVAR(deployHeight) = 2 min (-2 max GVAR(deployHeight) + (_scroll * 0.1));
     true
 };
 
-GVAR(deployDistance) = 4 min (1 max GVAR(deployDistance) + (_scroll * 0.2));
+GVAR(deployDistance) = 4 min (1 max GVAR(deployDistance) + (_scroll * 0.1));
 true

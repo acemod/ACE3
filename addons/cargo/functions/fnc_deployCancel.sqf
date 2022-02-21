@@ -25,7 +25,7 @@ if (_key != 1 || {GVAR(deployPFH) == -1}) exitWith {};
 [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // delete placement dummy
-deleteVehicle GVAR(dummyObject);
+deleteVehicle GVAR(itemPreviewObject);
 
 // remove deployment pfh
 [GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;

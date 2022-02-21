@@ -37,7 +37,7 @@ closeDialog 1;
 
 private _classname = _item;
 
-GVAR(objectToDeploy) = _item;
+GVAR(selectedItem) = _item;
 
 if (_classname isEqualType ObjNull) then {
     _classname = typeOf _classname;
@@ -47,52 +47,91 @@ if (_classname isEqualType ObjNull) then {
 [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
-// create the object
-private _dummyObject = _classname createVehicleLocal [0, 0, 0];
-GVAR(dummyObject) = _dummyObject;
+// create the objects
+private _itemPreviewObject = _classname createVehicleLocal [0, 0, 1000];
+
+// private _itemPreviewObject = createSimpleObject [_classname, [0, 0, 0], true];
+GVAR(itemPreviewObject) = _itemPreviewObject;
 
 // prevent collisions with object
-_dummyObject disableCollisionWith ACE_player;
-_dummyObject enableSimulation false;
-_dummyObject setMass 1e-12;
+_itemPreviewObject disableCollisionWith ACE_player;
+_itemPreviewObject enableSimulation false;
+_itemPreviewObject setMass 1e-12;
 
-private _dummyObjectRadius = ((boundingBoxReal _dummyObject) select 2) / 2;
+// detect radius of zone where collision can damage the player
+private _itemPreviewObjectRadius = 0.2 + ((boundingBoxReal _itemPreviewObject) select 2) / 2;
 
 // set default values for deployment settings
-GVAR(deployDistance) = _dummyObjectRadius max (([ACE_player, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) / 2);
+GVAR(deployDistance) = _itemPreviewObjectRadius max (([ACE_player, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) / 2);
 GVAR(deployDirection) = 0;
 GVAR(deployHeight) = 0;
+GVAR(canDeploy) = true;
 
 // pfh that runs while the deployment is in progress
 GVAR(deployPFH) = [{
-    (_this select 0) params ["_unit", "_dummyObject", "_target", "_item", "_dummyObjectRadius"];
+    (_this select 0) params ["_unit", "_itemPreviewObject", "_vehicle", "_item", "_itemPreviewObjectRadius"];
 
     if !(
-        !isNull _dummyObject
-        && (alive _target)
-        && {locked _target < 2}
-        && {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
-        && {_item in (_target getVariable [QGVAR(loaded), []])}
+        !isNull _itemPreviewObject
+        && {alive _vehicle}
+        && {locked _vehicle < 2}
+        && {([_unit, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+        && {_item in (_vehicle getVariable [QGVAR(loaded), []])}
     ) exitWith {
         [_unit] call FUNC(deployCancel);
     };
 
-    GVAR(deployDistance) = _dummyObjectRadius max GVAR(deployDistance);
+    GVAR(deployDistance) = _itemPreviewObjectRadius max GVAR(deployDistance);
 
-    _dummyObject setPosASL (eyePos _unit vectorAdd (positionCameraToWorld [0, GVAR(deployHeight), GVAR(deployDistance)] vectorDiff positionCameraToWorld [0, 0, 0]));
-    _dummyObject setDir (GVAR(deployDirection) + getDir _unit);
+    // prepare safe position with z-position limit
+    private _itemPreviewObjectASL = (eyePos _unit) vectorAdd ((positionCameraToWorld [0, GVAR(deployHeight), GVAR(deployDistance)]) vectorDiff positionCameraToWorld [0, 0, 0]);
 
-    private _dummyObjectASL = getPosASL _dummyObject;
-    private _targetModelPos = [_target, _dummyObjectASL] call EFUNC(interaction,getVehiclePosComplex);
-    private _distance = _dummyObjectASL distance (_target modelToWorldWorld _targetModelPos);
+    private _minDeployHeightASL = (getPosASL _unit select 2) + 0.1;
+    private _maxDeployHeightASL = (getPosASL _vehicle select 2) + 2;
+    _itemPreviewObjectASL set [2, _maxDeployHeightASL min (_minDeployHeightASL max (_itemPreviewObjectASL select 2))];
+
+    _itemPreviewObject setPosASL _itemPreviewObjectASL;
+    _itemPreviewObject setDir (GVAR(deployDirection) + getDir _unit);
+
+    private _vehicleModelPos = [_vehicle, _itemPreviewObjectASL] call EFUNC(interaction,getVehiclePosComplex);
+    private _distance = _itemPreviewObjectASL distance (_vehicle modelToWorldWorld _vehicleModelPos);
 
     // limit distance from object to vehicle
     // this makes deployment user-friendly
-    if !(_distance < MAX_LOAD_DISTANCE) exitWith {
-        private _safeRelativePosition = (_target worldToModel ASLToAGL (getPosASL _dummyObject)) vectorMultiply (MAX_LOAD_DISTANCE / _distance);
-        _dummyObject setPosASL AGLToASL (_target modelToWorld _safeRelativePosition);
+    if !(_distance < MAX_LOAD_DISTANCE) then {
+        private _safeRelativePosition = (_vehicle worldToModel ASLToAGL (getPosASL _itemPreviewObject)) vectorMultiply (MAX_LOAD_DISTANCE / _distance);
+        _itemPreviewObject setPosASL AGLToASL (_vehicle modelToWorld _safeRelativePosition);
     };
-}, 0, [ACE_player, _dummyObject, GVAR(interactionVehicle), _item, _dummyObjectRadius]] call CBA_fnc_addPerFrameHandler;
+
+    // hide object and deny placing
+    // when deploying can corrupt collision bug/killing
+    // or deploying behind another objects
+    private _ctrlTextLMB = (uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420;
+    private _intersection = lineIntersects [getPosASL _itemPreviewObject, getPosASL _vehicle, _itemPreviewObject, _vehicle]
+        || lineIntersects [getPosASL _itemPreviewObject, eyePos _unit, _itemPreviewObject, _unit];
+
+    if (_intersection || {(_itemPreviewObject distance2D _unit) < _itemPreviewObjectRadius}) then {
+        if (GVAR(canDeploy)) then {
+            GVAR(canDeploy) = false;
+            _itemPreviewObject hideObject true;
+            _ctrlTextLMB ctrlSetText localize LSTRING(BlockedAction);
+        };
+    } else {
+        if (!GVAR(canDeploy)) then {
+            GVAR(canDeploy) = true;
+            _itemPreviewObject hideObject false;
+            _ctrlTextLMB ctrlSetText localize LSTRING(unloadObject);
+        };
+    };
+
+    #ifdef DEBUG_MODE_FULL
+    drawLine3D [
+        ASLToAGL _itemPreviewObjectASL,
+        ASLToAGL getPosASL _vehicle,
+        if (GVAR(canDeploy)) then {[1, 1, 1, 1]} else {[1, 0, 0, 1]}
+    ];
+    #endif
+}, 0, [ACE_player, _itemPreviewObject, GVAR(interactionVehicle), _item, _itemPreviewObjectRadius]] call CBA_fnc_addPerFrameHandler;
 
 // add mouse button action and hint
 [localize LSTRING(unloadObject), localize "STR_DISP_CANCEL", localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
