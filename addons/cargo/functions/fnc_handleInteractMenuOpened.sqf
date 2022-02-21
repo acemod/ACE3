@@ -1,0 +1,22 @@
+#include "script_component.hpp"
+/*
+ * Author: Smith
+ * Handle opening of interaction menu.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ace_cargo_fnc_handleInteractMenuOpened
+ *
+ * Public: No
+*/
+
+params ["_unit"];
+
+if (_unit getVariable [QGVAR(isDeploying), false]) then {
+    [_unit] call FUNC(deployCancel);
+};

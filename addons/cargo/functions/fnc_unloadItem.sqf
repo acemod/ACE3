@@ -17,20 +17,29 @@
  * Public: Yes
  */
 
-params ["_item", "_vehicle", ["_unloader", objNull]];
-TRACE_3("params",_item,_vehicle,_unloader);
+params ["_item", "_vehicle", ["_unloader", objNull], ["_place", []]];
+TRACE_4("params",_item,_vehicle,_unloader,_place);
 
-//This covers testing vehicle stability and finding a safe position
-private _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
-TRACE_1("findUnloadPosition",_emptyPosAGL);
+private ["_emptyPosAGL", "_direction"];
 
-if ((count _emptyPosAGL) != 3) exitWith {
-    TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
-    if ((!isNull _unloader) && {_unloader == ACE_player}) then {
-        //display text saying there are no safe places to exit the vehicle
-        [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
+if (2 == count _place) then {
+    // case when player unloads via placement
+    _emptyPosAGL = _place select 0;
+    _direction = _place select 1;
+    TRACE_2("place",_emptyPosAGL,_direction);
+} else {
+    // this covers testing vehicle stability and finding a safe position
+    _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
+    TRACE_1("findUnloadPosition",_emptyPosAGL);
+
+    if ((count _emptyPosAGL) != 3) exitWith {
+        TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
+        if ((!isNull _unloader) && {_unloader == ACE_player}) then {
+            //display text saying there are no safe places to exit the vehicle
+            [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
+        };
+        false
     };
-    false
 };
 
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
@@ -52,10 +61,15 @@ if (_object isEqualType objNull) then {
     detach _object;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
+    [QGVAR(serverUnload), [_object, _emptyPosAGL, _direction]] call CBA_fnc_serverEvent;
 } else {
     _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
     _object setPosASL (AGLtoASL _emptyPosAGL);
+
+    // case when player unloads via placement
+    if (!isNil "_direction") then {
+        _object setDir _direction;
+    };
 
     [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
     [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;

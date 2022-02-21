@@ -33,10 +33,10 @@
 }] call CBA_fnc_addEventHandler;
 
 ["ace_unloadCargo", {
-    params ["_item", "_vehicle", ["_unloader", objNull]];
-    TRACE_3("UnloadCargo EH",_item,_vehicle,_unloader);
+    params ["_item", "_vehicle", ["_unloader", objNull], ["_place", []]];
+    TRACE_4("UnloadCargo EH",_item,_vehicle,_unloader,_place);
 
-    private _unloaded = [_item, _vehicle, _unloader] call FUNC(unloadItem); //returns true if sucessful
+    private _unloaded = [_item, _vehicle, _unloader, _place] call FUNC(unloadItem); //returns true if sucessful
 
     // Show hint as feedback
     private _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
@@ -55,10 +55,14 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(serverUnload), {
-    params ["_item", "_emptyPosAGL"];
+    params ["_item", "_emptyPosAGL", "_direction"];
 
     _item hideObjectGlobal false;
     _item setPosASL (AGLtoASL _emptyPosAGL);
+
+    if (!isNil "_direction") then {
+        _item setDir _direction;
+    };
 
     [_item, "blockDamage", "ACE_cargo", false] call EFUNC(common,statusEffect_set);
 }] call CBA_fnc_addEventHandler;

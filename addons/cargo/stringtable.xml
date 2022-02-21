@@ -33,6 +33,36 @@
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
         </Key>
+        <Key ID="STR_ACE_Cargo_placeObject">
+            <English>Place</English>
+            <German>Platzieren</German>
+            <Spanish>Colocar</Spanish>
+            <Polish>Umieść</Polish>
+            <French>Placer</French>
+            <Czech>Položit</Czech>
+            <Italian>Piazza</Italian>
+            <Hungarian>Elhelyezés</Hungarian>
+            <Portuguese>Colocar</Portuguese>
+            <Russian>Установить</Russian>
+            <Japanese>設置</Japanese>
+            <Korean>설치</Korean>
+            <Chinesesimp>放置</Chinesesimp>
+            <Chinese>放置</Chinese>
+            <Turkish>Yerleştir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Cargo_ScrollAction">
+            <English>Distance | (Ctrl + Scroll) Rotate | (Alt + Scroll) Height</English>
+            <German>Distanz | (Strg + Scrollen) Drehen | (Alt + Scrollen) Höhe</German>
+            <French>Distance | (Ctrl + Scroll) Rotation | (Alt + Scroll) Hauteur</French>
+            <Japanese>距離 | (Ctrl + スクロール) 回転 | (Alt + スクロール) 高さ</Japanese>
+            <Czech>Vzdálenost | (Ctrl + Kolečko myši) Otočit | (Alt + Kolečko myši) Výška</Czech>
+            <Russian>Дистанция | (Ctrl + Скролл) Bращать | (Alt + Скролл) Высота</Russian>
+            <Polish>Dystans | (Ctrl + Kółko myszy) Obrót | (Alt + Kółko myszy) Wysokość</Polish>
+            <Turkish>Mesafe | (Ctrl + Tekerlek) Yönlendir | (Alt + Tekerlek) Yükseklik</Turkish>
+            <Spanish>Distancia | (Ctrl + Scroll) Girar | (Alt + Scroll) Altura</Spanish>
+            <Chinesesimp>距离 |（Ctrl + 鼠标滚轮 旋转 | (Alt + 鼠标滚轮 旋转) 高度</Chinesesimp>
+            <Korean>거리 | (컨트롤 + 스크롤) 돌리기 | (Alt + 스크롤) 고도</Korean>
+        </Key>
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
             <Japanese>名前を次に変更:&lt;br/&gt;%1</Japanese>
