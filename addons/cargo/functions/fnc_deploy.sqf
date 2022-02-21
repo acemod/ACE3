@@ -54,15 +54,18 @@ GVAR(dummyObject) = _dummyObject;
 // prevent collisions with object
 _dummyObject disableCollisionWith ACE_player;
 _dummyObject enableSimulation false;
+_dummyObject setMass 1e-12;
+
+private _dummyObjectRadius = ((boundingBoxReal _dummyObject) select 2) / 2;
 
 // set default values for deployment settings
-GVAR(deployDistance) = 1.5 max (([ACE_player, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) / 2);
+GVAR(deployDistance) = _dummyObjectRadius max (([ACE_player, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) / 2);
 GVAR(deployDirection) = 0;
 GVAR(deployHeight) = 0;
 
 // pfh that runs while the deployment is in progress
 GVAR(deployPFH) = [{
-    (_this select 0) params ["_unit", "_dummyObject", "_target", "_item"];
+    (_this select 0) params ["_unit", "_dummyObject", "_target", "_item", "_dummyObjectRadius"];
 
     if !(
         !isNull _dummyObject
@@ -73,6 +76,8 @@ GVAR(deployPFH) = [{
     ) exitWith {
         [_unit] call FUNC(deployCancel);
     };
+
+    GVAR(deployDistance) = _dummyObjectRadius max GVAR(deployDistance);
 
     _dummyObject setPosASL (eyePos _unit vectorAdd (positionCameraToWorld [0, GVAR(deployHeight), GVAR(deployDistance)] vectorDiff positionCameraToWorld [0, 0, 0]));
     _dummyObject setDir (GVAR(deployDirection) + getDir _unit);
@@ -87,10 +92,10 @@ GVAR(deployPFH) = [{
         private _safeRelativePosition = (_target worldToModel ASLToAGL (getPosASL _dummyObject)) vectorMultiply (MAX_LOAD_DISTANCE / _distance);
         _dummyObject setPosASL AGLToASL (_target modelToWorld _safeRelativePosition);
     };
-}, 0, [ACE_player, _dummyObject, GVAR(interactionVehicle), _item]] call CBA_fnc_addPerFrameHandler;
+}, 0, [ACE_player, _dummyObject, GVAR(interactionVehicle), _item, _dummyObjectRadius]] call CBA_fnc_addPerFrameHandler;
 
 // add mouse button action and hint
-[localize "STR_DISP_CANCEL", localize LSTRING(unloadObject), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
+[localize LSTRING(unloadObject), localize "STR_DISP_CANCEL", localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
 ACE_player setVariable [QGVAR(Deploy), [
     ACE_player, "DefaultAction",

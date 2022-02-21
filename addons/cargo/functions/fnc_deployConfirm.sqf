@@ -5,7 +5,6 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Item <OBJECT>
  *
  * Return Value:
  * None

@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Key <NUMBER>
  *
  * Return Value:
  * None
@@ -15,9 +16,9 @@
  * Public: No
  */
 
-params ["_unit"];
+params ["_unit", "_key"];
 
-if (GVAR(deployPFH) == -1) exitWith {};
+if (_key != 1 || {GVAR(deployPFH) == -1}) exitWith {};
 
 // enable running again
 [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
