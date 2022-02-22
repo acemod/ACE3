@@ -15,20 +15,9 @@
  * Public: No
  */
 
-disableSerialization;
+private _item = call FUNC(getSelectedItem); // This can be an object or a classname string
 
-private _display = uiNamespace getVariable QGVAR(menuDisplay);
-if (isNil "_display") exitWith {};
-
-private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
-if (_loaded isEqualTo []) exitWith {};
-
-private _ctrl = _display displayCtrl 100;
-
-private _selected = (lbCurSel _ctrl) max 0;
-
-if (count _loaded <= _selected) exitWith {};
-private _item = _loaded select _selected; // This can be an object or a classname string
+if (isNil "_item") exitWith {};
 
 if (GVAR(interactionParadrop)) exitWith {
     // If drop time is 0 don't show a progress bar

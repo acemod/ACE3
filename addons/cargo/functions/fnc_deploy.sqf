@@ -15,24 +15,16 @@
  * Public: No
  */
 
-disableSerialization;
-
-private _display = uiNamespace getVariable QGVAR(menuDisplay);
-if (isNil "_display") exitWith {};
-
-private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
-if (_loaded isEqualTo []) exitWith {};
-
+// Deny creating preview item because it will
+// destroy player vehicle instantly by collision.
 if (GVAR(interactionParadrop)) exitWith {};
 
-private _ctrl = _display displayCtrl 100;
+// This can be an object or a classname string.
+private _item = call FUNC(getSelectedItem);
 
-private _selected = (lbCurSel _ctrl) max 0;
+if (isNil "_item") exitWith {};
 
-if (count _loaded <= _selected) exitWith {};
-private _item = _loaded select _selected;
-
-// close opened cargo menu
+// Close opened cargo menu.
 closeDialog 1;
 
 private _classname = _item;
@@ -43,29 +35,29 @@ if (_classname isEqualType ObjNull) then {
     _classname = typeOf _classname;
 };
 
-// prevent the placing unit from running
+// Prevent the placing unit from running.
 [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
-// create the objects
+// Create the objects.
 private _itemPreviewObject = createSimpleObject [_classname, [0, 0, 0], true];
 GVAR(itemPreviewObject) = _itemPreviewObject;
 
-// prevent collisions with object
+// Prevent collisions with object.
 _itemPreviewObject disableCollisionWith ACE_player;
 _itemPreviewObject enableSimulation false;
 _itemPreviewObject setMass 1e-12;
 
-// detect radius of zone where collision can damage the player
+// Detect radius of zone where collision can damage the player.
 private _itemPreviewObjectRadius = 0.2 + ((boundingBoxReal _itemPreviewObject) select 2) / 2;
 
-// set default values for deployment settings
+// Set default values for deployment settings.
 GVAR(deployDistance) = _itemPreviewObjectRadius max (([ACE_player, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) / 2);
 GVAR(deployDirection) = 0;
 GVAR(deployHeight) = 0;
 GVAR(canDeploy) = true;
 
-// pfh that runs while the deployment is in progress
+// Pfh that runs while the deployment is in progress.
 GVAR(deployPFH) = [{
     (_this select 0) params ["_unit", "_itemPreviewObject", "_vehicle", "_item", "_itemPreviewObjectRadius"];
 
@@ -81,7 +73,7 @@ GVAR(deployPFH) = [{
 
     GVAR(deployDistance) = _itemPreviewObjectRadius max GVAR(deployDistance);
 
-    // prepare safe position with z-position limit
+    // Prepare safe position with z-position limit.
     private _itemPreviewObjectASL = (eyePos _unit) vectorAdd ((positionCameraToWorld [0, GVAR(deployHeight), GVAR(deployDistance)]) vectorDiff positionCameraToWorld [0, 0, 0]);
 
     private _minDeployHeightASL = (getPosASL _unit select 2) + 0.1;
@@ -94,16 +86,16 @@ GVAR(deployPFH) = [{
     private _vehicleModelPos = [_vehicle, _itemPreviewObjectASL] call EFUNC(interaction,getVehiclePosComplex);
     private _distance = _itemPreviewObjectASL distance (_vehicle modelToWorldWorld _vehicleModelPos);
 
-    // limit distance from object to vehicle
-    // this makes deployment user-friendly
+    // Limit distance from object to vehicle.
+    // This makes deployment user-friendly.
     if !(_distance < MAX_LOAD_DISTANCE) then {
         private _safeRelativePosition = (_vehicle worldToModel ASLToAGL (getPosASL _itemPreviewObject)) vectorMultiply (MAX_LOAD_DISTANCE / _distance);
         _itemPreviewObject setPosASL AGLToASL (_vehicle modelToWorld _safeRelativePosition);
     };
 
-    // hide object and deny placing
+    // Hide object and deny placing
     // when deploying can corrupt collision bug/killing
-    // or deploying behind another objects
+    // or deploying behind another objects.
     private _ctrlTextLMB = (uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420;
     private _intersection = lineIntersects [getPosASL _itemPreviewObject, getPosASL _vehicle, _itemPreviewObject, _vehicle]
         || lineIntersects [getPosASL _itemPreviewObject, eyePos _unit, _itemPreviewObject, _unit];
@@ -131,7 +123,7 @@ GVAR(deployPFH) = [{
     #endif
 }, 0, [ACE_player, _itemPreviewObject, GVAR(interactionVehicle), _item, _itemPreviewObjectRadius]] call CBA_fnc_addPerFrameHandler;
 
-// add mouse button action and hint
+// Add mouse button action and hint.
 [localize LSTRING(unloadObject), localize "STR_DISP_CANCEL", localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
 ACE_player setVariable [QGVAR(Deploy), [

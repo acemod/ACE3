@@ -7,6 +7,7 @@ PREP(deployCancel);
 PREP(deployConfirm);
 PREP(getCargoSpaceLeft);
 PREP(getNameItem);
+PREP(getSelectedItem);
 PREP(getSizeItem);
 PREP(handleDeleted);
 PREP(handleDestroyed);
