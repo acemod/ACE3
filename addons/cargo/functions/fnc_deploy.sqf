@@ -48,9 +48,7 @@ if (_classname isEqualType ObjNull) then {
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // create the objects
-private _itemPreviewObject = _classname createVehicleLocal [0, 0, 1000];
-
-// private _itemPreviewObject = createSimpleObject [_classname, [0, 0, 0], true];
+private _itemPreviewObject = createSimpleObject [_classname, [0, 0, 0], true];
 GVAR(itemPreviewObject) = _itemPreviewObject;
 
 // prevent collisions with object
