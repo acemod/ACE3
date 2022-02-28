@@ -24,7 +24,7 @@
             <Chinese>每發所需時間</Chinese>
             <Chinesesimp>每发所需时间</Chinesesimp>
             <Japanese>弾頭毎の所有時間</Japanese>
-            <Korean>구경 당 시간</Korean>
+            <Korean>탄당 시간</Korean>
             <Polish>Czas na nabój</Polish>
             <Russian>Время на патрон</Russian>
             <Portuguese>Tempo por projétil</Portuguese>
@@ -128,7 +128,7 @@
             <Portuguese>Reorganização Terminada</Portuguese>
             <Japanese>詰め替えが完了しました</Japanese>
             <Korean>탄창 채우기 끝남</Korean>
-            <Chinesesimp>重整完成</Chinesesimp>
+            <Chinesesimp>整理完成</Chinesesimp>
             <Chinese>重整完成</Chinese>
             <Turkish>Yeniden Doldurma Bitti</Turkish>
         </Key>
@@ -144,7 +144,7 @@
             <Italian>Riempimento Interrotto</Italian>
             <Portuguese>Reorganização Interrompida</Portuguese>
             <Japanese>詰め替えを中断しました</Japanese>
-            <Korean>탄창 채우기 방해받음</Korean>
+            <Korean>탄창을 채우는 중 방해받음</Korean>
             <Chinesesimp>弹匣整理被打断</Chinesesimp>
             <Chinese>重整被中斷</Chinese>
             <Turkish>Yeniden Doldurma Durduruldu</Turkish>
@@ -173,6 +173,8 @@
             <Russian>Перепаковать загруженные магазины</Russian>
             <German>Geladene Magazine umpacken</German>
             <Polish>Przepakuj załadowane magazynki</Polish>
+            <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
+            <Korean>장전된 탄창에 총알 채우는 중</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
             <English>Repacking magazines, weapon unloaded</English>
@@ -181,6 +183,8 @@
             <Russian>Перепаковка магазинов, оружие разряжено</Russian>
             <German>Magazin umgepackt, Waffe entladen</German>
             <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
+            <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
+            <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
         </Key>
     </Package>
 </Project>

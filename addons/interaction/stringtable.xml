@@ -6,7 +6,7 @@
             <German>Interaktion</German>
             <Italian>Interazione</Italian>
             <Chinese>互動</Chinese>
-            <Chinesesimp>互动</Chinesesimp>
+            <Chinesesimp>互动菜单</Chinesesimp>
             <Japanese>インタラクション</Japanese>
             <Korean>상호작용</Korean>
             <Polish>Interakcja</Polish>
@@ -166,7 +166,7 @@
             <Italian>Menù interazione</Italian>
             <Japanese>インタラクション メニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
-            <Chinesesimp>互动选单</Chinesesimp>
+            <Chinesesimp>互动菜单</Chinesesimp>
             <Chinese>互動選單</Chinese>
             <Turkish>Etkileim Menüsü</Turkish>
         </Key>
@@ -183,7 +183,7 @@
             <Italian>Menù interazione (individuale)</Italian>
             <Japanese>インタラクション メニュー (セルフ)</Japanese>
             <Korean>상호작용 메뉴(자신)</Korean>
-            <Chinesesimp>互动选单 (自我)</Chinesesimp>
+            <Chinesesimp>互动菜单（自我）</Chinesesimp>
             <Chinese>互動選單 (自我)</Chinese>
             <Turkish>Etkileşim Menüsü(Şahsi)</Turkish>
         </Key>
@@ -330,6 +330,8 @@
             <Russian>Переименовать группу</Russian>
             <German>Gruppe umbenennen</German>
             <Polish>Zmień nazwę grupy</Polish>
+            <Chinesesimp>小队重命名</Chinesesimp>
+            <Korean>그룹 명칭 다시짓기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
@@ -338,6 +340,8 @@
             <Russian>Данное имя группы уже используется.</Russian>
             <German>Dieser Gruppenname ist bereits in Verwendung.</German>
             <Polish>Ta nazwa grupy jest już w użyciu.</Polish>
+            <Chinesesimp>该小队名称已被使用</Chinesesimp>
+            <Korean>그 명칭은 이미 사용 중 입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
@@ -346,6 +350,8 @@
             <Russian>НОВОЕ ИМЯ ГРУППЫ</Russian>
             <German>NEUER GRUPPENNAME:</German>
             <Polish>NOWA NAZWA GRUPY:</Polish>
+            <Chinesesimp>新的小队名：</Chinesesimp>
+            <Korean>새 그룹 명칭:</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -376,7 +382,7 @@
             <Portuguese>Parar de dançar</Portuguese>
             <Italian>Smetti di ballare</Italian>
             <Japanese>踊るのを止める</Japanese>
-            <Korean>춤 멈추기</Korean>
+            <Korean>춤 그만 추기</Korean>
             <Chinesesimp>停止跳舞</Chinesesimp>
             <Chinese>停止跳舞</Chinese>
             <Turkish>Dans Etmeyi Durdur</Turkish>
@@ -513,7 +519,7 @@
             <Italian>Via di qui!</Italian>
             <Japanese>失せろ!</Japanese>
             <Korean>저리 가!</Korean>
-            <Chinesesimp>走开!</Chinesesimp>
+            <Chinesesimp>走开！</Chinesesimp>
             <Chinese>走開!</Chinese>
             <Turkish>Git!</Turkish>
         </Key>
@@ -530,7 +536,7 @@
             <Italian>A terra!</Italian>
             <Japanese>伏せろ!</Japanese>
             <Korean>엎드려!</Korean>
-            <Chinesesimp>趴下!</Chinesesimp>
+            <Chinesesimp>趴下！</Chinesesimp>
             <Chinese>趴下!</Chinese>
             <Turkish>Yat!</Turkish>
         </Key>
@@ -930,6 +936,7 @@
             <Russian>Перевернуть</Russian>
             <Japanese>ひっくり返す</Japanese>
             <Chinese>拋</Chinese>
+            <Chinesesimp>翻动</Chinesesimp>
             <Italian>Gira</Italian>
             <Polish>Przewróć</Polish>
             <Portuguese>Virar</Portuguese>
@@ -937,6 +944,7 @@
             <Czech>Otočit</Czech>
             <Spanish>Voltear</Spanish>
             <Turkish>Döndür</Turkish>
+            <Korean>뒤집기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -1036,7 +1044,7 @@
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
             <Japanese>プレイヤーがチーム管理メニューを使えるかどうかを設定します。標準: 有効化</Japanese>
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
-            <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
+            <Chinesesimp>允许玩家使用小队管理菜单？ 预设：是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
             <Turkish>Oyuncuların Takım Yönetimi Menüsünü kullanmalarına izin verilmeli mi? Varsayılan: Evet</Turkish>
         </Key>
@@ -1061,7 +1069,7 @@
             <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしても AI からの攻撃を防ぎます。</Japanese>
             <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
-            <Chinesesimp>玩家是否会收到负面评价? 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
+            <Chinesesimp>玩家是否会收到负面评价？ 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军 AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
             <Korean>플레이어의 부정행위 가중치를 계산합니까? 활성화된 플레이어는 높은 레이팅을 가질때, 아군의 장비나 병력을 사격해도 아군 AI의 사격을 받지 않습니다.</Korean>
             <Polish>Czy powinni gracze otrzymywać negatywną ocenę? Kiedy aktywowani gracze otrzymuję wyłącznie pozytywną ocenę, która zapobiega ognia przyjaznego SI podczas niszczenia przyjaznego wyposażenia lub zabijaniu członków drużyny.</Polish>
             <Russian>Должны ли игроки получать отрицательный рейтинг? Когда включено, игроки получают только положительный рейтинг, что предотвращает дружественный огонь от ИИ при уничтожении дружественного оборудования или убийстве членов команды.</Russian>
@@ -1202,7 +1210,7 @@
             <Russian>Вытащить тело</Russian>
             <Japanese>身体を引き出す</Japanese>
             <Italian>Estrai il corpo</Italian>
-            <Korean>시체 끌기</Korean>
+            <Korean>인원 꺼내기</Korean>
             <Chinese>拿出屍體</Chinese>
             <Chinesesimp>拿出尸体</Chinesesimp>
             <Polish>Wyciągnij ciało</Polish>
@@ -1226,6 +1234,8 @@
             <Chinese>踹開擋風玻璃</Chinese>
             <Spanish>Romper parabrisas</Spanish>
             <Turkish>Ön camı parçala</Turkish>
+            <Chinesesimp>砸碎挡风玻璃</Chinesesimp>
+            <Korean>전면유리 부수기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
             <English>Attach %1</English>
@@ -1235,6 +1245,8 @@
             <French>Fixer %1</French>
             <Polish>Przyczep %1</Polish>
             <German>Befestige %1</German>
+            <Chinesesimp>附加 %1</Chinesesimp>
+            <Korean>%1 붙이기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
             <English>Detach %1</English>
@@ -1244,6 +1256,8 @@
             <French>Retirer %1</French>
             <Polish>Odczep %1</Polish>
             <German>Löse %1</German>
+            <Chinesesimp>拆卸 %1</Chinesesimp>
+            <Korean>%1 떼내기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1253,6 +1267,8 @@
             <French>Cette option permet de fixer/retirer des accessoires d'arme à partir du menu d'interaction personnel.</French>
             <Polish>Włącza akcje przyczepienia/odczepienia dodatków dla obecnej broni</Polish>
             <German>Aktiviert das Befestigen/Lösen von Waffenausätzen an der aktuellen Waffe.</German>
+            <Chinesesimp>启用当前武器的附加/拆卸武器配件的动作。</Chinesesimp>
+            <Korean>현재 사용하고 있는 무기에서 부착물을 붙이거나 떼냅니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
             <English>Allow group rename</English>
@@ -1261,6 +1277,8 @@
             <Russian>Разрешить переименование группы</Russian>
             <German>Erlaube das Umbenennen der Gruppe</German>
             <Polish>Zezwól na zmianę nazwy grupy</Polish>
+            <Chinesesimp>允许小队重命名</Chinesesimp>
+            <Korean>그룹 이름 재설정 허가</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
@@ -1269,6 +1287,8 @@
             <Russian>Разрешить лидеру группы её переименование, если имя не занято.</Russian>
             <German>Erlaube Gruppenführer das Umbenennen Ihrer Gruppe, wenn der Name nicht bereits vergeben ist.</German>
             <Polish>Pozwala liderowi grupy na zmianę jej nazwy, jeżeli ta nazwa nie jest już w użyciu.</Polish>
+            <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
+            <Korean>그룹 리더가 그룹 이름을 재설정 하는것을 허가합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1277,6 +1297,8 @@
             <Japanese>警告: 一部のオブジェクトが干渉する可能性があります。</Japanese>
             <German>Achtung: einige Objekte könnten mit anderen Kollidieren.</German>
             <Polish>Uwaga: niektóre obiekty mogą kolidować z innymi.</Polish>
+            <Chinesesimp>警告：会导致一些物体与其他物体发生碰撞。</Chinesesimp>
+            <Korean>주의: 물체 끼리 충돌하는 현상이 있을 수 있음.</Korean>
         </Key>
     </Package>
 </Project>

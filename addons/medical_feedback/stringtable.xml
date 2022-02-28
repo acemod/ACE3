@@ -9,11 +9,13 @@
             <French>Réaction aux blessures</French>
             <Portuguese>Reação a Lesões</Portuguese>
             <Chinese>視覺回饋</Chinese>
+            <Chinesesimp>受伤反应</Chinesesimp>
             <Italian>Commenti</Italian>
             <Czech>Zpětná vazba</Czech>
             <Polish>Informacje Zwrotne</Polish>
             <Spanish>Reacción</Spanish>
             <Turkish>Geri Bildirim</Turkish>
+            <Korean>피드백</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -29,6 +31,7 @@
             <Japanese>痛み効果種類</Japanese>
             <Korean>고통 효과 종류</Korean>
             <Chinese>疼痛效果類型</Chinese>
+            <Chinesesimp>疼痛效果类型</Chinesesimp>
             <Turkish>Ağrı Etkisi Türü</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
@@ -38,12 +41,14 @@
             <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
             <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
             <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
+            <Chinesesimp>选择反馈的疼痛效果类型。</Chinesesimp>
             <Italian>Seleziona il tipo di effetto del dolore usato.</Italian>
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
             <Polish>Wybiera rodzaj efektu bólu.</Polish>
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
             <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
             <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
+            <Korean>고통 시 어떤 효과로 나타낼지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -53,11 +58,13 @@
             <French>Flash blancs</French>
             <Portuguese>Flashes Brancos</Portuguese>
             <Chinese>白光閃爍</Chinese>
+            <Chinesesimp>白光闪烁</Chinesesimp>
             <Italian>Bianco lampeggiante</Italian>
             <Czech>Blikání bílé barvy</Czech>
             <Polish>Miganie na biało</Polish>
             <Spanish>Destello blanco</Spanish>
             <Turkish>Beyaz Yanıp Sönüyor</Turkish>
+            <Korean>반짝이는 하얀색</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -67,11 +74,13 @@
             <French>Pulsations floues</French>
             <Portuguese>Borrão Pulsante</Portuguese>
             <Chinese>脈動模糊</Chinese>
+            <Chinesesimp>脉冲式模糊</Chinesesimp>
             <Italian>Sfocatura pulsante</Italian>
             <Czech>Pulzující rozmazání</Czech>
             <Polish>Pulsujące rozmycie</Polish>
             <Spanish>Enborronamiento pulsante</Spanish>
             <Turkish>Titreşimli Bulanıklık</Turkish>
+            <Korean>두근대는 흐려짐</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
             <English>Chromatic Aberration</English>
@@ -94,6 +103,7 @@
             <English>Only high pain effect</English>
             <Japanese>強い痛みの時のみ</Japanese>
             <Chinese>只有在強烈疼痛時使用</Chinese>
+            <Chinesesimp>仅在剧烈疼痛下启用</Chinesesimp>
             <French>Juste un fort effet douloureux</French>
             <Italian>Solo elevato effetto di dolore</Italian>
             <Czech>Pouze efekt vysoké bolesti</Czech>
@@ -103,6 +113,7 @@
             <Turkish>Sadece yüksek ağrı etkisi</Turkish>
             <German>Nur bei starken Schmerzen</German>
             <Russian>Эффект только сильной боли</Russian>
+            <Korean>강한 고통 때만 보여짐</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
             <English>Low Blood Volume Effect Type</English>
@@ -114,6 +125,8 @@
             <Turkish>Düşük Kan Efekt Türü</Turkish>
             <Spanish>Tipo de efecto por volumen bajo de sangre</Spanish>
             <German>Effektart für "Niedriges Blutvolumen"</German>
+            <Chinesesimp>低血容量影响类型</Chinesesimp>
+            <Korean>혈액량 부족 시 효과 종류</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
             <English>Selects the used low blood volume effect type.</English>
@@ -125,6 +138,8 @@
             <Turkish>Kullanılan düşük kan hacmi efekt türünü seçer.</Turkish>
             <Spanish>Selecciona el tipo de efecto a causa de un volumen bajo de sangre.</Spanish>
             <German>Wählt die verwendete Effektart für niedriges Blutvolumen.</German>
+            <Chinesesimp>选择低血容量下的效果类型。</Chinesesimp>
+            <Korean>혈액량이 부족할 때 어떤 효과로 나타낼지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>
@@ -136,6 +151,8 @@
             <Turkish>Renk Soldurma</Turkish>
             <Spanish>Atenuación del color</Spanish>
             <German>Farbverblassen</German>
+            <Chinesesimp>褪色</Chinesesimp>
+            <Korean>색 물빠짐</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
@@ -147,6 +164,8 @@
             <Turkish>Simge</Turkish>
             <Spanish>Icono</Spanish>
             <German>Symbol</German>
+            <Chinesesimp>图标</Chinesesimp>
+            <Korean>아이콘</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
             <English>Icon + Color Fading</English>
@@ -158,6 +177,8 @@
             <Turkish>Simge + Renk Soldurma</Turkish>
             <Spanish>Icono + Atenuación del color</Spanish>
             <German>Symbol + Farbverblassen</German>
+            <Chinesesimp>图标+褪色</Chinesesimp>
+            <Korean>아이콘 및 색 물빠짐</Korean>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
@@ -173,7 +194,7 @@
                 <Italian>Abilita Grida</Italian>
                 <Japanese>叫びを有効化</Japanese>
                 <Korean>비명 활성화</Korean>
-                <Chinesesimp>启用尖叫</Chinesesimp>
+                <Chinesesimp>启用惨叫</Chinesesimp>
                 <Chinese>啟用尖叫</Chinese>
                 <Turkish>Çığlıkları Etkinleştir</Turkish>
             </Key>
@@ -190,7 +211,7 @@
                 <Italian>Abilita Grida da parte delle unità ferite</Italian>
                 <Japanese>負傷したユニットを叫ぶようにします。</Japanese>
                 <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
-                <Chinesesimp>启用伤者的尖叫声</Chinesesimp>
+                <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
                 <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
             </Key>
@@ -201,6 +222,8 @@
                 <French>Indicateurs de fractures/garrots/attelles</French>
                 <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
                 <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
+                <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
+                <Korean>골절/지혈대/부목 표시 활서오하</Korean>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
@@ -209,6 +232,8 @@
                 <French>Affiche des icônes au niveau de l'indicateur de posture, indiquant si le personnage souffre de fractures ou si des garrots ou des attelles sont appliqués.</French>
                 <German>Aktiviert Indikatoren für Frakturen mit angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
                 <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
+                <Chinesesimp>在姿态指示器上启用骨折、应用止血带和夹板指示器。</Chinesesimp>
+                <Korean>자세 표시기 옆에 골절, 지혈대, 부목의 여부를 표시합니다.</Korean>
             </Key>
         </Container>
     </Package>

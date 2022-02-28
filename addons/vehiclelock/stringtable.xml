@@ -130,7 +130,7 @@
             <Portuguese>Um set de chave mixas que pode abrir a maioria dos veículos.</Portuguese>
             <Japanese>ピッキング ツールでは多くの車両をこじ開けられます。</Japanese>
             <Korean>거의 모든 차량을 열 수 있게 해주는 해정도구 모음입니다.</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份载具)</Chinesesimp>
+            <Chinesesimp>一组解锁钥匙（可解锁大部份载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_West_Description">
@@ -146,7 +146,7 @@
             <Portuguese>Uma chave que abre a maioria dos veículos ocidentais</Portuguese>
             <Japanese>このキーは多くの同盟軍車両を開けられます。</Japanese>
             <Korean>거의 모든 서방진영 차량을 여는 열쇠입니다.</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份蓝方载具)</Chinesesimp>
+            <Chinesesimp>一组解锁钥匙（可解锁大部份蓝方载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份藍方載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_East_Description">
@@ -162,7 +162,7 @@
             <Portuguese>Uma chave que abre a maioria dos veículos orientais</Portuguese>
             <Japanese>このキーは多くのOPFOR軍車両を開けられます。</Japanese>
             <Korean>거의 모든 동방진영 차량을 여는 열쇠입니다.</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份红方载具)</Chinesesimp>
+            <Chinesesimp>一组解锁钥匙（可解锁大部份红方载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份紅方載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Indp_Description">
@@ -178,7 +178,7 @@
             <Portuguese>Uma chave que abre a maioria dos veículos independentes</Portuguese>
             <Japanese>このキーは多くの独立軍車両を開けられます。</Japanese>
             <Korean>거의 모든 중립진영 차량을 여는 열쇠입니다.</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份独立方载具)</Chinesesimp>
+            <Chinesesimp>一组解锁钥匙（可解锁大部份独立方载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份獨立方載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Civ_Description">
@@ -194,7 +194,7 @@
             <Portuguese>Uma chave que abre a maioria dos veículos civis.</Portuguese>
             <Japanese>このキーは多くの市民車両を開けられます。</Japanese>
             <Korean>거의 모든 민간인 차량을 여는 열쇠입니다</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份平民载具)</Chinesesimp>
+            <Chinesesimp>一组解锁钥匙（可解锁大部份平民载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份平民載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_DisplayName">
@@ -274,7 +274,7 @@
             <Italian>Imposta lo stato di blocco per tutti i veicoli (rimuove stati di blocco ambigui)</Italian>
             <Japanese>全車両へ鍵の状態を設定します。(あいまいな鍵の状態を削除)</Japanese>
             <Korean>모든 차량의 잠금 상태를 정합니다. (애매한 잠금 상태는 모두 없앱니다.)</Korean>
-            <Chinesesimp>设定所有载具的初始上锁状态 (移除不明确的锁定状态)</Chinesesimp>
+            <Chinesesimp>设定所有载具的初始上锁状态（移除不明确的锁定状态）</Chinesesimp>
             <Chinese>設定所有載具的初始上鎖狀態 (移除不明確的鎖定狀態)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_RemoveAmbiguousLockState">
@@ -285,6 +285,8 @@
             <Polish>Usuń niejednoznaczny stan blokady</Polish>
             <Japanese>あいまいな鍵の状態を削除</Japanese>
             <German>Unklaren Sperrzustand entfernen</German>
+            <Chinesesimp>移除不明确的上锁状态</Chinesesimp>
+            <Korean>어정쩡한 잠금상태 제거</Korean>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
@@ -364,7 +366,7 @@
             <Italian>Tempo Default richiesto per forzare serrature (in secondi). Default: 10</Italian>
             <Japanese>ピッキング ツールを使った作業時間の標準設定。(秒) 標準: 10</Japanese>
             <Korean>해정을 위해 들이는 기본시간입니다(초 단위). 기본설정: 10</Korean>
-            <Chinesesimp>开锁时间(秒)。预设:10</Chinesesimp>
+            <Chinesesimp>开锁时间（秒）。预设：10</Chinesesimp>
             <Chinese>開鎖時間(秒)。預設:10</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_Description">

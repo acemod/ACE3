@@ -268,6 +268,8 @@
             <Russian>Повысьте подготовку инженеров при ремонте транспортных средств или объектов. Нетренированный становится инженером, инженер становится продвинутым инженером.</Russian>
             <German>Steigert die Ausbildung von Pionieren, wenn Sie sich in Reparaturfahrzeugen oder -einrichtungen befinden. Aus Ungelerntem wird Pionier, aus Pionier wird ein fortgeschrittener Pionier.</German>
             <Polish>Zwiększ wyszkolenie inżynierów w pojazdach i budynkach naprawczych. Niewyszkoleni zostają inżynierami, inżynierowie zostają zaawansowanymi inżynierami.</Polish>
+            <Chinesesimp>在修理车辆或设施时，提升工程师训练。未受过训练的变成工程师，工程师晋升为高级工程师。</Chinesesimp>
+            <Korean>수리 차량이나 시설 주위에 있으면 수리 수준을 높입니다. 정비병이 아닌 사람은 정비병이 되고, 정비병은 정비사가 됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
@@ -297,7 +299,7 @@
             <French>Définit les lieux permettant de réparer intégralement un véhicule.</French>
             <Japanese>どのような場所で車両の完全な修理を出来るようにしますか?</Japanese>
             <Korean>어느 구역에서 차량을 완전히 수리할 수 있게 합니까?</Korean>
-            <Chinesesimp>什么位置可以完整维修载具?</Chinesesimp>
+            <Chinesesimp>什么位置可以完整维修载具？</Chinesesimp>
             <Chinese>什麼位置可以完整維修載具?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_name">
@@ -328,7 +330,7 @@
             <French>Définit qui peut effectuer une réparation complète sur un véhicule.</French>
             <Japanese>誰が車両の完全な修理を出来るようにしますか?</Japanese>
             <Korean>누가 완전 수리를 할 수 있습니까?</Korean>
-            <Chinesesimp>谁可以完整维修载具?</Chinesesimp>
+            <Chinesesimp>谁可以完整维修载具？</Chinesesimp>
             <Chinese>誰可以完整維修載具?</Chinese>
             <Turkish>Kimler araçta tam onarım yapabilir?</Turkish>
         </Key>
@@ -360,7 +362,7 @@
             <French>Ajoute des pièces de rechange aux véhicules (nécessite le système de cargaison).</French>
             <Japanese>車両へ予備部品を追加しますか（カーゴ コンポーネントが必要)?</Japanese>
             <Korean>차량에 예비 부품을 더합니까?(짐칸 요소 필요)</Korean>
-            <Chinesesimp>添加载具备件 (需相关货物组件)?</Chinesesimp>
+            <Chinesesimp>添加载具备件（需相关货物组件）？</Chinesesimp>
             <Chinese>添加載具備件 (需相關貨物組件)?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
@@ -778,7 +780,7 @@
             <Russian>Пушку</Russian>
             <Japanese>砲</Japanese>
             <Korean>포</Korean>
-            <Chinesesimp>枪</Chinesesimp>
+            <Chinesesimp>炮</Chinesesimp>
             <Chinese>槍</Chinese>
             <Turkish>Silah</Turkish>
         </Key>
@@ -1071,7 +1073,7 @@
             <Russian>Стекло (справа)</Russian>
             <Japanese>ガラス (右)</Japanese>
             <Korean>유리 (오른쪽)</Korean>
-            <Chinesesimp>玻璃 (右)</Chinesesimp>
+            <Chinesesimp>玻璃（右）</Chinesesimp>
             <Chinese>玻璃 (右)</Chinese>
             <Turkish>Cam(Sağ)</Turkish>
         </Key>
@@ -1088,7 +1090,7 @@
             <Russian>Стекло (слава)</Russian>
             <Japanese>ガラス (左)</Japanese>
             <Korean>유리 (왼쪽)</Korean>
-            <Chinesesimp>玻璃 (左)</Chinesesimp>
+            <Chinesesimp>玻璃（左）</Chinesesimp>
             <Chinese>玻璃 (左)</Chinese>
             <Turkish>Cam (sol)</Turkish>
         </Key>
@@ -1191,7 +1193,7 @@
             <German>Instandsetzer</German>
             <Italian>Solo Geniere avanzato</Italian>
             <Japanese>上級工兵のみ</Japanese>
-            <Chinesesimp>只有维修专精兵</Chinesesimp>
+            <Chinesesimp>只有维修专业兵</Chinesesimp>
             <Chinese>只有維修專精兵</Chinese>
             <Polish>Tylko zaawansowani mechanicy</Polish>
             <Korean>고급 정비공만</Korean>
@@ -1229,7 +1231,7 @@
             <French>Définit qui peut démonter et remplacer des roues.</French>
             <Japanese>誰がタイヤの除去と交換を出来るようにしますか?</Japanese>
             <Korean>누가 바퀴를 제거 및 교체할 수 있습니까?</Korean>
-            <Chinesesimp>谁可维修轮胎?</Chinesesimp>
+            <Chinesesimp>谁可维修轮胎？</Chinesesimp>
             <Chinese>誰可維修輪胎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
@@ -1259,7 +1261,7 @@
             <French>Définit qui peut effectuer des réparations.</French>
             <Japanese>誰が修理を出来るようににしますか?</Japanese>
             <Korean>누가 수리를 할 수 있습니까?</Korean>
-            <Chinesesimp>谁可以进行维修操作?</Chinesesimp>
+            <Chinesesimp>谁可以进行维修操作？</Chinesesimp>
             <Chinese>誰可以進行維修操作?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
@@ -1289,7 +1291,7 @@
             <French>Définit la quantité maximale de dégâts pouvant être réparés avec une trousse à outils.</French>
             <Japanese>ツールキットで修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
             <Korean>어느정도의 피해까지 툴킷으로 수리가 가능합니까?</Korean>
-            <Chinesesimp>工具包可以修复的最大损坏值?</Chinesesimp>
+            <Chinesesimp>工具包可以修复的最大损坏值？</Chinesesimp>
             <Chinese>工具包可以修復的最大損壞值?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
@@ -1304,7 +1306,7 @@
             <French>Seuil de réparabilité (ingénieurs)</French>
             <Japanese>修理のしきい値 (工兵)</Japanese>
             <Korean>정비 한계치 (정비공)</Korean>
-            <Chinesesimp>维修门槛 (工兵)</Chinesesimp>
+            <Chinesesimp>维修门槛（工兵）</Chinesesimp>
             <Chinese>維修門檻 (工兵)</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
@@ -1319,7 +1321,7 @@
             <French>Définit la quantité maximale de dégâts qu'un ingénieur peut réparer.</French>
             <Japanese>工兵が修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
             <Korean>정비공은 어느정도의 피해까지 수리할 수 있습니까?</Korean>
-            <Chinesesimp>工兵可以修复的最大损坏值?</Chinesesimp>
+            <Chinesesimp>工兵可以修复的最大损坏值？</Chinesesimp>
             <Chinese>工兵可以修復的最大損壞值?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_name">
@@ -1349,7 +1351,7 @@
             <French>Définit si la trousse à outils doit être retirée après usage.</French>
             <Japanese>ツールキットを使うと削除しますか?</Japanese>
             <Korean>툴킷을 사용하면 제거를 합니까?</Korean>
-            <Chinesesimp>要在使用后删除工具包吗?</Chinesesimp>
+            <Chinesesimp>要在使用后删除工具包吗？</Chinesesimp>
             <Chinese>要在使用後刪除工具包嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_useAnywhere">
@@ -1525,7 +1527,7 @@
             <German>Instandsetzer</German>
             <Italian>Adv. Geniere</Italian>
             <Japanese>上級工兵</Japanese>
-            <Chinesesimp>专精</Chinesesimp>
+            <Chinesesimp>高级工兵</Chinesesimp>
             <Chinese>專精</Chinese>
             <Polish>Zaaw. mechanik</Polish>
             <Korean>고급 정비공</Korean>
@@ -1623,7 +1625,7 @@
             <French>Définit s'il s'agit d'un véhicule de réparation.</French>
             <Japanese>車両を修理車両と指定しますか?</Japanese>
             <Korean>이 차량을 정비 차량으로 분류합니까?</Korean>
-            <Chinesesimp>此载具是维修载具吗?</Chinesesimp>
+            <Chinesesimp>此载具是维修载具吗？</Chinesesimp>
             <Chinese>此載具是維修載具嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_Description">
@@ -1713,7 +1715,7 @@
             <French>Définit l'objet comme étant un atelier de réparation.</French>
             <Japanese>オブジェクトを修理施設として指定しますか?</Japanese>
             <Korean>이 시설을 정비 시설로 분류합니까?</Korean>
-            <Chinesesimp>此设施是维修设施吗?</Chinesesimp>
+            <Chinesesimp>此设施是维修设施吗？</Chinesesimp>
             <Chinese>此設施是維修設施嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
@@ -1728,7 +1730,7 @@
             <French>Assigne un ou plusieurs objets en tant qu'atelier de réparation.</French>
             <Japanese>ひとつ、または複数オブジェクトに予備部品を追加</Japanese>
             <Korean>하나 혹은 여러 시설을 정비 시설로 등록합니다</Korean>
-            <Chinesesimp>指定一个或多个对象作为维修设施</Chinesesimp>
+            <Chinesesimp>指定一个或多个物体作为维修设施</Chinesesimp>
             <Chinese>指定一個或多個對象作為維修設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_DisplayName">
@@ -1758,7 +1760,7 @@
             <French>Ajoute des pièces de rechange à un ou plusieurs objets.</French>
             <Japanese>一覧に追加されたオブジェクトへ予備部品を与えます。コンマで複数を指定できます。</Japanese>
             <Korean>하나 혹은 여러 물체가 예비 부품을 더합니다</Korean>
-            <Chinesesimp>添加备件到一个或多个对象上</Chinesesimp>
+            <Chinesesimp>添加备件到一个或多个物体上</Chinesesimp>
             <Chinese>添加備件到一個或多個對象上</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
@@ -1878,7 +1880,7 @@
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
             <French>Outils nécessaires pour le démontage ou le remplacement des roues.</French>
             <Japanese>タイヤの除去と交換にアイテムを必要としますか?</Japanese>
-            <Korean>바퀴를 제거/교체하는데 필요한 물건</Korean>
+            <Korean>바퀴를 제거/교체하는데 필요한 물건을 정합니다.</Korean>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
         </Key>
@@ -1887,6 +1889,7 @@
             <German>Sonstige Reparaturbedingungen</German>
             <Japanese>部分修理条件</Japanese>
             <Chinese>額外修理條件</Chinese>
+            <Chinesesimp>部分全面维修条件</Chinesesimp>
             <French>Exigences pour réparations diverses</French>
             <Italian>Requisiti di riparazione vari</Italian>
             <Czech>Požadavky pro částečnou opravu</Czech>
@@ -1894,12 +1897,14 @@
             <Portuguese>Requerimentos para reparo miscelâneo</Portuguese>
             <Spanish>Requisitos de objetos misceláneos de reparación</Spanish>
             <Russian>Требования к разному ремонту</Russian>
+            <Korean>기타 수리 요구사항</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
             <German>Gegenstände die benötigt werden, um eine spezifische Fahrzeugkomponente oder eine Kette zu entfernen/auszutauschen.</German>
             <Japanese>車両の特定コンポーネントか履帯の除去/交換にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
+            <Chinesesimp>维修特定车辆部件或拆除/更换轨道所需的物品。</Chinesesimp>
             <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
             <Czech>Předměty potřebné k provedení opravy konkrétní části vozidla nebo sundání/výměny pásů.</Czech>
             <Polish>Przedmioty wymagane do naprawy określonego elementu pojazdu lub usunięcia/wymiany gąsienicy.</Polish>
@@ -1907,12 +1912,14 @@
             <Spanish>Objetos necesarios para reparar un componente específico del vehículo o quitar/reemplazar las orugas.</Spanish>
             <Italian>Elementi necessari per riparare un componente specifico del veicolo o per rimuovere/sostituire i cingoli</Italian>
             <Russian>Предметы, необходимые для ремонта отдельных компонентов или снятия/замены гусеницы.</Russian>
+            <Korean>차량의 궤도나 부품을 제거/교체할 때 필요한 아이템을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
             <German>Bedingungen für vollständige Reparatur</German>
             <Japanese>完全修理条件</Japanese>
             <Chinese>完整修復條件</Chinese>
+            <Chinesesimp>全面维修条件</Chinesesimp>
             <French>Exigences pour réparations complètes</French>
             <Italian>Requisiti per la riparazione completa</Italian>
             <Czech>Požadavky pro plnou opravu</Czech>
@@ -1920,12 +1927,14 @@
             <Portuguese>Requerimentos de Reparo Completo</Portuguese>
             <Spanish>Requisitos para reparación completa</Spanish>
             <Russian>Требования к полному ремонту</Russian>
+            <Korean>완전 수리 요구사항</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
             <German>Gegenstände die benötigt werden um ein Fahrzeug vollständig zu reparieren.</German>
             <Japanese>車両の完全修理にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來完整修復載具</Chinese>
+            <Chinesesimp>进行全面车辆维修所需的物品。</Chinesesimp>
             <French>Outils nécessaires pour effectuer une réparation complète des véhicules.</French>
             <Czech>Předměty potřebné k provedení plné opravy vozidla.</Czech>
             <Polish>Przedmioty wymagane do przeprowadzenia pełnej naprawy pojazdu.</Polish>
@@ -1933,6 +1942,7 @@
             <Spanish>Objetos requeridos para una reparación completa</Spanish>
             <Italian>Elementi necessari per eseguire una riparazione completa del veicolo.</Italian>
             <Russian>Предметы, необходимые для полного ремонта техники.</Russian>
+            <Korean>차량 완전 수리 시 필요한 아이템을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
@@ -1962,6 +1972,7 @@
             <French>Chenilles de rechange</French>
             <Czech>Náhradní pásy</Czech>
             <Spanish>Orugas de repuesto</Spanish>
+            <Korean>여분 궤도</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
@@ -1976,6 +1987,7 @@
             <French>Nombre de chenilles de rechange dans la cargaison.</French>
             <Czech>Počet náhradních pásů v nákladovém prostoru vozidla.</Czech>
             <Spanish>Número de orugas de repuesto en la carga</Spanish>
+            <Korean>화물칸 안에 여분 궤도 수</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
@@ -1990,6 +2002,7 @@
             <French>Roues de secours</French>
             <Czech>Náhradní kola</Czech>
             <Spanish>Ruedas de repuesto</Spanish>
+            <Korean>여분 바퀴</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
@@ -2004,6 +2017,7 @@
             <French>Nombre de roues de secours dans la cargaison.</French>
             <Czech>Počet náhradních kol v nákladovém prostoru vozidla.</Czech>
             <Spanish>Número de ruedas de repuesto en la carga</Spanish>
+            <Korean>화물칸 안에 여분 바퀴 수</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
@@ -2018,6 +2032,7 @@
             <French>Arrêt auto du moteur lors d'une réparation</French>
             <Czech>Automaticky vypnout motor při opravách</Czech>
             <Spanish>Apagar el motor automáticamente al reparar</Spanish>
+            <Korean>수리 시 엔진 자동 끄기</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
@@ -2032,6 +2047,7 @@
             <French>Coupe automatiquement le moteur lorsque des réparations sont effectuées.</French>
             <Czech>Automaticky vypne motor při zahájení oprav.</Czech>
             <Spanish>Apagar el motor automáticamente al efectuar una reparación</Spanish>
+            <Korean>수리 시 엔진을 자동으로 끕니다.</Korean>
         </Key>
     </Package>
 </Project>

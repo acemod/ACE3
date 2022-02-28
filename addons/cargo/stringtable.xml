@@ -40,6 +40,8 @@
             <Russian>Переименовано в:</Russian>
             <German>Neu Bewaffnet: &lt;br/&gt;%1</German>
             <Polish>Nazwa zmieniona na:&lt;br/&gt;%1</Polish>
+            <Chinesesimp>重命名为：&lt;br/&gt;%1</Chinesesimp>
+            <Korean>%1&lt;br/&gt;으로 명칭을 바꿈</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
@@ -48,6 +50,8 @@
             <Russian>Пользовательское название удалено.</Russian>
             <German>Eigener Name wurde gelöscht.</German>
             <Polish>Własna nazwa została usunięta</Polish>
+            <Chinesesimp>自定义名称已被清除。</Chinesesimp>
+            <Korean>임의로 지은 명칭을 지웠습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
@@ -56,6 +60,8 @@
             <Russian>Задать новое название:</Russian>
             <German>Neuen Namen setzen:</German>
             <Polish>Ustaw nową nazwę:</Polish>
+            <Chinesesimp>设定新名称：</Chinesesimp>
+            <Korean>새로운 명칭 설정:</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
@@ -64,6 +70,8 @@
             <Russian>Включить возможность переименования</Russian>
             <German>Aktiviere Umbenennungs-Aktion</German>
             <Polish>Włącz możliwość zmiany nazwy</Polish>
+            <Chinesesimp>启用重命名动作</Chinesesimp>
+            <Korean>새로 명칭짓기 행동 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
@@ -72,6 +80,8 @@
             <Russian>Включает переименование для объектов, допускающих переименование.</Russian>
             <German>Aktiviert die Umbenennungs-Aktion für neu benennbare Objekte.</German>
             <Polish>Włącza akcję zmiany nazwy dla obiektów z możliwością zmiany nazwy.</Polish>
+            <Chinesesimp>启用可重命名物体的重命名动作。</Chinesesimp>
+            <Korean>개체의 명칭을 새로 짓는것을 허가합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -102,7 +112,7 @@
             <Japanese>カーゴ メニュー</Japanese>
             <Korean>화물 메뉴</Korean>
             <Chinese>貨物選單</Chinese>
-            <Chinesesimp>货物选单</Chinesesimp>
+            <Chinesesimp>货物菜单</Chinesesimp>
             <Turkish>Kargo Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
@@ -118,7 +128,7 @@
             <Japanese>カーゴの空き容量: %1</Japanese>
             <Korean>선적 공간 남음: %1</Korean>
             <Chinese>貨物剩餘空間: %1</Chinese>
-            <Chinesesimp>货物剩余空间: %1</Chinesesimp>
+            <Chinesesimp>货物剩余空间：%1</Chinesesimp>
             <Turkish>Kargo Alanı Kaldı: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
@@ -148,7 +158,7 @@
             <Italian>Abilita il modulo di caricamento in cargo</Italian>
             <French>Active la possibilité de charger du matériel dans un module de fret (véhicule/container).</French>
             <Japanese>カーゴ モジュールで積み込みを有効化</Japanese>
-            <Korean>화물 모듈에 싣기를 활성화합니다</Korean>
+            <Korean>화물 모듈을 활성화합니다</Korean>
             <Chinese>啟用貨物裝載功能</Chinese>
             <Chinesesimp>启用货物装载功能</Chinesesimp>
         </Key>
@@ -285,6 +295,8 @@
             <French>Nom personnalisé</French>
             <German>Eigener Name</German>
             <Polish>Własna nazwa</Polish>
+            <Chinesesimp>自定义名称</Chinesesimp>
+            <Korean>임의 명칭</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
@@ -293,6 +305,8 @@
             <Russian>Установить пользовательское имя груза, используемое в интерфейсе погрузки.</Russian>
             <German>Definiere eigenen Frachtnamen, welcher im Frachtraum genutzt wird.</German>
             <Polish>Ustaw własną nazwę ładunku, używaną w menu ładunku.</Polish>
+            <Chinesesimp>设置货物界面中使用的一个自定义货物名称。</Chinesesimp>
+            <Korean>화물 인터페이스에 쓰일 화물의 명칭을 설정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
@@ -347,7 +361,7 @@
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
             <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
-            <Chinesesimp>此货物会占掉多少空间(设定-1的话此货物就不能被装载)</Chinesesimp>
+            <Chinesesimp>此货物会占掉多少空间（设定 -1 的话此货物就不能被装载）</Chinesesimp>
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
             <Korean>이 화물을 적재하는데 필요한 공간 (-1=무조건 적재가능)</Korean>
             <Russian>Грузовое пространство, необходимое для размещения этого объекта (-1 для незагружаемого)</Russian>
@@ -408,9 +422,9 @@
             <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
             <French>Modifie le temps nécessaire au paralargage d'une cargaison.</French>
             <Chinese>設定空投所需消耗的時間</Chinese>
-            <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
+            <Chinesesimp>设定空投所需消耗的时间。</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
-            <Korean>화물을 공중 투하 하는데 얼마나 걸리는 시간 설정</Korean>
+            <Korean>화물을 공중 투하 하는데 걸리는 시간을 설정합니다</Korean>
             <Russian>Модификатор времени, необходимого для десантирования груза</Russian>
             <Portuguese>Coeficiente de quanto tempo leva para soltar uma carga de paraquedas</Portuguese>
             <Czech>Upravuje jak dlouho výsadek trvá pro náklad.</Czech>
@@ -428,6 +442,8 @@
             <Chinese>裝載時間係數</Chinese>
             <Czech>Koeficient času nákládání</Czech>
             <Spanish>Coeficiente de tiempo para cargar</Spanish>
+            <Chinesesimp>装载时间系数</Chinesesimp>
+            <Korean>적재 시간 계수</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
@@ -441,6 +457,8 @@
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
             <Czech>Upravuje jak dlouho nakládají/vykládání trvá.\nVýsledkem je čas v sekundách - velikost objektu vynásobená touto hodnotou.</Czech>
             <Spanish>Modifica el tiempo de carga/descarga de objetos.\n El Tiempo en segundos, es el tamño del objeto multiplicado por este valor.</Spanish>
+            <Chinesesimp>修改装载/卸载物体所需的时间。\n时间，单位：秒，物体的大小乘以该系数值。</Chinesesimp>
+            <Korean>화물의 적재/하역 시 걸리는 시간을 설정합니다.\n초 단위로 물건의 크기에 곱셈하여 계산합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload">
             <English>Reopen Cargo Menu</English>
@@ -450,6 +468,8 @@
             <Russian>Переоткрыть меню погрузки</Russian>
             <German>Frachtmenü erneut öffnen</German>
             <Polish>Ponownie otwórz menu załadunku</Polish>
+            <Chinesesimp>重新打开货物菜单</Chinesesimp>
+            <Korean>화물 메뉴 다시 열기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
             <English>Reopen the Cargo Menu after successful unload.</English>
@@ -459,6 +479,8 @@
             <Russian>Переоткрыть меню погрузки после успешной выгрузки.</Russian>
             <German>Frachtmenü erneut öffnen, nach erfolgreichen Entladen.</German>
             <Polish>Ponownie otwórz menu załadunku po udanym wyładowaniu.</Polish>
+            <Chinesesimp>成功卸货后，重新打开货物菜单。</Chinesesimp>
+            <Korean>화물을 성공적으로 내리고 난 다음 화물 메뉴를 열지 결정합니다.</Korean>
         </Key>
     </Package>
 </Project>

@@ -31,7 +31,7 @@
             <Italian>Incrementi per 50 METRI - MRAD/MRAD (reticolo/torrette)</Italian>
             <Japanese>50 メートル増やす -- MRAD/MRAD (照準線/砲塔)</Japanese>
             <Korean>50 미터 늘리기 -- MRAD/MRAD (조준선/포탑)</Korean>
-            <Chinesesimp>50公尺增量 -- 毫弧度/毫弧度 (瞄镜分划线/调整纽)</Chinesesimp>
+            <Chinesesimp>50米增量 -- 毫弧度/毫弧度（瞄镜分划线/调整纽）</Chinesesimp>
             <Chinese>50公尺增量 -- 毫弧度/毫弧度 (瞄鏡分劃線/調整紐)</Chinese>
             <Turkish>50 METER increments -- MRAD/MRAD (reticle/turrets)</Turkish>
         </Key>
@@ -82,7 +82,7 @@
             <Italian>Apri Tavola Balistica</Italian>
             <Japanese>射表を開く</Japanese>
             <Korean>사거리표 열기</Korean>
-            <Chinesesimp>开启弹道射表</Chinesesimp>
+            <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟彈道射表</Chinese>
             <Turkish>Menzil Kartını Aç</Turkish>
         </Key>

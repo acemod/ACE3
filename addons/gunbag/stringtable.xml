@@ -27,7 +27,7 @@
             <Polish>Torba na broń (jasnobrązowa)</Polish>
             <Korean>총가방 (황갈색)</Korean>
             <Italian>Borsa per Armi (Tan)</Italian>
-            <Chinesesimp>枪袋 (黄褐色)</Chinesesimp>
+            <Chinesesimp>枪袋（黄褐色）</Chinesesimp>
             <Chinese>槍袋 (黃褐色)</Chinese>
             <Portuguese>Bolsa de Arma (Bege)</Portuguese>
             <Turkish>Silah Çantası (Tan)</Turkish>
@@ -74,6 +74,8 @@
             <Turkish>Silah çantasında silah değişimi</Turkish>
             <Spanish>Intercambiar arma en funda de arma</Spanish>
             <German>Waffe in Waffentasche tauschen</German>
+            <Chinesesimp>交换枪袋中的武器</Chinesesimp>
+            <Korean>총가방 안에 있는 무기랑 교환하기</Korean>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_DisplayName">
             <English>Enable Weapon Swap</English>
@@ -84,6 +86,8 @@
             <Turkish>Silah Değiştirmeyi Etkinleştir</Turkish>
             <Spanish>Habilitar cambio de arma</Spanish>
             <German>Aktiviere Tauschen von Waffen</German>
+            <Chinesesimp>启用武器互换</Chinesesimp>
+            <Korean>무기 교환 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_Description">
             <English>Allows interaction to directly swap the primary weapon and stored weapon.</English>
@@ -94,6 +98,8 @@
             <Turkish>Etkileşimin doğrudan birincil silahı ve depolanan silahı değiştirmesine izin verir.</Turkish>
             <Spanish>Permitir interacción para intercambiar el arma principal y el arma guardada.</Spanish>
             <German>Erlaube den direkten Wechsel von Primärer und verstauter Waffe über das Interaktionsmenü.</German>
+            <Chinesesimp>允许互动直接切换主武器和存储武器。</Chinesesimp>
+            <Korean>보관중인 무기와 주무기와 바로 바꾸는것을 허용합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>

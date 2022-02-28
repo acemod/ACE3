@@ -63,7 +63,7 @@
             <Italian>Messaggi di Ascesa</Italian>
             <Japanese>転生表示</Japanese>
             <Korean>재림 메세지</Korean>
-            <Chinesesimp>宙斯上任讯息</Chinesesimp>
+            <Chinesesimp>宙斯上任信息</Chinesesimp>
             <Chinese>宙斯上任訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_Description">
@@ -79,7 +79,7 @@
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
             <Japanese>プレイヤーが Zeus になる際、全体へポップアップ表示を行います。</Japanese>
             <Korean>플레이어가 Zeus 될 시 서버에 이를 알리는 팝업이 등장합니다.</Korean>
-            <Chinesesimp>当一位玩家被指定为宙斯时显示全域讯息</Chinesesimp>
+            <Chinesesimp>当一位玩家被指定为宙斯时显示全局信息</Chinesesimp>
             <Chinese>當一位玩家被指定為宙斯時顯示全域訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
@@ -225,7 +225,7 @@
             <Italian>Rivela ad Alleati</Italian>
             <Japanese>友軍へ表示</Japanese>
             <Korean>모든 아군에게 표시</Korean>
-            <Chinesesimp>透露给盟军</Chinesesimp>
+            <Chinesesimp>透露给友军</Chinesesimp>
             <Chinese>透露給盟軍</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_full">
@@ -241,7 +241,7 @@
             <Italian>Alleati + Marcatori Mappa</Italian>
             <Japanese>友軍と地図マーカー</Japanese>
             <Korean>아군 + 지도 마커</Korean>
-            <Chinesesimp>显示盟军+地图标记</Chinesesimp>
+            <Chinesesimp>显示友军+地图标记</Chinesesimp>
             <Chinese>顯示盟軍+地圖標記</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
@@ -285,7 +285,7 @@
             <Korean>수정 가능한 물체 갱신</Korean>
             <French>Màj les objets modifiables</French>
             <Italian>Aggiorna Oggetti Modificabili</Italian>
-            <Chinesesimp>更新可编辑的物件</Chinesesimp>
+            <Chinesesimp>更新可编辑的物体</Chinesesimp>
             <Chinese>更新可編輯的物件</Chinese>
             <Russian>Обновить редактируемые объекты</Russian>
             <Portuguese>Atualizar objetos editáveis</Portuguese>
@@ -295,6 +295,7 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
             <Chinese>編輯模式</Chinese>
+            <Chinesesimp>编辑模式</Chinesesimp>
             <Italian>Modalità per editare</Italian>
             <German>Bearbeitungsmodus</German>
             <Japanese>編集モード</Japanese>
@@ -304,10 +305,12 @@
             <Czech>Režim úprav</Czech>
             <French>Mode d'édition</French>
             <Spanish>Modo de edición</Spanish>
+            <Korean>편집 모드</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
             <Chinese>新增或移除可編輯物件給宙斯</Chinese>
+            <Chinesesimp>添加或删除宙斯的可编辑物体</Chinesesimp>
             <German>Aktiviere oder deaktiviere zu bearbeitende Objekte von Zeus</German>
             <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
             <Japanese>Zeus から編集可能オブジェクトの追加と削除をする</Japanese>
@@ -317,11 +320,13 @@
             <Czech>Přidej nebo odeber upravitelné objekty ze Zeusu</Czech>
             <French>Ajoute ou supprime les objets modifiables depuis Zeus.</French>
             <Spanish>Añadir o eliminar objetos editables desde Zeus</Spanish>
+            <Korean>제우스가 편집 가능한 물체를 추가하거나 제거합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
             <German>Füge Objekte hinzu</German>
             <Chinese>新增物件</Chinese>
+            <Chinesesimp>新增物体</Chinesesimp>
             <Italian>Aggiungi Oggetti</Italian>
             <Japanese>オブジェクト追加</Japanese>
             <Polish>Dodaj obiekty</Polish>
@@ -331,6 +336,7 @@
             <French>Ajouter des objets</French>
             <Turkish>Obje Ekle</Turkish>
             <Spanish>Añadir objetos</Spanish>
+            <Korean>물체 추가</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -340,7 +346,7 @@
             <Polish>Usuń obiekty</Polish>
             <French>Enlever des objets</French>
             <Italian>Rimuovi Oggetti</Italian>
-            <Chinesesimp>移除物件</Chinesesimp>
+            <Chinesesimp>移除物体</Chinesesimp>
             <Chinese>移除物件</Chinese>
             <Russian>Удалить объекты</Russian>
             <Portuguese>Remover Objetos</Portuguese>
@@ -356,7 +362,7 @@
             <Polish>Wszyscy kuratorzy</Polish>
             <French>Tous les curateurs</French>
             <Italian>Tutti i Moderatori</Italian>
-            <Chinesesimp>所有编辑者</Chinesesimp>
+            <Chinesesimp>所有宙斯</Chinesesimp>
             <Chinese>所有編輯者</Chinese>
             <Russian>Все кураторы</Russian>
             <Portuguese>Todos os Curadores</Portuguese>
@@ -371,7 +377,7 @@
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
             <French>Applique les changements à tous les curateurs.</French>
             <Italian>Applica i cambiamenti a tutti i moderatori</Italian>
-            <Chinesesimp>确认变更给所有编辑者</Chinesesimp>
+            <Chinesesimp>确认变更给所有宙斯</Chinesesimp>
             <Chinese>確認變更給所有編輯者</Chinese>
             <Russian>Применить изменения ко всем кураторам</Russian>
             <Portuguese>Aplicar mudanças à todos os Curadores</Portuguese>
@@ -388,8 +394,10 @@
             <Portuguese>Objetos adicionais</Portuguese>
             <Czech>Další objekty</Czech>
             <Chinese>額外物件</Chinese>
+            <Chinesesimp>额外物体</Chinesesimp>
             <French>Objets supplémentaires</French>
             <Spanish>Objetos adicionales</Spanish>
+            <Korean>추가 목표</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
@@ -401,8 +409,10 @@
             <Portuguese>Objetos adicionais para incluir na ação, ignorando a distância da tarefa</Portuguese>
             <Czech>Další objekty, které mají být zahrnuty do akce, bez ohledu na poloměr úlohy</Czech>
             <Chinese>無論任務範圍何處，都在行動中包含著額外的物件</Chinese>
+            <Chinesesimp>确认变更给所有宙斯</Chinesesimp>
             <French>Objets supplémentaires à intégrer dans l'action, quel que soit le rayon de la tâche.</French>
             <Spanish>Objetos adicionales para incluir en la acción al margen del Radio de Tarea</Spanish>
+            <Korean>목표 반경 상관없이 추가 목표를 추가합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -414,7 +424,7 @@
             <German>Globale KI-Fähigkeit</German>
             <Korean>서버 인공지능 실력</Korean>
             <Italian>Abilità AI Globale</Italian>
-            <Chinesesimp>AI技巧设定</Chinesesimp>
+            <Chinesesimp>AI 技巧设定</Chinesesimp>
             <Chinese>AI技巧設定</Chinese>
             <Portuguese>Habilidade Global da IA</Portuguese>
             <Turkish>Genel AI Yetenekleri</Turkish>
@@ -446,7 +456,7 @@
             <German>Ändert: general, commanding, courage</German>
             <Korean>변화: 전반적, 지휘, 사기</Korean>
             <Italian>Cambia: generale, comando, </Italian>
-            <Chinesesimp>改变: 战斗技巧，指挥技巧，勇气大小</Chinesesimp>
+            <Chinesesimp>改变：战斗技巧，指挥技巧，勇气大小</Chinesesimp>
             <Chinese>改變: 戰鬥技巧，指揮技巧，勇氣大小</Chinese>
             <Portuguese>Muda: general, commanding, courage</Portuguese>
             <Spanish>Cambios: general, commanding, courage</Spanish>
@@ -476,7 +486,7 @@
             <German>Ändert: aimingAccuracy</German>
             <Korean>변화: 조준 명중률</Korean>
             <Italian>Cambia: aimingAccuracy</Italian>
-            <Chinesesimp>改变: 瞄准精确度</Chinesesimp>
+            <Chinesesimp>改变：瞄准精确度</Chinesesimp>
             <Chinese>改變: 瞄準精確度</Chinese>
             <Portuguese>Muda: aimingAccuracy</Portuguese>
             <Spanish>Cambios: aimingAccuracy</Spanish>
@@ -506,7 +516,7 @@
             <German>Ändert: aimingShake, aimingSpeed, reloadSpeed</German>
             <Korean>변화: 조준시 흔들림, 조준 속도, 재장전 속도</Korean>
             <Italian>Cambia: aimingShake, aimingSpeed, reloadSpeed</Italian>
-            <Chinesesimp>改变: 手晃幅度，瞄准速度， 重新装填速度</Chinesesimp>
+            <Chinesesimp>改变：手晃幅度，瞄准速度， 重新装填速度</Chinesesimp>
             <Chinese>改變: 手晃幅度，瞄準速度， 重新裝填速度</Chinese>
             <Portuguese>Muda: aimingShake, aimingSpeed, reloadSpeed</Portuguese>
             <Spanish>Cambios: aimingShake, aimingSpeed, reloadSpeed</Spanish>
@@ -536,7 +546,7 @@
             <German>Ändert: spotDistance, spotTime</German>
             <Korean>변화: 탐지 거리, 탐지까지의 시간</Korean>
             <Italian>Cambia: spotDistance, spotTime</Italian>
-            <Chinesesimp>改变: 搜索距离, 发现时间</Chinesesimp>
+            <Chinesesimp>改变：搜索距离，发现时间</Chinesesimp>
             <Chinese>改變: 搜索距離, 發現時間</Chinese>
             <Portuguese>Muda: spotDistance, spotTime</Portuguese>
             <Spanish>Cambios: spotDistance, spotTime</Spanish>
@@ -566,7 +576,7 @@
             <German>Soll KI nach Deckung suchen</German>
             <Korean>인공지능이 엄폐물을 찾아갑니다</Korean>
             <Italian>Le AI dovrebbero cercare una copertura</Italian>
-            <Chinesesimp>决定AI是否会寻找掩护</Chinesesimp>
+            <Chinesesimp>决定 AI 是否会寻找掩护</Chinesesimp>
             <Chinese>決定AI是否會尋找掩護</Chinese>
             <Portuguese>A IA dever buscar cobertura</Portuguese>
             <Spanish>La IA debe buscar cobertura</Spanish>
@@ -596,7 +606,7 @@
             <German>Soll KI automatisch in Kampfmodus umschalten</German>
             <Korean>인공지능이 자동적으로 교전 상태에 돌입합니다</Korean>
             <Italian>Le AI dovrebbero passare in modalità di combattimento automaticamente</Italian>
-            <Chinesesimp>决定AI是否会自动与敌人交战</Chinesesimp>
+            <Chinesesimp>决定 AI 是否会自动与敌人交战</Chinesesimp>
             <Chinese>決定AI是否會自動與敵人交戰</Chinese>
             <Portuguese>A IA deveria automaticamente mudar para modo de combate</Portuguese>
             <Spanish>La IA debe automáticamente cambiar a modo de combate</Spanish>
@@ -928,7 +938,7 @@
             <Portuguese>Unidade deve estar viva</Portuguese>
             <Japanese>ユニットを生存させます</Japanese>
             <Korean>대상이 반드시 살아있어야 합니다</Korean>
-            <Chinesesimp>单位必须是活着</Chinesesimp>
+            <Chinesesimp>单位必须是活的</Chinesesimp>
             <Chinese>單位必須是活著</Chinese>
             <Turkish>Birliğin yaşaması gerekiyor</Turkish>
         </Key>
@@ -1097,9 +1107,11 @@
             <Portuguese>Nenhum</Portuguese>
             <Spanish>Ninguno</Spanish>
             <Chinese>無</Chinese>
+            <Chinesesimp>无</Chinesesimp>
             <Czech>Nikdo</Czech>
             <French>Aucun</French>
             <Turkish>Hiçbiri</Turkish>
+            <Korean>없음</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
@@ -1111,9 +1123,11 @@
             <Portuguese>Jogadores</Portuguese>
             <Spanish>Jugadores</Spanish>
             <Chinese>玩家</Chinese>
+            <Chinesesimp>玩家</Chinesesimp>
             <Czech>Hráči</Czech>
             <French>Joueurs</French>
             <Turkish>Oyuncular</Turkish>
+            <Korean>플레이어</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
@@ -1125,9 +1139,11 @@
             <Portuguese>Jogadores e IA</Portuguese>
             <Spanish>Jugadores e IA</Spanish>
             <Chinese>玩家與AI</Chinese>
+            <Chinesesimp>玩家与 AI</Chinesesimp>
             <Czech>Hráči a AI</Czech>
             <French>Joueurs et IA</French>
             <Turkish>Oyuncular ve AI</Turkish>
+            <Korean>플레이어와 인공지능</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -1141,7 +1157,7 @@
             <German>Fügt Objekte zum Kurator hinzu</German>
             <Japanese>キュレーターにオブジェクトを追加</Japanese>
             <Korean>큐레이터에 물체 추가</Korean>
-            <Chinesesimp>增加物件给任务策划人</Chinesesimp>
+            <Chinesesimp>增加物体给任务宙斯</Chinesesimp>
             <Chinese>增加物件給任務策劃人</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
@@ -1156,7 +1172,7 @@
             <German>Fügt jedes gespawnte Objekt allen Kuratoren der Mission hinzu</German>
             <Japanese>ミッション内で作成されたオブジェクトに全キュレーターを追加</Japanese>
             <Korean>미션 내 큐레이터에 모든 생성 물체 추가</Korean>
-            <Chinesesimp>在任务中生成物件给所有的任务策划人</Chinesesimp>
+            <Chinesesimp>在任务中生成物体给所有的任务宙斯</Chinesesimp>
             <Chinese>在任務中生成物件給所有的任務策劃人</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">
@@ -1169,7 +1185,7 @@
             <German>Ladung:</German>
             <Korean>화물:</Korean>
             <Italian>Cargo:</Italian>
-            <Chinesesimp>货物:</Chinesesimp>
+            <Chinesesimp>货物：</Chinesesimp>
             <Chinese>貨物:</Chinese>
             <Portuguese>Carga:</Portuguese>
             <Turkish>Kargo:</Turkish>
@@ -1179,6 +1195,7 @@
             <English>Select cargo to unload</English>
             <German>Ladung zum ausladen auswählen</German>
             <Chinese>選擇要卸載的貨物</Chinese>
+            <Chinesesimp>选择要卸载的货物</Chinesesimp>
             <Italian>Scegli il carico da scaricare</Italian>
             <Japanese>選択したカーゴを降ろす</Japanese>
             <Polish>Wybierz ładunek do wyładowania</Polish>
@@ -1188,6 +1205,7 @@
             <French>Sélectionner une cargaison à décharger</French>
             <Turkish>Seçilen kargo boşaltıldı</Turkish>
             <Spanish>Seleccionar carga para descargar:</Spanish>
+            <Korean>내릴 화물을 선택하세요</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1255,7 +1273,7 @@
             <French>Ajouter un arsenal complet</French>
             <Italian>Aggiungi Arsenale Completo</Italian>
             <Japanese>オブジェクトに完全なアーセナルを追加</Japanese>
-            <Chinesesimp>增加完整的虚拟军火库到物件上</Chinesesimp>
+            <Chinesesimp>增加完整的虚拟军火库到物体上</Chinesesimp>
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
             <Polish>Dodaj Wirtualny Arsenał</Polish>
             <Korean>아스날 놓기</Korean>
@@ -1271,7 +1289,7 @@
             <French>Retirer un arsenal</French>
             <Italian>Rimuovi Arsenale</Italian>
             <Japanese>オブジェクトからアーセナルを削除</Japanese>
-            <Chinesesimp>移除物件上的虚拟军火库</Chinesesimp>
+            <Chinesesimp>移除物体上的虚拟军火库</Chinesesimp>
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
             <Polish>Usuń Wirtualny Arsenał</Polish>
             <Korean>아스날 제거</Korean>
@@ -1303,7 +1321,7 @@
             <Italian>Attiva NVGs</Italian>
             <Japanese>暗視装置の切り替え</Japanese>
             <Chinese>切換夜視鏡</Chinese>
-            <Chinesesimp>切换夜视镜</Chinesesimp>
+            <Chinesesimp>切换夜视仪</Chinesesimp>
             <Korean>야시경 토글</Korean>
             <Polish>Przełącz NVG</Polish>
             <Russian>Вкл/Выкл ПНВ</Russian>
@@ -1318,7 +1336,7 @@
             <Italian>Attrezzatura NVG</Italian>
             <Japanese>暗視装置</Japanese>
             <Chinese>夜視鏡裝備</Chinese>
-            <Chinesesimp>夜视镜装备</Chinesesimp>
+            <Chinesesimp>夜视仪装备</Chinesesimp>
             <Korean>야시경 장비</Korean>
             <Polish>Ekwipunek NVG</Polish>
             <Russian>Приборы ночного видения</Russian>
@@ -1334,7 +1352,7 @@
             <Italian>Aggiunge o rimuove NVGs alle unità</Italian>
             <Japanese>ユニットから暗視装置の追加と削除</Japanese>
             <Chinese>增加或移除單位的夜視鏡</Chinese>
-            <Chinesesimp>增加或移除单位的夜视镜</Chinesesimp>
+            <Chinesesimp>增加或移除单位的夜视仪</Chinesesimp>
             <Korean>야시경 추가/제거</Korean>
             <Polish>Dodaj lub usuń noktowizję z jednostek</Polish>
             <Russian>Добавить/Убрать ПНВ у юнитов</Russian>
@@ -1356,12 +1374,13 @@
             <Spanish>Objetivo de palanca</Spanish>
             <Czech>Přepnout cíl</Czech>
             <French>Unités cible</French>
+            <Korean>타겟 토글</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
             <German>Betroffene Spieler beim umschalten</German>
             <Japanese>ユニットは切り替えに影響を受けます</Japanese>
-            <Chinesesimp>被选单位受切换影响</Chinesesimp>
+            <Chinesesimp>被菜单位受切换影响</Chinesesimp>
             <Chinese>受切換所影響的單位</Chinese>
             <Italian>Unità influenzate dallo scambio</Italian>
             <Polish>Jednostki pod wpływem przełączenia</Polish>
@@ -1370,6 +1389,7 @@
             <Czech>Jednotky ovlivněné přepnutím</Czech>
             <French>Unités affectées par le changement.</French>
             <Spanish>Unidades afectadas por esta alternancia</Spanish>
+            <Korean>유닛은 토글에 영향받습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1676,7 +1696,7 @@
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_DisplayName">
             <English>Suicide Bomber</English>
             <Chinese>自殺式炸彈襲擊者</Chinese>
-            <Chinesesimp>自杀式炸弹袭击者</Chinesesimp>
+            <Chinesesimp>自杀炸弹手</Chinesesimp>
             <Czech>Samovražedný bombardér</Czech>
             <French>Kamikaze</French>
             <German>Selbstmordattentäter</German>
@@ -1727,7 +1747,7 @@
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ExplosionSize">
             <English>Explosion Size</English>
             <Chinese>爆炸尺寸</Chinese>
-            <Chinesesimp>爆炸尺寸</Chinesesimp>
+            <Chinesesimp>爆炸大小</Chinesesimp>
             <Czech>Velikost výbuchu</Czech>
             <French>Taille de l'explosion</French>
             <German>Explosionsgröße</German>
@@ -1744,7 +1764,7 @@
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek">
             <English>Auto Seek</English>
             <Chinese>自動尋求</Chinese>
-            <Chinesesimp>自动寻求</Chinesesimp>
+            <Chinesesimp>自动寻的</Chinesesimp>
             <Czech>Auto Seek</Czech>
             <French>Recherche automatique</French>
             <German>Automatische Suche</German>
@@ -1784,7 +1804,7 @@
             <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
             <Italian>L'unità è già un kamikaze</Italian>
             <Japanese>既に自爆ユニットです</Japanese>
-            <Korean>유닛은 이미 자살 폭탄 테러범이다.</Korean>
+            <Korean>유닛은 이미 자살 폭탄 테러범입니다.</Korean>
             <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
             <Portuguese>A unidade já é um suicida</Portuguese>
             <Russian>Единица уже является террористом-смертником</Russian>
@@ -1795,7 +1815,7 @@
             <English>Add full ACE Arsenal</English>
             <German>Vollständiges ACE Arsenal hinzufügen</German>
             <Japanese>ACE 武器庫を追加</Japanese>
-            <Chinesesimp>添加ACE模式军火库</Chinesesimp>
+            <Chinesesimp>添加 ACE 军火库</Chinesesimp>
             <Chinese>增加完整的ACE軍火庫</Chinese>
             <Italian>Aggiungi l'arsenale ACE completo</Italian>
             <Polish>Dodaj pełny arsenał ACE</Polish>
@@ -1805,12 +1825,13 @@
             <Czech>Přidat plný ACE Arzenál</Czech>
             <French>Ajouter arsenal ACE complet</French>
             <Turkish>ACE Arsenal ekle</Turkish>
+            <Korean>전체 ACE 아스널 추가</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
             <German>ACE Arsenal entfernen</German>
             <Japanese>ACE 武器庫を削除</Japanese>
-            <Chinesesimp>删除ACE模式军火库</Chinesesimp>
+            <Chinesesimp>删除 ACE 军火库</Chinesesimp>
             <Chinese>移除ACE軍火庫</Chinese>
             <Italian>Rimuovi l'arsenale ACE</Italian>
             <Polish>Usuń arsenał ACE</Polish>
@@ -1820,6 +1841,7 @@
             <Czech>Odebrat plný ACE Arzenál</Czech>
             <French>Retirer un arsenal ACE</French>
             <Turkish>ACE Arsenali sil </Turkish>
+            <Korean>전체 ACE 아스널 제거</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_CreateZeus">
             <English>Create Zeus</English>
@@ -1831,9 +1853,11 @@
             <Portuguese>Criar Zeus</Portuguese>
             <Spanish>Crear Zeus</Spanish>
             <Chinese>新增宙斯</Chinese>
+            <Chinesesimp>创建宙斯</Chinesesimp>
             <Czech>Vytvořit Zeuse</Czech>
             <French>Créer Zeus</French>
             <Turkish>Zeus oluştur</Turkish>
+            <Korean>제우스 생성</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
@@ -1845,9 +1869,11 @@
             <Portuguese>Apagar Zeus</Portuguese>
             <Spanish>Eliminar Zeus</Spanish>
             <Chinese>刪除宙斯</Chinese>
+            <Chinesesimp>删除宙斯</Chinesesimp>
             <Czech>Smazat Zeuse</Czech>
             <French>Supprimer Zeus</French>
             <Turkish>Zeus sil</Turkish>
+            <Korean>제우스 제거</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
@@ -1858,10 +1884,12 @@
             <Italian>menu "%1"</Italian>
             <Portuguese>Menu "%1"</Portuguese>
             <Chinese>選單 %1</Chinese>
+            <Chinesesimp>菜单"%1"</Chinesesimp>
             <Czech>"%1" menu</Czech>
             <French>Menu "%1"</French>
             <Turkish>"%1" menü</Turkish>
             <Spanish>"%1" menu</Spanish>
+            <Korean>"%1" 메뉴</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
@@ -1871,11 +1899,13 @@
             <Russian>Десантировать груз</Russian>
             <Portuguese>Soltar carga de paraquedas</Portuguese>
             <Chinese>空投貨物</Chinese>
+            <Chinesesimp>空投货物</Chinesesimp>
             <Italian>Paradrop Cargo</Italian>
             <Czech>Výsadek nákladu</Czech>
             <French>Paralargage de cargaison</French>
             <Turkish>Paraşüt Kargosu</Turkish>
             <Spanish>Carga mediante paracaidas</Spanish>
+            <Korean>화물 공수</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
@@ -1886,14 +1916,18 @@
             <Portuguese>Nenhuma carga carregada</Portuguese>
             <Spanish>No hay carga cargada</Spanish>
             <Chinese>沒有貨物裝載</Chinese>
+            <Chinesesimp>没有装载货物</Chinesesimp>
             <Italian>Nessun carico caricato</Italian>
             <Czech>Žádný náklad není naložen</Czech>
             <French>Aucune cargaison chargée</French>
             <Turkish>Kargo yüklenmedi</Turkish>
+            <Korean>화물이 실려있지 않습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleBurn_DisplayName">
             <English>Burn Unit</English>
             <German>Einheit anzünden</German>
+            <Chinesesimp>焚烧单位</Chinesesimp>
+            <Korean>유닛 불로 태우기</Korean>
         </Key>
     </Package>
 </Project>

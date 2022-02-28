@@ -64,7 +64,7 @@
             <Italian>Paracadute non manovrabile</Italian>
             <Portuguese>Para-querdas não controlável</Portuguese>
             <Japanese>非操作型パラシュート</Japanese>
-            <Korean>비-조종 낙하산</Korean>
+            <Korean>비조종 낙하산</Korean>
             <Chinesesimp>非可操控降落伞</Chinesesimp>
             <Chinese>非可操控降落傘</Chinese>
             <Turkish>Yönlendirilemez Paraşüt</Turkish>
@@ -117,6 +117,7 @@
             <Czech>Schovat výškoměr v GUI při volném pádu</Czech>
             <Spanish>Ocultar altímetro de caída libre</Spanish>
             <Turkish>Serbest Düşüş Altimetresini Gizle</Turkish>
+            <Korean>강하 시 고도계 숨기기</Korean>
         </Key>
         <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
             <English>Hides the altitude and speed shown while free falling or parachuting.</English>
@@ -132,6 +133,7 @@
             <Czech>Schová výšku a rychlost v GUI při volném pádu a při použití padáku.</Czech>
             <Spanish>Oculta la altitud y la velocidad que se muestran en caída libre o en paracaídas.</Spanish>
             <Turkish>Serbest düşme veya paraşütle atlama sırasında gösterilen yüksekliği ve hızı gizler.</Turkish>
+            <Korean>강하 시 고도와 속도를 보여주지 않습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Parachute_FailureChance">
             <English>Parachute Failure Chance</English>
@@ -140,6 +142,8 @@
             <Japanese>開傘失敗率</Japanese>
             <Polish>Szansa na nieotwarcie się spadochronu</Polish>
             <German>Wahrscheinlichkeit, dass ein Fallschirm sich nicht öffnet</German>
+            <Chinesesimp>开伞失败率</Chinesesimp>
+            <Korean>낙하산 실패 확률</Korean>
         </Key>
     </Package>
 </Project>

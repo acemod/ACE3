@@ -97,17 +97,6 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
     };
 
-    // TOOLKIT
-
-    class ACE_Module;
-    class ACE_moduleRepairSettings: ACE_Module {
-        class wheelRepairRequiredItems {
-            class values {
-                class gm_repairkit_01 { name = "RepairKit"; value = 1; };
-            };
-        };
-    };
-
     // STATIC
 
     class gm_ge_army_shelteraceII_repair_base;

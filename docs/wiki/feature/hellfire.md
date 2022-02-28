@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Hellfire
+component: hellfire
 description: AGM-114K Hellfire Missiles
 group: feature
 category: equipment
@@ -70,7 +71,3 @@ class myChopper: HeliBase {
     ace_hellfire_addLaserDesignator = 1;
 };
 ```
-
-## 5. Dependencies
-
-{% include dependencies_list.md component="hellfire" %}

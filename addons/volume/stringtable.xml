@@ -59,7 +59,7 @@
             <Japanese>音量を戻しました</Japanese>
             <French>Volume rétabli</French>
             <Korean>음량 복구됨</Korean>
-            <Chinesesimp>回复音量</Chinesesimp>
+            <Chinesesimp>恢复音量</Chinesesimp>
             <Chinese>回復音量</Chinese>
             <Italian>Volume ripristinato</Italian>
             <Russian>Громкость восстановлена</Russian>
@@ -134,7 +134,7 @@
             <Japanese>音量を低減、復元時に通知を表示します。</Japanese>
             <French>Affiche une notification lorsque le volume est réduit/rétabli.</French>
             <Korean>음량이 감소/복구될 때 메세지를 표시합니다.</Korean>
-            <Chinesesimp>当正在降低/回复音量时显示提示。</Chinesesimp>
+            <Chinesesimp>当正在降低/恢复音量时显示提示。</Chinesesimp>
             <Chinese>當正在降低/回復音量時顯示提示。</Chinese>
             <Italian>Mostra notifiche mentre si abbassa/ripristina il volume.</Italian>
             <Russian>Показывать уведомление при уменьшении/восстановлении громкости</Russian>

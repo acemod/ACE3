@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Handles various fire objects and determines if local units deserves to get burned.
  * Used to handle external burning objects, not used internally because internal methods are more performant.
  *
@@ -28,7 +28,7 @@ params ["_args", "_handle"];
     _value params ["_source", "_radius", "_intensity"];
     private _attachedObject = attachedTo _source;
     private _sourcePos = getPosATL _source;
-    if !(_attachedObject isEqualTo objNull) then {
+    if (_attachedObject isNotEqualTo objNull) then {
         _sourcePos = getPosATL _attachedObject;
     };
 

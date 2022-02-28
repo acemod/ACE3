@@ -8,12 +8,14 @@
             <French>[CSW] M47 Super-Dragon</French>
             <Japanese>[CSW] M47 スーパー ドラゴン</Japanese>
             <Chinese>[CSW] M47龍式</Chinese>
+            <Chinesesimp>[班组] M47 龙式反坦克导弹</Chinesesimp>
             <Italian>[CSW] M47 Super-Dragon</Italian>
             <Czech>[CSW] M47 Super-Dragon</Czech>
             <Polish>[CSW] M47 Super-Dragon</Polish>
             <Turkish>[CSW] M47 Super-Dragon</Turkish>
             <Russian>[CSW] M47 Super-Dragon</Russian>
             <Spanish>[CSW] M47 Super-Dragon</Spanish>
+            <Korean>[CSW] M47 슈퍼 드래곤</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
@@ -22,12 +24,14 @@
             <French>M47 Super-Dragon</French>
             <Japanese>M47 スーパー ドラゴン</Japanese>
             <Chinese>M47 龍式</Chinese>
+            <Chinesesimp>M47 龙式反坦克导弹</Chinesesimp>
             <Italian>M47 Super-Dragon</Italian>
             <Czech>M47 Super-Dragon</Czech>
             <Polish>M47 Super-Dragon</Polish>
             <Turkish>M47 Super-Dragon</Turkish>
             <Russian>M47 Super-Dragon</Russian>
             <Spanish>M47 Super-Dragon</Spanish>
+            <Korean>M47 슈퍼 드래곤</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_attachSight">
             <English>Attach Sight</English>
@@ -36,11 +40,13 @@
             <French>Monter le viseur</French>
             <Japanese>照準器を取り付ける</Japanese>
             <Chinese>裝上瞄具</Chinese>
+            <Chinesesimp>装上瞄具</Chinesesimp>
             <Italian>Monta mirino</Italian>
             <Czech>Připojit puškohled</Czech>
             <Polish>Dołącz Optykę</Polish>
             <Russian>Прикрепить прицел</Russian>
             <Spanish>Acoplar visor</Spanish>
+            <Korean>조준경 부착</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_detachSight">
             <English>Detach Sight</English>
@@ -49,11 +55,13 @@
             <French>Démonter le viseur</French>
             <Japanese>照準器を外す</Japanese>
             <Chinese>拆下瞄具</Chinese>
+            <Chinesesimp>卸下瞄具</Chinesesimp>
             <Italian>Smonta mirino</Italian>
             <Czech>Odpojit puškohled</Czech>
             <Polish>Odczep Optykę</Polish>
             <Russian>Открепить прицел</Russian>
             <Spanish>Desacoplar visor</Spanish>
+            <Korean>조준경 분리</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_sightName">
             <English>SU-36/P Daysight</English>
@@ -62,12 +70,14 @@
             <French>SU-36/P Daysight</French>
             <Japanese>SU-36/P デイサイト</Japanese>
             <Chinese>SU-36/P 日間瞄具</Chinese>
+            <Chinesesimp>SU-36/P 常规瞄具</Chinesesimp>
             <Italian>SU-36/P Daysight</Italian>
             <Czech>SU-36/P denní puškohled</Czech>
             <Polish>SU-36/P Celownik dzienny</Polish>
             <Turkish>SU-36/P Daysight</Turkish>
             <Russian>SU-36/P Дневной</Russian>
             <Spanish>Visor diurno SU-36/P</Spanish>
+            <Korean>SU-36/P 주간조준기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
@@ -76,11 +86,13 @@
             <French>Un viseur léger et bon marché utilisé pour les opérations de jour.\nContient l'ordinateur de guidage pour tout le système.</French>
             <Japanese>昼間時に使用される軽量で、低価格の照準器です。システム全体の誘導コンピュータを備えています。</Japanese>
             <Chinese>一個輕量，便宜適合日間行動使用的廉價瞄具。內含全套制導電腦系統</Chinese>
+            <Chinesesimp>一种用于日间作战的轻型廉价瞄准具。包含整个系统的制导计算机</Chinesesimp>
             <Italian>Una luce,un mirino usato per le operazioni diurne.Contiene il computer di guida per l'intero sistema </Italian>
             <Czech>Lehký a levný puškohled pro použití za denního světla. Obsahuje navigační počítač pro celý systém.</Czech>
             <Polish>Lekki, tani celownik używany do działania w trakcie dnia. Zawiera komputer naprowadząjący dla całego systemu</Polish>
             <Russian>Легкий дешёвый прицел, используемый для дневных операций. Содержит компьютер для всей системы</Russian>
             <Spanish>Un visor ligero y barato utilizado en operaciones diurnas. Contiene el ordenador de guiado para todo el sistema.</Spanish>
+            <Korean>싸고 가벼운 주간조준기입니다. 사격을 하기 위한 통제컴퓨터가 포함되있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
@@ -89,11 +101,13 @@
             <French>Un missile filoguidé SACLOS, présentant une caractéristique de vol exceptionnelle.</French>
             <Japanese>特徴的な飛行特性を持つ、ワイヤ誘導の SACLOS ミサイルです。</Japanese>
             <Chinese>一個有線制導半自動指令型飛彈並有著獨特的飛航動作</Chinese>
+            <Chinesesimp>具有独特飞行特性的线导半自动指令型导弹</Chinesesimp>
             <Italian>Un missile SACLOS  filo-guidato con uniche caratterische di volo </Italian>
             <Czech>Drátem naváděná SACLOS raketa s unikátními letovými vlastnostmi</Czech>
             <Polish>Naprowadzany przewodowo rakietowy pocisk SACLOS o unikalnej charakterystyce lotu</Polish>
             <Russian>Ракета SACLOS с проводным наведением с уникальной характеристикой полета</Russian>
             <Spanish>Misil SACLOS guiado por hilo con una característica de vuelo única.</Spanish>
+            <Korean>특이한 비행 성질을 가진 반자동 가시선지령 유도미사일입니다.</Korean>
         </Key>
     </Package>
 </Project>

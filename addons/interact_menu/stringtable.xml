@@ -14,7 +14,7 @@
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
             <Japanese>セルフ インタラクションへ常にカーソルを表示</Japanese>
             <Korean>자기상호작용시 항상 커서를 보이기</Korean>
-            <Chinesesimp>自我互动时永远显示游标</Chinesesimp>
+            <Chinesesimp>自我互动时永远显示光标</Chinesesimp>
             <Chinese>自我互動時永遠顯示游標</Chinese>
             <Turkish>Kendi kendine etkileşim için daima imleci göster</Turkish>
         </Key>
@@ -31,7 +31,7 @@
             <Portuguese>Sempre mostrar cursor para interação</Portuguese>
             <Japanese>インタラクションへ常にカーソルを表示</Japanese>
             <Korean>상호작용시 항상 커서를 보이기</Korean>
-            <Chinesesimp>互动时永远显示游标</Chinesesimp>
+            <Chinesesimp>互动时永远显示光标</Chinesesimp>
             <Chinese>互動時永遠顯示游標</Chinese>
             <Turkish>Etkileşim için her zaman imleci göster</Turkish>
         </Key>
@@ -150,7 +150,7 @@
             <Portuguese>Interação - Max. de Texto</Portuguese>
             <Japanese>インタラクション - 文字の色</Japanese>
             <Korean>상호작용 - 문자색깔</Korean>
-            <Chinesesimp>互动-文字颜色最大值</Chinesesimp>
+            <Chinesesimp>互动—文字颜色最大值</Chinesesimp>
             <Chinese>互動 - 文字最大化</Chinese>
             <Turkish>Etkileşim - Maksimum Metin</Turkish>
         </Key>
@@ -167,7 +167,7 @@
             <Portuguese>Interação - Min. de Texto</Portuguese>
             <Japanese>インタラクション - 文字の背景色</Japanese>
             <Korean>상호작용 - 문자배경색</Korean>
-            <Chinesesimp>互动-文字颜色最小值</Chinesesimp>
+            <Chinesesimp>互动—文字颜色最小值</Chinesesimp>
             <Chinese>互動 - 文字最小化</Chinese>
             <Turkish>Etkileşim - Minumum Metin </Turkish>
         </Key>
@@ -184,7 +184,7 @@
             <Portuguese>Interação - Max. de Sombra</Portuguese>
             <Japanese>インタラクション - 文字への影の色</Japanese>
             <Korean>상호작용 - 문자그림자색</Korean>
-            <Chinesesimp>互动 - 阴影最大值</Chinesesimp>
+            <Chinesesimp>互动—阴影最大值</Chinesesimp>
             <Chinese>互動 - 陰影最大化</Chinese>
             <Turkish>Etkileşim - Maksimum Gölge</Turkish>
         </Key>
@@ -201,7 +201,7 @@
             <Portuguese>Interação - Min. de Sombra</Portuguese>
             <Japanese>インタラクション - 文字への影の最低色</Japanese>
             <Korean>상호작용 - 문자그림자배경색</Korean>
-            <Chinesesimp>互动 - 阴影最小值</Chinesesimp>
+            <Chinesesimp>互动—阴影最小值</Chinesesimp>
             <Chinese>互動 - 陰影最小化</Chinese>
             <Turkish>Etkileşim - Minumum Gölge</Turkish>
         </Key>
@@ -218,7 +218,7 @@
             <Italian>Mantieni il cursore centrato</Italian>
             <Japanese>常にカーソルを中央にする</Japanese>
             <Korean>커서를 항상 가운데에 둡니다</Korean>
-            <Chinesesimp>保持游标在中心点</Chinesesimp>
+            <Chinesesimp>保持光标在中心点</Chinesesimp>
             <Chinese>保持游標在中心點</Chinese>
             <Turkish>İmleci Ortada tut</Turkish>
         </Key>
@@ -235,7 +235,7 @@
             <Italian>Mantieni il cursore centrato e sposta il menù intorno. Utile se lo schermo è piccolo.</Italian>
             <Japanese>常にカーソルを中央へ表示させ、オプション メニューが移動します。画面の大きさが制限されている時に使いやすくなります。</Japanese>
             <Korean>커서를 항상 가운데에 두고 메뉴를 움직입니다. 화면의 크기가 제한되있을때 유용합니다.</Korean>
-            <Chinesesimp>保持游标在中心点并平移周遭的选项选单。这对在荧幕尺寸有限的玩家很有用!</Chinesesimp>
+            <Chinesesimp>保持光标在中心点并平移周遭的选项菜单。这对在屏幕尺寸有限的玩家很有用！</Chinesesimp>
             <Chinese>保持游標在中心點並平移周遭的選項選單。這對在螢幕尺寸有限的玩家很有用!</Chinese>
             <Turkish>İmleci ortalanmış halde tutar ve seçenek menüsünü kaydırır. Ekran boyutu sınırlıysa kullanışlıdır.</Turkish>
         </Key>
@@ -252,7 +252,7 @@
             <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
             <Japanese>メニュー キーを離した時に動作を実行</Japanese>
             <Korean>메뉴키를 놓을때 행동하기</Korean>
-            <Chinesesimp>当放开选单键后就执行动作</Chinesesimp>
+            <Chinesesimp>当放开菜单键后就执行动作</Chinesesimp>
             <Chinese>當放開選單鍵後就執行動作</Chinese>
             <Turkish>Menü tuşunu bırakırken işlem yap</Turkish>
         </Key>
@@ -269,7 +269,7 @@
             <Italian>Dimensione del testo d'interazione</Italian>
             <Japanese>インタラクション文字の大きさ</Japanese>
             <Korean>상호작용 - 문자크기</Korean>
-            <Chinesesimp>互动选单文字大小</Chinesesimp>
+            <Chinesesimp>互动菜单文字大小</Chinesesimp>
             <Chinese>互動選單文字大小</Chinese>
             <Turkish>Etkileşim Metni Boyutu</Turkish>
         </Key>
@@ -286,7 +286,7 @@
             <Italian>Ombra del testo d'interazione</Italian>
             <Japanese>インタラクション文字へ影</Japanese>
             <Korean>상호작용 - 문자그림자</Korean>
-            <Chinesesimp>互动选单文字阴影</Chinesesimp>
+            <Chinesesimp>互动菜单文字阴影</Chinesesimp>
             <Chinese>互動選單文字陰影</Chinese>
             <Turkish>Etkileşim Metni Gölgesi</Turkish>
         </Key>
@@ -337,7 +337,7 @@
             <Italian>Sfondo Menù Interazioni</Italian>
             <Japanese>インタラクション メニューの背景</Japanese>
             <Korean>상호작용 메뉴 배경</Korean>
-            <Chinesesimp>互动选单背景</Chinesesimp>
+            <Chinesesimp>互动菜单背景</Chinesesimp>
             <Chinese>互動選單背景</Chinese>
             <Turkish>Etkileşim menüsü arka planı</Turkish>
         </Key>
@@ -354,7 +354,7 @@
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
             <Japanese>インタラクション メニューを開いたとき、背景にボケを与えます。</Japanese>
             <Korean>상호작용 메뉴가 열릴시 배경을 흐릿하게 처리합니다.</Korean>
-            <Chinesesimp>当互动选单开启时，模糊背景画面。</Chinesesimp>
+            <Chinesesimp>当互动菜单开启时，模糊背景画面。</Chinesesimp>
             <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
             <Turkish>Etkileşim menüsü açıkken arka planı bulanıklaştırın.</Turkish>
         </Key>
@@ -422,7 +422,7 @@
             <Italian>Aggiunge azioni interattive per l'apertura delle porte e piazzamento scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
             <Japanese>建物にある扉の開閉やはしごの昇降といった動作をインタラクションへ追加します。(街などでインタラクション メニューを開くと動作が低下します)</Japanese>
             <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
-            <Chinesesimp>增加互动选单的功能在可开启的门与建筑物的梯子上。(注意: 此功能有可能会降低系统效能，特别是在城镇区更明显)</Chinesesimp>
+            <Chinesesimp>增加互动菜单的功能在可开启的门与建筑物的梯子上。（注意：此功能有可能会降低系统效能，特别是在城镇区更明显）</Chinesesimp>
             <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上。(注意: 此功能有可能會降低系統效能，特別是在城鎮區更明顯)</Chinese>
             <Turkish>Binalara kapıları açmak ve merdivenleri monte etmek için etkileşim eylemleri ekler. (Not: Etkileşim menüsünü açarken, özellikle şehirlerde bir performansı etkiler)</Turkish>
         </Key>
@@ -438,7 +438,7 @@
             <French>Menu d'interaction</French>
             <Japanese>インタラクション メニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
-            <Chinesesimp>互动选单</Chinesesimp>
+            <Chinesesimp>互动菜单</Chinesesimp>
             <Chinese>互動選單</Chinese>
             <Turkish>Etkileşim Menüsü</Turkish>
         </Key>
@@ -454,7 +454,7 @@
             <French>Vitesse de l'animation d'interaction</French>
             <Japanese>インタラクションのアニメーション速度</Japanese>
             <Korean>상호작용 움직임 속도</Korean>
-            <Chinesesimp>互动选单动画速度</Chinesesimp>
+            <Chinesesimp>互动菜单动画速度</Chinesesimp>
             <Chinese>互動選單動畫速度</Chinese>
             <Turkish>Etkileşim Animasyon Hızı</Turkish>
         </Key>
@@ -469,7 +469,7 @@
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
             <French>Rend les animations du menu plus rapide, et réduit le temps nécessaire à l'affichage des sous menus d'action.</French>
             <Japanese>ホバーで子アクションを表示した時に出るメニューのアニメーション速度を早くしたり遅くしたりできます</Japanese>
-            <Chinesesimp>使选单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
+            <Chinesesimp>使菜单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
             <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
             <Korean>상호 작용을 표시하기 위해 메뉴 애니메이션을 빠르게 만들고 마우스를 가져 오는 데 필요한 시간을 줄입니다.</Korean>
             <Turkish>Menü animasyonlarını daha hızlı hale getirir ve alt eylemleri göstermek için fareyle üzerine gelmek için gereken süreyi azaltır</Turkish>
@@ -478,7 +478,7 @@
             <English>Selector Color</English>
             <German>Farbauswahl</German>
             <Japanese>セレクターの色</Japanese>
-            <Chinesesimp>选择器颜色</Chinesesimp>
+            <Chinesesimp>菜单颜色</Chinesesimp>
             <Chinese>選單的顏色</Chinese>
             <Italian>Controllo Settore</Italian>
             <Polish>Kolor wybierającego</Polish>
@@ -488,6 +488,7 @@
             <Czech>Barva selektoru</Czech>
             <Spanish>Selector de color</Spanish>
             <Turkish>Seçici Renk</Turkish>
+            <Korean>색상 선택</Korean>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
             <English>Consolidate single child actions</English>
@@ -497,6 +498,8 @@
             <French>Combiner les sous-actions uniques</French>
             <German>Untergeordnete Aktionen zusammenfassen</German>
             <Polish>Połącz akcje podrzędne</Polish>
+            <Chinesesimp>整合子操作</Chinesesimp>
+            <Korean>하위 동작 통합</Korean>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
             <English>Combines parent action with only one child action together.</English>
@@ -506,6 +509,8 @@
             <French>Lorsqu'un menu ne contient qu'une seule sous-action, elle est combinée avec son menu parent.</French>
             <German>Übergeordnete Aktionen mit nur einer Unteraktion zusammenfassen.</German>
             <Polish>Gdy menu zawiera tylko jedną akcję podrzędną, łączy ją z akcją nadrzędną.</Polish>
+            <Chinesesimp>主操作与子操作集成显示。</Chinesesimp>
+            <Korean>대분류로 나뉜 행동을 한눈에 보여줍니다</Korean>
         </Key>
     </Package>
 </Project>

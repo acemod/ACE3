@@ -8,12 +8,14 @@
             <Russian>Медицинский интерфейс</Russian>
             <Portuguese>GUI</Portuguese>
             <Chinese>界面</Chinese>
+            <Chinesesimp>界面</Chinesesimp>
             <Italian>GUI</Italian>
             <Czech>GUI</Czech>
             <Polish>Graficzny Interfejs Użytkownika</Polish>
             <Spanish>Interfaz gráfica</Spanish>
             <Turkish>GUI</Turkish>
             <German>Graphische Benutzeroberfläche</German>
+            <Korean>GUI</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
             <English>Enable Medical Actions</English>
@@ -23,11 +25,13 @@
             <French>Activer les actions médicales</French>
             <Portuguese>Ativar Ações Médicas</Portuguese>
             <Chinese>啟用醫療行為</Chinese>
+            <Chinesesimp>启用医疗措施</Chinesesimp>
             <Italian>Attivare azioni mediche</Italian>
             <Czech>Povolit zdravotnické akce</Czech>
             <Polish>Włącza opcje medyczne</Polish>
             <Spanish>Habilitar acciones médicas</Spanish>
             <Turkish>Medikal hareketleri etkinleştir</Turkish>
+            <Korean>의료 행동 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
@@ -37,11 +41,13 @@
             <French>Permet d'afficher les actions médicales dans le menu d'interaction, et de définir leur style visuel.</French>
             <Portuguese>Ativa as ações médicas para o menu de interação e seleciona seus estilos.</Portuguese>
             <Chinese>為互動選單啟用醫療行為以及選擇其風格。</Chinese>
+            <Chinesesimp>为交互式菜单启用医疗操作，并选择其样式。</Chinesesimp>
             <Italian>Abilita le azioni mediche per il Menu Interazione e seleziona il loro stile.</Italian>
             <Czech>Povolit zdravotnické akce pro menu interakcí a vybrat jejich styl.</Czech>
             <Polish>Umożliwia akcje medyczne w menu interakcji i wybiera ich styl.</Polish>
             <Spanish>Habilita acciones médicas para el menú de interacción y selecciona su estilo.</Spanish>
             <Turkish>Etkileşim Menüsü için tıbbi eylemleri etkinleştirir ve stillerini seçer.</Turkish>
+            <Korean>상호작용 메뉴에서 의료 행동을 하는 것을 허락합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Selections3D">
             <English>Selections (3D)</English>
@@ -56,7 +62,7 @@
             <Italian>Selezione (3D)</Italian>
             <Japanese>選択 (3D)</Japanese>
             <Korean>선택 (3d)</Korean>
-            <Chinesesimp>选择 (3D)</Chinesesimp>
+            <Chinesesimp>选择（3D）</Chinesesimp>
             <Chinese>選擇 (3D)</Chinese>
             <Turkish>Seçimler (3D)</Turkish>
         </Key>
@@ -85,11 +91,13 @@
             <French>Activer les actions médicales sur soi-même</French>
             <Portuguese>Ativar ações médicas em si mesmo</Portuguese>
             <Chinese>啟用自我醫療行為</Chinese>
+            <Chinesesimp>启用医疗自我措施</Chinesesimp>
             <Italian>Abilitare le azioni di automedicazione</Italian>
             <Czech>Povolit zdravotnické vlastní akce</Czech>
             <Polish>Włącza akcje medyczne na sobie</Polish>
             <Spanish>Habilitar las acciones médicas en uno mismo</Spanish>
             <Turkish>Kendine Tıbbi Müdahele Etmeyi Etkinleştir</Turkish>
+            <Korean>자가 의료 행동 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_Description">
             <English>Enables medical actions for the Self Interaction Menu.</English>
@@ -99,11 +107,13 @@
             <French>Active les actions médicales du menu d'interaction personnel.</French>
             <Portuguese>Ativa as ações médicas do menu de interação pessoal.</Portuguese>
             <Chinese>為自我互動選單啟用醫療行為。</Chinese>
+            <Chinesesimp>为自我交互菜单启用医疗操作。</Chinesesimp>
             <Italian>Abilita il menu per le interazioni mediche personali</Italian>
             <Czech>Povoluje zdravotnické akce v menu vlastních interakcí.</Czech>
             <Polish>Umożliwia działania medyczne w menu własnej interakcji.</Polish>
             <Spanish>Activa las acciones médicas para el menú de interacción personal</Spanish>
             <Turkish>Kişisel Etkileşim Menüsü için tıbbi eylemleri etkinleştirir.</Turkish>
+            <Korean>자기 상호작용 메뉴에서 의료 행동을 하는 것을 허락합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_DisplayName">
             <English>Enable Medical Menu</English>
@@ -113,11 +123,13 @@
             <French>Activer le menu médical</French>
             <Portuguese>Ativar Menu Médico</Portuguese>
             <Chinese>啟用醫療選單</Chinese>
+            <Chinesesimp>启用医疗菜单</Chinesesimp>
             <Italian>Abilita il menu medico</Italian>
             <Czech>Povolit Zdravotnické menu</Czech>
             <Polish>Włącz Menu Medyczne</Polish>
             <Spanish>Activar menú médico</Spanish>
             <Turkish>Medikal Menüyü Etkinleştir</Turkish>
+            <Korean>의료 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
@@ -127,11 +139,13 @@
             <French>Permet l'utilisation du menu médical via le menu d'interaction ou l'appui d'une touche.</French>
             <Portuguese>Ativa o uso do Menu Médico atráves da Tecla ou Menu de Interação.</Portuguese>
             <Chinese>啟用以互動選單或者按鍵綁定所呼出的高效醫療選單</Chinese>
+            <Chinesesimp>通过按键绑定或交互菜单启用医疗菜单。</Chinesesimp>
             <Italian>Abilita l'uso del Menu Medico attraverso il menu tastiera o il menu di interazione.</Italian>
             <Czech> Povoluje používání Zdravotnického menu klávesovou zkratku nebo skrze menu interakcí.</Czech>
             <Polish>Umożliwia korzystanie z menu medycznego poprzez  skrót lub menu interakcji.</Polish>
             <Spanish>Activa el uso del menú médico a través de la tecla o del menú de interacción</Spanish>
             <Turkish>Medikal Menünün bir tuşla veya etkileşim menüsü aracılığıyla kullanılmasını sağlar.</Turkish>
+            <Korean>단축키나 상호작용을 통해 의료 메뉴를 활성화 할지 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
             <English>Reopen Medical Menu</English>
@@ -141,11 +155,13 @@
             <French>Rouvrir le menu médical</French>
             <Portuguese>Reabrir Menu Médico</Portuguese>
             <Chinese>醫療選單二度開啟</Chinese>
+            <Chinesesimp>重新打开医疗菜单</Chinesesimp>
             <Italian>Riaprire il menù medico</Italian>
             <Czech>Znovu otevřít Zdravotnické menu</Czech>
             <Polish>Otwiera ponownie menu medyczne</Polish>
             <Spanish>Reabrir menú médico</Spanish>
             <Turkish>Medikal Menüyü Yeniden Aç</Turkish>
+            <Korean>의료 메뉴 다시 열기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_Description">
             <English>Reopen the Medical Menu after successful treatment.</English>
@@ -155,11 +171,13 @@
             <French>Réouvre le menu médical suite à l'application d'un soin.</French>
             <Portuguese>Reabrir Menu Médico após um tratamento com sucesso</Portuguese>
             <Chinese>當治療完成後二度打開醫療選單</Chinese>
+            <Chinesesimp>治疗成功后，重新打开医疗菜单。</Chinesesimp>
             <Italian>Riaprire il menu medico dopo il trattamento con successo.</Italian>
             <Czech>Otevře Zdravotnické menu po úspěšném dokončení zdravotnické akce.</Czech>
             <Polish>Otwiera ponownie menu medyczne po udanym leczeniu.</Polish>
             <Spanish>Reabrir menú médico después de completar un tratamiento</Spanish>
             <Turkish>Başarılı bir tedaviden sonra Tıbbi Menüyü yeniden açın.</Turkish>
+            <Korean>성공적으로 치료한 뒤 의료 메뉴를 다시 열지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -169,11 +187,13 @@
             <French>Distance maximale</French>
             <Portuguese>Distância Máxima</Portuguese>
             <Chinese>最大醫療距離</Chinese>
+            <Chinesesimp>最大医疗距离</Chinesesimp>
             <Italian>Massima distanza</Italian>
             <Czech>Maximální vzdálenost</Czech>
             <Polish>Maksymalny dystans</Polish>
             <Spanish>Distancia máxima</Spanish>
             <Turkish>Maksimum Mesafe</Turkish>
+            <Korean>최대 거리</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
@@ -183,11 +203,13 @@
             <French>Définit la distance (en mètres) à partir de laquelle il n'est plus possible d'activer le menu médical pour traiter un patient.</French>
             <Portuguese>A Distância máxima do paciente para que o Menu Médico possa ser aberto.</Portuguese>
             <Chinese>設定距離多遠以內可以對目標使用醫療選單</Chinese>
+            <Chinesesimp>设定距离多远以内可以对目标使用医疗菜单</Chinesesimp>
             <Italian>Distanza massima da cui si può aprire il Menu Medico.</Italian>
             <Czech>Maximální vzdálenost ze které je možné otevřít Zdravotnické menu.</Czech>
             <Polish>Maksymalny dystans w którym menu medyczne może zostać otwarte.</Polish>
             <Spanish>Distancia máxima desde el paciente para que el menú pueda ser abierto</Spanish>
             <Turkish>Tıbbi Menünün açılabileceği maksimum mesafe.</Turkish>
+            <Korean>의료 메뉴를 열 수 있는 최대 거리를 지정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_DisplayName">
             <English>Show Triage Level in Interaction Menu</English>
@@ -197,6 +219,8 @@
             <Russian>Показывать группу триажа в меню взаимодействий</Russian>
             <Polish>Pokaż poziom Triażu w menu interakcji</Polish>
             <German>Zeige Triage-Einstufung im Interaktionsmenü</German>
+            <Chinesesimp>在交互式菜单中显示分诊级别</Chinesesimp>
+            <Korean>상호작용 메뉴에서 부상자 카드 보기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_Description">
             <English>Shows the patient's triage level by changing the color of the main and medical menu actions.</English>
@@ -206,6 +230,8 @@
             <Russian>Отображает установленную группу карты медицинской сортировки (триажа), изменяя цвет действий основного и медицинского меню.</Russian>
             <Polish>Pokazuje poziom Triażu pacjenta poprzez zmianę koloru ikony w menu interakcji.</Polish>
             <German>Zeigt die Triage-Einstufung des Patienten durch Ändern der Farbe der Aktionen des Hauptmenüs und des medizinischen Menüs an.</German>
+            <Chinesesimp>通过改变主菜单和医疗菜单动作的颜色来显示伤员的分诊级别。</Chinesesimp>
+            <Korean>환자의 부상자 카드를 상호작용에서 볼 수 있게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -431,7 +457,7 @@
             <Italian>Bendaggi/Fratture</Italian>
             <Japanese>包帯 / 骨折</Japanese>
             <Korean>붕대 / 골절</Korean>
-            <Chinesesimp>包扎 / 骨折</Chinesesimp>
+            <Chinesesimp>包扎/骨折</Chinesesimp>
             <Chinese>繃帶 / 骨折</Chinese>
             <Turkish>Bandaj / Kırıklar</Turkish>
         </Key>
@@ -495,7 +521,7 @@
             <Italian>Trascina / Trasporta</Italian>
             <Japanese>引きずる / 担ぐ</Japanese>
             <Korean>끌기 / 들기</Korean>
-            <Chinesesimp>拖 / 背</Chinesesimp>
+            <Chinesesimp>拖/背</Chinesesimp>
             <Chinese>拖 / 背</Chinese>
             <Turkish>Sürükle / Taşı</Turkish>
         </Key>
@@ -511,7 +537,7 @@
             <Italian>Attiva (Te Stesso)</Italian>
             <Japanese>切り替え (自分)</Japanese>
             <Korean>토글 (자신)</Korean>
-            <Chinesesimp>切换 (自己)</Chinesesimp>
+            <Chinesesimp>切换（自己）</Chinesesimp>
             <Chinese>切換 (自己)</Chinese>
             <Turkish>Değiştir (Şahsi)</Turkish>
         </Key>
@@ -977,6 +1003,7 @@
             <Chinesesimp>骨折</Chinesesimp>
             <Turkish>Kırık</Turkish>
             <German>Gebrochen</German>
+            <Korean>골절됨</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
@@ -992,6 +1019,7 @@
             <Chinesesimp>已用夹板固定</Chinesesimp>
             <Turkish>Atel Uygulandı</Turkish>
             <German>Schiene angelegt</German>
+            <Korean>부목 적용함</Korean>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1008,6 +1036,7 @@
             <Spanish>Algo de sangre perdida</Spanish>
             <Turkish>Az kan kaybı var</Turkish>
             <Chinesesimp>轻微失血</Chinesesimp>
+            <Korean>피를 조금 잃음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
             <English>Lost a lot of blood</English>
@@ -1021,7 +1050,7 @@
             <Italian>Ha perso parecchio sangue</Italian>
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Japanese>大量失血した</Japanese>
-            <Korean>많은 양의 혈액을 잃음</Korean>
+            <Korean>피를 꽤 잃음</Korean>
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血中</Chinese>
             <Turkish>Çok fazla kan kaybı var</Turkish>
@@ -1040,6 +1069,7 @@
             <Spanish>Perdida gran cantidad de sangre</Spanish>
             <Turkish>Çok miktarda kan kaybetti</Turkish>
             <Chinesesimp>严重失血</Chinesesimp>
+            <Korean>피를 많이 잃음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
@@ -1055,6 +1085,7 @@
             <Spanish>Perdida una cantidad fatal de sangre</Spanish>
             <Turkish>Ölümcül miktarda kan kaybetti</Turkish>
             <Chinesesimp>致命失血</Chinesesimp>
+            <Korean>피를 심각할만큼 잃음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -1068,7 +1099,7 @@
             <Italian>Laccio Emostatico [CAT]</Italian>
             <Japanese>止血帯 [CAT]</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <Chinesesimp>止血带 (军用型)</Chinesesimp>
+            <Chinesesimp>止血带（军用型）</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
             <Turkish>Turnike [CAT]</Turkish>
         </Key>
@@ -1083,7 +1114,7 @@
             <Czech>Nasofaryngeální trubice [NPA]</Czech>
             <Italian>Tubo Nasofaringeo [NPA]</Italian>
             <Japanese>鼻咽頭チューブ [NPA]</Japanese>
-            <Korean>비-인두 기도기 [NPA]</Korean>
+            <Korean>기도유지기 [NPA]</Korean>
             <Chinesesimp>鼻咽管</Chinesesimp>
             <Chinese>鼻咽管</Chinese>
             <Turkish>Nazofarengeal Tüp [NPA]</Turkish>
@@ -1119,6 +1150,7 @@
             <Turkish>Parsiyel %1</Turkish>
             <Russian>Частичное %1</Russian>
             <Chinesesimp>未完全处理的 %1</Chinesesimp>
+            <Korean>부분 %1</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_IGUI_PatientInfo">
             <English>Patient Info</English>
@@ -1130,6 +1162,7 @@
             <Turkish>Hasta Bilgileri</Turkish>
             <Spanish>Información de paciente</Spanish>
             <German>Patienteninformation</German>
+            <Korean>환자 정보</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColors">
             <English>Blood Loss Colors</English>
@@ -1138,14 +1171,18 @@
             <French>Couleurs des hémorragies</French>
             <German>Farben für Blutverlust</German>
             <Polish>Kolory utraty krwi</Polish>
+            <Chinesesimp>失血颜色</Chinesesimp>
+            <Korean>출혈 색상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColor_Description">
-            <English>Blood Loss Colors, That Used in Medical GUI. 10 Color Gradient.</English>
+            <English>Defines the 10 color gradient used to indicate blood loss in Medical GUIs.</English>
             <Russian>Цвета кровопотери, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
             <Japanese>医療 GUI 内で失血量を 10 段階のカラーで表します。</Japanese>
             <French>Couleurs utilisées pour afficher les hémorragies dans l'interface médicale. Dégradé de 10 couleurs.</French>
             <German>Farben für Blutverlust, die in dem Medizinischen Menü verwendet werden. 10-Farben Farbverlauf.</German>
             <Polish>Kolory używane do wyświetlania krwawienia w interfejsie medycznym. Gradient 10 kolorów.</Polish>
+            <Chinesesimp>失血颜色，用于医学图形用户界面。10种渐变颜色。</Chinesesimp>
+            <Korean>출혈로 인한 의료 GUI의 색상을 변경합니다. 총 10가지 색상이 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColorX_DisplayName">
             <English>Blood Loss Color %1</English>
@@ -1154,6 +1191,8 @@
             <French>Hémorragies - couleur %1</French>
             <German>Blutverlustfarbe %1</German>
             <Polish>Krwawienie - kolor %1</Polish>
+            <Chinesesimp>失血颜色 %1</Chinesesimp>
+            <Korean>출혈 색상 %1</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColors">
             <English>Damage Colors</English>
@@ -1162,14 +1201,18 @@
             <French>Couleur des dégâts</French>
             <German>Farben für Schaden</German>
             <Polish>Kolory obrażeń</Polish>
+            <Chinesesimp>负伤颜色</Chinesesimp>
+            <Korean>피해 색상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
-            <English>Damage Colors, That Used in Medical GUI. 10 Color Gradient.</English>
+            <English>Defines the 10 color gradient used to indicate damage in Medical GUIs.</English>
             <Russian>Цвета урона, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
             <Japanese>医療 GUI 内で負傷を 10 段階のカラーで表します。</Japanese>
             <French>Couleurs utilisées pour afficher les dégâts dans l'interface médicale. Dégradé de 10 couleurs.</French>
             <German>Farben für Schaden, die in dem medizinischen Menü verwendet werden. 10-Farben Farbverlauf.</German>
             <Polish>Kolory używane do wyświetlania obrażeń w interfejsie medycznym. Gradient 10 kolorów.</Polish>
+            <Chinesesimp>负伤颜色，用于医学图形用户界面。10种渐变颜色。</Chinesesimp>
+            <Korean>의료 GUI에 쓰이는 피해 색상입니다. 총 10가지 색상이 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColorX_DisplayName">
             <English>Damage Color %1</English>
@@ -1178,6 +1221,8 @@
             <French>Dégâts - couleur %1</French>
             <German>Schadensfarbe %1</German>
             <Polish>Obrażenia - kolor %1</Polish>
+            <Chinesesimp>负伤颜色 %1</Chinesesimp>
+            <Korean>피해 색상 %1</Korean>
         </Key>
     </Package>
 </Project>

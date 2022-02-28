@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Makes object catch fire. Only call from events. Local effects only.
  * Arbitrary values to ignite people. Assumed maximum is "10".
  *
@@ -137,7 +137,7 @@ if (_isBurning) exitWith {};
     };
 
     // always keep flare visible to perceiving unit as long as it isnt the player
-    if !(_unit isEqualTo ace_player) then {
+    if (_unit isNotEqualTo ace_player) then {
         private _relativeAttachPoint = [0, 0, 0.3];
         if (_distanceToUnit > 1.5) then {
             _relativeAttachPoint = (vectorNormalized (_unit worldToModelVisual (getPos ace_player))) vectorMultiply linearConversion [5, 30, _distanceToUnit, 0.5, 1.5];
@@ -162,7 +162,7 @@ if (_isBurning) exitWith {};
                         [QGVAR(burn), [ace_player, _intensity * (7 / 8), _instigator]] call CBA_fnc_globalEvent;
                     };
                 } else {
-                    if ((ace_player isKindOf "Man") && { !(_unit isEqualTo ace_player) }) then {
+                    if ((ace_player isKindOf "Man") && {_unit isNotEqualTo ace_player}) then {
                         private _burnCounter = ace_player getVariable [QGVAR(burnCounter), 0];
                         if (_distanceToUnit < BURN_PROPOGATE_DISTANCE) then {
                             if (_burnCounter < BURN_PROPOGATE_COUNTER_MAX) then {
@@ -279,7 +279,7 @@ if (_isBurning) exitWith {};
     _lightFlare setLightFlareMaxDistance 100;
     _lightFlare setLightFlareSize 0;
 
-    if !(_unit isEqualTo ace_player) then {
+    if (_unit isNotEqualTo ace_player) then {
         private _relativeAttachPoint = (vectorNormalized (_unit worldToModelVisual (getPos ace_player))) vectorMultiply 1;
         _relativeAttachPoint set [2, 0.5];
         _lightFlare attachTo [_unit, _relativeAttachPoint];

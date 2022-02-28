@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Chemlights
+component: chemlights
 description: Adds enhanced types of chemlights.
 group: feature
 category: equipment
@@ -21,7 +22,3 @@ version:
 
 ### 1.1 Chemlights
 Adds throwable chemlights in the colors white, red, green and yellow. Additionally "Hi" chemlights are added that emit a brighter glow.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="chemlights" %}

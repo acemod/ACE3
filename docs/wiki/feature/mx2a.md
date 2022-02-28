@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: MX-2A
+component: mx2a
 description: MX-2A thermal imaging device.
 group: feature
 category: equipment
@@ -15,7 +16,3 @@ version:
 ## 1. Overview
 
 Adds the MX-2A thermal imaging device.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="mx2a" %}
