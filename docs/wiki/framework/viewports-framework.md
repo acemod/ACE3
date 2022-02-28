@@ -24,10 +24,10 @@ class myVehicle {
             type = ""; 
              // camLocation [ARRAY or STRING] - Required
             camLocation = "memoryPointP1";
-            camLocation[] = {1,2,3};
+            camLocation[] = {1,2,3}; // model offset
             // camAttach [ARRAY or NUMBER] - Required
-            camAttach[] = {0,0};
-            camAttach = 55;
+            camAttach[] = {0,0}; // Turret path
+            camAttach = 55; // Direction in degrees
             // screenLocation [ARRAY or STRING] - Optional
             camLocation = "memoryPointP1x";
             camLocation[] = {1,2,3};
