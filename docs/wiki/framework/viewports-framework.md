@@ -29,8 +29,8 @@ class myVehicle {
             camAttach[] = {0,0}; // Turret path
             camAttach = 55; // Direction in degrees
             // screenLocation [ARRAY or STRING] - Optional
-            camLocation = "memoryPointP1x";
-            camLocation[] = {1,2,3};
+            screenLocation = "memoryPointP1x";
+            screenLocation[] = {1,2,3};
             // maxDistance [NUMBER] - Optional
             maxDistance = 0.75;
             // compartments [ARRAY] - Optional
