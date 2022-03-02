@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Disposable
+component: disposable
 description: Makes NLAW disposable.
 group: feature
 category: equipment
@@ -15,7 +16,3 @@ version:
 ## 1. Overview
 
 The NLAW is shoulder fired and disposable, firing just once before being needed to be disposed of. This feature makes the NLAW disposable.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="disposable" %}

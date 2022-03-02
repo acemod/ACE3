@@ -32,7 +32,7 @@ if (_speedLimit != 0) exitWith { TRACE_1("speed limit set by external source",_s
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
-GVAR(speedLimit) = speed _vehicle max 5;
+GVAR(speedLimit) = round (speed _vehicle max 5);
 
 [{
     params ["_args", "_idPFH"];
@@ -42,11 +42,13 @@ GVAR(speedLimit) = speed _vehicle max 5;
         private _uavControll = UAVControl _vehicle;
         if ((_uavControll select 0) != _driver || _uavControll select 1 != "DRIVER") then {
             GVAR(isSpeedLimiter) = false;
+            TRACE_1("UAV driver changed, disabling speedlimit",_vehicle);
             _vehicle setCruiseControl [0, false];
         };
     } else {
         if (_driver != driver _vehicle) then {
             GVAR(isSpeedLimiter) = false;
+            TRACE_3("Vehicle driver changed, disabling speedlimit",_driver,driver _vehicle,_vehicle);
             _vehicle setCruiseControl [0, false];
         };
     };
@@ -57,7 +59,8 @@ GVAR(speedLimit) = speed _vehicle max 5;
     };
 
     getCruiseControl _vehicle params ["_currentSpeedLimit"];
-    if (_currentSpeedLimit != GVAR(speedLimit)) then {
+    if (round _currentSpeedLimit != GVAR(speedLimit)) then {
+        TRACE_2("Updating speed limit",GVAR(speedLimit),_vehicle);
         _vehicle setCruiseControl [GVAR(speedLimit), false];
     };
 

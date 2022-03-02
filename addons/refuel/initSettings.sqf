@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_refuel]:
-
 [
     QGVAR(rate), "SLIDER",
     [LSTRING(RefuelSettings_speed_DisplayName), LSTRING(RefuelSettings_speed_Description)],

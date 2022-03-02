@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM and PabstMirror
+ * Author: Dani (TCVM) and PabstMirror
  * Handles returned ammo (either from unloading or leftovers from linking)
  *
  * Arguments:

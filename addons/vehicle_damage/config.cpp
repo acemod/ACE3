@@ -9,7 +9,7 @@ class CfgPatches {
         // ammo/vehicle config defines touch all of these
         requiredAddons[] = { "ace_common", "ace_cookoff" };
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Brandon (TCVM)"};
+        authors[] = {"Dani (TCVM)"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

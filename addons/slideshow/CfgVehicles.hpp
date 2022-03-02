@@ -47,6 +47,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 0;
             };
+            class Selection {
+                displayName = CSTRING(Selection_DisplayName);
+                description = CSTRING(Selection_Description);
+                typeName = "NUMBER";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Description);

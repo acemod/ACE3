@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror & TCVM
+ * Author: PabstMirror &Dani (TCVM)
  * Tests if unit can load a magazine into a static weapon.
  *
  * Arguments:

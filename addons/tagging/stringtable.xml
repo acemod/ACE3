@@ -7,7 +7,7 @@
             <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
             <German>Markieren (Spraydose)</German>
-            <Korean>뿌리기</Korean>
+            <Korean>낙서하기</Korean>
             <French>Marquage</French>
             <Italian>Marcamento</Italian>
             <Chinesesimp>喷漆</Chinesesimp>
@@ -23,7 +23,7 @@
             <Japanese>標準で開くタグ付けシステムの設定を行います。</Japanese>
             <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
             <German>Konfiguriert, wie das Markieren standardmäßig funktioniert.</German>
-            <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
+            <Korean>낙서 시스템의 기본사항을 설정합니다.</Korean>
             <French>Configure le fonctionnement par défaut du système de marquage.</French>
             <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
             <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
@@ -38,7 +38,7 @@
             <Japanese>クイック タグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
             <German>Schnelle Markierung (Spraydose)</German>
-            <Korean>빠른 뿌리기</Korean>
+            <Korean>스프레이 페인트 - 빠른 낙서</Korean>
             <French>Peinture en spray - Marquage rapide</French>
             <Italian>Marcamento Rapido</Italian>
             <Chinesesimp>快速喷漆</Chinesesimp>
@@ -54,10 +54,10 @@
             <Japanese>インタラクション ポイントにむけてタグ付けをします。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
-            <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
+            <Korean>상호작용시 표시할 낙서를 고릅니다.</Korean>
             <French>Type de marquage à appliquer sur le point visé.</French>
             <Italian>Azione eseguita sul punto di interazione dei tag principali.</Italian>
-            <Chinesesimp>直接喷漆在互动选单瞄准的点上。</Chinesesimp>
+            <Chinesesimp>直接喷漆在互动菜单瞄准的点上。</Chinesesimp>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
             <Portuguese>Ação executada no ponto principal de marcação</Portuguese>
             <Czech>Akce prováděná v hlavním bodě značky interakce.</Czech>
@@ -121,7 +121,7 @@
             <Portuguese>Marcar</Portuguese>
             <Russian>Маркер</Russian>
             <Japanese>タグ</Japanese>
-            <Korean>뿌리기</Korean>
+            <Korean>낙서하기</Korean>
             <French>Tag</French>
             <Chinesesimp>喷漆</Chinesesimp>
             <Chinese>噴漆</Chinese>
@@ -266,7 +266,7 @@
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
             <Japanese>スプレー缶は壁にタグ付できます。</Japanese>
-            <Korean>벽에 뿌릴 수 있는 스프레이캔 입니다.</Korean>
+            <Korean>벽에 낙서할 수 있는 스프레이캔 입니다.</Korean>
             <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
             <Chinese>噴漆可噴塗在牆壁上</Chinese>
         </Key>

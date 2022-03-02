@@ -271,6 +271,8 @@ def pboproject_settings():
         k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
         winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
+        winreg.SetValueEx(k, "wildcard_exclude_from_pbo_normal", 0, winreg.REG_SZ, value_exclude)
+        winreg.SetValueEx(k, "wildcard_exclude_from_pbo_unbinarised_missions", 0, winreg.REG_SZ, value_exclude)
     except:
         raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
 
@@ -1301,7 +1303,7 @@ See the make.cfg file for additional build options.
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
-                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                        cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
                     color("grey")
                     if quiet:

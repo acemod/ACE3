@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Fortify
+component: fortify
 description: Enables player to build fortifications.
 group: feature
 category: interaction
@@ -15,7 +16,7 @@ redirect_from: "/wiki/featurex/fortify.html"
 
 ## 1. Overview
 
-Enable players to place down fortifications. Budget enables mission makers / admin to restrict the amount of resources available.
+Enable players to place down fortifications. Budget enables mission makers / admin to restrict the amount of resources available and how long it will take to construct the fortifications.
 
 ## 2. Usage
 
@@ -36,7 +37,3 @@ Please note that to use this function the Fortify module needs to be placed down
 - Using <kbd>Alt</kbd> / <kbd>Ctrl</kbd> / <kbd>Shift</kbd> + <kbd>Scroll Wheel</kbd> you can rotate object on different axis.
 - You can use planks to get up on rooftops.
 - Holding <kbd>Ctrl</kbd> while placing allows for placing multiple objects of the same type.
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="fortify" %}

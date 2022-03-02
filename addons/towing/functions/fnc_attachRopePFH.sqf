@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * PFH which allows the user to attach a rope to the given target vehicle
  *
  * Arguments:
@@ -50,7 +50,7 @@ if (_intersections isNotEqualTo []) then {
 
         GVAR(attachHelper) setVariable [QGVAR(object), _intersectObject];
     };
-    
+
 };
 
 if (_source isNotEqualTo [0, 0, 0]) then {

@@ -8,6 +8,8 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
+GVAR(allToolKits) = call (uiNamespace getVariable QGVAR(allToolKits));
+
 ["ACE_RepairItem_Base", "killed", {
     params ["_object"];
 

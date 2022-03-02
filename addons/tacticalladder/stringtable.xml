@@ -13,7 +13,7 @@
             <Hungarian>Teleszkopikus létra</Hungarian>
             <Portuguese>Escada telescópica</Portuguese>
             <Japanese>タクティカル ラダー</Japanese>
-            <Korean>로프 사다리</Korean>
+            <Korean>접이식 사다리</Korean>
             <Chinesesimp>伸缩梯子</Chinesesimp>
             <Chinese>伸縮梯子</Chinese>
             <Turkish>Katlanabilir Merdiven</Turkish>
@@ -31,7 +31,7 @@
             <Portuguese>Implantar escada</Portuguese>
             <Japanese>ラダーを設置</Japanese>
             <Korean>사다리 배치</Korean>
-            <Chinesesimp>布署梯子</Chinesesimp>
+            <Chinesesimp>部署梯子</Chinesesimp>
             <Chinese>佈署梯子</Chinese>
             <Turkish>Merdiveni Konuşlandır</Turkish>
         </Key>
@@ -47,7 +47,7 @@
             <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
             <Japanese>ラダーを落とす</Japanese>
-            <Korean>사다리 놓기</Korean>
+            <Korean>사다리 내려놓기</Korean>
             <Chinesesimp>降下梯子</Chinesesimp>
             <Chinese>降下梯子</Chinese>
             <Turkish>Merdiveni Bırak</Turkish>
@@ -95,7 +95,7 @@
             <Hungarian>Létra elhelyezése</Hungarian>
             <Portuguese>Posicionar escada</Portuguese>
             <Japanese>ラダーの位置</Japanese>
-            <Korean>사다리 위치</Korean>
+            <Korean>사다리 설치</Korean>
             <Chinesesimp>梯子位置</Chinesesimp>
             <Chinese>梯子位置</Chinese>
             <Turkish>Merdiveni Taşı</Turkish>

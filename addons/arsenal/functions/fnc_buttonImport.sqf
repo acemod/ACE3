@@ -25,10 +25,10 @@ if (GVAR(shiftState) && {is3DEN}) then {
 
     {
         if (
-                count _x == 2 && 
-                {_x select 0 isEqualType ""} && 
+                count _x == 2 &&
+                {_x select 0 isEqualType ""} &&
                 {_x select 0 != ""} &&
-                {_x select 1 isEqualType []} && 
+                {_x select 1 isEqualType []} &&
                 {count (_x select 1) == 10}
         ) then {
             _x call FUNC(addDefaultLoadout);
