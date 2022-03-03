@@ -19,7 +19,7 @@ if ((!GVAR(isMaster)) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(comm
     false
 };
 
- params ["_isOverride"];
+params ["_isOverride"];
 
 private _vehicle = vehicle ace_player;
 private _config = configOf _vehicle;
