@@ -8,7 +8,13 @@
             <English>Commander Override</English>
         </Key>
         <Key ID="STR_ACE_HunterKiller_commanderOverride_description">
-            <English>From command turret, slews gunner turret onto your target</English>
+            <English>From command turret slew gunner turret onto your target</English>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_commanderObserve">
+            <English>Commander Observe</English>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_commanderObserve_description">
+            <English>From command turret slews your turret onto gunner's target</English>
         </Key>
     </Package>
 </Project>

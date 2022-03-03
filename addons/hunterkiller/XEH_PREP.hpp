@@ -1,4 +1,5 @@
 LOG("prep");
 
-PREP(eachFrame);
+PREP(keydown);
+PREP(slew);
 PREP(turretChangedEH);
