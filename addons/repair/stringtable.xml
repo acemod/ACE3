@@ -1156,21 +1156,6 @@
             <Chinesesimp>提供修复系统给所有载具</Chinesesimp>
             <Chinese>提供修復系統給所有載具</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_engineerSetting_nobody">
-            <English>Nobody</English>
-            <German>Niemand</German>
-            <Polish>Nikt</Polish>
-            <Portuguese>Ninguém</Portuguese>
-            <Russian>Никто</Russian>
-            <Spanish>Nadie</Spanish>
-            <French>Personne</French>
-            <Czech>Nikdo</Czech>
-            <Italian>Nessuno</Italian>
-            <Japanese>誰も</Japanese>
-            <Korean>아무도</Korean>
-            <Chinesesimp>沒有人</Chinesesimp>
-            <Chinese>沒有人</Chinese>
-        </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_anyone">
             <English>Anyone</English>
             <German>Jeder</German>
