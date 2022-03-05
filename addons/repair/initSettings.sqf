@@ -26,6 +26,23 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(patchWheelEnabled), "LIST",
+    [LSTRING(patchWheelEnabled_name), LSTRING(patchWheelEnabled_description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [[-1,0,1,2],["str_player_none", LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],1], // default value
+    true // isGlobal
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(patchWheelRequiredItems),
+    "LIST",
+    [LSTRING(patchWheelRequiredItems_DisplayName), LSTRING(patchWheelRequiredItems_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [[[], [ANY_TOOLKIT_FAKECLASS]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(repairDamageThreshold), "SLIDER",
     [LSTRING(repairDamageThreshold_name), LSTRING(repairDamageThreshold_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
@@ -125,13 +142,13 @@
     {[QGVAR(autoShutOffEngineWhenStartingRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
-
 [
-    QGVAR(patchWheelEnabled), "CHECKBOX",
-    [LSTRING(patchWheelEnabled_name), LSTRING(patchWheelEnabled_description)],
+    QGVAR(fullRepairRequiredItems),
+    "LIST",
+    [LSTRING(FullRepairRequiredItems_DisplayName), LSTRING(FullRepairRequiredItems_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    true, // default value
-    true // isGlobal
+    [[[], [ANY_TOOLKIT_FAKECLASS]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -140,5 +157,14 @@
     [LSTRING(patchWheelTime_DisplayName), LSTRING(patchWheelTime_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
     [0.1, 60, 5, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(patchWheelMaximumRepair),
+    "SLIDER",
+    [LSTRING(patchWheelMaximumRepair_DisplayName), LSTRING(patchWheelMaximumRepair_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [0, 1, 0.3, 1, true],
     true
 ] call CBA_fnc_addSetting;

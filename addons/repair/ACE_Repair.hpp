@@ -36,6 +36,8 @@ class ACE_Repair {
             condition = QFUNC(canPatchWheel);
             repairingTime = QFUNC(getPatchWheelTime);
             callbackProgress = QFUNC(doPatchWheelProgress);
+            items = QGVAR(patchWheelRequiredItems);
+            requiredEngineer = QGVAR(engineerSetting_Wheel);
             callbackSuccess = "";
             claimObjects[] = {};
         };

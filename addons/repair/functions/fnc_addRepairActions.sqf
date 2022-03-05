@@ -70,7 +70,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
             [_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair) ||
             {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(canRepair)}
         };
-        private _action = [_root, "Wheel", "", {}, _condition, {}, [_hitpoint], _position, 2, nil, FUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
+        private _action = [_root, "Wheel", ["","#FFFFFF"], {}, _condition, {}, [_hitpoint], _position, 2, nil, FUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
         // An action to remove the wheel is required

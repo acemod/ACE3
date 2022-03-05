@@ -2,6 +2,7 @@
 PREP(addRepairActions);
 PREP(addSpareParts);
 PREP(canMiscRepair);
+PREP(canPatchRemovedWheel);
 PREP(canPatchWheel);
 PREP(canRemove);
 PREP(canRepair);
@@ -35,6 +36,7 @@ PREP(moduleAssignRepairVehicle);
 PREP(moduleAssignRepairFacility);
 PREP(moduleRepairSettings);
 PREP(normalizeHitPoints);
+PREP(patchRemovedWheel);
 PREP(repair);
 PREP(repair_failure);
 PREP(repair_success);

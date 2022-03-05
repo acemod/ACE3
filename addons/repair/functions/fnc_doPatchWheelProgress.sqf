@@ -4,15 +4,15 @@
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
  *
  * Arguments:
- * 0: Unit that does the repairing <OBJECT>
- * 1: Vehicle to repair <OBJECT>
- * 2: Selected hitpoint <STRING>
+ * 0: Unit that does the patching <OBJECT>
+ * 1: Vehicle to patch <OBJECT>
+ * 2: Selected wheel hitpoint <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [unit, vehicle, "hitpoint"] call ace_repair_fnc_doRemoveWheel
+ * [unit, vehicle, "hitpoint"] call ace_repair_fnc_doPatchWheelProgress
  *
  * Public: No
  */
@@ -24,18 +24,16 @@ TRACE_3("params",_unit,_vehicle,_hitPoint);
 // get current hitpoint damage
 private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 
-private _iterationsRemaining = (_hitPointDamage - 0.30) / 0.05;
-systemChat format ["%1 iterations remaining", _iterationsRemaining];
-systemChat format ["%1 - %2", (_totalTime - _elapsedTime), _iterationsRemaining * GVAR(patchWheelTime)];
+private _iterationsRemaining = ceil ((_hitPointDamage - GVAR(patchWheelMaximumRepair)) / 0.05) - 1;
 if ((_totalTime - _elapsedTime) > _iterationsRemaining * GVAR(patchWheelTime)) exitWith {true};
 
 _hitPointDamage = _hitPointDamage - 0.05;
 
-if (_hitPointDamage <= 0) then {
-    _hitPointDamage = 0;
+if (_hitPointDamage < GVAR(patchWheelMaximumRepair)) then {
+    _hitPointDamage = GVAR(patchWheelMaximumRepair);
 };
 
 // raise event to set the new hitpoint damage
 [QGVAR(setWheelHitPointDamage), [_vehicle, _hitPoint, _hitPointDamage], _vehicle] call CBA_fnc_targetEvent;
 
-_hitPointDamage > 0.30
+_hitPointDamage > GVAR(patchWheelMaximumRepair)

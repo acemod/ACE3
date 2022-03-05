@@ -403,6 +403,24 @@ class CfgVehicles {
         };
 
         editorPreview = QPATHTOF(data\preview_wheel.jpg);
+
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                distance = 2;
+                condition = QUOTE(true);
+                statement = "";
+                modifierFunction = QUOTE(_this call FUNC(modifyInteraction));
+                class GVAR(Patch) {
+                    displayName = CSTRING(PatchWheel);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canPatchRemovedWheel));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(patchRemovedWheel));
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotOnLadder", "isNotSwimming", "isNotSitting"};
+                    icon = "a3\ui_f\data\igui\cfg\actions\repair_ca.paa";
+                };
+            };
+        };
     };
 
     // disable vanilla repair
