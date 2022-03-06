@@ -407,7 +407,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
-                distance = 2;
+                distance = 4;
                 condition = QUOTE(true);
                 statement = "";
                 modifierFunction = QUOTE(_this call FUNC(modifyInteraction));
