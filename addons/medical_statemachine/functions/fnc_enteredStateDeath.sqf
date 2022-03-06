@@ -17,6 +17,7 @@
 
 params ["_unit"];
 if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) exitWith {
+    if ((_unit getVariable [QEGVAR(medical,causeOfDeath), ""]) == "#scripted") exitWith {};
     WARNING_1("enteredStateDeath: State transition on dead or null unit - %1",_unit);
 };
 
