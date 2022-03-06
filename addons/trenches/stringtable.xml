@@ -44,7 +44,7 @@
             <Russian>Окоп - Малый</Russian>
             <Japanese>塹壕 - 小型</Japanese>
             <Korean>참호 - 소형</Korean>
-            <Chinesesimp>掩体 - 小</Chinesesimp>
+            <Chinesesimp>掩体—小</Chinesesimp>
             <Chinese>掩體 - 小</Chinese>
             <Czech>Obálka - Malá</Czech>
             <Turkish>Zarf - Küçük</Turkish>
@@ -77,7 +77,7 @@
             <Russian>Вырыть малый окоп</Russian>
             <Japanese>小型塹壕を掘る</Japanese>
             <Korean>소형참호 파기</Korean>
-            <Chinesesimp>盖小掩体</Chinesesimp>
+            <Chinesesimp>挖掘小掩体</Chinesesimp>
             <Chinese>蓋小掩體</Chinese>
             <Turkish>Küçük Siper</Turkish>
         </Key>
@@ -92,7 +92,7 @@
             <Russian>Окоп - Большой</Russian>
             <Japanese>塹壕 - 大型</Japanese>
             <Korean>참호 -  대형</Korean>
-            <Chinesesimp>掩体 - 大</Chinesesimp>
+            <Chinesesimp>掩体—大</Chinesesimp>
             <Chinese>掩體 - 大</Chinese>
             <Czech>Obálka - Velká</Czech>
             <Turkish>Zarf - Büyük</Turkish>
@@ -125,7 +125,7 @@
             <Russian>Вырыть большой окоп</Russian>
             <Japanese>大型の塹壕を掘る</Japanese>
             <Korean>대형참호 파기</Korean>
-            <Chinesesimp>盖大掩体</Chinesesimp>
+            <Chinesesimp>挖掘大掩体</Chinesesimp>
             <Chinese>蓋大掩體</Chinese>
             <Turkish>Büyük Siper</Turkish>
         </Key>
@@ -190,7 +190,7 @@
             <Russian>Копание окопа</Russian>
             <Japanese>塹壕を掘っている</Japanese>
             <Korean>참호 파는중</Korean>
-            <Chinesesimp>正在盖掩体</Chinesesimp>
+            <Chinesesimp>正在挖掘掩体</Chinesesimp>
             <Chinese>正在蓋掩體中</Chinese>
             <Turkish>Siper Kazılıyor</Turkish>
         </Key>
@@ -205,7 +205,7 @@
             <German>Graben fortsetzen</German>
             <Korean>계속해서 참호파기</Korean>
             <Italian>Continuando a Scavare la Trincea</Italian>
-            <Chinesesimp>继续盖掩体</Chinesesimp>
+            <Chinesesimp>继续挖掘掩体</Chinesesimp>
             <Chinese>繼續蓋掩體</Chinese>
             <Turkish>Kazmaya Devam Et</Turkish>
             <Spanish>Continuar cavando trinchera</Spanish>
@@ -250,7 +250,7 @@
             <Spanish>ACETrincheras</Spanish>
             <Polish>ACE Okopy</Polish>
             <German>ACE Gräben</German>
-            <Chinesesimp>ACE战壕</Chinesesimp>
+            <Chinesesimp>ACE 战壕</Chinesesimp>
             <Korean>ACE 참호</Korean>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
@@ -272,7 +272,7 @@
             <Spanish>Tiempo, en segundos, requerido para cavar una trinchera pequeña.</Spanish>
             <Polish>Czas, w sekundach wymagany do wykopania małego okopu</Polish>
             <German>Zeit in Sekunden, um einen kleinen Graben auszuheben.</German>
-            <Chinesesimp>挖一条小型战壕所需的时间(秒)。</Chinesesimp>
+            <Chinesesimp>挖一条小型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>초단위로, 소형 참호를 팔때 필요한 시간을 설정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
@@ -294,7 +294,7 @@
             <Spanish>Tiempo, en segundos, requerido para eliminar una trinchera pequeña.</Spanish>
             <Polish>Czas, w sekundach wymagany do usunięcia małego okopu</Polish>
             <German>Zeit in Sekunden, um einen kleinen Graben aufzuschütten.</German>
-            <Chinesesimp>回填一条小型战壕所需的时间(秒)。</Chinesesimp>
+            <Chinesesimp>回填一条小型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>초단위로, 소형 참호를 제거할때 필요한 시간을 설정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
@@ -316,7 +316,7 @@
             <Spanish>Tiempo, en segundos, requerido para cavar una trinchera grande</Spanish>
             <Polish>Czas, w sekundach wymagany do wykopania dużego okopu</Polish>
             <German>Zeit in Sekunden, um einen großen Graben auszuheben.</German>
-            <Chinesesimp>挖一条大型战壕所需的时间(秒)。</Chinesesimp>
+            <Chinesesimp>挖一条大型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>초단위로, 대형 참호를 팔때 필요한 시간을 설정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
@@ -338,7 +338,7 @@
             <Spanish>Tiempo, en segundos, requerido para eliminar una trinchera grande</Spanish>
             <Polish>Czas, w sekundach wymagany do usunięcia dużego okopu</Polish>
             <German>Zeit in Sekunden, um einen großen Graben aufzuschütten.</German>
-            <Chinesesimp>回填一条大型战壕所需的时间(秒)。</Chinesesimp>
+            <Chinesesimp>回填一条大型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>초단위로, 대형 참호를 제거할때 필요한 시간을 설정합니다.</Korean>
         </Key>
     </Package>

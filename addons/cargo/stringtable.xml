@@ -40,7 +40,7 @@
             <Russian>Переименовано в:</Russian>
             <German>Neu Bewaffnet: &lt;br/&gt;%1</German>
             <Polish>Nazwa zmieniona na:&lt;br/&gt;%1</Polish>
-            <Chinesesimp>重命名为:</Chinesesimp>
+            <Chinesesimp>重命名为：&lt;br/&gt;%1</Chinesesimp>
             <Korean>%1&lt;br/&gt;으로 명칭을 바꿈</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
@@ -60,7 +60,7 @@
             <Russian>Задать новое название:</Russian>
             <German>Neuen Namen setzen:</German>
             <Polish>Ustaw nową nazwę:</Polish>
-            <Chinesesimp>设定新名称:</Chinesesimp>
+            <Chinesesimp>设定新名称：</Chinesesimp>
             <Korean>새로운 명칭 설정:</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
@@ -80,7 +80,7 @@
             <Russian>Включает переименование для объектов, допускающих переименование.</Russian>
             <German>Aktiviert die Umbenennungs-Aktion für neu benennbare Objekte.</German>
             <Polish>Włącza akcję zmiany nazwy dla obiektów z możliwością zmiany nazwy.</Polish>
-            <Chinesesimp>启用可重命名对象的重命名动作。</Chinesesimp>
+            <Chinesesimp>启用可重命名物体的重命名动作。</Chinesesimp>
             <Korean>개체의 명칭을 새로 짓는것을 허가합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
@@ -112,7 +112,7 @@
             <Japanese>カーゴ メニュー</Japanese>
             <Korean>화물 메뉴</Korean>
             <Chinese>貨物選單</Chinese>
-            <Chinesesimp>货物选单</Chinesesimp>
+            <Chinesesimp>货物菜单</Chinesesimp>
             <Turkish>Kargo Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
@@ -128,7 +128,7 @@
             <Japanese>カーゴの空き容量: %1</Japanese>
             <Korean>선적 공간 남음: %1</Korean>
             <Chinese>貨物剩餘空間: %1</Chinese>
-            <Chinesesimp>货物剩余空间: %1</Chinesesimp>
+            <Chinesesimp>货物剩余空间：%1</Chinesesimp>
             <Turkish>Kargo Alanı Kaldı: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
@@ -361,7 +361,7 @@
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
             <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
-            <Chinesesimp>此货物会占掉多少空间(设定-1的话此货物就不能被装载)</Chinesesimp>
+            <Chinesesimp>此货物会占掉多少空间（设定 -1 的话此货物就不能被装载）</Chinesesimp>
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
             <Korean>이 화물을 적재하는데 필요한 공간 (-1=무조건 적재가능)</Korean>
             <Russian>Грузовое пространство, необходимое для размещения этого объекта (-1 для незагружаемого)</Russian>
@@ -422,7 +422,7 @@
             <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
             <French>Modifie le temps nécessaire au paralargage d'une cargaison.</French>
             <Chinese>設定空投所需消耗的時間</Chinese>
-            <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
+            <Chinesesimp>设定空投所需消耗的时间。</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
             <Korean>화물을 공중 투하 하는데 걸리는 시간을 설정합니다</Korean>
             <Russian>Модификатор времени, необходимого для десантирования груза</Russian>

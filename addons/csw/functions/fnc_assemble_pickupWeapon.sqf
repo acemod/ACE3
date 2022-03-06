@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM
+ * Author:Dani (TCVM)
  * Dismounts the weapon from the tripod and drops its backpack beside
  *
  * Arguments:

@@ -7,7 +7,7 @@
             <French>ACE Dégâts de véhicule avancés</French>
             <German>ACE Erweiterter Fahrzeugsschaden</German>
             <Polish>ACE Zaawansowany system uszkodzeń pojazdów</Polish>
-            <Chinesesimp>ACE高级载具损坏</Chinesesimp>
+            <Chinesesimp>ACE 高级载具损坏</Chinesesimp>
             <Korean>ACE 고급 차량 피해</Korean>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
@@ -68,7 +68,7 @@
             <Korean>잔해(포탑)</Korean>
             <Japanese>残骸 (砲塔)</Japanese>
             <Chinese>殘骸 (砲塔)</Chinese>
-            <Chinesesimp>残骸 (炮塔)</Chinesesimp>
+            <Chinesesimp>残骸（炮塔）</Chinesesimp>
         </Key>
     </Package>
 </Project>

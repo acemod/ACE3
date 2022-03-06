@@ -75,7 +75,7 @@
             <French>Afficher l'arc de lancé</French>
             <Italian>Mostra Arco di Tiro</Italian>
             <Chinese>顯示投擲軌道</Chinese>
-            <Chinesesimp>显示投掷轨道</Chinesesimp>
+            <Chinesesimp>显示投掷弧线</Chinesesimp>
             <Portuguese>Mostrar o Arco de Arremesso</Portuguese>
             <Czech>Zobrazit oblouk vrhu </Czech>
             <Turkish>Atış Yayını Göster</Turkish>
@@ -91,7 +91,7 @@
             <French>Active la visualisation de l'arc de lancé (la trajectoire de vol de l'objet).</French>
             <Italian>Abilita la visualizzazione dell'arco del tiro (dove l'oggetto lanciabile volerà).</Italian>
             <Chinese>顯示投擲軌道幫助投擲</Chinese>
-            <Chinesesimp>显示投掷轨道帮助投掷</Chinesesimp>
+            <Chinesesimp>显示投掷弧线帮助投掷</Chinesesimp>
             <Portuguese>Permite a visualização do Arco de Arremesso por onde o objeto será jogado.</Portuguese>
             <Czech>Zapíná vizualizaci oblouku vrhu (kam bude předmět hozen).</Czech>
         </Key>
@@ -106,7 +106,7 @@
             <French>Afficher les contrôles à la souris du lancé</French>
             <Italian>Mostra Comandi Mouse Lancio</Italian>
             <Chinese>顯示滑鼠投擲控制提示</Chinese>
-            <Chinesesimp>显示滑鼠投掷控制提示</Chinesesimp>
+            <Chinesesimp>显示鼠标投掷控制提示</Chinesesimp>
             <Portuguese>Mostrar os controles de mouse para Arremesso</Portuguese>
             <Czech>Zobrazit ovládání házení myší</Czech>
         </Key>
@@ -121,7 +121,7 @@
             <French>Active les aides visuelles pour les contrôles à la souris lorsqu'un lancé est préparé.</French>
             <Italian>Abilita la visualizzazione dei controlli del mouse quando l'oggetto lanciabile è pronto.</Italian>
             <Chinese>開啟後會在準備投擲時, 顯示滑鼠相關操作</Chinese>
-            <Chinesesimp>开启后会在准备投掷时, 显示滑鼠相关操作</Chinesesimp>
+            <Chinesesimp>开启后会在准备投掷时，显示鼠标相关操作</Chinesesimp>
             <Portuguese>Ativa as dicas visuais dos controles do mouse quando um arremessável é preparado.</Portuguese>
             <Czech>Zapíná popisky pro ovládání myší, když je házený předmět připraven.</Czech>
         </Key>
@@ -136,7 +136,7 @@
             <French>Permettre le ramassage d'objets lançables</French>
             <Italian>Abilita Raccogli Oggetti</Italian>
             <Chinese>啟用可撿取地面投擲物</Chinese>
-            <Chinesesimp>启用可捡取地面投掷物</Chinesesimp>
+            <Chinesesimp>启用捡取地面投掷物</Chinesesimp>
             <Portuguese>Permitir pegar arremessáveis</Portuguese>
             <Czech>Zapnout zdvihání házených předmětů</Czech>
         </Key>
@@ -151,7 +151,7 @@
             <French>Active la possibilité de ramasser des objets lançables du sol.</French>
             <Italian>Abilita la possibilità di raccogliere un oggetto lanciabile da terra.</Italian>
             <Chinese>啟用後, 可撿取地面上的投擲物</Chinese>
-            <Chinesesimp>启用后, 可捡取地面上的投掷物</Chinesesimp>
+            <Chinesesimp>启用后，可捡取地面上的投掷物</Chinesesimp>
             <Portuguese>Permite que objetos arremessados sejam pegos do chão. (ACE Menu de Interação)</Portuguese>
             <Czech>Zapíná schopnost zvednutí házených předmětů ze země.</Czech>
         </Key>
@@ -166,7 +166,7 @@
             <French>Activer le ramassage d'objets lançables attachés</French>
             <Italian>Abilita Raccogli Oggetti Lanciabili da altri Oggetti</Italian>
             <Chinese>啟用可撿取附著投擲物</Chinese>
-            <Chinesesimp>启用可捡取附着投掷物</Chinesesimp>
+            <Chinesesimp>启用捡取附着投掷物</Chinesesimp>
             <Portuguese>Permitir pegar arremessáveis fixados</Portuguese>
             <Czech>Zapnout zdvihání připnutých předmětů.</Czech>
         </Key>
@@ -181,7 +181,7 @@
             <French>Active la possibilité de ramasser des objets lançables attachés à d'autres objets.</French>
             <Italian>Abilita la possibilità di raccogliere gli oggetti lanciabili dagli altri oggetti. </Italian>
             <Chinese>啟用後, 可撿取附著在物件上的投擲物</Chinese>
-            <Chinesesimp>启用后, 可捡取附着在物件上的投掷物</Chinesesimp>
+            <Chinesesimp>启用后，可捡取附着在物体上的投掷物</Chinesesimp>
             <Portuguese>Permite que arremessáveis fixados em objetos sejam pegos.</Portuguese>
             <Czech>Zapíná schopnost zvednutí předmětů z objektů ke kterým jsou připnuté.</Czech>
         </Key>
@@ -211,7 +211,7 @@
             <French>Mode de lancé de l'objet (Tenir)</French>
             <Italian>Modalità Oggetto Gettabile (Mantenere)</Italian>
             <Chinese>投擲模式 (按住)</Chinese>
-            <Chinesesimp>投掷模式 (按住)</Chinesesimp>
+            <Chinesesimp>投掷模式（按住）</Chinesesimp>
             <Portuguese>Modo de Arremesso (Segurar)</Portuguese>
             <Czech>Mód puštění (Držet)</Czech>
         </Key>
@@ -226,7 +226,7 @@
             <French>Mode de lancé de l'objet (Basculer)</French>
             <Italian>Modalità Oggetto lanciabile Gettabile (Interruttore)</Italian>
             <Chinese>投擲模式 (切換)</Chinese>
-            <Chinesesimp>投掷模式 (切换)</Chinesesimp>
+            <Chinesesimp>投掷模式（切换）</Chinesesimp>
             <Portuguese>Modo de Arremesso (Alternar)</Portuguese>
             <Czech>Mód puštění (Přepnout)</Czech>
         </Key>
@@ -241,7 +241,7 @@
             <French>amorcée</French>
             <Italian>Armato</Italian>
             <Chinese>引信開始燃燒</Chinese>
-            <Chinesesimp>引信开始燃烧</Chinesesimp>
+            <Chinesesimp>已开引信</Chinesesimp>
             <Portuguese>Preparado</Portuguese>
             <Czech>Odjištěný</Czech>
         </Key>
@@ -272,7 +272,7 @@
             <French>(Défilement) Changer de mode</French>
             <Italian>(Scorrere) Cambio Modalità</Italian>
             <Chinese>(滾輪) 變更模式</Chinese>
-            <Chinesesimp>(滚轮) 变更模式</Chinesesimp>
+            <Chinesesimp>（滚轮）变更模式</Chinesesimp>
             <Portuguese>(Roda do Mouse) Alternar modo</Portuguese>
             <Czech>(Scrollovat) Změnit mód</Czech>
             <Turkish>(Tekerlek) Modu Değiştir</Turkish>
@@ -288,7 +288,7 @@
             <French>(Défilement) Étendre</French>
             <Italian>(Scorrere) Estendere</Italian>
             <Chinese>(滾輪) 延長</Chinese>
-            <Chinesesimp>(滚轮) 延长</Chinesesimp>
+            <Chinesesimp>（滚轮）延长</Chinesesimp>
             <Portuguese>(Roda do Mouse) Extender</Portuguese>
             <Czech>(Scrollovat) Oddálit</Czech>
             <Turkish>(Tekerlek) Uzat</Turkish>
@@ -304,7 +304,7 @@
             <French>(Clique) Dégoupiller</French>
             <Italian>(Click) Arma</Italian>
             <Chinese>(點擊) 提早拉開引信</Chinese>
-            <Chinesesimp>(点击) 提早拉开引信</Chinesesimp>
+            <Chinesesimp>（点击）提早拉开引信</Chinesesimp>
             <Portuguese>(Clique) Cozinhar</Portuguese>
             <Czech>(Klik) Odjistit</Czech>
             <Turkish>(Tıkla) Cook</Turkish>

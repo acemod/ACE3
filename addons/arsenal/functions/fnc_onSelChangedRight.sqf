@@ -33,7 +33,7 @@ private _fnc_selectItem = {
                 private _primaryMags = primaryWeaponMagazine GVAR(center);
                 GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + ([_primaryMags + [""], _primaryMags] select (count _primaryMags > 1))];
             } else {
-                GVAR(center) addPrimaryWeaponItem _item;
+                GVAR(center) addWeaponItem [primaryWeapon GVAR(center), _item, true];
                 private _primaryMags = primaryWeaponMagazine GVAR(center);
                 GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + ([_primaryMags + [""], _primaryMags] select (count _primaryMags > 1))];
             };
@@ -47,7 +47,7 @@ private _fnc_selectItem = {
                 private _secondaryMags = secondaryWeaponMagazine GVAR(center);
                 GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + ([_secondaryMags + [""], _secondaryMags] select (count _secondaryMags > 1))];
             } else {
-                GVAR(center) addSecondaryWeaponItem _item;
+                GVAR(center) addWeaponItem [secondaryWeapon GVAR(center), _item, true];
                 private _secondaryMags = secondaryWeaponMagazine GVAR(center);
                 GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + ([_secondaryMags + [""], _secondaryMags] select (count _secondaryMags > 1))];
             };
@@ -60,7 +60,7 @@ private _fnc_selectItem = {
                 private _handgunMags = handgunMagazine GVAR(center);
                 GVAR(currentItems) set [20, (handgunItems GVAR(center)) + ([_handgunMags + [""], _handgunMags] select (count _handgunMags > 1))];
             } else {
-                GVAR(center) addHandgunItem _item;
+                GVAR(center) addWeaponItem [handgunWeapon GVAR(center), _item, true];
                 private _handgunMags = handgunMagazine GVAR(center);
                 GVAR(currentItems) set [20, (handgunItems GVAR(center)) + ([_handgunMags + [""], _handgunMags] select (count _handgunMags > 1))];
             };

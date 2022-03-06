@@ -32,6 +32,13 @@ if (_unitState isNotEqualTo "Dead") then {
     [_unit, EGVAR(medical,STATE_MACHINE), _unitState, "Dead"] call CBA_statemachine_fnc_manualTransition;
 };
 
+// (#8803) Reenable damage if disabled to prevent having live units in dead state
+// Keep this after death event for compatibility with third party hooks
+if !(isDamageAllowed _unit) then {
+    WARNING_1("setDead executed on unit with damage blocked - %1",_this);
+    _unit allowDamage true;
+};
+
 // Kill the unit without changing visual apperance
 private _prevDamage = _unit getHitPointDamage "HitHead";
 

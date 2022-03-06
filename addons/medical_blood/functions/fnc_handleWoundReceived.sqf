@@ -5,9 +5,9 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Body Part (not used) <STRING>
- * 2: Damage <NUMBER>
- * 3: Shooter <OBJECT>
+ * 1: Damage done to each body part <ARRAY>
+ * 2: Shooter <OBJECT>
+ * 3: Ammo classname or damage type <STRING>
  *
  * Return Value:
  * None
@@ -18,7 +18,8 @@
  * Public: No
  */
 
-params ["_unit", "", "_damage", "_shooter"];
+params ["_unit", "_allDamages", "_shooter"];
+(_allDamages select 0) params ["_damage", ""];
 
 // Don't bleed when players only and a non-player unit is wounded
 if (GVAR(enabledFor) == BLOOD_ONLY_PLAYERS && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};

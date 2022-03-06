@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM), PabstMirror
+ * Author: Dani (TCVM), PabstMirror
  * Dumps ammo to container
  *
  * Arguments:

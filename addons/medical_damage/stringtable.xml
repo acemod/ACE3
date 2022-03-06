@@ -39,7 +39,7 @@
             <Russian>Порог критического урона AI</Russian>
             <Portuguese>Limite de Dano Crítico da IA</Portuguese>
             <Chinese>AI重擊承受量</Chinese>
-            <Chinesesimp>AI临界伤害阈值</Chinesesimp>
+            <Chinesesimp>AI 临界伤害阈值</Chinesesimp>
             <Italian>Soglia dei danni critici dell AI</Italian>
             <Czech>Kritická míra poškození pro AI</Czech>
             <Polish>Próg Obrażeń Krytycznych AI</Polish>
@@ -54,7 +54,7 @@
             <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
-            <Chinesesimp>设置AI在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
+            <Chinesesimp>设置 AI 在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
             <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
             <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności (oraz śmierci gdy "Suma urazów" jest włączona).</Polish>
@@ -748,7 +748,7 @@
             <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
             <Turkish>Bilinçsiz duruma geçmeden önce bir birimin alabileceği hasar miktarını ayarlar. (Görev varsayılanı için 0)</Turkish>
             <Spanish>Determina la cantidad de daño que puede recibir una unidad antes de quedar inconsciente (0 para predeterminado de misión)</Spanish>
-            <Chinesesimp>设定一个单位在昏迷前所能承受的伤害量。(任务默认为0)</Chinesesimp>
+            <Chinesesimp>设定一个单位在昏迷前所能承受的伤害量。（任务默认为0）</Chinesesimp>
             <Korean>이 유닛이 얼마나 많은 피해를 받아야 기절할지 정합니다. (0은 미션 기본 설정을 사용합니다)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
