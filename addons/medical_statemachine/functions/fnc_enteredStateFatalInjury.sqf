@@ -17,7 +17,7 @@
 
 params ["_unit"];
 if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) exitWith {
-    WARNING_1("State transition on dead or null unit - %1",_unit);
+    WARNING_1("enteredStateFatalInjury: State transition on dead or null unit - %1",_unit);
 };
 
 [QEGVAR(medical,FatalInjuryInstantTransition), _unit] call CBA_fnc_localEvent;
