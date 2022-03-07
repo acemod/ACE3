@@ -41,7 +41,6 @@ private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
 
     private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
     if (_magazine != "") then {
-        systemChat str _magazine;
         _compatibleMags insert [0, _magazine];
     };
 
