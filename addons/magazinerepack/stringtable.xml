@@ -186,5 +186,10 @@
             <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
             <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
         </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackAnimation">
+            <English>Repack Animation</English>
+            <German>Animation für Umpacken</German>
+            <Polish>Animacja przepakowywania</Polish>
+        </Key>
     </Package>
 </Project>
