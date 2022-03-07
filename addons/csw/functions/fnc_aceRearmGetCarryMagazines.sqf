@@ -31,11 +31,11 @@ private _allCarryMags = [];
             private _weapon = _x;
             {
                 private _xMag = _x;
-                private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
+                private _carryMag = GVAR(vehicleMagCache) get _xMag;
                 if (isNil "_carryMag") then {
                     private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
                     _carryMag = configName (_groups param [0, configNull]);
-                    GVAR(vehicleMagCache) setVariable [_x, _carryMag];
+                    GVAR(vehicleMagCache) set [_x, _carryMag];
                     TRACE_2("setting cache",_xMag,_carryMag);
                 };
                 if (_carryMag != "") then {
