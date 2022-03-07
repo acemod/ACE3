@@ -85,6 +85,18 @@
             <Chinese>設定指向指示器最大顯示距離。[預設: 4公尺]</Chinese>
             <Turkish>Hangi uzaklıktakilerin sanal daireyi görmesini seçin. [Varsayılan : 4 metre] </Turkish>
         </Key>
+        <Key ID="STR_ACE_Finger_sizeCoef_displayName">
+            <English>Visual Marker Size Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Finger_sizeCoef_description">
+            <English>Adjusts the size of the visual marker.</English>
+        </Key>
+        <Key ID="STR_ACE_Finger_proximityScaling_displayName">
+            <English>Proximity Scaling</English>
+        </Key>
+        <Key ID="STR_ACE_Finger_proximityScaling_description">
+            <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
+        </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
             <German>Zeigersymbol einem selbst anzeigen</German>
