@@ -20,7 +20,7 @@
  */
 
 params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
-TRACE_4("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit);
+TRACE_5("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit);
 
 private _timeToLoad = 1;
 if (!isNull(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime")) then {
