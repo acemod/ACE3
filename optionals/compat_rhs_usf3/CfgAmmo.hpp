@@ -240,7 +240,8 @@ class CfgAmmo {
         EGVAR(vehicle_damage,incendiary) = 0.8;
     };
 
-    class rhs_ammo_mk19m3_M430I_penetrator: rhsusf_ammo_basic_penetrator {
+    class rhsusf_ammo_reduced_penetrator;
+    class rhs_ammo_mk19m3_M430I_penetrator: rhsusf_ammo_reduced_penetrator {
         EGVAR(vehicle_damage,incendiary) = 0.8;
     };
 

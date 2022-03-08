@@ -53,7 +53,9 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 1447;
     };
 
-    class RHS_UH1Y_base: RHS_UH1_Base {};
+    class RHS_UH1Y_base: RHS_UH1_Base {
+        EQUIP_FRIES_ATTRIBUTE;
+    };
     class RHS_UH1Y_US_base: RHS_UH1Y_base {};
     class RHS_UH1Y: RHS_UH1Y_US_base {
         EGVAR(fastroping,enabled) = 2;
@@ -67,8 +69,6 @@ class CfgVehicles {
         class EventHandlers: EventHandlers {
             class RHSUSF_EventHandlers;
         };
-
-        EQUIP_FRIES_ATTRIBUTE;
     };
     class RHS_UH1Y_FFAR: RHS_UH1Y {
         class UserActions: UserActions {
@@ -80,6 +80,8 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
             };
         };
+        
+        EQUIP_FRIES_ATTRIBUTE;
     };
 
     class Helicopter_Base_H: Helicopter_Base_F {
@@ -577,5 +579,11 @@ class CfgVehicles {
     class rhsusf_props_JerryCan_Base: Items_base_F {
         EGVAR(cargo,canLoad) = 1;
         EGVAR(cargo,size) = 1;
+        EGVAR(dragging,canCarry) = 1;
+    };
+
+    class rhsusf_props_ScepterMWC_Base: rhsusf_props_JerryCan_Base {
+        EXGVAR(field_rations,waterSupply) = 20;
+        EXGVAR(field_rations,offset)[] = {-0.13, 0, 0.2};
     };
 };

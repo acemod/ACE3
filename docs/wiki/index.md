@@ -34,13 +34,11 @@ parent:
 <div class="row">
     <div class="large-6 medium-2 columns">
         <h3>User</h3>
-
         <p>General information about ACE3, installation guides and troubleshooting.</p>
         <a href="{{ site.baseurl }}/wiki/user/" class="button">Learn more</a>
     </div>
     <div class="large-6 medium-2 columns">
         <h3>Class Names</h3>
-
         <p>List of class names present in ACE3 which mission makers, modders and scripters can use.</p>
         <a href="{{ site.baseurl }}/wiki/class-names.html" class="button">Learn more</a>
     </div>
@@ -53,13 +51,11 @@ parent:
 <div class="row">
     <div class="large-6 medium-2 columns">
         <h3>Features</h3>
-
         <p>Overviews and details of ACE3 features, their usage and implementations.</p>
         <a href="{{ site.baseurl }}/wiki/feature/" class="button">Learn more</a>
     </div>
     <div class="large-6 medium-2 columns">
         <h3>Frameworks</h3>
-
         <p>Public API implemented by ACE3 which mission makers, modders and scripters can use.</p>
         <a href="{{ site.baseurl }}/wiki/framework/" class="button">Learn more</a>
     </div>
@@ -72,7 +68,6 @@ parent:
 <div class="row">
     <div class="large-6 medium-2 columns">
         <h3>Development</h3>
-
         <p>Information about developing ACE3, from setting up the development environment to guidelines and tips.</p>
         <a href="{{ site.baseurl }}/wiki/development/" class="button">Learn more</a>
     </div>

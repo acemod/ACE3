@@ -7,7 +7,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {QGVAR(dshkm_carry)};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_explosives", "ace_csw", "rhsgref_main_loadorder"};
+        requiredAddons[] = {"ace_fastroping", "ace_explosives", "ace_csw", "rhsgref_main_loadorder"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror", "Ruthberg", "Anton"};
         url = ECSTRING(main,URL);
@@ -16,6 +16,7 @@ class CfgPatches {
 };
 
 #include "CfgAmmo.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"

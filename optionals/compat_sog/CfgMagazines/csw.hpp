@@ -5,12 +5,13 @@ class GVAR(tow_missile): vn_missile_tow_mag_x1 {
     count = 1;
     model = "\vn\static_f_vietnam\tow\vn_static_tow_mag.p3d";
     picture = QPATHTOF(UI\ammo_1rnd_tow_ca.paa);
-    mass = 563;
+    mass = 220;  // to Arma, weight and volume are all the same which makes real life values unusable
 };
 
 class vn_m1919_v_250_mag;
 class GVAR(m1919_250): vn_m1919_v_250_mag {
     scope = 2;
+    scopeArsenal = 2;
     type = 256;
     count = 250;
     model = "\vn\objects_f_vietnam\supply\a2_ammo\macv\vn_us_30cal.p3d";

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Rangecard
+component: rangecard
 description: Adds a range card for your weapons.
 group: feature
 category: equipment
@@ -36,8 +37,3 @@ Add a range card that updates itself for your weapon and the type of ammo you're
 - Move to the `Bullet Drop` column, the drop is in MRADs, you need to compensate for it by adjusting your sight. Example, you want to adjust for a bullet drop of -7.9 MRADs  simply adjust your scope 7.9 MRADs vertically. (check [feature scopes]({{ site.baseurl }}/wiki/feature/scopes.html) ) for this.
 - Possibility to copy and share the range card.
 <img src="{{ site.baseurl }}/img/wiki/feature/rangecard_menu.webp" width="350" height="350" alt="Range card self interaction menu" />
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="rangecard" %}

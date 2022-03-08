@@ -31,9 +31,8 @@ private _fnc_removeMagazine = {
 
     if (_specificMagazineIndex > -1) exitWith {
         clearMagazineCargoGlobal _container;
-        private _containerType = typeOf _container;
-        if (_containerType in ["GroundWeaponHolder", "WeaponHolderSimulated"]) then {
-            _container = createVehicle [_containerType, getPosATL _container, [], 0, "CAN_COLLIDE"];
+        if (_container isKindOf "WeaponHolder" && {_allMagazines isNotEqualTo []}) then {
+            _container = createVehicle [typeOf _container, getPosATL _container, [], 0, "CAN_COLLIDE"];
         };
         {
             _container addMagazineAmmoCargo [_x select 0, 1, _x select 1];

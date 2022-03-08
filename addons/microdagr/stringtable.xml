@@ -14,7 +14,7 @@
             <Portuguese>GPS MicroDAGR</Portuguese>
             <Japanese>MicroDAGR GPS</Japanese>
             <Korean>MicroDAGR GPS</Korean>
-            <Chinesesimp>微型军用GPS接收器</Chinesesimp>
+            <Chinesesimp>微型军用 GPS 接收器</Chinesesimp>
             <Chinese>微型軍用GPS接收器</Chinese>
             <Turkish>MicroDAGR GPS</Turkish>
         </Key>
@@ -31,7 +31,7 @@
             <Portuguese>Receptor GPS avançado MicroDAGR</Portuguese>
             <Japanese>MicroDAGR は改良された GPS 受信機です</Japanese>
             <Korean>MicroDAGR 고급 위성항법 수신기</Korean>
-            <Chinesesimp>微型军用高级防御GPS接收器</Chinesesimp>
+            <Chinesesimp>微型军用高级防御 GPS 接收器</Chinesesimp>
             <Chinese>微型軍用高級防禦GPS接收器</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingUseMils">
@@ -47,7 +47,7 @@
             <Portuguese>Unidade Angular:</Portuguese>
             <Japanese>角度の種類:</Japanese>
             <Korean>각도의 단위:</Korean>
-            <Chinesesimp>角密位:</Chinesesimp>
+            <Chinesesimp>角密位：</Chinesesimp>
             <Chinese>角密位:</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingDegrees">
@@ -95,7 +95,7 @@
             <Portuguese>Mostrar Waypoints no mapa:</Portuguese>
             <Japanese>地図へｳｪｲﾎﾟｲﾝﾄを表示:</Japanese>
             <Korean>웨이포인트를 지도에 보이기:</Korean>
-            <Chinesesimp>显示路径点在地图上:</Chinesesimp>
+            <Chinesesimp>显示路径点在地图上：</Chinesesimp>
             <Chinese>顯示路徑點在地圖上:</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingOn">
@@ -144,7 +144,7 @@
             <Italian>Introduci griglia coordinate:</Italian>
             <Portuguese>Digite as Coords. do Grid</Portuguese>
             <Japanese>座標を入力:</Japanese>
-            <Chinesesimp>输入网格座标:</Chinesesimp>
+            <Chinesesimp>输入网格座标：</Chinesesimp>
             <Chinese>輸入網格座標:</Chinese>
             <Korean>좌표 입력:</Korean>
         </Key>
@@ -176,8 +176,8 @@
             <Italian>Nuovo MGRS</Italian>
             <Portuguese>MGRS-Novo</Portuguese>
             <Japanese>MGRS-New</Japanese>
-            <Chinesesimp>军事网格座标系统-新型</Chinesesimp>
-            <Chinese>軍事網格座標系統-新型</Chinese>
+            <Chinesesimp>军事网格座标系统—新型</Chinesesimp>
+            <Chinese>軍事網格座標系統—新型</Chinese>
             <Korean>MGRS-New</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlWGD">
@@ -209,7 +209,7 @@
             <Portuguese>Distância:</Portuguese>
             <Japanese>距離:</Japanese>
             <Korean>거리:</Korean>
-            <Chinesesimp>范围:</Chinesesimp>
+            <Chinesesimp>范围：</Chinesesimp>
             <Chinese>範圍:</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_compasDirection">
@@ -225,7 +225,7 @@
             <Portuguese>Direção na bússula</Portuguese>
             <Japanese>方位磁石での方位</Japanese>
             <Korean>방위</Korean>
-            <Chinesesimp>指北针方位</Chinesesimp>
+            <Chinesesimp>指南针方位</Chinesesimp>
             <Chinese>指北針方位</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuMark">
@@ -353,7 +353,7 @@
             <Portuguese>Alternar Modo de Display do MicroDAGR</Portuguese>
             <Japanese>MicroDAGR の表示モード</Japanese>
             <Korean>MicroDAGR 화면 모드 토글</Korean>
-            <Chinesesimp>切换微型军用GPS接收器显示模式</Chinesesimp>
+            <Chinesesimp>切换微型军用 GPS 接收器显示模式</Chinesesimp>
             <Chinese>切換微型軍用GPS接收器顯示模式</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_show">
@@ -369,7 +369,7 @@
             <Portuguese>Mostrar MicroDAGR</Portuguese>
             <Japanese>MicoDAGR を表示</Japanese>
             <Korean>MicroDAGR 꺼내기</Korean>
-            <Chinesesimp>显示微型军用GPS接收器</Chinesesimp>
+            <Chinesesimp>显示微型军用 GPS 接收器</Chinesesimp>
             <Chinese>顯示微型軍用GPS接收器</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_configure">
@@ -385,7 +385,7 @@
             <Portuguese>Configurar MicroDAGR</Portuguese>
             <Japanese>MicroDAGR を設定</Japanese>
             <Korean>MicroDAGR 설정하기</Korean>
-            <Chinesesimp>设定微型军用GPS接收器</Chinesesimp>
+            <Chinesesimp>设定微型军用 GPS 接收器</Chinesesimp>
             <Chinese>設定微型軍用GPS接收器</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_closeUnit">
@@ -401,7 +401,7 @@
             <Portuguese>Fechar MicroDAGR</Portuguese>
             <Japanese>MicroDAGR を閉じる</Japanese>
             <Korean>MicroDAGR 집어넣기</Korean>
-            <Chinesesimp>关闭微型军用GPS接收器</Chinesesimp>
+            <Chinesesimp>关闭微型军用 GPS 接收器</Chinesesimp>
             <Chinese>關閉微型軍用GPS接收器</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_DisplayName">
@@ -417,7 +417,7 @@
             <Italian>Riempimento Mappa MicroDAGR</Italian>
             <Japanese>MicroDAGR での地図情報</Japanese>
             <Korean>MicroDAGR - 지도채우기</Korean>
-            <Chinesesimp>微型军用GPS接收器地图资料</Chinesesimp>
+            <Chinesesimp>微型军用 GPS 接收器地图资料</Chinesesimp>
             <Chinese>微型軍用GPS接收器地圖資料</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_DisplayName">
@@ -433,7 +433,7 @@
             <Italian>Riempimento Mappa MicroDAGR</Italian>
             <Japanese>MicroDAGR での地図情報</Japanese>
             <Korean>MicroDAGR - 지도채우기</Korean>
-            <Chinesesimp>微型军用GPS接收器地图资料</Chinesesimp>
+            <Chinesesimp>微型军用 GPS 接收器地图资料</Chinesesimp>
             <Chinese>微型軍用GPS接收器地圖資料</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_Description">
@@ -449,7 +449,7 @@
             <Italian>Quanti dati sono trasferiti nella mappa del MicroDAGR</Italian>
             <Japanese>MicroDAGR で表示する地図情報を決定します</Japanese>
             <Korean>얼마나 많은 데이터가 MicroDAGR에 있는지에 대한 정보</Korean>
-            <Chinesesimp>有多少地图数据会显示在微型军用GPS接收器</Chinesesimp>
+            <Chinesesimp>有多少地图数据会显示在微型军用 GPS 接收器</Chinesesimp>
             <Chinese>有多少地圖數據會顯示在微型軍用GPS接收器</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_Full">
@@ -497,7 +497,7 @@
             <Italian>Nessuno (Non puoi usare la vista mappa)</Italian>
             <Japanese>なし（地図表示を使えません）</Japanese>
             <Korean>없음 (지도를 볼 수 없음)</Korean>
-            <Chinesesimp>无 (无法检视地图)</Chinesesimp>
+            <Chinesesimp>无（无法检视地图）</Chinesesimp>
             <Chinese>無 (無法檢視地圖)</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_DisplayName">
@@ -510,8 +510,10 @@
             <Portuguese>MicroDAGR - Precisão de Waypoint</Portuguese>
             <French>Précision des points de passage</French>
             <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
+            <Chinesesimp>微型军用 GPS 接收器—航点精度</Chinesesimp>
             <Czech>MicroDAGR - přesnost Waypointů</Czech>
             <Spanish>Micro DAGR - precisión del waypoint</Spanish>
+            <Korean>MicroDAGR - 웨이포인트 정확도</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>
@@ -523,8 +525,10 @@
             <Portuguese>Controla o quão preciso pode exibir o waypoint de distância</Portuguese>
             <French>Définit la précision d'affichage des points de passage.</French>
             <Chinese>控制顯示的導航點精確度為多少</Chinese>
+            <Chinesesimp>控制显示航点距离的精确程度。</Chinesesimp>
             <Czech>Nastavuje jak přesně je vzdálenost waypointů zobrazena.</Czech>
             <Spanish>Controla cómo de precisa se mostrará la distancia al waypoint</Spanish>
+            <Korean>웨이포인트 거리가 얼마나 정확하게 표시되는지를 결정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
@@ -536,9 +540,11 @@
             <Portuguese>100m</Portuguese>
             <French>100 m</French>
             <Chinese>一百公尺</Chinese>
+            <Chinesesimp>100米</Chinesesimp>
             <Czech>100 m</Czech>
             <Turkish>100m</Turkish>
             <Spanish>100m</Spanish>
+            <Korean>100m</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -550,9 +556,11 @@
             <Portuguese>10m</Portuguese>
             <French>10 m</French>
             <Chinese>十公尺</Chinese>
+            <Chinesesimp>10米</Chinesesimp>
             <Czech>10 m</Czech>
             <Turkish>10m</Turkish>
             <Spanish>10m</Spanish>
+            <Korean>10m</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -564,9 +572,11 @@
             <Portuguese>1m</Portuguese>
             <French>1 m</French>
             <Chinese>一公尺</Chinese>
+            <Chinesesimp>1米</Chinesesimp>
             <Czech>1 m</Czech>
             <Turkish>1m</Turkish>
             <Spanish>1m</Spanish>
+            <Korean>1m</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>
@@ -581,7 +591,7 @@
             <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa.</Italian>
             <Japanese>アイテム上で表示されるデータ量を決定します。設定を減らすと地図上での情報が少なくなります。</Japanese>
             <Korean>MicroDAGR에 얼마나 많은 데이터가 들어있는지 정합니다. 적을 수록 지도상에도 비춰지는게 적어집니다.</Korean>
-            <Chinesesimp>设定有多少数据会显示在微型军用GPS接收器上。这些资料的多寡会反映在迷你地图的显示上。</Chinesesimp>
+            <Chinesesimp>设定有多少数据会显示在微型军用 GPS 接收器上。这些资料的多寡会反映在迷你地图的显示上。</Chinesesimp>
             <Chinese>設定有多少數據會顯示在微型軍用GPS接收器上。這些資料的多寡會反映在迷你地圖的顯示上。</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_previousMode">
@@ -592,6 +602,8 @@
             <Japanese>MicroDAGR - 前のモードに</Japanese>
             <German>MicroDAGR - vorheriger Modus</German>
             <Polish>MicroDAGR - Poprzedni Tryb</Polish>
+            <Chinesesimp>微型 GPS 接收器—上一个模式</Chinesesimp>
+            <Korean>MicroDAGR - 이전 모드</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_nextMode">
             <English>MicroDAGR - Next Mode</English>
@@ -601,6 +613,8 @@
             <Japanese>MicroDAGR - 次のモードに</Japanese>
             <German>MicroDAGR - nächster Modus</German>
             <Polish>MicroDAGR - Kolejny Tryb</Polish>
+            <Chinesesimp>微型 GPS 接收器—下一个模式</Chinesesimp>
+            <Korean>MicroDAGR - 다음 모드</Korean>
         </Key>
     </Package>
 </Project>

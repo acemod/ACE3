@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Overheating
+component: overheating
 description: Weapon temperature and jamming, barrel swapping.
 group: feature
 category: realism
@@ -53,12 +54,11 @@ Jams can be cleared in the following ways:
 - Select `Equipment`.
 - Select `Check weapon temperature`.
 
-**NOTE** When the bar is half full (yellow) it means the barrel is around 500°c.
-Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
+**NOTE** Each section on the bar represents 100°C. When the bar reaches 2 sections weapons can start to cookoff. When it is half full (yellow) it means the barrel is around 500°C. Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
 
 ### 2.4 Cooling your weapon
 
-- Weapons and spare barrels will cool off over time.
+- Weapons and spare barrels will cool off over time, down to the ambient temperature in the mission.
 - Cooling speed of weapons in increased in windy or rainy weather, and when swimming.
 - If ACE Field Rations is loaded then weapons can be cooled with canteens, water bottles, or other beverage items. This does not require the Field Rations system to be enabled.
 - If ACE Field Rations is enabled then weapons can also be cooled with the same water sources used to refill canteens and water bottles.
@@ -67,7 +67,3 @@ Your weapon will be even more prone to jams, and it'll get worse if you don't le
 
 - After a firefight unload closed bolt firearms (most rifles) until the barrel temperature has gone down to less than 180°C (two sections or less on the bar).
 - Clear failure to fire jams quickly
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="overheating" %}

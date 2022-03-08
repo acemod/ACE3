@@ -14,7 +14,7 @@
             <Italian>Etichette Nomi</Italian>
             <Japanese>名札</Japanese>
             <Korean>이름표</Korean>
-            <Chinesesimp>玩家名字</Chinesesimp>
+            <Chinesesimp>玩家名称</Chinesesimp>
             <Chinese>玩家名稱</Chinese>
             <Turkish>Isım Etiketleri</Turkish>
         </Key>
@@ -65,7 +65,7 @@
             <Russian>Показывать имена игроков (включить имена)</Russian>
             <Japanese>プレイヤ名を表示</Japanese>
             <Korean>플레이어 이름 표시</Korean>
-            <Chinesesimp>显示玩家名字</Chinesesimp>
+            <Chinesesimp>显示玩家名称</Chinesesimp>
             <Chinese>顯示玩家名稱</Chinese>
             <Turkish>Oyuncu isimlerini göster</Turkish>
         </Key>
@@ -82,7 +82,7 @@
             <Italian>Mostra nomi giocatori ed imposta la loro attivazione. Default: Abilitato</Italian>
             <Japanese>プレイヤ名の表示と設定を有効化します。標準: 有効</Japanese>
             <Korean>플레이어 이름의 표시와 설정을 활성화합니다. 기본설정: 활성화</Korean>
-            <Chinesesimp>显示玩家的名字并设置其启动方式。预设: 启用</Chinesesimp>
+            <Chinesesimp>显示玩家的名字并设置其启动方式。预设：启用</Chinesesimp>
             <Chinese>顯示玩家的名稱並設置其啟動方式。預設: 啟用</Chinese>
             <Turkish>Oyuncu adlarını gösterin ve etkinleştirmelerini ayarlayın. Varsayılan: Etkin</Turkish>
         </Key>
@@ -145,7 +145,7 @@
             <Korean>화면 가장자리에서 사라짐</Korean>
             <French>Estomper sur les bords de l'écran</French>
             <Italian>Sfocatura nei bordi dello schermo</Italian>
-            <Chinesesimp>在荧幕边框旁淡出</Chinesesimp>
+            <Chinesesimp>在屏幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
             <Russian>Затухание на границе экрана</Russian>
             <Portuguese>Ocultar na borda da tela</Portuguese>
@@ -166,7 +166,7 @@
             <Russian>Показывать звания игроков (при вкл. именах)</Russian>
             <Japanese>プレイヤの階級を表示 (プレイヤ名が必要)</Japanese>
             <Korean>플레이어 계급 표시 (플레이어 이름 필요)</Korean>
-            <Chinesesimp>显示玩家军阶 (玩家必须有设定名字)</Chinesesimp>
+            <Chinesesimp>显示玩家军阶（玩家必须有设定名字）</Chinesesimp>
             <Chinese>顯示玩家軍階 (玩家必須有設定名稱)</Chinese>
             <Turkish>Oyuncu rütbelerini göster (oyuncu isimleri açılması gerektirir)</Turkish>
         </Key>
@@ -200,7 +200,7 @@
             <Italian>Mostra informazioni sull'equipaggio del veicolo, oppure consenti di default di lasciare che siano i giocatori a scegliere. Default: Non Forzare</Italian>
             <Japanese>車両の乗員を表示します。標準ではプレイヤ各々が選べられます。標準: 強制しない</Japanese>
             <Korean>승무원 정보를 표시하거나 플레이어가 직접 고르게 냅둡니다. 기본설정: 강제하지 않음</Korean>
-            <Chinesesimp>显示载具成员讯息。在预设的情况下，系统允许玩家自己决定开关此讯息。预设: 不显示</Chinesesimp>
+            <Chinesesimp>显示载具成员信息。在预设的情况下，系统允许玩家自己决定开关此信息。预设：不显示</Chinesesimp>
             <Chinese>顯示載具成員訊息。在預設的情況下，系統允許玩家自己決定開關此訊息。預設: 不顯示</Chinese>
             <Turkish>Araç mürettebat bilgilerini gösterin veya varsayılan olarak oyuncuların kendi başlarına seçmelerine izin verir. Varsayılan: Zorlama</Turkish>
         </Key>
@@ -217,7 +217,7 @@
             <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
             <Japanese>AI ユニットの名札を表示</Japanese>
             <Korean>인공지능 인원 이름 표시</Korean>
-            <Chinesesimp>显示AI单位名字</Chinesesimp>
+            <Chinesesimp>显示 AI 单位名字</Chinesesimp>
             <Chinese>顯示AI單位名稱</Chinese>
             <Turkish>AI birimleri için ad etiketlerini göster</Turkish>
         </Key>
@@ -234,7 +234,7 @@
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
             <Japanese>友軍の AI にも名前と階級を表示しますか? 標準: 強制しない</Japanese>
             <Korean>아군 인공지능의 계급을 표시합니까? 기본설정: 강제하지 않음</Korean>
-            <Chinesesimp>显示友军AI的名字和军阶? 预设: 不显示</Chinesesimp>
+            <Chinesesimp>显示友军 AI 的名字和军阶？ 预设：不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>
             <Turkish>Dost AI birimleri için ad ve rütbe etiketleri gösterilsin mi? Varsayılan: Zorlama</Turkish>
         </Key>
@@ -267,7 +267,7 @@
             <Italian>Mostra il nome sul cursore per il comandante del veicolo (solo se il client ha le Etichette Nomi attive) Default: No</Italian>
             <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準: 無効</Japanese>
             <Korean>차량의 사령관의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화 할시에만 보입니다) 기본설정: 아니요</Korean>
-            <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名字 (仅当客户端的名字功能已启用)。预设: 关闭</Chinesesimp>
+            <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名字（仅当客户端的名字功能已启用）。预设：关闭</Chinesesimp>
             <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用)。預設: 關閉</Chinese>
             <Turkish>Araç komutanı için Gösterge İsim Etiketini göster (yalnızca istemcide ad etiketleri etkinse) Varsayılan: Hayır</Turkish>
         </Key>
@@ -284,7 +284,7 @@
             <Portuguese>Mostrar onda sonora (requer nome de jogadores)</Portuguese>
             <Japanese>音波形を表示 (プレイヤ名が必要)</Japanese>
             <Korean>음파 표시 (플레이어 이름 필요)</Korean>
-            <Chinesesimp>当玩家讲话时，显示声波图案 (玩家必须有设定名字)</Chinesesimp>
+            <Chinesesimp>当玩家讲话时，显示声波图案（玩家必须有设定名字）</Chinesesimp>
             <Chinese>當玩家講話時，顯示聲波圖案 (玩家必須有設定名稱)</Chinese>
             <Turkish>Ses Dalgalarını Göster (oyuncu isimleri gerektirir)</Turkish>
         </Key>
@@ -301,7 +301,7 @@
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
             <Japanese>プレイヤーが PTT キーを押している間は、音波形を表示します。このオプションは TFAR と ACRE2 で動作します。</Japanese>
             <Korean>플레이어가 PTT로 말할시 머리위에 음파효과를 적용합니다. 이 옵션은 TFAR과 ACRE2가 있을때만 적용됩니다.</Korean>
-            <Chinesesimp>当玩家使用按键发话时，其头上的角色名字旁会显示声波的图案。此功能可搭配TFAR、ACRE2等模组使用。</Chinesesimp>
+            <Chinesesimp>当玩家使用按键发话时，其头上的角色名字旁会显示声波的图案。此功能可搭配 TFAR、ACRE2 等模组使用。</Chinesesimp>
             <Chinese>當玩家使用按鍵發話時，其頭上的角色名稱旁會顯示聲波的圖案。此功能可搭配TFAR、ACRE2等模組使用。</Chinese>
             <Turkish>Bas Konuş tuşunu basılı tuttuktan sonra ses dalgalarının konuşan oyuncuların başlarının üzerindeki etkisi. Bu seçenek TFAR ve ACRE2 ile çalışır.</Turkish>
         </Key>
@@ -318,7 +318,7 @@
             <Italian>Usa impostazioni Etichette Nomi</Italian>
             <Japanese>名札の設定</Japanese>
             <Korean>이름표 설정 사용</Korean>
-            <Chinesesimp>玩家名字设定</Chinesesimp>
+            <Chinesesimp>玩家名称设定</Chinesesimp>
             <Chinese>玩家名稱設定</Chinese>
             <Turkish>İsim etiketi ayarlarını kullan</Turkish>
         </Key>
@@ -352,7 +352,7 @@
             <Italian>Distanza Visiva Etichette Nomi</Italian>
             <Japanese>プレイヤ名が見える範囲</Japanese>
             <Korean>플레이어 이름 표시 거리</Korean>
-            <Chinesesimp>玩家名字显示距离</Chinesesimp>
+            <Chinesesimp>玩家名称显示距离</Chinesesimp>
             <Chinese>玩家名稱顯示距離</Chinese>
             <Turkish>Oyuncu Adlarını Görüntüleme Mes.</Turkish>
         </Key>
@@ -369,7 +369,7 @@
             <Italian>Distanza in metri a cui sono visibili i nomi giocatori. Default: 5</Italian>
             <Japanese>プレイヤの周り何メートルまで名札を表示できます。標準: 5</Japanese>
             <Korean>플레이어 이름이 표시되는 미터. 기본설정: 5</Korean>
-            <Chinesesimp>设定名字在多少距离以内显示。预设:5公尺</Chinesesimp>
+            <Chinesesimp>设定名字在多少距离以内显示。预设：5米</Chinesesimp>
             <Chinese>設定名稱在多少距離以內顯示。預設:5公尺</Chinese>
             <Turkish>Oyuncu adlarının gösterildiği metre cinsinden mesafe. Varsayılan: 5</Turkish>
         </Key>
@@ -377,7 +377,7 @@
             <English>Player tags transparency</English>
             <German>Spielernamen Transparenz</German>
             <Japanese>プレイヤー名札の透明度</Japanese>
-            <Chinesesimp>玩家名字标签透明度</Chinesesimp>
+            <Chinesesimp>玩家名称标签透明度</Chinesesimp>
             <Chinese>玩家名稱透明度</Chinese>
             <Italian>Trasparenza Etichette Nome</Italian>
             <Polish>Przezroczystość etykiet gracza</Polish>
@@ -387,6 +387,7 @@
             <Czech>Průhlednost jmenovek</Czech>
             <Spanish>Transparencia de etiquetas de jugadores</Spanish>
             <Turkish>Oyuncu etiketlerinde şeffaflık</Turkish>
+            <Korean>플레이어 이름 투명도</Korean>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
@@ -401,7 +402,7 @@
             <Italian>Dimensione Etichette Nome</Italian>
             <Japanese>名札の大きさ</Japanese>
             <Korean>이름표 크기</Korean>
-            <Chinesesimp>玩家名字标记大小</Chinesesimp>
+            <Chinesesimp>玩家名称标记大小</Chinesesimp>
             <Chinese>玩家名稱標記大小</Chinese>
             <Turkish>Isim Etiketi Büyüklüğü</Turkish>
         </Key>
@@ -435,7 +436,7 @@
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
             <Japanese>標準の名札の色（グループ メンバ以外)</Japanese>
             <Korean>기본 이름표 색상 (비-그룹 멤버)</Korean>
-            <Chinesesimp>预设名字颜色 (非同小队队友) </Chinesesimp>
+            <Chinesesimp>预设名字颜色（非同小队队友）</Chinesesimp>
             <Chinese>預設名稱顏色 (非同小隊隊友) </Chinese>
             <Turkish>Varsayılan İsim Etiketi Rengi (Grup Üyeleri Olmayanlar)</Turkish>
         </Key>
@@ -531,6 +532,8 @@
             <French>Coefficient de luminosité ambiante</French>
             <German>Spielernamen Umgebungshelligkeitskoeffizient</German>
             <Polish>Współczynnik jasności otoczenia </Polish>
+            <Chinesesimp>铭牌的环境亮度系数</Chinesesimp>
+            <Korean>이름표 배경 밝기 계수</Korean>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">
             <English>Adjusts how strongly ambient brightness affects nametag view distance.</English>
@@ -539,6 +542,8 @@
             <French>Définit à quel point le manque de lumière ambiante abaisse la distance de visibilité du nom des joueurs.</French>
             <German>Stellt ein, wie stark sich die Umgebungshelligkeit auf die Sichtweite der Spielernamen auswirkt.</German>
             <Polish>Definiuje jak bardzo jasność otoczenia wpływa na zasięg wyświetlania imion postaci.</Polish>
+            <Chinesesimp>调整环境亮度对铭牌查看距离的影响程度。</Chinesesimp>
+            <Korean>배경 밝기가 이름표를 보는 거리에 얼마나 영향을 끼치는지를 조절합니다.</Korean>
         </Key>
     </Package>
 </Project>

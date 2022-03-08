@@ -92,3 +92,5 @@ Event Name | Passed Parameter(s) | Locality | Description
 `acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
 `acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted
 `acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object
+`ace_fortify_deployFinished` | [player, side, configName, posASL, vectorDir, vectorUp] | Local | Player successfully finishes building object
+`ace_fortify_deployCanceled` | [player, side, configName, posASL, vectorDir, vectorUp] | Local | Player cancels building object

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Vehicles
+component: vehicles
 description: Various tweaks to vehicles and vehicle weapons.
 group: feature
 category: realism
@@ -55,7 +56,3 @@ Adds the ability to prevent the automatic shut-off of the engine when exiting ve
 ### 2.2 Turning the speed limiter on / off
 - To turn the speed limiter on press <kbd>Del</kbd>.
 - To turn it off press <kbd>Del</kbd> again.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="vehicles" %}

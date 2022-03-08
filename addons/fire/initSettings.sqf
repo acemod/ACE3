@@ -29,3 +29,12 @@
     ],
     true // isGlobal
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableScreams), "CHECKBOX",
+    [LSTRING(Setting_EnableScreams), LSTRING(Setting_EnableScreams_Description)],
+    LSTRING(Category_DisplayName),
+    true,
+    false // isGlobal
+] call CBA_fnc_addSetting;
+

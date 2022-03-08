@@ -42,7 +42,7 @@ class vn_mine_punji_01_ammo: APERSBoundingMine_Range_Ammo {
 
     class EventHandlers {
         class ADDON {
-            AmmoHit = QUOTE(call FUNC(handlePunjiTrapDamage));
+            AmmoHit = QUOTE(call FUNC(handlePunjiTrapTrigger));
         };
     };
 };
@@ -57,7 +57,7 @@ class vn_mine_punji_03_ammo: vn_mine_punji_01_ammo {
 
     class EventHandlers {
         class ADDON {
-            AmmoHit = QUOTE(call FUNC(handlePunjiTrapDamage));
+            AmmoHit = QUOTE(call FUNC(handlePunjiTrapTrigger));
         };
     };
 };

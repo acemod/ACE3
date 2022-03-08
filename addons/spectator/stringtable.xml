@@ -54,7 +54,7 @@
             <Japanese>AI にも有効化</Japanese>
             <Italian>AI Abilitate</Italian>
             <Chinese>可觀察AI</Chinese>
-            <Chinesesimp>可观察AI</Chinesesimp>
+            <Chinesesimp>可观察 AI</Chinesesimp>
             <Korean>AI 활성</Korean>
             <French>IA visible</French>
             <Polish>SI Aktywowane</Polish>
@@ -70,7 +70,7 @@
             <Japanese>スペクテイターで AI 視点を可能に</Japanese>
             <Italian>Permette la visibilità delle AI in spettatore</Italian>
             <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
-            <Chinesesimp>开启此功能后可在观察者模式下观察AI单位。</Chinesesimp>
+            <Chinesesimp>开启此功能后可在观察者模式下观察 AI 单位。</Chinesesimp>
             <Korean>관전자가 AI를 관전 할 수 있습니다.</Korean>
             <French>Rend les unités IA visibles en spectateur.</French>
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
@@ -212,11 +212,13 @@
             <Japanese>最大追随距離</Japanese>
             <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
             <Chinese>最大跟隨距離</Chinese>
+            <Chinesesimp>最大跟随距离</Chinesesimp>
             <French>Distance maximale de suivi</French>
             <Italian>Distanza massima per seguire</Italian>
             <Czech>Maximální vzdálenost sledování objektu</Czech>
             <Polish>Maksymalna odległość śledzenia</Polish>
             <Spanish>Distancia máxima de seguimiento</Spanish>
+            <Korean>최대 추적 거리</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
@@ -225,11 +227,13 @@
             <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
             <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
+            <Chinesesimp>摄影机能追随目标的最大距离</Chinesesimp>
             <Italian>Distanza massima che la telecamera seguente può percorrere dall'obiettivo</Italian>
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
             <Polish>Maksymalna odległość na jakiej kamera może podążać od celu</Polish>
             <Spanish>Distancia máxima que la cámara de seguimiento puede estar del objetivo</Spanish>
+            <Korean>카메라가 목표를 따라갈 수 있는 최대 거리를 설정합니다.</Korean>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">

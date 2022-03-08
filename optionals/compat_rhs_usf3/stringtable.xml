@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_RHS_USF3">
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_TOW_displayName">
+            <English>[CSW] BGM-71A TOW</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_TOWB_displayName">
+            <English>[CSW] BGM-71B TOW</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_ITOW_displayName">
+            <English>[CSW] BGM-71C ITOW</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_TOW2_displayName">
+            <English>[CSW] BGM-71D TOW-2</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_TOW2A_displayName">
+            <English>[CSW] BGM-71E TOW-2A</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_TOW2b_displayName">
+            <English>[CSW] BGM-71F TOW-2B</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_TOW2b_aero_displayName">
+            <English>[CSW] BGM-71F-3 TOW-2B AERO</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_TOW2bb_displayName">
+            <English>[CSW] BGM-71H Bunker Buster</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_48Rnd_40mm_MK19_displayName">
+            <English>[CSW] Mk. 19 40mm M384 HE</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_48Rnd_40mm_MK19_M430I_displayName">
+            <English>[CSW] Mk. 19 40mm M430I HEDP</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_48Rnd_40mm_MK19_M430A1_displayName">
+            <English>[CSW] Mk. 19 40mm M430A1 HEDP</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_48Rnd_40mm_MK19_M1001_displayName">
+            <English>[CSW] Mk. 19 40mm M1001 Canister</English>
+        </Key>
+    </Package>
+</Project>

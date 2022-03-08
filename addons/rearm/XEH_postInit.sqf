@@ -1,6 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(hardpointGroupsCache) = [] call CBA_fnc_createNamespace;
 GVAR(configTypesAdded) = [];
 ["CBA_settingsInitialized", {
     TRACE_2("settingsInit",GVAR(level),GVAR(supply));

@@ -81,7 +81,7 @@
             <Italian>Codice esplosivo: %1</Italian>
             <Japanese>爆破コード: %1</Japanese>
             <Korean>폭파 코드: %1</Korean>
-            <Chinesesimp>炸药代码: %1</Chinesesimp>
+            <Chinesesimp>炸药代码：%1</Chinesesimp>
             <Chinese>炸藥代號: %1</Chinese>
             <Turkish>Patlayıcı Kodu: %1</Turkish>
         </Key>
@@ -233,7 +233,7 @@
             <Russian>Используется для удаленной детонации СВУ</Russian>
             <Japanese>爆発物を遠隔で起爆させるのに使います</Japanese>
             <Korean>원격으로 폭발물을 폭파시킬때 씁니다.</Korean>
-            <Chinesesimp>用于远端引爆炸药</Chinesesimp>
+            <Chinesesimp>用于远程引爆炸药</Chinesesimp>
             <Chinese>用於遠端引爆炸藥</Chinese>
             <Turkish>Bombaları uzaktan patlatmak için kullanılır</Turkish>
         </Key>
@@ -267,7 +267,7 @@
             <Russian>Используется для удаленной детонации зарядов</Russian>
             <Japanese>爆発物を遠隔で起爆させるのに使います</Japanese>
             <Korean>원격으로 폭발물을 폭파시킬때 씁니다.</Korean>
-            <Chinesesimp>用于远端引爆炸药</Chinesesimp>
+            <Chinesesimp>用于远程引爆炸药</Chinesesimp>
             <Chinese>用於遠端引爆炸藥</Chinese>
             <Turkish>Patlayıcıları uzaktan tetiklemek için kullanılır</Turkish>
         </Key>
@@ -301,7 +301,7 @@
             <Italian>M152 RAMS</Italian>
             <Japanese>M152 RAMS</Japanese>
             <Korean>M152 RAMS</Korean>
-            <Chinesesimp>M152 远端炸药引爆系统</Chinesesimp>
+            <Chinesesimp>M152 远程炸药引爆系统</Chinesesimp>
             <Chinese>M152 遠端炸藥引爆系統</Chinese>
             <Turkish>M152 RAMS</Turkish>
         </Key>
@@ -335,7 +335,7 @@
             <Russian>Позволяет обезвреживать взрывчатку</Russian>
             <Japanese>爆発物を無力化できます</Japanese>
             <Korean>폭발물을 해체할 수 있게 해줍니다</Korean>
-            <Chinesesimp>可以用来拆除炸弹</Chinesesimp>
+            <Chinesesimp>可以用来拆除爆炸物</Chinesesimp>
             <Chinese>可以用來拆除炸彈</Chinese>
             <Turkish>Patlayıcıların etkisiz hale gelmesini sağlar.</Turkish>
         </Key>
@@ -454,7 +454,7 @@
             <Russian>Меню подрыва</Russian>
             <Japanese>点火メニュー</Japanese>
             <Korean>폭파 메뉴</Korean>
-            <Chinesesimp>引爆选单</Chinesesimp>
+            <Chinesesimp>引爆菜单</Chinesesimp>
             <Chinese>引爆選單</Chinese>
             <Turkish>Patlatma Menüsü</Turkish>
         </Key>
@@ -471,7 +471,7 @@
             <Russian>Меню установки</Russian>
             <Japanese>設置メニュー</Japanese>
             <Korean>설치 메뉴</Korean>
-            <Chinesesimp>放置选单</Chinesesimp>
+            <Chinesesimp>放置菜单</Chinesesimp>
             <Chinese>放置選單</Chinese>
             <Turkish>Yerleştirme Menüsü</Turkish>
         </Key>
@@ -505,7 +505,7 @@
             <Russian>Обезвреживание...</Russian>
             <Japanese>爆発物を無力化しています・・・</Japanese>
             <Korean>폭발물 해체중...</Korean>
-            <Chinesesimp>正在拆除炸弹...</Chinesesimp>
+            <Chinesesimp>正在拆除爆炸物...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
             <Turkish>Patlayıcı Imha Ediliyor...</Turkish>
         </Key>
@@ -539,7 +539,7 @@
             <Russian>Время: %1m %2c</Russian>
             <Japanese>設定時間: %1分 %2秒</Japanese>
             <Korean>시간: %1분 %2초</Korean>
-            <Chinesesimp>时间: %1分%2秒</Chinesesimp>
+            <Chinesesimp>时间：%1分%2秒</Chinesesimp>
             <Chinese>時間: %1分%2秒</Chinese>
             <Turkish>Süre: %1m %2s</Turkish>
         </Key>
@@ -675,7 +675,7 @@
             <Russian>ИК сенсор (детонация вбок)</Russian>
             <Japanese>赤外線感知式 (側面攻撃)</Japanese>
             <Korean>적외선 센서 (측면 공격)</Korean>
-            <Chinesesimp>红外线感应器 (侧边攻击)</Chinesesimp>
+            <Chinesesimp>红外线感应器（侧边攻击）</Chinesesimp>
             <Chinese>紅外線感應器 (側邊攻擊)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_SLAME_Magnetic">
@@ -691,7 +691,7 @@
             <Russian>Магнитный сенсор (детонация вверх)</Russian>
             <Japanese>磁気感知式 (底面攻撃)</Japanese>
             <Korean>자기장 감지센서 (바닥 공격)</Korean>
-            <Chinesesimp>磁性感应器 (底部攻击)</Chinesesimp>
+            <Chinesesimp>磁性感应器（底部攻击）</Chinesesimp>
             <Chinese>磁性感應器 (底部攻擊)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_NoExplosivesAvailable">
@@ -724,7 +724,7 @@
             <Italian>Detonatore a rilascio</Italian>
             <Japanese>自爆装置</Japanese>
             <Korean>자폭 장치</Korean>
-            <Chinesesimp>自杀炸弹客引爆器</Chinesesimp>
+            <Chinesesimp>自杀炸弹手引爆器</Chinesesimp>
             <Chinese>自殺炸彈客引爆器</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
@@ -740,7 +740,7 @@
             <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
             <Japanese>点火装置から遠隔から起爆したい時に使います。</Japanese>
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
-            <Chinesesimp>当放开按钮时, 将会引爆炸弹.</Chinesesimp>
+            <Chinesesimp>当放开按钮时，将会引爆炸弹。</Chinesesimp>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
             <Turkish>Patlayıcıları serbest bırakıldığında uzaktan tetiklemek için kullanılır.</Turkish>
         </Key>
@@ -791,7 +791,7 @@
             <Italian>Richiedi specialisti?</Italian>
             <Japanese>特技兵を必須</Japanese>
             <Korean>전문가가 필요합니까?</Korean>
-            <Chinesesimp>需要专家?</Chinesesimp>
+            <Chinesesimp>需要专家？</Chinesesimp>
             <Chinese>需要專家?</Chinese>
             <Turkish>Uzmanlara ihtiyaç var mı?</Turkish>
         </Key>
@@ -808,7 +808,7 @@
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
             <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。標準: 無効化</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
-            <Chinesesimp>需要炸弹专家才能拆除炸弹? 预设: 否</Chinesesimp>
+            <Chinesesimp>需要爆破专业兵才能拆除爆炸物？ 预设：否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
             <Turkish>Patlayıcı uzmanlarının patlayıcıları etkisiz hale getirmesini ister misiniz? Varsayılan: Hayır</Turkish>
         </Key>
@@ -825,7 +825,7 @@
             <Italian>Punisci non-specialisti?</Italian>
             <Japanese>非特技兵へ足かせ</Japanese>
             <Korean>비-전문가에 불이익을 줍니까?</Korean>
-            <Chinesesimp>折磨非专业人员?</Chinesesimp>
+            <Chinesesimp>惩罚非专业人士？</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_Description">
@@ -841,7 +841,7 @@
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
             <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
             <Korean>비-전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
-            <Chinesesimp>增加非专业人员相关操作的时间? 预设: 是</Chinesesimp>
+            <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
@@ -857,7 +857,7 @@
             <Italian>Fai esplodere quando disarmato?</Italian>
             <Japanese>解除中に爆発</Japanese>
             <Korean>해제시 폭발합니까?</Korean>
-            <Chinesesimp>拆除时引爆?</Chinesesimp>
+            <Chinesesimp>拆除时引爆？</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
@@ -873,7 +873,7 @@
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
             <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
             <Korean>특정 폭발물이 해제시 폭발하게 합니까? 기본설정: 예</Korean>
-            <Chinesesimp>启用后, 某些炸弹会在拆除时引爆? 预设: 是</Chinesesimp>
+            <Chinesesimp>启用后，某些爆炸物会在拆除时引爆？ 预设：是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
@@ -904,7 +904,7 @@
             <Russian>Мина M6 SLAM (направлена вверх)</Russian>
             <Japanese>M6 SLAM 地雷 (底面攻撃)</Japanese>
             <Korean>M6 SLAM 지뢰 (바닥 공격)</Korean>
-            <Chinesesimp>M6指向性反装甲地雷 (底部攻击)</Chinesesimp>
+            <Chinesesimp>M6指向性反装甲地雷（底部攻击）</Chinesesimp>
             <Chinese>M6指向性反裝甲地雷 (底部攻擊)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
@@ -919,7 +919,7 @@
             <Russian>Мина M6 SLAM (направлена вбок)</Russian>
             <Japanese>M6 SLAM 地雷 (側面攻撃)</Japanese>
             <Korean>M6 SLAM 지뢰 (측면 공격)</Korean>
-            <Chinesesimp>M6指向性反装甲地雷 (侧边攻击)</Chinesesimp>
+            <Chinesesimp>M6指向性反装甲地雷（侧边攻击）</Chinesesimp>
             <Chinese>M6指向性反裝甲地雷 (側邊攻擊)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
@@ -934,7 +934,7 @@
             <Russian>Большое СВУ (городское, нажимного действия)</Russian>
             <Japanese>大きな IED (市街地用、圧力感知)</Japanese>
             <Korean>대형 급조폭발물 (시가지, 압력식)</Korean>
-            <Chinesesimp>大型简易爆炸装置 (地表上, 压力盘)</Chinesesimp>
+            <Chinesesimp>大型 IED（地表上，压力盘）</Chinesesimp>
             <Chinese>大型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
@@ -949,7 +949,7 @@
             <Russian>Большое СВУ (закопанное, нажимного действия)</Russian>
             <Japanese>大きな IED (埋め込み型、圧力感知)</Japanese>
             <Korean>대형 급조폭발물 (묻힘, 압력식)</Korean>
-            <Chinesesimp>大型简易爆炸装置 (地表下, 压力盘)</Chinesesimp>
+            <Chinesesimp>大型 IED（地表下，压力盘）</Chinesesimp>
             <Chinese>大型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
@@ -964,7 +964,7 @@
             <Russian>Малое СВУ (городское, нажимного действия)</Russian>
             <Japanese>小さな IED (市街地用、圧力感知)</Japanese>
             <Korean>소형 급조폭발물 (시가지, 압력식)</Korean>
-            <Chinesesimp>小型简易爆炸装置 (地表上, 压力盘)</Chinesesimp>
+            <Chinesesimp>小型 IED（地表上，压力盘）</Chinesesimp>
             <Chinese>小型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
@@ -979,7 +979,7 @@
             <Russian>Малое СВУ (закопанное, нажимного действия)</Russian>
             <Japanese>小さな IED (埋め込み型、圧力感知)</Japanese>
             <Korean>소형 급조폭발물 (묻힘, 압력식)</Korean>
-            <Chinesesimp>小型简易爆炸装置 (地表下, 压力盘)</Chinesesimp>
+            <Chinesesimp>小型 IED（地表下，压力盘）</Chinesesimp>
             <Chinese>小型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_connectInventoryExplosiveToDeadman">
@@ -1008,7 +1008,7 @@
             <Korean>조명지뢰</Korean>
             <French>Fusée éclairante avec fil piège</French>
             <Italian>Cavo d'innesco</Italian>
-            <Chinesesimp>绊线闪光地雷</Chinesesimp>
+            <Chinesesimp>绊线信号弹</Chinesesimp>
             <Chinese>絆線閃光地雷</Chinese>
             <Portuguese>Tripwire (Sinalizador)</Portuguese>
             <Czech>Světlice na nástražném drátu</Czech>
@@ -1023,7 +1023,7 @@
             <Korean>종류: 조명지뢰 - 작동시 무해한 조명을 사출합니다.&lt;br /&gt;장탄수: 1&lt;br /&gt;사용처: 지면</Korean>
             <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée.&lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
             <Italian>Tipo: Cavo d'innesco - Sfocio un abbaglio non letale quanto attivato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
-            <Chinesesimp>类型: 绊线闪光地雷 - 触发后产生非致命性的强光.&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 地面</Chinesesimp>
+            <Chinesesimp>类型：绊线信号弹—触发后产生非致命性的强光。&lt;br /&gt;发数：1&lt;br /&gt;使用于：地面</Chinesesimp>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
             <Portuguese>Tipo: Flare de Tripwire - Acende um sinalizador não letal quando acionado.&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Chão</Portuguese>
             <Czech>Typ: Světlice na nástražném drátu - Zapálí světlici při aktivaci.&lt;br/&gt;Pouze 1 použití&lt;br/&gt;Použít na zem</Czech>
@@ -1043,6 +1043,7 @@
             <Czech>Dosah exploze</Czech>
             <Turkish>Patlayıcı menzili</Turkish>
             <Spanish>Alcance explosivo</Spanish>
+            <Korean>폭발 범위</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
@@ -1054,9 +1055,11 @@
             <Portuguese>Timer de explosão</Portuguese>
             <French>Minuteur pour explosifs</French>
             <Chinese>引爆倒數</Chinese>
+            <Chinesesimp>定时爆炸</Chinesesimp>
             <Czech>Časovač exploze</Czech>
             <Turkish>Patlayıcı Zamanlayıcı</Turkish>
             <Spanish>Temporizador de explosivo</Spanish>
+            <Korean>폭발 타이머</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
@@ -1064,11 +1067,13 @@
             <Japanese>EOD に</Japanese>
             <French>Spécialiste en explosifs</French>
             <Chinese>是EOD</Chinese>
+            <Chinesesimp>爆破专家</Chinesesimp>
             <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
             <Polish>Jest EOD</Polish>
             <Russian>Сапёр</Russian>
             <Spanish>¿Es EOD?</Spanish>
+            <Korean>폭발물 처리반</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1076,11 +1081,13 @@
             <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
             <French>Définit si l'unité est un spécialiste en explosifs.</French>
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
+            <Chinesesimp>控制该单位是否是爆破专家</Chinesesimp>
             <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
             <Russian>Определяет, является ли юнит сапёром.</Russian>
             <Spanish>Controla si la unidad es un especialista en explosivos</Spanish>
+            <Korean>유닛이 폭발물 처리반인지 결정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
@@ -1090,6 +1097,8 @@
             <Spanish>Tiempo mínimo</Spanish>
             <Polish>Minimalny czas</Polish>
             <German>Minimale Zeit</German>
+            <Chinesesimp>最短时间</Chinesesimp>
+            <Korean>최소 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
@@ -1099,6 +1108,8 @@
             <Spanish>Tiempo máximo</Spanish>
             <Polish>Maksymalny czas</Polish>
             <German>Maximale Zeit</German>
+            <Chinesesimp>最长时间</Chinesesimp>
+            <Korean>최대 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
@@ -1108,6 +1119,8 @@
             <Spanish>Tiempo por defecto</Spanish>
             <Polish>Domyślny czas</Polish>
             <German>Standardmäßige Zeit</German>
+            <Chinesesimp>默认时间</Chinesesimp>
+            <Korean>기본 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
@@ -1117,6 +1130,8 @@
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Chinesesimp>定时爆炸的最短时间（单位：秒）</Chinesesimp>
+            <Korean>초 단위로, 폭발 타이머의 최소 시간을 정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
@@ -1126,6 +1141,8 @@
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Chinesesimp>定时爆炸的最长时间（单位：秒）</Chinesesimp>
+            <Korean>초 단위로, 폭발 타이머의 최대 시간을 정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
@@ -1135,6 +1152,8 @@
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Chinesesimp>定时爆炸的默认时间（单位：秒）</Chinesesimp>
+            <Korean>초 단위로, 기본 폭발 타이머 시간을 정합니다</Korean>
         </Key>
     </Package>
 </Project>

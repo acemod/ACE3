@@ -17,7 +17,7 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define TOW_ACTION_DISTANCE 3
-#define INTERACTION_EXCEPTIONS "isNotInside", "isNotOnLadder", "isNotSwimming"
+#define INTERACTION_EXCEPTIONS "isNotOnLadder", "isNotSwimming"
 
 #define TOW_STATE_ATTACH_PARENT 0
 #define TOW_STATE_ATTACH_CHILD 1

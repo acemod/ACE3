@@ -18,8 +18,11 @@
 
 params ["_object", ["_addCustomPart", false]];
 
-private _class = if (_object isEqualType "") then {_object} else {typeOf _object};
-private _displayName = getText (configFile >> "CfgVehicles" >> _class >> "displayName");
+private _displayName = if (_object isEqualType "") then {
+    getText (configFile >> "CfgVehicles" >> _object >> "displayName")
+} else {
+    getText ((configOf _object) >> "displayName")
+};
 
 if (_addCustomPart && {!(_object isEqualType "")}) then {
     private _customPart = _object getVariable [QGVAR(customName), ""];

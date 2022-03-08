@@ -9,7 +9,7 @@
             <Japanese>視点制限</Japanese>
             <Korean>시점 제한</Korean>
             <French>Restriction Vue</French>
-            <Chinesesimp>视野限制</Chinesesimp>
+            <Chinesesimp>人称限制</Chinesesimp>
             <Chinese>視野限制</Chinese>
             <Italian>Visualizza Restrizione</Italian>
             <Russian>Ограничение обзора</Russian>
@@ -22,7 +22,7 @@
             <Japanese>全体や車両ごとで使える視点を1人称か3人称視点のどちらかに制限します。</Japanese>
             <Korean>차량 유형별, 혹은 전체적으로 1,3인칭 시점 사용 제한 설정</Korean>
             <French>La restriction de la vue limite l'usage de la vue à la 1ère/3ème personne globalement ou par type de véhicule.</French>
-            <Chinesesimp>视野限制可以设定在全局或是局部状况下能用的视野模式。</Chinesesimp>
+            <Chinesesimp>人称限制可以设定在全局或是局部状况下能用的人称模式。</Chinesesimp>
             <Chinese>視野限制可以設定在全局或是局部狀況下能用的視野模式。</Chinese>
             <Italian>Visualizza le impostazioni di restrizione per limitare l'utilizzo di prima e terza persona a livello globale o per tipologia di veicolo.</Italian>
             <Russian>Настройки ограничения обзора при виде от 1-го или 3-го лица. Общие для всех, или Выборочные, в зависимости от техники.</Russian>
@@ -50,7 +50,7 @@
             <Japanese>グローバル モードの設定。(標準: 無効)</Japanese>
             <Korean>전체 모드를 사용합니다. 기본값: 사용 안 함</Korean>
             <French>Mode global. Défaut: Désactivé</French>
-            <Chinesesimp>设定全局的视野模式。预设:关闭</Chinesesimp>
+            <Chinesesimp>设定全局的人称模式。预设：关闭</Chinesesimp>
             <Chinese>設定全局的視野模式。預設:關閉</Chinese>
             <Italian>Imposta modalità globale. Default: Disabilitato</Italian>
             <Russian>Общие установки для всех. По умолчанию: Отключено.</Russian>
@@ -64,7 +64,7 @@
             <Japanese>(選択性) 地上</Japanese>
             <Korean>(선택) 보병</Korean>
             <French>(Sélectif) A pied</French>
-            <Chinesesimp>(可选) 步行</Chinesesimp>
+            <Chinesesimp>（可选）步行</Chinesesimp>
             <Chinese>(可選) 步行</Chinese>
             <Italian>(Selettiva) Piedi</Italian>
             <Russian>(Выборочные) Пешком</Russian>
@@ -78,7 +78,7 @@
             <Japanese>地上でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>보병 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif hors des véhicules. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
-            <Chinesesimp>设定在步行的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinesesimp>设定在步行的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Chinese>設定在步行的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
             <Italian>Modalità selettiva su Piedi. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
             <Russian>Выборочные установки без техники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
@@ -92,7 +92,7 @@
             <Japanese>(選択性) 地上車両</Japanese>
             <Korean>(선택) 지상 차량</Korean>
             <French>(Sélectif) Véhicules terrestres</French>
-            <Chinesesimp>(可选) 陆上载具</Chinesesimp>
+            <Chinesesimp>（可选）陆上载具</Chinesesimp>
             <Chinese>(可選) 陸上載具</Chinese>
             <Italian>(Selettiva) Veicoli Terrestri</Italian>
             <Russian>(Выборочные) Наземная техника</Russian>
@@ -106,7 +106,7 @@
             <Japanese>地上車両でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>차량 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif dans les véhicules terrestres. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
-            <Chinesesimp>设定在搭乘陆上载具的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinesesimp>设定在搭乘陆上载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Chinese>設定在搭乘陸上載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
             <Italian>Modalità selettiva su Veicoli Terrestri. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
             <Russian>Выборочные установки для наземной техники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
@@ -120,7 +120,7 @@
             <Japanese>(選択性) 航空機</Japanese>
             <Korean>(선택) 항공기</Korean>
             <French>(Sélectif) Véhicules aériens</French>
-            <Chinesesimp>(可选) 空中载具</Chinesesimp>
+            <Chinesesimp>（可选）空中载具</Chinesesimp>
             <Chinese>(可選) 空中載具</Chinese>
             <Italian>(Selettiva) Veicolo Aerei</Italian>
             <Russian>(Выборочные) Авиатехника</Russian>
@@ -134,7 +134,7 @@
             <Japanese>航空機でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>항공기 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif dans les véhicules aériens. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
-            <Chinesesimp>设定在搭乘空中载具的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinesesimp>设定在搭乘空中载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Chinese>設定在搭乘空中載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
             <Italian>Modalità selettiva su Veicoli Aerei. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
             <Russian>Выборочные установки для авиатехники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
@@ -148,7 +148,7 @@
             <Japanese>(選択性) 船舶</Japanese>
             <Korean>(선택) 함선</Korean>
             <French>(Sélectif) Véhicules marins</French>
-            <Chinesesimp>(可选) 水上载具</Chinesesimp>
+            <Chinesesimp>（可选）水上载具</Chinesesimp>
             <Chinese>(可選) 水上載具</Chinese>
             <Italian>(Selettiva) Veicoli Marittimi</Italian>
             <Russian>(Выборочные) Водный транспорт</Russian>
@@ -162,7 +162,7 @@
             <Japanese>船舶でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>함선 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif dans les véhicules marins. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
-            <Chinesesimp>设定在搭乘水上载具的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinesesimp>设定在搭乘水上载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Chinese>設定在搭乘水上載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
             <Italian>Modalità selettiva su Veicoli Marittimi. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
             <Russian>Выборочные установки для водного транспорта. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
@@ -176,7 +176,7 @@
             <Japanese>(選択性) 無人機</Japanese>
             <Korean>(선택) 무인기</Korean>
             <French>(Sélectif) Drones</French>
-            <Chinesesimp>(可选) 无人载具</Chinesesimp>
+            <Chinesesimp>（可选）无人机</Chinesesimp>
             <Chinese>(可選) 無人載具</Chinese>
             <Italian>(Selettiva) UAV</Italian>
             <Russian>(Выборочные) Беспиплотники</Russian>
@@ -190,7 +190,7 @@
             <Japanese>無人機でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>무인기 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif dans les drones. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
-            <Chinesesimp>设定在搭乘无人载具的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinesesimp>设定在搭乘无人载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Chinese>設定在搭乘無人載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
             <Italian>Modalità selettiva su UAVi. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
             <Russian>Выборочные установки для беспилотников. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
@@ -252,9 +252,10 @@
             <Russian>Запоминать вид для типов техники</Russian>
             <Japanese>車両の種類により視点を変更</Japanese>
             <Chinese>保留載具的視野模式</Chinese>
-            <Chinesesimp>保留载具的视野模式</Chinesesimp>
+            <Chinesesimp>保留载具的人称模式</Chinesesimp>
             <Polish>Zachowaj ustawienie widoku dla pojazdów</Polish>
             <Turkish>Araç türleri için görünümü koru</Turkish>
+            <Korean>차량 타입에 따른 시야 정보 저장</Korean>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewDesc">
             <English>Switch view on vehicle change to last used in this vehicle type (Requires Mode: Disabled)</English>
@@ -262,9 +263,10 @@
             <Russian>Переключать вид при смене техники на последний использованный в данном типе техники (требуется режим: Отключено)</Russian>
             <Japanese>車両の種類により最後に使用した視点へ切り替え (無効モードでのみ有効)</Japanese>
             <Chinese>切換到載具時自動切換到上次最後使用的視野模式(需求模式:關閉)</Chinese>
-            <Chinesesimp>切换到载具时自动切换到上次最后使用的视野模式(需求模式:关闭)</Chinesesimp>
+            <Chinesesimp>切换到载具时自动切换到上次最后使用的人称模式（需求模式：关闭）</Chinesesimp>
             <Polish>Zmień widok podczas zmiany pojazdu na ustawienie widoku z ostatniego używanego pojazdu tego typu (Wymaga Tryb: Wyłączony</Polish>
             <Turkish>Araçlar için en son kullanılan bakış  türünü kaydet.</Turkish>
+            <Korean>해당 차량 타입에서 마지막으로 사용했던 시야로 설정하여 봅니다 (모드 - 사용 안함 필요)</Korean>
         </Key>
     </Package>
 </Project>

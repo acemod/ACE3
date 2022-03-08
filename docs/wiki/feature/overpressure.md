@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Overpressure
+component: overpressure
 description: Backblast and overpressure.
 group: feature
 category: realism
@@ -16,7 +17,3 @@ version:
 
 ### 1.1 Overpressure
 Adds backblast to AT launchers and overpressure zones to tank cannons, don't stay behind a firing RPG or it'll hurt.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="overpressure" %}
