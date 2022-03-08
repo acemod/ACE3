@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Sets up Active Radar state arrays (called from missileGuidance's onFired).
  *
  * Arguments:

@@ -3,6 +3,8 @@ TRACE_1("",QUOTE(ADDON));
 PREP(aceRearmGetCarryMagazines);
 
 PREP(ai_handleFired);
+PREP(ai_handleGetIn);
+PREP(ai_reload);
 
 PREP(assemble_canDeployTripod);
 PREP(assemble_canDeployWeapon);

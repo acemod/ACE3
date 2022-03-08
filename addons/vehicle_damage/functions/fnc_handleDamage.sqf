@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Called by "HandleDamage" event handler. Sets up hit array for this frame's damage.
  *
  * Arguments:

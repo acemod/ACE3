@@ -62,7 +62,7 @@
             <Italian>Selezione (3D)</Italian>
             <Japanese>選択 (3D)</Japanese>
             <Korean>선택 (3d)</Korean>
-            <Chinesesimp>选择 (3D)</Chinesesimp>
+            <Chinesesimp>选择（3D）</Chinesesimp>
             <Chinese>選擇 (3D)</Chinese>
             <Turkish>Seçimler (3D)</Turkish>
         </Key>
@@ -457,7 +457,7 @@
             <Italian>Bendaggi/Fratture</Italian>
             <Japanese>包帯 / 骨折</Japanese>
             <Korean>붕대 / 골절</Korean>
-            <Chinesesimp>包扎 / 骨折</Chinesesimp>
+            <Chinesesimp>包扎/骨折</Chinesesimp>
             <Chinese>繃帶 / 骨折</Chinese>
             <Turkish>Bandaj / Kırıklar</Turkish>
         </Key>
@@ -521,7 +521,7 @@
             <Italian>Trascina / Trasporta</Italian>
             <Japanese>引きずる / 担ぐ</Japanese>
             <Korean>끌기 / 들기</Korean>
-            <Chinesesimp>拖 / 背</Chinesesimp>
+            <Chinesesimp>拖/背</Chinesesimp>
             <Chinese>拖 / 背</Chinese>
             <Turkish>Sürükle / Taşı</Turkish>
         </Key>
@@ -537,7 +537,7 @@
             <Italian>Attiva (Te Stesso)</Italian>
             <Japanese>切り替え (自分)</Japanese>
             <Korean>토글 (자신)</Korean>
-            <Chinesesimp>切换 (自己)</Chinesesimp>
+            <Chinesesimp>切换（自己）</Chinesesimp>
             <Chinese>切換 (自己)</Chinese>
             <Turkish>Değiştir (Şahsi)</Turkish>
         </Key>
@@ -1099,7 +1099,7 @@
             <Italian>Laccio Emostatico [CAT]</Italian>
             <Japanese>止血帯 [CAT]</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <Chinesesimp>止血带 (军用型)</Chinesesimp>
+            <Chinesesimp>止血带（军用型）</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
             <Turkish>Turnike [CAT]</Turkish>
         </Key>
@@ -1175,7 +1175,7 @@
             <Korean>출혈 색상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColor_Description">
-            <English>Blood Loss Colors, That Used in Medical GUI. 10 Color Gradient.</English>
+            <English>Defines the 10 color gradient used to indicate blood loss in Medical GUIs.</English>
             <Russian>Цвета кровопотери, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
             <Japanese>医療 GUI 内で失血量を 10 段階のカラーで表します。</Japanese>
             <French>Couleurs utilisées pour afficher les hémorragies dans l'interface médicale. Dégradé de 10 couleurs.</French>
@@ -1205,7 +1205,7 @@
             <Korean>피해 색상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
-            <English>Damage Colors, That Used in Medical GUI. 10 Color Gradient.</English>
+            <English>Defines the 10 color gradient used to indicate damage in Medical GUIs.</English>
             <Russian>Цвета урона, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
             <Japanese>医療 GUI 内で負傷を 10 段階のカラーで表します。</Japanese>
             <French>Couleurs utilisées pour afficher les dégâts dans l'interface médicale. Dégradé de 10 couleurs.</French>
@@ -1223,6 +1223,14 @@
             <Polish>Obrażenia - kolor %1</Polish>
             <Chinesesimp>负伤颜色 %1</Chinesesimp>
             <Korean>피해 색상 %1</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_DisplayName">
+            <English>Show Blood Loss</English>
+            <German>Blutverlust anzeigen</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
+            <English>Show qualitative blood loss in the injury list.</English>
+            <German>Qualitativen Blutverlust in der Verletzungsliste anzeigen.</German>
         </Key>
     </Package>
 </Project>

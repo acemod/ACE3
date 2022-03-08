@@ -30,7 +30,7 @@
             <Portuguese>Confere a munição no seu novo carregador ao recarregar a arma</Portuguese>
             <Japanese>新しく装填された弾倉の弾薬を確認します。</Japanese>
             <Korean>재장전시 새탄창에 있는 탄약을 확인합니다.</Korean>
-            <Chinesesimp>在重新装填时检查新弹匣上的弹药.</Chinesesimp>
+            <Chinesesimp>在重新装填时检查新弹匣上的弹药。</Chinesesimp>
             <Chinese>在重新裝填時檢查新彈匣上的彈藥.</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelf">

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Initializes weapon to disable weapon disassembling
  *
  * Arguments:
@@ -25,6 +25,7 @@ TRACE_4("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig)
 if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
     TRACE_1("adding AI fired handler",_staticWeapon);
     _staticWeapon addEventHandler ["Fired", LINKFUNC(ai_handleFired)];
+    _staticWeapon addEventHandler ["GetIn", LINKFUNC(ai_handleGetIn)]; // handle AI getting inside weapon with no ammo
 };
 
 TRACE_2("",local _staticWeapon,_staticWeapon turretLocal [0]);

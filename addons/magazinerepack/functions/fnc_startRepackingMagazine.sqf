@@ -61,6 +61,10 @@ if (count _startingAmmoCounts < 2) exitWith {ERROR("Not Enough Mags to Repack");
 private _simEvents = [_fullMagazineCount, _startingAmmoCounts, _isBelt] call FUNC(simulateRepackEvents);
 private _totalTime = _simEvents select (count _simEvents - 1) select 0;
 
+if (GVAR(repackAnimation)) then {
+    [_player, "Gear"] call EFUNC(common,doGesture);
+};
+
 [
     _totalTime,
     [_magazineClassname, _startingAmmoCounts, _simEvents],

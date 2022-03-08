@@ -128,7 +128,7 @@
             <Portuguese>Reorganização Terminada</Portuguese>
             <Japanese>詰め替えが完了しました</Japanese>
             <Korean>탄창 채우기 끝남</Korean>
-            <Chinesesimp>重整完成</Chinesesimp>
+            <Chinesesimp>整理完成</Chinesesimp>
             <Chinese>重整完成</Chinese>
             <Turkish>Yeniden Doldurma Bitti</Turkish>
         </Key>
@@ -173,7 +173,7 @@
             <Russian>Перепаковать загруженные магазины</Russian>
             <German>Geladene Magazine umpacken</German>
             <Polish>Przepakuj załadowane magazynki</Polish>
-            <Chinesesimp>重新整理已上膛的弹夹</Chinesesimp>
+            <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
             <Korean>장전된 탄창에 총알 채우는 중</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
@@ -185,6 +185,11 @@
             <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
             <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
             <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackAnimation">
+            <English>Repack Animation</English>
+            <German>Animation für Umpacken</German>
+            <Polish>Animacja przepakowywania</Polish>
         </Key>
     </Package>
 </Project>

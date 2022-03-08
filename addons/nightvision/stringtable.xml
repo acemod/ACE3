@@ -7,7 +7,7 @@
             <Italian>ACE Visione notturna</Italian>
             <German>ACE-Nachtsicht</German>
             <Chinese>ACE夜視鏡</Chinese>
-            <Chinesesimp>ACE夜视仪</Chinesesimp>
+            <Chinesesimp>ACE 夜视仪</Chinesesimp>
             <French>ACE Vision Nocturne</French>
             <Polish>ACE Noktowizja</Polish>
             <Russian>ACE ПНВ</Russian>
@@ -90,7 +90,7 @@
             <Hungarian>Éjjellátó szemüveg (3. Gen.)</Hungarian>
             <Japanese>暗視装置 (第3世代)</Japanese>
             <Korean>야투경 (3세대)</Korean>
-            <Chinesesimp>夜视仪 (三代)</Chinesesimp>
+            <Chinesesimp>夜视仪（三代）</Chinesesimp>
             <Chinese>夜視鏡 (三代)</Chinese>
             <Turkish>GG Gözlüğü (3. Jen)</Turkish>
         </Key>
@@ -107,7 +107,7 @@
             <Hungarian>Éjjellátó szemüveg (3. Gen., barna)</Hungarian>
             <Japanese>暗視装置 (第3世代、ブラウン)</Japanese>
             <Korean>야투경 (3세대, 갈색)</Korean>
-            <Chinesesimp>夜视仪 (三代, 棕色)</Chinesesimp>
+            <Chinesesimp>夜视仪（三代，棕色）</Chinesesimp>
             <Chinese>夜視鏡 (三代, 棕色)</Chinese>
             <Turkish>GG Gözlüğü (3. Jen Kahverengi)</Turkish>
         </Key>
@@ -124,7 +124,7 @@
             <Hungarian>Éjjellátó szemüveg (3. Gen., zöld)</Hungarian>
             <Japanese>暗視装置 (第3世代、グリーン)</Japanese>
             <Korean>야투경 (3세대, 녹색)</Korean>
-            <Chinesesimp>夜视仪 (三代, 绿色)</Chinesesimp>
+            <Chinesesimp>夜视仪（三代，绿色）</Chinesesimp>
             <Chinese>夜視鏡 (三代, 綠色)</Chinese>
             <Turkish>GG Gözlüğü (3. Jen Yeşil)</Turkish>
         </Key>
@@ -141,7 +141,7 @@
             <Hungarian>Éjjellátó szemüveg (3. Gen., fekete)</Hungarian>
             <Japanese>暗視装置 (第3世代、ブラック)</Japanese>
             <Korean>야투경 (3세대, 검정색)</Korean>
-            <Chinesesimp>夜视仪 (三代, 黑色)</Chinesesimp>
+            <Chinesesimp>夜视仪（三代，黑色）</Chinesesimp>
             <Chinese>夜視鏡 (三代, 黑色)</Chinese>
             <Turkish>GG Gözlüğü (3. Jen Siyah)</Turkish>
         </Key>
@@ -152,7 +152,7 @@
             <Japanese>暗視装置 (第4世代、ブラウン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 4, Brązowe)</Polish>
             <German>NS-Brille (4. Gen., braun)</German>
-            <Chinesesimp>夜视仪 (四代, 棕色)</Chinesesimp>
+            <Chinesesimp>夜视仪（四代，棕色）</Chinesesimp>
             <Korean>야투경 (4세대, 갈색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
@@ -162,7 +162,7 @@
             <Japanese>暗視装置 (第3世代、ブラック)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 4, Czarne)</Polish>
             <German>NS-Brille (4. Gen., schwarz)</German>
-            <Chinesesimp>夜视仪 (四代, 黑色)</Chinesesimp>
+            <Chinesesimp>夜视仪（四代，黑色）</Chinesesimp>
             <Korean>야투경 (4세대, 검정색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
@@ -172,7 +172,7 @@
             <Japanese>暗視装置 (第3世代、グリーン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 4, Zielone)</Polish>
             <German>NS-Brille (4. Gen., grün)</German>
-            <Chinesesimp>夜视仪 (四代, 绿色)</Chinesesimp>
+            <Chinesesimp>夜视仪（四代，绿色）</Chinesesimp>
             <Korean>야투경 (4세대, 녹색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
@@ -182,7 +182,7 @@
             <Japanese>暗視装置 (ワイド、ブラウン)</Japanese>
             <Polish>Gogle noktowizyjne (Szerokie, Brązowe)</Polish>
             <German>NS-Brille (Weit, braun)</German>
-            <Chinesesimp>夜视仪 (宽, 棕色)</Chinesesimp>
+            <Chinesesimp>夜视仪（宽，棕色）</Chinesesimp>
             <Korean>야투경 (넓음, 갈색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
@@ -192,7 +192,7 @@
             <Japanese>暗視装置 (ワイド、ブラック)</Japanese>
             <Polish>Gogle noktowizyjne (Szerokie, Czarne)</Polish>
             <German>NS-Brille (Weit, schwarz)</German>
-            <Chinesesimp>夜视仪 (宽, 黑色)</Chinesesimp>
+            <Chinesesimp>夜视仪（宽，黑色）</Chinesesimp>
             <Korean>야투경 (넓음, 검정색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
@@ -202,7 +202,7 @@
             <Japanese>暗視装置 (ワイド、グリーン)</Japanese>
             <Polish>Gogle noktowizyjne (Szerokie, Zielone)</Polish>
             <German>NS-Brille (Weit, grün)</German>
-            <Chinesesimp>夜视仪 (宽, 绿色)</Chinesesimp>
+            <Chinesesimp>夜视仪（宽，绿色）</Chinesesimp>
             <Korean>야투경 (넓음, 녹색)</Korean>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
@@ -218,7 +218,7 @@
             <Italian>Luminosità: %1</Italian>
             <Japanese>明度: %1</Japanese>
             <Korean>밝기: %1</Korean>
-            <Chinesesimp>亮度: %1</Chinesesimp>
+            <Chinesesimp>亮度：%1</Chinesesimp>
             <Chinese>亮度: %1</Chinese>
             <Turkish>Parlaklık: %1</Turkish>
         </Key>
@@ -284,7 +284,7 @@
             <French>Réglages pour la vision nocturne.</French>
             <Japanese>暗視装置の設定をします。</Japanese>
             <Korean>야간투시경 설정</Korean>
-            <Chinesesimp>设置夜视仪选项.</Chinesesimp>
+            <Chinesesimp>设置夜视仪选项。</Chinesesimp>
             <Chinese>設定夜視選項</Chinese>
             <Turkish>Gece görüşü ayarı.</Turkish>
         </Key>
@@ -398,7 +398,7 @@
             <English>NVG Noise Scale</English>
             <German>Intensität des Bildrauschens</German>
             <Chinese>夜視鏡雜訊程度</Chinese>
-            <Chinesesimp>夜视仪杂讯程度</Chinesesimp>
+            <Chinesesimp>夜视仪噪声强度</Chinesesimp>
             <Japanese>暗視装置のノイズ度</Japanese>
             <French>Intensité du bruit (JVN)</French>
             <Italian>Fattore di Disturbo del NVG</Italian>
@@ -413,7 +413,7 @@
             <English>Image noise intensity when wearing NVGs</English>
             <German>Intensität des Bildrauschens im Nachtsichtgerät</German>
             <Chinese>調整配戴夜視鏡時畫面雜訊的多寡。</Chinese>
-            <Chinesesimp>调整配戴夜视仪时画面杂讯的多寡。</Chinesesimp>
+            <Chinesesimp>调整配戴夜视仪时画面噪声的强度。</Chinesesimp>
             <Japanese>暗視装置を使用時に起きる画像ノイズの強度です</Japanese>
             <French>Intensité du bruit de l'image lorsque vous portez des JVN.</French>
             <Italian>Intensità del disturbo dell'immagine quando i NVG sono equipaggiati</Italian>
