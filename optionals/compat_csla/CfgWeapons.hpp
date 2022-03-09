@@ -1,6 +1,7 @@
 class CfgWeapons {
 
     class CSLA_LauncherBase;
+    class CSLA_MachinegunBase_7_62;
 
     class CSLA_RPG7: CSLA_LauncherBase {
         EGVAR(reloadlaunchers,enabled) = 1;
@@ -16,6 +17,11 @@ class CfgWeapons {
         EGVAR(overpressure,range) = 2;
     };
 
+    class CSLA_UK59L: CSLA_MachinegunBase_7_62 {
+        EGVAR(overheating,allowSwapBarrel) = 1;
+        EGVAR(overheating,closedBolt) = 0;
+    };
+
     class US85_launcherBase;
     class US85_MachinegunBase_5_56;
     class US85_MachinegunBase_7_62;
@@ -27,12 +33,13 @@ class CfgWeapons {
 
     class US85_M249: US85_MachinegunBase_5_56 {
         EGVAR(overheating,allowSwapBarrel) = 1;
+        EGVAR(overheating,closedBolt) = 0;
     };
 
     class US85_M60: US85_MachinegunBase_7_62 {
         EGVAR(overheating,allowSwapBarrel) = 1;
+        EGVAR(overheating,closedBolt) = 0;
     };
-
 
     class US85_FIM92: US85_launcherBase {
         EGVAR(overpressure,angle) = 45;
