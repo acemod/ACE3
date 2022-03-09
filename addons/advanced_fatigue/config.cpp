@@ -20,4 +20,4 @@ class CfgPatches {
 #include "CfgMovesMaleSdr.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
-#include "Dialog.hpp"
+#include "RscTitles.hpp"

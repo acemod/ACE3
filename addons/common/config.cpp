@@ -58,11 +58,20 @@ class ACE_Rsc_Control_Base {
     h = 0;
 };
 
+class RscStructuredText;
+class RscMapControl;
+class RscControlsGroupNoScrollBars;
+class RscText;
+class RscPicture;
+class ctrlMapEmpty;
+class ctrlStructuredText;
+
 #include "ACE_Settings.hpp"
 #include "define.hpp"
 #include "ProgressScreen.hpp"
 #include "DisableMouseDialog.hpp"
 #include "HintConfig.hpp"
+#include "RscTitles.hpp"
 #include "RscInfoType.hpp"
 #include "CompassControl.hpp"
 #include "CfgUIGrids.hpp"

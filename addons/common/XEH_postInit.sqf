@@ -267,7 +267,6 @@ call FUNC(assignedItemFix);
 // @todo remove?
 enableCamShake true;
 
-
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
     if (GVAR(showHudHash) isNotEqualTo createHashMap) then {
@@ -308,7 +307,7 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
     GVAR(uniqueItemsCache) = nil;
 }] call CBA_fnc_addPlayerEventHandler;
 
-// Backwards compatiblity for old ace event
+// Backwards compatiblity for old ace event & hide HUD helper
 GVAR(OldIsCamera) = false;
 ["featureCamera", {
     params ["_player", "_cameraName"];

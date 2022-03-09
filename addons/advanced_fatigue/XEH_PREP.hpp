@@ -1,5 +1,4 @@
 PREP(addDutyFactor);
-PREP(createStaminaBar);
 PREP(getAnimDuty);
 PREP(getMetabolicCosts);
 PREP(handleEffects);

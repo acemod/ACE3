@@ -32,16 +32,6 @@ if (!hasInterface) exitWith {};
     // - GVAR updating and initialization -----------------------------------------
     ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
 
-    ["visibleMap", {
-        params ["", "_visibleMap"]; // command visibleMap is updated one frame later
-        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlShow ((!_visibleMap) && {(vehicle ACE_player) == ACE_player});
-    }, true] call CBA_fnc_addPlayerEventHandler;
-    ["vehicle", {
-        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlShow ((!visibleMap) && {(vehicle ACE_player) == ACE_player});
-    }, true] call CBA_fnc_addPlayerEventHandler;
-
     // - Duty factors -------------------------------------------------------------
     if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
         [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
@@ -56,12 +46,12 @@ if (!hasInterface) exitWith {};
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);
     };
-    if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
+    if (missionNamespace getVariable [QEGVAR(weather,enabled), false]) then { // Weather has an off switch, Dragging & Medical don't.
         [QEGVAR(weather,temperature), { // 35->1, 45->2
             linearConversion [35, 45, (missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]), 1, 2, true];
         }] call FUNC(addDutyFactor);
     };
 
     // - Add main loop at 1 second interval -------------------------------------------------------------
-    [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
+    [FUNC(mainLoop), 1] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
