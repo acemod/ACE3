@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-getNumber (configFile >> "CfgVehicles" >> (backpack _unit) >> QUOTE(ADDON)) == 1
+getNumber ((configOf (backpackContainer _unit)) >> QUOTE(ADDON)) == 1

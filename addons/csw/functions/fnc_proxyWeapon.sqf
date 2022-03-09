@@ -25,7 +25,7 @@ if (_staticWeapon getVariable [format [QGVAR(proxyHandled_%1), _turret], false])
 
 private _proxyWeapon = getText (configOf _staticWeapon >> "ace_csw" >> "proxyWeapon");
 
-TRACE_2("",_typeOf,_proxyWeapon);
+TRACE_2("",typeOf _staticWeapon,_proxyWeapon);
 if (_proxyWeapon == "") exitWith {};
 
 private _currentWeapon = (_staticWeapon weaponsTurret [0]) param [0, "#none"];

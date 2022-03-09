@@ -17,6 +17,7 @@
 
 params ["_object"];
 private _type = typeOf _object;
+private _config = configOf _object;
 TRACE_2("params",_object,_type);
 
 // If object had size given to it via eden/public then override config canLoad setting
@@ -24,7 +25,7 @@ private _canLoadPublic = _object getVariable [QGVAR(canLoad), false];
 if (!(_canLoadPublic isEqualType false)) then {
     WARNING_4("%1[%2] - Variable %3 is %4 - Should be bool",_object,_type,QGVAR(canLoad),_canLoadPublic);
 };
-private _canLoadConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(canLoad)) == 1;
+private _canLoadConfig = getNumber (_config >> QGVAR(canLoad)) == 1;
 
 // Nothing to do here if object can't be loaded
 if !(_canLoadConfig || {_canLoadPublic in [true, 1]}) exitWith {};
