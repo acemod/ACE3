@@ -4,7 +4,7 @@
  * Places a flag in front of the unit.
  *
  * Arguments:
- * 0: Unit <OPJECT>
+ * 0: Unit <OBJECT>
  * 1: Flag <OBJECT>
  *
  * Return Value:
