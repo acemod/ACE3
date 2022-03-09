@@ -58,7 +58,7 @@ class CfgWeapons {
         EGVAR(overpressure,damage) = 0.7;
         EGVAR(overpressure,priority) = 1;
         EGVAR(overpressure,range) = 10;
-    }
+    };
 
     class US85_SMAW: US85_launcherBase {
         EGVAR(reloadlaunchers,enabled) = 1;
