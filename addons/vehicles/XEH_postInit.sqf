@@ -39,9 +39,7 @@ GVAR(isSpeedLimiter) = false;
 ["ACE3 Vehicles", QGVAR(scrollUp), localize LSTRING(IncreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) + GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
-        if (GVAR(speedLimiterStep) == 5) then { // round to nearest multiple of 5
-            GVAR(speedLimit) = 5 max GVAR(speedLimiterStep) * floor (GVAR(speedLimit) / GVAR(speedLimiterStep));
-        };
+        GVAR(speedLimit) = 5 max GVAR(speedLimiterStep) * floor (GVAR(speedLimit) / GVAR(speedLimiterStep));
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
         true
     };
@@ -50,9 +48,7 @@ GVAR(isSpeedLimiter) = false;
 ["ACE3 Vehicles", QGVAR(scrollDown), localize LSTRING(DecreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) - GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
-        if (GVAR(speedLimiterStep) == 5) then { // round to nearest multiple of 5
-            GVAR(speedLimit) = 5 max GVAR(speedLimiterStep) * ceil (GVAR(speedLimit) / GVAR(speedLimiterStep));
-        };
+        GVAR(speedLimit) = 5 max GVAR(speedLimiterStep) * ceil (GVAR(speedLimit) / GVAR(speedLimiterStep));
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
         true
     };
