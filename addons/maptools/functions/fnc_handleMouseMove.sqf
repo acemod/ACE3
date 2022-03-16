@@ -29,6 +29,12 @@ if (GVAR(mapTool_Shown) == 0) exitWith {false};
 
 private _mousePosition = _control ctrlMapScreenToWorld [_mousePosX, _mousePosY];
 
+// open map tools in center of screen upon first open
+if (GVAR(mapTool_isFirstShown)) then {
+    GVAR(mapTool_pos) = _mousePosition;
+    GVAR(mapTool_isFirstShown) = false;  // we only need to do this once
+};
+
 // Translation
 if (GVAR(mapTool_isDragging)) exitWith {
     GVAR(mapTool_pos) set [0, (GVAR(mapTool_startPos) select 0) + (_mousePosition select 0) - (GVAR(mapTool_startDragPos) select 0)];
