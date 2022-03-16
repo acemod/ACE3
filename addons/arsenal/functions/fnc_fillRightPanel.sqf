@@ -146,8 +146,7 @@ _ctrlPanel ctrlCommit 0;
 _ctrlPanel ctrlSetFade 0;
 _ctrlPanel ctrlCommit FADE_DELAY;
 
-_itemsToCheck = _itemsToCheck apply {toLower _x};
-_compatibleItems =  _compatibleItems apply {toLower _x};
+_compatibleItems = _compatibleItems apply {configName (_x call CBA_fnc_getItemConfig)};
 
 lbClear (_display displayCtrl IDC_rightTabContentListnBox);
 lbClear (_display displayCtrl IDC_rightTabContent);
@@ -168,7 +167,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 0) apply {toLower _x}));
+            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 0)));
         } else {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
@@ -183,7 +182,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 1) apply {toLower _x}));
+            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 1)));
         } else {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
@@ -198,7 +197,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 2) apply {toLower _x}));
+            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 2)));
         } else {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
@@ -213,7 +212,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 3) apply {toLower _x}));
+            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 3)));
         } else {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
@@ -372,7 +371,7 @@ if (_itemsToCheck isNotEqualTo []) then {
     for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
         private _currentData = _ctrlPanel lbData _lbIndex;
 
-        if ((_currentData != "") && {tolower _currentData in _itemsToCheck}) exitWith {
+        if ((_currentData != "") && {_currentData in _itemsToCheck}) exitWith {
             _ctrlPanel lbSetCurSel _lbIndex;
         };
     };

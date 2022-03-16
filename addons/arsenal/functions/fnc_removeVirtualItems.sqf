@@ -54,6 +54,9 @@ if (_items isEqualType true) then {
     // Make sure all items are in string form
     _items = _items select {_x isEqualType "" && {_x != ""}};
 
+    // Convert items to their config names (which is used by the arsenal system)
+    _items = _items apply {configName (_x call CBA_fnc_getItemConfig)};
+
     {
         if (_forEachIndex isEqualTo 0) then {
             _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items]];
