@@ -146,8 +146,6 @@ _ctrlPanel ctrlCommit 0;
 _ctrlPanel ctrlSetFade 0;
 _ctrlPanel ctrlCommit FADE_DELAY;
 
-_compatibleItems = _compatibleItems apply {configName (_x call CBA_fnc_getItemConfig)};
-
 lbClear (_display displayCtrl IDC_rightTabContentListnBox);
 lbClear (_display displayCtrl IDC_rightTabContent);
 
