@@ -18,6 +18,10 @@
             <Chinese>啟用速度限制</Chinese>
             <Turkish>Hız Sabitleyeciı Açık</Turkish>
         </Key>
+        <Key ID="STR_ACE_Vehicles_OnCruise">
+            <English>Cruise control on</English>
+            <German>Tempomat an</German>
+        </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
             <German>Geschwindigkeitsbegrenzer aus</German>
@@ -34,6 +38,10 @@
             <Chinesesimp>停用速度限制</Chinesesimp>
             <Chinese>停用速度限制</Chinese>
             <Turkish>Hız Sabitleyeci Kapalı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_OffCruise">
+            <English>Cruise control off</English>
+            <German>Tempomat aus</German>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
@@ -67,6 +75,10 @@
             <Chinesesimp>速度限制器</Chinesesimp>
             <Chinese>速度限制器</Chinese>
             <Turkish>Hız Sabitleyici</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_CruiseControl">
+            <English>Cruise Control</English>
+            <German>Tempomat</German>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>
