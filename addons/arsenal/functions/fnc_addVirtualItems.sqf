@@ -71,6 +71,9 @@ if (_items isEqualType true) then {
     };
 
 } else {
+    // Convert items to their config names (which is used by the arsenal system)
+    _items = _items apply {configName (_x call CBA_fnc_getItemConfig)};
+
     {
         if (_x isEqualType "") then {
             private _configItemInfo = _configCfgWeapons >> _x >> "ItemInfo";
