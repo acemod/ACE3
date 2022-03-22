@@ -56,12 +56,10 @@ _pos set [2, (_pos #2) + 0.005];
         private _casing = createSimpleObject [_modelPath, [0,0,0], true];
         _casing setPosATL _pos;
         _casing setDir (random 360);
-        GVAR(casingsArr) pushBack _casing;
+        private _idx = GVAR(casingsArr) pushBack _casing;
 
-        private _totalCasings = count GVAR(casingsArr);
-
-        if (_totalCasings > GVAR(maxCasings)) then {
-            for "_i" from 0 to (_totalCasings - GVAR(maxCasings)) do {
+        if (_idx >= GVAR(maxCasings)) then {
+            for "_i" from 0 to (_idx - GVAR(maxCasings)) do {
                 deleteVehicle (GVAR(casingsArr) deleteAt 0);
             };
         };
