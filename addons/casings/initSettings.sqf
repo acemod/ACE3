@@ -13,7 +13,7 @@
     [LSTRING(maxCasings_displayName), LSTRING(maxCasings_description)],
     LSTRING(Settings_DisplayName),
     [100, 500, 250, -1],
-    true,
+    false,
     {GVAR(maxCasings) = _this},
     false
 ] call CBA_fnc_addSetting;
