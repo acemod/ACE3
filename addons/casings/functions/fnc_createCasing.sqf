@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: esteldunedain / Cyruz
+ * Author: esteldunedain / Cyruz / Diwako
  * Produces a casing matching the fired rifles caliber on the ground around the unit
  *
  * Arguments:

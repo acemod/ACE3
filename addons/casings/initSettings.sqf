@@ -3,7 +3,7 @@
     [LSTRING(displayName), LSTRING(description)],
     LSTRING(Settings_DisplayName),
     true,
-    true,
+    false,
     {},
     true
 ] call CBA_fnc_addSetting;
