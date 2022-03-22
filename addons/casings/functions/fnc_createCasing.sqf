@@ -46,10 +46,7 @@ if ((positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 <
 
 private _weapDir = _unit weaponDirection currentWeapon _unit;
 private _ejectDir = _weapDir vectorCrossProduct [0, 0, 1];
-private _pos = _unitPos vectorAdd
-                  (_weapDir vectorMultiply (-0.5 + random 1.0 + random 1.0)) vectorAdd
-                  (_ejectDir vectorMultiply (0.2 + random 1.0 + random 1.0));
-
+private _pos = _unitPos vectorAdd (_weapDir vectorMultiply (-0.5 + random 1.0 + random 1.0)) vectorAdd (_ejectDir vectorMultiply (0.2 + random 1.0 + random 1.0));
 _pos set [2, (_pos #2) + 0.005];
 
 [

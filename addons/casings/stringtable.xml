@@ -8,7 +8,7 @@
             <English>Casings Enabled</English>
         </Key>
         <Key ID="STR_ACE_Casings_description">
-            <English>Enable the persistent casings module</English>
+            <English>Enable persistent casings</English>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_displayName">
             <English>Maximum casings</English>

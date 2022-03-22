@@ -1,5 +1,5 @@
 [
-    QGVAR(casingsEnabled), "CHECKBOX",
+    QGVAR(enabled), "CHECKBOX",
     [LSTRING(displayName), LSTRING(description)],
     LSTRING(Settings_DisplayName),
     true,
