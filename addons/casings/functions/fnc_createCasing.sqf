@@ -60,10 +60,8 @@ private _pos = _unitPos
         _casing setDir (random 360);
         private _idx = GVAR(casings) pushBack _casing;
 
-        if (_idx >= GVAR(maxCasings)) then {
-            for "_" from 0 to (_idx - GVAR(maxCasings)) do {
-                deleteVehicle (GVAR(casings) deleteAt 0);
-            };
+        for "_" from 0 to (_idx - GVAR(maxCasings)) do {
+            deleteVehicle (GVAR(casings) deleteAt 0);
         };
     },
     [_modelPath,_pos],
