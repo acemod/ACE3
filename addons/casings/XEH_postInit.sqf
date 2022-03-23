@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (!hasInterface || !(GVAR(enabled))) exitWith {};
+if (!hasInterface || !GVAR(enabled)) exitWith {};
 
 GVAR(cachedCasings) = createHashMap;
 GVAR(casings) = [];
