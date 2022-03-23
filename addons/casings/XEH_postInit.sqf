@@ -2,6 +2,6 @@
 
 if (!hasInterface || !(GVAR(enabled))) exitWith {};
 
-GVAR(casings) = createHashMap;
-GVAR(casingsArr) = [];
+GVAR(cachedCasings) = createHashMap;
+GVAR(casings) = [];
 ["CAManBase", "FiredMan", {call FUNC(createCasing)}] call CBA_fnc_addClassEventHandler;

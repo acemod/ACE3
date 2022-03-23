@@ -19,9 +19,9 @@
 
 params ["_unit", "_weapon", "", "", "_ammo"];
 
-if (!isNull objectParent _unit || { _weapon in ["Throw","Put"] } ) exitWith {};
+if (!isNull objectParent _unit) exitWith {};
 
-private _modelPath = GVAR(casings) get _ammo;
+private _modelPath = GVAR(cachedCasings) get _ammo;
 
 if (isNil "_modelPath") then {
     private _cartridge = getText (configFile >> "CfgAmmo" >> _ammo >> "cartridge");
@@ -35,32 +35,31 @@ if (isNil "_modelPath") then {
         case "":                    { "" };
         default { "A3\Weapons_f\ammo\cartridge.p3d" };
     };
-    GVAR(casings) set [_ammo, _modelPath];
+    GVAR(cachedCasings) set [_ammo, _modelPath];
 };
 
 if (_modelPath isEqualTo "") exitWith {};
 
-private _unitPos = getposATL _unit;
+private _unitPos = getposASL _unit;
 // Distant shooters don't produce as many cases
 if ((positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 < 0.9}) exitWith {};
 
 private _weapDir = _unit weaponDirection currentWeapon _unit;
 private _ejectDir = _weapDir vectorCrossProduct [0, 0, 1];
-private _pos = _unitPos vectorAdd (_weapDir vectorMultiply (-0.5 + random 1.0 + random 1.0)) vectorAdd (_ejectDir vectorMultiply (0.2 + random 1.0 + random 1.0));
-_pos set [2, (_pos #2) + 0.005];
+private _pos = _unitPos vectorAdd (_weapDir vectorMultiply (-0.5 + random 1.0 + random 1.0)) vectorAdd (_ejectDir vectorMultiply (0.2 + random 1.0 + random 1.0)) vectorAdd [0, 0, 0.005];
 
 [
     {
-        params ["_modelPath","_pos"];
+        params ["_modelPath", "_pos"];
 
         private _casing = createSimpleObject [_modelPath, [0,0,0], true];
-        _casing setPosATL _pos;
+        _casing setPosASL _pos;
         _casing setDir (random 360);
-        private _idx = GVAR(casingsArr) pushBack _casing;
+        private _idx = GVAR(casings) pushBack _casing;
 
         if (_idx >= GVAR(maxCasings)) then {
-            for "_i" from 0 to (_idx - GVAR(maxCasings)) do {
-                deleteVehicle (GVAR(casingsArr) deleteAt 0);
+            for "_" from 0 to (_idx - GVAR(maxCasings)) do {
+                deleteVehicle (GVAR(casings) deleteAt 0);
             };
         };
     },
