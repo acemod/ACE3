@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Repair
+component: repair
 description: Adds custom repair system.
 group: feature
 category: interaction
@@ -40,8 +41,4 @@ Adds a more realistic repair system.
 
 - Amount repaired is based on settings and training level
 - Using the interaction system select the hitpoint to repair
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="repair" %}
 

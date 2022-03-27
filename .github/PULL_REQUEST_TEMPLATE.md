@@ -1,6 +1,9 @@
 **When merged this pull request will:**
-- Describe what this pull request will do
-- Each change in a separate line
-- Include documentation if applicable
-- Respect the [Development Guidelines](https://ace3mod.com/wiki/development/)
-- Follow title standard `Component - Add|Fix|Improve|Change|Make|Remove bananas`
+- _Describe what this pull request will do_
+- _Each change in a separate line_
+
+### IMPORTANT
+
+- [ ] If the contribution affects [the documentation](https://github.com/acemod/ACE3/tree/master/docs), please include your changes in this pull request so the documentation will appear on the [website](https://ace3mod.com/).
+- [ ] [Development Guidelines](https://ace3mod.com/wiki/development/) are read, understood and applied.
+- [ ] Title of this PR uses our standard template `Component - Add|Fix|Improve|Change|Make|Remove {changes}`.

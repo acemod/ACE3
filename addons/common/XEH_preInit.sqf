@@ -7,9 +7,9 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
-GVAR(showHudHash) = [] call CBA_fnc_hashCreate;
-GVAR(vehicleIconCache) = call CBA_fnc_createNamespace; // for getVehicleIcon
+GVAR(syncedEvents) = createHashMap;
+GVAR(showHudHash) = createHashMap;
+GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];

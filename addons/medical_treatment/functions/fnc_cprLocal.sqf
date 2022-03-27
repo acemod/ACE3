@@ -21,10 +21,12 @@ TRACE_2("cprLocal",_medic,_patient);
 
 [_patient, "activity", LSTRING(Activity_CPR), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
-if ((random 1) < GVAR(cprSuccessChance)) then {
-    TRACE_1("CPR random success",GVAR(cprSuccessChance));
+private _bloodVolume = GET_BLOOD_VOLUME(_patient);
+private _successChance = linearConversion [BLOOD_VOLUME_CLASS_4_HEMORRHAGE, BLOOD_VOLUME_CLASS_2_HEMORRHAGE, _bloodVolume, GVAR(cprSuccessChanceMin), GVAR(cprSuccessChanceMax), true];
+if ((random 1) < _successChance) then {
+    TRACE_2("CPR random success",_bloodVolume,_successChance);
     [QEGVAR(medical,CPRSucceeded), _patient] call CBA_fnc_localEvent;
 } else {
-    TRACE_1("CPR random fail",GVAR(cprSuccessChance));
+    TRACE_2("CPR random fail",_bloodVolume,_successChance);
 };
 

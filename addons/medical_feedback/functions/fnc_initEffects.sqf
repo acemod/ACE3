@@ -33,7 +33,7 @@ private _fnc_createEffect = {
 // - Pain ---------------------------------------------------------------------
 if (!isNil QGVAR(ppPain)) then {
     TRACE_1("delete pain",GVAR(ppPain));
-    ppEffectDestroy GVAR(ppPain)
+    if (GVAR(ppPain) != -1) then { ppEffectDestroy GVAR(ppPain); };
 };
 switch (GVAR(painEffectType)) do {
     case FX_PAIN_WHITE_FLASH: {
@@ -57,6 +57,7 @@ switch (GVAR(painEffectType)) do {
             [0, 0, false]
         ] call _fnc_createEffect;
     };
+    default { GVAR(ppPain) = -1; };
 };
 // Base blur on high pain
 if (isNil QGVAR(ppPainBlur)) then {

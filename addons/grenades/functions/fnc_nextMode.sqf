@@ -33,7 +33,7 @@ private _hint = localize ([
     LSTRING(HighThrow),
     LSTRING(PreciseThrow),
     LSTRING(RollGrenade),
-    LSTRING(DropGrenade)  
+    LSTRING(DropGrenade)
 ] select _mode);
 
 [_hint] call EFUNC(common,displayTextStructured);

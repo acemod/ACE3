@@ -101,6 +101,7 @@
             <English>Onscreen display for checking dogtags</English>
             <German>Anzeige um Erkennungsmarke zu überprüfen</German>
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
+            <Chinesesimp>在画面中显示检查兵籍牌</Chinesesimp>
             <Japanese>確認中のドッグタグを画面上で表示します</Japanese>
             <Italian>Display su schermo per il controllo delle piastrine</Italian>
             <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
@@ -110,6 +111,7 @@
             <French>Affichage à l'écran pour le contrôle des plaques.</French>
             <Czech>Okno na obrazovce pro kontrolu známek</Czech>
             <Turkish>Künye gösteriliyor</Turkish>
+            <Korean>군번줄 확인 시 화면에 보여줍니다</Korean>
         </Key>
     </Package>
 </Project>

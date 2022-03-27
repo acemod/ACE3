@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overpressure">
+        <Key ID="STR_ACE_Overpressure_DisplayName">
+            <English>Overpressure</English>
+            <Chinesesimp>超压</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">
             <English>Overpressure Distance Coefficient</English>
             <German>Überdruckentfernungskoeffizient</German>
@@ -9,12 +13,13 @@
             <Polish>Mnożnik dystansu nadciśnienia</Polish>
             <French>Coefficient de distance pour la surpression</French>
             <Italian>Coefficente Distanza Sovrapressione</Italian>
-            <Chinesesimp>高压影响距离系数</Chinesesimp>
+            <Chinesesimp>超压影响距离系数</Chinesesimp>
             <Chinese>高壓影響距離係數</Chinese>
             <Russian>Коэффициент избыточного давления</Russian>
             <Portuguese>Coeficiente de Distância de Sobrepressão</Portuguese>
             <Hungarian>Túlnyomás-távolság együtthatója</Hungarian>
             <Czech>Koeficient vzdálenosti přetlaku</Czech>
+            <Spanish>Coeficiente de distancia de sobrepresión</Spanish>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect [Default: 1]</English>
@@ -24,12 +29,13 @@
             <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
             <French>Ajuste l'effet de surpression. Valeur par défaut : 1.</French>
             <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
-            <Chinesesimp>高压影响的范围 [预设: 1]</Chinesesimp>
+            <Chinesesimp>超压影响的范围 [预设：1]</Chinesesimp>
             <Chinese>高壓影響的範圍 [預設: 1]</Chinese>
             <Russian>Степень зависимости избыточного давления от расстояния [По умолчанию: 1]</Russian>
             <Portuguese>Escala o efeito de sobrepressão [Padrão: 1]</Portuguese>
             <Hungarian>Állítja a túlnyomás hatását [Alapértelmezett: 1]</Hungarian>
             <Czech>Nastavuje jak velký je efekt přetlaku [Standard: 1]</Czech>
+            <Spanish>Escala el efecto de sobrepresión [Predeterminado: 1]</Spanish>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
@@ -44,6 +50,8 @@
             <Hungarian>Utóhatás távolsága</Hungarian>
             <French>Portée du backblast</French>
             <Czech>Dosah zpětné tlakové vlny (backblast)</Czech>
+            <Spanish>Alcance del cono de fuego</Spanish>
+            <Korean>후폭풍 거리</Korean>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastAngle">
             <English>Backblast angle</English>
@@ -58,6 +66,8 @@
             <Hungarian>Utóhatás aránya</Hungarian>
             <French>Angle du backblast</French>
             <Czech>Úhel zpětné tlakové vlny (backblast)</Czech>
+            <Spanish>Ángulo del cono de fuego</Spanish>
+            <Korean>후폭풍 각도</Korean>
         </Key>
     </Package>
 </Project>

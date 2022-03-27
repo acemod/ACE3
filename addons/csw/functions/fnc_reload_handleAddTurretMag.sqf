@@ -1,15 +1,16 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM, PabstMirror
+ * Author:Dani (TCVM), PabstMirror
  * Handles adding ammo to a turret
  * Called from a global event but only runs where turret is local
  *
  * Arguments:
  * 0: Static Weapon <OBJECT>
  * 1: Turret Path <ARRAY>
- * 2: Unit doing action <OBJECT>
+ * 2: Source of magazine <OBJECT>
  * 3: Vehicle Magazine <STRING>
  * 4: Ammo in magazine <NUMBER>
+ * 5: Unit or object to return ammo to <OBJECT>
  *
  * Return Value:
  * None
@@ -20,8 +21,8 @@
  * Public: No
  */
 
-params ["_vehicle", "_turret", "_unit", "_carryMag" ,"_ammoRecieved"];
-TRACE_5("reload_handleAddTurretMag",_vehicle,_turret,_unit,_carryMag,_ammoRecieved);
+params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived", ["_returnTo", _magSource]];
+TRACE_6("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_returnTo);
 
 TRACE_2("",local _vehicle, _vehicle turretLocal _turret);
 if (!(_vehicle turretLocal _turret)) exitWith {};
@@ -29,9 +30,9 @@ if (!(_vehicle turretLocal _turret)) exitWith {};
 ([_vehicle, _turret, _carryMag] call FUNC(reload_canLoadMagazine)) params ["_canAdd", "_loadedMag", "_neededAmmo", "_isBeltLinking"];
 TRACE_4("canLoad",_canAdd,_loadedMag,_neededAmmo,_isBeltLinking);
 
-private _ammoRemaining = _ammoRecieved;
+private _ammoRemaining = _ammoReceived;
 if (_canAdd) then {
-    private _ammoUsed = _neededAmmo min _ammoRecieved;
+    private _ammoUsed = _neededAmmo min _ammoReceived;
     _ammoRemaining = _ammoRemaining - _ammoUsed;
 
     if (_isBeltLinking) then {
@@ -46,7 +47,6 @@ if (_canAdd) then {
         _vehicle setAmmo [_weapon, _currentAmmo];
         private _currentAmmo = _vehicle magazineTurretAmmo [_loadedMag, _turret];
         if ((_weapon == "") || {_currentAmmo != _currentAmmo}) then { ERROR_1("failed to setAmmo - %1", _this); };
-
     } else {
         if (_loadedMag != "") then {
             TRACE_1("Removing emtpy mag",_loadedMag);
@@ -60,7 +60,6 @@ if (_canAdd) then {
 };
 
 if (_ammoRemaining > 0) then {
-    TRACE_3("Returning ammo",_unit,_carryMag,_ammoRemaining);
-    [QGVAR(returnAmmo), [_unit, _carryMag, _ammoRemaining], _unit] call CBA_fnc_targetEvent;
+    TRACE_3("Returning ammo",_returnTo,_carryMag,_ammoRemaining);
+    [QGVAR(returnAmmo), [_returnTo, _carryMag, _ammoRemaining], _returnTo] call CBA_fnc_targetEvent;
 };
-

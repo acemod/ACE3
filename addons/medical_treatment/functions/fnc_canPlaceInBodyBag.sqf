@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SynixeBrett
+ * Author: Brett Mayson
  * Checks if the patient can be placed in a bodybag.
  *
  * 'vehicle _patient' always returns the body

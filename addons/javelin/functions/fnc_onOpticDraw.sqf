@@ -91,11 +91,11 @@ if (GVAR(isLockKeyDown) && {cameraView == "GUNNER"} && {((currentVisionMode ACE_
     private _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
         [_currentTarget,[-0.5,-0.5,-0.25],[0,0,0]];
     } else {
-        [_currentTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"]; 
+        [_currentTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"];
     };
 
     private _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
-    
+
     private _lockTime = if (isNull _currentTarget) then {0} else {CBA_missionTime - _lockStartTime};
     private _minX = ((linearConversion [1, (__LOCKONTIME - 0.5), _lockTime, 0.5 - 0.075*safeZoneW, (_bpos select 0), true]) + _offsetX) max __ConstraintLeft;
     private _minY = ((linearConversion [1, (__LOCKONTIME - 0.5), _lockTime, 0.5 - 0.075*safeZoneH, (_bpos select 1), true]) + _offsetY) max __ConstraintTop;
@@ -128,7 +128,7 @@ if (isNull _newTarget) then {
     _currentShooter setVariable ["ace_missileguidance_target", nil, false];
 
     __JavelinIGUITargetingLines ctrlShow false;
-        
+
     // Disallow fire
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {

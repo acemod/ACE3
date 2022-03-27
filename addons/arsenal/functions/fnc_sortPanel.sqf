@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, Dedmen, SynixeBrett
+ * Author: Alganthe, Dedmen, Brett Mayson
  * Sort arsenal panel.
  *
  * Arguments:
@@ -106,6 +106,8 @@ missionNamespace setVariable [
     _sortConfig select 1
 ];
 
+private _originalNames = createHashMap;
+
 private _for = if (_right) then {
     for '_i' from 0 to ((lnbSize _panel select 0) - 1)
 } else {
@@ -123,7 +125,15 @@ _for do {
     } else {
         0
     };
+
     private _itemCfg = _cfgClass >> _item;
+
+    // In rare cases, item may not belong to the config class for the panel
+    // For example, misc items panel can contain CfgVehicles and CfgGlasses items in addition to the usual CfgWeapons items
+    if (isNull _itemCfg) then {
+        _itemCfg = _item call CBA_fnc_getItemConfig;
+    };
+
     private _value = [_itemCfg, _item, _quantity] call _statement;
     if (_value isEqualType 0) then {
         _value = [_value, 8] call CBA_fnc_formatNumber;
@@ -131,11 +141,18 @@ _for do {
     if (_value isEqualTo "") then {
         _value = "_";
     };
+
     if (_right) then {
-        _panel lnbSetText [[_i, 1], format ["%1%2", _value, _panel lnbText [_i, 1]]];
+        private _name = _panel lnbText [_i, 1];
+        _originalNames set [_item, _name];
+
+        _panel lnbSetText [[_i, 1], format ["%1%2", _value, _name]];
     } else {
         if (_item isNotEqualTo "") then {
-            _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
+            private _name = _panel lbText _i;
+            _originalNames set [_item, _name];
+
+            _panel lbSetText [_i, format ["%1%2", _value, _name]];
         };
     };
 };
@@ -145,22 +162,25 @@ if (_right) then {
 
     _for do {
         private _data = _panel lnbData [_i, 0];
-        if (_cursel >= 0) then {
-            if (_data == _selected) then {_panel lnbSetCurSelRow _i};
+
+        if (_curSel >= 0 && {_data == _selected}) then {
+            _panel lnbSetCurSelRow _i;
         };
-        _panel lnbSetText [[_i, 1], getText (_cfgClass >> _data >> "displayName")];
+
+        _panel lnbSetText [[_i, 1], _originalNames get _data];
     };
 } else {
     lbSort [_panel, "ASC"];
 
     _for do {
         private _data = _panel lbData _i;
-        if (_cursel >= 0) then {
-            if (_data == _selected) then {_panel lbSetCurSel _i};
+
+        if (_curSel >= 0 && {_data == _selected}) then {
+            _panel lbSetCurSel _i;
         };
-        private _name = getText (_cfgClass >> _data >> "displayName");
-        if (_name isNotEqualTo "") then {
-            _panel lbSetText [_i, _name];
+
+        if (_data isNotEqualTo "") then {
+            _panel lbSetText [_i, _originalNames get _data];
         };
     };
 };

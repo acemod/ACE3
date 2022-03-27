@@ -492,7 +492,7 @@ class GVAR(display) {
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             h = QUOTE(safezoneH - 28 * GRID_H);
         };
-        class rightTabContentListnBox : RscListNBox {
+        class rightTabContentListnBox: RscListNBox {
             idc = IDC_rightTabContentListnBox;
             colorBackground[]={0,0,0,0};
             colorSelectBackground[]={1,1,1,0.5};
@@ -1005,8 +1005,8 @@ class GVAR(loadoutsDisplay) {
                 class buttonRename: buttonSave {
                     idc = IDC_buttonRename;
                     x = QUOTE(32.5 * GRID_W);
-                    text= CSTRING(buttonRenameText);
-                    tooltip= CSTRING(buttonRenameTooltip);
+                    text = ECSTRING(common,rename);
+                    tooltip = CSTRING(buttonRenameTooltip);
                     onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
                 };
                 class buttonLoad: buttonSave {

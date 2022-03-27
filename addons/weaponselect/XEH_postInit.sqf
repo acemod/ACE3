@@ -201,7 +201,7 @@ if (!hasInterface) exitWith {};
     if (!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))) exitWith {false};
     // Conditions: specific
     if ((ACE_player isEqualTo (vehicle ACE_player)) || {ACE_player != (driver (vehicle ACE_player))}) exitWith {false};
-    
+
     // Statement
     (vehicle ACE_player) setCollisionLight !(isCollisionLightOn (vehicle ACE_player));
     true
