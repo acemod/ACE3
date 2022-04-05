@@ -75,8 +75,8 @@ class CfgAmmo {
             defaultNavigationType = "Line";
             navigationTypes[] = { "Line" };
 
-            lineGainP = 35;
-            lineGainD = 30;
+            lineGainP = 7;
+            lineGainD = 6;
 
             initialPitch = 2;
 
@@ -87,7 +87,6 @@ class CfgAmmo {
             seekerMinRange = 75;
             seekerMaxRange = 4000;      // Range from the missile which the seeker can visually search
 
-            correctionDistance = 30; // distance from center of crosshair where missile slows down
             offsetFromCrosshair[] = { 0, 0, 0.5 }; // where the missile wants to stay in relation to the center of the crosshair.
 
             // Attack profile type selection

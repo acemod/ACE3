@@ -20,26 +20,24 @@ _targetData params ["", "_targetDir", "_distance"];
 _flightParams params ["_pitchRate", "_yawRate"];
 
 _navigationParams params ["_proportionalGain", "", "_derivativeGain", "_lastErrorX", "_lastErrorY", "_correctionDistance"];
-private _targetDistance = _projectile vectorWorldToModelVisual (_targetDir vectorMultiply _distance);
+private _relativeTargetDirection = [0, (velocityModelSpace _projectile) select 1, 0] vectorAdd (_projectile vectorWorldToModelVisual (_targetDir vectorMultiply _distance));
 
-//_proportionalGain = 30;
-//_derivativeGain = 30;
-//_correctionDistance = 3;
-private _errorX = _targetDistance#0 / _correctionDistance;
-private _errorY = _targetDistance#2 / _correctionDistance;
+_proportionalGain = 50;
+_derivativeGain = 0;
 
-private _pX = _proportionalGain * _errorX;
-private _dX = if (_timestep != 0) then {
-    _derivativeGain * (_errorX - _lastErrorX) / _timestep
-} else {
-    0
+private _angleX = ((_relativeTargetDirection select 0) atan2 (_relativeTargetDirection select 1));
+private _angleY = ((_relativeTargetDirection select 2) atan2 (_relativeTargetDirection select 1));
+
+private _pX = _proportionalGain * _angleX;
+private _dX = 0;
+if (_timestep > 0) then {
+    _dX = _derivativeGain * (_angleX - _lastErrorX) / _timestep;
 };
 
-private _pY = _proportionalGain * _errorY;
-private _dY = if (_timestep != 0) then {
-    _derivativeGain * (_errorY - _lastErrorY) / _timestep
-} else {
-    0
+private _pY = _proportionalGain * _angleY;
+private _dY = 0;
+if (_timestep > 0) then {
+    _dY = _derivativeGain * (_angleY - _lastErrorY) / _timestep;
 };
 
 private _accelerationX = _pX + _dX;
@@ -51,7 +49,7 @@ private _commandedAcceleration = [
     _accelerationY
 ];
 
-_navigationParams set [3, _errorX];
-_navigationParams set [4, _errorY];
+_navigationParams set [3, _angleX];
+_navigationParams set [4, _angleY];
 
 _projectile vectorModelToWorldVisual _commandedAcceleration;

@@ -28,8 +28,8 @@ class CfgAmmo {
             defaultNavigationType = "Line";
             navigationTypes[] = { "Line" };
 
-            lineGainP = 30;
-            lineGainD = 30;
+            lineGainP = 10;
+            lineGainD = 9;
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 15;           // Angle from the shooter's view that can track the missile
@@ -38,7 +38,6 @@ class CfgAmmo {
             seekerMinRange = 80;
             seekerMaxRange = 2000;      // Range from the missile which the seeker can visually search
 
-            correctionDistance = 3; // distance from center of crosshair where missile slows down
             offsetFromCrosshair[] = { 0, 0, 0 }; // where the missile wants to stay in relation to the center of the crosshair.
 
             // Attack profile type selection
