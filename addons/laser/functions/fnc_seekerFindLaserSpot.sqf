@@ -177,6 +177,7 @@ if ((count _spots) > 0) then {
             //IGNORE_PRIVATE_WARNING ["_x", "_y"];
             _y params ["_count", "_owner"];
             if (_count > _maxOwnerCount) then {
+                _maxOwnerCount = _count;
                 _finalOwner = _owner;
             };
         } forEach _ownersHash;
