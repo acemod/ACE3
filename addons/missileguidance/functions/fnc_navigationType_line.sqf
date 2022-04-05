@@ -22,9 +22,6 @@ _flightParams params ["_pitchRate", "_yawRate"];
 _navigationParams params ["_proportionalGain", "", "_derivativeGain", "_lastErrorX", "_lastErrorY", "_correctionDistance"];
 private _relativeTargetDirection = [0, (velocityModelSpace _projectile) select 1, 0] vectorAdd (_projectile vectorWorldToModelVisual (_targetDir vectorMultiply _distance));
 
-_proportionalGain = 50;
-_derivativeGain = 0;
-
 private _angleX = ((_relativeTargetDirection select 0) atan2 (_relativeTargetDirection select 1));
 private _angleY = ((_relativeTargetDirection select 2) atan2 (_relativeTargetDirection select 1));
 
