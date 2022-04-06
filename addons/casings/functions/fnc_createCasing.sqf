@@ -47,7 +47,7 @@ if ((AGLToASL positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {r
 private _weapDir = _unit weaponDirection currentWeapon _unit;
 private _ejectDir = _weapDir vectorCrossProduct [0, 0, 1];
 private _pos = _unitPos
-    vectorAdd (_weapDir vectorMultiply (-0.5 + random 1 + random 1))
+    vectorAdd (_weapDir vectorMultiply (-0.5 + random 2))
     vectorAdd (_ejectDir vectorMultiply (0.2 + random 1 + random 1))
     vectorAdd [0, 0, 0.005];
 
