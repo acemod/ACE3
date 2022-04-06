@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", "", "", "_ammo"];
+params ["_unit", "", "", "", "_ammo"];
 
 if (!isNull objectParent _unit) exitWith {};
 
