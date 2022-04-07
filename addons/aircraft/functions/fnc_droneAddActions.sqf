@@ -44,9 +44,9 @@ if (_vehicle isKindOf "Air") then {
         GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle}  && {(ACE_controlledUAV select 2) isEqualTo [0]}
     };
     _statement = {        
-    params ["_vehicle"];
-    private _group = group driver _vehicle;
-    private _pos = ([_vehicle, [0]] call FUNC(droneGetTurretTargetPos)) select 0;
+        params ["_vehicle"];
+        private _group = group driver _vehicle;
+        private _pos = ([_vehicle, [0]] call FUNC(droneGetTurretTargetPos)) select 0;
         [QGVAR(droneSetWaypoint), [_vehicle, _group, _pos, "LOITER"], _group] call CBA_fnc_targetEvent;
     };
     _action = [QGVAR(droneSetWaypointLoiter), localize "$STR_AC_LOITER", 
