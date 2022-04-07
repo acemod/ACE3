@@ -28,11 +28,12 @@
         params ["_map"];
         _map drawLine [getPos _laserTarget, getPos (ACE_controlledUAV select 0), [1,0,0,0.333]];
         _map drawIcon [
-        "\A3\ui_f\data\igui\rscingameui\rscoptics\laser_designator_iconLaserOn.paa",
-        [1,0,1,1],
-        (getPos _laserTarget),
-        16, 16,
-        ((getDir _laserTarget) + 90)];
+            "\A3\ui_f\data\igui\rscingameui\rscoptics\laser_designator_iconLaserOn.paa",
+            [1,0,1,1],
+            (getPos _laserTarget),
+            16, 16,
+            ((getDir _laserTarget) + 90)
+        ];
     }];
     TRACE_2("added map drawEH",_map,_ehID);
     _map setVariable [QGVAR(ehID), _ehID];
