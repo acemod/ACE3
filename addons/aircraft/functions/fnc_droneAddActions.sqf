@@ -41,7 +41,7 @@ if (_vehicle isKindOf "Air") then {
     // loiter at location
     _condition = {
         params ["_vehicle"];
-        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle}  && {(ACE_controlledUAV select 2) isEqualTo [0]}
+        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
     };
     _statement = {        
         params ["_vehicle"];
@@ -57,11 +57,7 @@ if (_vehicle isKindOf "Air") then {
     // set height
     _condition = {
         params ["_vehicle"];
-        private _group = group driver _vehicle;
-        private _index = (currentWaypoint _group) min count waypoints _group;
-        private _waypoint = [_group, _index];
-
-        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle}  && {(ACE_controlledUAV select 2) isEqualTo [0]}
+        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
     };    
     _statement = {
         params ["_vehicle", "", "_args"];
@@ -70,7 +66,7 @@ if (_vehicle isKindOf "Air") then {
     };
     _action = [QGVAR(setAltitude), localize "$STR_3den_waypoint_attribute_loiteraltitude_displayname", 
         "", {}, _condition] call EFUNC(interact_menu,createAction);
-    _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
+    private _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
     {
         _action = [str _x, str _x, "", _statement, { true }, {}, _x] call EFUNC(interact_menu,createAction);
         [_vehicle, 1, _base, _action] call EFUNC(interact_menu,addActionToObject);
@@ -83,8 +79,7 @@ if (_vehicle isKindOf "Air") then {
         private _group = group driver _vehicle;
         private _index = (currentWaypoint _group) min count waypoints _group;
         private _waypoint = [_group, _index];
-
-        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle}  && {(ACE_controlledUAV select 2) isEqualTo [0]} 
+        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} 
         && {(waypointType _waypoint) == "LOITER"}
     };    
     _statement = {
@@ -101,7 +96,6 @@ if (_vehicle isKindOf "Air") then {
     } forEach [500, 750, 1000, 1250, 1500];
 
 
-
     // set loiter direction
     _condition = {
         params ["_vehicle", "", "_args"];
@@ -109,7 +103,7 @@ if (_vehicle isKindOf "Air") then {
         private _index = (currentWaypoint _group) min count waypoints _group;
         private _waypoint = [_group, _index];
 
-        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle}  && {(ACE_controlledUAV select 2) isEqualTo [0]} 
+        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} 
         && {(waypointType _waypoint) == "LOITER"} && {(waypointLoiterType _waypoint) != _args}
     };
     _statement = {
