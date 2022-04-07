@@ -32,7 +32,7 @@
             <Japanese>さまざまなオブジェクトへスライドショーを設定することができます。1つのモジュールは各画像リストになっています。オブジェクトが hiddenSelection 0へ対応している必要があります。</Japanese>
             <Korean>이 모듈은 다른 물체에 대해 슬라이드 쇼를 놓을 수 있게 해줍니다. 한 모듈당 한 이미지목록만 가능합니다. 또한 물체가 hiddenSelection 0 를 지원해야만합니다.</Korean>
             <Chinese>此模塊可讓圖片以幻燈片的形式顯示在物件上，每個模塊都能設定一串幻燈片清單，被設定的物件不能有隱藏部位(hiddenSelection)</Chinese>
-            <Chinesesimp>此模块可让图片以幻灯片的形式显示在物件上，每个模块都能设定一串幻灯片清单，被设定的物件不能有隐藏部位(hiddenSelection)</Chinesesimp>
+            <Chinesesimp>此模块可让图片以幻灯片的形式显示在物体上，每个模块都能设定一串幻灯片清单，被设定的物件不能有隐藏部位（hiddenSelection）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
             <English>Objects</English>
@@ -48,7 +48,7 @@
             <Japanese>オブジェクト</Japanese>
             <Korean>물체</Korean>
             <Chinese>物件</Chinese>
-            <Chinesesimp>物件</Chinesesimp>
+            <Chinesesimp>物体</Chinesesimp>
             <Turkish>Objeler</Turkish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
@@ -65,7 +65,7 @@
             <Japanese>スライドショーを表示するオブジェクト名 (オブジェクトとの同期も可)。複数ある場合はコンマで区切れます</Japanese>
             <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다.</Korean>
             <Chinese>物件名稱 (也可使用同步線來設定)，幻燈片將會顯示在該物件上，如有多個物件，請以逗號作區隔</Chinese>
-            <Chinesesimp>物件名称 (也可使用同步线来设定)，幻灯片将会显示在该物件上，如有多个物件，请以逗号作区隔</Chinesesimp>
+            <Chinesesimp>物体名称（也可使用同步线来设定），幻灯片将会显示在该物件上，如有多个物件，请以逗号作区隔</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
@@ -97,7 +97,7 @@
             <Japanese>コントローラに指定するオブジェクト名を記入し、複数ある場合はコンマで区切れます。</Japanese>
             <Korean>조종 장치 물체 명칭, 다수의 경우 쉼표로 구분됩니다.</Korean>
             <Chinese>指定是控制器的物件名稱，如有多個物件，請以逗號作區隔</Chinese>
-            <Chinesesimp>指定是控制器的物件名称，如有多个物件，请以逗号作区隔</Chinesesimp>
+            <Chinesesimp>指定是控制器的物体名称，如有多个物件，请以逗号作区隔</Chinesesimp>
             <Czech>Jména kontrolních objektů, v případě více oddělená čárkami.</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
@@ -131,7 +131,7 @@
             <Japanese>完全なパスでスライドショーに使う画像一覧を入力してください。コンマで区別できます。(例: images\image.paa)</Japanese>
             <Korean>슬라이드 쇼에 쓰일 사진목록입니다, 쉼표로 구분됩니다, 경로설정을 정확히 하십시요. (예: 사진\사진.ppa)</Korean>
             <Chinese>要做為幻燈片的圖片清單，每個圖片請已逗號區隔，並輸入完整路徑位址 (例如:images\image.paa)</Chinese>
-            <Chinesesimp>要做为幻灯片的图片清单，每个图片请已逗号区隔，并输入完整路径位址 (例如:images\image.paa)</Chinesesimp>
+            <Chinesesimp>要做为幻灯片的图片清单，每个图片请已逗号区隔，并输入完整路径位址（例如：images\image.paa）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_DisplayName">
             <English>Interaction Names</English>
@@ -188,7 +188,7 @@
             <French>Nom qui sera utilisé pour l'entrée d'interaction principale (pour distinguer plusieurs diaporamas). Valeur par défaut : "Slides".</French>
             <Italian>Nome che sarà utilizzato per le principali interazioni (per distinguere le multiple diapositive). Predefinito: "Slides"</Italian>
             <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片) 預設名稱: "幻燈片"</Chinese>
-            <Chinesesimp>设定该幻灯片的标题名称 (用来区分多个不同标题的幻灯片) 预设名称: "幻灯片"</Chinesesimp>
+            <Chinesesimp>设定该幻灯片的标题名称（用来区分多个不同标题的幻灯片）预设名称："幻灯片"</Chinesesimp>
             <Korean>상위 상호작용 이름 (여러개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
             <Russian>Имя, которое будет использоваться для основных взаимодействий (для различения нескольких слайдов). По умолчанию: «Slides»</Russian>
             <Portuguese>Nome que será usado para a entrada principal de interação (para separar vários slideshows). Padrão: "Slides"</Portuguese>
@@ -225,7 +225,21 @@
             <Japanese>各スライドの持続時間。標準：0 (自動的な切り替えは無効)</Japanese>
             <Korean>매 슬라이드의 지속시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
-            <Chinesesimp>每张幻灯片显示的时间。 预设:0 (自动换图已禁用)</Chinesesimp>
+            <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Selection_DisplayName">
+            <English>Texture Selection</English>
+            <Chinesesimp>纹理选择</Chinesesimp>
+            <Portuguese>텍스쳐 선택</Portuguese>
+            <Korean>텍스쳐 선택</Korean>
+            <German>Auswahl der Textur</German>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Selection_Description">
+            <English>Object texture selection. Default: 0</English>
+            <Chinesesimp>物体纹理选择（默认：0）</Chinesesimp>
+            <Portuguese>개체 텍스처 선택(기본값: 0)</Portuguese>
+            <Korean>물체의 텍스쳐를 선택합니다. 기본: 0</Korean>
+            <German>Auswahl der Objekttextur. Standard: 0</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>

@@ -40,7 +40,7 @@ isClass _config
         if (_condition isEqualTo {}) exitWith {
             _condition = true;
         };
-        
+
         _condition = call _condition;
     };
 

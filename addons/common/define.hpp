@@ -92,8 +92,7 @@ class ACE_gui_backgroundBase {
   text = "";
   sizeEx = 0.032;
 };
-class ACE_gui_editBase
-{
+class ACE_gui_editBase {
     type = 2;
     x = 0;
     y = 0;
@@ -236,7 +235,7 @@ class ACE_gui_staticBase {
 };
 
 class RscListBox;
-class ACE_gui_listBoxBase : RscListBox{
+class ACE_gui_listBoxBase: RscListBox {
   type = CT_LISTBOX;
   style = ST_MULTI;
   font = FONT_ACE;
@@ -379,8 +378,7 @@ class ACE_gui_comboBoxBase: RscCombo {
  soundExpand[] = {"\A3\ui_f\data\sound\RscCombo\soundExpand",0.1,1};
  soundCollapse[] = {"\A3\ui_f\data\sound\RscCombo\soundCollapse",0.1,1};
  maxHistoryDelay = 1.0;
- class ScrollBar
- {
+ class ScrollBar {
   color[] = {0.3,0.3,0.3,0.6};
   colorActive[] = {0.3,0.3,0.3,1};
   colorDisabled[] = {0.3,0.3,0.3,0.3};
@@ -485,8 +483,7 @@ onMouseButtonDblClick = "";
   color[] = {0.30, 0.10, 0.90, 1.00};
   size = 50;
  };
- class Legend
- {
+ class Legend {
   x = "SafeZoneX +          (     ((safezoneW / safezoneH) min 1.2) / 40)";
   y = "SafeZoneY + safezoneH - 4.5 *          (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
   w = "10 *           (     ((safezoneW / safezoneH) min 1.2) / 40)";
@@ -496,8 +493,7 @@ onMouseButtonDblClick = "";
   colorBackground[] = {1,1,1,0.5};
   color[] = {0,0,0,1};
  };
- class Task
- {
+ class Task {
   icon = "\A3\ui_f\data\map\mapcontrol\taskIcon_CA.paa";
   iconCreated = "\A3\ui_f\data\map\mapcontrol\taskIconCreated_CA.paa";
   iconCanceled = "\A3\ui_f\data\map\mapcontrol\taskIconCanceled_CA.paa";
@@ -513,8 +509,7 @@ onMouseButtonDblClick = "";
   coefMin = 1;
   coefMax = 1;
  };
- class Waypoint
- {
+ class Waypoint {
   icon = "\A3\ui_f\data\map\mapcontrol\waypoint_ca.paa";
   color[] = {0,0,0,1};
  size = 20;
@@ -522,8 +517,7 @@ onMouseButtonDblClick = "";
  coefMin = 0.900000;
  coefMax = 4;
  };
- class WaypointCompleted
- {
+ class WaypointCompleted {
   icon = "\A3\ui_f\data\map\mapcontrol\waypointCompleted_ca.paa";
   color[] = {0,0,0,1};
    size = 20;
@@ -531,8 +525,7 @@ onMouseButtonDblClick = "";
  coefMin = 0.900000;
  coefMax = 4;
  };
- class CustomMark
- {
+ class CustomMark {
   icon = "\A3\ui_f\data\map\mapcontrol\custommark_ca.paa";
   size = 24;
   importance = 1;
@@ -540,8 +533,7 @@ onMouseButtonDblClick = "";
   coefMax = 1;
   color[] = {0,0,0,1};
  };
- class Command
- {
+ class Command {
   icon = "\A3\ui_f\data\map\mapcontrol\waypoint_ca.paa";
   size = 18;
   importance = 1;
@@ -549,8 +541,7 @@ onMouseButtonDblClick = "";
   coefMax = 1;
   color[] = {1,1,1,1};
  };
- class Bush
- {
+ class Bush {
   icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
   color[] = {0.45,0.64,0.33,0.4};
   size = "14/2";
@@ -558,8 +549,7 @@ onMouseButtonDblClick = "";
   coefMin = 0.25;
   coefMax = 4;
  };
- class Rock
- {
+ class Rock {
   icon = "\A3\ui_f\data\map\mapcontrol\rock_ca.paa";
   color[] = {0.1,0.1,0.1,0.8};
   size = 12;
@@ -567,8 +557,7 @@ onMouseButtonDblClick = "";
   coefMin = 0.25;
   coefMax = 4;
  };
- class SmallTree
- {
+ class SmallTree {
   icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
   color[] = {0.45,0.64,0.33,0.4};
   size = 12;
@@ -576,8 +565,7 @@ onMouseButtonDblClick = "";
   coefMin = 0.25;
   coefMax = 4;
  };
- class Tree
- {
+ class Tree {
   icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
   color[] = {0.45,0.64,0.33,0.4};
   size = 12;
@@ -585,8 +573,7 @@ onMouseButtonDblClick = "";
   coefMin = 0.25;
   coefMax = 4;
  };
- class busstop
- {
+ class busstop {
   icon = "\A3\ui_f\data\map\mapcontrol\busstop_CA.paa";
   size = 24;
   importance = 1;
@@ -594,8 +581,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class fuelstation
- {
+ class fuelstation {
   icon = "\A3\ui_f\data\map\mapcontrol\fuelstation_CA.paa";
   size = 24;
   importance = 1;
@@ -603,8 +589,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class hospital
- {
+ class hospital {
   icon = "\A3\ui_f\data\map\mapcontrol\hospital_CA.paa";
   size = 24;
   importance = 1;
@@ -612,8 +597,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class church
- {
+ class church {
   icon = "\A3\ui_f\data\map\mapcontrol\church_CA.paa";
   size = 24;
   importance = 1;
@@ -621,8 +605,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class lighthouse
- {
+ class lighthouse {
   icon = "\A3\ui_f\data\map\mapcontrol\lighthouse_CA.paa";
   size = 24;
   importance = 1;
@@ -630,8 +613,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class power
- {
+ class power {
   icon = "\A3\ui_f\data\map\mapcontrol\power_CA.paa";
   size = 24;
   importance = 1;
@@ -639,8 +621,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class powersolar
- {
+ class powersolar {
   icon = "\A3\ui_f\data\map\mapcontrol\powersolar_CA.paa";
   size = 24;
   importance = 1;
@@ -648,8 +629,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class powerwave
- {
+ class powerwave {
   icon = "\A3\ui_f\data\map\mapcontrol\powerwave_CA.paa";
   size = 24;
   importance = 1;
@@ -657,8 +637,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class powerwind
- {
+ class powerwind {
   icon = "\A3\ui_f\data\map\mapcontrol\powerwind_CA.paa";
   size = 24;
   importance = 1;
@@ -666,8 +645,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class quay
- {
+ class quay {
   icon = "\A3\ui_f\data\map\mapcontrol\quay_CA.paa";
   size = 24;
   importance = 1;
@@ -675,8 +653,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class shipwreck
- {
+ class shipwreck {
   icon = "\A3\ui_f\data\map\mapcontrol\shipwreck_CA.paa";
   size = 24;
   importance = 1;
@@ -684,8 +661,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class transmitter
- {
+ class transmitter {
   icon = "\A3\ui_f\data\map\mapcontrol\transmitter_CA.paa";
   size = 24;
   importance = 1;
@@ -693,8 +669,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class watertower
- {
+ class watertower {
   icon = "\A3\ui_f\data\map\mapcontrol\watertower_CA.paa";
   size = 24;
   importance = 1;
@@ -702,8 +677,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {1,1,1,1};
  };
- class Cross
- {
+ class Cross {
   icon = "\A3\ui_f\data\map\mapcontrol\Cross_CA.paa";
   size = 24;
   importance = 1;
@@ -711,8 +685,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {0,0,0,1};
  };
- class Chapel
- {
+ class Chapel {
   icon = "\A3\ui_f\data\map\mapcontrol\Chapel_CA.paa";
   size = 24;
   importance = 1;
@@ -720,8 +693,7 @@ onMouseButtonDblClick = "";
   coefMax = 1.0;
   color[] = {0,0,0,1};
  };
- class Bunker
- {
+ class Bunker {
   icon = "\A3\ui_f\data\map\mapcontrol\bunker_ca.paa";
   size = 14;
   importance = "1.5 * 14 * 0.05";
@@ -729,8 +701,7 @@ onMouseButtonDblClick = "";
   coefMax = 4;
   color[] = {0,0,0,1};
  };
- class Fortress
- {
+ class Fortress {
   icon = "\A3\ui_f\data\map\mapcontrol\bunker_ca.paa";
   size = 16;
   importance = "2 * 16 * 0.05";
@@ -738,8 +709,7 @@ onMouseButtonDblClick = "";
   coefMax = 4;
   color[] = {0,0,0,1};
  };
- class Fountain
- {
+ class Fountain {
   icon = "\A3\ui_f\data\map\mapcontrol\fountain_ca.paa";
   size = 11;
   importance = "1 * 12 * 0.05";
@@ -747,8 +717,7 @@ onMouseButtonDblClick = "";
   coefMax = 4;
   color[] = {0,0,0,1};
  };
- class Ruin
- {
+ class Ruin {
   icon = "\A3\ui_f\data\map\mapcontrol\ruin_ca.paa";
   size = 16;
   importance = "1.2 * 16 * 0.05";
@@ -756,8 +725,7 @@ onMouseButtonDblClick = "";
   coefMax = 4;
   color[] = {0,0,0,1};
  };
- class Stack
- {
+ class Stack {
   icon = "\A3\ui_f\data\map\mapcontrol\stack_ca.paa";
   size = 20;
   importance = "2 * 16 * 0.05";
@@ -765,8 +733,7 @@ onMouseButtonDblClick = "";
   coefMax = 4;
   color[] = {0,0,0,1};
  };
- class Tourism
- {
+ class Tourism {
   icon = "\A3\ui_f\data\map\mapcontrol\tourism_ca.paa";
   size = 16;
   importance = "1 * 16 * 0.05";
@@ -774,8 +741,7 @@ onMouseButtonDblClick = "";
   coefMax = 4;
   color[] = {0,0,0,1};
  };
- class ViewTower
- {
+ class ViewTower {
   icon = "\A3\ui_f\data\map\mapcontrol\viewtower_ca.paa";
   size = 16;
   importance = "2.5 * 16 * 0.05";

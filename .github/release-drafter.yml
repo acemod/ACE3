@@ -27,6 +27,7 @@ categories:
 
 exclude-labels:
   - 'ignore changelog'
+  - 'dependencies'
 
 change-template: '- $TITLE (#$NUMBER)'
 template: |

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM
+ * Author:Dani (TCVM)
  * Deploys the tripod
  *
  * Arguments:

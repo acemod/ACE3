@@ -45,8 +45,8 @@ if (_target isKindOf "CAManBase") then {
     _target setDir (getDir _unit + 180);
     _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit));
 
-    [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
-    [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);
+    [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+    [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2] call EFUNC(common,doAnimation);
 
     _timer = CBA_missionTime + 10;
 

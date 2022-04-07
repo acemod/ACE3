@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Zeus
+component: zeus
 description: The Zeus module improves the Vanilla functionality.
 group: feature
 category: interaction
@@ -17,7 +18,3 @@ ACE3 Zeus is enabled by default. This feature provides control over vanilla aspe
 
 ## 2. Usage
 ACE3 Zeus can be disabled or modified via a module in the 2D editor.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="zeus" %}

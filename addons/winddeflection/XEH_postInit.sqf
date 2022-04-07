@@ -4,7 +4,7 @@ if (!hasInterface) exitWith {};
 
 GVAR(trackedBullets) = [];
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     //If not enabled, dont't add PFEH
     if (!GVAR(enabled)) exitWith {};
 

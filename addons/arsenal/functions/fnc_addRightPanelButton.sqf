@@ -9,10 +9,10 @@
  * 0: items only misc items <ARRAY of STRING>
  * 1: tooltip <STRING> (Optional)
  * 2: picture path <STRING> (Optional)
- * 3: override a spezific button (0-9) <NUMBER> (Optional)
+ * 3: override a specific button (0-9) <NUMBER> (Optional)
  *
  * Return Value:
- * successful: number of the slot; error: -1 <NUMBER>
+ * successful: number of the slot (0-9); error: -1 <NUMBER>
  *
  * Example:
  * [["ACE_bloodIV_500", "ACE_Banana"], "MedicalStuff", "\z\ace\addons\arsenal\data\iconCustom.paa", 5] call ace_arsenal_fnc_addRightPanelButton
@@ -42,12 +42,12 @@ if (_position >= 0 && _position <= 9) then {
     private _cfgWeapons = configFile >> "CfgWeapons";
     _items = _items select {
         private _configItemInfo = _cfgWeapons >> _x >> "ItemInfo";
-           
+
         _x isKindOf ["CBA_MiscItem", _cfgWeapons] && {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} ||
         {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
         {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"}
     };
-    
+
     _return = _position;
     GVAR(customRightPanelButtons) set [_position, [_items apply {toLower _x}, _picture, _tooltip]];
 };

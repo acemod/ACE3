@@ -8,75 +8,86 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             weaponIK = 0;
         };
 
-        class Unconscious;
         class DeadState;
-        class ace_unconscious_1: DeadState {
+        class UNCON_ANIM(1): DeadState {
             file = QPATHTO_T(data\ace_unconscious_1.rtm);
         };
-        class ace_unconscious_2: ace_unconscious_1 {
+
+        class UNCON_ANIM(2): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_2.rtm);
         };
-        class ace_unconscious_3: ace_unconscious_1 {
+
+        class UNCON_ANIM(3): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_3.rtm);
         };
-        class ace_unconscious_4: ace_unconscious_1 {
+
+        class UNCON_ANIM(4): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_4.rtm);
         };
-        class ace_unconscious_5: ace_unconscious_1 {
+
+        class UNCON_ANIM(5): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_5.rtm);
         };
-        class ace_unconscious_6: ace_unconscious_1 {
+
+        class UNCON_ANIM(6): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_6.rtm);
         };
-        class ace_unconscious_7: ace_unconscious_1 {
+
+        class UNCON_ANIM(7): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_7.rtm);
         };
-        class ace_unconscious_8: ace_unconscious_1 {
+
+        class UNCON_ANIM(8): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_8.rtm);
         };
-        class ace_unconscious_1_1: ace_unconscious_1 {
+
+        class UNCON_ANIM(1_1): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_1_1.rtm);
         };
-        class ace_unconscious_2_1: ace_unconscious_1 {
+
+        class UNCON_ANIM(2_1): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_2_1.rtm);
         };
-        class ace_unconscious_3_1: ace_unconscious_1 {
+
+        class UNCON_ANIM(3_1): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_3_1.rtm);
         };
-        class ace_unconscious_4_1: ace_unconscious_1 {
+
+        class UNCON_ANIM(4_1): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_4_1.rtm);
         };
-        class ace_unconscious_5_1: ace_unconscious_1 {
+
+        class UNCON_ANIM(5_1): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_5_1.rtm);
         };
-        class ace_unconscious_6_1: ace_unconscious_1 {
+
+        class UNCON_ANIM(6_1): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_6_1.rtm);
         };
-        class ace_unconscious_7_1: ace_unconscious_1 {
+
+        class UNCON_ANIM(7_1): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_7_1.rtm);
         };
-        class ace_unconscious_8_1: ace_unconscious_1 {
+
+        class UNCON_ANIM(8_1): UNCON_ANIM(1) {
             file = QPATHTO_T(data\ace_unconscious_8_1.rtm);
         };
+
         /* added for the "ace_unc" part */
         class KIA_passenger_boat_holdleft;
-        class ace_unconscious_9: KIA_passenger_boat_holdleft {
-        };
+        class UNCON_ANIM(9): KIA_passenger_boat_holdleft {};
+
         class KIA_driver_boat01;
-        class ace_unconscious_10: KIA_driver_boat01 {
-        };
+        class UNCON_ANIM(10): KIA_driver_boat01 {};
 
-        class GVAR(faceDown_unconscious): Unconscious {
-        };
+        class Unconscious;
+        class UNCON_ANIM(faceDown): Unconscious {};
 
-        class GVAR(faceLeft_unconscious): Unconscious {
-        };
+        class UNCON_ANIM(faceLeft): Unconscious {};
 
-        class GVAR(faceRight_unconscious): Unconscious {
-        };
+        class UNCON_ANIM(faceRight): Unconscious {};
 
-        class GVAR(faceUp_unconscious): Unconscious {
-        };
+        class UNCON_ANIM(faceUp): Unconscious {};
 
         class AmovPpneMstpSnonWnonDnon;
         class ACE_UnconsciousOutProne: AmovPpneMstpSnonWnonDnon {

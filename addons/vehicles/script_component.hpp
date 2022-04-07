@@ -6,6 +6,8 @@
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+
 #ifdef DEBUG_ENABLED_VEHICLES
     #define DEBUG_MODE_FULL
 #endif
@@ -20,4 +22,3 @@
 #define MOUSE_SCROLL_DOWN 0xF9
 
 #define FUEL_FACTOR 0.165    // fuel capacity = range in km * FUEL_FACTOR
-#define STARTUP_DELAY 1.3

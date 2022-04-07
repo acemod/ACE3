@@ -1,9 +1,9 @@
 [
     QGVAR(advancedDiagnose),
-    "CHECKBOX",
+    "LIST",
     [LSTRING(AdvancedDiagnose_DisplayName), LSTRING(AdvancedDiagnose_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    true,
+    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest)], 1],
     true
 ] call CBA_fnc_addSetting;
 
@@ -35,11 +35,11 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(clearTraumaAfterBandage),
-    "CHECKBOX",
-    [LSTRING(ClearTraumaAfterBandage_DisplayName), LSTRING(ClearTraumaAfterBandage_Description)],
+    QGVAR(clearTrauma),
+    "LIST",
+    [LSTRING(ClearTrauma_DisplayName), LSTRING(ClearTrauma_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    false,
+    [[0, 1, 2], [ELSTRING(common,Never),  LSTRING(ClearTrauma_AfterStitch), LSTRING(ClearTrauma_AfterBandage)], 1],
     true
 ] call CBA_fnc_addSetting;
 
@@ -47,7 +47,7 @@
 [
     QGVAR(locationsBoostTraining),
     "CHECKBOX",
-    [LSTRING(LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
+    [ELSTRING(common,LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
     true
@@ -252,9 +252,18 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(cprSuccessChance),
+    QGVAR(cprSuccessChanceMin),
     "SLIDER",
-    [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
+    [LSTRING(CPRSuccessChanceMin_DisplayName), LSTRING(CPRSuccessChanceMin_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 1, 0.4, 2, true],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cprSuccessChanceMax),
+    "SLIDER",
+    [LSTRING(CPRSuccessChanceMax_DisplayName), LSTRING(CPRSuccessChanceMax_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 1, 0.4, 2, true],
     true

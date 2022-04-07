@@ -19,7 +19,7 @@
  */
 
 params ["_args"];
-_args params ["_medic", "_patient", "_bodyPart", "_classname"];
+_args params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
 
 // Switch medic to end animation immediately
 private _endInAnim = _medic getVariable QGVAR(endInAnim);
@@ -48,4 +48,4 @@ _args call _callbackSuccess;
 _args call FUNC(createLitter);
 
 // Emit local event for medical API
-["ace_treatmentSucceded", [_medic, _patient, _bodyPart, _classname]] call CBA_fnc_localEvent;
+["ace_treatmentSucceded", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;
