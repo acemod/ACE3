@@ -1104,5 +1104,11 @@
             <Russian>Суточный рацион питания для обеспечения населения районов, охваченных гуманитарной катастрофой или стоящих на ее грани</Russian>
             <Spanish>Una ración humanitaria destinada a servir como el suministro de alimentos de una persona durante las crisis</Spanish>
         </Key>
+        <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_DisplayName">
+            <English>Sunflower Seeds</English>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Descriptione">
+            <English>Roasted And Salted</English>
+        </Key>
     </Package>
 </Project>
