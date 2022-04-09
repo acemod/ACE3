@@ -87,15 +87,19 @@
         </Key>
         <Key ID="STR_ACE_Finger_sizeCoef_displayName">
             <English>Visual Marker Size Coefficient</English>
+            <German>Visueller Markergrößenkoeffizient</German>
         </Key>
         <Key ID="STR_ACE_Finger_sizeCoef_description">
             <English>Adjusts the size of the visual marker.</English>
+            <German>Passt die Größe der visuellen Markierung an.</German>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_displayName">
             <English>Proximity Scaling</English>
+            <German>Näherungsskalierung</German>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_description">
             <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
+            <German>Skaliert die Größe der visuellen Markierung basierend auf der Entfernung zwischen dem beobachtenden Spieler und dem zeigenden Spieler.</German>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>

@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Overpressure_DisplayName">
             <English>Overpressure</English>
             <Chinesesimp>超压</Chinesesimp>
+            <German>Überdruck</German>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">
             <English>Overpressure Distance Coefficient</English>

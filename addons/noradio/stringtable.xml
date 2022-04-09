@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_NoRadio_DisplayName">
             <English>No Radio</English>
             <Chinesesimp>去无线电</Chinesesimp>
+            <German>Kein Funkgerät</German>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting">
             <English>Mute Player</English>
