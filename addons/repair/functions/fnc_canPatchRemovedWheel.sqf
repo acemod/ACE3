@@ -20,6 +20,7 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 if (GVAR(patchWheelEnabled) == -1) exitWith {false};
+if !("ground" in GVAR(patchWheelLocation)) exitWith {false};
 
 if !([_unit, GVAR(patchWheelEnabled)] call FUNC(isEngineer)) exitWith {false};
 

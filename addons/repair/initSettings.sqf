@@ -43,6 +43,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(patchWheelLocation),
+    "LIST",
+    [LSTRING(patchWheelLocation_DisplayName), LSTRING(patchWheelLocation_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [[["ground", "vehicle"], ["vehicle"], ["ground"]], ["str_difficulty_any", LSTRING(repairOnVehicle), LSTRING(repairOnGround)], 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(repairDamageThreshold), "SLIDER",
     [LSTRING(repairDamageThreshold_name), LSTRING(repairDamageThreshold_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],

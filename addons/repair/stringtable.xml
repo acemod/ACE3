@@ -2076,5 +2076,19 @@
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
             <English>Maximum level a wheel can be patched.</English>
         </Key>
+        <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
+            <English>Wheel Patch Location</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
+            <English>Where the wheel can be patched.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelOnGround">
+            <English>On the ground</English>
+            <German>Auf dem Boden</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelOnVehicle">
+            <English>On a vehicle</English>
+            <German>An einem Fahrzeug</German>
+        </Key>
     </Package>
 </Project>

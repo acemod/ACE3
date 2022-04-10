@@ -66,11 +66,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
         // Create a wheel interaction
         private _root = format ["Wheel_%1_%2", _forEachIndex, _hitpoint];
-        private _condition = {
-            [_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair) ||
-            {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(canRepair)}
-        };
-        private _action = [_root, LSTRING(SpareWheel), ["","#FFFFFF"], {}, _condition, {}, [_hitpoint], _position, 2, nil, FUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
+        private _action = [_root, LSTRING(SpareWheel), ["","#FFFFFF"], {}, {true}, {}, [_hitpoint], _position, 2, nil, FUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
         // An action to remove the wheel is required
@@ -84,7 +80,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         // An action to patch the wheel is required.
         private _name = format ["Patch_%1_%2", _forEachIndex, _hitpoint];
         private _text = localize LSTRING(PatchWheel);
-        private _condition = {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(canRepair)};
+        private _condition = {("vehicle" in GVAR(patchWheelLocation)) && {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(canRepair)}};
         private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(repair)};
         private _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [_root], _action] call EFUNC(interact_menu,addActionToClass);
