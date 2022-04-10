@@ -108,9 +108,6 @@
     _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
-// Cache for FUNC(isModLoaded)
-GVAR(isModLoadedCache) = createHashMap;
-
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {
