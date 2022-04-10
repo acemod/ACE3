@@ -48,16 +48,17 @@ private _weapDir = _unit weaponDirection currentWeapon _unit;
 private _ejectDir = _weapDir vectorCrossProduct [0, 0, 1];
 private _pos = _unitPos
     vectorAdd (_weapDir vectorMultiply (-0.5 + random 2))
-    vectorAdd (_ejectDir vectorMultiply (0.2 + random 2))
-    vectorAdd [0, 0, 0.005];
+    vectorAdd (_ejectDir vectorMultiply (0.2 + random 2));
 
 [
     {
         params ["_modelPath", "_pos"];
 
         private _casing = createSimpleObject [_modelPath, [0,0,0], true];
-        _casing setPosASL _pos;
         _casing setDir (random 360);
+        private _lisPos = (lineIntersectsSurfaces [_pos, _pos vectorAdd [0,0,-1e11], objNull, objNull, true, 1, "FIRE", "GEOM"]) #0;
+        _casing setPosASL _lisPos #0;
+        _casing setVectorUp _lisPos #1;
         private _idx = GVAR(casings) pushBack _casing;
 
         for "_" from 0 to (_idx - GVAR(maxCasings)) do {
