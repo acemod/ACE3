@@ -1,18 +1,17 @@
 #include "script_component.hpp"
 /*
  * Author: esteldunedain / Cyruz / diwako
- * Produces a casing matching the fired rifles caliber on the ground around the unit
+ * Produces a casing matching the fired weapons caliber on the ground around the unit
  *
  * Arguments:
  * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: ammo - Ammo used <STRING>
+ * 1: ammo - Ammo used <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, currentWeapon player, "","", player ammo currentWeapon player] call ace_casings_fnc_createCase
+ * [player, "", "","", "B_556x45_Ball"] call ace_casings_fnc_createCase
  *
  * Public: No
  */
