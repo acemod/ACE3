@@ -45,6 +45,9 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     // silently ignore structural damage
     if (_bodyPart == "#structural") then {continue};
 
+    // ignore if no dammage
+    if (_damage <= 0) then { continue };
+
     // Convert the selectionName to a number and ensure it is a valid selection.
     private _bodyPartNToAdd = ALL_BODY_PARTS find toLower _bodyPart;
     if (_bodyPartNToAdd < 0) then {

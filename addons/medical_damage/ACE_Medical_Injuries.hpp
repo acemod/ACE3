@@ -111,6 +111,9 @@ class ACE_Medical_Injuries {
             // at low damage numbers, chance to create no wounds - makes it a bit more random instead of consistently covering people in bruises
             thresholds[] = {{20, 10}, {10, 5}, {4, 3}, {1.5, 2}, {0.8, 2}, {0.3, 1}, {0, 0}};
             selectionSpecific = 0;
+            class woundHandlers: woundHandlers {
+                GVAR(nonSpecificScaling) = QFUNC(woundsHandlerNonSpecificScaling);
+            };
             class Avulsion {
                 weighting[] = {{1.5, 1}, {1.1, 0}};
             };
@@ -133,6 +136,9 @@ class ACE_Medical_Injuries {
             // explosives create more and smaller wounds than grenades
             thresholds[] = {{20, 15}, {8, 7}, {2, 3}, {1.2, 2}, {0.4, 1}, {0,0}};
             selectionSpecific = 0;
+            class woundHandlers: woundHandlers {
+                GVAR(nonSpecificScaling) = QFUNC(woundsHandlerNonSpecificScaling);
+            };
             class Avulsion {
                 weighting[] = {{1, 1}, {0.8, 0}};
             };
@@ -149,6 +155,9 @@ class ACE_Medical_Injuries {
             // shells tend to involve big pieces of shrapnel, so create fewer and larger wounds
             thresholds[] = {{20, 10}, {10, 5}, {4.5, 2}, {2, 2}, {0.8, 1}, {0.2, 1}, {0, 0}};
             selectionSpecific = 0;
+            class woundHandlers: woundHandlers {
+                GVAR(nonSpecificScaling) = QFUNC(woundsHandlerNonSpecificScaling);
+            };
             class Avulsion {
                 weighting[] = {{1.5, 1}, {1.1, 0}};
             };
@@ -171,6 +180,7 @@ class ACE_Medical_Injuries {
             thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
             class woundHandlers: woundHandlers {
+                GVAR(nonSpecificScaling) = QFUNC(woundsHandlerNonSpecificScaling);
                 GVAR(vehiclecrash) = QFUNC(woundsHandlerVehiclecrash);
             };
             class Abrasion {
@@ -195,6 +205,9 @@ class ACE_Medical_Injuries {
         class collision {
             thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
+            class woundHandlers: woundHandlers {
+                GVAR(nonSpecificScaling) = QFUNC(woundsHandlerNonSpecificScaling);
+            };
             class Abrasion {
                 weighting[] = {{0.30, 0}, {0.30, 1}};
             };
@@ -217,6 +230,9 @@ class ACE_Medical_Injuries {
         class backblast {
             thresholds[] = {{1, 6}, {1, 5}, {0.55, 5}, {0.55, 2}, {0, 2}};
             selectionSpecific = 0;
+            class woundHandlers: woundHandlers {
+                GVAR(nonSpecificScaling) = QFUNC(woundsHandlerNonSpecificScaling);
+            };
             class Avulsion {
                 weighting[] = {{0.30, 0}, {0.30, 1}};
             };
@@ -253,6 +269,9 @@ class ACE_Medical_Injuries {
         class falling {
             thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
+            class woundHandlers: woundHandlers {
+                GVAR(nonSpecificScaling) = QFUNC(woundsHandlerNonSpecificScaling);
+            };
             class Abrasion {
                 weighting[] = {{0.30, 0}, {0.30, 1}};
             };
@@ -285,6 +304,9 @@ class ACE_Medical_Injuries {
         class burn {
             thresholds[] = {{0, 1}};
             selectionSpecific = 0;
+            class woundHandlers: woundHandlers {
+                GVAR(nonSpecificScaling) = QFUNC(woundsHandlerNonSpecificScaling);
+            };
             class ThermalBurn {
                 weighting[] = {{0, 1}};
             };

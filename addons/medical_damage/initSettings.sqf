@@ -42,3 +42,6 @@
     [0, 1, 1, 2, true],
     true
 ] call CBA_fnc_addSetting;
+
+GVAR(multipleWoundReduction_explosion) = 0;
+GVAR(multipleWoundReduction_impact) = 0;
