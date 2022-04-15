@@ -6,6 +6,13 @@ if (hasInterface) then {
     GVAR(pfID) = -1;
 
     ["CBA_settingsInitialized", {
+        // Handle Map Drawing
+        GVAR(mapLaserSource) = objNull;
+        ["ACE_controlledUAV", LINKFUNC(addMapHandler)] call CBA_fnc_addEventHandler;
+        ["turret", LINKFUNC(addMapHandler), false] call CBA_fnc_addPlayerEventHandler;
+        ["unit", LINKFUNC(addMapHandler), true] call CBA_fnc_addPlayerEventHandler;
+
+        // Laser code display
         ["turret", LINKFUNC(showVehicleHud), false] call CBA_fnc_addPlayerEventHandler;
         ["vehicle", LINKFUNC(showVehicleHud), true] call CBA_fnc_addPlayerEventHandler; // only one of these needs the retro flag
 

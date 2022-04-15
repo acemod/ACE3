@@ -18,13 +18,14 @@
 params ["_vehicle"];
 TRACE_1("droneAddActions",_vehicle);
 
+if (!alive _vehicle) exitWith {};
 if (_vehicle getVariable [QGVAR(droneActionsAdded), false]) exitWith {};
 _vehicle setVariable [QGVAR(droneActionsAdded), true];
 
 // move to location
 private _condition = {
     params ["_vehicle"];
-    GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
+    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
 };
 private _statement = {
     params ["_vehicle"];
@@ -41,7 +42,7 @@ if (_vehicle isKindOf "Air") then {
     // loiter at location
     _condition = {
         params ["_vehicle"];
-        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
+        (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
     };
     _statement = {        
         params ["_vehicle"];
@@ -57,7 +58,7 @@ if (_vehicle isKindOf "Air") then {
     // set height
     _condition = {
         params ["_vehicle"];
-        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
+        (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
     };    
     _statement = {
         params ["_vehicle", "", "_args"];
@@ -79,7 +80,7 @@ if (_vehicle isKindOf "Air") then {
         private _group = group driver _vehicle;
         private _index = (currentWaypoint _group) min count waypoints _group;
         private _waypoint = [_group, _index];
-        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} 
+        (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} 
         && {(waypointType _waypoint) == "LOITER"}
     };    
     _statement = {
@@ -103,7 +104,7 @@ if (_vehicle isKindOf "Air") then {
         private _index = (currentWaypoint _group) min count waypoints _group;
         private _waypoint = [_group, _index];
 
-        GVAR(droneWaypointInteractions) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} 
+        (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} 
         && {(waypointType _waypoint) == "LOITER"} && {(waypointLoiterType _waypoint) != _args}
     };
     _statement = {

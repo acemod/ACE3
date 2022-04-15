@@ -68,5 +68,11 @@
             <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
             <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Laser_showLaserOnMap">
+            <English>Draw Laser on Map</English>
+        </Key>
+        <Key ID="STR_ACE_Laser_showLaserOnMap_tooltip">
+            <English>Active laser designator's position will be drawn on the map</English>
+        </Key>
     </Package>
 </Project>

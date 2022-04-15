@@ -164,17 +164,5 @@
             <Russian>30мм СБ 5:1</Russian>
             <Korean>30mm CM 5:1</Korean>
         </Key>
-        <Key ID="STR_ACE_Aircraft_droneWaypointInteractions_name">
-            <English>Set drone waypoints from gunner</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_droneWaypointInteractions_tooltip">
-            <English>Allows setting and modifying a UAV's waypoints with interaction menu</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_droneShowLaserOnMap_name">
-            <English>Show drone's laser position on map</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_droneShowLaserOnMap_tooltip">
-            <English>Active laser designator's position will be drawn on the map</English>
-        </Key>
     </Package>
 </Project>
