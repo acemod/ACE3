@@ -225,4 +225,20 @@ class CfgWeapons {
         model = QPATHTOF(data\mre_human.p3d);
         picture = QPATHTOF(ui\item_mre_human_co.paa);
     };
+    
+    // - Misc Food ------------------------------------------------------------
+    class ACE_Sunflower_Seeds: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        displayName = CSTRING(SunflowerSeeds_DisplayName);
+        descriptionShort = CSTRING(SunflowerSeeds_Description);
+        model = QPATHTOF(data\sunflower_seeds.p3d);
+        picture = QPATHTOF(ui\item_sunflowerseeds_co.paa);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 3;
+        };
+        XGVAR(consumeTime) = 10;
+        XGVAR(hungerSatiated) = 10;
+        XGVAR(consumeText) = CSTRING(EatingX);
+    };
 };

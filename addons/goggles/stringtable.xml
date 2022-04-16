@@ -92,7 +92,7 @@
             <Korean>색조</Korean>
             <French>Teinte</French>
             <Italian>Colore</Italian>
-            <Chinesesimp>染色</Chinesesimp>
+            <Chinesesimp>着色</Chinesesimp>
             <Chinese>染色</Chinese>
             <Portuguese>Cor</Portuguese>
             <Czech>Zabarvení</Czech>
@@ -124,7 +124,7 @@
             <Korean>색조+효과</Korean>
             <French>Teinte + effets</French>
             <Italian>Colore + Effetti</Italian>
-            <Chinesesimp>染色 + 影响</Chinesesimp>
+            <Chinesesimp>着色 + 效果</Chinesesimp>
             <Chinese>染色 + 影響</Chinese>
             <Portuguese>Cor + Efeitos</Portuguese>
             <Czech>Zabarvení + Efekty</Czech>
@@ -145,6 +145,7 @@
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
             <Russian>Показывать Протереть очки в меню взаимодействия с собой</Russian>
+            <Korean>자기상호작용에 고글 닦기 선택 보이기</Korean>
         </Key>
     </Package>
 </Project>

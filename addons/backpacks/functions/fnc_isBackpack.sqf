@@ -17,10 +17,10 @@
 
 params [["_backpack", objNull, [objNull, ""]]];
 
-if (_backpack isEqualType objNull) then {
-    _backpack = typeOf _backpack;
+private _config = if (_backpack isEqualType objNull) then {
+    configOf _backpack
+} else {
+    configFile >> "CfgVehicles" >> _backpack
 };
-
-private _config = configFile >> "CfgVehicles" >> _backpack;
 
 getText (_config >> "vehicleClass") == "backpacks" && {getNumber (_config >> "maximumLoad") > 0} // return

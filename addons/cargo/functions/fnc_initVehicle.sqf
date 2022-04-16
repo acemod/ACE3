@@ -19,10 +19,11 @@ params ["_vehicle"];
 TRACE_1("params", _vehicle);
 
 private _type = typeOf _vehicle;
+private _config = configOf _vehicle;
 
 // If vehicle had space given to it via eden/public then override config hasCargo setting
 private _hasCargoPublic = _vehicle getVariable [QGVAR(hasCargo), false];
-private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
+private _hasCargoConfig = getNumber (_config >> QGVAR(hasCargo)) == 1;
 
 // Nothing to do here if vehicle has no cargo space
 if !(_hasCargoConfig || _hasCargoPublic) exitWith {};
@@ -40,13 +41,11 @@ if (_addCargoType) then {
 // Vehicle can have default ace cargo in its config
 if (isServer) then {
     {
-        if (isClass _x) then {
-            private _cargoClassname = getText (_x >> "type");
-            private _cargoCount = getNumber (_x >> "amount");
-            TRACE_3("adding ACE_Cargo", (configName _x), _cargoClassname, _cargoCount);
-            ["ace_addCargo", [_cargoClassname, _vehicle, _cargoCount]] call CBA_fnc_localEvent;
-        };
-    } count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
+        private _cargoClassname = getText (_x >> "type");
+        private _cargoCount = getNumber (_x >> "amount");
+        TRACE_3("adding ACE_Cargo", (configName _x), _cargoClassname, _cargoCount);
+        ["ace_addCargo", [_cargoClassname, _vehicle, _cargoCount]] call CBA_fnc_localEvent;
+    } forEach ("true" configClasses (_config >> QUOTE(ADDON) >> "Cargo"));
 };
 
 // Servers and HCs do not require action menus (beyond this point)

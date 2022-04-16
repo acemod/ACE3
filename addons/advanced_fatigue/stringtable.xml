@@ -6,7 +6,7 @@
             <Spanish>ACE Fatiga Avanzada</Spanish>
             <German>ACE Erweiterte Ausdauer</German>
             <Chinese>ACE 進階疲勞</Chinese>
-            <Chinesesimp>ACE 进阶疲劳</Chinesesimp>
+            <Chinesesimp>ACE 进阶体力</Chinesesimp>
             <Japanese>ACE アドバンスド ファティーグ</Japanese>
             <Italian>ACE Fatica Avanzata</Italian>
             <Korean>ACE 고급 피로도</Korean>
@@ -73,7 +73,7 @@
             <French>Facteur de récupération</French>
             <Italian>Fattore Recupero</Italian>
             <Chinese>回復值</Chinese>
-            <Chinesesimp>回复值</Chinesesimp>
+            <Chinesesimp>恢复系数</Chinesesimp>
             <Russian>Фактор восстановления</Russian>
             <Portuguese>Fator de Recuperação</Portuguese>
             <Czech>Faktor zotavení</Czech>
@@ -89,7 +89,7 @@
             <French>Modifie la vitesse à laquelle le joueur récupère lorsqu'il se repose.\nPlus la valeur est élevée, plus la récupération est rapide.</French>
             <Italian>Determina in quanto tempo il giocatore recupera quando rilassato. Maggiore significa migliore.</Italian>
             <Chinese>決定玩家休息多久就能回復體力，值越高恢復越快</Chinese>
-            <Chinesesimp>决定玩家休息多久就能回复体力，值越高恢复越快</Chinesesimp>
+            <Chinesesimp>决定玩家休息多久就能恢复体力，值越高恢复越快</Chinesesimp>
             <Russian>Изменяет скорость восстановления игрока во время отдыха. Чем выше, тем быстрее.</Russian>
             <Portuguese>Altera o quão rápido um jogador recupera quando descansando. Quanto maior, mais rápido.</Portuguese>
             <Czech>Mění, jak rychle se hráč zotaví, když odpočívá. Vyšší je rychlejší.</Czech>
@@ -104,7 +104,7 @@
             <French>Facteur de charge</French>
             <Italian>Fattore Caricamento</Italian>
             <Chinese>負重量</Chinese>
-            <Chinesesimp>负重量</Chinesesimp>
+            <Chinesesimp>重量系数</Chinesesimp>
             <Russian>Фактор нагрузки</Russian>
             <Portuguese>Fator de Carga</Portuguese>
             <Czech>Faktor zatížení</Czech>
@@ -119,7 +119,7 @@
             <French>Augmente ou diminue l'influence du poids sur les performances du joueur.\nUne valeur nulle indique que le poids de l'équipement n'a aucun impact sur les performances.</French>
             <Italian>Incrementa o decrementa quanto il peso influenza le prestazioni dei giocatori. Zero significa che il peso dell'equipaggiamento non ha alcuna influenza nelle prestazioni.</Italian>
             <Chinese>增加或降低玩家所能承受的負重量. 如設定值為0, 代表裝備的重量將不會影響到玩家的體力表現</Chinese>
-            <Chinesesimp>增加或降低玩家所能承受的负重量. 如设定值为0, 代表装备的重量将不会影响到玩家的体力表现</Chinesesimp>
+            <Chinesesimp>增加或降低玩家所能承受的负重量。如设定值为0，代表装备的重量将不会影响到玩家的体力表现</Chinesesimp>
             <Russian>Увеличивает или уменьшает вес, влияющий на производительность игроков. Ноль означает, что вес снаряжения не влияет на производительность</Russian>
             <Portuguese>Aumenta ou diminui o quanto o peso influencia a performance do jogador. Zero significa que o peso não tem impacto algum na performance.</Portuguese>
             <Czech>Zvyšuje nebo snižuje, jak velká váha ovlivňuje výkon hráče. Nulová hodnota znamená, že hmotnost zařízení nemá žádný vliv na výkon.</Czech>
@@ -134,7 +134,7 @@
             <French>Facteur d'inclinaison du terrain</French>
             <Italian>Fattore Pendenza Terreno</Italian>
             <Chinese>地形陡峭影響值</Chinese>
-            <Chinesesimp>地形陡峭影响值</Chinesesimp>
+            <Chinesesimp>地形陡峭系数</Chinesesimp>
             <Russian>Фактор местности</Russian>
             <Portuguese>Fator de Inclinação do Terreno</Portuguese>
             <Czech>Faktor stoupání terénu</Czech>
@@ -149,7 +149,7 @@
             <French>Définit à quel point un terrain escarpé réduit l'endurance du joueur.\nPlus la valeur est élevée, moins le joueur est endurant.</French>
             <Italian>Stabilisce quanto la pendenza del terreno incrementa la perdita della stamina. Maggiore significa più stamina persa.</Italian>
             <Chinese>設定陡峭的地形將會影響多少體力的流失，值越高代表體力流失越快</Chinese>
-            <Chinesesimp>设定陡峭的地形将会影响多少体力的流，失值越高代表体力流失越快</Chinesesimp>
+            <Chinesesimp>设定陡峭的地形将会影响多少体力的流失速度，值越高代表体力流失越快</Chinesesimp>
             <Russian>Устанавливает, насколько крутая местность увеличивает потерю выносливости. Чем выше, тем быстрее теряется выносливость.</Russian>
             <Portuguese>Define o quanto que um terreno íngrime aumenta na perda de estamina. Quanto maior, maior a perda de estamina.</Portuguese>
             <Czech>Nastavuje, o kolik strmý terén zvyšuje ztrátu výdrže. Vyšší znamená vyšší ztrátu výdrže.</Czech>
@@ -159,7 +159,7 @@
             <Spanish>Factor de balanceo de mira</Spanish>
             <German>Verwacklungsfaktor</German>
             <Japanese>手ぶれ因数</Japanese>
-            <Chinesesimp>抖动因数</Chinesesimp>
+            <Chinesesimp>抖动系数</Chinesesimp>
             <Chinese>抖動因素</Chinese>
             <French>Facteur de tremblement</French>
             <Italian>Fattore di oscillazione</Italian>
@@ -167,13 +167,14 @@
             <Russian>Фактор колебания прицела</Russian>
             <Portuguese>Fator de Balanço de Mira</Portuguese>
             <Czech>Faktor kývání</Czech>
+            <Korean>손떨림 정도</Korean>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
             <English>Influences the amount of weapon sway. Higher means more sway.</English>
             <Spanish>Afecta al la estabilidad de la mira. Más alto significa más balanceo</Spanish>
             <German>Beeinflusst den Faktor, wie ruhig man eine Waffe halten kann. Ein höherer Wert bedeutet weniger Stabilisierung</German>
             <Japanese>武器を持つ手のぶれ度合いを設定します。 値が高ければ高いほど、手ぶれが強くなります。</Japanese>
-            <Chinesesimp>影响手持武器的晃动程度,数值越高,抖动的越厉害.</Chinesesimp>
+            <Chinesesimp>影响手持武器的晃动程度，数值越高，抖动的越厉害。</Chinesesimp>
             <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
             <French>Influe sur l'amplitude du tremblement de l'arme. Une valeur plus élevée signifie plus de tremblement.</French>
             <Italian>Influenza l'ammontare di oscillazione dell'arma. Maggiore significa più oscillazione.</Italian>
@@ -181,6 +182,7 @@
             <Russian>Влияет на колебания прицела оружия. Чем выше - тем больше.</Russian>
             <Portuguese>Influencia a quantidade de balanço da mira da arma. Quanto maior, mais balanço.</Portuguese>
             <Czech>Ovlivňuje množství kývání zbraní. Vyšší znamená více kývání.</Czech>
+            <Korean>손떨림의 정도를 정합니다. 높을 수록 많이 휘적입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
@@ -207,7 +209,7 @@
             <French>Active/Désactive la fatigue avancée.</French>
             <Italian>Abilita/disabilita la Fatica Avanzata.</Italian>
             <Chinese>啟用/關閉進階體力.</Chinese>
-            <Chinesesimp>启用/关闭进阶体力.</Chinesesimp>
+            <Chinesesimp>启用/关闭进阶体力。</Chinesesimp>
             <Russian>Включает / Отключает Продвинутую усталость</Russian>
             <Portuguese>Ativa/Desativa Fadiga Avançada.</Portuguese>
             <Czech>Aktivuje / deaktivuje Pokročilou únavu.</Czech>
@@ -256,6 +258,7 @@
             <Polish>Chowaj pasek wytrzymałości automatycznie</Polish>
             <Portuguese>Barra de stamina some automaticamente</Portuguese>
             <Turkish>Dayanıklılık çubuğunu otomatik olarak soldur</Turkish>
+            <Korean>자동으로 피로도 막대 숨기기</Korean>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
@@ -270,6 +273,7 @@
             <Japanese>スタミナの状態に応じて、自動的にバーの透明度を調整します。</Japanese>
             <Polish>Dostosowuje przezroczystość paska na podstawie stanu wytrzymałości.</Polish>
             <Portuguese>Ajusta a transparência da barra baseado no status da stamina</Portuguese>
+            <Korean>피로도에 따라 피로도 막대의 투명도를 조절합니다.</Korean>
         </Key>
     </Package>
 </Project>

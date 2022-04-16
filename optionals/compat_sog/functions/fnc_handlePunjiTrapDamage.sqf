@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Punji trap <OBJECT>
+ * 1: Affected units <ARRAY of OBJECT>
  *
  * Return Value:
  * None
@@ -14,15 +15,9 @@
  *
  * Public: No
  */
-params ["_trap"];
+params ["_trap", "_affectedUnits"];
 
-if (isNull (configFile >> "CfgPatches" >> "ace_medical")) exitWith {};
-
-private _radius = getNumber (configOf _trap >> "indirectHitRange");
-private _affectedUnits = (_trap nearEntities ["CAManBase", _radius]) select {local _x} select {isDamageAllowed _x};
 (getShotParents _trap) params ["", "_instigator"];
-
-if (_affectedUnits isEqualTo []) exitWith {};
 
 private _bodyParts = [];
 private _stabCount = 0;
@@ -49,4 +44,4 @@ switch (typeOf _trap select [0, 16]) do {
     for "_i" from 0 to _stabCount do {
         [_x, random [1, 2, 3], selectRandom _bodyParts, "stab", _instigator] call EFUNC(medical,addDamageToUnit);
     };
-} forEach _affectedUnits;
+} forEach _affectedUnits select {isDamageAllowed _x}; // isDamageAllowed already does local check

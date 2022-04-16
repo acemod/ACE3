@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Adds the event handler to a vehicle.
  *
  * Arguments:
@@ -25,7 +25,7 @@ if !(GVAR(enabled)) exitWith {
 };
 
 private _hitpointHash = [[], nil] call CBA_fnc_hashCreate;
-private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _vehicleConfig = configOf _vehicle;
 private _hitpointsConfig = _vehicleConfig >> "HitPoints";
 private _turretConfig = _vehicleConfig >> "Turrets";
 private _eraHitpoints = [_vehicleConfig >> QGVAR(eraHitpoints), "ARRAY", []] call CBA_fnc_getConfigEntry;

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Detaches child from parent, and gives rope item back
  *
  * Arguments:

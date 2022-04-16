@@ -8,13 +8,14 @@
             <French>[CSW] M47 Super-Dragon</French>
             <Japanese>[CSW] M47 スーパー ドラゴン</Japanese>
             <Chinese>[CSW] M47龍式</Chinese>
-            <Chinesesimp>[CSW] M47龙式反坦克导弹</Chinesesimp>
+            <Chinesesimp>[班组] M47 龙式反坦克导弹</Chinesesimp>
             <Italian>[CSW] M47 Super-Dragon</Italian>
             <Czech>[CSW] M47 Super-Dragon</Czech>
             <Polish>[CSW] M47 Super-Dragon</Polish>
             <Turkish>[CSW] M47 Super-Dragon</Turkish>
             <Russian>[CSW] M47 Super-Dragon</Russian>
             <Spanish>[CSW] M47 Super-Dragon</Spanish>
+            <Korean>[CSW] M47 슈퍼 드래곤</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
@@ -23,13 +24,14 @@
             <French>M47 Super-Dragon</French>
             <Japanese>M47 スーパー ドラゴン</Japanese>
             <Chinese>M47 龍式</Chinese>
-            <Chinesesimp>M47龙式反坦克导弹</Chinesesimp>
+            <Chinesesimp>M47 龙式反坦克导弹</Chinesesimp>
             <Italian>M47 Super-Dragon</Italian>
             <Czech>M47 Super-Dragon</Czech>
             <Polish>M47 Super-Dragon</Polish>
             <Turkish>M47 Super-Dragon</Turkish>
             <Russian>M47 Super-Dragon</Russian>
             <Spanish>M47 Super-Dragon</Spanish>
+            <Korean>M47 슈퍼 드래곤</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_attachSight">
             <English>Attach Sight</English>
@@ -44,6 +46,7 @@
             <Polish>Dołącz Optykę</Polish>
             <Russian>Прикрепить прицел</Russian>
             <Spanish>Acoplar visor</Spanish>
+            <Korean>조준경 부착</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_detachSight">
             <English>Detach Sight</English>
@@ -58,6 +61,7 @@
             <Polish>Odczep Optykę</Polish>
             <Russian>Открепить прицел</Russian>
             <Spanish>Desacoplar visor</Spanish>
+            <Korean>조준경 분리</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_sightName">
             <English>SU-36/P Daysight</English>
@@ -73,6 +77,7 @@
             <Turkish>SU-36/P Daysight</Turkish>
             <Russian>SU-36/P Дневной</Russian>
             <Spanish>Visor diurno SU-36/P</Spanish>
+            <Korean>SU-36/P 주간조준기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
@@ -87,6 +92,7 @@
             <Polish>Lekki, tani celownik używany do działania w trakcie dnia. Zawiera komputer naprowadząjący dla całego systemu</Polish>
             <Russian>Легкий дешёвый прицел, используемый для дневных операций. Содержит компьютер для всей системы</Russian>
             <Spanish>Un visor ligero y barato utilizado en operaciones diurnas. Contiene el ordenador de guiado para todo el sistema.</Spanish>
+            <Korean>싸고 가벼운 주간조준기입니다. 사격을 하기 위한 통제컴퓨터가 포함되있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
@@ -101,6 +107,7 @@
             <Polish>Naprowadzany przewodowo rakietowy pocisk SACLOS o unikalnej charakterystyce lotu</Polish>
             <Russian>Ракета SACLOS с проводным наведением с уникальной характеристикой полета</Russian>
             <Spanish>Misil SACLOS guiado por hilo con una característica de vuelo única.</Spanish>
+            <Korean>특이한 비행 성질을 가진 반자동 가시선지령 유도미사일입니다.</Korean>
         </Key>
     </Package>
 </Project>

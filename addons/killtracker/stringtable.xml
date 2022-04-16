@@ -6,7 +6,8 @@
             <Japanese>ACE キルトラッカー</Japanese>
             <German>ACE Abgeschossene Ereignisse</German>
             <Polish>ACE Licznik Zabójstw</Polish>
-            <Chinesesimp>ACE击杀事件</Chinesesimp>
+            <Chinesesimp>ACE 击杀事件</Chinesesimp>
+            <Korean>ACE 사살 이벤트</Korean>
         </Key>
         <Key ID="STR_ACE_KillTracker_TotalKills">
             <English>Total Kills:</English>
@@ -16,6 +17,7 @@
             <Japanese>総キル:</Japanese>
             <German>Gesammte Abschüsse:</German>
             <Chinesesimp>总击杀数：</Chinesesimp>
+            <Korean>총 사살수:</Korean>
         </Key>
         <Key ID="STR_ACE_KillTracker_Kill">
             <English>Kill: %1 %2</English>
@@ -25,6 +27,7 @@
             <Japanese>キル: %1 %2</Japanese>
             <German>Abschuss: %1 %2</German>
             <Chinesesimp>击杀：%1 %2</Chinesesimp>
+            <Korean>사살: %1 %2</Korean>
         </Key>
         <Key ID="STR_ACE_KillTracker_Killer">
             <English>Killer: %1 %2</English>
@@ -34,6 +37,7 @@
             <Japanese>キラー: %1 %2</Japanese>
             <German>Täter: %1 %2</German>
             <Chinesesimp>击杀者：%1 %2</Chinesesimp>
+            <Korean>사살자: %1 %2</Korean>
         </Key>
         <Key ID="STR_ACE_KillTracker_Vehicle">
             <English>Vehicle: %1</English>
@@ -43,6 +47,7 @@
             <Japanese>車両: %1</Japanese>
             <German>Fahrzeuge %!</German>
             <Chinesesimp>载具：%1</Chinesesimp>
+            <Korean>차량: %1</Korean>
         </Key>
         <Key ID="STR_ACE_KillTracker_FriendlyFire">
             <English>Friendly Fire</English>

@@ -29,9 +29,9 @@ class cfgMagazines {
     // Explosives
     class gm_explosive_petn_charge_base;
     class gm_explosive_petn_charge: gm_explosive_petn_charge_base {
-        EGVAR(explosive,DelayTime) = 1;
-        EGVAR(explosive,Placeable) = 1;
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_gm_explosive_petn";
+        EGVAR(explosives,DelayTime) = 1;
+        EGVAR(explosives,Placeable) = 1;
+        EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_gm_explosive_petn";
         useAction = 0;
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
@@ -48,12 +48,27 @@ class cfgMagazines {
 
     class gm_explosive_plnp_charge_base;
     class gm_explosive_plnp_charge: gm_explosive_plnp_charge_base {
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_gm_explosive_plnp";
+        EGVAR(explosives,DelayTime) = 1;
+        EGVAR(explosives,Placeable) = 1;
+        EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_gm_explosive_plnp";
+        useAction = 0;
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+            class DeadmanSwitch: Command {};
+        };
     };
 
     class gm_mine_at_base;
     class gm_mine_at_tm46: gm_mine_at_base {
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_gm_mine_tm46";
+        EGVAR(explosives,Placeable) = 1;
+        EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_gm_mine_tm46";
         useAction = 0;
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
@@ -63,7 +78,8 @@ class cfgMagazines {
         };
     };
     class gm_mine_at_dm21: gm_mine_at_base {
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_gm_explosive_dm21";
+        EGVAR(explosives,Placeable) = 1;
+        EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_gm_explosive_dm21";
         useAction = 0;
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
@@ -73,7 +89,8 @@ class cfgMagazines {
         };
     };
     class gm_mine_at_mn111: gm_mine_at_base {
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_gm_explosive_m111";
+        EGVAR(explosives,Placeable) = 1;
+        EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_gm_explosive_m111";
         useAction = 0;
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
@@ -84,7 +101,8 @@ class cfgMagazines {
     };
 
     class gm_mine_ap_dm31: gm_mine_at_base {
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_gm_explosive_dm31";
+        EGVAR(explosives,Placeable) = 1;
+        EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_gm_explosive_dm31";
         useAction = 0;
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};

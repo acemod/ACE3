@@ -5,7 +5,7 @@
             <English>Artillery Rangetable</English>
             <German>Artillerieschusstafel</German>
             <Chinese>火炮射程表</Chinese>
-            <Chinesesimp>火炮射程表</Chinesesimp>
+            <Chinesesimp>火炮射表</Chinesesimp>
             <Italian>Tavola balistica per artigliria </Italian>
             <Czech>Dělostřelecké tabulky střelby</Czech>
             <Japanese>火砲射表</Japanese>
@@ -15,12 +15,13 @@
             <Spanish>Tabla de distancias de artillería</Spanish>
             <Turkish>Topçu Menzil Tablosu</Turkish>
             <Russian>Артиллерийская баллистическая таблица</Russian>
+            <Korean>포병 사격거리표</Korean>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
             <German>Universale Artillerieschusstafel</German>
             <Chinese>通用的火炮射程表</Chinese>
-            <Chinesesimp>通用火炮射程表</Chinesesimp>
+            <Chinesesimp>通用火炮射表</Chinesesimp>
             <Italian>Tavola balistica universale per artiglieria</Italian>
             <Czech>Univerzální dělostřelecká tabulka střelby</Czech>
             <Japanese>汎用の火砲用射程表</Japanese>
@@ -30,6 +31,7 @@
             <Spanish>Tabla de distancias universal de artillería</Spanish>
             <Turkish>Uluslar arası Topçu Menzil Tablosu</Turkish>
             <Russian>Универсальная артиллерийская баллистическая таблица</Russian>
+            <Korean>범용 포병 사격거리표</Korean>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -61,7 +63,7 @@
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
             <Japanese>プレイヤが射撃すると、空気抵抗モデルと風による影響を与えます。</Japanese>
             <Korean>플레이어 사격시 공기저항과 바람에 영향을 받습니다</Korean>
-            <Chinesesimp>设定由玩家射击的迫击炮，将会受到空气阻力与风力的影响</Chinesesimp>
+            <Chinesesimp>设定由玩家射击的炮弹是否受到空气阻力与风力的影响</Chinesesimp>
             <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
             <Turkish>Oyuncu atışları, hava direnci ve rüzgar efektleri için</Turkish>
         </Key>
@@ -69,7 +71,7 @@
             <English>Artillery Computer Disabled</English>
             <German>Artilleriecomputer ausgeschaltet</German>
             <Chinese>停用火炮電腦</Chinese>
-            <Chinesesimp>停用火炮电脑</Chinesesimp>
+            <Chinesesimp>停用弹道计算机</Chinesesimp>
             <Italian>Computer artiglieria disattivato</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače</Czech>
             <Japanese>砲撃コンピュータ無効化</Japanese>
@@ -79,12 +81,13 @@
             <Spanish>Computadora de artillería deshabilitada</Spanish>
             <Turkish>Topçu Bilgisayarı Devre Dışı</Turkish>
             <Russian>Артиллерийский Компьютер Отключён</Russian>
+            <Korean>탄도계산컴퓨터 비활성화</Korean>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
             <German>Deaktiviert die Vanilla-Artilleriecomputer</German>
             <Chinese>停用原本的火炮控制電腦</Chinese>
-            <Chinesesimp>禁用原版炮兵计算机</Chinesesimp>
+            <Chinesesimp>禁用游戏自带的弹道计算机</Chinesesimp>
             <Italian>Disattiva il computer artiglieria vanilla</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače základní hry</Czech>
             <Japanese>ゲームの砲撃コンピュータを無効化します。</Japanese>
@@ -94,6 +97,7 @@
             <Spanish>Deshabilita la computadora de artillería por defecto de Arma 3</Spanish>
             <Turkish>Topçu bilgisayarını devre dışı bırak</Turkish>
             <Russian>Отключить ванильный артиллерийский компьютер</Russian>
+            <Korean>바닐라 탄도계산컴퓨터를 비활성화 합니다.</Korean>
         </Key>
     </Package>
 </Project>

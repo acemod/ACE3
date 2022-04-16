@@ -18,7 +18,7 @@
 
 params ["_object", "_player"];
 
-private _magazineClass = getText (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(magazine));
+private _magazineClass = getText ((configOf _object) >> QGVAR(magazine));
 private _index = _object getVariable [QGVAR(index), -1];
 
 // Add magazine to inventory and get its id

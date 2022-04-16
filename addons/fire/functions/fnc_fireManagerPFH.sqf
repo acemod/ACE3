@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Handles various fire objects and determines if local units deserves to get burned.
  * Used to handle external burning objects, not used internally because internal methods are more performant.
  *

@@ -70,7 +70,8 @@ class CfgWeapons {
         ACE_barrelLength = 508.0;
     };
     class rhs_weap_saw_base: Rifle_Base_F { // Base class for all Minimi
-        ACE_Overheating_allowSwapBarrel = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
+        EGVAR(overheating,closedBolt) = 0;
     };
     class rhs_weap_lmg_minimi_railed;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {

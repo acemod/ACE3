@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Spawn cook-off effects
  *
  * Arguments:
