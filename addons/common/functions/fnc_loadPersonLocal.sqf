@@ -7,6 +7,8 @@
  * 0: unit to be loaded <OBJECT>
  * 1: vehicle that will beloaded <OBJECT>
  * 2: caller that will load <OBJECT>
+ * 3: preferred seats <ARRAY>
+ * 4: reverse fill <BOOL>
  *
  * Return Value:
  * None
@@ -17,14 +19,33 @@
  * Public: Yes
  */
 
-params ["_unit", "_vehicle", ["_caller", objNull]];
-TRACE_3("loadPersonLocal",_unit,_vehicle,_caller);
+params ["_unit", "_vehicle", ["_caller", objNull], ["_preferredSeats", []], ["_reverseFill", false]];
+TRACE_5("loadPersonLocal",_unit,_vehicle,_caller,_preferredSeats,_reverseFill);
 
 private _slotsOpen = false;
 if ((_vehicle emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUnconscious', false]) || {(getNumber (configOf _vehicle >> "ejectDeadCargo")) == 0}}) then {
-    _unit moveInCargo _vehicle;
-    TRACE_1("moveInCargo",_vehicle);
-    _slotsOpen = true;
+    if (_preferredSeats isNotEqualTo []) then {
+        private _taken = [];
+        {
+            _taken pushBackUnique (_vehicle getCargoIndex _x);
+        } forEach crew _vehicle;
+        private _preferredSeats = _preferredSeats - _taken;
+        if (count _preferredSeats > 0) then {
+            _unit moveInCargo [_vehicle, _preferredSeats select 0];
+            TRACE_2("moveInCargo",_vehicle,_preferredSeats select 0);
+            _slotsOpen = true;
+        };
+    };
+    if (!_slotsOpen) then {
+        private _cargoSeats = fullCrew [_vehicle, "cargo", true];
+        if (_reverseFill) then {
+            reverse _cargoSeats;
+        };
+        private _index = _cargoSeats findIf {isNull (_x select 0)};
+        _unit moveInCargo [_vehicle, (_cargoSeats select _index) select 2];
+        TRACE_2("moveInCargo",_vehicle,_index);
+        _slotsOpen = true;
+    };
 } else {
     // Check if an empty turret is available
     // This already excludes FFV seats, which count as cargo positions

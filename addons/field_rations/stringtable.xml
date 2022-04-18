@@ -32,7 +32,7 @@
         <Key ID="STR_ACE_Field_Rations_IGUI_Description">
             <English>Indicates current hunger and thirst status.</English>
             <Chinese>顯示目前的飲食需求程度。</Chinese>
-            <Chinesesimp>显示当前的饥饿和渴望状态。</Chinesesimp>
+            <Chinesesimp>显示当前的饮食需求状态。</Chinesesimp>
             <Czech>Označuje aktuální stav hladovění a žízní.</Czech>
             <French>Indique l'état actuel de la faim et de la soif.</French>
             <German>Zeigt den aktuellen Hunger- und Durststatus an.</German>
@@ -239,7 +239,7 @@
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
             <Japanese>マップ オブジェクト動作</Japanese>
             <German>Geländeobjekt-Aktionen</German>
-            <Chinesesimp>地形对象动作</Chinesesimp>
+            <Chinesesimp>地形物体动作</Chinesesimp>
             <Korean>지형 물체 상호작용</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_Description">
@@ -249,7 +249,7 @@
             <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
             <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
             <German>Aktiviert Wasserquellen-Aktionen für Geländeobjekte.</German>
-            <Chinesesimp>为地形对象启用水源动作。</Chinesesimp>
+            <Chinesesimp>为地形物体启用水源动作。</Chinesesimp>
             <Korean>지형 물체에서 물을 얻는게 가능해집니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
@@ -267,7 +267,7 @@
             <English>Controls if thirst and hunger should affect ACE Advanced Fatigue.</English>
             <German>Bestimmt, ob Durst und Hunger ACE Erweiterte Ausdauer beeinflussen sollen.</German>
             <Chinese>是否讓飲食影響到ACE的進階疲勞。</Chinese>
-            <Chinesesimp>是否让饮食影响到ACE的进阶疲劳。</Chinesesimp>
+            <Chinesesimp>是否让饮食影响到 ACE 的进阶疲劳。</Chinesesimp>
             <Japanese>喉の渇きと空腹感が ACE アドバンスド ファティーグへ与える影響を決定します</Japanese>
             <Russian>Определяет, будет ли жажда и голод влиять на продвинутую усталость ACE.</Russian>
             <Polish>Kontroluje czy pragnienie i głód mają wpływ na zaawansowane zmęczenie ACE.</Polish>
@@ -361,7 +361,7 @@
             <English>Colored Icons - Transparency</English>
             <German>Farbige Icons - Transparenz</German>
             <Chinese>顏色化圖示 - 透明度</Chinese>
-            <Chinesesimp>彩色图标 - 透明度</Chinesesimp>
+            <Chinesesimp>彩色图标—透明度</Chinesesimp>
             <Japanese>色付きアイコン - 透明度</Japanese>
             <Polish>Kolorowe ikony - transparentność</Polish>
             <Russian>Прозрачность цветных иконок</Russian>
@@ -372,7 +372,7 @@
             <English>Controls the transparency of the Colored Icons HUD. Dynamic setting makes the HUD less transparent as thirst or hunger increase.</English>
             <German>Bestimmt die Tranzparenz der farbigen HUD Icons. Die Dynamische Einstellung macht das HUD weniger transparent, wenn Hunger oder Durst steigen.</German>
             <Chinese>控制顏色化圖示的透明度。設定為動態使其界面透明度與飲食需求一樣，越透明越需要。</Chinese>
-            <Chinesesimp>控制彩色图标HUD的透明度。动态设置使HUD的透明度随着口渴或饥饿的增加而减弱。</Chinesesimp>
+            <Chinesesimp>控制彩色图标 HUD 的透明度。动态设置使 HUD 的透明度随着口渴或饥饿的增加而减弱。</Chinesesimp>
             <Polish>Kontroluje transparentność kolorowych ikon HUD. Dynamiczne ustawienie zmniejsza przejrzystość wraz z zwiększeniem głodu czy pragnienia.</Polish>
             <Japanese>色付きアイコンの透明度を決定できます。動的に設定されると、喉の渇きや空腹感が増すにつれて、アイコンの透明度を下げます。</Japanese>
             <Russian>Настраивает прозрачность цветных иконок. «Динамическая» делает иконки менее прозрачными при увеличении жажды и голода.</Russian>
@@ -815,7 +815,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_DisplayName">
             <English>MRE Lamb Curry</English>
             <Chinese>軍糧 羊肉咖哩</Chinese>
-            <Chinesesimp>MRE羊肉咖喱饭</Chinesesimp>
+            <Chinesesimp>军粮羊肉咖喱饭</Chinesesimp>
             <Czech>MRE jehněčí kari</Czech>
             <French>MRE Curry d'agneau</French>
             <German>EPA Lamm Curry</German>
@@ -832,7 +832,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_Description">
             <English>An MRE containing Lamb Curry. Heat for best effect</English>
             <Chinese>含有羊肉咖哩的軍用口糧。加熱以達到最佳效果</Chinese>
-            <Chinesesimp>含有羊肉咖喱饭的MRE。加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>含有羊肉咖喱饭的军粮。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE obsahující Lamb Curry. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE contenant du Curry d'agneau. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Lamm Curry. Für den besten Geschmack erhitzen.</German>
@@ -850,7 +850,7 @@
             <English>MRE Beef Stew</English>
             <German>EPA Rindereintopf</German>
             <Chinese>軍糧 牛肉燉湯</Chinese>
-            <Chinesesimp>MRE炖牛肉汤</Chinesesimp>
+            <Chinesesimp>军粮炖牛肉汤</Chinesesimp>
             <Japanese>MRE ビーフ シチュー</Japanese>
             <Polish>MRE Gulasz wołowy</Polish>
             <Russian>ИРП Тушеная говядина</Russian>
@@ -861,7 +861,7 @@
             <English>An MRE containing Beef Stew. Heat for best effect</English>
             <German>Eine EPA, welche Rindereintopf beeinhaltet. Für den besten Geschmack erhitzen.</German>
             <Chinese>含有牛肉燉湯的軍用口糧。加熱以達到最佳效果</Chinese>
-            <Chinesesimp>含有牛肉炖汤的MRE。加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>含有牛肉炖汤的军粮。加热以达到最佳效果</Chinesesimp>
             <Japanese>ビーフ シチューの MRE。温めるとなお美味しい</Japanese>
             <Polish>MRE zawierające gulasz wołowy. Podgrzej dla najlepszego efektu</Polish>
             <Russian>Сухой паёк, содержащий тушеную говядину. Перед употреблением рекомендуется разогреть</Russian>
@@ -871,7 +871,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_CreamTomatoSoup_DisplayName">
             <English>MRE Cream Tomato Soup</English>
             <Chinese>軍糧 奶油番茄湯</Chinese>
-            <Chinesesimp>MRE奶油西红柿汤</Chinesesimp>
+            <Chinesesimp>军粮奶油西红柿汤</Chinesesimp>
             <Czech>MRE krémová rajská polévka</Czech>
             <French>MRE Soupe de tomate crème</French>
             <German>EPA Cremige Tomatensuppe</German>
@@ -888,7 +888,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_CreamTomatoSoup_Description">
             <English>An MRE containing Cream Tomato Soup. Mix with water and heat for best effect</English>
             <Chinese>含有奶油番茄湯的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
-            <Chinesesimp>含有奶油番茄汤的MRE。添水加热以获得最佳效果</Chinesesimp>
+            <Chinesesimp>含有奶油番茄汤的军粮。添水加热以获得最佳效果</Chinesesimp>
             <Czech>MRE obsahující krémovou rajčatovou polévku. Směs s vodou a teplem pro nejlepší efekt</Czech>
             <French>Un MRE contenant de la soupe à la tomate et à la crème. Mélanger avec de l'eau et chauffer pour obtenir le meilleur effet</French>
             <German>Eine EPA mit Creme Tomatensuppe. Für beste Wirkung mit Wasser und Hitze mischen.</German>
@@ -905,7 +905,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_CreamChickenSoup_DisplayName">
             <English>MRE Cream Chicken Soup</English>
             <Chinese>軍糧 奶油雞湯</Chinese>
-            <Chinesesimp>MRE奶油鸡汤</Chinesesimp>
+            <Chinesesimp>军粮奶油鸡汤</Chinesesimp>
             <Czech>MRE krémová kuřecí polévka</Czech>
             <French>MRE Soupe à la crème au poulet</French>
             <German>EPA Cream Hühnersuppe</German>
@@ -922,7 +922,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_CreamChickenSoup_Description">
             <English>An MRE containing Chicken Soup. Mix with water and heat for best effect</English>
             <Chinese>含有雞湯的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
-            <Chinesesimp>含有鸡汤的MRE。添水加热以获得最佳效果</Chinesesimp>
+            <Chinesesimp>含有鸡汤的军粮。添水加热以获得最佳效果</Chinesesimp>
             <Czech>MRE obsahující kuřecí polévku. Směs s vodou a teplem pro nejlepší efekt</Czech>
             <French>Un MRE contenant une soupe au poulet. Mélanger avec de l'eau et chauffer pour obtenir le meilleur effet</French>
             <German>Eine EPA mit Hühnersuppe. Für beste Wirkung mit Wasser und Hitze mischen.</German>
@@ -939,7 +939,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenTikkaMasala_DisplayName">
             <English>MRE Chicken Tikka Masala</English>
             <Chinese>軍糧 瑪撒拉雞</Chinese>
-            <Chinesesimp>MRE鸡蒂卡Masala</Chinesesimp>
+            <Chinesesimp>军粮鸡蒂卡 Masala</Chinesesimp>
             <Czech>MRE Kuře Tikka Masala</Czech>
             <French>MRE Poulet Tikka Masala</French>
             <German>EPA Huhn Tikka Masala</German>
@@ -956,7 +956,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenTikkaMasala_Description">
             <English>An MRE with Chicken Tikka Masala. Heat for best effect</English>
             <Chinese>含有瑪撒拉雞的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
-            <Chinesesimp>与鸡Tikka马萨拉MRE。加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>与鸡 Tikka 马萨拉军粮。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE s kuřecím masem Tikka Masala. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE avec du poulet Tikka Masala. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Hühnchen Tikka Masala. Für den besten Geschmack erhitzen.</German>
@@ -973,7 +973,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_SteakVegetables_DisplayName">
             <English>MRE Steak Vegetables</English>
             <Chinese>軍糧 牛排蔬菜</Chinese>
-            <Chinesesimp>MRE牛排蔬菜</Chinesesimp>
+            <Chinesesimp>军粮牛排蔬菜</Chinesesimp>
             <Czech>MRE Steak zelenina</Czech>
             <French>MRE Steak légumes</French>
             <German>EPA Steak Gemüse</German>
@@ -990,7 +990,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_SteakVegetables_Description">
             <English>An MRE containing Steak and Vegetables. Heat for best effect</English>
             <Chinese>包含牛排和蔬菜的軍用口糧。 加熱以達到最佳效果</Chinese>
-            <Chinesesimp>包含牛排和蔬菜的MRE。加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>包含牛排和蔬菜的军粮。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE obsahující steak a zeleninu. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE contenant du bifteck et des légumes. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Steak und Gemüse. Für den besten Geschmack erhitzen.</German>
@@ -1007,7 +1007,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_MeatballsPasta_DisplayName">
             <English>MRE Meatballs and Pasta</English>
             <Chinese>軍糧 肉丸和意大利麵</Chinese>
-            <Chinesesimp>MRE肉丸和意大利面</Chinesesimp>
+            <Chinesesimp>军粮肉丸和意大利面</Chinesesimp>
             <Czech>MRE karbanátky a těstoviny</Czech>
             <French>MRE Pâtes aux boulettes de viande</French>
             <German>EPA Frikadellen und Pasta</German>
@@ -1024,7 +1024,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_MeatballsPasta_Description">
             <English>An MRE containing Meatballs and Pasta. Heat for best effect</English>
             <Chinese>含有肉丸和意大利麵的軍用口糧。 加熱以達到最佳效果</Chinese>
-            <Chinesesimp>含有肉丸和意大利面的MRE。加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>含有肉丸和意大利面的军粮。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE obsahující maso a těstoviny. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE contenant des boulettes de viande et des pâtes. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Fleischbällchen und Pasta. Für den besten Geschmack erhitzen.</German>
@@ -1041,7 +1041,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenHerbDumplings_DisplayName">
             <English>MRE Chicken with Herb Dumplings</English>
             <Chinese>軍糧 雞肉香草餃子</Chinese>
-            <Chinesesimp>MRE鸡肉香草饺子</Chinesesimp>
+            <Chinesesimp>军粮鸡肉香草饺子</Chinesesimp>
             <Czech>MRE kuře s bylinkovým knedlíkem</Czech>
             <French>MRE de poulet avec des boulettes aux herbes</French>
             <German>EPA Huhn mit Kraut Knödel</German>
@@ -1058,7 +1058,7 @@
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenHerbDumplings_Description">
             <English>An MRE containing Chicken with Herb Dumplings. Heat for best effect</English>
             <Chinese>含有雞肉和香草餃子的軍用口糧。 加熱以達到最佳效果</Chinese>
-            <Chinesesimp>含有鸡肉和香草饺子的MRE。加热以达到最佳效果</Chinesesimp>
+            <Chinesesimp>含有鸡肉和香草饺子的军粮。加热以达到最佳效果</Chinesesimp>
             <Czech>MRE obsahující kuře s bylinkovými knedlíky. Teplo pro nejlepší efekt</Czech>
             <French>Un MRE contenant du poulet et des dumplings aux fines herbes. Chaleur pour le meilleur effet</French>
             <German>Eine EPA mit Hühnchen mit Kräuterknödeln. Für den besten Geschmack erhitzen.</German>
@@ -1103,6 +1103,14 @@
             <Portuguese>Uma Ração Humanitária destinada a servir como alimento alimentar de uma pessoa durante as crises</Portuguese>
             <Russian>Суточный рацион питания для обеспечения населения районов, охваченных гуманитарной катастрофой или стоящих на ее грани</Russian>
             <Spanish>Una ración humanitaria destinada a servir como el suministro de alimentos de una persona durante las crisis</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_DisplayName">
+            <English>Sunflower Seeds</English>
+            <German>Sonnenblumenkerne</German>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Descriptione">
+            <English>Roasted And Salted</English>
+            <German>Geröstet und Gesalzen</German>
         </Key>
     </Package>
 </Project>

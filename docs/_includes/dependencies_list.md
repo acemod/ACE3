@@ -616,6 +616,7 @@
 {% endif %}
 
 {% if include.component == "compat_rhs_gref3" %}
+- `ace_fastroping`
 - `ace_explosives`
 - `ace_csw`
 - `rhsgref_main_loadorder`
