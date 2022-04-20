@@ -42,6 +42,7 @@
         LOG("remove ammo");
         {
             _x params ["_xMag", "", "_xAmmo"];
+            if (_xAmmo == 0) then {continue};
 
             private _carryMag = GVAR(vehicleMagCache) get _xMag;
             if (isNil "_carryMag") then {
