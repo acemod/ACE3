@@ -1,4 +1,4 @@
-private _category = [LELSTRING(common,categoryUncategorized), localize "str_a3_itemtype_laser"];
+private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(laser)];
 
 [
     QGVAR(dispersionCount),  "SLIDER",
