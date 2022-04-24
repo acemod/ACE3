@@ -166,6 +166,6 @@ if (!isPlayer _unit) then {
 END_COUNTER(Vitals);
 
 //placed outside the counter as 3rd-party code may be called from this event
-[QEGVAR(medical,handleUnitVitals), _unit] call CBA_fnc_localEvent;
+[QEGVAR(medical,handleUnitVitals), [_unit, _deltaT]] call CBA_fnc_localEvent;
 
 true
