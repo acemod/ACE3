@@ -193,7 +193,7 @@ class ACE_Medical_Injuries {
             };
         };
         class collision {
-            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.4, 1}, {0.15, 0.7}, {0, 0.5}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
             class Abrasion {
                 weighting[] = {{0.30, 0}, {0.30, 1}};
@@ -212,6 +212,22 @@ class ACE_Medical_Injuries {
             };
             class Laceration {
 
+            };
+        };
+        class falling {
+            thresholds[] = {{8, 4}, {1, 1}, {0.4, 1}, {0.15, 0.7}, {0, 0.5}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            selectionSpecific = 0;
+            class Abrasion {
+                weighting[] = {{0.4, 0}, {0.2, 1}, {0, 0}};
+                sizeMultiplier = 3;
+            };
+            class Contusion {
+                weighting[] = {{0.4, 0}, {0.2, 1}};
+                sizeMultiplier = 3;
+            };
+            class Crush {
+                weighting[] = {{0.4, 1}, {0.2, 0}};
+                sizeMultiplier = 1.5;
             };
         };
         class backblast {
@@ -248,22 +264,6 @@ class ACE_Medical_Injuries {
             };
             class Laceration {
 
-            };
-        };
-        class falling {
-            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.4, 1}, {0.15, 0.7}, {0, 0.5}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
-            selectionSpecific = 0;
-            class Abrasion {
-                weighting[] = {{1, 0}, {0.5, 1}, {0, 0}};
-                sizeMultiplier = 3;
-            };
-            class Contusion {
-                weighting[] = {{0.5, 0}, {0.35, 1}};
-                sizeMultiplier = 3;
-            };
-            class Crush {
-                weighting[] = {{0.5, 1}, {0.35, 0}};
-                sizeMultiplier = 1.5;
             };
         };
         class ropeburn {
