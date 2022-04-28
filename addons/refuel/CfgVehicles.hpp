@@ -83,6 +83,8 @@ class CfgVehicles {
         destrType = "DestructNo";
     };
 
+    #include "CfgVehicles\fuel_bottle.hpp"
+    
     class All;
     class Static: All {};
     class Building: Static {};

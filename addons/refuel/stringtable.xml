@@ -543,5 +543,20 @@
             <Czech>Souřadnice na modelu pro připojení hadice na palivo.</Czech>
             <Spanish>Coordenadas del modelo usado para la boquilla de la manguera</Spanish>
         </Key>
+        <Key ID="STR_ACE_Refuel_Fuel_Bottle_DisplayName">
+            <English>1 Liter Fuel Bottle</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Fuel_Bottle_Item_DisplayName">
+            <English>Liter Fuel Bottle</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Fuel_Bottle_Not_Full">
+            <English>Only full bottles can be picked up</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Bottle_Refueling">
+            <English>Refuel From Bottle</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Bottle_Pickup">
+            <English>Pickup Bottle</English>
+        </Key>
     </Package>
 </Project>

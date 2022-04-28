@@ -1,3 +1,4 @@
+PREP(bottleRefueling);
 PREP(canCheckFuel);
 PREP(canDisconnect);
 PREP(canReturnNozzle);
@@ -16,6 +17,7 @@ PREP(makeJerryCan);
 PREP(makeSource);
 PREP(moduleRefuelSettings);
 PREP(onMouseButtonDown);
+PREP(pickupFuelBottle);
 PREP(readFuelCounter);
 PREP(refuel);
 PREP(returnNozzle);
