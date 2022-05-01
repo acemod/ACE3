@@ -111,5 +111,9 @@
             <Chinesesimp>解开牵引绳</Chinesesimp>
             <Korean>견인줄 분리</Korean>
         </Key>
+        <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
+            <English>Add Tow Rope to Vehicle Inventory</English>
+            <Russian>Добавить буксировочный трос в инвентарь машин</Russian>
+        </Key>
     </Package>
 </Project>
