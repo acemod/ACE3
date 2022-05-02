@@ -35,7 +35,8 @@ if (_item  isEqualType "") then {
 } else {
     _validItem =
         (alive _item) &&
-        {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}};
+        {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}} &&
+        {!(_item getVariable [QEGVAR(cookoff,isCookingOff), false])};
 };
 
 _validItem &&
