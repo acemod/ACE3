@@ -44,13 +44,7 @@
             _x params ["_xMag", "", "_xAmmo"];
             if (_xAmmo == 0) then {continue};
 
-            private _carryMag = GVAR(vehicleMagCache) get _xMag;
-            if (isNil "_carryMag") then {
-                private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
-                _carryMag = configName (_groups param [0, configNull]);
-                GVAR(vehicleMagCache) set [_xMag, _carryMag];
-                TRACE_2("setting cache",_xMag,_carryMag);
-            };
+            private _carryMag = _xMag call FUNC(getCarryMagazine);
             if (_carryWeaponMag isEqualTo "" && {toLower _carryMag in _carryWeaponMags}) then {
                 TRACE_3("Adding mag to secondary weapon",_xMag,_xAmmo,_carryMag);
                 _carryWeaponMag = _carryMag;

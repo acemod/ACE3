@@ -89,7 +89,7 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
 
             // Magazine groups
             {
-                private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
+                private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups), createHashMap];
                 private _magArray = _magazineGroups get (toLower _x);
                 {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
             } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));

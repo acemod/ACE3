@@ -18,6 +18,12 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
+    // Invisible Target Soldier
+    class TargetSoldierBase: StaticWeapon {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(canCarry) = 1;
