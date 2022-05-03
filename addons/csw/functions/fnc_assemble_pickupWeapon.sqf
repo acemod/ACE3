@@ -81,7 +81,11 @@
             private _weaponHolder = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
             _weaponHolder setDir random [0, 180, 360];
             _weaponHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];
-            _weaponHolder addWeaponCargoGlobal [_carryWeaponClassname, 1];
+            if (_carryWeaponMag isEqualTo "") then {
+                _weaponHolder addWeaponCargoGlobal [_carryWeaponClassname, 1];
+            } else {
+                _weaponHolder addWeaponWithAttachmentsCargoGlobal [[_carryWeaponClassname, "", "", "", [_carryWeaponMag, 1], [], ""], 1];
+            };
         }, [_player, _weaponPos, _carryWeaponClassname, _carryWeaponMag]] call CBA_fnc_execNextFrame;
 
         LOG("delete weapon");
