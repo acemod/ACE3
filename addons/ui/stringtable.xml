@@ -688,5 +688,11 @@
             <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
             <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화 합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_UI_HideDefaultActionIcon">
+            <English>Hide Default Action Icon</English>
+        </Key>
+        <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
+            <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
+        </Key>
     </Package>
 </Project>
