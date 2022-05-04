@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-private _weapons = configProperties [configfile >> "CfgWeapons", QUOTE(isClass _x && (isText (_x >> QQGVAR(vehicle)))), true];
+private _weapons = (call (uiNamespace getVariable [QGVAR(flagItems), {[]}])) apply {configFile >> "CfgWeapons" >> _x};
 
 {
     private _name = configName _x;
@@ -10,7 +10,7 @@ private _weapons = configProperties [configfile >> "CfgWeapons", QUOTE(isClass _
     GVAR(flagCache) set [_name, _vehicle];
 
     private _action = [
-        _name,
+        QGVAR(pickup),
         LLSTRING(ActionPickUp),
         "",
         {[_player, _target] call FUNC(pickUpFlag)},

@@ -19,6 +19,7 @@
 params [["_unit", objNull, [objNull]], ["_flag", QGVAR(white), [""]]];
 
 _unit removeItem _flag;
+_flag = GVAR(flagCache) get _flag; // convert to vehicle type
 private _pos = _unit modelToWorld [0, 1, 0];
 private _flag = _flag createVehicle _pos;
 _flag setPos _pos;
