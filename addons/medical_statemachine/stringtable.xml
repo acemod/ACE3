@@ -15,7 +15,7 @@
             <Polish>Stany</Polish>
             <Turkish>Devletler</Turkish>
             <Spanish>Estados</Spanish>
-            <Korean>현재상태</Korean>
+            <Korean>현재 상태</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_DisplayName">
             <English>Player Fatal Injuries</English>
@@ -47,7 +47,7 @@
             <German>Legt fest, wann Spieler tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Torso verursacht.</German>
             <Russian>Определяет, могут ли игроки получить смертельные травмы. Смертельная травма вызывается значительным повреждением головы или туловища.</Russian>
             <Spanish>Controla cuándo los jugadores pueden sufrir lesiones fatales. Una lesión fatal es causada por un daño significativo en la cabeza o el cuerpo.</Spanish>
-            <Korean>플레이어가 언제 중태로 빠질지 결정합니다. 중태는 머리나 몸통에 심각한 피해를 입는 경우 발생합니다.</Korean>
+            <Korean>플레이어가 언제 중태로 빠질 지 결정합니다. 중태는 머리나 몸통에 심각한 피해를 입는 경우 발생합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
             <English>AI Fatal Injuries</English>
@@ -79,7 +79,7 @@
             <German>Legt fest, wann KI-Einheiten tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Körper verursacht.\nWenn "Immer" eingestellt ist, erzeugt diese Einstellung das "KI Sofort-Tod" Verhalten. KI-Einheiten sterben sofort durch jede tödliche Verletzung.\nBEACHTE: Eine andere Einstellung als "Immer" bedingt, dass "KI-Bewusstlosigkeit" verwendet wird.</German>
             <Russian>Определяет могут ли игроки получить смертельные травмы. Смертельная травма вызывается значительным повреждением головы или туловища.\nКогда установлено «Всегда», это вызывает поведение «Мгновенной смерти ИИ», так как ИИ немедленно умрет от любой смертельной травмы.\nПРИМЕЧАНИЕ: Любой режим, кроме «Всегда», требует включения функции «Потеря сознания».</Russian>
             <Spanish>Controla cuándo la IA puede sufrir lesiones fatales. Una lesión fatal es causada por un daño significativo en la cabeza o el cuerpo. \n Cuando se establece en "Siempre", esto produce efectivamente un comportamiento de "Muerte instantánea de IA", ya que la IA morirá inmediatamente por cualquier lesión fatal. \n NOTA: Cualquier modo que no sea "Siempre" requiere que la inconsciencia de la IA esté habilitada.</Spanish>
-            <Korean>인공지능이 언제 중태로 빠질지 결정합니다. 중태는 머리나 몸통에 심각한 피해를 입는 경우 발생합니다.\n "언제나"로 설정하면 "인공지능 즉사" 기능이 즉각 적용됩니다.\n 참고: "언제나"를 제외한 다른 모드는 인공지능의 기절이 활성화가 필요합니다. </Korean>
+            <Korean>인공지능이 언제 중태로 빠질 지 결정합니다. 중태는 머리나 몸통에 심각한 피해를 입는 경우 발생합니다.\n "언제나"로 설정하면 "인공지능 즉사" 기능이 즉각 적용됩니다.\n 참고: "언제나"를 제외한 다른 모드는 인공지능의 기절이 활성화가 필요합니다. </Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_DisplayName">
             <English>AI Unconsciousness</English>
@@ -182,7 +182,7 @@
             <Spanish>COntrola si una persona puede morir en parada cardíaca por causa de pérdida de sangre antes de que se termine el contador de parada cardíaca</Spanish>
             <Polish>Kontroluje czy śmierć osoby może nastąpić poprzez wykrwawienie zanim wyczerpię się Czas Zatrzymania Akcji Serca.</Polish>
             <Chinesesimp>控制单位是否会在心脏骤停时间耗完之前因失血过多而死亡。</Chinesesimp>
-            <Korean>지정한 심정지 시간이 다 되기전에 출혈로 인해 사망할 수 있는지를 결정합니다.</Korean>
+            <Korean>지정한 심정지 시간이 다 되기 전에 출혈로 인해 사망할 수 있는 지를 결정합니다.</Korean>
         </Key>
     </Package>
 </Project>

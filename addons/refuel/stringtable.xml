@@ -92,7 +92,7 @@
             <Spanish>Tomando surtidor...</Spanish>
             <French>Prise du pistolet...</French>
             <Japanese>給油ノズルを取っています・・・</Japanese>
-            <Korean>주유기 획득중...</Korean>
+            <Korean>주유기 획득 중...</Korean>
             <Chinesesimp>正在拿取加油枪...</Chinesesimp>
             <Chinese>拿取燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Alınıyor...</Turkish>
@@ -124,7 +124,7 @@
             <Spanish>Conectando surtidor...</Spanish>
             <French>Introduction du pistolet...</French>
             <Japanese>給油ノズルを接続しています・・・</Japanese>
-            <Korean>주유기 꼽는중...</Korean>
+            <Korean>주유기 꼽는 중...</Korean>
             <Chinesesimp>正在连接加油枪...</Chinesesimp>
             <Chinese>連結燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Bağlanıyor...</Turkish>
@@ -428,7 +428,7 @@
             <Spanish>Devolviendo el surtidor...</Spanish>
             <French>Rangement du pistolet...</French>
             <Japanese>給油ノズルを戻しています・・・</Japanese>
-            <Korean>주유기 반환중</Korean>
+            <Korean>주유기 반환 중</Korean>
             <Chinesesimp>正在放回加油枪...</Chinesesimp>
             <Chinese>放回燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Geri Koyuluyor</Turkish>
@@ -444,7 +444,7 @@
             <Spanish>Verificar el contador de combustible</Spanish>
             <French>Vérifier le compteur</French>
             <Japanese>燃料計を見る</Japanese>
-            <Korean>연로카운터 확인</Korean>
+            <Korean>연료카운터 확인</Korean>
             <Chinesesimp>检查燃料表</Chinesesimp>
             <Chinese>檢查燃料表</Chinese>
             <Turkish>Yakıt tankını kontrol et</Turkish>
@@ -506,7 +506,7 @@
             <Italian>La capacità del carburante disponibile per il rifornimento (-1 disabilita, -10 se infinito)</Italian>
             <Chinese>設定有多少油料可供載具進行加油(-1時關閉，-10為無限油量)</Chinese>
             <Chinesesimp>设定有多少油料可供载具进行加油（-1时关闭，-10为无限油量）</Chinesesimp>
-            <Korean>재급유에 사용 할 수 있는 연료량 (-1=비활성, -10=무한)</Korean>
+            <Korean>재급유에 사용할 수 있는 연료량 (-1=비활성, -10=무한)</Korean>
             <Polish>Pojemność paliwa dostępnego do tankowania (-1 wyłącz, -10 jeśli nieskończone)</Polish>
             <Portuguese>Quantidade de combustível disponível para abastecer (-1 para desativar, -10 para infinito)</Portuguese>
             <French>Le volume de carburant disponible pour le ravitaillement (-1 pour désactiver, -10 pour quantité illimitée).</French>

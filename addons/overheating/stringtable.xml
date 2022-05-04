@@ -41,7 +41,7 @@
             <Japanese>過熱と弾詰まりモジュールを全て有効化します</Japanese>
             <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
             <German>Hauptschalter, um die Überhitzung-/Ladehemmung-Module zu aktivieren</German>
-            <Korean>과열/탄걸림 최종 활성화</Korean>
+            <Korean>과열/탄걸림 마스터 활성화</Korean>
             <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
             <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
             <Chinese>啟用槍管過熱/干擾模塊</Chinese>
@@ -88,7 +88,7 @@
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
             <Chinesesimp>附加了消音器后，产生的额外热量系数。\n数值越高，热量越高，0意味着消音器不产生额外热量。</Chinesesimp>
-            <Korean>소음기 장착시 만들어 지는 열에 대한 계수를 적용합니다.\n높을 수록 온도가 높아집니다, 0으로 설정 시 추가적인 열을 얻지 않습니다.</Korean>
+            <Korean>소음기 장착 시 만들어 지는 열에 대한 계수를 적용합니다.\n높을 수록 온도가 높아집니다, 0으로 설정 시 추가적인 열을 얻지 않습니다.</Korean>
             <German>Koeffizient, der angibt, wie viel zusätzliche Wärme durch das Anbringen eines Schalldämpfers hinzugefügt wird. Ein höherer Wert erhöht die Menge an Wärme, 0 bedeutet, dass keine zusätzliche Wärme durch den Schalldämpfer hinzukommt.</German>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
@@ -119,7 +119,7 @@
             <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
             <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
             <Japanese>持っている武器が弾詰りをすると、通知を表示します</Japanese>
-            <Korean>총알이 무기에 걸릴경우 화면에 알림을 띄웁니다</Korean>
+            <Korean>총알이 무기에 걸릴 경우 화면에 알림을 띄웁니다</Korean>
             <Chinesesimp>当武器卡弹时显示提示信息</Chinesesimp>
             <Chinese>當武器卡彈時顯示提示訊息</Chinese>
         </Key>
@@ -182,7 +182,7 @@
             <Russian>Показывать эффект частиц, когда оружие других игроков перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
             <Japanese>他のプレイヤーの過熱の視覚表現を表示します</Japanese>
-            <Korean>모든 인원이 무기가 과열될시 입자 효과가 나타납니다.</Korean>
+            <Korean>모든 인원이 무기가 과열될 시 입자 효과가 나타납니다.</Korean>
             <Chinesesimp>当其他玩家的武器过热时显示特效</Chinesesimp>
             <Chinese>當其他玩家的武器過熱時顯示特效</Chinese>
             <Hungarian>Mutassa a részecskehatásokat, amikor más játékosok fegyvere melegedik túl</Hungarian>
@@ -214,7 +214,7 @@
             <Russian>Перегретое оружие будет менее точным, а дульная скорость будет снижена. Применяется ко всем игрокам.</Russian>
             <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
             <Japanese>過熱は精度を減少させたり、初速を低下させます。これは全プレイヤに適用します。</Japanese>
-            <Korean>무기 과열시 무기의 명중률이 저하되고 총구속도가 감소합니다. 이는 모든 플레이어에게 적용됩니다.</Korean>
+            <Korean>무기 과열 시 무기의 명중률이 저하되고 총구속도가 감소합니다. 이는 모든 플레이어에게 적용됩니다.</Korean>
             <Chinesesimp>过热的武器将会有打不准和减少射击初速的情况。适用于所有玩家</Chinesesimp>
             <Chinese>過熱的武器將會有打不準和減少射擊初速的情況。適用於所有玩家</Chinese>
             <Hungarian>A túlmelegedett fegyverek kevésbé lesznek pontosak és csökkent a lövés sebessége. Minden játékosra vonatkozik.</Hungarian>
@@ -227,7 +227,7 @@
             <German>Abstand für Effekte und Dispersion</German>
             <Polish>Odległość efektów i rozproszenia</Polish>
             <Chinesesimp>效果和扩散距离</Chinesesimp>
-            <Korean>효과와 분산의 거리</Korean>
+            <Korean>효과와 분산 거리</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
             <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
@@ -237,7 +237,7 @@
             <German>Der Abstand in Metern vom Spieler, in dem Überhitzungspartikeleffekte und Dispersion sichtbar sind.</German>
             <Polish>Określa odległość w metrach, do której widoczne są efekty cząsteczkowe i rozproszenie.</Polish>
             <Chinesesimp>距离玩家的距离（米），在这个距离内可以看到过热的粒子效应和扩散。</Chinesesimp>
-            <Korean>미터 단위로, 과열 시 입자효과와 분산정도가 플레이어로 부터 얼마나 떨어진 곳까지 보여지는지를 결정합니다.</Korean>
+            <Korean>미터 단위로, 과열 시 입자효과와 분산 정도가 플레이어로부터 얼마나 떨어진 곳까지 보여지는지를 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
             <English>Heat Increases Fire Rate</English>
@@ -247,7 +247,7 @@
             <German>Hitze erhöht die Feuerrate</German>
             <Polish>Ciepło zwiększa szybkostrzelność</Polish>
             <Chinesesimp>过热增加射速</Chinesesimp>
-            <Korean>과열시 발사속도 증가</Korean>
+            <Korean>과열 시 발사속도 증가</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_description">
             <English>As weapons heat up, their rate of fire increases by up to 10%.</English>
@@ -257,7 +257,7 @@
             <German>Wenn sich Waffen erhitzen, erhöht sich ihre Feuerrate um bis zu 10%.</German>
             <Polish>Gdy broń się nagrzewa, jej szybkostrzelność może wzrosnąć nawet o 10%.</Polish>
             <Chinesesimp>随着武器的过热，其射速最多增加10%。</Chinesesimp>
-            <Korean>과열될 수록 발사속도가 최대 10%까지 올라갑니다.</Korean>
+            <Korean>과열될수록 발사속도가 최대 10%까지 올라갑니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
             <English>Jam Chance Coefficient</English>
@@ -290,7 +290,7 @@
             <Portuguese>Desemperrar arma no recarregamento</Portuguese>
             <Russian>Исправлять клин при перезарядке</Russian>
             <Japanese>再装填による弾詰りの解消</Japanese>
-            <Korean>재장전시 기능고장 해결</Korean>
+            <Korean>재장전 시 기능고장 해결</Korean>
             <Chinesesimp>重装弹匣以解决卡弹</Chinesesimp>
             <Chinese>重裝彈匣以解決卡彈</Chinese>
             <Hungarian>Távolítsa el az akadályt újratöltéskor</Hungarian>
@@ -306,7 +306,7 @@
             <Portuguese>Recarregar desemperra arma.</Portuguese>
             <Russian>Перезарядка устраняет заклинивание оружия.</Russian>
             <Japanese>再装填により、弾詰りを除去します。</Japanese>
-            <Korean>기능고장이 재장전시 해결됩니다.</Korean>
+            <Korean>기능고장이 재장전 시 해결됩니다.</Korean>
             <Chinesesimp>利用重装弹匣来解决卡弹</Chinesesimp>
             <Chinese>利用重裝彈匣來解決卡彈</Chinese>
             <Hungarian>Az újratöltés megszünteti a fegyver elakadását.</Hungarian>
@@ -318,7 +318,7 @@
             <Russian>Замена ствола устраняет заклинивание оружия.</Russian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
             <Chinesesimp>更换枪管清除卡弹</Chinesesimp>
-            <Korean>총열 교환시 기능고장 해결</Korean>
+            <Korean>총열 교환 시 기능고장 해결</Korean>
             <German>Ladehemmung beim Wechseln des Laufes beheben.</German>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
@@ -381,7 +381,7 @@
             <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
             <Polish>Współczynnik modyfikujący ilość ciepła wymaganego do samozapłonu amunicji w komorze broni.\nIm wyższa wartość, tym gorętsza musi być broń, aby amunicja uległa samozapłonowi\nUstaw 0, aby wyłączyć samozapłon.</Polish>
             <Chinesesimp>发生热诱发的过热系数。\n数值越高，热诱发所需要的过热值越高。\n设置为0禁用热诱发。</Chinesesimp>
-            <Korean>쿡오프가 되기위해 얼마나 과열되는가를 결정합니다. \n높을 수록 쿡오프 되기위해 더 뜨거운 열을 필요로 합니다.\n 0으로 설정하면 쿡오프 현상이 없어집니다.</Korean>
+            <Korean>쿡오프가 되기 위해 얼마나 과열되는가를 결정합니다. \n높을 수록 쿡오프 되기위해 더 뜨거운 열을 필요로 합니다.\n 0으로 설정하면 쿡오프 현상이 없어집니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -411,7 +411,7 @@
             <Portuguese>Use para trocar o cano/estriamento.</Portuguese>
             <Italian>Usata per cambiare la canna.</Italian>
             <Japanese>予身の交換に使用します。</Japanese>
-            <Korean>총열을 바꿀때 사용합니다.</Korean>
+            <Korean>총열을 바꿀 때 사용합니다.</Korean>
             <Chinesesimp>用来更换枪管</Chinesesimp>
             <Chinese>用來更換槍管</Chinese>
         </Key>
@@ -712,7 +712,7 @@
             <German>Waffe ist kalt genug, dass Wasser hat aufgehört zu kochen.</German>
             <Polish>Broń jest wystarczająco schłodzona. Woda przestała się gotować.</Polish>
             <Chinesesimp>武器已经冷却，水已经停止沸腾了。</Chinesesimp>
-            <Korean>물이 끓지 않는걸 보아 무기가 식은듯 하다.</Korean>
+            <Korean>물이 끓지 않는 걸 보아 무기가 식은듯 하다.</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
