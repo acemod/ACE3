@@ -68,6 +68,15 @@ TRACE_1("Remove all loaded magazines",_magsToRemove);
     };
 } forEach _magsToRemove;
 
+if (_staticWeapon getVariable [QGVAR(secondaryWeaponMagazine), ""] isNotEqualTo "") then {
+    private _secondaryWeaponMagazine = _staticWeapon getVariable QGVAR(secondaryWeaponMagazine);
+    private _turret = allTurrets _staticWeapon param [0, []];
+    private _vehicleMag = [_staticWeapon, _turret, _secondaryWeaponMagazine] call FUNC(reload_getVehicleMagazine);
+    TRACE_3("Re-add previous mag",_secondaryWeaponMagazine,_turret,_vehicleMag);
+    if (!isClass (configFile >> "CfgMagazines" >> _vehicleMag)) exitWith {};
+    _staticWeapon addMagazineTurret [_vehicleMag, _turret, 1];
+    _staticWeapon setVariable [QGVAR(secondaryWeaponMagazine), nil];
+};
 
 if (_storeExtraMagazines) then {
     TRACE_1("saving extra mags to container",_containerMagazineCount);
