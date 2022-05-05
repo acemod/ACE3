@@ -19,11 +19,10 @@ params ["_unloader", "_object"];
 
 if !(["ace_dragging"] call EFUNC(common,isModLoaded)) exitWith {};
 
-switch (true) do {
-    case ([_unloader, _object] call EFUNC(dragging,canCarry)): {
-        [_unloader, _object] call EFUNC(dragging,startCarry);
-    };
-    case ([_unloader, _object] call EFUNC(dragging,canDrag)): {
+if ([_unloader, _object] call EFUNC(dragging,canCarry)) then {
+    [_unloader, _object] call EFUNC(dragging,startCarry);
+} else {
+    if ([_unloader, _object] call EFUNC(dragging,canDrag)) then {
         [_unloader, _object] call EFUNC(dragging,startDrag);
     };
 };
