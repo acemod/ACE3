@@ -184,13 +184,13 @@
             <Chinesesimp>控制单位是否会在心脏骤停时间耗完之前因失血过多而死亡。</Chinesesimp>
             <Korean>지정한 심정지 시간이 다 되기전에 출혈로 인해 사망할 수 있는지를 결정합니다.</Korean>
         </Key>
-		<Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Exception_DisplayName">
+        <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Exception_DisplayName">
             <English>AI Unconsciousness exception</English>
-			<Czech>Výjimka pro AI bezvědomí</Czech>
+            <Czech>Výjimka pro AI bezvědomí</Czech>
         </Key>
-		<Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Exception_Description">
+        <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Exception_Description">
             <English>If enabled, it allows you to put AI into unconsciousness via Zeus Module even though the AI unconsciousness is disabled.</English>
-			<Czech>Pokud povoleno, povolí vám uvrhnout AI do bezvědomí pomocí Zeus modulu i přes to, že bezvědomí pro AI je zakázáno.</Czech>
+            <Czech>Pokud povoleno, povolí vám uvrhnout AI do bezvědomí pomocí Zeus modulu i přes to, že bezvědomí pro AI je zakázáno.</Czech>
         </Key>
     </Package>
 </Project>
