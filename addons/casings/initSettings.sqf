@@ -2,7 +2,7 @@
     QGVAR(enabled), "CHECKBOX",
     [LSTRING(displayName), LSTRING(description)],
     LSTRING(Settings_DisplayName),
-    false,
+    true,
     false,
     {},
     true
