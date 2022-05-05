@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, "", "","", "B_556x45_Ball"] call ace_casings_fnc_createCase
+ * [player, "", "","", "B_556x45_Ball"] call ace_casings_fnc_createCasing
  *
  * Public: No
  */
