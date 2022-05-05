@@ -41,7 +41,7 @@ if (isNil QEFUNC(medical,setUnconscious)) then {
                 if (ace_medical_statemachine_AIUnconsciousness_Exception) then {
                 _unit setVariable ["ACE_AI_Unconsciousness_ExceptionVar", true, true];
                     if (_unconscious) then {
-                    _unit setVariable ["ACE_AI_Unconsciousness_ExceptionVar", false, true];	
+                    _unit setVariable ["ACE_AI_Unconsciousness_ExceptionVar", false, true];
                     };
                 };
                 // Function handles locality for me
