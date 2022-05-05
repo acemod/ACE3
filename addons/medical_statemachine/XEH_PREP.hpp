@@ -13,3 +13,4 @@ PREP(leftStateCardiacArrest);
 PREP(localityChangedEH);
 PREP(resetStateDefault);
 PREP(transitionSecondChance);
+PREP(AIUnconsciousException);

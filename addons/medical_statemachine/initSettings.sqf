@@ -34,6 +34,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(AIUnconsciousness_Exception),
+    "CHECKBOX",
+    [LSTRING(AIUnconsciousness_Exception_DisplayName), LSTRING(AIUnconsciousness_Exception_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    true,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(cardiacArrestTime),
     "TIME",
     [LSTRING(CardiacArrestTime_DisplayName), LSTRING(CardiacArrestTime_Description)],
