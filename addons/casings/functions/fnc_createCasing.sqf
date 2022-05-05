@@ -53,7 +53,6 @@ private _pos = _unitPos
     {
         params ["_modelPath", "_pos"];
 
-        private _casing = createSimpleObject [_modelPath, [0,0,0], true];
         _casing setDir (random 360);
         private _lisPos = (lineIntersectsSurfaces [_pos, _pos vectorAdd [0,0,-1e11], objNull, objNull, true, 1, "ROADWAY", "FIRE"]) #0;
         private _casing = createSimpleObject [_modelPath, _lisPos #0, true];
