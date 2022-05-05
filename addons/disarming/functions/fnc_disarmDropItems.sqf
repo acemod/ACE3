@@ -219,7 +219,7 @@ if (_holderIsEmpty) then {
         };
 
         //If we added a dummy item, remove it now
-        if (_holderIsEmpty && {!((getItemCargo _holder) isEqualTo [[DUMMY_ITEM],[1]])}) exitWith {
+        if (_holderIsEmpty && {(getItemCargo _holder) isNotEqualTo [[DUMMY_ITEM],[1]]}) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Holder should only have dummy item"] call FUNC(eventTargetFinish);
         };
@@ -237,7 +237,7 @@ if (_holderIsEmpty) then {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Target cannot be disarmed"] call FUNC(eventTargetFinish);
         };
-        if (_needToRemoveVest && {!((vestItems _target) isEqualTo [])}) exitWith {
+        if (_needToRemoveVest && {(vestItems _target) isNotEqualTo []}) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Vest Not Empty"] call FUNC(eventTargetFinish);
         };
@@ -245,7 +245,7 @@ if (_holderIsEmpty) then {
             _holder addItemCargoGlobal [(vest _target), 1];
             removeVest _target;
         };
-        if (_needToRemoveUniform && {!((uniformItems _target) isEqualTo [])}) exitWith {
+        if (_needToRemoveUniform && {(uniformItems _target) isNotEqualTo []}) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Uniform Not Empty"] call FUNC(eventTargetFinish);
         };

@@ -19,6 +19,13 @@ params ["_theMap"];
 
 if ((GVAR(mapTool_Shown) == 0) || {!("ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems)))}) exitWith {};
 
+// open map tools in center of screen when toggled to be shown
+if (GVAR(mapTool_moveToMouse)) then {
+    private _mousePosition = _theMap ctrlMapScreenToWorld getMousePosition;
+    GVAR(mapTool_pos) = _mousePosition;
+    GVAR(mapTool_moveToMouse) = false;  // we only need to do this once	after opening the map tool
+};
+
 private _rotatingTexture = "";
 private _textureWidth = 0;
 if (GVAR(mapTool_Shown) == 1) then {

@@ -35,5 +35,11 @@ class RscDisplayInsertMarker {
         class MarkerAngleText: RscText {
             idc = IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
         };
+        class MarkerScale: RscXSliderH {
+            idc = IDC_ACE_INSERT_MARKER_SCALE;
+        };
+        class MarkerScaleText: RscText {
+            idc = IDC_ACE_INSERT_MARKER_SCALE_TEXT;
+        };
     };
 };

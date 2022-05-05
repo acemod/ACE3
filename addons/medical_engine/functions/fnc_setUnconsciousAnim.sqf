@@ -27,7 +27,7 @@ _unit setUnconscious _isUnconscious;
 
 if (_isUnconscious) then {
     // eject from static weapon
-    if (vehicle _unit isKindOf "StaticWeapon") then {
+    if (vehicle _unit isKindOf "StaticWeapon" && {!(vehicle _unit isKindOf "Pod_Heli_Transport_04_crewed_base_F")}) then {
         TRACE_2("ejecting from static weapon",_unit,vehicle _unit);
         [_unit] call EFUNC(common,unloadPerson);
     };
@@ -59,7 +59,7 @@ if (_isUnconscious) then {
             if (!alive _unit) exitWith {};
             // Fix unit being in locked animation with switchMove (If unit was unloaded from a vehicle, they may be in deadstate instead of unconscious)
             private _animation = animationState _unit;
-            if ((_animation == "unconscious" || {_animation == "deadstate" || {_animation find "ace_unconscious_" != -1}}) && {lifeState _unit != "INCAPACITATED"}) then {
+            if ((_animation == "unconscious" || {_animation == "deadstate" || {_animation find QGVAR(uncon_anim) != -1}}) && {lifeState _unit != "INCAPACITATED"}) then {
                 [_unit, "AmovPpneMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
                 TRACE_1("forcing SwitchMove",animationState _unit);
             };

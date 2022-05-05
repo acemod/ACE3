@@ -23,7 +23,7 @@ private _isInBuilding = false;
 
 private _checkObject = {
     if (
-        _x getVariable ["ACE_isRepairFacility", getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(canRepair))] > 0
+        _x getVariable ["ACE_isRepairFacility", getNumber (configOf _x >> QGVAR(canRepair))] > 0
         && {!(_x isKindOf "AllVehicles")} // check if it's not repair vehicle
         && {alive _x}
     ) exitWith {

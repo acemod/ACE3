@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_rearm]:
-
 [
     QGVAR(level), "LIST",
     [LSTRING(RearmSettings_level_DisplayName), LSTRING(RearmSettings_level_Description)],
@@ -7,7 +5,7 @@
     [[0,1,2],[LSTRING(RearmSettings_vehicle), LSTRING(RearmSettings_magazine), LSTRING(RearmSettings_caliber)],0], // [values, titles, defaultIndex]
     true, // isGlobal
     {[QGVAR(level), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(supply), "LIST",
@@ -16,7 +14,7 @@
     [[0,1,2],[LSTRING(RearmSettings_unlimited), LSTRING(RearmSettings_limited), LSTRING(RearmSettings_magazineSupply)],0], // [values, titles, defaultIndex]
     true, // isGlobal
     {[QGVAR(supply), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(distance), "SLIDER",
@@ -25,4 +23,4 @@
     [10, 50, 20, 0],
     true, // isGlobal
     {[QGVAR(supply), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

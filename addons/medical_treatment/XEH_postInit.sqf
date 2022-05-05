@@ -34,8 +34,8 @@ if (isServer) then {
 [QGVAR(addToTriageCard), LINKFUNC(addToTriageCard)] call CBA_fnc_addEventHandler;
 
 // replace medical items with their ACE equivalents
-["ace_settingsInitialized", {
-    TRACE_1("ace_settingsInitialized EH",GVAR(convertItems)); // 0: Enabled 1: RemoveOnly 2:Disabled
+["CBA_settingsInitialized", {
+    TRACE_1("CBA_settingsInitialized EH",GVAR(convertItems)); // 0: Enabled 1: RemoveOnly 2:Disabled
     if (GVAR(convertItems) == 2) exitWith {};
     {
         // turn [["stuff", 2], ...] into ["stuff", "stuff", ...]

@@ -13,6 +13,7 @@
             <Portuguese>Sangue</Portuguese>
             <Korean>혈흔</Korean>
             <Japanese>血痕</Japanese>
+            <Chinesesimp>血迹</Chinesesimp>
             <Chinese>血跡</Chinese>
             <Turkish>Kan</Turkish>
         </Key>
@@ -38,6 +39,7 @@
             <French>Si une unité saigne, elle laissera des traces de sang derrière elle.</French>
             <Russian>Разрешает создание капель крови при кровотечении или получении урона</Russian>
             <Portuguese>Permitir a criação de gotas de sangue quando as unidades recebem ferimentos ou estão sangrando.</Portuguese>
+            <Chinesesimp>当单位失血或受伤的时，启用出血效果。</Chinesesimp>
             <Chinese>啟用出血效果當單位失血或受傷的時候。</Chinese>
             <Czech>Povoluje vytváření kapek krve na zemi když jednotka krvácí nebo utrpí zranění.</Czech>
             <Polish>Umożliwia tworzenie śladów krwi, gdy jednostki krwawią lub otrzymują obrażenia.</Polish>
@@ -45,6 +47,7 @@
             <Turkish>Kişiler kanarken veya hasar alırken kan damlası oluşumunu sağlar.</Turkish>
             <Italian>Abilita la creazione di chiazze di sangue quando un'unità sta sanguinando o viene ferita.</Italian>
             <German>Ermöglicht das Erstellen von Blutstropfen, wenn Einheiten am Bluten sind oder Schaden nehmen.</German>
+            <Korean>출혈이나 부상시 핏자국이 생기는것을 활성화합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
             <English>Max Blood Objects</English>
@@ -52,6 +55,7 @@
             <French>Quantité de sang à afficher</French>
             <Russian>Макс. кол-во капель крови</Russian>
             <Portuguese>Limite de objetos de sangue</Portuguese>
+            <Chinesesimp>最大血迹数</Chinesesimp>
             <Chinese>最大血跡數</Chinese>
             <Italian>Massimo numero di chiazze di sangue</Italian>
             <Czech>Maximum objektů krve</Czech>
@@ -59,6 +63,7 @@
             <Spanish>Máxima cantidad de objetos de sangre</Spanish>
             <Turkish>Maksimum Kan Objeleri</Turkish>
             <German>Maximale Anzahl an Blutstropfen-Objekten</German>
+            <Korean>최대 피의 양</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
             <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
@@ -66,6 +71,7 @@
             <French>Définit le nombre maximal de traces de sangs pouvant être affichées.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
             <Russian>Задает макс. количество создаваемых объектов капель крови. Чрезмерное количество может вызвать задержку FPS</Russian>
             <Portuguese>Define o limite máximo de objetos de gota de sangue que podem ser criados, quantidades excessivas podem causar lag de FPS.</Portuguese>
+            <Chinesesimp>设置最大可存在的血迹数量。过量会导致帧数低下或卡顿</Chinesesimp>
             <Chinese>設定最大可存在的血跡數量。太極端的數量會導致幀數低落或卡頓</Chinese>
             <Italian>Imposta il numero massimo di chiazze di sangue che possono essere depositate, quantità eccessive possono causare del lag di FPS.</Italian>
             <Czech>Nastavuje maximum objektů krve na zemi, příliš mnoho může způsobit pokles FPS</Czech>
@@ -73,6 +79,7 @@
             <Spanish>Fija el límite de objetos de sangre que aparecerán, cantidades excesivas pueden causar caídas de FPS</Spanish>
             <Turkish>Ortaya çıkabilecek maksimum kan damlası sayısını ayarlar, aşırı miktarlar FPS düşmesine neden olabilir.</Turkish>
             <German>Legt die maximale Anzahl an Blutstropfen-Objekten fest, die erscheinen können. Eine zu hoch eingestellte Anzahl kann Lags verursachen.</German>
+            <Korean>스폰되는 피의 최대양을 결정합니다. 너무 많은 양은 FPS 렉이 생길 수 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
             <English>Blood Lifetime</English>
@@ -80,6 +87,7 @@
             <French>Durée d'affichage du sang</French>
             <Russian>Время жизни капель крови</Russian>
             <Portuguese>Duração do Sangue</Portuguese>
+            <Chinesesimp>血迹时长</Chinesesimp>
             <Chinese>血跡時長</Chinese>
             <Italian>Durata del sangue</Italian>
             <Czech>Životnost krve</Czech>
@@ -87,6 +95,7 @@
             <Spanish>Duración de la sangre</Spanish>
             <Turkish>Kan Ömrü</Turkish>
             <German>Anzeigedauer der Blutstropfen</German>
+            <Korean>피 잔존기간</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
             <English>Controls the lifetime of blood drop objects.</English>
@@ -94,6 +103,7 @@
             <French>Définit la durée d'affichage des traces de sang.</French>
             <Russian>Управляет временем жизни объектов капель крови.</Russian>
             <Portuguese>Controla o tempo de vida que um objeto de gota de sangue tem.</Portuguese>
+            <Chinesesimp>控制血迹在地上的时长</Chinesesimp>
             <Chinese>控制血跡在地上的時長</Chinese>
             <Italian>Controlla la durata delle chiazze di sangue.</Italian>
             <Czech>Nastavuje jak dlouho objekty krve na zemi vydrží.</Czech>
@@ -101,6 +111,7 @@
             <Spanish>Controla el tiempo de vida que tendrán los objetos de sangre</Spanish>
             <Turkish>Kan objelerinin silinme süresini belirler.</Turkish>
             <German>Kontrolliert die Anzeigedauer der Blutstropfen-Objekte.</German>
+            <Korean>떨어진 피의 잔존 기간을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
             <English>Only Players</English>
@@ -110,7 +121,7 @@
             <Polish>Tylko gracze</Polish>
             <French>Joueurs seulement</French>
             <Italian>Solo Giocatori</Italian>
-            <Chinesesimp>只有玩家</Chinesesimp>
+            <Chinesesimp>仅玩家</Chinesesimp>
             <Chinese>只有玩家</Chinese>
             <Russian>Только игроки</Russian>
             <Portuguese>Apenas Jogadores</Portuguese>

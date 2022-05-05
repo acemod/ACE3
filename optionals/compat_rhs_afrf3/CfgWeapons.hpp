@@ -23,6 +23,13 @@ class CfgWeapons {
         ACE_barrelTwist = 199.898;
         ACE_barrelLength = 414.02;
     };
+    class rhs_weap_ak103_base;
+    class rhs_weap_ak104: rhs_weap_ak103_base {
+        ACE_barrelLength = 314.96;
+    };
+    class rhs_weap_ak105: rhs_weap_ak74m {
+        ACE_barrelLength = 314.96;
+    };
     class rhs_weap_akm: rhs_weap_ak74m {
         ACE_RailHeightAboveBore = -0.456233;//from rhs_weap_akmn and rhs_weap_ak74m
         ACE_barrelTwist = 199.898;
@@ -57,6 +64,11 @@ class CfgWeapons {
     class rhs_weap_svds_npz: rhs_weap_svds {
         ACE_RailHeightAboveBore = 4.3348;
     };
+    class rhs_weap_rpk_base;
+    class rhs_weap_rpk74_base: rhs_weap_rpk_base {
+        ACE_barrelLength = 590.00;
+        ACE_barrelTwist = 195.072;
+    };
     class rhs_pkp_base;
     class rhs_weap_pkp: rhs_pkp_base {
         ACE_barrelTwist = 240.03;
@@ -66,10 +78,6 @@ class CfgWeapons {
         ACE_Overheating_allowSwapBarrel = 1;
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 645.16;
-    };
-    class rhs_weap_rpk74: rhs_weap_pkp {
-        ACE_barrelTwist = 195.072;
-        ACE_barrelLength = 589.28;
     };
     class rhs_weap_orsis_Base_F;
     class rhs_weap_t5000: rhs_weap_orsis_Base_F { // http://en.orsis.com/production/catalog/19046/
@@ -122,6 +130,11 @@ class CfgWeapons {
     #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
     class H_HelmetB;
     class rhs_tsh4: H_HelmetB {
+        HEARING_PROTECTION_VICCREW
+    };
+
+    class rhs_6b47_bare;
+    class rhs_6b48: rhs_6b47_bare {
         HEARING_PROTECTION_VICCREW
     };
 
@@ -332,7 +345,7 @@ class CfgWeapons {
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_Kornet_9M133_2_msv_ca.paa";
     };
-    
+
     class rhs_uniform_flora;
     class rhs_uniform_df15: rhs_uniform_flora {
         ACE_GForceCoef = 0.8;

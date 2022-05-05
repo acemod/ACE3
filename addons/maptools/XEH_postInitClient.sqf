@@ -13,6 +13,7 @@ GVAR(mapTool_pos) = [0,0];
 GVAR(mapTool_angle) = 0;
 GVAR(mapTool_isDragging) = false;
 GVAR(mapTool_isRotating) = false;
+GVAR(mapTool_moveToMouse) = true;  // used to display it in center of screen when opened
 
 //Install the event handers for the map tools on the main in-game map
 [{!isNull findDisplay 12},

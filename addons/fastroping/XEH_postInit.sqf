@@ -35,7 +35,7 @@
 #ifdef DRAW_FASTROPE_INFO
 addMissionEventHandler ["Draw3D", {
     if (!(cursorObject isKindOf "Helicopter")) exitWith {};
-    private _config = configFile >> "CfgVehicles" >> (typeOf cursorObject);
+    private _config = configOf cursorObject;
     private _enabled = getNumber (_config >> QGVAR(enabled));
     drawIcon3D ["", [.5,.5,1,1], (ASLtoAGL getPosASL cursorObject), 0.5, 0.5, 0, format ["%1 = %2", typeOf cursorObject, _enabled], 0.5, 0.025, "TahomaB"];
     if (_enabled > 0) then {

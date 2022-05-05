@@ -6,7 +6,7 @@ PREP(calculateZeroAngleCorrection);
 PREP(canAdjustZero);
 PREP(canResetZero);
 PREP(firedEH);
-PREP(getBaseAngle); 
+PREP(getBaseAngle);
 PREP(getBoreHeight);
 PREP(getCurrentZeroRange);
 PREP(getOptics);

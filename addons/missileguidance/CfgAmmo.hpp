@@ -63,7 +63,7 @@ class CfgAmmo {
         //trackOversteer = 1;
         //trackLead = 0;
 
-        initTime = 2;
+        initTime = 0.5;
 
         // Begin ACE guidance Configs
         class ADDON {

@@ -15,7 +15,7 @@
  * Public: No
  */
 
-getNumber ([configFile >> "CfgVehicles" >> typeOf vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call EFUNC(common,getTurretConfigPath) >> QGVAR(Enabled)) == 1
+getNumber ([configOf vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call EFUNC(common,getTurretConfigPath) >> QGVAR(Enabled)) == 1
 && {cameraView == "GUNNER"}
 && {!([ACE_player] call CBA_fnc_canUseWeapon)} //Not Turned Out
 && {cameraOn != (getConnectedUAV ACE_player)} //Not Controlling a UAV

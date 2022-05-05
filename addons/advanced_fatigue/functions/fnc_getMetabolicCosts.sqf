@@ -30,7 +30,7 @@ private _duty = GVAR(animDuty);
     } else {
         _duty = _duty * (_unit call _x);
     };
-} forEach (GVAR(dutyList) select 1);
+} forEach (values GVAR(dutyList));
 
 if (GVAR(isSwimming)) then {
     _terrainGradient = 0;

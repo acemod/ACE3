@@ -15,6 +15,7 @@
             <French>Remplissage des chargeurs</French>
             <Czech>Přepáskování zásobníků</Czech>
             <Turkish>Şarjör Yeniden Doldurma</Turkish>
+            <Spanish>Reempaquetado de cargadores</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
@@ -23,13 +24,14 @@
             <Chinese>每發所需時間</Chinese>
             <Chinesesimp>每发所需时间</Chinesesimp>
             <Japanese>弾頭毎の所有時間</Japanese>
-            <Korean>구경 당 시간</Korean>
+            <Korean>탄당 시간</Korean>
             <Polish>Czas na nabój</Polish>
             <Russian>Время на патрон</Russian>
             <Portuguese>Tempo por projétil</Portuguese>
             <French>Temps par cartouche</French>
             <Czech>Čas na náboj</Czech>
             <Turkish>Süre başına mermi</Turkish>
+            <Spanish>Tiempo por cartucho</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
@@ -45,6 +47,7 @@
             <French>Temps par chargeur</French>
             <Czech>Čas na zásobník</Czech>
             <Turkish>Süre başına şarjör</Turkish>
+            <Spanish>Tiempo por cargador</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
@@ -59,6 +62,7 @@
             <Portuguese>Tempo por carregador de cinto</Portuguese>
             <French>Temps par bande</French>
             <Czech>Čas na článek pásu</Czech>
+            <Spanish>Tiempo por enganche de cinta</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
             <English>Repack Magazines</English>
@@ -124,7 +128,7 @@
             <Portuguese>Reorganização Terminada</Portuguese>
             <Japanese>詰め替えが完了しました</Japanese>
             <Korean>탄창 채우기 끝남</Korean>
-            <Chinesesimp>重整完成</Chinesesimp>
+            <Chinesesimp>整理完成</Chinesesimp>
             <Chinese>重整完成</Chinese>
             <Turkish>Yeniden Doldurma Bitti</Turkish>
         </Key>
@@ -140,7 +144,7 @@
             <Italian>Riempimento Interrotto</Italian>
             <Portuguese>Reorganização Interrompida</Portuguese>
             <Japanese>詰め替えを中断しました</Japanese>
-            <Korean>탄창 채우기 방해받음</Korean>
+            <Korean>탄창을 채우는 중 방해받음</Korean>
             <Chinesesimp>弹匣整理被打断</Chinesesimp>
             <Chinese>重整被中斷</Chinese>
             <Turkish>Yeniden Doldurma Durduruldu</Turkish>
@@ -161,6 +165,31 @@
             <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
             <Chinese>%1個滿的與%2個部分的</Chinese>
             <Turkish>%1 Dolu ve %2 Partial</Turkish>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazines">
+            <English>Repack Loaded Magazines</English>
+            <Japanese>装填済み弾倉を詰め替え</Japanese>
+            <French>Remplir le chargeur engagé</French>
+            <Russian>Перепаковать загруженные магазины</Russian>
+            <German>Geladene Magazine umpacken</German>
+            <Polish>Przepakuj załadowane magazynki</Polish>
+            <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
+            <Korean>장전된 탄창에 총알 채우는 중</Korean>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
+            <English>Repacking magazines, weapon unloaded</English>
+            <Japanese>弾倉を詰め替えし、&lt;br /&gt;非装填状態です</Japanese>
+            <French>Remplissage des chargeurs, arme déchargée.</French>
+            <Russian>Перепаковка магазинов, оружие разряжено</Russian>
+            <German>Magazin umgepackt, Waffe entladen</German>
+            <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
+            <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
+            <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackAnimation">
+            <English>Repack Animation</English>
+            <German>Animation für Umpacken</German>
+            <Polish>Animacja przepakowywania</Polish>
         </Key>
     </Package>
 </Project>

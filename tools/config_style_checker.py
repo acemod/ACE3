@@ -16,6 +16,14 @@ def check_config_style(filepath):
     def popClosing():
         closing << closingStack.pop()
 
+    reIsClass = re.compile(r'^\s*class(.*)')
+    reIsClassInherit = re.compile(r'^\s*class(.*):')
+    reIsClassBody = re.compile(r'^\s*class(.*){')
+    reBadColon = re.compile(r'\s*class (.*) :')
+    reSpaceAfterColon = re.compile(r'\s*class (.*): ')
+    reSpaceBeforeCurly = re.compile(r'\s*class (.*) {')
+    reClassSingleLine = re.compile(r'\s*class (.*)[{;]')
+
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
         content = file.read()
 
@@ -118,6 +126,23 @@ def check_config_style(filepath):
         if brackets_list.count('{') != brackets_list.count('}'):
             print("ERROR: A possible missing curly brace {{ or }} in file {0} {{ = {1} }} = {2}".format(filepath,brackets_list.count('{'),brackets_list.count('}')))
             bad_count_file += 1
+
+        file.seek(0)
+        for lineNumber, line in enumerate(file.readlines()):
+            if reIsClass.match(line):
+                if reBadColon.match(line):
+                    print(f"WARNING: bad class colon {filepath} Line number: {lineNumber+1}")
+                    # bad_count_file += 1
+                if reIsClassInherit.match(line):
+                    if not reSpaceAfterColon.match(line):
+                        print(f"WARNING: bad class missing space after colon {filepath} Line number: {lineNumber+1}")
+                if reIsClassBody.match(line):
+                    if not reSpaceBeforeCurly.match(line):
+                        print(f"WARNING: bad class inherit missing space before curly braces {filepath} Line number: {lineNumber+1}")
+                if not reClassSingleLine.match(line):
+                    print(f"WARNING: bad class braces placement {filepath} Line number: {lineNumber+1}")
+                    # bad_count_file += 1
+
     return bad_count_file
 
 def main():
@@ -131,16 +156,17 @@ def main():
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default="")
     args = parser.parse_args()
 
-    # Allow running from root directory as well as from inside the tools directory
-    rootDir = "../addons"
-    if (os.path.exists("addons")):
-        rootDir = "addons"
+    for folder in ['addons', 'optionals']:
+        # Allow running from root directory as well as from inside the tools directory
+        rootDir = "../" + folder
+        if (os.path.exists(folder)):
+            rootDir = folder
 
-    for root, dirnames, filenames in os.walk(rootDir + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.cpp'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.hpp'):
-        sqf_list.append(os.path.join(root, filename))
+        for root, dirnames, filenames in os.walk(rootDir + '/' + args.module):
+          for filename in fnmatch.filter(filenames, '*.cpp'):
+            sqf_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.hpp'):
+            sqf_list.append(os.path.join(root, filename))
 
     for filename in sqf_list:
         bad_count = bad_count + check_config_style(filename)

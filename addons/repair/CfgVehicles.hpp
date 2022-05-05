@@ -327,6 +327,7 @@ class CfgVehicles {
     class ACE_Track: ACE_RepairItem_Base {
         EGVAR(cargo,size) = 2;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
         author = "Hawkins";
         scope = 2;
         model = QPATHTOF(data\ace_track.p3d);
@@ -357,6 +358,7 @@ class CfgVehicles {
     class ACE_Wheel: ACE_RepairItem_Base {
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
         author = "Hawkins";
         scope = 2;
         model = QPATHTOF(data\ace_wheel.p3d);

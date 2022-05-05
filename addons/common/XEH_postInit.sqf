@@ -26,6 +26,7 @@
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 ["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -68,6 +69,20 @@
     } else {
         _vis = _object getVariable [QGVAR(oldVisibility), _vis];
         _object setUnitTrait ["camouflageCoef", _vis];
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(blockRadio), {
+    params ["_object", "_set"];
+    TRACE_2("blockRadio EH",_object,_set);
+    if (_object isEqualTo ACE_Player && {_set > 0}) then {
+        call FUNC(endRadioTransmission);
+    };
+    if (["task_force_radio"] call FUNC(isModLoaded)) then {
+        _object setVariable ["tf_unable_to_use_radio", _set > 0, true];
+    };
+    if (["acre_main"] call FUNC(isModLoaded)) then {
+        _object setVariable ["acre_sys_core_isDisabledRadio", _set > 0, true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -222,7 +237,7 @@ call FUNC(checkFiles);
 // Set up ace_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     [
         GVAR(checkPBOsAction),
         GVAR(checkPBOsCheckAll),
@@ -252,8 +267,7 @@ enableCamShake true;
 
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
-    GVAR(showHudHash) params ["", "", "_masks"];
-    if !(_masks isEqualTo []) then {
+    if (GVAR(showHudHash) isNotEqualTo createHashMap) then {
         [] call FUNC(showHud);
     };
 }] call CBA_fnc_addEventHandler;
@@ -397,45 +411,58 @@ addMissionEventHandler ["PlayerViewChanged", {
 //////////////////////////////////////////////////
 
 GVAR(isReloading) = false;
+GVAR(reloadMutex_lastMagazines) = [];
+// When reloading, the new magazine is removed from inventory, an animation plays and then the old magazine is added
+// If the animation is interrupted, the new magazine will be lost
+["loadout", {
+    params ["_unit", "_newLoadout"];
+    private _mags = magazines _unit;
+    // if our magazine count dropped by 1, we might be reloading
+    if ((count GVAR(reloadMutex_lastMagazines)) - (count _mags) == 1) then {
+        private _weapon = currentWeapon _unit;
+        private _muzzle = currentMuzzle _unit;
+        if (_weapon == "") exitWith {};
+        private _wpnMzlConfig = configFile >> "CfgWeapons" >> _weapon;
+        if (_muzzle != _weapon) then { _wpnMzlConfig = _wpnMzlConfig >> _muzzle; };
 
-["keyDown", {
-    if ((_this select 1) in actionKeys "ReloadMagazine" && {alive ACE_player}) then {
-        //Ignore mounted (except ffv)
-        if (!(player call CBA_fnc_canUseWeapon)) exitWith {};
-        private _weapon = currentWeapon ACE_player;
+        private _compatMags = [_wpnMzlConfig] call CBA_fnc_compatibleMagazines;
+        private _lastCompatMagCount = {_x in _compatMags} count GVAR(reloadMutex_lastMagazines);
+        private _curCompatMagCount = {_x in _compatMags} count _mags;
+        TRACE_3("",_wpnMzlConfig,_lastCompatMagCount,_curCompatMagCount);
+        if (_lastCompatMagCount - _curCompatMagCount != 1) exitWith {}; // check if magazines for our specific muzzle dropped by 1
 
-        if (_weapon != "") then {
-            private _muzzle = currentMuzzle ACE_player;
-            private _wpnConfig = configFile >> "CfgWeapons" >> _weapon;
-            private _gesture = getText ([_wpnConfig >> _muzzle, _wpnConfig] select (_weapon isEqualTo _muzzle) >> "reloadAction");
-            if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
-            private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
-            private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
-            private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
+        private _gesture = getText (_wpnMzlConfig >> "reloadAction");
+        if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
+        private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
+        private _duration = 0;
+        if (_isLauncher) then {
+            _duration = getNumber (configfile >> "CfgMovesMaleSdr" >> "States" >> _gesture >> "speed");
+        };
+        if (_duration == 0) then {
+            _duration = getNumber (configfile >> "CfgGesturesMale" >> "States" >> _gesture >> "speed");
+        };
 
-            if (_duration != 0) then {
-                _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
-            } else {
-                _duration = 3;
-            };
+        if (_duration != 0) then {
+            _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
+        } else {
+            _duration = 6;
+        };
 
-            TRACE_2("Reloading, blocking gestures",_weapon,_duration);
-            GVAR(reloadingETA) = CBA_missionTime + _duration;
+        TRACE_2("Reloading, blocking gestures",_weapon,_duration);
+        GVAR(reloadingETA) = CBA_missionTime + _duration;
 
-            if (!GVAR(isReloading)) then {
-                GVAR(isReloading) = true;
+        if (!GVAR(isReloading)) then {
+            GVAR(isReloading) = true;
 
-                [{
-                    CBA_missionTime > GVAR(reloadingETA)
-                },{
-                    GVAR(isReloading) = false;
-                }] call CBA_fnc_waitUntilAndExecute;
-            };
+            [{
+                CBA_missionTime > GVAR(reloadingETA)
+            },{
+                GVAR(isReloading) = false;
+            }] call CBA_fnc_waitUntilAndExecute;
         };
     };
-
-    false
-}] call CBA_fnc_addDisplayHandler;
+    GVAR(reloadMutex_lastMagazines) = _mags;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler

@@ -60,7 +60,7 @@ private _fnc_onButtonUnload = {
     private _class = if (_item isEqualType "") then {_item} else {typeOf _item};
     private _itemName = getText (configFile >> "CfgVehicles" >> _class >> "displayName");
     if ([_item, _vehicle] call EFUNC(cargo,unloadItem)) then {
-        private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+        private _vehicleName = getText (configOf _vehicle >> "displayName");
         private _message = [localize ELSTRING(cargo,UnloadedItem), "<br/>", " "] call CBA_fnc_replace;
         [_message, _itemName, _vehicleName] call FUNC(showMessage);
     } else {
