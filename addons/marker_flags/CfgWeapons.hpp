@@ -7,7 +7,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         displayName = CSTRING(white);
-        model = "\a3\Structures_F_Orange\Signs\Special\FlagMarker_F.p3d";
+        model = QPATHTOF(data\ace_markerpole.p3d);
         picture = QPATHTOF(ui\white_ca.paa);
         icon = "iconObject_1x10";
         mapSize = 0.2;
