@@ -38,12 +38,10 @@ if (isNil QEFUNC(medical,setUnconscious)) then {
                 [LSTRING(OnlyAlive)] call FUNC(showMessage);
             } else {
                 private _unconscious = GETVAR(_unit,ACE_isUnconscious,false);
-                if (ace_medical_statemachine_AIUnconsciousness_Exception) then {
-                _unit setVariable ["ACE_AI_Unconsciousness_ExceptionVar", true, true];
+                _unit setVariable [QGVAR(AIUnconsciousException), true, true];
                     if (_unconscious) then {
-                    _unit setVariable ["ACE_AI_Unconsciousness_ExceptionVar", false, true];
+                    _unit setVariable [QGVAR(AIUnconsciousException), false, true];
                     };
-                };
                 // Function handles locality for me
                 [_unit, !_unconscious, 10e10] call EFUNC(medical,setUnconscious);
             };

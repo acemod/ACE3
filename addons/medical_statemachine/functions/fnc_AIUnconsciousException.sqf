@@ -20,6 +20,6 @@ params ["_unit"];
 // If the unit died the loop is finished
 if (!alive _unit || {!local _unit}) exitWith {};
 
-if (_unit getVariable ["ACE_AI_Unconsciousness_ExceptionVar", false]) exitWith { true };
+if (_unit getVariable ["ace_zeus_AIUnconsciousException", false]) exitWith { true };
 
 false
