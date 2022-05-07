@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * x
+ * Draw3D event handler when scope is active
  *
  * Arguments:
- * 0: v <OBJECT>
+ * None (implicit vars from missionEventHandler)
  *
  * Return Value:
  * None

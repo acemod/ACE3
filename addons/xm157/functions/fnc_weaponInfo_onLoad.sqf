@@ -4,13 +4,13 @@
  * Creates UI
  *
  * Arguments:
- * 0: v <OBJECT>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_xm157_fnc_weaponInfo_onLoad
+ * [display] call ace_xm157_fnc_weaponInfo_onLoad
  *
  * Public: No
  */

@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None
+ * Weapon Info <ARRAY>
  *
  * Example:
  * [] call ace_xm157_fnc_ballistics_getData

@@ -4,13 +4,16 @@
  * Calculates elevation and windage
  *
  * Arguments:
- * None
+ * 0: Range <NUMBER>
+ * 1: Direction of Fire (deg) - Yaw <NUMBER>
+ * 2: Inlination (deg) - Pitch <NUMBER>
+ * 3: Bank (deg) - Roll <NUMBER>
  *
  * Return Value:
- * None
+ * Elevation and Windage in MRAD <ARRAY>
  *
  * Example:
- * [] call ace_xm157_fnc_ballistics_calculator
+ * [500, 90, 0, 0] call ace_xm157_fnc_ballistics_calculator
  *
  * Public: No
  */

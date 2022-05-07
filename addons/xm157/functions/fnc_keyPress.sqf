@@ -1,16 +1,17 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * x
+ * Handles key presses
  *
  * Arguments:
- * None
+ * 0: Type <STRING>
+ * 1: IsKeyDown <BOOL>
  *
  * Return Value:
- * None
+ * Handled <BOOL>
  *
  * Example:
- * [] call ace_xm157_fnc_keyPress
+ * ["range", true] call ace_xm157_fnc_keyPress
  *
  * Public: No
  */

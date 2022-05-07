@@ -1,16 +1,17 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * x
+ * Updates the menu display
  *
  * Arguments:
- * 0: v <OBJECT>
+ * 0: Display <DISPLAY>
+ * 1: Menu Item Needs Updating <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_xm157_fnc_weaponInfo_drawMenu
+ * [display, true] call ace_xm157_fnc_weaponInfo_drawMenu
  *
  * Public: No
  */
