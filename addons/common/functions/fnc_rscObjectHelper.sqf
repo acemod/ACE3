@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Convert between screen and 3d object cordinates
+ * Convert between screen and 3d object coordinates
  *
  * Arguments:
  * 0: Function <STRING>
