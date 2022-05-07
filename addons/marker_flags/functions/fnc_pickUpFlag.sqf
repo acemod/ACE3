@@ -4,22 +4,25 @@
  * Places a flag in front of the unit.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Flag <OBJECT>
+ * 0: Flag <OBJECT>
+ * 1: Unit <OBJECT>
+ * 2: Action Args <ARRAY>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player, _flag] call ace_marker_flags_fnc_pickupFlag
+ * [_flag,player,"x"] call ace_marker_flags_fnc_pickupFlag
  *
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]], ["_flag", objNull, [objNull]]];
+params [["_flag", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_args", [""], [[]]]];
+private _itemName = _args # 0;
+TRACE_3("pickupFlag",_unit,_flag,_itemName);
 
 if (isNull _flag) exitWith {};
 
 [_unit, "PutDown"] call EFUNC(common,doGesture);
 deleteVehicle _flag;
-[_unit, configName configOf _flag] call EFUNC(common,addToInventory);
+[_unit, _itemName] call EFUNC(common,addToInventory);

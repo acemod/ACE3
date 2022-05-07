@@ -13,8 +13,10 @@ private _weapons = (call (uiNamespace getVariable [QGVAR(flagItems), {[]}])) app
         QGVAR(pickup),
         LLSTRING(ActionPickUp),
         "",
-        {[_player, _target] call FUNC(pickUpFlag)},
-        {true}
-    ] call ace_interact_menu_fnc_createAction;
-    [_name, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
+        {call FUNC(pickUpFlag)},
+        {[_player, _target, []] call EFUNC(common,canInteractWith)},
+        {},
+        [_name]
+    ] call EFUNC(interact_menu,createAction);
+    [_vehicle, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
 } forEach _weapons;
