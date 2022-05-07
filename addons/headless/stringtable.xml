@@ -125,7 +125,7 @@
             <English>Log transfer statistics and Headless Client (dis)connections to RPT. (Default: No)</English>
             <German>Zeichnet Transferstatistiken, Verbindungen und Verbindungsabbrüche in einer RPT-Datei auf. (Standard: Nein)</German>
             <Polish>Zapisz statystyki transferu i status połączenia Headless Clienta do RPT. (Domyślnie: Tak)</Polish>
-            <Korean>로그 전송 통계 및 RPT에 대한 헤드리스 클라이언트 연결(해제) (기본값: No)</Korean>
+            <Korean>전송 통계 및 헤드리스 클라이언트 연결(해제)를 RPT파일에 로그함. (기본값: No)</Korean>
             <Japanese>統計とヘッドレス クライアントの接続有無を PRT へ記録します。(標準: 無効)</Japanese>
             <French>Archive les statistiques de transfert et de (dé)connections du Headless Client dans le RPT. (Défaut: Non)</French>
             <Chinesesimp>记录 Headless 客户端间的转换数量与连线/断线等记录到 RPT 报告档中。（预设：关闭）</Chinesesimp>
