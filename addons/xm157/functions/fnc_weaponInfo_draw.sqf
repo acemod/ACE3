@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_xm157_fnc_weaponInfo_draw3d
+ * [] call ace_xm157_fnc_weaponInfo_draw
  *
  * Public: No
  */
