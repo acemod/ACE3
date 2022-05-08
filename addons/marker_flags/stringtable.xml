@@ -17,7 +17,19 @@
             <German>Flagge platzieren</German>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
-            <English>Pick up</English>
+            <English>Pick Up</English>
+            <Chinese>提取點</Chinese>
+            <French>Récupérer</French>
+            <Spanish>Recoger</Spanish>
+            <Italian>Recupera</Italian>
+            <Polish>Podnieś</Polish>
+            <Russian>Подобрать</Russian>
+            <Czech>Vyzvednutí</Czech>
+            <Portuguese>Pegar</Portuguese>
+            <Korean>확보</Korean>
+            <Chinesesimp>提取点</Chinesesimp>
+            <Japanese>受け取り</Japanese>
+            <Turkish>Al</Turkish>
             <German>Aufheben</German>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_white">
