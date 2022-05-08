@@ -60,6 +60,10 @@ if (_object isEqualType objNull) then {
     [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
     [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;
 };
+
+// Dragging integration
+[_unloader, _object] call FUNC(unloadCarryItem);
+
 // Invoke listenable event
 ["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;
 true
