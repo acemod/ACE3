@@ -58,6 +58,10 @@
 - `ace_interaction`
 {% endif %}
 
+{% if include.component == "casings" %}
+- `ace_common`
+{% endif %}
+
 {% if include.component == "chemlights" %}
 - `ace_common`
 {% endif %}
