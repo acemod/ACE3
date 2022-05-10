@@ -48,7 +48,7 @@
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
             <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
             <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
-            <Korean>고통 시 어떤 효과로 나타낼지 결정합니다.</Korean>
+            <Korean>고통 시 어떤 효과로 나타낼 지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -152,7 +152,7 @@
             <Spanish>Atenuación del color</Spanish>
             <German>Farbverblassen</German>
             <Chinesesimp>褪色</Chinesesimp>
-            <Korean>색 물빠짐</Korean>
+            <Korean>색바램</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
@@ -178,7 +178,7 @@
             <Spanish>Icono + Atenuación del color</Spanish>
             <German>Symbol + Farbverblassen</German>
             <Chinesesimp>图标+褪色</Chinesesimp>
-            <Korean>아이콘 및 색 물빠짐</Korean>
+            <Korean>아이콘 및 색바램</Korean>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
@@ -210,7 +210,7 @@
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
                 <Italian>Abilita Grida da parte delle unità ferite</Italian>
                 <Japanese>負傷したユニットを叫ぶようにします。</Japanese>
-                <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
+                <Korean>부상당한 인원이 소리지르는 것을 활성화합니다</Korean>
                 <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
                 <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
@@ -223,7 +223,7 @@
                 <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
                 <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
                 <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
-                <Korean>골절/지혈대/부목 표시 활서오하</Korean>
+                <Korean>골절/지혈대/부목 표시 활성화</Korean>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>

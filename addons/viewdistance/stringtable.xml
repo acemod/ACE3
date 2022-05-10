@@ -254,7 +254,7 @@
             <Russian>Устанавливает дальность отрисовки объектов как коэффициент от общей дальности видимости.</Russian>
             <Italian>Imposta la distanza visiva degli oggetti come un coefficiente basato sulla distanza visiva oppure basato sul campo visivo.</Italian>
             <Japanese>視野角を元にするか、視界距離によるオブジェクト描画距離を決定します。視野角を元にするオプションを有効化した場合、視野角により最低と最高値が変動します。</Japanese>
-            <Korean>설정된 시야 혹은 시야각(FoV)에 계수를 적용해 물체 시야를 적용합니다. 시계를 바탕으로 하는 옵션을 활성화할 경우 시계에 의한 최저와 최고치가 변동됩니다.</Korean>
+            <Korean>설정된 시야 혹은 시야각(FoV)에 계수를 적용해 물체 시야를 적용합니다. 시야각를 바탕으로 하는 옵션을 활성화할 경우 시야각에 의한 최저와 최고치가 변동됩니다.</Korean>
             <Chinesesimp>设定物体可被观察的距离，透过视距或是视野角度来决定。</Chinesesimp>
             <Chinese>設定物件可被觀察的距離，透過視野距離或是視野角度來決定。</Chinese>
         </Key>

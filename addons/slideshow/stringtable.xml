@@ -30,7 +30,7 @@
             <Czech>Tento modul umožňuje nastavit prezentaci na různé objekty. Jeden modul na seznam s obrázky. Podporované jsou pouze objekty s hiddenSelection 0.</Czech>
             <Italian>Questo modulo ti permette di creare una presentazione con diapositive su vari oggetti. Un modulo per lista immagini. Solo oggetti con hiddenSelection 0 sono supportati.</Italian>
             <Japanese>さまざまなオブジェクトへスライドショーを設定することができます。1つのモジュールは各画像リストになっています。オブジェクトが hiddenSelection 0へ対応している必要があります。</Japanese>
-            <Korean>이 모듈은 다른 물체에 대해 슬라이드 쇼를 놓을 수 있게 해줍니다. 한 모듈당 한 이미지목록만 가능합니다. 또한 물체가 hiddenSelection 0 를 지원해야만합니다.</Korean>
+            <Korean>이 모듈은 다른 물체에 대해 슬라이드 쇼를 놓을 수 있게 해줍니다. 한 모듈 당 한 이미지 목록만 가능합니다. 또한 hiddenSelection 0가 있는 물체만 지원됩니다.</Korean>
             <Chinese>此模塊可讓圖片以幻燈片的形式顯示在物件上，每個模塊都能設定一串幻燈片清單，被設定的物件不能有隱藏部位(hiddenSelection)</Chinese>
             <Chinesesimp>此模块可让图片以幻灯片的形式显示在物体上，每个模块都能设定一串幻灯片清单，被设定的物件不能有隐藏部位（hiddenSelection）</Chinesesimp>
         </Key>
@@ -160,7 +160,7 @@
             <Italian>Lista di nomi che verranno usati per per le interazioni, separati da virgole, in ordine per immagini.</Italian>
             <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Kommata getrennt, in Reihenfolge der Bilder.</German>
             <Japanese>画像を操作できるインタラクション エントリ名の一覧を入力してください。コンマで区切り複数を指定できます。</Japanese>
-            <Korean>상호작용 메세지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
+            <Korean>상호작용 메시지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
             <Chinese>設定互動鍵切換圖片時的按鈕名稱，多個按鈕請以逗號做區隔，有多少圖片就輸入多少個按鈕，以利切換圖片</Chinese>
             <Chinesesimp>设定互动键切换图片时的按钮名称，多个按钮请以逗号做区隔，有多少图片就输入多少个按钮，以利切换图片</Chinesesimp>
             <Czech>Seznam jmen které budou použity pro interakce, oddělené čárkami, v pořadí obrázků.</Czech>
@@ -189,7 +189,7 @@
             <Italian>Nome che sarà utilizzato per le principali interazioni (per distinguere le multiple diapositive). Predefinito: "Slides"</Italian>
             <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片) 預設名稱: "幻燈片"</Chinese>
             <Chinesesimp>设定该幻灯片的标题名称（用来区分多个不同标题的幻灯片）预设名称："幻灯片"</Chinesesimp>
-            <Korean>상위 상호작용 이름 (여러개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
+            <Korean>상위 상호작용 이름 (여러 개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
             <Russian>Имя, которое будет использоваться для основных взаимодействий (для различения нескольких слайдов). По умолчанию: «Slides»</Russian>
             <Portuguese>Nome que será usado para a entrada principal de interação (para separar vários slideshows). Padrão: "Slides"</Portuguese>
             <Czech>Jméno, které bude použito pro hlavní interakci (pro rozlišení více prezentací). Standard: Snímky</Czech>
@@ -207,7 +207,7 @@
             <Italian>Durata Diapositiva</Italian>
             <German>Länge der Diavorführung pro Bild</German>
             <Japanese>スライドの持続時間</Japanese>
-            <Korean>슬라이드 지속시간</Korean>
+            <Korean>슬라이드 지속 시간</Korean>
             <Chinese>幻燈片顯示時間</Chinese>
             <Chinesesimp>幻灯片显示时间</Chinesesimp>
         </Key>
@@ -223,7 +223,7 @@
             <Italian>Durata di ogni diapositiva. Default: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
             <Japanese>各スライドの持続時間。標準：0 (自動的な切り替えは無効)</Japanese>
-            <Korean>매 슬라이드의 지속시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
+            <Korean>매 슬라이드의 지속 시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>
         </Key>
