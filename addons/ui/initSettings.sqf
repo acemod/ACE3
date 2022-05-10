@@ -294,7 +294,7 @@ if (productVersion select 4 == 'Development') then {
     QGVAR(enableSpeedIndicator),
     "CHECKBOX",
     [LSTRING(EnableSpeedIndicator), LSTRING(EnableSpeedIndicator_Description)],
-    "ACE " + LLSTRING(Category),
+    _category,
     true,
     true, {
         if (!_this) then {
@@ -302,4 +302,17 @@ if (productVersion select 4 == 'Development') then {
             _speedIndicator ctrlSetText "";
         };
     }
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(hideDefaultActionIcon),
+    "CHECKBOX",
+    [LSTRING(HideDefaultActionIcon), LSTRING(HideDefaultActionIcon_Description)],
+    _category,
+    false,
+    2, {
+        profileNamespace setVariable [QGVAR(hideDefaultActionIcon), [nil, 0] select _this];
+        saveProfileNamespace;
+    },
+    true // needs restart
 ] call CBA_fnc_addSetting;

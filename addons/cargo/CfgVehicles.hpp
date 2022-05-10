@@ -322,6 +322,11 @@ class CfgVehicles {
         GVAR(canLoad) = 1;
     };
 
+    // Invisible Target Soldier
+    class TargetSoldierBase: StaticWeapon {
+        GVAR(canLoad) = 0;
+    };
+
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(size) = 2; // 1 = small, 2 = large

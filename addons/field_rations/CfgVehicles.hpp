@@ -277,4 +277,14 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Humanitarian_Ration,1);
         };
     };
+    class ACE_Sunflower_Seeds_Item: Item_Base_F {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(SunflowerSeeds_DisplayName);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Sunflower_Seeds,1);
+        };
+    };
 };

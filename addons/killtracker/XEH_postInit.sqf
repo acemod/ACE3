@@ -65,7 +65,7 @@ GVAR(killCount) = 0;
 
     if (!isNull _killer) then {
         if (!(_killer isKindof "CAManBase")) then { // If killer is a vehicle log the vehicle type
-            _killInfo pushBack format [LLSTRING(Vehicle), getText (configfile >> "CfgVehicles" >> (typeOf _killer) >> "displayName")];
+            _killInfo pushBack format [LLSTRING(Vehicle), getText ((configOf _killer) >> "displayName")];
         };
         if (isNull _instigator) then {
             _instigator = effectiveCommander _killer;
@@ -82,7 +82,7 @@ GVAR(killCount) = 0;
     // Log firendly fire
     private _fnc_getSideFromConfig = {
         params ["_object"];
-        switch (getNumber (configFile >> "CfgVehicles" >> (typeOf _object) >> "side")) do {
+        switch (getNumber ((configOf _object) >> "side")) do {
             case (0): {east};
             case (1): {west};
             case (2): {resistance};
@@ -117,7 +117,7 @@ GVAR(killCount) = 0;
             } else {
                 _killerName = _killer getVariable [QGVAR(aiName), ""]; // allow setting a custom AI name (e.g. VIP Target)
                 if (_killerName == "") then {
-                    _killerName = format ["*AI* - %1", getText (configfile >> "CfgVehicles" >> (typeOf _killer) >> "displayName")];
+                    _killerName = format ["*AI* - %1", getText ((configOf _killer) >> "displayName")];
                 };
             };
         };
@@ -133,7 +133,7 @@ GVAR(killCount) = 0;
         } else {
             _unitName = _unit getVariable [QGVAR(aiName), ""]; // allow setting a custom AI name (e.g. VIP Target)
             if (_unitName == "") then {
-                _unitName = format ["*AI* - %1", getText (configfile >> "CfgVehicles" >> (typeOf _unit) >> "displayName")];
+                _unitName = format ["*AI* - %1", getText ((configOf _unit) >> "displayName")];
             };
         };
         TRACE_3("send kill event",_killer,_unitName,_killInfo);
