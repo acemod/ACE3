@@ -8,5 +8,6 @@ PREP(parseWoundHandlersCfg);
 PREP(woundReceived);
 PREP(woundsHandler);
 PREP(woundsHandlerBurning);
+PREP(woundsHandlerCollision);
 PREP(woundsHandlerSQF);
 PREP(woundsHandlerVehiclecrash);
