@@ -9,7 +9,7 @@
  * 2: Spawn fire ring <Boolean>
  * 3: How long effect will last (Max 20 seconds) <Number>
  * 4: What selection will fire originate from <String>
- * 5: Intensity value passed by ace_cookoff_fnc_cookOff <Number>
+ * 5: Cookoff intensity value <Number>
  *
  * Return Value:
  * None
