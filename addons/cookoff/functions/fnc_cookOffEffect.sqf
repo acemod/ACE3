@@ -184,13 +184,14 @@ if (isServer) then {
             [2 + random 1], 1, 0, "", "", _obj
         ];
     };
-    
-    private _tiPars = getVehicleTIPars _obj; 
+
+    (getVehicleTIPars _obj) params ["_tiEngine", "_tiWheels", "_tiWeapon"];
     _obj setVehicleTIPars [
-        ((_tiPars select 0) + (_intensity * 0.01))/1.005, 
-        ((_tiPars select 1) + (_intensity * 0.004))/1.002, 
-        ((_tiPars select 2) + (_intensity * 0.01))/1.005
+        // formula is designed to have the temperature ramp up quickly and then level out
+        (_tiEngine + (_intensity * 0.01))/1.005,
+        (_tiWheels + (_intensity * 0.004))/1.002, // wheels//tracks are further away from burning parts
+        (_tiWeapon + (_intensity * 0.01))/1.005
     ];
-    
+
 }, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound, _intensity]] call CBA_fnc_addPerFrameHandler;
 
