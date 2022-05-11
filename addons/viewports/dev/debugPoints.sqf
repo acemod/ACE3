@@ -126,7 +126,7 @@ addMissionEventHandler ["Draw3D", {
 
 
     drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [1,1,0,1], _vehicle modelToWorldVisual [0,0,0], 0.1, 0.1, 0, "", 1, 0.02, "TahomaB"];
-    if (alive player) then {
+    if (alive player) then { // not using ace_player so this works in 3den
         drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], aslToAGL eyepos player, 0.1, 0.1, 0, "eye", 1, 0.02, "TahomaB"];
         drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], player modelToWorldVisual (player selectionPosition "pilot"), 0.1, 0.1, 0, "pilot", 1, 0.02, "TahomaB"];
     };
