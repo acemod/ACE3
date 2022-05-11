@@ -58,7 +58,7 @@ if (isNil "_viewports") then {
         // maxDistance [NUMBER] - Optional
         private _maxDistance = getNumber (_x >> "maxDistance");
         if (_maxDistance == 0) then {
-            _maxDistance = 0.75;
+            _maxDistance = 0.8;
         };
         // compartments [ARRAY] - Optional
         private _compartments = (getArray (_x >> "compartments")) apply {toLower _x};

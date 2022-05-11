@@ -226,11 +226,103 @@ class CfgVehicles {
     };
     class rhs_btr70_vmf: rhs_btr_base {
         EGVAR(refuel,fuelCapacity) = 350;
+        class ace_viewports {
+            class view_0 {
+                camLocation[] = {0.478394, -0.575, -0.145};
+                camAttach = 90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_1 {
+                camLocation[] = {-1.38184, -0.575, -0.145};
+                camAttach = -90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+        };
     };
 
     class rhs_btr70_msv: rhs_btr70_vmf {};
     class rhs_btr80_msv: rhs_btr70_msv {
         EGVAR(refuel,fuelCapacity) = 300;
+        class ace_viewports {
+            class view_0 {
+                camLocation[] = {0.534424, -0.336914, 0.636819};
+                camAttach = 45;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_1 {
+                camLocation[] = {0.760254, -0.459473, 0.526328};
+                camAttach = 90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_2 {
+                camLocation[] = {0.770508, -1.21924, 0.526954};
+                camAttach = 90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_3 {
+                camLocation[] = {-1.13, -1.2085, 0.490339};
+                camAttach = -90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_4 {
+                camLocation[] = {-1.14124, -0.416992, 0.460611};
+                camAttach = -90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_5 {
+                camLocation[] = {-0.932983, -0.326172, 0.647666};
+                camAttach = -45;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+        };
+    };
+    class rhs_btr80a_msv: rhs_btr80_msv {
+        class ace_viewports {
+            class view_0 {
+                camLocation[] = {0.589844, -0.314941, 0.449678};
+                camAttach = 45;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_1 {
+                camLocation[] = {0.809082, -0.442871, 0.276865};
+                camAttach = 90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_2 {
+                camLocation[] = {0.819092, -1.24414, 0.27857};
+                camAttach = 90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_3 {
+                camLocation[] = {-1.1012, -1.22461, 0.341089};
+                camAttach = -90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_4 {
+                camLocation[] = {-1.11597, -0.458984, 0.307256};
+                camAttach = -90;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+            class view_5 {
+                camLocation[] = {-0.869995, -0.304688, 0.461181};
+                camAttach = -45;
+                compartments[]={"Compartment1"};
+                roles[]={"cargo"};
+            };
+        };
     };
 
     class rhs_2s3tank_base: Tank_F {

@@ -125,9 +125,11 @@ addMissionEventHandler ["Draw3D", {
     if (isNull _vehicle) exitWith {};
 
 
-    drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], aslToAGL eyepos player, 0.1, 0.1, 0, "eye", 1, 0.02, "TahomaB"];
-    drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], player modelToWorldVisual (player selectionPosition "pilot"), 0.1, 0.1, 0, "pilot", 1, 0.02, "TahomaB"];
-
+    drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [1,1,0,1], _vehicle modelToWorldVisual [0,0,0], 0.1, 0.1, 0, "", 1, 0.02, "TahomaB"];
+    if (alive player) then {
+        drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], aslToAGL eyepos player, 0.1, 0.1, 0, "eye", 1, 0.02, "TahomaB"];
+        drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], player modelToWorldVisual (player selectionPosition "pilot"), 0.1, 0.1, 0, "pilot", 1, 0.02, "TahomaB"];
+    };
     // {
     //     private _pos = _vehicle modelToWorldVisual (_vehicle selectionPosition [_x, "Memory"]);
     //     drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,0,1,0.2], _pos, 0.05, 0.05, 0, _x, 1, 0.02, "TahomaB"];
