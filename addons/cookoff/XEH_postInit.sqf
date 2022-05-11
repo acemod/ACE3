@@ -1,4 +1,3 @@
-
 #include "script_component.hpp"
 
 [QGVAR(engineFire), FUNC(engineFire)] call CBA_fnc_addEventHandler;
