@@ -17,10 +17,10 @@
 
 params ["_unit"];
 
-private _actions = [];
+private _itemsActions = createHashMap;
 {
     _x params ["_class", "_displayName", "_requiredItem", "_textures", "_icon", "_materials"];
-
+    private _actions = _itemsActions getOrDefault [_requiredItem, []];
     _actions pushBack [
         [
             format ["ACE_ConfigTag_%1", _class],
@@ -41,16 +41,30 @@ private _actions = [];
                 [_unit, _randomTexture, _randomMaterial] call FUNC(tag);
                 _unit setVariable [QGVAR(lastUsedTag), _class];
             },
-            {
-                (_this select 2) params ["_unit", "", "", "_requiredItem"];
-                _requiredItem in (_unit call EFUNC(common,uniqueItems))
-            },
+            {},
             {},
             [_unit, _class, _textures, _requiredItem, _materials]
         ] call EFUNC(interact_menu,createAction),
         [],
         _unit
     ];
+    _itemsActions set [_requiredItem, _actions];
 } forEach GVAR(cachedTags);
 
+private _actions = [];
+{
+    _actions pushBack [
+        [
+            format ["ACE_TagItem_%1", _x],
+            getText (configFile >> "CfgWeapons" >> _x >> "displayName"),
+            (_y select 0  select 0 select 2), //use icon of first child action in the list
+            {},
+            {(_this select 2) in (_player call EFUNC(common,uniqueItems))},
+            {},
+            _x
+        ] call EFUNC(interact_menu,createAction),
+        _y, //sub-actions for each individual tag
+        _unit
+    ]
+} forEach _itemsActions;
 _actions
