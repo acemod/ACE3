@@ -221,7 +221,6 @@
         <Key ID="STR_ACE_Tagging_tri_inv_black">
             <English>Triangle Inverted Black</English>
         </Key>
-
         <Key ID="STR_ACE_Tagging_ar_u_Blue">
             <English>Up Arrow Blue</English>
         </Key>
@@ -252,7 +251,6 @@
         <Key ID="STR_ACE_Tagging_tri_inv_Blue">
             <English>Triangle Inverted Blue</English>
         </Key>
-
         <Key ID="STR_ACE_Tagging_ar_u_Green">
             <English>Up Arrow Green</English>
         </Key>
@@ -283,7 +281,6 @@
         <Key ID="STR_ACE_Tagging_tri_inv_Green">
             <English>Triangle Inverted Green</English>
         </Key>
-
         <Key ID="STR_ACE_Tagging_ar_u_Red">
             <English>Up Arrow Red</English>
         </Key>
