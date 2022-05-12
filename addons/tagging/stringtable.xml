@@ -191,125 +191,35 @@
             <Chinese>藍色X標記</Chinese>
             <Turkish>X Mavi</Turkish>
         </Key>
-        <Key ID="STR_ACE_Tagging_ar_u_black">
-            <English>Up Arrow Black</English>
+        <Key ID="STR_ACE_Tagging_arrow_up">
+            <English>Up Arrow</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_ar_d_black">
-            <English>Down Arrow Black</English>
+        <Key ID="STR_ACE_Tagging_arrow_down">
+            <English>Down Arrow</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_ar_l_black">
-            <English>Left Arrow Black</English>
+        <Key ID="STR_ACE_Tagging_arrow_left">
+            <English>Left Arrow</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_ar_r_black">
-            <English>Right Arrow Black</English>
+        <Key ID="STR_ACE_Tagging_arrow_right">
+            <English>Right Arrow</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_circ_black">
-            <English>Circle Black</English>
+        <Key ID="STR_ACE_Tagging_circle">
+            <English>Circle</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_cross_black">
-            <English>Cross Black</English>
+        <Key ID="STR_ACE_Tagging_cross">
+            <English>Cross</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_diam_black">
-            <English>Diamond Black</English>
+        <Key ID="STR_ACE_Tagging_diamond">
+            <English>Diamond</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_square_black">
-            <English>Square Black</English>
+        <Key ID="STR_ACE_Tagging_square">
+            <English>Square</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_tri_black">
-            <English>Triangle Black</English>
+        <Key ID="STR_ACE_Tagging_triangle">
+            <English>Triangle</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_tri_inv_black">
-            <English>Triangle Inverted Black</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_u_Blue">
-            <English>Up Arrow Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_d_Blue">
-            <English>Down Arrow Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_l_Blue">
-            <English>Left Arrow Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_r_Blue">
-            <English>Right Arrow Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_circ_Blue">
-            <English>Circle Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_cross_Blue">
-            <English>Cross Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_diam_Blue">
-            <English>Diamond Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_square_Blue">
-            <English>Square Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_tri_Blue">
-            <English>Triangle Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_tri_inv_Blue">
-            <English>Triangle Inverted Blue</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_u_Green">
-            <English>Up Arrow Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_d_Green">
-            <English>Down Arrow Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_l_Green">
-            <English>Left Arrow Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_r_Green">
-            <English>Right Arrow Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_circ_Green">
-            <English>Circle Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_cross_Green">
-            <English>Cross Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_diam_Green">
-            <English>Diamond Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_square_Green">
-            <English>Square Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_tri_Green">
-            <English>Triangle Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_tri_inv_Green">
-            <English>Triangle Inverted Green</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_u_Red">
-            <English>Up Arrow Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_d_Red">
-            <English>Down Arrow Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_l_Red">
-            <English>Left Arrow Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_ar_r_Red">
-            <English>Right Arrow Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_circ_Red">
-            <English>Circle Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_cross_Red">
-            <English>Cross Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_diam_Red">
-            <English>Diamond Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_square_Red">
-            <English>Square Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_tri_Red">
-            <English>Triangle Red</English>
-        </Key>
-        <Key ID="STR_ACE_Tagging_tri_inv_Red">
-            <English>Triangle Inverted Red</English>
+        <Key ID="STR_ACE_Tagging_triangle_inverted">
+            <English>Triangle Inverted</English>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
