@@ -1,6 +1,7 @@
+#define GLUE(g1,g2) g1##g2
 #define TAG(name,col) class TRIPLES(ACE,name,col) { \
         displayName = CSTRING(DOUBLES(name,col)); \
-        requiredItem = QUOTE(ACE_Spraypaint##col); \
+        requiredItem = QUOTE(GLUE(ACE_Spraypaint,col)); \
         textures[] = {QPATHTOF(UI\tags\col\name.paa)}; \
         icon = QPATHTOF(UI\icons\iconTagging##col.paa); \
     } \

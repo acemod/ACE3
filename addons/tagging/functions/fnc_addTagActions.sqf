@@ -41,7 +41,7 @@ private _itemsActions = createHashMap;
                 [_unit, _randomTexture, _randomMaterial] call FUNC(tag);
                 _unit setVariable [QGVAR(lastUsedTag), _class];
             },
-            {},
+            {true},
             {},
             [_unit, _class, _textures, _requiredItem, _materials]
         ] call EFUNC(interact_menu,createAction),
@@ -57,7 +57,7 @@ private _actions = [];
         [
             format ["ACE_TagItem_%1", _x],
             getText (configFile >> "CfgWeapons" >> _x >> "displayName"),
-            (_y select 0  select 0 select 2), //use icon of first child action in the list
+            getText (configFile >> "CfgWeapons" >> _x >> "picture"),
             {},
             {(_this select 2) in (_player call EFUNC(common,uniqueItems))},
             {},
