@@ -17,6 +17,22 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(sizeCoef), "SLIDER",
+    [LSTRING(sizeCoef_displayName), LSTRING(sizeCoef_description)],
+    _category,
+    [0.1, 5, 1, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(proximityScaling), "CHECKBOX",
+    [LSTRING(proximityScaling_displayName), LSTRING(proximityScaling_description)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(indicatorForSelf), "CHECKBOX",
     [LSTRING(indicatorForSelf_name), LSTRING(indicatorForSelf_description)],
     _category,

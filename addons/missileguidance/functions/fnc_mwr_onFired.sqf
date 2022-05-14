@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
- * Sets up MWR state arrays (called from missileGuidance's onFired).
+ * Author: Dani (TCVM)
+ * Sets up Active Radar state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
  * Guidance Arg Array <ARRAY>

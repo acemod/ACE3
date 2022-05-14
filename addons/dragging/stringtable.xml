@@ -15,7 +15,7 @@
             <Japanese>引きずる</Japanese>
             <Korean>끌기</Korean>
             <Chinese>拖拉</Chinese>
-            <Chinesesimp>拖拉</Chinesesimp>
+            <Chinesesimp>拖动</Chinesesimp>
             <Turkish>Sürükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
@@ -49,7 +49,7 @@
             <Japanese>オブジェクトを引きずる/離す</Japanese>
             <Korean>물건 끌기/놓기</Korean>
             <Chinese>拖拉/放開物品</Chinese>
-            <Chinesesimp>拖拉/放开物品</Chinesesimp>
+            <Chinesesimp>拖动/放开物品</Chinesesimp>
             <Turkish>Objeyi Sürükle/Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_CarryKeybind">
@@ -62,6 +62,7 @@
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
             <German>Objekt tragen/loslassen</German>
             <Chinesesimp>背负/释放物体</Chinesesimp>
+            <Korean>물건 업기/놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -107,7 +108,8 @@
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
             <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
-            <Chinesesimp>抬起/放低 | (Ctrl + 鼠标滚轮) 旋转</Chinesesimp>
+            <Chinesesimp>抬起/放低 |（Ctrl + 鼠标滚轮）旋转</Chinesesimp>
+            <Korean>높이기/내리기 | (컨트롤 + 스크롤) 회전</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
             <English>ACE Dragging</English>
@@ -118,7 +120,8 @@
             <Spanish>ACE Arrastrar</Spanish>
             <Polish>ACE Przeciąganie</Polish>
             <Japanese>ACE ドラッグ</Japanese>
-            <Chinesesimp>ACE拖曳系统</Chinesesimp>
+            <Chinesesimp>ACE 拖曳</Chinesesimp>
+            <Korean>ACE 끌기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
@@ -130,6 +133,7 @@
             <Polish>Pozwól na strzelanie podczas przeciągania</Polish>
             <Japanese>搬送中に射撃許可</Japanese>
             <Chinesesimp>允许在拖动时开火</Chinesesimp>
+            <Korean>사격 중 끌기 가능하게 하기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
@@ -141,6 +145,7 @@
             <Polish>Pozwala graczom strzelać z broni podczas przeciągania obiektów.</Polish>
             <Japanese>プレイヤーが引きずっている最中でも射撃できるようにします。</Japanese>
             <Chinesesimp>允许玩家在拖动时开火。</Chinesesimp>
+            <Korean>플레이어가 무기를 끄는 동안에 무기를 사용할 수 있게합니다.</Korean>
         </Key>
     </Package>
 </Project>

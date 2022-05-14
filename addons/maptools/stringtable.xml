@@ -133,7 +133,7 @@
             <Russian>Выровнять инструменты по компасу</Russian>
             <Japanese>マップ ツールを方位磁石に合わせる</Japanese>
             <Korean>독도용 도구를 나침반에 정렬</Korean>
-            <Chinesesimp>地图工具对准指北针</Chinesesimp>
+            <Chinesesimp>地图工具对准指南针</Chinesesimp>
             <Chinese>地圖工具對準指北針</Chinese>
             <Turkish>Harita Aracını Pusulaya Hizala</Turkish>
         </Key>
@@ -150,7 +150,7 @@
             <Russian>Показать GPS на карте</Russian>
             <Japanese>地図上に GPS を表示する</Japanese>
             <Korean>GPS를 지도상에 꺼내기</Korean>
-            <Chinesesimp>在地图上显示GPS</Chinesesimp>
+            <Chinesesimp>在地图上显示 GPS</Chinesesimp>
             <Chinese>在地圖上顯示GPS</Chinese>
             <Turkish>Harita da GPS Göster</Turkish>
         </Key>
@@ -167,7 +167,7 @@
             <Russian>Скрыть GPS на карте</Russian>
             <Japanese>地図上から GPS を隠す</Japanese>
             <Korean>GPS를 지도상에서 숨기기</Korean>
-            <Chinesesimp>在地图上隐藏GPS</Chinesesimp>
+            <Chinesesimp>在地图上隐藏 GPS</Chinesesimp>
             <Chinese>在地圖上隱藏GPS</Chinese>
             <Turkish>Harita da GPS'i Gizle</Turkish>
         </Key>
@@ -184,7 +184,7 @@
             <Portuguese>Direção: %1</Portuguese>
             <Japanese>方位：%1°</Japanese>
             <Korean>방위: %1°</Korean>
-            <Chinesesimp>方位: %1°</Chinesesimp>
+            <Chinesesimp>方位：%1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>
             <Turkish>Yön: %1°</Turkish>
         </Key>
@@ -244,7 +244,7 @@
             <Polish>Przeciągnij po krawędzi narzędzi nawigacyjnych by narysować prostą linię. Uwaga: aby usunąć linię - nalezy ustawić kursor nad jej środkiem.</Polish>
             <French>Utilise le bord des outils de navigation pour tracer des lignes droites. Note : il faut pointer au milieu du trait pour pouvoir le supprimer.</French>
             <Italian>Disegna sul bordo degli strumenti di mappatura per disegnare linee dritte. Nota: Deve spostarsi al centro per essere cancellato.</Italian>
-            <Chinesesimp>使用地图工具的边缘来绘制直线。备注: 要删除直线时，请把滑鼠移动到该线条的中央即可删除该线。</Chinesesimp>
+            <Chinesesimp>使用地图工具的边缘来绘制直线。备注：要删除直线时，请把鼠标移动到该线条的中央即可删除该线。</Chinesesimp>
             <Chinese>使用地圖工具的邊緣來繪製直線。備註: 要刪除直線時，請把滑鼠移動到該線條的中央即可刪除該線</Chinese>
             <Russian>Рисуйте по краю инструмента карты, чтобы провести прямые линии. Примечание: при удалении линии размещайте курсор над ее серединой</Russian>
             <Portuguese>Desenhe no canto da ferramenta de mapa para desenhar linhas retas. Observação: Sobreponha o meio com o mouse para deletar.</Portuguese>

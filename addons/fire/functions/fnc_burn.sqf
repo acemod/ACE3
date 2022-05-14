@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Makes object catch fire. Only call from events. Local effects only.
  * Arbitrary values to ignite people. Assumed maximum is "10".
  *
@@ -237,7 +237,7 @@ if (_isBurning) exitWith {};
                         // keep pain around unconciousness limit to allow for more fun interactions
                         [_unit, _intensity / MAX_INTENSITY, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
                     } else {
-                        [_unit, 0.15, _woundSelection, "unknown", _instigator] call EFUNC(medical,addDamageToUnit);
+                        [_unit, 0.15, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
                     };
                 };
                 _unit setVariable [QGVAR(intensity), _intensity, true]; // globally sync intensity across all clients to make sure simulation is deterministic

@@ -15,6 +15,7 @@
             <Czech>Drátem naváděné</Czech>
             <Turkish>Tel-Güdümlü</Turkish>
             <Spanish>Guiado por cable</Spanish>
+            <Korean>유선 유도</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_SACLOS_Description">
             <English>Semi-automatic command to line of sight</English>
@@ -25,11 +26,12 @@
             <Russian>Полуавтоматическое командное наведение по линии визирования (SACLOS)</Russian>
             <Portuguese>Comando semi-automático para a linha de visão (SACLOS)</Portuguese>
             <Chinese>視線內半自動指令</Chinese>
-            <Chinesesimp>视线内半自动指令</Chinesesimp>
+            <Chinesesimp>半自动指令到视线（SACLOS）</Chinesesimp>
             <French>Contrôle semi-automatique par contact visuel (SACLOS)</French>
             <Czech>Poloautomatický povelový systém dalkového navedení pro záměrné cíle (SACLOS)</Czech>
             <Spanish>Control semi-automático por línea de visión</Spanish>
             <Turkish>Görüş alanına yarı otomatik komut</Turkish>
+            <Korean>반자동 가시선 지령 유도방식</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description">
             <English>Wire-Guided Missile</English>
@@ -45,6 +47,7 @@
             <Czech>Drátem naváděná střela</Czech>
             <Turkish>Tel Güdümlü Füze</Turkish>
             <Spanish>Misil guiado por cable</Spanish>
+            <Korean>유선 유도 미사일</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hotMissile">
             <English>HOT Missile</English>
@@ -55,11 +58,12 @@
             <Russian>Ракета HOT</Russian>
             <Portuguese>Míssil HOT</Portuguese>
             <Chinese>高次音速(HOT)飛彈</Chinese>
-            <Chinesesimp>高次音速(HOT)导弹</Chinesesimp>
+            <Chinesesimp>高次音速（HOT）导弹</Chinesesimp>
             <French>Missile HOT</French>
             <Czech>HOT Střela</Czech>
             <Turkish>HOT Missile</Turkish>
             <Spanish>Misil HOT</Spanish>
+            <Korean>HOT 미사일</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot1">
             <English>HOT 1</English>
@@ -75,6 +79,7 @@
             <Czech>HOT 1</Czech>
             <Turkish>HOT 1</Turkish>
             <Spanish>HOT 1</Spanish>
+            <Korean>HOT 1</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot2">
             <English>HOT 2</English>
@@ -90,6 +95,7 @@
             <Czech>HOT 2</Czech>
             <Turkish>HOT 2</Turkish>
             <Spanish>HOT 2</Spanish>
+            <Korean>HOT 2</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp">
             <English>HOT 2MP</English>
@@ -105,6 +111,7 @@
             <Czech>HOT 2MP</Czech>
             <Turkish>HOT 2MP</Turkish>
             <Spanish>HOT 2MP</Spanish>
+            <Korean>HOT 2MP</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot3">
             <English>HOT 3</English>
@@ -120,6 +127,7 @@
             <Czech>HOT 3</Czech>
             <Turkish>HOT 3</Turkish>
             <Spanish>HOT 3</Spanish>
+            <Korean>HOT 3</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description_AP">
             <English>Wire-Guided Missile (Anti-Personnel)</English>
@@ -135,6 +143,7 @@
             <Czech>Drátem naváděná střela (protipěchotní)</Czech>
             <Turkish>Tel Güdümlü Füze (Anti-Personelı)</Turkish>
             <Spanish>Misil guiado por cable (Antipersona)</Spanish>
+            <Korean>유선 유도 미사일 (대인)</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_1">
             <English>1x HOT 1 [ACE]</English>
@@ -150,6 +159,7 @@
             <Czech>1x HOT 1 [ACE]</Czech>
             <Turkish>1x HOT 1 [ACE]</Turkish>
             <Spanish>1x HOT 1 [ACE]</Spanish>
+            <Korean>1x HOT 1 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_3">
             <English>3x HOT 1 [ACE]</English>
@@ -165,6 +175,7 @@
             <Czech>3x HOT 1 [ACE]</Czech>
             <Turkish>3x HOT 1 [ACE]</Turkish>
             <Spanish>3x HOT 1 [ACE]</Spanish>
+            <Korean>3x HOT 1 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_4">
             <English>4x HOT 1 [ACE]</English>
@@ -180,6 +191,7 @@
             <Czech>4x HOT 1 [ACE]</Czech>
             <Turkish>4x HOT 1 [ACE]</Turkish>
             <Spanish>4x HOT 1 [ACE]</Spanish>
+            <Korean>4x HOT 1 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_1">
             <English>1x HOT 2 [ACE]</English>
@@ -195,6 +207,7 @@
             <Czech>1x HOT 2 [ACE]</Czech>
             <Turkish>1x HOT 2 [ACE]</Turkish>
             <Spanish>1x HOT 2 [ACE]</Spanish>
+            <Korean>1x HOT 2 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_3">
             <English>3x HOT 2 [ACE]</English>
@@ -210,6 +223,7 @@
             <Czech>3x HOT 2 [ACE]</Czech>
             <Turkish>3x HOT 2 [ACE]</Turkish>
             <Spanish>3x HOT 2 [ACE]</Spanish>
+            <Korean>3x HOT 2 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_4">
             <English>4x HOT 2 [ACE]</English>
@@ -225,6 +239,7 @@
             <Czech>4x HOT 2 [ACE]</Czech>
             <Turkish>4x HOT 2 [ACE]</Turkish>
             <Spanish>4x HOT 2 [ACE]</Spanish>
+            <Korean>4x HOT 2 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_1">
             <English>1x HOT 2MP [ACE]</English>
@@ -240,6 +255,7 @@
             <Czech>1x HOT 2MP [ACE]</Czech>
             <Turkish>1x HOT 2MP [ACE]</Turkish>
             <Spanish>1x HOT 2MP [ACE]</Spanish>
+            <Korean>1x HOT 2MP [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_3">
             <English>3x HOT 2MP [ACE]</English>
@@ -255,6 +271,7 @@
             <Czech>3x HOT 2MP [ACE]</Czech>
             <Turkish>3x HOT 2MP [ACE]</Turkish>
             <Spanish>3x HOT 2MP [ACE]</Spanish>
+            <Korean>3x HOT 2MP [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_4">
             <English>4x HOT 2MP [ACE]</English>
@@ -270,6 +287,7 @@
             <Czech>4x HOT 2MP [ACE]</Czech>
             <Turkish>4x HOT 2MP [ACE]</Turkish>
             <Spanish>4x HOT 2MP [ACE]</Spanish>
+            <Korean>4x HOT 2MP [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_1">
             <English>1x HOT 3 [ACE]</English>
@@ -285,6 +303,7 @@
             <Czech>1x HOT 3 [ACE]</Czech>
             <Turkish>1x HOT 3 [ACE]</Turkish>
             <Spanish>1x HOT 3 [ACE]</Spanish>
+            <Korean>1x HOT 3 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_4">
             <English>4x HOT 3 [ACE]</English>
@@ -300,6 +319,7 @@
             <Czech>4x HOT 3 [ACE]</Czech>
             <Turkish>4x HOT 3 [ACE]</Turkish>
             <Spanish>4x HOT 3 [ACE]</Spanish>
+            <Korean>4x HOT 3 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_3">
             <English>3x HOT 3 [ACE]</English>
@@ -315,6 +335,7 @@
             <Czech>3x HOT 3 [ACE]</Czech>
             <Turkish>3x HOT 3 [ACE]</Turkish>
             <Spanish>3x HOT 3 [ACE]</Spanish>
+            <Korean>3x HOT 3 [ACE]</Korean>
         </Key>
     </Package>
 </Project>

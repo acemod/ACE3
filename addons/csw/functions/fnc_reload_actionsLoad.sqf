@@ -23,24 +23,26 @@ private _loadableMagazines = [_vehicle, _player] call FUNC(reload_getLoadableMag
 
 private _statement = {
     params ["_target", "_player", "_params"];
-    _params params ["_carryMag", "_turretPath"];
+    _params params ["_carryMag", "_turretPath", "", "_magSource"];
 
-    [_target, _turretPath, _carryMag, _player] call FUNC(reload_loadMagazine);
+    [_target, _turretPath, _carryMag, _magSource, _player] call FUNC(reload_loadMagazine);
 };
 
 private _condition = {
     params ["_target", "_player", "_params"];
-    _params params ["_carryMag", "_turretPath"];
+    _params params ["_carryMag", "_turretPath", "", "_magSource"];
 
-    ([_target, _turretPath, _carryMag, _player] call FUNC(reload_canLoadMagazine)) select 0
+    ([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0
 };
 
+private _cfgMagazines = configFile >> "CfgMagazines"; // micro-optimization
+
 {
-    _x params ["_carryMag", "_turretPath", "_loadInfo"];
+    _x params ["_carryMag", "", "_loadInfo"];
     _loadInfo params ["", "", "", "_isBeltLinking"];
 
-    private _displayName = getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName");
-    private _picture = getText (configFile >> "CfgMagazines" >> _carryMag >> "picture");
+    private _displayName = getText (_cfgMagazines >> _carryMag >> "displayName");
+    private _picture = getText (_cfgMagazines >> _carryMag >> "picture");
     private _text = if (_isBeltLinking) then {
         format [localize LSTRING(actionLink), _displayName];
     } else {
@@ -53,4 +55,3 @@ private _condition = {
 
 TRACE_1("loadActions",count _actions);
 _actions
-

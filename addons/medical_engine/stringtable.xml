@@ -10,6 +10,7 @@
             <Japanese>車両衝突ダメージを有効化</Japanese>
             <German>Aktiviere Verletzungen durch Fahrzeugunfälle</German>
             <Chinesesimp>启用车辆碰撞损坏</Chinesesimp>
+            <Korean>차량 충돌 피해 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_Description">
             <English>Controls whether crew receives damage from vehicle collisions.</English>
@@ -20,6 +21,7 @@
             <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを決定します。</Japanese>
             <German>Kontrolliert, ob Besatzung eines Fahrzeugs Schaden durch Unfälle erleiden soll</German>
             <Chinesesimp>控制乘员是否受到车辆碰撞的伤害。</Chinesesimp>
+            <Korean>차량 충돌로 인해 탑승인원들이 피해를 받을 지 결정합니다.</Korean>
         </Key>
     </Package>
 </Project>

@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror & TCVM
+ * Author: PabstMirror &Dani (TCVM)
  * Tests if unit can load a magazine into a static weapon.
  *
  * Arguments:
  * 0: Static Weapon <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Carryable Magazine <STRING>
- * 3: Player <OBJECT>
+ * 3: Supplier <OBJECT>
  *
  * Return Value:
  * [CanLoad<BOOL>, LoadedMag<STRING>, AmmoNeeded<NUMBER>, IsBeltLinking<BOOL>]<ARRAY>
@@ -18,17 +18,30 @@
  * Public: No
  */
 
-params ["_vehicle", "_turret", "_carryMag", ["_unit", objNull]];
-// TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_unit);
+params ["_vehicle", "_turret", "_carryMag", ["_magSource", objNull]];
+// TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource);
+
+private _return = [false, "", -2, false];
 
 // Handle disassembled or deleted
-if (!alive _vehicle) exitWith { [false, "", -1, false] };
-// Verify unit has carry magazine
-if ((!isNull _unit) && {((_vehicle distance _unit) > 5) || {((magazines _unit) findIf {_x == _carryMag}) == -1}}) exitWith { [false, "", -2, false] };
+if (!alive _vehicle) exitWith { _return };
+// Verify holder has carry magazine
+if (
+    (!isNull _magSource) &&
+    {!((_magSource isKindOf "Bag_Base") || {_magSource isKindOf "ContainerSupply"})} && // hacky workaround for magazines within dropped backpacks
+    {
+        ((_vehicle distance _magSource) > 10) ||
+        {((magazineCargo _magSource) findIf {_x == _carryMag}) == -1}
+    }
+) exitWith { _return };
+
+// solve config lookups
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgMagazinesCarryMag = _cfgMagazines >> _carryMag;
 
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
-private _ammoNeeded = _desiredAmmo min getNumber (configFile >> "CfgMagazines" >> _carryMag >> "count"); // assume it needs full carry mag
+private _ammoNeeded = _desiredAmmo min getNumber (_cfgMagazinesCarryMag >> "count"); // assume it needs full carry mag
 private _loadedMag = "";
 private _isBeltLinking = false;
 
@@ -40,13 +53,13 @@ scopeName "main";
         _loadedMag = _xMag;
         if (_xAmmo > 0) then {
             // There is a magazine with ammo loaded in the turret (are there any multi-muzzle static weapons??), see if we can add to this mag
-            if (getNumber (configFile >> QGVAR(groups) >> _carryMag >> _xMag) != 1) exitWith {
+            if (getNumber (_cfgMagazinesCarryMag >> _xMag) != 1) exitWith {
                 [false, _loadedMag, -4, false] breakOut "main"; // Carry mag cannot be added to existing vehicle mag (e.g. red to green tracers)
             };
-            if (getNumber (configFile >> "CfgMagazines" >> _carryMag >> "ACE_isBelt") == 0) exitWith {
+            if (getNumber (_cfgMagazinesCarryMag >> "ACE_isBelt") == 0) exitWith {
                 [false, _loadedMag, -5, false] breakOut "main"; // Non-linkable mag loaded, can't add any more
             };
-            private _maxMagazineAmmo = _desiredAmmo min getNumber (configFile >> "CfgMagazines" >> _xMag >> "count");
+            private _maxMagazineAmmo = _desiredAmmo min getNumber (_cfgMagazines >> _xMag >> "count");
             if (_xAmmo >= _maxMagazineAmmo) exitWith {
                 [false, _loadedMag, -6, false] breakOut "main"; // Already at capicity
             };
