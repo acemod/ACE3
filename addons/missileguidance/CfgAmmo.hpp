@@ -71,8 +71,8 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
 
-            pitchRate = 25; // degrees per second
-            yawRate = 25;
+            pitchRate = 100; // degrees per second
+            yawRate = 100;
 
             bangBangGuidance = 0;
 

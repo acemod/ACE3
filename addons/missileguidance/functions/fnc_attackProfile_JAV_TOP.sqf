@@ -57,7 +57,7 @@ switch( (_attackProfileStateParams select 0) ) do {
         TRACE_1("STAGE_CLIMB","");
         private _cruisAlt = 140;
         if (_distanceShooterToTarget < 1250) then {
-            _cruisAlt = 140 * (_distanceShooterToTarget/1250);
+            _cruisAlt = 140 * ((0 max (_distanceShooterToTarget - 150))/1250);
             TRACE_1("_cruisAlt", _cruisAlt);
         };
         if ( ((ASLToAGL _projectilePos) select 2) - ((ASLToAGL _seekerTargetPos) select 2) >= _cruisAlt) then {
