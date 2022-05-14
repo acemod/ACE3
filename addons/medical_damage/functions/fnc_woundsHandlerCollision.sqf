@@ -17,6 +17,7 @@
  * Public: No
  */
 params ["_unit", "_allDamages", "_typeOfDamage"];
+TRACE_3("woundsHandlerCollision",_unit,_allDamages,_typeOfDamage);
 
 // partially ignore armor
 private _newDamages = _allDamages apply {
@@ -24,5 +25,4 @@ private _newDamages = _allDamages apply {
     [0.5*(_dmgBefore+_dmgAfter), _part, _dmgBefore];
 };
 
-TRACE_1("Collision handled, passing damage", _newDamages);
 [_unit, _newDamages, _typeOfDamage] //return

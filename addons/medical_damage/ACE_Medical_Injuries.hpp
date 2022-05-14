@@ -223,7 +223,7 @@ class ACE_Medical_Injuries {
             };
         };
         class falling {
-            thresholds[] = {{8, 4}, {1, 1}, {0.3, 1}, {0.15, 0.7}, {0, 0.5}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            thresholds[] = {{8, 4}, {1, 1}, {0.2, 1}, {0.1, 0.7}, {0, 0.5}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
             class Abrasion {
                 weighting[] = {{0.4, 0}, {0.2, 1}, {0, 0}};
