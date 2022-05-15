@@ -795,5 +795,17 @@
             <Chinesesimp>死于致命伤的概率。</Chinesesimp>
             <Korean>치명상으로 인해 사망할 확률을 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_multipleWoundReduction_collision_DisplayName">
+            <English>Reduce collision multipart damage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_multipleWoundReduction_collision_Description">
+            <English>Reduce damage on multiple limbs from collisions or falling</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_multipleWoundReduction_explosion_DisplayName">
+            <English>Reduce explosion multipart damage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_multipleWoundReduction_explosion_Description">
+            <English>Reduce damage on multiple limbs from weapon fire</English>
+        </Key>
     </Package>
 </Project>

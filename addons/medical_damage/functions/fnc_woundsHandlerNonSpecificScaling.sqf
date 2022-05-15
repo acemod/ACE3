@@ -19,8 +19,8 @@
 params ["_unit", "_allDamages", "_typeOfDamage"];
 TRACE_3("woundsHandlerNonSpecificScaling",_unit,_allDamages,_typeOfDamage);
 
-private _reduceFactor = [GVAR(multipleWoundReduction_explosion), GVAR(multipleWoundReduction_impact)] 
-    select (toLower _typeOfDamage in ["vehiclecrash", "collision", "falling", "collision"]);
+private _reduceFactor = [GVAR(multipleWoundReduction_explosion), GVAR(multipleWoundReduction_collision)] 
+    select (toLower _typeOfDamage in ["vehiclecrash", "collision", "falling"]);
 
 if (_reduceFactor > 0) then {
     private _multiSelectionReduction = 0;
@@ -28,7 +28,7 @@ if (_reduceFactor > 0) then {
         _x params ["_damage", "_bodyPart"];
         if ((_bodyPart == "#structural") || {_damage <= 0}) then { continue };
 
-        _damage = _damage - _multiSelectionReduction;
+        _damage = 0 max (_damage - _multiSelectionReduction);
         _multiSelectionReduction = _multiSelectionReduction + _damage * _reduceFactor;
         TRACE_3("reduce",_x,_damage,_multiSelectionReduction);
         _x set [0, _damage];
