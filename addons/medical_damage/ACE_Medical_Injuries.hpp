@@ -195,31 +195,22 @@ class ACE_Medical_Injuries {
         class collision {
             thresholds[] = {{8, 4}, {1, 1}, {0.3, 1}, {0.15, 0.5}, {0, 0.3}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
-            class woundHandlers: woundHandlers {
-                GVAR(collision) = QFUNC(woundsHandlerCollision);
-            };
             class Avulsion {
                 weighting[] = {{1, 2}, {0.5, 0.5}, {0.5, 0}};
-                damageMultiplier = 0.5;
             };
             class Abrasion {
                 weighting[] = {{0.4, 0}, {0.2, 1}, {0, 0}};
-                damageMultiplier = 0.5;
             };
             class Contusion {
                 weighting[] = {{0.4, 0}, {0.2, 1}};
-                damageMultiplier = 0.5;
             };
             class Crush {
                 weighting[] = {{0.4, 1}, {0.2, 0}};
-                damageMultiplier = 0.5;
             };
             class Cut {
                 weighting[] = {{0.1, 1}, {0.1, 0}};
-                damageMultiplier = 0.5;
             };
             class Laceration {
-                damageMultiplier = 0.5;
             };
         };
         class falling {
