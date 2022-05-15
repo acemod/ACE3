@@ -18,4 +18,13 @@
 
 params ["", "_patient"];
 
-(_patient call FUNC(getStitchableWounds) isNotEqualTo [])
+(_patient call FUNC(getStitchableWounds) isNotEqualTo []) ||
+{   // Allow stitching if "Clear Trauma" is set to "After Stitch",
+    // but wound reopening is disabled
+    GVAR(clearTrauma) isEqualTo 1 &&
+    {!IS_BLEEDING(_patient)} &&
+    {(_patient getVariable [
+        QEGVAR(medical,bodyPartDamage),
+        [0,0,0,0,0,0]
+    ]) isNotEqualTo [0,0,0,0,0,0]}
+}

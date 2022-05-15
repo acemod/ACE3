@@ -24,8 +24,9 @@ _args params ["", "_patient"];
 
 private _stitchableWounds = _patient call FUNC(getStitchableWounds);
 
-// Stop treatment if there are no wounds that can be stitched remaining
-if (_stitchableWounds isEqualTo []) exitWith {false};
+// Stop treatment if there are no wounds that can be stitched remaining,
+// except when clear trauma on stitch is enabled
+if (_stitchableWounds isEqualTo []) exitWith {GVAR(clearTrauma) == 1};
 
 // Not enough time has elapsed to stitch a wound
 if (_totalTime - _elapsedTime > (count _stitchableWounds - 1) * GVAR(woundStitchTime)) exitWith {true};
