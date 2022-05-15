@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Laser">
+        <Key ID="STR_ACE_Laser_laser">
+            <English>Laser</English>
+            <German>Laser</German>
+            <Polish>Laser</Polish>
+            <French>Laser</French>
+            <Russian>Лазер</Russian>
+            <Portuguese>Laser</Portuguese>
+            <Hungarian>Lézer</Hungarian>
+            <Spanish>Láser</Spanish>
+            <Czech>Laser</Czech>
+            <Italian>Laser</Italian>
+            <Japanese>レーザー</Japanese>
+            <Korean>레이저</Korean>
+            <Chinesesimp>激光</Chinesesimp>
+            <Chinese>雷射</Chinese>
+            <Turkish>Lazer</Turkish>
+        </Key>
         <Key ID="STR_ACE_Laser_dispersionCount_displayName">
             <English>Laser Dispersion Simulation Count</English>
             <Japanese>レーザーの分散シミュレート数</Japanese>
@@ -67,6 +84,12 @@
             <Chinesesimp>激光—循环切换激光码 下</Chinesesimp>
             <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
             <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Laser_showLaserOnMap">
+            <English>Draw Laser on Map</English>
+        </Key>
+        <Key ID="STR_ACE_Laser_showLaserOnMap_tooltip">
+            <English>Active laser designator's position will be drawn on the map</English>
         </Key>
     </Package>
 </Project>

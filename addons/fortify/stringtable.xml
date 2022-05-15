@@ -142,7 +142,7 @@
             <Polish>Nigdy</Polish>
             <Russian>Не показывать никогда</Russian>
             <Turkish>Asla Gösterme</Turkish>
-            <Korean>안보여줌</Korean>
+            <Korean>안 보여줌</Korean>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintHasTool">
             <English>Has fortify tool</English>

@@ -71,7 +71,7 @@
             <Italian>Permette la visibilità delle AI in spettatore</Italian>
             <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
             <Chinesesimp>开启此功能后可在观察者模式下观察 AI 单位。</Chinesesimp>
-            <Korean>관전자가 AI를 관전 할 수 있습니다.</Korean>
+            <Korean>관전자가 AI를 관전할 수 있습니다.</Korean>
             <French>Rend les unités IA visibles en spectateur.</French>
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
             <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
@@ -136,7 +136,7 @@
             <German>1PP und 3PP</German>
             <Czech>1. a 3. osoby</Czech>
             <Portuguese>1ª e 3ª pessoa</Portuguese>
-            <Korean>1PP 과 3PP 카메라</Korean>
+            <Korean>1인칭과 3인칭 카메라</Korean>
             <Japanese>一人称と三人称</Japanese>
             <Chinese>第一人稱與第三人稱</Chinese>
             <Chinesesimp>第一人称与第三人称</Chinesesimp>
@@ -263,7 +263,7 @@
             <Italian>Libera</Italian>
             <French>Libre</French>
             <Japanese>自由視点</Japanese>
-            <Korean>자유</Korean>
+            <Korean>자유시점</Korean>
             <Chinesesimp>自由模式</Chinesesimp>
             <Chinese>自由模式</Chinese>
             <Turkish>Serbest</Turkish>
@@ -279,7 +279,7 @@
             <Italian>Normale</Italian>
             <French>Normale</French>
             <Japanese>通常</Japanese>
-            <Korean>정상</Korean>
+            <Korean>일반</Korean>
             <Chinesesimp>正常</Chinesesimp>
             <Chinese>正常</Chinese>
             <Turkish>Normal</Turkish>

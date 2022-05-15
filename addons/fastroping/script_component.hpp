@@ -16,6 +16,7 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+#include "script_macros.hpp"
 
 #define DEFAULT_ROPE_LENGTH 34.5
 
