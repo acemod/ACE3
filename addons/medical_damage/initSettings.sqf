@@ -44,19 +44,19 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(multipleWoundReduction_explosion),
-    "SLIDER",
-    [LSTRING(multipleWoundReduction_explosion_DisplayName), LSTRING(multipleWoundReduction_explosion_Description)],
-    ELSTRING(medical,Category),
-    [0, 1, 0, 2],
-    true
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(multipleWoundReduction_collision),
     "SLIDER",
     [LSTRING(multipleWoundReduction_collision_DisplayName), LSTRING(multipleWoundReduction_collision_Description)],
     ELSTRING(medical,Category),
     [0, 1, 0.3, 2],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(multipleWoundReduction_explosion),
+    "SLIDER",
+    [LSTRING(multipleWoundReduction_explosion_DisplayName), LSTRING(multipleWoundReduction_explosion_Description)],
+    ELSTRING(medical,Category),
+    [0, 1, 0, 2],
     true
 ] call CBA_fnc_addSetting;
