@@ -191,6 +191,36 @@
             <Chinese>藍色X標記</Chinese>
             <Turkish>X Mavi</Turkish>
         </Key>
+        <Key ID="STR_ACE_Tagging_arrow_up">
+            <English>Up Arrow</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_down">
+            <English>Down Arrow</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_left">
+            <English>Left Arrow</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_right">
+            <English>Right Arrow</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_circle">
+            <English>Circle</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_cross">
+            <English>Cross</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_diamond">
+            <English>Diamond</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_square">
+            <English>Square</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_triangle">
+            <English>Triangle</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_triangle_inverted">
+            <English>Triangle Inverted</English>
+        </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
             <German>Sprühfarbe (Schwarz)</German>
