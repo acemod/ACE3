@@ -549,6 +549,10 @@
 - `ace_common`
 {% endif %}
 
+{% if include.component == "viewports" %}
+- `ace_common`
+{% endif %}
+
 {% if include.component == "viewrestriction" %}
 - `ace_common`
 {% endif %}

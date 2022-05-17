@@ -171,6 +171,18 @@ class vn_mine_m112_remote_mag: vn_mine_m18_mag {
     };
 };
 
+// Spiked ammo box
+class vn_mine_ammobox_range_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(ammobox_range);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0.01;
+        };
+    };
+};
+
 // Punji large
 class vn_mine_punji_01_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_01);
