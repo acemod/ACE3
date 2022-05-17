@@ -48,7 +48,7 @@
     "SLIDER",
     [LSTRING(multipleWoundReduction_collision_DisplayName), LSTRING(multipleWoundReduction_collision_Description)],
     ELSTRING(medical,Category),
-    [0, 1, 0.3, 2],
+    [0, 1, 0, 2],
     true
 ] call CBA_fnc_addSetting;
 
