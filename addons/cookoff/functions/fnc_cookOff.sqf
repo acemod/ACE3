@@ -96,7 +96,7 @@ if (_smokeDelayEnabled) then {
                 _fireSource = selectRandom _positions;
             };
 
-            [QGVAR(cookOffEffect), [_vehicle, true, _ring, _time, _fireSource]] call CBA_fnc_globalEvent;
+            [QGVAR(cookOffEffect), [_vehicle, true, _ring, _time, _fireSource, _intensity]] call CBA_fnc_globalEvent;
 
             _intensity = _intensity - (0.5 max random 1);
             _vehicle setVariable [QGVAR(intensity), _intensity];
