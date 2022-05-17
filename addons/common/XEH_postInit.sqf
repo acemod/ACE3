@@ -27,6 +27,7 @@
 ["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -83,6 +84,17 @@
     };
     if (["acre_main"] call FUNC(isModLoaded)) then {
         _object setVariable ["acre_sys_core_isDisabledRadio", _set > 0, true];
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(blockSpeaking), {
+    params ["_object", "_set"];
+    TRACE_2("blockSpeaking EH",_object,_set);
+    if (["acre_main"] call FUNC(isModLoaded)) then {
+        _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
+    };
+    if (["task_force_radio"] call FUNC(isModLoaded)) then {
+        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 

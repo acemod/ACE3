@@ -584,7 +584,7 @@
             <Czech>Levá Ruka</Czech>
             <Italian>Braccio Sinistro</Italian>
             <Japanese>左腕</Japanese>
-            <Korean>왼쪽 팔</Korean>
+            <Korean>왼팔</Korean>
             <Chinesesimp>左臂</Chinesesimp>
             <Chinese>左手</Chinese>
             <Turkish>Sol Kol</Turkish>
@@ -600,7 +600,7 @@
             <Czech>Pravá Ruka</Czech>
             <Italian>Braccio Destro</Italian>
             <Japanese>右腕</Japanese>
-            <Korean>오른쪽 팔</Korean>
+            <Korean>오른팔</Korean>
             <Chinesesimp>右臂</Chinesesimp>
             <Chinese>右手</Chinese>
             <Turkish>Sağ Kol</Turkish>
@@ -616,7 +616,7 @@
             <Czech>Levá Noha</Czech>
             <Italian>Gamba Sinistra</Italian>
             <Japanese>左足</Japanese>
-            <Korean>왼쪽 다리</Korean>
+            <Korean>왼다리</Korean>
             <Chinesesimp>左腿</Chinesesimp>
             <Chinese>左腳</Chinese>
             <Turkish>Sol Bacak</Turkish>
@@ -632,7 +632,7 @@
             <Czech>Pravá Noha</Czech>
             <Italian>Gamba Destra</Italian>
             <Japanese>右足</Japanese>
-            <Korean>오른쪽 다리</Korean>
+            <Korean>오른다리</Korean>
             <Chinesesimp>右腿</Chinesesimp>
             <Chinese>右腳</Chinese>
             <Turkish>Sağ Bacak</Turkish>
@@ -680,7 +680,7 @@
             <Czech>Vybrat Levou ruku</Czech>
             <Italian>Seleziona Braccio Sinistro</Italian>
             <Japanese>左腕を選ぶ</Japanese>
-            <Korean>왼쪽 팔 선택</Korean>
+            <Korean>왼팔 선택</Korean>
             <Chinesesimp>选择左臂</Chinesesimp>
             <Chinese>選擇左手</Chinese>
             <Turkish>Sol Kolu Seç</Turkish>
@@ -696,7 +696,7 @@
             <Czech>Vybrat Pravou ruku</Czech>
             <Italian>Seleziona Braccio Destro</Italian>
             <Japanese>右腕を選ぶ</Japanese>
-            <Korean>오른쪽 팔 선택</Korean>
+            <Korean>오른팔 선택</Korean>
             <Chinesesimp>选择右臂</Chinesesimp>
             <Chinese>選擇右手</Chinese>
             <Turkish>Sağ Kolu Seç</Turkish>
@@ -712,7 +712,7 @@
             <Czech>Vybrat Levou nohu</Czech>
             <Italian>Seleziona Gamba Sinistra</Italian>
             <Japanese>左足を選ぶ</Japanese>
-            <Korean>왼쪽 다리 선택</Korean>
+            <Korean>왼다리 선택</Korean>
             <Chinesesimp>选择左腿</Chinesesimp>
             <Chinese>選擇左腳</Chinese>
             <Turkish>Sol Bacağı Seç</Turkish>
@@ -728,7 +728,7 @@
             <Czech>Vybrat Pravou nohu</Czech>
             <Italian>Seleziona Gamba Destra</Italian>
             <Japanese>右足を選ぶ</Japanese>
-            <Korean>오른쪽 다리 선택</Korean>
+            <Korean>오른다리 선택</Korean>
             <Chinesesimp>选择右腿</Chinesesimp>
             <Chinese>選擇右腳</Chinese>
             <Turkish>Sağ Bacağı Seç</Turkish>
@@ -744,7 +744,7 @@
             <Czech>Malý</Czech>
             <Italian>Piccolo</Italian>
             <Japanese>小さい</Japanese>
-            <Korean>소</Korean>
+            <Korean>작은</Korean>
             <Chinesesimp>小</Chinesesimp>
             <Chinese>小</Chinese>
             <Turkish>Küçük</Turkish>
@@ -760,7 +760,7 @@
             <Czech>Střední</Czech>
             <Italian>Medio</Italian>
             <Japanese>中くらい</Japanese>
-            <Korean>중</Korean>
+            <Korean>중간의</Korean>
             <Chinesesimp>中</Chinesesimp>
             <Chinese>中</Chinese>
             <Turkish>Orta</Turkish>
@@ -776,7 +776,7 @@
             <Czech>Velký</Czech>
             <Italian>Grande</Italian>
             <Japanese>大きい</Japanese>
-            <Korean>대</Korean>
+            <Korean>큰</Korean>
             <Chinesesimp>大</Chinesesimp>
             <Chinese>大</Chinese>
             <Turkish>Büyük</Turkish>
@@ -1085,7 +1085,7 @@
             <Spanish>Perdida una cantidad fatal de sangre</Spanish>
             <Turkish>Ölümcül miktarda kan kaybetti</Turkish>
             <Chinesesimp>致命失血</Chinesesimp>
-            <Korean>피를 심각할만큼 잃음</Korean>
+            <Korean>피를 심각할 만큼 잃음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -1114,7 +1114,7 @@
             <Czech>Nasofaryngeální trubice [NPA]</Czech>
             <Italian>Tubo Nasofaringeo [NPA]</Italian>
             <Japanese>鼻咽頭チューブ [NPA]</Japanese>
-            <Korean>기도유지기 [NPA]</Korean>
+            <Korean>기관삽입기 [NPA]</Korean>
             <Chinesesimp>鼻咽管</Chinesesimp>
             <Chinese>鼻咽管</Chinese>
             <Turkish>Nazofarengeal Tüp [NPA]</Turkish>

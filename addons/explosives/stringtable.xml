@@ -824,7 +824,7 @@
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
             <Japanese>非特技兵へ足かせ</Japanese>
-            <Korean>비-전문가에 불이익을 줍니까?</Korean>
+            <Korean>비전문가에게 불이익을 줍니까?</Korean>
             <Chinesesimp>惩罚非专业人士？</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
         </Key>
@@ -840,7 +840,7 @@
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
             <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
-            <Korean>비-전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
+            <Korean>비전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
         </Key>
@@ -856,7 +856,7 @@
             <Russian>Взрыв при разминир.?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
             <Japanese>解除中に爆発</Japanese>
-            <Korean>해제시 폭발합니까?</Korean>
+            <Korean>해제 시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆？</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
         </Key>
@@ -872,7 +872,7 @@
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
             <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
-            <Korean>특정 폭발물이 해제시 폭발하게 합니까? 기본설정: 예</Korean>
+            <Korean>특정 폭발물이 해제 시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后，某些爆炸物会在拆除时引爆？ 预设：是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
         </Key>

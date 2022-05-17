@@ -41,7 +41,7 @@
             <Japanese>モジュールではユーザ インタフェイスの一部表示を切り替えできます。</Japanese>
             <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
             <German>Dieses Modul erlaubt es, Teile der Benutzeroberfläche (UI) an- oder auszuschalten.</German>
-            <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는것을 가능케 해줍니다.</Korean>
+            <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는 것을 가능케 해줍니다.</Korean>
             <Italian>Questo modulo consente di commutare parti di interfaccia utente visibili.</Italian>
             <Chinesesimp>此模块允许你调整用户界面的任何一个控件</Chinesesimp>
             <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
@@ -72,7 +72,7 @@
             <Japanese>クライアントがユーザ インタフェイスを編集できるようにします。</Japanese>
             <Polish>Zezwól klientowi na modyfikację UI.</Polish>
             <German>Erlaube Clients, ihr UI zu modifizieren.</German>
-            <Korean>클라이언트가 선택적 사용자 인터페이스 사용하는것을 허가합니다</Korean>
+            <Korean>클라이언트가 자신의 사용자 인터페이스를 사용하는 것을 허가합니다</Korean>
             <Italian>Permette al client di modificare la propria UI.</Italian>
             <Chinesesimp>允许客户端自行调整用户界面</Chinesesimp>
             <Chinese>允許客戶端自行調整使用者介面</Chinese>
@@ -166,7 +166,7 @@
             <Japanese>開発版ウォーターマーク</Japanese>
             <German>Wasserzeichen für Entwicklungsversion</German>
             <Chinesesimp>开发建设水印</Chinesesimp>
-            <Korean>개발용빌드 워터마크</Korean>
+            <Korean>개발용 빌드 워터마크</Korean>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -647,7 +647,7 @@
             <Japanese>ユーザ インタフェイスの変更は無効化されています。</Japanese>
             <Polish>Modyfikacja interfejsu użytkownika jest wyłączona.</Polish>
             <German>Die Modifizierung des UI ist deaktiviert.</German>
-            <Korean>사용자 인터페이스 변경이 비활성화 되어있습니다.</Korean>
+            <Korean>사용자 인터페이스 변경이 비활성화 되어 있습니다.</Korean>
             <Italian>La modifica dell'Interfaccia Utente è disabilitata.</Italian>
             <Chinesesimp>自定用户界面功能已关闭</Chinesesimp>
             <Chinese>自定使用者介面功能已關閉</Chinese>
@@ -676,7 +676,7 @@
             <Russian>Включить индикатор скорости передвижения</Russian>
             <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
             <Chinesesimp>启用移动速度指示器</Chinesesimp>
-            <Korean>이동속도 표시기 활성화</Korean>
+            <Korean>이동 속도 표시기 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
@@ -686,7 +686,13 @@
             <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
             <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
             <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
-            <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화 합니다.</Korean>
+            <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_UI_HideDefaultActionIcon">
+            <English>Hide Default Action Icon</English>
+        </Key>
+        <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
+            <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
         </Key>
     </Package>
 </Project>

@@ -48,7 +48,9 @@ if (isServer) then {
     if (_elapsedTime >= _time) exitWith {
         deleteVehicle _light;
         deleteVehicle _sound;
-        [QEGVAR(fire,removeFireSource), [_obj]] call CBA_fnc_globalEvent;
+        if (isServer) then {
+            [QEGVAR(fire,removeFireSource), [_obj]] call CBA_fnc_localEvent;
+        };
         [_pfh] call CBA_fnc_removePerFrameHandler;
     };
     private _factor = (1 + (_elapsedTime / 2) min 2);
