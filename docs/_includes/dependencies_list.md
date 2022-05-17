@@ -58,6 +58,10 @@
 - `ace_interaction`
 {% endif %}
 
+{% if include.component == "casings" %}
+- `ace_common`
+{% endif %}
+
 {% if include.component == "chemlights" %}
 - `ace_common`
 {% endif %}
@@ -264,6 +268,10 @@
 
 {% if include.component == "maptools" %}
 - `ace_interaction`
+{% endif %}
+
+{% if include.component == "marker_flags" %}
+- `ace_interact_menu`
 {% endif %}
 
 {% if include.component == "markers" %}
@@ -616,6 +624,7 @@
 {% endif %}
 
 {% if include.component == "compat_rhs_gref3" %}
+- `ace_fastroping`
 - `ace_explosives`
 - `ace_csw`
 - `rhsgref_main_loadorder`

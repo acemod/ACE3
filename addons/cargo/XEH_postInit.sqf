@@ -50,8 +50,6 @@
         GVAR(interactionParadrop) = false;
         createDialog QGVAR(menu);
     };
-
-    // TOOO maybe drag/carry the unloaded item?
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(serverUnload), {

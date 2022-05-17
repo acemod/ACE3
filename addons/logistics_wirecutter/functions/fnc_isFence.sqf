@@ -19,14 +19,11 @@
 params ["_object"];
 TRACE_1("Checking if fence",_object);
 
-private _typeOf = typeOf _object;
-
-private _returnValue = if (_typeOf != "") then {
-    // Check for isFence entry since we have valid typeOf
-    1 == getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(isFence));
+private _configOf = configOf _object;
+if !(isNull _configOf) then {
+    // Check for isFence entry since we have valid configOf
+    getNumber (_configOf >> QGVAR(isFence)) == 1 // return
 } else {
     // Check the p3d name against list (in script_component.hpp)
-    (getModelInfo _object select 0) in FENCE_P3DS;
+    (getModelInfo _object select 0) in FENCE_P3DS // return
 };
-
-_returnValue

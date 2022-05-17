@@ -125,7 +125,7 @@
             <English>Log transfer statistics and Headless Client (dis)connections to RPT. (Default: No)</English>
             <German>Zeichnet Transferstatistiken, Verbindungen und Verbindungsabbrüche in einer RPT-Datei auf. (Standard: Nein)</German>
             <Polish>Zapisz statystyki transferu i status połączenia Headless Clienta do RPT. (Domyślnie: Tak)</Polish>
-            <Korean>전송 통계 및 헤드리스 클라이언트 연결(해제) 로그 RPT. (기본값: No)</Korean>
+            <Korean>전송 통계 및 헤드리스 클라이언트 연결(해제)를 RPT파일에 로그함. (기본값: No)</Korean>
             <Japanese>統計とヘッドレス クライアントの接続有無を PRT へ記録します。(標準: 無効)</Japanese>
             <French>Archive les statistiques de transfert et de (dé)connections du Headless Client dans le RPT. (Défaut: Non)</French>
             <Chinesesimp>记录 Headless 客户端间的转换数量与连线/断线等记录到 RPT 报告档中。（预设：关闭）</Chinesesimp>
@@ -151,7 +151,7 @@
             <Chinese>裝備傳輸用於試著暫時應付單位透過無頭客戶端傳輸時所導致裸裝之問題。</Chinese>
             <Chinesesimp>装备转移用于试着暂时应付单位透过 Headless 客户端传输时所导致裸装之问题。</Chinesesimp>
             <Polish>Transfer Wyposażenia jednostek usiłuje uniknąć problemu z nagimi jednostkami po transferze do Headless Clienta</Polish>
-            <Korean>헤드리스 클라이언트로 넘어갈때 유닛이 벌거벗고 있는 상황을 해결하기 위해 로드아웃을 유닛에 전송합니다.</Korean>
+            <Korean>헤드리스 클라이언트로 넘어갈 때 유닛이 벌거벗고 있는 상황을 해결하기 위해 로드아웃을 유닛에 전송합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutCurrent">
             <English>Current Loadout</English>
@@ -193,7 +193,7 @@
             <Chinesesimp>禁止转换黑名单中的 AI 单位/群组到 Headless 客户端上。此功能对玩家单位无用。</Chinesesimp>
             <Chinese>禁止轉換黑名單中的AI單位/群組到無頭客戶端上。此功能對玩家單位無用。</Chinese>
             <Italian>Disabilita il trasferimento di questa unità/gruppo di AI negli Headless Client. Non ha effetto sui giocatori.</Italian>
-            <Korean>이 AI 유닛 / 그룹을 헤드리스 클라이언트로 전송하지 못하도록합니다. 플레이어 유닛에는 영향을주지 않습니다.</Korean>
+            <Korean>이 AI 유닛/그룹을 헤드리스 클라이언트로 전송하지 못하도록 합니다. 플레이어 유닛에는 영향을 주지 않습니다.</Korean>
             <Polish>Wyłącza transfer tych jednostek/grup AI do Headless Clients. Bez efektu na jednostkach gracza.</Polish>
             <Russian>Отключает передачу управления этого юнита/группы Headless клиентам. Не влияет на юниты игроков.</Russian>
         </Key>
