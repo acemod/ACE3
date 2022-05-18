@@ -78,6 +78,8 @@ def main(argv):
     allDefinedStrings = list(sorted(set(allDefinedStrings)))
     allUsedStrings = list(sorted(set(allUsedStrings)))
 
+    if ("str_ace_tagging_name" in allUsedStrings): allUsedStrings.remove("str_ace_tagging_name") # Handle tagging macro
+
     print("-----------")
     countUnusedStrings = 0
     countUndefinedStrings = 0
