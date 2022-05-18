@@ -19,7 +19,7 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", ["_muzzle", _weapon], ["_ammoCount", ammo _muzzle _unit], ["_skipAnim", false]];
+params ["_unit", "_weapon", ["_muzzle", _weapon], ["_ammoCount", _unit ammo _muzzle ], ["_skipAnim", false]];
 TRACE_5("params",_unit,_weapon,_muzzle,_ammoCount,_skipAnim);
 
 // audiovisual effects
