@@ -18,7 +18,6 @@
  * Public: No
  */
 
-
 params ["_targetRange", "_directionOfFire", "_inclinationAngle", "_bank"];
 
 private _weaponInfo = [] call FUNC(ballistics_getData);

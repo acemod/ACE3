@@ -16,10 +16,9 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisEventHandler"]; // from missionEventHandler
-
 _thisArgs params ["_display"];
 if (isNull _display) exitWith {
-    systemChat "cleanup";
+    TRACE_1("cleaning up display",_thisEventHandler);
     GVAR(shown) = false;
     removeMissionEventHandler ["Draw3D", _thisEventHandler];
 };
@@ -38,8 +37,14 @@ _ctrlScreenObject ctrlShow true;
 BEGIN_COUNTER(draw);
 
 // Get common info
-((ace_player weaponDirection currentWeapon ace_player) call CBA_fnc_vect2Polar) params ["", "_weaponDir", "_weaponPitch"];
-private _weaponBank = call cba_optics_fnc_gunBank; // todo - prone-bipod tilting is special (screen doesn't tilt, but player does)
+private _weaponVec = ace_player weaponDirection currentWeapon ace_player;
+(_weaponVec call CBA_fnc_vect2Polar) params ["", "_weaponDir", "_weaponPitch"];
+private _weaponBank = call cba_optics_fnc_gunBank;
+private _viewBank = _weaponBank;
+if (isWeaponDeployed [player, true]) then {  // prone deploy tilting is special (screen doesn't tilt, but player does)
+    _weaponBank = (((vectorUp ace_player) vectorCrossProduct _weaponVec) call CBA_fnc_vect2Polar) # 2; // I think this is right?
+};
+
 (0.25 call CBA_fnc_getFov) params ["_fov", "_zoom"];
 private _fovMRAD = 1000 * _fov;  // Real MRAD (not mils)
 private _nonMagnified = _zoom < 1.1;
@@ -49,8 +54,8 @@ private _timeSinceLastInput = CBA_missionTime - (GVAR(data) getOrDefault ["lastI
 
 
 // Bank-tilt display objects
-_ctrlScopeObject ctrlSetModelDirAndUp [[0,1,0],[sin _weaponBank,0,cos _weaponBank]];
-_ctrlScreenObject ctrlSetModelDirAndUp [[0,1,0],[sin _weaponBank,0,cos _weaponBank]];
+_ctrlScopeObject ctrlSetModelDirAndUp [[0,1,0],[sin _viewBank,0,cos _viewBank]];
+_ctrlScreenObject ctrlSetModelDirAndUp [[0,1,0],[sin _viewBank,0,cos _viewBank]];
 
 
 // Scope - Handle etched reticle
@@ -92,8 +97,8 @@ _ctrl ctrlSetText _rangeInfo;
 // Screen - Show bearing info
 private _bearingInfo = call {
     private _bearingSetting = GVAR(data) getOrDefault ["bearing_show", 0];
-    if ((_bearingSetting == 2) && {_timeSinceLastInput > 3}) exitWith { "" };
-    if ((_bearingSetting == 1)) exitWith { format ["%1", floor (17.777777 * _weaponDir)]; }; // (6400 Mils)
+    if ((_bearingSetting == 2) && {_timeSinceLastInput > 2}) exitWith { "" };
+    if ((_bearingSetting == 1)) exitWith { format ["%1", floor (17.777777 * _weaponDir)]; }; // (6400 Mils, not MRAD)
     format ["%1°", floor _weaponDir];
 };
 private _ctrl = _display displayCtrl IDC_SCREEN_TEXT_UPPER_LEFT;
@@ -128,7 +133,6 @@ if (_range > 0 && {_size > 0}) then {
     BEGIN_COUNTER(ballistics_calculator);
     ([_range, _weaponDir, _weaponPitch, _weaponBank] call FUNC(ballistics_calculator)) params ["_elevMRAD", "_windMRAD"];
     END_COUNTER(ballistics_calculator);
-    // systemChat format ["MRAD %1 - %2", _elevMRAD, _windMRAD];
     _ctrl ctrlSetPosition [-_windMRAD / _fovMRAD + 0.5 - _size / 2,  + 4/3 * (_elevMRAD / _fovMRAD + 0.5 - _size/2), _size, _size*4/3];
     _ctrl ctrlCommit 0;
 } else {

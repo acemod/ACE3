@@ -44,7 +44,6 @@ call {
                 };
             };
             TRACE_1("Updating range",_range);
-            systemChat format ["new range %1", _range];
             GVAR(data) set ["range", _range];
         };
     };

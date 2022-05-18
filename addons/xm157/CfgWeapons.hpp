@@ -2,14 +2,14 @@ class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
 
-    class ace_xm157: ItemCore {
-        author="Pabst";
-        scope=2; // scope 1?
+    class ace_xm157_prototype: ItemCore {
+        author = ECSTRING(common,ACETeam);
+        scope = 1; // hidden
         displayName="XM157 Prototype";
         descriptionShort="";
         picture="\a3\Weapons_F\acc\Data\UI\icon_optic_tws_ca.paa";
         model="\A3\weapons_f\acc\acco_tws_F";
-        inertia=0.2;
+        inertia=0.3;
         
         class CBA_ScriptedOptic {
             bodyTexture = QPATHTOF(data\ace_vector_body_co.paa);

@@ -3,35 +3,36 @@
 
 GVAR(shown) = false;
 GVAR(data) = createHashMap;
-GVAR(data) set ["latitude", -1 * getNumber (configFile >> "CfgWorlds" >> worldName >> "latitude")];
+([worldName] call EFUNC(common,getMapData)) params ["_latitude"];
+GVAR(data) set ["latitude", _latitude];
 
 
 // Add Keybinds
-["ACE3 Equipment", QGVAR(range), ["Range", "##"], {
+["ACE3 Equipment", QGVAR(range), ["XM157 - Range"], {
     ["range", true] call FUNC(keyPress);
 }, {
     ["range", false] call FUNC(keyPress);
 }, [DIK_TAB, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Equipment", QGVAR(left), ["Left", "##"], {
+["ACE3 Equipment", QGVAR(left), ["XM157 - Right"], {
     ["right", true] call FUNC(keyPress);
 }, {
     ["right", false] call FUNC(keyPress);
 }, [DIK_END, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Equipment", QGVAR(right), ["Range", "##"], {
+["ACE3 Equipment", QGVAR(right), ["XM157 - Left"], {
     ["left", true] call FUNC(keyPress);
 }, {
     ["left", false] call FUNC(keyPress);
 }, [DIK_DELETE, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Equipment", QGVAR(up), ["Range", "##"], {
+["ACE3 Equipment", QGVAR(up), ["XM157 - Up"], {
     ["up", true] call FUNC(keyPress);
 }, {
     ["up", false] call FUNC(keyPress);
 }, [DIK_PGUP, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Equipment", QGVAR(down), ["Range", "##"], {
+["ACE3 Equipment", QGVAR(down), ["XM157 - down"], {
     ["down", true] call FUNC(keyPress);
 }, {
     ["down", false] call FUNC(keyPress);
@@ -39,8 +40,8 @@ GVAR(data) set ["latitude", -1 * getNumber (configFile >> "CfgWorlds" >> worldNa
 
 
 
-// Dev stuff
-player addPrimaryWeaponItem "ace_xm157";
+#ifdef ENABLE_QUICK_TESTING
+player addPrimaryWeaponItem "ace_xm157_prototype";
 [player] call CBA_fnc_addUnitTrackProjectiles;
 player addItem "ACE_ATragMX";
 player addItem "ace_rangecard";
@@ -62,3 +63,4 @@ player addItem "ace_rangecard";
 
     false
 }, {false}, [0x21, [false, false, false]], false] call CBA_fnc_addKeybind; // F Key
+#endif
