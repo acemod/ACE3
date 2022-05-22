@@ -14,8 +14,8 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/Licencja-GPLv2-red.svg?style=flat-square" alt="ACE3 Licencja">
     </a>
-    <a href="https://acemod.org/slack">
-        <img src="https://acemod.org/slackbadge.svg?label=Slack&style=flat-square" alt="ACE3 Slack">
+    <a href="https://acemod.org/discord">
+        <img src="https://acemod.org/discordbadge.svg?label=Discord&style=flat-square" alt="ACE3 Discord">
     </a>
     <a href="https://circleci.com/gh/acemod/ACE3">
         <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
