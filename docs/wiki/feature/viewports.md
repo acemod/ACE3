@@ -8,8 +8,8 @@ parent: wiki
 mod: ace
 version:
   major: 3
-  minor: x
-  patch: y
+  minor: 15
+  patch: 0
 ---
 
 ## 1. Overview

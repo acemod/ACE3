@@ -2,7 +2,7 @@
     <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
 </p>
 <p align="center">
-    <a href="https://github.com/acemod/ACE3/releases">
+    <a href="https://github.com/acemod/ACE3/releases/latest">
         <img src="https://img.shields.io/badge/Wersja-0.0.0-blue.svg?style=flat-square" alt="ACE3 Wersja">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
@@ -14,8 +14,8 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/Licencja-GPLv2-red.svg?style=flat-square" alt="ACE3 Licencja">
     </a>
-    <a href="https://acemod.org/slack">
-        <img src="https://acemod.org/slackbadge.svg?label=Slack&style=flat-square" alt="ACE3 Slack">
+    <a href="https://acemod.org/discord">
+        <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="ACE3 Discord">
     </a>
     <a href="https://circleci.com/gh/acemod/ACE3">
         <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">

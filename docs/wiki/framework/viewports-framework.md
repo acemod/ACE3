@@ -8,8 +8,8 @@ parent: wiki
 mod: ace
 version:
   major: 3
-  minor: x
-  patch: y
+  minor: 15
+  patch: 0
 ---
 
 ## 1. Config Values
@@ -18,10 +18,10 @@ Reference [ace_viewports_fnc_getViewports](https://github.com/acemod/ACE3/blob/m
 
 ```cpp
 class myVehicle {
-    class ace_viewports {            
+    class ace_viewports {
         class Template {
             // type [STRING] - Optional
-            type = ""; 
+            type = "";
              // camLocation [ARRAY or STRING] - Required
             camLocation = "memoryPointP1";
             camLocation[] = {1,2,3}; // model offset

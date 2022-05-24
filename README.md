@@ -18,8 +18,8 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 License">
     </a>
-    <a href="https://acemod.org/slack">
-        <img src="https://img.shields.io/badge/Slack-Join-darkviolet.svg?style=flat-square" alt="ACE3 Slack">
+    <a href="https://acemod.org/discord">
+        <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="ACE3 Discord">
     </a>
     <a href="https://circleci.com/gh/acemod/ACE3">
         <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
@@ -105,8 +105,8 @@ To help us test the latest development changes, download our master branch ([dir
 
 <table>
   <tr>
-    <td><a href="https://acemod.org/slack">Slack</a></td>
-    <td>We have a public Slack team that anyone can join. This is where all our developers and contributors hang out and where we make announcements</td>
+    <td><a href="https://acemod.org/discord">Discord</a></td>
+    <td>We have a public Discord server that anyone can join. This is where all our developers and contributors hang out and where we make announcements</td>
   </tr>
 
   <tr>
