@@ -25,6 +25,8 @@ if (count _loadout == 2) then {
     _loadout = _loadout select 0;
 };
 
+if (count _loadout != 10) exitWith {};
+
 if (isNil QGVAR(defaultLoadoutsList)) then {
     GVAR(defaultLoadoutsList) = [];
 };
