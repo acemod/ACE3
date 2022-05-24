@@ -6,6 +6,7 @@
         </Key>
         <Key ID="STR_ACE_Viewports_setting_enabled_description">
             <English>Allows crew to look through periscopes</English>
+            <Polish>Pozwala załogdze patrzeć przez peryskop</Polish>
         </Key>
     </Package>
 </Project>

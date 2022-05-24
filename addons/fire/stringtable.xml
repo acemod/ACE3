@@ -73,6 +73,7 @@
             <Chinesesimp>启用着火单位发出惨叫声</Chinesesimp>
             <Korean>불 붙은 유닛 비명</Korean>
             <German>Schreie von brennenden Einheiten aktivieren</German>
+            <Polish>Włącz krzyki podpalonych jednostek</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
             <English>Enables if units on fire will play the screaming sound</English>
@@ -80,6 +81,7 @@
             <Chinesesimp>启用着火的单位是否会发出惨叫声。</Chinesesimp>
             <Korean>불이 붙은 유닛이 소리를 지르게 합니다</Korean>
             <German>Aktiviert, ob brennende Einheiten den Schrei-Ton abspielen</German>
+            <Polish>Włącza, czy płonące jednostki będą odtwarzać dźwięk krzyku</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
             <English>Drop Weapons When on Fire</English>

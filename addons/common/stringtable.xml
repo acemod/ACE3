@@ -1320,6 +1320,7 @@
             <Chinesesimp>ACE 未分类</Chinesesimp>
             <Korean>ACE 무분류</Korean>
             <German>ACE Unkategorisiert</German>
+            <Polish>ACE Nieskategoryzowane</Polish>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1637,6 +1638,7 @@
         </Key>
         <Key ID="STR_ACE_Common_unloadWeapon">
             <English>Unload Weapon</English>
+            <Polish>Wyładuj Broń</Polish>
         </Key>
     </Package>
 </Project>

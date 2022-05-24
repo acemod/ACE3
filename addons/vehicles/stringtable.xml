@@ -22,6 +22,7 @@
             <English>Cruise control on</English>
             <German>Tempomat an</German>
             <Korean>속도 유지기 켜짐</Korean>
+            <Polish>Tempomat włączony</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -44,6 +45,7 @@
             <English>Cruise control off</English>
             <German>Tempomat aus</German>
             <Korean>속도 유지기 꺼짐</Korean>
+            <Polish>Tempomat wyłączony</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
@@ -82,6 +84,7 @@
             <English>Cruise Control</English>
             <German>Tempomat</German>
             <Korean>속도 유지기</Korean>
+            <Polish>Tempomat</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>

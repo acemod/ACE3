@@ -193,33 +193,43 @@
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_up">
             <English>Up Arrow</English>
+            <Polish>Strzałka w górę</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_down">
             <English>Down Arrow</English>
+            <Polish>Strzałka w dół</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_left">
             <English>Left Arrow</English>
+            <Polish>Strzałka w lewo</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_right">
             <English>Right Arrow</English>
+            <Polish>Strzałka w prawo</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_circle">
             <English>Circle</English>
+            <Polish>Okrąg</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_cross">
             <English>Cross</English>
+            <Polish>Krzyż</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_diamond">
             <English>Diamond</English>
+            <Polish>Diament</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_square">
             <English>Square</English>
+            <Polish>Kwadrat</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle">
             <English>Triangle</English>
+            <Polish>Trójkąt</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle_inverted">
             <English>Triangle Inverted</English>
+            <Polish>Odwrócony trójkąt</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>

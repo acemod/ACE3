@@ -1107,10 +1107,12 @@
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_DisplayName">
             <English>Sunflower Seeds</English>
             <German>Sonnenblumenkerne</German>
+            <Polish>Nasiona Słonecznika</Polish>
         </Key>
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Description">
             <English>Roasted And Salted</English>
             <German>Geröstet und Gesalzen</German>
+            <Polish>Pieczone i Solone</Polish>
         </Key>
     </Package>
 </Project>

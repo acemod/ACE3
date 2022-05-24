@@ -4,17 +4,21 @@
         <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
             <English>Marker Flags</English>
             <German>Markierungsfahnen</German>
+            <Polish>Chorągiewki</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
             <English>Place Anywhere</English>
             <German>Überall platzieren</German>
+            <Polish>Umieść w dowolnym miejscu</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
             <English>Place marker flag anywhere regardless of surface.</English>
+            <Polish>Umieść chorągiewkę w dowolnym miejscu, niezależnie od powierzchni.</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Flag</English>
             <German>Flagge platzieren</German>
+            <Polish>Postaw chorągiewkę</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick Up</English>
@@ -35,34 +39,42 @@
         <Key ID="STR_ACE_Marker_Flags_white">
             <English>Marker Flag (White)</English>
             <German>Markierungsfahne (Weiß)</German>
+            <Polish>Chorągiewka (Biała)</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_black">
             <English>Marker Flag (Black)</English>
             <German>Markierungsfahne (Schwarz)</German>
+            <Polish>Chorągiewka (Czarna)</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_red">
             <English>Marker Flag (Red)</English>
             <German>Markierungsfahne (Rot)</German>
+            <Polish>Chorągiewka (Czerwona)</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_green">
             <English>Marker Flag (Green)</English>
             <German>Markierungsfahne (Grün)</German>
+            <Polish>Chorągiewka (Zielona)</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_blue">
             <English>Marker Flag (Blue)</English>
             <German>Markierungsfahne (Blau)</German>
+            <Polish>Chorągiewka (Niebieska)</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_yellow">
             <English>Marker Flag (Yellow)</English>
             <German>Markierungsfahne (Gelb)</German>
+            <Polish>Chorągiewka (Żółta)</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_orange">
             <English>Marker Flag (Orange)</English>
             <German>Markierungsfahne (Orange)</German>
+            <Polish>Chorągiewka (Pomarańczowa)</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_purple">
             <English>Marker Flag (Purple)</English>
             <German>Markierungsfahne (Lila)</German>
+            <Polish>Chorągiewka (Fioletowa)</Polish>
         </Key>
     </Package>
 </Project>
