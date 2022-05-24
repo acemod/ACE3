@@ -35,16 +35,17 @@ if (count _similarLoadouts > 0) exitWith {
 
 // Update loadout info in profile / 3DEN and list namespaces
 private _loadoutToRename = (_data select {_x select 0 == _loadoutName}) select 0;
-(_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
+(_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
 _data set [_data find _loadoutToRename, [_editBoxContent, (_loadoutToRename select 1)]];
 _contentPanelCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), nil];
-_contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]];
+_contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_extendedLoadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]];
 
 // Add new row
 _contentPanelCtrl lnbDeleteRow _curSelRow;
 private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
 
+_extendedLoadout params ["_loadout"];
 ADD_LOADOUTS_LIST_PICTURES
 
 if (_nullItemsAmount > 0) then {

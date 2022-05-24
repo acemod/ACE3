@@ -289,7 +289,9 @@ All are local.
 | ace_arsenal_leftPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
 | ace_arsenal_rightPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
 | ace_arsenal_onLoadoutSave | Loadout index (SCALAR), [loadout name (STRING), loadout data (ARRAY)] |
+| ace_arsenal_onLoadoutSaveExtended | Loadout index (SCALAR), [loadout name (STRING), CBA extended loadout data (ARRAY)] |
 | ace_arsenal_onLoadoutLoad | loadout data (ARRAY), loadout name (STRING) |
+| ace_arsenal_onLoadoutLoadExtended | CBA extended loadout data (ARRAY), loadout name (STRING) |
 | ace_arsenal_onLoadoutDelete | loadout name (STRING) |
 |  ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL),, [loadout author (STRING), loadout name (STRING), loadout data (ARRAY)]  |
 |  ace_arsenal_loadoutUnshared | Loadouts list listnBox control (CONTROL), loadout name (STRING) |
