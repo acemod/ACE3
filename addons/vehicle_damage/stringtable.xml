@@ -44,7 +44,7 @@
             <German>Entfernt die gesamte Munition nach dem Durchzünden der Munition eines Fahrzeuges.</German>
             <Polish>Usuwa całą amunicję z pojazdu po samozapłonie</Polish>
             <Chinesesimp>殉爆后移除所有车辆弹药</Chinesesimp>
-            <Korean>쿡-오프 현상 후 차량에서 모든 탄약을 제거합니다.</Korean>
+            <Korean>쿡오프 현상 후 차량에서 모든 탄약을 제거합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_enable">
             <English>Enable/Disable Ammo Removal During Cook-Off</English>
@@ -53,7 +53,7 @@
             <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
             <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
             <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
-            <Korean>쿡-오프시 탄약 제거 활성화/비활성화</Korean>
+            <Korean>쿡오프시 탄약 제거 활성화/비활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>

@@ -30,7 +30,7 @@
             <Spanish>Fijar la cantidad de daño que un jugador puede recivir antes de caer inconsciente</Spanish>
             <German>Legt die Höhe des Schadens fest, den ein Spieler erhalten kann, bevor er ohnmächtig wird (oder stirbt, wenn "Summe aller Traumata" aktiviert ist).</German>
             <Turkish>Bir oyuncunun bayılmadan önce alabileceği hasar miktarını belirler.</Turkish>
-            <Korean>플레이어가 치명상으로 인해 기절까지 가기전의 한계점을 정합니다. ("피해량 중첩"이 켜져있으면 죽기도 합니다)</Korean>
+            <Korean>플레이어가 치명상으로 인해 기절까지 가기 전의 한계점을 정합니다. ("피해량 중첩"이 켜져있으면 죽기도 합니다)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
@@ -60,7 +60,7 @@
             <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności (oraz śmierci gdy "Suma urazów" jest włączona).</Polish>
             <Spanish>Fijar la cantidad de daño que la IA puede recivir antes de caer inconsciente</Spanish>
             <German>Legt die Höhe des Schadens fest, den eine KI-Einheit erhalten kann, bevor sie ohnmächtig wird (oder stirbt, wenn "Summe aller Traumata" aktiviert ist).</German>
-            <Korean>인공지능이 치명상으로 인해 기절까지 가기전의 한계점을 정합니다. ("피해량 중첩"이 켜져있으면 죽기도 합니다)</Korean>
+            <Korean>인공지능이 치명상으로 인해 기절까지 가기 전의 한계점을 정합니다. ("피해량 중첩"이 켜져있으면 죽기도 합니다)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
@@ -636,7 +636,7 @@
             <Spanish>Determina qué daño puede ser fatal</Spanish>
             <Turkish>Hangi hasarın ölümcül olabileceğini belirler</Turkish>
             <German>Bestimmt welcher Schaden tödlich ist.</German>
-            <Korean>어떤 피해가 치명상으로 작용할지 정합니다</Korean>
+            <Korean>어떤 피해가 치명상으로 작용할 지 정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
@@ -749,7 +749,7 @@
             <Turkish>Bilinçsiz duruma geçmeden önce bir birimin alabileceği hasar miktarını ayarlar. (Görev varsayılanı için 0)</Turkish>
             <Spanish>Determina la cantidad de daño que puede recibir una unidad antes de quedar inconsciente (0 para predeterminado de misión)</Spanish>
             <Chinesesimp>设定一个单位在昏迷前所能承受的伤害量。（任务默认为0）</Chinesesimp>
-            <Korean>이 유닛이 얼마나 많은 피해를 받아야 기절할지 정합니다. (0은 미션 기본 설정을 사용합니다)</Korean>
+            <Korean>이 유닛이 얼마나 많은 피해를 받아야 기절할 지 정합니다. (0은 미션 기본 설정을 사용합니다)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
             <English>Pain Unconscious Chance</English>

@@ -19,6 +19,7 @@ class CfgWeapons {
             reticleSafezoneSize = 1;
             hidePeripheralVision = 1;
             opticsPPEffects[] = {QGVAR(OpticsRadBlur1)};
+            disableTilt = 1;
         };
         weaponInfoType = "ACE_RscOptics_vector";
     };

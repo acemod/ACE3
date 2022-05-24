@@ -58,6 +58,10 @@
 - `ace_interaction`
 {% endif %}
 
+{% if include.component == "casings" %}
+- `ace_common`
+{% endif %}
+
 {% if include.component == "chemlights" %}
 - `ace_common`
 {% endif %}
@@ -264,6 +268,10 @@
 
 {% if include.component == "maptools" %}
 - `ace_interaction`
+{% endif %}
+
+{% if include.component == "marker_flags" %}
+- `ace_interact_menu`
 {% endif %}
 
 {% if include.component == "markers" %}
@@ -538,6 +546,10 @@
 {% endif %}
 
 {% if include.component == "viewdistance" %}
+- `ace_common`
+{% endif %}
+
+{% if include.component == "viewports" %}
 - `ace_common`
 {% endif %}
 

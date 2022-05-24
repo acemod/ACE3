@@ -40,6 +40,7 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has started (local on the _caller)
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action is completed (local on the _caller)
 |`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has been interrupted (local on the _caller)
+|`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit)
 
 ### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction

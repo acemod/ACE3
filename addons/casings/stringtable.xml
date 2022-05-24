@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Casings">
+        <Key ID="STR_ACE_Casings_Settings_DisplayName">
+            <English>ACE Casings</English>
+        </Key>
+        <Key ID="STR_ACE_Casings_displayName">
+            <English>Casings Enabled</English>
+        </Key>
+        <Key ID="STR_ACE_Casings_description">
+            <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
+        </Key>
+        <Key ID="STR_ACE_Casings_maxCasings_displayName">
+            <English>Maximum casings</English>
+        </Key>
+        <Key ID="STR_ACE_Casings_maxCasings_description">
+            <English>Maximum amount of casings to display</English>
+        </Key>
+    </Package>
+</Project>

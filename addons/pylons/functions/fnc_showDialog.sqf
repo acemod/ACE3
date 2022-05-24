@@ -93,6 +93,8 @@ GVAR(comboBoxes) = [];
     {
         _combo lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayName");
         _combo lbSetData [_forEachIndex + 1, _x];
+        private _description = getText (configFile >> "CfgMagazines" >> _x >> "descriptionShort");
+        _combo lbSetTooltip [_forEachIndex + 1, _description];
 
         if (_x == _mag) then {
             _index = _forEachIndex + 1;
