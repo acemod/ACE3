@@ -10,7 +10,7 @@
  * CBA Extended Loadout <ARRAY>
  *
  * Example:
- * [_box, player] call ace_arsenal_fnc_openBox
+ * [_unit] call ace_arsenal_fnc_getLoadout
  *
  * Public: Yes
 */
