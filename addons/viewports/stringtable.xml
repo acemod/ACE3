@@ -3,9 +3,11 @@
     <Package name="Viewports">
         <Key ID="STR_ACE_Viewports_addon_displayname">
             <English>Viewports</English>
+            <Japanese>ビューポート</Japanese>
         </Key>
         <Key ID="STR_ACE_Viewports_setting_enabled_description">
             <English>Allows crew to look through periscopes</English>
+            <Japanese>乗組員がペリスコープを通して外を見ることができます</Japanese>
         </Key>
     </Package>
 </Project>

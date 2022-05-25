@@ -22,6 +22,7 @@
             <English>Cruise control on</English>
             <German>Tempomat an</German>
             <Korean>속도 유지기 켜짐</Korean>
+            <Japanese>クルーズコントロールを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -44,12 +45,13 @@
             <English>Cruise control off</English>
             <German>Tempomat aus</German>
             <Korean>속도 유지기 꺼짐</Korean>
+            <Japanese>クルーズコントロールを無効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
             <German>Geschwindigkeitsbegrenzung</German>
             <Italian>Limite di velocità</Italian>
-            <Japanese>速度制限</Japanese>
+            <Japanese>制限速度</Japanese>
             <Polish>Ograniczenie prędkości</Polish>
             <Russian>Ограничение скорости</Russian>
             <Portuguese>Limite de Velocidade</Portuguese>
@@ -82,12 +84,13 @@
             <English>Cruise Control</English>
             <German>Tempomat</German>
             <Korean>속도 유지기</Korean>
+            <Japanese>クルーズコントロール</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>
             <German>Maximale Geschwindigkeit erhöhen</German>
             <Italian>Aumenta limite di velocità</Italian>
-            <Japanese>速度制限を増やす</Japanese>
+            <Japanese>制限速度を増やす</Japanese>
             <Polish>Zwiększ ograniczenie prędkości</Polish>
             <Russian>Увеличить ограничение скорости</Russian>
             <Portuguese>Aumentar Limite de Velocidade</Portuguese>
@@ -103,7 +106,7 @@
             <English>Decrease Speed Limit</English>
             <German>Maximale Geschwindigkeit verringern</German>
             <Italian>Diminuisce limite di velocità</Italian>
-            <Japanese>速度制限を減らす</Japanese>
+            <Japanese>制限速度を減らす</Japanese>
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
             <Russian>Уменьшить ограничение скорости</Russian>
             <Portuguese>Diminuir Limite de Velocidade</Portuguese>
@@ -182,7 +185,7 @@
             <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
             <Polish>Przeskok limitera prędkości</Polish>
             <French>Pas du limiteur de vitesse</French>
-            <Japanese>設定速度の増減量</Japanese>
+            <Japanese>制限速度の増減量</Japanese>
             <Czech>Krokování omezovače rychlosti</Czech>
             <Russian>Шаг ограничителя скорости</Russian>
             <Spanish>Salto de limitador de vehículo</Spanish>

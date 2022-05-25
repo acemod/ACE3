@@ -87,9 +87,11 @@
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>
+            <Japanese>地図上にレーザーを表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap_tooltip">
             <English>Active laser designator's position will be drawn on the map</English>
+            <Japanese>アクティブな指示レーザーの位置が地図上に描画されます</Japanese>
         </Key>
     </Package>
 </Project>

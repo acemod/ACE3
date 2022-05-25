@@ -12,7 +12,7 @@
             <Italian>Scala Telescopica</Italian>
             <Hungarian>Teleszkopikus létra</Hungarian>
             <Portuguese>Escada telescópica</Portuguese>
-            <Japanese>タクティカル ラダー</Japanese>
+            <Japanese>伸縮はしご</Japanese>
             <Korean>접이식 사다리</Korean>
             <Chinesesimp>伸缩梯子</Chinesesimp>
             <Chinese>伸縮梯子</Chinese>
@@ -29,7 +29,7 @@
             <Italian>Piazza scala</Italian>
             <Hungarian>Létra lerakása</Hungarian>
             <Portuguese>Implantar escada</Portuguese>
-            <Japanese>ラダーを設置</Japanese>
+            <Japanese>はしごを設置</Japanese>
             <Korean>사다리 배치</Korean>
             <Chinesesimp>部署梯子</Chinesesimp>
             <Chinese>佈署梯子</Chinese>
@@ -46,7 +46,7 @@
             <Italian>Lascia scala</Italian>
             <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
-            <Japanese>ラダーを落とす</Japanese>
+            <Japanese>はしごを落とす</Japanese>
             <Korean>사다리 내려놓기</Korean>
             <Chinesesimp>降下梯子</Chinesesimp>
             <Chinese>降下梯子</Chinese>
@@ -94,7 +94,7 @@
             <Italian>Posiziona scala</Italian>
             <Hungarian>Létra elhelyezése</Hungarian>
             <Portuguese>Posicionar escada</Portuguese>
-            <Japanese>ラダーの位置</Japanese>
+            <Japanese>はしごの位置</Japanese>
             <Korean>사다리 설치</Korean>
             <Chinesesimp>梯子位置</Chinesesimp>
             <Chinese>梯子位置</Chinese>
@@ -111,7 +111,7 @@
             <Italian>Prendi scala</Italian>
             <Hungarian>Létra felvétele</Hungarian>
             <Portuguese>Pegar escada</Portuguese>
-            <Japanese>ラダーを拾う</Japanese>
+            <Japanese>はしごを拾う</Japanese>
             <Korean>사다리 줍기</Korean>
             <Chinesesimp>捡起梯子</Chinesesimp>
             <Chinese>撿起梯子</Chinese>

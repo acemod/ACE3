@@ -72,24 +72,28 @@
             <Chinesesimp>冷却系数</Chinesesimp>
             <Korean>냉각 계수</Korean>
             <German>Abkühlungskoeffizienten</German>
+            <Japanese>冷却係数</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
             <Chinesesimp>武器冷却速度系数。\n数值越高，冷却速度越快。</Chinesesimp>
             <Korean>무기가 차가워지는 정도를 정합니다.\n높은 계수는 무기가 빨리 차가워지는데 관여합니다.</Korean>
             <German>Koeffizient, der angibt, wie schnell eine Waffe abkühlt.\nEin höherer Wert erhöht die Abkühlgeschwindigkeit.</German>
+            <Japanese>武器の冷却速度の係数。\n値を大きくすると冷却速度が速くなります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
             <English>Suppressor Coefficient</English>
             <Chinesesimp>消音器系数</Chinesesimp>
             <Korean>소음기 계수</Korean>
             <German>Schalldämpfer-Koeffizient</German>
+            <Japanese>サプレッサー係数</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
             <Chinesesimp>附加了消音器后，产生的额外热量系数。\n数值越高，热量越高，0意味着消音器不产生额外热量。</Chinesesimp>
             <Korean>소음기 장착 시 만들어 지는 열에 대한 계수를 적용합니다.\n높을 수록 온도가 높아집니다, 0으로 설정 시 추가적인 열을 얻지 않습니다.</Korean>
             <German>Koeffizient, der angibt, wie viel zusätzliche Wärme durch das Anbringen eines Schalldämpfers hinzugefügt wird. Ein höherer Wert erhöht die Menge an Wärme, 0 bedeutet, dass keine zusätzliche Wärme durch den Schalldämpfer hinzukommt.</German>
+            <Japanese>サプレッサーを取り付けることで追加される熱量の係数。\n値が大きいほど熱が増加し、0はサプレッサーからの追加の熱がないことを意味します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>

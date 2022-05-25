@@ -1521,7 +1521,7 @@
             <Italian>Bendaggio compressivo</Italian>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz (Tlakový)</Czech>
-            <Japanese>弾性包帯</Japanese>
+            <Japanese>包帯 (弾性)</Japanese>
             <Korean>붕대 (거즈)</Korean>
             <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Chinese>繃帶（包紮型）</Chinese>
@@ -2148,7 +2148,7 @@
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
-            <Japanese>緊急圧迫止血包帯 (クイッククロット)</Japanese>
+            <Japanese>包帯 (クイッククロット)</Japanese>
             <Korean>붕대 (퀵 클롯)</Korean>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Chinese>繃帶 (止血粉)</Chinese>
@@ -2807,7 +2807,7 @@
             <Hungarian>Zárókötszer</Hungarian>
             <Italian>Bendaggio rapido</Italian>
             <Portuguese>Curativo de Campo</Portuguese>
-            <Japanese>緊急圧迫包帯を巻く</Japanese>
+            <Japanese>包帯を巻く (緊急圧迫)</Japanese>
             <Korean>붕대 (기본)</Korean>
             <Chinesesimp>绷带（基础型）</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
@@ -2823,7 +2823,7 @@
             <French>Bandage compressif</French>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz Tlakový</Czech>
-            <Japanese>弾性包帯を巻く</Japanese>
+            <Japanese>包帯を巻く (弾性)</Japanese>
             <Korean>붕대 (거즈)</Korean>
             <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Chinese>包紮繃帶</Chinese>
@@ -2840,7 +2840,7 @@
             <Hungarian>Rögzitő kötszer</Hungarian>
             <Italian>Bendaggio elastico</Italian>
             <Portuguese>Bandagem Elástica</Portuguese>
-            <Japanese>伸縮包帯を巻く</Japanese>
+            <Japanese>包帯を巻く (伸縮)</Japanese>
             <Korean>붕대 (압박)</Korean>
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
@@ -2857,7 +2857,7 @@
             <Hungarian>QuikClot</Hungarian>
             <Italian>QuikClot (polvere emostatica)</Italian>
             <Portuguese>QuikClot</Portuguese>
-            <Japanese>クイッククロットを巻く</Japanese>
+            <Japanese>包帯を巻く (クイッククロット)</Japanese>
             <Korean>붕대 (퀵 클롯)</Korean>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Chinese>止血粉</Chinese>
