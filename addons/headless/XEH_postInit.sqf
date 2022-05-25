@@ -32,6 +32,7 @@
                             breakOut QGVAR(applyLoadout);
                         };
                     };
+                    // Config default loadout
                     _unit setUnitLoadout (typeOf _unit);
                 };
             }] call CBA_fnc_addClassEventHandler;
