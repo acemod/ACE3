@@ -10,17 +10,17 @@ mod: ace
 version:
   major: 3
   minor: 15
-  patch: 0
+  patch: 1
 ---
 
 ## 1. Overview
-Allows a tank commander to re-aim the main turret or to aim their turret at the what the main turret is looking at
+Allows a gunner and commander to observe and remote control the other's weapon to their own target
 
 ## 2. Usage
 
-### 2.1 Commander Override
-- Place the crosshair on the enemy vehicle.
+### 2.1 Observe other turret
 - Press <kbd>Q</kbd>
 
-### 2.2 Commander Observe
+### 2.2 Override other turret
+- Place the crosshair on the enemy vehicle.
 - Press <kbd>E</kbd>

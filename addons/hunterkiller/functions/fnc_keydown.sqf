@@ -15,33 +15,31 @@
  * Public: No
  */
 
-if ((!GVAR(isMaster)) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {
+if ((GVAR(mode) == MODE_NO_ACTIONS) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {
     false
 };
 
-params ["_isOverride"];
+params ["_mode"];
+if ((_mode == "observe") && {!(GVAR(mode) in [MODE_OBSERVE, MODE_OBSERVE_AND_OVERRIDE])}) exitWith { false };
+if ((_mode == "override") && {!(GVAR(mode) in [MODE_OVERRIDE, MODE_OBSERVE_AND_OVERRIDE])}) exitWith { false };
 
-private _vehicle = vehicle ace_player;
-private _config = configOf _vehicle;
-private _masterTurret = [_config >> QGVAR(masterTurret), "ARRAY", [0, 0]] call CBA_fnc_getConfigEntry;
-private _puppetTurret = [_config >> QGVAR(puppetTurret), "ARRAY", [0]] call CBA_fnc_getConfigEntry;
-
+private _vehicle = vehicle ACE_player;
+private _playerTurret = _vehicle unitTurret ACE_player;
 
 private _eyePos = eyePos _vehicle;
-private _lookDir = if (_isOverride) then {
-    // CBA_fnc_turretDir has problems on some commander turrets, we can just use eyeDirection to get high precision turret dir
-    // The accuracy is higher here because the turret is local to us
-    eyeDirection _vehicle // assume masterTurret is the obsTurret
+private _lookDir = if (_mode == "override") then {
+    TRACE_2("looking at",_mode,_playerTurret);
+    ([1] + ([_vehicle, _playerTurret] call CBA_fnc_turretDir)) call CBA_fnc_polar2vect
 } else {
-    ([1] + ([_vehicle, _puppetTurret] call CBA_fnc_turretDir)) call CBA_fnc_polar2vect
+    TRACE_2("looking at",_mode,GVAR(targetTurret));
+    ([1] + ([_vehicle, GVAR(targetTurret)] call CBA_fnc_turretDir)) call CBA_fnc_polar2vect
 };
 
 private _lookPoint = _eyePos vectorAdd (_lookDir vectorMultiply 5000);
-
-if (_isOverride) then {
-    [QGVAR(slew), [_vehicle, _puppetTurret, _lookPoint, _isOverride], _vehicle, _puppetTurret] call CBA_fnc_turretEvent;
+if (_mode == "override") then {
+    [QGVAR(slew), [_vehicle, GVAR(targetTurret), _lookPoint, true], _vehicle, GVAR(targetTurret)] call CBA_fnc_turretEvent;
 } else {
-    [QGVAR(slew), [_vehicle, _masterTurret, _lookPoint, _isOverride]] call CBA_fnc_localEvent; // we know it's local
+    [QGVAR(slew), [_vehicle, _playerTurret, _lookPoint, false]] call CBA_fnc_localEvent; // we know it's local
 };
 
 playSound "ACE_Sound_Click";

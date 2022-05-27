@@ -24,7 +24,7 @@ TRACE_4("slew",_vehicle,_turret,_posASL,_isOverride);
 _vehicle lockCameraTo [_posASL, _turret, true];
 
 if (hasInterface && {(_vehicle turretUnit _turret) isEqualTo ace_player}) then {
-    private _displayText = if (_isOverride) then { LLSTRING(commanderOverride) } else { LLSTRING(commanderObserve) };
+    private _displayText = if (_isOverride) then { LLSTRING(override) } else { LLSTRING(observe) };
     QGVAR(text) cutText [format ["<br/><br/><br/><br/><br/><t color='#ff0000' size='1.25'>[%1]</t>", _displayText], "PLAIN", -1, false, true];
     [{
         QGVAR(text) cutText ["", "PLAIN"];

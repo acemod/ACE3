@@ -4,17 +4,17 @@
         <Key ID="STR_ACE_HunterKiller_displayName">
             <English>Hunter Killer</English>
         </Key>
-        <Key ID="STR_ACE_HunterKiller_commanderOverride">
-            <English>Commander Override</English>
+        <Key ID="STR_ACE_HunterKiller_override">
+            <English>Override</English>
         </Key>
-        <Key ID="STR_ACE_HunterKiller_commanderOverride_description">
-            <English>From command turret slew gunner turret onto your target</English>
+        <Key ID="STR_ACE_HunterKiller_override_description">
+            <English>Force other turret to slew onto your viewpoint</English>
         </Key>
-        <Key ID="STR_ACE_HunterKiller_commanderObserve">
-            <English>Commander Observe</English>
+        <Key ID="STR_ACE_HunterKiller_observe">
+            <English>Observe</English>
         </Key>
-        <Key ID="STR_ACE_HunterKiller_commanderObserve_description">
-            <English>From command turret slews your turret onto gunner's target</English>
+        <Key ID="STR_ACE_HunterKiller_observe_description">
+            <English>Slew your turret onto other turret's viewpoint</English>
         </Key>
     </Package>
 </Project>
