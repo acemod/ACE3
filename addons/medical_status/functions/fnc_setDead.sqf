@@ -26,6 +26,12 @@ _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
 // Send a local event before death
 [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
 
+// Update the state machine if necessary (forced respawn, scripted death, etc)
+private _unitState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
+if (_unitState isNotEqualTo "Dead") then {
+    [_unit, EGVAR(medical,STATE_MACHINE), _unitState, "Dead"] call CBA_statemachine_fnc_manualTransition;
+};
+
 // (#8803) Reenable damage if disabled to prevent having live units in dead state
 // Keep this after death event for compatibility with third party hooks
 if !(isDamageAllowed _unit) then {

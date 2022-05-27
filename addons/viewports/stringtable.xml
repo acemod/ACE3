@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Viewports">
+        <Key ID="STR_ACE_Viewports_addon_displayname">
+            <English>Viewports</English>
+        </Key>
+        <Key ID="STR_ACE_Viewports_setting_enabled_description">
+            <English>Allows crew to look through periscopes</English>
+        </Key>
+    </Package>
+</Project>

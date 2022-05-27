@@ -114,7 +114,7 @@
             <Korean>%1 연결</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
-            <English>Advanced assembly</English>
+            <English>Advanced Assembly</English>
             <German>Erweiterter Zusammenbau</German>
             <Portuguese>Montagem Avançada</Portuguese>
             <French>Assemblage avancé</French>
@@ -129,7 +129,7 @@
             <Korean>고급 조립</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
-            <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
+            <English>Use ACE for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
             <German>Benutze ACE um unterstützte statische Waffen zu montieren/demontieren. Geladene Munition ist auf ein einzelnes Magazin reduziert.</German>
             <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas. Munição carregada é reduzida para um único carregador.</Portuguese>
             <French>Utilise ACE pour l'assemblage/le désassemblage des armes statiques supportées.\nLes munitions chargées sont réduites à un seul chargeur.</French>
@@ -144,7 +144,7 @@
             <Korean>ACE의 조립/분해 기능을 사용하여 공용화기를 다룹니다. 장전된 탄은 한 탄창으로 제한됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
-            <English>Save extra ammo</English>
+            <English>Save Extra Ammo</English>
             <German>Spare extra Munition</German>
             <Portuguese>Economizar munição extra</Portuguese>
             <French>Conserver le surplus de munitions</French>
@@ -172,6 +172,22 @@
             <Spanish>Almacenar cargadores extra junto al arma estática</Spanish>
             <Russian>Хранить дополнительные магазины рядом со статическим оружием</Russian>
             <Korean>공용화기 옆에 남은 탄들을 저장합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_CSW_handleExtraMagazinesType_displayName">
+            <English>Ammo Storage</English>
+            <German>Munitionslager</German>
+        </Key>
+        <Key ID="STR_ACE_CSW_handleExtraMagazinesType_description">
+            <English>Determines whether extra magazines are stored on the ground or inside an ammo box</English>
+            <German>Legt fest, ob zusätzliche Magazine auf dem Boden oder in einer Munitionskiste aufbewahrt werden</German>
+        </Key>
+        <Key ID="STR_ACE_CSW_handleExtraMagazinesType_weaponHolder">
+            <English>Ground</English>
+            <German>Boden</German>
+        </Key>
+        <Key ID="STR_ACE_CSW_handleExtraMagazinesType_ammoBox">
+            <English>Ammo Box</English>
+            <German>Munitionskiste</German>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
@@ -234,7 +250,7 @@
             <Korean>공용화기의 조립 및 재장전 속도를에 관여하는 계수입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_displayName">
-            <English>Drag tripods after deploying</English>
+            <English>Drag Tripods after Deploying</English>
             <German>Ziehe Dreibeine nach Aufbau</German>
             <Portuguese>Arrastar tripés após montar</Portuguese>
             <French>Glisser le trépied après déploiement</French>
@@ -622,7 +638,7 @@
             <English>M3 Tripod</English>
             <Spanish>Trípode M3</Spanish>
             <German>M3 Dreibein</German>
-            <Portuguese>M3 Tripé</Portuguese>
+            <Portuguese>Tripé M3</Portuguese>
             <French>Trépied M3</French>
             <Japanese>M3 三脚</Japanese>
             <Chinese>M3 三腳架</Chinese>
@@ -750,7 +766,7 @@
             <English>[CSW] M3 Deployable Tripod</English>
             <Spanish>[CSW] Trípode desplegable M3</Spanish>
             <German>[CSW] M3 aufstellbares Dreibein</German>
-            <Portuguese>[CSW] M3 Tripe Ajustável</Portuguese>
+            <Portuguese>[CSW] Tripe Ajustável M3</Portuguese>
             <French>[CSW] M3 Trépied déployable</French>
             <Japanese>[CSW] M3 設置型三脚</Japanese>
             <Chinese>[CSW] M3 部屬型三腳架</Chinese>

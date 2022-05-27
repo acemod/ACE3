@@ -17,7 +17,7 @@
 
 visibleMap &&
 {alive ACE_player} &&
-{getText (configFile >> "CfgWeapons" >> (assignedItems ACE_player param [0, ""]) >> "simulation") == "ItemMap"} &&
 {"ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems))} &&
 {!GVAR(mapTool_isDragging)} &&
-{!GVAR(mapTool_isRotating)}
+{!GVAR(mapTool_isRotating)} &&
+{getUnitLoadout ACE_player param [9, []] param [0, ""] != ""}

@@ -111,6 +111,18 @@ class EXPLOSIVES_PLACE(m112): EGVAR(explosives,Place) {
     model = "\vn\weapons_f_vietnam\mines\m112\vn_mine_m112_mag";
 };
 
+// Spiked ammo box
+class EXPLOSIVES_PLACE(ammobox_range): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_AMMOBOX_RANGE_MAG_DN";
+    model = "\vn\objects_f_vietnam\supply\a2_ammo\pavn\vn_pavn_ammo";
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "[0, 0, 0.3]";
+        };
+    };
+};
+
 // Punji large
 class EXPLOSIVES_PLACE(punji_01): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_PUNJI_01_MAG_DN";

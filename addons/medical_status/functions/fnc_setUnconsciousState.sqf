@@ -9,7 +9,7 @@
  * 1: Set unconscious <BOOL>
  *
  * Return Value:
- * Success <BOOL>
+ * None
  *
  * Example:
  * [player, true] call ace_medical_status_fnc_setUnconsciousState
@@ -21,7 +21,7 @@ params ["_unit", "_active"];
 TRACE_2("setUnconsciousState",_unit,_active);
 
 // No change to make
-if (_active isEqualTo IS_UNCONSCIOUS(_unit)) exitWith { TRACE_2("no change",_active,IS_UNCONSCIOUS(_unit)); };
+if (_active isEqualTo IS_UNCONSCIOUS(_unit) || {!alive _unit}) exitWith { TRACE_2("no change",_active,IS_UNCONSCIOUS(_unit)); };
 
 _unit setVariable [VAR_UNCON, _active, true];
 
@@ -33,6 +33,9 @@ _unit setVariable [VAR_UNCON, _active, true];
 
 // Block radio on unconsciousness for compatibility with captive module
 [_unit, "blockRadio", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
+
+// Block speaking on unconsciousness
+[_unit, "blockSpeaking", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
 
 if (_active) then {
     // Don't bother setting this if not used

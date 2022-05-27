@@ -47,7 +47,7 @@ if ((_house animationPhase (_animations select 0) <= 0) && {_house getVariable [
 
 // Add handle on carrier
 if (typeOf _house == "Land_Carrier_01_island_01_F") then {
-    private _handle = format ["door_handle_%1_rot_1", (_animations select 0) select [5, 1]];
+    private _handle = format ["door_handle_%1_rotate_1", (_animations select 0) select [5, 1]];
     TRACE_1("carrier handle",_handle);
     _animations pushBack _handle;
 };

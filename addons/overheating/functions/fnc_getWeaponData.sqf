@@ -81,7 +81,10 @@ private _reloadTime = getNumber (configfile >> "CfgWeapons" >> _weapon >> (_mode
 
 private _closedBolt = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(closedBolt));
 
-private _barrelMass = METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+private _barrelMass = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(barrelMass));
+if (_barrelMass <= 0) then {
+    _barrelMass = METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+};
 
 // Cache the values
 _weaponData = [_dispersion, _slowdownFactor, _jamChance, _modes, _muzzle, _reloadTime, _closedBolt, _barrelMass];

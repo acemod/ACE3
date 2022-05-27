@@ -115,7 +115,7 @@
             <Russian>Только по нажатию клавиши</Russian>
             <Italian>Solo quando Premi Tasto</Italian>
             <Japanese>キー押下のみ</Japanese>
-            <Korean>키를 누를경우만</Korean>
+            <Korean>키를 누를 경우만</Korean>
             <Chinesesimp>只有按按键时</Chinesesimp>
             <Chinese>只有按按鍵時</Chinese>
             <Turkish>Yalnızca Tuşa Basmada</Turkish>
@@ -132,7 +132,7 @@
             <Russian>Под курсором или по нажатию клавиши</Russian>
             <Italian>Solo su Cursore e quando Premi Tasto</Italian>
             <Japanese>カーソルとキー押下のみ</Japanese>
-            <Korean>커서와 키를 누를경우만</Korean>
+            <Korean>커서와 키를 누를 경우만</Korean>
             <Chinesesimp>只有在准心指到和按按键时</Chinesesimp>
             <Chinese>只有在準心指到和按按鍵時</Chinese>
             <Turkish>Yalnızca İmleç ve Tuşa Basıldığında</Turkish>
@@ -199,7 +199,7 @@
             <Russian>Показывать информацию об экипаже техники, или по-умолчанию, позволяет игрокам выбрать свою настройку. По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra informazioni sull'equipaggio del veicolo, oppure consenti di default di lasciare che siano i giocatori a scegliere. Default: Non Forzare</Italian>
             <Japanese>車両の乗員を表示します。標準ではプレイヤ各々が選べられます。標準: 強制しない</Japanese>
-            <Korean>승무원 정보를 표시하거나 플레이어가 직접 고르게 냅둡니다. 기본설정: 강제하지 않음</Korean>
+            <Korean>승무원 정보를 표시하거나 플레이어가 직접 고르게 놔둡니다. 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示载具成员信息。在预设的情况下，系统允许玩家自己决定开关此信息。预设：不显示</Chinesesimp>
             <Chinese>顯示載具成員訊息。在預設的情況下，系統允許玩家自己決定開關此訊息。預設: 不顯示</Chinese>
             <Turkish>Araç mürettebat bilgilerini gösterin veya varsayılan olarak oyuncuların kendi başlarına seçmelerine izin verir. Varsayılan: Zorlama</Turkish>
@@ -266,7 +266,7 @@
             <French>Affiche les noms pour les commandants de véhicule (uniquement si le client a activé l'affichage des noms).</French>
             <Italian>Mostra il nome sul cursore per il comandante del veicolo (solo se il client ha le Etichette Nomi attive) Default: No</Italian>
             <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準: 無効</Japanese>
-            <Korean>차량의 사령관의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화 할시에만 보입니다) 기본설정: 아니요</Korean>
+            <Korean>차장의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화할 시에만 보입니다) 기본설정: 아니요</Korean>
             <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名字（仅当客户端的名字功能已启用）。预设：关闭</Chinesesimp>
             <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用)。預設: 關閉</Chinese>
             <Turkish>Araç komutanı için Gösterge İsim Etiketini göster (yalnızca istemcide ad etiketleri etkinse) Varsayılan: Hayır</Turkish>
@@ -300,7 +300,7 @@
             <Russian>Эффект звуковой волны над головами говорящих игроков при удерживании кнопки push-to-talk. Эта опация работает также с рациями TFAR и ACRE2.</Russian>
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
             <Japanese>プレイヤーが PTT キーを押している間は、音波形を表示します。このオプションは TFAR と ACRE2 で動作します。</Japanese>
-            <Korean>플레이어가 PTT로 말할시 머리위에 음파효과를 적용합니다. 이 옵션은 TFAR과 ACRE2가 있을때만 적용됩니다.</Korean>
+            <Korean>플레이어가 눌러서 말할 시 머리위에 음파효과를 적용합니다. 이 옵션은 TFAR과 ACRE2가 있을 때만 적용됩니다.</Korean>
             <Chinesesimp>当玩家使用按键发话时，其头上的角色名字旁会显示声波的图案。此功能可搭配 TFAR、ACRE2 等模组使用。</Chinesesimp>
             <Chinese>當玩家使用按鍵發話時，其頭上的角色名稱旁會顯示聲波的圖案。此功能可搭配TFAR、ACRE2等模組使用。</Chinese>
             <Turkish>Bas Konuş tuşunu basılı tuttuktan sonra ses dalgalarının konuşan oyuncuların başlarının üzerindeki etkisi. Bu seçenek TFAR ve ACRE2 ile çalışır.</Turkish>
@@ -435,7 +435,7 @@
             <Italian>Colore dei nomi non appartenenti al gruppo</Italian>
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
             <Japanese>標準の名札の色（グループ メンバ以外)</Japanese>
-            <Korean>기본 이름표 색상 (비-그룹 멤버)</Korean>
+            <Korean>기본 이름표 색상 (비그룹 멤버)</Korean>
             <Chinesesimp>预设名字颜色（非同小队队友）</Chinesesimp>
             <Chinese>預設名稱顏色 (非同小隊隊友) </Chinese>
             <Turkish>Varsayılan İsim Etiketi Rengi (Grup Üyeleri Olmayanlar)</Turkish>
@@ -503,7 +503,7 @@
             <Russian>Обязательно: Только по нажатию клавиши</Russian>
             <Italian>Forza Mostra solo quando Premi Tasto</Italian>
             <Japanese>キー押下のみに強制する</Japanese>
-            <Korean>키를 누를경우만 강제로 해당</Korean>
+            <Korean>키를 누를 경우만 강제로 해당</Korean>
             <Chinesesimp>强制仅显示在按按键时</Chinesesimp>
             <Chinese>強制僅顯示在按按鍵時</Chinese>
             <Turkish>Gösteriyi Yalnızca Tuşa Basıldığında Zorla</Turkish>
@@ -520,7 +520,7 @@
             <Russian>Обязательно: Под курсором или по нажатию клавиши</Russian>
             <Italian>Forza Mostra solo su Cursore e quando Premi Tasto</Italian>
             <Japanese>カーソルとキー押下のみに強制する</Japanese>
-            <Korean>커서와 키를 누를경우만 강제로 해당</Korean>
+            <Korean>커서와 키를 누를 경우만 강제로 해당</Korean>
             <Chinesesimp>强制显示在准心指到和按按键时</Chinesesimp>
             <Chinese>強制顯示在準心指到和按按鍵時</Chinese>
             <Turkish>Göstermeyi Yalnızca İmleç ve Tuşa Basmaya Zorla</Turkish>
@@ -543,7 +543,7 @@
             <German>Stellt ein, wie stark sich die Umgebungshelligkeit auf die Sichtweite der Spielernamen auswirkt.</German>
             <Polish>Definiuje jak bardzo jasność otoczenia wpływa na zasięg wyświetlania imion postaci.</Polish>
             <Chinesesimp>调整环境亮度对铭牌查看距离的影响程度。</Chinesesimp>
-            <Korean>배경 밝기가 이름표를 보는 거리에 얼마나 영향을 끼치는지를 조절합니다.</Korean>
+            <Korean>배경 밝기가 이름표를 보는 거리에 얼마나 영향을 끼치는 지를 조절합니다.</Korean>
         </Key>
     </Package>
 </Project>

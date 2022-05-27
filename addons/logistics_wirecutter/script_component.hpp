@@ -83,6 +83,6 @@
 
 #define HAS_WIRECUTTER(unit) (\
     "ACE_wirecutter" in (unit call EFUNC(common,uniqueItems)) \
-    || {1 == getNumber (configFile >> "CfgVehicles" >> (backpack unit) >> QGVAR(hasWirecutter))} \
-    || {1 == getNumber (configFile >> "CfgWeapons" >> (vest unit) >> QGVAR(hasWirecutter))} \
+    || {getNumber ((configOf (backpackContainer unit)) >> QGVAR(hasWirecutter)) == 1} \
+    || {getNumber (configFile >> "CfgWeapons" >> (vest unit) >> QGVAR(hasWirecutter)) == 1} \
 )

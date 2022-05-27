@@ -7,38 +7,66 @@ GVAR(isSpeedLimiter) = false;
 ["ACE3 Vehicles", QGVAR(speedLimiter), localize LSTRING(SpeedLimiter),
 {
     private _connectedUAV = getConnectedUAV ACE_player;
-    private _uavControll = UAVControl _connectedUAV;
-    if ((_uavControll select 1) == "DRIVER") then {
+    private _uavControl = UAVControl _connectedUAV;
+    if ((_uavControl select 1) == "DRIVER") then {
         if !(_connectedUAV isKindOf "UGV_01_base_F") exitWith {false};
         GVAR(isUAV) = true;
-        [_uavControll select 0, _connectedUAV] call FUNC(speedLimiter);
+        [_uavControl select 0, _connectedUAV] call FUNC(speedLimiter);
         true
     } else {
         // Conditions: canInteract
         if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
         // Conditions: specific
-        if !(ACE_player == driver vehicle ACE_player &&
-            {vehicle ACE_player isKindOf 'Car' ||
-            {vehicle ACE_player isKindOf 'Tank'} ||
-            {vehicle ACE_player isKindOf 'Plane'}}) exitWith {false};
+        private _vehicle = vehicle ACE_player;
+        if (
+            ACE_player != driver _vehicle
+            || {-1 == ["Car", "Tank", "Ship"] findIf {_vehicle isKindOf _x}}
+        ) exitWith {false};
 
-            GVAR(isUAV) = false;
+        GVAR(isUAV) = false;
         // Statement
-        if (vehicle ACE_player isKindOf 'Plane') then {
-            [ACE_player, vehicle ACE_player] call FUNC(autoThrottle);
+        [ACE_player, _vehicle] call FUNC(speedLimiter);
+        true
+    };
+},
+{false},
+[DIK_DELETE, [false, false, false]], false] call CBA_fnc_addKeybind;
+
+["ACE3 Vehicles", QGVAR(cruiseControl), localize LSTRING(CruiseControl), {
+    private _connectedUAV = getConnectedUAV ACE_player;
+    private _uavControl = UAVControl _connectedUAV;
+    if ((_uavControl select 1) == "DRIVER") then {
+        if !(_connectedUAV isKindOf "UGV_01_base_F") exitWith {false};
+        GVAR(isUAV) = true;
+        [_uavControl select 0, _connectedUAV, true] call FUNC(speedLimiter);
+        true
+    } else {
+        // Conditions: canInteract
+        if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+        // Conditions: specific
+        private _vehicle = vehicle ACE_player;
+        if (
+            ACE_player != driver _vehicle
+            || {-1 == ["Car", "Tank", "Ship", "Plane"] findIf {_vehicle isKindOf _x}}
+        ) exitWith {false};
+
+        GVAR(isUAV) = false;
+        // Statement
+        if (_vehicle isKindOf "Plane") then {
+            [ACE_player, _vehicle] call FUNC(autoThrottle);
         } else {
-            [ACE_player, vehicle ACE_player] call FUNC(speedLimiter);
+            [ACE_player, _vehicle, true] call FUNC(speedLimiter);
         };
         true
     };
-
 },
 {false},
-[211, [false, false, false]], false] call CBA_fnc_addKeybind; //DELETE Key
+[DIK_INSERT, [false, false, false]], false] call CBA_fnc_addKeybind;
 
 ["ACE3 Vehicles", QGVAR(scrollUp), localize LSTRING(IncreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) + GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
+        GVAR(speedLimit) = 5 max GVAR(speedLimiterStep) * floor (GVAR(speedLimit) / GVAR(speedLimiterStep));
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
         true
     };
@@ -47,6 +75,7 @@ GVAR(isSpeedLimiter) = false;
 ["ACE3 Vehicles", QGVAR(scrollDown), localize LSTRING(DecreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) - GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
+        GVAR(speedLimit) = 5 max GVAR(speedLimiterStep) * ceil (GVAR(speedLimit) / GVAR(speedLimiterStep));
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
         true
     };

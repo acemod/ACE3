@@ -15,7 +15,7 @@
             <Polish>Status</Polish>
             <Spanish>Estado</Spanish>
             <Turkish>Durum</Turkish>
-            <Korean>결과상태</Korean>
+            <Korean>결과 상태</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
@@ -99,7 +99,7 @@
             <Polish>Natężenie Przepływu Transfuzji IV</Polish>
             <Spanish>IV Flujo de transfusión</Spanish>
             <Turkish>IV Transfüzyon Akış Hızı</Turkish>
-            <Korean>수혈 유량</Korean>
+            <Korean>수혈 속도</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
@@ -115,7 +115,7 @@
             <Polish>Kontroluje, jak szybko płyn wypływa z worków IV. Zmiana objętości worka IV jest obliczana jako:\n przedział czasowy * zmiana iv na sekundę (4,1667 mL/s) * natężenie przepływu (ten współczynnik).</Polish>
             <Spanish>Controla la rapidez con que fluye el líquido de las bolsas intravenosas. El cambio de volumen de la bolsa IV se calcula como: \n intervalo (s) de tiempo * cambio iv por segundo (4.1667 mL/s) * velocidad de flujo (este coeficiente).</Spanish>
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
-            <Korean>수액용기에서 얼마나 빨리 들어가는지를 정합니다. 초당 4.16ml * 계수를 적용받습니다.</Korean>
+            <Korean>수액용기에서 얼마나 빨리 들어가는 지를 정합니다. 초당 4.16ml * 계수를 적용받습니다.</Korean>
         </Key>
     </Package>
 </Project>
