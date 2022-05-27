@@ -12,6 +12,7 @@
             <Russian>[CSW] ВОГ-17М</Russian>
             <German>[CSW] VOG-17M</German>
             <Korean>[CSW] VOG-17M</Korean>
+            <Japanese>[CSW] VOG-17M</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG30_30_displayName">
             <English>[CSW] VOG-30</English>
@@ -24,6 +25,7 @@
             <Russian>[CSW] ВОГ-30</Russian>
             <German>[CSW] VOG-30</German>
             <Korean>[CSW] VOG-30</Korean>
+            <Japanese>[CSW] VOG-30</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_GPD30_30_displayName">
             <English>[CSW] GPD-30</English>
@@ -36,6 +38,7 @@
             <Russian>[CSW] ГПД-30</Russian>
             <German>[CSW] GPD-30</German>
             <Korean>[CSW] GPD-30</Korean>
+            <Japanese>[CSW] GPD-30</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131M_displayName">
             <English>[CSW] ATGM 9M131M</English>
@@ -48,6 +51,7 @@
             <Russian>[CSW] ПТРК 9М131М</Russian>
             <German>[CSW] ATGM 9M131M</German>
             <Korean>[CSW] ATGM 9M131M</Korean>
+            <Japanese>[CSW] ATGM 9M131M</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131F_displayName">
             <English>[CSW] ATGM 9M131F</English>
@@ -60,6 +64,7 @@
             <Russian>[CSW] ПТРК 9М131Ф</Russian>
             <German>[CSW] ATGM 9M131F</German>
             <Korean>[CSW] ATGM 9M131F</Korean>
+            <Japanese>[CSW] ATGM 9M131F</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133F_displayName">
             <English>[CSW] ATGM 9M133F</English>
@@ -72,6 +77,7 @@
             <Russian>[CSW] ПТРК 9М133Ф</Russian>
             <German>[CSW] ATGM 9M133F</German>
             <Korean>[CSW] ATGM 9M133F</Korean>
+            <Japanese>[CSW] ATGM 9M133F</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133_displayName">
             <English>[CSW] ATGM 9M133</English>
@@ -84,6 +90,7 @@
             <Russian>[CSW] ПТРК 9М133</Russian>
             <German>[CSW] ATGM 9M133</German>
             <Korean>[CSW] ATGM 9M133</Korean>
+            <Japanese>[CSW] ATGM 9M133</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M1331_displayName">
             <English>[CSW] ATGM 9M133-1</English>
@@ -96,6 +103,7 @@
             <Russian>[CSW] ПТРК 9М133-1</Russian>
             <German>[CSW] ATGM 9M133-1</German>
             <Korean>[CSW] ATGM 9M133-1</Korean>
+            <Japanese>[CSW] ATGM 9M133-1</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133M2_displayName">
             <English>[CSW] ATGM 9M133M2</English>
@@ -108,6 +116,7 @@
             <Russian>[CSW] ПТРК 9М133M2</Russian>
             <German>[CSW] ATGM 9M133M2</German>
             <Korean>[CSW] ATGM 9M133M2</Korean>
+            <Japanese>[CSW] ATGM 9M133M2</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9V_displayName">
             <English>[CSW] HEAT PG-9V</English>
@@ -120,6 +129,7 @@
             <Russian>[CSW] ПГ-9В</Russian>
             <German>[CSW] HEAT PG-9V</German>
             <Korean>[CSW] HEAT PG-9V</Korean>
+            <Japanese>[CSW] HEAT PG-9V</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9N_displayName">
             <English>[CSW] HEAT PG-9N</English>
@@ -132,6 +142,7 @@
             <Russian>[CSW] ПГ-9Н</Russian>
             <German>[CSW] HEAT PG-9N</German>
             <Korean>[CSW] HEAT PG-9N</Korean>
+            <Japanese>[CSW] HEAT PG-9N</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9VNT_displayName">
             <English>[CSW] HEAT PG-9VNT</English>
@@ -144,6 +155,7 @@
             <Russian>[CSW] ПГ-9ВНТ</Russian>
             <German>[CSW] HEAT PG-9VNT</German>
             <Korean>[CSW] HEAT PG-9VNT</Korean>
+            <Japanese>[CSW] HEAT PG-9VNT</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9V_displayName">
             <English>[CSW] HE-FRAG OG-9V</English>
@@ -156,6 +168,7 @@
             <Russian>[CSW] ОГ-9В</Russian>
             <German>[CSW] HE-FRAG OG-9V</German>
             <Korean>[CSW] HE-FRAG OG-9V</Korean>
+            <Japanese>[CSW] HE-FRAG OG-9V</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9VM_displayName">
             <English>[CSW] HE-FRAG OG-9VM</English>
@@ -168,6 +181,7 @@
             <Russian>[CSW] ОГ-9ВМ</Russian>
             <German>[CSW] HE-FRAG OG-9VM</German>
             <Korean>[CSW] HE-FRAG OG-9VM</Korean>
+            <Japanese>[CSW] HE-FRAG OG-9VM</Japanese>
         </Key>
     </Package>
 </Project>
