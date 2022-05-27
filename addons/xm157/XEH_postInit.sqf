@@ -8,31 +8,31 @@ GVAR(data) set ["latitude", _latitude];
 
 
 // Add Keybinds
-["ACE3 Equipment", QGVAR(range), ["XM157 - Range"], {
+["ACE3 Equipment", QGVAR(range), [format ["XM157 - %1", localize "str_a3_rscdisplayarsenal_stat_range"]], {
     ["range", true] call FUNC(keyPress);
 }, {
     ["range", false] call FUNC(keyPress);
 }, [DIK_TAB, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Equipment", QGVAR(left), ["XM157 - Right"], {
+["ACE3 Equipment", QGVAR(left), [format ["XM157 - %1", localize "str_a3_left"]], {
     ["right", true] call FUNC(keyPress);
 }, {
     ["right", false] call FUNC(keyPress);
 }, [DIK_END, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Equipment", QGVAR(right), ["XM157 - Left"], {
+["ACE3 Equipment", QGVAR(right), [format ["XM157 - %1", localize "str_a3_right"]], {
     ["left", true] call FUNC(keyPress);
 }, {
     ["left", false] call FUNC(keyPress);
 }, [DIK_DELETE, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Equipment", QGVAR(up), ["XM157 - Up"], {
+["ACE3 Equipment", QGVAR(up), [format ["XM157 - %1", localize "str_a3_rscattributetargetstate_up"]], {
     ["up", true] call FUNC(keyPress);
 }, {
     ["up", false] call FUNC(keyPress);
 }, [DIK_PGUP, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Equipment", QGVAR(down), ["XM157 - down"], {
+["ACE3 Equipment", QGVAR(down), [format ["XM157 - %1", localize "str_a3_rscattributetargetstate_down"]], {
     ["down", true] call FUNC(keyPress);
 }, {
     ["down", false] call FUNC(keyPress);

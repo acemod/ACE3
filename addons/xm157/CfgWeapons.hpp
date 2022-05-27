@@ -15,7 +15,6 @@ class CfgWeapons {
             bodyTexture = QPATHTOF(data\ace_vector_body_co.paa);
             // bodyTextureNight = ".paa"; // optional
             bodyTextureSize = 1;
-
             hideMagnification = 1; // no point, and it flickers at 1x
             disableTilt = 0;
         };
