@@ -1639,7 +1639,7 @@
         </Key>
         <Key ID="STR_ACE_Common_unloadWeapon">
             <English>Unload Weapon</English>
-            <Japanese>武器を降ろす</Japanese>
+            <Japanese>武器からマガジンを抜く</Japanese>
         </Key>
     </Package>
 </Project>
