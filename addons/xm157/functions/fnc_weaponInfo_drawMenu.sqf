@@ -54,7 +54,7 @@ if (isNil QGVAR(menu)) then {
         ["", "", [""], _rangeUp, _rangeDown],
         ["Wind Speed (m/s)", "wind_speed", ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"], _arrayUp, _arrayDown],
         ["Wind Direction", "wind_dir", ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"], _arrayUp, _arrayDown],
-        ["CQB Reticle", "reticle_cqb", ["2 MOA Red Dot", "4 MOA Red Dot", "Red Dot + Circle", "3 MOA Green Dot", "Off"], _arrayUp, _arrayDown],
+        // ["CQB Reticle", "reticle_cqb", ["2 MOA Red Dot", "4 MOA Red Dot", "Off"], _arrayUp, _arrayDown],
         ["Bearing Display", "bearing_show", ["Degrees", "Mils", "Off"], _arrayUp, _arrayDown],
         ["Atmosphere", "", _atmosphereInfo, {}, {}]
     ];
