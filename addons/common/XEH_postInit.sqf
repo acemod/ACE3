@@ -27,6 +27,7 @@
 ["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -83,6 +84,17 @@
     };
     if (["acre_main"] call FUNC(isModLoaded)) then {
         _object setVariable ["acre_sys_core_isDisabledRadio", _set > 0, true];
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(blockSpeaking), {
+    params ["_object", "_set"];
+    TRACE_2("blockSpeaking EH",_object,_set);
+    if (["acre_main"] call FUNC(isModLoaded)) then {
+        _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
+    };
+    if (["task_force_radio"] call FUNC(isModLoaded)) then {
+        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -526,5 +538,22 @@ GVAR(deviceKeyCurrentIndex) = -1;
 },
 {false},
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
+
+
+["ACE3 Weapons", QGVAR(unloadWeapon), localize LSTRING(unloadWeapon), {
+    // Conditions:
+    if !([ACE_player, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
+
+    private _currentWeapon = currentWeapon ACE_player;
+    if !(_currentWeapon != primaryWeapon _unit && {_currentWeapon != handgunWeapon _unit} && {_currentWeapon != secondaryWeapon _unit}) exitWith {false};
+
+    private _currentMuzzle = currentMuzzle ACE_player;
+    private _currentAmmoCount = ACE_player ammo _currentMuzzle;
+    if (_currentAmmoCount < 1) exitWith {false};
+
+    // Statement:
+    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount, false] call FUNC(unloadUnitWeapon);
+    true
+}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; //ALT + R Key
 
 GVAR(commonPostInited) = true;

@@ -1,16 +1,3 @@
-#define EQUIP_FRIES_ATTRIBUTE class Attributes { \
-    class EGVAR(fastroping,equipFRIES) { \
-        property = QEGVAR(fastroping,equipFRIES); \
-        control = "Checkbox"; \
-        displayName = ECSTRING(fastroping,Eden_equipFRIES); \
-        tooltip = ECSTRING(fastroping,Eden_equipFRIES_Tooltip); \
-        expression = QUOTE([_this] call EFUNC(fastroping,equipFRIES)); \
-        typeName = "BOOL"; \
-        condition = "objectVehicle"; \
-        defaultValue = false; \
-    }; \
-}
-
 class CfgVehicles {
     class Rubber_duck_base_F;
     class rhsgref_canoe_base: Rubber_duck_base_F {
@@ -61,7 +48,9 @@ class CfgVehicles {
     };
 
     class rhs_uh1h_hidf: rhs_uh1h_base {
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
 
     class rhs_uh1h_hidf_unarmed: rhs_uh1h_hidf {
@@ -75,7 +64,9 @@ class CfgVehicles {
             };
         };
 
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes: Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
 
     class rhs_uh1h_idap: rhs_uh1h_base {
@@ -89,7 +80,9 @@ class CfgVehicles {
             };
         };
 
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
 
     class rhs_uh1h_un: rhs_uh1h_base {
@@ -103,7 +96,9 @@ class CfgVehicles {
             };
         };
 
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
 
     // ACE Explosives

@@ -21,6 +21,7 @@
         <Key ID="STR_ACE_Vehicles_OnCruise">
             <English>Cruise control on</English>
             <German>Tempomat an</German>
+            <Korean>속도 유지기 켜짐</Korean>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -42,6 +43,7 @@
         <Key ID="STR_ACE_Vehicles_OffCruise">
             <English>Cruise control off</English>
             <German>Tempomat aus</German>
+            <Korean>속도 유지기 꺼짐</Korean>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
@@ -79,6 +81,7 @@
         <Key ID="STR_ACE_Vehicles_CruiseControl">
             <English>Cruise Control</English>
             <German>Tempomat</German>
+            <Korean>속도 유지기</Korean>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>
@@ -142,7 +145,7 @@
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
             <Turkish>Araçtan inerken motorun otomatik kapatılmasını engelleyin.</Turkish>
             <Polish>Zapobiegaj automatycznemu wyłączaniu silnika podczas wychodzenia z pojazdu.</Polish>
-            <Korean>차량에서 내릴때 자동으로 엔진을 끄는 것을 비활성화 합니다.</Korean>
+            <Korean>차량에서 내릴 때 자동으로 엔진을 끄는 것을 비활성화 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>

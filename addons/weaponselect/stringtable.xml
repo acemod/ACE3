@@ -13,7 +13,7 @@
             <Italian>Mostra indicazioni nel lancio granate</Italian>
             <Portuguese>Mostrat texto ao lançar granada</Portuguese>
             <Japanese>手榴弾を投げるときに通知</Japanese>
-            <Korean>수류탄 투척시 화면에 문자 표시</Korean>
+            <Korean>수류탄 투척 시 화면에 문자 표시</Korean>
             <Chinesesimp>投掷手榴弹时显示提示信息</Chinesesimp>
             <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
         </Key>
@@ -29,7 +29,7 @@
             <Italian>Mostra una notifica quando si lanciano granate</Italian>
             <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
             <Japanese>手榴弾を投げるときに、ヒントか文で通知します。</Japanese>
-            <Korean>수류탄 투척시 화면에 문자나 힌트를 표시합니다.</Korean>
+            <Korean>수류탄 투척 시 화면에 문자나 힌트를 표시합니다.</Korean>
             <Chinesesimp>投掷手榴弹时显示提示信息。</Chinesesimp>
             <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
         </Key>

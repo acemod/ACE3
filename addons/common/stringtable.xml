@@ -890,7 +890,7 @@
             <Russian>Проверять все аддоны</Russian>
             <Italian>Controlla tutti gli addon</Italian>
             <Japanese>全アドオンを検査</Japanese>
-            <Korean>모든 에드온 검사</Korean>
+            <Korean>모든 애드온 검사</Korean>
             <Chinese>檢查所有模組</Chinese>
             <Chinesesimp>检查所有模组</Chinesesimp>
         </Key>
@@ -939,7 +939,7 @@
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
             <Italian>Quali addon sono permessi in ogni caso?</Italian>
             <Japanese>どのようなアドオンを許可しますか?</Japanese>
-            <Korean>허가되는 에드온은 어느것입니까?</Korean>
+            <Korean>허가되는 애드온은 어느 것입니까?</Korean>
             <Chinese>哪些模組是可被允許/忽略的?</Chinese>
             <Chinesesimp>无论如何都允许的附加组件</Chinesesimp>
         </Key>
@@ -1215,7 +1215,7 @@
             <Italian>Non forzare</Italian>
             <French>Ne pas forcer</French>
             <Japanese>強制しない</Japanese>
-            <Korean>강제하지 말것</Korean>
+            <Korean>강제하지 말 것</Korean>
             <Chinese>不要強行</Chinese>
             <Chinesesimp>不要强行</Chinesesimp>
             <Turkish>Zorlama</Turkish>
@@ -1601,7 +1601,7 @@
             <Polish>Zmień nazwę</Polish>
             <Japanese>改名</Japanese>
             <Italian>Rinomina</Italian>
-            <Korean>이름바꾸기</Korean>
+            <Korean>이름 바꾸기</Korean>
             <Chinese>重新命名</Chinese>
             <Chinesesimp>重新命名</Chinesesimp>
             <Russian>Переименовать</Russian>
@@ -1634,6 +1634,9 @@
             <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
             <Chinese>受所在位置影響提升醫療能力</Chinese>
             <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_unloadWeapon">
+            <English>Unload Weapon</English>
         </Key>
     </Package>
 </Project>

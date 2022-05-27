@@ -81,7 +81,7 @@
             <German>Aktiviert die Umbenennungs-Aktion für neu benennbare Objekte.</German>
             <Polish>Włącza akcję zmiany nazwy dla obiektów z możliwością zmiany nazwy.</Polish>
             <Chinesesimp>启用可重命名物体的重命名动作。</Chinesesimp>
-            <Korean>개체의 명칭을 새로 짓는것을 허가합니다.</Korean>
+            <Korean>개체의 명칭을 새로 짓는 것을 허가합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>

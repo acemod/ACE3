@@ -67,8 +67,8 @@ GVAR(speedLimitInit) = true;
     _args params ["_driver", "_vehicle"];
 
     if (GVAR(isUAV)) then {
-        private _uavControll = UAVControl _vehicle;
-        if ((_uavControll select 0) != _driver || _uavControll select 1 != "DRIVER") then {
+        private _uavControl = UAVControl _vehicle;
+        if ((_uavControl select 0) != _driver || _uavControl select 1 != "DRIVER") then {
             GVAR(isSpeedLimiter) = false;
             TRACE_1("UAV driver changed, disabling speedlimit",_vehicle);
             _vehicle setCruiseControl [0, false];
