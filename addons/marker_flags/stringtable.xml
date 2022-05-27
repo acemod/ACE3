@@ -4,17 +4,21 @@
         <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
             <English>Marker Flags</English>
             <German>Markierungsfahnen</German>
+            <Japanese>旗マーカー</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
             <English>Place Anywhere</English>
             <German>Überall platzieren</German>
+            <Japanese>どこでも設置可能</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
             <English>Place marker flag anywhere regardless of surface.</English>
+            <Japanese>どのような地表でも旗を設置できるようにします</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Flag</English>
             <German>Flagge platzieren</German>
+            <Japanese>旗を設置</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick Up</English>
@@ -28,41 +32,49 @@
             <Portuguese>Pegar</Portuguese>
             <Korean>확보</Korean>
             <Chinesesimp>提取点</Chinesesimp>
-            <Japanese>受け取り</Japanese>
+            <Japanese>拾う</Japanese>
             <Turkish>Al</Turkish>
             <German>Aufheben</German>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_white">
             <English>Marker Flag (White)</English>
             <German>Markierungsfahne (Weiß)</German>
+            <Japanese>旗マーカー (白)</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_black">
             <English>Marker Flag (Black)</English>
             <German>Markierungsfahne (Schwarz)</German>
+            <Japanese>旗マーカー (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_red">
             <English>Marker Flag (Red)</English>
             <German>Markierungsfahne (Rot)</German>
+            <Japanese>旗マーカー (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_green">
             <English>Marker Flag (Green)</English>
             <German>Markierungsfahne (Grün)</German>
+            <Japanese>旗マーカー (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_blue">
             <English>Marker Flag (Blue)</English>
             <German>Markierungsfahne (Blau)</German>
+            <Japanese>旗マーカー (青)</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_yellow">
             <English>Marker Flag (Yellow)</English>
             <German>Markierungsfahne (Gelb)</German>
+            <Japanese>旗マーカー (黄)</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_orange">
             <English>Marker Flag (Orange)</English>
             <German>Markierungsfahne (Orange)</German>
+            <Japanese>旗マーカー (橙)</Japanese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_purple">
             <English>Marker Flag (Purple)</English>
             <German>Markierungsfahne (Lila)</German>
+            <Japanese>旗マーカー (紫)</Japanese>
         </Key>
     </Package>
 </Project>

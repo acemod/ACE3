@@ -171,42 +171,49 @@
             <Chinesesimp>时间—成本系数</Chinesesimp>
             <Korean>시간-가격 계수</Korean>
             <German>Zeit-Kosten-Koeffizient</German>
+            <Japanese>時間コスト係数</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeCostCoefficient">
             <English>Coefficient used to determine time to build structure.&lt;br/&gt;A in Ax + b where x is cost of object</English>
             <Chinesesimp>用于确定建造建筑所需时间的系数。&lt;br/&gt;A是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
             <Korean>건축물을 지을 때 걸리는 시간을 계수를 적용하여 계산합니다.</Korean>
             <German>Koeffizient zur Bestimmung der Bauzeit &lt;br/&gt;A in Ax + b, wobei x die Kosten des Objekts sind.</German>
+            <Japanese>建造する時間を決定するために使用される係数。&lt;br/&gt;計算式はAx + bです。この係数はAであり、xは建造物のコストです。</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint_timeMin">
             <English>Minimum Build Time</English>
             <Chinesesimp>最短建造时间</Chinesesimp>
             <Korean>최소 건축 시간</Korean>
             <German>Minimale Bauzeit</German>
+            <Japanese>建造に掛かる最小の時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeMin">
             <English>Minimum time to build any structure.&lt;br/&gt;b in Ax + b where x is cost of object</English>
             <Chinesesimp>建造任何建筑的最短时间。&lt;br/&gt;b是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
             <Korean>건축물을 지을 때 걸리는 최소 시간을 계수를 적용하여 계산합니다.</Korean>
             <German>Mindestzeit für den Bau eines beliebigen Bauwerks.&lt;br/&gt;b in Ax + b, wobei x die Kosten des Objekts sind.</German>
+            <Japanese>建造に掛かる最小の時間。&lt;br/&gt;計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_progressBarTitle">
             <English>Building</English>
             <Chinesesimp>建造</Chinesesimp>
             <Korean>건설 중</Korean>
             <German>Bauwerk</German>
+            <Japanese>建造</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
             <Chinesesimp>创建地图标记</Chinesesimp>
             <Korean>지도에 마커 생성</Korean>
             <German>Kartenmarkierungen erstellen</German>
+            <Japanese>マップマーカーを生成する</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
             <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
             <Chinesesimp>在放置静态防御工事时，创建看起来像地形建筑的地图标记</Chinesesimp>
             <Korean>건축물을 건설하고 나서 지도에 마커를 생성합니다</Korean>
             <German>Erstellen von Kartenmarkierungen, die wie Gebäude im Gelände aussehen, wenn statische Befestigungen platziert werden</German>
+            <Japanese>静的な建築物が配置されたときに地形の建物のように見えるマップマーカーを生成します</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapNone">
             <English>Never</English>
@@ -229,6 +236,7 @@
             <Chinesesimp>对放置者友军单位</Chinesesimp>
             <Korean>아군 유닛이 지은 건물만</Korean>
             <German>Für, zum Erbauer, verbündete Einheiten.</German>
+            <Japanese>設置者の友軍に</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
             <English>For everyone</English>

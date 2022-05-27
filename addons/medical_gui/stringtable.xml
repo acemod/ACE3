@@ -1227,10 +1227,12 @@
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_DisplayName">
             <English>Show Blood Loss</English>
             <German>Blutverlust anzeigen</German>
+            <Japanese>失血量の表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
             <English>Show qualitative blood loss in the injury list.</English>
             <German>Qualitativen Blutverlust in der Verletzungsliste anzeigen.</German>
+            <Japanese>負傷リストに段階的な失血量を表示します。</Japanese>
         </Key>
     </Package>
 </Project>

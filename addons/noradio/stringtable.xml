@@ -6,6 +6,7 @@
             <Chinesesimp>去无线电</Chinesesimp>
             <German>Kein Funkgerät</German>
             <Korean>음소거</Korean>
+            <Japanese>無線無し</Japanese>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting">
             <English>Mute Player</English>
