@@ -233,6 +233,7 @@
             <Portuguese>텍스쳐 선택</Portuguese>
             <Korean>텍스쳐 선택</Korean>
             <German>Auswahl der Textur</German>
+            <Polish>Wybór Tekstury</Polish>
             <Japanese>テクスチャの選択</Japanese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Selection_Description">
@@ -241,6 +242,7 @@
             <Portuguese>개체 텍스처 선택(기본값: 0)</Portuguese>
             <Korean>물체의 텍스쳐를 선택합니다. 기본: 0</Korean>
             <German>Auswahl der Objekttextur. Standard: 0</German>
+            <Polish>Wybór tekstury obiektu. Domyślnie: 0</Polish>
             <Japanese>オブジェクトテクスチャの選択。デフォルト: 0</Japanese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">

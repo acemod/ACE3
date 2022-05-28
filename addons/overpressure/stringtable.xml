@@ -6,6 +6,7 @@
             <Chinesesimp>超压</Chinesesimp>
             <German>Überdruck</German>
             <Korean>과중압력</Korean>
+            <Polish>Nadciśnienie</Polish>
             <Japanese>過圧</Japanese>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">

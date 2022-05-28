@@ -691,10 +691,12 @@
         <Key ID="STR_ACE_UI_HideDefaultActionIcon">
             <English>Hide Default Action Icon</English>
             <Japanese>デフォルトのアクションアイコンを非表示</Japanese>
+            <Polish>Ukryj domyślną ikonę akcji</Polish>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
             <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
             <Japanese>カーソルの前に何かがあるときに自動的に表示されるアイコンを非表示にします。 ゲームを再起動する必要があります。\n警告:アクション自体は削除されません! 誤って実行することを防ぐために、'標準アクション'キーのバインドを解除することをお勧めします。</Japanese>
+            <Polish>Ukrywa ikonę wyświetlaną automatycznie, gdy coś znajduje się przed kursorem. Wymaga ponownego uruchomienia gry.\nOstrzeżenie: Nie usuwa samej akcji! Zaleca się usunięcia przypisania klawisza „Użyj domyślnej akcji”, aby zapobiec niechcianym interakcjom.</Polish>
         </Key>
     </Package>
 </Project>
