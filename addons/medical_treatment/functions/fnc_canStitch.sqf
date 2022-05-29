@@ -18,4 +18,4 @@
 
 params ["", "_patient"];
 
-(_patient call FUNC(getStitchableWounds) isNotEqualTo [])
+count (_patient call FUNC(getStitchableWounds)) > 0
