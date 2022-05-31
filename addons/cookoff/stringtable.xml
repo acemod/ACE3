@@ -166,6 +166,12 @@
             <Czech>Multiplikátor pro pravděpodobnost vznícení munice. Vyšší hodnota znamená vyšší šanci vznícení munice.</Czech>
             <Korean>쿡오프가 일어날 확률에 계수를 곱합니다. 더 큰 숫자는 더 높은 확률의 쿡오프를 일으킵니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
+            <English>Destroy Vehicles After Cook-off</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
+            <English>Controls whether vehicles will always be destroyed after cooking off. Depending on the cookoff, the vehicle may explode or may simply be killed without effects.</English>
+        </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>
             <Japanese>誘爆火災を有効化</Japanese>
