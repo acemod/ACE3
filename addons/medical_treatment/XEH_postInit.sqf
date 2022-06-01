@@ -18,14 +18,19 @@ if (isServer) then {
 };
 
 // Treatment events
+[QGVAR(airwayAdjunctLocal), LINKFUNC(airwayAdjunctLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(bandageLocal), LINKFUNC(bandageLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(checkBloodPressureLocal), LINKFUNC(checkBloodPressureLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(checkPulseLocal), LINKFUNC(checkPulseLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(clearBlockageLocal), LINKFUNC(clearBlockageLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(cprLocal), LINKFUNC(cprLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(bvmLocal), LINKFUNC(bvmLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(chestSealLocal), LINKFUNC(chestSealLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(fullHealLocal), LINKFUNC(fullHealLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(ivBagLocal), LINKFUNC(ivBagLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(medicationLocal), LINKFUNC(medicationLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(placeInBodyBag), LINKFUNC(placeInBodyBag)] call CBA_fnc_addEventHandler;
+[QGVAR(pulseOxiLocal), LINKFUNC(pulseOxiLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(splintLocal), LINKFUNC(splintLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(tourniquetLocal), LINKFUNC(tourniquetLocal)] call CBA_fnc_addEventHandler;
 

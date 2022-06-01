@@ -24,6 +24,9 @@ if (!alive _unit || {!local _unit}) exitWith {};
 
 // Handle spontaneous wake up from unconsciousness
 if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
+    if(CBA_missionTime - _lastWakeUpCheck > 10) then {
+        _unit call EFUNC(medical_status,airwayDegrading);
+    };
     if (_unit call EFUNC(medical_status,hasStableVitals)) then {
         private _lastWakeUpCheck = _unit getVariable QEGVAR(medical,lastWakeUpCheck);
 

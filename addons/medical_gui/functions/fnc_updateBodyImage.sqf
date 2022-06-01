@@ -20,6 +20,7 @@ params ["_ctrlGroup", "_target"];
 
 // Get tourniquets, damage, and blood loss for target
 private _tourniquets = GET_TOURNIQUETS(_target);
+private _pulseOxis = GET_PULSE_OXIS(_target);
 private _fractures = GET_FRACTURES(_target);
 private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]];
 private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
@@ -30,7 +31,7 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 } forEach GET_OPEN_WOUNDS(_target);
 
 {
-    _x params ["_bodyPartIDC", ["_tourniquetIDC", -1], ["_fractureIDC", -1]];
+    _x params ["_bodyPartIDC", ["_tourniquetIDC", -1], ["_fractureIDC", -1], ["_pulseOxiIDC", -1], ["_lungsIDC", -1]];
 
     // Show or hide the tourniquet icon
     if (_tourniquetIDC != -1) then {
@@ -60,6 +61,18 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
             };
         };
     };
+    if (_pulseOxiIDC != -1) then {
+        private _hasPulseOxi = _pulseOxis select _forEachIndex > 0;
+        private _ctrlPulseOxi = _ctrlGroup controlsGroupCtrl _pulseOxiIDC;
+        _ctrlPulseOxi ctrlShow _hasPulseOxi;
+    };
+    
+    if (_lungsIDC != -1) then {
+        private _hasPneumo = GET_PNEUMO(_target);
+        private _ctrlLungs = _ctrlGroup controlsGroupCtrl _lungsIDC;
+        _ctrlLungs ctrlShow _hasPneumo;
+        _ctrlLungs ctrlSetTextColor [1, 0, 0, 1];
+    };
 
     // Update body part color based on blood loss and damage
     private _bloodLoss = _bodyPartBloodLoss select _forEachIndex;
@@ -73,10 +86,10 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
     private _ctrlBodyPart = _ctrlGroup controlsGroupCtrl _bodyPartIDC;
     _ctrlBodyPart ctrlSetTextColor _bodyPartColor;
 } forEach [
-    [IDC_BODY_HEAD],
-    [IDC_BODY_TORSO],
-    [IDC_BODY_ARMLEFT,  IDC_BODY_ARMLEFT_T,  IDC_BODY_ARMLEFT_B],
-    [IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_T, IDC_BODY_ARMRIGHT_B],
-    [IDC_BODY_LEGLEFT,  IDC_BODY_LEGLEFT_T,  IDC_BODY_LEGLEFT_B],
-    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B]
+    [IDC_BODY_HEAD, -1, -1, IDC_BODY_HEAD_P],
+    [IDC_BODY_TORSO, -1, -1, -1, IDC_BODY_LUNGS],
+    [IDC_BODY_ARMLEFT,  IDC_BODY_ARMLEFT_T,  IDC_BODY_ARMLEFT_B, IDC_BODY_ARMLEFT_P],
+    [IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_T, IDC_BODY_ARMRIGHT_B, IDC_BODY_ARMRIGHT_P],
+    [IDC_BODY_LEGLEFT,  IDC_BODY_LEGLEFT_T,  IDC_BODY_LEGLEFT_B, IDC_BODY_LEGLEFT_P],
+    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B, IDC_BODY_LEGRIGHT_P]
 ];

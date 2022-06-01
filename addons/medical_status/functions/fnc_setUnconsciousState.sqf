@@ -64,9 +64,20 @@ if (_active) then {
         _unit disableAI "WEAPONAIM";
         _unit setVariable [QGVAR(reenableWeaponAim), true, true];
     };
+    
+    // handle airways on transition
+    if (EGVAR(medical,airway) > 0) then {
+        if ( random 1 < BLOCKAGE_CHANCE) then {
+            [_unit, true] call FUNC(setAirwayBlocked);
+        };
+        if ( random 1 < COLLAPSE_CHANCE) then {
+            _unit setVariable [VAR_AIRWAY_COLLAPSED, true, true];
+        };
+    };
 } else {
     // Unit has woken up, no longer need to track this
     _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil];
+    _unit setVariable [VAR_AIRWAY_TREATMENT_LVL, 0, true];
 
     // Reenable AI aiming
     if (_unit getVariable [QGVAR(reenableWeaponAim), false]) then {

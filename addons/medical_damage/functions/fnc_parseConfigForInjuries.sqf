@@ -34,8 +34,9 @@ private _classID = 0;
     private _pain = GET_NUMBER(_entry >> "pain",0);
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0) == 1;
     private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0) == 1;
+    private _causePneumo = GET_NUMBER(_entry >> "causePneumo",0) == 1;
 
-    private _details = [_selections, _bleeding, _pain, _causeLimping, _causeFracture];
+    private _details = [_selections, _bleeding, _pain, _causeLimping, _causeFracture, _causePneumo];
     GVAR(woundDetails) set [_className, _details];
     GVAR(woundDetails) set [_classID, _details];
     

@@ -22,13 +22,15 @@ if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) e
 };
 
 // 10% possible variance in cardiac arrest time
-private _time = GVAR(cardiacArrestTime);
-_time = _time + _time * random [-0.1, 0, 0.1];
+private _timeDiff = CBA_missionTime - (_unit getVariable [QGVAR(cardiacArrestTimeLastUpdate), 0]);
+if(_timeDiff > 2) then {
+	private _time = GVAR(cardiacArrestTime);
+	_time = _time + _time * random [-0.1, 0, 0.1];
 
-_unit setVariable [QGVAR(cardiacArrestTimeLeft), _time];
-_unit setVariable [QGVAR(cardiacArrestTimeLastUpdate), CBA_missionTime];
+	_unit setVariable [QGVAR(cardiacArrestTimeLeft), _time];
+	_unit setVariable [QGVAR(cardiacArrestTimeLastUpdate), CBA_missionTime];
 
-TRACE_3("enteredStateCardiacArrest",_unit,_time,CBA_missionTime);
-
+	TRACE_3("enteredStateCardiacArrest",_unit,_time,CBA_missionTime);
+};
 // Update the unit status to reflect cardiac arrest
 [_unit, true] call EFUNC(medical_status,setCardiacArrestState);

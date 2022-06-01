@@ -229,6 +229,65 @@ class CfgWeapons {
             mass = 1;
         };
     };
+    class ACE_chestSeal: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        model = QPATHTOF(data\bandage.p3d);
+        picture = QPATHTOF(ui\Hyfin_ca.paa);
+        displayName = "Chest Seal";
+        descriptionShort = "Chest Seal";
+        descriptionUse = "Chest Seal";
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class ACE_basicAirway: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        model = QPATHTOF(data\guedel\guedel.p3d);
+        picture = QPATHTOF(ui\NPA_ca.paa);
+        displayName = "Basic Airway";
+        descriptionShort = "Basic Airway";
+        descriptionUse = "Basic Airway";
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class ACE_pocketBVM: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        model = QPATHTOF(data\guedel\guedel.p3d);
+        picture = QPATHTOF(ui\pocket_bvm_ca.paa);
+        displayName = "Pocket BVM";
+        descriptionShort = "Pocket BVM";
+        descriptionUse = "Pocket BVM";
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class ACE_advancedAirway: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        picture = QPATHTOF(ui\LMA_ca.paa);
+        displayName = "Advanced Airway";
+        descriptionShort = "Advanced Airway";
+        descriptionUse = "Advanced Airway";
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class ACE_pulseOximeter: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        model = QPATHTOF(data\pulseox\pulseox.p3d);
+        picture = QPATHTOF(ui\Pulseoximeter_normal_ca.paa);
+        displayName = "Pulse Oximeter";
+        descriptionShort = "Pulse Oximeter";
+        descriptionUse = "Pulse Oximeter";
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
     class ACE_personalAidKit: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);

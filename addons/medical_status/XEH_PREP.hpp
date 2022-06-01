@@ -1,5 +1,6 @@
 PREP(addMedicationAdjustment);
 PREP(adjustPainLevel);
+PREP(airwayDegrading);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
@@ -12,6 +13,7 @@ PREP(initUnit);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(isInStableCondition);
+PREP(setAirwayBlocked);
 PREP(setCardiacArrestState);
 PREP(setDead);
 PREP(setUnconsciousState);

@@ -44,6 +44,13 @@
 #define DEFAULT_HEART_RATE 80
 #define DEFAULT_PERIPH_RES 100
 
+// --- Airway
+#define DEFAULT_SPO2 100
+#define PNEUMO_DAMAGE_THRESHOLD EGVAR(medical,pneumoDamageThreshold)
+#define PNEUMO_CHANCE EGVAR(medical,pneumoChance)
+#define COLLAPSE_CHANCE EGVAR(medical,collapsedChance)
+#define BLOCKAGE_CHANCE EGVAR(medical,blockageChance)
+
 // --- blood
 // 0.077 l/kg * 80kg = 6.16l
 #define DEFAULT_BLOOD_VOLUME 6.0 // in liters
@@ -137,46 +144,58 @@
 // - Unit Variables ----------------------------------------------------
 // These variables get stored in object space and used across components
 // Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)
-#define VAR_BLOOD_PRESS       QEGVAR(medical,bloodPressure)
-#define VAR_BLOOD_VOL         QEGVAR(medical,bloodVolume)
-#define VAR_WOUND_BLEEDING    QEGVAR(medical,woundBleeding)
-#define VAR_CRDC_ARRST        QEGVAR(medical,inCardiacArrest)
-#define VAR_HEART_RATE        QEGVAR(medical,heartRate)
-#define VAR_PAIN              QEGVAR(medical,pain)
-#define VAR_PAIN_SUPP         QEGVAR(medical,painSuppress)
-#define VAR_PERIPH_RES        QEGVAR(medical,peripheralResistance)
-#define VAR_UNCON             "ACE_isUnconscious"
-#define VAR_OPEN_WOUNDS       QEGVAR(medical,openWounds)
-#define VAR_BANDAGED_WOUNDS   QEGVAR(medical,bandagedWounds)
-#define VAR_STITCHED_WOUNDS   QEGVAR(medical,stitchedWounds)
+#define VAR_BLOOD_PRESS      		QEGVAR(medical,bloodPressure)
+#define VAR_BLOOD_VOL        		QEGVAR(medical,bloodVolume)
+#define VAR_WOUND_BLEEDING   		QEGVAR(medical,woundBleeding)
+#define VAR_CRDC_ARRST       		QEGVAR(medical,inCardiacArrest)
+#define VAR_HEART_RATE       		QEGVAR(medical,heartRate)
+#define VAR_PAIN             		QEGVAR(medical,pain)
+#define VAR_PAIN_SUPP        		QEGVAR(medical,painSuppress)
+#define VAR_PERIPH_RES       		QEGVAR(medical,peripheralResistance)
+#define VAR_UNCON            		"ACE_isUnconscious"
+#define VAR_OPEN_WOUNDS      		QEGVAR(medical,openWounds)
+#define VAR_BANDAGED_WOUNDS  		QEGVAR(medical,bandagedWounds)
+#define VAR_STITCHED_WOUNDS  		QEGVAR(medical,stitchedWounds)
 // These variables track gradual adjustments (from medication, etc.)
-#define VAR_MEDICATIONS       QEGVAR(medical,medications)
+#define VAR_MEDICATIONS       		QEGVAR(medical,medications)
 // These variables track the current state of status values above
-#define VAR_HEMORRHAGE        QEGVAR(medical,hemorrhage)
-#define VAR_IN_PAIN           QEGVAR(medical,inPain)
-#define VAR_TOURNIQUET        QEGVAR(medical,tourniquets)
-#define VAR_FRACTURES         QEGVAR(medical,fractures)
+#define VAR_HEMORRHAGE        		QEGVAR(medical,hemorrhage)
+#define VAR_IN_PAIN           		QEGVAR(medical,inPain)
+#define VAR_TOURNIQUET        		QEGVAR(medical,tourniquets)
+#define VAR_FRACTURES         		QEGVAR(medical,fractures)
+#define VAR_SPO2	          		QEGVAR(medical,spo2)
+#define VAR_PNEUMO	          		QEGVAR(medical,pneumo)
+#define VAR_AIRWAY_BLOCKED    		QEGVAR(medical,blockage)
+#define VAR_AIRWAY_COLLAPSED  		QEGVAR(medical,collapsed)
+#define VAR_AIRWAY_TREATMENT_LVL  	QEGVAR(medical,airwayTreatmentLvl)
+#define VAR_PULSE_OXI			  	QEGVAR(medical,pulseOximeters)
 
 // - Unit Functions ---------------------------------------------------
 // Retrieval macros for common unit values
 // Defined for easy consistency and speed
-#define GET_SM_STATE(_unit)         ([_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState)
-#define GET_BLOOD_VOLUME(unit)      (unit getVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME])
-#define GET_WOUND_BLEEDING(unit)    (unit getVariable [VAR_WOUND_BLEEDING, 0])
-#define GET_HEART_RATE(unit)        (unit getVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE])
-#define GET_HEMORRHAGE(unit)        (unit getVariable [VAR_HEMORRHAGE, 0])
-#define GET_PAIN(unit)              (unit getVariable [VAR_PAIN, 0])
-#define GET_PAIN_SUPPRESS(unit)     (unit getVariable [VAR_PAIN_SUPP, 0])
-#define GET_TOURNIQUETS(unit)       (unit getVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES])
-#define GET_FRACTURES(unit)         (unit getVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES])
-#define IN_CRDC_ARRST(unit)         (unit getVariable [VAR_CRDC_ARRST, false])
-#define IS_BLEEDING(unit)           (GET_WOUND_BLEEDING(unit) > 0)
-#define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN, false])
-#define IS_UNCONSCIOUS(unit)        (unit getVariable [VAR_UNCON, false])
-#define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, []])
-#define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, []])
-#define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, []])
-#define GET_DAMAGE_THRESHOLD(unit)  (unit getVariable [QEGVAR(medical,damageThreshold), [EGVAR(medical,AIDamageThreshold),EGVAR(medical,playerDamageThreshold)] select (isPlayer unit)])
+#define GET_SM_STATE(_unit)         	([_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState)
+#define GET_BLOOD_VOLUME(unit)      	(unit getVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME])
+#define GET_WOUND_BLEEDING(unit)    	(unit getVariable [VAR_WOUND_BLEEDING, 0])
+#define GET_HEART_RATE(unit)        	(unit getVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE])
+#define GET_HEMORRHAGE(unit)        	(unit getVariable [VAR_HEMORRHAGE, 0])
+#define GET_PAIN(unit)              	(unit getVariable [VAR_PAIN, 0])
+#define GET_PAIN_SUPPRESS(unit)     	(unit getVariable [VAR_PAIN_SUPP, 0])
+#define GET_TOURNIQUETS(unit)       	(unit getVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES])
+#define GET_FRACTURES(unit)         	(unit getVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES])
+#define GET_SPO2(unit)					(unit getVariable [VAR_SPO2, DEFAULT_SPO2])
+#define GET_PNEUMO(unit)				(unit getVariable [VAR_PNEUMO, false])
+#define GET_AIRWAY_BLOCKED(unit)		(unit getVariable [VAR_AIRWAY_BLOCKED, false])
+#define GET_AIRWAY_COLLAPSED(unit)		(unit getVariable [VAR_AIRWAY_COLLAPSED, false])
+#define GET_AIRWAY_TREATMENT_LVL(unit)	(unit getVariable [VAR_AIRWAY_TREATMENT_LVL, 0])
+#define GET_PULSE_OXIS(unit)			(unit getVariable [VAR_PULSE_OXI, DEFAULT_TOURNIQUET_VALUES])
+#define IN_CRDC_ARRST(unit)         	(unit getVariable [VAR_CRDC_ARRST, false])
+#define IS_BLEEDING(unit)           	(GET_WOUND_BLEEDING(unit) > 0)
+#define IS_IN_PAIN(unit)            	(unit getVariable [VAR_IN_PAIN, false])
+#define IS_UNCONSCIOUS(unit)        	(unit getVariable [VAR_UNCON, false])
+#define GET_OPEN_WOUNDS(unit)       	(unit getVariable [VAR_OPEN_WOUNDS, []])
+#define GET_BANDAGED_WOUNDS(unit)   	(unit getVariable [VAR_BANDAGED_WOUNDS, []])
+#define GET_STITCHED_WOUNDS(unit)   	(unit getVariable [VAR_STITCHED_WOUNDS, []])
+#define GET_DAMAGE_THRESHOLD(unit)  	(unit getVariable [QEGVAR(medical,damageThreshold), [EGVAR(medical,AIDamageThreshold),EGVAR(medical,playerDamageThreshold)] select (isPlayer unit)])
 
 // The following function calls are defined here just for consistency
 #define GET_BLOOD_LOSS(unit)        ([unit] call EFUNC(medical_status,getBloodLoss))
@@ -186,6 +205,7 @@
 #define GET_PAIN_PERCEIVED(unit)    (0 max (GET_PAIN(unit) - GET_PAIN_SUPPRESS(unit)) min 1)
 
 #define HAS_TOURNIQUET_APPLIED_ON(unit,index) ((GET_TOURNIQUETS(unit) select index) > 0)
+#define HAS_PULSE_OXI_APPLIED_ON(unit,index) ((GET_PULSE_OXIS(unit) select index) > 0)
 
 // Cache expiry values, in seconds
 #define IN_MEDICAL_FACILITY_CACHE_EXPIRY 1
