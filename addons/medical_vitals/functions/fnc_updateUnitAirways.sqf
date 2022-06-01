@@ -29,13 +29,14 @@ private _adjustment = 0;
 private _updateDamageEffects = false;
 private _pneumo = GET_PNEUMO(_unit);
 private _inCrdc = IN_CRDC_ARRST(_unit);
+private _isUnconscious = IS_UNCONSCIOUS(_unit);
 private _blocked = GET_AIRWAY_BLOCKED(_unit);
 private _collapsed = GET_AIRWAY_COLLAPSED(_unit);
 private _airSupliment = _unit getVariable [QEGVAR(medical,air_supliment), 0];
 private _receivingAir = alive (_unit getVariable [QEGVAR(medical,air_provider), objNull]);
 private _maximumDrop = (EGVAR(medical,pneumoMultiplier) + EGVAR(medical,collapsedMultiplier) + EGVAR(medical,blockageMultiplier));
 
-if(_blocked || _collapsed || _pneumo || _inCrdc) then {
+if((_isUnconscious && (_blocked || _collapsed)) || _pneumo || _inCrdc) then {
     if(_inCrdc) then {
         _adjustment = [-0.3 , _airSupliment] select (_receivingAir);
         _multiplier = [EGVAR(medical,airwayDegradationMultiplier), EGVAR(medical,airwayRecoveryMultiplier)] select (_receivingAir);
@@ -60,6 +61,10 @@ if(_blocked || _collapsed || _pneumo || _inCrdc) then {
         if((_newSpo2 > 95 && _spo2 < 95) || {_newSpo2 > 85 && _spo2 < 85}) then {
             _updateDamageEffects = true;
         };
+    };
+    if(!_isUnconscious && (_blocked || _collapsed)) then {
+        _unit setVariable [VAR_AIRWAY_BLOCKED, false, true];
+        _unit setVariable [VAR_AIRWAY_COLLAPSED, false, true];
     };
 };
 _unit setVariable [VAR_SPO2, _newSpo2 , _syncValue];
