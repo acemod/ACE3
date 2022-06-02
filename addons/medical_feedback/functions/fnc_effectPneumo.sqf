@@ -19,7 +19,7 @@
 params ["_enable", "_spo2"];
 if (isNull findDisplay 46) exitWith {};
 
-if (!_enable || _spo2 == 0 ) exitWith {
+if (!_enable || {_spo2 == 0}) exitWith {
     if (GVAR(ppPneumothoraxBlackout) != -1) then { GVAR(ppPneumothoraxBlackout) ppEffectEnable false; };
     GVAR(ppPneumothoraxBlur) ppEffectEnable false;
 };

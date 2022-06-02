@@ -564,8 +564,8 @@ class ADDON {
             airwayRecoveryLevel = 3;
         };
     };
+    
     class ManualBreathing {
-        
         airwayRecoveryLevel = 1;
         class BVM{
             airwayRecoveryLevel = 2; // Just as good as breathing

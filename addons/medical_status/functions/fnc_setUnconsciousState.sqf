@@ -67,10 +67,10 @@ if (_active) then {
     
     // handle airways on transition
     if (EGVAR(medical,airway) > 0) then {
-        if ( random 1 < BLOCKAGE_CHANCE) then {
+        if (random 1 < BLOCKAGE_CHANCE) then {
             [_unit, true] call FUNC(setAirwayBlocked);
         };
-        if ( random 1 < COLLAPSE_CHANCE) then {
+        if (random 1 < COLLAPSE_CHANCE) then {
             _unit setVariable [VAR_AIRWAY_COLLAPSED, true, true];
         };
     };
