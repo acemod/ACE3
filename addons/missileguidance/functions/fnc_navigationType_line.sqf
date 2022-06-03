@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Assumes targetDir is pointing toward line we want to stay on
  *
  * Arguments:

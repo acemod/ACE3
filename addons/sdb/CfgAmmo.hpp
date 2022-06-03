@@ -1,7 +1,7 @@
 class CfgAmmo {
     class ammo_Bomb_SDB;
     class GVAR(sdb): ammo_Bomb_SDB {
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0; // no maneuvrability so that default guidance doesnt work
         class ace_missileguidance {
             enabled = 1;

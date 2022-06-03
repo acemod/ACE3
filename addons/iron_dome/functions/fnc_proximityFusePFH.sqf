@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Handles the fusing and detonation of any and all interceptors in the air
  *
  * Arguments:

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Determine path for projectile to take in accordance to proportional navigation
  *
  * Arguments:

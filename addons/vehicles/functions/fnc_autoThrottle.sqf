@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Toggle speed limiter for Driver in Plane. Uses a simple PID controller to manage thrust
  *
  * Arguments:

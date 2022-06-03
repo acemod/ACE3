@@ -6,7 +6,7 @@ class CfgAmmo {
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
 
         class ace_missileguidance {
@@ -50,7 +50,7 @@ class CfgAmmo {
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
 
         class ace_missileguidance {
@@ -95,7 +95,7 @@ class CfgAmmo {
         missileLockMaxDistance = 8000;
         missileLockMinDistance = 250;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
 
         class ace_missileguidance {
@@ -140,7 +140,7 @@ class CfgAmmo {
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
 
         class ace_missileguidance {
@@ -184,7 +184,7 @@ class CfgAmmo {
         missileLockMaxDistance = 8000;
         missileLockMinDistance = 250;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
 
         class ace_missileguidance {

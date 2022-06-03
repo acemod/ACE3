@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 #include "\a3\ui_f\hpp\defineCommonColors.inc"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Select either TOO or PB mode. Disable anything that shouldnt be touched in TOO and renable in PB
  *
  * Arguments:

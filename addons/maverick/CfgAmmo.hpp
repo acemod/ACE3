@@ -6,7 +6,7 @@ class CfgAmmo {
     class Missile_AGM_02_F: MissileBase {};
 
     class GVAR(D): Missile_AGM_02_F {
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         missileLockMaxDistance = 14000;
         maneuvrability = 0;
         class ace_missileguidance {

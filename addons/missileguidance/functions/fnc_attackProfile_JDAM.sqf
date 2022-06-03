@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Attack profile: JDAM
  * Uses LINE navigation type to guide projectile onto target
  *

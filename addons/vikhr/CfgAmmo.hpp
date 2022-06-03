@@ -1,7 +1,7 @@
 class CfgAmmo {
     class M_Scalpel_AT;
     class GVAR(9k121): M_Scalpel_AT {
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
 
         irLock = 0;

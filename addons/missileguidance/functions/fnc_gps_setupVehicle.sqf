@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Adds interaction menu actions to configure GPS bombs
  *
  * Arguments:

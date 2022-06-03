@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Attempts to hold angle as fed to by seeker. Does so with a simple proportional controller
  *
  * Arguments:

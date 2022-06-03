@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Saves all textboxes to whatever settings say for PB mode
  *
  * Arguments:

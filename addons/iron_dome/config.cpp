@@ -9,7 +9,7 @@ class CfgPatches {
         // no point having this system without missile guidance: nothing would happen
         requiredAddons[] = {"ace_common","ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Brandon (TCVM)"};
+        authors[] = {"Dani (TCVM)"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

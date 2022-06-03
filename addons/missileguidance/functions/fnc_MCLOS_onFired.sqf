@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Sets up SACLOS state arrays (called from missileGuidance's onFired).
  *
  * Arguments:

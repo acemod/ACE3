@@ -8,7 +8,7 @@ class CfgAmmo {
         missileLockMaxDistance = 16000;
         missileLockMinDistance = 500;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
         flightProfiles[] = {"Direct", "Loft"};
         class Direct {}; // dummy to allow for F cycling of missile mode
@@ -56,7 +56,7 @@ class CfgAmmo {
         missileLockMaxDistance = 16000;
         missileLockMinDistance = 500;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
         flightProfiles[] = {"Direct", "Loft"};
         class Direct {}; // dummy to allow for F cycling of missile mode
@@ -105,7 +105,7 @@ class CfgAmmo {
         missileLockMaxDistance = 16000;
         missileLockMinDistance = 500;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
         flightProfiles[] = {"Direct", "TopDown"};
         class Direct {}; // dummy to allow for F cycling of missile mode
@@ -155,7 +155,7 @@ class CfgAmmo {
         missileLockMaxDistance = 16000;
         missileLockMinDistance = 500;
 
-        author = "Brandon (TCVM)";
+        author = "Dani (TCVM)";
         maneuvrability = 0;
         flightProfiles[] = {"Direct", "TopDown"};
         class Direct {}; // dummy to allow for F cycling of missile mode
