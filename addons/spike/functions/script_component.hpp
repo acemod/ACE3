@@ -1,1 +1,0 @@
-#include "\z\ace\addons\spike\script_component.hpp"
