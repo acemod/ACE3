@@ -90,8 +90,8 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
     private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos, _targetData, _navigationParameters] call (missionNamespace getVariable _navigationFunction);
 
     if (isNil "_commandedAcceleration") exitWith {
-        systemChat format ["Error in %1", _navigationFunction];
-        ERROR_MSG("_commandedAcceleration is nil! Guidance cancelled");
+        systemChat format ["Error in %1 Missile Type %2", _navigationFunction, typeOf _projectile];
+        ERROR_MSG_2("_commandedAcceleration is nil! Guidance cancelled [%1 %2]",_navigationFunction,typeOf _projectile);
     };
 
     if (GVAR(debug_drawGuidanceInfo)) then {
