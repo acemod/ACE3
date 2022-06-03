@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Sets up a top-attack profile. If we don't have a target: coast
  *
  * Arguments:

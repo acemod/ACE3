@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Handles the map helper's draw event
  * Resets arguments if not run recently
  * And starts a watchdog to detect when weapon display unloaded
