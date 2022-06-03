@@ -31,9 +31,6 @@ if (isServer) then {
         GVAR(interceptors) pushBack [_interceptor, _target, getPosASLVisual _interceptor, _interceptor distance _target];
         [GVAR(toBeShot), _target] call CBA_fnc_hashRem;
     }] call CBA_fnc_addEventHandler;
-
-    [LINKFUNC(projectileTrackerPFH)] call CBA_fnc_addPerFrameHandler;
-    [LINKFUNC(proximityFusePFH)] call CBA_fnc_addPerFrameHandler;
 };
 
 [QGVAR(registerLaunchers), {

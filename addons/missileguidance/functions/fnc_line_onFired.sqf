@@ -27,7 +27,7 @@ if (_correctionDistance == 0) then {
 };
 
 private _navigationParams = [
-    _p, _i, _d,
+    _p, 0, _d,
     0,
     0,
     _correctionDistance

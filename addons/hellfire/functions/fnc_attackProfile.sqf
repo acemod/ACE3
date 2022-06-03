@@ -38,7 +38,7 @@ private _heightAboveLaunch = (_projectilePos select 2) - (_launchPos select 2);
 // Add height depending on distance for compensate
 private _returnTargetPos = _seekerTargetPos;
 if (_returnTargetPos isEqualTo [0, 0, 0]) then {
-    _initialDistanceToTarget = 8000;
+    private _initialDistanceToTarget = 8000;
     _returnTargetPos = _launchPos vectorAdd (_launchDir vectorMultiply _initialDistanceToTarget);
 };
 
@@ -109,6 +109,7 @@ switch (_attackStage) do {
 };
 
 // missile guidance defines this variable in doAttackProfile
+//IGNORE_PRIVATE_WARNING ["_attackProfileName"];
 _attackProfileName = ["na", "hellfire - LAUNCH", "hellfire - SEEK CRUISE", "hellfire - ATTACK CRUISE", "hellfire - TERMINAL"] select _attackStage;
 
 TRACE_1("Adjusted target position", _returnTargetPos);

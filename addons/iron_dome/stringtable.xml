@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="IRON_DOME">
+        <Key ID="STR_ACE_IRON_DOME_enable_description">
+            <English>Enable the Iron Dome system</English>
+        </Key>
         <Key ID="STR_ACE_IRON_DOME_category">
             <English>ACE Iron Dome</English>
         </Key>

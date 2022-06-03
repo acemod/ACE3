@@ -1,4 +1,14 @@
 [
+    QGVAR(enable), "CHECKBOX",
+    [ELSTRING(common,Enabled), LSTRING(enable_description)],
+    LSTRING(category),
+    false, // default value
+    true, // isGlobal
+    {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(targetRecycleTime), "SLIDER",
     [LSTRING(targetRecycleTime_setting), LSTRING(targetRecycleTime_description)],
     LSTRING(category),
