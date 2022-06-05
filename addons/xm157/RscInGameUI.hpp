@@ -3,7 +3,7 @@ class RscControlsGroupNoScrollbars;
 
 class RscText;
 class GVAR(text): RscText {
-    font = "EtelkaMonospaceProBold";
+    font = "EtelkaMonospacePro";
     SizeEx = 0.04;
     colorText[]={1,0.1,0.05,0.95};
     shadow = 0;
