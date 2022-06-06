@@ -19,7 +19,7 @@ class CBA_Extended_EventHandlers;
             class ACE_CamouflageTrench { \
                 displayName = CSTRING(CamouflageTrench); \
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canCamouflageTrench)); \
-                statement = QUOTE(_target call FUNC(camouflageTrench)); \
+                statement = QUOTE([ARR_2(_target,_player)] call FUNC(camouflageTrench)); \
             }; \
         }; \
     }

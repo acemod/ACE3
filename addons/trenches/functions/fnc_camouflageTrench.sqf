@@ -5,17 +5,23 @@
  *
  * Arguments:
  * 0: trench <OBJECT>
+ * 1: unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [TrenchObj] call ace_trenches_fnc_camouflageTrench
+ * [TrenchObj, ACE_player] call ace_trenches_fnc_camouflageTrench
  *
  * Public: No
  */
 
-params ["_trench"];
+params ["_trench", "_unit"];
 
-_trench setObjectTextureGlobal [0, (surfaceTexture getPosATL _trench)];
-_trench setVariable [QGVAR(camouflaged), true, true];
+_unit playActionNow "PutDown";
+
+[{
+    _this setObjectTextureGlobal [0, (surfaceTexture getPosATL _this)];
+    _this setVariable [QGVAR(camouflaged), true, true];
+}, _trench, 2] call CBA_fnc_waitAndExecute;
+
