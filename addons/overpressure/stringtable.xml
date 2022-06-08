@@ -5,6 +5,7 @@
             <English>Overpressure</English>
             <Chinesesimp>超压</Chinesesimp>
             <German>Überdruck</German>
+            <Korean>초과압력</Korean>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">
             <English>Overpressure Distance Coefficient</English>

@@ -1107,10 +1107,12 @@
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_DisplayName">
             <English>Sunflower Seeds</English>
             <German>Sonnenblumenkerne</German>
+            <Korean>해바라기씨</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Descriptione">
             <English>Roasted And Salted</English>
             <German>Geröstet und Gesalzen</German>
+            <Korean>굽고 간을 했습니다</Korean>
         </Key>
     </Package>
 </Project>

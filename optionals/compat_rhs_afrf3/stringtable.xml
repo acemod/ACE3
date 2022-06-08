@@ -44,6 +44,7 @@
             <Portuguese>[CSW] ATGM 9M131M</Portuguese>
             <Russian>[CSW] ПТРК 9М131М</Russian>
             <German>[CSW] ATGM 9M131M</German>
+            <Korean>[CSW] 9M131M 대전차미사일</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131F_displayName">
             <English>[CSW] ATGM 9M131F</English>
@@ -55,6 +56,7 @@
             <Portuguese>[CSW] ATGM 9M131F</Portuguese>
             <Russian>[CSW] ПТРК 9М131Ф</Russian>
             <German>[CSW] ATGM 9M131F</German>
+            <Korean>[CSW] 9M131F 대전차미사일</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133F_displayName">
             <English>[CSW] ATGM 9M133F</English>
@@ -66,6 +68,7 @@
             <Portuguese>[CSW] ATGM 9M133F</Portuguese>
             <Russian>[CSW] ПТРК 9М133Ф</Russian>
             <German>[CSW] ATGM 9M133F</German>
+            <Korean>[CSW] 9M133F 대전차미사일</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133_displayName">
             <English>[CSW] ATGM 9M133</English>
@@ -77,6 +80,7 @@
             <Portuguese>[CSW] ATGM 9M133</Portuguese>
             <Russian>[CSW] ПТРК 9М133</Russian>
             <German>[CSW] ATGM 9M133</German>
+            <Korean>[CSW] 9M133 대전차미사일</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M1331_displayName">
             <English>[CSW] ATGM 9M133-1</English>
@@ -88,6 +92,7 @@
             <Portuguese>[CSW] ATGM 9M133-1</Portuguese>
             <Russian>[CSW] ПТРК 9М133-1</Russian>
             <German>[CSW] ATGM 9M133-1</German>
+            <Korean>[CSW] 9M133-1 대전차미사일</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133M2_displayName">
             <English>[CSW] ATGM 9M133M2</English>
@@ -99,6 +104,7 @@
             <Portuguese>[CSW] ATGM 9M133M2</Portuguese>
             <Russian>[CSW] ПТРК 9М133M2</Russian>
             <German>[CSW] ATGM 9M133M2</German>
+            <Korean>[CSW] 9M133M2 대전차미사일</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9V_displayName">
             <English>[CSW] HEAT PG-9V</English>
@@ -110,6 +116,7 @@
             <Portuguese>[CSW] HEAT PG-9V</Portuguese>
             <Russian>[CSW] ПГ-9В</Russian>
             <German>[CSW] HEAT PG-9V</German>
+            <Korean>[CSW] PG-9V 대전차고폭탄</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9N_displayName">
             <English>[CSW] HEAT PG-9N</English>
@@ -121,6 +128,7 @@
             <Portuguese>[CSW] HEAT PG-9N</Portuguese>
             <Russian>[CSW] ПГ-9Н</Russian>
             <German>[CSW] HEAT PG-9N</German>
+            <Korean>[CSW] PG-9N 대전차고폭탄</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9VNT_displayName">
             <English>[CSW] HEAT PG-9VNT</English>
@@ -132,6 +140,7 @@
             <Portuguese>[CSW] HEAT PG-9VNT</Portuguese>
             <Russian>[CSW] ПГ-9ВНТ</Russian>
             <German>[CSW] HEAT PG-9VNT</German>
+            <Korean>[CSW] PG-9VNT 대전차고폭탄</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9V_displayName">
             <English>[CSW] HE-FRAG OG-9V</English>
@@ -143,6 +152,7 @@
             <Portuguese>[CSW] HE-FRAG OG-9V</Portuguese>
             <Russian>[CSW] ОГ-9В</Russian>
             <German>[CSW] HE-FRAG OG-9V</German>
+            <Korean>[CSW] OG-9V 고폭파편탄</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9VM_displayName">
             <English>[CSW] HE-FRAG OG-9VM</English>
@@ -154,6 +164,7 @@
             <Portuguese>[CSW] HE-FRAG OG-9VM</Portuguese>
             <Russian>[CSW] ОГ-9ВМ</Russian>
             <German>[CSW] HE-FRAG OG-9VM</German>
+            <Korean>[CSW] OG-9VM 고폭파편탄</Korean>
         </Key>
     </Package>
 </Project>
