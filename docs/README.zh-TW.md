@@ -18,8 +18,8 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 條款">
     </a>
-    <a href="https://acemod.org/slack">
-        <img src="https://img.shields.io/badge/Slack-Join-darkviolet.svg?style=flat-square" alt="加入ACE3 Slack">
+    <a href="https://acemod.org/discord">
+        <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="加入ACE3 Discord">
     </a>
     <a href="https://circleci.com/gh/acemod/ACE3">
         <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 建構狀態">
@@ -104,8 +104,8 @@ ACE3需要最新版本的武裝行動3以及最新版本的 <a href="https://git
 
 <table>
   <tr>
-    <td><a href="https://acemod.org/slack">Slack</a></td>
-    <td>我們有著公共的Slack團隊供大家加入，而該模組所有開發者以及維護者也會在此出現並公告</td>
+    <td><a href="https://acemod.org/discord">Discord</a></td>
+    <td>我們有著公共的Discord團隊供大家加入，而該模組所有開發者以及維護者也會在此出現並公告</td>
   </tr>
 
   <tr>

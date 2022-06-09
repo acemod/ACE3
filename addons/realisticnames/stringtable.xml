@@ -115,7 +115,7 @@
             <Hungarian>Mini-Spike rakétarendszer (Tankelhárító)</Hungarian>
             <Italian>Lanciatore Mini-Spike (AC)</Italian>
             <Japanese>ミニスパイク ランチャー (対戦)</Japanese>
-            <Korean>미니 스파이크 발사기 (대전차)</Korean>
+            <Korean>스파이크 미사일 발사기 (대전차)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (反坦克)</Chinese>
             <Chinesesimp>"迷你长钉"（反坦）</Chinesesimp>
             <Turkish>Mini-Spike Launcher (AT)</Turkish>
@@ -132,7 +132,7 @@
             <Hungarian>Mini-Spike rakétarendszer (Repülő-elhárító)</Hungarian>
             <Italian>Lanciatore Mini-Spike (AA)</Italian>
             <Japanese>ミニスパイク ランチャー (対空)</Japanese>
-            <Korean>미니 스파이크 (대공)</Korean>
+            <Korean>스파이크 미사일 발사기 (대공)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (防空)</Chinese>
             <Chinesesimp>"迷你长钉"（防空）</Chinesesimp>
             <Turkish>Mini-Spike Launcher (AA)</Turkish>
@@ -267,8 +267,8 @@
             <Portuguese>Sholef</Portuguese>
             <Hungarian>Sholef</Hungarian>
             <Italian>Sholef</Italian>
-            <Japanese>ショルフ</Japanese>
-            <Korean>숄레프</Korean>
+            <Japanese>ショレフ</Japanese>
+            <Korean>숄레프 자주포</Korean>
             <Chinese>"神槍"自走炮</Chinese>
             <Chinesesimp>"神枪"</Chinesesimp>
             <Turkish>Sholef</Turkish>
@@ -285,7 +285,7 @@
             <Hungarian>Seara</Hungarian>
             <Italian>Seara</Italian>
             <Japanese>シアラ</Japanese>
-            <Korean>시아라</Korean>
+            <Korean>시아라 다연장로켓</Korean>
             <Chinese>"希拉"多管火箭車</Chinese>
             <Chinesesimp>"希拉"</Chinesesimp>
             <Turkish>Seara</Turkish>
@@ -301,8 +301,8 @@
             <Portuguese>Namer</Portuguese>
             <Hungarian>Namer</Hungarian>
             <Italian>Namer</Italian>
-            <Japanese>ネイマー</Japanese>
-            <Korean>나메르</Korean>
+            <Japanese>ナメル</Japanese>
+            <Korean>나메르 APC</Korean>
             <Chinese>"花豹"裝甲運兵車</Chinese>
             <Chinesesimp>"花豹"</Chinesesimp>
             <Turkish>Namer</Turkish>
@@ -318,8 +318,8 @@
             <Portuguese>Bardelas</Portuguese>
             <Hungarian>Bardelas</Hungarian>
             <Italian>Bardelas</Italian>
-            <Japanese>バーラデラス</Japanese>
-            <Korean>바델라스</Korean>
+            <Japanese>バルデラス</Japanese>
+            <Korean>바델라스 자주대공포</Korean>
             <Chinese>"布萊德斯"防空車</Chinese>
             <Chinesesimp>"布莱德斯"</Chinesesimp>
             <Turkish>Bardelas</Turkish>
@@ -335,7 +335,7 @@
             <Portuguese>Badger IFV</Portuguese>
             <Hungarian>Badger IFV</Hungarian>
             <Italian>Badger IFV</Italian>
-            <Japanese>バッジ IFV</Japanese>
+            <Japanese>バジャー IFV</Japanese>
             <Korean>뱃져 IFV</Korean>
             <Chinese>"蜜獾"步兵戰車</Chinese>
             <Chinesesimp>"蜜獾"</Chinesesimp>
@@ -353,7 +353,7 @@
             <Hungarian>Nemmera</Hungarian>
             <Italian>Nemmera</Italian>
             <Japanese>ネマラ</Japanese>
-            <Korean>네메라</Korean>
+            <Korean>네메라 공병장갑차</Korean>
             <Chinese>"雌豹"戰鬥工程車</Chinese>
             <Chinesesimp>"雌豹"</Chinesesimp>
             <Turkish>Nemmera</Turkish>
@@ -556,7 +556,7 @@
             <Portuguese>Leopard 2SG</Portuguese>
             <Hungarian>Leopard 2SG</Hungarian>
             <Italian>Leopard 2SG</Italian>
-            <Japanese>レオパルド 2SG</Japanese>
+            <Japanese>レオパルト 2SG</Japanese>
             <Korean>레오파르트 2SG</Korean>
             <Chinese>"豹2型新加坡版"主戰坦克</Chinese>
             <Chinesesimp>"豹"2 新加坡版</Chinesesimp>
@@ -574,7 +574,7 @@
             <Hungarian>FV510 Warrior</Hungarian>
             <Italian>FV510 Warrior</Italian>
             <Japanese>FV510 ウォーリアー</Japanese>
-            <Korean>FV510 워리어</Korean>
+            <Korean>FV510 워리어 IFV</Korean>
             <Chinese>FV510 "戰士"步兵戰車</Chinese>
             <Chinesesimp>FV510 "战士"</Chinesesimp>
             <Turkish>FV510 Warrior</Turkish>
@@ -591,7 +591,7 @@
             <Hungarian>Pandur II</Hungarian>
             <Italian>Pandur II</Italian>
             <Japanese>パンデュール II</Japanese>
-            <Korean>판두르 II</Korean>
+            <Korean>판두르 II APC</Korean>
             <Chinese>"潘德2型"裝甲運兵車</Chinese>
             <Chinesesimp>"潘德"二型</Chinesesimp>
             <Turkish>Pandur II</Turkish>
@@ -712,7 +712,7 @@
             <Czech>KamAZ MRL (raketové dělostřelectvo)</Czech>
             <Spanish>KamAZ MRL</Spanish>
             <Turkish>KamAZ </Turkish>
-            <Korean>카마즈 MRL</Korean>
+            <Korean>카마즈 다연장로켓</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -777,7 +777,7 @@
             <Hungarian>T100 Fekete Sas</Hungarian>
             <Italian>T100 Black Eagle</Italian>
             <Japanese>T100 ブラック イーグル</Japanese>
-            <Korean>T100 블랙이글</Korean>
+            <Korean>T-100 블랙 이글</Korean>
             <Chinese>T100 "黑鷹"主戰坦克</Chinese>
             <Chinesesimp>T-100 "黑鹰"</Chinesesimp>
             <Turkish>T100 Black Eagle</Turkish>
@@ -845,7 +845,7 @@
             <Hungarian>Otokar ARMA</Hungarian>
             <Italian>Otokar ARMA</Italian>
             <Japanese>オトカ アルマ</Japanese>
-            <Korean>오토카 ARMA</Korean>
+            <Korean>오토카르 아르마 APC</Korean>
             <Chinese>"奧托卡—阿爾默"裝甲運兵車</Chinese>
             <Chinesesimp>奥托卡尔 "阿玛"</Chinesesimp>
             <Turkish>Otokar ARMA</Turkish>
@@ -1409,7 +1409,7 @@
             <Portuguese>M83 Granada de fumaça (Branca)</Portuguese>
             <Hungarian>M83 füstgránát (Fehér)</Hungarian>
             <Italian>M83 Granata fumogena (Bianco)</Italian>
-            <Japanese>M18 発煙手榴弾 (白)</Japanese>
+            <Japanese>M83 発煙手榴弾 (白)</Japanese>
             <Korean>M83 연막탄 (하양)</Korean>
             <Chinese>M83煙霧彈 (白色)</Chinese>
             <Chinesesimp>M83 烟雾弹（白色）</Chinesesimp>
@@ -1614,7 +1614,7 @@
             <Portuguese>MP-443 Grach</Portuguese>
             <Italian>MP-443 Grach</Italian>
             <Japanese>MP-433 グラッチ</Japanese>
-            <Korean>MP-443 Grach</Korean>
+            <Korean>MP-443 그라치</Korean>
             <Chinese>MP-443 "烏鴉"手槍</Chinese>
             <Chinesesimp>MP-443 "乌鸦"</Chinesesimp>
             <Turkish>MP-443 Grach</Turkish>
@@ -1630,7 +1630,7 @@
             <Russian>Custom Covert II</Russian>
             <Portuguese>Custom Covert II</Portuguese>
             <Italian>ACP-C2</Italian>
-            <Japanese>カスタム コンバート II</Japanese>
+            <Japanese>カスタム コバートⅡ</Japanese>
             <Korean>커스텀 커버트 II</Korean>
             <Chinese>特裝隱蔽Ⅱ型手槍</Chinese>
             <Chinesesimp>金柏特特装隐蔽二型</Chinesesimp>
@@ -1682,7 +1682,7 @@
             <Portuguese>Chiappa Rhino 60DS</Portuguese>
             <Italian>Chiappa Rhino 6DS</Italian>
             <Japanese>チアッパ ライノ 60DS</Japanese>
-            <Korean>키아파 라이노60DS</Korean>
+            <Korean>키아파 라이노 60DS</Korean>
             <Chinese>齊亞帕"犀牛"60DS左輪手槍</Chinese>
             <Chinesesimp>齐亚帕"犀牛" 60DS</Chinesesimp>
             <Turkish>Chiappa Rhino 60DS</Turkish>
@@ -1767,7 +1767,7 @@
             <Portuguese>Mini-Spike (AA)</Portuguese>
             <Italian>Mini-Spike (AA)</Italian>
             <Japanese>ミニスパイク (対空)</Japanese>
-            <Korean>미니 스파이크 (대공)</Korean>
+            <Korean>스파이크 미사일 (대공)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (防空)</Chinese>
             <Chinesesimp>"迷你长钉"（防空）</Chinesesimp>
             <Turkish>Mini-Spike (AA)</Turkish>
@@ -1784,7 +1784,7 @@
             <Portuguese>Mini-Spike (AT)</Portuguese>
             <Italian>Mini-Spike (AT)</Italian>
             <Japanese>ミニスパイク (対地)</Japanese>
-            <Korean>미니 스파이크 (대전차)</Korean>
+            <Korean>스파이크 미사일 (대전차)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (反坦克)</Chinese>
             <Chinesesimp>"迷你长钉"（反坦）</Chinesesimp>
             <Turkish>Mini-Spike (AT)</Turkish>
@@ -2320,7 +2320,7 @@
             <Portuguese>Scorpion Evo 3 A1</Portuguese>
             <Italian>Scorpion Evo 3 A1</Italian>
             <Japanese>スコーピオン エボ 3 A1</Japanese>
-            <Korean>스콜피온 Evo 3 A1</Korean>
+            <Korean>스콜피온 에보 3 A1</Korean>
             <Chinese>"蠍式"Evo 3 A1衝鋒槍</Chinese>
             <Chinesesimp>Evo 3 A1 "蝎"</Chinesesimp>
             <Turkish>Scorpion Evo 3 A1</Turkish>
@@ -3048,7 +3048,7 @@
             <Italian>Burraq UCAV</Italian>
             <Hungarian>Burraq UCAV</Hungarian>
             <Portuguese>Burraq UCAV</Portuguese>
-            <Japanese>ブラーク UCAV</Japanese>
+            <Japanese>ブラク UCAV</Japanese>
             <Korean>부라크 UCAV</Korean>
             <Chinese>"柏拉格"空中無人戰鬥載具</Chinese>
             <Chinesesimp>"柏拉格" 战斗无人机</Chinesesimp>
@@ -3628,7 +3628,7 @@
             <Czech>Polaris DAGOR (Mini-Spike AT)</Czech>
             <Turkish>Polaris DAGOR (Mini-Spike AT)</Turkish>
             <Spanish>Polaris DAGOR (Mini-Spike AT)</Spanish>
-            <Korean>폴라리스 DAGOR (Mini-Spike 대전차)</Korean>
+            <Korean>폴라리스 DAGOR (스파이크 미사일 대전차)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3692,7 +3692,7 @@
             <Czech>LSV Mk. II (Metis-M)</Czech>
             <Turkish>LSV Mk. II (Metis-M)</Turkish>
             <Spanish>LSV Mk. II (Metis-M)</Spanish>
-            <Korean>LSV Mk. II (Metis-M)</Korean>
+            <Korean>LSV Mk. II (메티스-M)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -3740,7 +3740,7 @@
             <Czech>Rooikat 120 UP</Czech>
             <Turkish>Rooikat 120 UP</Turkish>
             <Spanish>Rooikat 120 UP</Spanish>
-            <Korean>루이캇트 120 UP</Korean>
+            <Korean>루이캇트 120 시가전형</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
@@ -3827,7 +3827,7 @@
             <German>Wiesel 2 AFF (Radar)</German>
             <Chinesesimp>"鼬鼠"2（雷达）</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (雷達)</Chinese>
-            <Japanese>ウィーゼル 2 (レーダー)</Japanese>
+            <Japanese>ウィーゼル 2 RFCV (レーダー)</Japanese>
             <Italian>Wiesel 2 RFCV (Radar)</Italian>
             <Polish>Wiesel 2 RFCV (Radar)</Polish>
             <Russian>Wiesel 2 RFCV (Радар)</Russian>
@@ -4041,7 +4041,7 @@
             <Czech>SIG BRAVO4 / ROMEO3 (Černá)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Siyah)</Turkish>
             <Spanish>SIG BRAVO4 / ROMEO3 (Negra)</Spanish>
-            <Korean>SIG 브라보4 / 로미오3 (검정)</Korean>
+            <Korean>시그 브라보4 / 로미오3 (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
             <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
@@ -4057,7 +4057,7 @@
             <Czech>SIG BRAVO4 / ROMEO3 (Khaki)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Haki)</Turkish>
             <Spanish>SIG BRAVO4 / ROMEO3 (Caqui)</Spanish>
-            <Korean>SIG 브라보4 / 로미오3 (카키)</Korean>
+            <Korean>시그 브라보4 / 로미오3 (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -4073,7 +4073,7 @@
             <Czech>SIG BRAVO4 / ROMEO3 (Písková)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Kum)</Turkish>
             <Spanish>SIG BRAVO4 / ROMEO3 (Arena)</Spanish>
-            <Korean>SIG 브라보4 / 로미오3 (사막)</Korean>
+            <Korean>시그 브라보4 / 로미오3 (사막)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
@@ -4185,7 +4185,7 @@
             <Turkish>US Optics MR-10 (Haki)</Turkish>
             <Spanish>US Optics MR-10 (Caqui)</Spanish>
             <German>US Optics MR-10 (Khaki)</German>
-            <Korean>US 옵틱스 MR-10  (카키)</Korean>
+            <Korean>US 옵틱스 MR-10 (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -4201,7 +4201,7 @@
             <Turkish>US Optics MR-10 (Kum)</Turkish>
             <Spanish>US Optics MR-10 (Arena)</Spanish>
             <German>US Optics MR-10 (Sand)</German>
-            <Korean>US 옵틱스 MR-10  (사막)</Korean>
+            <Korean>US 옵틱스 MR-10 (사막)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -4845,7 +4845,7 @@
             <Japanese>5.7mm 50 発入り弾倉</Japanese>
             <Chinese>5.7mm 50發 彈匣</Chinese>
             <Chinesesimp>5.7 mm 50发 弹匣</Chinesesimp>
-            <Korean>5.7mm 50Rnd Mag</Korean>
+            <Korean>5.7mm 50발 들이 탄창</Korean>
             <Turkish>5.7mm 50Rnd Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Mag_DescriptionShort">
@@ -5114,7 +5114,7 @@
             <German>M14 (klassisch)</German>
             <Czech>M14 (klasický)</Czech>
             <Portuguese>M14 (clássico)</Portuguese>
-            <Korean>M14 (표준)</Korean>
+            <Korean>M14 (클래식)</Korean>
             <Chinesesimp>M14（经典）</Chinesesimp>
             <Japanese>M14 (クラシック)</Japanese>
             <Turkish>M14 (klasik)</Turkish>
@@ -5199,7 +5199,7 @@
             <German>MSBS Grot (Sandfarben)</German>
             <Czech>MSBS Grot (Písková)</Czech>
             <Portuguese>MSBS Grot (Deserto)</Portuguese>
-            <Korean>MSBS 그롯 (사막)</Korean>
+            <Korean>MSBS 그롯 (모래)</Korean>
             <Chinesesimp>MSBS Grot（沙色）</Chinesesimp>
             <Japanese>MSBS グロート (サンド)</Japanese>
             <Turkish>MSBS Grot (Kum)</Turkish>
@@ -5267,7 +5267,7 @@
             <German>MSBS Grot GL (Sandfarben)</German>
             <Czech>MSBS Grot GL (Písková)</Czech>
             <Portuguese>MSBS Grot GL (Deserto)</Portuguese>
-            <Korean>MSBS 그롯 GL (사막)</Korean>
+            <Korean>MSBS 그롯 GL (모래)</Korean>
             <Chinesesimp>MSBS Grot GPBO-40（沙色）</Chinesesimp>
             <Japanese>MSBS グロート GL (サンド)</Japanese>
             <Turkish>MSBS Grot GL (Kum)</Turkish>
@@ -5335,7 +5335,7 @@
             <German>MSBS Grot MR (Sandfarben)</German>
             <Czech>MSBS Grot MR (Písková)</Czech>
             <Portuguese>MSBS Grot MR (Deserto)</Portuguese>
-            <Korean>MSBS 그롯 MR (사막)</Korean>
+            <Korean>MSBS 그롯 MR (모래)</Korean>
             <Chinesesimp>MSBS Grot MR（沙色）</Chinesesimp>
             <Japanese>MSBS グロート MR (サンド)</Japanese>
             <Turkish>MSBS Grot MR (Kum)</Turkish>
@@ -5403,7 +5403,7 @@
             <German>MSBS Grot SG (Sandfarben)</German>
             <Czech>MSBS Grot SG (Písková)</Czech>
             <Portuguese>MSBS Grot SG (Deserto)</Portuguese>
-            <Korean>MSBS 그롯 SG (사막)</Korean>
+            <Korean>MSBS 그롯 SG (모래)</Korean>
             <Chinesesimp>MSBS Grot SG（沙色）</Chinesesimp>
             <Japanese>MSBS グロート SG (サンド)</Japanese>
             <Turkish>MSBS Grot SG (Kum)</Turkish>

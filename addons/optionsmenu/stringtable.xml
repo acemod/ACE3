@@ -13,7 +13,7 @@
             <Russian>Отладка в буфер обмена</Russian>
             <Italian>Debug su Blocco Note</Italian>
             <Japanese>ｸﾘｯﾌﾟﾎﾞｰﾄﾞにﾃﾞﾊﾞｯｸﾞ</Japanese>
-            <Korean>디버그를 클립보드로</Korean>
+            <Korean>클립보드를 디버그하기</Korean>
             <Chinesesimp>复制调试信息至剪贴板</Chinesesimp>
             <Chinese>複製除錯訊息至剪貼簿</Chinese>
             <Turkish>Panoya Hata Ayıkla</Turkish>
@@ -81,7 +81,7 @@
             <Russian>Новости ACE</Russian>
             <Italian>Novità ACE</Italian>
             <Japanese>ACE ニュース</Japanese>
-            <Korean>ACE 새소식</Korean>
+            <Korean>ACE 새 소식</Korean>
             <Chinesesimp>ACE 新闻</Chinesesimp>
             <Chinese>ACE新聞</Chinese>
             <Turkish>ACE Haberler</Turkish>
@@ -98,7 +98,7 @@
             <Czech>Zobrazit zprávy v hlavním menu</Czech>
             <Italian>Mostra News nel Menù Princinpale</Italian>
             <Japanese>メイン画面にニュースを表示します</Japanese>
-            <Korean>메인메뉴에 새소식을 표시합니다</Korean>
+            <Korean>메인메뉴에 새 소식을 표시합니다</Korean>
             <Chinesesimp>显示新闻消息于主菜单</Chinesesimp>
             <Chinese>顯示新聞消息於主選單</Chinese>
             <Turkish>Ana Menü de Haberleri Göster</Turkish>

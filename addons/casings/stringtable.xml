@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Casings">
+        <Key ID="STR_ACE_Casings_Settings_DisplayName">
+            <English>ACE Casings</English>
+            <Japanese>ACE 薬莢</Japanese>
+            <Polish>ACE Łuski</Polish>
+        </Key>
+        <Key ID="STR_ACE_Casings_displayName">
+            <English>Casings Enabled</English>
+            <Japanese>薬莢の有効化</Japanese>
+            <Polish>Łuski włączone</Polish>
+        </Key>
+        <Key ID="STR_ACE_Casings_description">
+            <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
+            <Japanese>永続的な薬莢を有効にする (古い/弱いシステムに対する潜在的なパフォーマンスの影響)</Japanese>
+            <Polish>Włącz pozostawanie łusek (MOŻLIWY wpływ na wydajność na starych/słabych komputerach)</Polish>
+        </Key>
+        <Key ID="STR_ACE_Casings_maxCasings_displayName">
+            <English>Maximum casings</English>
+            <Japanese>薬莢の最大量</Japanese>
+            <Polish>Maksymalna liczba łusek</Polish>
+        </Key>
+        <Key ID="STR_ACE_Casings_maxCasings_description">
+            <English>Maximum amount of casings to display</English>
+            <Japanese>表示される薬莢の最大の数</Japanese>
+            <Polish>Maksymalna liczba wyświetlanych łusek</Polish>
+        </Key>
+    </Package>
+</Project>

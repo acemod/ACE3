@@ -47,7 +47,7 @@
             <Italian>Usato per mostrare l'altitudine, la velocità di discesa e l'ora.</Italian>
             <Portuguese>Usado para mostrar altura, taxa de descida e o tempo.</Portuguese>
             <Japanese>高度や降下率、時間を見るのに使います。</Japanese>
-            <Korean>높이와, 하강속도 그리고 시간을 보여줍니다.</Korean>
+            <Korean>높이, 하강속도 그리고 시간을 보여줍니다.</Korean>
             <Chinesesimp>用于显示高度，下降率和时间。</Chinesesimp>
             <Chinese>用於顯示高度，下降率和時間</Chinese>
             <Turkish>Yüksekliği, alçalma hızını ve zamanı göstermek için kullanılır.</Turkish>
@@ -143,7 +143,7 @@
             <Polish>Szansa na nieotwarcie się spadochronu</Polish>
             <German>Wahrscheinlichkeit, dass ein Fallschirm sich nicht öffnet</German>
             <Chinesesimp>开伞失败率</Chinesesimp>
-            <Korean>낙하산 실패 확률</Korean>
+            <Korean>낙하산 펼치기 실패 확률</Korean>
         </Key>
     </Package>
 </Project>

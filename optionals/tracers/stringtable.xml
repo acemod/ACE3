@@ -11,7 +11,7 @@
                 <Portuguese>Recarregar magazine de 150 balas tracejantes (verde)</Portuguese>
                 <Japanese>5.56 mm 150発入り 残通知 曳光弾 (緑) マガジン</Japanese>
                 <Spanish>Cargador de 150 Cartuchos 5.56 mm Trazadora de recarga (Verde)</Spanish>
-                <Korean>5.56mm 150발들이 재장전알림 예광탄 (초록) 탄창 </Korean>
+                <Korean>5.56mm 150발들이 재장전 알림 예광탄 (초록) 탄창 </Korean>
                 <Chinesesimp>5.56 mm 150发 弹鼓（曳光，装填指示，绿）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_yellow">
@@ -23,7 +23,7 @@
                 <Portuguese>Recarregar magazine 150 balas tracejantes (Amarelo)</Portuguese>
                 <Japanese>5.56 mm 150発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 150 Cartuchos 5.56 mm Trazadora de recarga (Amarilla)</Spanish>
-                <Korean>5.56mm 150발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
+                <Korean>5.56mm 150발들이 재장전 알림 예광탄 (노랑) 탄창 </Korean>
                 <Chinesesimp>5.56 mm 150发 弹鼓（曳光，装填指示，黄）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_green">
@@ -119,7 +119,7 @@
                 <Portuguese>Recarregar magazine 5.8mm 30 Balas tracejantes (vermelho)</Portuguese>
                 <Japanese>5.8 mm 30発入り 残通知 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 5.8 mm Trazadora de recarga (Roja)</Spanish>
-                <Korean>5.8mm 30발들이 재장전알림 예광탄 (빨강) 탄창 </Korean>
+                <Korean>5.8mm 30발들이 재장전 알림 예광탄 (빨강) 탄창 </Korean>
                 <Chinesesimp>5.8 mm 30发 弹匣（曳光，装填指示，红）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_yellow">
@@ -131,7 +131,7 @@
                 <Portuguese>Recarregar magazine 5.8mm 30 Balas tracejantes (amarelo)</Portuguese>
                 <Japanese>5.8 mm 30発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 5.8 mm Trazadora de recarga (Amarilla)</Spanish>
-                <Korean>5.8mm 30발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
+                <Korean>5.8mm 30발들이 재장전 알림 예광탄 (노랑) 탄창 </Korean>
                 <Chinesesimp>5.8 mm 30发 弹匣（曳光，装填指示，黄）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_red">
@@ -191,7 +191,7 @@
                 <Portuguese>Recarregar magazine 5.8 mm 100 balas tracejante (vermelho)</Portuguese>
                 <Japanese>5.8 mm 100発入り 残通知 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 100 Cartuchos 5.8 mm Trazadora de recarga (Roja)</Spanish>
-                <Korean>5.8mm 100발들이 재장전알림 예광탄 (빨강) 탄창 </Korean>
+                <Korean>5.8mm 100발들이 재장전 알림 예광탄 (빨강) 탄창 </Korean>
                 <Chinesesimp>5.8 mm 100发 弹鼓（曳光，装填指示，红）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_yellow">
@@ -203,7 +203,7 @@
                 <Portuguese>Recarregar magazine 5.8 mm 100 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>5.8 mm 100発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 100 Cartuchos 5.8 mm Trazadora de recarga (Amarilla)</Spanish>
-                <Korean>5.8mm 100발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
+                <Korean>5.8mm 100발들이 재장전 알림 예광탄 (노랑) 탄창 </Korean>
                 <Chinesesimp>5.8 mm 100发 弹鼓（曳光，装填指示，黄）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_red">
@@ -263,7 +263,7 @@
                 <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (verde)</Portuguese>
                 <Japanese>6.5 mm 30発入り 残通知 曳光弾 (緑) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora de recarga (Verde)</Spanish>
-                <Korean>6.5mm 30발들이 재장전알림 예광탄 (초록) 탄창 </Korean>
+                <Korean>6.5mm 30발들이 재장전 알림 예광탄 (초록) 탄창 </Korean>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，装填指示，绿）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_green_description">
@@ -287,7 +287,7 @@
                 <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>6.5 mm 30発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora de recarga (Amarilla)</Spanish>
-                <Korean>6.5mm 30발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
+                <Korean>6.5mm 30발들이 재장전 알림 예광탄 (노랑) 탄창 </Korean>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，装填指示，黄）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_yellow_description">
@@ -431,7 +431,7 @@
                 <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (vermelho)</Portuguese>
                 <Japanese>6.5 mm 30発入り 残通知 曳光弾 (赤) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora de recarga (Roja)</Spanish>
-                <Korean>6.5mm 30발들이 재장전알림 예광탄 (빨강) 탄창 </Korean>
+                <Korean>6.5mm 30발들이 재장전 알림 예광탄 (빨강) 탄창 </Korean>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，装填指示，红）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_yellow">
@@ -443,7 +443,7 @@
                 <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
                 <Japanese>6.5 mm 30発入り 残通知 曳光弾 (黄) マガジン</Japanese>
                 <Spanish>Cargador de 30 Cartuchos 6.5 mm Trazadora de recarga (Amarilla)</Spanish>
-                <Korean>6.5mm 30발들이 재장전알림 예광탄 (노랑) 탄창 </Korean>
+                <Korean>6.5mm 30발들이 재장전 알림 예광탄 (노랑) 탄창 </Korean>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，装填指示，黄）</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_red">

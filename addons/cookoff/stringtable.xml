@@ -101,7 +101,7 @@
             <Italian>Abilita l'esplosione delle munizioni. Spara munizioni di proiettili quando il veicolo va a fuoco e contiene munizioni.</Italian>
             <Chinese>開啟彈藥殉爆效果。當一台載有彈藥的載具起火時, 將會有殉爆的效果</Chinese>
             <Chinesesimp>开启弹药殉爆效果。当一台载有弹药的载具起火时，将会有殉爆的效果。</Chinesesimp>
-            <Korean>쿡오프 현상을 활성화 합니다. 이것은 탄약에 불이 붙어있는 동안 주변에 발사체를 발사합니다.</Korean>
+            <Korean>쿡오프 현상을 활성화 합니다. 이것은 탄약에 불이 붙어 있는 동안 주변에 발사체를 발사합니다.</Korean>
             <Russian>Активирует возгорание и детонацию боекомплекта в горящей технике</Russian>
             <Portuguese>Permite que a munição cozinhe. Dispara projéteis de munição enquanto o veículo está em chamas e tem munição.</Portuguese>
             <Czech>Zapíná vznícení munice. Vystřeluje projektily po dobu kdy vozidlo hoří a má munici.</Czech>
@@ -165,6 +165,12 @@
             <Portuguese>Multiplicador para a chance de cozinhamento. Valores mais altos aumentam as chances de ocorrer.</Portuguese>
             <Czech>Multiplikátor pro pravděpodobnost vznícení munice. Vyšší hodnota znamená vyšší šanci vznícení munice.</Czech>
             <Korean>쿡오프가 일어날 확률에 계수를 곱합니다. 더 큰 숫자는 더 높은 확률의 쿡오프를 일으킵니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
+            <English>Destroy Vehicles After Cook-off</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
+            <English>Controls whether vehicles will always be destroyed after cooking off. Depending on the cookoff, the vehicle may explode or may simply be killed without effects.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>

@@ -743,7 +743,7 @@
             <French>Banane</French>
             <Hungarian>Banán</Hungarian>
             <Portuguese>Banana</Portuguese>
-            <Japanese>甘蕉</Japanese>
+            <Japanese>バナナ</Japanese>
             <Korean>바나나</Korean>
             <Chinese>香蕉</Chinese>
             <Chinesesimp>香蕉</Chinesesimp>
@@ -759,7 +759,7 @@
             <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków.&lt;br /&gt;Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii.&lt;br /&gt;Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
             <French>Une banane est un fruit comestible qui, d'un point de vue botanique, fait partie du groupe des baies.\nProduite par plusieurs espèces de grandes plantes à fleurs herbacées du genre Musa.</French>
             <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
-            <Japanese>甘蕉は食べられる果物でバショウ科バショウ属のうち、果実を食用とする品種群の総称。また、その果実のこと。いくつかの原種から育種された多年草。種によっては熟すまでは毒を持つものもある。</Japanese>
+            <Japanese>バナナは、バショウ科バショウ属のうち、果実を食用とする品種群の総称である。また、その果実のこと。いくつかの原種から育種された多年性植物。熱帯～亜熱帯の地域で栽培されるトロピカルフルーツ。種によっては熟すまでは毒を持つものもある。</Japanese>
             <Korean>바나나는 식용 과일로써 식물학적으로 열매류이며 여러 종류의 개화가능한 초본의 파초과로 부터 생산됩니다.</Korean>
             <Chinese>香蕉(學名: Musa × paradisiaca)，為芭蕉科芭蕉屬小果野蕉及野蕉的人工栽培雜交種，為多年生草本植物。果實長有棱; 果皮黃色，果肉白色，味道香甜。主要生長在熱帶、亞熱帶地區。原產於亞洲東南部熱帶、亞熱帶地區</Chinese>
             <Chinesesimp>香蕉（学名：Musa paradisiaca），为芭蕉科芭蕉属小果野蕉及野蕉的人工栽培杂交种，为多年生草本植物。果实长有棱; 果皮黄色，果肉白色，味道香甜。主要生长在热带、亚热带地区。原产于亚洲东南部热带、亚热带地区。</Chinesesimp>
@@ -890,7 +890,7 @@
             <Russian>Проверять все аддоны</Russian>
             <Italian>Controlla tutti gli addon</Italian>
             <Japanese>全アドオンを検査</Japanese>
-            <Korean>모든 에드온 검사</Korean>
+            <Korean>모든 애드온 검사</Korean>
             <Chinese>檢查所有模組</Chinese>
             <Chinesesimp>检查所有模组</Chinesesimp>
         </Key>
@@ -939,7 +939,7 @@
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
             <Italian>Quali addon sono permessi in ogni caso?</Italian>
             <Japanese>どのようなアドオンを許可しますか?</Japanese>
-            <Korean>허가되는 에드온은 어느것입니까?</Korean>
+            <Korean>허가되는 애드온은 어느 것입니까?</Korean>
             <Chinese>哪些模組是可被允許/忽略的?</Chinese>
             <Chinesesimp>无论如何都允许的附加组件</Chinesesimp>
         </Key>
@@ -1215,7 +1215,7 @@
             <Italian>Non forzare</Italian>
             <French>Ne pas forcer</French>
             <Japanese>強制しない</Japanese>
-            <Korean>강제하지 말것</Korean>
+            <Korean>강제하지 말 것</Korean>
             <Chinese>不要強行</Chinese>
             <Chinesesimp>不要强行</Chinesesimp>
             <Turkish>Zorlama</Turkish>
@@ -1320,6 +1320,8 @@
             <Chinesesimp>ACE 未分类</Chinesesimp>
             <Korean>ACE 무분류</Korean>
             <German>ACE Unkategorisiert</German>
+            <Polish>ACE Nieskategoryzowane</Polish>
+            <Japanese>ACE 無区分</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1492,6 +1494,7 @@
             <Korean>인공지능만</Korean>
             <German>Nur KI</German>
             <Chinesesimp>仅 AI</Chinesesimp>
+            <Japanese>AIのみ</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
@@ -1601,7 +1604,7 @@
             <Polish>Zmień nazwę</Polish>
             <Japanese>改名</Japanese>
             <Italian>Rinomina</Italian>
-            <Korean>이름바꾸기</Korean>
+            <Korean>이름 바꾸기</Korean>
             <Chinese>重新命名</Chinese>
             <Chinesesimp>重新命名</Chinesesimp>
             <Russian>Переименовать</Russian>
@@ -1634,6 +1637,11 @@
             <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
             <Chinese>受所在位置影響提升醫療能力</Chinese>
             <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_unloadWeapon">
+            <English>Unload Weapon</English>
+            <Polish>Wyładuj Broń</Polish>
+            <Japanese>武器からマガジンを抜く</Japanese>
         </Key>
     </Package>
 </Project>
