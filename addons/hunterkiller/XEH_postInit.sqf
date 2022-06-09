@@ -15,14 +15,14 @@ GVAR(targetTurret) = [];
 
 ["ACE3 Vehicles", QGVAR(observe), [format ["%1 - %2", LLSTRING(displayName), LLSTRING(observe)], LLSTRING(observe_description)],
 {
-    ["observe"] call FUNC(keyDown)
+    [false] call FUNC(keyDown)
 }, {
     false
 }, [DIK_Q, [false, false, false]]] call CBA_fnc_addKeybind;
 
 ["ACE3 Vehicles", QGVAR(override), [format ["%1 - %2", LLSTRING(displayName), LLSTRING(override)], LLSTRING(override_description)],
 {
-    ["override"] call FUNC(keyDown)
+    [true] call FUNC(keyDown)
 }, {
     false
 }, [DIK_E, [false, false, false]]] call CBA_fnc_addKeybind;
