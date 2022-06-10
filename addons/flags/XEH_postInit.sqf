@@ -8,13 +8,11 @@ GVAR(isPlacing) = PLACE_CANCEL;
 [QGVAR(flagPlaced), {
     params ["_unit", "_item", "_flag"];
 
-    TRACE_1("Somebody placed flag", _this);
-
-    (GVAR(flagItemCache) get _item) params ["_displayName"];
+    (GVAR(flagItemCache) get _item) params ["_flagName"];
 
     private _pickupFlag = [
         QGVAR(pickup),
-        format [LLSTRING(pickup), _displayName],
+        format [LLSTRING(pickup), _flagName],
         QPATHTOF(data\icons\place\white_pickup_icon.paa),
         {
             params ["_flag", "_unit", "_item"];
