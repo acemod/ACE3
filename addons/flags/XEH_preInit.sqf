@@ -8,4 +8,4 @@ PREP_RECOMPILE_END;
 
 ADDON = true;
 
-GVAR(cache) = createHashMap;
+GVAR(flagItemCache) = createHashMap;
