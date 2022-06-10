@@ -87,7 +87,7 @@ if (
         private _armor = [_unit, _x] call FUNC(getHitpointArmor);
         // would be nice to move this into getHitpointArmor
         private _shielding = GET_NUMBER(configFile >> "CfgVehicles" >> _uniformClass >> "Hitpoints" >> _x >> "explosionShielding", 1);
-        _damages pushBack [_hit*_shielding/_armor, ALL_BODY_PARTS select _forEachIndex, _hit*_shielding]
+        _damages pushBack [_hit*_shielding/_armor, ALL_BODY_PARTS select _forEachIndex, _hit*_shielding];
     } forEach ALL_HITPOINTS;
     TRACE_6("Vehicle explosion",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
     [QEGVAR(medical,woundReceived), [_unit, _damages, _unit, _ammo]] call CBA_fnc_localEvent;
