@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Flags">
+    <Container name="settings">
+        <Key ID="STR_ACE_Flags_SettingCategory">
+            <English>Flags</English>
+            <German>Flaggen</German>
+        </Key>
+        <Key ID="STR_ACE_Flags_AllowPlacingFlags">
+            <English>Allow placing flags</English>
+            <German>Erlaube Flaggen zu platzieren</German>
+        </Key>
+        <Key ID="STR_ACE_Flags_AllowPlacingFlagsTooltip">
+            <English>Adds the actions to place flags when the corresponding item is in the inventory.</English>
+            <German>Fügt Aktionen zum Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+        </Key>
+        <Key ID="STR_ACE_Flags_AllowCarryingFlags">
+            <English>Allow carrying flags</English>
+            <German>Erlaube Flaggen zu tragen</German>
+        </Key>
+        <Key ID="STR_ACE_Flags_AllowCarryingFlagsTooltip">
+            <English>Adds the actions to carry flags when the corresponding item is in the inventory.</English>
+            <German>Fügt Aktionen zum Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+        </Key>
+    </Container>
     <Container name="displayNames">
         <Key ID="STR_ACE_Flags_White">
             <Original>Flag (White)</Original>

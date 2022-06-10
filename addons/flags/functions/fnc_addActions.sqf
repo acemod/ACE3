@@ -32,7 +32,7 @@ private _actions = [];
                 params ["_player", "", "_item"];
                 [_player, _item] call FUNC(placeFlag);
             },
-            {true},
+            {GVAR(enablePlacing)},
             {},
             _x
         ] call EFUNC(interact_menu,createAction),
@@ -50,7 +50,7 @@ private _actions = [];
                 params ["_player", "", "_item"];
                 [_player, _item] call FUNC(carryFlag);
             },
-            {!([_this select 0] call FUNC(carriesFlag))}, // Should not carry flag already
+            {GVAR(enableCarrying) && {!([_this select 0] call FUNC(carriesFlag))}}, // Should not carry flag already
             {},
             _x
         ] call EFUNC(interact_menu,createAction),
