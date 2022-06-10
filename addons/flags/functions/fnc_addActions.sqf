@@ -26,7 +26,7 @@ private _actions = [];
     _actions pushBack [
         [
             "place_" + _x,
-            format [LSTRING(place), _displayName],
+            format [LLSTRING(place), _displayName],
             _actionIconPlace,
             {[_this select 0, _this select 2] call FUNC(placeFlag)},
             {true},
@@ -41,7 +41,7 @@ private _actions = [];
     _actions pushBack [
         [
             "carry_" + _x,
-            format [LSTRING(carry), _displayName],
+            format [LLSTRING(carry), _displayName],
             _actionIconCarry,
             {[_this select 0, _this select 2] call FUNC(carryFlag)},
             {!([_this select 1] call FUNC(carriesFlag))}, // Should not carry flag already
