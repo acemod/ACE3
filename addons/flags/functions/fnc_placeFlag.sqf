@@ -18,6 +18,7 @@
  */
 
 params ["_player", "_item"];
+TRACE_2("Placing flag", _player, _item);
 
 // Create local object
 private _flag = "FlagChecked_F" createVehicle [0, 0, 0];
@@ -27,7 +28,9 @@ GVAR(objectHeight) = MIN_HEIGHT;
 
 GVAR(isPlacing) = PLACE_WAITING;
 
-(GVAR(flagItemCache) get _x) params ["_flagName"];
+(GVAR(flagItemCache) get _item) params ["_flagName", "_texture"];
+
+_flag setFlagTexture _texture;
 
 // Add info dialog for the player which show the controls
 private _placeFlagText = format [LLSTRING(place), _flagName];
@@ -59,12 +62,10 @@ private _mouseClickID = [_player, "DefaultAction", {
 
             [_player, "PutDown"] call EFUNC(common,doGesture);
 
-            [{(animationState _player select [25, 7]) isEqualTo "putdown"}, {
-                params ["_player", "_item", "_flag"];
+            _player removeItem _item;
 
-                [QGVAR(flagPlaced), [_player, _item, _flag]] call CBA_fnc_globalEventJIP;
-                [QGVAR(flagPlaced), _flag] call CBA_fnc_removeGlobalEventJIP;
-            }, [_player, _item, _flag]] call CBA_fnc_waitUntilAndExecute;
+            private _jipID = [QGVAR(flagPlaced), [_player, _item, _flag]] call CBA_fnc_globalEventJIP;
+            [_jipID, _flag] call CBA_fnc_removeGlobalEventJIP;
         } else {
             // Action is canceled
             deleteVehicle _flag;

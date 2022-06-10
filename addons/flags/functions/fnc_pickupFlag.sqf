@@ -18,13 +18,13 @@
  */
 
 params ["_unit", "_item", "_flag"];
+TRACE_3("Flag pickup", _unit, _item, _flag);
 
 [_unit, "PutDown"] call EFUNC(common,doGesture);
 
-[{((animationState _unit) select [25,7]) isEqualTo "putdown"}, {
+[{
     params ["_unit", "_item", "_flag"];
 
     [_unit, _item] call EFUNC(common,addToInventory);
-
     deleteVehicle _flag;
-}, _this] call CBA_fnc_waitUntilAndExecute;
+}, [_unit, _item, _flag], 0.7] call CBA_fnc_waitAndExecute;

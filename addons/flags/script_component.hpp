@@ -24,5 +24,3 @@
 #define MAX_HEIGHT 2
 
 #define FLAG_PLACING_DISTANCE 2
-
-#define PICKUP_RADIUS 2

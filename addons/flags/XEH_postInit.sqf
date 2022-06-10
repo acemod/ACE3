@@ -8,23 +8,23 @@ GVAR(isPlacing) = PLACE_CANCEL;
 [QGVAR(flagPlaced), {
     params ["_unit", "_item", "_flag"];
 
-    (GVAR(cache) get _item) params ["_displayName"];
+    TRACE_1("Somebody placed flag", _this);
+
+    (GVAR(flagItemCache) get _item) params ["_displayName"];
 
     private _pickupFlag = [
         QGVAR(pickup),
         format [LLSTRING(pickup), _displayName],
         QPATHTOF(data\icons\place\white_pickup_icon.paa),
         {
-            params ["_flag", "_unit", "_args"];
-            _args params ["_item"];
-
+            params ["_flag", "_unit", "_item"];
             [_unit, _item, _flag] call FUNC(pickupFlag);
         },
         {true},
         {},
-        [_item],
-        [0, 0, 0],
-        PICKUP_RADIUS
+        _item,
+        [0, -0.45, 0.75],
+        2
     ] call ace_interact_menu_fnc_createAction;
     [_flag, 0, [], _pickupFlag] call ace_interact_menu_fnc_addActionToObject;
 }] call CBA_fnc_addEventHandler;
