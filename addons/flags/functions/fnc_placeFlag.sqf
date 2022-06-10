@@ -33,8 +33,8 @@ GVAR(isPlacing) = PLACE_WAITING;
 _flag setFlagTexture _texture;
 
 // Add info dialog for the player which show the controls
-private _placeFlagText = format [LLSTRING(place), _flagName];
-[_placeFlagText, LLSTRING(cancel), LLSTRING(adjustHeight)] call EFUNC(interaction,showMouseHint);
+private _placeFlagText = format [LLSTRING(Place), _flagName];
+[_placeFlagText, LLSTRING(Cancel), LLSTRING(AdjustHeight)] call EFUNC(interaction,showMouseHint);
 
 private _mouseClickID = [_player, "DefaultAction", {
     GVAR(isPlacing) isEqualTo PLACE_WAITING

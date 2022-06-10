@@ -5,10 +5,10 @@ class CfgWeapons {
     class GVAR(white): ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);
-        descriptionShort = CSTRING(description);
-        descriptionUse = CSTRING(description);
+        descriptionShort = CSTRING(Description);
+        descriptionUse = CSTRING(Description);
 
-        displayName = CSTRING(white);
+        displayName = CSTRING(White);
         picture = QPATHTOF(data\pictures\white_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\flag_white_co.paa";
@@ -20,7 +20,7 @@ class CfgWeapons {
         };
     };
     class GVAR(red): GVAR(white) {
-        displayName = CSTRING(red);
+        displayName = CSTRING(Red);
         picture = QPATHTOF(data\pictures\red_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\flag_red_co.paa";
@@ -28,7 +28,7 @@ class CfgWeapons {
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\red_carry_icon.paa);
     };
     class GVAR(blue): GVAR(white) {
-        displayName = CSTRING(blue);
+        displayName = CSTRING(Blue);
         picture = QPATHTOF(data\pictures\blue_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\Flag_blue_co.paa";
@@ -36,7 +36,7 @@ class CfgWeapons {
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\blue_carry_icon.paa);
     };
     class GVAR(green): GVAR(white) {
-        displayName = CSTRING(green);
+        displayName = CSTRING(Green);
         picture = QPATHTOF(data\pictures\green_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\flag_green_co.paa";
@@ -44,7 +44,7 @@ class CfgWeapons {
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\green_carry_icon.paa);
     };
     class GVAR(yellow): GVAR(white) {
-        displayName = CSTRING(yellow);
+        displayName = CSTRING(Yellow);
         picture = QPATHTOF(data\pictures\yellow_item.paa);
 
         GVAR(texture) = QPATHTOF(data\Flag_yellow_co.paa);

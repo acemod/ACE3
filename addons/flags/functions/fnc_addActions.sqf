@@ -26,7 +26,7 @@ private _actions = [];
     _actions pushBack [
         [
             "place_" + _x,
-            format [LLSTRING(place), _flagName],
+            format [LLSTRING(Place), _flagName],
             _actionIconPlace,
             {
                 params ["_player", "", "_item"];
@@ -44,7 +44,7 @@ private _actions = [];
     _actions pushBack [
         [
             "carry_" + _x,
-            format [LLSTRING(carry), _flagName],
+            format [LLSTRING(Carry), _flagName],
             _actionIconCarry,
             {
                 params ["_player", "", "_item"];

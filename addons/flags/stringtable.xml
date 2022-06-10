@@ -2,57 +2,57 @@
 <Project name="ACE">
     <Package name="Flags">
     <Container name="displayNames">
-        <Key ID="STR_ACE_Flags_white">
+        <Key ID="STR_ACE_Flags_White">
             <Original>Flag (White)</Original>
             <German>Flagge (Weiß)</German>
         </Key>
-        <Key ID="STR_ACE_Flags_red">
+        <Key ID="STR_ACE_Flags_Red">
             <Original>Flag (Red)</Original>
             <German>Flagge (Rot)</German>
         </Key>
-        <Key ID="STR_ACE_Flags_blue">
+        <Key ID="STR_ACE_Flags_Blue">
             <Original>Flag (Blue)</Original>
             <German>Flagge (Blau)</German>
         </Key>
-        <Key ID="STR_ACE_Flags_green">
+        <Key ID="STR_ACE_Flags_Green">
             <Original>Flag (Green)</Original>
             <German>Flagge (Grün)</German>
         </Key>
-        <Key ID="STR_ACE_Flags_yellow">
+        <Key ID="STR_ACE_Flags_Yellow">
             <Original>Flag (Yellow)</Original>
             <German>Flagge (Gelb)</German>
         </Key>
-        <Key ID="STR_ACE_Flags_description">
+        <Key ID="STR_ACE_Flags_Description">
             <Original>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</Original>
             <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
         </Key>
     </Container>
     <Container name="actions">
-        <Key ID="STR_ACE_Flags_action">
+        <Key ID="STR_ACE_Flags_ActionCategory">
             <Original>Flags</Original>
             <German>Flaggen</German>
         </Key>
-        <Key ID="STR_ACE_Flags_carry">
+        <Key ID="STR_ACE_Flags_Carry">
             <Original>Carry %1</Original>
             <German>%1 tragen</German>
         </Key>
-        <Key ID="STR_ACE_Flags_furl">
+        <Key ID="STR_ACE_Flags_Furl">
             <Original>Furl Flag</Original>
             <German>Flagge einrollen</German>
         </Key>
-        <Key ID="STR_ACE_Flags_place">
+        <Key ID="STR_ACE_Flags_Place">
             <Original>Place %1</Original>
             <German>%1 platzieren</German>
         </Key>
-        <Key ID="STR_ACE_Flags_pickup">
+        <Key ID="STR_ACE_Flags_Pickup">
             <Original>Pickup %1</Original>
             <German>%1 aufnehmen</German>
         </Key>
-        <Key ID="STR_ACE_Flags_cancel">
+        <Key ID="STR_ACE_Flags_Cancel">
             <Original>Cancel</Original>
             <German>Abbrechen</German>
         </Key>
-        <Key ID="STR_ACE_Flags_adjustHeight">
+        <Key ID="STR_ACE_Flags_AdjustHeight">
             <Original>Adjust height</Original>
             <German>Höhe anpassen</German>
         </Key>

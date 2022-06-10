@@ -12,7 +12,7 @@ GVAR(isPlacing) = PLACE_CANCEL;
 
     private _pickupFlag = [
         QGVAR(pickup),
-        format [LLSTRING(pickup), _flagName],
+        format [LLSTRING(Pickup), _flagName],
         QPATHTOF(data\icons\place\white_pickup_icon.paa),
         {
             params ["_flag", "_unit", "_item"];
