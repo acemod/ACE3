@@ -109,6 +109,14 @@ private _fnc_renderSelfActions = {
         _action = _x;
         [_target, _action, _pos] call FUNC(renderBaseMenu);
     } forEach _classActions;
+
+    // Iterate through object actions, find base level actions and render them if appropiate
+    {
+        // Only render them directly if they are base level actions
+        if (_x select 1 isNotEqualTo []) then {continue};
+        private _action = _x;
+        [_target, _action] call FUNC(renderBaseMenu);
+    } forEach GVAR(objectActionList);
 };
 
 private _fnc_renderZeusActions = {
