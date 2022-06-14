@@ -126,7 +126,7 @@ private _fnc_renderVehicleSelfActions = {
 
 
     // Iterate through class actions
-    private _classActions = GVAR(ActNamespace) getVariable [typeOf _target, []];
+    private _classActions = GVAR(ActSelfNamespace) getVariable [typeOf _target, []];
     {
         private _action = _x;
         [_target, _action, [0.5,0.5]] call FUNC(renderBaseMenu);
