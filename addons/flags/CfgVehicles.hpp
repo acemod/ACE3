@@ -6,7 +6,7 @@ class CfgVehicles {
                 class ADDON {
                     displayName = CSTRING(ActionCategory);
                     condition = QUOTE(_player call FUNC(hasFlag));
-                    insertChildren = QUOTE(_this call FUNC(addActions));
+                    insertChildren = QUOTE(_this call FUNC(getActions));
                     icon = QPATHTOF(data\icons\place\white_place_icon.paa);
 
                     class GVAR(furlFlag) {
