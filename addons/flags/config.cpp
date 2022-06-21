@@ -9,7 +9,10 @@ class CfgPatches {
             QGVAR(red),
             QGVAR(blue),
             QGVAR(green),
-            QGVAR(yellow)
+            QGVAR(yellow),
+            QGVAR(orange),
+            QGVAR(purple),
+            QGVAR(black)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common", "ace_interact_menu", "ace_interaction"};
