@@ -1,4 +1,4 @@
 ace_flags
 ===================
 
-Adds flags feature.
+Adds placeable and carryable flags with a variety of colors.
