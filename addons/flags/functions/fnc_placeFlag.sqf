@@ -20,10 +20,9 @@
 params ["_player", "_item"];
 TRACE_2("Placing flag", _player, _item);
 
-// Create local object
 private _flag = "FlagChecked_F" createVehicle [0, 0, 0];
 
-// Set object start height
+// Set flag start height
 GVAR(objectHeight) = MIN_HEIGHT;
 
 GVAR(isPlacing) = PLACE_WAITING;
@@ -56,7 +55,7 @@ private _mouseClickID = [_player, "DefaultAction", {
         [_player, "DefaultAction", _mouseClickID] call EFUNC(common,removeActionEventHandler);
 
         if (GVAR(isPlacing) isEqualTo PLACE_APPROVE) then {
-            // End position of the object
+            // End position of the flag
 
             GVAR(isPlacing) = PLACE_CANCEL;
 

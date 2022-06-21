@@ -17,7 +17,9 @@
 
 params ["_scrollAmount"];
 
-if (GVAR(isPlacing) isNotEqualTo PLACE_WAITING) exitWith {false};
+if (GVAR(isPlacing) isNotEqualTo PLACE_WAITING) exitWith {
+    false
+};
 
 // Move object height 10cm per scroll
 GVAR(objectHeight) = GVAR(objectHeight) + (_scrollAmount * 0.1);

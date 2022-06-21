@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Stops carrying flag and add flag item to unit.
+ * Stops carrying flag and adds flag item back to unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>

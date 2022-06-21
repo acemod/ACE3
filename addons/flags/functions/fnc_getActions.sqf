@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Timi007
- * Adds the child actions for placing and carring flags.
+ * Gets the child actions for placing and carring flags.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -10,7 +10,7 @@
  * Actions <ARRAY>
  *
  * Example:
- * [player] call ace_flags_fnc_addActions
+ * [player] call ace_flags_fnc_getActions
  *
  * Public: No
  */
