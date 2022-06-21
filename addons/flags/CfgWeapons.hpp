@@ -51,4 +51,28 @@ class CfgWeapons {
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\yellow_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\yellow_carry_icon.paa);
     };
+    class GVAR(orange): GVAR(white) {
+        displayName = CSTRING(Orange);
+        picture = QPATHTOF(data\pictures\orange_item.paa);
+
+        GVAR(texture) = QPATHTOF(data\flag_orange_co.paa);
+        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\orange_place_icon.paa);
+        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\orange_carry_icon.paa);
+    };
+    class GVAR(purple): GVAR(white) {
+        displayName = CSTRING(Purple);
+        picture = QPATHTOF(data\pictures\purple_item.paa);
+
+        GVAR(texture) = QPATHTOF(data\flag_purple_co.paa);
+        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\purple_place_icon.paa);
+        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\purple_carry_icon.paa);
+    };
+    class GVAR(black): GVAR(white) {
+        displayName = CSTRING(Black);
+        picture = QPATHTOF(data\pictures\black_item.paa);
+
+        GVAR(texture) = QPATHTOF(data\flag_black_co.paa);
+        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\black_place_icon.paa);
+        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\black_carry_icon.paa);
+    };
 };

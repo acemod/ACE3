@@ -44,6 +44,18 @@
             <Original>Flag (Yellow)</Original>
             <German>Flagge (Gelb)</German>
         </Key>
+        <Key ID="STR_ACE_Flags_Orange">
+            <Original>Flag (Orange)</Original>
+            <German>Flagge (Orange)</German>
+        </Key>
+        <Key ID="STR_ACE_Flags_Purple">
+            <Original>Flag (Purple)</Original>
+            <German>Flagge (Violett)</German>
+        </Key>
+        <Key ID="STR_ACE_Flags_Black">
+            <Original>Flag (Black)</Original>
+            <German>Flagge (Schwarz)</German>
+        </Key>
         <Key ID="STR_ACE_Flags_Description">
             <Original>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</Original>
             <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
