@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Flags">
-    <Container name="settings">
-        <Key ID="STR_ACE_Flags_SettingCategory">
-            <English>Flags</English>
-            <German>Flaggen</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_AllowPlacingFlags">
-            <English>Allow placing flags</English>
-            <German>Erlaube Flaggen zu platzieren</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_AllowPlacingFlagsTooltip">
-            <English>Adds the actions to place flags when the corresponding item is in the inventory.</English>
-            <German>Fügt Aktionen zum Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_AllowCarryingFlags">
-            <English>Allow carrying flags</English>
-            <German>Erlaube Flaggen zu tragen</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_AllowCarryingFlagsTooltip">
-            <English>Adds the actions to carry flags when the corresponding item is in the inventory.</English>
-            <German>Fügt Aktionen zum Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
-        </Key>
-    </Container>
-    <Container name="displayNames">
-        <Key ID="STR_ACE_Flags_White">
-            <Original>Flag (White)</Original>
-            <German>Flagge (Weiß)</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Red">
-            <Original>Flag (Red)</Original>
-            <German>Flagge (Rot)</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Blue">
-            <Original>Flag (Blue)</Original>
-            <German>Flagge (Blau)</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Green">
-            <Original>Flag (Green)</Original>
-            <German>Flagge (Grün)</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Yellow">
-            <Original>Flag (Yellow)</Original>
-            <German>Flagge (Gelb)</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Orange">
-            <Original>Flag (Orange)</Original>
-            <German>Flagge (Orange)</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Purple">
-            <Original>Flag (Purple)</Original>
-            <German>Flagge (Violett)</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Black">
-            <Original>Flag (Black)</Original>
-            <German>Flagge (Schwarz)</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Description">
-            <Original>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</Original>
-            <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
-        </Key>
-    </Container>
-    <Container name="actions">
-        <Key ID="STR_ACE_Flags_ActionCategory">
-            <Original>Flags</Original>
-            <German>Flaggen</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Carry">
-            <Original>Carry %1</Original>
-            <German>%1 tragen</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Furl">
-            <Original>Furl Flag</Original>
-            <German>Flagge einrollen</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Place">
-            <Original>Place %1</Original>
-            <German>%1 platzieren</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Pickup">
-            <Original>Pickup %1</Original>
-            <German>%1 aufnehmen</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_Cancel">
-            <Original>Cancel</Original>
-            <German>Abbrechen</German>
-        </Key>
-        <Key ID="STR_ACE_Flags_AdjustHeight">
-            <Original>Adjust height</Original>
-            <German>Höhe anpassen</German>
-        </Key>
-    </Container>
+        <Container name="settings">
+            <Key ID="STR_ACE_Flags_SettingCategory">
+                <English>Flags</English>
+                <German>Flaggen</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_AllowPlacingFlags">
+                <English>Allow placing flags</English>
+                <German>Erlaube Flaggen zu platzieren</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_AllowPlacingFlagsTooltip">
+                <English>Adds the actions to place flags when the corresponding item is in the inventory.</English>
+                <German>Fügt Aktionen zum Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_AllowCarryingFlags">
+                <English>Allow carrying flags</English>
+                <German>Erlaube Flaggen zu tragen</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_AllowCarryingFlagsTooltip">
+                <English>Adds the actions to carry flags when the corresponding item is in the inventory.</English>
+                <German>Fügt Aktionen zum Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+            </Key>
+        </Container>
+        <Container name="displayNames">
+            <Key ID="STR_ACE_Flags_White">
+                <English>Flag (White)</English>
+                <German>Flagge (Weiß)</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Red">
+                <English>Flag (Red)</English>
+                <German>Flagge (Rot)</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Blue">
+                <English>Flag (Blue)</English>
+                <German>Flagge (Blau)</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Green">
+                <English>Flag (Green)</English>
+                <German>Flagge (Grün)</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Yellow">
+                <English>Flag (Yellow)</English>
+                <German>Flagge (Gelb)</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Orange">
+                <English>Flag (Orange)</English>
+                <German>Flagge (Orange)</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Purple">
+                <English>Flag (Purple)</English>
+                <German>Flagge (Violett)</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Black">
+                <English>Flag (Black)</English>
+                <German>Flagge (Schwarz)</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Description">
+                <English>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</English>
+                <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
+            </Key>
+        </Container>
+        <Container name="actions">
+            <Key ID="STR_ACE_Flags_ActionCategory">
+                <English>Flags</English>
+                <German>Flaggen</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Carry">
+                <English>Carry %1</English>
+                <German>%1 tragen</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Furl">
+                <English>Furl Flag</English>
+                <German>Flagge einrollen</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Place">
+                <English>Place %1</English>
+                <German>%1 platzieren</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Pickup">
+                <English>Pickup %1</English>
+                <German>%1 aufnehmen</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_Cancel">
+                <English>Cancel</English>
+                <German>Abbrechen</German>
+            </Key>
+            <Key ID="STR_ACE_Flags_AdjustHeight">
+                <English>Adjust height</English>
+                <German>Höhe anpassen</German>
+            </Key>
+        </Container>
     </Package>
 </Project>
