@@ -573,7 +573,7 @@
             <Portuguese>FV510 Warrior</Portuguese>
             <Hungarian>FV510 Warrior</Hungarian>
             <Italian>FV510 Warrior</Italian>
-            <Japanese>FV510 ウォーリア</Japanese>
+            <Japanese>FV510 ウォーリアー</Japanese>
             <Korean>FV510 워리어 IFV</Korean>
             <Chinese>FV510 "戰士"步兵戰車</Chinese>
             <Chinesesimp>FV510 "战士"</Chinesesimp>
@@ -1234,7 +1234,7 @@
             <Hungarian>Ka-60 Kasatka (fegyvertelen)</Hungarian>
             <Italian>Ka-60 Kasatka (disarmato)</Italian>
             <Japanese>Ka-60 カサートカ (非武装)</Japanese>
-            <Korean>Ka-60 Kasatka (비무장)</Korean>
+            <Korean>Ka-60 카사트카 (비무장)</Korean>
             <Chinese>Ka-60 "逆戟鯨"直升機 (無武裝)</Chinese>
             <Chinesesimp>Ka-60 "虎鲸"（无武装）</Chinesesimp>
             <Turkish>Ka-60 Kasatka (Silahsız)</Turkish>
@@ -3852,7 +3852,7 @@
             <Czech>Leupold Mark 4 HAMR</Czech>
             <Turkish>Leupold Mark 4 HAMR</Turkish>
             <Spanish>Leupold Mark 4 HAMR</Spanish>
-            <Korean>류폴드 Mark 4 HAMR</Korean>
+            <Korean>류폴드 마크 4 HAMR</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
             <English>Leupold Mark 4 HAMR (Khaki)</English>
@@ -3868,7 +3868,7 @@
             <Czech>Leupold Mark 4 HAMR (Khaki)</Czech>
             <Turkish>Leupold Mark 4 HAMR (Haki)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (Caqui)</Spanish>
-            <Korean>류폴드 Mark 4 HAMR (카키)</Korean>
+            <Korean>류폴드 마크 4 HAMR (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_2d">
             <English>Leupold Mark 4 HAMR (2D)</English>
@@ -3884,7 +3884,7 @@
             <Czech>Leupold Mark 4 HAMR (2D)</Czech>
             <Turkish>Leupold Mark 4 HAMR (2D)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (2D)</Spanish>
-            <Korean>류폴드 Mark 4 HAMR (2D)</Korean>
+            <Korean>류폴드 마크 4 HAMR (2D)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_pip">
             <English>Leupold Mark 4 HAMR (PIP)</English>
@@ -3900,7 +3900,7 @@
             <Czech>Leupold Mark 4 HAMR (PIP)</Czech>
             <Turkish>Leupold Mark 4 HAMR (PIP)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (PIP)</Spanish>
-            <Korean>류폴드 Mark 4 HAMR (PIP)</Korean>
+            <Korean>류폴드 마크 4 HAMR (PIP)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
@@ -4315,7 +4315,7 @@
             <Japanese>Burris XTR II (ASP-1 Kir)</Japanese>
             <German>Burris XTR II (ASP-1 Kir)</German>
             <Chinesesimp>Burris XTR II（ASP-1 Kir）</Chinesesimp>
-            <Korean>버리스 XTR II (ASP-1 Kir)</Korean>
+            <Korean>버리스 XTR II (ASP-1 키르)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4862,7 +4862,7 @@
             <Japanese>口径: 5.7mm&lt;br /&gt;装弾数: 50&lt;br /&gt;次で使用: P90</Japanese>
             <Chinese>口徑: 5.7毫米&lt;br /&gt;發數: 50&lt;br /&gt;使用於: P90</Chinese>
             <Chinesesimp>口径：5.7 mm&lt;br /&gt;发数：50&lt;br /&gt;使用于：P90</Chinesesimp>
-            <Korean>구경: 5.7mm&lt;br /&gt;장탄수: 50&lt;br /&gt;사용됨: P90</Korean>
+            <Korean>구경: 5.7mm&lt;br /&gt;장탄수: 50&lt;br /&gt;사용처: P90</Korean>
             <Turkish>Kalibre: 5.7mm&lt;br /&gt;Mermi: 50&lt;br /&gt;Kullanıyor: P90</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AKM">

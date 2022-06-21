@@ -21,7 +21,7 @@
         <Key ID="STR_ACE_Vehicles_OnCruise">
             <English>Cruise control on</English>
             <German>Tempomat an</German>
-            <Korean>속도 유지기 켜짐</Korean>
+            <Korean>자동운전 켜짐</Korean>
             <Polish>Tempomat włączony</Polish>
             <Japanese>クルーズコントロールを有効化</Japanese>
         </Key>
@@ -45,7 +45,7 @@
         <Key ID="STR_ACE_Vehicles_OffCruise">
             <English>Cruise control off</English>
             <German>Tempomat aus</German>
-            <Korean>속도 유지기 꺼짐</Korean>
+            <Korean>자동운전 꺼짐</Korean>
             <Polish>Tempomat wyłączony</Polish>
             <Japanese>クルーズコントロールを無効化</Japanese>
         </Key>
@@ -85,7 +85,7 @@
         <Key ID="STR_ACE_Vehicles_CruiseControl">
             <English>Cruise Control</English>
             <German>Tempomat</German>
-            <Korean>속도 유지기</Korean>
+            <Korean>자동운전</Korean>
             <Polish>Tempomat</Polish>
             <Japanese>クルーズコントロール</Japanese>
         </Key>

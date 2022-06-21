@@ -176,24 +176,28 @@
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_displayName">
             <English>Ammo Storage</English>
             <German>Munitionslager</German>
+            <Korean>탄약 보관</Korean>
             <Polish>Magazyn amunicji</Polish>
             <Japanese>弾薬の格納</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_description">
             <English>Determines whether extra magazines are stored on the ground or inside an ammo box</English>
             <German>Legt fest, ob zusätzliche Magazine auf dem Boden oder in einer Munitionskiste aufbewahrt werden</German>
+            <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을지 결정합니다.</Korean>
             <Polish>Decyduje, czy dodatkowe magazynki przechowywane są na ziemi, czy w skrzynce z amunicją.</Polish>
             <Japanese>追加のマガジンを地面に設置するか、弾薬箱の中に保管するかを決定します</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_weaponHolder">
             <English>Ground</English>
             <German>Boden</German>
+            <Korean>지면</Korean>
             <Polish>Ziemia</Polish>
             <Japanese>地面</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_ammoBox">
             <English>Ammo Box</English>
             <German>Munitionskiste</German>
+            <Korean>탄약 상자</Korean>
             <Polish>Skrzynka amunicyjna</Polish>
             <Japanese>弾薬箱</Japanese>
         </Key>

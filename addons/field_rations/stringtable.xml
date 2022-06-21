@@ -1107,12 +1107,14 @@
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_DisplayName">
             <English>Sunflower Seeds</English>
             <German>Sonnenblumenkerne</German>
+            <Korean>해바라기씨</Korean>
             <Polish>Nasiona Słonecznika</Polish>
             <Japanese>ヒマワリの種</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Description">
             <English>Roasted And Salted</English>
             <German>Geröstet und Gesalzen</German>
+            <Korean>굽고 간을 했습니다</Korean>
             <Polish>Pieczone i Solone</Polish>
             <Japanese>炒って塩で味付け済</Japanese>
         </Key>
