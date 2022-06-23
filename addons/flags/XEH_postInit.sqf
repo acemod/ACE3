@@ -27,7 +27,8 @@ GVAR(isPlacing) = PLACE_CANCEL;
     [_flag, 0, [], _pickupFlag] call ace_interact_menu_fnc_addActionToObject;
 }] call CBA_fnc_addEventHandler;
 
-private _flagItems = (call (uiNamespace getVariable [QGVAR(allFlagItems), {[]}])) apply {configFile >> "CfgWeapons" >> _x};
+private _cfgWeapons = configFile >> "CfgWeapons";
+private _flagItems = (call (uiNamespace getVariable [QGVAR(allFlagItems), {[]}])) apply {_cfgWeapons >> _x};
 {
     private _name = configName _x;
     private _displayName = getText (_x >> "displayName");
