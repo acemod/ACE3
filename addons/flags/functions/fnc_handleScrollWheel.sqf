@@ -24,12 +24,7 @@ if (GVAR(isPlacing) isNotEqualTo PLACE_WAITING) exitWith {
 // Move object height 10cm per scroll
 GVAR(objectHeight) = GVAR(objectHeight) + (_scrollAmount * 0.1);
 
-if (GVAR(objectHeight) < MIN_HEIGHT) then {
-    GVAR(objectHeight) = MIN_HEIGHT;
-};
-
-if (GVAR(objectHeight) > MAX_HEIGHT) then {
-    GVAR(objectHeight) = MAX_HEIGHT;
-};
+// Clamp height between MIN_HEIGHT and MAX_HEIGHT
+GVAR(objectHeight) = (MIN_HEIGHT max (GVAR(objectHeight) min MAX_HEIGHT));
 
 true
