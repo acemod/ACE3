@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: trench <OBJECT>
- * 1: unit <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Can camouflage <BOOL>
