@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Cyruz
- * Apply surfaceTexture to a completed trench
+ * Apply surfaceTexture to a completed trench.
  *
  * Arguments:
  * 0: trench <OBJECT>
