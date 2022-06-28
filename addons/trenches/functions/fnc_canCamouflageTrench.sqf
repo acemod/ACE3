@@ -4,7 +4,7 @@
  * Checks if a unit can camouflage a trench.
  *
  * Arguments:
- * 0: trench <OBJECT>
+ * 0: Trench <OBJECT>
  * 1: Unit <OBJECT>
  *
  * Return Value:
