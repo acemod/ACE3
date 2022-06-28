@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Cyruz
- * Checks if a unit can camouflage a trench
+ * Checks if a unit can camouflage a trench.
  *
  * Arguments:
  * 0: trench <OBJECT>
