@@ -24,4 +24,3 @@ _unit playActionNow "PutDown";
     _this setObjectTextureGlobal [0, (surfaceTexture getPosATL _this)];
     _this setVariable [QGVAR(camouflaged), true, true];
 }, _trench, 2] call CBA_fnc_waitAndExecute;
-
