@@ -10,10 +10,10 @@ private _weapons = (call (uiNamespace getVariable [QGVAR(flagItems), {[]}])) app
 
 {
     private _name = configName _x;
-    private _vehicle = getText (_x >> QGVAR(vehicle));
+    private _vehicleClass = getText (_x >> QGVAR(vehicle));
     private _displayName = getText (_x >> "displayName");
     private _picture = getText (_x >> "picture");
-    GVAR(flagCache) set [_name, [_vehicle, _displayName, _picture]];
+    GVAR(flagCache) set [_name, [_vehicleClass, _displayName, _picture]];
 
     private _action = [
         QGVAR(pickup),
@@ -22,7 +22,9 @@ private _weapons = (call (uiNamespace getVariable [QGVAR(flagItems), {[]}])) app
         {call FUNC(pickUpFlag)},
         {[_player, _target, []] call EFUNC(common,canInteractWith)},
         {},
-        [_name]
+        [_name],
+        [0, 0.072, 0.2],
+        2
     ] call EFUNC(interact_menu,createAction);
-    [_vehicle, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
+    [_vehicleClass, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 } forEach _weapons;
