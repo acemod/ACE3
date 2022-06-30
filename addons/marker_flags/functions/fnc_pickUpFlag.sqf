@@ -12,7 +12,7 @@
  * Nothing
  *
  * Example:
- * [_flag, player, "ace_marker_flags_white"] call ace_marker_flags_fnc_pickupFlag
+ * [_flag, player, ["ace_marker_flags_white"]] call ace_marker_flags_fnc_pickupFlag
  *
  * Public: No
  */
