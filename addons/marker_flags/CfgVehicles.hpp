@@ -7,6 +7,7 @@ class CfgVehicles {
                     displayName = CSTRING(ActionPlace);
                     condition = QUOTE(_player call FUNC(canPlace));
                     insertChildren = QUOTE(_this call FUNC(addActions));
+                    icon = QPATHTOF(ui\icons\white_place_icon.paa);
                 };
             };
         };

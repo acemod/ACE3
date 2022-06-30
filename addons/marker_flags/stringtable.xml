@@ -25,12 +25,8 @@
             <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
-            <English>Place Flag</English>
-            <German>Flagge platzieren</German>
-            <Polish>Postaw chorągiewkę</Polish>
-            <Japanese>旗を設置</Japanese>
-            <Korean>깃발 배치</Korean>
-            <Chinesesimp>放置标记旗</Chinesesimp>
+            <English>Place Marker Flag</English>
+            <German>Markierungsfahne platzieren</German>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
             <English>Adjust height</English>

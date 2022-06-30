@@ -20,13 +20,13 @@ params ["_unit"];
 private _actions = [];
 
 {
-    (GVAR(flagCache) get _x) params ["_vehicle", "_displayName", "_picture"];
+    (GVAR(flagCache) get _x) params ["_vehicle", "_displayName", "_icon"];
 
     _actions pushBack [
         [
             _x,
             _displayName,
-            _picture,
+            _icon,
             {[_this select 0, _this select 2] call FUNC(placeFlag)},
             {true},
             {},
