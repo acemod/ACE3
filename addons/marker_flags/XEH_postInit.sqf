@@ -2,12 +2,18 @@
 
 if (!hasInterface) exitWith {};
 
-private _weapons = (call (uiNamespace getVariable [QGVAR(flagItems), {[]}])) apply {configFile >> "CfgWeapons" >> _x};
+GVAR(isPlacing) = PLACE_CANCEL;
+["ace_interactMenuOpened", {GVAR(isPlacing) = PLACE_CANCEL;}] call CBA_fnc_addEventHandler;
+
+private _cfgWeapons = configFile >> "CfgWeapons";
+private _weapons = (call (uiNamespace getVariable [QGVAR(flagItems), {[]}])) apply {_cfgWeapons >> _x};
 
 {
     private _name = configName _x;
     private _vehicle = getText (_x >> QGVAR(vehicle));
-    GVAR(flagCache) set [_name, _vehicle];
+    private _displayName = getText (_x >> "displayName");
+    private _picture = getText (_x >> "picture");
+    GVAR(flagCache) set [_name, [_vehicle, _displayName, _picture]];
 
     private _action = [
         QGVAR(pickup),
