@@ -27,7 +27,7 @@ private _flag = _vehicleClass createVehicle [0, 0, 0];
 TRACE_1("Created flag", _flag);
 
 // Set flag start height
-GVAR(objectHeight) = MIN_HEIGHT;
+GVAR(objectHeight) = MAX_HEIGHT;
 
 GVAR(isPlacing) = PLACE_WAITING;
 
