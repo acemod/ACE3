@@ -32,6 +32,27 @@
             <Korean>깃발 배치</Korean>
             <Chinesesimp>放置标记旗</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
+            <English>Adjust height</English>
+            <German>Höhe anpassen</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_ActionCancel">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+            <Spanish>Cancelar</Spanish>
+            <Polish>Anuluj</Polish>
+            <French>Annuler</French>
+            <Czech>Zrušit</Czech>
+            <Italian>Annulla</Italian>
+            <Hungarian>Mégsem</Hungarian>
+            <Portuguese>Cancelar</Portuguese>
+            <Russian>Отмена</Russian>
+            <Japanese>中止</Japanese>
+            <Korean>취소</Korean>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
+        </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick Up</English>
             <Chinese>提取點</Chinese>
