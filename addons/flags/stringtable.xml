@@ -85,6 +85,19 @@
             <Key ID="STR_ACE_Flags_Cancel">
                 <English>Cancel</English>
                 <German>Abbrechen</German>
+                <Spanish>Cancelar</Spanish>
+                <Polish>Anuluj</Polish>
+                <French>Annuler</French>
+                <Czech>Zrušit</Czech>
+                <Italian>Annulla</Italian>
+                <Hungarian>Mégsem</Hungarian>
+                <Portuguese>Cancelar</Portuguese>
+                <Russian>Отмена</Russian>
+                <Japanese>中止</Japanese>
+                <Korean>취소</Korean>
+                <Chinesesimp>取消</Chinesesimp>
+                <Chinese>取消</Chinese>
+                <Turkish>Iptal</Turkish>
             </Key>
             <Key ID="STR_ACE_Flags_AdjustHeight">
                 <English>Adjust height</English>
