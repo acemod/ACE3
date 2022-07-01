@@ -49,6 +49,9 @@ if (_positions isEqualTo []) then {
     };
 };
 
+// default fire jet to enabled when not set in configs
+private _canJet = ([_config >> QGVAR(canHaveFireJet), "number", 1] call CBA_fnc_getConfigEntry) == 1;
+
 private _delay = 0;
 if (_smokeDelayEnabled) then {
     _delay = SMOKE_TIME + random SMOKE_TIME;
@@ -56,13 +59,13 @@ if (_smokeDelayEnabled) then {
 [QGVAR(smoke), [_vehicle, _positions]] call CBA_fnc_globalEvent;
 
 [{
-    params ["_vehicle", "_positions", "_intensity", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing"];
+    params ["_vehicle", "_positions", "_intensity", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing", "_canJet"];
     _vehicle setVariable [QGVAR(intensity), _intensity];
     private _smokeEffects = _vehicle getVariable [QGVAR(effects), []];
 
     [{
         params ["_args", "_pfh"];
-        _args params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing", "_smokeEffects"];
+        _args params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing", "_canJet", "_smokeEffects"];
         private _intensity = _vehicle getVariable [QGVAR(intensity), 0];
         if (isNull _vehicle || {_intensity <= 1}) exitWith {
             [QGVAR(cleanupEffects), [_vehicle, _smokeEffects]] call CBA_fnc_globalEvent;
@@ -96,7 +99,7 @@ if (_smokeDelayEnabled) then {
                 _fireSource = selectRandom _positions;
             };
 
-            [QGVAR(cookOffEffect), [_vehicle, true, _ring, _time, _fireSource, _intensity]] call CBA_fnc_globalEvent;
+            [QGVAR(cookOffEffect), [_vehicle, _canJet, _ring, _time, _fireSource, _intensity]] call CBA_fnc_globalEvent;
 
             _intensity = _intensity - (0.5 max random 1);
             _vehicle setVariable [QGVAR(intensity), _intensity];
@@ -122,5 +125,5 @@ if (_smokeDelayEnabled) then {
                 _vehicle setVariable [QGVAR(nextExplosiveDetonation), random 60];
             };
         };
-    }, 0.25, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing, _smokeEffects]] call CBA_fnc_addPerFrameHandler
-}, [_vehicle, _positions, _intensity, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing], _delay] call CBA_fnc_waitAndExecute;
+    }, 0.25, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing, _canJet, _smokeEffects]] call CBA_fnc_addPerFrameHandler
+}, [_vehicle, _positions, _intensity, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing, _canJet], _delay] call CBA_fnc_waitAndExecute;
