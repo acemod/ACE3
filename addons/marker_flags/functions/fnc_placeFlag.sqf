@@ -50,7 +50,7 @@ private _mouseClickID = [_player, "DefaultAction", {
 
     if (GVAR(isPlacing) isNotEqualTo PLACE_WAITING) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
-        call ace_interaction_fnc_hideMouseHint;
+        call EFUNC(interaction,hideMouseHint);
         [_player, "DefaultAction", _mouseClickID] call EFUNC(common,removeActionEventHandler);
 
         if (GVAR(isPlacing) isEqualTo PLACE_APPROVE) then {
