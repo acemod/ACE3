@@ -19,7 +19,10 @@
     if ((_vehicle getVariable [QGVAR(deletedEH), -1]) == -1) then {
         private _deletedEH = _vehicle addEventHandler ["Deleted", {
             params ["_vehicle"];
-            [QGVAR(cleanupEffects), [_vehicle]] call CBA_fnc_globalEvent;
+            
+            if (local _vehicle) then {
+                [QGVAR(cleanupEffects), [_vehicle]] call CBA_fnc_globalEvent;
+            };
         }];
     
         _vehicle setVariable [QGVAR(deletedEH), _deletedEH];
