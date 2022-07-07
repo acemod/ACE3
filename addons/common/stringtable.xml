@@ -1568,7 +1568,7 @@
             <German>Prozent</German>
             <Polish>Procent</Polish>
             <Chinesesimp>百分比</Chinesesimp>
-            <Korean>퍼센트</Korean>
+            <Korean>백분율</Korean>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
@@ -1642,6 +1642,7 @@
             <English>Unload Weapon</English>
             <Polish>Wyładuj Broń</Polish>
             <Japanese>武器からマガジンを抜く</Japanese>
+            <Korean>탄창 빼기</Korean>
         </Key>
     </Package>
 </Project>
