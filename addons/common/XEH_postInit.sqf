@@ -21,7 +21,7 @@
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
 ["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, ["ace_advanced_fatigue", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), QEGVAR(medical_status,Unconscious)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 ["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
@@ -55,12 +55,18 @@
 [QGVAR(setHidden), {
     params ["_object", "_set"];
     TRACE_2("setHidden EH",_object,_set);
+
     // May report nil. Default to factor 1.
     private _vis = [_object getUnitTrait "camouflageCoef"] param [0, 1];
+    private _aud = [_object getUnitTrait "audibleCoef"] param [0, 1];
+
     if (_set > 0) then {
-        if (_vis != 0) then {
+        if (_vis != 0 || _aud != 0) then {
             _object setVariable [QGVAR(oldVisibility), _vis];
             _object setUnitTrait ["camouflageCoef", 0];
+            _object setVariable [QGVAR(oldAudibleCoef), _aud];
+            _object setUnitTrait ["audibleCoef", 0];
+
             {
                 if (side _x != side group _object) then {
                     _x forgetTarget _object;
@@ -70,6 +76,8 @@
     } else {
         _vis = _object getVariable [QGVAR(oldVisibility), _vis];
         _object setUnitTrait ["camouflageCoef", _vis];
+        _aud = _object getVariable [QGVAR(oldAudibleCoef), _aud];
+        _object setUnitTrait ["audibleCoef", _aud];
     };
 }] call CBA_fnc_addEventHandler;
 

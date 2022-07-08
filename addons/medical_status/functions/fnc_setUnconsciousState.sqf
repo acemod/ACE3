@@ -28,8 +28,8 @@ _unit setVariable [VAR_UNCON, _active, true];
 // Toggle unit ragdoll state
 [_unit, _active] call EFUNC(medical_engine,setUnconsciousAnim);
 
-// Stop AI firing at unconscious units in most situations (global effect)
-[_unit, "setHidden", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
+// Stop enemy AI targeting the unit
+[_unit, "setCaptive", QGVAR(Unconscious), _active] call EFUNC(common,statusEffect_set);
 
 // Block radio on unconsciousness for compatibility with captive module
 [_unit, "blockRadio", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
