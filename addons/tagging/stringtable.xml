@@ -195,51 +195,61 @@
             <English>Up Arrow</English>
             <Japanese>上矢印</Japanese>
             <Polish>Strzałka w górę</Polish>
+            <Korean>화살표(위)</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_down">
             <English>Down Arrow</English>
             <Japanese>下矢印</Japanese>
             <Polish>Strzałka w dół</Polish>
+            <Korean>화살표(아래)</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_left">
             <English>Left Arrow</English>
             <Japanese>左矢印</Japanese>
             <Polish>Strzałka w lewo</Polish>
+            <Korean>화살표(왼쪽)</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_right">
             <English>Right Arrow</English>
             <Japanese>右矢印</Japanese>
             <Polish>Strzałka w prawo</Polish>
+            <Korean>화살표(오른쪽)</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_circle">
             <English>Circle</English>
             <Japanese>丸</Japanese>
             <Polish>Okrąg</Polish>
+            <Korean>원</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_cross">
             <English>Cross</English>
             <Japanese>十字</Japanese>
             <Polish>Krzyż</Polish>
+            <Korean>십자</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_diamond">
             <English>Diamond</English>
             <Japanese>ひし形</Japanese>
             <Polish>Diament</Polish>
+            <Korean>마름모</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_square">
             <English>Square</English>
             <Japanese>四角</Japanese>
             <Polish>Kwadrat</Polish>
+            <Korean>사각형</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle">
             <English>Triangle</English>
             <Japanese>三角形</Japanese>
             <Polish>Trójkąt</Polish>
+            <Korean>삼각형</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle_inverted">
             <English>Triangle Inverted</English>
             <Japanese>三角形 (反転)</Japanese>
             <Polish>Odwrócony trójkąt</Polish>
+            <Korean>역삼각형</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
