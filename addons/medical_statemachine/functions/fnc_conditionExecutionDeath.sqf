@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-(if (isPlayer _unit) then {
+(if ([_unit] call EFUNC(medical_engine,conditionIsConsideredPlayer)) then {
     GVAR(fatalInjuriesPlayer) != FATAL_INJURIES_NEVER
 } else {
     GVAR(fatalInjuriesAI) != FATAL_INJURIES_NEVER

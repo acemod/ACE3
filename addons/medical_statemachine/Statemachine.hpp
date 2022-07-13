@@ -46,7 +46,7 @@ class ACE_Medical_StateMachine {
         onStateEntered = QFUNC(enteredStateUnconscious);
         class DeathAI {
             targetState = "Dead";
-            condition = QUOTE(!(_this getVariable [ARR_2(QQGVAR(AIUnconsciousness), GVAR(AIUnconsciousness))]) && {!isPlayer _this});
+            condition = QUOTE(!(_this getVariable [ARR_2(QQGVAR(AIUnconsciousness), GVAR(AIUnconsciousness))]) && {!([_this] call EFUNC(medical_engine,conditionIsConsideredPlayer))});
         };
         class WakeUp {
             targetState = "Injured";
@@ -86,7 +86,7 @@ class ACE_Medical_StateMachine {
             // If an AI unit reanimates, they will immediately die upon entering unconsciousness if AI Unconsciousness is disabled
             // As a result, we immediately kill the AI unit since cardiac arrest is effectively useless for it
             targetState = "Dead";
-            condition = QUOTE(!GVAR(AIUnconsciousness) && {!isPlayer _this});
+            condition = QUOTE(!GVAR(AIUnconsciousness) && {!([_this] call EFUNC(medical_engine,conditionIsConsideredPlayer))});
         };
         class Timeout {
             targetState = "Dead";
