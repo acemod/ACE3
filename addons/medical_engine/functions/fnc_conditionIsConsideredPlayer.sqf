@@ -17,21 +17,21 @@
 
 params ["_unit"];
 
-if (isPlayer _unit) then {true} else 
-{
-    switch (EGVAR(medical,considerSelectAIPlayersForMedical)) do
-    {
+if (isPlayer _unit) then {
+    true
+} else {
+    switch (EGVAR(medical,considerSelectAIPlayersForMedical)) do {
 	    case 0: {false};
 	    case 1: { 
-           if (isMultiplayer) then {
-	          if (_unit in playableUnits) then {true} else {false};
-           } else {
-	          if (_unit in switchableUnits) then {true} else {false};
-                                   };
-                               };
-	    case 2:  { 
-           if (_unit in units player) then {true} else {false}
-                                        };
-	    default { false }; //Default code should never be entered, but just in case
-     };
+            if (isMultiplayer) then {
+                [false, true] select (_unit in playableUnits);
+            } else {
+                [false, true] select (_unit in switchableUnits);
+            };
+        };
+	    case 2: { 
+            [false, true] select (_unit in units ACE_player);
+        };
+	    default {false}; //Default code should never be entered, but just in case
+    };
 }
