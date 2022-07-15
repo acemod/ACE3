@@ -24,7 +24,7 @@ if (isPlayer _unit) then {
 	    case 0: {false};
 	    case 1: { 
             if (isMultiplayer) then {
-                [false, true] select (_unit in playableUnits);
+                _unit in playableUnits // return
             } else {
                 [false, true] select (_unit in switchableUnits);
             };
