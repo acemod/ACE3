@@ -11,6 +11,22 @@
 [QGVAR(smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOffBox), FUNC(cookOffBox)] call CBA_fnc_addEventHandler;
 
+// handle cleaning up effects when vehicle is deleted mid-cookoff
+[QGVAR(addCleanupHandlers), {
+    params ["_vehicle"];
+    
+    // Don't add a new EH if cookoff is run multiple times
+    if ((_vehicle getVariable [QGVAR(deletedEH), -1]) == -1) then {
+        private _deletedEH = _vehicle addEventHandler ["Deleted", {
+            params ["_vehicle"];
+            
+            [QGVAR(cleanupEffects), [_vehicle]] call CBA_fnc_globalEvent;
+        }];
+    
+        _vehicle setVariable [QGVAR(deletedEH), _deletedEH];
+    };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(cleanupEffects), {
     params ["_vehicle", ["_effects", []]];
 
