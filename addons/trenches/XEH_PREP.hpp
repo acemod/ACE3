@@ -1,4 +1,6 @@
 
+PREP(camouflageTrench);
+PREP(canCamouflageTrench);
 PREP(canContinueDiggingTrench);
 PREP(canDigTrench);
 PREP(canRemoveTrench);
