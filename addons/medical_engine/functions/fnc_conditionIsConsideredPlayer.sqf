@@ -30,7 +30,7 @@ if (isPlayer _unit) then {
             };
         };
 	    case 2: { 
-            [false, true] select (_unit in units ACE_player);
+            _unit in units ACE_player // return
         };
 	    default {false}; //Default code should never be entered, but just in case
     };
