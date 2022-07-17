@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player] call ace_medical_statemachine_fnc_conditionIsConsideredPlayer
+ * [player] call ace_medical_engine_fnc_conditionIsConsideredPlayer
  *
  * Public: No
  */
@@ -18,20 +18,28 @@
 params ["_unit"];
 
 if (isPlayer _unit) then {
-    true
+	true
 } else {
-    switch (EGVAR(medical,considerSelectAIPlayersForMedical)) do {
-	    case 0: {false};
-	    case 1: { 
-            if (isMultiplayer) then {
-                _unit in playableUnits // return
-            } else {
-               _unit in switchableUnits // return
-            };
-        };
-	    case 2: { 
-            _unit in units ACE_player // return
-        };
-	    default {false}; //Default code should never be entered, but just in case
-    };
+	// check if unit medical settings are overriden via eden atribute
+	switch (_unit getVariable [QEGVAR(medical,OverrideAIMedicalSettings), 0]) do {
+		case 0: {
+			// no override, check mission settings
+			switch (EGVAR(medical,considerSelectAIPlayersForMedical)) do {
+				case 0: {false};
+				case 1: { 
+					if (isMultiplayer) then {
+						_unit in playableUnits // return
+					} else {
+						_unit in switchableUnits // return
+					};
+				};
+				case 2: { 
+					_unit in units ACE_player // return
+				};
+				default {false}; // failsafe, just in case
+			};
+		};
+		case 1: {true};
+		case 2: {false};
+	};
 }
