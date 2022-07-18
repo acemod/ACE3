@@ -12,14 +12,21 @@ version:
   patch: 1
 ---
 
-## 1. Config Values
+## 1. Array Info
 
+HunterKiller needs a 2 element array to know what seats to run on.
+Each element is a tuple of a turret path and operating mode.
 ```cpp
 // NO_ACTIONS = 0
 // OBSERVE = 1
 // OVERRIDE = 2
 // OBSERVE_AND_OVERRIDE = 3
+```
 
+
+## 2. Configs
+
+```cpp
 class CfgVehicles {
     class MyTankA {
         ace_hunterkiller = 1; // enable with default settings
@@ -33,10 +40,11 @@ class CfgVehicles {
 };
 ```
 
-
 ## 2. Variables
 
 ```cpp
-this setVariable ["ace_hunterkiller", [[[0], 1], [[0,0], 3]]]; // enable at mission
-this setVariable ["ace_hunterkiller", []]; // disable via mission
+this setVariable ["ace_hunterkiller", true]; // enable for vic using default settings
+this setVariable ["ace_hunterkiller", [[[0], 1], [[0,0], 3]]]; // enable using custom array
+this setVariable ["ace_hunterkiller", false]; // disabled
+this setVariable ["ace_hunterkiller", []]; // disabled
 ```

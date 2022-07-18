@@ -20,8 +20,9 @@ if ((GVAR(mode) == MODE_NO_ACTIONS) || {!([ACE_player, vehicle ACE_player, []] c
 };
 
 params ["_modeOverride"];
-if ((_modeOverride) && {!(GVAR(mode) in [MODE_OBSERVE, MODE_OBSERVE_AND_OVERRIDE])}) exitWith { false };
-if ((!_modeOverride) && {!(GVAR(mode) in [MODE_OVERRIDE, MODE_OBSERVE_AND_OVERRIDE])}) exitWith { false };
+TRACE_1("keydown",_modeOverride);
+if ((_modeOverride) && {!(GVAR(mode) in [MODE_OVERRIDE, MODE_OBSERVE_AND_OVERRIDE])}) exitWith { false };
+if ((!_modeOverride) && {!(GVAR(mode) in [MODE_OBSERVE, MODE_OBSERVE_AND_OVERRIDE])}) exitWith { false };
 
 private _vehicle = vehicle ACE_player;
 private _playerTurret = _vehicle unitTurret ACE_player;

@@ -25,24 +25,25 @@ GVAR(targetTurret) = [];
 if (_playerTurret isEqualTo []) exitWith {};
 private _vehicle = vehicle _player;
 private _config = configOf _vehicle;
+
+// setVar can be real array or true/false
 private _hkArray = _vehicle getVariable [QUOTE(ADDON), nil];
 if (isNil "_hkArray") then {
     _hkArray = if (isArray (_config >> QUOTE(ADDON))) then {
         getArray (_config >> QUOTE(ADDON))
     } else {
-        if ((getNumber (_config >> QUOTE(ADDON))) == 1) then {
-            [[[0], 1], [[0,0], 3]]
-        } else {
-            []
-        };
+        ((getNumber (_config >> QUOTE(ADDON))) == 1)
     };
 };
+if (_hkArray isEqualTo true) then { _hkArray = [[[0], 1], [[0,0], 3]]; };
+if (_hkArray isEqualTo false) then { _hkArray = []; };
+
 TRACE_1("",_hkArray);
 if ((count _hkArray) != 2) exitWith {};
 
 {
     _x params ["_xTurret", "_xMode"];
-    TRACE_2("wtf",_playerTurret,_xTurret);
+    TRACE_2("x",_playerTurret,_xTurret);
     if (_xTurret isEqualTo _playerTurret) exitWith {
         TRACE_3("seat active",typeOf _vehicle,_xTurret,_xMode);
         GVAR(mode) = _xMode;

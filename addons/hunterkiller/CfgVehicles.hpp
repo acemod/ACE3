@@ -21,4 +21,26 @@ class CfgVehicles {
     class MBT_04_base_F: Tank_F {
         ADDON = 1;
     };
+    class APC_Tracked_01_base_F: Tank_F {
+        ADDON = 1;
+    };
+    class APC_Tracked_02_base_F: Tank_F {
+        ADDON = 1;
+    };
+    class APC_Tracked_03_base_F: Tank_F {
+        ADDON = 1;
+    };
+    class Wheeled_APC_F;
+    class AFV_Wheeled_01_base_F: Wheeled_APC_F {
+        ADDON = 1;
+    };
+    class APC_Wheeled_01_base_F: Wheeled_APC_F {
+        ADDON = 1;
+    };
+    class APC_Wheeled_02_base_F: Wheeled_APC_F {
+        ADDON = 1;
+    };
+    class APC_Wheeled_03_base_F: Wheeled_APC_F {
+        ADDON = 1;
+    };
 };
