@@ -25,7 +25,7 @@ class CfgVehicles {
         ace_hunterkiller = 1; // enable with default settings
     };
     class MyTankB {
-        ace_hunterkiller[] = {{{0}, 1}, {{0,0}, 3}}; // Default settings: (gunner can observer, commander can observe and override gunner)
+        ace_hunterkiller[] = {{{0}, 1}, {{0,0}, 3}}; // Default settings: (gunner can observe, commander can observe and override gunner)
     };
     class MRAP_03_hmg_base_F {
         ace_hunterkiller[] = {{{0}, 1}, {{1}, 2}}; // e.g. vehicle where commander is [1] instead of [0,0]
