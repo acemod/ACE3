@@ -185,6 +185,7 @@ class vn_mine_ammobox_range_mag: vn_mine_m18_mag {
 
 // Punji large
 class vn_mine_punji_01_mag: vn_mine_m18_mag {
+    useAction = 0;
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_01);
 
     class ACE_Triggers {
