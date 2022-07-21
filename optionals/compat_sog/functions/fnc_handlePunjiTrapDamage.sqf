@@ -44,4 +44,4 @@ switch (typeOf _trap select [0, 16]) do {
     for "_i" from 0 to _stabCount do {
         [_x, random [1, 2, 3], selectRandom _bodyParts, "stab", _instigator] call EFUNC(medical,addDamageToUnit);
     };
-} forEach _affectedUnits select {isDamageAllowed _x}; // isDamageAllowed already does local check
+} forEach (_affectedUnits select {isDamageAllowed _x}); // isDamageAllowed already does local check
