@@ -205,3 +205,86 @@ class vn_mine_punji_02_mag: vn_mine_punji_01_mag {
 class vn_mine_punji_03_mag: vn_mine_punji_01_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_03);
 };
+
+// Punji door-way
+class vn_mine_punji_04_mag: vn_mine_m18_mag {
+    useAction = 0;
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_04);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            displayName = CSTRING(Action_DigIn);
+        };
+    };
+};
+
+// Punji side whip
+class vn_mine_punji_05_mag: vn_mine_punji_04_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_05);
+};
+
+// Bike mine
+class vn_mine_bike_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bike);
+};
+
+// Cartridge mine
+class vn_mine_cartridge_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(cartridge);
+};
+
+// Lighter mine
+class vn_mine_lighter_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(lighter);
+};
+
+// Pot mine
+class vn_mine_pot_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(pot);
+};
+
+// Jerrycan mine
+class vn_mine_jerrycan_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(jerrycan);
+};
+
+// Mortar shell on a stick
+class vn_mine_mortar_range_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(mortar_range);
+};
+
+// Limpet mine USA
+class vn_mine_limpet_01_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(limpet_01);
+};
+
+// Limpet mine RUS
+class vn_mine_limpet_02_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(limpet_02);
+};
+
+// Chicom NO8 mine
+class vn_mine_chicom_no8_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(chicom_no8);
+};
+
+// DH10 mine
+class vn_mine_dh10_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(dh10);
+};
+
+// Grenade board mine
+class vn_mine_gboard_range_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(gboard);
+};
+
+// Satchel charge
+class vn_mine_satchelcharge_02_mag: vn_mine_satchel_remote_02_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(satchelcharge_02);
+};
+
+// Bangalore mine
+class vn_mine_bangalore_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bangalore);
+};

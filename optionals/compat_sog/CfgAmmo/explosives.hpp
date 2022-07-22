@@ -62,3 +62,81 @@ class vn_mine_punji_03_ammo: vn_mine_punji_01_ammo {
         };
     };
 };
+
+class vn_mine_punji_04_ammo: APERSBoundingMine_Range_Ammo {
+    EGVAR(minedetector,detectable) = 0;
+
+    hit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(hit)'));
+    GVAR(hit) = QUOTE([ARR_2(0,1)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
+
+    indirectHit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(indirectHit)'));
+    GVAR(indirectHit) = QUOTE([ARR_2(0,10)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
+
+    class EventHandlers {
+        class ADDON {
+            AmmoHit = QUOTE(call FUNC(handlePunjiTrapTrigger));
+        };
+    };
+};
+
+class vn_mine_punji_05_ammo: vn_mine_punji_04_ammo {
+    class EventHandlers {
+        class ADDON {
+            AmmoHit = QUOTE(call FUNC(handlePunjiTrapTrigger));
+        };
+    };
+};
+
+class APERSMine_Range_Ammo;
+class vn_mine_bike_ammo: APERSMine_Range_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_bike_ammo_scripted";
+};
+
+class vn_mine_cartridge_ammo: APERSMine_Range_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_cartridge_ammo_scripted";
+};
+
+class vn_mine_lighter_ammo: APERSMine_Range_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_lighter_ammo_scripted";
+};
+
+class vn_mine_jerrycan_ammo: APERSMine_Range_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_jerrycan_ammo_scripted";
+};
+
+class vn_mine_pot_ammo: APERSMine_Range_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_pot_ammo_scripted";
+};
+
+class vn_mine_mortar_range_ammo: APERSMine_Range_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_mortar_range_ammo_scripted";
+};
+
+class vn_mine_limpet_01_ammo: DemoCharge_Remote_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_limpet_01_ammo_scripted";
+};
+
+class vn_mine_limpet_02_ammo: vn_mine_limpet_01_ammo {
+    EGVAR(explosives,explosive) = "vn_mine_limpet_02_ammo_scripted";
+};
+
+class vn_mine_chicom_no8_ammo: APERSMine_Range_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_chicom_no8_ammo_scripted";
+};
+
+class vn_mine_dh10_ammo: DirectionalBombBase {
+    EGVAR(explosives,explosive) = "vn_mine_dh10_ammo_scripted";
+};
+
+class PipeBombBase;
+class vn_mine_gboard_range_ammo: PipeBombBase {
+    EGVAR(explosives,explosive) = "vn_mine_gboard_range_ammo_scripted";
+};
+
+class vn_mine_satchelcharge_02_ammo: SatchelCharge_Remote_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_satchelcharge_02_ammo_scripted";
+};
+
+class vn_mine_bangalore_ammo: SatchelCharge_Remote_Ammo {
+    EGVAR(explosives,explosive) = "vn_mine_bangalore_ammo_scripted";
+};
