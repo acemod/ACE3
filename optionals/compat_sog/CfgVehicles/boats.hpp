@@ -14,7 +14,7 @@ class vn_boat_09_base : vn_boat_armed_base {
     EGVAR(refuel,fuelCapacity) = 464;
 };
 
-// Type 55A Shantou Gunboat (Could find no info on this, so same as the similarly sized PBR for now)
+// Type 55A Shantou Gunboat (Could find no info on this, so same as the similarly sized PTF for now)
 class vn_boat_03_base : vn_boat_armed_base {
-    EGVAR(refuel,fuelCapacity) = 727;
+    EGVAR(refuel,fuelCapacity) = 2773;
 };
