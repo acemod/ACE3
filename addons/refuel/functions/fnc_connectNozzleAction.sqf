@@ -111,13 +111,8 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _sink setVariable [QGVAR(nozzle), _nozzle, true];
 
-        private _source = _nozzle getVariable QGVAR(source);
-        private _fuel = [_source] call FUNC(getFuel);
-        if (_fuel == REFUEL_INFINITE_FUEL) then {
-            _source setVariable [QGVAR(fuelCounter), 0, true];
-        } else {
-            _source setVariable [QGVAR(fuelCounter), _fuel, true];
-        };
+        // Reset fuel counter
+        _source setVariable [QGVAR(fuelCounter), 0, true];
 
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
 

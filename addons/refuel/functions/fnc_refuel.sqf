@@ -84,9 +84,6 @@ if (_refuelContainer) then {
             } else {
                 _fuelInSource = _fuelInSource - _addedFuel;
             };
-        } else {
-            // For infinite fuel sources only increase counter
-            _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _addedFuel, true];
         };
         
         // Add fuel to target while being sure not to put too much into sink
@@ -112,6 +109,9 @@ if (_refuelContainer) then {
             [QEGVAR(common,setFuel), [_sink, _fuelInSink / _maxFuel], _sink] call CBA_fnc_targetEvent;
             _unit setVariable [QGVAR(tempFuel), _fuelInSink];
         };
+        
+        // Increment fuel counter
+        _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _addedFuel, true];
 
         [QGVAR(tick), [_source, _sink, _addedFuel, _refuelContainer]] call CBA_fnc_localEvent;
 
