@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Fortify">
+        <Key ID="STR_ACE_Fortify_Fortify">
+            <English>Fortify</English>
+            <German>Verstärken</German>
+            <Japanese>要塞</Japanese>
+            <Korean>요새화</Korean>
+            <Chinese>要塞</Chinese>
+            <Chinesesimp>设防</Chinesesimp>
+            <Polish>Fortyfikowanie</Polish>
+            <Russian>Фортификация</Russian>
+            <Turkish>Inşa Etme</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_FortifyItem_name">
+            <English>Fortify Tool</English>
+            <German>Bauwerkzeug</German>
+            <Japanese>要塞ツール</Japanese>
+            <Korean>요새화 도구</Korean>
+            <Chinese>要塞工具</Chinese>
+            <Chinesesimp>设防工具</Chinesesimp>
+            <Polish>Narzędzie do fortyfikowania</Polish>
+            <Russian>Инструмент строителя</Russian>
+            <Turkish>Inşa Etme Aleti</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_Budget">
+            <English>Budget</English>
+            <German>Budget</German>
+            <Japanese>予算</Japanese>
+            <Korean>예산</Korean>
+            <Chinese>預算</Chinese>
+            <Chinesesimp>预算</Chinesesimp>
+            <Polish>Budżet</Polish>
+            <Russian>Бюджет</Russian>
+            <Turkish>Bütçe</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_addToolItem">
+            <English>Auto add fortify item</English>
+            <German>Füge das Bauwerkzeug automatisch hinzu</German>
+            <Japanese>自動的に要塞ツールを追加</Japanese>
+            <Korean>자동 추가 요새 항목</Korean>
+            <Chinese>自動增加要塞物品</Chinese>
+            <Chinesesimp>自动增加设防物品</Chinesesimp>
+            <Polish>Automatycznie dodaj narzędzie do fortyfikowania</Polish>
+            <Russian>Автоматически добавлять Инструмент строителя</Russian>
+            <Turkish>Otomatik olarak inşa etme aletini ekle</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_moduleDescription">
+            <English>Initializes the Fortify system, with some basic parameters.&lt;br/&gt;Presets are pulled from configFile and missionConfigFile, see wiki for format.</English>
+            <Polish>Inicjalizuje system fortyfikacji, z podstawowymi parametrami.&lt;br/&gt;Domyślne ustawienia są załadowane z configFile oraz missionConfigFile, odwiedź wiki aby znaleźć format</Polish>
+            <Russian>Инициализирует систему фортификации с некоторыми базовыми параметрами.&lt;br/&gt;Предустановки взяты из configFile и missionConfigFile, формат смотри на wiki.</Russian>
+            <Turkish>Inşa etme sistemini bazı temel parametrelerle başlatır. &lt;br/&gt; Ön ayarlar configFile ve missionConfigFile'dan alınır, format için wiki'ye bakın.</Turkish>
+            <Japanese>要塞システムを初期設定に戻します。&lt;br/&gt;プリセットは configfile と missionConfigFile から参照されます。詳細は wiki を参照してください。</Japanese>
+            <German>Initialisiert das Verstärken-System, mit grundlegenden Einstellungen &lt;br/&gt;Vorseinstellungen werden aus der configFile und der missionConfigFile gezogen, für mehr Informationen: siehe das ACE Wiki.</German>
+            <Chinesesimp>使用一些基本参数初始化设防系统。&lt;br/&gt;预设从 configFile 和 missionConfigFile 中提取，参见 wiki 的格式。</Chinesesimp>
+            <Korean>기본 파라미터와 함께 요새화 시스템을 활성화합니다&lt;br/&gt;configFile 과 missionConfigFile에서 프리셋을 뽑아옵니다, 포맷은 위키를 참조하십시오.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_rotate">
+            <English>Rotate</English>
+            <German>Drehen</German>
+            <Spanish>Girar</Spanish>
+            <French>Tourner</French>
+            <Italian>Rotazione</Italian>
+            <Czech>Otočit</Czech>
+            <Hungarian>Forgatás</Hungarian>
+            <Polish>Obrót</Polish>
+            <Portuguese>Rotaciona</Portuguese>
+            <Russian>Bращать</Russian>
+            <Japanese>回転</Japanese>
+            <Korean>회전</Korean>
+            <Chinesesimp>旋转</Chinesesimp>
+            <Chinese>旋轉</Chinese>
+            <Turkish>Yönlendir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_Confirm">
+            <English>Confirm Deployment</English>
+            <German>Aufbauen</German>
+            <Russian>Подтвердить размещение</Russian>
+            <Polish>Potwierdź rozłożenie</Polish>
+            <Spanish>Confirmar despliegue</Spanish>
+            <French>Confirmer Déploiement</French>
+            <Czech>Potvrdit Položení</Czech>
+            <Italian>Conferma Posizionamento</Italian>
+            <Hungarian>Lerak</Hungarian>
+            <Portuguese>Confirmar implantação</Portuguese>
+            <Japanese>ここで作る</Japanese>
+            <Korean>설치 확인</Korean>
+            <Chinesesimp>确认部署</Chinesesimp>
+            <Chinese>確認佈署</Chinese>
+            <Turkish>Yerleştirmeyi Onayla</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_buildLocationModule">
+            <English>Fortify: Limit Build Area</English>
+            <German>Verstärken: Beschränke Baubereich</German>
+            <Japanese>要塞: 構築制限エリア</Japanese>
+            <Chinese>要塞: 限制建造區</Chinese>
+            <Chinesesimp>设防：限制建造区</Chinesesimp>
+            <Polish>Fortyfikowanie: Limituj strefe budowania</Polish>
+            <Russian>Фортификация: ограничить зону постройки</Russian>
+            <Turkish>Inşa Etme : Bölgede Inşa Etmeyi Limitle</Turkish>
+            <Korean>요새화: 건설 영역 제한</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingsCategory">
+            <English>ACE Fortify</English>
+            <German>ACE Verstärken</German>
+            <Chinese>ACE 要塞</Chinese>
+            <Chinesesimp>ACE 设防</Chinesesimp>
+            <Japanese>ACE 要塞</Japanese>
+            <Polish>ACE Fortyfikowanie</Polish>
+            <Russian>ACE Фортификация</Russian>
+            <Turkish>ACE Inşa Etme</Turkish>
+            <Korean>ACE 요새화</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHint">
+            <English>Show budget updates</English>
+            <German>Zeige Budgetveränderungen</German>
+            <Chinese>顯示預算更新</Chinese>
+            <Chinesesimp>显示预算更新</Chinesesimp>
+            <Japanese>予算の更新を表示</Japanese>
+            <Polish>Pokaż aktualizacje budżetu</Polish>
+            <Russian>Показывать обновления бюджета</Russian>
+            <Turkish>Bütçe güncellenmelerini göster</Turkish>
+            <Korean>비용 업데이트 표시</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHintDesc">
+            <English>Controls when budget update hints are shown</English>
+            <German>Bestimmt wann Budgetveränderungen angezeigt werden</German>
+            <Chinese>決定預算變更時是否會顯示提示</Chinese>
+            <Chinesesimp>决定预算变更时是否会显示提示</Chinesesimp>
+            <Japanese>予算が更新されヒント表示時の操作を決定します</Japanese>
+            <Polish>Kontroluje kiedy aktualizacje budżetu są wyświetlane</Polish>
+            <Russian>Настраивает сообщения об обновлении бюджета</Russian>
+            <Turkish>Bütçe güncellenince bilgi verilip verilmeyeceğini kontrol eder.</Turkish>
+            <Korean>어떤 행동을 취할 때 비용이 표시되는지를 결정합니다</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHintNone">
+            <English>Never show</English>
+            <German>Niemals anzeigen</German>
+            <Chinese>永不顯示</Chinese>
+            <Chinesesimp>永不显示</Chinesesimp>
+            <Japanese>非表示</Japanese>
+            <Polish>Nigdy</Polish>
+            <Russian>Не показывать никогда</Russian>
+            <Turkish>Asla Gösterme</Turkish>
+            <Korean>안 보여줌</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHintHasTool">
+            <English>Has fortify tool</English>
+            <German>Hat Bauewerkzeug</German>
+            <Chinese>有要塞工具</Chinese>
+            <Chinesesimp>有设防工具</Chinesesimp>
+            <Japanese>要塞ツール所持の時</Japanese>
+            <Polish>Posiada narzędzie do fortyfikowania</Polish>
+            <Russian>Если имеется Инструмент</Russian>
+            <Turkish>Insa Etme Aleti Olanlara Göster</Turkish>
+            <Korean>요새화 도구를 들고 있을 때</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHintEveryone">
+            <English>Always show</English>
+            <German>Immer anzeigen</German>
+            <Chinese>總是顯示</Chinese>
+            <Chinesesimp>总是显示</Chinesesimp>
+            <Japanese>常に表示</Japanese>
+            <Polish>Zawsze</Polish>
+            <Russian>Показывать всегда</Russian>
+            <Turkish>Her Zaman Göster</Turkish>
+            <Korean>항상 보여줌</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHint_timeCostCoefficient">
+            <English>Time-Cost Coefficient</English>
+            <Chinesesimp>时间—成本系数</Chinesesimp>
+            <Korean>시간-가격 계수</Korean>
+            <German>Zeit-Kosten-Koeffizient</German>
+            <Japanese>時間コスト係数</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHintDesc_timeCostCoefficient">
+            <English>Coefficient used to determine time to build structure.&lt;br/&gt;A in Ax + b where x is cost of object</English>
+            <Chinesesimp>用于确定建造建筑所需时间的系数。&lt;br/&gt;A是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
+            <Korean>건축물을 지을 때 걸리는 시간을 계수를 적용하여 계산합니다.</Korean>
+            <German>Koeffizient zur Bestimmung der Bauzeit &lt;br/&gt;A in Ax + b, wobei x die Kosten des Objekts sind.</German>
+            <Japanese>建造する時間を決定するために使用される係数。&lt;br/&gt;計算式はAx + bです。この係数はAであり、xは建造物のコストです。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHint_timeMin">
+            <English>Minimum Build Time</English>
+            <Chinesesimp>最短建造时间</Chinesesimp>
+            <Korean>최소 건축 시간</Korean>
+            <German>Minimale Bauzeit</German>
+            <Japanese>建造に掛かる最小の時間</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHintDesc_timeMin">
+            <English>Minimum time to build any structure.&lt;br/&gt;b in Ax + b where x is cost of object</English>
+            <Chinesesimp>建造任何建筑的最短时间。&lt;br/&gt;b是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
+            <Korean>건축물을 지을 때 걸리는 최소 시간을 계수를 적용하여 계산합니다.</Korean>
+            <German>Mindestzeit für den Bau eines beliebigen Bauwerks.&lt;br/&gt;b in Ax + b, wobei x die Kosten des Objekts sind.</German>
+            <Japanese>建造に掛かる最小の時間。&lt;br/&gt;計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Fortify_progressBarTitle">
+            <English>Building</English>
+            <Chinesesimp>建造</Chinesesimp>
+            <Korean>건설 중</Korean>
+            <German>Bauwerk</German>
+            <Japanese>建造</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMap">
+            <English>Create map markers</English>
+            <Chinesesimp>创建地图标记</Chinesesimp>
+            <Korean>지도에 마커 생성</Korean>
+            <German>Kartenmarkierungen erstellen</German>
+            <Japanese>マップマーカーを生成する</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
+            <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
+            <Chinesesimp>在放置静态防御工事时，创建看起来像地形建筑的地图标记</Chinesesimp>
+            <Korean>건축물을 건설하고 나서 지도에 마커를 생성합니다</Korean>
+            <German>Erstellen von Kartenmarkierungen, die wie Gebäude im Gelände aussehen, wenn statische Befestigungen platziert werden</German>
+            <Japanese>静的な建築物が配置されたときに地形の建物のように見えるマップマーカーを生成します</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMapNone">
+            <English>Never</English>
+            <Czech>Nikdy</Czech>
+            <German>Nie</German>
+            <Russian>Никогда</Russian>
+            <Polish>Nigdy</Polish>
+            <Italian>Mai</Italian>
+            <Spanish>Nunca</Spanish>
+            <French>Jamais</French>
+            <Chinese>永不</Chinese>
+            <Japanese>なし</Japanese>
+            <Korean>안 함</Korean>
+            <Portuguese>Nunca</Portuguese>
+            <Chinesesimp>永不</Chinesesimp>
+            <Turkish>Asla</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMapFriendly">
+            <English>For units friendly to the placer</English>
+            <Chinesesimp>对放置者友军单位</Chinesesimp>
+            <Korean>아군 유닛이 지은 건물만</Korean>
+            <German>Für, zum Erbauer, verbündete Einheiten.</German>
+            <Japanese>設置者の友軍に</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
+            <English>For everyone</English>
+            <Chinese>所有人</Chinese>
+            <French>Pour tous</French>
+            <Spanish>Para todos</Spanish>
+            <Italian>Per tutti</Italian>
+            <Polish>Dla wszystkich</Polish>
+            <Russian>Для всех</Russian>
+            <German>Für alle</German>
+            <Czech>Pro všechny</Czech>
+            <Portuguese>Para todos</Portuguese>
+            <Korean>모든 사람</Korean>
+            <Chinesesimp>针对每一个人</Chinesesimp>
+            <Japanese>全員に</Japanese>
+            <Turkish>Herkes için</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_small">
+            <English>Small</English>
+            <Polish>Małe</Polish>
+            <Russian>Малый</Russian>
+            <Turkish>Küçük</Turkish>
+            <Japanese>小型</Japanese>
+            <German>Klein</German>
+            <Chinesesimp>小型</Chinesesimp>
+            <Korean>소형</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_smallGreen">
+            <English>Small (Green)</English>
+            <Russian>Малый (Зеленый)</Russian>
+            <Polish>Małe (Zielone)</Polish>
+            <Turkish>Küçük (Yeşil)</Turkish>
+            <Japanese>小型 (グリーン)</Japanese>
+            <German>Klein (Grün)</German>
+            <Chinesesimp>小型（绿色）</Chinesesimp>
+            <Korean>소형 (초목)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_medium">
+            <English>Medium</English>
+            <Polish>Średnie</Polish>
+            <Russian>Средний</Russian>
+            <Turkish>Orta</Turkish>
+            <Japanese>中型</Japanese>
+            <German>Mittel</German>
+            <Chinesesimp>中型</Chinesesimp>
+            <Korean>중형</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_mediumGreen">
+            <English>Medium (Green)</English>
+            <Russian>Средний (Зеленый)</Russian>
+            <Polish>Średnie (Zielone)</Polish>
+            <Turkish>Orta (Yeşil)</Turkish>
+            <Japanese>中型 (グリーン)</Japanese>
+            <German>Mittel (Grün)</German>
+            <Chinesesimp>中型（绿色）</Chinesesimp>
+            <Korean>중형 (초목)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_big">
+            <English>Big</English>
+            <Polish>Duże</Polish>
+            <Russian>Большой</Russian>
+            <Turkish>Büyük</Turkish>
+            <Japanese>大型</Japanese>
+            <German>Groß</German>
+            <Chinesesimp>大型</Chinesesimp>
+            <Korean>대형</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fortify_bigGreen">
+            <English>Big (Green)</English>
+            <Polish>Duże (Zielone)</Polish>
+            <Russian>Большой (Зеленый)</Russian>
+            <Turkish>Büyük (Yeşil)</Turkish>
+            <Japanese>大型 (グリーン)</Japanese>
+            <German>Groß (Grün)</German>
+            <Chinesesimp>大型（绿色）</Chinesesimp>
+            <Korean>대형 (초목)</Korean>
+        </Key>
+    </Package>
+</Project>

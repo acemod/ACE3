@@ -19,38 +19,18 @@ params ["_unit"];
 
 private _actions = [];
 {
-    _x params ["_class", "_displayName", "_requiredItem", "_textures", "_icon", "_materials"];
-
     _actions pushBack [
         [
-            format ["ACE_ConfigTag_%1", _class],
-            _displayName,
-            _icon,
-            {
-                (_this select 2) params ["_unit", "_class", "_textures", "", "_materials"];
-
-                (
-                    if (count _textures == count _materials) then {
-                        private _textureIndex = floor random count _textures;
-                        [_textures select _textureIndex, _materials select _textureIndex]
-                    } else {
-                        [selectRandom _textures, selectRandom _materials]
-                    }
-                ) params ["_randomTexture", "_randomMaterial"];
-
-                [_unit, _randomTexture, _randomMaterial] call FUNC(tag);
-                _unit setVariable [QGVAR(lastUsedTag), _class];
-            },
-            {
-                (_this select 2) params ["_unit", "", "", "_requiredItem"];
-                _requiredItem in (_unit call EFUNC(common,uniqueItems))
-            },
+            format ["ACE_TagItem_%1", _x],
+            getText (configFile >> "CfgWeapons" >> _x >> "displayName"),
+            getText (configFile >> "CfgWeapons" >> _x >> "picture"),
             {},
-            [_unit, _class, _textures, _requiredItem, _materials]
+            {(_this select 2) in (_player call EFUNC(common,uniqueItems))},
+            {},
+            _x
         ] call EFUNC(interact_menu,createAction),
-        [],
+        _y apply { [_x, [], _unit] }, //sub-actions for each individual tag
         _unit
-    ];
-} forEach GVAR(cachedTags);
-
+    ]
+} forEach GVAR(itemActions);
 _actions

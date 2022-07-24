@@ -29,57 +29,54 @@ private _fnc_renderNearbyActions = {
     GVAR(foundActions) = [];
     GVAR(lastTimeSearchedActions) = diag_tickTime;
 
+    QGVAR(renderNearbyActions) call CBA_fnc_localEvent;
+
     private _numInteractObjects = 0;
     private _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
     {
         private _target = _x;
 
         // Quick oclussion test. Skip objects more than 1 m behind the camera plane
-        private _lambda = ((getPosASL _x) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir);
-        if ((_lambda > -1) && {!isObjectHidden _target}) then {
-            private _numInteractions = 0;
+        private _lambda = getPosASL _target vectorDiff GVAR(cameraPosASL) vectorDotProduct GVAR(cameraDir);
+        if (
+            _lambda <= -1
+            || {isObjectHidden _target}
             // Prevent interacting with yourself or your own vehicle
-            if (_target != ACE_player && {_target != vehicle ACE_player}) then {
+            || {_target in [ACE_player, vehicle ACE_player]}
+        ) then {continue};
 
-                // Iterate through object actions, find base level actions and render them if appropiate
-                GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
-                {
-                    // Only render them directly if they are base level actions
-                    if ((_x select 1) isEqualTo []) then {
-                        // Try to render the menu
-                        private _action = _x;
-                        if ([_target, _action] call FUNC(renderBaseMenu)) then {
-                            _numInteractions = _numInteractions + 1;
-                            GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
-                        };
-                    };
-                    nil
-                } count GVAR(objectActionList);
+        private _hasInteractions = false;
 
-                // Iterate through base level class actions and render them if appropiate
-                private _namespace = GVAR(ActNamespace);
-                private _classActions = _namespace getVariable typeOf _target;
-
-                {
-                    private _action = _x;
-                    // Try to render the menu
-                    if ([_target, _action] call FUNC(renderBaseMenu)) then {
-                        _numInteractions = _numInteractions + 1;
-                        GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
-                    };
-                    nil
-                } count _classActions;
-
-                // Limit the amount of objects the player can interact with
-                if (_numInteractions > 0) then {
-                    _numInteractObjects = _numInteractObjects + 1;
-                };
+        // Iterate through object actions, find base level actions and render them if appropiate
+        GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
+        {
+            // Only render them directly if they are base level actions
+            if (_x select 1 isNotEqualTo []) then {continue};
+            // Try to render the menu
+            private _action = _x;
+            if ([_target, _action] call FUNC(renderBaseMenu)) then {
+                _hasInteractions = true;
+                GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
             };
-        };
-        if (_numInteractObjects >= MAXINTERACTOBJECTS) exitWith {};
+        } forEach GVAR(objectActionList);
 
-        nil
-    } count _nearestObjects;
+        // Iterate through base level class actions and render them if appropiate
+        private _classActions = GVAR(ActNamespace) getVariable [typeOf _target, []];
+        {
+            private _action = _x;
+            // Try to render the menu
+            if ([_target, _action] call FUNC(renderBaseMenu)) then {
+                _hasInteractions = true;
+                GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
+            };
+        } forEach _classActions;
+
+        // Limit the amount of objects the player can interact with
+        if (_hasInteractions) then {
+            INC(_numInteractObjects);
+            if (_numInteractObjects >= MAXINTERACTOBJECTS) then {break};
+        };
+    } forEach _nearestObjects;
 };
 
 private _fnc_renderLastFrameActions = {
@@ -88,8 +85,7 @@ private _fnc_renderLastFrameActions = {
 
         GVAR(objectActionList) = _objectActionList;
         [_target, _action] call FUNC(renderBaseMenu);
-        nil
-    } count GVAR(foundActions);
+    } forEach GVAR(foundActions);
 };
 
 private _fnc_renderSelfActions = {
@@ -112,16 +108,14 @@ private _fnc_renderSelfActions = {
     {
         _action = _x;
         [_target, _action, _pos] call FUNC(renderBaseMenu);
-        nil
-    } count _classActions;
+    } forEach _classActions;
 };
 
 private _fnc_renderZeusActions = {
     {
         private _action = _x;
         [_this, _action, [0.5, 0.5]] call FUNC(renderBaseMenu);
-        nil
-    } count GVAR(ZeusActions);
+    } forEach GVAR(ZeusActions);
 };
 
 
@@ -178,5 +172,4 @@ if (count GVAR(collectedActionPoints) > 1) then {
 {
     _x params ["_z", "_sPos", "_activeActionTree"];
     [[], _activeActionTree, _sPos, [180,360]] call FUNC(renderMenu);
-    nil
-} count GVAR(collectedActionPoints);
+} forEach GVAR(collectedActionPoints);

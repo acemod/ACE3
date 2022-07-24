@@ -21,7 +21,7 @@ GVAR(cacheManActions) = +(GVAR(ActNamespace) getVariable ["CAManBase", []]); // 
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {
-    if (GVAR(cursorKeepCentered)) then {
+    if ([GVAR(cursorKeepCentered), GVAR(cursorKeepCenteredSelfInteraction)] select GVAR(keyDownSelfAction)) then {
         GVAR(cursorPos) = GVAR(cursorPos) vectorAdd [_this select 1, _this select 2, 0] vectorDiff [0.5, 0.5, 0];
         setMousePosition [0.5, 0.5];
     } else {
@@ -73,5 +73,39 @@ GVAR(lastTimeSearchedActions) = -1000;
 
 // Init zeus menu
 [] call FUNC(compileMenuZeus);
+
+// Handle addActionToClass with Inheritance flag set (CAManBase actions are seperated for speed)
+GVAR(inheritedActionsAll) = [];
+GVAR(inheritedClassesAll) = [];
+GVAR(inheritedActionsMan) = [];
+GVAR(inheritedClassesMan) = [];
+
+["All", "InitPost", {
+    BEGIN_COUNTER(InitPost);
+    params ["_object"];
+    private _type = typeOf _object;
+
+    if (GVAR(inheritedClassesAll) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
+
+    {
+        _x params ["_objectType", "_typeNum", "_parentPath", "_action"];
+        if (_object isKindOf _objectType) then {
+            [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        };
+    } forEach GVAR(inheritedActionsAll);
+    END_COUNTER(InitPost);
+}] call CBA_fnc_addClassEventHandler;
+["CAManBase", "InitPost", {
+    BEGIN_COUNTER(InitPost);
+    params ["_object"];
+    private _type = typeOf _object;
+
+    if (GVAR(inheritedClassesMan) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
+    {
+        _x params ["_typeNum", "_parentPath", "_action"];
+        [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+    } forEach GVAR(inheritedActionsMan);
+    END_COUNTER(InitPost);
+}, true, ["VirtualMan_F"]] call CBA_fnc_addClassEventHandler;
 
 ADDON = true;

@@ -4,7 +4,7 @@
 # ACE3 automatic deployment script #
 # ================================ #
 # This is not meant to be run      #
-# directly!                        #
+# directly!!                       #
 ####################################
 
 import os
@@ -16,7 +16,7 @@ from github import Github, InputGitAuthor
 
 
 TRANSLATIONISSUE = 367
-TRANSLATIONBODY = """**[ACE3 Translation Guide](http://ace3mod.com/wiki/development/how-to-translate-ace3.html)**
+TRANSLATIONBODY = """**[ACE3 Translation Guide](http://ace3.acemod.org/wiki/development/how-to-translate-ace3.html)**
 
 {}
 """
@@ -26,6 +26,8 @@ DEPENDENCIESPATH = "docs/_includes/dependencies_list.md"
 REPOUSER = "acemod"
 REPONAME = "ACE3"
 REPOPATH = "{}/{}".format(REPOUSER,REPONAME)
+
+BRANCH = "master"
 
 
 def update_translations(repo):
@@ -41,14 +43,11 @@ def update_dependencies(repo):
     diff = str(diff, "utf-8")
 
     if diff != "":
-        sha = repo.get_contents(DEPENDENCIESPATH
-            #, ref="travisForDocs" # Debug
-        ).sha
+        sha = repo.get_contents(DEPENDENCIESPATH, ref=BRANCH).sha
         repo.update_file(
-            path="/{}".format(DEPENDENCIESPATH),
-            message="[Docs] Update component dependencies\nAutomatically committed through Travis CI.\n\n[ci skip]",
-            content=dependencies, sha=sha, committer=InputGitAuthor("ace3mod", "ace3mod@gmail.com")
-            #, branch="travisForDocs" # Debug
+            path="{}".format(DEPENDENCIESPATH),
+            message="[Docs] Update component dependencies\nAutomatically committed through CI.\n\n[ci skip]",
+            content=dependencies, sha=sha, committer=InputGitAuthor("ace3mod", "ace3mod@gmail.com"), branch=BRANCH
         )
         print("Dependencies successfully updated.")
     else:

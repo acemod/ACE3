@@ -16,10 +16,15 @@
  */
 
 params ["_unit"];
+if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) exitWith {
+    if ((_unit getVariable [QEGVAR(medical,causeOfDeath), ""]) == "#scripted") exitWith {};
+    WARNING_1("enteredStateDeath: State transition on dead or null unit - %1",_unit);
+};
 
-// TODO: Probably also needs additional logic to deal with edge cases
+//IGNORE_PRIVATE_WARNING ["_thisOrigin", "_thisTransition"]; // vars provided by CBA_statemachine
+TRACE_4("enteredStateDeath",_this,_thisOrigin,_thisTransition,CBA_missionTime);
 
-// Send a local event before death
-[QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
+private _causeOfDeath = format ["%1:%2", _thisOrigin, _thisTransition];
+private _instigator = _unit getVariable [QEGVAR(medical,lastInstigator), objNull];
 
-[_unit] call EFUNC(medical_status,setDead);
+[_unit, _causeOfDeath, _instigator] call EFUNC(medical_status,setDead);

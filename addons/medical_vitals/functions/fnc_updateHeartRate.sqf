@@ -22,7 +22,15 @@ params ["_unit", "_hrTargetAdjustment", "_deltaT", "_syncValue"];
 
 private _heartRate = GET_HEART_RATE(_unit);
 
-if !IN_CRDC_ARRST(_unit) then {
+if IN_CRDC_ARRST(_unit) then {
+    if (alive (_unit getVariable [QEGVAR(medical,CPR_provider), objNull])) then {
+        if (_heartRate == 0) then { _syncValue = true }; // always sync on large change
+        _heartRate = random [25, 30, 35];
+    } else {
+        if (_heartRate != 0) then { _syncValue = true }; // always sync on large change
+        _heartRate = 0
+    };
+} else {
     private _hrChange = 0;
     private _targetHR = 0;
     private _bloodVolume = GET_BLOOD_VOLUME(_unit);
@@ -32,12 +40,12 @@ if !IN_CRDC_ARRST(_unit) then {
         private _painLevel = GET_PAIN_PERCEIVED(_unit);
 
         private _targetBP = 107;
-        if (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE) then {
+        if (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) then {
             _targetBP = _targetBP * (_bloodVolume / DEFAULT_BLOOD_VOLUME);
         };
 
         _targetHR = DEFAULT_HEART_RATE;
-        if (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) then {
+        if (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE) then {
             _targetHR = _heartRate * (_targetBP / (45 max _meanBP));
         };
         if (_painLevel > 0.2) then {

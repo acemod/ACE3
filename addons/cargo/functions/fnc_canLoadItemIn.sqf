@@ -21,7 +21,7 @@ params [["_item", "", [objNull,""]], "_vehicle", ["_ignoreInteraction", false]];
 
 if ((!_ignoreInteraction) && {speed _vehicle > 1 || {((getPos _vehicle) select 2) > 3}}) exitWith {TRACE_1("vehicle not stable",_vehicle); false};
 
-if (_item isEqualType objNull && {{alive _x && {getText (configFile >> "CfgVehicles" >> typeOf _x >> "simulation") != "UAVPilot"}} count crew _item > 0}) exitWith {
+if (_item isEqualType objNull && {{alive _x && {getText (configOf _x >> "simulation") != "UAVPilot"}} count crew _item > 0}) exitWith {
     TRACE_1("item is occupied",_item);
     false
 };
@@ -35,7 +35,8 @@ if (_item  isEqualType "") then {
 } else {
     _validItem =
         (alive _item) &&
-        {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}};
+        {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}} &&
+        {!(_item getVariable [QEGVAR(cookoff,isCookingOff), false])};
 };
 
 _validItem &&

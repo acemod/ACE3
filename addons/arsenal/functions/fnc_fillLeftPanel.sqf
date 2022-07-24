@@ -18,7 +18,7 @@ params ["_display", "_control"];
 
 private _ctrlIDC = ctrlIDC _control;
 
-if !(isNil QGVAR(currentLeftPanel)) then {
+if (!isNil QGVAR(currentLeftPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLeftPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
     _previousCtrlBackground ctrlCommit FADE_DELAY;
@@ -47,7 +47,7 @@ switch true do {
 
         {
             ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-        } foreach ((GVAR(virtualItems) select 0) select ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find _ctrlIDC));
+        } foreach ((GVAR(virtualItems) select IDX_VIRT_WEAPONS) select ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find _ctrlIDC));
     };
 
     case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
@@ -61,19 +61,19 @@ switch true do {
             case IDC_buttonUniform : {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 4);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_UNIFORM);
             };
 
             case IDC_buttonVest : {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 5);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_VEST);
             };
 
             case IDC_buttonBackpack : {
                 {
                     ["CfgVehicles", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 6);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_BACKPACK);
             };
         };
     };
@@ -92,12 +92,12 @@ switch true do {
             case IDC_buttonHeadgear: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 3);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_HEADGEAR);
             };
             case IDC_buttonGoggles : {
                 {
                     ["CfgGlasses", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 7);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_GOGGLES);
             };
             case IDC_buttonNVG : {
                 {
@@ -138,8 +138,8 @@ switch true do {
                 {
                     {
                         if (
-                            getnumber (_x >> "disabled") == 0 && 
-                            {getText (_x >> "head") != ""} && 
+                            getnumber (_x >> "disabled") == 0 &&
+                            {getText (_x >> "head") != ""} &&
                             {configName _x != "Default"}
                         ) then {
                             private _configName = configName _x;
@@ -149,8 +149,8 @@ switch true do {
                             _ctrlPanel lbSetTooltip [_lbAdd,format ["%1\n%2",_displayName, _configName]];
                             _x call ADDMODICON;
                         };
-                    } foreach ("isClass _x" configClasses _x);
-                } foreach ("isClass _x" configClasses (configfile >> "cfgfaces"));
+                    } foreach ("true" configClasses _x);
+                } foreach ("true" configClasses (configfile >> "cfgfaces"));
             };
             case IDC_buttonVoice : {
                 private _voices = (configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [(configfile >> "CfgVoice" >> "NoVoice")];
@@ -158,11 +158,11 @@ switch true do {
                     ["CfgVoice", configName _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
                 } foreach _voices;
             };
-            case IDC_buttonInsigna : {
+            case IDC_buttonInsignia : {
                 {
                     ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
                 } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
-                
+
                 {
                     private _displayName = getText (_x >> "displayName");
                     private _className = configName _x;
@@ -188,7 +188,7 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 
 // Sort
 private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
-[_sortLeftCtrl, _sortLeftCtrl lbValue (lbCurSel _sortLeftCtrl)] call FUNC(sortPanel);
+[_display, _control, _sortLeftCtrl] call FUNC(fillSort);
 
 //Select current item
 private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)]) apply {tolower _x};
@@ -196,7 +196,7 @@ private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace)
 for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
     private _currentData = _ctrlPanel lbData _lbIndex;
 
-    if (!(_currentData isEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
+    if ((_currentData isNotEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
         _ctrlPanel lbSetCurSel _lbIndex;
     };
 };

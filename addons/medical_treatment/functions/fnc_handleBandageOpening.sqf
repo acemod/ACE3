@@ -58,7 +58,7 @@ if (isClass (_config >> _className)) then {
 };
 TRACE_5("configs",_bandage,_className,_reopeningChance,_reopeningMinDelay,_reopeningMaxDelay);
 
-private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+private _bandagedWounds = GET_BANDAGED_WOUNDS(_target);
 private _exist = false;
 {
     _x params ["_id", "_partN", "_amountOf"];
@@ -76,7 +76,7 @@ if (!_exist) then {
     _bandagedWounds pushBack _bandagedInjury;
 };
 
-_target setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
+_target setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
 
 // _reopeningChance = 1;
 // _reopeningMinDelay = 5;
@@ -84,14 +84,14 @@ _target setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
 
 TRACE_1("",_reopeningChance);
 // Check if we are ever going to reopen this
-if (random 1 <= _reopeningChance) then {
+if (random 1 <= _reopeningChance * GVAR(woundReopenChance)) then {
     private _delay = _reopeningMinDelay + random (_reopeningMaxDelay - _reopeningMinDelay);
     TRACE_1("Will open",_delay);
     [{
         params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
         TRACE_5("reopen delay finished",_target,_impact,_part,_injuryIndex,_injury);
 
-        private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
+        private _openWounds = GET_OPEN_WOUNDS(_target);
         if (count _openWounds - 1 < _injuryIndex) exitWith { TRACE_2("index bounds",_injuryIndex,count _openWounds); };
 
         _injury params ["_classID", "_bodyPartN"];
@@ -99,7 +99,7 @@ if (random 1 <= _reopeningChance) then {
         private _selectedInjury = _openWounds select _injuryIndex;
         _selectedInjury params ["_selClassID", "_selBodyPart", "_selAmmount"];
         if ((_selClassID == _classID) && {_selBodyPart == _bodyPartN}) then { // matching the IDs
-            private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+            private _bandagedWounds = GET_BANDAGED_WOUNDS(_target);
             private _exist = false;
             {
                 _x params ["_id", "_partN", "_amountOf"];
@@ -113,10 +113,28 @@ if (random 1 <= _reopeningChance) then {
             if (_exist) then {
                 TRACE_2("Reopening Wound",_bandagedWounds,_openWounds);
                 _selectedInjury set [2, _selAmmount + _impact];
-                _target setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
-                _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+                _target setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
+                _target setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
                 [_target] call EFUNC(medical_status,updateWoundBloodLoss);
+
+                // Re-add trauma and damage visuals
+                if (GVAR(clearTrauma) == 2) then {
+                    private _injuryDamage = (_selectedInjury select 4) * _impact;
+                    private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+                    private _newDam = (_bodyPartDamage select _selBodyPart) + _injuryDamage;
+                    _bodyPartDamage set [_selBodyPart, _newDam];
+
+                    _target setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+
+                    switch (_selBodyPart) do {
+                        case 0: { [_target, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+                        case 1: { [_target, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+                        case 2;
+                        case 3: { [_target, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+                        default { [_target, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
+                    };
+                };
 
                 // Check if we gained limping from this wound re-opening
                 if ((EGVAR(medical,limping) == 1) && {_bodyPartN > 3}) then {

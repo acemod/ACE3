@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="gforces">
-        <Key ID="STR_ACE_gforces_enabledFor_displayName">
+    <Package name="GForces">
+        <Key ID="STR_ACE_GForces_Category">
+            <English>ACE G-Forces</English>
+            <Polish>ACE Przeciążenia</Polish>
+            <French>ACE Force gravitationnelle</French>
+            <Russian>ACE Перегрузки</Russian>
+            <Japanese>ACE G フォース</Japanese>
+            <Turkish>ACE G-Kuvveti</Turkish>
+            <Spanish>ACE Fuerza G</Spanish>
+            <German>ACE G-Kräfte</German>
+            <Chinesesimp>ACE G力</Chinesesimp>
+            <Korean>ACE 중력가속도</Korean>
+        </Key>
+        <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
             <German>Effekte der G-Kräfte</German>
-            <Spanish>Efectos Gforces</Spanish>
+            <Spanish>Efectos de fuerza G</Spanish>
             <Czech>G Force efekty</Czech>
-            <Portuguese>Efeitos de ForçaG</Portuguese>
+            <Portuguese>Efeitos da Força G</Portuguese>
             <French>Effets de force gravitationnelle</French>
             <Russian>Эффекты перегрузок</Russian>
             <Japanese>G による効果</Japanese>
@@ -15,8 +27,9 @@
             <Italian>Effetti forza G</Italian>
             <Chinesesimp>G力影响</Chinesesimp>
             <Chinese>G力影響</Chinese>
+            <Turkish>G-Kuvveti Efekti</Turkish>
         </Key>
-        <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
+        <Key ID="STR_ACE_GForces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
             <German>Nur Luftfahrzeug</German>
             <Spanish>Sólo Aeronave</Spanish>
@@ -28,17 +41,49 @@
             <Polish>Tylko samoloty</Polish>
             <Korean>비행기에만 적용</Korean>
             <Italian>Solo Aerei</Italian>
-            <Chinesesimp>只有战斗机</Chinesesimp>
+            <Chinesesimp>仅飞行器</Chinesesimp>
             <Chinese>只有戰鬥機</Chinese>
+            <Turkish>Sadece Uçaklar</Turkish>
         </Key>
-        <Key ID="STR_ACE_gforces_statGReduction">
+        <Key ID="STR_ACE_GForces_statGReduction">
             <English>G-force reduction</English>
-            <French>Reduction des Gs</French>
+            <German>G-Kräfte Reduzierung</German>
+            <French>Réduction des Gs</French>
             <Japanese>耐 G 性</Japanese>
             <Chinesesimp>减少G力</Chinesesimp>
             <Chinese>減少G力</Chinese>
             <Italian>Riduzione forza G</Italian>
             <Polish>Redukcja przeciążenia</Polish>
+            <Russian>Уменьшение перегрузок</Russian>
+            <Portuguese>Redução de Força-G</Portuguese>
+            <Czech>Redukce G Force</Czech>
+            <Spanish>Reducción de fuerzas G</Spanish>
+            <Turkish>G-Kuvvetinde azalma</Turkish>
+            <Korean>중력가속도 감소</Korean>
+        </Key>
+        <Key ID="STR_ACE_GForces_Coefficient_DisplayName">
+            <English>G-Force Coefficient</English>
+            <Polish>Współczynnk przeciążenia</Polish>
+            <French>Coefficient de force gravitationnelle</French>
+            <Russian>Коэффициент перегрузки</Russian>
+            <Japanese>G 効果係数</Japanese>
+            <Turkish>G-Kuvvet Katsayısı</Turkish>
+            <Spanish>Coeficiente de Fuerza G</Spanish>
+            <German>G-Kräfte-Koeffizient</German>
+            <Chinesesimp>G力系数</Chinesesimp>
+            <Korean>중력가속도 계수</Korean>
+        </Key>
+        <Key ID="STR_ACE_GForces_Coefficient_Description">
+            <English>Controls strength of G-Force affecting players.</English>
+            <Polish>Wpływa na siłe przeciążeń oddziałujących na graczy</Polish>
+            <French>Coefficient permettant d'ajuster le niveau de force gravitationnelle affectant les joueurs.</French>
+            <Russian>Определяет силу перегрузок, влияющих на игроков.</Russian>
+            <Japanese>G 効果がプレイヤーに与える影響量を設定できます。</Japanese>
+            <Turkish>Oyuncuları etkileyen G-Force'un gücünü kontrol eder.</Turkish>
+            <Spanish>Controla la intensidad de fuerza G que afecta a los jugadores.</Spanish>
+            <German>Bestimmt, wie stark G-Kräfte Spieler beeinflussen.</German>
+            <Chinesesimp>控制影响玩家的G力的强度。</Chinesesimp>
+            <Korean>플레이어에게 영향을 끼칠 중력가속도의 계수를 조절합니다.</Korean>
         </Key>
     </Package>
 </Project>

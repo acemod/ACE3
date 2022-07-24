@@ -17,11 +17,15 @@
 
 params ["_display"];
 
+// forces player name control to display irrespective of isStreamFriendlyUIEnabled
+(_display displayCtrl 111) ctrlShow true;
+
 private _fnc_update = {
     params ["_display"];
     private _control = _display displayCtrl 111;
+    private _format = ["%1 - %2 %3 (%4)", "%2 %3 (%4)"] select isStreamFriendlyUIEnabled;
 
-    _control ctrlSetText format ["%1 - %2 %3 (%4)",
+    _control ctrlSetText format [_format,
         [ACE_player, false, true] call EFUNC(common,getName),
         localize ELSTRING(common,Weight),
         [ACE_player] call EFUNC(common,getWeight),

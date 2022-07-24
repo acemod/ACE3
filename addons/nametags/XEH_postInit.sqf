@@ -23,13 +23,13 @@ GVAR(showNamesTime) = -10;
 [29, [false, false, false]], false] call CBA_fnc_addKeybind; //LeftControl Key
 
 // Wait until the colors are defined before starting to draw the nametags
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Draw handle
     call FUNC(updateSettings);
 }] call CBA_fnc_addEventHandler;
 
 // Change settings accordingly when they are changed
-["ace_settingChanged", {
+["CBA_SettingChanged", {
     params ["_name"];
     if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
@@ -45,3 +45,15 @@ GVAR(showNamesTime) = -10;
 
 // civilians don't use military ranks
 ["CIV_F", ["","","","","","",""]] call FUNC(setFactionRankIcons);
+
+// Change ranks based on faction for all factions that have an entry in CfgFactionClasses
+if (missionNamespace getVariable [QGVAR(useFactionIcons), true]) then {
+    {
+        if (isArray (_x >> QGVAR(rankIcons))) then {
+            private _faction = configName _x;
+            if (!isNil {GVAR(factionRanks) getVariable _faction}) exitWith {}; // don't overwrite if already set
+            private _icons = getArray (_x >> QGVAR(rankIcons));
+            [_faction, _icons] call FUNC(setFactionRankIcons);
+        };
+    } forEach ("true" configClasses (configFile >> "CfgFactionClasses"));
+};

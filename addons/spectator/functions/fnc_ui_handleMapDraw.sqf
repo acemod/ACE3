@@ -76,7 +76,7 @@ GVAR(uiMapHighlighted) = _nearestEntity;
 CTRL_MAP_FOOTER ctrlSetText _text;
 
 // Draw camera icon
-if !(isNil QGVAR(camera)) then {
+if (!isNil QGVAR(camera)) then {
     private _cameraPos = getPosASLVisual GVAR(camera);
     private _cameraDir = getDirVisual GVAR(camera);
     _map drawIcon [ICON_CAMERA, [0.5, 1, 0.5, 1], _cameraPos, 32, 48, _cameraDir, "", 1, 0.05, "TahomaB", "right"];

@@ -1,8 +1,13 @@
 @*
 *.zip
 release/*
+releases/*
+extensions/vcproj32/*
+extensions/vcproj64/*
+.vscode/*
+hemtt
+hemtt.exe
 tools/temp
-tools/armake.exe
 *.cache
 *.pbo
 texHeaders.bin
@@ -11,3 +16,6 @@ texHeaders.bin
 *.biprivatekey
 Thumbs.db
 CHANGELOG.md
+sqfvm.exe
+ArmaScriptCompiler.exe
+*.sqfc

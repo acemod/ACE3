@@ -47,7 +47,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
             case (_settingType == "CHECKBOX"): {
                 _settingValue = _settingValue > 0;
                 _validValue = [_settingName, _settingValue] call CBA_settings_fnc_check;
-            }; 
+            };
             // Will not Handle ARRAY,COLOR,STRING??? (bool/scalar covers most important settings)
         };
 

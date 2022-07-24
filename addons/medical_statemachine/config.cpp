@@ -14,6 +14,5 @@ class CfgPatches {
     };
 };
 
-#include "ACE_Settings.hpp"
 #include "Statemachine.hpp"
 #include "CfgEventHandlers.hpp"

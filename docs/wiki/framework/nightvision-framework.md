@@ -34,11 +34,3 @@ class CfgWeapons {
   };
 };
 ```
-
-## 2. Events
-
-To change night vision settings with code use:
-
-`ace_nightvision_fogScaling = 0.5;` // More is more fog.
-
-`ace_nightvision_effectScaling = 0.5;` // More is more apparent effects.

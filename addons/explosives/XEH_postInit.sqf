@@ -46,6 +46,7 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
 GVAR(PlacedCount) = 0;
+GVAR(excludedMines) = [];
 GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
@@ -59,4 +60,14 @@ GVAR(CurrentSpeedDial) = 0;
     //Show defuse actions on CfgAmmos (allMines):
     _this call FUNC(interactEH);
 
+}] call CBA_fnc_addEventHandler;
+
+["unit", {
+    params ["_player"];
+    [_player, QGVAR(explosiveActions)] call EFUNC(common,eraseCache);
+}] call CBA_fnc_addPlayerEventHandler;
+
+["ace_allowDefuse", {
+    params["_mine", "_allow"];
+    [_mine, _allow] call FUNC(allowDefuse);
 }] call CBA_fnc_addEventHandler;

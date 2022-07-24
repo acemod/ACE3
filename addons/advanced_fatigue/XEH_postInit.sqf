@@ -8,18 +8,18 @@ if (!hasInterface) exitWith {};
 
     switch (stance _unit) do {
         case ("CROUCH"): {
-            1.0 + _fatigue ^ 2 * 0.1
+            (1.0 + _fatigue ^ 2 * 0.1) * GVAR(swayFactor)
         };
         case ("PRONE"): {
-            1.0 + _fatigue ^ 2 * 2.0
+            (1.0 + _fatigue ^ 2 * 2.0) * GVAR(swayFactor)
         };
         default {
-            1.5 + _fatigue ^ 2 * 3.0
+            (1.5 + _fatigue ^ 2 * 3.0) * GVAR(swayFactor)
         };
     };
 }] call EFUNC(common,arithmeticSetSource);
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
     // - Post process effect ------------------------------------------------------
@@ -30,7 +30,7 @@ if (!hasInterface) exitWith {};
     GVAR(ppeBlackout) ppEffectCommit 0.4;
 
     // - GVAR updating and initialization -----------------------------------------
-    ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
+    ["unit", LINKFUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
 
     ["visibleMap", {
         params ["", "_visibleMap"]; // command visibleMap is updated one frame later
@@ -47,8 +47,8 @@ if (!hasInterface) exitWith {};
         [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
             linearConversion [0, 1, (_this getVariable [QEGVAR(medical,pain), 0]), 1, 1.1, true];
         }] call FUNC(addDutyFactor);
-        [QEGVAR(medical,bloodVolume), { // 100->1.0, 90->1.1, 80->1.2
-            linearConversion [6, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 100]), 1, 2, true];
+        [QEGVAR(medical,bloodVolume), { // 6->1.0, 5->1.167, 4->1.33
+            linearConversion [6, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 6]), 1, 2, true];
         }] call FUNC(addDutyFactor);
     };
     if (["ACE_Dragging"] call EFUNC(common,isModLoaded)) then {
@@ -56,7 +56,8 @@ if (!hasInterface) exitWith {};
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);
     };
-    if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
+    // Weather has an off switch, Dragging & Medical don't.
+    if (missionNamespace getVariable [QEGVAR(weather,enabled), false]) then {
         [QEGVAR(weather,temperature), { // 35->1, 45->2
             linearConversion [35, 45, (missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]), 1, 2, true];
         }] call FUNC(addDutyFactor);

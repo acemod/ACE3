@@ -56,6 +56,7 @@ if (!alive _cargo) exitWith {
             private _loadedItem = [localize ELSTRING(cargo,LoadedItem), "<br/>", " "] call CBA_fnc_replace;
             private _holderDisplayName = [_holder] call EFUNC(common,getName);
             [_loadedItem, _displayName, _holderDisplayName] call FUNC(showMessage);
+            ["ace_cargoLoaded", [_cargo, _holder]] call CBA_fnc_globalEvent;
         } else {
             private _loadingFailed = [localize ELSTRING(cargo,LoadingFailed), "<br/>", " "] call CBA_fnc_replace;
             [_loadingFailed, _displayName] call FUNC(showMessage);

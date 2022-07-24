@@ -14,9 +14,9 @@ class CfgPatches {
     };
 };
 
-// #include "ACE_Settings.hpp" // ToDo: setting not used
 #include "CfgEventHandlers.hpp"
 #include "CfgInGameUI.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "RscTitles.hpp"
+#include "RscInGameUI.hpp"

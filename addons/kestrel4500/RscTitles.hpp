@@ -223,7 +223,6 @@ class RscTitles {
     class RscKestrel4500 {
         idd=-1;
         onLoad="with uiNameSpace do { RscKestrel4500 = _this select 0 };";
-        onUnload=(_this call FUNC(onCloseDisplay));
         movingEnable=0;
         duration=60;
         fadeIn="false";

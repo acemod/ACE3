@@ -20,14 +20,14 @@ class CfgVehicles {
                     statement = QUOTE(false call FUNC(openRangeCard));
                     showDisabled = 0;
                     icon = QPATHTOF(UI\RangeCard_Icon.paa);
-                    exceptions[] = {"notOnMap"};
+                    exceptions[] = {"notOnMap", "isNotInside"};
                     class GVAR(openCopy) {
                         displayName = CSTRING(OpenRangeCardCopy);
                         condition = QUOTE(call FUNC(canShowCopy) && !GVAR(RangeCardOpened));
                         statement = QUOTE(true call FUNC(openRangeCard));
                         showDisabled = 0;
                         icon = QPATHTOF(UI\RangeCard_Icon.paa);
-                        exceptions[] = {"notOnMap"};
+                        exceptions[] = {"notOnMap", "isNotInside"};
                     };
                     class GVAR(makeCopy) {
                         displayName = CSTRING(CopyRangeCard);
@@ -35,7 +35,7 @@ class CfgVehicles {
                         statement = QUOTE(GVAR(zeroRangeCopy)=GVAR(zeroRange); GVAR(boreHeightCopy)=GVAR(boreHeight); GVAR(ammoClassCopy)=GVAR(ammoClass); GVAR(magazineClassCopy)=GVAR(magazineClass); GVAR(weaponClassCopy)=GVAR(weaponClass););
                         showDisabled = 0;
                         icon = QPATHTOF(UI\RangeCard_Icon.paa);
-                        exceptions[] = {"notOnMap"};
+                        exceptions[] = {"notOnMap", "isNotInside"};
                     };
                 };
             };

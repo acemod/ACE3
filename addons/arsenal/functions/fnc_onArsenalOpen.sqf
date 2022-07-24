@@ -60,28 +60,31 @@ GVAR(statsPagesLeft) =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(statsPagesRight) =  [0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 
+// Cache assignedItems
+private _assignedItems = (getUnitLoadout GVAR(center)) select 9;
+
 // Add the items the player has to virtualItems
-for "_index" from 0 to 10 do {
+for "_index" from 0 to 14 do {
     switch (_index) do {
         // primary, secondary, handgun weapons
-        case 0: {
+        case IDX_VIRT_WEAPONS: {
             private _array = LIST_DEFAULTS select _index;
 
-            if !((_array select 0) isEqualTo "") then {
+            if ((_array select 0) isNotEqualTo "") then {
                 ((GVAR(virtualItems) select _index) select 0) pushBackUnique (_array select 0);
             };
 
-            if !((_array select 1) isEqualTo "") then {
+            if ((_array select 1) isNotEqualTo "") then {
                 ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 1);
             };
 
-            if !((_array select 2) isEqualTo "") then {
+            if ((_array select 2) isNotEqualTo "") then {
                  ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
             };
         };
 
         // Accs for the weapons above
-        case 1: {
+        case IDX_VIRT_ATTACHEMENTS: {
             private _array = LIST_DEFAULTS select _index;
             _array params ["_accsArray", "_magsArray"];
 
@@ -96,28 +99,36 @@ for "_index" from 0 to 10 do {
             } forEach _accsArray;
 
             {
-                if !(_x isEqualTo []) then {
+                if (_x isNotEqualTo []) then {
 
                     if (_x select 0 != "") then {
-                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 0);
+                        (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 0);
                     };
 
                     if (count _x > 1 && {_x select 1 != ""}) then {
-                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 1);
+                        (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 1);
                     };
                 };
             } forEach _magsArray;
         };
 
+        // Assigned items
+        case IDX_VIRT_MAP: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 0) };
+        case IDX_VIRT_COMMS: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 1) };
+        case IDX_VIRT_RADIO: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 2) };
+        case IDX_VIRT_COMPASS: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 3) };
+        case IDX_VIRT_WATCH: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 4) };
+
+
         // Inventory items
-        case 2: {
+        case IDX_VIRT_ITEMS_ALL: {
                 call FUNC(updateUniqueItemsList);
             };
 
         // The rest
         default {
-            private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
-            if !(_array isEqualTo []) then {
+            private _array = (LIST_DEFAULTS select _index) select {_x isNotEqualTo ""};
+            if (_array isNotEqualTo []) then {
                 {(GVAR(virtualItems) select _index) pushBackUnique _x} forEach _array;
             };
         };
@@ -164,18 +175,24 @@ for "_index" from 0 to 15 do {
 };
 
 {
-    private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
-
-    if (_simulationType != "NVGoggles") then {
-        if (_simulationType == "ItemGps" || _simulationType == "Weapon") then {
+    switch (_forEachIndex) do {
+        case 0: { // Map
+            GVAR(currentItems) set [10, _x];
+        };
+        case 1: { // GPS
             GVAR(currentItems) set [14, _x];
-        } else {
-
-            private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch"] find (tolower _simulationType));
-            GVAR(currentItems) set [_index, _x];
+        };
+        case 2: { // Radio
+            GVAR(currentItems) set [12, _x];
+        };
+        case 3: { // Compass
+            GVAR(currentItems) set [11, _x];
+        };
+        case 4: { // Watch
+            GVAR(currentItems) set [13, _x];
         };
     };
-} forEach (assignedItems GVAR(center));
+} forEach _assignedItems;
 
 GVAR(currentWeaponType) = switch true do {
     case (currentWeapon GVAR(center) == GVAR(currentItems) select 0): {0};
@@ -288,7 +305,7 @@ if (is3DEN) then {
     } forEach [
         IDC_buttonFace,
         IDC_buttonVoice,
-        IDC_buttonInsigna
+        IDC_buttonInsignia
     ];
 
     _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
@@ -308,7 +325,7 @@ if (is3DEN) then {
     } forEach [
         IDC_buttonFace,
         IDC_buttonVoice,
-        IDC_buttonInsigna
+        IDC_buttonInsignia
     ];
 };
 
@@ -332,6 +349,11 @@ GVAR(rightTabLnBFocus) = false;
 //--------------- Init camera
 if (isNil QGVAR(cameraPosition)) then {
     GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
+};
+
+// Save curator camera state so camera position and direction are not modified while using arsenal
+if (!isNull curatorCamera) then {
+    GVAR(curatorCameraData) = [getPosASL curatorCamera, [vectorDir curatorCamera, vectorUp curatorCamera]];
 };
 
 GVAR(cameraHelper) = createAgent ["Logic", position GVAR(center) ,[] ,0 ,"none"];

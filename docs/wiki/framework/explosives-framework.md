@@ -190,7 +190,7 @@ CODE will be passed `[Unit<OBJECT>, MaxRange <NUMBER>, Explosive <OBJECT>, FuzeT
 
 Jammer that blocks RF triggers:
 
-```cpp
+```sqf
 [{
     params ["_unit", "_range", "_explosive", "_fuzeTime", "_triggerItem"];
     if (_triggerItem == "ace_cellphone") exitWith { systemChat "Blocking Cell Phone"; false };  // always block cell phones
@@ -204,9 +204,3 @@ Jammer that blocks RF triggers:
     true
 }] call ace_explosives_fnc_addDetonateHandler;
 ```
-
-#### 5.4 Custom timer limits
-`Added in 3.12.7`
-
-Can set custom min and max time for the timer trigger, can set one or both, time in seconds
-`ace_explosives_customTimerMin` / `ace_explosives_customTimerMax`

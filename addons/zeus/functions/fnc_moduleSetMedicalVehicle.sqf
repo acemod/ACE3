@@ -40,9 +40,9 @@ if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
                 if (GETVAR(_unit,EGVAR(captives,isHandcuffed),false)) then {
                     [LSTRING(OnlyNonCaptive)] call FUNC(showMessage);
                 } else {
-                    private _medicN = GETVAR(_unit,EGVAR(medical,medicClass),0);
-                    if (_medicN < 1) then {
-                        _unit setVariable [QEGVAR(medical,medicClass), 1, true];
+                    private _medicN = GETVAR(_unit,EGVAR(medical,isMedicalVehicle),false);
+                    if !(_medicN) then {
+                        _unit setVariable [QEGVAR(medical,isMedicalVehicle), true, true];
                     };
                 };
             };

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: No Rearm
+component: norearm
 description: Remove rearm action.
 group: feature
 category: interaction
@@ -15,7 +16,3 @@ version:
 ## 1. Overview
 
 Hides the rearm action for players (on cars / boxes / corpses / ground)
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="norearm" %}

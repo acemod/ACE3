@@ -16,19 +16,26 @@
  *
  * Public: No
  */
-params ["_vehicle", "_player", "_ropeClass"];
+
+params ["_vehicle", ["_player", objNull], ["_ropeClass", ""]];
 TRACE_3("deployRopes",_vehicle,_player,_ropeClass);
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 private _ropeOrigins = getArray (_config >> QGVAR(ropeOrigins));
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 private _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
 
-private _ropeLength = getNumber (configfile >> "CfgWeapons" >> _ropeClass >> QGVAR(ropeLength));
+private _ropeLength = getNumber (configfile >> "CfgWeapons" >> _ropeClass >> QEGVAR(logistics_rope,length));
+
+if (_ropeLength <= 0) then {
+    _ropeLength = DEFAULT_ROPE_LENGTH;
+};
+
 TRACE_3("",_ropeClass,_ropeLength,GVAR(requireRopeItems));
-if (GVAR(requireRopeItems)) then {
-    if (_ropeClass in (items _player)) then {
+
+if (GVAR(requireRopeItems) && {_ropeClass != ""}) then {
+    if (_ropeClass in (_player call EFUNC(common,uniqueItems))) then {
         _player removeItem _ropeClass;
     } else {
         _vehicle removeItem _ropeClass;

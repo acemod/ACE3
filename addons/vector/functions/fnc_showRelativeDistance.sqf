@@ -23,7 +23,7 @@ private _distance = call FUNC(getRelativeDistance);
 // relative slope distance
 private _digits = [_distance] call FUNC(convertToTexturesDistance);
 
-(_dlgVector displayCtrl 1311) ctrlSetText (_digits select 0);
-(_dlgVector displayCtrl 1312) ctrlSetText (_digits select 1);
-(_dlgVector displayCtrl 1313) ctrlSetText (_digits select 2);
-(_dlgVector displayCtrl 1314) ctrlSetText (_digits select 3);
+(_dlgVector displayCtrl IDC_DIGIT_1) ctrlSetText (_digits select 0);
+(_dlgVector displayCtrl IDC_DIGIT_2) ctrlSetText (_digits select 1);
+(_dlgVector displayCtrl IDC_DIGIT_3) ctrlSetText (_digits select 2);
+(_dlgVector displayCtrl IDC_DIGIT_4) ctrlSetText (_digits select 3);

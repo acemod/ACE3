@@ -7,6 +7,11 @@ order: 10
 parent: wiki
 ---
 
+<a href="{{ site.baseurl }}/img/wiki/user/issue_flowchart.webp" target="_blank">
+    <center><img src="{{ site.baseurl }}/img/wiki/user/issue_flowchart.webp" width="200" alt="Issue Flowchart" /></center>
+    <center><i>Issue Flowchart - click to enlarge</i></center>
+</a>
+
 ### Before reporting
 
 If you have found an issue with ACE3 please make sure that ACE3 is really the cause of the problem. To do this try to reproduce the issue with using only `@CBA_A3` and `@ace` on a newly created mission.
@@ -21,6 +26,6 @@ Indicate if the issue appears on stable or development version. In case it is th
 
 ### Reporting the issue
 
-Head over to the [ACE3 GitHub issue tracker]({{ site.ace.githubUrl }}/issues){:target="_blank"} and press the ["New Issue"]({{ site.ace.githubUrl }}/issues/new){:target="_blank"} button in the top right corner. Fill out the issue template. Add a link ([gist](https://gist.github.com){:target="_blank"} or [pastebin](http://pastebin.com){:target="_blank"}) to the client and/or server RPT file. An instruction to find your RPT files can be found [here](https://community.bistudio.com/wiki/Crash_Files#Arma_3){:target="_blank"}.
+Head over to the [ACE3 GitHub issue tracker]({{ site.ace.githubUrl }}/issues){:target="_blank"} and press the ["New Issue"]({{ site.ace.githubUrl }}/issues/new/choose){:target="_blank"} button in the top right corner. Fill out the issue template. Add a link ([gist](https://gist.github.com){:target="_blank"} or [pastebin](http://pastebin.com){:target="_blank"}) to the client and/or server RPT file. An instruction to find your RPT files can be found [here](https://community.bistudio.com/wiki/Crash_Files#Arma_3){:target="_blank"}.
 
 A short video clip of the issue might be helpful in resolving it faster.

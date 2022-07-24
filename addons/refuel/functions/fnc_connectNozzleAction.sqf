@@ -23,10 +23,10 @@ params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startin
 
 
 private _bestPosASL = [];
-private _bestPosDistance = 1e99;
+private _bestPosDistance = 1e38;
 private _viewPos = _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3);
-private _modelVector = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToWorld [0,0,0]));
-private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToWorld [0,0,-1]));
+private _modelVector = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,0]);
+private _modelVectorLow = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,-1]);
 
 {
     private _endPosASL = _x;
@@ -50,8 +50,8 @@ private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToW
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,-0.25,1])) vectorMultiply 3),
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [-0.25,-0.25,1])) vectorMultiply 3),
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0.25,-0.25,1])) vectorMultiply 3),
-    AGLtoASL (_sink modelToWorld [0,0,0]), // Try old method of just using model center
-    AGLtoASL (_sink modelToWorld [0,0,-0.5])
+    _sink modelToWorldWorld [0,0,0], // Try old method of just using model center
+    _sink modelToWorldWorld [0,0,-0.5]
 ];
 
 //Checks (too close to center or can't attach)

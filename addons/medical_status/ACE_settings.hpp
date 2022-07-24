@@ -5,7 +5,7 @@ class ACE_Settings {
     class EGVAR(medical,painCoefficient) {
         movedToSQF = 1;
     };
-    class GVAR(ivFlowRate) {
+    class EGVAR(medical,ivFlowRate) {
         movedToSQF = 1;
     };
 };

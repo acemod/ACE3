@@ -26,6 +26,8 @@ if (isNil "_magName") then {
         WARNING_1("Magazine is missing display name [%1]",_className);
     };
 
+    if ((_displayName select [0,6]) == "[CSW] ") then { _displayName = _displayName select [6]; };
+
     GVAR(magazineNameCache) setVariable [_className, _displayName];
     GVAR(originalMagazineNames) pushBack _displayName;
     TRACE_2("Adding to cache",_className,_displayName);

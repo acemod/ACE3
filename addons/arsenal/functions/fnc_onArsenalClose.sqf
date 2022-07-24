@@ -59,7 +59,6 @@ if (is3DEN) then {
         curatorcamera cameraEffect ["internal","back"];
     } else {
         GVAR(camera) cameraEffect ["terminate","back"];
-        ACE_player switchCamera GVAR(cameraView);
     };
 };
 
@@ -71,8 +70,17 @@ if (!isNil QGVAR(moduleUsed)) then {
     objNull remoteControl GVAR(center);
 };
 
-if (isMultiplayer) then {
+ACE_player switchCamera GVAR(cameraView);
 
+// Restore curator camera state
+if (!isNull curatorCamera) then {
+    GVAR(curatorCameraData) params ["_position", "_dirAndUp"];
+
+    curatorCamera setPosASL _position;
+    curatorCamera setVectorDirAndUp _dirAndUp;
+};
+
+if (isMultiplayer) then {
     [QGVAR(broadcastFace), [GVAR(center), GVAR(currentFace)], QGVAR(center) + "_face"] call CBA_fnc_globalEventJIP;
     [QGVAR(center) + "_face", GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
 
@@ -80,8 +88,12 @@ if (isMultiplayer) then {
     [QGVAR(center) + "_voice", GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
 };
 
+GVAR(currentBox) = objNull;
+
 GVAR(camera) = nil;
 GVAR(cameraHelper) = nil;
+
+GVAR(curatorCameraData) = nil;
 
 GVAR(mouseButtonState) = nil;
 GVAR(currentLeftPanel) = nil;
@@ -95,6 +107,7 @@ GVAR(rightTabLnBFocus) = nil;
 
 GVAR(selectedWeaponType) = nil;
 GVAR(virtualItems) = nil;
+GVAR(virtualItemsFlat) = nil;
 GVAR(currentItems) = nil;
 GVAR(currentFace) = nil;
 GVAR(currentVoice) = nil;

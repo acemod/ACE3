@@ -16,6 +16,11 @@ class CBA_Extended_EventHandlers;
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canRemoveTrench)); \
                 statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench);); \
             }; \
+            class ACE_CamouflageTrench { \
+                displayName = CSTRING(CamouflageTrench); \
+                condition = QUOTE([ARR_2(_target,_player)] call FUNC(canCamouflageTrench)); \
+                statement = QUOTE([ARR_2(_target,_player)] call FUNC(camouflageTrench)); \
+            }; \
         }; \
     }
 
@@ -53,8 +58,8 @@ class CfgVehicles {
         descriptionShort = CSTRING(EnevlopeSmallDescription);
         model = QPATHTOEF(apl,ace_envelope_small4.p3d);
         scope = 2;
-        GVAR(diggingDuration) = 20;
-        GVAR(removalDuration) = 12;
+        GVAR(diggingDuration) = QGVAR(smallEnvelopeDigDuration);
+        GVAR(removalDuration) = QGVAR(smallEnvelopeRemoveDuration);
         GVAR(noGeoClass) = "ACE_envelope_small_NoGeo";
         GVAR(placementData)[] = {2,3,0.35};
         GVAR(grassCuttingPoints)[] = {{0,-0.5,0}};
@@ -62,6 +67,8 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
+        hiddenSelections[] = {"velka"};
+        hiddenSelectionsTextures[] = {"a3\map_data\gdt_mud_co.paa"};
     };
     class ACE_envelope_big: BagFence_base_F {
         author = ECSTRING(common,ACETeam);
@@ -69,8 +76,8 @@ class CfgVehicles {
         descriptionShort = CSTRING(EnevlopeBigDescription);
         model = QPATHTOEF(apl,ace_envelope_big4.p3d);
         scope = 2;
-        GVAR(diggingDuration) = 25;
-        GVAR(removalDuration) = 15;
+        GVAR(diggingDuration) = QGVAR(bigEnvelopeDigDuration);
+        GVAR(removalDuration) = QGVAR(bigEnvelopeRemoveDuration);
         GVAR(noGeoClass) = "ACE_envelope_big_NoGeo";
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
@@ -78,6 +85,8 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
+        hiddenSelections[] = {"velka"};
+        hiddenSelectionsTextures[] = {"a3\map_data\gdt_mud_co.paa"};
     };
 
     class ACE_envelope_small_NoGeo: ACE_envelope_small {
