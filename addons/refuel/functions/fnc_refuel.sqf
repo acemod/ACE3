@@ -21,7 +21,6 @@
 params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
 private _config = configOf _sink;
-
 private _rate = if (isNumber(_config >> QGVAR(flowRate))) then {
     getNumber (_config >> QGVAR(flowRate)) * GVAR(rate)
 } else {
@@ -29,22 +28,9 @@ private _rate = if (isNumber(_config >> QGVAR(flowRate))) then {
     GVAR(rate)
 };
 
-private "_maxFuel";
-private _refuelContainer = _nozzle getVariable [QGVAR(refuelContainer), false];
-if (_refuelContainer) then {
-    _maxFuel = _sink getVariable [QGVAR(capacity), getNumber (_config >> QGVAR(fuelCargo))];
-} else {
-    _maxFuel = getNumber (_config >> QGVAR(fuelCapacity));
-    // Fall back to vanilla fuelCapacity value (only air and sea vehicles don't have this defined by default by us)
-    // Air and sea vehicles have that value properly defined in liters, unlike ground vehicles which is is formula of (range * tested factor) - different fuel consumption system than ground vehicles
-    if (_maxFuel == 0) then {
-        _maxFuel = getNumber (_config >> "fuelCapacity");
-    };
-};
-
 [{
     params ["_args", "_pfID"];
-    _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_refuelContainer", false, [false]], ["_rate", 1, [0]], ["_startFuel", 0, [0]], ["_maxFuel", 0, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
+    _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_rate", 1, [0]], ["_startFuel", 0, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
 
     if !(_nozzle getVariable [QGVAR(isConnected), false]) exitWith {
         [_pfID] call CBA_fnc_removePerFrameHandler;
@@ -86,11 +72,14 @@ if (_refuelContainer) then {
             };
         };
         
+        private _maxFuel = _nozzle getVariable [QGVAR(maxFuel), 0];
+        private _refuelContainer = _nozzle getVariable [QGVAR(refuelContainer), false];
+        
         // Add fuel to target while being sure not to put too much into sink
         private _fuelInSink = (if (_refuelContainer) then {
             [_sink] call FUNC(getFuel)
         } else {
-            (_unit getVariable [QGVAR(tempFuel), _startFuel]) * _maxFuel
+            (_nozzle getVariable [QGVAR(tempFuel), _startFuel]) * _maxFuel
         }) + _addedFuel;
         
         if (_fuelInSink >= _maxFuel) then {
@@ -107,7 +96,7 @@ if (_refuelContainer) then {
             [_sink, _fuelInSink] call FUNC(setFuel);
         } else {
             [QEGVAR(common,setFuel), [_sink, _fuelInSink / _maxFuel], _sink] call CBA_fnc_targetEvent;
-            _unit setVariable [QGVAR(tempFuel), _fuelInSink];
+            _nozzle setVariable [QGVAR(tempFuel), _fuelInSink];
         };
         
         // Increment fuel counter
@@ -117,7 +106,7 @@ if (_refuelContainer) then {
 
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
-        _unit setVariable [QGVAR(tempFuel), fuel _sink];
+        _nozzle setVariable [QGVAR(tempFuel), fuel _sink];
     };
 
     // Reset variables when done
@@ -131,10 +120,10 @@ if (_refuelContainer) then {
     _sink,
     _unit,
     _nozzle,
-    _refuelContainer,
     _rate,
     fuel _sink,
-    _maxFuel,
     _nozzle getVariable [QGVAR(attachPos), [0,0,0]],
     _connectToPoint
 ]] call CBA_fnc_addPerFrameHandler;
+
+["cba_xeh_deleted","ace_interact_menu_atcache_repair_19_palivo","bis_addvirtualweaponcargo_cargo","bis_fnc_initvehicle_mass","ace_interact_menu_atcache_ace_mainactions","cba_xeh_incomingmissile","cba_xeh_getin","cba_xeh_local","cba_xeh_isprocessed","cba_xeh_init","cba_xeh_initpost","cba_xeh_fired","ace_cargo_space","ace_interact_menu_atcache_replace_8_hitrf2wheel","cba_xeh_respawn","cba_xeh_engine","ace_refuel_currentfuelcargo","ace_refuel_nozzle","ace_cargo_loaded","ace_interact_menu_atcache_repair_1_motor","ace_interact_menu_atcache_remove_8_hitrf2wheel","cba_xeh_killed","ace_vehicles_enginestate","cba_xeh_getout","cba_xeh_isinitialized","ace_interact_menu_atcache_repair_0_palivo","ace_interact_menu_atcache_repair_2_karoserie","bis_fnc_arsenal_action"]
