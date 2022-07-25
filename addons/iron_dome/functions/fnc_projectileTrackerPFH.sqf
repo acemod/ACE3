@@ -41,6 +41,8 @@ if (_idleLaunchers isNotEqualTo []) then {
 
     GVAR(nonTrackingProjectiles) = GVAR(nonTrackingProjectiles) select {
         private _projectile = _x;
+        if (isNull _projectile) then {continueWith false};
+
         private _keep = true;
         private _bestRange = 1e10;
         
