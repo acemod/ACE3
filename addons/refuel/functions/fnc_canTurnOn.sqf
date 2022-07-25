@@ -27,14 +27,17 @@ if (isNull _unit  ||
 
 private _source = _nozzle getVariable [QGVAR(source), objNull];
 private _sink = _nozzle getVariable [QGVAR(sink), objNull];
+
+private _config = configOf _sink;
+
 private _isContainer = !(isNil {_sink getVariable QGVAR(currentFuelCargo)})
-                       || {isNumber (configFile >> "CfgVehicles" >> typeOf _sink >> QGVAR(fuelCargo))};
+                       || {isNumber (_config >> QGVAR(fuelCargo))};
 
 private _isFull = if (_refuelContainer) then {
     private _currentFuel = [_sink] call FUNC(getFuel);
     private _capacity = _sink getVariable [
         QGVAR(capacity),
-        getNumber (configFile >> "CfgVehicles" >> typeOf _sink >> QGVAR(fuelCargo))
+        getNumber (_config >> QGVAR(fuelCargo))
     ];
 
     (_currentFuel == REFUEL_INFINITE_FUEL) || {_capacity == REFUEL_INFINITE_FUEL} || {_currentFuel == _capacity}
