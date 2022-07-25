@@ -95,12 +95,7 @@ TRACE_2("start",_unit,_nozzle);
 
     getCursorObjectParams params ["_cursorObject", "", "_distance"];
     if (!isNull _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {
-        private _canReceive = _cursorObject getVariable [
-            QGVAR(jerryCan), // Jerry cans can always be refueled
-            1 == getNumber (configOf _cursorObject >> QGVAR(canReceive))
-            && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}
-        ];
-        if (_canReceive && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}) then {
+        if ([_cursorObject] call FUNC(canConnectNozzle)) then {
             _hintLMB = localize LSTRING(Connect);
         };
         if ([_unit, _cursorObject] call FUNC(canReturnNozzle)) then {
