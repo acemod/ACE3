@@ -40,7 +40,9 @@ if (
     || {_fuelCargo != 0 && {_fuelCargo == _fuelCargoConfig}}
 ) exitWith {};
 
-_source setVariable [QGVAR(capacity), _fuelCargoConfig max _fuelCargo, true];
+private _capacity = if (_fuelCargo < 0) then {_fuelCargo} else {_fuelCargoConfig max _fuelCargo};
+
+_source setVariable [QGVAR(capacity), _capacity, true];
 
 if (_fuelCargo == REFUEL_DISABLED_FUEL) exitWith {};
 

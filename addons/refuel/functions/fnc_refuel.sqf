@@ -28,9 +28,6 @@ private _rate = if (isNumber(_config >> QGVAR(flowRate))) then {
     GVAR(rate)
 };
 
-// How much fuel is in a fuel source's container
-private _maxFuelContainer = [_sink] call FUNC(getCapacity);
-
 // How much fuel is in a vehicle's fuel tank
 private _maxFuelTank = getNumber(_config >> QGVAR(fuelCapacity));
 // Fall back to vanilla fuelCapacity value (only air and sea vehicles don't have this defined by default by us)
@@ -41,7 +38,7 @@ if (_maxFuelTank == 0) then {
 
 [{
     params ["_args", "_pfID"];
-    _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_rate", 1, [0]], ["_maxFuelTank", 1, [0]], ["_maxFuelContainer", 1, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
+    _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_rate", 1, [0]], ["_maxFuelTank", 1, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
 
     if !(_nozzle getVariable [QGVAR(isConnected), false]) exitWith {
         [_pfID] call CBA_fnc_removePerFrameHandler;
@@ -72,7 +69,7 @@ if (_maxFuelTank == 0) then {
 
         // Figure out exactly how much fuel to transfer while being sure not to take too much from source
         private _fuelInSource = [_source] call FUNC(getFuel);
-        if (_fuelInSource != REFUEL_INFINITE_FUEL) then {
+        if (([_source] call FUNC(getCapacity)) != REFUEL_INFINITE_FUEL) then {
             if (_addedFuel > _fuelInSource) then {
                 _addedFuel = _fuelInSource;
                 _fuelInSource = 0;
@@ -92,6 +89,7 @@ if (_maxFuelTank == 0) then {
         }) + _addedFuel;
         
         // Add fuel to target while being sure not to put too much into sink
+        private _maxFuelContainer = [_sink] call FUNC(getCapacity);
         private _maxFuel = [_maxFuelTank, _maxFuelContainer] select _refuelContainer;
         if (_fuelInSink >= _maxFuel) then {
             // Put any extra fuel back
@@ -134,7 +132,6 @@ if (_maxFuelTank == 0) then {
     _nozzle,
     _rate,
     _maxFuelTank,
-    _maxFuelContainer,
     _nozzle getVariable [QGVAR(attachPos), [0,0,0]],
     _connectToPoint
 ]] call CBA_fnc_addPerFrameHandler;

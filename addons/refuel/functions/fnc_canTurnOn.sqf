@@ -30,16 +30,13 @@ private _sink = _nozzle getVariable [QGVAR(sink), objNull];
 
 if (isNull _source || {isNull _sink}) exitWith {false};
 
-private _config = configOf _sink;
-private _capacity = [_sink] call FUNC(getCapacity);
-
 private _isSinkFull = if (_refuelContainer) then {
-    _capacity in [REFUEL_DISABLED_FUEL, REFUEL_INFINITE_FUEL, [_sink] call FUNC(getFuel)]
+    ([_sink] call FUNC(getCapacity)) in [REFUEL_DISABLED_FUEL, REFUEL_INFINITE_FUEL, [_sink] call FUNC(getFuel)]
 } else {
     fuel _sink == 1
 };
 
 !(_nozzle getVariable [QGVAR(isRefueling), false]) &&
-    {[_source] call FUNC(getFuel) != 0} &&
-    {!_isSinkFull} &&
+    {(([_source] call FUNC(getCapacity)) == REFUEL_INFINITE_FUEL) || {[_source] call FUNC(getFuel) > 0}} && // Make sure the source has fuel
+    {!_isSinkFull} && // Make sure the sink isn't full
     {!(_refuelContainer && {_source == _sink})}; // No endless container ot itself loop

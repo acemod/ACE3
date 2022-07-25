@@ -24,16 +24,13 @@ private _capacity = _source getVariable QGVAR(capacity);
 // Initialize fuel truck if needed
 if (isNil "_capacity") then {
     // Check if this object has a fuelCargo config entry
-    if (isNumber(configOf _source >> QGVAR(fuelCargo))) then {
-        _capacity = getNumber(configOf _source >> QGVAR(fuelCargo));
-        if !(_capacity in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL]) then {
-            _source setVariable [QGVAR(currentFuelCargo), _capacity, true];
-        };
+    _capacity = if (isNumber(configOf _source >> QGVAR(fuelCargo))) then {
+        getNumber(configOf _source >> QGVAR(fuelCargo))
     } else {
-        // Not a fuel source
-        _capacity = REFUEL_DISABLED_FUEL;
+        REFUEL_DISABLED_FUEL // Not a fuel source
     };
     _source setVariable [QGVAR(capacity), _capacity, true];
+    [_source, _capacity] call FUNC(setFuel);
 };
 
 _capacity;
