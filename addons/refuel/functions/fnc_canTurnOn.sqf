@@ -28,26 +28,18 @@ if (isNull _unit  ||
 private _source = _nozzle getVariable [QGVAR(source), objNull];
 private _sink = _nozzle getVariable [QGVAR(sink), objNull];
 
+if (isNull _source || {isNull _sink}) exitWith {false};
+
 private _config = configOf _sink;
+private _capacity = [_sink] call FUNC(getCapacity);
 
-private _isContainer = !(isNil {_sink getVariable QGVAR(currentFuelCargo)})
-                       || {isNumber (_config >> QGVAR(fuelCargo))};
-
-private _isFull = if (_refuelContainer) then {
-    private _currentFuel = [_sink] call FUNC(getFuel);
-    private _capacity = _sink getVariable [
-        QGVAR(capacity),
-        getNumber (_config >> QGVAR(fuelCargo))
-    ];
-
-    (_currentFuel == REFUEL_INFINITE_FUEL) || {_capacity == REFUEL_INFINITE_FUEL} || {_currentFuel == _capacity}
+private _isSinkFull = if (_refuelContainer) then {
+    _capacity in [REFUEL_DISABLED_FUEL, REFUEL_INFINITE_FUEL, [_sink] call FUNC(getFuel)]
 } else {
     fuel _sink == 1
 };
 
 !(_nozzle getVariable [QGVAR(isRefueling), false]) &&
     {[_source] call FUNC(getFuel) != 0} &&
-    {!isNull _sink} &&
-    {!_isFull} &&
-    {!(_refuelContainer && {_source == _sink})} && // No endless container ot itself loop
-    {!_refuelContainer || _isContainer} // Container refueling only if it actually is one
+    {!_isSinkFull} &&
+    {!(_refuelContainer && {_source == _sink})}; // No endless container ot itself loop

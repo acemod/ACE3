@@ -22,12 +22,11 @@ if (isNull _target ||
     {_target isKindOf "AllVehicles"} ||
     {_target getVariable [QGVAR(jerryCan), false]}) exitWith {};
 
-if (isServer) then {
-    [_target, _fuelAmount] call FUNC(setFuel);  // has global effects
-};
 _target setVariable [QGVAR(jerryCan), true];
 _target setVariable [QGVAR(source), _target];
+
 _target setVariable [QGVAR(capacity), _fuelAmount];
+[_target, _fuelAmount] call FUNC(setFuel);
 
 // Main Action
 private _action = [QGVAR(Refuel),

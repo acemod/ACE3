@@ -40,9 +40,11 @@ if (
     || {_fuelCargo != 0 && {_fuelCargo == _fuelCargoConfig}}
 ) exitWith {};
 
-[_source, _fuelCargo] call FUNC(setFuel);
+_source setVariable [QGVAR(capacity), _fuelCargoConfig max _fuelCargo, true];
 
 if (_fuelCargo == REFUEL_DISABLED_FUEL) exitWith {};
+
+[_source, _fuelCargo] call FUNC(setFuel);
 
 if (
     !isNil "_hooks"

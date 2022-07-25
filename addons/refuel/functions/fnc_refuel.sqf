@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: GitHawk
+ * Author: GitHawk, QuantX
  * Refuels the vehicle.
  *
  * Arguments:
@@ -29,7 +29,7 @@ private _rate = if (isNumber(_config >> QGVAR(flowRate))) then {
 };
 
 // How much fuel is in a fuel source's container
-private _maxFuelContainer = _sink getVariable [QGVAR(capacity), getNumber(_config >> QGVAR(fuelCargo))];
+private _maxFuelContainer = [_sink] call FUNC(getCapacity);
 
 // How much fuel is in a vehicle's fuel tank
 private _maxFuelTank = getNumber(_config >> QGVAR(fuelCapacity));
