@@ -117,12 +117,35 @@ class CfgWeapons {
             };
         };
     };
+
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
     };
+
+    class rhs_weap_strela;
+    class rhs_weap_igla: rhs_weap_strela {
+        EGVAR(overpressure,range) = 6;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.6;
+        EGVAR(overpressure,offset) = 1.65;
+    };
+
     class rhs_weap_rpg7: Launcher_Base_F {
-        ace_reloadlaunchers_enabled = 1;
+        EGVAR(reloadlaunchers,enabled) = 1;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,offset) = 0.9;
+    };
+
+    class rhs_weap_rpg26: Launcher_Base_F {
+        EGVAR(overpressure,range) = 10;
+        EGVAR(overpressure,angle) = 50;
+        EGVAR(overpressure,offset) = 0.65;
+    };
+
+    class rhs_weap_rpg18: rhs_weap_rpg26 {
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,offset) = 1;
     };
 
     #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
