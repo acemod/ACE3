@@ -169,10 +169,12 @@
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
             <English>Destroy Vehicles After Cook-off</English>
             <Korean>쿡오프 후 차량 파괴</Korean>
+            <Chinesesimp>殉爆发生后摧毁载具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
             <English>Controls whether vehicles will always be destroyed after cooking off. Depending on the cookoff, the vehicle may explode or may simply be killed without effects.</English>
             <Korean>차량이 쿡오프된 후 파괴할 지에 대한 여부를 제어합니다. 쿡오프에 따라 차량이 폭발하거나 아무런 효과 없이 파괴될 수 있습니다.</Korean>
+            <Chinesesimp>控制载具是否总是会在殉爆结束后被摧毁。根据殉爆的剧烈程度，载具可能会爆炸，也可能只是被没有效果地摧毁。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>
