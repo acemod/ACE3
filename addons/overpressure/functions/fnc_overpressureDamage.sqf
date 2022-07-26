@@ -23,14 +23,15 @@
 
 params ["_firer", "_posASL", "_direction", "_weapon", "_magazine", "_ammo"];
 
-// Bake variable name and check if the variable exists, call the caching function otherwise
-private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-private _var = if (isNil _varName) then {
-    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
-} else {
-    missionNameSpace getVariable _varName;
+// Bake key name and check if it exists, call the caching function otherwise
+private _key = (format ["%1#%2#%3", _weapon, _ammo, _magazine]);
+private _opData = (GVAR(cacheHash) getOrDefault [_key, []]);
+
+if (_opData isEqualTo []) then {
+    _opData = [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
 };
-_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage"];
+
+_opData params ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
 TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
 
 {

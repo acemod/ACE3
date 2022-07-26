@@ -47,11 +47,12 @@ TRACE_1("ConfigPath",_config);
 private _return = [
     (getNumber (_config >> QGVAR(angle))),
     (getNumber (_config >> QGVAR(range))) * GVAR(distanceCoefficient),
-    (getNumber (_config >> QGVAR(damage)))
+    (getNumber (_config >> QGVAR(damage))),
+    (getNumber (_config >> QGVAR(offset)))
 ];
 
-private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-missionNameSpace setVariable [_varName, _return];
-TRACE_2("Return",_varName,_return);
+private _key = format ["%1#%2#%3", _weapon, _ammo, _magazine];
+GVAR(cacheHash) set [_key, _return];
+TRACE_2("Return",_key,_return);
 
 _return

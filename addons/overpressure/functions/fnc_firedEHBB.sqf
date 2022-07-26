@@ -18,20 +18,22 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-// Bake variable name and check if the variable exists, call the caching function otherwise
-private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-private _var = if (isNil _varName) then {
-    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
-} else {
-    missionNameSpace getVariable _varName;
+// Bake key name and check if it exists, call the caching function otherwise
+private _key = (format ["%1#%2#%3", _weapon, _ammo, _magazine]);
+private _opData = (GVAR(cacheHash) getOrDefault [_key, []]);
+
+if (_opData isEqualTo []) then {
+    _opData = [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
 };
-_var params ["_backblastAngle","_backblastRange","_backblastDamage"];
-TRACE_3("cache",_backblastAngle,_backblastRange,_backblastDamage);
+
+_opData params ["_backblastAngle", "_backblastRange", "_backblastDamage", "_offset"];
+TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 
 if (_backblastDamage <= 0) exitWith {};
 
 private _position = getPosASL _projectile;
 private _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
+_position = (_position vectorAdd (_direction vectorMultiply _offset));
 
 // Damage to others
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
