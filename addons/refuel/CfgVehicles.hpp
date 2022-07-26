@@ -46,11 +46,11 @@ class CfgNonAIVehicles {
     class GVAR(fuelHoseSegment) {
         access = 0;
         scope = 2;
-		displayName = "Fuel Hose";
-		simulation = "ropesegment";
-		autocenter = 0;
-		animated = 0;
-		model = QPATHTOF(data\hose.p3d);
+        displayName = "Fuel Hose";
+        simulation = "ropesegment";
+        autocenter = 0;
+        animated = 0;
+        model = QPATHTOF(data\hose.p3d);
     };
 };
 
