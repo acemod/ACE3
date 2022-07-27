@@ -18,11 +18,11 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-// Bake key name and check if it exists, call the caching function otherwise
-private _opData = (GVAR(cacheHash) getOrDefault [
-    (format ["%1#%2#%3", _weapon, _ammo, _magazine]),
-    ([_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues))
-]);
+// Check if key exists, call the caching function otherwise
+private _opData = GVAR(cacheHash) getOrDefault [
+    [_weapon, _ammo, _magazine],
+    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues)
+];
 
 _opData params ["_backblastAngle", "_backblastRange", "_backblastDamage", "_offset"];
 TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
