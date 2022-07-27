@@ -19,21 +19,18 @@
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 // Bake key name and check if it exists, call the caching function otherwise
-private _key = (format ["%1#%2#%3", _weapon, _ammo, _magazine]);
-private _opData = (GVAR(cacheHash) getOrDefault [_key, []]);
-
-if (_opData isEqualTo []) then {
-    _opData = [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
-};
+private _opData = (GVAR(cacheHash) getOrDefault [
+    (format ["%1#%2#%3", _weapon, _ammo, _magazine]),
+    ([_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues))
+]);
 
 _opData params ["_backblastAngle", "_backblastRange", "_backblastDamage", "_offset"];
 TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 
 if (_backblastDamage <= 0) exitWith {};
 
-private _position = getPosASL _projectile;
 private _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
-_position = (_position vectorAdd (_direction vectorMultiply _offset));
+private _position = ((getPosASL _projectile) vectorAdd (_direction vectorMultiply _offset));
 
 // Damage to others
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];

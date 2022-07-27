@@ -19,12 +19,10 @@
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 // Bake key name and check if it exists, call the caching function otherwise
-private _key = (format ["%1#%2#%3", _weapon, _ammo, _magazine]);
-private _opData = (GVAR(cacheHash) getOrDefault [_key, []]);
-
-if (_opData isEqualTo []) then {
-    _opData = [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
-};
+private _opData = (GVAR(cacheHash) getOrDefault [
+    (format ["%1#%2#%3", _weapon, _ammo, _magazine]),
+    ([_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues))
+]);
 
 _opData params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
