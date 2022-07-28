@@ -17,9 +17,7 @@
 
 params ["_unit"];
 
-if (isPlayer _unit) then {
-	true
-} else {
+isPlayer _unit || {
 	// check if unit medical settings are overriden via eden atribute
 	switch (_unit getVariable [QEGVAR(medical,OverrideAIMedicalSettings), 0]) do {
 		case 0: {
