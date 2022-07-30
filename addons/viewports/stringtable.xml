@@ -5,12 +5,14 @@
             <English>Viewports</English>
             <Japanese>ビューポート</Japanese>
             <Korean>뷰포트</Korean>
+            <Chinesesimp>观察口</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Viewports_setting_enabled_description">
             <English>Allows crew to look through periscopes</English>
             <Polish>Pozwala załodze patrzeć przez peryskop</Polish>
             <Japanese>乗組員がペリスコープを通して外を見ることができます</Japanese>
             <Korean>승무원이 잠망경을 통해 볼 수 있도록 허용합니다</Korean>
+            <Chinesesimp>允许乘员通过观察口观察</Chinesesimp>
         </Key>
     </Package>
 </Project>

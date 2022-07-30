@@ -13,6 +13,7 @@
             <German>[CSW] VOG-17M</German>
             <Korean>[CSW] VOG-17M</Korean>
             <Japanese>[CSW] VOG-17M</Japanese>
+            <Chinesesimp>[班组] VOG-17M</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG30_30_displayName">
             <English>[CSW] VOG-30</English>
@@ -26,6 +27,7 @@
             <German>[CSW] VOG-30</German>
             <Korean>[CSW] VOG-30</Korean>
             <Japanese>[CSW] VOG-30</Japanese>
+            <Chinesesimp>[班组] VOG-30</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_GPD30_30_displayName">
             <English>[CSW] GPD-30</English>
@@ -39,6 +41,7 @@
             <German>[CSW] GPD-30</German>
             <Korean>[CSW] GPD-30</Korean>
             <Japanese>[CSW] GPD-30</Japanese>
+            <Chinesesimp>[班组] GPD-30</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131M_displayName">
             <English>[CSW] ATGM 9M131M</English>
@@ -52,6 +55,7 @@
             <German>[CSW] ATGM 9M131M</German>
             <Korean>[CSW] 9M131M 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M131M</Japanese>
+            <Chinesesimp>[班组] 9M131M 反坦克导弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131F_displayName">
             <English>[CSW] ATGM 9M131F</English>
@@ -65,6 +69,7 @@
             <German>[CSW] ATGM 9M131F</German>
             <Korean>[CSW] 9M131F 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M131F</Japanese>
+            <Chinesesimp>[班组] 9M131F 反坦克导弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133F_displayName">
             <English>[CSW] ATGM 9M133F</English>
@@ -78,6 +83,7 @@
             <German>[CSW] ATGM 9M133F</German>
             <Korean>[CSW] 9M133F 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M133F</Japanese>
+            <Chinesesimp>[班组] 9M133F 反坦克导弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133_displayName">
             <English>[CSW] ATGM 9M133</English>
@@ -91,6 +97,7 @@
             <German>[CSW] ATGM 9M133</German>
             <Korean>[CSW] 9M133 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M133</Japanese>
+            <Chinesesimp>[班组] 9M133 反坦克导弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M1331_displayName">
             <English>[CSW] ATGM 9M133-1</English>
@@ -104,6 +111,7 @@
             <German>[CSW] ATGM 9M133-1</German>
             <Korean>[CSW] 9M133-1 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M133-1</Japanese>
+            <Chinesesimp>[班组] 9M133-1 反坦克导弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133M2_displayName">
             <English>[CSW] ATGM 9M133M2</English>
@@ -117,6 +125,7 @@
             <German>[CSW] ATGM 9M133M2</German>
             <Korean>[CSW] 9M133M2 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M133M2</Japanese>
+            <Chinesesimp>[班组] 9M133M2 反坦克导弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9V_displayName">
             <English>[CSW] HEAT PG-9V</English>
@@ -130,6 +139,7 @@
             <German>[CSW] HEAT PG-9V</German>
             <Korean>[CSW] PG-9V 대전차고폭탄</Korean>
             <Japanese>[CSW] HEAT PG-9V</Japanese>
+            <Chinesesimp>[班组] PG-9V 破甲弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9N_displayName">
             <English>[CSW] HEAT PG-9N</English>
@@ -143,6 +153,7 @@
             <German>[CSW] HEAT PG-9N</German>
             <Korean>[CSW] PG-9N 대전차고폭탄</Korean>
             <Japanese>[CSW] HEAT PG-9N</Japanese>
+            <Chinesesimp>[班组] PG-9N 破甲弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9VNT_displayName">
             <English>[CSW] HEAT PG-9VNT</English>
@@ -156,6 +167,7 @@
             <German>[CSW] HEAT PG-9VNT</German>
             <Korean>[CSW] PG-9VNT 대전차고폭탄</Korean>
             <Japanese>[CSW] HEAT PG-9VNT</Japanese>
+            <Chinesesimp>[班组] PG-9VN 破甲弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9V_displayName">
             <English>[CSW] HE-FRAG OG-9V</English>
@@ -169,6 +181,7 @@
             <German>[CSW] HE-FRAG OG-9V</German>
             <Korean>[CSW] OG-9V 고폭파편탄</Korean>
             <Japanese>[CSW] HE-FRAG OG-9V</Japanese>
+            <Chinesesimp>[班组] OG-9V 高爆破片弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9VM_displayName">
             <English>[CSW] HE-FRAG OG-9VM</English>
@@ -182,6 +195,7 @@
             <German>[CSW] HE-FRAG OG-9VM</German>
             <Korean>[CSW] OG-9VM 고폭파편탄</Korean>
             <Japanese>[CSW] HE-FRAG OG-9VM</Japanese>
+            <Chinesesimp>[班组] OG-9VM 高爆破片弹</Chinesesimp>
         </Key>
     </Package>
 </Project>

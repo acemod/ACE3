@@ -229,6 +229,7 @@
         <Key ID="STR_ACE_Trenches_CamouflageTrench">
             <English>Camouflage Trench</English>
             <Polish>Zakamufluj Okop</Polish>
+            <Chinesesimp>伪装掩体</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>

@@ -693,12 +693,14 @@
             <Japanese>デフォルトのアクションアイコンを非表示</Japanese>
             <Polish>Ukryj domyślną ikonę akcji</Polish>
             <Korean>기본 행동 아이콘 숨기기</Korean>
+            <Chinesesimp>隐藏默认动作标识</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
             <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
             <Japanese>カーソルの前に何かがあるときに自動的に表示されるアイコンを非表示にします。 ゲームを再起動する必要があります。\n警告:アクション自体は削除されません! 誤って実行することを防ぐために、'標準アクション'キーのバインドを解除することをお勧めします。</Japanese>
             <Polish>Ukrywa ikonę wyświetlaną automatycznie, gdy coś znajduje się przed kursorem. Wymaga ponownego uruchomienia gry.\nOstrzeżenie: Nie usuwa samej akcji! Zaleca się usunięcia przypisania klawisza „Użyj domyślnej akcji”, aby zapobiec niechcianym interakcjom.</Polish>
             <Korean>커서 앞에 무언가가 있을 때 자동으로 표시되는 아이콘을 숨깁니다. 게임을 재시작해야 합니다\n경고: 작업 자체를 제거하지 않습니다! 원하지 않는 상호작용을 방지하려면 '기본 행동' 키를 삭제하는 것이 좋습니다.</Korean>
+            <Chinesesimp>隐藏屏幕面前有物体时自动显示的动作标识。需要重新启动游戏。\n警告：不会删除动作本身！建议同时取消对“使用默认动作”键的绑定，以防止不必要的互动。</Chinesesimp>
         </Key>
     </Package>
 </Project>
