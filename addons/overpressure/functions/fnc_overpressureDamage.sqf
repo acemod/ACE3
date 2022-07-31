@@ -23,13 +23,10 @@
 
 params ["_firer", "_posASL", "_direction", "_weapon", "_magazine", "_ammo"];
 
-// Check if key exists, call the caching function otherwise
-private _opData = GVAR(cacheHash) getOrDefault [
-    [_weapon, _ammo, _magazine],
-    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues)
-];
+// Retrieve overpressure values
+private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
-_opData params ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
+_opValues params ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
 TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
 
 {

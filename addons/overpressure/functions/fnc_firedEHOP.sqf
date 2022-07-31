@@ -18,13 +18,10 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-// Check if key exists, call the caching function otherwise
-private _opData = GVAR(cacheHash) getOrDefault [
-    [_weapon, _ammo, _magazine],
-    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues)
-];
+// Retrieve overpressure values
+private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
-_opData params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
+_opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
 if (_dangerZoneDamage <= 0) exitWith {};
