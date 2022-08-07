@@ -133,6 +133,7 @@ class vn_mine_gboard_range_ammo: PipeBombBase {
     EGVAR(explosives,explosive) = "vn_mine_gboard_range_ammo_scripted";
 };
 
+class SatchelCharge_Remote_Ammo;
 class vn_mine_satchelcharge_02_ammo: SatchelCharge_Remote_Ammo {
     EGVAR(explosives,explosive) = "vn_mine_satchelcharge_02_ammo_scripted";
 };

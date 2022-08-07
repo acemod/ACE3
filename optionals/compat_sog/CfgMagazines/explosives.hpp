@@ -311,13 +311,13 @@ class vn_mine_mortar_range_mag: vn_mine_m18_mag {
     };
 };
 
-// Limpet mine USA
+// Limpet mine USA (Remote)
 class vn_mine_limpet_01_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(limpet_01);
 };
 
-// Limpet mine RUS
-class vn_mine_limpet_02_mag: vn_mine_m18_mag {
+// Limpet mine RUS (Remote)
+class vn_mine_limpet_02_mag: vn_mine_limpet_01_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(limpet_02);
 };
 
@@ -349,6 +349,6 @@ class vn_mine_satchelcharge_02_mag: vn_mine_satchel_remote_02_mag {
 };
 
 // Bangalore mine
-class vn_mine_bangalore_mag: vn_mine_m18_mag {
+class vn_mine_bangalore_mag: vn_mine_satchel_remote_02_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bangalore);
 };
