@@ -224,9 +224,27 @@ class vn_mine_punji_05_mag: vn_mine_punji_04_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_05);
 };
 
-// Bike mine
+// Bike mine (Remote)
 class vn_mine_bike_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bike);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {QGVAR(Command), QGVAR(MK16_Transmitter)};
+        class GVAR(Command) {
+            digDistance = 0;
+            fuseTime = 1;
+        };
+        class GVAR(MK16_Transmitter): GVAR(Command) {};
+    };
+};
+// Bike mine (Proximity)
+class vn_mine_bike_range_mag: vn_mine_bike_mag {
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
 };
 
 // Cartridge mine
