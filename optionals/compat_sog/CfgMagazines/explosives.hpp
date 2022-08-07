@@ -331,9 +331,16 @@ class vn_mine_dh10_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(dh10);
 };
 
-// Grenade board mine
+// Grenade board mine (Tripwire 4m)
 class vn_mine_gboard_range_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(gboard);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Tripwire"};
+        class Tripwire {
+            digDistance = 0;
+        };
+    };
 };
 
 // Satchel charge
