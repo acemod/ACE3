@@ -18,7 +18,7 @@
 
 [
     QGVAR(progressDuration), "TIME",
-    [LSTRING(RefuelSettings_progressDuration_DisplayName)],
+    [LSTRING(RefuelSettings_progressDuration_DisplayName), LSTRING(RefuelSettings_progressDuration_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_refuel"],
     [0, 10, 2], // [min, max, default value]
     true, // isGlobal
