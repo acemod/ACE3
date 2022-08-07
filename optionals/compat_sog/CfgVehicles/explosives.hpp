@@ -3,6 +3,7 @@ class EGVAR(explosives,Place): Items_base_F {
     class ACE_Actions {
         class ACE_MainActions;
     };
+    class EventHandlers;
 };
 
 // Claymore
@@ -155,6 +156,12 @@ class EXPLOSIVES_PLACE(punji_05): EGVAR(explosives,Place) {
 class EXPLOSIVES_PLACE(bike): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_BIKE_MAG_DN";
     model = "vn\weapons_f_vietnam_03\mines\bike\vn_mine_bike_mag";
+
+    class EventHandlers: EventHandlers {
+        class ADDON {
+            init = QUOTE(_this call FUNC(handleBikeMinePlace));
+        };
+    };
 };
 
 // Cartridge mine
