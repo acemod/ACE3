@@ -285,9 +285,18 @@ class vn_mine_pot_range_mag: vn_mine_pot_mag {
     };
 };
 
-// Jerrycan mine
+// Jerrycan mine (Remote)
 class vn_mine_jerrycan_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(jerrycan);
+};
+// Jerrycan mine (Proximity)
+class vn_mine_jerrycan_range_mag: vn_mine_jerrycan_mag {
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = -0.05;
+        };
+    };
 };
 
 // Mortar shell on a stick
