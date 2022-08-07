@@ -250,6 +250,13 @@ class vn_mine_bike_range_mag: vn_mine_bike_mag {
 // Cartridge mine
 class vn_mine_cartridge_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(cartridge);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
 };
 
 // Lighter mine
