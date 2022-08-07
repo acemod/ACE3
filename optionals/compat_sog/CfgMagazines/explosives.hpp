@@ -271,9 +271,18 @@ class vn_mine_lighter_mag: vn_mine_m18_mag {
     };
 };
 
-// Pot mine
+// Pot mine (Remote)
 class vn_mine_pot_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(pot);
+};
+// Pot mine (Proximity)
+class vn_mine_pot_range_mag: vn_mine_pot_mag {
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = -0.05;
+        };
+    };
 };
 
 // Jerrycan mine
