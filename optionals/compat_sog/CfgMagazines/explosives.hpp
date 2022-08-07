@@ -299,9 +299,16 @@ class vn_mine_jerrycan_range_mag: vn_mine_jerrycan_mag {
     };
 };
 
-// Mortar shell on a stick
+// Mortar shell on a stick (Proximity)
 class vn_mine_mortar_range_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(mortar_range);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = -0.05;
+        };
+    };
 };
 
 // Limpet mine USA
