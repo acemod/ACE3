@@ -351,9 +351,18 @@ class vn_mine_chicom_no8_mag: vn_mine_m18_mag {
     };
 };
 
-// DH10 mine
+// DH10 mine (Remote)
 class vn_mine_dh10_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(dh10);
+};
+// DH10 mine (Proximity)
+class vn_mine_dh10_range_mag: vn_mine_dh10_mag {
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
 };
 
 // Grenade board mine (Tripwire 4m)
