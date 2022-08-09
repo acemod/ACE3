@@ -94,6 +94,10 @@ class vn_mine_bike_ammo: APERSMine_Range_Ammo {
 
 class vn_mine_cartridge_ammo: APERSMine_Range_Ammo {
     EGVAR(explosives,explosive) = "vn_mine_cartridge_ammo_scripted";
+
+    // bump range and damage slightly, default values do not work well with ACE Medical
+    indirectHit = 2;
+    indirectHitRange = 0.7;
 };
 
 class vn_mine_lighter_ammo: APERSMine_Range_Ammo {
