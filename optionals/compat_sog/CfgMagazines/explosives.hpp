@@ -274,13 +274,22 @@ class vn_mine_lighter_mag: vn_mine_m18_mag {
 // Pot mine (Remote)
 class vn_mine_pot_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(pot);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Command", "MK16_Transmitter"};
+        class Command {
+            digDistance = 0;
+            fuseTime = 1;
+        };
+        class MK16_Transmitter: Command {};
+    };
 };
 // Pot mine (Proximity)
 class vn_mine_pot_range_mag: vn_mine_pot_mag {
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = -0.05;
+            digDistance = 0;
         };
     };
 };
@@ -288,13 +297,22 @@ class vn_mine_pot_range_mag: vn_mine_pot_mag {
 // Jerrycan mine (Remote)
 class vn_mine_jerrycan_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(jerrycan);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Command", "MK16_Transmitter"};
+        class Command {
+            digDistance = 0.02;
+            fuseTime = 1;
+        };
+        class MK16_Transmitter: Command {};
+    };
 };
 // Jerrycan mine (Proximity)
 class vn_mine_jerrycan_range_mag: vn_mine_jerrycan_mag {
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = -0.05;
+            digDistance = 0.02;
         };
     };
 };
@@ -306,7 +324,7 @@ class vn_mine_mortar_range_mag: vn_mine_m18_mag {
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = -0.05;
+            digDistance = 0.5;
         };
     };
 };
@@ -324,6 +342,13 @@ class vn_mine_limpet_02_mag: vn_mine_limpet_01_mag {
 // Chicom NO8 mine
 class vn_mine_chicom_no8_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(chicom_no8);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
 };
 
 // DH10 mine

@@ -157,6 +157,12 @@ class EXPLOSIVES_PLACE(bike): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_BIKE_MAG_DN";
     model = "vn\weapons_f_vietnam_03\mines\bike\vn_mine_bike_mag";
 
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "[0.085, 0.185, 0.54]";
+        };
+    };
+
     class EventHandlers: EventHandlers {
         class ADDON {
             init = QUOTE(_this call FUNC(handleBikeMinePlace));
@@ -186,6 +192,12 @@ class EXPLOSIVES_PLACE(pot): EGVAR(explosives,Place) {
 class EXPLOSIVES_PLACE(jerrycan): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_JERRYCAN_MAG_DN";
     model = "vn\weapons_f_vietnam_03\mines\jerrycan\vn_mine_jerrycan_mag";
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "[0, 0, 0.15]";
+        };
+    };
 };
 
 // Mortar shell on a stick
