@@ -101,10 +101,14 @@ class vn_mine_cartridge_ammo: APERSMine_Range_Ammo {
 };
 
 class vn_mine_lighter_ammo: APERSMine_Range_Ammo {
+    ACE_damageType = QGVAR(explosive_incendiary);
+
     EGVAR(explosives,explosive) = "vn_mine_lighter_ammo_scripted";
 };
 
 class vn_mine_jerrycan_ammo: APERSMine_Range_Ammo {
+    ACE_damageType = QGVAR(explosive_incendiary);
+
     EGVAR(explosives,explosive) = "vn_mine_jerrycan_ammo_scripted";
 };
 
