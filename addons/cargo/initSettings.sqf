@@ -45,7 +45,7 @@
 
 [
     QGVAR(carryAfterUnload), "CHECKBOX",
-    [LSTRING(ModuleSettings_carryAfterUnload), LSTRING(ModuleSettings_carryAfterUnload_description)],
+    [LSTRING(carryAfterUnload), LSTRING(carryAfterUnload_description)],
     [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(openMenu)],
     true,
     true,

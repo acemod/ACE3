@@ -18,7 +18,8 @@
 params ["_unloader", "_object"];
 TRACE_2("unloadCarryItem-start",_unloader,_object);
 
-if (!["ace_dragging"] call EFUNC(common,isModLoaded) || !GVAR(carryAfterUnload)) exitWith {};
+if !(["ace_dragging"] call EFUNC(common,isModLoaded)) exitWith {};
+if !(GVAR(carryAfterUnload)) exitWith {};
 
 // When unloading attached objects, this code will run before server has finished moving object to the safe position
 [{
