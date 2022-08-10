@@ -9,4 +9,5 @@ class CfgVehicles {
     #include "CfgVehicles\wheeled.hpp"
     #include "CfgVehicles\land.hpp"
     #include "CfgVehicles\vn_boxes.hpp"
+    #include "CfgVehicles\boats.hpp"
 };
