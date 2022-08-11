@@ -48,6 +48,6 @@
     [LSTRING(carryAfterUnload), LSTRING(carryAfterUnload_description)],
     [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(openMenu)],
     true,
-    true,
+    false,
     {[QGVAR(carryAfterUnload), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
