@@ -486,7 +486,7 @@
             <English>Carry After Unload</English>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
-            <English>Carries or drags the cargo item after unloading</English>
+            <English>Controls whether cargo items are carried or dragged after unloading.</English>
         </Key>
     </Package>
 </Project>
