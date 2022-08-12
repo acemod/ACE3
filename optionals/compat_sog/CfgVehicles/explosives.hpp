@@ -139,14 +139,22 @@ class EXPLOSIVES_PLACE(punji_02): EGVAR(explosives,Place) {
 // Punji whip
 class EXPLOSIVES_PLACE(punji_03): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_PUNJI_01_MAG_DN";
-    model = "\vn\weapons_f_vietnam\mines\punji\vn_mine_punji_03_mag";
+    model = "\vn\weapons_f_vietnam\mines\punji\vn_mine_punji_03";
+
+    class EventHandlers: EventHandlers {
+        class ADDON {
+            init = QUOTE(_this call FUNC(handlePunjiTrapPlace));
+        };
+    };
 };
 
+// Punji door-way
 class EXPLOSIVES_PLACE(punji_04): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_PUNJI_04_MAG_DN";
     model = "vn\weapons_f_vietnam_03\mines\punji_02\vn_mine_punji_04_mag";
 };
 
+// Punji side whip
 class EXPLOSIVES_PLACE(punji_05): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_PUNJI_05_MAG_DN";
     model = "vn\weapons_f_vietnam_03\mines\punji_02\vn_mine_punji_05_mag";
