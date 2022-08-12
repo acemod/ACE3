@@ -14,4 +14,4 @@ systemChat format ["intensity - %1, damage - %2", _intensity, _fireDamage];
 
 ["ace_fire_burn", [_unit, _intensity]] call CBA_fnc_globalEvent;
 
-_this call EFUNC(medical_damage,woundsHandlerBase) // return
+_this // return
