@@ -215,6 +215,7 @@ class vn_mine_punji_04_mag: vn_mine_m18_mag {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
             displayName = CSTRING(Action_DigIn);
+            digDistance = -2.14;
         };
     };
 };
@@ -222,6 +223,12 @@ class vn_mine_punji_04_mag: vn_mine_m18_mag {
 // Punji side whip
 class vn_mine_punji_05_mag: vn_mine_punji_04_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_05);
+
+    class ACE_Triggers: ACE_Triggers {
+        class PressurePlate: PressurePlate {
+            digDistance = 0;
+        };
+    };
 };
 
 // Bike mine (Remote)
