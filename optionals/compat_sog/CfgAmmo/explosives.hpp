@@ -72,6 +72,10 @@ class vn_mine_punji_04_ammo: APERSBoundingMine_Range_Ammo {
     indirectHit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(indirectHit)'));
     GVAR(indirectHit) = QUOTE([ARR_2(0,10)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 
+    GVAR(spikesOffset)[] = {0, 0, 1.8};
+    GVAR(spikesCheckSelection) = "head";
+    GVAR(spikesCheckRadius) = 1;
+
     class EventHandlers {
         class ADDON {
             AmmoHit = QUOTE(call FUNC(handlePunjiTrapTrigger));
@@ -80,6 +84,9 @@ class vn_mine_punji_04_ammo: APERSBoundingMine_Range_Ammo {
 };
 
 class vn_mine_punji_05_ammo: vn_mine_punji_04_ammo {
+    GVAR(spikesOffset)[] = {0, 0, 0};
+    GVAR(spikesCheckSelection) = "";
+
     class EventHandlers {
         class ADDON {
             AmmoHit = QUOTE(call FUNC(handlePunjiTrapTrigger));
