@@ -289,7 +289,7 @@ if (_isBurning) exitWith {};
 
     if (isServer) then {
         _fireSound = createSoundSource ["Sound_Fire", _unitPos, [], 0];
-        _fireSound attachTo [_unit, [0, 0, 0], "destructionEffect1"];
+        _fireSound attachTo [_unit, [0, 0, 0], "Head"];
     };
 
     _unit setVariable [QGVAR(burning), true];
