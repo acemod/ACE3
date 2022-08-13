@@ -11,6 +11,7 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 
     [QEGVAR(trenches,finished), {
+        params ["", "_trench"];
         if (_trench isKindOf "vn_o_vc_spiderhole_01") then {
             _trench enableSimulationGlobal true;
         };
