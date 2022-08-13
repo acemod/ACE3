@@ -350,6 +350,8 @@ class vn_o_vc_spiderhole_01: StaticWeapon {
     EGVAR(dragging,canCarry) = 0;
     EGVAR(dragging,canDrag) = 0;
 
+    EGVAR(cargo,canLoad) = 0;
+
     EGVAR(trenches,diggingDuration) = QEGVAR(trenches,smallEnvelopeDigDuration);
     EGVAR(trenches,removalDuration) = QEGVAR(trenches,smallEnvelopeRemoveDuration);
     EGVAR(trenches,noGeoClass) = QGVAR(spiderhole_01_nogeo);
