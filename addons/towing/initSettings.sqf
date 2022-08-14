@@ -10,8 +10,8 @@
         };
         if (!isServer || {!isNil QGVAR(addRopeToVehicleInventory_initialized)}) exitWith {};
         GVAR(addRopeToVehicleInventory_initialized) = true;
-        ["Tank", "initPost", {call FUNC(addRopeToVehicle)}, true, [], true] call CBA_fnc_addClassEventHandler;
-        ["Car", "initPost", {call FUNC(addRopeToVehicle)}, true, [], true] call CBA_fnc_addClassEventHandler;
+        ["Tank", "initPost", LINKFUNC(addRopeToVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
+        ["Car", "initPost", LINKFUNC(addRopeToVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
     },
     true // needs restart only on disabling
 ] call CBA_fnc_addSetting;
