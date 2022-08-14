@@ -10,6 +10,7 @@ class vn_m_hammer_01: vn_hand_melee_base_dynamic_scope {
 };
 class vn_m_shovel_01: vn_hand_melee_base_dynamic_scope {
     scope = 2;
+    EGVAR(trenches,entrenchingTool) = 1;
 };
 class vn_m_axe_01: vn_hand_melee_base_dynamic_scope {
     scope = 2;
@@ -43,6 +44,7 @@ class vn_m_typeivaxe_01: vn_hand_melee_base_dynamic_scope {
 };
 class vn_m_m51_etool_01: vn_hand_melee_base_dynamic_scope {
     scope = 2;
+    EGVAR(trenches,entrenchingTool) = 1;
 };
 class vn_m_bayo_m4956: vn_hand_melee_base_dynamic_scope {
     scope = 2;
