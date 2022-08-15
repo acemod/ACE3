@@ -47,8 +47,7 @@ class vn_static_m1919a6_base: vn_static_m2_low_base {
     class ACE_CSW: ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(vn_m1919_v_01);
-        magazineLocation = "_target selectionPosition 'mg1_magazine'";
-        disassembleTo = QGVAR(m1919A6_carry);
+        magazineLocation = "_target selectionPosition 'mg1_magazine' vectorAdd [-0.3, 0, 0]";
         disassembleWeapon = QGVAR(m1919A6_carry);
         disassembleTurret = "";
         ammoLoadTime = 10;
@@ -70,7 +69,6 @@ class vn_static_m1919a4_high_base: vn_static_m1919a6_base {
         enabled = 1;
         proxyWeapon = QGVAR(vn_m1919_v_01);
         magazineLocation = "_target selectionPosition 'mg1_magazine'";
-        disassembleTo = "";
         disassembleWeapon = QGVAR(m1919A4_carry);
         disassembleTurret = QEGVAR(csw,m3Tripod);
         ammoLoadTime = 10;
@@ -98,7 +96,6 @@ class vn_static_m60_high_base: vn_static_m2_low_base {
         enabled = 1;
         proxyWeapon = QGVAR(vn_m60_v_01);
         magazineLocation = "_target selectionPosition 'mg1_trigger'";
-        disassembleTo = "";
         disassembleWeapon = QGVAR(m60_carry);
         disassembleTurret = QEGVAR(csw,m3Tripod);
         ammoLoadTime = 10;
