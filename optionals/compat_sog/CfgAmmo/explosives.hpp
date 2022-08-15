@@ -104,10 +104,10 @@ class vn_mine_cartridge_ammo: APERSMine_Range_Ammo {
 
     // bump range and damage slightly, default values do not work well with ACE Medical
     indirectHit = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_cartridge_ammo' >> 'GVAR(indirectHit)'));
-    GVAR(indirectHit) = QUOTE([ARR_2(1,2)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
+    GVAR(indirectHit) = QUOTE([ARR_2(2,1)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 
     indirectHitRange = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_cartridge_ammo' >> 'GVAR(indirectHitRange)'));
-    GVAR(indirectHitRange) = QUOTE([ARR_2(0.3,0.7)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
+    GVAR(indirectHitRange) = QUOTE([ARR_2(0.7,0.3)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 };
 
 class vn_mine_lighter_ammo: APERSMine_Range_Ammo {
