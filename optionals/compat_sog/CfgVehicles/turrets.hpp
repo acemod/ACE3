@@ -49,7 +49,7 @@ class vn_static_m1919a6_base: vn_static_m2_low_base {
         proxyWeapon = QGVAR(vn_m1919_v_01);
         magazineLocation = "_target selectionPosition 'mg1_magazine'";
         disassembleTo = QGVAR(m1919A6_carry);
-        disassembleWeapon = "";
+        disassembleWeapon = QGVAR(m1919A6_carry);
         disassembleTurret = "";
         ammoLoadTime = 10;
         ammoUnloadTime = 8;
