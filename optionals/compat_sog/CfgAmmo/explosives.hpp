@@ -35,10 +35,10 @@ class APERSBoundingMine_Range_Ammo;
 class vn_mine_punji_01_ammo: APERSBoundingMine_Range_Ammo {
     EGVAR(minedetector,detectable) = 0;
 
-    hit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(hit)'));
+    hit = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(hit)'));
     GVAR(hit) = QUOTE([ARR_2(0,1)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 
-    indirectHit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(indirectHit)'));
+    indirectHit = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(indirectHit)'));
     GVAR(indirectHit) = QUOTE([ARR_2(0,10)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 
     class EventHandlers {
@@ -49,7 +49,7 @@ class vn_mine_punji_01_ammo: APERSBoundingMine_Range_Ammo {
 };
 
 class vn_mine_punji_02_ammo: vn_mine_punji_01_ammo {
-    indirectHit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_02_ammo' >> 'GVAR(indirectHit)'));
+    indirectHit = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_punji_02_ammo' >> 'GVAR(indirectHit)'));
     GVAR(indirectHit) = QUOTE([ARR_2(0,5)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 };
 
@@ -66,10 +66,10 @@ class vn_mine_punji_03_ammo: vn_mine_punji_01_ammo {
 class vn_mine_punji_04_ammo: APERSBoundingMine_Range_Ammo {
     EGVAR(minedetector,detectable) = 0;
 
-    hit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(hit)'));
+    hit = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(hit)'));
     GVAR(hit) = QUOTE([ARR_2(0,1)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 
-    indirectHit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(indirectHit)'));
+    indirectHit = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(indirectHit)'));
     GVAR(indirectHit) = QUOTE([ARR_2(0,10)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 
     GVAR(spikesOffset)[] = {0, 0, 1.8};
@@ -103,10 +103,10 @@ class vn_mine_cartridge_ammo: APERSMine_Range_Ammo {
     EGVAR(explosives,explosive) = "vn_mine_cartridge_ammo_scripted";
 
     // bump range and damage slightly, default values do not work well with ACE Medical
-    indirectHit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_cartridge_ammo' >> 'GVAR(indirectHit)'));
+    indirectHit = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_cartridge_ammo' >> 'GVAR(indirectHit)'));
     GVAR(indirectHit) = QUOTE([ARR_2(1,2)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 
-    indirectHitRange = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_cartridge_ammo' >> 'GVAR(indirectHitRange)'));
+    indirectHitRange = QUOTE(getNumber (configFile >> 'CfgAmmo' >> 'vn_mine_cartridge_ammo' >> 'GVAR(indirectHitRange)'));
     GVAR(indirectHitRange) = QUOTE([ARR_2(0.3,0.7)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 };
 
