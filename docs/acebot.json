@@ -2,101 +2,101 @@
     // General
     {
         "name": "Arsenal",
-        "url": "https://ace3mod.com/wiki/feature/arsenal.html"
+        "url": "https://ace3.acemod.org/wiki/feature/arsenal.html"
     },
     // Interaction
     {
         "name": "AdvancedThrowing",
-        "url": "https://ace3mod.com/wiki/feature/advanced-throwing.html"
+        "url": "https://ace3.acemod.org/wiki/feature/advanced-throwing.html"
     },
     {
         "name": "Captives",
-        "url": "https://ace3mod.com/wiki/feature/captives.html"
+        "url": "https://ace3.acemod.org/wiki/feature/captives.html"
     },
     {
         "name": "Explosives",
-        "url": "https://ace3mod.com/wiki/feature/explosives.html"
+        "url": "https://ace3.acemod.org/wiki/feature/explosives.html"
     },
     {
         "name": "Interaction",
-        "url": "https://ace3mod.com/wiki/feature/interaction.html"
+        "url": "https://ace3.acemod.org/wiki/feature/interaction.html"
     },
     {
         "name": "MapGestures",
-        "url": "https://ace3mod.com/wiki/feature/map-gestures.html"
+        "url": "https://ace3.acemod.org/wiki/feature/map-gestures.html"
     },
     {
         "name": "Nametags",
-        "url": "https://ace3mod.com/wiki/feature/nametags.html"
+        "url": "https://ace3.acemod.org/wiki/feature/nametags.html"
     },
     {
         "name": "Pylons",
-        "url": "https://ace3mod.com/wiki/feature/pylons.html"
+        "url": "https://ace3.acemod.org/wiki/feature/pylons.html"
     },
     {
         "name": "Refuel",
-        "url": "https://ace3mod.com/wiki/feature/refuel.html"
+        "url": "https://ace3.acemod.org/wiki/feature/refuel.html"
     },
     {
         "name": "Reload",
-        "url": "https://ace3mod.com/wiki/feature/reload.html"
+        "url": "https://ace3.acemod.org/wiki/feature/reload.html"
     },
     {
         "name": "Repair",
-        "url": "https://ace3mod.com/wiki/feature/repair.html"
+        "url": "https://ace3.acemod.org/wiki/feature/repair.html"
     },
     {
         "name": "Slideshow",
-        "url": "https://ace3mod.com/wiki/feature/slideshow.html"
+        "url": "https://ace3.acemod.org/wiki/feature/slideshow.html"
     },
     {
         "name": "Spectator",
-        "url": "https://ace3mod.com/wiki/feature/spectator.html"
+        "url": "https://ace3.acemod.org/wiki/feature/spectator.html"
     },
     // Realism
     {
         "name": "AdvancedBallistics",
-        "url": "https://ace3mod.com/wiki/feature/advanced-ballistics.html"
+        "url": "https://ace3.acemod.org/wiki/feature/advanced-ballistics.html"
     },
     {
         "name": "Hearing",
-        "url": "https://ace3mod.com/wiki/feature/hearing.html"
+        "url": "https://ace3.acemod.org/wiki/feature/hearing.html"
     },
     {
         "name": "MedicalSystem",
-        "url": "https://ace3mod.com/wiki/feature/medical-system.html"
+        "url": "https://ace3.acemod.org/wiki/feature/medical-system.html"
     },
     {
         "name": "Overheating",
-        "url": "https://ace3mod.com/wiki/feature/overheating.html"
+        "url": "https://ace3.acemod.org/wiki/feature/overheating.html"
     },
     {
         "name": "Weather",
-        "url": "https://ace3mod.com/wiki/feature/weather.html"
+        "url": "https://ace3.acemod.org/wiki/feature/weather.html"
     },
     // Equipment
     {
         "name": "ATragMX",
-        "url": "https://ace3mod.com/wiki/feature/atragmx.html"
+        "url": "https://ace3.acemod.org/wiki/feature/atragmx.html"
     },
     {
         "name": "Hellfire",
-        "url": "https://ace3mod.com/wiki/feature/hellfire.html"
+        "url": "https://ace3.acemod.org/wiki/feature/hellfire.html"
     },
     {
         "name": "Kestrel4500",
-        "url": "https://ace3mod.com/wiki/feature/kestrel4500.html"
+        "url": "https://ace3.acemod.org/wiki/feature/kestrel4500.html"
     },
     {
         "name": "MapTools",
-        "url": "https://ace3mod.com/wiki/feature/maptools.html"
+        "url": "https://ace3.acemod.org/wiki/feature/maptools.html"
     },
     {
         "name": "MicroDAGR",
-        "url": "https://ace3mod.com/wiki/feature/microdagr.html"
+        "url": "https://ace3.acemod.org/wiki/feature/microdagr.html"
     },
     {
         "name": "Nightvision",
-        "url": "https://ace3mod.com/wiki/feature/nightvision.html"
+        "url": "https://ace3.acemod.org/wiki/feature/nightvision.html"
     }
 ]

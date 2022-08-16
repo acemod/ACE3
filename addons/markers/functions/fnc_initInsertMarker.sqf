@@ -343,7 +343,7 @@
     // init marker scale slider
     _aceScaleSlider sliderSetRange [0.5, 2.0];
 
-    if !(GVAR(editingMarker) isEqualTo "") then {
+    if (GVAR(editingMarker) isNotEqualTo "") then {
         //get the original scale
         GVAR(currentMarkerScale) = (markerSize GVAR(editingMarker)) param [0, 1];
     };

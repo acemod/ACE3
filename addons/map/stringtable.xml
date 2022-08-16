@@ -46,8 +46,8 @@
             <Czech>Simulovat nasvícení mapy v závisloti na okolí a předmětů hráče?</Czech>
             <Italian>Simula illuminazione della mappa in base alla luce ambientale e agli oggetti del giocatore?</Italian>
             <Japanese>地図へ環境光やプレイヤーのアイテムに基づいた光のシミュレーションを行うかどうかを設定できます。</Japanese>
-            <Korean>주변 환경및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
-            <Chinesesimp>透过环境光与玩家的手电筒来决定地图亮度.</Chinesesimp>
+            <Korean>주변 환경 및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
+            <Chinesesimp>透过环境光与玩家的手电筒来决定地图亮度。</Chinesesimp>
             <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
@@ -61,7 +61,7 @@
             <Italian>Luce della torcia in mappa</Italian>
             <French>Lueur lampe carte</French>
             <Japanese>地図をライトで照らす</Japanese>
-            <Korean>지도 조명이 빛이 납니까</Korean>
+            <Korean>지도 조명 발광</Korean>
             <Chinesesimp>增加地图亮度</Chinesesimp>
             <Chinese>增加地圖亮度</Chinese>
         </Key>
@@ -76,8 +76,8 @@
             <Czech>Přidat externí záři hráči který používá baterku v mapě?</Czech>
             <Italian>Aggiungi luce esterna a giocatori che usano la torcia in mappa?</Italian>
             <Japanese>プレイヤーが地図をフラッシュライトで照らせられるように設定します。</Japanese>
-            <Korean>지도에 불빛을 비치는 플레이어를 조금 더 밝게 합니까?</Korean>
-            <Chinesesimp>当玩家打开手电筒时，增加地图亮度.</Chinesesimp>
+            <Korean>지도에 조명을 사용하는 플레이어에 외부 불빛을 추가합니까?</Korean>
+            <Chinesesimp>当玩家打开手电筒时，增加地图亮度。</Chinesesimp>
             <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
@@ -109,8 +109,8 @@
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
             <Japanese>歩いているときは地図を揺らすかかどうかを設定できます。</Japanese>
-            <Korean>걸을때 지도보면 흔들리게 합니까?</Korean>
-            <Chinesesimp>走路时打开地图会产生晃动.</Chinesesimp>
+            <Korean>걸을 때 지도를 보면 흔들리게 합니까?</Korean>
+            <Chinesesimp>走路时打开地图会产生晃动。</Chinesesimp>
             <Chinese>走路時讓地圖有震動的感覺?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
@@ -142,7 +142,7 @@
             <Italian>Limita l'ammontare di zoom disponibile per la mappa?</Italian>
             <Japanese>地図上で利用できる拡大倍率を制限できます。</Japanese>
             <Korean>지도 확대에 제한을 둡니까?</Korean>
-            <Chinesesimp>限制地图上可允许缩放的倍率?</Chinesesimp>
+            <Chinesesimp>限制地图上可允许缩放的倍率？</Chinesesimp>
             <Chinese>限制地圖上可允許縮放的倍率?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
@@ -157,8 +157,8 @@
             <Russian>Показывать координаты курсора</Russian>
             <Italian>Mostra coordinate sul cursore</Italian>
             <Japanese>カーソル先で座標を表示</Japanese>
-            <Korean>커서에 좌표를 보이게 합니까</Korean>
-            <Chinesesimp>显示游标的座标</Chinesesimp>
+            <Korean>커서에 좌표를 보이기</Korean>
+            <Chinesesimp>显示光标的座标</Chinesesimp>
             <Chinese>顯示游標的座標</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
@@ -174,7 +174,7 @@
             <Italian>Mostra la griglia coordinate sul cursore mouse?</Italian>
             <Japanese>カーソルで合わせた先を地図座標で表示するかどうかを設定できます。</Japanese>
             <Korean>지도에서 커서 옆에 좌표가 뜨게 합니까?</Korean>
-            <Chinesesimp>显示滑鼠游标所在的网格座标?</Chinesesimp>
+            <Chinesesimp>显示鼠标光标所在的网格座标？</Chinesesimp>
             <Chinese>顯示滑鼠游標所在的網格座標?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
@@ -190,7 +190,7 @@
             <Italian>Questo modulo ti permette di customizzare lo schermo della mappa.</Italian>
             <Japanese>このモジュールは地図画面を変更できます。</Japanese>
             <Korean>이 모듈은 지도 화면을 임의로 설정할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>此模块允许自定地图的相关效果.</Chinesesimp>
+            <Chinesesimp>此模块允许自定地图的相关效果。</Chinesesimp>
             <Chinese>此模塊允許自定地圖的相關效果.</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
@@ -205,8 +205,8 @@
             <Russian>Система слежения Blue Force Tracking</Russian>
             <Italian>Blue Force Tracking</Italian>
             <Japanese>ブルー フォース トラッキング</Japanese>
-            <Korean>GPS피아식별기</Korean>
-            <Chinesesimp>显示蓝方踪迹</Chinesesimp>
+            <Korean>GPS 피아식별기</Korean>
+            <Chinesesimp>显示蓝方追踪</Chinesesimp>
             <Chinese>顯示藍方蹤跡</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
@@ -221,8 +221,8 @@
             <Russian>Включить BFT</Russian>
             <Italian>Abilita BFT</Italian>
             <Japanese>BFT を有効化</Japanese>
-            <Korean>GPS피아식별기 켜기</Korean>
-            <Chinesesimp>蓝方踪迹启用</Chinesesimp>
+            <Korean>GPS 피아식별기 켜기</Korean>
+            <Chinesesimp>蓝方追踪启用</Chinesesimp>
             <Chinese>藍方蹤跡啟用</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
@@ -237,8 +237,8 @@
             <Russian>Включает систему служения BFT. По-умолчанию: Нет</Russian>
             <Italian>Abilita Blue Force Tracking. Default: No</Italian>
             <Japanese>ブルー フォース トラッキングを有効化します。標準: 無効</Japanese>
-            <Korean>GPS피아식별기 켭니다. 기본설정: 아니요</Korean>
-            <Chinesesimp>启用显示蓝方踪迹. 预设: 否</Chinesesimp>
+            <Korean>GPS 피아식별기 켭니다. 기본설정: 아니요</Korean>
+            <Chinesesimp>启用显示蓝方追踪。预设：否</Chinesesimp>
             <Chinese>啟用顯示藍方蹤跡. 預設: 否</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
@@ -270,7 +270,7 @@
             <Italian>Quanto spesso vengono aggiornati i marker (in secondi)</Italian>
             <Japanese>マーカが再描画される間隔を設定できます (秒)</Japanese>
             <Korean>몇 초마다 마커를 새로 갱신합니까?</Korean>
-            <Chinesesimp>设定每多少时间重新标示出单位位置 (秒)</Chinesesimp>
+            <Chinesesimp>设定每多少时间重新标示出单位位置（秒）</Chinesesimp>
             <Chinese>設定每多少時間重新標示出單位位置 (秒)</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
@@ -285,8 +285,8 @@
             <Russian>Скрыть группы ботов</Russian>
             <Italian>Nascondere gruppi IA</Italian>
             <Japanese>AI グループを非表示</Japanese>
-            <Korean>인공지능 그룹을 숨깁니까</Korean>
-            <Chinesesimp>隐藏AI小队</Chinesesimp>
+            <Korean>인공지능 그룹 숨기기</Korean>
+            <Chinesesimp>隐藏 AI 小队</Chinesesimp>
             <Chinese>隱藏AI小隊</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
@@ -302,7 +302,7 @@
             <Italian>Nascondi markers per gruppi di sole IA?</Italian>
             <Japanese>'AI のみ'グループのマーカー表示有無を設定できます。</Japanese>
             <Korean>인공지능만 있는 그룹의 마커를 숨깁니까?</Korean>
-            <Chinesesimp>隐藏'AI小队'的踪迹?</Chinesesimp>
+            <Chinesesimp>隐藏'AI 小队'的追踪？</Chinesesimp>
             <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_DisplayName">
@@ -317,7 +317,7 @@
             <Russian>Показать имена игроков</Russian>
             <Italian>Mostra i nomi dei giocatori</Italian>
             <Japanese>プレイヤー名を表示</Japanese>
-            <Korean>플레이어 이름을 표시합니까</Korean>
+            <Korean>플레이어 이름 표시</Korean>
             <Chinesesimp>显示玩家名称</Chinesesimp>
             <Chinese>顯示玩家名稱</Chinese>
         </Key>
@@ -334,7 +334,7 @@
             <Italian>Mostra i nomi dei giocatori singoli?</Italian>
             <Japanese>プレイヤーの名前の表示有無を設定できます。</Japanese>
             <Korean>각 플레이어의 이름을 표시합니까?</Korean>
-            <Chinesesimp>显示玩家的个别名称?</Chinesesimp>
+            <Chinesesimp>显示玩家的个别名称？</Chinesesimp>
             <Chinese>顯示玩家的個別名稱?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
@@ -350,7 +350,7 @@
             <Italian>Questo modulo permette il tracciamento di unità alleate con i marker BFT in mappa</Italian>
             <Japanese>モジュールは BFT マップ マーカとともに、同勢力ユニットの追跡を許可します。</Japanese>
             <Korean>이 모듈은 아군을 지도상에서 추적할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>此模块将使你能在地图上看见友方单位的踪迹</Chinesesimp>
+            <Chinesesimp>此模块将使你能在地图上看见友方单位的追踪</Chinesesimp>
             <Chinese>此模塊將使你能在地圖上看見友方單位的蹤跡</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_Flashlights">
@@ -380,8 +380,8 @@
             <Spanish>NVG</Spanish>
             <Italian>NVG</Italian>
             <Japanese>夜間暗視装置</Japanese>
-            <Korean>야투경</Korean>
-            <Chinesesimp>夜视镜</Chinesesimp>
+            <Korean>야간투시경</Korean>
+            <Chinesesimp>夜视仪</Chinesesimp>
             <Chinese>夜視鏡</Chinese>
             <Turkish>NVG</Turkish>
         </Key>
@@ -507,7 +507,7 @@
             <Spanish>Cambiar el canal de marcadores inicial al comenzar la misión</Spanish>
             <French>Change le canal de communication par défaut au début de la mission.</French>
             <Japanese>ミッション開始時にあらかじめ設定されているマーカ チャンネルを変更します</Japanese>
-            <Korean>미션시작시 마커채널을 변경합니다</Korean>
+            <Korean>미션 시작시 마커채널을 변경합니다</Korean>
             <Chinesesimp>更改任务启动时的聊天频道</Chinesesimp>
             <Chinese>更改任務啟動時的聊天頻道</Chinese>
         </Key>
@@ -515,11 +515,11 @@
             <English>Disable BFT</English>
             <German>BFT deaktivieren</German>
             <Japanese>BFTを無効化</Japanese>
-            <Korean>GPS피아식별기 끄기</Korean>
+            <Korean>GPS 피아식별기 끄기</Korean>
             <Polish>Wyłącz BFT</Polish>
             <French>Désactiver le SFA</French>
             <Italian>Disablita BFT</Italian>
-            <Chinesesimp>关闭友军踪迹</Chinesesimp>
+            <Chinesesimp>关闭友军追踪</Chinesesimp>
             <Chinese>關閉友軍蹤跡</Chinese>
             <Russian>Отключить BFT</Russian>
             <Portuguese>Desativar BFT</Portuguese>
@@ -530,11 +530,11 @@
             <English>Always disable Blue Force Tracking for this group.</English>
             <German>Blue Force Tracking für diese Gruppe immer deaktivieren.</German>
             <Japanese>このグループへのブルー フォース トラッキングを常に無効化します。</Japanese>
-            <Korean>이 그룹에 한해 GPS피아식별기를 항상 끕니다.</Korean>
+            <Korean>이 그룹에 한해 GPS 피아식별기를 항상 끕니다.</Korean>
             <Polish>Zawsze wyłączaj Blue Force Tracking dla tej grupy.</Polish>
             <French>Désactive en permanence le Suivi des Forces Alliées pour ce groupe.</French>
             <Italian>Disabilita sempre il Blue Force Tracking per questo gruppo.</Italian>
-            <Chinesesimp>对此小队永远关闭友军踪迹显示</Chinesesimp>
+            <Chinesesimp>对此小队永远关闭友军追踪显示</Chinesesimp>
             <Chinese>對此小隊永遠關閉友軍蹤跡顯示</Chinese>
             <Russian>Всегда отключать Blue Force Tracking для этой группы</Russian>
             <Portuguese>Sempre desativar Rastreio Blue Force (BFT) para esse grupo.</Portuguese>

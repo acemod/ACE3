@@ -39,6 +39,17 @@
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) (if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT})
 
+// ACEX Merge
+#define ACEX_PREFIX acex
+#define XADDON DOUBLES(ACEX_PREFIX,COMPONENT)
+#define XGVAR(var) DOUBLES(XADDON,var)
+#define EXGVAR(var1,var2) TRIPLES(ACEX_PREFIX,var1,var2)
+#define QXGVAR(var) QUOTE(XGVAR(var))
+#define QEXGVAR(var1,var2) QUOTE(EXGVAR(var1,var2))
+#define QQXGVAR(var) QUOTE(QXGVAR(var))
+#define QQEXGVAR(var1,var2) QUOTE(QEXGVAR(var1,var2))
+#define ACEX_PREP(func) PREP(func); TRIPLES(XADDON,fnc,func) = DFUNC(func)
+
 
 #define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
     weapon = #WEAPON; \
@@ -135,5 +146,7 @@
 #define MOA_TO_RAD(d) ((d) * 0.00029088) // Conversion factor: PI / 10800
 
 #define ZEUS_ACTION_CONDITION ([_target, {QUOTE(QUOTE(ADDON)) in curatorAddons _this}, missionNamespace, QUOTE(QGVAR(zeusCheck)), 1E11, 'ace_interactMenuClosed'] call EFUNC(common,cachedCall))
+
+#define SUBSKILLS ["aimingAccuracy", "aimingShake", "aimingSpeed", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"]
 
 #include "script_debug.hpp"

@@ -47,7 +47,7 @@ class RscTitles {
                 sizeEx=0.027;
                 text="";
             };
-            class RscProtractorMarker : RscProtractorBase {
+            class RscProtractorMarker: RscProtractorBase {
                 idc=132951;
             };
         };

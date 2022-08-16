@@ -20,7 +20,7 @@ private _opticsModes = ("true" configClasses (_config >> "ItemInfo" >> "OpticsMo
     private _visionMode = getArray (_x >> "visionMode");
     [
         getNumber (_x >> "useModelOptics") == 1, //is in optics
-        _visionMode isEqualTo [], //optional NVG 
+        _visionMode isEqualTo [], //optional NVG
         "NVG" in _visionMode, //Integrated NVG
         "Ti" in _visionMode //Integrated Thermal
     ]

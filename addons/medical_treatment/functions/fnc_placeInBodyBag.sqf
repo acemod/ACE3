@@ -31,7 +31,7 @@ if (!local _patient) exitWith {
 
 if (alive _patient) then {
     TRACE_1("Manually killing with setDead",_patient);
-    [_patient, "buried_alive"] call EFUNC(medical_status,setDead);
+    [_patient, "buried_alive", _medic] call EFUNC(medical_status,setDead);
 };
 
 private _position = (getPosASL _patient) vectorAdd [0, 0, 0.2];

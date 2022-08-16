@@ -75,7 +75,7 @@ if(_actualProgress == 0) then {
     //Remove grass
     {
         private _trenchGrassCutter = createVehicle ["Land_ClutterCutter_medium_F", [0, 0, 0], [], 0, "NONE"];
-        private _cutterPos = AGLToASL (_trench modelToWorld _x);
+        private _cutterPos = _trench modelToWorldWorld _x;
         _cutterPos set [2, getTerrainHeightASL _cutterPos];
         _trenchGrassCutter setPosASL _cutterPos;
         deleteVehicle _trenchGrassCutter;

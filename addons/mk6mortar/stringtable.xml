@@ -14,7 +14,7 @@
             <Italian>Tavola di tiro 82mm</Italian>
             <Japanese>82mm 射表</Japanese>
             <Korean>82mm 사거리표</Korean>
-            <Chinesesimp>82mm迫击炮射表</Chinesesimp>
+            <Chinesesimp>82 mm 迫击炮射表</Chinesesimp>
             <Chinese>82毫米迫擊炮射表</Chinese>
             <Turkish>82mm Menzil Tablosu</Turkish>
         </Key>
@@ -31,7 +31,7 @@
             <Italian>Tavola di tiro per il mortaio calibro 82mm Mk6</Italian>
             <Japanese>Mk6 82mm 迫撃砲の射表</Japanese>
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
-            <Chinesesimp>MK6 82mm迫击炮射表</Chinesesimp>
+            <Chinesesimp>MK6 82 mm 迫击炮射表</Chinesesimp>
             <Chinese>MK6 82毫米迫擊炮射表</Chinese>
             <Turkish>Mk6 82mm için Menzil Tablosu</Turkish>
         </Key>
@@ -48,7 +48,7 @@
             <Italian>Apri la tavola di tiro 82mm</Italian>
             <Japanese>82mm 射表を開く</Japanese>
             <Korean>82mm 사거리표 열기</Korean>
-            <Chinesesimp>开启82mm迫击炮射表</Chinesesimp>
+            <Chinesesimp>开启82 mm 迫击炮射表</Chinesesimp>
             <Chinese>開啟82毫米迫擊炮射表</Chinese>
             <Turkish>82mm Menzil Tablosunu Aç</Turkish>
         </Key>
@@ -74,7 +74,7 @@
             <German>Mk6 Mörser</German>
             <Italian>Mortaio Mk6</Italian>
             <Chinese>MK6迫擊炮</Chinese>
-            <Chinesesimp>MK6迫击炮</Chinesesimp>
+            <Chinesesimp>MK6 迫击炮</Chinesesimp>
             <Japanese>Mk6 迫撃砲</Japanese>
             <French>Mortier Mk6</French>
             <Polish>Moździerz Mk6</Polish>
@@ -83,6 +83,7 @@
             <Czech>Minomet Mk6</Czech>
             <Turkish>Mk6 Havan</Turkish>
             <Spanish>Mortero MK6</Spanish>
+            <Korean>Mk6 박격포</Korean>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -97,7 +98,7 @@
             <Italian>Impostazioni Mk6</Italian>
             <Japanese>Mk6 設定</Japanese>
             <Korean>Mk6 설정</Korean>
-            <Chinesesimp>MK6设定</Chinesesimp>
+            <Chinesesimp>MK6 设定</Chinesesimp>
             <Chinese>MK6設定</Chinese>
             <Turkish>Mk6 Ayarları</Turkish>
         </Key>
@@ -130,7 +131,7 @@
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
             <Japanese>プレイヤが射撃すると、空気抵抗モデルと風による影響をあたえます。</Japanese>
-            <Korean>플레이어 사격시 공기저항과 바람에 영향을 받습니다</Korean>
+            <Korean>플레이어가 사격 시 공기저항과 바람에 영향을 받습니다</Korean>
             <Chinesesimp>设定由玩家射击的迫击炮，将会受到空气阻力与风力的影响</Chinesesimp>
             <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
         </Key>
@@ -147,7 +148,7 @@
             <Italian>Consenti Computer Mk6</Italian>
             <Japanese>Mk6 コンピュータを許可</Japanese>
             <Korean>Mk6 탄도계산컴퓨터 허가</Korean>
-            <Chinesesimp>允许使用MK6射控电脑</Chinesesimp>
+            <Chinesesimp>允许使用 MK6 弹道计算机</Chinesesimp>
             <Chinese>允許使用MK6射控電腦</Chinese>
             <Turkish>Mk6 bilgisayarına izin ver</Turkish>
         </Key>
@@ -163,8 +164,8 @@
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
             <Japanese>コンピュータと距離を表示します (空気抵抗を有効化している場合は必ず削除してください)</Japanese>
-            <Korean>탄도계산컴퓨터와 거리측정기를 보여줍니다(공기저항을 활성화했을경우 이 항목은 비활성화 되어야만 합니다)</Korean>
-            <Chinesesimp>显示射控电脑和测距仪 (如果有启用空气阻力功能时，须停用此项功能)</Chinesesimp>
+            <Korean>탄도계산컴퓨터와 거리측정기를 보여줍니다(공기저항을 활성화했을 경우 이 항목은 비활성화 되어야 합니다)</Korean>
+            <Chinesesimp>显示弹道计算机和测距仪（如果有启用空气阻力功能时，须停用此项功能）</Chinesesimp>
             <Chinese>顯示射控電腦和測距儀 (如果有啟用空氣阻力功能時，須停用此項功能)</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
@@ -180,7 +181,7 @@
             <Italian>Consenti Bussola Mk6</Italian>
             <Japanese>Mk6 への方位磁石を有効化</Japanese>
             <Korean>Mk6 나침반 허용</Korean>
-            <Chinesesimp>允许使用MK6指北针</Chinesesimp>
+            <Chinesesimp>允许使用 MK6 指南针</Chinesesimp>
             <Chinese>允許使用MK6指北針</Chinese>
             <Turkish>Mk6 pusulasına izin ver</Turkish>
         </Key>
@@ -197,7 +198,7 @@
             <Italian>Mostra la Bussola Digitale Mk6</Italian>
             <Japanese>Mk6 のデジタル方位磁石を表示</Japanese>
             <Korean>Mk6 에서 전자 나침반을 보여줍니다</Korean>
-            <Chinesesimp>显示MK6的数位指北针</Chinesesimp>
+            <Chinesesimp>显示 MK6 的电子指南针</Chinesesimp>
             <Chinese>顯示MK6的數位指北針</Chinese>
             <Turkish>Mk6 Dijital Pusulasını göster</Turkish>
         </Key>
@@ -213,7 +214,7 @@
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
             <Japanese>Mk6 迫撃砲への設定をできます。</Japanese>
             <Korean>이 모듈은 Mk6 설치 설정을 가능케 합니다.</Korean>
-            <Chinesesimp>这个模块允许你设定MK6迫击炮的相关功能</Chinesesimp>
+            <Chinesesimp>这个模块允许你设定 MK6 迫击炮的相关功能</Chinesesimp>
             <Chinese>這個模塊允許你設定MK6迫擊砲的相關功能</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
@@ -241,8 +242,8 @@
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
             <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжащим. Не влияет на артиллерию ИИ.</Russian>
             <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI 迫撃砲へ影響を与えません。</Japanese>
-            <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야만 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
-            <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由AI射击的迫击炮</Chinesesimp>
+            <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
+            <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由 AI 射击的迫击炮</Chinesesimp>
             <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填。此功能並不影響由AI射擊的迫擊砲</Chinese>
             <Czech>Odstraní z minometu zásobník a vynucuje nabíjení po každém výstřelu buď mířičem nebo nabíječem. Tato možnost neovlivňuje AI posádky.</Czech>
         </Key>
@@ -288,7 +289,7 @@
             <Portuguese>Descarregar munição</Portuguese>
             <Russian>Извлечение снаряда</Russian>
             <Japanese>弾薬を除去しています</Japanese>
-            <Korean>탄약 제거중</Korean>
+            <Korean>탄약 제거 중</Korean>
             <Chinesesimp>正在卸除弹头</Chinesesimp>
             <Chinese>卸除彈頭中</Chinese>
             <Czech>Vybít minomet</Czech>
@@ -305,7 +306,7 @@
             <Portuguese>Preparar munição</Portuguese>
             <Russian>Подготовка снаряда</Russian>
             <Japanese>砲弾を事前装填</Japanese>
-            <Korean>탄약 준비중</Korean>
+            <Korean>탄약 준비 중</Korean>
             <Chinesesimp>正在准备弹头</Chinesesimp>
             <Chinese>準備彈頭中</Chinese>
             <Turkish>Mermi Hazırlanıyor</Turkish>
@@ -370,7 +371,7 @@
             <Russian>Зарядить фугасный управляемый</Russian>
             <Japanese>誘導りゅう弾を装填</Japanese>
             <Korean>유도 고폭탄 장전</Korean>
-            <Chinesesimp>装载导引高爆弹</Chinesesimp>
+            <Chinesesimp>装载制导高爆弹</Chinesesimp>
             <Chinese>裝載導引高爆彈</Chinese>
             <Turkish>Güdümlü HE Yükle</Turkish>
         </Key>
@@ -386,93 +387,93 @@
             <Russian>Зарядить фугасный управляемый по ЛЦУ</Russian>
             <Japanese>レーザ誘導りゅう弾を装填</Japanese>
             <Korean>레이저 유도 고폭탄 장전</Korean>
-            <Chinesesimp>装载雷射导引高爆弹</Chinesesimp>
+            <Chinesesimp>装填激光制导高爆弹</Chinesesimp>
             <Chinese>裝載雷射導引高爆彈</Chinese>
             <Turkish>Lazer Güdümlü HE Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
-            <English>82mm HE Round</English>
-            <German>82mm Sprengpatrone</German>
-            <Spanish>Ronda 82mm HE</Spanish>
-            <Polish>Pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE</French>
-            <Italian>Proiettile da 82mm HE</Italian>
-            <Czech>82mm HE náboj</Czech>
-            <Portuguese>Munição 82mm HE</Portuguese>
-            <Russian>Фугасный снаряд 82мм</Russian>
-            <Japanese>82mm りゅう弾</Japanese>
-            <Korean>82mm 고폭탄</Korean>
-            <Chinesesimp>82mm高爆弹</Chinesesimp>
-            <Chinese>82毫米高爆彈</Chinese>
-            <Turkish>82mm HE Mermisi</Turkish>
+            <English>[CSW] 82mm HE Round</English>
+            <German>[CSW] 82mm Sprengpatrone</German>
+            <Spanish>[CSW] Ronda 82mm HE</Spanish>
+            <Polish>[CSW] Pocisk wybuchowy kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm HE</French>
+            <Italian>[CSW] Proiettile da 82mm HE</Italian>
+            <Czech>[CSW] 82mm HE náboj</Czech>
+            <Portuguese>[CSW] Munição 82mm HE</Portuguese>
+            <Russian>[CSW] Фугасный снаряд 82мм</Russian>
+            <Japanese>[CSW] 82mm りゅう弾</Japanese>
+            <Korean>[CSW] 82mm 고폭탄</Korean>
+            <Chinesesimp>[班组] 82 mm 高爆弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米高爆彈</Chinese>
+            <Turkish>[CSW] 82mm HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
-            <English>82mm Smoke Round</English>
-            <German>82mm Nebelpatrone</German>
-            <Spanish>Ronda 82mm Humo</Spanish>
-            <Polish>Pocisk dymny kal. 82mm</Polish>
-            <French>Obus de 82 mm fumigène</French>
-            <Italian>Proiettile Fumogeno da 82mm</Italian>
-            <Czech>82mm Kouřový náboj</Czech>
-            <Portuguese>Munição 82mm Fumaça</Portuguese>
-            <Russian>Дымовой снаряд 82мм</Russian>
-            <Japanese>82mm 発煙弾</Japanese>
-            <Korean>82mm 연막탄</Korean>
-            <Chinesesimp>82mm烟雾弹</Chinesesimp>
-            <Chinese>82毫米煙霧彈</Chinese>
-            <Turkish>82mm Sis Mermisi</Turkish>
+            <English>[CSW] 82mm Smoke Round</English>
+            <German>[CSW] 82mm Nebelpatrone</German>
+            <Spanish>[CSW] Ronda 82mm Humo</Spanish>
+            <Polish>[CSW] Pocisk dymny kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm fumigène</French>
+            <Italian>[CSW] Proiettile Fumogeno da 82mm</Italian>
+            <Czech>[CSW] 82mm Kouřový náboj</Czech>
+            <Portuguese>[CSW] Munição 82mm Fumaça</Portuguese>
+            <Russian>[CSW] Дымовой снаряд 82мм</Russian>
+            <Japanese>[CSW] 82mm 発煙弾</Japanese>
+            <Korean>[CSW] 82mm 연막탄</Korean>
+            <Chinesesimp>[班组] 82 mm 烟雾弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米煙霧彈</Chinese>
+            <Turkish>[CSW] 82mm Sis Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
-            <English>82mm Illumination Round</English>
-            <German>82mm Leuchtpatrone</German>
-            <Spanish>Ronda 82mm Iluminación</Spanish>
-            <Polish>Pocisk oświetlający kal. 82mm</Polish>
-            <French>Obus de 82 mm éclairant</French>
-            <Italian>Proiettile illuminante da 82mm</Italian>
-            <Czech>82mm Osvětlovací náboj</Czech>
-            <Portuguese>Munição 82mm Iluminação</Portuguese>
-            <Russian>Осветительный снаряд 82мм</Russian>
-            <Japanese>82mm 照明弾</Japanese>
-            <Korean>82mm 조명탄</Korean>
-            <Chinesesimp>82mm照明弹</Chinesesimp>
-            <Chinese>82毫米照明彈</Chinese>
-            <Turkish>82mm Işık Mermisi</Turkish>
+            <English>[CSW] 82mm Illumination Round</English>
+            <German>[CSW] 82mm Leuchtpatrone</German>
+            <Spanish>[CSW] Ronda 82mm Iluminación</Spanish>
+            <Polish>[CSW] Pocisk oświetlający kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm éclairant</French>
+            <Italian>[CSW] Proiettile illuminante da 82mm</Italian>
+            <Czech>[CSW] 82mm Osvětlovací náboj</Czech>
+            <Portuguese>[CSW] Munição 82mm Iluminação</Portuguese>
+            <Russian>[CSW] Осветительный снаряд 82мм</Russian>
+            <Japanese>[CSW] 82mm 照明弾</Japanese>
+            <Korean>[CSW] 82mm 조명탄</Korean>
+            <Chinesesimp>[班组] 82 mm 照明弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米照明彈</Chinese>
+            <Turkish>[CSW] 82mm Işık Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
-            <English>82mm Guided HE Round</English>
-            <German>82mm gelenkte Sprengpatrone</German>
-            <Spanish>Ronda 82mm Guiada</Spanish>
-            <Polish>Kierowany pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE guidé</French>
-            <Italian>Proiettile HE guidato</Italian>
-            <Czech>82mm HE náboj (naváděný)</Czech>
-            <Portuguese>Munição 82mm HE Guiada</Portuguese>
-            <Russian>Фугасный снаряд управляемый 82мм</Russian>
-            <Japanese>82mm 誘導りゅう弾</Japanese>
-            <Korean>82mm 유도 고폭탄</Korean>
-            <Chinesesimp>82mm导引高爆弹</Chinesesimp>
-            <Chinese>82毫米導引高爆彈</Chinese>
-            <Turkish>82mm Güdümlü HE Mermisi</Turkish>
+            <English>[CSW] 82mm Guided HE Round</English>
+            <German>[CSW] 82mm gelenkte Sprengpatrone</German>
+            <Spanish>[CSW] Ronda 82mm Guiada</Spanish>
+            <Polish>[CSW] Kierowany pocisk wybuchowy kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm HE guidé</French>
+            <Italian>[CSW] Proiettile HE guidato</Italian>
+            <Czech>[CSW] 82mm HE náboj (naváděný)</Czech>
+            <Portuguese>[CSW] Munição 82mm HE Guiada</Portuguese>
+            <Russian>[CSW] Фугасный снаряд управляемый 82мм</Russian>
+            <Japanese>[CSW] 82mm 誘導りゅう弾</Japanese>
+            <Korean>[CSW] 82mm 유도 고폭탄</Korean>
+            <Chinesesimp>[班组] 82 mm 制导高爆弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米導引高爆彈</Chinese>
+            <Turkish>[CSW] 82mm Güdümlü HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
-            <English>82mm Laser Guided HE Round</English>
-            <German>82mm lasergelenkte Sprengpatrone</German>
-            <Spanish>Ronda 82mm Guiada por Laser</Spanish>
-            <Polish>Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE guidé au laser</French>
-            <Italian>Proiettile HE a guida laser</Italian>
-            <Czech>82mm HE náboj (naváděný laserem)</Czech>
-            <Portuguese>Munição 82mm HE Guiada por Laser </Portuguese>
-            <Russian>Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
-            <Japanese>82mm レーザ誘導りゅう弾</Japanese>
-            <Korean>82mm 레이저 유도 고폭탄</Korean>
-            <Chinesesimp>82mm雷射导引高爆弹</Chinesesimp>
-            <Chinese>82毫米雷射導引高爆彈</Chinese>
-            <Turkish>82mm Lazer Güdümlü HE Mermisi</Turkish>
+            <English>[CSW] 82mm Laser Guided HE Round</English>
+            <German>[CSW] 82mm lasergelenkte Sprengpatrone</German>
+            <Spanish>[CSW] Ronda 82mm Guiada por Laser</Spanish>
+            <Polish>[CSW] Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
+            <French>[CSW] Obus de 82 mm HE guidé au laser</French>
+            <Italian>[CSW] Proiettile HE a guida laser</Italian>
+            <Czech>[CSW] 82mm HE náboj (naváděný laserem)</Czech>
+            <Portuguese>[CSW] Munição 82mm HE Guiada por Laser </Portuguese>
+            <Russian>[CSW] Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
+            <Japanese>[CSW] 82mm レーザ誘導りゅう弾</Japanese>
+            <Korean>[CSW] 82mm 레이저 유도 고폭탄</Korean>
+            <Chinesesimp>[班组] 82 mm 激光制导高爆弹</Chinesesimp>
+            <Chinese>[CSW] 82毫米雷射導引高爆彈</Chinese>
+            <Turkish>[CSW] 82mm Lazer Güdümlü HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
-            <English>Used in Mk6 mortar</English>
-            <German>Wird im Mk6 Mörser verwendet</German>
+            <English>Used in Mk6 Mortar</English>
+            <German>Wird im Mk6-Mörser verwendet</German>
             <Spanish>Usada en el mortero Mk6</Spanish>
             <Polish>Używany w moździerzu Mk6</Polish>
             <French>Utilisé dans le mortier Mk6.</French>
@@ -482,7 +483,7 @@
             <Russian>Использовался в миномете Mk6</Russian>
             <Japanese>Mk6 mortar で使います</Japanese>
             <Korean>Mk6 박격포에 사용됨</Korean>
-            <Chinesesimp>用于Mk6迫击炮</Chinesesimp>
+            <Chinesesimp>用于 Mk6 迫击炮</Chinesesimp>
             <Chinese>用於Mk6迫擊砲</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
@@ -497,7 +498,7 @@
             <Russian>[ACE] Ящик фугасных снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm りゅう弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 고폭탄 상자</Korean>
-            <Chinesesimp>[ACE] 82mm高爆弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] 82 mm 高爆弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米高爆彈藥箱</Chinese>
             <Turkish>[ACE] 82mm HE Mermisi Kutusu</Turkish>
         </Key>
@@ -513,7 +514,7 @@
             <Russian>[ACE] Ящик дымовых снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm 発煙弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 연막탄 상자</Korean>
-            <Chinesesimp>[ACE] 82mm烟雾弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] 82 mm 烟雾弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米煙霧彈藥箱</Chinese>
             <Turkish>[ACE] 82mm Sis Mermisi Kutusu</Turkish>
         </Key>
@@ -529,7 +530,7 @@
             <Russian>[ACE] Ящик осветительных снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm 照明弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 조명탄 상자</Korean>
-            <Chinesesimp>[ACE] 82mm照明弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] 82 mm 照明弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米照明彈藥箱</Chinese>
             <Turkish>[ACE] 82mm Işık Mermisi Kutusu</Turkish>
         </Key>
@@ -545,7 +546,7 @@
             <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>
             <Japanese>[ACE] 82mm 保管箱</Japanese>
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
-            <Chinesesimp>[ACE] 82mm预设弹药箱</Chinesesimp>
+            <Chinesesimp>[ACE] 82 mm 预设弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>
             <Turkish>[ACE] 82mm Varsayılan Teçhizat Kutusu</Turkish>
         </Key>

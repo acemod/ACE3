@@ -19,18 +19,18 @@
 #define ROUGHNESS_LENGTHS [0.0002, 0.0005, 0.0024, 0.03, 0.055, 0.1, 0.2, 0.4, 0.8, 1.6]
 
 private _windSource = _this vectorDiff ((vectorNormalized wind) vectorMultiply 25);
-private _nearBuildings = {
+private _nearBuildingCount = {
     // Filter lights - fixes high roughness on airports (#6602)
     str _x find "light" == -1
-} count (_windSource nearObjects ["Building", 50]);
+} count (ASLToAGL _windSource nearObjects ["Building", 50]);
 private _isWater = surfaceIsWater _windSource;
 
-if (_nearBuildings == 0 && _isWater) exitWith {
+if (_nearBuildingCount == 0 && _isWater) exitWith {
     0.0005
 };
 
-if (_nearBuildings >= 10) exitWith {
+if (_nearBuildingCount >= 10) exitWith {
     1.6
 };
 
-ROUGHNESS_LENGTHS select (2 + (_nearBuildings min 6))
+ROUGHNESS_LENGTHS select (2 + (_nearBuildingCount min 6))

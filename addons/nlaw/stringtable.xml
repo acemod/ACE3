@@ -6,7 +6,7 @@
             <German>NLAW Zielverfolgung</German>
             <Italian>NLAW Traccia Bersaglio (Mantieni)</Italian>
             <Japanese>NALW 目標の追跡 (押しっぱ)</Japanese>
-            <Chinesesimp>次世代轻型反坦克导弹发射器追踪目标 (按住)</Chinesesimp>
+            <Chinesesimp>NLAW 追踪目标（按住）</Chinesesimp>
             <Chinese>次世代輕型反坦克導彈發射器追蹤目標 (按住)</Chinese>
             <Polish>Śledzenie Celu NLAW (Przytrzymaj)</Polish>
             <Korean>NLAW 목표 추적 (누름유지)</Korean>
@@ -25,7 +25,7 @@
             <Chinesesimp>直射模式</Chinesesimp>
             <Chinese>直射模式</Chinese>
             <Polish>Bezpośredni atak</Polish>
-            <Korean>직접 사격</Korean>
+            <Korean>직선 공격</Korean>
             <Russian>Прямая атака</Russian>
             <Portuguese>Ataque Direto</Portuguese>
             <French>Attaque directe</French>
@@ -38,7 +38,7 @@
             <German>Überflugangriff</German>
             <Italian>Attacco dall'alto</Italian>
             <Japanese>オーバーフライ トップ アタック</Japanese>
-            <Chinesesimp>攻顶模式</Chinesesimp>
+            <Chinesesimp>飞越攻顶模式</Chinesesimp>
             <Chinese>攻頂模式</Chinese>
             <Polish>Atak z góry</Polish>
             <Korean>탑어택</Korean>

@@ -45,7 +45,7 @@
             <French>Définit la vitesse de ravitaillement en carburant des véhicules.</French>
             <Japanese>どのくらいの速さで車両へ給油しますか?</Japanese>
             <Korean>차량이 얼마나 빨리 재급유될 수 있습니까?</Korean>
-            <Chinesesimp>载具多快会加油完毕?</Chinesesimp>
+            <Chinesesimp>载具多快会加油完毕？</Chinesesimp>
             <Chinese>載具多快會加油完畢?</Chinese>
             <Turkish>Bir araca ne kadar hızlı yakıt ikmali yapılmalıdır?</Turkish>
         </Key>
@@ -77,7 +77,7 @@
             <French>Prendre le pistolet</French>
             <Japanese>給油ノズルを取る</Japanese>
             <Korean>주유기 획득</Korean>
-            <Chinesesimp>拿取燃料喷嘴</Chinesesimp>
+            <Chinesesimp>拿取加油枪</Chinesesimp>
             <Chinese>拿取燃料噴嘴</Chinese>
             <Turkish>Yakıt Pompasını Al</Turkish>
         </Key>
@@ -92,8 +92,8 @@
             <Spanish>Tomando surtidor...</Spanish>
             <French>Prise du pistolet...</French>
             <Japanese>給油ノズルを取っています・・・</Japanese>
-            <Korean>주유기 획득중...</Korean>
-            <Chinesesimp>正在拿取燃料喷嘴...</Chinesesimp>
+            <Korean>주유기 획득 중...</Korean>
+            <Chinesesimp>正在拿取加油枪...</Chinesesimp>
             <Chinese>拿取燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Alınıyor...</Turkish>
         </Key>
@@ -109,7 +109,7 @@
             <French>Introduire le pistolet</French>
             <Japanese>給油ノズルを接続する</Japanese>
             <Korean>주유기 꼽기</Korean>
-            <Chinesesimp>连接燃料喷嘴</Chinesesimp>
+            <Chinesesimp>连接加油枪</Chinesesimp>
             <Chinese>連接燃料噴嘴</Chinese>
             <Turkish>Yakıt Pompasını Bağla</Turkish>
         </Key>
@@ -124,8 +124,8 @@
             <Spanish>Conectando surtidor...</Spanish>
             <French>Introduction du pistolet...</French>
             <Japanese>給油ノズルを接続しています・・・</Japanese>
-            <Korean>주유기 꼽는중...</Korean>
-            <Chinesesimp>正在连结燃料喷嘴...</Chinesesimp>
+            <Korean>주유기 꼽는 중...</Korean>
+            <Chinesesimp>正在连接加油枪...</Chinesesimp>
             <Chinese>連結燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Bağlanıyor...</Turkish>
         </Key>
@@ -141,7 +141,7 @@
             <French>Retirer le pistolet</French>
             <Japanese>給油ノズルを外す</Japanese>
             <Korean>주유기 뽑기</Korean>
-            <Chinesesimp>断开燃料喷嘴</Chinesesimp>
+            <Chinesesimp>断开加油枪</Chinesesimp>
             <Chinese>斷開燃料噴嘴</Chinese>
             <Turkish>Yakıt Pompası Çıkar</Turkish>
         </Key>
@@ -157,7 +157,7 @@
             <French>Raccorder</French>
             <Japanese>接続</Japanese>
             <Korean>꼽기</Korean>
-            <Chinesesimp>连结</Chinesesimp>
+            <Chinesesimp>连接</Chinesesimp>
             <Chinese>連結</Chinese>
             <Turkish>Bağlan</Turkish>
         </Key>
@@ -205,7 +205,7 @@
             <French>Il reste %1 litres.</French>
             <Japanese>後 %1 リットル残っています。</Japanese>
             <Korean>%1 리터 남음</Korean>
-            <Chinesesimp>剩下%1公升的燃料。</Chinesesimp>
+            <Chinesesimp>剩下%1升的燃料。</Chinesesimp>
             <Chinese>剩下%1公升的燃料。</Chinese>
             <Turkish>%1 litre kaldı.</Turkish>
         </Key>
@@ -295,7 +295,7 @@
             <Italian>Impossibile iniziare il rifornimento</Italian>
             <Japanese>給油を始められませんでした</Japanese>
             <Chinese>無法開啟燃料噴嘴</Chinese>
-            <Chinesesimp>无法开启燃料喷嘴</Chinesesimp>
+            <Chinesesimp>无法开启加油枪</Chinesesimp>
             <Korean>주유기를 켤 수 없습니다.</Korean>
             <Polish>Nie można włączyć dyszy paliwowej</Polish>
             <Russian>Не удалось включить топливный пистолет</Russian>
@@ -317,7 +317,7 @@
             <French>%1 litres pompés.</French>
             <Japanese>%1 リッターを給油しました</Japanese>
             <Korean>%1 리터 재급유됨</Korean>
-            <Chinesesimp>已加入%1公升的燃料</Chinesesimp>
+            <Chinesesimp>已加入%1升的燃料</Chinesesimp>
             <Chinese>已加入%1公升的燃料</Chinese>
             <Turkish>%1 Litre Dolduruldu</Turkish>
         </Key>
@@ -332,7 +332,7 @@
             <Spanish>La fuente de combustible está vacía.</Spanish>
             <French>La source de carburant est vide.</French>
             <Japanese>給油元は空です。</Japanese>
-            <Chinesesimp>燃料来源已空.</Chinesesimp>
+            <Chinesesimp>燃料来源已空。</Chinesesimp>
             <Chinese>燃料來源已空.</Chinese>
             <Korean>연료공급처가 비었음.</Korean>
             <Turkish>Yakıt tankı boş.</Turkish>
@@ -413,7 +413,7 @@
             <French>Ranger le pistolet</French>
             <Japanese>給油ノズルを戻す</Japanese>
             <Korean>주유기 반환</Korean>
-            <Chinesesimp>放回燃料喷嘴</Chinesesimp>
+            <Chinesesimp>放回加油枪</Chinesesimp>
             <Chinese>放回燃料噴嘴</Chinese>
             <Turkish>Yakıt Pompasını Geri Koy</Turkish>
         </Key>
@@ -428,8 +428,8 @@
             <Spanish>Devolviendo el surtidor...</Spanish>
             <French>Rangement du pistolet...</French>
             <Japanese>給油ノズルを戻しています・・・</Japanese>
-            <Korean>주유기 반환중</Korean>
-            <Chinesesimp>正在放回燃料喷嘴...</Chinesesimp>
+            <Korean>주유기 반환 중</Korean>
+            <Chinesesimp>正在放回加油枪...</Chinesesimp>
             <Chinese>放回燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Geri Koyuluyor</Turkish>
         </Key>
@@ -444,7 +444,7 @@
             <Spanish>Verificar el contador de combustible</Spanish>
             <French>Vérifier le compteur</French>
             <Japanese>燃料計を見る</Japanese>
-            <Korean>연로카운터 확인</Korean>
+            <Korean>연료카운터 확인</Korean>
             <Chinesesimp>检查燃料表</Chinesesimp>
             <Chinese>檢查燃料表</Chinese>
             <Turkish>Yakıt tankını kontrol et</Turkish>
@@ -461,7 +461,7 @@
             <French>%1 litres ont été pompés.</French>
             <Japanese>%1 リッターが給油されました。</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
-            <Chinesesimp>已加入%1公升</Chinesesimp>
+            <Chinesesimp>已加入%1升</Chinesesimp>
             <Chinese>已加入%1公升</Chinese>
             <Turkish>%1 litre dolduruldu</Turkish>
         </Key>
@@ -505,8 +505,8 @@
             <Japanese>給油用の貯油量を設定できます (-1で無効、-10で無限)</Japanese>
             <Italian>La capacità del carburante disponibile per il rifornimento (-1 disabilita, -10 se infinito)</Italian>
             <Chinese>設定有多少油料可供載具進行加油(-1時關閉，-10為無限油量)</Chinese>
-            <Chinesesimp>设定有多少油料可供载具进行加油(-1时关闭，-10为无限油量)</Chinesesimp>
-            <Korean>재급유에 사용 할 수 있는 연료량 (-1=비활성, -10=무한)</Korean>
+            <Chinesesimp>设定有多少油料可供载具进行加油（-1时关闭，-10为无限油量）</Chinesesimp>
+            <Korean>재급유에 사용할 수 있는 연료량 (-1=비활성, -10=무한)</Korean>
             <Polish>Pojemność paliwa dostępnego do tankowania (-1 wyłącz, -10 jeśli nieskończone)</Polish>
             <Portuguese>Quantidade de combustível disponível para abastecer (-1 para desativar, -10 para infinito)</Portuguese>
             <French>Le volume de carburant disponible pour le ravitaillement (-1 pour désactiver, -10 pour quantité illimitée).</French>
