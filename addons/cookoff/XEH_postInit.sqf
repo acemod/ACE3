@@ -55,8 +55,6 @@
         ([_vehicle] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
 
         private _delay = (random MAX_AMMO_DETONATION_START_DELAY) max MIN_AMMO_DETONATION_START_DELAY;
-        [{
-            _this call FUNC(detonateAmmunition);
-        }, [_vehicle, _mags, _total], _delay] call CBA_fnc_waitAndExecute;
+        [FUNC(detonateAmmunition), [_vehicle, _mags, _total], _delay] call CBA_fnc_waitAndExecute;
     };
 }, nil, ["Man","StaticWeapon"]] call CBA_fnc_addClassEventHandler;
