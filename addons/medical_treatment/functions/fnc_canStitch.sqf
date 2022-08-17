@@ -20,4 +20,4 @@
 params ["", "_patient", "_bodyPart"];
 
 private _index = ALL_BODY_PARTS find toLower _bodyPart;
-([_patient, _index] call FUNC(getStitchableWounds) isNotEqualTo [])
+[_patient, _index] call FUNC(getStitchableWounds) isNotEqualTo []

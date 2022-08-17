@@ -30,6 +30,5 @@ private _bleedingBodyParts = GET_OPEN_WOUNDS(_unit) select {
 GET_BANDAGED_WOUNDS(_unit) select {
     _x params ["", "_bodyPartN"];
 
-    (_bodyPart in [-1, _bodyPartN]) &&
-    {!(_bodyPartN in _bleedingBodyParts)}
+    _bodyPart in [-1, _bodyPartN] && {!(_bodyPartN in _bleedingBodyParts)}
 }
