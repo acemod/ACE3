@@ -22,7 +22,7 @@ params [
 ];
 
 [
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    GVAR(progressDuration),
     [_unit, _object],
     {
         params ["_args"];

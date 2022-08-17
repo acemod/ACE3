@@ -78,6 +78,11 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 12;
             };
+            class progressDuration {
+                displayName = CSTRING(RefuelSettings_progressDuration_DisplayName);
+                typeName = "NUMBER";
+                defaultValue = 2;
+            };
         };
     };
 
