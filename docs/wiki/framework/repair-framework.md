@@ -29,7 +29,7 @@ SetVar: `"ACE_IsEngineer"` - number 0 - 2 (can also be true/false)
 - Allows full repair based on setting `fullRepairLocation` (not enabled by default)
 - Can easily be set via 3den attribute.
 
-SetVar: `"ACE_isRepairVehicle"` - true or false
+SetVar: `"ACE_isRepairVehicle"` - 1 or 0
 
 Config: `ace_repair_canRepair` - 0 or 1
 
