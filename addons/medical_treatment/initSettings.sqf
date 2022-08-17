@@ -248,7 +248,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeAutoinjectorMultMedic_DisplayName), LSTRING(TreatmentTimeMultMedic_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -257,7 +257,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeAutoinjectorMultDoctor_DisplayName), LSTRING(TreatmentTimeMultDoctor_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -275,7 +275,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeTourniquetMultMedic_DisplayName), LSTRING(TreatmentTimeMultMedic_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -284,7 +284,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeTourniquetMultDoctor_DisplayName), LSTRING(TreatmentTimeMultDoctor_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -302,7 +302,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeSplintMultMedic_DisplayName), LSTRING(TreatmentTimeMultMedic_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -311,7 +311,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeSplintMultDoctor_DisplayName), LSTRING(TreatmentTimeMultDoctor_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -329,7 +329,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeBodyBagMultMedic_DisplayName), LSTRING(TreatmentTimeMultMedic_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -338,7 +338,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeBodyBagMultDoctor_DisplayName), LSTRING(TreatmentTimeMultDoctor_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -356,7 +356,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimePAKMultMedic_DisplayName), LSTRING(TreatmentTimeMultMedic_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -365,7 +365,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimePAKMultDoctor_DisplayName), LSTRING(TreatmentTimeMultDoctor_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -383,7 +383,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeStitchMultMedic_DisplayName), LSTRING(TreatmentTimeMultMedic_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -392,7 +392,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeStitchMultDoctor_DisplayName), LSTRING(TreatmentTimeMultDoctor_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -410,7 +410,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeIVMultMedic_DisplayName), LSTRING(TreatmentTimeMultMedic_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -419,7 +419,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeIVMultDoctor_DisplayName), LSTRING(TreatmentTimeMultDoctor_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -455,7 +455,7 @@
     "SLIDER",
     [LSTRING(TreatmentTimeCPRMultMedic_DisplayName), LSTRING(TreatmentTimeMultMedic_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -464,6 +464,6 @@
     "SLIDER",
     [LSTRING(TreatmentTimeCPRMultDoctor_DisplayName), LSTRING(TreatmentTimeMultDoctor_Description)],
     [LSTRING(Category_Treatment), LSTRING(SubCategory_Tweaks)],
-    [0, 5, 1, 1],
+    [0, 2, 1, 2],
     true
 ] call CBA_fnc_addSetting;
