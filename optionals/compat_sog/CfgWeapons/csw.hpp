@@ -10,11 +10,14 @@ CREATE_CSW_PROXY(vn_pk_v_01);
 CREATE_CSW_PROXY(vn_mortar_m29);
 CREATE_CSW_PROXY(vn_mortar_m2);
 CREATE_CSW_PROXY(vn_mortar_type53);
+CREATE_CSW_PROXY(vn_mg42_v_01);
 
 class Launcher;
 class Launcher_Base_F: Launcher {
     class WeaponSlotsInfo;
 };
+
+// --- Gun Turrets -------------------------------------------------------------
 
 class GVAR(m2_carry): Launcher_Base_F {
     displayName = ECSTRING(csw,m2_gun);
@@ -302,6 +305,35 @@ class GVAR(mortar_m29_carry): Launcher_Base_F {
         mass = 730;
     };
 };
+
+class GVAR(mg42_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    // picture = QPATHTOF(UI\csw_m1919a4_ca.paa);
+
+    class ACE_CSW {
+        type = "mount";
+        deployTime = 4;
+        pickupTime = 4;
+        deploy = "vn_o_vc_static_mg42_low";
+
+        class assembleTo {
+            EGVAR(csw,m3Tripod) = "vn_o_vc_static_mg42_high";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
+// --- Mortars -----------------------------------------------------------------
 
 class GVAR(mortar_m2_carry): Launcher_Base_F {
     displayName = CSTRING(csw_m2);

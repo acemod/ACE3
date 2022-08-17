@@ -8,6 +8,8 @@ class GVAR(tow_missile): vn_missile_tow_mag_x1 {
     mass = 220;  // to Arma, weight and volume are all the same which makes real life values unusable
 };
 
+// --- Gun Turrets -------------------------------------------------------------
+
 class vn_m1919_v_250_mag;
 class GVAR(m1919_250): vn_m1919_v_250_mag {
     scope = 2;
@@ -41,6 +43,18 @@ class GVAR(dshkm_50): vn_dshkm_v_50_mag {
     ACE_isBelt = 1;
     mass = 170;
 };
+
+class vn_mg42_v_250_mag;
+class GVAR(mg42_250): vn_mg42_v_250_mag {
+    scope = 2;
+    type = 256;
+    model = "\vn\objects_f_vietnam\supply\a2_ammo\pavn\vn_pavn_30_can.p3d";
+    picture = QPATHTOF(UI\ammo_250rnd_792mm_ca.paa);
+    ACE_isBelt = 1;
+    mass = 160;
+};
+
+// --- Mortars -----------------------------------------------------------------
 
 class vn_mortar_m29_mag_he_x8;
 class GVAR(81mm_he): vn_mortar_m29_mag_he_x8 {

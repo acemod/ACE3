@@ -245,6 +245,38 @@ class vn_static_pk_low_base: vn_static_pk_high_base {
     };
 };
 
+// MG42 - High
+class vn_static_mg42_high_base: vn_static_rpd_high_base {
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "[-0.18, 0.5, -0.3]";
+        };
+    };
+
+    class ACE_CSW {
+        enabled = 1;
+        proxyWeapon = QGVAR(vn_mg42_v_01);
+        magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
+        disassembleWeapon = QGVAR(mg42_carry);
+        disassembleTurret = QEGVAR(csw,m3Tripod);
+        ammoLoadTime = 10;
+        ammoUnloadTime = 8;
+        desiredAmmo = 250;
+    };
+};
+
+class vn_static_mg42_low_base: vn_static_mg42_high_base {
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "[-0.1, 0.3, -0.9]";
+        };
+    };
+
+    class ACE_CSW: ACE_CSW {
+        disassembleTurret = "";
+    };
+};
+
 // --- Mortars -----------------------------------------------------------------
 
 // M29 Mortar
