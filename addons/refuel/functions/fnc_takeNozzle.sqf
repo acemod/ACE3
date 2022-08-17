@@ -69,7 +69,7 @@ params [
                 _attachPos = _attachPos select (_hookDistances find selectMin _hookDistances);
             };
             private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
-            private _rope = ropeCreate [_ropeTarget, _attachPos, _nozzle, [0, -0.20, 0.12], _hoseLength];
+            private _rope = ropeCreate [_ropeTarget, _attachPos, _nozzle, [0, -0.20, 0.12], _hoseLength, [], [], QGVAR(fuelHose)];
             _nozzle setVariable [QGVAR(rope), _rope, true];
             _nozzle setVariable [QGVAR(attachPos), _attachPos, true];
             _nozzle setVariable [QGVAR(source), _source, true];
