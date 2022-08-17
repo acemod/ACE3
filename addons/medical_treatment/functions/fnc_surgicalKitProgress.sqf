@@ -20,15 +20,16 @@
  */
 
 params ["_args", "_elapsedTime", "_totalTime"];
-_args params ["", "_patient"];
+_args params ["_medic", "_patient"];
 
 private _stitchableWounds = _patient call FUNC(getStitchableWounds);
 
 // Stop treatment if there are no wounds that can be stitched remaining
 if (_stitchableWounds isEqualTo []) exitWith {false};
 
+private _mult = [_medic, "stitch"] call FUNC(getTreatmentTimeMult);
 // Not enough time has elapsed to stitch a wound
-if (_totalTime - _elapsedTime > (count _stitchableWounds - 1) * GVAR(woundStitchTime)) exitWith {true};
+if (_totalTime - _elapsedTime > (count _stitchableWounds - 1) * GVAR(woundStitchTime) * _mult) exitWith {true};
 
 private _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);
 private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);

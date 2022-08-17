@@ -18,7 +18,7 @@
 
 #define DAMAGE_SCALING_FACTOR 5
 
-params ["", "_patient"];
+params ["_medic", "_patient"];
 
 private _bodyPartDamage = 0;
 
@@ -26,4 +26,6 @@ private _bodyPartDamage = 0;
     _bodyPartDamage = _bodyPartDamage + _x;
 } forEach (_patient getVariable [QEGVAR(medical,bodyPartDamage), []]);
 
-10 max (((_bodyPartDamage * DAMAGE_SCALING_FACTOR) min 180) * GVAR(timeCoefficientPAK))
+private _mult = [_medic, "PAK"] call FUNC(getTreatmentTimeMult);
+
+10 max (((_bodyPartDamage * DAMAGE_SCALING_FACTOR) min 180) * GVAR(timeCoefficientPAK) * _mult)

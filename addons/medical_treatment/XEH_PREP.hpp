@@ -32,6 +32,7 @@ PREP(getBandageTime);
 PREP(getHealTime);
 PREP(getStitchableWounds);
 PREP(getStitchTime);
+PREP(getTreatmentTimeMult);
 PREP(getTriageStatus);
 PREP(handleBandageOpening);
 PREP(hasItem);

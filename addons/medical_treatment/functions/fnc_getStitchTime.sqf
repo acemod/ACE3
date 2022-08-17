@@ -16,6 +16,8 @@
  * Public: No
  */
 
-params ["", "_patient"];
+params ["_medic", "_patient"];
 
-count (_patient call FUNC(getStitchableWounds)) * GVAR(woundStitchTime)
+private _mult = [_medic, "stitch"] call FUNC(getTreatmentTimeMult);
+
+count (_patient call FUNC(getStitchableWounds)) * GVAR(woundStitchTime) * _mult
