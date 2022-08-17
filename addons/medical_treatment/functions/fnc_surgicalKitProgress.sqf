@@ -7,6 +7,7 @@
  * 0: Arguments <ARRAY>
  *   0: Medic (not used) <OBJECT>
  *   1: Patient <OBJECT>
+ *   2: Body Part <STRING>
  * 1: Elapsed Time <NUMBER>
  * 2: Total Time <NUMBER>
  *
@@ -20,9 +21,10 @@
  */
 
 params ["_args", "_elapsedTime", "_totalTime"];
-_args params ["", "_patient"];
+_args params ["", "_patient", "_bodyPart"];
 
-private _stitchableWounds = _patient call FUNC(getStitchableWounds);
+private _index = ALL_BODY_PARTS find toLower _bodyPart;
+private _stitchableWounds = [_patient, _index] call FUNC(getStitchableWounds);
 
 // Stop treatment if there are no wounds that can be stitched remaining
 if (_stitchableWounds isEqualTo []) exitWith {false};

@@ -18,4 +18,5 @@
 
 params ["", "_patient"];
 
-count (_patient call FUNC(getStitchableWounds)) * GVAR(woundStitchTime)
+private _index = ALL_BODY_PARTS find toLower _bodyPart;
+count ([_patient, _index] call FUNC(getStitchableWounds)) * GVAR(woundStitchTime)

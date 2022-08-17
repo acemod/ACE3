@@ -6,6 +6,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Body Part ID <NUMBER> (default: -1)
  *
  * Return Value:
  * Stitchable Wounds <ARRAY>
@@ -16,7 +17,7 @@
  * Public: No
  */
 
-params ["_unit"];
+params ["_unit", ["_bodyPart", -1]];
 
 private _bleedingBodyParts = GET_OPEN_WOUNDS(_unit) select {
     _x params ["", "", "_amountOf", "_bleedingRate"];
@@ -29,5 +30,6 @@ private _bleedingBodyParts = GET_OPEN_WOUNDS(_unit) select {
 GET_BANDAGED_WOUNDS(_unit) select {
     _x params ["", "_bodyPartN"];
 
-    !(_bodyPartN in _bleedingBodyParts)
+    (_bodyPart in [-1, _bodyPartN]) &&
+    {!(_bodyPartN in _bleedingBodyParts)}
 }

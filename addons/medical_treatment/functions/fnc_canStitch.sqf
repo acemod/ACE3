@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Medic (not used) <OBJECT>
  * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
  *
  * ReturnValue:
  * Can Stitch <BOOL>
@@ -16,6 +17,7 @@
  * Public: No
  */
 
-params ["", "_patient"];
+params ["", "_patient", "_bodyPart"];
 
-(_patient call FUNC(getStitchableWounds) isNotEqualTo [])
+private _index = ALL_BODY_PARTS find toLower _bodyPart;
+([_patient, _index] call FUNC(getStitchableWounds) isNotEqualTo [])
