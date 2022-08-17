@@ -56,8 +56,10 @@ jobs:
       run: |
         rm -r z\ace\addons\
         rm -r z\ace\optionals\
+        rm -r z\ace\tools\pDummies\
         xcopy /e /h /q pullrequest\addons z\ace\addons\
         xcopy /e /h /q pullrequest\optionals z\ace\optionals\
+        xcopy /e /h /q pullrequest\tools\pDummies z\ace\tools\pDummies\
     - name: Setup build environment
       run: |
         subst P: .

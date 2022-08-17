@@ -76,7 +76,7 @@ GVAR(objectRotationZ) = 0;
 // Place object event handler
 [QGVAR(deployFinished), {
     params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
-    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp", "_cost"];
 
     private _newObject = _typeOf createVehicle _posASL;
     _newObject setPosASL _posASL;
@@ -96,7 +96,10 @@ GVAR(objectRotationZ) = 0;
 
 [QGVAR(deployCanceled), {
     params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
-    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp", "_cost"];
+
+    // Refund if deploy was canceled
+    [_side, _cost] call FUNC(updateBudget);
 
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);

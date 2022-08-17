@@ -479,7 +479,15 @@
             <Portuguese>Comprimento da Mangueira de Combustível</Portuguese>
             <French>Longueur du tuyau</French>
             <Czech>Délka hadice na palivo</Czech>
-            <Turkish>Yakıt poması uzunluğu</Turkish>
+            <Turkish>Yakıt hortumu uzunluğu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_DisplayName">
+            <English>Pump/Hose Interaction Time</English>
+            <Turkish>Pompa/Hortum Etkileşim Süresi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_Description">
+            <English>How long refuel interactions take in seconds.</English>
+            <Turkish>Saniye biriminde yakıt ikmali etkileşimlerinin süresi.</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
             <English>Fuel Cargo Volume</English>

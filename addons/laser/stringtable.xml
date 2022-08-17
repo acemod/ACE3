@@ -90,12 +90,14 @@
             <Japanese>地図上にレーザーを表示する</Japanese>
             <Polish>Rysuj Laser na Mapie</Polish>
             <Korean>맵에 레이저 그리기</Korean>
+            <Chinesesimp>在地图上绘制激光</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap_tooltip">
             <English>Active laser designator's position will be drawn on the map</English>
             <Japanese>アクティブな指示レーザーの位置が地図上に描画されます</Japanese>
             <Polish>Pozycja aktywnego wskaźnika laserowego będzie rysowana na mapie.</Polish>
             <Korean>지도에 능동 레이저 표시기의 위치가 그려집니다.</Korean>
+            <Chinesesimp>激活的激光指示器本身及其标记的点会在地图上显示</Chinesesimp>
         </Key>
     </Package>
 </Project>

@@ -6,30 +6,35 @@
             <Japanese>ACE 薬莢</Japanese>
             <Polish>ACE Łuski</Polish>
             <Korean>ACE 탄피</Korean>
+            <Chinesesimp>ACE 弹壳</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Casings_displayName">
             <English>Casings Enabled</English>
             <Japanese>薬莢の有効化</Japanese>
             <Polish>Łuski włączone</Polish>
             <Korean>탄피 활성화</Korean>
+            <Chinesesimp>开启弹壳生成</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Casings_description">
             <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
             <Japanese>永続的な薬莢を有効にする (古い/弱いシステムに対する潜在的なパフォーマンスの影響)</Japanese>
             <Polish>Włącz pozostawanie łusek (MOŻLIWY wpływ na wydajność na starych/słabych komputerach)</Polish>
             <Korean>영구적으로 남는 탄피를 활성화합니다(오래되고 취약한 시스템에 잠재적인 성능에 영향을 미칩니다.)</Korean>
+            <Chinesesimp>开启生成持续存在的弹壳（可能对较老和性能不行的系统有影响）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_displayName">
             <English>Maximum casings</English>
             <Japanese>薬莢の最大量</Japanese>
             <Polish>Maksymalna liczba łusek</Polish>
             <Korean>탄피 최대 갯수</Korean>
+            <Chinesesimp>最大弹壳量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_description">
             <English>Maximum amount of casings to display</English>
             <Japanese>表示される薬莢の最大の数</Japanese>
             <Polish>Maksymalna liczba wyświetlanych łusek</Polish>
             <Korean>표시할 최대 탄피 갯수</Korean>
+            <Chinesesimp>显示的最大弹壳数量</Chinesesimp>
         </Key>
     </Package>
 </Project>
