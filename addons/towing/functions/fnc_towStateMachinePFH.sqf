@@ -147,8 +147,8 @@ switch (_state) do {
         TRACE_2("state cleanup",GVAR(attachHelper),_handle);
         deleteVehicle GVAR(attachHelper);
         [_handle] call CBA_fnc_removePerFrameHandler;
+        ["MouseButtonDown", GVAR(onMouseButtonDownEHID)] call CBA_fnc_removeDisplayHandler;
         _unit setVariable [QGVAR(hint), []];
         call EFUNC(interaction,hideMouseHint);
     };
 };
-
