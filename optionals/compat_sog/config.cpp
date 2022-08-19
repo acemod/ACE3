@@ -31,7 +31,10 @@ class CfgPatches {
             QGVAR(mortar_type53_carry)
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"vn_weapons", "vn_emm_main_menu", "weapons_f_vietnam_c", "ace_trenches"};
+        requiredAddons[] = {
+            "ace_trenches",
+            "loadorder_f_vietnam"
+        };
         author = ECSTRING(common,ACETeam);
         authors[] = {"BaerMitUmlaut", "veteran29"};
         url = ECSTRING(main,URL);
