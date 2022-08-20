@@ -1,16 +1,8 @@
 #include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 
-CREATE_CSW_PROXY(vn_m2_v_01);
-CREATE_CSW_PROXY(vn_m1919_v_01);
-CREATE_CSW_PROXY(vn_m60_v_01);
-CREATE_CSW_PROXY(vn_missile_tow_launcher);
-CREATE_CSW_PROXY(vn_dshkm_v_01);
-CREATE_CSW_PROXY(vn_rpd_v_01);
-CREATE_CSW_PROXY(vn_pk_v_01);
 CREATE_CSW_PROXY(vn_mortar_m29);
 CREATE_CSW_PROXY(vn_mortar_m2);
 CREATE_CSW_PROXY(vn_mortar_type53);
-CREATE_CSW_PROXY(vn_mg42_v_01);
 
 class Launcher;
 class Launcher_Base_F: Launcher {
