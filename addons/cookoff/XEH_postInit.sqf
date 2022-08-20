@@ -53,6 +53,8 @@
     ) then {
         if (GVAR(ammoCookoffDuration) == 0) exitWith {};
         ([_vehicle] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
-        [_vehicle, _mags, _total] call FUNC(detonateAmmunition);
+
+        private _delay = (random MAX_AMMO_DETONATION_START_DELAY) max MIN_AMMO_DETONATION_START_DELAY;
+        [FUNC(detonateAmmunition), [_vehicle, _mags, _total], _delay] call CBA_fnc_waitAndExecute;
     };
 }, nil, ["Man","StaticWeapon"]] call CBA_fnc_addClassEventHandler;
