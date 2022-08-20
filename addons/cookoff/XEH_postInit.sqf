@@ -20,7 +20,7 @@
         private _deletedEH = _vehicle addEventHandler ["Deleted", {
             params ["_vehicle"];
             
-            [QGVAR(cleanupEffects), [_vehicle]] call CBA_fnc_globalEvent;
+            [QGVAR(cleanupEffects), [_vehicle]] call CBA_fnc_localEvent;
         }];
     
         _vehicle setVariable [QGVAR(deletedEH), _deletedEH];
