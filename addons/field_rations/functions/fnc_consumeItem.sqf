@@ -21,7 +21,13 @@
  */
 
 params ["", "_player", "_consumeData"];
-_consumeData params ["_consumeItem", "_config", "_isMagazine"];
+_consumeData params ["_consumeItem", "_config", ["_isMagazine", false]];
+// backward compatiblity
+if (isNil "_config") then {
+    WARNING_1("No config specified, falling back to CfgWeapons",_consumeItem);
+    _config = configFile >> "CfgWeapons" >> _consumeItem;
+};
+
 TRACE_3("Consume item started",_player,_consumeItem,_config);
 
 // Get consume time for item
