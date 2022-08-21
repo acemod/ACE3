@@ -6,13 +6,16 @@
  * Arguments:
  * 0: Water source <OBJECT>
  * 1: Player <OBJECT>
- * 2: Item classname <STRING>
+ * 2: Item data <ARRAY>
+ *    0: Item classname <STRING>
+ *    1: Item config <CONFIG>
+ *    2: Is item magazine <BOOL>
  *
  * Return Value:
  * Can refill item <BOOL>
  *
  * Example:
- * [_source, _player, "ACE_WaterBottle_Empty"] call ace_field_rations_fnc_canRefillItem
+ * [_source, _player, ["ACE_WaterBottle_Empty", configFile >> "CfgWeapons" >> "ACE_WaterBottle_Empty", false]] call ace_field_rations_fnc_canRefillItem
  *
  * Public: No
  */

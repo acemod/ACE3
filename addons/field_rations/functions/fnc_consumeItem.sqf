@@ -6,13 +6,16 @@
  * Arguments:
  * 0: Target (not used) <OBJECT>
  * 1: Player <OBJECT>
- * 2: Item classname <STRING>
+ * 2: Item data <ARRAY>
+ *    0: Item classname <STRING>
+ *    1: Item config <CONFIG>
+ *    2: Is item magazine <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [objNull, ACE_player, "ACE_WaterBottle"] call ace_field_rations_fnc_consumeItem
+ * [objNull, ACE_player, "["ACE_WaterBottle_Empty", configFile >> "CfgWeapons" >> "ACE_WaterBottle_Empty", false]] call ace_field_rations_fnc_consumeItem
  *
  * Public: No
  */
