@@ -17,12 +17,16 @@
  * Public: No
  */
 
-params ["_source", "_player", "_item"];
+params ["_source", "_player", "_itemData"];
+_itemData params ["_item", "_itemConfig", "_isMagazine"];
 
 alive _source
 && {XGVAR(waterSourceActions) != 0}
-&& {_item in (_player call EFUNC(common,uniqueItems))}
+&& {
+    (_isMagazine && {_item in magazines _player})
+    || {_item in (_player call EFUNC(common,uniqueItems))}
+}
 && {
     private _water = _source call FUNC(getRemainingWater);
-    _water == REFILL_WATER_INFINITE || {_water >= getNumber (configFile >> "CfgWeapons" >> _item >> QXGVAR(refillAmount))}
+    _water == REFILL_WATER_INFINITE || {_water >= getNumber (_itemConfig >> QXGVAR(refillAmount))}
 }
