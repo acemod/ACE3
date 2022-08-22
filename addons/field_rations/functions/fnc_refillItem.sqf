@@ -31,7 +31,8 @@ private _refillTime = getNumber (_config >> QXGVAR(refillTime));
 
 private _fnc_onSuccess = {
     params ["_args"];
-    _args params ["_source", "_player", "_item", "_refillItem", "_refillAmount", "_isMagazine"];
+    _args params ["_source", "_player", "_itemData", "_refillItem", "_refillAmount", "_itemData"];
+    _itemData params ["_item", "", "_isMagazine"];
     TRACE_1("Refill item successful",_args);
 
     // Replace item with refilled one
@@ -70,10 +71,9 @@ private _fnc_condition = {
     [
         _source,
         _player,
-        _item,
+        _itemData,
         _refillItem,
-        _refillAmount,
-        _isMagazine
+        _refillAmount
     ],
     _fnc_onSuccess,
     _fnc_onFailure,
