@@ -137,7 +137,128 @@ class vn_prop_food_meal_01_02: vn_prop_base {
     EXGVAR(field_rations,consumeTime) = 10;
 };
 
+// Breast of Chicken Under Bullets. Boned Chicken + Cheese Spread + White Bread + Hot sauce
 class vn_prop_food_meal_01_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Battlefield Fufu. Boned Chicken + Peanut Butter + Milk + Hot sauce
+class vn_prop_food_meal_01_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Ham with Spiced Apricots. Fried Ham + Apricots + Jam + Hot sauce
+class vn_prop_food_meal_01_05: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Pork Mandarin. Pork-steak + Hot sauce
+class vn_prop_food_meal_01_06: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Tin Can Casserole. Frank and Beans + Beefsteak + Crackers + Cheese Spread + Hot sauce
+class vn_prop_food_meal_01_07: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Creamed Turkey on Toast. Turkey loaf + White Bread + Hot sauce
+class vn_prop_food_meal_01_08: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Fish with Front line Stuffing. Crackers + Ham and Egg Chopped + Hot sauce
+class vn_prop_food_meal_01_09: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Combat Zone Burgoo. Spiced Beef + Ham and Lima Beans + Crackers + Hot sauce
+class vn_prop_food_meal_01_10: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Patrol Chicken Soup. Fresh Chicken + Crackers + Hot sauce
+class vn_prop_food_meal_01_11: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Guard Relief Eggs Benedict. White Bread + Ham and Eggs Chopped + Cheese Spread + Hot sauce
+class vn_prop_food_meal_01_12: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Beefsteak En Croute. White Bread + Beefsteak + Hot sauce
+class vn_prop_food_meal_01_13: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Curried Meat Balls Over Rice. Meat Balls and Beans + Hot sauce
+class vn_prop_food_meal_01_14: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Cease Fire Casserole. Beefsteak + Spiced Beef + Hot sauce
+class vn_prop_food_meal_01_15: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Rice Paddy Shrimp. Fresh Shrimp + Cheese Spread + Hot sauce
+class vn_prop_food_meal_01_16: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Battlefield Birthday Cake. Pound Cake + Chocolate Candy + Hot sauce
+class vn_prop_food_meal_01_17: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,thirstQuenched) = -1; // hot!
+
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Pecan Cake Roll with Peanut Butter Sauce. Pecan Cake Roll + Peanut Butter + Hot sauce
+class vn_prop_food_meal_01_18: vn_prop_base {
     EXGVAR(field_rations,hungerSatiated) = 20;
     EXGVAR(field_rations,thirstQuenched) = -1; // hot!
 
