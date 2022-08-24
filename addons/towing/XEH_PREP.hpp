@@ -1,6 +1,7 @@
 PREP(attachRopePFH);
-PREP(canStartTow);
-PREP(detach);
+PREP(attachVehicles);
+PREP(detachChild);
+PREP(detachRope);
 PREP(isSuitableSimulation);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);

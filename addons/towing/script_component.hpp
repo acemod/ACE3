@@ -2,8 +2,8 @@
 #define COMPONENT_BEAUTIFIED Towing
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_TOWING
@@ -24,4 +24,3 @@
 #define TOW_STATE_ATTACH 2
 #define TOW_STATE_CANCEL 3
 #define TOW_STATE_CLEANUP 4
-
