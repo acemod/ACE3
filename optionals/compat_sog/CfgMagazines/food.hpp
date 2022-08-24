@@ -264,3 +264,39 @@ class vn_prop_food_meal_01_18: vn_prop_base {
 
     EXGVAR(field_rations,consumeTime) = 10;
 };
+
+// Con ho. Rice + Tiger + Vegetables + Fish Sauce
+class vn_prop_food_meal_02_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Con voi. Rice + Elephant + Vegetables + Fish Sauce
+class vn_prop_food_meal_02_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Con ran. Rice + Snake + Vegetables + Fish Sauce
+class vn_prop_food_meal_02_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Cha ca la vong. Rice + Fish + Vegetables + Fish Sauce
+class vn_prop_food_meal_02_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Con tom. Rice + Shrimp + Vegetables + Fish sauce
+class vn_prop_food_meal_02_05: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Pho ga. Rice + Chicken + Vegetables + Fish sauce
+class vn_prop_food_meal_02_06: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
