@@ -115,7 +115,6 @@ class vn_prop_drink_10: vn_prop_base {
 
 // Ration 0.75Kg
 class vn_prop_food_meal_01: vn_prop_base {
-    // assuming 0.25Kg = 5% of hunger
     EXGVAR(field_rations,hungerSatiated) = 15;
 
     EXGVAR(field_rations,consumeTime) = 10;
@@ -394,5 +393,283 @@ class vn_prop_food_box_02_07: vn_prop_base {
 // Boxed Rations. Contains 2Kg of food: Ration box (Chicken Boned)
 class vn_prop_food_box_02_08: vn_prop_base {
     EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Beefsteak)
+class vn_prop_food_can_01_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Spiced Sauce)
+class vn_prop_food_can_01_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Turkey Loaf)
+class vn_prop_food_can_01_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Ham, Fried)
+class vn_prop_food_can_01_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Ham and Eggs Chopped)
+class vn_prop_food_can_01_05: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Tuna)
+class vn_prop_food_can_01_06: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Chicken and Noodles)
+class vn_prop_food_can_01_07: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Chicken Boned)
+class vn_prop_food_can_01_08: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Pork Slices with Juices)
+class vn_prop_food_can_01_09: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (B-1A Unit Crackers and Candy)
+class vn_prop_food_can_01_10: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (B-2 Unit Crackers and Cheese Spread)
+class vn_prop_food_can_01_11: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Pound Cake)
+class vn_prop_food_can_01_12: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Pecan Cake Roll)
+class vn_prop_food_can_01_13: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Chocolate Nut Roll)
+class vn_prop_food_can_01_14: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (Fruitcake)
+class vn_prop_food_can_01_15: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.5Kg of food: Ration can (White Bread)
+class vn_prop_food_can_01_16: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 25;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.75Kg of food: Ration can (Beans w/ Meat Balls in Tomato Sauce)
+class vn_prop_food_can_02_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.75Kg of food: Ration can (Ham and Lima Beans)
+class vn_prop_food_can_02_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.75Kg of food: Ration can (Beans w/ Frankfurter Chunks in Tomato Sauce)
+class vn_prop_food_can_02_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.75Kg of food: Ration can (Spaghetti w/ Ground Meat)
+class vn_prop_food_can_02_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.75Kg of food: Ration can (B-3 Unit Cookies, Jam and Cocoa Beverage Powder)
+class vn_prop_food_can_02_05: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.75Kg of food: Ration can (Apricots)
+class vn_prop_food_can_02_06: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.75Kg of food: Ration can (Peaches)
+class vn_prop_food_can_02_07: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.75Kg of food: Ration can (Pears)
+class vn_prop_food_can_02_08: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.3Kg of food: Ration can (Peanut Butter)
+class vn_prop_food_can_03_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 15;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.3Kg of food: Ration can (Jam, Seedless Blackberry)
+class vn_prop_food_can_03_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 15;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.3Kg of food: Ration can (Pineapple Jam)
+class vn_prop_food_can_03_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 15;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Canned Rations. Contains 0.3Kg of food: Ration can (Cheese Spread)
+class vn_prop_food_can_03_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 15;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Orange
+class vn_prop_food_fresh_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 10;
+    EXGVAR(field_rations,thirstQuenched) = 10;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Pumpik 3Kg
+class vn_prop_food_fresh_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,thirstQuenched) = 5;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Chicken 3Kg
+class vn_prop_food_fresh_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 35;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Shrimp 3Kg
+class vn_prop_food_fresh_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Fish 3Kg
+class vn_prop_food_fresh_05: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Pork 3Kg
+class vn_prop_food_fresh_06: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 35;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Snake 3Kg
+class vn_prop_food_fresh_07: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Tiger 3Kg
+class vn_prop_food_fresh_08: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Elephant 3Kg
+class vn_prop_food_fresh_09: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Rau Ma 3Kg
+class vn_prop_food_fresh_10: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 30;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// LRRP Rations. Contains 1Kg of high energy food: LRRP ration (Beef Hash)
+class vn_prop_food_lrrp_01_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 90;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// LRRP Rations. Contains 1Kg of high energy food: LRRP ration (Chili Con Carne)
+class vn_prop_food_lrrp_01_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 90;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// LRRP Rations. Contains 1Kg of high energy food: LRRP ration (Spaghetti w/ Meat Sauce)
+class vn_prop_food_lrrp_01_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 90;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// LRRP Rations. Contains 1Kg of high energy food: LRRP ration (Beef and Rice)
+class vn_prop_food_lrrp_01_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 90;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// LRRP Rations. Contains 1Kg of high energy food: LRRP ration (Chicken Stew)
+class vn_prop_food_lrrp_01_05: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 90;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// LRRP Rations. Contains 1Kg of high energy food: LRRP ration (Pork w/ Escalloped Potatoes)
+class vn_prop_food_lrrp_01_06: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 90;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// LRRP Rations. Contains 1Kg of high energy food: LRRP ration (Beef Stew)
+class vn_prop_food_lrrp_01_07: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 90;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// LRRP Rations. Contains 1Kg of high energy food: LRRP ration (Chicken and Rice)
+class vn_prop_food_lrrp_01_08: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 90;
     EXGVAR(field_rations,consumeTime) = 10;
 };
