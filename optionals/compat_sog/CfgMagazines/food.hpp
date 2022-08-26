@@ -585,43 +585,43 @@ class vn_prop_food_fresh_03: vn_prop_base {
 };
 
 // Shrimp 3Kg
-class vn_prop_food_fresh_04: vn_prop_base {
+class vn_prop_food_fresh_04: vn_prop_food_fresh_03 {
     EXGVAR(field_rations,hungerSatiated) = 30;
     EXGVAR(field_rations,consumeTime) = 10;
 };
 
 // Fish 3Kg
-class vn_prop_food_fresh_05: vn_prop_base {
+class vn_prop_food_fresh_05: vn_prop_food_fresh_03 {
     EXGVAR(field_rations,hungerSatiated) = 30;
     EXGVAR(field_rations,consumeTime) = 10;
 };
 
 // Pork 3Kg
-class vn_prop_food_fresh_06: vn_prop_base {
+class vn_prop_food_fresh_06: vn_prop_food_fresh_03 {
     EXGVAR(field_rations,hungerSatiated) = 35;
     EXGVAR(field_rations,consumeTime) = 10;
 };
 
 // Snake 3Kg
-class vn_prop_food_fresh_07: vn_prop_base {
+class vn_prop_food_fresh_07: vn_prop_food_fresh_03 {
     EXGVAR(field_rations,hungerSatiated) = 20;
     EXGVAR(field_rations,consumeTime) = 10;
 };
 
 // Tiger 3Kg
-class vn_prop_food_fresh_08: vn_prop_base {
+class vn_prop_food_fresh_08: vn_prop_food_fresh_03 {
     EXGVAR(field_rations,hungerSatiated) = 20;
     EXGVAR(field_rations,consumeTime) = 10;
 };
 
 // Elephant 3Kg
-class vn_prop_food_fresh_09: vn_prop_base {
+class vn_prop_food_fresh_09: vn_prop_food_fresh_03 {
     EXGVAR(field_rations,hungerSatiated) = 20;
     EXGVAR(field_rations,consumeTime) = 10;
 };
 
 // Rau Ma 3Kg
-class vn_prop_food_fresh_10: vn_prop_base {
+class vn_prop_food_fresh_10: vn_prop_food_fresh_03 {
     EXGVAR(field_rations,hungerSatiated) = 30;
     EXGVAR(field_rations,consumeTime) = 10;
 };
