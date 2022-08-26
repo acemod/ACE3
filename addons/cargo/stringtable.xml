@@ -482,5 +482,11 @@
             <Chinesesimp>成功卸货后，重新打开货物菜单。</Chinesesimp>
             <Korean>화물을 성공적으로 내리고 난 다음 화물 메뉴를 열지 결정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Cargo_carryAfterUnload">
+            <English>Carry After Unload</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
+            <English>Controls whether cargo items are carried or dragged after unloading.</English>
+        </Key>
     </Package>
 </Project>

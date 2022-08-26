@@ -23,5 +23,6 @@ if !(_activated) exitWith {};
 
 [_logic, QGVAR(rate), "rate"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(hoseLength), "hoseLength"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(progressDuration), "progressDuration"] call EFUNC(common,readSettingFromModule);
 
-INFO_2("Refuel Module Initialized with flow rate: %1 - hoseLength: %2",GVAR(rate), GVAR(hoseLength))
+INFO_3("Refuel Module Initialized with flow rate: %1 - hoseLength: %2 - progressDuration: %3",GVAR(rate),GVAR(hoseLength),GVAR(progressDuration))
