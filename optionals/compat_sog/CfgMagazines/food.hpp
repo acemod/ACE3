@@ -300,3 +300,99 @@ class vn_prop_food_meal_02_06: vn_prop_base {
     EXGVAR(field_rations,hungerSatiated) = 20;
     EXGVAR(field_rations,consumeTime) = 10;
 };
+
+// PIR Rations. Contains 1Kg of high energy food: PIR ration (Beef)
+class vn_prop_food_pir_01_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// PIR Rations. Contains 1Kg of high energy food: PIR ration (Fish and Squid)
+class vn_prop_food_pir_01_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// PIR Rations. Contains 1Kg of high energy food: PIR ration (Shrimp and Mushroom)
+class vn_prop_food_pir_01_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// PIR Rations. Contains 1Kg of high energy food: PIR ration (Mutton)
+class vn_prop_food_pir_01_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// PIR Rations. Contains 1Kg of high energy food: PIR ration (Sausage)
+class vn_prop_food_pir_01_05: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 20;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 10Kg of food: Ration box (LRP Ration Box)
+class vn_prop_food_box_01_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 100;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 10Kg of food: Ration box (PIR Ration Box)
+class vn_prop_food_box_01_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 100;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 10Kg of food: Ration box (MCI Ration Box)
+class vn_prop_food_box_01_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 100;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 2Kg of food: Ration box (Ham and Eggs Chopped)
+class vn_prop_food_box_02_01: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 2Kg of food: Ration box (Ham Fried)
+class vn_prop_food_box_02_02: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 2Kg of food: Ration box (Beans w/ Frankfurter Chunks)
+class vn_prop_food_box_02_03: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 2Kg of food: Ration box (Spaghetti w/ Ground Meat)
+class vn_prop_food_box_02_04: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 2Kg of food: Ration box (Turkey Loaf)
+class vn_prop_food_box_02_05: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 2Kg of food: Ration box (Pork Steak)
+class vn_prop_food_box_02_06: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 2Kg of food: Ration box (Beef w/ Spiced Sauce)
+class vn_prop_food_box_02_07: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
+
+// Boxed Rations. Contains 2Kg of food: Ration box (Chicken Boned)
+class vn_prop_food_box_02_08: vn_prop_base {
+    EXGVAR(field_rations,hungerSatiated) = 50;
+    EXGVAR(field_rations,consumeTime) = 10;
+};
