@@ -15,6 +15,7 @@
  * Public: No
  */
 
+if (!GVAR(addRopeToVehicleInventory)) exitWith {};
 params ["_vehicle"];
 
 if (0 == getNumber (configOf _vehicle >> QEGVAR(cargo,hasCargo))) exitWith {};
