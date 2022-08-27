@@ -283,8 +283,11 @@ class vn_static_mg42_low_base: vn_static_mg42_high_base {
     };
 };
 
-// SGM - Base
+// SGM - High
 class vn_static_sgm_base: StaticMGWeapon {
+    class ACE_Actions: ACE_Actions {};
+};
+class vn_static_sgm_high_base: vn_static_sgm_base {
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
             selection = "mg1_otocvez";
@@ -302,9 +305,6 @@ class vn_static_sgm_base: StaticMGWeapon {
         desiredAmmo = 250;
     };
 };
-
-// SGM - High
-class vn_static_sgm_high_base: vn_static_sgm_base {};
 
 // SGM - Low
 class vn_static_sgm_low_base: vn_static_sgm_high_base {
