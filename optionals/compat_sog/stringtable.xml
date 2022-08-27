@@ -249,6 +249,14 @@
             <Korean>[CSW] PK 총가방</Korean>
             <Chinesesimp>[班组] PK 枪袋</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_MG42">
+            <English>[CSW] MG42 Gun Bag</English>
+            <German>[CSW] MG42 Waffentasche</German>
+            <Japanese>[CSW] MG42 ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na MG42</Polish>
+            <Korean>[CSW] MG42 총가방</Korean>
+            <Chinesesimp>[班组] MG42 枪袋</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_SGM">
             <English>[CSW] SGM Gun Bag</English>
             <German>[CSW] SGM Waffentasche</German>

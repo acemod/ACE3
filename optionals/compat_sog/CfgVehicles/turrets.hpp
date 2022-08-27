@@ -142,7 +142,11 @@ class vn_static_tow_base: vn_static_at3_base {
 };
 
 // DShKM - High
-class vn_static_dp28_high_base: vn_static_m2_high_base {};
+class vn_static_dp28_high_base: vn_static_m2_high_base {
+    class ACE_CSW: ACE_CSW {
+        enabled = 0;
+    };
+};
 class vn_static_dshkm_high_01_base: vn_static_dp28_high_base {
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
@@ -155,7 +159,7 @@ class vn_static_dshkm_high_01_base: vn_static_dp28_high_base {
         proxyWeapon = "vn_dshkm_v_01";
         magazineLocation = "_target selectionPosition 'mg1_boxmag'";
         disassembleWeapon = QGVAR(dshkm_carry);
-        disassembleTurret = QEGVAR(csw,m3Tripod);
+        disassembleTurret = QEGVAR(csw,kordTripod);
         ammoLoadTime = 1;
         ammoUnloadTime = 8;
         desiredAmmo = 50;
@@ -181,7 +185,7 @@ class vn_static_dshkm_low_01_base: vn_static_dshkm_high_01_base {
 
     class ACE_CSW: ACE_CSW {
         disassembleWeapon = QGVAR(dshkm_shield_carry);
-        disassembleTurret = QEGVAR(csw,m3TripodLow);
+        disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
 };
 
@@ -205,7 +209,7 @@ class vn_static_rpd_high_base: vn_static_dp28_high_base {
         proxyWeapon = "vn_rpd_v_01";
         magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
         disassembleWeapon = QGVAR(rpd_carry);
-        disassembleTurret = QEGVAR(csw,m3Tripod);
+        disassembleTurret = QEGVAR(csw,kordTripod);
         ammoLoadTime = 10;
         ammoUnloadTime = 8;
         desiredAmmo = 100;
@@ -225,7 +229,7 @@ class vn_static_pk_high_base: vn_static_rpd_high_base {
         proxyWeapon = "vn_pk_v_01";
         magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
         disassembleWeapon = QGVAR(pk_carry);
-        disassembleTurret = QEGVAR(csw,m3Tripod);
+        disassembleTurret = QEGVAR(csw,kordTripod);
         ammoLoadTime = 2;
         ammoUnloadTime = 8;
         desiredAmmo = 100;
@@ -241,7 +245,7 @@ class vn_static_pk_low_base: vn_static_pk_high_base {
     };
 
     class ACE_CSW: ACE_CSW {
-        disassembleTurret = QEGVAR(csw,m3TripodLow);
+        disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
 };
 
@@ -258,7 +262,7 @@ class vn_static_mg42_high_base: vn_static_rpd_high_base {
         proxyWeapon = "vn_mg42_v_01";
         magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
         disassembleWeapon = QGVAR(mg42_carry);
-        disassembleTurret = QEGVAR(csw,m3Tripod);
+        disassembleTurret = QEGVAR(csw,kordTripod);
         ammoLoadTime = 2;
         ammoUnloadTime = 8;
         desiredAmmo = 250;

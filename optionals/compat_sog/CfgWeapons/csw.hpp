@@ -182,7 +182,7 @@ class GVAR(dshkm_shield_carry): Launcher_Base_F {
         pickupTime = 4;
 
         class assembleTo {
-            EGVAR(csw,kordTripodLow) = "vn_o_nva_navy_static_dshkm_low_01";
+            EGVAR(csw,kordTripodLow) = "vn_o_nva_static_dshkm_low_01";
         };
     };
 
@@ -260,7 +260,8 @@ class GVAR(pk_carry): Launcher_Base_F {
         pickupTime = 4;
 
         class assembleTo {
-            EGVAR(csw,kordTripod) = "vn_o_nva_static_dshkm_high_02";
+            EGVAR(csw,kordTripod) = "vn_o_nva_static_pk_high";
+            EGVAR(csw,kordTripodLow) = "vn_o_nva_static_pk_low";
         };
     };
 
@@ -299,12 +300,12 @@ class GVAR(mortar_m29_carry): Launcher_Base_F {
 };
 
 class GVAR(mg42_carry): Launcher_Base_F {
-    displayName = CSTRING(csw_);
+    displayName = CSTRING(csw_mg42);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    // picture = QPATHTOF(UI\csw_m1919a4_ca.paa);
+    // picture = QPATHTOF(UI\csw_mg42_ca.paa);
 
     class ACE_CSW {
         type = "mount";
@@ -313,7 +314,7 @@ class GVAR(mg42_carry): Launcher_Base_F {
         deploy = "vn_o_vc_static_mg42_low";
 
         class assembleTo {
-            EGVAR(csw,m3Tripod) = "vn_o_vc_static_mg42_high";
+            EGVAR(csw,kordTripod) = "vn_o_vc_static_mg42_high";
         };
     };
 
