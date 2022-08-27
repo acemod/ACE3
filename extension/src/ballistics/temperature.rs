@@ -8,7 +8,7 @@ impl Temperature {
         Self(value + 273.15)
     }
 
-    pub fn new_kelvin(value: f64) -> Self {
+    pub const fn new_kelvin(value: f64) -> Self {
         Self(value)
     }
 
@@ -20,7 +20,7 @@ impl Temperature {
         self.0 - 273.15
     }
 
-    pub fn as_kelvin(&self) -> f64 {
+    pub const fn as_kelvin(&self) -> f64 {
         self.0
     }
 
@@ -37,19 +37,19 @@ impl FromArma for Temperature {
         match s.chars().next().unwrap() {
             'c' => {
                 let temp = s[1..].parse::<f64>().map_err(|e| format!("{}", e))?;
-                Ok(Temperature::new_celsius(temp))
+                Ok(Self::new_celsius(temp))
             }
             'f' => {
                 let temp = s[1..].parse::<f64>().map_err(|e| format!("{}", e))?;
-                Ok(Temperature::new_fahrenheit(temp))
+                Ok(Self::new_fahrenheit(temp))
             }
             'k' => {
                 let temp = s[1..].parse::<f64>().map_err(|e| format!("{}", e))?;
-                Ok(Temperature::new_kelvin(temp))
+                Ok(Self::new_kelvin(temp))
             }
             _ => {
                 let temp = s.parse::<f64>().map_err(|e| format!("{}", e))?;
-                Ok(Temperature::new_celsius(temp))
+                Ok(Self::new_celsius(temp))
             }
         }
     }

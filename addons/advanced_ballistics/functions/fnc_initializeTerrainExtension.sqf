@@ -25,7 +25,7 @@ private _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize
     "ace" callExtension ["ballistics:map:init", [worldName, _mapSize]]
 ) params ["_data", "_code"];
 if (_code != 0) exitWith {
-    WARN_1("Error initializing map")
+    ERROR_1("Error initializing map")
 };
 
 if (_data == "true") exitWith {

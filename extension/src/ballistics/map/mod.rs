@@ -16,7 +16,7 @@ fn init(name: String, size: u32) -> Result<bool, String> {
     // Safety: this is all single threaded, so no need to lock
     unsafe {
         if MAPS.is_none() {
-            MAPS = Some(HashMap::new())
+            MAPS = Some(HashMap::new());
         }
         CURRENT_MAP = Some(name.clone());
         if MAPS.as_ref().unwrap().contains_key(&name) {
@@ -29,15 +29,23 @@ fn init(name: String, size: u32) -> Result<bool, String> {
     Ok(false)
 }
 
-fn set(grid: u64, height: i64, num_objects: i64, surface_is_water: bool) {
+fn set(grid: u64, height: i64, num_objects: i64, surface_is_water: bool) -> Result<(), String> {
     // Safety: this is all single threaded, so no need to lock
     unsafe {
         if MAPS.is_none() {
-            return;
+            return Err("Map array not initialized".to_string());
         }
-        let map = MAPS.as_mut().unwrap().get_mut(&grid.to_string()).unwrap();
-        map.set_height(grid as usize, height);
-        map.set_building_num(grid as usize, num_objects);
-        map.set_surface_is_water(grid as usize, surface_is_water);
+        if let Some(map) = MAPS
+            .as_mut()
+            .unwrap()
+            .get_mut(CURRENT_MAP.as_ref().unwrap())
+        {
+            map.set_height(grid as usize, height);
+            map.set_building_num(grid as usize, num_objects);
+            map.set_surface_is_water(grid as usize, surface_is_water);
+            Ok(())
+        } else {
+            Err(format!("no map: {}", CURRENT_MAP.as_ref().unwrap()))
+        }
     }
 }

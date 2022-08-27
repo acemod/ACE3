@@ -36,14 +36,14 @@ if (!GVAR(atmosphereModeTBH)) then {
 };
 
 private _scopeBaseAngle = if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
-    (parseNumber ("ace" callExtension ["ballistics:zero_vanilla", [
+    parseNumber (("ace" callExtension ["ballistics:zero_vanilla", [
         _zeroRange,
         _muzzleVelocity,
         _airFriction,
         _boreHeight
     ]]) select 0)
 } else {
-    (parseNumber ("ace" callExtension ["ballistics:zero_advanced", [
+    parseNumber (("ace" callExtension ["ballistics:zero_advanced", [
         _zeroRange,
         _muzzleVelocity,
         _airFriction,

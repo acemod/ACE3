@@ -53,22 +53,22 @@ impl Bullet {
         bullet_position: Vector3,
         mut wind: Vector3,
         height_atl: f64,
-        time: f64,
+        tick_time: f64,
     ) -> Vector3 {
         let gravity_accel = Vector3::new(0.0, 0.0, -GRAVITY);
 
-        let mut tof = time - self.start_time;
-        let delta_time = time - self.last_frame;
+        let mut tof = tick_time - self.start_time;
+        let delta_time = tick_time - self.last_frame;
 
         let temperature =
             Temperature::new_celsius(self.temperature.as_celsius() - 0.0065 * bullet_position.z());
         let pressure = (1010.32 - 10.0 * self.overcast)
             * (1.0
                 - (0.0065 * (self.altitude + bullet_position.z()))
-                    / (temperature.as_kelvin() + 0.0065 * self.altitude))
-                .powf(5.255754495);
+                    / 0.0065f64.mul_add(self.altitude, temperature.as_kelvin()))
+            .powf(5.255754495);
 
-        self.last_frame = time;
+        self.last_frame = tick_time;
 
         if wind.magnitude() > 0.1 {
             let mut wind_attenuation = 1.0;
@@ -96,8 +96,8 @@ impl Bullet {
                     wind_source_obstacles.x(),
                     wind_source_obstacles.y(),
                 );
-                wind_attenuation *= 0.0f64
-                    .max((height_atl / roughness_length).ln() / (20.0 / roughness_length).ln());
+                wind_attenuation *=
+                    0.0f64.max(height_atl / roughness_length.log(20.0 / roughness_length));
             }
 
             wind *= wind_attenuation;
@@ -133,7 +133,7 @@ impl Bullet {
             let sound_speed = speed_of_sound(temperature);
             if self.transonic_stability_coefficient < 1.0
                 && true_velocity.magnitude() < 1.2 * sound_speed
-                && true_velocity.magnitude() > 0.8 * sound_speed
+                && true_velocity.magnitude() > sound_speed
             {
                 let distribution = Uniform::from(-10.0..10.0);
                 let offset = Vector3::new(
@@ -185,7 +185,7 @@ impl Bullet {
             if tof > 0.0 {
                 let bullet_dir = bullet_velocity.x().atan2(bullet_velocity.y());
                 let drift_accel = self.twist_direction
-                    * (0.0482252 * (self.stability_factor + 1.2))
+                    * (0.0482251 * (self.stability_factor + 1.2))
                     / tof.powf(0.17);
                 let drift_velocity = 0.0581025 * (self.stability_factor + 1.2) * tof.powf(0.83);
                 let drag_correction = (drift_velocity / true_velocity.magnitude()) * drag;
@@ -215,6 +215,6 @@ impl Bullet {
             time += dt;
         }
         self.bullet_velocity_last_frame = bullet_velocity_current_frame + velocity_offset;
-        self.bullet_velocity_last_frame
+        velocity_offset
     }
 }

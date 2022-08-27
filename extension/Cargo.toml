@@ -3,9 +3,14 @@ name = "ace"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "ace"
+crate-type = ["cdylib"]
+
 [dependencies]
 # arma-rs = "1.7.7"
-arma-rs = { git = "https://github.com/brettmayson/arma-rs", features = ["uuid"] }
+# arma-rs = { git = "https://github.com/brettmayson/arma-rs", features = ["uuid"] }
+arma-rs = { path = "P:/Arma Mods Reorganized/arma-rs/arma-rs", features = ["uuid"] }
 uuid = { version = "1.1.2", features = ["v4"] }
 rand = "0.8.5"
 rand_chacha = "0.3.1"

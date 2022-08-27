@@ -36,27 +36,27 @@ pub struct AdvancedBallistics {
 }
 
 impl AdvancedBallistics {
-    pub fn temperature(&self) -> Temperature {
+    pub const fn temperature(&self) -> Temperature {
         self.temperature
     }
 
-    pub fn pressure(&self) -> f64 {
+    pub const fn pressure(&self) -> f64 {
         self.pressure
     }
 
-    pub fn relative_humidity(&self) -> f64 {
+    pub const fn relative_humidity(&self) -> f64 {
         self.relative_humidity
     }
 
-    pub fn ballistic_coefficient(&self) -> f64 {
+    pub const fn ballistic_coefficient(&self) -> f64 {
         self.ballistic_coefficient
     }
 
-    pub fn drag_function(&self) -> DragFunction {
+    pub const fn drag_function(&self) -> DragFunction {
         self.drag_function
     }
 
-    pub fn atmosphere_model(&self) -> AtmosphereModel {
+    pub const fn atmosphere_model(&self) -> AtmosphereModel {
         self.atmosphere_model
     }
 }

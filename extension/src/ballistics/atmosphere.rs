@@ -6,9 +6,9 @@ pub enum AtmosphereModel {
 
 impl FromArma for AtmosphereModel {
     fn from_arma(s: String) -> Result<Self, String> {
-        match s.as_str() {
-            "icao" => Ok(AtmosphereModel::Icao),
-            "asm" => Ok(AtmosphereModel::Asm),
+        match s.to_lowercase().as_str() {
+            "icao" => Ok(Self::Icao),
+            "asm" => Ok(Self::Asm),
             _ => Err(String::from("unexpected model")),
         }
     }
@@ -55,18 +55,18 @@ pub fn calculate_air_density(
     pressure: f64,
     relative_humidity: f64,
 ) -> f64 {
-    let temperature = temperature.as_celsius();
     let pressure = pressure * 100.0;
     if relative_humidity > 0.0 {
         // 610.78 gives pressure in Pa - https://en.wikipedia.org/wiki/Density_of_air
-        let p_sat = 610.78 * 10_f64.powf(7.5 * temperature / (temperature + 237.3));
+        let p_sat = 610.78
+            * 10_f64.powf((7.5 * temperature.as_celsius()) / (temperature.as_celsius() + 237.3));
         let vapor_pressure = relative_humidity * p_sat;
         let partial_pressure = pressure - vapor_pressure;
 
         partial_pressure.mul_add(DRY_AIR_MOLAR_MASS, vapor_pressure * WATOR_VAPOR_MOLAR_MASS)
-            / (UNIVERSAL_GAS_CONSTANT * temperature)
+            / (UNIVERSAL_GAS_CONSTANT * temperature.as_kelvin())
     } else {
-        pressure / (SPECIFIC_GAST_CONSTANT_DRY_AIR * temperature)
+        pressure / (SPECIFIC_GAST_CONSTANT_DRY_AIR * temperature.as_kelvin())
     }
 }
 
@@ -93,6 +93,20 @@ pub fn speed_of_sound(temperature: Temperature) -> f64 {
 #[cfg(test)]
 mod tests {
     use crate::ballistics::temperature::Temperature;
+
+    #[test]
+    fn atmospheric_correction() {
+        assert_eq!(
+            super::calculate_atmospheric_correction(
+                0.583,
+                Temperature::new_celsius(15.0),
+                1005.0,
+                0.0,
+                crate::ballistics::AtmosphereModel::Icao
+            ),
+            0.5877847467528564 // previous ace: 0.580047
+        );
+    }
 
     #[test]
     fn speed_of_sound() {

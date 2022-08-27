@@ -62,17 +62,17 @@ fn new(
         transonic_stability_coefficient,
         bullet_velocity_last_frame: bullet_velocity,
         origin,
-        latitude,
+        latitude: latitude / 180.0 * std::f64::consts::PI,
         temperature,
         altitude,
         humidity,
         overcast,
         start_time,
-        last_frame: 0.0,
+        last_frame: start_time,
         rng: rand::SeedableRng::seed_from_u64({
             let k1 = (start_time / 2.0).round();
             let k2 = ammo_count as f64;
-            (0.5 * (k1 + k2) * (k1 + k2 + 1.0) + k2) as u64
+            (0.5 * (k1 + k2)).mul_add(k1 + k2 + 1.0, k2) as u64
         }),
     };
     // Safety: this is all single threaded, so no need to lock

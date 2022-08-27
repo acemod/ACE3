@@ -120,7 +120,7 @@ if (_caliber * _bulletLength * _bulletMass * _barrelTwist > 0) then {
     _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
 
-private _id = "ace" callExtension [
+("ace" callExtension [
     "ballistics:bullet:new", [
         _ammoCount,
         _airFriction,
@@ -140,6 +140,7 @@ private _id = "ace" callExtension [
         EGVAR(weather,currentOvercast),
         CBA_missionTime toFixed 6
     ]
-];
-
-GVAR(allBullets) set [_id, [_projectile, _caliber, _bulletTraceVisible]];
+]) params ["_id", "_code"];
+if (_code == 0) then {
+    GVAR(allBullets) set [_id, [_projectile, _caliber, _bulletTraceVisible]];
+};

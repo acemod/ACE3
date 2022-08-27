@@ -8,19 +8,19 @@ pub struct Vector3 {
 }
 
 impl Vector3 {
-    pub fn new(x: f64, y: f64, z: f64) -> Self {
+    pub const fn new(x: f64, y: f64, z: f64) -> Self {
         Self { x, y, z }
     }
 
-    pub fn x(&self) -> f64 {
+    pub const fn x(&self) -> f64 {
         self.x
     }
 
-    pub fn y(&self) -> f64 {
+    pub const fn y(&self) -> f64 {
         self.y
     }
 
-    pub fn z(&self) -> f64 {
+    pub const fn z(&self) -> f64 {
         self.z
     }
 
@@ -29,7 +29,8 @@ impl Vector3 {
     }
 
     pub fn magnitude_squared(&self) -> f64 {
-        self.x * self.x + self.y * self.y + self.z * self.z
+        self.x
+            .mul_add(self.x, self.y.mul_add(self.y, self.z * self.z))
     }
 
     pub fn normalize(&self) -> Self {

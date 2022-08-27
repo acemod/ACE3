@@ -3,7 +3,7 @@ use crate::common::Vector3;
 use super::{drag::calculate_retard, BallisticModel, GRAVITY};
 
 pub fn replicate_vanilla_zero(zero_range: f64, muzzle_velocity: f64, air_friction: f64) -> f64 {
-    let max_delta_time = 0.5;
+    let max_delta_time = 0.05;
     let mut time = 0.0;
     let mut current_shot_position = Vector3::default();
     let mut current_shot_velocity = Vector3::new(muzzle_velocity, 0.0, 0.0);
@@ -19,13 +19,13 @@ pub fn replicate_vanilla_zero(zero_range: f64, muzzle_velocity: f64, air_frictio
         } else {
             let delta_time = max_delta_time;
             current_shot_position += current_shot_velocity * delta_time;
+            time += delta_time;
             current_shot_velocity += current_shot_velocity
                 * (current_shot_velocity.magnitude() * air_friction * delta_time);
-            time += delta_time;
             current_shot_velocity -= Vector3::new(0.0, GRAVITY * delta_time, 0.0);
         }
     }
-    (current_shot_position.y() / zero_range).atan()
+    (-(current_shot_position.y() / zero_range).atan()).to_degrees()
 }
 
 const SPEED_OF_SOUND_AT_15C: f64 = 340.275;
@@ -52,13 +52,13 @@ pub fn calculate_zero(
         let mut vx = zero_angle.cos() * muzzle_velocity;
         let mut vy = zero_angle.sin() * muzzle_velocity;
 
-        let mut tof = 0.0f64;
+        let mut tof = 0.0;
 
         while tof < 8.0 && px < zero_range {
             lx = px;
             ly = py;
 
-            let v = (vx * vx + vy * vy).sqrt();
+            let v = vx.hypot(vy);
 
             let (ax, ay) = match &ballistic_model {
                 BallisticModel::Vanilla(air_friction) => {
@@ -77,7 +77,7 @@ pub fn calculate_zero(
                         v,
                         SPEED_OF_SOUND_AT_15C,
                     );
-                    ((vx / v * -retard) + gx, (vy / v * -retard) + gy)
+                    ((vx / v).mul_add(-retard, gx), (vy / v).mul_add(-retard, gy))
                 }
             };
 
@@ -98,5 +98,48 @@ pub fn calculate_zero(
             break;
         }
     }
-    zero_angle
+    zero_angle.to_degrees()
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::ballistics::{
+        AdvancedBallistics, AtmosphereModel, BallisticModel, DragFunction, Temperature,
+    };
+
+    #[test]
+    fn replicate_vanilla_zero() {
+        assert_eq!(
+            super::replicate_vanilla_zero(200.0, 89.0, 0.3),
+            0.16467323756834434 // old ace: 0.164672
+        )
+    }
+
+    #[test]
+    fn calc_zero_vanilla() {
+        assert_eq!(
+            super::calculate_zero(200.0, 89.0, 1.5, BallisticModel::Vanilla(0.3)),
+            0.13281857110203227 // old ace: 0.132818
+        )
+    }
+
+    #[test]
+    fn calc_zero_advanced() {
+        assert_eq!(
+            super::calculate_zero(
+                200.0,
+                89.0,
+                1.5,
+                BallisticModel::Advanced(AdvancedBallistics {
+                    ballistic_coefficient: 0.583,
+                    temperature: Temperature::new_celsius(15.0),
+                    pressure: 1005.0,
+                    relative_humidity: 0.0,
+                    atmosphere_model: AtmosphereModel::Icao,
+                    drag_function: DragFunction::G1,
+                })
+            ),
+            7.50985540380535 // old ace: 7.51363
+        )
+    }
 }
