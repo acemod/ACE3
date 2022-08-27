@@ -23,6 +23,7 @@ _child setTowParent objNull;
 if (!isServer) exitWith {};
 
 _child setVariable [QGVAR(parent), objNull, true];
+GVAR(allChildren) = GVAR(allChildren) - [_child];
 
 private _childChildHooks = _child getVariable [QGVAR(childHooks), []];
 if (_childChildHooks isEqualTo []) then {

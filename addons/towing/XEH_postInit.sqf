@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+
 ["MouseButtonUp", LINKFUNC(onMouseButtonUp)] call CBA_fnc_addDisplayHandler;
 GVAR(mouseLeft) = false;
 GVAR(mouseRight) = false;
@@ -31,3 +32,11 @@ if (!isServer) exitWith {};
         _parent setVariable [QGVAR(DeletedEHID), -1];
     };
 }] call CBA_fnc_addEventHandler;
+
+addMissionEventHandler ["PlayerConnected", {
+    if (GVAR(allChildren) isEqualTo []) exitWith {};
+    params ["", "", "", "_jip", "_owner"];
+    if (!_jip) exitWith {};
+    TRACE_2("pushing children",_owner,GVAR(allChildren));
+    [QGVAR(setTowParentAllChildren), [GVAR(allChildren)], _owner] call CBA_fnc_ownerEvent;
+}];

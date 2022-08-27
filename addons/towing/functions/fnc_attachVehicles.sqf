@@ -32,6 +32,7 @@ _child setTowParent _parent;
 if (!isServer) exitWith {};
 
 _child setVariable [QGVAR(parent), _parent, true];
+GVAR(allChildren) pushBack _child;
 
 {
     if (-1 == _x getVariable [QGVAR(DeletedEHID), -1]) then {
