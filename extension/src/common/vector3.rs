@@ -41,6 +41,14 @@ impl Vector3 {
             z: self.z / magnitude,
         }
     }
+
+    pub fn lerp(&self, other: &Self, t: f64) -> Self {
+        Self {
+            x: self.x + (other.x - self.x) * t,
+            y: self.y + (other.y - self.y) * t,
+            z: self.z + (other.z - self.z) * t,
+        }
+    }
 }
 
 impl FromArma for Vector3 {

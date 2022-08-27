@@ -16,6 +16,7 @@ dependencies = [
 [[package]]
 name = "arma-rs"
 version = "1.7.7"
+source = "git+https://github.com/brettmayson/arma-rs#2477f870065c3da17500a3eaa803ecef320ecfd7"
 dependencies = [
  "arma-rs-proc",
  "crossbeam-queue",

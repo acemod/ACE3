@@ -1,19 +1,17 @@
 use std::collections::HashMap;
 
 use arma_rs::Group;
-
-mod model;
-pub use model::Bullet;
 use uuid::Uuid;
-
-use crate::common::Vector3;
 
 use super::{
     atmosphere::AtmosphereModel,
     drag::DragFunction,
     map::{CURRENT_MAP, MAPS},
-    temperature::Temperature,
 };
+use crate::common::{Temperature, Vector3};
+
+mod model;
+pub use model::Bullet;
 
 pub fn group() -> Group {
     Group::new()

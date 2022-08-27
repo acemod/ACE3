@@ -1,6 +1,6 @@
-use crate::common::Vector3;
+use crate::common::{Vector3, GRAVITY};
 
-use super::{drag::calculate_retard, BallisticModel, GRAVITY};
+use super::{drag::calculate_retard, BallisticModel};
 
 pub fn replicate_vanilla_zero(zero_range: f64, muzzle_velocity: f64, air_friction: f64) -> f64 {
     let max_delta_time = 0.05;
@@ -111,7 +111,7 @@ mod tests {
     fn replicate_vanilla_zero() {
         assert_eq!(
             super::replicate_vanilla_zero(200.0, 89.0, 0.3),
-            0.16467323756834434 // old ace: 0.164672
+            0.16467323756834437 // old ace: 0.164672
         )
     }
 
@@ -132,7 +132,7 @@ mod tests {
                 1.5,
                 BallisticModel::Advanced(AdvancedBallistics {
                     ballistic_coefficient: 0.583,
-                    temperature: Temperature::new_celsius(15.0),
+                    temperature: Temperature::new_15c(),
                     pressure: 1005.0,
                     relative_humidity: 0.0,
                     atmosphere_model: AtmosphereModel::Icao,

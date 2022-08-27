@@ -186,7 +186,7 @@ mod tests {
                 DragFunction::G1,
                 0.583,
                 89.0,
-                speed_of_sound(Temperature::new_celsius(15.0))
+                speed_of_sound(Temperature::new_15c())
             ),
             2.103812727313926 // old ace: 2.10381
         )

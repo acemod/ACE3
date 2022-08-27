@@ -11,10 +11,8 @@ use crate::{
         },
         drag::{calculate_retard, DragFunction},
         map::Map,
-        temperature::Temperature,
-        GRAVITY,
     },
-    common::Vector3,
+    common::{Temperature, Vector3, GRAVITY_ACCEL},
 };
 
 const STD_AIR_DENSITY_ICAO: f64 = 1.22498;
@@ -55,8 +53,6 @@ impl Bullet {
         height_atl: f64,
         tick_time: f64,
     ) -> Vector3 {
-        let gravity_accel = Vector3::new(0.0, 0.0, -GRAVITY);
-
         let mut tof = tick_time - self.start_time;
         let delta_time = tick_time - self.last_frame;
 
@@ -115,7 +111,7 @@ impl Bullet {
 
                 velocity_offset += accel_ref * dt;
                 bullet_velocity -= accel_ref * dt;
-                bullet_velocity += gravity_accel * dt;
+                bullet_velocity += GRAVITY_ACCEL * dt;
 
                 time += dt;
             }
@@ -209,7 +205,7 @@ impl Bullet {
             );
 
             velocity_offset += accel * dt;
-            bullet_velocity -= accel * dt + gravity_accel * dt;
+            bullet_velocity -= accel * dt + GRAVITY_ACCEL * dt;
 
             tof += dt;
             time += dt;

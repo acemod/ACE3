@@ -1,3 +1,8 @@
+use arma_rs::FromArma;
+
+use super::map::Map;
+use crate::common::Temperature;
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum AtmosphereModel {
     Icao,
@@ -13,10 +18,6 @@ impl FromArma for AtmosphereModel {
         }
     }
 }
-
-use arma_rs::FromArma;
-
-use super::{map::Map, temperature::Temperature};
 
 const ROUGHNESS_LENGTHS: [f64; 10] = [0.0002, 0.0005, 0.0024, 0.03, 0.055, 0.1, 0.2, 0.4, 0.8, 1.6];
 
@@ -92,14 +93,14 @@ pub fn speed_of_sound(temperature: Temperature) -> f64 {
 
 #[cfg(test)]
 mod tests {
-    use crate::ballistics::temperature::Temperature;
+    use crate::common::Temperature;
 
     #[test]
     fn atmospheric_correction() {
         assert_eq!(
             super::calculate_atmospheric_correction(
                 0.583,
-                Temperature::new_celsius(15.0),
+                Temperature::new_15c(),
                 1005.0,
                 0.0,
                 crate::ballistics::AtmosphereModel::Icao
@@ -116,7 +117,7 @@ mod tests {
         );
         assert_eq!(super::speed_of_sound(Temperature::new_celsius(0.0)), 331.3);
         assert_eq!(
-            super::speed_of_sound(Temperature::new_celsius(15.0)),
+            super::speed_of_sound(Temperature::new_15c()),
             340.2750805118605
         );
     }

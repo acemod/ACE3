@@ -8,6 +8,10 @@ impl Temperature {
         Self(value + 273.15)
     }
 
+    pub const fn new_15c() -> Self {
+        Self::new_kelvin(288.15)
+    }
+
     pub const fn new_kelvin(value: f64) -> Self {
         Self(value)
     }

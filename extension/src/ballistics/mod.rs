@@ -1,22 +1,19 @@
 use arma_rs::Group;
 
-use self::{
-    atmosphere::{calculate_atmospheric_correction, speed_of_sound},
-    drag::calculate_retard,
-};
-
-const GRAVITY: f64 = 9.80665;
+use crate::common::Temperature;
 
 mod atmosphere;
 mod bullet;
 mod drag;
 mod map;
-mod temperature;
 mod zero;
 
-pub use self::{
-    atmosphere::AtmosphereModel, drag::DragFunction, map::Map, temperature::Temperature,
+use self::{
+    atmosphere::{calculate_atmospheric_correction, speed_of_sound},
+    drag::calculate_retard,
 };
+
+pub use self::{atmosphere::AtmosphereModel, drag::DragFunction, map::Map};
 
 pub enum BallisticModel {
     Vanilla(
