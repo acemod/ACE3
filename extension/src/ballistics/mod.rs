@@ -14,7 +14,9 @@ mod map;
 mod temperature;
 mod zero;
 
-pub use self::{atmosphere::AtmosphereModel, temperature::Temperature, map::Map, drag::DragFunction};
+pub use self::{
+    atmosphere::AtmosphereModel, drag::DragFunction, map::Map, temperature::Temperature,
+};
 
 pub enum BallisticModel {
     Vanilla(

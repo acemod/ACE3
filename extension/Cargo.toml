@@ -1,5 +1,5 @@
 [package]
-name = "extension"
+name = "ace"
 version = "0.1.0"
 edition = "2021"
 
