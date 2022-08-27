@@ -30,3 +30,6 @@
     "amovppnemstpsoptwbindnon_amovppnemevasoptwbindl",\
     "amovppnemstpsoptwbindnon_amovppnemevasoptwbindr"\
 ]
+
+#define BURN_MAX_INTENSITY 10
+#define BURN_MIN_INTENSITY 1
