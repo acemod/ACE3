@@ -340,6 +340,29 @@ class vn_o_nva_navy_static_sgm_low_01: vn_static_sgm_low_base {
     };
 };
 
+// Mk18 Grenade laucher
+class vn_static_mk18_base: StaticCannon {
+    EGVAR(dragging,canCarry) = 1;
+    EGVAR(dragging,canDrag) = 1;
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            selection = "mg1_otochlaven";
+        };
+    };
+
+    class ACE_CSW {
+        enabled = 1;
+        proxyWeapon = "vn_mk18_v_01";
+        magazineLocation = "_target selectionPosition 'mg1_magazine'";
+        disassembleWeapon = QGVAR(mk18_carry);
+        disassembleTurret = QEGVAR(csw,m3TripodLow);
+        ammoLoadTime = 1;
+        ammoUnloadTime = 8;
+        desiredAmmo = 24;
+    };
+};
+
 // --- Mortars -----------------------------------------------------------------
 
 // M29 Mortar

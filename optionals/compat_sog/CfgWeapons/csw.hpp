@@ -378,6 +378,32 @@ class GVAR(sgm_shield_carry): Launcher_Base_F {
     };
 };
 
+class GVAR(mk18_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_mk18);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    // picture = QPATHTOF(UI\csw_mk18_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,m3TripodLow) = "vn_b_army_static_mk18";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
 // --- Mortars -----------------------------------------------------------------
 
 class GVAR(mortar_m2_carry): Launcher_Base_F {

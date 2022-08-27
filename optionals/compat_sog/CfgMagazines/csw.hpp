@@ -64,6 +64,24 @@ class GVAR(sgm_250): vn_sgm_v_250_mag {
     mass = 160;
 };
 
+class vn_mk18_v_24_mag;
+class GVAR(mk18_24): vn_mk18_v_24_mag {
+    scope = 2;
+    type = 256;
+    model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
+    picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    mass = 160;
+};
+
+class vn_mk18_v_48_mag;
+class GVAR(mk18_48): vn_mk18_v_48_mag {
+    scope = 2;
+    type = 256;
+    model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
+    picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    mass = 220;
+};
+
 // --- Mortars -----------------------------------------------------------------
 
 class vn_mortar_m29_mag_he_x8;
