@@ -418,6 +418,23 @@ class vn_static_mortar_type53_base: vn_static_mortar_m29_base {
     };
 };
 
+// H-12 MLRS
+class vn_static_h12_base: Mortar_01_base_F {
+    EGVAR(dragging,canCarry) = 0;
+    EGVAR(dragging,canDrag) = 1;
+    EGVAR(dragging,dragPosition)[] = {0.4, 2.1, 0};
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            selection = "damagegun";
+        };
+    };
+
+    class ACE_CSW {
+        enabled = 0;
+    };
+};
+
 // --- Non-CSW Static Weapons --------------------------------------------------
 
 class vn_static_m45_base: vn_static_m2_high_base {
