@@ -4,11 +4,12 @@ class StaticWeapon: LandVehicle {
         class ACE_MainActions;
     };
 };
+class StaticCannon: StaticWeapon {};
+class StaticMGWeapon: StaticWeapon {};
 
 // --- Gun Turrets -------------------------------------------------------------
 
 // M2 Browning - High
-class StaticMGWeapon: StaticWeapon {};
 class vn_static_m2_high_base: StaticMGWeapon {
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
@@ -122,6 +123,7 @@ class vn_static_m60_low_base: vn_static_m60_high_base {
 class vn_static_at3_base: StaticMGWeapon {};
 class vn_static_tow_base: vn_static_at3_base {
     EGVAR(dragging,canCarry) = 0;
+    EGVAR(dragging,dragPosition)[] = {0.8, 1.3, 0};
 
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
@@ -432,6 +434,28 @@ class vn_o_static_rsna75: StaticMGWeapon {
 class vn_sa2: StaticMGWeapon {
     EGVAR(dragging,canCarry) = 0;
     EGVAR(dragging,canDrag) = 0;
+};
+
+class vn_static_m40a1rr_base: StaticCannon {
+    EGVAR(dragging,canDrag) = 1;
+    EGVAR(dragging,dragPosition)[] = {-0.3, 1.9, 0};
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            selection = "mg1_otochlaven";
+        };
+    };
+};
+
+class vn_static_type56rr_base: StaticCannon {
+    EGVAR(dragging,canDrag) = 1;
+    EGVAR(dragging,dragPosition)[] = {-0.1, 0.5, 0};
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            selection = "mg1_otocvez";
+        };
+    };
 };
 
 // --- Spiderholes -------------------------------------------------------------
