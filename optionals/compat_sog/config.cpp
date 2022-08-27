@@ -27,6 +27,9 @@ class CfgPatches {
             QGVAR(rpd_carry),
             QGVAR(pk_carry),
             QGVAR(mg42_carry),
+            QGVAR(sgm_carry),
+            QGVAR(sgm_shield_carry),
+            QGVAR(mk18_carry),
             QGVAR(mortar_m29_carry),
             QGVAR(mortar_m2_carry),
             QGVAR(mortar_type53_carry)
