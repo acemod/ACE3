@@ -125,14 +125,14 @@ class vn_static_tow_base: vn_static_at3_base {
 
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
-            position = "[-0.22, 0.28, -0.85]";
+            position = "[-1.04, 0.3, -0.5]";
         };
     };
 
     class ACE_CSW {
         enabled = 1;
         proxyWeapon = "vn_missile_tow_launcher";
-        magazineLocation = "[-0.22, 0.28, -0.5]";
+        magazineLocation = "_target selectionPosition 'magazine'";
         disassembleWeapon = QGVAR(tow_carry);
         disassembleTurret = QEGVAR(csw,m220Tripod);
         ammoLoadTime = 2;
