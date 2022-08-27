@@ -32,25 +32,23 @@ if (_initSpeedCoef < 0) then {
     _initSpeed = _initSpeed * (-1 * _initSpeedCoef);
 };
 
-private _zeroAngle = "ace_advanced_ballistics" callExtension format ["replicateVanillaZero:%1:%2:%3", _oldZeroRange, _initSpeed, _airFriction];
-private _vanillaZero = parseNumber _zeroAngle;
+private _vanillaZero = parseNumber (("ace" callExtension ["ballistics:replicate_vanilla_zero", [_oldZeroRange, _initSpeed, _airFriction]]) select 0);
 
 #ifdef DISABLE_DISPERSION
     _vanillaZero = 0;
 #endif
 
 private _trueZero = if (!_advancedBallistics) then {
-    _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _newZeroRange, _initSpeed, _airFriction, _boreHeight];
-    (parseNumber _zeroAngle)
+    parseNumber (("ace" callExtension ["ballistics:zero_vanilla", [_newZeroRange, _initSpeed, _airFriction, _boreHeight]]) select 0)
 } else {
     // Get Weapon and Ammo Configurations
     private _AmmoCacheEntry = uiNamespace getVariable format[QEGVAR(advanced_ballistics,%1), _ammo];
     if (isNil "_AmmoCacheEntry") then {
-         _AmmoCacheEntry = _ammo call EFUNC(advanced_ballistics,readAmmoDataFromConfig);
+        _AmmoCacheEntry = _ammo call EFUNC(advanced_ballistics,readAmmoDataFromConfig);
     };
     private _WeaponCacheEntry = uiNamespace getVariable format[QEGVAR(advanced_ballistics,%1), _weapon];
     if (isNil "_WeaponCacheEntry") then {
-         _WeaponCacheEntry = _weapon call EFUNC(advanced_ballistics,readWeaponDataFromConfig);
+        _WeaponCacheEntry = _weapon call EFUNC(advanced_ballistics,readWeaponDataFromConfig);
     };
 
     _AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
@@ -66,8 +64,19 @@ private _trueZero = if (!_advancedBallistics) then {
         _initSpeed = _initSpeed + _ammoTemperatureVelocityShift;
     };
 
-    _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZeroAB:%1:%2:%3:%4:%5:%6:%7:%8:%9", _newZeroRange, _initSpeed, _boreHeight, GVAR(zeroReferenceTemperature), GVAR(zeroReferenceBarometricPressure), GVAR(zeroReferenceHumidity), _ballisticCoefficients select 0, _dragModel, _atmosphereModel];
-    (parseNumber _zeroAngle)
+    parseNumber (
+        ("ace" callExtension ["ballistics:zero_advanced", [
+            _newZeroRange,
+            _initSpeed,
+            _boreHeight,
+            GVAR(zeroReferenceTemperature),
+            GVAR(zeroReferenceBarometricPressure),
+            GVAR(zeroReferenceHumidity),
+            _ballisticCoefficients select 0,
+            _dragModel,
+            _atmosphereModel
+        ]]) select 0
+    )
 };
 
 private _zeroAngleCorrection = _trueZero - _vanillaZero;

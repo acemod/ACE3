@@ -1,0 +1,109 @@
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum AtmosphereModel {
+    Icao,
+    Asm,
+}
+
+impl FromArma for AtmosphereModel {
+    fn from_arma(s: String) -> Result<Self, String> {
+        match s.as_str() {
+            "icao" => Ok(AtmosphereModel::Icao),
+            "asm" => Ok(AtmosphereModel::Asm),
+            _ => Err(String::from("unexpected model")),
+        }
+    }
+}
+
+use arma_rs::FromArma;
+
+use super::{map::Map, temperature::Temperature};
+
+const ROUGHNESS_LENGTHS: [f64; 10] = [0.0002, 0.0005, 0.0024, 0.03, 0.055, 0.1, 0.2, 0.4, 0.8, 1.6];
+
+pub fn calculate_roughness_length(map: &Map, x: f64, y: f64) -> f64 {
+    let grid_x = (x / 50.0).floor() as i64;
+    let grid_y = (y / 50.0).floor() as i64;
+    let grid_cell = (grid_x * map.grids() as i64) + grid_y;
+
+    if grid_cell >= 0 {
+        let grid_cell = grid_cell as usize;
+        if grid_cell < map.heights().len() && grid_cell < map.building_nums().len() {
+            let near_building_num = map.building_num(grid_cell);
+            let surface_is_water = map.surface_is_water(grid_cell);
+
+            if near_building_num == 0 && surface_is_water {
+                return 0.0005;
+            }
+
+            if near_building_num >= 10 {
+                return 1.6;
+            }
+
+            return ROUGHNESS_LENGTHS[2 + std::cmp::min(near_building_num as usize, 6)];
+        }
+    }
+
+    0.0024
+}
+
+const DRY_AIR_MOLAR_MASS: f64 = 0.028964;
+const WATOR_VAPOR_MOLAR_MASS: f64 = 0.018016;
+const UNIVERSAL_GAS_CONSTANT: f64 = 8.31432;
+const SPECIFIC_GAST_CONSTANT_DRY_AIR: f64 = UNIVERSAL_GAS_CONSTANT / DRY_AIR_MOLAR_MASS;
+pub fn calculate_air_density(
+    temperature: Temperature,
+    pressure: f64,
+    relative_humidity: f64,
+) -> f64 {
+    let temperature = temperature.as_celsius();
+    let pressure = pressure * 100.0;
+    if relative_humidity > 0.0 {
+        // 610.78 gives pressure in Pa - https://en.wikipedia.org/wiki/Density_of_air
+        let p_sat = 610.78 * 10_f64.powf(7.5 * temperature / (temperature + 237.3));
+        let vapor_pressure = relative_humidity * p_sat;
+        let partial_pressure = pressure - vapor_pressure;
+
+        partial_pressure.mul_add(DRY_AIR_MOLAR_MASS, vapor_pressure * WATOR_VAPOR_MOLAR_MASS)
+            / (UNIVERSAL_GAS_CONSTANT * temperature)
+    } else {
+        pressure / (SPECIFIC_GAST_CONSTANT_DRY_AIR * temperature)
+    }
+}
+
+const STD_AIR_DENSITY_ICAO: f64 = 1.22498;
+const STD_AIR_DENSITY_ASM: f64 = 1.20886;
+pub fn calculate_atmospheric_correction(
+    ballistic_coefficient: f64,
+    temperature: Temperature,
+    pressure: f64,
+    relative_humidity: f64,
+    atmosphere_model: AtmosphereModel,
+) -> f64 {
+    let air_density = calculate_air_density(temperature, pressure, relative_humidity);
+    match atmosphere_model {
+        AtmosphereModel::Icao => (STD_AIR_DENSITY_ICAO / air_density) * ballistic_coefficient,
+        AtmosphereModel::Asm => (STD_AIR_DENSITY_ASM / air_density) * ballistic_coefficient,
+    }
+}
+
+pub fn speed_of_sound(temperature: Temperature) -> f64 {
+    331.3 * (1.0 + temperature.as_celsius() / 273.15).sqrt()
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::ballistics::temperature::Temperature;
+
+    #[test]
+    fn speed_of_sound() {
+        assert_eq!(
+            super::speed_of_sound(Temperature::new_celsius(-15.0)),
+            322.07491299796527
+        );
+        assert_eq!(super::speed_of_sound(Temperature::new_celsius(0.0)), 331.3);
+        assert_eq!(
+            super::speed_of_sound(Temperature::new_celsius(15.0)),
+            340.2750805118605
+        );
+    }
+}

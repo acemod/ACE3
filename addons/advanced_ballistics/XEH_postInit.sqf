@@ -2,11 +2,9 @@
 
 #include "initKeybinds.sqf"
 
-GVAR(currentbulletID) = -1;
-
 GVAR(Protractor) = false;
 GVAR(ProtractorStart) = CBA_missionTime;
-GVAR(allBullets) = [];
+GVAR(allBullets) = createHashMap;
 GVAR(currentGrid) = 0;
 
 if (!hasInterface) exitWith {};

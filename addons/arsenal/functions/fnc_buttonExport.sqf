@@ -25,27 +25,27 @@ if (GVAR(shiftState)) then {
 
         switch true do {
             case (_index == -1): {
-                "ace_clipboard" callExtension (format ["[%1", endl]);
+                "ace" callExtension ["clipboard:append", [(format ["[%1", endl])]];
             };
 
             case (_index == _listLength): {
-                "ace_clipboard" callExtension "];";
+                "ace" callExtension ["clipboard:append", ["];"]];
             };
 
             default {
-                "ace_clipboard" callExtension (["    ",str (GVAR(defaultLoadoutsList) select _index), [",", ""] select (_index == _listLength - 1), endl] joinString "");
+                "ace" callExtension ["clipboard:append", [(["    ",str (GVAR(defaultLoadoutsList) select _index), [",", ""] select (_index == _listLength - 1), endl] joinString "")]];
             };
         };
     };
 
-    "ace_clipboard" callExtension "--COMPLETE--";
+    "ace" callExtension ["clipboard:complete", []];
 
     [_display, localize LSTRING(exportDefault)] call FUNC(message);
 } else {
 
     private _export = str ([GVAR(center)] call FUNC(getLoadout));
-    "ace_clipboard" callExtension (_export + ";");
-    "ace_clipboard" callExtension "--COMPLETE--";
+    "ace" callExtension ["clipboard:append", [(_export + ";")]];
+    "ace" callExtension ["clipboard:complete", []];
 
     [_display, localize LSTRING(exportCurrent)] call FUNC(message);
 };
