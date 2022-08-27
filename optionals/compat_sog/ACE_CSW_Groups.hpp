@@ -38,6 +38,10 @@ class ACE_CSW_Groups {
         vn_mg42_v_250_mag = 1;
     };
 
+    class GVAR(sgm_250) {
+        vn_sgm_v_250_mag = 1;
+    };
+
     // --- Mortars -----------------------------------------------------------------
 
     class GVAR(81mm_he)  {

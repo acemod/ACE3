@@ -277,6 +277,63 @@ class vn_static_mg42_low_base: vn_static_mg42_high_base {
     };
 };
 
+// SGM - Base
+class vn_static_sgm_base: StaticMGWeapon {
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            selection = "mg1_otocvez";
+        };
+    };
+
+    class ACE_CSW {
+        enabled = 1;
+        proxyWeapon = "vn_sgm_v_01";
+        magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
+        disassembleWeapon = QGVAR(sgm_carry);
+        disassembleTurret = QEGVAR(csw,kordTripod);
+        ammoLoadTime = 2;
+        ammoUnloadTime = 8;
+        desiredAmmo = 250;
+    };
+};
+
+// SGM - High
+class vn_static_sgm_high_base: vn_static_sgm_base {};
+
+// SGM - Low
+class vn_static_sgm_low_base: vn_static_sgm_high_base {
+    class ACE_CSW: ACE_CSW {
+        disassembleWeapon = QGVAR(sgm_carry);
+        disassembleTurret = QEGVAR(csw,kordTripodLow);
+    };
+};
+
+// SGM - Shield
+class vn_o_pl_static_sgm_low_01: vn_static_sgm_low_base {
+    class ACE_CSW: ACE_CSW {
+        disassembleWeapon = QGVAR(sgm_shield_carry);
+        disassembleTurret = QEGVAR(csw,kordTripodLow);
+    };
+};
+class vn_o_nva_65_static_sgm_low_01: vn_static_sgm_low_base {
+    class ACE_CSW: ACE_CSW {
+        disassembleWeapon = QGVAR(sgm_shield_carry);
+        disassembleTurret = QEGVAR(csw,kordTripodLow);
+    };
+};
+class vn_o_nva_static_sgm_low_01: vn_static_sgm_low_base {
+    class ACE_CSW: ACE_CSW {
+        disassembleWeapon = QGVAR(sgm_shield_carry);
+        disassembleTurret = QEGVAR(csw,kordTripodLow);
+    };
+};
+class vn_o_nva_navy_static_sgm_low_01: vn_static_sgm_low_base {
+    class ACE_CSW: ACE_CSW {
+        disassembleWeapon = QGVAR(sgm_shield_carry);
+        disassembleTurret = QEGVAR(csw,kordTripodLow);
+    };
+};
+
 // --- Mortars -----------------------------------------------------------------
 
 // M29 Mortar

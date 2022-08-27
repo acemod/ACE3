@@ -54,6 +54,16 @@ class GVAR(mg42_250): vn_mg42_v_250_mag {
     mass = 160;
 };
 
+class vn_sgm_v_250_mag;
+class GVAR(sgm_250): vn_sgm_v_250_mag {
+    scope = 2;
+    type = 256;
+    model = "\vn\objects_f_vietnam\supply\a2_ammo\pavn\vn_pavn_30_can.p3d";
+    picture = "\vn\weapons_f_vietnam\ui\icon_vn_pk_100_mag_ca.paa";
+    ACE_isBelt = 1;
+    mass = 160;
+};
+
 // --- Mortars -----------------------------------------------------------------
 
 class vn_mortar_m29_mag_he_x8;

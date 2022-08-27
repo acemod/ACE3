@@ -325,6 +325,58 @@ class GVAR(mg42_carry): Launcher_Base_F {
     };
 };
 
+class GVAR(sgm_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_sgm);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    // picture = QPATHTOF(UI\csw_sgm_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,kordTripod) = "vn_o_vc_static_sgm_high_01";
+            EGVAR(csw,kordTripodLow) = "vn_o_vc_static_sgm_low_02";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+class GVAR(sgm_shield_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_sgm_shield);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    // picture = QPATHTOF(UI\csw_sgm_shield_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,kordTripodLow) = "vn_o_vc_static_sgm_low_01";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
 // --- Mortars -----------------------------------------------------------------
 
 class GVAR(mortar_m2_carry): Launcher_Base_F {

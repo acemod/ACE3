@@ -249,6 +249,22 @@
             <Korean>[CSW] PK 총가방</Korean>
             <Chinesesimp>[班组] PK 枪袋</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_SGM">
+            <English>[CSW] SGM Gun Bag</English>
+            <German>[CSW] SGM Waffentasche</German>
+            <Japanese>[CSW] SGM ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na SGM</Polish>
+            <Korean>[CSW] SGM 총가방</Korean>
+            <Chinesesimp>[班组] SGM 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_SGM_Shield">
+            <English>[CSW] SGM (Shield) Gun Bag</English>
+            <German>[CSW] SGM (Schutzschild) Waffentasche</German>
+            <Japanese>[CSW] SGM (防盾) ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na SGM (z tarczą) </Polish>
+            <Korean>[CSW] SGM (방패) 총가방</Korean>
+            <Chinesesimp>[班组] SGM（防盾）枪袋</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M29">
             <English>[CSW] M29 Mortar Tube</English>
             <German>[CSW] M29 Mörserrohr</German>
