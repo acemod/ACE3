@@ -17,9 +17,10 @@
 
 params ["_vehicle"];
 
-if !("clan" in selectionNames _vehicle) exitWith {
-    TRACE_1("vehicle does not have 'clan' selection",_vehicle);
+private _selectionClan = getText (configOf _vehicle >> "selectionClan");
+if !(_selectionClan in selectionNames _vehicle) exitWith {
+    TRACE_2("vehicle does not have 'selectionClan' selection",_vehicle,_selectionLogo);
 };
 
 TRACE_1("replacing clan logo with empty texture",_vehicle);
-_vehicle setObjectTextureGlobal ["clan", "#(argb,1,1,1)color(0,0,0,0)"] // return
+_vehicle setObjectTextureGlobal [_selectionClan, "#(argb,1,1,1)color(0,0,0,0)"] // return
