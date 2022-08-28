@@ -18,11 +18,17 @@
  */
 params ["_unit", "_hook", ["_deletedObject", objNull]];
 
+private _hookParent = _hook getVariable QGVAR(hookParent);
+if (isNil "_hookParent") then {
+    _hookParent = _hook;
+    _hook = _hookParent getVariable QGVAR(hook);
+};
+
 private _parent = _hook getVariable QGVAR(parent);
 private _child = _hook getVariable QGVAR(child);
 private _rope = _hook getVariable QGVAR(rope);
 
-TRACE_6("detachRope",_unit,_parent,_child,_hook,_rope,_deletedObject);
+TRACE_7("detachRope",_unit,_parent,_child,_hook,_hookParent,_rope,_deletedObject);
 
 ropeDestroy _rope; // can run on client
 
@@ -34,8 +40,10 @@ if (!isNull _unit) then {
     };
 };
 
-detach _hook;
-deleteVehicle _hook;
+{
+    detach _x;
+    deleteVehicle _x;
+} forEach [_hook, _hookParent];
 
 // cleanup object variables and EHs only if function isn't called from Deleted EH
 if (isNull _deletedObject || {_parent isNotEqualTo _deletedObject}) then {

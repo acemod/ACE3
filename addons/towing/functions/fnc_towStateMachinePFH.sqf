@@ -91,6 +91,9 @@ switch (_state) do {
             [QGVAR(ropeAttachTo), [_child, _relativeAttachPos, _rope, GVAR(helper)], _parent] call CBA_fnc_targetEvent;
         };
 
+        private _hookParent = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "CAN_COLLIDE"];
+        _hookParent attachTo [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual _rope];
+
         private _hook = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "CAN_COLLIDE"];
         _hook attachTo [_child, _relativeAttachPos];
 
@@ -98,6 +101,9 @@ switch (_state) do {
         _hook setVariable [QGVAR(child), _child, true];
         _hook setVariable [QGVAR(rope), _rope, true];
         _hook setVariable [QGVAR(ropeClass), _ropeClass, true];
+        _hook setVariable [QGVAR(hookParent), _hookParent, true];
+
+        _hookParent setVariable [QGVAR(hook), _hook, true];
         _rope setVariable [QGVAR(hook), _hook, true];
 
         private _childParentHooks = _child getVariable [QGVAR(parentHooks), []];
