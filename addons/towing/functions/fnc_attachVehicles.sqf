@@ -51,7 +51,7 @@ if (-1 == _parent getVariable [QGVAR(RopeBreakEHID), -1]) then {
         params ["_parent", "_rope", "_child"];
         if (isNull _rope) exitWith {}; // happens
         private _hook = _rope getVariable [QGVAR(hook), objNull];
-        private _hookChild = _hook getVariable [QGVAR(child), objNull];
+        private _hookChild = _hook getVariable [QGVAR(vars), []] param [1, objNull];
         if (isNull _hook || {_child != _hookChild}) exitWith {}; // handle helper detach
         TRACE_4("RopeBreak EH",_parent,_rope,_child,_hook);
         [objNull, _hook] call FUNC(detachRope);

@@ -48,7 +48,7 @@ if (_intersections isNotEqualTo []) then {
                 _intersectObject isEqualTo _target
             } else {
                 [_intersectObject] call FUNC(isSuitableSimulation)
-                && { // ignore _intersectObject with parent
+                && { // ignore _intersectObject which has parent != _ignoreParent
                     private _intersectObjectParent = _intersectObject getVariable [QGVAR(parent), objNull];
                     isNull _intersectObjectParent || {_intersectObjectParent == _ignoreParent}
                 } && { // arma prevents making rings (ropeAttachTo silently fails)

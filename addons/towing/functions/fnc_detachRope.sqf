@@ -18,22 +18,19 @@
  */
 params ["_unit", "_hook", ["_deletedObject", objNull]];
 
-private _hookParent = _hook getVariable QGVAR(hookParent);
-if (isNil "_hookParent") then {
-    _hookParent = _hook;
-    _hook = _hookParent getVariable QGVAR(hook);
+private _hookVars = _hook getVariable QGVAR(vars);
+if (isNil "_hookVars") then { // this is hookParent
+    _hook = _hook getVariable QGVAR(hook);
+    _hookVars = _hook getVariable QGVAR(vars);
 };
 
-private _parent = _hook getVariable QGVAR(parent);
-private _child = _hook getVariable QGVAR(child);
-private _rope = _hook getVariable QGVAR(rope);
+_hookVars params ["_parent", "_child", "_rope", "_ropeClass", "_hookParent"];
 
 TRACE_7("detachRope",_unit,_parent,_child,_hook,_hookParent,_rope,_deletedObject);
 
 ropeDestroy _rope; // can run on client
 
 if (!isNull _unit) then {
-    private _ropeClass = _hook getVariable [QGVAR(ropeClass), ""];
     TRACE_1("rope",_ropeClass);
     if (!isNull _unit && {_ropeClass isNotEqualTo ""}) then {
         [_unit, _ropeClass, true] call CBA_fnc_addItem;
@@ -55,7 +52,6 @@ if (isNull _deletedObject || {_parent isNotEqualTo _deletedObject}) then {
         [QGVAR(cleanupParent), _parent] call CBA_fnc_serverEvent;
     };
 };
-
 if (isNull _deletedObject || {_child isNotEqualTo _deletedObject}) then {
     private _childParentHooks = _child getVariable [QGVAR(parentHooks), []];
     _childParentHooks = _childParentHooks - [_hook];

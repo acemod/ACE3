@@ -97,11 +97,9 @@ switch (_state) do {
         private _hook = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "CAN_COLLIDE"];
         _hook attachTo [_child, _relativeAttachPos];
 
-        _hook setVariable [QGVAR(parent), _parent, true];
-        _hook setVariable [QGVAR(child), _child, true];
-        _hook setVariable [QGVAR(rope), _rope, true];
-        _hook setVariable [QGVAR(ropeClass), _ropeClass, true];
-        _hook setVariable [QGVAR(hookParent), _hookParent, true];
+        // use array to decrease public setVar count
+        private _hookVars = [_parent, _child, _rope, _ropeClass, _hookParent];
+        _hook setVariable [QGVAR(vars), _hookVars, true];
 
         _hookParent setVariable [QGVAR(hook), _hook, true];
         _rope setVariable [QGVAR(hook), _hook, true];
