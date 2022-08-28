@@ -42,9 +42,9 @@ switch (_state) do {
             _args set [0, TOW_STATE_ATTACH_CHILD];
             // can't use unit hand because rope doesn't change position when hand moving
             // can't use createVehicleLocal because rope can be non-local (like parent) and it must be attached to global vehicle
-            GVAR(h) = createVehicle ["ace_refuel_helper", [0, 0, 0], [], 0, "CAN_COLLIDE"];////////////////////////////////////////////////////////
-            GVAR(h) attachTo [_unit, [0,0,0], "LeftHand", true];
-            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), GVAR(h), [0,0,0], _length];
+            GVAR(helper) = createVehicle [QGVAR(helper), [0, 0, 0], [], 0, "CAN_COLLIDE"];
+            GVAR(helper) attachTo [_unit, [0,0,0], "LeftHand", true];
+            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), GVAR(helper), [0,0,0], _length];
             _args set [3, _rope];
         };
 
@@ -83,12 +83,12 @@ switch (_state) do {
             GVAR(cancel) = false;
         };
 
-        detach GVAR(h);
-        // can't delete GVAR(h) without ropeDetach which requires local rope (==parent), so pass it to owner
+        detach GVAR(helper);
+        // can't delete GVAR(helper) without ropeDetach which requires local rope (==parent), so pass it to owner
         if (isNull (_child getVariable [QGVAR(parent), objNull])) then {
-            [QGVAR(attachVehicles), [_parent, _child, _relativeAttachPos, _rope, GVAR(h)]] call CBA_fnc_globalEvent;
+            [QGVAR(attachVehicles), [_parent, _child, _relativeAttachPos, _rope, GVAR(helper)]] call CBA_fnc_globalEvent;
         } else {
-            [QGVAR(ropeAttachTo), [_child, _relativeAttachPos, _rope, GVAR(h)], _parent] call CBA_fnc_targetEvent;
+            [QGVAR(ropeAttachTo), [_child, _relativeAttachPos, _rope, GVAR(helper)], _parent] call CBA_fnc_targetEvent;
         };
 
         private _hook = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "CAN_COLLIDE"];
@@ -113,8 +113,8 @@ switch (_state) do {
     case TOW_STATE_CANCEL: {
         TRACE_1("state cancel",_rope);
         if !(isNull _rope) then {
-            detach GVAR(h);
-            deleteVehicle GVAR(h);
+            detach GVAR(helper);
+            deleteVehicle GVAR(helper);
             ropeDestroy _rope;
         };
         [_unit, _ropeClass, true] call CBA_fnc_addItem;

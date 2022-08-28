@@ -41,18 +41,20 @@ class CfgVehicles {
     };
 
     class ThingX;
-    class GVAR(hook): ThingX {
-        displayName = "hook"; // not publicly visible, no stringtable needed
+    class GVAR(helper): ThingX {
+        displayName = "helper"; // not publicly visible, no stringtable needed
         scope = 1;
         scopeCurator = 1;
-        model = "\a3\Structures_F_Orange\VR\Helpers\Sign_sphere10cm_Geometry_F.p3d";
+        model = "\A3\Weapons_f\empty";
         destrType = "DestructNo";
-
+    };
+    class GVAR(hook): GVAR(helper) {
+        displayName = "hook";
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(detach);
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(detachRope));
-                distance = 2;
+                distance = TOW_ACTION_DISTANCE;
             };
         };
     };
