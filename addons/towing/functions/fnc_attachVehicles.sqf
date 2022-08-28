@@ -38,10 +38,16 @@ GVAR(allChildren) pushBack _child;
     if (-1 == _x getVariable [QGVAR(DeletedEHID), -1]) then {
         _x setVariable [QGVAR(DeletedEHID), _x addEventHandler ["Deleted", {
             params ["_entity"];
-            TRACE_1("Deleted EH",_entity);
+            private _childHooks = _entity getVariable [QGVAR(childHooks), []];
+            private _parentHooks = _entity getVariable [QGVAR(parentHooks), []];
+            TRACE_3("Deleted EH",_entity,_childHooks,_parentHooks);
             {
-                [objNull, _hook, _entity] call FUNC(detachRope);
-            } forEach ((_entity getVariable [QGVAR(childHooks), []]) + (_entity getVariable [QGVAR(parentHooks), []]));
+                [objNull, _x, _entity] call FUNC(detachRope);
+            } forEach (_childHooks + _parentHooks);
+            if (_childHooks isNotEqualTo []) then { // only for parent
+                // because deleting lasts for several frames we have to delete RB EH to fix double cleanup
+                _entity removeEventHandler ["RopeBreak", _entity getVariable QGVAR(RopeBreakEHID)];
+            };
         }]];
     };
 } forEach [_parent, _child];
