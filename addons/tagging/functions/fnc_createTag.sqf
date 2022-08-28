@@ -31,7 +31,7 @@ if (_texture == "") exitWith {
 
 if (_isVehicleTag) exitWith {
     TRACE_3("tagging vehicle",_object,typeOf _object,_texture);
-    _object setObjectTextureGlobal [getText (configOf _obj >> "selectionClan"), _texture];
+    _object setObjectTextureGlobal [getText (configOf _object >> "selectionClan"), _texture];
     // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
 };
 
