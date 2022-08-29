@@ -48,6 +48,8 @@ private _fnc_onFinish = {
     private _progress = _trench getVariable [QGVAR(progress), 0];
     _trench setVariable [QGVAR(progress), _progress, true];
 
+    [QGVAR(finished), [_unit, _trench]] call CBA_fnc_globalEvent;
+
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);
 };

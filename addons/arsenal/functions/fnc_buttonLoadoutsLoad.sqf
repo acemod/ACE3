@@ -34,7 +34,7 @@ private _loadout = switch GVAR(currentLoadoutsTab) do {
     };
 };
 
-GVAR(center) setUnitLoadout [_loadout, true];
+[GVAR(center), _loadout, true] call CBA_fnc_setLoadout;
 
 GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
 for "_index" from 0 to 15 do {
@@ -91,9 +91,21 @@ for "_index" from 0 to 15 do {
 call FUNC(updateUniqueItemsList);
 
 // Reapply insignia
-[GVAR(center), ""] call bis_fnc_setUnitInsignia;
-[GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
+if (QGVAR(insignia) in _loadout#1) then {
+    GVAR(currentInsignia) = _loadout#1 getOrDefault [QGVAR(insignia), ""];
+} else {
+    [GVAR(center), ""] call bis_fnc_setUnitInsignia;
+    [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
+};
+
+if (QGVAR(face) in _loadout#1) then {
+    GVAR(currentFace) = _loadout#1 getOrDefault [QGVAR(face), GVAR(currentFace)];
+};
+if (QGVAR(voice) in _loadout#1) then {
+    GVAR(currentVoice) = _loadout#1 getOrDefault [QGVAR(voice), GVAR(currentVoice)];
+};
 
 [(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutLoaded), _loadoutName] joinString " "] call FUNC(message);
 
-[QGVAR(onLoadoutLoad), [_loadout, _loadoutName]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutLoad), [_loadout#0, _loadoutName]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutLoadExtended), [_loadout, _loadoutName]] call CBA_fnc_localEvent;

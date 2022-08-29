@@ -556,4 +556,17 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 }, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; //ALT + R Key
 
+["CBA_loadoutSet", {
+    params ["_unit", "_loadout"];
+    // remove if with https://github.com/CBATeam/CBA_A3/pull/1548
+    if (count _loadout == 2) then {
+        _loadout = _loadout select 0;
+    };
+    _loadout params ["_primaryWeaponArray"];
+    if ((_primaryWeaponArray param [0, ""]) == "ACE_FakePrimaryWeapon") then {
+        TRACE_1("Ignoring fake gun",_primaryWeaponArray);
+        _loadout set [0, []];
+    };
+}] call CBA_fnc_addEventHandler;
+
 GVAR(commonPostInited) = true;

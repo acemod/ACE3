@@ -881,6 +881,22 @@
             <Czech>ACE Arzenál</Czech>
             <Turkish>ACE Arsenal</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutSubcategory">
+            <English>Loadouts</English>
+            <Spanish>Equipamiento</Spanish>
+            <French>Sets d'équipement</French>
+            <German>Ausrüstungen</German>
+            <Polish>Zestawy wyposażenia</Polish>
+            <Japanese>装備</Japanese>
+            <Italian>Equipaggiamenti</Italian>
+            <Korean>로드아웃</Korean>
+            <Chinese>裝備</Chinese>
+            <Chinesesimp>负载</Chinesesimp>
+            <Russian>Комплекты</Russian>
+            <Portuguese>Loadouts</Portuguese>
+            <Czech>Sady vybavení</Czech>
+            <Turkish>Kıyafetler</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_defaultLoadoutsTooltip">
             <English>Allow the use of the default loadouts tab</English>
             <Spanish>Permitir el uso de la pestaña de equipamientos por defecto</Spanish>
@@ -1448,6 +1464,15 @@
             <Spanish>Detona mediante impacto</Spanish>
             <Chinesesimp>碰炸引信</Chinesesimp>
             <Korean>충격 신관</Korean>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutsSaveFaceSetting">
+            <English>Save Face</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
+            <English>Save Voice</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
+            <English>Save Insignia</English>
         </Key>
     </Package>
 </Project>

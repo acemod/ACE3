@@ -223,8 +223,8 @@ if (_isBurning) exitWith {};
                             };
                         } else {
                             if ((animationState _unit) in PRONE_ROLLING_ANIMS) then {
-                                // decrease intensity of burn, but if its too high this wont do anything substantial
-                                _intensity = _intensity - (1 / _intensity);
+                                // decrease intensity of burn
+                                _intensity = _intensity * INTENSITY_DECREASE_MULT_ROLLING;
                             };
                         };
 
