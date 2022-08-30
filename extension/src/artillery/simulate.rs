@@ -2,6 +2,7 @@ use crate::common::{Temperature, Vector3, GRAVITY, GRAVITY_ACCEL};
 
 const TIME_STEP: f64 = 1.0 / 60.0;
 
+#[allow(clippy::too_many_arguments)]
 pub fn shot(
     fire_angle_rad: f64,
     muzzle_velocity: f64,
