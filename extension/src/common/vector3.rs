@@ -44,9 +44,9 @@ impl Vector3 {
 
     pub fn lerp(&self, other: &Self, t: f64) -> Self {
         Self {
-            x: self.x + (other.x - self.x) * t,
-            y: self.y + (other.y - self.y) * t,
-            z: self.z + (other.z - self.z) * t,
+            x: (other.x - self.x).mul_add(t, self.x),
+            y: (other.y - self.y).mul_add(t, self.y),
+            z: (other.z - self.z).mul_add(t, self.z),
         }
     }
 }

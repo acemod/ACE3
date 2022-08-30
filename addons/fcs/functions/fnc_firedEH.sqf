@@ -41,7 +41,7 @@ if (_zeroDistance > 0) then {
     private _weaponCombo = [_weapon, _magazine, _ammo, _zeroDistance];
     if (_weaponCombo isNotEqualTo (_gunner getVariable [QGVAR(lastWeaponCombo), []])) then {
         private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-        private _antiOffset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, 0, _zeroDistance];
+        private _antiOffset = "ace" callExtension ["fcs", [_initSpeed, _airFriction, 0, _zeroDistance]];
         _antiOffset = parseNumber _antiOffset;
 
         _gunner setVariable [QGVAR(lastWeaponCombo), _weaponCombo];

@@ -60,12 +60,16 @@ pub fn find_solution(
     if air_friction != 0.0 {
         let radicand = muzzle_velocity.powi(4)
             - GRAVITY
-                * (GRAVITY * range_to_hit.powi(2) + 2.0 * height_to_hit * muzzle_velocity.powi(2));
+                * GRAVITY.mul_add(
+                    range_to_hit.powi(2),
+                    2.0 * height_to_hit * muzzle_velocity.powi(2),
+                );
         if radicand < 0.0 {
             return (-1.0, -1.0, -1.0);
         }
         let radicand = radicand.sqrt();
-        let angle_root = ((muzzle_velocity.powi(2) + radicand) / (GRAVITY * range_to_hit)).atan();
+        let angle_root =
+            (muzzle_velocity.mul_add(muzzle_velocity, radicand) / (GRAVITY * range_to_hit)).atan();
         if angle_root > max_elev || angle_root < min_elev {
             return (-1.0, -1.0, -1.0);
         }
@@ -103,7 +107,7 @@ pub fn find_solution(
         if number_of_attempts > 50 {
             break;
         }
-        if !((search_max - search_min) > 0.000025) {
+        if (search_max - search_min) <= 0.000025 {
             break;
         }
     }

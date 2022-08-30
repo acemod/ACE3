@@ -30,6 +30,30 @@
     };
 }] call CBA_fnc_addEventHandler;
 
+addMissionEventHandler ["ExtensionCallback", {
+    params ["_name", "_function", "_data"];
+    if (_name isEqualTo "ace:artillery") then {
+        if (_function isEqualTo "calculate_table") then {
+            (parseSimpleArray _data) params ["_line", "_data"];
+            GVAR(tableData) set [_line, _data];
+            GVAR(tableSizeReceived) = GVAR(tableSizeReceived) + 1;
+            if (GVAR(tableSizeReceived) == GVAR(tableSizeActual)) then {
+                private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
+                private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
+                if (isNull _dialog) exitWith {true};
+                for "_i" from 0 to GVAR(tableSizeActual) do {
+                    _ctrlRangeTable lnbAdd GVAR(tableData) select _i;
+                };
+            };
+            private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
+            private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
+            if (isNull _dialog) exitWith {TRACE_1("dialog closed",_this);};
+            _ctrlRangeTable lnbAddRow ["", "", "", "", "", "", "", "", "", "", ""];
+            TRACE_1("table filled",_ctrlRangeTable);
+        };
+    };
+}]
+
 #ifdef DEBUG_MODE_FULL
 #include "dev\showShotInfo.sqf"
 #include "dev\checkConfigs.sqf"
