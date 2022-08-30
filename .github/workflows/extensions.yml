@@ -10,16 +10,16 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the source code
-        uses: actions/checkout@master
-        run: |
-          rustup toolchain update stable --no-self-update
-          rustup default stable
-          rustup component add clippy rustfmt
-      - name: Run rustfmt
-        run: cargo fmt -- --check
-      - name: Run clippy
-        run: cargo clippy --all -- -Dwarnings
+    - name: Checkout the source code
+      uses: actions/checkout@master
+      run: |
+        rustup toolchain update stable --no-self-update
+        rustup default stable
+        rustup component add clippy rustfmt
+    - name: Run rustfmt
+      run: cargo fmt -- --check
+    - name: Run clippy
+      run: cargo clippy --all -- -Dwarnings
 
   test:
     runs-on: ubuntu-latest
@@ -45,17 +45,17 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@master
     - name: Install stable Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          target: ${{ matrix.arrays.os.target }}
-          toolchain: stable
-          default: true
+      uses: actions-rs/toolchain@v1
+      with:
+        target: ${{ matrix.arrays.os.target }}
+        toolchain: stable
+        default: true
     - name: Build
       run: cargo build --verbose
     - name: Upload
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{ matrix.arrays.os.target }}
-          path: target/debug/ace.dll
-          if-no-files-found: error
-          retention-days: 30
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ matrix.arrays.os.target }}
+        path: target/debug/ace.dll
+        if-no-files-found: error
+        retention-days: 30
