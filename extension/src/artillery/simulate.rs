@@ -57,14 +57,11 @@ pub fn find_solution(
     max_elev: f64,
     high_arc: bool,
 ) -> (f64, f64, f64) {
-    if air_friction != 0.0 {
+    if air_friction == 0.0 {
         let radicand = muzzle_velocity.powi(4)
             - GRAVITY
-                * GRAVITY.mul_add(
-                    range_to_hit.powi(2),
-                    2.0 * height_to_hit * muzzle_velocity.powi(2),
-                );
-        if radicand < 0.0 {
+                * (GRAVITY * range_to_hit.powi(2) + 2.0 * height_to_hit * muzzle_velocity.powi(2));
+        if range_to_hit == 0.0 || radicand < 0.0 {
             return (-1.0, -1.0, -1.0);
         }
         let radicand = radicand.sqrt();
@@ -77,7 +74,7 @@ pub fn find_solution(
         return (range_to_hit, angle_root, tof);
     }
 
-    let number_of_attempts = 0;
+    let mut number_of_attempts = 50;
     let mut result_distance = -1.0;
     let mut result_time = -1.0;
     let mut search_min = min_elev;
@@ -85,6 +82,7 @@ pub fn find_solution(
     let mut current_error = 9999.0;
     let mut current_elevation = -1.0;
     loop {
+        number_of_attempts -= 1;
         current_elevation = (search_min + search_max) / 2.0;
         let (_, shot_distance, shot_time) = shot(
             current_elevation,
@@ -98,13 +96,15 @@ pub fn find_solution(
         );
         result_distance = shot_distance;
         result_time = shot_time;
-        current_error = range_to_hit - result_distance;
-        if (current_error > 0.0) ^ !high_arc {
-            search_min = current_elevation;
-        } else {
-            search_max = current_elevation;
+        if !result_distance.is_nan() {
+            current_error = range_to_hit - result_distance;
         }
-        if number_of_attempts > 50 {
+        if (current_error > 0.0) != !high_arc {
+            search_max = current_elevation;
+        } else {
+            search_min = current_elevation;
+        }
+        if number_of_attempts == 0 {
             break;
         }
         if (search_max - search_min) <= 0.000025 {
@@ -116,4 +116,39 @@ pub fn find_solution(
     }
 
     (result_distance, current_elevation, result_time)
+}
+
+#[cfg(test)]
+mod tests {
+    use std::f64::consts::FRAC_PI_4;
+
+    use crate::common::Temperature;
+
+    use super::shot;
+
+    #[test]
+    fn test_shot() {
+        let (x, y, result_time) = shot(
+            FRAC_PI_4,
+            400.0,
+            0.0,
+            0.0,
+            0.0,
+            Temperature::new_15c(),
+            1.0,
+            -0.00005,
+        );
+        assert_eq!(x, 0.0);
+        assert_eq!(y, 10331.03903821219); // old ace: 10330.2
+        assert_eq!(result_time, 50.31666666666509); // old ace: 50.3167
+    }
+
+    #[test]
+    fn find_solution() {
+        let (result_distance, current_elevation, result_time) =
+            super::find_solution(1000.0, 0.0, 400.0, -0.00005, -5.0, 80.0, true);
+        assert_eq!(result_distance, 999.6287373584529); // old ace: 999.773
+        assert_eq!(current_elevation, 1.5223753452301025); // old ace: 1.52238
+        assert_eq!(result_time, 69.69999999999733); // old ace: 69.7
+    }
 }

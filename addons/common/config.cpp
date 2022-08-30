@@ -67,8 +67,6 @@ class ACE_Rsc_Control_Base {
 #include "CompassControl.hpp"
 #include "CfgUIGrids.hpp"
 
-class ACE_Extensions {};
-
 class ACE_Tests {
     vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
     mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);

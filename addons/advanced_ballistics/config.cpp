@@ -18,10 +18,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "RscTitles.hpp"
 #include "ACE_Settings.hpp"
-
-class ACE_Extensions {
-    class ace_advanced_ballistics {
-        windows = 1;
-        client = 1;
-    };
-};

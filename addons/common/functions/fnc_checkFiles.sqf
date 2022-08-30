@@ -65,49 +65,6 @@ if (_oldCompats isNotEqualTo []) then {
 };
 
 ///////////////
-// check extensions
-///////////////
-private _platform = toLower (productVersion select 6);
-if (!isServer && {_platform in ["linux", "osx"]}) then {
-    // Linux and OSX client ports do not support extensions at all
-    INFO("Operating system does not support extensions");
-} else {
-    {
-        private _extension = configName _x;
-        private _isWindows = _platform == "windows" && {getNumber (_x >> "windows") == 1};
-        private _isLinux = _platform == "linux" && {getNumber (_x >> "linux") == 1};
-        private _isClient = hasInterface && {getNumber (_x >> "client") == 1};
-        private _isServer = !hasInterface && {getNumber (_x >> "server") == 1};
-
-        if ((_isWindows || _isLinux) && {_isClient || _isServer}) then {
-            private _versionEx = _extension callExtension "version";
-            if (_versionEx == "") then {
-                private _extensionFile = _extension;
-                if (productVersion select 7 == "x64") then {
-                    _extensionFile = format ["%1_x64", _extensionFile];
-                };
-
-                private _platformExt = [".dll", ".so"] select (_platform == "linux");
-                _extensionFile = format ["%1%2", _extensionFile, _platformExt];
-
-                private _errorMsg = format ["Extension %1 not found.", _extensionFile];
-                ERROR(_errorMsg);
-
-                if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
-                };
-            } else {
-                // Print the current extension version
-                INFO_2("Extension version: %1: %2",_extension,_versionEx);
-            };
-        };
-    } forEach ("true" configClasses (configFile >> "ACE_Extensions"));
-};
-if (isArray (configFile >> "ACE_Extensions" >> "extensions")) then {
-    WARNING("extensions[] array no longer supported");
-};
-
-///////////////
 // check server version/addons
 ///////////////
 if (isMultiplayer) then {

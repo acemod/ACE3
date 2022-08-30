@@ -36,25 +36,27 @@ fn calculate_table(
 
     std::thread::spawn(move || {
         if max_elev > min_elev {
-            let ranges = ranges
+            ranges
                 .collect::<Vec<u32>>()
                 .into_par_iter()
                 .enumerate()
-                .map(|(idx, range)| {
-                    (
-                        idx as u32,
-                        calc_range_table_line(
-                            range as f64,
-                            muzzle_velocity,
-                            air_friction,
-                            min_elev,
-                            max_elev,
-                            high_arc,
+                .for_each(|(idx, range)| {
+                    ctx.callback_data(
+                        "ace:artillery",
+                        "calculate_table",
+                        (
+                            idx as u32,
+                            calc_range_table_line(
+                                range as f64,
+                                muzzle_velocity,
+                                air_friction,
+                                min_elev,
+                                max_elev,
+                                high_arc,
+                            ),
                         ),
                     )
-                })
-                .collect::<Vec<_>>();
-            ctx.callback_data("ace:artillery", "calculate_table", ranges);
+                });
         }
     });
     (best_distance, ranges_size as u32)
@@ -80,12 +82,12 @@ fn find_max_angle(muzzle_velocity: f64, air_friction: f64) -> (f64, f64) {
             air_friction,
         );
         if result_distance > best_distance {
-            best_distance = result_distance;
             best_angle = test_angle;
+            best_distance = result_distance;
         }
 
         test_angle -= FRAC_PI_4 / 100.0;
-        if test_angle < 0.0 {
+        if test_angle <= 0.0 {
             break;
         }
     }
@@ -125,7 +127,7 @@ fn calc_range_table_line(
     let (dr_elev_adjust, dr_tof_adjust) = if line_height_elevation > 0.0 {
         (
             format!(
-                "{:.0}",
+                "{:.1}",
                 (line_height_elevation - line_elevation) * 3200.0 / PI
             ),
             format!("{:.1}", line_height_tof - line_tof),
@@ -314,4 +316,75 @@ fn calc_range_table_line(
         air_density_dec_offset,
         air_density_inc_offset,
     ])
+}
+
+#[cfg(test)]
+mod tests {
+    use std::{
+        sync::atomic::{AtomicI8, Ordering},
+        time::Duration,
+    };
+
+    use arma_rs::{Extension, FromArma, Result, Value};
+
+    use crate::artillery::calculate_table;
+
+    use super::find_max_angle;
+
+    #[test]
+    fn test_find_max_angle() {
+        let (best_angle, best_distance) = find_max_angle(400.0, -0.00005);
+        assert_eq!(best_angle, 0.7304202919596272); // old ace: 0.722566
+        assert_eq!(best_distance, 10393.560433295957); // old ace: 10391.8
+    }
+
+    #[test]
+    fn range_table_line() {
+        let extension = Extension::build()
+            .command("calc", calculate_table)
+            .finish()
+            .testing();
+        let (output, code) = unsafe {
+            extension.call(
+                "calc",
+                Some(vec![
+                    400.0.to_string(),
+                    (-0.00005).to_string(),
+                    (-5.0).to_string(),
+                    80.0.to_string(),
+                    true.to_string(),
+                ]),
+            )
+        };
+        println!("{:?}", output);
+        let (best, lines): (f64, i8) = FromArma::from_arma(output).unwrap();
+        assert_eq!(best, 10393.560433295957);
+        assert_eq!(lines, 103);
+        let recv: AtomicI8 = AtomicI8::new(0);
+        assert_eq!(code, 0);
+        let result = extension.callback_handler(
+            |name, func, data| {
+                recv.fetch_add(1, Ordering::SeqCst);
+                if name == "ace:artillery" && func == "calculate_table" {
+                    if let Some(Value::Array(data)) = data {
+                        if let Value::Array(line) = &data[1] {
+                            if line[0] == Value::String(String::from("3500")) {
+                                println!("data: {:?}", line);
+                            }
+                        }
+                    }
+                    if recv.load(Ordering::SeqCst) == lines {
+                        Result::Ok(())
+                    } else {
+                        Result::Continue
+                    }
+                } else {
+                    Result::Err(String::from("unexpected callback"))
+                }
+            },
+            Duration::from_secs(10),
+        );
+        println!("result: {:?}", result);
+        assert!(result.is_ok());
+    }
 }

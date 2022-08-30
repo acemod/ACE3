@@ -36,7 +36,7 @@ lnbClear _ctrlRangeTable;
 // Call extension with current data and start workers
 TRACE_5("callExtension:artillery:calculate_table",_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode));
 (
-    "ace" callExtension ["artillery:calculate_table", [_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode)]];
+    "ace" callExtension ["artillery:calculate_table", [_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode)]]
 ) params ["_data", "_code"];
 TRACE_1("",_code)
 
