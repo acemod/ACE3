@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: xd009642/tarpaulin
-      options: --security-opt seccomp=unconfine
+      options: --security-opt seccomp=unconfined
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
