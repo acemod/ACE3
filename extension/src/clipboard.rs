@@ -16,16 +16,16 @@ pub fn clear() {
     }
 }
 
-pub fn append(text: String) -> Result<(), String> {
+pub fn append(text: String) {
     unsafe {
         BUFFER.push_str(&text);
     }
-    Ok(())
 }
 
 pub fn complete() -> Result<(), String> {
-    let mut ctx = ClipboardContext::new().unwrap();
-    ctx.set_contents(unsafe { BUFFER.clone() }).unwrap();
+    let mut ctx = ClipboardContext::new().map_err(|e| e.to_string())?;
+    ctx.set_contents(unsafe { BUFFER.clone() })
+        .map_err(|e| e.to_string())?;
     unsafe {
         BUFFER = String::new();
     }

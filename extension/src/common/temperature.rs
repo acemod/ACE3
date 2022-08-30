@@ -20,15 +20,15 @@ impl Temperature {
         Self((value - 32.0) * 5.0 / 9.0 + 273.15)
     }
 
-    pub fn as_celsius(&self) -> f64 {
+    pub fn as_celsius(self) -> f64 {
         self.0 - 273.15
     }
 
-    pub const fn as_kelvin(&self) -> f64 {
+    pub const fn as_kelvin(self) -> f64 {
         self.0
     }
 
-    pub fn as_fahrenheit(&self) -> f64 {
+    pub fn as_fahrenheit(self) -> f64 {
         (self.0 - 273.15) * 9.0 / 5.0 + 32.0
     }
 }
@@ -38,7 +38,7 @@ impl FromArma for Temperature {
         if s.is_empty() {
             return Err(String::from("unexpected empty string"));
         }
-        match s.chars().next().unwrap() {
+        match s.chars().next().unwrap_or(' ') {
             'c' => {
                 let temp = s[1..].parse::<f64>().map_err(|e| format!("{}", e))?;
                 Ok(Self::new_celsius(temp))

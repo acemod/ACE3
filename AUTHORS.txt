@@ -6,6 +6,7 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+BrettMayson <brett@mayson.io>
 bux578 <github@jonathandavid.de>
 commy2
 Dahlgren
@@ -57,7 +58,6 @@ Bla1337
 BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
 Brakoviejo
-Brett Mayson
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>

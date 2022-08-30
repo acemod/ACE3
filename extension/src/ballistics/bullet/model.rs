@@ -53,6 +53,7 @@ impl Bullet {
         height_atl: f64,
         tick_time: f64,
     ) -> Vector3 {
+        const EARTH_ANGULAR_SPEED: f64 = 0.000_072_92;
         let mut tof = tick_time - self.start_time;
         let delta_time = tick_time - self.last_frame;
 
@@ -62,7 +63,7 @@ impl Bullet {
             * (1.0
                 - (0.0065 * (self.altitude + bullet_position.z()))
                     / 0.0065f64.mul_add(self.altitude, temperature.as_kelvin()))
-            .powf(5.255754495);
+            .powf(5.255_754_495);
 
         self.last_frame = tick_time;
 
@@ -181,9 +182,9 @@ impl Bullet {
             if tof > 0.0 {
                 let bullet_dir = bullet_velocity.x().atan2(bullet_velocity.y());
                 let drift_accel = self.twist_direction
-                    * (0.0482251 * (self.stability_factor + 1.2))
+                    * (0.048_225_1 * (self.stability_factor + 1.2))
                     / tof.powf(0.17);
-                let drift_velocity = 0.0581025 * (self.stability_factor + 1.2) * tof.powf(0.83);
+                let drift_velocity = 0.058_102_5 * (self.stability_factor + 1.2) * tof.powf(0.83);
                 let drag_correction = (drift_velocity / true_velocity.magnitude()) * drag;
                 let magnitude = (drift_accel + drag_correction) * dt;
                 let offset = Vector3::new(
@@ -196,7 +197,6 @@ impl Bullet {
             }
 
             let lat = self.latitude;
-            const EARTH_ANGULAR_SPEED: f64 = 0.00007292;
             let accel = Vector3::new(
                 2.0 * EARTH_ANGULAR_SPEED
                     * (bullet_velocity.y() * lat.sin() - bullet_velocity.x() * lat.cos()),

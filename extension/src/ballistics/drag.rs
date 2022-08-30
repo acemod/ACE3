@@ -27,6 +27,7 @@ impl FromArma for DragFunction {
 }
 
 impl DragFunction {
+    #[must_use]
     pub fn drag_coefficients(&self) -> Vec<f64> {
         match self {
             Self::G1 => vec![
@@ -94,7 +95,8 @@ impl DragFunction {
         }
     }
 
-    fn mach_numbers(&self) -> Vec<f64> {
+    #[must_use]
+    fn mach_numbers(self) -> Vec<f64> {
         match self {
             Self::G1 => vec![
                 0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.70,
@@ -150,7 +152,7 @@ impl DragFunction {
     }
 }
 
-const BC_CONVERSION_FACTOR: f64 = 0.00068418;
+const BC_CONVERSION_FACTOR: f64 = 0.000_684_18;
 pub fn calculate_retard(
     drag_function: DragFunction,
     ballistic_coefficient: f64,
@@ -175,20 +177,22 @@ pub fn calculate_retard(
 
 #[cfg(test)]
 mod tests {
+    use std::f64::EPSILON;
+
     use crate::ballistics::{atmosphere::speed_of_sound, Temperature};
 
     use super::DragFunction;
 
     #[test]
     fn retard() {
-        assert_eq!(
+        assert!(
             super::calculate_retard(
                 DragFunction::G1,
                 0.583,
                 89.0,
                 speed_of_sound(Temperature::new_15c())
-            ),
-            2.103812727313926 // old ace: 2.10381
-        )
+            ) - 2.103_812_727_313_926
+                < EPSILON // old ace: 2.10381
+        );
     }
 }

@@ -2,7 +2,7 @@ use crate::common::{Vector3, GRAVITY};
 
 use super::{drag::calculate_retard, BallisticModel};
 
-pub fn replicate_vanilla_zero(zero_range: f64, muzzle_velocity: f64, air_friction: f64) -> f64 {
+pub fn replicate_vanilla(zero_range: f64, muzzle_velocity: f64, air_friction: f64) -> f64 {
     let max_delta_time = 0.05;
     let mut time = 0.0;
     let mut current_shot_position = Vector3::default();
@@ -16,21 +16,20 @@ pub fn replicate_vanilla_zero(zero_range: f64, muzzle_velocity: f64, air_frictio
             current_shot_velocity -= Vector3::new(0.0, GRAVITY * delta_time, 0.0);
             current_shot_position += current_shot_velocity * delta_time;
             break;
-        } else {
-            let delta_time = max_delta_time;
-            current_shot_position += current_shot_velocity * delta_time;
-            time += delta_time;
-            current_shot_velocity += current_shot_velocity
-                * (current_shot_velocity.magnitude() * air_friction * delta_time);
-            current_shot_velocity -= Vector3::new(0.0, GRAVITY * delta_time, 0.0);
         }
+        let delta_time = max_delta_time;
+        current_shot_position += current_shot_velocity * delta_time;
+        time += delta_time;
+        current_shot_velocity +=
+            current_shot_velocity * (current_shot_velocity.magnitude() * air_friction * delta_time);
+        current_shot_velocity -= Vector3::new(0.0, GRAVITY * delta_time, 0.0);
     }
     (-(current_shot_position.y() / zero_range).atan()).to_degrees()
 }
 
 const SPEED_OF_SOUND_AT_15C: f64 = 340.275;
 
-pub fn calculate_zero(
+pub fn calculate(
     zero_range: f64,
     muzzle_velocity: f64,
     bore_height: f64,
@@ -103,30 +102,32 @@ pub fn calculate_zero(
 
 #[cfg(test)]
 mod tests {
+    use std::f64::EPSILON;
+
     use crate::ballistics::{
         AdvancedBallistics, AtmosphereModel, BallisticModel, DragFunction, Temperature,
     };
 
     #[test]
     fn replicate_vanilla_zero() {
-        assert_eq!(
-            super::replicate_vanilla_zero(200.0, 89.0, 0.3),
-            0.16467323756834437 // old ace: 0.164672
-        )
+        assert!(
+            super::replicate_vanilla(200.0, 89.0, 0.3) - 0.164_673_237_568_344_37 < EPSILON // old ace: 0.164672
+        );
     }
 
     #[test]
     fn calc_zero_vanilla() {
-        assert_eq!(
-            super::calculate_zero(200.0, 89.0, 1.5, BallisticModel::Vanilla(0.3)),
-            0.13281857110203227 // old ace: 0.132818
-        )
+        assert!(
+            super::calculate(200.0, 89.0, 1.5, BallisticModel::Vanilla(0.3))
+                - 0.132_818_571_102_032_27
+                < EPSILON // old ace: 0.132818
+        );
     }
 
     #[test]
     fn calc_zero_advanced() {
-        assert_eq!(
-            super::calculate_zero(
+        assert!(
+            super::calculate(
                 200.0,
                 89.0,
                 1.5,
@@ -138,8 +139,8 @@ mod tests {
                     atmosphere_model: AtmosphereModel::Icao,
                     drag_function: DragFunction::G1,
                 })
-            ),
-            7.50985540380535 // old ace: 7.51363
-        )
+            ) - 7.509_855_403_805_35
+                < EPSILON // old ace: 7.51363
+        );
     }
 }

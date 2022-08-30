@@ -1,0 +1,59 @@
+[tasks.install_x32]
+command = "rustup"
+args = ["toolchain", "install", "stable-i686-pc-windows-msvc"]
+
+[tasks.build_x64_debug]
+install_crate = false
+command = "cargo"
+args = ["+stable-x86_64-pc-windows-msvc", "build"]
+
+[tasks.build_x64_release]
+install_crate = false
+command = "cargo"
+args = ["+stable-x86_64-pc-windows-msvc", "build", "--release"]
+
+[tasks.build_x32_debug]
+install_crate = false
+command = "cargo"
+args = ["+stable-i686-pc-windows-msvc", "build", "--target", "i686-pc-windows-msvc"]
+dependencies = ["install_x32"]
+
+[tasks.build_x32_release]
+install_crate = false
+command = "cargo"
+args = ["+stable-i686-pc-windows-msvc", "build", "--release", "--target", "i686-pc-windows-msvc"]
+dependencies = ["install_x32"]
+
+[tasks.move_x64_debug]
+script_runner = "@shell"
+script = '''
+cp ../target/debug/ace.dll ../ace_x64.dll
+'''
+dependencies = ["build_x64_debug"]
+
+[tasks.move_x64_release]
+script_runner = "@shell"
+script = '''
+cp ../target/release/ace.dll ../ace_x64.dll
+'''
+dependencies = ["build_x64_release"]
+
+[tasks.move_x32_debug]
+script_runner = "@shell"
+script = '''
+cp ../target/i686-pc-windows-msvc/debug/ace.dll ../ace.dll
+'''
+dependencies = ["build_x32_debug"]
+
+[tasks.move_x32_release]
+script_runner = "@shell"
+script = '''
+cp ../target/i686-pc-windows-msvc/release/ace.dll ../ace.dll
+'''
+dependencies = ["build_x32_release"]
+
+[tasks.debug]
+dependencies = ["move_x32_debug", "move_x64_debug"]
+
+[tasks.release]
+dependencies = ["move_x32_release", "move_x64_release"]

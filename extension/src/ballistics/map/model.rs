@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub struct Map {
     heights: Vec<i64>,
     building_nums: Vec<i64>,
@@ -7,6 +8,7 @@ pub struct Map {
 }
 
 impl Map {
+    #[must_use]
     pub fn new(size: u32, grids: u32) -> Self {
         Self {
             heights: vec![0; (size * grids) as usize],
@@ -17,10 +19,12 @@ impl Map {
         }
     }
 
+    #[must_use]
     pub const fn heights(&self) -> &Vec<i64> {
         &self.heights
     }
 
+    #[must_use]
     pub fn height(&self, cell: usize) -> i64 {
         self.heights[cell]
     }
@@ -29,10 +33,12 @@ impl Map {
         self.heights[cell] = height;
     }
 
+    #[must_use]
     pub const fn building_nums(&self) -> &Vec<i64> {
         &self.building_nums
     }
 
+    #[must_use]
     pub fn building_num(&self, index: usize) -> i64 {
         self.building_nums[index]
     }
@@ -41,6 +47,7 @@ impl Map {
         self.building_nums[index] = num;
     }
 
+    #[must_use]
     pub fn surface_is_water(&self, index: usize) -> bool {
         self.surface_is_water[index]
     }
@@ -49,10 +56,12 @@ impl Map {
         self.surface_is_water[index] = is_water;
     }
 
+    #[must_use]
     pub const fn size(&self) -> u32 {
         self.size
     }
 
+    #[must_use]
     pub const fn grids(&self) -> u32 {
         self.grids
     }

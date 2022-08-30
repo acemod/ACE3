@@ -20,3 +20,4 @@ sqfvm.exe
 ArmaScriptCompiler.exe
 *.sqfc
 target/
+*.dll

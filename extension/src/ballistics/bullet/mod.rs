@@ -94,24 +94,34 @@ fn simulate(
 ) -> Result<Vector3, String> {
     // Safety: this is all single threaded, so no need to lock
     unsafe {
-        if let Some(map) = MAPS.as_ref() {
-            let bullet = {
-                if BULLET_LIST.is_none() {
-                    BULLET_LIST = Some(HashMap::new());
-                }
-                BULLET_LIST.as_mut().unwrap().get_mut(&id).unwrap()
-            };
-            Ok(bullet.simulate(
-                map.get(CURRENT_MAP.as_ref().unwrap()).unwrap(),
-                bullet_velocity,
-                bullet_position,
-                wind,
-                altitude,
-                time,
-            ))
-        } else {
-            Err("No map loaded".to_string())
-        }
+        MAPS.as_ref().map_or_else(
+            || Err("No map loaded".to_string()),
+            |map| {
+                let bullet = {
+                    if BULLET_LIST.is_none() {
+                        BULLET_LIST = Some(HashMap::new());
+                    }
+                    BULLET_LIST
+                        .as_mut()
+                        .unwrap()
+                        .get_mut(&id)
+                        .ok_or_else(|| "Bullet not found".to_string())?
+                };
+                Ok(bullet.simulate(
+                    map.get(
+                        CURRENT_MAP
+                            .as_ref()
+                            .ok_or_else(|| "No current map".to_string())?,
+                    )
+                    .ok_or_else(|| "Current map not loaded".to_string())?,
+                    bullet_velocity,
+                    bullet_position,
+                    wind,
+                    altitude,
+                    time,
+                ))
+            },
+        )
     }
 }
 

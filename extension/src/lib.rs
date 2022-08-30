@@ -1,3 +1,8 @@
+#![deny(clippy::all)]
+#![deny(missing_debug_implementations)]
+
+//! ACE3 Extension for quick maths and OS APIs
+
 use arma_rs::{arma, Extension};
 
 mod artillery;

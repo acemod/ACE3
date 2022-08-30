@@ -14,10 +14,10 @@ pub fn shot(
     air_friction: f64,
 ) -> (f64, f64, f64) {
     let k_coefficient = -1.0 * air_density * air_friction;
-    let powder_effects = if air_friction != 0.0 {
-        (temperature.as_kelvin() / 288.13 - 1.0) / 40.0 + 1.0
-    } else {
+    let powder_effects = if air_friction == 0.0 {
         1.0
+    } else {
+        (temperature.as_kelvin() / 288.13 - 1.0) / 40.0 + 1.0
     };
 
     let mut current_time = 0.0;
@@ -60,7 +60,10 @@ pub fn find_solution(
     if air_friction == 0.0 {
         let radicand = muzzle_velocity.powi(4)
             - GRAVITY
-                * (GRAVITY * range_to_hit.powi(2) + 2.0 * height_to_hit * muzzle_velocity.powi(2));
+                * GRAVITY.mul_add(
+                    range_to_hit.powi(2),
+                    2.0 * height_to_hit * muzzle_velocity.powi(2),
+                );
         if range_to_hit == 0.0 || radicand < 0.0 {
             return (-1.0, -1.0, -1.0);
         }
@@ -99,7 +102,7 @@ pub fn find_solution(
         if !result_distance.is_nan() {
             current_error = range_to_hit - result_distance;
         }
-        if (current_error > 0.0) != !high_arc {
+        if (current_error > 0.0) ^ !high_arc {
             search_max = current_elevation;
         } else {
             search_min = current_elevation;
@@ -107,7 +110,7 @@ pub fn find_solution(
         if number_of_attempts == 0 {
             break;
         }
-        if (search_max - search_min) <= 0.000025 {
+        if (search_max - search_min) <= 0.000_025 {
             break;
         }
     }
@@ -120,7 +123,7 @@ pub fn find_solution(
 
 #[cfg(test)]
 mod tests {
-    use std::f64::consts::FRAC_PI_4;
+    use std::f64::{consts::FRAC_PI_4, EPSILON};
 
     use crate::common::Temperature;
 
@@ -138,17 +141,17 @@ mod tests {
             1.0,
             -0.00005,
         );
-        assert_eq!(x, 0.0);
-        assert_eq!(y, 10331.03903821219); // old ace: 10330.2
-        assert_eq!(result_time, 50.31666666666509); // old ace: 50.3167
+        assert!(x < EPSILON);
+        assert!(y - 10_331.039_038_212_19 < EPSILON); // old ace: 10330.2
+        assert!(result_time - 50.316_666_666_665_09 < EPSILON); // old ace: 50.3167
     }
 
     #[test]
     fn find_solution() {
         let (result_distance, current_elevation, result_time) =
             super::find_solution(1000.0, 0.0, 400.0, -0.00005, -5.0, 80.0, true);
-        assert_eq!(result_distance, 999.6287373584529); // old ace: 999.773
-        assert_eq!(current_elevation, 1.5223753452301025); // old ace: 1.52238
-        assert_eq!(result_time, 69.69999999999733); // old ace: 69.7
+        assert!(result_distance - 999.628_737_358_452_9 < EPSILON); // old ace: 999.773
+        assert!(current_elevation - 1.522_375_345_230_102_5 < EPSILON); // old ace: 1.52238
+        assert!(result_time - 69.699_999_999_997_33 < EPSILON); // old ace: 69.7
     }
 }

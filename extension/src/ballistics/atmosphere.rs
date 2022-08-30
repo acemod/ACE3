@@ -47,9 +47,9 @@ pub fn calculate_roughness_length(map: &Map, x: f64, y: f64) -> f64 {
     0.0024
 }
 
-const DRY_AIR_MOLAR_MASS: f64 = 0.028964;
-const WATOR_VAPOR_MOLAR_MASS: f64 = 0.018016;
-const UNIVERSAL_GAS_CONSTANT: f64 = 8.31432;
+const DRY_AIR_MOLAR_MASS: f64 = 0.028_964;
+const WATOR_VAPOR_MOLAR_MASS: f64 = 0.018_016;
+const UNIVERSAL_GAS_CONSTANT: f64 = 8.314_32;
 const SPECIFIC_GAST_CONSTANT_DRY_AIR: f64 = UNIVERSAL_GAS_CONSTANT / DRY_AIR_MOLAR_MASS;
 pub fn calculate_air_density(
     temperature: Temperature,
@@ -93,32 +93,31 @@ pub fn speed_of_sound(temperature: Temperature) -> f64 {
 
 #[cfg(test)]
 mod tests {
+    use std::f64::EPSILON;
+
     use crate::common::Temperature;
 
     #[test]
     fn atmospheric_correction() {
-        assert_eq!(
+        assert!(
             super::calculate_atmospheric_correction(
                 0.583,
                 Temperature::new_15c(),
                 1005.0,
                 0.0,
                 crate::ballistics::AtmosphereModel::Icao
-            ),
-            0.5877847467528564 // previous ace: 0.580047
+            ) - 0.587_784_746_752_856_4
+                < EPSILON // previous ace: 0.580047
         );
     }
 
     #[test]
     fn speed_of_sound() {
-        assert_eq!(
-            super::speed_of_sound(Temperature::new_celsius(-15.0)),
-            322.07491299796527
+        assert!(
+            super::speed_of_sound(Temperature::new_celsius(-15.0)) - 322.074_912_997_965_27
+                < EPSILON
         );
-        assert_eq!(super::speed_of_sound(Temperature::new_celsius(0.0)), 331.3);
-        assert_eq!(
-            super::speed_of_sound(Temperature::new_15c()),
-            340.2750805118605
-        );
+        assert!(super::speed_of_sound(Temperature::new_celsius(0.0)) - 331.3 < EPSILON);
+        assert!(super::speed_of_sound(Temperature::new_15c()) - 340.275_080_511_860_5 < EPSILON);
     }
 }

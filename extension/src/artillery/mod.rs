@@ -55,7 +55,7 @@ fn calculate_table(
                                 high_arc,
                             ),
                         ),
-                    )
+                    );
                 });
         }
     });
@@ -144,7 +144,17 @@ fn calc_range_table_line(
         temp_inc_offset,
         air_density_dec_offset,
         air_density_inc_offset,
-    ) = if air_friction != 0.0 {
+    ) = if air_friction == 0.0 {
+        (
+            String::from("-"),
+            String::from("-"),
+            String::from("-"),
+            String::from("-"),
+            String::from("-"),
+            String::from("-"),
+            String::from("-"),
+        )
+    } else {
         (
             {
                 let (x_offset, _, _) = simulate::shot(
@@ -286,16 +296,6 @@ fn calc_range_table_line(
                 )
             },
         )
-    } else {
-        (
-            String::from("-"),
-            String::from("-"),
-            String::from("-"),
-            String::from("-"),
-            String::from("-"),
-            String::from("-"),
-            String::from("-"),
-        )
     };
 
     Some(vec![
@@ -321,6 +321,7 @@ fn calc_range_table_line(
 #[cfg(test)]
 mod tests {
     use std::{
+        f64::EPSILON,
         sync::atomic::{AtomicI8, Ordering},
         time::Duration,
     };
@@ -334,8 +335,8 @@ mod tests {
     #[test]
     fn test_find_max_angle() {
         let (best_angle, best_distance) = find_max_angle(400.0, -0.00005);
-        assert_eq!(best_angle, 0.7304202919596272); // old ace: 0.722566
-        assert_eq!(best_distance, 10393.560433295957); // old ace: 10391.8
+        assert!(best_angle - 0.730_420_291_959_627_2 < EPSILON); // old ace: 0.722566
+        assert!(best_distance - 10_393.560_433_295_957 < EPSILON); // old ace: 10391.8
     }
 
     #[test]
@@ -358,7 +359,7 @@ mod tests {
         };
         println!("{:?}", output);
         let (best, lines): (f64, i8) = FromArma::from_arma(output).unwrap();
-        assert_eq!(best, 10393.560433295957);
+        assert!(best - 10_393.560_433_295_957 < EPSILON);
         assert_eq!(lines, 103);
         let recv: AtomicI8 = AtomicI8::new(0);
         assert_eq!(code, 0);

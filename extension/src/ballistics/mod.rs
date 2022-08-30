@@ -15,6 +15,7 @@ use self::{
 
 pub use self::{atmosphere::AtmosphereModel, drag::DragFunction, map::Map};
 
+#[derive(Debug)]
 pub enum BallisticModel {
     Vanilla(
         /// Air friction
@@ -23,6 +24,7 @@ pub enum BallisticModel {
     Advanced(AdvancedBallistics),
 }
 
+#[derive(Debug)]
 pub struct AdvancedBallistics {
     temperature: Temperature,
     pressure: f64,
@@ -33,31 +35,38 @@ pub struct AdvancedBallistics {
 }
 
 impl AdvancedBallistics {
+    #[must_use]
     pub const fn temperature(&self) -> Temperature {
         self.temperature
     }
 
+    #[must_use]
     pub const fn pressure(&self) -> f64 {
         self.pressure
     }
 
+    #[must_use]
     pub const fn relative_humidity(&self) -> f64 {
         self.relative_humidity
     }
 
+    #[must_use]
     pub const fn ballistic_coefficient(&self) -> f64 {
         self.ballistic_coefficient
     }
 
+    #[must_use]
     pub const fn drag_function(&self) -> DragFunction {
         self.drag_function
     }
 
+    #[must_use]
     pub const fn atmosphere_model(&self) -> AtmosphereModel {
         self.atmosphere_model
     }
 }
 
+#[must_use]
 pub fn group() -> Group {
     Group::new()
         .command("retard", retard)
@@ -100,11 +109,11 @@ fn atmospheric_correction(
 }
 
 fn replicate_vanilla_zero(zero_range: f64, muzzle_velocity: f64, air_friction: f64) -> f64 {
-    zero::replicate_vanilla_zero(zero_range, muzzle_velocity, air_friction)
+    zero::replicate_vanilla(zero_range, muzzle_velocity, air_friction)
 }
 
 fn zero_vanilla(zero_range: f64, muzzle_velocity: f64, air_friction: f64, bore_height: f64) -> f64 {
-    zero::calculate_zero(
+    zero::calculate(
         zero_range,
         muzzle_velocity,
         bore_height,
@@ -124,7 +133,7 @@ fn zero_advanced(
     drag_function: DragFunction,
     atmosphere_model: AtmosphereModel,
 ) -> f64 {
-    zero::calculate_zero(
+    zero::calculate(
         zero_range,
         muzzle_velocity,
         bore_height,

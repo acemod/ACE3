@@ -6,24 +6,56 @@ on:
     - 'extensions/**'
 
 jobs:
-  build:
-    runs-on: ${{ matrix. os }}
-    strategy:
-      matrix:
-        os: [windows-latest]
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@master
+        run: |
+          rustup toolchain update stable --no-self-update
+          rustup default stable
+          rustup component add clippy rustfmt
+      - name: Run rustfmt
+        run: cargo fmt -- --check
+      - name: Run clippy
+        run: cargo clippy --all -- -Dwarnings
 
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: xd009642/tarpaulin
+      options: --security-opt seccomp=unconfine
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
+    - name: Test & Coverage
+      run: cargo tarpaulin --verbose --all-features --workspace --timeout 240
+
+  build:
+    needs: test
+    strategy:
+      matrix:
+        arrays: [
+          os: { tag: "windows-latest", target: "i686-pc-windows-msvc" },
+          os: { tag: "windows-latest", target: "x86_64-pc-windows-msvc" },
+        ]
+    runs-on: ${{ matrix.arrays.os.tag }}
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Install stable Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          target: ${{ matrix.arrays.os.target }}
+          toolchain: stable
+          default: true
     - name: Build
-      shell: cmd
-      run: |
-        cd extensions
-        mkdir build
-        cd build
-        cmake .. && cmake --build .
-    - name: Upload Artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: ace3_extensions-${{ matrix.os }}-debug
-        path: extensions/build
+      run: cargo build --verbose
+    - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.arrays.os.target }}
+          path: target/debug/ace.dll
+          if-no-files-found: error
+          retention-days: 30
