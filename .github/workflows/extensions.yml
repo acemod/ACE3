@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
+    - name: Install dependencies
       run: |
         rustup toolchain update stable --no-self-update
         rustup default stable
