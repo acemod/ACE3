@@ -38,7 +38,7 @@ impl FromArma for Temperature {
         if s.is_empty() {
             return Err(String::from("unexpected empty string"));
         }
-        match s.chars().next().unwrap_or(' ') {
+        match s.chars().next().unwrap() {
             'c' => {
                 let temp = s[1..].parse::<f64>().map_err(|e| format!("{}", e))?;
                 Ok(Self::new_celsius(temp))
