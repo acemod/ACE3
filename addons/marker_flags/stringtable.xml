@@ -25,12 +25,29 @@
             <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
-            <English>Place Flag</English>
-            <German>Flagge platzieren</German>
-            <Polish>Postaw chorągiewkę</Polish>
-            <Japanese>旗を設置</Japanese>
-            <Korean>깃발 배치</Korean>
-            <Chinesesimp>放置标记旗</Chinesesimp>
+            <English>Place Marker Flag</English>
+            <German>Markierungsfahne platzieren</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
+            <English>Adjust height</English>
+            <German>Höhe anpassen</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_ActionCancel">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+            <Spanish>Cancelar</Spanish>
+            <Polish>Anuluj</Polish>
+            <French>Annuler</French>
+            <Czech>Zrušit</Czech>
+            <Italian>Annulla</Italian>
+            <Hungarian>Mégsem</Hungarian>
+            <Portuguese>Cancelar</Portuguese>
+            <Russian>Отмена</Russian>
+            <Japanese>中止</Japanese>
+            <Korean>취소</Korean>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick Up</English>
