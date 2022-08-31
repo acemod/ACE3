@@ -3,15 +3,17 @@ use arma_rs::Group;
 #[cfg(feature = "clipboard")]
 use clipboard::{ClipboardContext, ClipboardProvider};
 
+#[cfg(feature = "clipboard")]
 pub fn group() -> Group {
-    let mut group = Group::new();
-    if cfg!(feature = "clipboard") {
-        group = group
-            .command("clear", clear)
-            .command("append", append)
-            .command("complete", complete)
-    }
-    group
+    Group::new()
+        .command("clear", clear)
+        .command("append", append)
+        .command("complete", complete)
+}
+
+#[cfg(not(feature = "clipboard"))]
+pub fn group() -> Group {
+    Group::new()
 }
 
 static mut BUFFER: String = String::new();
