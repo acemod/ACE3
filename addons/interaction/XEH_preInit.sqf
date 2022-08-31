@@ -15,4 +15,8 @@ DFUNC(repair_Statement) = { // moved from config because of build problems
     } forEach (curatorSelected select 0)
 };
 
+if (hasInterface) then {
+    GVAR(replaceTerrainModels) = createHashMapFromArray call (uiNamespace getVariable QGVAR(cacheReplaceTerrainModels));
+};
+
 ADDON = true;

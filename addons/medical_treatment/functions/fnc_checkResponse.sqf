@@ -18,7 +18,15 @@
 
 params ["_medic", "_patient"];
 
-private _output = [LSTRING(Check_Response_Unresponsive), LSTRING(Check_Response_Responsive)] select (_patient call EFUNC(common,isAwake));
+
+private _output = if (_patient call EFUNC(common,isAwake)) then {
+     LSTRING(Check_Response_Responsive)
+} else {
+    if ((GVAR(advancedDiagnose) == 2) && {IN_CRDC_ARRST(_patient)}) exitWith { LSTRING(Check_Response_CardiacArrest) };
+    if ((GVAR(advancedDiagnose) == 2) && {!alive _patient}) exitWith { LSTRING(Check_Response_Dead) };
+    LSTRING(Check_Response_Unresponsive)
+};
+
 [[_output, _patient call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
 
 [_patient, "quick_view", _output, [[_patient, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);

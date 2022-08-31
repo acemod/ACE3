@@ -51,7 +51,7 @@ if (_closeNum isEqualTo 1) then {
 
         // Add to list of user placed markers, and then filter for deleted
         GVAR(userPlacedMarkers) pushBack _newestMarker;
-        GVAR(userPlacedMarkers) = GVAR(userPlacedMarkers) select {!((getMarkerPos _x) isEqualTo [0,0,0])};
+        GVAR(userPlacedMarkers) = GVAR(userPlacedMarkers) select {(getMarkerPos _x) isNotEqualTo [0,0,0]};
 
         [QGVAR(setMarkerNetwork), [
             _newestMarker, [

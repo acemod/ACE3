@@ -271,6 +271,8 @@ def pboproject_settings():
         k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
         winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
+        winreg.SetValueEx(k, "wildcard_exclude_from_pbo_normal", 0, winreg.REG_SZ, value_exclude)
+        winreg.SetValueEx(k, "wildcard_exclude_from_pbo_unbinarised_missions", 0, winreg.REG_SZ, value_exclude)
     except:
         raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
 
@@ -366,7 +368,7 @@ def copy_important_files(source_dir,destination_dir):
 
 
 def copy_optionals_for_building(mod,pbos):
-    src_directories = os.listdir(optionals_root)
+    src_directories = next(os.walk(optionals_root))[1]
     current_dir = os.getcwd()
 
     print_blue("\nChecking optionals folder...")
@@ -844,6 +846,7 @@ def main(argv):
     make_target = "DEFAULT" # Which section in make.cfg to use for the build
     new_key = True # Make a new key and use it to sign?
     quiet = False # Suppress output from build tool?
+    sqfc_compiling = True
 
     # Parse arguments
     if "help" in argv or "-h" in argv or "--help" in argv:
@@ -1133,9 +1136,10 @@ See the make.cfg file for additional build options.
                 if ret == 0:
                     print_green("Created: {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
                     print("Removing any old signature keys...")
-                    purge(os.path.join(module_root, release_dir, project, "addons"), "^.*\.bisign$","*.bisign")
-                    purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
-                    purge(os.path.join(module_root, release_dir, project, "keys"), "^.*\.bikey$","*.bikey")
+                    for root, _dirs, files in os.walk(os.path.join(module_root, release_dir)):
+                        for file in files:
+                            if file.endswith(".bisign") or file.endswith(".bikey"):
+                                os.remove(os.path.join(root, file))
                 else:
                     print_error("Failed to create key!")
 
@@ -1182,6 +1186,23 @@ See the make.cfg file for additional build options.
                     except:
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
+
+        # Always cleanup old sqfc    
+        for root, _dirs, files in os.walk(module_root_parent):
+            for file in files:
+                if file.endswith(".sqfc"):
+                    os.remove(os.path.join(root, file))
+        if sqfc_compiling:
+            print_blue("\nCompiling to sqfc...")
+            compiler_exe = os.path.join(module_root_parent, "ArmaScriptCompiler.exe")
+            if not os.path.isfile(compiler_exe):
+                print_yellow("ArmaScriptCompiler.exe not found in base mod folder - skipping")
+            else:
+                ret = subprocess.call([compiler_exe], cwd=module_root_parent, stdout=False)
+                if ret == 0:
+                    print_green("sqfc finished")
+                else:
+                    print_error("ArmaScriptCompiler.exe returned unexpected {}".format(ret))
 
         # For each module, prep files and then build.
         print_blue("\nBuilding...")
@@ -1282,7 +1303,7 @@ See the make.cfg file for additional build options.
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
-                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                        cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
                     color("grey")
                     if quiet:
@@ -1433,6 +1454,14 @@ See the make.cfg file for additional build options.
             shutil.rmtree(os.path.join(release_dir, project, "temp"), True)
         except:
             print_error("ERROR: Could not delete pboProject temp files.")
+
+    if sqfc_compiling:
+        print_blue("\nCleaning up sqfc...")
+        # cleanup all old sqfc    
+        for root, _dirs, files in os.walk(module_root_parent):
+            for file in files:
+                if file.endswith(".sqfc"):
+                    os.remove(os.path.join(root, file))
 
     # Make release
     if make_release_zip:

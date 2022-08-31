@@ -41,6 +41,10 @@ if (_state) then {
 
         private _display = uiNamespace getVariable QGVAR(dlgDisableMouse);
 
+        // Hide cursor by using custom transparent cursor
+        private _map = _display displayCtrl 101;
+        _map ctrlMapCursor ["", QGVAR(blank)];
+
         _display displayAddEventHandler ["KeyDown", {
             params ["", "_key"];
 
@@ -62,9 +66,13 @@ if (_state) then {
                 _ctrl ctrlSetTooltip "Abort.";
 
                 _ctrl = _dlg displayctrl ([104, 1010] select isMultiplayer);
-                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
-                _ctrl ctrlEnable (call {private _config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
-                _ctrl ctrlSetText "RESPAWN";
+                if (["ace_medical"] call FUNC(isModLoaded)) then {
+                    _ctrl ctrlSetEventHandler ["buttonClick", 'closeDialog 0; [player, "respawn_button"] call EFUNC(medical_status,setDead); [false] call DFUNC(disableUserInput);'];
+                } else {
+                    _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
+                };
+                _ctrl ctrlEnable ((getMissionConfigValue ["respawnButton", -1]) != 0); // handles 3den attribute or description.ext
+                _ctrl ctrlSetText localize "$str_3den_multiplayer_attributecategory_respawn_displayname";
                 _ctrl ctrlSetTooltip "Respawn.";
             };
 

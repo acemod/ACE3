@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SynixeBrett
+ * Author: Brett Mayson
  * Create the internal stats arrays when needed for the first time
  *
  * Arguments:

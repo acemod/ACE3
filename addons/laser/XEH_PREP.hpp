@@ -1,5 +1,6 @@
 
 PREP(addLaserTarget);
+PREP(addMapHandler);
 PREP(dev_drawVisibleLaserTargets);
 PREP(findLaserSource);
 PREP(handleLaserTargetCreation);

@@ -13,8 +13,8 @@
             <Russian>Отладка в буфер обмена</Russian>
             <Italian>Debug su Blocco Note</Italian>
             <Japanese>ｸﾘｯﾌﾟﾎﾞｰﾄﾞにﾃﾞﾊﾞｯｸﾞ</Japanese>
-            <Korean>디버그를 클립보드로</Korean>
-            <Chinesesimp>复制除错讯息至剪贴簿</Chinesesimp>
+            <Korean>클립보드를 디버그하기</Korean>
+            <Chinesesimp>复制调试信息至剪贴板</Chinesesimp>
             <Chinese>複製除錯訊息至剪貼簿</Chinese>
             <Turkish>Panoya Hata Ayıkla</Turkish>
         </Key>
@@ -31,7 +31,7 @@
             <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
             <Japanese>デバッグ情報を RPT とクリップボードに送ります。</Japanese>
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
-            <Chinesesimp>复制除错讯息至剪贴簿与RPT报告档中。</Chinesesimp>
+            <Chinesesimp>复制调试信息至剪贴板与 RPT 报告档中。</Chinesesimp>
             <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中</Chinese>
             <Turkish>Hata ayıklama bilgilerini RPT ve panoya gönderir.</Turkish>
         </Key>
@@ -48,7 +48,7 @@
             <Italian>Sistema Bug della Testa</Italian>
             <Japanese>ヘッドバグ修正</Japanese>
             <Korean>헤드버그 수정</Korean>
-            <Chinesesimp>修复动作BUG</Chinesesimp>
+            <Chinesesimp>修复动作 BUG</Chinesesimp>
             <Chinese>修復動作BUG</Chinese>
             <Turkish>Animasyon Düzeltme</Turkish>
         </Key>
@@ -65,7 +65,7 @@
             <Italian>Resetta il tuo stato animazione</Italian>
             <Japanese>現在のアニメーション状態を初期化します。</Japanese>
             <Korean>자신의 동작 상태 초기화</Korean>
-            <Chinesesimp>当ACE发生动作BUG时，点此修复。</Chinesesimp>
+            <Chinesesimp>当 ACE 发生动作 BUG 时，点此修复。</Chinesesimp>
             <Chinese>當ACE發生動作BUG時，點此修復</Chinese>
             <Turkish>Animasyon durumunuzu sıfırlar.</Turkish>
         </Key>
@@ -81,8 +81,8 @@
             <Russian>Новости ACE</Russian>
             <Italian>Novità ACE</Italian>
             <Japanese>ACE ニュース</Japanese>
-            <Korean>ACE 새소식</Korean>
-            <Chinesesimp>ACE新闻</Chinesesimp>
+            <Korean>ACE 새 소식</Korean>
+            <Chinesesimp>ACE 新闻</Chinesesimp>
             <Chinese>ACE新聞</Chinese>
             <Turkish>ACE Haberler</Turkish>
         </Key>
@@ -98,8 +98,8 @@
             <Czech>Zobrazit zprávy v hlavním menu</Czech>
             <Italian>Mostra News nel Menù Princinpale</Italian>
             <Japanese>メイン画面にニュースを表示します</Japanese>
-            <Korean>메인메뉴에 새소식을 표시합니다</Korean>
-            <Chinesesimp>显示新闻消息于主选单</Chinesesimp>
+            <Korean>메인메뉴에 새 소식을 표시합니다</Korean>
+            <Chinesesimp>显示新闻消息于主菜单</Chinesesimp>
             <Chinese>顯示新聞消息於主選單</Chinese>
             <Turkish>Ana Menü de Haberleri Göster</Turkish>
         </Key>

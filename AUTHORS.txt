@@ -6,10 +6,10 @@
 # request, preferably including an email address.
 
 # CORE TEAM
-Brandon (TCVM) <brandondanyluk366@gmail.com>
 bux578 <github@jonathandavid.de>
 commy2
 Dahlgren
+Dani (TCVM) <baileydanyluk@gmail.com>
 esteldunedain <nicolas.d.badano@gmail.com>
 Felix Wiegand <koffeinflummi@gmail.com>
 Garth "L-H" de Wet <garthofhearts@gmail.com>
@@ -31,10 +31,11 @@ VKing <kauestad@gmail.com>
 Walter Pearce <jaynus@gmail.com>
 
 # CONTRIBUTORS
-[BIG]Bull
+10Dozen a.k.a Dusin
 11RDP-LoupVert <loupvert@11rdp.fr>
 654wak654 <ozanegitmen@gmail.com>
-ACCtomeek <tomeek99@gmail.com>
+[BIG]Bull
+ACCtomeek
 adam3adam <br.ada@seznam.cz>
 Adanteh
 aeroson
@@ -44,8 +45,8 @@ Aleksey EpMAK Yermakov <epmak777@gmail.com>
 Alganthe <alganthe@live.fr>
 Andrea "AtixNeon" Verano <veranoandrea88@gmail.com>
 Anthariel <Contact@storm-simulation.com>
-Arcanum417 <lubos.len@gmail.com>
 Anton
+Arcanum417 <lubos.len@gmail.com>
 Arkhir <wonsz666@gmail.com >
 ARV187 aka Spark23
 Asgar Serran <piechottaf@web.de>
@@ -56,16 +57,19 @@ Bla1337
 BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
 Brakoviejo
+Brett Mayson
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>
+C0kkie
 chris579 <github@klemm.one>
 classicarma
 Clon1998 <ps.patti1998@gmail.com>
 Codingboy
 Coren <coren4@gmail.com>
 Crusty
-C0kkie
+Cyruz143
+dabako <dabako@dabakoworld.de>
 dgibso29 <gibson@earringpranks.com>
 Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
 Dimaslg <dimaslg@telecable.es>
@@ -73,9 +77,9 @@ diwako
 dixon13 <dixonbegay@gmail.com>
 Drift_91
 Drill <drill87@gmail.com>
-Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Drofseh <drofseh@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
+Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Eclipser <jms@modeemi.fi>
 Elgin675
 ElTyranos
@@ -90,7 +94,9 @@ FFAAMOD <modffaa@gmail.com>
 Filip Basara <filip.basara93@googlemail.com>
 fr89k <kaschitoku@web.de>
 Fragment
+Frank <frankplow@protonmail.com>
 FreeZbe <freeseb@gmail.com>
+Fyuran <dankemedic@hotmail.com>
 geraldbolso1899
 Ghost
 Gianmarco Varriale (TeamNuke) <admin@forhost.org>
@@ -105,7 +111,9 @@ havena <silveredenis@gmail.com>
 Hawkins
 Head <brobergsebastian@gmail.com>
 Hybrid V
+JasperRab <jasper@jasperrab.eu>
 john681611 <john681611@hotmail.com>
+JoramD
 Karneck <dschultz26@hotmail.com>
 Kavinsky <nmunozfernandez@gmail.com>
 Keithen <Keithen.Neu@gmail.com>
@@ -123,6 +131,7 @@ meat <p.humberdroz@gmail.com>
 Michail Nikolaev
 MikeMatrix <m.braun92@gmail.com>
 mjc4wilton <mjc4wilton@gmail.com>
+Mysteryjuju
 nic547 <nic547@outlook.com>
 nikolauska <nikolauska1@gmail.com>
 nomisum <nomisum@gmail.com>
@@ -131,8 +140,8 @@ Orbis2358 <mgkid3310@naver.com>
 oscarmolinadev
 Panisher (Tushino Serious Games) <panisher333@gmail.com>
 PaxJaromeMalues <seemax1991@gmail.com>
-PiZZADOX <509thParachuteInfantry@gmail.com>
 Phyma <sethramstrom@gmail.com>
+PiZZADOX <509thParachuteInfantry@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
 Pterolatypus <pterolatypus@gmail.com>
@@ -140,11 +149,14 @@ QuickDagger
 rakowozz
 ramius86 <pasini86@hotmail.com>
 Raspu86
+RcINS
 Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
 Rutger "RedBery" Meijering <c.redbery@gmail.com>
+sancron
 Schwaggot <tom.ryan@posteo.de>
+Seb <sebsmith90@gmail.com>
 shukari
 simon84 <badguy360th@gmail.com>
 Skengman2
@@ -153,6 +165,7 @@ Sniperwolf572 <tenga6@gmail.com>
 System98
 SzwedzikPL <szwedzikpl@gmail.com>
 Tachi <zaveruha007@gmail.com>
+tbeswick96
 Tessa Elieff <Fastroping Sound - CreativeCommons Attributions 3.0>
 Timi007 <timi007@gmx.net>
 Toaster <jonathan.pereira@gmail.com>
@@ -165,9 +178,8 @@ voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
 Walthzer <walthzer.69@gmail.com>
 Winter <simon@agius-muscat.net>
+wizpig64
+YetheSamartaka
 xrufix
 Zakant <Zakant@gmx.de>
 zGuba
-Fyuran <dankemedic@hotmail.com>
-dabako <dabako@dabakoworld.de>
-Frank <frankplow@protonmail.com>

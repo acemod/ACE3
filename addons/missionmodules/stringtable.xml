@@ -64,7 +64,7 @@
             <Italian>Nomi classi dei suoni ambientali da eseguire. Separati da ','</Italian>
             <Japanese>再生する環境音のクラスネームを記載。','で複数指定できます。</Japanese>
             <Korean>재생되는 환경 효과음의 단위와 이름입니다. ','로 구분됩니다.</Korean>
-            <Chinesesimp>输入想使用的环境声音classname。每个classname用','做区隔</Chinesesimp>
+            <Chinesesimp>输入想使用的环境声音 classname。每个 classname 用'，'做区隔</Chinesesimp>
             <Chinese>輸入想使用的環境聲音classname。每個classname用','做區隔</Chinese>
             <Turkish>Çalınacak ambiyans seslerinin sınıf isimleri.</Turkish>
         </Key>
@@ -97,8 +97,8 @@
             <Russian>Используется для расчета случайной позиции и указывает минимальное расстояние между игроками и источниками звука</Russian>
             <Italian>Usati per calcolare una posizione casuale ed impostare la distanza minima tra i giocatori ed il file suono eseguito</Italian>
             <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最低距離を設定します</Japanese>
-            <Korean>무작위 위치 계산에 사용되며 플레이어와 재생 된 사운드 파일 간의 최소 거리를 설정합니다.</Korean>
-            <Chinesesimp>声音将随机产生在玩家附近，此选项定义该声音最近会距离玩家多少公尺</Chinesesimp>
+            <Korean>무작위 위치 계산에 사용되며 플레이어와 재생된 사운드 파일 간의 최소 거리를 설정합니다.</Korean>
+            <Chinesesimp>声音将随机产生在玩家附近，此选项定义该声音最近会距离玩家多少米</Chinesesimp>
             <Chinese>聲音將隨機產生在玩家附近，此選項定義該聲音最近會距離玩家多少公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
@@ -130,8 +130,8 @@
             <Russian>Используется для расчета случайной позиции и указывает максимальное расстояние между игроками и источниками звука</Russian>
             <Italian>Usato per calcolare una posizione casuale ed impostare la distanza massima tra giocatori e il file suono eseguito</Italian>
             <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最大距離を設定します</Japanese>
-            <Korean>무작위 위치 계산에 사용되며 플레이어와 재생 된 사운드 파일 간의 최대 거리를 설정합니다.</Korean>
-            <Chinesesimp>声音将随机产生在玩家附近，此选项定义该声音最远会距离玩家多少公尺</Chinesesimp>
+            <Korean>무작위 위치 계산에 사용되며 플레이어와 재생된 사운드 파일 간의 최대 거리를 설정합니다.</Korean>
+            <Chinesesimp>声音将随机产生在玩家附近，此选项定义该声音最远会距离玩家多少米</Chinesesimp>
             <Chinese>聲音將隨機產生在玩家附近，此選項定義該聲音最遠會距離玩家多少公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
@@ -163,7 +163,7 @@
             <Russian>Минимальная задержка между воспроизведением звуков</Russian>
             <Italian>Pausa Minima tra suoni eseguiti</Italian>
             <Japanese>再生されるまでの最低遅延</Japanese>
-            <Korean>재생된 소리간 최소 지연시간</Korean>
+            <Korean>재생된 소리간 최소 지연 시간</Korean>
             <Chinesesimp>设定每个声音档案中间最少间隔多久再进行播放</Chinesesimp>
             <Chinese>設定每個聲音檔案中間最少間隔多久再進行播放</Chinese>
             <Turkish>Çalınan sesler arasında minimum gecikme</Turkish>
@@ -197,7 +197,7 @@
             <Russian>Максимальная задержка между воспроизведением звуков</Russian>
             <Italian>Pausa Massima tra suoni eseguiti</Italian>
             <Japanese>再生されるまでの最大遅延</Japanese>
-            <Korean>재생된 소리간 최대 지연시간</Korean>
+            <Korean>재생된 소리간 최대 지연 시간</Korean>
             <Chinesesimp>设定每个声音档案中间最多间隔多久再进行播放</Chinesesimp>
             <Chinese>設定每個聲音檔案中間最多間隔多久再進行播放</Chinese>
             <Turkish>Çalınan sesler arasında maksimum gecikme</Turkish>
@@ -231,7 +231,7 @@
             <Russian>Следовать за игроками. Если установить в Ложь, звуки будут циклически проигрываться только около позиции Логики.</Russian>
             <Italian>Segui Giocatori. Se impostato su falso, il ciclo eseguirà i suoni solo vicino ad una posizione logica.</Italian>
             <Japanese>プレイヤーを追随します。False に設定するとロジックの近くで延々と再生します。</Japanese>
-            <Korean>플레이어를 따라갑니다. 거짓으로 설정될경우 오직 한 자리에서만 반복해서 소리를 재생합니다.</Korean>
+            <Korean>플레이어를 따라갑니다. False로 설정될 경우 오직 한 자리에서만 반복해서 소리를 재생합니다.</Korean>
             <Chinesesimp>设定声音是否会在玩家的附近产生。假如关闭此功能，声音只会在模块的位置产生。</Chinesesimp>
             <Chinese>設定聲音是否會在玩家的附近產生。假如關閉此功能，聲音只會在模塊的位置產生。</Chinese>
             <Turkish>Eğer devde dışı bırakılırsa sesler oyuncuyu takip etmez</Turkish>
@@ -283,7 +283,7 @@
             <Italian>Ciclo Suoni Ambientali (sincronizzato in MP)</Italian>
             <Japanese>環境音の繰り返し (MP 間で同期させます)</Japanese>
             <Korean>환경 효과음 반복 (멀티플레이 전반적으로 동기화됨)</Korean>
-            <Chinesesimp>循环的环境声音 (在多人游戏中会同步所有玩家的播放状态)</Chinesesimp>
+            <Chinesesimp>循环的环境声音（在多人游戏中会同步所有玩家的播放状态）</Chinesesimp>
             <Chinese>循環的環境聲音 (在多人遊戲中會同步所有玩家的播放狀態)</Chinese>
             <Turkish>Ambiyans sesleri döngüsü (MP üzerinden senkronize edilir)</Turkish>
         </Key>

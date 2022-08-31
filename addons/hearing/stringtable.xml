@@ -145,8 +145,8 @@
             <Portuguese>Remove o efeito de zunido quando o jogador recebe dano na audição</Portuguese>
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
             <Japanese>プレイヤーの聴覚が損傷したら耳鳴りの効果を削除します</Japanese>
-            <Korean>플레이어가 청력손실을 입을때 생기는 이명현상을 제거합니다.</Korean>
-            <Chinesesimp>关闭耳鸣效果时，就算玩家受到相当程度的听力伤害, 也不会造成耳鸣效果</Chinesesimp>
+            <Korean>플레이어가 청력손실을 입을 때 생기는 이명현상을 제거합니다.</Korean>
+            <Chinesesimp>关闭耳鸣效果时，就算玩家受到相当程度的听力伤害，也不会造成耳鸣效果</Chinesesimp>
             <Chinese>關閉耳鳴效果時，就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果</Chinese>
             <Czech>Odstranit tinitus když hráč utrpí poškození sluchu</Czech>
         </Key>
@@ -179,7 +179,7 @@
             <Italian>Sordità da combattimento</Italian>
             <Japanese>戦闘による難聴を有効化</Japanese>
             <Korean>전투 난청 켜기</Korean>
-            <Chinesesimp>启用战斗性耳聋?</Chinesesimp>
+            <Chinesesimp>启用战斗性耳聋？</Chinesesimp>
             <Chinese>啟用戰鬥性耳聾?</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableCombatDeafness_Description">
@@ -194,7 +194,7 @@
             <French>Réduit la capacité auditive du joueur lorsqu'il subit des dommages auditifs.</French>
             <Japanese>音による損傷をうけ、聴覚が減る可能性があります</Japanese>
             <Korean>청력에 손상을 입으면 듣는 소리가 감소합니다.</Korean>
-            <Chinesesimp>当玩家听力受损时降低听力能力?</Chinesesimp>
+            <Chinesesimp>当玩家听力受损时降低听力能力？</Chinesesimp>
             <Chinese>當玩家聽力受損時降低聽力能力?</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
@@ -269,7 +269,7 @@
             <Spanish>Agregar el item `ACE_EarPlugs`  a todas las unidades equipadas con armas muy ruidosas. Desactivar si quieren utilizarse equipamientos personalizados.</Spanish>
             <French>Ajoute l'objet `Ace_EarPlugs` à toutes les unités ayant des armes bruyantes. Peut être désactivé si de l'équipement personnalisé est utilisé.</French>
             <Japanese>全ユニットへ`ACE_EarPlugs`アイテムを持たせます。これは変更された武装で無効化できます。</Japanese>
-            <Korean>무기를 가지고 있는 모든 인원에게 'ACE_EarPlugs'를 지급합니다. 임의의 장비를 사용시 비활성화 할 수 있습니다.</Korean>
+            <Korean>무기를 가지고 있는 모든 인원에게 'ACE_EarPlugs'를 지급합니다. 임의의 장비를 사용시 비활성화할 수 있습니다.</Korean>
             <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位。当你想自定装备时，此功能可被关闭。</Chinesesimp>
             <Chinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位。當你想自定裝備時，此功能可被關閉。</Chinese>
         </Key>
@@ -286,6 +286,7 @@
             <Portuguese>Proteção Auditiva</Portuguese>
             <Czech>Ochrana sluchu</Czech>
             <Spanish>Protección auditiva</Spanish>
+            <Korean>청력 보호</Korean>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
@@ -300,6 +301,7 @@
             <Portuguese>Abafamento de Volume</Portuguese>
             <Czech>Snížení hlasitosti</Czech>
             <Spanish>Atenuación de volumen</Spanish>
+            <Korean>소리 차음도</Korean>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
@@ -314,6 +316,7 @@
             <French>Volume bouchons anti bruit</French>
             <Czech>Hlasitost se špunty</Czech>
             <Spanish>Volumen de protectores auditivos</Spanish>
+            <Korean>귀마개 볼륨</Korean>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
@@ -328,6 +331,7 @@
             <French>Volume audio perçu par les joueurs portant des bouchons anti bruit.</French>
             <Czech>Hlasitost při používání špuntů do uší.</Czech>
             <Spanish>Volumen cuando se utilizan protectores auditivos.</Spanish>
+            <Korean>귀마개 사용 시의 볼륨입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
@@ -342,6 +346,7 @@
             <French>Volume inconscience</French>
             <Czech>Hlasitost při ztrátě vědomí</Czech>
             <Spanish>Volumen inconsciente</Spanish>
+            <Korean>기절 볼륨</Korean>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
@@ -356,6 +361,7 @@
             <French>Volume perçu par les joueurs inconscients.</French>
             <Czech>Hlasitost během ztráty vědomí.</Czech>
             <Spanish>Volumen durante la inconsciencia.</Spanish>
+            <Korean>기절 시 볼륨입니다.</Korean>
         </Key>
     </Package>
 </Project>
