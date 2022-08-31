@@ -271,6 +271,8 @@
 {% endif %}
 
 {% if include.component == "marker_flags" %}
+- `ace_common`
+- `ace_interaction`
 - `ace_interact_menu`
 {% endif %}
 
