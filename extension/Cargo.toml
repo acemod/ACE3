@@ -22,3 +22,9 @@ clipboard = { version = "0.5", optional = true }
 
 [features]
 default = ["clipboard"]
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true

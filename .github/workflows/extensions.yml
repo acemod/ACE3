@@ -29,10 +29,8 @@ jobs:
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
-    - name: Install dependencies
-      run: apt-get update && apt-get install xorg-dev -y
     - name: Test & Coverage
-      run: cargo tarpaulin --verbose --all-features --workspace --timeout 240
+      run: cargo tarpaulin --verbose --no-default-features --workspace --timeout 240
 
   build:
     needs: test
