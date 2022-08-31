@@ -189,7 +189,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     headwind_offset,
                     width = 1,
-                    precision = if headwind_offset.abs() > 9.949 { 1 } else { 0 }
+                    precision = if headwind_offset.abs() > 9.949 { 0 } else { 1 }
                 )
             },
             {
@@ -208,7 +208,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     tailwind_offset,
                     width = 1,
-                    precision = if tailwind_offset.abs() > 9.949 { 1 } else { 0 }
+                    precision = if tailwind_offset.abs() > 9.949 { 0 } else { 1 }
                 )
             },
             {
@@ -227,7 +227,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     temp_dec_offset,
                     width = 1,
-                    precision = if temp_dec_offset.abs() > 9.949 { 1 } else { 0 }
+                    precision = if temp_dec_offset.abs() > 9.949 { 0 } else { 1 }
                 )
             },
             {
@@ -246,7 +246,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     temp_inc_offset,
                     width = 1,
-                    precision = if temp_inc_offset.abs() > 9.949 { 1 } else { 0 }
+                    precision = if temp_inc_offset.abs() > 9.949 { 0 } else { 1 }
                 )
             },
             {
@@ -266,9 +266,9 @@ fn calc_range_table_line(
                     air_density_dec_offset,
                     width = 1,
                     precision = if air_density_dec_offset.abs() > 9.949 {
-                        1
-                    } else {
                         0
+                    } else {
+                        1
                     }
                 )
             },
@@ -289,9 +289,9 @@ fn calc_range_table_line(
                     air_density_inc_offset,
                     width = 1,
                     precision = if air_density_inc_offset.abs() > 9.949 {
-                        1
-                    } else {
                         0
+                    } else {
+                        1
                     }
                 )
             },
