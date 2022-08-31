@@ -40,7 +40,7 @@ private _mouseClickID = [_player, "DefaultAction", {
     GVAR(isPlacing) = PLACE_APPROVE
 }] call EFUNC(common,addActionEventHandler);
 
-[{ // Start of PFH
+[{
     params ["_args", "_handle"];
     _args params ["_player", "_item", "_flag", "_mouseClickID"];
 
@@ -55,13 +55,9 @@ private _mouseClickID = [_player, "DefaultAction", {
 
         if (GVAR(isPlacing) isEqualTo PLACE_APPROVE) then {
             // End position of the flag
-
             GVAR(isPlacing) = PLACE_CANCEL;
-
             [_player, "PutDown"] call EFUNC(common,doGesture);
-
             _player removeItem _item;
-
             [QGVAR(placed), [_player, _flag, _item]] call CBA_fnc_localEvent;
         } else {
             // Action is canceled
@@ -69,7 +65,7 @@ private _mouseClickID = [_player, "DefaultAction", {
         };
     };
 
-    private _pos = ((eyePos _player) vectorAdd ((getCameraViewDirection _player) vectorMultiply FLAG_PLACING_DISTANCE));
+    private _pos = (eyePos _player) vectorAdd ((getCameraViewDirection _player) vectorMultiply FLAG_PLACING_DISTANCE);
     // Adjust height of flag with the scroll wheel
     _pos set [2, ((getPosWorld _player) select 2) + GVAR(objectHeight)];
 

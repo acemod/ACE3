@@ -25,6 +25,6 @@ if (GVAR(isPlacing) isNotEqualTo PLACE_WAITING) exitWith {
 GVAR(objectHeight) = GVAR(objectHeight) + (_scrollAmount * 0.05);
 
 // Clamp height between MIN_HEIGHT and MAX_HEIGHT
-GVAR(objectHeight) = (MIN_HEIGHT max (GVAR(objectHeight) min MAX_HEIGHT));
+GVAR(objectHeight) = MIN_HEIGHT max (GVAR(objectHeight) min MAX_HEIGHT);
 
 true
