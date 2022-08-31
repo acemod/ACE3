@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: BaerMitUmlaut
- * Inflames a unit.
+ * Author: Brett Mayson
+ * Opens the medical menu for the unit
  *
  * Arguments:
  * 0: The module logic <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [LOGIC] call ace_zeus_fnc_moduleBurn
+ * [LOGIC] call ace_zeus_fnc_moduleMedicalMenu
  *
  * Public: No
  */
