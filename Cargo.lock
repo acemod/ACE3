@@ -16,8 +16,9 @@ dependencies = [
 
 [[package]]
 name = "arma-rs"
-version = "1.7.7"
-source = "git+https://github.com/brettmayson/arma-rs#cb4216da1dc92f2a7a23517d08a0da55e4f62565"
+version = "1.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bc11bd68eb0c38108bdf27f85d5b078b2c7674522aa1bc730dca37af2b5b7678"
 dependencies = [
  "arma-rs-proc",
  "crossbeam-queue",

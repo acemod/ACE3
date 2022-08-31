@@ -8,8 +8,7 @@ name = "ace"
 crate-type = ["cdylib"]
 
 [dependencies]
-# arma-rs = "1.7.7"
-arma-rs = { git = "https://github.com/brettmayson/arma-rs", features = ["uuid"] }
+arma-rs = { version = "1.8.0", features = ["uuid"] }
 uuid = { version = "1.1.2", features = ["v4"] }
 rand = "0.8.5"
 rand_chacha = "0.3.1"
