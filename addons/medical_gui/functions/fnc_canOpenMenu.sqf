@@ -21,5 +21,5 @@ params ["_player", "_target"];
 alive _player
 && {!IS_UNCONSCIOUS(_player)}
 && {!isNull _target}
-&& {_player distance _target < GVAR(maxDistance) || {vehicle _player == vehicle _target}}
+&& {_player distance _target < GVAR(maxDistance) || {vehicle _player == vehicle _target} || {!isNull findDisplay 312}}
 && {GVAR(enableMedicalMenu) == 1 || {GVAR(enableMedicalMenu) == 2 && {vehicle _player != _player || {vehicle _target != _target}}}}
