@@ -55,7 +55,7 @@ addMissionEventHandler ["ExtensionCallback", {
             TRACE_1("table filled",_ctrlRangeTable);
         };
     };
-}]
+}];
 
 #ifdef DEBUG_MODE_FULL
 #include "dev\showShotInfo.sqf"
