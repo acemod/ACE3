@@ -63,9 +63,3 @@ Use the `Run and Debug` tab in VSCode to launch Arma, or Press `F5`.
 ### 2.3 Release
 
 Release versions can be built using `cargo make release`.
-
-If you wish to replace the existing `ace.dll` and `ace_x64.dll` with the newly built ones, they will need to be force added to git.
-
-```
-git add --force ace.dll ace_x64.dll
-```

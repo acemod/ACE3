@@ -14,24 +14,24 @@ fn trace_bullet(
 ) -> f64 {
     let mut vel_x = angle.to_radians().cos() * init_speed;
     let mut vel_y = angle.to_radians().sin() * init_speed;
-    let mut pos_target_x = angle_target.to_radians().cos() * distance;
-    let mut pos_target_y = angle_target.to_radians().sin() * distance;
+    let pos_target_x = angle_target.to_radians().cos() * distance;
+    let pos_target_y = angle_target.to_radians().sin() * distance;
     let mut pos_x = 0.0;
     let mut pos_y = 0.0;
     let mut last_pos_x = 0.0;
     let mut last_pos_y = 0.0;
 
     for _ in 0..MAX_ITERATIONS {
-        last_pos_x = pos_target_x;
-        last_pos_y = pos_target_y;
+        last_pos_x = pos_x;
+        last_pos_y = pos_y;
         let vel_mag = vel_x.hypot(vel_y);
-        pos_target_x += vel_x * SIMULATION_STEP * 0.5;
-        pos_target_y += vel_y * SIMULATION_STEP * 0.5;
+        pos_x += vel_x * SIMULATION_STEP * 0.5;
+        pos_y += vel_y * SIMULATION_STEP * 0.5;
         vel_x += SIMULATION_STEP * (vel_x * vel_mag * air_friction);
         vel_y += SIMULATION_STEP * (vel_y * vel_mag * air_friction - GRAVITY);
         pos_x += vel_x * SIMULATION_STEP * 0.5;
         pos_y += vel_y * SIMULATION_STEP * 0.5;
-        if pos_x > pos_target_x {
+        if pos_x >= pos_target_x {
             break;
         }
     }
@@ -66,4 +66,16 @@ pub fn get_solution(init_speed: f64, air_friction: f64, angle_target: f64, dista
         f1 = f2;
     }
     a2 - angle_target
+}
+
+#[cfg(test)]
+mod tests {
+    use std::f64::EPSILON;
+
+    use super::get_solution;
+
+    #[test]
+    fn test_get_solution() {
+        assert!(get_solution(400.0, 0.0, 28.0, 950.0) - -8.0 < EPSILON)
+    }
 }
