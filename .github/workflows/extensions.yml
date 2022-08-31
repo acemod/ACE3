@@ -3,7 +3,7 @@ name: Extensions
 on:
   pull_request:
     paths:
-    - 'extensions/**'
+    - 'extension/**'
 
 jobs:
   lint:

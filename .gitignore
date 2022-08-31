@@ -2,8 +2,6 @@
 *.zip
 release/*
 releases/*
-extensions/vcproj32/*
-extensions/vcproj64/*
 .vscode/*
 hemtt
 hemtt.exe
