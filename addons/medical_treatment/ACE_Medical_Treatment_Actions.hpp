@@ -286,6 +286,7 @@ class GVAR(actions) {
         treatmentTime = QFUNC(getStitchTime);
         condition = QFUNC(canStitch);
         callbackSuccess = "";
+        callbackStart = QFUNC(surgicalKitStart);
         callbackProgress = QFUNC(surgicalKitProgress);
         consumeItem = QGVAR(consumeSurgicalKit);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";

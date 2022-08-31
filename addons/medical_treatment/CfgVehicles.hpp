@@ -232,6 +232,16 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_surgicalKit,1);
         };
     };
+    class ACE_sutureItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(Suture_Display);
+        author = ECSTRING(common,ACETeam);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_suture,1);
+        };
+    };
     class ACE_bodyBagItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
