@@ -90,7 +90,7 @@ Different `make.py` command line options include:
 - `increment_patch` - increments _patch_ version number (ignored with `increment_minor` or `increment_major`)
 - `increment_minor` - increments _minor_ version number and resets _patch_ version number to `0` (ignored with `increment_major`)
 - `increment_major` - increments _major_ version number and resets _minor_ and _patch_ version numbers to `0`
-- `force` - force rebuild all PBOs, even those already present in the `release` directory (combined with `compile` it will also rebuild all extensions)
+- `force` - force rebuild all PBOs, even those already present in the `release` directory
 - `checkexternal` - check external references (incompatible only with `<component1> <component2>` and `force <component1> <component2>`)
 - `release` - create release packages/archives
 - `<component1> <component2>` - build only specified component(s) (incompatible with `release`)

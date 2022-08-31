@@ -32,29 +32,27 @@
 
 addMissionEventHandler ["ExtensionCallback", {
     params ["_name", "_function", "_data"];
-    if (_name isEqualTo "ace:artillery") then {
-        if (_function isEqualTo "calculate_table") then {
-            (parseSimpleArray _data) params ["_line", "_data"];
-            if (_data isEqualType []) then {
-                GVAR(tableData) set [_line, _data];
-            };
-            GVAR(tableSizeReceived) = GVAR(tableSizeReceived) + 1;
-            if (GVAR(tableSizeReceived) == GVAR(tableSizeActual)) then {
-                private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
-                private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
-                if (isNull _dialog) exitWith {true};
-                for "_i" from 0 to GVAR(tableSizeActual) do {
-                    private _row = GVAR(tableData) getOrDefault [_i, []];
-                    if (count _row == 12) then {
-                        _ctrlRangeTable lnbAddRow _row;
-                    };
+    if (_name == "ace:artillery" && {_function == "calculate_table"}) then {
+        (parseSimpleArray _data) params ["_line", "_data"];
+        if (_data isEqualType []) then {
+            GVAR(tableData) set [_line, _data];
+        };
+        GVAR(tableSizeReceived) = GVAR(tableSizeReceived) + 1;
+        if (GVAR(tableSizeReceived) == GVAR(tableSizeActual)) then {
+            private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
+            private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
+            if (isNull _dialog) exitWith {true};
+            for "_i" from 0 to GVAR(tableSizeActual) do {
+                private _row = GVAR(tableData) getOrDefault [_i, []];
+                if (count _row == 12) then {
+                    _ctrlRangeTable lnbAddRow _row;
                 };
-                private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
-                private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
-                if (isNull _dialog) exitWith {TRACE_1("dialog closed",_this);};
-                _ctrlRangeTable lnbAddRow ["", "", "", "", "", "", "", "", "", "", ""];
-                TRACE_1("table filled",_ctrlRangeTable);
             };
+            private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
+            private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
+            if (isNull _dialog) exitWith {TRACE_1("dialog closed",_this);};
+            _ctrlRangeTable lnbAddRow ["", "", "", "", "", "", "", "", "", "", ""];
+            TRACE_1("table filled",_ctrlRangeTable);
         };
     };
 }]
