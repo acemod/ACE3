@@ -87,9 +87,9 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
 class GVAR(TriageToggle): RscButton {
     idc = -1;
     onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(toggleTriageSelect));
-    x = POS_X(13.33);
+    x = POS_X(15.495);
     y = POS_Y(15.5);
-    w = POS_W(12.33);
+    w = POS_W(8);
     h = POS_H(1.1);
     colorFocused[] = {0, 0, 0, 0};
     colorBackground[] = {0, 0, 0, 0};
@@ -98,9 +98,9 @@ class GVAR(TriageToggle): RscButton {
 
 class GVAR(TriageSelect): RscControlsGroupNoScrollbars {
     idc = IDC_TRIAGE_SELECT;
-    x = POS_X(13.33);
+    x = POS_X(15.495);
     y = POS_Y(16.6);
-    w = POS_W(12.33);
+    w = POS_W(8);
     h = POS_H(5.5);
     class controls {
         class None: RscButton {
@@ -110,7 +110,7 @@ class GVAR(TriageSelect): RscControlsGroupNoScrollbars {
             text = ECSTRING(medical_treatment,Triage_Status_None);
             x = 0;
             y = 0;
-            w = POS_W(12.33);
+            w = POS_W(8);
             h = POS_H(1.1);
             shadow = 0;
             colorText[] = {TRIAGE_TEXT_COLOR_NONE};
@@ -339,6 +339,14 @@ class ACE_Medical_Menu {
             idc = IDC_ACTION_9;
             y = POS_Y(13.2);
         };
+        class Action10: Action1 {
+            idc = IDC_ACTION_10;
+            y = POS_Y(14.3);
+        };
+        class Action11: Action1 {
+            idc = IDC_ACTION_11;
+            y = POS_Y(15.4);
+        };
         class BodyImage: GVAR(BodyImage) {};
         class SelectHead: RscButton {
             idc = -1;
@@ -420,9 +428,9 @@ class ACE_Medical_Menu {
         class TriageStatus: RscText {
             idc = IDC_TRIAGE_STATUS;
             style = ST_CENTER;
-            x = POS_X(13.33);
+            x = POS_X(15.495);
             y = POS_Y(15.5);
-            w = POS_W(12.33);
+            w = POS_W(8);
             h = POS_H(1.1);
             shadow = 0;
         };
