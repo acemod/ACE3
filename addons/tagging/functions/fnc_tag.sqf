@@ -53,7 +53,8 @@ if ((!isNull _object) && {
     if (_object isKindOf "Static") exitWith {false};
 
     // Taggable vehicle, do not exit and tell server to change "clan" tag
-    if ((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true]) exitWith {
+    if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true])
+    && {getText (configOf _object >> "selectionClan") in selectionNames _object}) exitWith {
         _isVehicleTag = true;
         false
     };

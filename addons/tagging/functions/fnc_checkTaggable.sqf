@@ -43,7 +43,10 @@
         if (_object isKindOf "Static") exitWith {false};
 
         // Taggable vehicle, do not exit
-        if ((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true]) exitWith {false};
+        if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true]) 
+        && {getText (configOf _object >> "selectionClan") in selectionNames _object}) exitWith {
+            false
+        };
 
         // If the class is not categorized correctly search the cache
         private _modelName = (getModelInfo _object) select 0;
