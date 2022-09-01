@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Novehicleclanlogo">
+        <Key ID="STR_ACE_Novehicleclanlogo_DisplayName">
+            <English>Remove clan logo from vehicles</English>
+            <Polish>Usuń logo klanu z pojazdów</Polish>
+        </Key>
+        <Key ID="STR_ACE_Novehicleclanlogo_Enabled_Tooltip">
+            <English>Prevents clan logo from being displayed on vehicles controlled by players.</English>
+            <Polish>Zapobiega wyświetlaniu logo klanu na pojazdach kontrolowanych przez graczy.</Polish>
+        </Key>
+    </Package>
+</Project>
