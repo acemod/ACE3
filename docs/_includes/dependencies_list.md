@@ -583,6 +583,11 @@
 - `ace_common`
 {% endif %}
 
+{% if include.component == "xm157" %}
+- `ace_advanced_ballistics`
+- `ace_scopes`
+{% endif %}
+
 {% if include.component == "yardage450" %}
 - `ace_apl`
 - `ace_laser`
