@@ -54,7 +54,7 @@ private _userAndItem = if (GET_NUMBER_ENTRY(_config >> "consumeItem") == 1) then
 
 _userAndItem params ["_itemUser", "_usedItem"];
 
-if !(_medic isEqualTo player && {!isNull findDisplay 312}) then {
+if (_medic isNotEqualTo player || {isNull findDisplay 312}) then {
     // Get treatment animation for the medic
     private _medicAnim = if (_medic isEqualTo _patient) then {
         getText (_config >> ["animationMedicSelf", "animationMedicSelfProne"] select (stance _medic == "PRONE"));
