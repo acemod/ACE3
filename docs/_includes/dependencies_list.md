@@ -392,6 +392,10 @@
 - `ace_common`
 {% endif %}
 
+{% if include.component == "novehicleclanlogo" %}
+- `ace_common`
+{% endif %}
+
 {% if include.component == "optics" %}
 - `ace_common`
 {% endif %}
