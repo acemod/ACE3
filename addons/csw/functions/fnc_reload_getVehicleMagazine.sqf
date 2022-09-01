@@ -4,8 +4,9 @@
  * Finds the best vehicle magazines to create from a carryable magazine for a given weapon.
  *
  * Arguments:
- * 0: Weapon <STRING>
- * 1: Magazine that is carryable <STRING>
+ * 0: Vehicle <OBJECT>
+ * 1: Turret <ARRAY>
+ * 2: Magazine that is carryable <STRING>
  *
  * Return Value:
  * Vehicle Magazine <STRING>

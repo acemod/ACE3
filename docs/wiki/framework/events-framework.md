@@ -40,6 +40,7 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has started (local on the _caller)
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action is completed (local on the _caller)
 |`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has been interrupted (local on the _caller)
+|`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit)
 
 ### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
@@ -116,6 +117,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle
 |`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle.
+
+### 2.12 Trenches (`ace_trenches`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_trenches_placed` | [_unit, _trench] | Global | Listen | After trench object is placed by unit.
+| `ace_trenches_finished` | [_unit, _trench] | Global | Listen | After trench object is fully dug up by unit (100% progress).
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

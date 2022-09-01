@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases/latest">
-        <img src="https://img.shields.io/badge/Version-3.14.1-blue.svg?style=flat-square" alt="ACE3 Version">
+        <img src="https://img.shields.io/badge/Version-3.15.0-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Issues">
@@ -18,8 +18,8 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 License">
     </a>
-    <a href="https://slackin.ace3mod.com/">
-        <img src="https://img.shields.io/badge/Slack-Join-darkviolet.svg?style=flat-square" alt="ACE3 Slack">
+    <a href="https://acemod.org/discord">
+        <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="ACE3 Discord">
     </a>
     <a href="https://circleci.com/gh/acemod/ACE3">
         <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
@@ -78,8 +78,8 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 
 ACE3 requires Arma 3 and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. See the following pages for help and information on how to get started with ACE3:
 
-- [Installation guide](https://ace3mod.com/wiki/user/installation-guide.html)
-- [Information center](https://ace3mod.com/wiki/user/information-center.html)
+- [Installation guide](https://ace3.acemod.org/wiki/user/installation-guide.html)
+- [Information center](https://ace3.acemod.org/wiki/user/information-center.html)
 
 ## Contributing
 
@@ -87,26 +87,26 @@ You can help out with the ongoing development by looking for potential bugs in o
 
 ### Contribution guidelines
 
-To contribute something to ACE3, simply fork this repository and submit your pull requests for review by other collaborators. See [the pull request guidelines](https://ace3mod.com/wiki/development/merging-pull-requests.html) for further information on this process.
+To contribute something to ACE3, simply fork this repository and submit your pull requests for review by other collaborators. See [the pull request guidelines](https://ace3.acemod.org/wiki/development/merging-pull-requests.html) for further information on this process.
 
 ### Submitting issues and requesting features
 
 Please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues) to report a bug, propose a feature, or suggest changes to the existing ones. See also:
-- [How to report an issue](https://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-- [How to make a feature request](https://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [How to report an issue](https://ace3.acemod.org/wiki/user/how-to-report-an-issue.html)
+- [How to make a feature request](https://ace3.acemod.org/wiki/user/how-to-make-a-feature-request.html)
 
 ### Testing & building
 
 To help us test the latest development changes, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or [with git](https://help.github.com/articles/fetching-a-remote/)), then assemble a test build:
 
-- [Setting up the development environment](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – step-by-step instructions on how to properly setup and build a version of ACE3 for testing purposes.
+- [Setting up the development environment](https://ace3.acemod.org/wiki/development/setting-up-the-development-environment.html) – step-by-step instructions on how to properly setup and build a version of ACE3 for testing purposes.
 
 ### Get in touch
 
 <table>
   <tr>
-    <td><a href="https://slackin.ace3mod.com/">Slack</a></td>
-    <td>We have a public Slack team that anyone can join. This is where all our developers and contributors hang out and where we make announcements</td>
+    <td><a href="https://acemod.org/discord">Discord</a></td>
+    <td>We have a public Discord server that anyone can join. This is where all our developers and contributors hang out and where we make announcements</td>
   </tr>
 
   <tr>

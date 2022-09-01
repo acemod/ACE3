@@ -22,14 +22,18 @@
 
                 // Check if naked unit bug happened
                 if (_local && {uniform _unit == ""}) then {
+                    scopeName QGVAR(applyLoadout);
                     INFO_1("Unit [%1] became local with broken loadout - attempting to fix",_unit);
                     if (XGVAR(transferLoadout) == 1) then {
                         // Transferred loadout, if unavailable reset to config default (still better than naked)
-                        _unit setUnitLoadout (_unit getVariable [QGVAR(loadout), typeOf _unit]);
-                    } else {
-                        // Config default loadout
-                        _unit setUnitLoadout (typeOf _unit);
+                        private _loadout = _unit getVariable [QGVAR(loadout), []];
+                        if (_loadout isNotEqualTo []) then {
+                            [_unit, _loadout] call CBA_fnc_setLoadout;
+                            breakOut QGVAR(applyLoadout);
+                        };
                     };
+                    // Config default loadout
+                    _unit setUnitLoadout (typeOf _unit);
                 };
             }] call CBA_fnc_addClassEventHandler;
         };

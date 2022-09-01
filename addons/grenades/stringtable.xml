@@ -168,7 +168,7 @@
             <Turkish>CTS 7290 9- Flaş Bombası</Turkish>
             <Russian>CTS 7290-9 Светошумовая граната</Russian>
             <Spanish>Granada aturdidora CTS 7290 9-explosiones</Spanish>
-            <Korean>CTS 7290 9-뱅 섬광 수류탄</Korean>
+            <Korean>CTS 7290 9-bang 섬광 수류탄</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_NameShort">
             <English>CTS 7290-9</English>
@@ -429,7 +429,7 @@
             <Russian>Зажигательная граната используется для уничтожения оружия, боеприпасов и прочего оборудования.</Russian>
             <Japanese>焼夷手榴弾は武器や弾薬箱などの装備を破壊する為に使われます。</Japanese>
             <Polish>Granat zapalający, używany do niszczenia broni, amunicji i innego sprzętu.</Polish>
-            <Korean>소이 수류탄은 무기나 탄약 그리고 장비를 파괴할때 쓰입니다.</Korean>
+            <Korean>소이 수류탄은 무기나 탄약 그리고 장비를 파괴할 때 쓰입니다.</Korean>
             <French>Grenade incendiaire utilisée pour détruire des armes, des munitions et d'autres équipements.</French>
             <Italian>Granata incendiaria usata per distruggere armi, munizioni e altri equipaggiamenti.</Italian>
             <Chinesesimp>燃烧手榴弹是用来摧毁武器，弹药以及其他装备的好帮手。</Chinesesimp>
@@ -566,7 +566,7 @@
             <Polish>Rzucany pakiet ładunków wybuchowych. 7 sekundowy zapalnik</Polish>
             <German>Werfbare Rucksackladung. 7 Sekunden Zeitzünder</German>
             <Chinesesimp>一个可投掷的炸药包。7秒定时引信</Chinesesimp>
-            <Korean>던질 수 있는 폭파 장약 입니다. 던지고 7초 후에 터집니다</Korean>
+            <Korean>던질 수 있는 폭파 장약입니다. 던지고 7초 후에 터집니다</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
@@ -588,7 +588,7 @@
             <Polish>Rzucany ładunkek wybuchowy. 7 sekundowy zapalnik</Polish>
             <German>Werfbare Sprengladung. 7 Sekunden Zeitzünder</German>
             <Chinesesimp>一个可投掷的炸药块。7秒定时引信</Chinesesimp>
-            <Korean>던질 수 있는 폭파 블럭 입니다. 던지고 7초 후에 터집니다</Korean>
+            <Korean>던질 수 있는 폭파 블럭입니다. 던지고 7초 후에 터집니다</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>

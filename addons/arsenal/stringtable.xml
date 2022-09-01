@@ -881,6 +881,22 @@
             <Czech>ACE Arzenál</Czech>
             <Turkish>ACE Arsenal</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutSubcategory">
+            <English>Loadouts</English>
+            <Spanish>Equipamiento</Spanish>
+            <French>Sets d'équipement</French>
+            <German>Ausrüstungen</German>
+            <Polish>Zestawy wyposażenia</Polish>
+            <Japanese>装備</Japanese>
+            <Italian>Equipaggiamenti</Italian>
+            <Korean>로드아웃</Korean>
+            <Chinese>裝備</Chinese>
+            <Chinesesimp>负载</Chinesesimp>
+            <Russian>Комплекты</Russian>
+            <Portuguese>Loadouts</Portuguese>
+            <Czech>Sady vybavení</Czech>
+            <Turkish>Kıyafetler</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_defaultLoadoutsTooltip">
             <English>Allow the use of the default loadouts tab</English>
             <Spanish>Permitir el uso de la pestaña de equipamientos por defecto</Spanish>
@@ -967,7 +983,7 @@
             <French>Importer les sets BI VA dans l'arsenal ACE</French>
             <German>Importiert die BI-VA-Ausrüstungen in das ACE-Arsenal</German>
             <Japanese>標準の VA 装備から ACE 武器庫へ取り込み</Japanese>
-            <Korean>바닐라 로드아웃을 ace 아스날로 가져오기</Korean>
+            <Korean>바닐라 로드아웃을 ACE 아스날로 가져오기</Korean>
             <Chinese>匯入BI原廠虛擬軍火庫的裝備到ACE虛擬軍火庫中</Chinese>
             <Chinesesimp>导入 BI 原版虚拟军火库的负载到 ACE 虚拟军火库中</Chinesesimp>
             <Italian>Importa l'arsenale virtuale BI nell'arsenale ACE</Italian>
@@ -997,7 +1013,7 @@
             <French>Aucun équipement à importer.</French>
             <German>Keine Ausrüstungen zum Importieren</German>
             <Japanese>インポートする装備がありません。</Japanese>
-            <Korean>가져올 로드 아웃이 없습니다.</Korean>
+            <Korean>가져올 로드아웃이 없습니다.</Korean>
             <Chinese>沒有裝備被匯入</Chinese>
             <Chinesesimp>没有负载被导入。</Chinesesimp>
             <Italian>Non ci sono equipaggiamenti da importare.</Italian>
@@ -1448,6 +1464,15 @@
             <Spanish>Detona mediante impacto</Spanish>
             <Chinesesimp>碰炸引信</Chinesesimp>
             <Korean>충격 신관</Korean>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutsSaveFaceSetting">
+            <English>Save Face</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
+            <English>Save Voice</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
+            <English>Save Insignia</English>
         </Key>
     </Package>
 </Project>

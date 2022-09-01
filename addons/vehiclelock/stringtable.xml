@@ -29,7 +29,7 @@
             <Italian>Sblocca il Veicolo</Italian>
             <Portuguese>Destravar veículo</Portuguese>
             <Japanese>車両の鍵を開ける</Japanese>
-            <Korean>차량 잠금열기</Korean>
+            <Korean>차량 잠금해제</Korean>
             <Chinesesimp>载具解锁</Chinesesimp>
             <Chinese>載具解鎖</Chinese>
             <Turkish>Araç Kilidini Aç</Turkish>
@@ -80,7 +80,7 @@
             <Italian>Scassino il veicolo...</Italian>
             <Portuguese>Usando Mixa...</Portuguese>
             <Japanese>鍵をこじ開けている・・・</Japanese>
-            <Korean>문따는중...</Korean>
+            <Korean>문따는 중...</Korean>
             <Chinesesimp>正在开锁...</Chinesesimp>
             <Chinese>解鎖中...</Chinese>
             <Turkish>Maymuncuklanıyor...</Turkish>
@@ -145,7 +145,7 @@
             <Italian>Una chiave che apre la maggior parte dei veicoli occidentali</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos ocidentais</Portuguese>
             <Japanese>このキーは多くの同盟軍車両を開けられます。</Japanese>
-            <Korean>거의 모든 서방진영 차량을 여는 열쇠입니다.</Korean>
+            <Korean>거의 모든 청군 진영 차량을 여는 열쇠입니다.</Korean>
             <Chinesesimp>一组解锁钥匙（可解锁大部份蓝方载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份藍方載具)</Chinese>
         </Key>
@@ -161,7 +161,7 @@
             <Italian>Una chaive che apre la maggior parte dei veicoli orientali</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos orientais</Portuguese>
             <Japanese>このキーは多くのOPFOR軍車両を開けられます。</Japanese>
-            <Korean>거의 모든 동방진영 차량을 여는 열쇠입니다.</Korean>
+            <Korean>거의 모든 대항군 진영 차량을 여는 열쇠입니다.</Korean>
             <Chinesesimp>一组解锁钥匙（可解锁大部份红方载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份紅方載具)</Chinese>
         </Key>
@@ -177,7 +177,7 @@
             <Italian>Una chaive che apre la maggior parte dei veicoli degli indipendenti</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos independentes</Portuguese>
             <Japanese>このキーは多くの独立軍車両を開けられます。</Japanese>
-            <Korean>거의 모든 중립진영 차량을 여는 열쇠입니다.</Korean>
+            <Korean>거의 모든 무소속군 진영 차량을 여는 열쇠입니다.</Korean>
             <Chinesesimp>一组解锁钥匙（可解锁大部份独立方载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份獨立方載具)</Chinese>
         </Key>
@@ -241,7 +241,7 @@
             <Russian>Закрывать инвентарь транспорта, если транспорт закрыт</Russian>
             <Italian>Blocca l'inventario di un veicolo bloccato</Italian>
             <Japanese>施錠されている車両の開けないインベントリ</Japanese>
-            <Korean>잠긴 차량의 소지품을 뒤지지못하게 합니다.</Korean>
+            <Korean>잠긴 차량의 소지품을 뒤지지 못하게 합니다.</Korean>
             <Chinesesimp>上锁载具的车箱，使玩家不能拿取/查看载具内的装备</Chinesesimp>
             <Chinese>上鎖載具的車箱，使玩家不能拿取/查看載具內的裝備</Chinese>
         </Key>
@@ -257,7 +257,7 @@
             <Russian>Начальное состояние замков</Russian>
             <Italian>Stato Iniziale del Blocco per Veicoli</Italian>
             <Japanese>開始時における車両の鍵の状態</Japanese>
-            <Korean>시작시 차량 잠금 상태</Korean>
+            <Korean>시작 시 차량 잠금 상태</Korean>
             <Chinesesimp>载具初始上锁状态</Chinesesimp>
             <Chinese>載具初始上鎖狀態</Chinese>
         </Key>
@@ -273,7 +273,7 @@
             <Russian>Устанавливает начальное состояние замков всех транспортных средств (устраняет неоднозначные состояния)</Russian>
             <Italian>Imposta lo stato di blocco per tutti i veicoli (rimuove stati di blocco ambigui)</Italian>
             <Japanese>全車両へ鍵の状態を設定します。(あいまいな鍵の状態を削除)</Japanese>
-            <Korean>모든 차량의 잠금 상태를 정합니다. (애매한 잠금 상태는 모두 없앱니다.)</Korean>
+            <Korean>모든 차량의 잠금 상태를 정합니다. (불분명한 잠금 상태는 모두 없앱니다.)</Korean>
             <Chinesesimp>设定所有载具的初始上锁状态（移除不明确的锁定状态）</Chinesesimp>
             <Chinese>設定所有載具的初始上鎖狀態 (移除不明確的鎖定狀態)</Chinese>
         </Key>
@@ -286,7 +286,7 @@
             <Japanese>あいまいな鍵の状態を削除</Japanese>
             <German>Unklaren Sperrzustand entfernen</German>
             <Chinesesimp>移除不明确的上锁状态</Chinesesimp>
-            <Korean>어정쩡한 잠금상태 제거</Korean>
+            <Korean>불분명한 잠금상태 제거</Korean>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
@@ -413,7 +413,7 @@
             <Russian>Синхронизируйте с транспортом и игроком. Это выдаст игроку ключи от всех синхронизированных транспортных средств. Работает только для объектов, присутствующих на старте миссии</Russian>
             <Italian>Sincronizza con veicoli e giocatori. Distribuirà chiavi ai giocatori per ogni veicolo sincronizzato. Valido solo per oggetti presenti ad inizio missione.</Italian>
             <Japanese>車両とプレイヤへ同期します。プレイヤへ同期された車両のカスタム キーを作ります。これはミッション開始時に作成されたオブジェクトでのみ有効です。</Japanese>
-            <Korean>차량과 플레이어에게 동기화됩니다. 동기화된 차량은 플레이어에게 열쇠를 지급합니다. 오직 미션 시작시에 생긴 물체들만 유효합니다.</Korean>
+            <Korean>차량과 플레이어에게 동기화됩니다. 동기화된 차량은 플레이어에게 열쇠를 지급합니다. 오직 미션 시작 시에 생긴 물체들만 유효합니다.</Korean>
             <Chinesesimp>可同步在载具与玩家身上。将使被同步的玩家掌握其他被同步载具的钥匙。此模块只会在任务刚开始时触发。</Chinesesimp>
             <Chinese>可同步在載具與玩家身上。將使被同步的玩家掌握其他被同步載具的鑰匙。此模塊只會在任務剛開始時觸發</Chinese>
         </Key>

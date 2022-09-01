@@ -99,7 +99,7 @@
             <Spanish>Permitir interacción para intercambiar el arma principal y el arma guardada.</Spanish>
             <German>Erlaube den direkten Wechsel von Primärer und verstauter Waffe über das Interaktionsmenü.</German>
             <Chinesesimp>允许互动直接切换主武器和存储武器。</Chinesesimp>
-            <Korean>보관중인 무기와 주무기와 바로 바꾸는것을 허용합니다.</Korean>
+            <Korean>보관 중인 무기와 주무기와 바로 바꾸는 것을 허용합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>

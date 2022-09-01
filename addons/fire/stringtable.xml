@@ -73,6 +73,8 @@
             <Chinesesimp>启用着火单位发出惨叫声</Chinesesimp>
             <Korean>불 붙은 유닛 비명</Korean>
             <German>Schreie von brennenden Einheiten aktivieren</German>
+            <Polish>Włącz krzyki podpalonych jednostek</Polish>
+            <Japanese>炎上中の悲鳴を有効</Japanese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
             <English>Enables if units on fire will play the screaming sound</English>
@@ -80,6 +82,8 @@
             <Chinesesimp>启用着火的单位是否会发出惨叫声。</Chinesesimp>
             <Korean>불이 붙은 유닛이 소리를 지르게 합니다</Korean>
             <German>Aktiviert, ob brennende Einheiten den Schrei-Ton abspielen</German>
+            <Polish>Włącza, czy płonące jednostki będą odtwarzać dźwięk krzyku</Polish>
+            <Japanese>有効化すると炎上しているユニットが悲鳴を上げます</Japanese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
             <English>Drop Weapons When on Fire</English>
@@ -88,6 +92,7 @@
             <Chinesesimp>着火时扔掉武器</Chinesesimp>
             <Korean>불 붙을 경우 무기 내려놓음</Korean>
             <German>Waffen fallen lassen, wenn in Brand geraten.</German>
+            <Japanese>炎上時に武器を落とす</Japanese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
             <English>Controls whether units drop their weapons when on fire.</English>
@@ -96,6 +101,7 @@
             <Chinesesimp>控制单位在着火时是否丢掉武器。</Chinesesimp>
             <Korean>유닛이 불에 붙이면 무기를 떨굴지를 결정합니다.</Korean>
             <German>Steuert, ob Einheiten ihre Waffen fallen lassen, wenn sie brennen.</German>
+            <Japanese>ユニットが炎上時に武器を落とすかどうかを定義します。</Japanese>
         </Key>
     </Package>
 </Project>
