@@ -198,6 +198,10 @@
 - `ace_missileguidance`
 {% endif %}
 
+{% if include.component == "hunterkiller" %}
+- `ace_common`
+{% endif %}
+
 {% if include.component == "huntir" %}
 - `ace_common`
 {% endif %}
