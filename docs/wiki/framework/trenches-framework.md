@@ -25,10 +25,10 @@ class CfgSurfaces {
 };
 ```
 
-### 1.2 Enabling entrenching tool features on an item
+### 1.2 Enabling entrenching tool features on an item or backpack
 
 ```cpp
-class CfgWeapons {
+class CfgWeapons { // same config also works on backpacks (CfgVehicles)
     class yourBaseClass;
     class yourEntrenchingToolClass: yourBaseClass
         ace_trenches_entrenchingTool = 1;
