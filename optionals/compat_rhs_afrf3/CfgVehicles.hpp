@@ -429,7 +429,7 @@ class CfgVehicles {
             "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint",
             "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
             "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint", "era_36_hitpoint",
-            "era_37_hitpoint",
+            "era_37_hitpoint"
         };
         EGVAR(vehicle_damage,slatHitpoints)[] = {
             "SLAT_38_hitpoint", "SLAT_39_hitpoint", "SLAT_40_hitpoint", "SLAT_41_hitpoint"
@@ -445,7 +445,7 @@ class CfgVehicles {
             "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint",
             "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
             "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint", "era_36_hitpoint",
-            "era_37_hitpoint",
+            "era_37_hitpoint"
         };
     };
 
