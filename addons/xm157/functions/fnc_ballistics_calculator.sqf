@@ -91,7 +91,7 @@ if (_useAB && {(_bulletPos select 1) > 0}) then {
     // Spin drift
     private _stabilityFactor = 1.5;
     if (_caliber * _bulletLength * _bulletMass * _barrelTwist > 0) then {
-        _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
+        _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call EFUNC(advanced_ballistics,calculateStabilityFactor);
     };
     private _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
     private _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
