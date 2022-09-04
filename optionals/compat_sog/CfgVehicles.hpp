@@ -1,4 +1,5 @@
 class CfgVehicles {
+    #include "CfgVehicles\backpacks.hpp"
     #include "CfgVehicles\boxes.hpp"
     #include "CfgVehicles\explosives.hpp"
     #include "CfgVehicles\helicopters.hpp"
