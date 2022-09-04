@@ -78,6 +78,9 @@ class CfgVehicles {
     class ACE_MedicalLitter_splint: ACE_MedicalLitterBase {
         model = QPATHTOF(data\littergeneric_splint.p3d);
     };
+	class ACE_MedicalLitter_suture: ACE_MedicalLitterBase {
+        model = QPATHTOF(data\littergeneric_suture.p3d);
+    };
 
     // Treatment items
     class Item_Base_F;
