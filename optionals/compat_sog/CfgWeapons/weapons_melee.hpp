@@ -5,7 +5,7 @@ class vn_hand_melee_base_dynamic_scope;
 class vn_m_wrench_01: vn_hand_melee_base_dynamic_scope {
     scope = 2;
 };
-class vn_m_hammer_01: vn_hand_melee_base_dynamic_scope {
+class vn_m_hammer: vn_hand_melee_base_dynamic_scope {
     scope = 2;
 };
 class vn_m_shovel_01: vn_hand_melee_base_dynamic_scope {
@@ -15,7 +15,7 @@ class vn_m_shovel_01: vn_hand_melee_base_dynamic_scope {
 class vn_m_axe_01: vn_hand_melee_base_dynamic_scope {
     scope = 2;
 };
-class vn_m_axe_fire_01: vn_hand_melee_base_dynamic_scope {
+class vn_m_axe_fire: vn_hand_melee_base_dynamic_scope {
     scope = 2;
 };
 class vn_m_bayo_carbine: vn_hand_melee_base_dynamic_scope {
