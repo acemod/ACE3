@@ -55,6 +55,13 @@ layout: compress
                     <div id="toc"></div>
                 </div>
             </div>
+            {% if page.component %}
+            <div class="row">
+                <div class="large-12 columns">
+                    <p><a href="{{ site.url }}/wiki/development/dependencies.html#{{ page.title | slugify }}"><i class="fa fa-1 fa-chevron-right"></i>&nbsp;&nbsp;See dependencies</a></p>
+                </div>
+            </div>
+            {% endif %}
         </aside>
         <section class="medium-8 medium-pull-4 small-12 columns">
             <h1>{{page.title}}</h1>

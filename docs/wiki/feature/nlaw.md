@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: NLAW
+component: nlaw
 description: NLAW
 group: feature
 category: equipment
@@ -29,7 +30,3 @@ It will also correct for gravity drop.
 - Start tracking by pressing and holding the "NLAW Track Target" keybind (default: <kbd>Tab</kbd>)
 - While holding the key down track the target for 2-3 seconds and fire.
 - Can also be fired against static targets without tracking.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="nlaw" %}

@@ -25,5 +25,6 @@ PREP(startLoadIn);
 PREP(startUnload);
 PREP(unload);
 PREP(unloadAllVehicles);
+PREP(unloadCarryItem);
 PREP(unloadItem);
 PREP(validateCargoSpace);

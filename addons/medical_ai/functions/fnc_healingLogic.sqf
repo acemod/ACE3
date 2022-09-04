@@ -54,7 +54,7 @@ switch (true) do {
         _treatmentTime = 5;
         _treatmentArgs = [_target, _selection, "FieldDressing"];
     };
-    case (IN_CRDC_ARRST(_target) && {EGVAR(medical_treatment,cprSuccessChance) > 0}): {
+    case (IN_CRDC_ARRST(_target) && {EGVAR(medical_treatment,cprSuccessChanceMin) > 0}): {
         _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
         _treatmentArgs = [_healer, _target];
         _treatmentTime = 15;

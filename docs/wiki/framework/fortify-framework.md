@@ -67,7 +67,7 @@ class ACEX_Fortify_Presets {
  ```
 
 Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or the chat command: `#ace-fortify blufor myMissionObjects`.
- 
+
 ## 1.3 Adding custom deploy handlers
 
 A custom deploy handler allows missions makers to decide if an object can be placed or not.
@@ -82,6 +82,25 @@ To verify that an object isn't above a certain terrain height we can check the h
 }] call ace_fortify_fnc_addDeployHandler;
 ```
 
+## 1.4 Updating budget
+
+The Fortify budget can be updated for any side using the function.
+
+```sqf
+* Updates the given sides budget.
+*
+* Arguments:
+* 0: Side <SIDE>
+* 1: Change <NUMBER> (default: 0)
+* 2: Display hint <BOOL> (default: true)
+*
+* Return Value:
+* None
+*
+* Example:
+* [west, -250, false] call ace_fortify_fnc_updateBudget
+```
+
 
 ## 2. Events
 
@@ -92,3 +111,5 @@ Event Name | Passed Parameter(s) | Locality | Description
 `acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
 `acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted
 `acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object
+`ace_fortify_deployFinished` | [player, side, configName, posASL, vectorDir, vectorUp] | Local | Player successfully finishes building object
+`ace_fortify_deployCanceled` | [player, side, configName, posASL, vectorDir, vectorUp] | Local | Player cancels building object

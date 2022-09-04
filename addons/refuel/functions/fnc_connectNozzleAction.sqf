@@ -65,7 +65,7 @@ _bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) 
 private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
 
 [
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    GVAR(progressDuration),
     [_unit, _nozzle, _sink, _attachPosModel],
     {
         params ["_args"];

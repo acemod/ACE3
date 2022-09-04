@@ -13,7 +13,7 @@
             <Hungarian>ACE Orvosi Rendszer</Hungarian>
             <Italian>ACE Medical</Italian>
             <Korean>ACE 의료</Korean>
-            <Chinesesimp>ACE 医疗系统</Chinesesimp>
+            <Chinesesimp>ACE 医疗</Chinesesimp>
             <Chinese>ACE 醫療系統</Chinese>
             <Turkish>ACE Medikal</Turkish>
             <Japanese>ACE 医療</Japanese>
@@ -32,6 +32,7 @@
             <Polish>Szansa na wybudzenie nieprzytomnego</Polish>
             <Spanish>Posibilidad de recuperar la conciencia</Spanish>
             <Turkish>Bayılmış Bir Kişinin Uyanma Şansı</Turkish>
+            <Korean>기절 회복 확률</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probability that a person with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
@@ -47,6 +48,7 @@
             <Polish>Prawdopodobieństwo, że jednostka ze stabilnymi parametrami życiowymi obudzi się z nieprzytomności (sprawdzane co 15 sekund).</Polish>
             <Spanish>La probabilidad de que una unidad estabilizada recupere la conciencia y se levante (se comprueba cada 15 segundos)</Spanish>
             <Turkish>Hayati değerleri stabil olan bir kişinin bilinçsizlikten uyanma olasılığı (her 15 saniyede bir kontrol edilir).</Turkish>
+            <Korean>기절하고 안정화된 상태에서 깨어날 확률을 정합니다 (매 15초 마다 갱신됨)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Wake Up Chance Boost</English>
@@ -60,6 +62,7 @@
             <Russian>Увеличение шанса очнуться от адреналина</Russian>
             <Turkish>Epinefrin Uyanma Şansı Artışı</Turkish>
             <Spanish>Aumento de probabilidad de despertarse por epinefrina</Spanish>
+            <Korean>에피네프린 사용 시 추가 회복 확률</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -75,6 +78,7 @@
             <German>Erhöht wie oft Aufwachprüfungen passieren, wenn ein Patient Epinephrin im Blutkreislauf hat.</German>
             <Russian>Увеличивает частоту проверок на спонтанное пробуждение, когда пациент под действием адреналина.</Russian>
             <Turkish>Hastanın sisteminde Epinefrin olduğunda rasgele uyanma kontrollerinin ne sıklıkla gerçekleştiğini artırır.</Turkish>
+            <Korean>에피네프린 투여 후 환자가 일어날 확률을 얼마나 추가할 지 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -90,6 +94,7 @@
             <Spanish>Cojera</Spanish>
             <German>Humpeln</German>
             <Turkish>Topallama</Turkish>
+            <Korean>절뚝거림</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -105,6 +110,7 @@
             <German>Stellt ein, ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
             <Russian>Контролирует хромоту в случае открытых или забинтованных ран.</Russian>
             <Turkish>Açık veya sargılı yaraların bir kişinin topallamasına neden olup olmadığını kontrol eder.</Turkish>
+            <Korean>붕대로 묶인 상처가 플레이어를 절게 만들지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -120,6 +126,7 @@
             <Spanish>Cojera en heridas abiertas</Spanish>
             <German>Humpeln bei offenen Wunden</German>
             <Turkish>Açık Yaralarda Topallama</Turkish>
+            <Korean>상처 개방 시 절뚝거림</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -135,6 +142,7 @@
             <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
             <German>Humpeln bei offenen oder bandagierten Wunden</German>
             <Turkish>Açık veya Sargılı Yaralarda Topallama</Turkish>
+            <Korean>상처 개방 혹은 붕대질 후에도 절뚝거림</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -150,12 +158,13 @@
             <Spanish>Fracturas</Spanish>
             <German>Brüche</German>
             <Turkish>Kırıklar</Turkish>
+            <Korean>골절</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
             <Japanese>医療機能で骨折に添え木効果を使うかどうかを決定できます。\n無効化すると、骨折効果は表れません。</Japanese>
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
-            <Chinesesimp>控制是否让固定版能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
+            <Chinesesimp>控制是否让固定板能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
             <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
             <Italian>Controlla l'effetto dell'utilizzo di stecche per curare le fratture. Quando disabilitato, le lesioni non causano fratture.</Italian>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
@@ -165,6 +174,7 @@
             <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
             <Russian>Управляет эффектом использования шин для лечения переломов.\nПри отключении травмы не вызывают переломов.</Russian>
             <Turkish>Kırıkları tedavi etmek için atel kullanmanın etkisini kontrol eder. \ Devre dışı bırakıldığında, yaralanmalar kırılmaya neden olmaz.</Turkish>
+            <Korean>부목이 골절을 어떻게 치료할 지 결정합니다\n비활성화 시 골절이 일어나지 않습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -180,6 +190,7 @@
             <Spanish>Férulas sanan completamente las fracturas</Spanish>
             <German>Schienen heilen Knochenbrüche vollständig</German>
             <Turkish>Ateller Kırıkları Tamamen İyileştirir</Turkish>
+            <Korean>부목이 골절을 완전히 치료</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoSprint">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -188,13 +199,14 @@
             <French>Les attelles guérissent les fractures, mais empêchent de sprinter</French>
             <Portuguese>Talas curam (mas não consegue correr)</Portuguese>
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
-            <Chinesesimp>固定版能治愈骨折，但无法奔跑</Chinesesimp>
+            <Chinesesimp>固定板能治愈骨折，但无法奔跑</Chinesesimp>
             <Italian>Le gessature curano, ma non puoi correre</Italian>
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
             <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
             <German>Schienen heilen, aber ermöglichen kein Sprinten</German>
             <Turkish>Ateller İyileştirir, ancak Koşamaz</Turkish>
+            <Korean>부목이 치료는 하지만 달릴 수는 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoJog">
             <English>Splints Heal, but Cannot Jog</English>
@@ -205,6 +217,8 @@
             <Russian>Шины вылечивают, но не дают бежать трусцой</Russian>
             <Polish>Szyny leczą, ale uniemożliwiają trucht</Polish>
             <German>Schiene heilt, aber verhindert Sprinten</German>
+            <Korean>부목이 치료는 하지만 빨리 걷지 못함</Korean>
+            <Chinesesimp>固定板能治愈骨折，但无法慢跑</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
@@ -217,6 +231,7 @@
             <Turkish>Kırılma Şansı</Turkish>
             <Spanish>Probabilidad de fractura</Spanish>
             <German>Wahrscheinlichkeit einer Fraktur</German>
+            <Korean>골절 확률</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
@@ -229,6 +244,7 @@
             <Turkish>Yaraya neden olan bir kırığın kırılma olasılığı.</Turkish>
             <Spanish>La probabilidad de que una herida que pueda provocar una fractura, provoque una fractura.</Spanish>
             <German>Die Wahrscheinlichkeit, dass eine Wunde, die eine Fraktur verursachen würde, tatsächlich zu einer Fraktur führt.</German>
+            <Korean>상처를 입을 때 골절에 얼마나 관여할지를 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -260,7 +276,7 @@
             <Italian>Seleziona per quali unità verrà abilitato il sistema medico avanzato</Italian>
             <Japanese>選択されたユニットが、アドバンスド医療が使えるようになります</Japanese>
             <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시요.</Korean>
-            <Chinesesimp>选择进阶医疗系统影响的对象</Chinesesimp>
+            <Chinesesimp>选择进阶医疗系统影响的物体</Chinesesimp>
             <Chinese>選擇進階醫療系統影響的對象</Chinese>
             <Turkish>Gelişmiş tıbbi sistemin hangi üniteler için etkinleştirileceğini seçin</Turkish>
         </Key>
@@ -294,7 +310,7 @@
             <Italian>Giocatori ed IA</Italian>
             <Japanese>プレイヤーと AI</Japanese>
             <Korean>플레이어 및 인공지능</Korean>
-            <Chinesesimp>玩家与AI</Chinesesimp>
+            <Chinesesimp>玩家与 AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
             <Turkish>Oyuncular ve AI</Turkish>
         </Key>
@@ -328,7 +344,7 @@
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
             <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか?</Japanese>
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
-            <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
+            <Chinesesimp>设定人员是否会因为载具冲撞别的物体而产生伤害？</Chinesesimp>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
             <Turkish>Birimler bir araç kazasından hasar alır mı?</Turkish>
         </Key>

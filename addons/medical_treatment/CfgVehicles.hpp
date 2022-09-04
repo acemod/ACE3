@@ -328,4 +328,14 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bodyBag,5);
         };
     };
+
+    class Van_02_base_F;
+    class Van_02_medevac_base_F: Van_02_base_F {
+        GVAR(patientSeats)[] = {3,4};
+    };
+
+    class Heli_Transport_04_base_F;
+    class O_Heli_Transport_04_medevac_F: Heli_Transport_04_base_F {
+        GVAR(patientSeats)[] = {0,1,2};
+    };
 };

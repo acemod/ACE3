@@ -20,7 +20,7 @@
 
     // Exit if no required item in inventory
     if ([_unit, {
-        GVAR(cachedRequiredItems) arrayIntersect (_unit call EFUNC(common,uniqueItems)) isEqualTo []
+        (keys GVAR(itemActions)) arrayIntersect (_unit call EFUNC(common,uniqueItems)) isEqualTo []
     }, _unit, QGVAR(checkRequiredItemsCache), 9999, "cba_events_loadoutEvent"] call EFUNC(common,cachedCall)) exitWith {false};
 
     private _startPosASL = eyePos _unit;
@@ -41,6 +41,12 @@
     if ((!isNull _object) && {
         // If the class is alright, do not exit
         if (_object isKindOf "Static") exitWith {false};
+
+        // Taggable vehicle, do not exit
+        if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true]) 
+        && {getText (configOf _object >> "selectionClan") in selectionNames _object}) exitWith {
+            false
+        };
 
         // If the class is not categorized correctly search the cache
         private _modelName = (getModelInfo _object) select 0;

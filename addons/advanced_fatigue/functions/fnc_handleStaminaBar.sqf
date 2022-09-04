@@ -31,6 +31,8 @@ if (GVAR(fadeStaminaBar)) then {
     } else {
         _staminaBarContainer ctrlSetFade (0.9 * _stamina / 0.8);
     };
+} else {
+    _staminaBarContainer ctrlSetFade 0;
 };
 
 // - Color --------------------------------------------------------------------

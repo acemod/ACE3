@@ -1,16 +1,3 @@
-#define EQUIP_FRIES_ATTRIBUTE class Attributes { \
-    class GVAR(equipFRIES) { \
-        property = QGVAR(equipFRIES); \
-        control = "Checkbox"; \
-        displayName = CSTRING(Eden_equipFRIES); \
-        tooltip = CSTRING(Eden_equipFRIES_Tooltip); \
-        expression = QUOTE(if (_value) then {[_this] call FUNC(equipFRIES)}); \
-        typeName = "BOOL"; \
-        condition = "objectVehicle"; \
-        defaultValue = "(false)"; \
-    }; \
-}
-
 class CfgVehicles {
     class Logic;
     class Module_F: Logic {
@@ -221,7 +208,9 @@ class CfgVehicles {
         GVAR(friesAttachmentPoint)[] = {0.035, 2.2, -0.15};
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
     class Heli_Transport_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
@@ -254,14 +243,19 @@ class CfgVehicles {
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantryReverse";
         GVAR(friesAttachmentPoint)[] = {-1.04, 2.5, -0.34};
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
     class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantry";
         GVAR(friesAttachmentPoint)[] = {1.07, 2.5, -0.5};
-        EQUIP_FRIES_ATTRIBUTE;
+
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
     class Heli_Transport_04_base_F: Helicopter_Base_H {
         class UserActions;

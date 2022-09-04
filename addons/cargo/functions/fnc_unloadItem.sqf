@@ -42,6 +42,9 @@ if !(_item in _loaded) exitWith {
 
 private _object = [_item, _emptyPosAGL, _loaded, _vehicle] call FUNC(unload);
 
+// Dragging integration
+[_unloader, _object] call FUNC(unloadCarryItem);
+
 // Invoke listenable event
 ["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;
 true

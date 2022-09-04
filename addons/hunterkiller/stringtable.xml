@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="HunterKiller">
+        <Key ID="STR_ACE_HunterKiller_displayName">
+            <English>Hunter Killer</English>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_override">
+            <English>Override</English>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_override_description">
+            <English>Force other turret to slew onto your viewpoint</English>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_observe">
+            <English>Observe</English>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_observe_description">
+            <English>Slew your turret onto other turret's viewpoint</English>
+        </Key>
+    </Package>
+</Project>

@@ -32,7 +32,7 @@ GVAR(preserveViewCameraViewEH) = ["cameraView", {
     private _vehicle = vehicle _player;
     private _vehicleClass = {if (_vehicle isKindOf _x) exitWith {_x}} forEach ["CAManBase", "LandVehicle", "Air", "Ship", "All"];
     private _varName = QXGVAR(preserveView) + _vehicleClass;
-    if !(_cameraView isEqualTo (profileNamespace getVariable [_varName, ""])) then {
+    if (_cameraView isNotEqualTo (profileNamespace getVariable [_varName, ""])) then {
         profileNamespace setVariable [_varName, _cameraView];
     };
 }] call CBA_fnc_addPlayerEventHandler;
@@ -44,7 +44,7 @@ GVAR(preserveViewVehicleEH) = ["vehicle", {
 
     private _vehicleClass = {if (_vehicle isKindOf _x) exitWith {_x}} forEach ["CAManBase", "LandVehicle", "Air", "Ship", "All"];
     private _savedView = profileNamespace getVariable (QXGVAR(preserveView) + _vehicleClass);
-    if (!isNil "_savedView" && {!(_cameraView isEqualTo _savedView)}) then {
+    if (!isNil "_savedView" && {_cameraView isNotEqualTo _savedView}) then {
         _vehicle switchCamera _savedView;
     };
 }, true] call CBA_fnc_addPlayerEventHandler;

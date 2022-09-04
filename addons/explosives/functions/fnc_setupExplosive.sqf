@@ -24,7 +24,7 @@ params ["_vehicle", "_unit", "_magClassname"];
 TRACE_3("params",_vehicle,_unit,_magClassname);
 
 //Get setup object vehicle and model:
-private _setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
+private _setupObjectClass = getText (configFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
 if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR("Bad Vehicle");};
 private _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!

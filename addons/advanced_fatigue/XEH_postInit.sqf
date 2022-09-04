@@ -30,7 +30,7 @@ if (!hasInterface) exitWith {};
     GVAR(ppeBlackout) ppEffectCommit 0.4;
 
     // - GVAR updating and initialization -----------------------------------------
-    ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
+    ["unit", LINKFUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
 
     ["visibleMap", {
         params ["", "_visibleMap"]; // command visibleMap is updated one frame later
@@ -56,7 +56,8 @@ if (!hasInterface) exitWith {};
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);
     };
-    if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
+    // Weather has an off switch, Dragging & Medical don't.
+    if (missionNamespace getVariable [QEGVAR(weather,enabled), false]) then {
         [QEGVAR(weather,temperature), { // 35->1, 45->2
             linearConversion [35, 45, (missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]), 1, 2, true];
         }] call FUNC(addDutyFactor);

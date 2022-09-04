@@ -23,6 +23,13 @@ class CfgWeapons {
         ACE_barrelTwist = 199.898;
         ACE_barrelLength = 414.02;
     };
+    class rhs_weap_ak103_base;
+    class rhs_weap_ak104: rhs_weap_ak103_base {
+        ACE_barrelLength = 314.96;
+    };
+    class rhs_weap_ak105: rhs_weap_ak74m {
+        ACE_barrelLength = 314.96;
+    };
     class rhs_weap_akm: rhs_weap_ak74m {
         ACE_RailHeightAboveBore = -0.456233;//from rhs_weap_akmn and rhs_weap_ak74m
         ACE_barrelTwist = 199.898;
@@ -110,12 +117,35 @@ class CfgWeapons {
             };
         };
     };
+
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
     };
+
+    class rhs_weap_strela;
+    class rhs_weap_igla: rhs_weap_strela {
+        EGVAR(overpressure,range) = 6;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.6;
+        EGVAR(overpressure,offset) = 1.65;
+    };
+
     class rhs_weap_rpg7: Launcher_Base_F {
-        ace_reloadlaunchers_enabled = 1;
+        EGVAR(reloadlaunchers,enabled) = 1;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,offset) = 0.9;
+    };
+
+    class rhs_weap_rpg26: Launcher_Base_F {
+        EGVAR(overpressure,range) = 10;
+        EGVAR(overpressure,angle) = 50;
+        EGVAR(overpressure,offset) = 0.65;
+    };
+
+    class rhs_weap_rpg18: rhs_weap_rpg26 {
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,offset) = 1;
     };
 
     #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
@@ -126,7 +156,8 @@ class CfgWeapons {
         HEARING_PROTECTION_VICCREW
     };
 
-    class rhs_6b48: H_HelmetB {
+    class rhs_6b47_bare;
+    class rhs_6b48: rhs_6b47_bare {
         HEARING_PROTECTION_VICCREW
     };
 

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Vector
+component: vector
 description: Adds a realistic depiction of the Vector 21 rangefinder.
 group: feature
 category: equipment
@@ -97,7 +98,3 @@ Polish version of this manual with some comments and small additional section
 /polska wersja tego dokumentu opatrzona komentarzami oraz niewielkim dodatkiem:
 
 http://pgm.armaonline.pl/forum/viewtopic.php?f=15&t=548
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="vector" %}

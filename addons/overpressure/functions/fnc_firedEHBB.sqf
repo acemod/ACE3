@@ -18,20 +18,16 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-// Bake variable name and check if the variable exists, call the caching function otherwise
-private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-private _var = if (isNil _varName) then {
-    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
-} else {
-    missionNameSpace getVariable _varName;
-};
-_var params ["_backblastAngle","_backblastRange","_backblastDamage"];
-TRACE_3("cache",_backblastAngle,_backblastRange,_backblastDamage);
+// Retrieve backblast values
+private _bbValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
+
+_bbValues params ["_backblastAngle", "_backblastRange", "_backblastDamage", "_offset"];
+TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 
 if (_backblastDamage <= 0) exitWith {};
 
-private _position = getPosASL _projectile;
 private _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
+private _position = ((getPosASL _projectile) vectorAdd (_direction vectorMultiply _offset));
 
 // Damage to others
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
@@ -51,7 +47,7 @@ if (_distance < _backblastRange) then {
     private _damage = _alpha * _beta * _backblastDamage;
     [_damage * 100] call BIS_fnc_bloodEffect;
 
-    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical")) then {
+    if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
         [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
     } else {
         TRACE_1("",isDamageAllowed _unit);

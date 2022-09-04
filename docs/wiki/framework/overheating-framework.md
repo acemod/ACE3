@@ -53,10 +53,16 @@ class CfgWeapons {
 
 ```cpp
 class CfgWeapons {
-    class Rifle_Long_Base_F ;
+    class Rifle_Base_F;
+    class Rifle_Long_Base_F;
+
+    class MyRifle: Rifle_Base_F {
+        ace_overheating_closedBolt = 1; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_barrelMass = 1.5895; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+    };
 
     class MySniper: Rifle_Long_Base_F {
-        ace_overheating_closedBolt = 1; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_closedBolt = 1;
     };
 
     class MyMG: Rifle_Long_Base_F {
