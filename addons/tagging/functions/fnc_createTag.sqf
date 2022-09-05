@@ -33,6 +33,7 @@ if (_isVehicleTag) exitWith {
     TRACE_3("tagging vehicle",_object,typeOf _object,_texture);
     _object setObjectTextureGlobal [getText (configOf _object >> "selectionClan"), _texture];
     // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
+    ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
 };
 
 private _tag = createSimpleObject [_tagModel, _tagPosASL];
