@@ -57,7 +57,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Callable | Scripted way to add cargo to vehicle
 |`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle
-|`ace_cargoUnloaded` | [_item, _vehicle] | Global | Listen | Cargo has been Unloaded from vehicle
+|`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Listen | Cargo has been Unloaded from vehicle
 
 ### 2.5 Captives (`ace_captives`)
 
