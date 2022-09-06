@@ -27,6 +27,7 @@ Each element is a tuple of a turret path and operating mode.
 ## 2. Configs
 
 ```cpp
+{{ raw }}
 class CfgVehicles {
     class MyTankA {
         ace_hunterkiller = 1; // enable with default settings
@@ -38,6 +39,7 @@ class CfgVehicles {
         ace_hunterkiller[] = {{{0}, 1}, {{1}, 2}}; // e.g. vehicle where commander is [1] instead of [0,0]
     };
 };
+{{ endraw }}
 ```
 
 ## 2. Variables
