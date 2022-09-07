@@ -12,7 +12,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="z\wfar\addons\axe\data\suture_nohq.paa";
+	texture="z\ace\addons\medical_treatment\data\suture_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -60,7 +60,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="z\wfar\addons\axe\data\suture_smdi.paa";
+	texture="z\ace\addons\medical_treatment\data\suture_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{
