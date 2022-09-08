@@ -674,10 +674,8 @@
 {% endif %}
 
 {% if include.component == "compat_sog" %}
-- `vn_weapons`
-- `vn_emm_main_menu`
-- `weapons_f_vietnam_c`
 - `ace_trenches`
+- `loadorder_f_vietnam`
 {% endif %}
 
 {% if include.component == "noactionmenu" %}
