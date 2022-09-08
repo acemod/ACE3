@@ -305,7 +305,7 @@ class GVAR(mg42_carry): Launcher_Base_F {
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    // picture = QPATHTOF(UI\csw_mg42_ca.paa);
+    picture = QPATHTOF(UI\csw_mg42_ca.paa);
 
     class ACE_CSW {
         type = "mount";
@@ -332,7 +332,7 @@ class GVAR(sgm_carry): Launcher_Base_F {
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    // picture = QPATHTOF(UI\csw_sgm_ca.paa);
+    picture = QPATHTOF(UI\csw_sgm_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -358,7 +358,7 @@ class GVAR(sgm_shield_carry): Launcher_Base_F {
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    // picture = QPATHTOF(UI\csw_sgm_shield_ca.paa);
+    picture = QPATHTOF(UI\csw_sgm_shield_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -384,7 +384,7 @@ class GVAR(mk18_carry): Launcher_Base_F {
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    // picture = QPATHTOF(UI\csw_mk18_ca.paa);
+    picture = QPATHTOF(UI\csw_mk18_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
