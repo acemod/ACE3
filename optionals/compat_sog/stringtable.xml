@@ -249,6 +249,38 @@
             <Korean>[CSW] PK 총가방</Korean>
             <Chinesesimp>[班组] PK 枪袋</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_MG42">
+            <English>[CSW] MG42 Gun Bag</English>
+            <German>[CSW] MG42 Waffentasche</German>
+            <Japanese>[CSW] MG42 ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na MG42</Polish>
+            <Korean>[CSW] MG42 총가방</Korean>
+            <Chinesesimp>[班组] MG42 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_SGM">
+            <English>[CSW] SGM Gun Bag</English>
+            <German>[CSW] SGM Waffentasche</German>
+            <Japanese>[CSW] SGM ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na SGM</Polish>
+            <Korean>[CSW] SGM 총가방</Korean>
+            <Chinesesimp>[班组] SGM 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_SGM_Shield">
+            <English>[CSW] SGM (Shield) Gun Bag</English>
+            <German>[CSW] SGM (Schutzschild) Waffentasche</German>
+            <Japanese>[CSW] SGM (防盾) ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na SGM (z tarczą) </Polish>
+            <Korean>[CSW] SGM (방패) 총가방</Korean>
+            <Chinesesimp>[班组] SGM（防盾）枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_Mk18">
+            <English>[CSW] Mk18 Gun Bag</English>
+            <German>[CSW] Mk18 Waffentasche</German>
+            <Japanese>[CSW] Mk18 ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na Mk18</Polish>
+            <Korean>[CSW] Mk18 총가방</Korean>
+            <Chinesesimp>[班组] Mk18 枪袋</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M29">
             <English>[CSW] M29 Mortar Tube</English>
             <German>[CSW] M29 Mörserrohr</German>
