@@ -66,7 +66,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
         // Create a wheel interaction
         private _root = format ["Wheel_%1_%2", _forEachIndex, _hitpoint];
-        private _action = [_root, LSTRING(SpareWheel), ["","#FFFFFF"], {}, {true}, {}, [_hitpoint], _position, 2, nil, FUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
+        private _action = [_root, localize LSTRING(SpareWheel), ["","#FFFFFF"], {}, {true}, {}, [_hitpoint], _position, 2, nil, FUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
         // An action to remove the wheel is required
