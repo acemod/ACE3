@@ -2,7 +2,7 @@
 #include "..\defines.hpp"
 /*
  * Author: mharis001
- * Handles changing the category in 3DEN attribute.
+ * Handles changing the category in 3DEN's ace arsenal attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>

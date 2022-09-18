@@ -27,7 +27,7 @@ private _hideUnusedFnc = {
     params ["_numbers"];
 
     {
-        private _statsTitleCtrl = _display displayCtrl (5101 + ((_x - 1) * 4));
+        private _statsTitleCtrl = _display displayCtrl (IDC_statsTitle1 + ((_x - 1) * 4));
         private _statsTitleIDC = ctrlIDC _statsTitleCtrl;
 
         private _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
@@ -47,7 +47,6 @@ private _hideUnusedFnc = {
 };
 
 if (!isNil "_itemCfg") then {
-
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];
 
@@ -59,7 +58,6 @@ if (!isNil "_itemCfg") then {
         } params ["_isLeftPanel", "_statsArray", "_currentPage"];
 
         private _statsList = _statsArray select _currentPage;
-
         private _statsCount = 0;
 
         // Handle titles, bars and text
@@ -70,7 +68,7 @@ if (!isNil "_itemCfg") then {
                 _bools params ["_showBar", "_showText"];
                 _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
 
-                private _statsTitleCtrl = _display displayCtrl (5101 + _forEachIndex * 4);
+                private _statsTitleCtrl = _display displayCtrl (IDC_statsTitle1 + _forEachIndex * 4);
                 private _statsTitleIDC = ctrlIDC _statsTitleCtrl;
                 private _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
                 private _statsBarCtrl = _display displayCtrl (_statsTitleIDC + 2);
@@ -151,7 +149,6 @@ if (!isNil "_itemCfg") then {
     };
 
     if (ctrlIDC _control == IDC_leftTabContent) then {
-
         if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia] find GVAR(currentLeftPanel) > -1) then {
 
             [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
@@ -227,7 +224,6 @@ if (!isNil "_itemCfg") then {
         };
     };
 } else {
-
     [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,

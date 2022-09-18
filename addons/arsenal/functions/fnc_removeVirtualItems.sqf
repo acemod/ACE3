@@ -1,12 +1,13 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Remove virtual items to the provided target.
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <ARRAY of strings> <BOOL>
- * 2: Add globally <BOOL>
+ * 1: Items <ARRAY of STRINGS>, <BOOL>
+ * 2: Add globally <BOOL> (Optional)
  *
  * Return Value:
  * None
@@ -18,63 +19,64 @@
  * Public: Yes
 */
 
-params [ ["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]] ];
+params [["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]]];
 
-if (_object == objNull) exitWith {};
-if (_items isEqualType [] && {count _items == 0}) exitWith {};
-
-private _cargo = _object getVariable [QGVAR(virtualItems), [
-    [[], [], []], // Weapons 0, primary, handgun, secondary
-    [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
-    [ ], // Magazines 2
-    [ ], // Headgear 3
-    [ ], // Uniform 4
-    [ ], // Vest 5
-    [ ], // Backpacks 6
-    [ ], // Goggles 7
-    [ ], // NVGs 8
-    [ ], // Binoculars 9
-    [ ], // Map 10
-    [ ], // Compass 11
-    [ ], // Radio slot 12
-    [ ], // Watch slot  13
-    [ ], // Comms slot 14
-    [ ], // WeaponThrow 15
-    [ ], // WeaponPut 16
-    [ ] // InventoryItems 17
-]];
+if (isNull _object || {_items isEqualTo []}) exitWith {};
 
 if (_items isEqualType true) then {
     if (_items) then {
         [_object, _global] call FUNC(removeBox);
-        _object setVariable [QGVAR(virtualItems), nil, _global];
     };
 } else {
+    // Make sure all items are in string form, then convert to config case (non-existent items return "")
+    _items = (_items select {_x isEqualType ""}) apply {_x call EFUNC(common,getConfigName)};
 
-    // Make sure all items are in string form
-    _items = _items select {_x isEqualType "" && {_x != ""}};
+    // Remove any invalid/non-existing items
+    _items = _items - [""];
 
+    private _cargo = _object getVariable [QGVAR(virtualItems), EMPTY_VIRTUAL_ARSENAL];
+    private _isEmpty = true;
+    private _newItems = [];
+
+    // Remove items from lists
     {
-        if (_forEachIndex isEqualTo 0) then {
-            _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items]];
-        } else {
-            if (_forEachIndex isEqualTo 1) then {
-                _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items, (_x select 3) - _items]];
-            } else {
-                _cargo set [_cargo find _x, _x - _items];
+        switch (_forEachIndex) do {
+            // Weapons
+            case IDX_VIRT_WEAPONS: {
+                _cargo set [_forEachIndex, [
+                    (_x select IDX_VIRT_PRIMARY_WEAPONS) - _items,
+                    (_x select IDX_VIRT_SECONDARY_WEAPONS) - _items,
+                    (_x select IDX_VIRT_HANDGUN_WEAPONS) - _items
+                ]];
+
+                // Check that there are still items left in the arsenal
+                _isEmpty = (_cargo select _forEachIndex) isEqualTo [[], [], []];
             };
-        };
-    } foreach _cargo;
+            // Weapon attachments
+            case IDX_VIRT_ATTACHMENTS: {
+                _cargo set [_forEachIndex, [
+                    (_x select IDX_VIRT_OPTICS_ATTACHMENTS) - _items,
+                    (_x select IDX_VIRT_FLASHLIGHT_ATTACHMENTS) - _items,
+                    (_x select IDX_VIRT_MUZZLE_ATTACHMENTS) - _items,
+                    (_x select IDX_VIRT_BIPOD_ATTACHMENTS) - _items
+                ]];
 
-    private _itemCount = {
-        if (_x isEqualTo (_cargo select 0) || {_x isEqualTo (_cargo select 1)}) then {
-            (_x isNotEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]})
-        } else {
-            (_x isNotEqualTo [])
-        };
-    } count _cargo;
+                // Check that there are still items left in the arsenal
+                _isEmpty = _isEmpty && {(_cargo select _forEachIndex) isEqualTo [[], [], [], []]};
+            };
+            // Rest
+            default {
+               _newItems = _x - _items;
+               _cargo set [_forEachIndex, _newItems];
 
-    if (_itemCount == 0) then {
+               // Check that there are still items left in the arsenal
+               _isEmpty = _isEmpty && {_newItems isEqualTo []};
+           };
+        };
+    } forEach _cargo;
+
+    // If nothing is left, remove arsenal from object
+    if (_isEmpty) then {
         [_object, _global] call FUNC(removeBox);
     } else {
         _object setVariable [QGVAR(virtualItems), _cargo, _global];

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brett Mayson
- * Get the extended loadout of a unit, including identity options if enabled
+ * Get the extended loadout of a unit, including identity options if enabled.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -21,14 +21,20 @@ if (isNull _unit) exitWith {};
 
 ([_unit] call CBA_fnc_getLoadout) params ["_loadout", "_extendedInfo"];
 
+// Set face if enabled
 if (GVAR(loadoutsSaveFace)) then {
     _extendedInfo set [QGVAR(face), face _unit];
 };
+
+// Set voice if enabled
 if (GVAR(loadoutsSaveVoice)) then {
     _extendedInfo set [QGVAR(voice), speaker _unit];
 };
+
+// Set insignia if enabled
 if (GVAR(loadoutsSaveInsignia)) then {
-    private _insignia = _unit getVariable ["BIS_fnc_setUnitInsignia_class", ""];
+    private _insignia = _unit call BIS_fnc_getUnitInsignia;
+
     if (_insignia != "") then {
         _extendedInfo set [QGVAR(insignia), _insignia];
     };

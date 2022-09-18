@@ -16,12 +16,13 @@
 params ["_display"];
 
 private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
+private _ctrl = controlNull;
 
 {
-    private _ctrl = _display displayctrl _x;
-    _ctrl ctrlshow _showToggle;
-    _ctrl ctrlcommit 0.15;
-} foreach [
+    _ctrl = _display displayCtrl _x;
+    _ctrl ctrlShow _showToggle;
+    _ctrl ctrlCommit FADE_DELAY;
+} forEach [
     IDC_blockLeftFrame,
     IDC_blockLeftBackground,
     IDC_blockRightFrame,

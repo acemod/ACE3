@@ -16,6 +16,7 @@ if (!isNil QGVAR(sortListLeftPanel)) exitWith {};
 
 private _fnc_addToTabs = {
     params ["_tabsList", "_tabsToAddTo", "_sideString"];
+
     {
         private _arrayToSave = +_finalArray;
         _arrayToSave set [0, [_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString ""];
@@ -84,7 +85,7 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
     if (_rightTabsList isNotEqualTo []) then {
         [_sortListRightPanel, _rightTabsList, "R"] call _fnc_addToTabs;
     };
-} foreach _configEntries;
+} forEach _configEntries;
 
 missionNamespace setVariable [QGVAR(sortListLeftPanel), _sortListLeftPanel];
 missionNamespace setVariable [QGVAR(sortListRightPanel), _sortListRightPanel];

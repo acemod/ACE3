@@ -16,6 +16,7 @@ if (!isNil QGVAR(statsListLeftPanel)) exitWith {};
 
 private _fnc_addToTabs = {
     params ["_tabsList", "_tabsToAddTo", "_sideString"];
+
     {
         private _currentTab = _tabsList select _x;
         private _availablePagesCount = {count _x < 5} count _currentTab;
@@ -29,11 +30,11 @@ private _fnc_addToTabs = {
                 if (count _x < 5) exitWith {
                     (_currentTab select _forEachIndex) append [_arrayToSave];
                 };
-            } foreach _currentTab;
+            } forEach _currentTab;
         } else {
             _currentTab pushBack [_arrayToSave];
         };
-    } foreach _tabsToAddTo;
+    } forEach _tabsToAddTo;
 };
 
 private _fnc_sortLists = {
@@ -44,15 +45,15 @@ private _fnc_sortLists = {
         {
             {
                 reverse _x;
-            } foreach _x;
+            } forEach _x;
 
             _x sort false;
 
             {
                 reverse _x;
-            } foreach _x;
-        } foreach _page;
-    } foreach _tabsList;
+            } forEach _x;
+        } forEach _page;
+    } forEach _tabsList;
 };
 
 private _statsListLeftPanel = [
@@ -70,7 +71,7 @@ private _statsListLeftPanel = [
     [[]], // GPS 11
     [[]], // Radio 12
     [[]], // Compass 13
-    [[]] // Watch 14
+    [[]]  // Watch 14
 ];
 
 private _statsListRightPanel = [
@@ -106,13 +107,11 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
     _finalArray = ["", _stats, _displayName, [_showBar, _showText], [{}, {}, _condition], _priority];
 
     if (_showBar) then {
-        private _barStatement = compile (getText (_x >> "barStatement"));
-        (_finalArray select 4) set [0, _barStatement];
+        (_finalArray select 4) set [0, compile (getText (_x >> "barStatement"))];
     };
 
     if (_showText) then {
-        private _textStatement = compile (getText (_x >> "textStatement"));
-        (_finalArray select 4) set [1, _textStatement];
+        (_finalArray select 4) set [1, compile (getText (_x >> "textStatement"))];
     };
 
     TRACE_3("stats array", _finalArray, _leftTabsList, _rightTabsList);
@@ -124,7 +123,7 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
     if (count _rightTabsList > 0) then {
         [_statsListRightPanel, _rightTabsList, "R"] call _fnc_addToTabs;
     };
-} foreach _configEntries;
+} forEach _configEntries;
 
 [_statsListLeftPanel] call _fnc_sortLists;
 [_statsListRightPanel] call _fnc_sortLists;

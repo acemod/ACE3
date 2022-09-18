@@ -17,7 +17,7 @@ params ["_sortControl"];
 
 private _display = ctrlParent _sortControl;
 
-private _rightSort = ctrlIDC _sortControl == 17;
+private _rightSort = ctrlIDC _sortControl == IDC_sortRightTab;
 private _right = _rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]};
 
 if (_rightSort) then {
@@ -33,8 +33,8 @@ if (_rightSort) then {
             case IDC_buttonThrow;
             case IDC_buttonPut;
             case IDC_buttonMag;
-            case IDC_buttonMagALL: { configFile >> "CfgMagazines" };
-            default { configFile >> "CfgWeapons" };
+            case IDC_buttonMagALL: {configFile >> "CfgMagazines"};
+            default {configFile >> "CfgWeapons"};
         },
         GVAR(sortListRightPanel) select (
             switch (GVAR(currentRightPanel)) do {
@@ -56,12 +56,12 @@ if (_rightSort) then {
     [
         _display displayCtrl IDC_leftTabContent,
         switch (GVAR(currentLeftPanel)) do {
-            case IDC_buttonBackpack: { configFile >> "CfgVehicles" };
-            case IDC_buttonGoggles: { configFile >> "CfgGlasses" };
-            case IDC_buttonFace: { configFile >> "CfgFaces" >> "Man_A3" };
-            case IDC_buttonVoice: { configFile >> "CfgVoice" };
-            case IDC_buttonInsignia: { configFile >> "CfgUnitInsignia" };
-            default { configFile >> "CfgWeapons" };
+            case IDC_buttonBackpack: {configFile >> "CfgVehicles"};
+            case IDC_buttonGoggles: {configFile >> "CfgGlasses"};
+            case IDC_buttonFace: {configFile >> "CfgFaces" >> "Man_A3"};
+            case IDC_buttonVoice: {configFile >> "CfgVoice"};
+            case IDC_buttonInsignia: {configFile >> "CfgUnitInsignia"};
+            default {configFile >> "CfgWeapons"};
         },
         (GVAR(sortListLeftPanel) select ([
             IDC_buttonPrimaryWeapon,
@@ -86,70 +86,89 @@ if (_rightSort) then {
     ]
 } params ["_panel", "_cfgClass", "_sorts"];
 
+// Get currently selected item
 private _curSel = if (_right) then {
     lnbCurSelRow _panel
 } else {
     lbCurSel _panel
 };
+
 private _selected = if (_right) then {
-    _panel lnbData [_curSel, 0];
+    _panel lnbData [_curSel, 0]
 } else {
     _panel lbData _curSel
 };
 
+// Get sort's information
 private _sortName = _sortControl lbData (0 max lbCurSel _sortControl);
 private _sortConfig = _sorts select (0 max (_sorts findIf {(_x select 0) isEqualTo _sortName}));
 private _statement = _sortConfig select 2;
+_sortConfig params ["", "", "_statement"];
 
+// Update last sort
 missionNamespace setVariable [
     [QGVAR(lastSortLeft), QGVAR(lastSortRight)] select _rightSort,
     _sortConfig select 1
 ];
 
 private _originalNames = createHashMap;
+private _item = "";
+private _quantity = "";
+private _itemCfg = configNull;
+private _value = "";
+private _name = "";
+private _data = "";
 
 private _for = if (_right) then {
-    for '_i' from 0 to ((lnbSize _panel select 0) - 1)
+    for '_i' from 0 to (lnbSize _panel select 0) - 1
 } else {
-    for '_i' from 0 to (lbSize _panel - 1)
+    for '_i' from 0 to (lbSize _panel) - 1
 };
 
 _for do {
-    private _item = if (_right) then {
+    // Get item
+    _item = if (_right) then {
         _panel lnbData [_i, 0]
     } else {
         _panel lbData _i
     };
-    private _quantity = if (_right) then {
+
+    // Get item's count
+    _quantity = if (_right) then {
         parseNumber (_panel lnbText [_i, 2])
     } else {
         0
     };
 
-    private _itemCfg = _cfgClass >> _item;
+    _itemCfg = _cfgClass >> _item;
 
-    // In rare cases, item may not belong to the config class for the panel
-    // For example, misc items panel can contain CfgVehicles and CfgGlasses items in addition to the usual CfgWeapons items
+    // Some items may not belong to the config class for the panel (misc. items panel can have unique items)
     if (isNull _itemCfg) then {
         _itemCfg = _item call CBA_fnc_getItemConfig;
     };
 
-    private _value = [_itemCfg, _item, _quantity] call _statement;
+    // Value can be any type
+    _value = [_itemCfg, _item, _quantity] call _statement;
+
+    // If number, convert to string
     if (_value isEqualType 0) then {
         _value = [_value, 8] call CBA_fnc_formatNumber;
     };
+
+    // If empty string, add alphabetically small char at beginning to make it sort correctly
     if (_value isEqualTo "") then {
         _value = "_";
     };
 
+    // Save the current row's item's name in a cache and set text to it's sorting value
     if (_right) then {
-        private _name = _panel lnbText [_i, 1];
+        _name = _panel lnbText [_i, 1];
         _originalNames set [_item, _name];
 
         _panel lnbSetText [[_i, 1], format ["%1%2", _value, _name]];
     } else {
-        if (_item isNotEqualTo "") then {
-            private _name = _panel lbText _i;
+        if (_item != "") then {
+            _name = _panel lbText _i;
             _originalNames set [_item, _name];
 
             _panel lbSetText [_i, format ["%1%2", _value, _name]];
@@ -157,13 +176,14 @@ _for do {
     };
 };
 
+// Sort alphabetically, find the previously selected item, select it again and reset text to original text
 if (_right) then {
     _panel lnbSort [1, false];
 
     _for do {
-        private _data = _panel lnbData [_i, 0];
+        _data = _panel lnbData [_i, 0];
 
-        if (_curSel >= 0 && {_data == _selected}) then {
+        if (_curSel != -1 && {_data == _selected}) then {
             _panel lnbSetCurSelRow _i;
         };
 
@@ -173,13 +193,13 @@ if (_right) then {
     lbSort [_panel, "ASC"];
 
     _for do {
-        private _data = _panel lbData _i;
+        _data = _panel lbData _i;
 
-        if (_curSel >= 0 && {_data == _selected}) then {
+        if (_curSel != -1 && {_data == _selected}) then {
             _panel lbSetCurSel _i;
         };
 
-        if (_data isNotEqualTo "") then {
+        if (_data != "") then {
             _panel lbSetText [_i, _originalNames get _data];
         };
     };

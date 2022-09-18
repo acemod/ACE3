@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Ignored
  * 1: Arguments <ARRAY>
-  * 1.1: Loadouts display <DISPLAY>
+ *  1.1: Loadouts display <DISPLAY>
  *
  * Return Value:
  * None
@@ -34,6 +34,7 @@ private _panelContentCtrl = _display displayCtrl IDC_contentPanel;
 _panelContentCtrl ctrlSetFontHeight (4.5 * GRID_H);
 _panelContentCtrl ctrlCommit 0;
 
+// If default loadouts are disabled, disable button
 if !(GVAR(allowDefaultLoadouts)) then {
     private _buttonDefaultLoadoutsCtrl = _display displayCtrl IDC_buttonDefaultLoadouts;
     _buttonDefaultLoadoutsCtrl ctrlEnable false;
@@ -44,6 +45,7 @@ if !(GVAR(allowDefaultLoadouts)) then {
     _buttonDefaultLoadoutsBackgroundCtrl ctrlCommit 0;
 };
 
+// If shared loadouts are disabled or it's singleplayer, disable button
 if !(GVAR(allowSharedLoadouts) && {isMultiplayer}) then {
     private _buttonShareLoadoutsCtrl = _display displayCtrl IDC_buttonSharedLoadouts;
     _buttonShareLoadoutsCtrl ctrlEnable false;

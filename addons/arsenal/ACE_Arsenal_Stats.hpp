@@ -8,7 +8,7 @@ class GVAR(stats) {
         showText = 0;
         barStatement = "";
         textStatement = "";
-        condition = "true";
+        condition = QUOTE(true);
         tabs[] = {{}, {}};
     };
     class ACE_bananaPotassium: statBase {
@@ -63,7 +63,7 @@ class GVAR(stats) {
         stats[] = {"hit", "initSpeed"};
         displayName = "$STR_a3_rscdisplayarsenal_stat_impact";
         showBar = 1;
-        barStatement = QUOTE([ARR_3(_this select 0, _this select 1, [ARR_3([ARR_2(0, 3.2)], [ARR_2(-1, 1100)], 2006)])] call FUNC(statBarStatement_impact));
+        barStatement = QUOTE([ARR_3(_this select 0, _this select 1, [ARR_2([ARR_2(0, 3.2)], [ARR_2(-1, 1100)])])] call FUNC(statBarStatement_impact));
         tabs[] = {{0,1,2}, {}};
     };
     class ACE_scopeMagnification: statBase {
@@ -125,7 +125,6 @@ class GVAR(stats) {
         displayName = CSTRING(StatExplosionTime);
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_explosionTime));
-        condition = QUOTE(true);
         tabs[] = {{}, {5}};
     };
 };

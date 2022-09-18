@@ -7,6 +7,14 @@
 #define WIDTH_GAP (WIDTH_TOTAL / 100)
 #define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
 
+// IDDs
+#define IDD_MISSION 46
+#define IDD_RSCDISPLAYCURATOR 312
+#define IDD_DISPLAY3DEN	313
+
+#define IDC_OK 1 // emulate "OK" button
+#define IDC_CANCEL 2 // emulate "Cancel" button
+
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
@@ -165,9 +173,57 @@
 #define IDC_ATTRIBUTE_IMPORT_BUTTON 8109
 #define IDC_ATTRIBUTE_ADD_COMPATIBLE 8110
 
+// Weapons 0 [primary, handgun, secondary]
+// Weapon attachements 1 [optics, flashlight, muzzle, bipod]
+// Magazines 2
+// Headgear 3
+// Uniform 4
+// Vest 5
+// Backpacks 6
+// Goggles 7
+// NVGs 8
+// Binoculars 9
+// Map 10
+// Compass 11
+// Radio slot 12
+// Watch slot  13
+// Comms slot (GPS, UAV terminals) 14
+// Grenades (WeaponThrow) 15
+// Explosives (WeaponPut) 16
+// InventoryItems 17
+#define EMPTY_VIRTUAL_ARSENAL\
+[\
+    [[],[],[]],\
+    [[],[],[],[]],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    [],\
+    []\
+]
+
 // Indexes of virtual items array
 #define IDX_VIRT_WEAPONS 0
-#define IDX_VIRT_ATTACHEMENTS 1
+#define IDX_VIRT_PRIMARY_WEAPONS 0
+#define IDX_VIRT_SECONDARY_WEAPONS 1
+#define IDX_VIRT_HANDGUN_WEAPONS 2
+
+#define IDX_VIRT_ATTACHMENTS 1
+#define IDX_VIRT_OPTICS_ATTACHMENTS 0
+#define IDX_VIRT_FLASHLIGHT_ATTACHMENTS 1
+#define IDX_VIRT_MUZZLE_ATTACHMENTS 2
+#define IDX_VIRT_BIPOD_ATTACHMENTS 3
 
 #define IDX_VIRT_ITEMS_ALL 2
 
@@ -183,6 +239,53 @@
 #define IDX_VIRT_RADIO 12
 #define IDX_VIRT_WATCH 13
 #define IDX_VIRT_COMMS 14
+#define IDX_VIRT_GRENADES 15
+#define IDX_VIRT_EXPLOSIVES 16
+#define IDX_VIRT_MISC_ITEMS 17
+
+#define IDX_VIRT_UNIQUE_MISC_ITEMS 18
+#define IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL 19
+#define IDX_VIRT_UNIQUE_GRENADES 20
+#define IDX_VIRT_UNIQUE_EXPLOSIVES 21
+#define IDX_VIRT_UNIQUE_ATTACHMENTS 22
+#define IDX_VIRT_UNIQUE_BACKPACKS 23
+#define IDX_VIRT_UNIQUE_GOGGLES 24
+
+// Indexes of current items array
+#define IDX_CURR_PRIMARY_WEAPON 0
+#define IDX_CURR_SECONDARY_WEAPON 1
+#define IDX_CURR_HANDGUN_WEAPON 2
+#define IDX_CURR_HEADGEAR 3
+#define IDX_CURR_UNIFORM 4
+#define IDX_CURR_VEST 5
+#define IDX_CURR_BACKPACK 6
+#define IDX_CURR_GOGGLES 7
+#define IDX_CURR_NVG 8
+#define IDX_CURR_BINO 9
+#define IDX_CURR_MAP 10
+#define IDX_CURR_COMPASS 11
+#define IDX_CURR_RADIO 12
+#define IDX_CURR_WATCH 13
+#define IDX_CURR_COMMS 14
+#define IDX_CURR_UNIFORM_ITEMS 15
+#define IDX_CURR_VEST_ITEMS 16
+#define IDX_CURR_BACKPACK_ITEMS 17
+#define IDX_CURR_PRIMARY_WEAPON_ITEMS 18
+#define IDX_CURR_SECONDARY_WEAPON_ITEMS 19
+#define IDX_CURR_HANDGUN_WEAPON_ITEMS 20
+#define IDX_CURR_BINO_ITEMS 21
+
+// Indexes of loadout items array
+#define IDX_LOADOUT_PRIMARY_WEAPON 0
+#define IDX_LOADOUT_SECONDARY_WEAPON 1
+#define IDX_LOADOUT_HANDGUN_WEAPON 2
+#define IDX_LOADOUT_UNIFORM 3
+#define IDX_LOADOUT_VEST 4
+#define IDX_LOADOUT_BACKPACK 5
+#define IDX_LOADOUT_HEADGEAR 6
+#define IDX_LOADOUT_GOGGLES 7
+#define IDX_LOADOUT_BINO 8
+#define IDX_LOADOUT_ASSIGNEDITEMS 9
 
 #define SYMBOL_ITEM_NONE "−"
 #define SYMBOL_ITEM_REMOVE "×"
@@ -199,31 +302,6 @@
 #define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc, RIGHT_PANEL_CUSTOM_BACKGROUND
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
 
-#define GETDLC\
-    {\
-        private _dlc = "";\
-        private _addons = configsourceaddonlist _this;\
-        if (count _addons > 0) then {\
-            private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _addons select 0);\
-            if (count _mods > 0) then {\
-                _dlc = _mods select 0;\
-            };\
-        };\
-        _dlc\
-    }
-
-#define ADDMODICON\
-    {\
-        private _dlcName = _this call GETDLC;\
-        if (_dlcName != "") then {\
-            _ctrlPanel lbsetpictureright [_lbAdd,(modParams [_dlcName,["logo"]]) param [0,""]];\
-        };\
-    };
-
-#define ADDBINOCULARSMAG\
-    private _magazines = getarray (configfile >> "cfgweapons" >> _item >> "magazines");\
-    if (count _magazines > 0) then {GVAR(center) addmagazine (_magazines select 0)};
-
 #define TOGGLE_RIGHT_PANEL_WEAPON\
 {\
     _x = _display displayCtrl _x;\
@@ -231,7 +309,7 @@
     _x ctrlShow true;\
     _x ctrlEnable true;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground,\
     IDC_rightTabContent,\
@@ -242,15 +320,9 @@
     IDC_buttonCurrentMag\
 ];\
 private _buttonCurrentMag2Ctrl = _display displayCtrl IDC_buttonCurrentMag2;\
-if (GVAR(currentLeftPanel) == IDC_buttonPrimaryWeapon) then {\
-    _buttonCurrentMag2Ctrl ctrlSetFade 0;\
-    _buttonCurrentMag2Ctrl ctrlShow true;\
-    _buttonCurrentMag2Ctrl ctrlEnable true;\
-} else {\
-    _buttonCurrentMag2Ctrl ctrlSetFade 1;\
-    _buttonCurrentMag2Ctrl ctrlShow false;\
-    _buttonCurrentMag2Ctrl ctrlEnable false;\
-};\
+_buttonCurrentMag2Ctrl ctrlSetFade 0;\
+_buttonCurrentMag2Ctrl ctrlShow true;\
+_buttonCurrentMag2Ctrl ctrlEnable true;\
 _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
 {\
     _x = _display displayCtrl _x;\
@@ -258,7 +330,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlShow false;\
     _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_loadIndicator,\
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_rightTabContentListnBox,\
@@ -274,7 +346,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
         safezoneH - 28 * GRID_H\
     ];\
     _x ctrlCommit 0;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];
@@ -286,7 +358,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlShow true;\
     _x ctrlEnable true;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame, \
     IDC_blockRighttBackground,\
     IDC_loadIndicator,\
@@ -304,7 +376,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlShow false;\
     _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_buttonCurrentMag,\
     IDC_buttonCurrentMag2,\
     IDC_iconBackgroundCurrentMag,\
@@ -319,7 +391,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
         safezoneH - 34 * GRID_H\
     ];\
     _x ctrlCommit 0;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];\
@@ -367,7 +439,7 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     _x ctrlShow false;\
     _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [\
+} forEach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground,\
     IDC_loadIndicator,\
@@ -387,83 +459,12 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     IDC_iconBackgroundCurrentMag2\
 ];
 
-#define LIST_DEFAULTS\
-    [\
-    [\
-        (primaryweapon GVAR(center) call bis_fnc_baseWeapon),\
-        (secondaryweapon GVAR(center) call bis_fnc_baseWeapon),\
-        (handgunweapon GVAR(center) call bis_fnc_baseWeapon)\
-    ],\
-    [\
-        [primaryWeaponItems GVAR(center), secondaryWeaponItems GVAR(center), handgunItems GVAR(center)],\
-        [primaryWeaponMagazine GVAR(center), secondaryWeaponMagazine GVAR(center), handgunMagazine GVAR(center)]\
-    ],\
-    uniformItems GVAR(center) + vestItems GVAR(center) + backpackItems GVAR(center),\
-    [headgear GVAR(center)],\
-    [uniform GVAR(center)],\
-    [vest GVAR(center)],\
-    [backpack GVAR(center)],\
-    [goggles GVAR(center)],\
-    [hmd GVAR(center)],\
-    [binocular GVAR(center)]\
-]
-
-#define CHECK_WEAPON_OR_ACC\
-    (_weaponsArray select 0) findIf {_x == _item} > -1 ||\
-    {(_weaponsArray select 1) findIf {_x == _item} > -1} ||\
-    {(_weaponsArray select 2)  findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 9) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 0) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 1 findIf {_x == _item} > -1)} ||\
-    {(_accsArray select 2) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 3) findIf {_x == _item} > -1}
-
-// PboProject 2.45 has problems with these macros for some reason, adding a single space before the \ fixes
-#define CHECK_ASSIGNED_ITEMS \
-    (GVAR(virtualItems) select 10) findIf {_x == _item} > -1 ||\
-    {(GVAR(virtualItems) select 11) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 12) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 13) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 14) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 8) findIf {_x == _item} > -1}
-
-#define CHECK_CONTAINER \
-    (GVAR(virtualItems) select 4) findIf {_x == _item} > -1 ||\
-    {(GVAR(virtualItems) select 5) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 6) findIf {_x == _item} > -1}
-
-#define CLASS_CHECK_ITEM\
-    isClass (_weaponCfg >> _item) ||\
-    {isClass (_vehcCfg >> _item)} ||\
-    {isClass (_glassesCfg >> _item)} ||\
-    {isClass (_magCfg >> _item)}
-
-#define CHECK_CONTAINER_ITEMS \
-    (GVAR(virtualItems) select 3) findIf {_x == _item} > -1 ||\
-    {(_accsArray select 0) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 1) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 2) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 3) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 4) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 5) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 6) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 7) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 8) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 10) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 11) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 12) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 13) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 14) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 15) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 16) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 17) findIf {_x == _item} > -1}
-
 #define ADD_LOADOUTS_LIST_PICTURES\
-    _contentPanelCtrl lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];\
-    _contentPanelCtrl lnbSetPicture [[_newRow, 3], getText (configFile >> "cfgWeapons" >> ((_loadout select 1) select 0) >> "picture")];\
-    _contentPanelCtrl lnbSetPicture [[_newRow, 4], getText (configFile >> "cfgWeapons" >> ((_loadout select 2) select 0) >> "picture")];\
-    _contentPanelCtrl lnbSetPicture [[_newRow, 5], getText (configFile >> "cfgWeapons" >> ((_loadout select 3) select 0) >> "picture")];\
-    _contentPanelCtrl lnbSetPicture [[_newRow, 6], getText (configFile >> "cfgWeapons" >> ((_loadout select 4) select 0) >> "picture")];\
-    _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];\
-    _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];\
-    _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
+    _contentPanelCtrl lnbSetPicture [[_newRow, 2], getText (_cfgWeapons >> (_loadout select IDX_LOADOUT_PRIMARY_WEAPON) select 0 >> "picture")];\
+    _contentPanelCtrl lnbSetPicture [[_newRow, 3], getText (_cfgWeapons >> (_loadout select IDX_LOADOUT_SECONDARY_WEAPON) select 0 >> "picture")];\
+    _contentPanelCtrl lnbSetPicture [[_newRow, 4], getText (_cfgWeapons >> (_loadout select IDX_LOADOUT_HANDGUN_WEAPON) select 0 >> "picture")];\
+    _contentPanelCtrl lnbSetPicture [[_newRow, 5], getText (_cfgWeapons >> (_loadout select IDX_LOADOUT_UNIFORM) select 0 >> "picture")];\
+    _contentPanelCtrl lnbSetPicture [[_newRow, 6], getText (_cfgWeapons >> (_loadout select IDX_LOADOUT_VEST) select 0 >> "picture")];\
+    _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "CfgVehicles" >> (_loadout select IDX_LOADOUT_BACKPACK) select 0 >> "picture")];\
+    _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (_cfgWeapons >> _loadout select IDX_LOADOUT_HEADGEAR >> "picture")];\
+    _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "CfgGlasses" >> _loadout select IDX_LOADOUT_GOGGLES >> "picture")];

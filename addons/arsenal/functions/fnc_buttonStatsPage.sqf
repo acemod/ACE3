@@ -21,7 +21,7 @@ if !(ctrlEnabled _control) exitWith {};
 
 GVAR(statsInfo) params ["_isLeftPanel", "_statsIndex", "_panelControl", "_curSel", "_itemCfg"];
 
-private _pageList = [GVAR(statsPagesRight), GVAR(statsPagesLeft)] select (_isLeftPanel);
+private _pageList = [GVAR(statsPagesRight), GVAR(statsPagesLeft)] select _isLeftPanel;
 private _newPageNumber = [(_pageList select _statsIndex) - 1, (_pageList select _statsIndex) + 1] select _nextPage;
 
 _pageList set [_statsIndex, _newPageNumber];

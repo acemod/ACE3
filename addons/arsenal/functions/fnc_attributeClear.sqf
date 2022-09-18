@@ -2,7 +2,7 @@
 #include "..\defines.hpp"
 /*
  * Author: mharis001
- * Clears all items from current category in 3DEN attribute.
+ * Clears all items from current category in 3DEN's ace arsenal attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -27,18 +27,22 @@ if (_category == -1) then {
     _attributeValue set [0, []];
 } else {
     // Find category items and remove from list
-    private _configItems = +(uiNamespace getVariable [QGVAR(configItems), []]);
+    private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
     private _categoryItems = switch (true) do {
+        // Weapons
         case (_category < 3): {
-            _configItems select 0 select _category;
+            _configItems select IDX_VIRT_WEAPONS select _category;
         };
+        // Weapon attachments
         case (_category < 7): {
-            _configItems select 1 select (_category - 3);
+            _configItems select IDX_VIRT_ATTACHMENTS select (_category - 3);
         };
+        // Other
         default {
             _configItems select (_category - 5);
         };
     };
+
     _attributeValue set [0, (_attributeValue select 0) - _categoryItems];
 };
 
