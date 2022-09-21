@@ -32,7 +32,7 @@ private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
 private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
 private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
 private _extendedLoadout = GVAR(center) call FUNC(getLoadout);
-private _loadout = _loadout select 0;
+private _loadout = _extendedLoadout select 0;
 
 private _loadoutIndex = _data findIf {(_x select 0) == _editBoxContent};
 private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
