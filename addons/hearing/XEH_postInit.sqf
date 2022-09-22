@@ -1,20 +1,5 @@
 #include "script_component.hpp"
 
-["CBA_loadoutSet", {
-    params ["_unit", "_loadout", "_extendedInfo"];
-    if (_extendedInfo getOrDefault ["ace_earplugs", false]) then {
-        _unit setVariable ["ACE_hasEarPlugsIn", true, true];
-        [[true]] remoteExec [QFUNC(updateVolume), _unit];
-    };
-}] call CBA_fnc_addEventHandler;
-
-["CBA_loadoutGet", {
-    params ["_unit", "_loadout", "_extendedInfo"];
-    if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
-        _extendedInfo set ["ace_earplugs", true]
-    };
-}] call CBA_fnc_addEventHandler;
-
 if (!hasInterface) exitWith {};
 
 GVAR(cacheAmmoLoudness) = call CBA_fnc_createNamespace;
