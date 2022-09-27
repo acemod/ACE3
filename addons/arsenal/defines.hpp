@@ -128,8 +128,20 @@
 #define IDC_statsPreviousPage 52
 #define IDC_statsNextPage 53
 #define IDC_statsCurrentPage 54
-#define IDC_statsButton 55
-#define IDC_statsButtonClose 56
+#define IDC_actionsBox 90
+#define IDC_actionsText1 9001
+#define IDC_actionsButton1 9002
+#define IDC_actionsText2 9003
+#define IDC_actionsButton2 9004
+#define IDC_actionsText3 9005
+#define IDC_actionsButton3 9009
+#define IDC_actionsText4 9007
+#define IDC_actionsButton4 9008
+#define IDC_actionsText5 9009
+#define IDC_actionsButton5 9010
+#define IDC_actionsPreviousPage 91
+#define IDC_actionsNextPage 92
+#define IDC_actionsCurrentPage 93
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3

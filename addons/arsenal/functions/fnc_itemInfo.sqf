@@ -26,6 +26,7 @@ if (isClass _itemCfg) then {
     _ctrlInfo ctrlCommit FADE_DELAY;
 
     [QGVAR(displayStats), [_display, _control, _curSel, _itemCfg]] call CBA_fnc_localEvent;
+    [QGVAR(displayActions), [_display, _control, _curSel, _itemCfg]] call CBA_fnc_localEvent;
 
     // Name + author
     private _ctrlInfoName = _display displayCtrl IDC_infoName;
@@ -73,6 +74,7 @@ if (isClass _itemCfg) then {
 
 } else {
     [QGVAR(displayStats), [_display, _control, -1, nil]] call CBA_fnc_localEvent;
+    [QGVAR(displayACtions), [_display, _control, -1, nil]] call CBA_fnc_localEvent;
 
     _ctrlInfo ctrlSetFade 1;
     _ctrlInfo ctrlCommit FADE_DELAY;

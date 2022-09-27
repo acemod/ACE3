@@ -35,14 +35,14 @@ PREP_RECOMPILE_END;
     };
 }] call CBA_fnc_addEventHandler;
 
-[QEGVAR(arsenal,displayClosed), {
+// [QEGVAR(arsenal,displayClosed), {
 
-    if (!isNil QGVAR(arsenalCache)) then {
-        (backpackContainer EGVAR(arsenal,center)) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
-    };
+//     if (!isNil QGVAR(arsenalCache)) then {
+//         (backpackContainer EGVAR(arsenal,center)) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
+//     };
 
-    GVAR(arsenalCache) = nil;
-}] call CBA_fnc_addEventHandler;
+//     GVAR(arsenalCache) = nil;
+// }] call CBA_fnc_addEventHandler;
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout", "_extendedInfo"];

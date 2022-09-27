@@ -125,13 +125,20 @@ if (!isNil "_itemCfg") then {
 
         // Resize the window
         [[1, 2, 3, 4, 5] select [_statsCount, 5]] call _hideUnusedFnc;
+        private _height = ([11, (10 * _statsCount) + 5] select (_statsCount > 0));
         _statsBoxCtrl ctrlSetPosition [
             (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
             safezoneY + 1.8 * GRID_H,
             47 * GRID_W,
-            ([11, (10 * _statsCount) + 5] select (_statsCount > 0)) * GRID_H
+            _height * GRID_H
         ];
         _statsBoxCtrl ctrlCommit 0;
+        private _ctrl = _display displayCtrl IDC_actionsBox;
+        private _pos = ctrlPosition _ctrl;
+        _pos set [1, safezoneY + (_height + 3.6) * GRID_H];
+        _ctrl ctrlSetPosition _pos;
+        _ctrl ctrlCommit 0;
+
 
         GVAR(statsInfo) = [_isLeftPanel, _statsIndex, _control, _curSel, _itemCfg];
 
@@ -236,6 +243,11 @@ if (!isNil "_itemCfg") then {
         11 * GRID_H
     ];
     _statsBoxCtrl ctrlCommit 0;
+    private _ctrl = _display displayCtrl IDC_actionsBox;
+    private _pos = ctrlPosition _ctrl;
+    _pos set [1, safezoneY + (14.6) * GRID_H];
+    _ctrl ctrlSetPosition _pos;
+    _ctrl ctrlCommit 0;
 
     {
         _x ctrlSetFade 1;
