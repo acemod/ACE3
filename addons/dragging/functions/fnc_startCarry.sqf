@@ -51,13 +51,12 @@ if (_target isKindOf "CAManBase") then {
     _timer = CBA_missionTime + 10;
 
 } else {
-
     // select no weapon and stop sprinting
+    _unit setVariable [QGVAR(previousWeapon), currentWeapon _unit, true];
     _unit action ["SwitchWeapon", _unit, _unit, 299];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
     [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
-
 };
 
 [_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
