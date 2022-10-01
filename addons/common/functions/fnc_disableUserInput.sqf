@@ -107,10 +107,23 @@ if (_state) then {
     };
 
     GVAR(disableInputPFH) = [{
-        if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && {isNull findDisplay IDD_INTERRUPT} && {isNull findDisplay IDD_RSCDISPLAYCURATOR} && {isNull findDisplay IDD_TEAMSWITCH}}) then {
+        if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && {isNull findDisplay IDD_INTERRUPT} && {isNull findDisplay IDD_RSCDISPLAYCURATOR} && {isNull findDisplay IDD_TEAMSWITCH}}) exitWith {
             [GVAR(disableInputPFH)] call CBA_fnc_removePerFrameHandler;
             GVAR(disableInputPFH) = nil;
             [true] call FUNC(disableUserInput);
+        };
+
+        // Allow user input if the player is respawning and a respawn template (menu position or spectator)
+        // is open (otherwise they cannot click the respawn button)
+        if (
+            !alive player
+            && {playerRespawnTime != -1}
+            && {
+                missionNamespace getVariable ["BIS_RscRespawnControlsMap_shown", false]
+                || {missionNamespace getVariable ["BIS_RscRespawnControlsSpectate_shown", false]}
+            }
+        ) exitWith {
+            [false] call FUNC(disableUserInput);
         };
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 } else {
