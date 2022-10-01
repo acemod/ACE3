@@ -1885,7 +1885,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_DisplayName">
             <English>Wheel Patch Requirements</English>
-            <German>Bedingungen für die Reifenflicken</German>
+            <German>Bedingungen für die Radflicken</German>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
             <English>Items required to patch a wheel.</English>
