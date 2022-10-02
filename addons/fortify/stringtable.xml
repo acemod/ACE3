@@ -172,6 +172,7 @@
             <Korean>시간-가격 계수</Korean>
             <German>Zeit-Kosten-Koeffizient</German>
             <Japanese>時間コスト係数</Japanese>
+            <Polish>Współczynnik Czas-Koszt</Polish>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeCostCoefficient">
             <English>Coefficient used to determine time to build structure.&lt;br/&gt;A in Ax + b where x is cost of object</English>
@@ -179,6 +180,7 @@
             <Korean>건축물을 지을 때 걸리는 시간을 계수를 적용하여 계산합니다.</Korean>
             <German>Koeffizient zur Bestimmung der Bauzeit &lt;br/&gt;A in Ax + b, wobei x die Kosten des Objekts sind.</German>
             <Japanese>建造する時間を決定するために使用される係数。&lt;br/&gt;計算式はAx + bです。この係数はAであり、xは建造物のコストです。</Japanese>
+            <Polish>Współczynnik używany do określenia czasu budowy konstrukcji. &amp;lt;br/&amp;gt;A w Ax + b gdzie x jest kosztem obiektu</Polish>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint_timeMin">
             <English>Minimum Build Time</English>
@@ -186,6 +188,7 @@
             <Korean>최소 건축 시간</Korean>
             <German>Minimale Bauzeit</German>
             <Japanese>建造に掛かる最小の時間</Japanese>
+            <Polish>Minimalny czas budowy</Polish>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeMin">
             <English>Minimum time to build any structure.&lt;br/&gt;b in Ax + b where x is cost of object</English>
@@ -193,6 +196,7 @@
             <Korean>건축물을 지을 때 걸리는 최소 시간을 계수를 적용하여 계산합니다.</Korean>
             <German>Mindestzeit für den Bau eines beliebigen Bauwerks.&lt;br/&gt;b in Ax + b, wobei x die Kosten des Objekts sind.</German>
             <Japanese>建造に掛かる最小の時間。&lt;br/&gt;計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
+            <Polish>Minimalny czas do zbudowania dowolenj konstrukcji.&amp;lt;br/&amp;gt;b w Ax + b gdzie x jest kosztem obiektu</Polish>
         </Key>
         <Key ID="STR_ACE_Fortify_progressBarTitle">
             <English>Building</English>
@@ -200,6 +204,7 @@
             <Korean>건설 중</Korean>
             <German>Bauwerk</German>
             <Japanese>建造</Japanese>
+            <Polish>Budowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
@@ -207,6 +212,7 @@
             <Korean>지도에 마커 생성</Korean>
             <German>Kartenmarkierungen erstellen</German>
             <Japanese>マップマーカーを生成する</Japanese>
+            <Polish>Twórz znaczniki na mapie</Polish>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
             <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
@@ -214,6 +220,7 @@
             <Korean>건축물을 건설하고 나서 지도에 마커를 생성합니다</Korean>
             <German>Erstellen von Kartenmarkierungen, die wie Gebäude im Gelände aussehen, wenn statische Befestigungen platziert werden</German>
             <Japanese>静的な建築物が配置されたときに地形の建物のように見えるマップマーカーを生成します</Japanese>
+            <Polish>Utwórz znaczniki mapy, które wyglądają jak obiekty terenu, gdy umieszczane są statyczne fortyfikacje</Polish>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapNone">
             <English>Never</English>
@@ -237,6 +244,7 @@
             <Korean>아군 유닛이 지은 건물만</Korean>
             <German>Für, zum Erbauer, verbündete Einheiten.</German>
             <Japanese>設置者の友軍に</Japanese>
+            <Polish>Dla jednostek sojuszniczych wobec stawiającego</Polish>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
             <English>For everyone</English>
