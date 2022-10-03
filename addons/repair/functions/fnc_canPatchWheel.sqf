@@ -22,6 +22,10 @@ TRACE_3("params",_unit,_target,_hitPoint);
 
 if (GVAR(patchWheelEnabled) == -1) exitWith {false};
 
+private _damage = _target getHitPointDamage _hitPoint;
+
+if (_damage == 1) exitWith {false};
+
 if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
-(_target getHitPointDamage _hitPoint > GVAR(patchWheelMaximumRepair))
+(_damage > GVAR(patchWheelMaximumRepair))
