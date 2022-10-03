@@ -1205,7 +1205,7 @@
             <Turkish>Sadece Gelişmiş Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
-            <English>Allow Wheel Removal</English>
+            <English>Allow Wheel Replacement</English>
             <German>Erlaube Radwechsel</German>
             <Polish>Wymiana kół</Polish>
             <Russian>Разрешить замену колес</Russian>
