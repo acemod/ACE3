@@ -6,6 +6,7 @@
             <Japanese>ビューポート</Japanese>
             <Korean>뷰포트</Korean>
             <Chinesesimp>观察口</Chinesesimp>
+            <Polish>Wizjery</Polish>
         </Key>
         <Key ID="STR_ACE_Viewports_setting_enabled_description">
             <English>Allows crew to look through periscopes</English>

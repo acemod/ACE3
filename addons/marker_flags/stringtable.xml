@@ -27,10 +27,12 @@
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Marker Flag</English>
             <German>Markierungsfahne platzieren</German>
+            <Polish>Postaw chorągiewkę</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
             <English>Adjust height</English>
             <German>Höhe anpassen</German>
+            <Polish>Dostosuj wysokość</Polish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionCancel">
             <English>Cancel</English>
