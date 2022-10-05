@@ -29,6 +29,7 @@
 #define MAX_TIME_BETWEEN_AMMO_DET 25
 #define MAX_COOKOFF_INTENSITY 10
 
+#define COOKOFF_FLAME_STAGE 1 // How many flame executions to allow
 #define MIN_AMMO_DETONATION_START_DELAY 1 // Min time to wait before a vehicle's ammo starts to cookoff
 #define MAX_AMMO_DETONATION_START_DELAY 6 // Max time to wait before a vehicle's ammo starts to cookoff
 

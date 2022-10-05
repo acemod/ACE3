@@ -76,13 +76,14 @@ if (_smokeDelayEnabled) then {
             };
         };
 
+        private _stage = _vehicle getVariable [QGVAR(stage), 1];
         private _lastFlameTime = _vehicle getVariable [QGVAR(lastFlame), 0];
         private _nextFlameTime = _vehicle getVariable [QGVAR(nextFlame), 0];
 
         // Wait until we are ready for the next flame
         // dt = Tcurrent - Tlast
         // dt >= Tnext
-        if ((CBA_missionTime - _lastFlameTime) >= _nextFlameTime) then {
+        if (_stage <= COOKOFF_FLAME_STAGE && {(CBA_missionTime - _lastFlameTime) >= _nextFlameTime}) then {
             private _ring = (0.2 > random 1);
             if (!_ring && _intensity >= 2) then {
                 _ring = (0.7 > random 1);
@@ -104,6 +105,7 @@ if (_smokeDelayEnabled) then {
             _vehicle setVariable [QGVAR(intensity), _intensity];
             _vehicle setVariable [QGVAR(lastFlame), CBA_missionTime];
             _vehicle setVariable [QGVAR(nextFlame), _time + (MIN_TIME_BETWEEN_FLAMES max random MAX_TIME_BETWEEN_FLAMES)];
+            _vehicle setVariable [QGVAR(stage), _stage + 1];
 
             {
                 [QEGVAR(fire,burn), [_x, _intensity * 1.5, _instigator]] call CBA_fnc_globalEvent;
