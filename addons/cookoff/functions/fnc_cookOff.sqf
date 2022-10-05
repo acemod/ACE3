@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false], ["_fireSource", ""], ["_canRing", true], ["_maxIntensity", MAX_COOKOFF_INTENSITY, [0]]];
+params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false], ["_fireSource", ""], ["_canRing", true], ["_canJet", true], ["_maxIntensity", MAX_COOKOFF_INTENSITY, [0]]];
 
 if (GVAR(enable) == 0) exitWith {};
 if !(GVAR(enableFire)) exitWith {};
@@ -50,9 +50,6 @@ if (_positions isEqualTo []) then {
         _positions pushBack "#noselection";
     };
 };
-
-// default fire jet to enabled when not set in configs
-private _canJet = ([_config >> QGVAR(canHaveFireJet), "number", 1] call CBA_fnc_getConfigEntry) == 1;
 
 private _delay = 0;
 if (_smokeDelayEnabled) then {
