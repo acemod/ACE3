@@ -67,3 +67,13 @@
     {[QGVAR(probabilityCoef), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(finaleChance), "SLIDER",
+    [LSTRING(finaleChance_name), LSTRING(finaleChance_tooltip)],
+    LSTRING(category_displayName),
+    [0,1,0.5,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true, // isGlobal
+    {[QGVAR(finaleChance), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    false // Needs mission restart
+] call CBA_fnc_addSetting;
