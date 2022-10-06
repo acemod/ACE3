@@ -58,6 +58,6 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
 
         [_object, _items, false] call FUNC(addVirtualItems);
 
-        [QGVAR(boxInitialized), _object, _items] call CBA_fnc_localEvent;
+        [QGVAR(boxInitialized), [_object, _items]] call CBA_fnc_localEvent;
     };
 };

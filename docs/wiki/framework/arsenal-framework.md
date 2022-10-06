@@ -284,7 +284,7 @@ All are local.
 
 | Name  | Arguments | Added in |
 | ------------- | ------------- | ------------- |
-| ace_arsenal_boxInitialized | Arsenal object |
+| ace_arsenal_boxInitialized | Arsenal object, items |
 | ace_arsenal_boxRemoved | Arsenal object |
 | ace_arsenal_displayOpened | Arsenal display (DISPLAY) |
 | ace_arsenal_displayClosed | None |
