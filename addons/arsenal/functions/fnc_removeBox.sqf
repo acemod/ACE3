@@ -29,7 +29,7 @@ if (_global && {isMultiplayer}) then {
         publicVariable QGVAR(EHIDArray);
         [QGVAR(removeBox), [_object, false]] call CBA_fnc_globalEvent;
     };
-} else {  
+} else {
     _object setVariable [QGVAR(virtualItems), nil, false];
     [_object, 0, ["ACE_MainActions", QGVAR(interaction)]] call EFUNC(interact_menu,removeActionFromObject);
     [QGVAR(onremoveBox), _object] call CBA_fnc_localEvent;
