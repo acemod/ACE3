@@ -29,7 +29,7 @@ GVAR(enabled)
 }
 && {alive _vehicle}
 && {2 > locked _vehicle}
-&& {isnull getConnectedUAVUnit _unit}
+&& {isNull getConnectedUAVUnit _unit}
 && {simulationEnabled _vehicle}
 && {
     -1 == crew _vehicle findIf {alive _x}
