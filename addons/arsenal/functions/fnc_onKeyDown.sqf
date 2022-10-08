@@ -103,7 +103,7 @@ if (_loadoutsDisplay isNotEqualTo displayNull) then {
                         };
                     } params ["_className"];
 
-                    "ace" callExtension ["clipboard:append", [(_className + ";")]];
+                    "ace" callExtension ["clipboard:append", [_className]];
                     "ace" callExtension ["clipboard:complete", []];
 
                     [_display, localize LSTRING(exportedClassnameText)] call FUNC(message);

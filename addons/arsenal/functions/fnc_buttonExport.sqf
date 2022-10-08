@@ -44,7 +44,7 @@ if (GVAR(shiftState)) then {
 } else {
 
     private _export = str ([GVAR(center)] call FUNC(getLoadout));
-    "ace" callExtension ["clipboard:append", [(_export + ";")]];
+    "ace" callExtension ["clipboard:append", [_export]];
     "ace" callExtension ["clipboard:complete", []];
 
     [_display, localize LSTRING(exportCurrent)] call FUNC(message);
