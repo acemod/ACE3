@@ -28,11 +28,13 @@
             <English>Place Marker Flag</English>
             <German>Markierungsfahne platzieren</German>
             <Polish>Postaw chorągiewkę</Polish>
+            <Korean>마킹용 깃발 꽂기</Korean>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
             <English>Adjust height</English>
             <German>Höhe anpassen</German>
             <Polish>Dostosuj wysokość</Polish>
+            <Korean>높이 조정</Korean>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionCancel">
             <English>Cancel</English>
