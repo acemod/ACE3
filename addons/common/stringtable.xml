@@ -1643,7 +1643,10 @@
             <Polish>Wyładuj Broń</Polish>
             <Japanese>武器からマガジンを抜く</Japanese>
             <Korean>탄창 빼기</Korean>
+<<<<<<< HEAD
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
     </Package>
 </Project>

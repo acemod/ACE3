@@ -7,7 +7,10 @@
             <Polish>Chorągiewki</Polish>
             <Japanese>旗マーカー</Japanese>
             <Korean>마킹용 깃발</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
             <English>Place Anywhere</English>
@@ -15,24 +18,33 @@
             <Japanese>どこでも設置可能</Japanese>
             <Polish>Umieść w dowolnym miejscu</Polish>
             <Korean>아무 곳에나 배치</Korean>
+<<<<<<< HEAD
             <Chinesesimp>随意放置</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
             <English>Place marker flag anywhere regardless of surface.</English>
             <Japanese>どのような地表でも旗を設置できるようにします</Japanese>
             <Polish>Umieść chorągiewkę w dowolnym miejscu, niezależnie od powierzchni.</Polish>
             <Korean>지면에 상관없이 아무곳에서나 마킹용 깃발을 배치합니다.</Korean>
+<<<<<<< HEAD
             <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Marker Flag</English>
             <German>Markierungsfahne platzieren</German>
             <Polish>Postaw chorągiewkę</Polish>
+<<<<<<< HEAD
+            <Korean>마킹용 깃발 꽂기</Korean>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
             <English>Adjust height</English>
             <German>Höhe anpassen</German>
             <Polish>Dostosuj wysokość</Polish>
+            <Korean>높이 조정</Korean>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionCancel">
             <English>Cancel</English>
@@ -50,6 +62,10 @@
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
             <Turkish>Iptal</Turkish>
+=======
+            <Japanese>旗を設置</Japanese>
+            <Korean>깃발 배치</Korean>
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick Up</English>
@@ -73,7 +89,10 @@
             <Polish>Chorągiewka (Biała)</Polish>
             <Japanese>旗マーカー (白)</Japanese>
             <Korean>마킹용 깃발(하양)</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗（白）</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_black">
             <English>Marker Flag (Black)</English>
@@ -81,7 +100,10 @@
             <Polish>Chorągiewka (Czarna)</Polish>
             <Japanese>旗マーカー (黒)</Japanese>
             <Korean>마킹용 깃발(검정)</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗（黑）</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_red">
             <English>Marker Flag (Red)</English>
@@ -89,7 +111,10 @@
             <Polish>Chorągiewka (Czerwona)</Polish>
             <Japanese>旗マーカー (赤)</Japanese>
             <Korean>마킹용 깃발(빨강)</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗（红）</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_green">
             <English>Marker Flag (Green)</English>
@@ -97,7 +122,10 @@
             <Polish>Chorągiewka (Zielona)</Polish>
             <Japanese>旗マーカー (緑)</Japanese>
             <Korean>마킹용 깃발(초록)</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗（绿）</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_blue">
             <English>Marker Flag (Blue)</English>
@@ -105,7 +133,10 @@
             <Polish>Chorągiewka (Niebieska)</Polish>
             <Japanese>旗マーカー (青)</Japanese>
             <Korean>마킹용 깃발(파랑)</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗（蓝）</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_yellow">
             <English>Marker Flag (Yellow)</English>
@@ -113,7 +144,10 @@
             <Polish>Chorągiewka (Żółta)</Polish>
             <Japanese>旗マーカー (黄)</Japanese>
             <Korean>마킹용 깃발(노랑)</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗（黄）</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_orange">
             <English>Marker Flag (Orange)</English>
@@ -121,7 +155,10 @@
             <Polish>Chorągiewka (Pomarańczowa)</Polish>
             <Japanese>旗マーカー (橙)</Japanese>
             <Korean>마킹용 깃발(주황)</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗（橙）</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
         <Key ID="STR_ACE_Marker_Flags_purple">
             <English>Marker Flag (Purple)</English>
@@ -129,7 +166,10 @@
             <Polish>Chorągiewka (Fioletowa)</Polish>
             <Japanese>旗マーカー (紫)</Japanese>
             <Korean>마킹용 깃발(보라)</Korean>
+<<<<<<< HEAD
             <Chinesesimp>标记旗（紫）</Chinesesimp>
+=======
+>>>>>>> 541a072e50539a3ca30da2f008eb2359a1c22639
         </Key>
     </Package>
 </Project>
