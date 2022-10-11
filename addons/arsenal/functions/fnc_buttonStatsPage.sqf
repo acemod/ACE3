@@ -6,7 +6,8 @@
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Previous or next <BOOL> (false = previous, true = next)
+ * 1: Stats control <CONTROL>
+ * 2: Previous or next <BOOL> (false = previous, true = next)
  *
  * Return Value:
  * None

@@ -447,7 +447,7 @@ class GVAR(display) {
                     x = QUOTE(0);
                     y = QUOTE(0);
                     w = QUOTE(47 * GRID_W);
-                    h = QUOTE(55 * GRID_H);
+                    h = QUOTE(56 * GRID_H);
                     colorBackground[]={0.1,0.1,0.1,0.5};
                 };
                 class actionsStaticBackground2: ctrlStaticBackground {
@@ -475,7 +475,7 @@ class GVAR(display) {
                     fade = 1;
                     text = "";
                     x = QUOTE(1 * GRID_W);
-                    y = QUOTE(5 * GRID_H);
+                    y = QUOTE(6 * GRID_H);
                     w = QUOTE(45 * GRID_W);
                     h = QUOTE(4 * GRID_H);
                 };
@@ -485,7 +485,7 @@ class GVAR(display) {
                 };
                 class actionsButton2: actionsButton1 {
                     idc = IDC_actionsButton2;
-                    y = QUOTE(10 * GRID_H);
+                    y = QUOTE(11 * GRID_H);
                 };
                 class actionsText3: actionsText1 {
                     idc = IDC_actionsText3;
@@ -493,7 +493,7 @@ class GVAR(display) {
                 };
                 class actionsButton3: actionsButton1 {
                     idc = IDC_actionsButton3;
-                    y = QUOTE(15 * GRID_H);
+                    y = QUOTE(16 * GRID_H);
                 };
                 class actionsText4: actionsText1 {
                     idc = IDC_actionsText4;
@@ -501,7 +501,7 @@ class GVAR(display) {
                 };
                 class actionsButton4: actionsButton1 {
                     idc = IDC_actionsButton4;
-                    y = QUOTE(20 * GRID_H);
+                    y = QUOTE(21 * GRID_H);
                 };
                 class actionsText5: actionsText1 {
                     idc = IDC_actionsText5;
@@ -509,7 +509,7 @@ class GVAR(display) {
                 };
                 class actionsButton5: actionsButton1 {
                     idc = IDC_actionsButton5;
-                    y = QUOTE(25 * GRID_H);
+                    y = QUOTE(26 * GRID_H);
                 };
                 class actionsPreviousPage: ctrlButton {
                     idc = IDC_actionsPreviousPage;
@@ -517,7 +517,7 @@ class GVAR(display) {
                     text="<";
                     colorBackground[]={0,0,0,0};
                     colorBackgroundDisabled[]= {0,0,0,0};
-                    onButtonClick = QUOTE([ARR_2(QQGVAR(actionChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, false)])] call CBA_fnc_localEvent);
+                    onButtonClick = QUOTE([ARR_2(QQGVAR(actionsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, false)])] call CBA_fnc_localEvent);
                     x = QUOTE(0);
                     y = QUOTE(0);
                     w = QUOTE(5 * GRID_W);
@@ -527,7 +527,7 @@ class GVAR(display) {
                 class actionsNextPage: actionsPreviousPage {
                     idc =  IDC_actionsNextPage;
                     text = ">";
-                    onButtonClick = QUOTE([ARR_2(QQGVAR(actionChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, true)])] call CBA_fnc_localEvent);
+                    onButtonClick = QUOTE([ARR_2(QQGVAR(actionsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, true)])] call CBA_fnc_localEvent);
                     x = QUOTE(42 * GRID_W);
                 };
                 class actionsCurrentPage: RscText {

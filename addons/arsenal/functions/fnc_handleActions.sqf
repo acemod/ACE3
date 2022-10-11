@@ -18,6 +18,8 @@
 
 params ["_display", "_control", "_curSel", "_itemCfg"];
 
+GVAR(actionsInfo) = [_control, _curSel, _itemCfg];
+
 private _panel = [
     IDC_buttonPrimaryWeapon,
     IDC_buttonHandgun,
@@ -133,6 +135,6 @@ private _actionCount = count _items;
 } forEach ([0, 1, 2, 3, 4] select [_actionCount, 5]);
 
 private _pos = ctrlPosition _actionsBoxCtrl;
-_pos set [3, ([11, (5 * _actionCount) + 5] select (_actionCount > 0)) * GRID_H];
+_pos set [3, ([11, (5 * _actionCount) + 6] select (_actionCount > 0)) * GRID_H];
 _actionsBoxCtrl ctrlSetPosition _pos;
 _actionsBoxCtrl ctrlCommit 0;

@@ -56,9 +56,14 @@ private _configGroupEntries = "true" configClasses (configFile >> QGVAR(actions)
         private _label = getText (_x >> "label");
         private _condition = getText (_x >> "condition");
         private _statement = getText (_x >> "statement");
+        private _text = getText (_x >> "text");
         private _textStatement = getText (_x >> "textStatement");
 
         private _type = switch (false) do {
+            case (_text == ""): {
+                _statement = format ["""%1""", _text];
+                ACTION_TYPE_TEXT
+            };
             case (_textStatement == ""): {
                 _statement = _textStatement;
                 ACTION_TYPE_TEXT

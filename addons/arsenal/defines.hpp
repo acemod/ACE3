@@ -134,7 +134,7 @@
 #define IDC_actionsText2 9003
 #define IDC_actionsButton2 9004
 #define IDC_actionsText3 9005
-#define IDC_actionsButton3 9009
+#define IDC_actionsButton3 9006
 #define IDC_actionsText4 9007
 #define IDC_actionsButton4 9008
 #define IDC_actionsText5 9009

@@ -15,6 +15,7 @@ PREP(attributeKeyDown);
 PREP(attributeLoad);
 PREP(attributeMode);
 PREP(attributeSelect);
+PREP(buttonActionsPage);
 PREP(buttonCargo);
 PREP(buttonClearAll);
 PREP(buttonExport);

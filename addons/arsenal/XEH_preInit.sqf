@@ -48,6 +48,10 @@ PREP_RECOMPILE_END;
     _this call FUNC(handleStats);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(actionsChangePage), {
+    _this call FUNC(buttonActionsPage);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(displayActions), {
     _this call FUNC(handleActions);
 }] call CBA_fnc_addEventHandler;
