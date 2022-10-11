@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player] call ace_gunbag_fnc_status
+ * [player] call ace_gunbag_fnc_weaponName
  *
  * Public: No
  */
