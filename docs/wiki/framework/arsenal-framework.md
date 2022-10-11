@@ -278,6 +278,39 @@ Right tabs:
 | 6 | Put |
 | 7 | Misc |
 
+## 6. Actions
+
+ACE Arsenal actions are customizable, this will show you how.
+
+### 6.1 Adding actions via config
+
+Actions use the same tab definitions as stats, found above.
+
+```cpp
+class ace_arsenal_actions {
+    class TAG_myActions {
+        displayName = "My Actions";
+        condition = QUOTE(true);
+        tabs[] = {0,5};
+        class text {
+            // A simple text label
+            text = "My text";
+        };
+        class statement {
+            // Statement output as text
+            textStatement = QUOTE([_this select 0] call tag_fnc_myTextStatement);
+        };
+        class button {
+            label = "My Action";
+            condition = QUOTE(true);
+            statement = QUOTE(_this call tag_fnc_myAction);
+        };
+    };
+};
+```
+
+The player object is passed to the condition and statement functions.
+
 ## 6. Eventhandlers
 
 All are local.
