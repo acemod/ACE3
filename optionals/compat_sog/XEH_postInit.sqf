@@ -2,6 +2,8 @@
 
 [QGVAR(handlePunjiTrapDamage), LINKFUNC(handlePunjiTrapDamage)] call CBA_fnc_addEventHandler;
 
+GVAR(showTrenchActions) = isClass (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_SelfActions" >> "ACE_Equipment" >> "ace_trenches_digEnvelopeSmall");
+
 if (isServer) then {
     [QEGVAR(trenches,placed), {
         params ["", "_trench"];

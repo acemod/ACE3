@@ -2,16 +2,16 @@ class Man;
 class CAManBase: Man {
     class ACE_SelfActions {
         class ACE_Equipment {
-            class EGVAR(trenches,digEnvelopeSmall);
-            class GVAR(digSpiderhole): EGVAR(trenches,digEnvelopeSmall) {
+            class GVAR(digSpiderhole) {
+                condition = QUOTE(GVAR(showTrenchActions) && {_player call EFUNC(trenches,canDigTrench)});
                 displayName = CSTRING(Action_DigSpiderhole);
                 statement = QUOTE([ARR_2({_this call EFUNC(trenches,placeTrench)},[ARR_2(_this select 0,'vn_o_vc_spiderhole_01')])] call CBA_fnc_execNextFrame);
             };
-            class GVAR(digSpiderholeAngled): EGVAR(trenches,digEnvelopeSmall) {
+            class GVAR(digSpiderholeAngled): GVAR(digSpiderhole) {
                 displayName = CSTRING(Action_DigSpiderholeAngled);
                 statement = QUOTE([ARR_2({_this call EFUNC(trenches,placeTrench)},[ARR_2(_this select 0,'vn_o_vc_spiderhole_02')])] call CBA_fnc_execNextFrame);
             };
-            class GVAR(digSpiderholeDual): EGVAR(trenches,digEnvelopeSmall) {
+            class GVAR(digSpiderholeDual): GVAR(digSpiderhole) {
                 displayName = CSTRING(Action_DigSpiderholeDual);
                 statement = QUOTE([ARR_2({_this call EFUNC(trenches,placeTrench)},[ARR_2(_this select 0,'vn_o_vc_spiderhole_03')])] call CBA_fnc_execNextFrame);
             };
