@@ -29,7 +29,7 @@ if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith {false};
 if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith {false};
 
 // Parameterize this value to reduce duplication.
-private _hasOpenWounds = (GET_OPEN_WOUNDS(_unit) findIf {_x select 2 > 0 && _x select 3 > 0} ) != -1;
+private _hasOpenWounds = (GET_OPEN_WOUNDS(_unit) findIf {_x select 2 > 0 && {_x select 3 > 0}}) != -1;
 
 // Bangaded wounds required. This means there can be no open wounds. This check makes sure to ignore any non-bleeding wounds, such as bruises, that would otherwise be counted.
 if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1 && _hasOpenWounds) exitWith {false};
