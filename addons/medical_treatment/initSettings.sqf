@@ -189,6 +189,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(allowFracturesPAK),
+    "LIST",
+    [LSTRING(allowFracturesPAK_DisplayName), LSTRING(allowFracturesPAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(minBloodPAK),
     "SLIDER",
     [LSTRING(MinBloodPAK_DisplayName), LSTRING(MinBloodPAK_Description)],
