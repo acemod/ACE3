@@ -28,6 +28,9 @@ if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith {false};
 
 if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith {false};
 
+// Untreated fractures have a value of 1. Treated are -1.
+if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { ((GET_FRACTURES(_unit) findIf {_x isEqualTo 1}) != -1) })  exitWith {false}; 
+
 // Parameterize this value to reduce duplication.
 private _hasOpenWounds = (GET_OPEN_WOUNDS(_unit) findIf {_x select 2 > 0 && {_x select 3 > 0}}) != -1;
 
