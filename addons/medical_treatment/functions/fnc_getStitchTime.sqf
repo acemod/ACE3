@@ -17,5 +17,26 @@
  */
 
 params ["", "_patient"];
+private _time = 0;
 
-count (_patient call FUNC(getStitchableWounds)) * GVAR(woundStitchTime)
+if (GVAR(advancedBandages) == 2) then {
+    _time = count (_patient call FUNC(getStitchableWounds)) * GVAR(woundStitchTime)
+} else {
+    // Allow stitching if "Clear Trauma" is set to "After Stitch",
+    // but wound reopening is disabled
+    if (GVAR(clearTrauma) == 1) then {
+        private _bodyPartDamage = _patient getVariable [
+            QEGVAR(medical,bodyPartDamage),
+            [0,0,0,0,0,0]
+        ];
+
+        {
+            ADD(_time, _x * GVAR(woundStitchTime));
+        } forEach _bodyPartDamage;
+
+        _time = _time max GVAR(woundStitchTime);
+    };
+};
+
+_time
+
