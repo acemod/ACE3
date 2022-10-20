@@ -1467,12 +1467,15 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveFaceSetting">
             <English>Save Face</English>
+            <Korean>얼굴 저장</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
+            <Korean>목소리 저장</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
+            <Korean>계급장 저장</Korean>
         </Key>
     </Package>
 </Project>

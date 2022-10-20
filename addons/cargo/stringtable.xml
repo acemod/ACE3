@@ -484,9 +484,11 @@
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload">
             <English>Carry After Unload</English>
+            <Korean>화물 내린 후 운반</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
             <English>Controls whether cargo items are carried or dragged after unloading.</English>
+            <Korean>화물 아이템을 내린 후 들거나 끌지 여부를 결정합니다.</Korean>
         </Key>
     </Package>
 </Project>
