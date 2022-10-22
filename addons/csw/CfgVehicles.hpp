@@ -283,4 +283,19 @@ class CfgVehicles {
         maximumLoad = 0; // don't allow anything to be placed inside, only removed
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
     };
+
+    // vehicles turret
+    class Car: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_ReloadTurret {
+                    displayName = CSTRING(AmmoHandling_displayName);
+                    condition = QUOTE(([_target] call DEFUNC(common,getTurretGunner)) isEqualTo [0]);
+                    statement = "systemChat 'this works!'";
+                    exceptions[] = {"isNotSwimming", "isNotSitting"};
+                    //insertChildren = QUOTE((call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload)));
+                };
+            };
+        };
+    };
 };
