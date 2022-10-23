@@ -24,5 +24,12 @@ class ace_csw_groups {
         RHS_48Rnd_40mm_MK19_M1001 = 1;
         RHS_96Rnd_40mm_MK19_M1001 = 1;
     };
+    class rhs_mag_762x51_M240_200 {
+        rhs_mag_762x51_M240_200 = 1;    // just like vanilla for the titan, just give something already made.
+    };
+    CREATE_MAGAZINE_GROUP(mag_400rnd_127x99_mag);
+    CREATE_MAGAZINE_GROUP(mag_400rnd_127x99_mag_Tracer_Red);
+    CREATE_MAGAZINE_GROUP(mag_400rnd_127x99_SLAP_mag);
+    CREATE_MAGAZINE_GROUP(mag_400rnd_127x99_SLAP_mag_Tracer_Red);
 };
 

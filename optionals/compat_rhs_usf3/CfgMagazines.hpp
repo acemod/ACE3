@@ -239,4 +239,44 @@ class cfgMagazines {
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
         picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
     };
+    class rhs_mag_400rnd_127x99_mag;
+    class GVAR(mag_400rnd_127x99_mag): rhs_mag_400rnd_127x99_mag {
+        scope = 2;
+        displayName = CSTRING(mag_400rnd_127x99_displayName);
+        type = 256;
+        count = 400;
+        mass = 384;     //96*4 = 384
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
+    class rhs_mag_400rnd_127x99_mag_Tracer_Red;
+    class GVAR(mag_400rnd_127x99_mag_Tracer_Red): rhs_mag_400rnd_127x99_mag_Tracer_Red {
+        scope = 2;
+        displayName = CSTRING(mag_400rnd_127x99_Red_displayName);
+        type = 256;
+        count = 400;
+        mass = 384;     //96*4 = 384
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
+    class rhs_mag_400rnd_127x99_SLAP_mag;
+    class GVAR(mag_400rnd_127x99_SLAP_mag): rhs_mag_400rnd_127x99_SLAP_mag {
+        scope = 2;
+        displayName = CSTRING(mag_400rnd_127x99_SLAP_displayName);
+        type = 256;
+        count = 400;
+        mass = 384;     //96*4 = 384
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
+    class rhs_mag_400rnd_127x99_SLAP_mag_Tracer_Red;
+    class GVAR(mag_400rnd_127x99_SLAP_mag_Tracer_Red): rhs_mag_400rnd_127x99_SLAP_mag_Tracer_Red {
+        scope = 2;
+        displayName = CSTRING(mag_400rnd_127x99_SLAP_Red_displayName);
+        type = 256;
+        count = 400;
+        mass = 384;     //96*4 = 384
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
 };

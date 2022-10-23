@@ -73,5 +73,29 @@
             <Japanese>[CSW] Mk. 19 40mm M1001 キャニスター</Japanese>
             <Chinesesimp>[班组] Mk. 19 40mm M1001 霰弹</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_400rnd_127x99_displayName">
+            <English>[CSW] M2 12.7x99mm HMG Belt </English>
+            <Korean></Korean>
+            <Japanese></Japanese>
+            <Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_400rnd_127x99_Red_displayName">
+            <English>[CSW] M2 12.7x99mm HMG Tracer Red Belt </English>
+            <Korean></Korean>
+            <Japanese></Japanese>
+            <Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_400rnd_127x99_SLAP_displayName">
+            <English>[CSW] M2 12.7x99mm HMG SLAP Belt </English>
+            <Korean></Korean>
+            <Japanese></Japanese>
+            <Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_400rnd_127x99_SLAP_Red_displayName">
+            <English>[CSW] M2 12.7x99mm HMG Red Tracer SLAP Belt </English>
+            <Korean></Korean>
+            <Japanese></Japanese>
+            <Chinesesimp></Chinesesimp>
+        </Key>
     </Package>
 </Project>
