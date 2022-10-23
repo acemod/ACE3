@@ -291,11 +291,24 @@ class CfgVehicles {
                 class ACE_ReloadTurret {
                     displayName = CSTRING(AmmoHandling_displayName);
                     condition = QUOTE(([_target] call DEFUNC(common,getTurretGunner)) isEqualTo [0]);
-                    statement = "systemChat 'this works!'";
+                    statement = "";
                     exceptions[] = {"isNotSwimming", "isNotSitting"};
-                    //insertChildren = QUOTE((call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload)));
+                    insertChildren = QUOTE((call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload)));
                 };
             };
+        };
+    };
+
+    class Car_F: Car {};
+    class LSV_02_base_F: Car_F {};
+    class LSV_02_armed_base_F: LSV_02_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(LMG_Minigun_Transport);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            desiredAmmo = 1000;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
         };
     };
 };

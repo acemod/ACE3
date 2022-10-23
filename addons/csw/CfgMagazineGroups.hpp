@@ -49,6 +49,36 @@ class GVAR(groups) {
         200Rnd_20mm_G_belt = 1;
     };
 
+    // A3 20mm CROWS
+    class GVAR(96Rnd_40mm_G_belt) {
+        96Rnd_40mm_G_belt = 1;
+    };
+
+    // Jeep Wrangler LMG
+    class 200Rnd_556x45_Box_Tracer_F {
+        200Rnd_556x45_Box_Tracer_F = 1;
+    };
+
+    //LSV_AT weirdness
+    class Vorona_HEAT {
+        Vorona_HEAT = 1;
+    };
+
+    // SGP9 HEAT
+    class GVAR(12rnd_SPG9_HEAT){
+        12rnd_SPG9_HEAT = 1;
+    };
+
+    // SPG9 HE
+    class GVAR(8rnd_SPG9_HE) {
+        8rnd_SPG9_HE = 1;
+    };
+
+    // LSV M134
+    class GVAR(500Rnd_65x39_Belt_Tracer_Green_Splash) {
+        500Rnd_65x39_Belt_Tracer_Green_Splash = 1;
+    };
+
     // A3 82mm mortar shells (Allows the normal mk6 to be reloaded from the mk6 ammo handling mags)
     class ACE_1Rnd_82mm_Mo_HE {
         ACE_1Rnd_82mm_Mo_HE = 1;

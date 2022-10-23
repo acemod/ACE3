@@ -239,6 +239,7 @@ class CfgWeapons {
     CREATE_CSW_PROXY(HMG_Static);
     CREATE_CSW_PROXY(HMG_M2_Mounted);
     CREATE_CSW_PROXY(GMG_20mm);
+    CREATE_CSW_PROXY(LMG_Minigun_Transport);
 
     class missiles_titan_static;
     class EGVAR(javelin,Titan_Static): missiles_titan_static {}; // if ace_javelin does not exist, this will just inherit from the base weapon
