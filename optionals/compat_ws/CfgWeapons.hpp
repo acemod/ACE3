@@ -47,7 +47,7 @@ class CfgWeapons {
         ACE_twistDirection = 1;
     };
 
-    // XMS
+    // XMS - Weird off-shoot from the XM8 rifles so there is no data for barrel lengths or twists. Used the vanilla CTAR as a baseline for the values.
     class arifle_SPAR_01_base_F;
     class arifle_XMS_Base_lxWS: arifle_SPAR_01_base_F {
         ACE_barrelLength = 406.4;
