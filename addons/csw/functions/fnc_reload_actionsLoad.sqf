@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-/*
+/*typeOf
  * Author: PabstMirror
  * Gets sub actions for what the player can load into the static weapon
  *

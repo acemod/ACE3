@@ -74,25 +74,31 @@
             <Chinesesimp>[班组] Mk. 19 40mm M1001 霰弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_mag_400rnd_127x99_displayName">
-            <English>[CSW] M2 12.7x99mm HMG Belt </English>
+            <English>[CSW] M2 12.7x99mm HMG Belt 400 Count</English>
             <Korean></Korean>
             <Japanese></Japanese>
             <Chinesesimp></Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_mag_400rnd_127x99_Red_displayName">
-            <English>[CSW] M2 12.7x99mm HMG Tracer Red Belt </English>
+            <English>[CSW] M2 12.7x99mm HMG Tracer Red Belt 400 Count</English>
             <Korean></Korean>
             <Japanese></Japanese>
             <Chinesesimp></Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_mag_400rnd_127x99_SLAP_displayName">
-            <English>[CSW] M2 12.7x99mm HMG SLAP Belt </English>
+            <English>[CSW] M2 12.7x99mm HMG SLAP Belt 400 Count</English>
             <Korean></Korean>
             <Japanese></Japanese>
             <Chinesesimp></Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_mag_400rnd_127x99_SLAP_Red_displayName">
-            <English>[CSW] M2 12.7x99mm HMG Red Tracer SLAP Belt </English>
+            <English>[CSW] M2 12.7x99mm HMG Red Tracer SLAP Belt 400 Count </English>
+            <Korean></Korean>
+            <Japanese></Japanese>
+            <Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_mag_762x51_m80a1_4000_displayName">
+            <English>[CSW] M134D 7.62x51mm Belt</English>
             <Korean></Korean>
             <Japanese></Japanese>
             <Chinesesimp></Chinesesimp>

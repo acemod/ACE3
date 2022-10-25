@@ -196,7 +196,19 @@ class CfgVehicles {
     class rhsusf_fmtv_base: Truck_01_base_F {
         EGVAR(refuel,fuelCapacity) = 219;
     };
-    class rhsusf_M1078A1P2_B_M2_fmtv_usarmy;
+
+    class rhsusf_M1078A1P2_B_fmtv_usarmy;
+    class rhsusf_M1078A1P2_B_M2_fmtv_usarmy: rhsusf_M1078A1P2_B_fmtv_usarmy {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(RHS_M2);   
+            magazineLocation = "";  // will be on the vehicle interaction menu
+            desiredAmmo = 100;     
+            ammoLoadTime = 7;       
+            ammoUnloadTime = 5;
+        };
+    };
+
     class rhsusf_M1078A1R_SOV_M2_D_fmtv_socom: rhsusf_M1078A1P2_B_M2_fmtv_usarmy {
         transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 800;
@@ -205,6 +217,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCargo) = 900; // 45 jerrycans
         transportRepair = 0;
         EGVAR(repair,canRepair) = 1;
+
     };
 
     class rhsusf_HEMTT_A4_base: Truck_01_base_F {};
@@ -220,7 +233,16 @@ class CfgVehicles {
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
-    class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
+    class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(RHS_M2_M1117);   
+            magazineLocation = "";  // will be on the vehicle interaction menu
+            desiredAmmo = 200;     
+            ammoLoadTime = 7;       
+            ammoUnloadTime = 5;
+        };
+    };
     class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
         transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 1200;
@@ -293,6 +315,14 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.2;
         EGVAR(vehicle_damage,engineFireProb) = 0.8;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(RHS_M2_M1117);   
+            magazineLocation = "";  // will be on the vehicle interaction menu
+            desiredAmmo = 200;     
+            ammoLoadTime = 7;       
+            ammoUnloadTime = 5;
+        };
     };
     class rhsusf_stryker_base: Wheeled_APC_F {
         EGVAR(vehicle_damage,hullDetonationProb) = 0.2;
@@ -491,6 +521,9 @@ class CfgVehicles {
             ammoUnloadTime = 5;
         };
     };
+
+    #include "CfgCSWVehiclesTurrets.hpp"
+
 
     class rhsusf_infantry_usmc_base;
     class rhsusf_usmc_marpat_wd_helipilot: rhsusf_infantry_usmc_base {

@@ -100,6 +100,7 @@ class CfgMagazines {
         ACE_isBelt = 0;
     };
 
+    // TODO: green tracers aren't the only tracer 
     class 500Rnd_65x39_Belt_Tracer_Green_Splash;
     class GVAR(500Rnd_65x39_Belt_Tracer_Green_Splash): 500Rnd_65x39_Belt_Tracer_Green_Splash {
         author = ECSTRING(common,ACETeam);

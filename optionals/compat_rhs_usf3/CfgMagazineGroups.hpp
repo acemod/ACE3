@@ -31,5 +31,6 @@ class ace_csw_groups {
     CREATE_MAGAZINE_GROUP(mag_400rnd_127x99_mag_Tracer_Red);
     CREATE_MAGAZINE_GROUP(mag_400rnd_127x99_SLAP_mag);
     CREATE_MAGAZINE_GROUP(mag_400rnd_127x99_SLAP_mag_Tracer_Red);
+    CREATE_MAGAZINE_GROUP(mag_762x51_m80a1_4000);
 };
 

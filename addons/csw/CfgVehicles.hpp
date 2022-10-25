@@ -305,7 +305,7 @@ class CfgVehicles {
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(LMG_Minigun_Transport);
-            magazineLocation = "_target selectionPosition 'magazine'";
+            magazineLocation = "";
             desiredAmmo = 1000;
             ammoLoadTime = 7;
             ammoUnloadTime = 5;

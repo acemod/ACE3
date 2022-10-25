@@ -592,6 +592,11 @@ class CfgWeapons {
     CREATE_CSW_PROXY(RHS_M2);
     CREATE_CSW_PROXY(RHS_MK19);
     CREATE_CSW_PROXY(Rhs_weap_TOW_Launcher_static);
+    CREATE_CSW_PROXY(RHS_M2_CROWS_M153);
+    CREATE_CSW_PROXY(RHS_MK19_CROWS_M153);
+    CREATE_CSW_PROXY(rhs_weap_m240_m113);
+    CREATE_CSW_PROXY(RHS_M2_M1117);
+    CREATE_CSW_PROXY(rhs_weap_m134_mounted);
 
     class GVAR(m252_carry): Launcher_Base_F {
         class ACE_CSW {
