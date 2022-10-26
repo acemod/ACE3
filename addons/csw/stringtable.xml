@@ -652,67 +652,15 @@
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt96_displayName">
             <English>[CSW] 20mm Grenade GMG Belt 96 Count</English>
-            <Spanish></Spanish>
-            <German></German>
-            <Portuguese></Portuguese>
-            <French></French>
-            <Japanese></Japanese>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Italian></Italian>
-            <Czech></Czech>
-            <Turkish></Turkish>
-            <Polish></Polish>
-            <Russian></Russian>
-            <Korean></Korean>
         </Key>
         <Key ID="STR_ACE_CSW_SPGHEAT_displayName">
             <English>[CSW] SPG9 HEAT Rounds</English>
-            <Spanish></Spanish>
-            <German></German>
-            <Portuguese></Portuguese>
-            <French></French>
-            <Japanese></Japanese>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Italian></Italian>
-            <Czech></Czech>
-            <Turkish></Turkish>
-            <Polish></Polish>
-            <Russian></Russian>
-            <Korean></Korean>
         </Key>
         <Key ID="STR_ACE_CSW_SPGHE_displayName">
             <English>[CSW] SPG9 HE Rounds</English>
-            <Spanish></Spanish>
-            <German></German>
-            <Portuguese></Portuguese>
-            <French></French>
-            <Japanese></Japanese>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Italian></Italian>
-            <Czech></Czech>
-            <Turkish></Turkish>
-            <Polish></Polish>
-            <Russian></Russian>
-            <Korean></Korean>
         </Key>
         <Key ID="STR_ACE_CSW_65_39Belt_displayName">
-            <English>[CSW] 6.5mm x 39mm Belt</English>
-            <Spanish></Spanish>
-            <German></German>
-            <Portuguese></Portuguese>
-            <French></French>
-            <Japanese></Japanese>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Italian></Italian>
-            <Czech></Czech>
-            <Turkish></Turkish>
-            <Polish></Polish>
-            <Russian></Russian>
-            <Korean></Korean>
+            <English>[CSW] 6.5X39mm Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>
