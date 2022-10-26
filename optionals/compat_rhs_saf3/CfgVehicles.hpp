@@ -1,5 +1,16 @@
 class CfgVehicles {
 
+    class rhsusf_M1151_GPK_PKM_base;
+    class rhssaf_m1151_olive_pkm : rhsusf_M1151_GPK_PKM_base {
+        class ACE_CSW {
+        enabled = 1;
+        proxyWeapon = QEGVAR(compat_rhs_afrf3, rhs_weap_pkm_tigr);   
+        magazineLocation = "";  // will be on the vehicle interaction menu
+        desiredAmmo = 100;     
+        ammoLoadTime = 7;       
+        ammoUnloadTime = 5;
+        };
+    };
     // ACE Explosives
     class Items_base_F;
     class ACE_Explosives_Place: Items_base_F {
