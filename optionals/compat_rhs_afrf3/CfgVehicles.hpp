@@ -603,6 +603,18 @@ class CfgVehicles {
         };
     };
 
+    class rhs_tigr_vdv;
+    class rhs_tigr_sts_vdv: rhs_tigr_vdv {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_pkm_tigr);
+            magazineLocation = "";
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions;

@@ -3,19 +3,19 @@ class cfgMagazines {
     class rhs_30Rnd_545x39_7N6_AK;
 
     class rhs_100Rnd_762x54mmR: rhs_30Rnd_545x39_7N6_AK {
-        ace_isbelt = 1;
+        ACE_isBelt = 1;
     };
     class rhs_mag_127x108mm_50: VehicleMagazine {
-        ace_isbelt = 1;
+        ACE_isBelt = 1;
     };
     class rhs_mag_127x108mm_150: rhs_mag_127x108mm_50 {
-        ace_isbelt = 0;
+        ACE_isBelt = 0;
     };
     class rhs_mag_127x108mm_1470: rhs_mag_127x108mm_50 {
-        ace_isbelt = 0;
+        ACE_isBelt = 0;
     };
     class RHS_mag_VOG30_30: VehicleMagazine {
-        ace_isbelt = 1;
+        ACE_isBelt = 1;
     };
     class RHS_mag_GPD30_30: RHS_mag_VOG30_30 {};
 
@@ -158,6 +158,17 @@ class cfgMagazines {
         mass = 40;
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
         picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
+    class rhs_mag_762x54mm_100;
+    class GVAR(mag_762x54mm_100): rhs_mag_762x54mm_100 {
+        scope = 2;
+        displayName = CSTRING(mag_762x54mm_100_displayName);
+        type = 256;
+        count = 100;
+        mass = 50;
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+        ACE_isBelt = 1;
     };
 
     // ACE Explosives

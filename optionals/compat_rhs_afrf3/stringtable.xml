@@ -197,5 +197,8 @@
             <Japanese>[CSW] HE-FRAG OG-9VM</Japanese>
             <Chinesesimp>[班组] OG-9VM 高爆破片弹</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_762x54mm_100_displayName">
+            <English>[CSW] 7.62x54mm Belt AFRF</English>
+        </Key>
     </Package>
 </Project>
