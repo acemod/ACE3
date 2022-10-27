@@ -18,6 +18,15 @@ private _category = format ["ACE %1", localize LSTRING(Category)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(arcMaxDist),
+    "SLIDER",
+    [LSTRING(ArcMaxDist_DisplayName), LSTRING(ArcMaxDist_Description)],
+    _category,
+    [1, 250, 20, 0],
+    0
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(showMouseControls), "CHECKBOX",
     [LSTRING(ShowMouseControls_DisplayName), LSTRING(ShowMouseControls_Description)],
     _category,
