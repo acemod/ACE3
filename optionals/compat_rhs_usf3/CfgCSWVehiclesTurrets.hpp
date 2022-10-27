@@ -25,7 +25,7 @@ class rhsusf_M1151_CROWS_Mk19_base: rhsusf_m1151_CROWS_base {
 
 class rhsusf_m1025_w;
 class rhsusf_m1025_w_m2: rhsusf_m1025_w {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(RHS_M2);   
         magazineLocation = "";  // will be on the vehicle interaction menu
@@ -36,7 +36,7 @@ class rhsusf_m1025_w_m2: rhsusf_m1025_w {
 };
 
 class rhsusf_m1025_w_mk19: rhsusf_m1025_w_m2 {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(RHS_MK19);   
         magazineLocation = "";  // will be on the vehicle interaction menu
@@ -47,7 +47,7 @@ class rhsusf_m1025_w_mk19: rhsusf_m1025_w_m2 {
 };
 
 class rhsusf_m966_w: rhsusf_m1025_w {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(Rhs_weap_TOW_Launcher_static);   
         magazineLocation = "";  // will be on the vehicle interaction menu
@@ -59,7 +59,7 @@ class rhsusf_m966_w: rhsusf_m1025_w {
 
 class rhsusf_m1151_GPK_base;
 class rhsusf_m1151_GPK_M2_base: rhsusf_m1151_GPK_base {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(RHS_M2);   
         magazineLocation = "";  // will be on the vehicle interaction menu
@@ -70,7 +70,7 @@ class rhsusf_m1151_GPK_M2_base: rhsusf_m1151_GPK_base {
 };
 
 class rhsusf_m1151_GPK_M240_base: rhsusf_m1151_GPK_base {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(rhs_weap_m240_m113);   
         magazineLocation = "";  // will be on the vehicle interaction menu
@@ -81,7 +81,7 @@ class rhsusf_m1151_GPK_M240_base: rhsusf_m1151_GPK_base {
 };
 
 class rhsusf_m1151_GPK_MK19_base: rhsusf_m1151_GPK_base {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(RHS_MK19);   
         magazineLocation = "";  // will be on the vehicle interaction menu
@@ -93,7 +93,7 @@ class rhsusf_m1151_GPK_MK19_base: rhsusf_m1151_GPK_base {
 
 class rhsusf_m1151_OGPK_base;
 class rhsusf_m1151_OGPK_M2_base: rhsusf_m1151_OGPK_base {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(RHS_M2);   
         magazineLocation = "";  // will be on the vehicle interaction menu
@@ -104,7 +104,7 @@ class rhsusf_m1151_OGPK_M2_base: rhsusf_m1151_OGPK_base {
 };
 
 class rhsusf_m1151_OGPK_M240_base: rhsusf_m1151_OGPK_base {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(rhs_weap_m240_m113);   
         magazineLocation = "";  // will be on the vehicle interaction menu
@@ -115,7 +115,7 @@ class rhsusf_m1151_OGPK_M240_base: rhsusf_m1151_OGPK_base {
 };
 
 class rhsusf_m1151_OGPK_MK19_base: rhsusf_m1151_OGPK_base {
-	class ACE_CSW {
+    class ACE_CSW {
         enabled = 1;
         proxyWeapon = QGVAR(RHS_MK19);   
         magazineLocation = "";  // will be on the vehicle interaction menu

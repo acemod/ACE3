@@ -65,7 +65,7 @@ class GVAR(groups) {
     };
 
     // SGP9 HEAT
-    class GVAR(12rnd_SPG9_HEAT){
+    class GVAR(12rnd_SPG9_HEAT) {
         12rnd_SPG9_HEAT = 1;
     };
 

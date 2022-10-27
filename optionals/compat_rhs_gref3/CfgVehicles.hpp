@@ -148,7 +148,7 @@ class CfgVehicles {
     };
 
     class rhsgref_tla_offroad_armed;
-    class rhsgref_tla_g_offroad_armed : rhsgref_tla_offroad_armed {
+    class rhsgref_tla_g_offroad_armed: rhsgref_tla_offroad_armed {
         class ACE_CSW {
             enabled = 1;
             proxyWeapon = QGVAR(RHS_M2_offroad);  
