@@ -23,7 +23,8 @@ private _category = format ["ACE %1", localize LSTRING(Category)];
     [LSTRING(ArcMaxDist_DisplayName), LSTRING(ArcMaxDist_Description)],
     _category,
     [1, 250, 20, 0],
-    0
+    0,
+    {[QGVAR(arcMaxDist), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
