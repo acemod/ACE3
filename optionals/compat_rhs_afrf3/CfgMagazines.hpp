@@ -170,6 +170,26 @@ class cfgMagazines {
         picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
         ACE_isBelt = 1;
     };
+    class RHS_mag_AZP23_100;
+    class GVAR(mag_AZP23_100): RHS_mag_AZP23_100 {
+        scope = 2;
+        displayName = CSTRING(mag_AZP23_100_displayName);
+        type = 256;
+        count = 100;
+        mass = 75;
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
+    class rhs_mag_AZP23_100_ap;
+    class GVAR(mag_AZP23_100_ap): rhs_mag_AZP23_100_ap {
+        scope = 2;
+        displayName = CSTRING(mag_AZP23_100_ap_displayName);
+        type = 256;
+        count = 100;
+        mass = 75;
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
 
     // ACE Explosives
     class ATMine_Range_Mag;

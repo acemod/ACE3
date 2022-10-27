@@ -290,7 +290,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 class ACE_ReloadTurret {
                     displayName = CSTRING(AmmoHandling_displayName);
-                    condition = QUOTE(([_target] call DEFUNC(common,getTurretGunner)) isEqualTo [0]);
+                    condition = QUOTE((count([_target] call DEFUNC(common,getTurretGunner))) isEqualTo 1);
                     statement = "";
                     exceptions[] = {"isNotSwimming", "isNotSitting"};
                     insertChildren = QUOTE((call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload)));

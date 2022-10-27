@@ -15,5 +15,15 @@ class ace_csw_groups {
     CREATE_MAGAZINE_GROUP(mag_GPD30_30);
     CREATE_MAGAZINE_GROUP(mag_VOG17m_30);
     CREATE_MAGAZINE_GROUP(mag_762x54mm_100);
+
+    class GVAR(mag_AZP23_100) {
+        RHS_mag_AZP23_100 = 1;
+        rhs_mag_AZP23_100_veh = 1;
+    };
+
+    class GVAR(mag_AZP23_100_ap) {
+        rhs_mag_AZP23_100_ap = 1;
+        rhs_mag_AZP23_100_ap_veh = 1;
+    };
 };
 

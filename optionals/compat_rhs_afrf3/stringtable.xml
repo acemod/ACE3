@@ -198,7 +198,13 @@
             <Chinesesimp>[班组] OG-9VM 高爆破片弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_762x54mm_100_displayName">
-            <English>[CSW] 7.62x54mm Belt AFRF</English>
+            <English>[CSW] 7.62x54mm PKT Belt </English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_AZP23_100_displayName">
+            <English>[CSW] 23x152mm ZU-23 Belt</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_AZP23_100_ap_displayName">
+            <English>[CSW] 23x152mm ZU-23 AP Belt</English>
         </Key>
     </Package>
 </Project>

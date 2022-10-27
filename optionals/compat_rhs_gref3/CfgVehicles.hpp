@@ -101,6 +101,64 @@ class CfgVehicles {
         };
     };
 
+    class RHS_UAZ_DShKM_Base;
+    class RHS_UAZ_SPG9_Base: RHS_UAZ_DShKM_Base {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QEGVAR(compat_rhs_afrf3, rhs_weap_SPG9);  
+            magazineLocation = "";  // will be on the vehicle interaction menu
+            desiredAmmo = 1;     
+            ammoLoadTime = 5;       
+            ammoUnloadTime = 3;
+        };
+    };
+
+    class rhsgref_ins_uaz_dshkm: RHS_UAZ_DShKM_Base {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_DSHKM);   
+            magazineLocation = "";  // will be on the vehicle interaction menu
+            desiredAmmo = 50;     
+            ammoLoadTime = 7;       
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class RHS_UAZ_AGS30_Base: RHS_UAZ_DShKM_Base {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon =QEGVAR(compat_rhs_afrf3, RHS_weap_Ags30);   
+            magazineLocation = "";  // will be on the vehicle interaction menu
+            desiredAmmo = 100;     
+            ammoLoadTime = 7;       
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class rhsgref_tla_offroad_at;
+    class rhsgref_tla_g_offroad_at: rhsgref_tla_offroad_at {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QEGVAR(compat_rhs_afrf3, rhs_weap_SPG9);  
+            magazineLocation = "";  // will be on the vehicle interaction menu
+            desiredAmmo = 1;     
+            ammoLoadTime = 5;       
+            ammoUnloadTime = 3;
+        };
+    };
+
+    class rhsgref_tla_offroad_armed;
+    class rhsgref_tla_g_offroad_armed : rhsgref_tla_offroad_armed {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(RHS_M2_offroad);  
+            magazineLocation = "";  // will be on the vehicle interaction menu
+            desiredAmmo = 1;     
+            ammoLoadTime = 5;       
+            ammoUnloadTime = 3;
+        };
+    };
+
     // ACE Explosives
     class Items_base_F;
     class ACE_Explosives_Place: Items_base_F {
