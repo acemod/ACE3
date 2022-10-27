@@ -40,12 +40,14 @@ private _initialVelocity = (vectorNormalized (_viewEnd vectorDiff _viewStart)) v
 private _prevTrajASL = getPosASLVisual _activeThrowable;
 
 private _pathData = [];
+private _pathRange = GVAR(arcMaxDist);
+private _pathNodes = parseNumber ((GVAR(arcMaxDist) * 0.0725) toFixed 2);
 
-for "_i" from 0.05 to 1.45 step 0.1 do {
+for "_i" from 0.05 to _pathNodes step 0.1 do {
     private _newTrajASL = (getPosASLVisual _activeThrowable) vectorAdd (_initialVelocity vectorMultiply _i) vectorAdd ([0, 0, -4.9] vectorMultiply (_i * _i));
     private _cross = 0;
 
-    if (_newTrajASL distance (getPosASLVisual ACE_player) <= 20) then {
+    if (_newTrajASL distance (getPosASLVisual ACE_player) <= _pathRange) then {
         if ((ASLToATL _newTrajASL) select 2 <= 0) then {
             _cross = 1; // 1: Distance Limit (Green)
         } else {
@@ -59,8 +61,8 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
             };
         };
 
-        private _iDim = linearConversion [20, 0, _newTrajASL distance (getPosASLVisual ACE_player), 0.3, 2.5, true];
-        private _alpha = linearConversion [20, 0, _newTrajASL distance (getPosASLVisual ACE_player), 0.05, 0.7, true];
+        private _iDim = linearConversion [_pathRange, 0, _newTrajASL distance (getPosASLVisual ACE_player), 0.3, 2.5, true];
+        private _alpha = linearConversion [_pathRange, 0, _newTrajASL distance (getPosASLVisual ACE_player), 0.05, 0.7, true];
         private _movePerc = linearConversion [3, 0, vectorMagnitude (velocity ACE_player), 0, 1, true];
         _alpha = _alpha * _movePerc;
 
