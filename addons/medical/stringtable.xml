@@ -78,7 +78,7 @@
             <German>Erhöht wie oft Aufwachprüfungen passieren, wenn ein Patient Epinephrin im Blutkreislauf hat.</German>
             <Russian>Увеличивает частоту проверок на спонтанное пробуждение, когда пациент под действием адреналина.</Russian>
             <Turkish>Hastanın sisteminde Epinefrin olduğunda rasgele uyanma kontrollerinin ne sıklıkla gerçekleştiğini artırır.</Turkish>
-            <Korean>에피네프린 투여 후 환자가 일어날 확률을 얼마나 추가할지 정합니다.</Korean>
+            <Korean>에피네프린 투여 후 환자가 일어날 확률을 얼마나 추가할 지 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -94,7 +94,7 @@
             <Spanish>Cojera</Spanish>
             <German>Humpeln</German>
             <Turkish>Topallama</Turkish>
-            <Korean>절름발</Korean>
+            <Korean>절뚝거림</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -110,7 +110,7 @@
             <German>Stellt ein, ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
             <Russian>Контролирует хромоту в случае открытых или забинтованных ран.</Russian>
             <Turkish>Açık veya sargılı yaraların bir kişinin topallamasına neden olup olmadığını kontrol eder.</Turkish>
-            <Korean>붕대로 묶을 상처가 플레이어를 절게 만들지 결정합니다</Korean>
+            <Korean>붕대로 묶인 상처가 플레이어를 절게 만들지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -126,7 +126,7 @@
             <Spanish>Cojera en heridas abiertas</Spanish>
             <German>Humpeln bei offenen Wunden</German>
             <Turkish>Açık Yaralarda Topallama</Turkish>
-            <Korean>상처 개방시 절뚝임</Korean>
+            <Korean>상처 개방 시 절뚝거림</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -142,7 +142,7 @@
             <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
             <German>Humpeln bei offenen oder bandagierten Wunden</German>
             <Turkish>Açık veya Sargılı Yaralarda Topallama</Turkish>
-            <Korean>상처 개방 혹은 붕대질 후에도 절뚝임</Korean>
+            <Korean>상처 개방 혹은 붕대질 후에도 절뚝거림</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -174,7 +174,7 @@
             <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
             <Russian>Управляет эффектом использования шин для лечения переломов.\nПри отключении травмы не вызывают переломов.</Russian>
             <Turkish>Kırıkları tedavi etmek için atel kullanmanın etkisini kontrol eder. \ Devre dışı bırakıldığında, yaralanmalar kırılmaya neden olmaz.</Turkish>
-            <Korean>부목이 골절을 어떻게 치료할지 결정합니다\n비활성화시 골절이 일어나지 않습니다.</Korean>
+            <Korean>부목이 골절을 어떻게 치료할 지 결정합니다\n비활성화 시 골절이 일어나지 않습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>

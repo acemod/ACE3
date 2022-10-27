@@ -23,7 +23,7 @@ private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if (isNull _nozzle || {_source != _nozzle getVariable QGVAR(source)}) exitWith {};
 
 [
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    GVAR(progressDuration),
     [_unit, _nozzle, _source],
     {
         params ["_args"];

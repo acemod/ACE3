@@ -49,6 +49,7 @@ ace_recoil_shakemultiplier
 ace_overpressure_angle
 ace_overpressure_range
 ace_overpressure_damage
+ace_overpressure_offset
 ace_overheating_closedbolt
 ace_overheating_dispersion
 ace_overheating_slowdownfactor

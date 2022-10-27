@@ -42,6 +42,18 @@
 
 class CBA_Extended_EventHandlers;
 
+class CfgNonAIVehicles {
+    class GVAR(fuelHoseSegment) {
+        access = 0;
+        scope = 2;
+        displayName = "Fuel Hose";
+        simulation = "ropesegment";
+        autocenter = 0;
+        animated = 0;
+        model = QPATHTOF(data\hose.p3d);
+    };
+};
+
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRefuelSettings: ACE_Module {
@@ -66,6 +78,11 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 12;
             };
+            class progressDuration {
+                displayName = CSTRING(RefuelSettings_progressDuration_DisplayName);
+                typeName = "NUMBER";
+                defaultValue = 2;
+            };
         };
     };
 
@@ -81,6 +98,14 @@ class CfgVehicles {
         scopeCurator = 1;
         model = QPATHTOF(data\nozzle.p3d);
         destrType = "DestructNo";
+    };
+    
+    class Rope;
+    class GVAR(fuelHose): Rope {
+        hiddenSelections[] = {"rope"};
+        hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(0.009,0.009,0.009,1.0,co)"};
+        segmentType = QGVAR(fuelHoseSegment);
+        model = QPATHTOF(data\hose.p3d);
     };
 
     class All;

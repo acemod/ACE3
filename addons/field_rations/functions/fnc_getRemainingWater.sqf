@@ -22,10 +22,10 @@ if (!alive _source) exitWith {0};
 private _water = _source getVariable QGVAR(currentWaterSupply);
 
 if (isNil "_water") then {
-    private _typeOf = typeOf _source;
-    if (_typeOf != "") then {
+    private _configOf = configOf _source;
+    if !(isNull _configOf) then {
         // Check for waterSupply entry since we have valid typeOf
-        _water = getNumber (configFile >> "CfgVehicles" >> _typeOf >> QXGVAR(waterSupply));
+        _water = getNumber (_configOf >> QXGVAR(waterSupply));
         if (_water == 0) then {_water = REFILL_WATER_DISABLED};
 
         if (_water != REFILL_WATER_DISABLED) then {

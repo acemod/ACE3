@@ -18,6 +18,14 @@
             <Chinese>啟用速度限制</Chinese>
             <Turkish>Hız Sabitleyeciı Açık</Turkish>
         </Key>
+        <Key ID="STR_ACE_Vehicles_OnCruise">
+            <English>Cruise control on</English>
+            <German>Tempomat an</German>
+            <Korean>자동운전 켜짐</Korean>
+            <Polish>Tempomat włączony</Polish>
+            <Japanese>クルーズコントロールを有効化</Japanese>
+            <Chinesesimp>开启巡航模式</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
             <German>Geschwindigkeitsbegrenzer aus</German>
@@ -35,11 +43,19 @@
             <Chinese>停用速度限制</Chinese>
             <Turkish>Hız Sabitleyeci Kapalı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Vehicles_OffCruise">
+            <English>Cruise control off</English>
+            <German>Tempomat aus</German>
+            <Korean>자동운전 꺼짐</Korean>
+            <Polish>Tempomat wyłączony</Polish>
+            <Japanese>クルーズコントロールを無効化</Japanese>
+            <Chinesesimp>关闭巡航模式</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
             <German>Geschwindigkeitsbegrenzung</German>
             <Italian>Limite di velocità</Italian>
-            <Japanese>速度制限</Japanese>
+            <Japanese>制限速度</Japanese>
             <Polish>Ograniczenie prędkości</Polish>
             <Russian>Ограничение скорости</Russian>
             <Portuguese>Limite de Velocidade</Portuguese>
@@ -68,11 +84,19 @@
             <Chinese>速度限制器</Chinese>
             <Turkish>Hız Sabitleyici</Turkish>
         </Key>
+        <Key ID="STR_ACE_Vehicles_CruiseControl">
+            <English>Cruise Control</English>
+            <German>Tempomat</German>
+            <Korean>자동운전</Korean>
+            <Polish>Tempomat</Polish>
+            <Japanese>クルーズコントロール</Japanese>
+            <Chinesesimp>巡航模式</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>
             <German>Maximale Geschwindigkeit erhöhen</German>
             <Italian>Aumenta limite di velocità</Italian>
-            <Japanese>速度制限を増やす</Japanese>
+            <Japanese>制限速度を増やす</Japanese>
             <Polish>Zwiększ ograniczenie prędkości</Polish>
             <Russian>Увеличить ограничение скорости</Russian>
             <Portuguese>Aumentar Limite de Velocidade</Portuguese>
@@ -88,7 +112,7 @@
             <English>Decrease Speed Limit</English>
             <German>Maximale Geschwindigkeit verringern</German>
             <Italian>Diminuisce limite di velocità</Italian>
-            <Japanese>速度制限を減らす</Japanese>
+            <Japanese>制限速度を減らす</Japanese>
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
             <Russian>Уменьшить ограничение скорости</Russian>
             <Portuguese>Diminuir Limite de Velocidade</Portuguese>
@@ -130,7 +154,7 @@
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
             <Turkish>Araçtan inerken motorun otomatik kapatılmasını engelleyin.</Turkish>
             <Polish>Zapobiegaj automatycznemu wyłączaniu silnika podczas wychodzenia z pojazdu.</Polish>
-            <Korean>차량에서 내릴때 자동으로 엔진을 끄는 것을 비활성화 합니다.</Korean>
+            <Korean>차량에서 내릴 때 자동으로 엔진을 끄는 것을 비활성화 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>
@@ -167,7 +191,7 @@
             <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
             <Polish>Przeskok limitera prędkości</Polish>
             <French>Pas du limiteur de vitesse</French>
-            <Japanese>設定速度の増減量</Japanese>
+            <Japanese>制限速度の増減量</Japanese>
             <Czech>Krokování omezovače rychlosti</Czech>
             <Russian>Шаг ограничителя скорости</Russian>
             <Spanish>Salto de limitador de vehículo</Spanish>

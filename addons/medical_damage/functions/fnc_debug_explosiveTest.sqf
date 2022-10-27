@@ -57,7 +57,7 @@ if (_ammoClass != "") then {
         params ["_ammoClass", "_center"];
         private _position = _center vectorAdd [0, 0, 5];
         private _obj = _ammoClass createVehicle _position;
-        _object setVectorDirAndUp [[0, 0, -1], [0, 1, 0]];
+        _obj setVectorDirAndUp [[0, 0, -1], [0, 1, 0]];
         _obj setVelocity [0, 0, -20];
     }, [_ammoClass, _center], _delay] call CBA_fnc_waitAndExecute;
 };

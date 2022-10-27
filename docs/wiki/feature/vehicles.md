@@ -15,8 +15,8 @@ version:
 
 ## 1. Overview
 
-### 1.1 Speed limiter
-Adds ability to limit the max. speed of any vehicle.
+### 1.1 Speed limiter & Cruise Control
+Adds ability to limit the max speed of any vehicle, or enable cruise control.
 
 ### 1.2 Engine start delay
 The engine has to be started before the vehicle can move. Starting the engine takes aprox. 1 to 2 seconds.
@@ -56,3 +56,7 @@ Adds the ability to prevent the automatic shut-off of the engine when exiting ve
 ### 2.2 Turning the speed limiter on / off
 - To turn the speed limiter on press <kbd>Del</kbd>.
 - To turn it off press <kbd>Del</kbd> again.
+
+### 2.3 Turning cruise control on / off
+- To turn cruise control on press <kbd>Ins</kbd>.
+- To turn it off press <kbd>Ins</kbd> again.

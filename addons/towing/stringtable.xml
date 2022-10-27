@@ -109,7 +109,13 @@
             <German>Entferne Abschleppseil</German>
             <Polish>Odepnij linkę holowniczą</Polish>
             <Chinesesimp>解开牵引绳</Chinesesimp>
-            <Korean>견일줄 분리</Korean>
+            <Korean>견인줄 분리</Korean>
+        </Key>
+        <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
+            <English>Add Tow Rope to Vehicle Inventory</English>
+            <Russian>Добавить буксировочный трос в инвентарь машин</Russian>
+            <Polish>Dodaj linkę holowniczą do ekwipunku pojazdów</Polish>
+            <Korean>차량 소지품에 견인줄 추가</Korean>
         </Key>
     </Package>
 </Project>

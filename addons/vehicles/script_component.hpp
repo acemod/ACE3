@@ -6,6 +6,8 @@
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+
 #ifdef DEBUG_ENABLED_VEHICLES
     #define DEBUG_MODE_FULL
 #endif

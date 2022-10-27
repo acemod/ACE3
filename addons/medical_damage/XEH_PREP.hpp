@@ -6,7 +6,6 @@ PREP(interpolatePoints);
 PREP(parseConfigForInjuries);
 PREP(parseWoundHandlersCfg);
 PREP(woundReceived);
-PREP(woundsHandler);
+PREP(woundsHandlerBase);
 PREP(woundsHandlerBurning);
-PREP(woundsHandlerSQF);
 PREP(woundsHandlerVehiclecrash);

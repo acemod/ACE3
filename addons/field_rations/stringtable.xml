@@ -83,7 +83,7 @@
             <Hungarian>Terepi adagok engedélyezése / letiltása</Hungarian>
             <Italian>Abilita / disabilita le razioni di campo</Italian>
             <Japanese>フィールド レーションを有効/無効化します</Japanese>
-            <Korean>전투식량 활성화/비활서오하</Korean>
+            <Korean>전투식량 활성화/비활성화</Korean>
             <Polish>Włącz / wyłącz racje polowe</Polish>
             <Portuguese>Ativar / Desativar rações de campo</Portuguese>
             <Russian>Включение/отключение жажды и голода</Russian>
@@ -100,7 +100,7 @@
             <Hungarian>Víz nélküli idő</Hungarian>
             <Italian>Tempo senza acqua</Italian>
             <Japanese>水なしの時間</Japanese>
-            <Korean>물 없이 생존 시간</Korean>
+            <Korean>물 없이 생존 가능 시간</Korean>
             <Polish>Czas bez wody</Polish>
             <Portuguese>Tempo sem água</Portuguese>
             <Russian>Время без воды</Russian>
@@ -117,7 +117,7 @@
             <Hungarian>Mennyi ideig kell egy egység víz nélkül (óra)</Hungarian>
             <Italian>Mennyi ideig kell egy egység víz nélkül (óra)</Italian>
             <Japanese>ユニットが水なしでどれくらい時間を過ごすことができるか (一時間単位)</Japanese>
-            <Korean>물을 안마시고 얼마나 생존 할 수 있는지 정합니다 (시간)</Korean>
+            <Korean>물을 안 마시고 얼마나 생존할 수 있는지 정합니다 (시간)</Korean>
             <Polish>Jak długo jednostka powinna przetrwać bez wody (godziny)</Polish>
             <Portuguese>Quanto tempo uma unidade pode passar sem água (horas)</Portuguese>
             <Russian>Как долго персонаж может обходиться без воды (часы)</Russian>
@@ -134,7 +134,7 @@
             <Hungarian>Élelmiszer nélkül</Hungarian>
             <Italian>Tempo senza cibo</Italian>
             <Japanese>食べ物なしの時間</Japanese>
-            <Korean>밥 없이 생존 시간</Korean>
+            <Korean>밥 없이 생존 가능 시간</Korean>
             <Polish>Czas bez jedzenia</Polish>
             <Portuguese>Tempo sem comida</Portuguese>
             <Russian>Время без еды</Russian>
@@ -151,7 +151,7 @@
             <Hungarian>Mennyi ideig kell egy egység élni nélkül (óra)</Hungarian>
             <Italian>Per quanto tempo un'unità dovrebbe essere in grado di andare senza cibo (ore)</Italian>
             <Japanese>ユニットが食糧なしでどれくらい時間を過ごすことができるか (一時間単位)</Japanese>
-            <Korean>밥을 안먹고 얼마나 생존할 수 있는지를 정합니다 (시간)</Korean>
+            <Korean>밥을 안 먹고 얼마나 생존할 수 있는지 정합니다 (시간)</Korean>
             <Polish>Jak długo jednostka powinna przetrwać bez jedzenia (godziny)</Polish>
             <Portuguese>Quanto tempo uma unidade pode ir sem alimentos (horas)</Portuguese>
             <Russian>Как долго персонаж может обходиться без пищи (часы)</Russian>
@@ -250,7 +250,7 @@
             <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
             <German>Aktiviert Wasserquellen-Aktionen für Geländeobjekte.</German>
             <Chinesesimp>为地形物体启用水源动作。</Chinesesimp>
-            <Korean>지형 물체에서 물을 얻는게 가능해집니다.</Korean>
+            <Korean>지형 물체에서 물을 얻는 게 가능해집니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
             <English>Affect Advanced Fatigue</English>
@@ -469,7 +469,7 @@
             <Polish>Nie ma wody</Polish>
             <Russian>Воды больше не осталось</Russian>
             <Turkish>Hiç su kalmadı.</Turkish>
-            <Korean>물이 한방울도 없습니다.</Korean>
+            <Korean>물이 한 방울도 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkFromSource">
             <English>Drink From Source</English>
@@ -479,7 +479,7 @@
             <Turkish>Mataradan Iç</Turkish>
             <Japanese>水源から飲む</Japanese>
             <Chinesesimp>从水源处喝水</Chinesesimp>
-            <Korean>수원에서 물마시기</Korean>
+            <Korean>수원에서 물 마시기</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Refill">
             <English>Refill</English>
@@ -636,7 +636,7 @@
             <Hungarian>Fél-teljes vizes palack</Hungarian>
             <Italian>Una mezza bottiglia piena d'acqua</Italian>
             <Japanese>半分入っているウォーター ボトル</Japanese>
-            <Korean>절반만 차있는 물병입니다.</Korean>
+            <Korean>절반만 차 있는 물병입니다.</Korean>
             <Polish>Pół butelki z wodą</Polish>
             <Portuguese>Uma garrafa de água meia cheia</Portuguese>
             <Russian>Половина бутылки с водой</Russian>
@@ -738,7 +738,7 @@
             <Hungarian>A vízzel töltött kantin</Hungarian>
             <Italian>Una mensa riempita per metà di acqua</Italian>
             <Japanese>半分入っている水筒</Japanese>
-            <Korean>반이 차있는 수통입니다</Korean>
+            <Korean>반이 차 있는 수통입니다</Korean>
             <Polish>Manierka w połowie wypełniona wodą</Polish>
             <Portuguese>Uma meia cantina cheia de água</Portuguese>
             <Russian>Наполовину заполненая водой фляга</Russian>
@@ -784,7 +784,7 @@
             <German>Ein erfrischender Softdrink mit Zitronen- und Limettengeschmack.</German>
             <Chinese>清新檸檬以及有著酸橙味的汽水</Chinese>
             <Chinesesimp>清爽的柠檬和青柠味汽水</Chinesesimp>
-            <Japanese>新鮮なレモンとライムの風味を味わえるソフト ドリンク</Japanese>
+            <Japanese>新鮮なレモンとライムの風味を味わえるソフトドリンク</Japanese>
             <Polish>Odświeżający napój cytronowo-limonkowy</Polish>
             <Russian>Освежающий напиток со вкусом лимона и лайма</Russian>
             <Turkish>Limon Ve Yeşil Limondan Yapılmış Gazlı Bir Içecek</Turkish>
@@ -795,7 +795,7 @@
             <German>Ein nach Orange schmeckender Softdrink mit einem prickelndem und fruchtigem Geschmack</German>
             <Chinese>有著微微的橘子水果味的汽水</Chinese>
             <Chinesesimp>橙子味汽水，有刺鼻的水果味</Chinesesimp>
-            <Japanese>口いっぱいに果物を感じるオレンジ風味のソフト ドリンク</Japanese>
+            <Japanese>口いっぱいに果物を感じるオレンジ風味のソフトドリンク</Japanese>
             <Polish>Napój pomarańczowy</Polish>
             <Russian>Напиток с апельсиновым вкусом</Russian>
             <Turkish>Gazlı Portakallı Bir Içecek</Turkish>
@@ -806,7 +806,7 @@
             <German>Red Gull verleiht Flügel</German>
             <Chinese>紅鷹讓你猛虎添翼</Chinese>
             <Chinesesimp>红鹰让你猛虎添翼</Chinesesimp>
-            <Japanese>レッドガルは翼をさずける</Japanese>
+            <Japanese>レッドガル 翼をさずける</Japanese>
             <Polish>Red Gull doda ci skrzydeł</Polish>
             <Russian>Рэд Гулл окрыляет!</Russian>
             <Turkish>Red Gull kanatlandırrrrr</Turkish>
@@ -821,7 +821,7 @@
             <German>EPA Lamm Curry</German>
             <Hungarian>MRE bárány Curry</Hungarian>
             <Italian>MRE Curry di agnello</Italian>
-            <Japanese>MRE 羊カレー</Japanese>
+            <Japanese>MRE ラムカレー</Japanese>
             <Korean>MRE 양고기 카레</Korean>
             <Polish>MRE jagnięcina Curry</Polish>
             <Portuguese>MRE cordeiro ao Curry</Portuguese>
@@ -838,7 +838,7 @@
             <German>Eine EPA mit Lamm Curry. Für den besten Geschmack erhitzen.</German>
             <Hungarian>Egy MRE, amely Lamb Curry-t tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
             <Italian>Un MRE contenente Lamb Curry. Calore per il miglior effetto</Italian>
-            <Japanese>羊カレーの MRE。温めるとなお美味しい</Japanese>
+            <Japanese>ラム(羊肉)カレーの MRE。温めるとなお美味しい</Japanese>
             <Korean>양고기 카레가 들어있는 MRE입니다. 뜨겁게 먹을 때 가장 좋습니다</Korean>
             <Polish>MRE zawierające jagnięcine Curry. Podgrzej dla najlepszego efektu</Polish>
             <Portuguese>Um MRE contendo Lamb Curry. Calor para melhor efeito</Portuguese>
@@ -851,7 +851,7 @@
             <German>EPA Rindereintopf</German>
             <Chinese>軍糧 牛肉燉湯</Chinese>
             <Chinesesimp>军粮炖牛肉汤</Chinesesimp>
-            <Japanese>MRE ビーフ シチュー</Japanese>
+            <Japanese>MRE ビーフシチュー</Japanese>
             <Polish>MRE Gulasz wołowy</Polish>
             <Russian>ИРП Тушеная говядина</Russian>
             <Turkish>MRE Dana Yahni</Turkish>
@@ -877,7 +877,7 @@
             <German>EPA Cremige Tomatensuppe</German>
             <Hungarian>MRE krémes paradicsomleves</Hungarian>
             <Italian>MRE Crema di pomodoro</Italian>
-            <Japanese>MRE クリーム トマト スープ</Japanese>
+            <Japanese>MRE クリームトマトスープ</Japanese>
             <Korean>MRE 크림 토마토 수프</Korean>
             <Polish>MRE Kremowa Zupa Pomidorowa</Polish>
             <Portuguese>MRE Sopa de creme de tomate</Portuguese>
@@ -894,8 +894,8 @@
             <German>Eine EPA mit Creme Tomatensuppe. Für beste Wirkung mit Wasser und Hitze mischen.</German>
             <Hungarian>Egy krémes paradicsomleveset tartalmazó MRE. Keverjük össze vízzel és hővel a legjobb hatás érdekében</Hungarian>
             <Italian>Un MRE contenente zuppa di pomodoro crema. Mescolare con acqua e calore per ottenere il massimo effetto</Italian>
-            <Japanese>クリーム トマト スープの MRE。水と混ぜて温めるとなお美味しい</Japanese>
-            <Korean>크림 토마토 수프가 들어있는 MRE입니다. 물과 섞어 뜨겁게 먹을 때 가장 좋습니다</Korean>
+            <Japanese>クリームトマトスープの MRE。水と混ぜて温めるとなお美味しい</Japanese>
+            <Korean>크림 토마토 수프가 들어 있는 MRE입니다. 물과 섞어 뜨겁게 먹을 때 가장 좋습니다</Korean>
             <Polish>MRE zawierające śmietanową zupę pomidorową. Wymieszaj z wodą i podgrzej, aby uzyskać najlepszy efekt</Polish>
             <Portuguese>Uma MRE contendo Cream Tomato Soup. Misture com água e calor para melhor efeito</Portuguese>
             <Russian>Сухой паёк, содержащий сублимированный томатный крем-суп. Перед употреблением растворить в воде и разогреть</Russian>
@@ -911,7 +911,7 @@
             <German>EPA Cream Hühnersuppe</German>
             <Hungarian>MRE krémes csirke leves</Hungarian>
             <Italian>MRE Zuppa di pollo crema</Italian>
-            <Japanese>MRE クリーム チキン スープ</Japanese>
+            <Japanese>MRE クリームチキンスープ</Japanese>
             <Korean>MRE 크림 치킨 수프</Korean>
             <Polish>MRE Kremowy Rosół</Polish>
             <Portuguese>MRE Sopa de creme de galinha</Portuguese>
@@ -928,8 +928,8 @@
             <German>Eine EPA mit Hühnersuppe. Für beste Wirkung mit Wasser und Hitze mischen.</German>
             <Hungarian>A csirke leves tartalmú MRE. Keverjük össze vízzel és hővel a legjobb hatás érdekében</Hungarian>
             <Italian>Un MRE contenente zuppa di pollo. Mescolare con acqua e calore per ottenere il massimo effetto</Italian>
-            <Japanese>チキン スープの MRE。水と混ぜて温めるとなお美味しい</Japanese>
-            <Korean>치킨 수프가 MRE입니다. 물과 섞어 뜨겁게 먹을 때 가장 좋습니다</Korean>
+            <Japanese>クリームチキンスープの MRE。水と混ぜて温めるとなお美味しい</Japanese>
+            <Korean>치킨 수프가 들어 있는 MRE입니다. 물과 섞어 뜨겁게 먹을 때 가장 좋습니다</Korean>
             <Polish>MRE zawierające rosół. Wymieszaj z wodą i podgrzej, aby uzyskać najlepszy efekt</Polish>
             <Portuguese>Um MRE contendo Sopa de Frango. Misture com água e calor para melhor efeito</Portuguese>
             <Russian>Сухой паёк, содержащий сублимированный куриный крем-суп. Перед употреблением растворить в воде и разогреть</Russian>
@@ -997,7 +997,7 @@
             <Hungarian>Egy MRE, amely Steak és Zöldségeket tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
             <Italian>Un MRE contenente bistecche e verdure. Calore per il miglior effetto</Italian>
             <Japanese>野菜とステーキの MRE。温めるとなお美味しい</Japanese>
-            <Korean>스테이크와 채소가 들어있는 MRE입니다. 뜨겁게 먹을 때 가장 좋습니다</Korean>
+            <Korean>스테이크와 채소가 들어 있는 MRE입니다. 뜨겁게 먹을 때 가장 좋습니다</Korean>
             <Polish>MRE zawierający stek i warzywa. Podgrzej dla najlepszego efektu</Polish>
             <Portuguese>Um MRE contendo Bife e Legumes. Calor para melhor efeito</Portuguese>
             <Russian>Сухой паёк, содержащий стейк с овощами. Перед употреблением рекомендуется разогреть</Russian>
@@ -1014,7 +1014,7 @@
             <Hungarian>MRE húsgombóc és tészta</Hungarian>
             <Italian>MRE Pasta e polpette</Italian>
             <Japanese>MRE ミートボールとパスタ</Japanese>
-            <Korean>MRE 미트볼파스타</Korean>
+            <Korean>MRE 미트볼 파스타</Korean>
             <Polish>MRE Klopsiki i makaron</Polish>
             <Portuguese>MRE Macarrão com almôndegas</Portuguese>
             <Russian>ИРП Макароны с фрикадельками</Russian>
@@ -1031,7 +1031,7 @@
             <Hungarian>Húsgombócokat és tésztát tartalmazó MRE. Hő a legjobb hatás érdekében</Hungarian>
             <Italian>Un MRE contenente polpette e pasta. Calore per il miglior effetto</Italian>
             <Japanese>ミートボールとパスタの MRE。温めるとなお美味しい</Japanese>
-            <Korean>미트볼과 파스타를 포함한 MRE입니다. 뜨겁게 먹을 때 가장 좋습니다</Korean>
+            <Korean>미트볼과 파스타가 들어 있는 MRE입니다. 뜨겁게 먹을 때 가장 좋습니다</Korean>
             <Polish>MRE zawierające klopsiki i makaron. Podgrzej dla najlepszego efektu</Polish>
             <Portuguese>Um MRE contendo Meatballs e Pasta. Calor para melhor efeito</Portuguese>
             <Russian>Сухой паёк, содержащий макароны с фрикадельками. Перед употреблением рекомендуется разогреть</Russian>
@@ -1047,7 +1047,7 @@
             <German>EPA Huhn mit Kraut Knödel</German>
             <Hungarian>MRE csirke Herb galuskával</Hungarian>
             <Italian>MRE pollo con gnocchi alle erbe</Italian>
-            <Japanese>MRE 鶏肉団子</Japanese>
+            <Japanese>MRE チキンとハーブ団子</Japanese>
             <Korean>MRE 허브 치킨 만두</Korean>
             <Polish>MRE kurczak z pierogami ziołowymi.</Polish>
             <Portuguese>MRE Frango com Dumplings de ervas</Portuguese>
@@ -1064,7 +1064,7 @@
             <German>Eine EPA mit Hühnchen mit Kräuterknödeln. Für den besten Geschmack erhitzen.</German>
             <Hungarian>Egy MRE, amely csirkét és fűszeres gombócokat tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
             <Italian>Un MRE contenente pollo con gnocchi alle erbe. Calore per il miglior effetto</Italian>
-            <Japanese>鶏肉を団子で包んだ MRE。温めるとなお美味しい</Japanese>
+            <Japanese>チキンとハーブ団子のMRE。温めるとなお美味しい</Japanese>
             <Korean>허브 치킨 만두 MRE입니다. 뜨겁게 먹을 때 가장 좋습니다</Korean>
             <Polish>MRE z kurczakiem i pierogamii ziołowymi. Podgrzej dla najlepszego efektu</Polish>
             <Portuguese>Uma MRE que contém Bolinhos De Frango Com Erva. Calor para melhor efeito</Portuguese>
@@ -1103,6 +1103,22 @@
             <Portuguese>Uma Ração Humanitária destinada a servir como alimento alimentar de uma pessoa durante as crises</Portuguese>
             <Russian>Суточный рацион питания для обеспечения населения районов, охваченных гуманитарной катастрофой или стоящих на ее грани</Russian>
             <Spanish>Una ración humanitaria destinada a servir como el suministro de alimentos de una persona durante las crisis</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_DisplayName">
+            <English>Sunflower Seeds</English>
+            <German>Sonnenblumenkerne</German>
+            <Korean>해바라기씨</Korean>
+            <Polish>Nasiona Słonecznika</Polish>
+            <Japanese>ヒマワリの種</Japanese>
+            <Chinesesimp>葵花籽</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Description">
+            <English>Roasted And Salted</English>
+            <German>Geröstet und Gesalzen</German>
+            <Korean>굽고 간을 했습니다</Korean>
+            <Polish>Pieczone i Solone</Polish>
+            <Japanese>炒って塩で味付け済</Japanese>
+            <Chinesesimp>焙烤盐焗</Chinesesimp>
         </Key>
     </Package>
 </Project>

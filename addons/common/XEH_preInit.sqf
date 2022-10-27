@@ -11,6 +11,9 @@ GVAR(syncedEvents) = createHashMap;
 GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
 
+// Cache for FUNC(isModLoaded)
+GVAR(isModLoadedCache) = createHashMap;
+
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
 

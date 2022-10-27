@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets sub actions for what the player can load into the static weapon
+ * Gets sub actions for what the player can unload from the static weapon
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -52,25 +52,20 @@ private _condition = {
 private _actions = [];
 private _handeledMagTypes = [];
 
+private _cfgMagazines = configFile >> "CfgMagazines";
+
 // Go through magazines on static weapon and check if any are unloadable
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
 
     if ((_xAmmo > 0) && {!(_xMag in _handeledMagTypes)}) then {
         _handeledMagTypes pushBack _xMag;
-        private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
-
-        if (isNil "_carryMag") then {
-            private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
-            _carryMag = configName (_groups param [0, configNull]);
-            GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
-            TRACE_2("setting cache",_xMag,_carryMag);
-        };
+        private _carryMag = _xMag call FUNC(getCarryMagazine);
         if (_carryMag == "") exitWith {};
 
-        private _displayName = getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName");
+        private _displayName = getText (_cfgMagazines >> _carryMag >> "displayName");
         private _text = format [LLSTRING(unloadX), _displayName];
-        private _picture = getText (configFile >> "CfgMagazines" >> _carryMag >> "picture");
+        private _picture = getText (_cfgMagazines >> _carryMag >> "picture");
         private _action = [format ["unload_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, [_xMag, _xTurret, _carryMag]] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _vehicle];
     };
@@ -78,4 +73,3 @@ private _handeledMagTypes = [];
 
 TRACE_1("unloadActions",count _actions);
 _actions
-

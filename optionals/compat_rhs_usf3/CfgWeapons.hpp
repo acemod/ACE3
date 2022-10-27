@@ -14,7 +14,6 @@ class CfgWeapons {
     class Pistol_Base_F;
     class Rifle_Base_F;
     class rhs_weap_m14ebrri_base;
-    class launch_O_Titan_F;
     class GM6_base_F;
     class rhs_weap_M107_Base_F: GM6_base_F {
         ACE_barrelTwist = 381.0;
@@ -309,9 +308,12 @@ class CfgWeapons {
             };
         };
     };
+
     // RHS lauchers
+    class launch_O_Titan_F;
     class rhs_weap_fgm148: launch_O_Titan_F {
-        ace_javelin_enabled = 1;
+        EGVAR(javelin,enabled) = 1;
+        EGVAR(overpressure,offset) = 1.1;
         weaponInfoType = "ACE_RscOptics_javelin";
         modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";
         canLock = 0;
@@ -326,19 +328,36 @@ class CfgWeapons {
         };
     };
 
+    class rhs_weap_fim92: launch_O_Titan_F {
+        EGVAR(overpressure,range) = 6;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.6;
+        EGVAR(overpressure,offset) = 1.45;
+    };
+
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
     };
+
     class rhs_weap_smaw: Launcher_Base_F {
-        ace_reloadlaunchers_enabled = 1;
-        ace_overpressure_angle = 45;
+        EGVAR(reloadlaunchers,enabled) = 1;
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,offset) = 1.3;
     };
+
     class rhs_weap_maaws: Launcher_Base_F {
-        ace_reloadlaunchers_enabled = 1;
-        ace_overpressure_range = 15;
-        ace_overpressure_angle = 70;
-        ace_overpressure_damage = 0.75;
+        EGVAR(reloadlaunchers,enabled) = 1;
+        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,angle) = 70;
+        EGVAR(overpressure,damage) = 0.75;
+        EGVAR(overpressure,offset) = 0.95;
+    };
+
+    class rhs_weap_M136: Launcher_Base_F {
+        EGVAR(overpressure,range) = 10;
+        EGVAR(overpressure,angle) = 50;
+        EGVAR(overpressure,offset) = 0.9;
     };
 
     #define HEARING_PROTECTION_OPEN EGVAR(hearing,protection) = 0; EGVAR(hearing,lowerVolume) = 0;
