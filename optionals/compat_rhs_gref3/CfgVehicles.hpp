@@ -153,9 +153,9 @@ class CfgVehicles {
             enabled = 1;
             proxyWeapon = QGVAR(RHS_M2_offroad);  
             magazineLocation = "";  // will be on the vehicle interaction menu
-            desiredAmmo = 1;     
-            ammoLoadTime = 5;       
-            ammoUnloadTime = 3;
+            desiredAmmo = 100;     
+            ammoLoadTime = 7;       
+            ammoUnloadTime = 5;
         };
     };
 

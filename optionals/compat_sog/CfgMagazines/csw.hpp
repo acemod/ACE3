@@ -82,6 +82,32 @@ class GVAR(mk18_48): vn_mk18_v_48_mag {
     mass = 220;
 };
 
+class vn_m134_v_2000_mag;
+class GVAR(m134_v_2000_mag): vn_m134_v_2000_mag {
+    scope = 2;
+    type = 256;
+    model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+    picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    mass = 160;
+};
+
+class vn_m2_v_800_mag;
+class GVAR(m2_v_800_mag): vn_m2_v_800_mag {
+    scope = 2;
+    type = 256;
+    model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+    picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    mass = 160;
+};
+
+class vn_m2_v_100_mag;
+class vn_zpu4_v_4800_mag: vn_m2_v_100_mag {
+    scope = 2;
+    type = 256;
+    picture = QPATHTOF(UI\ammo_4800rnd_zpu4_ca.paa);;
+    mass = 300;
+};
+
 // --- Mortars -----------------------------------------------------------------
 
 class vn_mortar_m29_mag_he_x8;
@@ -212,4 +238,27 @@ class GVAR(82mm_lume): vn_mortar_type53_mag_lume_x8 {
     displayName = CSTRING(Magazine_82mm_Lume);
     displayNameShort = "";
     descriptionShort = ECSTRING(mk6mortar,magazine_descriptionShort);
+};
+
+// --- SPGs -----------------------------------------------------------------
+class vn_m40a1rr_v_8_heat_mag;
+class GVAR(m40a1rr_v_8_heat_mag): vn_m40a1rr_v_8_heat_mag {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = "\vn\static_f_vietnam_03\m40a1rr\proxy\vn_static_m40a1rr_mag_heat.p3d";
+    picture = QPATHTOF(UI\ammo_1rnd_m40a1rr_ca.paa);
+    mass = 100;
+    displayName = CSTRING(m40a1rr_v_8_heat_mag);
+};
+
+class vn_m40a1rr_v_8_apers_mag;
+class GVAR(m40a1rr_v_8_apers_mag): vn_m40a1rr_v_8_apers_mag {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = "\vn\static_f_vietnam_03\m40a1rr\proxy\vn_static_m40a1rr_mag_heat.p3d";
+    picture = QPATHTOF(UI\ammo_1rnd_m40a1rr_ca.paa);
+    mass = 100;
+    displayName = CSTRING(m40a1rr_v_8_apers_mag);
 };
