@@ -299,14 +299,139 @@ class CfgVehicles {
         };
     };
 
-    class Car_F: Car {};
-    class LSV_02_base_F: Car_F {};
+    class LSV_01_base_F;
+    class LSV_01_armed_base_F: LSV_01_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_127_LSV_01);
+            magazineLocation = "";
+            desiredAmmo = 200;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class LSV_01_AT_base_F: LSV_01_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(Titan_AT_Static);
+            magazineLocation = "";
+            desiredAmmo = 1;
+            ammoLoadTime = 15;
+            ammoUnloadTime = 10;
+        };
+    };
+
+    class LSV_02_base_F;
     class LSV_02_armed_base_F: LSV_02_base_F {
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(LMG_Minigun_Transport);
             magazineLocation = "";
             desiredAmmo = 1000;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class LSV_02_AT_base_F: LSV_02_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = "missiles_Vorona";
+            magazineLocation = "";
+            desiredAmmo = 1;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class MRAP_01_base_F;
+    class MRAP_01_gmg_base_F: MRAP_01_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(GMG_40mm);
+            magazineLocation = "";
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class MRAP_01_hmg_base_F: MRAP_01_gmg_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_127);
+            magazineLocation = "";
+            desiredAmmo = 200;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class MRAP_02_base_F;
+    class MRAP_02_hmg_base_F: MRAP_02_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_127);
+            magazineLocation = "";
+            desiredAmmo = 200;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class MRAP_02_gmg_base_F: MRAP_02_hmg_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(GMG_40mm);
+            magazineLocation = "";
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class MRAP_03_base_F;
+    class MRAP_03_hmg_base_F: MRAP_03_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_127);
+            magazineLocation = "";
+            desiredAmmo = 200;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class MRAP_03_gmg_base_F: MRAP_03_hmg_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(GMG_40mm);
+            magazineLocation = "";
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class Offroad_01_military_base_F;
+    class Offroad_01_armed_base_F: Offroad_01_military_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_M2_Mounted);
+            magazineLocation = "";
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class Offroad_01_AT_base_F: Offroad_01_military_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(launcher_SPG9);
+            magazineLocation = "";
+            desiredAmmo = 100;
             ammoLoadTime = 7;
             ammoUnloadTime = 5;
         };
