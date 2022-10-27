@@ -95,6 +95,12 @@
             <Portuguese>Permite a visualização do Arco de Arremesso por onde o objeto será jogado.</Portuguese>
             <Czech>Zapíná vizualizaci oblouku vrhu (kam bude předmět hozen).</Czech>
         </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_ArcMaxDist_DisplayName">
+            <English>Throw Arc Distance</English>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_ArcMaxDist_Description">
+            <English>Maximum distance the throw arc can project.</English>
+        </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
             <English>Show Throwing Mouse Controls</English>
             <Spanish>Mostrar controles de ratón de lanzamiento</Spanish>
