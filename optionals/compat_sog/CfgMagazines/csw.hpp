@@ -104,7 +104,7 @@ class vn_m2_v_100_mag;
 class vn_zpu4_v_4800_mag: vn_m2_v_100_mag {
     scope = 2;
     type = 256;
-    picture = QPATHTOF(UI\ammo_4800rnd_zpu4_ca.paa);;
+    picture = QPATHTOF(UI\ammo_4800rnd_zpu4_ca.paa);
     mass = 300;
 };
 
