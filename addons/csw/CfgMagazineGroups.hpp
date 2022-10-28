@@ -64,7 +64,7 @@ class GVAR(groups) {
         Vorona_HEAT = 1;
     };
 
-    // SGP9 HEAT
+    // SPG9 HEAT
     class GVAR(12rnd_SPG9_HEAT) {
         12rnd_SPG9_HEAT = 1;
     };
