@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  * 2: State <BOOL>
- * 3: Show hint <BOOL> (Optional)
+ * 3: Show hint <BOOL> (default: true)
  *
  * Return Value:
  * None
