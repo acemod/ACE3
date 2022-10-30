@@ -6,11 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "Weapons_F_lxWS",
-            "Weapons_1_F_lxWS",
-            "Characters_f_lxWS_headgear"
-        };
+        requiredAddons[] = {"data_f_lxWS_Loadorder"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Mike"};
         url = ECSTRING(main,URL);
