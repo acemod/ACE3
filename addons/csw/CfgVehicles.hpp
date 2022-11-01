@@ -297,6 +297,15 @@ class CfgVehicles {
                 };
             };
         };
+        class ACE_SelfActions {
+            class GVAR(reload_Turret_while_gunner) {
+                displayName = CSTRING(AmmoHandling_displayName);
+                condition = QUOTE(([_target] call DEFUNC(common,getTurretGunner)) isEqualTo ([_player] call DEFUNC(common,getTurretIndex)));
+                statement = "";
+                exceptions[] = {"isNotSwimming", "isNotSitting"};
+                insertChildren = QUOTE((call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload)));
+            };
+        };
     };
 
     class LSV_01_base_F;

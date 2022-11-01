@@ -44,6 +44,9 @@ if (isNull _container) then {
     _container = (nearestObjects [_unloadTo, [QGVAR(ammo_holder), "GroundWeaponHolder"], 10]) param [0, objNull];
 };
 
+// is the player in a vehicle? If so the container is the vehicle
+if (isNull _container && (!isNull (objectParent _unloadTo))) then {_container = objectParent _unloadTo;};
+
 
 if (isNull _container) then {
     // Create ammo storage container

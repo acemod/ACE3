@@ -39,7 +39,51 @@ class CfgMagazines {
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
         picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
         type = 256;
-        mass = 96;
+        mass = 192;
+        ACE_isBelt = 1;
+    };
+
+    class 200Rnd_127x99_mag;
+    class GVAR(200Rnd_127x99_mag): 200Rnd_127x99_mag {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(127x99_displayName);
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
+        type = 256;
+        mass = 192;
+        ACE_isBelt = 1;
+    };
+
+    class 200Rnd_127x99_mag_Tracer_Red;
+    class GVAR(200Rnd_127x99_mag_red): 200Rnd_127x99_mag_Tracer_Red {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(127x99_red_displayName);
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
+        type = 256;
+        mass = 192;
+        ACE_isBelt = 1;
+    };
+
+    class 200Rnd_127x99_mag_Tracer_Green;
+    class GVAR(200Rnd_127x99_mag_green): 200Rnd_127x99_mag_Tracer_Green {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(127x99_green_displayName);
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
+        type = 256;
+        mass = 192;
+        ACE_isBelt = 1;
+    };
+
+    class 200Rnd_127x99_mag_Tracer_Yellow;
+    class GVAR(200Rnd_127x99_mag_yellow): 200Rnd_127x99_mag_Tracer_Yellow {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(127x99_yellow_displayName);
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
+        type = 256;
+        mass = 192;
         ACE_isBelt = 1;
     };
 

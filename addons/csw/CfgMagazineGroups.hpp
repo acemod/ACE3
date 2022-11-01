@@ -31,6 +31,25 @@ class GVAR(groups) {
         CUP_100Rnd_TE4_Yellow_Tracer_127x99_M = 1;
     };
 
+    class GVAR(200Rnd_127x99_mag) {
+        500Rnd_127x99_mag = 1;
+        200Rnd_127x99_mag = 1;
+        rhs_mag_200rnd_127x99_mag = 1;
+    };
+    class GVAR(200Rnd_127x99_mag_red) {
+        500Rnd_127x99_mag_Tracer_Red = 1;
+        200Rnd_127x99_mag_Tracer_Red = 1;
+        rhs_mag_200rnd_127x99_mag_Tracer_Red = 1;
+    };
+    class GVAR(200Rnd_127x99_mag_green) {
+        500Rnd_127x99_mag_Tracer_Green = 1;
+        200Rnd_127x99_mag_Tracer_Green = 1;
+    };
+    class GVAR(200Rnd_127x99_mag_yellow) {
+        500Rnd_127x99_mag_Tracer_Yellow = 1;
+        200Rnd_127x99_mag_Tracer_Yellow = 1;
+    };
+
     // Soviet HMG (12.7x108mm)
     class GVAR(50Rnd_127x108_mag) {
         rhs_mag_127x108mm_50 = 1;
@@ -49,7 +68,7 @@ class GVAR(groups) {
         200Rnd_20mm_G_belt = 1;
     };
 
-    // A3 20mm CROWS
+    // A3 40mm CROWS
     class GVAR(96Rnd_40mm_G_belt) {
         96Rnd_40mm_G_belt = 1;
     };

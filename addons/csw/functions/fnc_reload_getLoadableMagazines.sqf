@@ -28,6 +28,8 @@ private _nearSupplies = ((_vehicle nearSupplies 10) select {
     {!([_x] call EFUNC(common,isPlayer)) && {[side group _player, side group _x] call BIS_fnc_sideIsFriendly}}
 });
 
+if (!isNull (objectParent _player)) then {_nearSupplies pushBack (objectParent _player)};
+
 // backpacks/uniforms/etc need to be added manually.
 // array can't be modified while iterating, use copy
 {
