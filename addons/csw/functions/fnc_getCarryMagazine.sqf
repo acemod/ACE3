@@ -20,16 +20,16 @@ params ["_vehicleMag"];
 private _carryMag = GVAR(vehicleMagCache) get _vehicleMag;
 if (isNil "_carryMag") then {
     private _cfgMag = configFile >> 'CfgMagazines';
-	private _vehicleMagCount = getNumber (_cfgMag >> _vehicleMag >>  "count");
+    private _vehicleMagCount = getNumber (_cfgMag >> _vehicleMag >>  "count");
     private _groups = "getNumber (_x >> _vehicleMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
 
     // try to find a mag that has the same count as the vehicleMag first, if that doesn't exist give the first element in the group array
-	_carryMagIndex = _groups findIf {getNumber (_cfgMag >> (configName _x) >> "count") isEqualTo _vehicleMagCount};
-	if (_carryMagIndex isNotEqualTo -1) then {
-		_carryMag = configName (_groups param [_carryMagIndex, configNull]);
-	} else {
-		_carryMag = configName (_groups param [0, configNull]);
-	};
+    _carryMagIndex = _groups findIf {getNumber (_cfgMag >> (configName _x) >> "count") isEqualTo _vehicleMagCount};
+    if (_carryMagIndex isNotEqualTo -1) then {
+        _carryMag = configName (_groups param [_carryMagIndex, configNull]);
+    } else {
+        _carryMag = configName (_groups param [0, configNull]);
+    };
     
     GVAR(vehicleMagCache) set [_vehicleMag, _carryMag];
     TRACE_2("setting cache",_vehicleMag,_carryMag);
