@@ -45,7 +45,7 @@ if (isNull _container) then {
 };
 
 // is the player in a vehicle? If so the container is the vehicle
-if (isNull _container && (!isNull (objectParent _unloadTo))) then {_container = objectParent _unloadTo;};
+if (isNull _container && {!isNull (objectParent _unloadTo)}) then {_container = objectParent _unloadTo;};
 
 
 if (isNull _container) then {
