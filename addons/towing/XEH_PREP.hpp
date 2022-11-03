@@ -3,6 +3,7 @@ PREP(attachRopePFH);
 PREP(attachVehicles);
 PREP(detachChild);
 PREP(detachRope);
+PREP(getDetachActions);
 PREP(isSuitableSimulation);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);

@@ -14,6 +14,7 @@ class ACE_Actions {\
             distance = TOW_ACTION_DISTANCE;\
             condition = QUOTE(_target call DFUNC(isSuitableSimulation));\
             exceptions[] = { INTERACTION_EXCEPTIONS };\
+            insertChildren = QUOTE(_target call DFUNC(getDetachActions));\
             TOW_ACTION(3);\
             TOW_ACTION(6);\
             TOW_ACTION(12);\
