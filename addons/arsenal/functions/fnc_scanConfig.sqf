@@ -95,9 +95,9 @@ private _isMiscItem = false;
         };
         // Weapon, at the bottom to avoid adding binos
         case (
-                isClass (_x >> "WeaponSlotsInfo") &&
-                {getNumber (_x >> "type") != TYPE_BINOCULAR_AND_NVG}
-            ): {
+            isClass (_x >> "WeaponSlotsInfo") &&
+            {getNumber (_x >> "type") != TYPE_BINOCULAR_AND_NVG}
+        ): {
             switch (getNumber (_x >> "type")) do {
                 case TYPE_WEAPON_PRIMARY: {
                     ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_PRIMARY_WEAPONS) pushBackUnique (_className call EFUNC(common,baseWeapon));
@@ -180,25 +180,8 @@ _putList = _putList - [""];
     (_configItems select IDX_VIRT_GOGGLES) pushBackUnique (configName _x);
 } forEach configProperties [configFile >> "CfgGlasses", _filterFunction, true];
 
-// Get magazine groups (magazinewells)
-private _magazineGroups = createHashMap;
-private _magazinesList = [];
-
-{
-    _magazinesList = [];
-
-    {
-        // Filter out non-existent magazines, then make names config case
-        /////////////////////////////////////////////////////////////////// No filtering for scope ?
-        _magazinesList append (((getArray _x) select {isClass (_cfgMagazines >> _x)}) apply {configName (_cfgMagazines >> _x)});
-    } forEach configProperties [_x, "isArray _x", true];
-
-    _magazineGroups set [toLower configName _x, _magazinesList arrayIntersect _magazinesList];
-} forEach configProperties [configFile >> "CfgMagazineWells", "isClass _x", true];
-
 // Get all faces
 private _faceCache = createHashMap;
-
 private _dlcName = "";
 private _modPicture = "";
 
@@ -227,7 +210,6 @@ private _insigniaCache = "true" configClasses (configFile >> "CfgUnitInsignia");
 // This contains config case entries only
 uiNamespace setVariable [QGVAR(configItems), _configItems];
 uiNamespace setVariable [QGVAR(configItemsFlat), flatten _configItems];
-uiNamespace setVariable [QGVAR(magazineGroups), _magazineGroups];
 uiNamespace setVariable [QGVAR(faceCache), _faceCache];
 uiNamespace setVariable [QGVAR(voiceCache), _voiceCache];
 uiNamespace setVariable [QGVAR(insigniaCache), _insigniaCache];

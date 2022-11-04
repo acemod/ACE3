@@ -46,7 +46,7 @@ private _loadoutName = _contentPanelCtrl lnbText [_curSelRow, 1];
 private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
 
 // Get unit's current loadout
-private _extendedLoadout = GVAR(center) call FUNC(getLoadout);
+private _extendedLoadout = GVAR(center) call CBA_fnc_getLoadout;
 _extendedLoadout params ["_loadout"];
 
 private _loadouts = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (is3DEN && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts});

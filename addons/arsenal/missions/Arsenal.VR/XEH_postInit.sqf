@@ -57,7 +57,7 @@ cba_diagnostic_projectileMaxLines = 10;
 
                     if (_return) then {
                         // Save loadout for next time arsenal mission is played
-                        profileNamespace setVariable [QGVAR(missionLastLoadout), [player] call FUNC(getLoadout)];
+                        profileNamespace setVariable [QGVAR(missionLastLoadout), [player] call CBA_fnc_getLoadout];
 
                         // Quit mission
                         _display closeDisplay IDC_CANCEL;

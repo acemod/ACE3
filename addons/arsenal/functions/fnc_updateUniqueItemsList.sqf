@@ -113,4 +113,4 @@ private _isWeapon = false;
             (GVAR(virtualItems) select IDX_VIRT_UNIQUE_GOGGLES) pushBackUnique _x;
         };
     };
-} forEach (uniformItems GVAR(center) + vestItems GVAR(center) + backpackItems GVAR(center));
+} forEach ([GVAR(center)] call ace_common_fnc_uniqueItems);

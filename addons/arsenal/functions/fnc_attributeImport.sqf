@@ -46,7 +46,6 @@ private _intersection = [];
 
     _filteredList append _intersection;
 
-    //////////////////////// Is this necessary/wanted?
     // Remove found entries, to reduce input array size
     _importList = _importList - _intersection;
 

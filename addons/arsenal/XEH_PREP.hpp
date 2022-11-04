@@ -34,7 +34,6 @@ PREP(fillLeftPanel);
 PREP(fillLoadoutsList);
 PREP(fillRightPanel);
 PREP(fillSort);
-PREP(getLoadout);
 PREP(handleLoadoutsSearchbar);
 PREP(handleMouse);
 PREP(handleScrollWheel);

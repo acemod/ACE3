@@ -44,7 +44,7 @@ if (GVAR(shiftState)) then {
     [_display, LLSTRING(exportDefault)] call FUNC(message);
 } else {
     // Export singular loadout
-    private _export = str (GVAR(center) call FUNC(getLoadout));
+    private _export = str (GVAR(center) call CBA_fnc_getLoadout);
 
     "ace_clipboard" callExtension (_export + ";");
     "ace_clipboard" callExtension "--COMPLETE--";

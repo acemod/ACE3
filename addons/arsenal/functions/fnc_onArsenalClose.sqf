@@ -28,7 +28,7 @@ if (is3DEN) then {
 
     // Apply the loadout from the dummy to all selected units
     if (_exitCode == 1) then {
-        private _extendedLoadout = GVAR(center) call FUNC(getLoadout);
+        private _extendedLoadout = GVAR(center) call CBA_fnc_getLoadout;
         private _objects = get3DENSelected "object";
 
         {

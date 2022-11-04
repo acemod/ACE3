@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "..\..\defines.hpp"
 
 params ["_unit"];
 
@@ -74,7 +75,7 @@ _position = _unit getRelPos [30, 180];
         private _vehicle = createVehicle [_x, _position, [], 0, "NONE"];
         _vehicle setPos _position;
         _vehicle setDir 180;
-        _vehicle setVelocity [0,0,-1];
+        _vehicle setVelocity [0, 0, -1];
         _vehicle call BIS_fnc_VRHitpart;
 
         private _marker = _vehicle call BIS_fnc_boundingBoxMarker;
@@ -142,19 +143,10 @@ _marker setMarkerType "mil_start";
 // Init Arsenal
 [_unit, true, false] call FUNC(initBox);
 
-/*
+// Wait until the mission screen is available
 [{!isNull findDisplay IDD_MISSION}, {
     [_this, _this, true] call FUNC(openBox);
 }, _unit] call CBA_fnc_waitUntilAndExecute;
-*/
-// Open arsenal when loading screen has finished
-["CBA_loadingScreenDone", {
-    [_thisArgs, _thisArgs, true] call FUNC(openBox);
-
-    // Remove EH
-    [_thisType, _thisId] call CBA_fnc_removeEventHandler;
-}, _unit] call CBA_fnc_addEventHandlerArgs;
-
 
 // Salute
 _unit addEventHandler ["AnimChanged", {
@@ -167,7 +159,7 @@ _unit addEventHandler ["AnimChanged", {
     };
 }];
 
-["#(argb,8,8,3)color(0,0,0,1)", false, nil, 0.1, [0,0.5]] spawn BIS_fnc_textTiles;
+["#(argb,8,8,3)color(0,0,0,1)", false, nil, 0.1, [0, 0.5]] spawn BIS_fnc_textTiles;
 
 // Target markers
 private _markers = [];

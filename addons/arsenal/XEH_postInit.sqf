@@ -118,7 +118,30 @@ GVAR(lastSortRight) = "";
     private _insignia = _extendedInfo getOrDefault [QGVAR(insignia), ""];
 
     if (_insignia != "") then {
-        [_unit, ""] call BIS_fnc_setUnitInsignia;
+        _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil];
         [_unit, _insignia] call BIS_fnc_setUnitInsignia;
+    };
+}] call CBA_fnc_addEventHandler;
+
+["CBA_loadoutGet", {
+    params ["_unit", "_loadout", "_extendedInfo"];
+
+    // Set face if enabled
+    if (GVAR(loadoutsSaveFace)) then {
+        _extendedInfo set [QGVAR(face), face _unit];
+    };
+
+    // Set voice if enabled
+    if (GVAR(loadoutsSaveVoice)) then {
+        _extendedInfo set [QGVAR(voice), speaker _unit];
+    };
+
+    // Set insignia if enabled
+    if (GVAR(loadoutsSaveInsignia)) then {
+        private _insignia = _unit call BIS_fnc_getUnitInsignia;
+
+        if (_insignia != "") then {
+            _extendedInfo set [QGVAR(insignia), _insignia];
+        };
     };
 }] call CBA_fnc_addEventHandler;

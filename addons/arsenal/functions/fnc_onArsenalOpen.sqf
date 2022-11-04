@@ -240,7 +240,7 @@ if (is3DEN) then {
     GVAR(center) switchAction "playerStand";
     GVAR(center) enableSimulation false;
 
-    [GVAR(center), GVAR(centerOrigin) call FUNC(getLoadout)] call CBA_fnc_setLoadout;
+    [GVAR(center), GVAR(centerOrigin) call CBA_fnc_getLoadout] call CBA_fnc_setLoadout;
 
     //--- Create light for night editing (code based on BIS_fnc_3DENFlashlight)
     GVAR(light) = "#lightpoint" createVehicle _centerPos;
