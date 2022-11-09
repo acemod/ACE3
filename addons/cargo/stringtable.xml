@@ -67,7 +67,7 @@
             <English>Enable Rename Action</English>
             <Japanese>名前変更を有効化</Japanese>
             <French>Possibilité de renommage</French>
-            <Russian>Включить возможность переименования</Russian>
+            <Russian>Вкл. возможность переименования</Russian>
             <German>Aktiviere Umbenennungs-Aktion</German>
             <Polish>Włącz możliwość zmiany nazwy</Polish>
             <Chinesesimp>启用重命名动作</Chinesesimp>
@@ -136,7 +136,7 @@
             <German>Aktiviere Fracht</German>
             <Polish>Aktywuj cargo</Polish>
             <Portuguese>Ativar carga</Portuguese>
-            <Russian>Включить модуль перевозки грузов</Russian>
+            <Russian>Вкл. модуль перевозки грузов</Russian>
             <Czech>Povolit náklad</Czech>
             <Spanish>Habilitar carga</Spanish>
             <Italian>Abilita Cargo</Italian>
@@ -297,6 +297,7 @@
             <Polish>Własna nazwa</Polish>
             <Chinesesimp>自定义名称</Chinesesimp>
             <Korean>임의 명칭</Korean>
+            <Russian>Собственное название</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
@@ -410,7 +411,7 @@
             <Chinesesimp>空投时间系数</Chinesesimp>
             <Polish>Współczynnik czasu zrzutu</Polish>
             <Korean>공중 투하 시간 계수</Korean>
-            <Russian>Коэффициент времени десантирования</Russian>
+            <Russian>Коэф. времени десантирования</Russian>
             <Portuguese>Fator de Tempo para soltar a carga</Portuguese>
             <Czech>Koeficient času nákladního výsadku</Czech>
             <Spanish>Coeficiente de tiempo para lanzamiento</Spanish>
@@ -436,7 +437,7 @@
             <Japanese>積載時間の係数</Japanese>
             <Polish>Współczynnik czasu załadowania</Polish>
             <Italian>Coefficente Tempo Caricamento</Italian>
-            <Russian>Коэффициент времени погрузки</Russian>
+            <Russian>Коэф. времени погрузки</Russian>
             <Portuguese>Fator de tempo para carregar</Portuguese>
             <French>Coefficient du temps de chargement</French>
             <Chinese>裝載時間係數</Chinese>
@@ -485,10 +486,12 @@
         <Key ID="STR_ACE_Cargo_carryAfterUnload">
             <English>Carry After Unload</English>
             <Korean>화물 내린 후 운반</Korean>
+            <Russian>Нести после выгрузки</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
             <English>Controls whether cargo items are carried or dragged after unloading.</English>
             <Korean>화물 아이템을 내린 후 들거나 끌지 여부를 결정합니다.</Korean>
+            <Russian>Нужно ли переносить или тащить предметы после их выгрузки.</Russian>
         </Key>
     </Package>
 </Project>

@@ -887,7 +887,7 @@
             <Italian>Attivatore Simulazione</Italian>
             <Chinesesimp>切换模拟</Chinesesimp>
             <Chinese>切換模擬</Chinese>
-            <Russian>Вкл/Выкл симуляцию</Russian>
+            <Russian>Переключить симуляцию</Russian>
             <Portuguese>Alternar Simulação</Portuguese>
             <Spanish>Activar simulación</Spanish>
             <Czech>Přepnout simulaci objektu</Czech>
@@ -1324,7 +1324,7 @@
             <Chinesesimp>切换夜视仪</Chinesesimp>
             <Korean>야시경 토글</Korean>
             <Polish>Przełącz NVG</Polish>
-            <Russian>Вкл/Выкл ПНВ</Russian>
+            <Russian>Переключить ПНВ</Russian>
             <Portuguese>Alternar Visão Noturna</Portuguese>
             <Czech>Přepnout noktovizory</Czech>
             <Spanish>Alternar visión nocturna</Spanish>
@@ -1417,7 +1417,7 @@
             <Chinesesimp>切换手电筒</Chinesesimp>
             <Korean>손전등 토글</Korean>
             <Polish>Przełącz latarki</Polish>
-            <Russian>Вкл/Выкл Фонари</Russian>
+            <Russian>Переключить фонари</Russian>
             <Portuguese>Alternar Lanternas</Portuguese>
             <Spanish>Alternar linternas</Spanish>
             <Czech>Přepnout svítilny</Czech>
@@ -1930,6 +1930,7 @@
             <Korean>유닛 불로 태우기</Korean>
             <Polish>Podpal Jednostkę</Polish>
             <Japanese>ユニットを燃やす</Japanese>
+            <Russian>Поджечь юнита</Russian>
         </Key>
     </Package>
 </Project>
