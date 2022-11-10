@@ -156,7 +156,7 @@ if (_callbackProgress isEqualTo {}) then {
     FUNC(treatmentFailure),
     getText (_config >> "displayNameProgress"),
     _callbackProgress,
-    ["isNotInside"]
+    ["isNotInside", "isNotUnderwater"]
 ] call EFUNC(common,progressBar);
 
 true
