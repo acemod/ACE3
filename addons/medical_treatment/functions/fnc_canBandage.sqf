@@ -21,6 +21,8 @@
 
 params ["_medic", "_patient", "_bodyPart", "_bandage"];
 
+if (underwater _patient) exitWith {false};
+
 // Bandage type and bandage setting XNOR to show only active actions
 if ((_bandage == "BasicBandage") isEqualTo (GVAR(advancedBandages) != 0)) exitWith {false};
 
