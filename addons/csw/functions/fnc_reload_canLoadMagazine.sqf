@@ -46,12 +46,12 @@ private _loadedMag = "";
 private _isBeltLinking = false;
 
 // Zeus Enhanced will keep the mags in the turrent and set the count to zero
-(magazinesAllTurrets _vehicle) apply {
+{
     _x params ["_xMag", "_xTurret", "_xAmmo"];
     if (_xTurret isEqualTo _turret && {_xAmmo isEqualTo 0}) then {
         _vehicle removeMagazineTurret [_xMag, _xTurret];
     };
-};
+} forEach (magazinesAllTurrets _vehicle);
 
 scopeName "main";
 {
