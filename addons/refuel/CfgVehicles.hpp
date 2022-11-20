@@ -38,7 +38,7 @@
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
         }; \
-    };
+    }
 
 class CBA_Extended_EventHandlers;
 
@@ -92,7 +92,7 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        MACRO_NOZZLE_ACTIONS
+        MACRO_NOZZLE_ACTIONS;
         displayName = QGVAR(fuelNozzle);
         scope = 1;
         scopeCurator = 1;
