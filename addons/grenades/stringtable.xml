@@ -520,20 +520,20 @@
             <Korean>종류: 낙하식 적외선 조명탄</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
-            <English>M992 Illumination IR Flare</English>
-            <German>M992 IR Leuchtfackel</German>
-            <Polish>M992 Oświetlająca flara IR</Polish>
-            <Italian>M992 Granata con infrarosso</Italian>
-            <Japanese>M992 赤外線照明弾</Japanese>
-            <Russian>M992 ИК-осветительная ракета</Russian>
-            <Portuguese>M992 Sinalizador de Iluminação Infravermelho</Portuguese>
+            <English>M992 Illumination Flare (IR)</English>
+            <German>M992 Leuchtfackel (IR)</German>
+            <Polish>M992 Flara oświetlająca (IR)</Polish>
+            <Italian>M992 Granata con bengala (Infrarosso)</Italian>
+            <Japanese>M992 照明弾 (赤外線)</Japanese>
+            <Russian>M992 Осветит. ракета (ИК)</Russian>
+            <Portuguese>M992 Sinalizador de Iluminação (Infravermelho)</Portuguese>
             <Chinese>M992 紅外線照明彈</Chinese>
             <Chinesesimp>M992 红外照明弹</Chinesesimp>
-            <French>M992 Fusée IR</French>
-            <Czech>M992 Infračervená světlice</Czech>
-            <Turkish>M992 Illumination IR Flare</Turkish>
-            <Spanish>M992 Bengala de iluminación infrarroja</Spanish>
-            <Korean>M992 적외선 조명탄</Korean>
+            <French>M992 Fusée éclairante (IR)</French>
+            <Czech>M992 Světlice (Infračervená)</Czech>
+            <Turkish>M992 Aydınlatma Fişeği (IR)</Turkish>
+            <Spanish>M992 Bengala de iluminación (Infrarroja)</Spanish>
+            <Korean>M992 조명탄 (적외선)</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Remote_Mag_Throwable">
             <English>Explosive Satchel (Throwable)</English>
