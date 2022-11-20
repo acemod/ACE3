@@ -74,7 +74,7 @@
 
 // --- pain
 #define PAIN_UNCONSCIOUS EGVAR(medical,const_painUnconscious)
-#define PAIN_UNCONSCIOUS_DEFAULT 0.5
+#define PAIN_UNCONSCIOUS_DEFAULT 0.35
 
 // Pain fade out time (time it takes until pain is guaranteed to be completly gone)
 #define PAIN_FADE_TIME EGVAR(medical,const_painFadeTime)
