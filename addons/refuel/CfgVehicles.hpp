@@ -44,7 +44,6 @@ class CBA_Extended_EventHandlers;
 
 class CfgNonAIVehicles {
     class GVAR(fuelHoseSegment) {
-        access = 0;
         scope = 2;
         displayName = "Fuel Hose";
         simulation = "ropesegment";
