@@ -63,6 +63,12 @@ if (_maxFuelTank == 0) then {
     private _finished = false;
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
+        private _refuelContainer = _nozzle getVariable [QGVAR(refuelContainer), false];
+        
+        // Use special cargo refuel rate when refueling containers
+        // TODO: Add flow dedicated input/output flow rates for every container and use the lower of the two instead
+        if (_refuelContainer) then {_rate = GVAR(cargoRate)};
+    
         // Calculate rate using mission time to take time acceleration and pause into account
         private _addedFuel = _rate * (CBA_missionTime - (_nozzle getVariable [QGVAR(lastTickMissionTime), CBA_missionTime]));
         _nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime];
@@ -80,7 +86,6 @@ if (_maxFuelTank == 0) then {
             };
         };
         
-        private _refuelContainer = _nozzle getVariable [QGVAR(refuelContainer), false];
         private _fuelInSink = (if (_refuelContainer) then {
             [_sink] call FUNC(getFuel)
         } else {

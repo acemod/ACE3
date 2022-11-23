@@ -49,6 +49,12 @@
             <Chinese>載具多快會加油完畢?</Chinese>
             <Turkish>Bir araca ne kadar hızlı yakıt ikmali yapılmalıdır?</Turkish>
         </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_DisplayName">
+            <English>Cargo Flow Rate</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
+            <English>How fast should a fuel source's tank be filled?</English>
+        </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
             <German>Betankung</German>
