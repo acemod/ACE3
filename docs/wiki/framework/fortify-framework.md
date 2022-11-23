@@ -67,7 +67,7 @@ class ACEX_Fortify_Presets {
  ```
 
 Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or the chat command: `#ace-fortify blufor myMissionObjects`.
- 
+
 ## 1.3 Adding custom deploy handlers
 
 A custom deploy handler allows missions makers to decide if an object can be placed or not.
@@ -80,6 +80,25 @@ To verify that an object isn't above a certain terrain height we can check the h
     private _return = (getPosATL _object) select 2 < 1;
     _return
 }] call ace_fortify_fnc_addDeployHandler;
+```
+
+## 1.4 Updating budget
+
+The Fortify budget can be updated for any side using the function.
+
+```sqf
+* Updates the given sides budget.
+*
+* Arguments:
+* 0: Side <SIDE>
+* 1: Change <NUMBER> (default: 0)
+* 2: Display hint <BOOL> (default: true)
+*
+* Return Value:
+* None
+*
+* Example:
+* [west, -250, false] call ace_fortify_fnc_updateBudget
 ```
 
 

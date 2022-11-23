@@ -558,7 +558,7 @@
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
             <Russian>Задать список непроверяемых аддонов.</Russian>
             <German>Ermöglicht das Erstellen einer Liste von immer erlaubten Erweiterungen.</German>
-            <Korean>허용할 에드온의 목록입니다.</Korean>
+            <Korean>허용할 애드온의 목록입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -791,7 +791,7 @@
             <French>/!\ Module obsolète /!\ - Vérifie l'intégrité des addons avec le serveur, et effectue l'action sélectionnée si un addon est manquant.</French>
             <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
             <Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
-            <Korean>서버 에드온의 무결성을 검사하고 사라진 에드온이 있을경우 행동을 선택합니다.</Korean>
+            <Korean>서버 애드온의 무결성을 검사하고 사라진 애드온이 있을 경우 행동을 선택합니다.</Korean>
             <Chinese>檢查客戶端與伺服器端的模組清單是否一致且完整，並提供訊息表示遺失的模組</Chinese>
             <Chinesesimp>检查客户端与服务器端的模组清单是否一致且完整，并提供信息表示遗失的模组。</Chinesesimp>
         </Key>
@@ -823,7 +823,7 @@
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
             <Japanese>プレイヤーが正しい PBO を持っていない場合は?</Japanese>
-            <Korean>올바르지 않는 PBO를 가진 사람을 어떻게 할까요?</Korean>
+            <Korean>올바르지 않은 PBO를 가진 사람을 어떻게 할까요?</Korean>
             <Chinese>若玩家沒有正確的PBO檔時，將採取何種動作?</Chinese>
             <Chinesesimp>若玩家没有正确的 PBO 档时，将采取何种动作？</Chinesesimp>
         </Key>
@@ -971,7 +971,7 @@
             <Russian>Добавляет эффект LSD (мигание всеми цветами радуги) синхронизированным транспортным средствам</Russian>
             <Italian>Aggiunge effetti LSD ai veicoli sincronizzati</Italian>
             <Japanese>同期されたオブジェクトに LSD の効果を追加します</Japanese>
-            <Korean>동기화된 차량에 LSD효과를 추가합니다.</Korean>
+            <Korean>동기화된 차량에 LSD 효과를 추가합니다.</Korean>
             <Chinese>使被同步的載具產生瘋狂的迷幻效果。(後果自負)</Chinese>
             <Chinesesimp>使被同步的载具产生疯狂的迷幻效果。（后果自负）</Chinesesimp>
         </Key>
@@ -1634,7 +1634,7 @@
             <Russian>Места ускоренного обучения</Russian>
             <Japanese>衛生能力の上昇位置</Japanese>
             <Korean>교육 증가 지역</Korean>
-            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
+            <Chinesesimp>位置提升能力</Chinesesimp>
             <Chinese>受所在位置影響提升醫療能力</Chinese>
             <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
         </Key>
@@ -1643,6 +1643,7 @@
             <Polish>Wyładuj Broń</Polish>
             <Japanese>武器からマガジンを抜く</Japanese>
             <Korean>탄창 빼기</Korean>
+            <Chinesesimp>卸掉武器弹匣</Chinesesimp>
         </Key>
     </Package>
 </Project>

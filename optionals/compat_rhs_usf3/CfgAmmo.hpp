@@ -250,6 +250,11 @@ class CfgAmmo {
         EGVAR(vehicle_damage,incendiary) = 0.8;
     };
 
+    class SubmunitionBase;
+    class rhs_ammo_30x173mm_GAU8_mixed: SubmunitionBase {
+        EGVAR(rearm,caliber) = 30;
+    };
+
     class M_Titan_AT;
     class rhs_ammo_TOW_AT: M_Titan_AT {
         EGVAR(vehicle_damage,incendiary) = 1.0;

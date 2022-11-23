@@ -171,6 +171,9 @@ class ACE_Medical_Injuries {
             // if 1, wounds are only applied to the most-damaged body part. if 0, wounds are applied to all damaged parts
             selectionSpecific = 1;
 
+            // if 1, wounds do not produce blood spurts
+            noBlood = 0;
+
             // custom handling for this damage type
             // inherits from the default handlers - the function(s) defined here will be called first, then the default one(s)
             class woundHandlers: woundHandlers {

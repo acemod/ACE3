@@ -72,7 +72,7 @@ private _bestAmmoToSend = -1;
             _bestAmmoToSend = _xAmmo;
         };
     };
-} forEach (if (_reloadSource isKindOf "CaManBase") then {magazinesAmmo _reloadSource} else {magazinesAmmoCargo _reloadSource});
+} forEach (if (_reloadSource isKindOf "CAManBase") then {magazinesAmmo _reloadSource} else {magazinesAmmoCargo _reloadSource});
 TRACE_4("",_reloadSource,_reloadMag,_reloadNeededAmmo,_bestAmmoToSend);
 if (_bestAmmoToSend == -1) exitWith {ERROR("No ammo");};
 

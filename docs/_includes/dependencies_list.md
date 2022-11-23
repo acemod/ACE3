@@ -198,6 +198,10 @@
 - `ace_missileguidance`
 {% endif %}
 
+{% if include.component == "hunterkiller" %}
+- `ace_common`
+{% endif %}
+
 {% if include.component == "huntir" %}
 - `ace_common`
 {% endif %}
@@ -271,6 +275,8 @@
 {% endif %}
 
 {% if include.component == "marker_flags" %}
+- `ace_common`
+- `ace_interaction`
 - `ace_interact_menu`
 {% endif %}
 
@@ -387,6 +393,10 @@
 {% endif %}
 
 {% if include.component == "norearm" %}
+- `ace_common`
+{% endif %}
+
+{% if include.component == "novehicleclanlogo" %}
 - `ace_common`
 {% endif %}
 
@@ -573,6 +583,11 @@
 - `ace_common`
 {% endif %}
 
+{% if include.component == "xm157" %}
+- `ace_advanced_ballistics`
+- `ace_scopes`
+{% endif %}
+
 {% if include.component == "yardage450" %}
 - `ace_apl`
 - `ace_laser`
@@ -659,10 +674,8 @@
 {% endif %}
 
 {% if include.component == "compat_sog" %}
-- `vn_weapons`
-- `vn_emm_main_menu`
-- `weapons_f_vietnam_c`
 - `ace_trenches`
+- `loadorder_f_vietnam`
 {% endif %}
 
 {% if include.component == "noactionmenu" %}

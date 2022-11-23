@@ -1230,6 +1230,7 @@
             <Korean>혈액 손실 표시</Korean>
             <Polish>Pokaż utratę krwi</Polish>
             <Japanese>失血量の表示</Japanese>
+            <Chinesesimp>显示失血量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
             <English>Show qualitative blood loss in the injury list.</English>
@@ -1237,6 +1238,7 @@
             <Korean>부상 목록에 혈액 손실량을 표시합니다.</Korean>
             <Polish>Pokaż jakościową utratę krwi na liście ran.</Polish>
             <Japanese>負傷リストに段階的な失血量を表示します。</Japanese>
+            <Chinesesimp>在负伤列表中显示失血阶段</Chinesesimp>
         </Key>
     </Package>
 </Project>

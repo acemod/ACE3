@@ -24,6 +24,7 @@
             <Korean>자동운전 켜짐</Korean>
             <Polish>Tempomat włączony</Polish>
             <Japanese>クルーズコントロールを有効化</Japanese>
+            <Chinesesimp>开启巡航模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -48,6 +49,7 @@
             <Korean>자동운전 꺼짐</Korean>
             <Polish>Tempomat wyłączony</Polish>
             <Japanese>クルーズコントロールを無効化</Japanese>
+            <Chinesesimp>关闭巡航模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
@@ -88,6 +90,7 @@
             <Korean>자동운전</Korean>
             <Polish>Tempomat</Polish>
             <Japanese>クルーズコントロール</Japanese>
+            <Chinesesimp>巡航模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>

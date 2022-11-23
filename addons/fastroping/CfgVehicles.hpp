@@ -177,6 +177,7 @@ class CfgVehicles {
         author = "KoffeinFlummi";
         scope = 1;
         model = QPATHTOF(data\helper.p3d);
+        destrType = "DestructNo";
         class ACE_Actions {};
         class Turrets {};
         class TransportItems {};
