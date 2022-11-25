@@ -17,18 +17,17 @@
 
 params [["_source", objNull, [objNull]]];
 
-if (isNull _source) exitWith {0};
+if (isNull _source) exitWith {REFUEL_DISABLED_FUEL};
 
 private _capacity = _source getVariable QGVAR(capacity);
 
 // Initialize fuel truck if needed
 if (isNil "_capacity") then {
     // Check if this object has a fuelCargo config entry
-    _capacity = if (isNumber(configOf _source >> QGVAR(fuelCargo))) then {
-        getNumber(configOf _source >> QGVAR(fuelCargo))
-    } else {
-        REFUEL_DISABLED_FUEL // Not a fuel source
-    };
+    private _fuelCargo = configOf _source >> QGVAR(fuelCargo);
+    _capacity = if (isNumber _fuelCargo) then {getNumber _fuelCargo} else {REFUEL_DISABLED_FUEL};
+    
+    // Set capacity even if this isn't a fuel source to save on config lookup time in the event this function is used in a loop
     _source setVariable [QGVAR(capacity), _capacity, true];
     [_source, _capacity] call FUNC(setFuel);
 };
