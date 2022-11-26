@@ -118,7 +118,7 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
 
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
 
-        private _canReceive = getNumber((configOf _sink) >> QGVAR(canReceive)) == 1;
+        private _canReceive = getNumber ((configOf _sink) >> QGVAR(canReceive)) == 1;
         private _isContainer = ([_sink] call FUNC(getCapacity)) != REFUEL_DISABLED_FUEL;
 
         // Decide if cargo or vehicle will be refueled

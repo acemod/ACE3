@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: GitHawk
- * Check if a unit can turn on a fuel nozzle
+ * Check if a unit can turn on a fuel nozzle.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Nozzle <OBJECT>
- * 2: Refuel container (optional) <BOOL>
+ * 2: Refuel container <BOOL> (default: false)
  *
  * Return Value:
  * Can turn on <BOOL>

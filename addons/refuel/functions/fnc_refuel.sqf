@@ -21,7 +21,7 @@
 params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
 private _config = configOf _sink;
-private _rate = if (isNumber(_config >> QGVAR(flowRate))) then {
+private _rate = if (isNumber (_config >> QGVAR(flowRate))) then {
     getNumber (_config >> QGVAR(flowRate)) * GVAR(rate)
 } else {
     // Jerry cans for example have no flow rate defined, default to 1
@@ -29,11 +29,11 @@ private _rate = if (isNumber(_config >> QGVAR(flowRate))) then {
 };
 
 // How much fuel is in a vehicle's fuel tank
-private _maxFuelTank = getNumber(_config >> QGVAR(fuelCapacity));
+private _maxFuelTank = getNumber (_config >> QGVAR(fuelCapacity));
 // Fall back to vanilla fuelCapacity value (only air and sea vehicles don't have this defined by default by us)
 // Air and sea vehicles have that value properly defined in liters, unlike ground vehicles which is is formula of (range * tested factor) - different fuel consumption system than ground vehicles
 if (_maxFuelTank == 0) then {
-    _maxFuelTank = getNumber(_config >> "fuelCapacity");
+    _maxFuelTank = getNumber (_config >> "fuelCapacity");
 };
 
 [{

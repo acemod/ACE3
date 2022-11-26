@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: QuantX
- * Get the capacity of a fuel source's tank
+ * Gets the capacity of a fuel source's tank.
  *
  * Arguments:
  * 0: Fuel Source <OBJECT>

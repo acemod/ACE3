@@ -3,7 +3,7 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DRAW_HOOKS_POS
-// #define DEBUG_ENABLED_REFUEL
+// #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 

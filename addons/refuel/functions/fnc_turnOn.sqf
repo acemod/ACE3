@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Nozzle <OBJECT>
- * 2: Refuel container (optional) <BOOL>
+ * 2: Refuel container <BOOL> (default: false)
  *
  * Return Value:
  * None

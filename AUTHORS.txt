@@ -145,6 +145,7 @@ PiZZADOX <509thParachuteInfantry@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
 Pterolatypus <pterolatypus@gmail.com>
+QuantX
 QuickDagger
 rakowozz
 ramius86 <pasini86@hotmail.com>
@@ -183,4 +184,3 @@ YetheSamartaka
 xrufix
 Zakant <Zakant@gmx.de>
 zGuba
-QuantX
