@@ -72,6 +72,8 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
+        
+        private _source = _nozzle getVariable QGVAR(source);
 
         detach _nozzle;
         _nozzle attachTo [_sink, _endPosTestOffset];
