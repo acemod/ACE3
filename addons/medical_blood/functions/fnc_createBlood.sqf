@@ -27,6 +27,6 @@ private _bloodDrop = createSimpleObject [_model, [0, 0, 0]];
 _bloodDrop setDir random 360;
 _bloodDrop setPos _position;
 
-[QGVAR(bloodDropCreated), [_bloodDrop, _source] call CBA_fnc_serverEvent;
+[QGVAR(bloodDropCreated), [_bloodDrop, _source]] call CBA_fnc_serverEvent;
 
 _bloodDrop
