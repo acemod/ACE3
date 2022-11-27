@@ -19,7 +19,7 @@
 params [["_object", objNull, [objNull]]];
 
 // Make sure object doesn't already have a nozzle connected
-if (isNull _object || {!isNull(_object getVariable [QGVAR(nozzle), objNull])} ) exitWith {false};
+if (isNull _object || {!isNull (_object getVariable [QGVAR(nozzle), objNull])} ) exitWith {false};
 
 // Can't fuel a jerry can that is connected to another object
 if (_object getVariable [QGVAR(jerryCan), false]) exitWith {!(_object getVariable [QGVAR(isConnected), false])};
