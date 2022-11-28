@@ -24,10 +24,10 @@ class CfgVehicles {
         displayName = "HuntIR";
         model = QPATHTOF(data\huntir.p3d);
         scope = 1;
-        soundCrash[] = {"", db-30, 1 };
+        soundCrash[] = {"", "db-30", 1 };
         soundEnviron[] = {"z\ace\addons\apl\sounds\padak_let", 0.316228, 1, 80};
-        soundLandCrash[] = {"", db-30, 1 };
-        soundWaterCrash[] = {"", db10, 1 };
+        soundLandCrash[] = {"", "db-30", 1 };
+        soundWaterCrash[] = {"", "db-10", 1 };
         class HitPoints {
             class HitEngine {
                 armor = 0;

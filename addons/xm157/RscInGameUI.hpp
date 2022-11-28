@@ -10,14 +10,14 @@ class GVAR(text): RscText {
 };
 class GVAR(textMenu): GVAR(text) {
     SizeEx = 0.09;
-    style = 2+16;
+    style = "2+16";
 };
 
 class RscInGameUI {
     class CBA_ScriptedOptic_zooming;
     class GVAR(info): CBA_ScriptedOptic_zooming {
         onLoad = QUOTE(call FUNC(weaponInfo_onLoad));
-        class objects {            
+        class objects {
             class Optic: RscObject { // first focal plane
                 idc = IDC_SCOPE_OBJECT;
                 type = 82;
@@ -40,7 +40,7 @@ class RscInGameUI {
                                 x = 0;
                                 y = 0;
                                 w = 1;
-                                h = 4/3;
+                                h = "4/3";
                             };
                         };
                     };
@@ -68,7 +68,7 @@ class RscInGameUI {
                                 x = 0;
                                 y = 0;
                                 w = 1;
-                                h = 4/3;
+                                h = "4/3";
                             };
                         };
                     };
