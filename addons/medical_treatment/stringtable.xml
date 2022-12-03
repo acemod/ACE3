@@ -156,7 +156,7 @@
             <French>Coefficient de réouverture des plaies</French>
             <German>Wundwiederöffnungskoeffizient</German>
             <Czech>Koeficient opětovného otevření rány</Czech>
-            <Russian>Коэффициент повторного открытия раны</Russian>
+            <Russian>Коэф. повторного открытия раны</Russian>
             <Polish>Współczynnik ponownego otwierania ran</Polish>
             <Japanese>再開放係数</Japanese>
             <Turkish>Yara Yeniden Açılma Katsayısı</Turkish>
@@ -924,7 +924,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
             <English>Enable Litter</English>
-            <Russian>Включить мусор</Russian>
+            <Russian>Вкл. мусор</Russian>
             <Polish>Aktywuj odpadki</Polish>
             <Spanish>Activar restos médicos</Spanish>
             <German>Abfälle aktivieren</German>
@@ -1100,7 +1100,7 @@
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_DisplayName">
             <English>CPR Success Chance Minimum</English>
             <French>RCP - Chance minimale de réussite</French>
-            <Russian>Минимальные шансы успеха СЛР</Russian>
+            <Russian>Мин. шансы успеха СЛР</Russian>
             <Polish>Szansa na powodzenie CPR - Minimum</Polish>
             <Japanese>心肺蘇生の最低成功確率</Japanese>
             <German>HLW Minimale Erfolgschance</German>
@@ -1110,7 +1110,7 @@
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
             <English>CPR Success Chance Maximum</English>
             <French>RCP - Chance maximale de réussite</French>
-            <Russian>Максимальные шансы успеха СЛР</Russian>
+            <Russian>Макс. шансы успеха СЛР</Russian>
             <Polish>Szansa na powodzenie CPR - Maksimum</Polish>
             <Japanese>心肺蘇生の最高成功確率</Japanese>
             <German>HLW Maximale Erfolgschance</German>
@@ -3960,6 +3960,7 @@
             <German>%1 reagiert nicht, schnappt nach Luft und verkrampft</German>
             <Chinesesimp>%1没有反应，微软的喘着气和抽搐</Chinesesimp>
             <Korean>%1 은 반응이 없고, 얕은 헐떡임과 경련증세를 보입니다</Korean>
+            <Russian>%1 не реагирует на раздражители, поверхностно дышит, в конвульсиях</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -3969,6 +3970,7 @@
             <German>%1 reagiert nicht, ist regungslos und kalt</German>
             <Chinesesimp>%1没有反应，一动不动，身体冰凉</Chinesesimp>
             <Korean>%1 은 반응이 없고, 움직임이 없으며 차갑습니다</Korean>
+            <Russian>%1 не реагирует на раздражители, не шевелится и холодный</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
