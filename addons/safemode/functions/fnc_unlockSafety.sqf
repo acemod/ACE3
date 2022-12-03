@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", "_muzzle", "_hint"];
+params ["_unit", "_weapon", "_muzzle", ["_hint", true, [true]]];
 
 private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 _safedWeapons deleteAt (_safedWeapons find _weapon);
