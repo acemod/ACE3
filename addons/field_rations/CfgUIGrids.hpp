@@ -8,7 +8,7 @@ class CfgUIGrids {
                             QUOTE(safeZoneX + safeZoneW - 4.2 * GUI_GRID_W),
                             QUOTE(safeZoneY + safeZoneH - 2.2 * GUI_GRID_H),
                             QUOTE(4 * GUI_GRID_W),
-                            QUOTE(2 * GUI_GRID_G)
+                            QUOTE(2 * GUI_GRID_H)
                         },
                         QUOTE(GUI_GRID_W),
                         QUOTE(GUI_GRID_H)
