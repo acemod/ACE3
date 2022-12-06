@@ -530,7 +530,7 @@ class ATragMX_Display {
         };
         class TEXT_ELEVATION_OUTPUT_ABSOLUTE: ATragMX_RscText {
             idc=400;
-            style="ST_WITH_RECT+ST_RIGHT";
+            style=QUOTE(ST_WITH_RECT+ST_RIGHT);
             sizeEx="0.025";
             w="0.065";
             h="0.032";
@@ -1748,7 +1748,7 @@ class ATragMX_Display {
         };
         class TEXT_TRUING_DROP_DROP_OUTPUT: ATragMX_RscEdit {
             idc=18006;
-            style="ST_WITH_RECT+ST_RIGHT";
+            style=QUOTE(ST_WITH_RECT+ST_RIGHT);
             colorBackground[]={0.15,0.21,0.23,0.3};
             colorDisabled[]={0,0,0,1};
             w="0.06";
@@ -1782,7 +1782,7 @@ class ATragMX_Display {
         };
         class TEXT_TRUING_DROP_TARGET_RANGE_SUPER_INPUT: ATragMX_RscEdit {
             idc=18011;
-            style="ST_WITH_RECT+ST_RIGHT";
+            style=QUOTE(ST_WITH_RECT+ST_RIGHT);
             colorDisabled[]={0,0,0,0.6};
             w="0.06";
             x="0.550*safezoneW+safezoneX+0.25";
