@@ -11,7 +11,7 @@ if (isServer) then {
     [QGVAR(bloodDropCreated), {
         params ["_bloodDrop", "_source"];
 
-        // Add to created queue with format: [expire time, blood object]
+        // Add to created queue with format: [expire time, blood object, source unit]
         private _index = GVAR(bloodDrops) pushBack [CBA_missionTime + GVAR(bloodLifetime), _bloodDrop, _source];
 
         if (count GVAR(bloodDrops) >= GVAR(maxBloodObjects)) then {
