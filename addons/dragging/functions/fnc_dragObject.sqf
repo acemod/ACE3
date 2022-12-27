@@ -45,7 +45,7 @@ _unit setVariable [QGVAR(draggedObject), _target, true];
 // add drop action
 GVAR(unit) = _unit;
 
-GVAR(releaseActionID) = [0xF1, [false, false, false], {
+GVAR(releaseActionID) = [0x01, [false, false, false], {
     [GVAR(unit), GVAR(unit) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
 }, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;
 
