@@ -415,7 +415,7 @@
             <Polish>Wyłącz menu dowodzenia</Polish>
             <Czech>Vypnout velící menu</Czech>
             <French>Désactiver menu commande</French>
-            <Russian>Выключить командное меню</Russian>
+            <Russian>Выкл. командное меню</Russian>
             <Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
             <Italian>Disabilita menù di comando</Italian>
             <Portuguese>Desabilitar menu de comando</Portuguese>
@@ -597,7 +597,7 @@
             <German>Position der Fortschrittsanzeige</German>
             <Spanish>Ubicación de la barra de progreso</Spanish>
             <Italian>Posizione della barra di avanzamento</Italian>
-            <Russian>Положение прогресс-бара</Russian>
+            <Russian>Положение индикатора процесса</Russian>
             <Polish>Lokalizacja paska postępu</Polish>
             <French>Position de la barre de progression</French>
             <Czech>Pozice ukazetele průběhu činnosti</Czech>
@@ -1031,7 +1031,7 @@
             <Italian>Disattivato</Italian>
             <Polish>Wyłączone</Polish>
             <Portuguese>Desativado</Portuguese>
-            <Russian>Откл.</Russian>
+            <Russian>Отключено</Russian>
             <Spanish>Desactivado</Spanish>
             <Japanese>無効化</Japanese>
             <Korean>비활성화</Korean>
@@ -1047,7 +1047,7 @@
             <Italian>Attivato</Italian>
             <Polish>Włączone</Polish>
             <Portuguese>Ativado</Portuguese>
-            <Russian>Вкл.</Russian>
+            <Russian>Включено</Russian>
             <Spanish>Activado</Spanish>
             <Japanese>有効化</Japanese>
             <Korean>활성화</Korean>
@@ -1322,6 +1322,7 @@
             <German>ACE Unkategorisiert</German>
             <Polish>ACE Nieskategoryzowane</Polish>
             <Japanese>ACE 無区分</Japanese>
+            <Russian>ACE Без категории</Russian>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1429,6 +1430,7 @@
             <French>Mode adapté à l'épilepsie</French>
             <Chinesesimp>癫痫病友好模式</Chinesesimp>
             <Korean>광과민 친화적 모드</Korean>
+            <Russian>Режим для эпилептиков</Russian>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
@@ -1438,6 +1440,7 @@
             <French>Désactive certains effets de lumière clignotante afin de réduire les risques de crise d'épilepsie.</French>
             <Chinesesimp>禁用一些闪烁的灯光效果，以降低癫痫发作的风险。</Chinesesimp>
             <Korean>반짝거리는 빛으로 인해 일어날 발작 상황을 줄여줍니다.</Korean>
+            <Russian>Отключает некоторые вспышки во избежание риска приступа.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1495,6 +1498,7 @@
             <German>Nur KI</German>
             <Chinesesimp>仅 AI</Chinesesimp>
             <Japanese>AIのみ</Japanese>
+            <Russian>Только ИИ</Russian>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
@@ -1544,7 +1548,7 @@
             <English>Additional progress bar information</English>
             <Japanese>プログレス バー詳細情報</Japanese>
             <French>Infos supplémentaires de la barre de progression</French>
-            <Russian>Дополнительная информация прогресс-бара</Russian>
+            <Russian>Доп. информация индикатора процесса</Russian>
             <German>Zusätzliche Informationen beim Fortschrittsbalken</German>
             <Polish>Dodatkowe informacje na pasku postępu </Polish>
             <Chinesesimp>额外的进度条信息</Chinesesimp>
@@ -1554,7 +1558,7 @@
             <English>Controls extra information shown in progress bar.</English>
             <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
             <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
-            <Russian>Устанавливает дополнительную информацию в прогресс-баре.</Russian>
+            <Russian>Устанавливает дополнительную информацию в индикаторе процесса.</Russian>
             <German>Kontrolliert zusätzliche Informationen beim Fortschrittsbalkens</German>
             <Polish>Kontroluje dodatkowe informacje na pasku postępu.</Polish>
             <Chinesesimp>控制进度条中显示的额外信息。</Chinesesimp>
@@ -1644,6 +1648,7 @@
             <Japanese>武器からマガジンを抜く</Japanese>
             <Korean>탄창 빼기</Korean>
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
+            <Russian>Разрядить оружие</Russian>
         </Key>
     </Package>
 </Project>

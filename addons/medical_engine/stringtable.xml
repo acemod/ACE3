@@ -3,7 +3,7 @@
     <Package name="Medical_Engine">
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_DisplayName">
             <English>Enable Vehicle Crash Damage</English>
-            <Russian>Включить урон при аварии в транспортном средстве.</Russian>
+            <Russian>Вкл. урон при аварии в транспорте</Russian>
             <Spanish>Activar daño por accidente de vehículo</Spanish>
             <French>Blessures de collision (véhicules)</French>
             <Polish>Włącz obrażenia od kolizji pojazdu</Polish>
