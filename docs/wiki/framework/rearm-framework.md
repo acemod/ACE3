@@ -41,7 +41,7 @@ class CfgVehicles {
 ### 1.2 Setting vehicle as a supply
 
 
-## 1.2.1 Setting up in the Config
+#### 1.2.1 Setting up in the Config
 
 A vehicle will be set as a supply vehicle based on the config `ace_rearm_defaultSupply`
 ```cpp
@@ -50,7 +50,7 @@ class MyTruck: Car_F {
 };
 ```
 
-## 1.2.2 Make an object into a rearm source
+#### 1.2.2 Make an object into a rearm source
 *Added in ACE3 3.12.5*
 
 `ace_rearm_fnc_makeSource`
