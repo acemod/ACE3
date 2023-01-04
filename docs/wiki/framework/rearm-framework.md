@@ -39,16 +39,37 @@ class CfgVehicles {
 </div>
 
 ### 1.2 Setting vehicle as a supply
+
+
+## 1.2.1 Setting up in the Config
+
 A vehicle will be set as a supply vehicle based on the config `ace_rearm_defaultSupply`
 ```cpp
 class MyTruck: Car_F {
     ace_rearm_defaultSupply = 1200;
 };
 ```
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>Mission makers can also use `this setVariable ["ace_rearm_isSupplyVehicle", true]`</p>
-</div>
+
+## 1.2.2 Make an object into a rearm source
+*Added in ACE3 3.12.5*
+
+`ace_rearm_fnc_makeSource`
+
+   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Rearm Source | Object | Required
+1  | Amount | Number | Optional (default: `0`)
+1  | Add instead set | Bool | Optional (default: false)
+**R** | None | None | Return value
+
+#### 3.7.1 Example
+
+`[cursorObject, 1200] call ace_rearm_fnc_makeSource`
+
+   | Arguments | Explanation
+---| --------- | -----------
+0  | `cursorObject` | Fuel source object
+1  | `1200` | Ammo supply
 
 ## 2. Variables
 
