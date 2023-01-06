@@ -877,6 +877,7 @@ Examples:
 
 
 If a file called $NOBIN$ is found in the module directory, that module will not be binarized.
+If a file called $NOBIN_CONFIG$ is found in the module directory, that module's config will not be binarized.
 
 See the make.cfg file for additional build options.
 """)
@@ -1293,15 +1294,16 @@ See the make.cfg file for additional build options.
             build_successful = False
             if build_tool == "pboproject":
                 try:
-                    nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 
-                    if os.path.isfile(nobinFilePath):
+                    if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
-
+                    elif os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN_CONFIG$")):
+                        print_green("$NOBIN_CONFIG$ Found. Proceeding with non-bin config!")
+                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
                     else:
                         cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
