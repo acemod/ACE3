@@ -678,6 +678,10 @@
 - `loadorder_f_vietnam`
 {% endif %}
 
+{% if include.component == "compat_ws" %}
+- `data_f_lxWS_Loadorder`
+{% endif %}
+
 {% if include.component == "noactionmenu" %}
 - `ace_common`
 {% endif %}
