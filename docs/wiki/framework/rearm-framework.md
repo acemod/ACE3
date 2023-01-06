@@ -59,7 +59,7 @@ class MyTruck: Car_F {
 ---| --------- | ---- | ------------------------
 0  | Rearm Source | Object | Required
 1  | Amount | Number | Optional (default: `0`)
-1  | Add instead set | Bool | Optional (default: false)
+1  | Add amount instead of setting it | Bool | Optional (default: false)
 **R** | None | None | Return value
 
 #### 3.7.1 Example
