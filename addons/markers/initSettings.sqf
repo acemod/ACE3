@@ -37,8 +37,8 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
     [LSTRING(TimestampHourFormat), LSTRING(TimestampHourFormatDescription)],
     [_categoryName, LLSTRING(Module_DisplayName)],
     [
-        [24, 12],
-        [LSTRING(TimestampHourFormat24), LSTRING(TimestampHourFormat12)],
+        [24, 12, 0],
+        [LSTRING(TimestampHourFormat24), LSTRING(TimestampHourFormat12), "System"],
         0
     ]
 ] call CBA_fnc_addSetting;

@@ -42,6 +42,11 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
             _time = _time - 12;
             _periodPostfix = " pm";
         };
+    } else {
+        if (GVAR(timestampHourFormat) == 0) then {
+            systemTime params ["", "", "", "_hour", "_min", "_sec"];
+            _time = _hour + _min/60 + _sec/3600;
+        };
     };
 
     _description ctrlSetText format [
