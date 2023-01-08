@@ -157,7 +157,7 @@ class CfgPatches { \
         weapons[] = {}; \
         requiredVersion = REQUIRED_VERSION; \
         requiredAddons[] = {"ace_main"}; \
-        version = VERSION; \
+        VERSION_CONFIG; \
     }; \
 }; \
 class ace_notLoaded { \
