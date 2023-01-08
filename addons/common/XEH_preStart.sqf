@@ -2,7 +2,9 @@
 
 #include "XEH_PREP.hpp"
 
-private _notLoaded = configProperties [configfile >> "ace_notLoaded", "isText _x"];
-{
-    TRACE_2("not loaded",configName _x, getText _x);
-} forEach _notLoaded;
+if (isFilePatchingEnabled) then {
+    private _notLoaded = configProperties [configfile >> "ace_notLoaded", "isText _x"];
+    {
+        INFO_2("%1 not loaded because %2",configName _x, getText _x);
+    } forEach _notLoaded;
+};
