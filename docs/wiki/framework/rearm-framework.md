@@ -14,7 +14,16 @@ version:
 
 ## 1. Config Values
 
-### 1.1 Ammo Configs
+### 1.1 Setting vehicle as a supply
+
+A vehicle will be set as a supply vehicle based on the config `ace_rearm_defaultSupply`
+```cpp
+class MyTruck: Car_F {
+    ace_rearm_defaultSupply = 1200;
+};
+```
+
+### 1.2 Ammo Configs
 
 ```cpp
 class CfgAmmo {
@@ -38,39 +47,6 @@ class CfgVehicles {
     <p>ace_rearm_dummy is only needed if you have a custom ammunition model. For each model you should create a dummy vehicle extending ace_rearm_defaultCarriedObject.</p>
 </div>
 
-### 1.2 Setting vehicle as a supply
-
-
-#### 1.2.1 Setting up in the Config
-
-A vehicle will be set as a supply vehicle based on the config `ace_rearm_defaultSupply`
-```cpp
-class MyTruck: Car_F {
-    ace_rearm_defaultSupply = 1200;
-};
-```
-
-#### 1.2.2 Make an object into a rearm source
-*Added in ACE3 3.12.5*
-
-`ace_rearm_fnc_makeSource`
-
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Rearm Source | Object | Required
-1  | Amount | Number | Optional (default: `0`)
-1  | Add (`true`) or set (`false`) amount | Bool | Optional (default: `false`)
-**R** | None | None | Return value
-
-#### 3.7.1 Example
-
-`[cursorObject, 1200] call ace_rearm_fnc_makeSource`
-
-   | Arguments | Explanation
----| --------- | -----------
-0  | `cursorObject` | Fuel source object
-1  | `1200` | Ammo supply
-
 ## 2. Variables
 
 ### 2.1 Allow Rearming of Scripted Loadouts
@@ -88,7 +64,28 @@ VEHICLE setVariable ["ace_rearm_scriptedLoadout", true, true];
 
 ## 3. Functions
 
-### 3.1 Adding specific magazines
+#### 3.1 Enabling object as a rearm source
+*Added in ACE3 3.12.3*
+
+`ace_rearm_fnc_makeSource`
+
+   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Rearm Source | Object | Required
+1  | Amount | Number | Optional (default: `0`)
+1  | Add (`true`) or set (`false`) amount | Bool | Optional (default: `false`)
+**R** | None | None | Return value
+
+#### 3.1.1 Example
+
+`[cursorObject, 1200] call ace_rearm_fnc_makeSource`
+
+   | Arguments | Explanation
+---| --------- | -----------
+0  | `cursorObject` | Rearm source object
+1  | `1200` | Ammo supply
+
+### 3.2 Adding specific magazines
 
 `ace_rearm_fnc_addMagazineToSupply`
 
@@ -103,7 +100,7 @@ This function is most useful with the module setting `Only specific Magazines`. 
 
 This function can also be used to increase the supply count on setting `Limited ammo supply based on caliber` by a certain caliber value.
 
-#### 3.1.1 Example
+#### 3.2.1 Example
 
 `[ammo_truck, "32Rnd_155mm_Mo_shells"] call ace_rearm_fnc_addMagazineToSupply;`
 
@@ -114,7 +111,7 @@ This function can also be used to increase the supply count on setting `Limited 
 
 The 32 artillery shells are added to the supply count or the magazine storage of the specified ammo truck.
 
-### 3.2 Adding all magazines of a specific vehicle
+### 3.3 Adding all magazines of a specific vehicle
 
 `ace_rearm_fnc_addVehicleMagazinesToSupply`
 
@@ -126,7 +123,7 @@ The 32 artillery shells are added to the supply count or the magazine storage of
 
 This functions wraps `ace_rearm_fnc_addMagazineToSupply` and  uses it to add all default magazines of all supported turrets of the vehicle to the ammo truck.
 
-#### 3.2.1 Example 1
+#### 3.3.1 Example 1
 
 `[ammo_truck, tank] call ace_rearm_fnc_addVehicleMagazinesToSupply;`
 
@@ -137,7 +134,7 @@ This functions wraps `ace_rearm_fnc_addMagazineToSupply` and  uses it to add all
 
 All magazines found in the class config of the object `tank` are made available.
 
-#### 3.2.2 Example 2
+#### 3.3.2 Example 2
 
 `[ammo_truck, "B_MBT_01_arty_F"] call ace_rearm_fnc_addVehicleMagazinesToSupply;`
 
@@ -148,7 +145,7 @@ All magazines found in the class config of the object `tank` are made available.
 
 All magazines found in the config of the vehicle class `B_MBT_01_arty_F` are made available.
 
-### 3.3 Enabling / disabling rearming
+### 3.4 Enabling / disabling rearming
 
 `ace_rearm_fnc_disable`
 
@@ -160,7 +157,7 @@ All magazines found in the config of the vehicle class `B_MBT_01_arty_F` are mad
 
 This functions disables rearming for all supported turrets of a certain vehicle.
 
-#### 3.3.1 Example 1
+#### 3.4.1 Example 1
 
 `[tank] call ace_rearm_fnc_disable;`
 
@@ -170,7 +167,7 @@ This functions disables rearming for all supported turrets of a certain vehicle.
 
 Disables rearming on the object `tank`.
 
-#### 3.3.2 Example 2
+#### 3.4.2 Example 2
 
 `[tank, false] call ace_rearm_fnc_disable;`
 
@@ -181,7 +178,7 @@ Disables rearming on the object `tank`.
 
 Enables rearming on the object `tank`.
 
-### 3.4 Getting the supply count
+### 3.5 Getting the supply count
 
 `ace_rearm_fnc_getSupplyCount`
 
@@ -192,7 +189,7 @@ Enables rearming on the object `tank`.
 
 This functions returns the current supply count of the ammo truck.
 
-#### 3.4.1 Example
+#### 3.5.1 Example
 
 `[ammo_truck] call ace_rearm_fnc_getSupplyCount;`
 
@@ -202,7 +199,7 @@ This functions returns the current supply count of the ammo truck.
 
 The remaining supply count of `ammo_truck` will be returned.
 
-### 3.5 Removing magazines from supply
+### 3.6 Removing magazines from supply
 
 `ace_rearm_fnc_removeMagazineFromSupply`
 
@@ -213,7 +210,7 @@ The remaining supply count of `ammo_truck` will be returned.
 2  | Number of Rounds to withdraw | Number | Optional (default: `-1`)
 **R** | Magazine could be removed successfully | Boolean | Return value
 
-#### 3.5.1 Example 1
+#### 3.6.1 Example 1
 
 `[ammo_truck, "500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_removeMagazineFromSupply;`
 
@@ -224,7 +221,7 @@ The remaining supply count of `ammo_truck` will be returned.
 
 Removes one ammo box worth of 500Rnd_127x99_mag_Tracer_Red from the supply. Depending on the module setting the ammo box does hold an entire magazine or only the caliber based amount of rounds.
 
-#### 3.5.2 Example 2
+#### 3.6.2 Example 2
 
 `[ammo_truck, "500Rnd_127x99_mag_Tracer_Red", 50] call ace_rearm_fnc_removeMagazineFromSupply;`
 
@@ -236,7 +233,7 @@ Removes one ammo box worth of 500Rnd_127x99_mag_Tracer_Red from the supply. Depe
 
 Removes one ammo box with 50 rounds of 500Rnd_127x99_mag_Tracer_Red from the supply. This is 10% of the supply of an entire magazine.
 
-### 3.6 Setting the supply count
+### 3.7 Setting the supply count
 
 `ace_rearm_fnc_setSupplyCount`
 
@@ -248,7 +245,7 @@ Removes one ammo box with 50 rounds of 500Rnd_127x99_mag_Tracer_Red from the sup
 
 This function sets the current supply count of the ammo truck. It can be used to replenish the ammo truck on `Limited ammo supply based on caliber` setting.
 
-#### 3.6.1 Example
+#### 3.7.1 Example
 
 `[ammo_truck, 1000] call ace_rearm_fnc_setSupplyCount;`
 
