@@ -226,6 +226,83 @@
             <Chinesesimp>需要手表</Chinesesimp>
             <Korean>시계 필요함</Korean>
         </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezone">
+            <English>Time Zone</English>
+            <Russian>Часовой пояс</Russian>
+            <French>Fuseau horaire</French>
+            <Japanese>時間帯</Japanese>
+            <Spanish>Zona horaria</Spanish>
+            <Polish>Strefa czasowa</Polish>
+            <German>Zeitzone</German>
+            <Chinesesimp>时区</Chinesesimp>
+            <Korean>시간대</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezoneDescription">
+            <English>Change the time zone for the timestamp</English>
+            <Russian>Измените часовой пояс для метки времени</Russian>
+            <French>Modifiez le fuseau horaire pour l'horodatage</French>
+            <Japanese>タイムスタンプの時間帯を変更します</Japanese>
+            <Spanish>Cambie la zona horaria para la marca de tiempo</Spanish>
+            <Polish>Zmień strefę czasową dla znaczników czasu</Polish>
+            <German>Ändern Sie die Zeitzone für den Zeitstempel</German>
+            <Chinesesimp>更改时间戳的时区</Chinesesimp>
+            <Korean>타임스탬프의 시간대를 변경하십시오</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezoneIngameTime">
+            <English>In-game Time</English>
+            <Russian>Время в игре</Russian>
+            <French>Heure de jeu</French>
+            <Japanese>ゲーム内時刻</Japanese>
+            <Spanish>Hora del juego</Spanish>
+            <Polish>Czas gry</Polish>
+            <German>Ingame-Zeit</German>
+            <Chinesesimp>游戏内时间</Chinesesimp>
+            <Korean>게임 시간</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezoneSystemTime">
+            <English>System Time</English>
+            <Russian>Системное время</Russian>
+            <French>Heure système</French>
+            <Japanese>システム時刻</Japanese>
+            <Spanish>Hora del sistema</Spanish>
+            <Polish>Czas systemowy</Polish>
+            <German>Systemzeit</German>
+            <Chinesesimp>系统时间</Chinesesimp>
+            <Korean>시스템 시간</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezoneUTCTime">
+            <English>UTC Time</English>
+            <Russian>Время UTC</Russian>
+            <French>Heure UTC</French>
+            <Japanese>UTC時刻</Japanese>
+            <Spanish>Hora UTC</Spanish>
+            <Polish>Czas UTC</Polish>
+            <German>UTC-Zeit</German>
+            <Chinesesimp>UTC时间</Chinesesimp>
+            <Korean>UTC 시간</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampUTCOffset">
+            <English>UTC Offset</English>
+            <Russian>Смещение UTC</Russian>
+            <French>Décalage UTC</French>
+            <Japanese>UTCオフセット</Japanese>
+            <Spanish>Desplazamiento UTC</Spanish>
+            <Polish>Przesunięcie UTC</Polish>
+            <German>UTC-Verschiebung</German>
+            <Chinesesimp>UTC偏移量</Chinesesimp>
+            <Korean>UTC 오프셋</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampUTCOffsetDescription">
+            <English>Change the time offset for the UTC timestamp</English>
+            <Russian>Измените смещение времени для метки времени UTC</Russian>
+            <French>Modifier le décalage horaire pour l'horodatage UTC</French>
+            <Japanese>UTCタイムスタンプの時差を変更する</Japanese>
+            <Spanish>Cambiar el desplazamiento horario para la marca de tiempo UTC</Spanish>
+            <Polish>Zmień przesunięcie czasu dla sygnatury czasowej UTC</Polish>
+            <German>Ändere die Zeitverschiebung für den UTC-Zeitstempel</German>
+            <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
+            <Korean>UTC 타임 스탬프의 시간 오프셋을 변경하십시오</Korean>
+        </Key>
         <Key ID="STR_ACE_Markers_TimestampFormat">
             <English>Timestamp Format</English>
             <Russian>Формат времени</Russian>
