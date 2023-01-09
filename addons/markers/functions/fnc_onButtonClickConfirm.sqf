@@ -43,10 +43,10 @@ if (cbChecked _aceTimestamp && {
 			systemTimeUTC params["", "", "", "_hour", "_min", "_sec"];
 			_hour = _hour + _offset;
 			if (_hour < 0) then {
-				_hour= 24 - (_hour + _offset);
+				_hour = 24 - _hour;
 			};
 			if (_hour > 24) then {
-				_hour = 0 + ((_hour + _offset) - 24);
+				_hour = 0 + (_hour - 24);
 			};
 			_time = _hour + _min/60 + _sec/3600;
 		};
