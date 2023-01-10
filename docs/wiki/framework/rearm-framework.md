@@ -241,7 +241,7 @@ All magazines found in the config of the vehicle class `B_MBT_01_arty_F` are mad
 0  |  `ammo_truck` | My ammo truck object
 1  |  `"500Rnd_127x99_mag_Tracer_Red"`| Carrying is enabled
 
-Removes one ammo box worth of 500Rnd_127x99_mag_Tracer_Red from the supply. Depending on the module setting the ammo box does hold an entire magazine or only the caliber based amount of rounds.
+Removes one ammo box worth of "500Rnd_127x99_mag_Tracer_Red" from the supply. Depending on the module setting the ammo box does hold an entire magazine or only the caliber based amount of rounds.
 
 #### 3.7.2 Example 2
 
