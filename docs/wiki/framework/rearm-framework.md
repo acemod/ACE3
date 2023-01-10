@@ -95,7 +95,7 @@ VEHICLE setVariable ["ace_rearm_scriptedLoadout", true, true];
 1  | Disable rearming, true to disable, false to enable | Boolean | Optional (default: `true`)
 **R** | None | None | Return value
 
-This functions disables rearming for all supported turrets of a certain vehicle.
+This function disables rearming for all supported turrets of a vehicle.
 
 #### 3.2.1 Example 1
 
