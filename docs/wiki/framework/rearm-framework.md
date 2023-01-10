@@ -196,7 +196,7 @@ The 32 artillery shells are added to the supply count or the magazine storage of
 1  | Any vehicle object or class name | Object or String | Required
 **R** | None | None | Return value
 
-This functions wraps `ace_rearm_fnc_addMagazineToSupply` and  uses it to add all default magazines of all supported turrets of the vehicle to the ammo truck.
+This function wraps `ace_rearm_fnc_addMagazineToSupply` and uses it to add all default magazines of all supported turrets of the vehicle to the ammo truck.
 
 #### 3.6.1 Example 1
 
