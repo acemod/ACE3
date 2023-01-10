@@ -127,7 +127,7 @@ Enables rearming on the object `tank`.
 0  | Ammo Truck | Object | Required
 **R** | Supply count | Number | Return value
 
-This functions returns the current supply count of the ammo truck.
+This function returns the current supply count of the ammo truck.
 
 #### 3.3.1 Example
 
