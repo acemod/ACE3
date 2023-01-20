@@ -156,7 +156,7 @@
             <French>Coefficient de réouverture des plaies</French>
             <German>Wundwiederöffnungskoeffizient</German>
             <Czech>Koeficient opětovného otevření rány</Czech>
-            <Russian>Коэффициент повторного открытия раны</Russian>
+            <Russian>Коэф. повторного открытия раны</Russian>
             <Polish>Współczynnik ponownego otwierania ran</Polish>
             <Japanese>再開放係数</Japanese>
             <Turkish>Yara Yeniden Açılma Katsayısı</Turkish>
@@ -924,7 +924,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
             <English>Enable Litter</English>
-            <Russian>Включить мусор</Russian>
+            <Russian>Вкл. мусор</Russian>
             <Polish>Aktywuj odpadki</Polish>
             <Spanish>Activar restos médicos</Spanish>
             <German>Abfälle aktivieren</German>
@@ -1100,7 +1100,7 @@
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_DisplayName">
             <English>CPR Success Chance Minimum</English>
             <French>RCP - Chance minimale de réussite</French>
-            <Russian>Минимальные шансы успеха СЛР</Russian>
+            <Russian>Мин. шансы успеха СЛР</Russian>
             <Polish>Szansa na powodzenie CPR - Minimum</Polish>
             <Japanese>心肺蘇生の最低成功確率</Japanese>
             <German>HLW Minimale Erfolgschance</German>
@@ -1110,7 +1110,7 @@
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
             <English>CPR Success Chance Maximum</English>
             <French>RCP - Chance maximale de réussite</French>
-            <Russian>Максимальные шансы успеха СЛР</Russian>
+            <Russian>Макс. шансы успеха СЛР</Russian>
             <Polish>Szansa na powodzenie CPR - Maksimum</Polish>
             <Japanese>心肺蘇生の最高成功確率</Japanese>
             <German>HLW Maximale Erfolgschance</German>
@@ -1521,7 +1521,7 @@
             <Italian>Bendaggio compressivo</Italian>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz (Tlakový)</Czech>
-            <Japanese>弾性包帯</Japanese>
+            <Japanese>包帯 (弾性)</Japanese>
             <Korean>붕대 (거즈)</Korean>
             <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Chinese>繃帶（包紮型）</Chinese>
@@ -2148,7 +2148,7 @@
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
-            <Japanese>緊急圧迫止血包帯 (クイッククロット)</Japanese>
+            <Japanese>包帯 (クイッククロット)</Japanese>
             <Korean>붕대 (퀵 클롯)</Korean>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Chinese>繃帶 (止血粉)</Chinese>
@@ -2807,7 +2807,7 @@
             <Hungarian>Zárókötszer</Hungarian>
             <Italian>Bendaggio rapido</Italian>
             <Portuguese>Curativo de Campo</Portuguese>
-            <Japanese>緊急圧迫包帯を巻く</Japanese>
+            <Japanese>包帯を巻く (緊急圧迫)</Japanese>
             <Korean>붕대 (기본)</Korean>
             <Chinesesimp>绷带（基础型）</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
@@ -2823,7 +2823,7 @@
             <French>Bandage compressif</French>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz Tlakový</Czech>
-            <Japanese>弾性包帯を巻く</Japanese>
+            <Japanese>包帯を巻く (弾性)</Japanese>
             <Korean>붕대 (거즈)</Korean>
             <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Chinese>包紮繃帶</Chinese>
@@ -2840,7 +2840,7 @@
             <Hungarian>Rögzitő kötszer</Hungarian>
             <Italian>Bendaggio elastico</Italian>
             <Portuguese>Bandagem Elástica</Portuguese>
-            <Japanese>伸縮包帯を巻く</Japanese>
+            <Japanese>包帯を巻く (伸縮)</Japanese>
             <Korean>붕대 (압박)</Korean>
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
@@ -2857,7 +2857,7 @@
             <Hungarian>QuikClot</Hungarian>
             <Italian>QuikClot (polvere emostatica)</Italian>
             <Portuguese>QuikClot</Portuguese>
-            <Japanese>クイッククロットを巻く</Japanese>
+            <Japanese>包帯を巻く (クイッククロット)</Japanese>
             <Korean>붕대 (퀵 클롯)</Korean>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Chinese>止血粉</Chinese>
@@ -3960,6 +3960,7 @@
             <German>%1 reagiert nicht, schnappt nach Luft und verkrampft</German>
             <Chinesesimp>%1没有反应，微软的喘着气和抽搐</Chinesesimp>
             <Korean>%1 은 반응이 없고, 얕은 헐떡임과 경련증세를 보입니다</Korean>
+            <Russian>%1 не реагирует на раздражители, поверхностно дышит, в конвульсиях</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -3969,6 +3970,7 @@
             <German>%1 reagiert nicht, ist regungslos und kalt</German>
             <Chinesesimp>%1没有反应，一动不动，身体冰凉</Chinesesimp>
             <Korean>%1 은 반응이 없고, 움직임이 없으며 차갑습니다</Korean>
+            <Russian>%1 не реагирует на раздражители, не шевелится и холодный</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -4662,7 +4664,7 @@
             <Polish>Ciało drgnęło i może nie być martwe!</Polish>
             <German>Der Körper zuckte und kann nicht tot sein!</German>
             <Chinesesimp>身体抽搐了一下，可能还没死！</Chinesesimp>
-            <Korean>꿈틀대는걸 보니 죽은것 같지는 않습니다!</Korean>
+            <Korean>꿈틀대는걸 보니 죽은 것 같지는 않습니다!</Korean>
         </Key>
     </Package>
 </Project>

@@ -424,7 +424,7 @@
             <Hungarian>javítása...</Hungarian>
             <Russian>Ремонтируем...</Russian>
             <Japanese>修理しています・・・</Japanese>
-            <Korean>수리중...</Korean>
+            <Korean>수리 중...</Korean>
             <Chinesesimp>正在维修...</Chinesesimp>
             <Chinese>維修中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
@@ -441,7 +441,7 @@
             <Hungarian>%1 javítása...</Hungarian>
             <Russian>Ремонтируем %1...</Russian>
             <Japanese>%1 を修理しています・・・</Japanese>
-            <Korean>%1 수리중...</Korean>
+            <Korean>%1 수리 중...</Korean>
             <Chinesesimp>正在维修%1...</Chinesesimp>
             <Chinese>維修%1中...</Chinese>
             <Turkish>Tamir Ediliyor %1...</Turkish>
@@ -474,7 +474,7 @@
             <Italian>Parte riparata completamente</Italian>
             <French>Pièce entièrement réparée.</French>
             <Japanese>完全に修理された部品</Japanese>
-            <Korean>부분 완벽히 수리됨</Korean>
+            <Korean>완전수리된 부품</Korean>
             <Chinesesimp>完整维修部分</Chinesesimp>
             <Chinese>完整維修部分</Chinese>
         </Key>
@@ -1455,7 +1455,7 @@
             <Italian>Lista di unità che verranno classificate come genieri, separate da virgole.</Italian>
             <French>Liste d'unités qui seront classées comme ingénieurs, séparées par des virgules.</French>
             <Japanese>一覧に記載されたユニット名を、工兵として指定します。コンマで複数を指定できます。</Japanese>
-            <Korean>목록내 보직이름은 정비공으로 분류됩니다. 쉼표로 구분합니다.</Korean>
+            <Korean>목록 내 보직이름은 정비공으로 분류됩니다. 쉼표로 구분합니다.</Korean>
             <Chinesesimp>工兵名单，把单位名称输入在这边即可定义其为工兵。每个单位使用逗号以做区隔。</Chinesesimp>
             <Chinese>工兵名單，把單位名稱輸入在這邊即可定義其為工兵。每個單位使用逗號以做區隔。</Chinese>
         </Key>
@@ -2023,7 +2023,7 @@
             <English>Auto shut off engine on repair</English>
             <German>Motor automatisch ausschalten</German>
             <Japanese>修理時にエンジン自動停止</Japanese>
-            <Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
+            <Chinesesimp>维修时自动关闭发动机</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Italian>Motore spento automaticamente durante la riparazione</Italian>
             <Polish>Automatycznie wyłącz silnik podczas napraw</Polish>

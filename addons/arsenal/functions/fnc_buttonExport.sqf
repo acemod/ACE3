@@ -43,7 +43,7 @@ if (GVAR(shiftState)) then {
     [_display, localize LSTRING(exportDefault)] call FUNC(message);
 } else {
 
-    private _export = str getUnitLoadout GVAR(center);
+    private _export = str ([GVAR(center)] call FUNC(getLoadout));
     "ace_clipboard" callExtension (_export + ";");
     "ace_clipboard" callExtension "--COMPLETE--";
 

@@ -1,4 +1,7 @@
 class ACE_CSW_Groups {
+
+    // --- Gun Turrets -------------------------------------------------------------
+
     class ace_csw_100Rnd_127x99_mag {
         vn_m2_v_100_mag = 1;
     };
@@ -30,6 +33,24 @@ class ACE_CSW_Groups {
     class vn_pk_100_mag {
         vn_pk_v_100_mag = 1;
     };
+
+    class GVAR(mg42_250) {
+        vn_mg42_v_250_mag = 1;
+    };
+
+    class GVAR(sgm_250) {
+        vn_sgm_v_250_mag = 1;
+    };
+
+    class GVAR(mk18_24) {
+        vn_mk18_v_24_mag = 1;
+    };
+
+    class GVAR(mk18_48) {
+        vn_mk18_v_48_mag = 1;
+    };
+
+    // --- Mortars -----------------------------------------------------------------
 
     class GVAR(81mm_he)  {
         vn_mortar_m29_mag_he_x8 = 1;

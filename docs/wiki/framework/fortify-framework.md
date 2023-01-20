@@ -30,7 +30,7 @@ If the Fortify module is present in the mission, server admins can use chat comm
 
 ## 1.2 Adding custom presets
 
-There are two ways of adding custom presets to your mission, either via code or through desciption.ext.
+There are three ways of adding custom presets to your mission, either via code, through desciption.ext or through config.
 
 To add a preset via code you use the function `call ace_fortify_fnc_registerObjects`. Also enables Fortify.
 
@@ -52,11 +52,11 @@ To add a preset via code you use the function `call ace_fortify_fnc_registerObje
 * [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call ace_fortify_fnc_registerObjects
 ```
 
-Adding it through `description.ext` you use:
+Adding it through `description.ext` or config you use:
 
 ```cpp
 class ACEX_Fortify_Presets {
-    class myMissionObjects {
+    class TAG_MyPreset {
         displayName = "My Preset";
         objects[] = {
             {"Sandbag", 5},
@@ -66,8 +66,8 @@ class ACEX_Fortify_Presets {
 };
  ```
 
-Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or the chat command: `#ace-fortify blufor myMissionObjects`.
- 
+Then you will have to set the mission preset to `TAG_MyPreset` by either using the Fortify editor module or the chat command: `#ace-fortify blufor TAG_MyPreset`.
+
 ## 1.3 Adding custom deploy handlers
 
 A custom deploy handler allows missions makers to decide if an object can be placed or not.
@@ -80,6 +80,25 @@ To verify that an object isn't above a certain terrain height we can check the h
     private _return = (getPosATL _object) select 2 < 1;
     _return
 }] call ace_fortify_fnc_addDeployHandler;
+```
+
+## 1.4 Updating budget
+
+The Fortify budget can be updated for any side using the function.
+
+```sqf
+* Updates the given sides budget.
+*
+* Arguments:
+* 0: Side <SIDE>
+* 1: Change <NUMBER> (default: 0)
+* 2: Display hint <BOOL> (default: true)
+*
+* Return Value:
+* None
+*
+* Example:
+* [west, -250, false] call ace_fortify_fnc_updateBudget
 ```
 
 

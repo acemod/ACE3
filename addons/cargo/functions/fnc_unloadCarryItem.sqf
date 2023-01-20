@@ -19,6 +19,7 @@ params ["_unloader", "_object"];
 TRACE_2("unloadCarryItem-start",_unloader,_object);
 
 if !(["ace_dragging"] call EFUNC(common,isModLoaded)) exitWith {};
+if (!GVAR(carryAfterUnload) || {getNumber (configOf _object >> QGVAR(blockUnloadCarry)) > 0}) exitWith {};
 
 // When unloading attached objects, this code will run before server has finished moving object to the safe position
 [{
@@ -35,5 +36,5 @@ if !(["ace_dragging"] call EFUNC(common,isModLoaded)) exitWith {};
     };
 }, _this, 1.0, {  // delay is based on how long it will take server event to trigger and take effect
     // not a hard error if this fails, could have just unloaded to other side of vehicle because of findSafePos
-    TRACE_1("unloadCarryItem-failed to unload nearby player",_this); 
+    TRACE_1("unloadCarryItem-failed to unload nearby player",_this);
 }] call CBA_fnc_waitUntilAndExecute;
