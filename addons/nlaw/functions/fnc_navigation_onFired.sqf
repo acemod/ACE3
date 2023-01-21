@@ -52,8 +52,8 @@ if (_shooter == ACE_player) then {
 };
 
 // Limit Max Deflection
-_yawChange = -10 max _yawChange min 10;
-_pitchChange = -10 max _pitchChange min 10;
+//_yawChange = -10 max _yawChange min 10;
+//_pitchChange = -10 max _pitchChange min 10;
 
 ((velocity _projectile) call CBA_fnc_vect2polar) params ["", "_currentYaw", "_currentPitch"];
 ((ACE_player weaponDirection (currentWeapon ACE_player)) call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];

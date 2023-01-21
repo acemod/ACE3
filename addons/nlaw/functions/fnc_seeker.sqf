@@ -16,7 +16,7 @@
  *
  * Public: No
  */
-#define PITCH_UP_TIME 1
+#define PITCH_UP_TIME 0.5
 
 params ["", "_args", "_seekerStateParams", "", "", "_targetData"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];

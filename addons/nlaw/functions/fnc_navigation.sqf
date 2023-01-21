@@ -15,16 +15,16 @@
  * Public: No
  */
 // arbitrary constant
-#define PROPORTIONALITY_CONSTANT 3
+#define PROPORTIONALITY_CONSTANT 10
 params ["_args", "_timestep", "_seekerTargetPos", "_profileAdjustedTargetPos", "_targetData", "_navigationParams"];
 _args params ["_firedEH"];
 _firedEH params ["","","","","","","_projectile"];
 
-_navigationParams params ["_yawChange", "_pitchChange", "_lastPitch", "_lastYaw", "_initialPitch"];
+_navigationParams params ["_yawChange", "_pitchChange", "_lastPitch", "_lastYaw", "_initialPitch", "_pitchUp"];
 
-// for some reason we need to double this. I don't know why, but it just works
-_pitchChange = _pitchChange * 2;
-_yawChange = _yawChange * 2;
+// for some reason we need to multiply this. I don't know why, but it just works
+_pitchChange = _pitchChange * 1.5;
+_yawChange = _yawChange * 1.5;
 
 ((velocity _projectile) call CBA_fnc_vect2polar) params ["", "_currentYaw", "_currentPitch"];
 
@@ -41,7 +41,7 @@ private _pitchModifier = if (_pitchChange == 0) then {
     abs (_pitchRate / _pitchChange)
 };
 private _desiredPitchChange = (_pitchChange - _pitchRate) * PROPORTIONALITY_CONSTANT * _pitchModifier;
-_desiredPitchChange = _desiredPitchChange + (_initialPitch - _currentPitch) * PROPORTIONALITY_CONSTANT * _pitchModifier;
+_desiredPitchChange = _desiredPitchChange + _pitchUp * (_initialPitch - _currentPitch) * PROPORTIONALITY_CONSTANT * _pitchModifier;
 
 private _yawRate = if (_timestep == 0) then {
     0
