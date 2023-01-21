@@ -22,14 +22,14 @@ class CfgMagazines {
         author = "Dani (TCVM)";
         displayName = CSTRING(a_1x);
         ammo = QGVAR(a);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
 
     class GVAR(PylonMissile_1Rnd_a): PylonMissile_1Rnd_GAA_missiles {
         author = "Dani (TCVM)";
         displayName = CSTRING(a_1x);
         ammo = QGVAR(a);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
 
     // AIM-120
@@ -42,44 +42,44 @@ class CfgMagazines {
         author = "Dani (TCVM)";
         displayName = CSTRING(c_1x);
         ammo = QGVAR(c);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
     class GVAR(PylonRack_Missile_c_x1): PylonRack_Missile_AMRAAM_C_x1 {
         author = "Dani (TCVM)";
         displayName = CSTRING(c_1x);
         ammo = QGVAR(c);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
     class GVAR(PylonRack_Missile_c_x2): PylonRack_Missile_AMRAAM_C_x2 {
         author = "Dani (TCVM)";
         displayName = CSTRING(c_2x);
         ammo = QGVAR(c);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
 
     class GVAR(PylonMissile_Missile_d_x1): PylonMissile_Missile_AMRAAM_D_x1 {
         author = "Dani (TCVM)";
         displayName = CSTRING(d_1x);
         ammo = QGVAR(d);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
     class GVAR(PylonMissile_Missile_d_INT_x1): PylonMissile_Missile_AMRAAM_D_INT_x1 {
         author = "Dani (TCVM)";
         displayName = CSTRING(d_1x);
         ammo = QGVAR(d);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
     class GVAR(PylonRack_Missile_d_x1): PylonRack_Missile_AMRAAM_D_x1 {
         author = "Dani (TCVM)";
         displayName = CSTRING(d_1x);
         ammo = QGVAR(d);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
     class GVAR(PylonRack_Missile_d_x2): PylonRack_Missile_AMRAAM_D_x2 {
         author = "Dani (TCVM)";
         displayName = CSTRING(d_2x);
         ammo = QGVAR(d);
-        pylonWeapon = GVAR(aim120Launcher);
+        pylonWeapon = QGVAR(aim120Launcher);
     };
 
     // R-77

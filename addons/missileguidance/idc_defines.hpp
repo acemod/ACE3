@@ -1,0 +1,34 @@
+#ifndef GPS_UI_TOO
+#define GPS_UI_TOO 1704211
+#endif
+#ifndef GPS_UI_PB
+#define GPS_UI_PB 1704112
+#endif
+#ifndef GPS_UI_PB_MISSION
+#define GPS_UI_PB_MISSION 1704113
+#endif
+#ifndef GPS_UI_PB_MISSION_BACKWARD
+#define GPS_UI_PB_MISSION_BACKWARD 1704114
+#endif
+#ifndef GPS_UI_PB_MISSION_FORWARD
+#define GPS_UI_PB_MISSION_FORWARD 1704115
+#endif
+#ifndef GPS_UI_EASTING
+#define GPS_UI_EASTING 1704116
+#endif
+#ifndef GPS_UI_NORTHING
+#define GPS_UI_NORTHING 1704117
+#endif
+#ifndef GPS_UI_HEIGHT
+#define GPS_UI_HEIGHT 1704118
+#endif
+#ifndef GPS_UI_ANGLE
+#define GPS_UI_ANGLE 1704119
+#endif
+#ifndef GPS_UI_HEADING
+#define GPS_UI_HEADING 1704120
+#endif
+#ifndef IDC_TIMER_CONFIRM
+#define IDC_TIMER_CONFIRM 1704121
+#endif
+
