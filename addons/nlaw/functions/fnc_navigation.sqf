@@ -20,7 +20,7 @@ params ["_args", "_timestep", "_seekerTargetPos", "_profileAdjustedTargetPos", "
 _args params ["_firedEH"];
 _firedEH params ["","","","","","","_projectile"];
 
-_navigationParams params ["_yawChange", "_pitchChange", "_lastPitch", "_lastYaw"];
+_navigationParams params ["_yawChange", "_pitchChange", "_lastPitch", "_lastYaw", "_initialPitch"];
 
 // for some reason we need to double this. I don't know why, but it just works
 _pitchChange = _pitchChange * 2;
@@ -41,6 +41,7 @@ private _pitchModifier = if (_pitchChange == 0) then {
     abs (_pitchRate / _pitchChange)
 };
 private _desiredPitchChange = (_pitchChange - _pitchRate) * PROPORTIONALITY_CONSTANT * _pitchModifier;
+_desiredPitchChange = _desiredPitchChange + (_initialPitch - _currentPitch) * PROPORTIONALITY_CONSTANT * _pitchModifier;
 
 private _yawRate = if (_timestep == 0) then {
     0
