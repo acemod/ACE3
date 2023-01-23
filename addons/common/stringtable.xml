@@ -1584,6 +1584,12 @@
             <Chinesesimp>剩余时间</Chinesesimp>
             <Korean>남은 시간</Korean>
         </Key>
+        <Key ID="STR_ACE_Common_progressBarHideCursor">
+            <English>Hide cursor during progress bar</English>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarHideCursorDesc">
+            <English>Hides the cursor when the progress bar is shown.</English>
+        </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
             <Czech>Žádná</Czech>

@@ -100,3 +100,12 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     [[0, 1, 2], [LSTRING(None), LSTRING(progressBarInfoPercentage), LSTRING(progressBarInfoTime)], 2],
     0
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(progressBarHideCursor),
+    "CHECKBOX",
+    [LSTRING(progressBarHideCursor), LSTRING(progressBarHideCursorDesc)],
+    _category,
+    true,
+    true
+] call CBA_fnc_addSetting;
