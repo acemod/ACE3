@@ -31,11 +31,9 @@ closeDialog 0;
 createDialog QGVAR(ProgressBar_Dialog);
 
 // Hide cursor by using custom transparent cursor
-if (GVAR(progressBarHideCursor)) then {
-    private _display = uiNamespace getVariable QGVAR(dlgProgress);
-    private _map = _display displayCtrl 101;
-    _map ctrlMapCursor ["", QGVAR(blank)];
-};
+private _display = uiNamespace getVariable QGVAR(dlgProgress);
+private _map = _display displayCtrl 101;
+_map ctrlMapCursor ["", QGVAR(blank)];
 
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
 
