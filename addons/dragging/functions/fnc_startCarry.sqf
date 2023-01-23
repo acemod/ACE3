@@ -52,7 +52,8 @@ if (_target isKindOf "CAManBase") then {
 
 } else {
     // select no weapon and stop sprinting
-    _unit setVariable [QGVAR(previousWeapon), currentWeapon _unit, true];
+    private _previousWeaponIndex = [_unit] call EFUNC(common,getFiremodeIndex);
+    _unit setVariable [QGVAR(previousWeapon), _previousWeaponIndex, true];
     _unit action ["SwitchWeapon", _unit, _unit, 299];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 

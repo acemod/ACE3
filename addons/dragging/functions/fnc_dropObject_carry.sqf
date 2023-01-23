@@ -48,11 +48,11 @@ if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) 
 _unit removeWeapon "ACE_FakePrimaryWeapon";
 
 // reselect weapon and re-enable sprint
-private _previousWeapon = _unit getVariable [QGVAR(previousWeapon), primaryWeapon _unit];
+private _previousWeaponIndex = _unit getVariable [QGVAR(previousWeapon), -1];
 _unit setVariable [QGVAR(previousWeapon), nil, true];
 
-if (_previousWeapon != "") then {
-    _unit selectWeapon _previousWeapon;
+if (_previousWeaponIndex != -1) then {
+    _unit action ["SwitchWeapon", _unit, _unit, _previousWeaponIndex];
 };
 
 [_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
