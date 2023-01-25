@@ -245,7 +245,7 @@
             <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
             <Czech>Provést akci při pustění klávesy menu</Czech>
             <French>Action au relâchement des touches</French>
-            <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
+            <Russian>Выполнять при отпускании кнопки меню</Russian>
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
@@ -492,7 +492,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
             <English>Consolidate single child actions</English>
-            <Russian>Объединять с единственным дочерним действием</Russian>
+            <Russian>Объединять ед. дочерные действия</Russian>
             <Japanese>サブ動作を統合</Japanese>
             <Spanish>Consolidar acciones hijo únicas</Spanish>
             <French>Combiner les sous-actions uniques</French>

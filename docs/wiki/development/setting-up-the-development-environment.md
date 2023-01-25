@@ -58,7 +58,7 @@ mklink /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
 mklink /J "P:\z\ace" "[location of the ACE3 project]"
 ```
 
-Then, copy the `cba` folder from the `tools` folder to `P:\x\cba`. Create the `x` folder if needed. That folder contains the parts of the CBA source code that are required for the macros to work.
+Then, copy the `cba` folder from the `include\x` folder to `P:\x\cba`. Create the `x` folder if needed. That folder contains the parts of the CBA source code that are required for the macros to work.
 
 
 ## 4.2 Creating a Test Build

@@ -2825,6 +2825,7 @@
             <Polish>Magazynek 6.5x47 mm 30rd Piaskowy (HPBT Scenar)</Polish>
             <Chinesesimp>6.5x47 mm 30发 沙色弹匣（HPBT Scenar）</Chinesesimp>
             <Korean>6.5x47 mm 30발 사막 탄창 (HPBT Scenar)</Korean>
+            <Russian>Магазин из 30-ти 6.5x47 мм Песочный (HPBT Scenar)</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_msbs_mag_Name">
             <English>6.5x47 mm 30Rnd Promet Mag (HPBT Scenar)</English>
@@ -2834,6 +2835,7 @@
             <Polish>Magazynek 6.5x47 mm 30rd Promet (HPBT Scenar)</Polish>
             <Chinesesimp>6.5x47 mm 30发 Promet 弹匣（HPBT Scenar）</Chinesesimp>
             <Korean>6.5x47 mm 30발 프로멧 탄창 (HPBT Scenar)</Korean>
+            <Russian>Магазин из 30-ти 6.5x47 мм Promet (HPBT Scenar)</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_black_mag_Name">
             <English>6.5x47 mm 30Rnd Black Mag (HPBT Scenar)</English>
@@ -2843,6 +2845,7 @@
             <Polish>Magazynek 6.5x47 mm 30rd Czarny (HPBT Scenar)</Polish>
             <Chinesesimp>6.5x47 mm 30发 黑色弹匣（HPBT Scenar）</Chinesesimp>
             <Korean>6.5x47 mm 30발 검정 탄창 (HPBT Scenar)</Korean>
+            <Russian>Магазин из 30-ти 6.5x47 мм Чёрный (HPBT Scenar)</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_khaki_mag_Name">
             <English>6.5x47 mm 30Rnd Khaki Mag (HPBT Scenar)</English>
@@ -2852,6 +2855,7 @@
             <Polish>Magazynek 6.5x47 mm 30rd Khaki (HPBT Scenar)</Polish>
             <Chinesesimp>6.5x47 mm 30发 卡其色弹匣（HPBT Scenar）</Chinesesimp>
             <Korean>6.5x47 mm 30발 카키 탄창 (HPBT Scenar)</Korean>
+            <Russian>Магазин из 30-ти 6.5x47 мм Хаки (HPBT Scenar)</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5 mm Lapua</English>
@@ -2912,6 +2916,7 @@
             <Polish>Magazynek 6.5 mm Creedmor 30Rnd Piaskowy</Polish>
             <Chinesesimp>6.5 mm 30发 沙色弹匣（Creedmor）</Chinesesimp>
             <Korean>6.5 mm 크리드무어 30발 사막 탄창</Korean>
+            <Russian>Магазин из 30-ти 6.5 мм Creedmor Песочный</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_msbs_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Promet Mag</English>
@@ -2921,6 +2926,7 @@
             <Polish>Magazynek 6.5 mm Creedmor 30Rnd Promet</Polish>
             <Chinesesimp>6.5 mm 30发 Promet 弹匣（Creedmor）</Chinesesimp>
             <Korean>6.5 mm 크리드무어 30발 프로멧 탄창</Korean>
+            <Russian>Магазин из 30-ти 6.5 мм Creedmor Promet</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_black_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Black Mag</English>
@@ -2930,6 +2936,7 @@
             <Polish>Magazynek 6.5 mm Creedmor 30Rnd Czarny</Polish>
             <Chinesesimp>6.5 mm 30发 黑色弹匣（Creedmor）</Chinesesimp>
             <Korean>6.5 mm 크리드무어 30발 검정 탄창</Korean>
+            <Russian>Магазин из 30-ти 6.5 мм Creedmor Чёрный</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_khaki_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Khaki Mag</English>
@@ -2939,6 +2946,7 @@
             <Polish>Magazynek 6.5 mm Creedmor 30Rnd Khaki</Polish>
             <Chinesesimp>6.5 mm 30发 卡其色弹匣（Creedmor）</Chinesesimp>
             <Korean>6.5 mm 크리드무어 30발 카키 탄창</Korean>
+            <Russian>Магазин из 30-ти 6.5 мм Creedmor Хаки</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5 mm CM</English>

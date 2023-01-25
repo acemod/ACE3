@@ -1231,6 +1231,7 @@
             <Polish>Pokaż utratę krwi</Polish>
             <Japanese>失血量の表示</Japanese>
             <Chinesesimp>显示失血量</Chinesesimp>
+            <Russian>Показывать кровопотерю</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
             <English>Show qualitative blood loss in the injury list.</English>
@@ -1239,6 +1240,7 @@
             <Polish>Pokaż jakościową utratę krwi na liście ran.</Polish>
             <Japanese>負傷リストに段階的な失血量を表示します。</Japanese>
             <Chinesesimp>在负伤列表中显示失血阶段</Chinesesimp>
+            <Russian>Показывать тяжесть кровопотери в списке ранений.</Russian>
         </Key>
     </Package>
 </Project>
