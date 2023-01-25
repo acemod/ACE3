@@ -1,6 +1,0 @@
-[project]
-name = "ACE 3"
-files = [
-    "*.dll",
-    "logo_ace3_ca.paa",
-]
