@@ -15,12 +15,14 @@
  * Public: No
  */
 
-if (!hasInterface) exitWith {};
-
 params ["_source"];
 TRACE_2("init",_source,typeOf _source);
 
-[_source, 0, ["ACE_MainActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToObject);
-{
-    [_source, 0, ["ACE_MainActions", QGVAR(Refuel)], _x] call EFUNC(interact_menu,addActionToObject);
-} forEach GVAR(actions);
+if (hasInterface) then {
+	[_source, 0, ["ACE_MainActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToObject);
+    {
+        [_source, 0, ["ACE_MainActions", QGVAR(Refuel)], _x] call EFUNC(interact_menu,addActionToObject);
+    } forEach GVAR(actions);
+};
+
+[QGVAR(fuelSourceInitialized), [_source]] call CBA_fnc_localEvent;
