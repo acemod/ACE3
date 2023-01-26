@@ -41,6 +41,8 @@ class CfgVehicles {
 ### 2.1 Make an object into a refuel source
 *Added in ACE3 3.11.0*
 
+Meant to be called on server only.
+
 `ace_refuel_fnc_makeSource`
 
    | Arguments | Type | Optional (default value)
@@ -96,6 +98,8 @@ class CfgVehicles {
 1  | `428` | New fuel amount (in liters)
 
 ### 2.4 Make a jerry can
+
+Meant to be run on all clients and server.
 
 `ace_refuel_fnc_makeJerryCan`
 
