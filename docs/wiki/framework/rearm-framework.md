@@ -67,6 +67,8 @@ VEHICLE setVariable ["ace_rearm_scriptedLoadout", true, true];
 #### 3.1 Make an object into a rearm source
 *Added in ACE3 3.12.3*
 
+Meant to run on server only.
+
 `ace_rearm_fnc_makeSource`
 
    | Arguments | Type | Optional (default value)
