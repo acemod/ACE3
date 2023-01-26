@@ -56,9 +56,11 @@ if (
     _source setVariable [QGVAR(hooks), _hooks, true];
 };
 
-// check if menu already exists
-if (_fuelCargoConfig != 0 || {!isNil {_source getVariable QGVAR(initSource_jipID)}}) exitWith {};
+// only add if menu doesn't already exist
+if (!(_fuelCargoConfig != 0 && {!isNil {_source getVariable QGVAR(initSource_jipID)}})) then {
+    private _jipID = [QGVAR(initSource), [_source]] call CBA_fnc_globalEventJIP;
+    [_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
+    _source setVariable [QGVAR(initSource_jipID), _jipID];
+};
 
-private _jipID = [QGVAR(initSource), [_source]] call CBA_fnc_globalEventJIP;
-[_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
-_source setVariable [QGVAR(initSource_jipID), _jipID];
+[QGVAR(sourceInitialized), [_source]] call CBA_fnc_globalEvent;
