@@ -4,11 +4,11 @@ author = "ACE-Team"
 
 [files]
 include = [
-    #"*.dll", # TODO https://github.com/BrettMayson/HEMTT/issues/455
-    #"*.so",
+    "*.dll",
+    "*.so",
     "mod.cpp",
     "README.md",
-    #"docs/README_*.md", # TODO https://github.com/BrettMayson/HEMTT/issues/460
+    "docs/README_*.md",
     "AUTHORS.txt",
     "LICENSE",
     "logo_ace3_ca.paa",
@@ -23,7 +23,7 @@ git_hash = 0
 #version = "{{git \"id 8\"}}"
 
 [asc]
-enabled = false # TODO v0.10-a14 broken on Linux
+enabled = true
 exclude = [
     "/initsettings.sqf",
     "/initkeybinds.sqf",
