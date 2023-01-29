@@ -92,7 +92,11 @@ if (_tryLoad && {!isNull cursorObject} && {([ACE_player, cursorObject, []] call 
     if (_target isKindOf "CAManBase") then {
         private _vehicles = [cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
         if ([cursorObject] isEqualTo _vehicles) then {
-            [ACE_player, _target, cursorObject] call EFUNC(medical_treatment,loadUnit);
+            if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+                [_unit, _target, cursorObject] call EFUNC(medical_treatment,loadUnit);
+            } else {
+                [_unit, _target, cursorObject] call EFUNC(common,loadPerson);
+            };
         };
     } else {
         if ([_target, cursorObject] call EFUNC(cargo,canLoadItemIn)) then {
