@@ -31,6 +31,25 @@ if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
+// Update mouse hint
+private _ctrlTextLMB = (uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420;
+if (
+    !isNull cursorObject
+    && {([ACE_player, cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith))}
+    && {
+        if (_target isKindOf "CAManBase") then {
+            ([] isNotEqualTo ([cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat)))
+            && {([_target, cursorObject] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+        } else {
+            [_target, cursorObject] call EFUNC(cargo,canLoadItemIn)
+        }
+    }
+) then {
+    _ctrlTextLMB ctrlSetText localize ELSTRING(Cargo,loadObject);
+} else {
+    _ctrlTextLMB ctrlSetText localize LSTRING(Drop);
+};
+
 // drop if the crate is destroyed OR (target moved away from carrier (weapon disasembled))
 if (!alive _target || {_unit distance _target > 10}) then {
     TRACE_2("dead/distance",_unit,_target);

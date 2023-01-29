@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_unit", "_target"];
+ params ["_unit", "_target", ["_tryLoad", false]];
 TRACE_1("params",_this);
 
 // remove drop action
@@ -86,3 +86,17 @@ if (_mass != 0) then {
 
 // reset temp direction
 _target setVariable [QGVAR(carryDirection_temp), nil];
+
+// try loading into vehicle
+if (_tryLoad && {!isNull cursorObject} && {([ACE_player, cursorObject, []] call EFUNC(common,canInteractWith))}) then {
+    if (_target isKindOf "CAManBase") then {
+        private _vehicles = [cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
+        if ([cursorObject] isEqualTo _vehicles) then {
+            [ACE_player, _target, cursorObject] call EFUNC(medical_treatment,loadUnit);
+        };
+    } else {
+        if ([_target, cursorObject] call EFUNC(cargo,canLoadItemIn)) then {
+            [player, _target, cursorObject] call EFUNC(cargo,startLoadIn);
+        };
+    };
+};
