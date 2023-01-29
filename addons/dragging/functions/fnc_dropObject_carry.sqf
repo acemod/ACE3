@@ -16,7 +16,7 @@
  * Public: No
  */
 
- params ["_unit", "_target", ["_tryLoad", false]];
+params ["_unit", "_target", ["_tryLoad", false]];
 TRACE_1("params",_this);
 
 // remove drop action
