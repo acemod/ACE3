@@ -73,7 +73,7 @@ class CfgAmmo {
 
             pitchRate = 100; // degrees per second
             yawRate = 100;
-
+            stabilityCoefficient = 0.2;
             bangBangGuidance = 0;
 
             canVanillaLock = 0;

@@ -65,5 +65,6 @@ _navigationParams set [2, _currentPitch]; // last pitch
 _navigationParams set [3, _currentYaw]; // last yaw
 _navigationParams set [4, _pitch]; // initial pitch
 _navigationParams set [5, 0]; // whether or not to zero out the pitch
+_navigationParams set [6, 0];
 _navigationParams
 

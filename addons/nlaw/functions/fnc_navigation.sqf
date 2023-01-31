@@ -15,12 +15,12 @@
  * Public: No
  */
 // arbitrary constant
-#define PROPORTIONALITY_CONSTANT 10
+#define PROPORTIONALITY_CONSTANT 20
 params ["_args", "_timestep", "_seekerTargetPos", "_profileAdjustedTargetPos", "_targetData", "_navigationParams"];
 _args params ["_firedEH"];
 _firedEH params ["","","","","","","_projectile"];
 
-_navigationParams params ["_yawChange", "_pitchChange", "_lastPitch", "_lastYaw", "_initialPitch", "_pitchUp"];
+_navigationParams params ["_yawChange", "_pitchChange", "_lastPitch", "_lastYaw", "_initialPitch", "_pitchUp", "_lastYawRateDifference"];
 
 // for some reason we need to multiply this. I don't know why, but it just works
 _pitchChange = _pitchChange * 1.5;
@@ -55,7 +55,17 @@ private _yawModifier = if (_yawChange == 0) then {
 } else {
     abs (_yawRate / _yawChange)
 };
-private _desiredYawChange = (_yawChange - _yawRate) * PROPORTIONALITY_CONSTANT * _yawModifier;
+
+private _yawRateDifference = _yawChange - _yawRate;
+private _yawChangeDerivative = if (_timestep == 0) then {
+    0 
+} else {
+    (_yawRateDifference - _lastYawRateDifference) / _timestep
+};
+_navigationParams set [6, _yawRateDifference];
+
+private _desiredYawChange = _yawRateDifference * PROPORTIONALITY_CONSTANT + _yawRateDifference * 2;
+systemChat str [_yawChange, _yawRate];
 
 #ifdef DRAW_NLAW_INFO
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLtoAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["dP [%1] dY: [%2]", _desiredPitchChange, _desiredYawChange], 1, 0.025, "TahomaB"];

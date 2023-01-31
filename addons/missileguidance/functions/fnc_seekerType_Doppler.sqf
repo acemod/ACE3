@@ -128,7 +128,6 @@ if !(isNull _target) then {
     private _filterTarget = [_target, _projectile, _minimumFilterSpeed, _minimumFilterTime, _maxTerrainCheck, _seekerAngle] call FUNC(shouldFilterRadarHit);
     if (_filterTarget) then {
         // filter out target
-        systemChat "filter";
         _target = objNull;
         _seekerStateParams set [9, true];
     } else {

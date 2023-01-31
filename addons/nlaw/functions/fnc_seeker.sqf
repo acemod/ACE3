@@ -16,7 +16,7 @@
  *
  * Public: No
  */
-#define PITCH_UP_TIME 0.5
+#define PITCH_UP_TIME 1
 
 params ["", "_args", "_seekerStateParams", "", "", "_targetData"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
@@ -36,7 +36,7 @@ _navigationParams params ["", "_pitchRate"];
 // pitch up for the first second of flight to begin an over-fly trajectory
 private _pitchChange = linearConversion [0, PITCH_UP_TIME, CBA_missionTime - _startTime, 2, 0, true];
 _navigationParams set [1, _originalPitchRate + _pitchChange];
-_navigationParams set [5, (CBA_missionTime - _startTime) min PITCH_UP_TIME];
+_navigationParams set [5, ((CBA_missionTime - _startTime) min PITCH_UP_TIME) / PITCH_UP_TIME];
 
 private _projPos = getPosASL _projectile;
 
