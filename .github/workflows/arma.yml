@@ -33,16 +33,16 @@ jobs:
       continue-on-error: true # No failure due to many false-positives
 
   build:
-   runs-on: ubuntu-latest
-   steps:
-   - name: Checkout the source code
-     uses: actions/checkout@master
-   - name: Build using HEMTT
-     uses: arma-actions/hemtt@master
-     with:
-       command: build --release --ci
-   - name: Upload Artifact
-     uses: actions/upload-artifact@v2-preview
-     with:
-       name: ace3-${{ github.sha }}-nobin
-       path: releases/ace3_*.zip
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Build using HEMTT
+      uses: arma-actions/hemtt@master
+      with:
+        command: build --release --ci
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2-preview
+      with:
+        name: ace3-${{ github.sha }}-nobin
+        path: releases/ace3_*.zip
