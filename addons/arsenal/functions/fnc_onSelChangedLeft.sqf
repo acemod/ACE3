@@ -291,11 +291,11 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(center) setUnitLoadout _loadout;
 
                 private _uniformItems = uniformItems GVAR(center);
-                private _index = count _backpackItems - 1;
+                private _index = count _uniformItems - 1;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
                 while {loadUniform GVAR(center) > 1} do {
-                    GVAR(center) removeItemFromUniform (_backpackItems select _index);
+                    GVAR(center) removeItemFromUniform (_uniformItems select _index);
                     DEC(_index);
                 };
 
@@ -331,12 +331,12 @@ switch (GVAR(currentLeftPanel)) do {
                 _loadout set [IDX_LOADOUT_VEST, [_item, GVAR(currentItems) select IDX_CURR_VEST_ITEMS]];
                 GVAR(center) setUnitLoadout _loadout;
 
-                private _backpackItems = vestItems GVAR(center);
-                private _index = count _backpackItems - 1;
+                private _vestItems = vestItems GVAR(center);
+                private _index = count _vestItems - 1;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
                 while {loadVest GVAR(center) > 1} do {
-                    GVAR(center) removeItemFromVest (_backpackItems select _index);
+                    GVAR(center) removeItemFromVest (_vestItems select _index);
                     DEC(_index);
                 };
 
