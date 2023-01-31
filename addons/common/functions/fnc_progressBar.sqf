@@ -33,7 +33,7 @@ createDialog QGVAR(ProgressBar_Dialog);
 private _display = uiNamespace getVariable QGVAR(dlgProgress);
 
 // Ensure CBA keybindings are hooked into the display
-[_display] call (uiNamespace getVariable ["CBA_events_fnc_initDisplayCurator", {}]);
+_display call (uiNamespace getVariable "CBA_events_fnc_initDisplayCurator");
 
 // Hide cursor by using custom transparent cursor
 private _map = _display displayCtrl 101;
