@@ -22,8 +22,8 @@ if (isNull _source) exitWith {0};
 private _fuel = _source getVariable QGVAR(currentFuelCargo);
 
 if (isNil "_fuel") then {
-    // Get capacity will initialize the fuel source and return the amount of fuel in the tank
+    // Calling getCapacity will initialize the fuel source and return the amount of fuel in the tank
     _fuel = [_source] call FUNC(getCapacity);
 };
 
-_fuel;
+_fuel
