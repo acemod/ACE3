@@ -19,4 +19,11 @@ params [["_source", objNull, [objNull]]];
 
 if (isNull _source) exitWith {0};
 
-_source getVariable [QGVAR(currentFuelCargo), 0];
+private _fuel = _source getVariable QGVAR(currentFuelCargo);
+
+if (isNil "_fuel") then {
+    // Get capacity will initialize the fuel source and return the amount of fuel in the tank
+    _fuel = [_source] call FUNC(getCapacity);
+};
+
+_fuel;
