@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#include "\a3\ui_f_curator\ui\defineresincldesign.inc"
+#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 /*
  * Author: commy2
  * Disables key input. ESC can still be pressed to open the menu.
