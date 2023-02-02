@@ -79,7 +79,7 @@ class GVAR(actions) {
         icon = QPATHTOEF(medical_gui,ui\tourniquet.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_tourniquet"};
-        treatmentTime = QGVAR(treatmentTimeTourniquet);
+        treatmentTime = QUOTE(([ARR_2(_medic, 'tourniquet')] call FUNC(getTreatmentTimeMult)) * GVAR(treatmentTimeTourniquet));
         condition = QUOTE(!([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo)));
         callbackSuccess = QFUNC(tourniquet);
         litter[] = {};
@@ -100,7 +100,7 @@ class GVAR(actions) {
         icon = QPATHTOEF(medical_gui,ui\splint.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_splint"};
-        treatmentTime = QGVAR(treatmentTimeSplint);
+        treatmentTime = QUOTE(([ARR_2(_medic, 'splint')] call FUNC(getTreatmentTimeMult)) * GVAR(treatmentTimeSplint));
         callbackSuccess = QFUNC(splint);
         condition = QFUNC(canSplint);
         litter[] = {
@@ -117,7 +117,7 @@ class GVAR(actions) {
         category = "medication";
         items[] = {"ACE_morphine"};
         condition = "";
-        treatmentTime = QGVAR(treatmentTimeAutoinjector);
+        treatmentTime = QUOTE(([ARR_2(_medic, 'autoinjector')] call FUNC(getTreatmentTimeMult)) * GVAR(treatmentTimeAutoinjector));
         callbackSuccess = QFUNC(medication);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
@@ -148,7 +148,7 @@ class GVAR(actions) {
         allowSelfTreatment = QGVAR(allowSelfIV);
         category = "advanced";
         medicRequired = QGVAR(medicIV);
-        treatmentTime = QGVAR(treatmentTimeIV);
+        treatmentTime = QUOTE(([ARR_2(_medic, 'IV')] call FUNC(getTreatmentTimeMult)) * GVAR(treatmentTimeIV));
         items[] = {"ACE_bloodIV"};
         treatmentLocations = QGVAR(locationIV);
         condition = "";
@@ -244,7 +244,7 @@ class GVAR(actions) {
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
         allowSelfTreatment = 0;
         medicRequired = 0;
-        treatmentTime = QGVAR(treatmentTimeBodyBag);
+        treatmentTime = QUOTE(([ARR_2(_medic, 'bodybag')] call FUNC(getTreatmentTimeMult)) * GVAR(treatmentTimeBodyBag));
         items[] = {"ACE_bodyBag"};
         condition = QFUNC(canPlaceInBodyBag);
         callbackSuccess = QFUNC(placeInBodyBag);
@@ -260,7 +260,7 @@ class GVAR(actions) {
         allowedSelections[] = {"Body"};
         allowSelfTreatment = 0;
         medicRequired = 0;
-        treatmentTime = QGVAR(treatmentTimeCPR);
+        treatmentTime = QUOTE(([ARR_2(_medic, 'cpr')] call FUNC(getTreatmentTimeMult)) * GVAR(treatmentTimeCPR));
         items[] = {};
         condition = QFUNC(canCPR);
         callbackSuccess = QFUNC(cprSuccess);

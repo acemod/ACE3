@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
+        <Key ID="STR_ACE_Medical_Treatment_Category_Treatment">
+            <English>ACE Medical - Treatment</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_SubCategory_Tweaks">
+            <English>Tweaks</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Treatment">
             <English>Treatment</English>
             <German>Behandlung</German>
@@ -319,6 +325,18 @@
             <Chinesesimp>使用自动注射器给药所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 주사기를 사용하는데 걸리는 시간을 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjectorMultMedic_DisplayName">
+            <English>Autoinjector Treatment Time Multiplier (Medic)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjectorMultDoctor_DisplayName">
+            <English>Autoinjector Treatment Time Multiplier (Doctor)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeMultMedic_Description">
+            <English>Multiplier applied to treatment time for medics (not doctors).</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeMultDoctor_Description">
+            <English>Multiplier applied to treatment time for doctors.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
             <French>Durée d'interaction - Garrots</French>
@@ -340,6 +358,12 @@
             <Polish>Czas w sekundach potrzebny do założenia/zdjęcia stazy.</Polish>
             <Chinesesimp>使用/移除止血带所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 지혈대를 사용/제거하는 데 걸리는 시간을 정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquetMultMedic_DisplayName">
+            <English>Tourniquet Treatment Time Multiplier (Medic)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquetMultDoctor_DisplayName">
+            <English>Tourniquet Treatment Time Multiplier (Doctor)</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
@@ -363,6 +387,12 @@
             <Chinesesimp>使用静脉输液所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 수액용기를 사용하는 데 걸리는 시간을 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIVMultMedic_DisplayName">
+            <English>IV Bag Treatment Time Multiplier (Medic)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIVMultDoctor_DisplayName">
+            <English>IV Bag Treatment Time Multiplier (Doctor)</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
             <French>Durée d'interaction - Attelles</French>
@@ -385,6 +415,12 @@
             <Chinesesimp>使用夹板所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 부목을 사용하는데 걸리는 시간을 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplintMultMedic_DisplayName">
+            <English>Splint Treatment Time Multiplier (Medic)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplintMultDoctor_DisplayName">
+            <English>Splint Treatment Time Multiplier (Doctor)</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
             <French>Durée d'interaction - Housses mortuaires</French>
@@ -406,6 +442,12 @@
             <Polish>Czas w sekundach potrzebny na spakowanie ciała do worka na ciało.</Polish>
             <Chinesesimp>装入裹尸袋时间</Chinesesimp>
             <Korean>초 단위로 시체 운반용 부대를 사용하는데 걸리는 시간을 정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodybagMultMedic_DisplayName">
+            <English>Body Bag Use Time Multiplier (Medic)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodybagMultDoctor_DisplayName">
+            <English>Body Bag Use Time Multiplier (Doctor)</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -631,6 +673,12 @@
             <Spanish>Modifica el tiempo que tarda en aplicarse un EPA. \n El tiempo de tratamiento se basa en el daño total de la parte del cuerpo multiplicado por este coeficiente, con un mínimo de 10 segundos.</Spanish>
             <Korean>개인응급키트를 사용하는데 걸리는 시간의 계수을 정합니다.\n최소 10초를 기준으로 몸 전체 피해량과 계수를 합산하여 계산합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimePAKMultMedic_DisplayName">
+            <English>PAK Treatment Time Multiplier (Medic)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimePAKMultDoctor_DisplayName">
+            <English>PAK Treatment Time Multiplier (Doctor)</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
             <Japanese>縫合キットを許可</Japanese>
@@ -776,6 +824,12 @@
             <German>Zeit in Sekunden, um eine einzelne Wunde zu nähen.</German>
             <Chinesesimp>缝合一个伤口所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로, 한 상처를 봉합하는데 걸리는 시간을 설정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeStitchMultMedic_DisplayName">
+            <English>Wound Stitch Time Multiplier (Medic)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeStitchMultDoctor_DisplayName">
+            <English>Wound Stitch Time Multiplier (Doctor)</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -1158,6 +1212,12 @@
             <German>Zeit in Sekunden, die benötigt wird, um eine HLW durzuführen.</German>
             <Chinesesimp>对伤员实施心肺复苏所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로, 심폐소생술을 진행하는 시간을 결정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPRMultMedic_DisplayName">
+            <English>CPR Treatment Time Multiplier (Medic)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPRMultDoctor_DisplayName">
+            <English>CPR Treatment Time Multiplier (Doctor)</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
