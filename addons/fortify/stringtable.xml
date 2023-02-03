@@ -96,7 +96,7 @@
             <Chinese>要塞: 限制建造區</Chinese>
             <Chinesesimp>设防：限制建造区</Chinesesimp>
             <Polish>Fortyfikowanie: Limituj strefe budowania</Polish>
-            <Russian>Фортификация: ограничить зону постройки</Russian>
+            <Russian>Фортификация: Ограничить зону постройки</Russian>
             <Turkish>Inşa Etme : Bölgede Inşa Etmeyi Limitle</Turkish>
             <Korean>요새화: 건설 영역 제한</Korean>
         </Key>
@@ -151,7 +151,7 @@
             <Chinesesimp>有设防工具</Chinesesimp>
             <Japanese>要塞ツール所持の時</Japanese>
             <Polish>Posiada narzędzie do fortyfikowania</Polish>
-            <Russian>Если имеется Инструмент</Russian>
+            <Russian>Если имеется инструмент</Russian>
             <Turkish>Insa Etme Aleti Olanlara Göster</Turkish>
             <Korean>요새화 도구를 들고 있을 때</Korean>
         </Key>
@@ -172,13 +172,17 @@
             <Korean>시간-가격 계수</Korean>
             <German>Zeit-Kosten-Koeffizient</German>
             <Japanese>時間コスト係数</Japanese>
+            <Polish>Współczynnik Czas-Koszt</Polish>
+            <Russian>Коэф. время-цена</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeCostCoefficient">
-            <English>Coefficient used to determine time to build structure.&lt;br/&gt;A in Ax + b where x is cost of object</English>
-            <Chinesesimp>用于确定建造建筑所需时间的系数。&lt;br/&gt;A是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
+            <English>Coefficient used to determine time to build structure.\nA in Ax + b where x is cost of object</English>
+            <Chinesesimp>用于确定建造建筑所需时间的系数。\nA是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
             <Korean>건축물을 지을 때 걸리는 시간을 계수를 적용하여 계산합니다.</Korean>
-            <German>Koeffizient zur Bestimmung der Bauzeit &lt;br/&gt;A in Ax + b, wobei x die Kosten des Objekts sind.</German>
-            <Japanese>建造する時間を決定するために使用される係数。&lt;br/&gt;計算式はAx + bです。この係数はAであり、xは建造物のコストです。</Japanese>
+            <German>Koeffizient zur Bestimmung der Bauzeit \nA in Ax + b, wobei x die Kosten des Objekts sind.</German>
+            <Japanese>建造する時間を決定するために使用される係数。\n計算式はAx + bです。この係数はAであり、xは建造物のコストです。</Japanese>
+            <Polish>Współczynnik używany do określenia czasu budowy konstrukcji.\nA w Ax + b gdzie x jest kosztem obiektu</Polish>
+            <Russian>Коэффициент используемый для указания времени необходимого для возведения постройки.\nA в формуле Ax + b, где x - это цена объекта</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint_timeMin">
             <English>Minimum Build Time</English>
@@ -186,13 +190,17 @@
             <Korean>최소 건축 시간</Korean>
             <German>Minimale Bauzeit</German>
             <Japanese>建造に掛かる最小の時間</Japanese>
+            <Polish>Minimalny czas budowy</Polish>
+            <Russian>Мин. время возведения</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeMin">
-            <English>Minimum time to build any structure.&lt;br/&gt;b in Ax + b where x is cost of object</English>
-            <Chinesesimp>建造任何建筑的最短时间。&lt;br/&gt;b是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
+            <English>Minimum time to build any structure.\nb in Ax + b where x is cost of object</English>
+            <Chinesesimp>建造任何建筑的最短时间。\nb是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
             <Korean>건축물을 지을 때 걸리는 최소 시간을 계수를 적용하여 계산합니다.</Korean>
-            <German>Mindestzeit für den Bau eines beliebigen Bauwerks.&lt;br/&gt;b in Ax + b, wobei x die Kosten des Objekts sind.</German>
-            <Japanese>建造に掛かる最小の時間。&lt;br/&gt;計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
+            <German>Mindestzeit für den Bau eines beliebigen Bauwerks.\nb in Ax + b, wobei x die Kosten des Objekts sind.</German>
+            <Japanese>建造に掛かる最小の時間。\n計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
+            <Polish>Minimalny czas do zbudowania dowolenj konstrukcji.\nb w Ax + b gdzie x jest kosztem obiektu</Polish>
+            <Russian>Минимальное время для возведения любой постройки.\nb в формуле Ax + b, где x - это цена объекта</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_progressBarTitle">
             <English>Building</English>
@@ -200,6 +208,8 @@
             <Korean>건설 중</Korean>
             <German>Bauwerk</German>
             <Japanese>建造</Japanese>
+            <Polish>Budowanie</Polish>
+            <Russian>Возведение</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
@@ -207,6 +217,8 @@
             <Korean>지도에 마커 생성</Korean>
             <German>Kartenmarkierungen erstellen</German>
             <Japanese>マップマーカーを生成する</Japanese>
+            <Polish>Twórz znaczniki na mapie</Polish>
+            <Russian>Создавать маркера на карте</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
             <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
@@ -214,6 +226,8 @@
             <Korean>건축물을 건설하고 나서 지도에 마커를 생성합니다</Korean>
             <German>Erstellen von Kartenmarkierungen, die wie Gebäude im Gelände aussehen, wenn statische Befestigungen platziert werden</German>
             <Japanese>静的な建築物が配置されたときに地形の建物のように見えるマップマーカーを生成します</Japanese>
+            <Polish>Utwórz znaczniki mapy, które wyglądają jak obiekty terenu, gdy umieszczane są statyczne fortyfikacje</Polish>
+            <Russian>Создавать маркера от статических фортификаций как от зданий на карте</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapNone">
             <English>Never</English>
@@ -237,6 +251,8 @@
             <Korean>아군 유닛이 지은 건물만</Korean>
             <German>Für, zum Erbauer, verbündete Einheiten.</German>
             <Japanese>設置者の友軍に</Japanese>
+            <Polish>Dla jednostek sojuszniczych wobec stawiającego</Polish>
+            <Russian>Для союзников</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
             <English>For everyone</English>
@@ -266,7 +282,7 @@
         </Key>
         <Key ID="STR_ACE_Fortify_smallGreen">
             <English>Small (Green)</English>
-            <Russian>Малый (Зеленый)</Russian>
+            <Russian>Малый (зелёный)</Russian>
             <Polish>Małe (Zielone)</Polish>
             <Turkish>Küçük (Yeşil)</Turkish>
             <Japanese>小型 (グリーン)</Japanese>
@@ -286,7 +302,7 @@
         </Key>
         <Key ID="STR_ACE_Fortify_mediumGreen">
             <English>Medium (Green)</English>
-            <Russian>Средний (Зеленый)</Russian>
+            <Russian>Средний (зелёный)</Russian>
             <Polish>Średnie (Zielone)</Polish>
             <Turkish>Orta (Yeşil)</Turkish>
             <Japanese>中型 (グリーン)</Japanese>
@@ -307,7 +323,7 @@
         <Key ID="STR_ACE_Fortify_bigGreen">
             <English>Big (Green)</English>
             <Polish>Duże (Zielone)</Polish>
-            <Russian>Большой (Зеленый)</Russian>
+            <Russian>Большой (зелёный)</Russian>
             <Turkish>Büyük (Yeşil)</Turkish>
             <Japanese>大型 (グリーン)</Japanese>
             <German>Groß (Grün)</German>

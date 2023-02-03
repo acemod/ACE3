@@ -184,7 +184,7 @@
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabled">
             <English>Allow Timestamps</English>
-            <Russian>Включить отображение времени на метках</Russian>
+            <Russian>Вкл. отображение времени на метках</Russian>
             <French>Permettre l'horodatage</French>
             <Japanese>タイムスタンプ許可</Japanese>
             <Spanish>Permitir marcas de tiempo</Spanish>

@@ -1111,6 +1111,7 @@
             <Polish>Nasiona Słonecznika</Polish>
             <Japanese>ヒマワリの種</Japanese>
             <Chinesesimp>葵花籽</Chinesesimp>
+            <Russian>Семечки подсолнуха</Russian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Description">
             <English>Roasted And Salted</English>
@@ -1119,6 +1120,7 @@
             <Polish>Pieczone i Solone</Polish>
             <Japanese>炒って塩で味付け済</Japanese>
             <Chinesesimp>焙烤盐焗</Chinesesimp>
+            <Russian>Поджаренные и солёные</Russian>
         </Key>
     </Package>
 </Project>

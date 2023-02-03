@@ -356,6 +356,36 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.2;
         EGVAR(vehicle_damage,engineFireProb) = 0.8;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        class ace_viewports {
+            class view_0 {
+                camLocation[] = {1.02881, -0.923828, -0.647231};
+                screenLocation[] = {1.12881, -0.653828, -1.08223};
+                camAttach = 50;
+                maxDistance = 0.5;
+                roles[]={"cargo"};
+            };
+            class view_1 {
+                camLocation[] = {1.01709, -1.55664, -0.647231};
+                screenLocation[] = {1.10709, -1.42664, -1.14223};
+                camAttach = 82;
+                maxDistance = 0.5;
+                roles[]={"cargo"};
+            };
+            class view_2 {
+                camLocation[] = {-0.871094, -1.55762, -0.647231};
+                screenLocation[] = {-0.981094, -1.42762, -1.13223};
+                camAttach = 285;
+                maxDistance = 0.5;
+                roles[]={"cargo"};
+            };
+            class view_3 {
+                camLocation[] = {-1.00879, -0.939941, -0.650259};
+                screenLocation[] = {-0.97879, -0.689941, -1.09526};
+                camAttach = 310;
+                maxDistance = 0.5;
+                roles[]={"cargo"};
+            };
+        };
     };
     class rhs_a3spruttank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 400;
