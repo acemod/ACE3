@@ -877,7 +877,7 @@ Examples:
 
 
 If a file called $NOBIN$ is found in the module directory, that module will not be binarized.
-If a file called $NOBIN_CONFIG$ is found in the module directory, that module's config will not be binarized.
+If preprocess = false is set in the addon.toml, that module's config will not be binarized.
 
 See the make.cfg file for additional build options.
 """)
@@ -1298,11 +1298,17 @@ See the make.cfg file for additional build options.
 
                     version_stamp_pboprefix(module,commit_id)
 
+                    skipPreprocessing = False
+                    addonTomlPath = os.path.join(work_drive, prefix, module, "addon.toml")
+                    if os.path.isfile(addonTomlPath):
+                        with open(addonTomlPath, "r") as f:
+                            skipPreprocessing = "preprocess = false" in f.read() #python 3.11 has real toml but this is fine for now
+
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
-                    elif os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN_CONFIG$")):
-                        print_green("$NOBIN_CONFIG$ Found. Proceeding with non-bin config!")
+                    elif skipPreprocessing:
+                        print_green("addon.toml set [preprocess = false]. Proceeding with non-binerized config build!")
                         cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
                     else:
                         cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
