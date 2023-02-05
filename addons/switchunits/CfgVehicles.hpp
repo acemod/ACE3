@@ -4,7 +4,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(DisplayName);
-        function = FUNC(module);
+        function = QFUNC(module);
         scope = 1;
         isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_SwitchUnits_ca.paa);
