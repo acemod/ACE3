@@ -49,6 +49,16 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(removeFlares), "CHECKBOX",
+    [LSTRING(removeFlares_name), LSTRING(removeFlares_tooltip)],
+    LSTRING(category_displayName),
+    false, // default value
+    true, // isGlobal
+    {[QGVAR(removeFlares), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    false // Needs mission restart
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(ammoCookoffDuration), "SLIDER",
     [LSTRING(ammoCookoffDuration_name), LSTRING(ammoCookoffDuration_tooltip)],
     LSTRING(category_displayName),
