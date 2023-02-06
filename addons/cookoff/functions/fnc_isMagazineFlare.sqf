@@ -10,7 +10,7 @@
  * 0: If magazine is type of flare <BOOL>
  *
  * Example:
- * ["3Rnd_UGL_FlareWhite_F"] call ace_cookoff_fnc_isFlareMagazine
+ * ["3Rnd_UGL_FlareWhite_F"] call ace_cookoff_fnc_isMagazineFlare
  *
  * Public: No
  */
