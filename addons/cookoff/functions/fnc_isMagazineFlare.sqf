@@ -17,13 +17,12 @@
 
 params ["_magazine"];
 
-private _return = false;
 private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 private _intensity = getNumber (configFile >> "CfgAmmo" >> _ammo >> "intensity");
-private _flare = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_grenades_flare");
+private _flare = getNumber (configFile >> "CfgAmmo" >> _ammo >> QEGVAR(grenades,flare));
 
-if (_intensity isNotEqualTo 0 || _flare isEqualTo 1) then {
-    _return = true;
+if (_intensity != 0 || _flare == 1) then {
+    true
+} else {
+    false
 };
-
-_return
