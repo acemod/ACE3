@@ -21,8 +21,4 @@ private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 private _intensity = getNumber (configFile >> "CfgAmmo" >> _ammo >> "intensity");
 private _flare = getNumber (configFile >> "CfgAmmo" >> _ammo >> QEGVAR(grenades,flare));
 
-if (_intensity != 0 || _flare == 1) then {
-    true
-} else {
-    false
-};
+_intensity != 0 || _flare == 1
