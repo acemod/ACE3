@@ -33,5 +33,5 @@ TRACE_2("Surface",_surfaceType,_surfaceDust);
 if (isNumber (_config >> "ACE_canDig")) then {
     (getNumber (_config >> "ACE_canDig")) == 1 // return
 } else {
-    !(_surfaceType in DIG_SURFACE_BLACKLIST) && {(_surfaceDust >= 0.1) || {_surfaceType in DIG_SURFACE_WHITELIST}} // return
+    GVAR(canDigSurfaces) getOrDefault [_surfaceType, _surfaceDust >= 0.1] // return
 };
