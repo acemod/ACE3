@@ -59,13 +59,6 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 // add anim changed EH
 [_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
 
-// show mouse hint
-if (_target isKindOf "CAManBase") then {
-    [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);
-} else {
-    [localize LSTRING(Drop), "", localize LSTRING(RaiseLowerRotate)] call EFUNC(interaction,showMouseHint);
-};
-
 // check everything
 [FUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
