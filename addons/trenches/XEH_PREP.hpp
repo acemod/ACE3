@@ -1,4 +1,5 @@
 
+PREP(blockTrench_place);
 PREP(camouflageTrench);
 PREP(canCamouflageTrench);
 PREP(canContinueDiggingTrench);

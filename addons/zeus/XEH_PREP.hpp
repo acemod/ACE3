@@ -21,6 +21,7 @@ PREP(moduleGarrison);
 PREP(moduleGlobalSetSkill);
 PREP(moduleGroupSide);
 PREP(moduleHeal);
+PREP(moduleLayTrench);
 PREP(moduleLoadIntoCargo);
 PREP(moduleRemoveArsenal);
 PREP(moduleRemoveAceArsenal);

@@ -4,24 +4,27 @@
  * Checks if the player can dig on the surface below (enough dust).
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Unit or Position (2d/3d) <OBJECT><ARRAY>
  *
  * Return Value:
  * Can Dig <BOOL>
  *
  * Example:
  * [ACE_player] call ace_common_fnc_canDig
+ * [[1000,2000]] call ace_common_fnc_canDig
  *
  * Public: No
  */
 
-params ["_unit"];
+params ["_input"];
 
-private _posASL = getPosASL _unit;
+private _posASL = _input;
 
-if ((getPosATL _unit) select 2 > 0.05 || // Walking on objects, such as buildings, pavements, etc.
+if ((_input isEqualType objNull) && {
+    _posASL = getPosASL _input;
+    (getPosATL _unit) select 2 > 0.05 || // Walking on objects, such as buildings, pavements, etc.
     {surfaceIsWater _posASL} // posATL in low water (not as low to allow awalking) is negative
-) exitWith {false};
+}) exitWith {false};
 
 private _surfaceClass = (surfaceType _posASL) select [1];
 private _config = configFile >> "CfgSurfaces" >> _surfaceClass;

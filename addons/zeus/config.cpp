@@ -27,6 +27,7 @@ class CfgPatches {
             QGVAR(moduleSuicideBomber),
             QGVAR(AddFullAceArsenal),
             QGVAR(RemoveFullAceArsenal)
+            ,QGVAR(moduleLayTrench)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
