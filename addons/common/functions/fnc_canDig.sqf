@@ -28,7 +28,6 @@ if ((_input isEqualType objNull) && {
 
 private _surfaceClass = (surfaceType _posASL) select [1];
 private _config = configFile >> "CfgSurfaces" >> _surfaceClass;
-private _surfaceDust = getNumber (_config >> "dust");
 
 TRACE_3("",_surfaceClass,getText (_config >> "soundEnviron"),getNumber (_config >> "dust"));
 
