@@ -28,13 +28,12 @@ if ((_input isEqualType objNull) && {
 
 private _surfaceClass = (surfaceType _posASL) select [1];
 private _config = configFile >> "CfgSurfaces" >> _surfaceClass;
-private _surfaceType = getText (_config >> "soundEnviron");
-private _surfaceDust = getNumber (_config >> "dust");
 
-TRACE_2("Surface",_surfaceType,_surfaceDust);
+TRACE_3("",_surfaceClass,getText (_config >> "soundEnviron"),getNumber (_config >> "dust"));
 
 if (isNumber (_config >> "ACE_canDig")) then {
     (getNumber (_config >> "ACE_canDig")) == 1 // return
 } else {
-    GVAR(canDigSurfaces) getOrDefault [_surfaceType, _surfaceDust >= 0.1] // return
+    private _surfaceType = getText (_config >> "soundEnviron");
+    GVAR(canDigSurfaces) getOrDefault [_surfaceType, getNumber (_config >> "dust") >= 0.1, true] // return
 };
