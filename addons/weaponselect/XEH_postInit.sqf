@@ -183,18 +183,18 @@ if (!hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call CBA_fnc_addKeybind; //Unbound (was 5 Key)
 
-["ACE3 Vehicles", QGVAR(FireSmokeLauncher), localize LSTRING(FireSmokeLauncher), {
-    // Conditions: canInteract
-    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
-    // Conditions: specific
-    if !(ACE_player != vehicle ACE_player && {ACE_player == commander vehicle ACE_player}) exitWith {false};
+// ["ACE3 Vehicles", QGVAR(FireSmokeLauncher), localize LSTRING(FireSmokeLauncher), {
+//     // Conditions: canInteract
+//     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+//     // Conditions: specific
+//     if !(ACE_player != vehicle ACE_player && {ACE_player == commander vehicle ACE_player}) exitWith {false};
 
-    // Statement
-    [vehicle ACE_player] call FUNC(fireSmokeLauncher);
-    true
-},
-{false},
-[10, [false, false, false]], false] call CBA_fnc_addKeybind; //9 Key
+//     // Statement
+//     [vehicle ACE_player] call FUNC(fireSmokeLauncher);
+//     true
+// },
+// {false},
+// [10, [false, false, false]], false] call CBA_fnc_addKeybind; //9 Key
 
 ["ACE3 Vehicles", QGVAR(CollisionLights), localize LSTRING(CollisionLights), {
     // Conditions: canInteract
