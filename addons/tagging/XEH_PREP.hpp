@@ -1,3 +1,4 @@
+PREP(addCustomStencilText);
 PREP(addCustomTag);
 PREP(addTagActions);
 PREP(applyCustomTag);
