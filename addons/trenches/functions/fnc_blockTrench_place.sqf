@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Position <ARRAY>
  * 1: Position <ARRAY>
+ * 2: Force <BOOL>
  *
  * Return Value:
  * None
@@ -17,10 +18,10 @@
  * Public: No
  */
 
-if (!isServer) exitWith { ERROR("function must be called on server"); [false]; };
+if (!isServer) exitWith { ERROR("function must be called on server"); [false, "server-only"]; };
 
 params ["_start2d", "_end2d", ["_force", false]];
-TRACE_2("",_start2d,_end2d);
+TRACE_3("",_start2d,_end2d,_force);
 
 scopeName "main";
 
@@ -69,7 +70,6 @@ if (_length < 2) exitWith { [false, "too short"] breakOut "main" };
 
 // Test and get block data
 private _blockData = [];
-
 for "_i" from 0 to _length do {
     private _posCenter = _origin2D;
     private _posLeft = _origin2D;
@@ -87,8 +87,7 @@ for "_i" from 0 to _length do {
         _direction = [-1,0,0];
     };
 
-    // Test if valid
-    {
+    {   // Test if each point is valid
         private _pos2d = _x;
         // check water
         if ((!_force) && {(getTerrainHeightASL _pos2D) < 0}) then { [false, "water"] breakOut "main" };
@@ -122,7 +121,7 @@ for "_i" from 0 to _length do {
 };
 
 
-// adjust terrain heights
+// Adjust terrain heights
 private _terrainData = [];
 for "_i" from 1 to (_length - 1) do { // skip first and last
     private _posCenter = _origin2D;
