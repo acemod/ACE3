@@ -10,7 +10,7 @@
             <Japanese>弾倉詰め替え</Japanese>
             <Korean>탄약 채우기</Korean>
             <Polish>Przepakowywanie magazynków</Polish>
-            <Russian>Перепаковка Магазинов</Russian>
+            <Russian>Перепаковка магазинов</Russian>
             <Portuguese>Preenchimento de Carregador</Portuguese>
             <French>Remplissage des chargeurs</French>
             <Czech>Přepáskování zásobníků</Czech>
@@ -193,6 +193,7 @@
             <Korean>탄약 합치기 애니메이션</Korean>
             <Japanese>詰め替え時のアニメーション</Japanese>
             <Chinesesimp>整理动画</Chinesesimp>
+            <Russian>Анимация перепаковки</Russian>
         </Key>
     </Package>
 </Project>

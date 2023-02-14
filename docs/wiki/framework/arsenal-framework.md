@@ -284,6 +284,8 @@ All are local.
 
 | Name  | Arguments | Added in |
 | ------------- | ------------- | ------------- |
+| ace_arsenal_boxInitialized | Arsenal box (OBJECT), items (BOOL or ARRAY) |
+| ace_arsenal_boxRemoved | Arsenal box (OBJECT) |
 | ace_arsenal_displayOpened | Arsenal display (DISPLAY) |
 | ace_arsenal_displayClosed | None |
 | ace_arsenal_leftPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |

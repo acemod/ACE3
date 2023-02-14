@@ -110,7 +110,7 @@
             <French>Poste de tir Mini-Spike (AC)</French>
             <Czech>Mini-Spike Odpalovač (AT)</Czech>
             <Polish>Wyrzutnia Mini-Spike (AT)</Polish>
-            <Russian>Mini-Spike Пусковое устройство (ПТРК)</Russian>
+            <Russian>Mini-Spike ПУ (ПТРК)</Russian>
             <Portuguese>Lança-mísseis Mini-Spike (AC)</Portuguese>
             <Hungarian>Mini-Spike rakétarendszer (Tankelhárító)</Hungarian>
             <Italian>Lanciatore Mini-Spike (AC)</Italian>
@@ -127,7 +127,7 @@
             <French>Poste de tir Mini-Spike (AA)</French>
             <Czech>Mini-Spike Odpalovač (AA)</Czech>
             <Polish>Wyrzutnia Mini-Spike (AA)</Polish>
-            <Russian>Mini-Spike Пусковое устройство (ПВО)</Russian>
+            <Russian>Mini-Spike ПУ (ЗРК)</Russian>
             <Portuguese>Lança-mísseis Mini-Spike (AA)</Portuguese>
             <Hungarian>Mini-Spike rakétarendszer (Repülő-elhárító)</Hungarian>
             <Italian>Lanciatore Mini-Spike (AA)</Italian>
@@ -195,7 +195,7 @@
             <Polish>M-ATV (CKM)</Polish>
             <Czech>M-ATV (HMG)</Czech>
             <French>M-ATV (HMG)</French>
-            <Russian>M-ATV (Пулемёт)</Russian>
+            <Russian>M-ATV (с пулемётом)</Russian>
             <Portuguese>M-ATV (HMG)</Portuguese>
             <Hungarian>M-ATV (nehézgéppuska)</Hungarian>
             <Italian>M-ATV (HMG)</Italian>
@@ -212,7 +212,7 @@
             <Polish>M-ATV (GMG)</Polish>
             <Czech>M-ATV (GMG)</Czech>
             <French>M-ATV (GMG)</French>
-            <Russian>M-ATV (Гранатомёт)</Russian>
+            <Russian>M-ATV (с гранатомётом)</Russian>
             <Portuguese>M-ATV (GMG)</Portuguese>
             <Hungarian>M-ATV (gránátgéppuska)</Hungarian>
             <Italian>M-ATV (GMG)</Italian>
@@ -365,7 +365,7 @@
             <Polish>HEMTT Transportowy</Polish>
             <Czech>HEMTT (valník)</Czech>
             <French>HEMTT Transport</French>
-            <Russian>HEMTT Транспортный</Russian>
+            <Russian>HEMTT (транспортный)</Russian>
             <Portuguese>HEMTT Transporte</Portuguese>
             <Hungarian>HEMTT szállítójármű</Hungarian>
             <Italian>HEMTT da trasporto</Italian>
@@ -382,7 +382,7 @@
             <Polish>HEMTT Transportowy (zakryty)</Polish>
             <Czech>HEMTT (valník-krytý)</Czech>
             <French>HEMTT Transport (bâché)</French>
-            <Russian>HEMTT Транспортный (крытый)</Russian>
+            <Russian>HEMTT (транспортный, крытый)</Russian>
             <Portuguese>HEMTT Transporte (coberto)</Portuguese>
             <Hungarian>HEMTT szállítójármű (ponyvás)</Hungarian>
             <Italian>HEMTT da trasporto (coperto)</Italian>
@@ -416,7 +416,7 @@
             <Polish>HEMTT Kontener</Polish>
             <Czech>HEMTT (skříňový)</Czech>
             <French>HEMTT Conteneur</French>
-            <Russian>HEMTT Контейнер</Russian>
+            <Russian>HEMTT (контейнер)</Russian>
             <Portuguese>HEMTT Contêiner</Portuguese>
             <Hungarian>HEMTT (konténer)</Hungarian>
             <Italian>HEMTT portacontainer</Italian>
@@ -433,7 +433,7 @@
             <Polish>HEMTT Medyczny</Polish>
             <Czech>HEMTT (zdravotnický)</Czech>
             <French>HEMTT Médical</French>
-            <Russian>HEMTT Медицинский</Russian>
+            <Russian>HEMTT (медицинский)</Russian>
             <Portuguese>HEMTT Médico</Portuguese>
             <Hungarian>HEMTT (egészségügyi)</Hungarian>
             <Italian>HEMTT Medico</Italian>
@@ -450,7 +450,7 @@
             <Polish>HEMTT Amunicyjny</Polish>
             <Czech>HEMTT (muniční)</Czech>
             <French>HEMTT Munitions</French>
-            <Russian>HEMTT Боеприпасы</Russian>
+            <Russian>HEMTT (боеприпасы)</Russian>
             <Portuguese>HEMTT Munições</Portuguese>
             <Hungarian>HEMTT (lőszerszállító)</Hungarian>
             <Italian>HEMTT di rifornimento munizioni</Italian>
@@ -467,7 +467,7 @@
             <Polish>HEMTT Cysterna</Polish>
             <Czech>HEMTT (cisterna)</Czech>
             <French>HEMTT Citerne</French>
-            <Russian>HEMTT Заправщик</Russian>
+            <Russian>HEMTT (топливозаправщик)</Russian>
             <Portuguese>HEMTT Combustível</Portuguese>
             <Hungarian>HEMTT (üzemanyag-szállító)</Hungarian>
             <Italian>HEMTT di rifornimento carburante</Italian>
@@ -484,7 +484,7 @@
             <Polish>HEMTT Naprawczy</Polish>
             <Czech>HEMTT (opravárenský)</Czech>
             <French>HEMTT Réparation</French>
-            <Russian>HEMTT Ремонтный</Russian>
+            <Russian>HEMTT (ремонтный)</Russian>
             <Portuguese>HEMTT Reparador</Portuguese>
             <Hungarian>HEMTT (szerelő-jármű)</Hungarian>
             <Italian>HEMTT Riparatore</Italian>
@@ -501,7 +501,7 @@
             <Polish>Fennek</Polish>
             <Czech>Fennek</Czech>
             <French>Fennek</French>
-            <Russian>Феннек</Russian>
+            <Russian>Fennek</Russian>
             <Portuguese>Fennek</Portuguese>
             <Hungarian>Fennek</Hungarian>
             <Italian>Fennek</Italian>
@@ -518,7 +518,7 @@
             <Polish>Fennek (CKM)</Polish>
             <Czech>Fennek (HMG)</Czech>
             <French>Fennek (HMG)</French>
-            <Russian>Феннек (Пулемёт)</Russian>
+            <Russian>Fennek (с пулемётом)</Russian>
             <Portuguese>Fennek (HMG)</Portuguese>
             <Hungarian>Fennek (nehézgéppuska)</Hungarian>
             <Italian>Fennek (HMG)</Italian>
@@ -535,7 +535,7 @@
             <Polish>Fennek (GMG)</Polish>
             <Czech>Fennek (GMG)</Czech>
             <French>Fennek (GMG)</French>
-            <Russian>Феннек (Гранатомёт)</Russian>
+            <Russian>Fennek (с гранатомётом)</Russian>
             <Portuguese>Fennek (GMG)</Portuguese>
             <Hungarian>Fennek (gránátgéppuska)</Hungarian>
             <Italian>Fennek (GMG)</Italian>
@@ -552,7 +552,7 @@
             <Polish>Leopard 2SG</Polish>
             <Czech>Leopard 2SG</Czech>
             <French>Leopard 2SG</French>
-            <Russian>Леопард 2SG</Russian>
+            <Russian>Leopard 2SG</Russian>
             <Portuguese>Leopard 2SG</Portuguese>
             <Hungarian>Leopard 2SG</Hungarian>
             <Italian>Leopard 2SG</Italian>
@@ -569,7 +569,7 @@
             <Polish>FV510 Warrior</Polish>
             <Czech>FV510 Warrior</Czech>
             <French>FV510 Warrior</French>
-            <Russian>FV510 Уорриор</Russian>
+            <Russian>FV510 Warrior</Russian>
             <Portuguese>FV510 Warrior</Portuguese>
             <Hungarian>FV510 Warrior</Hungarian>
             <Italian>FV510 Warrior</Italian>
@@ -603,7 +603,7 @@
             <Polish>KamAZ transportowy</Polish>
             <Czech>KamAZ (valník)</Czech>
             <French>KamAZ Transport</French>
-            <Russian>КамАЗ Транспортный</Russian>
+            <Russian>КамАЗ (транспортный)</Russian>
             <Portuguese>KamAZ Transporte</Portuguese>
             <Hungarian>KamAZ szállítójármű</Hungarian>
             <Italian>KamAZ da trasporto</Italian>
@@ -620,7 +620,7 @@
             <Polish>KamAZ Transportowy (zakryty)</Polish>
             <Czech>KamAZ (valník-krytý)</Czech>
             <French>KamAZ Transport (bâché)</French>
-            <Russian>КамАЗ Транспортный (крытый)</Russian>
+            <Russian>КамАЗ (транспортный, крытый)</Russian>
             <Portuguese>KamAZ Transporte (coberto)</Portuguese>
             <Hungarian>KamAZ szállítójármű (ponyvás)</Hungarian>
             <Italian>KamAZ da trasporto (coperto)</Italian>
@@ -637,7 +637,7 @@
             <Polish>KamAZ Amunicyjny</Polish>
             <Czech>KamAZ (muniční)</Czech>
             <French>KamAZ Munitions</French>
-            <Russian>КамАЗ Боеприпасы</Russian>
+            <Russian>КамАЗ (боеприпасы)</Russian>
             <Portuguese>KamAZ Munições</Portuguese>
             <Hungarian>KamAZ (lőszerszállító)</Hungarian>
             <Italian>KamAZ  di rifornimento munizioni</Italian>
@@ -654,7 +654,7 @@
             <Polish>KamAZ cysterna</Polish>
             <Czech>KamAZ (cisterna)</Czech>
             <French>KamAZ Citerne</French>
-            <Russian>КамАЗ Заправщик</Russian>
+            <Russian>КамАЗ (топливозаправщик)</Russian>
             <Portuguese>KamAZ Combustível</Portuguese>
             <Hungarian>KamAZ (üzemanyag-szállító)</Hungarian>
             <Italian>KamAZ  di rifornimento carburante</Italian>
@@ -671,7 +671,7 @@
             <Polish>KamAZ Naprawczy</Polish>
             <Czech>KamAZ (opravárenský)</Czech>
             <French>KamAZ Réparation</French>
-            <Russian>КамАЗ Ремонтный</Russian>
+            <Russian>КамАЗ (ремонтный)</Russian>
             <Portuguese>KamAZ Reparador</Portuguese>
             <Hungarian>KamAZ (szerelő-jármű)</Hungarian>
             <Italian>KamAZ  riparatore</Italian>
@@ -688,7 +688,7 @@
             <Polish>KamAZ Medyczny</Polish>
             <Czech>KamAZ (zdravotnický)</Czech>
             <French>KamAZ Médical</French>
-            <Russian>КамАЗ Медицинский</Russian>
+            <Russian>КамАЗ (медицинский)</Russian>
             <Portuguese>KamAZ Médico</Portuguese>
             <Hungarian>KamAZ (egészségügyi)</Hungarian>
             <Italian>KamAZ Medico</Italian>
@@ -721,7 +721,7 @@
             <Polish>Karatel</Polish>
             <Czech>Karatel</Czech>
             <French>Karatel</French>
-            <Russian>Kаратель</Russian>
+            <Russian>Каратель</Russian>
             <Portuguese>Karatel</Portuguese>
             <Hungarian>Karatel</Hungarian>
             <Italian>Karatel</Italian>
@@ -738,7 +738,7 @@
             <Polish>Karatel (CKM)</Polish>
             <Czech>Karatel (HMG)</Czech>
             <French>Karatel (HMG)</French>
-            <Russian>Kаратель (Пулемёт)</Russian>
+            <Russian>Каратель (с пулемётом)</Russian>
             <Portuguese>Karatel (HMG)</Portuguese>
             <Hungarian>Karatel (nehézgéppuska)</Hungarian>
             <Italian>Karatel (HMG)</Italian>
@@ -755,7 +755,7 @@
             <Polish>Karatel (GMG)</Polish>
             <Czech>Karatel (GMG)</Czech>
             <French>Karatel (GMG)</French>
-            <Russian>Kаратель (Гранатомёт)</Russian>
+            <Russian>Каратель (с гранатомётом)</Russian>
             <Portuguese>Karatel (GMG)</Portuguese>
             <Hungarian>Karatel (gránátgéppuska)</Hungarian>
             <Italian>Karatel (GMG)</Italian>
@@ -857,7 +857,7 @@
             <Polish>Typhoon Transportowy</Polish>
             <Czech>KamAZ Typhoon (valník)</Czech>
             <French>Typhoon Transport</French>
-            <Russian>Тайфун Транспортный</Russian>
+            <Russian>Тайфун (транспортный)</Russian>
             <Portuguese>Typhoon Transporte</Portuguese>
             <Hungarian>Typhoon szállítójármű</Hungarian>
             <Italian>Typhoon da trasporto</Italian>
@@ -874,7 +874,7 @@
             <Polish>Typhoon Transportowy (przykryty)</Polish>
             <Czech>KamAZ Typhoon (valník-krytý)</Czech>
             <French>Typhoon Transport (bâché)</French>
-            <Russian>Тайфун Транспортный (крытый)</Russian>
+            <Russian>Тайфун (крытый)</Russian>
             <Portuguese>Typhoon Transporte (coberto)</Portuguese>
             <Hungarian>Typhoon szállítójármű (ponyvás)</Hungarian>
             <Italian>Typhoon da trasporto (coperto)</Italian>
@@ -891,7 +891,7 @@
             <Polish>Typhoon Urządzenie</Polish>
             <Czech>KamAZ Typhoon (zařízení)</Czech>
             <French>Typhoon Dispositif</French>
-            <Russian>Тайфун Устройство</Russian>
+            <Russian>Тайфун (устройство)</Russian>
             <Portuguese>Typhoon Dispositivo</Portuguese>
             <Hungarian>Typhoon (eszköz)</Hungarian>
             <Italian>Typhoon per dispositivo</Italian>
@@ -908,7 +908,7 @@
             <Polish>Typhoon Amunicyjny</Polish>
             <Czech>KamAZ Typhoon (muniční)</Czech>
             <French>Typhoon Munitions</French>
-            <Russian>Тайфун Боеприпасы</Russian>
+            <Russian>Тайфун (боеприпасы)</Russian>
             <Portuguese>Typhoon Munições</Portuguese>
             <Hungarian>Typhoon (lőszerszállító)</Hungarian>
             <Italian>Typhoon di rifornimento munizioni</Italian>
@@ -925,7 +925,7 @@
             <Polish>Typhoon Cysterna</Polish>
             <Czech>KamAZ Typhoon (cisterna)</Czech>
             <French>Typhoon Citerne</French>
-            <Russian>Тайфун Заправщик</Russian>
+            <Russian>Тайфун (топливозаправщик)</Russian>
             <Portuguese>Typhoon Combustível</Portuguese>
             <Hungarian>Typhoon (üzemanyag-szállító)</Hungarian>
             <Italian>Typhoon di rifornimento carburante</Italian>
@@ -942,7 +942,7 @@
             <Polish>Typhoon Naprawczy</Polish>
             <Czech>KamAZ Typhoon (opravárenský)</Czech>
             <French>Typhoon Réparation</French>
-            <Russian>Тайфун Ремонтный</Russian>
+            <Russian>Тайфун (ремонтный)</Russian>
             <Portuguese>Typhoon Reparador</Portuguese>
             <Hungarian>Typhoon (szerelő-jármű)</Hungarian>
             <Italian>Typhoon riparatore</Italian>
@@ -959,7 +959,7 @@
             <Polish>Typhoon Medyczny</Polish>
             <Czech>KamAZ Typhoon (zdravotnický)</Czech>
             <French>Typhoon Médical</French>
-            <Russian>Тайфун Медицинский</Russian>
+            <Russian>Тайфун (медицинский)</Russian>
             <Portuguese>Typhoon Médico</Portuguese>
             <Hungarian>Typhoon (egészségügyi)</Hungarian>
             <Italian>Typhoon medico</Italian>
@@ -976,7 +976,7 @@
             <Polish>RAH-66 Comanche</Polish>
             <Czech>RAH-66 Comanche</Czech>
             <French>RAH-66 Comanche</French>
-            <Russian>RAH-66 Команч</Russian>
+            <Russian>RAH-66 Comanche</Russian>
             <Portuguese>RAH-66 Comanche</Portuguese>
             <Hungarian>RAH-66 Comanche</Hungarian>
             <Italian>RAH-66 Comanche</Italian>
@@ -1061,7 +1061,7 @@
             <Polish>A-10D Thunderbolt II</Polish>
             <Czech>A-10D Thunderbolt II</Czech>
             <French>A-10D Thunderbolt II</French>
-            <Russian>A-10D Тандерболт II</Russian>
+            <Russian>A-10D Thunderbolt II</Russian>
             <Portuguese>A-10D Thunderbolt II</Portuguese>
             <Hungarian>A-10D Thunderbolt II</Hungarian>
             <Italian>A-10D Thunderbolt II</Italian>
@@ -1112,7 +1112,7 @@
             <Polish>AW101 Merlin</Polish>
             <Czech>AW101 Merlin</Czech>
             <French>AW101 Merlin</French>
-            <Russian>AW101 Мерлин</Russian>
+            <Russian>AW101 Merlin</Russian>
             <Portuguese>AW101 Merlin</Portuguese>
             <Hungarian>AW101 Merlin</Hungarian>
             <Italian>AW101 Merlin</Italian>
@@ -1129,7 +1129,7 @@
             <Polish>L-159 ALCA</Polish>
             <Czech>L-159 ALCA</Czech>
             <French>L-159 ALCA</French>
-            <Russian>L-159 Альбатрос</Russian>
+            <Russian>L-159 ALCA</Russian>
             <Portuguese>L-159 ALCA</Portuguese>
             <Hungarian>L-159 ALCA</Hungarian>
             <Italian>L-159 ALCA</Italian>
@@ -1146,7 +1146,7 @@
             <Polish>L-159 ALCA (CAS)</Polish>
             <Czech>L-159 ALCA (CAS)</Czech>
             <French>L-159 ALCA (CAS)</French>
-            <Russian>L-159 Альбатрос (CAS)</Russian>
+            <Russian>L-159 ALCA (поддержка)</Russian>
             <Portuguese>L-159 ALCA (CAS)</Portuguese>
             <Hungarian>L-159 ALCA (Légitámogató)</Hungarian>
             <Italian>L-159 ALCA (CAS)</Italian>
@@ -1163,8 +1163,8 @@
             <Polish>L-159 ALCA (AA)</Polish>
             <Czech>L-159 ALCA (AA)</Czech>
             <French>L-159 ALCA (AA)</French>
-            <Russian>L-159 Альбатрос (AA)</Russian>
-            <Portuguese>L-159 ALCA (ВВ)</Portuguese>
+            <Russian>L-159 ALCA (ВВ)</Russian>
+            <Portuguese>L-159 ALCA (AA)</Portuguese>
             <Hungarian>L-159 ALCA (Repülő-elhárító)</Hungarian>
             <Italian>L-159 ALCA (AA)</Italian>
             <Japanese>L-159 ALCA (対空)</Japanese>
@@ -1180,7 +1180,7 @@
             <Polish>JAS 39 Gripen</Polish>
             <Czech>JAS 39 Gripen</Czech>
             <French>JAS 39 Gripen</French>
-            <Russian>JAS 39 Грипен</Russian>
+            <Russian>JAS 39 Gripen</Russian>
             <Portuguese>JAS 39 Gripen</Portuguese>
             <Italian>JAS 39 Gripen</Italian>
             <Japanese>JAS 39 グリペン</Japanese>
@@ -1214,7 +1214,7 @@
             <Italian>Ka-60 Kasatka (bianco e nero)</Italian>
             <Polish>Ka-60 Kasatka (czarno-biały)</Polish>
             <Portuguese>Ka-60 Kasatka (preto e branco)</Portuguese>
-            <Russian>Ka-60 Касатка (белый и черный)</Russian>
+            <Russian>Ka-60 Касатка (чёрно-белый)</Russian>
             <Spanish>Ka-60 Kasatka (blanco y negro)</Spanish>
             <Japanese>Ka-60 カサートカ (黒 &amp; 白）</Japanese>
             <Korean>Ka-60 카사트카 (검정 및 하양)</Korean>
@@ -1314,7 +1314,7 @@
             <Polish>Ładunek burzący M183</Polish>
             <Czech>Demoliční nálož M183</Czech>
             <French>M183 Charge de démolition</French>
-            <Russian>M183 Комплектный подрывной заряд</Russian>
+            <Russian>M183 комплектный подрывной заряд</Russian>
             <Portuguese>M183 Sacola de Demolição</Portuguese>
             <Hungarian>M183 romboló töltet</Hungarian>
             <Italian>M183 Demolition Charge Assembly</Italian>
@@ -1330,7 +1330,7 @@
             <Japanese>M183 梱包爆薬 (投てき仕様)</Japanese>
             <Turkish>M183 Demolition Charge (Throwable)</Turkish>
             <Spanish>Carga de demolición M183 (Lanzable)</Spanish>
-            <Russian>M183 Комплектный подрывной заряд (Бросаемый)</Russian>
+            <Russian>M183 комплектный подрывной заряд (бросаемый)</Russian>
             <Polish>Ładunek burzący M183 (Rzucany)</Polish>
             <German>M183 Geballte Sprengladung (Werfbar)</German>
             <Chinesesimp>M183 炸药包（可投掷）</Chinesesimp>
@@ -1359,7 +1359,7 @@
             <Japanese>M112 爆薬ブロック (投てき仕様)</Japanese>
             <Turkish>M112 Demolition Charge (Throwable)</Turkish>
             <Spanish>Bloque de demolición M112 (Lanzable)</Spanish>
-            <Russian>M112 подрывной заряд (Бросаемый)</Russian>
+            <Russian>M112 подрывной заряд (бросаемый)</Russian>
             <Polish>Ładunek burzący M112 (Rzucany)</Polish>
             <German>M112 Sprengladung (Werfbar)</German>
             <Chinesesimp>M112 塑性炸药（可投掷）</Chinesesimp>
@@ -1388,7 +1388,7 @@
             <Italian>Mini Granata V40</Italian>
             <Japanese>V40 小型手榴弾</Japanese>
             <Polish>Mini-granat V40</Polish>
-            <Russian>V40 Мини-граната</Russian>
+            <Russian>V40 мини-граната</Russian>
             <Portuguese>Mini Granada V40</Portuguese>
             <French>V40 Mini-Grenade</French>
             <Chinese>V40迷你手榴彈</Chinese>
@@ -1405,7 +1405,7 @@
             <Polish>Granat dymny M83 (Biały)</Polish>
             <Czech>M83 Kouřový Granát (Bílý)</Czech>
             <French>M83 Grenade fumigène (Blanche)</French>
-            <Russian>M83 дымовая граната (Белый)</Russian>
+            <Russian>M83 дымовая граната (белый)</Russian>
             <Portuguese>M83 Granada de fumaça (Branca)</Portuguese>
             <Hungarian>M83 füstgránát (Fehér)</Hungarian>
             <Italian>M83 Granata fumogena (Bianco)</Italian>
@@ -1422,7 +1422,7 @@
             <Polish>Granat dymny M18 (Niebieski)</Polish>
             <Czech>M18 Kouřový Granát (Modrý)</Czech>
             <French>M18 Grenade fumigène (Bleue)</French>
-            <Russian>M18 дымовая граната (Синий)</Russian>
+            <Russian>M18 дымовая граната (синий)</Russian>
             <Portuguese>M18 Granada de fumaça (Azul)</Portuguese>
             <Hungarian>M18 füstgránát (Kék)</Hungarian>
             <Italian>M18 Granata fumogena (Blu)</Italian>
@@ -1439,7 +1439,7 @@
             <Polish>Granat dymny M18 (Zielony)</Polish>
             <Czech>M18 Kouřový Granát (Zelený)</Czech>
             <French>M18 Grenade fumigène (Verte)</French>
-            <Russian>M18 дымовая граната (Зелёный)</Russian>
+            <Russian>M18 дымовая граната (зелёный)</Russian>
             <Portuguese>M18 Granada de fumaça (Verde)</Portuguese>
             <Hungarian>M18 füstgránát (Zöld)</Hungarian>
             <Italian>M18 Granata fumogena (Verde)</Italian>
@@ -1456,7 +1456,7 @@
             <Polish>Granat dymny M18 (Pomarańczowy)</Polish>
             <Czech>M18 Kouřový Granát (Oranžový)</Czech>
             <French>M18 Grenade fumigène (Orange)</French>
-            <Russian>M18 дымовая граната (Оранжевый)</Russian>
+            <Russian>M18 дымовая граната (оранжевый)</Russian>
             <Portuguese>M18 Granada de fumaça (Laranja)</Portuguese>
             <Hungarian>M18 füstgránát (Narancssárga)</Hungarian>
             <Italian>M18 Granata fumogena (Arancione)</Italian>
@@ -1473,7 +1473,7 @@
             <Polish>Granat dymny M18 (Fioletowy)</Polish>
             <Czech>M18 Kouřový Granát (Fialový)</Czech>
             <French>M18 Grenade fumigène (Pourpre)</French>
-            <Russian>M18 дымовая граната (Пурпурный)</Russian>
+            <Russian>M18 дымовая граната (пурпурный)</Russian>
             <Portuguese>M18 Granada de fumaça (Roxa)</Portuguese>
             <Hungarian>M18 füstgránát (Lila)</Hungarian>
             <Italian>M18 Granata fumogena (Viola)</Italian>
@@ -1490,7 +1490,7 @@
             <Polish>Granat dymny M18 (Czerwony)</Polish>
             <Czech>M18 Kouřový Granát (Červený)</Czech>
             <French>M18 Grenade fumigène (Rouge)</French>
-            <Russian>M18 дымовая граната (Красный)</Russian>
+            <Russian>M18 дымовая граната (красный)</Russian>
             <Portuguese>M18 Granada de fumaça (Vermelha)</Portuguese>
             <Hungarian>M18 füstgránát (Piros)</Hungarian>
             <Italian>M18 Granata fumogena (Rosso)</Italian>
@@ -1507,7 +1507,7 @@
             <Polish>Granat dymny M18 (Żółty)</Polish>
             <Czech>M18 Kouřový Granát (Žlutý)</Czech>
             <French>M18 Grenade fumigène (Jaune)</French>
-            <Russian>M183 дымовая граната (Жёлтый)</Russian>
+            <Russian>M18 дымовая граната (жёлтый)</Russian>
             <Portuguese>M18 Granada de fumaça (Amarela)</Portuguese>
             <Hungarian>M18 füstgránát (Sárga)</Hungarian>
             <Italian>M18 Granata fumogena (Giallo)</Italian>
@@ -1541,7 +1541,7 @@
             <Polish>Mina przeciwpiechotna VS-50</Polish>
             <Czech>VS-50 Protipěchotní mina</Czech>
             <French>VS-50 Mine AP</French>
-            <Russian>VS-50 Противопехотная мина</Russian>
+            <Russian>VS-50 противопехотная мина</Russian>
             <Portuguese>VS-50 Mina antipessoal</Portuguese>
             <Hungarian>VS-50 gyalogsági taposóakna</Hungarian>
             <Italian>VS-50 Mine antiuomo</Italian>
@@ -1558,7 +1558,7 @@
             <Polish>Mina przeciwpiechotna M26</Polish>
             <Czech>M26 Protipěchotní mina</Czech>
             <French>M26 Mine AP bondissante</French>
-            <Russian>M26 Противопехотная мина</Russian>
+            <Russian>M26 противопехотная мина</Russian>
             <Portuguese>M26 Mina saltadora antipessoal</Portuguese>
             <Hungarian>M26 gyalogsági ugróakna</Hungarian>
             <Italian>M26 Mine saltanti antiuomo</Italian>
@@ -1575,7 +1575,7 @@
             <Polish>Mina przeciwpiechotna PMR-3</Polish>
             <Czech>PMR-3 Protipěchotní mina (drát)</Czech>
             <French>PMR-3 Mine AP à traction</French>
-            <Russian>PMR-3 Противопехотная мина</Russian>
+            <Russian>PMR-3 противопехотная мина</Russian>
             <Portuguese>PMR-3 Mina antipessoal (armadilha)</Portuguese>
             <Hungarian>PMR-3 botlódrótos gyalogsági akna</Hungarian>
             <Italian>PMR-3 Mine antiuomo</Italian>
@@ -1610,7 +1610,7 @@
             <French>MP-443 Grach</French>
             <Hungarian>MP-443 Grach</Hungarian>
             <Spanish>MP-443 Grach</Spanish>
-            <Russian>МР-443 "Грач"</Russian>
+            <Russian>МР-443 Грач</Russian>
             <Portuguese>MP-443 Grach</Portuguese>
             <Italian>MP-443 Grach</Italian>
             <Japanese>MP-433 グラッチ</Japanese>
@@ -1661,7 +1661,7 @@
             <French>FNX-45 Tactical (Vert)</French>
             <Hungarian>FNX-45 Tactical (Zöld)</Hungarian>
             <Spanish>FNX-45 Tactical (Verde)</Spanish>
-            <Russian>FNX-45 Tactical (Зелёный)</Russian>
+            <Russian>FNX-45 Tactical (зелёный)</Russian>
             <Portuguese>FNX-45 Tactical (Verde)</Portuguese>
             <Italian>FNX-45 Tactical (Verde)</Italian>
             <Turkish>FNX-45 Tactical (Yeşil)</Turkish>
@@ -1746,7 +1746,7 @@
             <French>RPG-32 (Vert)</French>
             <Hungarian>RPG-32 (Zöld)</Hungarian>
             <Spanish>RPG-32 (Verde)</Spanish>
-            <Russian>РПГ-32 (Зелёный)</Russian>
+            <Russian>РПГ-32 (зелёный)</Russian>
             <Portuguese>RPG-32 (Verde)</Portuguese>
             <Italian>RPG-32 (Verde)</Italian>
             <Turkish>RPG-32 (Yeşil)</Turkish>
@@ -1763,7 +1763,7 @@
             <French>Mini-Spike (AA)</French>
             <Hungarian>Mini-Spike (Repülő-elhárító)</Hungarian>
             <Spanish>Mini-Spike (AA)</Spanish>
-            <Russian>Mini-Spike (ПВО)</Russian>
+            <Russian>Mini-Spike (ЗРК)</Russian>
             <Portuguese>Mini-Spike (AA)</Portuguese>
             <Italian>Mini-Spike (AA)</Italian>
             <Japanese>ミニスパイク (対空)</Japanese>
@@ -1780,7 +1780,7 @@
             <French>Mini-Spike (AC)</French>
             <Hungarian>Mini-Spike (Tankelhárító)</Hungarian>
             <Spanish>Mini-Spike (AT)</Spanish>
-            <Russian>Mini-Spike (ПТ)</Russian>
+            <Russian>Mini-Spike (ПТРК)</Russian>
             <Portuguese>Mini-Spike (AT)</Portuguese>
             <Italian>Mini-Spike (AT)</Italian>
             <Japanese>ミニスパイク (対地)</Japanese>
@@ -1809,7 +1809,7 @@
             <English>Metis-M (Brown)</English>
             <German>Metis-M (Braun)</German>
             <French>Metis-M (Brun)</French>
-            <Russian>Метис-М (Коричневый)</Russian>
+            <Russian>Метис-М (коричневый)</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈(棕色)</Chinese>
             <Chinesesimp>"麦士蒂索"-M（棕色）</Chinesesimp>
             <Italian>Metis-M (Marrone)</Italian>
@@ -1825,7 +1825,7 @@
             <English>Metis-M (Green)</English>
             <German>Metis-M (Grün)</German>
             <French>Metis-M (Vert)</French>
-            <Russian>Метис-М (Зелёный)</Russian>
+            <Russian>Метис-М (зелёный)</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈(綠色)</Chinese>
             <Chinesesimp>"麦士蒂索"-M（绿色）</Chinesesimp>
             <Italian>Metis-M (Verde)</Italian>
@@ -1862,7 +1862,7 @@
             <French>MX (Noir)</French>
             <Hungarian>MX (Fekete)</Hungarian>
             <Spanish>MX (Negro)</Spanish>
-            <Russian>MX (Чёрный)</Russian>
+            <Russian>MX (чёрный)</Russian>
             <Portuguese>MX (Preto)</Portuguese>
             <Italian>MX (Nero)</Italian>
             <Japanese>MX (ブラック)</Japanese>
@@ -1912,7 +1912,7 @@
             <French>MXC (Noir)</French>
             <Hungarian>MXC (Fekete)</Hungarian>
             <Spanish>MXC (Negro)</Spanish>
-            <Russian>MXC (Чёрный)</Russian>
+            <Russian>MXC (чёрный)</Russian>
             <Portuguese>MXC (Preto)</Portuguese>
             <Italian>MXC (Nero)</Italian>
             <Japanese>MXC (ブラック)</Japanese>
@@ -1962,7 +1962,7 @@
             <French>MX 3GL (Noir)</French>
             <Hungarian>MX 3GL (Fekete)</Hungarian>
             <Spanish>MX 3GL (Negro)</Spanish>
-            <Russian>MX 3GL (Чёрный)</Russian>
+            <Russian>MX 3GL (чёрный)</Russian>
             <Portuguese>MX 3GL (Preto)</Portuguese>
             <Italian>MX 3GL (Nero)</Italian>
             <Japanese>MX 3GL (ブラック)</Japanese>
@@ -2012,7 +2012,7 @@
             <French>MX LSW (Noir)</French>
             <Hungarian>MX LSW (Fekete)</Hungarian>
             <Spanish>MX LSW (Negro)</Spanish>
-            <Russian>MX LSW (Чёрный)</Russian>
+            <Russian>MX LSW (чёрный)</Russian>
             <Portuguese>MX LSW (Preto)</Portuguese>
             <Italian>MX LSW (Nero)</Italian>
             <Japanese>MX LSW (ブラック)</Japanese>
@@ -2062,7 +2062,7 @@
             <French>MXM (Noir)</French>
             <Hungarian>MXM (Fekete)</Hungarian>
             <Spanish>MXM (Negro)</Spanish>
-            <Russian>MXM (Чёрный)</Russian>
+            <Russian>MXM (чёрный)</Russian>
             <Portuguese>MXM (Preto)</Portuguese>
             <Italian>MXM (Nero)</Italian>
             <Japanese>MXM (ブラック)</Japanese>
@@ -2146,7 +2146,7 @@
             <French>F2000 (Camo)</French>
             <Hungarian>F2000 (Terepmintás)</Hungarian>
             <Spanish>F2000 (Camuflaje)</Spanish>
-            <Russian>F2000 (Камо)</Russian>
+            <Russian>F2000 (камуфляжный)</Russian>
             <Portuguese>F2000 (Camo)</Portuguese>
             <Italian>F2000 (Camo)</Italian>
             <Japanese>F2000 (カモフラージュ)</Japanese>
@@ -2180,7 +2180,7 @@
             <French>F2000 Tactical (Camo)</French>
             <Hungarian>F2000 Tactical (Terepmintás)</Hungarian>
             <Spanish>F2000 Tactical (Camuflaje)</Spanish>
-            <Russian>F2000 Tactical (Камо)</Russian>
+            <Russian>F2000 Tactical (камуфляжный)</Russian>
             <Portuguese>F2000 Tactical (Camo)</Portuguese>
             <Italian>F2000 Tactical (Camo)</Italian>
             <Japanese>F2000 タクティカル (カモフラージュ)</Japanese>
@@ -2214,7 +2214,7 @@
             <French>F2000 EGLM (Camo)</French>
             <Hungarian>F2000 EGLM (Terepmintás)</Hungarian>
             <Spanish>F2000 EGLM (Camuflaje)</Spanish>
-            <Russian>F2000 EGLM (Камо)</Russian>
+            <Russian>F2000 EGLM (камуфляжный)</Russian>
             <Portuguese>F2000 EGLM (Camo)</Portuguese>
             <Italian>F2000 EGLM (Camo)</Italian>
             <Japanese>F2000 EGLM (カモフラージュ)</Japanese>
@@ -2435,7 +2435,7 @@
             <French>GM6 Lynx (Camo)</French>
             <Hungarian>GM6 Gepárd (Terepmintás)</Hungarian>
             <Spanish>GM6 Lynx (Camuflaje)</Spanish>
-            <Russian>GM6 Lynx (Камо)</Russian>
+            <Russian>GM6 Lynx (камуфляжный)</Russian>
             <Portuguese>GM6 Lynx (Camo)</Portuguese>
             <Italian>GM6 Lynx (Camo)</Italian>
             <Japanese>GM6 リンクス (カモフラージュ)</Japanese>
@@ -2469,7 +2469,7 @@
             <French>M200 Intervention (Camo)</French>
             <Hungarian>M200 Intervention (Terepmintás)</Hungarian>
             <Spanish>M200 Intervention (Camuflaje)</Spanish>
-            <Russian>M200 Intervention (Камо)</Russian>
+            <Russian>M200 Intervention (камуфляжный)</Russian>
             <Portuguese>M200 Intervention (Camo)</Portuguese>
             <Italian>M200 Intervention (Camo)</Italian>
             <Japanese>M200 インターベンション (カモフラージュ)</Japanese>
@@ -2517,7 +2517,7 @@
             <Czech>Noreen "Bad News" ULR (Černá)</Czech>
             <French>Noreen "Bad News" ULR (Noir)</French>
             <Spanish>Noreen "Bad News" ULR (Negro)</Spanish>
-            <Russian>Noreen "Bad News" ULR (Чёрный)</Russian>
+            <Russian>Noreen "Bad News" ULR (чёрный)</Russian>
             <German>Noreen "Bad News" ULR (Schwarz)</German>
             <Polish>Noreen "Bad News" ULR (czarny)</Polish>
             <Italian>Noreen "Bad News" ULR (Nero)</Italian>
@@ -2534,7 +2534,7 @@
             <Czech>Noreen "Bad News" ULR (Kamufláž)</Czech>
             <French>Noreen "Bad News" ULR (Camo)</French>
             <Spanish>Noreen "Bad News" ULR (Camuflaje)</Spanish>
-            <Russian>Noreen "Bad News" ULR (Камо)</Russian>
+            <Russian>Noreen "Bad News" ULR (камуфляжный)</Russian>
             <German>Noreen "Bad News" ULR (Tarnmuster)</German>
             <Polish>Noreen "Bad News" ULR (kamuflaż)</Polish>
             <Italian>Noreen "Bad News" ULR (Camo)</Italian>
@@ -2551,7 +2551,7 @@
             <Czech>Noreen "Bad News" ULR (Písková)</Czech>
             <French>Noreen "Bad News" ULR (Beige)</French>
             <Spanish>Noreen "Bad News" ULR (Arena)</Spanish>
-            <Russian>Noreen "Bad News" ULR (Песочный)</Russian>
+            <Russian>Noreen "Bad News" ULR (песочный)</Russian>
             <German>Noreen "Bad News" ULR (sandfarben)</German>
             <Polish>Noreen "Bad News" ULR (piaskowy)</Polish>
             <Italian>Noreen "Bad News" ULR (Sabbia)</Italian>
@@ -2585,7 +2585,7 @@
             <Czech>SIG 556 (Černá)</Czech>
             <French>SIG 556 (Noir)</French>
             <Spanish>SIG 556 (Negro)</Spanish>
-            <Russian>SIG 556 (Чёрный)</Russian>
+            <Russian>SIG 556 (чёрный)</Russian>
             <Polish>SIG 556 (czarny)</Polish>
             <German>SIG 556 (Schwarz)</German>
             <Italian>SIG 556 (Nero)</Italian>
@@ -2602,7 +2602,7 @@
             <Czech>SIG 556 (Khaki)</Czech>
             <French>SIG 556 (Kaki)</French>
             <Spanish>SIG 556 (Caqui)</Spanish>
-            <Russian>SIG 556 (Хаки)</Russian>
+            <Russian>SIG 556 (хаки)</Russian>
             <Polish>SIG 556 (Khaki)</Polish>
             <German>SIG 556 (Khaki)</German>
             <Italian>SIG 556 (Khaki)</Italian>
@@ -2619,7 +2619,7 @@
             <Czech>SIG 556 (Písková)</Czech>
             <French>SIG 556 (Beige)</French>
             <Spanish>SIG 556 (Arena)</Spanish>
-            <Russian>SIG 556 (Песочный)</Russian>
+            <Russian>SIG 556 (песочный)</Russian>
             <Polish>SIG 556 (piaskowy)</Polish>
             <German>SIG 556 (sandfarben)</German>
             <Italian>SIG 556 (Sabbia)</Italian>
@@ -2636,7 +2636,7 @@
             <Czech>SIG 556 (Kamufláž)</Czech>
             <French>SIG 556 (Camo)</French>
             <Spanish>SIG 556 (Camuflaje)</Spanish>
-            <Russian>SIG 556 (Камо)</Russian>
+            <Russian>SIG 556 (камуфляжный)</Russian>
             <Polish>SIG 556 (kamuflaż)</Polish>
             <German>SIG 556 (Tarnmuster)</German>
             <Italian>SIG 556 (Camo)</Italian>
@@ -2653,7 +2653,7 @@
             <Czech>SIG 556 (Lesní)</Czech>
             <French>SIG 556 (Woodland)</French>
             <Spanish>SIG 556 (Bosque)</Spanish>
-            <Russian>SIG 556 (Лесной)</Russian>
+            <Russian>SIG 556 (Woodland)</Russian>
             <Polish>SIG 556 (leśny)</Polish>
             <German>SIG 556 (Grünes Tarnmuster)</German>
             <Italian>SIG 556 (Woodland)</Italian>
@@ -2687,7 +2687,7 @@
             <Czech>ASP-1 Kir (Černá)</Czech>
             <French>ASP-1 Kir (Noir)</French>
             <Spanish>ASP-1 Kir (Negro)</Spanish>
-            <Russian>ASP-1 Kir (Чёрный)</Russian>
+            <Russian>ASP-1 Kir (чёрный)</Russian>
             <German>ASP-1 Kir (Schwarz)</German>
             <Polish>ASP-1 Kir (czarny)</Polish>
             <Italian>ASP-1 Kir (Nero)</Italian>
@@ -2704,7 +2704,7 @@
             <Czech>ASP-1 Kir (Žlutohnědá)</Czech>
             <French>ASP-1 Kir (Tan)</French>
             <Spanish>ASP-1 Kir (Tan)</Spanish>
-            <Russian>ASP-1 Kir (Бронзовый)</Russian>
+            <Russian>ASP-1 Kir (пустынный)</Russian>
             <German>ASP-1 Kir (Hellbraun)</German>
             <Polish>ASP-1 Kir (Tan)</Polish>
             <Italian>ASP-1 Kir (Tan)</Italian>
@@ -2738,7 +2738,7 @@
             <Czech>Cyrus (Černá)</Czech>
             <French>Cyrus (Noir)</French>
             <Spanish>Cyrus (Negro)</Spanish>
-            <Russian>Cyrus (Чёрный)</Russian>
+            <Russian>Cyrus (чёрный)</Russian>
             <German>Cyrus (Schwarz)</German>
             <Polish>Cyrus (czarny)</Polish>
             <Italian>Cyrus (Nero)</Italian>
@@ -2755,7 +2755,7 @@
             <Czech>Cyrus (Hex)</Czech>
             <French>Cyrus (Hex)</French>
             <Spanish>Cyrus (Hex)</Spanish>
-            <Russian>Cyrus (Гекс)</Russian>
+            <Russian>Cyrus (гекс)</Russian>
             <German>Cyrus (Hex)</German>
             <Polish>Cyrus (hex)</Polish>
             <Italian>Cyrus (Hex)</Italian>
@@ -2772,7 +2772,7 @@
             <Czech>Cyrus (Žlutohnědá)</Czech>
             <French>Cyrus (Tan)</French>
             <Spanish>Cyrus (Tan)</Spanish>
-            <Russian>Cyrus (Бронза)</Russian>
+            <Russian>Cyrus (пустынный)</Russian>
             <German>Cyrus (Hellbraun)</German>
             <Polish>Cyrus (podpalany)</Polish>
             <Italian>Cyrus (Tan)</Italian>
@@ -2806,7 +2806,7 @@
             <Czech>M14 (Kamufláž)</Czech>
             <French>M14 (Camo)</French>
             <Spanish>M14 (Camuflaje)</Spanish>
-            <Russian>M14 (Камо)</Russian>
+            <Russian>M14 (камуфляжный)</Russian>
             <Polish>M14 (kamuflaż)</Polish>
             <German>M14 (Tarnmuster)</German>
             <Italian>M14 (Camo)</Italian>
@@ -2823,7 +2823,7 @@
             <Czech>M14 (Olivová)</Czech>
             <French>M14 (Olive)</French>
             <Spanish>M14 (Oliva)</Spanish>
-            <Russian>M14 (Олива)</Russian>
+            <Russian>M14 (олива)</Russian>
             <Polish>M14 (oliwkowy)</Polish>
             <German>M14 (Olivgrün)</German>
             <Italian>M14 (Olive)</Italian>
@@ -2857,7 +2857,7 @@
             <Czech>HK121 (Hex)</Czech>
             <French>HK121 (Hex)</French>
             <Spanish>HK121 (Hex)</Spanish>
-            <Russian>HK121 (Гекс)</Russian>
+            <Russian>HK121 (гекс)</Russian>
             <German>HK121 (Hex)</German>
             <Polish>HK121 (hex)</Polish>
             <Italian>HK121 (Hex)</Italian>
@@ -2874,7 +2874,7 @@
             <Czech>HK121 (Žlutohnědá)</Czech>
             <French>HK121 (Tan)</French>
             <Spanish>HK121 (Tan)</Spanish>
-            <Russian>HK121 (Бронза)</Russian>
+            <Russian>HK121 (пустынный)</Russian>
             <German>HK121 (Hellbraun)</German>
             <Polish>HK121 (podpalany)</Polish>
             <Italian>HK121 (Tan)</Italian>
@@ -2925,7 +2925,7 @@
             <Czech>LWMMG (Černá)</Czech>
             <French>LWMMG (Noir)</French>
             <Spanish>LWMMG (Negro)</Spanish>
-            <Russian>LWMMG (Чёрный)</Russian>
+            <Russian>LWMMG (чёрный)</Russian>
             <Polish>LWMMG (czarny)</Polish>
             <German>LWMMG (Schwarz)</German>
             <Italian>LWMMG (Nero)</Italian>
@@ -2942,7 +2942,7 @@
             <Czech>LWMMG (Písková)</Czech>
             <French>SPMG (Beige)</French>
             <Spanish>LWMMG (Arena)</Spanish>
-            <Russian>LWMMG (Песочный)</Russian>
+            <Russian>LWMMG (песочный)</Russian>
             <Polish>LWMMG (piaskowy)</Polish>
             <German>LWMMG (sandfarben)</German>
             <Italian>LWMMG (Sabbia)</Italian>
@@ -2995,7 +2995,7 @@
             <Japanese>ジープ ラングラー (LMG)</Japanese>
             <Italian>Jeep Wrangler (LMG)</Italian>
             <Polish>Jeep Wrangler (LMG)</Polish>
-            <Russian>Jeep Wrangler (Пулемет)</Russian>
+            <Russian>Jeep Wrangler (с пулемётом)</Russian>
             <Portuguese>Jeep Wrangler (LMG)</Portuguese>
             <French>Jeep Wrangler (LMG)</French>
             <Czech>Jeep Wrangler (LMG)</Czech>
@@ -3059,7 +3059,7 @@
             <Czech>QBZ-95-1 (Černá)</Czech>
             <French>QBZ-95-1 (Noir)</French>
             <Spanish>QBZ-95-1 (Negro)</Spanish>
-            <Russian>QBZ-95-1 (Чёрный)</Russian>
+            <Russian>QBZ-95-1 (чёрный)</Russian>
             <Polish>QBZ-95-1 (czarny)</Polish>
             <German>QBZ-95-1 (Schwarz)</German>
             <Italian>QBZ-95-1 (Nero)</Italian>
@@ -3078,7 +3078,7 @@
             <Polish>QBZ-95-1 (zielony hex)</Polish>
             <Czech>QBZ-95-1 (Zelený Hex)</Czech>
             <French>QBZ-95-1 (Hex Vert)</French>
-            <Russian>QBZ-95-1 (Зелёный Гекс)</Russian>
+            <Russian>QBZ-95-1 (зелёный гекс)</Russian>
             <Portuguese>QBZ-95-1 (Verde Hex)</Portuguese>
             <Hungarian>QBZ-95-1 (Zöld Hex)</Hungarian>
             <Italian>QBZ-95-1 (Hex Verde)</Italian>
@@ -3095,7 +3095,7 @@
             <Polish>QBZ-95-1 (hex)</Polish>
             <Czech>QBZ-95-1 (Hex)</Czech>
             <French>QBZ-95-1 (Hex)</French>
-            <Russian>QBZ-95-1 (Гекс)</Russian>
+            <Russian>QBZ-95-1 (гекс)</Russian>
             <Portuguese>QBZ-95-1 (Hex)</Portuguese>
             <Hungarian>QBZ-95-1 (Hex)</Hungarian>
             <Italian>QBZ-95-1 (Hex)</Italian>
@@ -3110,7 +3110,7 @@
             <Czech>QBZ-95-1 GL (Černá)</Czech>
             <French>QBZ-95-1 GL (Noir)</French>
             <Spanish>QBZ-95-1 GL (Negro)</Spanish>
-            <Russian>QBZ-95-1 GL (Чёрный)</Russian>
+            <Russian>QBZ-95-1 GL (чёрный)</Russian>
             <Polish>QBZ-95-1 GL (czarny)</Polish>
             <German>QBZ-95-1 GL (Schwarz)</German>
             <Italian>QBZ-95-1 GL (Nero)</Italian>
@@ -3129,7 +3129,7 @@
             <Polish>QBZ-95-1 GL (zielony hex)</Polish>
             <Czech>QBZ-95-1 GL (Zelený Hex)</Czech>
             <French>QBZ-95-1 GL (Hex Vert)</French>
-            <Russian>QBZ-95-1 GL (Зелёный Гекс)</Russian>
+            <Russian>QBZ-95-1 GL (зелёный гекс)</Russian>
             <Portuguese>QBZ-95-1 GL (Verde Hex)</Portuguese>
             <Hungarian>QBZ-95-1 GL (Zöld Hex)</Hungarian>
             <Italian>QBZ-95-1 GL (Hex Verde)</Italian>
@@ -3146,7 +3146,7 @@
             <Polish>QBZ-95-1 GL (hex)</Polish>
             <Czech>QBZ-95-1 GL (Hex)</Czech>
             <French>QBZ-95-1 GL (Hex)</French>
-            <Russian>QBZ-95-1 GL (Гекс)</Russian>
+            <Russian>QBZ-95-1 GL (гекс)</Russian>
             <Portuguese>QBZ-95-1 GL (Hex)</Portuguese>
             <Hungarian>QBZ-95-1 GL (Hex)</Hungarian>
             <Italian>QBZ-95-1 GL (Hex)</Italian>
@@ -3161,7 +3161,7 @@
             <Czech>QBZ-95-1 LSW (Černá)</Czech>
             <French>QBZ-95-1 LSW (Noir)</French>
             <Spanish>QBZ-95-1 LSW (Negro)</Spanish>
-            <Russian>QBZ-95-1 LSW (Чёрный)</Russian>
+            <Russian>QBZ-95-1 LSW (чёрный)</Russian>
             <Polish>QBZ-95-1 LSW (czarny)</Polish>
             <German>QBZ-95-1 LSW (Schwarz)</German>
             <Italian>QBZ-95-1 LSW (Nero)</Italian>
@@ -3180,7 +3180,7 @@
             <Polish>QBZ-95-1 LSW (zielony hex)</Polish>
             <Czech>QBZ-95-1 LSW (Zelený Hex)</Czech>
             <French>QBZ-95-1 LSW (Hex Vert)</French>
-            <Russian>QBZ-95-1 LSW (Зелёный Гекс)</Russian>
+            <Russian>QBZ-95-1 LSW (зелёный гекс)</Russian>
             <Portuguese>QBZ-95-1 LSW (Verde Hex)</Portuguese>
             <Hungarian>QBZ-95-1 LSW (Zöld Hex)</Hungarian>
             <Italian>QBZ-95-1 LSW (Hex Verde)</Italian>
@@ -3197,7 +3197,7 @@
             <Polish>QBZ-95-1 LSW (hex)</Polish>
             <Czech>QBZ-95-1 LSW (Hex)</Czech>
             <French>QBZ-95-1 LSW (Hex)</French>
-            <Russian>QBZ-95-1 LSW (Гекс)</Russian>
+            <Russian>QBZ-95-1 LSW (гекс)</Russian>
             <Portuguese>QBZ-95-1 LSW (Hex)</Portuguese>
             <Hungarian>QBZ-95-1 LSW (Hex)</Hungarian>
             <Italian>QBZ-95-1 LSW (Hex)</Italian>
@@ -3212,7 +3212,7 @@
             <Czech>QBU-88 (Černá)</Czech>
             <French>QBU-88 (Noir)</French>
             <Spanish>QBU-88 (Negro)</Spanish>
-            <Russian>QBU-88 (Чёрный)</Russian>
+            <Russian>QBU-88 (чёрный)</Russian>
             <Polish>QBU-88 (czarny)</Polish>
             <German>QBU-88 (Schwarz)</German>
             <Italian>QBU-88 (Nero)</Italian>
@@ -3231,7 +3231,7 @@
             <Polish>QBU-88 (zielony hex)</Polish>
             <Czech>QBU-88 (Zelený Hex)</Czech>
             <French>QBU-88 (Hex Vert)</French>
-            <Russian>QBU-88 (Зелёный Гекс)</Russian>
+            <Russian>QBU-88 (зелёный гекс)</Russian>
             <Portuguese>QBU-88 (Verde Hex)</Portuguese>
             <Hungarian>QBU-88 (Zöld Hex)</Hungarian>
             <Italian>QBU-88 (Hex Verde)</Italian>
@@ -3248,7 +3248,7 @@
             <Polish>QBU-88 (hex)</Polish>
             <Czech>QBU-88 (Hex)</Czech>
             <French>QBU-88 (Hex)</French>
-            <Russian>QBU-88 (Гекс)</Russian>
+            <Russian>QBU-88 (гекс)</Russian>
             <Portuguese>QBU-88 (Hex)</Portuguese>
             <Hungarian>QBU-88 (Hex)</Hungarian>
             <Italian>QBU-88 (Hex)</Italian>
@@ -3265,7 +3265,7 @@
             <Polish>GM6 Lynx (Zielony hex)</Polish>
             <Czech>GM6 Lynx (Zelený Hex)</Czech>
             <French>GM6 Lynx (Hex Vert)</French>
-            <Russian>GM6 Lynx (Зелёный Гекс)</Russian>
+            <Russian>GM6 Lynx (зелёный гекс)</Russian>
             <Portuguese>GM6 Lynx (Verde Hex)</Portuguese>
             <Hungarian>GM6 Lynx (Zöld Hex)</Hungarian>
             <Italian>GM6 Lynx (Hex Verde)</Italian>
@@ -3331,7 +3331,7 @@
             <Czech>HK416A5 11 " (Černá)</Czech>
             <French>HK416A5 11 " (Noir)</French>
             <Spanish>HK416A5 11 " (Negro)</Spanish>
-            <Russian>HK416A5 11 " (Чёрный)</Russian>
+            <Russian>HK416A5 11 " (чёрный)</Russian>
             <Polish>HK416A5 11 " (czarny)</Polish>
             <German>HK416A5 11 " (Schwarz)</German>
             <Italian>HK416A5 11 " (Nero)</Italian>
@@ -3348,7 +3348,7 @@
             <Czech>HK416A5 11 " (Khaki)</Czech>
             <French>HK416A5 11 " (Kaki)</French>
             <Spanish>HK416A5 11 " (Caqui)</Spanish>
-            <Russian>HK416A5 11 " (Хаки)</Russian>
+            <Russian>HK416A5 11 " (хаки)</Russian>
             <Polish>HK416A5 11 " (Khaki)</Polish>
             <German>HK416A5 11 " (Khaki)</German>
             <Italian>HK416A5 11 " (Khaki)</Italian>
@@ -3365,7 +3365,7 @@
             <Czech>HK416A5 11 " (Písková)</Czech>
             <French>HK416A5 11 " (Beige)</French>
             <Spanish>HK416A5 11 " (Arena)</Spanish>
-            <Russian>HK416A5 11 " (Песочный)</Russian>
+            <Russian>HK416A5 11 " (песочный)</Russian>
             <German>HK416A5 11 " (sandfarben)</German>
             <Polish>HK416A5 11 " (piaskowy)</Polish>
             <Italian>HK416A5 11 " (Sabbia)</Italian>
@@ -3382,7 +3382,7 @@
             <Czech>HK416A5 11 " GL (Černá)</Czech>
             <French>HK416A5 11 " GL (Noir)</French>
             <Spanish>HK416A5 11 " GL (Negro)</Spanish>
-            <Russian>HK416A5 11 " GL (Чёрный)</Russian>
+            <Russian>HK416A5 11 " GL (чёрный)</Russian>
             <Polish>HK416A5 11 " GL (czarny)</Polish>
             <German>HK416A5 11 " GL (Schwarz)</German>
             <Italian>HK416A5 11 " GL (Nero)</Italian>
@@ -3399,7 +3399,7 @@
             <Czech>HK416A5 11 " GL (Khaki)</Czech>
             <French>HK416A5 11 " GL (Kaki)</French>
             <Spanish>HK416A5 11 " GL (Caqui)</Spanish>
-            <Russian>HK416A5 11 " GL (Хаки)</Russian>
+            <Russian>HK416A5 11 " GL (хаки)</Russian>
             <Polish>HK416A5 11 " GL (Khaki)</Polish>
             <German>HK416A5 11 " GL (Khaki)</German>
             <Italian>HK416A5 11 " GL (Khaki)</Italian>
@@ -3416,7 +3416,7 @@
             <Czech>HK416A5 11 " GL (Písková)</Czech>
             <French>HK416A5 11 " GL (Beige)</French>
             <Spanish>HK416A5 11 " GL (Arena)</Spanish>
-            <Russian>HK416A5 11 " GL (Песочный)</Russian>
+            <Russian>HK416A5 11 " GL (песочный)</Russian>
             <German>HK416A5 11 " GL (sandfarben)</German>
             <Polish>HK416A5 11 " GL (piaskowy)</Polish>
             <Italian>HK416A5 11 " GL (Sabbia)</Italian>
@@ -3433,7 +3433,7 @@
             <Czech>HK416A5 14.5 " (Černá)</Czech>
             <French>HK416A5 14.5 " (Noir)</French>
             <Spanish>HK416A5 14.5 " (Negro)</Spanish>
-            <Russian>HK416A5 14.5 " (Чёрный)</Russian>
+            <Russian>HK416A5 14.5 " (чёрный)</Russian>
             <Polish>HK416A5 14.5 " (czarny)</Polish>
             <German>HK416A5 14.5 " (Schwarz)</German>
             <Italian>HK416A5 14.5 " (Nero)</Italian>
@@ -3450,7 +3450,7 @@
             <Czech>HK416A5 14.5 " (Khaki)</Czech>
             <French>HK416A5 14.5 " (Kaki)</French>
             <Spanish>HK416A5 14.5 " (Caqui)</Spanish>
-            <Russian>HK416A5 14.5 " (Хаки)</Russian>
+            <Russian>HK416A5 14.5 " (хаки)</Russian>
             <Polish>HK416A5 14.5 " (Khaki)</Polish>
             <German>HK416A5 14.5 " (Khaki)</German>
             <Italian>HK416A5 14.5 " (Khaki)</Italian>
@@ -3467,7 +3467,7 @@
             <Czech>HK416A5 14.5 " (Písková)</Czech>
             <French>HK416A5 14.5 " (Beige)</French>
             <Spanish>HK416A5 14.5 " (Arena)</Spanish>
-            <Russian>HK416A5 14.5 " (Песочный)</Russian>
+            <Russian>HK416A5 14.5 " (песочный)</Russian>
             <German>HK416A5 14.5 " (sandfarben)</German>
             <Polish>HK416A5 14.5 " (piaskowy)</Polish>
             <Italian>HK416A5 14.5 " (Sabbia)</Italian>
@@ -3484,7 +3484,7 @@
             <Czech>HK417A2 20 " (Černá)</Czech>
             <French>HK417A2 20 " (Noir)</French>
             <Spanish>HK417A2 20 " (Negro)</Spanish>
-            <Russian>HK417A2 20 " (Чёрный)</Russian>
+            <Russian>HK417A2 20 " (чёрный)</Russian>
             <Polish>HK417A2 20 " (czarny)</Polish>
             <German>HK417A2 20 " (Schwarz)</German>
             <Italian>HK417A2 20 " (Nero)</Italian>
@@ -3501,7 +3501,7 @@
             <Czech>HK417A2 20 " (Khaki)</Czech>
             <French>HK417A2 20 " (Kaki)</French>
             <Spanish>HK417A2 20 " (Caqui)</Spanish>
-            <Russian>HK417A2 20 " (Хаки)</Russian>
+            <Russian>HK417A2 20 " (хаки)</Russian>
             <Polish>HK417A2 20 " (Khaki)</Polish>
             <German>HK417A2 20 " (Khaki)</German>
             <Italian>HK417A2 20 " (Khaki)</Italian>
@@ -3518,7 +3518,7 @@
             <Czech>HK417A2 20 " (Písková)</Czech>
             <French>HK417A2 20 " (Beige)</French>
             <Spanish>HK417A2 20 " (Arena)</Spanish>
-            <Russian>HK417A2 20 " (Песочный)</Russian>
+            <Russian>HK417A2 20 " (песочный)</Russian>
             <German>HK417A2 20 " (sandfarben)</German>
             <Polish>HK417A2 20 " (piaskowy)</Polish>
             <Italian>HK417A2 20 " (Sabbia)</Italian>
@@ -3537,7 +3537,7 @@
             <Polish>RPG-32 (zielony hex)</Polish>
             <Czech>RPG-32 (Zelený Hex)</Czech>
             <French>RPG-32 (Hex Vert)</French>
-            <Russian>RPG-32 (Зелёный Гекс)</Russian>
+            <Russian>RPG-32 (зелёный гекс)</Russian>
             <Portuguese>RPG-32 (Verde Hex)</Portuguese>
             <Hungarian>RPG-32 (Zöld Hex)</Hungarian>
             <Italian>RPG-32 (Hex Verde)</Italian>
@@ -3552,7 +3552,7 @@
             <Czech>P99 (Khaki)</Czech>
             <French>P99 (Kaki)</French>
             <Spanish>P99 (Caqui)</Spanish>
-            <Russian>P99 (Хаки)</Russian>
+            <Russian>P99 (хаки)</Russian>
             <Polish>P99 (Khaki)</Polish>
             <German>P99 (Khaki)</German>
             <Italian>P99 (Khaki)</Italian>
@@ -3569,7 +3569,7 @@
             <Czech>P99 (Černá)</Czech>
             <French>P99 (Noir)</French>
             <Spanish>P99 (Negro)</Spanish>
-            <Russian>P99 (Чёрный)</Russian>
+            <Russian>P99 (чёрный)</Russian>
             <Polish>P99 (czarny)</Polish>
             <German>P99 (Schwarz)</German>
             <Italian>P99 (Nero)</Italian>
@@ -3588,7 +3588,7 @@
             <Polish>Makarowa PM</Polish>
             <Czech>Makarov PM</Czech>
             <French>Makarov PM</French>
-            <Russian>Макарова ПМ</Russian>
+            <Russian>ПМ</Russian>
             <Portuguese>Makarov PM</Portuguese>
             <Hungarian>Makarov PM</Hungarian>
             <Italian>Makarov PM</Italian>
@@ -3654,7 +3654,7 @@
             <Chinesesimp>"北极星"（轻型）</Chinesesimp>
             <Italian>Polaris DAGOR (leggero)</Italian>
             <Polish>Polaris DAGOR (light)</Polish>
-            <Russian>Polaris DAGOR (легкий)</Russian>
+            <Russian>Polaris DAGOR (лёгкий)</Russian>
             <Portuguese>Polaris DAGOR (leve)</Portuguese>
             <French>Polaris DAGOR (léger)</French>
             <Czech>Polaris DAGOR (lehký)</Czech>
@@ -3782,7 +3782,7 @@
             <Japanese>ウィーゼル 2 オゼロット (対空)</Japanese>
             <Italian>Wiesel 2 Ozelot (AA)</Italian>
             <Polish>Wiesel 2 Ozelot (AA)</Polish>
-            <Russian>Wiesel 2 Ozelot (ПВО)</Russian>
+            <Russian>Wiesel 2 Ozelot (ЗРК)</Russian>
             <Portuguese>Wiesel 2 Ozelot (AA)</Portuguese>
             <French>Wiesel 2 Ozelot (AA)</French>
             <Czech>Wiesel 2 Ozelot (AA)</Czech>
@@ -3798,7 +3798,7 @@
             <Japanese>ウィーゼル 2 (ATGM)</Japanese>
             <Italian>Wiesel 2 (ATGM)</Italian>
             <Polish>Wiesel 2 (ATGM)</Polish>
-            <Russian>Wiesel 2 (ПТ)</Russian>
+            <Russian>Wiesel 2 (ПТРК)</Russian>
             <Portuguese>Wiesel 2 (ATGM)</Portuguese>
             <French>Wiesel 2 (ATGM)</French>
             <Czech>Wiesel 2 (ATGM)</Czech>
@@ -3830,7 +3830,7 @@
             <Japanese>ウィーゼル 2 RFCV (レーダー)</Japanese>
             <Italian>Wiesel 2 RFCV (Radar)</Italian>
             <Polish>Wiesel 2 RFCV (Radar)</Polish>
-            <Russian>Wiesel 2 RFCV (Радар)</Russian>
+            <Russian>Wiesel 2 RFCV (радар)</Russian>
             <Portuguese>Wiesel 2 RFCV (Radar)</Portuguese>
             <French>Wiesel 2 RFCV (Radar)</French>
             <Czech>Wiesel 2 RFCV (Radar)</Czech>
@@ -3862,7 +3862,7 @@
             <Japanese>Leupold Mark 4 HAMR (カーキ)</Japanese>
             <Italian>Leupold Mark 4 HAMR (Khaki)</Italian>
             <Polish>Leupold Mark 4 HAMR (Khaki)</Polish>
-            <Russian>Leupold Mark 4 HAMR (Хаки)</Russian>
+            <Russian>Leupold Mark 4 HAMR (хаки)</Russian>
             <Portuguese>Leupold Mark 4 HAMR (Khaki)</Portuguese>
             <French>Leupold Mark 4 HAMR (Kaki)</French>
             <Czech>Leupold Mark 4 HAMR (Khaki)</Czech>
@@ -3910,7 +3910,7 @@
             <Japanese>ELCAN SpecterOS (タン)</Japanese>
             <Italian>ELCAN SpecterOS (Tan)</Italian>
             <Polish>ELCAN SpecterOS (Tan)</Polish>
-            <Russian>ELCAN SpecterOS (Бронза)</Russian>
+            <Russian>ELCAN SpecterOS (пустынный)</Russian>
             <Portuguese>ELCAN SpecterOS (Bege)</Portuguese>
             <French>ELCAN SpecterOS (Tan)</French>
             <Czech>ELCAN SpecterOS (Žlutohnědá)</Czech>
@@ -3926,7 +3926,7 @@
             <Japanese>ELCAN SpecterOS (ブラック)</Japanese>
             <Italian>ELCAN SpecterOS (Nero)</Italian>
             <Polish>ELCAN SpecterOS (Czarny)</Polish>
-            <Russian>ELCAN SpecterOS (Черный)</Russian>
+            <Russian>ELCAN SpecterOS (чёрный)</Russian>
             <Portuguese>ELCAN SpecterOS (Preto)</Portuguese>
             <French>ELCAN SpecterOS (Noire)</French>
             <Czech>ELCAN SpecterOS (Černá)</Czech>
@@ -3941,7 +3941,7 @@
             <Japanese>ELCAN SpecterOS (緑ヘックス)</Japanese>
             <Italian>ELCAN SpecterOS (Verde Hex)</Italian>
             <Polish>ELCAN SpecterOS (Zielony Hex)</Polish>
-            <Russian>ELCAN SpecterOS (Зеленый Гекс)</Russian>
+            <Russian>ELCAN SpecterOS (зелёный гекс)</Russian>
             <Portuguese>ELCAN SpecterOS (Verde Hex)</Portuguese>
             <French>ELCAN SpecterOS (Hex Verte)</French>
             <Czech>ELCAN SpecterOS (Zelený Hex)</Czech>
@@ -3990,6 +3990,7 @@
             <German>ELCAN SpecterOS (Grün)</German>
             <Chinesesimp>ELCAN SpecterOS（繁茂）</Chinesesimp>
             <Korean>엘칸 스펙터OS (초목)</Korean>
+            <Russian>ELCAN SpecterOS (обильная растительность)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
@@ -3999,6 +4000,7 @@
             <German>ELCAN SpecterOS (Trocken)</German>
             <Chinesesimp>ELCAN SpecterOS（干旱）</Chinesesimp>
             <Korean>엘칸 스펙터OS (건조)</Korean>
+            <Russian>ELCAN SpecterOS (сухая местность)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
@@ -4008,6 +4010,7 @@
             <German>ELCAN SpecterOS 7.62 (Schwarz)</German>
             <Chinesesimp>ELCAN SpecterOS 7.62（黑色）</Chinesesimp>
             <Korean>엘칸 스펙터OS 7.62 (검정)</Korean>
+            <Russian>ELCAN SpecterOS 7.62 (чёрный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
@@ -4017,6 +4020,7 @@
             <German>ELCAN SpecterOS 7.62 (Grün)</German>
             <Chinesesimp>ELCAN SpecterOS 7.62（繁茂）</Chinesesimp>
             <Korean>엘칸 스펙터OS 7.62 (초목)</Korean>
+            <Russian>ELCAN SpecterOS 7.62 (обильная растительность)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
@@ -4026,6 +4030,7 @@
             <German>ELCAN SpecterOS 7.62 (Trocken)</German>
             <Chinesesimp>ELCAN SpecterOS 7.62（干旱）</Chinesesimp>
             <Korean>엘칸 스펙터OS 7.62 (건조)</Korean>
+            <Russian>ELCAN SpecterOS 7.62 (сухая местность)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4035,7 +4040,7 @@
             <Japanese>SIG BRAVO4 / ROMEO3 (ブラック)</Japanese>
             <Italian>SIG BRAVO4 / ROMEO3 (Nero)</Italian>
             <Polish>SIG BRAVO4 / ROMEO3 (Czarny)</Polish>
-            <Russian>SIG BRAVO4 / ROMEO3 (Черный)</Russian>
+            <Russian>SIG BRAVO4 / ROMEO3 (чёрный)</Russian>
             <Portuguese>SIG BRAVO4 / ROMEO3 (Preto)</Portuguese>
             <French>SIG BRAVO4 / ROMEO3 (Noire)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Černá)</Czech>
@@ -4051,7 +4056,7 @@
             <Japanese>SIG BRAVO4 / ROMEO3 (カーキ)</Japanese>
             <Italian>SIG BRAVO4 / ROMEO3 (Khaki)</Italian>
             <Polish>SIG BRAVO4 / ROMEO3 (Khaki)</Polish>
-            <Russian>SIG BRAVO4 / ROMEO3 (Хаки)</Russian>
+            <Russian>SIG BRAVO4 / ROMEO3 (хаки)</Russian>
             <Portuguese>SIG BRAVO4 / ROMEO3 (Khaki)</Portuguese>
             <French>SIG BRAVO4 / ROMEO3 (Kaki)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Khaki)</Czech>
@@ -4067,7 +4072,7 @@
             <Japanese>SIG BRAVO4 / ROMEO3 (サンド)</Japanese>
             <Italian>SIG BRAVO4 / ROMEO3 (Sabbia)</Italian>
             <Polish>SIG BRAVO4 / ROMEO3 (Piasek)</Polish>
-            <Russian>SIG BRAVO4 / ROMEO3 (Песочный)</Russian>
+            <Russian>SIG BRAVO4 / ROMEO3 (песочный)</Russian>
             <Portuguese>SIG BRAVO4 / ROMEO3 (Areia)</Portuguese>
             <French>SIG BRAVO4 / ROMEO3 (Beige)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Písková)</Czech>
@@ -4098,7 +4103,7 @@
             <Japanese>Nightforce NXS (緑ヘックス)</Japanese>
             <Italian>Nightforce NXS (Verde Hex)</Italian>
             <Polish>Nightforce NXS (Zielony Hex)</Polish>
-            <Russian>Nightforce NXS (Зеленый Гекс)</Russian>
+            <Russian>Nightforce NXS (зелёный гекс)</Russian>
             <Portuguese>Nightforce NXS (Verde Hex)</Portuguese>
             <French>Nightforce NXS (Hex Verte)</French>
             <Czech>Nightforce NXS (Zelený Hex)</Czech>
@@ -4115,7 +4120,7 @@
             <Japanese>Nightforce NXS (ジャングル)</Japanese>
             <Italian>Nightforce NXS (Giungla)</Italian>
             <Polish>Nightforce NXS (Dżungla)</Polish>
-            <Russian>Nightforce NXS (Джунгли)</Russian>
+            <Russian>Nightforce NXS (джунгли)</Russian>
             <Portuguese>Nightforce NXS (Selva)</Portuguese>
             <French>Nightforce NXS (Jungle)</French>
             <Czech>Nightforce NXS (Džungle)</Czech>
@@ -4162,7 +4167,7 @@
             <Japanese>US Optics MR-10 (ブラック)</Japanese>
             <Polish>US Optics MR-10 (Czarny)</Polish>
             <Italian>Ottica US MR-10 (nera)</Italian>
-            <Russian>US Optics MR-10 (Черный)</Russian>
+            <Russian>US Optics MR-10 (чёрный)</Russian>
             <Portuguese>US Optics MR-10  (Preto)</Portuguese>
             <French>US Optics MR-10 (Noire)</French>
             <Czech>US Optics MR-10 (Černá)</Czech>
@@ -4178,7 +4183,7 @@
             <Japanese>US Optics MR-10 (カーキ)</Japanese>
             <Polish>US Optics MR-10 (Khaki)</Polish>
             <Italian>Ottica US MR-10 (cachi)</Italian>
-            <Russian>US Optics MR-10 (Хаки)</Russian>
+            <Russian>US Optics MR-10 (хаки)</Russian>
             <Portuguese>US Optics MR-10 (Khaki)</Portuguese>
             <French>US Optics MR-10 (Kaki)</French>
             <Czech>US Optics MR-10 (Khaki)</Czech>
@@ -4194,7 +4199,7 @@
             <Japanese>US Optics MR-10 (サンド)</Japanese>
             <Polish>US Optics MR-10 (Piasek)</Polish>
             <Italian>Ottica US MR-10 (sabbia)</Italian>
-            <Russian>US Optics MR-10 (Песочный)</Russian>
+            <Russian>US Optics MR-10 (песочный)</Russian>
             <Portuguese>US Optics MR-10 (Areia)</Portuguese>
             <French>US Optics MR-10 (Beige)</French>
             <Czech>US Optics MR-10 (Písková)</Czech>
@@ -4210,7 +4215,7 @@
             <Japanese>KAHLES ヘリア (ブラック)</Japanese>
             <Polish>KAHLES Helia (Czarny)</Polish>
             <Italian>KAHLES Helia (nero)</Italian>
-            <Russian>KAHLES Helia (Черный)</Russian>
+            <Russian>KAHLES Helia (чёрный)</Russian>
             <Portuguese>KAHLES Helia  (Preto)</Portuguese>
             <French>KAHLES Helia (Noire)</French>
             <Czech>KAHLES Helia (Černá)</Czech>
@@ -4226,7 +4231,7 @@
             <Japanese>KAHLES ヘリア (ヘックス)</Japanese>
             <Polish>KAHLES Helia (Hex)</Polish>
             <Italian>KAHLES Helia (esagonale)</Italian>
-            <Russian>KAHLES Helia (Гекс)</Russian>
+            <Russian>KAHLES Helia (гекс)</Russian>
             <Portuguese>KAHLES Helia (Hex)</Portuguese>
             <French>KAHLES Helia (Hex)</French>
             <Czech>KAHLES Helia (Hex)</Czech>
@@ -4242,7 +4247,7 @@
             <Japanese>KAHLES ヘリア (使い古し)</Japanese>
             <Polish>KAHLES Helia (Stary)</Polish>
             <Italian>KAHLES Helia (vecchio)</Italian>
-            <Russian>KAHLES Helia (Старый)</Russian>
+            <Russian>KAHLES Helia (старый)</Russian>
             <Portuguese>KAHLES Helia (Velho)</Portuguese>
             <French>KAHLES Helia (Usée)</French>
             <Czech>KAHLES Helia (Stará)</Czech>
@@ -4258,7 +4263,7 @@
             <Japanese>KAHLES Helia (タン)</Japanese>
             <Polish>KAHLES Helia (Tan)</Polish>
             <Italian>KAHLES Helia (marroncino)</Italian>
-            <Russian>KAHLES Helia (Бронза)</Russian>
+            <Russian>KAHLES Helia (пустынный)</Russian>
             <Portuguese>KAHLES Helia (Bege)</Portuguese>
             <French>KAHLES Helia (Tan)</French>
             <Czech>KAHLES Helia (Žlutohnědá)</Czech>
@@ -4290,7 +4295,7 @@
             <Japanese>Burris XTR II (緑ヘックス)</Japanese>
             <Italian>Burris XTR II (Green Hex)</Italian>
             <Polish>Burris XTR II (Zielony Hex)</Polish>
-            <Russian>Burris XTR II (Зеленый Гекс)</Russian>
+            <Russian>Burris XTR II (зелёный гекс)</Russian>
             <Portuguese>Burris XTR II (Verde Hex)</Portuguese>
             <French>Burris XTR II (Hex Verte)</French>
             <Czech>Burris XTR II (Zelený Hex)</Czech>
@@ -4307,6 +4312,7 @@
             <German>Burris XTR II (Alt)</German>
             <Chinesesimp>Burris XTR II（陈旧）</Chinesesimp>
             <Korean>버리스 XTR II (낡음)</Korean>
+            <Russian>Burris XTR II (старый)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
@@ -4316,6 +4322,7 @@
             <German>Burris XTR II (ASP-1 Kir)</German>
             <Chinesesimp>Burris XTR II（ASP-1 Kir）</Chinesesimp>
             <Korean>버리스 XTR II (ASP-1 키르)</Korean>
+            <Russian>Burris XTR II (ASP-1 Kir)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4325,7 +4332,7 @@
             <Japanese>EOTech XPS3 (タン)</Japanese>
             <Italian>EOTech XPS3 (Tan)</Italian>
             <Polish>EOTech XPS3 (Tan)</Polish>
-            <Russian>EOTech XPS3 (Бронза)</Russian>
+            <Russian>EOTech XPS3 (пустынный)</Russian>
             <Portuguese>EOTech XPS3 (Bege)</Portuguese>
             <French>EOTech XPS3 (Tan)</French>
             <Czech>EOTech XPS3 (Žlutohnědá)</Czech>
@@ -4341,7 +4348,7 @@
             <Japanese>EOTech XPS3 (ブラック)</Japanese>
             <Italian>EOTech XPS3 (Black)</Italian>
             <Polish>EOTech XPS3 (Czarny)</Polish>
-            <Russian>EOTech XPS3 (Черный)</Russian>
+            <Russian>EOTech XPS3 (чёрный)</Russian>
             <Portuguese>EOTech XPS3 (Preto)</Portuguese>
             <French>EOTech XPS3 (Noire)</French>
             <Czech>EOTech XPS3 (Černá)</Czech>
@@ -4357,7 +4364,7 @@
             <Japanese>EOTech XPS3 (カーキ)</Japanese>
             <Italian>EOTech XPS3 (Khaki)</Italian>
             <Polish>EOTech XPS3 (Khaki)</Polish>
-            <Russian>EOTech XPS3 (Хаки)</Russian>
+            <Russian>EOTech XPS3 (хаки)</Russian>
             <Portuguese>EOTech XPS3 (Khaki)</Portuguese>
             <French>EOTech XPS3 (Kaki)</French>
             <Czech>EOTech XPS3 (Khaki)</Czech>
@@ -4373,6 +4380,7 @@
             <German>EOTech XPS3 (Grün)</German>
             <Chinesesimp>EOTech XPS3（繁茂）</Chinesesimp>
             <Korean>이오텍 XPS3 (초목)</Korean>
+            <Russian>EOTech XPS3 (обильная растительность)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
@@ -4382,6 +4390,7 @@
             <German>EOTech XPS3 (Trocken)</German>
             <Chinesesimp>EOTech XPS3（干旱）</Chinesesimp>
             <Korean>이오텍 XPS3 (건조)</Korean>
+            <Russian>EOTech XPS3 (сухая местность)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4391,7 +4400,7 @@
             <Japanese>EOTech XPS3 SMG (タン)</Japanese>
             <Italian>EOTech XPS3 SMG (Tan)</Italian>
             <Polish>EOTech XPS3 SMG (Tan)</Polish>
-            <Russian>EOTech XPS3 SMG (Бронза)</Russian>
+            <Russian>EOTech XPS3 SMG (пустынный)</Russian>
             <Portuguese>EOTech XPS3 SMG (Bege)</Portuguese>
             <French>EOTech XPS3 SMG (Tan)</French>
             <Czech>EOTech XPS3 SMG (Žlutohnědá)</Czech>
@@ -4407,7 +4416,7 @@
             <Japanese>EOTech XPS3 SMG (ブラック)</Japanese>
             <Italian>EOTech XPS3 SMG (Nero)</Italian>
             <Polish>EOTech XPS3 SMG (Czarny)</Polish>
-            <Russian>EOTech XPS3 SMG (Черный)</Russian>
+            <Russian>EOTech XPS3 SMG (чёрный)</Russian>
             <Portuguese>EOTech XPS3 SMG (Preto)</Portuguese>
             <French>EOTech XPS3 SMG (Noire)</French>
             <Czech>EOTech XPS3 SMG (Černá)</Czech>
@@ -4423,7 +4432,7 @@
             <Japanese>EOTech XPS3 SMG (カーキ)</Japanese>
             <Italian>EOTech XPS3 SMG (Khaki)</Italian>
             <Polish>EOTech XPS3 SMG (Khaki)</Polish>
-            <Russian>EOTech XPS3 SMG (Хаки)</Russian>
+            <Russian>EOTech XPS3 SMG (хаки)</Russian>
             <Portuguese>EOTech XPS3 SMG (Khaki)</Portuguese>
             <French>EOTech XPS3 SMG (Kaki)</French>
             <Czech>EOTech XPS3 SMG (Khaki)</Czech>
@@ -4503,7 +4512,7 @@
             <Japanese>C-More レイルウェイ (レッド)</Japanese>
             <Italian>C-More Railway (Rosso)</Italian>
             <Polish>C-More Railway (Czerwony)</Polish>
-            <Russian>C-More Railway (Красный)</Russian>
+            <Russian>C-More Railway (красный)</Russian>
             <Portuguese>C-More Railway (Vermelho)</Portuguese>
             <French>C-More Railway (Rouge)</French>
             <Czech>C-More Railway (Červený)</Czech>
@@ -4519,7 +4528,7 @@
             <Japanese>C-More レイルウェイ (グリーン)</Japanese>
             <Italian>C-More Railway (Verde)</Italian>
             <Polish>C-More Railway (Zielony)</Polish>
-            <Russian>C-More Railway (Зеленый)</Russian>
+            <Russian>C-More Railway (зелёный)</Russian>
             <Portuguese>C-More Railway (Verde)</Portuguese>
             <French>C-More Railway (Verte)</French>
             <Czech>C-More Railway (Zelený)</Czech>
@@ -4535,7 +4544,7 @@
             <Japanese>C-More レイルウェイ SMG (レッド)</Japanese>
             <Italian>C-More Railway SMG (Rosso)</Italian>
             <Polish>C-More Railway SMG (Czerwony)</Polish>
-            <Russian>C-More Railway SMG (Красный)</Russian>
+            <Russian>C-More Railway SMG (красный)</Russian>
             <Portuguese>C-More Railway SMG (Vermelho)</Portuguese>
             <French>C-More Railway SMG (Rouge)</French>
             <Czech>C-More Railway SMG (Červený)</Czech>
@@ -4551,7 +4560,7 @@
             <Japanese>C-More レイルウェイ SMG (グリーン)</Japanese>
             <Italian>C-More Railway SMG (Verde)</Italian>
             <Polish>C-More Railway SMG (Zielony)</Polish>
-            <Russian>C-More Railway SMG (Зеленый)</Russian>
+            <Russian>C-More Railway SMG (зелёный)</Russian>
             <Portuguese>C-More Railway SMG (Verde)</Portuguese>
             <French>C-More Railway SMG (Verte)</French>
             <Czech>C-More Railway SMG (Zelený)</Czech>
@@ -4564,7 +4573,7 @@
             <Czech>P90 TR (Černá)</Czech>
             <French>P90 TR (Noir)</French>
             <Spanish>P90 TR (Negro)</Spanish>
-            <Russian>P90 TR (Чёрный)</Russian>
+            <Russian>P90 TR (чёрный)</Russian>
             <Polish>P90 TR (czarny)</Polish>
             <German>P90 TR (Schwarz)</German>
             <Italian>P90 TR (Nero)</Italian>
@@ -4581,7 +4590,7 @@
             <Czech>P90 TR (Khaki)</Czech>
             <French>P90 TR (Kaki)</French>
             <Spanish>P90 TR (Caqui)</Spanish>
-            <Russian>P90 TR (Хаки)</Russian>
+            <Russian>P90 TR (хаки)</Russian>
             <Polish>P90 TR (Khaki)</Polish>
             <German>P90 TR (Khaki)</German>
             <Italian>P90 TR (Khaki)</Italian>
@@ -4598,7 +4607,7 @@
             <Czech>P90 TR (Kamufláž)</Czech>
             <French>P90 TR (Camo)</French>
             <Spanish>P90 TR (Camuflaje)</Spanish>
-            <Russian>P90 TR (Камо)</Russian>
+            <Russian>P90 TR (камуфляжный)</Russian>
             <Polish>P90 TR (kamuflaż)</Polish>
             <German>P90 TR (Camo)</German>
             <Italian>P90 TR (Camo)</Italian>
@@ -4615,7 +4624,7 @@
             <Czech>P90 TR (Hex)</Czech>
             <French>P90 TR (Hex)</French>
             <Spanish>P90 TR (Hex)</Spanish>
-            <Russian>P90 TR (Гекс)</Russian>
+            <Russian>P90 TR (гекс)</Russian>
             <German>P90 TR (Hex)</German>
             <Polish>P90 TR (hex)</Polish>
             <Italian>P90 TR (Hex)</Italian>
@@ -4632,7 +4641,7 @@
             <Czech>P90 (Černá)</Czech>
             <French>P90 (Noir)</French>
             <Spanish>P90 (Negro)</Spanish>
-            <Russian>P90 (Чёрный)</Russian>
+            <Russian>P90 (чёрный)</Russian>
             <Polish>P90 (czarny)</Polish>
             <German>P90 (Schwarz)</German>
             <Italian>P90 (Nero)</Italian>
@@ -4649,7 +4658,7 @@
             <Czech>P90 (Khaki)</Czech>
             <French>P90 (Kaki)</French>
             <Spanish>P90 (Caqui)</Spanish>
-            <Russian>P90 (Хаки)</Russian>
+            <Russian>P90 (хаки)</Russian>
             <Polish>P90 (Khaki)</Polish>
             <German>P90 (Khaki)</German>
             <Italian>P90 (Khaki)</Italian>
@@ -4666,7 +4675,7 @@
             <Czech>P90 (Kamufláž)</Czech>
             <French>P90 (Camo)</French>
             <Spanish>P90 (Camuflaje)</Spanish>
-            <Russian>P90 (Камо)</Russian>
+            <Russian>P90 (камуфляжный)</Russian>
             <Polish>P90 (kamuflaż)</Polish>
             <German>P90 (Camo)</German>
             <Italian>P90 (Camo)</Italian>
@@ -4683,7 +4692,7 @@
             <Czech>P90 (Hex)</Czech>
             <French>P90 (Hex)</French>
             <Spanish>P90 (Hex)</Spanish>
-            <Russian>P90 (Гекс)</Russian>
+            <Russian>P90 (гекс)</Russian>
             <German>P90 (Hex)</German>
             <Polish>P90 (hex)</Polish>
             <Italian>P90 (Hex)</Italian>
@@ -4700,7 +4709,7 @@
             <Czech>PS90 TR (Černá)</Czech>
             <French>PS90 TR (Noir)</French>
             <Spanish>PS90 TR (Negro)</Spanish>
-            <Russian>PS90 TR (Чёрный)</Russian>
+            <Russian>PS90 TR (чёрный)</Russian>
             <Polish>PS90 TR (czarny)</Polish>
             <German>PS90 TR (Schwarz)</German>
             <Italian>PS90 TR (Nero)</Italian>
@@ -4717,7 +4726,7 @@
             <Czech>PS90 TR (Khaki)</Czech>
             <French>PS90 TR (Kaki)</French>
             <Spanish>PS90 TR (Caqui)</Spanish>
-            <Russian>PS90 TR (Хаки)</Russian>
+            <Russian>PS90 TR (хаки)</Russian>
             <Polish>PS90 TR (Khaki)</Polish>
             <German>PS90 TR (Khaki)</German>
             <Italian>PS90 TR (Khaki)</Italian>
@@ -4734,7 +4743,7 @@
             <Czech>PS90 TR (Kamufláž)</Czech>
             <French>PS90 TR (Camo)</French>
             <Spanish>PS90 TR (Camuflaje)</Spanish>
-            <Russian>PS90 TR (Камо)</Russian>
+            <Russian>PS90 TR (камуфляжный)</Russian>
             <Polish>PS90 TR (kamuflaż)</Polish>
             <German>PS90 TR (Camo)</German>
             <Italian>PS90 TR (Camo)</Italian>
@@ -4751,7 +4760,7 @@
             <Czech>PS90 TR (Hex)</Czech>
             <French>PS90 TR (Hex)</French>
             <Spanish>PS90 TR (Hex)</Spanish>
-            <Russian>PS90 TR (Гекс)</Russian>
+            <Russian>PS90 TR (гекс)</Russian>
             <German>PS90 TR (Hex)</German>
             <Polish>PS90 TR (hex)</Polish>
             <Italian>PS90 TR (Hex)</Italian>
@@ -4768,7 +4777,7 @@
             <Czech>PS90 (Černá)</Czech>
             <French>PS90 (Noir)</French>
             <Spanish>PS90 (Negro)</Spanish>
-            <Russian>PS90 (Чёрный)</Russian>
+            <Russian>PS90 (чёрный)</Russian>
             <Polish>PS90 (czarny)</Polish>
             <German>PS90 (Schwarz)</German>
             <Italian>PS90 (Nero)</Italian>
@@ -4785,7 +4794,7 @@
             <Czech>PS90 (Khaki)</Czech>
             <French>PS90 (Kaki)</French>
             <Spanish>PS90 (Caqui)</Spanish>
-            <Russian>PS90 (Хаки)</Russian>
+            <Russian>PS90 (хаки)</Russian>
             <Polish>PS90 (Khaki)</Polish>
             <German>PS90 (Khaki)</German>
             <Italian>PS90 (Khaki)</Italian>
@@ -4802,7 +4811,7 @@
             <Czech>PS90 (Kamufláž)</Czech>
             <French>PS90 (Camo)</French>
             <Spanish>PS90 (Camuflaje)</Spanish>
-            <Russian>PS90 (Камо)</Russian>
+            <Russian>PS90 (камуфляжный)</Russian>
             <Polish>PS90 (kamuflaż)</Polish>
             <German>PS90 (Camo)</German>
             <Italian>PS90 (Camo)</Italian>
@@ -4819,7 +4828,7 @@
             <Czech>PS90 (Hex)</Czech>
             <French>PS90 (Hex)</French>
             <Spanish>PS90 (Hex)</Spanish>
-            <Russian>PS90 (Гекс)</Russian>
+            <Russian>PS90 (гекс)</Russian>
             <German>PS90 (Hex)</German>
             <Polish>PS90 (hex)</Polish>
             <Italian>PS90 (Hex)</Italian>
@@ -4940,7 +4949,7 @@
             <Spanish>AK-15 (árido)</Spanish>
             <Italian>AK-15 (arido)</Italian>
             <Polish>AK-15 (region suchy)</Polish>
-            <Russian>AK-15 (засушливая местность)</Russian>
+            <Russian>AK-15 (сухая местность)</Russian>
             <German>AK-15 (Trocken)</German>
             <Czech>AK-15 (suchý porost)</Czech>
             <Portuguese>AK-15 (Árido)</Portuguese>
@@ -4991,7 +5000,7 @@
             <Spanish>AK-15 GL (árido)</Spanish>
             <Italian>AK-15 GL (arido)</Italian>
             <Polish>AK-15 GL (region suchy)</Polish>
-            <Russian>AK-15 GL (засушливая местность)</Russian>
+            <Russian>AK-15 GL (сухая местность)</Russian>
             <German>AK-15 GL (Trocken)</German>
             <Czech>AK-15 GL (suchý porost)</Czech>
             <Portuguese>AK-15 GL (Árido)</Portuguese>
@@ -5042,7 +5051,7 @@
             <Spanish>AK-15K (árido)</Spanish>
             <Italian>AK-15K (arido)</Italian>
             <Polish>AK-15K (region suchy)</Polish>
-            <Russian>AK-15K (засушливая местность)</Russian>
+            <Russian>AK-15K (сухая местность)</Russian>
             <German>AK-15K (Trocken)</German>
             <Czech>AK-15K (suchý porost)</Czech>
             <Portuguese>AK-15K (Árido)</Portuguese>
@@ -5093,7 +5102,7 @@
             <Spanish>RPK (árido)</Spanish>
             <Italian>RPK (arido)</Italian>
             <Polish>RPK (region suchy)</Polish>
-            <Russian>RPK (засушливая местность)</Russian>
+            <Russian>RPK (сухая местность)</Russian>
             <German>RPK (Trocken)</German>
             <Czech>RPK (suchý porost)</Czech>
             <Portuguese>RPK (Árido)</Portuguese>
@@ -5127,7 +5136,7 @@
             <Spanish>Stoner 99 LMG (Negro)</Spanish>
             <Italian>Stoner 99 LMG (Nero)</Italian>
             <Polish>Stoner 99 LMG (Czarny)</Polish>
-            <Russian>Stoner 99 LMG (Чёрный)</Russian>
+            <Russian>Stoner 99 LMG (чёрный)</Russian>
             <German>Stoner 99 LMG (Schwarz)</German>
             <Czech>Stoner 99 LMG (Černá)</Czech>
             <Portuguese>Stoner 99 LMG (Preto)</Portuguese>
@@ -5161,7 +5170,7 @@
             <Spanish>MSBS Grot (Negro)</Spanish>
             <Italian>MSBS Grot (Nero)</Italian>
             <Polish>MSBS Grot (Czarny)</Polish>
-            <Russian>MSBS Grot (Чёрный)</Russian>
+            <Russian>MSBS Grot (чёрный)</Russian>
             <German>MSBS Grot (Schwarz)</German>
             <Czech>MSBS Grot (Černá)</Czech>
             <Portuguese>MSBS Grot (Preto)</Portuguese>
@@ -5178,7 +5187,7 @@
             <Spanish>MSBS Grot (Camuflaje)</Spanish>
             <Italian>MSBS Grot (Camo)</Italian>
             <Polish>MSBS Grot (Kamuflaż)</Polish>
-            <Russian>MSBS Grot (Камо)</Russian>
+            <Russian>MSBS Grot (камуфляжный)</Russian>
             <German>MSBS Grot (Tarnmuster)</German>
             <Czech>MSBS Grot (Kamufláž)</Czech>
             <Portuguese>MSBS Grot (Camo)</Portuguese>
@@ -5195,7 +5204,7 @@
             <Spanish>MSBS Grot (Arena)</Spanish>
             <Italian>MSBS Grot (Sabbia)</Italian>
             <Polish>MSBS Grot (Piaskowy)</Polish>
-            <Russian>MSBS Grot (Песочный)</Russian>
+            <Russian>MSBS Grot (песочный)</Russian>
             <German>MSBS Grot (Sandfarben)</German>
             <Czech>MSBS Grot (Písková)</Czech>
             <Portuguese>MSBS Grot (Deserto)</Portuguese>
@@ -5229,7 +5238,7 @@
             <Spanish>MSBS Grot GL (Negro)</Spanish>
             <Italian>MSBS Grot GL (Nero)</Italian>
             <Polish>MSBS Grot GL (Czarny)</Polish>
-            <Russian>MSBS Grot GL (Чёрный)</Russian>
+            <Russian>MSBS Grot GL (чёрный)</Russian>
             <German>MSBS Grot GL (Schwarz)</German>
             <Czech>MSBS Grot GL (Černá)</Czech>
             <Portuguese>MSBS Grot GL (Preto)</Portuguese>
@@ -5246,7 +5255,7 @@
             <Spanish>MSBS Grot GL (Camuflaje)</Spanish>
             <Italian>MSBS Grot GL (Camo)</Italian>
             <Polish>MSBS Grot GL (Kamuflaż)</Polish>
-            <Russian>MSBS Grot GL (Камо)</Russian>
+            <Russian>MSBS Grot GL (камуфляжный)</Russian>
             <German>MSBS Grot GL (Tarnmuster)</German>
             <Czech>MSBS Grot GL (Kamufláž)</Czech>
             <Portuguese>MSBS Grot GL (Camo)</Portuguese>
@@ -5263,7 +5272,7 @@
             <Spanish>MSBS Grot GL (Arena)</Spanish>
             <Italian>MSBS Grot GL (Sabbia)</Italian>
             <Polish>MSBS Grot GL (Piaskowy)</Polish>
-            <Russian>MSBS Grot GL (Песочный)</Russian>
+            <Russian>MSBS Grot GL (песочный)</Russian>
             <German>MSBS Grot GL (Sandfarben)</German>
             <Czech>MSBS Grot GL (Písková)</Czech>
             <Portuguese>MSBS Grot GL (Deserto)</Portuguese>
@@ -5297,7 +5306,7 @@
             <Spanish>MSBS Grot MR (Negro)</Spanish>
             <Italian>MSBS Grot MR (Nero)</Italian>
             <Polish>MSBS Grot MR (Czarny)</Polish>
-            <Russian>MSBS Grot MR (Чёрный)</Russian>
+            <Russian>MSBS Grot MR (чёрный)</Russian>
             <German>MSBS Grot MR (Schwarz)</German>
             <Czech>MSBS Grot MR (Černá)</Czech>
             <Portuguese>MSBS Grot MR (Preto)</Portuguese>
@@ -5314,7 +5323,7 @@
             <Spanish>MSBS Grot MR (Camuflaje)</Spanish>
             <Italian>MSBS Grot MR (Camo)</Italian>
             <Polish>MSBS Grot MR (Kamuflaż)</Polish>
-            <Russian>MSBS Grot MR (Камо)</Russian>
+            <Russian>MSBS Grot MR (камуфляжный)</Russian>
             <German>MSBS Grot MR (Tarnmuster)</German>
             <Czech>MSBS Grot MR (Kamufláž)</Czech>
             <Portuguese>MSBS Grot MR (Camo)</Portuguese>
@@ -5331,7 +5340,7 @@
             <Spanish>MSBS Grot MR (Arena)</Spanish>
             <Italian>MSBS Grot MR (Sabbia)</Italian>
             <Polish>MSBS Grot MR (Piaskowy)</Polish>
-            <Russian>MSBS Grot MR (Песочный)</Russian>
+            <Russian>MSBS Grot MR (песочный)</Russian>
             <German>MSBS Grot MR (Sandfarben)</German>
             <Czech>MSBS Grot MR (Písková)</Czech>
             <Portuguese>MSBS Grot MR (Deserto)</Portuguese>
@@ -5365,7 +5374,7 @@
             <Spanish>MSBS Grot SG (Negro)</Spanish>
             <Italian>MSBS Grot SG (Nero)</Italian>
             <Polish>MSBS Grot SG (Czarny)</Polish>
-            <Russian>MSBS Grot SG (Чёрный)</Russian>
+            <Russian>MSBS Grot SG (чёрный)</Russian>
             <German>MSBS Grot SG (Schwarz)</German>
             <Czech>MSBS Grot SG (Černá)</Czech>
             <Portuguese>MSBS Grot SG (Preto)</Portuguese>
@@ -5382,7 +5391,7 @@
             <Spanish>MSBS Grot SG (Camuflaje)</Spanish>
             <Italian>MSBS Grot SG (Camo)</Italian>
             <Polish>MSBS Grot SG (Kamuflaż)</Polish>
-            <Russian>MSBS Grot SG (Камо)</Russian>
+            <Russian>MSBS Grot SG (камуфляжный)</Russian>
             <German>MSBS Grot SG (Tarnmuster)</German>
             <Czech>MSBS Grot SG (Kamufláž)</Czech>
             <Portuguese>MSBS Grot SG (Camo)</Portuguese>
@@ -5399,7 +5408,7 @@
             <Spanish>MSBS Grot SG (Arena)</Spanish>
             <Italian>MSBS Grot SG (Sabbia)</Italian>
             <Polish>MSBS Grot SG (Piaskowy)</Polish>
-            <Russian>MSBS Grot SG (Песочный)</Russian>
+            <Russian>MSBS Grot SG (песочный)</Russian>
             <German>MSBS Grot SG (Sandfarben)</German>
             <Czech>MSBS Grot SG (Písková)</Czech>
             <Portuguese>MSBS Grot SG (Deserto)</Portuguese>
