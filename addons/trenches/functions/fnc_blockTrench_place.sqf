@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * x
+ * Dig trenchline
  *
  * Arguments:
  * 0: Position <ARRAY>
@@ -10,7 +10,7 @@
  * 2: Force <BOOL>
  *
  * Return Value:
- * None
+ * <ARRAY> [success<BOOL>, failure reason<STRING>, extra info<ANY>]
  *
  * Example:
  * [a, b] call ace_trenches_fnc_blockTrench_place
@@ -20,8 +20,8 @@
 
 if (!isServer) exitWith { ERROR("function must be called on server"); [false, "server-only"]; };
 
-params ["_start2d", "_end2d", ["_force", false]];
-TRACE_3("",_start2d,_end2d,_force);
+params [["_start2d", [], [[]]], ["_end2d", [], [[]]], ["_force", false, [false]]];
+TRACE_3("blockTrench_place",_start2d,_end2d,_force);
 
 scopeName "main";
 
@@ -91,21 +91,26 @@ for "_i" from 0 to _length do {
         private _pos2d = _x;
         // check water
         if ((!_force) && {(getTerrainHeightASL _pos2D) < 0}) then { [false, "water"] breakOut "main" };
-        // check canDig
-        if ((!_force) && {!([_pos2d] call EFUNC(common,canDig))}) then { [false, "canDig"] breakOut "main" };
+        // check canDig (surface type)
+        if ((!_force) && {!([_pos2d] call EFUNC(common,canDig))}) then { [false, "canDig surface"] breakOut "main" };
+        // check canDig (surface type)
+        if ((!_force) && {isOnRoad _pos2D}) then { [false, "road"] breakOut "main" };
         // check terrain objects
         private _terrainObjects = nearestTerrainObjects [_pos2d, [], _testRadius, false, true];
-        if (_terrainObjects isNotEqualTo []) then { 
-            if (_force) then { 
-                WARNING_1("overlapping terrainObjects  %1",_terrainObjects);
+        // todo: want to avoid touching trees and large rocks but could allow some small shrubs to be overlapped
+        if (_terrainObjects isNotEqualTo []) then {
+            if (_force) then {
+                WARNING_1("overlapping terrainObjects %1",_terrainObjects);
             } else {
                 [false, "terrain object", _terrainObjects] breakOut "main";
             };
         };
         // check mission objects
         private _missionObjects = nearestObjects [_origin2D, ["All"], _testRadius, true];
-        if (_missionObjects isNotEqualTo []) then { 
-            if (_force) then { 
+        _missionObjects = _missionObjects select { !(_x isKindOf "Logic") };
+        if (_missionObjects isNotEqualTo []) then {
+            _missionObjects = _missionObjects apply {typeOf _x}; 
+            if (_force) then {
                 WARNING_1("blocking missionObjects %1",_missionObjects);
             } else {
                 [false, "mission object", _missionObjects] breakOut "main";
@@ -142,11 +147,11 @@ setTerrainHeight [_terrainData, true];
 {
     _x params ["_xPosASL", "_xDir", "_xUp"];
     // todo: there also is a snow textured block or do it right and make our own re-texturable model
-    private _block = createSimpleObject ["Land_Trench_01_forest_F", _xPosASL]; 
+    private _block = createSimpleObject ["Land_Trench_01_forest_F", _xPosASL];
     _block setVectorDirAndUp [_xDir, _xUp];
     if (_blockScale != 1) then {
         _block setObjectScale _blockScale;
     };
 } forEach _blockData;
 
-[true]
+[true, "", _length]

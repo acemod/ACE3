@@ -1932,5 +1932,8 @@
             <Japanese>ユニットを燃やす</Japanese>
             <Russian>Поджечь юнита</Russian>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
+            <English>Lay Trenchline</English>
+        </Key>
     </Package>
 </Project>

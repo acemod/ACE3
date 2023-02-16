@@ -181,7 +181,7 @@ class CfgVehicles {
     };
     class GVAR(moduleLayTrench): GVAR(moduleBase) {
         category = QGVAR(Utility);
-        displayName = "lay trench line";
+        displayName = CSTRING(ModuleLayTrenchline_DisplayName);
         function = QFUNC(moduleLayTrench);
     };
     class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {

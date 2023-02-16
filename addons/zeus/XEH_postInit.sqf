@@ -66,15 +66,6 @@ if (isServer) then {
             missionNamespace setVariable [_zeusVarName, nil];
         };
     }];
-    [QGVAR(digTrenchHandler), {
-        params ["_curator", "_args"];
-        private _return = _args call EFUNC(trenches,blockTrench_place);
-        TRACE_3("",_curator,_args,_return);
-        _return params ["_success", "_reason", "_info"];
-        if (!_success) then {
-            [QEGVAR(common,displayTextStructured), [["%1:<br/>%2", "str_mis_state_failed", _reason]], [_curator]] call CBA_fnc_targetEvent;
-        };
-    }] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
