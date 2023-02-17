@@ -31,9 +31,6 @@ if (isServer) then {
     [QVAR(jerryCanInitalized), [_target]] call CBA_fnc_globalevent;
 };
 
-
-if (isServer) then { [_target, _fuelAmount] call FUNC(setFuel); };
-
 // Main Action
 private _action = [QGVAR(Refuel),
     localize LSTRING(Refuel),
