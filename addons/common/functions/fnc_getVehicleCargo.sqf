@@ -15,9 +15,9 @@
  * Public: Yes
  */
 
-params [["_vehicle", objNull, [objNull]]];
+params [["_vehicle", "", ["objNull"]]];
 
-private _config = configOf _vehicle;
+private _config = configFile >> "CfgVehicles" >> _vehicle;
 
 private _cargo = [];
 private _codrivers = getArray (_config >> "cargoIsCoDriver");
