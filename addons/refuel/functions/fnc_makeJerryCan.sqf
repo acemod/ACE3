@@ -28,7 +28,7 @@ _target setVariable [QGVAR(capacity), _fuelAmount];
 
 if (isServer) then {
     [_target, _fuelAmount] call FUNC(setFuel); // has global effects
-    [QVAR(jerryCanInitalized), [_target]] call CBA_fnc_globalevent;
+    [QGVAR(jerryCanInitalized), [_target]] call CBA_fnc_globalevent;
 };
 
 // Main Action
