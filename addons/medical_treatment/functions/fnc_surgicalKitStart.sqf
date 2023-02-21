@@ -16,6 +16,9 @@
  * Public: No
  */
 
+params ["_medic", "_patient"];
+TRACE_2("surgicalKitStart",_medic,_patient);
+
 if (GVAR(consumeSurgicalKit) == 2) then {
     ([_medic, _patient, ["ACE_suture"]] call FUNC(useItem));
 };
