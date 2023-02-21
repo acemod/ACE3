@@ -9,7 +9,7 @@
  * 2: Selected wheel hitpoint <STRING>
  *
  * Return Value:
- * None
+ * Should patching continue? <BOOL>
  *
  * Example:
  * [unit, vehicle, "hitpoint"] call ace_repair_fnc_doPatchWheelProgress

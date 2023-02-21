@@ -9,7 +9,7 @@
  * 2: Selected wheel hitpoint <STRING>
  *
  * Return Value:
- * None
+ * Can patch wheel? <BOOL>
  *
  * Example:
  * [unit, vehicle, "hitpoint"] call ace_repair_fnc_canPatchWheel

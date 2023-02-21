@@ -9,7 +9,7 @@
  * 2: Selected wheel hitpoint <STRING>
  *
  * Return Value:
- * None
+ * Patching time <NUMBER>
  *
  * Example:
  * [unit, vehicle, "hitpoint"] call ace_repair_fnc_getPatchWheelTime

@@ -8,7 +8,7 @@
  * 1: Wheel to patch <OBJECT>
  *
  * Return Value:
- * None
+ * Can patch wheel? <BOOL>
  *
  * Example:
  * [unit, vehicle] call ace_repair_fnc_canPatchRemovedWheel

@@ -151,14 +151,6 @@
     {[QGVAR(autoShutOffEngineWhenStartingRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
-[
-    QGVAR(fullRepairRequiredItems),
-    "LIST",
-    [LSTRING(FullRepairRequiredItems_DisplayName), LSTRING(FullRepairRequiredItems_Description)],
-    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [[[], [ANY_TOOLKIT_FAKECLASS]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
-    true
-] call CBA_fnc_addSetting;
 
 [
     QGVAR(patchWheelTime),
