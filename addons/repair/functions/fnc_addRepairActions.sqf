@@ -79,10 +79,11 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
         // An action to patch the wheel is required.
         private _name = format ["Patch_%1_%2", _forEachIndex, _hitpoint];
+        private _patchIcon = QPATHTOF(ui\patch_ca.paa);
         private _text = localize LSTRING(PatchWheel);
         private _condition = {("vehicle" in GVAR(patchWheelLocation)) && {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(canRepair)}};
         private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(repair)};
-        private _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
+        private _action = [_name, _text, _patchIcon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [_root], _action] call EFUNC(interact_menu,addActionToClass);
 
         _processedSelections pushBack _selection;
