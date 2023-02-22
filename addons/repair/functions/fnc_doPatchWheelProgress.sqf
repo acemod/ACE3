@@ -27,11 +27,7 @@ private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 private _iterationsRemaining = ceil ((_hitPointDamage - GVAR(patchWheelMaximumRepair)) / 0.05) - 1;
 if ((_totalTime - _elapsedTime) > _iterationsRemaining * GVAR(patchWheelTime)) exitWith {true};
 
-_hitPointDamage = _hitPointDamage - 0.05;
-
-if (_hitPointDamage < GVAR(patchWheelMaximumRepair)) then {
-    _hitPointDamage = GVAR(patchWheelMaximumRepair);
-};
+_hitPointDamage = (_hitPointDamage - 0.05) max GVAR(patchWheelMaximumRepair);
 
 // raise event to set the new hitpoint damage
 [QGVAR(setWheelHitPointDamage), [_vehicle, _hitPoint, _hitPointDamage], _vehicle] call CBA_fnc_targetEvent;

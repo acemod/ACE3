@@ -30,11 +30,7 @@ private _wheelDamage = (damage _target) - GVAR(patchWheelMaximumRepair);
     private _iterationsRemaining = ceil ((_damage - GVAR(patchWheelMaximumRepair)) / 0.05) - 1;
     if ((_totalTime - _elapsedTime) > _iterationsRemaining * GVAR(patchWheelTime)) exitWith {true};
 
-    _damage = _damage - 0.05;
-
-    if (_damage < GVAR(patchWheelMaximumRepair)) then {
-        _damage = GVAR(patchWheelMaximumRepair);
-    };
+    _damage = (_damage - 0.05) max GVAR(patchWheelMaximumRepair);
 
     _target setDamage _damage;
 
