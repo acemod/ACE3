@@ -21,7 +21,7 @@ TRACE_2("params",_unit,_target);
 
 if (GVAR(patchWheelEnabled) == -1) exitWith {false};
 if !("ground" in GVAR(patchWheelLocation)) exitWith {false};
-
+if ((GVAR(patchWheelRequiredItems) isEqualTo [ANY_TOOLKIT_FAKECLASS]) && {!([_unit, [GVAR(allToolKits)]] call FUNC(hasItems))}) exitWith {false};
 if !([_unit, GVAR(patchWheelEnabled)] call FUNC(isEngineer)) exitWith {false};
 
 (damage _target > GVAR(patchWheelMaximumRepair))
