@@ -7,7 +7,8 @@
  * Arguments:
  * 0: Position <ARRAY>
  * 1: Position <ARRAY>
- * 2: Force <BOOL>
+ * 2: Force - ignoring saftey checks (optional: false) <BOOL>
+ * 3: Cut Grass (optional: false) <BOOL>
  *
  * Return Value:
  * <ARRAY> [success<BOOL>, failure reason<STRING>, extra info<ANY>]
@@ -20,7 +21,7 @@
 
 if (!isServer) exitWith { ERROR("function must be called on server"); [false, "server-only"]; };
 
-params [["_start2d", [], [[]]], ["_end2d", [], [[]]], ["_force", false, [false]]];
+params [["_start2d", [], [[]]], ["_end2d", [], [[]]], ["_force", false, [false]], ["_cutGrass", false, [false]]];
 TRACE_3("blockTrench_place",_start2d,_end2d,_force);
 
 scopeName "main";
@@ -34,7 +35,8 @@ private _modelX = 2.1;
 private _modelZ = 1.1;
 private _modelSize = 3.75;
 
-private _landAdjust = -1.5; // how deep we dig
+private _landAdjust = -1.7; // how deep we dig into the terrain
+private _trenchDepth = -1; // how deep the floor is
 private _trenchWidth = 1; // offset for each side from center
 private _blockAdjust = -0.45; // get block to sit flush
 private _blockScale = _cellsize / _modelSize; // scale up block to fit cellsize
@@ -70,7 +72,7 @@ if (_length < 2) exitWith { [false, "too short"] breakOut "main" };
 
 // Test and get block data
 private _blockData = [];
-for "_i" from 0 to _length do {
+for "_i" from 0 to _length do { // intentionally inclusive
     private _posCenter = _origin2D;
     private _posLeft = _origin2D;
     private _posRight = _origin2D;
@@ -118,11 +120,17 @@ for "_i" from 0 to _length do {
         };
     } forEach [_posCenter, _posLeft, _posRight];
 
+    _posCenter set [2, (getTerrainHeightASL _posCenter) + _zOffset + _trenchDepth];
     _posLeft set [2, (getTerrainHeightASL _posLeft) + _zOffset];
     _posRight set [2, (getTerrainHeightASL _posRight) + _zOffset];
 
-    _blockData pushBack [_posLeft, _direction, surfaceNormal _posLeft];
-    _blockData pushBack [_posRight, _direction vectorMultiply -1, surfaceNormal _posRight];
+    if (_cutGrass && {_i != 0} && {_i != _length}) then {
+        _blockData pushBack ["Land_ClutterCutter_medium_F", _blockScale, _posCenter, [0,1,0], surfaceNormal _posCenter];
+    };
+    // todo: there also is a snow textured block or do it right and make our own re-texturable model
+    _blockData pushBack ["Land_Trench_01_forest_F", _blockScale, _posCenter, _direction, surfaceNormal _posCenter];
+    _blockData pushBack ["Land_Trench_01_forest_F", _blockScale, _posLeft, _direction, surfaceNormal _posLeft];
+    _blockData pushBack ["Land_Trench_01_forest_F", _blockScale, _posRight, _direction vectorMultiply -1, surfaceNormal _posRight];
 };
 
 
@@ -145,13 +153,10 @@ setTerrainHeight [_terrainData, true];
 
 // Place blocks
 {
-    _x params ["_xPosASL", "_xDir", "_xUp"];
-    // todo: there also is a snow textured block or do it right and make our own re-texturable model
-    private _block = createSimpleObject ["Land_Trench_01_forest_F", _xPosASL];
+    _x params ["_xClass", "_xScale", "_xPosASL", "_xDir", "_xUp"];
+    private _block = createSimpleObject [_xClass, _xPosASL];
     _block setVectorDirAndUp [_xDir, _xUp];
-    if (_blockScale != 1) then {
-        _block setObjectScale _blockScale;
-    };
+    if (_xScale != 1) then { _block setObjectScale _xScale; };
 } forEach _blockData;
 
 [true, "", _length]
