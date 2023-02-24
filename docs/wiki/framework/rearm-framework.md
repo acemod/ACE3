@@ -235,3 +235,9 @@ This function sets the current supply count of the ammo truck. It can be used to
 ---| --------- | -----------
 0  |  `ammo_truck` | My ammo truck object
 1  |  `1000`| Supply Count
+
+## 4. Events
+
+| Name  | Arguments | Global? | Added in |
+| ------------- | ------------- | ------------- |
+| ace_rearm_sourceInitalized | Yes | Ammo truck (OBJECT) | 3.16.0 |
