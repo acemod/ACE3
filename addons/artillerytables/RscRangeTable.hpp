@@ -1,5 +1,3 @@
-#define ST_RIGHT 1
-
 class GVAR(rangeTableDialog) {
     idd = -1;
     movingEnable = 1;
