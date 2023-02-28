@@ -198,11 +198,5 @@
             <Chinesesimp>车辆在殉爆过程中是否会起火</Chinesesimp>
             <Korean>쿡오프가 일어나면 차량에 불이 붙습니다.</Korean>
         </Key>
-        <Key ID="STR_ACE_CookOff_removeFlares_name">
-            <English>Remove flares from Cook-Off</English>
-        </Key>
-        <Key ID="STR_ACE_CookOff_removeFlares_tooltip">
-            <English>Stops flares from cooking off in vehicle ammo</English>
-        </Key>
     </Package>
 </Project>
