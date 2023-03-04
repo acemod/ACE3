@@ -38,7 +38,7 @@ if (!((count _textColor) in [6,8])) exitWith { ERROR_1("bad tcolor %1",_textColo
 if (!((count _backgroundColor) in [6,8])) exitWith { ERROR_1("bad bcolor %1",_textColor); false };
 
 private _identifier = format ["%1_%2_%3",_text,_textColor,_backgroundColor];
-private _texture = format ['#(rgb,512,512,3)text(1,1,"SairaStencilOne",%1,"#%2","#%3","%4")', _textSize, _backgroundColor, _textColor, _text];
+private _texture = format ['#(rgb,512,512,3)text(1,1,"ACE_Stencil",%1,"#%2","#%3","%4")', _textSize, _backgroundColor, _textColor, _text];
 
 TRACE_2("",_identifier,_texture);
 
