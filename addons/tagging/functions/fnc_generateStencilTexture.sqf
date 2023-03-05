@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Adds custom text tag. Has to be executed on one machine only.
+ * Generate a "Text to Texture"
  *
  * Arguments:
  * 0: Display Text <STRING>
