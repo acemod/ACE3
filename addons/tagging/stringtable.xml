@@ -340,5 +340,11 @@
             <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
             <Chinese>噴漆可噴塗在牆壁上</Chinese>
         </Key>
+        <Key ID="STR_ACE_Tagging_stencilVehicle">
+            <English>Vehicle ID Marking</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
+            <English>Replaces clan tag with stenciled text</English>
+        </Key>
     </Package>
 </Project>
