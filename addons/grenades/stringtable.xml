@@ -637,7 +637,7 @@
             <Polish>Pozwól na konwersję ładunków wybuchowych</Polish>
             <German>Erlaube die Umwandlung von Sprengstoffen</German>
             <Chinesesimp>允许转换炸药</Chinesesimp>
-            <Korean>폭발물 변경 가능여부</Korean>
+            <Korean>폭발물 변환 가능여부</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
@@ -648,7 +648,7 @@
             <Polish>Zezwala na konwersje ładunków wybuchowych na rzucane wersje</Polish>
             <German>Erlaube die Umwandlung von Sprengstoffen in werfbare Ladungen</German>
             <Chinesesimp>允许将炸药转换为可投掷物</Chinesesimp>
-            <Korean>폭발물을 던질 수 있게 개조를 허락합니다</Korean>
+            <Korean>폭발물을 투척무기로 변환할 수 있도록 허용합니다.</Korean>
         </Key>
     </Package>
 </Project>
