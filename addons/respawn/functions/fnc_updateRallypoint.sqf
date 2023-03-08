@@ -17,7 +17,8 @@
  * Public: No
  */
 
-params ["_rallypoint", "_side", "_position"];
+params ["_rallypoint", "_side"];
+private _position = param [2, getpos _rallypoint];
 
 if (!hasInterface) exitWith {};
 
