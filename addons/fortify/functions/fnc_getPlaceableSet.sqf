@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Size <STRING>
+ * 1: Get sub categories from preset[] config <BOOL> (default: true)
  *
  * Return Value:
  * Pairs of classnames and costs <ARRAY>
@@ -15,8 +16,8 @@
  * Public: No
  */
 
-params ["_preset"];
-TRACE_1("getPlaceableSet",_preset);
+params ["_preset", ["_gatherSubCategories", true]];
+TRACE_2("getPlaceableSet",_preset,_gatherSubCategories);
 
 private _config = missionConfigFile >> "ACEX_Fortify_Presets" >> _preset;
 if (!isClass _config) then {
@@ -30,7 +31,7 @@ if (!isClass _config) exitWith {
 
 private _objects = getArray (_config >> "objects");
 
-// Attemp to filter bad input
+// Attempt to filter bad input
 _objects = _objects select {
     if ((_x  isEqualTypeParams ["", 0])) then {
         _x params [["_classname", "#", [""]], ["_cost", -1, [0]]];
@@ -43,6 +44,15 @@ _objects = _objects select {
         ERROR_2("Preset [%1] - Bad data in objects array %2",_preset,_x);
         false
     };
+};
+
+if (_gatherSubCategories) then {
+    {
+        private _category = _x;
+        private _pObjects = [_category, false] call FUNC(getPlaceableSet);
+        _pObjects apply { _x set [2, _category] };
+        _objects append _pObjects;
+    } forEach getArray (_config >> "presets");
 };
 
 _objects

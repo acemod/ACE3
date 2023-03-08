@@ -64,4 +64,8 @@ class ACEX_Fortify_Presets {
             {"Land_BagFence_01_long_green_F", 10}
         };
     };
+    class bigCombo {
+        displayName = CSTRING(bigCombo);
+        presets[] = { "big", "bigGreen"};
+    };
 };

@@ -37,7 +37,7 @@ To add a preset via code you use the function `call ace_fortify_fnc_registerObje
 ```sqf
 * Registers the given objects in the given side's player interaction menu.
 * Players on that side must have the `Fortify Tool` item in their inventory to access the menu.
-* Classnames must be in the format [<classname>, <cost>]
+* Classnames must be in the format [<classname>, <cost>, <category(optional)]
 * MUST BE CALLED ON SERVER!
 *
 * Arguments:
@@ -50,6 +50,7 @@ To add a preset via code you use the function `call ace_fortify_fnc_registerObje
 *
 * Example:
 * [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call ace_fortify_fnc_registerObjects
+* [west, 5000, [["Land_BagFence_Long_F", 5, "tan"], ["Land_BagFence_01_long_green_F", 5, "green"]]] call ace_fortify_fnc_registerObjects
 ```
 
 Adding it through `description.ext` or config you use:
@@ -62,6 +63,10 @@ class ACEX_Fortify_Presets {
             {"Sandbag", 5},
             {"Bunker", 50}
         };
+    };
+    class TAG_categories{
+        displayName = "Combo";
+        presets[] = {"big", "bigGreen"}; // will load presets big and bigGreen each under their own sub category
     };
 };
  ```
