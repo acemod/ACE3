@@ -64,8 +64,9 @@ class ACEX_Fortify_Presets {
             {"Bunker", 50}
         };
     };
-    class TAG_categories{
+    class TAG_categories {
         displayName = "Combo";
+        // presets can be loaded from both configFile and missionConfigFile (descprtion.ext)
         presets[] = {"big", "bigGreen"}; // will load presets big and bigGreen each under their own sub category
     };
 };
