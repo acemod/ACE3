@@ -22,4 +22,4 @@ params ["_unit", "_vehicle", "_hitPoint"];
 // get current hitpoint damage
 private _hitPointDamage = (_vehicle getHitPointDamage _hitPoint) - GVAR(patchWheelMaximumRepair);
 
-ceil (_hitPointDamage / 0.05) * GVAR(patchWheelTime)
+ceil (_hitPointDamage / PATCH_WHEEL_STEP_TIME) * GVAR(patchWheelTime)

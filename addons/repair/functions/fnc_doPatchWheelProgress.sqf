@@ -24,12 +24,12 @@ TRACE_3("params",_unit,_vehicle,_hitPoint);
 // get current hitpoint damage
 private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 
-private _iterationsRemaining = ceil ((_hitPointDamage - GVAR(patchWheelMaximumRepair)) / 0.05) - 1;
+private _iterationsRemaining = ceil ((_hitPointDamage - GVAR(patchWheelMaximumRepair)) / PATCH_WHEEL_STEP_TIME) - 1;
 if ((_totalTime - _elapsedTime) > _iterationsRemaining * GVAR(patchWheelTime)) exitWith {true};
 
-_hitPointDamage = (_hitPointDamage - 0.05) max GVAR(patchWheelMaximumRepair);
+_hitPointDamage = (_hitPointDamage - PATCH_WHEEL_STEP_TIME) max GVAR(patchWheelMaximumRepair);
 
 // raise event to set the new hitpoint damage
 [QGVAR(setWheelHitPointDamage), [_vehicle, _hitPoint, _hitPointDamage], _vehicle] call CBA_fnc_targetEvent;
 
-_hitPointDamage > GVAR(patchWheelMaximumRepair)
+(_hitPointDamage > GVAR(patchWheelMaximumRepair))
