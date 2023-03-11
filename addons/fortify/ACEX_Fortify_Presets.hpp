@@ -66,6 +66,6 @@ class ACEX_Fortify_Presets {
     };
     class bigCombo {
         displayName = CSTRING(bigCombo);
-        presets[] = { "big", "bigGreen"};
+        presets[] = {"big", "bigGreen"};
     };
 };
