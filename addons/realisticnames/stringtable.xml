@@ -200,7 +200,7 @@
             <Hungarian>M-ATV (nehézgéppuska)</Hungarian>
             <Italian>M-ATV (HMG)</Italian>
             <Japanese>M-ATV (HMG)</Japanese>
-            <Korean>M-ATV (HMG)</Korean>
+            <Korean>M-ATV (중기관총)</Korean>
             <Chinese>防地雷反伏擊全地形車 (重機槍)</Chinese>
             <Chinesesimp>M-ATV（重机枪）</Chinesesimp>
             <Turkish>M-ATV (HMG)</Turkish>
@@ -217,7 +217,7 @@
             <Hungarian>M-ATV (gránátgéppuska)</Hungarian>
             <Italian>M-ATV (GMG)</Italian>
             <Japanese>M-ATV (GMG)</Japanese>
-            <Korean>M-ATV (GMG)</Korean>
+            <Korean>M-ATV (유탄기관총)</Korean>
             <Chinese>防地雷反伏擊全地形車 (榴彈機槍)</Chinese>
             <Chinesesimp>M-ATV（榴弹发射器）</Chinesesimp>
             <Turkish>M-ATV (GMG)</Turkish>
@@ -302,7 +302,7 @@
             <Hungarian>Namer</Hungarian>
             <Italian>Namer</Italian>
             <Japanese>ナメル</Japanese>
-            <Korean>나메르 APC</Korean>
+            <Korean>나메르 병력수송장갑차</Korean>
             <Chinese>"花豹"裝甲運兵車</Chinese>
             <Chinesesimp>"花豹"</Chinesesimp>
             <Turkish>Namer</Turkish>
@@ -336,7 +336,7 @@
             <Hungarian>Badger IFV</Hungarian>
             <Italian>Badger IFV</Italian>
             <Japanese>バジャー IFV</Japanese>
-            <Korean>뱃져 IFV</Korean>
+            <Korean>뱃져 보병전투차</Korean>
             <Chinese>"蜜獾"步兵戰車</Chinese>
             <Chinesesimp>"蜜獾"</Chinesesimp>
             <Turkish>Badger IFV</Turkish>
@@ -523,7 +523,7 @@
             <Hungarian>Fennek (nehézgéppuska)</Hungarian>
             <Italian>Fennek (HMG)</Italian>
             <Japanese>フェネック (HMG)</Japanese>
-            <Korean>페넥 (HMG)</Korean>
+            <Korean>페넥 (중기관총)</Korean>
             <Chinese>"非洲小狐"防地雷反伏擊車 (重機槍)</Chinese>
             <Chinesesimp>"非洲小狐"（重机枪）</Chinesesimp>
             <Turkish>Fennek (HMG)</Turkish>
@@ -540,7 +540,7 @@
             <Hungarian>Fennek (gránátgéppuska)</Hungarian>
             <Italian>Fennek (GMG)</Italian>
             <Japanese>フェネック (GMG)</Japanese>
-            <Korean>페넥 (GMG)</Korean>
+            <Korean>페넥 (유탄기관총)</Korean>
             <Chinese>"非洲小狐"防地雷反伏擊車 (榴彈機槍)</Chinese>
             <Chinesesimp>"非洲小狐"（榴弹发射器）</Chinesesimp>
             <Turkish>Fennek (GMG)</Turkish>
@@ -574,7 +574,7 @@
             <Hungarian>FV510 Warrior</Hungarian>
             <Italian>FV510 Warrior</Italian>
             <Japanese>FV510 ウォーリアー</Japanese>
-            <Korean>FV510 워리어 IFV</Korean>
+            <Korean>FV510 워리어 보병전투차</Korean>
             <Chinese>FV510 "戰士"步兵戰車</Chinese>
             <Chinesesimp>FV510 "战士"</Chinesesimp>
             <Turkish>FV510 Warrior</Turkish>
@@ -591,7 +591,7 @@
             <Hungarian>Pandur II</Hungarian>
             <Italian>Pandur II</Italian>
             <Japanese>パンデュール II</Japanese>
-            <Korean>판두르 II APC</Korean>
+            <Korean>판두르 II 병력수송장갑차</Korean>
             <Chinese>"潘德2型"裝甲運兵車</Chinese>
             <Chinesesimp>"潘德"二型</Chinesesimp>
             <Turkish>Pandur II</Turkish>
@@ -743,7 +743,7 @@
             <Hungarian>Karatel (nehézgéppuska)</Hungarian>
             <Italian>Karatel (HMG)</Italian>
             <Japanese>カラテル (HMG)</Japanese>
-            <Korean>카라텔 (HMG)</Korean>
+            <Korean>카라텔 (중기관총)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (重機槍)</Chinese>
             <Chinesesimp>"宪兵"（重机枪）</Chinesesimp>
             <Turkish>Karatel (HMG)</Turkish>
@@ -760,7 +760,7 @@
             <Hungarian>Karatel (gránátgéppuska)</Hungarian>
             <Italian>Karatel (GMG)</Italian>
             <Japanese>カラテル (GMG)</Japanese>
-            <Korean>카라텔 (GMG)</Korean>
+            <Korean>카라텔 (유탄기관총)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (榴彈機槍)</Chinese>
             <Chinesesimp>"宪兵"（榴弹发射器）</Chinesesimp>
             <Turkish>Karatel (GMG)</Turkish>
@@ -2405,7 +2405,7 @@
             <Portuguese>Mk14 Mod 1 EBR</Portuguese>
             <Italian>Mk14 Mod 1 EBR</Italian>
             <Japanese>Mk14 Mod 1 EBR</Japanese>
-            <Korean>Mk14 Mod 1 EBR</Korean>
+            <Korean>Mk.14 Mod 1 EBR</Korean>
             <Chinese>Mk14一型增強型戰鬥步槍</Chinese>
             <Chinesesimp>Mk14 Mod 1 EBR</Chinesesimp>
             <Turkish>Mk14 Mod 1 EBR</Turkish>
@@ -2575,7 +2575,7 @@
             <Hungarian>SIG 556</Hungarian>
             <Portuguese>SIG 556</Portuguese>
             <Japanese>SIG 556</Japanese>
-            <Korean>SIG 556</Korean>
+            <Korean>시그 556</Korean>
             <Chinese>SIG 556精準步槍</Chinese>
             <Chinesesimp>SIG 556</Chinesesimp>
             <Turkish>SIG 556</Turkish>
@@ -2592,7 +2592,7 @@
             <Hungarian>SIG 556 (Fekete)</Hungarian>
             <Portuguese>SIG 556 (Preto)</Portuguese>
             <Japanese>SIG 556 (ブラック)</Japanese>
-            <Korean>SIG 556 (검정)</Korean>
+            <Korean>시그 556 (검정)</Korean>
             <Chinese>SIG 556精準步槍 (黑色)</Chinese>
             <Chinesesimp>SIG 556（黑色）</Chinesesimp>
             <Turkish>SIG 556 (Siyah)</Turkish>
@@ -2609,7 +2609,7 @@
             <Hungarian>SIG 556 (Khaki)</Hungarian>
             <Portuguese>SIG 556 (Caqui)</Portuguese>
             <Japanese>SIG 556 (カーキ)</Japanese>
-            <Korean>SIG 556 (카키)</Korean>
+            <Korean>시그 556 (카키)</Korean>
             <Chinese>SIG 556精準步槍 (卡其色)</Chinese>
             <Chinesesimp>SIG 556（卡其色）</Chinesesimp>
             <Turkish>SIG 556 (Haki)</Turkish>
@@ -2626,7 +2626,7 @@
             <Hungarian>SIG 556 (Homok)</Hungarian>
             <Portuguese>SIG 556 (Deserto)</Portuguese>
             <Japanese>SIG 556 (サンド)</Japanese>
-            <Korean>SIG 556 (모래)</Korean>
+            <Korean>시그 556 (모래)</Korean>
             <Chinese>SIG 556精準步槍 (沙色)</Chinese>
             <Chinesesimp>SIG 556（沙色）</Chinesesimp>
             <Turkish>SIG 556 (Kum)</Turkish>
@@ -2643,7 +2643,7 @@
             <Hungarian>SIG 556 (Terepmintás)</Hungarian>
             <Portuguese>SIG 556 (Camuflagem)</Portuguese>
             <Japanese>SIG 556 (カモフラージュ)</Japanese>
-            <Korean>SIG 556 (위장)</Korean>
+            <Korean>시그 556 (위장)</Korean>
             <Chinese>SIG 556精準步槍 (迷彩)</Chinese>
             <Chinesesimp>SIG 556（迷彩）</Chinesesimp>
             <Turkish>SIG 556 (Kamufulaj)</Turkish>
@@ -2660,7 +2660,7 @@
             <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
             <Portuguese>SIG 556 (Floresta)</Portuguese>
             <Japanese>SIG 556 (森林)</Japanese>
-            <Korean>SIG 556 (우드랜드)</Korean>
+            <Korean>시그 556 (수풀)</Korean>
             <Chinese>SIG 556精準步槍 (森林迷彩)</Chinese>
             <Chinesesimp>SIG 556（森林迷彩）</Chinesesimp>
             <Turkish>SIG 556 (Orman)</Turkish>
@@ -3338,7 +3338,7 @@
             <Hungarian>HK416A5 11 " (Fekete)</Hungarian>
             <Portuguese>HK416A5 11 " (Preto)</Portuguese>
             <Japanese>HK416A5 11 " (ブラック)</Japanese>
-            <Korean>HK416A5 11 " (검정)</Korean>
+            <Korean>HK416A5 11인치 (검정)</Korean>
             <Chinese>HK416A5 11 "突擊步槍 (黑色)</Chinese>
             <Chinesesimp>HK416A5 11英寸（黑色）</Chinesesimp>
             <Turkish>HK416A5 11 " (Siyah)</Turkish>
@@ -3355,7 +3355,7 @@
             <Hungarian>HK416A5 11 " (Khaki)</Hungarian>
             <Portuguese>HK416A5 11 " (Caqui)</Portuguese>
             <Japanese>HK416A5 11 " (カーキ)</Japanese>
-            <Korean>HK416A5 11 " (카키)</Korean>
+            <Korean>HK416A5 11인치 (카키)</Korean>
             <Chinese>HK416A5 11 "突擊步槍 (卡其色)</Chinese>
             <Chinesesimp>HK416A5 11英寸（卡其色）</Chinesesimp>
             <Turkish>HK416A5 11 " (Haki)</Turkish>
@@ -3372,7 +3372,7 @@
             <Hungarian>HK416A5 11 " (Homok)</Hungarian>
             <Portuguese>HK416A5 11 " (Deserto)</Portuguese>
             <Japanese>HK416A5 11 " (サンド)</Japanese>
-            <Korean>HK416A5 11 " (모래)</Korean>
+            <Korean>HK416A5 11인치 (모래)</Korean>
             <Chinese>HK416A5 11 "突擊步槍 (沙色)</Chinese>
             <Chinesesimp>HK416A5 11英寸（沙色）</Chinesesimp>
             <Turkish>HK416A5 11 " (Kum)</Turkish>
@@ -3389,7 +3389,7 @@
             <Hungarian>HK416A5 11 " GL (Fekete)</Hungarian>
             <Portuguese>HK416A5 11 " GL (Preto)</Portuguese>
             <Japanese>HK416A5 11 " GL (ブラック)</Japanese>
-            <Korean>HK416A5 11 " GL (검정)</Korean>
+            <Korean>HK416A5 11인치 GL (검정)</Korean>
             <Chinese>HK416A5 11 "突擊步槍 (榴彈—黑色)</Chinese>
             <Chinesesimp>HK416A5 11英寸 GLM（黑色）</Chinesesimp>
             <Turkish>HK416A5 11 " GL (Siyah)</Turkish>
@@ -3406,7 +3406,7 @@
             <Hungarian>HK416A5 11 " GL (Khaki)</Hungarian>
             <Portuguese>HK416A5 11 " GL (Caqui)</Portuguese>
             <Japanese>HK416A5 11 " GL (カーキ)</Japanese>
-            <Korean>HK416A5 11 " GL (카키)</Korean>
+            <Korean>HK416A5 11인치 GL (카키)</Korean>
             <Chinese>HK416A5 11 "突擊步槍 (榴彈—卡其色)</Chinese>
             <Chinesesimp>HK416A5 11英寸 GLM（卡其色）</Chinesesimp>
             <Turkish>HK416A5 11 " GL (Hakii)</Turkish>
@@ -3423,7 +3423,7 @@
             <Hungarian>HK416A5 11 " GL (Homok)</Hungarian>
             <Portuguese>HK416A5 11 " GL (Deserto)</Portuguese>
             <Japanese>HK416A5 11 " GL (サンド)</Japanese>
-            <Korean>HK416A5 11 " GL (모래)</Korean>
+            <Korean>HK416A5 11인치 GL (모래)</Korean>
             <Chinese>HK416A5 11 "突擊步槍 (榴彈—沙色)</Chinese>
             <Chinesesimp>HK416A5 11英寸 GLM（沙色）</Chinesesimp>
             <Turkish>HK416A5 11 " GL (Çöl)</Turkish>
@@ -3440,7 +3440,7 @@
             <Hungarian>HK416A5 14.5 " (Fekete)</Hungarian>
             <Portuguese>HK416A5 14.5 " (Preto)</Portuguese>
             <Japanese>HK416A5 14.5 " (ブラック)</Japanese>
-            <Korean>HK416A5 14.5 " (검정)</Korean>
+            <Korean>HK416A5 14.5인치 (검정)</Korean>
             <Chinese>HK416A5 14.5 "突擊步槍 (黑色)</Chinese>
             <Chinesesimp>HK416A5 14.5英寸（黑色）</Chinesesimp>
             <Turkish>HK416A5 14.5 " (Siyah)</Turkish>
@@ -3457,7 +3457,7 @@
             <Hungarian>HK416A5 14.5 " (Khaki)</Hungarian>
             <Portuguese>HK416A5 14.5 " (Caqui)</Portuguese>
             <Japanese>HK416A5 14.5 " (カーキ)</Japanese>
-            <Korean>HK416A5 14.5 " (카키)</Korean>
+            <Korean>HK416A5 14.5인치 (카키)</Korean>
             <Chinese>HK416A5 14.5 "突擊步槍 (卡其色)</Chinese>
             <Chinesesimp>HK416A5 14.5英寸（卡其色）</Chinesesimp>
             <Turkish>HK416A5 14.5 " (Haki)</Turkish>
@@ -3474,7 +3474,7 @@
             <Hungarian>HK416A5 14.5 " (Homok)</Hungarian>
             <Portuguese>HK416A5 14.5 " (Deserto)</Portuguese>
             <Japanese>HK416A5 14.5 " (サンド)</Japanese>
-            <Korean>HK416A5 14.5 " (모래)</Korean>
+            <Korean>HK416A5 14.5인치 (모래)</Korean>
             <Chinese>HK416A5 14.5 "突擊步槍 (沙色)</Chinese>
             <Chinesesimp>HK416A5 14.5英寸（沙色）</Chinesesimp>
             <Turkish>HK416A5 14.5 " (Kum)</Turkish>
@@ -3491,7 +3491,7 @@
             <Hungarian>HK417A2 20 " (Fekete)</Hungarian>
             <Portuguese>HK417A2 20 " (Preto)</Portuguese>
             <Japanese>HK417A2 20 " (ブラック)</Japanese>
-            <Korean>HK417A2 20 " (검정)</Korean>
+            <Korean>HK417A2 20인치 (검정)</Korean>
             <Chinese>HK417A2 20 "突擊步槍 (黑色)</Chinese>
             <Chinesesimp>HK417A2 20英寸（黑色）</Chinesesimp>
             <Turkish>HK417A2 20 " (Siyah)</Turkish>
@@ -3508,7 +3508,7 @@
             <Hungarian>HK417A2 20 " (Khaki)</Hungarian>
             <Portuguese>HK417A2 20 " (Caqui)</Portuguese>
             <Japanese>HK417A2 20 " (カーキ)</Japanese>
-            <Korean>HK417A2 20 " (카키)</Korean>
+            <Korean>HK417A2 20인치 (카키)</Korean>
             <Chinese>HK417A2 20 "突擊步槍 (卡其色)</Chinese>
             <Chinesesimp>HK417A2 20英寸（卡其色）</Chinesesimp>
             <Turkish>HK417A2 20 " (Haki)</Turkish>
@@ -3525,7 +3525,7 @@
             <Hungarian>HK417A2 20 " (Homok)</Hungarian>
             <Portuguese>HK417A2 20 " (Deserto)</Portuguese>
             <Japanese>HK417A2 20 " (サンド)</Japanese>
-            <Korean>HK417A2 20 " (모래)</Korean>
+            <Korean>HK417A2 20인치 (모래)</Korean>
             <Chinese>HK417A2 20 "突擊步槍 (沙色)</Chinese>
             <Chinesesimp>HK417A2 20英寸（沙色）</Chinesesimp>
             <Turkish>HK417A2 20 " (Kum)</Turkish>
@@ -3676,7 +3676,7 @@
             <Czech>LSV Mk. II (M134)</Czech>
             <Turkish>LSV Mk. II (M134)</Turkish>
             <Spanish>LSV Mk. II (M134)</Spanish>
-            <Korean>LSV Mk. II (M134)</Korean>
+            <Korean>LSV Mk.II (M134)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -3692,7 +3692,7 @@
             <Czech>LSV Mk. II (Metis-M)</Czech>
             <Turkish>LSV Mk. II (Metis-M)</Turkish>
             <Spanish>LSV Mk. II (Metis-M)</Spanish>
-            <Korean>LSV Mk. II (메티스-M)</Korean>
+            <Korean>LSV Mk.II (메티스-M)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -3708,7 +3708,7 @@
             <Czech>LSV Mk. II</Czech>
             <Turkish>LSV Mk. II</Turkish>
             <Spanish>LSV Mk. II</Spanish>
-            <Korean>LSV Mk. II</Korean>
+            <Korean>LSV Mk.II</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>

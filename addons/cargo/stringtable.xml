@@ -41,7 +41,7 @@
             <German>Neu Bewaffnet: &lt;br/&gt;%1</German>
             <Polish>Nazwa zmieniona na:&lt;br/&gt;%1</Polish>
             <Chinesesimp>重命名为：&lt;br/&gt;%1</Chinesesimp>
-            <Korean>%1&lt;br/&gt;으로 명칭을 바꿈</Korean>
+            <Korean>%1(으)로 명칭을 바꿈</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
@@ -71,7 +71,7 @@
             <German>Aktiviere Umbenennungs-Aktion</German>
             <Polish>Włącz możliwość zmiany nazwy</Polish>
             <Chinesesimp>启用重命名动作</Chinesesimp>
-            <Korean>새로 명칭짓기 행동 활성화</Korean>
+            <Korean>새로 명칭 짓기 행동 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
@@ -205,7 +205,7 @@
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
             <Japanese>%1&lt;br/&gt;は&lt;br/&gt;%2へ積み込まれました</Japanese>
-            <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에 실림</Korean>
+            <Korean>%1은(는)&lt;br/&gt;%2 에 실림</Korean>
             <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
             <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
         </Key>
@@ -221,7 +221,7 @@
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
             <Japanese>&lt;br/&gt;%1が&lt;br/&gt;%2から降ろされました</Japanese>
-            <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에서 내려짐</Korean>
+            <Korean>%1은(는)&lt;br/&gt;%2에서 내려짐</Korean>
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
         </Key>
@@ -268,7 +268,7 @@
             <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
             <French>%1&lt;br /&gt;n'a pas pu être chargé</French>
             <Japanese>%1&lt;br/&gt;は積み込めませんでした</Japanese>
-            <Korean>%1&lt;br/&gt;이 실릴 수가 없습니다</Korean>
+            <Korean>%1을(를) 싣을 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被裝載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被装载</Chinesesimp>
             <Turkish>%1&lt;br/&gt; kargo yüklenemedi</Turkish>
@@ -284,7 +284,7 @@
             <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
             <French>%1&lt;br /&gt;n'a pas pu être déchargé</French>
             <Japanese>%1&lt;br/&gt;は降ろせませんでした</Japanese>
-            <Korean>%1&lt;br/&gt;이 내려질 수가 없습니다</Korean>
+            <Korean>%1을(를) 하역할 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
             <Turkish>%1&lt;br/&gt; kargo boşaltılamadı</Turkish>
