@@ -8,7 +8,7 @@ PREP_RECOMPILE_END;
 
 // handle GM uniform additional insignia
 [QEGVAR(arsenal,displayClosed), {
-    ACE_arsenal_center call gm_core_characters_fnc_updateUniformDetails;
+    EGVAR(arsenal,center) call gm_core_characters_fnc_updateUniformDetails;
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;
