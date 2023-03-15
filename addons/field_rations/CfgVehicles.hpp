@@ -82,7 +82,7 @@ class CfgVehicles {
     class House_Small_F;
     class Land_ConcreteWell_02_F: House_Small_F {
         XGVAR(waterSupply) = REFILL_WATER_INFINITE;
-        XGVAR(offset)[] = {0, 0, -.25};
+        XGVAR(offset)[] = {0, 0, -0.25};
     };
     class Land_WaterPump_01_F;
     class WaterPump_01_forest_F: Land_WaterPump_01_F {
