@@ -5,7 +5,6 @@
  *
  * Arguments:
  * 0: Size <STRING>
- * 1: Get sub categories from preset[] config <BOOL> (default: true)
  *
  * Return Value:
  * Pairs of classnames and costs <ARRAY>
