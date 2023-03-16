@@ -53,9 +53,13 @@ private _subActions = createHashmap;
 } forEach _objects;
 
 {
-    private _displayName = getText (missionConfigFile >> "ACEX_Fortify_Presets" >> _x >> "displayName");
-    if (_displayName == "") then { _displayName = getText (configfile >> "ACEX_Fortify_Presets" >> _x >> "displayName"); };
-    if (_displayName == "") then { _displayName = _x };
+    private _displayName = if (isLocalized _x) then { 
+        localize _x
+    } else { 
+        if (isText (configFile >> "ACEX_Fortify_Presets" >> _x >> "displayName")) exitWith { getText (configFile >> "ACEX_Fortify_Presets" >> _x >> "displayName") };
+        if (isText (missionConfigFile >> "ACEX_Fortify_Presets" >> _x >> "displayName")) exitWith { getText (missionConfigFile >> "ACEX_Fortify_Presets" >> _x >> "displayName") };
+        _x
+     };
     private _action = [_x, _displayName, "", {}, {true}] call EFUNC(interact_menu,createAction);
     _actions pushBack [_action, _y, _player];
 } forEach _subActions;

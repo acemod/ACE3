@@ -16,8 +16,8 @@
  * Public: No
  */
 
-params ["_preset", ["_gatherSubCategories", true]];
-TRACE_2("getPlaceableSet",_preset,_gatherSubCategories);
+params ["_preset"];
+TRACE_1("getPlaceableSet",_preset);
 
 private _config = missionConfigFile >> "ACEX_Fortify_Presets" >> _preset;
 if (!isClass _config) then {
@@ -33,26 +33,18 @@ private _objects = getArray (_config >> "objects");
 
 // Attempt to filter bad input
 _objects = _objects select {
-    if ((_x  isEqualTypeParams ["", 0])) then {
+    if ((_x isEqualTypeParams ["", 0]) || {_x isEqualTypeParams ["", 0, ""]}) then {
         _x params [["_classname", "#", [""]], ["_cost", -1, [0]]];
         if (isClass (configFile >> "CfgVehicles" >> _classname)) then {
             true
         } else {
             ERROR_2("Preset [%1] - Classname does not exist",_preset,_classname);
+            false
         };
     } else {
         ERROR_2("Preset [%1] - Bad data in objects array %2",_preset,_x);
         false
     };
-};
-
-if (_gatherSubCategories) then {
-    {
-        private _category = _x;
-        private _pObjects = [_category, false] call FUNC(getPlaceableSet);
-        _pObjects apply { _x set [2, _category] };
-        _objects append _pObjects;
-    } forEach getArray (_config >> "presets");
 };
 
 _objects
