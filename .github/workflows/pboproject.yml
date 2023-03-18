@@ -8,7 +8,7 @@ on:
 
 jobs:
   pboproject:
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
     - name: Install Arma 3 Tools
       uses: arma-actions/arma3-tools@master
