@@ -42,7 +42,7 @@ jobs:
       with:
         command: build --release --ci
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2-preview
+      uses: actions/upload-artifact@master
       with:
         name: ace3-${{ github.sha }}-nobin
         path: releases/ace3_*.zip
