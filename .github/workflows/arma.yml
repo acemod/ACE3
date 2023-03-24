@@ -40,7 +40,7 @@ jobs:
     - name: Build using HEMTT
       uses: arma-actions/hemtt@v1
       with:
-        command: build --release --ci
+        command: build
     - name: Upload Artifact
       uses: actions/upload-artifact@master
       with:
