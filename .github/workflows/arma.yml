@@ -35,12 +35,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Build using HEMTT
-      uses: arma-actions/hemtt@v1
-      with:
-        command: build
+    - uses: actions/checkout@master
+    - uses: arma-actions/hemtt@v1
+      name: Setup HEMTT
+    - name: Build
+      run: hemtt build
     - name: Upload Artifact
       uses: actions/upload-artifact@master
       with:
