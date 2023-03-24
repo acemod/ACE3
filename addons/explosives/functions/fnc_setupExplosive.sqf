@@ -181,7 +181,6 @@ GVAR(TweakedAngle) = 0;
 
             _expSetupVehicle setVariable [QGVAR(class), _magClassname, true];
             _expSetupVehicle setVariable [QGVAR(Direction), _placeAngle, true];
-            _expSetupVehicle setShotParents [_unit, objNull];
 
             _unit removeMagazine _magClassname;
             [_unit, "PutDown"] call EFUNC(common,doGesture);
