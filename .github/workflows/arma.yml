@@ -38,7 +38,7 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@master
     - name: Build using HEMTT
-      uses: arma-actions/hemtt@master
+      uses: arma-actions/hemtt@v1
       with:
         command: build --release --ci
     - name: Upload Artifact
