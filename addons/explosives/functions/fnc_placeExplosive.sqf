@@ -87,6 +87,9 @@ if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_tr
     _explosive
 };
 
+// Whoever places the explosive shall become the instigator (for damage tracking purposes)
+[QEGVAR(common,setShotParents), [_explosive, _unit, _unit]] call CBA_fnc_serverEvent;
+
 //TODO: placing explosives on hills looks funny
 
 private _pitch = getNumber (_magazineTrigger >> "pitch");
