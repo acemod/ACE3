@@ -7,7 +7,6 @@ extensions/vcproj64/*
 .vscode/*
 hemtt
 hemtt.exe
-hemttNew.exe
 .hemttout
 tools/temp
 *.cache

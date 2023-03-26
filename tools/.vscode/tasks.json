@@ -81,8 +81,8 @@
             }
         },
         {
-            "label": "Build: Hemtt New",
-            "command": "hemttNew.exe",
+            "label": "Build: Hemtt",
+            "command": "hemtt.exe",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
