@@ -43,5 +43,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: ace3-${{ github.sha }}
+        name: ace3-${{ github.sha }}-nobin
         path: .hemttout/build
