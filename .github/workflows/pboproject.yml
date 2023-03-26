@@ -35,18 +35,18 @@ jobs:
         RHSSAF_URL: ${{ secrets.RHSSAF_URL }}
         RHSUSF_URL: ${{ secrets.RHSUSF_URL }}
     - name: Checkout CBA A3
-      uses: actions/checkout@master
+      uses: actions/checkout@v3
       with:
         path: x\cba
         ref: master
         repository: CBATeam/CBA_A3.git
     - name: Checkout ACE3
-      uses: actions/checkout@master
+      uses: actions/checkout@v3
       with:
         path: z\ace
         persist-credentials: false
     - name: Checkout pull request
-      uses: actions/checkout@master
+      uses: actions/checkout@v3
       if: ${{ github.event_name == 'pull_request_target' }}
       with:
         path: pullrequest
@@ -72,13 +72,13 @@ jobs:
       env:
         PYTHONUNBUFFERED: 1
     - name: Archive logs
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v3
       if: ${{ always() }}
       with:
         name: logs
         path: temp/*.log
     - name: Archive @ace
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v3
       with:
         name: '@ace3-${{ github.sha }}'
         path: z\ace\release\@ace

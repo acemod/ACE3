@@ -35,13 +35,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
     - uses: arma-actions/hemtt@v1
       name: Setup HEMTT
     - name: Build
       run: hemtt build
     - name: Upload Artifact
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v3
       with:
         name: ace3-${{ github.sha }}
         path: .hemttout/build
