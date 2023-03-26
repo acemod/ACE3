@@ -1,5 +1,6 @@
 {
 	"files.exclude": {
-		"**/.hemttout": true
+		"**/.hemttout": true,
 		"**/include": true
+	}
 }
