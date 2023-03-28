@@ -40,8 +40,10 @@ jobs:
       name: Setup HEMTT
     - name: Build
       run: hemtt build
+    - name: Rename build folder
+      run: mv .hemttout/build .hemttout/@ace
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: ace3-${{ github.sha }}-nobin
-        path: .hemttout/build
+        path: .hemttout/@*
