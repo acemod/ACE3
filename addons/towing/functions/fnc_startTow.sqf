@@ -17,6 +17,7 @@
  * Public: No
  */
 params ["_unit", "_target", "_ropeClass"];
+[QGVAR(ropeDeployed), [_unit, _target, _ropeClass]] call CBA_fnc_localEvent;
 
 GVAR(attachHelper) = "Sign_Sphere10cm_F" createVehicleLocal [0, 0, 0];
 [_unit] call EFUNC(weaponselect,putWeaponAway);
