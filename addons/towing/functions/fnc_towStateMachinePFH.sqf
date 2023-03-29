@@ -140,7 +140,7 @@ switch (_state) do {
         [_unit, _ropeClass, true] call CBA_fnc_addItem;
         _args set [0, TOW_STATE_CLEANUP];
         GVAR(cancel) = false;
-
+        [QGVAR(ropeDeployedCanceled), [_unit, _ropeClass]] call CBA_fnc_localEvent;
         (localize LSTRING(canceled)) call CBA_fnc_notify;
     };
     case TOW_STATE_CLEANUP: {
