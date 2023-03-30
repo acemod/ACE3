@@ -17,7 +17,7 @@
  * Public: No
  */
 params ["_unit", "_target", "_ropeClass"];
-[QGVAR(ropeDeployed), [_unit, _target, _ropeClass]] call CBA_fnc_localEvent;
+
 
 GVAR(attachHelper) = "Sign_Sphere10cm_F" createVehicleLocal [0, 0, 0];
 [_unit] call EFUNC(weaponselect,putWeaponAway);
@@ -32,4 +32,4 @@ _unit removeItem _ropeClass;
 GVAR(cancel) = false;
 GVAR(canAttach) = false;
 [LINKFUNC(towStateMachinePFH), 0, [TOW_STATE_ATTACH_PARENT, _unit, _target, objNull, _ropeLength, _ropeClass]] call CBA_fnc_addPerFrameHandler;
-
+[QGVAR(ropeDeployed), [_unit, _target, _ropeClass]] call CBA_fnc_localEvent;
