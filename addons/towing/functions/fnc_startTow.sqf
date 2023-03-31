@@ -18,7 +18,6 @@
  */
 params ["_unit", "_target", "_ropeClass"];
 
-
 GVAR(attachHelper) = "Sign_Sphere10cm_F" createVehicleLocal [0, 0, 0];
 [_unit] call EFUNC(weaponselect,putWeaponAway);
 
