@@ -16,7 +16,15 @@
  */
 
 //Event for setting explosive placement angle/pitch:
-[QGVAR(place), {_this call FUNC(setPosition)}] call CBA_fnc_addEventHandler;
+[QGVAR(place), {
+	params ["_explosive", "", "", "_unit"];
+
+	_this call FUNC(setPosition);
+
+	if (isServer) then {
+		_explosive setShotParents [_unit, _unit];
+	};
+}] call CBA_fnc_addEventHandler;
 [QGVAR(startDefuse), FUNC(startDefuse)] call CBA_fnc_addEventHandler;
 
 //When getting knocked out in medical, trigger deadman explosives:
