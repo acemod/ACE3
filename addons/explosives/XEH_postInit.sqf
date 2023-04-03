@@ -17,13 +17,13 @@
 
 //Event for setting explosive placement angle/pitch:
 [QGVAR(place), {
-	params ["_explosive", "", "", "_unit"];
+    params ["_explosive", "", "", "_unit"];
 
-	_this call FUNC(setPosition);
+    _this call FUNC(setPosition);
 
-	if (isServer) then {
-		_explosive setShotParents [_unit, _unit];
-	};
+    if (isServer) then {
+        _explosive setShotParents [_unit, _unit];
+    };
 }] call CBA_fnc_addEventHandler;
 [QGVAR(startDefuse), FUNC(startDefuse)] call CBA_fnc_addEventHandler;
 
