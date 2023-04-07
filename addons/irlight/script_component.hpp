@@ -1,5 +1,5 @@
 #define COMPONENT irlight
-#define COMPONENT_BEAUTIFIED IR Light
+#define COMPONENT_BEAUTIFIED IR Lights
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

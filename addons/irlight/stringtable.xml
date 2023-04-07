@@ -2,12 +2,12 @@
 <Project name="ACE">
     <Package name="IRLight">
         <Key ID="STR_ACE_IRLight_DBAL_A3_Red">
-            <English>DBAL A3 (red)</English>
-            <German>DBAL A3 (rot)</German>
+            <English>DBAL-A3 (red)</English>
+            <German>DBAL-A3 (rot)</German>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_Green">
-            <English>DBAL A3 (green)</English>
-            <German>DBAL A3 (grün)</German>
+            <English>DBAL-A3 (green)</English>
+            <German>DBAL-A3 (grün)</German>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF&lt;br&gt;Double click to switch mode</English>
@@ -52,6 +52,10 @@
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionShort">
             <English>Special Purpose IR LED Illuminator</English>
             <German>Infrarot LED Taschenlampe</German>
+        </Key>
+        <Key ID="STR_ACE_IRLight_MomentarySwitch">
+            <English>Illuminator / Laser Momentary Switch</English>
+            <German>Licht / Laser Tastschalter</German>
         </Key>
     </Package>
 </Project>
