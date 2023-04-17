@@ -1,6 +1,7 @@
 name = "ACE3"
 prefix = "ace"
 author = "ACE-Team"
+mainprefix = "z"
 
 [files]
 include = [
@@ -31,3 +32,8 @@ exclude = [
 
 [hemtt.config]
 preset = "Hemtt"
+
+[hemtt.launch]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
