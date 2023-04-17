@@ -68,7 +68,7 @@ Run `$ hemtt dev` to build the mod for use with [file patching](#file-patching) 
 
 Run `$ hemtt launch` to run ACE3 with pre-configured file patching. _Uses `$ hemtt dev` before launching Arma._
 
-To launch a development build using file patching with CBA versions different than latest published, or with other mods, you must start the game as you usually would and provide a modline:
+To launch a development build using file patching with CBA versions different than latest published, or with other mods, you must build the mod with `$ hemtt dev` and start the game by provide a modline:
 ```bat
 -mod=@CBA_A3;z\ace -skipIntro -noSplash -showScriptErrors -debug -filePatching
 ```
