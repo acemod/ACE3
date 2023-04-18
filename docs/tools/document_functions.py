@@ -50,7 +50,7 @@ class FunctionFile:
     def import_header(self, file_path):
         self.path = file_path
 
-        with open(file_path) as file:
+        with open(file_path, "r", encoding="utf-8") as file:
             code = file.read()
 
         header_match = re.search(r"\s*/\*.+?\*/", code, re.S)
@@ -260,17 +260,55 @@ class FunctionFile:
         print("".join(to_print))
 
 
-def document_functions(components):
-    os.makedirs('../wiki/functions/', exist_ok=True)
+def get_component_name(addons_dir, component):
+    errors = 0
+
+    script_component = os.path.join(addons_dir, component, 'script_component.hpp')
+    with open(script_component, "r", encoding="utf-8") as file:
+        code = file.read()
+
+    name_match = re.search(r"#define COMPONENT_BEAUTIFIED (.*)", code)
+    if name_match:
+        name = name_match.group(1)
+    else:
+        name = component.title()
+        print("    Warning: Missing COMPONENT_BEAUTIFIED")
+        errors += 1
+
+    return name, errors
+
+
+
+def document_functions(addons_dir, components):
+    errors = 0
+
+    wiki_dir = os.path.abspath(os.path.join(addons_dir, '../docs/wiki/functions/'))
+    os.makedirs(wiki_dir, exist_ok=True)
+    print("Wiki: {}".format(wiki_dir))
 
     for component in components:
-        output = os.path.join('../wiki/functions/', component) + ".md"
-        with open(output, "w") as file:
+        print("  Documenting... {}.md".format(component))
+        component_name, error = get_component_name(addons_dir, component)
+        errors += error
+
+        output = os.path.join(wiki_dir, component) + ".md"
+        with open(output, "w", encoding="utf-8") as file:
             for function in components[component]:
+                file.writelines([
+                    "---\n",
+                    "layout: wiki\n",
+                    "title: {} Functions\n".format(component_name),
+                    "description: List of functions in {} component.\n".format(component_name),
+                    "group: functions\n",
+                    "parent: wiki\n",
+                    "---\n",
+                ])
                 file.write(function.document(component))
 
+    return errors
 
-def crawl_dir(directory, debug=False, lint_private=False):
+
+def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
     components = {}
     errors = 0
 
@@ -296,7 +334,8 @@ def crawl_dir(directory, debug=False, lint_private=False):
                 else:
                     errors += 1
 
-    document_functions(components)
+    print()
+    errors += document_functions(addons_dir, components)
 
     if errors != 0:
         print("\n  Unclean!\n    {} errors".format(errors))
@@ -320,12 +359,12 @@ def main():
     args = parser.parse_args()
 
     # Allow calling from anywhere and work our way to addons from this file
-    file_dir = os.path.abspath(__file__)
-    prospective_dir = os.path.abspath(os.path.join(file_dir, '../../../addons/', args.directory))
+    addons_dir = os.path.abspath(os.path.join(__file__, '../../../addons/'))
+    prospective_dir = os.path.abspath(os.path.join(addons_dir, args.directory))
 
     if os.path.isdir(prospective_dir):
         print("Directory: {}".format(prospective_dir))
-        errors = crawl_dir(prospective_dir, args.debug, args.lint_private)
+        errors = crawl_dir(addons_dir, prospective_dir, args.debug, args.lint_private)
         return 0 if errors == 0 else 1
     else:
         print("Invalid directory: {}".format(prospective_dir))
