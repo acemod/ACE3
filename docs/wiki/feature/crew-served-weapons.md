@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Crew Served Weapons
+component: csw
 description: Static weapons that require multiple people to crew
 group: feature
 category: equipment
@@ -72,7 +73,3 @@ Static weapons are assembled when a tripod is placed down, and the weapon mounte
 
 - Whether or not you want to handle ammo using the CSW way. Does nothing if using defaultAssemblyMode
 - Default: On
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="csw" %}

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM), veteran29
+ * Author: Dani (TCVM), veteran29
  * Handles burning reactions of an unit, like screaming or throwing the weapons away due to pain.
  *
  * Arguments:
@@ -18,7 +18,7 @@ params ["_unit", ["_throwWeapon", true]];
 if (
     _throwWeapon
     && {GVAR(dropWeapon) > 0}
-    && {_unit in _unit && { !(currentWeapon _unit isEqualTo "") }}
+    && {_unit in _unit && {(currentWeapon _unit) isNotEqualTo ""}}
     && {!isPlayer _unit || GVAR(dropWeapon >= 2)}
 ) then {
     [_unit] call EFUNC(hitreactions,throwWeapon);

@@ -28,11 +28,12 @@ class CfgVehicles {
 ### 1.2 Making an object loadable
 
 ```cpp
-class staticBananaLauncher {
-    class yourVehicleBaseClass {
+class CfgVehicles {
+    class staticBananaLauncher {
         ace_cargo_size = 4;  // Cargo space the object takes
         ace_cargo_canLoad = 1;  // Enables the object to be loaded (1-yes, 0-no)
         ace_cargo_noRename = 1;  // Blocks renaming object (1-blocked, 0-allowed)
+        ace_cargo_blockUnloadCarry = 1; // Blocks object from being automatically picked up by player on unload
     };
 };
 ```
@@ -50,7 +51,7 @@ class staticBananaLauncher {
 Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
-`ace_cargoUnloaded` | [_item, _vehicle] | Global | Cargo has been Unloaded from vehicle
+`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Cargo has been Unloaded from vehicle
 `ace_cargoRemoved` | [_itemClass, _vehicle, _amountRequested, _amountRemoved] | Global | Cargo has been removed (deleted) from vehicle
 
 ## 3. Editor Attributes
@@ -161,4 +162,10 @@ Note first arg can be a in-game object or a classname of an object type.
  * Example:
  * ["ACE_Wheel", vehicle, 2] call ace_cargo_fnc_removeCargoItem
  * [crate_7, truck] call ace_cargo_fnc_removeCargoItem
+```
+
+### 4.7 Disable cargo renaming via script
+
+```sqf
+cargoBox setVariable ["ace_cargo_noRename", true]
 ```

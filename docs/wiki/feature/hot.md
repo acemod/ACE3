@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: HOT
+component: hot
 description: HOT 1/2/3 Missiles
 group: feature
 category: equipment
@@ -60,7 +61,3 @@ if (local this) then {
     this addMagazineTurret ["ace_hot_3_6Rnd", [-1]];
 };
 ```
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="hot" %}

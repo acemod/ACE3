@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Checks hitpoint damage and determines if a vehicle should cookoff.
  *
  * Arguments:
@@ -25,9 +25,10 @@ params ["_vehicle", "_chanceOfFire", "_intensity", ["_injurer", objNull], ["_hit
 private _alreadyCookingOff = _vehicle getVariable [QGVAR(cookingOff), false];
 
 if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
-    private _fireDetonateChance = [configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(detonationDuringFireProb), "number", 0] call CBA_fnc_getConfigEntry;
+    private _configOf = configOf _vehicle;
+    private _fireDetonateChance = [_configOf >> QGVAR(detonationDuringFireProb), "number", 0] call CBA_fnc_getConfigEntry;
     if (_canRing) then {
-        _canRing = 1 isEqualTo ([configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(canHaveFireRing), "number", 0] call CBA_fnc_getConfigEntry);
+        _canRing = ([_configOf >> QGVAR(canHaveFireRing), "number", 0] call CBA_fnc_getConfigEntry) == 1;
     };
 
     private _delayWithSmoke = _chanceOfFire < random 1;

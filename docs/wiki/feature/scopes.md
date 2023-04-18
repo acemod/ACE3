@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Scopes
+component: scopes
 description: Scope adjustment.
 group: feature
 category: equipment
@@ -40,8 +41,3 @@ Please not that the following key combinations are ACE3 default key binds.
 ### 2.4 Simplified Zeroing
 
 <img src="{{ site.baseurl }}/img/wiki/feature/simplified_zeroing.webp" width="800" height="484" alt="Simplified zeroing" />
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="scopes" %}

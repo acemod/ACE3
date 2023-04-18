@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Overheating
+component: overheating
 description: Weapon temperature and jamming, barrel swapping.
 group: feature
 category: realism
@@ -66,7 +67,3 @@ Jams can be cleared in the following ways:
 
 - After a firefight unload closed bolt firearms (most rifles) until the barrel temperature has gone down to less than 180°C (two sections or less on the bar).
 - Clear failure to fire jams quickly
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="overheating" %}

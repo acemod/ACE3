@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Process hit by projectile against vehicle and apply appropiate damage to part.
  *
  * Arguments:
@@ -146,7 +146,7 @@ private _chanceOfDetonation = 0;
 private _explosiveAmmoCount = 0;
 private _nonExplosiveAmmoCount = 0;
 
-if !(count (_currentVehicleAmmo select 0) isEqualTo 0) then {
+if (count (_currentVehicleAmmo select 0) isNotEqualTo 0) then {
     private _magConfig = configFile >> "CfgMagazines";
     private _ammoConfig = configFile >> "CfgAmmo";
     private _countOfExplodableAmmo = 0;

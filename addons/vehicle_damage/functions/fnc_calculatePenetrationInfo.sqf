@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Calculates whether or not hit penetrated given armour or not. Only enabled with advanced penetration simulation turned on.
  *
  * Arguments:

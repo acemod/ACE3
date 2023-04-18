@@ -164,8 +164,9 @@ if ((count _spots) > 0) then {
         {
             _x params ["_xPos", "_owner"];
             _finalPos = _finalPos vectorAdd _xPos;
-            private _count = _ownersHash getOrDefault [hashValue _owner, 0];
-            _ownersHash set [hashValue _owner, _count + 1];
+            private _value = _ownersHash getOrDefault [hashValue _owner, [0, _owner]];
+            _value set [0, 1 + _value#0];
+            _ownersHash set [hashValue _owner, _value];
         } forEach _finalBucket;
 
         _finalPos = _finalPos vectorMultiply (1 / (count _finalBucket));
@@ -174,8 +175,10 @@ if ((count _spots) > 0) then {
 
         {
             //IGNORE_PRIVATE_WARNING ["_x", "_y"];
-            if (_y > _maxOwnerCount) then {
-                _finalOwner = _x;
+            _y params ["_count", "_owner"];
+            if (_count > _maxOwnerCount) then {
+                _maxOwnerCount = _count;
+                _finalOwner = _owner;
             };
         } forEach _ownersHash;
     };

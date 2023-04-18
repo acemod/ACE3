@@ -286,8 +286,9 @@ class GVAR(actions) {
         treatmentTime = QFUNC(getStitchTime);
         condition = QFUNC(canStitch);
         callbackSuccess = "";
+        callbackStart = QFUNC(surgicalKitStart);
         callbackProgress = QFUNC(surgicalKitProgress);
-        consumeItem = QGVAR(consumeSurgicalKit);
+        consumeItem = QGVAR(consumeSurgicalKit); // setting can be 0,1,2 - only 1 will consume items[]
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         litter[] = {{"ACE_MedicalLitter_gloves"}};
     };

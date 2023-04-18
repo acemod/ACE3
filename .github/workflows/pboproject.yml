@@ -15,7 +15,7 @@ jobs:
       with:
         toolsUrl: ${{ secrets.ARMA3_TOOLS_URL }}
     - name: Install Mikero Tools
-      uses: arma-actions/mikero-tools@2021-04-10
+      uses: arma-actions/mikero-tools@2021-11-06
     - name: Download game data
       run: |
         Invoke-WebRequest "$env:ARMA3_DATA_URL" -OutFile arma3.zip
@@ -56,8 +56,10 @@ jobs:
       run: |
         rm -r z\ace\addons\
         rm -r z\ace\optionals\
+        rm -r z\ace\tools\pDummies\
         xcopy /e /h /q pullrequest\addons z\ace\addons\
         xcopy /e /h /q pullrequest\optionals z\ace\optionals\
+        xcopy /e /h /q pullrequest\tools\pDummies z\ace\tools\pDummies\
     - name: Setup build environment
       run: |
         subst P: .

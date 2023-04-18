@@ -240,13 +240,19 @@ class CfgAmmo {
         EGVAR(vehicle_damage,incendiary) = 0.8;
     };
 
-    class rhs_ammo_mk19m3_M430I_penetrator: rhsusf_ammo_basic_penetrator {
+    class rhsusf_ammo_reduced_penetrator;
+    class rhs_ammo_mk19m3_M430I_penetrator: rhsusf_ammo_reduced_penetrator {
         EGVAR(vehicle_damage,incendiary) = 0.8;
     };
 
     class B_30mm_APFSDS_Tracer_Red;
     class rhs_ammo_PGU14B_API: B_30mm_APFSDS_Tracer_Red {
         EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class SubmunitionBase;
+    class rhs_ammo_30x173mm_GAU8_mixed: SubmunitionBase {
+        EGVAR(rearm,caliber) = 30;
     };
 
     class M_Titan_AT;

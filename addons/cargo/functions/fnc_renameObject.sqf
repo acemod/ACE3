@@ -19,6 +19,7 @@ private _display = uiNamespace getVariable QGVAR(menuDisplay);
 if (isNil "_display") exitWith {};
 
 private _ctrlEditText = ctrlText 100;
+_ctrlEditText = _ctrlEditText select [0,32];
 if (_ctrlEditText isEqualTo "") then { // custom name has been removed
     [LSTRING(clearedCustomName), 3] call EFUNC(common,displayTextStructured);
 } else {

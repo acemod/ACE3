@@ -30,3 +30,6 @@
     "amovppnemstpsoptwbindnon_amovppnemevasoptwbindl",\
     "amovppnemstpsoptwbindnon_amovppnemevasoptwbindr"\
 ]
+
+#define INTENSITY_DECREASE_MULT_PAT_DOWN 0.8
+#define INTENSITY_DECREASE_MULT_ROLLING INTENSITY_DECREASE_MULT_PAT_DOWN

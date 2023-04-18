@@ -59,7 +59,7 @@
             <Japanese>音量を戻しました</Japanese>
             <French>Volume rétabli</French>
             <Korean>음량 복구됨</Korean>
-            <Chinesesimp>回复音量</Chinesesimp>
+            <Chinesesimp>恢复音量</Chinesesimp>
             <Chinese>回復音量</Chinese>
             <Italian>Volume ripristinato</Italian>
             <Russian>Громкость восстановлена</Russian>
@@ -107,7 +107,7 @@
             <German>Verringere die Lautstärke innerhalb von Fahrzeugen automatisch.</German>
             <Japanese>車両内では自動的に音量を低減させます。</Japanese>
             <French>Réduit automatiquement le volume à l'intérieur des véhicules.</French>
-            <Korean>자동으로 차량내에 있으면 음량을 감소 합니다.</Korean>
+            <Korean>차량 내에 있으면 자동으로 음량을 감소시킵니다.</Korean>
             <Chinesesimp>当搭乘载具时自动降低音量。</Chinesesimp>
             <Chinese>當搭乘載具時自動降低音量。</Chinese>
             <Italian>Riduce automaticamente il volume quando dentro i veicoli.</Italian>
@@ -133,8 +133,8 @@
             <German>Zeige Benachrichtigung, wenn Lautstärke verringert/wiederhergestellt wurde.</German>
             <Japanese>音量を低減、復元時に通知を表示します。</Japanese>
             <French>Affiche une notification lorsque le volume est réduit/rétabli.</French>
-            <Korean>음량이 감소/복구될 때 메세지를 표시합니다.</Korean>
-            <Chinesesimp>当正在降低/回复音量时显示提示。</Chinesesimp>
+            <Korean>음량이 감소/복구될 때 메시지를 표시합니다.</Korean>
+            <Chinesesimp>当正在降低/恢复音量时显示提示。</Chinesesimp>
             <Chinese>當正在降低/回復音量時顯示提示。</Chinese>
             <Italian>Mostra notifiche mentre si abbassa/ripristina il volume.</Italian>
             <Russian>Показывать уведомление при уменьшении/восстановлении громкости</Russian>
@@ -170,7 +170,7 @@
             <German>Erinnere wenn verringert</German>
             <Japanese>低減時に通知</Japanese>
             <French>Rappel si réduit</French>
-            <Korean>감소시 알림</Korean>
+            <Korean>감소 시 알림</Korean>
             <Chinesesimp>降低音量时是否提醒</Chinesesimp>
             <Chinese>降低音量時是否提醒</Chinese>
             <Italian>Sollecita se diminuito</Italian>
@@ -196,7 +196,7 @@
             <German>Lautstärke noch immer verringert.</German>
             <Japanese>音量を低減中です</Japanese>
             <French>Volume réduit</French>
-            <Korean>음량 감소중</Korean>
+            <Korean>음량 감소 중</Korean>
             <Chinesesimp>降低音量中</Chinesesimp>
             <Chinese>降低音量中</Chinese>
             <Italian>Il volume è ancora basso</Italian>

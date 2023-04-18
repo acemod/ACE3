@@ -6,7 +6,7 @@
             <German>Fingerzeig</German>
             <Italian>Puntamento</Italian>
             <Chinese>指向指示器</Chinese>
-            <Chinesesimp>指向标记器</Chinesesimp>
+            <Chinesesimp>指向标记</Chinesesimp>
             <Japanese>指差し</Japanese>
             <Korean>가리키기</Korean>
             <French>Pointage du doigt</French>
@@ -29,7 +29,7 @@
             <Italian>Puntamento abilitato</Italian>
             <Japanese>指差しを有効</Japanese>
             <Korean>가리키기 활성화</Korean>
-            <Chinesesimp>指向系统启动</Chinesesimp>
+            <Chinesesimp>启用指向系统</Chinesesimp>
             <Chinese>指向系統啟動</Chinese>
             <Spanish>Señalado permitido</Spanish>
             <Turkish>Işaretleme Etkin</Turkish>
@@ -38,7 +38,7 @@
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
             <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
             <French>Permet d'effectuer un pointage du doigt, ce qui a pour effet d'afficher sur l'écran des joueurs alliés proches un marqueur virtuel, indiquant la direction dans laquelle vous regardez. Peut être maintenu.</French>
-            <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
+            <Polish>Wskazuje a także wyświetla wirtualny znacznik - okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
             <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>
             <Russian>Показывает пальцем и рисует виртуальный маркер в направлении взгляда ближайшим игрокам. Можно удерживать.</Russian>
@@ -46,7 +46,7 @@
             <Czech>Ukazuje virtuální značku kruhu ve směru, kterým se díváte pro všechny blízké jednotky.</Czech>
             <Italian>Punta e mostra un marker virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
             <Japanese>指差し表記は自ユニットの近くにいる人のみに表記されます。また押しっぱなしにできます。</Japanese>
-            <Korean>당신이 보는것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른채로 유지할 수 있습니다.</Korean>
+            <Korean>당신이 보는 것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른 채로 유지할 수 있습니다.</Korean>
             <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
             <Chinese>當按下此按鍵後，你附近的單位即可看見一個虛擬圖示，標明你正在指向的位置。此按鍵可以被按住來持續顯示。</Chinese>
             <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir. </Turkish>
@@ -75,15 +75,51 @@
             <Polish>Określ dystans na jakim można wskazywać coś palcem innym graczom. [domyślnie: 4m] </Polish>
             <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
             <Portuguese>Distância máxima entre jogadores para mostrar o apontamento [padrão: 4 metros]</Portuguese>
-            <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по-умолчанию: 4 метра]</Russian>
+            <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по умолчанию: 4 метра]</Russian>
             <Spanish>Distancia máxima entre los jugadores para mostrar el indicador que señala [por defecto: 4 metros]</Spanish>
             <Czech>Maximální vzdálenost mezi hráči pro ukázání směru [výchozí: 4 metry]</Czech>
             <Italian>Distanza massima tra giocatori per mostrare l'indicatore di puntamento [default: 4 metri]</Italian>
             <Japanese>指差し表記が他のプレイヤーに表示される範囲を決定できます。(標準 4 メートル)</Japanese>
             <Korean>플레이어 사이에서 가리키기 표시를  보이게 하는 최대거리를 설정합니다[기본설정: 4 미터]</Korean>
-            <Chinesesimp>设定指向标记最大显示距离。[预设: 4公尺]</Chinesesimp>
+            <Chinesesimp>设定指向标记最大显示距离。[预设：4米]</Chinesesimp>
             <Chinese>設定指向指示器最大顯示距離。[預設: 4公尺]</Chinese>
             <Turkish>Hangi uzaklıktakilerin sanal daireyi görmesini seçin. [Varsayılan : 4 metre] </Turkish>
+        </Key>
+        <Key ID="STR_ACE_Finger_sizeCoef_displayName">
+            <English>Visual Marker Size Coefficient</English>
+            <German>Visueller Markergrößenkoeffizient</German>
+            <Korean>보이는 마커 크기 계수</Korean>
+            <Polish>Współczynnik wielkości wirtualnego znacznika</Polish>
+            <Japanese>指さし表記大きさ係数</Japanese>
+            <Chinesesimp>屏幕标记大小系数</Chinesesimp>
+            <Russian>Коэф. размера маркера</Russian>
+        </Key>
+        <Key ID="STR_ACE_Finger_sizeCoef_description">
+            <English>Adjusts the size of the visual marker.</English>
+            <German>Passt die Größe der visuellen Markierung an.</German>
+            <Korean>눈에 보이는 마커의 크기를 조정합니다.</Korean>
+            <Polish>Dostosowuje rozmiar wirtualnego znacznika.</Polish>
+            <Japanese>指さし表記の大きさを調整します。</Japanese>
+            <Chinesesimp>调整屏幕上显示的标记大小</Chinesesimp>
+            <Russian>Настраивает размер визуального маркера</Russian>
+        </Key>
+        <Key ID="STR_ACE_Finger_proximityScaling_displayName">
+            <English>Proximity Scaling</English>
+            <German>Näherungsskalierung</German>
+            <Korean>근접 스케일링</Korean>
+            <Polish>Skalowanie odległościowe</Polish>
+            <Japanese>近接性スケーリング</Japanese>
+            <Chinesesimp>根据距离缩放</Chinesesimp>
+            <Russian>Масштабирование от дальности</Russian>
+        </Key>
+        <Key ID="STR_ACE_Finger_proximityScaling_description">
+            <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
+            <German>Skaliert die Größe der visuellen Markierung basierend auf der Entfernung zwischen dem beobachtenden Spieler und dem zeigenden Spieler.</German>
+            <Korean>관찰하는 플레이어와 가리키는 플레이어 사이의 거리에 따라 보이는 마커의 크기를 조정합니다.</Korean>
+            <Polish>Skaluje rozmiar wirtualnego znacznika, na podstawie odległości między graczem obserwującym a graczem wskazującym.</Polish>
+            <Japanese>見ているプレーヤーと指さししたプレーヤーの距離に基づいて、指さし表記の大きさを調整します。</Japanese>
+            <Chinesesimp>根据观察的玩家和在指出方向的的玩家之间的距离调整视觉标记的大小。</Chinesesimp>
+            <Russian>Масштабирует размер визуального маркера в зависимости от дальности от игрока до точки указания.</Russian>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
@@ -165,7 +201,7 @@
             <Czech>Akce "ukázat prstem na"</Czech>
             <Italian>Azione "punta il dito a"</Italian>
             <Japanese>"指差し"キー</Japanese>
-            <Korean>"손가락으로 가리키기"행동</Korean>
+            <Korean>"손가락으로 가리키기" 행동</Korean>
             <Chinesesimp>使"手指指向在"</Chinesesimp>
             <Chinese>使"手指指向在"</Chinese>
             <Turkish>Animasyon "Parmakla Gösterme"</Turkish>
@@ -182,7 +218,7 @@
             <Czech>Ukazuje virtuální značku kruhu ve směru, kterým se díváte pro všechny blízké jednotky.</Czech>
             <Italian>Punta e mostra un marker virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
             <Japanese>指差し表記は自ユニットの近くにいる人のみに表記されます。また押しっぱなしにできます。</Japanese>
-            <Korean>당신이 보는것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른채로 유지할 수 있습니다.</Korean>
+            <Korean>당신이 보는 것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른 채로 유지할 수 있습니다.</Korean>
             <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
             <Chinese>當按下此按鍵後，你附近的單位即可看見一個虛擬圖示，標明你正在指向的位置。此按鍵可以被按住來持續顯示。</Chinese>
             <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir. </Turkish>

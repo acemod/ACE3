@@ -10,8 +10,8 @@ Fast Recompiling via function
     #define PREP_RECOMPILE_END      }; call _recomp; ACE_RECOMPILES pushBack _recomp;
 #else
     #define LINKFUNC(x) FUNC(x)
-    #define PREP_RECOMPILE_START /* */
-    #define PREP_RECOMPILE_END /* */
+    #define PREP_RECOMPILE_START ; /* disabled */
+    #define PREP_RECOMPILE_END ; /* disabled */
 #endif
 
 
@@ -32,7 +32,7 @@ STACK TRACING
 #else
     #define CALLSTACK(function) function
     #define CALLSTACK_NAMED(function, functionName) function
-    #define DUMPSTACK
+    #define DUMPSTACK ; /* disabled */
 #endif
 
 
@@ -51,8 +51,8 @@ PERFORMANCE COUNTERS SECTION
 
     #define DUMP_COUNTERS ([__FILE__, __LINE__] call ACE_DUMPCOUNTERS_FNC)
 #else
-    #define CREATE_COUNTER(x) /* disabled */
-    #define BEGIN_COUNTER(x) /* disabled */
-    #define END_COUNTER(x) /* disabled */
-    #define DUMP_COUNTERS  /* disabled */
+    #define CREATE_COUNTER(x) ; /* disabled */
+    #define BEGIN_COUNTER(x) ; /* disabled */
+    #define END_COUNTER(x) ; /* disabled */
+    #define DUMP_COUNTERS ; /* disabled */
 #endif

@@ -98,7 +98,7 @@
             <Portuguese>Seguir</Portuguese>
             <Italian>Seguire</Italian>
             <Japanese>ついて来い</Japanese>
-            <Korean>따라올것</Korean>
+            <Korean>따라와</Korean>
             <Chinesesimp>跟进</Chinesesimp>
             <Chinese>跟進</Chinese>
             <Turkish>Takip Et</Turkish>
@@ -230,7 +230,7 @@
             <Italian>Ingaggiare</Italian>
             <Spanish>Atacar</Spanish>
             <Japanese>交戦しろ</Japanese>
-            <Korean>교전할것</Korean>
+            <Korean>교전</Korean>
             <Chinesesimp>交战</Chinesesimp>
             <Chinese>交戰</Chinese>
             <Turkish>Tut</Turkish>
@@ -295,7 +295,7 @@
             <Russian>Показать жесты в меню взаимодействия</Russian>
             <Japanese>インタラクション メニュー上でジェスチャー表示</Japanese>
             <Korean>수신호를 상호작용 메뉴에서 보여줍니다</Korean>
-            <Chinesesimp>显示手势互动选单</Chinesesimp>
+            <Chinesesimp>显示手势互动菜单</Chinesesimp>
             <Chinese>顯示手勢互動選單</Chinese>
             <Turkish>Hareketleri Etkileşim Menüsünde Göster</Turkish>
         </Key>
@@ -311,7 +311,7 @@
             <Russian>Показать жесты в меню взамиодейтсвия с собой или только использовать горячие клавиши, или полностью отключить</Russian>
             <Japanese>キー操作や同時使用を無効化している場合はセルフ インタラクション メニュ上でジェスチャーを表示します</Japanese>
             <Korean>수신호를 상호작용 메뉴에서 보여주거나 혹은 단축키를 지정하거나 아니면 아예 사용하지 않습니다.</Korean>
-            <Chinesesimp>显示手势选项在自己的互动选单上，或只利用键盘来使用手势，或完全禁用</Chinesesimp>
+            <Chinesesimp>显示手势选项在自己的互动菜单上，或只利用键盘来使用手势，或完全禁用</Chinesesimp>
             <Chinese>顯示手勢選項在自己的互動選單上，或只利用鍵盤來使用手勢，或完全禁用</Chinese>
             <Turkish>Kendi kendine etkileşim menüsünde hareketleri göster veya sadece tuş atamaları kullan veya tamamen devre dışı bırak.</Turkish>
         </Key>
@@ -342,8 +342,8 @@
             <Portuguese>Atalhos + Menu de Interação</Portuguese>
             <Russian>Клавиши + Меню взаимодействия</Russian>
             <Japanese>キー操作とインタラクション メニュ</Japanese>
-            <Korean>단축키및 상호작용 메뉴</Korean>
-            <Chinesesimp>键盘 + 互动选单</Chinesesimp>
+            <Korean>단축키 및 상호작용 메뉴</Korean>
+            <Chinesesimp>键盘 + 互动菜单</Chinesesimp>
             <Chinese>鍵盤 + 互動選單</Chinese>
             <Turkish>Tuş Atamaları + Etkileşim Menüsü</Turkish>
         </Key>

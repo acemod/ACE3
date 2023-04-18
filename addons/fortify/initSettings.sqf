@@ -15,7 +15,8 @@
     "SLIDER",
     [LLSTRING(settingHint_timeCostCoefficient), LLSTRING(settingHintDesc_timeCostCoefficient)],
     LLSTRING(settingsCategory),
-    [0, 10, 1, 2] // Min, Max, Default, Trailing Decimals, is Percentage
+    [0, 10, 1, 2], // Min, Max, Default, Trailing Decimals, is Percentage
+    true //isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -23,7 +24,8 @@
     "SLIDER",
     [LLSTRING(settingHint_timeMin), LLSTRING(settingHintDesc_timeMin)],
     LLSTRING(settingsCategory),
-    [0, 25, 1.5, 2] // Min, Max, Default, Trailing Decimals, is Percentage
+    [0, 25, 1.5, 2], // Min, Max, Default, Trailing Decimals, is Percentage
+    true //isGlobal
 ] call CBA_fnc_addSetting;
 
 [

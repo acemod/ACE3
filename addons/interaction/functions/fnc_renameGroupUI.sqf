@@ -26,7 +26,7 @@
     _display displayAddEventHandler ["Unload", {
         params ["_display", "_exitCode"];
 
-        if !(_exitCode isEqualTo 1) exitWith {};
+        if (_exitCode isNotEqualTo 1) exitWith {};
 
         private _group = _display getVariable QGVAR(renamedGroup);
         private _textCtrl = _display displayCtrl 451;

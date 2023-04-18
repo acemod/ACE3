@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Injures occupants in a vehicle based on percent chance of injury.
  *
  * Arguments:

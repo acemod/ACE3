@@ -7,7 +7,7 @@
             <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
             <German>Markieren (Spraydose)</German>
-            <Korean>뿌리기</Korean>
+            <Korean>태그하기</Korean>
             <French>Marquage</French>
             <Italian>Marcamento</Italian>
             <Chinesesimp>喷漆</Chinesesimp>
@@ -19,11 +19,11 @@
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
-            <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
+            <Russian>Настройка работы системы спрей-маркеров по умолчанию.</Russian>
             <Japanese>標準で開くタグ付けシステムの設定を行います。</Japanese>
             <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
             <German>Konfiguriert, wie das Markieren standardmäßig funktioniert.</German>
-            <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
+            <Korean>태그 시스템의 기본사항을 설정합니다.</Korean>
             <French>Configure le fonctionnement par défaut du système de marquage.</French>
             <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
             <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
@@ -38,7 +38,7 @@
             <Japanese>クイック タグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
             <German>Schnelle Markierung (Spraydose)</German>
-            <Korean>빠른 뿌리기</Korean>
+            <Korean>스프레이 페인트 - 빠른 태그</Korean>
             <French>Peinture en spray - Marquage rapide</French>
             <Italian>Marcamento Rapido</Italian>
             <Chinesesimp>快速喷漆</Chinesesimp>
@@ -54,10 +54,10 @@
             <Japanese>インタラクション ポイントにむけてタグ付けをします。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
-            <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
+            <Korean>상호작용 시 표시할 낙서를 고릅니다.</Korean>
             <French>Type de marquage à appliquer sur le point visé.</French>
             <Italian>Azione eseguita sul punto di interazione dei tag principali.</Italian>
-            <Chinesesimp>直接喷漆在互动选单瞄准的点上。</Chinesesimp>
+            <Chinesesimp>直接喷漆在互动菜单瞄准的点上。</Chinesesimp>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
             <Portuguese>Ação executada no ponto principal de marcação</Portuguese>
             <Czech>Akce prováděná v hlavním bodě značky interakce.</Czech>
@@ -121,7 +121,7 @@
             <Portuguese>Marcar</Portuguese>
             <Russian>Маркер</Russian>
             <Japanese>タグ</Japanese>
-            <Korean>뿌리기</Korean>
+            <Korean>태그</Korean>
             <French>Tag</French>
             <Chinesesimp>喷漆</Chinesesimp>
             <Chinese>噴漆</Chinese>
@@ -137,7 +137,7 @@
             <Czech>X černě</Czech>
             <Portuguese>X em preto</Portuguese>
             <Russian>Черный Х</Russian>
-            <Japanese>黒のX印</Japanese>
+            <Japanese>X印</Japanese>
             <Korean>검정 X</Korean>
             <Chinesesimp>黑色X标记</Chinesesimp>
             <Chinese>黑色X標記</Chinese>
@@ -153,7 +153,7 @@
             <Czech>X červeně</Czech>
             <Portuguese>X em vermelho</Portuguese>
             <Russian>Красный Х</Russian>
-            <Japanese>赤のX印</Japanese>
+            <Japanese>X印</Japanese>
             <Korean>빨간 X</Korean>
             <Chinesesimp>红色X标记</Chinesesimp>
             <Chinese>紅色X標記</Chinese>
@@ -168,8 +168,8 @@
             <Italian>X verde</Italian>
             <Czech>X zeleně</Czech>
             <Portuguese>X em verde</Portuguese>
-            <Russian>Зеленый Х</Russian>
-            <Japanese>緑のX印</Japanese>
+            <Russian>Зелёный Х</Russian>
+            <Japanese>X印</Japanese>
             <Korean>초록 X</Korean>
             <Chinesesimp>绿色X标记</Chinesesimp>
             <Chinese>綠色X標記</Chinese>
@@ -185,11 +185,81 @@
             <Czech>X modře</Czech>
             <Portuguese>X em azul</Portuguese>
             <Russian>Синий Х</Russian>
-            <Japanese>青のX印</Japanese>
+            <Japanese>X印</Japanese>
             <Korean>파랑 X</Korean>
             <Chinesesimp>蓝色X标记</Chinesesimp>
             <Chinese>藍色X標記</Chinese>
             <Turkish>X Mavi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_up">
+            <English>Up Arrow</English>
+            <Japanese>上矢印</Japanese>
+            <Polish>Strzałka w górę</Polish>
+            <Korean>화살표(위)</Korean>
+            <Russian>Стрелка вверх</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_down">
+            <English>Down Arrow</English>
+            <Japanese>下矢印</Japanese>
+            <Polish>Strzałka w dół</Polish>
+            <Korean>화살표(아래)</Korean>
+            <Russian>Стрелка вниз</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_left">
+            <English>Left Arrow</English>
+            <Japanese>左矢印</Japanese>
+            <Polish>Strzałka w lewo</Polish>
+            <Korean>화살표(왼쪽)</Korean>
+            <Russian>Стрелка влево</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_right">
+            <English>Right Arrow</English>
+            <Japanese>右矢印</Japanese>
+            <Polish>Strzałka w prawo</Polish>
+            <Korean>화살표(오른쪽)</Korean>
+            <Russian>Стрелка вправо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_circle">
+            <English>Circle</English>
+            <Japanese>丸</Japanese>
+            <Polish>Okrąg</Polish>
+            <Korean>원</Korean>
+            <Russian>Круг</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_cross">
+            <English>Cross</English>
+            <Japanese>十字</Japanese>
+            <Polish>Krzyż</Polish>
+            <Korean>십자</Korean>
+            <Russian>Перекрестие</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_diamond">
+            <English>Diamond</English>
+            <Japanese>ひし形</Japanese>
+            <Polish>Diament</Polish>
+            <Korean>마름모</Korean>
+            <Russian>Алмаз</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_square">
+            <English>Square</English>
+            <Japanese>四角</Japanese>
+            <Polish>Kwadrat</Polish>
+            <Korean>사각형</Korean>
+            <Russian>Квадрат</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_triangle">
+            <English>Triangle</English>
+            <Japanese>三角形</Japanese>
+            <Polish>Trójkąt</Polish>
+            <Korean>삼각형</Korean>
+            <Russian>Треугольник</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_triangle_inverted">
+            <English>Triangle Inverted</English>
+            <Japanese>三角形 (反転)</Japanese>
+            <Polish>Odwrócony trójkąt</Polish>
+            <Korean>역삼각형</Korean>
+            <Russian>Обратный треугольник</Russian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
@@ -201,7 +271,7 @@
             <Czech>Černý sprej</Czech>
             <Portuguese>Spray de tinta preta</Portuguese>
             <Russian>Черный спрей</Russian>
-            <Japanese>黒のスプレー缶</Japanese>
+            <Japanese>スプレー缶 (黒)</Japanese>
             <Korean>검정 스프레이</Korean>
             <Chinesesimp>黑色喷漆</Chinesesimp>
             <Chinese>黑色噴漆</Chinese>
@@ -217,7 +287,7 @@
             <Czech>Červený sprej</Czech>
             <Portuguese>Spray de tinta vermelha</Portuguese>
             <Russian>Красный спрей</Russian>
-            <Japanese>赤のスプレー缶</Japanese>
+            <Japanese>スプレー缶 (赤)</Japanese>
             <Korean>빨강 스프레이</Korean>
             <Chinesesimp>红色喷漆</Chinesesimp>
             <Chinese>紅色噴漆</Chinese>
@@ -232,8 +302,8 @@
             <Italian>Bomboletta spray verde</Italian>
             <Czech>Zelený sprej</Czech>
             <Portuguese>Spray de tinta verde</Portuguese>
-            <Russian>Зеленый спрей</Russian>
-            <Japanese>緑のスプレー缶</Japanese>
+            <Russian>Зелёный спрей</Russian>
+            <Japanese>スプレー缶 (緑)</Japanese>
             <Korean>초록 스프레이</Korean>
             <Chinesesimp>绿色喷漆</Chinesesimp>
             <Chinese>綠色噴漆</Chinese>
@@ -249,7 +319,7 @@
             <Czech>Modrý sprej</Czech>
             <Portuguese>Spray de tinta azul</Portuguese>
             <Russian>Синий спрей</Russian>
-            <Japanese>青のスプレー缶</Japanese>
+            <Japanese>スプレー缶 (青)</Japanese>
             <Korean>파랑 스프레이</Korean>
             <Chinesesimp>蓝色喷漆</Chinesesimp>
             <Chinese>藍色噴漆</Chinese>
@@ -266,7 +336,7 @@
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
             <Japanese>スプレー缶は壁にタグ付できます。</Japanese>
-            <Korean>벽에 뿌릴 수 있는 스프레이캔 입니다.</Korean>
+            <Korean>벽에 낙서할 수 있는 스프레이캔 입니다.</Korean>
             <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
             <Chinese>噴漆可噴塗在牆壁上</Chinese>
         </Key>

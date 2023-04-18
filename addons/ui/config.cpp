@@ -15,6 +15,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgInGameUI.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_UI.hpp"

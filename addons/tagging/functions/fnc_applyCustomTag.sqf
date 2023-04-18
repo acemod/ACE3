@@ -24,7 +24,7 @@
 params ["_identifier", "_displayName", "_requiredItem"];
 
 // Add only if tag not already added (compare identifiers)
-if !(GVAR(cachedTags) select {_x select 0 == _identifier} isEqualTo []) exitWith {
+if ((GVAR(cachedTags) select {_x select 0 == _identifier}) isNotEqualTo []) exitWith {
     INFO_2("Tag with selected identifier already exists: %1 (%2)",_identifier,_displayName)
 };
 
@@ -36,5 +36,5 @@ _requiredItem = configName (configFile >> "CfgWeapons" >> _requiredItem); // Con
 _this set [2, _requiredItem];
 
 GVAR(cachedTags) pushBack _this;
-GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
+_this call FUNC(compileTagAction);
 TRACE_1("Added custom script tag",_this);

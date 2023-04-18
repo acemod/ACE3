@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Laser">
+        <Key ID="STR_ACE_Laser_laser">
+            <English>Laser</English>
+            <German>Laser</German>
+            <Polish>Laser</Polish>
+            <French>Laser</French>
+            <Russian>Лазер</Russian>
+            <Portuguese>Laser</Portuguese>
+            <Hungarian>Lézer</Hungarian>
+            <Spanish>Láser</Spanish>
+            <Czech>Laser</Czech>
+            <Italian>Laser</Italian>
+            <Japanese>レーザー</Japanese>
+            <Korean>레이저</Korean>
+            <Chinesesimp>激光</Chinesesimp>
+            <Chinese>雷射</Chinese>
+            <Turkish>Lazer</Turkish>
+        </Key>
         <Key ID="STR_ACE_Laser_dispersionCount_displayName">
             <English>Laser Dispersion Simulation Count</English>
             <Japanese>レーザーの分散シミュレート数</Japanese>
@@ -9,7 +26,7 @@
             <Polish>Wskaźnik poziomu rozproszenia wiązki lasera</Polish>
             <French>Nombre de simulations pour la dispersion du laser</French>
             <Italian>Contatore di Simulazione della Dispersione del Laser</Italian>
-            <Chinesesimp>雷射散射模拟计算</Chinesesimp>
+            <Chinesesimp>激光色散模拟计数</Chinesesimp>
             <Chinese>雷射散射模擬計算</Chinese>
             <Russian>Число симуляций рассеивания лазерного луча</Russian>
             <Portuguese>Contador da Simulação de Dispersão de Laser</Portuguese>
@@ -30,7 +47,7 @@
             <Italian>Codice laser</Italian>
             <Japanese>レーザ コード</Japanese>
             <Korean>레이저 코드</Korean>
-            <Chinesesimp>雷射码</Chinesesimp>
+            <Chinesesimp>激光码</Chinesesimp>
             <Chinese>雷射碼</Chinese>
             <Turkish>Lazer Kod</Turkish>
         </Key>
@@ -47,7 +64,7 @@
             <Italian>Laser - Cambia codice +</Italian>
             <Japanese>レーザ - コードの数値を増やす</Japanese>
             <Korean>레이저 - 코드 순환 위</Korean>
-            <Chinesesimp>雷射 - 循环切换雷射码 上</Chinesesimp>
+            <Chinesesimp>激光—循环切换激光码 上</Chinesesimp>
             <Chinese>雷射 - 循環切換雷射碼 上</Chinese>
             <Turkish>Lazer - Çevrim Kodu Yukarı</Turkish>
         </Key>
@@ -64,9 +81,25 @@
             <Italian>Laser - Cambia codice -</Italian>
             <Japanese>レーザ - コードの数値を減らす</Japanese>
             <Korean>레이저 - 코드 순환 아래</Korean>
-            <Chinesesimp>雷射 - 循环切换雷射码 下</Chinesesimp>
+            <Chinesesimp>激光—循环切换激光码 下</Chinesesimp>
             <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
             <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Laser_showLaserOnMap">
+            <English>Draw Laser on Map</English>
+            <Japanese>地図上にレーザーを表示する</Japanese>
+            <Polish>Rysuj Laser na Mapie</Polish>
+            <Korean>맵에 레이저 그리기</Korean>
+            <Chinesesimp>在地图上绘制激光</Chinesesimp>
+            <Russian>Отображать лазер на карте</Russian>
+        </Key>
+        <Key ID="STR_ACE_Laser_showLaserOnMap_tooltip">
+            <English>Active laser designator's position will be drawn on the map</English>
+            <Japanese>アクティブな指示レーザーの位置が地図上に描画されます</Japanese>
+            <Polish>Pozycja aktywnego wskaźnika laserowego będzie rysowana na mapie.</Polish>
+            <Korean>지도에 능동 레이저 표시기의 위치가 그려집니다.</Korean>
+            <Chinesesimp>激活的激光指示器本身及其标记的点会在地图上显示</Chinesesimp>
+            <Russian>Точка, куда светит активный лазер, будет указана на карте</Russian>
         </Key>
     </Package>
 </Project>

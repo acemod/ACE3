@@ -19,7 +19,7 @@
 private _player = ACE_player;
 private _vehicle = vehicle _player;
 private _type = typeOf _vehicle;
-private _config = configFile >> "CfgVehicles" >> _type;
+private _config = configOf _vehicle;
 private _text = format["<t size='1.4'><img image='%1'></t> <t size='1.7' shadow='true'>%2</t><br/>", getText(_config>>"picture"), getText (_config >> "DisplayName")];
 
 private _data = [_type] call FUNC(getVehicleData);

@@ -28,12 +28,8 @@ private _ignoreRange = (_range == -1);
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {TRACE_1("out of range",_range); false};
 
 private _result = true;
-{
-    // Pass [Unit<OBJECT>, MaxRange <NUMBER>, Explosive <OBJECT>, FuzeTime <NUMBER>, TriggerItem <STRING>]
-    private _handlerResult = [_unit, _range, _item select 0, _item select 1, _triggerClassname] call _x;
-    if (_handlerResult isEqualTo false) then {TRACE_1("Handler Failed",_forEachIndex); _result = false};
-} forEach GVAR(detonationHandlers);
-if (!_result) exitWith {false};
+
+if !([_unit, _range, _item select 0, _item select 1, _triggerClassname] call FUNC(checkDetonateHandlers)) exitWith {false};
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
     private _previousExp = _item select 0;
