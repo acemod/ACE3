@@ -51,7 +51,7 @@
             <English>Heating Coefficient</English>
             <Japanese>過熱係数</Japanese>
             <French>Coefficient de surchauffe</French>
-            <Russian>Коэффициент нагрева</Russian>
+            <Russian>Коэф. нагрева</Russian>
             <German>Erhitzungs-Koeffizient</German>
             <Polish>Współczynnik nagrzewania</Polish>
             <Chinesesimp>过热系数</Chinesesimp>
@@ -74,6 +74,7 @@
             <German>Abkühlungskoeffizienten</German>
             <Polish>Współczynnik chłodzenia</Polish>
             <Japanese>冷却係数</Japanese>
+            <Russian>Коэф. остывания</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
@@ -82,6 +83,7 @@
             <German>Koeffizient, der angibt, wie schnell eine Waffe abkühlt.\nEin höherer Wert erhöht die Abkühlgeschwindigkeit.</German>
             <Polish>Współczynnik szybkości chłodzenia broni.\nWiększa wartość zwiększa szybkość chłodzenia.</Polish>
             <Japanese>武器の冷却速度の係数。\n値を大きくすると冷却速度が速くなります。</Japanese>
+            <Russian>Коэффициент скорости остывания орудия.\nЧем больше значение, тем быстрее остывает.</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
             <English>Suppressor Coefficient</English>
@@ -90,6 +92,7 @@
             <German>Schalldämpfer-Koeffizient</German>
             <Polish>Współczynnik tłumika</Polish>
             <Japanese>サプレッサー係数</Japanese>
+            <Russian>Коэф. глушителя</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
@@ -98,6 +101,7 @@
             <German>Koeffizient, der angibt, wie viel zusätzliche Wärme durch das Anbringen eines Schalldämpfers hinzugefügt wird. Ein höherer Wert erhöht die Menge an Wärme, 0 bedeutet, dass keine zusätzliche Wärme durch den Schalldämpfer hinzukommt.</German>
             <Polish>Współczynnik określający, ile dodatkowego ciepła jest dodawane z założonego tłumika.\nWyższa wartość zwiększa ciepło, 0 oznacza brak dodatkowego ciepła z tłumika.</Polish>
             <Japanese>サプレッサーを取り付けることで追加される熱量の係数。\n値が大きいほど熱が増加し、0はサプレッサーからの追加の熱がないことを意味します。</Japanese>
+            <Russian>Коэффициент указывающий как много дополнительного тепла будет выделяться прикреплённым глушителем.\nБольшее значение увеличивает выделение тепла, 0 - отсутствие дополнительного тепла.</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>
@@ -231,7 +235,7 @@
             <English>Distance for Effects and Dispersion</English>
             <Japanese>エフェクトと分散用距離</Japanese>
             <French>Distance des effets et de la dispersion</French>
-            <Russian>Дистанция для Еффектов и Разброса</Russian>
+            <Russian>Дистанция для эффектов и разброса</Russian>
             <German>Abstand für Effekte und Dispersion</German>
             <Polish>Odległość efektów i rozproszenia</Polish>
             <Chinesesimp>效果和扩散距离</Chinesesimp>
@@ -323,7 +327,7 @@
             <English>Unjam on Barrel Swap</English>
             <Japanese>銃身交換で弾詰まり解消</Japanese>
             <French>Désenrayer l'arme au changement de canon</French>
-            <Russian>Замена ствола устраняет заклинивание оружия.</Russian>
+            <Russian>Замена ствола устраняет клин оружия</Russian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
             <Chinesesimp>更换枪管清除卡弹</Chinesesimp>
             <Korean>총열 교환 시 기능고장 해결</Korean>
@@ -375,7 +379,7 @@
             <English>Overheating Cookoff Coefficient</English>
             <Japanese>過熱誘爆係数</Japanese>
             <French>Coefficient de l'auto-inflammation</French>
-            <Russian>Коеффициент возгорания при перегреве</Russian>
+            <Russian>Коэф. возгорания при перегреве</Russian>
             <German>Selbstzündungskoeffizient bei Überhitzung</German>
             <Polish>Współczynnik samozapłonu</Polish>
             <Chinesesimp>过热诱发系数</Chinesesimp>
@@ -385,7 +389,7 @@
             <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
             <Japanese>過熱によって誘爆が起きる確立係数を設定します。\n高い値では誘爆までに必要な過熱量が増加し、0 で誘爆が無効化されます。</Japanese>
             <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment dans la chambre de l'arme.\nPlus la valeur est élevée, plus l'arme doit être chaude pour que les munitions s'auto-inflamment.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
-            <Russian>Коеффициент нагрева, при котором возникает возгорание.</Russian>
+            <Russian>Коэффициент нагрева, при котором возникает возгорание.</Russian>
             <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
             <Polish>Współczynnik modyfikujący ilość ciepła wymaganego do samozapłonu amunicji w komorze broni.\nIm wyższa wartość, tym gorętsza musi być broń, aby amunicja uległa samozapłonowi\nUstaw 0, aby wyłączyć samozapłon.</Polish>
             <Chinesesimp>发生热诱发的过热系数。\n数值越高，热诱发所需要的过热值越高。\n设置为0禁用热诱发。</Chinesesimp>
