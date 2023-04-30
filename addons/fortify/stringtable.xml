@@ -330,5 +330,15 @@
             <Chinesesimp>大型（绿色）</Chinesesimp>
             <Korean>대형 (초목)</Korean>
         </Key>
+        <Key ID="STR_ACE_Fortify_bigCombo">
+            <English>Big (Both)</English>
+            <Polish>Duże (Oba)</Polish>
+            <Russian>Большой (Оба)</Russian>
+            <Turkish>Büyük (İkisi de)</Turkish>
+            <Japanese>大型 (両方)</Japanese>
+            <German>Groß (Beide)</German>
+            <Chinesesimp>大型（两方）</Chinesesimp>
+            <Korean>대형 (둘 다)</Korean>
+        </Key>
     </Package>
 </Project>

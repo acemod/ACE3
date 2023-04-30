@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_arsenal_fnc_portVALoadouts
+ *
  * Public: Yes
 */
 

@@ -3,8 +3,7 @@
 
 GVAR(shown) = false;
 GVAR(data) = createHashMap;
-([worldName] call EFUNC(common,getMapData)) params ["_latitude"];
-GVAR(data) set ["latitude", _latitude];
+GVAR(data) set ["latitude", EGVAR(common,mapLatitude)];
 
 
 // Add Keybinds

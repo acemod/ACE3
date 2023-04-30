@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Number to 'digitize' <NUMBER>
- * 1: Set the minimal length of the returned array. Useful for getting left hand zeroes. <NUMBER>, optional
+ * 1: Set the minimal length of the returned array. Useful for getting left hand zeroes. <NUMBER> (optional)
  *
  * Return Value:
  * Digits. The maximum count is six digits. <ARRAY>

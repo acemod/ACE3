@@ -1,6 +1,7 @@
 name = "ACE3"
 prefix = "ace"
 author = "ACE-Team"
+mainprefix = "z"
 
 [files]
 include = [
@@ -18,10 +19,6 @@ include = [
 [version]
 git_hash = 0
 
-# TODO Enable once templating is added in v0.10
-#[properties]
-#version = "{{git \"id 8\"}}"
-
 [asc]
 enabled = true
 exclude = [
@@ -34,4 +31,9 @@ exclude = [
 ]
 
 [hemtt.config]
-preset = "Hemtt" # TODO will change after v0.10-a14
+preset = "Hemtt"
+
+[hemtt.launch]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]

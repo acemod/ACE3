@@ -530,7 +530,7 @@
             <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
             <Russian>Проверять все аддоны, а не только ACE.</Russian>
             <German>Überprüft alle Erweiterungen, nicht nur die von ACE.</German>
-            <Korean>ACE뿐만이 아닌 다른 PBO 모두 검사합니다.</Korean>
+            <Korean>ACE 뿐만이 아닌 다른 PBO 모두 검사합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -539,7 +539,7 @@
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查 PBO 白名单</Chinesesimp>
             <Japanese>許可リスト内の PBO を検査</Japanese>
-            <Korean>화이트리스트 PBO</Korean>
+            <Korean>PBO 화이트리스트 확인</Korean>
             <Polish>Sprawdź białą listę PBO</Polish>
             <Russian>Белый список для проверки PBO</Russian>
             <Portuguese>Lista Branca de PBO</Portuguese>
@@ -558,7 +558,7 @@
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
             <Russian>Задать список непроверяемых аддонов.</Russian>
             <German>Ermöglicht das Erstellen einer Liste von immer erlaubten Erweiterungen.</German>
-            <Korean>허용할 애드온의 목록입니다.</Korean>
+            <Korean>허용된 애드온 목록을 정의합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -707,7 +707,7 @@
             <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
             <Japanese>武器のレーザー ポインタ/フラッシュライトの永続</Japanese>
             <Italian>Laser/torcia dell'arma costantemente accesi</Italian>
-            <Korean>무기 레이저 포인터 / 손전등 지속</Korean>
+            <Korean>무기 레이저 지시기/손전등 지속</Korean>
             <German>Kontinuität des Laserpointers/Taktischen Lichts</German>
             <Chinese>保持武器雷射/手電筒的狀態</Chinese>
             <Chinesesimp>保持武器激光/手电筒的状态</Chinesesimp>
@@ -722,7 +722,7 @@
             <Russian>Включать ЛЦУ/тактический фонарь после смены оружия или входа/выхода из машины, если он был до этого включен.</Russian>
             <Japanese>銃のライト等を点けていると武器を切り替えた後や車両を乗り降りしても、ライト等を点けたままにします。</Japanese>
             <Italian>Abilita la torcia/laser dopo il cambio dell'arma o l'entrata/uscita del veicolo se precedentemente attiva.</Italian>
-            <Korean>무기를 바꾸거나 차량에 승하차 할 때 이전에 스위치 켜고 끔을 유지합니다.</Korean>
+            <Korean>이전에 무기의 손전등/레이저를 켠 경우 무기 전환이나 차량 승하차시 켠 상태를 유지합니다.</Korean>
             <German>Aktiviert Laserpointer/Taktisches Licht nach einem Waffenwechsel oder dem Auf-/Absitzen, falls es zuvor aktiv war.</German>
             <Chinese>保存武器雷射/手電筒的開關狀態，使玩家切換武器或進出載具時能保持之前的狀態</Chinese>
             <Chinesesimp>保持武器激光/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的状态。</Chinesesimp>

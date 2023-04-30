@@ -49,6 +49,14 @@
             <Chinese>載具多快會加油完畢?</Chinese>
             <Turkish>Bir araca ne kadar hızlı yakıt ikmali yapılmalıdır?</Turkish>
         </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_DisplayName">
+            <English>Cargo Flow Rate</English>
+            <Korean>화물 주유량</Korean>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
+            <English>How fast should a fuel source's tank be filled?</English>
+            <Korean>연료 공급처의 저장 탱크를 얼마나 빨리 채웁니까?</Korean>
+        </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
             <German>Betankung</German>
@@ -288,6 +296,11 @@
             <Chinesesimp>开始加油</Chinesesimp>
             <Chinese>開始加油</Chinese>
             <Turkish>Yakıt Doldurmayı Başlat</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Refuel_TurnOn_Container">
+            <English>Start fueling (container)</English>
+            <German>Betankung beginnen (Container)</German>
+            <Korean>연료 재급유 시작 (컨테이너)</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
