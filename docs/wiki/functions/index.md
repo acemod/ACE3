@@ -1,15 +1,10 @@
 ---
-title: Frameworks
+title: Functions
 layout: default
 group: subNav
 order: 1
 short: wiki
 parent: wiki
-redirect_from:
-  - "/wiki/missionmaker/mission-tools.html"
-  - "/wiki/missionmaker/modules.html"
-  - "/wiki/missionmaker/useful-functions.html"
-  - "/wiki/frameworkx"
 ---
 
 <style type="text/css">
@@ -20,8 +15,8 @@ redirect_from:
 
 <div class="row">
     <div class="large-12 columns">
-        <h1>Frameworks</h1>
-        <p>Public API implemented by ACE3 which mission makers, modders and scripters can use.</p>
+        <h1>Functions</h1>
+        <p>Public API functions for use by mission makers and other mods to interface with ACE3. Backwards compatibility is supported for the following functions as much as possible.</p>
     </div>
 </div>
 <div class="row">
@@ -29,7 +24,7 @@ redirect_from:
         <nav>
             <ul>
                 {% assign pages_list = site.pages | sort: "title" %}
-                {% assign group = 'framework' %}
+                {% assign group = 'functions' %}
                 {% include pages_list %}
             </ul>
         </nav>

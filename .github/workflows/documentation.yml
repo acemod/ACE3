@@ -4,13 +4,23 @@ on:
   push:
     branches:
     - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
+      uses: actions/checkout@v3
     - name: Install Python packages
       run: |
         pip3 install wheel
@@ -22,3 +32,39 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.DOCS_TOKEN }}
       run: python3 tools/deploy.py
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Extract Dependencies
+      run: python3 tools/extract_dependencies.py --markdown
+    - name: Document Functions
+      run: python3 docs/tools/document_functions.py
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+    - name: Build with Jekyll
+      uses: actions/jekyll-build-pages@v1
+      with:
+        source: docs/
+        destination: docs/_site/
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: docs/_site/
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    needs: [build]
+
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
