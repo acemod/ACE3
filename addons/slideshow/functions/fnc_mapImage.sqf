@@ -31,7 +31,7 @@ params [
     ["_userCode", {}, [{}]],
     ["_resolution", 4096, [0]]
 ];
-TRACE_5("",_pos,_scale,count _markers,_mapType,_userCode isEqualTo {},_resolution);
+TRACE_6("",_pos,_scale,count _markers,_mapType,_userCode isEqualTo {},_resolution);
 
 _markers = _markers apply { // convert marker array to draw command
     _x params [["_xPos", [0,0,0], [[]]], ["_xText", "", [""]], ["_xIcon", "mil_dot", [""]], ["_xColor", [1,0,0,1], [[]]]];
