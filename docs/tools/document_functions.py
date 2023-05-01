@@ -293,16 +293,17 @@ def document_functions(addons_dir, components):
 
         output = os.path.join(wiki_dir, component) + ".md"
         with open(output, "w", encoding="utf-8") as file:
+            file.writelines([
+                "---\n",
+                "layout: wiki\n",
+                "title: {} Functions\n".format(component_name),
+                "description: List of functions in {} component.\n".format(component_name),
+                "group: functions\n",
+                "parent: wiki\n",
+                "---\n",
+            ])
+
             for function in components[component]:
-                file.writelines([
-                    "---\n",
-                    "layout: wiki\n",
-                    "title: {} Functions\n".format(component_name),
-                    "description: List of functions in {} component.\n".format(component_name),
-                    "group: functions\n",
-                    "parent: wiki\n",
-                    "---\n",
-                ])
                 file.write(function.document(component))
 
     return errors
