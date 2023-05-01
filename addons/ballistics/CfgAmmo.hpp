@@ -712,7 +712,7 @@ class CfgAmmo {
 
     class B_127x108_APDS: B_127x108_Ball {
         ACE_caliber = 7.13; // Chinese 12.7x108mm APDS (Armour Piercing Discarding Sabot) https://i.imgur.com/8mlXD0e.png
-        ACE_bulletLength = 34.08 // Chinese 12.7x108mm APDS (Armour Piercing Discarding Sabot) https://i.imgur.com/8mlXD0e.png
+        ACE_bulletLength = 34.08; // Chinese 12.7x108mm APDS (Armour Piercing Discarding Sabot) https://i.imgur.com/8mlXD0e.png
         ACE_bulletMass = 27.95; // Average value from "Norinco 2017 Weapon Systems", Type 54 12.7x108 mm Tungsten APDS https://i-com.cdn.gaijin.net/monthly_2023_03/image.png.5e6ae14e7b69a610c716872abea1061e.png
         ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.8, -7.64, -1.53, 5.96, 15.17, 26.19}; // Muzzle Velocity shift 0 at 70°F (21°C), -8m/s at 15°C
         ACE_ballisticCoefficients[] = {1.052}; // Compromise based on bullet drops, times of flight and remaining velocities according to vanilla B_127x108_APDS airFriction -0.00036
