@@ -13,7 +13,7 @@ redirect_from:
 ---
 
 <style type="text/css">
-  ul {
+  ul.columns {
     columns: 2;
   }
 </style>
@@ -27,7 +27,7 @@ redirect_from:
 <div class="row">
     <div class="large-12 columns">
         <nav>
-            <ul>
+            <ul class="columns">
                 {% assign pages_list = site.pages | sort: "title" %}
                 {% assign group = 'framework' %}
                 {% include pages_list %}
