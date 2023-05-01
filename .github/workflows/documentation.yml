@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - master
+    - pages-test
   workflow_dispatch:
 
 permissions:
@@ -44,8 +45,6 @@ jobs:
     - name: Document Functions
       run: python3 docs/tools/document_functions.py
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v3
     - name: Build with Jekyll
       uses: actions/jekyll-build-pages@v1
       with:
