@@ -205,7 +205,7 @@ Jammer that blocks RF triggers:
 }] call ace_explosives_fnc_addDetonateHandler;
 ```
 
-#### 5.4 Disabiling `setShotParents`.
+#### 5.4 Disabling `setShotParents`.
 
 ACE will set the owner/instigator of the explosive to the unit placeing/detonating it.
 This can be disabled by executing
