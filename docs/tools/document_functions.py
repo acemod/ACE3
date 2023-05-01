@@ -334,8 +334,9 @@ def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
                 else:
                     errors += 1
 
-    print()
-    errors += document_functions(addons_dir, components)
+    if not debug:
+        print()
+        errors += document_functions(addons_dir, components)
 
     if errors != 0:
         print("\n  Unclean!\n    {} errors".format(errors))

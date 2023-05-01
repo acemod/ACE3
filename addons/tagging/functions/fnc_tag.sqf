@@ -10,7 +10,7 @@
  * 3: Tag Model <STRING> (default: "UserTexture1m_F")
  *
  * Return Value:
- * Sucess <BOOL>
+ * Success <BOOL>
  *
  * Example:
  * success = [player, "z\ace\addons\tagging\UI\tags\black\0.paa"] call ace_tagging_fnc_tag

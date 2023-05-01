@@ -13,7 +13,7 @@
  * 6: Tag Model <STRING> (default: "UserTexture1m_F")
  *
  * Return Value:
- * Sucessfully Added Tag <BOOL>
+ * Successfully Added Tag <BOOL>
  *
  * Example:
  * ["ace_victoryRed", "Victory Red", "ACE_SpraypaintRed", ["path\to\texture1.paa", "path\to\texture2.paa"], "path\to\icon.paa"] call ace_tagging_fnc_addCustomTag
