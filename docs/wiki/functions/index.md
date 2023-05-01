@@ -17,7 +17,6 @@ parent: wiki
     <div class="large-12 columns">
         <h1>Functions</h1>
         <p>Public API functions for use by mission makers and other mods to interface with ACE3. Backwards compatibility is supported for the following functions as much as possible.</p>
-        <p>Test Deployment!</p>
     </div>
 </div>
 <div class="row">
