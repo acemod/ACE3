@@ -278,7 +278,6 @@ def get_component_name(addons_dir, component):
     return name, errors
 
 
-
 def document_functions(addons_dir, components):
     errors = 0
 
