@@ -591,6 +591,7 @@ class CfgMagazines {
         initSpeed = 1067;
     };
 
+    class 5Rnd_127x108_Mag;
     class ACE_5Rnd_127x99_Mag: 5Rnd_127x108_Mag {
         author = ECSTRING(common,ACETeam);
         ammo = "B_127x99_Ball";
