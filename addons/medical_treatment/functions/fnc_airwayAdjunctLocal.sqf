@@ -1,24 +1,24 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror
- * Local callback for applying a splint to a patient.
+ * Author: Slatery
+ * Local callback for inserting an airway adjunct to a patient.
  *
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
- * 2: Body Part <STRING>
+ * 2: Treatment <STRING>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player, cursorObject, "LeftLeg"] call ace_medical_treatment_fnc_splintLocal
+ * [player, cursorObject, "ACE_advancedAirway"] call ace_medical_treatment_fnc_aiwayAdjunctLocal;
  *
  * Public: No
  */
 
 params ["_medic", "_patient","_classname"];
-TRACE_2("chestSealLocal",_medic,_patient);
+TRACE_2("aiwayAdjunctLocal",_medic,_patient);
 
 private _defaultConfig = configFile >> QUOTE(ADDON) >> "AirwayAdjunct";
 private _adjunctConfig = _defaultConfig >> _classname;

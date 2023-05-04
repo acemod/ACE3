@@ -237,8 +237,8 @@ class GVAR(actions) {
     
     // - Airways --------------------------------------------------------------
     class ChestSeal: BasicBandage {
-        displayName = "Chest seal";
-        displayNameProgress = "Applying chest seal...";
+        displayName = CSTRING(Actions_ChestSeal);
+        displayNameProgress = CSTRING(Actions_ChestSealProgress);
         icon = "";
         category = "airway";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
@@ -254,8 +254,8 @@ class GVAR(actions) {
     };
     
     class HeadTilt: BasicBandage {
-        displayName = "Head Tilt";
-        displayNameProgress = "Tilting Head...";
+        displayName = CSTRING(Actions_HeadTilt);
+        displayNameProgress = CSTRING(Actions_HeadTiltProgress);
         icon = "";
         category = "airway";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
@@ -271,9 +271,9 @@ class GVAR(actions) {
         items[] = {};
     };
     
-    class BasicAirway: BasicBandage {
-        displayName = "Basic Airway";
-        displayNameProgress = "Applying Basic Airway...";
+    class BasicAirway: BasicBandage {        
+        displayName = CSTRING(Actions_BasicAirway);
+        displayNameProgress = CSTRING(Actions_BasicAirwayProgress);
         icon = "";
         category = "airway";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
@@ -290,8 +290,8 @@ class GVAR(actions) {
     };
     
     class AdvancedAirway: BasicBandage {
-        displayName = "Advanced Airway";
-        displayNameProgress = "Applying Advanced Airway...";
+        displayName = CSTRING(Actions_AdvancedAirway);
+        displayNameProgress = CSTRING(Actions_AdvancedAirwayProgress);
         icon = "";
         category = "airway";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
@@ -308,8 +308,8 @@ class GVAR(actions) {
     };
     
     class PulseOximeterOn: BasicBandage {
-        displayName = "Attach Pulse Oximeter";
-        displayNameProgress = "Applying Pulse Oximeter...";
+        displayName = CSTRING(Actions_PulseOximeterOn);
+        displayNameProgress = CSTRING(Actions_PulseOximeterOnProgress);
         icon = "";
         category = "examine";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
@@ -325,8 +325,8 @@ class GVAR(actions) {
     };
     
     class PulseOximeterOff: BasicBandage {
-        displayName = "Remove Pulse Oximeter";
-        displayNameProgress = "Removing Pulse Oximeter...";
+        displayName = CSTRING(Actions_PulseOximeterOff);
+        displayNameProgress = CSTRING(Actions_PulseOximeterOffProgress);
         icon = "";
         category = "examine";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
@@ -342,8 +342,8 @@ class GVAR(actions) {
     };
     
     class ClearDebris: BasicBandage {
-        displayName = "Clear Debris";
-        displayNameProgress = "Clearing debris from airway...";
+        displayName = CSTRING(Actions_ClearDebris);
+        displayNameProgress = CSTRING(Actions_ClearDebrisProgress);
         icon = "";
         category = "airway";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
@@ -359,8 +359,8 @@ class GVAR(actions) {
     };
     
     class BVM: BasicBandage {
-        displayName = "Pocket BVM";
-        displayNameProgress = "Using Bag Valve Mask";
+        displayName = CSTRING(Actions_BVM);
+        displayNameProgress = CSTRING(Actions_BVMProgress);
         icon = "";
         category = "airway";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
@@ -382,9 +382,9 @@ class GVAR(actions) {
         litter[] = {};
     };  
     
-    class mouthToMouth: BasicBandage {
-        displayName = "Mouth To Mouth Breathing";
-        displayNameProgress = "Providing mouth to mouth";
+    class MouthToMouth: BasicBandage {
+        displayName = CSTRING(Actions_MouthToMouth);
+        displayNameProgress = CSTRING(Actions_MouthToMouthProgress);
         icon = "";
         category = "airway";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;

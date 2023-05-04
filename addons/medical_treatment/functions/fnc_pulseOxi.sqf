@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal, mharis001
+ * Author: Slatery
  * Applies a pulseOxi to the patient on the given body part.
  *
  * Arguments:

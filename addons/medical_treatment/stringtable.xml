@@ -4679,5 +4679,111 @@
             <Chinesesimp>身体抽搐了一下，可能还没死！</Chinesesimp>
             <Korean>꿈틀대는걸 보니 죽은 것 같지는 않습니다!</Korean>
         </Key>
+
+        <!-- Airway related strings -->
+        <Key ID="STR_ACE_Medical_Treatment_noPulseOxiOnBodyPart">
+            <English>There is no pulse oximeter on this body part!</English>
+        </Key>
+
+        <Key ID="STR_ACE_Medical_Treatment_Actions_ChestSeal">
+            <English>Chest seal</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_ChestSealProgress">
+            <English>Applying chest seal...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_HeadTilt">
+            <English>Head tilt</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_HeadTiltProgress">
+            <English>Tilting patient's head...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_BasicAirway">
+            <English>Basic Airway</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_BasicAirwayProgress">
+            <English>Inserting basic airway adjunct...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_AdvancedAirway">
+            <English>Advanced Airway</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_AdvancedAirwayProgress">
+            <English>Inserting advanced airway adjunct...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_PulseOximeterOn">
+            <English>Attach Pulse Oximeter</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_PulseOximeterOnProgress">
+            <English>Placing pulse oximeter...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_PulseOximeterOff">
+            <English>Remove Pulse Oximeter</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_PulseOximeterOffProgress">
+            <English>Retrieving pulse oximeter...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_ClearDebris">
+            <English>Clear Debris</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_ClearDebrisProgress">
+            <English>Clearing debris from airway...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_BVM">
+            <English>Pocket BVM</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_BVMProgress">
+            <English>Using Bag Valve Mask...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_MouthToMouth">
+            <English>Mouth To Mouth Breathing</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Actions_MouthToMouthProgress">
+            <English>Providing mouth to mouth...</English>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Treatment_ChestSeal_Display">
+            <English>Hyfin Vent Compact Chest Seal</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ChestSeal_Desc_Short">
+            <English>Adheasive backed vented chest seals in a compact packaging for the treatment of penetrating injuries to the chest.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ChestSeal_Desc_Short_Use">
+            <English>Adheasive backed vented chest seals in a compact packaging for the treatment of penetrating injuries to the chest.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_BasicAirway_Display">
+            <English>NPA Basic Airway</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_BasicAirway_Desc_Short">
+            <English>Nasopharyngeal Airway adjunct. Inserted through the nostril, it provides the patient an airway in the case of airway collapse.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_BasicAirway_Desc_Short_Use">
+            <English>Nasopharyngeal Airway adjunct. Inserted through the nostril, it provides the patient an airway in the case of airway collapse.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedAirway_Display">
+            <English>SGA Advanced Airway</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedAirway_Desc_Short">
+            <English>Supraglottic Airway (AKA i-Gel). Inserted into the throat it prevents further airway degredation while allowing the patient to breathe.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedAirway_Desc_Short_Use">
+            <English>Supraglottic Airway (AKA i-Gel). Inserted into the throat it prevents further airway degredation while allowing the patient to breathe.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_PulseOximeter_Display">
+            <English>Pulse Oximeter</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_PulseOximeter_Desc_Short">
+            <English>Pulse Oximeter. Measures the heart rate and oxygen saturation of the blood of the patient.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_PulseOximeter_Desc_Short_Use">
+            <English>Pulse Oximeter. Measures the heart rate and oxygen saturation of the blood of the patient.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_BVM_Display">
+            <English>Pocket BVM</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_BVM_Desc_Short">
+            <English>Pocket Bag Valve Mask. Used to manually breathe for an unconscious patient.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_BVM_Desc_Short_Use">
+            <English>Pocket Bag Valve Mask. Used to manually breathe for an unconscious patient.</English>
+        </Key>
     </Package>
 </Project>

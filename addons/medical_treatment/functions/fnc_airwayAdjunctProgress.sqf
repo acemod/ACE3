@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Zakant
- * Handles the progress of the BVM treatment.
+ * Handles the status of the airway recovery.
  *
  * Arguments:
  * 0: Arguments <ARRAY>
@@ -12,7 +12,7 @@
  * Continue BVM <BOOL>
  *
  * Example:
- * [[player, cursorObject]] call ace_medical_treatment_fnc_bvmProgress
+ * [[player, cursorObject]] call ace_medical_treatment_fnc_aiwayAdjunctProgress
  *
  * Public: No
  */
@@ -20,6 +20,6 @@
 params ["_args"];
 _args params ["_medic", "_patient"];
 
-// Cancel BVM if patient wakes up
+// Remove if patient wakes up
 
 !(_patient call EFUNC(common,isAwake))

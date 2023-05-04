@@ -1,18 +1,19 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror
- * Applies a splint to the patient on the given body part.
+ * Author: Slatery
+ * Inserts an airway adjunct to the patient.
  *
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
- * 2: Body Part <STRING>
+ * 2: Body Part (not used) <STRING>
+ * 3: Treatment <STRING>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player, cursorObject, "LeftLeg"] call ace_medical_treatment_fnc_splint
+ * [player, cursorObject, "", "ACE_advancedAirway"] call ace_medical_treatment_fnc_aiwayAdjunct;
  *
  * Public: No
  */

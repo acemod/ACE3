@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Slatery
  * Local callback for applying a pulseOxi to a patient.
  *
  * Arguments:
@@ -24,8 +24,6 @@ private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 private _pulseOxis = GET_PULSE_OXIS(_patient);
 _pulseOxis set [_partIndex, CBA_missionTime];
 _patient setVariable [VAR_PULSE_OXI, _pulseOxis, true];
-
-[_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
 private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call EFUNC(common,isPlayer)};
 TRACE_1("clearConditionCaches: pulseOxiLocal",_nearPlayers);

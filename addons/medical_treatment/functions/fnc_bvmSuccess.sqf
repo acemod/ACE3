@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Slatery
  * Handles finishing performing BVM on the patient.
  *
  * Arguments:

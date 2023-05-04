@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Zakant
+ * Author: Slatery
  * Handles failure of the bvm treatment.
  *
  * Arguments:

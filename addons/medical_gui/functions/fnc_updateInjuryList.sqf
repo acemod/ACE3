@@ -88,7 +88,7 @@ if (_selectionN == 0) then {
     if (_message != "") then {
         _entries pushBack [_message, [0.2, 0.2, 1, 1]];
     } else {
-        if(GET_AIRWAY_COLLAPSED(_target)) then {
+        if (GET_AIRWAY_COLLAPSED(_target)) then {
             _entries pushBack ["Airways has collapsed", [1, 0.67, 0, 1]];
         };
     };

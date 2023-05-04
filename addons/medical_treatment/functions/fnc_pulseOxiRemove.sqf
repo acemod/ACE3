@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal, mharis001
+ * Author: Slatery
  * Removes the pulseOxi from the patient on the given body part.
  * Note: Patient may not be local
  *
@@ -26,7 +26,7 @@ private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 private _pulseOxis = GET_PULSE_OXIS(_patient);
 
 if (_pulseOxis select _partIndex == 0) exitWith {
-    [LSTRING(noTourniquetOnBodyPart), 1.5] call EFUNC(common,displayTextStructured);
+    [LSTRING(noPulseOxiOnBodyPart), 1.5] call EFUNC(common,displayTextStructured);
 };
 
 _pulseOxis set [_partIndex, 0];

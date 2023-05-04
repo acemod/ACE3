@@ -1,17 +1,17 @@
 #include "script_component.hpp"
 /*
  * Author: Slatery
- * Checks if a chest seal can be applied to the patient.
+ * Checks if the patient can have their head tilted.
  *
  * Arguments:
  * 0: Medic (not used) <OBJECT>
  * 1: Patient <OBJECT>
  *
  * Return Value:
- * Can Apply Chest seal <BOOL>
+ * Can tilt head <BOOL>
  *
  * Example:
- * [player, cursorObject] call ace_medical_treatment_fnc_canChestseal
+ * [player, cursorObject] call ace_medical_treatment_fnc_canHeadTilt
  *
  * Public: No
  */

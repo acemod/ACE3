@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Zakant
+ * Author: Slatery
  * Handles starting the BVM treatment.
  *
  * Arguments:

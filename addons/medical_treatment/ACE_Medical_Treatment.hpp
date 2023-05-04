@@ -570,7 +570,7 @@ class ADDON {
         class BVM{
             airwayRecoveryLevel = 2; // Just as good as breathing
         };
-        class mouthToMouth{
+        class MouthToMouth{
             airwayRecoveryLevel = 0.5;
         };
     };

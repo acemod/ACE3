@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: Slatery
  * Checks if BVM can be performed on the patient.
  *
  * Arguments:
