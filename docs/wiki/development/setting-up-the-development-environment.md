@@ -56,7 +56,7 @@ Execute `tools\setup.bat` (double-click on Windows) or download [HEMTT](https://
 
 ACE3 comes pre-configured for testing with [file patching](#file-patching) using only CBA's latest published version. You must subscribe to [CBA_A3](https://steamcommunity.com/workshop/filedetails/?id=450814997) on the Workshop.
 
-If you intend to test using file patching with CBA versions different than latest published, or with other mods, further setup is required create the links manually. First, create a folder called `z` in your Arma 3 directory. Then run the following command as admin, replacing the text in brackets with the appropriate paths:
+If you intend to test using file patching with CBA versions different than latest published, or with other mods, further setup is required. First, create a folder called `z` in your Arma 3 directory. Then run the following command as admin, replacing the text in brackets with the appropriate paths:
 
 ```bat
 mklink /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]/.hemttout/dev"
