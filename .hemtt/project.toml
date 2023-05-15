@@ -8,8 +8,7 @@ include = [
     "*.dll",
     "*.so",
     "mod.cpp",
-    "README.md",
-    "docs/README_*.md",
+    "README*.md",  # Translated READMEs get moved to root in a hook (virtual file system)
     "AUTHORS.txt",
     "LICENSE",
     "logo_ace3_ca.paa",
