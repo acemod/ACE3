@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 GVAR(isSpeedLimiter) = false;
 
 // Add keybinds
-["ACE3 Vehicles", QGVAR(speedLimiter), localize LSTRING(SpeedLimiter),{
+["ACE3 Vehicles", QGVAR(speedLimiter), localize LSTRING(SpeedLimiter), {
     false call FUNC(toggleSpeedControl)
 }, {false}, [DIK_DELETE, [false, false, false]], false] call CBA_fnc_addKeybind;
 

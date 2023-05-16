@@ -71,7 +71,7 @@ if (!_preserveSpeedLimit) then {
         GVAR(isSpeedLimiter) = false;
     };
 
-    if ("" != call CBA_fnc_getActiveFeatureCamera) then {
+    if (call CBA_fnc_getActiveFeatureCamera != "") then {
         GVAR(isSpeedLimiter) = false;
     };
 

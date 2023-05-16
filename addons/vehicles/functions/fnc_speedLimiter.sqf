@@ -81,7 +81,7 @@ GVAR(speedLimitInit) = true;
         };
     };
 
-    if ("" != call CBA_fnc_getActiveFeatureCamera) then {
+    if (call CBA_fnc_getActiveFeatureCamera != "") then {
         GVAR(isSpeedLimiter) = false;
     };
 
