@@ -16,3 +16,7 @@
 
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define PAK_REQ_OPEN 0
+#define PAK_REQ_BANDAGED 1
+#define PAK_REQ_STITCHED 2
