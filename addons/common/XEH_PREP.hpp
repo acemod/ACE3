@@ -182,7 +182,7 @@ PREP(toBin);
 PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
-PREP(throwWeapon)
+PREP(throwWeapon);
 PREP(unhideUnit);
 PREP(uniqueElements);
 PREP(uniqueItems);

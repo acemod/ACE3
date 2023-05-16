@@ -42,8 +42,8 @@ if (_active) then {
         _unit setVariable [QEGVAR(medical,lastWakeUpCheck), _lastWakeUpCheck max CBA_missionTime];
     };
 
-    // Player drop weapon chanse
-    if (EGVAR(medical,dropWeaponUnconsciousChanse) != 0 && {_unit == ACE_player && {random 1 <= EGVAR(medical,dropWeaponUnconsciousChanse)}}) then {
+    // Player drop weapon channe
+    if (EGVAR(medical,dropWeaponUnconsciousChance) != 0 && {_unit == ACE_player && {random 1 <= EGVAR(medical,dropWeaponUnconsciousChance)}}) then {
         _unit call EFUNC(common,throwWeapon);
     };
 
