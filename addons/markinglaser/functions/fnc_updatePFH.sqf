@@ -18,8 +18,7 @@
 if (GVAR(localLasers) isEqualTo []) exitWith {};
 
 {
-    private _laser = _x;
-    private _aircraft = _laser getVariable QGVAR(aircraft);
+    private _aircraft = _x;
     (getPilotCameraTarget _aircraft) params ["_isTracking", "_targetPos", "_targetObj"];
 
     private ["_type", "_target"];
@@ -38,5 +37,5 @@ if (GVAR(localLasers) isEqualTo []) exitWith {};
         };
     };
 
-    _laser setVariable [QGVAR(laserInfo), [_type, _target, CBA_missionTime], true];
+    _aircraft setVariable [QGVAR(laser), [_type, _target, CBA_missionTime], true];
 } forEach GVAR(localLasers);

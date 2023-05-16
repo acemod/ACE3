@@ -29,17 +29,7 @@ if (hasInterface && {GVAR(renderPFH) == -1}) then {
     GVAR(renderPFH) = [FUNC(renderPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
-// Create laser
-private _laser = "ACE_MarkingLaser" createVehicleLocal [0, 0, 0];
-private _laserOrigin = _aircraft getVariable [QGVAR(laserOrigin), ""];
-_laser setPosASL (_aircraft modelToWorldVisualWorld (_aircraft selectionPosition _laserOrigin));
-_laser setVariable [QGVAR(aircraft), _aircraft];
-_aircraft setVariable [QGVAR(laser), _laser];
-
-// Render PFH will take care of visibility and orientation
-_laser hideObject true;
-
-GVAR(lasers) pushBack _laser;
+GVAR(lasers) pushBack _aircraft;
 if (local _aircraft) then {
     GVAR(localLasers) pushBack _laser;
 

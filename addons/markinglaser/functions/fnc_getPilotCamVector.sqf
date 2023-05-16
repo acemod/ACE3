@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_aircraft", "_laser"];
+params ["_aircraft"];
 
 #ifndef DEBUG_MODE_FULL
 // If player is controlling the camera, no need to interpolate
@@ -31,8 +31,8 @@ if (local _aircraft && {cameraOn == _aircraft}) exitWith {
 // _target    - Locked target, either an object, a position or a vector
 // _time      - When this info was last synched
 // _isNewInfo - NIL when this info was just updated, otherwise true (not synched)
-private _laserInfo = _laser getVariable [QGVAR(laserInfo), []];
-_laserInfo params ["_type", "_target", "_time", ["_isNewInfo", true]];
+private _laser = _aircraft getVariable [QGVAR(laserInfo), []];
+_laser params ["_type", "_target", "_time", ["_isNewInfo", true]];
 
 private _originModel = _aircraft getVariable [QGVAR(laserOrigin), ""];
 private _origin = _aircraft modelToWorldVisualWorld (_aircraft selectionPosition _originModel);
@@ -44,7 +44,7 @@ if (_deltaTime > UPDATE_INTERVAL * 2) exitWith {
     _aircraft vectorModelToWorld vectorUp _laser;
 };
 
-private _interpolationInfo = _laser getVariable [QGVAR(interpolationInfo), []];
+private _interpolationInfo = _aircraft getVariable [QGVAR(interpolationInfo), []];
 _interpolationInfo params ["_lastTarget", "_cachedTarget", ["_cachedType", ""]];
 
 // If laser info was just synched, use previous position/vector for interpolation start
@@ -56,8 +56,7 @@ if (_isNewInfo) then {
     _lastTarget = [_target, _cachedTarget] select (_type == _cachedType);
 
     // Update info arrays
-    _laser setVariable [QGVAR(interpolationInfo), [_lastTarget, _target, _type]];
-    _laserInfo set [3, false];
+    _aircraft setVariable [QGVAR(interpolationInfo), [_lastTarget, _target, _type]];
 };
 
 private _vector = [0, 0, 0];

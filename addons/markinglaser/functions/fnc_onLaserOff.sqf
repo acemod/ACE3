@@ -17,12 +17,8 @@
 
 params ["_aircraft"];
 
-private _laser = _aircraft getVariable [QGVAR(laser), objNull];
-
-GVAR(lasers) deleteAt (GVAR(lasers) find _laser);
+GVAR(lasers) deleteAt (GVAR(lasers) find _aircraft);
 GVAR(localLasers) deleteAt (GVAR(localLasers) find _laser);
-
-deleteVehicle _laser;
 
 if (local _aircraft) then {
     _aircraft setVariable [QGVAR(laserOn), false, true];
