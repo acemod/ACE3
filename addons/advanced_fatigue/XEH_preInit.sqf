@@ -9,7 +9,7 @@ PREP_RECOMPILE_END;
 #include "initSettings.sqf"
 
 GVAR(staminaBarWidth) = 10 * (((safezoneW / safezoneH) min 1.2) / 40);
-GVAR(dutyList) = [[], []];
+GVAR(dutyList) = createHashMap;
 GVAR(setAnimExclusions) = [];
 
 ADDON = true;

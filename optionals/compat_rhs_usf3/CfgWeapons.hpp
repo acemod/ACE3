@@ -13,8 +13,7 @@ class CfgWeapons {
 
     class Pistol_Base_F;
     class Rifle_Base_F;
-    class srifle_EBR_F;
-    class launch_O_Titan_F;
+    class rhs_weap_m14ebrri_base;
     class GM6_base_F;
     class rhs_weap_M107_Base_F: GM6_base_F {
         ACE_barrelTwist = 381.0;
@@ -70,7 +69,8 @@ class CfgWeapons {
         ACE_barrelLength = 508.0;
     };
     class rhs_weap_saw_base: Rifle_Base_F { // Base class for all Minimi
-        ACE_Overheating_allowSwapBarrel = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
+        EGVAR(overheating,closedBolt) = 0;
     };
     class rhs_weap_lmg_minimi_railed;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
@@ -83,18 +83,37 @@ class CfgWeapons {
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
     };
-    class rhs_weap_m240_base; // Rifle_Long_Base_F
-    class rhs_weap_m240B: rhs_weap_m240_base {
+    class rhs_weap_m249: rhs_weap_lmg_minimi_railed {
+        ACE_barrelLength = 464.8;
+        ACE_barrelTwist = 177.8;
+    };
+    class rhs_weap_m249_pip: rhs_weap_lmg_minimi_railed {
+        ACE_barrelLength = 464.8;
+        ACE_barrelTwist = 177.8;
+    };
+    class rhs_weap_M249_base;
+    class rhs_weap_m240_base: rhs_weap_M249_base {
         ACE_RailHeightAboveBore = 4.3987;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 629.92;
         ACE_Overheating_allowSwapBarrel = 1;
     };
-    class rhs_weap_m14ebrri: srifle_EBR_F {
+    class rhs_weap_m14_base;
+    class rhs_weap_m14: rhs_weap_m14_base {
+        ACE_barrelTwist = 304.8;
+        ACE_barrelLength = 558.8;
+        ACE_Overheating_dispersion = 0.75;
+    };
+    class rhs_weap_m14ebrri: rhs_weap_m14ebrri_base {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
         ACE_Overheating_dispersion = 0.75;
         ACE_RailHeightAboveBore = 3.08341;
+    };
+    class rhs_weap_m14_socom_base: rhs_weap_m14_base {
+        ACE_barrelTwist = 304.8;
+        ACE_barrelLength = 413; //16.25 in (413 mm)
+        ACE_Overheating_dispersion = 0.75;
     };
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
@@ -102,9 +121,31 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.13162;
     };
     class rhs_weap_sr25_ec: rhs_weap_sr25 {
-        ACE_barrelTwist = 285.75;
         ACE_barrelLength = 508.0;
         ACE_RailHeightAboveBore = 3.13689;
+    };
+    class rhs_weap_sr25_d;
+    class rhs_weap_sr25_ec_d: rhs_weap_sr25_d {
+        ACE_barrelLength = 508.0;
+        ACE_RailHeightAboveBore = 3.13689;
+    };
+    class rhs_weap_sr25_wd;
+    class rhs_weap_sr25_ec_wd: rhs_weap_sr25_wd {
+        ACE_barrelLength = 508.0;
+        ACE_RailHeightAboveBore = 3.13689;
+    };
+    class rhs_weap_SCAR_H_Base;
+    class rhs_weap_SCAR_H_CQC_Base: rhs_weap_SCAR_H_Base {
+        ACE_barrelTwist = 304.8; // 1:12"
+        ACE_barrelLength = 330.0;
+    };
+    class rhs_weap_SCAR_H_LB_Base: rhs_weap_SCAR_H_Base {
+        ACE_barrelTwist = 304.8; // 1:12"
+        ACE_barrelLength = 508.0;
+    };
+    class rhs_weap_SCAR_H_STD_Base: rhs_weap_SCAR_H_Base {
+        ACE_barrelTwist = 304.8; // 1:12"
+        ACE_barrelLength = 406.0;
     };
     class rhs_weap_M590_5RD: Rifle_Base_F {
         ACE_barrelTwist = 0.0;
@@ -115,6 +156,9 @@ class CfgWeapons {
         ACE_barrelTwist = 0.0;
         ACE_twistDirection = 0;
         ACE_barrelLength = 508.0;
+    };
+    class rhs_weap_m32_Base_F: Rifle_Base_F {
+        ace_overheating_jamTypesAllowed[] = {"Fire", "Dud"};
     };
     class SMG_02_base_F;
     class rhsusf_weap_MP7A1_base_f: SMG_02_base_F {
@@ -139,6 +183,10 @@ class CfgWeapons {
         ACE_barrelTwist = 248.92;
         ACE_barrelLength = 124.46;
     };
+    class rhs_weap_M320_Base_F: Pistol_Base_F {
+        ace_overheating_jamTypesAllowed[] = {"Fire", "Dud"};
+    };
+
     // RHS sniper scopes
     class ItemCore;
     class InventoryOpticsItem_Base_F;
@@ -220,9 +268,52 @@ class CfgWeapons {
     class rhsusf_acc_M8541_low: rhsusf_acc_M8541 {
         ACE_ScopeHeightAboveRail = 2.9789;
     };
+    class rhsusf_acc_nxs_3515x50_base: ItemCore { // http://www.nightforceusa.com/PDF/nightforce-2011-catalog.pdf#page=12
+        ACE_ScopeAdjust_Vertical[] = {0, 30};
+        ACE_ScopeAdjust_Horizontal[] = {-10.9, 10.9};
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class nxs_scope {
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class rhsusf_acc_nxs_3515x50f1_base: rhsusf_acc_sniper_base { // http://www.nightforceusa.com/PDF/nightforce-2011-catalog.pdf#page=12
+        ACE_ScopeAdjust_Vertical[] = {0, 30};
+        ACE_ScopeAdjust_Horizontal[] = {-10.9, 10.9};
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class nxs_scope {
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class rhsusf_acc_nxs_5522x56_base: ItemCore { // http://www.nightforceusa.com/PDF/nightforce-2011-catalog.pdf#page=12
+        ACE_ScopeAdjust_Vertical[] = {0, 27.3};
+        ACE_ScopeAdjust_Horizontal[] = {-8.2, 8.2};
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class nxs_scope {
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+
     // RHS lauchers
+    class launch_O_Titan_F;
     class rhs_weap_fgm148: launch_O_Titan_F {
-        ace_javelin_enabled = 1;
+        EGVAR(javelin,enabled) = 1;
+        EGVAR(overpressure,offset) = 1.1;
         weaponInfoType = "ACE_RscOptics_javelin";
         modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";
         canLock = 0;
@@ -237,19 +328,36 @@ class CfgWeapons {
         };
     };
 
+    class rhs_weap_fim92: launch_O_Titan_F {
+        EGVAR(overpressure,range) = 6;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.6;
+        EGVAR(overpressure,offset) = 1.45;
+    };
+
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
     };
+
     class rhs_weap_smaw: Launcher_Base_F {
-        ace_reloadlaunchers_enabled = 1;
-        ace_overpressure_angle = 45;
+        EGVAR(reloadlaunchers,enabled) = 1;
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,offset) = 1.3;
     };
+
     class rhs_weap_maaws: Launcher_Base_F {
-        ace_reloadlaunchers_enabled = 1;
-        ace_overpressure_range = 15;
-        ace_overpressure_angle = 70;
-        ace_overpressure_damage = 0.75;
+        EGVAR(reloadlaunchers,enabled) = 1;
+        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,angle) = 70;
+        EGVAR(overpressure,damage) = 0.75;
+        EGVAR(overpressure,offset) = 0.95;
+    };
+
+    class rhs_weap_M136: Launcher_Base_F {
+        EGVAR(overpressure,range) = 10;
+        EGVAR(overpressure,angle) = 50;
+        EGVAR(overpressure,offset) = 0.9;
     };
 
     #define HEARING_PROTECTION_OPEN EGVAR(hearing,protection) = 0; EGVAR(hearing,lowerVolume) = 0;

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Marker_Flags">
+        <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
+            <English>Marker Flags</English>
+            <German>Markierungsfahnen</German>
+            <Polish>Chorągiewki</Polish>
+            <Japanese>旗マーカー</Japanese>
+            <Korean>마킹용 깃발</Korean>
+            <Chinesesimp>标记旗</Chinesesimp>
+            <Russian>Флажки</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
+            <English>Place Anywhere</English>
+            <German>Überall platzieren</German>
+            <Japanese>どこでも設置可能</Japanese>
+            <Polish>Umieść w dowolnym miejscu</Polish>
+            <Korean>아무 곳에나 배치</Korean>
+            <Chinesesimp>随意放置</Chinesesimp>
+            <Russian>Размещать где угодно</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
+            <English>Place marker flag anywhere regardless of surface.</English>
+            <Japanese>どのような地表でも旗を設置できるようにします</Japanese>
+            <Polish>Umieść chorągiewkę w dowolnym miejscu, niezależnie od powierzchni.</Polish>
+            <Korean>지면에 상관없이 아무곳에서나 마킹용 깃발을 배치합니다.</Korean>
+            <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
+            <Russian>Размещать флажки где угодно вне зависимости от поверхности.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_ActionPlace">
+            <English>Place Marker Flag</English>
+            <German>Markierungsfahne platzieren</German>
+            <Polish>Postaw chorągiewkę</Polish>
+            <Korean>마킹용 깃발 꽂기</Korean>
+            <Russian>Поставить флажок</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
+            <English>Adjust height</English>
+            <German>Höhe anpassen</German>
+            <Polish>Dostosuj wysokość</Polish>
+            <Korean>높이 조정</Korean>
+            <Russian>Регулировать высоту</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_ActionCancel">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+            <Spanish>Cancelar</Spanish>
+            <Polish>Anuluj</Polish>
+            <French>Annuler</French>
+            <Czech>Zrušit</Czech>
+            <Italian>Annulla</Italian>
+            <Hungarian>Mégsem</Hungarian>
+            <Portuguese>Cancelar</Portuguese>
+            <Russian>Отмена</Russian>
+            <Japanese>中止</Japanese>
+            <Korean>취소</Korean>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
+            <English>Pick Up</English>
+            <Chinese>提取點</Chinese>
+            <French>Récupérer</French>
+            <Spanish>Recoger</Spanish>
+            <Italian>Recupera</Italian>
+            <Polish>Podnieś</Polish>
+            <Russian>Подобрать</Russian>
+            <Czech>Vyzvednutí</Czech>
+            <Portuguese>Pegar</Portuguese>
+            <Korean>가져가기</Korean>
+            <Chinesesimp>提取点</Chinesesimp>
+            <Japanese>拾う</Japanese>
+            <Turkish>Al</Turkish>
+            <German>Aufheben</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_white">
+            <English>Marker Flag (White)</English>
+            <German>Markierungsfahne (Weiß)</German>
+            <Polish>Chorągiewka (Biała)</Polish>
+            <Japanese>旗マーカー (白)</Japanese>
+            <Korean>마킹용 깃발(하양)</Korean>
+            <Chinesesimp>标记旗（白）</Chinesesimp>
+            <Russian>Флажок (белый)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_black">
+            <English>Marker Flag (Black)</English>
+            <German>Markierungsfahne (Schwarz)</German>
+            <Polish>Chorągiewka (Czarna)</Polish>
+            <Japanese>旗マーカー (黒)</Japanese>
+            <Korean>마킹용 깃발(검정)</Korean>
+            <Chinesesimp>标记旗（黑）</Chinesesimp>
+            <Russian>Флажок (чёрный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_red">
+            <English>Marker Flag (Red)</English>
+            <German>Markierungsfahne (Rot)</German>
+            <Polish>Chorągiewka (Czerwona)</Polish>
+            <Japanese>旗マーカー (赤)</Japanese>
+            <Korean>마킹용 깃발(빨강)</Korean>
+            <Chinesesimp>标记旗（红）</Chinesesimp>
+            <Russian>Флажок (красный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_green">
+            <English>Marker Flag (Green)</English>
+            <German>Markierungsfahne (Grün)</German>
+            <Polish>Chorągiewka (Zielona)</Polish>
+            <Japanese>旗マーカー (緑)</Japanese>
+            <Korean>마킹용 깃발(초록)</Korean>
+            <Chinesesimp>标记旗（绿）</Chinesesimp>
+            <Russian>Флажок (зелёный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_blue">
+            <English>Marker Flag (Blue)</English>
+            <German>Markierungsfahne (Blau)</German>
+            <Polish>Chorągiewka (Niebieska)</Polish>
+            <Japanese>旗マーカー (青)</Japanese>
+            <Korean>마킹용 깃발(파랑)</Korean>
+            <Chinesesimp>标记旗（蓝）</Chinesesimp>
+            <Russian>Флажок (синий)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_yellow">
+            <English>Marker Flag (Yellow)</English>
+            <German>Markierungsfahne (Gelb)</German>
+            <Polish>Chorągiewka (Żółta)</Polish>
+            <Japanese>旗マーカー (黄)</Japanese>
+            <Korean>마킹용 깃발(노랑)</Korean>
+            <Chinesesimp>标记旗（黄）</Chinesesimp>
+            <Russian>Флажок (жёлтый)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_orange">
+            <English>Marker Flag (Orange)</English>
+            <German>Markierungsfahne (Orange)</German>
+            <Polish>Chorągiewka (Pomarańczowa)</Polish>
+            <Japanese>旗マーカー (橙)</Japanese>
+            <Korean>마킹용 깃발(주황)</Korean>
+            <Chinesesimp>标记旗（橙）</Chinesesimp>
+            <Russian>Флажок (оранжевый)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_purple">
+            <English>Marker Flag (Purple)</English>
+            <German>Markierungsfahne (Lila)</German>
+            <Polish>Chorągiewka (Fioletowa)</Polish>
+            <Japanese>旗マーカー (紫)</Japanese>
+            <Korean>마킹용 깃발(보라)</Korean>
+            <Chinesesimp>标记旗（紫）</Chinesesimp>
+            <Russian>Флажок (фиолетовый)</Russian>
+        </Key>
+    </Package>
+</Project>

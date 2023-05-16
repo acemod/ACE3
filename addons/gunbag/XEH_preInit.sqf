@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 // restore gunbag info after respawn
 ["CAManBase", "respawn", {
     [{
@@ -14,11 +16,11 @@ PREP_RECOMPILE_END;
         private _newBackpack = backpackContainer _unit;
         private _oldBackpack = backpackContainer _corpse;
 
-        if !(typeOf _newBackpack isEqualTo typeOf _oldBackpack) exitWith {};
+        if (typeOf _newBackpack isNotEqualTo typeOf _oldBackpack) exitWith {};
 
         private _state = _oldBackpack getVariable [QGVAR(gunbagWeapon), []];
 
-        if !(_state isEqualTo []) then {
+        if (_state isNotEqualTo []) then {
             _newBackpack setVariable [QGVAR(gunbagWeapon), _state, true];
         };
     }, _this] call CBA_fnc_execNextFrame;
@@ -40,6 +42,22 @@ PREP_RECOMPILE_END;
     };
 
     GVAR(arsenalCache) = nil;
+}] call CBA_fnc_addEventHandler;
+
+["CBA_loadoutSet", {
+    params ["_unit", "_loadout", "_extendedInfo"];
+    private _gunbagWeapon = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
+    if (_gunbagWeapon isNotEqualTo []) then {
+        (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon), _gunbagWeapon, true];
+    };
+}] call CBA_fnc_addEventHandler;
+
+["CBA_loadoutGet", {
+    params ["_unit", "_loadout", "_extendedInfo"];
+    private _gunbagWeapon = (backpackContainer _unit) getVariable [QGVAR(gunbagWeapon), []];
+    if (_gunbagWeapon isNotEqualTo []) then {
+        _extendedInfo set [QGVAR(gunbagWeapon), _gunbagWeapon];
+    };
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;

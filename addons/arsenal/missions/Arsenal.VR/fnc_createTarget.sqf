@@ -1,4 +1,9 @@
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ *
+ * Public: No
+*/
 
 params ["_type", "_position", ["_group", grpNull], "_varName"];
 private _player = player;
@@ -52,6 +57,10 @@ _target setVariable ["origin", _position];
 
 _target addEventHandler ["killed", {
     params ["_target"];
+
+    // Killed may fire twice, 2nd will be null - https://github.com/acemod/ACE3/pull/7561
+    if (isNull _target) exitWith { TRACE_1("Ignoring null death",_target); };
+
     private _position = _target getVariable ["origin", position _target];
     private _varName = vehicleVarName _target;
 

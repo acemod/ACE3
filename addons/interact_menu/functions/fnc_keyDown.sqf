@@ -15,13 +15,21 @@
  * Public: No
  */
 
+#include "\a3\ui_f\hpp\defineResincl.inc"
+
 params ["_menuType"];
 
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
+// Conditions: Don't open when editing a text box
+private _isTextEditing = (allDisplays findIf {(ctrlType (focusedCtrl _x)) == CT_EDIT}) != -1;
+
 // Conditions: canInteract (these don't apply to zeus)
-if ((isNull curatorCamera) && {
-    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+if (
+    _isTextEditing ||
+    {(isNull curatorCamera) && {
+        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+    }
 }) exitWith {false};
 
 while {dialog} do {
@@ -36,6 +44,12 @@ if (_menuType == 0) then {
     GVAR(keyDownSelfAction) = true;
 };
 GVAR(keyDownTime) = diag_tickTime;
+
+// Raise MenuClosed event whenever one type is replaced with another, because KeyUp code is not guaranteed.
+if (GVAR(openedMenuType) != -1) then {
+    ["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
+};
+
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];

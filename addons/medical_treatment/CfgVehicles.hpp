@@ -18,6 +18,7 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {QPATHTOEF(apl,data\bodybag_co.paa)};
         class ACE_Actions {
@@ -76,6 +77,9 @@ class CfgVehicles {
     };
     class ACE_MedicalLitter_splint: ACE_MedicalLitterBase {
         model = QPATHTOF(data\littergeneric_splint.p3d);
+    };
+    class ACE_MedicalLitter_suture: ACE_MedicalLitterBase {
+        model = QPATHTOF(data\littergeneric_suture.p3d);
     };
 
     // Treatment items
@@ -231,6 +235,16 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_surgicalKit,1);
         };
     };
+    class ACE_sutureItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(Suture_Display);
+        author = ECSTRING(common,ACETeam);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_suture,1);
+        };
+    };
     class ACE_bodyBagItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -267,6 +281,8 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bloodIV,15);
             MACRO_ADDITEM(ACE_bloodIV_500,15);
             MACRO_ADDITEM(ACE_bloodIV_250,15);
+            MACRO_ADDITEM(ACE_tourniquet,10);
+            MACRO_ADDITEM(ACE_splint,10);
             MACRO_ADDITEM(ACE_bodyBag,10);
         };
         class AnimationSources {
@@ -285,14 +301,14 @@ class CfgVehicles {
                 class ACE_OpenLid {
                     displayName = ECSTRING(medical,openLid);
                     condition = QUOTE(alive _target && {_target animationPhase 'Cover' < 0.5});
-                    statement = QUOTE(_target animate ARR_2(['Cover',1]));
+                    statement = QUOTE(_target animate [ARR_2('Cover',1)]);
                     showDisabled = 0;
                     priority = -1;
                 };
                 class ACE_CloseLid {
                     displayName = ECSTRING(medical,closeLid);
                     condition = QUOTE(alive _target && {_target animationPhase 'Cover' >= 0.5});
-                    statement = QUOTE(_target animate ARR_2(['Cover',0]));
+                    statement = QUOTE(_target animate [ARR_2('Cover',0)]);
                     showDisabled = 0;
                     priority = -1;
                 };
@@ -324,5 +340,15 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_surgicalKit,2);
             MACRO_ADDITEM(ACE_bodyBag,5);
         };
+    };
+
+    class Van_02_base_F;
+    class Van_02_medevac_base_F: Van_02_base_F {
+        GVAR(patientSeats)[] = {3,4};
+    };
+
+    class Heli_Transport_04_base_F;
+    class O_Heli_Transport_04_medevac_F: Heli_Transport_04_base_F {
+        GVAR(patientSeats)[] = {0,1,2};
     };
 };

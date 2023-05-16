@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_realoadLauncher
+ * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_reloadLauncher
  *
  * Public: No
  */
@@ -26,5 +26,4 @@ _target selectWeapon _weapon;
 if (currentWeapon _target != _weapon) exitWith {};
 if (currentMagazine _target != "") exitWith {};
 
-// command is wip, reload time for launchers is not intended.
-_target addWeaponItem [_weapon, _magazine];
+_target addWeaponItem [_weapon, _magazine, true];

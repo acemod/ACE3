@@ -38,19 +38,21 @@ if (IS_BLEEDING(_target)) then {
     _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
 };
 
-// Give a qualitative description of the blood volume lost
-switch (GET_HEMORRHAGE(_target)) do {
-    case 1: {
-        _entries pushBack [localize LSTRING(Lost_Blood1), [1, 0, 0, 1]];
-    };
-    case 2: {
-        _entries pushBack [localize LSTRING(Lost_Blood2), [1, 0, 0, 1]];
-    };
-    case 3: {
-        _entries pushBack [localize LSTRING(Lost_Blood3), [1, 0, 0, 1]];
-    };
-    case 4: {
-        _entries pushBack [localize LSTRING(Lost_Blood4), [1, 0, 0, 1]];
+if (GVAR(showBloodlossEntry)) then {
+    // Give a qualitative description of the blood volume lost
+    switch (GET_HEMORRHAGE(_target)) do {
+        case 1: {
+            _entries pushBack [localize LSTRING(Lost_Blood1), [1, 1, 0, 1]];
+        };
+        case 2: {
+            _entries pushBack [localize LSTRING(Lost_Blood2), [1, 0.67, 0, 1]];
+        };
+        case 3: {
+            _entries pushBack [localize LSTRING(Lost_Blood3), [1, 0.33, 0, 1]];
+        };
+        case 4: {
+            _entries pushBack [localize LSTRING(Lost_Blood4), [1, 0, 0, 1]];
+        };
     };
 };
 
@@ -65,8 +67,8 @@ switch (GET_FRACTURES(_target) select _selectionN) do {
         _entries pushBack [localize LSTRING(Status_Fractured), [1, 0, 0, 1]];
     };
     case -1: {
-        if (EGVAR(medical,fractures) == 2) then { // Ignore if the splint has no effect
-            _entries pushBack [localize LSTRING(Status_SplintApplied), [1, 1, 1, 1]];
+        if (EGVAR(medical,fractures) in [2, 3]) then { // Ignore if the splint has no effect
+            _entries pushBack [localize LSTRING(Status_SplintApplied), [0.2, 0.2, 1, 1]];
         };
     };
 };
@@ -114,7 +116,7 @@ private _fnc_processWounds = {
             private _classIndex = _woundClassID / 10;
             private _category   = _woundClassID % 10;
 
-            private _className = EGVAR(medical_damage,woundsData) select _classIndex select 6;
+            private _className = EGVAR(medical_damage,woundClassNames) select _classIndex;
             private _suffix = ["Minor", "Medium", "Large"] select _category;
             private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];
 

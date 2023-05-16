@@ -38,7 +38,7 @@ TRACE_2("start",_unit,_nozzle);
         alive _unit
         && {"" isEqualTo currentWeapon _unit || {_unit call EFUNC(common,isSwimming)}}
         && {[_unit, objNull, [INTERACT_EXCEPTIONS, "notOnMap"]] call EFUNC(common,canInteractWith)}
-        && {!("unconscious" isEqualTo toLower animationState _unit)}
+        && {"unconscious" isNotEqualTo toLower animationState _unit}
         && {!(_unit getVariable ["ACE_isUnconscious", false])}
     ) exitWith {
         TRACE_3("stop dead/weapon/interact/uncon",_unit,alive _unit,currentWeapon _unit);
@@ -71,7 +71,7 @@ TRACE_2("start",_unit,_nozzle);
         END_PFH
     };
 
-    if !(_unit == vehicle _unit && {_unit isEqualTo ACE_player}) exitWith {
+    if (_unit == vehicle _unit && {_unit isNotEqualTo ACE_player}) exitWith {
         TRACE_2("stop vehicle/player",_unit,vehicle _unit);
         DROP_NOZZLE
         UNHOLSTER_WEAPON
@@ -95,10 +95,7 @@ TRACE_2("start",_unit,_nozzle);
 
     getCursorObjectParams params ["_cursorObject", "", "_distance"];
     if (!isNull _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {
-        if (
-            1 == getNumber (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> QGVAR(canReceive))
-            && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}
-        ) then {
+        if ([_cursorObject] call FUNC(canConnectNozzle)) then {
             _hintLMB = localize LSTRING(Connect);
         };
         if ([_unit, _cursorObject] call FUNC(canReturnNozzle)) then {
@@ -107,7 +104,7 @@ TRACE_2("start",_unit,_nozzle);
     };
 
     private _hint = [_hintLMB, _hintRMB];
-    if !(_hint isEqualTo (_unit getVariable [QGVAR(hint), []])) then {
+    if (_hint isNotEqualTo (_unit getVariable [QGVAR(hint), []])) then {
         _unit setVariable [QGVAR(hint), _hint];
         _hint call EFUNC(interaction,showMouseHint);
     };

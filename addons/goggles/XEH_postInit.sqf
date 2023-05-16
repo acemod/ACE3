@@ -14,8 +14,8 @@ if (!hasInterface) exitWith {};
 [20, [true, true, false]], false] call CBA_fnc_addKeybind;
 
 
-["ace_settingsInitialized", {
-    TRACE_2("ace_settingsInitialized eh",GVAR(effects),GVAR(showInThirdPerson));
+["CBA_settingsInitialized", {
+    TRACE_2("CBA_settingsInitialized eh",GVAR(effects),GVAR(showInThirdPerson));
 
     if (GVAR(effects) == 0) exitWith {};
 
@@ -85,7 +85,7 @@ if (!hasInterface) exitWith {};
 
 
     // // ---Add the Dust/Dirt/Rain Effects---
-    if (GVAR(effects) == 2) then {
+    if (GVAR(effects) in [2, 3]) then {
 
         // Register fire event handler
         ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;

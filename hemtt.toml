@@ -8,7 +8,7 @@ files = [
     "README.md",
     "docs/README_DE.md",
     "docs/README_PL.md",
-    "README.zh-TW.md",
+    "docs/README.zh-TW.md",
     "AUTHORS.txt",
     "LICENSE",
     "logo_ace3_ca.paa",

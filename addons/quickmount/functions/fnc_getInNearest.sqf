@@ -25,7 +25,7 @@ if (!GVAR(enabled) ||
 params [["_interactionTarget", objNull, [objNull]]];
 TRACE_1("getInNearest",_interactionTarget);
 
-private _start = AGLtoASL (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
+private _start = ACE_player modelToWorldVisualWorld (ACE_player selectionPosition "pilot");
 private _end = (_start vectorAdd (getCameraViewDirection ACE_player vectorMultiply GVAR(distance)));
 private _objects = lineIntersectsSurfaces [_start, _end, ACE_player];
 private _target = (_objects param [0, []]) param [2, objNull];
@@ -37,7 +37,7 @@ if ((isNull _target) && {alive _interactionTarget}) then {
     _target = (_objects param [0, []]) param [2, objNull];
 };
 
-if (locked _target in [2,3]) exitWith {
+if (locked _target in [2,3] || {!simulationEnabled _target}) exitWith {
     [localize LSTRING(VehicleLocked)] call EFUNC(common,displayTextStructured);
     true
 };
@@ -72,12 +72,12 @@ if (!isNull _target &&
                 private _effectiveRole = toLower _role;
 
                 if ((_effectiveRole in ["driver", "gunner"]) && {unitIsUAV _target}) exitWith {}; // Ignoring UAV Driver/Gunner
-                if ((_effectiveRole == "driver") && {(getNumber (([_target] call CBA_fnc_getObjectConfig) >> "hasDriver")) == 0}) exitWith {}; // Ignoring Non Driver (static weapons)
+                if ((_effectiveRole == "driver") && {(getNumber (configOf _target >> "hasDriver")) == 0}) exitWith {}; // Ignoring Non Driver (static weapons)
 
                 // Seats can be locked independently of the main vehicle
                 if ((_role == "driver") && {lockedDriver _target}) exitWith {TRACE_1("lockedDriver",_x);};
                 if ((_cargoIndex >= 0) && {_target lockedCargo _cargoIndex}) exitWith {TRACE_1("lockedCargo",_x);};
-                if ((!(_turretPath isEqualTo [])) && {_target lockedTurret _turretPath}) exitWith {TRACE_1("lockedTurret",_x);};
+                if ((_turretPath isNotEqualTo []) && {_target lockedTurret _turretPath}) exitWith {TRACE_1("lockedTurret",_x);};
 
                 if (_effectiveRole == "turret") then {
                     private _turretConfig = [_target, _turretPath] call CBA_fnc_getTurret;
@@ -95,7 +95,7 @@ if (!isNull _target &&
                 TRACE_2("",_effectiveRole,_x);
                 if (_effectiveRole != _desiredRole) exitWith {};
 
-                if (!(_turretPath isEqualTo [])) then {
+                if (_turretPath isNotEqualTo []) then {
                      // Using GetInTurret seems to solve problems with incorrect GetInEH params when gunner/commander
                     ACE_player action ["GetInTurret", _target, _turretPath];
                     TRACE_3("Geting In Turret",_x,_role,_turretPath);

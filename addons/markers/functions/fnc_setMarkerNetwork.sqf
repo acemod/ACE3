@@ -12,14 +12,14 @@
  * None
  *
  * Example:
- * [[],[],dummyLogic] call ace_markers_fnc_setMarkerJIP;
+ * [[],[],dummyLogic] call ace_markers_fnc_setMarkerNetwork;
  *
  * Public: No
  */
 
 params ["_marker", "_data"];
 TRACE_2("params",_marker,_data);
-_data params ["_markerClassname", "_colorClassname", "_pos", "_dir"];
+_data params ["_markerClassname", "_colorClassname", "_pos", "_dir", "_scale"];
 
 private _config = configfile >> "CfgMarkers" >> _markerClassname;
 
@@ -41,6 +41,7 @@ _marker setMarkerColorLocal configName _config;
 
 _marker setMarkerPosLocal _pos;
 _marker setMarkerDirLocal _dir;
+_marker setMarkerSizeLocal [_scale, _scale];
 
 // save properties on server machine for JIP, marker editing ready
 if (isMultiplayer && {isServer}) then {

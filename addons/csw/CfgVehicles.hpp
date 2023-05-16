@@ -169,6 +169,31 @@ class CfgVehicles {
         };
     };
 
+    class HMG_02_base_F: StaticMGWeapon {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_M2_Mounted);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(staticM2ShieldCarry); // carry weapon [CfgWeapons]
+            disassembleTurret = QGVAR(m3TripodLow); // turret [CfgVehicles]
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+    class HMG_02_high_base_F: HMG_02_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_M2_Mounted);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(staticM2ShieldCarry); // carry weapon [CfgWeapons]
+            disassembleTurret = QGVAR(m3Tripod); // turret [CfgVehicles]
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
 
     class GMG_TriPod;
     class GMG_01_base_F: GMG_TriPod {
@@ -247,5 +272,15 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
+    // Ammo holder for returning ammo
+    class ReammoBox_F;
+    class GVAR(ammo_holder): ReammoBox_F {
+        EGVAR(cargo,canLoad) = 0;
+        EGVAR(cargo,noRename) = 1;
+        EGVAR(dragging,canCarry) = 1; // Allow this to be moved alongside the weapon
+        EGVAR(dragging,canDrag) = 1;
+        scope = 1;
+        maximumLoad = 0; // don't allow anything to be placed inside, only removed
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+    };
 };
-

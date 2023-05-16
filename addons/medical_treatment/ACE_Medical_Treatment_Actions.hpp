@@ -79,10 +79,11 @@ class GVAR(actions) {
         icon = QPATHTOEF(medical_gui,ui\tourniquet.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_tourniquet"};
-        treatmentTime = 7;
+        treatmentTime = QGVAR(treatmentTimeTourniquet);
         condition = QUOTE(!([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo)));
         callbackSuccess = QFUNC(tourniquet);
         litter[] = {};
+        allowedUnderwater = 1;
     };
     class RemoveTourniquet: ApplyTourniquet {
         displayName = CSTRING(Actions_RemoveTourniquet);
@@ -90,6 +91,7 @@ class GVAR(actions) {
         items[] = {};
         condition = QUOTE([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo));
         callbackSuccess = QFUNC(tourniquetRemove);
+        allowedUnderwater = 1;
     };
 
     // - Splint ---------------------------------------------------------------
@@ -100,7 +102,7 @@ class GVAR(actions) {
         icon = QPATHTOEF(medical_gui,ui\splint.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_splint"};
-        treatmentTime = 7;
+        treatmentTime = QGVAR(treatmentTimeSplint);
         callbackSuccess = QFUNC(splint);
         condition = QFUNC(canSplint);
         litter[] = {
@@ -117,7 +119,7 @@ class GVAR(actions) {
         category = "medication";
         items[] = {"ACE_morphine"};
         condition = "";
-        treatmentTime = 5;
+        treatmentTime = QGVAR(treatmentTimeAutoinjector);
         callbackSuccess = QFUNC(medication);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
@@ -148,8 +150,9 @@ class GVAR(actions) {
         allowSelfTreatment = QGVAR(allowSelfIV);
         category = "advanced";
         medicRequired = QGVAR(medicIV);
-        treatmentTime = 12;
+        treatmentTime = QGVAR(treatmentTimeIV);
         items[] = {"ACE_bloodIV"};
+        treatmentLocations = QGVAR(locationIV);
         condition = "";
         callbackSuccess = QFUNC(ivBag);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
@@ -203,7 +206,7 @@ class GVAR(actions) {
         medicRequired = 0;
         treatmentTime = 2.5;
         items[] = {};
-        condition = QUOTE(!GVAR(advancedDiagnose));
+        condition = QUOTE(GVAR(advancedDiagnose) == 0);
         callbackSuccess = QFUNC(diagnose);
         callbackFailure = "";
         callbackProgress = "";
@@ -215,7 +218,7 @@ class GVAR(actions) {
         displayName = CSTRING(Actions_CheckPulse);
         displayNameProgress = CSTRING(Check_Pulse_Content);
         allowedSelections[] = {"All"};
-        condition = QGVAR(advancedDiagnose);
+        condition = QUOTE(GVAR(advancedDiagnose) != 0);
         callbackSuccess = QFUNC(checkPulse);
         animationMedicProne = "";
         animationMedicSelfProne = "";
@@ -243,9 +246,9 @@ class GVAR(actions) {
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
         allowSelfTreatment = 0;
         medicRequired = 0;
-        treatmentTime = 15;
+        treatmentTime = QGVAR(treatmentTimeBodyBag);
         items[] = {"ACE_bodyBag"};
-        condition = QUOTE(!alive _patient);
+        condition = QFUNC(canPlaceInBodyBag);
         callbackSuccess = QFUNC(placeInBodyBag);
         consumeItem = 1;
         litter[] = {};
@@ -259,7 +262,7 @@ class GVAR(actions) {
         allowedSelections[] = {"Body"};
         allowSelfTreatment = 0;
         medicRequired = 0;
-        treatmentTime = 15;
+        treatmentTime = QGVAR(treatmentTimeCPR);
         items[] = {};
         condition = QFUNC(canCPR);
         callbackSuccess = QFUNC(cprSuccess);
@@ -285,8 +288,9 @@ class GVAR(actions) {
         treatmentTime = QFUNC(getStitchTime);
         condition = QFUNC(canStitch);
         callbackSuccess = "";
+        callbackStart = QFUNC(surgicalKitStart);
         callbackProgress = QFUNC(surgicalKitProgress);
-        consumeItem = QGVAR(consumeSurgicalKit);
+        consumeItem = QGVAR(consumeSurgicalKit); // setting can be 0,1,2 - only 1 will consume items[]
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         litter[] = {{"ACE_MedicalLitter_gloves"}};
     };

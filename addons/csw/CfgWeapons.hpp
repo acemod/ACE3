@@ -179,6 +179,20 @@ class CfgWeapons {
         modes[] = {};
         picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
     };
+    class GVAR(staticM2ShieldCarry): GVAR(staticHMGCarry) {
+        class ADDON: ADDON {
+            class assembleTo {
+                GVAR(m3Tripod) = "B_HMG_02_high_F";
+                GVAR(m3TripodLow) = "B_HMG_02_F";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 1000;
+        };
+        displayName = CSTRING(StaticM2ShieldBag_displayName);
+        author = ECSTRING(common,ACETeam);
+        picture = QPATHTOF(UI\StaticM2Shield_Icon_ca.paa);
+    };
 
     class GVAR(staticGMGCarry): Launcher_Base_F {
         class ADDON {
@@ -223,6 +237,7 @@ class CfgWeapons {
 
     // Proxy Weapons
     CREATE_CSW_PROXY(HMG_Static);
+    CREATE_CSW_PROXY(HMG_M2_Mounted);
     CREATE_CSW_PROXY(GMG_20mm);
 
     class missiles_titan_static;
@@ -231,7 +246,7 @@ class CfgWeapons {
         EGVAR(javelin,enabled) = 1; // needs to be explicitly enabled
         magazineReloadTime = 0.5;
     };
-    class GVAR(Titan_AA_Static) : missiles_titan_static {
+    class GVAR(Titan_AA_Static): missiles_titan_static {
         magazineReloadTime = 0.5;
     };
 

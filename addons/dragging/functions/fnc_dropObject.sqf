@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Malbryn
  * Drop a dragged object.
  *
  * Arguments:
@@ -20,7 +20,12 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // remove drop action
-[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
+[GVAR(releaseActionID), "keydown"] call CBA_fnc_removeKeyHandler;
+
+// stop blocking
+if !(GVAR(dragAndFire)) then {
+    [_unit, "DefaultAction", _unit getVariable [QGVAR(blockFire), -1]] call EFUNC(common,removeActionEventHandler);
+};
 
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
@@ -38,9 +43,9 @@ detach _target;
 
 if (_target isKindOf "CAManBase") then {
     if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+        [_target, "unconscious", 2] call EFUNC(common,doAnimation);
     } else {
-        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim.
+        [_target, "", 2] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim.
     };
 };
 
@@ -69,7 +74,7 @@ if !(_target isKindOf "CAManBase") then {
 };
 
 if (_unit getVariable ["ACE_isUnconscious", false]) then {
-    [_unit, "unconscious", 2, true] call EFUNC(common,doAnimation);
+    [_unit, "unconscious", 2] call EFUNC(common,doAnimation);
 };
 
 // recreate UAV crew
@@ -77,9 +82,12 @@ if (_target getVariable [QGVAR(isUAV), false]) then {
     createVehicleCrew _target;
 };
 
+// fixes not being able to move when in combat pace
+[_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+
 // reset mass
 private _mass = _target getVariable [QGVAR(originalMass), 0];
 
 if (_mass != 0) then {
-    [QEGVAR(common,setMass), [_target, _mass], _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,setMass), [_target, _mass]] call CBA_fnc_globalEvent; // force global sync
 };

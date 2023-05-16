@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM
+ * Author:Dani (TCVM)
  * Checks if the player can deploy the tripod.
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * Can deploy <BOOL>
  *
  * Example:
- * [player] call ace_csw_fnc_canDeployTripod
+ * [player] call ace_csw_fnc_assemble_canDeployTripod
  *
  * Public: No
  */

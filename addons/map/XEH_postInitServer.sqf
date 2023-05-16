@@ -6,7 +6,7 @@ addMissionEventHandler ["HandleDisconnect",{
     if (!GVAR(mapGlow)) exitWith {};
     private _unitLight = _disconnectedPlayer getVariable [QGVAR(flashlight), ["", objNull]];
     _unitLight params ["", "_glow"];
-    
+
     if ((!isNull _disconnectedPlayer) && {!isNull _glow}) then {
         detach _glow;
         deleteVehicle _glow;

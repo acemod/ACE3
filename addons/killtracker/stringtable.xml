@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="KillTracker">
+        <Key ID="STR_ACE_KillTracker_Title">
+            <English>ACE Killed Events</English>
+            <Japanese>ACE キルトラッカー</Japanese>
+            <German>ACE Abgeschossene Ereignisse</German>
+            <Polish>ACE Licznik Zabójstw</Polish>
+            <Chinesesimp>ACE 击杀事件</Chinesesimp>
+            <Korean>ACE 사살 이벤트</Korean>
+            <Russian>ACE Счётчик убийств</Russian>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_TotalKills">
+            <English>Total Kills:</English>
+            <Russian>Всего убийств:</Russian>
+            <Polish>Liczba zabójstw:</Polish>
+            <Turkish>Toplam Öldürme:</Turkish>
+            <Japanese>総キル:</Japanese>
+            <German>Gesammte Abschüsse:</German>
+            <Chinesesimp>总击杀数：</Chinesesimp>
+            <Korean>총 사살수:</Korean>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_Kill">
+            <English>Kill: %1 %2</English>
+            <Russian>Убил: %1 %2</Russian>
+            <Polish>Zabójstwo: %1 %2</Polish>
+            <Turkish>Öldürülen: %1 %2</Turkish>
+            <Japanese>キル: %1 %2</Japanese>
+            <German>Abschuss: %1 %2</German>
+            <Chinesesimp>击杀：%1 %2</Chinesesimp>
+            <Korean>사살: %1 %2</Korean>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_Killer">
+            <English>Killer: %1 %2</English>
+            <Russian>Убийца: %1 %2</Russian>
+            <Polish>Zabójca: %1 %2</Polish>
+            <Turkish>Öldüren: %1 %2</Turkish>
+            <Japanese>キラー: %1 %2</Japanese>
+            <German>Täter: %1 %2</German>
+            <Chinesesimp>击杀者：%1 %2</Chinesesimp>
+            <Korean>사살자: %1 %2</Korean>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_Vehicle">
+            <English>Vehicle: %1</English>
+            <Russian>Техника: %1</Russian>
+            <Polish>Pojazd: %1</Polish>
+            <Turkish>Araç :%1</Turkish>
+            <Japanese>車両: %1</Japanese>
+            <German>Fahrzeuge %!</German>
+            <Chinesesimp>载具：%1</Chinesesimp>
+            <Korean>차량: %1</Korean>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_FriendlyFire">
+            <English>Friendly Fire</English>
+            <Chinese>誤擊友方</Chinese>
+            <French>Tir fratricide</French>
+            <Spanish>Fuego aliado</Spanish>
+            <Italian>Fuoco amico</Italian>
+            <Polish>Ostrzał sojuszniczy</Polish>
+            <Russian>Дружественный огонь</Russian>
+            <German>Teambeschuss</German>
+            <Czech>Střelba do vlastních!</Czech>
+            <Portuguese>Fogo amigo</Portuguese>
+            <Korean>아군 오인사격</Korean>
+            <Chinesesimp>友军误击</Chinesesimp>
+            <Japanese>同士討ち</Japanese>
+            <Turkish>Dost Atışı</Turkish>
+        </Key>
+    </Package>
+</Project>

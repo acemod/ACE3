@@ -8,7 +8,7 @@
  * 1: Target <OBJECT>
  *
  * Return Value:
- * -1: can't interact 0: empty gunbag 1: full gunbag <NUMBER>
+ * -1: can't interact 0: empty gunbag 1: full gunbag 2: full gunbag & has primary <NUMBER>
  *
  * Example:
  * _canInteract = [player, target] call ace_gunbag_fnc_canInteract
@@ -26,8 +26,10 @@ if ((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo [] && {_weapon != 
     _result = 0;
 };
 
-if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {_weapon == ""}) then {
+if ((_gunbag getVariable [QGVAR(gunbagWeapon), []] isNotEqualTo []) && {_weapon == ""}) then {
     _result = 1;
 };
-
+if ((_gunbag getVariable [QGVAR(gunbagWeapon), []] isNotEqualTo []) && {_weapon != ""}) then {
+    _result = 2;
+};
 _result

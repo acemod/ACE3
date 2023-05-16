@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [player, cursorObject, "Head", "BasicBandage"] call ace_medical_fnc_createLitter
+ * [player, cursorObject, "Head", "BasicBandage"] call ace_medical_treatment_fnc_createLitter
  *
  * Public: No
  */

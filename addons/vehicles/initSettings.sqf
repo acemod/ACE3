@@ -19,3 +19,11 @@
     },
     true // needs restart
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(speedLimiterStep),
+    "SLIDER",
+    LSTRING(SpeedLimiterStep),
+    ELSTRING(common,ACEKeybindCategoryVehicles),
+    [1, 10, 5, -1] // whole numbers only
+] call CBA_fnc_addSetting;

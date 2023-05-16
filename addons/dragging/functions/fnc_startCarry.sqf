@@ -45,19 +45,19 @@ if (_target isKindOf "CAManBase") then {
     _target setDir (getDir _unit + 180);
     _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit));
 
-    [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
-    [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);
+    [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+    [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2] call EFUNC(common,doAnimation);
 
     _timer = CBA_missionTime + 10;
 
 } else {
-
     // select no weapon and stop sprinting
+    private _previousWeaponIndex = [_unit] call EFUNC(common,getFiremodeIndex);
+    _unit setVariable [QGVAR(previousWeapon), _previousWeaponIndex, true];
     _unit action ["SwitchWeapon", _unit, _unit, 299];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
     [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
-
 };
 
 [_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
@@ -79,5 +79,5 @@ private _mass = getMass _target;
 
 if (_mass > 1) then {
     _target setVariable [QGVAR(originalMass), _mass, true];
-    [QEGVAR(common,setMass), [_target, 1e-12], _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,setMass), [_target, 1e-12]] call CBA_fnc_globalEvent; // force global sync
 };

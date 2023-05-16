@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Name of loadout <STRING>
- * 1: getUnitLoadout array <ARRAY>
+ * 1: CBA extended loadout or getUnitLoadout array <ARRAY>
  *
  * Return Value:
  * None
@@ -17,7 +17,15 @@
  * Public: Yes
 */
 
-params [["_name", "", [""]], ["_loadout", [], [[]], 10]];
+params [["_name", "", [""]], ["_loadout", [], [[]]]];
+
+private _extendedInfo = createHashMap;
+if (count _loadout == 2) then {
+    _extendedInfo = _loadout select 1;
+    _loadout = _loadout select 0;
+};
+
+if (count _loadout != 10) exitWith {};
 
 if (isNil QGVAR(defaultLoadoutsList)) then {
     GVAR(defaultLoadoutsList) = [];
@@ -36,7 +44,7 @@ for "_dataIndex" from 0 to 10 do {
                 if (_weapon != "") then {
 
                     private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                     if (_weapon != _baseWeapon) then {
+                    if (_weapon != _baseWeapon) then {
                         (_loadout select _dataIndex) set [0, _baseWeapon];
                     };
                 };
@@ -71,7 +79,7 @@ for "_dataIndex" from 0 to 10 do {
 
                                         private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
                                         if (_weapon != _baseWeapon) then {
-                                            (_x select 0)set [0, _baseWeapon];
+                                            (_x select 0) set [0, _baseWeapon];
                                         };
                                     };
                                 };
@@ -100,7 +108,7 @@ for "_dataIndex" from 0 to 10 do {
 
 private _loadoutIndex = (+(GVAR(defaultLoadoutsList))) findIf {(_x select 0) == _name};
 if (_loadoutIndex == -1) then {
-    GVAR(defaultLoadoutsList) pushBack [_name, _loadout];
+    GVAR(defaultLoadoutsList) pushBack [_name, [_loadout, _extendedInfo]];
 } else {
-    GVAR(defaultLoadoutsList) set [_loadoutIndex, [_name, _loadout]];
+    GVAR(defaultLoadoutsList) set [_loadoutIndex, [_name, [_loadout, _extendedInfo]]];
 };

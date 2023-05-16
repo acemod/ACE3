@@ -74,11 +74,16 @@ if (_isRespawn) then {
     _unit setVariable [VAR_MEDICATIONS, [], true];
 
     // Unconscious spontanious wake up chance
-    _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil];
+    _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil, true];
+
+    // Cause of death
+    _unit setVariable [QEGVAR(medical,causeOfDeath), nil, true];
 };
 
 [{
     params ["_unit"];
     TRACE_3("Unit Init",_unit,local _unit,typeOf _unit);
+
+    _unit setVariable [QEGVAR(medical,initialized), true, true];
     [QGVAR(initialized), [_unit]] call CBA_fnc_localEvent;
 }, [_unit], 0.5] call CBA_fnc_waitAndExecute;

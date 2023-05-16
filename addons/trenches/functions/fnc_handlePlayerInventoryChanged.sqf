@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [bob, "weapon"] call ace_trenches_fnc_handlePlayerInverntoryChanged
+ * [bob, "weapon"] call ace_trenches_fnc_handlePlayerInventoryChanged
  *
  * Public: No
 */
@@ -19,7 +19,7 @@
 params ["_unit"];
 
 if (_unit getVariable [QGVAR(isPlacing), false]) then {
-    if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) then {
+    if !(_unit call FUNC(hasEntrenchingTool)) then {
         [_unit] call FUNC(placeCancel);
     };
 };

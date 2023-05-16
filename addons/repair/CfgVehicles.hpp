@@ -327,6 +327,7 @@ class CfgVehicles {
     class ACE_Track: ACE_RepairItem_Base {
         EGVAR(cargo,size) = 2;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
         author = "Hawkins";
         scope = 2;
         model = QPATHTOF(data\ace_track.p3d);
@@ -357,6 +358,7 @@ class CfgVehicles {
     class ACE_Wheel: ACE_RepairItem_Base {
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
         author = "Hawkins";
         scope = 2;
         model = QPATHTOF(data\ace_wheel.p3d);
@@ -377,13 +379,14 @@ class CfgVehicles {
         // can not take damage individually though, because of limitations of the thingX simulation type
         class HitPoints {
             class HitBody {
-                armor = 0.6;
+                armor = 1;
                 material = -1;
                 name = "mat_rim";
                 visual = "mat_rim";
                 passThrough = 1;
                 radius = 0.1;
                 explosionShielding = 1;
+                minimalHit = 1;
             };
         };
 

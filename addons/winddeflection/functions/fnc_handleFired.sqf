@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [clientFiredBIS-XEH] call ace_advanced_ballistics_fnc_handleFired
+ * [clientFiredBIS-XEH] call ace_winddeflection_fnc_handleFired
  *
  * Public: No
  */
