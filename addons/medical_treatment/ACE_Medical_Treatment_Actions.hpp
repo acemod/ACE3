@@ -83,6 +83,7 @@ class GVAR(actions) {
         condition = QUOTE(!([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo)));
         callbackSuccess = QFUNC(tourniquet);
         litter[] = {};
+        allowedUnderwater = 1;
     };
     class RemoveTourniquet: ApplyTourniquet {
         displayName = CSTRING(Actions_RemoveTourniquet);
@@ -90,6 +91,7 @@ class GVAR(actions) {
         items[] = {};
         condition = QUOTE([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo));
         callbackSuccess = QFUNC(tourniquetRemove);
+        allowedUnderwater = 1;
     };
 
     // - Splint ---------------------------------------------------------------
