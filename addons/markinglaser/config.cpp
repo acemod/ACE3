@@ -14,5 +14,6 @@ class CfgPatches {
     };
 };
 
+#include "CfgIRLaserSettings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"

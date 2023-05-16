@@ -19,7 +19,11 @@ if (GVAR(lasers) isEqualTo []) exitWith {};
 
 #ifndef DEBUG_MODE_FULL
 private _controlledUnit = [ACE_player, ACE_controlledUAV#1] select unitIsUAV cameraOn;
-if (currentVisionMode _controlledUnit != 1) exitWith {};
+if (currentVisionMode _controlledUnit != 1 && {
+    (!isNull curatorCamera) && {
+        (_curator getVariable ["BIS_fnc_curatorVisionModes_current", 0]) != 0
+    }
+}) exitWith {};
 #endif
 
 {
@@ -47,28 +51,44 @@ if (currentVisionMode _controlledUnit != 1) exitWith {};
         continue;
     };
 
-    private _originWorld = [0, 0, 0];
-    private _originVisual = [0, 0, 0];
+    private _origin = [0, 0, 0];
     if (_aircraft == cameraOn && {cameraView == "GUNNER"}) then {
-        // Add offset when looking through camera
-        // Otherwise, laser will appear invisible because camera is inside of laser
-        _originWorld = AGLToASL positionCameraToWorld [0.5, -0.5, 0];
-        _originVisual = _originWorld;
+        _origin = AGLToASL positionCameraToWorld [0, 0, 0];
     } else {
         private _originPoint = _aircraft getVariable [QGVAR(laserOrigin), ""];
-        _originWorld = _aircraft modelToWorldVisualWorld (_aircraft selectionPosition _originPoint);
-        _originVisual = _originWorld vectorAdd (_vector vectorMultiply -0.25);
+        _origin = _aircraft modelToWorldVisualWorld (_aircraft selectionPosition _originPoint);
     };
 
-    // Draw laser
+    // Check if laser hits object or ground
+    private _startPos = _origin vectorAdd (_vector vectorMultiply 0.25);
+    private _endPos = _startPos vectorAdd (_vector vectorMultiply LASER_MAX);
+    private _intersects = [];
+    while { _intersects isEqualTo [] } do {
+        _intersects = lineIntersectsSurfaces [_startPos, _endPos, _aircraft];
+        drawLaser [
+            +_startPos,
+            _vector,
+            [250, 0, 0, 1],
+            [],
+            0,
+            1,
+            LASER_MAX,
+            true
+        ];
+        // Circumvent limit of drawLaser
+        if (_intersects isEqualTo []) then {
+            _startPos = _endPos;
+            _endPos = _endPos vectorAdd (_vector vectorMultiply LASER_MAX);
+        };
+    };
     drawLaser [
-        _originVisual,
+        _startPos,
         _vector,
-        [1, 0, 0, 1],
+        [250, 0, 0, 1],
         [],
-        5,
-        20,
-        -1,
+        0.5,
+        1,
+        LASER_MAX,
         true
     ];
 } forEach GVAR(lasers);
