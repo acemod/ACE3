@@ -18,6 +18,12 @@
             <Chinese>裝載發射器</Chinese>
             <Turkish>Fırlatıcıyı Yükle</Turkish>
         </Key>
+        <Key ID="STR_ACE_ReloadLaunchers_LoadingStarted">
+            <English>is loading your launcher.</English>
+        </Key>
+        <Key ID="STR_ACE_ReloadLaunchers_LoadingAborted">
+            <English>stopped loading your launcher.</English>
+        </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>
             <French>Chargement du lanceur...</French>

@@ -24,7 +24,7 @@ TRACE_4("params",_unit,_target,_weapon,_magazine);
 private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))) then {
     getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))
 } else {
-    2.5
+    getNumber (configFile >> "CfgWeapons" >> _weapon >> "magazineReloadTime") min 2.5
 };
 
 // do animation
@@ -35,11 +35,11 @@ private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGV
 private _onSuccess =  {
     (_this select 0 select 0) removeMagazine (_this select 0 select 3);
     [QGVAR(reloadLauncher), _this select 0, _this select 0 select 1] call CBA_fnc_targetEvent;
-
     [localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
 };
 
 private _onFailure = {
+    [QGVAR(reloadAborted), _this select 0 select 0, _this select 0 select 1] call CBA_fnc_targetEvent;
     [localize ELSTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
 };
 
@@ -48,3 +48,4 @@ private _condition = {
 };
 
 [_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, localize LSTRING(LoadingLauncher), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);
+[QGVAR(reloadStarted), _unit, _target] call CBA_fnc_targetEvent;
