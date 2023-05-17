@@ -2,12 +2,12 @@
 #include "script_component.hpp"
 
 [QGVAR(reloadStarted), {
-    private _message = format ["%1 %2", _this select 0, localize LSTRING(LoadingStarted)];
+    private _message = format [localize LSTRING(LoadingStarted), _this select 0];
     [_message] call DEFUNC(common,displayTextStructured)
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(reloadAborted), {
-    private _message = format ["%1 %2", _this select 0, localize LSTRING(LoadingAborted)];
+    private _message = format [localize LSTRING(LoadingAborted), _this select 0];
     [_message] call DEFUNC(common,displayTextStructured)
 }] call CBA_fnc_addEventHandler;
 
