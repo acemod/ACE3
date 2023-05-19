@@ -10,7 +10,7 @@
 // IDDs
 #define IDD_MISSION 46
 #define IDD_RSCDISPLAYCURATOR 312
-#define IDD_DISPLAY3DEN	313
+#define IDD_DISPLAY3DEN 313
 
 #define IDC_OK 1 // emulate "OK" button
 #define IDC_CANCEL 2 // emulate "Cancel" button
