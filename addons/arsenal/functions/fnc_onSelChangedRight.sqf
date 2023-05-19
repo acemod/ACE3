@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Right panel control <CONTROL>
- * 1: Right panel selection <SCALAR>
+ * 1: Right panel selection <NUMBER>
  *
  * Return Value:
  * None

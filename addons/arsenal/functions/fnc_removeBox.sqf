@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Remove globally <BOOL> (Optional)
+ * 1: Remove globally <BOOL> (default: true)
  *
  * Return Value:
  * None

@@ -7,7 +7,7 @@
  * 0: Config category, must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice" <STRING>
  * 1: Classname <STRING>
  * 2: Panel control <CONTROL>
- * 3: Name of the picture entry in that Cfg class <STRING> (Optional)
+ * 3: Name of the picture entry in that Cfg class <STRING> (default: "picture")
  *
  * Return Value:
  * None
@@ -38,10 +38,11 @@ if (_cachedItemInfo isEqualTo []) then {
     // Get name of DLC
     private _dlcName = _configPath call EFUNC(common,getAddon);
 
+     // Mod picture
     if (_dlcName != "") then {
-        _cachedItemInfo set [3, (modParams [_dlcName, ["logo"]]) param [0, ""]]; // Mod picture
+        _cachedItemInfo set [3, (modParams [_dlcName, ["logo"]]) param [0, ""]];
     } else {
-        _cachedItemInfo set [3, ""]; // Mod picture
+        _cachedItemInfo set [3, ""];
     };
 
     // Store in cache

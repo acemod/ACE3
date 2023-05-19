@@ -4,7 +4,7 @@
  * Add a custom sorting method.
  *
  * Arguments:
- * 0: Tabs to add stat to <ARRAY>
+ * 0: Tabs to add sort to <ARRAY>
  *   0.0: Left Tab Indexes <ARRAY of NUMBERS>
  *   0.1: Right Tab Indexes <ARRAY of NUMBERS>
  * 1: Sort Class (a unique string for each algorithm) <STRING>
@@ -60,7 +60,7 @@ private _fnc_addToTabs = {
     } forEach _tabsToAddTo;
 };
 
-_finalArray = ["", _title, _statement, _condition];
+private _finalArray = ["", _title, _statement, _condition];
 
 if (_leftTabs isNotEqualTo []) then {
     [GVAR(sortListLeftPanel), _leftTabs, "L", 0] call _fnc_addToTabs;

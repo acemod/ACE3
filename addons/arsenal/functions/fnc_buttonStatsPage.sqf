@@ -2,11 +2,12 @@
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
- * Handles the previous / next page buttons for stats
+ * Handles the previous / next page buttons for stats.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Previous or next <BOOL> (false = previous, true = next)
+ * 1: Stats page <CONTROL>
+ * 2: Previous (false) or next (true) page <BOOL>
  *
  * Return Value:
  * None

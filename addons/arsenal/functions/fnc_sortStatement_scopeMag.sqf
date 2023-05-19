@@ -7,7 +7,7 @@
  * 0: Item Config <CONFIG>
  *
  * Return Value:
- * Sorting Value <NUMBER|STRING>
+ * Sorting Value <NUMBER> <STRING>
  *
  * Public: No
 */

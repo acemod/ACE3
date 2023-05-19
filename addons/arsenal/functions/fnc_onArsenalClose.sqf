@@ -4,7 +4,10 @@
  * onUnLoad EH for arsenal.
  *
  * Arguments:
- * None
+ * 0: Not used
+ * 1: Args <ARRAY>
+ *   1.0: Not used
+ *   1.1: Exit code <NUMBER>
  *
  * Return Value:
  * None

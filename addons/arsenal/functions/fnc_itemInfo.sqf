@@ -8,7 +8,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Current panel control <CONTROL>
- * 2: Current panel selection <SCALAR>
+ * 2: Current panel selection <NUMBER>
  * 3: Item config entry <CONFIG>
  *
  * Return Value:

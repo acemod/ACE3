@@ -4,11 +4,11 @@
  * Accuracy bar statement.
  *
  * Arguments:
- * 0: Stats array <ARRAY>
+ * 0: Not used
  * 1: Item config path <CONFIG>
- * 2: Args
- *  2.1: Stat limits <ARRAY of BOOLS>
- *  2.2: Bar limits <ARRAY of NUMBERS>
+ * 2: Args <ARRAY>
+ *  2.0: Stat limits <ARRAY of BOOLS>
+ *  2.1: Bar limits <ARRAY of NUMBERS>
  *
  * Return Value:
  * <NUMBER>
@@ -16,7 +16,7 @@
  * Public: No
 */
 
-params ["_stat", "_config", "_args"];
+params ["", "_config", "_args"];
 _args params ["_statMinMax", "_barLimits"];
 
 private _dispersion = [];

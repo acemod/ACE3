@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Alganthe
- * Create the internal stats arrays when needed for the first time
+ * Create the internal stat arrays when needed for the first time.
  *
  * Arguments:
  * None

@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Not used
  * 1: onMouseZChanged EH return <ARRAY>
- *  1.1: Not used
- *  1.2: Mousewheel Z position <SCALAR>
+ *  1.0: Not used
+ *  1.1: Mousewheel Z position <NUMBER>
  *
  * Return Value:
  * None

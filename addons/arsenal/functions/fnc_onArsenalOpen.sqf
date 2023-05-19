@@ -5,9 +5,9 @@
  * onLoad EH for arsenal.
  *
  * Arguments:
- * 0: Ignored
+ * 0: Not used
  * 1: Arguments <ARRAY>
- *  1.1: Arsenal display <DISPLAY>
+ *  1.0: Arsenal display <DISPLAY>
  *
  * Return Value:
  * None

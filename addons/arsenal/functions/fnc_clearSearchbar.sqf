@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Searchbar control <CONTROL>
- * 2: Right button state <BOOL>
+ * 2: Mouse button <NUMBER>
  *
  * Return Value:
  * None
@@ -15,9 +15,9 @@
  * Public: No
 */
 
-params ["_display", "_control", "_rightButton"];
+params ["_display", "_control", "_buttonPressed"];
 
-if (_rightButton != 1) exitWith  {};
+if (_buttonPressed != 1) exitWith  {};
 
 _control ctrlSetText "";
 

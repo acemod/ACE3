@@ -6,9 +6,9 @@
  * Arguments:
  * 0: Not used
  * 1: Item config path <CONFIG>
- * 2: Args
- *  2.1: Stat limits <ARRAY of BOOLS>
- *  2.2: Bar limits <ARRAY of NUMBERS>
+ * 2: Args <ARRAY>
+ *  2.0: Stat limits <ARRAY of BOOLS>
+ *  2.1: Bar limits <ARRAY of NUMBERS>
  *
  * Return Value:
  * Number

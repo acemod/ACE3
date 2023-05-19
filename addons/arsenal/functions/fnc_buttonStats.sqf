@@ -2,11 +2,10 @@
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
- * Toggle the stats control group
+ * Toggle the stats control group.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Button control <CONTROL>
  *
  * Return Value:
  * None

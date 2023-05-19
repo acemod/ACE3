@@ -5,9 +5,9 @@
  * onLoad EH for arsenal loadouts display.
  *
  * Arguments:
- * 0: Ignored
+ * 0: Not used
  * 1: Arguments <ARRAY>
- *  1.1: Loadouts display <DISPLAY>
+ *  1.0: Loadouts display <DISPLAY>
  *
  * Return Value:
  * None

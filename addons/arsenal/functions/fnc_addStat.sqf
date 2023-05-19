@@ -11,12 +11,12 @@
  * 2: Config entries to pass <ARRAY of STRINGS>
  * 3: Title <STRING>
  * 4: Show bar / show text bools <ARRAY of BOOLS>
- *   4.0: Show bar <BOOL>
- *   4.1: Show text <BOOL>
+ *   4.0: Show bar <BOOL> (default: false)
+ *   4.1: Show text <BOOL> (default: false)
  * 5: Array of statements <ARRAY of ARRAYS>
- *   5.0: Bar code <CODE>
- *   5.1: Text code <CODE>
- *   5.2: Condition code <CODE>
+ *   5.0: Bar code <CODE> (default: {})
+ *   5.1: Text code <CODE> (default: {})
+ *   5.2: Condition code <CODE> (default: {true})
  * 6: Priority <NUMBER> (default: 0)
  *
  * Return Value:

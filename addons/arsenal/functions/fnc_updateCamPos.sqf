@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Karel Moricky, modified by Alganthe
- * Update camera position
+ * Update camera position.
  * Modernized a bit, modified vars to fit arsenal rewrite.
  *
  * Arguments:

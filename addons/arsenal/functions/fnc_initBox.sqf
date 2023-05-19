@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <BOOL> or <ARRAY>
- * 2: Initialize globally <BOOL>
+ * 1: Items <BOOL> <ARRAY>
+ * 2: Initialize globally <BOOL> (default: true)
  *
  * Return Value:
  * None

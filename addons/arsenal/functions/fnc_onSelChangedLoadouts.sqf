@@ -5,8 +5,8 @@
  * Handles selection changes on loadouts panel.
  *
  * Arguments:
- * 0: Loadouts panel control <CONTROL>
- * 1: Loadouts panel selection <SCALAR>
+ * 0: Arsenal display <DISPLAY>
+ * 1: Loadouts panel control <CONTROL>
  * 2: Currently selected loadout's index <NUMBER>
  *
  * Return Value:

@@ -8,9 +8,9 @@
  * Arguments:
  * 0: Not used
  * 1: Arguments <ARRAY>
-  * 1.1: Mouse area control <CONTROL>
-  * 1.2: Mouse X position <SCALAR>
-  * 1.3: Mouse Y position <SCALAR>
+  * 1.0: Mouse area control <CONTROL>
+  * 1.1: Mouse X position <NUMBER>
+  * 1.2: Mouse Y position <NUMBER>
  *
  * Return Value:
  * None

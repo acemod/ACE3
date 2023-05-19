@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Add or remove <NUMBER> (-1: Remove, 1: Add)
+ * 1: Add (1) or remove (-1) item <NUMBER>
  *
  * Return Value:
  * None

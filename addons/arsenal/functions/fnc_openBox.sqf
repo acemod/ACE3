@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Box <OBJECT>
  * 1: Unit to open the arsenal on <OBJECT>
- * 2: Ignore virtual items and fill arsenal <BOOL>
+ * 2: Ignore virtual items and fill arsenal <BOOL> (default: false)
  *
  * Return Value:
  * None

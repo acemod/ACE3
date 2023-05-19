@@ -6,8 +6,8 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <ARRAY of strings> <BOOL>
- * 2: Add globally <BOOL> (Optional)
+ * 1: Items <ARRAY of STRINGS> <BOOL>
+ * 2: Add globally <BOOL> (default: false)
  *
  * Return Value:
  * None
