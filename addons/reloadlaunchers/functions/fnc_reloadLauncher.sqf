@@ -28,4 +28,6 @@ if (currentMagazine _target != "") exitWith {};
 
 _target addWeaponItem [_weapon, _magazine, true];
 
-[localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
+if GVAR(displayStatusText) then {
+    [localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
+};

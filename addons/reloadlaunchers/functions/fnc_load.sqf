@@ -35,12 +35,18 @@ private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGV
 private _onSuccess =  {
     (_this select 0 select 0) removeMagazine (_this select 0 select 3);
     [QGVAR(reloadLauncher), _this select 0, _this select 0 select 1] call CBA_fnc_targetEvent;
-    [localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
+
+    if GVAR(displayStatusText) then {
+        [localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
+    };
 };
 
 private _onFailure = {
     [QGVAR(reloadAborted), _this select 0 select 0, _this select 0 select 1] call CBA_fnc_targetEvent;
-    [localize ELSTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
+
+    if GVAR(displayStatusText) then {
+        [localize ELSTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
+    };
 };
 
 private _condition = {
