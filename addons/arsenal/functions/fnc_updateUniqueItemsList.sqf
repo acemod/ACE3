@@ -113,4 +113,4 @@ private _isWeapon = false;
             (GVAR(virtualItems) select IDX_VIRT_UNIQUE_GOGGLES) pushBackUnique _x;
         };
     };
-} forEach ([GVAR(center)] call ace_common_fnc_uniqueItems);
+} forEach ([GVAR(center)] call EFUNC(common,uniqueItems));
