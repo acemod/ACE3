@@ -4,13 +4,13 @@
  * Add a custom sorting method.
  *
  * Arguments:
- * 0: Tabs to add sort to <ARRAY>
- *  0.1: Left Tab Indexes <ARRAY of NUMBERS>
- *  0.2: Right Tab Indexes <ARRAY of NUMBERS>
- * 1: Sort class (a unique string for each algorithm) <STRING>
+ * 0: Tabs to add stat to <ARRAY>
+ *   0.0: Left Tab Indexes <ARRAY of NUMBERS>
+ *   0.1: Right Tab Indexes <ARRAY of NUMBERS>
+ * 1: Sort Class (a unique string for each algorithm) <STRING>
  * 2: Title <STRING>
  * 3: Algorithm <CODE>
- * 4: Condition <CODE> (Optional)
+ * 4: Condition <CODE> (default: true)
  *
  * Return Value:
  * 0: Array of IDs <ARRAY of STRINGS>

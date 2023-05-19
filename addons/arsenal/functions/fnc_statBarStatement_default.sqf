@@ -6,16 +6,19 @@
  * Arguments:
  * 0: Stat <STRING>
  * 1: Item config path <CONFIG>
- * 2: Args
+ * 2: Args for configExtreme <ARRAY>
  *  2.1: Stat limits <ARRAY of BOOLS>
  *  2.2: Bar limits <ARRAY of NUMBERS>
  *  2.3: Evaluate as a logarithmic number <BOOL>
  *
  * Return Value:
- * Number
+ * Bar statement <NUMBER>
+ *
+ * Example:
+ * ["ACE_maxZeroing", _config, [[0, 2500], [0.01, 1], false]] call ace_arsenal_fnc_statBarStatement_default
  *
  * Public: Yes
-*/
+ */
 
 params ["_stat", "_config", "_args"];
 _args params ["_statMinMax", "_barLimits", "_configExtremeBool"];

@@ -4,7 +4,7 @@
  * Add a listbox row.
  *
  * Arguments:
- * 0: Config category <STRING> (must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice", "CfgGlasses" etc.)
+ * 0: Config category, must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice" <STRING>
  * 1: Classname <STRING>
  * 2: Panel control <CONTROL>
  * 3: Name of the picture entry in that Cfg class <STRING> (Optional)
@@ -13,10 +13,10 @@
  * None
  *
  * Example:
- * ["CfgWeapons", "arifle_AKM_F", _control] call ace_arsenal_fnc_addListBoxItem
+ * ["CfgWeapons", "launch_NLAW_F", _ctrl, "icon"] call ace_arsenal_fnc_addListBoxItem
  *
  * Public: Yes
-*/
+ */
 
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
 

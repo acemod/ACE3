@@ -1,5 +1,10 @@
 #include "script_component.hpp"
 #include "..\..\defines.hpp"
+/*
+ * Author: commy2
+ *
+ * Public: No
+*/
 
 params ["_display"];
 

@@ -37,4 +37,5 @@ if (_global && {isMultiplayer} && {!isNil "_id"}) then {
 } else {
     _object setVariable [QGVAR(virtualItems), nil];
     [_object, 0, ["ACE_MainActions", QGVAR(interaction)]] call EFUNC(interact_menu,removeActionFromObject);
+    [QGVAR(boxRemoved), _object] call CBA_fnc_localEvent;
 };

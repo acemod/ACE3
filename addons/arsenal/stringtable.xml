@@ -764,7 +764,7 @@
             <Korean>모드 아이콘 허가</Korean>
             <Chinese>啟用模組圖示</Chinese>
             <Chinesesimp>启用模组图示</Chinesesimp>
-            <Russian>Включить иконки модов</Russian>
+            <Russian>Вкл. иконки модов</Russian>
             <Portuguese>Ativar ícones de mods</Portuguese>
             <Czech>Zapnout ikony modů</Czech>
             <Turkish>Mod simgelerini etkinleştir</Turkish>
@@ -1266,7 +1266,7 @@
             <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
             <Italian>Abilita volti, voci e insegne</Italian>
             <Polish>Aktywuj zakładki twarz / głos / insygnia</Polish>
-            <Russian>Включить вкладки Лиц / Голосов / Знаков различия</Russian>
+            <Russian>Вкл. вкладки: лица, голоса, эмблемы</Russian>
             <Portuguese>Ativar as abas de rostos / vozes / insígnias</Portuguese>
             <Czech>Povolit záložky s tvářemi, hlasy a insigniemi</Czech>
             <Turkish>Yüzler/sesler/peçler bölmelerini etkinleştir</Turkish>
@@ -1467,12 +1467,18 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveFaceSetting">
             <English>Save Face</English>
+            <Korean>얼굴 저장</Korean>
+            <Russian>Сохранить лицо</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
+            <Korean>목소리 저장</Korean>
+            <Russian>Сохранить голос</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
+            <Korean>계급장 저장</Korean>
+            <Russian>Сохранить эмблему</Russian>
         </Key>
     </Package>
 </Project>

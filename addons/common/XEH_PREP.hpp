@@ -68,6 +68,7 @@ PREP(getDefaultAnim);
 PREP(getDefinedVariable);
 PREP(getDefinedVariableDefault);
 PREP(getDefinedVariableInfo);
+PREP(getFiremodeIndex);
 PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
 PREP(getGunner);

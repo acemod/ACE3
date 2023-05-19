@@ -25,6 +25,7 @@
             <Polish>Tempomat włączony</Polish>
             <Japanese>クルーズコントロールを有効化</Japanese>
             <Chinesesimp>开启巡航模式</Chinesesimp>
+            <Russian>Круиз-контроль включён</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -50,6 +51,7 @@
             <Polish>Tempomat wyłączony</Polish>
             <Japanese>クルーズコントロールを無効化</Japanese>
             <Chinesesimp>关闭巡航模式</Chinesesimp>
+            <Russian>Круиз-контроль выключен</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
@@ -91,6 +93,7 @@
             <Polish>Tempomat</Polish>
             <Japanese>クルーズコントロール</Japanese>
             <Chinesesimp>巡航模式</Chinesesimp>
+            <Russian>Круиз-контроль</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>

@@ -52,4 +52,6 @@ if (_global && {isMultiplayer} && {isNil {_object getVariable QGVAR(initBoxJIP)}
     [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
     [_object, _items, false] call FUNC(addVirtualItems);
+
+    [QGVAR(boxInitialized), [_object, _items]] call CBA_fnc_localEvent;
 };
