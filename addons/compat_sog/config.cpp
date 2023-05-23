@@ -36,7 +36,6 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_trenches",
             "loadorder_f_vietnam"
         };
         skipWhenMissingDependencies = 1;
