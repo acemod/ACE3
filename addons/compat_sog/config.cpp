@@ -39,6 +39,7 @@ class CfgPatches {
             "ace_trenches",
             "loadorder_f_vietnam"
         };
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"BaerMitUmlaut", "veteran29"};
         url = ECSTRING(main,URL);
