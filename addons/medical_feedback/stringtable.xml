@@ -183,7 +183,7 @@
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
-                <Russian>Включить крики</Russian>
+                <Russian>Вкл. крики</Russian>
                 <Polish>Aktywuj wrzaski</Polish>
                 <Spanish>Activar gritos</Spanish>
                 <German>Schreie aktivieren</German>
@@ -217,7 +217,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
                 <English>Enable Fracture/Tourniquet/Splint Indicators</English>
-                <Russian>Включить индикаторы переломов/жгутов/шин</Russian>
+                <Russian>Вкл. индикаторы переломов/жгутов/шин</Russian>
                 <Japanese>骨折/止血帯の表記を有効化</Japanese>
                 <French>Indicateurs de fractures/garrots/attelles</French>
                 <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>

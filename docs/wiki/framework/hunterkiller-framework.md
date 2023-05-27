@@ -26,6 +26,7 @@ Each element is a tuple of a turret path and operating mode.
 
 ## 2. Configs
 
+{% raw %}
 ```cpp
 class CfgVehicles {
     class MyTankA {
@@ -39,6 +40,7 @@ class CfgVehicles {
     };
 };
 ```
+{% endraw %}
 
 ## 2. Variables
 

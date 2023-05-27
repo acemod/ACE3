@@ -19,7 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
-            <Polish>Saperka, używana do budowy wnęk</Polish>
+            <Polish>Saperka, używana do budowy okopów</Polish>
             <German>Mit dem Klappspaten können Erdwälle oder Gräben ausgehoben werden. </German>
             <Italian>Pala da Trincea</Italian>
             <Spanish>Pala para trincheras</Spanish>
@@ -36,7 +36,7 @@
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
             <German>Rund - Klein</German>
-            <Polish>Wnęka - mała</Polish>
+            <Polish>Okop - mały</Polish>
             <Italian>Fascia - Piccola</Italian>
             <Spanish>Trinchera pequeña</Spanish>
             <French>Tranchée individuelle</French>
@@ -52,7 +52,7 @@
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
             <German>Kleiner Schützengraben</German>
-            <Polish>Mała jednoosobowa wnęka</Polish>
+            <Polish>Mały jednoosobowy okop</Polish>
             <Italian>Piccola Trincea Personale</Italian>
             <Spanish>Trinchera personal pequeña</Spanish>
             <French>Petite tranchée personnelle</French>
@@ -68,7 +68,7 @@
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
             <German>Grabe kleinen Schützengraben</German>
-            <Polish>Kop małą wnękę</Polish>
+            <Polish>Kop mały okop</Polish>
             <Italian>Scava Trincea Piccola</Italian>
             <Spanish>Cavar trinchera pequeña</Spanish>
             <French>Creuser une petite tranchée</French>
@@ -84,7 +84,7 @@
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
             <German>Rund - Groß</German>
-            <Polish>Wnęka - duża</Polish>
+            <Polish>Okop - duży</Polish>
             <Italian>Fascia - Grande</Italian>
             <Spanish>Trinchera grande</Spanish>
             <French>Grande tranchée</French>
@@ -100,7 +100,7 @@
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
             <German>Großer Schützengraben</German>
-            <Polish>Duża jednoosobowa wnęka</Polish>
+            <Polish>Duży jednoosobowy okop</Polish>
             <Italian>Grande Trincea Personale</Italian>
             <Spanish>Trinchera personal grande</Spanish>
             <French>Grande tranchée personnelle</French>
@@ -116,7 +116,7 @@
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
             <German>Grabe großen Schützengraben</German>
-            <Polish>Kop dużą wnękę</Polish>
+            <Polish>Kop duży okop</Polish>
             <Italian>Scava Trincea Grande</Italian>
             <Spanish>Cavar trinchera grande</Spanish>
             <French>Creuser une grande tranchée</French>
@@ -181,7 +181,7 @@
         <Key ID="STR_ACE_Trenches_DiggingTrench">
             <English>Digging Trench</English>
             <German>Grabe Schützengraben</German>
-            <Polish>Kopanie wnęki</Polish>
+            <Polish>Kopanie okopu</Polish>
             <Italian>Scavando la Trincea</Italian>
             <Spanish>Cavando trinchera</Spanish>
             <French>Excavation de la tranchée</French>
@@ -196,7 +196,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_ContinueDiggingTrench">
             <English>Continue Digging Trench</English>
-            <Polish>Wzów kopanie wnęki</Polish>
+            <Polish>Wzów kopanie okopu</Polish>
             <Portuguese>Continuar cavando trincheira</Portuguese>
             <French>Poursuivre l'excavation de la tranchée</French>
             <Russian>Продолжить копание окопа</Russian>
@@ -228,12 +228,14 @@
         </Key>
         <Key ID="STR_ACE_Trenches_CamouflageTrench">
             <English>Camouflage Trench</English>
-            <Polish>Zakamufluj Okop</Polish>
+            <Polish>Zakamufluj okop</Polish>
             <Chinesesimp>伪装掩体</Chinesesimp>
+            <Korean>참호 위장시키기</Korean>
+            <Russian>Камуфлировать окоп</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
-            <Polish>Usuwanie wnęki</Polish>
+            <Polish>Usuwanie okopu</Polish>
             <Portuguese>Removendo tricnheira</Portuguese>
             <French>Retrait de la tranchée</French>
             <Russian>Убирание окопа</Russian>
@@ -260,7 +262,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
             <English>Small Trench Dig Duration</English>
-            <Russian>Продолжительность копания малого окопа</Russian>
+            <Russian>Время копания малого окопа</Russian>
             <French>Petites tranchées - durée d'excavation</French>
             <Japanese>小型塹壕の完成時間</Japanese>
             <Spanish>Tiempo de cavar trinchera pequeña</Spanish>
@@ -282,7 +284,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
             <English>Small Trench Remove Duration</English>
-            <Russian>Продолжительность удаления малого окопа</Russian>
+            <Russian>Время удаления малого окопа</Russian>
             <French>Petites tranchées - durée de retrait</French>
             <Japanese>小型塹壕の削除時間</Japanese>
             <Spanish>Tiempo de eliminar trinchera pequeña</Spanish>
@@ -304,7 +306,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
             <English>Big Trench Dig Duration</English>
-            <Russian>Продолжительность рытья большого окопа</Russian>
+            <Russian>Время рытья большого окопа</Russian>
             <French>Grandes tranchées - durée d'excavation</French>
             <Japanese>大型塹壕の完成時間</Japanese>
             <Spanish>Tiempo de cavar trinchera grande</Spanish>
@@ -326,7 +328,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
             <English>Big Trench Remove Duration</English>
-            <Russian>Продолжительность удаления большого окопа</Russian>
+            <Russian>Время удаления большого окопа</Russian>
             <French>Grandes tranchées - durée de retrait</French>
             <Japanese>大型塹壕の削除時間</Japanese>
             <Spanish>Tiempo de eliminar trinchera grande</Spanish>

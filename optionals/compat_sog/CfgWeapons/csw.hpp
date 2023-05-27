@@ -1,12 +1,5 @@
 #include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 
-CREATE_CSW_PROXY(vn_m2_v_01);
-CREATE_CSW_PROXY(vn_m1919_v_01);
-CREATE_CSW_PROXY(vn_m60_v_01);
-CREATE_CSW_PROXY(vn_missile_tow_launcher);
-CREATE_CSW_PROXY(vn_dshkm_v_01);
-CREATE_CSW_PROXY(vn_rpd_v_01);
-CREATE_CSW_PROXY(vn_pk_v_01);
 CREATE_CSW_PROXY(vn_mortar_m29);
 CREATE_CSW_PROXY(vn_mortar_m2);
 CREATE_CSW_PROXY(vn_mortar_type53);
@@ -15,6 +8,8 @@ class Launcher;
 class Launcher_Base_F: Launcher {
     class WeaponSlotsInfo;
 };
+
+// --- Gun Turrets -------------------------------------------------------------
 
 class GVAR(m2_carry): Launcher_Base_F {
     displayName = ECSTRING(csw,m2_gun);
@@ -187,7 +182,7 @@ class GVAR(dshkm_shield_carry): Launcher_Base_F {
         pickupTime = 4;
 
         class assembleTo {
-            EGVAR(csw,kordTripodLow) = "vn_o_nva_navy_static_dshkm_low_01";
+            EGVAR(csw,kordTripodLow) = "vn_o_nva_static_dshkm_low_01";
         };
     };
 
@@ -265,7 +260,8 @@ class GVAR(pk_carry): Launcher_Base_F {
         pickupTime = 4;
 
         class assembleTo {
-            EGVAR(csw,kordTripod) = "vn_o_nva_static_dshkm_high_02";
+            EGVAR(csw,kordTripod) = "vn_o_nva_static_pk_high";
+            EGVAR(csw,kordTripodLow) = "vn_o_nva_static_pk_low";
         };
     };
 
@@ -302,6 +298,113 @@ class GVAR(mortar_m29_carry): Launcher_Base_F {
         mass = 730;
     };
 };
+
+class GVAR(mg42_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_mg42);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = QPATHTOF(UI\csw_mg42_ca.paa);
+
+    class ACE_CSW {
+        type = "mount";
+        deployTime = 4;
+        pickupTime = 4;
+        deploy = "vn_o_vc_static_mg42_low";
+
+        class assembleTo {
+            EGVAR(csw,kordTripod) = "vn_o_vc_static_mg42_high";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
+class GVAR(sgm_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_sgm);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = QPATHTOF(UI\csw_sgm_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,kordTripod) = "vn_o_vc_static_sgm_high_01";
+            EGVAR(csw,kordTripodLow) = "vn_o_vc_static_sgm_low_02";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+class GVAR(sgm_shield_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_sgm_shield);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = QPATHTOF(UI\csw_sgm_shield_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,kordTripodLow) = "vn_o_vc_static_sgm_low_01";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
+class GVAR(mk18_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_mk18);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = QPATHTOF(UI\csw_mk18_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,m3TripodLow) = "vn_b_army_static_mk18";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
+// --- Mortars -----------------------------------------------------------------
 
 class GVAR(mortar_m2_carry): Launcher_Base_F {
     displayName = CSTRING(csw_m2);

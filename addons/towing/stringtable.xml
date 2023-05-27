@@ -114,6 +114,8 @@
         <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
             <English>Add Tow Rope to Vehicle Inventory</English>
             <Russian>Добавить буксировочный трос в инвентарь машин</Russian>
+            <Polish>Dodaj linkę holowniczą do ekwipunku pojazdów</Polish>
+            <Korean>차량 소지품에 견인줄 추가</Korean>
         </Key>
     </Package>
 </Project>

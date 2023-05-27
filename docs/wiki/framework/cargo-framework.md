@@ -51,7 +51,7 @@ class CfgVehicles {
 Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
-`ace_cargoUnloaded` | [_item, _vehicle] | Global | Cargo has been Unloaded from vehicle
+`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Cargo has been Unloaded from vehicle
 `ace_cargoRemoved` | [_itemClass, _vehicle, _amountRequested, _amountRemoved] | Global | Cargo has been removed (deleted) from vehicle
 
 ## 3. Editor Attributes
