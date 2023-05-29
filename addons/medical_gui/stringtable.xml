@@ -1173,6 +1173,7 @@
             <Polish>Kolory utraty krwi</Polish>
             <Chinesesimp>失血颜色</Chinesesimp>
             <Korean>출혈 색상</Korean>
+            <Spanish>Colores de pérdida de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColor_Description">
             <English>Defines the 10 color gradient used to indicate blood loss in Medical GUIs.</English>
@@ -1183,6 +1184,7 @@
             <Polish>Kolory używane do wyświetlania krwawienia w interfejsie medycznym. Gradient 10 kolorów.</Polish>
             <Chinesesimp>失血颜色，用于医学图形用户界面。10种渐变颜色。</Chinesesimp>
             <Korean>출혈로 인한 의료 GUI의 색상을 변경합니다. 총 10가지 색상이 있습니다.</Korean>
+            <Spanish>Define los 10 gradientes de color utilizados para indicar la pérdida de sangre en la interfaz gráfica del sistema Médico.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColorX_DisplayName">
             <English>Blood Loss Color %1</English>
@@ -1193,6 +1195,7 @@
             <Polish>Krwawienie - kolor %1</Polish>
             <Chinesesimp>失血颜色 %1</Chinesesimp>
             <Korean>출혈 색상 %1</Korean>
+            <Spanish>Color de pérdida de sangre %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColors">
             <English>Damage Colors</English>
@@ -1203,6 +1206,7 @@
             <Polish>Kolory obrażeń</Polish>
             <Chinesesimp>负伤颜色</Chinesesimp>
             <Korean>피해 색상</Korean>
+            <Spanish>Colores de daño</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
             <English>Defines the 10 color gradient used to indicate damage in Medical GUIs.</English>
@@ -1213,6 +1217,7 @@
             <Polish>Kolory używane do wyświetlania obrażeń w interfejsie medycznym. Gradient 10 kolorów.</Polish>
             <Chinesesimp>负伤颜色，用于医学图形用户界面。10种渐变颜色。</Chinesesimp>
             <Korean>의료 GUI에 쓰이는 피해 색상입니다. 총 10가지 색상이 있습니다.</Korean>
+            <Spanish>Define los 10 gradientes de color utilizados para indicar el daño en la interfaz gráfiica del sistema Médico.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColorX_DisplayName">
             <English>Damage Color %1</English>
@@ -1223,6 +1228,7 @@
             <Polish>Obrażenia - kolor %1</Polish>
             <Chinesesimp>负伤颜色 %1</Chinesesimp>
             <Korean>피해 색상 %1</Korean>
+            <Spanish>Color de daño %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_DisplayName">
             <English>Show Blood Loss</English>
@@ -1232,6 +1238,7 @@
             <Japanese>失血量の表示</Japanese>
             <Chinesesimp>显示失血量</Chinesesimp>
             <Russian>Показывать кровопотерю</Russian>
+            <Spanish>Mostrar pérdida de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
             <English>Show qualitative blood loss in the injury list.</English>
@@ -1241,6 +1248,7 @@
             <Japanese>負傷リストに段階的な失血量を表示します。</Japanese>
             <Chinesesimp>在负伤列表中显示失血阶段</Chinesesimp>
             <Russian>Показывать тяжесть кровопотери в списке ранений.</Russian>
+            <Spanish>Mostrar la pérdida de sangre cualitativa en la lista de heridas.</Spanish>
         </Key>
     </Package>
 </Project>
