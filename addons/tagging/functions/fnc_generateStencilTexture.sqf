@@ -7,7 +7,7 @@
  * 0: Display Text <STRING>
  * 1: Text Size <NUMBER> (default: 0.3)
  * 2: Text Color (in HEX 6 or 8) <STRING> (default: black)
- * 3: Background Color (in HEX 6 or 8) <STRING> (default: clear)
+ * 3: Background Color (in HEX 6 or 8) <STRING> (default: "00000000" - transparent)
  * 4: Auto newlines <BOOL> (default: true)
  * 4: Texture Dimensions <BOOL> (default: 512)
  *

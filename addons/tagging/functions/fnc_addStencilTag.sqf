@@ -6,9 +6,9 @@
  * Arguments:
  * 0: Display Text <STRING>
  * 1: Text Size <NUMBER> (default: 0.3)
- * 2: Required Item <STRING> (default: ACE_SpraypaintBlack)
+ * 2: Required Item <STRING> (default: "ACE_SpraypaintBlack")
  * 3: Text Color (in HEX 6 or 8) <STRING> (default: based on spray item)
- * 4: Background Color (in HEX 6 or 8) <STRING> (default: clear)
+ * 4: Background Color (in HEX 6 or 8) <STRING> (default: "00000000" - transparent)
  * 5: Auto newlines <BOOL> (default: true)
  *
  * Return Value:
