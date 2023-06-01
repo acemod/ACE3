@@ -7,9 +7,9 @@
  *
  * Arguments:
  * 0: items only misc items <ARRAY of STRING>
- * 1: tooltip <STRING> (Optional)
- * 2: picture path <STRING> (Optional)
- * 3: override a specific button (0-9) <NUMBER> (Optional)
+ * 1: tooltip <STRING> (default: "")
+ * 2: picture path <STRING> (default: QPATHTOF(data\iconCustom.paa))
+ * 3: override a specific button (0-9) <NUMBER> (default: -1)
  *
  * Return Value:
  * successful: number of the slot (0-9); error: -1 <NUMBER>

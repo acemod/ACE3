@@ -93,6 +93,7 @@
             <Japanese>指さし表記大きさ係数</Japanese>
             <Chinesesimp>屏幕标记大小系数</Chinesesimp>
             <Russian>Коэф. размера маркера</Russian>
+            <Spanish>Coeficiente del tamaño del marcador visual</Spanish>
         </Key>
         <Key ID="STR_ACE_Finger_sizeCoef_description">
             <English>Adjusts the size of the visual marker.</English>
@@ -102,6 +103,7 @@
             <Japanese>指さし表記の大きさを調整します。</Japanese>
             <Chinesesimp>调整屏幕上显示的标记大小</Chinesesimp>
             <Russian>Настраивает размер визуального маркера</Russian>
+            <Spanish>Ajusta el tamaño del marcador visual.</Spanish>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_displayName">
             <English>Proximity Scaling</English>
@@ -111,6 +113,7 @@
             <Japanese>近接性スケーリング</Japanese>
             <Chinesesimp>根据距离缩放</Chinesesimp>
             <Russian>Масштабирование от дальности</Russian>
+            <Spanish>Escalado de cercanía</Spanish>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_description">
             <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
@@ -120,6 +123,7 @@
             <Japanese>見ているプレーヤーと指さししたプレーヤーの距離に基づいて、指さし表記の大きさを調整します。</Japanese>
             <Chinesesimp>根据观察的玩家和在指出方向的的玩家之间的距离调整视觉标记的大小。</Chinesesimp>
             <Russian>Масштабирует размер визуального маркера в зависимости от дальности от игрока до точки указания.</Russian>
+            <Spanish>Escala el tamaño del marcador visual dependiendo de la distancia entre el jugador observador y el jugador que señala.</Spanish>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>

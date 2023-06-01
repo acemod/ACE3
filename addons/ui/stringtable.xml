@@ -677,6 +677,7 @@
             <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
             <Chinesesimp>启用移动速度指示器</Chinesesimp>
             <Korean>이동 속도 표시기 활성화</Korean>
+            <Spanish>Habilitar indicador de velocidad de movimiento</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
@@ -687,6 +688,7 @@
             <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
             <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
             <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화합니다.</Korean>
+            <Spanish>Habilita el indicador de velocidad de movimiento para el personaje del jugador.</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon">
             <English>Hide Default Action Icon</English>
@@ -695,6 +697,7 @@
             <Korean>기본 행동 아이콘 숨기기</Korean>
             <Chinesesimp>隐藏默认动作标识</Chinesesimp>
             <Russian>Спрятать иконку действия по умолчанию</Russian>
+            <Spanish>Ocultar el icono de acción por defecto</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
             <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
@@ -703,6 +706,7 @@
             <Korean>커서 앞에 무언가가 있을 때 자동으로 표시되는 아이콘을 숨깁니다. 게임을 재시작해야 합니다\n경고: 작업 자체를 제거하지 않습니다! 원하지 않는 상호작용을 방지하려면 '기본 행동' 키를 삭제하는 것이 좋습니다.</Korean>
             <Chinesesimp>隐藏屏幕面前有物体时自动显示的动作标识。需要重新启动游戏。\n警告：不会删除动作本身！建议同时取消对“使用默认动作”键的绑定，以防止不必要的互动。</Chinesesimp>
             <Russian>Прячет иконку, которая показывается автоматически когда что-то находиться перед курсором. Требует рестарта игры.\nВнимание: не убирает само действие! Рекомендуется убрать комбинацию клавиш с настройки "Выполнить действие по умолчанию" чтобы предостеречься от нежеланных действий.</Russian>
+            <Spanish>Oculta el icono que se muestra automáticamente cuando algo se sitúa enfrente del cursor. Requiere reinicio del juego.\nAdvertencia: No elimina la propia acción! Es recomendable desactivar la tecla "Usar acción por defecto" para prevenir interacciones no deseadas.</Spanish>
         </Key>
     </Package>
 </Project>
