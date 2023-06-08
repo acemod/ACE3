@@ -1,0 +1,66 @@
+#include "script_component.hpp"
+
+#include "UI\defines\shared_defines.hpp"
+
+// prevent execution of anything below on headless clients
+if (!hasInterface) exitWith {};
+
+// Get a rsc layer for for our displays
+GVAR(rscLayer) = [QGVAR(displays)] call BIS_fnc_rscLayer;
+GVAR(rscLayerMailNotification) = [QGVAR(mailNotification)] call BIS_fnc_rscLayer;
+
+// ifOpenStart will be set to true while interface is starting and prevent further open attempts
+GVAR(ifOpenStart) = false;
+
+// Initialize all uiNamespace variables
+SETUVAR(GVAR(GD300_dsp), displayNull);
+SETUVAR(GVAR(GD300_dlg), displayNull);
+SETUVAR(GVAR(JV5_dlg), displayNull);
+SETUVAR(GVAR(MicroDAGR_dsp), displayNull);
+SETUVAR(GVAR(MicroDAGR_dlg), displayNull);
+SETUVAR(GVAR(TAD_dsp), displayNull);
+SETUVAR(GVAR(TAD_dlg), displayNull);
+
+// Draw Map Tools (Hook)
+GVAR(drawMapTools) = false;
+GVAR(mapToolsArrowToCursor) = true;
+
+// Base defines.
+GVAR(uavViewActive) = false;
+GVAR(uavCams) = [];
+GVAR(cursorOnMap) = false;
+GVAR(mapCursorPos) = [0,0];
+GVAR(mapWorldPos) = [];
+GVAR(mapScale) = 0.5;
+GVAR(textAndIconScaleFactor) = 12;
+GVAR(playerVehicleIcon) = "";
+
+// Setup icon and text sizes
+[] call FUNC(updateTextAndIconSize);
+
+// List setup
+GVAR(notificationCache) = [];
+GVAR(UAVlist) = [];
+GVAR(hCamList) = [];
+
+// Define default settings for interface property groups
+GVAR(settings) = [] call CBA_fnc_hashCreate;
+
+private ["_tempHash"];
+// COMMON settings
+_tempHash = [] call CBA_fnc_hashCreate;
+[_tempHash, "mode", "BFT"] call CBA_fnc_hashSet;
+[_tempHash, "mapScaleMin", 0.1] call CBA_fnc_hashSet;
+[_tempHash, "mapScaleMax", 2 ^ round(sqrt(GVAR(worldSize) / 1024))] call CBA_fnc_hashSet;
+[GVAR(settings), "COMMON", _tempHash] call CBA_fnc_hashSet;
+
+// when main map is opened, close any open interface
+["visibleMap",{
+    params ["", "_mapIsVisible"];
+
+    if (_mapIsVisible) then {
+        [] call FUNC(ifClose);
+    };
+}] call CBA_fnc_addPlayerEventHandler;
+
+#include "initKeybinds.sqf"

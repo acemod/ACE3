@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="BFT_Device_dk10">
+        <Key ID="STR_ACE_BFT_Device_dk10_dk10_itemName_b">
+            <English>DK10 Tablet (NATO)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_dk10_dk10_itemDescription_b">
+            <English>DK10 rugged tablet PC</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_dk10_dk10_itemName_o">
+            <English>DK10 Tablet (CSAT)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_dk10_dk10_itemDescription_o">
+            <English>DK10 rugged tablet PC</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_dk10_dk10_itemName_i">
+            <English>DK10 Tablet (AAF)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_dk10_dk10_itemDescription_i">
+            <English>DK10 rugged tablet PC</English>
+        </Key>
+    </Package>
+</Project>

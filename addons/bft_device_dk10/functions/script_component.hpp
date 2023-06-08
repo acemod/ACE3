@@ -1,0 +1,1 @@
+#include "\z\ace\addons\bft_device_dk10\script_component.hpp"
