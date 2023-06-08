@@ -21,7 +21,7 @@
 
 params [["_object", objNull, [objNull]], ["_items", [], [true, []]], ["_global", false, [false]]];
 
-if (_object == objNull) exitWith {};
+if (isNull _object) exitWith {};
 if (_items isEqualType [] && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
