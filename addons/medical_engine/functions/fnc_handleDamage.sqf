@@ -32,7 +32,8 @@ if (_hitPoint isEqualTo "") then {
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 private _newDamage = _damage - _oldDamage;
-// Get armor value of hitpoint and calculate damage before armor
+// Get scaled armor value of hitpoint and calculate damage before armor
+// We scale using passThrough to handle explosive-resistant armor properly, fixing #9063
 private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
 private _realDamage = _newDamage * _armor;
 TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
@@ -101,7 +102,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     private _damageLeftLeg = _unit getVariable [QGVAR($HitLeftLeg), [0,0]];
     private _damageRightLeg = _unit getVariable [QGVAR($HitRightLeg), [0,0]];
 
-    // Find hit point that received the maxium damage
+    // Find hit point that received the maximum damage
     // Priority used for sorting if incoming damage is equal
     private _allDamages = [
         [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       "Head"],
@@ -115,8 +116,10 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     TRACE_2("incoming",_allDamages,_damageStructural);
 
     _allDamages sort false;
-    _allDamages = _allDamages apply {[_x select 2, _x select 3, _x select 0]};
-    
+
+    // We only need real damage at this point, divide by 10 to use engine range of 0-1 (or higher for really high damage)
+    _allDamages = _allDamages apply {[(_x select 0) / 10, _x select 3]};
+
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them
     if (_ammo isEqualTo "") then {
