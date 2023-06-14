@@ -46,7 +46,7 @@ if (isNil "_armor") then {
         private _entry = configProperties [_itemInfo >> "HitpointsProtectionInfo", _condition] param [0, configNull];
         if (!isNull _entry) then {
             _armor = getNumber (_entry >> "armor");
-            _passThrough = (0.01 max getNumber (_entry >> "passThrough"));
+            _passThrough = 0.01 max getNumber (_entry >> "passThrough");
         };
     };
 
