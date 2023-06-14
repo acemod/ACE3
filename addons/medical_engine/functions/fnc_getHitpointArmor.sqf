@@ -37,6 +37,7 @@ _unit getVariable [_var, ["", 0, 0]] params ["_prevRags", "_armor", "_armorScale
 if (_rags != _prevRags) then {
     _armor = 0;
     _armorScaled = 0;
+
     {
         ([_x, _hitpoint] call FUNC(getItemArmor)) params ["_itemArmor", "_itemArmorScaled"];
         _armor = _armor + _itemArmor;
