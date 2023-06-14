@@ -50,7 +50,7 @@ if (isNil "_armor") then {
         };
     };
 
-    // Scale armor using passthrough to fix explosive resistant armor (#9063)
+    // Scale armor using passthrough to fix explosive-resistant armor (#9063)
     // Skip scaling for items that don't cover the hitpoint to prevent infinite armor
     if (_armor != 0) then {
         _armor = (log (_armor / _passThrough)) * 10;
