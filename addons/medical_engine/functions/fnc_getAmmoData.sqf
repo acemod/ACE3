@@ -21,8 +21,8 @@ private _return = GVAR(ammoCache) get _ammo;
 if (isNil "_return") then {
     TRACE_1("Cache miss",_ammo);
     private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
-    _hit = getNumber (_ammoConfig >> "hit");
-    _caliber = getNumber (_ammoConfig >> "caliber");
+    private _hit = getNumber (_ammoConfig >> "hit");
+    private _caliber = getNumber (_ammoConfig >> "caliber");
     _return = [_hit, _caliber];
     GVAR(ammoCache) set [_ammo, _return];
 };
