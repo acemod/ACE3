@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Pterolatypus
+ * Author: Pterolatypus, Salluci
  * Checks a unit's equipment to calculate the total armor on a hitpoint.
  *
  * Arguments:

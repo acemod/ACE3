@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: Pterolatypus, Salluci
- * Returns the scaled armor value the given item provides to a particular hitpoint, either from a cache or by reading the item config.
+ * Returns the regular and scaled armor values the given item provides to a particular hitpoint, either from a cache or by reading the item config.
  *
  * Arguments:
  * 0: Item Class <STRING>
  * 1: Hitpoint <STRING>
  *
  * Return Value:
- * Scaled item armor for the given hitpoint <NUMBER>
+ * Regular and scaled item armor for the given hitpoint <ARRAY of NUMBER>
  *
  * Example:
  * ["V_PlateCarrier_rgr", "HitChest"] call ace_medical_engine_fnc_getItemArmor
