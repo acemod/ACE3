@@ -27,7 +27,9 @@ if (isNil "_return") then {
     private _passThrough = 1;
     TRACE_2("Cache miss",_item,_hitpoint);
     if ("" in [_item, _hitpoint]) exitWith {
-        GVAR(armorCache) set [_key, [_armor, _armorScaled]];
+        _return = [_armor, _armorScaled];
+        GVAR(armorCache) set [_key, _return];
+        _return
     };
 
     private _itemInfo = configFile >> "CfgWeapons" >> _item >> "ItemInfo";
