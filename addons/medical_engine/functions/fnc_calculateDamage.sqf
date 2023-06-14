@@ -1,18 +1,18 @@
 #include "script_component.hpp"
 /*
  * Author: Salluci
- * Calculates final damage inflicted by a round using scaled hitpoint armor and engine damage, taking penetration into account
+ * Calculates final damage inflicted by a round using scaled hitpoint armor and real damage, taking penetration into account
  *
  * Arguments:
- * 0: Engine damage <NUMBER>
+ * 0: Real damage <NUMBER>
  * 1: Impact ammo <STRING>
- * 2: Scaled hitpoint Armor <NUMBER>
+ * 2: Scaled hitpoint armor <NUMBER>
  *
  * Return Value:
  * Final damage for the given hitpoint <NUMBER>
  *
  * Example:
- * [0.5, "B_556x45_Ball", 32] call ace_medical_engine_fnc_calculateDamage
+ * [9, "B_556x45_Ball", 32] call ace_medical_engine_fnc_calculateDamage
  *
  * Public: No
  */
