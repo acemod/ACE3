@@ -39,7 +39,7 @@ if (isNil "_armor") then {
         } else {
             private _entry = _unitCfg >> "HitPoints" >> _hitpoint;
             _armor = getNumber (_unitCfg >> "armor") * (1 max getNumber (_entry >> "armor"));
-            _passThrough = (0.01 max getNumber (_entry >> "passThrough")); // prevent dividing by 0
+            _passThrough = 0.01 max getNumber (_entry >> "passThrough"); // prevent dividing by 0
         };
     } else {
         private _condition = format ["getText (_x >> 'hitpointName') == '%1'", _hitpoint];
