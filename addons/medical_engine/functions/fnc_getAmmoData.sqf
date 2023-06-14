@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: Salluci
- * Returns base damage value of a given round, either from a cache or by reading the ammo config.
+ * Returns base damage value and penetration factor of a given round, either from a cache or by reading the ammo config.
  *
  * Arguments:
  * 0: Ammo <STRING>
  *
  * Return Value:
- * Base damage value and penetration factor of a given round <ARRAY>
+ * Base damage value and penetration factor <ARRAY>
  *
  * Example:
  * ["B_556x45_Ball"] call ace_medical_engine_fnc_getAmmoHit
