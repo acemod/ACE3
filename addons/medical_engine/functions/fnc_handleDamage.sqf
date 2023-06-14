@@ -106,7 +106,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // Find hit point that received the maximum damage
     // Priority used for sorting if incoming damage is equal
-    // _realDamage, priority, _newDamage, body part name
+    // _realDamage, priority, _newDamage, _realDamageScaled, body part name
     private _allDamages = [
         [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       _damageHead select 2,       "Head"],
         [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 1,       _damageBody select 2,       "Body"],
