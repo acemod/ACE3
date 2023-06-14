@@ -8,7 +8,7 @@
  * 1: Hitpoint <STRING>
  *
  * Return Value:
- * Total armor for the given hitpoint <NUMBER>
+ * Total armor and scaled armor for the given hitpoint <ARRAY of NUMBER>
  *
  * Example:
  * [player, "HitChest"] call ace_medical_engine_fnc_getHitpointArmor
@@ -32,16 +32,18 @@ private _gear = [
 
 private _rags = _gear joinString "$";
 private _var = format [QGVAR(armorCache$%1), _hitpoint];
-_unit getVariable [_var, [""]] params ["_prevRags", "_armor"];
+_unit getVariable [_var, ["", 0, 0]] params ["_prevRags", "_armor", "_armorScaled"];
 
 if (_rags != _prevRags) then {
     _armor = 0;
-
+    _armorScaled = 0;
     {
-        _armor = _armor + ([_x, _hitpoint] call FUNC(getItemArmor));
+        ([_x, _hitpoint] call FUNC(getItemArmor)) params ["_itemArmor", "_itemArmorScaled"];
+        _armor = _armor + _itemArmor;
+        _armorScaled = _armorScaled + _itemArmorScaled;
     } forEach _gear;
 
-    _unit setVariable [_var, [_rags, _armor]];
+    _unit setVariable [_var, [_rags, _armor, _armorScaled]];
 };
 
-_armor // return
+[_armor, _armorScaled] // return

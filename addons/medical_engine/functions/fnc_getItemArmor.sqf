@@ -19,14 +19,15 @@
 params ["_item", "_hitpoint"];
 
 private _key = format ["%1$%2", _item, _hitpoint];
-private _armor = GVAR(armorCache) get _key;
+private _return = GVAR(armorCache) get _key;
 
-if (isNil "_armor") then {
-    _armor = 0;
+if (isNil "_return") then {
+    private _armor = 0;
+    private _armorScaled = 0;
     private _passThrough = 1;
     TRACE_2("Cache miss",_item,_hitpoint);
     if ("" in [_item, _hitpoint]) exitWith {
-        GVAR(armorCache) set [_key, _armor];
+        GVAR(armorCache) set [_key, [_armor, _armorScaled]];
     };
 
     private _itemInfo = configFile >> "CfgWeapons" >> _item >> "ItemInfo";
@@ -53,9 +54,10 @@ if (isNil "_armor") then {
     // Scale armor using passthrough to fix explosive-resistant armor (#9063)
     // Skip scaling for items that don't cover the hitpoint to prevent infinite armor
     if (_armor isNotEqualTo 0) then {
-        _armor = (log (_armor / _passThrough)) * 10;
+        _armorScaled = (log (_armor / _passThrough)) * 10;
     };
-    GVAR(armorCache) set [_key, _armor];
+    _return = [_armor, _armorScaled];
+    GVAR(armorCache) set [_key, _return];
 };
 
-_armor // return
+_return // return
