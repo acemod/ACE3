@@ -17,7 +17,7 @@
 #define HEAD_DAMAGE_THRESHOLD EGVAR(medical,const_headDamageThreshold)
 #define HEAD_DAMAGE_THRESHOLD_DEFAULT 1
 #define ORGAN_DAMAGE_THRESHOLD EGVAR(medical,const_organDamageThreshold)
-#define ORGAN_DAMAGE_THRESHOLD_DEFAULT 0.6
+#define ORGAN_DAMAGE_THRESHOLD_DEFAULT 0.35
 // Consts for determineIfFatal: sum of damage (values are calcualted at runtime in preInit)
 #define FATAL_SUM_DAMAGE_WEIBULL_K EGVAR(medical,const_fatalSumDamageWeibull_K)
 #define FATAL_SUM_DAMAGE_WEIBULL_L EGVAR(medical,const_fatalSumDamageWeibull_L)

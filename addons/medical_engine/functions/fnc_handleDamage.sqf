@@ -38,6 +38,13 @@ private _newDamage = _damage - _oldDamage;
 [_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
 private _realDamage = _newDamage * _armor;
 private _realDamageScaled = _newDamage * _armorScaled;
+
+// Setting for those who prefer the regular balance or have custom ammo configs
+if (EGVAR(medical,alternateArmorPenetration)) then {
+    // Calculate damage based on ammo "caliber": ammo material penetration
+    _realDamageScaled = [_realDamage, _ammo, _armorScaled] call FUNC(calculateDamage);
+};
+
 TRACE_5("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_realDamageScaled);
 
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
@@ -120,9 +127,8 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     _allDamages sort false;
 
-    // We only need real damage at this point, divide by 10 to use engine range of 0-1 (or higher for really high damage)
-    // _newDamage is maintained for compatibility
-    _allDamages = _allDamages apply {[(_x select 3) / 10, _x select 4, _x select 0]};
+    // We only need real damage at this point, _newDamage is maintained for compatibility
+    _allDamages = _allDamages apply {[_x select 3, _x select 4, _x select 0]};
 
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them

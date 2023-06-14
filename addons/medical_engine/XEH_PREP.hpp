@@ -1,6 +1,8 @@
 PREP(applyAnimAfterRagdoll);
+PREP(calculateDamage);
 PREP(damageBodyPart);
 PREP(disableThirdParty);
+PREP(getAmmoData);
 PREP(getHitpointArmor);
 PREP(getItemArmor);
 PREP(handleDamage);
