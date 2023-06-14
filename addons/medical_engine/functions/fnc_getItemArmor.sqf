@@ -29,7 +29,6 @@ if (isNil "_return") then {
     if ("" in [_item, _hitpoint]) exitWith {
         _return = [_armor, _armorScaled];
         GVAR(armorCache) set [_key, _return];
-        _return
     };
 
     private _itemInfo = configFile >> "CfgWeapons" >> _item >> "ItemInfo";
