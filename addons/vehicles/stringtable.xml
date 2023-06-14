@@ -26,6 +26,7 @@
             <Japanese>クルーズコントロールを有効化</Japanese>
             <Chinesesimp>开启巡航模式</Chinesesimp>
             <Russian>Круиз-контроль включён</Russian>
+            <Spanish>Control de crucero encendido</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -52,6 +53,7 @@
             <Japanese>クルーズコントロールを無効化</Japanese>
             <Chinesesimp>关闭巡航模式</Chinesesimp>
             <Russian>Круиз-контроль выключен</Russian>
+            <Spanish>Control de crucero apagado</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
@@ -94,6 +96,7 @@
             <Japanese>クルーズコントロール</Japanese>
             <Chinesesimp>巡航模式</Chinesesimp>
             <Russian>Круиз-контроль</Russian>
+            <Spanish>Contro de crucero</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>

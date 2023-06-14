@@ -270,6 +270,7 @@
             <Polish>Zwiększ wyszkolenie inżynierów w pojazdach i budynkach naprawczych. Niewyszkoleni zostają inżynierami, inżynierowie zostają zaawansowanymi inżynierami.</Polish>
             <Chinesesimp>在修理车辆或设施时，提升工程师训练。未受过训练的变成工程师，工程师晋升为高级工程师。</Chinesesimp>
             <Korean>수리 차량이나 시설 주위에 있으면 수리 수준을 높입니다. 정비병이 아닌 사람은 정비병이 되고, 정비병은 정비사가 됩니다.</Korean>
+            <Spanish>Aumenta las capacidades del ingeniero cuando se encuentra en un vehículo o instalacion de raparacion de vehículos. Quien no es ingeniero, pasa a serlo, y quien es ingeniero, pasa a ser ingeniero avanzado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
