@@ -32,6 +32,7 @@ if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIB
 
 // Cache for armor values of equipped items (vests etc)
 GVAR(armorCache) = createHashMap;
+GVAR(ammoCache) = createHashMap;
 
 // Hack for #3168 (units in static weapons do not take any damage):
 // Doing a manual pre-load with a small distance seems to fix the LOD problems
