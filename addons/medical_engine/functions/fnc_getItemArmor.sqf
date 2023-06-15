@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
  * Author: Pterolatypus, Salluci
@@ -60,5 +61,5 @@ if (isNil "_return") then {
     _return = [_armor, _armorScaled];
     GVAR(armorCache) set [_key, _return];
 };
-
+TRACE_3("",_item,_hitpoint,_return);
 _return // return
