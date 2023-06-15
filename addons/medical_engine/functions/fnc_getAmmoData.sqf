@@ -21,11 +21,6 @@ private _return = GVAR(ammoCache) get _ammo;
 if (isNil "_return") then {
     TRACE_1("Cache miss",_ammo);
     private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
-    private _blacklisted = (getText (_ammoConfig >> "simulation")) isNotEqualTo "shotBullet";
-    if (_blacklisted) exitWith {
-        _return = [0, 0, 0, _blacklisted];
-        GVAR(ammoCache) set [_ammo, _return];
-    };
     private _hit = getNumber (_ammoConfig >> "hit");
     private _penFactor = (getNumber (_ammoConfig >> "caliber")) * RHA_PENETRABILITY;
     private _typicalSpeed = getNumber (_ammoConfig >> "typicalSpeed");

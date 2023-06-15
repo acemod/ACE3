@@ -22,8 +22,8 @@
 #define SCALED_UNPROTECTED_VALUE 4
 params ["_damage", "_ammo", "_armor"];
 
-// Skip environmental damage and shrapnel
-if (_ammo isEqualTo "" || {_ammo isKindOf "ace_frag_base"} || {_ammo isEqualTo "rhs_he_fragments"}) exitWith {
+// Skip environmental damage, everything that isn't a bullet, and shrapnel
+if !(_ammo isNotEqualTo "" && {!(_ammo isKindOF "BulletBase")} && {!(_ammo isKindOf "ace_frag_base")} && {!(_ammo isEqualTo "rhs_he_fragments")}) exitWith {
     TRACE_1("skipping",_ammo);
     _damage // return
 };
@@ -32,13 +32,7 @@ if (_ammo isEqualTo "" || {_ammo isKindOf "ace_frag_base"} || {_ammo isEqualTo "
 // _penFactor is ammo "caliber" * penetrability, for simplification we consider an armor value of 1 to be equivalent to 1mm of RHA (penetrability 0.015)
 // While composite armor is actually harder to penetrate than RHA, this also includes the unit's body, soft armor inserts, uniform, and other factors, so it's a good enough approximation
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
-([_ammo] call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed", "_blacklisted"];
-
-// Skip everything that isn't a bullet
-if (_blacklisted) exitWith {
-    TRACE_1("skipping",_ammo);
-    _damage // return
-};
+([_ammo] call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
 
 // Between 5 and 35% of the projectile's energy is transferred to the unit
 // This adds some variety to damage and allows for both lucky hits and survival, rewarding concentrated automatic fire
