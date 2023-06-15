@@ -23,7 +23,7 @@
 params ["_damage", "_ammo", "_armor"];
 
 // Skip environmental damage, everything that isn't a bullet, and shrapnel
-if !(_ammo isNotEqualTo "" && {!(_ammo isKindOF "BulletBase")} && {!(_ammo isKindOf "ace_frag_base")} && {!(_ammo isEqualTo "rhs_he_fragments")}) exitWith {
+if !(_ammo isNotEqualTo "" && {!(_ammo isKindOF "BulletBase")} && {!(_ammo isKindOf "ace_frag_base")} && {_ammo isNotEqualTo "rhs_he_fragments"}) exitWith {
     TRACE_1("skipping",_ammo);
     _damage // return
 };
