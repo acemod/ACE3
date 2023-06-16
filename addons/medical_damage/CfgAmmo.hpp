@@ -20,6 +20,12 @@ class CfgAmmo {
         ACE_damageType = "grenade";
     };
 
+    // ACE shrapnel should also be handled as a grenade (puncture wounds)
+    class B_65x39_Caseless;
+    class ace_frag_base: B_65x39_Caseless {
+        ACE_damageType = "grenade";
+    };
+
     class MineCore;
     class MineBase: MineCore {
         ACE_damageType = "explosive";
