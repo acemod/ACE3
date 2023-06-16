@@ -16,6 +16,9 @@
  *
  * Public: No
  */
+
+// Average of values in https://pubmed.ncbi.nlm.nih.gov/7304523/
+#define MINIMUM_VELOCITY 50
 // armor 12 with passthrough 0.5 + a standard uniform, armor 2 with passthrough 0.8
 #define SCALED_SOFT_ARMOR_MAX_VALUE 18
 // armor 2 with passthrough 0.8
@@ -23,21 +26,26 @@
 params ["_damage", "_ammo", "_armor"];
 
 // Skip environmental damage, everything that isn't a bullet, and shrapnel
-if !(_ammo isNotEqualTo "" && {!(_ammo isKindOF "BulletBase")} && {!(_ammo isKindOf "ace_frag_base")} && {_ammo isNotEqualTo "rhs_he_fragments"}) exitWith {
-    TRACE_1("skipping",_ammo);
+if !(_ammo isNotEqualTo "" && {_ammo isKindOf "BulletBase"} && {!(_ammo isKindOf "ace_frag_base")} && {_ammo isNotEqualTo "rhs_he_fragments"}) exitWith {
+    TRACE_1("skipping non-bullet damage",_ammo);
     _damage // return
 };
 
 // Get ammo data to calculate penetration
-// _penFactor is ammo "caliber" * penetrability, for simplification we consider an armor value of 1 to be equivalent to 1mm of RHA (penetrability 0.015)
+// _penFactor is ammo "caliber" * penetrability, for simplification we consider an armor value of 1 to be equivalent to 0.667mm of RHA (penetrability 0.015)
 // While composite armor is actually harder to penetrate than RHA, this also includes the unit's body, soft armor inserts, uniform, and other factors, so it's a good enough approximation
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
 ([_ammo] call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
 
-// Between 5 and 35% of the projectile's energy is transferred to the unit
+private _impactSpeed = (_damage/_hit) * _typicalSpeed; // _damage is _hit at _typicalSpeed, see https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#typicalSpeed
+if (_impactSpeed < MINIMUM_VELOCITY) exitWith {
+    TRACE_2("projectile under minimum damage velocity",_ammo,_impactSpeed);
+    0 // return
+};
+
+// Between 5 and 35% of the projectile's energy is always transferred to the unit
 // This adds some variety to damage and allows for both lucky hits and survival, rewarding concentrated automatic fire
 private _energyTransferred = random [0.05, 0.2, 0.35];
-private _impactSpeed = (_damage/_hit) * _typicalSpeed; // _damage is _hit at _typicalSpeed, see https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#typicalSpeed
 
 // We'll use this value as baseline for unprotected body parts, this allows pistols to remain relevant
 // There's no need to calculate penetration if there is no armor to begin with
@@ -52,10 +60,6 @@ if (_armor >= SCALED_UNPROTECTED_VALUE) then {
         _penDepth = _penDepth + (1/(_penFactor * _armor)) + random [0, 0.2, 1];
         TRACE_2("hit soft armor",_penDepth,_penFactor);
     };
-} else {
-    // Add some bonus damage to hitting unprotected body parts to account for more of the energy being transferred directly
-    // This also lets unarmored units potentially survive small hits to torso, rarely.
-    _hit = _hit * (0.8 + _energyTransferred);
 };
 TRACE_4("impact",_impactSpeed,_penDepth,_energyTransferred,_armor);
 

@@ -22,7 +22,7 @@ if (isNil "_return") then {
     TRACE_1("Cache miss",_ammo);
     private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
     private _hit = getNumber (_ammoConfig >> "hit");
-    private _penFactor = (getNumber (_ammoConfig >> "caliber")) * RHA_PENETRABILITY;
+    private _penFactor = (getNumber (_ammoConfig >> "caliber")) * ARMOR_PENETRABILITY;
     private _typicalSpeed = getNumber (_ammoConfig >> "typicalSpeed");
     _return = [_hit, _penFactor, _typicalSpeed, _blacklisted];
     GVAR(ammoCache) set [_ammo, _return];

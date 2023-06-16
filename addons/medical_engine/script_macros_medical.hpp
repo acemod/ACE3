@@ -15,7 +15,7 @@
 
 // Damage threshold above which fatal organ damage can occur
 #define HEAD_DAMAGE_THRESHOLD EGVAR(medical,const_headDamageThreshold)
-#define HEAD_DAMAGE_THRESHOLD_DEFAULT 1
+#define HEAD_DAMAGE_THRESHOLD_DEFAULT 0.6
 #define ORGAN_DAMAGE_THRESHOLD EGVAR(medical,const_organDamageThreshold)
 #define ORGAN_DAMAGE_THRESHOLD_DEFAULT 0.35
 // Consts for determineIfFatal: sum of damage (values are calcualted at runtime in preInit)
@@ -62,8 +62,8 @@
 #define PENETRATION_THRESHOLD EGVAR(medical,const_penetrationThreshold)
 #define PENETRATION_THRESHOLD_DEFAULT 0.35
 
-// RHA penetrability used for armor penetration calculation, see (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber)
-#define RHA_PENETRABILITY 0.015
+// Baseline penetrability used for armor penetration calculation, see (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber)
+#define ARMOR_PENETRABILITY 0.015
 
 // To be replaced by a proper blood pressure calculation
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD EGVAR(medical,const_bloodLossKnockOutThreshold)
