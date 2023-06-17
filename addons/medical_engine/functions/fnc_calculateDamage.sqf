@@ -32,10 +32,10 @@ if !(_ammo isNotEqualTo "" && {_ammo isKindOf "BulletBase"} && {!(_ammo isKindOf
 };
 
 // Get ammo data to calculate penetration
-// _penFactor is ammo "caliber" * penetrability, for simplification we consider an armor value of 1 to be equivalent to 0.667mm of RHA (penetrability 0.015)
+// _penFactor is ammo "caliber" * penetrability, for simplification we consider an armor value of 1 to be equivalent to 1mm of RHA (penetrability 0.015)
 // While composite armor is actually harder to penetrate than RHA, this also includes the unit's body, soft armor inserts, uniform, and other factors, so it's a good enough approximation
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
-([_ammo] call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
+([_ammo] call FUNC(getAmmoData)) params ["_hit", "_crossSection", "_penFactor", "_typicalSpeed"];
 
 private _impactSpeed = (_damage/_hit) * _typicalSpeed; // _damage is _hit at _typicalSpeed, see https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#typicalSpeed
 if (_impactSpeed < MINIMUM_VELOCITY) exitWith {
@@ -43,32 +43,21 @@ if (_impactSpeed < MINIMUM_VELOCITY) exitWith {
     0 // return
 };
 
-// Between 5 and 35% of the projectile's energy is always transferred to the unit
-// This adds some variety to damage and allows for both lucky hits and survival, rewarding concentrated automatic fire
-private _energyTransferred = random [0.05, 0.2, 0.35];
-
 // We'll use this value as baseline for unprotected body parts, this allows pistols to remain relevant
 // There's no need to calculate penetration if there is no armor to begin with
-private _penDepth = 2;
+private _penDepth = SCALED_UNPROTECTED_VALUE;
 if (_armor >= SCALED_UNPROTECTED_VALUE) then {
-    _penDepth = _penFactor * _impactSpeed * (1 - _energyTransferred);
-
-    // We also want pistols to be relevant against soft armor (armor levels 8-12) but fall off beyond that
-    // Increasing penetration directly is fine in this case with a compensation for what should be hollow points
-    // The idea is soft armor should catch most pistol rounds, but not all
-    if (_armor <= SCALED_SOFT_ARMOR_MAX_VALUE) then {
-        _penDepth = _penDepth + (1/(_penFactor * _armor)) + random [0, 0.2, 1];
-        TRACE_2("hit soft armor",_penDepth,_penFactor);
-    };
+    _penDepth = (_penFactor * _impactSpeed) * random [0.75, 1, 1.25]; // penetration can vary a bit for more damage variety
 };
-TRACE_4("impact",_impactSpeed,_penDepth,_energyTransferred,_armor);
+TRACE_3("impact",_impactSpeed,_penDepth,_armor);
 
-// We want to base damage on the weight of the round, its velocity, and how much energy was spent penetrating armor, so we'll use the config value to get damage
+// We want to base damage on the round's weight, cross-section, velocity, and energy spent penetrating armor, so we'll use the config value to get damage
 // Because impactSpeed comes from the engine impact damage, this already handles damage loss from hits at oblique angles
-_damage = _hit * sqrt((_impactSpeed * _energyTransferred) / _typicalSpeed);
+// There's only so much damage a round can do, limited by the base resistance of an unprotected limb and its energy/cross-section
+_damage = ((_hit * _crossSection) * ((_penDepth/_armor) min 1)^2) / SCALED_UNPROTECTED_VALUE;
 
-// Now we reduce the armor, capping at 2 because there's only so much damage a single projectile can do
-_damage = _damage / (2 max (_armor - _penDepth));
-
+#ifdef DEBUG_MODE_FULL
+systemChat format ["dam: %1, armor: %2, penDepth: %3, hit: %4, crossSection: %5", _damage, _armor, _penDepth, _hit, _crossSection];
+#endif
 TRACE_4("finalDamage",_damage,_ammo,_armor,_penDepth);
 _damage // return
