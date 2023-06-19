@@ -25,10 +25,10 @@ private _fnc_isFieldRationItem = toString {
 
 {
     _list set [configName _x, ""];
-} forEach (configProperties [_cfgWeapons, _fnc_isFieldRationItem]);
+} forEach (_fnc_isFieldRationItem configClasses _cfgWeapons);
 
 {
     _list set [configName _x, ""];
-} forEach (configProperties [_cfgMagazines, _fnc_isFieldRationItem]);
+} forEach (_fnc_isFieldRationItem configClasses _cfgMagazines);
 
 uiNamespace setVariable [QXGVAR(fieldRationItems), compileFinal str _list];
