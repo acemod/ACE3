@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_medical_treatment_fnc_getAllMedicalItems
+ * call ace_medical_treatment_fnc_scanMedicalItems
  *
  * Public: No
  */
