@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+#define ARSENAL_CATEGORY_ICON (["\A3\ui_f\data\igui\cfg\actions\heal_ca.paa", QPATHTOEF(medical_gui,data\categories\bandage_fracture.paa)] select (["ace_medical_gui"] call EFUNC(common,isModLoaded)))
+
 [QEGVAR(medical_status,initialized), {
     params ["_unit"];
 
@@ -61,3 +63,8 @@ if (isServer) then {
         [_toReplace, _replacements] call EFUNC(common,registerItemReplacement);
     } forEach (configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"]);
 }] call CBA_fnc_addEventHandler;
+
+// Custom Arsenal tab
+if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
+    [uiNamespace getVariable [QGVAR(treatmentItems), []], localize ELSTRING(medical,Category), ARSENAL_CATEGORY_ICON] call EFUNC(arsenal,addRightPanelButton);
+};

@@ -49,6 +49,7 @@ PREP(medicationLocal);
 PREP(onMedicationUsage);
 PREP(placeInBodyBag);
 PREP(removeBody);
+PREP(scanMedicalItems);
 PREP(setTriageStatus);
 PREP(splint);
 PREP(splintLocal);
