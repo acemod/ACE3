@@ -62,6 +62,7 @@ This lists all the maintainers responsible for project management and the overal
 - [Brandon (TCVM)](https://github.com/TheCandianVendingMachine){:target="_blank"}
 - [veteran29](https://github.com/veteran29){:target="_blank"}
 - [Dahlgren](https://github.com/Dahlgren){:target="_blank"}
+- [Grim](https://github.com/Salluci){:target="_blank"}
 
 ## Contributors
 
