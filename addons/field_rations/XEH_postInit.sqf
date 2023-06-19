@@ -146,5 +146,5 @@ if !(hasInterface) exitWith {};
 
 // Custom Arsenal Tab
 if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
-    [keys FIELD_RATIONS_ITEMS, localize LSTRING(DisplayName), ARSENAL_CATEGORY_ICON] call EFUNC(arsenal,addRightPanelButton);
+    [keys FIELD_RATIONS_ITEMS, LLSTRING(DisplayName), ARSENAL_CATEGORY_ICON] call EFUNC(arsenal,addRightPanelButton);
 };
