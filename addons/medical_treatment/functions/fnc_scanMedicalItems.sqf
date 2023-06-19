@@ -15,10 +15,20 @@
  * Public: No
  */
 
-private _list = ["ACE_suture"]; // ugly workaround for sutures
-private _config = configFile >> QGVAR(actions);
+private _list = [];
+private _cfgActions = configFile >> QGVAR(actions);
+
+private _fnc_isMedicalItem = toString {
+    getNumber (_x >> "ACE_isMedicalItem") isEqualTo 1
+};
+
+// get items in ACE_Medical_Treament_Actions, fallback for items without API config property
 {
     _list append (getArray (_x >> "items"));
-} forEach ("true" configClasses _config);
+} forEach ("true" configClasses _cfgActions);
+
+{
+    _list pushBack (configName _x);
+} forEach (_fnc_isMedicalItem configClasses (configFile >> "CfgWeapons"));
 
 uiNamespace setVariable [QGVAR(treatmentItems), compileFinal str (_list arrayIntersect _list)]
