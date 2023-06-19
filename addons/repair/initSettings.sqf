@@ -145,6 +145,6 @@
     QGVAR(fullRepairFacilitySpeed), "SLIDER",
     [LSTRING(fullRepairFacilitySpeed_name), LSTRING(fullRepairFacilitySpeed_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [1,30,5,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    [0,1,1,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true
 ] call CBA_fnc_addSetting;
