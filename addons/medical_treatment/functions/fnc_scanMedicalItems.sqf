@@ -21,4 +21,4 @@ private _config = configFile >> QGVAR(actions);
     _list append (getArray (_x >> "items"));
 } forEach ("true" configClasses _config);
 
-uiNamespace setVariable [QGVAR(treatmentItems), _list arrayIntersect _list]
+uiNamespace setVariable [QGVAR(treatmentItems), compileFinal str (_list arrayIntersect _list)]
