@@ -2,8 +2,6 @@
 
 if !(hasInterface) exitWith {};
 
-#define ARSENAL_CATEGORY_ICON QPATHTOF(ui\icon_survival.paa)
-
 ["ace_settingsInitialized", {
     // Exit if not enabled
     if (!XGVAR(enabled)) exitWith {};
@@ -143,8 +141,3 @@ if !(hasInterface) exitWith {};
         ["ACE_player hunger", {ACE_player getVariable [QXGVAR(hunger), 0]}, [true, 0, 100]] call EFUNC(common,watchVariable);
     #endif
 }] call CBA_fnc_addEventHandler;
-
-// Custom Arsenal Tab
-if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
-    [keys FIELD_RATIONS_ITEMS, LLSTRING(DisplayName), ARSENAL_CATEGORY_ICON] call EFUNC(arsenal,addRightPanelButton);
-};

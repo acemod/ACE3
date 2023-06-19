@@ -31,4 +31,4 @@ private _fnc_isFieldRationItem = {
     _list set [configName _x, ""];
 } forEach (configProperties [_cfgMagazines, toString _fnc_isFieldRationItem, true]);
 
-uiNamespace setVariable [QXGVAR(fieldRationItems), _list];
+uiNamespace setVariable [QXGVAR(fieldRationItems), compileFinal str _list];
