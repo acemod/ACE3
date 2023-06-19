@@ -23,6 +23,13 @@ if (!hasInterface) exitWith {};
     };
 }] call CBA_fnc_addEventHandler;
 
+[QEGVAR(medical,pneumo), {
+    params ["_unit"];
+    if (_unit == ACE_player) then {
+        playSound SND_FRACTURE;
+    };
+}] call CBA_fnc_addEventHandler;
+
 GVAR(nextFadeIn) = 0;
 GVAR(heartBeatEffectRunning) = false;
 GVAR(lastHeartBeatSound) = 0;

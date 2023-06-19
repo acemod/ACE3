@@ -23,6 +23,7 @@ if (EGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
     [false]    call FUNC(effectBloodVolume);
     [false]    call FUNC(effectBloodVolumeIcon);
     [false]    call FUNC(effectBleeding);
+    [false,100]    call FUNC(effectPneumo);
 };
 
 BEGIN_COUNTER(handleEffects);
@@ -33,6 +34,8 @@ private _bloodVolume      = GET_BLOOD_VOLUME(ACE_player);
 private _unconscious      = IS_UNCONSCIOUS(ACE_player);
 private _heartRate        = GET_HEART_RATE(ACE_player);
 private _pain             = GET_PAIN_PERCEIVED(ACE_player);
+private _pneumo           = GET_PNEUMO(ACE_player);
+private _spo2             = GET_SPO2(ACE_player);
 
 if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) || {_heartRate < 60}}) then {
     TRACE_1("Starting heart beat effect",_heartRate);
@@ -57,6 +60,7 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 
 [!_unconscious, _pain] call FUNC(effectPain);
 [!_unconscious, _bleedingStrength, _manualUpdate] call FUNC(effectBleeding);
+[!_unconscious, _spo2, _pneumo] call FUNC(effectPneumo);
 
 // - Tourniquets, fractures and splints indication ---------------------------------------
 if (GVAR(enableHUDIndicators)) then {

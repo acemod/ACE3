@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Medical_Vitals">
+        <Key ID="STR_ACE_Medical_Vitals_SubCategory_Airway">
+            <English>Airway</English>
+            <Russian>Дыхательные пути</Russian>
+            <Spanish>Vías aéreas</Spanish>
+            <Polish>Drogi oddechowe</Polish>
+            <German>Atemwege</German>
+            <French>Voies respiratoires</French>
+            <Hungarian>Légút</Hungarian>
+            <Italian>Vie respiratorie</Italian>
+            <Portuguese>Vias Aéreas</Portuguese>
+            <Czech>Dýchací cesty</Czech>
+            <Japanese>気道</Japanese>
+            <Korean>기도</Korean>
+            <Chinesesimp>呼吸道</Chinesesimp>
+            <Chinese>呼吸道</Chinese>
+            <Turkish>Hava yolu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_Airways_DisplayName">
+            <English>Respiratory simulation</English>
+            <Russian>респираторный</Russian>
+            <Japanese>呼吸器</Japanese>
+            <French>Respiratoire</French>
+            <Portuguese>Respiratório</Portuguese>
+            <Chinese>呼吸</Chinese>
+            <Chinesesimp>呼吸</Chinesesimp>
+            <Italian>Respiratorio</Italian>
+            <Czech>Respirační</Czech>
+            <Polish>Oddechowy</Polish>
+            <Spanish>Respiratorio</Spanish>
+            <German>Atmung</German>
+            <Turkish>Solunum</Turkish>
+            <Korean>호흡기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_Airways_Description">
+            <English>Controls the level of simulation for the Respiratory system</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_Airways_Basic">
+            <English>Normal airway management. (Blockages, Collapse and Pneumothoraxes)</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_Airways_Advanced">
+            <English>Normal airway management, movement becomes limited when degraded</English>
+            <!-- TODO - Airways -->
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Vitals_AirwayDegradation_DisplayName">
+            <English>Airway Degredation Multiplier</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_AirwayDegradation_Description">
+            <English>Adjust the rate at which a patient's Sp02 will degrade when their airways are compromised</English>
+            <!-- TODO - Airways -->
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Vitals_AirwayRecovery_DisplayName">
+            <English>Airway Recovery Multiplier</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_AirwayRecovery_Description">
+            <English>Adjust the rate at which a patient's Sp02 will recover when their airways are clear</English>
+            <!-- TODO - Airways -->
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Vitals_CollapsedChance_DisplayName">
+            <English>Collapsed Airway Chance</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_CollapsedChance_Description">
+            <English>How likely a patient's airways will collapse</English>
+            <!-- TODO - Airways -->
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Vitals_BlockageChance_DisplayName">
+            <English>Blocked Airway Chance</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_BlockageChance_Description">
+            <English>How likely a patient's airway will be blocked</English>
+            <!-- TODO - Airways -->
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Vitals_PneumoChance_DisplayName">
+            <English>Pneumothorax Airway Chance</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_PneumoChance_Description">
+            <English>How likely a Pneumothorax will be to occur</English>
+            <!-- TODO - Airways -->
+        </Key>
+                
+        
+        <Key ID="STR_ACE_Medical_Vitals_PneumoDamageThreshold_DisplayName">
+            <English>Pneumothorax Damage Threshold</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_PneumoDamageThreshold_Description">
+            <English>The ammount of damage it requires for a patient to receive a pneumothorax</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_CollapsedMultiplier_DisplayName">
+            <English>Collapsed Airway Multiplier</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_CollapsedMultiplier_Description">
+            <English>Adjust how much effect a patient having a collapsed airway will have on SpO2 loss</English>
+            <!-- TODO - Airways -->
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Vitals_BlockageMultiplier_DisplayName">
+            <English>Blocked Airway Multiplier</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_BlockageMultiplier_Description">
+            <English>Adjust how much effect a patient having a blocked airway will have on SpO2 loss</English>
+            <!-- TODO - Airways -->
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Vitals_PneumoMultiplier_DisplayName">
+            <English>Pneumothorax Airway Multiplier</English>
+            <!-- TODO - Airways -->
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_PneumoMultiplier_Description">
+            <English>Adjust how much effect a patient having a Pneumothorax will have on SpO2 loss</English>
+            <!-- TODO - Airways -->
+        </Key>
+    </Package>
+</Project>

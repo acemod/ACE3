@@ -29,6 +29,10 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
             idc = IDC_BODY_TORSO;
             text = QPATHTOF(data\body_image\torso.paa);
         };
+        class Lungs: Background {
+            idc = IDC_BODY_LUNGS;
+            text = QPATHTOF(data\body_image\lungs.paa);
+        };
         class ArmLeft: Background {
             idc = IDC_BODY_ARMLEFT;
             text = QPATHTOF(data\body_image\arm_left.paa);
@@ -80,6 +84,28 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         class LegRightT: ArmLeftT {
             idc = IDC_BODY_LEGRIGHT_T;
             text = QPATHTOF(data\body_image\leg_right_t.paa);
+        };
+        class ArmLeftP: Background {
+            idc = IDC_BODY_ARMLEFT_P;
+            text = QPATHTOF(data\body_image\arm_left_p.paa);
+            colorText[] = {0, 0, 0.8, 1};
+            show = 0;
+        };
+        class ArmRightP: ArmLeftP {
+            idc = IDC_BODY_ARMRIGHT_P;
+            text = QPATHTOF(data\body_image\arm_right_p.paa);
+        };
+        class LegLeftP: ArmLeftP {
+            idc = IDC_BODY_LEGLEFT_P;
+            text = QPATHTOF(data\body_image\leg_left_p.paa);
+        };
+        class LegRightP: ArmLeftP {
+            idc = IDC_BODY_LEGRIGHT_P;
+            text = QPATHTOF(data\body_image\leg_right_p.paa);
+        };
+        class headP: ArmLeftP {
+            idc = IDC_BODY_HEAD_P;
+            text = QPATHTOF(data\body_image\head_p.paa);
         };
     };
 };

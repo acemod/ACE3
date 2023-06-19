@@ -31,4 +31,13 @@ if (_bloodPressureL < 50 || {_bloodPressureH < 60}) exitWith { false };
 private _heartRate = GET_HEART_RATE(_unit);
 if (_heartRate < 40) exitWith { false };
 
+private _spo2 = GET_SPO2(_unit);
+if (_spo2 < 80) exitWith { false };
+
+private _blocked = GET_AIRWAY_BLOCKED(_unit);
+if (_blocked) exitWith { false };
+
+private _collapsed = GET_AIRWAY_COLLAPSED(_unit);
+if (_collapsed) exitWith { false };
+
 true

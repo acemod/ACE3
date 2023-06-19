@@ -1103,6 +1103,18 @@
             <Chinese>軍用止血帶</Chinese>
             <Turkish>Turnike [CAT]</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_STATUS_HAS_PNUEMOTHORAX">
+            <English>Pneumothorax</English>
+            <German>Pneumothorax</German>
+            <Polish>Odma płucna</Polish>
+            <Spanish>Pneumotórax</Spanish>
+            <Chinese>等氣胸</Chinese>
+            <Czech>Pneumotorax</Czech>
+            <Korean>기흉</Korean>
+            <French>Pneumothorax</French>
+            <Turkish>Pnömotoraks</Turkish>
+            <Italian>Pneumotorace</Italian>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_NPA_APPLIED">
             <English>Nasopharyngeal Tube [NPA]</English>
             <German>Nasen-Rachen-Rohr</German>

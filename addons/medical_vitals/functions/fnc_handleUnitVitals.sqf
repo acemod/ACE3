@@ -106,6 +106,10 @@ _unit setVariable [VAR_BLOOD_PRESS, _bloodPressure, _syncValues];
 
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 
+private _spo2 = GET_SPO2(_unit);
+if (EGVAR(medical,airway) > 0) then {
+    _spo2 = [_unit, _spo2, _deltaT, _syncValues] call FUNC(updateUnitAirways);
+};
 // Statements are ordered by most lethal first.
 switch (true) do {
     case (_bloodVolume < BLOOD_VOLUME_FATAL): {
@@ -144,6 +148,15 @@ switch (true) do {
             [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
         };
     };
+    case(_spo2 <= 80) : { 
+        if (_spo2 <= 65) then { 
+        TRACE_2("Oxygen critical. Cardiac arrest",_unit,_spo2);
+        [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
+        } else {
+            TRACE_2("Oxygen critical. Critical vitals",_unit,_spo2);
+            [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
+        };
+    };
     case (_woundBloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD): {
         [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
     };
@@ -159,7 +172,7 @@ switch (true) do {
 private _cardiacOutput = [_unit] call EFUNC(medical_status,getCardiacOutput);
 if (!isPlayer _unit) then {
     private _painLevel = _unit getVariable [VAR_PAIN, 0];
-    hintSilent format["blood volume: %1, blood loss: [%2, %3]\nhr: %4, bp: %5, pain: %6", round(_bloodVolume * 100) / 100, round(_woundBloodLoss * 1000) / 1000, round((_woundBloodLoss / (0.001 max _cardiacOutput)) * 100) / 100, round(_heartRate), _bloodPressure, round(_painLevel * 100) / 100];
+    hintSilent format["blood volume: %1, blood loss: [%2, %3]\nhr: %4, bp: %5, pain: %6, SpO2: %7", round(_bloodVolume * 100) / 100, round(_woundBloodLoss * 1000) / 1000, round((_woundBloodLoss / (0.001 max _cardiacOutput)) * 100) / 100, round(_heartRate), _bloodPressure, round(_painLevel * 100) / 100, round(_spo2)];
 };
 #endif
 

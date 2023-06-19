@@ -20,7 +20,6 @@
 params ["_unit", "_allDamages", "_typeOfDamage"];
 TRACE_3("woundsHandlerBase",_unit,_allDamages,_typeOfDamage);
 
-
 if !(_typeOfDamage in GVAR(damageTypeDetails)) then {
     WARNING_1("damage type not found",_typeOfDamage);
     _typeOfDamage = "unknown";
@@ -51,7 +50,6 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         ERROR_1("invalid body part %1",_bodyPart);
         continue
     };
-
     // determine how many wounds to create
     private _nWounds = [_damage, _thresholds, true] call FUNC(interpolatePoints);
     if (_nWounds < 1) then {
@@ -82,7 +80,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             WARNING_4("No valid wound types",_damage,_dmgPerWound,_typeOfDamage,_bodyPart);
             continue
         };
-        GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture"];
+        GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture","_causePneumo"];
         private _woundClassIDToAdd = GVAR(woundClassNames) find _woundTypeToAdd;
     
         // Add a bit of random variance to wounds
@@ -143,6 +141,20 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
                 [QEGVAR(medical,fracture), [_unit, _bodyPartNToAdd]] call CBA_fnc_localEvent;
                 TRACE_1("Limb fracture",_bodyPartNToAdd);
+
+                _updateDamageEffects = true;
+            };            
+            case (
+                _causePneumo
+                && {EGVAR(medical,airway) > 0}
+                && {_bodyPartNToAdd == 1}
+                && {_woundDamage > PNEUMO_DAMAGE_THRESHOLD}
+                && {random 1 < EGVAR(medical,pneumoChance)} 
+            ): {
+                _unit setVariable [VAR_PNEUMO, true, true];
+
+                [QEGVAR(medical,pneumo), [_unit]] call CBA_fnc_localEvent;
+                TRACE_1("Pneumothorax",_unit);
 
                 _updateDamageEffects = true;
             };

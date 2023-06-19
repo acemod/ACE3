@@ -229,6 +229,65 @@ class CfgWeapons {
             mass = 1;
         };
     };
+    class ACE_chestSeal: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        model = QPATHTOF(data\bandage.p3d);
+        picture = QPATHTOF(ui\Hyfin_ca.paa);
+        displayName = CSTRING(ChestSeal_Display);
+        descriptionShort = CSTRING(ChestSeal_Desc_Short);
+        descriptionUse = CSTRING(ChestSeal_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class ACE_basicAirway: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        model = QPATHTOF(data\guedel\guedel.p3d);
+        picture = QPATHTOF(ui\NPA_ca.paa);
+        displayName = CSTRING(BasicAirway_Display);
+        descriptionShort = CSTRING(BasicAirway_Desc_Short);
+        descriptionUse = CSTRING(BasicAirway_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class ACE_advancedAirway: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        picture = QPATHTOF(ui\LMA_ca.paa);
+        displayName = CSTRING(AdvancedAirway_Display);
+        descriptionShort = CSTRING(AdvancedAirway_Desc_Short);
+        descriptionUse = CSTRING(AdvancedAirway_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class ACE_pocketBVM: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        model = QPATHTOF(data\guedel\guedel.p3d);
+        picture = QPATHTOF(ui\pocket_bvm_ca.paa);
+        displayName = CSTRING(BVM_Display);
+        descriptionShort = CSTRING(BVM_Desc_Short);
+        descriptionUse = CSTRING(BVM_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class ACE_pulseOximeter: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        model = QPATHTOF(data\pulseox\pulseox.p3d);
+        picture = QPATHTOF(ui\Pulseoximeter_normal_ca.paa);
+        displayName = CSTRING(PulseOximeter_Display);
+        descriptionShort = CSTRING(PulseOximeter_Desc_Short);
+        descriptionUse = CSTRING(PulseOximeter_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
     class ACE_personalAidKit: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);

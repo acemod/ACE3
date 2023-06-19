@@ -123,3 +123,17 @@ GVAR(ppIncapacitationBlur) = [
     815, // 135xx does not work
     [0]
 ] call _fnc_createEffect;
+
+// - Pneumothorax -------------------------------------------------------------
+
+GVAR(ppPneumothoraxBlur) = [
+    "DynamicBlur",
+    817, // 135xx does not work
+    [0]
+] call _fnc_createEffect;
+
+GVAR(ppPneumothoraxBlackout) = [
+    "ColorCorrections",
+    13507,
+    [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+] call _fnc_createEffect;

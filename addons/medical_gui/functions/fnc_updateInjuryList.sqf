@@ -56,6 +56,43 @@ if (GVAR(showBloodlossEntry)) then {
     };
 };
 
+if (HAS_PULSE_OXI_APPLIED_ON(_target,_selectionN)) then {
+    private _spo2 = GET_SPO2(_target);
+    private _hr = GET_HEART_RATE(_target);
+    private _spo2Status = format ["HR: %1, SpO2: %2", (round _hr), (round _spo2)];
+    private _color = [1,1,1,1];
+    switch (true) do {
+        case (_spo2 < 80 || {_hr < 30 || _hr > 140}): {
+            _color = [1,0,0,1];
+        };
+        case ((_spo2 > 79 && _spo2 < 87) || {_hr < 40 || _hr > 120}): {
+            _color = [1, 0.67,0,1];
+        };
+        case (_spo2 > 86 && _spo2 < 95): {
+            _color = [1, 1,0,1]; 
+        };
+    };
+    _entries pushBack [_spo2Status,_color];
+};
+if (_selectionN == 0) then {
+    if (GET_AIRWAY_BLOCKED(_target)) then {
+        _entries pushBack ["Airways blocked by debris", [1, 0.67, 0, 1]];
+    };
+    private _message = "";
+    private _airwayLvl = GET_AIRWAY_TREATMENT_LVL(_target);
+    switch (_airwayLvl) do {
+        case 1: {_message = "Head tilted to the side"};
+        case 2: {_message = "Basic airway inserted"};
+        case 3: {_message = "Advanced airway inserted"};
+    };
+    if (_message != "") then {
+        _entries pushBack [_message, [0.2, 0.2, 1, 1]];
+    } else {
+        if (GET_AIRWAY_COLLAPSED(_target)) then {
+            _entries pushBack ["Airways has collapsed", [1, 0.67, 0, 1]];
+        };
+    };
+};
 // Indicate if a tourniquet is applied
 if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
     _entries pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
@@ -102,6 +139,11 @@ private _totalIvVolume = 0;
 if (_totalIvVolume >= 1) then {
     _entries pushBack [format [localize ELSTRING(medical_treatment,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
 };
+// Indicate if target has a pnuemothorax
+if (GET_PNEUMO(_target) && {_selectionN  == 1}) then {
+    _entries pushBack [localize LSTRING(STATUS_HAS_PNUEMOTHORAX), [1, 0, 0, 1]];
+};
+
 
 // Add entries for open, bandaged, and stitched wounds
 private _woundEntries = [];
