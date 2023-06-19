@@ -19,16 +19,16 @@ private _list = createHashMap;
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
 
-private _fnc_isFieldRationItem = {
-    ((getNumber (_x >> QXGVAR(thirstQuenched))) > 0) || {(getNumber (_x >> QXGVAR(hungerSatiated))) > 0}
+private _fnc_isFieldRationItem = toString {
+    ((getNumber (_x >> QXGVAR(thirstQuenched))) > 0) || {(getNumber (_x >> QXGVAR(hungerSatiated))) > 0} || {(getText (_x >> QXGVAR(refillItem))) isNotEqualTo ""}
 };
 
 {
     _list set [configName _x, ""];
-} forEach (configProperties [_cfgWeapons, toString _fnc_isFieldRationItem, true]);
+} forEach (configProperties [_cfgWeapons, _fnc_isFieldRationItem]);
 
 {
     _list set [configName _x, ""];
-} forEach (configProperties [_cfgMagazines, toString _fnc_isFieldRationItem, true]);
+} forEach (configProperties [_cfgMagazines, _fnc_isFieldRationItem]);
 
 uiNamespace setVariable [QXGVAR(fieldRationItems), compileFinal str _list];
