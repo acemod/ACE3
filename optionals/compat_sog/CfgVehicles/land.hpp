@@ -24,3 +24,8 @@ class Land_vn_usaf_fueltank_75_01: Land_vn_building_b_base {
     EGVAR(refuel,hooks)[] = {{0, -0.4, -0.5}};
     EGVAR(refuel,fuelCargo) = 2840; // 750 * 3.785
 };
+class Land_vn_b_prop_fueldrum_01: Land_vn_building_b_base {
+    transportFuel = 0;
+    EGVAR(refuel,hooks)[] = {{0, 0, 0.5}}; // reference is Land_FlexibleTank_01_F
+    EGVAR(refuel,fuelCargo) = 300; // reference is Land_FlexibleTank_01_F
+};

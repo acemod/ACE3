@@ -13,7 +13,7 @@
             <Italian>Controlla le munizioni durante il ricaricamento</Italian>
             <Portuguese>Conferir munição ao recarregar a arma</Portuguese>
             <Japanese>再装填された武器の弾薬を確認</Japanese>
-            <Korean>재장전시 장탄수 확인</Korean>
+            <Korean>재장전 시 장탄수 확인</Korean>
             <Chinesesimp>在重新装填时检查弹药</Chinesesimp>
             <Chinese>在重新裝填時檢查彈藥</Chinese>
         </Key>
@@ -29,8 +29,8 @@
             <Italian>Controlla le munizioni rimanenti nel caricatore in fase di cambio caricatore.</Italian>
             <Portuguese>Confere a munição no seu novo carregador ao recarregar a arma</Portuguese>
             <Japanese>新しく装填された弾倉の弾薬を確認します。</Japanese>
-            <Korean>재장전시 새탄창에 있는 탄약을 확인합니다.</Korean>
-            <Chinesesimp>在重新装填时检查新弹匣上的弹药.</Chinesesimp>
+            <Korean>재장전 시 새 탄창에 있는 탄약을 확인합니다.</Korean>
+            <Chinesesimp>在重新装填时检查新弹匣上的弹药。</Chinesesimp>
             <Chinese>在重新裝填時檢查新彈匣上的彈藥.</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelf">
@@ -43,9 +43,10 @@
             <Chinesesimp>总是在自我互动中显示检查弹药动作</Chinesesimp>
             <French>Toujours afficher l'action de vérification des munitions</French>
             <Portuguese>Sempre mostrar a opção de checar a própria munição</Portuguese>
-            <Russian>Всегда показывать проверку боеприпасов в меню взаимодействия с собой</Russian>
+            <Russian>Всегда показывать проверку боеприпасов</Russian>
             <Spanish>Mostrar siempre la autointeracción de comprobar munición</Spanish>
             <German>Zeige immer die Selbstinteraktion zur Prüfung der Munition an.</German>
+            <Korean>상호작용에 탄약 확인을 항상 띄우기</Korean>
         </Key>
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelfDesc">
             <English>Shows check ammo self interaction even when not in static weapons.</English>
@@ -60,6 +61,7 @@
             <Russian>Показывать проверку боеприпасов даже вне стационарного орудия</Russian>
             <Spanish>Mostrar la comprobación de la munición incluso cuando no está en armas estáticas</Spanish>
             <German>Zeigt die Selbstinteraktion der Munitionsüberprüfung an, auch wenn nicht in statischen Waffen.</German>
+            <Korean>탄약 확인을 상호작용에서 할 수 있도록 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>
@@ -123,7 +125,7 @@
             <Italian>Attaccando la tracolla...</Italian>
             <Portuguese>Ligando cintos...</Portuguese>
             <Japanese>ベルトを繋げています・・・</Japanese>
-            <Korean>벨트 연결중...</Korean>
+            <Korean>벨트 연결 중...</Korean>
             <Chinesesimp>正在连接弹链...</Chinesesimp>
             <Chinese>連接彈鏈中...</Chinese>
         </Key>

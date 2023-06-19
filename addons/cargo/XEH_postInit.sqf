@@ -50,8 +50,6 @@
         GVAR(interactionParadrop) = false;
         createDialog QGVAR(menu);
     };
-
-    // TOOO maybe drag/carry the unloaded item?
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(serverUnload), {
@@ -101,7 +99,7 @@ GVAR(objectActions) = [
             {(_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad))]) in [true, 1]} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-            {(getNumber ((configOf _target) >> QGVAR(noRename))) == 0}
+            {(_target getVariable [QGVAR(noRename), getNumber (configOf _target >> QGVAR(noRename))]) in [false, 0]}
         }
     ] call EFUNC(interact_menu,createAction),
     [QGVAR(load), localize LSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",

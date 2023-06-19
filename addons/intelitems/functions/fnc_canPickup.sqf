@@ -18,6 +18,6 @@
 
 params ["_object", "_player"];
 
-private _magazineClass = getText (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(magazine));
+private _magazineClass = getText ((configOf _object) >> QGVAR(magazine));
 
 _magazineClass != "" && {_player canAdd _magazineClass}

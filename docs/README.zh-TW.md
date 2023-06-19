@@ -18,8 +18,8 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 條款">
     </a>
-    <a href="https://slackin.ace3mod.com/">
-        <img src="https://img.shields.io/badge/Slack-Join-darkviolet.svg?style=flat-square" alt="加入ACE3 Slack">
+    <a href="https://acemod.org/discord">
+        <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="加入ACE3 Discord">
     </a>
     <a href="https://circleci.com/gh/acemod/ACE3">
         <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 建構狀態">
@@ -77,8 +77,8 @@
 ## 新手起步
 
 ACE3需要最新版本的武裝行動3以及最新版本的 <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>模組。以下的網頁可用於幫助以及提供安裝ACE3上的資訊。
-- [安裝指南-英文](https://ace3mod.com/wiki/user/installation-guide.html)
-- [資訊中心-英文](https://ace3mod.com/wiki/user/information-center.html)
+- [安裝指南-英文](https://ace3.acemod.org/wiki/user/installation-guide.html)
+- [資訊中心-英文](https://ace3.acemod.org/wiki/user/information-center.html)
 
 ## 維護
 
@@ -91,21 +91,21 @@ ACE3需要最新版本的武裝行動3以及最新版本的 <a href="https://git
 ### 提交問題或者申請功能
 
 麻煩，請使用我們的 [問題追蹤](https://github.com/acemod/ACE3/issues)來回報漏洞，想要的功能，或者建議調整目前已有的功能，也請到以下參閱:
-- [如何回報問題-英文](https://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-- [如何申請功能-英文](https://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [如何回報問題-英文](https://ace3.acemod.org/wiki/user/how-to-report-an-issue.html)
+- [如何申請功能-英文](https://ace3.acemod.org/wiki/user/how-to-make-a-feature-request.html)
 
 ### 測試與建構。
 
 若要幫助我們測試最新的開發版所造成的更改，下載我們的主分支([直接下載](https://github.com/acemod/ACE3/archive/master.zip),或者 [git](https://help.github.com/articles/fetching-a-remote/))，然後用於編譯組建:
 
-- [設置開發環境-英文](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html) –一步一步的引導如何為了測試目的來正確的建構ACE3
+- [設置開發環境-英文](https://ace3.acemod.org/wiki/development/setting-up-the-development-environment.html) –一步一步的引導如何為了測試目的來正確的建構ACE3
 
 ### 聯繫
 
 <table>
   <tr>
-    <td><a href="https://slackin.ace3mod.com/">Slack</a></td>
-    <td>我們有著公共的Slack團隊供大家加入，而該模組所有開發者以及維護者也會在此出現並公告</td>
+    <td><a href="https://acemod.org/discord">Discord</a></td>
+    <td>我們有著公共的Discord團隊供大家加入，而該模組所有開發者以及維護者也會在此出現並公告</td>
   </tr>
 
   <tr>

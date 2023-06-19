@@ -31,7 +31,7 @@
             <Portuguese>Laser (vermelho)</Portuguese>
             <Japanese>レーザ ポインタ (赤)</Japanese>
             <Korean>레이저 지시기 (빨강)</Korean>
-            <Chinesesimp>激光指示器 (红色)</Chinesesimp>
+            <Chinesesimp>激光指示器（红色）</Chinesesimp>
             <Chinese>雷射指示器 (紅色)</Chinese>
             <Turkish>Lazer Işaretleyici (Kırmızı)</Turkish>
         </Key>
@@ -48,7 +48,7 @@
             <Portuguese>Laser (verde)</Portuguese>
             <Japanese>レーザ ポインタ (緑)</Japanese>
             <Korean>레이저 지시기 (초록)</Korean>
-            <Chinesesimp>激光指示器 (绿色)</Chinesesimp>
+            <Chinesesimp>激光指示器（绿色）</Chinesesimp>
             <Chinese>雷射指示器 (綠色)</Chinese>
             <Turkish>Lazer Işaretleyici (Yeşil)</Turkish>
         </Key>
@@ -82,7 +82,7 @@
             <Hungarian>&lt;t color='#9cf953'&gt;Használat: &lt;/t&gt;Lézer BE/KI kapcsolása</Hungarian>
             <Japanese>&lt;t color='#9cf953'&gt;つかう: &lt;/t&gt;レーザの起動/停止</Japanese>
             <Korean>&lt;t color='#9cf953'&gt;사용키: &lt;/t&gt;레이저 켜기/끄기</Korean>
-            <Chinesesimp>&lt;t color='#9cf953'&gt;使用: &lt;/t&gt;激光开启/关闭</Chinesesimp>
+            <Chinesesimp>&lt;t color='#9cf953'&gt;使用：&lt;/t&gt;激光开启/关闭</Chinesesimp>
             <Chinese>&lt;t color='#9cf953'&gt;使用: &lt;/t&gt;雷射開啟/關閉</Chinese>
             <Turkish>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</Turkish>
         </Key>
@@ -97,7 +97,7 @@
             <Hungarian>Lézer</Hungarian>
             <Czech>Laser</Czech>
             <Portuguese>Laser</Portuguese>
-            <Japanese>レーザ</Japanese>
+            <Japanese>レーザー</Japanese>
             <Korean>레이저</Korean>
             <Chinesesimp>激光</Chinesesimp>
             <Chinese>雷射</Chinese>
@@ -132,7 +132,7 @@
             <Czech>Přepnout Laser / Infračervený Laser</Czech>
             <Portuguese>Alternar entre Laser / Laser IV</Portuguese>
             <Japanese>レーザ/赤外線レーザを切り替える</Japanese>
-            <Korean>레이저 / 적외선 레이저 전환</Korean>
+            <Korean>가시광/적외선 레이저 전환</Korean>
             <Chinesesimp>切换激光/红外线激光</Chinesesimp>
             <Chinese>切換雷射/紅外線雷射</Chinese>
             <Turkish>Değiştir Lazer/IR Lazer</Turkish>

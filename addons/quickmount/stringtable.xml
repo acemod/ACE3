@@ -55,7 +55,7 @@
             <Chinesesimp>载具已满</Chinesesimp>
             <Chinese>載具已滿</Chinese>
             <Polish>Pojazd pełny</Polish>
-            <Korean>만차</Korean>
+            <Korean>차량이 꽉 찼습니다</Korean>
             <Russian>Мест нет</Russian>
             <Portuguese>Veículo cheio</Portuguese>
             <French>Véhicule plein</French>
@@ -77,6 +77,7 @@
             <Russian>Эта опция разрешает быстро залезть в транспорт, на который вы смотрите.</Russian>
             <Spanish>Esta opción permite entrar rápidamente al vehículo al que estás mirando</Spanish>
             <German>Diese Option erlaubt es, schnell in das Fahrzeug, auf das der Spieler gerade zeigt, einzusteigen.</German>
+            <Korean>보고 있는 차량에 신속히 탑승하게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
@@ -99,7 +100,7 @@
             <German>Maximale Entfernung zu Fahrzeugen</German>
             <Italian>Distanza massima per controllare i veicoli.</Italian>
             <Japanese>車両を検知できる最大距離を設定します。</Japanese>
-            <Chinesesimp>最大可检查载具的距离.</Chinesesimp>
+            <Chinesesimp>最大可检查载具的距离。</Chinesesimp>
             <Chinese>最大可檢查載具的距離</Chinese>
             <Polish>Maksymalna odległość do pojazdu.</Polish>
             <Korean>탑승 가능한 차량과의 거리</Korean>
@@ -131,7 +132,7 @@
             <German>Maximale Geschwindigkeit (km/h)</German>
             <Italian>Velocità Massima (km/h)</Italian>
             <Japanese>最高速度 (km/h)</Japanese>
-            <Chinesesimp>最高速度 (公里/小时)</Chinesesimp>
+            <Chinesesimp>最高速度（km/h）</Chinesesimp>
             <Chinese>最高速度 (公里/小時)</Chinese>
             <Polish>Maksymalna prędkość (km/h)</Polish>
             <Korean>최대 속도 (km/h)</Korean>
@@ -204,6 +205,7 @@
             <Czech>Změnit sedadlo</Czech>
             <Turkish>Koltuk Değiştir</Turkish>
             <Spanish>Cambiar asiento</Spanish>
+            <Korean>좌석 변경</Korean>
         </Key>
     </Package>
 </Project>

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Makes object catch fire. Only call from events. Local effects only.
  * Arbitrary values to ignite people. Assumed maximum is "10".
  *
@@ -223,8 +223,8 @@ if (_isBurning) exitWith {};
                             };
                         } else {
                             if ((animationState _unit) in PRONE_ROLLING_ANIMS) then {
-                                // decrease intensity of burn, but if its too high this wont do anything substantial
-                                _intensity = _intensity - (1 / _intensity);
+                                // decrease intensity of burn
+                                _intensity = _intensity * INTENSITY_DECREASE_MULT_ROLLING;
                             };
                         };
 
@@ -237,7 +237,7 @@ if (_isBurning) exitWith {};
                         // keep pain around unconciousness limit to allow for more fun interactions
                         [_unit, _intensity / MAX_INTENSITY, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
                     } else {
-                        [_unit, 0.15, _woundSelection, "unknown", _instigator] call EFUNC(medical,addDamageToUnit);
+                        [_unit, 0.15, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
                     };
                 };
                 _unit setVariable [QGVAR(intensity), _intensity, true]; // globally sync intensity across all clients to make sure simulation is deterministic
@@ -289,7 +289,7 @@ if (_isBurning) exitWith {};
 
     if (isServer) then {
         _fireSound = createSoundSource ["Sound_Fire", _unitPos, [], 0];
-        _fireSound attachTo [_unit, [0, 0, 0], "destructionEffect1"];
+        _fireSound attachTo [_unit, [0, 0, 0], "Head"];
     };
 
     _unit setVariable [QGVAR(burning), true];

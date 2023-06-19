@@ -8,13 +8,14 @@
             <Russian>ИИ Медик</Russian>
             <French>Médecine IA</French>
             <Portuguese>IA Médico</Portuguese>
-            <Chinesesimp>AI医疗兵</Chinesesimp>
+            <Chinesesimp>AI 医疗兵</Chinesesimp>
             <Chinese>AI醫療兵</Chinese>
             <Italian>Medico AI</Italian>
             <Czech>Zdravotnická AI</Czech>
             <Polish>Medyk AI</Polish>
             <Spanish>Médico para IA</Spanish>
             <Turkish>Medikal AI</Turkish>
+            <Korean>인공지능 의무병</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
@@ -23,12 +24,13 @@
             <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
             <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
-            <Chinesesimp>AI对于受伤及无意识单位会有所反应</Chinesesimp>
+            <Chinesesimp>AI 对于受伤及无意识单位会有所反应</Chinesesimp>
             <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
             <Italian>L'intelligenza artificiale risponderà a lesioni e perdita di coscienza</Italian>
             <Czech>UI reaguje na zranění a bezvědomí</Czech>
             <Polish>AI zareaguje na obrażenia i utratę przytomności</Polish>
             <Spanish>La IA responderá a heridas e inconsciencia</Spanish>
+            <Korean>인공지능이 기절이나 부상에 대응합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
@@ -39,9 +41,9 @@
             <Polish>Tylko serwer i HC</Polish>
             <French>Seulement sur le serveur ou le HC</French>
             <Italian>Solo Server e HC</Italian>
-            <Chinesesimp>只在伺服器或无头客户端</Chinesesimp>
+            <Chinesesimp>只在服务器或无头客户端</Chinesesimp>
             <Chinese>只在伺服器或無頭客戶端</Chinese>
-            <Korean>서버와 헤드리스만</Korean>
+            <Korean>서버와 헤드리스 전용</Korean>
             <Portuguese>Apenas Servidor e HC</Portuguese>
             <Czech>Pouze Server a HC</Czech>
             <Turkish>Sadece Sunucu ve HC de</Turkish>
