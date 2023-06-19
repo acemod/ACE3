@@ -48,7 +48,7 @@ GVAR(facilityClasses) = [];
 
 // Custom Arsenal tab
 if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
-    [call MEDICAL_TREATMENT_ITEMS, LELSTRING(medical,Category), ARSENAL_CATEGORY_ICON] call EFUNC(arsenal,addRightPanelButton);
+    [MEDICAL_TREATMENT_ITEMS, LELSTRING(medical,Category), ARSENAL_CATEGORY_ICON] call EFUNC(arsenal,addRightPanelButton);
 };
 
 ADDON = true;
