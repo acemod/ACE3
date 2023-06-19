@@ -25,7 +25,7 @@ _args params ["_medic", "_patient"];
 private _stitchableWounds = _patient call FUNC(getStitchableWounds);
 
 // Stop treatment if there are no wounds that can be stitched remaining
-if (count _stitchableWounds == 0) exitWith {false};
+if (_stitchableWounds isEqualTo createHashMap) exitWith {false};
 
 // Not enough time has elapsed to stitch a wound
 if (_totalTime - _elapsedTime > ([_patient, _patient] call FUNC(getStitchTime)) - GVAR(woundStitchTime)) exitWith {true};
@@ -85,7 +85,7 @@ if (
 // Consume a suture for the next wound if one exists, stop stitching if none are left
 if (GVAR(consumeSurgicalKit) == 2) then {
     // Don't consume a suture if there are no more wounds to stitch
-    if (count _stitchableWounds == 1) exitWith {false};
+    if (count (values _stitchableWounds) isEqualTo 1) exitWith {false};
     ([_medic, _patient, ["ACE_suture"]] call FUNC(useItem)) params ["_user"];
     !isNull _user
 } else {
