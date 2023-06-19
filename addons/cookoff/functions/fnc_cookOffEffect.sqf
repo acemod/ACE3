@@ -32,8 +32,10 @@ private _sound = objNull;
 if (isServer) then {
     // ironically biggest performance hit is this. Creating a new sound source takes up aprox 400 milliseconds.
     // I dont think there is an alternative that takes into effect distance and whatever, but if you find one please fix!
-    private _soundName = selectRandomWeighted [QGVAR(Sound_low), 0.1, QGVAR(Sound_mid), 0.25, QGVAR(Sound_high), 0.65];
-    _sound = createSoundSource [_soundName, position _obj, [], 0];
+    if (_jet || _ring) then {
+        private _soundName = selectRandomWeighted [QGVAR(Sound_low), 0.1, QGVAR(Sound_mid), 0.25, QGVAR(Sound_high), 0.65];
+        _sound = createSoundSource [_soundName, position _obj, [], 0];
+    };
 
     if (_ring) then {
         private _intensity = 6;

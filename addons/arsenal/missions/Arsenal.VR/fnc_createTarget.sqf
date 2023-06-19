@@ -1,4 +1,9 @@
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ *
+ * Public: No
+*/
 
 params ["_type", "_position", ["_group", grpNull], "_varName"];
 private _player = player;

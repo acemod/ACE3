@@ -57,7 +57,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Callable | Scripted way to add cargo to vehicle
 |`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle
-|`ace_cargoUnloaded` | [_item, _vehicle] | Global | Listen | Cargo has been Unloaded from vehicle
+|`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Listen | Cargo has been Unloaded from vehicle
 
 ### 2.5 Captives (`ace_captives`)
 
@@ -117,6 +117,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle
 |`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle.
+
+### 2.12 Trenches (`ace_trenches`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_trenches_placed` | [_unit, _trench] | Global | Listen | After trench object is placed by unit.
+| `ace_trenches_finished` | [_unit, _trench] | Global | Listen | After trench object is fully dug up by unit (100% progress).
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

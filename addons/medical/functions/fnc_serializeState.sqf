@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Serialized state as JSON string
+ * Serialized state as JSON string <STRING>
  *
  * Example:
  * [player] call ace_medical_fnc_serializeState

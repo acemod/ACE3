@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="HunterKiller">
+        <Key ID="STR_ACE_HunterKiller_displayName">
+            <English>Hunter Killer</English>
+            <Korean>헌터 킬러</Korean>
+            <Russian>Hunter Killer</Russian>
+            <Spanish>Hunter Killer</Spanish>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_override">
+            <English>Override</English>
+            <Korean>오버라이드</Korean>
+            <Russian>Указать</Russian>
+            <Spanish>Anular</Spanish>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_override_description">
+            <English>Force other turret to slew onto your viewpoint</English>
+            <Korean>다른 포탑이 시야에 오도록 강제합니다.</Korean>
+            <Russian>Повернуть другую турель туда, куда смотрит твоя</Russian>
+            <Spanish>Forzar otra torreta a dirigirse hacia tu zona de apuntado.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_observe">
+            <English>Observe</English>
+            <Korean>관측</Korean>
+            <Russian>Наблюдать</Russian>
+            <Spanish>Observar</Spanish>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_observe_description">
+            <English>Slew your turret onto other turret's viewpoint</English>
+            <Korean>포탑을 다른 포탑의 시야에 놓습니다.</Korean>
+            <Russian>Повернуть свою турель туда, куда смотрит другая</Russian>
+            <Spanish>Dirigir tu propia torreta hacia la zona de apuntado de otra torreta.</Spanish>
+        </Key>
+    </Package>
+</Project>

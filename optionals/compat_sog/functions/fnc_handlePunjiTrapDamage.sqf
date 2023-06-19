@@ -38,10 +38,20 @@ switch (typeOf _trap select [0, 16]) do {
         _bodyParts = ["LeftLeg", "RightLeg", "Body"];
         _stabCount = random [3, 5, 7];
     };
+    // Door way trap
+    case "vn_mine_punji_04": {
+        _bodyParts = ["Head", "Body"];
+        _stabCount = random [3, 5, 7];
+    };
+    // Side whip trap
+    case "vn_mine_punji_05": {
+        _bodyParts = ["LeftLeg", "RightLeg"];
+        _stabCount = random [3, 5, 7];
+    };
 };
 
 {
     for "_i" from 0 to _stabCount do {
         [_x, random [1, 2, 3], selectRandom _bodyParts, "stab", _instigator] call EFUNC(medical,addDamageToUnit);
     };
-} forEach _affectedUnits select {isDamageAllowed _x}; // isDamageAllowed already does local check
+} forEach (_affectedUnits select {isDamageAllowed _x}); // isDamageAllowed already does local check

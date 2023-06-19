@@ -68,7 +68,7 @@ class ACE_Medical_Injuries {
 
         // if 1, wounds are only applied to the hitpoint that took the most damage. othewrise, wounds are applied to all damaged hitpoints
         selectionSpecific = 1;
-        
+
         // list of damage handlers, which will be called in reverse order
         // each entry should be a SQF expression that returns a function
         // this can also be overridden for each damage type
@@ -80,7 +80,7 @@ class ACE_Medical_Injuries {
             // bullets only create multiple wounds when the damage is very high
             thresholds[] = {{20, 10}, {4.5, 2}, {3, 1}, {0, 1}};
             selectionSpecific = 1;
-            
+
             class Avulsion {
                 // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
                 // as with thresholds, but result is not rounded (decimal values used as-is)
@@ -268,6 +268,7 @@ class ACE_Medical_Injuries {
         class ropeburn {
             thresholds[] = {{0.1, 1}, {0.1, 0}};
             selectionSpecific = 1;
+            noBlood = 1;
             class Abrasion {
                 weighting[] = {{0.30, 1}};
             };
@@ -275,9 +276,11 @@ class ACE_Medical_Injuries {
         class drowning {
             //No related wounds as drowning should not cause wounds/bleeding. Can be extended for internal injuries if they are added.
             thresholds[] = {{0, 0}};
+            noBlood = 1;
             class woundHandlers {};
         };
         class fire {
+            noBlood = 1;
             // custom handling for environmental fire sources
             // passes damage to "burn" so doesn't need its own wound stats
             class woundHandlers {
@@ -287,6 +290,7 @@ class ACE_Medical_Injuries {
         class burn {
             thresholds[] = {{0, 1}};
             selectionSpecific = 0;
+            noBlood = 1;
             class ThermalBurn {
                 weighting[] = {{0, 1}};
             };

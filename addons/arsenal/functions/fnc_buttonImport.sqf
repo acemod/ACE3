@@ -39,8 +39,9 @@ if (GVAR(shiftState) && {is3DEN}) then {
     set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
 
 } else {
-    if (count _data == 10) then {
-        GVAR(center) setUnitLoadout _data;
+    private _count = count _data;
+    if (_count == 10 || { _count == 2 }) then {
+        [GVAR(center), _data] call CBA_fnc_setLoadout;
 
         GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
         for "_index" from 0 to 15 do {
@@ -92,8 +93,19 @@ if (GVAR(shiftState) && {is3DEN}) then {
         call FUNC(updateUniqueItemsList);
 
         // Reapply insignia
-        [GVAR(center), ""] call bis_fnc_setUnitInsignia;
-        [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
+        if (QGVAR(insignia) in _loadout#1) then {
+            GVAR(currentInsignia) = _loadout#1 getOrDefault [QGVAR(insignia), ""];
+        } else {
+            [GVAR(center), ""] call bis_fnc_setUnitInsignia;
+            [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
+        };
+
+        if (QGVAR(face) in _loadout#1) then {
+            GVAR(currentFace) = _loadout#1 getOrDefault [QGVAR(face), GVAR(currentFace)];
+        };
+        if (QGVAR(voice) in _loadout#1) then {
+            GVAR(currentVoice) = _loadout#1 getOrDefault [QGVAR(voice), GVAR(currentVoice)];
+        };
 
         [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
 

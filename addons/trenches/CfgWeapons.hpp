@@ -12,5 +12,7 @@ class CfgWeapons {
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
+
+        GVAR(entrenchingTool) = 1;
     };
 };

@@ -185,6 +185,7 @@ class vn_mine_ammobox_range_mag: vn_mine_m18_mag {
 
 // Punji large
 class vn_mine_punji_01_mag: vn_mine_m18_mag {
+    useAction = 0;
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_01);
 
     class ACE_Triggers {
@@ -203,4 +204,192 @@ class vn_mine_punji_02_mag: vn_mine_punji_01_mag {
 // Punji whip
 class vn_mine_punji_03_mag: vn_mine_punji_01_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_03);
+};
+
+// Punji door-way
+class vn_mine_punji_04_mag: vn_mine_m18_mag {
+    useAction = 0;
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_04);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            displayName = CSTRING(Action_DigIn);
+            digDistance = -2.14;
+        };
+    };
+};
+
+// Punji side whip
+class vn_mine_punji_05_mag: vn_mine_punji_04_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_05);
+
+    class ACE_Triggers: ACE_Triggers {
+        class PressurePlate: PressurePlate {
+            digDistance = 0;
+        };
+    };
+};
+
+// Bike mine (Remote)
+class vn_mine_bike_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bike);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {QGVAR(Command), QGVAR(MK16_Transmitter)};
+        class GVAR(Command) {
+            digDistance = 0;
+            fuseTime = 1;
+        };
+        class GVAR(MK16_Transmitter): GVAR(Command) {};
+    };
+};
+// Bike mine (Proximity)
+class vn_mine_bike_range_mag: vn_mine_bike_mag {
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
+};
+
+// Cartridge mine
+class vn_mine_cartridge_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(cartridge);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
+};
+
+// Lighter mine (Proximity)
+class vn_mine_lighter_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(lighter);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
+};
+
+// Pot mine (Remote)
+class vn_mine_pot_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(pot);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Command", "MK16_Transmitter"};
+        class Command {
+            digDistance = 0;
+            fuseTime = 1;
+        };
+        class MK16_Transmitter: Command {};
+    };
+};
+// Pot mine (Proximity)
+class vn_mine_pot_range_mag: vn_mine_pot_mag {
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
+};
+
+// Jerrycan mine (Remote)
+class vn_mine_jerrycan_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(jerrycan);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Command", "MK16_Transmitter"};
+        class Command {
+            digDistance = 0.02;
+            fuseTime = 1;
+        };
+        class MK16_Transmitter: Command {};
+    };
+};
+// Jerrycan mine (Proximity)
+class vn_mine_jerrycan_range_mag: vn_mine_jerrycan_mag {
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0.02;
+        };
+    };
+};
+
+// Mortar shell on a stick (Proximity)
+class vn_mine_mortar_range_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(mortar_range);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0.5;
+        };
+    };
+};
+
+// Limpet mine USA (Remote)
+class vn_mine_limpet_01_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(limpet_01);
+};
+
+// Limpet mine RUS (Remote)
+class vn_mine_limpet_02_mag: vn_mine_limpet_01_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(limpet_02);
+};
+
+// Chicom NO8 mine
+class vn_mine_chicom_no8_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(chicom_no8);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
+};
+
+// DH10 mine (Remote)
+class vn_mine_dh10_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(dh10);
+};
+// DH10 mine (Proximity)
+class vn_mine_dh10_range_mag: vn_mine_dh10_mag {
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0;
+        };
+    };
+};
+
+// Grenade board mine (Tripwire 4m)
+class vn_mine_gboard_range_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(gboard);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Tripwire"};
+        class Tripwire {
+            digDistance = 0;
+        };
+    };
+};
+
+// Satchel charge
+class vn_mine_satchelcharge_02_mag: vn_mine_satchel_remote_02_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(satchelcharge_02);
+};
+
+// Bangalore mine
+class vn_mine_bangalore_mag: vn_mine_satchel_remote_02_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bangalore);
 };

@@ -252,6 +252,18 @@ class CfgWeapons {
             mass = 15;
         };
     };
+    class ACE_suture: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(Suture_Display);
+        model = QPATHTOF(data\suture.p3d);
+        picture = QPATHTOF(ui\suture_ca.paa);
+        descriptionShort = CSTRING(Suture_Desc_Short);
+        descriptionUse = CSTRING(Suture_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
     class ACE_bodyBag: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);

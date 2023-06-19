@@ -74,10 +74,10 @@ if (_isRespawn) then {
     _unit setVariable [VAR_MEDICATIONS, [], true];
 
     // Unconscious spontanious wake up chance
-    _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil];
+    _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil, true];
 
     // Cause of death
-    _unit setVariable [QEGVAR(medical,causeOfDeath), nil];
+    _unit setVariable [QEGVAR(medical,causeOfDeath), nil, true];
 };
 
 [{

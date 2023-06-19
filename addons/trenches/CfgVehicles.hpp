@@ -16,6 +16,11 @@ class CBA_Extended_EventHandlers;
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canRemoveTrench)); \
                 statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench);); \
             }; \
+            class ACE_CamouflageTrench { \
+                displayName = CSTRING(CamouflageTrench); \
+                condition = QUOTE([ARR_2(_target,_player)] call FUNC(canCamouflageTrench)); \
+                statement = QUOTE([ARR_2(_target,_player)] call FUNC(camouflageTrench)); \
+            }; \
         }; \
     }
 
@@ -62,6 +67,8 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
+        hiddenSelections[] = {"velka"};
+        hiddenSelectionsTextures[] = {"a3\map_data\gdt_mud_co.paa"};
     };
     class ACE_envelope_big: BagFence_base_F {
         author = ECSTRING(common,ACETeam);
@@ -78,6 +85,8 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
+        hiddenSelections[] = {"velka"};
+        hiddenSelectionsTextures[] = {"a3\map_data\gdt_mud_co.paa"};
     };
 
     class ACE_envelope_small_NoGeo: ACE_envelope_small {

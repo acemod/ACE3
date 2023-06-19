@@ -14,15 +14,23 @@
  *  0: Angle <Number>
  *  1: Range <Number>
  *  2: Damage <Number>
+ *  3: Offset <Number>
  *
  * Example:
- * ["cannon_125mm","Sh_125mm_APFSDS_T_Green","24Rnd_125mm_APFSDS_T_Green"] call ace_overpressure_fnc_cacheOverPressureValues
+ * ["cannon_125mm","Sh_125mm_APFSDS_T_Green","24Rnd_125mm_APFSDS_T_Green"] call ace_overpressure_fnc_getOverPressureValues
  *
  * Public: No
  */
 
 params ["_weapon", "_ammo", "_magazine"];
 TRACE_3("Parameter",_weapon,_magazine,_ammo);
+
+// Check cache for weapon/ammo/mag combo
+private _return = GVAR(cacheHash) get _this;
+if (!isNil "_return") exitWith {
+    TRACE_3("CacheHit",_weapon,_magazine,_ammo);
+    _return
+};
 
 // get Priority Array from Config
 private _array = [
@@ -43,15 +51,15 @@ private _config = [
 ] select _indexOfMaxPriority;
 TRACE_1("ConfigPath",_config);
 
-// get the Variables out of the Configes and create a array with then
-private _return = [
+// get the Variables out of the Configs and populate return array with them
+_return = [
     (getNumber (_config >> QGVAR(angle))),
     (getNumber (_config >> QGVAR(range))) * GVAR(distanceCoefficient),
-    (getNumber (_config >> QGVAR(damage)))
+    (getNumber (_config >> QGVAR(damage))),
+    (getNumber (_config >> QGVAR(offset)))
 ];
 
-private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-missionNameSpace setVariable [_varName, _return];
-TRACE_2("Return",_varName,_return);
+GVAR(cacheHash) set [_this, _return];
+TRACE_2("Return",_this,_return);
 
 _return
