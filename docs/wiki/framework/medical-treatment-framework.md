@@ -40,15 +40,10 @@ class CfgVehicles {
 ```
 ### 1.3 Treatment Items
 
-Items in `CfgWeapons` and `CfgMagazines` with `ACE_isMedicalItem` property will be added to the ACE Medical category in the ACE Arsenal.
+Items in `CfgWeapons` with `ACE_isMedicalItem` property will be added to the ACE Medical category in the ACE Arsenal.
 ```cpp
 class CfgWeapons {
     class MyMedicalItem {
-        ACE_isMedicalItem = 1;
-    };
-};
-class CfgMagazines {
-    class MyOtherMedicalitem {
         ACE_isMedicalItem = 1;
     };
 };
