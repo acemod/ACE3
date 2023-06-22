@@ -25,4 +25,11 @@ private _class = _unit getVariable ["ACE_IsEngineer", _unit getUnitTrait "engine
 if (_class isEqualType false) then {_class = [0, 1] select _class};
 
 TRACE_3("isEngineer",_unit,_engineerN,_class);
-_class >= _engineerN;
+if (_class >= _engineerN) exitWith {true};
+if (!GVAR(locationsBoostTraining)) exitWith {false};
+
+if ([_unit] call FUNC(isInRepairFacility) || {[_unit] call FUNC(isNearRepairVehicle)}) then {
+    _class = _class + 1; // Boost engineer training by one: untrained becomes engineer, engineer becomes advanced engineer
+};
+
+_class >= _engineerN

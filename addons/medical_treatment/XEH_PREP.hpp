@@ -53,6 +53,7 @@ PREP(setTriageStatus);
 PREP(splint);
 PREP(splintLocal);
 PREP(surgicalKitProgress);
+PREP(surgicalKitStart);
 PREP(tourniquet);
 PREP(tourniquetLocal);
 PREP(tourniquetRemove);

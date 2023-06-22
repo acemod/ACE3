@@ -35,7 +35,10 @@ if (_item  isEqualType "") then {
 } else {
     _validItem =
         (alive _item) &&
-        {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}};
+        {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}} &&
+        {!(_item getVariable [QEGVAR(cookoff,isCookingOff), false])} &&
+        {isNull(_item getVariable [QEGVAR(refuel,nozzle), objNull])} && // Objects which have a refueling nozzle connected to them cannot be loaded
+        {isNull(_item getVariable [QEGVAR(refuel,ownedNozzle), objNull])}; // Fuel sources which have their nozzle out cannot be loaded
 };
 
 _validItem &&

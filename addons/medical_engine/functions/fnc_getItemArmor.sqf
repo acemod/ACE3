@@ -19,22 +19,26 @@
 params ["_item", "_hitpoint"];
 
 private _key = format ["%1$%2", _item, _hitpoint];
-private _armor = GVAR(armorCache) getVariable _key;
+private _armor = GVAR(armorCache) get _key;
 
 if (isNil "_armor") then {
     TRACE_2("Cache miss",_item,_hitpoint);
     if ("" in [_item, _hitpoint]) exitWith {
         _armor = 0;
-        GVAR(armorCache) setVariable [_key, _armor];
+        GVAR(armorCache) set [_key, _armor];
     };
 
     private _itemInfo = configFile >> "CfgWeapons" >> _item >> "ItemInfo";
 
     if (getNumber (_itemInfo >> "type") == TYPE_UNIFORM) then {
         private _unitCfg = configFile >> "CfgVehicles" >> getText (_itemInfo >> "uniformClass");
-        private _entry = _unitCfg >> "HitPoints" >> _hitpoint;
-
-        _armor = getNumber (_unitCfg >> "armor") * getNumber (_entry >> "armor")
+        if (_hitpoint == "#structural") then {
+            // TODO: I'm not sure if this should be multiplied by the base armor value or not
+            _armor = getNumber (_unitCfg >> "armorStructural");
+        } else {
+            private _entry = _unitCfg >> "HitPoints" >> _hitpoint;
+            _armor = getNumber (_unitCfg >> "armor") * (1 max getNumber (_entry >> "armor"));
+        };
     } else {
         private _condition = format ["getText (_x >> 'hitpointName') == '%1'", _hitpoint];
         private _entry = configProperties [_itemInfo >> "HitpointsProtectionInfo", _condition] param [0, configNull];
@@ -42,7 +46,7 @@ if (isNil "_armor") then {
         _armor = getNumber (_entry >> "armor");
     };
 
-    GVAR(armorCache) setVariable [_key, _armor];
+    GVAR(armorCache) set [_key, _armor];
 };
 
 _armor // return

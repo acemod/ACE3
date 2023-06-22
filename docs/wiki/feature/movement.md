@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Movement
+component: movement
 description: Movement improvements.
 group: feature
 category: realism
@@ -40,7 +41,3 @@ The player can now use the sights of rifles and pistols in all prone stances.
 - Approach what you want to climb.
 - Press <kbd>ctrl</kbd> + <kbd>V</kbd> (ACE3 default key bind `Climb`).
 - Note that when climbing your character will put his weapon on his back.
-
-## Dependencies
-
-{% include dependencies_list.md component="movement" %}

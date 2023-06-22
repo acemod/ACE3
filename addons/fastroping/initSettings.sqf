@@ -1,6 +1,4 @@
-// CBA Settings [ADDON: ace_fastroping]:
-
-private _category = ["ACE Uncategorized", LLSTRING(setting_categoryMenu_displayName)];
+private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(setting_categoryMenu_displayName)];
 
 [
     QGVAR(requireRopeItems), "CHECKBOX",

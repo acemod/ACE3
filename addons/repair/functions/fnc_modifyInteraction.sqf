@@ -24,4 +24,4 @@ params ["_target", "", "", "_actionData"];
 private _color = ceil linearConversion [0, 1, damage _target, 0, 8, true];
 TRACE_2("Modifying icon color",_target,_color);
 (_actionData select 2) set [1, DAMAGE_COLOR_SCALE select _color];
-    
+

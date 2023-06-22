@@ -41,13 +41,14 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
     private _className = configName _x;
     private _hasItemInfo = isClass (_configItemInfo);
     private _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
+    private _isMiscItem = _className isKindOf ["CBA_MiscItem", (_configCfgWeapons)];
 
     switch true do {
         /* Weapon acc */
         case (
                 _hasItemInfo &&
                 {_itemInfoType in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} &&
-                {!(configName _x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}
+                {!_isMiscItem}
             ): {
 
             //Convert type to array index
@@ -117,7 +118,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         case (
                 _hasItemInfo &&
                 (_itemInfoType in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD] &&
-                {(_className isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
+                {_isMiscItem}) ||
                 {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
                 {(getText ( _x >> "simulation")) == "ItemMineDetector"}
             ): {
@@ -140,15 +141,6 @@ private _putList = [];
     private _className = configName _x;
 
     switch true do {
-        // Rifle, handgun, secondary weapons mags
-        case (
-                ((getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL,TYPE_MAGAZINE_MISSILE]) ||
-                {(getNumber (_x >> QGVAR(hide))) == -1}) &&
-                {!(_className in _grenadeList)} &&
-                {!(_className in _putList)}
-            ): {
-            (_cargo select 2) pushBackUnique _className;
-        };
         // Grenades
         case (_className in _grenadeList): {
             (_cargo select 15) pushBackUnique _className;
@@ -156,6 +148,13 @@ private _putList = [];
         // Put
         case (_className in _putList): {
             (_cargo select 16) pushBackUnique _className;
+        };
+        // Rifle, handgun, secondary weapons mags
+        case (
+                ((getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL,TYPE_MAGAZINE_MISSILE]) ||
+                {(getNumber (_x >> QGVAR(hide))) == -1})
+            ): {
+            (_cargo select 2) pushBackUnique _className;
         };
     };
 } foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
@@ -170,7 +169,7 @@ private _putList = [];
     (_cargo select 7) pushBackUnique (configName _x);
 } foreach configProperties [(configFile >> "CfgGlasses"), "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
-private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
+private _magazineGroups = createHashMap;
 
 private _cfgMagazines = configFile >> "CfgMagazines";
 
@@ -182,8 +181,9 @@ private _cfgMagazines = configFile >> "CfgMagazines";
         _magList append _magazines;
     } foreach configProperties [_x, "isArray _x", true];
 
-    [_magazineGroups, toLower configName _x, _magList arrayIntersect _magList] call CBA_fnc_hashSet;
+    _magazineGroups set [toLower configName _x, _magList arrayIntersect _magList];
 } foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
 
 uiNamespace setVariable [QGVAR(configItems), _cargo];
+uiNamespace setVariable [QGVAR(configItemsFlat), flatten _cargo];
 uiNamespace setVariable [QGVAR(magazineGroups), _magazineGroups];

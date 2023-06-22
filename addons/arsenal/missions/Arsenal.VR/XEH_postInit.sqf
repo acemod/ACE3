@@ -27,7 +27,7 @@ cba_diagnostic_projectileMaxLines = 10;
     {
         _x enableSimulation false;
         _x hideObject true;
-    } forEach (allMissionObjects "" - [_player]);
+    } forEach (allMissionObjects "" - [_player] - attachedObjects _player);
 
     if ((_player getVariable ["cba_projectile_firedEhId", -1]) != -1) then {
         _player call CBA_fnc_removeUnitTrackProjectiles;
@@ -54,7 +54,7 @@ cba_diagnostic_projectileMaxLines = 10;
                     ] call BIS_fnc_GUImessage;
 
                     if (_return) then {
-                        profileNamespace setVariable [QGVAR(missionLastLoadout), getUnitLoadout player];
+                        profileNamespace setVariable [QGVAR(missionLastLoadout), [player] call CBA_fnc_getLoadout];
                         _display closeDisplay 2;
                         findDisplay 46 closeDisplay 0;
                     };

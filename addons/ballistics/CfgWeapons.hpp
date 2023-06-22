@@ -13,7 +13,7 @@ class CfgWeapons {
         ACE_barrelTwist = 381.0;
         initSpeed = -1.0;
         magazineWell[] += {
-            "CBA_50BMG_M107"
+            "CBA_50BMG_AS50"
         }; // empty in vanilla
     };
 
@@ -59,7 +59,7 @@ class CfgWeapons {
         ACE_barrelTwist = 254.0;
         initSpeed = -0.991536;
         magazineWell[] += {
-            "CBA_762x51_M14"
+            "CBA_762x51_SR25"
         }; // vanilla magazineWell[] = {"M14_762x51"};
     };
 
@@ -101,7 +101,7 @@ class CfgWeapons {
     // Rifle_Long_Base_F MG
     // Stoner 99 LMG
     class LMG_Mk200_F: Rifle_Long_Base_F {
-        ACE_barrelLength = 317.5;
+        ACE_barrelLength = 381;
         ACE_barrelTwist = 177.8;
         initSpeed = -0.999327;
     };
@@ -152,6 +152,34 @@ class CfgWeapons {
         ACE_barrelLength = 457.2;
         ACE_barrelTwist = 228.6;
         initSpeed = -1.0;
+        magazines[] += { // 6.5C Rechambering, MXM only
+            "ACE_30Rnd_65_Creedmor_mag",
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_30Rnd_65_Creedmor_black_mag",
+            "ACE_30Rnd_65_Creedmor_khaki_mag",
+            "ACE_30Rnd_65x47_Scenar_black_mag",
+            "ACE_30Rnd_65x47_Scenar_khaki_mag"
+        };
+    };
+    class arifle_MXM_Black_F: arifle_MXM_F { // bleh inheritance
+        magazines[] += {
+            "ACE_30Rnd_65_Creedmor_mag",
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_30Rnd_65_Creedmor_black_mag",
+            "ACE_30Rnd_65_Creedmor_khaki_mag",
+            "ACE_30Rnd_65x47_Scenar_black_mag",
+            "ACE_30Rnd_65x47_Scenar_khaki_mag"
+        };
+    };
+    class arifle_MXM_khk_F: arifle_MXM_Black_F {
+        magazines[] += {
+            "ACE_30Rnd_65_Creedmor_mag",
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_30Rnd_65_Creedmor_black_mag",
+            "ACE_30Rnd_65_Creedmor_khaki_mag",
+            "ACE_30Rnd_65x47_Scenar_black_mag",
+            "ACE_30Rnd_65x47_Scenar_khaki_mag"
+        };
     };
 
     // MX
@@ -329,6 +357,10 @@ class CfgWeapons {
     class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F {
         ACE_barrelLength = 508; // 20"
         initSpeed = -1.007752; // 774*1.007752= 780 m/s according with the ACE_muzzleVelocities at 15°C
+        magazines[] += { // 6.5C Rechambering, only available for Grot MR
+            "ACE_30Rnd_65_Creedmor_msbs_mag",
+            "ACE_30Rnd_65x47_Scenar_msbs_mag"
+        };
     };
 
     // QBZ-95-1

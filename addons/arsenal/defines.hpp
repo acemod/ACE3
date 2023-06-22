@@ -176,6 +176,13 @@
 #define IDX_VIRT_VEST 5
 #define IDX_VIRT_BACKPACK 6
 #define IDX_VIRT_GOGGLES 7
+#define IDX_VIRT_NVG 8
+#define IDX_VIRT_BINO 9
+#define IDX_VIRT_MAP 10
+#define IDX_VIRT_COMPASS 11
+#define IDX_VIRT_RADIO 12
+#define IDX_VIRT_WATCH 13
+#define IDX_VIRT_COMMS 14
 
 #define SYMBOL_ITEM_NONE "−"
 #define SYMBOL_ITEM_REMOVE "×"
