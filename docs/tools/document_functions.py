@@ -161,7 +161,7 @@ class FunctionFile:
 
         arguments = []
         for argument in lines:
-            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w,\|]+?)\>( \([Oo]ptional\))?(\s\(default: (.+)\))?$", argument)
+            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w,\|]+?)\>( )?(\s\(default: (.+)\))?$", argument)
 
             if valid:
                 arg_index = valid.group(1)
@@ -278,7 +278,6 @@ def get_component_name(addons_dir, component):
     return name, errors
 
 
-
 def document_functions(addons_dir, components):
     errors = 0
 
@@ -293,16 +292,17 @@ def document_functions(addons_dir, components):
 
         output = os.path.join(wiki_dir, component) + ".md"
         with open(output, "w", encoding="utf-8") as file:
+            file.writelines([
+                "---\n",
+                "layout: wiki\n",
+                "title: {} Functions\n".format(component_name),
+                "description: List of functions in {} component.\n".format(component_name),
+                "group: functions\n",
+                "parent: wiki\n",
+                "---\n",
+            ])
+
             for function in components[component]:
-                file.writelines([
-                    "---\n",
-                    "layout: wiki\n",
-                    "title: {} Functions\n".format(component_name),
-                    "description: List of functions in {} component.\n".format(component_name),
-                    "group: functions\n",
-                    "parent: wiki\n",
-                    "---\n",
-                ])
                 file.write(function.document(component))
 
     return errors
@@ -334,8 +334,9 @@ def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
                 else:
                     errors += 1
 
-    print()
-    errors += document_functions(addons_dir, components)
+    if not debug:
+        print()
+        errors += document_functions(addons_dir, components)
 
     if errors != 0:
         print("\n  Unclean!\n    {} errors".format(errors))

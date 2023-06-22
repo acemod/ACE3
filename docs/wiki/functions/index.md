@@ -8,7 +8,7 @@ parent: wiki
 ---
 
 <style type="text/css">
-  ul {
+  ul.columns {
     columns: 2;
   }
 </style>
@@ -22,7 +22,7 @@ parent: wiki
 <div class="row">
     <div class="large-12 columns">
         <nav>
-            <ul>
+            <ul class="columns">
                 {% assign pages_list = site.pages | sort: "title" %}
                 {% assign group = 'functions' %}
                 {% include pages_list %}
