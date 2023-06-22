@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 0: Target (ACE_DefuseObject) <OBJECT>
+ * 1: Target (ACE_DefuseObject) <OBJECT>
  *
  * Return Value:
  * Able to defuse <BOOL>

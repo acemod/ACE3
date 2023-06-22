@@ -68,7 +68,7 @@ class ACE_Medical_Injuries {
 
         // if 1, wounds are only applied to the hitpoint that took the most damage. othewrise, wounds are applied to all damaged hitpoints
         selectionSpecific = 1;
-        
+
         // list of damage handlers, which will be called in reverse order
         // each entry should be a SQF expression that returns a function
         // this can also be overridden for each damage type
@@ -80,7 +80,7 @@ class ACE_Medical_Injuries {
             // bullets only create multiple wounds when the damage is very high
             thresholds[] = {{20, 10}, {4.5, 2}, {3, 1}, {0, 1}};
             selectionSpecific = 1;
-            
+
             class Avulsion {
                 // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
                 // as with thresholds, but result is not rounded (decimal values used as-is)
@@ -193,25 +193,40 @@ class ACE_Medical_Injuries {
             };
         };
         class collision {
-            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            thresholds[] = {{8, 4}, {1, 1}, {0.3, 1}, {0.15, 0.5}, {0, 0.3}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
-            class Abrasion {
-                weighting[] = {{0.30, 0}, {0.30, 1}};
-            };
             class Avulsion {
                 weighting[] = {{1, 2}, {0.5, 0.5}, {0.5, 0}};
             };
+            class Abrasion {
+                weighting[] = {{0.4, 0}, {0.2, 1}, {0, 0}};
+            };
             class Contusion {
-                weighting[] = {{0.35, 0}, {0.35, 1}};
+                weighting[] = {{0.4, 0}, {0.2, 1}};
             };
             class Crush {
-                weighting[] = {{0.1, 1}, {0.1, 0}};
+                weighting[] = {{0.4, 1}, {0.2, 0}};
             };
             class Cut {
                 weighting[] = {{0.1, 1}, {0.1, 0}};
             };
             class Laceration {
-
+            };
+        };
+        class falling {
+            thresholds[] = {{8, 4}, {1, 1}, {0.2, 1}, {0.1, 0.7}, {0, 0.5}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            selectionSpecific = 0;
+            class Abrasion {
+                weighting[] = {{0.4, 0}, {0.2, 1}, {0, 0}};
+                sizeMultiplier = 3;
+            };
+            class Contusion {
+                weighting[] = {{0.4, 0}, {0.2, 1}};
+                sizeMultiplier = 3;
+            };
+            class Crush {
+                weighting[] = {{0.4, 1}, {0.2, 0}};
+                sizeMultiplier = 1.5;
             };
         };
         class backblast {
@@ -250,22 +265,10 @@ class ACE_Medical_Injuries {
 
             };
         };
-        class falling {
-            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
-            selectionSpecific = 0;
-            class Abrasion {
-                weighting[] = {{0.30, 0}, {0.30, 1}};
-            };
-            class Contusion {
-                weighting[] = {{0.35, 0}, {0.35, 1}};
-            };
-            class Crush {
-                weighting[] = {{0.1, 1}, {0.1, 0}};
-            };
-        };
         class ropeburn {
             thresholds[] = {{0.1, 1}, {0.1, 0}};
             selectionSpecific = 1;
+            noBlood = 1;
             class Abrasion {
                 weighting[] = {{0.30, 1}};
             };
@@ -273,9 +276,11 @@ class ACE_Medical_Injuries {
         class drowning {
             //No related wounds as drowning should not cause wounds/bleeding. Can be extended for internal injuries if they are added.
             thresholds[] = {{0, 0}};
+            noBlood = 1;
             class woundHandlers {};
         };
         class fire {
+            noBlood = 1;
             // custom handling for environmental fire sources
             // passes damage to "burn" so doesn't need its own wound stats
             class woundHandlers {
@@ -285,6 +290,7 @@ class ACE_Medical_Injuries {
         class burn {
             thresholds[] = {{0, 1}};
             selectionSpecific = 0;
+            noBlood = 1;
             class ThermalBurn {
                 weighting[] = {{0, 1}};
             };

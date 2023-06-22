@@ -265,11 +265,11 @@ class CfgVehicles {
     };
     class VTOL_Base_F;
     class VTOL_01_base_F: VTOL_Base_F {
-        GVAR(space) = 4;
+        GVAR(space) = 20;
         GVAR(hasCargo) = 1;
     };
     class VTOL_02_base_F: VTOL_Base_F {
-        GVAR(space) = 4;
+        GVAR(space) = 10;
         GVAR(hasCargo) = 1;
     };
 
@@ -320,6 +320,11 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
+    };
+
+    // Invisible Target Soldier
+    class TargetSoldierBase: StaticWeapon {
+        GVAR(canLoad) = 0;
     };
 
     class StaticMortar;

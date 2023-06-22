@@ -211,6 +211,13 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {340, 370, 400};
         ACE_barrelLengths[] = {101.6, 127.0, 228.6};
     };
+    class rhs_ammo_he_fragments: BulletBase { // Shrapnel, compatibility with medical_damage
+        ACE_damageType = "grenade";
+    };
+    class B_12Gauge_Slug;
+    class rhs_ammo_12g_FRAG: B_12Gauge_Slug { // Frag rounds, compatibility with medical_damage
+        ACE_damageType = "grenade";
+    };
 
     class Sh_125mm_APFSDS;
     class rhsusf_ammo_basic_penetrator: Sh_125mm_APFSDS {
@@ -248,6 +255,11 @@ class CfgAmmo {
     class B_30mm_APFSDS_Tracer_Red;
     class rhs_ammo_PGU14B_API: B_30mm_APFSDS_Tracer_Red {
         EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class SubmunitionBase;
+    class rhs_ammo_30x173mm_GAU8_mixed: SubmunitionBase {
+        EGVAR(rearm,caliber) = 30;
     };
 
     class M_Titan_AT;

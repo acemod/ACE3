@@ -59,10 +59,11 @@ GVAR(lastSortRight) = "";
     if (!isNil QGVAR(currentLoadoutsTab) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
         private _curSelData =_contentPanelCtrl lnbData [(lnbCurSelRow _contentPanelCtrl), 1];
-        ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];
+        ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount"];
 
         private _newRow = _contentPanelCtrl lnbAddRow [_playerName, _loadoutName];
 
+        _extendedLoadout params ["_loadout"];
         ADD_LOADOUTS_LIST_PICTURES
 
         _contentPanelCtrl lnbSetData [[_newRow, 1], _playerName + _loadoutName];
@@ -83,5 +84,22 @@ GVAR(lastSortRight) = "";
         for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
             if ((_contentPanelCtrl lnbText [_i, 1]) == _curSelData) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
         };
+    };
+}] call CBA_fnc_addEventHandler;
+
+["CBA_loadoutSet", {
+    params ["_unit", "_loadout", "_extendedInfo"];
+    private _face = _extendedInfo getOrDefault [QGVAR(face), ""];
+    if (_face != "") then {
+        _unit setFace _face;
+    };
+    private _voice = _extendedInfo getOrDefault [QGVAR(voice), ""];
+    if (_voice != "") then {
+        _unit setSpeaker _voice;
+    };
+    private _insignia = _extendedInfo getOrDefault [QGVAR(insignia), ""];
+    if (_insignia != "") then {
+        _unit setVariable ["BIS_fnc_setUnitInsignia_class", nil];
+        [_unit, _insignia] call bis_fnc_setUnitInsignia;
     };
 }] call CBA_fnc_addEventHandler;
