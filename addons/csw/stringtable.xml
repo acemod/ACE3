@@ -303,6 +303,36 @@
             <Russian>После развертывания начать тащить треногу на другое место</Russian>
             <Korean>조립 후 위치선정을 위해 배치하지 않고 끌고다닙니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_CSW_replaceTurrentAmmoWithCSW_displayName">
+            <English>Replace turrent ammo with CSW mags</English>
+            <German></German>
+            <Portuguese></Portuguese>
+            <French></French>
+            <Japanese></Japanese>
+            <Chinese></Chinese>
+            <Chinesesimp></Chinesesimp>
+            <Italian></Italian>
+            <Czech></Czech>
+            <Polish></Polish>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <Korean></Korean>
+        </Key>
+        <Key ID="STR_ACE_CSW_replaceTurrentAmmoWithCSW_description">
+            <English>Turrent ammo will be replaced with CSW mags in the vehicle's cargo</English>
+            <German></German>
+            <Portuguese></Portuguese>
+            <French></French>
+            <Japanese></Japanese>
+            <Chinese></Chinese>
+            <Chinesesimp></Chinesesimp>
+            <Italian></Italian>
+            <Czech></Czech>
+            <Polish></Polish>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <Korean></Korean>
+        </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
             <German>Dreibein aufnehmen</German>
