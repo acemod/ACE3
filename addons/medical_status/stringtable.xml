@@ -19,7 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
-            <Russian>Коэффициент кровопотери</Russian>
+            <Russian>Коэф. кровопотери</Russian>
             <Polish>Mnożnik krwawienia</Polish>
             <Spanish>Coeficiente de sangrado</Spanish>
             <German>Verblutungsmultiplikator</German>
@@ -53,7 +53,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_DisplayName">
             <English>Pain Coefficient</English>
-            <Russian>Коэффициент боли</Russian>
+            <Russian>Коэф. боли</Russian>
             <Polish>Mnożnik bólu</Polish>
             <Spanish>Coeficiente de dolor</Spanish>
             <German>Schmerzmultiplikator</German>

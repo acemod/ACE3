@@ -125,6 +125,8 @@
             <German>Bei Einstellung auf 0 werden die Standard-Videoeinstellungen verwendet.</German>
             <Polish>Ustawienie na 0, spowoduje użycie domyślnych ustawień wideo.</Polish>
             <Japanese>0に設定すると、デフォルトのビデオ設定が使用されます</Japanese>
+            <Russian>Значение 0 будет использовать настройки видео по умолчанию</Russian>
+            <Spanish>Establecer a 0 utiliza las opciones de video por defecto</Spanish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
