@@ -155,6 +155,7 @@ RcINS
 Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
+RusComBear
 Rutger "RedBery" Meijering <c.redbery@gmail.com>
 sancron
 Schwaggot <tom.ryan@posteo.de>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Engine">
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_DisplayName">
@@ -22,6 +22,38 @@
             <German>Kontrolliert, ob Besatzung eines Fahrzeugs Schaden durch Unfälle erleiden soll</German>
             <Chinesesimp>控制乘员是否受到车辆碰撞的伤害。</Chinesesimp>
             <Korean>차량 충돌로 인해 탑승인원들이 피해를 받을 지 결정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_ConsiderSelectAIPlayersForMedical_DisplayName">
+            <English>Consider select AIs as players</English>
+            <Russian>Считать определённых ботов игроками</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_ConsiderSelectAIPlayersForMedical_Description">
+            <English>Turning on this option will make select AIs considered as players for medical system.\nAffected AIs will use player settings for fatal injuries and critical damage threshold, as well as will be able to go unconscious regardless of AI settings.</English>
+            <Russian>При включении этой опции определённые боты будут считаться игроками для медицинской системы.\nЗатронутые боты будут использовать натройки игроков для смертельных травм и порога критического урона, а также смогут терять сознание вне зависимости от настройки ИИ.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_AllPlayables">
+            <English>All playable AIs</English>
+            <Russian>Все играбельные боты</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_AllPlayerSquadmates">
+            <English>All AIs in player squad</English>
+            <Russian>Все ИИ в отряде с игроком</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_OverrideAIMedicalSettings_DisplayName">
+            <English>Medical settings for AI</English>
+            <Russian>Настройки медицины для ИИ</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_OverrideAIMedicalSettings_Description">
+            <English>Non-default options will override mission settings for this unit and make him considered as either player or AI for medical system.\nThis will affect fatal injuries, default critical damage threshold and ability to go unconscious ("Players" can always go unconscious regardless of AI settings).\nThis attribute won't affect players.</English>
+            <Russian>Опции кроме по умолчанию перезапишут настройки миссии для этого юнита и он будет считаться либо игроком, либо ИИ для медицинской системы.\nЭто повлияет на смертельные травмы, стандартный порог критического урона и возможность терять сознание ("Игроки" всегда могут терять сознание вне зависимости от настроек ИИ).\nЭтот атрибут не влияет на игроков.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_OverrideAIMedicalSettings_AlwaysPlayer">
+            <English>Consider as player</English>
+            <Russian>Считать игроком</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_OverrideAIMedicalSettings_AlwaysAI">
+            <English>Consider as AI</English>
+            <Russian>Считать ИИ</Russian>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,5 @@
 PREP(applyAnimAfterRagdoll);
+PREP(conditionIsConsideredPlayer);
 PREP(damageBodyPart);
 PREP(disableThirdParty);
 PREP(getHitpointArmor);
