@@ -40,7 +40,7 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
                     INFO_1("Clear cached variables on event: %1",_eventName);
                 #endif
                 // Get the list of caches to clear
-                //IGNORE_PRIVATE_WARNING ["_eventName"]; 
+                //IGNORE_PRIVATE_WARNING ["_eventName"];
                 // _eventName is defined on the function that calls the event
                 private _varName = format [QGVAR(clearCache_%1), _eventName];
                 private _cacheList = missionNamespace getVariable [_varName, []];

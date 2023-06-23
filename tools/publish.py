@@ -147,6 +147,12 @@ def main(argv):
     #tracers: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202414450
     publishFolder(os.path.join(ace_optionals_dir,"@ace_tracers"), "2202414450", changelog_path)
 
+    #ace_compat_gm: - https://steamcommunity.com/sharedfiles/filedetails/?id=2633534991
+    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_gm"), "2633534991", changelog_path)
+
+    #ace_compat_sog: - https://steamcommunity.com/sharedfiles/filedetails/?id=2633537792
+    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_sog"), "2633537792", changelog_path)
+
 
 
 

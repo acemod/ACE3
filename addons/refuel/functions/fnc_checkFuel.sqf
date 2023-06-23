@@ -21,7 +21,7 @@ params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
 private _fuel = [_source] call FUNC(getFuel);
 
 [
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION * 2),
+    GVAR(progressDuration) * 2,
     [_unit, _source, _fuel],
     {
         params ["_args"];

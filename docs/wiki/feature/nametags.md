@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Nametags
+component: nametags
 description: Name tags above other players.
 group: feature
 category: interaction
@@ -19,7 +20,3 @@ Adds nametags and soldier ranks to friendly players in multiplayer. This can be 
 
 ### 1.2 Arma 3 VON, ACRE and TFAR soundwaves
 A soundwave effect is shown when someone is speaking using either the vanilla VON, ACRE 1 or 2 and TFAR.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="nametags" %}

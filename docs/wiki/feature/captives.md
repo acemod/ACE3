@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Captives
+component: captives
 description: System for taking and handling captives.
 group: feature
 category: interaction
@@ -47,7 +48,3 @@ Allows players to surrender. It renders the unit unable to move and with the han
 - Select `Passengers`.
 - Select the captive.
 - Select `Unload captive`.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="captives" %}

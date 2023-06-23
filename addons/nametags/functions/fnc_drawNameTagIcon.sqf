@@ -29,19 +29,26 @@ _fnc_parameters = {
     params ["_player", "_target", "_alpha", "_heightOffset", "_drawName", "_drawRank", "_drawSoundwave"];
 
     //Set Icon:
-    private _icon = "";
-    if (_drawSoundwave) then {
-        _icon = format [QPATHTOF(UI\soundwave%1.paa), floor random 10];
-    } else {
-        if (_drawRank) then {
-            _icon = _target getVariable "ace_nametags_rankIcon";
-            if (isNil "_icon" && {rank _target != ""}) then {
-                _icon = GVAR(factionRanks) getVariable (_target getVariable [QGVAR(faction), faction _target]);
-                if (!isNil "_icon") then {
-                    _icon = _icon param [ALL_RANKS find rank _target, ""];
-                } else {
-                    _icon = format ["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", rank _target];
-                };
+    private _targetIcon = _target getVariable QGVAR(rankIcon);
+
+    private _icon = switch true do {
+        case _drawSoundwave: {
+            format [QPATHTOF(UI\soundwave%1.paa), floor random 10]
+        };
+
+        case !_drawRank: {""};
+        case !isNil "_targetIcon": {_targetIcon};
+        case (rank _target == ""): {""};
+
+        default {
+            private _targetFaction = _target getVariable [QGVAR(faction), faction _target];
+            private _customRankIcons = GVAR(factionRanks) getVariable _targetFaction;
+
+            if (!isNil "_customRankIcons") then {
+                _customRankIcons param [ALL_RANKS find rank _target, ""] // return
+            } else {
+                // default rank icons
+                format ["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", rank _target] // return
             };
         };
     };

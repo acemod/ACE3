@@ -20,7 +20,7 @@
  */
 
 params ["_args", "_elapsedTime", "_totalTime"];
-_args params ["", "_patient"];
+_args params ["_medic", "_patient"];
 
 private _stitchableWounds = _patient call FUNC(getStitchableWounds);
 
@@ -35,7 +35,7 @@ private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
 
 // Remove the first stitchable wound from the bandaged wounds
 private _treatedWound = _bandagedWounds deleteAt (_bandagedWounds find (_stitchableWounds select 0));
-_treatedWound params ["_treatedID", "_treatedBodyPartN", "_treatedAmountOf"];
+_treatedWound params ["_treatedID", "_treatedBodyPartN", "_treatedAmountOf", "", "_treatedDamageOf"];
 
 // Check if we need to add a new stitched wound or increase the amount of an existing one
 private _woundIndex = _stitchedWounds findIf {
@@ -51,6 +51,22 @@ if (_woundIndex == -1) then {
     _wound set [2, (_wound select 2) + _treatedAmountOf];
 };
 
+if (GVAR(clearTrauma) == 1) then {
+    TRACE_2("clearTrauma - clearing trauma after stitching",_partIndex,_treatedWound);
+    private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), []];
+    _bodyPartDamage set [_treatedBodyPartN, (_bodyPartDamage select _treatedBodyPartN) - _treatedDamageOf];
+    _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+    TRACE_2("clearTrauma - healed damage",_partIndex,_treatedDamageOf);
+
+    switch (_treatedBodyPartN) do {
+        case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        case 2;
+        case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
+    };
+};
+
 _patient setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
 _patient setVariable [VAR_STITCHED_WOUNDS, _stitchedWounds, true];
 
@@ -60,4 +76,12 @@ if (EGVAR(medical,limping) == 2 && {_patient getVariable [QEGVAR(medical,isLimpi
     [QEGVAR(medical_engine,updateDamageEffects), _patient, _patient] call CBA_fnc_targetEvent;
 };
 
-true
+// Consume a suture for the next wound if one exists, stop stitching if none are left
+if (GVAR(consumeSurgicalKit) == 2) then {
+    // Don't consume a suture if there are no more wounds to stitch
+    if (count _stitchableWounds == 1) exitWith {false};
+    ([_medic, _patient, ["ACE_suture"]] call FUNC(useItem)) params ["_user"];
+    !isNull _user
+} else {
+    true
+}

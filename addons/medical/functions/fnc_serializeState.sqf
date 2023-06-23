@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Serialized state as JSON string
+ * Serialized state as JSON string <STRING>
  *
  * Example:
  * [player] call ace_medical_fnc_serializeState
@@ -61,4 +61,6 @@ private _currentState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_g
 _state setVariable [QGVAR(statemachineState), _currentState];
 
 // Serialize & return
-[_state] call CBA_fnc_encodeJSON
+private _json = [_state] call CBA_fnc_encodeJSON;
+_state call CBA_fnc_deleteNamespace;
+_json

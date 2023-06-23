@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Determines if you can attach the sighting unit to the Dragon missile.
  *
  * Arguments:

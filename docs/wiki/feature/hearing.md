@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Hearing
+component: hearing
 description: Combat deafness and ringing.
 group: feature
 category: realism
@@ -33,7 +34,3 @@ Some types of helmets can mitigate hearing damage also (ie. crewman helmet, pilo
 - Select `Earplugs in`.
 - Same method to remove them but the option is `Earplugs out`.
 - Note: you're able to re-use earplugs.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="hearing" %}

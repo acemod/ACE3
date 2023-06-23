@@ -11,7 +11,7 @@ GVAR(currentGrid) = 0;
 
 if (!hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     //If not enabled, dont't add PFEH
     if (!GVAR(enabled)) exitWith {};
 
@@ -28,7 +28,7 @@ if (!hasInterface) exitWith {};
     //Add warnings for missing compat PBOs (only if AB is on)
     {
         _x params ["_modPBO", "_compatPBO"];
-        if ((isClass (configFile >> "CfgPatches" >> _modPBO)) && {!isClass (configFile >> "CfgPatches" >> _compatPBO)}) then {
+        if ([_modPBO] call EFUNC(common,isModLoaded) && {!([_compatPBO] call EFUNC(common,isModLoaded))}) then {
             WARNING_2("Weapon Mod [%1] missing ace compat pbo [%2] (from @ace\optionals)",_modPBO,_compatPBO);
         };
     } forEach [

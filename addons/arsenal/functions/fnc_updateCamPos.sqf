@@ -10,8 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_arsenal_fnc_updateCamPos
+ *
  * Public: Yes
-*/
+ */
 
 GVAR(cameraPosition)  params ["_distance", "_dirH", "_dirV"];
 [GVAR(cameraHelper), [_dirH + 180, - _dirV, 0]] call bis_fnc_setobjectrotation;

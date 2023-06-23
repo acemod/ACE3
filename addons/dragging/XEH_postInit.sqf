@@ -68,7 +68,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
         false
     };
     if (ACE_player getVariable [QGVAR(isCarrying), false]) exitWith {
-        [ACE_player, ACE_player getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry);
+        [ACE_player, ACE_player getVariable [QGVAR(carriedObject), objNull], true] call FUNC(dropObject_carry);
         false
     };
 
