@@ -5,6 +5,17 @@ class CfgVehicles {
         EGVAR(refuel,canReceive) = 0;
     };
 
+    class Wheeled_APC_F;
+    class rhsgref_BRDM2: Wheeled_APC_F {
+        GVAR(hullDetonationProb) = 0.2;
+        GVAR(turretDetonationProb) = 0.2;
+        GVAR(engineDetonationProb) = 0;
+        GVAR(hullFireProb) = 0.7;
+        GVAR(turretFireProb) = 0.7;
+        GVAR(engineFireProb) = 0.7;
+        GVAR(detonationDuringFireProb) = 0.5;
+    };
+
     class StaticMGWeapon;
     class rhs_DSHKM_base: StaticMGWeapon {
         // ENABLE_CSW_ATTRIBUTE;
@@ -23,6 +34,70 @@ class CfgVehicles {
         class ACE_CSW: ACE_CSW {
             enabled = 1;
             disassembleTurret = QEGVAR(csw,kordTripodLow);
+        };
+    };
+
+    class Helicopter_Base_H;
+    class rhs_uh1h_base: Helicopter_Base_H {
+        EGVAR(fastroping,enabled) = 2;
+        EGVAR(fastroping,friesType) = "ACE_friesAnchorBar";
+        EGVAR(fastroping,friesAttachmentPoint)[] = {0, 1.95, -0.26};
+        EGVAR(fastroping,onCut) = QFUNC(onCut);
+        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
+        EGVAR(fastroping,ropeOrigins)[] = {"ropeOriginLeft", "ropeOriginRight"};
+    };
+
+    class rhs_uh1h_hidf: rhs_uh1h_base {
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
+    };
+
+    class rhs_uh1h_hidf_unarmed: rhs_uh1h_hidf {
+        EGVAR(fastroping,friesAttachmentPoint)[] = {0, 1.8, -0.27};
+
+        class UserActions {
+            class Open_Side_Doors;
+
+            class Close_Side_Doors: Open_Side_Doors {
+                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call FUNC(canCloseDoor));
+            };
+        };
+
+        class Attributes: Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
+    };
+
+    class rhs_uh1h_idap: rhs_uh1h_base {
+        EGVAR(fastroping,friesAttachmentPoint)[] = {0, 1.8, -0.27};
+
+        class UserActions {
+            class Open_Side_Doors;
+
+            class Close_Side_Doors: Open_Side_Doors {
+                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call FUNC(canCloseDoor));
+            };
+        };
+
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
+    };
+
+    class rhs_uh1h_un: rhs_uh1h_base {
+        EGVAR(fastroping,friesAttachmentPoint)[] = {0, 1.8, -0.27};
+
+        class UserActions {
+            class Open_Side_Doors;
+
+            class Close_Side_Doors: Open_Side_Doors {
+                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call FUNC(canCloseDoor));
+            };
+        };
+
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
         };
     };
 

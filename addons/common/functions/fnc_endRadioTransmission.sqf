@@ -2,7 +2,7 @@
 /*
  * Author: commy2
  *
- * End radio transmissions of addons TFAR and ACRE2. TFAR v0.9.x, ACRE Public Beta 2.0.3.571
+ * End radio transmissions of addons TFAR and ACRE2. TFAR v0.9.x, ACRE Public Beta 2.0.3.571, TFAR v1.0.-1.x
  *
  * Arguments:
  * None
@@ -19,7 +19,7 @@
 ["ace_endRadioTransmissions"] call CBA_fnc_localEvent;
 
 // ACRE
-if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
+if (["acre_main"] call FUNC(isModLoaded)) then {
     [-1] call acre_sys_core_fnc_handleMultiPttKeyPressUp;
     [0] call acre_sys_core_fnc_handleMultiPttKeyPressUp;
     [1] call acre_sys_core_fnc_handleMultiPttKeyPressUp;
@@ -27,7 +27,10 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 };
 
 // TFAR
-if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
+if (["task_force_radio"] call FUNC(isModLoaded)) then {
+    if (["tfar_core"] call FUNC(isModLoaded)) exitWith { // Beta TFAR, exit to avoid script errors from legacy functions not existing
+        ACE_Player call TFAR_fnc_releaseAllTangents;
+    };
     call TFAR_fnc_onSwTangentReleased;
     call TFAR_fnc_onAdditionalSwTangentReleased;
     call TFAR_fnc_onLRTangentReleased;

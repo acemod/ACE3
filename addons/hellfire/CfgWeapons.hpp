@@ -44,7 +44,7 @@ class CfgWeapons {
         cursor = "EmptyCursor";
         cursorAim = "missile";
         showAimCursorInternal = 0;
-        
+
         // vanilla weapon lock systems
         weaponLockSystem = 8;
         cmImmunity = 0.9;

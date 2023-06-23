@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM
+ * Author:Dani (TCVM)
  * Checks if you can deploy a weapon on the tripod
  *
  * Arguments:

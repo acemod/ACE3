@@ -18,10 +18,10 @@
 
 params ["_unit", "_weaponIndex"];
 
-if (_weaponIndex < 0 || {_weaponIndex > 2}) exitWith { 0 }; 
+if (_weaponIndex < 0 || {_weaponIndex > 2}) exitWith { 0 };
 
-private _weaponClass = [primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] select _weaponIndex; 
-private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex; 
+private _weaponClass = [primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] select _weaponIndex;
+private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex;
 
 private _weaponConfig = configFile >> "CfgWeapons" >> _weaponClass;
 private _baseAngle = getNumber(_weaponConfig >> "ACE_IronSightBaseAngle");

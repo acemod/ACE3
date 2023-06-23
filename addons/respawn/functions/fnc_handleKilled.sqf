@@ -20,7 +20,7 @@ params ["_unit"];
 
 // Saves the gear when the player! (and only him) is killed
 if (ACE_player == _unit && {GVAR(SavePreDeathGear)}) then {
-    _unit setVariable [QGVAR(unitGear), getUnitLoadout _unit];
+    _unit setVariable [QGVAR(unitGear), [_unit] call CBA_fnc_getLoadout];
     _unit setVariable [QGVAR(activeWeaponAndMuzzle), [currentWeapon _unit, currentMuzzle _unit, currentWeaponMode _unit]];
     [QGVAR(saveGear), _unit] call CBA_fnc_localEvent;
 };

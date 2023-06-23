@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Initializes weapon to disable weapon disassembling
  *
  * Arguments:
@@ -17,13 +17,15 @@
 
 params ["_staticWeapon"];
 private _typeOf = typeOf _staticWeapon;
-private _configEnabled = (getNumber (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "enabled")) == 1;
-private _assemblyConfig = _configEnabled && {(getText (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "disassembleWeapon")) != ""};
+private _configOf = configOf _staticWeapon;
+private _configEnabled = (getNumber (_configOf >> "ace_csw" >> "enabled")) == 1;
+private _assemblyConfig = _configEnabled && {(getText (_configOf >> "ace_csw" >> "disassembleWeapon")) != ""};
 TRACE_4("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig);
 
 if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
     TRACE_1("adding AI fired handler",_staticWeapon);
     _staticWeapon addEventHandler ["Fired", LINKFUNC(ai_handleFired)];
+    _staticWeapon addEventHandler ["GetIn", LINKFUNC(ai_handleGetIn)]; // handle AI getting inside weapon with no ammo
 };
 
 TRACE_2("",local _staticWeapon,_staticWeapon turretLocal [0]);
@@ -65,7 +67,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
 
 
     private _ammoActionPath = [];
-    private _magazineLocation = getText (configFile >> "CfgVehicles" >> _typeOf >> QUOTE(ADDON) >> "magazineLocation");
+    private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");
     private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
         if ((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
