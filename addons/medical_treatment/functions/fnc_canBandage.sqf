@@ -21,6 +21,9 @@
 
 params ["_medic", "_patient", "_bodyPart", "_bandage"];
 
+// If patient is swimming, don't allow bandage actions.
+if (_patient call EFUNC(common,isSwimming)) exitWith {false};
+
 // Bandage type and bandage setting XNOR to show only active actions
 if ((_bandage == "BasicBandage") isEqualTo (GVAR(advancedBandages) != 0)) exitWith {false};
 

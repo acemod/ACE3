@@ -877,6 +877,7 @@ Examples:
 
 
 If a file called $NOBIN$ is found in the module directory, that module will not be binarized.
+If preprocess = false is set in the addon.toml, that module's config will not be binarized.
 
 See the make.cfg file for additional build options.
 """)
@@ -1293,15 +1294,22 @@ See the make.cfg file for additional build options.
             build_successful = False
             if build_tool == "pboproject":
                 try:
-                    nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 
-                    if os.path.isfile(nobinFilePath):
+                    skipPreprocessing = False
+                    addonTomlPath = os.path.join(work_drive, prefix, module, "addon.toml")
+                    if os.path.isfile(addonTomlPath):
+                        with open(addonTomlPath, "r") as f:
+                            skipPreprocessing = "preprocess = false" in f.read() #python 3.11 has real toml but this is fine for now
+
+                    if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
-
+                    elif skipPreprocessing:
+                        print_green("addon.toml set [preprocess = false]. Proceeding with non-binerized config build!")
+                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
                     else:
                         cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 

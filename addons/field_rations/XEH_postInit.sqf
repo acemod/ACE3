@@ -89,7 +89,8 @@ if !(hasInterface) exitWith {};
         ],
         {
             params ["_unit", "", "_item"];
-            [objNull, _unit, _item] call FUNC(consumeItem);
+            private _itemConfig = configFile >> "CfgWeapons" >> _item;
+            [objNull, _unit, [_item, _itemConfig, false]] call FUNC(consumeItem);
             false
         }
     ] call CBA_fnc_addItemContextMenuOption;

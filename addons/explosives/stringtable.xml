@@ -804,7 +804,7 @@
             <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
             <French>Seul un spécialiste peut désamorcer des explosifs.</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
-            <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
+            <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
             <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。標準: 無効化</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
@@ -837,7 +837,7 @@
             <Portuguese>Aumentar o tempo necessário para completar ações por não especialistas? Padrão: Sim</Portuguese>
             <French>Augmente le temps nécessaire au désamorçage pour les unités non spécialisées.</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
-            <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
+            <Russian>Увеличивать время завершения действий для не-специалистов? По умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
             <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
             <Korean>비전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
@@ -853,7 +853,7 @@
             <Spanish>Explotar al desactivar?</Spanish>
             <French>Explosion au désamorçage</French>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
-            <Russian>Взрыв при разминир.?</Russian>
+            <Russian>Взрыв при разминировании?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
             <Japanese>解除中に爆発</Japanese>
             <Korean>해제 시 폭발합니까?</Korean>
@@ -869,7 +869,7 @@
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
             <French>Certains explosifs exploseront durant le désamorçage. Valeur par défaut : activé.</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
-            <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
+            <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
             <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
             <Korean>특정 폭발물이 해제 시 폭발하게 합니까? 기본설정: 예</Korean>
@@ -1091,7 +1091,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
-            <Russian>Минимальное время</Russian>
+            <Russian>Мин. время</Russian>
             <French>Durée minimale</French>
             <Japanese>最短時間</Japanese>
             <Spanish>Tiempo mínimo</Spanish>
@@ -1102,7 +1102,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
-            <Russian>Максимальное время</Russian>
+            <Russian>Макс. время</Russian>
             <French>Durée maximale</French>
             <Japanese>最長時間</Japanese>
             <Spanish>Tiempo máximo</Spanish>

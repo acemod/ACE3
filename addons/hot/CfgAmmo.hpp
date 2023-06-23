@@ -112,7 +112,7 @@ class CfgAmmo {
         EGVAR(frag,metal) = 7100; // 1000 steel balls
         EGVAR(frag,charge) = 4100;
         EGVAR(frag,gurney_c) = 2700;
-        EGVAR(frag,gurney_k) = 3/5;
+        EGVAR(frag,gurney_k) = "3/5";
         EGVAR(frag,classes)[] = {"ACE_frag_small"};
 
         displayName = CSTRING(hot2mp);

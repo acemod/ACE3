@@ -59,4 +59,6 @@ isClass _config
         };
         default {false};
     };
+} && {
+    ((getNumber (_config >> "allowedUnderwater")) == 1) || {!([_medic] call ace_common_fnc_isSwimming)}
 }
