@@ -19,13 +19,15 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-private _weight = [_target] call FUNC(getWeight);
-
 // exempt from weight check if object has override variable set
-if (!GETVAR(_target,GVAR(ignoreWeightCarry),false) && {
-    _weight > GETMVAR(ACE_maxWeightCarry,1E11)
-}) exitWith {
-    // exit if object weight is over global var value
+private _weight = if (_target getVariable [QGVAR(ignoreWeightCarry), false]) then {
+    0
+} else {
+    [_target] call FUNC(getWeight)
+};
+
+// exit if object weight is over global var value
+if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
@@ -58,15 +60,10 @@ if (_target isKindOf "CAManBase") then {
     _unit action ["SwitchWeapon", _unit, _unit, 299];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
-    // objects other than containers have calculated weight == 0 so we use getMass
-    if (-1 == ["ReammoBox_F", "WeaponHolder", "WeaponHolderSimulated"] findIf {_target isKindOf _x}) then {
-        _weight = getMass _target;
-    };
-    if (_weight > GVAR(maxWeightCarryRun)) then {
-        [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
-    } else {
-        [_unit, "blockSprint", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
-    };
+    // only force walking if we're overweight
+    [_unit, "forceWalk", "ACE_dragging", _weight > GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
+    [_unit, "blockSprint", "ACE_dragging", _weight <= GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
+
 };
 
 [_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
@@ -74,12 +71,19 @@ if (_target isKindOf "CAManBase") then {
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
 
-
 // prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
 // required for aborting animation
 _unit setVariable [QGVAR(carriedObject), _target, true];
+
+// Event Handler for changes to inventory: allows unit to start running if weight is removed or be forced to walk if weight is added, drop object if weight past ACE_maxWeightCarry
+private _ehID = _target addEventHandler ["ContainerClosed", {
+    params ["_container", ""];
+    private _owner = _container getVariable [QEGVAR(common,owner), objNull];
+    [QGVAR(carryingContainerClosed), [_container, _owner], _owner] call CBA_fnc_targetEvent;
+}];
+_target setVariable [QGVAR(carryingContainerClosedEh), _ehID, true];
 
 [FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
 

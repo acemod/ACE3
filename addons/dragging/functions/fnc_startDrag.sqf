@@ -20,11 +20,14 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // exempt from weight check if object has override variable set
-if (!GETVAR(_target,GVAR(ignoreWeightDrag),false) && {
-    private _weight = [_target] call FUNC(getWeight);
-    _weight > GETMVAR(ACE_maxWeightDrag,1E11)
-}) exitWith {
-    // exit if object weight is over global var value
+private _weight = if (_target getVariable [QGVAR(ignoreWeightDrag), false]) then {
+    0
+} else {
+    [_target] call FUNC(getWeight)
+};
+
+// exit if object weight is over global var value
+if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
@@ -85,6 +88,14 @@ if (_target isKindOf "CAManBase") then {
 
 // prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isDragging), true, true];
+
+// Event Handler for changes to inventory: drop object if weight past ACE_maxWeightDrag is added
+private _ehID = _target addEventHandler ["ContainerClosed", {
+    params ["_container", ""];
+    private _owner = _container getVariable [QEGVAR(common,owner), objNull];
+    [QGVAR(draggingContainerClosed), [_container, _owner], _owner] call CBA_fnc_targetEvent;
+}];
+_target setVariable [QGVAR(draggingContainerClosedEh), _ehID, true];
 
 [FUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
 

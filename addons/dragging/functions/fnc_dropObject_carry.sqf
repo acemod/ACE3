@@ -67,6 +67,10 @@ if (_inBuilding) then {
 _unit setVariable [QGVAR(isCarrying), false, true];
 _unit setVariable [QGVAR(carriedObject), objNull, true];
 
+// remove EH from container
+_target removeEventHandler ["ContainerClosed", _target getVariable [QGVAR(carryingContainerClosedEh), -1]];
+_target setVariable [QGVAR(carryingContainerClosedEh), nil, true];
+
 // make object accesable for other units
 [objNull, _target, true] call EFUNC(common,claim);
 

@@ -65,6 +65,10 @@ if (_inBuilding) then {
 _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];
 
+// remove EH from container
+_target removeEventHandler ["ContainerClosed", _target getVariable [QGVAR(draggingContainerClosedEh), -1]];
+_target setVariable [QGVAR(draggingContainerClosedEh), nil, true];
+
 // make object accessible for other units
 [objNull, _target, true] call EFUNC(common,claim);
 

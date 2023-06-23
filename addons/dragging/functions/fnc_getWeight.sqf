@@ -21,8 +21,10 @@ params ["_object"];
 private _weight = loadAbs _object;
 
 // Add the mass of the object itself
-// The container object is generally of type SupplyX and has mass of zero
-_weight = _weight + getNumber (configOf _object >> "mass");
+// getMass handles PhysX mass, this should be 0 for SupplyX containers and WeaponHolders
+// Use originalMass in case we're checking weight for a carried object
+// While backpacks are a special case, in that they have config mass while being a vehicle, they can't exist in the world without an objectParent (typically a WeaponHolder)
+_weight = _weight + ((_object getVariable [QGVAR(originalMass), getMass _object]));
 
 // Contents of backpacks get counted twice (see https://github.com/acemod/ACE3/pull/8457#issuecomment-1062522447)
 // This is a workaround until that is fixed on BI's end
