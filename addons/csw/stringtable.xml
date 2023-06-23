@@ -303,35 +303,13 @@
             <Russian>После развертывания начать тащить треногу на другое место</Russian>
             <Korean>조립 후 위치선정을 위해 배치하지 않고 끌고다닙니다.</Korean>
         </Key>
-        <Key ID="STR_ACE_CSW_replaceTurrentAmmoWithCSW_displayName">
-            <English>Replace turrent ammo with CSW mags</English>
-            <German></German>
-            <Portuguese></Portuguese>
-            <French></French>
-            <Japanese></Japanese>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Italian></Italian>
-            <Czech></Czech>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <Russian></Russian>
-            <Korean></Korean>
+        <Key ID="STR_ACE_CSW_replaceTurretAmmoWithCSW_displayName">
+            <English>Replace Turret ammo with CSW mags</English>
+
         </Key>
-        <Key ID="STR_ACE_CSW_replaceTurrentAmmoWithCSW_description">
-            <English>Turrent ammo will be replaced with CSW mags in the vehicle's cargo</English>
-            <German></German>
-            <Portuguese></Portuguese>
-            <French></French>
-            <Japanese></Japanese>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Italian></Italian>
-            <Czech></Czech>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <Russian></Russian>
-            <Korean></Korean>
+        <Key ID="STR_ACE_CSW_replaceTurretAmmoWithCSW_description">
+            <English>Turret ammo will be replaced with CSW mags in the vehicle's cargo</English>
+
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
@@ -689,7 +667,7 @@
             <Korean>[CSW] 20mm 고속유탄발사기 탄띠</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt96_displayName">
-            <English>[CSW] 40mm Grenade GMG Belt 96 Count</English>
+            <English>[CSW] 40mm Grenade GMG Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_SPGHEAT_displayName">
             <English>[CSW] SPG9 HEAT Rounds</English>
@@ -698,7 +676,7 @@
             <English>[CSW] SPG9 HE Rounds</English>
         </Key>
         <Key ID="STR_ACE_CSW_65_39Belt_displayName">
-            <English>[CSW] 6.5X39mm Belt</English>
+            <English>[CSW] 6.5x39 mm Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>

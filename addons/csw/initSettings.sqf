@@ -62,14 +62,14 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
 
 
 [
-    QGVAR(replaceTurrentAmmoWithCSW), "CHECKBOX",
-    [LSTRING(replaceTurrentAmmoWithCSW_displayName), LSTRING(replaceTurrentAmmoWithCSW_description)],
+    QGVAR(replaceTurretAmmoWithCSW), "CHECKBOX",
+    [LSTRING(replaceTurretAmmoWithCSW_displayName), LSTRING(replaceTurretAmmoWithCSW_description)],
     _categoryArray,
     true, // default value
     true, // isGlobal
     {
-        if !(_this && {isServer} && {isNil QGVAR(replaceTurrentAmmoWithCSW_initialized)}) exitWith {};
-        GVAR(replaceTurrentAmmoWithCSW_initialized) = true;
+        if !(_this && {isServer} && {isNil QGVAR(replaceTurretAmmoWithCSW_initialized)}) exitWith {};
+        GVAR(replaceTurretAmmoWithCSW_initialized) = true;
         ["Car", "init", LINKFUNC(staticWeaponVehicleInit), true, [], true] call CBA_fnc_addClassEventHandler;
     },
     false // Needs mission restart

@@ -20,6 +20,10 @@ GVAR(vehicleMagCache) = createHashMap;
 [QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;
 
 
+if (isServer) then 
+{
+    [QGVAR(setMaxLoad), {(_this#0) setMaxLoad (_this#1)}] call CBA_fnc_addEventHandler;
+}
 
 #ifdef DEBUG_MODE_FULL
 call compile preprocessFileLineNumbers QPATHTOF(dev\checkStaticWeapons.sqf);

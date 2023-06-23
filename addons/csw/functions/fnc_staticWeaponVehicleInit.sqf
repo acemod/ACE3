@@ -18,7 +18,7 @@
 
 params["_vehicle"];
 // exit with the user doesn't want the ammo to be replaced
-if(!GVAR(replaceTurrentAmmoWithCSW)) exitwith {};
+if(!GVAR(replaceTurretAmmoWithCSW)) exitwith {};
 private _turretPath = [_vehicle] call EFUNC(common,getTurretGunner);
 if((count _turretPath) isNotEqualTo 1) exitwith {};
 
@@ -41,8 +41,7 @@ private _addLoad = maxLoad _vehicle;
 } forEach (magazinesAllTurrets _vehicle);
 
 // set the load, so that users can remove the mags and add them other items to the vehicle.
-[_vehicle, _addLoad] remoteExecCall ["setMaxLoad", 2];
-
+[QGVAR(setMaxLoad), [_vehicle, _addLoad]] call CBA_fnc_serverEvent;
 {
     _x params ["_cswMag", "_xAmmo"];
     _vehicle addMagazineAmmoCargo [_cswMag, 1, _xAmmo];
