@@ -305,11 +305,9 @@
         </Key>
         <Key ID="STR_ACE_CSW_replaceTurretAmmoWithCSW_displayName">
             <English>Replace Turret ammo with CSW mags</English>
-
         </Key>
         <Key ID="STR_ACE_CSW_replaceTurretAmmoWithCSW_description">
             <English>Turret ammo will be replaced with CSW mags in the vehicle's cargo</English>
-
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
