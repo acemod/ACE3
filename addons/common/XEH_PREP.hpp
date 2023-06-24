@@ -18,7 +18,6 @@ PREP(ambientBrightness);
 PREP(arithmeticGetResult);
 PREP(arithmeticSetSource);
 PREP(ASLToPosition);
-PREP(baseWeapon);
 PREP(binarizeNumber);
 PREP(blurScreen);
 PREP(cachedCall);

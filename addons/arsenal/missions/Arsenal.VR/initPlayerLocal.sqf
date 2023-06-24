@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#include "..\..\defines.hpp"
+#include "\z\ace\addons\arsenal\defines.hpp"
 
 params ["_unit"];
 

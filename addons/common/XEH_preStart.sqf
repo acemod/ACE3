@@ -13,8 +13,5 @@ if (isFilePatchingEnabled) then {
 // Cache for FUNC(getAddon)
 uiNamespace setVariable [QGVAR(addonCache), createHashMap];
 
-// Cache for FUNC(baseWeapon)
-uiNamespace setVariable [QGVAR(baseWeaponNameCache), createHashMap];
-
 // Cache for FUNC(getConfigName)
 uiNamespace setVariable [QGVAR(configNames), createHashMap];

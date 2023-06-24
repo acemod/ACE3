@@ -2,7 +2,7 @@
 /*
  * Author: commy2, johnb43
  * Adds weapon to unit without taking a magazine.
- * Same as CBA_fnc_addWeaponWithoutItems, but with some small modifications.
+ * Same as CBA_fnc_addWeaponWithoutItems, but doesn't remove linked items.
  *
  * Arguments:
  * 0: Unit to add the weapon to <OBEJCT>

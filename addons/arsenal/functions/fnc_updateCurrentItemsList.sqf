@@ -28,7 +28,7 @@ private _indexCurrentItems = -1;
         case IDX_LOADOUT_BINO: {
             _x params [["_weapon", ""], ["_muzzle", ""], ["_flashlight", ""], ["_optics", ""], ["_primaryMagazine", []], ["_secondaryMagazine", []], ["_bipod", ""]];
 
-            _weapon = _weapon call EFUNC(common,baseWeapon);
+            _weapon = _weapon call FUNC(baseWeapon);
             _isWeapon = _forEachIndex != IDX_LOADOUT_BINO;
 
             // If bino, add it in a different place than regular weapons

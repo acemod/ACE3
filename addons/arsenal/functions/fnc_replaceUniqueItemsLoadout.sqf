@@ -42,7 +42,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 
             // Find baseweapon of weapon
             if (_weapon != "") then {
-                _x set [0, _weapon call EFUNC(common,baseWeapon)];
+                _x set [0, _weapon call FUNC(baseWeapon)];
             };
         };
         // Uniform, vest, backpack
@@ -73,7 +73,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                         _weapon = (_x select 0) select 0;
 
                         if (_weapon != "") then {
-                            (_x select 0) set [0, _weapon call EFUNC(common,baseWeapon)];
+                            (_x select 0) set [0, _weapon call FUNC(baseWeapon)];
                         };
                     };
                     // Magazines have 3 entries: Name, amount and ammo count

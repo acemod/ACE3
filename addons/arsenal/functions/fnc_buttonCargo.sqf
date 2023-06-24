@@ -16,13 +16,13 @@
 
 params ["_display", "_addOrRemove"];
 
-_addOrRemove = _addOrRemove > 0;
+private _add = _addOrRemove > 0;
 
 private _ctrlList = _display displayCtrl IDC_rightTabContentListnBox;
 private _lnbCurSel = lnbCurSelRow _ctrlList;
 
 // If item is unique, don't allow adding more
-if (_addOrRemove && {(_ctrlList lnbValue [_lnbCurSel, 2]) == 1}) exitWith {};
+if (_add && {(_ctrlList lnbValue [_lnbCurSel, 2]) == 1}) exitWith {};
 
 private _containerItems = [];
 private _item = _ctrlList lnbData [_lnbCurSel, 0];
@@ -31,7 +31,7 @@ private _item = _ctrlList lnbData [_lnbCurSel, 0];
 private _container = switch (GVAR(currentLeftPanel)) do {
     // Uniform
     case IDC_buttonUniform: {
-        if (_addOrRemove) then {
+        if (_add) then {
             for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                 GVAR(center) addItemToUniform _item;
             };
@@ -53,7 +53,7 @@ private _container = switch (GVAR(currentLeftPanel)) do {
     };
     // Vest
     case IDC_buttonVest: {
-        if (_addOrRemove) then {
+        if (_add) then {
             for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                 GVAR(center) addItemToVest _item;
             };
@@ -75,7 +75,7 @@ private _container = switch (GVAR(currentLeftPanel)) do {
     };
     // Backpack
     case IDC_buttonBackpack: {
-        if (_addOrRemove) then {
+        if (_add) then {
             for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                 GVAR(center) addItemToBackpack _item;
             };
@@ -100,7 +100,6 @@ private _container = switch (GVAR(currentLeftPanel)) do {
 // Find out how many items of that type there are and update the number displayed
 _ctrlList lnbSetText [[_lnbCurSel, 2], str ({_x == _item} count _containerItems)];
 
-//////////////////// Return NUMBER, as it did before or return BOOL, as the doc says is should ?
 [QGVAR(cargoChanged), [_display, _item, _addOrRemove, GVAR(shiftState)]] call CBA_fnc_localEvent;
 
 // Refresh availibility of items based on space remaining in container

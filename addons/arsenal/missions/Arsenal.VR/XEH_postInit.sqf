@@ -88,16 +88,13 @@ cba_diagnostic_projectileMaxLines = 10;
     {
         _unit = _x;
 
-        removeVest _unit;
         _unit addVest vest _player;
 
         removeBackpack _unit;
         _unit addBackpack backpack _player;
 
-        removeHeadgear _unit;
         _unit addHeadgear headgear _player;
 
-        removeGoggles _unit;
         _unit addGoggles goggles _player;
 
         removeAllWeapons _unit;

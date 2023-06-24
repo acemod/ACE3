@@ -70,7 +70,7 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 
             // Add weapon
             if (_weapon != "") then {
-                _weapon = _weapon call EFUNC(common,baseWeapon);
+                _weapon = _weapon call FUNC(baseWeapon);
 
                 if (_weapon != "") then {
                     // If bino, add it in a different place than regular weapons
@@ -150,16 +150,6 @@ call FUNC(updateCurrentItemsList);
 
 // This takes care of items that aren't available in the arsenal (either wrong tab or arsenal doesn't have it whitelisted)
 call FUNC(updateUniqueItemsList);
-
-// Get the type of the current weapon
-private _currentWeapon = currentWeapon GVAR(center);
-
-GVAR(currentWeaponType) = switch (true) do {
-    case (_currentWeapon == (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON)): {0};
-    case (_currentWeapon == (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON)): {1};
-    case (_currentWeapon == (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON)): {2};
-    default {-1};
-};
 
 [QGVAR(displayOpened), [_display]] call CBA_fnc_localEvent;
 

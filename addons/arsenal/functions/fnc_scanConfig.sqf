@@ -15,8 +15,10 @@
 
 private _configItems = EMPTY_VIRTUAL_ARSENAL;
 
+// https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
+// https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
 private _filterFunction = [{
-    isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}
+    isClass _x && {(if (isNumber (_x >> "scopeArsenal")) then {getNumber (_x >> "scopeArsenal")} else {getNumber (_x >> "scope")}) == 2} && {getNumber (_x >> QGVAR(hide)) != 1}
 }] call EFUNC(common,codeToString);
 
 private _cfgWeapons = configFile >> "CfgWeapons";
@@ -100,13 +102,13 @@ private _isMiscItem = false;
         ): {
             switch (getNumber (_x >> "type")) do {
                 case TYPE_WEAPON_PRIMARY: {
-                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_PRIMARY_WEAPONS) pushBackUnique (_className call EFUNC(common,baseWeapon));
+                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_PRIMARY_WEAPONS) pushBackUnique (_className call FUNC(baseWeapon));
                 };
                 case TYPE_WEAPON_HANDGUN: {
-                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_HANDGUN_WEAPONS) pushBackUnique (_className call EFUNC(common,baseWeapon));
+                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_HANDGUN_WEAPONS) pushBackUnique (_className call FUNC(baseWeapon));
                 };
                 case TYPE_WEAPON_SECONDARY: {
-                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_SECONDARY_WEAPONS) pushBackUnique (_className call EFUNC(common,baseWeapon));
+                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_SECONDARY_WEAPONS) pushBackUnique (_className call FUNC(baseWeapon));
                 };
             };
         };

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * ["arifle_AK12_GL_lush_arco_pointer_F"] call ace_common_fnc_baseWeapon
+ * ["arifle_AK12_GL_lush_arco_pointer_F"] call ace_arsenal_fnc_baseWeapon
  *
  * Public: Yes
  */
@@ -48,7 +48,9 @@ if (isClass _configBase) exitWith {
 scopeName "main";
 
 // Only take weapons available to the arsenal
-while {isClass _config && {getNumber (_config >> "scope") == 2}} do {
+// https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
+// https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
+while {isClass _config && {if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal") == 2} else {getNumber (_config >> "scope") > 0}} && {getNumber (_config >> QGVAR(hide)) != 1}} do {
     if (count (_config >> "LinkedItems") == 0) exitWith {
         _className = configName _config;
         (uiNamespace getVariable QGVAR(baseWeaponNameCache)) set [_cacheKey, _className];

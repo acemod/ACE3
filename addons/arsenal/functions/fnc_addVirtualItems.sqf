@@ -62,6 +62,7 @@ if (_items isEqualType true) then {
     private _configItemInfo = "";
     private _simulationType = "";
     private _hasItemInfo = false;
+    private _config = configNull;
 
     private _cfgWeapons = configFile >> "CfgWeapons";
     private _cfgMagazines = configFile >> "CfgMagazines";
@@ -71,7 +72,8 @@ if (_items isEqualType true) then {
     private _grenadeList = uiNamespace getVariable [QGVAR(grenadeCache), []];
     private _putList = uiNamespace getVariable [QGVAR(putCache), []];
 
-    // _items can contain classNames with scope < 2, which aren't necessarily in the arsenal cache
+    // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
+    // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
     {
         _configItemInfo = _cfgWeapons >> _x >> "ItemInfo";
         _simulationType = getText (_cfgWeapons >> _x >> "simulation");
@@ -79,6 +81,13 @@ if (_items isEqualType true) then {
 
         switch (true) do {
             case (isClass (_cfgWeapons >> _x)): {
+                _config = _cfgWeapons >> _x;
+
+                // Check if valid class
+                if !(((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal")} else {getNumber (_config >> "scope")}) == 2) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
+                    continue;
+                };
+
                 switch (true) do {
                     // Weapon attachments
                     case (
@@ -129,7 +138,7 @@ if (_items isEqualType true) then {
                     // Binoculars
                     case (
                         _simulationType == "Binocular" ||
-                        {_simulationType == "Weapon" && {getNumber (_cfgWeapons >> _x >> "type") == TYPE_BINOCULAR_AND_NVG}}
+                        {_simulationType == "Weapon" && {getNumber (_config >> "type") == TYPE_BINOCULAR_AND_NVG}}
                     ): {
                         (_cargo select IDX_VIRT_BINO) pushBackUnique _x;
                     };
@@ -159,18 +168,18 @@ if (_items isEqualType true) then {
                     };
                     // Weapons, at the bottom to avoid adding binos
                     case (
-                        isClass (_cfgWeapons >> _x >> "WeaponSlotsInfo") &&
-                        {getNumber (_cfgWeapons >> _x >> "type") != TYPE_BINOCULAR_AND_NVG}
+                        isClass (_config >> "WeaponSlotsInfo") &&
+                        {getNumber (_config >> "type") != TYPE_BINOCULAR_AND_NVG}
                     ): {
-                        switch (getNumber (_cfgWeapons >> _x >> "type")) do {
+                        switch (getNumber (_config >> "type")) do {
                             case TYPE_WEAPON_PRIMARY: {
-                                ((_cargo select IDX_VIRT_WEAPONS) select IDX_VIRT_PRIMARY_WEAPONS) pushBackUnique (_x call EFUNC(common,baseWeapon));
+                                ((_cargo select IDX_VIRT_WEAPONS) select IDX_VIRT_PRIMARY_WEAPONS) pushBackUnique (_x call FUNC(baseWeapon));
                             };
                             case TYPE_WEAPON_HANDGUN: {
-                                ((_cargo select IDX_VIRT_WEAPONS) select IDX_VIRT_HANDGUN_WEAPONS) pushBackUnique (_x call EFUNC(common,baseWeapon));
+                                ((_cargo select IDX_VIRT_WEAPONS) select IDX_VIRT_HANDGUN_WEAPONS) pushBackUnique (_x call FUNC(baseWeapon));
                             };
                             case TYPE_WEAPON_SECONDARY: {
-                                ((_cargo select IDX_VIRT_WEAPONS) select IDX_VIRT_SECONDARY_WEAPONS) pushBackUnique (_x call EFUNC(common,baseWeapon));
+                                ((_cargo select IDX_VIRT_WEAPONS) select IDX_VIRT_SECONDARY_WEAPONS) pushBackUnique (_x call FUNC(baseWeapon));
                             };
                         };
                     };
@@ -180,13 +189,20 @@ if (_items isEqualType true) then {
                         {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD] &&
                         {_x isKindOf ["CBA_MiscItem", _cfgWeapons]}} ||
                         {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-                        {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"}
+                        {getText (_config >> "simulation") == "ItemMineDetector"}
                     ): {
                         (_cargo select IDX_VIRT_MISC_ITEMS) pushBackUnique _x;
                     };
                 };
             };
             case (isClass (_cfgMagazines >> _x)): {
+                _config = _cfgMagazines >> _x;
+
+                // Check if valid class
+                if !(((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal")} else {getNumber (_config >> "scope")}) == 2) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
+                    continue;
+                };
+
                 // Check what type the magazine actually is
                 switch (true) do {
                     // Grenades
@@ -199,8 +215,8 @@ if (_items isEqualType true) then {
                     };
                     // Primary, handgun & secondary weapon magazines, and magazines that are forced with "ace_arsenal_hide = -1"
                     case (
-                        getNumber (_cfgMagazines >> _x >> QGVAR(hide)) == -1 ||
-                        {getNumber (_cfgMagazines >> _x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW, TYPE_MAGAZINE_SECONDARY_AND_PUT, 1536, TYPE_MAGAZINE_HANDGUN_AND_GL]}
+                        getNumber (_config >> QGVAR(hide)) == -1 ||
+                        {getNumber (_config >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW, TYPE_MAGAZINE_SECONDARY_AND_PUT, 1536, TYPE_MAGAZINE_HANDGUN_AND_GL]}
                     ): {
                         (_cargo select IDX_VIRT_ITEMS_ALL) pushBackUnique _x;
                     };
@@ -208,12 +224,26 @@ if (_items isEqualType true) then {
             };
             // Backpacks
             case (isClass (_cfgVehicles >> _x)): {
-                if (getNumber (_cfgVehicles >> _x >> "isBackpack") == 1) then {
+                _config = _cfgVehicles >> _x;
+
+                // Check if valid class
+                if !(((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal")} else {getNumber (_config >> "scope")}) == 2) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
+                    continue;
+                };
+
+                if (getNumber (_config >> "isBackpack") == 1) then {
                     (_cargo select IDX_VIRT_BACKPACK) pushBackUnique _x;
                 };
             };
             // Goggles
             case (isClass (_cfgGlasses >> _x)): {
+                _config = _cfgGlasses >> _x;
+
+                // Check if valid class
+                if !(((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal")} else {getNumber (_config >> "scope")}) == 2) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
+                    continue;
+                };
+
                 (_cargo select IDX_VIRT_GOGGLES) pushBackUnique _x;
             };
         };

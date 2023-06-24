@@ -204,27 +204,7 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                                         {isClass (_cfgVehicles >> _item)}
                                     ) then {
                                         // Check if item is available in arsenal
-                                        if !(
-                                            ////////////////// use _item in GVAR(virtualItemsFlat) ?
-                                            _item in (_accsArray select IDX_VIRT_OPTICS_ATTACHMENTS) ||
-                                            {_item in (_accsArray select IDX_VIRT_FLASHLIGHT_ATTACHMENTS)} ||
-                                            {_item in (_accsArray select IDX_VIRT_MUZZLE_ATTACHMENTS)} ||
-                                            {_item in (_accsArray select IDX_VIRT_BIPOD_ATTACHMENTS)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_HEADGEAR)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_UNIFORM)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_VEST)} ||\
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_BACKPACK)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_GOGGLES)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_NVG)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_MAP)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_COMPASS)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_RADIO)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_WATCH)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_COMMS)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_GRENADES)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_EXPLOSIVES)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_MISC_ITEMS)}
-                                        ) then {
+                                        if !(_item in GVAR(virtualItemsFlat)) then {
                                             _unavailableItemsList pushBackUnique _item;
                                             ((_loadout select _dataIndex) select 1) set [_forEachIndex, []];
                                             INC(_unavailableItemsAmount);

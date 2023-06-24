@@ -51,7 +51,7 @@ private _fnc_clearPreviousWepMags = {
 switch (GVAR(currentLeftPanel)) do {
     // Primary weapon
     case IDC_buttonPrimaryWeapon: {
-        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON) call EFUNC(common,baseWeapon);
+        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON) call FUNC(baseWeapon);
 
         // If nothing selected, remove primary weapon and its magazines
         if (_item == "") then {
@@ -119,7 +119,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
     // Handgun weapon
     case IDC_buttonHandgun: {
-        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON) call EFUNC(common,baseWeapon);
+        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON) call FUNC(baseWeapon);
 
         // If nothing selected, remove handgun weapon and its magazines
         if (_item == "") then {
@@ -188,7 +188,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
     // Secondary weapon
     case IDC_buttonSecondaryWeapon: {
-        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON) call EFUNC(common,baseWeapon);
+        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON) call FUNC(baseWeapon);
 
         // If nothing selected, remove secondary weapon and its magazines
         if (_item == "") then {
