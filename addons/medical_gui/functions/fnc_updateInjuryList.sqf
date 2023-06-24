@@ -110,9 +110,9 @@ private _fnc_processWounds = {
     params ["_wounds", "_format", "_color"];
 
     {
-        _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
+        _x params ["_woundClassID", "_amountOf"];
 
-        if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
+        if (_amountOf > 0) then {
             private _classIndex = _woundClassID / 10;
             private _category   = _woundClassID % 10;
 
@@ -128,7 +128,7 @@ private _fnc_processWounds = {
 
             _woundEntries pushBack [format [_format, _woundDescription], _color];
         };
-    } forEach _wounds;
+    } forEach (_wounds getOrDefault [ALL_BODY_PARTS select _selectionN, []]);
 };
 
 [GET_OPEN_WOUNDS(_target), "%1", [1, 1, 1, 1]] call _fnc_processWounds;

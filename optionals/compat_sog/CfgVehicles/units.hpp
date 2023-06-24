@@ -1,3 +1,5 @@
+#if __has_include("\x\grad_trenches\addons\main\config.bin")
+#else
 class Man;
 class CAManBase: Man {
     class ACE_SelfActions {
@@ -18,6 +20,7 @@ class CAManBase: Man {
         };
     };
 };
+#endif
 
 class vn_b_men_aircrew_base;
 class vn_b_men_jetpilot_01: vn_b_men_aircrew_base {

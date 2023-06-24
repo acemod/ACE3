@@ -4,7 +4,7 @@
  * Remove a stat from ACE Arsenal.
  *
  * Arguments:
- * 0: Array of IDs (ARRAY)
+ * 0: Array of IDs <ARRAY>
  *
  * Return Value:
  * None
