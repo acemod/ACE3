@@ -1,5 +1,5 @@
 ---
-title: ACE3 Framework documentation
+title: Frameworks
 layout: default
 group: subNav
 order: 1
@@ -12,15 +12,22 @@ redirect_from:
   - "/wiki/frameworkx"
 ---
 
+<style type="text/css">
+  ul.columns {
+    columns: 2;
+  }
+</style>
+
 <div class="row">
-    <div class="large-4 medium-4 columns">
+    <div class="large-12 columns">
         <h1>Frameworks</h1>
         <p>Public API implemented by ACE3 which mission makers, modders and scripters can use.</p>
-
     </div>
-    <div class="large-8 medium-8 columns">
+</div>
+<div class="row">
+    <div class="large-12 columns">
         <nav>
-            <ul>
+            <ul class="columns">
                 {% assign pages_list = site.pages | sort: "title" %}
                 {% assign group = 'framework' %}
                 {% include pages_list %}

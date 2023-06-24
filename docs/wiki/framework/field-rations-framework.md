@@ -45,8 +45,8 @@ Config Name | Type | Description
 
 Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ------------------- | -------- | -----------
-`acex_rationConsumed` | [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated] | Local | Item consumed
-`acex_rationRefilled` | [_source, _player, _item, _refillItem, _refillAmount] | Local | Item refilled
+`acex_rationConsumed` | [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated, _isMagazine] | Local | Item consumed
+`acex_rationRefilled` | [_source, _player, _item, _refillItem, _refillAmount, _isMagazine] | Local | Item refilled
 
 ## 3. Scripting
 

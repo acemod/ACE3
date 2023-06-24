@@ -9,11 +9,11 @@
  * 2: Required Item <STRING>
  * 3: Textures Paths <ARRAY>
  * 4: Icon Path <STRING> (default: "")
- * 5: Material Paths <ARRAY> (optional)
- * 6: Tag Model <STRING> (optional)
+ * 5: Material Paths <ARRAY> (default: [])
+ * 6: Tag Model <STRING> (default: "UserTexture1m_F")
  *
  * Return Value:
- * Sucessfully Added Tag <BOOL>
+ * Successfully Added Tag <BOOL>
  *
  * Example:
  * ["ace_victoryRed", "Victory Red", "ACE_SpraypaintRed", ["path\to\texture1.paa", "path\to\texture2.paa"], "path\to\icon.paa"] call ace_tagging_fnc_addCustomTag

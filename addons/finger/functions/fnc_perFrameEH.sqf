@@ -21,11 +21,11 @@ if !([ACE_player, ACE_player, ["isNotInside", "isNotSwimming"]] call EFUNC(commo
 // Make sure player is dismounted or in a static weapon:
 if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = createHashMap};
 
-private _iconSize = BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
+private _iconBaseSize = GVAR(sizeCoef) * BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
 
 {
     //IGNORE_PRIVATE_WARNING ["_x", "_y"];
-    _y params ["_lastTime", "_pos", "_name"];
+    _y params ["_lastTime", "_pos", "_name", "_sourceUnit"];
     private _timeLeftToShow = _lastTime + FP_TIMEOUT - diag_tickTime;
     if (_timeLeftToShow <= 0) then {
         GVAR(fingersHash) deleteAt _x;
@@ -33,6 +33,11 @@ private _iconSize = BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
         private _drawColor = + GVAR(indicatorColor);
         // Fade out:
         _drawColor set [3, ((_drawColor select 3) * ((_timeLeftToShow min 0.5) / 0.5))];
+
+        private _iconSize = _iconBaseSize;
+        if (GVAR(proximityScaling)) then {
+            _iconSize = _iconSize * linearConversion [0, GVAR(maxRange), (getPosASL ACE_player) vectorDistance (getPosASL _sourceUnit), 0.25, 2, true];
+        };
 
         drawIcon3D [QPATHTOF(UI\fp_icon2.paa), _drawColor, ASLtoAGL _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "RobotoCondensed"];
     };

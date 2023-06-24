@@ -14,8 +14,7 @@ GVAR(loadoutAction) = [ // create action
         private _isRearmVehicle = if (["ace_rearm"] call EFUNC(common,isModLoaded)) then {
             _vehicles findIf {[_x] call EFUNC(rearm,isSource)} != -1;
         } else {
-            private _cfgVehicle = configFile >> "CfgVehicles";
-            _vehicles findIf {getNumber (_cfgVehicle >> typeOf _x >> "transportAmmo") > 0} != -1;
+            _vehicles findIf {getNumber ((configOf _x) >> "transportAmmo") > 0} != -1;
         };
 
         (_isRearmVehicle && {[ace_player, _target] call FUNC(canConfigurePylons)})
@@ -27,7 +26,7 @@ GVAR(loadoutAction) = [ // create action
     private _typeOf = typeOf _vehicle;
 
     if (_typeOf in GVAR(aircraftWithPylons)) exitWith {};
-    if (!isClass (configFile >> "CfgVehicles" >> _typeOf >> 'Components' >> 'TransportPylonsComponent')) exitWith {};
+    if (!isClass ((configOf _vehicle) >> 'Components' >> 'TransportPylonsComponent')) exitWith {};
 
     GVAR(aircraftWithPylons) pushBack _typeOf;
     [_typeOf, 0, ["ACE_MainActions"], GVAR(loadoutAction)] call EFUNC(interact_menu,addActionToClass);

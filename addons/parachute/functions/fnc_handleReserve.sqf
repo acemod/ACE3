@@ -16,10 +16,10 @@
  */
 
 params ["_unit"];
-private _backpack = backpack _unit;
+private _backpack = backpackContainer _unit;
 
 if (
-    _backpack == "" &&
+    isNull _backpack &&
     {(vehicle _unit) isKindOf "ParachuteBase"} &&
     {GETVAR(_unit,GVAR(hasReserve),false)}
 ) then {
@@ -28,7 +28,7 @@ if (
     SETVAR(vehicle _unit,GVAR(canCut),true); // Mark the parachute cuttable since reserve is present
 } else {
     // Case where inventory has changed otherwise (including when reserve is added)
-    private _backpackCfg = configFile >> "CfgVehicles" >> _backpack;
+    private _backpackCfg = configOf _backpack;
     private _hasReserve = getNumber (_backpackCfg >> "ace_hasReserveParachute") == 1;
 
     // Cache reserve parachute state and class when backpack changes

@@ -114,7 +114,7 @@ TRACE_1("Found default wound handlers", count _defaultWoundHandlers);
         private _woundType = configName _x;
         if (_woundType == "woundHandlers") then {continue};
         if (_woundType in GVAR(woundDetails)) then {
-            private _weighting = GET_ARRAY(_x >> "weighting",ARR_2([[0,1]]));
+            private _weighting = GET_ARRAY(_x >> "weighting",[[ARR_2(0,1)]]);
             private _dmgMulti = GET_NUMBER(_x >> "damageMultiplier", 1);
             private _bleedMulti = GET_NUMBER(_x >> "bleedingMultiplier", 1);
             private _sizeMulti = GET_NUMBER(_x >> "sizeMultiplier", 1);

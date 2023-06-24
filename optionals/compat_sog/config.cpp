@@ -26,12 +26,19 @@ class CfgPatches {
             QGVAR(dshkm_AA_carry),
             QGVAR(rpd_carry),
             QGVAR(pk_carry),
+            QGVAR(mg42_carry),
+            QGVAR(sgm_carry),
+            QGVAR(sgm_shield_carry),
+            QGVAR(mk18_carry),
             QGVAR(mortar_m29_carry),
             QGVAR(mortar_m2_carry),
             QGVAR(mortar_type53_carry)
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"vn_weapons", "vn_emm_main_menu", "weapons_f_vietnam_c", "ace_trenches"};
+        requiredAddons[] = {
+            "ace_trenches",
+            "loadorder_f_vietnam"
+        };
         author = ECSTRING(common,ACETeam);
         authors[] = {"BaerMitUmlaut", "veteran29"};
         url = ECSTRING(main,URL);
@@ -40,6 +47,8 @@ class CfgPatches {
 };
 
 #include "ACE_CSW_Groups.hpp"
+#include "ACE_Medical_Injuries.hpp"
+#include "ACE_Triggers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgGlasses.hpp"

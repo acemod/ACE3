@@ -8,15 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
-// decide which woundsHandler to use by whether the extension is present or not
-// if ("ace_medical" callExtension "version" != "") then {
-
-    // DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandler);
-// } else {
-    // INFO("Using woundsHandlerSQF");
-    DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandlerSQF);
-// };
-
 call FUNC(parseConfigForInjuries);
 
 addMissionEventHandler ["Loaded",{
