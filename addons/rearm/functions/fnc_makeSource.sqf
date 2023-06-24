@@ -43,14 +43,16 @@ _source setVariable [QGVAR(currentSupply), _currentSupply + _rearmCargo, true];
 
 private _rearmCargoConfig = getNumber (configOf _source >> QGVAR(defaultSupply));
 
-// already initialized because this is a config rearm vehicle
-if (_rearmCargoConfig > 0 || _source getVariable [QGVAR(isSupplyVehicle), false]) exitWith {};
+// initialize if it's not a config rearm vehicle
+if (!(_rearmCargoConfig > 0 && _source getVariable [QGVAR(isSupplyVehicle), false])) then {
+    _source setVariable [QGVAR(isSupplyVehicle), true, true];
 
-_source setVariable [QGVAR(isSupplyVehicle), true, true];
+    // only add if menu does not already exist
+    if (isNil {_source getVariable QGVAR(initSupplyVehicle_jipID)}) then {
+        private _jipID = [QGVAR(initSupplyVehicle), [_source]] call CBA_fnc_globalEventJIP;
+        [_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
+        _source setVariable [QGVAR(initSupplyVehicle_jipID), _jipID];
+    };
+};
 
-// check if menu already exists
-if (!isNil {_source getVariable QGVAR(initSupplyVehicle_jipID)}) exitWith {};
-
-private _jipID = [QGVAR(initSupplyVehicle), [_source]] call CBA_fnc_globalEventJIP;
-[_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
-_source setVariable [QGVAR(initSupplyVehicle_jipID), _jipID];
+[QGVAR(rearmSourceInitalized), [_source]] call CBA_fnc_globalEvent;

@@ -19,7 +19,7 @@
 params ["_medic", "_patient", "_bodyPart", "_classname"];
 
 private _intensity = _patient getVariable [QGVAR(intensity), 0];
-_intensity = _intensity * (4/5);
+_intensity = _intensity * INTENSITY_DECREASE_MULT_PAT_DOWN;
 _patient setVariable [QGVAR(intensity), _intensity, true];
 
 if (_intensity > BURN_MIN_INTENSITY) then {

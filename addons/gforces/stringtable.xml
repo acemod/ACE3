@@ -36,7 +36,7 @@
             <Czech>Pouze letadla</Czech>
             <Portuguese>Somente Aeronave</Portuguese>
             <French>Avions seulement</French>
-            <Russian>Только для летательных аппаратов</Russian>
+            <Russian>Только авиация</Russian>
             <Japanese>航空機のみ</Japanese>
             <Polish>Tylko samoloty</Polish>
             <Korean>비행기에만 적용</Korean>
@@ -65,7 +65,7 @@
             <English>G-Force Coefficient</English>
             <Polish>Współczynnk przeciążenia</Polish>
             <French>Coefficient de force gravitationnelle</French>
-            <Russian>Коэффициент перегрузки</Russian>
+            <Russian>Коэф. перегрузки</Russian>
             <Japanese>G 効果係数</Japanese>
             <Turkish>G-Kuvvet Katsayısı</Turkish>
             <Spanish>Coeficiente de Fuerza G</Spanish>

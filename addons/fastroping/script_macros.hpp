@@ -6,5 +6,5 @@
     expression = QUOTE(if (_value) then {[_this] call EFUNC(fastroping,equipFRIES)}); \
     typeName = "BOOL"; \
     condition = "objectVehicle"; \
-    defaultValue = false; \
+    defaultValue = "false"; \
 }
