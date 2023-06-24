@@ -20,7 +20,7 @@
  */
 
 params ["_args", "_elapsedTime", "_totalTime"];
-_args params ["", "_patient"];
+_args params ["_medic", "_patient"];
 
 private _stitchableWounds = _patient call FUNC(getStitchableWounds);
 
@@ -76,4 +76,12 @@ if (EGVAR(medical,limping) == 2 && {_patient getVariable [QEGVAR(medical,isLimpi
     [QEGVAR(medical_engine,updateDamageEffects), _patient, _patient] call CBA_fnc_targetEvent;
 };
 
-true
+// Consume a suture for the next wound if one exists, stop stitching if none are left
+if (GVAR(consumeSurgicalKit) == 2) then {
+    // Don't consume a suture if there are no more wounds to stitch
+    if (count _stitchableWounds == 1) exitWith {false};
+    ([_medic, _patient, ["ACE_suture"]] call FUNC(useItem)) params ["_user"];
+    !isNull _user
+} else {
+    true
+}

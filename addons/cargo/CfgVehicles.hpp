@@ -265,11 +265,11 @@ class CfgVehicles {
     };
     class VTOL_Base_F;
     class VTOL_01_base_F: VTOL_Base_F {
-        GVAR(space) = 4;
+        GVAR(space) = 20;
         GVAR(hasCargo) = 1;
     };
     class VTOL_02_base_F: VTOL_Base_F {
-        GVAR(space) = 4;
+        GVAR(space) = 10;
         GVAR(hasCargo) = 1;
     };
 
@@ -320,6 +320,11 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
+    };
+
+    // Invisible Target Soldier
+    class TargetSoldierBase: StaticWeapon {
+        GVAR(canLoad) = 0;
     };
 
     class StaticMortar;
@@ -426,30 +431,43 @@ class CfgVehicles {
     class Land_CanisterFuel_F: Items_base_F {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
+        GVAR(noRename) = 1;
+    };
+
+    // Flexible Fuel tanks, 300L
+    class FlexibleTank_base_F: ThingX {
+        GVAR(size) = 3;
+        GVAR(canLoad) = 1;
+        GVAR(noRename) = 1;
     };
 
     // objects
     class RoadCone_F: ThingX {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
+        GVAR(noRename) = 1;
     };
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2;
+        GVAR(noRename) = 1;
     };
 
     class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
         GVAR(size) = 2;
         GVAR(canLoad) = 1;
+        GVAR(noRename) = 1;
     };
     class FloatingStructure_F;
     class Land_Camping_Light_F: FloatingStructure_F {
         GVAR(size) = 0.2;
         GVAR(canLoad) = 1;
+        GVAR(noRename) = 1;
     };
     class Land_Camping_Light_off_F: ThingX {
         GVAR(size) = 0.2;
         GVAR(canLoad) = 1;
+        GVAR(noRename) = 1;
     };
 
 

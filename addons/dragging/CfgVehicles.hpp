@@ -18,6 +18,12 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
+    // Invisible Target Soldier
+    class TargetSoldierBase: StaticWeapon {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(canCarry) = 1;
@@ -245,6 +251,15 @@ class CfgVehicles {
 
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,0.7,0};
+    };
+
+    // Flexible Fuel tanks, 300L
+    class FlexibleTank_base_F: ThingX {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition)[] = {0,0.65,0};
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition)[] = {0,1,0};
     };
 
     // some terrain objects

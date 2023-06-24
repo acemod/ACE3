@@ -271,6 +271,8 @@ def pboproject_settings():
         k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
         winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
+        winreg.SetValueEx(k, "wildcard_exclude_from_pbo_normal", 0, winreg.REG_SZ, value_exclude)
+        winreg.SetValueEx(k, "wildcard_exclude_from_pbo_unbinarised_missions", 0, winreg.REG_SZ, value_exclude)
     except:
         raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
 
@@ -875,6 +877,7 @@ Examples:
 
 
 If a file called $NOBIN$ is found in the module directory, that module will not be binarized.
+If preprocess = false is set in the addon.toml, that module's config will not be binarized.
 
 See the make.cfg file for additional build options.
 """)
@@ -1291,17 +1294,24 @@ See the make.cfg file for additional build options.
             build_successful = False
             if build_tool == "pboproject":
                 try:
-                    nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 
-                    if os.path.isfile(nobinFilePath):
+                    skipPreprocessing = False
+                    addonTomlPath = os.path.join(work_drive, prefix, module, "addon.toml")
+                    if os.path.isfile(addonTomlPath):
+                        with open(addonTomlPath, "r") as f:
+                            skipPreprocessing = "preprocess = false" in f.read() #python 3.11 has real toml but this is fine for now
+
+                    if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
-
-                    else:
+                    elif skipPreprocessing:
+                        print_green("addon.toml set [preprocess = false]. Proceeding with non-binerized config build!")
                         cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                    else:
+                        cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
                     color("grey")
                     if quiet:

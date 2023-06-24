@@ -17,7 +17,7 @@
  */
 
 params ["_truck", "_unit"];
-   
+
 (alive _unit)
 && {!isNull (_unit getVariable [QGVAR(dummy), objNull])}
 && {alive _truck}

@@ -3,7 +3,10 @@
 [QGVAR(burn), FUNC(burn)] call CBA_fnc_addEventHandler;
 [QGVAR(playScream), {
     params ["_scream", "_source"];
-    _source say3D _scream;
+    // only play sound if enabled in settings
+    if (GVAR(enableScreams)) then {
+        _source say3D _scream;
+    };
 }] call CBA_fnc_addEventHandler;
 
 ["ace_settingsInitialized", {
@@ -22,7 +25,7 @@
 
             [GVAR(fireSources), _key, [_fireLogic, _radius, _intensity, _condition, _conditionArgs]] call CBA_fnc_hashSet;
         }] call CBA_fnc_addEventHandler;
-        
+
         [QGVAR(removeFireSource), {
             params ["_key"];
             [GVAR(fireSources), _key] call CBA_fnc_hashRem;

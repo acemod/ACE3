@@ -31,7 +31,8 @@ private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
 
 private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
 private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
-private _loadout = getUnitLoadout GVAR(center);
+private _extendedLoadout = GVAR(center) call FUNC(getLoadout);
+private _loadout = _extendedLoadout select 0;
 
 private _loadoutIndex = _data findIf {(_x select 0) == _editBoxContent};
 private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
@@ -62,7 +63,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                         if (_weapon != "") then {
 
                             private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                             if (_weapon != _baseWeapon) then {
+                            if (_weapon != _baseWeapon) then {
                                 (_loadout select _dataIndex) set [0, _baseWeapon];
                             };
                         };
@@ -135,9 +136,9 @@ switch (GVAR(currentLoadoutsTab)) do {
         };
 
         if (_loadoutIndex isEqualto -1) then {
-            _data pushBack [_editBoxContent, _loadout];
+            _data pushBack [_editBoxContent, _extendedLoadout];
         } else {
-            _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+            _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _extendedLoadout]];
         };
 
         // Delete "old" loadout row
@@ -149,7 +150,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
         ADD_LOADOUTS_LIST_PICTURES
 
-        _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
+        _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_extendedLoadout] call FUNC(verifyLoadout)];
 
         _contentPanelCtrl lnbSort [1, false];
 
@@ -243,9 +244,9 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
 
             if (_loadoutIndex == -1) then {
-                GVAR(defaultLoadoutsList) pushBack [_editBoxContent, _loadout];
+                GVAR(defaultLoadoutsList) pushBack [_editBoxContent, _extendedLoadout];
             } else {
-                GVAR(defaultLoadoutsList) set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+                GVAR(defaultLoadoutsList) set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _extendedLoadout]];
             };
 
             for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
@@ -256,7 +257,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
             ADD_LOADOUTS_LIST_PICTURES
 
-            _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
+            _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_extendedLoadout] call FUNC(verifyLoadout)];
 
             _contentPanelCtrl lnbSort [1, false];
 
@@ -295,4 +296,5 @@ switch (GVAR(currentLoadoutsTab)) do {
 };
 [(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutSaved), _editBoxContent] joinString " "] call FUNC(message);
 private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
-[QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout#0]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutSaveExtended), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;

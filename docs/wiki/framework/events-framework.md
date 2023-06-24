@@ -40,6 +40,7 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has started (local on the _caller)
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action is completed (local on the _caller)
 |`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has been interrupted (local on the _caller)
+|`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit)
 
 ### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
@@ -56,7 +57,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Callable | Scripted way to add cargo to vehicle
 |`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle
-|`ace_cargoUnloaded` | [_item, _vehicle] | Global | Listen | Cargo has been Unloaded from vehicle
+|`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Listen | Cargo has been Unloaded from vehicle
 
 ### 2.5 Captives (`ace_captives`)
 
@@ -86,6 +87,8 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_allowDefuse` | [_mine, _allow] | Global or Target | Callable | Set allowance of the dynamic defusal action on a mine
 |`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered
 |`ace_explosives_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive
+|`ace_explosives_place` | [_explosive, _dir, _pitch, _unit] | Global | Listen | Explosive is armed
+|`ace_explosives_setup` | [_explosiveVehicle, _magClassname, _unit] | Global | Listen | Explosive is placed in the world
 
 ### 2.9 Logistics Wirecutter (`ace_logistics`)
 
@@ -116,6 +119,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle
 |`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle.
+
+### 2.12 Trenches (`ace_trenches`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_trenches_placed` | [_unit, _trench] | Global | Listen | After trench object is placed by unit.
+| `ace_trenches_finished` | [_unit, _trench] | Global | Listen | After trench object is fully dug up by unit (100% progress).
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
@@ -228,7 +238,7 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 ### 3.4 Example
 
-```cpp
+```sqf
 // Event handler added on a target machine
 ["ace_interact_tapShoulder", ace_example_fnc_onTapShoulder] call CBA_fnc_addEventHandler;
 

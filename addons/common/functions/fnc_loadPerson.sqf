@@ -7,6 +7,8 @@
  * 0: Unit that will load <OBJECT>
  * 1: Unit to be loaded <OBJECT>
  * 2: Vehicle that the unit will be loaded in <OBJECT> (default: objNull)
+ * 3: Preferred seats <ARRAY>
+ * 4: Reverse fill <BOOL>
  *
  * Return Value:
  * Vehicle that the unitToBeloaded has been loaded in. Returns objNull if function failed <OBJECT>
@@ -19,8 +21,8 @@
 
 #define GROUP_SWITCH_ID QFUNC(loadPerson)
 
-params ["_caller", "_unit", ["_vehicle", objNull]];
-TRACE_3("loadPerson",_caller,_unit,_vehicle);
+params ["_caller", "_unit", ["_vehicle", objNull], ["_preferredSeats", []], ["_reverseFill", false]];
+TRACE_5("loadPerson",_caller,_unit,_vehicle,_preferredSeats,_reverseFill);
 
 if (!([_caller, _unit, ["isNotDragging", "isNotCarrying", "isNotSwimming"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith { objNull };
 
@@ -39,8 +41,8 @@ if (!isNull _vehicle) then {
         };
     };
 
-    TRACE_3("sending ace_loadPersonEvent",_unit,_vehicle,_caller);
-    ["ace_loadPersonEvent", [_unit, _vehicle, _caller], _unit] call CBA_fnc_targetEvent;
+    TRACE_5("sending ace_loadPersonEvent",_unit,_vehicle,_caller,_preferredSeats,_reverseFill);
+    ["ace_loadPersonEvent", [_unit, _vehicle, _caller, _preferredSeats, _reverseFill], _unit] call CBA_fnc_targetEvent;
 };
 
 _vehicle

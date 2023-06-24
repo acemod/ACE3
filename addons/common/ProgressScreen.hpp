@@ -1,19 +1,20 @@
 class GVAR(ProgressBar_Dialog) {
     idd = -1;
     movingEnable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBG)),(_this select 0) displayCtrl 1)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBar)),(_this select 0) displayCtrl 2)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBarTitle)),(_this select 0) displayCtrl 3)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgProgress)),_this select 0)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBG)),(_this select 0) displayCtrl 1)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBar)),(_this select 0) displayCtrl 2)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBarTitle)),(_this select 0) displayCtrl 3)];);
     objects[] = {};
 
     class controlsBackground {
-        class Background {
-            idc = -1;
+        class Background: ctrlMapEmpty {
+            idc = 101;
             moving = 0;
+            fade = 1;
             font = "TahomaB";
             text = "";
             sizeEx = 0;
             lineSpacing = 0;
-            type = 0;
-            style = 0;
+            style = 48;
+            type = 101;
             size = 1;
             colorBackground[] = {0, 0, 0, 0.0};
             colorText[] = {0, 0, 0, 0};

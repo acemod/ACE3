@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: M47 Dragon Missile
+component: dragon
 description: M47 Dragon
 group: feature
 category: equipment
@@ -75,7 +76,3 @@ Adjust the sight picture by moving the launcher to align the vertical cross hair
 
 **Figure 4. Range determination for frontal or rear target.**
 <img src="{{ site.baseurl }}/img/wiki/feature/m47_frontal.webp" width="1400" height="357" alt="Frontal, Oblique, and Flank targets" />
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="dragon" %}

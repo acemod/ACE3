@@ -25,6 +25,17 @@ def get_files_to_process(basePath):
             if file.endswith(".sqf") or file == "config.cpp":
                 if file.lower() in files_to_ignore_lower:
                     continue
+                skipPreprocessing = False
+                addonTomlPath = os.path.join(root, "addon.toml")
+                if os.path.isfile(addonTomlPath):
+                    with open(addonTomlPath, "r") as f:
+                        skipPreprocessing = "preprocess = false" in f.read()
+                addonTomlPath = os.path.join(os.path.dirname(root), "addon.toml")
+                if os.path.isfile(addonTomlPath):
+                    with open(addonTomlPath, "r") as f:
+                        skipPreprocessing = "preprocess = false" in f.read()
+                if file == "config.cpp" and skipPreprocessing:
+                    continue  # ignore configs with __has_include
                 filePath = os.path.join(root, file)
                 arma_files.append(filePath)
     return arma_files
@@ -42,7 +53,7 @@ def process_file(filePath, skipA3Warnings=True):
     # cmd.append("-V")
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, universal_newlines=True)
     try:
-        ret = proc.wait(7)  # max wait - seconds
+        ret = proc.wait(12)  # max wait - seconds
     except Exception as _e:
         print("sqfvm timed out: {}".format(filePath))
         return True

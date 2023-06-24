@@ -15,13 +15,21 @@
  * Public: No
  */
 
+#include "\a3\ui_f\hpp\defineResincl.inc"
+
 params ["_menuType"];
 
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
+// Conditions: Don't open when editing a text box
+private _isTextEditing = (allDisplays findIf {(ctrlType (focusedCtrl _x)) == CT_EDIT}) != -1;
+
 // Conditions: canInteract (these don't apply to zeus)
-if ((isNull curatorCamera) && {
-    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+if (
+    _isTextEditing ||
+    {(isNull curatorCamera) && {
+        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+    }
 }) exitWith {false};
 
 while {dialog} do {

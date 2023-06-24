@@ -643,6 +643,27 @@ class CfgVehicles {
         };
         class ACE_SelfActions {};
     };
+
+    class Items_base_F;
+    class PlasticCase_01_base_F: Items_base_F {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 2;
+                condition = "true";
+                class ACE_OpenBox {
+                    displayName = CSTRING(OpenBox);
+                    condition = QUOTE(alive _target && {!lockedInventory _target} && {getNumber (configOf _target >> 'disableInventory') == 0});
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
+                    showDisabled = 0;
+                };
+            };
+        };
+        class ACE_SelfActions {};
+    };
+
+
     class Slingload_base_F: ReammoBox_F {};
     class Slingload_01_Base_F: Slingload_base_F {
         class ACE_Actions: ACE_Actions {

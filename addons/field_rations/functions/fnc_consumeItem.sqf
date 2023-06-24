@@ -6,21 +6,23 @@
  * Arguments:
  * 0: Target (not used) <OBJECT>
  * 1: Player <OBJECT>
- * 2: Item classname <STRING>
+ * 2: Item data <ARRAY>
+ *    0: Item classname <STRING>
+ *    1: Item config <CONFIG>
+ *    2: Is item magazine <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [objNull, ACE_player, "ACE_WaterBottle"] call ace_field_rations_fnc_consumeItem
+ * [objNull, ACE_player, "["ACE_WaterBottle_Empty", configFile >> "CfgWeapons" >> "ACE_WaterBottle_Empty", false]] call ace_field_rations_fnc_consumeItem
  *
  * Public: No
  */
 
-params ["", "_player", "_consumeItem"];
-TRACE_2("Consume item started",_player,_consumeItem);
-
-private _config = configFile >> "CfgWeapons" >> _consumeItem;
+params ["", "_player", "_consumeData"];
+_consumeData params ["_consumeItem", "_config", "_isMagazine"];
+TRACE_3("Consume item started",_player,_consumeItem,_config);
 
 // Get consume time for item
 private _consumeTime = getNumber (_config >> QXGVAR(consumeTime));
@@ -70,11 +72,15 @@ private _soundPlayed = if (_consumeAnim != "" && {vehicle _player == _player && 
 
 private _fnc_onSuccess = {
     params ["_args"];
-    _args params ["_player", "_consumeItem", "_replacementItem", "_thirstQuenched", "_hungerSatiated"];
+    _args params ["_player", "_consumeItem", "_replacementItem", "_thirstQuenched", "_hungerSatiated", "", "", "", "_isMagazine"];
     TRACE_1("Consume item successful",_args);
 
     // Remove consumed item
-    _player removeItem _consumeItem;
+    if (_isMagazine) then {
+        _player removeMagazineGlobal _consumeItem;
+    } else {
+        _player removeItem _consumeItem;
+    };
 
     // Add replacement item if needed
     if (_replacementItem != "") then {
@@ -92,7 +98,7 @@ private _fnc_onSuccess = {
         _player setVariable [QXGVAR(hunger), (_hunger - _hungerSatiated) max 0];
     };
 
-    ["acex_rationConsumed", [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated]] call CBA_fnc_localEvent;
+    ["acex_rationConsumed", [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated, _isMagazine]] call CBA_fnc_localEvent;
 
     _player setVariable [QGVAR(previousAnim), nil];
 };
@@ -115,7 +121,7 @@ private _fnc_onFailure = {
 
 private _fnc_condition = {
     params ["_args"];
-    _args params ["_player", "_consumeItem", "", "", "", "_consumeAnim", "_consumeSound", "_soundPlayed"];
+    _args params ["_player", "_consumeItem", "", "", "", "_consumeAnim", "_consumeSound", "_soundPlayed", "_isMagazine"];
 
     // Attempt to sync sound with animation start
     if (!_soundPlayed && {_consumeSound != "" && {_consumeAnim == "" || {animationState _player == _consumeAnim}}}) then {
@@ -123,7 +129,10 @@ private _fnc_condition = {
         _args set [7, true];
     };
 
-    _consumeItem in (_player call EFUNC(common,uniqueItems))
+    if (_isMagazine) exitWith {
+        _consumeItem in magazines _player // return
+    };
+    _consumeItem in (_player call EFUNC(common,uniqueItems)) // return
 };
 
 [
@@ -136,7 +145,8 @@ private _fnc_condition = {
         _hungerSatiated,
         _consumeAnim,
         _consumeSound,
-        _soundPlayed
+        _soundPlayed,
+        _isMagazine
     ],
     _fnc_onSuccess,
     _fnc_onFailure,

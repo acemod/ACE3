@@ -94,7 +94,7 @@
     "LIST",
     [LSTRING(WheelRepairRequiredItems_DisplayName), LSTRING(WheelRepairRequiredItems_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [[[], ["ToolKit"]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 0],
+    [[[], [ANY_TOOLKIT_FAKECLASS]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 0],
     true
 ] call CBA_fnc_addSetting;
 
@@ -103,7 +103,7 @@
     "LIST",
     [LSTRING(MiscRepairRequiredItems_DisplayName), LSTRING(MiscRepairRequiredItems_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [[[], ["ToolKit"]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
+    [[[], [ANY_TOOLKIT_FAKECLASS]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
     true
 ] call CBA_fnc_addSetting;
 
@@ -112,7 +112,7 @@
     "LIST",
     [LSTRING(FullRepairRequiredItems_DisplayName), LSTRING(FullRepairRequiredItems_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [[[], ["ToolKit"]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
+    [[[], [ANY_TOOLKIT_FAKECLASS]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
     true
 ] call CBA_fnc_addSetting;
 

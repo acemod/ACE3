@@ -22,7 +22,7 @@ params ["_newCameraView", "_cameraOn", ["_checkGunnerView", true]];
 // Remote control hates switchCamera (control returns to player, camera is left on remotely controlled object/unit), make sure remote controlled units are not impacted
 
 !(_newCameraView isEqualTo "GUNNER" && {_checkGunnerView}) &&
-{!(_newCameraView isEqualTo "GROUP")} &&
+{_newCameraView isNotEqualTo "GROUP"} &&
 {!isNull ACE_player} &&
 {player == ACE_player} &&
 {alive ACE_player} &&
