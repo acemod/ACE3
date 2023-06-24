@@ -1251,14 +1251,16 @@
             <Spanish>Mostrar la pérdida de sangre cualitativa en la lista de heridas.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
-            <English>Show Damage Taken</English>
+            <English>Show Trauma Sustained</English>
+            <Portuguese>Mostrar Traumatismo Sofrido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_Description">
-            <English>Show Damage Taken in the injury list.</English>
+            <English>Show trauma sustained in the injury list.</English>
+            <Portuguese>Mostrar traumatismo sofrido na lista de feridas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageToolTip">
-            <English>Damage: %1%2</English>
-            <Portuguese>Dano: %1%2</Portuguese>
+            <English>Trauma: %1%2</English>
+            <Portuguese>Traumatismo: %1%2</Portuguese>
         </Key>
     </Package>
 </Project>
