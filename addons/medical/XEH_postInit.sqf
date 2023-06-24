@@ -6,7 +6,8 @@
 if (!hasInterface) exitWith {};
 
 [missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
-    (linearConversion [0, 1, GET_PAIN_PERCEIVED(ACE_player), 1, 5, true]) + (ACE_player getVariable [QEGVAR(medical_engine,aimFracture), 0])
+    // pain has a 1:1 effect on sway, each untreated fracture doubles it
+    (1 + GET_PAIN_PERCEIVED(ACE_player)) * (linearConversion [0, 8, (ACE_player getVariable [QEGVAR(medical_engine,aimFracture), 0]), 1, 4, true])
 }] call EFUNC(common,arithmeticSetSource);
 
 #ifdef DEBUG_MODE_FULL
