@@ -26,8 +26,11 @@ private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
 private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 
 {
-    _x params ["", "_bodyPartN", "_amountOf", "_bleeding"];
-    _bodyPartBloodLoss set [_bodyPartN, (_bodyPartBloodLoss select _bodyPartN) + (_bleeding * _amountOf)];
+    private _partIndex = ALL_BODY_PARTS find _x;
+    {
+        _x params ["", "_amountOf", "_bleeding"];
+        _bodyPartBloodLoss set [_partIndex, (_bodyPartBloodLoss select _partIndex) + (_bleeding * _amountOf)];
+    } forEach _y;
 } forEach GET_OPEN_WOUNDS(_target);
 
 {

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: kymckay
  * Calculates the Surgical Kit treatment time based on the amount of stitchable wounds.
  *
  * Arguments:
@@ -18,4 +18,11 @@
 
 params ["", "_patient"];
 
-count (_patient call FUNC(getStitchableWounds)) * GVAR(woundStitchTime)
+
+private _stitchableTotal = 0;
+
+{
+    _stitchableTotal = _stitchableTotal + count _y;
+} forEach (_patient call FUNC(getStitchableWounds));
+
+_stitchableTotal * GVAR(woundStitchTime)

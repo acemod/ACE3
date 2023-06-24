@@ -18,7 +18,7 @@
 
 params ["_trench", "_unit"];
 
-if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
+if !(_unit call FUNC(hasEntrenchingTool)) exitWith {false};
 
 // Prevent camouflage if not fully dug
 if ((_trench getVariable [QGVAR(progress), 0]) != 1) exitWith {false};

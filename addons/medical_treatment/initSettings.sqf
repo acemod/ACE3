@@ -193,7 +193,7 @@
     "LIST",
     [LSTRING(ConsumeSurgicalKit_DisplayName), LSTRING(ConsumeSurgicalKit_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    [[0, 1, 2], ["str_eval_typenothing", LSTRING(SurgicalKit_Display), LSTRING(Suture_Display)], 0],
     true
 ] call CBA_fnc_addSetting;
 
