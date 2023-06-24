@@ -17,9 +17,9 @@ private _configItems = EMPTY_VIRTUAL_ARSENAL;
 
 // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
 // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
-private _filterFunction = [{
+private _filterFunction = toString {
     isClass _x && {(if (isNumber (_x >> "scopeArsenal")) then {getNumber (_x >> "scopeArsenal")} else {getNumber (_x >> "scope")}) == 2} && {getNumber (_x >> QGVAR(hide)) != 1}
-}] call EFUNC(common,codeToString);
+};
 
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
