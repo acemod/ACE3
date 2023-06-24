@@ -67,27 +67,18 @@ if (
     0
 };
 
-// Being inside an exploding vehicle doesn't trigger for each hitpoint
-// It seems to fire twice with ammo type "FuelExplosion" or "FuelExplosionBig"
+// Receiving explosive damage inside a vehicle doesn't trigger for each hitpoint
+// This is the case for mines, explosives, artillery, and catasthrophic vehicle explosions
+// Triggers twice, but that doesn't matter
 if (
     _hitPoint isEqualTo "#structural" &&
-    {_ammo isKindOf "FuelExplosion"} &&
     {_vehicle != _unit} &&
-    {_damage == 1}
+    {GET_NUMBER(configFile >> "CfgAmmo" >> _ammo >> "explosive", 0) > 0}
 ) exitwith {
-    // triggers twice, so do half damage each time. not very important as it's basically always lethal
-    private _hit = GET_NUMBER(configFile >> "CfgAmmo" >> _ammo >> "indirectHit", 10)/2;
-    private _uniform = uniform _unit;
-    if (_uniform isEqualTo "") then {
-        _uniform = getText (configOf _unit >> "nakedUniform");
-    };
-    private _uniformClass = GET_STRING(configFile >> "CfgWeapons" >> _uniform >> "ItemInfo" >> "uniformClass", "U_BasicBody");
+    _newDamage = abs _newDamage; // damage can sometimes be negative (why?)
     private _damages = [];
     {
-        private _armor = [_unit, _x] call FUNC(getHitpointArmor);
-        // would be nice to move this into getHitpointArmor
-        private _shielding = GET_NUMBER(configFile >> "CfgVehicles" >> _uniformClass >> "Hitpoints" >> _x >> "explosionShielding", 1);
-        _damages pushBack [_hit*_shielding/_armor, ALL_BODY_PARTS select _forEachIndex, _hit*_shielding];
+        _damages pushBack [_newDamage, ALL_BODY_PARTS select _forEachIndex, _newDamage];
     } forEach ALL_HITPOINTS;
     TRACE_6("Vehicle explosion",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
     [QEGVAR(medical,woundReceived), [_unit, _damages, _unit, _ammo]] call CBA_fnc_localEvent;
@@ -144,7 +135,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     _allDamages sort false;
     _allDamages = _allDamages apply {[_x select 2, _x select 3, _x select 0]};
-    
+
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them
     if (_ammo isEqualTo "") then {
