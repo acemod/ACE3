@@ -35,7 +35,7 @@ if !(_unit getVariable [QGVAR(initialized), false]) exitWith {
 
 private _state = [_json] call CBA_fnc_parseJSON;
 
-// Migration from old array wounding storage serialized in old versions (<= 3.15.0)
+// Migration from old array wounding storage serialized in old versions (<= 3.16.0)
 {
     if ((_state getVariable [_x, createHashMap]) isEqualType []) then {
         private _migratedWounds = createHashMap;
