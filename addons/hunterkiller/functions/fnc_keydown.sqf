@@ -15,7 +15,11 @@
  * Public: No
  */
 
-if ((GVAR(mode) == MODE_NO_ACTIONS) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {
+if (
+    (GVAR(mode) == MODE_NO_ACTIONS)
+    || {!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))}
+    || {isTurnedOut ACE_player}
+) exitWith {
     false
 };
 

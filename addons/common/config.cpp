@@ -58,6 +58,8 @@ class ACE_Rsc_Control_Base {
     h = 0;
 };
 
+class ctrlMapEmpty;
+
 #include "ACE_Settings.hpp"
 #include "define.hpp"
 #include "ProgressScreen.hpp"

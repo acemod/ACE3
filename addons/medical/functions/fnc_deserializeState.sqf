@@ -35,6 +35,22 @@ if !(_unit getVariable [QGVAR(initialized), false]) exitWith {
 
 private _state = [_json] call CBA_fnc_parseJSON;
 
+// Migration from old array wounding storage serialized in old versions (<= 3.16.0)
+{
+    if ((_state getVariable [_x, createHashMap]) isEqualType []) then {
+        private _migratedWounds = createHashMap;
+
+        {
+            _x params ["_class", "_bodyPartIndex", "_amountOf", "_bleeding", "_damage"];
+
+            private _partWounds = _migratedWounds getOrDefault [ALL_BODY_PARTS select _bodyPartIndex, [], true];
+            _partWounds pushBack [_class, _amountOf, _bleeding, _damage];
+        } forEach (_state getVariable _x);
+
+        _state setVariable [_x, _migratedWounds];
+    };
+} forEach [VAR_OPEN_WOUNDS, VAR_BANDAGED_WOUNDS, VAR_STITCHED_WOUNDS];
+
 // Set medical variables
 {
     _x params ["_var", "_default"];
@@ -57,9 +73,9 @@ private _state = [_json] call CBA_fnc_parseJSON;
     [VAR_PAIN, 0],
     [VAR_IN_PAIN, false],
     [VAR_PAIN_SUPP, 0],
-    [VAR_OPEN_WOUNDS, []],
-    [VAR_BANDAGED_WOUNDS, []],
-    [VAR_STITCHED_WOUNDS, []],
+    [VAR_OPEN_WOUNDS, createHashMap],
+    [VAR_BANDAGED_WOUNDS, createHashMap],
+    [VAR_STITCHED_WOUNDS, createHashMap],
     [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES],
     // State transition should handle this
     // [VAR_UNCON, false],

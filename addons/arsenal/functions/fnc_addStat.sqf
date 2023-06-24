@@ -4,32 +4,33 @@
  * Add a stat to ACE Arsenal.
  *
  * Arguments:
- * 0: Tabs to add the stat to (ARRAY of ARRAYS)
-   * 0.1 Left tab indexes (ARRAY of NUMBERS)
-   * 0.2 Right tab indexes (ARRAY of NUMBERS)
- * 1: Stat class (STRING) (A unique string for each stat)
- * 2: Config entries to pass (ARRAY of STRINGS)
- * 3: Title (STRING)
- * 4: Show bar / show text bools (ARRAY of BOOLS)
-   * 4.1 Show bar (BOOL)
-   * 4.2 Show text (BOOL)
- * 5: Array of statements (ARRAY of ARRAYS)
-   * 5.1 Bar code (CODE)
-   * 5.2 Text code (CODE)
-   * 5.3 Condition code (CODE)
- * 6: Priority (NUMBER) (Optional)
+ * 0: Tabs to add the stat to <ARRAY of ARRAYS>
+ *   0.0: Left tab indexes <ARRAY of NUMBERS>
+ *   0.1: Right tab indexes <ARRAY of NUMBERS>
+ * 1: Stat class (unique string for each stat) <STRING>
+ * 2: Config entries to pass <ARRAY of STRINGS>
+ * 3: Title <STRING>
+ * 4: Show bar / show text bools <ARRAY of BOOLS>
+ *   4.0: Show bar <BOOL>
+ *   4.1: Show text <BOOL>
+ * 5: Array of statements <ARRAY of ARRAYS>
+ *   5.0: Bar code <CODE>
+ *   5.1: Text code <CODE>
+ *   5.2: Condition code <CODE>
+ * 6: Priority <NUMBER> (default: 0)
  *
  * Return Value:
- * 0: Array of IDs (ARRAY of STRINGS)
+ * 0: Array of IDs <ARRAY of STRINGS>
  *
  * Example:
  * [[[0,1,2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {
-        params ["_statsArray", "_itemCfg"];
-        getNumber (_itemCfg >> _statsArray select 0)
-    }, {true}]] call ACE_arsenal_fnc_addStat
+ *     params ["_statsArray", "_itemCfg"];
+ *     getNumber (_itemCfg >> _statsArray select 0)
+ * }, {true}]] call ACE_arsenal_fnc_addStat
  *
  * Public: Yes
-*/
+ */
+
 params [
     ["_tabs", [[], []], [[]], 2],
     ["_class", "", [""]],

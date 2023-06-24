@@ -184,6 +184,18 @@ class CfgWeapons {
         HEARING_PROTECTION_EARMUFF
     };
 
+    class rhs_6b47;
+    class rhs_6b47_6m2: rhs_6b47 {
+        HEARING_PROTECTION_PELTOR
+    };
+    class rhs_6b47_6m2_1: rhs_6b47 {
+        HEARING_PROTECTION_PELTOR
+    };
+
+    class rhs_6m2: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    };
+
     class rhs_weap_d81;
     class rhs_weap_2a70: rhs_weap_d81 { // "Low pressure" 100mm cannon
         ace_overpressure_range = 15;
