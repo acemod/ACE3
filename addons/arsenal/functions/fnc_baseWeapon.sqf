@@ -8,7 +8,7 @@
  * 0: Weapon <STRING>
  *
  * Return Value:
- * None
+ * Base weapon <STRING>
  *
  * Example:
  * ["arifle_AK12_GL_lush_arco_pointer_F"] call ace_arsenal_fnc_baseWeapon

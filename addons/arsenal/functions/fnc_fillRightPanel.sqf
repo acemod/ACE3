@@ -42,24 +42,18 @@ if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
 private _fnc_fill_right_Container = {
     params ["_configCategory", "_className", "_isMagazine", ["_isUnique", false, [false]]];
 
-    // If items is not in the arsenal, it must be unique
-    if !(_className in GVAR(virtualItemsFlat)) then {
+    // If item is not in the arsenal, it must be unique
+    if (!_isUnique && {!(_className in GVAR(virtualItemsFlat))}) then {
         _isUnique = true;
     };
 
-    private _cachedItemInfo = GVAR(rightPanelCache) getOrDefault [_configCategory + _className, []];
-
     // If not in cache, find info and cache it for later use
-    if (_cachedItemInfo isEqualTo []) then {
+    private _cachedItemInfo = GVAR(rightPanelCache) getOrDefaultCall [_configCategory + _className, {
         // Get display name, picture and mass
         private _configPath = configFile >> _configCategory >> _className;
 
-        _cachedItemInfo set [0, getText (_configPath >> "displayName")];
-        _cachedItemInfo set [1, getText (_configPath >> "picture")];
-        _cachedItemInfo set [2, if (_isMagazine) then {getNumber (_configPath >> "mass")} else {getNumber (_configPath >> "itemInfo" >> "mass")}];
-
-        GVAR(rightPanelCache) set [_configCategory + _className, _cachedItemInfo]
-    };
+        [getText (_configPath >> "displayName"), getText (_configPath >> "picture"), if (_isMagazine) then {getNumber (_configPath >> "mass")} else {getNumber (_configPath >> "itemInfo" >> "mass")}]
+    }, true];
 
     _cachedItemInfo params ["_displayName", "_picture", "_mass"];
 
@@ -69,7 +63,7 @@ private _fnc_fill_right_Container = {
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
     _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
-    _ctrlPanel lbSetTooltip [_lbAdd * (count lnbGetColumnsPosition _ctrlPanel), format ["%1\n%2", _displayName, _className]];
+    _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
     _ctrlPanel setVariable [_className, _mass];
 };
 
@@ -118,28 +112,28 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonPrimaryWeapon: {
         _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 0 select 0;
         _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 0 select 1;
-        _compatibleItems = compatibleItems (_weapons select 0)/* call CBA_fnc_compatibleItems*/;
+        _compatibleItems = compatibleItems (_weapons select 0);
         _itemsToCheck = GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS;
     };
     // Handgun weapon
     case IDC_buttonHandgun: {
         _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 1 select 0;
         _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 1 select 1;
-        _compatibleItems = (_weapons select 1) call CBA_fnc_compatibleItems;
+        _compatibleItems = compatibleItems (_weapons select 1);
         _itemsToCheck = GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS;
     };
     // Secondary weapon
     case IDC_buttonSecondaryWeapon: {
         _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 2 select 0;
         _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 2 select 1;
-        _compatibleItems = (_weapons select 2) call CBA_fnc_compatibleItems;
+        _compatibleItems = compatibleItems (_weapons select 2);
         _itemsToCheck = GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS;
     };
     // Binoculars
     case IDC_buttonBinoculars: {
         _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 3 select 0;
         _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 3 select 1;
-        _compatibleItems = (_weapons select 3) call CBA_fnc_compatibleItems;
+        _compatibleItems = compatibleItems (_weapons select 3);
         _itemsToCheck = GVAR(currentItems) select IDX_CURR_BINO_ITEMS;
     };
     // Uniform, vest or backpack

@@ -186,8 +186,11 @@ _putList = _putList - [""];
 private _faceCache = createHashMap;
 private _dlcName = "";
 private _modPicture = "";
+private _faceCategory = "";
 
 {
+    _faceCategory = configName _x;
+
     {
         if (getNumber (_x >> "disabled") == 0 && {getText (_x >> "head") != ""} && {configName _x != "Default"}) then {
             _dlcName = _x call EFUNC(common,getAddon);
@@ -198,7 +201,7 @@ private _modPicture = "";
                 _modPicture = (modParams [_dlcName, ["logo"]]) param [0, ""];
             };
 
-            _faceCache set [configName _x, [getText (_x >> "displayName"), _modPicture]];
+            _faceCache set [configName _x, [getText (_x >> "displayName"), _modPicture, _faceCategory]];
         };
     } forEach ("true" configClasses _x);
 } forEach ("true" configClasses (configfile >> "CfgFaces"));

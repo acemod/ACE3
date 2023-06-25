@@ -5,8 +5,7 @@
 [QGVAR(getDogtagItem), DFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
 [QGVAR(addDogtagItem), DFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
 
-
-//Add actions and event handlers only if ace_medical is loaded
+// Add actions and event handlers only if ace_medical is loaded
 // - Adding actions via config would create a dependency
 if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     if (hasInterface) then {
@@ -46,35 +45,33 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     };
 };
 
+// If the arsenal is loaded, show the custom names for dog tags when in the arsenal
 if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
     [QEGVAR(arsenal,rightPanelFilled), {
-
         params ["_display", "_leftPanelIDC", "_rightPanelIDC"];
 
         if (_leftPanelIDC in [2010, 2012, 2014] && {_rightPanelIDC == 38}) then {
             LOG("passed");
             private _rightPanel = _display displayCtrl 15;
-            (lnbSize _rightPanel) params ["_rows", "_columns"];
+            private _allDogtags = missionNamespace getVariable [QGVAR(allDogtags), []];
+            private _allDogtagsData = missionNamespace getVariable [QGVAR(allDogtagDatas), []];
+            private _cfgWeapons = configFile >> "CfgWeapons";
+            private _item = "";
+            private _dogtagData = [];
 
-            private _allDogtags = missionNameSpace getVariable [QGVAR(allDogtags), []];
-            private _allDogtagDatas = missionNameSpace getVariable [QGVAR(allDogtagDatas), []];
+            for "_i" from 0 to (lnbSize _rightPanel select 0) - 1 do {
+                _item = _rightPanel lnbData [_i, 0];
 
-            for "_r" from 0 to (_rows - 1) do {
-                private _data = _rightPanel lnbData [_r, 0];
+                if (_item isKindOf ["ACE_dogtag", _cfgWeapons]) then {
+                    _dogtagData = _allDogtagsData param [_allDogtags find _item, []];
 
-                if (_data isKindOf ["ACE_dogtag", (configFile >> "CfgWeapons")]) then {
-
-                    private _dogtagData = [];
-                    private _index = _allDogtags find _data;
-                    _dogtagData = _allDogtagDatas select _index;
-                    private _dogtagString =  [localize LSTRING(itemName), ": ", (_dogtagData select 0)] joinString "";
-
-                    _rightPanel lnbSetText [[_r, 1], _dogtagString];
+                    // If data doesn't exist, put name as "unknown"
+                    _rightPanel lnbSetText [[_i, 1], [LLSTRING(itemName), ": ", _dogtagData param [0, LELSTRING(common,unknown)]] joinString ""];
                 };
             };
         };
     }] call CBA_fnc_addEventHandler;
 };
 
-// disable dogtags for civilians
+// Disable dogtags for civilians
 "CIV_F" call FUNC(disableFactionDogtags);

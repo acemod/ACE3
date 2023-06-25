@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, Dedmen, Brett Mayson
- * Sort arsenal panel.
+ * Author: Alganthe, Dedmen, Brett Mayson, johnb43
+ * Sort an arsenal panel.
  *
  * Arguments:
  * 0: Sort control <CONTROL>
@@ -19,6 +19,9 @@ private _display = ctrlParent _sortControl;
 
 private _rightSort = ctrlIDC _sortControl == IDC_sortRightTab;
 private _right = _rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]};
+private _cfgFaces = configFile >> "CfgFaces";
+private _cfgUnitInsignia = configFile >> "CfgUnitInsignia";
+private _cfgUnitInsigniaMission = missionConfigFile >> "CfgUnitInsignia";
 
 if (_rightSort) then {
     [
@@ -58,9 +61,9 @@ if (_rightSort) then {
         switch (GVAR(currentLeftPanel)) do {
             case IDC_buttonBackpack: {configFile >> "CfgVehicles"};
             case IDC_buttonGoggles: {configFile >> "CfgGlasses"};
-            case IDC_buttonFace: {configFile >> "CfgFaces" >> "Man_A3"};
+            case IDC_buttonFace: {_cfgFaces};
             case IDC_buttonVoice: {configFile >> "CfgVoice"};
-            case IDC_buttonInsignia: {configFile >> "CfgUnitInsignia"};
+            case IDC_buttonInsignia: {_cfgUnitInsignia};
             default {configFile >> "CfgWeapons"};
         },
         (GVAR(sortListLeftPanel) select ([
@@ -117,7 +120,18 @@ private _quantity = "";
 private _itemCfg = configNull;
 private _value = "";
 private _name = "";
-private _data = "";
+
+private _faceCache = if (_cfgClass == _cfgFaces) then {
+    uiNamespace getVariable [QGVAR(faceCache), createHashMap]
+} else {
+    createHashMap
+};
+
+private _countColumns = if (_right) then {
+    count lnbGetColumnsPosition _panel
+} else {
+    0
+};
 
 private _for = if (_right) then {
     for '_i' from 0 to (lnbSize _panel select 0) - 1
@@ -140,7 +154,24 @@ _for do {
         0
     };
 
-    _itemCfg = _cfgClass >> _item;
+    // Check item's config
+    _itemCfg = if !(_cfgClass in [_cfgFaces, _cfgUnitInsignia]) then {
+        _cfgClass >> _item
+    } else {
+        // If insignia, check both config and mission file
+        if (_cfgClass == _cfgUnitInsignia) then {
+            _itemCfg = _cfgClass >> _item;
+
+            if (isNull _itemCfg) then {
+                _itemCfg = _cfgUnitInsigniaMission >> _item;
+            };
+
+            _itemCfg
+        } else {
+            // If face, check correct category
+            _cfgClass >> (_faceCache get _item) param [2, "Man_A3"] >> _item
+        };
+    };
 
     // Some items may not belong to the config class for the panel (misc. items panel can have unique items)
     if (isNull _itemCfg) then {
@@ -162,16 +193,16 @@ _for do {
 
     // Save the current row's item's name in a cache and set text to it's sorting value
     if (_right) then {
-        _name = _panel lnbText [_i, 1];
-        _originalNames set [_item, _name];
+        _originalNames set [_item, _panel lnbText [_i, 1]];
 
-        _panel lnbSetText [[_i, 1], format ["%1%2", _value, _name]];
+        // Use tooltip to sort, as it also contains the classname, which means a fixed alphabetical order is guaranteed
+        _panel lnbSetText [[_i, 1], format ["%1%2", _value, _panel lbTooltip (_i * _countColumns)]];
     } else {
         if (_item != "") then {
-            _name = _panel lbText _i;
-            _originalNames set [_item, _name];
+            _originalNames set [_item, _panel lbText _i];
 
-            _panel lbSetText [_i, format ["%1%2", _value, _name]];
+            // Use tooltip to sort, as it also contains the classname, which means a fixed alphabetical order is guaranteed
+            _panel lbSetText [_i, format ["%1%2", _value, _panel lbTooltip _i]];
         };
     };
 };
@@ -181,26 +212,35 @@ if (_right) then {
     _panel lnbSort [1, false];
 
     _for do {
-        _data = _panel lnbData [_i, 0];
+        _item = _panel lnbData [_i, 0];
 
-        if (_curSel != -1 && {_data == _selected}) then {
+        _panel lnbSetText [[_i, 1], _originalNames get _item];
+
+        // Set selection after text, otherwise item info box on the right side shows invalid name
+        if (_curSel != -1 && {_item == _selected}) then {
             _panel lnbSetCurSelRow _i;
-        };
 
-        _panel lnbSetText [[_i, 1], _originalNames get _data];
+            // To avoid unnecessary checks after previsouly selected item was found
+            _curSel = -1;
+        };
     };
 } else {
     lbSort [_panel, "ASC"];
 
     _for do {
-        _data = _panel lbData _i;
+        _item = _panel lbData _i;
 
-        if (_curSel != -1 && {_data == _selected}) then {
-            _panel lbSetCurSel _i;
+        // Check if valid item (problems can be caused when searching)
+        if (_item != "") then {
+            _panel lbSetText [_i, _originalNames get _item];
         };
 
-        if (_data != "") then {
-            _panel lbSetText [_i, _originalNames get _data];
+        // Set selection after text, otherwise item info box on the right side shows invalid name
+        if (_curSel != -1 && {_item == _selected}) then {
+            _panel lbSetCurSel _i;
+
+            // To avoid unnecessary checks after previsouly selected item was found
+            _curSel = -1;
         };
     };
 };

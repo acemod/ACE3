@@ -434,7 +434,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
     // Binoculars
     case IDC_buttonBinoculars: {
-        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_BINO) call EFUNC(common,baseWeapon);
+        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_BINO) call FUNC(baseWeapon);
 
         // If nothing selected, remove secondary weapon and its magazines
         if (_item == "") then {
