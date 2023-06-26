@@ -38,23 +38,38 @@ _entries pushBack [localize _bodyPartName, [1, 1, 1, 1]];
 // Damage taken tooltip
 if (GVAR(showDamageEntry)) then {
     private _bodyPartDamage = (_target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]]) select _selectionN;
-    private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
-
-    switch (true) do {
-        case (_selectionN > 3): {
-            _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
+    if (_bodyPartDamage > 0) then {
+        private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
+        switch (true) do {
+            case (_selectionN > 3): { // legs: index 4 & 5
+                _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
+            };
+            case (_selectionN > 1): { // arms: index 2 & 3
+                _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+            };
+            case (_selectionN == 0): { // head: index 0
+                _damageThreshold = _damageThreshold * 1.25;
+            };
+            default { // torso: index 1
+                _damageThreshold = _damageThreshold * 1.5;
+            };
         };
-        case (_selectionN > 1): {
-            _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
-        };
-        case (_selectionN == 0): {
-            _damageThreshold = _damageThreshold / 2;
+        _bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
+        switch (true) do {
+            case (_bodyPartDamage isEqualTo 1): {
+                _entries pushBack [localize LSTRING(traumaSustained4), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.75): {
+                _entries pushBack [localize LSTRING(traumaSustained3), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.5): {
+                _entries pushBack [localize LSTRING(traumaSustained2), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.25): {
+                _entries pushBack [localize LSTRING(traumaSustained1), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
         };
     };
-    _bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
-
-    private _damageString = format [localize LSTRING(DamageToolTip), round (_bodyPartDamage * 100), "%"];
-    _entries pushBack [_damageString, [_bodyPartDamage] call FUNC(damageToRGBA)];
 };
 
 // Indicate if unit is bleeding at all

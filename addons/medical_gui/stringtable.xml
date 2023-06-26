@@ -1258,9 +1258,21 @@
             <English>Show trauma sustained in the injury list.</English>
             <Portuguese>Mostrar traumatismo sofrido na lista de feridas.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_DamageToolTip">
-            <English>Trauma: %1%2</English>
-            <Portuguese>Traumatismo: %1%2</Portuguese>
+        <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
+            <English>Minor Trauma</English>
+            <Portuguese>Traumatismo Leve</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_traumaSustained2">
+            <English>Major Trauma</English>
+            <Portuguese>Traumatismo Significante</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_traumaSustained3">
+            <English>Severe Trauma</English>
+            <Portuguese>Traumatismo Severo</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_traumaSustained4">
+            <English>Chronic Trauma</English>
+            <Portuguese>Traumatismo Crônico</Portuguese>
         </Key>
     </Package>
 </Project>

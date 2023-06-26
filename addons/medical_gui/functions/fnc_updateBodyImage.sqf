@@ -79,7 +79,10 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
                 _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
             };
             case (_forEachIndex == 0): { // head: index 0
-                _damageThreshold = _damageThreshold / 2;
+                _damageThreshold = _damageThreshold * 1.25;
+            };
+            default { // torso: index 1
+                _damageThreshold = _damageThreshold * 1.5
             };
         };
         _damage = (_damage / _damageThreshold) min 1;
