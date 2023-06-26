@@ -6,11 +6,13 @@ class CfgMagazines {
         ACE_isUnique = 1;
         GVAR(intel) = 1;
         GVAR(control) = "";
+        scopeArsenal = 0;
     };
 
     class XGVAR(notepad): GVAR(base) {
         author = ECSTRING(common,ACETeam);
-        scope = 2; // Allows players to access from arsenal
+        scope = 2;
+        scopeArsenal = 2; // Allows players to access from arsenal
         displayName = CSTRING(Notepad_DisplayName);
         descriptionShort = CSTRING(Notepad_Description);
         picture = QPATHTOF(ui\notepad_ca.paa);
@@ -20,6 +22,7 @@ class CfgMagazines {
 
     class XGVAR(document): GVAR(base) {
         author = ECSTRING(common,ACETeam);
+        scope = 2;
         displayName = CSTRING(Document_DisplayName);
         descriptionShort = CSTRING(Document_Description);
         picture = QPATHTOF(ui\document_ca.paa);
@@ -29,6 +32,7 @@ class CfgMagazines {
 
     class XGVAR(photo): GVAR(base) {
         author = ECSTRING(common,ACETeam);
+        scope = 2;
         displayName = CSTRING(Photo_DisplayName);
         descriptionShort = CSTRING(Photo_Description);
         picture = QPATHTOF(ui\photo_ca.paa);
