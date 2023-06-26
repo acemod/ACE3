@@ -22,7 +22,6 @@ class CfgMagazines {
 
     class XGVAR(document): GVAR(base) {
         author = ECSTRING(common,ACETeam);
-        scope = 2;
         displayName = CSTRING(Document_DisplayName);
         descriptionShort = CSTRING(Document_Description);
         picture = QPATHTOF(ui\document_ca.paa);
@@ -32,7 +31,6 @@ class CfgMagazines {
 
     class XGVAR(photo): GVAR(base) {
         author = ECSTRING(common,ACETeam);
-        scope = 2;
         displayName = CSTRING(Photo_DisplayName);
         descriptionShort = CSTRING(Photo_Description);
         picture = QPATHTOF(ui\photo_ca.paa);
