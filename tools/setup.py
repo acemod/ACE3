@@ -65,7 +65,7 @@ def main():
         return 3
 
     hemmt_path = os.path.join(projectpath, ".hemttout", "dev")
-    print("\n# Use Hemmit Dev Path for arma filepatching:")
+    print("\n# Use Hemmt Dev Path for arma filepatching:")
     print(f"  y: {hemmt_path}")
     print(f"  n: {projectpath}")
     repl = input("(y/n): ")
