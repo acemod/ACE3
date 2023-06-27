@@ -9,4 +9,4 @@ PREP(woundReceived);
 PREP(woundsHandlerBase);
 PREP(woundsHandlerBurning);
 PREP(woundsHandlerVehiclecrash);
-PREP(woundsHandlerVehiclehit)
+PREP(woundsHandlerVehicleexplosion);

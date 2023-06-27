@@ -73,11 +73,11 @@ if (
 if (
     _hitPoint isEqualTo "#structural" &&
     {_vehicle != _unit} &&
-    {GET_NUMBER(configFile >> "CfgAmmo" >> _ammo >> "explosive", 0) > 0 || _ammo isKindOf "SubmunitionBase"}
+    {_ammo isNotEqualTo ""} &&
+    {GET_NUMBER(configFile >> "CfgAmmo" >> _ammo >> "explosive", 0) > 0}
 ) exitwith {
-    _newDamage = abs _newDamage; // damage can sometimes be negative (why?)
     TRACE_6("Vehicle explosion",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _unit, "vehiclehit"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _unit, "vehicleexplosion"]] call CBA_fnc_localEvent;
 
     0
 };
