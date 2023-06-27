@@ -594,6 +594,7 @@ class CfgWeapons {
     CREATE_CSW_PROXY(Rhs_weap_TOW_Launcher_static);
 
     class GVAR(m252_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 20;
@@ -619,6 +620,7 @@ class CfgWeapons {
     };
 
     class GVAR(m2_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -643,6 +645,7 @@ class CfgWeapons {
     };
 
     class GVAR(mk19_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -666,6 +669,7 @@ class CfgWeapons {
     };
 
     class GVAR(tow_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
