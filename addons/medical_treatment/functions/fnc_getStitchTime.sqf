@@ -6,23 +6,17 @@
  * Arguments:
  * 0: Medic (not used) <OBJECT>
  * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
  *
  * Return Value:
  * Treatment Time <NUMBER>
  *
  * Example:
- * [player, cursorObject] call ace_medical_treatment_fnc_getStitchTime
+ * [player, cursorObject, "head"] call ace_medical_treatment_fnc_getStitchTime
  *
  * Public: No
  */
 
-params ["", "_patient"];
+params ["", "_patient", "_bodyPart"];
 
-
-private _stitchableTotal = 0;
-
-{
-    _stitchableTotal = _stitchableTotal + count _y;
-} forEach (_patient call FUNC(getStitchableWounds));
-
-_stitchableTotal * GVAR(woundStitchTime)
+count (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []]) * GVAR(woundStitchTime)
