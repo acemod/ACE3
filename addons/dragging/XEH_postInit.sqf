@@ -35,10 +35,10 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 
 [QGVAR(carryingContainerClosed), {
     params ["_container", "_owner"];
-    private _weight = if (_target getVariable [QGVAR(ignoreWeightCarry), false]) then {
-        0
-    } else {
-        [_container] call FUNC(getWeight)
+
+    private _weight = 0;
+    if !(_container getVariable [QGVAR(ignoreWeightCarry), false]) then {
+        _weight = [_container] call FUNC(getWeight);
     };
 
     // drop the object if overweight
@@ -53,10 +53,10 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 
 [QGVAR(draggingContainerClosed), {
     params ["_container", "_owner"];
-    private _weight = if (_target getVariable [QGVAR(ignoreWeightDrag), false]) then {
-        0
-    } else {
-        [_container] call FUNC(getWeight)
+
+    private _weight = 0;
+    if !(_container getVariable [QGVAR(ignoreWeightDrag), false]) then {
+        _weight = [_container] call FUNC(getWeight);
     };
 
      // drop the object if overweight
