@@ -42,7 +42,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 
     // drop the object if overweight
-    if (GVAR(dropOnOverweight) && {_weight > ACE_maxWeightCarry}) exitWith {
+    if (_weight > ACE_maxWeightCarry) exitWith {
         [_owner, _container] call FUNC(dropObject_carry);
     };
     private _canRun = [_weight] call FUNC(canRun_carry);
@@ -61,7 +61,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 
      // drop the object if overweight
-    if (GVAR(dropOnOverweight) && {_weight > ACE_maxWeightDrag}) exitWith {
+    if (_weight > ACE_maxWeightDrag) exitWith {
         [_owner, _container] call FUNC(dropObject);
     };
 }] call CBA_fnc_addEventHandler;
