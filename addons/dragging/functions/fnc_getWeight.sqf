@@ -6,7 +6,6 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Add PhysX mass <BOOL> (default: true)
  *
  * Return Value:
  * Weight <NUMBER>
@@ -17,11 +16,11 @@
  * Public: No
  */
 
-params ["_object", ["_usePhysX", true]];
+params ["_object"];
 
 private _weight = loadAbs _object;
 
-if (_usePhysX) then {
+if !(GVAR(skipContainerWeight)) then {
     // Add the mass of the object itself
     // getMass handles PhysX mass, this should be 0 for SupplyX containers and WeaponHolders
     // Use originalMass in case we're checking weight for a carried object

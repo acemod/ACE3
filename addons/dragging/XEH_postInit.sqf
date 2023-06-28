@@ -42,13 +42,14 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 
     // drop the object if overweight
-    if (_weight > ACE_maxWeightCarry) exitWith {
+    if (GVAR(dropOnOverweight) && {_weight > ACE_maxWeightCarry}) exitWith {
         [_owner, _container] call FUNC(dropObject_carry);
     };
+    private _canRun = [_weight] call FUNC(canRun_carry);
 
     // force walking based on weight
-    [_owner, "forceWalk", "ace_dragging", _weight > GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
-    [_owner, "blockSprint", "ace_dragging", _weight <= GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
+    [_owner, "forceWalk", "ace_dragging", !_canRun] call EFUNC(common,statusEffect_set);
+    [_owner, "blockSprint", "ace_dragging", _canRun] call EFUNC(common,statusEffect_set);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(draggingContainerClosed), {
@@ -60,7 +61,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 
      // drop the object if overweight
-    if (_weight > ACE_maxWeightDrag) exitWith {
+    if (GVAR(dropOnOverweight) && {_weight > ACE_maxWeightDrag}) exitWith {
         [_owner, _container] call FUNC(dropObject);
     };
 }] call CBA_fnc_addEventHandler;

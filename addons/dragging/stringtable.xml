@@ -147,5 +147,23 @@
             <Chinesesimp>允许玩家在拖动时开火。</Chinesesimp>
             <Korean>플레이어가 무기를 끄는 동안에 무기를 사용할 수 있게합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Dragging_dropOnOverweight_DisplayName">
+            <English>Drop Heavy Items</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_dropOnOverweight_Description">
+            <English>Drop the item when its weight exceeds carrying capacity.</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_allowRunWithLightweight_DisplayName">
+            <English>Allow Running with Light Items</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_allowRunWithLightweight_Description">
+            <English>Allow the player to run when carrying lightweight items.</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_skipContainerWeight_DisplayName">
+            <English>Skip Item Weight</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_skipContainerWeight_Description">
+            <English>Determines whether item's weight is added onto weight calculations.</English>
+        </Key>
     </Package>
 </Project>

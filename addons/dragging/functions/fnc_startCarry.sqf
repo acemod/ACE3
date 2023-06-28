@@ -61,9 +61,10 @@ if (_target isKindOf "CAManBase") then {
     _unit action ["SwitchWeapon", _unit, _unit, 299];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
+    private _canRun = [_weight] call FUNC(canRun_carry);
     // only force walking if we're overweight
-    [_unit, "forceWalk", "ace_dragging", _weight > GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
-    [_unit, "blockSprint", "ace_dragging", _weight <= GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
+    [_unit, "forceWalk", "ace_dragging", !_canRun] call EFUNC(common,statusEffect_set);
+    [_unit, "blockSprint", "ace_dragging", _canRun] call EFUNC(common,statusEffect_set);
 
 };
 
