@@ -19,6 +19,8 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
+private _weight = [_target] call FUNC(getWeight);
+
 // exempt from weight check if object has override variable set
 private _weight = 0;
 if !(_target getVariable [QGVAR(ignoreWeightCarry), false]) then {

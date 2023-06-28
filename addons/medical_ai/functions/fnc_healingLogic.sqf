@@ -44,12 +44,14 @@ private _treatmentTime = 6;
 switch (true) do {
     case (GET_WOUND_BLEEDING(_target) > 0): {
         // Select first bleeding wound and bandage it
-        private _openWounds = GET_OPEN_WOUNDS(_target);
         private _selection = "?";
         {
-            _x params ["", "_index", "_amount", "_percentage"];
-            if ((_amount * _percentage) > 0) exitWith { _selection = ALL_BODY_PARTS select _index; };
-        } forEach _openWounds;
+            private _foundBleeding = _y findIf {
+                _x params ["", "_amount", "_percentage"];
+                (_amount * _percentage) > 0
+            };
+            if (_foundBleeding != -1) exitWith { _selection = _x; };
+        } forEach GET_OPEN_WOUNDS(_target);
         _treatmentEvent = QEGVAR(medical_treatment,bandageLocal);
         _treatmentTime = 5;
         _treatmentArgs = [_target, _selection, "FieldDressing"];
