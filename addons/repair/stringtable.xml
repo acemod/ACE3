@@ -35,6 +35,11 @@
             <Chinese>備用輪胎</Chinese>
             <Turkish>Yedek Tekerlek</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_Wheel">
+            <English>Wheel</English>
+            <German>Rad</German>
+            <Spanish>Rueda</Spanish>
+        </Key>
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
             <German>Reifen wechseln</German>
@@ -1206,19 +1211,10 @@
             <Turkish>Sadece Gelişmiş Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
-            <English>Allow Wheel</English>
+            <English>Allow Wheel Replacement</English>
             <German>Erlaube Radwechsel</German>
             <Polish>Wymiana kół</Polish>
-            <Portuguese>Permite rodas</Portuguese>
             <Russian>Разрешить замену колес</Russian>
-            <Czech>Možnost Výměny Kol</Czech>
-            <Spanish>Permitir rueda</Spanish>
-            <Italian>Consenti Ruota</Italian>
-            <French>Roues autorisées pour</French>
-            <Japanese>タイヤを許可</Japanese>
-            <Korean>바퀴 허가</Korean>
-            <Chinesesimp>允许轮胎</Chinesesimp>
-            <Chinese>允許輪胎</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
@@ -1234,6 +1230,14 @@
             <Korean>누가 바퀴를 제거 및 교체할 수 있습니까?</Korean>
             <Chinesesimp>谁可维修轮胎？</Chinesesimp>
             <Chinese>誰可維修輪胎?</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelEnabled_name">
+            <English>Allow Wheel Patching</English>
+            <German>Erlaube Radflicken</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelEnabled_description">
+            <English>Who can patch wheels?</English>
+            <German>Wer kann Radflicken durchführen?</German>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
             <English>Allow Repair</English>
@@ -1885,6 +1889,14 @@
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
         </Key>
+        <Key ID="STR_ACE_Repair_patchWheelRequiredItems_DisplayName">
+            <English>Wheel Patch Requirements</English>
+            <German>Bedingungen für die Radflicken</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
+            <English>Items required to patch a wheel.</English>
+            <German>Gegenstänge, die zum Reifenflicken benötigt werden.</German>
+        </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
             <German>Sonstige Reparaturbedingungen</German>
@@ -2049,6 +2061,40 @@
             <Czech>Automaticky vypne motor při zahájení oprav.</Czech>
             <Spanish>Apagar el motor automáticamente al efectuar una reparación</Spanish>
             <Korean>수리 시 엔진을 자동으로 끕니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Repair_PatchWheel">
+            <English>Patch Wheel</English>
+            <German>Radflicken</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_PatchingWheel">
+            <English>Patching Wheel...</English>
+            <German>Radflicken...</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelTime_DisplayName">
+            <English>Patch wheel time</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelTime_Description">
+            <English>Time it takes to patch a wheel by 5%.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">
+            <English>Patch wheel maximum repair</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
+            <English>Maximum level a wheel can be patched.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
+            <English>Wheel Patch Location</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
+            <English>Where the wheel can be patched.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelOnGround">
+            <English>On the ground</English>
+            <German>Auf dem Boden</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelOnVehicle">
+            <English>On a vehicle</English>
+            <German>An einem Fahrzeug</German>
         </Key>
     </Package>
 </Project>
