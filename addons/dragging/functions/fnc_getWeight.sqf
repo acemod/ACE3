@@ -27,7 +27,7 @@ if !(GVAR(skipContainerWeight)) then {
     _weight = _weight + ((_object getVariable [QGVAR(originalMass), getMass _object]));
 };
 
-// Contents of backpacks get counted twice (see https://github.com/acemod/ACE3/pull/8457#issuecomment-1062522447)
+// Contents of backpacks get counted twice (https://github.com/acemod/ACE3/pull/8457#issuecomment-1062522447 and https://feedback.bistudio.com/T167469)
 // This is a workaround until that is fixed on BI's end
 {
     _x params ["", "_container"];
