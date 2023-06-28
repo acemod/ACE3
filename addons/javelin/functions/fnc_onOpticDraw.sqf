@@ -56,7 +56,7 @@ if ((_ammoCount == 0) || // No ammo loaded
     _this set [0, diag_frameno];
     _this set [4, _fireDisabledEH];
 
-    // Fix weapon being in top-attack when loading AP magazine (vanilla bug)
+    // Fix weapon being in top-attack when loading AP magazine (https://feedback.bistudio.com/T171012)
     if ((_currentShooter == ACE_player) && {_currentMagazine == "Titan_AP"} && {currentWeaponMode ACE_player == "TopDown"}) then {
         {
             _x params ["_xIndex", "", "", "", "_xMode"];
