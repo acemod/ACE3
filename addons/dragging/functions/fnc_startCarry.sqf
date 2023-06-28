@@ -20,10 +20,9 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // exempt from weight check if object has override variable set
-private _weight = if (_target getVariable [QGVAR(ignoreWeightCarry), false]) then {
-    0
-} else {
-    [_target] call FUNC(getWeight)
+private _weight = 0;
+if !(_target getVariable [QGVAR(ignoreWeightCarry), false]) then {
+    _weight = [_target] call FUNC(getWeight);
 };
 
 // exit if object weight is over global var value
@@ -61,12 +60,12 @@ if (_target isKindOf "CAManBase") then {
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
     // only force walking if we're overweight
-    [_unit, "forceWalk", "ACE_dragging", _weight > GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
-    [_unit, "blockSprint", "ACE_dragging", _weight <= GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
+    [_unit, "forceWalk", "ace_dragging", _weight > GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
+    [_unit, "blockSprint", "ace_dragging", _weight <= GVAR(maxWeightCarryRun)] call EFUNC(common,statusEffect_set);
 
 };
 
-[_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ace_dragging", true] call EFUNC(common,statusEffect_set);
 
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
