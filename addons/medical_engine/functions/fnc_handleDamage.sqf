@@ -38,7 +38,7 @@ private _newDamage = _damage - _oldDamage;
 [_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
 private _realDamage = _newDamage * _armor;
 _newDamage = _newDamage * (_armor/_armorScaled);
-TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
+TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
 
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // Damage occurs in consistent increments
@@ -81,8 +81,8 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     // --- Head
     private _damageHead = [
         _unit getVariable [QGVAR($HitFace), [0,0]],
-        _unit getVariable [QGVAR($HitNeck), [0,0,0]],
-        _unit getVariable [QGVAR($HitHead), [0,0,0]]
+        _unit getVariable [QGVAR($HitNeck), [0,0]],
+        _unit getVariable [QGVAR($HitHead), [0,0]]
     ];
     _damageHead sort false;
     _damageHead = _damageHead select 0;
@@ -119,7 +119,6 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     TRACE_2("incoming",_allDamages,_damageStructural);
 
     _allDamages sort false;
-
     _allDamages = _allDamages apply {[_x select 2, _x select 3, _x select 0]};
 
     // Environmental damage sources all have empty ammo string
