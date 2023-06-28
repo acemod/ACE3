@@ -35,6 +35,11 @@
             <Chinese>備用輪胎</Chinese>
             <Turkish>Yedek Tekerlek</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_Wheel">
+            <English>Wheel</English>
+            <German>Rad</German>
+            <Spanish>Rueda</Spanish>
+        </Key>
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
             <German>Reifen wechseln</German>
