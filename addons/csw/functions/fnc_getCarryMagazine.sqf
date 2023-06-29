@@ -24,7 +24,7 @@ if (isNil "_carryMag") then {
     private _magazines = "getNumber (_x >> _vehicleMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
 
     // try to find a mag that has the same count as the vehicleMag first, if that doesn't exist give the first element in the group array
-    _carryMag = configName (_groups param [0, configNull]);
+    _carryMag = configName (_magazines param [0, configNull]);
     {
         if (getNumber (_cfgMag >> configName _x >> "count") isEqualTo _ammoCount) then {
             _carryMag = configName _x;
