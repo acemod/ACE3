@@ -46,7 +46,7 @@ private _cfgMagazines = configFile >> "CfgMagazines"; // micro-optimization
     private _text = if (_isBeltLinking) then {
         format [localize LSTRING(actionLink), _displayName];
     } else {
-        format [localize LSTRING(loadX), _displayName];
+        format [localize LSTRING(actionLoad), _displayName];
     };
 
     private _action = [format ["load_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, _x] call EFUNC(interact_menu,createAction);

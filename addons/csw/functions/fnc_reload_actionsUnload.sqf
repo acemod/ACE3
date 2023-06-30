@@ -64,7 +64,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
         if (_carryMag == "") exitWith {};
 
         private _displayName = getText (_cfgMagazines >> _carryMag >> "displayName");
-        private _text = format [LLSTRING(unloadX), _displayName];
+        private _text = format [LLSTRING(actionUnload), _displayName];
         private _picture = getText (_cfgMagazines >> _carryMag >> "picture");
         private _action = [format ["unload_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, [_xMag, _xTurret, _carryMag]] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _vehicle];
