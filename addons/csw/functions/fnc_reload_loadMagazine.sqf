@@ -51,8 +51,19 @@ private _onFinish = {
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
-    TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend, _unit);
-    [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit]] call CBA_fnc_globalEvent;
+    // workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, get the closest object of same type on the next frame
+    private _magSourcePos = getPosATL _magSource;
+    private _magSourceType = typeOf _magSource;
+    private _eventParams = [_vehicle, _turret, objNull, _carryMag, _bestAmmoToSend];
+    [{
+        params ["_args", "_magSourcePos", "_magSourceType"];
+        _args params ["_vehicle", "_turret", "_magSource", "_carryMag", "_bestAmmoToSend"];
+        _magSource = _magSourcePos nearestObject _magSourceType;
+
+        TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend, _unit);
+        [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit]] call CBA_fnc_globalEvent;
+
+    }, [_eventParams, _magSourcePos, _magSourceType]] call CBA_fnc_execNextFrame;
 };
 
 

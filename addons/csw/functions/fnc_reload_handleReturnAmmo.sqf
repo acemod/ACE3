@@ -18,13 +18,13 @@
  */
 
 params ["_unloadTo", "_carryMag", "_ammo"];
-TRACE_3("reload_handleReturnAmmo",_unloadTo,_carryMag,_ammo);
+TRACE_4("reload_handleReturnAmmo",_unloadTo,typeOf _unloadTo,_carryMag,_ammo);
 
 private _carryMaxAmmo = getNumber (configFile >> "CfgMagazines" >> _carryMag >> "count");
 private _fullMagazines = floor (_ammo / _carryMaxAmmo);
 private _bulletsRemaining = _ammo % _carryMaxAmmo;
 
-if (_unloadTo isKindOf "CaManBase") then {
+if (_unloadTo isKindOf "CAManBase") then {
     while {(_fullMagazines > 0) && {[_unloadTo, _carryMag] call CBA_fnc_canAddItem}} do {
         _unloadTo addMagazine [_carryMag, _carryMaxAmmo];
         _fullMagazines = _fullMagazines - 1;
@@ -37,19 +37,21 @@ if (_unloadTo isKindOf "CaManBase") then {
 
 if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {};
 
-// Try to use existing container
-private _container = _unloadTo getVariable [QGVAR(container), objNull];
-if ((_container distance _unloadTo) > 10) then { _container = objNull; };
-if (isNull _container) then {
-    _container = (nearestObjects [_unloadTo, [QGVAR(ammo_holder), "GroundWeaponHolder"], 10]) param [0, objNull];
+// Try to use object inventory or existing container
+private _container = _unloadTo;
+if ((maxLoad _container) isEqualTo 0) then {
+    _container = _unloadTo getVariable [QGVAR(container), objNull];
+    if ((_container distance _unloadTo) > 10) then { _container = objNull; };
+    if (isNull _container) then {
+        _container = (nearestObjects [_unloadTo, [QGVAR(ammo_holder), "GroundWeaponHolder"], 10]) param [0, objNull];
+    };
 };
-
 
 if (isNull _container) then {
     // Create ammo storage container
     private _weaponRelPos = _unloadTo getRelPos RELATIVE_DIRECTION(270);
     _weaponRelPos set [2, ((getPosATL _unloadTo) select 2) + 0.05];
-    _container = createVehicle [["GroundWeaponHolder", QGVAR(ammo_holder)] select GVAR(handleExtraMagazinesType), [0, 0, 0], [], 0, "NONE"];
+    _container = createVehicle [["GroundWeaponHolder", QGVAR(ammo_holder)] select GVAR(handleExtraMagazinesType), [0, 0, 0], [], 0, "CAN_COLLIDE"];
     _unloadTo setVariable [QGVAR(container), _container, true];
     _container setDir random [0, 180, 360];
     _container setPosATL _weaponRelPos;
@@ -59,7 +61,7 @@ if (isNull _container) then {
     TRACE_2("Creating NEW Container",_container,_weaponRelPos);
 };
 
-TRACE_3("adding to container",_container,_fullMagazines,_bulletsRemaining);
+TRACE_4("adding to container",_container,typeOf _container,_fullMagazines,_bulletsRemaining);
 
 if (_fullMagazines > 0) then {
     _container addMagazineAmmoCargo [_carryMag, _fullMagazines, _carryMaxAmmo];
