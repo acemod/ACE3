@@ -31,8 +31,6 @@ private _bodyPartName = [
     LSTRING(RightLeg)
 ] select _selectionN;
 
-
-
 _entries pushBack [localize _bodyPartName, [1, 1, 1, 1]];
 
 // Damage taken tooltip
