@@ -24,7 +24,9 @@ private _carryMaxAmmo = getNumber (configFile >> "CfgMagazines" >> _carryMag >> 
 private _fullMagazines = floor (_ammo / _carryMaxAmmo);
 private _bulletsRemaining = _ammo % _carryMaxAmmo;
 
-if (_unloadTo isKindOf "CAManBase") then {
+private _unloadToUnit = _unloadTo isKindOf "CAManBase";
+
+if (_unloadToUnit) then {
     while {(_fullMagazines > 0) && {[_unloadTo, _carryMag] call CBA_fnc_canAddItem}} do {
         _unloadTo addMagazine [_carryMag, _carryMaxAmmo];
         _fullMagazines = _fullMagazines - 1;
@@ -38,7 +40,7 @@ if (_unloadTo isKindOf "CAManBase") then {
 if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {};
 
 // Try to use object inventory or existing container
-private _container = _unloadTo;
+private _container = [_unloadTo, objNull] select _unloadToUnit;
 if ((maxLoad _container) isEqualTo 0) then {
     _container = _unloadTo getVariable [QGVAR(container), objNull];
     if ((_container distance _unloadTo) > 10) then { _container = objNull; };
