@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: GhostIsSpooky, based on ace_medical_treatment_fnc_getHealTime
+ * Author: LinkIsGrim
  * Calculates the Full Repair time based on the amount of hitpoints to repair
  *
  * Arguments:
@@ -19,22 +19,24 @@
 params ["_engineer", "_vehicle"];
 
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
-_allHitPointsDamage params ["_hitPoints", "_selections", "_damageValues"];
-private _postRepairDamageMin = ([_engineer] call FUNC(getPostRepairDamage)) max 0.5; // single repair is capped at 0.5 in doRepair
-private _isNearFacility = [_engineer] call FUNC(isInRepairFacility) || {[_engineer] call FUNC(isNearRepairVehicle)};
-
-// get hitpoints of wheels with their selections
-([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
+_allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
 private _hitPointsToIgnore = [_vehicle] call FUNC(getHitPointsToIgnore);
 
 private _repairsNeeded = 0;
+private _doExtraRepair = false;
 {
-    private _damage = _damageValues select _forEachIndex;
-    private _hitPoint = toLower (_hitPoints select _forEachIndex);
-    if (_hitPoint in _hitPointsToIgnore) then { continue };
-    _repairsNeeded = _repairsNeeded + ceil (_damage / (1 - _postRepairDamageMin));
-} forEach _selections;
+    if (_x <= 0) then {continue}; // skip hitpoints that don't need repairs
+    private _hitPoint = _hitPoints select _forEachIndex;
+    if (_hitPoint in _hitPointsToIgnore) then { // only add extra repair for ignore hitpoints if they're damaged
+        _doExtraRepair = true;
+        continue
+    };
+    _repairsNeeded = _repairsNeeded + ceil (_x / 0.5); // repair is capped at 0.5 in FUNC(doRepair)
+} forEach _damageValues;
 
-// time for a repair for ignored hitpoints + actual repairs * time
-(GVAR(miscRepairTime) + _repairsNeeded * GVAR(miscRepairTime))
+if (_doExtraRepair) then {
+    _repairsNeeded = _repairsNeeded + 1;
+};
+
+_repairsNeeded * GVAR(miscRepairTime) // return

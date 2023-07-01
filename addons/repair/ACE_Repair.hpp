@@ -3,6 +3,7 @@ class ACE_Repair {
         class ReplaceWheel {
             displayName = CSTRING(ReplaceWheel);
             displayNameProgress = CSTRING(ReplacingWheel);
+            forceDisplayName = 0;
 
             repairLocations[] = {"All"};
             requiredEngineer = QGVAR(engineerSetting_Wheel);
@@ -80,6 +81,7 @@ class ACE_Repair {
         class FullRepair: MiscRepair {
             displayName = CSTRING(fullRepair);
             displayNameProgress = CSTRING(fullyRepairing);
+            forceDisplayName = 1;
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
             repairingTime = QFUNC(getFullRepairTime);

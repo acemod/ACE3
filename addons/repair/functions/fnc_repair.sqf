@@ -213,7 +213,10 @@ private _hitPointClassname = if (_hitPoint isEqualType "") then {
 };
 private _processText = getText (_config >> "displayNameProgress");
 private _backupText = format [localize LSTRING(RepairingHitPoint), _hitPointClassname];
-([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) params ["_text"];
+private _text = _processText;
+if (getNumber (_config >> "forceDisplayName") isNotEqualTo 1) then {
+    _text = ([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) select 0;
+};
 
 TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
 
