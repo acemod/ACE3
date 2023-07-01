@@ -17,7 +17,7 @@
  */
 
 params ["_unit", ["_override", false]];
-TRACE_2("params",_unit);
+TRACE_2("params",_unit,_override);
 
 //If in facility, near vehicle, or doing full repair then complete repair of hitpoint:
 if ((_override || {[_unit] call FUNC(isInRepairFacility)} || {[_unit] call FUNC(isNearRepairVehicle)})) exitWith {0};
