@@ -43,9 +43,9 @@ if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {};
 private _container = [_unloadTo, objNull] select _unloadToUnit;
 if ((maxLoad _container) isEqualTo 0) then {
     _container = _unloadTo getVariable [QGVAR(container), objNull];
-    if ((_container distance _unloadTo) > 10) then { _container = objNull; };
+    if ((_container distance _unloadTo) > 5) then { _container = objNull; };
     if (isNull _container) then {
-        _container = (nearestObjects [_unloadTo, [QGVAR(ammo_holder), "GroundWeaponHolder"], 10]) param [0, objNull];
+        _container = (nearestObjects [_unloadTo, [QGVAR(ammo_holder), "GroundWeaponHolder"], 5]) param [0, objNull];
     };
 };
 

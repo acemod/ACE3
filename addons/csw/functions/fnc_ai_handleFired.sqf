@@ -20,4 +20,4 @@ if (someAmmo _staticWeapon) exitWith {};
 
 TRACE_2("need ammo",someAmmo _staticWeapon,magazinesAllTurrets _staticWeapon);
 
-[_staticWeapon, _gunner, _weapon, _magazine] call FUNC(ai_reload);
+[_staticWeapon, _gunner, _weapon] call FUNC(ai_reload);

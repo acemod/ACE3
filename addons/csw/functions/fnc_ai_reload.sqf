@@ -7,14 +7,14 @@
  * 0: Static Weapon <OBJECT>
  * 1: Gunner <OBJECT>
  * 2: Weapon <STRING>
- * 3: Magazine <STRING> (default: "")
  *
  * Return Value:
  * None
  *
  * Public: No
  */
-params ["_staticWeapon", "_gunner", "_weapon", ["_magazine", ""]];
+params ["_staticWeapon", "_gunner", "_weapon"];
+TRACE_4("AI reload",_staticWeapon,_gunner,_weapon);
 
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
 private _reloadSource = objNull;
@@ -23,26 +23,28 @@ private _reloadNeededAmmo = -1;
 
 private _cfgMagGroups = configFile >> QGVAR(groups);
 
-private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
+// see fnc_reload_getLoadableMagazines, but AI doesn't get filtered out
+private _nearSupplies = (_staticWeapon nearSupplies 5) select {
     isNull (group _x) ||
     {!([_x] call EFUNC(common,isPlayer)) && {[side group _gunner, side group _x] call BIS_fnc_sideIsFriendly}}
-});
+};
+
+// add gunner since it won't show up in nearSupplies
+_nearSupplies pushBack _gunner;
 
 // Find if there is anything we can reload with
+// see fnc_reload_getLoadableMagazines, though we don't care about AI pulling from the best ammo possible
 {
     scopeName "findSource";
+    if (_x isKindOf "CAManBase") then {
+        // unit inventory needs to be added manually
+        _nearSupplies append [uniformContainer _x, vestContainer _x, backpackContainer _x];
+        continue
+    };
     private _xSource = _x;
 
-    private _cswMagazines  = [];
-    {
-        _cswMagazines pushBackUnique _x;
-    } forEach ((magazineCargo _xSource) select {isClass (_cfgMagGroups >> _x)});
+    private _cswMagazines = (magazineCargo _xSource) select {isClass (_cfgMagGroups >> _x)};
     TRACE_2("",_xSource,_cswMagazines);
-
-    private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
-    if (_magazine != "") then {
-        _compatibleMags insert [0, [_magazine]];
-    };
 
     {
         private _xWeaponMag = _x;
@@ -58,7 +60,7 @@ private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
                 };
             };
         } forEach _cswMagazines;
-    } forEach _compatibleMags;
+    } forEach (compatibleMagazines _weapon);
 } forEach _nearSupplies;
 if (_reloadMag == "") exitWith {TRACE_1("could not find mag",_reloadMag);};
 
@@ -79,17 +81,21 @@ if (_bestAmmoToSend == -1) exitWith {ERROR("No ammo");};
 // Remove the mag from the source
 [_reloadSource, _reloadMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
 
+// see fnc_reload_loadMagazine #L54
+// AI never returns ammo and removes the magazine before reloading, so we can skip distance and weaponHolder checks
+private _eventParams = [_staticWeapon, _turretPath, objNull, _reloadMag, _bestAmmoToSend, _gunner];
+
 private _timeToLoad = 1;
-if (!isNull(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime")) then {
-    _timeToLoad = getNumber(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime");
+if !(isNull (configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime")) then {
+    _timeToLoad = getNumber (configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime");
 };
 
 TRACE_1("Reloading in progress",_timeToLoad);
 [{
-    params ["_staticWeapon", "_turretPath", "_gunner", "_reloadMag", "_bestAmmoToSend"];
-    if ((!alive _staticWeapon) || {!alive _gunner} || {(_staticWeapon distance _gunner) > 10}) exitWith {TRACE_1("invalid state",_this);};
+    params ["_staticWeapon", "", "", "", "", "_gunner"];
+    if !(alive _staticWeapon && {alive _gunner}) exitWith {TRACE_2("invalid state",alive _staticWeapon,alive _gunner);};
 
     // Reload the static weapon
-    TRACE_5("calling addTurretMag event",_staticWeapon,_turretPath,_gunner,_reloadMag,_bestAmmoToSend);
+    TRACE_5("calling addTurretMag event: AI reload",_staticWeapon,_turretPath,_gunner,_reloadMag,_bestAmmoToSend);
     [QGVAR(addTurretMag), _this] call CBA_fnc_globalEvent;
-}, [_staticWeapon, _turretPath, _gunner, _reloadMag, _bestAmmoToSend], _timeToLoad] call CBA_fnc_waitAndExecute;
+}, _eventParams, _timeToLoad] call CBA_fnc_waitAndExecute;

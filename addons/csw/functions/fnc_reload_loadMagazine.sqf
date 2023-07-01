@@ -51,25 +51,21 @@ private _onFinish = {
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
-    // workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, get the closest object of same type on the next frame
-    private _magSourcePos = getPosATL _magSource;
-    private _magSourceType = typeOf _magSource;
-    private _eventParams = [_vehicle, _turret, objNull, _carryMag, _bestAmmoToSend];
-    [{
-        params ["_args", "_magSourcePos", "_magSourceType"];
-        _args params ["_vehicle", "_turret", "_magSource", "_carryMag", "_bestAmmoToSend"];
-        _magSource = _magSourcePos nearestObject _magSourceType;
+    private _returnTo = _magSource;
+    // if we're pulling from a weaponHolder, return the ammo to the unit doing the action
+    // workaround for weaponHolders being recreated with removeSpecificMagazine, magazines will still get dropped if inventory is full
+    if (_magSource isKindOf "WeaponHolder") then {
+        _returnTo = _unit;
+    };
 
-        TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend, _unit);
-        [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit]] call CBA_fnc_globalEvent;
-
-    }, [_eventParams, _magSourcePos, _magSourceType]] call CBA_fnc_execNextFrame;
+    TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend, _unit);
+    [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit, _returnTo]] call CBA_fnc_globalEvent;
 };
 
 
 [
     TIME_PROGRESSBAR(_timeToLoad),
-    [_vehicle, _turret, _carryMag, _magSource],
+    [_vehicle, _turret, _carryMag, _magSource, _unit],
     _onFinish,
     {TRACE_1("load progressBar fail",_this);},
     _displayName,
