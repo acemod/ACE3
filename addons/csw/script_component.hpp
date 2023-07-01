@@ -21,6 +21,8 @@
 #define DISTANCE_FROM_GUN 1.5
 #define RELATIVE_DIRECTION(direction) [DISTANCE_FROM_GUN, direction]
 
+#define NEARBY_SOURCES_CACHE_EXPIRY 5
+
 #ifdef FAST_PROGRESSBARS
     #define TIME_PROGRESSBAR(X) ((X) * 0.075)
 #else

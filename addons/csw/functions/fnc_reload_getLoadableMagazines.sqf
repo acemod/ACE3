@@ -23,31 +23,14 @@ private _magGroupsConfig = configFile >> QGVAR(groups); // so we don't solve in 
 private _availableMagazines = createHashMap; // slower than array, still needed for setting source of magazine
 
 // filter enemy & player units while allowing pulling from friendly AI, crates, etc
-private _nearSupplies = (_vehicle nearSupplies 5) select {
-    isNull (group _x) ||
-    {!([_x] call EFUNC(common,isPlayer)) && {[side group _player, side group _x] call BIS_fnc_sideIsFriendly}}
-};
-
-// add caller to nearSupplies since players will get filtered out
-_nearSupplies pushBack _player;
+private _sources = [_player] call FUNC(getNearbySources);
 
 // send the mag source with the highest ammo
 private _bestMagAmmo = createHashMap;
 
 {
-    if (_x isKindOf "CAManBase") then {
-        // unit inventory needs to be added manually
-        _nearSupplies append [uniformContainer _x, vestContainer _x, backpackContainer _x];
-        continue;
-    };
     private _xSource = _x;
     private _cswMags = (magazinesAmmoCargo _xSource) select {isClass (_magGroupsConfig >> _x select 0)};
-
-    // add containers inside containers
-    {
-        _x params ["_classname", "_container"];
-        _nearSupplies pushBack _container;
-    } forEach (everyContainer _x);
 
     {
         _x params ["_classname", "_ammo"];
@@ -56,7 +39,7 @@ private _bestMagAmmo = createHashMap;
             _availableMagazines set [_classname, _xSource];
         };
     } forEach _cswMags;
-} forEach _nearSupplies;
+} forEach _sources;
 
 if (_availableMagazines isEqualTo createHashMap) exitWith { [] }; // fast exit if no available mags
 

@@ -49,6 +49,10 @@ private _onFinish = {
 
     if (_bestAmmoToSend == -1) exitWith {ERROR_2("No ammo [%1 - %2]?",_xMag,_bestAmmoToSend);};
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
+
+    private _nearUnits = _vehicle nearEntities ["CAManBase", 5];
+    [QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;
+
     if (_bestAmmoToSend == 0) exitWith {};
 
     private _returnTo = _magSource;

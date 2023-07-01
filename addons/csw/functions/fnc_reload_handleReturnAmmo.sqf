@@ -24,6 +24,9 @@ private _carryMaxAmmo = getNumber (configFile >> "CfgMagazines" >> _carryMag >> 
 private _fullMagazines = floor (_ammo / _carryMaxAmmo);
 private _bulletsRemaining = _ammo % _carryMaxAmmo;
 
+// get nearby units to clear cache
+private _nearUnits = _unloadTo nearEntities ["CAManBase", 5];
+
 private _unloadToUnit = _unloadTo isKindOf "CAManBase";
 
 if (_unloadToUnit) then {
@@ -37,7 +40,9 @@ if (_unloadToUnit) then {
     };
 };
 
-if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {};
+if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {
+    [QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;
+};
 
 // Try to use object inventory or existing container
 private _container = [_unloadTo, objNull] select _unloadToUnit;
@@ -71,3 +76,5 @@ if (_fullMagazines > 0) then {
 if (_bulletsRemaining > 0) then {
     _container addMagazineAmmoCargo [_carryMag, 1, _bulletsRemaining];
 };
+
+[QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;

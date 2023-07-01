@@ -23,24 +23,12 @@ private _reloadNeededAmmo = -1;
 
 private _cfgMagGroups = configFile >> QGVAR(groups);
 
-// see fnc_reload_getLoadableMagazines, but AI doesn't get filtered out
-private _nearSupplies = (_staticWeapon nearSupplies 5) select {
-    isNull (group _x) ||
-    {!([_x] call EFUNC(common,isPlayer)) && {[side group _gunner, side group _x] call BIS_fnc_sideIsFriendly}}
-};
-
-// add gunner since it won't show up in nearSupplies
-_nearSupplies pushBack _gunner;
+private _sources = [_gunner] call FUNC(getNearbySources);
 
 // Find if there is anything we can reload with
 // see fnc_reload_getLoadableMagazines, though we don't care about AI pulling from the best ammo possible
 {
     scopeName "findSource";
-    if (_x isKindOf "CAManBase") then {
-        // unit inventory needs to be added manually
-        _nearSupplies append [uniformContainer _x, vestContainer _x, backpackContainer _x];
-        continue
-    };
     private _xSource = _x;
 
     private _cswMagazines = (magazineCargo _xSource) select {isClass (_cfgMagGroups >> _x)};
@@ -61,7 +49,7 @@ _nearSupplies pushBack _gunner;
             };
         } forEach _cswMagazines;
     } forEach (compatibleMagazines _weapon);
-} forEach _nearSupplies;
+} forEach _sources;
 if (_reloadMag == "") exitWith {TRACE_1("could not find mag",_reloadMag);};
 
 // Figure out what we can add from the magazines we have

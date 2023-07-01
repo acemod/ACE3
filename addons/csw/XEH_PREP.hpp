@@ -20,6 +20,7 @@ PREP(canGetIn);
 PREP(getIn);
 
 PREP(getCarryMagazine);
+PREP(getNearbySources);
 PREP(proxyWeapon);
 
 PREP(reload_actionsLoad);
