@@ -26,6 +26,32 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(patchWheelEnabled), "LIST",
+    [LSTRING(patchWheelEnabled_name), LSTRING(patchWheelEnabled_description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [[-1,0,1,2],["str_player_none", LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],1], // default value
+    true // isGlobal
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(patchWheelRequiredItems),
+    "LIST",
+    [LSTRING(patchWheelRequiredItems_DisplayName), LSTRING(patchWheelRequiredItems_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [[[], [ANY_TOOLKIT_FAKECLASS]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(patchWheelLocation),
+    "LIST",
+    [LSTRING(patchWheelLocation_DisplayName), LSTRING(patchWheelLocation_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [[["ground", "vehicle"], ["vehicle"], ["ground"]], ["str_difficulty_any", LSTRING(patchWheelOnVehicle), LSTRING(patchWheelOnGround)], 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(repairDamageThreshold), "SLIDER",
     [LSTRING(repairDamageThreshold_name), LSTRING(repairDamageThreshold_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
@@ -68,6 +94,14 @@
     [[0,1,2,3,4],[LSTRING(useAnywhere), LSTRING(repairVehicleOnly), LSTRING(repairFacilityOnly), LSTRING(vehicleAndFacility), ELSTRING(common,Disabled)],2], // [values, titles, defaultIndex]
     true, // isGlobal
     {[QGVAR(fullRepairLocation), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(facilitySpeedBost), "SLIDER",
+    [LSTRING(facilitySpeedBoost_name), LSTRING(facilitySpeedBoost_description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [0,1,1,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -134,17 +168,27 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(wheelRepairTime), "SLIDER",
-    [LSTRING(wheelRepairTime_name), LSTRING(wheelRepairTime_description)],
+    QGVAR(wheelChangeTime), "SLIDER",
+    [LSTRING(wheelChangeTime_name), LSTRING(wheelChangeTime_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
     [0,60,10,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(fullRepairFacilitySpeed), "SLIDER",
-    [LSTRING(fullRepairFacilitySpeed_name), LSTRING(fullRepairFacilitySpeed_description)],
+    QGVAR(patchWheelTime),
+    "SLIDER",
+    [LSTRING(patchWheelTime_DisplayName), LSTRING(patchWheelTime_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [0,1,1,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    [0.1, 60, 5, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(patchWheelMaximumRepair),
+    "SLIDER",
+    [LSTRING(patchWheelMaximumRepair_DisplayName), LSTRING(patchWheelMaximumRepair_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [0, 1, 0.3, 1, true],
     true
 ] call CBA_fnc_addSetting;

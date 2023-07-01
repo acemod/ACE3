@@ -30,6 +30,17 @@ class ACE_Repair {
             callbackSuccess = QFUNC(doRemoveWheel);
             claimObjects[] = {};
         };
+        class PatchWheel: ReplaceWheel {
+            displayName = CSTRING(PatchWheel);
+            displayNameProgress = CSTRING(PatchingWheel);
+            condition = QFUNC(canPatchWheel);
+            repairingTime = QFUNC(getPatchWheelTime);
+            callbackProgress = QFUNC(doPatchWheelProgress);
+            items = QGVAR(patchWheelRequiredItems);
+            requiredEngineer = QGVAR(engineerSetting_Wheel);
+            callbackSuccess = "";
+            claimObjects[] = {};
+        };
         class MiscRepair: ReplaceWheel {
             displayName = CSTRING(Repairing); // let's make empty string an auto generated string
             displayNameProgress = CSTRING(RepairingHitPoint);
