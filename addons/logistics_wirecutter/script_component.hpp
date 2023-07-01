@@ -88,7 +88,7 @@
 #define CUT_TIME_ENGINEER 7.5
 
 #define HAS_WIRECUTTER(unit) (\
-    count ((unit call EFUNC(common,uniqueItems)) select {_x isKindOf "ACE_wirecutter"}) > 0 \
+    count ((unit call EFUNC(common,uniqueItems)) select {_x isKindOf ["ACE_wirecutter", configFile >> "CfgWeapons"]}) > 0 \
     || {getNumber ((configOf (backpackContainer unit)) >> QGVAR(hasWirecutter)) == 1} \
     || {getNumber (configFile >> "CfgWeapons" >> (vest unit) >> QGVAR(hasWirecutter)) == 1} \
 )
