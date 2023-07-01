@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: GhostIsSpooky, based on Commy2 & SilentSpike logic
+ * Author: commy2, kymckay, LinkIsGrim
  * Get list of vehicle hitpoints to ignore
  *
  * Arguments:
