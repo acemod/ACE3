@@ -2074,18 +2074,6 @@
         <Key ID="STR_ACE_Repair_wheelChangeTime_description">
             <English>Time in seconds to remove or change a wheel.</English>
         </Key>
-        <Key ID="STR_ACE_Repair_facilitySpeedBoost_name">
-            <English>Facility Speed Boost</English>
-        </Key>
-        <Key ID="STR_ACE_Repair_facilitySpeedBoost_description">
-            <English>Time to complete a repair is multiplied by this value while in a repair facility.</English>
-        </Key>
-        <Key ID="STR_ACE_Repair_vehicleSpeedBoost_name">
-            <English>Vehicle Speed Boost</English>
-        </Key>
-        <Key ID="STR_ACE_Repair_vehicleSpeedBoost_description">
-            <English>Time to complete a repair is multiplied by this value while near a repair vehicle.</English>
-        </Key>
         <Key ID="STR_ACE_Repair_PatchWheel">
             <English>Patch Wheel</English>
             <German>Radflicken</German>
