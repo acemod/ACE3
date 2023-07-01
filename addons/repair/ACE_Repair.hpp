@@ -22,6 +22,7 @@ class ACE_Repair {
             animationCallerProne = "Acts_carFixingWheel";
             animationCallerSelf = "Acts_carFixingWheel";
             animationCallerSelfProne = "Acts_carFixingWheel";
+            loopAnimation = 0;
             litter[] = {};
         };
         class RemoveWheel: ReplaceWheel {
@@ -82,6 +83,7 @@ class ACE_Repair {
             displayName = CSTRING(fullRepair);
             displayNameProgress = CSTRING(fullyRepairing);
             forceDisplayName = 1;
+            loopAnimation = 1;
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
             repairingTime = QFUNC(getFullRepairTime);

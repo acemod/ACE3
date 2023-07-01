@@ -148,6 +148,7 @@ if (_callbackProgress == "") then {
 
 // Player Animation
 private _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
+private _loopAnim = (getNumber (_config >> "loopAnimation")) isEqualTo 1;
 _caller setVariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
 
 // Cannot use secondairy weapon for animation
@@ -171,8 +172,25 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         } else {
             _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
         };
+        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLower _callerAnim];
         [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
+};
+
+if (_loopAnim) then {
+    private _animDoneEh = _caller addEventHandler ["AnimDone", {
+        params ["_caller", "_anim"];
+        if (_anim isEqualTo (_caller getVariable [QGVAR(repairCurrentAnimCaller), ""])) then {
+            [{
+                params ["_caller", "_anim"];
+                if !(isNil {_caller getVariable QGVAR(repairCurrentAnimCaller)}) then {
+                    systemChat "loop";
+                    _this call EFUNC(common,doAnimation)
+                };
+            }, [_caller, _anim], 2.5] call CBA_fnc_waitAndExecute;
+        };
+    }];
+    _caller setVariable [QGVAR(repairLoopAnimEh), _animDoneEh];
 };
 
 private _soundPosition = _caller modelToWorldVisualWorld (_caller selectionPosition "RightHand");
