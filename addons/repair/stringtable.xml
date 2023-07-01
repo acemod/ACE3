@@ -1860,7 +1860,7 @@
             <Chinese>選擇的備件數量</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_DisplayName">
-            <English>Wheel Repair Requirements</English>
+            <English>Wheel Change Requirements</English>
             <German>Bedingungen für die Reifenreperatur</German>
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
@@ -2071,7 +2071,7 @@
         <Key ID="STR_ACE_Repair_wheelChangeTime_name">
             <English>Wheel Change Time</English>
         </Key>
-        <Key ID="STR_ACE_Repair_wheelRepairTime_description">
+        <Key ID="STR_ACE_Repair_wheelChangeTime_description">
             <English>Time in seconds to remove or change a wheel.</English>
         </Key>
         <Key ID="STR_ACE_Repair_facilitySpeedBoost_name">
