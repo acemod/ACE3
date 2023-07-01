@@ -36,5 +36,5 @@ private _repairsNeeded = 0;
     _repairsNeeded = _repairsNeeded + ceil (_damage / (1 - _postRepairDamageMin));
 } forEach _selections;
 
-// time for a repair for ignored hitpoints + actual repairs * time, sped up if near facility
-(GVAR(miscRepairTime) + _repairsNeeded * GVAR(miscRepairTime)) * ([1, GVAR(fullRepairFacilitySpeed)] select _isNearFacility)
+// time for a repair for ignored hitpoints + actual repairs * time
+(GVAR(miscRepairTime) + _repairsNeeded * GVAR(miscRepairTime))

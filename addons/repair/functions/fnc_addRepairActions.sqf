@@ -115,9 +115,6 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
             };
             if (_armorComponent != "") then { INFO_3("%1: %2 no selection: using armorComponent %3",_type,_hitpoint,_armorComponent); };
         };
-        if ((_selection == "") && {_armorComponent == ""}) exitWith {
-            TRACE_3("Skipping no selection OR armor component",_hitpoint,_forEachIndex,_selection);
-        };
 
         // Find the action position
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];

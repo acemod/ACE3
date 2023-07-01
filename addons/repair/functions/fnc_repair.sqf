@@ -205,6 +205,14 @@ if (_repairTime < 0) then {
     };
 };
 
+if (GVAR(facilitySpeedBoost) isNotEqualTo 1 && {[_caller] call FUNC(isInRepairFacility)}) then {
+    _repairTime = _repairTime * GVAR(facilitySpeedBoost);
+};
+
+if (GVAR(vehicleSpeedBoost) isNotEqualTo 1 && {[_caller] call FUNC(isNearRepairVehicle)}) then {
+    _repairTime = _repairTime * GVAR(vehicleSpeedBoost);
+};
+
 // Find localized string
 private _hitPointClassname = if (_hitPoint isEqualType "") then {
     _hitPoint

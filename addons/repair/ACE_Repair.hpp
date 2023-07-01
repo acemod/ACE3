@@ -6,7 +6,7 @@ class ACE_Repair {
 
             repairLocations[] = {"All"};
             requiredEngineer = QGVAR(engineerSetting_Wheel);
-            repairingTime = QGVAR(wheelRepairTime);
+            repairingTime = QGVAR(wheelChangeTime);
             repairingTimeSelfCoef = 1;
             items = QGVAR(wheelRepairRequiredItems);
             condition = QFUNC(canReplaceWheel);
