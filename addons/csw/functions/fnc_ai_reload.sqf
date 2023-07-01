@@ -14,7 +14,7 @@
  * Public: No
  */
 params ["_staticWeapon", "_gunner", "_weapon"];
-TRACE_4("AI reload",_staticWeapon,_gunner,_weapon);
+TRACE_3("AI reload",_staticWeapon,_gunner,_weapon);
 
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
 private _reloadSource = objNull;
