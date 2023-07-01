@@ -25,7 +25,7 @@ PREP(cprStart);
 PREP(createLitter);
 PREP(createLitterServer);
 PREP(diagnose);
-PREP(findMostEffectiveWound);
+PREP(findMostEffectiveWounds);
 PREP(fullHeal);
 PREP(fullHealLocal);
 PREP(getBandageTime);

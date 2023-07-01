@@ -26,6 +26,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(bandageRollover),
+    "CHECKBOX",
+    [LSTRING(bandageRollover_DisplayName), LSTRING(bandageRollover_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    false // server can force if necessary, otherwise client decides
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(woundReopenChance),
     "SLIDER",
     [LSTRING(WoundReopenChance_DisplayName), LSTRING(WoundReopenChance_Description)],
