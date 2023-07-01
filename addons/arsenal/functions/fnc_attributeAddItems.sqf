@@ -18,9 +18,10 @@
 
 params ["_controlsGroup"];
 
-private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY) - 1;
+private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY);
 private _filter = toLower ctrlText (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR);
 private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
+private _magazineMiscItems = uiNamespace getVariable [QGVAR(magazineMiscItems), []];
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
 _attributeValue params ["_attributeItems", "_attributeMode"];
 
@@ -38,15 +39,15 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 private _cfgGlasses = configFile >> "CfgGlasses";
 
 // Exit with current items (no specific category)
-if (_category == -1) exitWith {
+if (_category == IDX_CAT_ALL) exitWith {
     private _config = configNull;
     private _displayName = "";
-    private _picture = "";
     private _index = -1;
 
     {
         // Get appropriate config for each item (different since items can be from any category)
         _config = switch (true) do {
+            case (_x in _magazineMiscItems);
             case (_x in (_configItems select IDX_VIRT_ITEMS_ALL));
             case (_x in (_configItems select IDX_VIRT_GRENADES));
             case (_x in (_configItems select IDX_VIRT_EXPLOSIVES)): {_cfgMagazines >> _x};
@@ -59,70 +60,75 @@ if (_category == -1) exitWith {
 
         // Add item if not filtered
         if (_filter in (toLower _displayName) || {_filter in (toLower _x)}) then {
-            _picture = getText (_config >> "picture");
             _index = _listbox lnbAddRow ["", _displayName, _modeSymbol];
             _listbox lnbSetData [[_index, 1], _x];
-            _listbox lnbSetPicture [[_index, 0], _picture];
-            _listbox lbSetTooltip [_index * (count lnbGetColumnsPosition _listbox), _x];
+            _listbox lnbSetPicture [[_index, 0], getText (_config >> "picture")];
+            _listbox lnbSetTooltip [[_index, 0], _x];
         };
     } forEach _attributeItems;
 
-    _listbox lnbSort [1];
+    // Sort alphabetically
+    _listbox lnbSort [1, false];
 };
 
 // Get list of category items
 private _categoryItems = switch (true) do {
     // Weapons
-    case (_category < 3): {
-        _configItems select IDX_VIRT_WEAPONS select _category;
+    case (_category < IDX_CAT_OPTICS_ATTACHMENTS): {
+        _configItems select IDX_VIRT_WEAPONS select (_category - 1)
     };
     // Weapon attachments
-    case (_category < 7): {
-        _configItems select IDX_VIRT_ATTACHMENTS select (_category - 3);
+    case (_category < IDX_CAT_ITEMS_ALL): {
+        _configItems select IDX_VIRT_ATTACHMENTS select (_category - 4)
     };
     // Other
     default {
-        _configItems select (_category - 5);
+        _configItems select (_category - 6)
     };
 };
 
 // Get config for current category
-private _config = switch (true) do {
-    case (_category in [7, 20, 21]): {_cfgMagazines};
-    case (_category == 11): {_cfgVehicles};
-    case (_category == 12): {_cfgGlasses};
+private _cfgClass = switch (true) do {
+    case (_category in [IDX_CAT_ITEMS_ALL, IDX_CAT_GRENADES, IDX_CAT_EXPLOSIVES]): {_cfgMagazines};
+    case (_category == IDX_CAT_BACKPACK): {_cfgVehicles};
+    case (_category == IDX_CAT_GOGGLES): {_cfgGlasses};
     default {_cfgWeapons};
 };
 
 private _displayName = "";
-private _picture = "";
 private _symbol = SYMBOL_ITEM_NONE;
 private _alpha = 0;
 private _index = -1;
+private _config = _cfgClass;
 
 // Populate listbox with category items
 {
+    // "Misc. items" magazines (e.g. spare barrels, intel, photos)
+    if (_category == IDX_CAT_MISC_ITEMS) then {
+        _config = [_cfgClass, _cfgMagazines] select (_x in _magazineMiscItems);
+    };
+
     _displayName = getText (_config >> _x >> "displayName");
 
     // Add item if not filtered
     if (_filter in (toLower _displayName) || {_filter in (toLower _x)}) then {
-        _picture = getText (_config >> _x >> "picture");
-        _symbol = SYMBOL_ITEM_NONE;
-        _alpha = 0.5;
-
         // Change symbol and alpha if item already selected
         if (_x in _attributeItems) then {
             _symbol = _modeSymbol;
             _alpha = 1;
+        } else {
+            _symbol = SYMBOL_ITEM_NONE;
+            _alpha = 0.5;
         };
 
         _index = _listbox lnbAddRow ["", _displayName, _symbol];
         _listbox lnbSetData [[_index, 1], _x];
-        _listbox lnbSetPicture [[_index, 0], _picture];
-        _listbox lbSetTooltip [_index * (count lnbGetColumnsPosition _listbox), _x];
+        _listbox lnbSetPicture [[_index, 0], getText (_config >> _x >> "picture")];
+        _listbox lnbSetTooltip [[_index, 0], _x];
         _listbox lnbSetColor [[_index, 1], [1, 1, 1, _alpha]];
         _listbox lnbSetColor [[_index, 2], [1, 1, 1, _alpha]];
     };
 } forEach _categoryItems;
 
-_listbox lnbSort [1];
+// Sort alphabetically
+_listbox lnbSort [1, false];

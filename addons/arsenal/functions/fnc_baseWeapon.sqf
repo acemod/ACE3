@@ -18,47 +18,35 @@
 
 params [["_weapon", "", [""]]];
 
-private _cacheKey = toLower _weapon;
-
 // Check if item is cached
-private _className = (uiNamespace getVariable QGVAR(baseWeaponNameCache)) get _cacheKey;
+(uiNamespace getVariable QGVAR(baseWeaponNameCache)) getOrDefaultCall [toLower _weapon, {
+    private _cfgWeapons = configfile >> "CfgWeapons";
+    private _config = _cfgWeapons >> _weapon;
 
-if (!isNil "_className") exitWith {
-    _className
-};
+    // If class doesn't exist, exit
+    if (!isClass _config) then {
+        _weapon
+    } else {
+        // Get manual base weapon
+        private _configBase = _cfgWeapons >> getText (_config >> "baseWeapon");
 
-private _config = configfile >> "CfgWeapons" >> _weapon;
+        if (isClass _configBase) then {
+            configName _configBase
+        } else {
+            private _className = _weapon;
 
-// If class doesn't exist, exit
-if (!isClass _config) exitWith {
-    (uiNamespace getVariable QGVAR(baseWeaponNameCache)) set [_cacheKey, _weapon];
-    _weapon
-};
+            // Get first parent without any attachments; Only take weapons available to the arsenal
+            // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
+            // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
+            while {isClass _config && {getNumber (_config >> "scope") > 0 && {if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal") == 2} else {true}}} && {getNumber (_config >> QGVAR(hide)) != 1}} do {
+                if (count (_config >> "LinkedItems") == 0) exitWith {
+                    _className = configName _config;
+                };
 
-// Get manual base weapon
-private _configBase = configfile >> "CfgWeapons" >> getText (_config >> "baseWeapon");
+                _config = inheritsFrom _config;
+            };
 
-if (isClass _configBase) exitWith {
-    _className = configName _configBase;
-    (uiNamespace getVariable QGVAR(baseWeaponNameCache)) set [_cacheKey, _className];
-    _className
-};
-
-// Get first parent without any attachments
-scopeName "main";
-
-// Only take weapons available to the arsenal
-// https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
-// https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
-while {isClass _config && {if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal") == 2} else {getNumber (_config >> "scope") > 0}} && {getNumber (_config >> QGVAR(hide)) != 1}} do {
-    if (count (_config >> "LinkedItems") == 0) exitWith {
-        _className = configName _config;
-        (uiNamespace getVariable QGVAR(baseWeaponNameCache)) set [_cacheKey, _className];
-        _className breakOut "main"
+            _className
+        };
     };
-
-    _config = inheritsFrom _config;
-};
-
-_cache set [_cacheKey, _weapon];
-_weapon
+}, true]

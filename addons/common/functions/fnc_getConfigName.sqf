@@ -17,26 +17,14 @@
 
 params ["_className"];
 
-_className = toLower _className;
+(uiNamespace getVariable QGVAR(configNames)) getOrDefaultCall [toLower _className, {
+    private _config = configNull;
 
-// Check if item is cached
-private _configName = (uiNamespace getVariable QGVAR(configNames)) get _className;
+    {
+        _config = configFile >> _x >> _className;
 
-if (!isNil "_configName") exitWith {
-    _configName
-};
+        if (isClass _config) exitWith {};
+    } forEach ["CfgWeapons", "CfgMagazines", "CfgGlasses", "CfgVehicles", "CfgVoice", "CfgUnitInsignia"];
 
-private _config = configNull;
-
-{
-    _config = configFile >> _x >> _className;
-
-    if (isClass _config) exitWith {};
-} forEach ["CfgWeapons", "CfgMagazines", "CfgGlasses", "CfgVehicles", "CfgVoice", "CfgUnitInsignia"];
-
-_configName = configName _config;
-
-// Save, regardless of its existence
-(uiNamespace getVariable QGVAR(configNames)) set [_className, _configName];
-
-_configName
+    configName _config
+}, true]

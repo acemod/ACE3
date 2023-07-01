@@ -30,7 +30,7 @@ if (_items isEqualType true) then {
     if (_items) then {
         private _weapons = _cargo select IDX_VIRT_WEAPONS;
         private _weaponAttachments = _cargo select IDX_VIRT_ATTACHMENTS;
-        private _configItems = uiNamespace getVariable QGVAR(configItems);
+        private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
 
         // Add onto existing items, in case some items that were already added aren't available by default in the arsenal
         {
@@ -71,6 +71,7 @@ if (_items isEqualType true) then {
 
     private _grenadeList = uiNamespace getVariable [QGVAR(grenadeCache), []];
     private _putList = uiNamespace getVariable [QGVAR(putCache), []];
+    private _magazineMiscItems = uiNamespace getVariable [QGVAR(magazineMiscItems), createHashMap];
 
     // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
     // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
@@ -84,7 +85,7 @@ if (_items isEqualType true) then {
                 _config = _cfgWeapons >> _x;
 
                 // Check if valid class
-                if !(((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal")} else {getNumber (_config >> "scope")}) == 2) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
+                if !((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal") == 2 && {getNumber (_config >> "scope") > 0}} else {getNumber (_config >> "scope") == 2}) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
                     continue;
                 };
 
@@ -97,16 +98,16 @@ if (_items isEqualType true) then {
                     ): {
                         switch (getNumber (_configItemInfo >> "type")) do {
                             case TYPE_OPTICS: {
-                                ((_cargo select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_OPTICS_ATTACHMENTS) pushBackUnique _x;
+                                ((_cargo select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_OPTICS_ATTACHMENTS) pushBackUnique (_className call FUNC(baseWeapon));
                             };
                             case TYPE_FLASHLIGHT: {
-                                ((_cargo select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_FLASHLIGHT_ATTACHMENTS) pushBackUnique _x;
+                                ((_cargo select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_FLASHLIGHT_ATTACHMENTS) pushBackUnique (_className call FUNC(baseWeapon));
                             };
                             case TYPE_MUZZLE: {
-                                ((_cargo select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_MUZZLE_ATTACHMENTS) pushBackUnique _x;
+                                ((_cargo select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_MUZZLE_ATTACHMENTS) pushBackUnique (_className call FUNC(baseWeapon));
                             };
                             case TYPE_BIPOD: {
-                                ((_cargo select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_BIPOD_ATTACHMENTS) pushBackUnique _x;
+                                ((_cargo select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_BIPOD_ATTACHMENTS) pushBackUnique (_className call FUNC(baseWeapon));
                             };
                         };
                     };
@@ -199,12 +200,16 @@ if (_items isEqualType true) then {
                 _config = _cfgMagazines >> _x;
 
                 // Check if valid class
-                if !(((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal")} else {getNumber (_config >> "scope")}) == 2) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
+                if !((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal") == 2 && {getNumber (_config >> "scope") > 0}} else {getNumber (_config >> "scope") == 2}) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
                     continue;
                 };
 
                 // Check what type the magazine actually is
                 switch (true) do {
+                    // "Misc. items" magazines (e.g. spare barrels, intel, photos)
+                    case (_x in _magazineMiscItems): {
+                        (_cargo select IDX_VIRT_MISC_ITEMS) pushBackUnique _x;
+                    };
                     // Grenades
                     case (_x in _grenadeList): {
                         (_cargo select IDX_VIRT_GRENADES) pushBackUnique _x;
@@ -227,7 +232,7 @@ if (_items isEqualType true) then {
                 _config = _cfgVehicles >> _x;
 
                 // Check if valid class
-                if !(((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal")} else {getNumber (_config >> "scope")}) == 2) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
+                if !((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal") == 2 && {getNumber (_config >> "scope") > 0}} else {getNumber (_config >> "scope") == 2}) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
                     continue;
                 };
 
@@ -240,7 +245,7 @@ if (_items isEqualType true) then {
                 _config = _cfgGlasses >> _x;
 
                 // Check if valid class
-                if !(((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal")} else {getNumber (_config >> "scope")}) == 2) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
+                if !((if (isNumber (_config >> "scopeArsenal")) then {getNumber (_config >> "scopeArsenal") == 2 && {getNumber (_config >> "scope") > 0}} else {getNumber (_config >> "scope") == 2}) && {getNumber (_config >> QGVAR(hide)) != 1}) then {
                     continue;
                 };
 

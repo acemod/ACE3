@@ -15,6 +15,10 @@
 #define IDC_OK 1 // emulate "OK" button
 #define IDC_CANCEL 2 // emulate "Cancel" button
 
+// Sorting
+#define ASCENDING 0
+#define DESCENDING 1
+
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
@@ -46,7 +50,9 @@
 #define IDC_rightTabContent 14
 #define IDC_rightTabContentListnBox 15
 #define IDC_sortLeftTab 16
+#define IDC_sortLeftTabDirection 161
 #define IDC_sortRightTab 17
+#define IDC_sortRightTabDirection 171
 #define IDC_leftSearchbar 18
 #define IDC_leftSearchbarButton 41
 #define IDC_rightSearchbar 19
@@ -173,6 +179,32 @@
 #define IDC_ATTRIBUTE_IMPORT_BUTTON 8109
 #define IDC_ATTRIBUTE_ADD_COMPATIBLE 8110
 
+// Indexes of categories
+#define IDX_CAT_ALL 0
+#define IDX_CAT_PRIMARY_WEAPON 1
+#define IDX_CAT_SECONDARY_WEAPON 2
+#define IDX_CAT_HANDGUN_WEAPON 3
+#define IDX_CAT_OPTICS_ATTACHMENTS 4
+#define IDX_CAT_FLASHLIGHT_ATTACHMENTS 5
+#define IDX_CAT_MUZZLE_ATTACHMENTS 6
+#define IDX_CAT_BIPOD_ATTACHMENTS 7
+#define IDX_CAT_ITEMS_ALL 8
+#define IDX_CAT_HEADGEAR 9
+#define IDX_CAT_UNIFORM 10
+#define IDX_CAT_VEST 11
+#define IDX_CAT_BACKPACK 12
+#define IDX_CAT_GOGGLES 13
+#define IDX_CAT_NVG 14
+#define IDX_CAT_BINO 15
+#define IDX_CAT_MAP 16
+#define IDX_CAT_COMPASS 17
+#define IDX_CAT_RADIO 18
+#define IDX_CAT_WATCH 19
+#define IDX_CAT_COMMS 20
+#define IDX_CAT_GRENADES 21
+#define IDX_CAT_EXPLOSIVES 22
+#define IDX_CAT_MISC_ITEMS 23
+
 // Weapons 0 [primary, handgun, secondary]
 // Weapon attachements 1 [optics, flashlight, muzzle, bipod]
 // Magazines 2
@@ -226,7 +258,6 @@
 #define IDX_VIRT_BIPOD_ATTACHMENTS 3
 
 #define IDX_VIRT_ITEMS_ALL 2
-
 #define IDX_VIRT_HEADGEAR 3
 #define IDX_VIRT_UNIFORM 4
 #define IDX_VIRT_VEST 5
@@ -250,6 +281,7 @@
 #define IDX_VIRT_UNIQUE_ATTACHMENTS 22
 #define IDX_VIRT_UNIQUE_BACKPACKS 23
 #define IDX_VIRT_UNIQUE_GOGGLES 24
+#define IDX_VIRT_UNIQUE_UNKNOWN_ITEMS 25
 
 // Indexes of current items array
 #define IDX_CURR_PRIMARY_WEAPON 0
@@ -314,6 +346,7 @@
     IDC_blockRighttBackground,\
     IDC_rightTabContent,\
     IDC_sortRightTab,\
+    IDC_sortRightTabDirection,\
     RIGHT_PANEL_ACC_IDCS,\
     IDC_rightSearchbar,\
     IDC_rightSearchbarButton,\
@@ -364,6 +397,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     IDC_loadIndicator,\
     IDC_rightTabContentListnBox,\
     IDC_sortRightTab,\
+    IDC_sortRightTabDirection,\
     IDC_tabRight,\
     RIGHT_PANEL_ACC_IDCS,\
     RIGHT_PANEL_ITEMS_IDCS,\
@@ -446,6 +480,7 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     IDC_rightTabContent,\
     IDC_rightTabContentListnBox,\
     IDC_sortRightTab,\
+    IDC_sortRightTabDirection,\
     RIGHT_PANEL_ACC_BACKGROUND_IDCS,\
     RIGHT_PANEL_ACC_IDCS,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\

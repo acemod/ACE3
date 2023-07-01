@@ -26,6 +26,7 @@ if (count _loadout == 2) then {
 if (count _loadout != 10) exitWith {[]};
 
 private _weapon = "";
+private _weaponsInfo = [];
 private _uniqueBaseCfgText = "";
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
@@ -38,12 +39,19 @@ private _cfgVehicles = configFile >> "CfgVehicles";
         case IDX_LOADOUT_SECONDARY_WEAPON;
         case IDX_LOADOUT_HANDGUN_WEAPON;
         case IDX_LOADOUT_BINO: {
-            _x params [["_weapon", ""]];
+            _weaponsInfo = _x;
 
-            // Find baseweapon of weapon
-            if (_weapon != "") then {
-                _x set [0, _weapon call FUNC(baseWeapon)];
-            };
+            // Check weapon & weapon attachments
+            {
+                // Skip magazines
+                if (_forEachIndex in [4, 5]) then {
+                    continue;
+                };
+
+                if (_x != "") then {
+                    _weaponsInfo set [_forEachIndex, _x call FUNC(baseWeapon)];
+                };
+            } forEach _weaponsInfo;
         };
         // Uniform, vest, backpack
         case IDX_LOADOUT_UNIFORM;
@@ -61,7 +69,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                         _x params ["_item", "_arg"];
 
                         if (_item != "") then {
-                            _uniqueBaseCfgText = getText ([_cfgVehicles, _cfgWeapons] select (_arg isEqualType 0) >> _item >> QGVAR(uniqueBase));
+                            _uniqueBaseCfgText = (getText ([_cfgWeapons, _cfgVehicles] select ((_arg isEqualType false) && {_arg}) >> _item >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
 
                             if (_uniqueBaseCfgText != "") then {
                                 _x set [0, _uniqueBaseCfgText];
@@ -81,7 +89,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                         _x params ["_item"];
 
                         if (_item != "") then {
-                            _uniqueBaseCfgText = getText (_cfgMagazines >> _item >> QGVAR(uniqueBase));
+                            _uniqueBaseCfgText = (getText (_cfgMagazines >> _item >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
 
                             if (_uniqueBaseCfgText != "") then {
                                 _x set [0, _uniqueBaseCfgText];
@@ -98,7 +106,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 
             {
                 if (_x != "") then {
-                    _uniqueBaseCfgText = getText (_cfgWeapons >> _x >> QGVAR(uniqueBase));
+                    _uniqueBaseCfgText = (getText (_cfgWeapons >> _x >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
 
                     if (_uniqueBaseCfgText != "") then {
                         _items set [_forEachIndex, _uniqueBaseCfgText];

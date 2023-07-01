@@ -50,8 +50,8 @@ GVAR(currentBox) = _object;
 
 if (_mode) then {
     // Add all the items from the game that the arsenal has detected
-    GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
-    GVAR(virtualItemsFlat) = +(uiNamespace getVariable QGVAR(configItemsFlat));
+    GVAR(virtualItems) = +(uiNamespace getVariable [QGVAR(configItems), []]);
+    GVAR(virtualItemsFlat) = +(uiNamespace getVariable [QGVAR(configItemsFlat), []]);
 } else {
     // Add only specified items to the arsenal
     GVAR(virtualItems) = +(_object getVariable [QGVAR(virtualItems), EMPTY_VIRTUAL_ARSENAL]);

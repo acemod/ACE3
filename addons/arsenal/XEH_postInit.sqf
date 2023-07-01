@@ -9,9 +9,11 @@ GVAR(lastSearchTextRight) = "";
 GVAR(lastSearchTextLoadouts) = "";
 GVAR(lastSortLeft) = "";
 GVAR(lastSortRight) = "";
+GVAR(lastSortDirectionLeft) = DESCENDING;
+GVAR(lastSortDirectionRight) = DESCENDING;
 
-[QGVAR(initBox), {LINKFUNC(initBox)}] call CBA_fnc_addEventHandler;
-[QGVAR(removeBox), {LINKFUNC(removeBox)}] call CBA_fnc_addEventHandler;
+[QGVAR(initBox), LINKFUNC(initBox)] call CBA_fnc_addEventHandler;
+[QGVAR(removeBox), LINKFUNC(removeBox)] call CBA_fnc_addEventHandler;
 
 [QGVAR(broadcastFace), {
     params ["_unit", "_face"];
@@ -76,6 +78,7 @@ GVAR(lastSortRight) = "";
             };
         };
 
+        // Sort loadouts alphabetically
         _contentPanelCtrl lnbSort [1, false];
 
         // Select previously selected loadout

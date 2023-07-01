@@ -30,12 +30,12 @@ _contentPanelCtrl lnbSetCurSelRow -1;
 lnbClear _contentPanelCtrl;
 
 private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
+private _cfgWeapons = configFile >> "CfgWeapons";
+private _newRow = -1;
 
 if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     private _loadoutNameAndTab = "";
     private _loadoutCachedInfo = "";
-    private _newRow = -1;
-    private _cfgWeapons = configFile >> "CfgWeapons";
     private _sharingEnabled = GVAR(allowSharedLoadouts) && {isMultiplayer};
 
     // Add all loadouts to loadout list
@@ -93,8 +93,6 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     } forEach ([profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {
     private _allPlayerNames = allPlayers apply {name _x};
-    private _newRow = -1;
-    private _cfgWeapons = configFile >> "CfgWeapons";
 
     {
         _x params ["_playerName", "_loadoutName", "_loadoutData"];

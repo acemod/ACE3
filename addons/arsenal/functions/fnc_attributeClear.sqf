@@ -18,28 +18,28 @@
 
 params ["_controlsGroup"];
 
-private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY) - 1;
+private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY);
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
 TRACE_1("Handling clear button",_category);
 
 // Remove all if no specific category
-if (_category == -1) then {
+if (_category == IDX_CAT_ALL) then {
     _attributeValue set [0, []];
 } else {
     // Find category items and remove from list
     private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
     private _categoryItems = switch (true) do {
         // Weapons
-        case (_category < 3): {
-            _configItems select IDX_VIRT_WEAPONS select _category;
+        case (_category < IDX_CAT_OPTICS_ATTACHMENTS): {
+            _configItems select IDX_VIRT_WEAPONS select (_category - 1)
         };
         // Weapon attachments
-        case (_category < 7): {
-            _configItems select IDX_VIRT_ATTACHMENTS select (_category - 3);
+        case (_category < IDX_CAT_ITEMS_ALL): {
+            _configItems select IDX_VIRT_ATTACHMENTS select (_category - 4)
         };
         // Other
         default {
-            _configItems select (_category - 5);
+            _configItems select (_category - 6)
         };
     };
 

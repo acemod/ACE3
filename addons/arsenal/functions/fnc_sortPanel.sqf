@@ -5,7 +5,7 @@
  * Sort an arsenal panel.
  *
  * Arguments:
- * 0: Sort control <CONTROL>
+ * 0: Control <CONTROL>
  *
  * Return Value:
  * None
@@ -13,12 +13,20 @@
  * Public: No
 */
 
-params ["_sortControl"];
+params ["_control"];
 
-private _display = ctrlParent _sortControl;
+// When filling the sorting panel, FUNC(sortPanel) is called twice, so ignore first call
+if (GVAR(ignoreFirstSortPanelCall)) exitWith {
+    GVAR(ignoreFirstSortPanelCall) = false;
+};
 
-private _rightSort = ctrlIDC _sortControl == IDC_sortRightTab;
+private _display = ctrlParent _control;
+private _rightSort = (ctrlIDC _control) in [IDC_sortRightTab, IDC_sortRightTabDirection];
 private _right = _rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]};
+private _sortCtrl = _display displayCtrl ([IDC_sortLeftTab, IDC_sortRightTab] select _rightSort);
+private _sortDirectionCtrl = _display displayCtrl ([IDC_sortLeftTabDirection, IDC_sortRightTabDirection] select _rightSort);
+
+private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgFaces = configFile >> "CfgFaces";
 private _cfgUnitInsignia = configFile >> "CfgUnitInsignia";
 private _cfgUnitInsigniaMission = missionConfigFile >> "CfgUnitInsignia";
@@ -36,7 +44,7 @@ if (_rightSort) then {
             case IDC_buttonThrow;
             case IDC_buttonPut;
             case IDC_buttonMag;
-            case IDC_buttonMagALL: {configFile >> "CfgMagazines"};
+            case IDC_buttonMagALL: {_cfgMagazines};
             default {configFile >> "CfgWeapons"};
         },
         GVAR(sortListRightPanel) select (
@@ -89,6 +97,22 @@ if (_rightSort) then {
     ]
 } params ["_panel", "_cfgClass", "_sorts"];
 
+// Get sort & sort direction
+private _sortName = _sortCtrl lbData (0 max lbCurSel _sortCtrl);
+private _sortDirection = _sortDirectionCtrl lbValue (0 max lbCurSel _sortDirectionCtrl);
+(_sorts select (0 max (_sorts findIf {(_x select 0) == _sortName}))) params ["", "_displayName", "_statement"];
+
+// Update last sort & sort direction
+missionNamespace setVariable [
+    [QGVAR(lastSortLeft), QGVAR(lastSortRight)] select _rightSort,
+    _displayName
+];
+
+missionNamespace setVariable [
+    [QGVAR(lastSortDirectionLeft), QGVAR(lastSortDirectionRight)] select _rightSort,
+    _sortDirection
+];
+
 // Get currently selected item
 private _curSel = if (_right) then {
     lnbCurSelRow _panel
@@ -102,24 +126,14 @@ private _selected = if (_right) then {
     _panel lbData _curSel
 };
 
-// Get sort's information
-private _sortName = _sortControl lbData (0 max lbCurSel _sortControl);
-private _sortConfig = _sorts select (0 max (_sorts findIf {(_x select 0) isEqualTo _sortName}));
-private _statement = _sortConfig select 2;
-_sortConfig params ["", "", "_statement"];
-
-// Update last sort
-missionNamespace setVariable [
-    [QGVAR(lastSortLeft), QGVAR(lastSortRight)] select _rightSort,
-    _sortConfig select 1
-];
-
 private _originalNames = createHashMap;
 private _item = "";
 private _quantity = "";
 private _itemCfg = configNull;
 private _value = "";
 private _name = "";
+
+private _magazineMiscItems = uiNamespace getVariable [QGVAR(magazineMiscItems), []];
 
 private _faceCache = if (_cfgClass == _cfgFaces) then {
     uiNamespace getVariable [QGVAR(faceCache), createHashMap]
@@ -154,6 +168,11 @@ _for do {
         0
     };
 
+    // "Misc. items" magazines (e.g. spare barrels, intel, photos)
+    if (_item in _magazineMiscItems) then {
+        _cfgClass = _cfgMagazines;
+    };
+
     // Check item's config
     _itemCfg = if !(_cfgClass in [_cfgFaces, _cfgUnitInsignia]) then {
         _cfgClass >> _item
@@ -173,7 +192,7 @@ _for do {
         };
     };
 
-    // Some items may not belong to the config class for the panel (misc. items panel can have unique items)
+    // Some items may not belong to the config class for the panel (e.g. misc. items panel can have unique items)
     if (isNull _itemCfg) then {
         _itemCfg = _item call CBA_fnc_getItemConfig;
     };
@@ -181,9 +200,9 @@ _for do {
     // Value can be any type
     _value = [_itemCfg, _item, _quantity] call _statement;
 
-    // If number, convert to string
+    // If number, convert to string (keep 2 decimal after comma; Needed for correct weight sorting)
     if (_value isEqualType 0) then {
-        _value = [_value, 8] call CBA_fnc_formatNumber;
+        _value = [_value, 8, 2] call CBA_fnc_formatNumber;
     };
 
     // If empty string, add alphabetically small char at beginning to make it sort correctly
@@ -209,7 +228,7 @@ _for do {
 
 // Sort alphabetically, find the previously selected item, select it again and reset text to original text
 if (_right) then {
-    _panel lnbSort [1, false];
+    _panel lnbSort [1, _sortDirection == ASCENDING];
 
     _for do {
         _item = _panel lnbData [_i, 0];
@@ -225,7 +244,7 @@ if (_right) then {
         };
     };
 } else {
-    lbSort [_panel, "ASC"];
+    lbSort [_panel, ["DESC", "ASC"] select _sortDirection];
 
     _for do {
         _item = _panel lbData _i;

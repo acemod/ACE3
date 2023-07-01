@@ -247,7 +247,7 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
-[_display, _control, _display displayCtrl IDC_sortLeftTab] call FUNC(fillSort);
+[_display, _control, _display displayCtrl IDC_sortLeftTab, _display displayCtrl IDC_sortLeftTabDirection] call FUNC(fillSort);
 
 // Try to select previously selected item again, otherwise select first item ("Empty")
 if (_selectedItem != "") then {

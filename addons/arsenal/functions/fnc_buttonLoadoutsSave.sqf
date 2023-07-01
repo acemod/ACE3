@@ -96,6 +96,7 @@ private _savedLoadout = switch (GVAR(currentLoadoutsTab)) do {
 
             _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_extendedLoadout] call FUNC(verifyLoadout)];
 
+            // Sort loadouts alphabetically
             _contentPanelCtrl lnbSort [1, false];
 
             // Select newly saved loadout
@@ -137,6 +138,7 @@ private _savedLoadout = switch (GVAR(currentLoadoutsTab)) do {
 
             _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_extendedLoadout] call FUNC(verifyLoadout)];
 
+            // Sort loadouts alphabetically
             _contentPanelCtrl lnbSort [1, false];
 
             // Select newly saved loadout

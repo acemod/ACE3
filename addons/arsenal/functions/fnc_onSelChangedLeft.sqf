@@ -2,7 +2,7 @@
 #include "..\defines.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Handles selection changes on the left panel.
  *
  * Arguments:
@@ -28,16 +28,16 @@ private _selectCorrectPanelContainer = [_display displayCtrl IDC_buttonMisc, _di
 
 // Remove all magazines from the previous weapon that aren't compatible with the new weapon
 private _fnc_clearPreviousWepMags = {
-    private _compatibleMagsBaseWeapon = compatibleMagazines _baseWeapon;
+    private _compatibleMagsCurrentWeapon = compatibleMagazines _currentWeapon;
 
     // If nothing was selected, remove all magazines from the previous weapon
     if (_item != "") then {
-        _compatibleMagsBaseWeapon = _compatibleMagsBaseWeapon - _compatibleMags;
+        _compatibleMagsCurrentWeapon = _compatibleMagsCurrentWeapon - _compatibleMags;
     };
 
     {
         GVAR(center) removeMagazines _x;
-    } forEach _compatibleMagsBaseWeapon;
+    } forEach _compatibleMagsCurrentWeapon;
 
     // Update currentItems
     private _loadout = getUnitLoadout GVAR(center);
@@ -51,7 +51,7 @@ private _fnc_clearPreviousWepMags = {
 switch (GVAR(currentLeftPanel)) do {
     // Primary weapon
     case IDC_buttonPrimaryWeapon: {
-        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON) call FUNC(baseWeapon);
+        private _currentWeapon = GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON;
 
         // If nothing selected, remove primary weapon and its magazines
         if (_item == "") then {
@@ -64,7 +64,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             // Check if a new primary weapon was selected
-            if ((GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON) != _item && {_baseWeapon != _item}) then {
+            if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
                 private _compatibleMagIndex = _compatibleMags findAny (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
@@ -119,7 +119,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
     // Handgun weapon
     case IDC_buttonHandgun: {
-        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON) call FUNC(baseWeapon);
+        private _currentWeapon = GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON;
 
         // If nothing selected, remove handgun weapon and its magazines
         if (_item == "") then {
@@ -132,7 +132,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             // Check if a new handgun weapon was selected
-            if ((GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON) != _item && {_baseWeapon != _item}) then {
+            if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
                 private _compatibleMagIndex = _compatibleMags findAny (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
@@ -188,7 +188,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
     // Secondary weapon
     case IDC_buttonSecondaryWeapon: {
-        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON) call FUNC(baseWeapon);
+        private _currentWeapon = GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON;
 
         // If nothing selected, remove secondary weapon and its magazines
         if (_item == "") then {
@@ -201,7 +201,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             // Check if a new secondary weapon was selected
-            if ((GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON) != _item && {_baseWeapon != _item}) then {
+            if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
                 private _compatibleMagIndex = _compatibleMags findAny (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
@@ -245,7 +245,14 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
-            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
+            // If item is a disposable launcher, delay a bit to show new compatible items
+            if (_item in (uiNamespace getVariable [QGVAR(CBAdisposableLaunchers), []])) then {
+                [{
+                    _this call FUNC(fillRightPanel);
+                }, [_display, _selectCorrectPanelWeapon]] call CBA_fnc_execNextFrame;
+            } else {
+                [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
+            };
         };
 
         // Make unit switch to new item
@@ -434,7 +441,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
     // Binoculars
     case IDC_buttonBinoculars: {
-        private _baseWeapon = (GVAR(currentItems) select IDX_CURR_BINO) call FUNC(baseWeapon);
+        private _currentWeapon = GVAR(currentItems) select IDX_CURR_BINO;
 
         // If nothing selected, remove secondary weapon and its magazines
         if (_item == "") then {
@@ -447,7 +454,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             // Check if a new binocular was selected
-            if ((GVAR(currentItems) select IDX_CURR_BINO) != _item && {_baseWeapon != _item}) then {
+            if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new binocular
                 private _compatibleMags = compatibleMagazines _item;
                 private _compatibleMagIndex = _compatibleMags findAny (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);

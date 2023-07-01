@@ -28,7 +28,11 @@ private _indexCurrentItems = -1;
         case IDX_LOADOUT_BINO: {
             _x params [["_weapon", ""], ["_muzzle", ""], ["_flashlight", ""], ["_optics", ""], ["_primaryMagazine", []], ["_secondaryMagazine", []], ["_bipod", ""]];
 
-            _weapon = _weapon call FUNC(baseWeapon);
+            // Find baseweapon of weapon
+            if (_weapon != "") then {
+                _weapon = _weapon call FUNC(baseWeapon);
+            };
+
             _isWeapon = _forEachIndex != IDX_LOADOUT_BINO;
 
             // If bino, add it in a different place than regular weapons
@@ -38,7 +42,7 @@ private _indexCurrentItems = -1;
 
             // Add weapon attachments
             {
-                (GVAR(currentItems) select _indexCurrentItems) set [[2, 1, 0, 3] select _forEachIndex, _x];
+                (GVAR(currentItems) select _indexCurrentItems) set [[2, 1, 0, 3] select _forEachIndex, if (_x != "") then {_x call FUNC(baseWeapon)} else {_x}];
             } forEach [_optics, _flashlight, _muzzle, _bipod];
 
             // Add magazines

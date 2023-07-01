@@ -31,6 +31,7 @@ private _cfgGlasses = configFile >> "CfgGlasses";
 private _weaponsArray = GVAR(virtualItems) select IDX_VIRT_WEAPONS;
 private _accsArray = GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS;
 
+private _name = "";
 private _nullItemsAmount = 0;
 private _unavailableItemsAmount = 0;
 private _nullItemsList = [];
@@ -41,7 +42,7 @@ private _fnc_toConfigCase = {
     _this apply {
         if (_x isEqualType "") then {
             if (_x != "") then {
-                private _name = _x call EFUNC(common,getConfigName);
+                _name = _x call EFUNC(common,getConfigName);
 
                 // If item doesn't exist in config, "" is returned
                 // Just return unaltered item name in that case, so it can be documented as being unavailable
@@ -79,6 +80,9 @@ private _fnc_weaponCheck = {
             if (_x != "") then {
                 // Check if item exists
                 if (isClass (_cfgWeapons >> _x)) then {
+                    // Get base weapon
+                    _x = _x call FUNC(baseWeapon);
+
                     // Check if item is available in arsenal
                     if !(
                         // Weapon class name is at the very start of the array
@@ -176,7 +180,8 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                                         if !(
                                             _item in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) ||
                                             {_item in (GVAR(virtualItems) select IDX_VIRT_GRENADES)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_EXPLOSIVES)}
+                                            {_item in (GVAR(virtualItems) select IDX_VIRT_EXPLOSIVES)} ||
+                                            {_item in (GVAR(virtualItems) select IDX_VIRT_MISC_ITEMS)}
                                         ) then {
                                             _unavailableItemsList pushBackUnique _item;
                                             ((_loadout select _dataIndex) select 1) set [_forEachIndex, []];

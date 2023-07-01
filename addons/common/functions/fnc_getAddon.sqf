@@ -17,23 +17,14 @@
 
 params ["_config"];
 
-// Check if item is cached
-private _addon = (uiNamespace getVariable QGVAR(addonCache)) get _config;
+(uiNamespace getVariable QGVAR(addonCache)) getOrDefaultCall [_config, {
+    private _addons = configSourceAddonList _config;
 
-if (!isNil "_addon") exitWith {
-    _addon
-};
-
-private _addons = configSourceAddonList _config;
-
-// Return first addon
-_addon = if (_addons isNotEqualTo []) then {
-    (configSourceModList (configfile >> "CfgPatches" >> _addons select 0)) param [0, ""]
-} else {
-    // If nothing found at all, return ""
-    ""
-};
-
-(uiNamespace getVariable QGVAR(addonCache)) set [_config, _addon];
-
-_addon
+    // Return first addon
+    if (_addons isNotEqualTo []) then {
+        (configSourceModList (configfile >> "CfgPatches" >> _addons select 0)) param [0, ""]
+    } else {
+        // If nothing found at all, return ""
+        ""
+    }
+}, true]

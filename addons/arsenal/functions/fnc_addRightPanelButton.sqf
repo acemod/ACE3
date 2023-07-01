@@ -46,6 +46,7 @@ if (_position < 0 || {_position > 9}) exitWith {
 
 // If spot found, add items and return position
 private _cfgWeapons = configFile >> "CfgWeapons";
+private _cfgMagazines = configFile >> "CfgMagazines";
 private _configItemInfo = "";
 
 _items = _items select {
@@ -53,7 +54,8 @@ _items = _items select {
 
     _x isKindOf ["CBA_MiscItem", _cfgWeapons] && {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} ||
     {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-    {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"}
+    {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"} ||
+    {getNumber (_cfgMagazines >> _x >> "ACE_isUnique") == 1}
 };
 
 GVAR(customRightPanelButtons) set [_position, [_items apply {_x call EFUNC(common,getConfigName)}, _picture, _tooltip]];

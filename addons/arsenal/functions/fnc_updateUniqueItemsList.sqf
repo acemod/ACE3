@@ -21,8 +21,11 @@ GVAR(virtualItems) set [IDX_VIRT_UNIQUE_EXPLOSIVES, []];
 GVAR(virtualItems) set [IDX_VIRT_UNIQUE_ATTACHMENTS, [[], [], [], []]];
 GVAR(virtualItems) set [IDX_VIRT_UNIQUE_BACKPACKS, []];
 GVAR(virtualItems) set [IDX_VIRT_UNIQUE_GOGGLES, []];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_UNKNOWN_ITEMS, []];
 
-private _configItems = uiNamespace getVariable QGVAR(configItems);
+private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
+private _configItemsFlat = uiNamespace getVariable [QGVAR(configItemsFlat), []];
+private _magazineMiscItems = uiNamespace getVariable [QGVAR(magazineMiscItems), []];
 
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
@@ -104,6 +107,15 @@ private _isWeapon = false;
         ): {
             (GVAR(virtualItems) select IDX_VIRT_UNIQUE_MISC_ITEMS) pushBackUnique _x;
         };
+        // "Misc. items" magazines (e.g. spare barrels, intel, photos)
+        case (
+            _isMagazine &&
+            {_x in _magazineMiscItems} &&
+            {!(_x in (GVAR(virtualItems) select IDX_VIRT_MISC_ITEMS))} &&
+            {_x in (_configItems select IDX_VIRT_MISC_ITEMS)}
+        ): {
+            (GVAR(virtualItems) select IDX_VIRT_UNIQUE_MISC_ITEMS) pushBackUnique _x;
+        };
         // Backpacks
         case (getNumber (_cfgVehicles >> _x >> "isBackpack") == 1): {
             (GVAR(virtualItems) select IDX_VIRT_UNIQUE_BACKPACKS) pushBackUnique _x;
@@ -112,5 +124,12 @@ private _isWeapon = false;
         case (isClass (_cfgGlasses >> _x)): {
             (GVAR(virtualItems) select IDX_VIRT_UNIQUE_GOGGLES) pushBackUnique _x;
         };
+        // Unknown
+        default {
+            // Don't add items that are part of the arsenal
+            if !(_x in _configItemsFlat) then {
+                (GVAR(virtualItems) select IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) pushBackUnique _x;
+            };
+        };
     };
-} forEach ([GVAR(center)] call EFUNC(common,uniqueItems));
+} forEach (keys ([GVAR(center), 0, 3, 3, 3, false] call EFUNC(common,uniqueUnitItems))); // Get all items from unit

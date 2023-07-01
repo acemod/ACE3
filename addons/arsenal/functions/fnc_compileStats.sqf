@@ -116,11 +116,11 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
 
     TRACE_3("stats array", _finalArray, _leftTabsList, _rightTabsList);
 
-    if (count _leftTabsList > 0) then {
+    if (_leftTabsList isNotEqualTo []) then {
         [_statsListLeftPanel, _leftTabsList, "L"] call _fnc_addToTabs;
     };
 
-    if (count _rightTabsList > 0) then {
+    if (_rightTabsList isNotEqualTo []) then {
         [_statsListRightPanel, _rightTabsList, "R"] call _fnc_addToTabs;
     };
 } forEach _configEntries;

@@ -72,20 +72,18 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
             if (_weapon != "") then {
                 _weapon = _weapon call FUNC(baseWeapon);
 
-                if (_weapon != "") then {
-                    // If bino, add it in a different place than regular weapons
-                    if (_forEachIndex != IDX_LOADOUT_BINO) then {
-                        (GVAR(virtualItems) select IDX_VIRT_WEAPONS select _forEachIndex) pushBackUnique _weapon;
-                    } else {
-                        (GVAR(virtualItems) select IDX_VIRT_BINO) pushBackUnique _weapon;
-                    };
+                // If bino, add it in a different place than regular weapons
+                if (_forEachIndex != IDX_LOADOUT_BINO) then {
+                    ((GVAR(virtualItems) select IDX_VIRT_WEAPONS) select _forEachIndex) pushBackUnique _weapon;
+                } else {
+                    (GVAR(virtualItems) select IDX_VIRT_BINO) pushBackUnique _weapon;
                 };
             };
 
             // Add weapon attachments
             {
                 if (_x != "") then {
-                    ((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select _forEachIndex) pushBackUnique _x;
+                    ((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select _forEachIndex) pushBackUnique (_x call FUNC(baseWeapon));
                 };
             } forEach [_optics, _flashlight, _muzzle, _bipod];
 
@@ -110,7 +108,7 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
             _x params [["_containerClass", ""]];
 
             if (_containerClass != "") then {
-                (GVAR(virtualItems) select IDX_CURR_VEST) pushBackUnique _containerClass;
+                (GVAR(virtualItems) select IDX_VIRT_VEST) pushBackUnique _containerClass;
             };
         };
         // Backpack
@@ -118,7 +116,7 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
             _x params [["_containerClass", ""]];
 
             if (_containerClass != "") then {
-                (GVAR(virtualItems) select IDX_CURR_BACKPACK) pushBackUnique _containerClass;
+                (GVAR(virtualItems) select IDX_VIRT_BACKPACK) pushBackUnique _containerClass;
             };
         };
         // Helmet
@@ -285,6 +283,7 @@ GVAR(rightSearchbarFocus) = false;
 GVAR(leftTabFocus) = false;
 GVAR(rightTabFocus) = false;
 GVAR(rightTabLnBFocus) = false;
+GVAR(ignoreFirstSortPanelCall) = false;
 
 {
     private _panel = _display displayCtrl _x;

@@ -62,10 +62,6 @@ PREP_RECOMPILE_END;
 call FUNC(compileStats);
 call FUNC(compileSorts);
 
-// Caches for names, pictures, mod icons
-GVAR(addListBoxItemCache) = createHashMap;
-GVAR(rightPanelCache) = createHashMap;
-
 [QUOTE(ADDON), {!isNil QGVAR(camera)}] call CBA_fnc_registerFeatureCamera;
 
 // Compatibility with CBA scripted optics and disposable framework

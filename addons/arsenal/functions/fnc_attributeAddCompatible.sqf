@@ -21,7 +21,7 @@ params ["_controlsGroup"];
 private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY);
 
 // Exit if selected category is not attachments or magazines
-if !(_category in [4, 5, 6, 7, 8]) exitWith {};
+if !(_category in [IDX_CAT_OPTICS_ATTACHMENTS, IDX_CAT_FLASHLIGHT_ATTACHMENTS, IDX_CAT_MUZZLE_ATTACHMENTS, IDX_CAT_BIPOD_ATTACHMENTS, IDX_CAT_ITEMS_ALL]) exitWith {};
 
 private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
@@ -33,7 +33,7 @@ private _attributeWeapons = _attributeItems arrayIntersect (flatten (_configItem
 // Add compatible attachments or magazines to attribute
 private _itemsToAdd = [];
 
-if (_category == 8) then {
+if (_category == IDX_CAT_ITEMS_ALL) then {
     // Get all compatible magazines for weapons
     {
         _itemsToAdd append (compatibleMagazines _x);

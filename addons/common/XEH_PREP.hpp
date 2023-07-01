@@ -188,6 +188,7 @@ PREP(toNumber);
 PREP(unhideUnit);
 PREP(uniqueElements);
 PREP(uniqueItems);
+PREP(uniqueUnitItems);
 PREP(unloadPerson);
 PREP(unloadPersonLocal);
 PREP(unloadUnitWeapon);

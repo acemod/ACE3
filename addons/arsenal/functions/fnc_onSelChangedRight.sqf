@@ -31,7 +31,12 @@ switch (_currentItemsIndex) do {
         if (_item == "") then {
             GVAR(center) removePrimaryWeaponItem ((GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select _itemIndex);
         } else {
-            GVAR(center) addWeaponItem [primaryWeapon GVAR(center), _item, true];
+            private _currentItem = (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select _itemIndex;
+
+            // Don't add item if it isn't a different item than what the unit already has
+            if !(_item in [_currentItem, _currentItem call FUNC(baseWeapon)]) then {
+                GVAR(center) addWeaponItem [primaryWeapon GVAR(center), _item, true];
+            };
         };
 
         // Update currentItems
@@ -42,20 +47,26 @@ switch (_currentItemsIndex) do {
     };
     // Secondary weapon
     case IDX_CURR_SECONDARY_WEAPON_ITEMS: {
+        private _cbaDisposable = CBA_disposable_replaceDisposableLauncher && {!isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon GVAR(center))}};
+
+        // If removal
         if (_item == "") then {
-            if (CBA_disposable_replaceDisposableLauncher && {!isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon GVAR(center))}}) exitWith {
+            if (_cbaDisposable) exitWith {
                 TRACE_1("ignoring unload of disposable",secondaryWeapon GVAR(center));
             };
 
             GVAR(center) removeSecondaryWeaponItem ((GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex);
-
-            // Update currentItems
-            (getUnitLoadout GVAR(center) select IDX_LOADOUT_SECONDARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-            GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
         } else {
-            GVAR(center) addWeaponItem [secondaryWeapon GVAR(center), _item, true];
+            private _currentItem = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex;
 
-            // Update currentItems
+            // Don't add item if it isn't a different item than what the unit already has
+            if !(_item in [_currentItem, _currentItem call FUNC(baseWeapon)]) then {
+                GVAR(center) addWeaponItem [secondaryWeapon GVAR(center), _item, true];
+            };
+        };
+
+        // Update currentItems
+        if (!_cbaDisposable) then {
             (getUnitLoadout GVAR(center) select IDX_LOADOUT_SECONDARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
             GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
         };
@@ -67,7 +78,12 @@ switch (_currentItemsIndex) do {
         if (_item == "") then {
             GVAR(center) removeHandgunItem ((GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select _itemIndex);
         } else {
-            GVAR(center) addWeaponItem [handgunWeapon GVAR(center), _item, true];
+            private _currentItem = (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select _itemIndex;
+
+            // Don't add item if it isn't a different item than what the unit already has
+            if !(_item in [_currentItem, _currentItem call FUNC(baseWeapon)]) then {
+                GVAR(center) addWeaponItem [handgunWeapon GVAR(center), _item, true];
+            };
         };
 
         // Update currentItems
@@ -81,7 +97,12 @@ switch (_currentItemsIndex) do {
         if (_item == "") then {
             GVAR(center) removeBinocularItem ((GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select _itemIndex);
         } else {
-            GVAR(center) addWeaponItem [binocular GVAR(center), _item, true];
+            private _currentItem = (GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select _itemIndex;
+
+            // Don't add item if it isn't a different item than what the unit already has
+            if !(_item in [_currentItem, _currentItem call FUNC(baseWeapon)]) then {
+                GVAR(center) addWeaponItem [binocular GVAR(center), _item, true];
+            };
         };
 
         // Update currentItems

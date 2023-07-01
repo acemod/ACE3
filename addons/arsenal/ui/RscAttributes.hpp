@@ -519,14 +519,23 @@ class GVAR(display) {
             idc = IDC_sortLeftTab;
             x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
-            w = QUOTE(80 * GRID_W);
+            w = QUOTE(40 * GRID_W);
             h = QUOTE(6 * GRID_H);
             onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
             sizeEx = QUOTE(5 * GRID_H);
         };
+        class sortLeftTabDirection: sortLeftTab {
+            idc = IDC_sortLeftTabDirection;
+            x = QUOTE(safezoneX + 53 * GRID_W);
+            w = QUOTE(40 * GRID_W);
+        };
         class sortRightTab: sortLeftTab {
             idc = IDC_sortRightTab;
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
+        };
+        class sortRightTabDirection: sortLeftTabDirection {
+            idc = IDC_sortRightTabDirection;
+            x = QUOTE(safezoneX + safezoneW - 53 * GRID_W);
         };
         class leftSearchbar: ctrlEdit {
             idc = IDC_leftSearchbar;

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, Brett Mayson
+ * Author: Alganthe, Brett Mayson, johnb43
  * Fills the sort menu.
  *
  * Arguments:
@@ -15,13 +15,36 @@
  * Public: No
 */
 
-params ["_display", "_control", "_sortCtrl"];
+params ["_display", "_control", "_sortCtrl", "_sortDirectionCtrl"];
 
 lbClear _sortCtrl;
+lbClear _sortDirectionCtrl;
 
 private _right = false;
 private _rightSort = ctrlIDC _sortCtrl == IDC_sortRightTab;
 
+// Handle sorting direction
+private _lastSortDirection = [GVAR(lastSortDirectionLeft), GVAR(lastSortDirectionRight)] select _rightSort;
+private _sortIndex = 0;
+private _index = -1;
+
+{
+    _x params ["_sortName", "_displayName", "_direction"];
+
+    _index = _sortDirectionCtrl lbAdd _displayName;
+    _sortDirectionCtrl lbSetData [_index, _sortName];
+    _sortDirectionCtrl lbSetValue [_index, _direction];
+
+    if (_direction == _lastSortDirection) then {
+        _sortIndex = _index;
+    };
+} forEach [[QGVAR(descending), LLSTRING(sortDescending), DESCENDING], [QGVAR(ascending), LLSTRING(sortAscending), ASCENDING]];
+
+// Prevent FUNC(sortPanel) being called twice in succession
+GVAR(ignoreFirstSortPanelCall) = true;
+_sortDirectionCtrl lbSetCurSel _sortIndex;
+
+// Handle sorting
 private _sorts = if (_rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]}) then {
     _right = true;
 
@@ -90,7 +113,7 @@ private _sorts = if (_rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform
 };
 
 private _lastSort = [GVAR(lastSortLeft), GVAR(lastSortRight)] select _rightSort;
-private _sortIndex = 0;
+_sortIndex = 0;
 
 {
     if (_x isEqualTo []) then {
@@ -101,10 +124,10 @@ private _sortIndex = 0;
 
     // Check if sort if available for this panel
     if ([_right] call _condition) then {
-        private _index = _sortCtrl lbAdd _displayName;
+        _index = _sortCtrl lbAdd _displayName;
         _sortCtrl lbSetData [_index, _sortName];
 
-        if (_displayName isEqualTo _lastSort) then {
+        if (_displayName == _lastSort) then {
             _sortIndex = _index;
         };
     };

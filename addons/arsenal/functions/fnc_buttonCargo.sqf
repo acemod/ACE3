@@ -20,9 +20,10 @@ private _add = _addOrRemove > 0;
 
 private _ctrlList = _display displayCtrl IDC_rightTabContentListnBox;
 private _lnbCurSel = lnbCurSelRow _ctrlList;
+private _isUnique = (_ctrlList lnbValue [_lnbCurSel, 2]) == 1;
 
 // If item is unique, don't allow adding more
-if (_add && {(_ctrlList lnbValue [_lnbCurSel, 2]) == 1}) exitWith {};
+if (_add && {_isUnique}) exitWith {};
 
 private _containerItems = [];
 private _item = _ctrlList lnbData [_lnbCurSel, 0];
@@ -36,12 +37,18 @@ private _container = switch (GVAR(currentLeftPanel)) do {
                 GVAR(center) addItemToUniform _item;
             };
         } else {
-            for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
-                GVAR(center) removeItemFromUniform _item;
+            // Backpacks need special command to be removed
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) select IDX_VIRT_BACKPACK)}) then {
+                [uniformContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
+            } else {
+                for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
+                    GVAR(center) removeItemFromUniform _item;
+                };
             };
         };
 
-        _containerItems = uniformItems GVAR(center);
+        /// Get all items from container (excluding container itself)
+        _containerItems = [GVAR(center), 0, 3, 0, 0, false] call EFUNC(common,uniqueUnitItems);
 
         // Update currentItems
         GVAR(currentItems) set [IDX_CURR_UNIFORM_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_UNIFORM) param [1, []]];
@@ -58,12 +65,18 @@ private _container = switch (GVAR(currentLeftPanel)) do {
                 GVAR(center) addItemToVest _item;
             };
         } else {
-            for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
-                GVAR(center) removeItemFromVest _item;
+            // Backpacks need special command to be removed
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) select IDX_VIRT_BACKPACK)}) then {
+                [vestContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
+            } else {
+                for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
+                    GVAR(center) removeItemFromVest _item;
+                };
             };
         };
 
-        _containerItems = vestItems GVAR(center);
+        // Get all items from container (excluding container itself)
+        _containerItems = [GVAR(center), 0, 0, 3, 0, false] call EFUNC(common,uniqueUnitItems);
 
         // Update currentItems
         GVAR(currentItems) set [IDX_CURR_VEST_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_VEST) param [1, []]];
@@ -80,12 +93,18 @@ private _container = switch (GVAR(currentLeftPanel)) do {
                 GVAR(center) addItemToBackpack _item;
             };
         } else {
-            for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
-                GVAR(center) removeItemFromBackpack _item;
+            // Backpacks need special command to be removed
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) select IDX_VIRT_BACKPACK)}) then {
+                [backpackContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
+            } else {
+                for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
+                    GVAR(center) removeItemFromBackpack _item;
+                };
             };
         };
 
-        _containerItems = backpackItems GVAR(center);
+        // Get all items from container (excluding container itself)
+        _containerItems = [GVAR(center), 0, 0, 0, 3, false] call EFUNC(common,uniqueUnitItems);
 
         // Update currentItems
         GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_BACKPACK) param [1, []]];
@@ -98,7 +117,7 @@ private _container = switch (GVAR(currentLeftPanel)) do {
 };
 
 // Find out how many items of that type there are and update the number displayed
-_ctrlList lnbSetText [[_lnbCurSel, 2], str ({_x == _item} count _containerItems)];
+_ctrlList lnbSetText [[_lnbCurSel, 2], str (_containerItems getOrDefault [_item, 0])];
 
 [QGVAR(cargoChanged), [_display, _item, _addOrRemove, GVAR(shiftState)]] call CBA_fnc_localEvent;
 

@@ -36,6 +36,8 @@ private _ctrl = controlNull;
     IDC_rightTabContentListnBox,
     IDC_sortLeftTab,
     IDC_sortRightTab,
+    IDC_sortLeftTabDirection,
+    IDC_sortRightTabDirection,
     IDC_leftSearchbarButton,
     IDC_rightSearchbarButton,
     IDC_leftSearchbar,

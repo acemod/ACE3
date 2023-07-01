@@ -18,7 +18,7 @@ private _configItems = EMPTY_VIRTUAL_ARSENAL;
 // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
 // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
 private _filterFunction = toString {
-    isClass _x && {(if (isNumber (_x >> "scopeArsenal")) then {getNumber (_x >> "scopeArsenal")} else {getNumber (_x >> "scope")}) == 2} && {getNumber (_x >> QGVAR(hide)) != 1}
+    isClass _x && {if (isNumber (_x >> "scopeArsenal")) then {getNumber (_x >> "scopeArsenal") == 2 && {getNumber (_x >> "scope") > 0}} else {getNumber (_x >> "scope") == 2}} && {getNumber (_x >> QGVAR(hide)) != 1}
 };
 
 private _cfgWeapons = configFile >> "CfgWeapons";
@@ -47,7 +47,7 @@ private _isMiscItem = false;
             {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}
         ): {
             // Convert type to array index
-            ((_configItems select IDX_VIRT_ATTACHMENTS) select ([TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD] find _itemInfoType)) pushBackUnique _className;
+            ((_configItems select IDX_VIRT_ATTACHMENTS) select ([TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD] find _itemInfoType)) pushBackUnique (_className call FUNC(baseWeapon));
         };
         // Headgear
         case (_itemInfoType == TYPE_HEADGEAR): {
@@ -80,7 +80,7 @@ private _isMiscItem = false;
         case (_simulationType == "ItemCompass"): {
             (_configItems select IDX_VIRT_COMPASS) pushBackUnique _className;
         };
-        // Radio//
+        // Radio
         case (_simulationType == "ItemRadio"): {
             (_configItems select IDX_VIRT_RADIO) pushBackUnique _className;
         };
@@ -112,7 +112,7 @@ private _isMiscItem = false;
                 };
             };
         };
-        // Misc items
+        // Misc. items
         case (
             _hasItemInfo &&
             {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD] &&
@@ -147,11 +147,18 @@ _putList = _putList apply {_x call EFUNC(common,getConfigName)};
 _grenadeList = _grenadeList - [""];
 _putList = _putList - [""];
 
+private _magazineMiscItems = [];
+
 // Get all other grenades, explosives (and similar) and magazines
 {
     _className = configName _x;
 
     switch (true) do {
+        // "Misc. items" magazines (e.g. spare barrels, intel, photos)
+        case (getNumber (_x >> "ACE_isUnique") == 1): {
+            (_configItems select IDX_VIRT_MISC_ITEMS) pushBackUnique _className;
+            _magazineMiscItems pushBackUnique _className;
+        };
         // Grenades
         case (_className in _grenadeList): {
             (_configItems select IDX_VIRT_GRENADES) pushBackUnique _className;
@@ -212,6 +219,21 @@ private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x &
 // Get all insignia
 private _insigniaCache = "true" configClasses (configFile >> "CfgUnitInsignia");
 
+// Get all disposable launchers
+private _launchersConfig = configProperties [configFile >> "CBA_DisposableLaunchers"];
+private _launchers = [];
+
+// Get the loaded launchers (used launchers aren't necessary)
+{
+    _launchers pushBackUnique ((getArray _x) param [0, ""]);
+} forEach _launchersConfig;
+
+// Convert list to config case
+_launchers = _launchers apply {_x call EFUNC(common,getConfigName)};
+
+// Remove invalid/non-existent entries
+_launchers = _launchers - [""];
+
 // This contains config case entries only
 uiNamespace setVariable [QGVAR(configItems), _configItems];
 uiNamespace setVariable [QGVAR(configItemsFlat), flatten _configItems];
@@ -220,3 +242,5 @@ uiNamespace setVariable [QGVAR(voiceCache), _voiceCache];
 uiNamespace setVariable [QGVAR(insigniaCache), _insigniaCache];
 uiNamespace setVariable [QGVAR(grenadeCache), _grenadeList];
 uiNamespace setVariable [QGVAR(putCache), _putList];
+uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), _launchers];
+uiNamespace setVariable [QGVAR(magazineMiscItems), _magazineMiscItems];

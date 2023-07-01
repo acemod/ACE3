@@ -19,26 +19,35 @@ params ["_display"];
 private _container = switch (GVAR(currentLeftPanel)) do {
     // Uniform
     case IDC_buttonUniform: {
-        {
-            GVAR(center) removeItemFromUniform _x;
-        } forEach (vestItems GVAR(center));
+        private _container = uniformContainer GVAR(center);
+
+        // Remove everything (backpacks need special command for this)
+        clearWeaponCargoGlobal _container;
+        clearMagazineCargoGlobal _container;
+        clearItemCargoGlobal _container;
+        clearBackpackCargoGlobal _container;
 
         GVAR(currentItems) set [IDX_CURR_UNIFORM_ITEMS, []];
 
-        uniformContainer GVAR(center)
+        _container
     };
     // Vest
     case IDC_buttonVest: {
-        {
-            GVAR(center) removeItemFromVest _x;
-        } forEach (vestItems GVAR(center));
+        private _container = vestContainer GVAR(center);
+
+        // Remove everything (backpacks need special command for this)
+        clearWeaponCargoGlobal _container;
+        clearMagazineCargoGlobal _container;
+        clearItemCargoGlobal _container;
+        clearBackpackCargoGlobal _container;
 
         GVAR(currentItems) set [IDX_CURR_VEST_ITEMS, []];
 
-        vestContainer GVAR(center)
+        _container
     };
     // Backpack
     case IDC_buttonBackpack: {
+        // Remove everything
         clearAllItemsFromBackpack GVAR(center);
 
         GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, []];

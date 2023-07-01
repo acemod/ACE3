@@ -87,7 +87,7 @@ Example:
 1  | Items | Array of strings or boolean | Required
 2  | Add globally | Boolean | Optional (default: `false`)
 
-Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup).
+Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup). Faces, voices and insignia can't be added via this function.
 
 Examples:
 - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
@@ -103,7 +103,7 @@ Examples:
 1  | Items | Array of strings or boolean | Required
 2  | Remove globally | Boolean | Optional (default: `false`)
 
-Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal.
+Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal. Faces, voices and insignia can't be removed via this function.
 
 Examples:
 - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_removeVirtualItems`
@@ -135,9 +135,11 @@ Examples:
 ACE Arsenal has 2 new config entries for items:
 
 - `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal or `-1` (forced show), for magazines.
-- `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout. Supports configs in "CfgWeapons", "CfgMagazines" and "CfgVehicles". Item that replaces must be of the same config type as the original item.
+- `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout and displaying it in the arsenal. Supports configs in "CfgWeapons" (e.g. Maps, Compasses, Watches, GPS / UAV Terminals, Radios, NVGs, Uniforms, Vests - however no Primary, Secondary, Handgun or Launcher weapons are supported), "CfgMagazines" (any magazine) and "CfgVehicles" (e.g. Backpacks). Item that replaces must be of the same config type as the original item.
 
 Both of them are optional.
+
+- `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in "CfgWeapons".
 
 ## 4. Default loadouts
 

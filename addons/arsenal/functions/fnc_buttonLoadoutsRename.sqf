@@ -54,7 +54,7 @@ _contentPanelCtrl setVariable [_loadoutName + _currentLoadoutsTab, nil];
 // Update the current row's loadout name
 _contentPanelCtrl lnbSetText [[_curSelRow, 1], _editBoxContent];
 
-// Sort alphabetically
+// Sort loadouts alphabetically
 _contentPanelCtrl lnbSort [1, false];
 
 // Select the newly renamed loadout
