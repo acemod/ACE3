@@ -17,7 +17,7 @@
  */
 
 params ["_patient", "_bandage", "_bodyPart", ["_bandageRemaining", 1], ["_foundWounds", createHashMap]];
-TRACE_1("findMostEffectiveWounds", count _foundWounds);
+TRACE_1("findMostEffectiveWounds",count _foundWounds);
 
 // Get the default effectiveness for the used bandage
 private _config = configFile >> QUOTE(ADDON) >> "Bandaging";
