@@ -106,6 +106,14 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(timeCoefficientFullRepair), "SLIDER",
+    [LSTRING(timeCoefficientFullRepair_name), LSTRING(timeCoefficientFullRepair_description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [0,1,1,2],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(addSpareParts), "CHECKBOX",
     [LSTRING(addSpareParts_name), LSTRING(addSpareParts_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],

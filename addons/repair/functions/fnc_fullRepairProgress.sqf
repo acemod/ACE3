@@ -27,7 +27,7 @@ _args params ["_engineer", "_vehicle", "", "_action"];
 if !((alive _vehicle) && {(abs speed _vehicle) < 1}) exitWith {false}; // make sure vehicle doesn't drive off
 
 // Not enough time has elapsed to repair a hitpoint
-if (_totalTime - _elapsedTime > ([_engineer, _vehicle] call FUNC(getFullRepairTime)) - GVAR(miscRepairTime)) exitWith {true};
+if (_totalTime - _elapsedTime > ([_engineer, _vehicle] call FUNC(getFullRepairTime)) - (GVAR(miscRepairTime) * GVAR(timeCoefficientFullRepair))) exitWith {true};
 
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 _allHitPointsDamage params ["_hitPoints", "", "_damageValues"];

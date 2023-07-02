@@ -39,4 +39,4 @@ if (_doExtraRepair) then {
     _repairsNeeded = _repairsNeeded + 1;
 };
 
-_repairsNeeded * GVAR(miscRepairTime) // return
+_repairsNeeded * GVAR(miscRepairTime) * GVAR(timeCoefficientFullRepair) // return
