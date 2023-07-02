@@ -20,7 +20,7 @@ params ["_unit"];
     params ["_unit"];
     private _nearSupplies = (_unit nearSupplies 5) select {
         isNull (group _x) ||
-        {!([_x] call EFUNC(common,isPlayer)) && {[side group _player, side group _x] call BIS_fnc_sideIsFriendly}}
+        {!([_x] call EFUNC(common,isPlayer)) && {[side group _unit, side group _x] call BIS_fnc_sideIsFriendly}}
     };
 
     _nearSupplies pushBack _unit;
