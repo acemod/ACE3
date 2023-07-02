@@ -25,6 +25,7 @@ class ACE_Extensions {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgActions.hpp"
 
 
 // Common UI Stuff:
@@ -41,4 +42,3 @@ class ctrlButton;
 
 #include "RscTitles.hpp"
 #include "RscRangeTable.hpp"
-

@@ -17,12 +17,6 @@
 
 (_this select 0) params ["_vehicle", "_turret", "_fireModes", "_useAltElevation", "_turretAnimBody", "_invalidGunnerMem"];
 
-if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
-    // Still Don't like this solution, but it works
-    closeDialog 0;
-    [localize LSTRING(disableArtilleryComputer_displayName)] call EFUNC(common,displayTextStructured);
-};
-
 // Restart display if null (not just at start, this will happen periodicly)
 if (isNull (uiNamespace getVariable [QGVAR(display), displayNull])) then {
     TRACE_1("creating display",_this);

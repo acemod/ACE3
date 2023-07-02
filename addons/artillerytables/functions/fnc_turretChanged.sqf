@@ -21,6 +21,9 @@ private _vehicle = vehicle _player;
 private _typeOf = typeOf _vehicle;
 private _vehicleCfg = configOf _vehicle;
 
+// used to control artillery computer user action
+GVAR(canUseArtilleryComputer) = false;
+
 // config "ace_artillerytables_showGunLaying" [0 disabled, 1 enabled, 2 enabled w/ alt elevationMode] falls back to artilleryScanner
 private _showGunLaying = if (isNumber (_vehicleCfg >> QGVAR(showGunLaying))) then {
     getNumber (_vehicleCfg >> QGVAR(showGunLaying))
@@ -58,6 +61,11 @@ if ((alive _player) && {_showGunLaying > 0} && {_player == gunner _vehicle}) the
     _fireModes sort true;
     _fireModes = _fireModes apply {_x select 1};
 
+    if (_vehicle isKindOf "StaticMortar") then {
+        GVAR(canUseArtilleryComputer) = GETMVAR(EGVAR(mk6mortar,allowComputerRangefinder),false);
+    } else {
+        GVAR(canUseArtilleryComputer) = !(GVAR(disableArtilleryComputer));
+    };
     GVAR(pfID) = [LINKFUNC(turretPFEH), 0, [_vehicle, _turret, _fireModes, _useAltElevation, _turretAnimBody, _invalidGunnerMem]] call CBA_fnc_addPerFrameHandler;
     TRACE_4("added pfEH",GVAR(pfID),_useAltElevation,_turretAnimBody,_invalidGunnerMem);
 
