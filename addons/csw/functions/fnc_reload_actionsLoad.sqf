@@ -32,7 +32,8 @@ private _condition = {
     params ["_target", "_player", "_params"];
     _params params ["_carryMag", "_turretPath", "", "_magSource"];
 
-    ([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0
+    !(_target getVariable [QGVAR(disabled), false]) &&
+    {([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0}
 };
 
 private _cfgMagazines = configFile >> "CfgMagazines"; // micro-optimization

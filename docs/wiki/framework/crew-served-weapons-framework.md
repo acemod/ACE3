@@ -102,12 +102,12 @@ class ACE_CSW_Groups {
     class prefix_100rnd_hmg_csw_mag { // Same name as the carryable magazine
         prefix_100rnd_hmg_mag = 1;    // Vehicle magazine that will be loaded when loading this magazine
     };
-    
+
     // Using an existing CSW magazine
     class ace_csw_100Rnd_127x99_mag {
         banana_dummy_ammo = 1;
     };
-    
+
     /*
         Carryable magazines already defined by ACE:
         - ace_csw_100Rnd_127x99_mag
@@ -134,12 +134,12 @@ class CfgVehicles {
     class StaticMGWeapon;
     class prefix_hmg: StaticMGWeapon {
         class ACE_CSW {
-            enabled = 1; // Enables ACE CSW for this weapon              
+            enabled = 1; // Enables ACE CSW for this weapon
             proxyWeapon = "prefix_hmg_weapon_proxy"; // The proxy weapon created above
             magazineLocation = "_target selectionPosition 'magazine'"; // Ammo handling interaction point location
             disassembleWeapon = "prefix_hmg_carry";  // Carryable weapon created above
             disassembleTurret = "ace_csw_m3Tripod";  // Which static tripod will appear when weapon is disassembled
-            ammoLoadTime = 7;   // How long it takes in seconds to load ammo into the weapon           
+            ammoLoadTime = 7;   // How long it takes in seconds to load ammo into the weapon
             ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
             desiredAmmo = 100;  // When the weapon is reloaded it will try and reload to this ammo capacity
             // Optional callback function for when the CSW gets disassembled, called with [tripod, staticWeapon]
@@ -147,6 +147,17 @@ class CfgVehicles {
         };
     };
 };
+```
+
+### 1.5 Custom Ammo Handling
+
+ACE's ammo handling (including AI reloading, and initial unloading and conversion of the weapon's magazines) can be blocked by setting the `ace_csw_disabled` variable on init.
+This will also block reloading and unloading the weapon manually through ACE.
+This variable needs to be set where the weapon is local.
+
+```sqf
+myCustomStaticWeapon = createVehicle ["B_Mortar_01_F", [0, 0, 0]];
+myCustomStaticWeapon setVariable ["ace_csw_disabled", true, true]; // blocks ammo handling
 ```
 
 ## 2. Making a new Tripod
