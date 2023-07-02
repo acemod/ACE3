@@ -55,7 +55,7 @@
     QGVAR(repairDamageThreshold), "SLIDER",
     [LSTRING(repairDamageThreshold_name), LSTRING(repairDamageThreshold_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [0,1,0.6,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    [0, 1, 0.6, 1, true],
     true, // isGlobal
     {[QGVAR(repairDamageThreshold), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
@@ -64,7 +64,7 @@
     QGVAR(repairDamageThreshold_engineer), "SLIDER",
     [LSTRING(repairDamageThreshold_Engineer_name), LSTRING(repairDamageThreshold_Engineer_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [0,1,0.4,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    [0, 1, 0.4, 1, true],
     true, // isGlobal
     {[QGVAR(repairDamageThreshold_engineer), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
