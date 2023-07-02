@@ -1285,19 +1285,7 @@
             <Chinese>維修門檻</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
-            <English>What is the maximum damage that can be repaired with a toolkit?</English>
-            <German>Der maximale Schaden, der von einem Reperatursatz behoben werden kann?</German>
-            <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przy pomocy narzędzi?</Polish>
-            <Portuguese>Qual é o dano máximo que pode ser reparado com um kit de ferramentas?</Portuguese>
-            <Russian>Какой максимальный урон можно починить с помощью ремкомплекта?</Russian>
-            <Spanish>¿Cuál es el daño máximo que puede ser reparado con una caja de herramientas?</Spanish>
-            <Czech>Jaké maximální poškození může být opraveno pomocí opravárenské sady?</Czech>
-            <Italian>Qual'è il danno massimo che può essere riparato con il Toolkit?</Italian>
-            <French>Définit la quantité maximale de dégâts pouvant être réparés avec une trousse à outils.</French>
-            <Japanese>ツールキットで修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
-            <Korean>어느정도의 피해까지 툴킷으로 수리가 가능합니까?</Korean>
-            <Chinesesimp>工具包可以修复的最大损坏值？</Chinesesimp>
-            <Chinese>工具包可以修復的最大損壞值?</Chinese>
+            <English>Maximum damage to which a part can be repaired with a toolkit.\n0% means all damage can be repaired.</English>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
             <English>Repair Threshold (Engineer)</English>
@@ -1315,19 +1303,7 @@
             <Chinese>維修門檻 (工兵)</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
-            <English>What is the maximum damage that can be repaired by an engineer?</English>
-            <German>Der maximale Schaden, der von einem Pionier behoben werden kann?</German>
-            <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przez mechanika?</Polish>
-            <Portuguese>Qual é o dano máximo que pode ser reparado com um engenheiro?</Portuguese>
-            <Russian>Какой максимальный урон может починить инженер?</Russian>
-            <Spanish>¿Cuál es el daño máximo que puede ser reparado por un ingeniero?</Spanish>
-            <Czech>Jaké maximální poškození může být opraveno pomoci inženýra?</Czech>
-            <Italian>Qual'è il danno massimo che può essere riparato da un Geniere?</Italian>
-            <French>Définit la quantité maximale de dégâts qu'un ingénieur peut réparer.</French>
-            <Japanese>工兵が修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
-            <Korean>정비공은 어느정도의 피해까지 수리할 수 있습니까?</Korean>
-            <Chinesesimp>工兵可以修复的最大损坏值？</Chinesesimp>
-            <Chinese>工兵可以修復的最大損壞值?</Chinese>
+            <English>Maximum damage to which a part can be repaired by an engineer above the minimum level required for the repair.\n0% means all damage can be repaired.</English>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_name">
             <English>Remove toolkit on use</English>
