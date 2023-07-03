@@ -111,7 +111,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
     QGVAR(timeCoefficientFullRepair), "SLIDER",
     [LSTRING(timeCoefficientFullRepair_name), LSTRING(timeCoefficientFullRepair_description)],
     _category,
-    [0,1,1,2],
+    [0,3,1.5,2],
     true
 ] call CBA_fnc_addSetting;
 
