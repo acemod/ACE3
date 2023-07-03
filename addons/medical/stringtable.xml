@@ -65,7 +65,20 @@
             <Korean>에피네프린 사용 시 추가 회복 확률</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
-            <English>When an unconscious patient has Epinephrine in their system, the time for spontaneous wake up checks is divided by this value.</English>
+            <English>When an unconscious patient has Epinephrine in their system, the time between spontaneous wake up checks is divided by this value.</English>
+            <Japanese>患者がアドレナリンを投与されると自発的に覚醒する確率を上昇させます。</Japanese>
+            <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
+            <Chinesesimp>增加因病患的循环系统里面的肾上腺素自我苏醒的机率。</Chinesesimp>
+            <French>Augmente la fréquence des tests de réveil lorsque le patient a de l'épinéphrine dans son système sanguin.\n(L'épinéphrine n'accélère pas la reprise de conscience si la valeur est définie sur 1.)</French>
+            <Italian>Aumenta la frequenza dei controlli al risveglio spontaneo quando il paziente ha l'Epinefrina nel suo corpo</Italian>
+            <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
+            <Polish>Zwiększa częstotliwość spontanicznych wybudzeń, gdy pacjent ma epinefrynę w swoim organizmie. </Polish>
+            <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
+            <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
+            <German>Erhöht wie oft Aufwachprüfungen passieren, wenn ein Patient Epinephrin im Blutkreislauf hat.</German>
+            <Russian>Увеличивает частоту проверок на спонтанное пробуждение, когда пациент под действием адреналина.</Russian>
+            <Turkish>Hastanın sisteminde Epinefrin olduğunda rasgele uyanma kontrollerinin ne sıklıkla gerçekleştiğini artırır.</Turkish>
+            <Korean>에피네프린 투여 후 환자가 일어날 확률을 얼마나 추가할 지 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
