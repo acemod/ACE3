@@ -110,7 +110,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
 [
     QGVAR(timeCoefficientFullRepair), "SLIDER",
     [LSTRING(timeCoefficientFullRepair_name), LSTRING(timeCoefficientFullRepair_description)],
-    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    _category,
     [0,1,1,2],
     true
 ] call CBA_fnc_addSetting;
@@ -164,7 +164,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
 [
     QGVAR(miscRepairTime), "SLIDER",
     [LSTRING(miscRepairTime_name), LSTRING(miscRepairTime_description)],
-    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    _category,
     [0,60,15,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true
 ] call CBA_fnc_addSetting;
@@ -172,7 +172,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
 [
     QGVAR(wheelChangeTime), "SLIDER",
     [LSTRING(wheelChangeTime_name), LSTRING(wheelChangeTime_description)],
-    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    _category,
     [0,60,10,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true
 ] call CBA_fnc_addSetting;
