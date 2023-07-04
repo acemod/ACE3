@@ -88,7 +88,7 @@
 #define CUT_TIME_ENGINEER 7.5
 
 #define HAS_WIRECUTTER(unit) (\
-    count (unit call EFUNC(common,uniqueItems)) arrayIntersect GVAR(possibleWirecutters) != -1 \
+    ((unit call EFUNC(common,uniqueItems)) arrayIntersect GVAR(possibleWirecutters)) isNotEqualTo []\
     || {getNumber ((configOf (backpackContainer unit)) >> QGVAR(hasWirecutter)) == 1} \
     || {getNumber (configFile >> "CfgWeapons" >> (vest unit) >> QGVAR(hasWirecutter)) == 1} \
 )
