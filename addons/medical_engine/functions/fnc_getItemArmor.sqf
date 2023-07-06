@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Pterolatypus, Salluci
+ * Author: Pterolatypus, LinkIsGrim
  * Returns the regular and scaled armor values the given item provides to a particular hitpoint, either from a cache or by reading the item config.
  *
  * Arguments:
