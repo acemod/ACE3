@@ -1285,7 +1285,7 @@
             <Chinese>維修門檻</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
-            <English>What is the maximum damage that can be repaired with a toolkit?</English>
+            <English>Maximum damage to which a part can be repaired with a toolkit.\n0% means all damage can be repaired.</English>
             <German>Der maximale Schaden, der von einem Reperatursatz behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przy pomocy narzędzi?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um kit de ferramentas?</Portuguese>
@@ -1315,7 +1315,7 @@
             <Chinese>維修門檻 (工兵)</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
-            <English>What is the maximum damage that can be repaired by an engineer?</English>
+            <English>Maximum damage to which a part can be repaired by an engineer above the minimum level required for the repair.\n0% means all damage can be repaired.</English>
             <German>Der maximale Schaden, der von einem Pionier behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przez mechanika?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um engenheiro?</Portuguese>
