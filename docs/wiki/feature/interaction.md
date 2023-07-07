@@ -1,6 +1,8 @@
 ---
 layout: wiki
 title: Interaction
+component: interaction
+core_component: true
 description: Provides basic interaction options.
 group: feature
 category: interaction
@@ -43,9 +45,3 @@ Some of the zeus actions are also available (while in zeus) in the interaction m
  - Open the interaction menu.
  - Select `Waypoints`.
  - From here you can modify the speed / formation / behavior of the units / groups that are moving to that waypoint.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="interaction" %}
-
-*Note: The Interaction module is required by most of the other modules. Do NOT remove it!*

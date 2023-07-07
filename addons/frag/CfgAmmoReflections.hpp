@@ -1,9 +1,9 @@
 #define ACE_EXPLOSION_REFLECTION(range, hit)\
-class ace_explosion_reflection_##range##_##hit : ace_explosion_reflection_base {\
+class ace_explosion_reflection_##range##_##hit: ace_explosion_reflection_base {\
     indirectHitRange = range;\
     indirectHit = hit;\
-    dangerRadiusHit = range*3;\
-    suppressionRadiusHit = range*2;\
+    dangerRadiusHit = QUOTE(range*3);\
+    suppressionRadiusHit = QUOTE(range*2);\
 }
 
 #define ACE_EXPLOSION_RANGE(range)\
@@ -58,7 +58,7 @@ class ace_explosion_reflection_##range##_##hit : ace_explosion_reflection_base {
     ACE_EXPLOSION_REFLECTION(range,490);\
     ACE_EXPLOSION_REFLECTION(range,500)
 
-class ace_explosion_reflection_base : Sh_120mm_HE {
+class ace_explosion_reflection_base: Sh_120mm_HE {
     CraterWaterEffects = "";
     CraterEffects = "";
     effectsMissile = "";

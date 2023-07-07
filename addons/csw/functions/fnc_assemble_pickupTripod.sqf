@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM
+ * Author:Dani (TCVM)
  * Picks up the tripod and adds it to the player launcher slot
  *
  * Arguments:

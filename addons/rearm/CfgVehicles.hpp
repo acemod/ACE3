@@ -143,20 +143,24 @@ class CfgVehicles {
     };
 
     class ReammoBox_F;
-    class NATO_Box_Base: ReammoBox_F{};
+    class NATO_Box_Base: ReammoBox_F {};
     class Box_NATO_AmmoVeh_F: NATO_Box_Base {
         transportAmmo = 0;
         GVAR(defaultSupply) = 1200;
     };
-    class EAST_Box_Base: ReammoBox_F{};
+    class EAST_Box_Base: ReammoBox_F {};
     class Box_East_AmmoVeh_F: EAST_Box_Base {
         transportAmmo = 0;
         GVAR(defaultSupply) = 1200;
     };
-    class IND_Box_Base: ReammoBox_F{};
+    class IND_Box_Base: ReammoBox_F {};
     class Box_IND_AmmoVeh_F: IND_Box_Base {
         transportAmmo = 0;
         GVAR(defaultSupply) = 1200;
+    };
+    class Box_IND_AmmoOrd_F;
+    class Box_IDAP_AmmoOrd_F: Box_IND_AmmoOrd_F {
+        transportAmmo = 0; // not sure why this one has 240
     };
 
     // Dummy Vehicles

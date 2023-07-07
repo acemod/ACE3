@@ -38,13 +38,13 @@ private _onAttachText = format [localize LSTRING(Item_Attached), _onAttachText];
 
 if (_unit == _attachToVehicle) then {  //Self Attachment
     private _attachedItem = _itemVehClass createVehicle [0,0,0];
-    _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
+    _attachedItem attachTo [_unit, [0.07, -0.06, 0.085], "leftshoulder", true];
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
         [_onAttachText, 2] call EFUNC(common,displayTextStructured);
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
-    [QGVAR(attached), [_attachedItem, _itemClassname]] call CBA_fnc_localEvent;
+    [QGVAR(attached), [_attachedItem, _itemClassname, _silentScripted]] call CBA_fnc_localEvent;
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 

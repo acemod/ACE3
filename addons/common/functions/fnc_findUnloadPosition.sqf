@@ -43,9 +43,13 @@ if (_cargo isKindOf "CAManBase") then {
     _radiusOfItem = 1.1;
 } else {
     //`sizeOf` is unreliable, and does not work with object types that don't exist on map, so estimate size based on cargo size
-    private _typeOfCargo = if (_cargo isEqualType "") then {_cargo} else {typeOf _cargo};
-    private _itemSize = if (isNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size)) && {getNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size)) != -1}) then {
-        getNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size));
+    private _configOfCargo = if (_cargo isEqualType objNull) then {
+        configOf _cargo
+    } else {
+        configFile >> "CfgVehicles" >> _cargo
+    };
+    private _itemSize = if (isNumber (_configOfCargo >> QEGVAR(cargo,size)) && {getNumber (_configOfCargo >> QEGVAR(cargo,size)) != -1}) then {
+        getNumber (_configOfCargo >> QEGVAR(cargo,size));
     } else {
         if (["ace_cargo"] call FUNC(isModLoaded)) then {
             [_cargo] call EFUNC(cargo,getSizeItem);

@@ -15,7 +15,7 @@
             <Japanese>引きずる</Japanese>
             <Korean>끌기</Korean>
             <Chinese>拖拉</Chinese>
-            <Chinesesimp>拖拉</Chinesesimp>
+            <Chinesesimp>拖动</Chinesesimp>
             <Turkish>Sürükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
@@ -37,7 +37,7 @@
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
-            <Russian>Тащить/Отпустить Объект</Russian>
+            <Russian>Тащить/отпустить объект</Russian>
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
             <Polish>Ciągnij/Puść Obiekt</Polish>
             <Czech>Táhnout/Položit Objekt</Czech>
@@ -49,17 +49,20 @@
             <Japanese>オブジェクトを引きずる/離す</Japanese>
             <Korean>물건 끌기/놓기</Korean>
             <Chinese>拖拉/放開物品</Chinese>
-            <Chinesesimp>拖拉/放开物品</Chinesesimp>
+            <Chinesesimp>拖动/放开物品</Chinesesimp>
             <Turkish>Objeyi Sürükle/Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_CarryKeybind">
             <English>Carry/Release Object</English>
             <French>Porter/Lâcher un objet</French>
-            <Russian>Нести/Отпустить Объект</Russian>
+            <Russian>Нести/отпустить объект</Russian>
             <Polish>Nieś/Puść objekt</Polish>
             <Japanese>オブジェクトを運ぶ/離す</Japanese>
             <Turkish>Objeyi Taşı/Bırak</Turkish>
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
+            <German>Objekt tragen/loslassen</German>
+            <Chinesesimp>背负/释放物体</Chinesesimp>
+            <Korean>물건 업기/놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -101,10 +104,12 @@
             <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
             <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
             <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
-            <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
+            <Russian>Поднять/опустить | (Ctrl + Скролл) Крутить</Russian>
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
             <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
+            <Chinesesimp>抬起/放低 |（Ctrl + 鼠标滚轮）旋转</Chinesesimp>
+            <Korean>높이기/내리기 | (컨트롤 + 스크롤) 회전</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
             <English>ACE Dragging</English>
@@ -113,6 +118,10 @@
             <Hungarian>ACE Húzás</Hungarian>
             <Russian>ACE Перетаскивание</Russian>
             <Spanish>ACE Arrastrar</Spanish>
+            <Polish>ACE Przeciąganie</Polish>
+            <Japanese>ACE ドラッグ</Japanese>
+            <Chinesesimp>ACE 拖曳</Chinesesimp>
+            <Korean>ACE 끌기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
@@ -121,6 +130,10 @@
             <Hungarian>Húzás közbeni tüzelés engedélyezése</Hungarian>
             <Russian>Стрельба во время перетаскивания</Russian>
             <Spanish>Permitir disparar mientras se arrastra</Spanish>
+            <Polish>Pozwól na strzelanie podczas przeciągania</Polish>
+            <Japanese>搬送中に射撃許可</Japanese>
+            <Chinesesimp>允许在拖动时开火</Chinesesimp>
+            <Korean>사격 중 끌기 가능하게 하기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
@@ -129,6 +142,10 @@
             <Hungarian>Húzás közben a játékos elsütheti a fegyverét.</Hungarian>
             <Russian>Позволяет игроку стрелять во время перетаскивания</Russian>
             <Spanish>Permite al jugador disparar mientras está arrastrando.</Spanish>
+            <Polish>Pozwala graczom strzelać z broni podczas przeciągania obiektów.</Polish>
+            <Japanese>プレイヤーが引きずっている最中でも射撃できるようにします。</Japanese>
+            <Chinesesimp>允许玩家在拖动时开火。</Chinesesimp>
+            <Korean>플레이어가 무기를 끄는 동안에 무기를 사용할 수 있게합니다.</Korean>
         </Key>
     </Package>
 </Project>

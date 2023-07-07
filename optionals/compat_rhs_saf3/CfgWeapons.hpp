@@ -71,4 +71,13 @@ class CfgWeapons {
     class rhssaf_uniform_heli_pilot: Uniform_Base {
         ACE_GForceCoef = 0.8;
     };
+
+    // Launchers
+    class Launcher_Base_F;
+    class rhs_weap_m80: Launcher_Base_F {
+        EGVAR(overpressure,range) = 8;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.7;
+        EGVAR(overpressure,offset) = 1.15;
+    };
 };

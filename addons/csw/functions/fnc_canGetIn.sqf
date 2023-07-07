@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM
+ * Author:Dani (TCVM)
  * Checks if the player can get in the weapon
  *
  * Arguments:

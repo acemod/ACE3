@@ -7,7 +7,7 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(cachedTags) = [];
-GVAR(cachedRequiredItems) = [];
+GVAR(itemActions) = createHashMap;
 
 #include "initSettings.sqf"
 
