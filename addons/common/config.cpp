@@ -58,6 +58,8 @@ class ACE_Rsc_Control_Base {
     h = 0;
 };
 
+class ctrlMapEmpty;
+
 #include "ACE_Settings.hpp"
 #include "define.hpp"
 #include "ProgressScreen.hpp"
@@ -72,4 +74,5 @@ class ACE_Extensions {};
 class ACE_Tests {
     vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
     mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
+    cfgPatches = QPATHTOF(dev\test_cfgPatches.sqf);
 };

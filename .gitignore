@@ -7,6 +7,7 @@ extensions/vcproj64/*
 .vscode/*
 hemtt
 hemtt.exe
+.hemttout
 tools/temp
 *.cache
 *.pbo
@@ -17,3 +18,5 @@ texHeaders.bin
 Thumbs.db
 CHANGELOG.md
 sqfvm.exe
+ArmaScriptCompiler.exe
+*.sqfc

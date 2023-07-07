@@ -6,6 +6,11 @@
             <Spanish>Escala: %1</Spanish>
             <French>Échelle : %1</French>
             <Russian>Масштаб: %1</Russian>
+            <Japanese>スケール: %1</Japanese>
+            <Polish>Skala: %1</Polish>
+            <German>Skalierung: %1</German>
+            <Chinesesimp>规模：%1°</Chinesesimp>
+            <Korean>크기: %1</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
@@ -20,7 +25,7 @@
             <Portuguese>Direção %1</Portuguese>
             <Japanese>方位: %1°</Japanese>
             <Korean>방위: %1°</Korean>
-            <Chinesesimp>方位: %1°</Chinesesimp>
+            <Chinesesimp>方位：%1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>
             <Turkish>Yön: %1°</Turkish>
         </Key>
@@ -28,6 +33,12 @@
             <English>Click RMB to reset</English>
             <Russian>Нажми ПКМ чтобы сбросить</Russian>
             <French>Clic droit pour réinitialiser</French>
+            <Japanese>右クリックでリセット</Japanese>
+            <Polish>Naciśnij PPM żeby zresetować</Polish>
+            <German>Rechte Maustaste zum Zurücksetzen</German>
+            <Chinesesimp>点击鼠标右键重置</Chinesesimp>
+            <Korean>오른쪽 클릭으로 재설정</Korean>
+            <Spanish>Click botón derecho para restaurar</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
@@ -35,8 +46,8 @@
             <Japanese>マーカー</Japanese>
             <Italian>Marcatori</Italian>
             <Chinese>標誌</Chinese>
-            <Chinesesimp>标志</Chinesesimp>
-            <Korean>맵마커</Korean>
+            <Chinesesimp>标识</Chinesesimp>
+            <Korean>지도 마커</Korean>
             <Polish>Znaczniki</Polish>
             <Russian>Маркеры</Russian>
             <Portuguese>Marcadores</Portuguese>
@@ -51,7 +62,7 @@
             <Japanese>次ユーザーにマーカー移動を許可</Japanese>
             <Korean>마커 이동 허가</Korean>
             <Chinese>誰可以移動標誌</Chinese>
-            <Chinesesimp>谁可以移动标志</Chinesesimp>
+            <Chinesesimp>谁可以移动标识</Chinesesimp>
             <Italian>Permetti di spostare i marcatori a:</Italian>
             <Polish>Zezwól na poruszanie znaczników dla</Polish>
             <Russian>Разрешить перемещение маркеров для</Russian>
@@ -64,9 +75,9 @@
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
             <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
             <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をできるか制限できます。</Japanese>
-            <Korean>Alt 키를 누른 상태에서 마커를 움직일 수있는 플레이어를 제한합니다.</Korean>
+            <Korean>Alt 키를 누른 상태에서 마커를 움직일 수 있는 플레이어를 제한합니다.</Korean>
             <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
-            <Chinesesimp>设定谁可以透过按住Alt键来移动标志。</Chinesesimp>
+            <Chinesesimp>设定谁可以透过按住 Alt 键来移动标识。</Chinesesimp>
             <Italian>Limita quali giocatori possono spostare i marcatori mentre premono il tasto Alt.</Italian>
             <Polish>Ogranicz którzy gracze mogą poruszać znacznikami podczas trzymania przycisku Alt.</Polish>
             <Russian>Устанавливает ограничение на перемещения маркеров игроками при помощи клавиши Alt</Russian>
@@ -164,18 +175,24 @@
             <Russian>Создателя</Russian>
             <Portuguese>Criador</Portuguese>
             <Chinese>放置者</Chinese>
+            <Chinesesimp>放置者</Chinesesimp>
             <French>Créateur</French>
             <Italian>Creatore</Italian>
             <Czech>Tvůrce</Czech>
             <Turkish>Yaratıcı</Turkish>
             <Spanish>Creador</Spanish>
+            <Korean>제작자</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabled">
             <English>Allow Timestamps</English>
-            <Russian>Включить отображение времени на метках</Russian>
+            <Russian>Вкл. отображение времени на метках</Russian>
             <French>Permettre l'horodatage</French>
             <Japanese>タイムスタンプ許可</Japanese>
             <Spanish>Permitir marcas de tiempo</Spanish>
+            <Polish>Zezwól na znaczniki czasu</Polish>
+            <German>Erlaube Zeitstempel</German>
+            <Chinesesimp>允许时间戳</Chinesesimp>
+            <Korean>시간 표기 허용</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
             <English>Whether to allow timestamps to be automatically applied to markers</English>
@@ -183,6 +200,10 @@
             <French>Active une interface permettant d'apposer un horodatage sur les marqueurs.</French>
             <Japanese>マーカーへ自動的にタイムスタンプを付与するかどうかを設定できます。</Japanese>
             <Spanish>Permitir que las marcas de tiempo sean automáticamente aplicadas a los marcadores</Spanish>
+            <Polish>Zezwól na automatyczne stosowanie znaczników czasu do markerów</Polish>
+            <German>Ob Zeitstempel automatisch auf Maker angewendet werden sollen.</German>
+            <Chinesesimp>是否允许时间戳自动应用于标记</Chinesesimp>
+            <Korean>허용 시 마커를 내려놓음과 동시에 시간이 표기됩니다</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_Timestamp">
             <English>Timestamp</English>
@@ -190,6 +211,10 @@
             <French>Horodatage</French>
             <Japanese>タイムスタンプ</Japanese>
             <Spanish>Marca de tiempo</Spanish>
+            <Polish>Znacznik czasu</Polish>
+            <German>Zeitstempel</German>
+            <Chinesesimp>时间戳</Chinesesimp>
+            <Korean>시간 표기</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
             <English>Watch Required</English>
@@ -197,6 +222,10 @@
             <French>Une montre est requise.</French>
             <Japanese>時計の要求</Japanese>
             <Spanish>Reloj requerido</Spanish>
+            <Polish>Wymagany zegarek</Polish>
+            <German>Uhr benötigt</German>
+            <Chinesesimp>需要手表</Chinesesimp>
+            <Korean>시계 필요함</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormat">
             <English>Timestamp Format</English>
@@ -204,6 +233,10 @@
             <French>Horodatage - Format</French>
             <Japanese>タイムスタンプ形式</Japanese>
             <Spanish>Formato de marca de tiempo</Spanish>
+            <Polish>Format znacznika czasu</Polish>
+            <German>Format des Zeitstempels</German>
+            <Chinesesimp>时间戳格式</Chinesesimp>
+            <Korean>시간 표기 포맷</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
             <English>Changes the timestamp format</English>
@@ -211,6 +244,10 @@
             <French>Modifie le format de l'horodatage.</French>
             <Japanese>タイムスタンプの形式を変更します</Japanese>
             <Spanish>Cambia el formato de marca de tiempo</Spanish>
+            <Polish>Zmienia format znacznika czasu</Polish>
+            <German>Zeitstempel-Format anpassen</German>
+            <Chinesesimp>更改时间戳格式</Chinesesimp>
+            <Korean>시간 표기 포맷을 바꿉니다</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
             <English>"HH" - Hour</English>
@@ -218,6 +255,10 @@
             <French>"HH" - Heures</French>
             <Japanese>"HH" - 時間</Japanese>
             <Spanish>"HH" - Hora</Spanish>
+            <Polish>"HH" - Godziny</Polish>
+            <German>"HH" - Stunden</German>
+            <Chinesesimp>"HH"—时</Chinesesimp>
+            <Korean>"HH" - 시</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
             <English>"MM" - Minute</English>
@@ -225,6 +266,10 @@
             <French>"MM" - Minutes</French>
             <Japanese>"MM" - 分</Japanese>
             <Spanish>"MM" - Minuto</Spanish>
+            <Polish>"MM" - Minuty</Polish>
+            <German>"MM" - Minuten</German>
+            <Chinesesimp>"MM"—分</Chinesesimp>
+            <Korean>"MM" - 분</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
             <English>"SS" - Seconds</English>
@@ -232,6 +277,10 @@
             <French>"SS" - Secondes</French>
             <Japanese>"SS" - 秒</Japanese>
             <Spanish>"SS" - Segundos</Spanish>
+            <Polish>"SS" - Sekundy</Polish>
+            <German>"SS" - Sekunden</German>
+            <Chinesesimp>"SS"—秒</Chinesesimp>
+            <Korean>"SS" - 초</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
             <English>"MM" - Milliseconds</English>
@@ -239,6 +288,10 @@
             <French>"MM" - Millisecondes</French>
             <Japanese>"MM" - ミリ秒</Japanese>
             <Spanish>"MM" - Milisegundos</Spanish>
+            <Polish>"MM" - Milisekundy</Polish>
+            <German>"MS" - Milisekunden</German>
+            <Chinesesimp>"MS"—毫秒</Chinesesimp>
+            <Korean>"MS" - 밀리초</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
@@ -246,6 +299,10 @@
             <French>Horodatage - Système horaire</French>
             <Japanese>タイムスタンプ時刻形式</Japanese>
             <Spanish>Formato de hora de marca de tiempo</Spanish>
+            <Polish>Format Godzinnych znaczników czasu</Polish>
+            <German>Zeitstempel-Stundenformat</German>
+            <Chinesesimp>时间戳小时格式</Chinesesimp>
+            <Korean>시간 표기 시간 포맷</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat24">
             <English>24-Hour Clock</English>
@@ -253,6 +310,10 @@
             <French>Format 24 heures</French>
             <Japanese>24 時間表記</Japanese>
             <Spanish>Reloj 24-Horas</Spanish>
+            <Polish>Zegar 24-godzinny</Polish>
+            <German>24-Stunden</German>
+            <Chinesesimp>24小时制</Chinesesimp>
+            <Korean>24시간제</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat12">
             <English>12-Hour Clock</English>
@@ -260,6 +321,10 @@
             <French>Format 12 heures</French>
             <Japanese>12 時間表記</Japanese>
             <Spanish>Reloj 12-Horas</Spanish>
+            <Polish>Zegar 12-godzinny</Polish>
+            <German>12-Stunden</German>
+            <Chinesesimp>12小时制</Chinesesimp>
+            <Korean>12시간제</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
             <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
@@ -267,6 +332,10 @@
             <French>Permet de choisir le système d'horodatage souhaité, au format 12 ou 24 heures.</French>
             <Japanese>タイムスタンプの時刻を 24 時間か 12 時間表記のどちらかに変更できます。</Japanese>
             <Spanish>Cambia que la marca de tiempo sea en formato de reloj 24-horas o 12-horas</Spanish>
+            <Polish>Zmienia znacznik czasu tak, aby używał formatu 24-godzinnego lub 12-godzinnego</Polish>
+            <German>Ändert den Zeitstempel, um entweder das 24-Stunden- oder das 12-Stunden-Format zu verwenden</German>
+            <Chinesesimp>改变时间戳以使用24小时或12小时的时钟格式</Chinesesimp>
+            <Korean>시간 표기를 24시간제 혹은 12시간제 에서 골라 표기합니다</Korean>
         </Key>
     </Package>
 </Project>

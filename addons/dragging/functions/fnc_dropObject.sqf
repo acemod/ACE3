@@ -20,7 +20,7 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // remove drop action
-[QGVAR(releaseActionID), "keydown"] call CBA_fnc_removeKeyHandler;
+[GVAR(releaseActionID), "keydown"] call CBA_fnc_removeKeyHandler;
 
 // stop blocking
 if !(GVAR(dragAndFire)) then {
@@ -43,9 +43,9 @@ detach _target;
 
 if (_target isKindOf "CAManBase") then {
     if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+        [_target, "unconscious", 2] call EFUNC(common,doAnimation);
     } else {
-        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim.
+        [_target, "", 2] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim.
     };
 };
 
@@ -74,7 +74,7 @@ if !(_target isKindOf "CAManBase") then {
 };
 
 if (_unit getVariable ["ACE_isUnconscious", false]) then {
-    [_unit, "unconscious", 2, true] call EFUNC(common,doAnimation);
+    [_unit, "unconscious", 2] call EFUNC(common,doAnimation);
 };
 
 // recreate UAV crew

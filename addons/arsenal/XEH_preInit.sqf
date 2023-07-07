@@ -14,9 +14,13 @@ PREP_RECOMPILE_END;
 [QGVAR(enableIdentityTabs), "CHECKBOX", localize LSTRING(enableIdentityTabsSettings), localize LSTRING(settingCategory), true, true] call CBA_fnc_addSetting;
 
 // Arsenal loadouts
-[QGVAR(allowDefaultLoadouts), "CHECKBOX", [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)], localize LSTRING(settingCategory), true, true] call CBA_fnc_addSetting;
-[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), localize LSTRING(settingCategory), true, true] call CBA_fnc_addSetting;
-[QGVAR(EnableRPTLog), "CHECKBOX", [LSTRING(printToRPTSetting), LSTRING(printToRPTTooltip)], localize LSTRING(settingCategory), false, false] call CBA_fnc_addSetting;
+[QGVAR(allowDefaultLoadouts), "CHECKBOX", [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)], [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true, true] call CBA_fnc_addSetting;
+[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true, true] call CBA_fnc_addSetting;
+[QGVAR(EnableRPTLog), "CHECKBOX", [LSTRING(printToRPTSetting), LSTRING(printToRPTTooltip)], [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false, false] call CBA_fnc_addSetting;
+
+[QGVAR(loadoutsSaveFace), "CHECKBOX", localize LSTRING(loadoutsSaveFaceSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false] call CBA_fnc_addSetting;
+[QGVAR(loadoutsSaveVoice), "CHECKBOX", localize LSTRING(loadoutsSaveVoiceSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false] call CBA_fnc_addSetting;
+[QGVAR(loadoutsSaveInsignia), "CHECKBOX", localize LSTRING(loadoutsSaveInsigniaSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true] call CBA_fnc_addSetting;
 
 [QGVAR(statsToggle), {
     params ["_display", "_showStats"];

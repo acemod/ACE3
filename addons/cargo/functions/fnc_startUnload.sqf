@@ -77,7 +77,7 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
         localize LSTRING(UnloadingItem),
         {
             (_this select 0) params ["_item", "_target", "_player"];
-            
+
             (alive _target)
             && {locked _target < 2}
             && {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
@@ -86,8 +86,7 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
 } else {
-    private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
-    private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
+    private _displayName = [_item, true] call FUNC(getNameItem);
 
     [[LSTRING(UnloadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };
