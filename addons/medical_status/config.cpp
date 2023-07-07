@@ -16,4 +16,3 @@ class CfgPatches {
 
 #include "ACE_settings.hpp"
 #include "CfgEventHandlers.hpp"
-#include "CfgActions.hpp"

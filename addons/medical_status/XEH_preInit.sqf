@@ -36,7 +36,7 @@ if (hasInterface) then {
             _caller action ["Gear", _target];
         }, nil, 5.1, true, true, "gear", toString {
             (_target isNotEqualTo ACE_player) &&
-            {!((lifeState _target) in ["HEALTHY", "INJURED"])}
+            {(lifeState _target) isEqualTo "INCAPACITATED"}
         }, 2];
 
         _unit setUserActionText [_id, localize "STR_ACTION_GEAR", "<img image='\A3\ui_f\data\igui\cfg\actions\gear_ca.paa' size='2.5' shadow=2 />"];
@@ -47,7 +47,8 @@ if (hasInterface) then {
             _caller action ["OpenBag", _target];
         }, nil, 5.2, true, true, "", toString {
             (_target isNotEqualTo ACE_player) &&
-            {!(isNull (backpackContainer _target))} &&
+            {!((lifeState _target) in ["HEALTHY", "INJURED", "INCAPACITATED"])} &&
+            {!(isNull (backpackContainer _target)) && {(maxLoad (backpackContainer _target)) isNotEqualTo 0}} &&
             {_target setUserActionText [_actionId, format [localize "STR_ACTION_OPEN_BAG", getText (configOf (backpackContainer _target) >> "displayName")]]; true}
         }, 2];
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;
