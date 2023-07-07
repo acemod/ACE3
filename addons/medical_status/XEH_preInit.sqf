@@ -48,7 +48,7 @@ if (hasInterface) then {
         }, nil, 5.2, true, true, "", toString {
             (_target isNotEqualTo ACE_player) &&
             {!((lifeState _target) in ["HEALTHY", "INJURED", "INCAPACITATED"])} &&
-            {!(isNull (backpackContainer _target)) && {(maxLoad (backpackContainer _target)) isNotEqualTo 0}} &&
+            {!(isNull (backpackContainer _target)) && {!((backpackContainer _target)) isKindOf "Weapon_Bag_Base"}} &&
             {_target setUserActionText [_actionId, format [localize "STR_ACTION_OPEN_BAG", getText (configOf (backpackContainer _target) >> "displayName")]]; true}
         }, 2];
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;
