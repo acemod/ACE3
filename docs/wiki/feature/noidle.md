@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: No Idle
+component: noidle
 description: Disable idle animations.
 group: feature
 category: interaction
@@ -17,7 +18,3 @@ version:
 ### 1.1 Idle animations removed
 
 This removes idle animations.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="noidle" %}

@@ -37,7 +37,7 @@ private _hitPointsAddedAmount = [];
 private _processedSelections = [];
 private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 
-private _vehCfg = configFile >> "CfgVehicles" >> _type;
+private _vehCfg = configOf _vehicle;
 // Custom position can be defined via config for associated hitpoint
 private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
 // Associated hitpoints can be grouped via config to produce a single repair action
@@ -56,14 +56,6 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
         TRACE_3("Adding Wheel Actions",_hitpoint,_forEachIndex,_selection);
 
-        // An action to remove the wheel is required
-        private _name = format ["Remove_%1_%2", _forEachIndex, _hitpoint];
-        private _text = localize LSTRING(RemoveWheel);
-        private _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
-        private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
-        private _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2, nil, FUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
-        [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
-
         // An action to replace the wheel is required
         _name = format ["Replace_%1_%2", _forEachIndex, _hitpoint];
         _text = localize LSTRING(ReplaceWheel);
@@ -71,6 +63,28 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(repair)};
         _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
+
+        // Create a wheel interaction
+        private _root = format ["Wheel_%1_%2", _forEachIndex, _hitpoint];
+        private _action = [_root, localize LSTRING(Wheel), ["","#FFFFFF"], {}, {true}, {}, [_hitpoint], _position, 2, nil, LINKFUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
+        [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
+
+        // An action to remove the wheel is required
+        private _name = format ["Remove_%1_%2", _forEachIndex, _hitpoint];
+        private _text = localize LSTRING(RemoveWheel);
+        private _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
+        private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
+        private _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
+        [_type, 0, [_root], _action] call EFUNC(interact_menu,addActionToClass);
+
+        // An action to patch the wheel is required.
+        private _name = format ["Patch_%1_%2", _forEachIndex, _hitpoint];
+        private _patchIcon = QPATHTOF(ui\patch_ca.paa);
+        private _text = localize LSTRING(PatchWheel);
+        private _condition = {("vehicle" in GVAR(patchWheelLocation)) && {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(canRepair)}};
+        private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(repair)};
+        private _action = [_name, _text, _patchIcon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
+        [_type, 0, [_root], _action] call EFUNC(interact_menu,addActionToClass);
 
         _processedSelections pushBack _selection;
     } else {
@@ -94,12 +108,18 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
                 private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
                 if (_hitpointsCfg isNotEqualTo []) exitWith {
                     TRACE_2("turret hitpoint configFound",_hitpoint,_x);
-                     // only do turret hitpoints for now or we get some weird stuff
-                    if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1}) then {
+                     // only do turret hitpoints or stuff linked to visuals for now or we apparently get some weird stuff
+                    if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1} || {(getText (_hitpointsCfg # 0 >> "visual")) != ""}) then {
                         _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
                     };
                 };
             } forEach _turretPaths;
+            if (_armorComponent == "") then {
+                private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
+                if ((getText (_hitpointsCfg # 0 >> "visual")) != "") then {
+                    _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
+                };
+            };
             if (_armorComponent != "") then { INFO_3("%1: %2 no selection: using armorComponent %3",_type,_hitpoint,_armorComponent); };
         };
         if ((_selection == "") && {_armorComponent == ""}) exitWith { TRACE_3("Skipping no selection OR armor component",_hitpoint,_forEachIndex,_selection); };

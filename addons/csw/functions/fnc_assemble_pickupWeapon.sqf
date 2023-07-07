@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM
+ * Author:Dani (TCVM)
  * Dismounts the weapon from the tripod and drops its backpack beside
  *
  * Arguments:
@@ -37,16 +37,18 @@
         _weaponPos set [2, (_weaponPos select 2) + 0.1];
         private _weaponDir = getDir _staticWeapon;
 
+        private _carryWeaponMag = "";
+        private _carryWeaponMags = getArray (configFile >> "CfgWeapons" >> _carryWeaponClassname >> "magazines") apply {toLower _x};
         LOG("remove ammo");
         {
             _x params ["_xMag", "", "_xAmmo"];
+            if (_xAmmo == 0) then {continue};
 
-            private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
-            if (isNil "_carryMag") then {
-                private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
-                _carryMag = configName (_groups param [0, configNull]);
-                GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
-                TRACE_2("setting cache",_xMag,_carryMag);
+            private _carryMag = _xMag call FUNC(getCarryMagazine);
+            if (_carryWeaponMag isEqualTo "" && {toLower _carryMag in _carryWeaponMags}) then {
+                TRACE_3("Adding mag to secondary weapon",_xMag,_xAmmo,_carryMag);
+                _carryWeaponMag = _carryMag;
+                DEC(_xAmmo);
             };
             if ((_xAmmo > 0) && {_carryMag != ""}) then {
                 TRACE_2("Removing ammo",_xMag,_carryMag);
@@ -68,16 +70,23 @@
         };
 
         [{
-            params ["_player", "_weaponPos", "_carryWeaponClassname"];
+            params ["_player", "_weaponPos", "_carryWeaponClassname", "_carryWeaponMag"];
             if ((alive _player) && {(secondaryWeapon _player) == ""}) exitWith {
                 _player addWeapon _carryWeaponClassname;
+                if (_carryWeaponMag isNotEqualTo "") then {
+                    _player addWeaponItem [_carryWeaponClassname, _carryWeaponMag, true];
+                };
             };
             private _weaponRelPos = _weaponPos getPos RELATIVE_DIRECTION(90);
             private _weaponHolder = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
             _weaponHolder setDir random [0, 180, 360];
             _weaponHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];
-            _weaponHolder addWeaponCargoGlobal [_carryWeaponClassname, 1];
-        }, [_player, _weaponPos, _carryWeaponClassname]] call CBA_fnc_execNextFrame;
+            if (_carryWeaponMag isEqualTo "") then {
+                _weaponHolder addWeaponCargoGlobal [_carryWeaponClassname, 1];
+            } else {
+                _weaponHolder addWeaponWithAttachmentsCargoGlobal [[_carryWeaponClassname, "", "", "", [_carryWeaponMag, 1], [], ""], 1];
+            };
+        }, [_player, _weaponPos, _carryWeaponClassname, _carryWeaponMag]] call CBA_fnc_execNextFrame;
 
         LOG("delete weapon");
         deleteVehicle _staticWeapon;
@@ -93,4 +102,3 @@
 
     [TIME_PROGRESSBAR(_pickupTime), [_staticWeapon, _player, _carryWeaponClassname, _turretClassname, _onDisassembleFunc], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
-

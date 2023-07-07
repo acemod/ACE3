@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Determines if you can pick-up the Dragon missile. If the missile was fired you will not be able to pick up the tripod.
  *
  * Arguments:

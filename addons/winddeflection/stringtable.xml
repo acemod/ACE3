@@ -14,7 +14,7 @@
             <Portuguese>Informação do vento</Portuguese>
             <Japanese>風の情報</Japanese>
             <Korean>바람 정보</Korean>
-            <Chinesesimp>风力资讯</Chinesesimp>
+            <Chinesesimp>风力信息</Chinesesimp>
             <Chinese>風力資訊</Chinese>
             <Turkish>Rüzgar Bilgisi</Turkish>
         </Key>
@@ -30,8 +30,8 @@
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção: %1</Portuguese>
             <Japanese>風向: %1</Japanese>
-            <Korean>방향: %1</Korean>
-            <Chinesesimp>风向: %1</Chinesesimp>
+            <Korean>풍향: %1</Korean>
+            <Chinesesimp>风向：%1</Chinesesimp>
             <Chinese>風向: %1</Chinese>
             <Turkish>Yön: %1</Turkish>
         </Key>
@@ -48,7 +48,7 @@
             <Portuguese>Velocidade: %1 m/s</Portuguese>
             <Japanese>風速: %1 m/s</Japanese>
             <Korean>풍속: %1 m/s</Korean>
-            <Chinesesimp>风速: %1 m/s</Chinesesimp>
+            <Chinesesimp>风速：%1 m/s</Chinesesimp>
             <Chinese>風速: %1 m/s</Chinese>
             <Turkish>Hız: %1 m/s</Turkish>
         </Key>
@@ -65,7 +65,7 @@
             <Portuguese>Informação Meteorológica</Portuguese>
             <Japanese>天候の情報</Japanese>
             <Korean>기상 정보</Korean>
-            <Chinesesimp>天气资讯</Chinesesimp>
+            <Chinesesimp>天气信息</Chinesesimp>
             <Chinese>天氣資訊</Chinese>
             <Turkish>Hava Durumu Bilgisi</Turkish>
         </Key>
@@ -82,7 +82,7 @@
             <Portuguese>Humidade: %1%</Portuguese>
             <Japanese>湿度: %1%</Japanese>
             <Korean>습도: %1%</Korean>
-            <Chinesesimp>湿度: %1%</Chinesesimp>
+            <Chinesesimp>湿度：%1%</Chinesesimp>
             <Chinese>濕度: %1%</Chinese>
             <Turkish>Nem Oranı: %1%</Turkish>
         </Key>
@@ -99,7 +99,7 @@
             <Italian>Deviazione del Vento</Italian>
             <Japanese>風向の変化</Japanese>
             <Korean>풍향 변화</Korean>
-            <Chinesesimp>风偏</Chinesesimp>
+            <Chinesesimp>弹道风偏</Chinesesimp>
             <Chinese>風偏</Chinese>
             <Turkish>Rüzgar Sapması</Turkish>
         </Key>
@@ -116,7 +116,7 @@
             <Italian>Deviazione del Vento</Italian>
             <Japanese>風向の変化</Japanese>
             <Korean>풍향 변화</Korean>
-            <Chinesesimp>风偏</Chinesesimp>
+            <Chinesesimp>弹道风偏</Chinesesimp>
             <Chinese>風偏</Chinese>
             <Turkish>Rüzgar Sapması</Turkish>
         </Key>
@@ -133,7 +133,7 @@
             <Italian>Abilita deviazione del vento</Italian>
             <Japanese>風向の変化を有効化</Japanese>
             <Korean>풍향 변화를 적용합니다</Korean>
-            <Chinesesimp>开启风偏效果</Chinesesimp>
+            <Chinesesimp>开启弹道风偏效果</Chinesesimp>
             <Chinese>開啟風偏效果</Chinese>
             <Turkish>Rüzgar sapmasını aktif et</Turkish>
         </Key>
@@ -150,7 +150,7 @@
             <Italian>Abilita per Veicoli</Italian>
             <Japanese>車両へ有効化</Japanese>
             <Korean>차량 적용</Korean>
-            <Chinesesimp>启用风偏给载具</Chinesesimp>
+            <Chinesesimp>给载具启用弹道风偏</Chinesesimp>
             <Chinese>啟用風偏給載具</Chinese>
             <Turkish>Araçlar da etkin</Turkish>
         </Key>
@@ -167,7 +167,7 @@
             <Italian>Abilita deviazione del vento per artiglieri di statiche/veicoli</Italian>
             <Japanese>重火器や車両へ、風向の変化を有効化</Japanese>
             <Korean>차량이나 거치식 무기 사수에게 풍향 변화를 적용합니다</Korean>
-            <Chinesesimp>使风偏作用在固定式武器与载具炮手身上</Chinesesimp>
+            <Chinesesimp>使弹道风偏作用在固定式武器与载具炮手身上</Chinesesimp>
             <Chinese>使風偏作用在固定式武器與載具砲手身上</Chinese>
             <Turkish>Araç nişancıları için rüzgar sapmasını etkinleştirir.</Turkish>
         </Key>
