@@ -475,7 +475,7 @@ GVAR(reloadMutex_lastAction) = "";
     // anim is always lowercase, skip empty reload actions (binoculars)
     if (_anim isNotEqualTo _reloadAction || {_reloadAction isEqualTo ""}) exitWith {};
 
-    TRACE_2("Reloading with animation, blocking gestures",weaponState ACE_Player,_action);
+    TRACE_2("Reloading with animation, blocking gestures",weaponState ACE_Player,_anim);
     GVAR(isReloading) = true;
     GVAR(reloadMutex_lastAction) = _anim;
 }] call CBA_fnc_addClassEventHandler;
