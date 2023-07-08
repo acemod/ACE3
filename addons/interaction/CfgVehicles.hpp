@@ -164,7 +164,7 @@ class CfgVehicles {
                 };
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
-                    condition = QUOTE(!((lifeState _target) in [ARR_2('HEALTHY','INJURED')]));
+                    condition = QUOTE(!(lifeState _target in [ARR_2('HEALTHY','INJURED')]) && {isNull objectParent _target});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
                     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
                 };

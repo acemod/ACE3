@@ -29,7 +29,7 @@ if (_target isKindOf "StaticWeapon") exitWith {
 
 // Units need to be unconscious or be limping
 if (_target isKindOf "CAManBase") exitWith {
-    (lifeState _target) isEqualTo "INCAPACITATED"
+    lifeState _target isEqualTo "INCAPACITATED"
     || {_target getHitPointDamage "HitLegs" > 0.4}
 };
 

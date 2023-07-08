@@ -168,7 +168,7 @@ private _action = [
     // action display name will be overwritten in modifier function
     QGVAR(takeWeapon), "take", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa",
     {_player action ["TakeWeapon", _target, weaponCargo _target select 0]},
-    {count (weaponCargo _target) isEqualTo 1},
+    {count weaponCargo _target == 1},
     nil, nil, nil, nil, nil,
     {
         params ["_target", "", "", "_actionData"];
