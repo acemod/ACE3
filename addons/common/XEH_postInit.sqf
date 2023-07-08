@@ -423,31 +423,73 @@ addMissionEventHandler ["PlayerViewChanged", {
 //////////////////////////////////////////////////
 
 GVAR(isReloading) = false;
-GVAR(reloadMutex_lastGesture) = "";
+GVAR(reloadMutex_lastAction) = "";
 
 ["CAManBase", "GestureChanged", {
     params ["_unit", "_gesture"];
-    if (
-        (GVAR(isReloading)) ||
-        {_unit isNotEqualTo ACE_Player} ||
-        {(weaponState ACE_Player) select 6 == 0}
+    if !(
+        _unit isEqualTo ACE_Player &&
+        {!GVAR(isReloading)} &&
+        {_gesture isNotEqualTo ""}
     ) exitWith {};
 
-    TRACE_2("Reloading, blocking gestures",_weapon,_gesture);
+    (weaponState ACE_player) params ["_weapon", "_muzzle"];
+    if (_weapon isEqualTo "") exitWith {};
+
+    private _reloadAction = [_weapon, _muzzle] call FUNC(getReloadAction);
+
+    // gesture is always lowercase, skip empty reload actions (binoculars)
+    if (_gesture isNotEqualTo _reloadAction || {_reloadAction isEqualTo ""}) exitWith {};
+
+    TRACE_2("Reloading, blocking gestures",weaponState ACE_Player,_gesture);
     GVAR(isReloading) = true;
-    GVAR(reloadMutex_lastGesture) = _gesture;
+    GVAR(reloadMutex_lastAction) = _gesture;
 }] call CBA_fnc_addClassEventHandler;
 
 ["CAManBase", "GestureDone", {
     params ["_unit", "_gesture"];
-    if (
-        (!GVAR(isReloading)) ||
-        {_unit isNotEqualTo ACE_Player} ||
-        {_gesture isNotEqualTo GVAR(reloadMutex_lastGesture)}
+    if !(
+        GVAR(isReloading) &&
+        {_unit isEqualTo ACE_Player} &&
+        {_gesture isEqualTo GVAR(reloadMutex_lastAction)}
     ) exitWith {};
 
     GVAR(isReloading) = false;
-    GVAR(reloadMutex_lastGesture) = "";
+    GVAR(reloadMutex_lastAction) = "";
+}] call CBA_fnc_addClassEventHandler;
+
+// Some secondary weapons (mainly heavy launchers) have reloads as anims instead of gestures
+["CAManBase", "AnimChanged", {
+    params ["_unit", "_anim"];
+    if !(
+        _unit isEqualTo ACE_Player &&
+        {!GVAR(isReloading)} &&
+        {currentWeapon ACE_Player isEqualTo secondaryWeapon ACE_Player}
+    ) exitWith {};
+
+    (weaponState ACE_Player) params ["_weapon", "_muzzle"];
+    if (_weapon isEqualTo "") exitWith {};
+
+    private _reloadAction = [_weapon, _muzzle] call FUNC(getReloadAction);
+
+    // anim is always lowercase, skip empty reload actions (binoculars)
+    if (_anim isNotEqualTo _reloadAction || {_reloadAction isEqualTo ""}) exitWith {};
+
+    TRACE_2("Reloading with animation, blocking gestures",weaponState ACE_Player,_action);
+    GVAR(isReloading) = true;
+    GVAR(reloadMutex_lastAction) = _anim;
+}] call CBA_fnc_addClassEventHandler;
+
+["CAManBase", "AnimDone", {
+    params ["_unit", "_anim"];
+    if !(
+        GVAR(isReloading) &&
+        {_unit isEqualTo ACE_Player} &&
+        {_anim isEqualTo GVAR(reloadMutex_lastAction)}
+    ) exitWith {};
+
+    GVAR(isReloading) = false;
+    GVAR(reloadMutex_lastAction) = "";
 }] call CBA_fnc_addClassEventHandler;
 
 //////////////////////////////////////////////////
