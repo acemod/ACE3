@@ -62,4 +62,8 @@ call FUNC(compileSorts);
     "cba_disposable_arsenalClosed" call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
+if (GVAR(toolsTab)) then {
+    [uiNamespace getVariable [QGVAR(configItemsTools), []], localize LSTRING(toolsTab), TOOLS_TAB_ICON] call FUNC(addRightPanelButton);
+};
+
 ADDON = true;
