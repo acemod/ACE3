@@ -14,18 +14,18 @@
  * Public: No
 */
 
-GVAR(virtualItems) set [IDX_VIRT_UNIQUE_MISC_ITEMS, []];
-GVAR(virtualItems) set [IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL, []];
-GVAR(virtualItems) set [IDX_VIRT_UNIQUE_GRENADES, []];
-GVAR(virtualItems) set [IDX_VIRT_UNIQUE_EXPLOSIVES, []];
-GVAR(virtualItems) set [IDX_VIRT_UNIQUE_ATTACHMENTS, [[], [], [], []]];
-GVAR(virtualItems) set [IDX_VIRT_UNIQUE_BACKPACKS, []];
-GVAR(virtualItems) set [IDX_VIRT_UNIQUE_GOGGLES, []];
-GVAR(virtualItems) set [IDX_VIRT_UNIQUE_UNKNOWN_ITEMS, []];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_MISC_ITEMS, createHashMap];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL, createHashMap];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_GRENADES, createHashMap];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_EXPLOSIVES, createHashMap];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_ATTACHMENTS, createHashMapFromArray [[IDX_VIRT_OPTICS_ATTACHMENTS, createHashMap], [IDX_VIRT_FLASHLIGHT_ATTACHMENTS, createHashMap], [IDX_VIRT_MUZZLE_ATTACHMENTS, createHashMap], [IDX_VIRT_BIPOD_ATTACHMENTS, createHashMap]]];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_BACKPACKS, createHashMap];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_GOGGLES, createHashMap];
+GVAR(virtualItems) set [IDX_VIRT_UNIQUE_UNKNOWN_ITEMS, createHashMap];
 
-private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
-private _configItemsFlat = uiNamespace getVariable [QGVAR(configItemsFlat), []];
-private _magazineMiscItems = uiNamespace getVariable [QGVAR(magazineMiscItems), []];
+private _configItems = uiNamespace getVariable QGVAR(configItems);
+private _configItemsFlat = uiNamespace getVariable QGVAR(configItemsFlat);
+private _magazineMiscItems = uiNamespace getVariable QGVAR(magazineMiscItems);
 
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
@@ -43,92 +43,92 @@ private _isWeapon = false;
         // Primary, Handgun, Secondary weapon magazines
         case (
             _isMagazine &&
-            {!(_x in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL))} &&
-            {_x in (_configItems select IDX_VIRT_ITEMS_ALL)}
+            {!(_x in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL))} &&
+            {_x in (_configItems get IDX_VIRT_ITEMS_ALL)}
         ): {
-            (GVAR(virtualItems) select IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL) pushBackUnique _x;
+            (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL) set [_x, nil];
         };
         // Grenades
         case (
             _isMagazine &&
-            {!(_x in (GVAR(virtualItems) select IDX_VIRT_GRENADES))} &&
-            {_x in (_configItems select IDX_VIRT_GRENADES)}
+            {!(_x in (GVAR(virtualItems) get IDX_VIRT_GRENADES))} &&
+            {_x in (_configItems get IDX_VIRT_GRENADES)}
         ): {
-            (GVAR(virtualItems) select IDX_VIRT_UNIQUE_GRENADES) pushBackUnique _x;
+            (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GRENADES) set [_x, nil];
         };
         // Explosives
         case (
             _isMagazine &&
-            {!(_x in (GVAR(virtualItems) select IDX_VIRT_EXPLOSIVES))} &&
-            {_x in (_configItems select IDX_VIRT_EXPLOSIVES)}
+            {!(_x in (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES))} &&
+            {_x in (_configItems get IDX_VIRT_EXPLOSIVES)}
         ): {
-            (GVAR(virtualItems) select IDX_VIRT_UNIQUE_EXPLOSIVES) pushBackUnique _x;
+            (GVAR(virtualItems) get IDX_VIRT_UNIQUE_EXPLOSIVES) set [_x, nil];
         };
         // Optics
         case (
             _isWeapon &&
-            {!(_x in ((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_OPTICS_ATTACHMENTS))} &&
-            {_x in ((_configItems select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_OPTICS_ATTACHMENTS)}
+            {!(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS))} &&
+            {_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS)}
         ): {
-            ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_ATTACHMENTS) select IDX_VIRT_OPTICS_ATTACHMENTS) pushBackUnique _x;
+            ((GVAR(virtualItems) get IDX_VIRT_UNIQUE_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS) set [_x, nil];
         };
         // Flashlights
         case (
             _isWeapon &&
-            {!(_x in ((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
-            {_x in ((_configItems select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_FLASHLIGHT_ATTACHMENTS)}
+            {!(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
+            {_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS)}
         ): {
-            ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_ATTACHMENTS) select IDX_VIRT_FLASHLIGHT_ATTACHMENTS) pushBackUnique _x;
+            ((GVAR(virtualItems) get IDX_VIRT_UNIQUE_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS) set [_x, nil];
         };
         // Muzzle attachments
         case (
             _isWeapon &&
-            {!(_x in ((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
-            {_x in ((_configItems select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_MUZZLE_ATTACHMENTS)}
+            {!(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
+            {_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS)}
         ): {
-            ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_ATTACHMENTS) select IDX_VIRT_MUZZLE_ATTACHMENTS) pushBackUnique _x;
+            ((GVAR(virtualItems) get IDX_VIRT_UNIQUE_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS) set [_x, nil];
         };
         // Bipods
         case (
             _isWeapon &&
-            {!(_x in ((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_BIPOD_ATTACHMENTS))} &&
-            {_x in ((_configItems select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_BIPOD_ATTACHMENTS)}
+            {!(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS))} &&
+            {_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS)}
         ): {
-            ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_ATTACHMENTS) select IDX_VIRT_BIPOD_ATTACHMENTS) pushBackUnique _x;
+            ((GVAR(virtualItems) get IDX_VIRT_UNIQUE_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS) set [_x, nil];
         };
         // Misc. items
         case (
             _isWeapon &&
-            {!(_x in (GVAR(virtualItems) select IDX_VIRT_MISC_ITEMS))} &&
-            {!(_x in ((_configItems select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_OPTICS_ATTACHMENTS))} &&
-            {!(_x in ((_configItems select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
-            {!(_x in ((_configItems select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
-            {!(_x in ((_configItems select IDX_VIRT_ATTACHMENTS) select IDX_VIRT_BIPOD_ATTACHMENTS))}
+            {!(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS))} &&
+            {!(_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS))} &&
+            {!(_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
+            {!(_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
+            {!(_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS))}
         ): {
-            (GVAR(virtualItems) select IDX_VIRT_UNIQUE_MISC_ITEMS) pushBackUnique _x;
+            (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS) set [_x, nil];
         };
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
         case (
             _isMagazine &&
             {_x in _magazineMiscItems} &&
-            {!(_x in (GVAR(virtualItems) select IDX_VIRT_MISC_ITEMS))} &&
-            {_x in (_configItems select IDX_VIRT_MISC_ITEMS)}
+            {!(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS))} &&
+            {_x in (_configItems get IDX_VIRT_MISC_ITEMS)}
         ): {
-            (GVAR(virtualItems) select IDX_VIRT_UNIQUE_MISC_ITEMS) pushBackUnique _x;
+            (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS) set [_x, nil];
         };
         // Backpacks
         case (getNumber (_cfgVehicles >> _x >> "isBackpack") == 1): {
-            (GVAR(virtualItems) select IDX_VIRT_UNIQUE_BACKPACKS) pushBackUnique _x;
+            (GVAR(virtualItems) get IDX_VIRT_UNIQUE_BACKPACKS) set [_x, nil];
         };
         // Facewear
         case (isClass (_cfgGlasses >> _x)): {
-            (GVAR(virtualItems) select IDX_VIRT_UNIQUE_GOGGLES) pushBackUnique _x;
+            (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES) set [_x, nil];
         };
         // Unknown
         default {
             // Don't add items that are part of the arsenal
-            if !(_x in _configItemsFlat) then {
-                (GVAR(virtualItems) select IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) pushBackUnique _x;
+            if !(_x in GVAR(virtualItemsFlatAll)) then {
+                (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, nil];
             };
         };
     };

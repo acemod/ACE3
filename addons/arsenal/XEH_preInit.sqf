@@ -59,6 +59,7 @@ PREP_RECOMPILE_END;
     _this call FUNC(handleStats);
 }] call CBA_fnc_addEventHandler;
 
+// Compile sorts and stats
 call FUNC(compileStats);
 call FUNC(compileSorts);
 

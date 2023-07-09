@@ -28,8 +28,8 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgVehicles = configFile >> "CfgVehicles";
 private _cfgGlasses = configFile >> "CfgGlasses";
 
-private _weaponsArray = GVAR(virtualItems) select IDX_VIRT_WEAPONS;
-private _accsArray = GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS;
+private _weapons = GVAR(virtualItems) get IDX_VIRT_WEAPONS;
+private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
 
 private _name = "";
 private _nullItemsAmount = 0;
@@ -91,21 +91,21 @@ private _fnc_weaponCheck = {
                             if (_index != -1) then {
                                 // If binos, choose differently
                                 if (_index == IDX_LOADOUT_BINO) then {
-                                    _x in (GVAR(virtualItems) select IDX_VIRT_BINO)
+                                    _x in (GVAR(virtualItems) get IDX_VIRT_BINO)
                                 } else {
-                                    _x in (_weaponsArray select _index)
+                                    _x in (_weapons get _index)
                                 };
                             } else {
-                                _x in (_weaponsArray select IDX_VIRT_PRIMARY_WEAPONS) ||
-                                {_x in (_weaponsArray select IDX_VIRT_SECONDARY_WEAPONS)} ||
-                                {_x in (_weaponsArray select IDX_VIRT_HANDGUN_WEAPONS)} ||
-                                {_x in (GVAR(virtualItems) select IDX_VIRT_BINO)}
+                                _x in (_weapons get IDX_VIRT_PRIMARY_WEAPONS) ||
+                                {_x in (_weapons get IDX_VIRT_SECONDARY_WEAPONS)} ||
+                                {_x in (_weapons get IDX_VIRT_HANDGUN_WEAPONS)} ||
+                                {_x in (GVAR(virtualItems) get IDX_VIRT_BINO)}
                             };
                         } else {
-                            _x in (_accsArray select IDX_VIRT_OPTICS_ATTACHMENTS) ||
-                            {_x in (_accsArray select IDX_VIRT_FLASHLIGHT_ATTACHMENTS)} ||
-                            {_x in (_accsArray select IDX_VIRT_MUZZLE_ATTACHMENTS)} ||
-                            {_x in (_accsArray select IDX_VIRT_BIPOD_ATTACHMENTS)}
+                            _x in (_attachments get IDX_VIRT_OPTICS_ATTACHMENTS) ||
+                            {_x in (_attachments get IDX_VIRT_FLASHLIGHT_ATTACHMENTS)} ||
+                            {_x in (_attachments get IDX_VIRT_MUZZLE_ATTACHMENTS)} ||
+                            {_x in (_attachments get IDX_VIRT_BIPOD_ATTACHMENTS)}
                         }
                     ) then {
                         _unavailableItemsList pushBackUnique _x;
@@ -126,7 +126,7 @@ private _fnc_weaponCheck = {
                 // Check if item exists
                 if (isClass (_cfgMagazines >> _magazine)) then {
                     // Check if item is available in arsenal
-                    if !(_magazine in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL)) then {
+                    if !(_magazine in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) then {
                         _unavailableItemsList pushBackUnique _magazine;
                         _weaponArray set [_forEachIndex, []];
                         INC(_unavailableItemsAmount);
@@ -163,7 +163,7 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                 // Check if item exists
                 if (isClass (_cfgVehicles >> _item) || {isClass (_cfgWeapons >> _item)}) then {
                     // Check if item is available in arsenal
-                    if !(_item in (GVAR(virtualItems) select (_dataIndex + 1))) then {
+                    if !(_item in (GVAR(virtualItems) get (_dataIndex + 1))) then {
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, []];
                         INC(_unavailableItemsAmount);
@@ -178,10 +178,10 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                                     if (isClass (_cfgMagazines >> _item)) then {
                                         // Check if item is available in arsenal
                                         if !(
-                                            _item in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_GRENADES)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_EXPLOSIVES)} ||
-                                            {_item in (GVAR(virtualItems) select IDX_VIRT_MISC_ITEMS)}
+                                            _item in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL) ||
+                                            {_item in (GVAR(virtualItems) get IDX_VIRT_GRENADES)} ||
+                                            {_item in (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES)} ||
+                                            {_item in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)}
                                         ) then {
                                             _unavailableItemsList pushBackUnique _item;
                                             ((_loadout select _dataIndex) select 1) set [_forEachIndex, []];
@@ -239,7 +239,7 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                 // Check if item exists
                 if (isClass (_cfgWeapons >> _item)) then {
                     // Check if item is available in arsenal
-                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_HEADGEAR)) then {
+                    if !(_item in (GVAR(virtualItems) get IDX_VIRT_HEADGEAR)) then {
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
                         INC(_unavailableItemsAmount);
@@ -259,7 +259,7 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                 // Check if item exists
                 if (isClass (_cfgGlasses >> _item)) then {
                     // Check if item is available in arsenal
-                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_GOGGLES)) then {
+                    if !(_item in (GVAR(virtualItems) get IDX_VIRT_GOGGLES)) then {
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
                         INC(_unavailableItemsAmount);
@@ -282,7 +282,7 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                     // Check if item exists
                     if (isClass (_cfgWeapons >> _item)) then {
                         // Check if item is available in arsenal
-                        if !(_item in (GVAR(virtualItems) select (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _subIndex)))) then {
+                        if !(_item in (GVAR(virtualItems) get (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _subIndex)))) then {
                             _unavailableItemsList pushBackUnique _item;
                             _assignedItems set [_subIndex, ""];
                             INC(_unavailableItemsAmount);

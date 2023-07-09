@@ -113,6 +113,7 @@ GVAR(ignoreFirstSortPanelCall) = nil;
 GVAR(selectedWeaponType) = nil;
 GVAR(virtualItems) = nil;
 GVAR(virtualItemsFlat) = nil;
+GVAR(virtualItemsFlatAll) = nil;
 GVAR(currentItems) = nil;
 GVAR(currentFace) = nil;
 GVAR(currentVoice) = nil;

@@ -38,7 +38,7 @@ private _container = switch (GVAR(currentLeftPanel)) do {
             };
         } else {
             // Backpacks need special command to be removed
-            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) select IDX_VIRT_BACKPACK)}) then {
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) get IDX_VIRT_BACKPACK)}) then {
                 [uniformContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
             } else {
                 for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
@@ -66,7 +66,7 @@ private _container = switch (GVAR(currentLeftPanel)) do {
             };
         } else {
             // Backpacks need special command to be removed
-            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) select IDX_VIRT_BACKPACK)}) then {
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) get IDX_VIRT_BACKPACK)}) then {
                 [vestContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
             } else {
                 for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
@@ -94,7 +94,7 @@ private _container = switch (GVAR(currentLeftPanel)) do {
             };
         } else {
             // Backpacks need special command to be removed
-            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) select IDX_VIRT_BACKPACK)}) then {
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) get IDX_VIRT_BACKPACK)}) then {
                 [backpackContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
             } else {
                 for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {

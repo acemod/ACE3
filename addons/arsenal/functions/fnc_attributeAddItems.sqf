@@ -20,8 +20,8 @@ params ["_controlsGroup"];
 
 private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY);
 private _filter = toLower ctrlText (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR);
-private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
-private _magazineMiscItems = uiNamespace getVariable [QGVAR(magazineMiscItems), []];
+private _configItems = uiNamespace getVariable QGVAR(configItems);
+private _magazineMiscItems = uiNamespace getVariable QGVAR(magazineMiscItems);
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
 _attributeValue params ["_attributeItems", "_attributeMode"];
 
@@ -48,11 +48,11 @@ if (_category == IDX_CAT_ALL) exitWith {
         // Get appropriate config for each item (different since items can be from any category)
         _config = switch (true) do {
             case (_x in _magazineMiscItems);
-            case (_x in (_configItems select IDX_VIRT_ITEMS_ALL));
-            case (_x in (_configItems select IDX_VIRT_GRENADES));
-            case (_x in (_configItems select IDX_VIRT_EXPLOSIVES)): {_cfgMagazines >> _x};
-            case (_x in (_configItems select IDX_VIRT_BACKPACK)): {_cfgVehicles >> _x};
-            case (_x in (_configItems select IDX_VIRT_GOGGLES)): {_cfgGlasses >> _x};
+            case (_x in (_configItems get IDX_VIRT_ITEMS_ALL));
+            case (_x in (_configItems get IDX_VIRT_GRENADES));
+            case (_x in (_configItems get IDX_VIRT_EXPLOSIVES)): {_cfgMagazines >> _x};
+            case (_x in (_configItems get IDX_VIRT_BACKPACK)): {_cfgVehicles >> _x};
+            case (_x in (_configItems get IDX_VIRT_GOGGLES)): {_cfgGlasses >> _x};
             default {_cfgWeapons >> _x};
         };
 
@@ -75,15 +75,15 @@ if (_category == IDX_CAT_ALL) exitWith {
 private _categoryItems = switch (true) do {
     // Weapons
     case (_category < IDX_CAT_OPTICS_ATTACHMENTS): {
-        _configItems select IDX_VIRT_WEAPONS select (_category - 1)
+        (_configItems get IDX_VIRT_WEAPONS) get (_category - 1)
     };
     // Weapon attachments
     case (_category < IDX_CAT_ITEMS_ALL): {
-        _configItems select IDX_VIRT_ATTACHMENTS select (_category - 4)
+        (_configItems get IDX_VIRT_ATTACHMENTS) get (_category - 4)
     };
     // Other
     default {
-        _configItems select (_category - 6)
+        _configItems get (_category - 6)
     };
 };
 

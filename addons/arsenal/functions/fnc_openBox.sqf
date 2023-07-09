@@ -50,12 +50,45 @@ GVAR(currentBox) = _object;
 
 if (_mode) then {
     // Add all the items from the game that the arsenal has detected
-    GVAR(virtualItems) = +(uiNamespace getVariable [QGVAR(configItems), []]);
-    GVAR(virtualItemsFlat) = +(uiNamespace getVariable [QGVAR(configItemsFlat), []]);
+    GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
+    GVAR(virtualItemsFlat) = +(uiNamespace getVariable QGVAR(configItemsFlat));
 } else {
     // Add only specified items to the arsenal
-    GVAR(virtualItems) = +(_object getVariable [QGVAR(virtualItems), EMPTY_VIRTUAL_ARSENAL]);
-    GVAR(virtualItemsFlat) = flatten GVAR(virtualItems);
+    private _virtualItems = _object getVariable QGVAR(virtualItems);
+
+    GVAR(virtualItems) = if (isNil "_virtualItems") then {
+        _virtualItems = [
+            [IDX_VIRT_WEAPONS, createHashMapFromArray [[IDX_VIRT_PRIMARY_WEAPONS, createHashMap], [IDX_VIRT_SECONDARY_WEAPONS, createHashMap], [IDX_VIRT_HANDGUN_WEAPONS, createHashMap]]],
+            [IDX_VIRT_ATTACHMENTS, createHashMapFromArray [[IDX_VIRT_OPTICS_ATTACHMENTS, createHashMap], [IDX_VIRT_FLASHLIGHT_ATTACHMENTS, createHashMap], [IDX_VIRT_MUZZLE_ATTACHMENTS, createHashMap], [IDX_VIRT_BIPOD_ATTACHMENTS, createHashMap]]]
+        ];
+
+        _virtualItems = createHashMapFromArray _virtualItems;
+
+        for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+            _virtualItems set [_index, createHashMap];
+        };
+    } else {
+        +_virtualItems
+    };
+
+    // Flatten out hashmaps for easy checking later
+    private _virtualItemsFlat = +_virtualItems;
+    private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;
+    private _attachments = _virtualItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
+
+    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+        _virtualItemsFlat merge [_virtualItemsFlat deleteAt _index, true];
+    };
+
+    for "_index" from IDX_VIRT_PRIMARY_WEAPONS to IDX_VIRT_HANDGUN_WEAPONS do {
+        _virtualItemsFlat merge [_weapons deleteAt _index, true];
+    };
+
+    for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
+        _virtualItemsFlat merge [_attachments deleteAt _index, true];
+    };
+
+    GVAR(virtualItemsFlat) = _virtualItemsFlat;
 };
 
 GVAR(center) = _center;

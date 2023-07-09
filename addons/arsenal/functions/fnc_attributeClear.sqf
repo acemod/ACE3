@@ -27,23 +27,23 @@ if (_category == IDX_CAT_ALL) then {
     _attributeValue set [0, []];
 } else {
     // Find category items and remove from list
-    private _configItems = uiNamespace getVariable [QGVAR(configItems), []];
+    private _configItems = uiNamespace getVariable QGVAR(configItems);
     private _categoryItems = switch (true) do {
         // Weapons
         case (_category < IDX_CAT_OPTICS_ATTACHMENTS): {
-            _configItems select IDX_VIRT_WEAPONS select (_category - 1)
+            (_configItems get IDX_VIRT_WEAPONS) get (_category - 1)
         };
         // Weapon attachments
         case (_category < IDX_CAT_ITEMS_ALL): {
-            _configItems select IDX_VIRT_ATTACHMENTS select (_category - 4)
+            (_configItems get IDX_VIRT_ATTACHMENTS) get (_category - 4)
         };
         // Other
         default {
-            _configItems select (_category - 6)
+            _configItems get (_category - 6)
         };
     };
 
-    _attributeValue set [0, (_attributeValue select 0) - _categoryItems];
+    _attributeValue set [0, (_attributeValue select 0) select {!(_x in _categoryItems)}];
 };
 
 // Refresh the list after clear

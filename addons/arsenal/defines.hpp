@@ -205,46 +205,6 @@
 #define IDX_CAT_EXPLOSIVES 22
 #define IDX_CAT_MISC_ITEMS 23
 
-// Weapons 0 [primary, handgun, secondary]
-// Weapon attachements 1 [optics, flashlight, muzzle, bipod]
-// Magazines 2
-// Headgear 3
-// Uniform 4
-// Vest 5
-// Backpacks 6
-// Goggles 7
-// NVGs 8
-// Binoculars 9
-// Map 10
-// Compass 11
-// Radio slot 12
-// Watch slot  13
-// Comms slot (GPS, UAV terminals) 14
-// Grenades (WeaponThrow) 15
-// Explosives (WeaponPut) 16
-// InventoryItems 17
-#define EMPTY_VIRTUAL_ARSENAL\
-[\
-    [[],[],[]],\
-    [[],[],[],[]],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    [],\
-    []\
-]
-
 // Indexes of virtual items array
 #define IDX_VIRT_WEAPONS 0
 #define IDX_VIRT_PRIMARY_WEAPONS 0

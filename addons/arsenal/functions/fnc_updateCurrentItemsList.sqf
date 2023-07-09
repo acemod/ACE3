@@ -77,7 +77,7 @@ private _indexCurrentItems = -1;
         // Assigned items: Map, Compass, Watch, GPS / UAV Terminal, Radio, NVGs
         case IDX_LOADOUT_ASSIGNEDITEMS: {
             {
-                // Order of storing virtualItems is different than what getUnitLoadout returns, so do some math
+                // Order of storing currentItems is different than what getUnitLoadout returns, so do some math
                 GVAR(currentItems) set [IDX_CURR_NVG + ([2, 6, 4, 3, 5, 0] select _forEachIndex), _x];
             } forEach _x;
         };

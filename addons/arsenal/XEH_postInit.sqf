@@ -17,13 +17,11 @@ GVAR(lastSortDirectionRight) = DESCENDING;
 
 [QGVAR(broadcastFace), {
     params ["_unit", "_face"];
-
     _unit setFace _face;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(broadcastVoice), {
     params ["_unit", "_voice"];
-
     _unit setSpeaker _voice;
 }] call CBA_fnc_addEventHandler;
 

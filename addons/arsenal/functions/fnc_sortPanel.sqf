@@ -133,7 +133,8 @@ private _itemCfg = configNull;
 private _value = "";
 private _name = "";
 
-private _magazineMiscItems = uiNamespace getVariable [QGVAR(magazineMiscItems), []];
+private _magazineMiscItems = uiNamespace getVariable QGVAR(magazineMiscItems);
+private _sortCache = uiNamespace getVariable QGVAR(sortCache);
 
 private _faceCache = if (_cfgClass == _cfgFaces) then {
     uiNamespace getVariable [QGVAR(faceCache), createHashMap]
@@ -198,17 +199,21 @@ _for do {
     };
 
     // Value can be any type
-    _value = [_itemCfg, _item, _quantity] call _statement;
+    _value = _sortCache getOrDefaultCall [format ["%1_%2_%3", _sortName, _item, _quantity], {
+        private _value = [_itemCfg, _item, _quantity] call _statement;
 
-    // If number, convert to string (keep 2 decimal after comma; Needed for correct weight sorting)
-    if (_value isEqualType 0) then {
-        _value = [_value, 8, 2] call CBA_fnc_formatNumber;
-    };
+        // If number, convert to string (keep 2 decimal after comma; Needed for correct weight sorting)
+        if (_value isEqualType 0) then {
+            _value = [_value, 8, 2] call CBA_fnc_formatNumber;
+        };
 
-    // If empty string, add alphabetically small char at beginning to make it sort correctly
-    if (_value isEqualTo "") then {
-        _value = "_";
-    };
+        // If empty string, add alphabetically small char at beginning to make it sort correctly
+        if (_value isEqualTo "") then {
+            _value = "_";
+        };
+
+        _value
+    }, true];
 
     // Save the current row's item's name in a cache and set text to it's sorting value
     if (_right) then {

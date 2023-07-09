@@ -59,6 +59,7 @@ PREP(open3DEN);
 PREP(openBox);
 PREP(portVALoadouts);
 PREP(removeBox);
+PREP(removeSort);
 PREP(removeStat);
 PREP(removeVirtualItems);
 PREP(replaceUniqueItemsLoadout);

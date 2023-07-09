@@ -43,7 +43,37 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
 };
 
 if (isNil QGVAR(virtualItems)) then {
-    GVAR(virtualItems) = EMPTY_VIRTUAL_ARSENAL;
+    private _virtualItems = [
+        [IDX_VIRT_WEAPONS, createHashMapFromArray [[IDX_VIRT_PRIMARY_WEAPONS, createHashMap], [IDX_VIRT_SECONDARY_WEAPONS, createHashMap], [IDX_VIRT_HANDGUN_WEAPONS, createHashMap]]],
+        [IDX_VIRT_ATTACHMENTS, createHashMapFromArray [[IDX_VIRT_OPTICS_ATTACHMENTS, createHashMap], [IDX_VIRT_FLASHLIGHT_ATTACHMENTS, createHashMap], [IDX_VIRT_MUZZLE_ATTACHMENTS, createHashMap], [IDX_VIRT_BIPOD_ATTACHMENTS, createHashMap]]]
+    ];
+
+    _virtualItems = createHashMapFromArray _virtualItems;
+
+    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+        _virtualItems set [_index, createHashMap];
+    };
+
+    GVAR(virtualItems) = _virtualItems;
+
+    // Flatten out hashmaps for easy checking later
+    private _virtualItemsFlat = +_virtualItems;
+    private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;
+    private _attachments = _virtualItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
+
+    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+        _virtualItemsFlat merge [_virtualItemsFlat deleteAt _index, true];
+    };
+
+    for "_index" from IDX_VIRT_PRIMARY_WEAPONS to IDX_VIRT_HANDGUN_WEAPONS do {
+        _virtualItemsFlat merge [_weapons deleteAt _index, true];
+    };
+
+    for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
+        _virtualItemsFlat merge [_attachments deleteAt _index, true];
+    };
+
+    GVAR(virtualItemsFlat) = _virtualItemsFlat;
 };
 
 GVAR(currentFace) = face GVAR(center);
@@ -74,61 +104,48 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 
                 // If bino, add it in a different place than regular weapons
                 if (_forEachIndex != IDX_LOADOUT_BINO) then {
-                    ((GVAR(virtualItems) select IDX_VIRT_WEAPONS) select _forEachIndex) pushBackUnique _weapon;
+                    ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _forEachIndex) set [_weapon, nil];
                 } else {
-                    (GVAR(virtualItems) select IDX_VIRT_BINO) pushBackUnique _weapon;
+                    (GVAR(virtualItems) get IDX_VIRT_BINO) set [_weapon, nil];
                 };
             };
 
             // Add weapon attachments
             {
                 if (_x != "") then {
-                    ((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select _forEachIndex) pushBackUnique (_x call FUNC(baseWeapon));
+                    ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _forEachIndex) set [_x call FUNC(baseWeapon), nil];
                 };
             } forEach [_optics, _flashlight, _muzzle, _bipod];
 
             // Add magazines
             {
-                // Check if there is a magazine and if it has some ammo
-                if ((_x param [0, ""]) != "" && {(_x select 1) > 0}) then {
-                    (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 0);
+                // Check if there is a magazine (ammo count is unnecssary to check)
+                if ((_x param [0, ""]) != "") then {
+                    (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL) set [_x select 0, nil];
                 };
             } forEach [_primaryMagazine, _secondaryMagazine];
         };
-        // Uniform
-        case IDX_LOADOUT_UNIFORM: {
-            _x params [["_containerClass", ""]];
 
-            if (_containerClass != "") then {
-                (GVAR(virtualItems) select IDX_VIRT_UNIFORM) pushBackUnique _containerClass;
-            };
-        };
-        // Vest
-        case IDX_LOADOUT_VEST: {
-            _x params [["_containerClass", ""]];
-
-            if (_containerClass != "") then {
-                (GVAR(virtualItems) select IDX_VIRT_VEST) pushBackUnique _containerClass;
-            };
-        };
-        // Backpack
+        // Uniform, vest, backpack
+        case IDX_LOADOUT_UNIFORM;
+        case IDX_LOADOUT_VEST;
         case IDX_LOADOUT_BACKPACK: {
             _x params [["_containerClass", ""]];
 
             if (_containerClass != "") then {
-                (GVAR(virtualItems) select IDX_VIRT_BACKPACK) pushBackUnique _containerClass;
+                (GVAR(virtualItems) get (_forEachIndex + 1)) set [_containerClass, nil];
             };
         };
         // Helmet
         case IDX_LOADOUT_HEADGEAR: {
             if (_x != "") then {
-                (GVAR(virtualItems) select IDX_VIRT_HEADGEAR) pushBackUnique _x;
+                (GVAR(virtualItems) get IDX_VIRT_HEADGEAR) set [_x, nil];
             };
         };
         // Facewear
         case IDX_LOADOUT_GOGGLES: {
             if (_x != "") then {
-                (GVAR(virtualItems) select IDX_VIRT_GOGGLES) pushBackUnique _x;
+                (GVAR(virtualItems) get IDX_VIRT_GOGGLES) set [_x, nil];
             };
         };
         // Assigned items: Map, Compass, Watch, GPS / UAV Terminal, Radio, NVGs
@@ -136,12 +153,31 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
             {
                 // Order of storing virtualItems is different than what getUnitLoadout returns, so do some math
                 if (_x != "") then {
-                    (GVAR(virtualItems) select (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _forEachIndex))) pushBackUnique _x;
+                    (GVAR(virtualItems) get (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _forEachIndex))) set [_x, nil];
                 };
             } forEach _x;
         };
     };
 } forEach (getUnitLoadout GVAR(center)); // Only need items, not extended loadout
+
+// Get a list of all virtual items, including single panel items that are unique
+private _virtualItemsFlat = +GVAR(virtualItems);
+private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;
+private _attachments = _virtualItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
+
+for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+    _virtualItemsFlat merge [_virtualItemsFlat deleteAt _index, true];
+};
+
+for "_index" from IDX_VIRT_PRIMARY_WEAPONS to IDX_VIRT_HANDGUN_WEAPONS do {
+    _virtualItemsFlat merge [_weapons deleteAt _index, true];
+};
+
+for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
+    _virtualItemsFlat merge [_attachments deleteAt _index, true];
+};
+
+GVAR(virtualItemsFlatAll) = _virtualItemsFlat;
 
 // Update current item list
 call FUNC(updateCurrentItemsList);

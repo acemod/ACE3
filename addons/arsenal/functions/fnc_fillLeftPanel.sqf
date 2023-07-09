@@ -55,7 +55,7 @@ private _selectedItem = switch (true) do {
 
         {
             ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-        } forEach ((GVAR(virtualItems) select IDX_VIRT_WEAPONS) select _index);
+        } forEach ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _index);
 
         GVAR(currentItems) select _index
     };
@@ -73,7 +73,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonUniform: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_UNIFORM);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_UNIFORM);
 
                 GVAR(currentItems) select IDX_CURR_UNIFORM
             };
@@ -81,7 +81,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonVest: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_VEST);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_VEST);
 
                 GVAR(currentItems) select IDX_CURR_VEST
             };
@@ -89,7 +89,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonBackpack: {
                 {
                     ["CfgVehicles", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_BACKPACK);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_BACKPACK);
 
                 GVAR(currentItems) select IDX_CURR_BACKPACK
             };
@@ -115,7 +115,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonHeadgear: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_HEADGEAR);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_HEADGEAR);
 
                 GVAR(currentItems) select IDX_CURR_HEADGEAR
             };
@@ -123,7 +123,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonGoggles: {
                 {
                     ["CfgGlasses", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_GOGGLES);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_GOGGLES);
 
                 GVAR(currentItems) select IDX_CURR_GOGGLES
             };
@@ -131,7 +131,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonNVG: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_NVG);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_NVG);
 
                 GVAR(currentItems) select IDX_CURR_NVG
             };
@@ -139,7 +139,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonBinoculars: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_BINO);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_BINO);
 
                 GVAR(currentItems) select IDX_CURR_BINO
             };
@@ -147,7 +147,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonMap: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_MAP);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_MAP);
 
                 GVAR(currentItems) select IDX_CURR_MAP
             };
@@ -155,7 +155,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonCompass: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_COMPASS);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_COMPASS);
 
                 GVAR(currentItems) select IDX_CURR_COMPASS
             };
@@ -163,7 +163,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonRadio: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_RADIO);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_RADIO);
 
                 GVAR(currentItems) select IDX_CURR_RADIO
             };
@@ -171,7 +171,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonWatch: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_WATCH);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_WATCH);
 
                 GVAR(currentItems) select IDX_CURR_WATCH
             };
@@ -179,7 +179,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonGPS: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } forEach (GVAR(virtualItems) select IDX_VIRT_COMMS);
+                } forEach (GVAR(virtualItems) get IDX_VIRT_COMMS);
 
                 GVAR(currentItems) select IDX_CURR_COMMS
             };
@@ -194,7 +194,7 @@ private _selectedItem = switch (true) do {
                     _ctrlPanel lbSetData [_lbAdd, _x];
                     _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _x]];
                     _ctrlPanel lbSetPictureRight [_lbAdd, _modPicture];
-                } forEach (uiNamespace getVariable [QGVAR(faceCache), createHashMap]);
+                } forEach (uiNamespace getVariable QGVAR(faceCache));
 
                 GVAR(currentFace)
             };
@@ -202,7 +202,7 @@ private _selectedItem = switch (true) do {
             case IDC_buttonVoice: {
                 {
                     ["CfgVoice", configName _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
-                } forEach (uiNamespace getVariable [QGVAR(voiceCache), []]);
+                } forEach (uiNamespace getVariable QGVAR(voiceCache));
 
                 GVAR(currentVoice)
             };
@@ -211,7 +211,7 @@ private _selectedItem = switch (true) do {
                 // Insignia from config
                 {
                     ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
-                } forEach (uiNamespace getVariable [QGVAR(insigniaCache), []]);
+                } forEach (uiNamespace getVariable QGVAR(insigniaCache));
 
                 private _displayName = "";
                 private _className = "";
@@ -226,7 +226,7 @@ private _selectedItem = switch (true) do {
                     _ctrlPanel lbSetData [_lbAdd, _className];
                     _ctrlPanel lbSetPicture [_lbAdd, getText (_x >> "texture")];
                     _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
-                } forEach ("true" configClasses (missionConfigFile >> "CfgUnitInsignia"));
+                } forEach ("(if (isNumber (_x >> 'scope')) then {getNumber (_x >> 'scope')} else {2}) == 2" configClasses (missionConfigFile >> "CfgUnitInsignia"));
 
                 GVAR(currentInsignia)
             };

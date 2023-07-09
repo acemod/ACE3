@@ -41,8 +41,8 @@ if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
 
 private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgWeapons = configFile >> "CfgWeapons";
-private _magazineMiscItems = uiNamespace getVariable [QGVAR(magazineMiscItems), []];
-private _rightPanelCache = uiNamespace getVariable [QGVAR(rightPanelCache), createHashMap];
+private _magazineMiscItems = uiNamespace getVariable QGVAR(magazineMiscItems);
+private _rightPanelCache = uiNamespace getVariable QGVAR(rightPanelCache);
 
 private _fnc_fill_right_Container = {
     params ["_configCategory", "_className", "_hasItemInfo", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
@@ -208,15 +208,15 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } forEach ((((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select _index)) arrayIntersect _compatibleItems);
+            } forEach ((keys ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _index)) arrayIntersect _compatibleItems);
         } else {
             {
                 ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
-            } forEach ((GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS) select _index);
+            } forEach ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _index);
 
             {
                 ["CfgWeapons", _x, true, true] call _fnc_fill_right_Container;
-            } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_ATTACHMENTS) select _index);
+            } forEach ((GVAR(virtualItems) get IDX_VIRT_UNIQUE_ATTACHMENTS) get _index);
         };
     };
     // Current primary & secondary muzzle compatible magazines
@@ -225,48 +225,48 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } forEach ((GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) arrayIntersect _compatibleMagsMuzzle);
+            } forEach ((keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) arrayIntersect _compatibleMagsMuzzle);
         };
     };
     // All compatible magazines
     case IDC_buttonMag: {
         {
             ["CfgMagazines", _x, false] call _fnc_fill_right_Container;
-        } forEach ((GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) arrayIntersect _allCompatibleMags);
+        } forEach ((keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) arrayIntersect _allCompatibleMags);
 
         {
             ["CfgMagazines", _x, false, true] call _fnc_fill_right_Container;
-        } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL) arrayIntersect _allCompatibleMags);
+        } forEach ((keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL)) arrayIntersect _allCompatibleMags);
     };
     // All magazines
     case IDC_buttonMagALL: {
         {
             ["CfgMagazines", _x, false] call _fnc_fill_right_Container;
-        } forEach (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
+        } forEach (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL);
 
         {
             ["CfgMagazines", _x, false, true] call _fnc_fill_right_Container;
-        } forEach (GVAR(virtualItems) select IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL);
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL);
     };
     // Grenades
     case IDC_buttonThrow: {
         {
             ["CfgMagazines", _x, false] call _fnc_fill_right_Container;
-        } forEach (GVAR(virtualItems) select IDX_VIRT_GRENADES);
+        } forEach (GVAR(virtualItems) get IDX_VIRT_GRENADES);
 
         {
             ["CfgMagazines", _x, false, true] call _fnc_fill_right_Container;
-        } forEach (GVAR(virtualItems) select IDX_VIRT_UNIQUE_GRENADES);
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GRENADES);
     };
     // Explosives
     case IDC_buttonPut: {
         {
             ["CfgMagazines", _x, false] call _fnc_fill_right_Container;
-        } forEach (GVAR(virtualItems) select IDX_VIRT_EXPLOSIVES);
+        } forEach (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES);
 
         {
             ["CfgMagazines", _x, false, true] call _fnc_fill_right_Container;
-        } forEach (GVAR(virtualItems) select IDX_VIRT_UNIQUE_EXPLOSIVES);
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_EXPLOSIVES);
     };
     // Misc. items
     case IDC_buttonMisc: {
@@ -283,24 +283,34 @@ switch (_ctrlIDC) do {
 
         // "Regular" misc. items
         {
-            ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
-        } forEach ((GVAR(virtualItems) select IDX_VIRT_MISC_ITEMS) select {!(_x in _items)});
+            if !(_x in _items) then {
+                ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
+            };
+        } forEach (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS);
         // Unique items
         {
-            ["CfgWeapons", _x, true, true] call _fnc_fill_right_Container;
-        } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_MISC_ITEMS) select {!(_x in _items)});
+            if !(_x in _items) then {
+                ["CfgWeapons", _x, true, true] call _fnc_fill_right_Container;
+            };
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS);
         // Unique backpacks
         {
-            ["CfgVehicles", _x, false, true] call _fnc_fill_right_Container;
-        } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_BACKPACKS) select {!(_x in _items)});
+            if !(_x in _items) then {
+                ["CfgVehicles", _x, false, true] call _fnc_fill_right_Container;
+            };
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_BACKPACKS);
         // Unique goggles
         {
-            ["CfgGlasses", _x, false, true] call _fnc_fill_right_Container;
-        } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_GOGGLES) select {!(_x in _items)});
+            if !(_x in _items) then {
+                ["CfgGlasses", _x, false, true] call _fnc_fill_right_Container;
+            };
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES);
         // Unknown items
         {
-            ["CfgWeapons", _x, true, true, true] call _fnc_fill_right_Container;
-        } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) select {!(_x in _items)});
+            if !(_x in _items) then {
+                ["CfgWeapons", _x, true, true, true] call _fnc_fill_right_Container;
+            };
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS);
     };
     // Custom buttons
     default {
@@ -309,24 +319,34 @@ switch (_ctrlIDC) do {
         if (_items isNotEqualTo []) then {
             // "Regular" misc. items
             {
-                ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
-            } forEach ((GVAR(virtualItems) select IDX_VIRT_MISC_ITEMS) select {_x in _items});
+                if (_x in _items) then {
+                    ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
+                };
+            } forEach (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS);
             // Unique items
             {
-                ["CfgWeapons", _x, true, true] call _fnc_fill_right_Container;
-            } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_MISC_ITEMS) select {_x in _items});
+                if (_x in _items) then {
+                    ["CfgWeapons", _x, true, true] call _fnc_fill_right_Container;
+                };
+            } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS);
             // Unique backpacks
             {
-                ["CfgVehicles", _x, false, true] call _fnc_fill_right_Container;
-            } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_BACKPACKS) select {_x in _items});
+                if (_x in _items) then {
+                    ["CfgVehicles", _x, false, true] call _fnc_fill_right_Container;
+                };
+            } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_BACKPACKS);
             // Unique goggles
             {
-                ["CfgGlasses", _x, false, true] call _fnc_fill_right_Container;
-            } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_GOGGLES) select {_x in _items});
+                if (_x in _items) then {
+                    ["CfgGlasses", _x, false, true] call _fnc_fill_right_Container;
+                };
+            } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES);
             // Unknown items
             {
-                ["CfgWeapons", _x, true, true, true] call _fnc_fill_right_Container;
-            } forEach ((GVAR(virtualItems) select IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) select {_x in _items});
+                if (_x in _items) then {
+                    ["CfgWeapons", _x, true, true, true] call _fnc_fill_right_Container;
+                };
+            } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS);
         };
     };
 };

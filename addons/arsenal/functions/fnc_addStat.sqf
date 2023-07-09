@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: Alganthe
- * Add a stat to ACE Arsenal.
+ * Author: Alganthe, johnb43
+ * Adds a stat to ACE Arsenal.
  *
  * Arguments:
  * 0: Tabs to add the stat to <ARRAY of ARRAYS>
@@ -13,7 +13,7 @@
  * 4: Show bar / show text bools <ARRAY of BOOLS>
  *   4.0: Show bar <BOOL> (default: false)
  *   4.1: Show text <BOOL> (default: false)
- * 5: Array of statements <ARRAY of ARRAYS>
+ * 5: Array of statements <ARRAY of CODE>
  *   5.0: Bar code <CODE> (default: {})
  *   5.1: Text code <CODE> (default: {})
  *   5.2: Condition code <CODE> (default: {true})
@@ -26,7 +26,7 @@
  * [[[0, 1, 2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {
  *     params ["_statsArray", "_itemCfg"];
  *     getNumber (_itemCfg >> _statsArray select 0)
- * }, {true}]] call ACE_arsenal_fnc_addStat
+ * }, {true}]] call ace_arsenal_fnc_addStat
  *
  * Public: Yes
  */
@@ -57,34 +57,44 @@ _statements params [
     ["_condition", {true}, [{}]]
 ];
 
+// Compile stats from config (in case this is called before preInit)
 call FUNC(compileStats);
 
-private _returnArray = [];
+private _return = [];
+private _changes = [];
 
 private _fnc_addToTabs = {
-    params ["_tabsList", "_tabsToAddTo", "_sideString", "_returnIndex"];
+    params ["_tabsList", "_tabsToAddTo", "_tabSide"];
+
+    private _statName = "";
+    private _currentTab = [];
+    private _stat = [];
 
     {
-        private _currentTab = _tabsList select _x;
-        private _finalID = [_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "";
+        // Make stat name
+        _statName = [_class, _tabSide, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "";
+        _currentTab = _tabsList select _x;
 
-        if ({{(_x select 0) == _finalID} count _x > 0} count _currentTab > 0) then {
-            TRACE_1("A stat with this ID already exists", _finalID);
+        // Find if there is an entry with same ID
+        if (_currentTab findIf {_x findIf {_x select 0 == _statName} != -1} != -1) then {
+            TRACE_1("A stat with this ID already exists", _statName);
         } else {
-            private _arrayToSave = +_finalArray;
-            _arrayToSave set [0, _finalID];
-            _returnArray pushBack _finalID;
+            _stat = +_finalArray;
+            _stat set [0, _statName];
+
+            _index = _currentTab findIf {count _x < 5};
 
             // Add to existing page if there's enough space, otherwise create a new page
-            if ({count _x < 5} count _currentTab > 0) then {
-                {
-                    if (count _x < 5) exitWith {
-                        (_currentTab select _forEachIndex) append [_arrayToSave];
-                    };
-                } forEach _currentTab;
+            if (_index != -1) then {
+                (_currentTab select _index) pushBack _stat;
             } else {
-                _currentTab pushBack [_arrayToSave];
+                _currentTab pushBack [_stat];
             };
+
+            _return pushBack _statName;
+
+            // Store information, so that only tabs that were changed can be sorted again
+            _changes pushBackUnique [_x, _tabSide];
         };
     } forEach _tabsToAddTo;
 };
@@ -92,11 +102,55 @@ private _fnc_addToTabs = {
 private _finalArray = ["", _stats, _title, [_showBar, _showText], [_barStatement, _textStatement, _condition], _priority];
 
 if (_leftTabs isNotEqualTo []) then {
-    [GVAR(statsListLeftPanel), _leftTabs, "L", 0] call _fnc_addToTabs;
+    [GVAR(statsListLeftPanel), _leftTabs, "L"] call _fnc_addToTabs;
 };
 
 if (_rightTabs isNotEqualTo []) then {
-    [GVAR(statsListRightPanel), _rightTabs, "R", 1] call _fnc_addToTabs;
+    [GVAR(statsListRightPanel), _rightTabs, "R"] call _fnc_addToTabs;
 };
 
-_returnArray
+private _statsFlat = [];
+private _stats = [];
+private _tabToChange = [];
+
+// Ensure priority is kept
+{
+    _x params ["_tab", "_tabSide"];
+
+    _tabToChange = if (_tabSide == "R") then {
+        GVAR(statsListRightPanel)
+    } else {
+        GVAR(statsListLeftPanel)
+    };
+
+    _statsFlat = [];
+
+    // Get all stats of a tab into a single array
+    {
+        _statsFlat append _x;
+    } forEach (_tabToChange select _tab);
+
+    // Put priority up front
+    {
+        reverse _x;
+    } forEach _statsFlat;
+
+    // Sort numerically
+    _statsFlat sort false;
+
+    // Put it back at the rear
+    {
+        reverse _x;
+    } forEach _statsFlat;
+
+    _stats = [];
+
+    // Group stats into groups of 5
+    for "_index" from 0 to count _statsFlat - 1 step 5 do {
+        _stats pushBack (_statsFlat select [_index, _index + 5]);
+    };
+
+    _tabToChange set [_tab, _stats];
+} forEach _changes;
+
+_return

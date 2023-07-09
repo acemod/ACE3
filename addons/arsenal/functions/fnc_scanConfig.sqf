@@ -13,7 +13,16 @@
  * Public: No
 */
 
-private _configItems = EMPTY_VIRTUAL_ARSENAL;
+private _configItems = [
+    [IDX_VIRT_WEAPONS, createHashMapFromArray [[IDX_VIRT_PRIMARY_WEAPONS, createHashMap], [IDX_VIRT_SECONDARY_WEAPONS, createHashMap], [IDX_VIRT_HANDGUN_WEAPONS, createHashMap]]],
+    [IDX_VIRT_ATTACHMENTS, createHashMapFromArray [[IDX_VIRT_OPTICS_ATTACHMENTS, createHashMap], [IDX_VIRT_FLASHLIGHT_ATTACHMENTS, createHashMap], [IDX_VIRT_MUZZLE_ATTACHMENTS, createHashMap], [IDX_VIRT_BIPOD_ATTACHMENTS, createHashMap]]]
+];
+
+_configItems = createHashMapFromArray _configItems;
+
+for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+    _configItems set [_index, createHashMap];
+};
 
 // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
 // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
@@ -47,53 +56,53 @@ private _isMiscItem = false;
             {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}
         ): {
             // Convert type to array index
-            ((_configItems select IDX_VIRT_ATTACHMENTS) select ([TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD] find _itemInfoType)) pushBackUnique (_className call FUNC(baseWeapon));
+            ((_configItems get IDX_VIRT_ATTACHMENTS) get ([TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD] find _itemInfoType)) set [_className call FUNC(baseWeapon), nil];
         };
         // Headgear
         case (_itemInfoType == TYPE_HEADGEAR): {
-            (_configItems select IDX_VIRT_HEADGEAR) pushBackUnique _className;
+            (_configItems get IDX_VIRT_HEADGEAR) set [_className, nil];
         };
         // Uniform
         case (_itemInfoType == TYPE_UNIFORM): {
-            (_configItems select IDX_VIRT_UNIFORM) pushBackUnique _className;
+            (_configItems get IDX_VIRT_UNIFORM) set [_className, nil];
         };
         // Vest
         case (_itemInfoType == TYPE_VEST): {
-            (_configItems select IDX_VIRT_VEST) pushBackUnique _className;
+            (_configItems get IDX_VIRT_VEST) set [_className, nil];
         };
-        // NVgs
+        // NVGs
         case (_simulationType == "NVGoggles"): {
-            (_configItems select IDX_VIRT_NVG) pushBackUnique _className;
+            (_configItems get IDX_VIRT_NVG) set [_className, nil];
         };
         // Binos
         case (
             _simulationType == "Binocular" ||
             {_simulationType == "Weapon" && {getNumber (_x >> "type") == TYPE_BINOCULAR_AND_NVG}}
         ): {
-            (_configItems select IDX_VIRT_BINO) pushBackUnique _className;
+            (_configItems get IDX_VIRT_BINO) set [_className call FUNC(baseWeapon), nil];
         };
         // Map
         case (_simulationType == "ItemMap"): {
-            (_configItems select IDX_VIRT_MAP) pushBackUnique _className;
+            (_configItems get IDX_VIRT_MAP) set [_className, nil];
         };
         // Compass
         case (_simulationType == "ItemCompass"): {
-            (_configItems select IDX_VIRT_COMPASS) pushBackUnique _className;
+            (_configItems get IDX_VIRT_COMPASS) set [_className, nil];
         };
         // Radio
         case (_simulationType == "ItemRadio"): {
-            (_configItems select IDX_VIRT_RADIO) pushBackUnique _className;
+            (_configItems get IDX_VIRT_RADIO) set [_className, nil];
         };
         // Watch
         case (_simulationType == "ItemWatch"): {
-            (_configItems select IDX_VIRT_WATCH) pushBackUnique _className;
+            (_configItems get IDX_VIRT_WATCH) set [_className, nil];
         };
         // GPS and UAV terminals
         case (
             _simulationType == "ItemGPS" ||
             {_itemInfoType == TYPE_UAV_TERMINAL}
         ): {
-            (_configItems select IDX_VIRT_COMMS) pushBackUnique _className;
+            (_configItems get IDX_VIRT_COMMS) set [_className, nil];
         };
         // Weapon, at the bottom to avoid adding binos
         case (
@@ -102,13 +111,13 @@ private _isMiscItem = false;
         ): {
             switch (getNumber (_x >> "type")) do {
                 case TYPE_WEAPON_PRIMARY: {
-                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_PRIMARY_WEAPONS) pushBackUnique (_className call FUNC(baseWeapon));
+                    ((_configItems get IDX_VIRT_WEAPONS) get IDX_VIRT_PRIMARY_WEAPONS) set [_className call FUNC(baseWeapon), nil];
                 };
                 case TYPE_WEAPON_HANDGUN: {
-                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_HANDGUN_WEAPONS) pushBackUnique (_className call FUNC(baseWeapon));
+                    ((_configItems get IDX_VIRT_WEAPONS) get IDX_VIRT_HANDGUN_WEAPONS) set [_className call FUNC(baseWeapon), nil];
                 };
                 case TYPE_WEAPON_SECONDARY: {
-                    ((_configItems select IDX_VIRT_WEAPONS) select IDX_VIRT_SECONDARY_WEAPONS) pushBackUnique (_className call FUNC(baseWeapon));
+                    ((_configItems get IDX_VIRT_WEAPONS) get IDX_VIRT_SECONDARY_WEAPONS) set [_className call FUNC(baseWeapon), nil];
                 };
             };
         };
@@ -120,7 +129,7 @@ private _isMiscItem = false;
             {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
             {getText (_x >> "simulation") == "ItemMineDetector"}
         ): {
-            (_configItems select IDX_VIRT_MISC_ITEMS) pushBackUnique _className;
+            (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
         };
     };
 } forEach configProperties [_cfgWeapons, _filterFunction, true];
@@ -147,7 +156,7 @@ _putList = _putList apply {_x call EFUNC(common,getConfigName)};
 _grenadeList = _grenadeList - [""];
 _putList = _putList - [""];
 
-private _magazineMiscItems = [];
+private _magazineMiscItems = createHashMap;
 
 // Get all other grenades, explosives (and similar) and magazines
 {
@@ -156,23 +165,23 @@ private _magazineMiscItems = [];
     switch (true) do {
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
         case (getNumber (_x >> "ACE_isUnique") == 1): {
-            (_configItems select IDX_VIRT_MISC_ITEMS) pushBackUnique _className;
-            _magazineMiscItems pushBackUnique _className;
+            (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
+            _magazineMiscItems set [_className, nil];
         };
         // Grenades
         case (_className in _grenadeList): {
-            (_configItems select IDX_VIRT_GRENADES) pushBackUnique _className;
+            (_configItems get IDX_VIRT_GRENADES) set [_className, nil];
         };
         // Explosives
         case (_className in _putList): {
-            (_configItems select IDX_VIRT_EXPLOSIVES) pushBackUnique _className;
+            (_configItems get IDX_VIRT_EXPLOSIVES) set [_className, nil];
         };
         // Primary, handgun & secondary weapon magazines, and magazines that are forced with "ace_arsenal_hide = -1"
         case (
             getNumber (_x >> QGVAR(hide)) == -1 ||
             {getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW, TYPE_MAGAZINE_SECONDARY_AND_PUT, 1536, TYPE_MAGAZINE_HANDGUN_AND_GL, TYPE_MAGAZINE_MISSILE]}
         ): {
-            (_configItems select IDX_VIRT_ITEMS_ALL) pushBackUnique _className;
+            (_configItems get IDX_VIRT_ITEMS_ALL) set [_className, nil];
         };
     };
 } forEach configProperties [_cfgMagazines, _filterFunction, true];
@@ -180,13 +189,13 @@ private _magazineMiscItems = [];
 // Get all backpacks
 {
     if (getNumber (_x >> "isBackpack") == 1) then {
-        (_configItems select IDX_VIRT_BACKPACK) pushBackUnique (configName _x);
+        (_configItems get IDX_VIRT_BACKPACK) set [configName _x, nil];
     };
 } forEach configProperties [configFile >> "CfgVehicles", _filterFunction, true];
 
 // Get all facewear
 {
-    (_configItems select IDX_VIRT_GOGGLES) pushBackUnique (configName _x);
+    (_configItems get IDX_VIRT_GOGGLES) set [configName _x, nil];
 } forEach configProperties [configFile >> "CfgGlasses", _filterFunction, true];
 
 // Get all faces
@@ -200,8 +209,7 @@ private _faceCategory = "";
 
     {
         if (getNumber (_x >> "disabled") == 0 && {getText (_x >> "head") != ""} && {configName _x != "Default"}) then {
-            _dlcName = _x call EFUNC(common,getAddon);
-
+            _dlcName = _x call EFUNC(common,ggetAddon);
             _modPicture = "";
 
             if (_dlcName != "") then {
@@ -217,30 +225,44 @@ private _faceCategory = "";
 private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configfile >> "CfgVoice" >> "NoVoice"];
 
 // Get all insignia
-private _insigniaCache = "true" configClasses (configFile >> "CfgUnitInsignia");
+private _insigniaCache = "(if (isNumber (_x >> 'scope')) then {getNumber (_x >> 'scope')} else {2}) == 2" configClasses (configFile >> "CfgUnitInsignia");
 
 // Get all disposable launchers
 private _launchersConfig = configProperties [configFile >> "CBA_DisposableLaunchers"];
-private _launchers = [];
+private _launchers = createHashMap;
+private _launcher = "";
 
 // Get the loaded launchers (used launchers aren't necessary)
 {
-    _launchers pushBackUnique ((getArray _x) param [0, ""]);
+    // Convert to config case
+    _launcher = ((getArray _x) param [0, ""]) call EFUNC(common,getConfigName);
+
+    if (_launcher != "") then {
+        _launchers set [_launcher, nil];
+    };
 } forEach _launchersConfig;
 
-// Convert list to config case
-_launchers = _launchers apply {_x call EFUNC(common,getConfigName)};
+private _configItemsFlat = +_configItems;
+private _weapons = _configItemsFlat deleteAt IDX_VIRT_WEAPONS;
+private _attachments = _configItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
 
-// Remove invalid/non-existent entries
-_launchers = _launchers - [""];
+for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+    _configItemsFlat merge [_configItemsFlat deleteAt _index, true];
+};
+
+for "_index" from IDX_VIRT_PRIMARY_WEAPONS to IDX_VIRT_HANDGUN_WEAPONS do {
+    _configItemsFlat merge [_weapons deleteAt _index, true];
+};
+
+for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
+    _configItemsFlat merge [_attachments deleteAt _index, true];
+};
 
 // This contains config case entries only
 uiNamespace setVariable [QGVAR(configItems), _configItems];
-uiNamespace setVariable [QGVAR(configItemsFlat), flatten _configItems];
+uiNamespace setVariable [QGVAR(configItemsFlat), _configItemsFlat];
 uiNamespace setVariable [QGVAR(faceCache), _faceCache];
 uiNamespace setVariable [QGVAR(voiceCache), _voiceCache];
 uiNamespace setVariable [QGVAR(insigniaCache), _insigniaCache];
-uiNamespace setVariable [QGVAR(grenadeCache), _grenadeList];
-uiNamespace setVariable [QGVAR(putCache), _putList];
 uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), _launchers];
 uiNamespace setVariable [QGVAR(magazineMiscItems), _magazineMiscItems];

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: Brett Mayson
- * Add a custom sorting method.
+ * Author: Brett Mayson, johnb43
+ * Adds a custom sorting method.
  *
  * Arguments:
  * 0: Tabs to add sort to <ARRAY>
@@ -37,7 +37,8 @@ params [
     ["_class", "", [""]],
     ["_title", "", [""]],
     ["_statement", {}, [{}]],
-    ["_condition", {true}, [{}]]
+    ["_condition", {true}, [{}]],
+    ["_overwrite", false, [false]]
 ];
 
 _tabs params [
@@ -45,29 +46,46 @@ _tabs params [
     ["_rightTabs", [], [[]]]
 ];
 
+// Compile sorts from config (in case this is called before preInit)
 call FUNC(compileSorts);
 
-private _returnArray = [];
+private _return = [];
 
 private _fnc_addToTabs = {
-    params ["_tabsList", "_tabsToAddTo", "_sideString"];
+    params ["_tabsList", "_tabsToAddTo", "_tabSide"];
+
+    private _sort = [];
+    private _sortName = "";
+    private _currentTab = [];
 
     {
-        private _arrayToSave = +_finalArray;
-        _arrayToSave set [0, [_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString ""];
-        _returnArray pushBack (_arrayToSave select 0);
-        (_tabsList select _x) pushBack _arrayToSave;
+        // Copy title, statement and condition
+        _sort = +_finalArray;
+
+        // Make sort name
+        _sortName = [_class, _tabSide, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "";
+        _sort set [0, _sortName];
+
+        _currentTab = _tabsList select _x;
+
+        // Find if there is an entry with same ID
+        if ((_currentTab findIf {(_x select 0) == _sortName}) == -1) then {
+            _currentTab pushBack _sort;
+            _return pushBack _sortName;
+        } else {
+            TRACE_1("A sort with this ID already exists", _sortName);
+        };
     } forEach _tabsToAddTo;
 };
 
 private _finalArray = ["", _title, _statement, _condition];
 
 if (_leftTabs isNotEqualTo []) then {
-    [GVAR(sortListLeftPanel), _leftTabs, "L", 0] call _fnc_addToTabs;
+    [GVAR(sortListLeftPanel), _leftTabs, "L"] call _fnc_addToTabs;
 };
 
 if (_rightTabs isNotEqualTo []) then {
-    [GVAR(sortListRightPanel), _rightTabs, "R", 1] call _fnc_addToTabs;
+    [GVAR(sortListRightPanel), _rightTabs, "R"] call _fnc_addToTabs;
 };
 
-_returnArray
+_return

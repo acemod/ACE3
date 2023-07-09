@@ -67,7 +67,7 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
-                private _compatibleMagIndex = _compatibleMags findAny (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
+                private _compatibleMagIndex = _compatibleMags findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
                 // Remove all magazines from the previous weapon that aren't compatible with the new one
                 call _fnc_clearPreviousWepMags;
@@ -79,10 +79,8 @@ switch (GVAR(currentLeftPanel)) do {
 
                 // Remove linked items if unavailable
                 if (_linkedItems isNotEqualTo []) then {
-                    private _availableAttachments = flatten (GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS);
-
                     {
-                        if !(_x in _availableAttachments) then {
+                        if !(_x in GVAR(virtualItemsFlat)) then {
                             GVAR(center) removePrimaryWeaponItem _x;
                         };
                     } forEach _linkedItems;
@@ -135,7 +133,7 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
-                private _compatibleMagIndex = _compatibleMags findAny (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
+                private _compatibleMagIndex = _compatibleMags findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
                 // Remove all magazines from the previous weapon that aren't compatible with the new one
                 call _fnc_clearPreviousWepMags;
@@ -147,10 +145,8 @@ switch (GVAR(currentLeftPanel)) do {
 
                 // Remove linked items if unavailable
                 if (_linkedItems isNotEqualTo []) then {
-                    private _availableAttachments = flatten (GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS);
-
                     {
-                        if !(_x in _availableAttachments) then {
+                        if !(_x in GVAR(virtualItemsFlat)) then {
                             GVAR(center) removeHandgunItem _x;
                         };
                     } forEach _linkedItems;
@@ -189,6 +185,7 @@ switch (GVAR(currentLeftPanel)) do {
     // Secondary weapon
     case IDC_buttonSecondaryWeapon: {
         private _currentWeapon = GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON;
+        private _isDisposable = _item in (uiNamespace getVariable QGVAR(CBAdisposableLaunchers));
 
         // If nothing selected, remove secondary weapon and its magazines
         if (_item == "") then {
@@ -204,7 +201,7 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
-                private _compatibleMagIndex = _compatibleMags findAny (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
+                private _compatibleMagIndex = _compatibleMags findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
                 // Remove all magazines from the previous weapon that aren't compatible with the new one
                 call _fnc_clearPreviousWepMags;
@@ -216,10 +213,8 @@ switch (GVAR(currentLeftPanel)) do {
 
                 // Remove linked items if unavailable
                 if (_linkedItems isNotEqualTo []) then {
-                    private _availableAttachments = flatten (GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS);
-
                     {
-                        if !(_x in _availableAttachments) then {
+                        if !(_x in GVAR(virtualItemsFlat)) then {
                             GVAR(center) removeSecondaryWeaponItem _x;
                         };
                     } forEach _linkedItems;
@@ -246,7 +241,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_WEAPON
 
             // If item is a disposable launcher, delay a bit to show new compatible items
-            if (_item in (uiNamespace getVariable [QGVAR(CBAdisposableLaunchers), []])) then {
+            if (_isDisposable) then {
                 [{
                     _this call FUNC(fillRightPanel);
                 }, [_display, _selectCorrectPanelWeapon]] call CBA_fnc_execNextFrame;
@@ -255,11 +250,22 @@ switch (GVAR(currentLeftPanel)) do {
             };
         };
 
-        // Make unit switch to new item
-        call FUNC(showItem);
+        // If item is a disposable launcher, delay a bit to show new compatible items
+        if (_isDisposable) then {
+            [{
+                // Make unit switch to new item
+                call FUNC(showItem);
 
-        // Display new items's info on the bottom right
-        [_display, _control, _curSel, configFile >> "CfgWeapons" >> _item] call FUNC(itemInfo);
+                // Display new items's info on the bottom right
+                _this call FUNC(itemInfo);
+            }, [_display, _control, _curSel, configFile >> "CfgWeapons" >> _item]] call CBA_fnc_execNextFrame;
+        } else {
+            // Make unit switch to new item
+            call FUNC(showItem);
+
+            // Display new items's info on the bottom right
+            [_display, _control, _curSel, configFile >> "CfgWeapons" >> _item] call FUNC(itemInfo);
+        };
     };
     // Headgear
     case IDC_buttonHeadgear: {
@@ -301,7 +307,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _index = count _uniformItems - 1;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadUniform GVAR(center) > 1} do {
+                while {loadUniform GVAR(center) > 1 || {_index < 0}} do {
                     GVAR(center) removeItemFromUniform (_uniformItems select _index);
                     DEC(_index);
                 };
@@ -342,7 +348,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _index = count _vestItems - 1;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadVest GVAR(center) > 1} do {
+                while {loadVest GVAR(center) > 1 || {_index < 0}} do {
                     GVAR(center) removeItemFromVest (_vestItems select _index);
                     DEC(_index);
                 };
@@ -380,7 +386,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _index = count _backpackItems - 1;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadBackpack GVAR(center) > 1} do {
+                while {loadBackpack GVAR(center) > 1 || {_index < 0}} do {
                     GVAR(center) removeItemFromBackpack (_backpackItems select _index);
                     DEC(_index);
                 };
@@ -457,7 +463,7 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new binocular
                 private _compatibleMags = compatibleMagazines _item;
-                private _compatibleMagIndex = _compatibleMags findAny (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
+                private _compatibleMagIndex = _compatibleMags findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
                 // Remove all magazines from the previous binocular that aren't compatible with the new one
                 call _fnc_clearPreviousWepMags;
@@ -469,10 +475,8 @@ switch (GVAR(currentLeftPanel)) do {
 
                 // Remove linked items if unavailable
                 if (_linkedItems isNotEqualTo []) then {
-                    private _availableAttachments = flatten (GVAR(virtualItems) select IDX_VIRT_ATTACHMENTS);
-
                     {
-                        if !(_x in _availableAttachments) then {
+                        if !(_x in GVAR(virtualItemsFlat)) then {
                             GVAR(center) removeBinocularItem _x;
                         };
                     } forEach _linkedItems;
