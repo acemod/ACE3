@@ -307,7 +307,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _index = count _uniformItems - 1;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadUniform GVAR(center) > 1 || {_index < 0}} do {
+                while {loadUniform GVAR(center) > 1 && {_index >= 0}} do {
                     GVAR(center) removeItemFromUniform (_uniformItems select _index);
                     DEC(_index);
                 };
@@ -348,7 +348,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _index = count _vestItems - 1;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadVest GVAR(center) > 1 || {_index < 0}} do {
+                while {loadVest GVAR(center) > 1 && {_index >= 0}} do {
                     GVAR(center) removeItemFromVest (_vestItems select _index);
                     DEC(_index);
                 };
@@ -386,7 +386,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _index = count _backpackItems - 1;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadBackpack GVAR(center) > 1 || {_index < 0}} do {
+                while {loadBackpack GVAR(center) > 1 && {_index >= 0}} do {
                     GVAR(center) removeItemFromBackpack (_backpackItems select _index);
                     DEC(_index);
                 };
