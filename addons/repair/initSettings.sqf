@@ -57,7 +57,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
     QGVAR(repairDamageThreshold), "SLIDER",
     [LSTRING(repairDamageThreshold_name), LSTRING(repairDamageThreshold_description)],
     _category,
-    [0,1,0.6,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    [0, 1, 0.6, 1, true],
     true, // isGlobal
     {[QGVAR(repairDamageThreshold), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
@@ -66,7 +66,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
     QGVAR(repairDamageThreshold_engineer), "SLIDER",
     [LSTRING(repairDamageThreshold_Engineer_name), LSTRING(repairDamageThreshold_Engineer_description)],
     _category,
-    [0,1,0.4,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    [0, 1, 0.4, 1, true],
     true, // isGlobal
     {[QGVAR(repairDamageThreshold_engineer), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
@@ -105,6 +105,14 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
     [[0,1,2],[LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],2], // [values, titles, defaultIndex]
     true, // isGlobal
     {[QGVAR(engineerSetting_fullRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(timeCoefficientFullRepair), "SLIDER",
+    [LSTRING(timeCoefficientFullRepair_name), LSTRING(timeCoefficientFullRepair_description)],
+    _category,
+    [0,3,1.5,2],
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -153,6 +161,21 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
     {[QGVAR(autoShutOffEngineWhenStartingRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(miscRepairTime), "SLIDER",
+    [LSTRING(miscRepairTime_name), LSTRING(miscRepairTime_description)],
+    _category,
+    [0,60,15,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(wheelChangeTime), "SLIDER",
+    [LSTRING(wheelChangeTime_name), LSTRING(wheelChangeTime_description)],
+    _category,
+    [0,60,10,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(patchWheelTime),
