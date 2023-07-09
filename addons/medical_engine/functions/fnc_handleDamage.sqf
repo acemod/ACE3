@@ -53,14 +53,16 @@ if (
     0
 };
 
+// Faster than (vehicle _unit) != _unit, also handles dead units
+private _inVehicle = !(isNull objectParent _unit);
+
 // Crashing a vehicle doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // It does fire the EH multiple times, but this seems to scale with the intensity of the crash
-private _vehicle = vehicle _unit;
 if (
     EGVAR(medical,enableVehicleCrashes) &&
     {_hitPoint isEqualTo "#structural"} &&
     {_ammo isEqualTo ""} &&
-    {_vehicle != _unit} &&
+    {_inVehicle} &&
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
@@ -72,15 +74,23 @@ if (
 
 // Receiving explosive damage inside a vehicle doesn't trigger for each hitpoint
 // This is the case for mines, explosives, artillery, and catasthrophic vehicle explosions
-// Triggers twice, but that doesn't matter
+// Triggers twice, but that doesn't matter as damage is low
 if (
     _hitPoint isEqualTo "#structural" &&
-    {_vehicle != _unit} &&
+    {_inVehicle} &&
     {_ammo isNotEqualTo ""} &&
-    {GET_NUMBER(configFile >> "CfgAmmo" >> _ammo >> "explosive", 0) > 0}
+    {
+        private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
+        GET_NUMBER(_ammoCfg >> "explosive", 0) > 0 ||
+        {GET_NUMBER(_ammoCfg >> "indirectHit", 0) > 0}
+    }
 ) exitwith {
-    TRACE_6("Vehicle explosion",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _unit, "vehicleexplosion"]] call CBA_fnc_localEvent;
+    TRACE_6("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
+
+    _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
+    _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
+
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _shooter, "vehiclehit"]] call CBA_fnc_localEvent;
 
     0
 };

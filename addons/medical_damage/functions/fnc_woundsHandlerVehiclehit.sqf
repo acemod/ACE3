@@ -12,12 +12,12 @@
  * None
  *
  * Example:
- * [player, [[0.5, "#structural", 1.5]], "vehicleExplosion"] call ace_medical_damage_fnc_woundsHandlerVehicleexplosion
+ * [player, [[0.5, "#structural", 1.5]], "vehiclehit"] call ace_medical_damage_fnc_woundsHandlerVehiclehit
  *
  * Public: No
  */
 params ["_unit", "_allDamages", "_typeOfDamage"];
-TRACE_3("woundsHandlerVehicleExplosion",_unit,_allDamages,_typeOfDamage);
+TRACE_3("woundsHandlerVehiclehit",_unit,_allDamages,_typeOfDamage);
 
 // this should only trigger for hits to just structural
 if (count _allDamages > 1) exitWith {_this};
@@ -30,7 +30,7 @@ private _newDamages = [];
 
 // hitpoints are randomized, more damage means more wounds in different body parts
 for "_i" from 1 to (_damageToApply * 6) do {
-    _newDamages pushBack [_damageToApply, selectRandom ALL_BODY_PARTS, _damageToApply]
+    _newDamages pushBack [_damageToApply * 6, selectRandom ALL_BODY_PARTS, _damageToApply * 6]
 };
 
 TRACE_1("Vehicle explosion handled, passing damage", _newDamages);

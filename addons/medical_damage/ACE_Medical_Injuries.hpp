@@ -167,10 +167,11 @@ class ACE_Medical_Injuries {
                 painMultiplier = 0.9;
             };
         };
-        class vehicleexplosion: shell {
-            // vehicle explosions are usually caused by explosive damage and should behave similarly to shell damage
+        class vehiclehit: explosive {
+            // vehicle explosions are usually caused by explosive damage and should behave similarly
+            thresholds[] = {{6, 3}, {4.5, 2}, {2, 2}, {0.8, 1}, {0.2, 1}, {0, 0}};
             class woundHandlers: woundHandlers {
-                GVAR(vehiclehit) = QFUNC(woundsHandlerVehicleexplosion);
+                GVAR(vehiclehit) = QFUNC(woundsHandlerVehiclehit);
             };
         };
         class vehiclecrash {
