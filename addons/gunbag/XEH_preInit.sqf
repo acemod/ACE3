@@ -51,7 +51,9 @@ PREP_RECOMPILE_END;
         (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon), _gunbagWeapon, true];
 
         // Prevent the arsenal closed event from overwriting new info
-        GVAR(arsenalCache) = nil;
+        if (!isNil QGVAR(arsenalCache)) then {
+            GVAR(arsenalCache) = _gunbagWeapon;
+        };
     };
 }] call CBA_fnc_addEventHandler;
 
