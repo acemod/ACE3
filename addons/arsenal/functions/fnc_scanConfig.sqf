@@ -209,7 +209,7 @@ private _faceCategory = "";
 
     {
         if (getNumber (_x >> "disabled") == 0 && {getText (_x >> "head") != ""} && {configName _x != "Default"}) then {
-            _dlcName = _x call EFUNC(common,ggetAddon);
+            _dlcName = _x call EFUNC(common,getAddon);
             _modPicture = "";
 
             if (_dlcName != "") then {
