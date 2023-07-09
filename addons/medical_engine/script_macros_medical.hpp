@@ -99,8 +99,8 @@
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 
 // Empty wound data, used for some default return values
-// [classID, bodypartIndex, amountOf, bloodloss, damage]
-#define EMPTY_WOUND [-1, -1, 0, 0, 0]
+// [classID, amountOf, bloodloss, damage]
+#define EMPTY_WOUND [-1, 0, 0, 0]
 
 // Base time to bandage each wound category
 #define BANDAGE_TIME_S 4
@@ -173,9 +173,9 @@
 #define IS_BLEEDING(unit)           (GET_WOUND_BLEEDING(unit) > 0)
 #define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN, false])
 #define IS_UNCONSCIOUS(unit)        (unit getVariable [VAR_UNCON, false])
-#define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, []])
-#define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, []])
-#define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, []])
+#define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, createHashMap])
+#define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, createHashMap])
+#define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, createHashMap])
 #define GET_DAMAGE_THRESHOLD(unit)  (unit getVariable [QEGVAR(medical,damageThreshold), [EGVAR(medical,AIDamageThreshold),EGVAR(medical,playerDamageThreshold)] select (isPlayer unit)])
 
 // The following function calls are defined here just for consistency

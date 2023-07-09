@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Unit is medic <BOOL>
  *
  * Example:

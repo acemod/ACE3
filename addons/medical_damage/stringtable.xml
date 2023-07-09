@@ -694,6 +694,7 @@
             <Polish>Oparzenie</Polish>
             <Chinesesimp>热灼伤</Chinesesimp>
             <Korean>화상</Korean>
+            <Spanish>Quemadura térmica</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
             <English>Minor Thermal Burn</English>
@@ -704,6 +705,7 @@
             <Polish>Pomniejsze oparzenie</Polish>
             <Chinesesimp>轻微热灼伤</Chinesesimp>
             <Korean>작은 화상</Korean>
+            <Spanish>Quemadura térmica menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
             <English>Medium Thermal Burn</English>
@@ -714,6 +716,7 @@
             <Polish>Średnie oparzenie</Polish>
             <Chinesesimp>中度热灼伤</Chinesesimp>
             <Korean>꽤 큰 화상</Korean>
+            <Spanish>Quemadura térmica media</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
             <English>Major Thermal Burn</English>
@@ -724,6 +727,7 @@
             <Polish>Duże oparzenie</Polish>
             <Chinesesimp>重度热灼伤</Chinesesimp>
             <Korean>심각한 화상</Korean>
+            <Spanish>Quemadura térmica severa</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>

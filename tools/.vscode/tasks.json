@@ -72,7 +72,8 @@
                 "cwd": "${workspaceFolder}/tools"
             },
             "args": [
-                "make.py", "ci"
+                "make.py",
+                "ci"
             ],
             "group": {
                 "kind": "build",
@@ -80,13 +81,14 @@
             }
         },
         {
-            "label": "Build: Hemtt Release",
+            "label": "Build: Hemtt",
             "command": "hemtt.exe",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
             "args": [
-                "build", "--release", "--ci"
+                "build",
+                "-v"
             ],
             "group": "build"
         }
