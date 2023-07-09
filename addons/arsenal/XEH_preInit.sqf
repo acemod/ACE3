@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
+#define TOOLS_TAB_ICON "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"
+
 ADDON = false;
 
 PREP_RECOMPILE_START;

@@ -1,8 +1,6 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
-#define TOOLS_TAB_ICON "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"
-
 GVAR(currentBox) = objNull;
 
 GVAR(EH_ID) = 0;

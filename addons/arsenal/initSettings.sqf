@@ -29,7 +29,10 @@ private _category = localize LSTRING(settingCategory);
     "CHECKBOX",
     [LSTRING(toolsTab_displayName), LSTRING(toolsTab_description)],
     _category,
-    true
+    true,
+    false, // isGlobal
+    {[QGVAR(toolsTab), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
