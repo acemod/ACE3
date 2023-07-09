@@ -14,6 +14,7 @@ version:
 
 ## 1. Config Values
 
+The properties below control whether an item is considered a wirecutter. Worn items (vests and backpacks) can have "built-in" wirecutters with the `ace_logistics_wirecutter_hasWirecutter` property.
 ```cpp
 class CfgWeapons {
     class MyVest {
