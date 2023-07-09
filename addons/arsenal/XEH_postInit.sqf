@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
+#define TOOLS_TAB_ICON "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"
+
 GVAR(currentBox) = objNull;
 
 GVAR(EH_ID) = 0;
@@ -103,3 +105,7 @@ GVAR(lastSortRight) = "";
         [_unit, _insignia] call bis_fnc_setUnitInsignia;
     };
 }] call CBA_fnc_addEventHandler;
+
+if (GVAR(toolsTab)) then {
+    [uiNamespace getVariable [QGVAR(configItemsTools), []], localize LSTRING(toolsTab), TOOLS_TAB_ICON] call FUNC(addRightPanelButton);
+};

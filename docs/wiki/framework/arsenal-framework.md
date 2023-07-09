@@ -44,7 +44,7 @@ Examples:
 - `[_box, true] call ace_arsenal_fnc_initBox`
 - `[_box, false, false] call ace_arsenal_fnc_initBox`
 
-Passing an empty array or `false` will still add an interaction but no additional virtual items will be added.  
+Passing an empty array or `false` will still add an interaction but no additional virtual items will be added.
 Please note that at least one virtual item needs to be added otherwise ACE Arsenal will not open.
 
 ### 1.2 Opening an arsenal box manually
@@ -125,19 +125,20 @@ Built upon the function of section 2.1, this can be used to make an Arsenal only
 4. Paste the created array from your clipboard into the space where the items are listed using <kbd>Ctrl</kbd> + <kbd>V</kbd>. The array is created with brackets.
 
 Examples:
-- For a new box:  
+- For a new box:
   `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_initBox`
-- For an existing box:  
+- For an existing box:
   `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
 
 ## 3. Config entries
 
-ACE Arsenal has 2 new config entries for items:
+ACE Arsenal has 3 new config entries for items:
 
 - `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal or `-1` (forced show), for vehicle magazines.
 - `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout.
+- `ACE_isTool`: Items with this property set to `1` will be sorted to the Tools Tab, if it's enabled.
 
-Both of them are optional.
+All of them are optional.
 
 ## 4. Default loadouts
 
@@ -323,7 +324,7 @@ Return Value:
 - error: -1
 
 This function creates a sub category under misc items in the ACE Arsenal.
-Only items that are listed under 'Misc Items' are available for sub categories. 
+Only items that are listed under 'Misc Items' are available for sub categories.
 If the 'Override a specific button' argument is not used, the button will added at the bottom of the rest.
 
 Examples:

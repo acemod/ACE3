@@ -33,6 +33,8 @@ private _cargo = [
     [ ] // InventoryItems 17
 ];
 
+private _toolList = [];
+
 private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in variable for perf improvement
 
 {
@@ -42,6 +44,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
     private _hasItemInfo = isClass (_configItemInfo);
     private _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
     private _isMiscItem = _className isKindOf ["CBA_MiscItem", (_configCfgWeapons)];
+    private _isTool = getNumber (_x >> "ACE_isTool") isEqualTo 1;
 
     switch true do {
         /* Weapon acc */
@@ -121,8 +124,11 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
                 {_isMiscItem}) ||
                 {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
                 {(getText ( _x >> "simulation")) == "ItemMineDetector"}
-            ): {
+        ): {
             (_cargo select 17) pushBackUnique _className;
+            if (_isTool) then {
+                _toolList pushBackUnique _className;
+            };
         };
     };
 } foreach configProperties [_configCfgWeapons, "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
@@ -187,3 +193,4 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 uiNamespace setVariable [QGVAR(configItems), _cargo];
 uiNamespace setVariable [QGVAR(configItemsFlat), flatten _cargo];
 uiNamespace setVariable [QGVAR(magazineGroups), _magazineGroups];
+uiNamespace setVariable [QGVAR(configItemsTools), _toolList];
