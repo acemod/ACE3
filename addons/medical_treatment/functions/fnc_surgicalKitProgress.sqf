@@ -7,6 +7,7 @@
  * 0: Arguments <ARRAY>
  *   0: Medic (not used) <OBJECT>
  *   1: Patient <OBJECT>
+ *   2: Body Part <STRING>
  * 1: Elapsed Time <NUMBER>
  * 2: Total Time <NUMBER>
  *
@@ -20,35 +21,34 @@
  */
 
 params ["_args", "_elapsedTime", "_totalTime"];
-_args params ["_medic", "_patient"];
-
-private _stitchableWounds = _patient call FUNC(getStitchableWounds);
-
-// Stop treatment if there are no wounds that can be stitched remaining
-if (_stitchableWounds isEqualTo createHashMap) exitWith {false};
-
-// Not enough time has elapsed to stitch a wound
-if (_totalTime - _elapsedTime > ([_patient, _patient] call FUNC(getStitchTime)) - GVAR(woundStitchTime)) exitWith {true};
+_args params ["_medic", "_patient", "_bodyPart"];
 
 private _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);
-private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
+private _bandagedWoundsOnPart = _bandagedWounds get _bodyPart;
+
+// Stop treatment if there are no wounds that can be stitched remaining
+if (_bandagedWoundsOnPart isEqualTo []) exitWith {false};
+
+// Not enough time has elapsed to stitch a wound
+if (_totalTime - _elapsedTime > ([_patient, _patient, _bodyPart] call FUNC(getStitchTime)) - GVAR(woundStitchTime)) exitWith {true};
 
 // Remove the first stitchable wound from the bandaged wounds
-private _bodyPart = (keys _stitchableWounds) select 0;
-private _bandagedWoundsOnPart = _bandagedWounds get _bodyPart;
 private _treatedWound = _bandagedWoundsOnPart deleteAt (count _bandagedWoundsOnPart - 1);
 _treatedWound params ["_treatedID", "_treatedAmountOf", "", "_treatedDamageOf"];
 
 // Check if we need to add a new stitched wound or increase the amount of an existing one
-private _woundIndex = (_stitchedWounds getOrDefault [_bodyPart, []]) findIf {
+private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
+private _stitchedWoundsOnPart = _stitchedWounds getOrDefault [_bodyPart, [], true];
+
+private _woundIndex = _stitchedWoundsOnPart findIf {
     _x params ["_classID"];
     _classID == _treatedID
 };
 
 if (_woundIndex == -1) then {
-    (_stitchedWounds getOrDefault [_bodyPart, [], true]) pushBack _treatedWound;
+    _stitchedWoundsOnPart pushBack _treatedWound;
 } else {
-    private _wound = (_stitchedWounds get _bodyPart) select _woundIndex;
+    private _wound = _stitchedWoundsOnPart select _woundIndex;
     _wound set [1, (_wound select 1) + _treatedAmountOf];
 };
 
@@ -76,16 +76,14 @@ _patient setVariable [VAR_STITCHED_WOUNDS, _stitchedWounds, true];
 if (
     EGVAR(medical,limping) == 2
     && {_patient getVariable [QEGVAR(medical,isLimping), false]}
-    && {_bodyPart isEqualTo "leftleg" || _bodyPart isEqualTo "rightleg"}
+    && {_bodyPart in ["leftleg", "rightleg"]}
 ) then {
     TRACE_3("Updating damage effects",_patient,_bodyPart,local _patient);
     [QEGVAR(medical_engine,updateDamageEffects), _patient, _patient] call CBA_fnc_targetEvent;
 };
 
 // Consume a suture for the next wound if one exists, stop stitching if none are left
-if (GVAR(consumeSurgicalKit) == 2) then {
-    // Don't consume a suture if there are no more wounds to stitch
-    if (count (values _stitchableWounds) isEqualTo 1) exitWith {false};
+if (GVAR(consumeSurgicalKit) == 2 && {_bandagedWoundsOnPart isNotEqualTo []}) then {
     ([_medic, _patient, ["ACE_suture"]] call FUNC(useItem)) params ["_user"];
     !isNull _user
 } else {

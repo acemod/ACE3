@@ -13,6 +13,7 @@
     // Check if last hit point is our dummy.
     private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
     reverse _allHitPoints;
+    while {(_allHitPoints param [0, ""]) select [0,1] == "#"} do { WARNING_1("Ignoring Reflector hitpoint %1", _allHitPoints deleteAt 0); };
 
     if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
         private _config = configOf _unit;

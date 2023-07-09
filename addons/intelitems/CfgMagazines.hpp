@@ -6,11 +6,13 @@ class CfgMagazines {
         ACE_isUnique = 1;
         GVAR(intel) = 1;
         GVAR(control) = "";
+        scopeArsenal = 0;
     };
 
     class XGVAR(notepad): GVAR(base) {
         author = ECSTRING(common,ACETeam);
-        scope = 2; // Allows players to access from arsenal
+        scope = 2;
+        scopeArsenal = 2; // Allows players to access from arsenal
         displayName = CSTRING(Notepad_DisplayName);
         descriptionShort = CSTRING(Notepad_Description);
         picture = QPATHTOF(ui\notepad_ca.paa);
