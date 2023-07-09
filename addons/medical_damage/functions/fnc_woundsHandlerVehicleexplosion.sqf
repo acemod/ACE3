@@ -24,17 +24,14 @@ if (count _allDamages > 1) exitWith {_this};
 
 // damage can sometimes be negative (why?)
 // damage to structural is low unless it's a very large explosion, in which case it is typically >= 1
-private _damageToApply = sqrt (abs (_allDamages select 0 select 0));
+private _damageToApply = (abs (_allDamages select 0 select 0));
 
 private _newDamages = [];
 
-{
-    // randomize hitpoints, more hits for more damage
-    if (_damageToApply >= random 0.75) then {
-        private _damageToLimb = _damageToApply * random [0.75, 1, 1.5];
-        _newDamages pushBack [_damageToApply, _x, _damageToApply]
-    };
-} forEach ALL_BODY_PARTS;
+// hitpoints are randomized, more damage means more wounds in different body parts
+for "_i" from 1 to (_damageToApply * 6) do {
+    _newDamages pushBack [_damageToApply, selectRandom ALL_BODY_PARTS, _damageToApply]
+};
 
 TRACE_1("Vehicle explosion handled, passing damage", _newDamages);
 [_unit, _newDamages, _typeOfDamage] //return
