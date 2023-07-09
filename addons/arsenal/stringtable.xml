@@ -1487,7 +1487,7 @@
             <English>Enable the tools tab</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab_description">
-            <English>Shows the tools tab in the left panel, containing items like toolkits, mine detectors, flashlights, etc.\nItems sorted to the Tools tab won't be shown in Misc. Items.</English>
+            <English>Shows the tools tab in the right panel, containing items like toolkits, mine detectors, flashlights, etc.\nItems sorted to the Tools tab won't be shown in Misc. Items.</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
