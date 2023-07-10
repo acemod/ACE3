@@ -25,17 +25,6 @@ private _category = localize LSTRING(settingCategory);
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(toolsTab),
-    "CHECKBOX",
-    [LSTRING(toolsTab_displayName), LSTRING(toolsTab_description)],
-    _category,
-    true,
-    false, // isGlobal
-    {[QGVAR(toolsTab), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(enableIdentityTabs),
     "CHECKBOX",
     localize LSTRING(enableIdentityTabsSettings),
