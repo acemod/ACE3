@@ -4,7 +4,7 @@
  * Check if current player has Zeus access
  *
  * Arguments:
- * None.
+ * None
  *
  * Return Value:
  * Has Zeus <BOOL>
