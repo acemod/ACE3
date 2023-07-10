@@ -85,7 +85,7 @@ private _ehID = _target addEventHandler ["ContainerClosed", {
     private _owner = _container getVariable [QEGVAR(common,owner), objNull];
     [QGVAR(carryingContainerClosed), [_container, _owner], _owner] call CBA_fnc_targetEvent;
 }];
-_target setVariable [QGVAR(carryingContainerClosedEh), _ehID, true];
+_target setVariable [QGVAR(carryingContainerClosedEh), _ehID];
 
 [FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
 

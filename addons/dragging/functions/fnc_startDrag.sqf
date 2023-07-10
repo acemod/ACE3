@@ -94,7 +94,7 @@ private _ehID = _target addEventHandler ["ContainerClosed", {
     private _owner = _container getVariable [QEGVAR(common,owner), objNull];
     [QGVAR(draggingContainerClosed), [_container, _owner], _owner] call CBA_fnc_targetEvent;
 }];
-_target setVariable [QGVAR(draggingContainerClosedEh), _ehID, true];
+_target setVariable [QGVAR(draggingContainerClosedEh), _ehID];
 
 [FUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
 
