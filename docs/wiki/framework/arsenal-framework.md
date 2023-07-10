@@ -147,7 +147,7 @@ ACE Arsenal includes a "Tools" custom sub item category by default:
 
 - `ACE_isTool`: Items with this property set to `1` will be sorted to the Tools Tab.
 
-ACE Medical Treatment and ACE Field Rations also have their own custom sub categories:
+ACE Medical Treatment and ACE Field Rations also add their own custom sub categories, if they're present:
 
 - `ACE_isMedicalItem`: Items with this property set to `1` will be sorted to the ACE Medical Tab.
 - `ACE_isFieldRationItem`: Items with this property set to `1` will be sorted to the ACE Field Rations Tab.
@@ -358,4 +358,4 @@ private _buttonId = [["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1"], "Flashligh
 // now the category 'better flashlight' is replacing the category 'Flashlights' because it is set on the same button index
 [["ACE_Flashlight_XL50"], "better flashlight", "\path\to\a\pictureWithAFlashlight.paa", _buttonId] call ace_arsenal_fnc_addRightPanelButton
 ```
-Overriding a button will add its items back to Misc. Items.
+Overriding a button will add its items back to Misc. Items, if it's not being force-kept.
