@@ -1491,6 +1491,19 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
+            <Czech>Nástroje</Czech>
+            <German>Werkzeuge</German>
+            <Russian>Инструменты</Russian>
+            <Polish>Narzędzia</Polish>
+            <Italian>Strumenti</Italian>
+            <Spanish>Herramientas</Spanish>
+            <French>Outils</French>
+            <Chinese>工具</Chinese>
+            <Japanese>ツール</Japanese>
+            <Korean>도구</Korean>
+            <Portuguese>Ferramentas</Portuguese>
+            <Chinesesimp>工具</Chinesesimp>
+            <Turkish>Araçlar</Turkish>
         </Key>
     </Package>
 </Project>
