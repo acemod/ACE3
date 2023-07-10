@@ -33,8 +33,8 @@ if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
-// drop if the crate is destroyed OR (target moved away from carrier (weapon disasembled))
-if (!alive _target || {_unit distance _target > 10}) exitWith {
+// drop if the crate is destroyed OR target moved away from carrier (weapon disassembled) OR carrier starts limping
+if !(alive _target && {_unit distance _target <= 10} && {_unit getHitPointDamage "HitLegs" < 0.5}) exitWith {
     TRACE_2("dead/distance",_unit,_target);
     if ((_unit distance _target > 10) && {(CBA_missionTime - _startTime) < 1}) exitWith {
         //attachTo seems to have some kind of network delay and target can return an odd position during the first few frames,
