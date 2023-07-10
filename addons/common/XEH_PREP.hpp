@@ -105,6 +105,7 @@ PREP(handleModifierKey);
 PREP(handleModifierKeyUp);
 PREP(hasItem);
 PREP(hasMagazine);
+PREP(hasZeusAccess);
 PREP(headBugFix);
 PREP(hideUnit);
 PREP(interpolateFromArray);
