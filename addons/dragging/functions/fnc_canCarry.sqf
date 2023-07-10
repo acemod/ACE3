@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Dystopian
  * Check if unit can carry the object. Doesn't check weight.
  *
  * Arguments:
@@ -11,12 +11,14 @@
  * Can the unit carry the object? <BOOL>
  *
  * Example:
- * [player, cursorTarget] call ace_dragging_fnc_canCarry;
+ * [player, cursorTarget] call ace_dragging_fnc_canCarry
  *
  * Public: No
  */
 
 params ["_unit", "_target"];
+
+if !(alive _target && {_target getVariable [QGVAR(canCarry), false]} && {isNull objectParent _target}) exitWith {false};
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
@@ -24,7 +26,20 @@ if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 //The fireman carry animation does not slow down for injured legs, so you could carry and run
 if ((_unit getHitPointDamage "HitLegs") >= 0.5) exitWith {false};
 
-// a static weapon has to be empty for dragging (ignore UAV AI)
-if (((typeOf _target) isKindOf "StaticWeapon") && {{(getText (configOf _x >> "simulation")) != "UAVPilot"} count crew _target > 0}) exitWith {false};
+// Static weapons need to be empty for carrying (ignore UAV AI)
+if (_target isKindOf "StaticWeapon") exitWith {
+    crew _target findIf {getText (configOf _x >> "simulation") != "UAVPilot"} == -1
+};
 
-alive _target && {vehicle _target isEqualto _target} && {_target getVariable [QGVAR(canCarry), false]} && {animationState _target in ["", "unconscious"] || (_target getVariable ["ACE_isUnconscious", false]) || (_target isKindOf "CAManBase" && {(_target getHitPointDamage "HitLegs") > 0.4})}
+// Units need to be unconscious or be limping
+if (_target isKindOf "CAManBase") exitWith {
+    lifeState _target isEqualTo "INCAPACITATED"
+    || {_target getHitPointDamage "HitLegs" > 0.4}
+};
+
+// Check max items for WeaponHolders
+if (["WeaponHolder", "WeaponHolderSimulated"] findIf {_target isKindOf _x} != -1) exitWith {
+    (count (weaponCargo _target + magazineCargo _target + itemCargo _target)) <= MAX_DRAGGED_ITEMS
+};
+
+true // return
