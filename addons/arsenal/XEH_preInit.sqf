@@ -65,7 +65,7 @@ call FUNC(compileSorts);
 }] call CBA_fnc_addEventHandler;
 
 // Setup Tools tab
-[uiNamespace getVariable [QGVAR(configItemsTools), []], localize LSTRING(toolsTab), TOOLS_TAB_ICON] call FUNC(addRightPanelButton);
+[uiNamespace getVariable [QGVAR(configItemsTools), []], localize LSTRING(toolsTab), TOOLS_TAB_ICON, -1, true] call FUNC(addRightPanelButton);
 
 
 ADDON = true;

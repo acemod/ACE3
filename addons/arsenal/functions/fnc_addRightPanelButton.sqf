@@ -6,21 +6,23 @@
  * defined misc items.
  *
  * Arguments:
- * 0: items only misc items <ARRAY of STRING>
- * 1: tooltip <STRING> (default: "")
- * 2: picture path <STRING> (default: QPATHTOF(data\iconCustom.paa))
- * 3: override a specific button (0-9) <NUMBER> (default: -1)
+ * 0: Items only misc items <ARRAY of STRING>
+ * 1: Tooltip <STRING> (default: "")
+ * 2: Picture path <STRING> (default: QPATHTOF(data\iconCustom.paa))
+ * 3: Override a specific button (0-9) <NUMBER> (default: -1)
+ * 4: Move button if its position is overriden <BOOL> (default: false)
  *
  * Return Value:
- * successful: number of the slot (0-9); error: -1 <NUMBER>
+ * Successful: number of the slot (0-9) <NUMBER>
+ * Error: -1 <NUMBER>
  *
  * Example:
- * [["ACE_bloodIV_500", "ACE_Banana"], "MedicalStuff", "\z\ace\addons\arsenal\data\iconCustom.paa", 5] call ace_arsenal_fnc_addRightPanelButton
+ * [["ACE_bloodIV_500", "ACE_Banana"], "MedicalStuff", "\z\ace\addons\arsenal\data\iconCustom.paa", 5, false] call ace_arsenal_fnc_addRightPanelButton
  *
  * Public: Yes
 */
 
-params [["_items", [], [[]]], ["_tooltip", "", [""]], ["_picture", QPATHTOF(data\iconCustom.paa), [""]], ["_override", -1, [0]]];
+params [["_items", [], [[]]], ["_tooltip", "", [""]], ["_picture", QPATHTOF(data\iconCustom.paa), [""]], ["_override", -1, [0]], ["_keepIfOverriden", false, [false]]];
 
 if (isNil QGVAR(customRightPanelButtons)) then {
     GVAR(customRightPanelButtons) = [];
@@ -49,7 +51,16 @@ if (_position >= 0 && _position <= 9) then {
     };
 
     _return = _position;
-    GVAR(customRightPanelButtons) set [_position, [_items apply {toLower _x}, _picture, _tooltip]];
+
+    // check if we're overwriting a button that's being force-kept
+    private _currentButtonInPosition = GVAR(customRightPanelButtons) select _position;
+    if (!isNil "_currentButtonInPosition") then {
+        _currentButtonInPosition params ["_cbItems", "_cbPicture", "_cbTooltip", "_cbKeep"];
+        if (_cbKeep) then {
+            [{_this call FUNC(addRightPanelButton)}, [_cbItems, _cbTooltip, _cbPicture, -1, _cbKeep]] call CBA_fnc_execNextFrame;
+        };
+    };
+    GVAR(customRightPanelButtons) set [_position, [_items apply {toLower _x}, _picture, _tooltip, _keepIfOverriden]];
 };
 
 _return

@@ -132,13 +132,27 @@ Examples:
 
 ## 3. Config entries
 
-ACE Arsenal has 3 new config entries for items:
+### 3.1 New config entries
+
+ACE Arsenal has 2 new config entries for items:
 
 - `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal or `-1` (forced show), for vehicle magazines.
 - `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout.
-- `ACE_isTool`: Items with this property set to `1` will be sorted to the Tools Tab, if it's enabled.
 
-All of them are optional.
+Both of them are optional.
+
+### 3.2 Adding items to ACE's custom sub item categories
+
+ACE Arsenal includes a "Tools" custom sub item category by default:
+
+- `ACE_isTool`: Items with this property set to `1` will be sorted to the Tools Tab.
+
+ACE Medical Treatment and ACE Field Rations also have their own custom sub categories:
+
+- `ACE_isMedicalItem`: Items with this property set to `1` will be sorted to the ACE Medical Tab.
+- `ACE_isFieldRationItem`: Items with this property set to `1` will be sorted to the ACE Field Rations Tab.
+
+Only items in `CfgWeapons` will be checked for these properties.
 
 ## 4. Default loadouts
 
@@ -296,10 +310,10 @@ All are local.
 | ace_arsenal_onLoadoutLoad | loadout data (ARRAY), loadout name (STRING) |
 | ace_arsenal_onLoadoutLoadExtended | CBA extended loadout data (ARRAY), loadout name (STRING) |
 | ace_arsenal_onLoadoutDelete | loadout name (STRING) |
-|  ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL),, [loadout author (STRING), loadout name (STRING), loadout data (ARRAY)]  |
+|  ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL), [loadout author (STRING), loadout name (STRING), loadout data (ARRAY)]  |
 |  ace_arsenal_loadoutUnshared | Loadouts list listnBox control (CONTROL), loadout name (STRING) |
 | ace_arsenal_cargoChanged | Arsenal display (DISPLAY), item (STRING), add or remove (BOOL), shiftState (BOOL) |
-| ace_arsenal_loadoutImported | Arsenal display (DISPLAY), (import list (BOOL) |
+| ace_arsenal_loadoutImported | Arsenal display (DISPLAY), import list (BOOL) |
 | ace_arsenal_loadoutExported | Arsenal display (DISPLAY), export list (BOOL) |
 | ace_arsenal_loadoutsDisplayOpened | loadouts screen display (DISPLAY) | 3.12.3 |
 | ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
@@ -318,14 +332,16 @@ All are local.
 1  | Tooltip | String | Optional (default: `""`)
 2  | Picture path | String | Optional (default: `"\z\ace\addons\arsenal\data\iconCustom.paa"`)
 3  | Override a specific button | Number | Optional (default: `-1`)
+4  | Keep button if overriden | Bool | Optional (default: `false`)
 
 Return Value:
 - successful: number of the slot (0-9)
 - error: -1
 
-This function creates a sub category under misc items in the ACE Arsenal.
-Only items that are listed under 'Misc Items' are available for sub categories.
+This function creates a sub category just above misc items in the ACE Arsenal.
+Only items that are listed under 'Misc. Items' or other sub categories are available for sub categories.
 If the 'Override a specific button' argument is not used, the button will added at the bottom of the rest.
+If the 'Keep button if overriden' argument is used, the button will be moved to the bottom of the rest if its position is overriden.
 
 Examples:
 - `[["ACE_bloodIV_500", "ACE_fieldDressing"], "MedicalStuff"] call ace_arsenal_fnc_addRightPanelButton`
@@ -342,3 +358,4 @@ private _buttonId = [["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1"], "Flashligh
 // now the category 'better flashlight' is replacing the category 'Flashlights' because it is set on the same button index
 [["ACE_Flashlight_XL50"], "better flashlight", "\path\to\a\pictureWithAFlashlight.paa", _buttonId] call ace_arsenal_fnc_addRightPanelButton
 ```
+Overriding a button will add its items back to Misc. Items.
