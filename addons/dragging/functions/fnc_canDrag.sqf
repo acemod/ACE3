@@ -27,10 +27,10 @@ if (_target isKindOf "StaticWeapon") exitWith {
     crew _target findIf {getText (configOf _x >> "simulation") != "UAVPilot"} == -1
 };
 
-// Units need to be unconscious or be limping
+// Units need to be unconscious or limping
 if (_target isKindOf "CAManBase") exitWith {
     lifeState _target isEqualTo "INCAPACITATED"
-    || {_target getHitPointDamage "HitLegs" > 0.4}
+    || {_target getHitPointDamage "HitLegs" >= 0.5}
 };
 
 // Check max items for WeaponHolders
