@@ -13,7 +13,6 @@
  * call ace_common_fnc_hasZeusAccess
  *
  * Public: Yes
- *
  */
 
 // Use of player is intentional
