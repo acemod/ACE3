@@ -139,7 +139,8 @@ ACE Arsenal has 2 new config entries for items:
 
 Both of them are optional.
 
-- `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in "CfgWeapons".
+- `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in `CfgWeapons`.
+- `ACE_isUnique`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
 
 ## 4. Default loadouts
 
