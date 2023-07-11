@@ -135,7 +135,7 @@ Examples:
 ACE Arsenal has 2 new config entries for items:
 
 - `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal or `-1` (forced show), for magazines.
-- `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout and displaying it in the arsenal. Supports configs in "CfgWeapons" (e.g. Maps, Compasses, Watches, GPS / UAV Terminals, Radios, NVGs, Uniforms, Vests - however no Primary, Secondary, Handgun, Launcher weapons or weapon attachments are supported), "CfgMagazines" (any magazine) and "CfgVehicles" (e.g. Backpacks). Item that replaces must be of the same config type as the original item.
+- `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout and displaying it in the arsenal. Supports configs in `CfgWeapons` (e.g. Maps, Compasses, Watches, GPS / UAV Terminals, Radios, NVGs, Uniforms, Vests - however no Primary, Secondary, Handgun, Launcher weapons or weapon attachments are supported), `CfgMagazines` (any magazine) and `CfgVehicles` (e.g. Backpacks). Item that replaces must be of the same config type as the original item.
 
 Both of them are optional.
 

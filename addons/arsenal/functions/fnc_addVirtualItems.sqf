@@ -72,13 +72,11 @@ if (_items isEqualType true) then {
     // Remove any invalid/non-existing items
     _items = _items - [""];
 
+    private _configItems = uiNamespace getVariable QGVAR(configItems);
     private _configItemsFlat = uiNamespace getVariable QGVAR(configItemsFlat);
 
     // Remove any items not found by the arsenal
     _items = _items select {_x in _configItemsFlat};
-
-    private _magazineMiscItems = uiNamespace getVariable QGVAR(magazineMiscItems);
-    private _configItems = uiNamespace getVariable QGVAR(configItems);
 
     // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
     // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
