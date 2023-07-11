@@ -40,6 +40,11 @@ if (_items isEqualType true) then {
     // Remove any invalid/non-existing items
     _items = _items - [""];
 
+    private _configItemsFlat = uiNamespace getVariable QGVAR(configItemsFlat);
+
+    // Convert all items to their baseWeapon
+    _items = _items apply {if (_x in _configItemsFlat) then {_x} else {_x call FUNC(baseWeapon)}};
+
     // Remove items from lists
     {
         switch (true) do {

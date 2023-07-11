@@ -75,6 +75,9 @@ if (_items isEqualType true) then {
     private _configItems = uiNamespace getVariable QGVAR(configItems);
     private _configItemsFlat = uiNamespace getVariable QGVAR(configItemsFlat);
 
+    // Convert all items to their baseWeapon
+    _items = _items apply {if (_x in _configItemsFlat) then {_x} else {_x call FUNC(baseWeapon)}};
+
     // Remove any items not found by the arsenal
     _items = _items select {_x in _configItemsFlat};
 
@@ -84,27 +87,27 @@ if (_items isEqualType true) then {
         switch (true) do {
             // Weapons
             case (_x in ((_configItems get IDX_VIRT_WEAPONS) get IDX_VIRT_PRIMARY_WEAPONS)): {
-                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_PRIMARY_WEAPONS) set [_x call FUNC(baseWeapon), nil];
+                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_PRIMARY_WEAPONS) set [_x, nil];
             };
             case (_x in ((_configItems get IDX_VIRT_WEAPONS) get IDX_VIRT_HANDGUN_WEAPONS)): {
-                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_HANDGUN_WEAPONS) set [_x call FUNC(baseWeapon), nil];
+                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_HANDGUN_WEAPONS) set [_x, nil];
             };
             case (_x in ((_configItems get IDX_VIRT_WEAPONS) get IDX_VIRT_SECONDARY_WEAPONS)): {
-                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_SECONDARY_WEAPONS) set [_x call FUNC(baseWeapon), nil];
+                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_SECONDARY_WEAPONS) set [_x, nil];
             };
 
             // Weapon attachments
             case (_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS)): {
-                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS) set [_x call FUNC(baseWeapon), nil];
+                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS) set [_x, nil];
             };
             case (_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS)): {
-                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS) set [_x call FUNC(baseWeapon), nil];
+                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS) set [_x, nil];
             };
             case (_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS)): {
-                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS) set [_x call FUNC(baseWeapon), nil];
+                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS) set [_x, nil];
             };
             case (_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS)): {
-                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS) set [_x call FUNC(baseWeapon), nil];
+                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS) set [_x, nil];
             };
 
             // Other
