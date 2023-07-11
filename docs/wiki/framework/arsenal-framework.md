@@ -141,13 +141,13 @@ ACE Arsenal has 2 new config entries for items:
 
 Both of them are optional.
 
-### 3.2 Adding items to ACE's custom sub item categories
+### 3.2 Adding items to ACE's sub-categories
 
-ACE Arsenal includes a "Tools" custom sub item category by default:
+ACE Arsenal includes a "Tools" sub-category by default:
 
 - `ACE_isTool`: Items with this property set to `1` will be sorted to the Tools Tab.
 
-ACE Medical Treatment and ACE Field Rations also add their own custom sub categories, if they're present:
+ACE Medical Treatment and ACE Field Rations also add their own sub-categories, if they're present:
 
 - `ACE_isMedicalItem`: Items with this property set to `1` will be sorted to the ACE Medical Tab.
 - `ACE_isFieldRationItem`: Items with this property set to `1` will be sorted to the ACE Field Rations Tab.
@@ -320,9 +320,9 @@ All are local.
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 
-## 7. Custom sub item categories
+## 7. Custom sub-categories
 
-### 7.1 Adding a sub item category
+### 7.1 Adding a sub-category
 
 `ace_arsenal_fnc_addRightPanelButton`
 
@@ -332,16 +332,16 @@ All are local.
 1  | Tooltip | String | Optional (default: `""`)
 2  | Picture path | String | Optional (default: `"\z\ace\addons\arsenal\data\iconCustom.paa"`)
 3  | Override a specific button | Number | Optional (default: `-1`)
-4  | Keep button if overriden | Bool | Optional (default: `false`)
+4  | Move button on overwrite | Bool | Optional (default: `false`)
 
 Return Value:
-- successful: number of the slot (0-9)
-- error: -1
+- Successful: number of the slot (0-9)
+- Error: -1
 
-This function creates a sub category just above misc items in the ACE Arsenal.
-Only items that are listed under 'Misc. Items' or other sub categories are available for sub categories.
+This function creates a sub-category just above misc items in the ACE Arsenal.
+Only items that are listed under 'Misc. Items' or other sub-categories are available for sub-categories.
 If the 'Override a specific button' argument is not used, the button will added at the bottom of the rest.
-If the 'Keep button if overriden' argument is used, the button will be moved to the bottom of the rest if its position is overriden.
+If the 'Move button on overwrite' argument is used, the button will be moved to the bottom of the rest if its position is overriden.
 
 Examples:
 - `[["ACE_bloodIV_500", "ACE_fieldDressing"], "MedicalStuff"] call ace_arsenal_fnc_addRightPanelButton`
@@ -358,4 +358,4 @@ private _buttonId = [["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1"], "Flashligh
 // now the category 'better flashlight' is replacing the category 'Flashlights' because it is set on the same button index
 [["ACE_Flashlight_XL50"], "better flashlight", "\path\to\a\pictureWithAFlashlight.paa", _buttonId] call ace_arsenal_fnc_addRightPanelButton
 ```
-Overriding a button will add its items back to Misc. Items, if it's not being force-kept.
+If an overwritten button is not moved, its items will be added back to Misc. Items.
