@@ -2,7 +2,7 @@
 #include "..\defines.hpp"
 /*
  * Author: Brett Mayson
- * Refreshes the arsenal to show extenal changes
+ * Refreshes the arsenal to show external changes
  *
  * Return Value:
  * None
