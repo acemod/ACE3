@@ -7,7 +7,7 @@
  * Arguments:
  * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
- * 2: Magainze Unit Can Carry <STRING>
+ * 2: Magazine Unit Can Carry <STRING>
  * 3: Magazine To Remove From Static <STRING>
  * 4: Unit or container to unload to <OBJECT>
  *
