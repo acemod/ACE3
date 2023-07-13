@@ -7,9 +7,8 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Target <OBJECT, STRING or POSITION AGL>
- * 2: Spread in meters
- * 3: Magazine Type <STRING>
- * 4: Rounds to fire <NUMBER>
+ * 2: Magazine Type <STRING>
+ * 3: Rounds to fire <NUMBER>
  *
  * Return Value:
  * Barrage Started <BOOL>
@@ -19,7 +18,7 @@
  *
  * Public: Yes
  */
-params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull, ""], 3], ["_spread", 0, [0]], ["_magazine", "", [""]], ["_rounds", 0, [0]]];
+params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull, ""], 3], ["_magazine", "", [""]], ["_rounds", 0, [0]]];
 
 if (isNull _vehicle || {_rounds isEqualTo 0} || {_magazine isEqualTo ""} || {!(_vehicle turretLocal [0])}) exitWith {false};
 
@@ -57,7 +56,7 @@ if (_usingCSW) then {
     if !(_vehicleMagazine in (getArtilleryAmmo [_vehicle])) then {
         // reload to forced mag
         // TODO: use public functions for this
-        [_vehicle, gunner _vehicle, "", true] call EFUNC(csw,ai_reload);
+        [_vehicle, gunner _vehicle, true] call EFUNC(csw,ai_reload);
     };
 };
 
@@ -65,18 +64,18 @@ if (_usingCSW) then {
 _vehicleMagazine = configName (configFile >> "CfgMagazines" >> _vehicleMagazine);
 if (_vehicleMagazine isEqualTo "") exitWith {false};
 
-if ((_vehicle getArtilleryETA [_position, _vehicleMagazine]) isEqualTo -1) exitWith {false};
+if !(_position inRangeOfArtillery [[_vehicle], _vehicleMagazine]) exitWith {false};
 
 _vehicle doWatch _position;
 
 [{
-    params ["_vehicle", "_position", "_spread", "_magazine", "_roundsLeft", "_lastFired"];
+    params ["_vehicle", "_position", "_magazine", "_roundsLeft", "_lastFired"];
     if (CBA_missionTime - _lastFired > 30) exitWith {true};
 
     if (unitReady _vehicle) then {
-        _vehicle doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _magazine, 1];
-        _this set [4, _roundsLeft - 1];
-        _this set [5, CBA_missionTime];
+        _vehicle doArtilleryFire [_position, _magazine, 1];
+        _this set [3, _roundsLeft - 1];
+        _this set [4, CBA_missionTime];
     };
 
     if (_rounds <= 0 || {!alive _vehicle} || {!alive (gunner _vehicle)} || {objectParent (gunner _vehicle) isNotEqualTo _vehicle}) exitWith {
@@ -85,6 +84,6 @@ _vehicle doWatch _position;
         true
     };
     false
-}, {}, [_vehicle, _position, _spread, _vehicleMagazine, _rounds, CBA_missionTime]] call CBA_fnc_waitUntilAndExecute;
+}, {}, [_vehicle, _position, _vehicleMagazine, _rounds, CBA_missionTime]] call CBA_fnc_waitUntilAndExecute;
 
 true
