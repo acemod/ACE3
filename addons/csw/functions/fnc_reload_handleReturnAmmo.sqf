@@ -56,8 +56,7 @@ if ((maxLoad _container) isEqualTo 0) then {
 
 if (isNull _container) then {
     // Create ammo storage container
-    private _weaponRelPos = _unloadTo getRelPos RELATIVE_DIRECTION(270);
-    _weaponRelPos set [2, ((getPosATL _unloadTo) select 2) + 0.05];
+    private _weaponRelPos = (_unloadTo getRelPos RELATIVE_DIRECTION(270)) vectorAdd [0, 0, 0.05];
     _container = createVehicle [["GroundWeaponHolder", QGVAR(ammo_holder)] select GVAR(handleExtraMagazinesType), [0, 0, 0], [], 0, "CAN_COLLIDE"];
     _unloadTo setVariable [QGVAR(container), _container, true];
     _container setDir random [0, 180, 360];

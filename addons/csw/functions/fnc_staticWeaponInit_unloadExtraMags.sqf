@@ -80,7 +80,30 @@ if (_vehicle getVariable [QGVAR(secondaryWeaponMagazine), ""] isNotEqualTo "") t
 
 if (_storeExtraMagazines) then {
     TRACE_1("saving extra mags to container",_containerMagazineCount);
+
+    // Create container from config if available, use setting if not
+    private _containerType = getText (configOf _vehicle >> QUOTE(ADDON) >> "container");
+    if (_containerType isNotEqualTo "") then {
+        private _relPos = (_vehicle getRelPos RELATIVE_DIRECTION(270)) vectorAdd [0, 0, 0.05];
+        _container = createVehicle [_containerType, [0, 0, 0], [], 0, "CAN_COLLIDE"];
+        _vehicle setVariable [QGVAR(container), _container, true];
+        _container setDir random [0, 180, 360];
+        _container setPosATL _relPos;
+        if ((_relPos select 2) < 0.5) then {
+            _container setVectorUp (surfaceNormal _relPos);
+        };
+
+        // empty container inventory
+        // TODO: make a function in common?
+        clearItemCargoGlobal _container;
+        clearWeaponCargoGlobal _container;
+        clearMagazineCargoGlobal _container;
+        clearBackpackCargoGlobal _container;
+    } else {
+        _container = _vehicle;
+    };
+
     {
-        [_vehicle, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
+        [_container, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
     } forEach _containerMagazineClassnames;
 };
