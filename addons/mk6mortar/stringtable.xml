@@ -233,7 +233,7 @@
             <Czech>Používat ruční manipulaci s municí</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
-            <English>Converts mortar magazines into their single round versions, requiring individual rounds to be loaded by the crew.\nOverrides Crew Served Weapon's Ammo Handling.</English>
+            <English>Converts mortar magazines into their single round versions, requiring individual rounds to be loaded by the crew.\nOverrides Crew Served Weapon's Advanced Assembly and Ammo Handling if disabled.</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
