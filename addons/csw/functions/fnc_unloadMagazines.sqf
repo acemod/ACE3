@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: CSW <OBJECT> (default: objNull)
- * 1: Turret Path <ARRAY> (default: [0], gunner turret)
+ * 1: Turret Path <ARRAY> or <BOOL> to unload all turrets (default: [0], gunner turret)
  * 2: Return removed magazines <BOOL> (default: true)
  *
  * Return Value:
@@ -16,7 +16,7 @@
  *
  * Public: Yes
  */
-params [["_vehicle", objNull, [objNull]], ["_turretPath", [0], [0]], ["_returnMags", true, [true]]];
+params [["_vehicle", objNull, [objNull]], ["_turretPath", [0], [[0], true]], ["_returnMags", true, [true]]];
 
 if (isNull _vehicle) exitWith {};
 
@@ -26,7 +26,7 @@ private _containerMagazineCount = [];
 
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
-    if (_xTurret isNotEqualTo _turretPath) then {continue};
+    if (_xTurret isNotEqualTo _turretPath && {_turretPath isNotEqualTo true}) then {continue};
     private _carryMag = _xMag call FUNC(getCarryMagazine);
     if (_carryMag != "") then {
         _magsToRemove pushBackUnique [_xMag, _xTurret];
@@ -37,7 +37,7 @@ private _containerMagazineCount = [];
         };
         _containerMagazineCount set [_index, (_containerMagazineCount select _index) + _xAmmo];
     };
-} forEach (_vehicle magazinesAllTurrets _vehicle);
+} forEach (magazinesAllTurrets _vehicle);
 
 {
     _vehicle removeMagazinesTurret _x;
