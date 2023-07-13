@@ -21,9 +21,13 @@ if (_loadableMagazines isEqualTo []) exitWith {TRACE_1("could not find reloadabl
 
 // API, to be used by artillerytables
 private _forcedMag = _vehicle getVariable [QGVAR(forcedMag), ""];
+private _turretIndex = [_gunner] call EFUNC(common,getTurretIndex);
+if (_turretIndex isEqualTo []) then {
+    _turretIndex = [0];
+};
 
 // If this is called while CSW has ammo, unload mags in gunner's turret
-if (someAmmo _vehicle) then {[_vehicle, [_gunner] call EFUNC(common,getTurretIndex)] call FUNC(unloadMagazines)};
+if (someAmmo _vehicle) then {[_vehicle, _turretIndex] call FUNC(unloadMagazines)};
 
 private _bestAmmo = 0;
 private _magazineInfo = [];
