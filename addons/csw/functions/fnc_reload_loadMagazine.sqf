@@ -30,7 +30,7 @@ private _onFinish = {
     (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit", "_ammo"];
     TRACE_6("load progressBar finish",_vehicle,_turret,_carryMag,_magSource,_unit,_ammo);
 
-    ([_vehicle, _turret, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) params ["", "", "_neededAmmo", ""];
+    ([_vehicle, _turret, _carryMag] call FUNC(reload_canLoadMagazine)) params ["", "", "_neededAmmo", ""];
     if (_neededAmmo <= 0) exitWith { ERROR_1("Can't load ammo - %1",_this); };
 
     [_magSource, _carryMag, _ammo] call EFUNC(common,removeSpecificMagazine);

@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror, LinkIsGrim
- * Gets nearby magazines that can be loaded in the static weapon
+ * Gets nearby magazines that can be loaded into the CSW
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Unit <OBJECT>
  * 2: AI reloading, skip turret checks <BOOL> (default: false)
  *

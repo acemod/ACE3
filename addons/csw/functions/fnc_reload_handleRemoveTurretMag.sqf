@@ -5,7 +5,7 @@
  * Called from a global event but only runs where turret is local
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Magainze Unit Can Carry <STRING>
  * 3: Magazine To Remove From Static <STRING>

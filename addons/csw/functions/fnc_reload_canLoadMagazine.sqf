@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror &Dani (TCVM)
- * Tests if unit can load a magazine into a static weapon.
+ * Tests if unit can load a magazine into a CSW.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Carryable Magazine <STRING>
  * 3: Supplier <OBJECT> (default: objNull)

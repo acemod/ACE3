@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets sub actions for what the player can unload from the static weapon
+ * Gets sub actions for what the player can unload from the CSW
  *
  * Arguments:
  * 0: Target <OBJECT>

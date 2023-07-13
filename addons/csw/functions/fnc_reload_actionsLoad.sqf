@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets sub actions for what the player can load into the static weapon
+ * Gets sub actions for what the player can load into the CSW
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: Target <OBJECT>
  * 1: Player <OBJECT>
  *
  * Return Value:

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror, modified by Grim
+ * Author: PabstMirror, LinkIsGrim
  * Handles AI reloading
  *
  * Arguments:

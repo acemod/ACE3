@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Gets available ammo sources for loading a static weapon
+ * Gets available ammo sources for loading a CSW
  *
  * Arguments:
  * 0: Unit attempting to load <OBJECT>
