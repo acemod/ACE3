@@ -33,8 +33,8 @@ private _filterFunction = toString {
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
 private _className = "";
-private _configItemInfo = "";
 private _simulationType = "";
+private _configItemInfo = "";
 private _hasItemInfo = false;
 private _itemInfoType = 0;
 private _isMiscItem = false;
@@ -124,10 +124,10 @@ private _isMiscItem = false;
         // Misc. items
         case (
             _hasItemInfo &&
-            {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD] &&
-            {_isMiscItem}} ||
+            {_isMiscItem &&
+            {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}} ||
             {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-            {getText (_x >> "simulation") == "ItemMineDetector"}
+            {_simulationType == "ItemMineDetector"}
         ): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
         };
@@ -135,26 +135,22 @@ private _isMiscItem = false;
 } forEach configProperties [_cfgWeapons, _filterFunction, true];
 
 // Get all grenades
-private _grenadeList = [];
+private _grenadeList = createHashMap;
 
 {
-    _grenadeList append getArray (_cfgWeapons >> "Throw" >> _x >> "magazines");
+    _grenadeList insert [true, (getArray (_cfgWeapons >> "Throw" >> _x >> "magazines")) apply {_x call EFUNC(common,getConfigName)}, []];
 } forEach getArray (_cfgWeapons >> "Throw" >> "muzzles");
 
 // Get all explosives, mines, IEDS and similar
-private _putList = [];
+private _putList = createHashMap;
 
 {
-    _putList append getArray (_cfgWeapons >> "Put" >> _x >> "magazines");
+    _putList insert [true, (getArray (_cfgWeapons >> "Put" >> _x >> "magazines")) apply {_x call EFUNC(common,getConfigName)}, []];
 } forEach getArray (_cfgWeapons >> "Put" >> "muzzles");
 
-// Convert both lists to config case
-_grenadeList = _grenadeList apply {_x call EFUNC(common,getConfigName)};
-_putList = _putList apply {_x call EFUNC(common,getConfigName)};
-
 // Remove invalid/non-existent entries
-_grenadeList = _grenadeList - [""];
-_putList = _putList - [""];
+_grenadeList deleteAt "";
+_putList deleteAt "";
 
 private _magazineMiscItems = createHashMap;
 
@@ -223,9 +219,11 @@ private _faceCategory = "";
 
 // Get all voices
 private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configfile >> "CfgVoice" >> "NoVoice"];
+_voiceCache = _voiceCache apply {configName _x};
 
 // Get all insignia
 private _insigniaCache = "(if (isNumber (_x >> 'scope')) then {getNumber (_x >> 'scope')} else {2}) == 2" configClasses (configFile >> "CfgUnitInsignia");
+_insigniaCache = _insigniaCache apply {configName _x};
 
 // Get all disposable launchers
 private _launchersConfig = configProperties [configFile >> "CBA_DisposableLaunchers"];
@@ -264,5 +262,7 @@ uiNamespace setVariable [QGVAR(configItemsFlat), _configItemsFlat];
 uiNamespace setVariable [QGVAR(faceCache), _faceCache];
 uiNamespace setVariable [QGVAR(voiceCache), _voiceCache];
 uiNamespace setVariable [QGVAR(insigniaCache), _insigniaCache];
-uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), _launchers];
+uiNamespace setVariable [QGVAR(grenadeCache), _grenadeList];
+uiNamespace setVariable [QGVAR(putCache), _putList];
 uiNamespace setVariable [QGVAR(magazineMiscItems), _magazineMiscItems];
+uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), _launchers];

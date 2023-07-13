@@ -51,7 +51,7 @@ if (_category == IDX_CAT_ITEMS_ALL) then {
         if (_x in (_configItems get IDX_VIRT_ITEMS_ALL)) then {
             _itemsToAdd set [_x, nil];
         };
-    } forEach _compatibleMagazines;
+    } forEach (keys _compatibleMagazines);
 } else {
     private _attachmentCategory = _category - 4;
     private _filter = ["optic", "pointer", "muzzle", "bipod"] select _attachmentCategory;
@@ -72,7 +72,7 @@ if (_category == IDX_CAT_ITEMS_ALL) then {
         ) then {
             _itemsToAdd set [_x, nil];
         };
-    } forEach _compatibleItems;
+    } forEach (keys _compatibleItems);
 };
 
 // Only take items that can be found by default in the arsenal

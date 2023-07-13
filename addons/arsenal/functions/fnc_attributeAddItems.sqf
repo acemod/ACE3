@@ -128,7 +128,7 @@ private _config = _cfgClass;
         _listbox lnbSetColor [[_index, 1], [1, 1, 1, _alpha]];
         _listbox lnbSetColor [[_index, 2], [1, 1, 1, _alpha]];
     };
-} forEach _categoryItems;
+} forEach (keys _categoryItems);
 
 // Sort alphabetically
 _listbox lnbSort [1, false];
