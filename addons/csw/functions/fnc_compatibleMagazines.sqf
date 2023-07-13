@@ -22,8 +22,6 @@ if !((typeOf _csw) in GVAR(initializedStaticTypes)) exitWith {createHashMap};
 
 // fast exit for csw with single weapon, most common scenario
 if (count allTurrets _csw isEqualTo 1 && {count weapons _csw isEqualTo 1}) exitWith {
-    systemChat "has single weapon";
-    systemChat str (weapons _csw);
     GVAR(compatibleMagsCache) get ((weapons _csw) select 0) // return
 };
 
