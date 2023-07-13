@@ -13,7 +13,7 @@
  *   Magazine ammo <NUMBER>
  *
  * Example:
- * [player, cursorObject] call ace_csw_fnc_getSourceCompatibleMagazines
+ * [backpackContainer player, cursorObject] call ace_csw_fnc_getSourceCompatibleMagazines
  *
  * Public: Yes
  */
