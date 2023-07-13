@@ -72,13 +72,24 @@ _vehicle doWatch _position;
     params ["_vehicle", "_position", "_magazine", "_roundsLeft", "_lastFired"];
     if (CBA_missionTime - _lastFired > 30) exitWith {true};
 
-    if (unitReady _vehicle) then {
+    // have to wait a bit or the AI goes insane
+    if (CBA_missionTime - _lastFired < 3) exitWith {false};
+
+    (weaponState [_vehicle, [0]]) params ["", "", "", "_loadedMag", "_ammoCount", "_roundReloadPhase", "_magazineReloadPhase"];
+    if (
+        _loadedMag isEqualTo _magazine &&
+        {_ammoCount > 0} &&
+        {_roundReloadPhase isEqualTo 0} &&
+        {_magazineReloadPhase isEqualTo 0} &&
+        {unitReady _vehicle}
+    ) then {
         _vehicle doArtilleryFire [_position, _magazine, 1];
-        _this set [3, _roundsLeft - 1];
+        _roundsLeft = _roundsLeft - 1;
+        _this set [3, _roundsLeft];
         _this set [4, CBA_missionTime];
     };
 
-    if (_rounds <= 0 || {!alive _vehicle} || {!alive (gunner _vehicle)} || {objectParent (gunner _vehicle) isNotEqualTo _vehicle}) exitWith {
+    if (_roundsLeft <= 0 || {!alive _vehicle} || {!alive (gunner _vehicle)} || {objectParent (gunner _vehicle) isNotEqualTo _vehicle}) exitWith {
         [{_this doWatch objNull}, _vehicle, 5] call CBA_fnc_waitAndExecute;
         _vehicle setVariable [QEGVAR(csw,forcedMag), nil, true];
         true
