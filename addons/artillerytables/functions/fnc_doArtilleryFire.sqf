@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Target <OBJECT or POSITION AGL>
+ * 1: Target <OBJECT, STRING or POSITION AGL>
  * 2: Spread in meters
  * 3: Magazine Type <STRING>
  * 4: Rounds to fire <NUMBER>
@@ -19,12 +19,16 @@
  *
  * Public: Yes
  */
-params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull]], ["_spread", 0, [0]], ["_magazine", "", [""]], ["_rounds", 0, [0]]];
+params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull, ""], 3], ["_spread", 0, [0]], ["_magazine", "", [""]], ["_rounds", 0, [0]]];
 
 if (isNull _vehicle || {_rounds isEqualTo 0} || {_magazine isEqualTo ""} || {!(_vehicle turretLocal [0])}) exitWith {false};
 
 if (_position isEqualType objNull) then {
-    _position = getPos _objNull;
+    _position = ASLtoAGL getPosASL _position;
+};
+
+if (_position isEqualType "") then {
+    _position = [_position, true] call CBA_fnc_mapGridToPos;
 };
 
 private _usingCSW = false;
