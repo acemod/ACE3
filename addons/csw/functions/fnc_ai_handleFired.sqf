@@ -16,7 +16,6 @@ params ["_staticWeapon", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_
 TRACE_8("firedEH:",_staticWeapon,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
 
 if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
-if (_staticWeapon getVariable [QGVAR(disabled), false]) exitWith {};
 if (someAmmo _staticWeapon) exitWith {};
 
 TRACE_2("need ammo",someAmmo _staticWeapon,magazinesAllTurrets _staticWeapon);

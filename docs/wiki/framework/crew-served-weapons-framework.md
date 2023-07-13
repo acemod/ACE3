@@ -149,15 +149,13 @@ class CfgVehicles {
 };
 ```
 
-### 1.5 Custom Ammo Handling
+### 1.5 Disabling CSW for a single weapon
 
-ACE's ammo handling (including AI reloading, and initial unloading and conversion of the weapon's magazines) can be blocked by setting the `ace_csw_disabled` variable on init.
-This will also block reloading and unloading the weapon manually through ACE.
-This variable needs to be set globally.
+The entirety of CSW's systems can be disabled by setting the `ace_csw_assemblyMode` variable to `0` on init.
 
 ```sqf
 myCustomStaticWeapon = createVehicle ["B_Mortar_01_F", [0, 0, 0]];
-myCustomStaticWeapon setVariable ["ace_csw_disabled", true, true]; // blocks ammo handling
+myCustomStaticWeapon setVariable ["ace_csw_assemblyMode", 0, true]; // disable CSW
 ```
 
 ## 2. Making a new Tripod

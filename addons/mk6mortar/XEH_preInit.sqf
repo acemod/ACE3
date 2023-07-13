@@ -10,7 +10,7 @@ PREP_RECOMPILE_END;
 
 ["Mortar_01_base_F", "Init", { // override CSW's ammo handling with Mk6 setting
     params ["_mortar"];
-    _mortar setVariable [QEGVAR(csw,disabled), !GVAR(useAmmoHandling)];
+    _mortar setVariable [QEGVAR(csw,assemblyMode), [0, 3] select GVAR(useAmmoHandling)];
 }] call CBA_fnc_addClassEventHandler;
 
 GVAR(ammoHandlingMagazineReplacement) = createHashMapFromArray [
