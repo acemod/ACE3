@@ -24,13 +24,16 @@ _args params ["_vehicle", "_position", "_magazine", "_roundsLeft", "_usingCSW", 
 
 // Exit on timeout or rounds complete
 if (CBA_missionTime - _lastFired >= 30 || {_roundsLeft isEqualTo 0}) exitWith {
+    [{_this doWatch objNull}, _vehicle, 5] call CBA_fnc_waitAndExecute;
     _vehicle setVariable [QEGVAR(csw,forcedMag), nil, true];
     [_id] call CBA_fnc_removePerFrameHandler;
 };
 
 (weaponState [_vehicle, [0]]) params ["", "", "", "", "_ammoCount", "_roundReloadPhase", "_magazineReloadPhase"];
 
-if (_ammoCount > 0 && {_roundReloadPhase isEqualTo 0} && {_magazineReloadPhase isEqualTo 0}) exitWith {
+if !(unitReady (gunner _vehicle) && {_roundReloadPhase isEqualTo 0} && {_magazineReloadPhase isEqualTo 0}) exitWith {};
+
+if (_ammoCount > 0) exitWith {
     _vehicle doArtilleryFire [_position, _magazine, 1];
     _args set [3, _roundsLeft - 1];
     _args set [6, CBA_missionTime];
