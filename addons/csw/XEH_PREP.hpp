@@ -20,6 +20,7 @@ PREP(canGetIn);
 PREP(getIn);
 
 PREP(compatibleMagazines);
+PREP(getAvailableAmmo);
 PREP(getCarryMagazine);
 PREP(getNearbySources);
 PREP(getSourceCompatibleMagazines);

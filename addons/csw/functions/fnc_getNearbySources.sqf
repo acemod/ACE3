@@ -4,7 +4,9 @@
  * Gets available ammo sources for loading a CSW
  *
  * Arguments:
- * 0: Unit attempting to load <OBJECT>
+ * 0: Unit or vehicle attempting to load <OBJECT>
+ * 1: Skip vehicle sources <BOOL> (default: false)
+ * 2: Include CSW crew <BOOL> (default: false)
  *
  * Return Value:
  * Ammo sources <ARRAY of OBJECT>
@@ -14,16 +16,25 @@
  *
  * Public: No
  */
-params ["_unit"];
-
-[_unit, {
-    params ["_unit"];
+[_this, {
+    params ["_unit", ["_skipVehicles", false], ["_includeCrew", false]];
     private _nearSupplies = (_unit nearSupplies 5) select {
         isNull (group _x) ||
         {!([_x] call EFUNC(common,isPlayer)) && {[side group _unit, side group _x] call BIS_fnc_sideIsFriendly}}
     };
 
-    _nearSupplies pushBack _unit;
+    if (_includeCrew) then {
+        _nearSupplies append (crew _unit);
+    };
+
+    if (_skipVehicles) then {
+        _nearSupplies = _nearSupplies select {
+            private _source = _x;
+            (["Ship", "Car", "Air", "Tank"] findIf {_source isKindOf _x}) == -1
+        };
+    };
+
+    _nearSupplies pushBackUnique _unit;
     {
         if (_x isKindOf "CAManBase") then {
             _nearSupplies append [uniformContainer _x, vestContainer _x, backpackContainer _x];
@@ -37,4 +48,4 @@ params ["_unit"];
     } forEach _nearSupplies;
 
     _nearSupplies select {!(_x isKindOf "CAManBase")}  // return
-}, _unit, QGVAR(nearbySourcesCache), NEARBY_SOURCES_CACHE_EXPIRY, QGVAR(clearNearbySourcesCache)] call EFUNC(common,cachedCall);
+}, _this select 0, QGVAR(nearbySourcesCache), NEARBY_SOURCES_CACHE_EXPIRY, QGVAR(clearNearbySourcesCache)] call EFUNC(common,cachedCall);
