@@ -35,8 +35,9 @@ if (["ace_mk6mortar"] call EFUNC(common,isModLoaded) && {_vehicle isKindOf "Stat
     _usingCSW = EGVAR(mk6mortar,useAmmoHandling);
 };
 
-if (_usingCSW && {EGVAR(csw,ammoHandling) < 2}) exitWith {false};
+_usingCSW = _usingCSW && {!(_vehicle getVariable [QEGVAR(csw,disabled), false])};
 
+if (_usingCSW && {EGVAR(csw,ammoHandling) < 2}) exitWith {false};
 
 if (_usingCSW) then {
     private _isCarryMag = isClass (configFile >> QEGVAR(csw,groups) >> _magazine);
