@@ -218,7 +218,7 @@
             <Chinese>這個模塊允許你設定MK6迫擊砲的相關功能</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
-            <English>Use Ammunition handling</English>
+            <English>Use Ammunition Handling</English>
             <German>Aktiviere Munitionshandhabung</German>
             <Spanish>Usar manejo de munición.</Spanish>
             <Polish>Aktywuj obsługę amunicji</Polish>
@@ -233,19 +233,7 @@
             <Czech>Používat ruční manipulaci s municí</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
-            <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
-            <German>Enfernt das Magzin des Mörsers. Es ist nun erforderlich, die einzelnen Patronen manuell zu laden. Dies beeinflusst nicht die KI-Truppen.</German>
-            <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas. No afecta morteros controlados por IA.</Spanish>
-            <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego. Nie dotyczy moździerzy AI.</Polish>
-            <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement. N'affecte pas les mortiers IA.</French>
-            <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
-            <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
-            <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжающим. Не влияет на артиллерию ИИ.</Russian>
-            <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI 迫撃砲へ影響を与えません。</Japanese>
-            <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
-            <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由 AI 射击的迫击炮</Chinesesimp>
-            <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填。此功能並不影響由AI射擊的迫擊砲</Chinese>
-            <Czech>Odstraní z minometu zásobník a vynucuje nabíjení po každém výstřelu buď mířičem nebo nabíječem. Tato možnost neovlivňuje AI posádky.</Czech>
+            <English>Converts mortar magazines into their single round versions, requiring individual rounds to be loaded by the crew.\nOverrides Crew Served Weapon's Ammo Handling.</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>

@@ -24,7 +24,7 @@ TRACE_4("csw_getProxyWeapon",_mortar,_turret,_currentWeapon,_proxyWeaponNeeded);
 
 private _newWeapon = "";
 
-if (_proxyWeaponNeeded || GVAR(useAmmoHandling)) then {
+if (GVAR(useAmmoHandling)) then {
     if (_currentWeapon != "mortar_82mm") exitWith { ERROR_2("unknown weapon [%1 - %2]",typeOf _mortar,_currentWeapon); };
 
     // Replace weapon with fast reloading version
@@ -36,23 +36,13 @@ if (_proxyWeaponNeeded || GVAR(useAmmoHandling)) then {
     private _convertedMags = [];
     {
         _x params ["_xMag", "_xTurret", "_xAmmo"];
-
         if (_xTurret isEqualTo _turret) then {
-            private _replaceMag = switch (true) do {
-            case (_xMag == "8Rnd_82mm_Mo_shells"): {"ACE_1Rnd_82mm_Mo_HE"};
-            case (_xMag == "8Rnd_82mm_Mo_Smoke_white"): {"ACE_1Rnd_82mm_Mo_Smoke"};
-            case (_xMag == "8Rnd_82mm_Mo_Flare_white"): {"ACE_1Rnd_82mm_Mo_Illum"};
-            case (_xMag == "8Rnd_82mm_Mo_guided"): {"ACE_1Rnd_82mm_Mo_HE_Guided"};
-            case (_xMag == "8Rnd_82mm_Mo_LG"): {"ACE_1Rnd_82mm_Mo_HE_LaserGuided"};
-                default {""};
-            };
+            private _replaceMag = GVAR(ammoHandlingMagazineReplacement) getOrDefault [_xMag, ""];
             if (_replaceMag != "") then {
                 _magsToRemove pushBackUnique [_xMag, _xTurret];
-                if (!GVAR(useAmmoHandling)) then {
-                    TRACE_3("replacing",_xMag,_replaceMag,_xAmmo);
-                    for "_i" from 1 to _xAmmo do {
-                        _convertedMags pushBack [_replaceMag, _xTurret, 1];
-                    };
+                TRACE_3("replacing",_xMag,_replaceMag,_xAmmo);
+                for "_i" from 1 to _xAmmo do {
+                    _convertedMags pushBack [_replaceMag, _xTurret, 1];
                 };
             } else {
                 WARNING_1("unknown mag %1", _xMag);

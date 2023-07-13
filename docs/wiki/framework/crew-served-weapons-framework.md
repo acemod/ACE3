@@ -151,6 +151,17 @@ class CfgVehicles {
 };
 ```
 
+### 1.5 Custom Ammo Handling
+
+ACE's ammo handling (including AI reloading, and initial unloading and conversion of the weapon's magazines) can be blocked by setting the `ace_csw_disabled` variable on init.
+This will also block reloading and unloading the weapon manually through ACE.
+This variable needs to be set globally.
+
+```sqf
+myCustomStaticWeapon = createVehicle ["B_Mortar_01_F", [0, 0, 0]];
+myCustomStaticWeapon setVariable ["ace_csw_disabled", true, true]; // blocks ammo handling
+```
+
 ## 2. Making a new Tripod
 
 If none of the existing ACE tripods fit your weapon, you can create your own. Creating a tripod is similar to creating a crew served weapon and consists of two parts:

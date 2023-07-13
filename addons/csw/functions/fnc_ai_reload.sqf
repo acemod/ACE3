@@ -19,10 +19,13 @@ TRACE_3("AI reload",_vehicle,_gunner,_weapon);
 private _loadableMagazines = [_vehicle, _gunner, true] call FUNC(reload_getLoadableMagazines);
 if (_loadableMagazines isEqualTo []) exitWith {TRACE_1("could not find reloadable mag",_vehicle)};
 
+private _forcedMag = _vehicle getVariable [QGVAR(forcedMag), ""];
+
 private _bestAmmo = 0;
 private _magazineInfo = [];
 {
-    _x params ["", "", "", "", "", "_ammo"];
+    _x params ["_carryMag", "", "", "", "", "_ammo"];
+    if (_forcedMag isNotEqualTo "" && {_carryMag isNotEqualTo _forcedMag}) then {continue};
     if (_ammo > _bestAmmo) then {
         _bestAmmo = _ammo;
         _magazineInfo = _x;
