@@ -36,6 +36,7 @@ PREP(reload_handleAddTurretMag);
 PREP(reload_handleRemoveTurretMag);
 PREP(reload_handleReturnAmmo);
 PREP(reload_loadMagazine);
+PREP(unloadMagazines);
 
 PREP(staticWeaponInit);
 PREP(staticWeaponInit_unloadExtraMags);
