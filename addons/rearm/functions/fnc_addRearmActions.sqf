@@ -39,7 +39,7 @@ private _vehicleActions = [];
 
     _magazineHelper = _magazineHelper select {[_truck, _x] call FUNC(hasEnoughSupply)};
 
-    if (["ace_csw"] call EFUNC(common,isModLoaded) && {!(_vehicle getVariable [QEGVAR(csw,disabled), false])}) then {
+    if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
         ([_vehicle] call EFUNC(csw,aceRearmGetCarryMagazines)) params ["_turretMagsCSW", "_allCarryMags"];
         TRACE_3("csw compat",_vehicle,_turretMagsCSW,_allCarryMags);
         _cswCarryMagazines append _allCarryMags;
@@ -53,53 +53,51 @@ private _vehicleActions = [];
         if !((_icon select [0, 1]) == "\") then {
             _icon = "";
         };
-        if !(missionNamespace getVariable [QEGVAR(csw,ammoHandling), 0] > 0 && {_vehicle isKindOf "StaticWeapon"} && {!(_vehicle getVariable [QEGVAR(csw,disabled), false])}) then {
-            if (GVAR(level) == 0) then {
-                // [Level 0] adds a single action to rearm the entire vic
+        if (GVAR(level) == 0) then {
+            // [Level 0] adds a single action to rearm the entire vic
+            private _action = [
+                _vehicle,
+                getText(configOf _vehicle >> "displayName"),
+                _icon,
+                {_this call FUNC(rearmEntireVehicle)},
+                {true},
+                {},
+                _vehicle
+            ] call EFUNC(interact_menu,createAction);
+            _vehicleActions pushBack [_action, [], _truck];
+        } else {
+            // [Level 1,2] - Add actions for each magazine
+            private _actions = [];
+            {
                 private _action = [
-                    _vehicle,
-                    getText(configOf _vehicle >> "displayName"),
-                    _icon,
-                    {_this call FUNC(rearmEntireVehicle)},
+                    _x,
+                    _x call FUNC(getMagazineName),
+                    getText(configFile >> "CfgMagazines" >> _x >> "picture"),
+                    {_this call FUNC(takeAmmo)},
                     {true},
                     {},
-                    _vehicle
-                ] call EFUNC(interact_menu,createAction);
-                _vehicleActions pushBack [_action, [], _truck];
-            } else {
-                // [Level 1,2] - Add actions for each magazine
-                private _actions = [];
-                {
-                    private _action = [
-                        _x,
-                        _x call FUNC(getMagazineName),
-                        getText(configFile >> "CfgMagazines" >> _x >> "picture"),
-                        {_this call FUNC(takeAmmo)},
-                        {true},
-                        {},
-                        [_x, _vehicle]
-                    ] call EFUNC(interact_menu,createAction);
-
-                    _actions pushBack [_action, [], _truck];
-                } forEach _magazineHelper;
-
-                private _action = [
-                    _vehicle,
-                    getText(configOf _vehicle >> "displayName"),
-                    _icon,
-                    {},
-                    {true},
-                    {},
-                    []
+                    [_x, _vehicle]
                 ] call EFUNC(interact_menu,createAction);
 
-                _vehicleActions pushBack [_action, _actions, _truck];
-            };
+                _actions pushBack [_action, [], _truck];
+            } forEach _magazineHelper;
+
+            private _action = [
+                _vehicle,
+                getText(configOf _vehicle >> "displayName"),
+                _icon,
+                {},
+                {true},
+                {},
+                []
+            ] call EFUNC(interact_menu,createAction);
+
+            _vehicleActions pushBack [_action, _actions, _truck];
         };
     };
 } forEach _vehicles;
 
-if (_cswCarryMagazines isNotEqualTo [] && {missionNamespace getVariable [QEGVAR(csw,ammoHandling), 0] > 0}) then {
+if (_cswCarryMagazines isNotEqualTo []) then {
     _cswCarryMagazines = _cswCarryMagazines arrayIntersect _cswCarryMagazines;
     _cswCarryMagazines = _cswCarryMagazines select {[_truck, _x] call FUNC(hasEnoughSupply)};
     private _baseAction = [QGVAR(cswTake), "CSW", "", {}, {true}] call EFUNC(interact_menu,createAction);

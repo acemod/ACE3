@@ -18,12 +18,15 @@
 
 params ["_vehicle", ["_targetTurret", true, [[], true]]];
 
-if (!(_vehicle isKindOf "StaticWeapon")) exitWith { [[],[]] }; // limit to statics for now
-// Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
-if ((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]))}) exitWith { [[],[]] };
+private _return = [[], []];
 
-private _turretMagsCSW = [];
-private _allCarryMags = [];
+if (!(_vehicle isKindOf "StaticWeapon")) exitWith {_return}; // limit to statics for now
+if ((GVAR(ammoHandling) isEqualTo 0)) exitWith {_return};
+// Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
+if (!([false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]))) exitWith {_return};
+
+private _turretMagsCSW = _return select 0;
+private _allCarryMags = _return select 1;
 {
     private _turretPath = _x;
     if ((_targetTurret isEqualTo true) || {_turretPath isEqualTo _targetTurret}) then {
@@ -36,9 +39,9 @@ private _allCarryMags = [];
                     _turretMagsCSW pushBackUnique _xMag;
                     _allCarryMags pushBackUnique _carryMag;
                 };
-            } forEach ([_weapon] call CBA_fnc_compatibleMagazines);
+            } forEach (compatibleMagazines _weapon);
         } forEach (_vehicle weaponsTurret _turretPath);
     };
 } forEach (allTurrets _vehicle);
 
-[_turretMagsCSW, _allCarryMags]
+_return
