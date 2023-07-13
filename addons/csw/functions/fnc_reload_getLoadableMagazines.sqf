@@ -5,7 +5,8 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Player <OBJECT>
+ * 1: Unit <OBJECT>
+ * 2: AI reloading, skip turret checks <BOOL> (default: false)
  *
  * Return Value:
  * Mags <ARRAY>
@@ -17,55 +18,48 @@
  * Public: No
  */
 
-params ["_vehicle", "_player"];
+params ["_vehicle", "_unit", ["_aiReload", false]];
 
-private _magGroupsConfig = configFile >> QGVAR(groups); // so we don't solve in loop every time
 private _availableMagazines = createHashMap; // slower than array, still needed for setting source of magazine
 
 // filter enemy & player units while allowing pulling from friendly AI, crates, etc
-private _sources = [_player] call FUNC(getNearbySources);
-
-// send the mag source with the highest ammo
-private _bestMagAmmo = createHashMap;
+private _sources = [_unit] call FUNC(getNearbySources);
 
 {
+    // minor optimization: since mags are sorted by ammo count in FUNC(getSourceCompatibleMagazines), we only need to check the first mag of this type in this source
+    private _handledSourceMags = [];
     private _xSource = _x;
-    private _cswMags = (magazinesAmmoCargo _xSource) select {isClass (_magGroupsConfig >> _x select 0)};
-
     {
         _x params ["_classname", "_ammo"];
-        if (_ammo > (_bestMagAmmo getOrDefault [_classname, 0])) then {
-            _bestMagAmmo set [_classname, _ammo];
-            _availableMagazines set [_classname, _xSource];
+        if (_classname in _handledSourceMags) then {continue};
+        _handledSourceMags pushBack _classname;
+
+        // select mag source with the highest ammo
+        if (_ammo > (_availableMagazines getOrDefault [_classname, [objNull, 0]]) select 1) then {
+            _availableMagazines set [_classname, [_xSource, _ammo]];
         };
-    } forEach _cswMags;
+    } forEach ([_x, _vehicle] call FUNC(getSourceCompatibleMagazines));
 } forEach _sources;
 
-if (_availableMagazines isEqualTo createHashMap) exitWith { [] }; // fast exit if no available mags
+if (_availableMagazines isEqualTo createHashMap) exitWith {[]}; // fast exit if no available mags
 
 private _loadInfo = [];
 private _return = [];
+private _turretPath = [_unit] call EFUNC(common,getTurretIndex);
+
 // Go through turrets and find weapons that we could reload
+// We can skip checking all turrets if we're doing AI reloading
 {
     private _turretPath = _x;
     {
-        private _weapon = _x;
-        {
-            //IGNORE_PRIVATE_WARNING ["_x", "_y"];
-            private _carryMag = _x;
-            private _magSource = _y;
-            private _carryGroup = _magGroupsConfig >> _carryMag;
-            {
-                if (
-                    ((getNumber (_carryGroup >> _x)) == 1) &&
-                    {_loadInfo = [_vehicle, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine); _loadInfo select 0}
-                ) exitWith {
-                    _return pushBack [_carryMag, _turretPath, _loadInfo, _magSource, _player];
-                };
-            } forEach (compatibleMagazines _weapon);
-        } forEach _availableMagazines;
-    } forEach (_vehicle weaponsTurret _turretPath);
-} forEach (allTurrets _vehicle);
-// Note: these nested forEach's looks terrible, but most only have one element
+        //IGNORE_PRIVATE_WARNING ["_x", "_y"];
+        private _carryMag = _x;
+        _y params ["_magSource", "_ammo"];
+        _loadInfo = [_vehicle, _turretPath, _carryMag] call FUNC(reload_canLoadMagazine);
+        if (_loadInfo select 0) then {
+            _return pushBack [_carryMag, _turretPath, _loadInfo, _magSource, _unit, _ammo];
+        };
+    } forEach _availableMagazines;
+} forEach ([(allTurrets _vehicle), [_turretPath]] select _aiReload);
 
 _return

@@ -23,9 +23,9 @@ private _loadableMagazines = [_vehicle, _player] call FUNC(reload_getLoadableMag
 
 private _statement = {
     params ["_target", "_player", "_params"];
-    _params params ["_carryMag", "_turretPath", "", "_magSource"];
+    _params params ["_carryMag", "_turretPath", "", "_magSource", "", "_ammo"];
 
-    [_target, _turretPath, _carryMag, _magSource, _player] call FUNC(reload_loadMagazine);
+    [_target, _turretPath, _carryMag, _magSource, _player, _ammo] call FUNC(reload_loadMagazine);
 };
 
 private _condition = {

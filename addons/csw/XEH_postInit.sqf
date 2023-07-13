@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(vehicleMagCache) = createHashMap;
-
 ["CBA_settingsInitialized", {
     TRACE_3("settingsInit",GVAR(defaultAssemblyMode),GVAR(handleExtraMagazines),GVAR(ammoHandling));
     ["StaticWeapon", "init", LINKFUNC(staticWeaponInit), true, [], true] call CBA_fnc_addClassEventHandler;

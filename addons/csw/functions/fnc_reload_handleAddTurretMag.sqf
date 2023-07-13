@@ -24,6 +24,9 @@
 
 params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived", "_unit"];
 private _returnTo = param [6, _unit];
+if (isNull _returnTo) then {
+    _returnTo = _vehicle;
+};
 TRACE_7("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_unit,_returnTo);
 
 TRACE_2("",local _vehicle, _vehicle turretLocal _turret);

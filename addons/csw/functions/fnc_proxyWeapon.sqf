@@ -37,6 +37,15 @@ if ((missionNamespace getVariable [_proxyWeapon, objNull]) isEqualType {}) then 
 };
 if (!_needed) exitWith { TRACE_2("not needed",_needed,_proxyWeapon); };
 
+// Cache compatible magazines
+if !(_proxyWeapon in GVAR(compatibleVehicleMagsCache)) then {
+    private _compatibleMagazines = compatibleMagazines _proxyWeapon;
+    GVAR(compatibleVehicleMagsCache) set [_proxyWeapon, _compatibleMagazines];
+    GVAR(compatibleCarryMagsCache) set [_proxyWeapon,
+        _compatibleMagazines apply {_x call FUNC(getCarryMagazine)} createHashMapFromArray []
+    ];
+};
+
 TRACE_2("swapping to proxy weapon",_currentWeapon,_proxyWeapon);
 _staticWeapon removeWeaponTurret [_currentWeapon, _turret];
 _staticWeapon addWeaponTurret [_proxyWeapon, _turret];

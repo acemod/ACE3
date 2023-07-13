@@ -19,8 +19,10 @@ PREP(assemble_pickupWeapon);
 PREP(canGetIn);
 PREP(getIn);
 
+PREP(compatibleMagazines);
 PREP(getCarryMagazine);
 PREP(getNearbySources);
+PREP(getSourceCompatibleMagazines);
 PREP(proxyWeapon);
 
 PREP(reload_actionsLoad);

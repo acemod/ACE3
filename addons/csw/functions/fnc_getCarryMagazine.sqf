@@ -12,10 +12,10 @@
  * Example:
  * "1Rnd_GAT_missiles" call ace_csw_fnc_getCarryMagazine
  *
- * Public: No
+ * Public: Yes
  */
 
-params ["_vehicleMag"];
+params [["_vehicleMag", "", [""]]];
 
 private _carryMag = GVAR(vehicleMagCache) get _vehicleMag;
 if (isNil "_carryMag") then {
