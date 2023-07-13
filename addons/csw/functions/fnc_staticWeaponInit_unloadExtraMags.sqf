@@ -35,7 +35,6 @@ private _containerMagazineCount = [];
 
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
-    _magsToRemove pushBackUnique [_xMag, _xTurret];
 
     private _carryMag = _xMag call FUNC(getCarryMagazine);
     if (_carryMag != "") then {
@@ -46,6 +45,7 @@ private _containerMagazineCount = [];
             TRACE_1("",_loadedMagAmmo);
         };
         if (_xAmmo > 0) then {
+            _magsToRemove pushBackUnique [_xMag, _xTurret];
             private _index = _containerMagazineClassnames find _carryMag;
             if (_index < 0) then {
                 _index = _containerMagazineClassnames pushBack _carryMag;
