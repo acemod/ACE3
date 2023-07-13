@@ -15,7 +15,6 @@ params ["_staticWeapon", "_role", "_gunner"];
 TRACE_3("getInEH:",_staticWeapon,_role,_gunner);
 
 if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
-if (_staticWeapon getVariable [QGVAR(disabled), false]) exitWith {};
 if (someAmmo _staticWeapon) exitWith {};
 
 TRACE_2("need ammo",someAmmo _staticWeapon,magazinesAllTurrets _staticWeapon);
