@@ -19,7 +19,7 @@
 params ["_vehicle", "_assemblyMode", "_emptyWeapon"];
 TRACE_3("staticWeaponInit_unloadExtraMags",_vehicle,_assemblyMode,_emptyWeapon);
 if (!_assemblyMode) exitWith {};
-if (_staticWeapon getVariable [QGVAR(disabled), false]) exitWith {};
+if (_vehicle getVariable [QGVAR(disabled), false]) exitWith {};
 
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
