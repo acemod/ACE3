@@ -53,7 +53,7 @@ if (isNull _display) then {
 
         // Update activity log
         private _ctrlActivityLog = _display displayCtrl IDC_ACTIVITY;
-        private _activityLog = _target getVariable [QEGVAR(medical,logFile_activity_view), []];
+        private _activityLog = _target getVariable [MED_LOG_VARNAME("activity"), []];
         [_ctrlActivityLog, _activityLog] call FUNC(updateLogList);
 
         // Update triage status

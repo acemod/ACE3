@@ -8,7 +8,7 @@
  * 0: Local Vehicle to Damage <OBJECT>
  * 1: Selected hitpoint INDEX <NUMBER>
  * 2: Total Damage <NUMBER>
- * 3: Skip destruction effects <BOOL>
+ * 3: Use destruction effects <BOOL>
  *
  * Return Value:
  * None
@@ -19,7 +19,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", true]];
+params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", false]];
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
 // can't execute all commands if the vehicle isn't local. exit here.
@@ -44,7 +44,7 @@ private _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum -
     if ((!isNil {_vehicle getHit _selectionName}) && {_x != ""}) then {
         _realHitpointCount = _realHitpointCount + 1;
 
-        if ((((toLower _x) find "glass") == -1) && {(getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")) in ["", "0"]}) then {
+        if ((((toLower _x) find "glass") == -1) && {(getText (configOf _vehicle >> "HitPoints" >> _x >> "depends")) in ["", "0"]}) then {
             _hitPointDamageSumOld = _hitPointDamageSumOld + (_allHitPointDamages select _forEachIndex);
             if (_forEachIndex == _hitPointIndex) then {
                 _hitPointDamageRepaired = (_allHitPointDamages select _forEachIndex) - _hitPointDamage;

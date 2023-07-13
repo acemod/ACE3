@@ -10,6 +10,7 @@
  * 3: Textures Paths <ARRAY>
  * 4: Icon Path <STRING> (default: "")
  * 5: Material Paths <ARRAY>
+ * 6: Tag Model <STRING> (optional)
  *
  * Return Value:
  * None
@@ -23,12 +24,17 @@
 params ["_identifier", "_displayName", "_requiredItem"];
 
 // Add only if tag not already added (compare identifiers)
-if !(GVAR(cachedTags) select {_x select 0 == _identifier} isEqualTo []) exitWith {
+if ((GVAR(cachedTags) select {_x select 0 == _identifier}) isNotEqualTo []) exitWith {
     INFO_2("Tag with selected identifier already exists: %1 (%2)",_identifier,_displayName)
 };
+
+if (isLocalized _displayName) then {
+    _this set [1, localize _displayName];
+};
+
 _requiredItem = configName (configFile >> "CfgWeapons" >> _requiredItem); // Convert To config case
 _this set [2, _requiredItem];
 
 GVAR(cachedTags) pushBack _this;
-GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
+_this call FUNC(compileTagAction);
 TRACE_1("Added custom script tag",_this);

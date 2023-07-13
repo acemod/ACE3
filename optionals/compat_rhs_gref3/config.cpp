@@ -1,12 +1,13 @@
 #include "script_component.hpp"
+#include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {QGVAR(dshkm_carry)};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rhsgref_main", "rhsgref_c_weapons"};
+        requiredAddons[] = {"ace_fastroping", "ace_explosives", "ace_csw", "rhsgref_main_loadorder"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror", "Ruthberg", "Anton"};
         url = ECSTRING(main,URL);
@@ -15,6 +16,7 @@ class CfgPatches {
 };
 
 #include "CfgAmmo.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"

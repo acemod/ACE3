@@ -46,7 +46,7 @@ private _hideUnusedFnc = {
     } forEach _numbers;
 };
 
-if !(isNil "_itemCfg") then {
+if (!isNil "_itemCfg") then {
 
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];
@@ -64,7 +64,7 @@ if !(isNil "_itemCfg") then {
 
         // Handle titles, bars and text
         _statsList = _statsList select [0, 5];
-        if !(_statsList isEqualTo []) then {
+        if (_statsList isNotEqualTo []) then {
             {
                 _x params ["_ID", "_configEntry", "_title", "_bools", "_statements"];
                 _bools params ["_showBar", "_showText"];
@@ -152,7 +152,7 @@ if !(isNil "_itemCfg") then {
 
     if (ctrlIDC _control == IDC_leftTabContent) then {
 
-        if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsigna] find GVAR(currentLeftPanel) > -1) then {
+        if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia] find GVAR(currentLeftPanel) > -1) then {
 
             [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
             _statsBoxCtrl ctrlSetPosition [
@@ -191,7 +191,6 @@ if !(isNil "_itemCfg") then {
             ] find GVAR(currentLeftPanel), true] call _handleStatsFnc;
         };
     } else {
-
         switch (GVAR(currentRightPanel)) do {
             case IDC_buttonOptic: {
                 [0, false] call _handleStatsFnc;
@@ -219,6 +218,11 @@ if !(isNil "_itemCfg") then {
             };
             case IDC_buttonMisc: {
                 [7, false] call _handleStatsFnc;
+            };
+            default {
+                if (GVAR(currentRightPanel) in [RIGHT_PANEL_CUSTOM_BUTTONS]) then {
+                    [7, false] call _handleStatsFnc;
+                };
             };
         };
     };

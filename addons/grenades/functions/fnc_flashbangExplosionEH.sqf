@@ -47,33 +47,50 @@ private _affected = (ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20];
 _affected = _affected - [ACE_player];
 {
     if (local _x && {alive _x}) then {
-        private _strength = 1 - (((getPosASL _x) vectorDistance _grenadePosASL) min 20) / 20;
+        private _unit = _x;
+        private _strength = 1 - (((eyePos _unit) vectorDistance _grenadePosASL) min 20) / 20;
 
-        TRACE_3("FlashBangEffect Start",_x,((getPosASL _x) vectorDistance _grenadePosASL),_strength);
+        TRACE_3("FlashBangEffect Start",_unit,((getPosASL _unit) vectorDistance _grenadePosASL),_strength);
 
-        [_x, true] call EFUNC(common,disableAI);
+        [_unit, true] call EFUNC(common,disableAI);
 
-        _x setSkill (skill _x / 50);
+        // Make AI try to look away
+        private _dirToFlash = _unit getDir _grenadePosASL;
+        _unit setDir (_dirToFlash + linearConversion [0.2, 1, _strength, 40, 135] * selectRandom [-1, 1]);
 
-        if (_strength > 0.2) then {
-            _x setVectorDir ((getPosASL _x) vectorDiff _grenadePosASL);
+        private _flashReactionDebounce = _unit getVariable [QGVAR(flashReactionDebounce), 0];
+        _unit setVariable [QGVAR(flashReactionDebounce), _flashReactionDebounce max (CBA_missionTime + (7 * _strength))];
+        if (_flashReactionDebounce < CBA_missionTime) then {
+            // Not used interally but could be useful for other mods
+            _unit setVariable [QGVAR(flashStrength), _strength, true];
+            {
+                _unit setSkill [_x, (_unit skill _x) / 50];
+            } forEach SUBSKILLS;
+            [{
+                params ["_unit"];
+                CBA_missiontime >= _unit getVariable [QGVAR(flashReactionDebounce), 0]
+            },{
+                params ["_unit"];
+
+                _unit setVariable [QGVAR(flashStrength), 0, true];
+
+                // Make sure we don't enable AI for unconscious units
+                if !(_unit getVariable ["ace_isUnconscious", false]) then {
+                    [_unit, false] call EFUNC(common,disableAI);
+                };
+                {
+                    _unit setSkill [_x, (_unit skill _x) * 50];
+                } forEach SUBSKILLS;
+            }, [_unit]] call CBA_fnc_waitUntilAndExecute;
         };
-
-        [{
-            params ["_unit"];
-
-            //Make sure we don't enable AI for unconscious units
-            if !(_unit getVariable ["ace_isUnconscious", false]) then {
-                [_unit, false] call EFUNC(common,disableAI);
-            };
-
-            _unit setSkill (skill _unit * 50);
-        }, [_x], 7 * _strength] call CBA_fnc_waitAndExecute;
     };
 } count _affected;
 
 // Affect local player, independently of distance
 if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
+    if ((getNumber (configOf ACE_player >> "isPlayableLogic")) == 1) exitWith {
+        TRACE_1("skipping playable logic",typeOf ACE_player); // VirtualMan_F (placeable logic zeus / spectator)
+    };
     // Do effects for player
     // is there line of sight to the grenade?
     private _eyePos = eyePos ACE_player; //PositionASL
@@ -93,14 +110,14 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     _strength = _strength * _losCoefficient;
 
     // Add ace_hearing ear ringing sound effect
-    if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") && {_strength > 0 && {EGVAR(hearing,damageCoefficent) > 0.25}}) then {
+    if (["ACE_Hearing"] call EFUNC(common,isModLoaded) && {_strength > 0 && {EGVAR(hearing,damageCoefficent) > 0.25}}) then {
         private _earringingStrength = 40 * _strength;
         [_earringingStrength] call EFUNC(hearing,earRinging);
         TRACE_1("Earringing Strength",_earringingStrength);
     };
 
     // add ace_medical pain effect:
-    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {_strength > 0.1}) then {
+    if (["ACE_Medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1}) then {
         [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
     };
 
@@ -119,8 +136,10 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
 
     // Blind player
     if (_strength > 0.1) then {
+        private _blend = [[1,1,1,0], [0.3,0.3,0.3,1]] select EGVAR(common,epilepsyFriendlyMode);
+
         GVAR(flashbangPPEffectCC) ppEffectEnable true;
-        GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
+        GVAR(flashbangPPEffectCC) ppEffectAdjust [1, 1, (0.8 + _strength) min 1, _blend, [0,0,0,1], [0,0,0,0]];
         GVAR(flashbangPPEffectCC) ppEffectCommit 0.01;
 
         //PARTIALRECOVERY - start decreasing effect over time
@@ -137,8 +156,11 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
         }, [], 17 * _strength] call CBA_fnc_waitAndExecute;
     };
 
-    if (_strength > 0.2) then {
-        ACE_player setVectorDir (_eyePos vectorDiff _grenadePosASL);
-    };
+    // Make player flinch
+    if (_strength <= 0.2) exitWith {};
+    private _minFlinch = linearConversion [0.2, 1, _strength, 0, 60, true];
+    private _maxFlinch = linearConversion [0.2, 1, _strength, 0, 95, true];
+    private _flinch    = (_minFlinch + random (_maxFlinch - _minFlinch)) * selectRandom [-1, 1];
+    ACE_player setDir (getDir ACE_player + _flinch);
 };
 true

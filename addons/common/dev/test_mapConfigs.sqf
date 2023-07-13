@@ -22,7 +22,7 @@ private _maps = configProperties [configFile >> "CfgWorldList", "(isClass _x)", 
     };
 
     // Test MGRS grid step size (from ace_common_fnc_getMapGridData)
-    private _zoomMax = 1e99;
+    private _zoomMax = 1e38;
     private _formatX = "";
     private _formatY = "";
     private _stepX = 1e10;

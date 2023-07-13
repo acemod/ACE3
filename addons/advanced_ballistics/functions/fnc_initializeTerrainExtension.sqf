@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ruthberg
- * Initializes the advanced ballistics dll extension with terrain data
+ * Initializes the advanced ballistics extension with terrain data
  *
  * Arguments:
  * None

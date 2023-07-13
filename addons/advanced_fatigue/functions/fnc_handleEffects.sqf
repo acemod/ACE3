@@ -27,6 +27,7 @@ params ["_unit", "_fatigue", "_speed", "_overexhausted"];
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
 if (_fatigue > 0.4 && {GVAR(lastBreath) > (_fatigue * -10 + 9)} && {!underwater _unit}) then {
+    if (!isGameFocused) exitWith {};
     switch (true) do {
         case (_fatigue < 0.6): {
             playSound (QGVAR(breathLow) + str(floor random 6));
@@ -58,8 +59,9 @@ if (GVAR(ppeBlackoutLast) == 1) then {
 
 // - Physical effects ---------------------------------------------------------
 if (GVAR(isSwimming)) exitWith {
-    _unit setAnimSpeedCoef linearConversion [0.7, 0.9, _fatigue, 1, 0.5, true];
-
+    if (GVAR(setAnimExclusions) isEqualTo []) then {
+        _unit setAnimSpeedCoef linearConversion [0.7, 0.9, _fatigue, 1, 0.5, true];
+    };
     if ((isSprintAllowed _unit) && {_fatigue > 0.7}) then {
         [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
     } else {
@@ -69,7 +71,10 @@ if (GVAR(isSwimming)) exitWith {
     };
 };
 if ((getAnimSpeedCoef _unit) != 1) then {
-    _unit setAnimSpeedCoef 1;
+    if (GVAR(setAnimExclusions) isEqualTo []) then {
+        TRACE_1("reset",getAnimSpeedCoef _unit);
+        _unit setAnimSpeedCoef 1;
+    };
 };
 
 if (_overexhausted) then {

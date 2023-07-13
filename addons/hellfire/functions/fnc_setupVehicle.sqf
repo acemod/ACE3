@@ -41,7 +41,7 @@ if (!_enabled) exitWith {TRACE_3("Not enabled",_enabled,_vehicle,_turretPath);};
 
 
 // Add laser if vehicle is configured for one:
-if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QGVAR(addLaserDesignator))) == 1) then {  
+if ((getNumber (configOf _vehicle >> QGVAR(addLaserDesignator))) == 1) then {
     [{
         params ["_vehicle", "_turretPath"];
         TRACE_3("checking for laser",_vehicle,_turretPath,_vehicle turretLocal _turretPath);
@@ -78,7 +78,7 @@ private _fnc_statement = {
 };
 private _fnc_condition = {
     params ["_target", "_player", "_attackProfile"];
-    
+
     private _turretPath = if (ACE_player == (driver _target)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
     private _hasWeapon = ({(isNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled))) && {getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled)) > 0}} count (_target weaponsTurret _turretPath)) > 0;
 

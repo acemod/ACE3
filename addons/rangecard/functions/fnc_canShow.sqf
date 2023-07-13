@@ -15,4 +15,8 @@
  * Public: No
  */
 
-(GVAR(ammoClass) != "" && GVAR(magazineClass) != "" && GVAR(weaponClass) != "" && !GVAR(RangeCardOpened) && ("ACE_RangeCard" in (uniformItems ACE_player)) || ("ACE_RangeCard" in (vestItems ACE_player)))
+GVAR(ammoClass) != "" &&
+GVAR(magazineClass) != "" &&
+GVAR(weaponClass) != "" &&
+!GVAR(RangeCardOpened) &&
+"ACE_RangeCard" in ([ACE_player] call EFUNC(common,uniqueItems))

@@ -43,17 +43,7 @@ if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWi
     false
 };
 
-//Items can be an array of required items or a string to a ACE_Setting array
-private _items = if (isArray (_config >> "items")) then {
-    getArray (_config >> "items");
-} else {
-    private _settingName = getText (_config >> "items");
-    private _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
-    if ((isNil _settingName) || {(missionNamespace getVariable _settingName) >= (count _settingItemsArray)}) exitWith {
-        ERROR("bad setting"); ["BAD"]
-    };
-    _settingItemsArray select (missionNamespace getVariable _settingName);
-};
+private _items = _config call FUNC(getRepairItems);
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
 private _return = true;
@@ -87,7 +77,7 @@ if (!("All" in _repairLocations)) then {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
         if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
-        if !(isNil _x) exitWith {
+        if (!isNil _x) exitWith {
             private _val = missionNamespace getVariable _x;
             if (_val isEqualType 0) then {
                 _return = switch (_val) do {
@@ -104,7 +94,7 @@ if (!("All" in _repairLocations)) then {
 
 private _requiredObjects = getArray (_config >> "claimObjects");
 private _claimObjectsAvailable = [];
-if (!(_requiredObjects isEqualTo [])) then {
+if (_requiredObjects isNotEqualTo []) then {
     _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
     if (_claimObjectsAvailable isEqualTo []) then {
         TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
@@ -140,8 +130,12 @@ if (_consumeItems > 0) then {
 private _callbackProgress = getText (_config >> "callbackProgress");
 if (_callbackProgress == "") then {
     _callbackProgress = {
-        (_this select 0) params ["", "_target"];
-        (alive _target) && {(abs speed _target) < 1} // make sure vehicle doesn't drive off
+        (_this select 0) params ["_caller", "_target", "", "", "", "", "_claimObjectsAvailable"];
+        (
+            (alive _target) &&
+            {(abs speed _target) < 1} && // make sure vehicle doesn't drive off
+            {_claimObjectsAvailable findIf {!alive _x || {_x getVariable [QEGVAR(common,owner), objNull] isNotEqualTo _caller}} == -1} // make sure claim objects are still available
+        )
     };
 } else {
     if (isNil _callbackProgress) then {
@@ -154,6 +148,7 @@ if (_callbackProgress == "") then {
 
 // Player Animation
 private _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
+private _loopAnim = (getNumber (_config >> "loopAnimation")) isEqualTo 1;
 _caller setVariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
 
 // Cannot use secondairy weapon for animation
@@ -177,16 +172,33 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         } else {
             _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
         };
+        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLower _callerAnim];
         [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
 };
 
-private _soundPosition = AGLToASL (_caller modelToWorldVisual (_caller selectionPosition "RightHand"));
+if (_loopAnim) then {
+    private _animDoneEh = _caller addEventHandler ["AnimDone", {
+        params ["_caller", "_anim"];
+        if (_anim isEqualTo (_caller getVariable [QGVAR(repairCurrentAnimCaller), ""])) then {
+            [{
+                params ["_caller", "_anim"];
+                if !(isNil {_caller getVariable QGVAR(repairCurrentAnimCaller)}) then {
+                    TRACE_2("loop",_caller,_anim);
+                    _this call EFUNC(common,doAnimation)
+                };
+            }, [_caller, _anim], 2.5] call CBA_fnc_waitAndExecute;
+        };
+    }];
+    _caller setVariable [QGVAR(repairLoopAnimEh), _animDoneEh];
+};
+
+private _soundPosition = _caller modelToWorldVisualWorld (_caller selectionPosition "RightHand");
 ["Acts_carFixingWheel", _soundPosition, nil, 50] call EFUNC(common,playConfigSound3D);
 
 // Get repair time
 private _repairTime = [
-    configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
+    configOf _target >> QGVAR(repairTimes) >> configName _config,
     "number",
     -1
 ] call CBA_fnc_getConfigEntry;
@@ -219,7 +231,10 @@ private _hitPointClassname = if (_hitPoint isEqualType "") then {
 };
 private _processText = getText (_config >> "displayNameProgress");
 private _backupText = format [localize LSTRING(RepairingHitPoint), _hitPointClassname];
-([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) params ["_text"];
+private _text = _processText;
+if (getNumber (_config >> "forceDisplayName") isNotEqualTo 1) then {
+    _text = ([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) select 0;
+};
 
 TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
 

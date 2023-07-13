@@ -23,7 +23,11 @@
 
         if (!isNull cursorTarget && {cursorTarget isKindOf "CAManBase"}) then {
             private _targetState = [cursorTarget, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
-            drawIcon3D ["", [0.6, 0, 0, 1], cursorTarget modelToWorldVisual (cursorTarget selectionPosition "pelvis"), 0, 0, 0, format ["State: %1", _targetState], 2, 40 * pixelH, "RobotoCondensed"];
+            private _targetStateAI = "";
+            if (!isNil QEGVAR(medical_ai,stateMachine)) then {
+                _targetStateAI = [cursorTarget, EGVAR(medical_ai,stateMachine)] call CBA_statemachine_fnc_getCurrentState;
+            };
+            drawIcon3D ["", [0.6, 0, 0, 1], cursorTarget modelToWorldVisual (cursorTarget selectionPosition "pelvis"), 0, 0, 0, format ["State: %1 / %2", _targetState,_targetStateAI], 2, 40 * pixelH, "RobotoCondensed"];
         };
     }, 0 ,[]] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

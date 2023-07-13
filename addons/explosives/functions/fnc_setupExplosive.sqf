@@ -24,7 +24,7 @@ params ["_vehicle", "_unit", "_magClassname"];
 TRACE_3("params",_vehicle,_unit,_magClassname);
 
 //Get setup object vehicle and model:
-private _setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
+private _setupObjectClass = getText (configFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
 if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR("Bad Vehicle");};
 private _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
@@ -80,7 +80,7 @@ GVAR(TweakedAngle) = 0;
             #ifdef DEBUG_MODE_FULL
             drawLine3d [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
             #endif
-            if (lineIntersects [eyePos _unit, _testPos, _unit]) exitWith {_return = false;};
+            if ((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) isNotEqualTo []) exitWith {_return = false;};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
         _return
     };
@@ -94,8 +94,8 @@ GVAR(TweakedAngle) = 0;
         private _testBase = _basePosASL vectorAdd _lookDirVector;
         {
             private _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
-            private _intersectsWith = lineIntersectsWith [eyePos _unit, _testPos, _unit];
-            if (count _intersectsWith == 1) exitWith {_attachVehicle = (_intersectsWith select 0);};
+            private _intersectObject = ((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) param [0, objNull]) param [3, objNull];
+            if (_intersectObject isNotEqualTo objNull) exitWith {_attachVehicle = _intersectObject};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
         if ((!isNull _attachVehicle) && {[PLACE_RANGE_MIN] call _testPositionIsValid} &&
                 {(_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}}) then {
@@ -187,6 +187,7 @@ GVAR(TweakedAngle) = 0;
             _unit setVariable [QGVAR(PlantingExplosive), true];
             [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call CBA_fnc_waitAndExecute;
 
+            [QGVAR(setup), [_expSetupVehicle, _magClassname, _unit]] call CBA_fnc_globalEvent;
         };
     } else {
         private _screenPos = worldToScreen (_virtualPosASL call EFUNC(common,ASLToPosition));

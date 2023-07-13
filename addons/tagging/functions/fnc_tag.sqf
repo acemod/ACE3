@@ -6,10 +6,11 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
- * 2: Material of the tag <STRING> (Optional)
+ * 2: Material of the tag <STRING> (default: "")
+ * 3: Tag Model <STRING> (default: "UserTexture1m_F")
  *
  * Return Value:
- * Sucess <BOOL>
+ * Success <BOOL>
  *
  * Example:
  * success = [player, "z\ace\addons\tagging\UI\tags\black\0.paa"] call ace_tagging_fnc_tag
@@ -20,13 +21,15 @@
 params [
     ["_unit", objNull, [objNull]],
     ["_texture", "", [""]],
-    ["_material", "", [""]]
+    ["_material", "", [""]],
+    ["_tagModel", "UserTexture1m_F", [""]]
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
     ERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
 };
 
+private _isVehicleTag = false;
 private _startPosASL = eyePos _unit;
 private _cameraPosASL =  AGLToASL positionCameraToWorld [0, 0, 0];
 private _cameraDir = (AGLToASL positionCameraToWorld [0, 0, 1]) vectorDiff _cameraPosASL;
@@ -49,6 +52,13 @@ if ((!isNull _object) && {
     // If the class is alright, do not exit
     if (_object isKindOf "Static") exitWith {false};
 
+    // Taggable vehicle, do not exit and tell server to change "clan" tag
+    if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true])
+    && {getText (configOf _object >> "selectionClan") in selectionNames _object}) exitWith {
+        _isVehicleTag = true;
+        false
+    };
+
     // If the class is not categorized correctly search the cache
     private _modelName = (getModelInfo _object) select 0;
     private _isStatic = GVAR(cacheStaticModels) getVariable [_modelName, false];
@@ -68,13 +78,20 @@ if (_surfaceNormal vectorDotProduct  (_endPosASL vectorDiff _startPosASL) > 0) t
 
 // Check if its a valid surface: big enough, reasonably plane
 private _v1 = vectorNormalized (_surfaceNormal vectorMultiply -1);
-private _v2 = vectorNormalized (_v1 vectorCrossProduct (_endPosASL vectorDiff _startPosASL));
+private _v2 = [];
+private _v3 = [];
 // If the surface is not horizontal (>20º), create vup _v2 pointing upward instead of away
-if (abs (_v1 select 2) < 0.94) then {
-    private _v3Temp = _v1 vectorCrossProduct [0, 0, 1];
-    _v2 = _v3Temp vectorCrossProduct _v1;
+private _vectorDirAndUp = if (abs (_v1 select 2) < 0.94) then {
+    _v3 = _v1 vectorCrossProduct [0, 0, 1];
+    _v2 = _v3 vectorCrossProduct _v1;
+    TRACE_2("Wall Placement",_v1,_v2);
+    [_v1, _v2]
+} else {
+    _v2 = vectorNormalized (_v1 vectorCrossProduct (_endPosASL vectorDiff _startPosASL));
+    _v3 = _v2 vectorCrossProduct _v1;
+    TRACE_2("Ground Placement",_v1,_v3);
+    [_v1, _v3]
 };
-private _v3 = _v2 vectorCrossProduct _v1;
 
 TRACE_3("Reference:", _v1, _v2, _v3);
 
@@ -86,20 +103,20 @@ private _fnc_isOk = {
     // If there's no intersections
     if (_intersections isEqualTo []) exitWith {false;};
 
-    if !(((_intersections select 0) select 3) isEqualTo _object) exitWith {false;};
+    if (((_intersections select 0) select 3) isNotEqualTo _object) exitWith {false;};
 
     true
 };
 
-if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
+if ( (!_isVehicleTag) && {
+    !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([ 0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
-    {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}) exitWith {
+    {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}}) exitWith {
     TRACE_1("Unsuitable location:",_touchingPoint);
     false
 };
 
-private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
 
 // Everything ok, make the unit create the tag
 [_unit, "PutDown"] call EFUNC(common,doGesture);
@@ -108,10 +125,10 @@ private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
     params ["", "", "", "", "_unit"];
     TRACE_2("Unit:",_unit,_this);
 
-    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
+    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 5, 1, 15];
 
     // Tell the server to create the tag and handle its destruction
     [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material], 0.6] call CBA_fnc_waitAndExecute;
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material, _tagModel, _isVehicleTag], 0.6] call CBA_fnc_waitAndExecute;
 
 true

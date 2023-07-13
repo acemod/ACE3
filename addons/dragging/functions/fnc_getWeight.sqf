@@ -1,45 +1,36 @@
 #include "script_component.hpp"
 /*
- * Author: L-H, edited by commy2, rewritten by joko // Jonas
- * Returns the weight of a crate.
+ * Author: L-H, edited by commy2, rewritten by joko // Jonas, re-rewritten by mharis001
+ * Returns the weight of the given object.
+ * Weight is calculated from the object's mass and its current inventory.
  *
  * Arguments:
- * 0: Crate to get weight of <OBJECT>
+ * 0: Object <OBJECT>
  *
  * Return Value:
- * Total Weight <NUMBER>
+ * Weight <NUMBER>
  *
  * Example:
- * [Crate1] call ace_dragging_fnc_getweight;
+ * [_object] call ace_dragging_fnc_getWeight
  *
  * Public: No
-*/
+ */
 
 params ["_object"];
 
-// Initialize the total weight.
-private _totalWeight = 0;
+private _weight = loadAbs _object;
 
-// Cycle through all item types with their assigned config paths.
+// Add the mass of the object itself
+// The container object is generally of type SupplyX and has mass of zero
+_weight = _weight + getNumber (configOf _object >> "mass");
+
+// Contents of backpacks get counted twice (see https://github.com/acemod/ACE3/pull/8457#issuecomment-1062522447)
+// This is a workaround until that is fixed on BI's end
 {
-    _x params ["_items", "_getConfigCode"];
-    _items params ["_item", "_count"];
-    // Cycle through all items and read their mass out of the config.
-    {
-        // Multiply mass with amount of items and add the mass to the total weight.
-        _totalWeight = _totalWeight + (getNumber ((call _getConfigCode) >> "mass") * (_count select _forEachIndex));
-    } forEach _item;
-    true
-} count [
-    //IGNORE_PRIVATE_WARNING ["_x"];
-    [getMagazineCargo _object, {configFile >> "CfgMagazines" >> _x}],
-    [getBackpackCargo _object, {configFile >> "CfgVehicles" >> _x}],
-    [getItemCargo _object, {configFile >> "CfgWeapons" >> _x >> "ItemInfo"}],
-    [getWeaponCargo _object, {configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo"}]
-];
+    _x params ["", "_container"];
+    _weight = _weight - (loadAbs _container);
+} forEach (everyContainer _object);
 
-// add Weight of create to totalWeight
-_totalWeight = _totalWeight + (getNumber (configFile >> "CfgVehicles" >> typeOf _object >> "mass"));
-
-// Mass in Arma isn't an exact amount but rather a volume/weight value. This attempts to work around that by making it a usable value. (sort of).
-_totalWeight * 0.5
+// Mass in Arma isn't an exact amount but rather a volume/weight value
+// This attempts to work around that by making it a usable value (sort of)
+_weight * 0.5;

@@ -33,24 +33,63 @@ private _bodyPartName = [
 
 _entries pushBack [localize _bodyPartName, [1, 1, 1, 1]];
 
+// Damage taken tooltip
+if (GVAR(showDamageEntry)) then {
+    private _bodyPartDamage = (_target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]]) select _selectionN;
+    if (_bodyPartDamage > 0) then {
+        private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
+        switch (true) do {
+            case (_selectionN > 3): { // legs: index 4 & 5
+                _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
+            };
+            case (_selectionN > 1): { // arms: index 2 & 3
+                _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+            };
+            case (_selectionN == 0): { // head: index 0
+                _damageThreshold = _damageThreshold * 1.25;
+            };
+            default { // torso: index 1
+                _damageThreshold = _damageThreshold * 1.5;
+            };
+        };
+        _bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
+        switch (true) do {
+            case (_bodyPartDamage isEqualTo 1): {
+                _entries pushBack [localize LSTRING(traumaSustained4), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.75): {
+                _entries pushBack [localize LSTRING(traumaSustained3), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.5): {
+                _entries pushBack [localize LSTRING(traumaSustained2), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.25): {
+                _entries pushBack [localize LSTRING(traumaSustained1), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+        };
+    };
+};
+
 // Indicate if unit is bleeding at all
 if (IS_BLEEDING(_target)) then {
     _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
 };
 
-// Give a qualitative description of the blood volume lost
-switch (GET_HEMORRHAGE(_target)) do {
-    case 1: {
-        _entries pushBack [localize LSTRING(Lost_Blood1), [1, 0, 0, 1]];
-    };
-    case 2: {
-        _entries pushBack [localize LSTRING(Lost_Blood2), [1, 0, 0, 1]];
-    };
-    case 3: {
-        _entries pushBack [localize LSTRING(Lost_Blood3), [1, 0, 0, 1]];
-    };
-    case 4: {
-        _entries pushBack [localize LSTRING(Lost_Blood4), [1, 0, 0, 1]];
+if (GVAR(showBloodlossEntry)) then {
+    // Give a qualitative description of the blood volume lost
+    switch (GET_HEMORRHAGE(_target)) do {
+        case 1: {
+            _entries pushBack [localize LSTRING(Lost_Blood1), [1, 1, 0, 1]];
+        };
+        case 2: {
+            _entries pushBack [localize LSTRING(Lost_Blood2), [1, 0.67, 0, 1]];
+        };
+        case 3: {
+            _entries pushBack [localize LSTRING(Lost_Blood3), [1, 0.33, 0, 1]];
+        };
+        case 4: {
+            _entries pushBack [localize LSTRING(Lost_Blood4), [1, 0, 0, 1]];
+        };
     };
 };
 
@@ -58,24 +97,28 @@ switch (GET_HEMORRHAGE(_target)) do {
 if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
     _entries pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
-switch ((_target getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]]) select _selectionN) do {
-    case (1): {_entries pushBack [localize LSTRING(Status_Fractured), [1, 0, 0, 1]];};
-    case (-1): {
-        if (EGVAR(medical,fractures) == 2) then { // Ignore if the split has no effect
-            _entries pushBack [localize LSTRING(Status_SplintApplied), [1, 1, 1, 1]];
+
+// Indicate current body part fracture status
+switch (GET_FRACTURES(_target) select _selectionN) do {
+    case 1: {
+        _entries pushBack [localize LSTRING(Status_Fractured), [1, 0, 0, 1]];
+    };
+    case -1: {
+        if (EGVAR(medical,fractures) in [2, 3]) then { // Ignore if the splint has no effect
+            _entries pushBack [localize LSTRING(Status_SplintApplied), [0.2, 0.2, 1, 1]];
         };
     };
 };
 
 // Indicate the amount of pain the unit is in
-if ([_target] call EFUNC(common,isAwake)) then {
+if (_target call EFUNC(common,isAwake)) then {
     private _pain = GET_PAIN_PERCEIVED(_target);
     if (_pain > 0) then {
         private _painText = switch (true) do {
-            case (_pain > 0.5): {
+            case (_pain > PAIN_UNCONSCIOUS): {
                 ELSTRING(medical_treatment,Status_SeverePain);
             };
-            case (_pain > 0.1): {
+            case (_pain > (PAIN_UNCONSCIOUS / 5)): {
                 ELSTRING(medical_treatment,Status_Pain);
             };
             default {
@@ -100,45 +143,34 @@ if (_totalIvVolume >= 1) then {
 // Add entries for open, bandaged, and stitched wounds
 private _woundEntries = [];
 
-private _fnc_getWoundDescription = {
-    private _classIndex = _woundClassID / 10;
-    private _category = _woundClassID % 10;
-    private _className = EGVAR(medical_damage,woundsData) select _classIndex select 6;
-    private _suffix = ["Minor", "Medium", "Large"] select _category;
-    private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];
-    if (_amountOf >= 1) then {
-        format ["%1x %2", ceil _amountOf, _woundName];
-    } else {
-        format ["Partial %1", _woundName];
-    };
+private _fnc_processWounds = {
+    params ["_wounds", "_format", "_color"];
+
+    {
+        _x params ["_woundClassID", "_amountOf"];
+
+        if (_amountOf > 0) then {
+            private _classIndex = _woundClassID / 10;
+            private _category   = _woundClassID % 10;
+
+            private _className = EGVAR(medical_damage,woundClassNames) select _classIndex;
+            private _suffix = ["Minor", "Medium", "Large"] select _category;
+            private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];
+
+            private _woundDescription = if (_amountOf >= 1) then {
+                format ["%1x %2", ceil _amountOf, _woundName]
+            } else {
+                format [localize LSTRING(PartialX), _woundName]
+            };
+
+            _woundEntries pushBack [format [_format, _woundDescription], _color];
+        };
+    } forEach (_wounds getOrDefault [ALL_BODY_PARTS select _selectionN, []]);
 };
 
-{
-    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
-    if (_selectionN == _bodyPartN) then {
-        if (_amountOf > 0) then {
-            _woundEntries pushBack [call _fnc_getWoundDescription, [1, 1, 1, 1]];
-        } else {
-            if !(EGVAR(medical_treatment,advancedBandages) && {EGVAR(medical_treatment,woundReopening)}) then {
-                _woundEntries pushBack [format ["[B] %1", call _fnc_getWoundDescription], [0.7, 0.7, 0.7, 1]];
-            };
-        };
-    };
-} forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
-
-{
-    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
-    if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
-        _woundEntries pushBack [format ["[B] %1", call _fnc_getWoundDescription], [0.88, 0.7, 0.65, 1]];
-    };
-} forEach (_target getVariable [QEGVAR(medical,bandagedWounds), []]);
-
-{
-    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
-    if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
-        _woundEntries pushBack [format ["[S] %1", call _fnc_getWoundDescription], [0.7, 0.7, 0.7, 1]];
-    };
-} forEach (_target getVariable [QEGVAR(medical,stitchedWounds), []]);
+[GET_OPEN_WOUNDS(_target), "%1", [1, 1, 1, 1]] call _fnc_processWounds;
+[GET_BANDAGED_WOUNDS(_target), "[B] %1", [0.88, 0.7, 0.65, 1]] call _fnc_processWounds;
+[GET_STITCHED_WOUNDS(_target), "[S] %1", [0.7, 0.7, 0.7, 1]] call _fnc_processWounds;
 
 // Handle no wound entries
 if (_woundEntries isEqualTo []) then {
@@ -152,7 +184,8 @@ lbClear _ctrl;
 
 {
     _x params ["_text", "_color"];
-    private _index = _ctrl lbAdd _text;
-    _ctrl lbSetColor [_index, _color];
-    _ctrl lbSetSelectColor [_index, _color];
+
+    _ctrl lbSetColor [_ctrl lbAdd _text, _color];
 } forEach _entries;
+
+_ctrl lbSetCurSel -1;

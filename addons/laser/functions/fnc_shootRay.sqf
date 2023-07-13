@@ -36,7 +36,7 @@ if (_intersects isEqualTo []) then {
     };
 };
 
-if (!(_intersects isEqualTo [])) then {
+if (_intersects isNotEqualTo []) then {
     (_intersects select 0) params ["_intersectPosASL", "", "_intersectObject"];
     // Move back slightly to prevents issues with it going below terrain
     _distance = (_posASL vectorDistance _intersectPosASL) - 0.005;
@@ -46,7 +46,7 @@ if (!(_intersects isEqualTo [])) then {
 TRACE_3("", _resultPos, _distance, _intersects);
 
 #ifdef DRAW_LASER_INFO
-if !(isNil "_resultPos") then {
+if (!isNil "_resultPos") then {
     private _text = [_distance, 4, 0] call CBA_fnc_formatNumber;
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0, 1, 0, 1], ASLtoAGL _resultPos, 0.5, 0.5, 0, _text, 0.4, 0.025, "TahomaB"];
     drawLine3D [ASLtoAGL _posASL, ASLtoAGL _resultPos, [0,1,0,1]];

@@ -297,7 +297,7 @@ class ADDON {
                 reopeningMaxDelay = 150;
             };
             class AbrasionMinor: Abrasion {
-                effectiveness = 43;
+                effectiveness = 4;
             };
             class AbrasionMedium: Abrasion {
                 effectiveness = 3;
@@ -440,7 +440,7 @@ class ADDON {
             };
             class AbrasionLarge: Abrasion {
                 effectiveness = 0.7;
-                reopeningChance = 5;
+                reopeningChance = 0.5;
             };
 
             class Avulsion: Abrasion {
@@ -494,7 +494,6 @@ class ADDON {
             };
             class CutMinor: Cut {
                 effectiveness = 2;
-                reopeningChance = 0.3;
             };
             class CutMedium: Cut {
                 effectiveness = 1;
@@ -582,7 +581,7 @@ class ADDON {
             timeInSystem = 1800;
             timeTillMaxEffect = 30;
             maxDose = 4;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
             viscosityChange = -10;
         };
         class Epinephrine {
@@ -593,7 +592,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 10;
             maxDose = 10;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
         };
         class Adenosine {
             painReduce = 0;
@@ -603,24 +602,14 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 15;
             maxDose = 6;
-            inCompatableMedication[] = {};
-        };
-        class Atropine {
-            painReduce = 0;
-            hrIncreaseLow[] = {-2, -5};
-            hrIncreaseNormal[] = {-10, -15};
-            hrIncreaseHigh[] = {-5, -20};
-            timeInSystem = 120;
-            timeTillMaxEffect = 15;
-            maxDose = 6;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
         };
         class PainKillers {
             painReduce = 0.1;
             timeInSystem = 600;
             timeTillMaxEffect = 60;
             maxDose = 10;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
             viscosityChange = 5;
         };
     };

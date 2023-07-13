@@ -5,7 +5,7 @@
     LSTRING(Category_Pylons),
     [true],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enabledForZeus),
@@ -14,7 +14,7 @@
     LSTRING(Category_Pylons),
     [true],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(rearmNewPylons),
@@ -23,7 +23,7 @@
     LSTRING(Category_Pylons),
     [false],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(requireEngineer),
@@ -32,7 +32,7 @@
     LSTRING(Category_Pylons),
     [false],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(requireToolkit),
@@ -41,7 +41,7 @@
     LSTRING(Category_Pylons),
     [true],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(searchDistance),
@@ -54,7 +54,7 @@
         params ["_searchDistance"];
         GVAR(searchDistanceSqr) = _searchDistance ^ 2;
     }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(timePerPylon),
@@ -63,4 +63,4 @@
     LSTRING(Category_Pylons),
     [1, 10, 5, 0],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;

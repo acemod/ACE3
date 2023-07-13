@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal
- * Check if is bleeding
+ * Checks if the given unit is bleeding. Handles both ACE Medical and Vanilla.
  *
  * Arguments:
- * 0: unit <TYPE>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * is Bleeding <BOOL>
+ * Is Bleeding <BOOL>
  *
  * Example:
  * [player] call ace_medical_blood_fnc_isBleeding

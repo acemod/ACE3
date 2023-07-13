@@ -51,6 +51,8 @@ Note that these settings govern the default spectator behaviour. Through the use
 Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `ace_spectatorSet` | [_isSpectator, _player] | Global | Player's spectator status was changed
+`ace_spectator_displayLoaded` | _display | Local | Spectator display was loaded
+`ace_spectator_displayUnloaded` | _display | Local | Spectator display was unloaded
 
 ## 4. Scripting
 
@@ -63,7 +65,7 @@ If the interface is not forced then the player can close spectator with the <kbd
 
 If the player is hidden they will become invisible, invulnerable and removed from their group until they exit spectator.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Spectator state of local client <BOOL> (default: true)
  * 1: Force interface <BOOL> (default: true)
@@ -83,7 +85,7 @@ Whitelisted units will always show in the unit list regardless of the usual filt
 
 Note that this function takes local effect, so only the local player will see these changes.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Units to show in the list <ARRAY>
  * 1: Units to hide in the list <ARRAY>
@@ -94,7 +96,7 @@ Note that this function takes local effect, so only the local player will see th
  * Example:
  * [allPlayers, [player]] call ace_spectator_fnc_updateUnits
  ```
- 
+
 ### 4.3 Add/Remove sides available to spectate
 
 `ace_spectator_fnc_updateSides`
@@ -102,7 +104,7 @@ By default, units on all 4 sides (`west`, `east`, `independent` and `civilian`) 
 
 Note that this function takes local effect, so only the local player will see these changes.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Sides to add <ARRAY>
  * 1: Sides to remove <ARRAY>
@@ -117,11 +119,11 @@ Note that this function takes local effect, so only the local player will see th
 ### 4.4 Add/Remove available camera modes
 
 `ace_spectator_fnc_updateCameraModes`
-You can change the spectator camera modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have a free camera). Remember that the **Camera modes** setting will change which modes are available to everyone by default - changes with this function will override that. 
+You can change the spectator camera modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have a free camera). Remember that the **Camera modes** setting will change which modes are available to everyone by default - changes with this function will override that.
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
-```cpp
+```sqf
  * Possible camera modes are:
  *   - 0: Free
  *   - 1: First person
@@ -141,11 +143,11 @@ Note that this function takes local effect, so only the local player will experi
 ### 4.5 Add/Remove available vision modes
 
 `ace_spectator_fnc_updateVisionModes`
-You can change the spectator vision modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have night vision). Remember that the **Vision modes** setting will change which modes are available to everyone by default (if thermal is enabled via the setting then both black and white hot are available) - changes with this function will override that. 
+You can change the spectator vision modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have night vision). Remember that the **Vision modes** setting will change which modes are available to everyone by default (if thermal is enabled via the setting then both black and white hot are available) - changes with this function will override that.
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
-```cpp
+```sqf
  * Possible vision modes are:
  *   - -2: Normal
  *   - -1: Night vision
@@ -176,7 +178,7 @@ You can change any of the listed camera attributes at any time during a mission 
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Camera mode <NUMBER>
  *   - 0: Free
@@ -209,7 +211,7 @@ Note that this function takes local effect, so only the local player will experi
 `ace_spectator_fnc_getCameraAttributes`
 Returns an array of the listed camera attributes (see `setCameraAttributes` for more details) for the local player. If the spectator camera is not currently active any pre-set attributes will be returned (otherwise default values will be returned - position will be `[0,0,0]` if unset).
 
-```cpp
+```sqf
  * Arguments:
  * None
  *
@@ -225,7 +227,7 @@ Returns an array of the listed camera attributes (see `setCameraAttributes` for 
 `ace_spectator_fnc_players`
 Will return both alive and dead players (note that dead player corpses are never deleted until the player has respawned - even when `deleteVehicle` is used on them).
 
-```cpp
+```sqf
  * Arguments:
  * None
  *

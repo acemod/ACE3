@@ -20,7 +20,7 @@
 
 params [ ["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]] ];
 
-if (_object == objNull) exitWith {};
+if (isNull _object) exitWith {};
 if (_items isEqualType [] && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
@@ -68,9 +68,9 @@ if (_items isEqualType true) then {
 
     private _itemCount = {
         if (_x isEqualTo (_cargo select 0) || {_x isEqualTo (_cargo select 1)}) then {
-            !(_x isEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]})
+            (_x isNotEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]})
         } else {
-            !(_x isEqualTo [])
+            (_x isNotEqualTo [])
         };
     } count _cargo;
 

@@ -7,6 +7,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 // Make sure this data is read before client/server postInit
 call FUNC(getMapData);
 

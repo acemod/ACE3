@@ -1,4 +1,3 @@
-
 class CfgAmmo {
     class BulletBase;
     class B_127x99_Ball;
@@ -27,6 +26,7 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {900};
         ACE_barrelLengths[] = {736.6};
+        EGVAR(vehicle_damage,incendiary) = 1.0; // Raufoss Mk 211 HEIAP (high-explosive, incendiary, armor-piercing)
     };
     class B_762x54_Ball;
     class rhsusf_B_300winmag: B_762x54_Ball { // ACE_762x67_Ball_Mk248_Mod_1 (ballistics/CfgAmmo.hpp)
@@ -136,17 +136,18 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {875, 910, 930, 945};
         ACE_barrelLengths[] = {330.2, 406.4, 508.0, 609.6};
     };
-    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball { // RUAG Ammotec
-        ACE_caliber = 4.65;
+    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball { // RUAG Ammotec: https://www.heckler-koch.com/en/products/military/submachine-guns/mp7a1/mp7a2/ammunition.html
+        ACE_caliber = 4.65; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-en.pdf
         ACE_bulletLength = 21;
         ACE_bulletMass = 2.6;
         ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
-        ACE_ballisticCoefficients[] = {0.171};
+        ACE_ballisticCoefficients[] = {0.089};
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
-        ACE_dragModel = 1;
-        ACE_muzzleVelocities[] = {620};
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {621}; // at 21°C, 620 m/s at 15°C according with the 4.6x30 FMJ magazine initSpeed
         ACE_barrelLengths[] = {180};
+        airFriction = -0.002635; // default RHS value -0.0027667
     };
     class rhs_ammo_46x30_JHP: rhs_ammo_46x30_FMJ { // RUAG Ammotec
         ACE_caliber = 4.65;
@@ -157,8 +158,9 @@ class CfgAmmo {
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
         ACE_dragModel = 1;
-        ACE_muzzleVelocities[] = {690};
+        ACE_muzzleVelocities[] = {691}; // at 21°C, 690 m/s at 15°C according with the 4.6x30 JHP magazine initSpeed
         ACE_barrelLengths[] = {180};
+        airFriction = -0.003723; // default RHS value -0.00348301
     };
     class rhs_ammo_46x30_AP: rhs_ammo_46x30_FMJ { // RUAG Ammotec
         ACE_caliber = 4.65;
@@ -169,8 +171,9 @@ class CfgAmmo {
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
         ACE_dragModel = 1;
-        ACE_muzzleVelocities[] = {680};
+        ACE_muzzleVelocities[] = {681}; // at 21°C, 680 m/s at 15°C according with the 4.6x30 AP magazine initSpeed
         ACE_barrelLengths[] = {180};
+        airFriction = -0.003045; // default RHS value -0.00266241
     };
     class rhs_ammo_45ACP_MHP: BulletBase { // B_45ACP_Ball (ballistics/CfgAmmo.hpp)
         ACE_caliber = 11.481;
@@ -207,6 +210,131 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {340, 370, 400};
         ACE_barrelLengths[] = {101.6, 127.0, 228.6};
+    };
+    class rhs_ammo_he_fragments: BulletBase { // Shrapnel, compatibility with medical_damage
+        ACE_damageType = "grenade";
+    };
+    class B_12Gauge_Slug;
+    class rhs_ammo_12g_FRAG: B_12Gauge_Slug { // Frag rounds, compatibility with medical_damage
+        ACE_damageType = "grenade";
+    };
+
+    class Sh_125mm_APFSDS;
+    class rhsusf_ammo_basic_penetrator: Sh_125mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+
+    class rhs_ammo_ap_penetrator: Sh_125mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+
+    class Sh_120mm_APFSDS;
+    class rhs_ammo_M829: Sh_120mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+
+    class rhs_ammo_M830: Sh_120mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+
+    class B_30mm_HE;
+    class RHS_ammo_M792_HEI: B_30mm_HE {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class rhs_ammo_mk19m3_M384;
+    class rhs_ammo_mk19m3_M430I: rhs_ammo_mk19m3_M384 {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class rhsusf_ammo_reduced_penetrator;
+    class rhs_ammo_mk19m3_M430I_penetrator: rhsusf_ammo_reduced_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class B_30mm_APFSDS_Tracer_Red;
+    class rhs_ammo_PGU14B_API: B_30mm_APFSDS_Tracer_Red {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class SubmunitionBase;
+    class rhs_ammo_30x173mm_GAU8_mixed: SubmunitionBase {
+        EGVAR(rearm,caliber) = 30;
+    };
+
+    class M_Titan_AT;
+    class rhs_ammo_TOW_AT: M_Titan_AT {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+
+    class rhs_ammo_127x99_Ball;
+    class rhs_ammo_127x99_Ball_AI: rhs_ammo_127x99_Ball {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class rhs_ammo_127x99_Ball_Tracer_Red;
+    class rhs_ammo_127x99_Ball_Tracer_Red_AI: rhs_ammo_127x99_Ball_Tracer_Red {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class rhs_ammo_127x99_SLAP;
+    class rhs_ammo_127x99_SLAP_AI: rhs_ammo_127x99_SLAP {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class rhs_ammo_127x99_SLAP_Tracer_Red;
+    class rhs_ammo_127x99_SLAP_Tracer_Red_AI: rhs_ammo_127x99_SLAP_Tracer_Red {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class rhs_ammo_12gHEAP_penetrator: BulletBase {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+    class rhs_ammo_M136_rocket;
+    class rhs_ammo_M136_hp_rocket: rhs_ammo_M136_rocket {
+        EGVAR(vehicle_damage,incendiary) = 0.5;
+    };
+    class rhsusf_40mm_HE;
+    class rhsusf_40mm_HEDP: rhsusf_40mm_HE {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class rhs_ammo_M136_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_M136_hp_penetrator: rhs_ammo_M136_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.5;
+    };
+    class rhs_ammo_M136_hedp_penetrator: rhs_ammo_M136_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    class rhs_ammo_M_fgm148_AT_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_smaw_HEAA_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_maaws_HEAT_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class RocketBase;
+    class rhs_ammo_maaws_HEDP: RocketBase {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    class rhs_ammo_maaws_HEDP_penetrator: rhs_ammo_M136_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    class rhs_ammo_maaws_HE: RocketBase {
+        EGVAR(vehicle_damage,incendiary) = 0.5;
+    };
+    class rhs_ammo_maaws_SMOKE: RocketBase {
+        EGVAR(vehicle_damage,incendiary) = 0;
+    };
+    class rhs_ammo_maaws_ILLUM: RocketBase {
+        EGVAR(vehicle_damage,incendiary) = 0;
+    };
+    class rhs_ammo_40mmHEDP_penetrator: rhs_ammo_12gHEAP_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
     };
 
     class MissileBase;
@@ -279,8 +407,6 @@ class CfgAmmo {
         ace_frag_skip = 0;
         ace_frag_force = 1;
     };
-    class RocketBase;
-    class rhs_ammo_M136_rocket: RocketBase {};
     class rhs_ammo_M136_hedp_rocket: rhs_ammo_M136_rocket {
         ace_frag_enabled = 1;
         ace_frag_metal = 330;
@@ -290,8 +416,39 @@ class CfgAmmo {
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    class rhs_ammo_m72a7_rocket: rhs_ammo_M136_hedp_rocket {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+        ace_frag_enabled = 0;
+        ace_frag_skip = 1;
+        ace_frag_force = 0;
     };
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;
+    };
+
+    // ACE Explosives
+    class PipeBombBase;
+    class rhsusf_m112_ammo: PipeBombBase {
+        ace_explosives_defuseObjectPosition[] = {0.055, 0, 0.038};
+    };
+
+    class rhsusf_m112x4_ammo: PipeBombBase {
+        ace_explosives_defuseObjectPosition[] = {0.055, -0.025, 0.102};
+    };
+
+    class MineBase;
+    class rhsusf_mine_m19_ammo: MineBase {
+        ace_explosives_defuseObjectPosition[] = {0, 0.02, 0.046};
+    };
+
+    class rhsusf_mine_m14_ammo: MineBase {
+        ace_explosives_defuseObjectPosition[] = {-0.02, -0.015, 0.02};
+    };
+
+    class APERSMine_Range_Ammo;
+    class rhsusf_mine_m49a1_3m_ammo: APERSMine_Range_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0.016, 0.296};
     };
 };

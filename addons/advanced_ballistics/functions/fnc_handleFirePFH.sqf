@@ -15,12 +15,11 @@
  * Public: No
  */
 
+private _deleted = false;
 {
     _x params ["_bullet","_caliber","_bulletTraceVisible","_index"];
 
-    if (!alive _bullet) then {
-        GVAR(allBullets) deleteAt (GVAR(allBullets) find _x);
-    } else {
+    if (alive _bullet) then {
         private _bulletVelocity = velocity _bullet;
         private _bulletPosition = getPosASL _bullet;
 
@@ -29,11 +28,12 @@
         };
 
         _bullet setVelocity (_bulletVelocity vectorAdd (parseSimpleArray ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6", _index, _bulletVelocity, _bulletPosition, wind, ASLToATL(_bulletPosition) select 2, CBA_missionTime toFixed 6])));
+    } else {
+        GVAR(allBullets) set [_forEachIndex, objNull];
+        _deleted = true;
     };
-    nil
-} count +GVAR(allBullets);
+} forEach GVAR(allBullets);
 
-if (GVAR(allBullets) isEqualTo []) then {
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-    GVAR(BulletPFH) = nil;
+if (_deleted) then {
+    GVAR(allBullets) = GVAR(allBullets) - [objNull];
 };

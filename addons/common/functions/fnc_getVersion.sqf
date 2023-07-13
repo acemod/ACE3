@@ -15,4 +15,4 @@
  * Public: Yes
  */
 
-getText (configFile >> "CfgPatches" >> "ACE_main" >> "version") // return
+getText (configFile >> "CfgPatches" >> "ACE_main" >> "versionStr") // return

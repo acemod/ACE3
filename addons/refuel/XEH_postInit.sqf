@@ -30,7 +30,7 @@ GVAR(mainAction) = [
     {
         alive _target
         && {[_player, _target, [INTERACT_EXCEPTIONS]] call EFUNC(common,canInteractWith)}
-        && {REFUEL_DISABLED_FUEL != [_target] call FUNC(getFuel)}
+        && {REFUEL_DISABLED_FUEL != ([_target] call FUNC(getCapacity))}
     },
     {}, [], [0,0,0],
     REFUEL_ACTION_DISTANCE
@@ -96,7 +96,7 @@ _cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_dynamicClasses", []
 #ifdef DRAW_HOOKS_POS
 addMissionEventHandler ["Draw3D", {
     private _source = cursorObject;
-    private _cfgPos = getArray (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(hooks));
+    private _cfgPos = getArray (configOf _source >> QGVAR(hooks));
     private _dynPos = _source getVariable [QGVAR(hooks), []];
     {
         drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,1,1,1], _source modelToWorldVisual _x, 1, 1, 0, format ["Hook %1", _forEachIndex]];

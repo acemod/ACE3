@@ -17,6 +17,7 @@ PREP(isGogglesVisible);
 PREP(isInRotorWash);
 
 // general
+PREP(canWipeGlasses);
 PREP(clearGlasses);
 PREP(getExplosionIndex);
 

@@ -1,7 +1,7 @@
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 
 #define DEFAULT_ISENGINEER ([ARR_2(0,1)] select (_this getUnitTrait 'engineer'))
-#define DEFAULT_ISREPAIRVEHICLE GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(canRepair),0)
+#define DEFAULT_ISREPAIRVEHICLE GET_NUMBER(configOf _this >> QQGVAR(canRepair),0)
 
 class ctrlToolbox;
 
@@ -17,7 +17,7 @@ class Cfg3DEN {
             attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel (((_value + 1) min 3) max 0);";
             attributeSave = "(lbCurSel (_this controlsGroupCtrl 100)) - 1";
             class Controls: Controls {
-                class Title: Title{};
+                class Title: Title {};
                 class Value: ctrlToolbox {
                     idc = 100;
                     style = "0x02";

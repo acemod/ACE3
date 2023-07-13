@@ -30,11 +30,14 @@ class CfgAddons {
 #include "gui\pauseMenu.hpp"
 
 class ACE_Extensions {
-    extensions[] += {"ace_clipboard"};
+    class ace_clipboard {
+        windows = 1;
+        client = 1;
+    };
 };
 
 class CfgCommands {
     allowedHTMLLoadURIs[] += {
-        "https://ace3mod.com/version.html"
+        "https://ace3.acemod.org/version.html"
     };
 };

@@ -9,7 +9,6 @@ class RscDisplayMain: RscStandardDisplay {
 
             class Controls: Controls {
                 class Bootcamp;
-                class VRTraining;
                 class Arsenal;
                 class GVAR(mission): Arsenal {
                     idc = -1;

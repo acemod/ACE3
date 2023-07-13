@@ -8,14 +8,12 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common","ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Brandon (TCVM)"};
+        authors[] = {"Dani (TCVM)"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "ACE_GuidanceConfig.hpp"
-#include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"

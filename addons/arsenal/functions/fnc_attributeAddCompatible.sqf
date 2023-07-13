@@ -51,7 +51,7 @@ if (_category == 8) then {
             _itemsToAdd append _magazines;
 
             {
-                _itemsToAdd append ([_magazineGroups, toLower _x] call CBA_fnc_hashGet);
+                _itemsToAdd append (_magazineGroups get (toLower _x));
             } forEach getArray (_muzzleConfig >> "magazineWell");
         } forEach getArray (_weaponConfig >> "muzzles");
     } forEach _attributeWeapons;

@@ -1,5 +1,10 @@
 #include "script_component.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
+/*
+ * Author: commy2
+ *
+ * Public: No
+*/
 
 params ["_display"];
 if (ctrlIDD _display != IDD_MAIN_MAP) exitWith {};
@@ -7,6 +12,12 @@ if (ctrlIDD _display != IDD_MAIN_MAP) exitWith {};
 private _control = _display displayCtrl IDC_MAP;
 
 GVAR(lastStillPosition) = _control ctrlMapScreenToWorld [0.5, 0.5];
+[{
+    if (!GVAR(isShaking)) then { // player map position won't be correct until a frame later
+        GVAR(lastStillPosition) = _this ctrlMapScreenToWorld [0.5, 0.5];
+    };
+}, _control] call CBA_fnc_execNextFrame;
+
 GVAR(lastStillTime) = CBA_missionTime;
 GVAR(isShaking) = false;
 

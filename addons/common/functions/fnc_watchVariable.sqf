@@ -7,12 +7,12 @@
  * 0: Title (var name) <STRING> (default: "")
  * 1: Code to generate result (passed nothing, can return any) <CODE> (default: {})
  * 2: Array containing modifiers <ARRAY> (default: [])
- * For Numbers:
- *      0: Show Delta change <BOOL> (default: true)
- *      1: Slider Min Value <NUMBER> (default: 0)
- *      1: Slider Max Value <NUMBER> (default: 0)
- * For Anything else:
- *      0: Number of structured text lines <NUMBER> (default: 1)
+ *   For Numbers:
+ *     2.0: Show Delta change <BOOL> (default: true)
+ *     2.1: Slider Min Value <NUMBER> (default: 0)
+ *     2.1: Slider Max Value <NUMBER> (default: 0)
+ *   For Anything else:
+ *     2.0: Number of structured text lines <NUMBER> (default: 1)
  *
  * Return Value:
  * None
@@ -20,7 +20,7 @@
  * Example:
  * ["CBA_missionTime"] call ace_common_fnc_watchVariable // Uses title as code
  * ["diag_frameNo", {diag_frameNo}, [false]] call ace_common_fnc_watchVariable // Won't show delta
- * ["blood", {player getVariable "ace_medical_bloodVolume"}, [true, 0, 100]] call ace_common_fnc_watchVariable // Shows slider
+ * ["blood", {player getVariable "ace_medical_bloodVolume"}, [true, 0, 6]] call ace_common_fnc_watchVariable // Shows slider
  * ["multiLine text", {"Line 1 <br/>Line 2"}, [2]] call ace_common_fnc_watchVariable
  * ["player names", {allPlayers apply {name _x}}, [5]] call ace_common_fnc_watchVariable // handles any data types
  *

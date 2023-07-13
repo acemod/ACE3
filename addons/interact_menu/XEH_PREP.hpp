@@ -12,6 +12,7 @@ PREP(createVehiclesActions);
 PREP(ctrlSetParsedTextCached);
 PREP(findActionNode);
 PREP(handleEscapeMenu);
+PREP(initMenuReorder);
 PREP(isSubPath);
 PREP(keyDown);
 PREP(keyUp);

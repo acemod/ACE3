@@ -23,16 +23,21 @@ private _display = ctrlParent _control;
 private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
 
 private _weaponDefaultRightPanel = _display displayCtrl IDC_buttonOptic;
-private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
+private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
 
 private _containerDefaultRightPanel = _display displayCtrl IDC_buttonMisc;
-private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
+private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
 
 private _fnc_clearPreviousWepMags = {
-    private _compatibleMags = getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
+    private _compatibleMagsBaseWeapon = [_baseWeapon, true] call CBA_fnc_compatibleMagazines;
+
+    if (_item != "") then {
+        _compatibleMagsBaseWeapon = _compatibleMagsBaseWeapon select {!(_x in _compatibleMags)};
+    };
+
     {
         GVAR(center) removeMagazines _x;
-    } foreach _compatibleMags;
+    } foreach _compatibleMagsBaseWeapon;
 
     GVAR(currentItems) set [15, uniformItems GVAR(center)];
     GVAR(currentItems) set [16, vestItems GVAR(center)];
@@ -54,11 +59,16 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             if ((GVAR(currentItems) select 0) != _item && {_baseWeapon != _item}) then {
+                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
+
                 call _fnc_clearPreviousWepMags;
 
-                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                [GVAR(center), _item] call CBA_fnc_addWeaponWithoutItems;
+                if (_compatibleMags isNotEqualTo []) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0], true];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -92,11 +102,16 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             if ((GVAR(currentItems) select 2) != _item && {_baseWeapon != _item}) then {
+                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
+
                 call _fnc_clearPreviousWepMags;
 
-                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                [GVAR(center), _item] call CBA_fnc_addWeaponWithoutItems;
+                if (_compatibleMags isNotEqualTo []) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0], true];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -129,11 +144,16 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             if ((GVAR(currentItems) select 1) != _item && {_baseWeapon != _item}) then {
+                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
+
                 call _fnc_clearPreviousWepMags;
 
-                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                [GVAR(center), _item] call CBA_fnc_addWeaponWithoutItems;
+                if (_compatibleMags isNotEqualTo []) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0], true];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -406,7 +426,7 @@ switch (GVAR(currentLeftPanel)) do {
         [_display, _control, _curSel, (configFile >> "CfgVoice" >> _item)] call FUNC(itemInfo);
     };
 
-    case IDC_buttonInsigna : {
+    case IDC_buttonInsignia : {
         [GVAR(center), _item] call bis_fnc_setUnitInsignia;
         GVAR(currentInsignia) = _item;
 

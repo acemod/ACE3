@@ -68,10 +68,10 @@ class RscInGameUI {
             text = "";
             colorText[] = {1, 1, 1, 0};
             colorBackground[] = {0, 0, 0, 0};
-            x = safezoneX + 0.5 * safezoneW - 0.5 * SIZEX;
-            y = safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * (4 / 3);
-            w = SIZEX;
-            h = SIZEX * (4 / 3);
+            x = QUOTE(safezoneX + 0.5 * safezoneW - 0.5 * SIZEX);
+            y = QUOTE(safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * (4 / 3));
+            w = QUOTE(SIZEX);
+            h = QUOTE(SIZEX * (4 / 3));
         };
 
         class ReticleNight: ReticleDay {
@@ -84,10 +84,10 @@ class RscInGameUI {
         class BodyDay: ReticleDay {
             idc = 1713005;
             text = "";
-            x = safezoneX + 0.5 * safezoneW - 0.5 * SIZEX;
-            y = safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * (4 / 3);
-            w = SIZEX;
-            h = SIZEX * (4 / 3);
+            x = QUOTE(safezoneX + 0.5 * safezoneW - 0.5 * SIZEX);
+            y = QUOTE(safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * (4 / 3));
+            w = QUOTE(SIZEX);
+            h = QUOTE(SIZEX * (4 / 3));
         };
 
         class BodyNight: BodyDay {
@@ -109,7 +109,7 @@ class RscInGameUI {
         class trippleHeadRight: trippleHeadLeft {
             idc = 1713011;
             x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4) / (16 / 3))";
-             colorBackground[] = {0, 0, 0, 1};
+            colorBackground[] = {0, 0, 0, 1};
         };
     };
 
