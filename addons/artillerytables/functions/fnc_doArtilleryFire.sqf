@@ -55,10 +55,8 @@ if (_usingCSW) then {
     };
 
     if !(_vehicleMagazine in (getArtilleryAmmo [_vehicle])) then {
+        // reload to forced mag
         // TODO: use public functions for this
-        private _currentMagazine = currentMagazine _vehicle;
-        private _currentCarryMagazine = [_currentMagazine] call EFUNC(csw,getCarryMagazine);
-        [_vehicle, [0], _currentCarryMagazine, _currentMagazine, _vehicle] call EFUNC(csw,reload_handleRemoveTurretMag);
         [_vehicle, gunner _vehicle, "", true] call EFUNC(csw,ai_reload);
     };
 };
