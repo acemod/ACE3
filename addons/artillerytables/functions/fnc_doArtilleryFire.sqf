@@ -79,7 +79,7 @@ _vehicle doWatch _position;
         _this set [5, CBA_missionTime];
     };
 
-    if (_rounds <= 0 || {!alive _vehicle} || {!alive (gunner _vehicle)}) exitWith {
+    if (_rounds <= 0 || {!alive _vehicle} || {!alive (gunner _vehicle)} || {objectParent (gunner _vehicle) isNotEqualTo _vehicle}) exitWith {
         [{_this doWatch objNull}, _vehicle, 5] call CBA_fnc_waitAndExecute;
         _vehicle setVariable [QEGVAR(csw,forcedMag), nil, true];
         true
