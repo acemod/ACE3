@@ -19,7 +19,7 @@ GVAR(allToolKits) = call (uiNamespace getVariable QGVAR(allToolKits));
 // load tracks and wheels
 if (isServer) then {
     private _fnc_addSpareItems = {
-        if (!GVAR(addSpareParts)) exitWith {};
+        if !(GVAR(enabled) && {GVAR(addSpareParts)}) exitWith {};
         params ["_vehicle"];
 
         private _spareTracks = _vehicle getVariable QGVAR(editorLoadedTracks);
