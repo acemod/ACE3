@@ -5,6 +5,7 @@ PREP(aceRearmGetCarryMagazines);
 PREP(ai_handleFired);
 PREP(ai_handleGetIn);
 PREP(ai_reload);
+PREP(ai_unloadMagazines);
 
 PREP(assemble_canDeployTripod);
 PREP(assemble_canDeployWeapon);
