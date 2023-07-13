@@ -39,7 +39,7 @@ if (!_needed) exitWith { TRACE_2("not needed",_needed,_proxyWeapon); };
 
 // Config case for hashmap key
 _proxyWeapon = configName (configFile >> "CfgWeapons" >> _proxyWeapon);
-if (_proxyWeapon isEqualTo "") exitWith {ERROR_1("proxy weapon non-existent for [%1]", _currentWeapon)}
+if (_proxyWeapon isEqualTo "") exitWith {ERROR_1("proxy weapon non-existent for [%1]", _currentWeapon)};
 
 // Cache compatible magazines
 if !(_proxyWeapon in GVAR(compatibleMagsCache)) then {
