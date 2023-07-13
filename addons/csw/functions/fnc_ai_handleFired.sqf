@@ -20,4 +20,4 @@ if (someAmmo _vehicle) exitWith {};
 
 TRACE_2("need ammo",someAmmo _vehicle,magazinesAllTurrets _vehicle);
 
-[_vehicle, _gunner, _weapon] call FUNC(ai_reload);
+[_vehicle, _gunner] call FUNC(ai_reload);
