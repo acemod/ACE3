@@ -16,6 +16,7 @@ TRACE_3("getInEH:",_vehicle,_role,_gunner);
 
 if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
 if (someAmmo _vehicle) exitWith {};
+if (_vehicle getVariable [QGVAR(disabled), false]) exitWith {};
 
 // turret can be empty when AI is forcefully moved to the vehicle
 if (_turret isEqualTo []) then {

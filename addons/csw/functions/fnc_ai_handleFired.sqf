@@ -17,6 +17,7 @@ TRACE_8("firedEH:",_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_g
 
 if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
 if (someAmmo _vehicle) exitWith {};
+if (_vehicle getVariable [QGVAR(disabled), false]) exitWith {};
 
 TRACE_2("need ammo",someAmmo _vehicle,magazinesAllTurrets _vehicle);
 
