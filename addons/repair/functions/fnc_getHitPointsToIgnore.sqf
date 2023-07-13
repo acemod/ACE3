@@ -18,7 +18,7 @@
 params ["_vehicle"];
 
 private _type = typeOf _vehicle;
-TRACE_2("getHitPointsToIgnore", _vehicle,_type);
+TRACE_2("getHitPointsToIgnore",_vehicle,_type);
 private _initializedClasses = missionNamespace getVariable [QGVAR(hitPointsToIgnoreInitializedClasses), createHashMap];
 if (_type in _initializedClasses) exitWith {_initializedClasses get _type};
 
@@ -123,7 +123,7 @@ private _processedSelections = [];
         continue
     };
 
-    if ((_hitpointGroups findIf {(_x select 1) == _hitpoint}) != -1) then { // skip child hitpoints
+    if ((_hitpointGroups findIf {((_x select 1) findIf {_x == _hitpoint}) != -1}) != -1) then { // skip child hitpoints
         TRACE_3("Skipping child hitpoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
