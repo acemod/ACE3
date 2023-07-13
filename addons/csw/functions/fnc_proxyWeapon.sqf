@@ -4,7 +4,7 @@
  * Handles the use of proxy weapons to fix engine-reload times
  *
  * Arguments:
- * 0: Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Proxy weapon needed <BOOL>
  * 2: Weapon should be emptied <BOOL>

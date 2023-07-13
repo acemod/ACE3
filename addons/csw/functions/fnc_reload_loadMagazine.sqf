@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Loads a magazine into a static weapon from a magazine carried by or next to the player.
+ * Loads a magazine into a CSW from a magazine carried by or next to the player.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Unit Carried Magazine <STRING>
  * 3: Magazine source <OBJECT>

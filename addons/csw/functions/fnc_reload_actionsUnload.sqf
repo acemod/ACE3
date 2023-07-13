@@ -4,7 +4,7 @@
  * Gets sub actions for what the player can unload from the CSW
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Player <OBJECT>
  *
  * Return Value:
