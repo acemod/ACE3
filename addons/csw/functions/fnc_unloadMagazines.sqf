@@ -1,19 +1,24 @@
 #include "script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Switch loaded magazine on an AI CSW
+ * Unloads and returns magazines from a CSW
  *
  * Arguments:
- * 0: CSW <OBJECT>
- * 1: Gunner <OBJECT>
- * 2: Turret Path <ARRAY>
+ * 0: CSW <OBJECT> (default: objNull)
+ * 1: Turret Path <ARRAY> (default: [0], gunner turret)
+ * 2: Return removed magazines <BOOL> (default: true)
  *
  * Return Value:
  * None
  *
- * Public: No
+ * Example:
+ * [cursorTarget, [0]] call ace_csw_fnc_unloadMagazines
+ *
+ * Public: Yes
  */
-params ["_vehicle", "_gunner", "_turretPath"];
+params [["_vehicle", objNull, [objNull]], ["_turretPath", [0], [0]], ["_returnMags", true, [true]]];
+
+if (isNull _vehicle) exitWith {};
 
 private _magsToRemove = [];
 private _containerMagazineClassnames = [];
@@ -38,6 +43,8 @@ private _containerMagazineCount = [];
     _vehicle removeMagazinesTurret _x;
 } forEach _magsToRemove;
 
-{
-    [_vehicle, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
-} forEach _containerMagazineClassnames;
+if (_returnMags) then {
+    {
+        [_vehicle, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
+    } forEach _containerMagazineClassnames;
+};

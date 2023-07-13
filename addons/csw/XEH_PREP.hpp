@@ -5,7 +5,6 @@ PREP(aceRearmGetCarryMagazines);
 PREP(ai_handleFired);
 PREP(ai_handleGetIn);
 PREP(ai_reload);
-PREP(ai_unloadMagazines);
 
 PREP(assemble_canDeployTripod);
 PREP(assemble_canDeployWeapon);
@@ -37,6 +36,7 @@ PREP(reload_handleAddTurretMag);
 PREP(reload_handleRemoveTurretMag);
 PREP(reload_handleReturnAmmo);
 PREP(reload_loadMagazine);
+PREP(unloadMagazines);
 
 PREP(staticWeaponInit);
 PREP(staticWeaponInit_unloadExtraMags);
