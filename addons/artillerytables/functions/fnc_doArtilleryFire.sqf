@@ -1,14 +1,15 @@
 #include "script_component.hpp"
 /*
- * Author: LinkIsGrim
+ * Author: LinkIsGrim, mharris001
  * Wrapper for engine doArtilleryFire, fires barrage one round at a time.
  * Handles CSW magazines.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Target <OBJECT or POSITION AGL>
- * 2: Magazine Type <STRING>
- * 3: Rounds to fire <NUMBER>
+ * 2: Spread in meters
+ * 3: Magazine Type <STRING>
+ * 4: Rounds to fire <NUMBER>
  *
  * Return Value:
  * Barrage Started <BOOL>
@@ -18,7 +19,7 @@
  *
  * Public: Yes
  */
-params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull]], ["_magazine", "", [""]], ["_rounds", 0, [0]]];
+params [["_vehicle", objNull, [objNull]], ["_position", [0, 0, 0], [[], objNull]], ["_spread", 0, [0]], ["_magazine", "", [""]], ["_rounds", 0, [0]]];
 
 if (isNull _vehicle || {_rounds isEqualTo 0} || {_magazine isEqualTo ""} || {!(_vehicle turretLocal [0])}) exitWith {false};
 
@@ -27,15 +28,15 @@ if (_position isEqualType objNull) then {
 };
 
 private _usingCSW = false;
-if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
-    _usingCSW = EGVAR(csw,ammoHandling) > 0;
+if ((typeOf _vehicle) in GVAR(initializedStaticTypes)) then {
+    if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
+        _usingCSW = EGVAR(csw,ammoHandling) > 0;
+    };
+    if (["ace_mk6mortar"] call EFUNC(common,isModLoaded) && {_vehicle isKindOf "StaticMortar"}) then {
+        _usingCSW = EGVAR(mk6mortar,useAmmoHandling);
+    };
+    _usingCSW = _usingCSW && {_vehicle getVariable [QEGVAR(csw,assemblyMode), 3] isNotEqualTo 0}
 };
-
-if (["ace_mk6mortar"] call EFUNC(common,isModLoaded) && {_vehicle isKindOf "StaticMortar"}) then {
-    _usingCSW = EGVAR(mk6mortar,useAmmoHandling);
-};
-
-_usingCSW = _usingCSW && {!(_vehicle getVariable [QEGVAR(csw,disabled), false])};
 
 if (_usingCSW && {EGVAR(csw,ammoHandling) < 2}) exitWith {false};
 
@@ -66,6 +67,22 @@ if ((_vehicle getArtilleryETA [_position, _vehicleMagazine]) isEqualTo -1) exitW
 
 _vehicle doWatch _position;
 
-[LINKFUNC(doArtilleryFirePFEH), 0, [_vehicle, _position, _vehicleMagazine, _rounds, _usingCSW, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+[{
+    params ["_vehicle", "_position", "_spread", "_magazine", "_roundsLeft", "_lastFired"];
+    if (CBA_missionTime - _lastFired > 30) exitWith {true};
+
+    if (unitReady _vehicle) then {
+        _vehicle doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _magazine, 1];
+        _this set [4, _roundsLeft - 1];
+        _this set [5, CBA_missionTime];
+    };
+
+    if (_rounds <= 0 || {!alive _vehicle} || {!alive (gunner _vehicle)}) exitWith {
+        [{_this doWatch objNull}, _vehicle, 5] call CBA_fnc_waitAndExecute;
+        _vehicle setVariable [QEGVAR(csw,forcedMag), nil, true];
+        true
+    };
+    false
+}, {}, [_vehicle, _position, _spread, _vehicleMagazine, _rounds, CBA_missionTime]] call CBA_fnc_waitUntilAndExecute;
 
 true
