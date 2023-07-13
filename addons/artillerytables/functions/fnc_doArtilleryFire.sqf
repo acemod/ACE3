@@ -32,7 +32,7 @@ if (_position isEqualType "") then {
 };
 
 private _usingCSW = false;
-if ((typeOf _vehicle) in GVAR(initializedStaticTypes)) then {
+if ((typeOf _vehicle) in EGVAR(csw,initializedStaticTypes)) then {
     if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
         _usingCSW = EGVAR(csw,ammoHandling) > 0;
     };
