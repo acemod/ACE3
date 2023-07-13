@@ -22,7 +22,7 @@
 params ["_mortar", "_turret", "_currentWeapon", "_proxyWeaponNeeded"];
 TRACE_4("csw_getProxyWeapon",_mortar,_turret,_currentWeapon,_proxyWeaponNeeded);
 
-private _newWeapon = _currentWeapon;
+private _newWeapon = "";
 
 if (GVAR(useAmmoHandling)) then {
     if (_currentWeapon != "mortar_82mm") exitWith { ERROR_2("unknown weapon [%1 - %2]",typeOf _mortar,_currentWeapon); };
