@@ -20,6 +20,17 @@ if (!GVAR(enabled)) exitWith {};
     };
 }] call CBA_fnc_addEventHandler;
 
+["CAManBase", "InitPost", {
+    params ["_unit"];
+    if !(local _unit) exitWith {};
+    if (_unit getUnitTrait "Engineer") then {
+        _unit setUnitTrait ["Engineer", false]; // disable vanilla repair action
+    };
+    if (isNil {_unit getVariable "ACE_isEngineer"}) then {
+        _unit setVariable ["ACE_isEngineer", 1 max (getNumber (configOf _unit >> "engineer")), true];
+    };
+}] call CBA_fnc_addClassEventHandler;
+
 
 ["All", "InitPost", {
     params ["_vehicle"];
