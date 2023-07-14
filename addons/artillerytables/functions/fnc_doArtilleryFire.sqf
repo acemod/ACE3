@@ -45,24 +45,21 @@ if (_usingCSW && {EGVAR(csw,ammoHandling) < 2}) exitWith {false};
 
 private _vehicleMagazine = _magazine;
 if (_usingCSW) then {
+    private _carryMag = _magazine;
     private _isCarryMag = isClass (configFile >> QEGVAR(csw,groups) >> _magazine);
     if (_isCarryMag) then {
-        _vehicle setVariable [QEGVAR(csw,forcedMag), _magazine, true];
         _vehicleMagazine = [_vehicle, [0], _magazine] call EFUNC(csw,reload_getVehicleMagazine);
     } else {
-        _vehicle setVariable [QEGVAR(csw,forcedMag), [_magazine] call EFUNC(csw,getCarryMagazine), true];
+        _carryMag = [_magazine] call EFUNC(csw,getCarryMagazine);
     };
-
-    if !(_vehicleMagazine in (getArtilleryAmmo [_vehicle])) then {
-        // reload to forced mag
-        // TODO: use public functions for this
-        [_vehicle, gunner _vehicle, true] call EFUNC(csw,ai_reload);
-    };
+    [_vehicle, _carryMag, [0], true, false] call EFUNC(csw,ai_switchMagazine);
 };
 
 // Needs to be config case
 _vehicleMagazine = configName (configFile >> "CfgMagazines" >> _vehicleMagazine);
 if (_vehicleMagazine isEqualTo "") exitWith {false};
+
+if (!_usingCSW && {!(_vehicleMagazine in (getArtilleryAmmo [_vehicle]))}) exitWith {false};
 
 if !(_position inRangeOfArtillery [[_vehicle], _vehicleMagazine]) exitWith {false};
 
