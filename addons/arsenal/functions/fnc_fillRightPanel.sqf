@@ -325,15 +325,15 @@ switch (_ctrlIDC) do {
                         ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
                     };
                     // Unique items
-                    case (_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)): {
+                    case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS)): {
                         ["CfgWeapons", _x, true, true] call _fnc_fillRightContainer;
                     };
                     // Unique backpacks
-                    case (_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)): {
+                    case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_BACKPACKS)): {
                         ["CfgVehicles", _x, false, true] call _fnc_fillRightContainer;
                     };
                     // Unique goggles
-                    case (_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)): {
+                    case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES)): {
                         ["CfgGlasses", _x, false, true] call _fnc_fillRightContainer;
                     };
                     // Unknown items
