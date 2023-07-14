@@ -56,7 +56,7 @@ class CfgWeapons {
     class rhs_weap_m84: Rifle_Long_Base_F {
         ACE_barrelLength = 658;
         ACE_barrelTwist = 240;
-        ACE_Overheating_allowSwapBarrel = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
     };
 
     class hgun_P07_F;
