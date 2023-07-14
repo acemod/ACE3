@@ -52,7 +52,8 @@ if (_usingCSW) then {
     } else {
         _carryMag = [_magazine] call EFUNC(csw,getCarryMagazine);
     };
-    [_vehicle, _carryMag, [0], true, false] call EFUNC(csw,ai_switchMagazine);
+    private _canSwitch = [_vehicle, _carryMag, [0], true, false] call EFUNC(csw,ai_switchMagazine);
+    if !(_canSwitch) exitWith {false};
 };
 
 // Needs to be config case
