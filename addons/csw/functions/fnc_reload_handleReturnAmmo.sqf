@@ -56,10 +56,10 @@ if ((maxLoad _container) isEqualTo 0) then {
 
 if (isNull _container) then {
     // Create ammo storage container
-    private _containerType = getText (configOf _vehicle >> QUOTE(ADDON) >> "container");
+    private _containerType = getText (configOf _unloadTo >> QUOTE(ADDON) >> "container");
 
     // Use setting if container already created or not defined
-    if (_containerType isEqualTo "" || {!isNull (_vehicle getVariable [QGVAR(container), objNull])}) then {
+    if (_containerType isEqualTo "" || {!isNil {_unloadTo getVariable QGVAR(container)}}) then {
         _containerType = ["GroundWeaponHolder", QGVAR(ammo_holder)] select GVAR(handleExtraMagazinesType);
     };
 
