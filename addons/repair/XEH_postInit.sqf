@@ -25,9 +25,9 @@ if (!GVAR(enabled)) exitWith {};
     if !(local _unit) exitWith {};
     if (_unit getUnitTrait "Engineer") then {
         _unit setUnitTrait ["Engineer", false]; // disable vanilla repair action
-    };
-    if (isNil {_unit getVariable "ACE_isEngineer"}) then {
-        _unit setVariable ["ACE_isEngineer", 1 max (getNumber (configOf _unit >> "engineer")), true];
+        if (isNil {_unit getVariable "ACE_isEngineer"}) then {
+            _unit setVariable ["ACE_isEngineer", 1 max (getNumber (configOf _unit >> "engineer")), true];
+        };
     };
 }] call CBA_fnc_addClassEventHandler;
 
