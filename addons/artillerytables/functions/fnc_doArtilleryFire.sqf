@@ -5,7 +5,7 @@
  * Handles CSW magazines.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Vehicle, gunner must be local <OBJECT>
  * 1: Target <OBJECT, STRING or POSITION AGL>
  * 2: Magazine Type <STRING>
  * 3: Rounds to fire <NUMBER>
@@ -38,7 +38,6 @@ if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
     [_vehicle, _magazine] call EFUNC(csw,handleDoArtilleryFire) params ["_cswHandled", "_newMagazine"];
     if !(_cswHandled) exitWith {false};
     _magazine = _newMagazine;
-} else {
 };
 
 if !(_position inRangeOfArtillery [[_vehicle], _magazine]) exitWith {false};
