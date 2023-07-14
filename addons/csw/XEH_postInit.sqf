@@ -16,6 +16,7 @@
 [QGVAR(addTurretMag), LINKFUNC(reload_handleAddTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(removeTurretMag), LINKFUNC(reload_handleRemoveTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(ai_reload), LINKFUNC(ai_reload)] call CBA_fnc_addEventHandler;
 
 
 
