@@ -34,7 +34,10 @@ private _fnc_replaceItems = {
     };
 
     if (GVAR(blockItemReplacement)) exitWith {
-        [{!GVAR(blockItemReplacement)}, {_this addItem "ACE_FakeItem"}, _unit] call CBA_fnc_waitUntilAndExecute;
+        [{!GVAR(blockItemReplacement)}, {
+            if (ACE_player isNotEqualTo _this) exitWith {};
+            _this addItem "ACE_FakeItem"
+        }, _unit] call CBA_fnc_waitUntilAndExecute;
     };
 
     private _cfgWeapons = configFile >> "CfgWeapons"; // Microoptimization
