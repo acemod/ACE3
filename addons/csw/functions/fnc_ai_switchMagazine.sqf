@@ -14,6 +14,9 @@
  * Return Value:
  * Successful <BOOL>
  *
+ * Example:
+ * [cursorTarget, "ACE_csw_100Rnd_127x99_mag_red", [0]] call ace_csw_fnc_ai_switchMagazine
+ *
  * Public: Yes
  */
 params [["_vehicle", objNull, [objNull]], ["_carryMag", "", [""]], ["_turretPath", [0], [[0]]], ["_instantReload", false, [false]], ["_clearForcedMag", true, [true]]];
