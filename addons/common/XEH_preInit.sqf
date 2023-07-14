@@ -11,6 +11,9 @@ GVAR(syncedEvents) = createHashMap;
 GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
 
+GVAR(blockItemReplacement) = false;
+["ACE_FakeItem"] call FUNC(registerItemReplacement);
+
 // Cache for FUNC(isModLoaded)
 GVAR(isModLoadedCache) = createHashMap;
 

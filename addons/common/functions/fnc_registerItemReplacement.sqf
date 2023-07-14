@@ -33,6 +33,10 @@ private _fnc_replaceItems = {
         GVAR(oldItems) = _items;
     };
 
+    if (GVAR(blockItemReplacement)) exitWith {
+        [{!GVAR(blockItemReplacement)}, {_this addItem "ACE_FakeItem"}, _unit] call CBA_fnc_waitUntilAndExecute;
+    };
+
     private _cfgWeapons = configFile >> "CfgWeapons"; // Microoptimization
 
     for "_i" from 0 to count _newItems - 1 do {
