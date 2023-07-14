@@ -30,48 +30,24 @@ if (_position isEqualType "") then {
     _position = [_position, true] call CBA_fnc_mapGridToPos;
 };
 
-private _usingCSW = false;
-if ((typeOf _vehicle) in EGVAR(csw,initializedStaticTypes)) then {
-    if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
-        _usingCSW = EGVAR(csw,ammoHandling) > 0;
-    };
-    if (["ace_mk6mortar"] call EFUNC(common,isModLoaded) && {_vehicle isKindOf "StaticMortar"}) then {
-        _usingCSW = EGVAR(mk6mortar,useAmmoHandling);
-    };
-    _usingCSW = _usingCSW && {_vehicle getVariable [QEGVAR(csw,assemblyMode), 3] isNotEqualTo 0}
+// Magazine must be configCase
+_magazine = configName (configFile >> "CfgMagazines" >> _magazine);
+if (_magazine isEqualTo "") exitWith {false};
+
+if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
+    [_vehicle, _magazine] call EFUNC(csw,handleDoArtilleryFire) params ["_cswHandled", "_newMagazine"];
+    if !(_cswHandled) exitWith {false};
+    _magazine = _newMagazine;
+} else {
 };
 
-if (_usingCSW && {EGVAR(csw,ammoHandling) < 2}) exitWith {false};
-
-private _vehicleMagazine = _magazine;
-if (_usingCSW) then {
-    private _carryMag = _magazine;
-    private _isCarryMag = isClass (configFile >> QEGVAR(csw,groups) >> _magazine);
-    if (_isCarryMag) then {
-        _vehicleMagazine = [_vehicle, [0], _magazine] call EFUNC(csw,reload_getVehicleMagazine);
-    } else {
-        _carryMag = [_magazine] call EFUNC(csw,getCarryMagazine);
-    };
-    private _canSwitch = [_vehicle, _carryMag, [0], true, false] call EFUNC(csw,ai_switchMagazine);
-    if !(_canSwitch) exitWith {false};
-};
-
-// Needs to be config case
-_vehicleMagazine = configName (configFile >> "CfgMagazines" >> _vehicleMagazine);
-if (_vehicleMagazine isEqualTo "") exitWith {false};
-
-if (!_usingCSW && {!(_vehicleMagazine in (getArtilleryAmmo [_vehicle]))}) exitWith {false};
-
-if !(_position inRangeOfArtillery [[_vehicle], _vehicleMagazine]) exitWith {false};
+if !(_position inRangeOfArtillery [[_vehicle], _magazine]) exitWith {false};
 
 _vehicle doWatch _position;
 
 [{
     params ["_vehicle", "_position", "_magazine", "_roundsLeft", "_lastFired"];
     if (CBA_missionTime - _lastFired > 30) exitWith {true};
-
-    // have to wait a bit or the AI goes insane
-    if (CBA_missionTime - _lastFired < 3) exitWith {false};
 
     (weaponState [_vehicle, [0]]) params ["", "", "", "_loadedMag", "_ammoCount", "_roundReloadPhase", "_magazineReloadPhase"];
     if (
@@ -88,11 +64,11 @@ _vehicle doWatch _position;
     };
 
     if (_roundsLeft <= 0 || {!alive _vehicle} || {!alive (gunner _vehicle)} || {objectParent (gunner _vehicle) isNotEqualTo _vehicle}) exitWith {
+        [QGVAR(doArtilleryFireComplete), [_vehicle, _magazine, _roundsLeft]] call CBA_fnc_globalEvent;
         [{_this doWatch objNull}, _vehicle, 5] call CBA_fnc_waitAndExecute;
-        _vehicle setVariable [QEGVAR(csw,forcedMag), nil, true];
         true
     };
     false
-}, {}, [_vehicle, _position, _vehicleMagazine, _rounds, CBA_missionTime]] call CBA_fnc_waitUntilAndExecute;
+}, {}, [_vehicle, _position, _magazine, _rounds, CBA_missionTime]] call CBA_fnc_waitUntilAndExecute;
 
 true

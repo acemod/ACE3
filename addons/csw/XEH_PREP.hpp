@@ -25,6 +25,7 @@ PREP(getAvailableAmmo);
 PREP(getCarryMagazine);
 PREP(getNearbySources);
 PREP(getSourceCompatibleMagazines);
+PREP(handleDoArtilleryFire);
 PREP(proxyWeapon);
 
 PREP(reload_actionsLoad);
