@@ -7,16 +7,17 @@
  * 0: CSW <OBJECT>
  * 1: Gunner <OBJECT>
  * 2: Skip reload time <BOOL> (default: false)
+ * 3: Clear forced magazine after reloading (default: true)
  *
  * Return Value:
  * None
  *
  * Public: No
  */
-params ["_vehicle", "_gunner", ["_instantReload", false]];
+params ["_vehicle", "_gunner", ["_instantReload", false], ["_clearForcedMag", false]];
 TRACE_3("AI reload",_vehicle,_gunner,_instantReload);
 
-// API, to be used by artillerytables
+// API, used for ai_switchMagazine
 private _forcedMag = _vehicle getVariable [QGVAR(forcedMag), ""];
 private _turretIndex = [_gunner] call EFUNC(common,getTurretIndex);
 if (_turretIndex isEqualTo []) then {
@@ -39,6 +40,10 @@ private _magazineInfo = [];
         _magazineInfo = _x;
     };
 } forEach _loadableMagazines;
+
+if (_clearForcedMag) then {
+    _vehicle setVariable [QGVAR(forcedMag), nil, true];
+};
 
 if (_magazineInfo isEqualTo []) exitWith {};
 _magazineInfo params ["_carryMag", "_turretPath", "_loadInfo", "_magSource", "", "_ammo"];

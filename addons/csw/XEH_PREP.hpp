@@ -4,6 +4,7 @@ PREP(aceRearmGetCarryMagazines);
 
 PREP(ai_handleFired);
 PREP(ai_handleGetIn);
+PREP(ai_switchMagazine);
 PREP(ai_reload);
 
 PREP(assemble_canDeployTripod);

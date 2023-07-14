@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: CSW <OBJECT> (default: objNull)
- * 1: Turret Path <ARRAY> or <BOOL> to unload all turrets (default: [0], gunner turret)
+ * 1: Turret Path or True to unload all turrets <ARRAY|BOOL> (default: [0])
  * 2: Return removed magazines <BOOL> (default: true)
  *
  * Return Value:
