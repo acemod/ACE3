@@ -26,11 +26,11 @@ private _item = [_control lbData _curSel, _control lnbData [_curSel, 0]] select 
 private _selectCorrectPanelWeapon = [_display displayCtrl IDC_buttonOptic, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
 private _selectCorrectPanelContainer = [_display displayCtrl IDC_buttonMisc, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
 
-// Remove all magazines from the previous weapon that aren't compatible with the new weapon
-private _fnc_clearPreviousWepMags = {
+// Remove all magazines from the current weapon that aren't compatible with the new weapon
+private _fnc_clearCurrentWeaponMags = {
     private _compatibleMagsCurrentWeapon = compatibleMagazines _currentWeapon;
 
-    // If nothing was selected, remove all magazines from the previous weapon
+    // If nothing was selected, remove all magazines from the current weapon
     if (_item != "") then {
         _compatibleMagsCurrentWeapon = _compatibleMagsCurrentWeapon - _compatibleMags;
     };
@@ -55,7 +55,7 @@ switch (GVAR(currentLeftPanel)) do {
 
         // If nothing selected, remove primary weapon and its magazines
         if (_item == "") then {
-            call _fnc_clearPreviousWepMags;
+            call _fnc_clearCurrentWeaponMags;
 
             GVAR(center) removeWeapon (primaryWeapon GVAR(center));
             GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON_ITEMS, ["", "", "", "", "", ""]];
@@ -67,10 +67,9 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
-                private _compatibleMagIndex = _compatibleMags findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
-                // Remove all magazines from the previous weapon that aren't compatible with the new one
-                call _fnc_clearPreviousWepMags;
+                // Remove all magazines from the current weapon that aren't compatible with the new one
+                call _fnc_clearCurrentWeaponMags;
 
                 // Add new weapon without taking a magazine from the inventory
                 [GVAR(center), _item] call EFUNC(common,addWeapon);
@@ -93,14 +92,24 @@ switch (GVAR(currentLeftPanel)) do {
                     };
                 } forEach (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS);
 
-                // Add a magazine to the weapon itself if necessary
-                if ((primaryWeaponMagazine GVAR(center)) isEqualTo [] && {_compatibleMagIndex != -1}) then {
-                    GVAR(center) addWeaponItem [_item, _compatibleMags select _compatibleMagIndex, true];
+                (getUnitLoadout GVAR(center) select IDX_LOADOUT_PRIMARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
+
+                _primaryMagazine = _primaryMagazine param [0, ""];
+
+                // Add a magazine to the primary muzzle if empty
+                if (_primaryMagazine == "") then {
+                    // Get magazines that are compatible with the new weapon's primary muzzle only
+                    private _compatibleMagsPrimaryMuzzle = compatibleMagazines [_item, "this"];
+                    private _compatibleMagIndex = _compatibleMagsPrimaryMuzzle findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
+
+                    if (_compatibleMagIndex != -1) then {
+                        _primaryMagazine = _compatibleMagsPrimaryMuzzle select _compatibleMagIndex;
+                        GVAR(center) addWeaponItem [_item, _primaryMagazine, true];
+                    };
                 };
 
                 // Update currentItems
-                (getUnitLoadout GVAR(center) select IDX_LOADOUT_PRIMARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-                GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
+                GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _secondaryMagazine param [0, ""]]];
                 GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON, _item];
             };
 
@@ -121,7 +130,7 @@ switch (GVAR(currentLeftPanel)) do {
 
         // If nothing selected, remove handgun weapon and its magazines
         if (_item == "") then {
-            call _fnc_clearPreviousWepMags;
+            call _fnc_clearCurrentWeaponMags;
 
             GVAR(center) removeWeapon (handgunWeapon GVAR(center));
             GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, ["", "", "", "", "", ""]];
@@ -133,10 +142,9 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
-                private _compatibleMagIndex = _compatibleMags findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
-                // Remove all magazines from the previous weapon that aren't compatible with the new one
-                call _fnc_clearPreviousWepMags;
+                // Remove all magazines from the current weapon that aren't compatible with the new one
+                call _fnc_clearCurrentWeaponMags;
 
                 // Add new weapon without taking a magazine from the inventory
                 [GVAR(center), _item] call EFUNC(common,addWeapon);
@@ -160,14 +168,24 @@ switch (GVAR(currentLeftPanel)) do {
                     };
                 } forEach (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS);
 
-                // Add a magazine to the weapon itself if necessary
-                if ((handgunMagazine GVAR(center)) isEqualTo [] && {_compatibleMagIndex != -1}) then {
-                    GVAR(center) addWeaponItem [_item, _compatibleMags select _compatibleMagIndex, true];
+                (getUnitLoadout GVAR(center) select IDX_LOADOUT_HANDGUN_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
+
+                _primaryMagazine = _primaryMagazine param [0, ""];
+
+                // Add a magazine to the primary muzzle if empty
+                if (_primaryMagazine == "") then {
+                    // Get magazines that are compatible with the new weapon's primary muzzle only
+                    private _compatibleMagsPrimaryMuzzle = compatibleMagazines [_item, "this"];
+                    private _compatibleMagIndex = _compatibleMagsPrimaryMuzzle findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
+
+                    if (_compatibleMagIndex != -1) then {
+                        _primaryMagazine = _compatibleMagsPrimaryMuzzle select _compatibleMagIndex;
+                        GVAR(center) addWeaponItem [_item, _primaryMagazine, true];
+                    };
                 };
 
                 // Update currentItems
-                (getUnitLoadout GVAR(center) select IDX_LOADOUT_HANDGUN_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-                GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
+                GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _secondaryMagazine param [0, ""]]];
                 GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON, _item];
             };
 
@@ -189,7 +207,7 @@ switch (GVAR(currentLeftPanel)) do {
 
         // If nothing selected, remove secondary weapon and its magazines
         if (_item == "") then {
-            call _fnc_clearPreviousWepMags;
+            call _fnc_clearCurrentWeaponMags;
 
             GVAR(center) removeWeapon (secondaryWeapon GVAR(center));
             GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON_ITEMS, ["", "", "", "", "", ""]];
@@ -201,10 +219,9 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new weapon
                 private _compatibleMags = compatibleMagazines _item;
-                private _compatibleMagIndex = _compatibleMags findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
-                // Remove all magazines from the previous weapon that aren't compatible with the new one
-                call _fnc_clearPreviousWepMags;
+                // Remove all magazines from the current weapon that aren't compatible with the new one
+                call _fnc_clearCurrentWeaponMags;
 
                 // Add new weapon without taking a magazine from the inventory
                 [GVAR(center), _item] call EFUNC(common,addWeapon);
@@ -227,14 +244,24 @@ switch (GVAR(currentLeftPanel)) do {
                     };
                 } forEach (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS);
 
-                // Add a magazine to the weapon itself if necessary
-                if ((secondaryWeaponMagazine GVAR(center)) isEqualTo [] && {_compatibleMagIndex != -1}) then {
-                    GVAR(center) addWeaponItem [_item, _compatibleMags select _compatibleMagIndex, true];
+                (getUnitLoadout GVAR(center) select IDX_LOADOUT_SECONDARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
+
+                _primaryMagazine = _primaryMagazine param [0, ""];
+
+                // Add a magazine to the primary muzzle if empty
+                if (_primaryMagazine == "") then {
+                    // Get magazines that are compatible with the new weapon's primary muzzle only
+                    private _compatibleMagsPrimaryMuzzle = compatibleMagazines [_item, "this"];
+                    private _compatibleMagIndex = _compatibleMagsPrimaryMuzzle findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
+
+                    if (_compatibleMagIndex != -1) then {
+                        _primaryMagazine = _compatibleMagsPrimaryMuzzle select _compatibleMagIndex;
+                        GVAR(center) addWeaponItem [_item, _primaryMagazine, true];
+                    };
                 };
 
                 // Update currentItems
-                (getUnitLoadout GVAR(center) select IDX_LOADOUT_SECONDARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-                GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
+                GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _secondaryMagazine param [0, ""]]];
                 GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON, _item];
             };
 
@@ -451,7 +478,7 @@ switch (GVAR(currentLeftPanel)) do {
 
         // If nothing selected, remove secondary weapon and its magazines
         if (_item == "") then {
-            call _fnc_clearPreviousWepMags;
+            call _fnc_clearCurrentWeaponMags;
 
             GVAR(center) removeWeapon (binocular GVAR(center));
             GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, ["", "", "", "", "", ""]];
@@ -463,10 +490,9 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item != _currentWeapon) then {
                 // Get magazines that are compatible with the new binocular
                 private _compatibleMags = compatibleMagazines _item;
-                private _compatibleMagIndex = _compatibleMags findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
-                // Remove all magazines from the previous binocular that aren't compatible with the new one
-                call _fnc_clearPreviousWepMags;
+                // Remove all magazines from the current binocular that aren't compatible with the new one
+                call _fnc_clearCurrentWeaponMags;
 
                 // Add new weapon without taking a magazine from the inventory
                 [GVAR(center), _item] call EFUNC(common,addWeapon);
@@ -489,14 +515,24 @@ switch (GVAR(currentLeftPanel)) do {
                     };
                 } forEach (GVAR(currentItems) select IDX_CURR_BINO_ITEMS);
 
-                // Add a magazine to the binocular itself if necessary
-                if ((binocularMagazine GVAR(center)) isEqualTo [] && {_compatibleMagIndex != -1}) then {
-                    GVAR(center) addWeaponItem [_item, _compatibleMags select _compatibleMagIndex, true];
+                (getUnitLoadout GVAR(center) select IDX_LOADOUT_BINO) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
+
+                _primaryMagazine = _primaryMagazine param [0, ""];
+
+                // Add a magazine to the primary muzzle if empty
+                if (_primaryMagazine == "") then {
+                    // Get magazines that are compatible with the new weapon's primary muzzle only
+                    private _compatibleMagsPrimaryMuzzle = compatibleMagazines [_item, "this"];
+                    private _compatibleMagIndex = _compatibleMagsPrimaryMuzzle findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
+
+                    if (_compatibleMagIndex != -1) then {
+                        _primaryMagazine = _compatibleMagsPrimaryMuzzle select _compatibleMagIndex;
+                        GVAR(center) addWeaponItem [_item, _primaryMagazine, true];
+                    };
                 };
 
                 // Update currentItems
-                (getUnitLoadout GVAR(center) select IDX_LOADOUT_BINO) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-                GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
+                GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _secondaryMagazine param [0, ""]]];
                 GVAR(currentItems) set [IDX_CURR_BINO, _item];
             };
 
