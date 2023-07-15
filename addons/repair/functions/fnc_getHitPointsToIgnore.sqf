@@ -123,7 +123,7 @@ private _processedSelections = [];
         continue
     };
 
-    if ((_hitpointGroups findIf {((_x select 1) findIf {_x == _hitpoint}) != -1}) != -1) then { // skip child hitpoints
+    if (ANY(_hitpointGroups, ANY(_x select 1, _x == _hitpoint))) then { // skip child hitpoints
         TRACE_3("Skipping child hitpoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
