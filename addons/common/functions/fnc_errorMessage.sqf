@@ -1,27 +1,36 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
+ * Author: commy2, johnb43, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
  * Stops simulation and opens a textbox with error message.
  *
  * Arguments:
- * ?
+ * 0: Header <STRING>
+ * 1: Text <STRING, TEXT>
+ * 2: Code that is executed when 'Ok' is pressed <CODE> (default: {})
+ * 3: Code that is executed when 'Cancel' is pressed <CODE> (default: {})
+ * 4: Display <DISPLAY> (default: call BIS_fnc_displayMission)
+ * 5: Show buttons <ARRAY of BOOLS>
+ *  5.0: Show ok button if ok has code <BOOL> (default: true)
+ *  5.1: Show cancel button if cancel has code <BOOL> (default: true)
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_common_fnc_errorMessage
+ * ["[ACE] ERROR", text "Test", {findDisplay 46 closeDisplay 0}] call ace_common_fnc_errorMessage
  *
  * Public: No
  */
 
 disableSerialization;
+
+// Force stop any loading screens
 endLoadingScreen;
 
-// no message without player possible
+// No message without player possible
 if (!hasInterface) exitWith {};
 
-// wait for display
+// Wait for display
 if (isNull (call BIS_fnc_displayMission)) exitWith {
     [{
         if (isNull (call BIS_fnc_displayMission)) exitWith {};
@@ -32,13 +41,14 @@ if (isNull (call BIS_fnc_displayMission)) exitWith {
     }, 1, _this] call CBA_fnc_addPerFrameHandler;
 };
 
-params ["_textHeader", "_textMessage", ["_onOK", {}], ["_onCancel", {}]];
+params ["_textHeader", "_textMessage", ["_onOK", {}, [{}]], ["_onCancel", {}, [{}]], ["_mainDisplay", call BIS_fnc_displayMission, [displayNull]], ["_showButtons", [true, true]]];
+_showButtons params [["_showOkButton", true, [false]], ["_showCancelButton", true, [false]]];
 
 if (_textMessage isEqualType "") then {
     _textMessage = parseText _textMessage;
 };
 
-ARR_SELECT(_this,4,call BIS_fnc_displayMission) createDisplay "RscDisplayCommonMessagePause";
+_mainDisplay createDisplay "RscDisplayCommonMessagePause";
 
 private _display = uiNamespace getVariable "RscDisplayCommonMessage_display";
 private _ctrlRscMessageBox =          _display displayCtrl 2351;
@@ -109,7 +119,7 @@ _ctrlRscMessageBox ctrlSetPosition [
 _ctrlRscMessageBox ctrlEnable true;
 _ctrlRscMessageBox ctrlCommit 0;
 
-if (_onOK isEqualTo {}) then {
+if (!_showOkButton || {_onOK isEqualTo {}}) then {
     _ctrlButtonOK ctrlEnable false;
     _ctrlButtonOK ctrlSetFade 0;
     _ctrlButtonOK ctrlSetText "";
@@ -123,7 +133,7 @@ if (_onOK isEqualTo {}) then {
     ctrlSetFocus _ctrlButtonOK;
 };
 
-if (_onCancel isEqualTo {}) then {
+if (!_showCancelButton || {_onCancel isEqualTo {}}) then {
     _ctrlButtonCancel ctrlEnable false;
     _ctrlButtonCancel ctrlSetFade 0;
     _ctrlButtonCancel ctrlSetText "";
@@ -140,8 +150,5 @@ if (_onCancel isEqualTo {}) then {
 _ctrlButtonOK ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 1; true}];
 _ctrlButtonCancel ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 2; true}];
 
-GVAR(errorOnOK) = _onOK;
-GVAR(errorOnCancel) = _onCancel;
-
-_display displayAddEventHandler ["unload", {call ([{}, GVAR(errorOnOK), GVAR(errorOnCancel)] select (_this select 1))}];
+[_display, "unload", {call (_thisArgs select (_this select 1))}, [{}, _onOK, _onCancel]] call CBA_fnc_addBISEventHandler;
 _display displayAddEventHandler ["keyDown", {_this select 1 == 1}];
