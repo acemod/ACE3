@@ -5,7 +5,7 @@
  * Verify the provided loadout.
  *
  * Arguments:
- * 0: Loadout <ARRAY> (getUnitLoadout format)
+ * 0: Loadout <ARRAY> (CBA Extended Loadout or getUnitLoadout format)
  *
  * Return Value:
  * Verified loadout and missing / unavailable items list and count <ARRAY>
@@ -15,12 +15,20 @@
 
 params ["_loadout"];
 
+private _extendedInfo = createHashMap;
+
+// Check if the provided loadout is a CBA extended loadout
+if (count _loadout == 2) then {
+    _extendedInfo = _loadout select 1;
+    _loadout = _loadout select 0;
+};
+
 private _weaponCfg = configFile >> "CfgWeapons";
 private _magCfg = configFile >> "CfgMagazines";
 private _vehcCfg = configFile >> "CfgVehicles";
 private _glassesCfg = configFile >> "CfgGlasses";
-private _weaponsArray = GVAR(virtualItems) select 0;
-private _accsArray = GVAR(virtualItems) select 1;
+private _weaponsArray = GVAR(virtualItems) select IDX_VIRT_WEAPONS;
+private _accsArray = GVAR(virtualItems) select IDX_VIRT_ATTACHEMENTS;
 
 private _nullItemsAmount = 0;
 private _unavailableItemsAmount = 0;
@@ -58,7 +66,7 @@ private _fnc_weaponCheck = {
                     private _mag = _x select 0;
 
                     if (isClass (_magCfg >> _mag)) then {
-                        if !(_mag in (GVAR(virtualItems) select 2)) then {
+                        if !(_mag in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL)) then {
 
                             _unavailableItemsList pushBackUnique _mag;
                             _dataPath set [_forEachIndex, []];
@@ -137,7 +145,7 @@ for "_dataIndex" from 0 to 9 do {
 
                                         if (isClass (_magCfg >> _item)) then {
                                             if !(
-                                                    _item in (GVAR(virtualItems) select 2) ||
+                                                    _item in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) ||
                                                     _item in (GVAR(virtualItems) select 15) ||
                                                     _item in (GVAR(virtualItems) select 16)
                                                 ) then {
@@ -173,7 +181,7 @@ for "_dataIndex" from 0 to 9 do {
 
                 if (isClass (_weaponCfg >> _item)) then {
 
-                    if !(_item in (GVAR(virtualItems) select 3)) then {
+                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_HEADGEAR)) then {
 
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
@@ -195,7 +203,7 @@ for "_dataIndex" from 0 to 9 do {
 
                 if (isClass (_glassesCfg >> _item)) then {
 
-                    if !(_item in (GVAR(virtualItems) select 7)) then {
+                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_GOGGLES)) then {
 
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
@@ -236,4 +244,4 @@ for "_dataIndex" from 0 to 9 do {
     };
 };
 
-[_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]
+[[_loadout, _extendedInfo], _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]

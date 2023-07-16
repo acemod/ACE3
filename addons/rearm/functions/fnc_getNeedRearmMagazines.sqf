@@ -30,7 +30,7 @@ params ["_vehicle"];
 private _magazineInfo = [];
 
 // 1.70 pylons
-private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
+private _pylonConfigs = configProperties [configOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
 {
     private _pylonConfig = _x;
 
@@ -41,14 +41,14 @@ private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf
     private _pylonMagazine = (getPylonMagazines _vehicle) select (_pylonIndex - 1);
 
     // Only care about pylons that have a magazine.
-    if (!(_pylonMagazine isEqualTo "")) then {
+    if (_pylonMagazine isNotEqualTo "") then {
 
         private _maxRounds = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
         private _currentRounds = _vehicle ammoOnPylon _pylonIndex;
 
         if (_currentRounds < _maxRounds) then {
             // getPylonTurret expects 0 based index, and returns driver turret as [-1]
-            private _pylonTurret = [_vehicle, (_pylonIndex - 1)] call EFUNC(common,getPylonTurret);
+            private _pylonTurret = [_vehicle, _forEachIndex] call EFUNC(common,getPylonTurret);
 
             _magazineInfo pushBack [_pylonMagazine, _pylonTurret, true, _pylonIndex, 1, 1, _maxRounds, [_currentRounds]];
         };
@@ -58,10 +58,19 @@ private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf
 private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
 {
     private _turretPath = _x;
-    private _magazines = [_vehicle, _turretPath] call FUNC(getTurretConfigMagazines);
+    private _magazineClasses = [];
 
-    // _magazines without duplicates
-    private _magazineClasses = _magazines arrayIntersect _magazines;
+    if (_vehicle getVariable [QGVAR(scriptedLoadout), false]) then {
+        {
+            _x params ["_className", "_turretCurrent"];
+            if (_turretPath isEqualTo _turretCurrent) then {
+                _magazineClasses pushBackUnique _className;
+            };
+        } forEach (magazinesAllTurrets _vehicle);
+    } else {
+        _magazineClasses = [_vehicle, _turretPath] call FUNC(getTurretConfigMagazines);
+        _magazineClasses = _magazineClasses arrayIntersect _magazineClasses;
+    };
 
     {
         private _magazineClass = _x;

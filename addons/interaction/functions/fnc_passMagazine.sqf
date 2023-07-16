@@ -21,7 +21,7 @@ params ["_player", "_target", "_weapon"];
 private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
 private _filteredMags = magazinesAmmoFull _player select {
     _x params ["_className", "", "_loaded"];
-    (_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}
+    (_className in _compatibleMags) && {!_loaded} && {[_target, _className] call CBA_fnc_canAddItem}
 };
 
 //select magazine with most ammo

@@ -14,133 +14,176 @@ version:
 
 ## 1. Making a new Crew Served Weapon
 
-### 1.1 CfgVehicles
+To convert a static weapon into a crew served weapon, you need to create the following:
 
-```cpp
-class CfgVehicles {
-    class LandVehicle;
-    class StaticWeapon: LandVehicle {
-        class ACE_Actions;
-    };
-    class StaticMGWeapon: StaticWeapon {
-        class Turrets {
-            class MainTurret;
-        };
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions;
-        };
-    };
-    class banana_csw: StaticMGWeapon {
-        class ace_csw {
-            enabled = 1; // whether or not the weapon is affected by CSW                
-            proxyWeapon = QGVAR(HMG_Static); // The weapon that will be added to the CSW on initialization. Used to ensure lower ammo-reload time when using Ammo Handling
-            magazineLocation = "_target selectionPosition 'magazine'"; // The location of the magazine. Where the action for ammo-handling will appear on the weapon
-            disassembleWeapon = QGVAR(staticHMGCarry); // What the weapon will disassemble to
-            disassembleTurret = QGVAR(m3TripodLow); // Which tripod will appear when weapon has been disassembled
-            ammoLoadTime = 7; // How long it takes in seconds to load ammo into the weapon           
-            ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
-            desiredAmmo = 69; // When the weapon is reloaded it will try and reload to this ammo capacity
-            disassembleFunc = "myCoolFunction.sqf"; // A callback function for when the CSW gets disassembled. Arguments: [tripod, staticWeapon]
-        };
-    };
-};
-```
+- A proxy weapon
+- A carryable weapon that can be mounted on a tripod
+- Carryable weapon magazines
+- The CSW config in the static weapon
 
-### 1.2 CfgMagazines
+For the following examples, we are going to assume you are modifying your existing static weapon named `prefix_hmg` and that you are using the same prefix. If you are making a compatibility patch for a third party mod, you should use your own prefix. Do not use `ace` as your prefix.
 
-```cpp
-class CfgMagazines {
-    class 100Rnd_127x99_mag; // Example magazine used - does not have to be this
-    class banana_ammo: 100Rnd_127x99_mag {
-        scope=2; // Needs to be 2 to make sure it shows up in Arsenal
-        type=256; // Must be 256 to show up in Arsenal
-        count = 100; // How much ammo gets added per "Load Ammo" selection
-        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // default ammo box model
-        //ace_isbelt = 1; // Needed if your magazine has belt linking
-    };
-};
-```
+### 1.1 Proxy Weapon
 
-### 1.3 CfgWeapons
+Because the magazine loading time is already handled by the ACE interaction, a proxy weapon with a very low loading time is used. It automatically replaces the default weapon of the turret when CSW is enabled.
 
 ```cpp
 class CfgWeapons {
-    class Launcher_Base_F;
-    class banana_carry_weapon: Launcher_Base_F {
-        class ACE_CSW {
-            type = "weapon"; // What type of carry it is. Must always be "weapon" for the carry weapon
-            deployTime = 4; // How long it takes to deploy the weapon onto the tripod
-            pickupTime = 4; // How long it takes to disassemble weapon from the tripod
-            class assembleTo {
-                ace_csw_m3Tripod = "banana_csw_mod1"; // What tripod can this weapon deploy onto, and what vehicle will it spawn when it is deployed
-                banana_tripod = "banana_csw";
-            };
-        };
-    };
-    
-    class HMG_Static;
-    class banana_proxy_weapon: HMG_Static {
-        magazineReloadTime = 0.5; // Proxy weapons are spawned onto the CSW when it is assembled. Because ammo loading times use defined values in the magazine, this number needs to be low to ensure low latency
+    class prefix_hmg_weapon;
+    class prefix_hmg_weapon_proxy: prefix_hmg_weapon {
+        magazineReloadTime = 0.5;
     };
 };
 ```
 
-### 1.4 CfgMagazineGroups
+### 1.2 Carryable Weapon
+
+Carried CSW weapons are technically rocket launchers. This allows the player to carry both a CSW weapon and a backpack with magazines for the CSW.
 
 ```cpp
-    class ace_csw_groups { // Ammo that can be loaded into this CSW
-        class banana_ammo { // The magazine which the player can place into their inventory
-            banana_dummy_ammo = 1; // Magazine that is loaded into the weapon as per CfgWeapons >> weapon >> magazines
-        };
-        
-        // Optional
-        class ace_csw_100Rnd_127x99_mag { // default magazine that CSW already implements
-            banana_dummy_ammo = 1;
-        };
-        
-        /*
-          Ammo types already defined by CSW:
-            - ace_csw_100Rnd_127x99_mag
-            - ace_csw_100Rnd_127x99_mag_red
-            - ace_csw_100Rnd_127x99_mag_green
-            - ace_csw_100Rnd_127x99_mag_yellow
-            - ace_csw_50Rnd_127x108_mag
-            - ace_csw_20Rnd_20mm_G_belt
-            - ACE_1Rnd_82mm_Mo_HE
-            - ACE_1Rnd_82mm_Mo_Smoke
-            - ACE_1Rnd_82mm_Mo_Illum
-            - ACE_1Rnd_82mm_Mo_HE_Guided
-            - ACE_1Rnd_82mm_Mo_HE_LaserGuided
-            - Titan_AT
-            - Titan_AA
-        */
+class CfgWeapons {
+    class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
     };
+
+    class prefix_hmg_carry: Launcher_Base_F {
+        // displayName, author, model and picture are omitted and up to you
+        scope = 2;
+        modes[] = {};
+
+        class ACE_CSW {
+            type = "weapon"; // Use "weapon" for weapons or "mount" for tripods - see below
+            deployTime = 4;  // How long it takes to deploy the weapon onto the tripod
+            pickupTime = 4;  // How long it takes to disassemble weapon from the tripod
+            class assembleTo {
+                // What tripod can this weapon deploy onto, and what vehicle will it spawn when it is deployed
+                ace_csw_m3Tripod = "prefix_hmg";
+            };
+        };
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            // One WeaponSlot with a positive value for iconScale forces game to use icon overlay method
+            // Required, because the inventory icon has no accessory variants
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
+
+            // Don't forget to set mass to a reasonable value
+            // We use mass in pounds * 10
+            mass = 840; // 84 lb / 38 kg
+        };
+    };
+};
+```
+
+### 1.3 Carryable Magazines
+
+Vehicle magazines usually don't have inventory pictures or a 3D model. Because of this, carryable magazines need to be created for the CSW. If one of the existing CSW magazines or an infantry weapon magazine would fit your weapon, you don't need to create another magazine. Using one of the existing CSW magazines is preferred to prevent confusing players and mission makers.
+
+```cpp
+class CfgMagazines {
+    class prefix_100rnd_hmg_mag;
+    class prefix_100rnd_hmg_csw_mag: prefix_100rnd_hmg_mag {
+        scope = 2;
+        type = 256;  // Must be 256 to show up in Arsenal
+        count = 100;
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        ACE_isBelt = 1; // Enables belt linking for this magazine
+    };
+};
+```
+
+ACE converts the carryable magazines to the vehicle magazines when loading them. To enable this conversion, the ACE_CSW_Groups config needs to be extended.
+
+```cpp
+class ACE_CSW_Groups {
+    // Using a custom carryable magazine
+    class prefix_100rnd_hmg_csw_mag { // Same name as the carryable magazine
+        prefix_100rnd_hmg_mag = 1;    // Vehicle magazine that will be loaded when loading this magazine
+    };
+    
+    // Using an existing CSW magazine
+    class ace_csw_100Rnd_127x99_mag {
+        banana_dummy_ammo = 1;
+    };
+    
+    /*
+        Carryable magazines already defined by ACE:
+        - ace_csw_100Rnd_127x99_mag
+        - ace_csw_100Rnd_127x99_mag_red
+        - ace_csw_100Rnd_127x99_mag_green
+        - ace_csw_100Rnd_127x99_mag_yellow
+        - ace_csw_50Rnd_127x108_mag
+        - ace_csw_20Rnd_20mm_G_belt
+        - ace_1Rnd_82mm_Mo_HE
+        - ace_1Rnd_82mm_Mo_Smoke
+        - ace_1Rnd_82mm_Mo_Illum
+        - ace_1Rnd_82mm_Mo_HE_Guided
+        - ace_1Rnd_82mm_Mo_HE_LaserGuided
+    */
+};
+```
+
+### 1.4 CSW Config
+
+The final step is to let ACE know how to disassemble and load the static weapon.
+
+```cpp
+class CfgVehicles {
+    class StaticMGWeapon;
+    class prefix_hmg: StaticMGWeapon {
+        class ACE_CSW {
+            enabled = 1; // Enables ACE CSW for this weapon              
+            proxyWeapon = "prefix_hmg_weapon_proxy"; // The proxy weapon created above
+            magazineLocation = "_target selectionPosition 'magazine'"; // Ammo handling interaction point location
+            disassembleWeapon = "prefix_hmg_carry";  // Carryable weapon created above
+            disassembleTurret = "ace_csw_m3Tripod";  // Which static tripod will appear when weapon is disassembled
+            ammoLoadTime = 7;   // How long it takes in seconds to load ammo into the weapon           
+            ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
+            desiredAmmo = 100;  // When the weapon is reloaded it will try and reload to this ammo capacity
+            // Optional callback function for when the CSW gets disassembled, called with [tripod, staticWeapon]
+            disassembleFunc = "prefix_fnc_handleDisassembly";
+        };
+    };
+};
 ```
 
 ## 2. Making a new Tripod
 
-### 2.1 CfgVehicles
+If none of the existing ACE tripods fit your weapon, you can create your own. Creating a tripod is similar to creating a crew served weapon and consists of two parts:
 
-```cpp
-class CfgVehicles {
-    class ace_csw_baseTripod;
-    class banana_tripod: ace_csw_baseTripod {
-        class ace_csw { disassembleTo = "banana_carry_tripod"; }; // What will be spawned when "Pickup Tripod" is selected
-    };
-};
-```
+- A carryable tripod
+- A placeable static tripod
 
-### 2.2 CfgWeapons
+### 2.2 Carryable Tripod
+
+Creating the carryable tripod is similar to [creating a carryable weapon](#12-carryable-weapon). The config besides the `ACE_CSW` class has been omitted for brevity and is the same as above.
 
 ```cpp
 class CfgWeapons {
     class Launcher_Base_F;
-    class banana_carry_tripod: Launcher_Base_F {
+    class prefix_tripod_carry: Launcher_Base_F {
         class ACE_CSW {
-            type = "mount"; // What type of carry it is. Must always be "mount" for the tripod
+            type = "mount"; // Use "mount" for tripods
             deployTime = 4; // How long it takes to deploy the tripod
-            pickupTime = 4; // How long it takes to pickup the tripod
-            deploy = "banana_tripod"; // what vehicle will spawn when the tripod is deployed
+            pickupTime = 4; // How long it takes to disassemble the tripod
+            deploy = "prefix_tripod"; // what vehicle will spawn when the tripod is deployed
+        };
+    };
+};
+```
+
+### 2.1 CfgVehicles
+
+When deploying a tripod, a static vehicle is spawned to mount weapons onto. Make sure this vehicles interaction point is in a suitable position.
+
+```cpp
+class CfgVehicles {
+    class ace_csw_baseTripod;
+    class prefix_tripod: ace_csw_baseTripod {
+        class ACE_CSW {
+            disassembleTo = "prefix_tripod_carry";
         };
     };
 };

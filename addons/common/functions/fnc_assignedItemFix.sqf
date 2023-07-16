@@ -37,11 +37,11 @@ GVAR(AssignedItemsShownItems) = [
     private _assignedItems = getUnitLoadout _unit param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]
 
     GVAR(AssignedItemsShownItems) = [
-        !((_assignedItems select 0) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 0 >> "ACE_hideItemType") != "map"},
-        !((_assignedItems select 3) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 3 >> "ACE_hideItemType") != "compass"},
-        !((_assignedItems select 4) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 4 >> "ACE_hideItemType") != "watch"},
-        !((_assignedItems select 2) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 2 >> "ACE_hideItemType") != "radio"},
-        !((_assignedItems select 1) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 1 >> "ACE_hideItemType") != "gps"}
+        ((_assignedItems select 0) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 0 >> "ACE_hideItemType") != "map"},
+        ((_assignedItems select 3) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 3 >> "ACE_hideItemType") != "compass"},
+        ((_assignedItems select 4) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 4 >> "ACE_hideItemType") != "watch"},
+        ((_assignedItems select 2) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 2 >> "ACE_hideItemType") != "radio"},
+        ((_assignedItems select 1) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 1 >> "ACE_hideItemType") != "gps"}
     ];
 
     GVAR(AssignedItemsShownItems) params ["_showMap", "_showCompass", "_showWatch", "_showRadio", "_showGPS"];

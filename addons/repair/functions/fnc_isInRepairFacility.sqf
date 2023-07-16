@@ -15,28 +15,15 @@
  * Public: Yes
  */
 
+#define CHECK_OBJECTS(var) ((var) findIf {(_x getVariable ["ACE_isRepairFacility", getNumber (configOf _x >> QGVAR(canRepair))] > 0) && {!(_x isKindOf "AllVehicles")} && {alive _x}} != -1)
+
 params [["_object", objNull, [objNull]]];
 TRACE_1("params",_object);
 
-private _position = getPosASL _object;
-private _isInBuilding = false;
 
-private _checkObject = {
-    if (
-        _x getVariable ["ACE_isRepairFacility", getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(canRepair))] > 0
-        && {!(_x isKindOf "AllVehicles")} // check if it's not repair vehicle
-        && {alive _x}
-    ) exitWith {
-        _isInBuilding = true;
-    };
+private _fnc_check = {
+    private _position = _object modelToWorldVisual [0, 0, eyePos _object select 2];
+    CHECK_OBJECTS(lineIntersectsWith [ARR_3(_position, _position vectorAdd [ARR_3(0, 0, 10)], _object)]) || {CHECK_OBJECTS(_object nearObjects 7.5)}
 };
 
-private _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
-_checkObject forEach _objects;
-
-if (_isInBuilding) exitWith {true};
-
-_objects = _object nearObjects 7.5;
-_checkObject forEach _objects;
-
-_isInBuilding
+[[], _fnc_check, _object, QGVAR(inRepairFacilityCache), IN_REPAIR_FACILITY_CACHE_EXPIRY] call EFUNC(common,cachedCall);

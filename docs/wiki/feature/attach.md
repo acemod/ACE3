@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Attach
+component: attach
 description: Allow players to attach items to vehicles or themselves.
 group: feature
 category: interaction
@@ -34,7 +35,3 @@ Adds an attachable IR strobe, which is only visible using night vision devices a
 - Select `Attach item`.
 - Select your item and follow the instructions on the screen.
 - Repeat the process to detach.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="attach" %}

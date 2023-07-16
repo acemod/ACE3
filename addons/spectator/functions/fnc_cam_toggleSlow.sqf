@@ -17,7 +17,7 @@
 
 params ["_slowSpeed"];
 
-if !(GVAR(camSlow) isEqualTo _slowSpeed) then {
+if (GVAR(camSlow) isNotEqualTo _slowSpeed) then {
     private _camera = GVAR(camera);
 
     if (GVAR(camMode) == MODE_FREE) then {

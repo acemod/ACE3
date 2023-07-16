@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Inventory
+component: inventory
 description: Options to increase size of the inventory dialog.
 group: feature
 category: interaction
@@ -25,7 +26,3 @@ Makes the inventory dialog bigger and increases the number of items that can be 
 - Click on `Make Inventory Display Bigger`.
 - Choose the size desired on the right drop down menu.
 - Press the `Close` button, your changes are automatically saved.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="inventory" %}

@@ -33,8 +33,3 @@ Two key modes (can be used together):
 #### Public Functions:
 `[bob, car1, true] call ACE_VehicleLock_fnc_addKeyForVehicle;` - will add a `ACE_key_customKeyMagazine` to bob and program it to work on car1
 
-## Maintainers
-
-The people responsible for merging changes to this component or answering potential questions.
-
-- [PabstMirror](https://github.com/PabstMirror)

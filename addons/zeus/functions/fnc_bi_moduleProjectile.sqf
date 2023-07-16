@@ -31,7 +31,7 @@ if ({local _x} count (objectcurators _logic) > 0) then {
 if !(isserver) exitwith {};
 
 if (_activated) then {
-    _ammo = _logic getvariable ["type",gettext (configfile >> "cfgvehicles" >> typeof _logic >> "ammo")];
+    _ammo = _logic getvariable ["type",gettext (configOf _logic >> "ammo")];
     if (_ammo != "") then {
         _cfgAmmo = configfile >> "cfgammo" >> _ammo;
         //if !(isclass _cfgAmmo) exitwith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
@@ -90,10 +90,9 @@ if (_activated) then {
         };
         _fnc_playRadio = {
             if (_radio != "") then {
-                _entities = (getposatl _logic) nearentities ["All",100];
                 _sides = [];
                 {
-                    if (isplayer _x) then {
+                    if (_x distance2D _logic < 100) then {
                         _side = side group _x;
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
@@ -103,14 +102,14 @@ if (_activated) then {
                             };
                         };
                     };
-                } foreach _entities;
+                } foreach allPlayers;
             };
         };
         if (count _hint > 0 && {count objectcurators _logic > 0}) then {
             [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectcurators _logic] call bis_fnc_mp;
         };
         if (count _velocity == 3) then {
-            _altitude = (_logic getvariable ["altitude",_altitude]) call bis_fnc_parsenumber;
+            _altitude = (_logic getvariable ["altitude",_altitude]) call BIS_fnc_parseNumberSafe;
             _radio = _logic getvariable ["radio",_radio];
 
             //--- Create projectile

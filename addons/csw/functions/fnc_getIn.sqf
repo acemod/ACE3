@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: TCVM
+ * Author:Dani (TCVM)
  * An action for the player to get in the CSW
  * Due to the fact that the default static weapons "Get In" memory point is at the front of
  * the gun and can't be acssesed from the back, I am implementing this to get around that issue.

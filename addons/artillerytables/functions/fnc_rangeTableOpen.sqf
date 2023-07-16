@@ -47,6 +47,7 @@ _mags = _mags apply {
     _magParamsArray pushBackUnique _airFriction;
     [getText (_magCfg >> _x >> "displayNameShort"), getText (_magCfg >> _x >> "displayName"), _initSpeed, _airFriction]
 };
+_mags = _mags arrayIntersect _mags;
 TRACE_2("",_magParamsArray,_mags);
 if ((count _magParamsArray) == 2) then { // test if all magazines share the parameters
     _mags = [["", "All Magazines", (_mags select 0) select 2, (_mags select 0) select 3]]; // simplify

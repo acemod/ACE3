@@ -1,16 +1,3 @@
-#define EQUIP_FRIES_ATTRIBUTE class Attributes { \
-    class GVAR(equipFRIES) { \
-        property = QGVAR(equipFRIES); \
-        control = "Checkbox"; \
-        displayName = CSTRING(Eden_equipFRIES); \
-        tooltip = CSTRING(Eden_equipFRIES_Tooltip); \
-        expression = QUOTE(if (_value) then {[_this] call FUNC(equipFRIES)}); \
-        typeName = "BOOL"; \
-        condition = "objectVehicle"; \
-        defaultValue = "(false)"; \
-    }; \
-}
-
 class CfgVehicles {
     class Logic;
     class Module_F: Logic {
@@ -48,6 +35,16 @@ class CfgVehicles {
                 condition = QUOTE([_target] call FUNC(canStowFRIES));
                 statement = QUOTE([_target] call FUNC(stowFRIES));
             };
+            class ACE_deployRopes3 {
+                displayName = CSTRING(Interaction_deployRopes3);
+                condition = QUOTE([ARR_3(_target,_player,'ACE_rope3')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope3')])] call CBA_fnc_serverEvent);
+            };
+            class ACE_deployRopes6 {
+                displayName = CSTRING(Interaction_deployRopes6);
+                condition = QUOTE([ARR_3(_target,_player,'ACE_rope6')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope6')])] call CBA_fnc_serverEvent);
+            };
             class ACE_deployRopes12 {
                 displayName = CSTRING(Interaction_deployRopes12);
                 condition = QUOTE([ARR_3(_target,_player,'ACE_rope12')] call FUNC(canDeployRopes));
@@ -75,8 +72,9 @@ class CfgVehicles {
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = QUOTE(true);
-                statement = "";
+                condition = QUOTE([_target] call FUNC(canCutRopes));
+                // should not be empty to work with EGVAR(interact_menu,consolidateSingleChild) setting
+                statement = QUOTE(true);
                 class confirmCutRopes {
                     displayName = ECSTRING(common,confirm);
                     condition = QUOTE([_target] call FUNC(canCutRopes));
@@ -85,8 +83,8 @@ class CfgVehicles {
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
-                condition = [_player, _target] call FUNC(canFastRope);
-                statement = [_player, _target] call FUNC(fastRope);
+                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canFastRope));
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(fastRope));
             };
         };
     };
@@ -179,6 +177,7 @@ class CfgVehicles {
         author = "KoffeinFlummi";
         scope = 1;
         model = QPATHTOF(data\helper.p3d);
+        destrType = "DestructNo";
         class ACE_Actions {};
         class Turrets {};
         class TransportItems {};
@@ -210,7 +209,9 @@ class CfgVehicles {
         GVAR(friesAttachmentPoint)[] = {0.035, 2.2, -0.15};
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
     class Heli_Transport_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
@@ -221,7 +222,7 @@ class CfgVehicles {
         class UserActions {
             class Ramp_Open;
             class Ramp_Close: Ramp_Open {
-                condition = QUOTE([ARR_5(this,'CargoRamp_Open',[[0],[1],[2]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'CargoRamp_Open',[ARR_3([0],[1],[2])])] call FUNC(canCloseRamp));
             };
         };
     };
@@ -234,7 +235,7 @@ class CfgVehicles {
         class UserActions {
             class Ramp_Open;
             class Ramp_Close: Ramp_Open {
-                condition = QUOTE([ARR_5(this,'Door_rear_source',[[0],[3],[4]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'Door_rear_source',[ARR_3([0],[3],[4])])] call FUNC(canCloseRamp));
             };
         };
     };
@@ -243,14 +244,19 @@ class CfgVehicles {
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantryReverse";
         GVAR(friesAttachmentPoint)[] = {-1.04, 2.5, -0.34};
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
     class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantry";
         GVAR(friesAttachmentPoint)[] = {1.07, 2.5, -0.5};
-        EQUIP_FRIES_ATTRIBUTE;
+
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
     class Heli_Transport_04_base_F: Helicopter_Base_H {
         class UserActions;
@@ -268,7 +274,7 @@ class CfgVehicles {
         class UserActions: UserActions {
             class CloseDoor_6;
             class Ramp_Close: CloseDoor_6 {
-                condition = QUOTE([ARR_6(this,'Door_6_source',[[0],[1],[2],[3]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'Door_6_source',[ARR_4([0],[1],[2],[3])])] call FUNC(canCloseRamp));
             };
         };
     };

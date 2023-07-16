@@ -23,7 +23,7 @@ TRACE_4("params",_vehicle,_turret,_distance,_angleTarget);
 private _FCSInitSpeed = [];
 private _FCSMagazines = [];
 private _FCSElevation = [];
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
 {
     private _magazine = _x;

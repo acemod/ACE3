@@ -4,8 +4,9 @@
  * Finds the best vehicle magazines to create from a carryable magazine for a given weapon.
  *
  * Arguments:
- * 0: Weapon <STRING>
- * 1: Magazine that is carryable <STRING>
+ * 0: Vehicle <OBJECT>
+ * 1: Turret <ARRAY>
+ * 2: Magazine that is carryable <STRING>
  *
  * Return Value:
  * Vehicle Magazine <STRING>
@@ -20,7 +21,7 @@ params ["_vehicle", "_turret", "_carryMag"];
 TRACE_3("reload_getVehicleMagazine",_vehicle,_turret,_carryMag);
 
 private _carryGroupCfg = configFile >> QGVAR(groups) >> _carryMag;
-private _desiredAmmo = getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "desiredAmmo");
+private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
 
 private _bestMag = "#";

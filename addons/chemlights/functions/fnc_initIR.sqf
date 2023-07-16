@@ -17,7 +17,7 @@
 
 params ["_dummy"];
 
-private _chemlightClass = getText (configFile >> "CfgVehicles" >> typeOf _dummy >> "ACE_Attachable");
+private _chemlightClass = getText (configOf _dummy >> "ACE_Attachable");
 private _config = configFile >> "CfgAmmo" >> _chemlightClass;
 private _delay = getNumber (_config >> "explosionTime");
 private _lifeTime = getNumber (_config >> "timeToLive");

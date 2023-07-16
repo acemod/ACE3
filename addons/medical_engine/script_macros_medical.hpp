@@ -4,7 +4,7 @@
 
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
-#define ALL_HITPOINTS ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
+#define ALL_HITPOINTS ["HitHead", "HitChest", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
 
 #define HITPOINT_INDEX_HEAD 0
 #define HITPOINT_INDEX_BODY 1
@@ -99,8 +99,8 @@
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 
 // Empty wound data, used for some default return values
-// [classID, bodypartIndex, amountOf, bloodloss, damage]
-#define EMPTY_WOUND [-1, -1, 0, 0, 0]
+// [classID, amountOf, bloodloss, damage]
+#define EMPTY_WOUND [-1, 0, 0, 0]
 
 // Base time to bandage each wound category
 #define BANDAGE_TIME_S 4
@@ -112,9 +112,6 @@
 #define DEFAULT_BANDAGE_REOPENING_CHANCE 0.1
 #define DEFAULT_BANDAGE_REOPENING_MIN_DELAY 120
 #define DEFAULT_BANDAGE_REOPENING_MAX_DELAY 200
-
-// Time it takes to stitch one wound
-#define WOUND_STITCH_TIME 5
 
 #define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
 
@@ -176,9 +173,9 @@
 #define IS_BLEEDING(unit)           (GET_WOUND_BLEEDING(unit) > 0)
 #define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN, false])
 #define IS_UNCONSCIOUS(unit)        (unit getVariable [VAR_UNCON, false])
-#define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, []])
-#define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, []])
-#define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, []])
+#define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, createHashMap])
+#define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, createHashMap])
+#define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, createHashMap])
 #define GET_DAMAGE_THRESHOLD(unit)  (unit getVariable [QEGVAR(medical,damageThreshold), [EGVAR(medical,AIDamageThreshold),EGVAR(medical,playerDamageThreshold)] select (isPlayer unit)])
 
 // The following function calls are defined here just for consistency

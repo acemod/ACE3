@@ -61,7 +61,7 @@ if (_count > 0) then {
 };
 
 private _classCoef = (ACE_player getVariable ["ACE_GForceCoef",
-    getNumber (configFile >> "CfgVehicles" >> (typeOf ACE_player) >> "ACE_GForceCoef")]) max 0.001;
+    getNumber ((configOf ACE_player) >> "ACE_GForceCoef")]) max 0.001;
 private _suitCoef = if ((uniform ACE_player) != "") then {
     (getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef")) max 0.001
 } else {
@@ -71,7 +71,7 @@ private _suitCoef = if ((uniform ACE_player) != "") then {
 private _gBlackOut = MAXVIRTUALG / _classCoef + MAXVIRTUALG / _suitCoef - MAXVIRTUALG;
 
 // Unconsciousness
-if ((_average > _gBlackOut) and {isClass (configFile >> "CfgPatches" >> "ACE_Medical") and {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
+if ((_average > _gBlackOut) && {["ACE_Medical"] call EFUNC(common,isModLoaded) && {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
     [ACE_player, true, (10 + floor(random 5)), true] call EFUNC(medical,setUnconscious);
 };
 

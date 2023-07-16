@@ -13,4 +13,6 @@ PREP_RECOMPILE_END;
     GVAR(isTI) = _visionMode isEqualTo 2;
 }] call CBA_fnc_addPlayerEventHandler;
 
+#include "initSettings.sqf"
+
 ADDON = true;

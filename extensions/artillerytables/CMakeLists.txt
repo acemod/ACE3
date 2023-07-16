@@ -11,14 +11,23 @@ if(CMAKE_COMPILER_IS_GNUCXX)
 	set_target_properties(${ACE_EXTENSION_NAME} PROPERTIES LINK_SEARCH_END_STATIC 1)
 endif()
 
+# Copy and rename DLL to root
+if(USE_64BIT_BUILD)
+    set(FINAL_DLL_NAME ${ACE_EXTENSION_NAME}_x64.dll)
+else()
+    set(FINAL_DLL_NAME ${ACE_EXTENSION_NAME}.dll)
+endif()
+add_custom_command(TARGET ${ACE_EXTENSION_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${ACE_EXTENSION_NAME}> ${PROJECT_SOURCE_DIR}/../${FINAL_DLL_NAME}
+)
 
-
-# enable_testing()
-# set(ACE_TEST_NAME Test_${ACE_EXTENSION_NAME})
-
-# add_executable(${ACE_TEST_NAME} tests/tester.cpp ${SOURCES})
-# target_link_libraries(${ACE_TEST_NAME} ace_common)
-# target_link_libraries(${ACE_TEST_NAME} ${ACE_EXTENSION_NAME})
-# target_link_libraries(${ACE_TEST_NAME} gtest_main)
-# add_test(${ACE_TEST_NAME} ${ACE_TEST_NAME})
-# set_target_properties(${ACE_TEST_NAME} PROPERTIES FOLDER Tests)
+if (TARGET gtest_main) # Add Tests
+    enable_testing()
+    set(ACE_TEST_NAME ${ACE_EXTENSION_NAME}_test)
+    add_executable(${ACE_TEST_NAME} tests/tester.cpp ${SOURCES})
+    target_link_libraries(${ACE_TEST_NAME} ace_common)
+    target_link_libraries(${ACE_TEST_NAME} ${ACE_EXTENSION_NAME})
+    target_link_libraries(${ACE_TEST_NAME} gtest_main)
+    add_test(${ACE_TEST_NAME} ${ACE_TEST_NAME})
+    set_target_properties(${ACE_TEST_NAME} PROPERTIES FOLDER Tests)
+endif()

@@ -23,10 +23,10 @@ params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startin
 
 
 private _bestPosASL = [];
-private _bestPosDistance = 1e99;
+private _bestPosDistance = 1e38;
 private _viewPos = _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3);
-private _modelVector = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToWorld [0,0,0]));
-private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToWorld [0,0,-1]));
+private _modelVector = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,0]);
+private _modelVectorLow = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,-1]);
 
 {
     private _endPosASL = _x;
@@ -50,8 +50,8 @@ private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToW
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,-0.25,1])) vectorMultiply 3),
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [-0.25,-0.25,1])) vectorMultiply 3),
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0.25,-0.25,1])) vectorMultiply 3),
-    AGLtoASL (_sink modelToWorld [0,0,0]), // Try old method of just using model center
-    AGLtoASL (_sink modelToWorld [0,0,-0.5])
+    _sink modelToWorldWorld [0,0,0], // Try old method of just using model center
+    _sink modelToWorldWorld [0,0,-0.5]
 ];
 
 //Checks (too close to center or can't attach)
@@ -65,13 +65,15 @@ _bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) 
 private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
 
 [
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    GVAR(progressDuration),
     [_unit, _nozzle, _sink, _attachPosModel],
     {
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
+        
+        private _source = _nozzle getVariable QGVAR(source);
 
         detach _nozzle;
         _nozzle attachTo [_sink, _endPosTestOffset];
@@ -111,21 +113,34 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _sink setVariable [QGVAR(nozzle), _nozzle, true];
 
-        _source = _nozzle getVariable QGVAR(source);
-        private _fuel = [_source] call FUNC(getFuel);
-        if (_fuel == REFUEL_INFINITE_FUEL) then {
-            _source setVariable [QGVAR(fuelCounter), 0, true];
-        } else {
-            _source setVariable [QGVAR(fuelCounter), _fuel, true];
-        };
+        // Reset fuel counter
+        _source setVariable [QGVAR(fuelCounter), 0, true];
 
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
 
-        if ([_unit, _nozzle] call FUNC(canTurnOn)) then {
-            _unit setVariable [QGVAR(tempFuel), nil];
-            [_unit, _nozzle] call FUNC(turnOn);
-        } else {
-            [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+        private _canReceive = getNumber ((configOf _sink) >> QGVAR(canReceive)) == 1;
+        private _isContainer = ([_sink] call FUNC(getCapacity)) != REFUEL_DISABLED_FUEL;
+
+        // Decide if cargo or vehicle will be refueled
+        switch (true) do {
+            case (_canReceive && {!_isContainer || {_sink == _source}}): {
+                // is not a refueling vehicle or refueling vehicle tries to refuel itself
+                if ([_unit, _nozzle, false] call FUNC(canTurnOn)) then {
+                    [_unit, _nozzle, false] call FUNC(turnOn);
+                } else {
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+                };
+            };
+            case (!_canReceive && _isContainer): {
+                if ([_unit, _nozzle, true] call FUNC(canTurnOn)) then {
+                    [_unit, _nozzle, true] call FUNC(turnOn);
+                } else {
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+                };
+            };
+            default {
+                /* Target is a refueling vehicle, let user manually decide if he wants to refuel cargo or vehicle itself */
+            };
         };
     },
     "",
