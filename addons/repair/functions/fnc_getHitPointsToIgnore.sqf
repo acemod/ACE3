@@ -118,6 +118,13 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping depends hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
+
+        private _groupIndex = _hitpointGroups findIf {_x # 0 == _hitpoint};
+        if (_groupIndex != -1) then {
+            ERROR_2("[%1] hitpoint [%2] is both a group-parent and a depends and will be unrepairable",_type,_hitpoint);
+            ERROR_1("group: %1",_hitpointGroups # _groupIndex);
+        };
+
         _hitPointsToIgnore pushBackUnique _hitpoint;
         _processedSelections pushBack _selection;
         continue

@@ -438,9 +438,7 @@ class CfgVehicles {
     };
 
     class Helicopter_Base_H;
-    class Heli_Transport_04_base_F: Helicopter_Base_H {
-        GVAR(hitpointGroups)[] = { {"HitEngine", {"HitEngine1", "HitEngine2"}} };
-    };
+    class Heli_Transport_04_base_F: Helicopter_Base_H {};
     class O_Heli_Transport_04_repair_F: Heli_Transport_04_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
