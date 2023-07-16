@@ -18,7 +18,7 @@
 [QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(ai_reload), LINKFUNC(ai_reload)] call CBA_fnc_addEventHandler;
 
-[QEGVAR(artilleryTables,doArtilleryFireComplete), {
+[QEGVAR(common,doArtilleryFireComplete), {
     params ["_vehicle"];
     if !(local _vehicle) exitWith {};
 
