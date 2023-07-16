@@ -37,6 +37,8 @@ private _fnc_addAmmo = {
 {
     _x params ["_xMag", "", "_xAmmo"];
 
+    if (_xAmmo <= 0) then {continue};
+
     private _carryMag = _xMag call FUNC(getCarryMagazine);
     if (_carryMag isEqualTo "") then {continue};
 
