@@ -10,7 +10,7 @@
  * 2: Uniform items <NUMBER> (default: 2)
  * 3: Vest items <NUMBER> (default: 2)
  * 4: Backpack items <NUMBER> (default: 2)
- * 2: Assigned items <BOOL> (default: true)
+ * 5: Assigned items <BOOL> (default: true)
  *
  * Return Value:
  * Items <HASHMAP>
