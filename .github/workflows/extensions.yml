@@ -7,21 +7,23 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix. os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [windows-latest]
 
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
+      uses: actions/checkout@v3
     - name: Build
       shell: cmd
       run: |
-        cd extensions/build
+        cd extensions
+        mkdir build
+        cd build
         cmake .. && cmake --build .
     - name: Upload Artifact
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v3
       with:
         name: ace3_extensions-${{ matrix.os }}-debug
         path: extensions/build

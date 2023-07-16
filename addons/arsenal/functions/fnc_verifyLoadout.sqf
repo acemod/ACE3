@@ -5,7 +5,7 @@
  * Verify the provided loadout.
  *
  * Arguments:
- * 0: Loadout <ARRAY> (getUnitLoadout format)
+ * 0: Loadout <ARRAY> (CBA Extended Loadout or getUnitLoadout format)
  *
  * Return Value:
  * Verified loadout and missing / unavailable items list and count <ARRAY>
@@ -14,6 +14,14 @@
 */
 
 params ["_loadout"];
+
+private _extendedInfo = createHashMap;
+
+// Check if the provided loadout is a CBA extended loadout
+if (count _loadout == 2) then {
+    _extendedInfo = _loadout select 1;
+    _loadout = _loadout select 0;
+};
 
 private _weaponCfg = configFile >> "CfgWeapons";
 private _magCfg = configFile >> "CfgMagazines";
@@ -236,4 +244,4 @@ for "_dataIndex" from 0 to 9 do {
     };
 };
 
-[_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]
+[[_loadout, _extendedInfo], _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]

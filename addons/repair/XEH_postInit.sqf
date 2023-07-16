@@ -45,6 +45,8 @@ if !GVAR(enabled) exitWith {};
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 
+GVAR(allToolKits) = call (uiNamespace getVariable QGVAR(allToolKits));
+
 ["ACE_RepairItem_Base", "killed", {
     params ["_object"];
 

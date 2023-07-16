@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM), PabstMirror
+ * Author: Dani (TCVM), PabstMirror
  * Dumps ammo to container
  *
  * Arguments:
@@ -36,13 +36,7 @@ private _containerMagazineCount = [];
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
 
-    private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
-    if (isNil "_carryMag") then {
-        private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
-        _carryMag = configName (_groups param [0, configNull]);
-        GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
-        TRACE_2("setting cache",_xMag,_carryMag);
-    };
+    private _carryMag = _xMag call FUNC(getCarryMagazine);
     if (_carryMag != "") then {
         if ((_desiredAmmo > 0) && {_loadedMagazineInfo isEqualTo []}) then {
             private _loadedMagAmmo = _desiredAmmo min _xAmmo;
@@ -74,6 +68,15 @@ TRACE_1("Remove all loaded magazines",_magsToRemove);
     };
 } forEach _magsToRemove;
 
+if (_staticWeapon getVariable [QGVAR(secondaryWeaponMagazine), ""] isNotEqualTo "") then {
+    private _secondaryWeaponMagazine = _staticWeapon getVariable QGVAR(secondaryWeaponMagazine);
+    private _turret = allTurrets _staticWeapon param [0, []];
+    private _vehicleMag = [_staticWeapon, _turret, _secondaryWeaponMagazine] call FUNC(reload_getVehicleMagazine);
+    TRACE_3("Re-add previous mag",_secondaryWeaponMagazine,_turret,_vehicleMag);
+    if (!isClass (configFile >> "CfgMagazines" >> _vehicleMag)) exitWith {};
+    _staticWeapon addMagazineTurret [_vehicleMag, _turret, 1];
+    _staticWeapon setVariable [QGVAR(secondaryWeaponMagazine), nil];
+};
 
 if (_storeExtraMagazines) then {
     TRACE_1("saving extra mags to container",_containerMagazineCount);

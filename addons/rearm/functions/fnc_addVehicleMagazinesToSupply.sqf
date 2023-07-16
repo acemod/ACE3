@@ -36,10 +36,8 @@ private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
     TRACE_2("",_turretPath,_magazines);
     {
         [_truck, _x] call FUNC(addMagazineToSupply);
-        false
-    } count _magazines;
-    false
-} count _turrets;
+    } forEach _magazines;
+} forEach _turrets;
 
 // 1.70 pylons
 private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];

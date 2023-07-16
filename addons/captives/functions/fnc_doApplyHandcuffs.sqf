@@ -21,6 +21,6 @@ params ["_unit", "_target"];
 
 playSound3D [QUOTE(PATHTO_R(sounds\cable_tie_zipping.ogg)), objNull, false, (getPosASL _target), 1, 1, 10];
 
-[QGVAR(setHandcuffed), [_target, true], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(setHandcuffed), [_target, true, _unit], [_target]] call CBA_fnc_targetEvent;
 
 _unit removeItem "ACE_CableTie";

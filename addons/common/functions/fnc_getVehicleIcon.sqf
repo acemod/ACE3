@@ -4,7 +4,7 @@
  * Function used to get the vehicle icon for provided object (cached for repeat use)
  *
  * Arguments:
- * 0: Object to get icon of <OBJECT/STRING>
+ * 0: Object to get icon of <OBJECT, STRING>
  *
  * Return Value:
  * Icon of vehicle <STRING>
@@ -18,14 +18,14 @@
 
 params [["_object", objNull, [objNull, ""]]];
 
-if ((_object isEqualType objNull && {isNull _object}) || {_object isEqualType "" && {_object == ""}}) exitWith { DEFAULT_TEXTURE };
+if (_object isEqualTo objNull || {_object isEqualTo ""}) exitWith { DEFAULT_TEXTURE };
 
 private _objectType = if (_object isEqualType objNull) then {
     typeOf _object
 } else {
     _object
 };
-private _cachedValue = GVAR(vehicleIconCache) getVariable _objectType;
+private _cachedValue = GVAR(vehicleIconCache) get _objectType;
 
 if (isNil "_cachedValue") then {
     private _vehicleValue = getText (configfile >> "CfgVehicles" >> _objectType >> "icon");
@@ -41,7 +41,7 @@ if (isNil "_cachedValue") then {
         _cachedValue = _vehicleIconValue;
     };
 
-    GVAR(vehicleIconCache) setVariable [_objectType, _cachedValue];
+    GVAR(vehicleIconCache) set [_objectType, _cachedValue];
 };
 
 _cachedValue

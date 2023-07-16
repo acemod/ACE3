@@ -42,7 +42,7 @@ private _inherited = [];
 
 
 INFO("------ Logging static magazines with no carry version -------");
-private _hash = [] call CBA_fnc_hashCreate;
+private _hash = createHashMap;
 // private _logAll = true; // logs all possible weapon magazines (even if not used in a static weapon)
 private _logAll = false;
 {
@@ -57,20 +57,19 @@ private _logAll = false;
             private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
             private _carryMag = configName (_groups param [0, configNull]);
             if ((_carryMag == "") && {_logAll || {_xMag in _loadedMags}}) then {
-                private _vehs = [_hash, _xMag] call CBA_fnc_hashGet;
-                if (isNil "_vehs") then {_vehs = [];};
+                private _vehs = _hash getOrDefault [_xMag, []];
                 if (_xMag in _loadedMags) then {
                     _vehs pushBack _vehicleType;
                 };
-                [_hash, _xMag, _vehs] call CBA_fnc_hashSet;
+                _hash set [_xMag, _vehs];
             };
         } forEach _weapMags;
     } forEach _weapons;
 } forEach _staticWeaponConfigs;
 
-[_hash, {
-    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
-    INFO_2("[%1] has no carry varient - Used in %2",_key,_value);
-}] call CBA_fnc_hashEachPair;
+{
+    //IGNORE_PRIVATE_WARNING ["_x", "_y"];
+    INFO_2("[%1] has no carry varient - Used in %2",_x,_y);
+} forEach _hash;
 
 INFO("------ End -------");

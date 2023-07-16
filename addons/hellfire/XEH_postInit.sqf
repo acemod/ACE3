@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     ["turret", LINKFUNC(setupVehicle), false] call CBA_fnc_addPlayerEventHandler;
     ["vehicle", LINKFUNC(setupVehicle), true] call CBA_fnc_addPlayerEventHandler; // only one of these needs the retro flag
 

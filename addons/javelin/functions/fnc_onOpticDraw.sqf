@@ -55,6 +55,19 @@ if ((_ammoCount == 0) || // No ammo loaded
     _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
     _this set [0, diag_frameno];
     _this set [4, _fireDisabledEH];
+
+    // Fix weapon being in top-attack when loading AP magazine (https://feedback.bistudio.com/T171012)
+    if ((_currentShooter == ACE_player) && {_currentMagazine == "Titan_AP"} && {currentWeaponMode ACE_player == "TopDown"}) then {
+        {
+            _x params ["_xIndex", "", "", "", "_xMode"];
+            if (_xMode == "Single") exitWith {
+                ACE_player action ["SwitchWeapon", _currentShooter, ACE_player, _xIndex];
+                __JavelinIGUITop ctrlSetTextColor __ColorGray;
+                __JavelinIGUIDir ctrlSetTextColor __ColorGreen;
+                TRACE_2("fix top-attack for AP",weaponState _currentShooter,_x);
+            };
+        } forEach (ACE_player weaponsInfo [_currentWeapon, true]);
+    };
 };
 
 
@@ -91,11 +104,11 @@ if (GVAR(isLockKeyDown) && {cameraView == "GUNNER"} && {((currentVisionMode ACE_
     private _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
         [_currentTarget,[-0.5,-0.5,-0.25],[0,0,0]];
     } else {
-        [_currentTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"]; 
+        [_currentTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"];
     };
 
     private _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
-    
+
     private _lockTime = if (isNull _currentTarget) then {0} else {CBA_missionTime - _lockStartTime};
     private _minX = ((linearConversion [1, (__LOCKONTIME - 0.5), _lockTime, 0.5 - 0.075*safeZoneW, (_bpos select 0), true]) + _offsetX) max __ConstraintLeft;
     private _minY = ((linearConversion [1, (__LOCKONTIME - 0.5), _lockTime, 0.5 - 0.075*safeZoneH, (_bpos select 1), true]) + _offsetY) max __ConstraintTop;
@@ -128,7 +141,7 @@ if (isNull _newTarget) then {
     _currentShooter setVariable ["ace_missileguidance_target", nil, false];
 
     __JavelinIGUITargetingLines ctrlShow false;
-        
+
     // Disallow fire
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {

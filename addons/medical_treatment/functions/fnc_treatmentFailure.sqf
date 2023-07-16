@@ -48,3 +48,5 @@ if (!isNil QEGVAR(advanced_fatigue,setAnimExclusions)) then {
 GET_FUNCTION(_callbackFailure,configFile >> QGVAR(actions) >> _classname >> "callbackFailure");
 
 _args call _callbackFailure;
+
+["ace_treatmentFailed", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;
