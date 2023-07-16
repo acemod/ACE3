@@ -18,12 +18,7 @@ params ["_vehicle", "_magazine"];
 
 if !((typeOf _vehicle) in GVAR(initializedStaticTypes)) exitWith {[true, _magazine]};
 
-// Not using CSW systems
-if (_vehicle getVariable [QGVAR(assemblyMode), 3] isEqualTo 0) exitWith {[true, _magazine]};
-
-// Ammo Handling disabled for AI
-if (GVAR(ammoHandling) < 2) exitWith {[false, _magazine]};
-
+// Solve this before exiting, a carry mag can still be passed to a disabled CSW
 private _carryMag = _magazine;
 private _isCarryMag = isClass (configFile >> QGVAR(groups) >> _carryMag);
 
@@ -32,6 +27,12 @@ if (_isCarryMag) then {
 } else {
     _carryMag = [_magazine] call FUNC(getCarryMagazine);
 };
+
+// Not using CSW systems
+if (_vehicle getVariable [QGVAR(assemblyMode), 3] isEqualTo 0) exitWith {[true, _magazine]};
+
+// Ammo Handling disabled for AI
+if (GVAR(ammoHandling) < 2) exitWith {[false, _magazine]};
 
 private _canSwitch = [_vehicle, _carryMag, [0], true, false] call FUNC(ai_switchMagazine);
 
