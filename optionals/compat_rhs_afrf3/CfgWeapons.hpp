@@ -79,7 +79,7 @@ class CfgWeapons {
         ACE_barrelLength = 657.86;
     };
     class rhs_weap_pkm: rhs_weap_pkp {
-        ACE_Overheating_allowSwapBarrel = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 645.16;
     };
@@ -216,6 +216,7 @@ class CfgWeapons {
     CREATE_CSW_PROXY(rhs_weap_9K115_2_launcher);
 
     class GVAR(2b14_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 20;
@@ -241,6 +242,7 @@ class CfgWeapons {
     };
 
     class GVAR(nsv_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -264,6 +266,7 @@ class CfgWeapons {
     };
 
     class GVAR(kord_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -288,6 +291,7 @@ class CfgWeapons {
     };
 
     class GVAR(ags30_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -311,6 +315,7 @@ class CfgWeapons {
     };
 
     class GVAR(spg9_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -344,6 +349,7 @@ class CfgWeapons {
     };
 
     class GVAR(metis_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "mount";
             deployTime = 4;
@@ -365,6 +371,7 @@ class CfgWeapons {
     };
 
     class GVAR(kornet_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "mount";
             deployTime = 4;
