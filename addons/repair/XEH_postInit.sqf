@@ -31,17 +31,17 @@ if !GVAR(enabled) exitWith {};
 ["All", "InitPost", {
     params ["_vehicle"];
     if !(local _vehicle && {getRepairCargo _vehicle > 0}) exitWith {};
-        _vehicle setRepairCargo 0;
+    _vehicle setRepairCargo 0;
     TRACE_3("setRepairCargo vehicle",_vehicle,typeOf _vehicle,getRepairCargo _vehicle);
 }, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
 
 ["CAManBase", "InitPost", {
     params ["_unit"];
     if !(local _unit && {_unit getUnitTrait "engineer"}) exitWith {};
-        _unit setUnitTrait ["engineer", false];
+    _unit setUnitTrait ["engineer", false];
     if (_unit getVariable ["ACE_IsEngineer", -1] isEqualTo -1) then {
-            _unit setVariable ["ACE_IsEngineer", true, true];
-        };
+        _unit setVariable ["ACE_IsEngineer", true, true];
+    };
     TRACE_3("setUnitTrait",_unit,typeOf _unit,_unit getUnitTrait "engineer");
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
