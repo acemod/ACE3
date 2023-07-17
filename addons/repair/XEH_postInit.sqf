@@ -62,7 +62,7 @@ if (isServer) then {
 
         private _spareTracks = _vehicle getVariable QGVAR(editorLoadedTracks);
         if (isNil "_spareTracks") then {
-            _spareTracks = [0, 1] select (_vehicle isKindOf "Tank"); // must match eden attribute default
+            _spareTracks = parseNumber (_vehicle isKindOf "Tank"); // must match eden attribute default
         };
         if (_spareTracks > 0) then {
             [_vehicle, _spareTracks, "ACE_Track"] call FUNC(addSpareParts);
@@ -70,7 +70,7 @@ if (isServer) then {
 
         private _spareWheels = _vehicle getVariable QGVAR(editorLoadedWheels);
         if (isNil "_spareWheels") then {
-            _spareWheels = [0, 1] select (_vehicle isKindOf "Car"); // must match eden attribute default
+            _spareWheels = parseNumber (_vehicle isKindOf "Car"); // must match eden attribute default
         };
         if (_spareWheels > 0) then {
             [_vehicle, _spareWheels, "ACE_Wheel"] call FUNC(addSpareParts);
