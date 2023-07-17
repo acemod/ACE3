@@ -97,19 +97,6 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
     };
 
-    // STATIC
-
-    class gm_ge_army_shelteraceII_repair_base;
-    class gm_ge_army_shelteraceII_repair: gm_ge_army_shelteraceII_repair_base {
-        EGVAR(repair,canRepair) = 1;
-    };
-
-    class gm_gc_army_shelterlakII_repair_base;
-    class gm_gc_army_shelterlakII_repair: gm_gc_army_shelterlakII_repair_base {
-        EGVAR(repair,canRepair) = 1;
-    };
-
-
     // W H E E L E D
 
     class gm_wheeled_base;
@@ -174,11 +161,6 @@ class CfgVehicles {
         EGVAR(medical,medicClass) = 1;
     };
 
-    class gm_ural4320_repair_base: gm_ural4320_base {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
-
 
     // WEST
 
@@ -221,12 +203,6 @@ class CfgVehicles {
 
     class gm_fuchs_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 390;
-    };
-
-    class gm_fuchsa0_base;
-    class gm_fuchsa0_engineer_base: gm_fuchsa0_base {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
     };
 
     class gm_luchs_base: gm_wheeled_APC_base {
@@ -313,12 +289,6 @@ class CfgVehicles {
     class gm_m113a1g_base;
     class gm_m113a1g_medic_base: gm_m113a1g_base {
         EGVAR(medical,medicClass) = 1;
-    };
-
-    class gm_m113a1dk_base;
-    class gm_m113a1dk_engineer_base: gm_m113a1dk_base {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
     };
 
     class gm_m113a1dk_medic_base: gm_m113a1dk_base {
