@@ -60,7 +60,7 @@ _vehicle doWatch _position;
         _vehicle doArtilleryFire [[_position, _spread] call CBA_fnc_randPos, _magazine, 1];
         _roundsLeft = _roundsLeft - 1;
         _this set [3, _roundsLeft];
-        _this set [4, CBA_missionTime];
+        _this set [5, CBA_missionTime];
     };
 
     if (_roundsLeft <= 0 || {!alive _vehicle} || {!alive (gunner _vehicle)} || {objectParent (gunner _vehicle) isNotEqualTo _vehicle}) exitWith {
