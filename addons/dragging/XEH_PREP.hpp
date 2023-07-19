@@ -1,4 +1,3 @@
-
 PREP(canCarry);
 PREP(canDrag);
 PREP(canDrop);

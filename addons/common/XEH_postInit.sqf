@@ -120,6 +120,11 @@
     _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(awake), {
+    params ["_object", "_awake"];
+    _object awake _awake;
+}] call CBA_fnc_addEventHandler;
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {

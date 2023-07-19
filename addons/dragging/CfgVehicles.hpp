@@ -75,7 +75,7 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
-    // ammo boxes
+    // Ammo boxes
     class ThingX;
     class Items_base_F;
     class ReammoBox_F: ThingX {
@@ -89,7 +89,7 @@ class CfgVehicles {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
-    //remove actions from Taru Pods
+    // Remove actions from Taru Pods
     class Pod_Heli_Transport_04_base_F: Slingload_base_F {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
@@ -163,7 +163,7 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
-    //Plastic and metal case
+    // Plastic and metal case
     class PlasticCase_01_base_F: Items_base_F {
         GVAR(canCarry) = 1;
         GVAR(carryDirection) = 270;
@@ -229,22 +229,22 @@ class CfgVehicles {
         GVAR(canCarry) = 1;
     };
 
-    // weapons dropped from dead body
+    // Weapons dropped from dead body
     class WeaponHolderSimulated: ThingX {
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,0.5,1.3};
         GVAR(carryDirection) = 0;
 
-        // z-position floats from -1.2 to >0
-        // it's OK for carrying but odd for dragging
-        // needs workaround to drag correctly. Disabled ATM
+        // z-position floats from -1.2 to > 0
+        // It's OK for carrying but odd for dragging
+        // Needs workaround to drag correctly. Disabled ATM
         GVAR(canDrag) = 0;
         GVAR(dragPosition[]) = {0,1,0};
         GVAR(dragDirection) = 0;
     };
 
     class ReammoBox;
-    // dropped weapons/gear
+    // Dropped weapons/gear
     class WeaponHolder: ReammoBox {
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,0.5,1};
@@ -268,7 +268,7 @@ class CfgVehicles {
     class FloatingStructure_F;
     class Land_Camping_Light_F: FloatingStructure_F {
         GVAR(canCarry) = 1;
-        // if y < 0.9 player gets damage
+        // If y < 0.9 player gets damaged
         GVAR(carryPosition)[] = {0,0.9,1};
 
         GVAR(canDrag) = 1;
@@ -291,8 +291,7 @@ class CfgVehicles {
         GVAR(dragPosition)[] = {0,1,0};
     };
 
-    // some terrain objects
-
+    // Some terrain objects
     class Land_CampingTable_F: ThingX {
         EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
@@ -403,8 +402,8 @@ class CfgVehicles {
         GVAR(canDrag) = 1;
     };
 
-    // static classes need XEH
 
+    // Static classes need XEH
     class NonStrategic;
     class Land_Pallets_F: NonStrategic {
         XEH_INHERITED;

@@ -1,17 +1,17 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Check if unit can drop the carried object.
+ * Checks if unit can drop the carried object.
  *
  * Arguments:
- * 0: Unit that currently carries a object <OBJECT>
- * 1: Object that is carried <OBJECT>
+ * 0: Unit that is currently carrying an object <OBJECT>
+ * 1: Object being carried <OBJECT>
  *
  * Return Value:
  * Can the unit drop the object? <BOOL>
  *
  * Example:
- * [player, cursorTarget] call ace_dragging_fnc_canDrop_carry;
+ * [player, cursorObject] call ace_dragging_fnc_canDrop_carry;
  *
  * Public: No
  */
