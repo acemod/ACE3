@@ -23,10 +23,11 @@ TRACE_1("params",_this);
 [_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
 
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
+private _isClone = _target isKindOf QGVAR(clone);
 
-// drop cloned dead units
-if (_target isKindOf QGVAR(clone)) then {
-    _target = [_target] call FUNC(dropClone);
+// Drop cloned dead units
+if (_isClone) then {
+    _target = [_unit, _target, _inBuilding] call FUNC(dropClone);
 };
 
 // prevent collision damage
@@ -65,8 +66,9 @@ if (_previousWeaponIndex != -1) then {
 [_unit, "blockThrow", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
 
 // prevent object from flipping inside buildings
-if (_inBuilding) then {
+if (_inBuilding && {!_isClone}) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
+    TRACE_2("setPos",getPosASL _unit,getPosASL _target);
 };
 
 _unit setVariable [QGVAR(isCarrying), false, true];

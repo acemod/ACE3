@@ -28,9 +28,9 @@ if (!GETVAR(_target,GVAR(ignoreWeightDrag),false) && {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
-// create clone for dead units
+// Create clone for dead units
 if (!alive _target) then {
-    _target = [_target] call FUNC(createClone);
+    _target = _target call FUNC(createClone);
 };
 
 // Add a primary weapon if the unit has none

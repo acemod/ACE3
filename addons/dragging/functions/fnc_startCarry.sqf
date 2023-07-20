@@ -33,9 +33,9 @@ private _timer = CBA_missionTime + 5;
 
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
-    // create clone for dead units
+    // Create clone for dead units
     if (!alive _target) then {
-        _target = [_target] call FUNC(createClone);
+        _target = _target call FUNC(createClone);
     };
 
     // add a primary weapon if the unit has none.

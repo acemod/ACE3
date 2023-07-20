@@ -18,7 +18,7 @@
 
 params ["_unit", "_target"];
 
-if !(alive _target && {_target getVariable [QGVAR(canDrag), false]} && {isNull objectParent _target}) exitWith {false};
+if !((alive _target || {_target isKindOf "CAManBase"}) && {_target getVariable [QGVAR(canDrag), false]} && {isNull objectParent _target}) exitWith {false};
 
 if !([_unit, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
@@ -29,8 +29,9 @@ if (_target isKindOf "StaticWeapon") exitWith {
 
 // Units need to be unconscious or limping
 if (_target isKindOf "CAManBase") exitWith {
-    lifeState _target == "INCAPACITATED" ||
-    {_target getHitPointDamage "HitLegs" >= 0.5}
+    lifeState _target isEqualTo "INCAPACITATED"
+    || {_target getHitPointDamage "HitLegs" >= 0.5} ||
+    {(animationState _target) in ["", "unconscious", "deadstate"]}
 };
 
 // Check max items for WeaponHolders
