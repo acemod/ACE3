@@ -30,7 +30,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 // handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
-// handle local effect commands for clones
+// Handle local effect commands for clones
 [QGVAR(cloneCreated), {
     params ["_unit", "_clone"];
 
