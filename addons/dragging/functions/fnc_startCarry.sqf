@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2, PiZZADOX
- * Start the carrying process.
+ * Starts the carrying process.
  *
  * Arguments:
  * 0: Unit that should do the carrying <OBJECT>
@@ -19,49 +19,53 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-private _weight = [_target] call FUNC(getWeight);
+private _weight = _target call FUNC(getWeight);
 
-// exempt from weight check if object has override variable set
-if (!GETVAR(_target,GVAR(ignoreWeightCarry),false) && {
+// Exempt from weight check if object has override variable set
+if (!(_target getVariable [QGVAR(ignoreWeightCarry), false]) && {
     _weight > GETMVAR(ACE_maxWeightCarry,1E11)
 }) exitWith {
-    // exit if object weight is over global var value
-    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
+    // Exit if object weight is over global var value
+    [LLSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 private _timer = CBA_missionTime + 5;
 
-// handle objects vs persons
+// Handle objects vs persons
 if (_target isKindOf "CAManBase") then {
+    private _primaryWeapon = primaryWeapon _unit;
 
-    // add a primary weapon if the unit has none.
-    if (primaryWeapon _unit isEqualto "") then {
+    // Add a primary weapon if the unit has none
+    if (_primaryWeapon == "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
+        _primaryWeapon = "ACE_FakePrimaryWeapon";
     };
 
-    // select primary, otherwise the drag animation actions don't work.
-    _unit selectWeapon primaryWeapon _unit;
+    // Select primary, otherwise the drag animation actions don't work
+    _unit selectWeapon _primaryWeapon;
 
-    // move a bit closer and adjust direction when trying to pick up a person
-    _target setDir (getDir _unit + 180);
+    // Move a bit closer and adjust direction when trying to pick up a person
+    [QEGVAR(common,setDir), [_target, getDir _unit + 180], _target] call CBA_fnc_targetEvent;
     _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit));
 
     [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2] call EFUNC(common,doAnimation);
     [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2] call EFUNC(common,doAnimation);
 
     _timer = CBA_missionTime + 10;
-
 } else {
-    // select no weapon and stop sprinting
+    // Select no weapon and stop sprinting
     private _previousWeaponIndex = [_unit] call EFUNC(common,getFiremodeIndex);
     _unit setVariable [QGVAR(previousWeapon), _previousWeaponIndex, true];
+
     _unit action ["SwitchWeapon", _unit, _unit, 299];
+
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
-    // objects other than containers have calculated weight == 0 so we use getMass
-    if (-1 == ["ReammoBox_F", "WeaponHolder", "WeaponHolderSimulated"] findIf {_target isKindOf _x}) then {
+    // Objects other than containers have calculated weight == 0 so we use getMass
+    if (["ReammoBox_F", "WeaponHolder", "WeaponHolderSimulated"] findIf {_target isKindOf _x} == -1) then {
         _weight = getMass _target;
     };
+
     if (_weight > GVAR(maxWeightCarryRun)) then {
         [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
     } else {
@@ -71,22 +75,21 @@ if (_target isKindOf "CAManBase") then {
 
 [_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
 
-// prevent multiple players from accessing the same object
+// Prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
 
-
-// prevents draging and carrying at the same time
+// Prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
-// required for aborting animation
+// Required for aborting animation
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
 [FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
 
-// disable collisions by setting the physx mass to almost zero
+// Disable collisions by setting the PhysX mass to almost zero
 private _mass = getMass _target;
 
 if (_mass > 1) then {
     _target setVariable [QGVAR(originalMass), _mass, true];
-    [QEGVAR(common,setMass), [_target, 1e-12]] call CBA_fnc_globalEvent; // force global sync
+    [QEGVAR(common,setMass), [_target, 1e-12]] call CBA_fnc_globalEvent; // Force global sync
 };
