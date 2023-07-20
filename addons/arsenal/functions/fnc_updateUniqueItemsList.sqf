@@ -96,7 +96,7 @@ private _isMiscItem = false;
             _configItemInfo = _config >> "ItemInfo";
             _hasItemInfo = isClass (_configItemInfo);
             _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
-            _isMiscItem = _className isKindOf ["CBA_MiscItem", _cfgWeapons];
+            _isMiscItem = _x isKindOf ["CBA_MiscItem", _cfgWeapons];
 
             switch (true) do {
                 // Optics
