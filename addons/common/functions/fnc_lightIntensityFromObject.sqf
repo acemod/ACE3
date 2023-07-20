@@ -82,7 +82,7 @@ if (_lightSource isKindOf "CAManBase") then {
     if (isCollisionLightOn _lightSource) then {
         private _markerLights = [
             _lightSource,
-            {configProperties [configFile >> "CfgVehicles" >> typeOf _this >> "MarkerLights", "isClass _x", true]},
+            {configProperties [configOf _this >> "MarkerLights", "isClass _x", true]},
             uiNamespace,
             format [QEGVAR(cache,MarkerLights_%1), typeOf _lightSource],
             1E11

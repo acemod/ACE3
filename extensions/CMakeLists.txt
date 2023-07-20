@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required (VERSION 3.14)
 project (ACE)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
@@ -98,16 +98,21 @@ endif()
 
 
 string(TIMESTAMP ACE_BUILDSTAMP "%Y-%m-%dT%H:%M:%SZ")
-set(ACE_VERSION_MAJOR 3)
-set(ACE_VERSION_MINOR 13)
-set(ACE_VERSION_REVISION 0)
+# Get current version from addon
+file(READ "../addons/main/script_version.hpp" script_version)
+string(REGEX MATCH "#define MAJOR ([0-9]*)" "x" outputX ${script_version})
+set(ACE_VERSION_MAJOR ${CMAKE_MATCH_1})
+string(REGEX MATCH "#define MINOR ([0-9]*)" "x" outputX ${script_version})
+set(ACE_VERSION_MINOR ${CMAKE_MATCH_1})
+string(REGEX MATCH "#define PATCHLVL ([0-9]*)" outputX ${script_version})
+set(ACE_VERSION_REVISION ${CMAKE_MATCH_1})
 EXECUTE_PROCESS(COMMAND git rev-parse --verify HEAD
     OUTPUT_VARIABLE T_ACE_VERSION_BUILD
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 string(SUBSTRING ${T_ACE_VERSION_BUILD} 0 7 ACE_VERSION_BUILD )
 
-message("Building for: " ${ACE_VERSION_MAJOR}.${ACE_VERSION_MINOR}.${ACE_VERSION_REVISION}-${ACE_VERSION_BUILD})
+message("Setting ACE Version: " ${ACE_VERSION_MAJOR}.${ACE_VERSION_MINOR}.${ACE_VERSION_REVISION}-${ACE_VERSION_BUILD})
 
 configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/common/ace_version.hpp.in"
@@ -135,8 +140,7 @@ add_subdirectory(fcs)
 add_subdirectory(break_line)
 add_subdirectory(clipboard)
 add_subdirectory(advanced_ballistics)
-add_subdirectory(medical)
-add_subdirectory(parse_imagepath)
+#add_subdirectory(medical) # After medical re-write this extension is no longer used
 add_subdirectory(artillerytables)
 
 # Test Extension for dynamically loading/unloading built extensions; does not build in release
@@ -149,5 +153,14 @@ if (DEVEL)
 endif()
 
 
+# GTest
+option(ENABLE_GTEST "ENABLE_GTEST" ON)
+if (ENABLE_GTEST)
+    include(FetchContent)
+    FetchContent_Declare(googletest GIT_REPOSITORY https://github.com/google/googletest.git)
+    # For Windows: Prevent overriding the parent project's compiler/linker settings
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+    FetchContent_MakeAvailable(googletest)
+endif()
 
 message("Build Type: ${CMAKE_BUILD_TYPE}")

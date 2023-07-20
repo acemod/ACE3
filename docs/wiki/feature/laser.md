@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Laser
+component: laser
 description: Various functions necessary for realistic portrayal of laser mechanics in other components.
 group: feature
 category: realism
@@ -15,7 +16,3 @@ version:
 ## 1. Overview
 
 Contains various functions necessary for the realistic portrayal of laser mechanics in other components.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="laser" %}

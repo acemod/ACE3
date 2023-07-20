@@ -178,8 +178,6 @@ class CfgAmmo {
         indirectHit = 3000;
         indirectHitRange = 5;
         defaultMagazine = "ACE_SatchelCharge_Remote_Mag_Throwable";
-        soundHit1[] = {"A3\Sounds_F\arsenal\explosives\bombs\Explosion_satchel_01", 3.16228, 1, 1500};
-        soundHit2[] = {"A3\Sounds_F\arsenal\explosives\bombs\Explosion_satchel_02", 3.16228, 1, 1500};
         multiSoundHit[] = {"soundHit1", 0.5, "soundHit2", 0.5};
         ExplosionEffects = "MineNondirectionalExplosion";
         CraterEffects = "MineNondirectionalCrater";
@@ -207,7 +205,6 @@ class CfgAmmo {
         hit = 500;
         indirectHit = 500;
         defaultMagazine = "ACE_DemoCharge_Remote_Mag_Throwable";
-        soundHit[] = {"A3\Sounds_F\arsenal\explosives\bombs\Explosive_Charge", 3.16228, 1, 1500};
         ExplosionEffects = "MineNondirectionalExplosionSmall";
         CraterEffects = "MineNondirectionalCraterSmall";
         whistleDist = 32;

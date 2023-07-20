@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Medical System
+component: medical
 description: ACE3 provides users with a more realistic medical system.
 group: feature
 order: 4
@@ -189,7 +190,7 @@ Feel free to tweak the values of the settings to adjust it to your likings.
 
 #### 2.1.1 Preset 1
 
-```c++
+```cpp
 force ace_medical_fatalDamageSource = 1; // Sum of Trauma death condition
 force ace_medical_AIDamageThreshold = 0.2; // Decreased AI damage threshold so AI dies in single headshot and few torso taps depending on vest
 force ace_medical_playerDamageThreshold = 3.5; // Increased damage threshold for players, high caliber weapons should still be fatal
@@ -202,7 +203,7 @@ force ace_medical_statemachine_cardiacArrestTime = 630;
 
 #### 2.1.2 "Basic" Preset
 
-```c++
+```cpp
 force ace_medical_AIDamageThreshold = 0.2; // Decreased AI damage threshold so AI dies in single headshot and few torso taps depending on vest
 force ace_medical_playerDamageThreshold = 3.5; // Increased damage threshold for players, high caliber weapons should still be fatal
 force ace_medical_bleedingCoefficient = 0.25;
@@ -211,20 +212,20 @@ force ace_medical_fractures = 0; // Disabled Fractures
 force ace_medical_limping = 0; // Disabled Limping
 force ace_medical_statemachine_fatalInjuriesPlayer = 2; // Disabled fatal injuries by damage to head or torso
 force ace_medical_treatment_advancedBandages = 0; // Disabled advanced bandages
-force ace_medical_treatment_advancedDiagnose = false; // Disabled advanced diagnose
+force ace_medical_treatment_advancedDiagnose = 0; // Disabled advanced diagnose
 force ace_medical_treatment_advancedMedication = false; // Disabled advanced medication
 ```
 
 #### 2.1.3 "Advanced" Preset
 
-```c++
+```cpp
 force ace_medical_fractures = 1; // Splints Fully Heal Fractures - set to "2" to keep sprinting disabled after fracture
 force ace_medical_limping = 1; // Limp on Open Wounds
 force ace_medical_spontaneousWakeUpChance = 0.15; // 15% chance of waking up from unconscious after stable
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 1; // Epinephrine boosts wake up chance
 force ace_medical_statemachine_fatalInjuriesPlayer = 1; // Fatal injuries only occur in Cardiac Arrest
 force ace_medical_treatment_advancedBandages = 2; // Wounds can re-open until stitched.
-force ace_medical_treatment_advancedDiagnose = true; // Enabled Advanced Diagnosis
+force ace_medical_treatment_advancedDiagnose = 1; // Enabled Advanced Diagnosis
 force ace_medical_treatment_advancedMedication = true; // Enabled Advanced Medication
 force ace_medical_treatment_allowSelfIV = 1; // Medics can Self-IV
 force ace_medical_treatment_allowSelfPAK = 1; // Medics can Self-PAK
@@ -245,7 +246,7 @@ force ace_medical_treatment_medicSurgicalKit = 1; // Medics can stitch
 
 #### 2.2.1 Preset 1
 
-```c++
+```cpp
 force ace_medical_fatalDamageSource = 1; // Sum of Trauma death condition
 force ace_medical_feedback_painEffectType = 2; // Forced pain effect type to ensure that everyone is handicapped in the same way
 force ace_medical_spontaneousWakeUpChance = 0.15; // don't let players wake up too fast
@@ -255,7 +256,3 @@ force ace_medical_treatment_clearTraumaAfterBandage = true; // to increase the f
 ```
 
 _more tbd_
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="medical" %}

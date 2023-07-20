@@ -56,11 +56,28 @@ class CfgWeapons {
     class rhs_weap_m84: Rifle_Long_Base_F {
         ACE_barrelLength = 658;
         ACE_barrelTwist = 240;
-        ACE_Overheating_allowSwapBarrel = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
     };
 
     class hgun_P07_F;
     class rhs_weap_cz99: hgun_P07_F {
         ACE_barrelLength = 108;
+    };
+
+    class Uniform_Base;
+    class rhssaf_uniform_mig29_pilot: Uniform_Base {
+        ACE_GForceCoef = 0.8;
+    };
+    class rhssaf_uniform_heli_pilot: Uniform_Base {
+        ACE_GForceCoef = 0.8;
+    };
+
+    // Launchers
+    class Launcher_Base_F;
+    class rhs_weap_m80: Launcher_Base_F {
+        EGVAR(overpressure,range) = 8;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.7;
+        EGVAR(overpressure,offset) = 1.15;
     };
 };

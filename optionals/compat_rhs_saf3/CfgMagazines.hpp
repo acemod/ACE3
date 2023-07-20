@@ -50,6 +50,7 @@ class CfgMagazines {
 
     class CA_Magazine;
     class rhssaf_tm100_mag: CA_Magazine {
+        useAction = 0;
         ace_explosives_DelayTime = 1;
         ace_explosives_Placeable = 1;
         ace_explosives_SetupObject = "ACE_Explosives_Place_rhssaf_tm100";

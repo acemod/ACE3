@@ -1,21 +1,22 @@
 #include "script_component.hpp"
 /*
- * Author: SynixeBrett
+ * Author: Brett Mayson
  * Add a custom sorting method.
  *
  * Arguments:
  * 0: Tabs to add stat to <ARRAY>
- *   0: Left Tab Indexes <ARRAY>
- *   1: Right Tab Indexes <ARRAY>
+ *   0.0: Left Tab Indexes <ARRAY>
+ *   0.1: Right Tab Indexes <ARRAY>
  * 1: Sort Class (a unique string for each algorithm) <STRING>
  * 2: Display Name <STRING>
  * 3: Algorithm <CODE>
+ * 4: Condition <CODE> (default: true)
  *
  * Return Value:
- * 0: Array of IDs (ARRAY of STRINGS)
+ * 0: Array of IDs <ARRAY of STRINGS>
  *
  * Example:
- *  [[[0, 1]], "fireRateSort", "Sort by fire rate", {
+ *  [[[0, 1], []], "fireRateSort", "Sort by fire rate", {
  *      params ["_itemCfg"];
  *      private _fireModes = getArray (_itemCfg >> "modes");
  *      private _fireRate = [];
@@ -35,7 +36,8 @@ params [
     ["_tabs", [[], []], [[]], 2],
     ["_class", "", [""]],
     ["_displayName", "", [""]],
-    ["_statement", {}, [{}]]
+    ["_statement", {}, [{}]],
+    ["_condition", {true}, [{}]]
 ];
 
 _tabs params [
@@ -57,13 +59,13 @@ private _fnc_addToTabs = {
     } forEach _tabsToAddTo;
 };
 
-_finalArray = ["", _displayName, _statement];
+_finalArray = ["", _displayName, _statement, _condition];
 
-if !(_leftTabs isEqualTo []) then {
+if (_leftTabs isNotEqualTo []) then {
     [GVAR(sortListLeftPanel), _leftTabs, "L", 0] call _fnc_addToTabs;
 };
 
-if !(_rightTabs isEqualTo []) then {
+if (_rightTabs isNotEqualTo []) then {
     [GVAR(sortListRightPanel), _rightTabs, "R", 1] call _fnc_addToTabs;
 };
 

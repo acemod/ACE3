@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: ACE Arsenal
+component: arsenal
 description: Adds an interface that allow player to edit their loadouts.
 group: feature
 category: general
@@ -27,6 +28,7 @@ ACE Arsenal has a pretty large number of improvements over BI Virtual Arsenal, h
 - A setting to disable mod icons to increase performance even further.
 - An other setting to invert horizontal camera controls.
 - Settings to disable the "Default loadouts" and "Public loadouts" tabs.
+- Custom sub item categories for misc items
 
 <sup>*</sup> Items not currently available in ACE Arsenal but in the unit's inventory, unique items will be omitted when loading loadouts and they can only be removed from containers.
 
@@ -93,6 +95,3 @@ You can import loadouts from Virtual Arsenal into ACE Arsenal, face, voice, insi
 - <kbd>RMB</kbd> clears the text field.
 - Arrow keys can be used to move the caret.
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> switches which search bar is selected.
-
-
-{% include dependencies_list.md component="arsenal" %}

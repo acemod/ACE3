@@ -11,7 +11,7 @@
  *  2.2: Bar limits (ARRAY of SCALAR)
  *
  * Return Value:
- * Number
+ * <NUMBER>
  *
  * Public: No
 */

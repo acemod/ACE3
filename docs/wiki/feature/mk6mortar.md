@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Mk6 Mortar
+component: mk6mortar
 description: Improve the existing Mk6 Mortar.
 group: feature
 category: equipment
@@ -54,7 +55,3 @@ You need the proper mortar magazines in your inventory.
 - Interact with the mortar by pressing the interaction key <kbd>⊞&nbsp;Win</kbd> and looking near the muzzle.
 - Select the `Load Mortar` action and then select the round type you want to load.
 - If you want to unload the mortar without firing, interact near the muzzle again and select `Remove Round`. If there isn't space in your inventory for the round, it will be placed on the ground.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="mk6mortar" %}

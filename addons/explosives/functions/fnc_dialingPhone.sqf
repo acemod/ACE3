@@ -22,7 +22,8 @@ params ["_args", "_pfID"];
 _args params ["_unit", "_i", "_arr", "_code"];
 
 if ((_i mod 4) == 0) then {
-    playSound3D [QUOTE(PATHTO_R(Data\Audio\DialTone.wss)), objNull, false, (_unit modelToWorldVisual [0,0.2,2]), 5,1,5];
+    private _pos = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");
+    playSound3D [QUOTE(PATHTO_R(Data\Audio\DialTone.wss)), objNull, false, _pos, 5, 1, 5];
 };
 ctrlSetText [1400,format["Calling%1",_arr select (_i - 4)]];
 
@@ -38,9 +39,14 @@ if (_i >= (count _arr + 2)) then {
         ctrlSetText [1400,"Call Ended!"];
     };
 };
+
 if (_i == (count _arr)) then {
-    if ((count _explosive) > 0) then {
-        playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_explosive select 0),3.16228,1,75];
+    if (
+        ((count _explosive) > 0) &&
+        {[_unit, -1, (_explosive # 0), (_explosive # 2), "ACE_Cellphone"] call FUNC(checkDetonateHandlers)}
+    ) then {
+        playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)), objNull, false, (getPosASL (_explosive # 0)), 3.16228, 1, 75];
     };
 };
+
 _args set [1, _i + 1];
