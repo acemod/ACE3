@@ -1,16 +1,3 @@
-#define EQUIP_FRIES_ATTRIBUTE class Attributes { \
-    class EGVAR(fastroping,equipFRIES) { \
-        property = QEGVAR(fastroping,equipFRIES); \
-        control = "Checkbox"; \
-        displayName = ECSTRING(fastroping,Eden_equipFRIES); \
-        tooltip = ECSTRING(fastroping,Eden_equipFRIES_Tooltip); \
-        expression = QUOTE([_this] call EFUNC(fastroping,equipFRIES)); \
-        typeName = "BOOL"; \
-        condition = "objectVehicle"; \
-        defaultValue = false; \
-    }; \
-}
-
 class CfgVehicles {
     class LandVehicle;
     class Car: LandVehicle {
@@ -54,7 +41,9 @@ class CfgVehicles {
     };
 
     class RHS_UH1Y_base: RHS_UH1_Base {
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
     class RHS_UH1Y_US_base: RHS_UH1Y_base {};
     class RHS_UH1Y: RHS_UH1Y_US_base {
@@ -80,8 +69,6 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
             };
         };
-        
-        EQUIP_FRIES_ATTRIBUTE;
     };
 
     class Helicopter_Base_H: Helicopter_Base_F {
@@ -100,7 +87,11 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 1360;
     };
 
-    class RHS_UH60M_base: RHS_UH60_Base {};
+    class RHS_UH60M_base: RHS_UH60_Base {
+        class Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
+    };
     class RHS_UH60M_US_base: RHS_UH60M_base {};
     class RHS_UH60M: RHS_UH60M_US_base {
         EGVAR(fastroping,enabled) = 2;
@@ -119,20 +110,28 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
             };
         };
+    };
+    class RHS_UH60M2: RHS_UH60M {};
 
-        EQUIP_FRIES_ATTRIBUTE;
+    class RHS_UH60M_ESSS: RHS_UH60M2 {
+        EGVAR(fastroping,enabled) = 0;
+        class Attributes: Attributes {
+            delete EGVAR(fastroping,equipFRIES);
+        };
     };
 
     class RHS_UH60M_MEV: RHS_UH60M {
         EGVAR(fastroping,enabled) = 0;
-        class Attributes {
+        class Attributes: Attributes {
             delete EGVAR(fastroping,equipFRIES);
         };
     };
 
     class RHS_UH60M_MEV2: RHS_UH60M_MEV {
         EGVAR(fastroping,enabled) = 2;
-        EQUIP_FRIES_ATTRIBUTE;
+        class Attributes: Attributes {
+            EQUIP_FRIES_ATTRIBUTE;
+        };
     };
 
     class Heli_Transport_02_base_F;
@@ -327,7 +326,7 @@ class CfgVehicles {
             "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
             "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint",
             "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint",
-            "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint",
+            "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint"
         };
         EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };
@@ -342,7 +341,7 @@ class CfgVehicles {
             "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
             "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint",
             "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint",
-            "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint",
+            "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint"
         };
         EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };

@@ -32,7 +32,7 @@ if (is3DEN) then {
     // Apply the loadout from the dummy to all selected units
     if (_exitCode == 1) then {
         {
-            _x setUnitLoadout (getUnitLoadout GVAR(center));
+            [_x, GVAR(center) call FUNC(getLoadout)] call CBA_fnc_setLoadout;
         } foreach (get3DENSelected "object");
 
         save3DENInventory (get3DENSelected "object");

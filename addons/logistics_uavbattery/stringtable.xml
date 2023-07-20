@@ -13,7 +13,7 @@
             <Italian>Il drone è pieno</Italian>
             <Russian>БПЛА полностью заряжен</Russian>
             <Japanese>ドローンは充電完了</Japanese>
-            <Korean>무인기 충전완료</Korean>
+            <Korean>무인기 충전 완료</Korean>
             <Chinesesimp>无人机电池已充满</Chinesesimp>
             <Chinese>無人載具電池已充滿</Chinese>
             <Turkish>IHA Dolu</Turkish>
@@ -81,7 +81,7 @@
             <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
             <Russian>Используется для зарядки переносных БПЛА</Russian>
             <Japanese>運んでいる UAV を充電に使う</Japanese>
-            <Korean>무인기를 재충전 할때 씁니다.</Korean>
+            <Korean>무인기를 재충전 할 때 씁니다.</Korean>
             <Chinesesimp>对可携式无人机进行充电</Chinesesimp>
             <Chinese>對可攜式無人載具進行充電</Chinese>
             <Turkish>Used to refuel Carried UAV's</Turkish>
@@ -100,7 +100,7 @@
             <Japanese>充電しています・・・</Japanese>
             <Chinesesimp>正在充电...</Chinesesimp>
             <Chinese>充電中...</Chinese>
-            <Korean>충전중...</Korean>
+            <Korean>충전 중...</Korean>
             <Turkish>Şarj Oluyor</Turkish>
         </Key>
     </Package>

@@ -149,4 +149,19 @@
 
 #define SUBSKILLS ["aimingAccuracy", "aimingShake", "aimingSpeed", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"]
 
+// macro add a dummy cfgPatch and notLoaded entry
+#define ACE_PATCH_NOT_LOADED(NAME,CAUSE) \
+class CfgPatches { \
+    class DOUBLES(NAME,notLoaded) { \
+        units[] = {}; \
+        weapons[] = {}; \
+        requiredVersion = REQUIRED_VERSION; \
+        requiredAddons[] = {"ace_main"}; \
+        VERSION_CONFIG; \
+    }; \
+}; \
+class ace_notLoaded { \
+    NAME = CAUSE; \
+};
+
 #include "script_debug.hpp"

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror, modified by GhostIsSpooky
+ * Author: PabstMirror, modified by Grim
  * Handles AI reloading
  *
  * Arguments:
@@ -41,7 +41,7 @@ private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
 
     private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
     if (_magazine != "") then {
-        _compatibleMags insert [0, _magazine];
+        _compatibleMags insert [0, [_magazine]];
     };
 
     {
@@ -72,7 +72,7 @@ private _bestAmmoToSend = -1;
             _bestAmmoToSend = _xAmmo;
         };
     };
-} forEach (if (_reloadSource isKindOf "CaManBase") then {magazinesAmmo _reloadSource} else {magazinesAmmoCargo _reloadSource});
+} forEach (if (_reloadSource isKindOf "CAManBase") then {magazinesAmmo _reloadSource} else {magazinesAmmoCargo _reloadSource});
 TRACE_4("",_reloadSource,_reloadMag,_reloadNeededAmmo,_bestAmmoToSend);
 if (_bestAmmoToSend == -1) exitWith {ERROR("No ammo");};
 

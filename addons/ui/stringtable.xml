@@ -41,7 +41,7 @@
             <Japanese>モジュールではユーザ インタフェイスの一部表示を切り替えできます。</Japanese>
             <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
             <German>Dieses Modul erlaubt es, Teile der Benutzeroberfläche (UI) an- oder auszuschalten.</German>
-            <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는것을 가능케 해줍니다.</Korean>
+            <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는 것을 가능케 해줍니다.</Korean>
             <Italian>Questo modulo consente di commutare parti di interfaccia utente visibili.</Italian>
             <Chinesesimp>此模块允许你调整用户界面的任何一个控件</Chinesesimp>
             <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
@@ -53,7 +53,7 @@
             <Czech>Povolit selektivní UI</Czech>
             <Portuguese>Permitir IU Selecionável</Portuguese>
             <French>Autoriser la personnalisation de l'IU</French>
-            <Russian>Включить настраиваемый интерфейс</Russian>
+            <Russian>Вкл. настраиваемый интерфейс</Russian>
             <Japanese>UI 選択性を許可</Japanese>
             <Polish>Zezwól na selektywne UI</Polish>
             <German>Erlaube selektives UI</German>
@@ -72,7 +72,7 @@
             <Japanese>クライアントがユーザ インタフェイスを編集できるようにします。</Japanese>
             <Polish>Zezwól klientowi na modyfikację UI.</Polish>
             <German>Erlaube Clients, ihr UI zu modifizieren.</German>
-            <Korean>클라이언트가 선택적 사용자 인터페이스 사용하는것을 허가합니다</Korean>
+            <Korean>클라이언트가 자신의 사용자 인터페이스를 사용하는 것을 허가합니다</Korean>
             <Italian>Permette al client di modificare la propria UI.</Italian>
             <Chinesesimp>允许客户端自行调整用户界面</Chinesesimp>
             <Chinese>允許客戶端自行調整使用者介面</Chinese>
@@ -83,7 +83,7 @@
             <Czech>Informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Informação de Soldado/Veículo/Armamento</Portuguese>
             <French>Information soldat/véhicule/arme</French>
-            <Russian>Информация о Солдате/Технике/Оружии</Russian>
+            <Russian>Информация о солдате/технике/оружии</Russian>
             <Japanese>兵士/車両/武器の情報</Japanese>
             <Polish>Informacje o żołnierzu/pojeździe/broni</Polish>
             <German>Soldat/Fahrzeug/Waffe Information</German>
@@ -166,7 +166,7 @@
             <Japanese>開発版ウォーターマーク</Japanese>
             <German>Wasserzeichen für Entwicklungsversion</German>
             <Chinesesimp>开发建设水印</Chinesesimp>
-            <Korean>개발용빌드 워터마크</Korean>
+            <Korean>개발용 빌드 워터마크</Korean>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -315,7 +315,7 @@
             <English>Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento</Portuguese>
             <French>Fond pour la barre d'informations inférieure de l'arme</French>
-            <Russian>Фон ниформации об оружии снизу</Russian>
+            <Russian>Фон информации об оружии снизу</Russian>
             <Japanese>武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni</Polish>
             <German>Hintergrund der unteren Waffen-Info-Leiste</German>
@@ -472,7 +472,7 @@
             <English>Gunner Launchable Count</English>
             <Portuguese>Quantidade de Arremessável do fuzileiro</Portuguese>
             <French>Nombre d'objets lançables (tireur)</French>
-            <Russian>Количество снарядов пусковой установки наводчика</Russian>
+            <Russian>Кол-во снарядов ПУ наводчика</Russian>
             <Japanese>射手用のランチャー弾薬数</Japanese>
             <Polish>Ilość rakiet strzelca</Polish>
             <German>Richtschütze Raketenanzahl</German>
@@ -502,7 +502,7 @@
             <English>Gunner Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento do fuzileiro</Portuguese>
             <French>Fond pour la barre d'informations inférieure (tireur)</French>
-            <Russian>Фон ниформации об орудии наводчика снизу</Russian>
+            <Russian>Фон информации об орудии наводчика снизу</Russian>
             <Japanese>射手用の武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni strzelca</Polish>
             <German>Hintergrund der unteren Waffen-Info-Leiste (Richtschütze)</German>
@@ -628,7 +628,7 @@
             <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Requer informações de Soldado/Veículo/Armamento</Portuguese>
             <French>Requiert l'option "Information soldat/véhicule/arme".</French>
-            <Russian>Требуется Информация о Солдате/Технике/Оружии.</Russian>
+            <Russian>Требуется информация о солдате/технике/оружии.</Russian>
             <Japanese>兵士/車両/武器の情報を必要とします。</Japanese>
             <Polish>Wymaga informacji o żołnierzu/pojeździe/broni.</Polish>
             <German>Benötigt Soldat/Fahrzeug/Waffe Information.</German>
@@ -647,7 +647,7 @@
             <Japanese>ユーザ インタフェイスの変更は無効化されています。</Japanese>
             <Polish>Modyfikacja interfejsu użytkownika jest wyłączona.</Polish>
             <German>Die Modifizierung des UI ist deaktiviert.</German>
-            <Korean>사용자 인터페이스 변경이 비활성화 되어있습니다.</Korean>
+            <Korean>사용자 인터페이스 변경이 비활성화 되어 있습니다.</Korean>
             <Italian>La modifica dell'Interfaccia Utente è disabilitata.</Italian>
             <Chinesesimp>自定用户界面功能已关闭</Chinesesimp>
             <Chinese>自定使用者介面功能已關閉</Chinese>
@@ -673,10 +673,11 @@
             <Polish>Włącz wskaźnik prędkości poruszania</Polish>
             <Japanese>移動速度インジケータを有効化</Japanese>
             <French>Indicateur de vitesse de déplacement</French>
-            <Russian>Включить индикатор скорости передвижения</Russian>
+            <Russian>Вкл. индикатор скорости передвижения</Russian>
             <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
             <Chinesesimp>启用移动速度指示器</Chinesesimp>
-            <Korean>이동속도 표시기 활성화</Korean>
+            <Korean>이동 속도 표시기 활성화</Korean>
+            <Spanish>Habilitar indicador de velocidad de movimiento</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
@@ -686,7 +687,26 @@
             <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
             <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
             <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
-            <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화 합니다.</Korean>
+            <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화합니다.</Korean>
+            <Spanish>Habilita el indicador de velocidad de movimiento para el personaje del jugador.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_UI_HideDefaultActionIcon">
+            <English>Hide Default Action Icon</English>
+            <Japanese>デフォルトのアクションアイコンを非表示</Japanese>
+            <Polish>Ukryj domyślną ikonę akcji</Polish>
+            <Korean>기본 행동 아이콘 숨기기</Korean>
+            <Chinesesimp>隐藏默认动作标识</Chinesesimp>
+            <Russian>Спрятать иконку действия по умолчанию</Russian>
+            <Spanish>Ocultar el icono de acción por defecto</Spanish>
+        </Key>
+        <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
+            <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
+            <Japanese>カーソルの前に何かがあるときに自動的に表示されるアイコンを非表示にします。 ゲームを再起動する必要があります。\n警告:アクション自体は削除されません! 誤って実行することを防ぐために、'標準アクション'キーのバインドを解除することをお勧めします。</Japanese>
+            <Polish>Ukrywa ikonę wyświetlaną automatycznie, gdy coś znajduje się przed kursorem. Wymaga ponownego uruchomienia gry.\nOstrzeżenie: Nie usuwa samej akcji! Zaleca się usunięcia przypisania klawisza „Użyj domyślnej akcji”, aby zapobiec niechcianym interakcjom.</Polish>
+            <Korean>커서 앞에 무언가가 있을 때 자동으로 표시되는 아이콘을 숨깁니다. 게임을 재시작해야 합니다\n경고: 작업 자체를 제거하지 않습니다! 원하지 않는 상호작용을 방지하려면 '기본 행동' 키를 삭제하는 것이 좋습니다.</Korean>
+            <Chinesesimp>隐藏屏幕面前有物体时自动显示的动作标识。需要重新启动游戏。\n警告：不会删除动作本身！建议同时取消对“使用默认动作”键的绑定，以防止不必要的互动。</Chinesesimp>
+            <Russian>Прячет иконку, которая показывается автоматически когда что-то находиться перед курсором. Требует рестарта игры.\nВнимание: не убирает само действие! Рекомендуется убрать комбинацию клавиш с настройки "Выполнить действие по умолчанию" чтобы предостеречься от нежеланных действий.</Russian>
+            <Spanish>Oculta el icono que se muestra automáticamente cuando algo se sitúa enfrente del cursor. Requiere reinicio del juego.\nAdvertencia: No elimina la propia acción! Es recomendable desactivar la tecla "Usar acción por defecto" para prevenir interacciones no deseadas.</Spanish>
         </Key>
     </Package>
 </Project>

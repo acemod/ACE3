@@ -44,4 +44,25 @@ PREP_RECOMPILE_END;
     GVAR(arsenalCache) = nil;
 }] call CBA_fnc_addEventHandler;
 
+["CBA_loadoutSet", {
+    params ["_unit", "_loadout", "_extendedInfo"];
+    private _gunbagWeapon = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
+    if (_gunbagWeapon isNotEqualTo []) then {
+        (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon), _gunbagWeapon, true];
+
+        // Prevent the arsenal closed event from overwriting new info
+        if (!isNil QGVAR(arsenalCache)) then {
+            GVAR(arsenalCache) = _gunbagWeapon;
+        };
+    };
+}] call CBA_fnc_addEventHandler;
+
+["CBA_loadoutGet", {
+    params ["_unit", "_loadout", "_extendedInfo"];
+    private _gunbagWeapon = (backpackContainer _unit) getVariable [QGVAR(gunbagWeapon), []];
+    if (_gunbagWeapon isNotEqualTo []) then {
+        _extendedInfo set [QGVAR(gunbagWeapon), _gunbagWeapon];
+    };
+}] call CBA_fnc_addEventHandler;
+
 ADDON = true;

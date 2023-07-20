@@ -14,5 +14,6 @@ ACEX_PREP(handleEffects);
 ACEX_PREP(handleHUD);
 ACEX_PREP(handleRespawn);
 ACEX_PREP(refillItem);
+ACEX_PREP(scanFieldRations);
 ACEX_PREP(setRemainingWater);
 ACEX_PREP(update);

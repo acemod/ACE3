@@ -48,7 +48,7 @@
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
             <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
             <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
-            <Korean>고통 시 어떤 효과로 나타낼지 결정합니다.</Korean>
+            <Korean>고통 시 어떤 효과로 나타낼 지 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -152,7 +152,7 @@
             <Spanish>Atenuación del color</Spanish>
             <German>Farbverblassen</German>
             <Chinesesimp>褪色</Chinesesimp>
-            <Korean>색 물빠짐</Korean>
+            <Korean>색바램</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
@@ -178,12 +178,12 @@
             <Spanish>Icono + Atenuación del color</Spanish>
             <German>Symbol + Farbverblassen</German>
             <Chinesesimp>图标+褪色</Chinesesimp>
-            <Korean>아이콘 및 색 물빠짐</Korean>
+            <Korean>아이콘 및 색바램</Korean>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
-                <Russian>Включить крики</Russian>
+                <Russian>Вкл. крики</Russian>
                 <Polish>Aktywuj wrzaski</Polish>
                 <Spanish>Activar gritos</Spanish>
                 <German>Schreie aktivieren</German>
@@ -210,20 +210,21 @@
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
                 <Italian>Abilita Grida da parte delle unità ferite</Italian>
                 <Japanese>負傷したユニットを叫ぶようにします。</Japanese>
-                <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
+                <Korean>부상당한 인원이 소리지르는 것을 활성화합니다</Korean>
                 <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
                 <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
                 <English>Enable Fracture/Tourniquet/Splint Indicators</English>
-                <Russian>Включить индикаторы переломов/жгутов/шин</Russian>
+                <Russian>Вкл. индикаторы переломов/жгутов/шин</Russian>
                 <Japanese>骨折/止血帯の表記を有効化</Japanese>
                 <French>Indicateurs de fractures/garrots/attelles</French>
                 <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
                 <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
                 <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
-                <Korean>골절/지혈대/부목 표시 활서오하</Korean>
+                <Korean>골절/지혈대/부목 표시 활성화</Korean>
+                <Spanish>Habilitar indicadores de Fractura/Torniquete</Spanish>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
@@ -234,6 +235,7 @@
                 <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
                 <Chinesesimp>在姿态指示器上启用骨折、应用止血带和夹板指示器。</Chinesesimp>
                 <Korean>자세 표시기 옆에 골절, 지혈대, 부목의 여부를 표시합니다.</Korean>
+                <Spanish>Habilita los indicadores para fracturas y torniquetes apllicados y férulas sobre el indicador de posición del personaje.</Spanish>
             </Key>
         </Container>
     </Package>

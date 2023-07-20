@@ -9,6 +9,7 @@
  * 2: Spawn fire ring <Boolean>
  * 3: How long effect will last (Max 20 seconds) <Number>
  * 4: What selection will fire originate from <String>
+ * 5: Cookoff intensity value <Number>
  *
  * Return Value:
  * None
@@ -19,7 +20,7 @@
  * Public: No
  */
 
-params ["_obj", "_jet", "_ring", "_time", "_fireSelection"];
+params ["_obj", "_jet", "_ring", "_time", "_fireSelection", "_intensity"];
 private _light = "#lightpoint" createVehicleLocal [0,0,0];
 _light setLightBrightness 5;
 _light setLightAmbient [0.8, 0.6, 0.2];
@@ -31,8 +32,10 @@ private _sound = objNull;
 if (isServer) then {
     // ironically biggest performance hit is this. Creating a new sound source takes up aprox 400 milliseconds.
     // I dont think there is an alternative that takes into effect distance and whatever, but if you find one please fix!
-    private _soundName = selectRandomWeighted [QGVAR(Sound_low), 0.1, QGVAR(Sound_mid), 0.25, QGVAR(Sound_high), 0.65];
-    _sound = createSoundSource [_soundName, position _obj, [], 0];
+    if (_jet || _ring) then {
+        private _soundName = selectRandomWeighted [QGVAR(Sound_low), 0.1, QGVAR(Sound_mid), 0.25, QGVAR(Sound_high), 0.65];
+        _sound = createSoundSource [_soundName, position _obj, [], 0];
+    };
 
     if (_ring) then {
         private _intensity = 6;
@@ -43,12 +46,14 @@ if (isServer) then {
 
 [{
     params ["_args", "_pfh"];
-    _args params ["_obj", "_jet", "_ring", "_time", "_startTime", "_light", "_fireSelection", "_sound"];
+    _args params ["_obj", "_jet", "_ring", "_time", "_startTime", "_light", "_fireSelection", "_sound", "_intensity"];
     private _elapsedTime = CBA_missionTime - _startTime;
     if (_elapsedTime >= _time) exitWith {
         deleteVehicle _light;
         deleteVehicle _sound;
-        [QEGVAR(fire,removeFireSource), [_obj]] call CBA_fnc_globalEvent;
+        if (isServer) then {
+            [QEGVAR(fire,removeFireSource), [_obj]] call CBA_fnc_localEvent;
+        };
         [_pfh] call CBA_fnc_removePerFrameHandler;
     };
     private _factor = (1 + (_elapsedTime / 2) min 2);
@@ -183,5 +188,14 @@ if (isServer) then {
             [2 + random 1], 1, 0, "", "", _obj
         ];
     };
-}, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound]] call cba_fnc_addPerFrameHandler;
+
+    (getVehicleTIPars _obj) params ["_tiEngine", "_tiWheels", "_tiWeapon"];
+    _obj setVehicleTIPars [
+        // formula is designed to have the temperature ramp up quickly and then level out
+        (_tiEngine + (_intensity * 0.01))/1.005,
+        (_tiWheels + (_intensity * 0.004))/1.002, // wheels//tracks are further away from burning parts
+        (_tiWeapon + (_intensity * 0.01))/1.005
+    ];
+
+}, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound, _intensity]] call CBA_fnc_addPerFrameHandler;
 
