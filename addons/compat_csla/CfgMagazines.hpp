@@ -1,20 +1,7 @@
 class CfgMagazines {
 
-    class CSLA_Magazine;
-
-    class CSLA_UK59_50rnd_7_62vz59: CSLA_Magazine {
-        ace_isBelt = 1;
-    };
-    class CSLA_UK59_50rnd_7_62Sv59: CSLA_Magazine {
-        ace_isBelt = 1;
-    };
-    class CSLA_UK59_50rnd_7_62PZ59: CSLA_Magazine {
-        ace_isBelt = 1;
-    };
-    class CSLA_UK59_50rnd_7_62Tz59: CSLA_Magazine {
-        ace_isBelt = 1;
-    };
-    class CSLA_UK59_50rnd_7_62Cv59: CSLA_Magazine {
+    class CSLA_UK59_50rnd_7_62vz59;
+    class CSLA_UK59_50rnd_7_62Sv59: CSLA_UK59_50rnd_7_62vz59 {
         ace_isBelt = 1;
     };
 
@@ -32,10 +19,6 @@ class CfgMagazines {
     };
 
     class US85_200Rnd_556x45: US85_30Rnd_556x45 {
-        ace_isBelt = 1;
-    };
-
-    class US85_200Rnd_762x51: US85_30Rnd_762x51 {
         ace_isBelt = 1;
     };
 
