@@ -19,6 +19,7 @@ class CfgPatches {
 #include "Display3DEN.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgWeapons.hpp"
 #include "RscDisplayMain.hpp"
 #include "ACE_Arsenal_Sorts.hpp"
 #include "ACE_Arsenal_Stats.hpp"

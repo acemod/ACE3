@@ -44,7 +44,7 @@ Examples:
 - `[_box, true] call ace_arsenal_fnc_initBox`
 - `[_box, false, false] call ace_arsenal_fnc_initBox`
 
-Passing an empty array or `false` will still add an interaction but no additional virtual items will be added.  
+Passing an empty array or `false` will still add an interaction but no additional virtual items will be added.
 Please note that at least one virtual item needs to be added otherwise ACE Arsenal will not open.
 
 ### 1.2 Opening an arsenal box manually
@@ -125,12 +125,21 @@ Built upon the function of section 2.1, this can be used to make an Arsenal only
 4. Paste the created array from your clipboard into the space where the items are listed using <kbd>Ctrl</kbd> + <kbd>V</kbd>. The array is created with brackets.
 
 Examples:
-- For a new box:  
+- For a new box:
   `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_initBox`
-- For an existing box:  
+- For an existing box:
   `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
 
 ## 3. Config entries
+
+### 3.1 Special config entries
+
+ACE Arsenal uses 2 existing config entries to sort and display items.
+
+- `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in `CfgWeapons`.
+- `ACE_isUnique`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
+
+### 3.2 New config entries
 
 ACE Arsenal has 2 new config entries for items:
 
@@ -139,8 +148,18 @@ ACE Arsenal has 2 new config entries for items:
 
 Both of them are optional.
 
-- `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in `CfgWeapons`.
-- `ACE_isUnique`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
+### 3.3 Adding items to ACE's sub-categories
+
+ACE Arsenal includes a "Tools" sub-category by default:
+
+- `ACE_isTool`: Items with this property set to `1` will be sorted to the Tools Tab.
+
+ACE Medical Treatment and ACE Field Rations also add their own sub-categories, if they're present:
+
+- `ACE_isMedicalItem`: Items with this property set to `1` will be sorted to the ACE Medical Tab.
+- `ACE_isFieldRationItem`: Items with this property set to `1` will be sorted to the ACE Field Rations Tab.
+
+Only Misc. Items will be checked for these properties. Magazines must have ACE_isUnique property.
 
 ## 4. Default loadouts
 
@@ -339,7 +358,7 @@ Example:
     {
         _fireRate pushBackUnique (getNumber (_itemCfg >> _x >> "reloadTime"));
     } forEach _fireModes;
-    
+
     _fireRate sort true;
     _fireRate param [0, 0]
 }] call ace_arsenal_fnc_addSort;
@@ -380,10 +399,10 @@ All are local.
 | ace_arsenal_onLoadoutLoad | loadout data (ARRAY), loadout name (STRING) |
 | ace_arsenal_onLoadoutLoadExtended | CBA extended loadout data (ARRAY), loadout name (STRING) | 3.15.1
 | ace_arsenal_onLoadoutDelete | loadout name (STRING) |
-| ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL), [loadout author (STRING), loadout name (STRING), loadout data (ARRAY)]  |
+| ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL), loadout author (STRING), loadout name (STRING), loadout data (ARRAY) |
 | ace_arsenal_loadoutUnshared | Loadouts list listnBox control (CONTROL), loadout author (STRING), loadout name (STRING) |
 | ace_arsenal_cargoChanged | Arsenal display (DISPLAY), item (STRING), add or remove (NUMBER), shiftState (BOOL) |
-| ace_arsenal_loadoutImported | Arsenal display (DISPLAY), (import list (BOOL) |
+| ace_arsenal_loadoutImported | Arsenal display (DISPLAY), import list (BOOL) |
 | ace_arsenal_loadoutExported | Arsenal display (DISPLAY), export list (BOOL) |
 | ace_arsenal_loadoutsDisplayOpened | loadouts screen display (DISPLAY) | 3.12.3 |
 | ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
@@ -402,14 +421,16 @@ All are local.
 1  | Tooltip | String | Optional (default: `""`)
 2  | Picture path | String | Optional (default: `"\z\ace\addons\arsenal\data\iconCustom.paa"`)
 3  | Override a specific button | Number | Optional (default: `-1`)
+4  | Move button on overwrite | Bool | Optional (default: `false`)
 
 Return Value:
 - Successful: Number of the slot (0-9)
 - Error: -1
 
-This function creates a sub category under misc. items in the ACE Arsenal.
-Only items that are listed under 'Misc. Items' are available for sub categories. 
+This function creates a sub-category just above misc items in the ACE Arsenal.
+Only items that are listed under 'Misc. Items' or other sub-categories are available for sub-categories.
 If the 'Override a specific button' argument is not used, the button will added at the bottom of the rest.
+If the 'Move button on overwrite' argument is used, the button will be moved to the bottom of the rest if its position is overridden.
 
 Examples:
 - `[["ACE_bloodIV_500", "ACE_fieldDressing"], "MedicalStuff"] call ace_arsenal_fnc_addRightPanelButton`
@@ -426,3 +447,4 @@ private _buttonId = [["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1"], "Flashligh
 // now the category 'better flashlight' is replacing the category 'Flashlights' because it is set on the same button index
 [["ACE_Flashlight_XL50"], "better flashlight", "\path\to\a\pictureWithAFlashlight.paa", _buttonId] call ace_arsenal_fnc_addRightPanelButton
 ```
+If an overwritten button is not moved, its items will be added back to Misc. Items.

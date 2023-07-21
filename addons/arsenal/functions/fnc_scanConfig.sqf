@@ -24,6 +24,9 @@ for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
     _configItems set [_index, createHashMap];
 };
 
+// Cache tools for separate tab
+private _toolList = createHashMap;
+
 // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
 // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
 private _filterFunction = toString {
@@ -38,6 +41,7 @@ private _configItemInfo = "";
 private _hasItemInfo = false;
 private _itemInfoType = 0;
 private _isMiscItem = false;
+private _isTool = false;
 
 // Get weapons and other various items
 {
@@ -47,6 +51,7 @@ private _isMiscItem = false;
     _hasItemInfo = isClass (_configItemInfo);
     _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
     _isMiscItem = _className isKindOf ["CBA_MiscItem", _cfgWeapons];
+    _isTool = getNumber (_x >> "ACE_isTool") isEqualTo 1;
 
     switch (true) do {
         // Weapon attachments
@@ -130,6 +135,7 @@ private _isMiscItem = false;
             {_simulationType == "ItemMineDetector"}
         ): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
+            if (_isTool) then {_toolList set [_className, nil]};
         };
     };
 } forEach configProperties [_cfgWeapons, _filterFunction, true];
@@ -160,9 +166,10 @@ private _magazineMiscItems = createHashMap;
 
     switch (true) do {
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
-        case (getNumber (_x >> "ACE_isUnique") == 1): {
+        case (getNumber (_x >> "ACE_isUnique") isEqualTo 1): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             _magazineMiscItems set [_className, nil];
+            if (getNumber (_x >> "ACE_isTool") isEqualTo 1) then {_toolList set [_className, nil]};
         };
         // Grenades
         case (_className in _grenadeList): {
@@ -266,3 +273,4 @@ uiNamespace setVariable [QGVAR(grenadeCache), _grenadeList];
 uiNamespace setVariable [QGVAR(putCache), _putList];
 uiNamespace setVariable [QGVAR(magazineMiscItems), _magazineMiscItems];
 uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), _launchers];
+uiNamespace setVariable [QGVAR(configItemsTools), _toolList];
