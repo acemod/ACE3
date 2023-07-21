@@ -430,7 +430,7 @@ Return Value:
 This function creates a sub-category just above misc items in the ACE Arsenal.
 Only items that are listed under 'Misc. Items' or other sub-categories are available for sub-categories.
 If the 'Override a specific button' argument is not used, the button will added at the bottom of the rest.
-If the 'Move button on overwrite' argument is used, the button will be moved to the bottom of the rest if its position is overriden.
+If the 'Move button on overwrite' argument is used, the button will be moved to the bottom of the rest if its position is overridden.
 
 Examples:
 - `[["ACE_bloodIV_500", "ACE_fieldDressing"], "MedicalStuff"] call ace_arsenal_fnc_addRightPanelButton`

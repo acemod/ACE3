@@ -12,7 +12,7 @@
  * 4: Move button if its position is overridden <BOOL> (default: false)
  *
  * Return Value:
- * Successful: number of the slot (0-9) <NUMBER>
+ * Successful: Number of the slot (0-9) <NUMBER>
  * Error: -1 <NUMBER>
  *
  * Example:
@@ -47,13 +47,11 @@ if (_position < 0 || {_position > 9}) exitWith {
 };
 
 // Check if we're overwriting a button that's being force-kept
-if (count GVAR(customRightPanelButtons) > _position) then {
-    private _currentButtonInPosition = GVAR(customRightPanelButtons) select _position;
-    if (!isNil "_currentButtonInPosition") then {
-        _currentButtonInPosition params ["_cbItems", "_cbPicture", "_cbTooltip", "_cbMove"];
-        if (_cbMove) then {
-            [{_this call FUNC(addRightPanelButton)}, [_cbItems, _cbTooltip, _cbPicture, -1, _cbMove]] call CBA_fnc_execNextFrame;
-        };
+private _currentButtonInPosition = GVAR(customRightPanelButtons) select _position;
+if (!isNil "_currentButtonInPosition") then {
+    _currentButtonInPosition params ["_cbItems", "_cbPicture", "_cbTooltip", "_cbMove"];
+    if (_cbMove) then {
+        [{_this call FUNC(addRightPanelButton)}, [_cbItems, _cbTooltip, _cbPicture, -1, _cbMove]] call CBA_fnc_execNextFrame;
     };
 };
 
