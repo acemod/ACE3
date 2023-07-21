@@ -117,7 +117,7 @@ if (_zIndex < 5) then {
         if (count _explosions > (_radi * 2) / _depth) exitWith {};
     } forEach _buckets;
     // _can = "Land_Bricks_V4_F" createVehicle (ASLtoATL _pos);
-    // _dirvec = _pos vectorFromTo ((ATLtoASL (player modelToWorldVisual (player selectionPosition "Spine3"))));
+    // _dirvec = _pos vectorFromTo ((player modelToWorldVisualWorld (player selectionPosition "Spine3")));
     // _dirvec = _dirvec vectorMultiply 100;
     // _can setVelocity _dirvec;
     [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;

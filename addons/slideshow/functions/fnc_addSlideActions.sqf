@@ -9,6 +9,7 @@
  * 2: Names <ARRAY>
  * 3: Controller <OBJECT>
  * 4: Current Slideshow <NUMBER>
+ * 5: Texture Selection <NUMBER> (default: 0)
  *
  * Return Value:
  * List of actions <ARRAY>
@@ -19,7 +20,7 @@
  * Public: No
  */
 
-params ["_objects", "_images", "_names", "_controller", "_currentSlideshow"];
+params ["_objects", "_images", "_names", "_controller", "_currentSlideshow", ["_selection", 0]];
 
 private _actions = [];
 {
@@ -30,15 +31,15 @@ private _actions = [];
             _names select _forEachIndex,
             "",
             {
-                (_this select 2) params ["_objects", "_image", "_currentSlideshow"];
+                (_this select 2) params ["_objects", "_image", "_currentSlideshow", "_selection"];
                 {
-                    _x setObjectTextureGlobal [0, _image]
+                    _x setObjectTextureGlobal [_selection, _image]
                 } count _objects;
                 [QGVAR(slideChanged), [_image, _currentSlideshow]] call CBA_fnc_localEvent;
             },
             {true},
             {},
-            [_objects, _x, _currentSlideshow]
+            [_objects, _x, _currentSlideshow, _selection]
         ] call EFUNC(interact_menu,createAction),
         [],
         _controller

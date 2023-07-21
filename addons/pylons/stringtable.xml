@@ -97,7 +97,7 @@
             <Japanese>%1はすでにこの機体へ設定されています!</Japanese>
             <Italian>% sta già configurando questo aereo!</Italian>
             <Chinese>%1已經正在定義此飛機的武裝配置!</Chinese>
-            <Chinesesimp>%1已经正在定义此飞机的武器配置!</Chinesesimp>
+            <Chinesesimp>%1已经正在定义此飞机的武器配置！</Chinesesimp>
             <Korean>이미 이 항공기에 장착되어 있음 (%1)</Korean>
             <German>%1 konfiguriert dieses Fluggerät bereits!</German>
             <French>%1 est déjà en train de configurer cet aéronef !</French>
@@ -127,7 +127,7 @@
             <Japanese>パイロン%1で停止しました!</Japanese>
             <Italian>Fermato al pilone %1!</Italian>
             <Chinese>已停止在%1號派龍架!</Chinese>
-            <Chinesesimp>已在整装%1号挂架时停止!</Chinesesimp>
+            <Chinesesimp>已在整装%1号挂架时停止！</Chinesesimp>
             <Korean>%1 파일런이 멈춤</Korean>
             <German>Gestoppt bei Außenlaststation %1</German>
             <French>Arrêté au pylône %1 !</French>
@@ -165,6 +165,7 @@
             <Portuguese>Ativar Menu de Pylon para Zeus</Portuguese>
             <Czech>Povolit menu s pylony pro Zeuse</Czech>
             <Spanish>Habilitar menú de pilones para Zeus</Spanish>
+            <Korean>제우스 파일런 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
             <English>Enables use of the zeus module.</English>
@@ -179,6 +180,7 @@
             <Portuguese>Permite usar o módulo de Zeus</Portuguese>
             <Czech>Povoluje použití daného Zeus modulu.</Czech>
             <Spanish>Habilita el uso del módulo de Zeus.</Spanish>
+            <Korean>제우스 파일런 메뉴를 사용할 수 있게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
             <English>Enable Pylons Menu from Ammo Trucks</English>
@@ -193,6 +195,7 @@
             <Portuguese>Ativar Menu de Pylons de Caminhões de Munição</Portuguese>
             <Czech>Povolit menu s pylony z muničních náklaďáků.</Czech>
             <Spanish>Habilitar menú de pilones desde camiones de munición</Spanish>
+            <Korean>탄약 차량 파일런 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
             <English>Enables use of pylons menu from ammo trucks.</English>
@@ -207,6 +210,7 @@
             <Portuguese>Permite abrir o menu de pylons através de veículos de munição.</Portuguese>
             <Czech>Povoluje použití menu na nastavení pylonů z náklaďáků s municí.</Czech>
             <Spanish>Habilita el uso del menú de pilones desde camiones de munición.</Spanish>
+            <Korean>탄약 차량에서 파일런 메뉴를 불러올 수 있게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
             <English>This aircraft doesn't have pylons</English>
@@ -221,6 +225,7 @@
             <Portuguese>Essa aeronave não possui pylons</Portuguese>
             <Czech>Toto letadlo nemá pylony</Czech>
             <Spanish>Esta aeronave no tiene pilones</Spanish>
+            <Korean>이 비행기는 파일런이 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
             <English>Configure pylons module is disabled for zeus</English>
@@ -235,6 +240,7 @@
             <Portuguese>O Módulo de configurar pylons está desativado para o Zeus</Portuguese>
             <Czech>Nastavení pylonů je vypnuto pro Zeuse</Czech>
             <Spanish>La configuración del módulo de pilones está deshabilitada para Zeus</Spanish>
+            <Korean>제우스 파일런 모듈 설정이 비활성화 되어있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
@@ -242,7 +248,7 @@
             <Italian>Riarma Nuovi Piloni</Italian>
             <Chinese>重新整装新的导弹挂架</Chinese>
             <Chinesesimp>重新武装新的派龙架</Chinesesimp>
-            <Korean>새파일런 재무장</Korean>
+            <Korean>새 파일런 재무장</Korean>
             <German>Neue Außenlaststationen. aufmunitionieren</German>
             <French>Réarmer les nouveaux pylônes</French>
             <Polish>Dozbrój Nowe Pylony</Polish>
@@ -271,8 +277,8 @@
             <Japanese>パイロンへの時間</Japanese>
             <Italian>Tempo Per Pilone</Italian>
             <Chinese>派龍架整補所需時間(個別)</Chinese>
-            <Chinesesimp>导弹挂架整装所需时间(个别)</Chinesesimp>
-            <Korean>파일런당 시간</Korean>
+            <Chinesesimp>导弹挂架整装所需时间（个别）</Chinesesimp>
+            <Korean>파일런 당 시간</Korean>
             <German>Zeit pro Außenlaststation</German>
             <French>Durée par pylône</French>
             <Polish>Czas na Pylon</Polish>
@@ -286,7 +292,7 @@
             <Japanese>各パイロンの置き換えにかかる時間を設定します。(秒)</Japanese>
             <Italian>Il tempo che impiega ogni pilone ad essere sostituito (in secondi).</Italian>
             <Chinese>每個派龍架需花多久時間進行整補(單位為秒)</Chinese>
-            <Chinesesimp>每个挂架需花多久时间进行整装单位为秒)。</Chinesesimp>
+            <Chinesesimp>每个挂架需花多久时间进行整装（单位为秒）。</Chinesesimp>
             <Korean>파일런을 재설정 하는데 걸리는 시간 (초)</Korean>
             <German>Die benötigte Zeit, um einzelne Außenlaststationen zu ersetzen (in Sekunden).</German>
             <French>Le temps nécessaire pour remplacer chaque pylône (en secondes).</French>
@@ -316,7 +322,7 @@
             <Japanese>航空機と補給車両との間に必要な距離です。</Japanese>
             <Italian>La distanza necessaria per un aereo da un veicolo di riarmo.</Italian>
             <Chinese>設定飛機必須距離整補載具多少公尺才能進行彈藥整補</Chinese>
-            <Chinesesimp>设定飞机必须距离整装载具多少公尺才能进行弹药整装。</Chinesesimp>
+            <Chinesesimp>设定飞机必须距离整装载具多少米才能进行弹药整装。</Chinesesimp>
             <Korean>항공기에서 재보급 가능한 재무장 차량을 찾습니다.</Korean>
             <German>Die Distanz, die ein Fahrzeug von einem Munitionsfahrzeug entfernt sein darf.</German>
             <French>La distance maximale à laquelle un aéronef doit se trouver du véhicule de ravitaillement.</French>
@@ -362,7 +368,7 @@
             <Italian>Necessita Kit Riparazione</Italian>
             <Chinese>需要工具包</Chinese>
             <Chinesesimp>需要工具包</Chinesesimp>
-            <Korean>툴킷 요구</Korean>
+            <Korean>도구모음 요구</Korean>
             <German>Benötigt Werkzeugkasten</German>
             <French>Trousse à outils requise</French>
             <Polish>Wymaga Narzędzi</Polish>
@@ -377,7 +383,7 @@
             <Italian>Necessita un kit di riparazione nell'inventario</Italian>
             <Chinese>需要工具包才能進行彈藥整補</Chinese>
             <Chinesesimp>需要工具包才能进行弹药整装。</Chinesesimp>
-            <Korean>툴킷이 필요합니다.</Korean>
+            <Korean>도구모음이 필요합니다.</Korean>
             <German>Benötigt einen Werkzeugkasten im Inventar.</German>
             <French>Requiert une trousse à outils dans l'inventaire.</French>
             <Polish>Wymaga narzędzi w ekwipunku.</Polish>

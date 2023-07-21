@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the objects 3DEN attribute at scenario start.
+ * Initializes the objects 3DEN's ace arsenal attribute at scenario start.
  *
  * Arguments:
  * 0: Attribute target <OBJECT>
@@ -28,6 +28,7 @@ if (_mode > 0) then {
     [{
         [{
             params ["_object", "_items"];
+
             [_object, _items, true] call FUNC(removeVirtualItems);
         }, _this] call CBA_fnc_execNextFrame;
     }, [_object, _items]] call CBA_fnc_execNextFrame;

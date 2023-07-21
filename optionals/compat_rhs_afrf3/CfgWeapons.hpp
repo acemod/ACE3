@@ -23,6 +23,13 @@ class CfgWeapons {
         ACE_barrelTwist = 199.898;
         ACE_barrelLength = 414.02;
     };
+    class rhs_weap_ak103_base;
+    class rhs_weap_ak104: rhs_weap_ak103_base {
+        ACE_barrelLength = 314.96;
+    };
+    class rhs_weap_ak105: rhs_weap_ak74m {
+        ACE_barrelLength = 314.96;
+    };
     class rhs_weap_akm: rhs_weap_ak74m {
         ACE_RailHeightAboveBore = -0.456233;//from rhs_weap_akmn and rhs_weap_ak74m
         ACE_barrelTwist = 199.898;
@@ -33,6 +40,10 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = -0.30262;
         ACE_barrelTwist = 160.02;
         ACE_barrelLength = 210.82;
+    };
+    class rhs_weap_asval: rhs_weap_ak74m {
+        ACE_barrelTwist = 210.82;
+        ACE_barrelLength = 200.66;
     };
     class rhs_weap_svd: rhs_weap_ak74m {
         ACE_RailHeightAboveBore = -0.617396;
@@ -58,7 +69,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 4.3348;
     };
     class rhs_weap_rpk_base;
-    class rhs_weap_rpk74_base : rhs_weap_rpk_base {
+    class rhs_weap_rpk74_base: rhs_weap_rpk_base {
         ACE_barrelLength = 590.00;
         ACE_barrelTwist = 195.072;
     };
@@ -68,7 +79,7 @@ class CfgWeapons {
         ACE_barrelLength = 657.86;
     };
     class rhs_weap_pkm: rhs_weap_pkp {
-        ACE_Overheating_allowSwapBarrel = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 645.16;
     };
@@ -110,12 +121,35 @@ class CfgWeapons {
             };
         };
     };
+
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
     };
+
+    class rhs_weap_strela;
+    class rhs_weap_igla: rhs_weap_strela {
+        EGVAR(overpressure,range) = 6;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.6;
+        EGVAR(overpressure,offset) = 1.65;
+    };
+
     class rhs_weap_rpg7: Launcher_Base_F {
-        ace_reloadlaunchers_enabled = 1;
+        EGVAR(reloadlaunchers,enabled) = 1;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,offset) = 0.9;
+    };
+
+    class rhs_weap_rpg26: Launcher_Base_F {
+        EGVAR(overpressure,range) = 10;
+        EGVAR(overpressure,angle) = 50;
+        EGVAR(overpressure,offset) = 0.65;
+    };
+
+    class rhs_weap_rpg18: rhs_weap_rpg26 {
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,offset) = 1;
     };
 
     #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
@@ -125,8 +159,9 @@ class CfgWeapons {
     class rhs_tsh4: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
-    
-    class rhs_6b48: H_HelmetB {
+
+    class rhs_6b47_bare;
+    class rhs_6b48: rhs_6b47_bare {
         HEARING_PROTECTION_VICCREW
     };
 
@@ -149,6 +184,18 @@ class CfgWeapons {
         HEARING_PROTECTION_EARMUFF
     };
 
+    class rhs_6b47;
+    class rhs_6b47_6m2: rhs_6b47 {
+        HEARING_PROTECTION_PELTOR
+    };
+    class rhs_6b47_6m2_1: rhs_6b47 {
+        HEARING_PROTECTION_PELTOR
+    };
+
+    class rhs_6m2: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    };
+
     class rhs_weap_d81;
     class rhs_weap_2a70: rhs_weap_d81 { // "Low pressure" 100mm cannon
         ace_overpressure_range = 15;
@@ -169,6 +216,7 @@ class CfgWeapons {
     CREATE_CSW_PROXY(rhs_weap_9K115_2_launcher);
 
     class GVAR(2b14_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 20;
@@ -194,6 +242,7 @@ class CfgWeapons {
     };
 
     class GVAR(nsv_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -217,6 +266,7 @@ class CfgWeapons {
     };
 
     class GVAR(kord_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -241,6 +291,7 @@ class CfgWeapons {
     };
 
     class GVAR(ags30_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -264,6 +315,7 @@ class CfgWeapons {
     };
 
     class GVAR(spg9_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -297,6 +349,7 @@ class CfgWeapons {
     };
 
     class GVAR(metis_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "mount";
             deployTime = 4;
@@ -318,6 +371,7 @@ class CfgWeapons {
     };
 
     class GVAR(kornet_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "mount";
             deployTime = 4;
@@ -337,7 +391,7 @@ class CfgWeapons {
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_Kornet_9M133_2_msv_ca.paa";
     };
-    
+
     class rhs_uniform_flora;
     class rhs_uniform_df15: rhs_uniform_flora {
         ACE_GForceCoef = 0.8;

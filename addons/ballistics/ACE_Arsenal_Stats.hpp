@@ -59,7 +59,7 @@ class EGVAR(arsenal,stats) {
     };
     class ACE_weaponMuzzleVelocity: statBase {
         scope = 2;
-        priority = 3;
+        priority = 1;
         stats[] = {"initSpeed"};
         displayName= CSTRING(statMuzzleVelocity);
         showText = 1;

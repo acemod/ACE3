@@ -27,7 +27,7 @@
 
 // Try searching for lasers from a given vehicle position [BLUE]:
 private _seekerVehicle = vehicle ace_player;
-private _testSeekerPosASL = AGLtoASL (_seekerVehicle modelToWorldVisual [0,0,1]);
+private _testSeekerPosASL = _seekerVehicle modelToWorldVisualWorld [0,0,1];
 private _testSeekerDir = vectorDirVisual _seekerVehicle;
 {
     private _code = _x;
@@ -42,10 +42,10 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
 
 
 // Draw all lasers
-[GVAR(laserEmitters), {
-    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
-    // TRACE_2("",_key,_value);
-    _value params ["_obj", "_owner", "_laserMethod", "_waveLength", "_laserCode", "_beamSpread"];
+{
+    //IGNORE_PRIVATE_WARNING ["_x", "_y];
+    // TRACE_2("",_x,_y);
+    _y params ["_obj", "_owner", "_laserMethod", "_waveLength", "_laserCode", "_beamSpread"];
 
     // Draw vanila lasers [RED]
     if (_laserMethod isEqualTo QFUNC(findLaserSource)) then { // Normal vanilla laserTarget func
@@ -53,7 +53,7 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
         private _targetPosASL = getPosASL _targetObject;
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], (ASLtoAGL _targetPosASL), 0.5, 0.5, 0, "", 0.5, 0.025, "TahomaB"];
 
-        (_value call FUNC(findLaserSource)) params ["_laserPosASL", "_laserDir"];
+        (_y call FUNC(findLaserSource)) params ["_laserPosASL", "_laserDir"];
         private _resultsRay = [_laserPosASL, _laserDir, _obj] call FUNC(shootRay);
 
         private _rayPos = _resultsRay select 0;
@@ -67,7 +67,7 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
     // Draw array weapon lasers [YELLOW]
     if ((_laserMethod isEqualType []) && {(count _laserMethod) == 2}) then {
         _laserMethod params ["_modelPosition", "_weaponName"];
-        private _laserPosASL = AGLtoASL (_obj modelToWorldVisual _modelPosition);
+        private _laserPosASL = _obj modelToWorldVisualWorld _modelPosition;
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,1,0,1], (ASLtoAGL _laserPosASL), 0.5, 0.5, 0, _weaponName, 0.5, 0.025, "TahomaB"];
         private _laserDir = _obj weaponDirection _weaponName;
         private _resultsRay = [_laserPosASL, _laserDir, _obj] call FUNC(shootRay);
@@ -76,4 +76,4 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
             drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,1,0,1], (ASLtoAGL _rayPos), 2, 2, 0, _weaponName, 0.5, 0.025, "TahomaB"];
         };
     };
-}] call CBA_fnc_hashEachPair;
+} forEach GVAR(laserEmitters);

@@ -30,7 +30,7 @@ private _sounds = [
     QUOTE(PATHTO_R(sounds\zip_out.wav))
 ];
 
-private _position = AGLToASL (_target modelToWorldVisual (_target selectionPosition "Spine3"));
+private _position = _target modelToWorldVisualWorld (_target selectionPosition "Spine3");
 
 playSound3D [
     selectRandom _sounds,

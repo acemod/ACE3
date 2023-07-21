@@ -44,10 +44,16 @@ if (_postProcessTintAmount != 0 && {GVAR(UsePP)} && GVAR(effects) in [1, 2]) the
 };
 
 private _imagePath = getText (_config >> ["ACE_Overlay", "ACE_OverlayCracked"] select GETBROKEN);
+private _angle = getNumber (_config >> "ACE_Overlay_Angle");
 
 if (_imagePath != "") then {
     GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false];
-    (GLASSDISPLAY displayCtrl 10650) ctrlSetText _imagePath;
+    private _overlay = (GLASSDISPLAY displayCtrl 10650);
+    _overlay ctrlSetText _imagePath;
+
+    if ((_angle != 0) && {((ctrlAngle _overlay) # 0) != _angle}) then {
+        _overlay ctrlSetAngle [_angle, 0.5, 0.5, true];
+    };
 };
 
 if (GVAR(effects) in [2, 3]) then {

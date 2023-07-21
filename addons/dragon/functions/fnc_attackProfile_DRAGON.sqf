@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM) (Code inspired by NouberNou's Dragon Guidance)
+ * Author: Dani (TCVM) (Code inspired by NouberNou's Dragon Guidance)
  * Attack profile: Dragon Guidance
  *
  * Arguments:
@@ -30,7 +30,7 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut || { !alive _shoote
     // wire snap, random direction
     if (!_wireCut) then {
         _attackProfileStateParams set [1, true];
-        playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLtoASL (_shooter modelToWorld _wireCutSource), 5, 1, 25];
+        playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, _shooter modelToWorldWorld _wireCutSource, 5, 1, 25];
     };
 
     if (_serviceChargeCount > 0 && {(_lastTime - CBA_missionTime) <= 0}) then {
