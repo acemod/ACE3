@@ -4,8 +4,8 @@
  * Statement to sort items by the amount in inventory.
  *
  * Arguments:
- * 0: Item Config <CONFIG>
- * 1: Item Name <STRING>
+ * 0: Not used
+ * 1: Not used
  * 2: Quantity <NUMBER>
  *
  * Return Value:

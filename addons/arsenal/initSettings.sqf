@@ -1,9 +1,9 @@
 // Arsenal
-private _category = localize LSTRING(settingCategory);
+private _category = LLSTRING(settingCategory);
 [
     QGVAR(camInverted),
     "CHECKBOX",
-    localize LSTRING(invertCameraSetting),
+    LLSTRING(invertCameraSetting),
     _category,
     false
 ] call CBA_fnc_addSetting;
@@ -27,13 +27,13 @@ private _category = localize LSTRING(settingCategory);
 [
     QGVAR(enableIdentityTabs),
     "CHECKBOX",
-    localize LSTRING(enableIdentityTabsSettings),
+    LLSTRING(enableIdentityTabsSettings),
     _category,
     true,
     true
 ] call CBA_fnc_addSetting;
 
-private _loadoutCategory = localize LSTRING(loadoutSubcategory);
+private _loadoutCategory = LLSTRING(loadoutSubcategory);
 
 // Arsenal loadouts
 [QGVAR(allowDefaultLoadouts),
@@ -46,7 +46,7 @@ private _loadoutCategory = localize LSTRING(loadoutSubcategory);
 
 [QGVAR(allowSharedLoadouts),
     "CHECKBOX",
-    localize LSTRING(allowSharingSetting),
+    LLSTRING(allowSharingSetting),
     [_category, _loadoutCategory],
     true,
     true
@@ -63,21 +63,21 @@ private _loadoutCategory = localize LSTRING(loadoutSubcategory);
 
 [QGVAR(loadoutsSaveFace),
     "CHECKBOX",
-    localize LSTRING(loadoutsSaveFaceSetting),
+    LLSTRING(loadoutsSaveFaceSetting),
     [_category, _loadoutCategory],
     false
 ] call CBA_fnc_addSetting;
 
 [QGVAR(loadoutsSaveVoice),
     "CHECKBOX",
-    localize LSTRING(loadoutsSaveVoiceSetting),
+    LLSTRING(loadoutsSaveVoiceSetting),
     [_category, _loadoutCategory],
     false
 ] call CBA_fnc_addSetting;
 
 [QGVAR(loadoutsSaveInsignia),
     "CHECKBOX",
-    localize LSTRING(loadoutsSaveInsigniaSetting),
+    LLSTRING(loadoutsSaveInsigniaSetting),
     [_category, _loadoutCategory],
     true
 ] call CBA_fnc_addSetting;

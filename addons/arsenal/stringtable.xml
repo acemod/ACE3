@@ -1483,6 +1483,12 @@
             <Russian>Сохранить эмблему</Russian>
             <Spanish>Guardar Insignia</Spanish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_sortDescending">
+            <English>Descending</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortAscending">
+            <English>Ascending</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
             <Czech>Nástroje</Czech>

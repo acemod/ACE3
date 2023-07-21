@@ -87,7 +87,7 @@ Example:
 1  | Items | Array of strings or boolean | Required
 2  | Add globally | Boolean | Optional (default: `false`)
 
-Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup).
+Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup). Faces, voices and insignia can't be added via this function.
 
 Examples:
 - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
@@ -103,7 +103,7 @@ Examples:
 1  | Items | Array of strings or boolean | Required
 2  | Remove globally | Boolean | Optional (default: `false`)
 
-Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal.
+Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal. Faces, voices and insignia can't be removed via this function.
 
 Examples:
 - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_removeVirtualItems`
@@ -118,7 +118,7 @@ Built upon the function of section 2.1, this can be used to make an Arsenal only
 3. Clear the debug console then enter the following:
    ```sqf
    private _items = flatten (allUnits apply {getUnitLoadout _x});
-   _items = _items arrayIntersect _items select {_x isEqualType "" && {_x != ""}};
+   _items = (_items arrayIntersect _items) select {_x isEqualType "" && {_x != ""}};
    copyToClipboard str _items;
    ```
 
@@ -132,16 +132,23 @@ Examples:
 
 ## 3. Config entries
 
-### 3.1 New config entries
+### 3.1 Special config entries
+
+ACE Arsenal uses 2 existing config entries to sort and display items.
+
+- `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in `CfgWeapons`.
+- `ACE_isUnique`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
+
+### 3.2 New config entries
 
 ACE Arsenal has 2 new config entries for items:
 
-- `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal or `-1` (forced show), for vehicle magazines.
-- `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout.
+- `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal or `-1` (forced show), for magazines.
+- `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout and displaying it in the arsenal. Supports configs in `CfgWeapons` (e.g. Maps, Compasses, Watches, GPS / UAV Terminals, Radios, NVGs, Uniforms, Vests - however no Primary, Secondary, Handgun, Launcher weapons or weapon attachments are supported), `CfgMagazines` (any magazine) and `CfgVehicles` (e.g. Backpacks). Item that replaces must be of the same config type as the original item.
 
 Both of them are optional.
 
-### 3.2 Adding items to ACE's sub-categories
+### 3.3 Adding items to ACE's sub-categories
 
 ACE Arsenal includes a "Tools" sub-category by default:
 
@@ -174,7 +181,7 @@ This loadout list can be exported to the clipboard by using <kbd>Shift</kbd> + <
 |  | Argument | Type | Optional (default value)
 ---| -------- | ---- | ------------------------
 0  | Name of loadout | String | Required
-1  | getUnitLoadout array | Array | Required
+1  | getUnitLoadout array or CBA extended loadout array | Array | Required
 
 Example:
 `["Squad Leader", getUnitLoadout sql1] call ace_arsenal_fnc_addDefaultLoadout`
@@ -208,7 +215,7 @@ class ace_arsenal_stats {
 
 The arguments passed to the bar, text and condition statements are:
 - The stats array `<ARRAY of STRINGS>`
-- The config entry of the weapon `<CONFIG>`
+- The config entry of the item `<CONFIG>`
 
 ### 5.2 Adding stats via a function
 
@@ -225,18 +232,21 @@ The arguments passed to the bar, text and condition statements are:
 4   | Show bar / show text bools | Array of booleans | Required
 4.1 | Show bar | Boolean | Required
 4.2 | Show text | Boolean | Required
-5   | Array of statements | Array of arrays | Required
+5   | Array of statements | Array of code | Required
 5.1 | Bar code | Code | Required
 5.2 | Text code | Code | Required
 5.3 | Condition | Code | Required
 6   | Priority | Number | Optional (default: `0`)
 
+Return Value:
+- Array of stat IDs
+
 Example:
 ```sqf
-[[[0,1,2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {
+[[[0, 1, 2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {
     params ["_statsArray", "_itemCfg"];
     getNumber (_itemCfg >> _statsArray select 0)
-}, {true}]] call ACE_arsenal_fnc_addStat;
+}, {true}]] call ace_arsenal_fnc_addStat;
 ```
 
 ### 5.3 Removing stats via a function
@@ -293,7 +303,86 @@ Right tabs:
 | 6 | Put |
 | 7 | Misc |
 
-## 6. Eventhandlers
+## 6. Sorting
+
+ACE Arsenal sorting methods are customizable, this will show you how.
+
+### 6.1 Adding sorting methods via config
+
+```cpp
+class ace_arsenal_sorts {
+    class sortBase;
+
+    class TAG_myStat: sortBase {
+        scope = 2; // Only scope 2 show up in arsenal, scope 1 is used for base classes.
+        displayName = "Test entry title"; // Title of the sort.
+        statement = ""; // The returned value will be used to sort alphabetically. The statement's return value is converted to STRING, so anything can be returned by the statement.
+        condition = "true"; // Condition for the sorts to be displayed, default is true if not defined, needs to return a BOOL.
+        tabs[] = { {0,1,2}, { } }; // Arrays of tabs, left array is left tabs, right array is right tabs.
+    };
+};
+```
+
+The arguments passed to the statement are:
+- The config entry of the item `<CONFIG>`
+- The item classname `<STRING>`
+- Quantity of items present `<NUMBER>`
+
+The argument passed to the condition is:
+- If the sorting occurs in a right panel of uniforms, vest or backpacks. `<BOOL>`
+
+### 6.2 Adding sorting methods via a function
+
+`ace_arsenal_fnc_addSort`
+
+|   | Argument | Type | Optional (default value)
+--- | -------- | ---- | ------------------------
+0   | Tabs to add the sort to | Array of arrays | Required
+0.1 | Left tab indexes | Array of numbers | Required
+0.2 | Right tab indexes | Array of numbers | Required
+1   | Stat class ID | String | Required
+2   | Title | String | Required
+3   | Algorithm | Code | Required
+4   | Condition | Code | Optional (default: `true`)
+
+Return Value:
+- Array of sort IDs
+
+Example:
+```sqf
+[[[0, 1], []], "fireRateSort", "Sort by fire rate", {
+    params ["_itemCfg"];
+    private _fireModes = getArray (_itemCfg >> "modes");
+    private _fireRate = [];
+
+    {
+        _fireRate pushBackUnique (getNumber (_itemCfg >> _x >> "reloadTime"));
+    } forEach _fireModes;
+
+    _fireRate sort true;
+    _fireRate param [0, 0]
+}] call ace_arsenal_fnc_addSort;
+```
+
+Sorting method IDs are unique and are generated in the same fashion as the stat IDs (see `5.3 Removing stats via a function`).
+
+### 6.3 Removing sorting methods via a function
+
+`ace_arsenal_fnc_removeSort`
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Array of IDs | Array | Required
+
+Sorting method IDs are unique and are generated in the same fashion as the stat IDs (see `5.3 Removing stats via a function`).
+
+For config added sorts the classname is used, for function added ones the string provided is used.
+
+### 6.4 Sort tab numbers
+
+The same numbers are used for sorting methods as for stats (see `5.4 Stat tab numbers`).
+
+## 7. Eventhandlers
 
 All are local.
 
@@ -306,9 +395,9 @@ All are local.
 | ace_arsenal_leftPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
 | ace_arsenal_rightPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
 | ace_arsenal_onLoadoutSave | Loadout index (SCALAR), [loadout name (STRING), loadout data (ARRAY)] |
-| ace_arsenal_onLoadoutSaveExtended | Loadout index (SCALAR), [loadout name (STRING), CBA extended loadout data (ARRAY)] |
+| ace_arsenal_onLoadoutSaveExtended | Loadout index (SCALAR), [loadout name (STRING), CBA extended loadout data (ARRAY)] | 3.15.1
 | ace_arsenal_onLoadoutLoad | loadout data (ARRAY), loadout name (STRING) |
-| ace_arsenal_onLoadoutLoadExtended | CBA extended loadout data (ARRAY), loadout name (STRING) |
+| ace_arsenal_onLoadoutLoadExtended | CBA extended loadout data (ARRAY), loadout name (STRING) | 3.15.1
 | ace_arsenal_onLoadoutDelete | loadout name (STRING) |
 | ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL), [loadout author (STRING), loadout name (STRING), loadout data (ARRAY)]  |
 | ace_arsenal_loadoutUnshared | Loadouts list listnBox control (CONTROL), loadout name (STRING) |
@@ -320,9 +409,9 @@ All are local.
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 
-## 7. Custom sub-categories
+## 8. Custom sub item categories
 
-### 7.1 Adding a sub-category
+### 8.1 Adding a sub item category
 
 `ace_arsenal_fnc_addRightPanelButton`
 

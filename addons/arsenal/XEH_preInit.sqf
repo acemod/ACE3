@@ -11,6 +11,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
+// Arsenal events
 [QGVAR(statsToggle), {
     params ["_display", "_showStats"];
 
@@ -43,29 +44,29 @@ PREP_RECOMPILE_END;
     _this call FUNC(buttonStatsPage);
 }] call CBA_fnc_addEventHandler;
 
-
 [QGVAR(displayStats), {
     _this call FUNC(handleStats);
 }] call CBA_fnc_addEventHandler;
 
+// Compile sorts and stats
 call FUNC(compileStats);
 call FUNC(compileSorts);
 
 [QUOTE(ADDON), {!isNil QGVAR(camera)}] call CBA_fnc_registerFeatureCamera;
 
-// Compatibility with CBA scripted optics and dispoable framework
+// Compatibility with CBA scripted optics and disposable framework
 [QGVAR(displayOpened), {
-    "cba_optics_arsenalOpened" call CBA_fnc_localEvent;
-    "cba_disposable_arsenalOpened" call CBA_fnc_localEvent;
+    "CBA_optics_arsenalOpened" call CBA_fnc_localEvent;
+    "CBA_disposable_arsenalOpened" call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(displayClosed), {
-    "cba_optics_arsenalClosed" call CBA_fnc_localEvent;
-    "cba_disposable_arsenalClosed" call CBA_fnc_localEvent;
+    "CBA_optics_arsenalClosed" call CBA_fnc_localEvent;
+    "CBA_disposable_arsenalClosed" call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
 // Setup Tools tab
-[uiNamespace getVariable [QGVAR(configItemsTools), []], localize LSTRING(toolsTab), TOOLS_TAB_ICON, -1, true] call FUNC(addRightPanelButton);
+[keys (uiNamespace getVariable [QGVAR(configItemsTools), createHashMap]), LLSTRING(toolsTab), TOOLS_TAB_ICON, -1, true] call FUNC(addRightPanelButton);
 
 
 ADDON = true;
