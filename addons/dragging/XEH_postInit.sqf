@@ -19,6 +19,11 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     GVAR(maxWeightCarryRun) = 50;
 };
 
+// Extended EH doesn't fire for dead units, so add interactions manually
+{
+    _x call FUNC(initPerson);
+} forEach allDeadMen;
+
 ["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
 
