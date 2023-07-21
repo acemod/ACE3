@@ -1302,7 +1302,10 @@ See the make.cfg file for additional build options.
                     addonTomlPath = os.path.join(work_drive, prefix, module, "addon.toml")
                     if os.path.isfile(addonTomlPath):
                         with open(addonTomlPath, "r") as f:
-                            skipPreprocessing = "[preprocess]\nenabled = false" in f.read() #python 3.11 has real toml but this is fine for now
+                            if "preprocess = false" in f.read():
+                                print_error("'preprocess = false' not supported")
+                                raise
+                            skipPreprocessing = "[preprocess]\nenabled = false" in f.read()
 
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
