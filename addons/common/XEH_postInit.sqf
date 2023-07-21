@@ -540,7 +540,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
 
 
-["ACE3 Weapons", QGVAR(unloadWeapon), localize LSTRING(unloadWeapon), {
+["ACE3 Weapons", QGVAR(unloadWeapon), LLSTRING(unloadWeapon), {
     // Conditions:
     if !([ACE_player, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
 
@@ -558,11 +558,8 @@ GVAR(deviceKeyCurrentIndex) = -1;
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout"];
-    // remove if with https://github.com/CBATeam/CBA_A3/pull/1548
-    if (count _loadout == 2) then {
-        _loadout = _loadout select 0;
-    };
     _loadout params ["_primaryWeaponArray"];
+
     if ((_primaryWeaponArray param [0, ""]) == "ACE_FakePrimaryWeapon") then {
         TRACE_1("Ignoring fake gun",_primaryWeaponArray);
         _loadout set [0, []];
