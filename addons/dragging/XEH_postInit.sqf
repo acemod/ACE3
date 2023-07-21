@@ -36,7 +36,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 [QGVAR(carryingContainerClosed), {
     params ["_container", "_owner"];
     TRACE_2("carryingContainerClosed EH",_container,_owner);
-    if (!(_owner getVariable [QGVAR(isCarrying), false])) exitWith { ERROR_1("not carrying - %1") };
+    if (!(_owner getVariable [QGVAR(isCarrying), false])) exitWith { ERROR_1("not carrying - %1",_this) };
 
     private _weight = 0;
     if !(_container getVariable [QGVAR(ignoreWeightCarry), false]) then {
@@ -57,7 +57,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 [QGVAR(draggingContainerClosed), {
     params ["_container", "_owner"];
     TRACE_2("draggingContainerClosed EH",_container,_owner);
-    if (!(_owner getVariable [QGVAR(isDragging), false])) exitWith { ERROR_1("not dragging - %1") };
+    if (!(_owner getVariable [QGVAR(isDragging), false])) exitWith { ERROR_1("not dragging - %1",_this) };
 
     private _weight = 0;
     if !(_container getVariable [QGVAR(ignoreWeightDrag), false]) then {
