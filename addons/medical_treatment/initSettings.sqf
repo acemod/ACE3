@@ -297,6 +297,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(allowGaveDigging),
+    "CHECKBOX",
+    [LSTRING(AllowGaveDigging_DisplayName), LSTRING(AllowGaveDigging_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(allowGraveUnconscious),
     "CHECKBOX",
     [LSTRING(AllowGraveUnconscious_DisplayName), LSTRING(AllowGraveUnconscious_Description)],

@@ -830,6 +830,12 @@
             <Chinesesimp>能够将昏迷的伤员装入尸袋中。</Chinesesimp>
             <Korean>기절상태의 인원을 시체운반용부대에 옮겨 담을 수 있는지를 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_DisplayName">
+            <English>Allow Grave Digging</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_Description">
+            <English>Enables digging graves to dispose of corpes.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveUnconscious_DisplayName">
             <English>Allow Unconscious Grave</English>
         </Key>
