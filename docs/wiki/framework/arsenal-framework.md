@@ -399,6 +399,7 @@ All are local.
 | ace_arsenal_onLoadoutLoad | loadout data (ARRAY), loadout name (STRING) |
 | ace_arsenal_onLoadoutLoadExtended | CBA extended loadout data (ARRAY), loadout name (STRING) | 3.15.1
 | ace_arsenal_onLoadoutDelete | loadout name (STRING) |
+| ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL), loadout author (STRING), loadout name (STRING), loadout data (ARRAY) |
 | ace_arsenal_loadoutUnshared | Loadouts list listnBox control (CONTROL), loadout author (STRING), loadout name (STRING) |
 | ace_arsenal_cargoChanged | Arsenal display (DISPLAY), item (STRING), add or remove (NUMBER), shiftState (BOOL) |
 | ace_arsenal_loadoutImported | Arsenal display (DISPLAY), import list (BOOL) |
