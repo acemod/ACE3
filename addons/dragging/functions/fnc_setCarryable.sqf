@@ -49,7 +49,9 @@ GVAR(initializedClasses_carry) = _initializedClasses;
 [_type, "ContainerClosed", {
     params ["_object"];
     private _owner = _object getVariable [QEGVAR(common,owner), objNull];
+    TRACE_2("ContainerClosed-carry",_object,_owner);
     if (isNull _owner) exitWith {};
+    if (_object != (_owner getVariable [QGVAR(carriedObject), objNull])) exitWith {};
     [QGVAR(carryingContainerClosed), [_object, _owner], _owner] call CBA_fnc_targetEvent;
 }, false] call CBA_fnc_addClassEventHandler;
 
