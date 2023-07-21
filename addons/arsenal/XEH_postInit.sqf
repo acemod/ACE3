@@ -16,7 +16,7 @@ GVAR(lastSortDirectionRight) = DESCENDING;
 [QGVAR(removeBox), LINKFUNC(removeBox)] call CBA_fnc_addEventHandler;
 [QGVAR(addDefaultLoadout), LINKFUNC(addDefaultLoadout)] call CBA_fnc_addEventHandler;
 [QGVAR(removeDefaultLoadout), LINKFUNC(removeDefaultLoadout)] call CBA_fnc_addEventHandler;
-[QGVAR(renameDefaultLoadout), LIKNFUNC(renameDefaultLoadout)] call CBA_fnc_addEventHandler;
+[QGVAR(renameDefaultLoadout), LINKFUNC(renameDefaultLoadout)] call CBA_fnc_addEventHandler;
 
 [QGVAR(broadcastFace), {
     params ["_unit", "_face"];
