@@ -412,6 +412,12 @@
             <Chinesesimp>装入裹尸袋时间</Chinesesimp>
             <Korean>초 단위로 시체 운반용 부대를 사용하는데 걸리는 시간을 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_DisplayName">
+            <English>Grave Digging Time</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
+            <English>Time, in seconds, required to dig a grave for a patient.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
             <German>Erlaube Epiniphrin</German>
@@ -823,6 +829,12 @@
             <German>Aktiviert, Bewusstlose in Leichensack zu legen.</German>
             <Chinesesimp>能够将昏迷的伤员装入尸袋中。</Chinesesimp>
             <Korean>기절상태의 인원을 시체운반용부대에 옮겨 담을 수 있는지를 정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowGraveUnconscious_DisplayName">
+            <English>Allow Unconscious Grave</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowGraveUnconscious_Description">
+            <English>Enables placing an unconscious patient in a grave.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -4440,6 +4452,12 @@
             <Chinesesimp>正在将尸体装入尸袋...</Chinesesimp>
             <Chinese>將屍體放入屍袋中...</Chinese>
             <Turkish>Vücut, ceset torbasına yerleştiriliyor...</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DigGrave">
+            <English>Dig grave for body</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
+            <English>Digging grave for body...</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>

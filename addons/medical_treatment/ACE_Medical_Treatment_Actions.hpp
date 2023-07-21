@@ -249,9 +249,18 @@ class GVAR(actions) {
         treatmentTime = QGVAR(treatmentTimeBodyBag);
         items[] = {"ACE_bodyBag"};
         condition = QFUNC(canPlaceInBodyBag);
-        callbackSuccess = QFUNC(placeInBodyBag);
+        callbackSuccess = QFUNC(placeInBodyBagOrGrave);
         consumeItem = 1;
         litter[] = {};
+    };
+    class Grave: BodyBag {
+        displayName = CSTRING(DigGrave);
+        displayNameProgress = CSTRING(DiggingGrave);
+        icon = QPATHTOEF(medical_gui,ui\cross_grave.paa);
+        treatmentTime = QGVAR(treatmentTimeGrave);
+        condition = QFUNC(fnc_canDigGrave);
+        items[] = {"ACE_EntrenchingTool"};
+        consumeItem = 0;
     };
     class CPR: BasicBandage {
         displayName = CSTRING(Actions_CPR);
