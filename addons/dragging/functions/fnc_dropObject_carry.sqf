@@ -55,9 +55,9 @@ if (_previousWeaponIndex != -1) then {
     _unit action ["SwitchWeapon", _unit, _unit, _previousWeaponIndex];
 };
 
-[_unit, "forceWalk", "ace_dragging", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockSprint", "ace_dragging", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ace_dragging", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // prevent object from flipping inside buildings
 if (_inBuilding) then {
@@ -66,10 +66,6 @@ if (_inBuilding) then {
 
 _unit setVariable [QGVAR(isCarrying), false, true];
 _unit setVariable [QGVAR(carriedObject), objNull, true];
-
-// remove EH from container
-_target removeEventHandler ["ContainerClosed", _target getVariable [QGVAR(carryingContainerClosedEh), -1]];
-_target setVariable [QGVAR(carryingContainerClosedEh), nil];
 
 // make object accesable for other units
 [objNull, _target, true] call EFUNC(common,claim);

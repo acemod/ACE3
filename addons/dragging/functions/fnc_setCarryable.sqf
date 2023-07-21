@@ -46,6 +46,13 @@ if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
 GVAR(initializedClasses_carry) = _initializedClasses;
 
+[_type, "ContainerClosed", {
+    params ["_object"];
+    private _owner = _object getVariable [QEGVAR(common,owner), objNull];
+    if (isNull _owner) exitWith {};
+    [QGVAR(carryingContainerClosed), [_object, _owner], _owner] call CBA_fnc_targetEvent;
+}, false] call CBA_fnc_addClassEventHandler;
+
 private _icon = [QUOTE(PATHTOF(UI\icons\box_carry.paa)), QUOTE(PATHTOF(UI\icons\person_carry.paa))] select (_object isKindOf "Man");
 
 private _carryAction = [QGVAR(carry), localize LSTRING(Carry), _icon, {[_player, _target] call FUNC(startCarry)}, {[_player, _target] call FUNC(canCarry)}] call EFUNC(interact_menu,createAction);

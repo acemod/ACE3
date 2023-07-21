@@ -46,6 +46,14 @@ if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
 GVAR(initializedClasses) = _initializedClasses;
 
+[_type, "ContainerClosed", {
+    params ["_object"];
+    private _owner = _object getVariable [QEGVAR(common,owner), objNull];
+    if (isNull _owner) exitWith {};
+    [QGVAR(draggingContainerClosed), [_object, _owner], _owner] call CBA_fnc_targetEvent;
+}, false] call CBA_fnc_addClassEventHandler;
+
+
 private _icon = [QUOTE(PATHTOF(UI\icons\box_drag.paa)), QUOTE(PATHTOF(UI\icons\person_drag.paa))] select (_object isKindOf "Man");
 
 private _dragAction = [QGVAR(drag), localize LSTRING(Drag), _icon, {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}] call EFUNC(interact_menu,createAction);

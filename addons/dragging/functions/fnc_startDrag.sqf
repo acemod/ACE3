@@ -59,7 +59,7 @@ if !(GVAR(dragAndFire)) then {
 // Save the weapon so we can monitor if it changes
 _unit setVariable [QGVAR(currentWeapon), currentWeapon _unit];
 
-[_unit, "blockThrow", "ace_dragging", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
@@ -87,14 +87,6 @@ if (_target isKindOf "CAManBase") then {
 
 // prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isDragging), true, true];
-
-// Event Handler for changes to inventory: drop object if weight past ACE_maxWeightDrag is added
-private _ehID = _target addEventHandler ["ContainerClosed", {
-    params ["_container", ""];
-    private _owner = _container getVariable [QEGVAR(common,owner), objNull];
-    [QGVAR(draggingContainerClosed), [_container, _owner], _owner] call CBA_fnc_targetEvent;
-}];
-_target setVariable [QGVAR(draggingContainerClosedEh), _ehID];
 
 [FUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
 

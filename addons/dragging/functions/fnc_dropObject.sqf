@@ -51,7 +51,7 @@ if (_target isKindOf "CAManBase") then {
 
 _unit removeWeapon "ACE_FakePrimaryWeapon";
 
-[_unit, "blockThrow", "ace_dragging", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // prevent object from flipping inside buildings
 if (_inBuilding) then {
@@ -64,10 +64,6 @@ if (_inBuilding) then {
 
 _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];
-
-// remove EH from container
-_target removeEventHandler ["ContainerClosed", _target getVariable [QGVAR(draggingContainerClosedEh), -1]];
-_target setVariable [QGVAR(draggingContainerClosedEh), nil];
 
 // make object accessible for other units
 [objNull, _target, true] call EFUNC(common,claim);
@@ -87,7 +83,7 @@ if (_target getVariable [QGVAR(isUAV), false]) then {
 };
 
 // fixes not being able to move when in combat pace
-[_unit, "forceWalk", "ace_dragging", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // reset mass
 private _mass = _target getVariable [QGVAR(originalMass), 0];
