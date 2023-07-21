@@ -166,9 +166,10 @@ private _magazineMiscItems = createHashMap;
 
     switch (true) do {
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
-        case (getNumber (_x >> "ACE_isUnique") == 1): {
+        case (getNumber (_x >> "ACE_isUnique") isEqualTo 1): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             _magazineMiscItems set [_className, nil];
+            if (getNumber (_x >> "ACE_isTool") isEqualTo 1) then {_toolList set [_className, nil]};
         };
         // Grenades
         case (_className in _grenadeList): {
