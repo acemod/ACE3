@@ -2,12 +2,12 @@
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
- * Handles the stats control group
+ * Handles the stats control group.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Current panel control <CONTROL>
- * 2: Current panel selection <SCALAR>
+ * 2: Current panel selection <NUMBER>
  * 3: Item config entry <CONFIG>
  *
  * Return Value:
@@ -27,7 +27,7 @@ private _hideUnusedFnc = {
     params ["_numbers"];
 
     {
-        private _statsTitleCtrl = _display displayCtrl (5101 + ((_x - 1) * 4));
+        private _statsTitleCtrl = _display displayCtrl (IDC_statsTitle1 + ((_x - 1) * 4));
         private _statsTitleIDC = ctrlIDC _statsTitleCtrl;
 
         private _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
@@ -47,34 +47,40 @@ private _hideUnusedFnc = {
 };
 
 if (!isNil "_itemCfg") then {
-
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];
 
         // Get the proper list and page
         if (_leftPanel) then {
-            [true, (GVAR(statsListLeftPanel)) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
+            [(GVAR(statsListLeftPanel)) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
         } else {
-            [false, (GVAR(statsListRightPanel)) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
-        } params ["_isLeftPanel", "_statsArray", "_currentPage"];
+            [(GVAR(statsListRightPanel)) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
+        } params ["_statsArray", "_currentPage"];
 
         private _statsList = _statsArray select _currentPage;
-
         private _statsCount = 0;
 
         // Handle titles, bars and text
         _statsList = _statsList select [0, 5];
+
         if (_statsList isNotEqualTo []) then {
+            private _statsTitleCtrl = controlNull;
+            private _statsTitleIDC = -1;
+            private _statsBackgroundCtrl = controlNull;
+            private _statsBarCtrl = controlNull;
+            private _statsTextCtrl = controlNull;
+            private _textStatementResult = "";
+
             {
                 _x params ["_ID", "_configEntry", "_title", "_bools", "_statements"];
                 _bools params ["_showBar", "_showText"];
                 _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
 
-                private _statsTitleCtrl = _display displayCtrl (5101 + _forEachIndex * 4);
-                private _statsTitleIDC = ctrlIDC _statsTitleCtrl;
-                private _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
-                private _statsBarCtrl = _display displayCtrl (_statsTitleIDC + 2);
-                private _statsTextCtrl = _display displayCtrl (_statsTitleIDC + 3);
+                _statsTitleCtrl = _display displayCtrl (IDC_statsTitle1 + _forEachIndex * 4);
+                _statsTitleIDC = ctrlIDC _statsTitleCtrl;
+                _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
+                _statsBarCtrl = _display displayCtrl (_statsTitleIDC + 2);
+                _statsTextCtrl = _display displayCtrl (_statsTitleIDC + 3);
 
                 _statsCount = _statsCount + 1;
                 _statsTitleCtrl ctrlSetText _title;
@@ -83,7 +89,6 @@ if (!isNil "_itemCfg") then {
                 // Handle bars
                 if (_showBar) then {
                     _statsBarCtrl progressSetPosition ([_configEntry, _itemCfg] call _barStatement);
-
                     _statsBackgroundCtrl ctrlSetFade 0;
                     _statsBarCtrl ctrlSetFade 0;
                 } else {
@@ -93,15 +98,14 @@ if (!isNil "_itemCfg") then {
 
                 // Handle text entries
                 if (_showText) then {
-                    private _textStatementResult = [_configEntry, _itemCfg] call _textStatement;
+                    _textStatementResult = [_configEntry, _itemCfg] call _textStatement;
 
-                    if (_textStatementResult isEqualtype "") then {
-                        _statsTextCtrl ctrlSetText _textStatementResult;
-                    } else {
-                        _statsTextCtrl ctrlSetText (str _textStatementResult);
+                    if !(_textStatementResult isEqualtype "") then {
+                        _textStatementResult = str _textStatementResult;
                     };
-                    _statsTextCtrl ctrlSetTextColor ([[1,1,1,1], [0,0,0,1]] select (_showBar));
 
+                    _statsTextCtrl ctrlSetText _textStatementResult;
+                    _statsTextCtrl ctrlSetTextColor ([[1, 1, 1, 1], [0, 0, 0, 1]] select (_showBar));
                     _statsTextCtrl ctrlSetFade 0;
                 } else {
                     _statsTextCtrl ctrlSetFade 1;
@@ -116,8 +120,8 @@ if (!isNil "_itemCfg") then {
                     _statsTextCtrl
                 ];
             } forEach (_statsList select {
-                _x params ["_ID","_configEntry", "_title", "_bools", "_statements"];
-                _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
+                _x params ["", "_configEntry", "", "", "_statements"];
+                _statements params ["", "", ["_condition", {true}, [{}]]];
 
                 ([_configEntry, _itemCfg] call _condition)
             });
@@ -140,12 +144,12 @@ if (!isNil "_itemCfg") then {
         _ctrl ctrlCommit 0;
 
 
-        GVAR(statsInfo) = [_isLeftPanel, _statsIndex, _control, _curSel, _itemCfg];
+        GVAR(statsInfo) = [_leftPanel, _statsIndex, _control, _curSel, _itemCfg];
 
         // Toggle page buttons
-        _statsPreviousPageCtrl ctrlEnable !(_currentPage == 0);
-        _statsNextPageCtrl ctrlEnable !(_currentPage + 1 >= count _statsArray);
-        _statsCurrentPageCtrl ctrlSetText ([localize LSTRING(page), str (_currentPage + 1)] joinString " ");
+        _statsPreviousPageCtrl ctrlEnable (_currentPage > 0);
+        _statsNextPageCtrl ctrlEnable (_currentPage + 1 < count _statsArray);
+        _statsCurrentPageCtrl ctrlSetText ([LLSTRING(page), str (_currentPage + 1)] joinString " ");
 
         {
             _x ctrlSetFade 0;
@@ -157,10 +161,10 @@ if (!isNil "_itemCfg") then {
         ];
     };
 
+    // Check if in left or right panel
     if (ctrlIDC _control == IDC_leftTabContent) then {
-
+        // Faces, voices and insigna do not have stats
         if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia] find GVAR(currentLeftPanel) > -1) then {
-
             [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
             _statsBoxCtrl ctrlSetPosition [
                 (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
@@ -234,7 +238,7 @@ if (!isNil "_itemCfg") then {
         };
     };
 } else {
-
+    // If nothing is chosen, hide stats
     [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
