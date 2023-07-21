@@ -48,8 +48,8 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     private _canRun = [_weight] call FUNC(canRun_carry);
 
     // force walking based on weight
-    [_owner, "forceWalk", "ace_dragging", !_canRun] call EFUNC(common,statusEffect_set);
-    [_owner, "blockSprint", "ace_dragging", _canRun] call EFUNC(common,statusEffect_set);
+    [_owner, "forceWalk", QUOTE(ADDON), !_canRun] call EFUNC(common,statusEffect_set);
+    [_owner, "blockSprint", QUOTE(ADDON), _canRun] call EFUNC(common,statusEffect_set);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(draggingContainerClosed), {
