@@ -93,13 +93,15 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     } forEach ([profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {
     private _allPlayerNames = allPlayers apply {name _x};
+    private _loadoutVar = "";
 
     {
         _x params ["_playerName", "_loadoutName", "_loadoutData"];
-        private _loadoutVar = _playerName + _loadoutName;
+
+        _loadoutVar = _playerName + _loadoutName;
+
         // If player who shared loadout doesn't exist anymore, unshare loadout
         if !(_playerName in _allPlayerNames) then {
-
             GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
             GVAR(sharedLoadoutsNamespace) setVariable [QGVAR(sharedLoadoutsNamespace), _sharedLoadoutsVars - [_loadoutVar], true];
 
