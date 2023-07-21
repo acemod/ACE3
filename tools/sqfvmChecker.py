@@ -29,11 +29,11 @@ def get_files_to_process(basePath):
                 addonTomlPath = os.path.join(root, "addon.toml")
                 if os.path.isfile(addonTomlPath):
                     with open(addonTomlPath, "r") as f:
-                        skipPreprocessing = "preprocess = false" in f.read()
+                        skipPreprocessing = "[preprocess]\nenabled = false" in f.read()
                 addonTomlPath = os.path.join(os.path.dirname(root), "addon.toml")
                 if os.path.isfile(addonTomlPath):
                     with open(addonTomlPath, "r") as f:
-                        skipPreprocessing = "preprocess = false" in f.read()
+                        skipPreprocessing = "[preprocess]\nenabled = false" in f.read()
                 if file == "config.cpp" and skipPreprocessing:
                     continue  # ignore configs with __has_include
                 filePath = os.path.join(root, file)
