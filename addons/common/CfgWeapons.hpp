@@ -38,17 +38,4 @@ class CfgWeapons {
             mass = 1;
         };
     };
-
-    class ACE_FakeItem: ACE_ItemCore {
-        author = CSTRING(ACETeam);
-        scope = 1;
-        scopeCurator = 1;
-        scopeArsenal = 1;
-        displayName = "";
-        model = "\A3\Weapons_f\empty";
-        picture = "";
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 0;
-        };
-    };
 };

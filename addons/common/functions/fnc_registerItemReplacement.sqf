@@ -21,7 +21,7 @@ params [["_oldItem", "", [0,""]], ["_newItems", "", ["", []]], ["_replaceInherit
 TRACE_3("registerItemReplacement",_oldItem,_newItems,_replaceInherited);
 
 // CBA player event handler function
-private _fnc_replaceItems = {
+DFUNC(registerItemReplacement_replaceItems) = {
     params ["_unit"];
 
     private _items = items _unit;
@@ -32,11 +32,13 @@ private _fnc_replaceItems = {
     if (_newItems isEqualTo []) exitWith {
         GVAR(oldItems) = _items;
     };
+    TRACE_2("replacing",_unit,_newItems);
 
     if (GVAR(blockItemReplacement)) exitWith {
+        TRACE_2("blocked delay",_unit,_newItems);
         [{!GVAR(blockItemReplacement)}, {
             if (ACE_player isNotEqualTo _this) exitWith {};
-            _this addItem "ACE_FakeItem"
+            [_this] call FUNC(registerItemReplacement_replaceItems);
         }, _unit] call CBA_fnc_waitUntilAndExecute;
     };
 
@@ -96,7 +98,7 @@ if (isNil QGVAR(itemReplacements)) then {
     GVAR(itemReplacements) = [] call CBA_fnc_createNamespace;
     GVAR(inheritedReplacements) = [];
     GVAR(oldItems) = [];
-    ["loadout", _fnc_replaceItems] call CBA_fnc_addPlayerEventHandler;
+    ["loadout", FUNC(registerItemReplacement_replaceItems)] call CBA_fnc_addPlayerEventHandler;
 };
 
 // Save item replacement
@@ -124,5 +126,5 @@ if (!isNull ACE_player) then {
     // For example, if item replacements are registred in PostInit (due to CBA
     // settings) by different addons, the inventory is only scanned once in the
     // next frame, not once per addon.
-    [_fnc_replaceItems, [ACE_player]] call CBA_fnc_execNextFrame;
+    [FUNC(registerItemReplacement_replaceItems), [ACE_player]] call CBA_fnc_execNextFrame;
 };
