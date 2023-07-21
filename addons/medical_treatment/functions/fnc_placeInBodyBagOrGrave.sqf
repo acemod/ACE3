@@ -60,7 +60,7 @@ private _headPos = _patient modelToWorldVisual (_patient selectionPosition "head
 private _spinePos = _patient modelToWorldVisual (_patient selectionPosition "Spine3");
 private _direction = (_headPos vectorFromTo _spinePos) call CBA_fnc_vectDir;
 if (_restingPlaceIsGrave) then {
-    //Orentation of the grave object needs to be rotated 90 degrees to line of with the body
+    //Orentation of the grave object needs to be rotated 90 degrees to line up with the body
     _direction = _direction + 90;
 };
 
