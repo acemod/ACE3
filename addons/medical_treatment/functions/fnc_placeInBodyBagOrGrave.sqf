@@ -25,16 +25,18 @@ TRACE_1("placeInBodyBagOrGrave",_patient);
 
 private _alive = alive _patient;
 private _restingPlace = "ACE_bodyBagObject";
-if (_usedItem == "ACE_EntrenchingTool") then {
-    _restingPlace = "Land_Grave_dirt_F";
-};
+private _restingPlaceIsBodyBag = _restingPlace == "ACE_bodyBagObject";
 
-if (_alive && {!GVAR(allowBodyBagUnconscious) && {_restingPlace == "ACE_bodyBagObject"}}) exitWith {
+if (_alive && {!GVAR(allowBodyBagUnconscious) && {_restingPlaceIsBodyBag}}) exitWith {
     [_medic, "ACE_bodyBag"] call EFUNC(common,addToInventory); // re-add slighly used bodybag?
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
-if (_alive && {!GVAR(allowGraveUnconscious) && {_restingPlace == "Land_Grave_dirt_F"}}) exitWith {
+if (_usedItem == "ACE_EntrenchingTool") then {
+    _restingPlace = "Land_Grave_dirt_F";
+    _restingPlaceIsGrave = _restingPlace == "Land_Grave_dirt_F";
+};
+if (_alive && {!GVAR(allowGraveUnconscious) && {_restingPlaceIsGrave}}) exitWith {
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
@@ -48,11 +50,18 @@ if (alive _patient) then {
     [_patient, "buried_alive", _medic] call EFUNC(medical_status,setDead);
 };
 
-private _position = (getPosASL _patient) vectorAdd [0, 0, 0.2];
+private _position = getPosASL _patient;
+if (_restingPlaceIsBodyBag) then {
+    //Body bag needs to be a little higher than grave
+    _position = _position vectorAdd [0, 0, 0.2];
+};
 
 private _headPos = _patient modelToWorldVisual (_patient selectionPosition "head");
 private _spinePos = _patient modelToWorldVisual (_patient selectionPosition "Spine3");
 private _direction = (_headPos vectorFromTo _spinePos) call CBA_fnc_vectDir;
+if (_restingPlaceIsGrave) then {
+    _direction = _direction + 90;
+};
 
 // Move the body away so it won't collide with the body bag object
 // This setPosASL seems to need to be called where the unit is local
