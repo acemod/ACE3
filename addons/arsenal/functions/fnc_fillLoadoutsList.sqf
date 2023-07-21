@@ -96,10 +96,9 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
     {
         _x params ["_playerName", "_loadoutName", "_loadoutData"];
-
+        private _loadoutVar = _playerName + _loadoutName;
         // If player who shared loadout doesn't exist anymore, unshare loadout
         if !(_playerName in _allPlayerNames) then {
-            private _loadoutVar = _playerName + _loadoutName;
 
             GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
             GVAR(sharedLoadoutsNamespace) setVariable [QGVAR(sharedLoadoutsNamespace), _sharedLoadoutsVars - [_loadoutVar], true];
