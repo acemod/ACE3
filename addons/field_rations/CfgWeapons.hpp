@@ -40,6 +40,7 @@ class CfgWeapons {
         XGVAR(replacementItem) = "ACE_WaterBottle_Half";
         XGVAR(consumeAnims)[] = {QGVAR(drinkStand), QGVAR(drinkCrouch), QGVAR(drinkProne)};
         XGVAR(consumeSounds)[] = {QGVAR(drink1), QGVAR(drink1), QGVAR(drink2)};
+        ACE_isFieldRationItem = 1;
     };
 
     class ACE_WaterBottle_Half: ACE_WaterBottle {
@@ -87,6 +88,7 @@ class CfgWeapons {
         XGVAR(replacementItem) = "ACE_Canteen_Half";
         XGVAR(consumeAnims)[] = {QGVAR(drinkStand), QGVAR(drinkCrouch), QGVAR(drinkProne)};
         XGVAR(consumeSounds)[] = {QGVAR(drink1), QGVAR(drink1), QGVAR(drink2)};
+        ACE_isFieldRationItem = 1;
     };
 
     class ACE_Canteen_Half: ACE_Canteen {
@@ -132,6 +134,7 @@ class CfgWeapons {
         XGVAR(consumeText) = CSTRING(DrinkingX);
         XGVAR(consumeAnims)[] = {QGVAR(drinkStandCan), QGVAR(drinkCrouchCan), QGVAR(drinkProneCan)};
         XGVAR(consumeSounds)[] = {QGVAR(drinkCan1), QGVAR(drinkCan1), QGVAR(drinkCan2)};
+        ACE_isFieldRationItem = 1;
     };
 
     class ACE_Can_Franta: ACE_Can_Spirit {
@@ -164,6 +167,7 @@ class CfgWeapons {
         XGVAR(consumeTime) = 10;
         XGVAR(hungerSatiated) = 20;
         XGVAR(consumeText) = CSTRING(EatingX);
+        ACE_isFieldRationItem = 1;
     };
 
     class ACE_MRE_BeefStew: ACE_MRE_LambCurry {
@@ -225,7 +229,7 @@ class CfgWeapons {
         model = QPATHTOF(data\mre_human.p3d);
         picture = QPATHTOF(ui\item_mre_human_co.paa);
     };
-    
+
     // - Misc Food ------------------------------------------------------------
     class ACE_Sunflower_Seeds: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
@@ -240,5 +244,6 @@ class CfgWeapons {
         XGVAR(consumeTime) = 10;
         XGVAR(hungerSatiated) = 10;
         XGVAR(consumeText) = CSTRING(EatingX);
+        ACE_isFieldRationItem = 1;
     };
 };

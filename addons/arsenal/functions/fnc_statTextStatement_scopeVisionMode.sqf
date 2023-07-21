@@ -54,11 +54,14 @@ private _secondaryNVGSupported = false;
 //But on some scopes (from one specific mod) even the primary mode has useModelOptics=false
 //So we have this workaround
 
-if (
-    count _opticsModes == 1 || //If we only have a single mode. And it's a secondary, then consider it primary.
-    {{_x select 1} count _opticsModes  == count _opticsModes} //If every mode supports it. Then then the primary also supports it
-) then {
+// If we only have a single mode and it's a secondary, then consider it primary.
+if (count _opticsModes == 1 && {!(_opticsModes select 0 select 0)}) then {
     _primaryNVGSupported = _secondaryNVGSupported;
+};
+
+// If all modes support NVGs, then the primary also supports it
+if (!_primaryNVGSupported && {(_opticsModes select {_x select 1}) isEqualTo _opticsModes}) then {
+    _primaryNVGSupported = true;
 };
 
 if (_primaryNVGIntegrated) exitWith {LLSTRING(statVisionMode_IntPrim)};
