@@ -30,8 +30,8 @@ if (_patient call EFUNC(common,isAwake)) exitWith {
 ["ace_unloadPersonEvent", [_patient, objectParent _patient, _medic], _patient] call CBA_fnc_targetEvent;
 
 [{
-    params ["_unit", "_vehicle"];
-    (alive _unit) && {alive _vehicle} && {isNull objectParent _patient}
+    params ["_unit"];
+    isNull objectParent _unit
 }, {
     params ["_unit", "_vehicle"];
     TRACE_2("success",_unit,_vehicle);
