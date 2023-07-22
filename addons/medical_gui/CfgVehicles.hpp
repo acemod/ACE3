@@ -57,7 +57,7 @@ class CfgVehicles {
                 };
                 class ACE_UnloadPatient {
                     displayName = CSTRING(UnloadPatient);
-                    condition = QUOTE(_target getVariable [ARR_2('ACE_isUnconscious',false)] && {vehicle _target != _target} && {vehicle _player == _player});
+                    condition = QUOTE((_target getVariable [ARR_2('ACE_isUnconscious',false)] || {!alive _target}) && {vehicle _target != _target} && {vehicle _player == _player});
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,unloadUnit));
                     icon = QPATHTOF(ui\cross.paa);
