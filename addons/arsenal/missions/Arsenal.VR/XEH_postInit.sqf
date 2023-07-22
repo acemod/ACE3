@@ -88,29 +88,29 @@ cba_diagnostic_projectileMaxLines = 10;
     {
         _unit = _x;
 
-        if (vest _player != "") then { _target addVest vest _player; };
+        if (vest _player != "") then { _unit addVest vest _player; };
 
         removeBackpack _unit;
-        if (backpack _player != "") then { _target addBackpack backpack _player; };
+        if (backpack _player != "") then { _unit addBackpack backpack _player; };
         removeHeadgear _unit;
-        if (headgear _player != "") then { _target addHeadgear headgear _player; };
+        if (headgear _player != "") then { _unit addHeadgear headgear _player; };
         removeGoggles _unit;
-        if (goggles _player != "") then { _target addGoggles goggles _player; };
+        if (goggles _player != "") then { _unit addGoggles goggles _player; };
 
         removeAllWeapons _unit;
-        if (primaryWeapon _player != "") then { _target addWeapon primaryWeapon _player; };
+        if (primaryWeapon _player != "") then { _unit addWeapon primaryWeapon _player; };
 
         {
             _unit addPrimaryWeaponItem _x;
         } forEach primaryWeaponItems _player;
 
-        if (secondaryWeapon _player != "") then { _target addWeapon secondaryWeapon _player; };
+        if (secondaryWeapon _player != "") then { _unit addWeapon secondaryWeapon _player; };
 
         {
             _unit addSecondaryWeaponItem _x;
         } forEach secondaryWeaponItems _player;
 
-        if (handgunWeapon _player != "") then { _target addWeapon handgunWeapon _player; };
+        if (handgunWeapon _player != "") then { _unit addWeapon handgunWeapon _player; };
 
         {
             _unit addHandgunItem _x;
