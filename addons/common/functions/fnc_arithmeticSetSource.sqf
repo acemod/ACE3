@@ -25,16 +25,16 @@ TRACE_4("arithmeticSetSource",_namespace,_setID,_source,_variable);
 private _hash = _namespace getVariable _setID;
 
 if (isNil "_hash") then {
-    _hash = [] call CBA_fnc_hashCreate;
+    _hash = createHashMap;
     _namespace setVariable [_setID, _hash];
 };
 
 if (_variable isEqualTo {}) then {
     TRACE_1("removing",_source);
-    [_hash, _source] call CBA_fnc_hashRem;
+    _hash deleteAt _source;
 } else {
     TRACE_2("adding",_source,_variable);
-    [_hash, _source, _variable] call CBA_fnc_hashSet;
+    _hash set [_source, _variable];
 };
 
 nil

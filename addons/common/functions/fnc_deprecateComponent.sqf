@@ -22,7 +22,7 @@ params ["_oldComponent", "_newComponent", "_version"];
 _oldComponent params ["_oldComponentName", "_oldSettingName"];
 _newComponent params ["_newComponentName", "_newSettingName"];
 
-private _isReplacementAvailable = isClass (configFile >> "CfgPatches" >> _newComponentName);
+private _isReplacementAvailable = [_newComponentName] call FUNC(isModLoaded);
 private _isDeprecatedLoaded = missionNamespace getvariable [_oldSettingName, false];
 private _isReplacementLoaded = missionNamespace getvariable [_newSettingName, false];
 

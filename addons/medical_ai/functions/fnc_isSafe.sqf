@@ -15,6 +15,7 @@
  * Public: No
  */
 
-(getSuppression _this == 0)
-&& {CBA_missionTime - (_this getVariable [QGVAR(lastFired), -30]) > 30}
+   (CBA_missionTime - (_this getVariable [QGVAR(lastFired), -999999]) > GVAR(timeSafe_shoot))
+&& {CBA_missionTime - (_this getVariable [QGVAR(lastHit), -999999]) > GVAR(timeSafe_hit)}
+&& {CBA_missionTime - (_this getVariable [QGVAR(lastSuppressed), -999999]) > GVAR(timeSafe_suppressed)}
 && {!(_this getVariable [QEGVAR(captives,isHandcuffed), false])}

@@ -23,7 +23,7 @@ class RscTitles {
     class ACE_RscHint {
         idd = -1;
         onLoad = "uiNamespace setVariable ['ACE_ctrlHint', (_this select 0) displayCtrl 1];";
-        movingEnable = false;
+        movingEnable = 0;
         duration = 4;
         fadeIn = 0.2;
         fadeOut = 0.2;
@@ -37,10 +37,10 @@ class RscTitles {
                 SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0, 0, 0, 0.5};
-                x = safeZoneW + safeZoneX - 0 * safezoneW;  //safeZoneW + safeZoneX - 0.2 * safezoneW;
-                y = safeZoneY + 0.2 * safezoneH;
-                w = 0.2 * safeZoneW;
-                h = 0.1 * SafeZoneH;
+                x = "safeZoneW + safeZoneX - 0 * safezoneW";  //safeZoneW + safeZoneX - 0.2 * safezoneW;
+                y = "safeZoneY + 0.2 * safezoneH";
+                w = "0.2 * safeZoneW";
+                h = "0.1 * SafeZoneH";
                 font = "RobotoCondensed";
             };
         };
@@ -48,7 +48,7 @@ class RscTitles {
     class ACE_RscErrorHint {
         idd = -1;
         onLoad = "uiNamespace setVariable ['ACE_ctrlErrorHint', (_this select 0) displayCtrl 1];";
-        movingEnable = false;
+        movingEnable = 0;
         duration = 999999;
         fadeIn = 0.2;
         fadeOut = 0.2;
@@ -61,10 +61,10 @@ class RscTitles {
                 SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0.8, 0, 0, 0.5};
-                x = 0.3 * safeZoneW + safeZoneX;
-                y = 0.4 * safezoneH + safeZoneY;
-                w = 0.4 * safeZoneW;
-                h = 0.2 * SafeZoneH;
+                x = "0.3 * safeZoneW + safeZoneX";
+                y = "0.4 * safezoneH + safeZoneY";
+                w = "0.4 * safeZoneW";
+                h = "0.2 * SafeZoneH";
             };
         };
     };

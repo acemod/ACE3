@@ -3,12 +3,12 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
-        weapons[] = {};
+        units[] = {"ace_dragon_staticAssembled"};
+        weapons[] = {"ace_dragon_super","ace_dragon_sight"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_hot","ace_csw"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Brandon (TCVM)"};
+        authors[] = {"Dani (TCVM)"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

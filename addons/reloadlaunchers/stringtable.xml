@@ -14,7 +14,7 @@
             <Portuguese>Recarregar lançador</Portuguese>
             <Japanese>ランチャーに装填</Japanese>
             <Korean>무기 재장전</Korean>
-            <Chinesesimp>装载发射器</Chinesesimp>
+            <Chinesesimp>装填发射器</Chinesesimp>
             <Chinese>裝載發射器</Chinese>
             <Turkish>Fırlatıcıyı Yükle</Turkish>
         </Key>
@@ -30,8 +30,8 @@
             <Italian>Caricando il lanciamissili...</Italian>
             <Portuguese>Recarregando lançador...</Portuguese>
             <Japanese>ランチャーに装填中・・・</Japanese>
-            <Korean>무기 재장전중...</Korean>
-            <Chinesesimp>正在装载发射器...</Chinesesimp>
+            <Korean>무기 재장전 중...</Korean>
+            <Chinesesimp>正在装填发射器...</Chinesesimp>
             <Chinese>裝載發射器中...</Chinese>
             <Turkish>Fırlatıcı Yükleniyor...</Turkish>
         </Key>
@@ -48,7 +48,7 @@
             <Portuguese>Lançador Carregado</Portuguese>
             <Japanese>ランチャーに装填完了</Japanese>
             <Korean>무기 재장전됨</Korean>
-            <Chinesesimp>发射器装载完毕</Chinesesimp>
+            <Chinesesimp>发射器装填完毕</Chinesesimp>
             <Chinese>發射器裝載完畢</Chinese>
             <Turkish>Fırlatıcı Yüklendi</Turkish>
         </Key>
@@ -65,7 +65,7 @@
             <Portuguese>Recarregar %1</Portuguese>
             <Japanese>%1 を装填</Japanese>
             <Korean>%1 장전</Korean>
-            <Chinesesimp>装载%1</Chinesesimp>
+            <Chinesesimp>装填%1</Chinesesimp>
             <Chinese>裝載%1</Chinese>
             <Turkish>%1 Yüklendi</Turkish>
         </Key>

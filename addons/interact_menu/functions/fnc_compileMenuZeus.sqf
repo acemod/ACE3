@@ -35,7 +35,11 @@ private _recurseFnc = {
             private _statement = compile (getText (_entryCfg >> "statement"));
 
             private _condition = getText (_entryCfg >> "condition");
-            if (_condition == "") then {_condition = "true"};
+            if (_condition == "") then {
+                _condition = {true};
+            } else {
+                _condition = compile _condition;
+            };
 
             private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
             private _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
@@ -50,7 +54,6 @@ private _recurseFnc = {
                 _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
             };
 
-            private _condition = compile _condition;
             private _children = [_entryCfg] call _recurseFnc;
 
             private _entry = [

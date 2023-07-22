@@ -155,6 +155,9 @@ private _sound = objNull;
 
 if (isServer) then {
     _sound = createSoundSource ["Sound_Fire", _position, [], 0];
+    private _radius = 1.5 * getNumber (configOf _projectile >> "indirectHitRange");
+    private _intensity = getNumber (configOf _projectile >> "hit");
+    [QEGVAR(fire,addFireSource), [_projectile, _radius, _intensity, _projectile, {CBA_missionTime < _this}, CBA_missionTime + _timeToLive]] call CBA_fnc_serverEvent;
 };
 
 [{
@@ -196,7 +199,7 @@ private _vehicle = _position nearestObject "Car";
 
 if (!local _vehicle) exitWith {};
 
-private _config = _vehicle call CBA_fnc_getObjectConfig;
+private _config = configOf _vehicle;
 
 // --- burn tyres
 private _fnc_isWheelHitPoint = {

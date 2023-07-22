@@ -43,7 +43,7 @@ private _magazineDisplayName = _magazineClass call FUNC(getMagazineName);
     [_target, _unit, _turretPath, _magazineCount, _magazineClass, (REARM_COUNT select _idx), _pylon],
     {(_this select 0) call FUNC(rearmSuccess)},
     "",
-    format [localize LSTRING(RearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName"), _magazineDisplayName],
+    format [localize LSTRING(RearmAction), getText(configOf _target >> "displayName"), _magazineDisplayName],
     {
         param [0] params ["_target", "_unit"];
         _player distance _target <= GVAR(distance);

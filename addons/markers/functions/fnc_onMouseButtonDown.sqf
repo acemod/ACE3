@@ -23,7 +23,7 @@
 
 params ["_ctrlMap", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
 
-if (_button != 0 || {!([_shift, _ctrl, _alt] isEqualTo [false, false, true])}) exitWith {};
+if (_button != 0 || {[_shift, _ctrl, _alt] isNotEqualTo [false, false, true]}) exitWith {};
 
 ctrlMapMouseOver _ctrlMap params [["_type", ""], "_marker"];
 

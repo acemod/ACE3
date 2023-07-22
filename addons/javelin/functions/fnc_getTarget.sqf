@@ -35,10 +35,10 @@ if (!isNull _lastTarget) then {
     for "_xOffset" from -2.5 to 2.5 step 0.5 do {
         for "_yOffset" from -2 to 1 step 0.5 do {
             // Find test points in the model based on the angle that we are viewing it from (not true 3d projection, but not bad)
-            private _testPosASL = AGLtoASL (_lastTarget modelToWorld [_xOffset * - cos _relAngle, _xOffset * sin _relAngle, _yOffset]);
+            private _testPosASL = _lastTarget modelToWorldWorld [_xOffset * - cos _relAngle, _xOffset * sin _relAngle, _yOffset];
             private _intersectionsToCursorTarget = lineIntersectsSurfaces [_viewASL, _testPosASL, ace_player, vehicle ace_player, true, 1];
             // drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [[0,1,1,1], [1,0,1,1]] select (count _intersectionsToCursorTarget), (ASLtoAGL _testPosASL), 0.25, 0.25, 0, "", 0.5, 0.025, "TahomaB"];
-            if (!(_intersectionsToCursorTarget isEqualTo [])) then {
+            if (_intersectionsToCursorTarget isNotEqualTo []) then {
                 (_intersectionsToCursorTarget select 0) params ["", "", "_intersectedObject"];
                 if (_intersectedObject isKindOf "AllVehicles") then {
                     _intersectedObject breakOut "main";
@@ -68,7 +68,7 @@ for "_xOffset" from -14 to 14 step 2 do {
         private _testPosASL = AGLtoASL (positionCameraToWorld [_xOffset, _yOffset, _maxRange]);
         private _intersectionsToCursorTarget = lineIntersectsSurfaces [_viewASL, _testPosASL, ace_player, vehicle ace_player, true, 1];
         // drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [[0,1,0,1], [1,0,0,1]] select (count _intersectionsToCursorTarget), (ASLtoAGL _testPosASL), 0.25, 0.25, 0, "", 0.5, 0.025, "TahomaB"];
-        if (!(_intersectionsToCursorTarget isEqualTo [])) then {
+        if (_intersectionsToCursorTarget isNotEqualTo []) then {
             (_intersectionsToCursorTarget select 0) params ["", "", "_intersectedObject"];
             if (_intersectedObject isKindOf "AllVehicles") then {
                 _intersectedObject breakOut "main";

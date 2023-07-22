@@ -1,6 +1,6 @@
 class CfgMagazines {
     class 1Rnd_GAA_missiles;
-    class GVAR(super) : 1Rnd_GAA_missiles {
+    class GVAR(super): 1Rnd_GAA_missiles {
         sound[] = {};
         soundFly[] = {};
         soundHit[] = {};

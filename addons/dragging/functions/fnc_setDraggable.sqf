@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Any object <OBJECT>
  * 1: true to enable dragging, false to disable <BOOL>
- * 2: Position offset for attachTo command (optional; default: [0,0,0])<ARRAY>
+ * 2: Position offset for attachTo command (optional; default: [0, 1.5, 0]) <ARRAY>
  * 3: Direction in degree to rotate the object after attachTo (optional; default: 0) <NUMBER>
  * 4: Override weight limit (optional; default: false) <BOOL>
  *
@@ -23,7 +23,7 @@
 params ["_object", "_enableDrag", "_position", "_direction", ["_ignoreWeightDrag", false, [false]]];
 
 if (isNil "_position") then {
-    _position = _object getVariable [QGVAR(dragPosition), [0,0,0]];
+    _position = _object getVariable [QGVAR(dragPosition), [0, 1.5, 0]];
 };
 
 if (isNil "_direction") then {
@@ -45,6 +45,16 @@ if (_type in _initializedClasses) exitWith {};
 
 _initializedClasses pushBack _type;
 GVAR(initializedClasses) = _initializedClasses;
+
+[_type, "ContainerClosed", {
+    params ["_object"];
+    private _owner = _object getVariable [QEGVAR(common,owner), objNull];
+    TRACE_2("ContainerClosed-drag",_object,_owner);
+    if (isNull _owner) exitWith {};
+    if (_object isNotEqualTo (_owner getVariable [QGVAR(draggedObject), objNull])) exitWith {};
+    [QGVAR(draggingContainerClosed), [_object, _owner], _owner] call CBA_fnc_targetEvent;
+}, false] call CBA_fnc_addClassEventHandler;
+
 
 private _icon = [QUOTE(PATHTOF(UI\icons\box_drag.paa)), QUOTE(PATHTOF(UI\icons\person_drag.paa))] select (_object isKindOf "Man");
 

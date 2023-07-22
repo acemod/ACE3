@@ -22,7 +22,7 @@ params [
 ];
 
 [
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    GVAR(progressDuration),
     [_unit, _object],
     {
         params ["_args"];
@@ -47,7 +47,7 @@ params [
             if !(_source isKindOf "AllVehicles") then {
                 private _helper = QGVAR(helper) createVehicle [0,0,0];
                 [QEGVAR(common,hideObjectGlobal), [_helper, true]] call CBA_fnc_serverEvent;
-                if ((getText (configFile >> "CfgVehicles" >> typeOf _source >> "simulation")) isEqualTo "thingX") then {
+                if ((getText (configOf _source >> "simulation")) isEqualTo "thingX") then {
                     _helper attachTo [_source, [0,0,0]];
                 } else {
                     _helper setPosWorld (getPosWorld _source);
@@ -57,7 +57,7 @@ params [
                 _nozzle setVariable [QGVAR(helper), _helper, true];
                 _ropeTarget = _helper;
             };
-            private _attachPos = _source getVariable [QGVAR(hooks), getArray (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(hooks))];
+            private _attachPos = _source getVariable [QGVAR(hooks), getArray (configOf _source >> QGVAR(hooks))];
             if (_attachPos isEqualTo []) then {
                 _attachPos = [[0,0,0]];
             };
@@ -69,7 +69,7 @@ params [
                 _attachPos = _attachPos select (_hookDistances find selectMin _hookDistances);
             };
             private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
-            private _rope = ropeCreate [_ropeTarget, _attachPos, _nozzle, [0, -0.20, 0.12], _hoseLength];
+            private _rope = ropeCreate [_ropeTarget, _attachPos, _nozzle, [0, -0.20, 0.12], _hoseLength, [], [], QGVAR(fuelHose)];
             _nozzle setVariable [QGVAR(rope), _rope, true];
             _nozzle setVariable [QGVAR(attachPos), _attachPos, true];
             _nozzle setVariable [QGVAR(source), _source, true];
@@ -77,6 +77,13 @@ params [
             [_source, "blockEngine", "ACE_Refuel", true] call EFUNC(common,statusEffect_set);
             _source setVariable [QGVAR(isConnected), true, true];
             _source setVariable [QGVAR(ownedNozzle), _nozzle, true];
+            
+            // Prevent moving the fuel source while the hose is out
+            _source setVariable [QGVAR(canCarryLast), _source getVariable [QEGVAR(dragging,canCarry), false], true];
+            _source setVariable [QGVAR(canDragLast),  _source getVariable [QEGVAR(dragging,canDrag),  false], true];
+            
+            _source setVariable [QEGVAR(dragging,canCarry), false, true];
+            _source setVariable [QEGVAR(dragging,canDrag), false, true];
         };
 
         _unit setVariable [QGVAR(nozzle), _nozzle, true];

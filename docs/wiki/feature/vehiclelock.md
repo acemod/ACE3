@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Vehicle Lock
+component: vehiclelock
 description: The vehicle lock module enables locking vehicles and their inventory.
 group: feature
 category: interaction
@@ -22,7 +23,3 @@ Locking, unlocking and picking vehicle locks is possible via the ACE Interact me
     <h5>Note:</h5>
     <p>Different locking modes can be set, consult with your mission maker for more information.</p>
 </div>
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="vehiclelock" %}

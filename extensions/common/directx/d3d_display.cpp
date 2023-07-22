@@ -198,6 +198,7 @@ namespace ace {
                 LOG(ERROR) << "Could not register raw input devices. ";
                 exit(1);
             }
+            return true;
         }
 
         bool d3d_display::create(uint32_t width = 1024, uint32_t height = 768, bool fullscreen = false) {

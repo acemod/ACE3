@@ -18,8 +18,7 @@
 params ["_unit"];
 
 // If the unit died the loop is finished
-if (!alive _unit) exitWith {};
-if (!local _unit) exitWith {};
+if (!alive _unit || {!local _unit}) exitWith {};
 
 [_unit] call EFUNC(medical_vitals,handleUnitVitals);
 
@@ -34,4 +33,3 @@ if (_timeDiff >= 1) then {
     _timeLeft = _timeLeft - _timeDiff; // negative values are fine
     _unit setVariable [QGVAR(cardiacArrestTimeLeft), _timeLeft];
 };
-

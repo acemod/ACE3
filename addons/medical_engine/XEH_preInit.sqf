@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 // Define "Constants" variables (both are macros defined in script_macros_medical.hpp, look there for actual variable names)
 if (isNil QUOTE(HEAD_DAMAGE_THRESHOLD)) then {HEAD_DAMAGE_THRESHOLD = HEAD_DAMAGE_THRESHOLD_DEFAULT};
 if (isNil QUOTE(ORGAN_DAMAGE_THRESHOLD)) then {ORGAN_DAMAGE_THRESHOLD = ORGAN_DAMAGE_THRESHOLD_DEFAULT};
@@ -29,7 +31,7 @@ if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIB
 };
 
 // Cache for armor values of equipped items (vests etc)
-GVAR(armorCache) = false call CBA_fnc_createNamespace;
+GVAR(armorCache) = createHashMap;
 
 // Hack for #3168 (units in static weapons do not take any damage):
 // Doing a manual pre-load with a small distance seems to fix the LOD problems
@@ -37,10 +39,10 @@ GVAR(armorCache) = false call CBA_fnc_createNamespace;
 GVAR(fixedStatics) = [];
 
 GVAR(animations) = [] call CBA_fnc_createNamespace;
-GVAR(animations) setVariable [QGVAR(faceUp_unconscious), ["ace_unconscious_2","ace_unconscious_2_1","ace_unconscious_7_1","ace_unconscious_8_1","ace_unconscious_5_1","ace_unconscious_6_1"]];
-GVAR(animations) setVariable [QGVAR(faceDown_unconscious), ["ace_unconscious_1", "ace_unconscious_3", "ace_unconscious_4","unconscious","ace_unconscious_9","ace_unconscious_3_1","ace_unconscious_4_1"]];
-GVAR(animations) setVariable [QGVAR(faceLeft_unconscious), ["ace_unconscious_7","ace_unconscious_8","ace_unconscious_1_1","ace_unconscious_7_1","ace_unconscious_8_1"]];
-GVAR(animations) setVariable [QGVAR(faceRight_unconscious), ["ace_unconscious_5","ace_unconscious_6","ace_unconscious_10","ace_unconscious_5_1","ace_unconscious_6_1"]];
+GVAR(animations) setVariable [QUNCON_ANIM(faceUp), [QUNCON_ANIM(2),QUNCON_ANIM(2_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
+GVAR(animations) setVariable [QUNCON_ANIM(faceDown), [QUNCON_ANIM(1),QUNCON_ANIM(3),QUNCON_ANIM(4),"unconscious",QUNCON_ANIM(9),QUNCON_ANIM(3_1),QUNCON_ANIM(4_1)]];
+GVAR(animations) setVariable [QUNCON_ANIM(faceLeft), [QUNCON_ANIM(7),QUNCON_ANIM(8),QUNCON_ANIM(1_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1)]];
+GVAR(animations) setVariable [QUNCON_ANIM(faceRight), [QUNCON_ANIM(5),QUNCON_ANIM(6),QUNCON_ANIM(10),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
 
 private _fnc_fixStatic = {
     params ["_vehicle"];
@@ -67,7 +69,7 @@ addMissionEventHandler ["Loaded", {
         // Use object reference to indicate the waitUnit is already running (this prevents issues with respawning units keeping SetVars)
         if ((_unit getVariable [QGVAR(waitForAnim), objNull]) == _unit) exitWith {};
         _unit setVariable [QGVAR(waitForAnim), _unit];
-        [{(animationState _this) find QGVAR(face) != -1}, {
+        [{(animationState _this) find QUNCON_ANIM(face) != -1}, {
             [_this, animationState _this] call FUNC(applyAnimAfterRagdoll);
         }, _unit, 20] call CBA_fnc_waitUntilAndExecute;
     } else {
@@ -77,5 +79,7 @@ addMissionEventHandler ["Loaded", {
         };
     };
 }] call CBA_fnc_addEventhandler;
+
+[] call FUNC(disableThirdParty);
 
 ADDON = true;

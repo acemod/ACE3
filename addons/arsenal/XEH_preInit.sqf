@@ -1,23 +1,17 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
+#define TOOLS_TAB_ICON "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"
+
 ADDON = false;
 
 PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-// Arsenal
-[QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
-[QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_Settings_fnc_init;
-[QGVAR(fontHeight), "SLIDER", [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)], localize LSTRING(settingCategory), [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;
-[QGVAR(enableIdentityTabs), "CHECKBOX", localize LSTRING(enableIdentityTabsSettings), localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
+#include "initSettings.sqf"
 
-// Arsenal loadouts
-[QGVAR(allowDefaultLoadouts), "CHECKBOX", [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)], localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
-[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
-[QGVAR(EnableRPTLog), "CHECKBOX", [LSTRING(printToRPTSetting), LSTRING(printToRPTTooltip)], localize LSTRING(settingCategory), false, false] call CBA_Settings_fnc_init;
-
+// Arsenal events
 [QGVAR(statsToggle), {
     params ["_display", "_showStats"];
 
@@ -50,25 +44,31 @@ PREP_RECOMPILE_END;
     _this call FUNC(buttonStatsPage);
 }] call CBA_fnc_addEventHandler;
 
-
 [QGVAR(displayStats), {
     _this call FUNC(handleStats);
 }] call CBA_fnc_addEventHandler;
 
+// Compile sorts and stats
 call FUNC(compileStats);
 call FUNC(compileSorts);
 
 [QUOTE(ADDON), {!isNil QGVAR(camera)}] call CBA_fnc_registerFeatureCamera;
 
-// Compatibility with CBA scripted optics and dispoable framework
+// Compatibility with CBA scripted optics and disposable framework
 [QGVAR(displayOpened), {
-    "cba_optics_arsenalOpened" call CBA_fnc_localEvent;
-    "cba_disposable_arsenalOpened" call CBA_fnc_localEvent;
+    "CBA_optics_arsenalOpened" call CBA_fnc_localEvent;
+    "CBA_disposable_arsenalOpened" call CBA_fnc_localEvent;
+    EGVAR(common,blockItemReplacement) = true;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(displayClosed), {
-    "cba_optics_arsenalClosed" call CBA_fnc_localEvent;
-    "cba_disposable_arsenalClosed" call CBA_fnc_localEvent;
+    "CBA_optics_arsenalClosed" call CBA_fnc_localEvent;
+    "CBA_disposable_arsenalClosed" call CBA_fnc_localEvent;
+    EGVAR(common,blockItemReplacement) = false;
 }] call CBA_fnc_addEventHandler;
+
+// Setup Tools tab
+[keys (uiNamespace getVariable [QGVAR(configItemsTools), createHashMap]), LLSTRING(toolsTab), TOOLS_TAB_ICON, -1, true] call FUNC(addRightPanelButton);
+
 
 ADDON = true;
