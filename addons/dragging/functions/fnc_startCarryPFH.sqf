@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Carry PFH
+ * Checks for carrying conditions. If these are met, the unit will start carrying. Called from ace_dragging_fnc_startCarry.
  *
  * Arguments:
  * 0: Arguments <ARRAY>
@@ -40,7 +40,7 @@ if (!alive _target || {_unit distance _target > 10}) then {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Handle persons vs objects
+// Handle persons vs. objects
 if (_target isKindOf "CAManBase") then {
     // Drop if in timeout
     if (CBA_missionTime > _timeOut) exitWith {

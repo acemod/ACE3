@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2, Malbryn
- * Drags an object. Called from ace_dragging_fnc_startDrag
+ * Handles attaching and setting up a dragged object. Called from ace_dragging_fnc_startDragPFH.
  *
  * Arguments:
  * 0: Unit that should do the dragging <OBJECT>

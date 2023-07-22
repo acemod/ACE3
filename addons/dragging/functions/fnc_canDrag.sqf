@@ -38,4 +38,4 @@ if (["WeaponHolder", "WeaponHolderSimulated"] findIf {_target isKindOf _x} != -1
     (count (weaponCargo _target + magazineCargo _target + itemCargo _target)) <= MAX_DRAGGED_ITEMS
 };
 
-true // Return
+true // return

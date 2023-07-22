@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Drag PFH
+ * Checks for dragging conditions. If these are met, the unit will start dragging. Called from ace_dragging_fnc_startDrag.
  *
  * Arguments:
  * 0: Arguments <ARRAY>

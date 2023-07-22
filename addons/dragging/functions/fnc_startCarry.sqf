@@ -31,7 +31,7 @@ if (!(_target getVariable [QGVAR(ignoreWeightCarry), false]) && {
 
 private _timer = CBA_missionTime + 5;
 
-// Handle objects vs persons
+// Handle objects vs. persons
 if (_target isKindOf "CAManBase") then {
     private _primaryWeapon = primaryWeapon _unit;
 

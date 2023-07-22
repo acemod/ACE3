@@ -34,4 +34,6 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 // Display event handler
 ["MouseZChanged", {(_this select 1) call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
 
+#include "initKeybinds.sqf"
+
 //@todo Captivity?
