@@ -3,7 +3,7 @@
     private _player = ACE_player;
 
     if (!alive _player) exitWith {false};
-    if !([_player, objNull, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([_player, objNull, ["isNotDragging", "isNotCarrying", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // If we are drag/carrying something right now then just drop it:
     if (_player getVariable [QGVAR(isDragging), false]) exitWith {
