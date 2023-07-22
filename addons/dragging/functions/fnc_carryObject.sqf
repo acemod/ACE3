@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Carries an object.
+ * Handles attaching and setting up a carried object.
  *
  * Arguments:
  * 0: Unit that should do the carrying <OBJECT>
