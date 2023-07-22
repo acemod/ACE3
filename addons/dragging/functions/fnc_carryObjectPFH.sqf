@@ -65,11 +65,12 @@ if (
         if (_target isKindOf "CAManBase") then {
             [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat) isNotEqualTo []
         } else {
-            [_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)
+            ["ace_cargo"] call EFUNC(common,isModLoaded) &&
+            {[_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)}
         }
     }
 ) then {
-    _hintLMB = LELSTRING(cargo,loadObject);
+    _hintLMB = LELSTRING(common,loadObject);
 };
 
 private _hintMMB = LLSTRING(RaiseLowerRotate);

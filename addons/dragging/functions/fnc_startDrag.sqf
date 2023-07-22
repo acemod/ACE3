@@ -20,11 +20,14 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // Exempt from weight check if object has override variable set
-if (!(_target getVariable [QGVAR(ignoreWeightDrag), false]) && {
-    private _weight = _target call FUNC(getWeight);
-    _weight > GETMVAR(ACE_maxWeightDrag,1E11)
-}) exitWith {
-    // Exit if object weight is over global var value
+private _weight = 0;
+
+if !(_target getVariable [QGVAR(ignoreWeightDrag), false]) then {
+    _weight = _target call FUNC(getWeight);
+};
+
+// Exit if object weight is over global var value
+if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
     [LLSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
@@ -61,7 +64,7 @@ if !(GVAR(dragAndFire)) then {
 // Save the weapon so we can monitor if it changes
 _unit setVariable [QGVAR(currentWeapon), currentWeapon _unit];
 
-[_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // Prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);

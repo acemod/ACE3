@@ -2,7 +2,7 @@
 /*
  * Author: L-H, edited by commy2, rewritten by joko // Jonas, re-rewritten by mharis001
  * Returns the weight of the given object.
- * Weight is calculated from the object's mass and its current inventory.
+ * Weight is calculated from the object's mass, its current inventory, and PhysX mass if applicable.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -20,11 +20,14 @@ params ["_object"];
 
 private _weight = loadAbs _object;
 
-// Add the mass of the object itself
-// The container object is generally of type SupplyX and has mass of zero
-_weight = _weight + getNumber (configOf _object >> "mass");
+if !(GVAR(skipContainerWeight)) then {
+    // Add the mass of the object itself
+    // getMass handles PhysX mass, this should be 0 for SupplyX containers and WeaponHolders
+    // Use originalMass in case we're checking weight for a carried object
+    _weight = _weight + ((_object getVariable [QGVAR(originalMass), getMass _object]));
+};
 
-// Contents of backpacks get counted twice (see https://github.com/acemod/ACE3/pull/8457#issuecomment-1062522447)
+// Contents of backpacks get counted twice (https://github.com/acemod/ACE3/pull/8457#issuecomment-1062522447 and https://feedback.bistudio.com/T167469)
 // This is a workaround until that is fixed on BI's end
 {
     _x params ["", "_container"];

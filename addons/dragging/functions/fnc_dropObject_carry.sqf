@@ -56,9 +56,9 @@ if (_previousWeaponIndex != -1) then {
     _unit action ["SwitchWeapon", _unit, _unit, _previousWeaponIndex];
 };
 
-[_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockSprint", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Prevent object from flipping inside buildings
 if (_inBuilding) then {
@@ -94,7 +94,7 @@ _target setVariable [QGVAR(carryDirection_temp), nil];
 private _cursorObject = cursorObject;
 
 // Try loading into vehicle
-if (_tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, []] call EFUNC(common,canInteractWith)}) then {
+if (_tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)}) then {
     if (_target isKindOf "CAManBase") then {
         private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
 
@@ -106,8 +106,11 @@ if (_tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, []] call EFUN
             };
         };
     } else {
-        if ([_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)) then {
-            [player, _target, _cursorObject] call EFUNC(cargo,startLoadIn);
+        if (
+            ["ace_cargo"] call EFUNC(common,isModLoaded) &&
+            {[_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)}
+        ) then {
+            [_unit, _target, _cursorObject] call EFUNC(cargo,startLoadIn);
         };
     };
 };

@@ -19,13 +19,15 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-private _weight = _target call FUNC(getWeight);
-
 // Exempt from weight check if object has override variable set
-if (!(_target getVariable [QGVAR(ignoreWeightCarry), false]) && {
-    _weight > GETMVAR(ACE_maxWeightCarry,1E11)
-}) exitWith {
-    // Exit if object weight is over global var value
+private _weight = 0;
+
+if !(_target getVariable [QGVAR(ignoreWeightCarry), false]) then {
+    _weight = _target call FUNC(getWeight);
+};
+
+// Exit if object weight is over global var value
+if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
     [LLSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
@@ -61,24 +63,19 @@ if (_target isKindOf "CAManBase") then {
 
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
-    // Objects other than containers have calculated weight == 0 so we use getMass
-    if (["ReammoBox_F", "WeaponHolder", "WeaponHolderSimulated"] findIf {_target isKindOf _x} == -1) then {
-        _weight = getMass _target;
-    };
+    private _canRun = _weight call FUNC(canRun_carry);
 
-    if (_weight > GVAR(maxWeightCarryRun)) then {
-        [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
-    } else {
-        [_unit, "blockSprint", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
-    };
+    // Only force walking if we're overweight
+    [_unit, "forceWalk", QUOTE(ADDON), !_canRun] call EFUNC(common,statusEffect_set);
+    [_unit, "blockSprint", QUOTE(ADDON), _canRun] call EFUNC(common,statusEffect_set);
 };
 
-[_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // Prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
 
-// Prevents draging and carrying at the same time
+// Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
 // Required for aborting animation

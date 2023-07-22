@@ -3,7 +3,12 @@
 
 // Release object on disconnection. Function is identical to killed
 if (isServer) then {
-    addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleKilled)}];
+    // 'HandleDisconnect' EH triggers too late
+    addMissionEventHandler ["PlayerDisconnected", {
+        private _unit = (getUserInfo (_this select 5)) select 10;
+
+        _unit call FUNC(handleKilled);
+    }];
 };
 
 if (!hasInterface) exitWith {};
@@ -33,6 +38,43 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 
 // Display event handler
 ["MouseZChanged", {(_this select 1) call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
+
+[QGVAR(carryingContainerClosed), {
+    params ["_container", "_owner"];
+    TRACE_2("carryingContainerClosed EH",_container,_owner);
+    if !(_owner getVariable [QGVAR(isCarrying), false]) exitWith { ERROR_1("not carrying - %1",_this) };
+
+    private _weight = 0;
+    if !(_container getVariable [QGVAR(ignoreWeightCarry), false]) then {
+        _weight = [_container] call FUNC(getWeight);
+    };
+
+    // Drop the object if overweight
+    if (_weight > ACE_maxWeightCarry) exitWith {
+        [_owner, _container] call FUNC(dropObject_carry);
+    };
+    private _canRun = [_weight] call FUNC(canRun_carry);
+
+    // Force walking based on weight
+    [_owner, "forceWalk", QUOTE(ADDON), !_canRun] call EFUNC(common,statusEffect_set);
+    [_owner, "blockSprint", QUOTE(ADDON), _canRun] call EFUNC(common,statusEffect_set);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(draggingContainerClosed), {
+    params ["_container", "_owner"];
+    TRACE_2("draggingContainerClosed EH",_container,_owner);
+    if !(_owner getVariable [QGVAR(isDragging), false]) exitWith { ERROR_1("not dragging - %1",_this) };
+
+    private _weight = 0;
+    if !(_container getVariable [QGVAR(ignoreWeightDrag), false]) then {
+        _weight = [_container] call FUNC(getWeight);
+    };
+
+     // Drop the object if overweight
+    if (_weight > ACE_maxWeightDrag) exitWith {
+        [_owner, _container] call FUNC(dropObject);
+    };
+}] call CBA_fnc_addEventHandler;
 
 #include "initKeybinds.sqf"
 

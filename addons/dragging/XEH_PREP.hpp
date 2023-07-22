@@ -2,6 +2,7 @@ PREP(canCarry);
 PREP(canDrag);
 PREP(canDrop);
 PREP(canDrop_carry);
+PREP(canRun_carry);
 PREP(carryObject);
 PREP(carryObjectPFH);
 PREP(dragObject);

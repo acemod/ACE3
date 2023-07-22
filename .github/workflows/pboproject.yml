@@ -64,7 +64,6 @@ jobs:
       run: |
         subst P: .
         pboproject -P
-        xcopy /e /h /q z\ace\tools\pDummies\A3\ui_f_enoch a3\ui_f_enoch\
         xcopy /e /h /q z\ace\tools\pDummies\gm gm\
         xcopy /e /h /q z\ace\tools\pDummies\vn vn\
     - name: Build
