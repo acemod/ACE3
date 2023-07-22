@@ -9,6 +9,7 @@ class CfgWeapons {
         descriptionShort = "";
         picture = QPATHTOF(UI\w_spottingscope_ca.paa);
         model = QPATHTOF(data\ace_spottingscope.p3d);
+        ACE_isTool = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 40;

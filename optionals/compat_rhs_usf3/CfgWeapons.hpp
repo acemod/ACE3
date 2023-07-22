@@ -23,7 +23,7 @@ class CfgWeapons {
     class rhs_weap_XM2010_Base_F: Rifle_Base_F {
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 609.6;
-        ACE_Overheating_dispersion = 0.75;
+        EGVAR(overheating,dispersion) = 0.75;
         ACE_RailHeightAboveBore = 3.1028;
     };
     class rhs_weap_m24sws: rhs_weap_XM2010_Base_F {
@@ -96,24 +96,23 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 4.3987;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 629.92;
-        ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m14_base;
     class rhs_weap_m14: rhs_weap_m14_base {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
-        ACE_Overheating_dispersion = 0.75;
+        EGVAR(overheating,dispersion) = 0.75;
     };
     class rhs_weap_m14ebrri: rhs_weap_m14ebrri_base {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
-        ACE_Overheating_dispersion = 0.75;
+        EGVAR(overheating,dispersion) = 0.75;
         ACE_RailHeightAboveBore = 3.08341;
     };
     class rhs_weap_m14_socom_base: rhs_weap_m14_base {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 413; //16.25 in (413 mm)
-        ACE_Overheating_dispersion = 0.75;
+        EGVAR(overheating,dispersion) = 0.75;
     };
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
@@ -158,7 +157,7 @@ class CfgWeapons {
         ACE_barrelLength = 508.0;
     };
     class rhs_weap_m32_Base_F: Rifle_Base_F {
-        ace_overheating_jamTypesAllowed[] = {"Fire", "Dud"};
+        EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
     };
     class SMG_02_base_F;
     class rhsusf_weap_MP7A1_base_f: SMG_02_base_F {
@@ -184,7 +183,7 @@ class CfgWeapons {
         ACE_barrelLength = 124.46;
     };
     class rhs_weap_M320_Base_F: Pistol_Base_F {
-        ace_overheating_jamTypesAllowed[] = {"Fire", "Dud"};
+        EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
     };
 
     // RHS sniper scopes
