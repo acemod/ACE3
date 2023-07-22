@@ -55,9 +55,9 @@ if (_previousWeaponIndex != -1) then {
     _unit action ["SwitchWeapon", _unit, _unit, _previousWeaponIndex];
 };
 
-[_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockSprint", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // prevent object from flipping inside buildings
 if (_inBuilding) then {
