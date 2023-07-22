@@ -28,8 +28,11 @@ if (_isCarryMag) then {
     _carryMag = [_magazine] call FUNC(getCarryMagazine);
 };
 
+// Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
+private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]);
+
 // Not using CSW systems
-if (_vehicle getVariable [QGVAR(assemblyMode), 3] isEqualTo 0) exitWith {[true, _magazine]};
+if (!_assemblyMode) exitWith {[true, _magazine]};
 
 // Ammo Handling disabled for AI
 if (GVAR(ammoHandling) < 2) exitWith {[false, _magazine]};
