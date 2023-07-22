@@ -145,6 +145,7 @@ PREP(receiveRequest);
 PREP(registerItemReplacement);
 PREP(removeCanInteractWithCondition);
 PREP(removeSpecificMagazine);
+PREP(replaceRegisteredItems);
 PREP(requestCallback);
 PREP(resetAllDefaults);
 PREP(restoreVariablesJIP);
