@@ -402,11 +402,11 @@ addMissionEventHandler ["PlayerViewChanged", {
     params ["_unit", "_target"];
 
     // Players can always interact with himself if not boarded
-    vehicle _unit == _unit ||
+    isNull objectParent _unit ||
     // Players can always interact with his vehicle
-    {vehicle _unit == _target} ||
+    {objectParent _unit isEqualTo _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    {_unit isNotEqualTo _target && {!isNull objectParent _target} && {objectParent _unit isEqualTo objectParent _target}} ||
     // Players can always interact with connected UAV
     {!(isNull (ACE_controlledUAV select 0))}
 }] call FUNC(addCanInteractWithCondition);
@@ -415,7 +415,7 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 ["isNotUnconscious", {
     params ["_unit"];
-    lifeState _unit != "INCAPACITATED"
+    lifeState _unit isNotEqualTo "INCAPACITATED"
 }] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////
