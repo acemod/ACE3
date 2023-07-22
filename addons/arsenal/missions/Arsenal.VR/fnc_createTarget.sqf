@@ -47,13 +47,13 @@ _target setSpeaker "BASE";
 _player reveal [_target, 4];
 
 // Copy player's gear onto target
-_target addVest vest _player;
-_target addBackpack backpack _player;
-_target addHeadgear headgear _player;
-_target addGoggles goggles _player;
-_target addWeapon primaryWeapon _player;
-_target addWeapon secondaryWeapon _player;
-_target addWeapon handgunWeapon _player;
+if (vest _player != "") then { _target addVest vest _player; };
+if (backpack _player != "") then { _target addBackpack backpack _player; };
+if (headgear _player != "") then { _target addHeadgear headgear _player; };
+if (goggles _player != "") then { _target addGoggles goggles _player; };
+if (primaryWeapon _player != "") then { _target addWeapon primaryWeapon _player; };
+if (secondaryWeapon _player != "") then { _target addWeapon secondaryWeapon _player; };
+if (handgunWeapon _player != "") then { _target addWeapon handgunWeapon _player; };
 
 // Save AI for respawn
 _target setVehicleVarName _varName;
