@@ -27,11 +27,12 @@ if (_target isKindOf "StaticWeapon") exitWith {
     crew _target findIf {getText (configOf _x >> "simulation") != "UAVPilot"} == -1
 };
 
-// Units need to be unconscious or limping
+// Units need to be unconscious or limping; Units also need to not be in ragdoll, as that causes desync issues
 if (_target isKindOf "CAManBase") exitWith {
-    lifeState _target isEqualTo "INCAPACITATED"
-    || {_target getHitPointDamage "HitLegs" >= 0.5} ||
-    {(animationState _target) in ["", "unconscious", "deadstate"]}
+    !(alive _target != isAwake _target) &&
+    {lifeState _target isEqualTo "INCAPACITATED" ||
+    {_target getHitPointDamage "HitLegs" >= 0.5} ||
+    {(animationState _target) in ["", "unconscious", "deadstate"]}}
 };
 
 // Check max items for WeaponHolders

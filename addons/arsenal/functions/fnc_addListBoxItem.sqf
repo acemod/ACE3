@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
- * Author: Dedmen
+ * Author: Dedmen, johnb43
  * Add a listbox row.
  *
  * Arguments:
- * 0: Config category, must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice" <STRING>
+ * 0: Config category, must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice" or "CfgUnitInsignia" <STRING>
  * 1: Classname <STRING>
  * 2: Panel control <CONTROL>
- * 3: Name of the picture entry in that Cfg class <STRING>
+ * 3: Name of the picture entry in that Cfg class <STRING> (default: "picture")
  *
  * Return Value:
  * None
@@ -20,43 +20,18 @@
 
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
 
-private _cacheNamespace = _ctrlPanel; //For better readability.
-
-private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_className, []];
-
-//_cachedItemInfo == [_displayName, _itemPicture, _modPicture]
-if (_cachedItemInfo isEqualTo []) then {//Not in cache. So get info and put into cache.
-
+// Sanitise key, as it's public; If not in cache, find info and cache it for later use
+((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_configCategory + _className, {
+    // Get classname (config case), display name, picture and DLC
     private _configPath = configFile >> _configCategory >> _className;
+    private _dlcName = _configPath call EFUNC(common,getAddon);
 
-    _cachedItemInfo set [0, getText (_configPath >> "displayName")];
-    //if _pictureEntryName is empty then this item has no Icons. (Faces)
-    _cachedItemInfo set [1, if (_pictureEntryName isEqualTo "") then {""} else {getText (_configPath >> _pictureEntryName)}];
+    // If _pictureEntryName is empty, then this item has no picture (e.g. faces)
+    [configName _configPath, getText (_configPath >> "displayName"), if (_pictureEntryName == "") then {""} else {getText (_configPath >> _pictureEntryName)}, if (_dlcName != "") then {(modParams [_dlcName, ["logo"]]) param [0, ""]} else {""}]
+}, true]) params ["_className", "_displayName", "_itemPicture", "_modPicture"];
 
-    //get name of DLC
-    private _dlcName = "";
-    private _addons = configsourceaddonlist _configPath;
-    if (_addons isNotEqualTo []) then {
-        private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _addons select 0);
-        if (_mods isNotEqualTo []) then {
-            _dlcName = _mods select 0;
-        };
-    };
-
-    if (_dlcName != "") then {
-        _cachedItemInfo set [2, (modParams [_dlcName,["logo"]]) param [0,""]];//mod picture
-    } else {
-        _cachedItemInfo set [2, ""];//mod picture
-        _cachedItemInfo set [3, 0];//mod ID
-    };
-    _cacheNamespace setVariable [_configCategory+_className, _cachedItemInfo];
-};
-
-_cachedItemInfo params ["_displayName", "_itemPicture", "_modPicture"];
-
-private _lbAdd =  _ctrlPanel lbAdd _displayName;
-
+private _lbAdd = _ctrlPanel lbAdd _displayName;
 _ctrlPanel lbSetData [_lbAdd, _className];
 _ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
-_ctrlPanel lbSetPictureRight [_lbAdd,["",_modPicture] select (GVAR(enableModIcons))];
+_ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIcons)];
 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
