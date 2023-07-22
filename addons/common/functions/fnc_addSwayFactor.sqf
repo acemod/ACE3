@@ -4,7 +4,7 @@
  * Adds a factor to player sway calculation
  *
  * Arguments:
- * 0: Type of factor <STRING> ("baseline" or "multiplier")
+ * 0: Type of factor, "baseline" or "multiplier" <STRING>
  * 1: Factor function, must return number <CODE>
  * 2: Factor ID, unique to type <STRING>
  *
