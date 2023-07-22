@@ -1661,7 +1661,7 @@
             <Russian>Разрядить оружие</Russian>
             <Spanish>Descargar arma</Spanish>
         </Key>
-        <Key ID="STR_ACE_common_loadObject">
+        <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>
             <German>Beladen</German>
             <Polish>Załaduj</Polish>
