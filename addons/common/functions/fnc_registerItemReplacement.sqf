@@ -20,8 +20,12 @@
 params [["_oldItem", "", [0,""]], ["_newItems", "", ["", []]], ["_replaceInherited", false, [false]]];
 TRACE_3("registerItemReplacement",_oldItem,_newItems,_replaceInherited);
 
+
+// Setup on first run
+if (isNil QGVAR(itemReplacements)) then {
+
 // CBA player event handler function
-DFUNC(registerItemReplacement_replaceItems) = {
+DFUNC(registerItemReplacement_replaceItems) = compileFinal toString {
     params ["_unit"];
 
     private _items = items _unit;
@@ -93,8 +97,6 @@ DFUNC(registerItemReplacement_replaceItems) = {
     GVAR(oldItems) = items _unit;
 };
 
-// Setup on first run
-if (isNil QGVAR(itemReplacements)) then {
     GVAR(itemReplacements) = [] call CBA_fnc_createNamespace;
     GVAR(inheritedReplacements) = [];
     GVAR(oldItems) = [];
