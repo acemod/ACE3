@@ -91,7 +91,7 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 GVAR(showActions) = true;
 GVAR(currentActionPage) = 0;
 
-// Add the items the player has to virtualItems
+// Add the items the player has to virtualItems as unique items
 {
     switch (_forEachIndex) do {
         // Primary weapon, Secondary weapon, Handgun weapon, Binoculars
@@ -107,16 +107,16 @@ GVAR(currentActionPage) = 0;
 
                 // If bino, add it in a different place than regular weapons
                 if (_forEachIndex != IDX_LOADOUT_BINO) then {
-                    ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _forEachIndex) set [_weapon, nil];
+                    ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _forEachIndex) set [_weapon, true, true];
                 } else {
-                    (GVAR(virtualItems) get IDX_VIRT_BINO) set [_weapon, nil];
+                    (GVAR(virtualItems) get IDX_VIRT_BINO) set [_weapon, true, true];
                 };
             };
 
             // Add weapon attachments
             {
                 if (_x != "") then {
-                    ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _forEachIndex) set [_x call FUNC(baseWeapon), nil];
+                    ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _forEachIndex) set [_x call FUNC(baseWeapon), true, true];
                 };
             } forEach [_optics, _flashlight, _muzzle, _bipod];
 
@@ -124,7 +124,7 @@ GVAR(currentActionPage) = 0;
             {
                 // Check if there is a magazine (ammo count is unnecssary to check)
                 if ((_x param [0, ""]) != "") then {
-                    (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL) set [_x select 0, nil];
+                    (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL) set [_x select 0, true, true];
                 };
             } forEach [_primaryMagazine, _secondaryMagazine];
         };
@@ -136,19 +136,19 @@ GVAR(currentActionPage) = 0;
             _x params [["_containerClass", ""]];
 
             if (_containerClass != "") then {
-                (GVAR(virtualItems) get (_forEachIndex + 1)) set [_containerClass, nil];
+                (GVAR(virtualItems) get (_forEachIndex + 1)) set [_containerClass, true, true];
             };
         };
         // Helmet
         case IDX_LOADOUT_HEADGEAR: {
             if (_x != "") then {
-                (GVAR(virtualItems) get IDX_VIRT_HEADGEAR) set [_x, nil];
+                (GVAR(virtualItems) get IDX_VIRT_HEADGEAR) set [_x, true, true];
             };
         };
         // Facewear
         case IDX_LOADOUT_GOGGLES: {
             if (_x != "") then {
-                (GVAR(virtualItems) get IDX_VIRT_GOGGLES) set [_x, nil];
+                (GVAR(virtualItems) get IDX_VIRT_GOGGLES) set [_x, true, true];
             };
         };
         // Assigned items: Map, Compass, Watch, GPS / UAV Terminal, Radio, NVGs
@@ -156,7 +156,7 @@ GVAR(currentActionPage) = 0;
             {
                 // Order of storing virtualItems is different than what getUnitLoadout returns, so do some math
                 if (_x != "") then {
-                    (GVAR(virtualItems) get (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _forEachIndex))) set [_x, nil];
+                    (GVAR(virtualItems) get (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _forEachIndex))) set [_x, true, true];
                 };
             } forEach _x;
         };
