@@ -129,9 +129,9 @@
             <Korean>고급 조립</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
-            <English>Use ACE for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
+            <English>Use ACE to Assemble/Disassemble supported static weapons.</English>
             <German>Benutze ACE um unterstützte statische Waffen zu montieren/demontieren. Geladene Munition ist auf ein einzelnes Magazin reduziert.</German>
-            <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas. Munição carregada é reduzida para um único carregador.</Portuguese>
+            <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas.</Portuguese>
             <French>Utilise ACE pour l'assemblage/le désassemblage des armes statiques supportées.\nLes munitions chargées sont réduites à un seul chargeur.</French>
             <Japanese>対応している設置型火器に ACE3 の設置と解体を使用します。装填済みの弾倉は 1 つの弾倉に減少します。</Japanese>
             <Chinese>使用ACE來組裝/拆解固定型武器。上膛的限制為單個彈匣。</Chinese>
@@ -144,9 +144,9 @@
             <Korean>ACE의 조립/분해 기능을 사용하여 공용화기를 다룹니다. 장전된 탄은 한 탄창으로 제한됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
-            <English>Save Extra Ammo</English>
+            <English>Store Extra Ammo</English>
             <German>Spare extra Munition</German>
-            <Portuguese>Economizar munição extra</Portuguese>
+            <Portuguese>Guardar munição extra</Portuguese>
             <French>Conserver le surplus de munitions</French>
             <Japanese>過剰弾薬を保持</Japanese>
             <Chinese>保存額外彈藥</Chinese>
@@ -159,18 +159,18 @@
             <Korean>남은 탄약 저장</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
-            <English>Store extra magazines next to static weapon</English>
-            <German>Lager extra Magazine neben der statischen Waffe</German>
-            <Portuguese>Carregar munições extras próximo à arma estática</Portuguese>
+            <English>Store extra magazines next to the static weapon.</English>
+            <German>Lager extra Magazine neben der statischen Waffe.</German>
+            <Portuguese>Guardar munição extra próximo à arma estática.</Portuguese>
             <French>Range les chargeurs en surplus auprès de l'arme statique.</French>
             <Japanese>次の設置型火器用に過剰弾薬を保持します。</Japanese>
             <Chinese>在固定型武器旁存放額外彈匣</Chinese>
             <Chinesesimp>在固定式武器旁边存放额外的弹匣</Chinesesimp>
-            <Italian>Conservare i caricatori extra accanto all'arma statica</Italian>
+            <Italian>Conservare i caricatori extra accanto all'arma statica.</Italian>
             <Czech>Ukládat munici navíc vedle statické zbraně.</Czech>
-            <Polish>Dodatkowe magazynki przechowuj obok broni statycznej</Polish>
-            <Spanish>Almacenar cargadores extra junto al arma estática</Spanish>
-            <Russian>Хранить дополнительные магазины рядом со статическим оружием</Russian>
+            <Polish>Dodatkowe magazynki przechowuj obok broni statycznej.</Polish>
+            <Spanish>Almacenar cargadores extra junto al arma estática.</Spanish>
+            <Russian>Хранить дополнительные магазины рядом со статическим оружием.</Russian>
             <Korean>공용화기 옆에 남은 탄들을 저장합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_displayName">
@@ -184,8 +184,9 @@
             <Spanish>Almacenamiento de munición</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_description">
-            <English>Determines whether extra magazines are stored on the ground or inside an ammo box</English>
-            <German>Legt fest, ob zusätzliche Magazine auf dem Boden oder in einer Munitionskiste aufbewahrt werden</German>
+            <English>Determines whether extra magazines are stored on the ground or inside an ammo box, if the static weapon doesn't have a defined container.</English>
+            <German>Legt fest, ob zusätzliche Magazine auf dem Boden oder in einer Munitionskiste aufbewahrt werden.</German>
+            <Portuguese>Determina se a munição extra é guardada no chão ou dentro de uma caixa de munição, se a arma estática não tiver um recipiente definido.</Portuguese>
             <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을지 결정합니다.</Korean>
             <Polish>Decyduje, czy dodatkowe magazynki przechowywane są na ziemi, czy w skrzynce z amunicją.</Polish>
             <Japanese>追加のマガジンを地面に設置するか、弾薬箱の中に保管するかを決定します</Japanese>
@@ -196,6 +197,7 @@
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_weaponHolder">
             <English>Ground</English>
             <German>Boden</German>
+            <Portuguese>Chão</Portuguese>
             <Korean>지면</Korean>
             <Polish>Ziemia</Polish>
             <Japanese>地面</Japanese>
@@ -206,6 +208,7 @@
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_ammoBox">
             <English>Ammo Box</English>
             <German>Munitionskiste</German>
+            <Portuguese>Caixa de munição</Portuguese>
             <Korean>탄약 상자</Korean>
             <Polish>Skrzynka amunicyjna</Polish>
             <Japanese>弾薬箱</Japanese>
@@ -214,9 +217,9 @@
             <Spanish>Caja de munición</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
-            <English>Ammo handling</English>
+            <English>Ammo Handling</English>
             <German>Munitionsmanagement</German>
-            <Portuguese>Manipulação de Munições</Portuguese>
+            <Portuguese>Manipulação de Munição</Portuguese>
             <French>Manipulation des munitions</French>
             <Japanese>弾薬の処理</Japanese>
             <Chinese>彈藥處理</Chinese>
@@ -229,9 +232,9 @@
             <Korean>탄약 취급</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_description">
-            <English>Allow loading and unloading magazines</English>
+            <English>Allow loading and unloading magazines. Loaded ammo is reduced to a single magazine for static weapons using Advanced Assembly.</English>
             <German>Erlaubt es Magazine zu- und entladen.</German>
-            <Portuguese>Permite carregamento e descarregamento de munições</Portuguese>
+            <Portuguese>Permite carregar e descarregar munição. Munição carregada é reduzida para um único carregador em armas estáticas usando Montagem Avançada.</Portuguese>
             <French>Définit qui peut charger et décharger les chargeurs.</French>
             <Japanese>弾薬の装填と除去を許可します。</Japanese>
             <Chinese>允許裝填或卸載彈匣</Chinese>
