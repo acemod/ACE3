@@ -18,7 +18,10 @@
 
 params ["_unit", ["_engineerN", 1]];
 
-private _class = _unit getVariable ["ACE_IsEngineer", _unit getUnitTrait "engineer"];
+private _class = _unit getVariable "ACE_IsEngineer";
+if (isNil "_class") then {
+    _class = getNumber (configOf _unit >> "engineer");
+};
 
 // This if statement is here for copmatability with the common variant of isEngineer, which requires a bool.
 // We cannot move this function to common because we require the GVAR(engineerSetting_Repair), which only makes sense to include in the repair module.

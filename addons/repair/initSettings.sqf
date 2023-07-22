@@ -1,6 +1,17 @@
 private _category = format ["ACE %1", LLSTRING(Repair)];
 
 [
+    QGVAR(enabled),
+    "CHECKBOX",
+    ELSTRING(common,Enabled),
+    _category,
+    true,
+    true,
+    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(displayTextOnRepair), "CHECKBOX",
     [LSTRING(SettingDisplayTextName), LSTRING(SettingDisplayTextDesc)],
     _category,

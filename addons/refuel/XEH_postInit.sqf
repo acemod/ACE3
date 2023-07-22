@@ -1,4 +1,14 @@
 #include "script_component.hpp"
+if (!GVAR(enabled)) exitWith {};
+
+["All", "InitPost", {
+    params ["_vehicle"];
+    if (!local _vehicle) exitWith {};
+
+    if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportFuel") != 0) then {
+        _vehicle setFuelCargo 0;
+    };
+}, true, [], true] call CBA_fnc_addClassEventHandler;
 
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
