@@ -477,6 +477,15 @@ GVAR(reloadMutex_lastMagazines) = [];
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 //////////////////////////////////////////////////
+// Start the sway loop
+//////////////////////////////////////////////////
+[{
+    if ((GVAR(swayFactorsBaseline) + GVAR(swayFactorsMultiplier)) isNotEqualTo []) then {
+        call FUNC(swayLoop)
+    };
+}] call CBA_fnc_execNextFrame;
+
+//////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
 //////////////////////////////////////////////////
 
