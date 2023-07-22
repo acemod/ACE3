@@ -2,8 +2,12 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-    // release object on hard disconnection. Function is identical to killed
-    addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleKilled)}];
+    // 'HandleDisconnect' EH triggers too late
+    addMissionEventHandler ["PlayerDisconnected", {
+        private _unit = (getUserInfo (_this select 5)) select 10;
+
+        _unit call FUNC(handleKilled);
+    }];
 };
 
 if (!hasInterface) exitWith {};
