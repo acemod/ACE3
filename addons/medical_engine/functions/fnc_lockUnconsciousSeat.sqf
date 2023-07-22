@@ -13,12 +13,12 @@
  */
 params ["_unit"];
 
-private _vehicle = vehicle _unit;
+private _vehicle = objectParent _unit;
 
 if (alive _unit && {lifeState _unit != "INCAPACITATED"}) exitWith {};
 
 switch (true) do {
-    case (_unit == driver _vehicle): {
+    case (_unit isEqualTo (driver _vehicle)): {
         _vehicle lockDriver true;
         _unit setVariable [QGVAR(lockedSeat), [_vehicle, "driver"], true];
     };
@@ -29,8 +29,8 @@ switch (true) do {
         _unit setVariable [QGVAR(lockedSeat), [_vehicle, "cargo", _cargoIndex], true];
     };
 
-    case !((_vehicle unitTurret _gunner) isEqualTo []): {
-        private _turretPath = _vehicle unitTurret _gunner;
+    case ((_vehicle unitTurret _unit) isNotEqualTo []): {
+        private _turretPath = _vehicle unitTurret _unit;
         _vehicle lockTurret [_turretPath, true];
         _unit setVariable [QGVAR(lockedSeat), [_vehicle, "turret", _turretPath], true];
     };
