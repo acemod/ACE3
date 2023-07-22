@@ -91,7 +91,7 @@ if (_mass != 0) then {
 _target setVariable [QGVAR(carryDirection_temp), nil];
 
 // try loading into vehicle
-if (_tryLoad && {!isNull cursorObject} && {([ACE_player, cursorObject, []] call EFUNC(common,canInteractWith))}) then {
+if (_tryLoad && {!isNull cursorObject} && {([ACE_player, cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith))}) then {
     if (_target isKindOf "CAManBase") then {
         private _vehicles = [cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
         if ([cursorObject] isEqualTo _vehicles) then {
@@ -102,7 +102,10 @@ if (_tryLoad && {!isNull cursorObject} && {([ACE_player, cursorObject, []] call 
             };
         };
     } else {
-        if ([_target, cursorObject] call EFUNC(cargo,canLoadItemIn)) then {
+        if (
+            ["ace_cargo"] call EFUNC(common,isModLoaded) &&
+            {[_target, cursorObject] call EFUNC(cargo,canLoadItemIn)}
+        ) then {
             [player, _target, cursorObject] call EFUNC(cargo,startLoadIn);
         };
     };
