@@ -94,3 +94,8 @@
         };
     };
 }] call CBA_fnc_addEventHandler;
+
+["CAManBase", "Killed", {
+    params ["_unit"];
+    [_unit] call FUNC(unlockUnconsciousSeat);
+}] call CBA_fnc_addClassEventHandler;

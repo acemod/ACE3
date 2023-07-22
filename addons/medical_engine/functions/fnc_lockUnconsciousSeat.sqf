@@ -14,6 +14,7 @@
 params ["_unit"];
 
 private _vehicle = objectParent _unit;
+TRACE_3("lockUnconsciousSeat",_unit,_vehicle,lifeState _unit);
 
 if (alive _unit && {lifeState _unit != "INCAPACITATED"}) exitWith {};
 
@@ -35,3 +36,4 @@ switch (true) do {
         _unit setVariable [QGVAR(lockedSeat), [_vehicle, "turret", _turretPath], true];
     };
 };
+TRACE_1("locked",_unit getVariable QGVAR(lockedSeat));
