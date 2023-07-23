@@ -25,19 +25,4 @@ PREP_RECOMPILE_END;
 
 addMissionEventHandler ["EntityKilled", {_this call FUNC(handleKilledMission)}];
 
-// Add inventory and open backpack actions to uncon units
-if (hasInterface) then {
-    ["CAManBase", "init", LINKFUNC(addInventoryActions), true, [], true] call CBA_fnc_addClassEventHandler;
-};
-
-// Respawn is called locally
-["CAManBase", "respawn", {
-    params ["_unit"];
-
-    // Make sure to call function only once on respawn
-    if (!local _unit) exitWith {};
-
-    [QGVAR(addInventoryActions), _unit] call CBA_fnc_globalEvent;
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-
 ADDON = true;
