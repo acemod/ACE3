@@ -17,7 +17,7 @@
 
 private _baseline = 1;
 if (GVAR(swayFactorsBaseline) isNotEqualTo []) then {
-    _baseline = [missionNamespace, "ACE_setCustomAimCoef_baseline", "max"] call EFUNC(common,arithmeticGetResult);
+    _baseline = 1 max ([missionNamespace, "ACE_setCustomAimCoef_baseline", "max"] call EFUNC(common,arithmeticGetResult));
 };
 
 private _multiplier = 1;
