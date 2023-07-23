@@ -1661,5 +1661,21 @@
             <Russian>Разрядить оружие</Russian>
             <Spanish>Descargar arma</Spanish>
         </Key>
+        <Key ID="STR_ACE_Common_loadObject">
+            <English>Load</English>
+            <German>Beladen</German>
+            <Polish>Załaduj</Polish>
+            <Portuguese>Carregar</Portuguese>
+            <Russian>Загрузить</Russian>
+            <Czech>Naložit</Czech>
+            <Spanish>Cargar</Spanish>
+            <Italian>Carica</Italian>
+            <French>Charger</French>
+            <Japanese>積み込む</Japanese>
+            <Korean>싣기</Korean>
+            <Chinese>裝載</Chinese>
+            <Chinesesimp>装载</Chinesesimp>
+            <Turkish>Yükle</Turkish>
+        </Key>
     </Package>
 </Project>

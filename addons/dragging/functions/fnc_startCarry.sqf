@@ -19,12 +19,16 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
+private _weight = [_target] call FUNC(getWeight);
+
 // exempt from weight check if object has override variable set
-if (!GETVAR(_target,GVAR(ignoreWeightCarry),false) && {
-    private _weight = [_target] call FUNC(getWeight);
-    _weight > GETMVAR(ACE_maxWeightCarry,1E11)
-}) exitWith {
-    // exit if object weight is over global var value
+private _weight = 0;
+if !(_target getVariable [QGVAR(ignoreWeightCarry), false]) then {
+    _weight = [_target] call FUNC(getWeight);
+};
+
+// exit if object weight is over global var value
+if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
@@ -57,14 +61,17 @@ if (_target isKindOf "CAManBase") then {
     _unit action ["SwitchWeapon", _unit, _unit, 299];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
-    [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+    private _canRun = [_weight] call FUNC(canRun_carry);
+    // only force walking if we're overweight
+    [_unit, "forceWalk", QUOTE(ADDON), !_canRun] call EFUNC(common,statusEffect_set);
+    [_unit, "blockSprint", QUOTE(ADDON), _canRun] call EFUNC(common,statusEffect_set);
+
 };
 
-[_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
-
 
 // prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
