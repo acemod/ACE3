@@ -6,13 +6,13 @@
 if (!hasInterface) exitWith {};
 
 // Fractures affect base sway, pain makes it worse
-
-["multiplier", {
-    1 + GET_PAIN_PERCEIVED(ACE_player)
+["baseline", {
+    ACE_player getVariable [QEGVAR(medical_engine,aimFracture), 0]
 }, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
 
-["baseline", {
-    linearConversion [0, 8, (ACE_player getVariable [QEGVAR(medical_engine,aimFracture), 0]), 1, 4, true]
+// Max pain = 5x sway
+["multiplier", {
+    1 + (GET_PAIN_PERCEIVED(ACE_player) * 4)
 }, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
 
 #ifdef DEBUG_MODE_FULL
