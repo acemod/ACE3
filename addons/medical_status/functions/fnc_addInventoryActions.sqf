@@ -19,8 +19,6 @@ if (!hasInterface) exitWith {};
 
 params ["_unit"];
 
-systemChat str _this;
-
 private _id = _unit addAction ["", {
     params ["_target", "_caller"];
 
@@ -30,7 +28,7 @@ private _id = _unit addAction ["", {
     {(lifeState _target) isEqualTo "INCAPACITATED"}
 }, 2];
 
-_unit setUserActionText [_id, "TEST: " + localize "STR_ACTION_GEAR", "<img image='\A3\ui_f\data\igui\cfg\actions\gear_ca.paa' size='2.5' shadow=2 />"];
+_unit setUserActionText [_id, localize "STR_ACTION_GEAR", "<img image='\A3\ui_f\data\igui\cfg\actions\gear_ca.paa' size='2.5' shadow=2 />"];
 
 _unit addAction ["OpenBag", {
     params ["_target", "_caller"];
@@ -46,5 +44,5 @@ _unit addAction ["OpenBag", {
     {!lockedInventory _backpackContainer} &&
     {maxLoad _backpackContainer > 0} &&
     {getNumber (_backpackConfig >> "disableInventory") != 1} &&
-    {_target setUserActionText [_actionId, format ["TEST: " + localize "STR_ACTION_OPEN_BAG", getText (_backpackConfig >> "displayName")]]; true}
+    {_target setUserActionText [_actionId, format [localize "STR_ACTION_OPEN_BAG", getText (_backpackConfig >> "displayName")]]; true}
 }, 2];
