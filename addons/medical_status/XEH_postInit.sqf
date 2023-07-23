@@ -9,12 +9,14 @@
 if (hasInterface) then {
     ["CAManBase", "init", LINKFUNC(addInventoryActions), true, [], true] call CBA_fnc_addClassEventHandler;
 
-    // Respawn is called globally
+    // Respawn is called locally
     ["CAManBase", "respawn", {
         params ["_unit"];
 
-        [QGVAR(addInventoryActions), _unit] call CBA_fnc_localEvent;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
+        if (!local _unit) exitWith {};
+
+        [QGVAR(addInventoryActions), _unit] call CBA_fnc_globalEvent;
+    }, true] call CBA_fnc_addClassEventHandler;
 
     // EH above do not fire for dead units
     {
