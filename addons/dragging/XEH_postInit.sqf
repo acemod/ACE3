@@ -8,6 +8,16 @@ if (isServer) then {
 
         _unit call FUNC(handleKilled);
     }];
+
+    // Handle surrending and handcuffing
+    ["ace_captiveStatusChanged", {
+        params ["_unit", "_state"];
+
+        // If surrended or handcuffed, drop dragged/carried object
+        if (_state) then {
+            _unit call FUNC(handleKilled);
+        };
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
@@ -73,8 +83,6 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
         [_owner, _container] call FUNC(dropObject);
     };
 }] call CBA_fnc_addEventHandler;
-
-//@todo Captivity?
 
 //Add Keybind:
 ["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)), {
