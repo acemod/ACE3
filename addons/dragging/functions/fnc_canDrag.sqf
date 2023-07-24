@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2, Dystopian
- * Check if unit can drag the object. Doesn't check weight.
+ * Checks if unit can drag the object. Doesn't check weight.
  *
  * Arguments:
  * 0: Unit that should do the dragging <OBJECT>
@@ -24,13 +24,13 @@ if !([_unit, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)) exi
 
 // Static weapons need to be empty for dragging (ignore UAV AI)
 if (_target isKindOf "StaticWeapon") exitWith {
-    crew _target findIf {getText (configOf _x >> "simulation") != "UAVPilot"} == -1
+    (crew _target) findIf {getText (configOf _x >> "simulation") != "UAVPilot"} == -1
 };
 
 // Units need to be unconscious or limping; Units also need to not be in ragdoll, as that causes desync issues
 if (_target isKindOf "CAManBase") exitWith {
     !(alive _target != isAwake _target) &&
-    {lifeState _target isEqualTo "INCAPACITATED" ||
+    {lifeState _target == "INCAPACITATED" ||
     {_target getHitPointDamage "HitLegs" >= 0.5} ||
     {(animationState _target) in ["", "unconscious", "deadstate"]}}
 };

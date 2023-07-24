@@ -1,6 +1,7 @@
 // by PabstMirror, commy2
 #include "script_component.hpp"
 
+// Release object on disconnection. Function is identical to killed
 if (isServer) then {
     // 'HandleDisconnect' EH triggers too late
     addMissionEventHandler ["PlayerDisconnected", {
@@ -8,6 +9,16 @@ if (isServer) then {
 
         _unit call FUNC(handleKilled);
     }];
+
+    // Handle surrending and handcuffing
+    ["ace_captiveStatusChanged", {
+        params ["_unit", "_state"];
+
+        // If surrended or handcuffed, drop dragged/carried object
+        if (_state) then {
+            _unit call FUNC(handleKilled);
+        };
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
@@ -19,6 +30,7 @@ if (isNil "ACE_maxWeightDrag") then {
 if (isNil "ACE_maxWeightCarry") then {
     ACE_maxWeightCarry = 600;
 };
+
 if (isNil QGVAR(maxWeightCarryRun)) then {
     GVAR(maxWeightCarryRun) = 50;
 };
@@ -31,13 +43,13 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 ["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
 
-// release object on player change. This does work when returning to lobby, but not when hard disconnecting.
-["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+// Release object on player change. This does work when returning to lobby, but not when hard disconnecting.
+["unit", LINKFUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
 ["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
-["weapon", FUNC(handlePlayerWeaponChanged)] call CBA_fnc_addPlayerEventHandler;
+["weapon", LINKFUNC(handlePlayerWeaponChanged)] call CBA_fnc_addPlayerEventHandler;
 
-// handle waking up dragged unit and falling unconscious while dragging
-["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+// Handle waking up dragged unit and falling unconscious while dragging
+["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 
 // Handle local effect commands for clones
 [QGVAR(cloneCreated), {
@@ -47,8 +59,8 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     _clone setMimic "unconscious";
 }] call CBA_fnc_addEventHandler;
 
-// display event handler
-["MouseZChanged", {_this select 1 call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
+// Display event handler
+["MouseZChanged", {(_this select 1) call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
 
 [QGVAR(carryingContainerClosed), {
     params ["_container", "_owner"];
@@ -60,13 +72,13 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
         _weight = [_container] call FUNC(getWeight);
     };
 
-    // drop the object if overweight
+    // Drop the object if overweight
     if (_weight > ACE_maxWeightCarry) exitWith {
         [_owner, _container] call FUNC(dropObject_carry);
     };
     private _canRun = [_weight] call FUNC(canRun_carry);
 
-    // force walking based on weight
+    // Force walking based on weight
     [_owner, "forceWalk", QUOTE(ADDON), !_canRun] call EFUNC(common,statusEffect_set);
     [_owner, "blockSprint", QUOTE(ADDON), _canRun] call EFUNC(common,statusEffect_set);
 }] call CBA_fnc_addEventHandler;
@@ -81,55 +93,10 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
         _weight = [_container] call FUNC(getWeight);
     };
 
-     // drop the object if overweight
+     // Drop the object if overweight
     if (_weight > ACE_maxWeightDrag) exitWith {
         [_owner, _container] call FUNC(dropObject);
     };
 }] call CBA_fnc_addEventHandler;
 
-//@todo Captivity?
-
-//Add Keybind:
-["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)), {
-    if (!alive ACE_player) exitWith {false};
-    if !([ACE_player, objNull, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
-
-    // If we are drag/carrying something right now then just drop it:
-    if (ACE_player getVariable [QGVAR(isDragging), false]) exitWith {
-        [ACE_player, ACE_player getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
-        false
-    };
-    if (ACE_player getVariable [QGVAR(isCarrying), false]) exitWith {
-        [ACE_player, ACE_player getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry);
-        false
-    };
-
-    private _cursor = cursorObject;
-    if ((isNull _cursor) || {(_cursor distance ACE_player) > 2.6}) exitWith {false};
-    if (!([ACE_player, _cursor] call FUNC(canDrag))) exitWith {false};
-
-    [ACE_player, _cursor] call FUNC(startDrag);
-    false
-}, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
-
-["ACE3 Common", QGVAR(carry), (localize LSTRING(CarryKeybind)), {
-    if (!alive ACE_player) exitWith {false};
-    if !([ACE_player, objNull, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
-
-    // If we are drag/carrying something right now then just drop it:
-    if (ACE_player getVariable [QGVAR(isDragging), false]) exitWith {
-        [ACE_player, ACE_player getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
-        false
-    };
-    if (ACE_player getVariable [QGVAR(isCarrying), false]) exitWith {
-        [ACE_player, ACE_player getVariable [QGVAR(carriedObject), objNull], true] call FUNC(dropObject_carry);
-        false
-    };
-
-    private _cursor = cursorObject;
-    if ((isNull _cursor) || {(_cursor distance ACE_player) > 2.6}) exitWith {false};
-    if (!([ACE_player, _cursor] call FUNC(canCarry))) exitWith {false};
-
-    [ACE_player, _cursor] call FUNC(startCarry);
-    false
-}, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
+#include "initKeybinds.sqf"
