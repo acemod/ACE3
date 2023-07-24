@@ -46,8 +46,6 @@ if (_armor <= SCALED_UNPROTECTED_VALUE) exitWith {
 // Impact damage already takes into account hits at oblique angles, engine handles that
 private _impactSpeed = (_realDamage/_hit) * _typicalSpeed;
 
-
-
 // Energy transferred to target can be randomized a bit, final stage ballistics isn't a science
 _hit = _hit * random [0.75, 1, 1.1];
 
