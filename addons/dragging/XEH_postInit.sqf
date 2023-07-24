@@ -2,8 +2,22 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-    // release object on hard disconnection. Function is identical to killed
-    addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleKilled)}];
+    // 'HandleDisconnect' EH triggers too late
+    addMissionEventHandler ["PlayerDisconnected", {
+        private _unit = (getUserInfo (_this select 5)) select 10;
+
+        _unit call FUNC(handleKilled);
+    }];
+
+    // Handle surrending and handcuffing
+    ["ace_captiveStatusChanged", {
+        params ["_unit", "_state"];
+
+        // If surrended or handcuffed, drop dragged/carried object
+        if (_state) then {
+            _unit call FUNC(handleKilled);
+        };
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
@@ -14,6 +28,9 @@ if (isNil "ACE_maxWeightDrag") then {
 
 if (isNil "ACE_maxWeightCarry") then {
     ACE_maxWeightCarry = 600;
+};
+if (isNil QGVAR(maxWeightCarryRun)) then {
+    GVAR(maxWeightCarryRun) = 50;
 };
 
 ["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
@@ -30,7 +47,42 @@ if (isNil "ACE_maxWeightCarry") then {
 // display event handler
 ["MouseZChanged", {_this select 1 call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
 
-//@todo Captivity?
+[QGVAR(carryingContainerClosed), {
+    params ["_container", "_owner"];
+    TRACE_2("carryingContainerClosed EH",_container,_owner);
+    if !(_owner getVariable [QGVAR(isCarrying), false]) exitWith { ERROR_1("not carrying - %1",_this) };
+
+    private _weight = 0;
+    if !(_container getVariable [QGVAR(ignoreWeightCarry), false]) then {
+        _weight = [_container] call FUNC(getWeight);
+    };
+
+    // drop the object if overweight
+    if (_weight > ACE_maxWeightCarry) exitWith {
+        [_owner, _container] call FUNC(dropObject_carry);
+    };
+    private _canRun = [_weight] call FUNC(canRun_carry);
+
+    // force walking based on weight
+    [_owner, "forceWalk", QUOTE(ADDON), !_canRun] call EFUNC(common,statusEffect_set);
+    [_owner, "blockSprint", QUOTE(ADDON), _canRun] call EFUNC(common,statusEffect_set);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(draggingContainerClosed), {
+    params ["_container", "_owner"];
+    TRACE_2("draggingContainerClosed EH",_container,_owner);
+    if !(_owner getVariable [QGVAR(isDragging), false]) exitWith { ERROR_1("not dragging - %1",_this) };
+
+    private _weight = 0;
+    if !(_container getVariable [QGVAR(ignoreWeightDrag), false]) then {
+        _weight = [_container] call FUNC(getWeight);
+    };
+
+     // drop the object if overweight
+    if (_weight > ACE_maxWeightDrag) exitWith {
+        [_owner, _container] call FUNC(dropObject);
+    };
+}] call CBA_fnc_addEventHandler;
 
 //Add Keybind:
 ["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)), {
@@ -65,7 +117,7 @@ if (isNil "ACE_maxWeightCarry") then {
         false
     };
     if (ACE_player getVariable [QGVAR(isCarrying), false]) exitWith {
-        [ACE_player, ACE_player getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry);
+        [ACE_player, ACE_player getVariable [QGVAR(carriedObject), objNull], true] call FUNC(dropObject_carry);
         false
     };
 

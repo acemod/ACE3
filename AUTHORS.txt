@@ -6,6 +6,7 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+Brett Mayson
 bux578 <github@jonathandavid.de>
 commy2
 Dahlgren
@@ -15,6 +16,7 @@ Felix Wiegand <koffeinflummi@gmail.com>
 Garth "L-H" de Wet <garthofhearts@gmail.com>
 Giallustio
 Glowbal
+Grim
 Janus
 jokoho482 <jokoho482@gmail.com>
 Jonpas <jonpas33@gmail.com>
@@ -57,7 +59,6 @@ Bla1337
 BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
 Brakoviejo
-Brett Mayson
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>
