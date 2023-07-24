@@ -40,12 +40,6 @@ private _realDamage = _newDamage * _armor;
 if (_hitPoint isNotEqualTo "#structural") then {
     _newDamage = _newDamage * (_armor/_armorScaled);
 };
-
-// Calculate damage based on ammo "caliber": ammo material penetration
-// Setting for those who prefer the regular balance or have custom ammo configs
-if (EGVAR(medical,alternateArmorPenetration)) then {
-    _newDamage = [_realDamage, _ammo, _armorScaled] call FUNC(calculateDamage);
-};
 TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
 
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
