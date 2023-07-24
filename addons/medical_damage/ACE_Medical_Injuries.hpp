@@ -80,7 +80,7 @@ class ACE_Medical_Injuries {
             // bullets only create multiple wounds when the damage is very high
             thresholds[] = {{20, 10}, {4.5, 2}, {3, 1}, {0, 1}};
             selectionSpecific = 1;
-            class woundHandlers {
+            class woundHandlers: woundHandlers {
                 GVAR(armorPenetration) = QFUNC(woundsHandlerArmorPenetration);
             };
 
