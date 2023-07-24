@@ -32,14 +32,9 @@ if (_hitPoint isEqualTo "") then {
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 private _newDamage = _damage - _oldDamage;
-// Get scaled armor value of hitpoint and calculate damage before armor
-// We scale using passThrough to handle explosive-resistant armor properly (#9063)
-// We need realDamage to determine which limb was hit correctly
-[_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
+// Get armor value of hitpoint and calculate damage before armor
+private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
 private _realDamage = _newDamage * _armor;
-if (_hitPoint isNotEqualTo "#structural") then {
-    _newDamage = _newDamage * (_armor/_armorScaled);
-};
 TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
 
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
@@ -106,9 +101,8 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     private _damageLeftLeg = _unit getVariable [QGVAR($HitLeftLeg), [0,0]];
     private _damageRightLeg = _unit getVariable [QGVAR($HitRightLeg), [0,0]];
 
-    // Find hit point that received the maximum damage
+    // Find hit point that received the maxium damage
     // Priority used for sorting if incoming damage is equal
-    // _realDamage, priority, _newDamage, body part name
     private _allDamages = [
         [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       "Head"],
         [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 1,       "Body"],
