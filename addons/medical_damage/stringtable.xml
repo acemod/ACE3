@@ -799,5 +799,11 @@
             <Chinesesimp>死于致命伤的概率。</Chinesesimp>
             <Korean>치명상으로 인해 사망할 확률을 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
+            <English>Use Alternate Armor Penetration</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_Description">
+            <English>Controls whether ammo material penetration ("caliber") is taken into account for damage handling.</English>
+        </Key>
     </Package>
 </Project>

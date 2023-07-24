@@ -8,7 +8,7 @@
  * 0: Unit That Was Hit <OBJECT>
  * 1: Damage done to each body part <ARRAY>
  * 2: Type of the damage done <STRING>
- * 3: Projectile classname
+ * 3: Projectile classname <STRING>
  *
  * Return Value:
  * None
