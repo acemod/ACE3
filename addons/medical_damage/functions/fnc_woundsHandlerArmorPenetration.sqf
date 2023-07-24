@@ -23,6 +23,7 @@
 #define MINIMUM_VELOCITY 50
 // armor 2 with passthrough 0.8
 #define SCALED_UNPROTECTED_VALUE 4
+#define ENGINE_DAMAGE_INDEX 0
 
 if (!EGVAR(medical,alternateArmorPenetration)) exitWith {_this};
 
@@ -46,7 +47,7 @@ private _impactSpeed = (_realDamage/_hit) * _typicalSpeed;
 // Velocity too low to penetrate even unprotected human skin
 if (_impactSpeed < MINIMUM_VELOCITY) exitWith {
     TRACE_2("projectile under minimum damage velocity",_ammo,_impactSpeed);
-    _damageData set [0, 0];
+    _damageData set [ENGINE_DAMAGE_INDEX, 0];
     [_unit, _allDamages, _typeOfDamage] // return
 };
 
@@ -54,7 +55,7 @@ if (_impactSpeed < MINIMUM_VELOCITY) exitWith {
 // There's no need to calculate penetration if there is no armor to begin with
 _armor = _armor - SCALED_UNPROTECTED_VALUE;
 if (_armor <= 0) exitWith {
-    _damageData set [0, _realDamage / 5 ];
+    _damageData set [ENGINE_DAMAGE_INDEX, _realDamage / 5 ];
     [_unit, _allDamages, _typeOfDamage] // return
 };
 
@@ -67,7 +68,7 @@ private _penDepth = _penFactor * (_impactSpeed/_typicalSpeed)^2;
 // There's only so much damage a round can do, limited by its energy
 // Divide by 5 to scale to 0-1
 private _finalDamage = (_hit * ((_penDepth/_armor) min 1)) / 5;
-_damageData set [0, _finalDamage];
+_damageData set [ENGINE_DAMAGE_INDEX, _finalDamage];
 
 TRACE_3("Armor penetration handled, passing damage", _finalDamage, _damageData, _allDamages);
 
