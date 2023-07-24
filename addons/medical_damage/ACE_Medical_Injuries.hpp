@@ -81,7 +81,7 @@ class ACE_Medical_Injuries {
             thresholds[] = {{20, 10}, {4.5, 2}, {3, 1}, {0, 1}};
             selectionSpecific = 1;
             class woundHandlers {
-                ADDON = QFUNC(woundsHandlerArmorPenetration);
+                GVAR(armorPenetration) = QFUNC(woundsHandlerArmorPenetration);
             };
 
             class Avulsion {
