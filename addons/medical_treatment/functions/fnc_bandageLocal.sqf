@@ -7,30 +7,26 @@
  * 0: Patient <OBJECT>
  * 1: Body Part <STRING>
  * 2: Treatment <STRING>
- * 3: Amount of bandage remaining <NUMBER> (default: 1)
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "head", "FieldDressing", 1] call ace_medical_treatment_fnc_bandageLocal
+ * [player, "Head", "FieldDressing"] call ace_medical_treatment_fnc_bandageLocal
  *
  * Public: No
  */
 
-params ["_patient", "_bodyPart", "_bandage", ["_bandageRemaining", 1]];
-TRACE_4("bandageLocal",_patient,_bodyPart,_bandage,_bandageRemaining);
+params ["_patient", "_bodyPart", "_bandage"];
+TRACE_3("bandageLocal",_patient,_bodyPart,_bandage);
 _bodyPart = toLower _bodyPart;
 
 private _openWounds = GET_OPEN_WOUNDS(_patient);
 private _woundsOnPart = _openWounds getOrDefault [_bodyPart, []];
 if (_woundsOnPart isEqualTo []) exitWith {};
 
-// Bandage completely used up
-if (_bandageRemaining isEqualTo 0) exitWith {};
-
 // Figure out which injuries for this bodypart are the best choice to bandage
-private _targetWounds = [_patient, _bandage, _bodyPart, _bandageRemaining, createHashMap] call FUNC(findMostEffectiveWounds);
+private _targetWounds = [_patient, _bandage, _bodyPart, GVAR(bandageEffectiveness)] call FUNC(findMostEffectiveWounds);
 
 // Everything is patched up on this body part already
 if (_targetWounds isEqualTo createHashMap) exitWith {};
@@ -65,6 +61,7 @@ _patient setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 // Check if we fixed limping from this treatment
 if (
     EGVAR(medical,limping) == 1
+    && {_clearConditionCache}
     && {_bodyPart in ["leftleg", "rightleg"]}
     && {_patient getVariable [QEGVAR(medical,isLimping), false]}
 ) then {

@@ -35,6 +35,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(bandageEffectiveness),
+    "SLIDER",
+    [LSTRING(bandageEffectiveness_DisplayName), LSTRING(bandageEffectiveness_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 5, 1, 2],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(woundReopenChance),
     "SLIDER",
     [LSTRING(WoundReopenChance_DisplayName), LSTRING(WoundReopenChance_Description)],

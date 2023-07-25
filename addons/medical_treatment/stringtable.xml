@@ -4688,5 +4688,11 @@
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
+            <English>Bandage Effectiveness Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
+            <English>Determines how effective bandages are at closing wounds.</English>
+        </Key>
     </Package>
 </Project>
