@@ -88,6 +88,9 @@ GVAR(statsPagesLeft) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(statsPagesRight) = [0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 
+GVAR(showActions) = true;
+GVAR(currentActionPage) = 0;
+
 // Add the items the player has to virtualItems
 {
     switch (_forEachIndex) do {
@@ -223,7 +226,15 @@ _statsBoxCtrl ctrlSetPosition [
 _statsBoxCtrl ctrlEnable false;
 _statsBoxCtrl ctrlCommit 0;
 
-(_display displayCtrl IDC_statsButton) ctrlShow false;
+// Handle actions
+private _actionsBoxCtrl = _display displayCtrl IDC_actionsBox;
+_actionsBoxCtrl ctrlSetPosition [
+    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
+    safezoneY + 58.6 * GRID_H,
+    47 * GRID_W,
+    11 * GRID_H
+];
+_actionsBoxCtrl ctrlCommit 0;
 
 // Disable import in MP
 if (isMultiplayer) then {

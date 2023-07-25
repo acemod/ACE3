@@ -382,7 +382,39 @@ For config added sorts the classname is used, for function added ones the string
 
 The same numbers are used for sorting methods as for stats (see `5.4 Stat tab numbers`).
 
-## 7. Eventhandlers
+## 7. Actions
+
+ACE Arsenal actions are customizable, this will show you how.
+
+### 7.1 Adding actions via config
+
+Actions use the same tab definitions as stats, found above.
+
+```cpp
+class ace_arsenal_actions {
+    class TAG_myActions {
+        displayName = "My Actions";
+        condition = QUOTE(true);
+        tabs[] = {0,5};
+        class text {
+            // A simple text label
+            text = "My text";
+        };
+        class statement {
+            // Statement output as text
+            textStatement = QUOTE([_this select 0] call tag_fnc_myTextStatement);
+        };
+        class button {
+            label = "My Action";
+            condition = QUOTE(true);
+            statement = QUOTE(_this call tag_fnc_myAction);
+        };
+    };
+};
+```
+The focused unit object is passed to the condition and statement functions.
+
+## 8. Eventhandlers
 
 All are local.
 
@@ -409,9 +441,9 @@ All are local.
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 
-## 8. Custom sub item categories
+## 9. Custom sub item categories
 
-### 8.1 Adding a sub item category
+### 9.1 Adding a sub item category
 
 `ace_arsenal_fnc_addRightPanelButton`
 

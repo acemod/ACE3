@@ -125,6 +125,8 @@ GVAR(statsPagesLeft) = nil;
 GVAR(statsPagesRight) = nil;
 GVAR(statsInfo) =  nil;
 
+GVAR(showActions) = nil;
+
 GVAR(center) = nil;
 GVAR(centerNotPlayer) = nil;
 
