@@ -38,6 +38,9 @@ private _actionList = [
 private _configGroupEntries = "true" configClasses (configFile >> QGVAR(actions));
 
 {
+    private _scopeEditor = getNumber (_x >> "scopeEditor");
+    if (is3DEN && {_scopeEditor != 2}) then {continue};
+
     private _configActions = "true" configClasses _x;
 
     private _rootDisplayName = getText (_x >> "displayName");
