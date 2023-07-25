@@ -35,8 +35,8 @@ if (EGVAR(medical,fractures) > 0) then {
     if (EGVAR(medical,fractures) in [2, 3]) then { // the limp with a splint will still cause effects
         // Block sprint / force walking based on fracture setting and leg splint status
         private _hasLegSplint = (_fractures select 4) == -1 || {(_fractures select 5) == -1};
-        if (EGVAR(medical,fractures) == 2) then { 
-            [_unit, "blockSprint", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set); 
+        if (EGVAR(medical,fractures) == 2) then {
+            [_unit, "blockSprint", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
         } else {
             [_unit, "forceWalk", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
         };
@@ -48,18 +48,31 @@ if (EGVAR(medical,fractures) > 0) then {
 };
 
 if (!_isLimping && {EGVAR(medical,limping) > 0}) then {
-    private _woundsToCheck = GET_OPEN_WOUNDS(_unit);
+    private _openWounds = GET_OPEN_WOUNDS(_unit);
+
+    // Want a copy of combined arrays to prevent wound mixing
+    private _legWounds = (_openWounds getOrDefault ["leftleg", []])
+        + (_openWounds getOrDefault ["rightleg", []]);
+
     if (EGVAR(medical,limping) == 2) then {
-        _woundsToCheck = _woundsToCheck + GET_BANDAGED_WOUNDS(_unit); // do not append
+        private _bandagedWounds = GET_BANDAGED_WOUNDS(_unit);
+        _legWounds = _legWounds
+            + (_bandagedWounds getOrDefault ["leftleg", []])
+            + (_bandagedWounds getOrDefault ["rightleg", []]);
     };
+
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "", "_xDamage"];
-        if ((_xBodyPartN > 3) && {_xAmountOf > 0} && {_xDamage > LIMPING_DAMAGE_THRESHOLD} && {
-                    (EGVAR(medical_damage,woundsData) select (_xClassID / 10)) select 7}) exitWith { // select _causeLimping from woundsData
+        _x params ["_xClassID", "_xAmountOf", "", "_xDamage"];
+        if (
+            (_xAmountOf > 0)
+            && {_xDamage > LIMPING_DAMAGE_THRESHOLD}
+            // select _causeLimping from woundDetails
+            && {(EGVAR(medical_damage,woundDetails) get (_xClassID / 10)) select 3}
+        ) exitWith {
             TRACE_1("limping because of wound",_x);
             _isLimping = true;
         };
-    } forEach _woundsToCheck;
+    } forEach _legWounds;
 };
 _unit setVariable [QEGVAR(medical,isLimping), _isLimping, true];
 

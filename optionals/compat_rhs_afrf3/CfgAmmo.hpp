@@ -113,27 +113,38 @@ class CfgAmmo {
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
     class rhs_B_545x39_7U1_Ball: rhs_B_545x39_Ball {
-        // @todo: Provide accurate coefficients for this subsonic ammo
-        // In the meantime, prevent it inheriting from its supersonic parent
-        // ammoTempMuzzleVelocityShifts scaled down from normal
-        ACE_ammoTempMuzzleVelocityShifts[]={-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73};
-        ACE_muzzleVelocities[] = {};
-        ACE_barrelLengths[] = {};
+        ACE_caliber = 5.67;
+        ACE_bulletLength = 24.3;
+        ACE_bulletMass = 5.2;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73};
+        ACE_muzzleVelocities[] = {300, 320, 335};
+        ACE_barrelLengths[] = {200, 300, 400};
     };
     class rhs_B_762x39_U_Ball: rhs_B_762x39_Ball {
-        // @todo: Provide accurate coefficients for this subsonic ammo
-        // In the meantime, prevent it inheriting from its supersonic parent
-        // ammoTempMuzzleVelocityShifts scaled down from normal
-        ACE_ammoTempMuzzleVelocityShifts[]={-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73}; //Just Scaled Down Normal?
-        ACE_muzzleVelocities[] = {};
-        ACE_barrelLengths[] = {};
+        ACE_caliber = 7.94;
+        ACE_bulletLength = 33.62;
+        ACE_bulletMass = 12.5;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73}; //Just Scaled Down Normal?
+        ACE_muzzleVelocities[]= {270, 290, 320};
+        ACE_barrelLengths[]= {254.0, 414.02, 508.0};
     };
     class rhs_B_9x39_SP5: rhs_B_762x39_Ball {
-        // @todo: Provide accurate coefficients for this subsonic ammo
-        // In the meantime, prevent it inheriting from its supersonic parent
-        ACE_ammoTempMuzzleVelocityShifts[]={};
-        ACE_muzzleVelocities[]={};
-        ACE_barrelLengths[]={};
+        ACE_caliber = 9.246;
+        ACE_bulletLength = 31.496;
+        ACE_bulletMass = 16.1;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655,-2.547,-2.285,-2.012,-1.698,-1.28,-0.764,-0.153,0.596,1.517,2.619};
+        ACE_ballisticCoefficients[] = {0.275};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_muzzleVelocities[] = {280, 300, 320};
+        ACE_barrelLengths[] = {254.0, 414.02, 508.0};
+    };
+    class rhs_B_9x39_SP6: rhs_B_9x39_SP5 {
+        ACE_caliber = 9.26;
+        ACE_bulletMass = 16.2;
+        ACE_ballisticCoefficients[] = {0.225};
+        ACE_muzzleVelocities[] = {290, 310, 335};
+        ACE_barrelLengths[] = {254.0, 414.02, 508.0};
     };
 
     class SubmunitionBase;
@@ -179,11 +190,13 @@ class CfgAmmo {
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
+        EGVAR(vehicle_damage,incendiary) = 0.1;
     };
     class rhs_rpg7v2_tbg7v: rhs_rpg7v2_pg7vl {
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;
+        EGVAR(vehicle_damage,incendiary) = 0.7;
     };
     class rhs_rshg2_rocket: rhs_rpg7v2_tbg7v {
         ace_frag_enabled = 0;
@@ -253,5 +266,46 @@ class CfgAmmo {
 
     class rhs_mine_ozm72_c_ammo: rhs_mine_ozm72_a_ammo {
         ace_explosives_defuseObjectPosition[] = {0, -0.015, 0.12};
+    };
+    class Sh_125mm_APFSDS;
+    class Sh_125mm_HE;
+    class rhs_ammo_bm_base: Sh_125mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+    class rhs_ammo_bk_base: rhs_ammo_bm_base {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_3bm_base: rhs_ammo_bm_base {};
+    class rhs_ammo_of_base: Sh_125mm_HE {
+        EGVAR(vehicle_damage,incendiary) = 0.30;
+    };
+    class rhs_ammo_base_penetrator: rhs_ammo_3bm_base {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_ap_penetrator: Sh_125mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+
+    class M_Titan_AT;
+    class rhs_ammo_atgmCore_base: M_Titan_AT {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_atgmBase_base: M_Titan_AT {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+
+    class rhs_ammo_rpgShell_base;
+    class rhs_ammo_og9v: rhs_ammo_rpgShell_base {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+
+    class rhs_ammo_rpg15Shell_base;
+    class rhs_ammo_og15v: rhs_ammo_rpg15Shell_base {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+
+    class B_30mm_AP;
+    class rhs_ammo_30x165mm_base: B_30mm_AP {
+        EGVAR(vehicle_damage,incendiary) = 0.2;
     };
 };

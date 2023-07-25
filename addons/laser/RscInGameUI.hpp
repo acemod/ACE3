@@ -112,13 +112,13 @@ class RscInGameUI {
                     h = "1.6 *         (0.025 * SafezoneH)";
                 };
 
-                class ACE_LaserCode_Helper : RscMapControl {
+                class ACE_LaserCode_Helper: RscMapControl {
                     idc = -1;
                     onDraw = QUOTE(_this call FUNC(onLaserDesignatorDraw));
                     w = 0;
                     h = 0;
                 };
-                class ACE_LaserCode : RscText {
+                class ACE_LaserCode: RscText {
                     idc = 123001;
                     style = 0;
                     sizeEx = "0.038*SafezoneH";

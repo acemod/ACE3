@@ -10,6 +10,7 @@ class CfgWeapons {
         picture = QPATHTOF(UI\w_huntir_monitor_ca.paa);
         descriptionShort = CSTRING(monitor_displayName);
         model = QPATHTOF(data\ace_huntir_monitor.p3d);
+        ACE_isTool = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 20;

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Tagging
+component: tagging
 description: Adds a can of spray paint which allows you to tag buildings, walls and other static objects.
 group: feature
 category: equipment
@@ -21,7 +22,3 @@ Adds a can of spray paint which allows you to tag buildings, walls and other sta
 ### 2.1 Using the Spray
 - Self interact <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Tag` and select the wanted type.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="tagging" %}

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Concertina Wire
+component: concertina_wire
 description: Deployable concertina wire.
 group: feature
 category: equipment
@@ -22,7 +23,3 @@ A concertina wire is a type of barbed wire formed in large coils that can be exp
 - Approach the concertina coil and select <kbd>⊞&nbsp;Win</kbd> (ACE3 default)
 - Select `Deploy concertina wire`.
 - Follow the instructions on screen.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="concertina_wire" %}
