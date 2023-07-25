@@ -65,7 +65,7 @@ private _impactFound = -1;
     };
 
     // Multiply by bandageRemaining in case this is a rollover
-    _woundEffectiveness = _woundEffectiveness * (_bandageRemaining min 1);
+    _woundEffectiveness = _woundEffectiveness * _bandageRemaining;
 
     // Track most effective found so far
     if ((_woundEffectiveness * _amountOf * _bleeding) > (_effectivenessFound * (_wound select 1) * (_wound select 2))) then {
