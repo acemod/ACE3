@@ -117,6 +117,7 @@ class CfgWeapons {
     };
 
     CREATE_CSW_PROXY(rhs_weap_DSHKM);
+    CREATE_CSW_PROXY(RHS_M2_offroad);
 
     class Launcher;
     class Launcher_Base_F: Launcher {

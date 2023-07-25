@@ -214,6 +214,8 @@ class CfgWeapons {
     CREATE_CSW_PROXY(rhs_weap_SPG9);
     CREATE_CSW_PROXY(rhs_weap_9K133_launcher);
     CREATE_CSW_PROXY(rhs_weap_9K115_2_launcher);
+    CREATE_CSW_PROXY(rhs_weap_pkm_tigr);
+    CREATE_CSW_PROXY(rhs_weap_2a14);
 
     class GVAR(2b14_carry): Launcher_Base_F {
         dlc = "ace";

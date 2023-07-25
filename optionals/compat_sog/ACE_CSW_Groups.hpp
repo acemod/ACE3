@@ -91,4 +91,24 @@ class ACE_CSW_Groups {
     class GVAR(82mm_lume)  {
         vn_mortar_type53_mag_lume_x8 = 1;
     };
+
+    class GVAR(m40a1rr_v_8_heat_mag) {
+        vn_m40a1rr_v_8_heat_mag = 1;
+    };
+
+    class GVAR(m40a1rr_v_8_apers_mag) {
+        vn_m40a1rr_v_8_apers_mag = 1;
+    };
+
+    class GVAR(m134_v_2000_mag) {
+        vn_m134_v_2000_mag = 1;
+    };
+
+    class GVAR(m2_v_800_mag) {
+        vn_m2_v_800_mag = 1;
+    };
+
+    class vn_zpu4_v_4800_mag {
+        vn_zpu4_v_4800_mag = 1;
+    };
 };

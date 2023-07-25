@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror, Dystopian
- * Gets magazine that the player can carry, suitable to vehicle magazine
+ * Gets magazine that the player can carry, suitable to vehicle magazine and count
  *
  * Arguments:
  * 0: Vehicle Magazine <STRING>
@@ -19,8 +19,19 @@ params ["_vehicleMag"];
 
 private _carryMag = GVAR(vehicleMagCache) get _vehicleMag;
 if (isNil "_carryMag") then {
-    private _groups = "getNumber (_x >> _vehicleMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
-    _carryMag = configName (_groups param [0, configNull]);
+    private _cfgMag = configFile >> "CfgMagazines";
+    private _ammoCount = getNumber (_cfgMag >> _vehicleMag >>  "count");
+    private _magazines = "getNumber (_x >> _vehicleMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
+
+    // try to find a mag that has the same count as the vehicleMag first, if that doesn't exist give the first element in the group array
+    _carryMag = configName (_magazines param [0, configNull]);
+    {
+        if (getNumber (_cfgMag >> configName _x >> "count") isEqualTo _ammoCount) then {
+            _carryMag = configName _x;
+            break;
+        };
+    } forEach _magazines;
+    
     GVAR(vehicleMagCache) set [_vehicleMag, _carryMag];
     TRACE_2("setting cache",_vehicleMag,_carryMag);
 };

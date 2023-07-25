@@ -603,6 +603,40 @@ class CfgVehicles {
         };
     };
 
+    class rhs_tigr_vdv;
+    class rhs_tigr_sts_vdv: rhs_tigr_vdv {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_pkm_tigr);
+            magazineLocation = "";
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class rhs_gaz66_zu23_base: rhs_gaz66_vmf {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_2a14);
+            magazineLocation = "";
+            desiredAmmo = 100;
+            ammoLoadTime = 8;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class RHS_Ural_Zu23_Base: RHS_Ural_BaseTurret {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_2a14);
+            magazineLocation = "";
+            desiredAmmo = 100;
+            ammoLoadTime = 8;
+            ammoUnloadTime = 5;
+        };
+    };
+
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions;
@@ -645,6 +679,18 @@ class CfgVehicles {
             disassembleTurret = "";
             desiredAmmo = 1;
             ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class StaticCannon;
+    class RHS_ZU23_base: StaticCannon {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_2a14);
+            magazineLocation = "";      // it works better if it's on the main interaction
+            desiredAmmo = 100;
+            ammoLoadTime = 8;
             ammoUnloadTime = 5;
         };
     };

@@ -35,3 +35,5 @@ PREP(reload_loadMagazine);
 
 PREP(staticWeaponInit);
 PREP(staticWeaponInit_unloadExtraMags);
+
+PREP(staticWeaponVehicleInit);

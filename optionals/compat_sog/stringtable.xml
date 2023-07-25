@@ -381,5 +381,11 @@
             <Russian>[CSW] Сумка с миномётом Type 53</Russian>
             <Spanish>[CSW] Type 53 Tubo de mortero</Spanish>
         </Key>
+        <Key ID="STR_ACE_Compat_SOG_m40a1rr_v_8_heat_mag">
+            <English>[CSW] 105x607mm HEAT round</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_m40a1rr_v_8_apers_mag">
+            <English>[CSW] 105x607mm APERS round</English>
+        </Key>
     </Package>
 </Project>

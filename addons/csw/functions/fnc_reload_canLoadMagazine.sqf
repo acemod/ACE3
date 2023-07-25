@@ -46,6 +46,14 @@ private _ammoNeeded = _desiredAmmo min getNumber (_cfgMagazinesCarryMag >> "coun
 private _loadedMag = "";
 private _isBeltLinking = false;
 
+// Zeus Enhanced will keep the mags in the Turret and set the count to zero
+{
+    _x params ["_xMag", "_xTurret", "_xAmmo"];
+    if (_xTurret isEqualTo _turret && {_xAmmo isEqualTo 0}) then {
+        _vehicle removeMagazineTurret [_xMag, _xTurret];
+    };
+} forEach (magazinesAllTurrets _vehicle);
+
 scopeName "main";
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
