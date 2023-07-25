@@ -2,11 +2,12 @@
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
- * Handles the previous / next page buttons for stats
+ * Handles the previous / next page buttons for stats.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Previous or next <BOOL> (false = previous, true = next)
+ * 1: Stats page <CONTROL>
+ * 2: Previous (false) or next (true) page <BOOL>
  *
  * Return Value:
  * None
@@ -21,7 +22,7 @@ if !(ctrlEnabled _control) exitWith {};
 
 GVAR(statsInfo) params ["_isLeftPanel", "_statsIndex", "_panelControl", "_curSel", "_itemCfg"];
 
-private _pageList = [GVAR(statsPagesRight), GVAR(statsPagesLeft)] select (_isLeftPanel);
+private _pageList = [GVAR(statsPagesRight), GVAR(statsPagesLeft)] select _isLeftPanel;
 private _newPageNumber = [(_pageList select _statsIndex) - 1, (_pageList select _statsIndex) + 1] select _nextPage;
 
 _pageList set [_statsIndex, _newPageNumber];

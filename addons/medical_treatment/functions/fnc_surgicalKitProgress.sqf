@@ -83,9 +83,7 @@ if (
 };
 
 // Consume a suture for the next wound if one exists, stop stitching if none are left
-if (GVAR(consumeSurgicalKit) == 2) then {
-    // Don't consume a suture if there are no more wounds to stitch
-    if (_bandagedWoundsOnPart isEqualTo []) exitWith {false};
+if (GVAR(consumeSurgicalKit) == 2 && {_bandagedWoundsOnPart isNotEqualTo []}) then {
     ([_medic, _patient, ["ACE_suture"]] call FUNC(useItem)) params ["_user"];
     !isNull _user
 } else {
