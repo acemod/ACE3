@@ -19,12 +19,12 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ace_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, ["ace_advanced_fatigue", "ace_dragging", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
-["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ace_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
@@ -402,11 +402,11 @@ addMissionEventHandler ["PlayerViewChanged", {
     params ["_unit", "_target"];
 
     // Players can always interact with himself if not boarded
-    vehicle _unit == _unit ||
+    isNull objectParent _unit ||
     // Players can always interact with his vehicle
-    {vehicle _unit == _target} ||
+    {objectParent _unit isEqualTo _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    {_unit isNotEqualTo _target && {!isNull objectParent _target} && {objectParent _unit isEqualTo objectParent _target}} ||
     // Players can always interact with connected UAV
     {!(isNull (ACE_controlledUAV select 0))}
 }] call FUNC(addCanInteractWithCondition);
@@ -415,7 +415,7 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 ["isNotUnconscious", {
     params ["_unit"];
-    lifeState _unit != "INCAPACITATED"
+    lifeState _unit isNotEqualTo "INCAPACITATED"
 }] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////

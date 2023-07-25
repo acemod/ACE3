@@ -74,11 +74,13 @@ call FUNC(compileStats);
 [QGVAR(displayOpened), {
     "CBA_optics_arsenalOpened" call CBA_fnc_localEvent;
     "CBA_disposable_arsenalOpened" call CBA_fnc_localEvent;
+    EGVAR(common,blockItemReplacement) = true;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(displayClosed), {
     "CBA_optics_arsenalClosed" call CBA_fnc_localEvent;
     "CBA_disposable_arsenalClosed" call CBA_fnc_localEvent;
+    EGVAR(common,blockItemReplacement) = false;
 }] call CBA_fnc_addEventHandler;
 
 // Setup Tools tab
