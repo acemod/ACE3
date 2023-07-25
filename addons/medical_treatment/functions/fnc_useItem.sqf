@@ -30,12 +30,12 @@ private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GV
     private _unitItems = _x call EFUNC(common,uniqueItems);
 
     {
-        if (_x in _unitItems) then {
-            _unit removeItem _x;
-            [_unit, _x] breakOut "Main";
-        };
         if (!isNull _unitVehicle && {_x in (itemCargo _unitVehicle)}) then {
             _unitVehicle addItemCargoGlobal [_x, -1];
+            [_unit, _x] breakOut "Main";
+        };
+        if (_x in _unitItems) then {
+            _unit removeItem _x;
             [_unit, _x] breakOut "Main";
         };
     } forEach _items;

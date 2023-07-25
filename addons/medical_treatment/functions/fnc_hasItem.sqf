@@ -4,7 +4,7 @@
  * Checks if one of the given items are present between the medic and patient.
  * Does not respect the priority defined by the allowSharedEquipment setting.
  * Will check medic first and then patient if shared equipment is allowed.
- * If medic or patient are in a vehicle then vehicle's inventory will also be checked
+ * If medic or patient are in a vehicle then vehicle's inventory will also be checked.
  *
  * Arguments:
  * 0: Medic <OBJECT>
