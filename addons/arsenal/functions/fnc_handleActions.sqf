@@ -89,12 +89,13 @@ _actionsCurrentPageCtrl ctrlCommit 0;
     switch (_type) do {
         case ACTION_TYPE_BUTTON: {
             _actionButtonCtrl ctrlRemoveAllEventHandlers "ButtonClick";
-            _actionButtonCtrl ctrlAddEventHandler ["ButtonClick", _statement];
             _actionButtonCtrl ctrlAddEventHandler ["ButtonClick", {
+                if (is3DEN) exitWith {call FUNC(refresh)};
                 [{
                     call FUNC(refresh);
                 }] call CBA_fnc_execNextFrame;
             }];
+            _actionButtonCtrl ctrlAddEventHandler ["ButtonClick", _statement];
             _actionButtonCtrl ctrlSetText _label;
             _actionButtonCtrl ctrlSetFade 0;
             _actionButtonCtrl ctrlEnable true;
