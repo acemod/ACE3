@@ -19,14 +19,15 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
-["blockSprint", false, ["ace_advanced_fatigue", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ace_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
+["blockSprint", false, ["ace_advanced_fatigue", "ace_dragging", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
-["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ace_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -78,11 +79,22 @@
     if (_object isEqualTo ACE_Player && {_set > 0}) then {
         call FUNC(endRadioTransmission);
     };
-    if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
+    if (["task_force_radio"] call FUNC(isModLoaded)) then {
         _object setVariable ["tf_unable_to_use_radio", _set > 0, true];
     };
-    if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
+    if (["acre_main"] call FUNC(isModLoaded)) then {
+        _object setVariable ["acre_sys_core_isDisabledRadio", _set > 0, true];
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(blockSpeaking), {
+    params ["_object", "_set"];
+    TRACE_2("blockSpeaking EH",_object,_set);
+    if (["acre_main"] call FUNC(isModLoaded)) then {
         _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
+    };
+    if (["task_force_radio"] call FUNC(isModLoaded)) then {
+        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -390,11 +402,11 @@ addMissionEventHandler ["PlayerViewChanged", {
     params ["_unit", "_target"];
 
     // Players can always interact with himself if not boarded
-    vehicle _unit == _unit ||
+    isNull objectParent _unit ||
     // Players can always interact with his vehicle
-    {vehicle _unit == _target} ||
+    {objectParent _unit isEqualTo _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    {_unit isNotEqualTo _target && {!isNull objectParent _target} && {objectParent _unit isEqualTo objectParent _target}} ||
     // Players can always interact with connected UAV
     {!(isNull (ACE_controlledUAV select 0))}
 }] call FUNC(addCanInteractWithCondition);
@@ -403,7 +415,7 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 ["isNotUnconscious", {
     params ["_unit"];
-    lifeState _unit != "INCAPACITATED"
+    lifeState _unit isNotEqualTo "INCAPACITATED"
 }] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////
@@ -526,5 +538,32 @@ GVAR(deviceKeyCurrentIndex) = -1;
 },
 {false},
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
+
+
+["ACE3 Weapons", QGVAR(unloadWeapon), LLSTRING(unloadWeapon), {
+    // Conditions:
+    if !([ACE_player, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
+
+    private _currentWeapon = currentWeapon ACE_player;
+    if !(_currentWeapon != primaryWeapon _unit && {_currentWeapon != handgunWeapon _unit} && {_currentWeapon != secondaryWeapon _unit}) exitWith {false};
+
+    private _currentMuzzle = currentMuzzle ACE_player;
+    private _currentAmmoCount = ACE_player ammo _currentMuzzle;
+    if (_currentAmmoCount < 1) exitWith {false};
+
+    // Statement:
+    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount, false] call FUNC(unloadUnitWeapon);
+    true
+}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; //ALT + R Key
+
+["CBA_loadoutSet", {
+    params ["_unit", "_loadout"];
+    _loadout params ["_primaryWeaponArray"];
+
+    if ((_primaryWeaponArray param [0, ""]) == "ACE_FakePrimaryWeapon") then {
+        TRACE_1("Ignoring fake gun",_primaryWeaponArray);
+        _loadout set [0, []];
+    };
+}] call CBA_fnc_addEventHandler;
 
 GVAR(commonPostInited) = true;

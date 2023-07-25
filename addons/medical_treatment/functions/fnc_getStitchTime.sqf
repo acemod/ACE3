@@ -1,29 +1,28 @@
 #include "script_component.hpp"
 /*
- * Author: mharis001
+ * Author: kymckay
  * Calculates the Surgical Kit treatment time based on the amount of stitchable wounds.
  *
  * Arguments:
  * 0: Medic (not used) <OBJECT>
  * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
  *
  * Return Value:
  * Treatment Time <NUMBER>
  *
  * Example:
- * [player, cursorObject] call ace_medical_treatment_fnc_getStitchTime
+ * [player, cursorObject, "head"] call ace_medical_treatment_fnc_getStitchTime
  *
  * Public: No
  */
 
-params ["", "_patient"];
-
-private _stitchableWounds = _patient call FUNC(getStitchableWounds);
+params ["", "_patient", "_bodyPart"];
 
 private _woundCount = 0;
 {
-    _x params ["_woundID", "_bodyPartN", "_amountOf"];
+    _x params ["", "_amountOf"];
     _woundCount = _woundCount + (ceil _amountOf);
-} forEach _stitchableWounds;
+} forEach (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []]);
 
-_woundCount * GVAR(woundStitchTime)
+_woundCount * GVAR(woundStitchTime) // return

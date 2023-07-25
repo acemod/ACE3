@@ -28,10 +28,12 @@ class CfgVehicles {
 ### 1.2 Making an object loadable
 
 ```cpp
-class staticBananaLauncher {
-    class yourVehicleBaseClass {
+class CfgVehicles {
+    class staticBananaLauncher {
         ace_cargo_size = 4;  // Cargo space the object takes
         ace_cargo_canLoad = 1;  // Enables the object to be loaded (1-yes, 0-no)
+        ace_cargo_noRename = 1;  // Blocks renaming object (1-blocked, 0-allowed)
+        ace_cargo_blockUnloadCarry = 1; // Blocks object from being automatically picked up by player on unload
     };
 };
 ```
@@ -49,7 +51,7 @@ class staticBananaLauncher {
 Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
-`ace_cargoUnloaded` | [_item, _vehicle] | Global | Cargo has been Unloaded from vehicle
+`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Cargo has been Unloaded from vehicle
 `ace_cargoRemoved` | [_itemClass, _vehicle, _amountRequested, _amountRemoved] | Global | Cargo has been removed (deleted) from vehicle
 
 ## 3. Editor Attributes
@@ -64,7 +66,7 @@ If you wish to enable loading for an object/vehicle which does not have these ed
 
 To disable cargo for a mission object use:
 
-```cpp
+```sqf
 [this, -1] call ace_cargo_fnc_setSize;
 ```
 
@@ -73,7 +75,7 @@ To disable cargo for a mission object use:
 `ace_cargo_fnc_setSize`
 Note that this function can be used to make objects loadable/unloadable (set to `-1` for unloadable).
 
-```cpp
+```sqf
  * Set the cargo size of any object. Has global effect.
  * Adds the load action menu if necessary.
  * Negative size makes unloadable.
@@ -94,7 +96,7 @@ Note that this function can be used to make objects loadable/unloadable (set to 
 `ace_cargo_fnc_setSpace`
 Note that this function can be used to enable/disable a vehicle's cargo space (set to `0` to disable).
 
-```cpp
+```sqf
  * Set the cargo space of any object. Has global effect.
  * Adds the cargo action menu if necessary.
  *
@@ -114,7 +116,7 @@ Note that this function can be used to enable/disable a vehicle's cargo space (s
 `ace_cargo_fnc_loadItem` (Also callable from cba event `ace_loadCargo`)
 Note first arg can be a in-game object or a classname of an object type.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
@@ -131,7 +133,7 @@ Note first arg can be a in-game object or a classname of an object type.
 
 `ace_cargo_fnc_unloadItem` (Also callable from cba event `ace_unloadCargo`)
 
-```cpp
+```sqf
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
@@ -148,7 +150,7 @@ Note first arg can be a in-game object or a classname of an object type.
 
 `ace_cargo_fnc_removeCargoItem`
 
-```cpp
+```sqf
  * Arguments:
  * 0: Item <STRING> or <OBJECT>
  * 1: Vehicle <OBJECT>
@@ -160,4 +162,10 @@ Note first arg can be a in-game object or a classname of an object type.
  * Example:
  * ["ACE_Wheel", vehicle, 2] call ace_cargo_fnc_removeCargoItem
  * [crate_7, truck] call ace_cargo_fnc_removeCargoItem
+```
+
+### 4.7 Disable cargo renaming via script
+
+```sqf
+cargoBox setVariable ["ace_cargo_noRename", true]
 ```

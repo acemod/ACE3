@@ -52,7 +52,7 @@ Sync the module with vehicles and players. Custom keys will be handed to players
 
 To override a vehicle's side, allowing locking and unlocking using a different side's key, use the following on that vehicle (use wanted side instead of `west`):
 
-```cpp
+```sqf
 this setVariable ["ace_vehiclelock_lockSide", west];
 ```
 
@@ -60,6 +60,6 @@ this setVariable ["ace_vehiclelock_lockSide", west];
 
 To override default lock pick strength for a vehicle, that is how long lock picking will take, use the following on that vehicle (use wanted time in seconds instead of `5`):
 
-```cpp
+```sqf
 this setVariable ["ace_vehiclelock_lockpickStrength", 5];
 ```

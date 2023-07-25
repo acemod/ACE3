@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Called per frame. Handles current unit state for attaching a rope to two vehicles
  *
  * Arguments:
@@ -25,10 +25,11 @@ private _exitCondition = !(
     { "" isEqualTo currentWeapon _unit || { _unit call EFUNC(common,isSwimming) }} &&
     { [_unit, objNull, [INTERACTION_EXCEPTIONS]] call EFUNC(common,canInteractWith) } &&
     { "unconscious" isNotEqualTo toLower animationState _unit } &&
-    { !(_unit getVariable ["ACE_isUnconscious", false]) }
+    { !(_unit getVariable ["ACE_isUnconscious", false]) } &&
+    { ACE_player == _unit }
 );
 
-if (_exitCondition) then {
+if (_exitCondition && {_state < TOW_STATE_CANCEL}) then {
     _state = TOW_STATE_CANCEL;
 };
 
@@ -45,8 +46,9 @@ switch (_state) do {
             _args set [3, _rope];
         };
 
-        if (GVAR(mouseRight)) then {
+        if (GVAR(mouseRight) || GVAR(cancel)) then {
             _args set [0, TOW_STATE_CANCEL];
+            GVAR(cancel) = false;
         };
     };
     case TOW_STATE_ATTACH_CHILD: {
@@ -72,6 +74,11 @@ switch (_state) do {
         if (_child isEqualTo _parent) exitWith {
             _args set [0, TOW_STATE_CANCEL];
             ERROR_MSG("_child isEqualTo _parent");
+        };
+
+        if (GVAR(cancel)) exitWith {
+            _args set [0, TOW_STATE_CANCEL];
+            GVAR(cancel) = false;
         };
 
         [QGVAR(setTowParent), [_parent, _child], _parent] call CBA_fnc_targetEvent;
@@ -127,10 +134,13 @@ switch (_state) do {
     };
     case TOW_STATE_CANCEL: {
         TRACE_1("state cancel",_rope);
-        ropeDestroy _rope;
+        if !(isNull _rope) then {
+            ropeDestroy _rope;
+        };
         [_unit, _ropeClass, true] call CBA_fnc_addItem;
         _args set [0, TOW_STATE_CLEANUP];
-
+        GVAR(cancel) = false;
+        [QGVAR(ropeDeployCanceled), [_unit, _ropeClass]] call CBA_fnc_localEvent;
         (localize LSTRING(canceled)) call CBA_fnc_notify;
     };
     case TOW_STATE_CLEANUP: {

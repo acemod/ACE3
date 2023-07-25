@@ -34,9 +34,14 @@ _getDoorAnimations params ["_animations"];
 if (_animations isEqualTo []) exitWith {};
 
 private _lockedVariable = format ["bis_disabled_%1", _door];
+private _lockedVariableAlt = _lockedVariable; // GM Buildings may have door names like door_01 but locking expects door_1
+if ((count _door == 7) && {(_door select [0, 6]) == "door_0"}) then { 
+    _lockedVariableAlt = format ["bis_disabled_door_%1", _door select [6, 1]]; // stip off the leading zero then check both vars
+};
 
 // Check if the door can be locked aka have locked variable, otherwhise cant lock it
-if ((_house animationPhase (_animations select 0) <= 0) && {_house getVariable [_lockedVariable, 0] == 1}) exitWith {
+if ((_house animationPhase (_animations select 0) <= 0) && 
+    {(_house getVariable [_lockedVariable, 0] == 1) || {_house getVariable [_lockedVariableAlt, 0] == 1}}) exitWith {
     private _lockedAnimation = format ["%1_locked_source", _door];
     TRACE_3("locked",_house,_lockedAnimation,isClass (configOf _house >> "AnimationSources" >> _lockedAnimation));
     if (isClass (configOf _house >> "AnimationSources" >> _lockedAnimation)) then {
@@ -47,7 +52,7 @@ if ((_house animationPhase (_animations select 0) <= 0) && {_house getVariable [
 
 // Add handle on carrier
 if (typeOf _house == "Land_Carrier_01_island_01_F") then {
-    private _handle = format ["door_handle_%1_rot_1", (_animations select 0) select [5, 1]];
+    private _handle = format ["door_handle_%1_rotate_1", (_animations select 0) select [5, 1]];
     TRACE_1("carrier handle",_handle);
     _animations pushBack _handle;
 };

@@ -1,4 +1,4 @@
-# Source of https://ace3mod.com/
+# Source of https://ace3.acemod.org/
 
 ## Updating compiled JavaScript and CSS files
 

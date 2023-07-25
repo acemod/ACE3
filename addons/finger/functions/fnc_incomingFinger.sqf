@@ -27,7 +27,7 @@ private _fingerPos = if (_sourceUnit == ACE_player) then {
 
 TRACE_3("incoming finger:", _sourceUnit, _fingerPosPrecise, _fingerPos);
 
-private _data = [diag_tickTime, _fingerPos, ([_sourceUnit, false, true] call EFUNC(common,getName))];
+private _data = [diag_tickTime, _fingerPos, ([_sourceUnit, false, true] call EFUNC(common,getName)), _sourceUnit];
 GVAR(fingersHash) set [hashValue _sourceUnit, _data];
 
 if (GVAR(pfeh_id) == -1) then {

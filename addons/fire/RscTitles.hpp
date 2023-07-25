@@ -8,7 +8,7 @@ class RscTitles {
         fadeout = 0.75;
         name = QGVAR(onFire1);
         onload = QUOTE(with uiNamespace do {GVAR(onFireIndicator1) = _this select 0});
-        
+
         class controls {
             class GVAR(indicator): RscPicture {
                 idc = -1;
@@ -22,19 +22,19 @@ class RscTitles {
                 y = "SafeZoneY";
                 w = "SafeZoneW + 0.05";
                 h = "SafeZoneH + 0.05";
-                text = PATHTOF(data\overlay_burn_1.paa);
+                text = QPATHTOF(data\overlay_burn_1.paa);
             };
         };
     };
-    
+
     class GVAR(onFire2): GVAR(onFire1) {
         idd = -1;
         name = QGVAR(onFire2);
         onload = QUOTE(with uiNamespace do {GVAR(onFireIndicator2) = _this select 0});
-        
+
         class controls: controls {
             class GVAR(indicator): GVAR(indicator) {
-                text = PATHTOF(data\overlay_burn_2.paa);
+                text = QPATHTOF(data\overlay_burn_2.paa);
             };
         };
     };

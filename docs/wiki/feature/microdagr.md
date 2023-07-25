@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: MicroDAGR
+component: microdagr
 description: A GPS device and much more.
 group: feature
 category: equipment
@@ -182,8 +183,3 @@ There are three ways of adding a waypoint.
 1. Note that the compass menu also changed and now features the azimuth, compass bearing, distance and grid position of the point you sighted.
 
 Note that the results of the measure you took won't change until you do an other measure.
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="microdagr" %}

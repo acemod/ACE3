@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_cookoff]:
-
 [
     QGVAR(enable), "LIST",
     [LSTRING(enable_hd_name), LSTRING(enable_hd_tooltip)],
@@ -17,6 +15,16 @@
     true, // default value
     true, // isGlobal
     {[QGVAR(enableFire), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    false // Needs mission restart
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(destroyVehicleAfterCookoff), "CHECKBOX",
+    [LSTRING(destroyVehicleAfterCookoff_name), LSTRING(destroyVehicleAfterCookoff_tooltip)],
+    LSTRING(category_displayName),
+    false, // default value
+    true, // isGlobal
+    {[QGVAR(destroyVehicleAfterCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // Needs mission restart
 ] call CBA_fnc_addSetting;
 

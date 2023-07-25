@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Adds the event handler to a vehicle.
  *
  * Arguments:
@@ -20,12 +20,12 @@ TRACE_2("addEventHandler",_vehicle,GVAR(enabled));
 
 if !(GVAR(enabled)) exitWith {
     #ifdef DEBUG_MODE_FULL
-    [{ ["Warning: Vehicle Damage not enabled...", 2] call CBA_fnc_notify; }, [], 5] call CBA_fnc_waitAndExecute; 
+    [{ ["Warning: Vehicle Damage not enabled...", 2] call CBA_fnc_notify; }, [], 5] call CBA_fnc_waitAndExecute;
     #endif
 };
 
 private _hitpointHash = [[], nil] call CBA_fnc_hashCreate;
-private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _vehicleConfig = configOf _vehicle;
 private _hitpointsConfig = _vehicleConfig >> "HitPoints";
 private _turretConfig = _vehicleConfig >> "Turrets";
 private _eraHitpoints = [_vehicleConfig >> QGVAR(eraHitpoints), "ARRAY", []] call CBA_fnc_getConfigEntry;
@@ -51,7 +51,7 @@ private _iterateThroughConfig = {
     private _isEra = _configName in _eraHitpoints;
     private _isSlat = _configName in _slatHitpoints;
     private _isMisc = false;
-    
+
     // prevent incompatibilites with old mods
     if ((toLower _configName) isEqualTo "hitturret") then {
         _isTurret = true;
@@ -59,7 +59,7 @@ private _iterateThroughConfig = {
     if ((toLower _configName) isEqualTo "hitgun") then {
         _isGun = true;
     };
-    
+
     private _hash = _vehicle getVariable QGVAR(hitpointHash);
     {
         _x params ["_hitType", "_hitPoints"];
@@ -68,7 +68,7 @@ private _iterateThroughConfig = {
             _isMisc = true;
         };
     } forEach _hitpointAliases;
-        
+
     if (_isGun || _isTurret || _isEra || _isSlat || _isMisc) then {
         TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hash);
         if (_isGun) then {
