@@ -2,6 +2,7 @@ class EGVAR(arsenal,actions) {
     class ADDON {
         displayName = CSTRING(DisplayName);
         condition = QUOTE(_this call FUNC(hasGunbag));
+        scopeEditor = 0; // variables are reset between 3DEN and mission start
         tabs[] = {0,5};
         class status {
             textStatement = QUOTE([_this select 0] call FUNC(weaponName));

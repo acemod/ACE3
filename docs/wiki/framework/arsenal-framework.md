@@ -395,6 +395,7 @@ class ace_arsenal_actions {
     class TAG_myActions {
         displayName = "My Actions";
         condition = QUOTE(true);
+        scopeEditor = 2; // Only actions with scopeEditor = 2 are shown in 3DEN. Actions working with variables should take object variables being reset between editor view and mission start into account.
         tabs[] = {0,5};
         class text {
             // A simple text label
