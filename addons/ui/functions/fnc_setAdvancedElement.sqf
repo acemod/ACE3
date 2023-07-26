@@ -35,7 +35,7 @@ _cachedElement params ["_idd", "_elements", "_location", "_conditions"];
 private _canUseWeaponOrInCargo = ACE_player call CBA_fnc_canUseWeapon || {-1 < vehicle ACE_player getCargoIndex ACE_player};
 private _inUAVCamera = !isNull getConnectedUAV ACE_player && {getConnectedUAV ACE_player isEqualTo cameraOn};
 if (
-    ((_canUseWeaponOrInCargo || {!_inUAVCamera}) && {_location == VEHICLE_ONLY})
+    (_canUseWeaponOrInCargo && {!_inUAVCamera} && {_location == VEHICLE_ONLY})
     || {(!_canUseWeaponOrInCargo || {_inUAVCamera}) && {_location == GROUND_ONLY}}
 ) exitWith {
     TRACE_3("skip location",_this,_canUseWeaponOrInCargo,_location);
