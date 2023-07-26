@@ -36,6 +36,46 @@ class CfgPatches {
     };
 };
 
+class CfgFunctions
+{
+	class SPE_Weapons_Static
+	{
+        class SPE_Weapons_Static
+		{
+			file = "z\ace\addons\compat_spe\functions";
+            class player_put_EH{};
+			class player_take_EH{};
+			class fired_EH{};
+			class init_EH{};
+			class getin_EH{};
+			class getout_EH{};
+			class equip_tripod{};
+			class can_assemble_weapon{};
+			class assemble_weapon{};
+			class disassemble_weapon{};
+			class can_disassemble_weapon{};
+			class resupply_ammo{};
+			class can_resupply_ammo{};
+			class unload_ammo{};
+			class unload_all_ammo{};
+			class can_unload_ammo{};
+			class drop_magazine{};
+			class can_alter_height{};
+			class alter_height{};
+			class prepare_ammo{};
+			class attempt_to_resupply_ammo{};
+			class load_static_weapon{};
+			class getout_of_static_weapon{};
+			class toggle_range_table{};
+			class rapid_deploy_weapon{};
+			class addMagazine{};
+			class removeMagazine{};
+			class can_Reload{};
+			class can_prepare_ammo{};
+        };
+	};
+};
+
 #include "ACE_CSW_Groups.hpp"
 #include "ACE_Medical_Injuries.hpp"
 #include "CfgAmmo.hpp"

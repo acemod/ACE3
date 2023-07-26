@@ -12,28 +12,9 @@ class StaticMGWeapon: StaticWeapon {
 };
 class SPE_StaticMGWeapon_base: StaticMGWeapon{};
 
-// --- Static Machine Guns -----------------------------------------------------
+// --------------------------------------------------------
 class ace_csw_baseTripod;
-class ACE_SPE_M2_Tripod_Bag: ace_csw_baseTripod {
-    author = "SPE";
-    scope = 2;
-    displayName = "M2 Tripod";
-    model = "\WW2\SPE_Assets_m\Vehicles\StaticWeapons_m\SPE_M2_Tripod_Low.p3d";
-    picture = "\WW2\SPE_Assets_t\Weapons\Equipment_t\Weapons\MachineGun_Light\Gear_M1919A4_X_ca.paa";
-    class ACE_CSW {
-        disassembleTo = "SPE_M2_Tripod";
-    };
-};
-class ACE_SPE_MG42_Tripod_Disasm: ace_csw_baseTripod {
-    author = "SPE";
-    scope = 2;
-    displayName = "Lafette Tripod";
-    model = "\WW2\SPE_Assets_m\Vehicles\StaticWeapons_m\SPE_Lafette_Tripod_Low.p3d";
-    picture = "\WW2\SPE_Assets_t\Weapons\Pictures_t\Backpacks\B_MG42_Tripod_Disasm_ca.paa";
-    class ACE_CSW {
-        disassembleTo = "SPE_Lafette_Tripod";
-    };
-};
+
 class ACE_SPE_M1_81_Stand_Deployed: ace_csw_baseTripod {
     class Eventhandlers: Eventhandlers
     {
@@ -125,135 +106,6 @@ class ACE_SPE_MLE_27_31_Stand_Deployed: ace_csw_baseTripod {
     };
 };
 
-class SPE_M1919_M2: SPE_StaticMGWeapon_base {
-    class ACE_Actions: ACE_Actions
-    {
-        class ACE_MainActions: ACE_MainActions
-        {
-            position = "";
-            selection = "gunnerview";
-        };
-    };
-    class UserActions
-    {
-        delete Prepare_AP_Selected;
-        delete Prepare_AP;
-        delete Prepare_HeavyBall_Selected;
-        delete Prepare_HeavyBall;
-        delete Prepare_Ball_Selected;
-        delete Prepare_Ball;
-        delete Resupply;
-        delete Unload;
-	};
-    class assembleInfo
-    {
-        primary = 0;
-        base = "";
-        assembleTo = "";
-        dissasembleTo[] = {};
-        displayName = "";
-        SPE_dissasembleTo[] = {};
-        deployTime = 0;
-    };
-    class ACE_CSW {
-        enabled = 1; // Enables ACE CSW for this weapon
-        proxyWeapon = "SPE_M1919A4_tripod_proxy"; // The proxy weapon created above
-        magazineLocation = "_target selectionPosition 'magazine'"; // Ammo handling interaction point location
-        disassembleWeapon = "SPE_M1919A4";  // Carryable weapon created above
-        disassembleTurret = "SPE_M2_Tripod_Bag";  // Which static tripod will appear when weapon is disassembled
-        ammoLoadTime = 7;   // How long it takes in seconds to load ammo into the weapon
-        ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
-        desiredAmmo = 100;  // When the weapon is reloaded it will try and reload to this ammo capacity
-    };
-};
-
-class SPE_MG42_Lafette: SPE_StaticMGWeapon_base{};
-class SPE_MG42_Lafette_trench: SPE_MG42_Lafette{};
-class SPE_MG42_Lafette_low: SPE_MG42_Lafette_trench{};
-
-class SPE_MG42_Lafette_low_Deployed: SPE_MG42_Lafette_low {
-    class ACE_Actions: ACE_Actions
-    {
-        class ACE_MainActions: ACE_MainActions
-        {
-            position = "";
-            selection = "gunnerview";
-        };
-    };
-    class UserActions
-    {
-        delete Prepare_AP_Selected;
-        delete Prepare_AP;
-        delete Prepare_HeavyBall_Selected;
-        delete Prepare_HeavyBall;
-        delete Prepare_Ball_Selected;
-        delete Prepare_Ball;
-        delete Resupply;
-        delete Unload;
-	};
-    class assembleInfo
-    {
-        primary = 0;
-        base = "";
-        assembleTo = "";
-        dissasembleTo[] = {};
-        displayName = "";
-        SPE_dissasembleTo[] = {};
-        deployTime = 0;
-    };
-    class ACE_CSW {
-        enabled = 1; // Enables ACE CSW for this weapon
-        proxyWeapon = "SPE_MG42_Tripod_proxy"; // The proxy weapon created above
-        magazineLocation = "_target selectionPosition 'magazine'"; // Ammo handling interaction point location
-        disassembleWeapon = "SPE_MG42";  // Carryable weapon created above
-        disassembleTurret = "ACE_SPE_MG42_Tripod_Disasm";  // Which static tripod will appear when weapon is disassembled
-        ammoLoadTime = 7;   // How long it takes in seconds to load ammo into the weapon
-        ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
-        desiredAmmo = 100;  // When the weapon is reloaded it will try and reload to this ammo capacity
-    };
-};
-
-class SPE_MG34_Lafette_low_Deployed: SPE_MG42_Lafette_low {
-    class ACE_Actions: ACE_Actions
-    {
-        class ACE_MainActions: ACE_MainActions
-        {
-            position = "";
-            selection = "gunnerview";
-        };
-    };
-    class UserActions
-    {
-        delete Prepare_AP_Selected;
-        delete Prepare_AP;
-        delete Prepare_HeavyBall_Selected;
-        delete Prepare_HeavyBall;
-        delete Prepare_Ball_Selected;
-        delete Prepare_Ball;
-        delete Resupply;
-        delete Unload;
-	};
-    class assembleInfo
-    {
-        primary = 0;
-        base = "";
-        assembleTo = "";
-        dissasembleTo[] = {};
-        displayName = "";
-        SPE_dissasembleTo[] = {};
-        deployTime = 0;
-    };
-    class ACE_CSW {
-        enabled = 1; // Enables ACE CSW for this weapon
-        proxyWeapon = "SPE_MG34_Tripod_proxy"; // The proxy weapon created above
-        magazineLocation = "_target selectionPosition 'magazine'"; // Ammo handling interaction point location
-        disassembleWeapon = "SPE_MG34";  // Carryable weapon created above
-        disassembleTurret = "ACE_SPE_MG42_Tripod_Disasm";  // Which static tripod will appear when weapon is disassembled
-        ammoLoadTime = 7;   // How long it takes in seconds to load ammo into the weapon
-        ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
-        desiredAmmo = 100;  // When the weapon is reloaded it will try and reload to this ammo capacity
-    };
-};
 
 
 // --- Mortars -----------------------------------------------------------------
