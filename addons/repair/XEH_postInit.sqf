@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [compileScript [__FILE__], _this];
+};
+
 if !GVAR(enabled) exitWith {};
 
 [QGVAR(setVehicleDamage), {_this call FUNC(setDamage)}] call CBA_fnc_addEventHandler;
