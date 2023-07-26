@@ -249,7 +249,7 @@ class GVAR(actions) {
         treatmentTime = QGVAR(treatmentTimeBodyBag);
         items[] = {"ACE_bodyBag"};
         condition = QFUNC(canPlaceInBodyBag);
-        callbackSuccess = QFUNC(placeInBodyBagOrGrave);
+        callbackSuccess = QFUNC(placeInBodyBag);
         consumeItem = 1;
         litter[] = {};
     };
@@ -259,6 +259,7 @@ class GVAR(actions) {
         icon = QPATHTOEF(medical_gui,ui\cross_grave.paa);
         treatmentTime = QGVAR(treatmentTimeGrave);
         condition = QFUNC(fnc_canDigGrave);
+        callbackSuccess = QFUNC(placeInGrave);
         items[] = {"ACE_EntrenchingTool"};
         consumeItem = 0;
     };

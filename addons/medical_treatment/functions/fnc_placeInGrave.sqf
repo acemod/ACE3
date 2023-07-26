@@ -11,16 +11,15 @@
  * None
  *
  * Example:
- * [player, cursorObject] call ace_medical_treatment_fnc_placeInBodyBag
+ * [player, cursorObject] call ace_medical_treatment_fnc_placeInGrave
  *
  * Public: No
  */
 
 private _alive = alive _patient;
 
-if (_alive && {!GVAR(allowBodyBagUnconscious)}) exitWith {
-    [_medic, "ACE_bodyBag"] call EFUNC(common,addToInventory); // re-add slighly used bodybag?
+if (_alive && {!GVAR(allowGraveUnconscious)}) exitWith {
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
-[_this,"ACE_bodyBagObject"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave;
+[_this,"Land_Grave_dirt_F"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave;
