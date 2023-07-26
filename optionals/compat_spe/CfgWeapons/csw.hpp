@@ -10,11 +10,6 @@ class SPE_M1919A4_tripod_proxy: SPE_M1919A4_tripod {
     magazineReloadTime = 0.5;
 };
 
-class SPE_MG34_Tripod;
-class SPE_MG34_Tripod_proxy: SPE_MG34_Tripod {
-    magazineReloadTime = 0.5;
-};
-
 class SPE_MG42_Tripod;
 class SPE_MG42_Tripod_proxy: SPE_MG42_Tripod {
     magazineReloadTime = 0.5;
@@ -30,7 +25,6 @@ class SPE_Lafette_Tripod: SPE_Slung_Static_Weapon_Base {
         deploy = "ACE_SPE_MG42_Tripod_Disasm";
     };
 };
-
 
 class SPE_M1_81;
 class SPE_M1_81_proxy: SPE_M1_81 {

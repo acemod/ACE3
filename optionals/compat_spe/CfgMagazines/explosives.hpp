@@ -2,7 +2,7 @@ class SPE_Mine_Magazine;
 class SPE_US_TNT_4pound_mag: SPE_Mine_Magazine {
     EGVAR(explosives,DelayTime) = 1;
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_explosive_4LBTNT";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(4LBTNT);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
@@ -20,7 +20,7 @@ class SPE_US_TNT_4pound_mag: SPE_Mine_Magazine {
 class SPE_US_TNT_half_pound_mag: SPE_Mine_Magazine {
     EGVAR(explosives,DelayTime) = 1;
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_explosive_halfLBTNT";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(halfLBTNT);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
@@ -38,7 +38,7 @@ class SPE_US_TNT_half_pound_mag: SPE_Mine_Magazine {
 class SPE_US_Bangalore_mag: SPE_Mine_Magazine {
     EGVAR(explosives,DelayTime) = 1;
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_explosive_bangalore";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bangalore);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
@@ -56,7 +56,7 @@ class SPE_US_Bangalore_mag: SPE_Mine_Magazine {
 class SPE_Ladung_Small_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,DelayTime) = 1;
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_explosive_smallLadung";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(smallLadung);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
@@ -74,7 +74,7 @@ class SPE_Ladung_Small_MINE_mag: SPE_Mine_Magazine {
 class SPE_Ladung_Big_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,DelayTime) = 1;
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_explosive_bigLadung";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bigLadung);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
@@ -91,118 +91,118 @@ class SPE_Ladung_Big_MINE_mag: SPE_Mine_Magazine {
 
 class SPE_US_M1A1_ATMINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_M1A1at";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(M1A1at);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = 0.062; //good depth, blows up good
+            digDistance = 0.062;
         };
     };
 };
 class SPE_US_M3_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_M3ap";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(M3ap);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"Tripwire"};
         class Tripwire {
-            digDistance = 0.04; //good depth, blows up good
+            digDistance = 0.04;
         };
     };
 };
 class SPE_US_M3_Pressure_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_M3Pressure";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(M3Pressure);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = 0.18; //good depth, blows up good
+            digDistance = 0.18;
         };
     };
 };
 
 class SPE_Shg24x7_Improvised_Mine_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_Shg24x7";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(Shg24x7);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = 0.13; //good depth, blows up good
+            digDistance = 0.13;
         };
     };
 };
 
 class SPE_TMI_42_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_TMI42";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(TMI42);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = 0.09; //good depth, blows up good
+            digDistance = 0.09;
         };
     };
 };
 
 class SPE_SMI_35_1_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_SMI35_1";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(SMI35_1);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"Tripwire"};
         class Tripwire {
-            digDistance = 0.1; //poifect
+            digDistance = 0.1;
         };
     };
 };
 
 class SPE_SMI_35_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_SMI35";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(SMI35);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"Tripwire"};
         class Tripwire {
-            digDistance = 0.04; //poifect
+            digDistance = 0.04;
         };
     };
 };
 
 class SPE_SMI_35_Pressure_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_SMI35Pressure";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(SMI35Pressure);
     useAction = 0;
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = 0.19; //poifect
+            digDistance = 0.19;
         };
     };
 };
 
 class SPE_STMI_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_STMI";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(STMI);
     useAction = 0;
         class ACE_Triggers {
         SupportedTriggers[] = {"Tripwire"};
         class Tripwire {
-            digDistance = 0.04; //poifect
+            digDistance = 0.04;
         };
     };
 };
 
     class SPE_shumine_42_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
-    EGVAR(explosives,SetupObject) = "ACE_Explosives_Place_spe_mine_shumine42";
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(shumine42);
     useAction = 0;
         class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = 0.03; //poifect
+            digDistance = 0.03;
         };
     };
 };

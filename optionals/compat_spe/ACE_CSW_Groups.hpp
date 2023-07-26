@@ -18,7 +18,7 @@ class ACE_CSW_Groups {
         SPE_100Rnd_792x57 = 1;
     };
 
-    class SPE_100Rnd_792x57_sS {   
+    class SPE_100Rnd_792x57_sS {
         SPE_100Rnd_792x57_sS = 1;
     };
 

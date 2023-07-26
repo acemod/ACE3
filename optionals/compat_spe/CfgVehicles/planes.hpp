@@ -14,5 +14,5 @@ class SPE_P47: SPE_US_Plane_base {
 // AXIS FORCES
 class SPE_GER_Plane_base: SPE_Plane_base {};
 class SPE_FW190F8: SPE_GER_Plane_base {
-    EGVAR(refuel,fuelCapacity) = 639; 
+    EGVAR(refuel,fuelCapacity) = 639;
 };

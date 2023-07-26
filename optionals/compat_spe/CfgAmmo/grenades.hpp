@@ -115,6 +115,3 @@ class SPE_US_AN_M14: SPE_SmokeShell_base {
 class SPE_US_Mk_1: SPE_SmokeShell_base {
     EGVAR(frag,enabled) = 0;
 };
-
-
-
