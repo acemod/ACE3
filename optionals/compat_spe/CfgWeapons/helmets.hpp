@@ -142,7 +142,7 @@ class H_SPE_GER_TankOfficerCap2: H_SPE_GER_TankOfficerCap {
     HEARING_PROTECTION_EARMUFF
 };
 class H_SPE_GER_SPGPrivateCap: H_SPE_GER_Fieldcap {
-    H_SPE_GER_ST_Tanker_Cap2
+    HEARING_PROTECTION_EARMUFF
 };
 class H_SPE_GER_ST_Tanker_Cap2: H_SPE_GER_Fieldcap2 {
     HEARING_PROTECTION_EARMUFF

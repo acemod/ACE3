@@ -1,31 +1,3 @@
-class Launcher;
-class Launcher_Base_F: Launcher {
-    class WeaponSlotsInfo;
-};
-
-class SPE_Slung_Static_Weapon_Base: Launcher_Base_F{};
-
-class SPE_M1919A4_tripod;
-class SPE_M1919A4_tripod_proxy: SPE_M1919A4_tripod {
-    magazineReloadTime = 0.5;
-};
-
-class SPE_MG42_Tripod;
-class SPE_MG42_Tripod_proxy: SPE_MG42_Tripod {
-    magazineReloadTime = 0.5;
-};
-
-class SPE_Lafette_Tripod: SPE_Slung_Static_Weapon_Base {
-    SPE_isTripod = 0;
-    SPE_Deployed_Tripod_Name = "";
-    class ACE_CSW {
-        type = "mount";
-        deployTime = 4;
-        pickupTime = 4;
-        deploy = "ACE_SPE_MG42_Tripod_Disasm";
-    };
-};
-
 class SPE_M1_81;
 class SPE_M1_81_proxy: SPE_M1_81 {
     magazineReloadTime = 0.5;
