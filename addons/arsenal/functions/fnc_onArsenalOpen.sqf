@@ -86,9 +86,8 @@ GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
 GVAR(showStats) = true;
-GVAR(statsPagesLeft) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-GVAR(statsPagesRight) = [0, 0, 0, 0, 0, 0, 0, 0];
-GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
+GVAR(currentStatPage) = 0;
+GVAR(statsInfo) = [true, controlNull, nil, nil];
 
 GVAR(showActions) = true;
 GVAR(currentActionPage) = 0;

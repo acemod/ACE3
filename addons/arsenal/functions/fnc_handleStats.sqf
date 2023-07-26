@@ -50,20 +50,20 @@ if (!isNil "_itemCfg") then {
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];
 
-        // Get the proper list and page
-        if (_leftPanel) then {
-            [(GVAR(statsListLeftPanel)) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
-        } else {
-            [(GVAR(statsListRightPanel)) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
-        } params ["_statsArray", "_currentPage"];
+        private _statsPanel = [GVAR(statsListRightPanel), GVAR(statsListLeftPanel)] select _leftPanel;
 
-        private _statsList = _statsArray select _currentPage;
+        // Get all viable stats for this tab
+        private _statsTab = _statsPanel select _statsIndex select {
+            _x params ["", "_configEntry", "", "", "_statements"];
+            _statements params ["", "", ["_condition", {true}, [{}]]];
+
+            ([_configEntry, _itemCfg] call _condition)
+        };
+        private _statsToDisplay = _statsTab select [GVAR(currentStatPage) * MAX_STATS_PER_PAGE, MAX_STATS_PER_PAGE];
+
         private _statsCount = 0;
 
-        // Handle titles, bars and text
-        _statsList = _statsList select [0, 5];
-
-        if (_statsList isNotEqualTo []) then {
+        if (_statsToDisplay isNotEqualTo []) then {
             private _statsTitleCtrl = controlNull;
             private _statsTitleIDC = -1;
             private _statsBackgroundCtrl = controlNull;
@@ -119,12 +119,7 @@ if (!isNil "_itemCfg") then {
                     _statsBarCtrl,
                     _statsTextCtrl
                 ];
-            } forEach (_statsList select {
-                _x params ["", "_configEntry", "", "", "_statements"];
-                _statements params ["", "", ["_condition", {true}, [{}]]];
-
-                ([_configEntry, _itemCfg] call _condition)
-            });
+            } forEach _statsToDisplay;
         };
 
         // Resize the window
@@ -144,12 +139,12 @@ if (!isNil "_itemCfg") then {
         _ctrl ctrlCommit 0;
 
 
-        GVAR(statsInfo) = [_leftPanel, _statsIndex, _control, _curSel, _itemCfg];
+        GVAR(statsInfo) = [_leftPanel, _control, _curSel, _itemCfg];
 
         // Toggle page buttons
-        _statsPreviousPageCtrl ctrlEnable (_currentPage > 0);
-        _statsNextPageCtrl ctrlEnable (_currentPage + 1 < count _statsArray);
-        _statsCurrentPageCtrl ctrlSetText ([LLSTRING(page), str (_currentPage + 1)] joinString " ");
+        _statsPreviousPageCtrl ctrlEnable (GVAR(currentStatPage) > 0);
+        _statsNextPageCtrl ctrlEnable ((GVAR(currentStatPage) + 1) * 5 < count _statsTab);
+        _statsCurrentPageCtrl ctrlSetText ([LLSTRING(page), str (GVAR(currentStatPage) + 1)] joinString " ");
 
         {
             _x ctrlSetFade 0;

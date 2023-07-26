@@ -19,6 +19,9 @@
 #define ASCENDING 0
 #define DESCENDING 1
 
+// Stats
+#define MAX_STATS_PER_PAGE 5
+
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
