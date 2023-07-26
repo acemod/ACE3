@@ -40,7 +40,6 @@ workshop = [
 [hemtt.launch.spe]
 workshop = [
     "450814997", # CBA_A3
-    "2369477168", # ADT
 ]
 optionals = [
     "compat_spe"
