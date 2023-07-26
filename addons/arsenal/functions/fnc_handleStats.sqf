@@ -59,7 +59,7 @@ if (!isNil "_itemCfg") then {
 
             ([_configEntry, _itemCfg] call _condition)
         };
-        private _statsToDisplay = _statsTab select [GVAR(currentStatPage) * MAX_STATS_PER_PAGE, MAX_STATS_PER_PAGE];
+        private _statsToDisplay = _statsTab select [GVAR(currentStatPage) * 5, 5];
 
         private _statsCount = 0;
 
