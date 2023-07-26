@@ -1569,5 +1569,8 @@
             <Chinesesimp>工具</Chinesesimp>
             <Turkish>Araçlar</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statMagCount">
+            <English>Ammo count</English>
+        </Key>
     </Package>
 </Project>
