@@ -26,7 +26,7 @@ if (!isNil "_laserCode") then {
 };
 
 private _ctrlDistanceACE = _display displayCtrl IDC_LASERDESIGNATOR_ACEDISTANCE;
-if !(isLaserOn ACE_player) exitWith {
+if (!isLaserOn ACE_player) exitWith {
     _ctrlDistanceACE ctrlSetText "----";
 };
 
