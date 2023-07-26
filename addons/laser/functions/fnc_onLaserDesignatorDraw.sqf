@@ -15,14 +15,19 @@
  * Public: No
  */
 
-private _laserCode = ACE_player getVariable[QGVAR(code), ACE_DEFAULT_LASER_CODE];
+params ["_ctrl"];
+
+private _display = ctrlParent _ctrl;
+
+private _laserCode = ACE_player getVariable QGVAR(code);
 if (!isNil "_laserCode") then {
-    __LaserDesignatorIGUI_LaserCode ctrlSetText format["Code: %1", [_laserCode, 4, 0, false] call CBA_fnc_formatNumber];
+    private _ctrlLaserCode = _display displayCtrl IDC_LASERDESIGNATOR_LASERCODE;
+    _ctrlLaserCode ctrlSetText format ["Code: %1", [_laserCode, 4, 0, false] call CBA_fnc_formatNumber];
 };
 
-if (! (ctrlShown __LaserDesignatorIGUI_LaserOn) ) then {
-    // TODO: hide distance
-    __LaserDesignatorIGUI_ACE_Distance ctrlSetText "----";
-} else {
-    __LaserDesignatorIGUI_ACE_Distance ctrlSetText (ctrlText __LaserDesignatorIGUI_CA_Distance);
+private _ctrlDistanceACE = _display displayCtrl IDC_LASERDESIGNATOR_ACEDISTANCE;
+if !(isLaserOn ACE_player) exitWith {
+    _ctrlDistanceACE ctrlSetText "----";
 };
+
+_ctrlDistanceACE ctrlSetText (ctrlText (_display displayCtrl IDC_LASERDESIGNATOR_DISTANCE));
