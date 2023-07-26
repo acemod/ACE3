@@ -70,6 +70,8 @@ PREP(scanConfig);
 PREP(showItem);
 PREP(sortPanel);
 PREP(sortStatement_accuracy);
+PREP(statTextStatement_binoMag);
+PREP(statTextStatement_binoVisionMode);
 PREP(sortStatement_amount);
 PREP(sortStatement_magCount);
 PREP(sortStatement_mass);

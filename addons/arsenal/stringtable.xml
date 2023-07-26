@@ -1240,6 +1240,70 @@
             <Turkish>Desteklenmiyor</Turkish>
             <Korean>지원되지 않음</Korean>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionModeGeneric">
+            <English>Vision Mode</English>
+            <German>Sichtmodus</German>
+            <Japanese>ビジョン モード</Japanese>
+            <Italian>Modalità Visiva</Italian>
+            <Chinese>視覺模式</Chinese>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Korean>보기 모드</Korean>
+            <French>Mode de vision</French>
+            <Polish>Tryb Wizji</Polish>
+            <Russian>Режим видения</Russian>
+            <Portuguese>Modo de Visão</Portuguese>
+            <Czech>Režim sledování</Czech>
+            <Turkish>Görüş Modu</Turkish>
+            <Spanish>Modo de visión</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionNormal">
+            <English>Normal</English>
+            <German>Normal</German>
+            <Polish>Normalna</Polish>
+            <Portuguese>Normal</Portuguese>
+            <Russian>Нормальное</Russian>
+            <Czech>Normální</Czech>
+            <Spanish>Normal</Spanish>
+            <Italian>Normale</Italian>
+            <French>Normale</French>
+            <Japanese>通常</Japanese>
+            <Korean>일반</Korean>
+            <Chinesesimp>正常</Chinesesimp>
+            <Chinese>正常</Chinese>
+            <Turkish>Normal</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionNight">
+            <English>Night</English>
+            <German>Nacht</German>
+            <Polish>Noc</Polish>
+            <Portuguese>Visão Norturna</Portuguese>
+            <Russian>Ночное</Russian>
+            <Czech>Noční</Czech>
+            <Spanish>Nocturna</Spanish>
+            <Italian>Notturno</Italian>
+            <French>Nocturne</French>
+            <Japanese>暗視装置</Japanese>
+            <Korean>야간</Korean>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
+            <Turkish>Gece</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionThermal">
+            <English>Thermal</English>
+            <German>Wärme</German>
+            <Polish>Termo</Polish>
+            <Portuguese>Térmica</Portuguese>
+            <Russian>Тепловизор</Russian>
+            <Czech>Termální</Czech>
+            <Spanish>Térmica</Spanish>
+            <Italian>Termico</Italian>
+            <French>Thermique</French>
+            <Japanese>熱源画像</Japanese>
+            <Korean>열상</Korean>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Chinese>熱成像</Chinese>
+            <Turkish>Termal</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <Spanish>Página</Spanish>
