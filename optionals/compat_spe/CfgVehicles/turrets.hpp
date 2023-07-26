@@ -11,10 +11,10 @@ class StaticWeapon: LandVehicle {
 
 // --- Mortars -----------------------------------------------------------------
 
-class StaticMortar: StaticWeapon{};
+class StaticMortar: StaticWeapon {};
 class SPE_StaticMortar_base: StaticMortar {
     class Turrets: Turrets {
-        class MainTurret: MainTurret{};
+        class MainTurret: MainTurret {};
     };
     class EventHandlers: EventHandlers {
         class SPE_StaticWeaponsHandler {
@@ -45,7 +45,7 @@ class SPE_M1_81: SPE_US_Mortar_base {
         delete Prepare_HE;
         delete Reload;
         delete Unload;
-	};
+    };
     class ACE_CSW {
         enabled = 1;
         proxyWeapon = "SPE_M1_81_proxy";
@@ -80,7 +80,7 @@ class SPE_MLE_27_31: SPE_FR_Mortar_base {
         delete Prepare_HE;
         delete Reload;
         delete Unload;
-	};
+    };
     class ACE_CSW {
         enabled = 1;
         proxyWeapon = "SPE_MLE_27_31_proxy";
@@ -114,7 +114,7 @@ class SPE_GrW278_1: SPE_MLE_27_31 {
         delete Prepare_HE;
         delete Reload;
         delete Unload;
-	};
+    };
     class ACE_CSW {
         enabled = 1;
         proxyWeapon = "SPE_GrW278_1_proxy";

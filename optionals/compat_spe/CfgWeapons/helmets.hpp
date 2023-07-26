@@ -8,8 +8,8 @@ class H_HelmetB: ItemCore
 {
     class ItemInfo;
 };
-class H_SPE_HelmetB: H_HelmetB{};
-class H_SPE_Hat: H_SPE_HelmetB{};
+class H_SPE_HelmetB: H_HelmetB {};
+class H_SPE_Hat: H_SPE_HelmetB {};
 
 //ALLIED PILOT
 class H_SPE_US_Helmet_Pilot: H_SPE_Hat {

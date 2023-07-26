@@ -3,7 +3,7 @@ class Launcher_Base_F: Launcher {
     class WeaponSlotsInfo;
 };
 
-class SPE_Slung_Static_Weapon_Base: Launcher_Base_F{};
+class SPE_Slung_Static_Weapon_Base: Launcher_Base_F {};
 
 class SPE_M1_81;
 class SPE_M1_81_proxy: SPE_M1_81 {
