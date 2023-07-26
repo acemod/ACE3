@@ -46,7 +46,7 @@ private _fnc_condition = {
     _args params ["_player", "_target", "_weapon", "_tempVarName"];
 
     private _temperature = _player getVariable [_tempVarName, 0];
-    private _water = _target EFUNC(field_rations,getRemainingWater);
+    private _water = _target call EFUNC(field_rations,getRemainingWater);
 
     if (_water <= 0 && {_water != -10}) exitWith {false};
 
@@ -59,7 +59,7 @@ private _fnc_condition = {
         };
 
         //Cool the weapon down
-        private _barrelMass = _weapon call FUNC(getBarrelMass);
+        private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
         _temperature = [_temperature, _barrelMass, 20] call FUNC(calculateCooling);
         [_player, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 

@@ -8,10 +8,10 @@ class CfgWeapons {
 
     class Pistol_Base_F: Pistol {};
     class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-        GVAR(jamTypesAllowed) = ["Fire","Dud"];
+        GVAR(jamTypesAllowed)[] = {"Fire", "Dud"};
     };
    class hgun_Pistol_Signal_F: Pistol_Base_F {
-        GVAR(jamTypesAllowed) = ["Fire","Dud"];
+        GVAR(jamTypesAllowed)[] = {"Fire", "Dud"};
     };
 
     class RifleCore;
@@ -95,14 +95,17 @@ class CfgWeapons {
     };
     class sgun_HunterShotgun_01_base_F: Rifle_Long_Base_F {
         GVAR(closedBolt) = 1;
-        GVAR(jamTypesAllowed) = ["Fire","Dud"];
+        GVAR(jamTypesAllowed)[] = {"Fire", "Dud"};
     };
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
+
+    // Deprecated, 3.16.0 Arsenal supports showing magazines as misc items
     class ACE_SpareBarrel_Item: ACE_ItemCore {
         displayName = CSTRING(SpareBarrelName);
         author = ECSTRING(common,ACETeam);
-        scope = 2;
+        scope = 1;
+        scopeArsenal = 0;
         descriptionshort = CSTRING(SpareBarrelDescription);
         picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         class ItemInfo: CBA_MiscItem_ItemInfo {

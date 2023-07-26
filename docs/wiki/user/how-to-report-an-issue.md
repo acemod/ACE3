@@ -7,8 +7,8 @@ order: 10
 parent: wiki
 ---
 
-<a href="{{ site.baseurl }}/img/wiki/user/issue_flowchart.png" target="_blank">
-    <center><img src="{{ site.baseurl }}/img/wiki/user/issue_flowchart.png" width="200" alt="Issue Flowchart" /></center>
+<a href="{{ site.baseurl }}/img/wiki/user/issue_flowchart.webp" target="_blank">
+    <center><img src="{{ site.baseurl }}/img/wiki/user/issue_flowchart.webp" width="200" alt="Issue Flowchart" /></center>
     <center><i>Issue Flowchart - click to enlarge</i></center>
 </a>
 

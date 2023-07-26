@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Respawn
+component: respawn
 description: Same gear on respawn, friendly fire message, rally points.
 group: feature
 category: interaction
@@ -31,8 +32,3 @@ Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOB's
 - Approach the rallypoint flagpole
 - Use the interaction key <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interaction key`).
 - Select teleport to (base / rallypoint).
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="respawn" %}

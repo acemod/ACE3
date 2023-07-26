@@ -44,9 +44,9 @@ if (hasInterface) then {
 
     if !(hasInterface) exitWith {};
 
-    GVAR(cacheWeaponData) = call CBA_fnc_createNamespace;
-    GVAR(cacheAmmoData) = call CBA_fnc_createNamespace;
-    GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
+    GVAR(cacheWeaponData) = createHashMap;
+    GVAR(cacheAmmoData) = createHashMap;
+    GVAR(cacheSilencerData) = createHashMap;
 
     //Add Take EH if required
     if (GVAR(unJamOnReload) || {GVAR(cookoffCoef) > 0}) then {
@@ -76,36 +76,45 @@ if (hasInterface) then {
         }] call CBA_fnc_addClassEventHandler;
     };
 
+    // Reset all weapon heat to ambient on death to prevent cookoffs when a unit respawns.
+    ["CAManBase", "Killed", {
+        params ["_unit"];
+        {
+            _unit setVariable [_x, ambientTemperature select 0];
+        } forEach (_unit getVariable [QGVAR(trackedWeapons), []]);
+        _unit setVariable [QGVAR(trackedWeapons), []];
+    }] call CBA_fnc_addClassEventHandler;
+
     // Install event handler to display temp when a barrel was swapped
     [QGVAR(showWeaponTemperature), DFUNC(displayTemperature)] call CBA_fnc_addEventHandler;
+
     // Install event handler to initiate an assisted barrel swap
     [QGVAR(initiateSwapBarrelAssisted), DFUNC(swapBarrel)] call CBA_fnc_addEventHandler;
 
     // Add an action to allow hot weapons to be cooled off in AceX Field Rations water sources
-    if (isClass (configfile >> "CfgPatches" >> "acex_field_rations")) then {
+    if (["acex_field_rations"] call EFUNC(common,isModLoaded)) then {
         [
             {EXGVAR(field_rations,enabled) || CBA_missionTime > 1},
             {
                 if (!EXGVAR(field_rations,enabled)) exitWith {};
 
-                _CoolWeaponWithWaterSourceAction = [
+                private _coolWeaponWithWaterSourceAction = [
                     QGVAR(CoolWeaponWithWaterSource),
                     LLSTRING(CoolWeaponWithWaterSource),
                     QPATHTOEF(field_rations,ui\icon_water_tap.paa),
                     {
-                        private _waterSource = _target getVariable [QEXGVAR(field_rations,waterSource), objNull];
+                        private _waterSource = _target getVariable [QEGVAR(field_rations,waterSource), objNull];
                         [_player, _waterSource] call FUNC(coolWeaponWithWaterSource);
                     },
                     {
-                        private _waterSource = _target getVariable [QEXGVAR(field_rations,waterSource), objNull];
-                        [_player, _waterSource] call acex_field_rations_fnc_canDrinkFromSource;
+                        private _waterSource = _target getVariable [QEGVAR(field_rations,waterSource), objNull];
+                        [_player, _waterSource] call EFUNC(field_rations,canDrinkFromSource);
                     }
                 ] call EFUNC(interact_menu,createAction);
 
-                [QEGVAR(field_rations,helper), 0, [QGVAR(field_rations,waterSource)], _CoolWeaponWithWaterSourceAction] call EFUNC(interact_menu,addActionToClass);
+                [QEGVAR(field_rations,helper), 0, [QEGVAR(field_rations,waterSource)], _coolWeaponWithWaterSourceAction] call EFUNC(interact_menu,addActionToClass);
             },
             []
         ] call CBA_fnc_waitUntilAndExecute;
     };
-
 }] call CBA_fnc_addEventHandler;

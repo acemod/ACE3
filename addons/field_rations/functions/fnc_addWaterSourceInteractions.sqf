@@ -50,7 +50,7 @@ TRACE_1("Starting interact PFH",_interactionType);
                     if (_waterRemaining != REFILL_WATER_DISABLED) then {
                         private _offset = [_x] call FUNC(getActionOffset);
                         private _helper = QGVAR(helper) createVehicleLocal [0, 0, 0];
-                        _helper setVariable [QXGVAR(waterSource), _x];
+                        _helper setVariable [QGVAR(waterSource), _x];
                         _helper attachTo [_x, _offset];
 
                         _addedHelpers pushBack _helper;

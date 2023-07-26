@@ -17,10 +17,10 @@
 
 params ["_object"];
 
-private _typeOf = typeOf _object;
-if (_typeOf != "") then {
+private _configOf = configOf _object;
+if !(isNull _configOf) then {
     // Check for offset in config since we have valid typeOf
-    private _offset = getArray (configFile >> "CfgVehicles" >> _typeOf >> QXGVAR(offset));
+    private _offset = getArray (_configOf >> QXGVAR(offset));
     if (_offset isEqualTo []) then {[0, 0, 0]} else {_offset};
 } else {
     // Check for offset corresponding to p3d list

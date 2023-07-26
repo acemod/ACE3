@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Vehicle Damage
+component: vehicle_damage
 description: Enhances vanilla armoured vehicle damage simulation.
 group: feature
 category: realism
@@ -132,7 +133,3 @@ When hit, HEAT warheads will be defeated and no damage will be applied. If hit w
 
 - Enable experimental car damage. System will apply vehicle damage simulation to "car" types (trucks, SUVs, Humvees, etc.). Not fully tested and could be immbalanced causing weird behaviours.
 - Default: Off
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="vehicle_damage" %}

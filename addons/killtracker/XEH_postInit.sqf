@@ -19,8 +19,13 @@
 if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
+if (!(["ACE_Medical"] call EFUNC(common,isModLoaded))) exitWith {
+    WARNING("No ACE-Medical");
+    XGVAR(outputText) = "No ACE-Medical";
+};
 
-INFO("Running Kill Tracking");
+private _global = missionNamespace getVariable [QGVAR(globalSync), false];  // Global Sync (e.g. for spectator)
+INFO_1("Running Kill Tracking [Global: %1]",_global);
 
 // Variables:
 GVAR(eventsArray) = [];
@@ -35,6 +40,9 @@ GVAR(killCount) = 0;
     GVAR(killCount) = GVAR(killCount) + 1;
     GVAR(eventsArray) pushBack format [LLSTRING(Kill), _name, _killInfo];
     XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
+    if (missionNamespace getVariable [QGVAR(globalSync), false]) then {
+        ACE_player setVariable [QGVAR(output), XGVAR(outputText), true];
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(death), {
@@ -42,6 +50,9 @@ GVAR(killCount) = 0;
     TRACE_2("death eh",_name,_killInfo);
     GVAR(eventsArray) pushBack format [LLSTRING(Killer), _name, _killInfo];
     XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
+    if (missionNamespace getVariable [QGVAR(globalSync), false]) then {
+        ACE_player setVariable [QGVAR(output), XGVAR(outputText), true];
+    };
 }] call CBA_fnc_addEventHandler;
 
 ["ace_killed", {
@@ -54,7 +65,7 @@ GVAR(killCount) = 0;
 
     if (!isNull _killer) then {
         if (!(_killer isKindof "CAManBase")) then { // If killer is a vehicle log the vehicle type
-            _killInfo pushBack format [LLSTRING(Vehicle), getText (configfile >> "CfgVehicles" >> (typeOf _killer) >> "displayName")];
+            _killInfo pushBack format [LLSTRING(Vehicle), getText ((configOf _killer) >> "displayName")];
         };
         if (isNull _instigator) then {
             _instigator = effectiveCommander _killer;
@@ -71,7 +82,7 @@ GVAR(killCount) = 0;
     // Log firendly fire
     private _fnc_getSideFromConfig = {
         params ["_object"];
-        switch (getNumber (configFile >> "CfgVehicles" >> (typeOf _object) >> "side")) do {
+        switch (getNumber ((configOf _object) >> "side")) do {
             case (0): {east};
             case (1): {west};
             case (2): {resistance};
@@ -106,7 +117,7 @@ GVAR(killCount) = 0;
             } else {
                 _killerName = _killer getVariable [QGVAR(aiName), ""]; // allow setting a custom AI name (e.g. VIP Target)
                 if (_killerName == "") then {
-                    _killerName = format ["*AI* - %1", getText (configfile >> "CfgVehicles" >> (typeOf _killer) >> "displayName")];
+                    _killerName = format ["*AI* - %1", getText ((configOf _killer) >> "displayName")];
                 };
             };
         };
@@ -122,7 +133,7 @@ GVAR(killCount) = 0;
         } else {
             _unitName = _unit getVariable [QGVAR(aiName), ""]; // allow setting a custom AI name (e.g. VIP Target)
             if (_unitName == "") then {
-                _unitName = format ["*AI* - %1", getText (configfile >> "CfgVehicles" >> (typeOf _unit) >> "displayName")];
+                _unitName = format ["*AI* - %1", getText ((configOf _unit) >> "displayName")];
             };
         };
         TRACE_3("send kill event",_killer,_unitName,_killInfo);

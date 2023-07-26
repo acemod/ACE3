@@ -12,10 +12,7 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 
-    class XADDON: ADDON {
-        units[] = {};
-        weapons[] = {};
-    };
+    BWC_CONFIG(XADDON);
 };
 
 #include "Cfg3DEN.hpp"

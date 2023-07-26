@@ -38,7 +38,7 @@ class CfgVehicles {
                 };
                 class GVAR(CoolWeaponWithItem) {
                     displayName = CSTRING(CoolWeaponWithItem);
-                    condition = QUOTE(GVAR(enabled) && {isClass (configfile >> 'CfgPatches' >> 'acex_field_rations')});
+                    condition = QUOTE(call FUNC(canCoolWeaponWithItem));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = "true";
                     showDisabled = 0;
@@ -66,7 +66,7 @@ class CfgVehicles {
                 };
                 class GVAR(CoolWeaponWithItem) {
                     displayName = CSTRING(CoolWeaponWithItem);
-                    condition = QUOTE(GVAR(enabled) && {isClass (configfile >> 'CfgPatches' >> 'acex_field_rations')});
+                    condition = QUOTE(call FUNC(canCoolWeaponWithItem));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = "true";
                     showDisabled = 0;

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: Dani (TCVM)
  * Checks hitpoint damage and determines if a vehicle should cookoff.
  *
  * Arguments:
@@ -25,14 +25,15 @@ params ["_vehicle", "_chanceOfFire", "_intensity", ["_injurer", objNull], ["_hit
 private _alreadyCookingOff = _vehicle getVariable [QGVAR(cookingOff), false];
 
 if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
-    private _fireDetonateChance = [configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(detonationDuringFireProb), "number", 0] call CBA_fnc_getConfigEntry;
+    private _configOf = configOf _vehicle;
+    private _fireDetonateChance = [_configOf >> QGVAR(detonationDuringFireProb), "number", 0] call CBA_fnc_getConfigEntry;
     if (_canRing) then {
-        _canRing = 1 isEqualTo ([configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(canHaveFireRing), "number", 0] call CBA_fnc_getConfigEntry);
+        _canRing = ([_configOf >> QGVAR(canHaveFireRing), "number", 0] call CBA_fnc_getConfigEntry) == 1;
     };
 
     private _delayWithSmoke = _chanceOfFire < random 1;
     private _detonateAfterCookoff = (_fireDetonateChance / 4) > random 1;
-    
+
     private _source = "";
     if (toLower _hitPart isEqualTo "engine") then {
         _source = ["hit_engine_point", "HitPoints"];
@@ -43,7 +44,7 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     LOG_4("Cooking-off [%1] with a chance-of-fire [%2] - Delayed Smoke | Detonate after cookoff [%3 | %4]",_vehicle,_chanceOfFire,_delayWithSmoke,_detonateAfterCookoff);
     [_vehicle] spawn FUNC(abandon);
     LOG_1("[%1] is on fire is bailing",_vehicle);
-    
+
     // cant setVehicleAmmo 0 here because it removes FFV unit's ammo
     if (GVAR(removeAmmoDuringCookoff)) then {
         private _ammo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);

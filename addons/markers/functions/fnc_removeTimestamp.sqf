@@ -50,14 +50,14 @@ while {_keepCheckingDigits} do {
             _index = _index + 3;
         };
         case ("]"): {
-            _keepCheckingDigits = false; 
+            _keepCheckingDigits = false;
         };
         case (" "): {
             _keepCheckingDigits = false;
             if (!(_string select [_index+3, 3] in ["am]", "pm]"])) then {_validTimestamp = false; };
         };
         default {
-            _keepCheckingDigits = false; 
+            _keepCheckingDigits = false;
             _validTimestamp = false;
         };
     };

@@ -101,22 +101,22 @@ Default: ""
 
 On vehicle placement the system will iterate through all hitpoints define in `class Turrets` and find the relevant weapons and add their hitpoints. This occurs for ERA and SLAT as well
 
-## CfgAmmo
+## 2. CfgAmmo
 
 The only configuration needed on ammo is the warhead type (if applicable) and the incendiary value
 
-### 1.1 `ace_vehicle_damage_incendiary`
+### 2.1 `ace_vehicle_damage_incendiary`
 
 Value in range [0, 1] for how incendiary the ammo is. This is used in calculations to ignite fires. Not based on any real-world value, tweak as feels right.
 
-#### 1.1.1 Default Values
+#### 2.1.1 Default Values
 
 - Tandem/HEAT: 1
 - AP: 0.1
 - HE: 0.3
 - Incendiary Bullet: 0.7
 
-### 1.2 `warheadName`
+### 2.2 `warheadName`
 
 Default ARMA config value. We assume that the warheads are vanilla strings, so options are
 

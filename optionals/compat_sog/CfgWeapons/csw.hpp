@@ -1,12 +1,5 @@
 #include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 
-CREATE_CSW_PROXY(vn_m2_v_01);
-CREATE_CSW_PROXY(vn_m1919_v_01);
-CREATE_CSW_PROXY(vn_m60_v_01);
-CREATE_CSW_PROXY(vn_missile_tow_launcher);
-CREATE_CSW_PROXY(vn_dshkm_v_01);
-CREATE_CSW_PROXY(vn_rpd_v_01);
-CREATE_CSW_PROXY(vn_pk_v_01);
 CREATE_CSW_PROXY(vn_mortar_m29);
 CREATE_CSW_PROXY(vn_mortar_m2);
 CREATE_CSW_PROXY(vn_mortar_type53);
@@ -16,7 +9,10 @@ class Launcher_Base_F: Launcher {
     class WeaponSlotsInfo;
 };
 
+// --- Gun Turrets -------------------------------------------------------------
+
 class GVAR(m2_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = ECSTRING(csw,m2_gun);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -44,6 +40,7 @@ class GVAR(m2_carry): Launcher_Base_F {
 };
 
 class GVAR(m1919a4_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m1919a4);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -71,7 +68,8 @@ class GVAR(m1919a4_carry): Launcher_Base_F {
 };
 
 class GVAR(m1919a6_carry): Launcher_Base_F {
-    displayName = CSTRING(csw_m1919a4);
+    dlc = "ace";
+    displayName = CSTRING(csw_m1919a6);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
@@ -94,6 +92,7 @@ class GVAR(m1919a6_carry): Launcher_Base_F {
 };
 
 class GVAR(m60_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m60);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -121,6 +120,7 @@ class GVAR(m60_carry): Launcher_Base_F {
 };
 
 class GVAR(tow_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = ECSTRING(csw,tow_tube);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -147,6 +147,7 @@ class GVAR(tow_carry): Launcher_Base_F {
 };
 
 class GVAR(dshkm_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = ECSTRING(csw,dshk_gun);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -174,6 +175,7 @@ class GVAR(dshkm_carry): Launcher_Base_F {
 };
 
 class GVAR(dshkm_shield_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_dshkm_shield);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -187,7 +189,7 @@ class GVAR(dshkm_shield_carry): Launcher_Base_F {
         pickupTime = 4;
 
         class assembleTo {
-            EGVAR(csw,kordTripodLow) = "vn_o_nva_navy_static_dshkm_low_01";
+            EGVAR(csw,kordTripodLow) = "vn_o_nva_static_dshkm_low_01";
         };
     };
 
@@ -200,6 +202,7 @@ class GVAR(dshkm_shield_carry): Launcher_Base_F {
 };
 
 class GVAR(dshkm_AA_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_dshkm_aa);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -226,6 +229,7 @@ class GVAR(dshkm_AA_carry): Launcher_Base_F {
 };
 
 class GVAR(rpd_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_rpd);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -252,6 +256,7 @@ class GVAR(rpd_carry): Launcher_Base_F {
 };
 
 class GVAR(pk_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_pk);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -265,7 +270,8 @@ class GVAR(pk_carry): Launcher_Base_F {
         pickupTime = 4;
 
         class assembleTo {
-            EGVAR(csw,kordTripod) = "vn_o_nva_static_dshkm_high_02";
+            EGVAR(csw,kordTripod) = "vn_o_nva_static_pk_high";
+            EGVAR(csw,kordTripodLow) = "vn_o_nva_static_pk_low";
         };
     };
 
@@ -278,6 +284,7 @@ class GVAR(pk_carry): Launcher_Base_F {
 };
 
 class GVAR(mortar_m29_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m29);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -303,7 +310,119 @@ class GVAR(mortar_m29_carry): Launcher_Base_F {
     };
 };
 
+class GVAR(mg42_carry): Launcher_Base_F {
+    dlc = "ace";
+    displayName = CSTRING(csw_mg42);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = QPATHTOF(UI\csw_mg42_ca.paa);
+
+    class ACE_CSW {
+        type = "mount";
+        deployTime = 4;
+        pickupTime = 4;
+        deploy = "vn_o_vc_static_mg42_low";
+
+        class assembleTo {
+            EGVAR(csw,kordTripod) = "vn_o_vc_static_mg42_high";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
+class GVAR(sgm_carry): Launcher_Base_F {
+    dlc = "ace";
+    displayName = CSTRING(csw_sgm);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = QPATHTOF(UI\csw_sgm_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,kordTripod) = "vn_o_vc_static_sgm_high_01";
+            EGVAR(csw,kordTripodLow) = "vn_o_vc_static_sgm_low_02";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+class GVAR(sgm_shield_carry): Launcher_Base_F {
+    dlc = "ace";
+    displayName = CSTRING(csw_sgm_shield);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = QPATHTOF(UI\csw_sgm_shield_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,kordTripodLow) = "vn_o_vc_static_sgm_low_01";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
+class GVAR(mk18_carry): Launcher_Base_F {
+    dlc = "ace";
+    displayName = CSTRING(csw_mk18);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = QPATHTOF(UI\csw_mk18_ca.paa);
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 4;
+        pickupTime = 4;
+
+        class assembleTo {
+            EGVAR(csw,m3TripodLow) = "vn_b_army_static_mk18";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 310;
+    };
+};
+
+// --- Mortars -----------------------------------------------------------------
+
 class GVAR(mortar_m2_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m2);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -330,6 +449,7 @@ class GVAR(mortar_m2_carry): Launcher_Base_F {
 };
 
 class GVAR(mortar_type53_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_type53);
     author = ECSTRING(common,ACETeam);
     scope = 2;

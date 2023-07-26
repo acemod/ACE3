@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_nametags]:
-
 [
     QGVAR(showPlayerNames), "LIST",
     [LSTRING(ShowPlayerNames), LSTRING(ShowPlayerNames_Desc)],
@@ -68,7 +66,7 @@
     QGVAR(tagSize), "LIST",
     [LSTRING(TagSize_Name), LSTRING(TagSize_Description)],
     format ["ACE %1", localize LSTRING(Module_DisplayName)],
-    [[0, 1, 2, 3, 4], ["str_very_small", "str_small", "str_medium", "str_large", "str_very_large"], 1],
+    [[0, 1, 2, 3, 4], ["str_very_small", "str_small", "str_medium", "str_large", "str_very_large"], 2],
     0
 ] call CBA_fnc_addSetting;
 

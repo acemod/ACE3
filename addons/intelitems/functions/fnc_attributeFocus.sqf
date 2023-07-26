@@ -24,7 +24,7 @@ private _object = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
 private _ctrlLabel = _display displayCtrl IDC_ATTRIBUTE_LABEL;
-private _labelText = getText (configFile >> "CfgVehicles" >> typeOf _object >> "Attributes" >> QGVAR(data) >> "displayName");
+private _labelText = getText ((configOf _object) >> "Attributes" >> QGVAR(data) >> "displayName");
 _ctrlLabel ctrlSetText _labelText;
 
 private _index = _object getVariable [QGVAR(index), -1];

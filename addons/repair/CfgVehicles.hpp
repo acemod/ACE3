@@ -106,7 +106,6 @@ class CfgVehicles {
                 class values {
                     class None { name = "None"; value = 0;  default = 1;};
                     class ToolKit { name = "ToolKit"; value = 1; };
-                    class gm_repairkit_01 { name = "GM Repair Kit"; value = 1; };
                 };
             };
         };
@@ -328,6 +327,7 @@ class CfgVehicles {
     class ACE_Track: ACE_RepairItem_Base {
         EGVAR(cargo,size) = 2;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
         author = "Hawkins";
         scope = 2;
         model = QPATHTOF(data\ace_track.p3d);
@@ -358,6 +358,7 @@ class CfgVehicles {
     class ACE_Wheel: ACE_RepairItem_Base {
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
         author = "Hawkins";
         scope = 2;
         model = QPATHTOF(data\ace_wheel.p3d);
@@ -402,6 +403,19 @@ class CfgVehicles {
         };
 
         editorPreview = QPATHTOF(data\preview_wheel.jpg);
+
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class GVAR(Patch) {
+                    displayName = CSTRING(PatchWheel);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canPatchRemovedWheel));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(patchRemovedWheel));
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotOnLadder", "isNotSwimming", "isNotSitting"};
+                    icon = QPATHTOF(ui\patch_ca.paa);
+                };
+            };
+        };
     };
 
     // disable vanilla repair

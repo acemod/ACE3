@@ -17,7 +17,11 @@ def check_config_style(filepath):
         closing << closingStack.pop()
 
     reIsClass = re.compile(r'^\s*class(.*)')
+    reIsClassInherit = re.compile(r'^\s*class(.*):')
+    reIsClassBody = re.compile(r'^\s*class(.*){')
     reBadColon = re.compile(r'\s*class (.*) :')
+    reSpaceAfterColon = re.compile(r'\s*class (.*): ')
+    reSpaceBeforeCurly = re.compile(r'\s*class (.*) {')
     reClassSingleLine = re.compile(r'\s*class (.*)[{;]')
 
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
@@ -127,8 +131,14 @@ def check_config_style(filepath):
         for lineNumber, line in enumerate(file.readlines()):
             if reIsClass.match(line):
                 if reBadColon.match(line):
-                    print(f"WARNING: bad class colon {filepath} Line number: {lineNumber}")
+                    print(f"WARNING: bad class colon {filepath} Line number: {lineNumber+1}")
                     # bad_count_file += 1
+                if reIsClassInherit.match(line):
+                    if not reSpaceAfterColon.match(line):
+                        print(f"WARNING: bad class missing space after colon {filepath} Line number: {lineNumber+1}")
+                if reIsClassBody.match(line):
+                    if not reSpaceBeforeCurly.match(line):
+                        print(f"WARNING: bad class inherit missing space before curly braces {filepath} Line number: {lineNumber+1}")
                 if not reClassSingleLine.match(line):
                     print(f"WARNING: bad class braces placement {filepath} Line number: {lineNumber+1}")
                     # bad_count_file += 1
