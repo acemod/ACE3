@@ -1,6 +1,7 @@
 class EGVAR(csw,baseTripod);
 
 class GVAR(MLE_27_31_baseplate): EGVAR(csw,baseTripod) {
+    scope = 2;
     displayName = "$STR_DN_SPE_MLE_27_31_STAND";
     model = "\WW2\SPE_Assets_m\Weapons\Mortars_m\SPE_M1_Mortar_Stand_Deployed.p3d";
     picture = "\WW2\SPE_Assets_t\Weapons\Equipment_t\Weapons\Launchers\Gear_MLE_27_31_Stand_X_ca.paa";
@@ -12,6 +13,7 @@ class GVAR(MLE_27_31_baseplate): EGVAR(csw,baseTripod) {
 };
 
 class GVAR(GrW278_baseplate): EGVAR(csw,baseTripod) {
+    scope = 2;
     displayName = "$STR_DN_SPE_GrW278_1_STAND";
     model = "\WW2\SPE_Assets_m\Weapons\Mortars_m\SPE_M1_Mortar_Stand_Deployed.p3d";
     picture = "\WW2\SPE_Assets_t\Weapons\Equipment_t\Weapons\Launchers\Gear_GrW278_1_Stand_X_ca.paa";
@@ -23,6 +25,7 @@ class GVAR(GrW278_baseplate): EGVAR(csw,baseTripod) {
 };
 
 class GVAR(M1_81_baseplate): EGVAR(csw,baseTripod) {
+    scope = 2;
     displayName = "$STR_DN_SPE_M1_81_STAND";
     model = "\WW2\SPE_Assets_m\Weapons\Mortars_m\SPE_M1_Mortar_Stand_Deployed.p3d";
     picture = "\WW2\SPE_Assets_t\Weapons\Equipment_t\Weapons\Launchers\Gear_M1_81_Stand_X_ca.paa";
