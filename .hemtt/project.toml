@@ -40,8 +40,10 @@ workshop = [
 [hemtt.launch.spe]
 workshop = [
     "450814997", # CBA_A3
-    "2769490909", # SPE Beta
 ]
 optionals = [
     "compat_spe"
+]
+dlc = [
+    "spe"
 ]
