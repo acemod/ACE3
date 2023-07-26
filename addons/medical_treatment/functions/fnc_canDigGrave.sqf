@@ -18,4 +18,4 @@
 
 params ["", "_patient"];
 
-GVAR(allowGaveDigging) && {_patient call EFUNC(common,canDig)}
+GVAR(allowGraveDigging) && {_patient call EFUNC(common,canDig)}
