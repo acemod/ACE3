@@ -7,6 +7,6 @@ class EGVAR(arsenal,stats) {
         displayName = CSTRING(NVGeneration);
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_NVGeneration));
-        tabs = {{8}, {}};
+        tabs[] = {{8}, {}};
     };
 };
