@@ -36,7 +36,7 @@ if (hasInterface) then {
 
     GVAR(laserEmitters) set [_uuid, _args];
     private _unit = _args select 0;
-    if (hasPilotCamera _unit) then {
+    if (local _unit && {hasPilotCamera _unit}) then {
         [_unit] call FUNC(laserPointTrack);
     };
 }] call CBA_fnc_addEventHandler;

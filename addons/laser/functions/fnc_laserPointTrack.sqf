@@ -19,13 +19,7 @@ params ["_vehicle"];
 [{
     params ["_args", "_pfhID"];
     _args params ["_vehicle"];
-    if (!alive _vehicle) exitWith {
-        [_pfhID] call CBA_fnc_removePerFrameHandler;
-    };
-    if (!hasPilotCamera _vehicle) exitWith {
-        [_pfhID] call CBA_fnc_removePerFrameHandler;
-    };
-    if (isNull (laserTarget _vehicle)) exitWith {
+    if !(alive _vehicle && {local _vehicle} && {hasPilotCamera _vehicle} && {!isNull (laserTarget _vehicle)}) exitWith {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     };
     (getPilotCameraTarget _vehicle) params ["_isTracking", "_spotPos", "_targetObj"];
