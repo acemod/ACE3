@@ -46,8 +46,7 @@ private _fnc_hideUnused = {
     } forEach _numbers;
 };
 
-// If nothing is chosen, hide stats
-if (isNull _itemCfg) exitWith {
+private _fnc_hideEverything = {
     [[1, 2, 3, 4, 5]] call _fnc_hideUnused;
 
     // Hide the stats box
@@ -76,6 +75,11 @@ if (isNull _itemCfg) exitWith {
     ];
 };
 
+// If nothing is chosen, hide stats
+if (isNull _itemCfg) exitWith {
+    call _fnc_hideEverything
+};
+
 private _fnc_handleStats = {
     params ["_statsIndex", "_leftPanel"];
 
@@ -90,70 +94,74 @@ private _fnc_handleStats = {
     };
     private _statsToDisplay = _statsTab select [GVAR(currentStatPage) * 5, 5];
 
+    // If there are no stats to show (unlikely), just hide everything
+    if (_statsToDisplay isEqualTo []) exitWith {
+        call _fnc_hideEverything
+    };
+
     private _statsCount = 0;
 
-    if (_statsToDisplay isNotEqualTo []) then {
-        private _statsTitleCtrl = controlNull;
-        private _statsTitleIDC = -1;
-        private _statsBackgroundCtrl = controlNull;
-        private _statsBarCtrl = controlNull;
-        private _statsTextCtrl = controlNull;
-        private _textStatementResult = "";
+    private _statsTitleCtrl = controlNull;
+    private _statsTitleIDC = -1;
+    private _statsBackgroundCtrl = controlNull;
+    private _statsBarCtrl = controlNull;
+    private _statsTextCtrl = controlNull;
+    private _textStatementResult = "";
+
+    {
+        _x params ["_ID", "_configEntry", "_title", "_bools", "_statements"];
+        _bools params ["_showBar", "_showText"];
+        _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
+
+        _statsTitleCtrl = _display displayCtrl (IDC_statsTitle1 + _forEachIndex * 4);
+        _statsTitleIDC = ctrlIDC _statsTitleCtrl;
+        _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
+        _statsBarCtrl = _display displayCtrl (_statsTitleIDC + 2);
+        _statsTextCtrl = _display displayCtrl (_statsTitleIDC + 3);
+
+        _statsCount = _statsCount + 1;
+        _statsTitleCtrl ctrlSetText _title;
+        _statsTitleCtrl ctrlSetFade 0;
+
+        // Handle bars
+        if (_showBar) then {
+            _statsBarCtrl progressSetPosition ([_configEntry, _itemCfg] call _barStatement);
+            _statsBackgroundCtrl ctrlSetFade 0;
+            _statsBarCtrl ctrlSetFade 0;
+        } else {
+            _statsBackgroundCtrl ctrlSetFade 1;
+            _statsBarCtrl ctrlSetFade 1;
+        };
+
+        // Handle text entries
+        if (_showText) then {
+            _textStatementResult = [_configEntry, _itemCfg] call _textStatement;
+
+            if !(_textStatementResult isEqualtype "") then {
+                _textStatementResult = str _textStatementResult;
+            };
+
+            _statsTextCtrl ctrlSetText _textStatementResult;
+            _statsTextCtrl ctrlSetTextColor ([[1, 1, 1, 1], [0, 0, 0, 1]] select (_showBar));
+            _statsTextCtrl ctrlSetFade 0;
+        } else {
+            _statsTextCtrl ctrlSetFade 1;
+        };
 
         {
-            _x params ["_ID", "_configEntry", "_title", "_bools", "_statements"];
-            _bools params ["_showBar", "_showText"];
-            _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
+            _x ctrlCommit 0;
+        } forEach [
+            _statsTitleCtrl,
+            _statsBackgroundCtrl,
+            _statsBarCtrl,
+            _statsTextCtrl
+        ];
+    } forEach _statsToDisplay;
 
-            _statsTitleCtrl = _display displayCtrl (IDC_statsTitle1 + _forEachIndex * 4);
-            _statsTitleIDC = ctrlIDC _statsTitleCtrl;
-            _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
-            _statsBarCtrl = _display displayCtrl (_statsTitleIDC + 2);
-            _statsTextCtrl = _display displayCtrl (_statsTitleIDC + 3);
-
-            _statsCount = _statsCount + 1;
-            _statsTitleCtrl ctrlSetText _title;
-            _statsTitleCtrl ctrlSetFade 0;
-
-            // Handle bars
-            if (_showBar) then {
-                _statsBarCtrl progressSetPosition ([_configEntry, _itemCfg] call _barStatement);
-                _statsBackgroundCtrl ctrlSetFade 0;
-                _statsBarCtrl ctrlSetFade 0;
-            } else {
-                _statsBackgroundCtrl ctrlSetFade 1;
-                _statsBarCtrl ctrlSetFade 1;
-            };
-
-            // Handle text entries
-            if (_showText) then {
-                _textStatementResult = [_configEntry, _itemCfg] call _textStatement;
-
-                if !(_textStatementResult isEqualtype "") then {
-                    _textStatementResult = str _textStatementResult;
-                };
-
-                _statsTextCtrl ctrlSetText _textStatementResult;
-                _statsTextCtrl ctrlSetTextColor ([[1, 1, 1, 1], [0, 0, 0, 1]] select (_showBar));
-                _statsTextCtrl ctrlSetFade 0;
-            } else {
-                _statsTextCtrl ctrlSetFade 1;
-            };
-
-            {
-                _x ctrlCommit 0;
-            } forEach [
-                _statsTitleCtrl,
-                _statsBackgroundCtrl,
-                _statsBarCtrl,
-                _statsTextCtrl
-            ];
-        } forEach _statsToDisplay;
-    };
 
     // Resize the window
     [[1, 2, 3, 4, 5] select [_statsCount, 5]] call _fnc_hideUnused;
-    private _height = ([11, (10 * _statsCount) + 5] select (_statsCount > 0));
+    private _height = 10 * _statsCount + 5;
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
         safezoneY + 1.8 * GRID_H,
@@ -161,6 +169,8 @@ private _fnc_handleStats = {
         _height * GRID_H
     ];
     _statsBoxCtrl ctrlCommit 0;
+
+    // Move the actions box
     private _ctrl = _display displayCtrl IDC_actionsBox;
     private _pos = ctrlPosition _ctrl;
     _pos set [1, safezoneY + (_height + 3.6) * GRID_H];
