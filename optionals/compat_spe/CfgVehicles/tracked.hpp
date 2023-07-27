@@ -10,10 +10,8 @@ class SPE_Tank_base: Tank_F {
     EGVAR(vehicle_damage,turretFireProb) = 0.1;
     EGVAR(vehicle_damage,engineFireProb) = 0.2;
     EGVAR(vehicle_damage,detonationDuringFireProb) = 0.2;
-    EGVAR(vehicle_damage,canHaveFireRing) = 0.1;
+    EGVAR(vehicle_damage,canHaveFireRing) = 1;
 };
-
-
 
 // ALLIED FORCES
 class SPE_Sherman_base: SPE_Tank_base {};

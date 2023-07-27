@@ -2,12 +2,12 @@ class ShellBase;
 class SubmunitionBase;
 class MineCore;
 class PipeBombBase;
-class SPE_MAIN_pipebomb: PipeBombBase{};
-class SPE_ShellHE_base: ShellBase{};
-class SPE_ShellHEAT_base: ShellBase{};
+class SPE_MAIN_pipebomb: PipeBombBase {};
+class SPE_ShellHE_base: ShellBase {};
+class SPE_ShellHEAT_base: ShellBase {};
 class RocketBase;
-class SPE_MAIN_mine: MineCore{};
-class SPE_Rocket_base: RocketBase{};
+class SPE_MAIN_mine: MineCore {};
+class SPE_Rocket_base: RocketBase {};
 class SPE_PzFaust_30m: SPE_Rocket_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;

@@ -10,7 +10,7 @@ class SPE_Truck_base {
     EGVAR(vehicle_damage,turretFireProb) = 0.1;
     EGVAR(vehicle_damage,engineFireProb) = 0.2;
     EGVAR(vehicle_damage,detonationDuringFireProb) = 0.2;
-    EGVAR(vehicle_damage,canHaveFireRing) = 0.1;
+    EGVAR(vehicle_damage,canHaveFireRing) = 1;
 };
 class SPE_WheeledTracked_APC_base: SPE_Truck_base {
     EGVAR(refuel,fuelCapacity) = 140;
@@ -21,7 +21,7 @@ class SPE_WheeledTracked_APC_base: SPE_Truck_base {
     EGVAR(vehicle_damage,turretFireProb) = 0.1;
     EGVAR(vehicle_damage,engineFireProb) = 0.2;
     EGVAR(vehicle_damage,detonationDuringFireProb) = 0.2;
-    EGVAR(vehicle_damage,canHaveFireRing) = 0.1;
+    EGVAR(vehicle_damage,canHaveFireRing) = 1;
 };
 
 class SPE_Halftrack_base: SPE_WheeledTracked_APC_base {
@@ -33,7 +33,7 @@ class SPE_Halftrack_base: SPE_WheeledTracked_APC_base {
     EGVAR(vehicle_damage,turretFireProb) = 0.1;
     EGVAR(vehicle_damage,engineFireProb) = 0.2;
     EGVAR(vehicle_damage,detonationDuringFireProb) = 0.2;
-    EGVAR(vehicle_damage,canHaveFireRing) = 0.1;
+    EGVAR(vehicle_damage,canHaveFireRing) = 1;
 };
 
 

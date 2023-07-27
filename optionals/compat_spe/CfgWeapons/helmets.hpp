@@ -8,8 +8,8 @@ class H_HelmetB: ItemCore
 {
     class ItemInfo;
 };
-class H_SPE_HelmetB: H_HelmetB{};
-class H_SPE_Hat: H_SPE_HelmetB{};
+class H_SPE_HelmetB: H_HelmetB {};
+class H_SPE_Hat: H_SPE_HelmetB {};
 
 //ALLIED PILOT
 class H_SPE_US_Helmet_Pilot: H_SPE_Hat {
@@ -139,6 +139,9 @@ class H_SPE_GER_TankOffzCap2: H_SPE_GER_TankPrivateCap {
     HEARING_PROTECTION_EARMUFF
 };
 class H_SPE_GER_TankOfficerCap2: H_SPE_GER_TankOfficerCap {
+    HEARING_PROTECTION_EARMUFF
+};
+class H_SPE_GER_SPGPrivateCap: H_SPE_GER_Fieldcap {
     HEARING_PROTECTION_EARMUFF
 };
 class H_SPE_GER_ST_Tanker_Cap2: H_SPE_GER_Fieldcap2 {
