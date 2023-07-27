@@ -24,12 +24,13 @@ private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
 private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
 
 private _fnc_hideUnused = {
-    params ["_numbers"];
+    params ["_count"];
 
-    {
-        private _statsTitleCtrl = _display displayCtrl (IDC_statsTitle1 + ((_x - 1) * 4));
-        private _statsTitleIDC = ctrlIDC _statsTitleCtrl;
+    if (_count <= 0) exitWith {};
+    for "_i" from 0 to (_count - 1) do {
+        private _statsTitleIDC = IDC_statsTitle5 - (_i * 4);
 
+        private _statsTitleCtrl = _display displayCtrl _statsTitleIDC;
         private _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
         private _statsBarCtrl = _display displayCtrl (_statsTitleIDC + 2);
         private _statsTextCtrl = _display displayCtrl (_statsTitleIDC + 3);
@@ -43,11 +44,11 @@ private _fnc_hideUnused = {
             _statsBarCtrl,
             _statsTextCtrl
         ];
-    } forEach _numbers;
+    };
 };
 
 private _fnc_hideEverything = {
-    [[1, 2, 3, 4, 5]] call _fnc_hideUnused;
+    5 call _fnc_hideUnused;
 
     // Hide the stats box
     _statsBoxCtrl ctrlSetPosition [
@@ -160,7 +161,7 @@ private _fnc_handleStats = {
 
 
     // Resize the window
-    [[1, 2, 3, 4, 5] select [_statsCount, 5]] call _fnc_hideUnused;
+    (5 - _statsCount) call _fnc_hideUnused;
     private _height = 10 * _statsCount + 5;
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
@@ -199,23 +200,7 @@ private _fnc_handleStats = {
 if (ctrlIDC _control == IDC_leftTabContent) then {
     // Faces, voices and insigna do not have stats
     if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia] find GVAR(currentLeftPanel) > -1) then {
-        [[1, 2, 3, 4, 5]] call _fnc_hideUnused;
-        _statsBoxCtrl ctrlSetPosition [
-            (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-            safezoneY + 1.8 * GRID_H,
-            47 * GRID_W,
-            11 * GRID_H
-        ];
-        _statsBoxCtrl ctrlCommit 0;
-
-        {
-            _x ctrlSetFade 1;
-            _x ctrlCommit 0;
-        } forEach [
-            _statsPreviousPageCtrl,
-            _statsNextPageCtrl,
-            _statsCurrentPageCtrl
-        ];
+        call _fnc_hideEverything;
     } else {
         [[
             IDC_buttonPrimaryWeapon,
