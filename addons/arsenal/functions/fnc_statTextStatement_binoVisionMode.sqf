@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Dedmen, johnb43, LinkIsGrim
- * Text statement for the scope Night vision support stat.
+ * Text statement for the binocular/NVG vision mode stat.
  *
  * Arguments:
  * 0: Not used
@@ -14,7 +14,7 @@
  */
 
 params ["", "_config"];
-TRACE_1("statTextStatement_scopeVisionMode",_config);
+TRACE_1("statTextStatement_binoVisionMode",_config);
 
 private _text = [];
 private _visionModes = getArray (_config >> "visionMode") apply {toLower _x};

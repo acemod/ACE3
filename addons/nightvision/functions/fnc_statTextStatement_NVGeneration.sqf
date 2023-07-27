@@ -14,7 +14,7 @@
  */
 
 params ["", "_config"];
-TRACE_1("statTextStatement_scopeMag",_config);
+TRACE_1("statTextStatement_nvGeneration",_config);
 
 private _gen = 3; // Default
 if (isNumber (_config >> QGVAR(generation))) then {
