@@ -93,12 +93,14 @@ private _fnc_handleStats = {
 
         ([_configEntry, _itemCfg] call _condition)
     };
-    private _statsToDisplay = _statsTab select [GVAR(currentStatPage) * 5, 5];
 
     // If there are no stats to show (unlikely), just hide everything
-    if (_statsToDisplay isEqualTo []) exitWith {
+    if (_statsTab isEqualTo []) exitWith {
         call _fnc_hideEverything
     };
+
+    private _statsToDisplay = _statsTab select [GVAR(currentStatPage) * 5, 5];
+
 
     private _statsCount = 0;
 
