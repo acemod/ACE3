@@ -97,7 +97,7 @@ class GVAR(stats) {
         displayName = CSTRING(statVisionModeGeneric);
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_binoVisionMode));
-        tabs = {{8,9}, {}};
+        tabs[] = {{8,9}, {}};
     };
     class ACE_ballisticProtection: statBase {
         scope = 2;
