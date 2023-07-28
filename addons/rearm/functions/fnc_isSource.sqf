@@ -4,8 +4,7 @@
  * Returns if vehicle or object is a rearm source.
  *
  * Arguments:
- * 0: target <OBJECT>
- * 1: check for vanilla rearm vehicle <BOOL> (unused)
+ * 0: Target <OBJECT>
  *
  * Return Value:
  * None
