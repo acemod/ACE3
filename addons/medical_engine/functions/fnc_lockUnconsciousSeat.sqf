@@ -11,6 +11,7 @@
  *
  * Public: No
  */
+if (missionNamespace getVariable [QGVAR(disableSeatLocking), false]) exitWith {};
 params ["_unit"];
 
 private _vehicle = objectParent _unit;

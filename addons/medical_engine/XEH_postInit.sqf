@@ -95,7 +95,10 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-["CAManBase", "Killed", {
+["CAManBase", "deleted", {
     params ["_unit"];
-    [_unit] call FUNC(unlockUnconsciousSeat);
-}] call CBA_fnc_addClassEventHandler;
+    TRACE_3("unit deleted",_unit,objectParent _unit,local _unit);
+    if ((!isNull objectParent _unit) && {local objectParent _unit}) then {
+        [_unit] call FUNC(unlockUnconsciousSeat);
+    };
+}, true, []] call CBA_fnc_addClassEventHandler;
