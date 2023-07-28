@@ -8,7 +8,7 @@
  * 0: Unit That Was Hit <OBJECT>
  * 1: Damage done to each body part <ARRAY>
  * 2: Type of the damage done <STRING>
- * 3: Projectile classname <STRING>
+ * 3: Projectile classname <STRING> (default: "")
  *
  * Return Value:
  * None
@@ -24,7 +24,7 @@
 #define ENGINE_DAMAGE_INDEX 0
 
 
-params ["_unit", "_allDamages", "_typeOfDamage", "_ammo"];
+params ["_unit", "_allDamages", "_typeOfDamage", ["_ammo", ""]];
 TRACE_3("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage);
 
 if !(EGVAR(medical,alternateArmorPenetration) && {_ammo isNotEqualTo ""}) exitWith {_this};
