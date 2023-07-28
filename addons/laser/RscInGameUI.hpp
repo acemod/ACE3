@@ -8,7 +8,7 @@ class RscInGameUI {
                     fade = 1;
                 };
                 class ACE_Distance: CA_Distance {
-                    idc = 123002;
+                    idc = IDC_LASERDESIGNATOR_ACEDISTANCE;
                     fade = 0;
                 };
                 class ACE_LaserCode_Helper: RscMapControl {
