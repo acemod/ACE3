@@ -47,30 +47,32 @@ GVAR(currentTemperature) = 15;
 GVAR(currentHumidity) = 0;
 GVAR(currentOvercast) = 0;
 
+private _mapConfig = configFile >> "CfgWorlds" >> _worldName;
+
 // Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
-private _nonInheritedArrays = configProperties [configFile >> "CfgWorlds" >> _worldName, "isArray _x", false];
+private _nonInheritedArrays = configProperties [_mapConfig, "isArray _x", false];
 // And check if any custom non-inherited weather is defined through config and use that if so
-if ((configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay")) then {
-        GVAR(TempDay) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay");
+if ((_mapConfig >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
+    if (isArray (_mapConfig >> "ACE_TempDay")) then {
+        GVAR(TempDay) = getArray (_mapConfig >> "ACE_TempDay");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempNight")) then {
-        GVAR(TempNight) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempNight");
+    if (isArray (_mapConfig >> "ACE_TempNight")) then {
+        GVAR(TempNight) = getArray (_mapConfig >> "ACE_TempNight");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_Humidity")) then {
-        GVAR(Humidity) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_Humidity");
+    if (isArray (_mapConfig >> "ACE_Humidity")) then {
+        GVAR(Humidity) = getArray (_mapConfig >> "ACE_Humidity");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMin")) then {
-        GVAR(WindSpeedMin) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMin");
+    if (isArray (_mapConfig >> "ACE_WindSpeedMin")) then {
+        GVAR(WindSpeedMin) = getArray (_mapConfig >> "ACE_WindSpeedMin");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMean")) then {
-        GVAR(WindSpeedMean) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMean");
+    if (isArray (_mapConfig >> "ACE_WindSpeedMean")) then {
+        GVAR(WindSpeedMean) = getArray (_mapConfig >> "ACE_WindSpeedMean");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMax")) then {
-        GVAR(WindSpeedMax) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMax");
+    if (isArray (_mapConfig >> "ACE_WindSpeedMax")) then {
+        GVAR(WindSpeedMax) = getArray (_mapConfig >> "ACE_WindSpeedMax");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindDirectionProbabilities")) then {
-        GVAR(WindDirectionProbabilities) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindDirectionProbabilities");
+    if (isArray (_mapConfig >> "ACE_WindDirectionProbabilities")) then {
+        GVAR(WindDirectionProbabilities) = getArray (_mapConfig >> "ACE_WindDirectionProbabilities");
     };
 };
 
