@@ -148,10 +148,6 @@ class CfgVehicles {
     class Box_IND_AmmoVeh_F: IND_Box_Base {
         GVAR(defaultSupply) = 1200;
     };
-    class Box_IND_AmmoOrd_F;
-    class Box_IDAP_AmmoOrd_F: Box_IND_AmmoOrd_F {
-        transportAmmo = 0; // not sure why this one has 240
-    };
 
     // Dummy Vehicles
     class ThingX;
