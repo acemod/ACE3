@@ -25,10 +25,8 @@ private _loadoutName = _contentPanelCtrl lnbText [_contentPanelCursSel, 1];
 // If loadout is local or default
 if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     // Find loadout and delete from list
-    if (is3DEN && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts}) then {
-        GVAR(defaultLoadoutsList) deleteAt (GVAR(defaultLoadoutsList) findIf {(_x select 0) == _loadoutName});
-
-        set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
+    if (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts) then {
+        [_loadoutName, !is3DEN] call FUNC(removeDefaultLoadout);
     } else {
         private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 

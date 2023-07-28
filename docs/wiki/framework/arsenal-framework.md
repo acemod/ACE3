@@ -174,7 +174,13 @@ To do so:
 
 This loadout list can be exported to the clipboard by using <kbd>Shift</kbd> + <kbd>LMB</kbd>. on the export button, doing the same on the import button will import the list currently in the clipboard.
 
-### 4.2 Adding default loadouts via script
+You can also save one of your personal loadouts as a default loadout by <kbd>Shift</kbd> + <kbd>LMB</kbd> on the save button while highlighting or saving a loadout in My Loadouts.
+
+### 4.2 Adding default loadouts ingame
+
+Players with Zeus access can save default loadouts ingame, doing so will make the saved loadout available to all players. The procedure is the same as with 3DEN, but loadouts cannot be exported or imported in Multiplayer. Default loadouts are not deleted when their creator disconnects, unlike Public Loadouts.
+
+### 4.3 Adding default loadouts via script
 
 `ace_arsenal_fnc_addDefaultLoadout`
 
@@ -182,9 +188,10 @@ This loadout list can be exported to the clipboard by using <kbd>Shift</kbd> + <
 ---| -------- | ---- | ------------------------
 0  | Name of loadout | String | Required
 1  | getUnitLoadout array or CBA extended loadout array | Array | Required
+2  | Add loadout globally | Boolean | Optional (default: `false`)
 
 Example:
-`["Squad Leader", getUnitLoadout sql1] call ace_arsenal_fnc_addDefaultLoadout`
+`["Squad Leader", getUnitLoadout sql1, true] call ace_arsenal_fnc_addDefaultLoadout`
 
 If a loadout with the same name exists, it will be overwritten.
 
