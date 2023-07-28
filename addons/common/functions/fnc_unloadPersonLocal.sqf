@@ -68,12 +68,13 @@ if (local _vehicle) then {
     moveOut _unit;
 };
 
+// Wait until unit has actually exited vehicle and then move them to the unload position
 [{
     params ["_unit", "_emptyPos"];
-    (alive _unit) && {(objectParent _unit) != _unit}
+    (alive _unit) && {isNull objectParent _unit}
 }, {
     params ["_unit", "_emptyPos"];
-    TRACE_2("success",_unit,_emptyPos);
+    TRACE_2("unload success",_unit,_emptyPos);
     _unit setPosASL AGLToASL _emptyPos;
 }, [_unit, _emptyPos], 2, {
     params ["_unit", "_emptyPos"];
