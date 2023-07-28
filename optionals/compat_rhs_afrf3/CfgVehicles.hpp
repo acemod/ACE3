@@ -161,8 +161,7 @@ class CfgVehicles {
         EGVAR(repair,canRepair) = 1;
     };
     class RHS_Ural_Ammo_Base: RHS_Ural_Base {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class rhs_kraz255b1_base;
@@ -183,14 +182,12 @@ class CfgVehicles {
     };
 
     class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class rhs_kamaz5350;
     class rhs_kamaz5350_ammo_base: rhs_kamaz5350 {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class MRAP_02_base_F;

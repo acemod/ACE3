@@ -160,7 +160,6 @@ class CfgVehicles {
     };
 
     class gm_ural4320_reammo_base: gm_ural4320_base {
-        transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
