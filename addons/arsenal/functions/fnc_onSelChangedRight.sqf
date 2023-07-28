@@ -27,6 +27,7 @@ private _itemIndex = [IDC_buttonMuzzle, IDC_buttonItemAcc, IDC_buttonOptic, IDC_
 switch (_currentItemsIndex) do {
     // Primary weapon
     case IDX_CURR_PRIMARY_WEAPON_ITEMS: {
+        private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select _itemIndex;
         // If removal
         if (_item == "") then {
             private _secondaryMagazine = (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select 5;
@@ -40,11 +41,11 @@ switch (_currentItemsIndex) do {
                 // Add magazine back into primary muzzle
                 GVAR(center) addWeaponItem [primaryWeapon GVAR(center), _secondaryMagazine, true];
             } else {
-                GVAR(center) removePrimaryWeaponItem ((GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select _itemIndex);
+                GVAR(center) removePrimaryWeaponItem _currentItemInSlot;
             };
         } else {
-            // Don't add item if it isn't a different item than what the unit already has
-            if (_item != ((GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select _itemIndex)) then {
+            // Don't add item if it isn't a magazine or a different item than what the unit already has
+            if (_itemIndex >= 4 || {_item != _currentItemInSlot}) then {
                 // If magazine, make sure to add to correct muzzle
                 if (_itemIndex >= 4) then {
                     private _weapon = primaryWeapon GVAR(center);
@@ -64,6 +65,7 @@ switch (_currentItemsIndex) do {
     };
     // Secondary weapon
     case IDX_CURR_SECONDARY_WEAPON_ITEMS: {
+        private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex;
         private _isDisposable = CBA_disposable_replaceDisposableLauncher && {!isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon GVAR(center))}};
 
         // If removal
@@ -84,11 +86,11 @@ switch (_currentItemsIndex) do {
                 // Add magazine back into primary muzzle
                 GVAR(center) addWeaponItem [secondaryWeapon GVAR(center), _secondaryMagazine, true];
             } else {
-                GVAR(center) removeSecondaryWeaponItem ((GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex);
+                GVAR(center) removeSecondaryWeaponItem _currentItemInSlot;
             };
         } else {
-            // Don't add item if it isn't a different item than what the unit already has
-            if (_item != ((GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex)) then {
+            // Don't add item if it isn't a magazine or a different item than what the unit already has
+            if (_itemIndex >= 4 || {_item != _currentItemInSlot}) then {
                 // If magazine, make sure to add to correct muzzle
                 if (_itemIndex >= 4) then {
                     private _weapon = secondaryWeapon GVAR(center);
@@ -110,6 +112,7 @@ switch (_currentItemsIndex) do {
     };
     // Handgun weapon
     case IDX_CURR_HANDGUN_WEAPON_ITEMS: {
+        private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select _itemIndex;
         if (_item == "") then {
             private _secondaryMagazine = (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select 5;
 
@@ -122,11 +125,11 @@ switch (_currentItemsIndex) do {
                 // Add magazine back into primary muzzle
                 GVAR(center) addWeaponItem [handgunWeapon GVAR(center), _secondaryMagazine, true];
             } else {
-                GVAR(center) removeHandgunItem ((GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select _itemIndex);
+                GVAR(center) removeHandgunItem _currentItemInSlot;
             };
         } else {
-            // Don't add item if it isn't a different item than what the unit already has
-            if (_item != ((GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select _itemIndex)) then {
+            // Don't add item if it isn't a magazine or a different item than what the unit already has
+            if (_itemIndex >= 4 || {_item != _currentItemInSlot}) then {
                 // If magazine, make sure to add to correct muzzle
                 if (_itemIndex >= 4) then {
                     private _weapon = handgunWeapon GVAR(center);
@@ -154,6 +157,7 @@ switch (_currentItemsIndex) do {
     };
     // Binoculars
     case IDX_CURR_BINO_ITEMS: {
+        private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select _itemIndex;
         if (_item == "") then {
             private _secondaryMagazine = (GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select 5;
 
@@ -166,11 +170,11 @@ switch (_currentItemsIndex) do {
                 // Add magazine back into primary muzzle
                 GVAR(center) addWeaponItem [binocular GVAR(center), _secondaryMagazine, true];
             } else {
-                GVAR(center) removeBinocularItem ((GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select _itemIndex);
+                GVAR(center) removeBinocularItem _currentItemInSlot;
             };
         } else {
-            // Don't add item if it isn't a different item than what the unit already has
-            if (_item != ((GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select _itemIndex)) then {
+            // Don't add item if it isn't a magazine or a different item than what the unit already has
+            if (_itemIndex >= 4 || {_item != _currentItemInSlot}) then {
                 // If magazine, make sure to add to correct muzzle
                 if (_itemIndex >= 4) then {
                     private _weapon = binocular GVAR(center);
