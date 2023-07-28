@@ -15,7 +15,10 @@
  * Public: No
  */
 
+if (!GVAR(enabled)) exitWith {};
+
 params ["_vehicle"];
+
 private _typeOf = typeOf _vehicle;
 private _configOf = configOf _vehicle;
 TRACE_2("initSupplyVehicle",_vehicle,_typeOf);
