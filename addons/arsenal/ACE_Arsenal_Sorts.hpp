@@ -4,7 +4,7 @@ class GVAR(sorts) {
         displayName = "";
         tabs[] = {{}, {}};
         statement = "";
-        condition = "true";
+        condition = QUOTE(true);
     };
 
     class ACE_alphabetically: sortBase {

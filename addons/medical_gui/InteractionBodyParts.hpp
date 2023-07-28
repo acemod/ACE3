@@ -5,7 +5,7 @@ class ACE_Head {
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
-    modifierFunction = QUOTE([ARR_3(_target,0,_this select 3)] call FUNC(modifyAction));
+    modifierFunction = QUOTE([ARR_3(_target,""head"",_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
 class ACE_Torso {
@@ -15,7 +15,7 @@ class ACE_Torso {
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_2(_target,1)] call FUNC(displayPatientInformation));
-    modifierFunction = QUOTE([ARR_3(_target,1,_this select 3)] call FUNC(modifyAction));
+    modifierFunction = QUOTE([ARR_3(_target,""body"",_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
     class TriageCard {
         displayName = CSTRING(Actions_TriageCard);
@@ -32,7 +32,7 @@ class ACE_ArmLeft {
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_2(_target,2)] call FUNC(displayPatientInformation));
-    modifierFunction = QUOTE([ARR_3(_target,2,_this select 3)] call FUNC(modifyAction));
+    modifierFunction = QUOTE([ARR_3(_target,""leftarm"",_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
 class ACE_ArmRight {
@@ -42,7 +42,7 @@ class ACE_ArmRight {
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_2(_target,3)] call FUNC(displayPatientInformation));
-    modifierFunction = QUOTE([ARR_3(_target,3,_this select 3)] call FUNC(modifyAction));
+    modifierFunction = QUOTE([ARR_3(_target,""rightarm"",_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
 class ACE_LegLeft {
@@ -52,7 +52,7 @@ class ACE_LegLeft {
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_2(_target,4)] call FUNC(displayPatientInformation));
-    modifierFunction = QUOTE([ARR_3(_target,4,_this select 3)] call FUNC(modifyAction));
+    modifierFunction = QUOTE([ARR_3(_target,""leftleg"",_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
 class ACE_LegRight {
@@ -62,6 +62,6 @@ class ACE_LegRight {
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_2(_target,5)] call FUNC(displayPatientInformation));
-    modifierFunction = QUOTE([ARR_3(_target,5,_this select 3)] call FUNC(modifyAction));
+    modifierFunction = QUOTE([ARR_3(_target,""rightleg"",_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };

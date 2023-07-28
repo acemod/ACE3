@@ -23,7 +23,7 @@ private _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFirem
 if (_sound isEqualTo []) exitWith {};
 
 // get position where to play the sound (position of the weapon)
-private _position = AGLToASL (_unit modelToWorldVisual (_unit selectionPosition "RightHand"));
+private _position = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");
 
 _sound params ["_filename", ["_volume", 1], ["_soundPitch", 1], ["_distance", 0]];
 

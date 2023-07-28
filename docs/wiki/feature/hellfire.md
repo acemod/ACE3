@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Hellfire
+component: hellfire
 description: AGM-114K Hellfire Missiles
 group: feature
 category: equipment
@@ -54,7 +55,7 @@ This and the attack profile used will effect missile's flight and max altitude.
 ### 3.2 Script Example
 - Adding hellfires to the Cessna Civilian Plane:
 
-```
+```sqf
 if (local this) then {
     this addWeaponTurret ["ace_hellfire_launcher", [-1]];
     this addMagazineTurret ["6Rnd_ACE_Hellfire_AGM114K", [-1]];
@@ -70,7 +71,3 @@ class myChopper: HeliBase {
     ace_hellfire_addLaserDesignator = 1;
 };
 ```
-
-## 5. Dependencies
-
-{% include dependencies_list.md component="hellfire" %}

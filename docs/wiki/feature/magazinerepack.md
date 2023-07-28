@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Magazine Repack
+component: magazinerepack
 description: Repacking magazines, and maybe your bananas.
 group: feature
 category: realism
@@ -24,7 +25,3 @@ Adds the ability to repack magazines of the same type.
 - Press the self interaction button <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Self Interaction Key`).
 - Select `Repack magazines`.
 - Select the type of magazines you want to repack.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="magazinerepack" %}

@@ -4,6 +4,7 @@ PREP(conditionSecondChance);
 PREP(enteredStateCardiacArrest);
 PREP(enteredStateDeath);
 PREP(enteredStateFatalInjury);
+PREP(enteredStateUnconscious);
 PREP(handleStateCardiacArrest);
 PREP(handleStateDefault);
 PREP(handleStateInjured);

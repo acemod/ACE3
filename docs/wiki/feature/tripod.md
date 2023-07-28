@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Tripod
+component: tripod
 description: Adds a packable tripod deployable on the field.
 group: feature
 category: equipment
@@ -25,7 +26,3 @@ Adds a packable tripod deployable on the field. It features a flat part to deplo
 - Select `Place SSWT kit`.
 
 To adjust or pick up the tripod just interact with it <kbd>⊞&nbsp;Win</kbd> and select the desired action.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="tripod" %}

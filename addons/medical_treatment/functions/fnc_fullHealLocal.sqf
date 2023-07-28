@@ -20,6 +20,11 @@ TRACE_1("fullHealLocal",_patient);
 
 if (!alive _patient) exitWith {};
 
+// check if on fire, then put out the fire before healing
+if ((["ace_fire"] call EFUNC(common,isModLoaded)) && {[_patient] call EFUNC(fire,isBurning)}) then {
+    _patient setVariable [QEGVAR(fire,intensity), 0, true];
+};
+
 private _state = GET_SM_STATE(_patient);
 TRACE_1("start",_state);
 
@@ -36,13 +41,18 @@ _patient setVariable [VAR_PAIN, 0, true];
 _patient setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 
 // Tourniquets
+{
+    if (_x != 0) then {
+        [_patient, "ACE_tourniquet"] call EFUNC(common,addToInventory);
+    };
+} forEach GET_TOURNIQUETS(_patient);
 _patient setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _patient setVariable [QGVAR(occludedMedications), nil, true];
 
 // Wounds and Injuries
-_patient setVariable [VAR_OPEN_WOUNDS, [], true];
-_patient setVariable [VAR_BANDAGED_WOUNDS, [], true];
-_patient setVariable [VAR_STITCHED_WOUNDS, [], true];
+_patient setVariable [VAR_OPEN_WOUNDS, createHashMap, true];
+_patient setVariable [VAR_BANDAGED_WOUNDS, createHashMap, true];
+_patient setVariable [VAR_STITCHED_WOUNDS, createHashMap, true];
 _patient setVariable [QEGVAR(medical,isLimping), false, true];
 _patient setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 

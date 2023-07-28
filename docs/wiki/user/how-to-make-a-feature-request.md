@@ -18,6 +18,6 @@ Please refrain from making requests for any planned or existing features from ei
 </div>
 
 ### Requesting a feature
-In order to avoid duplicates and keep the issue tracker organized, we have created a common issue for <a href="{{ site.ace.githubUrl }}/issues/3594/" target="_blank">ACE 3 Feature Requests</a>. Any and all relevant requests should be submitted there, where they will also get discussed and evaluated. Before adding a new one, make sure to check the previous entries from the thread and do a quick search for similar suggestions; please don't reiterate requests for features that had already been accepted for inclusion, or those which were disregarded earlier.
+In order to avoid duplicates and keep the issue tracker organized, we have created a common issue for <a href="{{ site.ace.githubUrl }}/issues/3594/" target="_blank">ACE3 Feature Requests</a>. Any and all relevant requests should be submitted there, where they will also get discussed and evaluated. Before adding a new one, make sure to check the previous entries from the thread and do a quick search for similar suggestions; please don't reiterate requests for features that had already been accepted for inclusion, or those which were disregarded earlier.
 
 Following their approval, feature requests may be moved by moderators to a separate issue for further discussion.

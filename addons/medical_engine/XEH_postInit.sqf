@@ -13,6 +13,7 @@
     // Check if last hit point is our dummy.
     private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
     reverse _allHitPoints;
+    while {(_allHitPoints param [0, ""]) select [0,1] == "#"} do { WARNING_1("Ignoring Reflector hitpoint %1", _allHitPoints deleteAt 0); };
 
     if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
         private _config = configOf _unit;
@@ -31,8 +32,8 @@
 
 #ifdef DEBUG_MODE_FULL
 [QEGVAR(medical,woundReceived), {
-    params ["_unit", "_woundedHitPoint", "_receivedDamage", "_shooter", "_ammo"];
-    TRACE_5("wound",_unit,_woundedHitPoint, _receivedDamage, _shooter, _ammo);
+    params ["_unit", "_damages", "_shooter", "_ammo"];
+    TRACE_4("wound",_unit,_damages, _shooter, _ammo);
     //systemChat str _this;
 }] call CBA_fnc_addEventHandler;
 #endif
@@ -41,11 +42,22 @@
 // this handles moving units into vehicles via load functions or zeus
 // needed, because the vanilla INCAPACITATED state does not handle vehicles
 ["CAManBase", "GetInMan", {
-    params ["_unit"];
-    if (!local _unit) exitWith {};
+    params ["_unit", "", "_vehicle"];
 
-    if (lifeState _unit == "INCAPACITATED") then {
+    if (local _unit && {lifeState _unit == "INCAPACITATED"}) then {
         [_unit, true] call FUNC(setUnconsciousAnim);
+    };
+
+    if (local _vehicle) then {
+        [_unit] call FUNC(lockUnconsciousSeat);
+    };
+}] call CBA_fnc_addClassEventHandler;
+
+["CAManBase", "GetOutMan", {
+    params ["_unit", "", "_vehicle"];
+
+    if (local _vehicle) then {
+        [_unit] call FUNC(unlockUnconsciousSeat);
     };
 }] call CBA_fnc_addClassEventHandler;
 
@@ -59,14 +71,26 @@
     private _lethality = linearConversion [0, 25, (vectorMagnitude velocity _vehicle), 0.5, 1];
     TRACE_2("air crash",_lethality,crew _vehicle);
     {
-        [QEGVAR(medical,woundReceived), [_x, "Head", _lethality, _killer, "#vehiclecrash", [HITPOINT_INDEX_HEAD,1]], _x] call CBA_fnc_targetEvent;
+        [QEGVAR(medical,woundReceived), [_x, [[_lethality, "Head", _lethality]], _killer, "#vehiclecrash"], _x] call CBA_fnc_targetEvent;
     } forEach (crew _vehicle);
 }, true, ["ParachuteBase"]] call CBA_fnc_addClassEventHandler;
 
 // Fixes units being stuck in unconscious animation when being knocked over by a PhysX object
 ["CAManBase", "AnimDone", {
     params ["_unit", "_anim"];
-    if (local _unit && {_anim find QGVAR(face) != -1 && {lifeState _unit != "INCAPACITATED"}}) then {
+    if (local _unit && {_anim find QUNCON_ANIM(face) != -1 && {lifeState _unit != "INCAPACITATED"}}) then {
         [_unit, false] call FUNC(setUnconsciousAnim);
     };
 }] call CBA_fnc_addClassEventHandler;
+
+["ace_unconscious", {
+    params ["_unit", "_unconscious"];
+
+    if (vehicle _unit != _unit && {local vehicle _unit}) then {
+        if (_unconscious) then {
+            [_unit] call FUNC(lockUnconsciousSeat);
+        } else {
+            [_unit] call FUNC(unlockUnconsciousSeat);
+        };
+    };
+}] call CBA_fnc_addEventHandler;

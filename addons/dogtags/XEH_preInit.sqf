@@ -7,5 +7,5 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(disabledFactions) = [] call CBA_fnc_createNamespace;
-    
+
 ADDON = true;

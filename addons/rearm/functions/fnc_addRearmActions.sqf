@@ -19,7 +19,12 @@
 params ["_truck", "_player"];
 
 private _vehicles = nearestObjects [_truck, ["AllVehicles"], GVAR(distance)];
-_vehicles = _vehicles select {(_x != _truck) && {!(_x isKindOf "CAManBase")} && {!(_x getVariable [QGVAR(disabled), false])}};
+_vehicles = _vehicles select {
+    _x != _truck
+    && {!(_x isKindOf "CAManBase")}
+    && {alive _x}
+    && {!(_x getVariable [QGVAR(disabled), false])}
+};
 
 private _cswCarryMagazines = [];
 private _vehicleActions = [];

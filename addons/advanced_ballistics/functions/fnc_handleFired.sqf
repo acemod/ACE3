@@ -31,12 +31,14 @@ if (_abort) then {
     private _maxRange = uiNamespace getVariable format[QGVAR(maxRange_%1), _ammo];
     if (isNil "_maxRange") then {
         private _airFriction = getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-        private _maxRange = if (_airFriction < 0) then {
+        private _vanillaInitialSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
+        _maxRange = if (_airFriction < 0) then {
             private _maxTime = ((_vanillaInitialSpeed - BULLET_TRACE_MIN_VELOCITY) / (BULLET_TRACE_MIN_VELOCITY * -_airFriction * _vanillaInitialSpeed)) max getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime");
             -ln(1 - _airFriction * _vanillaInitialSpeed * _maxTime) / _airFriction
         } else {
             _vanillaInitialSpeed * getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime")
         };
+        _maxRange = _maxRange * 1.3; // Adding 30% more to range just to be safe
         uiNamespace setVariable [format[QGVAR(maxRange_%1), _ammo], _maxRange];
     };
     if (ACE_player distance _unit > _maxRange && {ACE_player distance ((getPosASL _unit) vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply _maxRange)) > _maxRange}) exitWith {};
