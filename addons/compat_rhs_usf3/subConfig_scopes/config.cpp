@@ -2,13 +2,15 @@
 
 #if __has_include("\rhsusf\addons\rhsusf_main\loadorder\config.bin")
 #else
-#define PATCH_SKIP "RHS USAF"
+    #define PATCH_SKIP "RHS USAF"
 #endif
 
 #if __has_include("\z\ace\addons\scopes\script_component.hpp")
 #else
-#undef PATCH_SKIP
-#define PATCH_SKIP "ACE Scopes"
+    #ifdef PATCH_SKIP
+    #else
+        #define PATCH_SKIP "ACE Scopes"
+    #endif
 #endif
 
 #ifdef PATCH_SKIP

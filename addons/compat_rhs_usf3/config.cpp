@@ -2,7 +2,7 @@
 
 #if __has_include("\rhsusf\addons\rhsusf_main\loadorder\config.bin")
 #else
-#define PATCH_SKIP "RHS USAF"
+    #define PATCH_SKIP "RHS USAF"
 #endif
 
 #ifdef PATCH_SKIP
