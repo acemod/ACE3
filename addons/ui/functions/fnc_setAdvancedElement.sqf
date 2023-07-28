@@ -33,7 +33,7 @@ _cachedElement params ["_idd", "_elements", "_location", "_conditions"];
 
 // Exit if main vehicle type condition not fitting
 private _canUseWeaponOrInCargo = ACE_player call CBA_fnc_canUseWeapon || {-1 < vehicle ACE_player getCargoIndex ACE_player};
-private _inUAVCamera = !isNull getConnectedUAV ACE_player && {getConnectedUAV ACE_player isEqualTo cameraOn};
+private _inUAVCamera = !isNull (ACE_controlledUAV select 0);
 if (
     (_canUseWeaponOrInCargo && {!_inUAVCamera} && {_location == VEHICLE_ONLY})
     || {(!_canUseWeaponOrInCargo || {_inUAVCamera}) && {_location == GROUND_ONLY}}
