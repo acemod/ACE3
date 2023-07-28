@@ -54,7 +54,7 @@ if (local _vehicle) then {
     [{
         params ["_unit"];
 
-        if (objectParent _unit != _unit) then {
+        if (!isNull objectParent _unit) then {
             if ([_unit] call FUNC(isAwake)) then {
                 WARNING_1("UnloadPersonLocal [%1] did not eject normally",_unit);
             } else {
