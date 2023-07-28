@@ -135,16 +135,15 @@ class CfgVehicles {
         GVAR(defaultSupply) = 1200;
     };
 
-    class ReammoBox_F;
-    class NATO_Box_Base: ReammoBox_F {};
+    class NATO_Box_Base;
     class Box_NATO_AmmoVeh_F: NATO_Box_Base {
         GVAR(defaultSupply) = 1200;
     };
-    class EAST_Box_Base: ReammoBox_F {};
+    class EAST_Box_Base;
     class Box_East_AmmoVeh_F: EAST_Box_Base {
         GVAR(defaultSupply) = 1200;
     };
-    class IND_Box_Base: ReammoBox_F {};
+    class IND_Box_Base;
     class Box_IND_AmmoVeh_F: IND_Box_Base {
         GVAR(defaultSupply) = 1200;
     };
