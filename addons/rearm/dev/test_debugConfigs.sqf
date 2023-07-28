@@ -11,11 +11,11 @@ private _badCfgVehicles = toString {
         getNumber (_x >> "scope") == 2
         && {getNumber (_x >> "transportAmmo") > 0}
         && {!isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init")}
-} configClasses (configFile >> "CfgVehicles");
+};
 
 {
     diag_log text format ["Class %1: %2 [%3] needs XEH", configName _x, configName inheritsFrom _x, configSourceMod _x];
     _testPass = false;
-} forEach _badCfgVehicles;
+} forEach (_badCfgVehicles configClasses (configFile >> "CfgVehicles"));
 
 _testPass
