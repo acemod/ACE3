@@ -60,4 +60,4 @@ class CfgMagazines {
     class rhsusf_mine_m49a1_10m_mag: rhsusf_mine_m49a1_3m_mag {
         EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_explosive_mine_m49a1_10m);
     };
-}
+};
