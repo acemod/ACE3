@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: HOT
+component: hot
 description: HOT 1/2/3 Missiles
 group: feature
 category: equipment
@@ -53,14 +54,10 @@ There are 4 HOT missiles included
 
 - Adding HOT to e.g. a Cessna Civilian Plane:
 
-```cpp
+```sqf
 if (local this) then {
     this addWeaponTurret ["ace_hot_generic_launcher", [-1]];
     this addMagazineTurret ["ace_hot_2mp_6Rnd", [-1]];
     this addMagazineTurret ["ace_hot_3_6Rnd", [-1]];
 };
 ```
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="hot" %}

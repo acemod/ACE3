@@ -24,7 +24,7 @@ params ["_vehicle", "_unit", "_magClassname"];
 TRACE_3("params",_vehicle,_unit,_magClassname);
 
 //Get setup object vehicle and model:
-private _setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
+private _setupObjectClass = getText (configFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
 if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR("Bad Vehicle");};
 private _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
@@ -187,6 +187,7 @@ GVAR(TweakedAngle) = 0;
             _unit setVariable [QGVAR(PlantingExplosive), true];
             [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call CBA_fnc_waitAndExecute;
 
+            [QGVAR(setup), [_expSetupVehicle, _magClassname, _unit]] call CBA_fnc_globalEvent;
         };
     } else {
         private _screenPos = worldToScreen (_virtualPosASL call EFUNC(common,ASLToPosition));

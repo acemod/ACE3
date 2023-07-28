@@ -12,6 +12,8 @@
  * 4: Seeker wavelength sensitivity range, [1550,1550] is common eye safe <ARRAY>
  * 5: Seeker laser code. <NUMBER>
  * 6: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
+ * 7: Ignore 2 (e.g. Attached object) <OBJECT> (default: objNull)
+ * 8: Owners to ignore (e.g. Player's vehicle) <ARRAY of OBJECT> (default: [])
  *
  * Return Value:
  * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found <ARRAY>
@@ -24,7 +26,7 @@
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull], ["_ignoreObj2", objNull], ["_ignoreOwners", []]];
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
@@ -43,6 +45,8 @@ private _finalOwner = objNull;
     _x params ["_obj", "_owner", "_laserMethod", "_emitterWavelength", "_laserCode", "_divergence"];
     TRACE_6("laser",_obj,_owner,_laserMethod,_emitterWavelength,_laserCode,_divergence);
 
+    if (_owner in _ignoreOwners) then {continue};
+
     if (alive _obj && {_emitterWavelength >= _seekerWavelengthMin} && {_emitterWavelength <= _seekerWavelengthMax} && {_laserCode == _seekerCode}) then {
 
         private _laser = [];
@@ -56,10 +60,10 @@ private _finalOwner = objNull;
 
                 if (IS_ARRAY(_laserMethod)) then {
                     if (count _laserMethod == 2) then { // [modelPosition, weaponName] for _obj
-                        _laser = [AGLtoASL (_obj modelToWorldVisual (_laserMethod select 0)), _obj weaponDirection (_laserMethod select 1)];
+                        _laser = [_obj modelToWorldVisualWorld (_laserMethod select 0), _obj weaponDirection (_laserMethod select 1)];
                     } else {
                         if (count _laserMethod == 3) then {
-                            _laser = [AGLtoASL (_obj modelToWorldVisual (_laserMethod select 0)), (AGLtoASL (_obj modelToWorldVisual (_laserMethod select 1))) vectorFromTo (AGLtoASL (_obj modelToWorldVisual (_laserMethod select 2)))];
+                            _laser = [_obj modelToWorldVisualWorld (_laserMethod select 0), (_obj modelToWorldVisualWorld (_laserMethod select 1)) vectorFromTo (_obj modelToWorldVisualWorld (_laserMethod select 2))];
                         };
                     };
                 };
@@ -95,7 +99,7 @@ private _finalOwner = objNull;
             };
         };
     };
-} forEach (GVAR(laserEmitters) select 2); // Go through all values in hash
+} forEach (values GVAR(laserEmitters)); // Go through all values in hash
 
 TRACE_2("",count _spots, _spots);
 
@@ -142,7 +146,7 @@ if ((count _spots) > 0) then {
         _bucketList = _finalBuckets select _index;
         {
             private _testPos = (_x select 0) vectorAdd [0,0,0.05];
-            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1];
+            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1, _ignoreObj2];
             if ([] isEqualTo _testIntersections) then {
                 _bucketList pushBack _x;
             };
@@ -154,7 +158,7 @@ if ((count _spots) > 0) then {
     } forEach _buckets;
 
     private _finalBucket = _finalBuckets select _largestIndex;
-    private _ownersHash = [] call CBA_fnc_hashCreate;
+    private _ownersHash = createHashMap;
 
     TRACE_2("",_finalBucket,_finalBuckets);
 
@@ -164,24 +168,23 @@ if ((count _spots) > 0) then {
         {
             _x params ["_xPos", "_owner"];
             _finalPos = _finalPos vectorAdd _xPos;
-            if ([_ownersHash, _owner] call CBA_fnc_hashHasKey) then {
-                private _count = [_ownersHash, _owner] call CBA_fnc_hashGet;
-                [_ownersHash, _owner, _count + 1] call CBA_fnc_hashSet;
-            } else {
-                [_ownersHash, _owner, 1] call CBA_fnc_hashSet;
-            };
+            private _value = _ownersHash getOrDefault [hashValue _owner, [0, _owner]];
+            _value set [0, 1 + _value#0];
+            _ownersHash set [hashValue _owner, _value];
         } forEach _finalBucket;
 
         _finalPos = _finalPos vectorMultiply (1 / (count _finalBucket));
 
         private _maxOwnerCount = -1;
 
-        [_ownersHash, {
-            //IGNORE_PRIVATE_WARNING ["_key", "_value"];
-            if (_value > _maxOwnerCount) then {
-                _finalOwner = _key;
+        {
+            //IGNORE_PRIVATE_WARNING ["_x", "_y"];
+            _y params ["_count", "_owner"];
+            if (_count > _maxOwnerCount) then {
+                _maxOwnerCount = _count;
+                _finalOwner = _owner;
             };
-        }] call CBA_fnc_hashEachPair;
+        } forEach _ownersHash;
     };
 };
 

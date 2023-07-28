@@ -162,6 +162,12 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getout_ca.paa";
                 };
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    condition = QUOTE(!(lifeState _target in [ARR_2('HEALTHY','INJURED')]) && {isNull objectParent _target});
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
             };
 
             class ACE_Torso {
@@ -303,6 +309,13 @@ class CfgVehicles {
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
+                class ACE_RenameGroup {
+                    displayName = CSTRING(RenameGroup);
+                    condition = QUOTE(_player call FUNC(canRenameGroup));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    statement = QUOTE(_player call FUNC(renameGroupUI));
+                    showDisabled =1;
+                };
             };
 
             class ACE_Equipment {
@@ -358,7 +371,7 @@ class CfgVehicles {
         };
     };
 
-    class Car_F: Car{};
+    class Car_F: Car {};
     class Quadbike_01_base_F: Car_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -628,7 +641,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_OpenBox {
                     displayName = CSTRING(OpenBox);
-                    condition = QUOTE((alive _target) && {(getNumber (configOf _target >> 'disableInventory')) == 0});
+                    condition = QUOTE(alive _target && {!lockedInventory _target} && {getNumber (configOf _target >> 'disableInventory') == 0});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
                     showDisabled = 0;
                 };
@@ -636,6 +649,27 @@ class CfgVehicles {
         };
         class ACE_SelfActions {};
     };
+
+    class Items_base_F;
+    class PlasticCase_01_base_F: Items_base_F {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 2;
+                condition = "true";
+                class ACE_OpenBox {
+                    displayName = CSTRING(OpenBox);
+                    condition = QUOTE(alive _target && {!lockedInventory _target} && {getNumber (configOf _target >> 'disableInventory') == 0});
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
+                    showDisabled = 0;
+                };
+            };
+        };
+        class ACE_SelfActions {};
+    };
+
+
     class Slingload_base_F: ReammoBox_F {};
     class Slingload_01_Base_F: Slingload_base_F {
         class ACE_Actions: ACE_Actions {
@@ -663,6 +697,41 @@ class CfgVehicles {
         };
 
         class ACE_SelfActions {};
+    };
+
+    // weapons dropped from dead body
+    class WeaponHolderSimulated: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 3;
+                position = QUOTE(_target worldToModel ASLToAGL getPosASL _target);
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
+            };
+        };
+    };
+
+    class ReammoBox;
+    // dropped weapons/gear
+    class WeaponHolder: ReammoBox {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 3;
+                position = QUOTE(_target worldToModel ASLToAGL getPosASL _target);
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
+            };
+        };
     };
 
     class Lamps_base_F;

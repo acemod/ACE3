@@ -27,7 +27,7 @@ private _weapon = currentWeapon _player;
 //Get the classname of the spare barrel of that weapon
 private _weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> _weapon >> QGVAR(barrelClassname));
 //If the weapon has no defined classname then use the ACE one
-if(_weaponBarrelClass == "") then {
+if (_weaponBarrelClass == "") then {
     _weaponBarrelClass = "ACE_SpareBarrel";
 };
 private _allBarrels = [_unit, _weaponBarrelClass] call CBA_fnc_getMagazineIndex;
@@ -37,10 +37,7 @@ if ((count _allBarrels) < 1) exitWith {};
 // Determine the temp of each barrel
 private _temps = [];
 {
-    private _temp = 0;
-    if ([GVAR(storedSpareBarrels), _x] call CBA_fnc_hashHasKey) then {
-        _temp = ([GVAR(storedSpareBarrels), _x] call CBA_fnc_hashGet) select 0;
-    };
+    private _temp = GVAR(storedSpareBarrels) getOrDefault [_x, [0]] select 0;
     _temps pushBack _temp;
 } forEach _allBarrels;
 TRACE_1("_temps",_temps);

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Options Menu
+component: optionsmenu
 description: ACE3 options menu.
 group: feature
 category: interaction
@@ -30,9 +31,3 @@ Adds the options menu used by other components.
 
 ### 2.2 Options menu informations
 - You don't have to press a save button. When a setting is changed it's saved automatically.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="optionsmenu" %}
-
-*Note: The Options Menu module is utilized by many other modules. Disabling it is not recommended.*

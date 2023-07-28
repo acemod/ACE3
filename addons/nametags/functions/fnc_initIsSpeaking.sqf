@@ -36,20 +36,22 @@ if (!hasInterface) exitWith {};
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
-if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
-    INFO("ACRE Detected.");
-    DFUNC(isSpeaking) = {
-        params ["_unit"];
-        ([_unit] call acre_api_fnc_isSpeaking) && {!(_unit getVariable ["ACE_isUnconscious", false])}
+switch (true) do {
+    case (["acre_api"] call EFUNC(common,isModLoaded)): {
+        INFO("ACRE Detected.");
+        DFUNC(isSpeaking) = {
+            params ["_unit"];
+            ([_unit] call acre_api_fnc_isSpeaking) && {!(_unit getVariable ["ACE_isUnconscious", false])}
+        };
     };
-} else {
-    if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
+    case (["task_force_radio"] call EFUNC(common,isModLoaded)): {
         INFO("TFAR Detected.");
         DFUNC(isSpeaking) =     {
             params ["_unit"];
             (_unit getVariable ["tf_isSpeaking", false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}
         };
-    } else {
+    };
+    default {
         //No Radio Mod - Start a PFEH to watch the internal VON icon
         //Note: class RscDisplayVoiceChat {idd = 55} - only present when talking
 

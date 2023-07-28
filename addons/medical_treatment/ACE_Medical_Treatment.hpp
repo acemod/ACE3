@@ -494,7 +494,6 @@ class ADDON {
             };
             class CutMinor: Cut {
                 effectiveness = 2;
-                reopeningChance = 0.3;
             };
             class CutMedium: Cut {
                 effectiveness = 1;

@@ -17,6 +17,7 @@
 
 params ["_vehicle"];
 private _typeOf = typeOf _vehicle;
+private _configOf = configOf _vehicle;
 TRACE_2("initSupplyVehicle",_vehicle,_typeOf);
 
 if (local _vehicle && {getAmmoCargo _vehicle > 0}) then {
@@ -27,13 +28,12 @@ if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-c
 
 if (!alive _vehicle) exitWith {};
 
-private _config = configOf _vehicle;
-private _configSupply = getNumber (_config >> QGVAR(defaultSupply));
+private _configSupply = getNumber (_configOf >> QGVAR(defaultSupply));
 if (_configSupply == 0) then {
     _configSupply = getNumber (_config >> "transportAmmo");
 };
 private _isSupplyVehicle = _vehicle getVariable [QGVAR(isSupplyVehicle), false];
-private _oldRearmConfig = isClass (_config >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(takeAmmo));
+private _oldRearmConfig = isClass (_configOf >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(takeAmmo));
 TRACE_3("",_configSupply,_isSupplyVehicle,_oldRearmConfig);
 
 if ((_configSupply <= 0) && {!_isSupplyVehicle} && {!_oldRearmConfig}) exitWith {}; // Ignore if not enabled
@@ -83,4 +83,3 @@ if (_oldRearmConfig || {_configSupply > 0}) then {
     [_vehicle, 0, ["ACE_MainActions"], _actionTakeAmmo] call EFUNC(interact_menu,addActionToObject);
     [_vehicle, 0, ["ACE_MainActions"], _actionStoreAmmo] call EFUNC(interact_menu,addActionToObject);
 };
-

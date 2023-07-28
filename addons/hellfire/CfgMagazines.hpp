@@ -1,13 +1,13 @@
 class CfgMagazines {
     class 12Rnd_PG_missiles;
-    
+
     // Kilo - tandem shaped charge HEAT (anti-tank)
     class 6Rnd_ACE_Hellfire_AGM114K: 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         ammo = "ACE_Hellfire_AGM114K";
         displayName = "AGM-114K [ACE]";
         displayNameShort = "AGM-114K";
-        descriptionShort = "AGM-114K";
+        descriptionShort = CSTRING(KDescriptionShort);
     };
 
     // 1.70 pylon magazines:
@@ -52,74 +52,74 @@ class CfgMagazines {
         ammo = "ACE_Hellfire_AGM114N";
         displayName = "AGM-114N [ACE]";
         displayNameShort = "AGM-114N";
-        descriptionShort = "AGM-114N";
+        descriptionShort = CSTRING(NDescriptionShort);
     };
 
     // 1.70 pylon magazines:
     class PylonMissile_1Rnd_ACE_Hellfire_AGM114N: PylonMissile_1Rnd_ACE_Hellfire_AGM114K { // Bare missle
         displayName = "1x AGM-114N [ACE]";
         displayNameShort = "AGM-114N";
-        descriptionShort = "AGM-114N";
+        descriptionShort = CSTRING(NDescriptionShort);
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
     class PylonRack_1Rnd_ACE_Hellfire_AGM114N: PylonRack_1Rnd_ACE_Hellfire_AGM114K { // 1x Launcher Support Rack
         displayName = "1x AGM-114N [ACE]";
         displayNameShort = "AGM-114N";
-        descriptionShort = "AGM-114N";
+        descriptionShort = CSTRING(NDescriptionShort);
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
     class PylonRack_3Rnd_ACE_Hellfire_AGM114N: PylonRack_3Rnd_ACE_Hellfire_AGM114K { // 3x Launcher Support Rack
         displayName = "3x AGM-114N [ACE]";
         displayNameShort = "AGM-114N";
-        descriptionShort = "AGM-114N";
+        descriptionShort = CSTRING(NDescriptionShort);
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
     class PylonRack_4Rnd_ACE_Hellfire_AGM114N: PylonRack_4Rnd_ACE_Hellfire_AGM114K { // 4x Launcher Support Rack
         displayName = "4x AGM-114N [ACE]";
         displayNameShort = "AGM-114N";
-        descriptionShort = "AGM-114N";
+        descriptionShort = CSTRING(NDescriptionShort);
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
-    
+
     // Lima - tandem shaped charge HEAT (anti-tank) Fire and Forget Active Radar Homing
     class 6Rnd_ACE_Hellfire_AGM114L: 6Rnd_ACE_Hellfire_AGM114K { // Old style vehicle magazine
         count = 6;
         ammo = "ACE_Hellfire_AGM114L";
         displayName = "AGM-114L [ACE]";
         displayNameShort = "AGM-114L";
-        descriptionShort = "AGM-114L";
+        descriptionShort = CSTRING(LDescriptionShort);
     };
 
     // 1.70 pylon magazines:
     class PylonMissile_1Rnd_ACE_Hellfire_AGM114L: PylonMissile_1Rnd_ACE_Hellfire_AGM114K { // Bare missle
         displayName = "1x AGM-114L [ACE]";
         displayNameShort = "AGM-114L";
-        descriptionShort = "AGM-114L";
+        descriptionShort = CSTRING(LDescriptionShort);
         ammo = "ACE_Hellfire_AGM114L";
         pylonWeapon = QGVAR(launcher_L);
     };
     class PylonRack_1Rnd_ACE_Hellfire_AGM114L: PylonRack_1Rnd_ACE_Hellfire_AGM114K { // 1x Launcher Support Rack
         displayName = "1x AGM-114L [ACE]";
         displayNameShort = "AGM-114L";
-        descriptionShort = "AGM-114L";
+        descriptionShort = CSTRING(LDescriptionShort);
         ammo = "ACE_Hellfire_AGM114L";
         pylonWeapon = QGVAR(launcher_L);
     };
     class PylonRack_3Rnd_ACE_Hellfire_AGM114L: PylonRack_3Rnd_ACE_Hellfire_AGM114K { // 3x Launcher Support Rack
         displayName = "3x AGM-114L [ACE]";
         displayNameShort = "AGM-114L";
-        descriptionShort = "AGM-114L";
+        descriptionShort = CSTRING(LDescriptionShort);
         ammo = "ACE_Hellfire_AGM114L";
         pylonWeapon = QGVAR(launcher_L);
     };
     class PylonRack_4Rnd_ACE_Hellfire_AGM114L: PylonRack_4Rnd_ACE_Hellfire_AGM114K { // 4x Launcher Support Rack
         displayName = "4x AGM-114L [ACE]";
         displayNameShort = "AGM-114L";
-        descriptionShort = "AGM-114L";
+        descriptionShort = CSTRING(LDescriptionShort);
         ammo = "ACE_Hellfire_AGM114L";
         pylonWeapon = QGVAR(launcher_L);
     };

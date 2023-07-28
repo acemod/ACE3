@@ -26,22 +26,20 @@ PREP_RECOMPILE_END;
     }, _this] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addClassEventHandler;
 
-[QEGVAR(arsenal,displayOpened), {
-
-    private _center = EGVAR(arsenal,center);
-
-    if (_center call FUNC(hasGunBag)) then {
-        GVAR(arsenalCache) = (backpackContainer _center) getVariable [QGVAR(gunbagWeapon), []];
+["CBA_loadoutSet", {
+    params ["_unit", "_loadout", "_extendedInfo"];
+    private _gunbagWeapon = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
+    if (_gunbagWeapon isNotEqualTo []) then {
+        (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon), _gunbagWeapon, true];
     };
 }] call CBA_fnc_addEventHandler;
 
-[QEGVAR(arsenal,displayClosed), {
-
-    if (!isNil QGVAR(arsenalCache)) then {
-        (backpackContainer EGVAR(arsenal,center)) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
+["CBA_loadoutGet", {
+    params ["_unit", "_loadout", "_extendedInfo"];
+    private _gunbagWeapon = (backpackContainer _unit) getVariable [QGVAR(gunbagWeapon), []];
+    if (_gunbagWeapon isNotEqualTo []) then {
+        _extendedInfo set [QGVAR(gunbagWeapon), _gunbagWeapon];
     };
-
-    GVAR(arsenalCache) = nil;
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;

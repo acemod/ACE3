@@ -168,12 +168,20 @@ The family of path macros define global paths to files for use within a module. 
 ## 3. Functions
 Functions shall be created in the `functions\` subdirectory, named `fnc_functionName.sqf` They shall then be indexed via the `PREP(functionName)` macro in the `XEH_preInit.sqf` file.
 
-The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_components.hpp"` include!**
+The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_component.hpp"` include!**
 
-### 3.1 Headers
-Every function should have a header of the following format as the start of their function file:
+### 3.1 Includes
+Every function includes the `script_component.hpp` file on the first line. Any additional includes or defines must be below this include.
 
-```js
+All code written must be below this include and any potential additional includes or defines.
+
+#### 3.1.1 Reasoning
+This ensures every function starts off in an uniform way and enforces function documentation. The include appears before the header to avoid incorrect line numbers in script errors.
+
+### 3.2 Headers
+Every function should have a header of the following format appear before any code:
+
+```sqf
 /*
  * Author: [Name of Author(s)]
  * [Description]
@@ -196,15 +204,7 @@ Every function should have a header of the following format as the start of thei
  */
 ```
 
-This is not the case for inline functions or functions not containing their own file.
-
-### 3.2 Includes
-Every function includes the `script_component.hpp` file just below the function header. Any additional includes or defines must be below this include.
-
-All scripts written must be below this include and any potential additional includes or defines.
-
-#### 3.2.1 Reasoning
-This ensures every function starts of in an uniform way and enforces function documentation.
+This is not the case for inline functions or functions not contained in their own file.
 
 
 ## 4. Global Variables
@@ -260,7 +260,7 @@ class Something : Or {
 
 When using `if`/`else`, it is encouraged to put `else` on the same line as the closing brace to save space:
 
-```js
+```sqf
 if (alive player) then {
     player setDamage 1;
 } else {
@@ -284,7 +284,7 @@ Every new scope should be on a new indent. This will make the code easier to und
 
 Good:
 
-```js
+```sqf
 call {
     call {
         if (/* condition */) then {
@@ -296,7 +296,7 @@ call {
 
 Bad:
 
-```js
+```sqf
 call {
         call {
         if (/* condition */) then {
@@ -311,7 +311,7 @@ Inline comments should use `//`. Usage of `/* */` is allowed for larger comment 
 
 Example:
 
-```js
+```sqf
 //// Comment   // < incorrect
 // Comment     // < correct
 /* Comment */  // < correct
@@ -324,7 +324,7 @@ Comments within the code shall be used when they are describing a complex and cr
 
 Good:
 
-```js
+```sqf
 // find the object with the most blood loss
 _highestObj = objNull;
 _highestLoss = -1;
@@ -338,28 +338,28 @@ _highestLoss = -1;
 
 Good:
 
-```js
+```sqf
 // Check if the unit is an engineer
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
 
-```js
+```sqf
 // Get the engineer skill and check if it is above 1
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
 
-```js
+```sqf
 // Get the variable myValue from the object
 _myValue = _obj getvariable [QGVAR(myValue), 0];
 ```
 
 Bad:
 
-```js
+```sqf
 // Loop through all units to increase the myvalue variable
 {
     _x setvariable [QGVAR(myValue), (_x getvariable [QGVAR(myValue), 0]) + 1];
@@ -369,19 +369,19 @@ Bad:
 ### 5.5 Brackets around code
 When making use of brackets `( )`, use as few as possible, unless doing so decreases readability of the code. Avoid statements such as:
 
-```js
+```sqf
 if (!(_value)) then { };
 ```
 
 However the following is allowed:
 
-```js
+```sqf
 _value = (_array select 0) select 1;
 ```
 
 Any conditions in statements shall always be wrapped around brackets.
 
-```js
+```sqf
 if (!_value) then {};
 if (_value) then {};
 ```
@@ -402,14 +402,14 @@ When using array notation `[]`, always use a space between elements to improve c
 
 Good:
 
-```js
+```sqf
 params ["_unit", "_vehicle"];
 private _pos = [0, 0, 0];
 ```
 
 Bad:
 
-```js
+```sqf
 params ["_unit","_vehicle"];
 private _pos = [0,0,0];
 ```
@@ -436,19 +436,19 @@ All private variables shall make use of the `private` keyword on initialization.
 
 Good:
 
-```js
+```sqf
 private _myVariable = "hello world";
 ```
 
 Good:
 
-```js
+```sqf
 _myArray params ["_elementOne", "_elementTwo"];
 ```
 
 Bad:
 
-```js
+```sqf
 _elementOne = _myArray select 0;
 _elementTwo = _myArray select 1;
 ```
@@ -461,36 +461,36 @@ Declarations should be at the smallest feasible scope.
 
 Good:
 
-```js
+```sqf
 if (call FUNC(myCondition)) then {
-   private _areAllAboveTen = true; // <- smallest feasable scope
+    private _areAllAboveTen = true; // <- smallest feasable scope
 
-   {
-      if (_x >= 10) then {
-         _areAllAboveTen = false;
-      };
-   } forEach _anArray;
+    {
+        if (_x >= 10) then {
+            _areAllAboveTen = false;
+        };
+    } forEach _anArray;
 
-   if (_areAllAboveTen) then {
-       hint "all values are above ten!";
-   };
+    if (_areAllAboveTen) then {
+        hint "all values are above ten!";
+    };
 }
 ```
 
 Bad:
 
-```js
+```sqf
 private _areAllAboveTen = true; // <- this is bad, because it can be initialized in the if statement
 if (call FUNC(myCondition)) then {
-   {
-      if (_x >= 10) then {
-         _areAllAboveTen = false;
-      };
-   } forEach _anArray;
+    {
+        if (_x >= 10) then {
+            _areAllAboveTen = false;
+        };
+    } forEach _anArray;
 
-   if (_areAllAboveTen) then {
-       hint "all values are above ten!";
-   };
+    if (_areAllAboveTen) then {
+        hint "all values are above ten!";
+    };
 };
 ```
 
@@ -499,7 +499,7 @@ Private variables will not be introduced until they can be initialized with mean
 
 Good:
 
-```js
+```sqf
 private _myVariable = 0; // good because the value will be used
 {
     _x params ["_value", "_amount"];
@@ -511,7 +511,7 @@ private _myVariable = 0; // good because the value will be used
 
 Bad:
 
-```js
+```sqf
 private _myvariable = 0; // Bad because it is initialized with a zero, but this value does not mean anything
 if (_condition) then {
     _myVariable = 1;
@@ -522,7 +522,7 @@ if (_condition) then {
 
 Good:
 
-```js
+```sqf
 private _myvariable = [1, 2] select _condition;
 ```
 
@@ -537,20 +537,20 @@ When using `getVariable`, there shall either be a default value given in the sta
 
 Bad:
 
-```js
+```sqf
 _return = obj getvariable "varName";
-if (isnil "_return") then {_return = 0 };
+if (isnil "_return") then { _return = 0 };
 ```
 
 Good:
 
-```js
+```sqf
 _return = obj getvariable ["varName", 0];
 ```
 
 Good:
 
-```js
+```sqf
 _return = obj getvariable "varName";
 if (isnil "_return") exitwith {};
 ```
@@ -560,27 +560,27 @@ Global variables should not be used to pass along information from one function 
 
 Bad:
 
-```js
+```sqf
 fnc_example = {
     hint GVAR(myVariable);
 };
 ```
 
-```js
+```sqf
 GVAR(myVariable) = "hello my variable";
 call fnc_example;
 ```
 
 Good:
 
-```js
+```sqf
 fnc_example = {
-   params ["_content"];
-   hint _content;
+    params ["_content"];
+    hint _content;
 };
 ```
 
-```js
+```sqf
 ["hello my variable"] call fnc_example;
 ```
 
@@ -625,7 +625,7 @@ More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wi
 
 **Warning about BIS event handlers:**
 BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.
-```js
+```sqf
 player addEventHandler ["Fired", FUNC(handleFired)]; // bad
 player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
 ```
@@ -638,7 +638,7 @@ Hashes are a variable type that store key value pairs. They are not implemented 
 
 The following example is a simple usage using our macros which will be explained further below.
 
-```js
+```sqf
 _hash = HASHCREATE;
 HASH_SET(_hash,"key","value");
 if (HASH_HASKEY(_hash,"key")) then {
@@ -664,7 +664,7 @@ A description of the above macros is below.
 
 A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate its usage.
 
-```js
+```sqf
 _defaultKeys = ["key1", "key2", "key3"];
 // create a new hashlist using the above keys as default
 _hashList = HASHLIST_CREATELIST(_defaultKeys);
@@ -712,19 +712,19 @@ When adding new elements to an array, `pushBack` shall be used instead of the bi
 
 Good:
 
-```js
+```sqf
 _a pushBack _value;
 ```
 
 Also good:
 
-```js
-_a append [1,2,3];
+```sqf
+_a append [1, 2, 3];
 ```
 
 Bad:
 
-```js
+```sqf
 _a set [ count _a, _value];
 _a = a + _[value];
 ```
@@ -742,14 +742,14 @@ Where possible `[0, 0, 0]` position shall be used, except on `#` objects (e.g. `
 
 This code requires ~1.00ms and will be higher with more objects near wanted position:
 
-```js
+```sqf
 _vehicle = _type createVehicleLocal _posATL;
 _vehicle setposATL _posATL;
 ```
 
 While this one requires ~0.04ms:
 
-```js
+```sqf
 _vehicle = _type createVehicleLocal [0, 0, 0];
 _vehicle setposATL _posATL;
 ```
@@ -765,13 +765,13 @@ When checking if an array is empty `isEqualTo` shall be used.
 
 ### 8.7 `for` Loops
 
-```js
+```sqf
 for "_y" from # to # step # do { ... }
 ```
 
 shall be used instead of
 
-```js
+```sqf
 for [{ ... },{ ... },{ ... }] do { ... };
 ```
 
@@ -782,7 +782,7 @@ While is only allowed when used to perform a unknown finite amount of steps with
 
 Good:
 
-```js
+```sqf
 _original = _obj getvariable [QGVAR(value), 0];
 while {_original < _weaponThreshold} do {
     _original = [_original, _weaponClass] call FUNC(getNewValue);
@@ -791,7 +791,7 @@ while {_original < _weaponThreshold} do {
 
 Bad:
 
-```js
+```sqf
 while {true} do {
     // anything
 };
@@ -799,7 +799,7 @@ while {true} do {
 
 ### 8.9 `waitUntil`
 The `waitUntil` command shall not be used. Instead, make use of CBA's `CBA_fnc_waitUntilAndExecute`
-```js
+```sqf
 [{
     params ["_unit"];
     _unit getVariable [QGVAR(myVariable), false]

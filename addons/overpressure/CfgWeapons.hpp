@@ -7,6 +7,7 @@ class CfgWeapons {
         GVAR(angle) = 60;
         GVAR(range) = 10;
         GVAR(damage) = 0.7;
+        GVAR(offset) = 1;
     };
 
     class Launcher_Base_F: Launcher {};
@@ -16,6 +17,7 @@ class CfgWeapons {
         GVAR(angle) = 40;
         GVAR(range) = 8;
         GVAR(damage) = 0.5;
+        GVAR(offset) = 1;
     };
 
     class launch_Titan_short_base: launch_Titan_base {
@@ -24,6 +26,7 @@ class CfgWeapons {
         GVAR(angle) = 30;
         GVAR(range) = 2;
         GVAR(damage) = 0.5;
+        GVAR(offset) = 0.85;
     };
 
     class launch_NLAW_F: Launcher_Base_F {
@@ -32,6 +35,7 @@ class CfgWeapons {
         GVAR(angle) = 30;
         GVAR(range) = 2;
         GVAR(damage) = 0.6;
+        GVAR(offset) = 1.05;
     };
 
     class launch_RPG32_F: Launcher_Base_F {
@@ -39,6 +43,22 @@ class CfgWeapons {
         GVAR(angle) = 60;
         GVAR(range) = 15;
         GVAR(damage) = 0.7;
+        GVAR(offset) = 1.2;
+    };
+
+    class launch_MRAWS_base_F: Launcher_Base_F {
+        GVAR(range) = 15;
+        GVAR(offset) = 1.05;
+    };
+
+    class launch_Vorona_base_F: Launcher_Base_F {
+        GVAR(angle) = 50;
+        GVAR(offset) = 0.88;
+    };
+
+    class launch_RPG7_F: Launcher_Base_F {
+        GVAR(angle) = 40;
+        GVAR(offset) = 0.9;
     };
 
     class CannonCore;

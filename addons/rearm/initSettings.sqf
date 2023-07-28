@@ -1,7 +1,9 @@
+private _category = [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(DisplayName)];
+
 [
     QGVAR(enabled), "CHECKBOX",
     ELSTRING(common,Enabled),
-    [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(DisplayName)],
+    _category,
     true,
     true,
     {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
@@ -11,7 +13,7 @@
 [
     QGVAR(level), "LIST",
     [LSTRING(RearmSettings_level_DisplayName), LSTRING(RearmSettings_level_Description)],
-    [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(DisplayName)],
+    _category,
     [[0,1,2],[LSTRING(RearmSettings_vehicle), LSTRING(RearmSettings_magazine), LSTRING(RearmSettings_caliber)],0], // [values, titles, defaultIndex]
     true, // isGlobal
     {[QGVAR(level), _this] call EFUNC(common,cbaSettings_settingChanged)}
@@ -20,7 +22,7 @@
 [
     QGVAR(supply), "LIST",
     [LSTRING(RearmSettings_supply_DisplayName), LSTRING(RearmSettings_supply_Description)],
-    [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(DisplayName)],
+    _category,
     [[0,1,2],[LSTRING(RearmSettings_unlimited), LSTRING(RearmSettings_limited), LSTRING(RearmSettings_magazineSupply)],0], // [values, titles, defaultIndex]
     true, // isGlobal
     {[QGVAR(supply), _this] call EFUNC(common,cbaSettings_settingChanged)}
@@ -29,7 +31,7 @@
 [
     QGVAR(distance), "SLIDER",
     [LLSTRING(RearmSettings_distance_DisplayName), LLSTRING(RearmSettings_distance_Description)],
-    [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(DisplayName)],
+    _category,
     [10, 50, 20, 0],
     true, // isGlobal
     {[QGVAR(supply), _this] call EFUNC(common,cbaSettings_settingChanged)}
