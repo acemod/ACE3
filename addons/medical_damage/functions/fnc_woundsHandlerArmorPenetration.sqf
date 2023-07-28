@@ -23,7 +23,6 @@
 #define SCALED_UNPROTECTED_VALUE 4
 #define ENGINE_DAMAGE_INDEX 0
 
-
 params ["_unit", "_allDamages", "_typeOfDamage", "_ammo"];
 TRACE_3("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage);
 

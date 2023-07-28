@@ -10,7 +10,7 @@
  * Base damage value, penetration factor, muzzle velocity <ARRAY of NUMBER>
  *
  * Example:
- * ["B_556x45_Ball"] call ace_medical_engine_fnc_getAmmoHit
+ * ["B_556x45_Ball"] call ace_medical_engine_fnc_getAmmoData
  *
  * Public: No
  */
