@@ -62,9 +62,6 @@
 #define PENETRATION_THRESHOLD EGVAR(medical,const_penetrationThreshold)
 #define PENETRATION_THRESHOLD_DEFAULT 0.35
 
-// Baseline penetrability used for armor penetration calculation, see (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber)
-#define ARMOR_PENETRABILITY 0.015
-
 // To be replaced by a proper blood pressure calculation
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD EGVAR(medical,const_bloodLossKnockOutThreshold)
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD_DEFAULT 0.5 // 50% of cardiac output

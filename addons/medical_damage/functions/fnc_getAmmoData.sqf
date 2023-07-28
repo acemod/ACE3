@@ -10,10 +10,12 @@
  * Base damage value, penetration factor, muzzle velocity <ARRAY of NUMBER>
  *
  * Example:
- * ["B_556x45_Ball"] call ace_medical_engine_fnc_getAmmoHit
+ * ["B_556x45_Ball"] call ace_medical_engine_fnc_getAmmoData
  *
  * Public: No
  */
+// Baseline penetrability used for armor penetration calculation, see (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber)
+#define ARMOR_PENETRABILITY 0.015
 
 params ["_ammo"];
 
