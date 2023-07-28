@@ -129,4 +129,4 @@ if (_map in ["xcam_prototype"]) exitWith { [35, 0] };
 if (_map in ["xcam_taunus"]) exitWith { [50, 0] };
 if (_map in ["zargabad"]) exitWith { [35, 2000] };
 
-[] //Return empty array if we have no specific data for the map
+[getNumber (configFile >> "CfgWorlds" >> _map >> "latitude"), 0] // Use terrain config if we have no data for this map
