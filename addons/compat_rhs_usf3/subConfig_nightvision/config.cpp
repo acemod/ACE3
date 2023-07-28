@@ -5,7 +5,7 @@
 #define PATCH_SKIP "RHS USAF"
 #endif
 
-#if __has_include("\z\ace\addons\nightvision\config.bin")
+#if __has_include("\z\ace\addons\nightvision\script_component.hpp")
 #else
 #undef PATCH_SKIP
 #define PATCH_SKIP "ACE Night Vision"

@@ -2,10 +2,10 @@
 
 #if __has_include("\rhsusf\addons\rhsusf_main\loadorder\config.bin")
 #else
-#define PATCH_SKIP "RHS"
+#define PATCH_SKIP "RHS USAF"
 #endif
 
-#if __has_include("\z\ace\addons\repair\config.bin")
+#if __has_include("\z\ace\addons\repair\script_component.hpp")
 #else
 #undef PATCH_SKIP
 #define PATCH_SKIP "ACE Repair"

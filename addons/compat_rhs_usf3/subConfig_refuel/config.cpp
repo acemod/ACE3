@@ -5,7 +5,7 @@
 #define PATCH_SKIP "RHS USAF"
 #endif
 
-#if __has_include("\z\ace\addons\refuel\config.bin")
+#if __has_include("\z\ace\addons\refuel\script_component.hpp")
 #else
 #undef PATCH_SKIP
 #define PATCH_SKIP "ACE Refuel"
