@@ -4,7 +4,7 @@ class RscInGameUI {
             class controls {
                 // Hide the vanilla distance display
                 class CA_Distance: RscText {
-                    idc = 151; // Purposeful overwrite, makes range update constantly, do not remove
+                    idc = IDC_LASERDESIGNATOR_DISTANCE; // Purposeful overwrite, makes range update constantly, do not remove
                     fade = 1;
                 };
                 class ACE_Distance: CA_Distance {
@@ -18,7 +18,7 @@ class RscInGameUI {
                     h = 0;
                 };
                 class ACE_LaserCode: RscText {
-                    idc = 123001;
+                    idc = IDC_LASERDESIGNATOR_LASERCODE;
                     style = 0;
                     sizeEx = "0.038*SafezoneH";
                     colorText[] = {0.706,0.0745,0.0196,1};
