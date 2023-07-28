@@ -99,6 +99,7 @@ private _fnc_handleStats = {
         call _fnc_hideEverything
     };
 
+   GVAR(currentStatPage) = GVAR(currentStatPage) min floor ((count _statsTab) / 5); 
     private _statsToDisplay = _statsTab select [GVAR(currentStatPage) * 5, 5];
 
 
