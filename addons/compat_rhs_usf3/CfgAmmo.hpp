@@ -337,118 +337,56 @@ class CfgAmmo {
         EGVAR(vehicle_damage,incendiary) = 0.8;
     };
 
-    class MissileBase;
-    class rhs_ammo_M_fgm148_AT: MissileBase {
-        irLock = 1;
-        laserLock = 0;
-        airLock = 0;
-
-        // Begin ACE guidance Configs
-        class ace_missileguidance {
-            enabled = 1;
-
-            minDeflection = 0.00005;      // Minium flap deflection for guidance
-            maxDeflection = 0.025;       // Maximum flap deflection for guidance
-            incDeflection = 0.00005;      // The incrmeent in which deflection adjusts.
-
-            canVanillaLock = 0;
-
-            // Guidance type for munitions
-            defaultSeekerType = "Optic";
-            seekerTypes[] = { "Optic" };
-
-            defaultSeekerLockMode = "LOBL";
-            seekerLockModes[] = { "LOBL" };
-
-            seekerAngle = 180;           // Angle in front of the missile which can be searched
-            seekerAccuracy = 1;         // seeker accuracy multiplier
-
-            seekerMinRange = 0;
-            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
-
-            seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-
-            // Attack profile type selection
-            defaultAttackProfile = "JAV_TOP";
-            attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
-            useModeForAttackProfile = 1;
-        };
-    };
-
     class GrenadeHand;
     class rhs_ammo_mk3a2: GrenadeHand {
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
     };
     class rhs_ammo_m84: GrenadeHand {
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
     };
     class rhs_ammo_m7a3_cs: GrenadeHand {
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
     };
     class GrenadeHand_stone;
     class rhs_ammo_m69: GrenadeHand_stone {
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
     };
     class rhs_ammo_m67: GrenadeHand {
-        ace_frag_enabled = 1;
-        ace_frag_metal = 213;
-        ace_frag_charge = 185;
-        ace_frag_gurney_c = 2700;
-        ace_frag_gurney_k = "3/5";
-        ace_frag_classes[] = {"ACE_frag_medium_HD"};
-        ace_frag_skip = 0;
-        ace_frag_force = 1;
+        EGVAR(frag,enabled) = 1;
+        EGVAR(frag,metal) = 213;
+        EGVAR(frag,charge) = 185;
+        EGVAR(frag,gurney_c) = 2700;
+        EGVAR(frag,gurney_k) = "3/5";
+        EGVAR(frag,classes)[] = {"ACE_frag_medium_HD"};
+        EGVAR(frag,skip) = 0;
+        EGVAR(frag,force) = 1;
     };
     class rhs_ammo_M136_hedp_rocket: rhs_ammo_M136_rocket {
-        ace_frag_enabled = 1;
-        ace_frag_metal = 330;
-        ace_frag_charge = 280;
-        ace_frag_gurney_c = 2800;
-        ace_frag_gurney_k = "3/5";
-        ace_frag_classes[] = {"ACE_frag_medium_HD"};
-        ace_frag_skip = 0;
-        ace_frag_force = 1;
+        EGVAR(frag,enabled) = 1;
+        EGVAR(frag,metal) = 330;
+        EGVAR(frag,charge) = 280;
+        EGVAR(frag,gurney_c) = 2800;
+        EGVAR(frag,gurney_k) = "3/5";
+        EGVAR(frag,classes)[] = {"ACE_frag_medium_HD"};
+        EGVAR(frag,skip) = 0;
+        EGVAR(frag,force) = 1;
         EGVAR(vehicle_damage,incendiary) = 0.8;
     };
     class rhs_ammo_m72a7_rocket: rhs_ammo_M136_hedp_rocket {
         EGVAR(vehicle_damage,incendiary) = 1.0;
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
     };
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;
-    };
-
-    // ACE Explosives
-    class PipeBombBase;
-    class rhsusf_m112_ammo: PipeBombBase {
-        ace_explosives_defuseObjectPosition[] = {0.055, 0, 0.038};
-    };
-
-    class rhsusf_m112x4_ammo: PipeBombBase {
-        ace_explosives_defuseObjectPosition[] = {0.055, -0.025, 0.102};
-    };
-
-    class MineBase;
-    class rhsusf_mine_m19_ammo: MineBase {
-        ace_explosives_defuseObjectPosition[] = {0, 0.02, 0.046};
-    };
-
-    class rhsusf_mine_m14_ammo: MineBase {
-        ace_explosives_defuseObjectPosition[] = {-0.02, -0.015, 0.02};
-    };
-
-    class APERSMine_Range_Ammo;
-    class rhsusf_mine_m49a1_3m_ammo: APERSMine_Range_Ammo {
-        ace_explosives_defuseObjectPosition[] = {0, 0.016, 0.296};
     };
 };
