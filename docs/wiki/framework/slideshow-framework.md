@@ -68,12 +68,12 @@ _Note: Set Name argument added in 3.9.1._
  * Needs to be run on all machines
  *
  * Arguments:
- * 0: Position <ARRAY>
- * 1: Scale (1.0 fits entire map in x-dimension) <SCALAR>
- * 2: Markers [_pos, _text, _icon, _color] <ARRAY>
- * 3: MapType (0: Normal, 1: Topographic, 2: Satelite) or any custom class (even mission config) <SCALAR><STRING>
- * 4: Code to run on init (passed [_map, _display, _displayID]) <CODE>
- * 5: Resolution <SCALAR>
+ * 0: Position <ARRAY> (default: center of map)
+ * 1: Scale (1.0 fits entire map in x-dimension) <SCALAR> (default: 1.25)
+ * 2: Markers (each _x = [_pos, _text, _icon, _color]) <ARRAY> (default: [])
+ * 3: MapType (0: Normal, 1: Topographic, 2: Satelite) or any custom class (even mission config) <SCALAR><STRING> (default: 0)
+ * 4: Code to run on init (passed [_map, _display, _displayID]) <CODE> (default: {})
+ * 5: Resolution <SCALAR> (default: 4096)
 ```
 ### 2.2.1 Map Slideshow Example
 ```sqf

@@ -4,7 +4,8 @@
  * Initilizaes the map texture display
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Display <DISPLAY> (default: displayNull)
+ * 1: Disply ID <STRING> (default: "")
  *
  * Return Value:
  * None
@@ -15,18 +16,27 @@
  * Public: No
  */
 
-params ["_display"];
-private _displayID = displayUniqueName _display;
-TRACE_2("",_display,_displayID);
+params [["_display", displayNull], ["_displayID", ""]];
+if (_displayID == "") then { _displayID = displayUniqueName _display; };
+if (isNull _display) then { _display = findDisplay _displayID; };
+TRACE_2("mapImage_init",_display,_displayID);
 
-// seems like display can sometimes not exist even though it does???
-// it won't be updated correctly, seems to depend on resolution???
-if (isNull findDisplay _displayID) then { WARNING_1("problem with texture %1",_displayID); };
+// seems like display can sometimes not exist even though it does
+// it won't be updated correctly, seems to depend on resolution, seems to be fixed mostly by the 2nd update run
+if (isNull findDisplay _displayID) then { WARNING_1("possible problem with texture %1",_displayID); };
 
-(GVAR(mapData) get displayUniqueName _display) params ["_posCenter", "_scale", "_markers", "_mapType", "_userCode"];
+// make sure data exists in hash, there can be a race if server broadcasts texture before client can finish init.sqf
+if (isNil QGVAR(mapData) || {!(_displayID in GVAR(mapData))}) exitWith {
+    WARNING_1("texture %1 has no data in hash",_displayID);
+    if (!isNull (param [0, displayNull])) then { // not a retry
+        [FUNC(mapImage_init), [displayNull, _displayID], 5] call CBA_fnc_waitAndExecute;
+    };
+};
+
+(GVAR(mapData) get _displayID) params ["_posCenter", "_scale", "_markers", "_mapType", "_userCode"];
 TRACE_4("data",_posCenter,_scale,count _markers,_mapType);
 
-private _map = _display ctrlCreate [_mapType, 1];
+private _map = _display ctrlCreate [_mapType, -1];
 _map ctrlSetPosition [0, 0, 1, 1];
 _map ctrlCommit 0;
 _map ctrlMapSetPosition [];
@@ -49,8 +59,8 @@ _map ctrlAddEventHandler ["draw", {
 private _update = {
     private _display = findDisplay _this;
     if (isNull _display) exitWith {};
-    systemChat format ["updating %1", _this];
+    TRACE_2("updating",_display,displayUniqueName _display);
     displayUpdate _display;
 };
 [_update, _displayID] call CBA_fnc_execNextFrame; // update after a frame so the map anim has time to take effect
-[_update, _displayID, 3] call CBA_fnc_waitAndExecute; // update a sec later so textures hopefully have time to load
+[_update, _displayID, 2] call CBA_fnc_waitAndExecute; // update a bit later so textures hopefully have time to load
