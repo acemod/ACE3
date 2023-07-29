@@ -7,3 +7,5 @@ if (hasInterface) then {
 if (isServer) then {
     [QGVAR(destroyFence), {_this call FUNC(destroyFence)}] call CBA_fnc_addEventHandler;
 };
+
+GVAR(possibleWirecutters) = call (uiNamespace getVariable [QGVAR(possibleWirecutters), {[]}]);

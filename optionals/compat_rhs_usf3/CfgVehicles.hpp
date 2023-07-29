@@ -198,31 +198,25 @@ class CfgVehicles {
     };
     class rhsusf_M1078A1P2_B_M2_fmtv_usarmy;
     class rhsusf_M1078A1R_SOV_M2_D_fmtv_socom: rhsusf_M1078A1P2_B_M2_fmtv_usarmy {
-        transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 800;
         transportFuel = 0;
         EGVAR(refuel,hooks)[] = {{1.1,0.9,-1.2}};
         EGVAR(refuel,fuelCargo) = 900; // 45 jerrycans
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
     };
 
     class rhsusf_HEMTT_A4_base: Truck_01_base_F {};
     class rhsusf_M977A4_usarmy_wd: rhsusf_HEMTT_A4_base {};
     class rhsusf_M977A4_AMMO_usarmy_wd: rhsusf_M977A4_usarmy_wd {
-        transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class rhsusf_M977A4_BKIT_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
-        transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
-        transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
@@ -236,21 +230,6 @@ class CfgVehicles {
         transportFuel = 0;
         EGVAR(refuel,hooks)[] = {{-0.44,-4.87,0}, {0.5,-4.87,0}};
         EGVAR(refuel,fuelCargo) = 10000;
-    };
-
-    class rhsusf_M977A4_REPAIR_usarmy_wd: rhsusf_M977A4_usarmy_wd {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
-
-    class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
-
-    class rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
     };
 
     class APC_Tracked_02_base_F: Tank_F {};
@@ -268,7 +247,6 @@ class CfgVehicles {
 
     class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
     class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
-        transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
