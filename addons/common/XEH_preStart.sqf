@@ -8,3 +8,10 @@ if (isFilePatchingEnabled) then {
         INFO_2("%1 not loaded because %2",configName _x, getText _x);
     } forEach _notLoaded;
 };
+
+// These functions are used for the ace arsenal, one of which are called in preStart (ace_arsenal_fnc_scanConfig)
+// Cache for FUNC(getAddon)
+uiNamespace setVariable [QGVAR(addonCache), createHashMap];
+
+// Cache for FUNC(getConfigName)
+uiNamespace setVariable [QGVAR(configNames), createHashMap];

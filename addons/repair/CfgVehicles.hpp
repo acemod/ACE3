@@ -414,11 +414,6 @@ class CfgVehicles {
         };
     };
 
-    class Helicopter_Base_H;
-    class Heli_Transport_04_base_F: Helicopter_Base_H {
-        GVAR(hitpointGroups)[] = { {"HitEngine", {"HitEngine1", "HitEngine2"}} };
-    };
-
     class Heli_Transport_02_base_F;
     class I_Heli_Transport_02_F: Heli_Transport_02_base_F {
         GVAR(hitpointPositions)[] = {{"HitVRotor", {-1,-9.4,1.8}}, {"HitHRotor", {0,1.8,1.3}}};
