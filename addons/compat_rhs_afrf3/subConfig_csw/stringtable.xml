@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Compat_RHS_AFRF3">
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG17m_30_displayName">
+    <Package name="Compat_RHS_AFRF3_CSW">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_VOG17m_30_displayName">
             <English>[CSW] VOG-17M</English>
             <Czech>[CSW] VOG-17M</Czech>
             <French>[CSW] VOG-17M</French>
@@ -15,7 +15,7 @@
             <Japanese>[CSW] VOG-17M</Japanese>
             <Chinesesimp>[班组] VOG-17M</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_VOG30_30_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_VOG30_30_displayName">
             <English>[CSW] VOG-30</English>
             <Czech>[CSW] VOG-30</Czech>
             <French>[CSW] VOG-30</French>
@@ -29,7 +29,7 @@
             <Japanese>[CSW] VOG-30</Japanese>
             <Chinesesimp>[班组] VOG-30</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_GPD30_30_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_GPD30_30_displayName">
             <English>[CSW] GPD-30</English>
             <Czech>[CSW] GPD-30</Czech>
             <French>[CSW] GPD-30</French>
@@ -43,7 +43,7 @@
             <Japanese>[CSW] GPD-30</Japanese>
             <Chinesesimp>[班组] GPD-30</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131M_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M131M_displayName">
             <English>[CSW] ATGM 9M131M</English>
             <Czech>[CSW] ATGM 9M131M</Czech>
             <French>[CSW] ATGM 9M131M</French>
@@ -57,7 +57,7 @@
             <Japanese>[CSW] ATGM 9M131M</Japanese>
             <Chinesesimp>[班组] 9M131M 反坦克导弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M131F_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M131F_displayName">
             <English>[CSW] ATGM 9M131F</English>
             <Czech>[CSW] ATGM 9M131F</Czech>
             <French>[CSW] ATGM 9M131F</French>
@@ -71,7 +71,7 @@
             <Japanese>[CSW] ATGM 9M131F</Japanese>
             <Chinesesimp>[班组] 9M131F 反坦克导弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133F_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133F_displayName">
             <English>[CSW] ATGM 9M133F</English>
             <Czech>[CSW] ATGM 9M133F</Czech>
             <French>[CSW] ATGM 9M133F</French>
@@ -85,7 +85,7 @@
             <Japanese>[CSW] ATGM 9M133F</Japanese>
             <Chinesesimp>[班组] 9M133F 反坦克导弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133_displayName">
             <English>[CSW] ATGM 9M133</English>
             <Czech>[CSW] ATGM 9M133</Czech>
             <French>[CSW] ATGM 9M133</French>
@@ -99,7 +99,7 @@
             <Japanese>[CSW] ATGM 9M133</Japanese>
             <Chinesesimp>[班组] 9M133 反坦克导弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M1331_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M1331_displayName">
             <English>[CSW] ATGM 9M133-1</English>
             <Czech>[CSW] ATGM 9M133-1</Czech>
             <French>[CSW] ATGM 9M133-1</French>
@@ -113,7 +113,7 @@
             <Japanese>[CSW] ATGM 9M133-1</Japanese>
             <Chinesesimp>[班组] 9M133-1 反坦克导弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_9M133M2_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133M2_displayName">
             <English>[CSW] ATGM 9M133M2</English>
             <Czech>[CSW] ATGM 9M133M2</Czech>
             <French>[CSW] ATGM 9M133M2</French>
@@ -127,7 +127,7 @@
             <Japanese>[CSW] ATGM 9M133M2</Japanese>
             <Chinesesimp>[班组] 9M133M2 反坦克导弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9V_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9V_displayName">
             <English>[CSW] HEAT PG-9V</English>
             <Czech>[CSW] HEAT PG-9V</Czech>
             <French>[CSW] HEAT PG-9V</French>
@@ -141,7 +141,7 @@
             <Japanese>[CSW] HEAT PG-9V</Japanese>
             <Chinesesimp>[班组] PG-9V 破甲弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9N_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9N_displayName">
             <English>[CSW] HEAT PG-9N</English>
             <Czech>[CSW] HEAT PG-9N</Czech>
             <French>[CSW] HEAT PG-9N</French>
@@ -155,7 +155,7 @@
             <Japanese>[CSW] HEAT PG-9N</Japanese>
             <Chinesesimp>[班组] PG-9N 破甲弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_PG9VNT_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9VNT_displayName">
             <English>[CSW] HEAT PG-9VNT</English>
             <Czech>[CSW] HEAT PG-9VNT</Czech>
             <French>[CSW] HEAT PG-9VNT</French>
@@ -169,7 +169,7 @@
             <Japanese>[CSW] HEAT PG-9VNT</Japanese>
             <Chinesesimp>[班组] PG-9VN 破甲弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9V_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_OG9V_displayName">
             <English>[CSW] HE-FRAG OG-9V</English>
             <Czech>[CSW] HE-FRAG OG-9V</Czech>
             <French>[CSW] HE-FRAG OG-9V</French>
@@ -183,7 +183,7 @@
             <Japanese>[CSW] HE-FRAG OG-9V</Japanese>
             <Chinesesimp>[班组] OG-9V 高爆破片弹</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_RHS_AFRF3_mag_OG9VM_displayName">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_OG9VM_displayName">
             <English>[CSW] HE-FRAG OG-9VM</English>
             <Czech>[CSW] HE-FRAG OG-9VM</Czech>
             <French>[CSW] HE-FRAG OG-9VM</French>

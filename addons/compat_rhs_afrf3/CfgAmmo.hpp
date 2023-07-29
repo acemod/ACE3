@@ -154,24 +154,24 @@ class CfgAmmo {
 
     class GrenadeHand;
     class rhs_ammo_rgd5: GrenadeHand {
-        ace_frag_enabled = 1;
-        ace_frag_metal = 200;
-        ace_frag_charge = 110;
-        ace_frag_gurney_c = 2440;
-        ace_frag_gurney_k = "3/5";
-        ace_frag_classes[] = {"ACE_frag_small_HD"};
-        ace_frag_skip = 0;
-        ace_frag_force = 1;
+        EGVAR(frag,enabled) = 1;
+        EGVAR(frag,metal) = 200;
+        EGVAR(frag,charge) = 110;
+        EGVAR(frag,gurney_c) = 2440;
+        EGVAR(frag,gurney_k) = "3/5";
+        EGVAR(frag,classes)[] = {"ACE_frag_small_HD"};
+        EGVAR(frag,skip) = 0;
+        EGVAR(frag,force) = 1;
     };
     class rhs_ammo_rgn: rhs_ammo_rgd5 {
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
     };
     class rhs_ammo_fakel: GrenadeHand {
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
     };
     class rhs_ammo_fakels: rhs_ammo_fakel {};
     class rhs_ammo_zarya2: rhs_ammo_fakels {};
@@ -182,91 +182,44 @@ class CfgAmmo {
     class rhs_rpg26_rocket: R_PG32V_F {};
     class rhs_rpg7v2_pg7vl: rhs_rpg26_rocket {};
     class rhs_rpg7v2_og7v: rhs_rpg7v2_pg7vl {
-        ace_frag_enabled = 1;
-        ace_frag_metal = 400;
-        ace_frag_charge = 210;
-        ace_frag_gurney_c = 2800;
-        ace_frag_gurney_k = "3/5";
-        ace_frag_classes[] = {"ACE_frag_medium_HD"};
-        ace_frag_skip = 0;
-        ace_frag_force = 1;
+        EGVAR(frag,enabled) = 1;
+        EGVAR(frag,metal) = 400;
+        EGVAR(frag,charge) = 210;
+        EGVAR(frag,gurney_c) = 2800;
+        EGVAR(frag,gurney_k) = "3/5";
+        EGVAR(frag,classes)[] = {"ACE_frag_medium_HD"};
+        EGVAR(frag,skip) = 0;
+        EGVAR(frag,force) = 1;
         EGVAR(vehicle_damage,incendiary) = 0.1;
     };
     class rhs_rpg7v2_tbg7v: rhs_rpg7v2_pg7vl {
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
         EGVAR(vehicle_damage,incendiary) = 0.7;
     };
     class rhs_rshg2_rocket: rhs_rpg7v2_tbg7v {
-        ace_frag_enabled = 0;
-        ace_frag_skip = 1;
-        ace_frag_force = 0;
+        EGVAR(frag,enabled) = 0;
+        EGVAR(frag,skip) = 1;
+        EGVAR(frag,force) = 0;
     };
 
     class G_40mm_HE;
     class rhs_g_vog25: G_40mm_HE {};
     class rhs_g_vg40tb: rhs_g_vog25 { //Thermobaric
-        ace_frag_force = 0;
+        EGVAR(frag,force) = 0;
     };
     class rhs_g_vg40sz: rhs_g_vog25 { //Flashbang
-        ace_frag_force = 0;
+        EGVAR(frag,force) = 0;
     };
     class rhs_g_gdm40: rhs_g_vog25 { //Smoke
-        ace_frag_force = 0;
+        EGVAR(frag,force) = 0;
     };
     class rhs_g_vg40md_white: rhs_g_vog25 { //Smoke
-        ace_frag_force = 0;
+        EGVAR(frag,force) = 0;
     };
 
-    // ACE Explosives
-    class MineBase;
-    class rhs_mine_tm62m_ammo: MineBase {
-        ace_explosives_defuseObjectPosition[] = {-0.005, 0.025, 0.06};
-    };
 
-    class rhs_mine_pmn2_ammo: MineBase {
-        ace_explosives_defuseObjectPosition[] = {0, 0, 0.012};
-    };
-
-    class ATMine_Range_Ammo;
-    class rhs_ammo_ptm1: ATMine_Range_Ammo {
-        ace_explosives_defuseObjectPosition[] = {0, 0.17, 0.02};
-    };
-
-    class APERSMine_Range_Ammo;
-    class rhs_ammo_pfm1: APERSMine_Range_Ammo {
-        ace_explosives_defuseObjectPosition[] = {0.015, -0.018, 0};
-    };
-
-    class PipeBombBase;
-    class rhs_ec75_ammo: PipeBombBase {
-        ace_explosives_defuseObjectPosition[] = {0, 0.04, 0.02};
-    };
-
-    class rhs_ec200_ammo: rhs_ec75_ammo {
-        ace_explosives_defuseObjectPosition[] = {0, 0.05, 0.008};
-    };
-
-    class rhs_ec400_ammo: rhs_ec75_ammo {
-        ace_explosives_defuseObjectPosition[] = {0, 0.03, 0.02};
-    };
-
-    class rhs_mine_msk40p_white_ammo: APERSMine_Range_Ammo {
-        ace_explosives_defuseObjectPosition[] = {0.025, 0, 0.4};
-    };
-
-    class rhs_mine_sm320_white_ammo: rhs_mine_msk40p_white_ammo {
-        ace_explosives_defuseObjectPosition[] = {0.01, 0, 0.25};
-    };
-
-    class rhs_mine_ozm72_a_ammo: APERSMine_Range_Ammo {
-        ace_explosives_defuseObjectPosition[] = {0, -0.125, 0.11};
-    };
-
-    class rhs_mine_ozm72_c_ammo: rhs_mine_ozm72_a_ammo {
-        ace_explosives_defuseObjectPosition[] = {0, -0.015, 0.12};
-    };
     class Sh_125mm_APFSDS;
     class Sh_125mm_HE;
     class rhs_ammo_bm_base: Sh_125mm_APFSDS {
