@@ -5,7 +5,7 @@ class SPE_US_TNT_4pound_mag: SPE_Mine_Magazine {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(4LBTNT);
     useAction = 0;
     class ACE_Triggers {
-        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter","FireCord", "LIB_LadungPM"};
         class Timer {
             FuseTime = 0.5;
         };
@@ -23,7 +23,7 @@ class SPE_US_TNT_half_pound_mag: SPE_Mine_Magazine {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(halfLBTNT);
     useAction = 0;
     class ACE_Triggers {
-        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "FireCord", "LIB_LadungPM"};
         class Timer {
             FuseTime = 0.5;
         };
@@ -41,7 +41,7 @@ class SPE_US_Bangalore_mag: SPE_Mine_Magazine {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bangalore);
     useAction = 0;
     class ACE_Triggers {
-        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "FireCord", "LIB_LadungPM"};
         class Timer {
             FuseTime = 0.5;
         };
@@ -59,7 +59,7 @@ class SPE_Ladung_Small_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(smallLadung);
     useAction = 0;
     class ACE_Triggers {
-        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter",  "FireCord", "LIB_LadungPM"};
         class Timer {
             FuseTime = 0.5;
         };
@@ -77,7 +77,7 @@ class SPE_Ladung_Big_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bigLadung);
     useAction = 0;
     class ACE_Triggers {
-        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter",  "FireCord", "LIB_LadungPM"};
         class Timer {
             FuseTime = 0.5;
         };
