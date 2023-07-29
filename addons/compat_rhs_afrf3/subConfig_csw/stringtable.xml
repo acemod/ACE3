@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Compat_RHS_AFRF3_CSW">
+    <Package name="Compat_RHS_AFRF3">
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_VOG17m_30_displayName">
             <English>[CSW] VOG-17M</English>
             <Czech>[CSW] VOG-17M</Czech>
