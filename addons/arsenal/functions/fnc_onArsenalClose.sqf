@@ -121,11 +121,11 @@ GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
 GVAR(showStats) = nil;
-GVAR(statsPagesLeft) = nil;
-GVAR(statsPagesRight) = nil;
+GVAR(currentStatPage) = nil;
 GVAR(statsInfo) =  nil;
 
 GVAR(showActions) = nil;
+GVAR(currentActionPage) = nil;
 
 GVAR(center) = nil;
 GVAR(centerNotPlayer) = nil;

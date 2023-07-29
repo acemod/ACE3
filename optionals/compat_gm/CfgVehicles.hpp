@@ -173,11 +173,6 @@ class CfgVehicles {
         EGVAR(medical,medicClass) = 1;
     };
 
-    class gm_ural4320_repair_base: gm_ural4320_base {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
-
 
     // WEST
 
@@ -220,12 +215,6 @@ class CfgVehicles {
 
     class gm_fuchs_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 390;
-    };
-
-    class gm_fuchsa0_base;
-    class gm_fuchsa0_engineer_base: gm_fuchsa0_base {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
     };
 
     class gm_luchs_base: gm_wheeled_APC_base {
@@ -315,11 +304,6 @@ class CfgVehicles {
     };
 
     class gm_m113a1dk_base;
-    class gm_m113a1dk_engineer_base: gm_m113a1dk_base {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
-
     class gm_m113a1dk_medic_base: gm_m113a1dk_base {
         EGVAR(medical,medicClass) = 1;
     };

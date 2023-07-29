@@ -15,7 +15,11 @@
  * Public: No
  */
 
-if (!hasInterface) exitWith {};
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addRepairActions), _this];
+};
+
+if !(hasInterface && {GVAR(enabled)}) exitWith {};
 
 params ["_vehicle"];
 private _type = typeOf _vehicle;
