@@ -41,6 +41,10 @@ class CfgWeapons {
         ACE_barrelTwist = 160.02;
         ACE_barrelLength = 210.82;
     };
+    class rhs_weap_asval: rhs_weap_ak74m {
+        ACE_barrelTwist = 210.82;
+        ACE_barrelLength = 200.66;
+    };
     class rhs_weap_svd: rhs_weap_ak74m {
         ACE_RailHeightAboveBore = -0.617396;
         ACE_barrelTwist = 238.76;
@@ -75,7 +79,7 @@ class CfgWeapons {
         ACE_barrelLength = 657.86;
     };
     class rhs_weap_pkm: rhs_weap_pkp {
-        ACE_Overheating_allowSwapBarrel = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 645.16;
     };
@@ -180,6 +184,18 @@ class CfgWeapons {
         HEARING_PROTECTION_EARMUFF
     };
 
+    class rhs_6b47;
+    class rhs_6b47_6m2: rhs_6b47 {
+        HEARING_PROTECTION_PELTOR
+    };
+    class rhs_6b47_6m2_1: rhs_6b47 {
+        HEARING_PROTECTION_PELTOR
+    };
+
+    class rhs_6m2: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    };
+
     class rhs_weap_d81;
     class rhs_weap_2a70: rhs_weap_d81 { // "Low pressure" 100mm cannon
         ace_overpressure_range = 15;
@@ -200,6 +216,7 @@ class CfgWeapons {
     CREATE_CSW_PROXY(rhs_weap_9K115_2_launcher);
 
     class GVAR(2b14_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 20;
@@ -225,6 +242,7 @@ class CfgWeapons {
     };
 
     class GVAR(nsv_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -248,6 +266,7 @@ class CfgWeapons {
     };
 
     class GVAR(kord_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -272,6 +291,7 @@ class CfgWeapons {
     };
 
     class GVAR(ags30_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -295,6 +315,7 @@ class CfgWeapons {
     };
 
     class GVAR(spg9_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "weapon";
             deployTime = 4;
@@ -328,6 +349,7 @@ class CfgWeapons {
     };
 
     class GVAR(metis_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "mount";
             deployTime = 4;
@@ -349,6 +371,7 @@ class CfgWeapons {
     };
 
     class GVAR(kornet_carry): Launcher_Base_F {
+        dlc = "ace";
         class ACE_CSW {
             type = "mount";
             deployTime = 4;

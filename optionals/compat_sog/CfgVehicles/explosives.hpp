@@ -3,6 +3,7 @@ class EGVAR(explosives,Place): Items_base_F {
     class ACE_Actions {
         class ACE_MainActions;
     };
+    class EventHandlers;
 };
 
 // Claymore
@@ -138,5 +139,119 @@ class EXPLOSIVES_PLACE(punji_02): EGVAR(explosives,Place) {
 // Punji whip
 class EXPLOSIVES_PLACE(punji_03): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_PUNJI_01_MAG_DN";
-    model = "\vn\weapons_f_vietnam\mines\punji\vn_mine_punji_03_mag";
+    model = "\vn\weapons_f_vietnam\mines\punji\vn_mine_punji_03";
+
+    class EventHandlers: EventHandlers {
+        class ADDON {
+            init = QUOTE(_this call FUNC(handlePunjiTrapPlace));
+        };
+    };
+};
+
+// Punji door-way
+class EXPLOSIVES_PLACE(punji_04): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_PUNJI_04_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\punji_02\vn_mine_punji_04_mag";
+};
+
+// Punji side whip
+class EXPLOSIVES_PLACE(punji_05): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_PUNJI_05_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\punji_02\vn_mine_punji_05_mag";
+};
+
+// Bike mine
+class EXPLOSIVES_PLACE(bike): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_BIKE_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\bike\vn_mine_bike_mag";
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "[0.085, 0.185, 0.54]";
+        };
+    };
+
+    class EventHandlers: EventHandlers {
+        class ADDON {
+            init = QUOTE(_this call FUNC(handleBikeMinePlace));
+        };
+    };
+};
+
+// Cartridge mine
+class EXPLOSIVES_PLACE(cartridge): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_CARTRIDGE_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\cartridge\vn_mine_cartridge_mag";
+};
+
+// Lighter mine
+class EXPLOSIVES_PLACE(lighter): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_LIGHTER_MAG_DN";
+    model = "\vn\characters_f_vietnam\BLUFOR\headgear\items\vn_b_item_lighter_01";
+};
+
+// Pot mine
+class EXPLOSIVES_PLACE(pot): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_POT_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\pot\vn_mine_pot_mag";
+};
+
+// Jerrycan mine
+class EXPLOSIVES_PLACE(jerrycan): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_JERRYCAN_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\jerrycan\vn_mine_jerrycan_mag";
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "[0, 0, 0.15]";
+        };
+    };
+};
+
+// Mortar shell on a stick
+class EXPLOSIVES_PLACE(mortar_range): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_MORTAR_RANGE_MAG_DN";
+    model = "vn\static_f_vietnam\mortar_type53\vn_shell_82mm_o832d_he_mag";
+};
+
+// Limpet mine USA
+class EXPLOSIVES_PLACE(limpet_01): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_LIMPET_01_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\limpet_01\vn_mine_limpet_01_mag";
+};
+
+// Limpet mine RUS
+class EXPLOSIVES_PLACE(limpet_02): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_LIMPET_02_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\limpet_02\vn_mine_limpet_02_mag";
+};
+
+// Chicom NO8 mine
+class EXPLOSIVES_PLACE(chicom_no8): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_CHICOM_NO8_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\no8\vn_mine_chicom_no8_mag";
+};
+
+// Dh10 mine
+class EXPLOSIVES_PLACE(dh10): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_DH10_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\dh10\vn_mine_dh10_mag";
+};
+
+// Grenade board mine
+class EXPLOSIVES_PLACE(gboard): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_TRIPWIRE_RGD5_04_DN";
+    model = "vn\weapons_f_vietnam_03\mines\gboard\vn_mine_gboard_range_mag";
+};
+
+// Satchel charge
+class EXPLOSIVES_PLACE(satchelcharge_02): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_SATCHELCHARGE_02_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\satchelcharge_02\vn_mine_satchelcharge_02_mag";
+};
+
+// Bangalore mine
+class EXPLOSIVES_PLACE(bangalore): EGVAR(explosives,Place) {
+    displayName = "$STR_VN_MINE_BANGALORE_MAG_DN";
+    model = "vn\weapons_f_vietnam_03\mines\bangalore\vn_mine_bangalore_mag";
 };

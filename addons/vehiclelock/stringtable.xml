@@ -345,7 +345,7 @@
             <Portuguese>Durabilidade padrão da chave micha</Portuguese>
             <French>Difficulté par défaut du crochetage</French>
             <Hungarian>Alapértelmezett zártörő-erősség</Hungarian>
-            <Russian>Сила отмычки по-умолчанию</Russian>
+            <Russian>Сила отмычки по умолчанию</Russian>
             <Italian>Durabilità Default del Grimaldello</Italian>
             <Japanese>ピッキング ツールの能力設定</Japanese>
             <Korean>기본 해정도구 설정</Korean>
@@ -362,7 +362,7 @@
             <Portuguese>Tempo padrão para forçar a fechadura (em segundos). Padrão: 10</Portuguese>
             <French>Temps par défaut requis pour crocheter une serrure. Valeur par défaut : 10 secondes.</French>
             <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
-            <Russian>Время для взлома замка отмычкой (в секундах). По-умолчанию: 10</Russian>
+            <Russian>Время для взлома замка отмычкой (в секундах). По умолчанию: 10</Russian>
             <Italian>Tempo Default richiesto per forzare serrature (in secondi). Default: 10</Italian>
             <Japanese>ピッキング ツールを使った作業時間の標準設定。(秒) 標準: 10</Japanese>
             <Korean>해정을 위해 들이는 기본시간입니다(초 단위). 기본설정: 10</Korean>

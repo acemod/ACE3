@@ -156,13 +156,8 @@ class CfgVehicles {
         EGVAR(refuel,hooks)[] = {{-0.05,-3.6,-0.45}};
         EGVAR(refuel,fuelCargo) = 10000;
     };
-    class RHS_Ural_Repair_MSV_01: RHS_Ural_Support_MSV_Base_01 {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
     class RHS_Ural_Ammo_Base: RHS_Ural_Base {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class rhs_kraz255b1_base;
@@ -176,21 +171,14 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 210;
     };
 
-    class rhs_gaz66_vmf: rhs_truck {};
-    class rhs_gaz66_repair_base: rhs_gaz66_vmf {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
-
+    class rhs_gaz66_vmf;
     class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class rhs_kamaz5350;
     class rhs_kamaz5350_ammo_base: rhs_kamaz5350 {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class MRAP_02_base_F;
@@ -356,6 +344,36 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.2;
         EGVAR(vehicle_damage,engineFireProb) = 0.8;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        class ace_viewports {
+            class view_0 {
+                camLocation[] = {1.02881, -0.923828, -0.647231};
+                screenLocation[] = {1.12881, -0.653828, -1.08223};
+                camAttach = 50;
+                maxDistance = 0.5;
+                roles[]={"cargo"};
+            };
+            class view_1 {
+                camLocation[] = {1.01709, -1.55664, -0.647231};
+                screenLocation[] = {1.10709, -1.42664, -1.14223};
+                camAttach = 82;
+                maxDistance = 0.5;
+                roles[]={"cargo"};
+            };
+            class view_2 {
+                camLocation[] = {-0.871094, -1.55762, -0.647231};
+                screenLocation[] = {-0.981094, -1.42762, -1.13223};
+                camAttach = 285;
+                maxDistance = 0.5;
+                roles[]={"cargo"};
+            };
+            class view_3 {
+                camLocation[] = {-1.00879, -0.939941, -0.650259};
+                screenLocation[] = {-0.97879, -0.689941, -1.09526};
+                camAttach = 310;
+                maxDistance = 0.5;
+                roles[]={"cargo"};
+            };
+        };
     };
     class rhs_a3spruttank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 400;
@@ -429,7 +447,7 @@ class CfgVehicles {
             "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint",
             "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
             "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint", "era_36_hitpoint",
-            "era_37_hitpoint",
+            "era_37_hitpoint"
         };
         EGVAR(vehicle_damage,slatHitpoints)[] = {
             "SLAT_38_hitpoint", "SLAT_39_hitpoint", "SLAT_40_hitpoint", "SLAT_41_hitpoint"
@@ -445,7 +463,7 @@ class CfgVehicles {
             "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint",
             "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
             "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint", "era_36_hitpoint",
-            "era_37_hitpoint",
+            "era_37_hitpoint"
         };
     };
 

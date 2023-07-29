@@ -45,7 +45,7 @@ private _onFinish = {
                 _bestAmmoToSend = _xAmmo;
             };
         };
-    } forEach (magazinesAmmo _magSource);
+    } forEach (if (_magSource isKindOf "CAManBase") then {magazinesAmmo _magSource} else {magazinesAmmoCargo _magSource});
 
     if (_bestAmmoToSend == -1) exitWith {ERROR_2("No ammo [%1 - %2]?",_xMag,_bestAmmoToSend);};
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
@@ -57,11 +57,11 @@ private _onFinish = {
 
 
 [
-TIME_PROGRESSBAR(_timeToLoad),
-[_vehicle, _turret, _carryMag, _magSource],
-_onFinish,
-{TRACE_1("load progressBar fail",_this);},
-_displayName,
-{((_this select 0) call FUNC(reload_canLoadMagazine)) select 0},
-["isNotInside"]
+    TIME_PROGRESSBAR(_timeToLoad),
+    [_vehicle, _turret, _carryMag, _magSource],
+    _onFinish,
+    {TRACE_1("load progressBar fail",_this);},
+    _displayName,
+    {((_this select 0) call FUNC(reload_canLoadMagazine)) select 0},
+    ["isNotInside"]
 ] call EFUNC(common,progressBar);

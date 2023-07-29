@@ -8,6 +8,7 @@ class CfgWeapons {
         displayName = CSTRING(rangetable_displayName);
         descriptionShort = CSTRING(rangetable_description);
         picture = QPATHTOF(UI\icon_rangeTable.paa);
+        ACE_isTool = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0.5;
         };

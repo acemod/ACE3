@@ -64,26 +64,26 @@ class Kestrel4500_Display {
             SizeEX=0.025;
             idc=74000;
             style=48;
-            x=safezoneX;
+            x="safezoneX";
             y = DIALOG_SAFE_Y(0);
-            w=1.024;
-            h=1.024*4/3;
+            w="1.024";
+            h="1.024*4/3";
             colorBackground[]={1,1,1,1};
             colorText[]={1,1,1,1};
-            text=PATHTOF(UI\Kestrel4500.paa);
+            text=QPATHTOF(UI\Kestrel4500.paa);
         };
         class POWER: Kestrel4500_RscButton {
             idc=-1;
-            x=safezoneX+0.385;
+            x="safezoneX+0.385";
             y = DIALOG_SAFE_Y(1.125);
-            w=0.042;
-            h=0.042*4/3;
+            w="0.042";
+            h="0.042*4/3";
             action=QUOTE(7 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_exit_button_click'";
         };
         class ENTER: POWER {
             idc=-1;
-            x=safezoneX+0.46;
+            x="safezoneX+0.46";
             y = DIALOG_SAFE_Y(1.0);
             w=0.1;
             action=QUOTE(0 call FUNC(buttonPressed));
@@ -91,7 +91,7 @@ class Kestrel4500_Display {
         };
         class TOP: Kestrel4500_RscButton {
             idc=-1;
-            x=safezoneX+0.46;
+            x="safezoneX+0.46";
             y = DIALOG_SAFE_Y(0.93);
             w=0.1;
             h=0.03;
@@ -106,7 +106,7 @@ class Kestrel4500_Display {
         };
         class LEFT: Kestrel4500_RscButton {
             idc=-1;
-            x=safezoneX+0.4;
+            x="safezoneX+0.4";
             y = DIALOG_SAFE_Y(0.97);
             w=0.046;
             h=0.11;
@@ -115,27 +115,27 @@ class Kestrel4500_Display {
         };
         class RIGHT: LEFT {
             idc=-1;
-            x=safezoneX+0.58;
+            x="safezoneX+0.58";
             action=QUOTE(4 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_right_button_click'";
         };
         class MEMORY: Kestrel4500_RscButton {
             idc=-1;
-            x=safezoneX+0.395;
+            x="safezoneX+0.395";
             y = DIALOG_SAFE_Y(0.87);
             w=0.05;
-            h=0.045*4/3;
+            h="0.045*4/3";
             action=QUOTE(5 call FUNC(buttonPressed));
         };
         class BACKLIGHT: MEMORY {
             idc=-1;
-            x=safezoneX+0.585;
+            x="safezoneX+0.585";
             action=QUOTE(6 call FUNC(buttonPressed));
         };
 
         class TEXT_TOP: Kestrel4500_RscText {
             idc=74100;
-            x=safezoneX+0.40;
+            x="safezoneX+0.40";
             y = DIALOG_SAFE_Y(0.58);
             w=0.22;
             h=0.04;
@@ -234,30 +234,30 @@ class RscTitles {
                 moving=0;
                 type=0;
                 font="TahomaB";
-                SizeEX=0.025*0.75;
+                SizeEX=".025*0.75";
                 style=48;
-                x=safezoneX+0.14;
+                x="safezoneX+0.14";
                 y = DISPLAY_SAFE_Y(0);
-                w=0.512*0.75;
-                h=1.024*4/3*0.75;
+                w="0.512*0.75";
+                h="1.024*4/3*0.75";
                 colorBackground[]={1,1,1,1};
                 colorText[]={1,1,1,1};
-                text=PATHTOF(UI\Kestrel4500_0.paa);
+                text=QPATHTOF(UI\Kestrel4500_0.paa);
             };
             class RscTextTop: Kestrel4500_RscText {
                 idc=75100;
-                x=safezoneX-0.05+0.40*0.75;
+                x="safezoneX-0.05+0.40*0.75";
                 y = DISPLAY_SAFE_Y(0.58*0.75);
-                w=0.22*0.75;
-                h=0.04*0.75;
-                SizeEx=0.04*0.75;
+                w="0.22*0.75";
+                h="0.04*0.75";
+                SizeEx="0.04*0.75";
                 text="";
             };
             class RscTextCenterBig: RscTextTop {
                 idc=75200;
                 y = DISPLAY_SAFE_Y(0.61*0.75);
-                h=0.10*0.75;
-                SizeEx=0.06*0.75;
+                h="0.10*0.75";
+                SizeEx="0.06*0.75";
                 text="";
             };
             class RscTextCenter: RscTextTop {
@@ -268,8 +268,8 @@ class RscTitles {
                 idc=75300;
                 y = DISPLAY_SAFE_Y(0.60*0.75);
                 style=ST_LEFT;
-                h=0.10*0.75;
-                SizeEx=0.05*0.75;
+                h="0.10*0.75";
+                SizeEx="0.05*0.75";
                 text="";
             };
             class RscTextCenterLine2Left: RscTextCenterLine1Left {
@@ -307,14 +307,14 @@ class RscTitles {
             class RscTextBottomBig: RscTextTop {
                 idc=75500;
                 y = DISPLAY_SAFE_Y(0.67*0.75);
-                h=0.10*0.75;
-                SizeEx=0.06*0.75;
+                h="0.10*0.75";
+                SizeEx="0.06*0.75";
                 text="";
             };
             class RscTextCenterLine1: RscTextTop {
                 idc=75600;
                 y = DISPLAY_SAFE_Y(0.58*0.75);
-                SizeEx=0.03*0.75;
+                SizeEx="0.03*0.75";
             };
             class RscTextCenterLine2: RscTextCenterLine1 {
                 idc=75601;

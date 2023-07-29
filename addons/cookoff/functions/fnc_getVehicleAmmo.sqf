@@ -29,6 +29,7 @@ private _totalAmmo = 0;
     _x params ["_mag", "_turret", "_count"];
     // if the turret is an FFV seat, it takes magazines from the soldier
     if (_count > 0) then {
+        if (_mag call FUNC(isMagazineFlare)) then {continue};
         private _ammo = getText (configFile >> "CfgMagazines" >> _mag >> "ammo");
         private _model = getText (configFile >> "CfgAmmo" >> _ammo >> "model");
         if (_model == "\A3\weapons_f\empty") exitWith {TRACE_3("skipping",_mag,_ammo,_model);};
@@ -41,6 +42,7 @@ private _totalAmmo = 0;
 {
     _x params ["_mag", "_count"];
     if (_count > 0) then {
+        if (_mag call FUNC(isMagazineFlare)) then {continue};
         _ammoToDetonate pushBack [_mag, _count];
         _totalAmmo = _totalAmmo + _count;
     };
