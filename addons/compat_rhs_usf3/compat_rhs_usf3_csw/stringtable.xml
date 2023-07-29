@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Compat_RHS_USF3">
+    <Package name="Compat_RHS_USF3_CSW">
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW_displayName">
             <English>[CSW] BGM-71A TOW</English>
             <Korean>[CSW] BGM-71A TOW</Korean>

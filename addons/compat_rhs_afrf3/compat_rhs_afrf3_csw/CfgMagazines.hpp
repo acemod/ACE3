@@ -110,7 +110,7 @@ class CfgMagazines {
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
         picture = "\A3\Weapons_F_Exp\Launchers\RPG7\Data\UI\icon_rocket_RPG7_CA.paa";
     };
-    class RHS_mag_VOD30_30;
+    class RHS_mag_VOG30_30;
     class GVAR(mag_VOG30_30): RHS_mag_VOG30_30 {
         scope = 2;
         displayName = CSTRING(mag_VOG30_30_displayName);
