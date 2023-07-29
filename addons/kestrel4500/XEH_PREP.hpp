@@ -7,7 +7,6 @@ PREP(displayKestrel);
 PREP(generateOutputData);
 PREP(measureWindSpeed);
 PREP(onCloseDialog);
-PREP(onCloseDisplay);
 PREP(restoreUserData);
 PREP(storeUserData);
 PREP(updateDisplay);

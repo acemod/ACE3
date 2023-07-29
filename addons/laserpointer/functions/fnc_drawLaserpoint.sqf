@@ -22,7 +22,7 @@ params ["_target", "_range", "_isGreen", "_brightness"];
 
 private _unit = ACE_player;
 
-private _p0 = AGLToASL (_target modelToWorldVisual (_target selectionPosition "righthand"));
+private _p0 = _target modelToWorldVisualWorld (_target selectionPosition "righthand");
 
 // Find a system of orthogonal reference vectors
 // _v1 points in the direction of the weapon
@@ -46,7 +46,7 @@ private _p1 = _p0 vectorAdd (_v1 vectorMultiply _range);
 
 private _pL = lineIntersectsSurfaces [_p0, _p1, _unit, vehicle _unit] select 0 select 0;
 
-// no intersection found, quit
+// no intersection found, quit (pointed to the sky or too far)
 if (isNil "_pL") exitWith {};
 
 private _distance = _p0 vectorDistance _pL;
@@ -72,12 +72,25 @@ drawLine3D [
 
 private _camPos = positionCameraToWorld [0,0,0.2];
 
-if (count ([_target, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
-if (count ([_unit, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
+// Check for blocking laser by player or external laser source (other player)
+private _blocked = false;
+if (_unit isEqualTo _target && {cameraView in ["INTERNAL","GUNNER"]}) then {
+    // Laser belongs to player: check VIEW LOD
+    // (it's less detailed & fallbacks to GEO if not present, but allows to draw laser mark behind bulletproof glass)
+    if (count ([_unit, "VIEW"] intersect [_camPos, _pL]) > 0) exitWith { _blocked = true; };
+} else {
+    // External laser: check FIRE GEO LOD (more detailed)
+    if (count ([_target, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith { _blocked = true; };
+    if (count ([_unit, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith { _blocked = true; };
+};
+
+// Exit due to LOS blocked by source/player
+if (_blocked) exitWith {};
 
 // Convert _camPos to ASL
 _camPos = AGLToASL _camPos;
 
+// Check for blocking by terrain or object
 if (terrainIntersectASL [_camPos, _pL2]) exitWith {};
 if (lineIntersects [_camPos, _pL2]) exitWith {};
 

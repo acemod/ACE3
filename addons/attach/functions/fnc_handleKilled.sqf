@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Handles when vehicle or man is killed. 
+ * Handles when vehicle or man is killed.
  * Note: Runs where unit is local.
  *
  * Arguments:

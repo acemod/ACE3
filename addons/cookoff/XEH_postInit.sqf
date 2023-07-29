@@ -1,72 +1,45 @@
 #include "script_component.hpp"
 
 [QGVAR(engineFire), FUNC(engineFire)] call CBA_fnc_addEventHandler;
-[QGVAR(cookOff), FUNC(cookOff)] call CBA_fnc_addEventHandler;
+[QGVAR(cookOff), {
+    params ["_vehicle"];
+    if (local _vehicle) then {
+        _this call FUNC(cookOff);
+    };
+}] call CBA_fnc_addEventHandler;
+[QGVAR(cookOffEffect), FUNC(cookOffEffect)] call CBA_fnc_addEventHandler;
+[QGVAR(smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOffBox), FUNC(cookOffBox)] call CBA_fnc_addEventHandler;
 
-GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
-
-// cookoff and burning engine
-["Tank", "init", {
+// handle cleaning up effects when vehicle is deleted mid-cookoff
+[QGVAR(addCleanupHandlers), {
     params ["_vehicle"];
-
-    private _typeOf = typeOf _vehicle;
-
-    if (isNil {GVAR(cacheTankDuplicates) getVariable _typeOf}) then {
-        private _hitpoints = (getAllHitPointsDamage _vehicle param [0, []]) apply {toLower _x};
-        private _duplicateHitpoints = [];
-
-        {
-            if ((_x != "") && {_x in (_hitpoints select [0,_forEachIndex])}) then {
-                _duplicateHitpoints pushBack _forEachIndex;
-            };
-        } forEach _hitpoints;
-
-        TRACE_2("dupes",_typeOf,_duplicateHitpoints);
-        GVAR(cacheTankDuplicates) setVariable [_typeOf, _duplicateHitpoints];
+    
+    // Don't add a new EH if cookoff is run multiple times
+    if ((_vehicle getVariable [QGVAR(deletedEH), -1]) == -1) then {
+        private _deletedEH = _vehicle addEventHandler ["Deleted", {
+            params ["_vehicle"];
+            
+            [QGVAR(cleanupEffects), [_vehicle]] call CBA_fnc_localEvent;
+        }];
+    
+        _vehicle setVariable [QGVAR(deletedEH), _deletedEH];
     };
+}] call CBA_fnc_addEventHandler;
 
-    _vehicle addEventHandler ["HandleDamage", {
-        ["tank", _this] call FUNC(handleDamage);
-    }];
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+[QGVAR(cleanupEffects), {
+    params ["_vehicle", ["_effects", []]];
 
-["Wheeled_APC_F", "init", {
-    params ["_vehicle"];
-
-    private _typeOf = typeOf _vehicle;
-
-    if (isNil {GVAR(cacheTankDuplicates) getVariable _typeOf}) then {
-        private _hitpoints = (getAllHitPointsDamage _vehicle param [0, []]) apply {toLower _x};
-        private _duplicateHitpoints = [];
-
-        {
-            if ((_x != "") && {_x in (_hitpoints select [0,_forEachIndex])}) then {
-                _duplicateHitpoints pushBack _forEachIndex;
-            };
-        } forEach _hitpoints;
-
-        TRACE_2("dupes",_typeOf,_duplicateHitpoints);
-        GVAR(cacheTankDuplicates) setVariable [_typeOf, _duplicateHitpoints];
+    _effects = _effects + (_vehicle getVariable [QGVAR(effects), []]);
+    if (_effects isNotEqualTo []) then {
+         { deleteVehicle _x } count _effects;
     };
-
-    _vehicle addEventHandler ["HandleDamage", {
-        ["tank", _this] call FUNC(handleDamage);
-    }];
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
-
-["Car", "init", {
-    params ["_vehicle"];
-
-    _vehicle addEventHandler ["HandleDamage", {
-        ["car", _this] call FUNC(handleDamage);
-    }];
-}, nil, ["Wheeled_APC_F"], true] call CBA_fnc_addClassEventHandler;
+}] call CBA_fnc_addEventHandler;
 
 ["ReammoBox_F", "init", {
     (_this select 0) addEventHandler ["HandleDamage", {
         if ((_this select 0) getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmobox)]) then {
-            ["box", _this] call FUNC(handleDamage);
+            _this call FUNC(handleDamageBox);
         };
     }];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
@@ -80,42 +53,8 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     ) then {
         if (GVAR(ammoCookoffDuration) == 0) exitWith {};
         ([_vehicle] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
-        [_vehicle, _mags, _total] call FUNC(detonateAmmunition);
+
+        private _delay = (random MAX_AMMO_DETONATION_START_DELAY) max MIN_AMMO_DETONATION_START_DELAY;
+        [FUNC(detonateAmmunition), [_vehicle, _mags, _total], _delay] call CBA_fnc_waitAndExecute;
     };
 }, nil, ["Man","StaticWeapon"]] call CBA_fnc_addClassEventHandler;
-
-// blow off turret effect
-["Tank", "killed", {
-    params ["_vehicle", "", "", "_useEffects"];
-    if (
-        _useEffects &&
-        _vehicle getVariable [QGVAR(enable), GVAR(enable)] in [1, 2, true]
-    ) then {
-        if (random 1 < 0.15) then {
-            _vehicle call FUNC(blowOffTurret);
-        };
-    };
-}] call CBA_fnc_addClassEventHandler;
-
-// event to add a turret to a curator if the vehicle already belonged to that curator
-if (isServer) then {
-    [QGVAR(addTurretToEditable), {
-        params ["_vehicle", "_turret"];
-
-        {
-            if (_vehicle in curatorEditableObjects _x) then {
-                _x addCuratorEditableObjects [[_turret], false];
-            };
-        } forEach allCurators;
-    }] call CBA_fnc_addEventHandler;
-};
-
-// init eject from destroyed vehicle
-{
-    [_x, "init", {
-        params ["_vehicle"];
-        if (!alive _vehicle) exitWith {};
-        TRACE_2("ejectIfDestroyed init",_vehicle,typeOf _vehicle);
-        _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectIfDestroyed)}];
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach EJECT_IF_DESTROYED_VEHICLES;

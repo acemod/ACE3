@@ -21,16 +21,16 @@ When using the ACE3 logo please do not stretch or skew it.
 
 ### 2.1 Black
 
-<img src="{{ site.baseurl }}/img/ace3-logo-black-small.png" height="30" />
+<img src="{{ site.baseurl }}/img/ace3-logo-black-small.webp" height="30" />
 
-* [JPG (white background)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg)
-* [PNG (transparent background)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.png)
-* [EPS (vector file)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.eps)
+* [JPG (white background)](https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg)
+* [PNG (transparent background)](https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.png)
+* [EPS (vector file)](https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.eps)
 
 ### 2.2 White
 
-<img src="{{ site.baseurl }}/img/ace3-logo-white-small.png" height="30" style="background-color: black; padding: 2px;" />
+<img src="{{ site.baseurl }}/img/ace3-logo-white-small.webp" height="30" style="background-color: black; padding: 2px;" />
 
-* [JPG (black background)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.jpg)
-* [PNG (transparent background)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.png)
-* [EPS (vector file)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.eps)
+* [JPG (black background)](https://github.com/acemod/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.jpg)
+* [PNG (transparent background)](https://github.com/acemod/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.png)
+* [EPS (vector file)](https://github.com/acemod/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.eps)

@@ -21,9 +21,8 @@ if (!isServer) exitWith {false};
 // Walk through the local synced events and clean up anything thats already EOL
 // @TODO: This should be iteration limited to prevent FPS lag
 
-[GVAR(syncedEvents), {
-    _value params ["_eventTime", "_eventLog", "_globalEventTTL"];
-
+{
+    _y params ["_eventTime", "_eventLog", "_globalEventTTL"];
     private _newEventLog = [];
 
     // @TODO: This should be iteration limited to prevent FPS lag
@@ -52,11 +51,8 @@ if (!isServer) exitWith {false};
         if (_ttlReturn) then {
             _newEventLog pushBack _x;
         };
-        false
-    } count _eventLog;
-
-    _value set [1, _newEventLog];
-    false
-}] call CBA_fnc_hashEachPair;
+    } forEach _eventLog;
+    _y set [1, _newEventLog];
+} forEach GVAR(syncedEvents);
 
 // @TODO: Next, detect if we had a new request from a JIP player, and we need to continue syncing events

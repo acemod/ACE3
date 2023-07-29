@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Goggles
+component: goggles
 description: Various effects for different goggles and ambient effects like dirt thrown up by explosions.
 group: feature
 category: equipment
@@ -22,7 +23,3 @@ Adds color tint to sunglasses and other eyewear. Causes raindrops to appear on t
 
 ### 2.1 Cleaning your goggles
 - To clean your goggles press <kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>T</kbd> (ACE3 deault key bind `Wipe goggles`)
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="goggles" %}
