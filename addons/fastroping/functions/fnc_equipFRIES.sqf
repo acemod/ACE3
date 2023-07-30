@@ -25,6 +25,6 @@ if !(isNumber (_config >> QGVAR(enabled))) then {
         private _fries = (getText (_config >> QGVAR(friesType))) createVehicle [0, 0, 0];
         _fries attachTo [_vehicle, getArray (_config >> QGVAR(friesAttachmentPoint))];
         _vehicle setVariable [QGVAR(FRIES), _fries, true];
-        _vehicle addEventHandler ["Deleted", LINKFUNCK(unequipFRIES)];
+        _vehicle addEventHandler ["Deleted", LINKFUNC(unequipFRIES)];
     };
 };
