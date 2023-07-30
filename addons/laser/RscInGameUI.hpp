@@ -6,10 +6,12 @@ class RscInGameUI {
                 class CA_Distance: RscText {
                     idc = IDC_LASERDESIGNATOR_DISTANCE; // Purposeful overwrite, makes range update constantly, do not remove
                     fade = 1;
+                    colorText[] = {0,0,0,0}; // fade doesn't work in some cases (e.g. controlling remote designator uav)
                 };
                 class ACE_Distance: CA_Distance {
                     idc = IDC_LASERDESIGNATOR_ACEDISTANCE;
                     fade = 0;
+                    colorText[] = {0.706,0.0745,0.0196,1};
                 };
                 class ACE_LaserCode_Helper: RscMapControl {
                     idc = -1;
