@@ -18,17 +18,17 @@ class CfgVehicles {
         };
     };
 
-    class EGVAR(explosives,Place_rhssaf_mine_mrud_b): EGVAR(explosives,Place_rhssaf_mine_mrud_a {
+    class EGVAR(explosives,Place_rhssaf_mine_mrud_b): EGVAR(explosives,Place_rhssaf_mine_mrud_a) {
         displayName = "$STR_RHSSAF_MRUD_B_DISPLAYNAME";
         model = "\rhssaf\addons\rhssaf_m_explosives\mines_ap\mrud\rhssaf_mrud_b_e";
     };
 
-    class EGVAR(explosives,Place_rhssaf_mine_mrud_c): EGVAR(explosives,Place_rhssaf_mine_mrud_a {
+    class EGVAR(explosives,Place_rhssaf_mine_mrud_c): EGVAR(explosives,Place_rhssaf_mine_mrud_a) {
         displayName = "$STR_RHSSAF_MRUD_C_DISPLAYNAME";
         model = "\rhssaf\addons\rhssaf_m_explosives\mines_ap\mrud\rhssaf_mrud_c_e";
     };
 
-    class EGVAR(explosives,Place_rhssaf_mine_mrud_d): EGVAR(explosives,Place_rhssaf_mine_mrud_a {
+    class EGVAR(explosives,Place_rhssaf_mine_mrud_d): EGVAR(explosives,Place_rhssaf_mine_mrud_a) {
         displayName = "$STR_RHSSAF_MRUD_D_DISPLAYNAME";
         model = "\rhssaf\addons\rhssaf_m_explosives\mines_ap\mrud\rhssaf_mrud_d_e";
         class ACE_Actions: ACE_Actions {
