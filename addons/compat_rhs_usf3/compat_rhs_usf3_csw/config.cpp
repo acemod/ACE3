@@ -6,6 +6,7 @@
 #endif
 
 #if __has_include("\z\ace\addons\csw\script_component.hpp")
+    #include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 #else
     #ifdef PATCH_SKIP
     #else
@@ -16,8 +17,6 @@
 #ifdef PATCH_SKIP
 ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
 #else
-
-#include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 
 class CfgPatches {
     class ADDON {
