@@ -1,8 +1,16 @@
 #include "script_component.hpp"
 
-#if __has_include("\rhsusf\addons\rhsusf_main\loadorder\config.bin")
+#if __has_include("\rhssaf\addons\rhssaf_main\loadorder\config.bin")
 #else
-    #define PATCH_SKIP "RHS USAF"
+    #define PATCH_SKIP "RHS SAF"
+#endif
+
+#if __has_include("\z\ace\addons\explosives\script_component.hpp")
+#else
+    #ifdef PATCH_SKIP
+    #else
+        #define PATCH_SKIP "ACE Explosives"
+    #endif
 #endif
 
 #ifdef PATCH_SKIP
@@ -11,13 +19,16 @@ ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
 
 class CfgPatches {
     class ADDON {
-        name = COMPONENT_NAME;
+        name = QUOTE(COMPONENT);
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rhsusf_main_loadorder"};
+        requiredAddons[] = {
+            "rhssaf_main_loadorder",
+            "ace_explosives"
+        };
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "Fyuran"};
+        authors[] = {};
         url = ECSTRING(main,URL);
         skipWhenMissingDependencies = 1;
         VERSION_CONFIG;
@@ -25,11 +36,6 @@ class CfgPatches {
 };
 
 #include "CfgAmmo.hpp"
-#include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
-#include "CfgMagazineWells.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgGlasses.hpp"
 
 #endif
