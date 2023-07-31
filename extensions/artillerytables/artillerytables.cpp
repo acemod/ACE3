@@ -281,8 +281,8 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
     if (!strcmp(function, "simulateShot")) {
         if (argsCnt < 4) { return -2; }  // Error: not enough args
         const double fireAngleRad = strtod(args[0], NULL);
-        const double muzzleVelocity = strtod(args[1], NULL);
-        const double heightOfTarget = strtod(args[2], NULL);
+        const double heightOfTarget = strtod(args[1], NULL);
+        const double muzzleVelocity = strtod(args[2], NULL);
         const double airFriction = strtod(args[3], NULL);
         double crossWind = 0;
         double tailWind = 0;
@@ -304,7 +304,7 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
     };
 
     if (!strcmp(function, "findMaxAngle")) {
-        if (argsCnt < 2) { return -2; } // Error: not enough args
+        if (argsCnt < 1) { return -2; } // Error: not enough args
         const double muzzleVelocity = strtod(args[0], NULL);
         const double airFriction = strtod(args[1], NULL);
 
@@ -313,6 +313,7 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
         std::stringstream outputStr;
         outputStr << "[" << bestAngle << "," << bestDistance << "]";
         strncpy(output, outputStr.str().c_str(), outputSize - 1);
+        return 1;
     }
 
     if (!strcmp(function, "simulateFindSolution")) {
