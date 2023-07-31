@@ -3,7 +3,13 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions;
     };
-    class StaticMortar: StaticWeapon {
+
+    class StaticWeapon: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class StaticMortar: StaticWeapon {};
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions;
         };
