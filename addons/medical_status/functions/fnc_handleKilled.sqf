@@ -53,4 +53,13 @@ if (_unit == player) then {
     ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
 };
 
+// Let AI resume firing at dead units in most situations (global effect) (which was blocked upon unconsciouness)
+[_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+
+// Unblock radio on dead for compatibility with captive module (which was blocked upon unconsciouness)
+[_unit, "blockRadio", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+
+// Unblock speaking on death (which was blocked upon unconsciouness)
+[_unit, "blockSpeaking", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+
 ["ace_killed", [_unit, _causeOfDeath, _killer, _instigator]] call CBA_fnc_globalEvent;
