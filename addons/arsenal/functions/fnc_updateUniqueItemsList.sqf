@@ -2,8 +2,9 @@
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
- * Updates the list of unique items.
- * Unique items are items that can't be multiplied using the arsenal.
+ * Updates the list of unique inventory items and unique equipment.
+ * Unique inventory items are items within containers that can't be multiplied using the arsenal.
+ * Unique equipment are any items (such as weapons, containers, etc.) that can't be multiplied using the arsenal.
  *
  * Arguments:
  * None
@@ -177,3 +178,97 @@ private _isMiscItem = false;
         };
     };
 } forEach (keys ([GVAR(center), 0, 3, 3, 3, false] call EFUNC(common,uniqueUnitItems))); // Get all items from unit
+
+// Remove unique equipment in every panel
+private _items = createHashMap;
+
+private _fnc_uniqueEquipment = {
+    params ["_items", "_item", ["_removeAllUniqueItems", true]];
+
+    // Remove all unique equipment from tab
+    if (_removeAllUniqueItems) then {
+        private _itemsToDelete = [];
+
+        {
+            if (!isNil "_y") then {
+                _itemsToDelete pushBack _x;
+            };
+        } forEach _items;
+
+        {
+            _items deleteAt _x;
+            GVAR(virtualItemsFlatAll) deleteAt _x;
+        } forEach _itemsToDelete;
+    };
+
+    // Add item as a unique equipment
+    if (_item != "") then {
+        _items set [_item, true, true];
+        GVAR(virtualItemsFlatAll) set [_item, true, true];
+    };
+};
+
+// Add the items the player has to virtualItems as unique equipment
+{
+    switch (_forEachIndex) do {
+        // Primary weapon, Secondary weapon, Handgun weapon, Binoculars
+        case IDX_LOADOUT_PRIMARY_WEAPON;
+        case IDX_LOADOUT_SECONDARY_WEAPON;
+        case IDX_LOADOUT_HANDGUN_WEAPON;
+        case IDX_LOADOUT_BINO: {
+            _x params [["_weapon", ""], ["_muzzle", ""], ["_flashlight", ""], ["_optics", ""], ["_primaryMagazine", []], ["_secondaryMagazine", []], ["_bipod", ""]];
+
+            // If bino, add it in a different place than regular weapons
+            _items = if (_forEachIndex != IDX_LOADOUT_BINO) then {
+                (GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _forEachIndex
+            } else {
+                GVAR(virtualItems) get IDX_VIRT_BINO
+            };
+
+            // Remove all unique equipment in tab; Add weapon as a unique equipment
+            [_items, _weapon call FUNC(baseWeapon)] call _fnc_uniqueEquipment;
+
+            private _removeUniqueItems = _forEachIndex == IDX_LOADOUT_PRIMARY_WEAPON;
+
+            // Add weapon attachments
+            {
+                // Remove all unique equipment in tab; Add weapon attachment as a unique equipment
+                [(GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _forEachIndex, _x call FUNC(baseWeapon), _removeUniqueItems] call _fnc_uniqueEquipment;
+            } forEach [_optics, _flashlight, _muzzle, _bipod];
+
+            // Add magazines
+            {
+                // Remove all unique equipment in tab; Add magazine as unique equipment
+                [GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL, _x param [0, ""], _removeUniqueItems && {_forEachIndex == 0}] call _fnc_uniqueEquipment;
+            } forEach [_primaryMagazine, _secondaryMagazine];
+        };
+
+        // Uniform, vest, backpack
+        case IDX_LOADOUT_UNIFORM;
+        case IDX_LOADOUT_VEST;
+        case IDX_LOADOUT_BACKPACK: {
+            _x params [["_containerClass", ""]];
+
+            // Remove all unique equipment in tab; Add container as a unique equipment
+            [GVAR(virtualItems) get (_forEachIndex + 1), _containerClass] call _fnc_uniqueEquipment;
+        };
+        // Helmet
+        case IDX_LOADOUT_HEADGEAR: {
+            // Remove all unique equipment in tab; Add item as a unique equipment
+            [GVAR(virtualItems) get IDX_VIRT_HEADGEAR, _x] call _fnc_uniqueEquipment;
+        };
+        // Facewear
+        case IDX_LOADOUT_GOGGLES: {
+            // Remove all unique equipment in tab; Add item as a unique equipment
+            [GVAR(virtualItems) get IDX_VIRT_GOGGLES, _x] call _fnc_uniqueEquipment;
+        };
+        // Assigned items: Map, Compass, Watch, GPS / UAV Terminal, Radio, NVGs
+        case IDX_LOADOUT_ASSIGNEDITEMS: {
+            {
+                // Order of storing virtualItems is different than what getUnitLoadout returns, so do some math
+                // Remove all unique equipment in tab; Add item as a unique equipment
+                [GVAR(virtualItems) get (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _forEachIndex)), _x] call _fnc_uniqueEquipment;
+            } forEach _x;
+        };
+    };
+} forEach (getUnitLoadout GVAR(center)); // Only need items, not extended loadout
