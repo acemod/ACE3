@@ -85,13 +85,21 @@
 
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];
-
+    TRACE_3("unit uncon",_unit,objectParent _unit,local _unit);
     if (vehicle _unit != _unit && {local vehicle _unit}) then {
         if (_unconscious) then {
             [_unit] call FUNC(lockUnconsciousSeat);
         } else {
             [_unit] call FUNC(unlockUnconsciousSeat);
         };
+    };
+}] call CBA_fnc_addEventHandler;
+
+["ace_killed", { // global event
+    params ["_unit"];
+    TRACE_3("unit Killed",_unit,objectParent _unit,local _unit);
+    if (!isNull objectParent _unit && {local objectParent _unit}) exitWith {
+        [_unit] call FUNC(lockUnconsciousSeat);
     };
 }] call CBA_fnc_addEventHandler;
 

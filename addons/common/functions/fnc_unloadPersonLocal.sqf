@@ -46,7 +46,7 @@ if (count _emptyPos != 3) exitwith {
 unassignVehicle _unit;
 [_unit] orderGetIn false;
 
-TRACE_1("Ejecting", alive _unit);
+TRACE_2("Ejecting",alive _unit,local _vehicle);
 
 if (local _vehicle) then {
     _unit action ["Eject", _vehicle];
@@ -69,18 +69,20 @@ if (local _vehicle) then {
 };
 
 // Wait until unit has actually exited vehicle and then move them to the unload position
-[{
-    params ["_unit", "_emptyPos"];
-    (alive _unit) && {isNull objectParent _unit}
-}, {
-    params ["_unit", "_emptyPos"];
-    TRACE_2("unload success",_unit,_emptyPos);
-    _unit setPosASL AGLToASL _emptyPos;
-}, [_unit, _emptyPos], 2, {
-    params ["_unit", "_emptyPos"];
-    if (!alive _unit) exitWith {};
-    WARNING_2("timeout %1->%2",_unit,objectParent _unit);
-}] call CBA_fnc_waitUntilAndExecute;
+if (alive _unit) then {
+    [{
+        params ["_unit", "_emptyPos"];
+        (alive _unit) && {isNull objectParent _unit}
+    }, {
+        params ["_unit", "_emptyPos"];
+        TRACE_2("unload success",_unit,_emptyPos);
+        _unit setPosASL AGLToASL _emptyPos;
+    }, [_unit, _emptyPos], 2, {
+        params ["_unit", "_emptyPos"];
+        if (!alive _unit) exitWith {};
+        WARNING_2("timeout %1->%2",_unit,objectParent _unit);
+    }] call CBA_fnc_waitUntilAndExecute;
+};
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 
