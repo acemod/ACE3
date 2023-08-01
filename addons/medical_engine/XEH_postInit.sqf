@@ -86,7 +86,7 @@
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];
     TRACE_3("unit uncon",_unit,objectParent _unit,local _unit);
-    if (vehicle _unit != _unit && {local vehicle _unit}) then {
+    if (!isNull objectParent _unit && {local objectParent _unit}) then {
         if (_unconscious) then {
             [_unit] call FUNC(lockUnconsciousSeat);
         } else {
