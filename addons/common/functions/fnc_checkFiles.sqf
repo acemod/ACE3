@@ -135,14 +135,12 @@ if (isMultiplayer) then {
         publicVariable QGVAR(ServerVersion);
         publicVariable QGVAR(ServerAddons);
     } else {
-        // Clients have to wait for the variables
-        [{
-            if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {};
+        GVAR(ClientVersion) = _version;
+        GVAR(ClientAddons) = _addons;
 
-            (_this select 0) params ["_version", "_addons"];
-
-            if (_version != GVAR(ServerVersion)) then {
-                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
+        private _fnc_check = {
+            if (GVAR(ClientVersion) != GVAR(ServerVersion)) then {
+                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), GVAR(ClientVersion)];
 
                 ERROR(_errorMsg);
 
@@ -151,7 +149,7 @@ if (isMultiplayer) then {
                 };
             };
 
-            _addons = _addons - GVAR(ServerAddons);
+            private _addons = GVAR(ClientAddons) - GVAR(ServerAddons);
 
             if (_addons isNotEqualTo []) then {
                 private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.", _addons];
@@ -162,8 +160,13 @@ if (isMultiplayer) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] call FUNC(errorMessage);
                 };
             };
+        };
 
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
-        }, 0.5, [_version,_addons]] call CBA_fnc_addPerFrameHandler;
+        // Clients have to wait for the variables
+        if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) then {
+            GVAR(ServerVersion) addPublicVariableEventHandler _fnc_check;
+        } else {
+            call _fnc_check;
+        };
     };
 };

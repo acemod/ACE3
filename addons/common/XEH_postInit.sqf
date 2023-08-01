@@ -244,6 +244,35 @@ if (_currentVersion != _previousVersion) then {
 
 call FUNC(checkFiles);
 
+// Let the server know that we have ACE loaded
+missionNamespace setVariable [QGVAR(aceLoaded_) + getPlayerUID player, true, 2];
+
+// This handles clients joining that do not have ACE loaded
+if (isServer) then {
+    addMissionEventHandler ["PlayerConnected", {
+        [{
+            params ["", "_uid", "", "", "_owner"];
+
+            // If ACE is not loaded, kick unit
+            if !(missionNamespace getVariable [QGVAR(aceLoaded_) + _uid, false]) then {
+                // Send function to client
+                _owner publicVariableClient QFUNC(errorMessage);
+
+                // Wait for function to broadcast, then kick client
+                [{
+                    ["[ACE] ERROR", "ACE is not present", {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] remoteExecCall [QFUNC(errorMessage), _this];
+                }, _owner, 0.5] call CBA_fnc_waitAndExecute;
+            };
+        }, _this, 3] call CBA_fnc_waitAndExecute;
+    }];
+
+    addMissionEventHandler ["PlayerDisconnected", {
+        params ["", "_uid"];
+
+        // Reset variable
+        missionNamespace setVariable [QGVAR(aceLoaded_) + _uid, nil];
+    }];
+};
 
 //////////////////////////////////////////////////
 // Set up ace_settingsInitialized eventhandler

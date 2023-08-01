@@ -150,5 +150,13 @@ if (!_showCancelButton || {_onCancel isEqualTo {}}) then {
 _ctrlButtonOK ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 1; true}];
 _ctrlButtonCancel ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 2; true}];
 
-[_display, "unload", {call (_thisArgs select (_this select 1))}, [{}, _onOK, _onCancel]] call CBA_fnc_addBISEventHandler;
+// CBA isn't guaranteed to be loaded
+private _ehID = _display displayAddEventHandler ["unload", {
+    params ["_display", "_exitCode"];
+
+    call ((_display getVariable [QGVAR(errorMessageCode_) + str _thisEventHandler, [{}, {}, {}]]) select _exitCode)
+}];
+
+_display setVariable [QGVAR(errorMessageCode_) + str _ehID, [{}, _onOK, _onCancel]];
+
 _display displayAddEventHandler ["keyDown", {_this select 1 == 1}];

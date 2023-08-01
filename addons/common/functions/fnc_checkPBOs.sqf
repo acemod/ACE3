@@ -101,4 +101,5 @@ if (!isServer) then {
     }, [_mode]] call CBA_fnc_addEventHandlerArgs;
 };
 
-[_whitelist] spawn COMPILE_FILE(scripts\checkVersionNumber); // @todo
+// Check file version numbers
+[_whitelist] call FUNC(checkVersionNumber);

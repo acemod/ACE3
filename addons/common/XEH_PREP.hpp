@@ -26,6 +26,7 @@ PREP(canInteractWith);
 PREP(changeProjectileDirection);
 PREP(checkFiles);
 PREP(checkPBOs);
+PREP(checkVersionNumber);
 PREP(claim);
 PREP(claimSafeServer);
 PREP(codeToString);
