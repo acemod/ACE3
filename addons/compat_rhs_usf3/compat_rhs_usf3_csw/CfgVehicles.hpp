@@ -1,19 +1,11 @@
 class CfgVehicles {
     class LandVehicle;
     class StaticWeapon: LandVehicle {
-        class ACE_Actions;
-    };
-
-    class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions;
         };
     };
     class StaticMortar: StaticWeapon {};
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions;
-        };
-    };
     class RHS_M252_Base: StaticMortar {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -35,7 +27,6 @@ class CfgVehicles {
     };
 
     class StaticMGWeapon;
-
     class rhs_m2staticmg_base: StaticMGWeapon {
         class ACE_CSW {
             enabled = 1;
