@@ -16,11 +16,12 @@
  * Public: No
  */
 
-private _alive = alive _patient;
+params ["_medic", "_patient"];
+TRACE_1("placeInBodyBag",_patient);
 
-if (_alive && {!GVAR(allowBodyBagUnconscious)}) exitWith {
+if ((alive _patient) && {!GVAR(allowBodyBagUnconscious)}) exitWith {
     [_medic, "ACE_bodyBag"] call EFUNC(common,addToInventory); // re-add slighly used bodybag?
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
-[_this,"ACE_bodyBagObject"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave;
+[_this, "ACE_bodyBagObject"] call FUNC(placeInBodyBagOrGrave);

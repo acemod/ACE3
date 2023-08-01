@@ -16,10 +16,11 @@
  * Public: No
  */
 
-private _alive = alive _patient;
+params ["_medic", "_patient"];
+TRACE_1("placeInGrave",_patient);
 
-if (_alive && {!GVAR(allowGraveUnconscious)}) exitWith {
+if ((alive _patient) && {!GVAR(allowGraveUnconscious)}) exitWith {
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
-[_this,"Land_Grave_dirt_F"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave;
+[_this, "Land_Grave_dirt_F"] call FUNC(placeInBodyBagOrGrave);

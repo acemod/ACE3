@@ -258,7 +258,7 @@ class GVAR(actions) {
         displayNameProgress = CSTRING(DiggingGrave);
         icon = QPATHTOEF(medical_gui,ui\cross_grave.paa);
         treatmentTime = QGVAR(treatmentTimeGrave);
-        condition = QFUNC(fnc_canDigGrave);
+        condition = QFUNC(canDigGrave);
         callbackSuccess = QFUNC(placeInGrave);
         items[] = {"ACE_EntrenchingTool"};
         consumeItem = 0;

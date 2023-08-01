@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [player, cursorObject, "ACE_bodyBagObject"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave
+ * [[player, cursorObject], "ACE_bodyBagObject"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ TRACE_1("placeInBodyBagOrGrave",_patient);
 
 if (!local _patient) exitWith {
     TRACE_1("Calling where local",local _patient);
-    [QGVAR(placeInGrave), [nil, _patient], _patient] call CBA_fnc_targetEvent;
+    [QGVAR(placeInBodyBagOrGrave), _this, _patient] call CBA_fnc_targetEvent;
 };
 
 if (alive _patient) then {
@@ -37,10 +37,10 @@ private _spinePos = _patient modelToWorldVisual (_patient selectionPosition "Spi
 private _direction = (_headPos vectorFromTo _spinePos) call CBA_fnc_vectDir;
 private _position = getPosASL _patient;
 if (_restingPlaceObject == "Land_Grave_dirt_F") then {
-    //Grave object needs to be rotated 90 degrees to line up with the body
+    // Grave object needs to be rotated 90 degrees to line up with the body
     _direction = _direction + 90;
 } else {
-    //Body bag needs to be a little higher to prevent it from flipping
+    // Body bag needs to be a little higher to prevent it from flipping
     _position = _position vectorAdd [0, 0, 0.2];
 };
 
