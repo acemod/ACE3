@@ -22,7 +22,15 @@ params ["_menuType"];
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
 // Conditions: Don't open when editing a text box
-private _isTextEditing = (allDisplays findIf {(ctrlType (focusedCtrl _x)) == CT_EDIT}) != -1;
+private _focusedTextIndex = allDisplays findIf {(ctrlType (focusedCtrl _x)) == CT_EDIT};
+private _isTextEditing = _focusedTextIndex != -1;
+
+// Map's controls remain open and focused despite map not being visible, workaround
+if (_isTextEditing) then {
+    if (ctrlIDD (allDisplays select _focusedTextIndex) == IDD_MAIN_MAP) then {
+        _isTextEditing = visibleMap;
+    };
+};
 
 // Conditions: canInteract (these don't apply to zeus)
 if (
