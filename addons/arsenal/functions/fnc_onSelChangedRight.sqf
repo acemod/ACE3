@@ -140,15 +140,7 @@ switch (_currentItemsIndex) do {
 
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_HANDGUN_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-
-        // https://feedback.bistudio.com/T173880
-        _primaryMagazine = _primaryMagazine param [0, ""];
-        private _handgunMagazines = handgunMagazine GVAR(center);
-
-        // Delete the first magazine (but keep one if both magazines are the same)
-        _handgunMagazines deleteAt (_handgunMagazines findIf {_x == _primaryMagazine});
-
-        GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _handgunMagazines param [0, ""]]];
+        GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
         [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };
@@ -184,15 +176,7 @@ switch (_currentItemsIndex) do {
 
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_BINO) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-
-        // https://feedback.bistudio.com/T173880 (unsure if binocular weapons are affected by this)
-        _primaryMagazine = _primaryMagazine param [0, ""];
-        private _binocularMagazines = binocularMagazine GVAR(center);
-
-        // Delete the first magazine (but keep one if both magazines are the same)
-        _binocularMagazines deleteAt (_binocularMagazines findIf {_x == _primaryMagazine});
-
-        GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _binocularMagazines param [0, ""]]];
+        GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
         [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };
