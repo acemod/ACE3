@@ -29,10 +29,7 @@ if (_isLnB) then {
 };
 
 if (_item in GVAR(favorites)) then {
-    GVAR(favorites) = GVAR(favorites) deleteAt _item;
-    if (isNil QGVAR(favorites)) then { // hashmap is deleted when all keys are deleted
-        GVAR(favorites) = createHashMap;
-    };
+    GVAR(favorites) deleteAt _item;
 } else {
     GVAR(favorites) set [_item, nil];
 };
