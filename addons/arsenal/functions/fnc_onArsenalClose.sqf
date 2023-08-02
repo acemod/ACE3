@@ -127,6 +127,8 @@ GVAR(statsInfo) =  nil;
 GVAR(showActions) = nil;
 GVAR(currentActionPage) = nil;
 
+GVAR(favorites) = nil;
+
 GVAR(center) = nil;
 GVAR(centerNotPlayer) = nil;
 
