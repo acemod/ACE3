@@ -19,20 +19,4 @@ class CfgMagazines {
     class US85_200Rnd_556x45: US85_30Rnd_556x45 {
         ace_isBelt = 1;
     };
-
-    class US85_ATMine_mag: US85_Magazine {
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_US85_ATMine_mag";
-        useAction = 0;
-    };
-
-    class US85_M14Mine_mag: US85_Magazine {
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_US85_M14Mine";
-        useAction = 0;
-    };
-
-    class US85_SatchelCharge_Mag: US85_Magazine {
-        EGVAR(explosive,SetupObject) = "ACE_Explosives_Place_US85_SatchelCharge_Mag";
-        useAction = 0;
-    };
-
 };
