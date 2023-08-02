@@ -49,6 +49,8 @@ PREP(loadoutsChangeTab);
 PREP(message);
 PREP(onArsenalClose);
 PREP(onArsenalOpen);
+PREP(onDblClickLeft);
+PREP(onDblClickRight);
 PREP(onKeyDown);
 PREP(onLoadoutsClose);
 PREP(onLoadoutsOpen);
