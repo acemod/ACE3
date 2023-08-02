@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Not used
  * 1: Args <ARRAY>
- *   1.0: Not used
- *   1.1: Mouse button <NUMBER>
+ * - 0: Not used
+ * - 1: Mouse button <NUMBER>
  *
  * Return Value:
  * None
