@@ -559,7 +559,7 @@ class GVAR(display) {
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
-            onLBDblClick = QUOTE(_this call FUNC(onDblClickLeft));
+            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
             onKillFocus = QUOTE(GVAR(leftTabFocus) = false);
             x = QUOTE(safezoneX + 13 * GRID_W);
@@ -573,7 +573,7 @@ class GVAR(display) {
             drawSideArrows = 1;
             disableOverflow = 1;
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRight));
-            onLBDblClick = QUOTE(_this call FUNC(onDblClickRight));
+            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(rightTabFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabFocus) = false);
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
@@ -594,7 +594,7 @@ class GVAR(display) {
             drawSideArrows = 1;
             disableOverflow = 1;
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRightListnBox));
-            onLBDblClick = QUOTE(_this call FUNC(onDblClickRight));
+            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(rightTabLnBFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabLnBFocus) = false);
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);

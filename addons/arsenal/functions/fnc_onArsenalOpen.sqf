@@ -92,6 +92,7 @@ GVAR(statsInfo) = [true, controlNull, nil, nil];
 GVAR(showActions) = true;
 GVAR(currentActionPage) = 0;
 
+GVAR(favoritesOnly) = false;
 GVAR(favorites) = profileNamespace getVariable [QGVAR(favorites), createHashMap];
 
 // Update current item list

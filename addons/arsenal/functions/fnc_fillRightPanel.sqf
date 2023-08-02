@@ -46,6 +46,8 @@ private _rightPanelCache = uiNamespace getVariable QGVAR(rightPanelCache);
 private _fnc_fillRightContainer = {
     params ["_configCategory", "_className", "_hasItemInfo", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
 
+    if (GVAR(favoritesOnly) && {!((toLower _className) in GVAR(favorites))}) exitWith {};
+
     // If item is not in the arsenal, it must be unique
     if (!_isUnique && {!(_className in GVAR(virtualItemsFlat))}) then {
         _isUnique = true;
@@ -99,6 +101,9 @@ private _fnc_fillRightContainer = {
     _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
     _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
+    if ((toLower _className) in GVAR(favorites)) then {
+        _ctrlPanel lnbSetColor [[_lbAdd, 0], [0.9, 0.875, 0.6, 1]];
+    }
 };
 
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;

@@ -20,6 +20,8 @@
 
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
 
+if (GVAR(favoritesOnly) && {!((toLower _className) in GVAR(favorites))}) exitWith {};
+
 // Sanitise key, as it's public; If not in cache, find info and cache it for later use
 ((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_configCategory + _className, {
     // Get classname (config case), display name, picture and DLC
@@ -35,3 +37,7 @@ _ctrlPanel lbSetData [_lbAdd, _className];
 _ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
 _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIcons)];
 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
+
+if ((toLower _className) in GVAR(favorites)) then {
+    _ctrlPanel lbSetColor [_lb, [0.9, 0.875, 0.6]];
+};
