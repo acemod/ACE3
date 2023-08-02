@@ -5,7 +5,7 @@ class SPE_US_TNT_4pound_mag: SPE_Mine_Magazine {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(4LBTNT);
     useAction = 0;
     class ACE_Triggers {
-        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter","FireCord", "LIB_LadungPM"};
+        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "FireCord", "LIB_LadungPM"};
         class Timer {
             FuseTime = 0.5;
         };

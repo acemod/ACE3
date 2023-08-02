@@ -1,16 +1,5 @@
-class ItemCore;
-class PistolCore;
-class RifleCore;
-class Pistol: PistolCore {};
-class Rifle: RifleCore {};
-class Pistol_Base_F: Pistol {};
-class Rifle_Base_F: Rifle {};
-class Rifle_Short_Base_F: Rifle_Base_F {};
-class Rifle_Long_Base_F: Rifle_Base_F {};
-
 // MACHINE GUNS
-
-class SPE_LMG: Rifle_Long_Base_F {};
+class SPE_LMG;
 class SPE_MG42: SPE_LMG {
     ACE_barrelTwist = 304.8;
     ACE_barrelLength = 533;
@@ -31,7 +20,7 @@ class SPE_MG34: SPE_LMG {
 };
 class SPE_M1919A4: SPE_LMG {
     ACE_barrelTwist = 254;
-    ACE_barrelLength = 610;   
+    ACE_barrelLength = 610;
     EGVAR(overheating,mrbs) = 3000;
     EGVAR(overheating,closedBolt) = 1;
     EGVAR(overheating,slowdownFactor) = 1;
@@ -66,8 +55,8 @@ class SPE_FM_24_M29: SPE_LMG {
     EGVAR(overheating,dispersion) = 0.25;
 };
 
-//SELF LOADING RIFLES
-class SPE_RIFLE: Rifle_Base_F {};
+// SELF LOADING RIFLES
+class SPE_RIFLE;
 class SPE_G43: SPE_RIFLE {
     ACE_Overheating_JamChance = 0.0003;
     ACE_barrelTwist = 254; // unknown set to 1:10
@@ -93,16 +82,15 @@ class SPE_M1903A3_Springfield: SPE_RIFLE {
     ACE_barrelLength = 610;
 };
 
-//ASSAULT RIFLE
-
+// ASSAULT RIFLE
 class SPE_STG44: SPE_RIFLE {
     ACE_Overheating_JamChance = 0.0015;
     ACE_barrelTwist = 254; // unknown set to 1:10
     ACE_barrelLength = 420;
 };
 
-//BOLT ACTION RIFLES
-class SPE_SRIFLE: Rifle_Long_Base_F {};
+// BOLT ACTION RIFLES
+class SPE_SRIFLE;
 class SPE_K98ZF39: SPE_SRIFLE {
     ACE_barrelTwist = 240;
     ACE_barrelLength = 600;
@@ -131,8 +119,7 @@ class SPE_M1903A4_Springfield: SPE_SRIFLE {
 };
 
 // SUB MACHINE GUNS
-
-class SPE_SMG: Rifle_Short_Base_F {};
+class SPE_SMG;
 class SPE_MP40: SPE_SMG {
     ACE_barrelTwist = 203.2;
     ACE_barrelLength = 251;
@@ -160,8 +147,7 @@ class SPE_M3_GreaseGun: SPE_SMG {
 };
 
 // VESTS
-class Vest_Camo_Base: ItemCore {};
-class V_SPE_Vest_Camo_Base: Vest_Camo_Base {};
+class V_SPE_Vest_Camo_Base;
 class V_SPE_DAK_VestG43: V_SPE_Vest_Camo_Base {
     EGVAR(trenches,entrenchingTool) = 1;
 };
