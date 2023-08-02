@@ -73,5 +73,4 @@ class CfgWeapons {
         EGVAR(reloadlaunchers,enabled) = 1;
         EGVAR(overpressure,angle) = 45;
     };
-
 };
