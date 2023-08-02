@@ -1,7 +1,8 @@
+#define VANILLA_ISREPAIRVEHICLE (parseNumber (getRepairCargo _this > 0))
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 
 #define DEFAULT_ISENGINEER ([ARR_2(0,1)] select (_this getUnitTrait 'engineer'))
-#define DEFAULT_ISREPAIRVEHICLE GET_NUMBER(configOf _this >> QQGVAR(canRepair),0)
+#define DEFAULT_ISREPAIRVEHICLE GET_NUMBER(configOf _this >> QQGVAR(canRepair),VANILLA_ISREPAIRVEHICLE)
 
 class ctrlToolbox;
 
@@ -69,7 +70,7 @@ class Cfg3DEN {
                         property = QGVAR(editorLoadedTracks);
                         control = "Edit";
                         expression = "_this setVariable ['%s',_value];";
-                        defaultValue = "[0,1] select (_this isKindOf 'Tank')"; // must match pre init script
+                        defaultValue = "parseNumber (_this isKindOf 'Tank')"; // must match post init script
                         validate = "number";
                         condition = "objectHasInventoryCargo";
                         typeName = "NUMBER";
@@ -78,7 +79,7 @@ class Cfg3DEN {
                         displayName = CSTRING(editorLoadedWheels);
                         tooltip = CSTRING(editorLoadedWheels_tooltip);
                         property = QGVAR(editorLoadedWheels);
-                        defaultValue = "[0,1] select (_this isKindOf 'Car')"; // must match pre init script
+                        defaultValue = "parseNumber (_this isKindOf 'Car')"; // must match post init script
                     };
                 };
             };
