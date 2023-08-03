@@ -16,6 +16,8 @@
  * Public: No
  */
 
-params ["", "_patient"];
+params ["_medic", "_patient"];
 
-GVAR(allowGraveDigging) && {_patient call EFUNC(common,canDig)}
+if !(["ace_trenches"] call EFUNC(common,isModLoaded)) exitWith {false};
+
+GVAR(allowGraveDigging) && {_patient call EFUNC(common,canDig)} && {_medic call EFUNC(trenches,hasEntrenchingTool)}

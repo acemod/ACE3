@@ -260,7 +260,7 @@ class GVAR(actions) {
         treatmentTime = QGVAR(treatmentTimeGrave);
         condition = QFUNC(canDigGrave);
         callbackSuccess = QFUNC(placeInGrave);
-        items[] = {"ACE_EntrenchingTool"};
+        items[] = {};
         consumeItem = 0;
     };
     class CPR: BasicBandage {
