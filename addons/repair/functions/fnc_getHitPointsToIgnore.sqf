@@ -62,16 +62,6 @@ private _processedSelections = [];
         continue
     };
 
-    if (_hitpoint select [0,1] isEqualTo "#" || {_hitpoint select [0,9] isEqualTo "hit_light"}) then { // skip lights
-        TRACE_3("Skipping light",_hitpoint,_forEachIndex,_selection);
-        /*#ifdef DEBUG_MODE_FULL
-        systemChat format ["Skipping light, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
-        #endif*/
-        _hitPointsToIgnore pushBackUnique _hitpoint;
-        _processedSelections pushBack _selection;
-        continue
-    };
-
     if (_hitpoint select [0,7] isEqualTo "hitera_" || {_hitpoint select [0,8] isEqualTo "hitslat_"} || {_hitpoint select [0,4] isEqualTo "era_"}) then { // skip era/slat
         TRACE_3("Skipping ERA/Slat HitPoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
