@@ -39,5 +39,6 @@ _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIco
 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
 
 if ((toLower _className) in GVAR(favorites)) then {
-    _ctrlPanel lbSetColor [_lb, [0.9, 0.875, 0.6]];
+    _ctrlPanel lbSetColor [_lbAdd, [0.9, 0.875, 0.6, 1]];
+    _ctrlPanel lbSetSelectColor [_lbAdd, [0.9, 0.875, 0.6, 1]];
 };

@@ -96,14 +96,15 @@ private _fnc_fillRightContainer = {
     }, true]) params ["_displayName", "_picture", "_mass"];
 
     private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, "0"];
+    _ctrlPanel lnbSetText [[_lbAdd, 1], _displayName];
     _ctrlPanel lnbSetData [[_lbAdd, 0], _className];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
     _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
     _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
     if ((toLower _className) in GVAR(favorites)) then {
-        _ctrlPanel lnbSetColor [[_lbAdd, 0], [0.9, 0.875, 0.6, 1]];
-    }
+        _ctrlPanel lnbSetColor [[_lbAdd, 1], [0.9, 0.875, 0.6, 1]];
+    };
 };
 
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;

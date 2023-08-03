@@ -37,7 +37,8 @@ if (_item in GVAR(favorites)) then {
 private _color = [[1, 1, 1, 1], [0.9, 0.875, 0.6, 1]] select (_item in GVAR(favorites));
 
 if (_isLnB) then {
-    _control lnbSetColor [[_curSel, 0], _color];
+    _control lnbSetColor [[_curSel, 1], _color];
 } else {
     _control lbSetColor [_curSel, _color];
+    _control lbSetSelectColor [_curSel, _color];
 };
