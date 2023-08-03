@@ -25,7 +25,7 @@ if (isServer) then {
 [QGVAR(fullHealLocal), LINKFUNC(fullHealLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(ivBagLocal), LINKFUNC(ivBagLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(medicationLocal), LINKFUNC(medicationLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(placeInBodyBag), LINKFUNC(placeInBodyBag)] call CBA_fnc_addEventHandler;
+[QGVAR(placeInBodyBagOrGrave), LINKFUNC(placeInBodyBagOrGrave)] call CBA_fnc_addEventHandler;
 [QGVAR(splintLocal), LINKFUNC(splintLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(tourniquetLocal), LINKFUNC(tourniquetLocal)] call CBA_fnc_addEventHandler;
 
