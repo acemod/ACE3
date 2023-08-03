@@ -7,7 +7,11 @@
  * Arguments:
  * 0: Position <ARRAY> (default: center of map)
  * 1: Scale (1.0 fits entire map in x-dimension) <SCALAR> (default: 1.25)
- * 2: Markers (each _x = [_pos, _text, _icon, _color]) <ARRAY> (default: [])
+ * 2: Markers <ARRAY> (default: [])
+ * - 0: Position 2d/3d <ARRAY> (default: [0,0,0])
+ * - 1: Text <STRING> (default: "")
+ * - 2: Marker Type OR icon string (default: "mil_dot")
+ * - 3: Color <ARRAY> (default: [1,0,0,1])
  * 3: MapType (0: Normal, 1: Topographic, 2: Satelite) or any custom class (even mission config) <SCALAR><STRING> (default: 0)
  * 4: Code to run on init (passed [_map, _display, _displayID]) <CODE> (default: {})
  * 5: Resolution <SCALAR> (default: 4096)
@@ -27,7 +31,7 @@ params [
     ["_pos", [worldSize/2,worldSize/2], [[]]],
     ["_scale", 1.25, [0]],
     ["_markers", [], [[]]],
-    ["_mapType", 0, [0, ""]],
+    ["_mapType", 0, [0, ""]], // 2.14 may allow config type as well
     ["_userCode", {}, [{}]],
     ["_resolution", 4096, [0]]
 ];
