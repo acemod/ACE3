@@ -1323,6 +1323,7 @@
             <Polish>ACE Nieskategoryzowane</Polish>
             <Japanese>ACE 無区分</Japanese>
             <Russian>ACE Без категории</Russian>
+            <Spanish>ACE Sin categoría</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1431,6 +1432,7 @@
             <Chinesesimp>癫痫病友好模式</Chinesesimp>
             <Korean>광과민 친화적 모드</Korean>
             <Russian>Режим для эпилептиков</Russian>
+            <Spanish>Modo adaptado para epilepsia</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
@@ -1441,6 +1443,7 @@
             <Chinesesimp>禁用一些闪烁的灯光效果，以降低癫痫发作的风险。</Chinesesimp>
             <Korean>반짝거리는 빛으로 인해 일어날 발작 상황을 줄여줍니다.</Korean>
             <Russian>Отключает некоторые вспышки во избежание риска приступа.</Russian>
+            <Spanish>Deshabilita algunos efectos de iluminación para reducir el riesgo de convulsiones.</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1499,6 +1502,7 @@
             <Chinesesimp>仅 AI</Chinesesimp>
             <Japanese>AIのみ</Japanese>
             <Russian>Только ИИ</Russian>
+            <Spanish>Sólo IA</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
@@ -1543,6 +1547,7 @@
             <Polish>Oba</Polish>
             <Chinesesimp>两方</Chinesesimp>
             <Korean>둘 다</Korean>
+            <Spanish>Ambos</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
@@ -1553,6 +1558,7 @@
             <Polish>Dodatkowe informacje na pasku postępu </Polish>
             <Chinesesimp>额外的进度条信息</Chinesesimp>
             <Korean>추가 진행 막대 정보</Korean>
+            <Spanish>Barra adicional de información de progreso</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
@@ -1563,6 +1569,7 @@
             <Polish>Kontroluje dodatkowe informacje na pasku postępu.</Polish>
             <Chinesesimp>控制进度条中显示的额外信息。</Chinesesimp>
             <Korean>진행 막대에 추가적인 정보를 보여주는걸 결정합니다.</Korean>
+            <Spanish>Controla la información extra mostrada en la barra de progreso.</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
@@ -1573,6 +1580,7 @@
             <Polish>Procent</Polish>
             <Chinesesimp>百分比</Chinesesimp>
             <Korean>백분율</Korean>
+            <Spanish>Porcentaje</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
@@ -1583,6 +1591,7 @@
             <Polish>Pozostały czas</Polish>
             <Chinesesimp>剩余时间</Chinesesimp>
             <Korean>남은 시간</Korean>
+            <Spanish>Tiempo restante</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
@@ -1625,6 +1634,7 @@
             <Polish>Pozostały czas: %1s</Polish>
             <Chinesesimp>剩余时间：%1秒</Chinesesimp>
             <Korean>남은 시간: %1초</Korean>
+            <Spanish>Tiempo restante: %1s</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -1649,6 +1659,23 @@
             <Korean>탄창 빼기</Korean>
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
             <Russian>Разрядить оружие</Russian>
+            <Spanish>Descargar arma</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Common_loadObject">
+            <English>Load</English>
+            <German>Beladen</German>
+            <Polish>Załaduj</Polish>
+            <Portuguese>Carregar</Portuguese>
+            <Russian>Загрузить</Russian>
+            <Czech>Naložit</Czech>
+            <Spanish>Cargar</Spanish>
+            <Italian>Carica</Italian>
+            <French>Charger</French>
+            <Japanese>積み込む</Japanese>
+            <Korean>싣기</Korean>
+            <Chinese>裝載</Chinese>
+            <Chinesesimp>装载</Chinesesimp>
+            <Turkish>Yükle</Turkish>
         </Key>
     </Package>
 </Project>
