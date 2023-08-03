@@ -65,8 +65,8 @@ if (isServer) then {
 if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
     if (hasInterface) then {
         private _checkHeadstoneAction = [
-            "ACE_CheckHeadstone",
-            format ["%1", localize LSTRING(checkHeadstoneName)],
+            QGVAR(checkHeadstone),
+            LLSTRING(checkHeadstoneName),
             QPATHTOEF(medical_gui,ui\cross_grave.paa),
             {
                 [
@@ -77,7 +77,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
             {!isNil {_target getVariable QGVAR(headstoneData)}},
             {},
             [],
-            [1.05,0.02,0.3] //position in centre of cross
+            [1.05, 0.02, 0.3] //position in centre of cross
         ] call EFUNC(interact_menu,createAction);
 
         ["Land_Grave_dirt_F", 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
