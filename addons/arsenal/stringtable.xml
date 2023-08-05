@@ -1572,9 +1572,6 @@
         <Key ID="STR_ACE_Arsenal_statMagCount">
             <English>Ammo count</English>
         </Key>
-        <Key ID="STR_ACE_Arsenal_favorites">
-            <English>Favorites</English>
-        </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
         </Key>
