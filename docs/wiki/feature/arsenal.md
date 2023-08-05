@@ -29,6 +29,7 @@ ACE Arsenal has a pretty large number of improvements over BI Virtual Arsenal, h
 - An other setting to invert horizontal camera controls.
 - Settings to disable the "Default loadouts" and "Public loadouts" tabs.
 - Custom sub item categories for misc items
+- Items can be saved as favorites to filter for your preferences.
 
 <sup>*</sup> Items not currently available in ACE Arsenal but in the unit's inventory, unique items will be omitted when loading loadouts and they can only be removed from containers.
 
@@ -81,6 +82,7 @@ You can import loadouts from Virtual Arsenal into ACE Arsenal, face, voice, insi
 - Arrow keys can be used to naviguate the left and right panels.
 - <kbd>Shift</kbd> + <kbd>LMB</kbd> on the `+` or `-` buttons on the right panel to add or remove 5 of the selected item.
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> Selects the left search bar.
+- <kbd>Shift</kbd> + <kbd>2x LMB</kbd> on an item will add or remove it from favorites.
 
 <div class="panel callout">
     <h5>Note:</h5>
