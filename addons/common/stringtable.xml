@@ -1677,9 +1677,5 @@
             <Chinesesimp>装载</Chinesesimp>
             <Turkish>Yükle</Turkish>
         </Key>
-        <Key ID="STR_ACE_Common_All">
-            <English>All</English>
-            <Portuguese>Todos</Portuguese>
-        </Key>
     </Package>
 </Project>

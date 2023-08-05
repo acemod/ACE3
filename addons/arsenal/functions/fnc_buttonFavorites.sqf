@@ -25,7 +25,7 @@ if (isNil QGVAR(favoritesOnly)) then {
     GVAR(favoritesOnly) = !GVAR(favoritesOnly);
 };
 
-_control ctrlSetText format ["%1: %2", localize "STR_GEAR_ITEMS", localize ([ELSTRING(common,All), "STR_3DEN_Favorite_textPlural"] select GVAR(favoritesOnly))];
+_control ctrlSetText format ["%1: %2", localize "STR_GEAR_ITEMS", localize (["str_word_all", "STR_3DEN_Favorite_textPlural"] select GVAR(favoritesOnly))];
 
 if (_firstRun) exitWith {};
 
