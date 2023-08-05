@@ -1584,7 +1584,7 @@
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
         </Key>
-        <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
+        <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesText">
