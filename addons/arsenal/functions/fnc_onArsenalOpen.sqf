@@ -92,11 +92,11 @@ GVAR(statsInfo) = [true, controlNull, nil, nil];
 GVAR(showActions) = true;
 GVAR(currentActionPage) = 0;
 
-[_display, _display displayCtrl IDC_buttonFavorites] call FUNC(buttonFavorites);
-GVAR(favorites) = profileNamespace getVariable [QGVAR(favorites), createHashMap];
-
 // Update current item list
 call FUNC(updateCurrentItemsList);
+
+[_display, _display displayCtrl IDC_buttonFavorites] call FUNC(buttonFavorites);
+GVAR(favorites) = profileNamespace getVariable [QGVAR(favorites), createHashMap];
 
 // This takes care of unique inventory items and unique equipment (arsenal doesn't have items/equipment whitelisted)
 call FUNC(updateUniqueItemsList);
