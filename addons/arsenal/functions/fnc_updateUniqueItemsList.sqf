@@ -33,6 +33,8 @@ private _cfgGlasses = configFile >> "CfgGlasses";
 
 private _isMagazine = false;
 private _isWeapon = false;
+private _isGrenade = false;
+private _isPut = false;
 private _config = configNull;
 private _simulationType = "";
 private _configItemInfo = "";
@@ -43,6 +45,8 @@ private _isMiscItem = false;
 {
     _isMagazine = isClass (_cfgMagazines >> _x);
     _isWeapon = isClass (_cfgWeapons >> _x);
+    _isGrenade = _x in (uiNamespace getVariable QGVAR(grenadeCache));
+    _isPut = _x in (uiNamespace getVariable QGVAR(putCache));
 
     switch (true) do {
         // Magazines
@@ -61,20 +65,21 @@ private _isMiscItem = false;
                 // Grenades
                 case (
                     !(_x in (GVAR(virtualItems) get IDX_VIRT_GRENADES)) &&
-                    {_x in (uiNamespace getVariable QGVAR(grenadeCache))}
+                    {_isGrenade}
                 ): {
                     (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GRENADES) set [_x, nil];
                 };
                 // Explosives
                 case (
                     !(_x in (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES)) &&
-                    {_x in (uiNamespace getVariable QGVAR(putCache))}
+                    {_isPut}
                 ): {
                     (GVAR(virtualItems) get IDX_VIRT_UNIQUE_EXPLOSIVES) set [_x, nil];
                 };
                 // Primary, Handgun, Secondary weapon magazines
                 case (
                     !(_x in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) &&
+                    {!_isGrenade && {!_isPut}} &&
                     {_x in (_configItems get IDX_VIRT_ITEMS_ALL) ||
                     {getNumber (_config >> QGVAR(hide)) == -1} ||
                     {getNumber (_config >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW, TYPE_MAGAZINE_SECONDARY_AND_PUT, 1536, TYPE_MAGAZINE_HANDGUN_AND_GL, TYPE_MAGAZINE_MISSILE]}}
