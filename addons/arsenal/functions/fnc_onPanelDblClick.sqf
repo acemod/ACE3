@@ -18,6 +18,8 @@ params ["_control", "_curSel"];
 
 if !(GVAR(shiftState)) exitWith {};
 
+if (GVAR(currentLeftPanel) in [IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsigina]) exitWith {};
+
 private _isLnB = (ctrlType _control) == CT_LISTNBOX;
 
 private _favorited = false;
