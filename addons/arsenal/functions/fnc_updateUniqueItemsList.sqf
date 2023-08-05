@@ -58,15 +58,6 @@ private _isMiscItem = false;
                 ): {
                     (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS) set [_x, nil];
                 };
-                // Primary, Handgun, Secondary weapon magazines
-                case (
-                    !(_x in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) &&
-                    {_x in (_configItems get IDX_VIRT_ITEMS_ALL) ||
-                    {getNumber (_config >> QGVAR(hide)) == -1} ||
-                    {getNumber (_config >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW, TYPE_MAGAZINE_SECONDARY_AND_PUT, 1536, TYPE_MAGAZINE_HANDGUN_AND_GL, TYPE_MAGAZINE_MISSILE]}}
-                ): {
-                    (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL) set [_x, nil];
-                };
                 // Grenades
                 case (
                     !(_x in (GVAR(virtualItems) get IDX_VIRT_GRENADES)) &&
@@ -80,6 +71,15 @@ private _isMiscItem = false;
                     {_x in (uiNamespace getVariable QGVAR(putCache))}
                 ): {
                     (GVAR(virtualItems) get IDX_VIRT_UNIQUE_EXPLOSIVES) set [_x, nil];
+                };
+                // Primary, Handgun, Secondary weapon magazines
+                case (
+                    !(_x in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) &&
+                    {_x in (_configItems get IDX_VIRT_ITEMS_ALL) ||
+                    {getNumber (_config >> QGVAR(hide)) == -1} ||
+                    {getNumber (_config >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW, TYPE_MAGAZINE_SECONDARY_AND_PUT, 1536, TYPE_MAGAZINE_HANDGUN_AND_GL, TYPE_MAGAZINE_MISSILE]}}
+                ): {
+                    (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL) set [_x, nil];
                 };
                 // Unknown
                 default {
