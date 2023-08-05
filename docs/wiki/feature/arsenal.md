@@ -75,7 +75,7 @@ Items can be saved to favorites by pressing <kbd>Shift</kbd> + <kbd>2x LMB</kbd>
 
 Favorited items will be shown in a light gold color by default, but this can be changed under `ACE Arsenal -> Favorites Color` in CBA Settings.
 
-It also possible to toggle between showing all items or favorites by default upon opening the arsenal via `ACE Arsenal -> Default to Favorites` in CBA Settings.
+It is also possible to toggle between showing all items or favorites by default upon opening the arsenal via `ACE Arsenal -> Default to Favorites` in CBA Settings.
 
 Those settings cannot be overwritten by mission makers and are exclusively player preference.
 
