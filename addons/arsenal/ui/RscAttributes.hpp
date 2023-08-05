@@ -199,10 +199,17 @@ class GVAR(display) {
                     tooltip = CSTRING(buttonImportTooltip);
                     onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(buttonImport));
                 };
+                class buttonFavorites: buttonHide {
+                    idc = IDC_buttonFavorites;
+                    x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
+                    text = CSTRING(buttonFavoritesText);
+                    tooltip = CSTRING(buttonFavoritesTooltip);
+                    onButtonClick = QUOTE(ARR_2([ctrlParent (_this select 0), (_this select 0)]) call FUNC(buttonFavorites));
+                };
                 class buttonClose: ctrlButtonOK {
                     idc = IDC_menuBarClose;
                     colorBackground[] = {0,0,0,0.8};
-                    x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
+                    x = QUOTE(6 * WIDTH_GAP + 5 * WIDTH_SINGLE);
                     y = QUOTE(0);
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(7 * GRID_H);

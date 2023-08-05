@@ -22,15 +22,18 @@ private _rightPanelCache = uiNamespace getVariable [QGVAR(rightPanelCache), crea
 
 private _mass = -1;
 private _color = [];
+private _alpha = 1;
 
 // Grey out items that are too big to fit in remaining space of the container
 for "_row" from 0 to (lnbSize _control select 0) - 1 do {
     _mass = _rightPanelCache getOrDefault [_control lnbData [_row, 0], 0];
+    _color = _control lnbColor [_row, 1];
 
     // Lower alpha on color for items that can't fit
-    _color = [1, 1, 1, [0.25, 1] select (_mass <= _loadRemaining)];
+    private _alpha = [0.25, 1] select (_mass <= _loadRemaining);
+    _color set [3, _alpha];
     _control lnbSetColor [[_row, 1], _color];
-    _control lnbSetColor [[_row, 2], _color];
+    _control lnbSetColor [[_row, 2], [1, 1, 1, _alpha]];
 };
 
 private _display = ctrlParent _control;

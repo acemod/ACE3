@@ -43,10 +43,14 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _rightPanelCache = uiNamespace getVariable QGVAR(rightPanelCache);
 
+private _currentCargo = GVAR(currentItems) select [IDX_CURR_UNIFORM_ITEMS, 3];
+_currentCargo = flatten _currentCargo;
+_currentCargo = (_currentCargo arrayIntersect _currentCargo);
+
 private _fnc_fillRightContainer = {
     params ["_configCategory", "_className", "_hasItemInfo", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
 
-    if (GVAR(favoritesOnly) && {!((toLower _className) in GVAR(favorites))}) exitWith {};
+    if (GVAR(favoritesOnly) && {!(_className in _currentCargo)} && {!((toLower _className) in GVAR(favorites))}) exitWith {};
 
     // If item is not in the arsenal, it must be unique
     if (!_isUnique && {!(_className in GVAR(virtualItemsFlat))}) then {
@@ -103,7 +107,8 @@ private _fnc_fillRightContainer = {
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
     _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
     if ((toLower _className) in GVAR(favorites)) then {
-        _ctrlPanel lnbSetColor [[_lbAdd, 1], [0.9, 0.875, 0.6, 1]];
+        _ctrlPanel lnbSetColor [[_lbAdd, 1], FAVORITES_COLOR];
+        _ctrlPanel lnbSetColorRight [[_lbAdd, 1], FAVORITES_COLOR];
     };
 };
 

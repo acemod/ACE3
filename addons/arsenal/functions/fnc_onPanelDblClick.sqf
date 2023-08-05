@@ -20,6 +20,8 @@ if !(GVAR(shiftState)) exitWith {};
 
 private _isLnB = (ctrlType _control) == CT_LISTNBOX;
 
+private _favorited = false;
+
 // Favorites/blacklist will always be lowercase to handle configCase changes
 private _item = "";
 if (_isLnB) then {
@@ -32,9 +34,11 @@ if (_item in GVAR(favorites)) then {
     GVAR(favorites) deleteAt _item;
 } else {
     GVAR(favorites) set [_item, nil];
+    _favorited = true;
 };
 
-private _color = [[1, 1, 1, 1], [0.9, 0.875, 0.6, 1]] select (_item in GVAR(favorites));
+private _color = [[1, 1, 1], GVAR(favoritesColor)] select _favorited;
+_color pushBack 1;
 
 if (_isLnB) then {
     _control lnbSetColor [[_curSel, 1], _color];

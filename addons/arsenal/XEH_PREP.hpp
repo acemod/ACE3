@@ -20,6 +20,7 @@ PREP(buttonActionsPage);
 PREP(buttonCargo);
 PREP(buttonClearAll);
 PREP(buttonExport);
+PREP(buttonFavorites);
 PREP(buttonHide);
 PREP(buttonImport);
 PREP(buttonLoadoutsDelete);

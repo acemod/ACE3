@@ -33,10 +33,29 @@ private _category = LLSTRING(settingCategory);
     true
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(defaultToFavorites),
+    "CHECKBOX",
+    [LSTRING(defaultToFavoritesSetting), LSTRING(defaultToFavoritesTooltip)],
+    _category,
+    false,
+    -2 // never overwrite the client
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(favoritesColor),
+    "COLOR",
+    [LSTRING(favoritesColorSetting), LSTRING(favoritesColorTooltip)],
+    _category,
+    [0.9, 0.875, 0.6],
+    -2 // never overwrite the client
+] call CBA_fnc_addSetting;
+
 private _loadoutCategory = LLSTRING(loadoutSubcategory);
 
 // Arsenal loadouts
-[QGVAR(allowDefaultLoadouts),
+[
+    QGVAR(allowDefaultLoadouts),
     "CHECKBOX",
     [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)],
     [_category, _loadoutCategory],
@@ -44,7 +63,8 @@ private _loadoutCategory = LLSTRING(loadoutSubcategory);
     true
 ] call CBA_fnc_addSetting;
 
-[QGVAR(allowSharedLoadouts),
+[
+    QGVAR(allowSharedLoadouts),
     "CHECKBOX",
     LLSTRING(allowSharingSetting),
     [_category, _loadoutCategory],
@@ -52,7 +72,8 @@ private _loadoutCategory = LLSTRING(loadoutSubcategory);
     true
 ] call CBA_fnc_addSetting;
 
-[QGVAR(EnableRPTLog),
+[
+    QGVAR(EnableRPTLog),
     "CHECKBOX",
     [LSTRING(printToRPTSetting),
     LSTRING(printToRPTTooltip)],
@@ -61,21 +82,24 @@ private _loadoutCategory = LLSTRING(loadoutSubcategory);
     false
 ] call CBA_fnc_addSetting;
 
-[QGVAR(loadoutsSaveFace),
+[
+    QGVAR(loadoutsSaveFace),
     "CHECKBOX",
     LLSTRING(loadoutsSaveFaceSetting),
     [_category, _loadoutCategory],
     false
 ] call CBA_fnc_addSetting;
 
-[QGVAR(loadoutsSaveVoice),
+[
+    QGVAR(loadoutsSaveVoice),
     "CHECKBOX",
     LLSTRING(loadoutsSaveVoiceSetting),
     [_category, _loadoutCategory],
     false
 ] call CBA_fnc_addSetting;
 
-[QGVAR(loadoutsSaveInsignia),
+[
+    QGVAR(loadoutsSaveInsignia),
     "CHECKBOX",
     LLSTRING(loadoutsSaveInsigniaSetting),
     [_category, _loadoutCategory],

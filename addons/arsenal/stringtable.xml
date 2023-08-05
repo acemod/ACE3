@@ -1572,5 +1572,26 @@
         <Key ID="STR_ACE_Arsenal_statMagCount">
             <English>Ammo count</English>
         </Key>
+        <Key ID="STR_ACE_Arsenal_favorites">
+            <English>Favorites</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
+            <English>Default to Favorites</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
+            <English>Controls whether all or favorited items are shown when opening the ACE Arsenal.\nThis can still be controlled by the user in the filters button.</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
+            <English>Favorites Color</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
+            <English>Highlight color for favorited items.</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonFavoritesText">
+            <English>Favorites</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
+            <English>Double click while holding LShift to add or remove an item from your favorites.</English>
+        </Key>
     </Package>
 </Project>
