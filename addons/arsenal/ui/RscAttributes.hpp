@@ -204,7 +204,7 @@ class GVAR(display) {
                     x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
                     text = CSTRING(buttonFavoritesText);
                     tooltip = CSTRING(buttonFavoritesTooltip);
-                    onButtonClick = QUOTE(ARR_2([ctrlParent (_this select 0), (_this select 0)]) call FUNC(buttonFavorites));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), (_this select 0))] call FUNC(buttonFavorites));
                 };
                 class buttonClose: ctrlButtonOK {
                     idc = IDC_menuBarClose;
