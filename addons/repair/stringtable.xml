@@ -35,6 +35,11 @@
             <Chinese>備用輪胎</Chinese>
             <Turkish>Yedek Tekerlek</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_Wheel">
+            <English>Wheel</English>
+            <German>Rad</German>
+            <Spanish>Rueda</Spanish>
+        </Key>
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
             <German>Reifen wechseln</German>
@@ -260,6 +265,12 @@
             <Chinesesimp>正在维修载具...</Chinesesimp>
             <Chinese>維修載具中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_name">
+            <English>Full Repair Time Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_description">
+            <English>Modifies how long it takes to perform a Full Repair.\nThe repair time is based on based on the amount of repairs needed for each part, including those normally inaccessible.</English>
         </Key>
         <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
             <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
@@ -1206,19 +1217,10 @@
             <Turkish>Sadece Gelişmiş Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
-            <English>Allow Wheel</English>
+            <English>Allow Wheel Replacement</English>
             <German>Erlaube Radwechsel</German>
             <Polish>Wymiana kół</Polish>
-            <Portuguese>Permite rodas</Portuguese>
             <Russian>Разрешить замену колес</Russian>
-            <Czech>Možnost Výměny Kol</Czech>
-            <Spanish>Permitir rueda</Spanish>
-            <Italian>Consenti Ruota</Italian>
-            <French>Roues autorisées pour</French>
-            <Japanese>タイヤを許可</Japanese>
-            <Korean>바퀴 허가</Korean>
-            <Chinesesimp>允许轮胎</Chinesesimp>
-            <Chinese>允許輪胎</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
@@ -1234,6 +1236,14 @@
             <Korean>누가 바퀴를 제거 및 교체할 수 있습니까?</Korean>
             <Chinesesimp>谁可维修轮胎？</Chinesesimp>
             <Chinese>誰可維修輪胎?</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelEnabled_name">
+            <English>Allow Wheel Patching</English>
+            <German>Erlaube Radflicken</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelEnabled_description">
+            <English>Who can patch wheels?</English>
+            <German>Wer kann Radflicken durchführen?</German>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
             <English>Allow Repair</English>
@@ -1281,7 +1291,7 @@
             <Chinese>維修門檻</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
-            <English>What is the maximum damage that can be repaired with a toolkit?</English>
+            <English>Maximum damage to which a part can be repaired with a toolkit.\n0% means all damage can be repaired.</English>
             <German>Der maximale Schaden, der von einem Reperatursatz behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przy pomocy narzędzi?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um kit de ferramentas?</Portuguese>
@@ -1311,7 +1321,7 @@
             <Chinese>維修門檻 (工兵)</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
-            <English>What is the maximum damage that can be repaired by an engineer?</English>
+            <English>Maximum damage to which a part can be repaired by an engineer above the minimum level required for the repair.\n0% means all damage can be repaired.</English>
             <German>Der maximale Schaden, der von einem Pionier behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przez mechanika?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um engenheiro?</Portuguese>
@@ -1856,7 +1866,7 @@
             <Chinese>選擇的備件數量</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_DisplayName">
-            <English>Wheel Repair Requirements</English>
+            <English>Wheel Change Requirements</English>
             <German>Bedingungen für die Reifenreperatur</German>
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
@@ -1884,6 +1894,14 @@
             <Korean>바퀴를 제거/교체하는데 필요한 물건을 정합니다.</Korean>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelRequiredItems_DisplayName">
+            <English>Wheel Patch Requirements</English>
+            <German>Bedingungen für die Radflicken</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
+            <English>Items required to patch a wheel.</English>
+            <German>Gegenstänge, die zum Reifenflicken benötigt werden.</German>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
@@ -2049,6 +2067,52 @@
             <Czech>Automaticky vypne motor při zahájení oprav.</Czech>
             <Spanish>Apagar el motor automáticamente al efectuar una reparación</Spanish>
             <Korean>수리 시 엔진을 자동으로 끕니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Repair_miscRepairTime_name">
+            <English>Part Repair Time</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_miscRepairTime_description">
+            <English>Time in seconds to complete a repair.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_wheelChangeTime_name">
+            <English>Wheel Change Time</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_wheelChangeTime_description">
+            <English>Time in seconds to remove or change a wheel.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_PatchWheel">
+            <English>Patch Wheel</English>
+            <German>Radflicken</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_PatchingWheel">
+            <English>Patching Wheel...</English>
+            <German>Radflicken...</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelTime_DisplayName">
+            <English>Wheel Patch Time</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelTime_Description">
+            <English>Time it takes to patch a wheel by 5%.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">
+            <English>Patch Wheel Threshold</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
+            <English>Maximum level to which a wheel can be patched.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
+            <English>Wheel Patch Location</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
+            <English>Where the wheel can be patched.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelOnGround">
+            <English>On the ground</English>
+            <German>Auf dem Boden</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelOnVehicle">
+            <English>On a vehicle</English>
+            <German>An einem Fahrzeug</German>
         </Key>
     </Package>
 </Project>

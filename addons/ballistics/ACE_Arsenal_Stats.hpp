@@ -24,6 +24,7 @@ class EGVAR(arsenal,stats) {
         stats[] = {"ammo", "displayName"};
         displayName = "$STR_dn_ammo";
         showText = 1;
+        condition = QUOTE(getText (_this select 1 >> _this select 0 select 0) isNotEqualTo '');
         textStatement = QUOTE(params [ARR_2('_stat', '_config')]; private _ammoDisplayName = getText (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo')) >> _stat select 1); [ARR_2(_ammoDisplayName, getText (_config >> _stat select 0))] select (_ammoDisplayName == ''));
         tabs[] = {{}, {4}};
     };
@@ -50,16 +51,16 @@ class EGVAR(arsenal,stats) {
     class ACE_magMuzzleVelocity: statBase {
         scope = 2;
         priority = 3;
-        stats[] = {"initSpeed"};
+        stats[] = {"initSpeed", "ammo"};
         displayName= CSTRING(statMuzzleVelocity);
         showText= 1;
         textStatement = QUOTE([ARR_2(_this select 0, _this select 1)] call FUNC(statTextStatement_magazineMuzzleVelocity));
-        condition = QUOTE(getNumber (_this select 1 >> (_this select 0) select 0) > 0);
+        condition = QUOTE(getText (_this select 1 >> _this select 0 select 1) isNotEqualTo '' && {getNumber (_this select 1 >> (_this select 0) select 0) > 0});
         tabs[] = {{}, {4}};
     };
     class ACE_weaponMuzzleVelocity: statBase {
         scope = 2;
-        priority = 3;
+        priority = 1;
         stats[] = {"initSpeed"};
         displayName= CSTRING(statMuzzleVelocity);
         showText = 1;
