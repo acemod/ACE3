@@ -39,7 +39,7 @@ private _category = LLSTRING(settingCategory);
     [LSTRING(defaultToFavoritesSetting), LSTRING(defaultToFavoritesTooltip)],
     _category,
     false,
-    -2 // never overwrite the client
+    2 // never overwrite the client
 ] call CBA_fnc_addSetting;
 
 [
@@ -48,7 +48,7 @@ private _category = LLSTRING(settingCategory);
     [LSTRING(favoritesColorSetting), LSTRING(favoritesColorTooltip)],
     _category,
     [0.9, 0.875, 0.6],
-    -2 // never overwrite the client
+    2 // never overwrite the client
 ] call CBA_fnc_addSetting;
 
 private _loadoutCategory = LLSTRING(loadoutSubcategory);
