@@ -30,7 +30,7 @@ for "_row" from 0 to (lnbSize _control select 0) - 1 do {
     _color = _control lnbColor [_row, 1];
 
     // Lower alpha on color for items that can't fit
-    private _alpha = [0.25, 1] select (_mass <= _loadRemaining);
+    _alpha = [0.25, 1] select (_mass <= _loadRemaining);
     _color set [3, _alpha];
     _control lnbSetColor [[_row, 1], _color];
     _control lnbSetColor [[_row, 2], [1, 1, 1, _alpha]];
