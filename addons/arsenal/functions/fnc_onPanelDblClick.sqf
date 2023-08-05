@@ -37,8 +37,7 @@ if (_item in GVAR(favorites)) then {
     _favorited = true;
 };
 
-private _color = [[1, 1, 1], GVAR(favoritesColor)] select _favorited;
-_color pushBack 1;
+private _color = ([[1, 1, 1], GVAR(favoritesColor)] select _favorited) + [1];
 
 if (_isLnB) then {
     _control lnbSetColor [[_curSel, 1], _color];
