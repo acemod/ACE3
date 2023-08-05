@@ -69,7 +69,7 @@ You can import loadouts from Virtual Arsenal into ACE Arsenal, face, voice, insi
 
 ## 2. Favorites
 
-To switch between displaying all items or just favorites, press the `All/Favorites` button on the bottom of the interface.
+To switch between displaying all items or just favorites, press the `Items:` button on the bottom of the interface.
 
 Items can be saved to favorites by pressing <kbd>Shift</kbd> + <kbd>2x LMB</kbd>. Favorites are saved to your profile, along with loadouts, and persist between missions and mod changes.
 
