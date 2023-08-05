@@ -67,14 +67,26 @@ You can import loadouts from Virtual Arsenal into ACE Arsenal, face, voice, insi
 - In the 3DEN top toolbar, click on the `TOOLS` tab
 - Click on `Import BI VA Loadouts to Ace Arsenal`
 
-## 2. Shortcuts
+## 2. Favorites
+
+To switch between displaying all items or just favorites, press the `All/Favorites` button on the bottom of the interface.
+
+Items can be saved to favorites by pressing <kbd>Shift</kbd> + <kbd>2x LMB</kbd>. Favorites are saved to your profile, along with loadouts, and persist between missions and mod changes.
+
+Favorited items will be shown in a light gold color by default, but this can be changed under `ACE Arsenal -> Favorites Color` in CBA Settings.
+
+It also possible to toggle between showing all items or favorites by default upon opening the arsenal via `ACE Arsenal -> Default to Favorites` in CBA Settings.
+
+Those settings cannot be overwritten by mission makers and are exclusively player preference.
+
+## 3. Shortcuts
 
 <div class="panel callout">
     <h5>Note:</h5>
     <p><kbd>Ctrl</kbd> + <kbd>V</kbd> does NOT work in multiplayer due to a BI safety, however <kbd>Ctrl</kbd> + <kbd>C</kbd> does since it's using the ACE3 clipboard extension.</p>
 </div>
 
-### 2.1 Outside of search bars
+### 3.1 Outside of search bars
 
 - <kbd>Ctrl</kbd> + <kbd>C</kbd>: Export current loadout to clipboard.
 - <kbd>Ctrl</kbd> + <kbd>V</kbd>: Import loadout from clipboard.
@@ -89,7 +101,7 @@ You can import loadouts from Virtual Arsenal into ACE Arsenal, face, voice, insi
     <p><kbd>Shift</kbd> + arrow keys can be used to add or remove a large amount of items in a short amount of time from the right panel.</p>
 </div>
 
-### 2.2 Inside of search bars
+### 3.2 Inside of search bars
 
 - Search bars support copy / cut and paste (same limitations as importing apply in multiplayer).
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> is supported.
