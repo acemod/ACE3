@@ -23,34 +23,19 @@ params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "pi
 
 private _skip = false;
 if (GVAR(favoritesOnly) && {!((toLower _className) in GVAR(favorites))} && {!(_className in GVAR(currentItems))}) then {
+
     switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonPrimaryWeapon: {
-            if (_configCategory == "CfgMagazines") then {
-                _skip = !(_className in primaryWeaponMagazine GVAR(center));
-            } else {
-                _skip = !(_className in primaryWeaponItems GVAR(center));
-            };
+            _skip = !(_className in (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS));
         };
         case IDC_buttonHandgun: {
-            if (_configCategory == "CfgMagazines") then {
-                _skip = !(_className in handgunMagazine GVAR(center));
-            } else {
-                _skip = !(_className in handgunItems GVAR(center));
-            };
+            _skip = !(_className in (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS));
         };
         case IDC_buttonSecondaryWeapon: {
-            if (_configCategory == "CfgMagazines") then {
-                _skip = !(_className in secondaryWeaponMagazine GVAR(center));
-            } else {
-                _skip = !(_className in secondaryWeaponItems GVAR(center));
-            };
+            _skip = !(_className in (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS));
         };
         case IDC_buttonBinoculars: {
-            if (_configCategory == "CfgMagazines") then {
-                _skip = !(_className in binocularMagazine GVAR(center));
-            } else {
-                _skip = !(_className in binocularItems GVAR(center));
-            };
+            _skip = !(_className in (GVAR(currentItems) select IDX_CURR_BINO_ITEMS));
         };
     };
 };
