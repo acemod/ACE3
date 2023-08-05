@@ -176,6 +176,7 @@ class GVAR(display) {
                     text = CSTRING(buttonHideText);
                     sizeEx = QUOTE(5 * GRID_H);
                     tooltip = CSTRING(buttonHideTooltip);
+                    onMouseEnter = QUOTE(ctrlSetFocus (_this select 0));
                     onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(buttonHide));
                 };
                 class buttonLoadouts: buttonHide {
