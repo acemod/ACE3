@@ -202,7 +202,7 @@ class GVAR(display) {
                 class buttonFavorites: buttonHide {
                     idc = IDC_buttonFavorites;
                     x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
-                    text = CSTRING(buttonFavoritesText);
+                    text = "";
                     tooltip = CSTRING(buttonFavoritesTooltip);
                     onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), (_this select 0))] call FUNC(buttonFavorites));
                 };

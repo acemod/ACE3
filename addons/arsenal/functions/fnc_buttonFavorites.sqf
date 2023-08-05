@@ -25,11 +25,7 @@ if (isNil QGVAR(favoritesOnly)) then {
     GVAR(favoritesOnly) = !GVAR(favoritesOnly);
 };
 
-if (GVAR(favoritesOnly)) then {
-    _control ctrlSetText LLSTRING(buttonFavoritesText);
-} else {
-    _control ctrlSetText LELSTRING(common,All);
-};
+_control ctrlSetText format ["%1: %2", localize "STR_GEAR_ITEMS", localize ([ELSTRING(common,All), LSTRING(favorites)] select GVAR(favoritesOnly))];
 
 if (_firstRun) exitWith {};
 
