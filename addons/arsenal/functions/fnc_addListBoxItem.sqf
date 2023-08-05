@@ -23,7 +23,6 @@ params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "pi
 
 private _skip = false;
 if (GVAR(favoritesOnly) && {!((toLower _className) in GVAR(favorites))} && {!(_className in GVAR(currentItems))}) then {
-
     switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonPrimaryWeapon: {
             _skip = !(_className in (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS));
