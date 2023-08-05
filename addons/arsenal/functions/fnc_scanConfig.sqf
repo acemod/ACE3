@@ -141,6 +141,7 @@ private _isTool = false;
 } forEach configProperties [_cfgWeapons, _filterFunction, true];
 
 // Get all grenades
+// Explicitly don't look at scope for these, we want hidden items to be sorted as grenades/explosives properly
 private _grenadeList = createHashMap;
 
 {
