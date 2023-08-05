@@ -1579,7 +1579,7 @@
             <English>Default to Favorites</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
-            <English>Controls whether all or favorited items are shown when opening the ACE Arsenal.\nThis can still be controlled by the user in the filters button.</English>
+            <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
