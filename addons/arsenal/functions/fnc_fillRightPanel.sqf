@@ -43,9 +43,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _rightPanelCache = uiNamespace getVariable QGVAR(rightPanelCache);
 
-private _currentCargo = GVAR(currentItems) select [IDX_CURR_UNIFORM_ITEMS, 3];
-_currentCargo = flatten _currentCargo;
-_currentCargo = (_currentCargo arrayIntersect _currentCargo);
+private _currentCargo = itemsWithMagazines GVAR(center);
 
 private _fnc_fillRightContainer = {
     params ["_configCategory", "_className", "_hasItemInfo", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
