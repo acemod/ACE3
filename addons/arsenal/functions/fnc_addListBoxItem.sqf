@@ -21,7 +21,41 @@
 
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
 
-if (GVAR(favoritesOnly) && {!((toLower _className) in GVAR(favorites))} && {!(_className in GVAR(currentItems))}) exitWith {};
+private _skip = false;
+if (GVAR(favoritesOnly) && {!((toLower _className) in GVAR(favorites))} && {!(_className in GVAR(currentItems))}) then {
+    switch (GVAR(currentLeftPanel)) do {
+        case IDC_buttonPrimaryWeapon: {
+            if (_configCategory == "CfgMagazines") then {
+                _skip = !(_className in primaryWeaponMagazine GVAR(center));
+            } else {
+                _skip = !(_className in primaryWeaponItems GVAR(center));
+            };
+        };
+        case IDC_buttonHandgun: {
+            if (_configCategory == "CfgMagazines") then {
+                _skip = !(_className in handgunMagazine GVAR(center));
+            } else {
+                _skip = !(_className in handgunItems GVAR(center));
+            };
+        };
+        case IDC_buttonSecondaryWeapon: {
+            if (_configCategory == "CfgMagazines") then {
+                _skip = !(_className in secondaryWeaponMagazine GVAR(center));
+            } else {
+                _skip = !(_className in secondaryWeaponItems GVAR(center));
+            };
+        };
+        case IDC_buttonBinoculars: {
+            if (_configCategory == "CfgMagazines") then {
+                _skip = !(_className in binocularMagazine GVAR(center));
+            } else {
+                _skip = !(_className in binocularItems GVAR(center));
+            };
+        };
+    };
+};
+
+if (_skip) exitWith {};
 
 // Sanitise key, as it's public; If not in cache, find info and cache it for later use
 ((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_configCategory + _className, {
