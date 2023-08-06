@@ -19,6 +19,7 @@ params ["_config"];
 // Read all valid entries from config and store
 private _entries = [];
 private _entryResult = "";
+private _function = "";
 
 {
     _entryResult = getText _x;
