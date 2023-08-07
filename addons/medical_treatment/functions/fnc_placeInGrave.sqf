@@ -19,7 +19,7 @@
 params ["_medic", "_patient"];
 TRACE_1("placeInGrave",_patient);
 
-if ((alive _patient) && {!GVAR(allowGraveUnconscious)}) exitWith {
+if ((alive _patient) && {GVAR(allowGraveDigging) < 2}) exitWith {
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 

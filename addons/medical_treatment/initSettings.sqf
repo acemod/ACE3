@@ -298,19 +298,10 @@
 
 [
     QGVAR(allowGraveDigging),
-    "CHECKBOX",
+    "LIST",
     [LSTRING(AllowGaveDigging_DisplayName), LSTRING(AllowGaveDigging_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    true,
-    true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(allowGraveUnconscious),
-    "CHECKBOX",
-    [LSTRING(AllowGraveUnconscious_DisplayName), LSTRING(AllowGraveUnconscious_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    false,
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(AllowGaveDigging_graveOnlyDead), ELSTRING(common,Yes)], 1],
     true
 ] call CBA_fnc_addSetting;
 

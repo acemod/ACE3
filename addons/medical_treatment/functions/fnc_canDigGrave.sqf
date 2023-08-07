@@ -20,4 +20,4 @@ params ["_medic", "_patient"];
 
 if !(["ace_trenches"] call EFUNC(common,isModLoaded)) exitWith {false};
 
-GVAR(allowGraveDigging) && {_patient call EFUNC(common,canDig)} && {_medic call EFUNC(trenches,hasEntrenchingTool)}
+(GVAR(allowGraveDigging) > 0) && {_patient call EFUNC(common,canDig)} && {_medic call EFUNC(trenches,hasEntrenchingTool)}

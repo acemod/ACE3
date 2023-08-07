@@ -836,11 +836,8 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_Description">
             <English>Enables digging graves to dispose of corpes.</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowGraveUnconscious_DisplayName">
-            <English>Allow Unconscious Grave</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowGraveUnconscious_Description">
-            <English>Enables placing an unconscious patient in a grave.</English>
+        <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_graveOnlyDead">
+            <English>Only if dead</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
