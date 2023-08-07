@@ -43,5 +43,5 @@ private _tabToChange = [];
     };
 
     // Delete stat
-    _tabToChange deleteAt (_tabToChange findIf {_x select 0 == _currentID});
+    _tabToChange deleteAt (_tabToChange findIf {_x select 5 == _currentID});
 } forEach _IDList;

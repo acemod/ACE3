@@ -76,11 +76,11 @@ private _fnc_addToTabs = {
         _currentTab = _tabsList select _x;
 
         // Find if there is an entry with same ID
-        if (_currentTab findIf {_x select 0 == _statName} != -1) then {
+        if (_currentTab findIf {_x select 5 == _statName} != -1) then {
             TRACE_1("A stat with this ID already exists", _statName);
         } else {
             _stat = +_finalArray;
-            _stat set [0, _statName];
+            _stat set [5, _statName];
 
             _currentTab append [_stat];
 
@@ -92,7 +92,7 @@ private _fnc_addToTabs = {
     } forEach _tabsToAddTo;
 };
 
-private _finalArray = ["", _stats, _title, [_showBar, _showText], [_barStatement, _textStatement, _condition], _priority];
+private _finalArray = [_priority, _stats, _title, [_showBar, _showText], [_barStatement, _textStatement, _condition], ""];
 
 if (_leftTabs isNotEqualTo []) then {
     [GVAR(statsListLeftPanel), _leftTabs, "L"] call _fnc_addToTabs;
@@ -117,18 +117,8 @@ private _tabToChange = [];
 
     _stats = _tabToChange select _tab;
 
-    // Put priority up front
-    {
-        reverse _x;
-    } forEach _stats;
-
-    // Sort numerically
+    // Sort by priority
     _stats sort false;
-
-    // Put it back at the rear
-    {
-        reverse _x;
-    } forEach _stats;
 } forEach _changes;
 
 _return
