@@ -1,11 +1,11 @@
 
 class CfgWeapons {
-    // Remove items from Virtual Arsenal.
+    // Remove medical item property, prevent AI from healing using these
     class ItemCore;
     class FirstAidKit: ItemCore {
-        type = 0;
+        type = TYPE_ITEM;
     };
     class Medikit: ItemCore {
-        type = 0;
+        type = TYPE_ITEM;
     };
 };

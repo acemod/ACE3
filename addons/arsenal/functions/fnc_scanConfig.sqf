@@ -131,7 +131,7 @@ private _isTool = false;
             _hasItemInfo &&
             {_isMiscItem &&
             {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}} ||
-            {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
+            {_itemInfoType in [TYPE_ITEM, TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
             {_simulationType == "ItemMineDetector"}
         ): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
