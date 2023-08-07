@@ -1585,7 +1585,7 @@
             <English>Highlight color for favorited items.</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
-            <English>Switch between displaying all items or your favorites.\nDouble click while holding LShift to add or remove an item.</English>
+            <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
         </Key>
     </Package>
 </Project>
