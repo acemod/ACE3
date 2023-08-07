@@ -777,6 +777,14 @@
             <Chinesesimp>当一个人的疼痛超过承受能力的极限时，他陷入昏迷的概率。</Chinesesimp>
             <Korean>고통 한계점을 넘을 시 기절하는 확률을 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_DisplayName">
+            <English>Pain Unconscious Threshold</English>
+            <Russian>Порог боли для потери сознания</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
+            <English>Sets the threshold for severe pain, above which a person can fall unconscious upon receiving damage.</English>
+            <Russian>Устанавливает количество боли от полученной травмы, при котором юнит может потерять сознание.</Russian>
+        </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
             <Russian>Вероятность смерти от смертельной травмы</Russian>

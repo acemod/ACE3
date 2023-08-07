@@ -49,23 +49,6 @@ private _fnc_sortLists = {
     } forEach _tabsList;
 };
 
-// Group stats into groups of 5
-private _fnc_toStatsArray = {
-    params ["_tabsList", "_tabsListAll"];
-
-    private _stats = [];
-
-    {
-        _stats = [];
-
-        for "_index" from 0 to count _x - 1 step 5 do {
-            _stats pushBack (_x select [_index, _index + 5]);
-        };
-
-        _tabsList set [_forEachIndex, _stats];
-    } forEach _tabsList;
-};
-
 private _statsListLeftPanel = [
     [], // Primary 0
     [], // Handgun 1
@@ -143,10 +126,6 @@ private _priority = 0;
 // Sort
 [_statsListLeftPanel] call _fnc_sortLists;
 [_statsListRightPanel] call _fnc_sortLists;
-
-// Group into 5 stats
-[_statsListLeftPanel] call _fnc_toStatsArray;
-[_statsListRightPanel] call _fnc_toStatsArray;
 
 //------------------------- Config Handling
 GVAR(statsListLeftPanel) = _statsListLeftPanel;

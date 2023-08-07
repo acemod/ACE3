@@ -11,7 +11,7 @@
  * Weight <NUMBER>
  *
  * Example:
- * [_object] call ace_dragging_fnc_getWeight
+ * [cursorTarget] call ace_dragging_fnc_getWeight
  *
  * Public: No
  */
@@ -36,4 +36,4 @@ if !(GVAR(skipContainerWeight)) then {
 
 // Mass in Arma isn't an exact amount but rather a volume/weight value
 // This attempts to work around that by making it a usable value (sort of)
-_weight * 0.5;
+_weight * 0.5 // return
