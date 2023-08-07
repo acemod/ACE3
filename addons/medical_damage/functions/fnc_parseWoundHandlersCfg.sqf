@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_config"];
 
 // Read all valid entries from config and store

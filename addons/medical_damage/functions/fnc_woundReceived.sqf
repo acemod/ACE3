@@ -17,6 +17,7 @@
  *
  * Public: No
  */
+
 params ["_unit", "_allDamages", "_shooter", "_ammo"];
 
 private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
