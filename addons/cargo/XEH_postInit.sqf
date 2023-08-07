@@ -125,6 +125,25 @@ GVAR(objectActions) = [
     ] call EFUNC(interact_menu,createAction)
 ];
 
+{
+    [_x, "InitPost", {
+        params ["_vehicle"];
+
+        private _actionID = _vehicle addAction [
+            "",
+            FUNC(unloadAllVehicles),
+            nil,
+            3,
+            false,
+            true,
+            "",
+            '[_target, _this] call FUNC(canShowUnloadAllVehicles)'
+        ];
+        _vehicle setUserActionText [_actionID, localize "STR_A3_ACTION_UNLOAD_ALL_VEHICLES", "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\unloadAllVehicles_ca.paa' size='1.8' shadow=2 />"];
+        _vehicle setVariable [QGVAR(unloadAllVehiclesAction), _actionID];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+} forEach ["LandVehicle", "Ship", "Air"];
+
 // find all remaining configured classes and init them, see XEH_preStart.sqf
 private _vehicleClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedVehicleClasses), {[]}]);
 {

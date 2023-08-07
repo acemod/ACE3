@@ -40,26 +40,7 @@ if !(_item in _loaded) exitWith {
     false
 };
 
-_loaded deleteAt (_loaded find _item);
-_vehicle setVariable [QGVAR(loaded), _loaded, true];
-
-private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
-private _itemSize = [_item] call FUNC(getSizeItem);
-_vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
-
-private _object = _item;
-if (_object isEqualType objNull) then {
-    detach _object;
-    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
-    // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
-} else {
-    _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
-    _object setPosASL (AGLtoASL _emptyPosAGL);
-
-    [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
-    [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;
-};
+private _object = [_item, _emptyPosAGL, _loaded, _vehicle] call FUNC(unload);
 
 // Dragging integration
 [_unloader, _object] call FUNC(unloadCarryItem);
