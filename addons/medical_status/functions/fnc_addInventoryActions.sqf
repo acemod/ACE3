@@ -19,6 +19,7 @@ if (!hasInterface) exitWith {};
 
 params ["_unit"];
 
+// Gear Action - For Unconscious Units
 private _id = _unit addAction ["", {
     params ["_target", "_caller"];
 
@@ -30,6 +31,7 @@ private _id = _unit addAction ["", {
 
 _unit setUserActionText [_id, localize "STR_ACTION_GEAR", "<img image='\A3\ui_f\data\igui\cfg\actions\gear_ca.paa' size='2.5' shadow=2 />"];
 
+// Open Bag Action - For Dead Units
 _unit addAction ["OpenBag", {
     params ["_target", "_caller"];
 
