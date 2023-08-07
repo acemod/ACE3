@@ -76,7 +76,7 @@ private _penDepth = _penFactor * _impactSpeed;
 
 // We want to base damage on the round's energy and armor penetration exclusively, so we'll use the config value to get damage
 // There's only so much damage a round can do, limited by its energy
-private _finalDamage = (_hit * (_penDepth/_armorThickness) min 1) / DAMAGE_SCALING_FACTOR;
+private _finalDamage = (_hit * ((_penDepth/_armorThickness) min 1)) / DAMAGE_SCALING_FACTOR;
 _damageData set [ENGINE_DAMAGE_INDEX, _finalDamage];
 
 TRACE_3("Armor penetration handled, passing damage", _finalDamage, _damageData, _allDamages);
