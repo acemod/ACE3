@@ -26,7 +26,7 @@ if (isNil "_return") then {
     private _hit = getNumber (_ammoConfig >> "hit");
     private _caliber = (getNumber (_ammoConfig >> "caliber"));
     private _typicalSpeed = getNumber (_ammoConfig >> "typicalSpeed");
-    private _penFactor = _caliber * ARMOR_PENETRABILITY * _typicalSpeed;
+    private _penFactor = _caliber * ARMOR_PENETRABILITY;
     _return = [_hit, _penFactor, _typicalSpeed];
     GVAR(ammoCache) set [_ammo, _return];
 };

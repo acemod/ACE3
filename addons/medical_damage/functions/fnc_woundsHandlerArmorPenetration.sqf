@@ -23,7 +23,7 @@
 #define ENGINE_DAMAGE_INDEX 0
 
 // This gets close to vanilla values on FMJ ammo
-#define DAMAGE_SCALING_FACTOR 7
+#define DAMAGE_SCALING_FACTOR 10
 
 // Based off #9216 armor values for vanilla vests
 #define ARMOR_LEVEL_1_CAP 12
@@ -46,32 +46,33 @@ if (_armor <= 0) exitWith {
 };
 
 // Armor RHA equivalent, non-linear, ref \a3\Data_F\Penetration\armour_plate/thin/medium/heavy.bisurf
+// Divided by 2 to keep inline with vanilla caliber values
 // Excedent armor over the cap gets added as a small bonus to thickness
-private _armorThickness = _armor;
+private _armorThickness = _armor/2;
 switch (true) do {
     case (_armor >= ARMOR_LEVEL_4_CAP): {
-        _armorThickness = 110 - (ARMOR_LEVEL_4_CAP - _armor);
+        _armorThickness = 55 - (ARMOR_LEVEL_4_CAP - _armor);
     };
     case (_armor >= ARMOR_LEVEL_3_CAP): {
-        _armorThickness = 80 - (ARMOR_LEVEL_3_CAP - _armor);
+        _armorThickness = 40 - (ARMOR_LEVEL_3_CAP - _armor);
     };
     case (_armor >= ARMOR_LEVEL_2_CAP): {
-        _armorThickness = 30 - (ARMOR_LEVEL_2_CAP - _armor);
+        _armorThickness = 15 - (ARMOR_LEVEL_2_CAP - _armor);
     };
     case (_armor >= ARMOR_LEVEL_1_CAP): {
-        _armorThickness = 12 - (ARMOR_LEVEL_1_CAP - _armor);
+        _armorThickness = 6 - (ARMOR_LEVEL_1_CAP - _armor);
     };
 };
 
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
-// _penFactor is ammo "caliber" * RHA penetrability * typicalSpeed, armor plates according to BI are just made of RHA with different thickness
+// _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHA with different thickness
 ([_ammo] call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
 
 // Impact damage is hit * (impactSpeed / typicalSpeed): https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#typicalSpeed
 // Impact damage is already lowered by engine based on hit angle, so speed and therefore penetration are also naturally lowered
 private _impactSpeed = (_realDamage/_hit) * _typicalSpeed;
 
-private _penDepth = _penFactor * (_impactSpeed/_typicalSpeed);
+private _penDepth = _penFactor * _impactSpeed;
 
 // We want to base damage on the round's energy and armor penetration exclusively, so we'll use the config value to get damage
 // There's only so much damage a round can do, limited by its energy
