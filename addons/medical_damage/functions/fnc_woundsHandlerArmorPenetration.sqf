@@ -47,7 +47,7 @@ if (_armor <= 0) exitWith {
 
 // Armor RHA equivalent, non-linear, ref \a3\Data_F\Penetration\armour_plate/thin/medium/heavy.bisurf
 // Excedent armor over the cap gets added as a small bonus to thickness
-private _armorThickness = 4;
+private _armorThickness = _armor;
 switch (true) do {
     case (_armor >= ARMOR_LEVEL_4_CAP): {
         _armorThickness = 110 - (ARMOR_LEVEL_4_CAP - _armor);
