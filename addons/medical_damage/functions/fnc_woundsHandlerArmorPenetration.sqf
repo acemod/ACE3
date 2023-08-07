@@ -17,9 +17,19 @@
  *
  * Public: No
  */
+
 // armor 2 with passthrough 0.8
 #define SCALED_UNPROTECTED_VALUE 4
 #define ENGINE_DAMAGE_INDEX 0
+
+// This gets close to vanilla values on FMJ ammo
+#define DAMAGE_SCALING_FACTOR 7
+
+// Based off #9216 armor values for vanilla vests
+#define ARMOR_LEVEL_1_CAP 12
+#define ARMOR_LEVEL_2_CAP 14
+#define ARMOR_LEVEL_3_CAP 16
+#define ARMOR_LEVEL_4_CAP 20
 
 params ["_unit", "_allDamages", "_typeOfDamage", ["_ammo", ""]];
 TRACE_3("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage);
@@ -29,30 +39,43 @@ if !(EGVAR(medical,alternateArmorPenetration) && {_ammo isNotEqualTo ""}) exitWi
 private _damageData = (_allDamages select 0); // selection specific
 _damageData params ["_engineDamage", "", "_realDamage"];
 
-private _armor = _realDamage/_engineDamage;
+private _armor = (_realDamage/_engineDamage) - SCALED_UNPROTECTED_VALUE;
 // There's no need to calculate penetration if there is no armor to begin with, vanilla damage handling is good enough in this case
-if (_armor <= SCALED_UNPROTECTED_VALUE) exitWith {
+if (_armor <= 0) exitWith {
     _this // return
 };
 
+// Armor RHA equivalent, non-linear, ref \a3\Data_F\Penetration\armour_plate/thin/medium/heavy.bisurf
+// Excedent armor over the cap gets added as a small bonus to thickness
+private _armorThickness = 4;
+switch (true) do {
+    case (_armor >= ARMOR_LEVEL_4_CAP): {
+        _armorThickness = 110 - (ARMOR_LEVEL_4_CAP - _armor);
+    };
+    case (_armor >= ARMOR_LEVEL_3_CAP): {
+        _armorThickness = 80 - (ARMOR_LEVEL_3_CAP - _armor);
+    };
+    case (_armor >= ARMOR_LEVEL_2_CAP): {
+        _armorThickness = 30 - (ARMOR_LEVEL_2_CAP - _armor);
+    };
+    case (_armor >= ARMOR_LEVEL_1_CAP): {
+        _armorThickness = 12 - (ARMOR_LEVEL_1_CAP - _armor);
+    };
+};
+
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
-// _penFactor is ammo "caliber" * penetrability * typicalSpeed, for simplification we consider an armor value of 1 to be equivalent to 1mm of RHA (penetrability 0.015)
-// Above is not actually the case but a good enough approximation
+// _penFactor is ammo "caliber" * RHA penetrability * typicalSpeed, armor plates according to BI are just made of RHA with different thickness
 ([_ammo] call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
 
 // Impact damage is hit * (impactSpeed / typicalSpeed): https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#typicalSpeed
-// Impact damage already takes into account hits at oblique angles, engine handles that
+// Impact damage is already lowered by engine based on hit angle, so speed and therefore penetration are also naturally lowered
 private _impactSpeed = (_realDamage/_hit) * _typicalSpeed;
 
-// Energy transferred to target can be randomized a bit, final stage ballistics isn't a science
-_hit = _hit * random [0.75, 1, 1.1];
-
-private _penDepth = _penFactor * (_impactSpeed/_typicalSpeed)^2;
+private _penDepth = _penFactor * (_impactSpeed/_typicalSpeed);
 
 // We want to base damage on the round's energy and armor penetration exclusively, so we'll use the config value to get damage
 // There's only so much damage a round can do, limited by its energy
-// Divide by 10 to scale to 0-1
-private _finalDamage = (_hit * ((_penDepth/_armor) min 1)^2) / 10;
+private _finalDamage = (_hit * (_penDepth/_armorThickness) min 1) / DAMAGE_SCALING_FACTOR;
 _damageData set [ENGINE_DAMAGE_INDEX, _finalDamage];
 
 TRACE_3("Armor penetration handled, passing damage", _finalDamage, _damageData, _allDamages);
