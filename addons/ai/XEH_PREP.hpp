@@ -1,3 +1,4 @@
+PREP(assignNVG);
 PREP(drawCuratorGarrisonPathing);
 PREP(garrison);
 PREP(garrisonMove);

@@ -68,3 +68,8 @@
     params ["_unit", "_mode"];
     _unit enableGunLights _mode;
 }] call CBA_fnc_addEventHandler;
+
+
+if (isServer) then {
+    call FUNC(assignNVG);
+};

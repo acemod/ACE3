@@ -65,5 +65,11 @@
             <Czech>Nenalezena žádná budova.</Czech>
             <Turkish>Bir yapı bulunamadı</Turkish>
         </Key>
+        <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
+            <English>Assign NVG</English>
+        </Key>
+        <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
+            <English>Assigns NVG in AI's inventory during night time and unassigns it during day time.</English>
+        </Key>
     </Package>
 </Project>
