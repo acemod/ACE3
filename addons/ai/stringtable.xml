@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="AI">
+        <Key ID="STR_ACE_AI_DisplayName">
+            <English>AI</English>
+        </Key>
         <Key ID="STR_ACE_AI_GarrisonInvalidPosition">
             <English>Invalid position provided.</English>
             <German>Ungültige Position</German>
@@ -68,7 +71,7 @@
         <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
             <English>Assign NVG</English>
         </Key>
-        <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
+        <Key ID="STR_ACE_AI_AssignNVG_Description">
             <English>Assigns NVG in AI's inventory during night time and unassigns it during day time.</English>
         </Key>
     </Package>
