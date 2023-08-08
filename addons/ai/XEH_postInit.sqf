@@ -71,5 +71,5 @@
 
 
 if (isServer) then {
-    call FUNC(assignNVG);
+    ["CAManBase", "init", FUNC(assignNVG), true, [], true] call CBA_fnc_addClassEventHandler;
 };

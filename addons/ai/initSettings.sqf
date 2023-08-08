@@ -1,4 +1,4 @@
-private _category = format ["ACE %1", localize LSTRING(DisplayName)];
+private _category = format ["ACE %1", LLSTRING(DisplayName)];
 
 [
     QGVAR(assignNVG), "CHECKBOX",
@@ -6,5 +6,14 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     false,
     1,
-    FUNC(assignNVG)
+    {
+        if (isServer) then {
+            params ["_enabled"];
+            if (_enabled) then {
+                GVAR(assignNVGpfh) = [FUNC(assignNVG), 300] call CBA_fnc_addPerFrameHandler;
+            } else {
+                [GVAR(assignNVGpfh)] call CBA_fnc_removePerFrameHandler;
+            };
+        };
+    }
 ] call CBA_fnc_addSetting;
