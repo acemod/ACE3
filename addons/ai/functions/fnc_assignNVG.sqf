@@ -22,7 +22,7 @@ private _equip = sunOrMoon < 1 || moonIntensity > 0.8;
 
 {
     private _unit = _x;
-    if (!isNull _unit && {!isPlayer _unit} && {alive _unit}) then {
+    if (alive _unit && !isPlayer _unit) then {
         private _nvg = hmd _unit;
 
         if (_equip) then {
