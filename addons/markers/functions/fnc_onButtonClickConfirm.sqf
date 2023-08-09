@@ -21,9 +21,7 @@ private _description = _display displayCtrl IDC_INSERT_MARKER;
 private _aceTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
 
 // handle timestamp
-if (cbChecked _aceTimestamp && {
-    ACE_player call FUNC(canTimestamp)
-}) then {
+if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
     private _time = [];
 
     switch (GVAR(timestampTimezone)) do
