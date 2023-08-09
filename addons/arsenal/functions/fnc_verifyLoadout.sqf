@@ -32,8 +32,6 @@ private _weapons = GVAR(virtualItems) get IDX_VIRT_WEAPONS;
 private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
 
 private _name = "";
-private _nullItemsAmount = 0;
-private _unavailableItemsAmount = 0;
 private _nullItemsList = [];
 private _unavailableItemsList = [];
 
@@ -108,14 +106,12 @@ private _fnc_weaponCheck = {
                             {_x in (_attachments get IDX_VIRT_BIPOD_ATTACHMENTS)}
                         }
                     ) then {
-                        _unavailableItemsList pushBackUnique _x;
+                        _unavailableItemsList pushBack _x;
                         _weaponArray set [_forEachIndex, ""];
-                        INC(_unavailableItemsAmount);
                     };
                 } else {
-                    _nullItemsList pushBackUnique _x;
+                    _nullItemsList pushBack _x;
                     _weaponArray set [_forEachIndex, ""];
-                    INC(_nullItemsAmount);
                 };
             };
         } else {
@@ -127,14 +123,12 @@ private _fnc_weaponCheck = {
                 if (isClass (_cfgMagazines >> _magazine)) then {
                     // Check if item is available in arsenal
                     if !(_magazine in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) then {
-                        _unavailableItemsList pushBackUnique _magazine;
+                        _unavailableItemsList pushBack _magazine;
                         _weaponArray set [_forEachIndex, []];
-                        INC(_unavailableItemsAmount);
                     };
                 } else {
-                    _nullItemsList pushBackUnique _magazine;
+                    _nullItemsList pushBack _magazine;
                     _weaponArray set [_forEachIndex, []];
-                    INC(_nullItemsAmount);
                 };
             };
         };
@@ -164,9 +158,8 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                 if (isClass (_cfgVehicles >> _item) || {isClass (_cfgWeapons >> _item)}) then {
                     // Check if item is available in arsenal
                     if !(_item in (GVAR(virtualItems) get (_dataIndex + 1))) then {
-                        _unavailableItemsList pushBackUnique _item;
+                        _unavailableItemsList pushBack _item;
                         _loadout set [_dataIndex, []];
-                        INC(_unavailableItemsAmount);
                     } else {
                         {
                             switch (true) do {
@@ -183,14 +176,12 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                                             {_item in (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES)} ||
                                             {_item in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)}
                                         ) then {
-                                            _unavailableItemsList pushBackUnique _item;
-                                            ((_loadout select _dataIndex) select 1) set [_forEachIndex, []];
-                                            INC(_unavailableItemsAmount);
+                                            _unavailableItemsList pushBack _item;
+                                            _containerItems set [_forEachIndex, []];
                                         };
                                     } else {
-                                        _nullItemsList pushBackUnique _item;
-                                        ((_loadout select _dataIndex) select 1) set [_forEachIndex, []];
-                                        INC(_nullItemsAmount);
+                                        _nullItemsList pushBack _item;
+                                        _containerItems set [_forEachIndex, []];
                                     };
                                 };
                                 // Weapons have 2 entries: Weapon info array and amount
@@ -210,14 +201,12 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                                     ) then {
                                         // Check if item is available in arsenal
                                         if !(_item in GVAR(virtualItemsFlat)) then {
-                                            _unavailableItemsList pushBackUnique _item;
-                                            ((_loadout select _dataIndex) select 1) set [_forEachIndex, []];
-                                            INC(_unavailableItemsAmount);
+                                            _unavailableItemsList pushBack _item;
+                                            _containerItems set [_forEachIndex, []];
                                         };
                                     } else {
-                                        _nullItemsList pushBackUnique _item;
-                                        ((_loadout select _dataIndex) select 1) set [_forEachIndex, []];
-                                        INC(_nullItemsAmount);
+                                        _nullItemsList pushBack _item;
+                                        _containerItems set [_forEachIndex, []];
                                     };
                                 };
 
@@ -225,9 +214,8 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                         } forEach _containerItems;
                     };
                 } else {
-                    _nullItemsList pushBackUnique _item;
+                    _nullItemsList pushBack _item;
                     _loadout set [_dataIndex, []];
-                    INC(_nullItemsAmount);
                 };
             };
         };
@@ -240,14 +228,12 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                 if (isClass (_cfgWeapons >> _item)) then {
                     // Check if item is available in arsenal
                     if !(_item in (GVAR(virtualItems) get IDX_VIRT_HEADGEAR)) then {
-                        _unavailableItemsList pushBackUnique _item;
+                        _unavailableItemsList pushBack _item;
                         _loadout set [_dataIndex, ""];
-                        INC(_unavailableItemsAmount);
                     };
                 } else {
-                    _nullItemsList pushBackUnique _item;
+                    _nullItemsList pushBack _item;
                     _loadout set [_dataIndex, ""];
-                    INC(_nullItemsAmount);
                 };
             };
         };
@@ -260,14 +246,12 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                 if (isClass (_cfgGlasses >> _item)) then {
                     // Check if item is available in arsenal
                     if !(_item in (GVAR(virtualItems) get IDX_VIRT_GOGGLES)) then {
-                        _unavailableItemsList pushBackUnique _item;
+                        _unavailableItemsList pushBack _item;
                         _loadout set [_dataIndex, ""];
-                        INC(_unavailableItemsAmount);
                     };
                 } else {
-                    _nullItemsList pushBackUnique _item;
+                    _nullItemsList pushBack _item;
                     _loadout set [_dataIndex, ""];
-                    INC(_nullItemsAmount);
                 };
             };
         };
@@ -283,14 +267,12 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
                     if (isClass (_cfgWeapons >> _item)) then {
                         // Check if item is available in arsenal
                         if !(_item in (GVAR(virtualItems) get (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _subIndex)))) then {
-                            _unavailableItemsList pushBackUnique _item;
+                            _unavailableItemsList pushBack _item;
                             _assignedItems set [_subIndex, ""];
-                            INC(_unavailableItemsAmount);
                         };
                     } else {
-                        _nullItemsList pushBackUnique _item;
+                        _nullItemsList pushBack _item;
                         _assignedItems set [_subIndex, ""];
-                        INC(_nullItemsAmount);
                     };
                 };
             };
@@ -298,4 +280,4 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
     };
 };
 
-[[_loadout, _extendedInfo], _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]
+[[_loadout, _extendedInfo], count _nullItemsList, count _unavailableItemsList, _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _nullItemsList]
