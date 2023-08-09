@@ -43,6 +43,7 @@ private _color = ([[1, 1, 1], GVAR(favoritesColor)] select _favorited) + [1];
 
 if (_isLnB) then {
     _control lnbSetColor [[_curSel, 1], _color];
+    _control lnbSetColorRight [[_curSel, 1], _color];
 } else {
     _control lbSetColor [_curSel, _color];
     _control lbSetSelectColor [_curSel, _color];
