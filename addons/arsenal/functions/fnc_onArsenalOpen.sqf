@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Not used
  * 1: Arguments <ARRAY>
- *  1.0: Arsenal display <DISPLAY>
+ * - 0: Arsenal display <DISPLAY>
  *
  * Return Value:
  * None

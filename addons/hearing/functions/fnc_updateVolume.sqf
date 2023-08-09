@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Args <ARRAY>
- *   0: Just update volume (skip ringing/recovery) <BOOL> (default: false)
+ * - 0: Just update volume (skip ringing/recovery) <BOOL> (default: false)
  *
  * Return Value:
  * None

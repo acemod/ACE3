@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Tabs to add sort to <ARRAY>
- *   0.0: Left Tab Indexes <ARRAY of NUMBERS>
- *   0.1: Right Tab Indexes <ARRAY of NUMBERS>
+ * - 0: Left Tab Indexes <ARRAY of NUMBERS>
+ * - 1: Right Tab Indexes <ARRAY of NUMBERS>
  * 1: Sort Class (a unique string for each algorithm) <STRING>
  * 2: Title <STRING>
  * 3: Algorithm <CODE>
