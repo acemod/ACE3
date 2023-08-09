@@ -4,13 +4,13 @@
  * Assigns AI first found NVG in their inventory during night time and unassigns it during day time.
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
 
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_ai_fnc_assignNVG
+ * [cursorObject] call ace_ai_fnc_assignNVG
  *
  * Public: No
  */

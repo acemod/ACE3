@@ -15,8 +15,6 @@
  * Public: No
  */
 
-if (!GVAR(assignNVG)) exitWith {};
-
 GVAR(assignNVGstate) = sunOrMoon < 1 || moonIntensity > 0.8;
 
 {
