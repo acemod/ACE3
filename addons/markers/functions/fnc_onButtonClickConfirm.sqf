@@ -24,8 +24,7 @@ private _aceTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
 if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
     private _time = [];
 
-    switch (GVAR(timestampTimezone)) do
-    {
+    switch (GVAR(timestampTimezone)) do {
         default
         {
             _time = dayTime;
