@@ -10,9 +10,12 @@ private _category = format ["ACE %1", LLSTRING(DisplayName)];
         if (isServer) then {
             params ["_enabled"];
             if (_enabled) then {
-                GVAR(assignNVGpfh) = [FUNC(assignNVG), 300] call CBA_fnc_addPerFrameHandler;
+                if (GVAR(assignNVGpfh) == -1) then {
+                    GVAR(assignNVGpfh) = [FUNC(assignNVG), 300] call CBA_fnc_addPerFrameHandler;
+                };
             } else {
                 [GVAR(assignNVGpfh)] call CBA_fnc_removePerFrameHandler;
+                GVAR(assignNVGpfh) = -1;
             };
         };
     }
