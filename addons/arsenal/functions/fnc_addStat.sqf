@@ -82,7 +82,7 @@ private _fnc_addToTabs = {
             _stat = +_finalArray;
             _stat set [5, _statName];
 
-            _currentTab append [_stat];
+            _currentTab pushBack _stat;
 
             _return pushBack _statName;
 
