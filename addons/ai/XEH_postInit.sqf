@@ -73,8 +73,6 @@
 if (isServer) then {
     ["CAManBase", "init", {
         // wait for HMD to be assigned so `hmd _unit` works
-        [{
-            _this call FUNC(assignNVG);
-        }, _this, 1] call CBA_fnc_waitAndExecute;
+        [FUNC(assignNVG), _this, 1] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addClassEventHandler;
 };
