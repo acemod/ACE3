@@ -50,10 +50,10 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _loadoutCachedInfo = [_loadoutData] call FUNC(verifyLoadout);
             _contentPanelCtrl setVariable [_loadoutNameAndTab, _loadoutCachedInfo];
 
-            _loadoutCachedInfo params ["", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
+            _loadoutCachedInfo params ["", "_nullItemsList", "_unavailableItemsList"];
 
             // Log missing / nil items to RPT (only once per arsenal session)
-            if (GVAR(EnableRPTLog) && {(_nullItemsAmount > 0) || {_unavailableItemsAmount > 0}}) then {
+            if (GVAR(EnableRPTLog) && {(_nullItemsList isNotEqualTo []) || {_unavailableItemsList isNotEqualTo []}}) then {
                 private _printComponent = "ACE_Arsenal - Loadout:";
                 private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
                 private _printUnavailableItemsList = ["Unavailable items:", str _unavailableItemsList] joinString " ";
@@ -69,7 +69,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _contentPanelCtrl lnbSetColumnsPos [0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
         };
 
-        _loadoutCachedInfo params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount"];
+        _loadoutCachedInfo params ["_extendedLoadout", "_nullItemsList", "_unavailableItemsList"];
         _extendedLoadout params ["_loadout"];
 
         _newRow = _contentPanelCtrl lnbAddRow ["", _loadoutName];
@@ -77,10 +77,10 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         ADD_LOADOUTS_LIST_PICTURES
 
         // Change color on loadout lines that have items that aren't available or don't exist
-        if (_nullItemsAmount > 0) then {
+        if (_nullItemsList isNotEqualTo []) then {
             _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
         } else {
-            if (_unavailableItemsAmount > 0) then {
+            if (_unavailableItemsList isNotEqualTo) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
             };
         };
@@ -107,7 +107,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
             [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
         } else {
-            ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount"];
+            ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsList", "_unavailableItemsList"];
             _extendedLoadout params ["_loadout"];
 
             _contentPanelCtrl lnbSetColumnsPos [0, 0.15, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
@@ -118,10 +118,10 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _contentPanelCtrl lnbSetData [[_newRow, 1], _loadoutVar];
 
             // Change color on loadout lines that have items that aren't available or don't exist
-            if (_nullItemsAmount > 0) then {
+            if (_nullItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
             } else {
-                if (_unavailableItemsAmount > 0) then {
+                if (_unavailableItemsList isNotEqualTo []) then {
                     _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
                 };
             };

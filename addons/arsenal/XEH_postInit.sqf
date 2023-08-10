@@ -60,7 +60,7 @@ GVAR(lastSortDirectionRight) = DESCENDING;
     if (!isNil QGVAR(currentLoadoutsTab) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
         private _curSelData = _contentPanelCtrl lnbData [lnbCurSelRow _contentPanelCtrl, 1];
 
-        ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount"];
+        ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsList", "_unavailableItemsList"];
         _extendedLoadout params ["_loadout"];
 
         private _newRow = _contentPanelCtrl lnbAddRow [_playerName, _loadoutName];
@@ -71,10 +71,10 @@ GVAR(lastSortDirectionRight) = DESCENDING;
         _contentPanelCtrl lnbSetData [[_newRow, 1], _playerName + _loadoutName];
 
         // Set color of row, depending if items are unavailable/missing
-        if (_nullItemsAmount > 0) then {
+        if (_nullItemsList isNotEqualTo []) then {
             _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]];
         } else {
-            if (_unavailableItemsAmount > 0) then {
+            if (_unavailableItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
             };
         };

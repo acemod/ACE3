@@ -78,6 +78,9 @@ if (isNil QGVAR(virtualItems)) then {
 
 GVAR(virtualItemsFlatAll) = +GVAR(virtualItemsFlat);
 
+// Used by FUNC(verifyLoadout) for an optimization
+GVAR(virtualItemsFlatAll) set ["", nil];
+
 GVAR(currentFace) = face GVAR(center);
 GVAR(currentVoice) = speaker GVAR(center);
 GVAR(currentInsignia) = GVAR(center) call BIS_fnc_getUnitInsignia;

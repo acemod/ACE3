@@ -23,14 +23,6 @@ if (count _loadout == 2) then {
     _loadout = _loadout select 0;
 };
 
-private _cfgWeapons = configFile >> "CfgWeapons";
-private _cfgMagazines = configFile >> "CfgMagazines";
-private _cfgVehicles = configFile >> "CfgVehicles";
-private _cfgGlasses = configFile >> "CfgGlasses";
-
-private _weapons = GVAR(virtualItems) get IDX_VIRT_WEAPONS;
-private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
-
 private _name = "";
 private _nullItemsList = [];
 private _unavailableItemsList = [];
@@ -38,26 +30,20 @@ private _unavailableItemsList = [];
 // Search for all items and turn them into config case; Don't touch other value types
 private _fnc_toConfigCase = {
     _this apply {
-        if (_x isEqualType "") then {
-            if (_x != "") then {
-                _name = _x call EFUNC(common,getConfigName);
+        if (_x isEqualType "" && {_x != ""}) then {
+            _name = _x call EFUNC(common,getConfigName);
 
-                // If item doesn't exist in config, "" is returned
-                // Just return unaltered item name in that case, so it can be documented as being unavailable
-                if (_name != "") then {
-                    _name
-                } else {
-                    _x
-                };
-            } else {
-                _x
+            // If item doesn't exist in config, "" is returned
+            if (_name == "") then {
+                _nullItemsList pushBack _x;
             };
+            _name
         } else {
             // Handle arrays
             if (_x isEqualType []) then {
                 _x call _fnc_toConfigCase
             } else {
-                // All other types
+                // All other types and empty strings
                 _x
             };
         };
@@ -70,47 +56,18 @@ _loadout = _loadout call _fnc_toConfigCase;
 
 // Check a weapon, with its attachments and magazines, if items are available
 private _fnc_weaponCheck = {
-    params ["_weaponArray", ["_index", -1]];
+    params ["_weaponArray"];
 
     {
         // Weapons and attachments
         if (_x isEqualType "") then {
             if (_x != "") then {
-                // Check if item exists
-                if (isClass (_cfgWeapons >> _x)) then {
-                    // Get base weapon
-                    _x = _x call FUNC(baseWeapon);
+                // Get base weapon
+                _x = _x call FUNC(baseWeapon);
 
-                    // Check if item is available in arsenal
-                    if !(
-                        // Weapon class name is at the very start of the array
-                        if (_forEachIndex == 0) then {
-                            // If the type of weapon is known, only look through that array
-                            if (_index != -1) then {
-                                // If binos, choose differently
-                                if (_index == IDX_LOADOUT_BINO) then {
-                                    _x in (GVAR(virtualItems) get IDX_VIRT_BINO)
-                                } else {
-                                    _x in (_weapons get _index)
-                                };
-                            } else {
-                                _x in (_weapons get IDX_VIRT_PRIMARY_WEAPONS) ||
-                                {_x in (_weapons get IDX_VIRT_SECONDARY_WEAPONS)} ||
-                                {_x in (_weapons get IDX_VIRT_HANDGUN_WEAPONS)} ||
-                                {_x in (GVAR(virtualItems) get IDX_VIRT_BINO)}
-                            };
-                        } else {
-                            _x in (_attachments get IDX_VIRT_OPTICS_ATTACHMENTS) ||
-                            {_x in (_attachments get IDX_VIRT_FLASHLIGHT_ATTACHMENTS)} ||
-                            {_x in (_attachments get IDX_VIRT_MUZZLE_ATTACHMENTS)} ||
-                            {_x in (_attachments get IDX_VIRT_BIPOD_ATTACHMENTS)}
-                        }
-                    ) then {
-                        _unavailableItemsList pushBack _x;
-                        _weaponArray set [_forEachIndex, ""];
-                    };
-                } else {
-                    _nullItemsList pushBack _x;
+                // Check if item is available in arsenal
+                if !(_x in GVAR(virtualItemsFlatAll)) then {
+                    _unavailableItemsList pushBack _x;
                     _weaponArray set [_forEachIndex, ""];
                 };
             };
@@ -119,15 +76,9 @@ private _fnc_weaponCheck = {
             if (_x isNotEqualTo []) then {
                 _x params ["_magazine"];
 
-                // Check if item exists
-                if (isClass (_cfgMagazines >> _magazine)) then {
-                    // Check if item is available in arsenal
-                    if !(_magazine in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) then {
-                        _unavailableItemsList pushBack _magazine;
-                        _weaponArray set [_forEachIndex, []];
-                    };
-                } else {
-                    _nullItemsList pushBack _magazine;
+                // Check if item is available in arsenal
+                if !(_magazine in GVAR(virtualItemsFlatAll)) then {
+                    _unavailableItemsList pushBack _magazine;
                     _weaponArray set [_forEachIndex, []];
                 };
             };
@@ -145,7 +96,7 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
         case IDX_LOADOUT_SECONDARY_WEAPON;
         case IDX_LOADOUT_HANDGUN_WEAPON;
         case IDX_LOADOUT_BINO: {
-            [_loadout select _dataIndex, _dataIndex] call _fnc_weaponCheck;
+            [_loadout select _dataIndex] call _fnc_weaponCheck;
         };
         // Uniform, vest, backpack
         case IDX_LOADOUT_UNIFORM;
@@ -153,131 +104,49 @@ for "_dataIndex" from IDX_LOADOUT_PRIMARY_WEAPON to IDX_LOADOUT_ASSIGNEDITEMS do
         case IDX_LOADOUT_BACKPACK: {
             (_loadout select _dataIndex) params [["_item", ""], ["_containerItems", []]];
 
-            if (_item != "") then {
-                // Check if item exists
-                if (isClass (_cfgVehicles >> _item) || {isClass (_cfgWeapons >> _item)}) then {
-                    // Check if item is available in arsenal
-                    if !(_item in (GVAR(virtualItems) get (_dataIndex + 1))) then {
-                        _unavailableItemsList pushBack _item;
-                        _loadout set [_dataIndex, []];
-                    } else {
-                        {
-                            switch (true) do {
-                                // Magazines have each 3 entries: Name, number of magazines and ammo count
-                                case (_x isEqualTypeArray ["", 0, 0]): {
-                                    _x params ["_item"];
-
-                                    // Check if item exists
-                                    if (isClass (_cfgMagazines >> _item)) then {
-                                        // Check if item is available in arsenal
-                                        if !(
-                                            _item in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL) ||
-                                            {_item in (GVAR(virtualItems) get IDX_VIRT_GRENADES)} ||
-                                            {_item in (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES)} ||
-                                            {_item in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)}
-                                        ) then {
-                                            _unavailableItemsList pushBack _item;
-                                            _containerItems set [_forEachIndex, []];
-                                        };
-                                    } else {
-                                        _nullItemsList pushBack _item;
-                                        _containerItems set [_forEachIndex, []];
-                                    };
-                                };
-                                // Weapons have 2 entries: Weapon info array and amount
-                                case (_x isEqualTypeArray [[], 0]): {
-                                    [_x select 0] call _fnc_weaponCheck;
-                                };
-                                // Misc. items have 2 entries: Name and amount, containers have 2 entries: Name and isBackpack
-                                default {
-                                    _x params ["_item"];
-
-                                    // Check if item exists
-                                    if (
-                                        isClass (_cfgWeapons >> _item) ||
-                                        {isClass (_cfgMagazines >> _item)} ||
-                                        {isClass (_cfgGlasses >> _item)} ||
-                                        {isClass (_cfgVehicles >> _item)}
-                                    ) then {
-                                        // Check if item is available in arsenal
-                                        if !(_item in GVAR(virtualItemsFlat)) then {
-                                            _unavailableItemsList pushBack _item;
-                                            _containerItems set [_forEachIndex, []];
-                                        };
-                                    } else {
-                                        _nullItemsList pushBack _item;
-                                        _containerItems set [_forEachIndex, []];
-                                    };
-                                };
-
-                            };
-                        } forEach _containerItems;
-                    };
-                } else {
-                    _nullItemsList pushBack _item;
-                    _loadout set [_dataIndex, []];
-                };
+            if !(_item in GVAR(virtualItemsFlatAll)) then {
+                _unavailableItemsList pushBack _item;
+                _loadout set [_dataIndex, []];
+                continue
             };
-        };
-        // Headgear
-        case IDX_LOADOUT_HEADGEAR: {
-            _item = _loadout select _dataIndex;
 
-            if (_item != "") then {
-                // Check if item exists
-                if (isClass (_cfgWeapons >> _item)) then {
-                    // Check if item is available in arsenal
-                    if !(_item in (GVAR(virtualItems) get IDX_VIRT_HEADGEAR)) then {
-                        _unavailableItemsList pushBack _item;
-                        _loadout set [_dataIndex, ""];
-                    };
-                } else {
-                    _nullItemsList pushBack _item;
-                    _loadout set [_dataIndex, ""];
+            {
+                _x params ["_item"];
+
+                if (_item isEqualType []) then {
+                    _x call _fnc_weaponCheck;
+                    continue
                 };
-            };
+
+
+                if !(_item in GVAR(virtualItemsFlatAll)) then {
+                    _unavailableItemsList pushBack _item;
+                    _containerItems set [_forEachIndex, []];
+                };
+            } forEach _containerItems;
         };
-        // Facewear
+        // Headgear & Facewear
+        case IDX_LOADOUT_HEADGEAR;
         case IDX_LOADOUT_GOGGLES: {
             _item = _loadout select _dataIndex;
 
-            if (_item != "") then {
-                // Check if item exists
-                if (isClass (_cfgGlasses >> _item)) then {
-                    // Check if item is available in arsenal
-                    if !(_item in (GVAR(virtualItems) get IDX_VIRT_GOGGLES)) then {
-                        _unavailableItemsList pushBack _item;
-                        _loadout set [_dataIndex, ""];
-                    };
-                } else {
-                    _nullItemsList pushBack _item;
-                    _loadout set [_dataIndex, ""];
-                };
+            if !(_item in GVAR(virtualItemsFlatAll)) then {
+                _unavailableItemsList pushBack _item;
+                _loadout set [_dataIndex, ""];
             };
         };
         // Assigned items: Map, Compass, Watch, GPS / UAV Terminal, Radio, NVGs
         case IDX_LOADOUT_ASSIGNEDITEMS: {
             private _assignedItems = _loadout select _dataIndex;
 
-            for "_subIndex" from 0 to 5 do {
-                _item = _assignedItems select _subIndex;
-
-                if (_item != "") then {
-                    // Check if item exists
-                    if (isClass (_cfgWeapons >> _item)) then {
-                        // Check if item is available in arsenal
-                        if !(_item in (GVAR(virtualItems) get (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _subIndex)))) then {
-                            _unavailableItemsList pushBack _item;
-                            _assignedItems set [_subIndex, ""];
-                        };
-                    } else {
-                        _nullItemsList pushBack _item;
-                        _assignedItems set [_subIndex, ""];
-                    };
-                };
-            };
+            {
+                if !(_x in GVAR(virtualItemsFlatAll)) then {
+                    _unavailableItemsList pushBack _x;
+                    _assignedItems set [_forEachIndex, ""];
+                }
+            } forEach _assignedItems;
         };
     };
 };
 
-[[_loadout, _extendedInfo], count _nullItemsList, count _unavailableItemsList, _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _nullItemsList]
+[[_loadout, _extendedInfo], _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _unavailableItemsList]
