@@ -50,7 +50,7 @@ private _fnc_toConfigCase = {
     };
 };
 
-// Convert loadout to config case
+// Convert loadout to config case and replace null items
 // Loadout might come from a different modpack, which might have different config naming
 _loadout = _loadout call _fnc_toConfigCase;
 
