@@ -80,7 +80,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         if (_nullItemsList isNotEqualTo []) then {
             _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
         } else {
-            if (_unavailableItemsList isNotEqualTo) then {
+            if (_unavailableItemsList isNotEqualTo [""]) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
             };
         };
