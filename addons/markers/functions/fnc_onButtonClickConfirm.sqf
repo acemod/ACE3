@@ -1,19 +1,19 @@
 #include "script_component.hpp"
 /*
-* Author: Freddo, Daniël H.
-* When the confirm button is pressed.
-*
-* Arguments:
-* 0: Confirm button <CONTROL>
-*
-* Return Value:
-* None
-*
-* Example:
-* [_buttonOk] call ACE_markers_fnc_onButtonClickConfirm
-*
-* Public: No
-*/
+ * Author: Freddo, Daniël H.
+ * When the confirm button is pressed.
+ *
+ * Arguments:
+ * 0: Confirm button <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_buttonOk] call ACE_markers_fnc_onButtonClickConfirm
+ *
+ * Public: No
+ */
 params ["_buttonOk"];
 
 private _display = ctrlParent _buttonOk;
