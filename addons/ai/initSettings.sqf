@@ -11,7 +11,7 @@ private _category = format ["ACE %1", LLSTRING(DisplayName)];
             params ["_enabled"];
             if (_enabled) then {
                 if (GVAR(assignNVGpfh) == -1) then {
-                    GVAR(assignNVGpfh) = [FUNC(assignNVG), 300] call CBA_fnc_addPerFrameHandler;
+                    GVAR(assignNVGpfh) = [FUNC(assignNVGpfh), 300] call CBA_fnc_addPerFrameHandler;
                 };
             } else {
                 [GVAR(assignNVGpfh)] call CBA_fnc_removePerFrameHandler;
