@@ -8,7 +8,7 @@
  * 1: Action class (unique string for each action) <STRING>
  * 2: Title <STRING>
  * 3: Actions <ARRAY of ARRAYS>
- * 4: Condition <CODE> {default: {true}}
+ * 4: Condition <CODE> (default: {true})
  * 5: Scope editor <NUMBER> (default: 2)
  *
  * Return Value:
