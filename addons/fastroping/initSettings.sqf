@@ -15,5 +15,5 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(setting_c
     [LSTRING(setting_autoAddFRIES_displayName), LSTRING(setting_autoAddFRIES_description)],
     _category,
     false, // default value
-    true, // isGlobal
+    true // isGlobal
 ] call CBA_fnc_addSetting;
