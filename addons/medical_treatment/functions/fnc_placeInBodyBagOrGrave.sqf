@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- *   0: Medic <OBJECT>
- *   1: Patient <OBJECT>
+ * - 0: Medic <OBJECT>
+ * - 1: Patient <OBJECT>
  * 1: Resting Place Object <OBJECT>
  *
  * Return Value:

@@ -834,7 +834,7 @@
             <English>Allow Grave Digging</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_Description">
-            <English>Enables digging graves to dispose of corpes.</English>
+            <English>Enables digging graves to dispose of corpses.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_graveOnlyDead">
             <English>Only if dead</English>
