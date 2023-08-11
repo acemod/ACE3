@@ -12,7 +12,7 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(setting_c
 
 [
     QGVAR(autoAddFRIES), "CHECKBOX",
-    [LSTRING(setting_autoAddFRIES_displayName), LSTRING(setting_autoAddFRIES_description],
+    [LSTRING(setting_autoAddFRIES_displayName), LSTRING(setting_autoAddFRIES_description)],
     _category,
     false, // default value
     true, // isGlobal
