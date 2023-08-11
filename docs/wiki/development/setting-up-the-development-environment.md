@@ -19,7 +19,7 @@ This page describes how you can setup your development environment for ACE3, all
 
 **HEMTT:** _(recommended)_
 - [Windows] PowerShell v3.0+ _(pre-installed on Windows 8 or newer)_
-- [HEMTT](https://github.com/BrettMayson/HEMTT/releases) (>=v1.5.1) in project root _(Windows users can double-click `tools/setup.bat`)_
+- [HEMTT](https://github.com/BrettMayson/HEMTT/releases) (>=v1.7.2) in project root _(Windows users can double-click `tools/setup.bat`)_
     - `hemtt` (Linux) or `hemtt.exe` (Windows)
 
 **Mikero Tools:**
