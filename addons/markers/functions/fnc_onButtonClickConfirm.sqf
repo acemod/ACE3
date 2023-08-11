@@ -25,8 +25,7 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
     private _time = [];
 
     switch (GVAR(timestampTimezone)) do {
-        default
-        {
+        default {
             _time = dayTime;
         };
         case 1:
