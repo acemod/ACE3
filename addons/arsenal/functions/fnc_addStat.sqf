@@ -82,7 +82,7 @@ private _fnc_addToTabs = {
             _stat = +_finalArray;
             _stat set [0, _statName];
 
-            _index = _currentTab findIf {count _x < 5};
+            private _index = _currentTab findIf {count _x < 5};
 
             // Add to existing page if there's enough space, otherwise create a new page
             if (_index != -1) then {

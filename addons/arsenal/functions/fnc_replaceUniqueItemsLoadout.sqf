@@ -136,7 +136,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
         // Assigned items: Map, Compass, Watch, GPS / UAV Terminal, Radio, NVGs
         case IDX_LOADOUT_ASSIGNEDITEMS: {
             // Check if assignedItems have items that need replacing with a defined base
-            _items = _x;
+            private _items = _x;
 
             {
                 if (_x != "") then {

@@ -22,7 +22,7 @@ private _posASL = _input;
 
 if ((_input isEqualType objNull) && {
     _posASL = getPosASL _input;
-    (getPosATL _unit) select 2 > 0.05 || // Walking on objects, such as buildings, pavements, etc.
+    (getPosATL _input) select 2 > 0.05 || // Walking on objects, such as buildings, pavements, etc.
     {surfaceIsWater _posASL} // posATL in low water (not as low to allow awalking) is negative
 }) exitWith {false};
 
