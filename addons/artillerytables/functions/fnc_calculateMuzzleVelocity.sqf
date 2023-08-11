@@ -4,12 +4,12 @@
  * Calculates the muzzleVelocity change with advanced calculations.
  *
  * Arguments:
- * 0: initial muzzle velocity <NUMBER>
- * 1: temperature (in C) <NUMBER>
- * 2: air density (kg/m^3) <NUMBER>
+ * 0: Initial Muzzle velocity; meters/second <NUMBER>
+ * 1: Temperature; degrees Celsius <NUMBER>
+ * 2: Atmospheric Density; kg/(meters^3) <NUMBER>
  *
  * Return Value:
- * Adjusted muzzle Velocity <NUMBER>
+ * Adjusted Muzzle Velocity; Meters <NUMBER>
  *
  * Example:
  * [200, 15, 1.225] call ace_artilleryTables_fnc_calculateMuzzleVelocity
@@ -25,4 +25,4 @@ private _newMuzzleVelocityCoefficient = (((_temperature + 273.13) / 288.13 - 1) 
 
 private _newMuzzleVelocity = _muzzleVelocity * _newMuzzleVelocityCoefficient;
 
-_newMuzzleVelocity;
+_newMuzzleVelocity

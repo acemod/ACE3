@@ -4,21 +4,21 @@
  * Adjusts a target point north and east, and recalculates a solution in air based on atmospheric conditions
  *
  * Arguments:
- * 0: Distance to Target; 
- * 1: Height of target
- * 2: muzzle velocity
- * 3: High angle boolean (true is high angle)
- * 4: air friction
- * 5: temperature 
- * 6: atmospheric density 
- * 7: cross wind (negative is right to left) m/s
- * 8: tail wind (negative is flying into wind) m/s
+ * 0: Distance to Target; meters <NUMBER>
+ * 1: Height of target; meters, relative to gun altitude (positive means target higher than gun) <NUMBER>
+ * 2: Muzzle velocity; meters/second <NUMBER>
+ * 3: High angle boolean (true is high angle) <BOOL>
+ * 4: Air Friction; meters^-1 [(m/s^2)/(m^2/s^2)] <NUMBER>
+ * 5: Temperature; degrees Celsius <NUMBER>
+ * 6: Atmospheric Density; kg/(meters^3) <NUMBER>
+ * 7: Cross wind; meters/second (negative is Right to Left) <NUMBER>
+ * 8: Tail wind; meters/second (negative is flying against the wind) <NUMBER>
  *
  * Return Value:
- * array of returns <ARRAY>
- * 0: angle of shot - milliradians
- * 1: angle adjust left or right - milliradians
- * 2: time of flight
+ * Array of returns <ARRAY>
+ * 0: Angle of shot; Milliradians <NUMBER>
+ * 1: Angle adjust left or right; Milliradians <NUMBER>
+ * 2: Time of flight; seconds <NUMBER>
  *
  * Example:
  * [myPos, 0, 200, true, -0.0001, 15, 1.225, 5, -10] call ace_artilleryTables_fnc_simulateShot
@@ -50,7 +50,7 @@ private _tof = 0;
 
 while {abs(_resultDistance - _targetDistance) > 0.5} do {
     private _useAngleRad = parseSimpleArray (("ace_artilleryTables" callExtension ["simulateFindSolution", [_useDistance, _targetHeight, _muzzleVelocity, _airFriction, _higharc]]) select 0) select 1; 
-    _useAngle = deg(_useAngleRad) * 6400/360;
+    _useAngle = deg(_useAngleRad) * DEGTOMILS;
 
     private _shotResults = [_useAngle, _targetHeight, _muzzleVelocity, _airFriction, _crossWind, _tailWind, _temperature, _airDensity] call FUNC(simulateShot);
     
@@ -61,6 +61,6 @@ while {abs(_resultDistance - _targetDistance) > 0.5} do {
 };
 
 private _angleOffsetDeg = _xDeviation atan2 _resultDistance;
-private _angleOffset = _angleOffsetDeg * 6400 / 360;
+private _angleOffset = _angleOffsetDeg * DEGTOMILS;
 
-[_useAngle, -_angleOffset, _tof];
+[_useAngle, -_angleOffset, _tof]

@@ -1,24 +1,24 @@
 #include "script_component.hpp"
 /*
  * Author: LorenLuke
- * Adjusts a target point north and east, and recalculates a solution in air based on atmospheric conditions
+ * Provides fire angle and deflection solutions on a target of set distance and height, including accounting for drag and atmospheric wind conditions.
  *
  * Arguments:
- * 0: Own Position ASL; 
- * 1: Target Position ASL
- * 2: muzzle velocity
- * 3: High angle boolean (true is high angle)
- * 4: air friction
- * 5: temperature 
- * 6: atmospheric density 
- * 7: direction of wind (in degrees)
- * 8: speed of wind in m/s
+ * 0: Gun Position ASL; <ARRAY>
+ * 1: Target Position ASL; <ARRAY>
+ * 2: Muzzle Velocity; meters/second <NUMBER>
+ * 3: High angle boolean (true is high angle) <BOOL>
+ * 4: Air Friction; meters^-1 [(m/s^2)/(m^2/s^2)] <NUMBER>
+ * 5: Temperature; degrees Celsius <NUMBER>
+ * 6: Atmospheric Density; kg/(meters^3) <NUMBER>
+ * 7: Direction of wind; degrees clockwise from north <NUMBER>
+ * 8: Speed of wind; meters/second <NUMBER>
  *
  * Return Value:
  * array of returns <ARRAY>
- * 0: angle of shot - milliradians
- * 1: angle adjust left or right - milliradians
- * 2: time of flight
+ * 0: Angle of shot; Milliradians <NUMBER>
+ * 1: Angle adjust left or right; Milliradians <NUMBER>
+ * 2: Time of flight; seconds <NUMBER>
  *
  * Example:
  * [myPos, targetPos, 200, true, -0.0001, 15, 1.225, 225, 5] call ace_artilleryTables_fnc_calculateSolution
@@ -41,4 +41,4 @@ private _tailWind = -cos(_targetDir - _windDir) * _windSpeed;
 
 private _solutionReturns = [_targetDist, _heightDif, _muzzleVelocity, _highAngle, _airFriction, _crossWind, _tailWind, _temperature, _airDensity] call FUNC(calculateElevation);
 
-_solutionReturns;
+_solutionReturns

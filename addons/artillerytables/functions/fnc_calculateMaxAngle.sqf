@@ -4,12 +4,12 @@
  * Calculates the best possible angle to shoot farthest based on muzzle velocity and air friction.
  *
  * Arguments:
- * 0: initial muzzle velocity <NUMBER>
- * 1: air friction <NUMBER>
+ * 0: Initial Muzzle Velocity; meters/second <NUMBER>
+ * 1: Air Friction; meters^-1 (m/s^2)/(m^2/s^2) <NUMBER>
  *
  * Return Values: <ARRAY>
- * 1: Best Angle -- milliradiance
- * 2: Furthest Distance - meters
+ * 1: Best Angle; Milliradians <NUMBER>
+ * 2: Furthest Distance; Meters <NUMBER>
  *
  * Example:
  * [200, -0.00006] call ace_artilleryTables_fnc_calculateMuzzleVelocity
@@ -23,4 +23,4 @@ private _returns = parseSimpleArray (("ace_artilleryTables" callExtension ["find
 _returns = [deg(_returns select 0) * 6400 / 360, _returns select 1];
 _returns params ["_bestAngle", "_bestDistance"];
 
-_returns;
+_returns

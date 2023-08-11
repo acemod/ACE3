@@ -1,23 +1,23 @@
 #include "script_component.hpp"
 /*
  * Author: LorenLuke
- * Simulates an indirect shot on a target of known height in given atmospheric conditions
+ * Simulates an indirect shot on a target of known height with given drag, wind, and atmospheric conditions
  *
  * Arguments:
- * 0: angle - in milliradians 
- * 1: target Height
- * 2: muzzle velocity
- * 3: air friction
- * 4: cross wind - negative is right-to-left
- * 5: tail wind - negative is flying into the wind
- * 6: temperature 
- * 7: atmospheric density 
+ * 0: Gun Elevation Angle; milliradians <NUMBER>
+ * 1: Relative Target Height; meters, relative to gun altitude (positive means target higher than gun) <NUMBER>
+ * 2: Muzzle Velocity; meters/second <NUMBER>
+ * 3: Air Friction; meters^-1 [(m/s^2)/(m^2/s^2)] <NUMBER>
+ * 4: Cross wind; meters/second (negative is Right to Left) <NUMBER>
+ * 5: Tail wind; meters/second (negative is flying against the wind) <NUMBER>
+ * 6: Temperature; degrees Celsius <NUMBER>
+ * 7: Atmospheric Density; kg/(meters^3) <NUMBER>
  *
  * Return Value:
  * array of returns <ARRAY>
- * 0: left-right Deviation
- * 1: distance of shot
- * 2: time of flight
+ * 0: Deflection Adjustment To Hit; Milliradians (negative is Left) <NUMBER>
+ * 1: Distance of Shot; meters <NUMBER>
+ * 2: Time of Flight; seconds <NUMBER>
  *
  * Example:
  * [900, 10, 200, -0.0001, 4, 0, 15, 1.225] call ace_artilleryTables_fnc_simulateShot
@@ -35,9 +35,9 @@ if (_airFriction != 0) then {
 };
 
 private _atmosphericDensityRatio = _atmosphericDensity / 1.225;
-private _radAngle = rad(_angle * 360 / 6400);
+private _radAngle = rad(_angle / DEGTOMILS);
 
 private _returns = parseSimpleArray (("ace_artilleryTables" callExtension ["simulateShot", [_radAngle, _targetHeight, _muzzleVelocity, _airFriction, _crossWind, _tailWind, _temperature, _atmosphericDensityRatio]]) select 0); 
 
 //[xDeviation, yDistance, timeOfFlight]
-_returns; 
+_returns
