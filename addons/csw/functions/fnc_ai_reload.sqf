@@ -1,95 +1,72 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror, modified by Grim
+ * Author: PabstMirror, LinkIsGrim
  * Handles AI reloading
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Gunner <OBJECT>
- * 2: Weapon <STRING>
- * 3: Magazine <STRING> (default: "")
+ * 2: Skip reload time <BOOL> (default: false)
+ * 3: Clear forced magazine after reloading (default: true)
  *
  * Return Value:
  * None
  *
  * Public: No
  */
-params ["_staticWeapon", "_gunner", "_weapon", ["_magazine", ""]];
+params ["_vehicle", "_gunner", ["_instantReload", false], ["_clearForcedMag", false]];
+TRACE_3("AI reload",_vehicle,_gunner,_instantReload);
 
-private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
-private _reloadSource = objNull;
-private _reloadMag = "";
-private _reloadNeededAmmo = -1;
+// API, used for ai_switchMagazine
+private _forcedMag = _vehicle getVariable [QGVAR(forcedMag), ""];
+private _turretIndex = [_gunner] call EFUNC(common,getTurretIndex);
+if (_turretIndex isEqualTo []) then {
+    _turretIndex = [0];
+};
 
-private _cfgMagGroups = configFile >> QGVAR(groups);
+// If this is called while CSW has ammo, unload mags in gunner's turret
+if (someAmmo _vehicle) then {[_vehicle, _turretIndex] call FUNC(unloadMagazines)};
 
-private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
-    isNull (group _x) ||
-    {!([_x] call EFUNC(common,isPlayer)) && {[side group _gunner, side group _x] call BIS_fnc_sideIsFriendly}}
-});
+private _loadableMagazines = [_vehicle, _gunner, true] call FUNC(reload_getLoadableMagazines);
+if (_loadableMagazines isEqualTo []) exitWith {TRACE_1("could not find reloadable mag",_vehicle)};
 
-// Find if there is anything we can reload with
+private _bestAmmo = 0;
+private _magazineInfo = [];
 {
-    scopeName "findSource";
-    private _xSource = _x;
-
-    private _cswMagazines  = [];
-    {
-        _cswMagazines pushBackUnique _x;
-    } forEach ((magazineCargo _xSource) select {isClass (_cfgMagGroups >> _x)});
-    TRACE_2("",_xSource,_cswMagazines);
-
-    private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
-    if (_magazine != "") then {
-        _compatibleMags insert [0, [_magazine]];
+    _x params ["_xMag", "", "", "", "", "_ammo"];
+    if (_forcedMag isNotEqualTo "" && {_xMag != _forcedMag}) then {continue};
+    if (_ammo > _bestAmmo) then {
+        _bestAmmo = _ammo;
+        _magazineInfo = _x;
     };
+} forEach _loadableMagazines;
 
-    {
-        private _xWeaponMag = _x;
-        {
-            if ((getNumber (_cfgMagGroups >> _x >> _xWeaponMag)) == 1) then {
-                private _loadInfo = [_staticWeapon, _turretPath, _x, _xSource] call FUNC(reload_canLoadMagazine);
-                if (_loadInfo select 0) then {
-                    _reloadMag = _x;
-                    _reloadSource = _xSource;
-                    _reloadNeededAmmo = _loadInfo select 2;
-                    TRACE_3("found mag",_reloadMag,_reloadSource,_x);
-                    breakOut "findSource";
-                };
-            };
-        } forEach _cswMagazines;
-    } forEach _compatibleMags;
-} forEach _nearSupplies;
-if (_reloadMag == "") exitWith {TRACE_1("could not find mag",_reloadMag);};
+if (_clearForcedMag) then {
+    _vehicle setVariable [QGVAR(forcedMag), nil, true];
+};
 
-// Figure out what we can add from the magazines we have
-private _bestAmmoToSend = -1;
-{
-    _x params ["_xMag", "_xAmmo"];
-    TRACE_2("",_xMag,_xAmmo);
-    if (_xMag == _reloadMag) then {
-        if ((_bestAmmoToSend == -1) || {(_xAmmo > _bestAmmoToSend) && {_xAmmo <= _reloadNeededAmmo}}) then {
-            _bestAmmoToSend = _xAmmo;
-        };
-    };
-} forEach (if (_reloadSource isKindOf "CAManBase") then {magazinesAmmo _reloadSource} else {magazinesAmmoCargo _reloadSource});
-TRACE_4("",_reloadSource,_reloadMag,_reloadNeededAmmo,_bestAmmoToSend);
-if (_bestAmmoToSend == -1) exitWith {ERROR("No ammo");};
+if (_magazineInfo isEqualTo []) exitWith {};
+_magazineInfo params ["_carryMag", "_turretPath", "_loadInfo", "_magSource", "", "_ammo"];
 
 // Remove the mag from the source
-[_reloadSource, _reloadMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
+[_magSource, _carryMag, _ammo] call EFUNC(common,removeSpecificMagazine);
 
-private _timeToLoad = 1;
-if (!isNull(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime")) then {
-    _timeToLoad = getNumber(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime");
+// AI never returns ammo and removes the magazine before reloading, so we can skip distance and weaponHolder checks
+private _eventParams = [_vehicle, _turretPath, objNull, _carryMag, _ammo, _gunner];
+
+if (_instantReload) exitWith {
+    TRACE_1("calling addTurretMag event: instant AI reload",_this);
+    [QGVAR(addTurretMag), _eventParams] call CBA_fnc_globalEvent;
 };
+
+private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime", 1);
 
 TRACE_1("Reloading in progress",_timeToLoad);
 [{
-    params ["_staticWeapon", "_turretPath", "_gunner", "_reloadMag", "_bestAmmoToSend"];
-    if ((!alive _staticWeapon) || {!alive _gunner} || {(_staticWeapon distance _gunner) > 10}) exitWith {TRACE_1("invalid state",_this);};
+    params ["_vehicle", "", "", "", "", "_gunner"];
+    if !(alive _vehicle && {alive _gunner}) exitWith {TRACE_2("invalid state",alive _vehicle,alive _gunner);};
 
     // Reload the static weapon
-    TRACE_5("calling addTurretMag event",_staticWeapon,_turretPath,_gunner,_reloadMag,_bestAmmoToSend);
+    TRACE_1("calling addTurretMag event: AI reload",_this);
     [QGVAR(addTurretMag), _this] call CBA_fnc_globalEvent;
-}, [_staticWeapon, _turretPath, _gunner, _reloadMag, _bestAmmoToSend], _timeToLoad] call CBA_fnc_waitAndExecute;
+}, _eventParams, _timeToLoad] call CBA_fnc_waitAndExecute;

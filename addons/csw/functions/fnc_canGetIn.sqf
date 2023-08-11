@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author:Dani (TCVM)
- * Checks if the player can get in the weapon
+ * Checks if the player can get in the CSW
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  *
  * Return Value:
  * None
@@ -20,9 +20,9 @@ if ((missionNamespace getVariable [QEGVAR(quickmount,enabled), false]) && {(miss
     false
 };
 
-params ["_staticWeapon"];
+params ["_vehicle"];
 
-alive _staticWeapon
-&& {!(alive (gunner _staticWeapon))}
-&& {(locked _staticWeapon) < 2}
-&& {0.3 < ((vectorUp _staticWeapon) select 2)}
+alive _vehicle
+&& {!(alive (gunner _vehicle))}
+&& {(locked _vehicle) < 2}
+&& {0.3 < ((vectorUp _vehicle) select 2)}

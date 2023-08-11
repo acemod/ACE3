@@ -5,12 +5,13 @@
  * Called from a global event but only runs where turret is local
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Source of magazine <OBJECT>
  * 3: Vehicle Magazine <STRING>
  * 4: Ammo in magazine <NUMBER>
- * 5: Unit or object to return ammo to <OBJECT>
+ * 5: Unit that added the magazine <OBJECT>
+ * 6: Object to return extra ammo <OBJECT> (default: Unit that added the magazine)
  *
  * Return Value:
  * None
@@ -21,8 +22,12 @@
  * Public: No
  */
 
-params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived", ["_returnTo", _magSource]];
-TRACE_6("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_returnTo);
+params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived", "_unit"];
+private _returnTo = param [6, _unit];
+if (isNull _returnTo) then {
+    _returnTo = _vehicle;
+};
+TRACE_7("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_unit,_returnTo);
 
 TRACE_2("",local _vehicle, _vehicle turretLocal _turret);
 if (!(_vehicle turretLocal _turret)) exitWith {};

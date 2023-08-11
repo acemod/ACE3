@@ -4,7 +4,7 @@
  * Dismounts the weapon from the tripod and drops its backpack beside
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  *
  * Return Value:
  * None
@@ -16,26 +16,26 @@
  */
 
 [{
-    params ["_staticWeapon", "_player"];
-    TRACE_2("assemble_pickupWeapon",_staticWeapon,_player);
+    params ["_vehicle", "_player"];
+    TRACE_2("assemble_pickupWeapon",_vehicle,_player);
 
-    private _onDisassembleFunc = getText(configOf _staticWeapon >> QUOTE(ADDON) >> "disassembleFunc");
-    private _carryWeaponClassname = getText(configOf _staticWeapon >> QUOTE(ADDON) >> "disassembleWeapon");
-    private _turretClassname = getText(configOf _staticWeapon >> QUOTE(ADDON) >> "disassembleTurret");
+    private _onDisassembleFunc = getText(configOf _vehicle >> QUOTE(ADDON) >> "disassembleFunc");
+    private _carryWeaponClassname = getText(configOf _vehicle >> QUOTE(ADDON) >> "disassembleWeapon");
+    private _turretClassname = getText(configOf _vehicle >> QUOTE(ADDON) >> "disassembleTurret");
     private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "pickupTime");
-    TRACE_4("",typeOf _staticWeapon,_carryWeaponClassname,_turretClassname,_pickupTime);
+    TRACE_4("",typeOf _vehicle,_carryWeaponClassname,_turretClassname,_pickupTime);
     if (!isClass (configFile >> "CfgWeapons" >> _carryWeaponClassname)) exitWith {ERROR_1("bad weapon classname [%1]",_carryWeaponClassname);};
     // Turret classname can equal nothing if the deploy bag is the "whole" weapon. e.g Kornet, Metis, other ATGMs
     if ((_turretClassname isNotEqualTo "") && {!isClass (configFile >> "CfgVehicles" >> _turretClassname)}) exitWith {ERROR_1("bad turret classname [%1]",_turretClassname);};
 
     private _onFinish = {
         params ["_args"];
-        _args params ["_staticWeapon", "_player", "_carryWeaponClassname", "_turretClassname", "_onDisassembleFunc"];
-        TRACE_4("disassemble finish",_staticWeapon,_player,_carryWeaponClassname,_turretClassname);
+        _args params ["_vehicle", "_player", "_carryWeaponClassname", "_turretClassname", "_onDisassembleFunc"];
+        TRACE_4("disassemble finish",_vehicle,_player,_carryWeaponClassname,_turretClassname);
 
-        private _weaponPos = getPosATL _staticWeapon;
+        private _weaponPos = getPosATL _vehicle;
         _weaponPos set [2, (_weaponPos select 2) + 0.1];
-        private _weaponDir = getDir _staticWeapon;
+        private _weaponDir = getDir _vehicle;
 
         private _carryWeaponMag = "";
         private _carryWeaponMags = getArray (configFile >> "CfgWeapons" >> _carryWeaponClassname >> "magazines") apply {toLower _x};
@@ -54,7 +54,7 @@
                 TRACE_2("Removing ammo",_xMag,_carryMag);
                 [_player, _carryMag, _xAmmo] call FUNC(reload_handleReturnAmmo);
             };
-        } forEach (magazinesAllTurrets _staticWeapon);
+        } forEach (magazinesAllTurrets _vehicle);
 
         if (_turretClassname isNotEqualTo "") then {
             private _cswTripod = createVehicle [_turretClassname, [0, 0, 0], [], 0, "NONE"];
@@ -66,7 +66,7 @@
                 _cswTripod setVelocity [0, 0, -0.05];
                 _cswTripod setVectorUp (surfaceNormal _weaponPos);
             }, [_cswTripod, _weaponDir, _weaponPos]] call CBA_fnc_execNextFrame;
-            [_cswTripod, _staticWeapon] call (missionNamespace getVariable _onDisassembleFunc);
+            [_cswTripod, _vehicle] call (missionNamespace getVariable _onDisassembleFunc);
         };
 
         [{
@@ -89,16 +89,16 @@
         }, [_player, _weaponPos, _carryWeaponClassname, _carryWeaponMag]] call CBA_fnc_execNextFrame;
 
         LOG("delete weapon");
-        deleteVehicle _staticWeapon;
+        deleteVehicle _vehicle;
 
         LOG("end");
     };
 
     private _condition = {
         params ["_args"];
-        _args params ["_staticWeapon"];
-        ((crew _staticWeapon) isEqualTo []) && (alive _staticWeapon)
+        _args params ["_vehicle"];
+        ((crew _vehicle) isEqualTo []) && (alive _vehicle)
     };
 
-    [TIME_PROGRESSBAR(_pickupTime), [_staticWeapon, _player, _carryWeaponClassname, _turretClassname, _onDisassembleFunc], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_pickupTime), [_vehicle, _player, _carryWeaponClassname, _turretClassname, _onDisassembleFunc], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;

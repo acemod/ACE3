@@ -4,7 +4,7 @@
  * Dumps ammo to container
  *
  * Arguments:
- * 0: Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Using advanced assembly <BOOL>
  *
  * Return Value:
@@ -16,11 +16,11 @@
  * Public: No
  */
 
-params ["_staticWeapon", "_assemblyMode", "_emptyWeapon"];
-TRACE_3("staticWeaponInit_unloadExtraMags",_staticWeapon,_assemblyMode,_emptyWeapon);
+params ["_vehicle", "_assemblyMode", "_emptyWeapon"];
+TRACE_3("staticWeaponInit_unloadExtraMags",_vehicle,_assemblyMode,_emptyWeapon);
 if (!_assemblyMode) exitWith {};
 
-private _desiredAmmo = getNumber (configOf _staticWeapon >> QUOTE(ADDON) >> "desiredAmmo");
+private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
 if (_emptyWeapon) then {
     _desiredAmmo = 0;
@@ -56,31 +56,32 @@ private _containerMagazineCount = [];
     } else {
         if ((_xMag select [0,4]) != "fake") then { WARNING_1("Unable to unload [%1] - No matching carry mag",_xMag); };
     };
-} forEach (magazinesAllTurrets _staticWeapon);
+} forEach (magazinesAllTurrets _vehicle);
 
 
 TRACE_1("Remove all loaded magazines",_magsToRemove);
 {
-    _staticWeapon removeMagazinesTurret _x;
+    _vehicle removeMagazinesTurret _x;
     if ((_loadedMagazineInfo select [0,2]) isEqualTo _x) then {
         TRACE_1("Re-add the starting mag",_loadedMagazineInfo);
-        _staticWeapon addMagazineTurret _loadedMagazineInfo;
+        _vehicle addMagazineTurret _loadedMagazineInfo;
     };
 } forEach _magsToRemove;
 
-if (_staticWeapon getVariable [QGVAR(secondaryWeaponMagazine), ""] isNotEqualTo "") then {
-    private _secondaryWeaponMagazine = _staticWeapon getVariable QGVAR(secondaryWeaponMagazine);
-    private _turret = allTurrets _staticWeapon param [0, []];
-    private _vehicleMag = [_staticWeapon, _turret, _secondaryWeaponMagazine] call FUNC(reload_getVehicleMagazine);
+if (_vehicle getVariable [QGVAR(secondaryWeaponMagazine), ""] isNotEqualTo "") then {
+    private _secondaryWeaponMagazine = _vehicle getVariable QGVAR(secondaryWeaponMagazine);
+    private _turret = allTurrets _vehicle param [0, []];
+    private _vehicleMag = [_vehicle, _turret, _secondaryWeaponMagazine] call FUNC(reload_getVehicleMagazine);
     TRACE_3("Re-add previous mag",_secondaryWeaponMagazine,_turret,_vehicleMag);
     if (!isClass (configFile >> "CfgMagazines" >> _vehicleMag)) exitWith {};
-    _staticWeapon addMagazineTurret [_vehicleMag, _turret, 1];
-    _staticWeapon setVariable [QGVAR(secondaryWeaponMagazine), nil];
+    _vehicle addMagazineTurret [_vehicleMag, _turret, 1];
+    _vehicle setVariable [QGVAR(secondaryWeaponMagazine), nil];
 };
 
 if (_storeExtraMagazines) then {
     TRACE_1("saving extra mags to container",_containerMagazineCount);
+
     {
-        [_staticWeapon, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
+        [_vehicle, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
     } forEach _containerMagazineClassnames;
 };

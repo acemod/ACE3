@@ -4,7 +4,7 @@
  * Helper function for ace_rearm; Gets magazines that should be loaded by csw
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Specific Turret or pass bool to check all turrets <ARRAY><BOOL>(default: true)
  *
  * Return Value:

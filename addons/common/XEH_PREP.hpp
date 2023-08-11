@@ -45,6 +45,7 @@ PREP(displayText);
 PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
+PREP(doArtilleryFire);
 PREP(doGesture);
 PREP(dummy);
 PREP(dropBackpack);

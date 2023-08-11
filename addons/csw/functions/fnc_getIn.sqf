@@ -6,7 +6,7 @@
  * the gun and can't be acssesed from the back, I am implementing this to get around that issue.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Unit <OBJECT>
  *
  * Return Value:
@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_staticWeapon", "_player"];
-TRACE_2("getIn",_staticWeapon,_player);
+params ["_vehicle", "_player"];
+TRACE_2("getIn",_vehicle,_player);
 
-_player moveInTurret [_staticWeapon, [0]];
+_player moveInTurret [_vehicle, [0]];
