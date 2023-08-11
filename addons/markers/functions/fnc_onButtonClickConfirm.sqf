@@ -28,13 +28,11 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
         default {
             _time = dayTime;
         };
-        case 1:
-        {
+        case 1: {
             systemTime params ["", "", "", "_hour", "_min", "_sec"];
             _time = _hour + _min/60 + _sec/3600;
         };
-        case 2:
-        {
+        case 2: {
             _offset = GVAR(timestampUTCOffset);
             systemTimeUTC params["", "", "", "_hour", "_min", "_sec"];
             _hour = _hour + round(_offset);
