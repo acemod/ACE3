@@ -315,8 +315,8 @@
             <Korean>줄이 필요합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_displayName">
-            <English>Auto add FRIES</English>
-            <Polish>Auto dodawanie FRIES</Polish>
+            <English>Auto-Equip FRIES</English>
+            <Polish>Automatyczne Zamontuj FRIES</Polish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_displayName">
             <English>Automatically add FRIES to helicopters that support them.</English>
