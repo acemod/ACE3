@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: Salluci
- * Caches all item classnames used as field rations, their thirst/hunger values, and whether they are treated as magazines
+ * Author: LinkIsGrim
+ * Caches all item classnames used as field rations
  *
  * Arguments:
  * None

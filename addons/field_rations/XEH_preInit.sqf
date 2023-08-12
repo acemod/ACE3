@@ -22,7 +22,7 @@ GVAR(waterSourceOffsets) = _cache select 1;
 
 // Custom Arsenal Tab
 if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
-    [keys FIELD_RATIONS_ITEMS, LLSTRING(DisplayName), ARSENAL_CATEGORY_ICON] call EFUNC(arsenal,addRightPanelButton);
+    [keys FIELD_RATIONS_ITEMS, LLSTRING(DisplayName), ARSENAL_CATEGORY_ICON, -1, true] call EFUNC(arsenal,addRightPanelButton);
 };
 
 ADDON = true;

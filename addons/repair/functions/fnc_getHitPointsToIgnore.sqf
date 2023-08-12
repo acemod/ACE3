@@ -18,7 +18,7 @@
 params ["_vehicle"];
 
 private _type = typeOf _vehicle;
-TRACE_2("getHitPointsToIgnore", _vehicle,_type);
+TRACE_2("getHitPointsToIgnore",_vehicle,_type);
 private _initializedClasses = missionNamespace getVariable [QGVAR(hitPointsToIgnoreInitializedClasses), createHashMap];
 if (_type in _initializedClasses) exitWith {_initializedClasses get _type};
 
@@ -56,16 +56,6 @@ private _processedSelections = [];
         TRACE_3("Skipping glass",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping glass, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
-        #endif*/
-        _hitPointsToIgnore pushBackUnique _hitpoint;
-        _processedSelections pushBack _selection;
-        continue
-    };
-
-    if (_hitpoint select [0,1] isEqualTo "#" || {_hitpoint select [0,9] isEqualTo "hit_light"}) then { // skip lights
-        TRACE_3("Skipping light",_hitpoint,_forEachIndex,_selection);
-        /*#ifdef DEBUG_MODE_FULL
-        systemChat format ["Skipping light, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
         _hitPointsToIgnore pushBackUnique _hitpoint;
         _processedSelections pushBack _selection;
@@ -118,12 +108,19 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping depends hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
+
+        private _groupIndex = _hitpointGroups findIf {_x # 0 == _hitpoint};
+        if (_groupIndex != -1) then {
+            ERROR_2("[%1] hitpoint [%2] is both a group-parent and a depends and will be unrepairable",_type,_hitpoint);
+            ERROR_1("group: %1",_hitpointGroups # _groupIndex);
+        };
+
         _hitPointsToIgnore pushBackUnique _hitpoint;
         _processedSelections pushBack _selection;
         continue
     };
 
-    if ((_hitpointGroups findIf {(_x select 1) == _hitpoint}) != -1) then { // skip child hitpoints
+    if (ANY_OF(_hitpointGroups, ANY_OF(_x select 1, _x == _hitpoint))) then { // skip child hitpoints
         TRACE_3("Skipping child hitpoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
