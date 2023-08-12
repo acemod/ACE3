@@ -16,8 +16,10 @@
  * Public: No
  */
 
-params [["_display", displayNull], ["_displayID", ""]];
+params [["_display", displayNull], ["_displayID", ""]]; // only one of these will be valid
+// On primary call from the display's onload we will only have the actual display
 if (_displayID == "") then { _displayID = displayUniqueName _display; };
+// On the delayed call (due to hash missing) we will only have the displayID
 if (isNull _display) then { _display = findDisplay _displayID; };
 TRACE_2("mapImage_init",_display,_displayID);
 
@@ -28,7 +30,7 @@ if (isNull findDisplay _displayID) then { WARNING_1("possible problem with textu
 // make sure data exists in hash, there can be a race if server broadcasts texture before client can finish init.sqf
 if (isNil QGVAR(mapData) || {!(_displayID in GVAR(mapData))}) exitWith {
     WARNING_1("texture %1 has no data in hash",_displayID);
-    if (!isNull (param [0, displayNull])) then { // not a retry
+    if (!isNull (param [0, displayNull])) then { // not a retry, checking using value from _this
         [FUNC(mapImage_init), [displayNull, _displayID], 5] call CBA_fnc_waitAndExecute;
     };
 };
