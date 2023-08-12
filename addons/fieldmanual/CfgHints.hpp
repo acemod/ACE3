@@ -279,7 +279,6 @@ class CfgHints
             displayName = CSTRING(Field_Rations_Hunger_DisplayName);
             displayNameShort = CSTRING(Field_Rations_Hunger_ShortName);
             description = CSTRING(Field_Rations_Hunger_Description);
-            arguments[] = {};
         };
         class Thirst: ACE_Field_Rations_Base
         {
@@ -287,7 +286,6 @@ class CfgHints
             displayName = CSTRING(Field_Rations_Thirst_DisplayName);
             displayNameShort = CSTRING(Field_Rations_Thirst_ShortName);
             description = CSTRING(Field_Rations_Thirst_Description);
-            arguments[] = {};
         };
     };
 
@@ -319,6 +317,23 @@ class CfgHints
 
         class ACE_Medical_Treatment_Base
         {
+            arguments[] =
+            {
+                "
+                    private _localized = 'Self Interact Key';
+                    if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                ",
+                "
+                    private _localized = 'Medical Menu Key';
+                    if !(isNil {['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                "
+            };
             image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
             tip = "<a href='https://ace3.acemod.org/wiki/feature/medical-system'>Medical Wiki</a>";
         };
@@ -329,7 +344,6 @@ class CfgHints
             displayName = CSTRING(Medical_Treatment_Adenosine_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_Adenosine_ShortName);
             description = CSTRING(Medical_Treatment_Adenosine_Description);
-            arguments[] = {};
         };
         class ACE_Bandages: ACE_Medical_Treatment_Base
         {
@@ -337,7 +351,6 @@ class CfgHints
             displayName = CSTRING(Medical_Treatment_Bandages_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_Bandages_ShortName);
             description = CSTRING(Medical_Treatment_Bandages_Description);
-            arguments[] = {};
         };
         class ACE_Fluids: ACE_Medical_Treatment_Base
         {
@@ -345,7 +358,6 @@ class CfgHints
             displayName = CSTRING(Medical_Treatment_IVFluids_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_IVFluids_ShortName);
             description = CSTRING(Medical_Treatment_IVFluids_Description);
-            arguments[] = {};
         };
         class ACE_Epinephrine: ACE_Medical_Treatment_Base
         {
@@ -353,7 +365,6 @@ class CfgHints
             displayName = CSTRING(Medical_Treatment_Epinephrine_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_Epinephrine_ShortName);
             description = CSTRING(Medical_Treatment_Epinephrine_Description);
-            arguments[] = {};
         };
         class ACE_PAK: ACE_Medical_Treatment_Base
         {
@@ -361,7 +372,6 @@ class CfgHints
             displayName = CSTRING(Medical_Treatment_PAK_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_PAK_ShortName);
             description = CSTRING(Medical_Treatment_PAK_Description);
-            arguments[] = {};
         };
         class ACE_Splint: ACE_Medical_Treatment_Base
         {
@@ -369,7 +379,6 @@ class CfgHints
             displayName = CSTRING(Medical_Treatment_Splint_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_Splint_ShortName);
             description = CSTRING(Medical_Treatment_Splint_Description);
-            arguments[] = {};
         };
         class ACE_SurgicalKit: ACE_Medical_Treatment_Base
         {
@@ -377,7 +386,6 @@ class CfgHints
             displayName = CSTRING(Medical_Treatment_SurgicalKit_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_SurgicalKit_ShortName);
             description = CSTRING(Medical_Treatment_SurgicalKit_Description);
-            arguments[] = {};
         };
         class ACE_Tourniquet: ACE_Medical_Treatment_Base
         {
@@ -385,7 +393,6 @@ class CfgHints
             displayName = CSTRING(Medical_Treatment_CAT_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_CAT_ShortName);
             description = CSTRING(Medical_Treatment_CAT_Description);
-            arguments[] = {};
         };
     };
 };

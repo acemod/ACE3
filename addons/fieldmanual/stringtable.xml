@@ -15,8 +15,8 @@
         <English>Hunger</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
-        <Original>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;1.) Pick up a food item&lt;br/&gt;2.) Use [%3%11%4] and select %3Survival%4&lt;br/&gt;3.) Choose a food item to consume.</Original>
-        <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;1.) Pick up a food item&lt;br/&gt;2.) Use [%3%11%4] and select %3Survival%4&lt;br/&gt;3.) Choose a food item to consume.</English>
+        <Original>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</Original>
+        <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
         <Original>Thirst</Original>
@@ -27,8 +27,8 @@
         <English>Thirst</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
-        <Original>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;1.) Pick up a drink item&lt;br/&gt;2.) Use [%3%11%4] and select %3Survival%4&lt;br/&gt;3.) Choose a drink item to consume.</Original>
-        <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;1.) Pick up a drink item&lt;br/&gt;2.) Use [%3%11%4] and select %3Survival%4&lt;br/&gt;3.) Choose a drink item to consume.</English>
+        <Original>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</Original>
+        <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</English>
       </Key>
     </Container>
     <Container name="ACE_Fortify">
@@ -63,8 +63,8 @@
         <English>Decrease Heart Rate</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
-        <Original />
-        <English />
+        <Original>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</Original>
+        <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_DisplayName">
         <Original>Bandages</Original>
@@ -75,8 +75,8 @@
         <English>Close Wounds</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
-        <Original />
-        <English />
+        <Original>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</Original>
+        <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
         <Original>IV Fluids</Original>
@@ -87,8 +87,8 @@
         <English>Restore Blood Volume</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_Description">
-        <Original />
-        <English />
+        <Original>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an appendage.&lt;br/&gt;%2Restore blood voluem by selecting desired %3IV Fluid%4 type.</Original>
+        <English>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an appendage.&lt;br/&gt;%2Restore blood voluem by selecting desired %3IV Fluid%4 type.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_DisplayName">
         <Original>Epinephrine</Original>
@@ -99,8 +99,8 @@
         <English>Increase Heartrate | Increase Conscious Chance</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_Description">
-        <Original />
-        <English />
+        <Original>%3Epinephrine%4 increases Heartrate as well as decreases the time between conscious checks (effectively increasing conscious chance).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</Original>
+        <English>%3Epinephrine%4 increases Heartrate as well as decreases the time between conscious checks (effectively increasing conscious chance).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_DisplayName">
         <Original>Personal Aid Kit</Original>
@@ -111,8 +111,8 @@
         <English>Restore Like New</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
-        <Original />
-        <English />
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_DisplayName">
         <Original>Splint</Original>
@@ -123,8 +123,8 @@
         <English>Fix Fractures</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_Description">
-        <Original />
-        <English />
+        <Original>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</Original>
+        <English>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_DisplayName">
         <Original>Surgical Kit</Original>
@@ -135,8 +135,8 @@
         <English>Prevent Wounds From Reopening</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
-        <Original />
-        <English />
+        <Original>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</Original>
+        <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_DisplayName">
         <Original>Tourniquet</Original>
@@ -147,8 +147,8 @@
         <English>Stop Bleeding</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
-        <Original />
-        <English />
+        <Original>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</Original>
+        <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%12%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
       </Key>
     </Container>
     <Container name="ACE_Items">
@@ -488,6 +488,12 @@
       <Key ID="STR_ACE_FieldManual_Items_DisplayName">
         <Original>Items</Original>
         <English>Items</English>
+      </Key>
+    </Container>
+    <Container name="Hint Categories">
+      <Key ID="STR_ACE_FieldManual_HintCategory_FieldManual_DisplayName">
+        <Original>ACE3</Original>
+        <English>ACE3</English>
       </Key>
     </Container>
   </Package>
