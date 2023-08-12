@@ -45,6 +45,35 @@ class CfgHints
 
         class ACE_Items_Base
         {
+            arguments[] =
+            {
+                // SELF INTERACT KEYBIND - %11
+                "
+                    private _localized = 'Self Interact Key';
+                    if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                ",
+
+                // INTERACT KEYBIND - %12
+                "
+                    private _localized = 'Interact Key';
+                    if !(isNil {['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                ",
+
+                // MEDICAL MENU KEYBIND - %13
+                "
+                    private _localized = 'Medical Menu Key';
+                    if !(isNil {['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                "
+            };
             image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
             noImage = 1;
         };
@@ -54,7 +83,6 @@ class CfgHints
             displayName = CSTRING(Items_ATragMX_DisplayName);
             displayNameShort = CSTRING(Items_ATragMX_ShortName);
             description = CSTRING(Items_ATragMX_Description);
-            arguments[] = {};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/atragmx'>ATragMX Wiki</a>";
         };
         class ACE_BodyBag: ACE_Items_Base
@@ -63,7 +91,6 @@ class CfgHints
             displayName = CSTRING(Items_BodyBag_DisplayName);
             displayNameShort = CSTRING(Items_BodyBag_ShortName);
             description = CSTRING(Items_BodyBag_Description);
-            arguments[] = {};
         };
         class ACE_CableTie: ACE_Items_Base
         {
@@ -71,7 +98,6 @@ class CfgHints
             displayName = CSTRING(Items_CableTie_DisplayName);
             displayNameShort = CSTRING(Items_CableTie_ShortName);
             description = CSTRING(Items_CableTie_Description);
-            arguments[] = {};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/captives'>Captives Wiki</a>";
         };
         class ACE_Cellphone: ACE_Items_Base
@@ -80,7 +106,6 @@ class CfgHints
             displayName = CSTRING(Items_Cellphone_DisplayName);
             displayNameShort = CSTRING(Items_Cellphone_ShortName);
             description = CSTRING(Items_Cellphone_Description);
-            arguments[] = {};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/explosives'>Explosives Wiki</a>";
         };
         class ACE_Chemlight_Shield: ACE_Items_Base
@@ -89,7 +114,6 @@ class CfgHints
             displayName = CSTRING(Items_Chemlight_Shield_DisplayName);
             displayNameShort = CSTRING(Items_Chemlight_Shield_ShortName);
             description = CSTRING(Items_Chemlight_Shield_Description);
-            arguments[] = {};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/chemlights'>Chemlights Wiki</a>";
         };
         class ACE_DAGR: ACE_Items_Base
@@ -98,7 +122,6 @@ class CfgHints
             displayName = CSTRING(Items_DAGR_DisplayName);
             displayNameShort = CSTRING(Items_DAGR_ShortName);
             description = CSTRING(Items_DAGR_Description);
-            arguments[] = {};
         };
         class ACE_DeadManSwitch: ACE_Items_Base
         {
@@ -106,7 +129,6 @@ class CfgHints
             displayName = CSTRING(Items_DeadManSwitch_DisplayName);
             displayNameShort = CSTRING(Items_DeadManSwitch_ShortName);
             description = CSTRING(Items_DeadManSwitch_Description);
-            arguments[] = {};
         };
         class ACE_DefusalKit: ACE_Items_Base
         {
@@ -114,7 +136,6 @@ class CfgHints
             displayName = CSTRING(Items_DefusalKit_DisplayName);
             displayNameShort = CSTRING(Items_DefusalKit_ShortName);
             description = CSTRING(Items_DefusalKit_Description);
-            arguments[] = {};
         };
         class ACE_EarPlugs: ACE_Items_Base
         {
@@ -122,7 +143,6 @@ class CfgHints
             displayName = CSTRING(Items_EarPlugs_DisplayName);
             displayNameShort = CSTRING(Items_EarPlugs_ShortName);
             description = CSTRING(Items_EarPlugs_Description);
-            arguments[] = {};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/hearing'>Hearing Wiki</a>";
         };
         class ACE_EntrenchingTool: ACE_Items_Base
@@ -138,7 +158,6 @@ class CfgHints
             displayName = CSTRING(Items_Flashlights_DisplayName);
             displayNameShort = CSTRING(Items_Flashlights_ShortName);
             description = CSTRING(Items_Flashlights_Description);
-            arguments[] = {};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/flashlights'>Flashlights Wiki</a>";
         };
         class ACE_HuntIR_Monitor: ACE_Items_Base
@@ -147,7 +166,6 @@ class CfgHints
             displayName = CSTRING(Items_HuntIR_Monitor_DisplayName);
             displayNameShort = CSTRING(Items_HuntIR_Monitor_ShortName);
             description = CSTRING(Items_HuntIR_Monitor_Description);
-            arguments[] = {};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/huntir'>HuntIR Wiki</a>";
         };
         class ACE_IR_Strobe: ACE_Items_Base
@@ -156,7 +174,6 @@ class CfgHints
             displayName = CSTRING(Items_IR_Strobe_DisplayName);
             displayNameShort = CSTRING(Items_IR_Strobe_ShortName);
             description = CSTRING(Items_IR_Strobe_Description);
-            arguments[] = {};
         };
         class ACE_Kestrel4500: ACE_Items_Base
         {
@@ -171,7 +188,6 @@ class CfgHints
             displayName = CSTRING(Items_MapTools_DisplayName);
             displayNameShort = CSTRING(Items_MapTools_ShortName);
             description = CSTRING(Items_MapTools_Description);
-            arguments[] = {};
         };
         class ACE_Clackers: ACE_Items_Base
         {
@@ -201,7 +217,6 @@ class CfgHints
             displayName = CSTRING(Items_Ropes_DisplayName);
             displayNameShort = CSTRING(Items_Ropes_ShortName);
             description = CSTRING(Items_Ropes_Description);
-            arguments[] = {};
         };
         class ACE_Sandbag: ACE_Items_Base
         {
@@ -216,7 +231,6 @@ class CfgHints
             displayName = CSTRING(Items_SpareBarrels_DisplayName);
             displayNameShort = CSTRING(Items_SpareBarrels_ShortName);
             description = CSTRING(Items_SpareBarrels_Description);
-            arguments[] = {};
         };
         class ACE_SprayPaint: ACE_Items_Base
         {
@@ -224,7 +238,6 @@ class CfgHints
             displayName = CSTRING(Items_SprayPaint_DisplayName);
             displayNameShort = CSTRING(Items_SprayPaint_ShortName);
             description = CSTRING(Items_SprayPaint_Description);
-            arguments[] = {};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/tagging'>Tagging Wiki</a>";
         };
         class ACE_Tripod: ACE_Items_Base
@@ -233,7 +246,6 @@ class CfgHints
             displayName = CSTRING(Items_Tripod_DisplayName);
             displayNameShort = CSTRING(Items_Tripod_ShortName);
             description = CSTRING(Items_Tripod_Description);
-            arguments[] = {};
         };
         class ACE_UAVBattery: ACE_Items_Base
         {
@@ -248,7 +260,6 @@ class CfgHints
             displayName = CSTRING(Items_Wirecutter_DisplayName);
             displayNameShort = CSTRING(Items_Wirecutter_ShortName);
             description = CSTRING(Items_Wirecutter_Description);
-            arguments[] = {};
         };
     };
 
@@ -261,10 +272,29 @@ class CfgHints
         {
             arguments[] =
             {
+                // SELF INTERACT KEYBIND - %11
                 "
                     private _localized = 'Self Interact Key';
                     if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {
                         _localized = ['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                ",
+
+                // INTERACT KEYBIND - %12
+                "
+                    private _localized = 'Interact Key';
+                    if !(isNil {['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                ",
+
+                // MEDICAL MENU KEYBIND - %13
+                "
+                    private _localized = 'Medical Menu Key';
+                    if !(isNil {['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
                     };
                     _localized
                 "
@@ -306,7 +336,6 @@ class CfgHints
             displayName = CSTRING(Fortify_FortifyTool_DisplayName);
             displayNameShort = CSTRING(Fortify_FortifyTool_ShortName);
             description = CSTRING(Fortify_FortifyTool_Description);
-            arguments[] = {};
         };
     };
 
@@ -319,6 +348,7 @@ class CfgHints
         {
             arguments[] =
             {
+                // SELF INTERACT KEYBIND - %11
                 "
                     private _localized = 'Self Interact Key';
                     if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {
@@ -326,6 +356,17 @@ class CfgHints
                     };
                     _localized
                 ",
+
+                // INTERACT KEYBIND - %12
+                "
+                    private _localized = 'Interact Key';
+                    if !(isNil {['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                ",
+
+                // MEDICAL MENU KEYBIND - %13
                 "
                     private _localized = 'Medical Menu Key';
                     if !(isNil {['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind}) then {
