@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Initilizaes the map texture display
+ * Initilizaes the map texture display.
  *
  * Arguments:
  * 0: Display <DISPLAY> (default: displayNull)
@@ -54,7 +54,6 @@ _map ctrlAddEventHandler ["draw", {
     TRACE_2("drawing markers",_map,count _markers);
     { _map drawIcon _x } forEach _markers;
 }];
-
 
 private _update = {
     private _display = findDisplay _this;

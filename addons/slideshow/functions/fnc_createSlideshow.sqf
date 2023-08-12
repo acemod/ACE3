@@ -35,7 +35,6 @@ params [
 if (_objects isEqualTo []) exitWith {
     ERROR("Slideshow Objects field must NOT be empty!");
 };
-if (_names isEqualTo []) then { private _i = 0; _names = _images apply { _i = _i + 1; str _i }};
 if (count _images != count _names || {_images isEqualTo []} || {_names isEqualTo []}) exitWith {
     ERROR("Slideshow Images or Names fields must NOT be empty and must have equal number of items!");
 };
