@@ -7,7 +7,7 @@ class CfgWeapons {
         GVAR(bluRadius) = 0.15;
         NVG_GREEN_PRESET;
     };
-    class NVGoggles_WP: NVGoggles {
+    class ACE_NVGoggles_WP: NVGoggles {
         displayName = CSTRING(NVG_Gen3_brown_WP);
         descriptionShort = CSTRING(NVG_WP_desc);
         NVG_WHITE_PRESET;
@@ -27,7 +27,7 @@ class CfgWeapons {
         modelOptics = "";
         displayName = CSTRING(NVG_Gen3_black);
     };
-    class NVGoggles_OPFOR_WP: NVGoggles_OPFOR {
+    class ACE_NVGoggles_OPFOR_WP: NVGoggles_OPFOR {
         displayName = CSTRING(NVG_Gen3_black_WP);
         descriptionShort = CSTRING(NVG_WP_desc);
         NVG_WHITE_PRESET;
@@ -36,7 +36,7 @@ class CfgWeapons {
         modelOptics = "";
         displayName = CSTRING(NVG_Gen3_green);
     };
-    class NVGoggles_INDEP_WP: NVGoggles_INDEP {
+    class ACE_NVGoggles_INDEP_WP: NVGoggles_INDEP {
         displayName = CSTRING(NVG_Gen3_green_WP);
         descriptionShort = CSTRING(NVG_WP_desc);
         NVG_WHITE_PRESET;
