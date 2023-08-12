@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE_FieldManual">
+  <Package name="ACE_FieldManual">
+    <Container name="ACE_Field_Rations">
+      <Key ID="STR_ACE_FieldManual_Field_Rations_DisplayName">
+        <Original>Field Rations</Original>
+        <English>Field Rations</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_DisplayName">
+        <Original>Hunger</Original>
+        <English>Hunger</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_ShortName">
+        <Original>Hunger</Original>
+        <English>Hunger</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
+        <Original />
+        <English />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
+        <Original>Thirst</Original>
+        <English>Thirst</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_ShortName">
+        <Original>Thirst</Original>
+        <English>Thirst</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
+        <Original />
+        <English />
+      </Key>
+    </Container>
+    <Container name="ACE_Fortify">
+      <Key ID="STR_ACE_FieldManual_Fortify_DisplayName">
+        <Original>Fortify</Original>
+        <English>Fortify</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_DisplayName">
+        <Original>Fortify Tool</Original>
+        <English>Fortify Tool</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_ShortName">
+        <Original>Build Fortifications</Original>
+        <English>Build Fortifications</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_Description">
+        <Original />
+        <English />
+      </Key>
+    </Container>
+    <Container name="ACE_Medical_Treatment">
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
+        <Original>Items - Medical</Original>
+        <English>Items - Medical</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_DisplayName">
+        <Original>Adenosine</Original>
+        <English>Adenosine</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_ShortName">
+        <Original>Decrease Heart Rate</Original>
+        <English>Decrease Heart Rate</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
+        <Original />
+        <English />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_DisplayName">
+        <Original>Bandages</Original>
+        <English>Bandages</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_ShortName">
+        <Original>Close Wounds</Original>
+        <English>Close Wounds</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
+        <Original />
+        <English />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
+        <Original>IV Fluids</Original>
+        <English>IV Fluids</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_ShortName">
+        <Original>Restore Blood Volume</Original>
+        <English>Restore Blood Volume</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_Description">
+        <Original />
+        <English />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_DisplayName">
+        <Original>Epinephrine</Original>
+        <English>Epinephrine</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_ShortName">
+        <Original>Increase Heartrate | Increase Conscious Chance</Original>
+        <English>Increase Heartrate | Increase Conscious Chance</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_Description">
+        <Original />
+        <English />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_DisplayName">
+        <Original>Personal Aid Kit</Original>
+        <English>Personal Aid Kit</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_ShortName">
+        <Original>Restore Like New</Original>
+        <English>Restore Like New</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
+        <Original />
+        <English />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_DisplayName">
+        <Original>Splint</Original>
+        <English>Splint</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_ShortName">
+        <Original>Fix Fractures</Original>
+        <English>Fix Fractures</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_Description">
+        <Original />
+        <English />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_DisplayName">
+        <Original>Surgical Kit</Original>
+        <English>Surgical Kit</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_ShortName">
+        <Original>Prevent Wounds From Reopening</Original>
+        <English>Prevent Wounds From Reopening</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
+        <Original />
+        <English />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_DisplayName">
+        <Original>Tourniquet</Original>
+        <English>Tourniquet</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_ShortName">
+        <Original>Stop Bleeding</Original>
+        <English>Stop Bleeding</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
+        <Original />
+        <English />
+      </Key>
+    </Container>
+    <Container name="ACE_Items">
+      <Key ID="STR_ACE_FieldManual_Items_ATragMX_DisplayName">
+        <Original>ATragMX</Original>
+        <English>ATragMX</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_ATragMX_ShortName">
+        <Original>Portable, Precise, Rugged</Original>
+        <English>Portable, Precise, Rugged</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_ATragMX_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_ArtilleryTable_DisplayName">
+        <Original>Artillery Range Table</Original>
+        <English>Artillery Range Table</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_ArtilleryTable_ShortName">
+        <Original>Hit Your Target</Original>
+        <English>Hit Your Target</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_ArtilleryTable_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_BodyBag_DisplayName">
+        <Original>Body Bags</Original>
+        <English>Body Bags</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
+        <Original>Bring Out Your Dead</Original>
+        <English>Bring Out Your Dead</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_CableTie_DisplayName">
+        <Original>Cable Tie</Original>
+        <English>Cable Tie</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_CableTie_ShortName">
+        <Original>Take Prisoners</Original>
+        <English>Take Prisoners</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_CableTie_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Cellphone_DisplayName">
+        <Original>Cellphone</Original>
+        <English>Cellphone</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Cellphone_ShortName">
+        <Original>Phone In An Explosion</Original>
+        <English>Phone In An Explosion</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Cellphone_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_DisplayName">
+        <Original>Chemlight Shield</Original>
+        <English>Chemlight Shield</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_ShortName">
+        <Original>Portable Reading Lights</Original>
+        <English>Portable Reading Lights</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DAGR_DisplayName">
+        <Original>DAGR</Original>
+        <English>DAGR</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DAGR_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DAGR_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_DisplayName">
+        <Original>Dead Man's Switch</Original>
+        <English>Dead Man's Switch</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DefusalKit_DisplayName">
+        <Original>Defusal Kit</Original>
+        <English>Defusal Kit</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DefusalKit_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DefusalKit_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_EarPlugs_DisplayName">
+        <Original>Ear Plugs</Original>
+        <English>Ear Plugs</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_EarPlugs_ShortName">
+        <Original>Protect Your Hearing</Original>
+        <English>Protect Your Hearing</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_EarPlugs_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_DisplayName">
+        <Original>Work In Progress</Original>
+        <English>Entrenching Tool</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Flashlights_DisplayName">
+        <Original>Flashlights</Original>
+        <English>Flashlights</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Flashlights_ShortName">
+        <Original>Illuminate Your Map</Original>
+        <English>Illuminate Your Map</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Flashlights_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+        <Czech />
+        <French />
+        <Spanish />
+        <Italian />
+        <Polish />
+        <Portuguese />
+        <Russian />
+        <German />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_DisplayName">
+        <Original>HuntIR Monitor</Original>
+        <English>HuntIR Monitor</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_ShortName">
+        <Original>Observe From The Skies</Original>
+        <English>Observe From The Skies</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_DisplayName">
+        <Original>IR Strobe</Original>
+        <English>IR Strobe</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_ShortName">
+        <Original>Track Your Team With Stealth</Original>
+        <English>Track Your Team With Stealth</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_DisplayName">
+        <Original>Kestrel 4500</Original>
+        <English>Kestrel 4500</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_MapTools_DisplayName">
+        <Original>Map Tools</Original>
+        <English>Map Tools</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_MapTools_ShortName">
+        <Original>Triangulate Your Position</Original>
+        <English>Triangulate Your Position</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_MapTools_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Clackers_DisplayName">
+        <Original>Clackers</Original>
+        <English>Clackers</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_DisplayName">
+        <Original>MicroDAGR GPS</Original>
+        <English>MicroDAGR GPS</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeCard_DisplayName">
+        <Original>Range Card</Original>
+        <English>Range Card</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeCard_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeCard_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeTable_82mm_DisplayName">
+        <Original>Range Table 82mm</Original>
+        <English>Range Table 82mm</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeTable_82mm_ShortName">
+        <Original>Hit Your Mortar Target</Original>
+        <English>Hit Your Mortar Target</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeTable_82mm_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Ropes_DisplayName">
+        <Original>Ropes</Original>
+        <English>Ropes</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Ropes_ShortName">
+        <Original>Tow With Ease</Original>
+        <English>Tow With Ease</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Ropes_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Sandbag_DisplayName">
+        <Original>Sandbags</Original>
+        <English>Sandbags</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Sandbag_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Sandbag_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_DisplayName">
+        <Original>Spare Barrels</Original>
+        <English>Spare Barrels</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_ShortName">
+        <Original>Lower Firearm Temperature</Original>
+        <English>Lower Firearm Temperature</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+        <French />
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_SprayPaint_DisplayName">
+        <Original>Spray Paint</Original>
+        <English>Spray Paint</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_SprayPaint_ShortName">
+        <Original>Tag Your Territory</Original>
+        <English>Tag Your Territory</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_SprayPaint_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Tripod_DisplayName">
+        <Original>SSWT Kit</Original>
+        <English>SSWT Kit</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Tripod_ShortName">
+        <Original>Brace From Anywhere</Original>
+        <English>Brace From Anywhere</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Tripod_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_UAVBattery_DisplayName">
+        <Original>UAV Battery</Original>
+        <English>UAV Battery</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_UAVBattery_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_UAVBattery_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Wirecutter_DisplayName">
+        <Original>Wirecutters</Original>
+        <English>Wirecutters</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Wirecutter_ShortName">
+        <Original>Making An Entrance</Original>
+        <English>Making An Entrance</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_DisplayName">
+        <Original>Items</Original>
+        <English>Items</English>
+      </Key>
+    </Container>
+  </Package>
+</Project>
