@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Salluci
+ * Author: LinkIsGrim
  * Caches all item classnames used in ACE_Medical_Treatment_Actions
  *
  * Arguments:
@@ -22,7 +22,7 @@ private _fnc_isMedicalItem = toString {
     getNumber (_x >> "ACE_isMedicalItem") isEqualTo 1
 };
 
-// get items in ACE_Medical_Treament_Actions, fallback for items without API config property
+// Get items in ACE_Medical_Treament_Actions, fallback for items without API config property
 {
     _list append (getArray (_x >> "items"));
 } forEach ("true" configClasses _cfgActions);
@@ -30,5 +30,9 @@ private _fnc_isMedicalItem = toString {
 {
     _list pushBack (configName _x);
 } forEach (_fnc_isMedicalItem configClasses (configFile >> "CfgWeapons"));
+
+{
+    _list pushBack (configName _x);
+} forEach (_fnc_isMedicalItem configClasses (configFile >> "CfgMagazines"));
 
 uiNamespace setVariable [QGVAR(treatmentItems), compileFinal str (_list arrayIntersect _list)]
