@@ -10,10 +10,10 @@
 
     if (_unit isNotEqualTo ACE_player) exitWith {};
 
-    if (_newCamera == "") then { // Switched back to player view
+    if (_newCamera == "") then { // switched back to player view
         private _status = IS_UNCONSCIOUS(_unit);
-        [_unit, _status] call FUNC(setStatusEffects);
+        [_unit, _status, true] call FUNC(setStatusEffects);
     } else {
-        [_unit, false] call FUNC(setStatusEffects);
+        [_unit, false, true] call FUNC(setStatusEffects);
     };
 }] call CBA_fnc_addPlayerEventHandler;

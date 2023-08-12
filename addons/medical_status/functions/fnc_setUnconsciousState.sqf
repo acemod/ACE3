@@ -28,7 +28,6 @@ _unit setVariable [VAR_UNCON, _active, true];
 // Toggle unit ragdoll state
 [_unit, _active] call EFUNC(medical_engine,setUnconsciousAnim);
 
-// Set status effects for comms
 [_unit, _active] call FUNC(setStatusEffects);
 
 if (_active) then {
