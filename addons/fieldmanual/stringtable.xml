@@ -15,8 +15,8 @@
         <English>Hunger</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
-        <Original>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</Original>
-        <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</English>
+        <Original>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</Original>
+        <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
         <Original>Thirst</Original>
@@ -173,8 +173,8 @@
         <English>Bring Out Your Dead</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
-        <Original>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</Original>
-        <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</English>
+        <Original>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_bodybag_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</Original>
+        <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_bodybag_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_CableTie_DisplayName">
         <Original>Cable Tie</Original>
@@ -185,8 +185,8 @@
         <English>Take Prisoners</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_CableTie_Description">
-        <Original>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</Original>
-        <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
+        <Original>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_cabletie_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</Original>
+        <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_cabletie_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Cellphone_DisplayName">
         <Original>Cellphone</Original>
@@ -197,8 +197,8 @@
         <English>Phone In An Explosion</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Cellphone_Description">
-        <Original>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Cellphone%4&lt;br/&gt;%2Open the cellphone interface with [%3%11%4]&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number&lt;br/&gt;%2Call the number to detonate</Original>
-        <English>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Cellphone%4&lt;br/&gt;%2Open the cellphone interface with [%3%11%4]&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number&lt;br/&gt;%2Call the number to detonate</English>
+        <Original>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Cellphone%4.&lt;br/&gt;%2Open the cellphone interface with [%3%11%4].&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number.&lt;br/&gt;%2Call the number to detonate.</Original>
+        <English>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Cellphone%4.&lt;br/&gt;%2Open the cellphone interface with [%3%11%4].&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number.&lt;br/&gt;%2Call the number to detonate.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_DisplayName">
         <Original>Chemlight Shield</Original>
@@ -209,8 +209,20 @@
         <English>Portable Reading Lights</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_Description">
-        <Original>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4&lt;br/&gt;%2Open %3Map%4&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield</Original>
-        <English>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4&lt;br/&gt;%2Open %3Map%4&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield</English>
+        <Original>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</Original>
+        <English>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Clackers_DisplayName">
+        <Original>Clackers</Original>
+        <English>Clackers</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
+        <Original>Work In Progress</Original>
+        <English>Work In Progress</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_DAGR_DisplayName">
         <Original>DAGR</Original>
@@ -257,8 +269,8 @@
         <English>Protect Your Hearing</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_EarPlugs_Description">
-        <Original>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4</Original>
-        <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4</English>
+        <Original>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_earplugs_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</Original>
+        <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_earplugs_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_DisplayName">
         <Original>Work In Progress</Original>
@@ -340,18 +352,6 @@
         <Original>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for triangulating your position, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Map Tools%4.&lt;br/&gt;%2 Tool can be moved with [%3Left-Click%4] and [%3ALT%4].</Original>
         <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for triangulating your position, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Map Tools%4.&lt;br/&gt;%2 Tool can be moved with [%3Left-Click%4] and [%3ALT%4].</English>
       </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Clackers_DisplayName">
-        <Original>Clackers</Original>
-        <English>Clackers</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
       <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_DisplayName">
         <Original>MicroDAGR GPS</Original>
         <English>MicroDAGR GPS</English>
@@ -363,6 +363,18 @@
       <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_Description">
         <Original>Work In Progress</Original>
         <English>Work In Progress</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeTables_DisplayName">
+        <Original>Range Tables</Original>
+        <English>Range Tables</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeTables_ShortName">
+        <Original>Get A Firing Solution</Original>
+        <English>Get A Firing Solution</English>
+      </Key>
+      <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
+        <Original>Work In Progress</Original>
+        <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_RangeCard_DisplayName">
         <Original>Range Card</Original>
@@ -385,7 +397,7 @@
         <English>Tow With Ease</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Ropes_Description">
-        <Original>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%11%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</Original>
+        <Original>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%12%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</Original>
         <English>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%12%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Sandbag_DisplayName">
@@ -409,8 +421,8 @@
         <English>Lower Firearm Temperature</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_Description">
-        <Original>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4&lt;br/&gt;%2Select %3Swap Barrel%4&lt;br/&gt;%2Resume operation after barrel swap is complete</Original>
-        <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4&lt;br/&gt;%2Select %3Swap Barrel%4&lt;br/&gt;%2Resume operation after barrel swap is complete</English>
+        <Original>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</Original>
+        <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</English>
         <French />
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_SprayPaint_DisplayName">
@@ -422,8 +434,8 @@
         <English>Tag Your Territory</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_SprayPaint_Description">
-        <Original>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</Original>
-        <English>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
+        <Original>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_spraypaint_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</Original>
+        <English>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_spraypaint_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Tripod_DisplayName">
         <Original>SSWT Kit</Original>
@@ -434,8 +446,8 @@
         <English>Brace From Anywhere</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Tripod_Description">
-        <Original>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]</Original>
-        <English>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;[Insert Image Here]</English>
+        <Original>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_tripod_1024x512.paa' /&gt;</Original>
+        <English>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_tripod_1024x512.paa' /&gt;</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_UAVBattery_DisplayName">
         <Original>UAV Battery</Original>
@@ -458,8 +470,8 @@
         <English>Making An Entrance</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
-        <Original>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.</Original>
-        <English>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.</English>
+        <Original>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_wirecutter_1024x512.paa' /&gt;</Original>
+        <English>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_wirecutter_1024x512.paa' /&gt;</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_DisplayName">
         <Original>Items</Original>

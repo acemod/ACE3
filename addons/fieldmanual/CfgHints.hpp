@@ -75,7 +75,6 @@ class CfgHints
                 "
             };
             image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
-            noImage = 1;
         };
         class ACE_ATragMX: ACE_Items_Base
         {
@@ -116,30 +115,37 @@ class CfgHints
             description = CSTRING(Items_Chemlight_Shield_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/chemlights'>Chemlights Wiki</a>";
         };
-        class ACE_DAGR: ACE_Items_Base
+        class ACE_Clackers: ACE_Items_Base
         {
             logicalOrder = 6;
+            displayName = CSTRING(Items_Clackers_DisplayName);
+            displayNameShort = CSTRING(Items_Clackers_ShortName);
+            description = CSTRING(Items_Clackers_Description);
+        };
+        class ACE_DAGR: ACE_Items_Base
+        {
+            logicalOrder = 7;
             displayName = CSTRING(Items_DAGR_DisplayName);
             displayNameShort = CSTRING(Items_DAGR_ShortName);
             description = CSTRING(Items_DAGR_Description);
         };
         class ACE_DeadManSwitch: ACE_Items_Base
         {
-            logicalOrder = 7;
+            logicalOrder = 8;
             displayName = CSTRING(Items_DeadManSwitch_DisplayName);
             displayNameShort = CSTRING(Items_DeadManSwitch_ShortName);
             description = CSTRING(Items_DeadManSwitch_Description);
         };
         class ACE_DefusalKit: ACE_Items_Base
         {
-            logicalOrder = 8;
+            logicalOrder = 9;
             displayName = CSTRING(Items_DefusalKit_DisplayName);
             displayNameShort = CSTRING(Items_DefusalKit_ShortName);
             description = CSTRING(Items_DefusalKit_Description);
         };
         class ACE_EarPlugs: ACE_Items_Base
         {
-            logicalOrder = 9;
+            logicalOrder = 10;
             displayName = CSTRING(Items_EarPlugs_DisplayName);
             displayNameShort = CSTRING(Items_EarPlugs_ShortName);
             description = CSTRING(Items_EarPlugs_Description);
@@ -147,14 +153,14 @@ class CfgHints
         };
         class ACE_EntrenchingTool: ACE_Items_Base
         {
-            logicalOrder = 10;
+            logicalOrder = 11;
             displayName = CSTRING(Items_EntrenchingTool_DisplayName);
             displayNameShort = CSTRING(Items_EntrenchingTool_ShortName);
             description = CSTRING(Items_EntrenchingTool_Description);
         };
         class ACE_Flashlights: ACE_Items_Base
         {
-            logicalOrder = 11;
+            logicalOrder = 12;
             displayName = CSTRING(Items_Flashlights_DisplayName);
             displayNameShort = CSTRING(Items_Flashlights_ShortName);
             description = CSTRING(Items_Flashlights_Description);
@@ -162,7 +168,7 @@ class CfgHints
         };
         class ACE_HuntIR_Monitor: ACE_Items_Base
         {
-            logicalOrder = 12;
+            logicalOrder = 13;
             displayName = CSTRING(Items_HuntIR_Monitor_DisplayName);
             displayNameShort = CSTRING(Items_HuntIR_Monitor_ShortName);
             description = CSTRING(Items_HuntIR_Monitor_Description);
@@ -170,31 +176,24 @@ class CfgHints
         };
         class ACE_IR_Strobe: ACE_Items_Base
         {
-            logicalOrder = 13;
+            logicalOrder = 14;
             displayName = CSTRING(Items_IR_Strobe_DisplayName);
             displayNameShort = CSTRING(Items_IR_Strobe_ShortName);
             description = CSTRING(Items_IR_Strobe_Description);
         };
         class ACE_Kestrel4500: ACE_Items_Base
         {
-            logicalOrder = 14;
+            logicalOrder = 15;
             displayName = CSTRING(Items_Kestrel4500_DisplayName);
             displayNameShort = CSTRING(Items_Kestrel4500_ShortName);
             description = CSTRING(Items_Kestrel4500_Description);
         };
         class ACE_MapTools: ACE_Items_Base
         {
-            logicalOrder = 15;
+            logicalOrder = 16;
             displayName = CSTRING(Items_MapTools_DisplayName);
             displayNameShort = CSTRING(Items_MapTools_ShortName);
             description = CSTRING(Items_MapTools_Description);
-        };
-        class ACE_Clackers: ACE_Items_Base
-        {
-            logicalOrder = 16;
-            displayName = CSTRING(Items_Clackers_DisplayName);
-            displayNameShort = CSTRING(Items_Clackers_ShortName);
-            description = CSTRING(Items_Clackers_Description);
         };
         class ACE_MicroDAGR: ACE_Items_Base
         {
@@ -207,9 +206,9 @@ class CfgHints
         class ACE_RangeTables: ACE_Items_Base
         {
             logicalOrder = 18;
-            displayName = CSTRING(Items_RangeCard_DisplayName);
-            displayNameShort = CSTRING(Items_RangeCard_ShortName);
-            description = CSTRING(Items_RangeCard_Description);
+            displayName = CSTRING(Items_RangeTables_DisplayName);
+            displayNameShort = CSTRING(Items_RangeTables_ShortName);
+            description = CSTRING(Items_RangeTables_Description);
         };
         class ACE_Ropes: ACE_Items_Base
         {
