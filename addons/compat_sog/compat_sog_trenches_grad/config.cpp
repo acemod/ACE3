@@ -7,16 +7,14 @@
 
 #if __has_include("\z\ace\addons\csw\script_component.hpp")
 #else
-    #ifdef PATCH_SKIP
-    #else
+    #ifndef PATCH_SKIP
         #define PATCH_SKIP "ACE Trenches"
     #endif
 #endif
 
 #if __has_include("\x\grad_trenches\addons\main\script_component.hpp")
 #else
-    #ifdef PATCH_SKIP
-    #else
+    #ifndef PATCH_SKIP
         #define PATCH_SKIP "Grad Trenches"
     #endif
 #endif

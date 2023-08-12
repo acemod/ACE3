@@ -7,8 +7,7 @@
 
 #if __has_include("\z\ace\addons\csw\script_component.hpp")
 #else
-    #ifdef PATCH_SKIP
-    #else
+    #ifndef PATCH_SKIP
         #define PATCH_SKIP "ACE Trenches"
     #endif
 #endif
