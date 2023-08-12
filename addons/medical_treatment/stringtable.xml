@@ -416,7 +416,7 @@
             <English>Grave Digging Time</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
-            <English>Time, in seconds, required to dig a grave for a patient.</English>
+            <English>Time, in seconds, required to dig a grave for a body.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
