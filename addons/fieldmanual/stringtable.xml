@@ -45,8 +45,8 @@
         <English>Build Fortifications</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_Description">
-        <Original />
-        <English />
+        <Original>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%2Usage:%3&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</Original>
+        <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%2Usage:%3&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
       </Key>
     </Container>
     <Container name="ACE_Medical_Treatment">
