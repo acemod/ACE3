@@ -373,7 +373,7 @@
         <English>Get A Firing Solution</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
-        <Original>Work In Progress</Original>
+        <Original>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</Original>
         <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_RangeCard_DisplayName">
