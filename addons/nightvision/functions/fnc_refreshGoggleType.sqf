@@ -26,6 +26,14 @@ private _hideHex = true;
 private _nvgGen = 3;
 private _blurRadius = -1;
 
+// Privated NVD's PP Effects (ColorCorrection) Params / Contains original ACE3's (ST's) by default.
+private _offset = 0;
+private _blend = [0.0, 0.0, 0.0, 0.0];
+private _colorize = [1.3, 1.2, 0.0, 0.9];
+private _weight = [6, 1, 1, 0.0];
+// Adds Array of Params / Original ACE3's (ST's) by default.
+private _preset = [0, [0.0, 0.0, 0.0, 0.0], [1.3, 1.2, 0.0, 0.9], [6, 1, 1, 0.0]];
+
 if (alive ACE_player) then {
     if (((vehicle ACE_player) == ACE_player) || {
         // Test if we are using player's nvg or if sourced from vehicle:
@@ -61,6 +69,7 @@ if (alive ACE_player) then {
             TRACE_1("souce: binocular",binocular ACE_player); // Source is from player's binocular (Rangefinder/Vector21bNite)
             private _config = configFile >> "CfgWeapons" >> (binocular ACE_player);
             if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
+            if (isArray (_config >> "colorPreset")) then {_preset = getArray (_config >> "colorPreset");};
         };
 
         TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope, but no good way to detect that)
@@ -75,7 +84,7 @@ if (alive ACE_player) then {
             if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
         };
         if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
-
+        if (isArray (_config >> "colorPreset")) then {_preset = getArray (_config >> "colorPreset");};
     } else {
         TRACE_1("source: vehicle - defaults",typeOf vehicle ACE_player);
     };
@@ -86,8 +95,17 @@ systemChat format ["NVG Refresh - Border: %1", _borderImage];
 systemChat format ["EyeCups: %1, HideHex %2, NVGen: %3, BluRadius: %4", _eyeCups, _hideHex, _nvgGen, _blurRadius];
 #endif
 
+// Selection cancelled, params added
+_preset params ["_offset", "_blend", "_colorize", "_weight"];
+
 GVAR(nvgBlurRadius) = _blurRadius;
 GVAR(nvgGeneration) = _nvgGen;
+
+// Additional Global variables for Params transfer & supporting
+GVAR(nvgOffset) = _offset;
+GVAR(nvgBlend) = _blend;
+GVAR(nvgColorize) = _colorize;
+GVAR(nvgWeight) = _weight;
 
 // Setup border and hex image based on NVG config:
 private _scale = (call EFUNC(common,getZoom)) * 1.12513;

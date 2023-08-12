@@ -5,6 +5,12 @@ class CfgWeapons {
         modelOptics = "";
         GVAR(border) = QPATHTOF(data\nvg_mask_binos_4096.paa);
         GVAR(bluRadius) = 0.15;
+        NVG_GREEN_PRESET;
+    };
+    class NVGoggles_WP: NVGoggles {
+        displayName = CSTRING(NVG_Gen3_brown_WP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
     };
     class O_NVGoggles_hex_F: NVGoggles { // APEX NVG with multiple lenses (spider eyes)
         modelOptics = "";
@@ -21,9 +27,19 @@ class CfgWeapons {
         modelOptics = "";
         displayName = CSTRING(NVG_Gen3_black);
     };
+    class NVGoggles_OPFOR_WP: NVGoggles_OPFOR {
+        displayName = CSTRING(NVG_Gen3_black_WP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
+    };
     class NVGoggles_INDEP: NVGoggles {
         modelOptics = "";
         displayName = CSTRING(NVG_Gen3_green);
+    };
+    class NVGoggles_INDEP_WP: NVGoggles_INDEP {
+        displayName = CSTRING(NVG_Gen3_green_WP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
     };
     class ACE_NVG_Gen1: NVGoggles_OPFOR {
         author = ECSTRING(common,ACETeam);
@@ -60,15 +76,30 @@ class CfgWeapons {
         displayName = CSTRING(NVG_Gen4_black);
         GVAR(generation) = 4;
     };
+    class ACE_NVG_Gen4_Black_WP: ACE_NVG_Gen4_Black {
+        displayName = CSTRING(NVG_Gen4_black_WP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
+    };
     class ACE_NVG_Gen4: NVGoggles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(NVG_Gen4_brown);
         GVAR(generation) = 4;
     };
+    class ACE_NVG_Gen4_WP: ACE_NVG_Gen4 {
+        displayName = CSTRING(NVG_Gen4_brown_WP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
+    };
     class ACE_NVG_Gen4_Green: NVGoggles_INDEP {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(NVG_Gen4_green);
         GVAR(generation) = 4;
+    };
+    class ACE_NVG_Gen4_Green_WP: ACE_NVG_Gen4_Green {
+        displayName = CSTRING(NVG_Gen4_green_WP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
     };
     class ACE_NVG_Wide_Black: NVGoggles_OPFOR {
         author = ECSTRING(common,ACETeam);
