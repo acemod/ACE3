@@ -156,13 +156,8 @@ class CfgVehicles {
         EGVAR(refuel,hooks)[] = {{-0.05,-3.6,-0.45}};
         EGVAR(refuel,fuelCargo) = 10000;
     };
-    class RHS_Ural_Repair_MSV_01: RHS_Ural_Support_MSV_Base_01 {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
     class RHS_Ural_Ammo_Base: RHS_Ural_Base {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class rhs_kraz255b1_base;
@@ -176,21 +171,14 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 210;
     };
 
-    class rhs_gaz66_vmf: rhs_truck {};
-    class rhs_gaz66_repair_base: rhs_gaz66_vmf {
-        transportRepair = 0;
-        EGVAR(repair,canRepair) = 1;
-    };
-
+    class rhs_gaz66_vmf;
     class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class rhs_kamaz5350;
     class rhs_kamaz5350_ammo_base: rhs_kamaz5350 {
-        transportAmmo = 0;
-        ace_rearm_defaultSupply = 1200;
+        EGVAR(rearm,defaultSupply) = 1200;
     };
 
     class MRAP_02_base_F;
