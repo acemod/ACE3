@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 
 /*
     Preferred Image Size = 256x256
