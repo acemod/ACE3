@@ -15,8 +15,8 @@
         <English>Hunger</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
-        <Original />
-        <English />
+        <Original>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;1.) Pick up a food item&lt;br/&gt;2.) Use [%3%11%4] and select %3Survival%4&lt;br/&gt;3.) Choose a food item to consume.</Original>
+        <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;1.) Pick up a food item&lt;br/&gt;2.) Use [%3%11%4] and select %3Survival%4&lt;br/&gt;3.) Choose a food item to consume.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
         <Original>Thirst</Original>
@@ -27,8 +27,8 @@
         <English>Thirst</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
-        <Original />
-        <English />
+        <Original>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;1.) Pick up a drink item&lt;br/&gt;2.) Use [%3%11%4] and select %3Survival%4&lt;br/&gt;3.) Choose a drink item to consume.</Original>
+        <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;1.) Pick up a drink item&lt;br/&gt;2.) Use [%3%11%4] and select %3Survival%4&lt;br/&gt;3.) Choose a drink item to consume.</English>
       </Key>
     </Container>
     <Container name="ACE_Fortify">

@@ -259,6 +259,16 @@ class CfgHints
 
         class ACE_Field_Rations_Base
         {
+            arguments[] =
+            {
+                "
+                    private _localized = 'Self Interact Key';
+                    if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {
+                        _localized = ['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
+                    };
+                    _localized
+                "
+            };
             image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
             tip = "<a href='https://ace3.acemod.org/wiki/framework/field-rations-framework'>Field Rations Wiki</a>";
         };
