@@ -74,7 +74,7 @@ GVAR(lastSortDirectionRight) = DESCENDING;
         if (_nullItemsList isNotEqualTo []) then {
             _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]];
         } else {
-            if (_unavailableItemsList isNotEqualTo [""]) then {
+            if (_unavailableItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
             };
         };
