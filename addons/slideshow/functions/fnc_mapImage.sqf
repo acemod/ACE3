@@ -22,7 +22,7 @@
  * Example:
  * [] call ace_slideshow_fnc_mapImage
  * [getPos player, 0.3, [], 1] call ace_slideshow_fnc_mapImage
- * [[5000, 5000], 0.5, [[getpos player, "obj"]], 2, {},] call ace_slideshow_fnc_mapImage
+ * [[5000, 5000], 0.5, [[getpos player, "obj"]], 2, {}] call ace_slideshow_fnc_mapImage
  *
  * Public: Yes
  */
