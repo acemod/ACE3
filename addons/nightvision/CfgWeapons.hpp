@@ -106,15 +106,30 @@ class CfgWeapons {
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_Wide_black);
     };
+    class ACE_NVG_Wide_Black_WP: ACE_NVG_Wide_Black {
+        displayName = CSTRING(NVG_Wide_black_wP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
+    };
     class ACE_NVG_Wide: NVGoggles {
         author = ECSTRING(common,ACETeam);
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_Wide_brown);
     };
+    class ACE_NVG_Wide_WP: ACE_NVG_Wide {
+        displayName = CSTRING(NVG_Wide_brown_WP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
+    };
     class ACE_NVG_Wide_Green: NVGoggles_INDEP {
         author = ECSTRING(common,ACETeam);
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_Wide_green);
+    };
+    class ACE_NVG_Wide_Green_WP: ACE_NVG_Wide_Green {
+        displayName = CSTRING(NVG_Wide_green_WP);
+        descriptionShort = CSTRING(NVG_WP_desc);
+        NVG_WHITE_PRESET;
     };
 
 
