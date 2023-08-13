@@ -53,7 +53,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _loadoutCachedInfo params ["", "_nullItemsList", "_unavailableItemsList"];
 
             // Log missing / nil items to RPT (only once per arsenal session)
-            if (GVAR(EnableRPTLog) && {(_nullItemsList isNotEqualTo []) || {_unavailableItemsList isNotEqualTo [""]}}) then {
+            if (GVAR(EnableRPTLog) && {(_nullItemsList isNotEqualTo []) || {_unavailableItemsList isNotEqualTo []}}) then {
                 private _printComponent = "ACE_Arsenal - Loadout:";
                 private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
                 private _printUnavailableItemsList = ["Unavailable items:", str _unavailableItemsList] joinString " ";
@@ -80,7 +80,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         if (_nullItemsList isNotEqualTo []) then {
             _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
         } else {
-            if (_unavailableItemsList isNotEqualTo [""]) then {
+            if (_unavailableItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
             };
         };
@@ -121,7 +121,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             if (_nullItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
             } else {
-                if (_unavailableItemsList isNotEqualTo [""]) then {
+                if (_unavailableItemsList isNotEqualTo []) then {
                     _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
                 };
             };
