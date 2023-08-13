@@ -316,7 +316,7 @@
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_displayName">
             <English>Auto-Equip FRIES</English>
-            <Polish>Automatyczne Zamontuj FRIES</Polish>
+            <Polish>Automatycznie Zamontuj FRIES</Polish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_description">
             <English>Automatically add FRIES to helicopters that support them.</English>
