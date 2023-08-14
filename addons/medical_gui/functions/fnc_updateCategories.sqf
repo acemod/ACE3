@@ -33,7 +33,7 @@ params ["_display"];
     private _color = [[0.4, 0.4, 0.4, 1], [1, 1, 1, 1]] select _enable;
     _color = if (GVAR(selectedCategory) isEqualTo _category) then {_selectedColor} else {_color};
     _ctrl ctrlSetTextColor _color;
-    _color set [-1, 0.8]; //Mouseover change
+    _color set [-1, 0.8]; // Mouseover change
     _ctrl ctrlSetActiveColor _color;
 } forEach [
     [IDC_EXAMINE, "examine"],
