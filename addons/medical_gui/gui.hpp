@@ -216,7 +216,7 @@ class ACE_Medical_Menu {
         };
         class Triage: RscActivePicture {
             idc = IDC_TRIAGE;
-            onButtonClick = QUOTE(GVAR(selectedCategory) = 'triage');
+            onButtonClick = QUOTE(if (GVAR(selectedCategory) isEqualTo 'triage') then {GVAR(selectedCategory) = 'triage'; GVAR(page) = GVAR(page) + 1;} else {GVAR(selectedCategory) = 'triage'};);
             text = QPATHTOF(data\categories\triage_card.paa);
             tooltip = CSTRING(ViewTriageCard);
             x = QUOTE(POS_X(1.5));
@@ -231,35 +231,35 @@ class ACE_Medical_Menu {
         };
         class Examine: Triage {
             idc = IDC_EXAMINE;
-            onButtonClick = QUOTE(GVAR(selectedCategory) = 'examine');
+            onButtonClick = QUOTE(if (GVAR(selectedCategory) isEqualTo 'examine') then {GVAR(selectedCategory) = 'examine'; GVAR(page) = GVAR(page) + 1;} else {GVAR(selectedCategory) = 'examine'};);
             text = QPATHTOF(data\categories\examine_patient.paa);
             tooltip = CSTRING(ExaminePatient);
             x = QUOTE(POS_X(3));
         };
         class Bandage: Triage {
             idc = IDC_BANDAGE;
-            onButtonClick = QUOTE(GVAR(selectedCategory) = 'bandage');
+            onButtonClick = QUOTE(if (GVAR(selectedCategory) isEqualTo 'bandage') then {GVAR(selectedCategory) = 'bandage'; GVAR(page) = GVAR(page) + 1;} else {GVAR(selectedCategory) = 'bandage'};);
             text = QPATHTOF(data\categories\bandage_fracture.paa);
             tooltip = CSTRING(BandageFractures);
             x = QUOTE(POS_X(4.5));
         };
         class Medication: Triage {
             idc = IDC_MEDICATION;
-            onButtonClick = QUOTE(GVAR(selectedCategory) = 'medication');
+            onButtonClick = QUOTE(if (GVAR(selectedCategory) isEqualTo 'medication') then {GVAR(selectedCategory) = 'medication'; GVAR(page) = GVAR(page) + 1;} else {GVAR(selectedCategory) = 'medication';};);
             text = QPATHTOF(data\categories\medication.paa);
             tooltip = CSTRING(Medication);
             x = QUOTE(POS_X(6));
         };
         class Airway: Triage {
             idc = IDC_AIRWAY;
-            onButtonClick = QUOTE(GVAR(selectedCategory) = 'airway');
+            onButtonClick = QUOTE(if (GVAR(selectedCategory) isEqualTo 'airway') then {GVAR(selectedCategory) = 'airway'; GVAR(page) = GVAR(page) + 1;} else {GVAR(selectedCategory) = 'airway';});
             text = QPATHTOF(data\categories\airway_management.paa);
             tooltip = CSTRING(AirwayManagement);
             x = QUOTE(POS_X(7.5));
         };
         class Advanced: Triage {
             idc = IDC_ADVANCED;
-            onButtonClick = QUOTE(GVAR(selectedCategory) = 'advanced');
+            onButtonClick = QUOTE(if (GVAR(selectedCategory) isEqualTo 'advanced') then {GVAR(selectedCategory) = 'advanced'; GVAR(page) = GVAR(page) + 1;} else {GVAR(selectedCategory) = 'advanced';});
             text = QPATHTOF(data\categories\advanced_treatment.paa);
             tooltip = CSTRING(AdvancedTreatment);
             x = QUOTE(POS_X(9));
