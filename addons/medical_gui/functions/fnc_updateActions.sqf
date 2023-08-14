@@ -46,16 +46,14 @@ private _idcIndex = 0;
     if (_forEachIndex < (GVAR(page)*9)) then {continue}; // Pagination
 
     // Check action category and condition
-    if (_category == _selectedCategory && {call _condition}) then {
-        private _ctrl = _display displayCtrl (IDCS_ACTION_BUTTONS select _idcIndex);
-        _ctrl ctrlSetText _displayName;
-        _ctrl ctrlShow true;
+    private _ctrl = _display displayCtrl (IDCS_ACTION_BUTTONS select _idcIndex);
+    _ctrl ctrlSetText _displayName;
+    _ctrl ctrlShow true;
 
-        _ctrl ctrlAddEventHandler ["ButtonClick", _statement];
-        _ctrl ctrlAddEventHandler ["ButtonClick", {GVAR(pendingReopen) = true}];
+    _ctrl ctrlAddEventHandler ["ButtonClick", _statement];
+    _ctrl ctrlAddEventHandler ["ButtonClick", {GVAR(pendingReopen) = true}];
 
-        _idcIndex = _idcIndex + 1;
-    };
+    _idcIndex = _idcIndex + 1;
 } forEach GVAR(possibleActions);
 
 if (_actionsCount > 0 && {_idcIndex isEqualTo 0}) then {GVAR(page) = 0;}; // Ensures pages all have actions
