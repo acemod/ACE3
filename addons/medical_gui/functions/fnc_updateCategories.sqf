@@ -33,10 +33,10 @@ params ["_display"];
     // Change icon based on page
     if (GVAR(selectedCategory) isEqualTo _category && {_pageCount > 1}) then {
         private _newImg = switch (_pageCount - GVAR(page)) do {
-            case 0: {QPATHTOF(data\pages_1.paa)};
-            case 1: {QPATHTOF(data\pages_1.paa)};
-            case 2: {QPATHTOF(data\pages_2.paa)};
-            default {QPATHTOF(data\pages_3.paa)};
+            case 0: {QPATHTOF(data\categories\pages_1.paa)};
+            case 1: {QPATHTOF(data\categories\pages_1.paa)};
+            case 2: {QPATHTOF(data\categories\pages_2.paa)};
+            default {QPATHTOF(data\categories\pages_3.paa)};
         };
         private _tooltip = getText (configFile >> "ACE_Medical_Menu" >> "controls" >> _category >> "tooltip");
         _ctrl ctrlSetText _newImg;
