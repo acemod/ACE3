@@ -247,7 +247,7 @@ def find_depbo_tools():
     for tool in requiredToolPaths:
         try:
             k = mikero_windows_registry(tool)
-            path = winreg.QueryValueEx(k, "exe")[0]           
+            path = winreg.QueryValueEx(k, "exe")[0]
         except FileNotFoundError:
             print_error("Could not find {}".format(tool))
             failed = True
@@ -877,7 +877,7 @@ Examples:
 
 
 If a file called $NOBIN$ is found in the module directory, that module will not be binarized.
-If preprocess = false is set in the addon.toml, that module's config will not be binarized.
+If preprocess.enabled = false is set in the addon.toml, that module's config will not be binarized.
 
 See the make.cfg file for additional build options.
 """)
@@ -1188,7 +1188,7 @@ See the make.cfg file for additional build options.
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
 
-        # Always cleanup old sqfc    
+        # Always cleanup old sqfc
         for root, _dirs, files in os.walk(module_root_parent):
             for file in files:
                 if file.endswith(".sqfc"):
@@ -1302,13 +1302,17 @@ See the make.cfg file for additional build options.
                     addonTomlPath = os.path.join(work_drive, prefix, module, "addon.toml")
                     if os.path.isfile(addonTomlPath):
                         with open(addonTomlPath, "r") as f:
-                            skipPreprocessing = "preprocess = false" in f.read() #python 3.11 has real toml but this is fine for now
+                            tomlFile = f.read()
+                            if "preprocess = false" in tomlFile: 
+                                print_error("'preprocess = false' not supported")
+                                raise
+                            skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
 
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
                     elif skipPreprocessing:
-                        print_green("addon.toml set [preprocess = false]. Proceeding with non-binerized config build!")
+                        print_green("addon.toml set [preprocess.enabled = false]. Proceeding with non-binerized config build!")
                         cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
                     else:
                         cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
@@ -1465,7 +1469,7 @@ See the make.cfg file for additional build options.
 
     if sqfc_compiling:
         print_blue("\nCleaning up sqfc...")
-        # cleanup all old sqfc    
+        # cleanup all old sqfc
         for root, _dirs, files in os.walk(module_root_parent):
             for file in files:
                 if file.endswith(".sqfc"):

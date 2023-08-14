@@ -15,3 +15,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define ACTION_TYPE_BUTTON 0
+#define ACTION_TYPE_TEXT 1

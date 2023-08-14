@@ -67,6 +67,10 @@ class FunctionFile:
         self.debug = debug
         self.lint_private = lint_private
 
+        for lineNumber, line in enumerate(self.header.splitlines()):
+            if (not (line.startswith(" * ") or line in ["", " *", "/*", "*/", " */"])):
+                self.feedback(f"header formating on line {lineNumber+1}: ({line})", 1)
+
         # Preemptively cut away the comment characters (and leading/trailing whitespace)
         self.header_text = "\n".join([x[3:].strip() for x in self.header.splitlines()])
 
@@ -160,18 +164,30 @@ class FunctionFile:
             self.feedback("No blank line after arguments list", 1)
 
         arguments = []
+        expectedMainIndex = 0
+        expectedSubIndex = 0
         for argument in lines:
-            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w,\|]+?)\>( )?(\s\(default: (.+)\))?$", argument)
+            valid = re.match(r"^(- ){0,1}(\d+):\s(.+?)\<([\s\w,\|]+?)\>( )?(\s\(default: (.+)\))?$", argument)
 
             if valid:
-                arg_index = valid.group(1)
-                arg_name = valid.group(2)
-                arg_types = valid.group(3)
-                arg_default = valid.group(6)
+                arg_isSubIndex = valid.group(1) is not None
+                arg_index = valid.group(2)
+                arg_name = valid.group(3)
+                arg_types = valid.group(4)
+                arg_default = valid.group(7)
                 arg_notes = []
 
-                if arg_index != str(len(arguments)):
-                    self.feedback("Argument index {} does not match listed order".format(arg_index), 1)
+                if arg_isSubIndex:
+                    expectedIndex = expectedSubIndex
+                    expectedSubIndex = expectedSubIndex + 1
+                else:
+                    expectedIndex = expectedMainIndex
+                    expectedMainIndex = expectedMainIndex + 1
+                    expectedSubIndex = 0
+
+                if int(arg_index) != expectedIndex:
+                    print(f"line|{argument}|")
+                    self.feedback(f"Argument index {arg_index} does not match listed order {expectedIndex}", 1)
 
                 if arg_default is None:
                     arg_default = ""
@@ -255,7 +271,7 @@ class FunctionFile:
             self.errors += 1
 
     def write(self, message, indent=2):
-        to_print = ["  "]*indent
+        to_print = ["  "] * indent
         to_print.append(message)
         print("".join(to_print))
 

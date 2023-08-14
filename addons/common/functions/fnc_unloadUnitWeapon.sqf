@@ -14,7 +14,7 @@
  * None
  *
  * Example:
-* [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player, 23, false] call ace_common_fnc_unloadUnitWeapon
+ * [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player, 23, false] call ace_common_fnc_unloadUnitWeapon
  *
  * Public: No
  */

@@ -30,3 +30,7 @@ private _cfgBase = configFile >> "CfgNonAIVehicles";
 
 uiNamespace setVariable [QGVAR(cacheStaticModels), compileFinal str _cacheStaticModels];
 TRACE_1("compiled",count _cacheStaticModels);
+
+// force preload of stencil texture to avoid error popup
+//  Warning Message: Cannot load mipmap z\ace\addons\fonts\sairastencilone\ace_stencil64-01.paa
+"Test" getTextWidth ["ACE_Stencil", 0.3];
