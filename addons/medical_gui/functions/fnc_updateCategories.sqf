@@ -25,10 +25,10 @@ params ["_display"];
     _ctrl ctrlEnable _enable;
 
     private _selectedColor = [
-        profilenamespace getvariable ["GUI_BCG_RGB_R",0.13],
-        profilenamespace getvariable ["GUI_BCG_RGB_G",0.54],
-        profilenamespace getvariable ["GUI_BCG_RGB_B",0.21],
-        profilenamespace getvariable ["GUI_BCG_RGB_A",0.8]
+        profileNamespace getVariable ["GUI_BCG_RGB_R", 0.13],
+        profileNamespace getVariable ["GUI_BCG_RGB_G", 0.54],
+        profileNamespace getVariable ["GUI_BCG_RGB_B", 0.21],
+        profileNamespace getVariable ["GUI_BCG_RGB_A", 0.8]
     ];
     private _color = [[0.4, 0.4, 0.4, 1], [1, 1, 1, 1]] select _enable;
     _color = if (GVAR(selectedCategory) isEqualTo _category) then {_selectedColor} else {_color};
