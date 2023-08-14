@@ -224,7 +224,7 @@ class ACE_Medical_Menu {
             w = QUOTE(POS_W(1.5));
             h = QUOTE(POS_H(1.5));
             color[] = {1, 1, 1, 1};
-            colorActive[] = {1,1,1,0.8};
+            colorActive[] = {1, 1, 1, 0.8};
             soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundClick", 0.09, 1};
             soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundEnter", 0.09, 1};
             soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundEscape", 0.09, 1};
