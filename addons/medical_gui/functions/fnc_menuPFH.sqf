@@ -24,6 +24,12 @@ if !([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(com
     };
 };
 
+// Create array of possible actions
+GVAR(possibleActions) = GVAR(actions) select {
+    _x params ["_displayName", "_category", "_condition", "_statement"];
+    _category isEqualTo GVAR(selectedCategory) && {call _condition}
+};
+
 // Get the Medical Menu display
 private _display = uiNamespace getVariable [QGVAR(menuDisplay), displayNull];
 if (isNull _display) exitWith {};
