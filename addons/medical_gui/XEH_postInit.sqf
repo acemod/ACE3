@@ -6,6 +6,7 @@ GVAR(target) = objNull;
 GVAR(previousTarget) = objNull;
 GVAR(selectedBodyPart) = 0;
 GVAR(selectedCategory) = "triage";
+GVAR(page) = 0;
 
 GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
