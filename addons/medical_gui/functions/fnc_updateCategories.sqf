@@ -24,8 +24,17 @@ params ["_display"];
     private _enable = GVAR(actions) findIf {_category == _x select 1 && {call (_x select 2)}} > -1;
     _ctrl ctrlEnable _enable;
 
+    private _selectedColor = [
+        profilenamespace getvariable ["GUI_BCG_RGB_R",0.13],
+        profilenamespace getvariable ["GUI_BCG_RGB_G",0.54],
+        profilenamespace getvariable ["GUI_BCG_RGB_B",0.21],
+        profilenamespace getvariable ["GUI_BCG_RGB_A",0.8]
+    ];
     private _color = [[0.4, 0.4, 0.4, 1], [1, 1, 1, 1]] select _enable;
+    _color = if (GVAR(selectedCategory) isEqualTo _category) then {_selectedColor} else {_color};
     _ctrl ctrlSetTextColor _color;
+    _color set [-1, 0.8]; //Mouseover change
+	_ctrl ctrlSetActiveColor _color;
 } forEach [
     [IDC_EXAMINE, "examine"],
     [IDC_BANDAGE, "bandage"],
