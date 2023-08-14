@@ -43,6 +43,8 @@ private _idcIndex = 0;
 {
     _x params ["_displayName", "_category", "_condition", "_statement"];
 
+    if (_forEachIndex < (GVAR(page)*9)) then {continue}; // Pagination
+
     // Check action category and condition
     if (_category == _selectedCategory && {call _condition}) then {
         private _ctrl = _display displayCtrl (IDCS_ACTION_BUTTONS select _idcIndex);
@@ -54,4 +56,4 @@ private _idcIndex = 0;
 
         _idcIndex = _idcIndex + 1;
     };
-} forEach GVAR(actions);
+} forEach GVAR(possibleActions);
