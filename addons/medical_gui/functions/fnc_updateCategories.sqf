@@ -44,8 +44,9 @@ params ["_display"];
         continue;
     };
     if ("pages" in ctrlText _ctrl) then {
-        private _newTooltip = getText (configFile >> "ACE_Medical_Menu" >> "controls" >> _category >> "tooltip");
-        private _newText = getText (configFile >> "ACE_Medical_Menu" >> "controls" >> _category >> "text");
+        private _config = configFile >> "ACE_Medical_Menu" >> "controls" >> _category;
+        private _newTooltip = getText (_config >> "tooltip");
+        private _newText = getText (_config >> "text");
         _ctrl ctrlSetText _newText;
         _ctrl ctrlSetTooltip _newTooltip;
     };
