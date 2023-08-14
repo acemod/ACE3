@@ -30,6 +30,7 @@ params ["_display"];
     private _actionsCount = count GVAR(possibleActions);
     private _pageCount = ceil (_actionsCount/9);
 
+    // Change icon based on page
     if (GVAR(selectedCategory) isEqualTo _category && {_pageCount > 1}) then {
         private _newImg = switch (_pageCount - GVAR(page)) do {
             case 0: {QPATHTOF(data\pages_1.paa)};
