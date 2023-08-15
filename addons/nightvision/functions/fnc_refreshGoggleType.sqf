@@ -26,14 +26,8 @@ private _hideHex = true;
 private _nvgGen = 3;
 private _blurRadius = -1;
 
-// Privated NVD's PP Effects (ColorCorrection) Params / Contains original ACE3's (ST's) by default.
-private _offset = 0;
-private _blend = [0.0, 0.0, 0.0, 0.0];
-private _colorize = [1.3, 1.2, 0.0, 0.9];
-private _weight = [6, 1, 1, 0.0];
-// Adds Array of Params / Original ACE3's (ST's) by default.
-private _preset = [0, [0.0, 0.0, 0.0, 0.0], [1.3, 1.2, 0.0, 0.9], [6, 1, 1, 0.0]];
-
+// Adds Array of Params / Original ACE3's (ST's) by default. (NVG_GREEN_PRESET)
+private _preset = getArray (configFile >> "CfgWeapons" >> "NVGoggles" >> "colorPreset");
 if (alive ACE_player) then {
     if (((vehicle ACE_player) == ACE_player) || {
         // Test if we are using player's nvg or if sourced from vehicle:
