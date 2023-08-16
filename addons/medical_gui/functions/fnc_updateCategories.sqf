@@ -26,6 +26,8 @@ params ["_display"];
 
     private _color = [[0.4, 0.4, 0.4, 1], [1, 1, 1, 1]] select _enable;
     _ctrl ctrlSetTextColor _color;
+    _color set [-1, 0.8]; // Mouseover change
+    _ctrl ctrlSetActiveColor _color;
 
     private _actionsCount = count GVAR(possibleActions);
     private _pageCount = ceil (_actionsCount/9);
