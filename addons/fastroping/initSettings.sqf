@@ -9,3 +9,11 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(setting_c
     {[QGVAR(requireRopeItems), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // needRestart
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(autoAddFRIES), "CHECKBOX",
+    [LSTRING(setting_autoAddFRIES_displayName), LSTRING(setting_autoAddFRIES_description)],
+    _category,
+    false, // default value
+    true // isGlobal
+] call CBA_fnc_addSetting;
