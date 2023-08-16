@@ -218,11 +218,11 @@
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
         <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
+        <English>Remote Detonation</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
+        <Original>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to the clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Clacker%4.&lt;br/&gt;%2Open the ACE interface with [%3%11%4].&lt;br/&gt;%2Select %3Explosives%4 and select %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</Original>
+        <English>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to the clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Clacker%4.&lt;br/&gt;%2Open the ACE interface with [%3%11%4].&lt;br/&gt;%2Select %3Explosives%4 and select %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_DAGR_DisplayName">
         <Original>DAGR</Original>
