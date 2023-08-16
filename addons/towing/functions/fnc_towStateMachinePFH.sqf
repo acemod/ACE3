@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Called per frame. Handles current unit state for attaching a rope to two vehicles
  *
  * Arguments:
