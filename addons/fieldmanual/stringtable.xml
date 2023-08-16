@@ -217,7 +217,7 @@
         <English>Clackers</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
-        <Original>Work In Progress</Original>
+        <Original>Remote Detonation</Original>
         <English>Remote Detonation</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
@@ -241,12 +241,12 @@
         <English>Dead Man's Switch</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
+        <Original>Explosive Revenge</Original>
+        <English>Explosive Revenge</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
+        <Original>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</Original>
+        <English>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</English>
       </Key>
       <Key ID="STR_ACE_FieldManual_Items_DefusalKit_DisplayName">
         <Original>Defusal Kit</Original>
