@@ -56,4 +56,4 @@ private _idcIndex = 0;
     _idcIndex = _idcIndex + 1;
 } forEach GVAR(possibleActions);
 
-if (_actionsCount > 0 && {_idcIndex isEqualTo 0}) then {GVAR(page) = 0;}; // Ensures pages all have actions
+if (_actionsCount > 0 && _idcIndex isEqualTo 0) then {GVAR(page) = 0;}; // Ensures pages all have actions
