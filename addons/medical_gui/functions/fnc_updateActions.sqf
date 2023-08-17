@@ -39,11 +39,10 @@ if (_showTriage) exitWith {
 
 // Show treatment options on action buttons
 private _idcIndex = 0;
+private _pageSize = 9; // 9 actions per page
 
 {
     _x params ["_displayName", "_category", "_condition", "_statement"];
-
-    if (_forEachIndex < (GVAR(page)*9)) then {continue}; // Pagination
 
     // Check action category and condition
     private _ctrl = _display displayCtrl (IDCS_ACTION_BUTTONS select _idcIndex);
@@ -54,6 +53,9 @@ private _idcIndex = 0;
     _ctrl ctrlAddEventHandler ["ButtonClick", {GVAR(pendingReopen) = true}];
 
     _idcIndex = _idcIndex + 1;
-} forEach GVAR(possibleActions);
+} forEach GVAR(possibleActions) select [
+    (GVAR(page)-1) * _pageSize,
+    _pageSize
+];
 
 if (_actionsCount > 0 && _idcIndex isEqualTo 0) then {GVAR(page) = 0;}; // Ensures pages all have actions. Page 0 will always have actions due to category being deactivated if no actions available
