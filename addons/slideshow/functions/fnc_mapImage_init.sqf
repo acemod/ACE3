@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Initilizaes the map texture display.
+ * Initializes the map texture display.
  *
  * Arguments:
  * 0: Display <DISPLAY> (default: displayNull)

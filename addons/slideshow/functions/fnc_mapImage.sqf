@@ -12,8 +12,8 @@
  * - 1: Text <STRING> (default: "")
  * - 2: Marker Type or Icon Name <STRING> (default: "mil_dot")
  * - 3: Color <ARRAY> (default: [1, 0, 0, 1])
- * 3: Map Type (0: Normal, 1: Topographic, 2: Satelite) or any custom class (even mission config) <NUMBER, STRING> (default: 0)
- * 4: Code to run on init (passed [_map, _display, _displayID]) <CODE> (default: {})
+ * 3: Map Type (0: Normal, 1: Topographic, 2: Satellite) or any custom class (even mission config) <NUMBER, STRING> (default: 0)
+ * 4: Code to run on init (will be passed [_map, _display, _displayID]) <CODE> (default: {})
  * 5: Resolution <NUMBER> (default: 4096)
  *
  * Return Value:
@@ -40,11 +40,12 @@ TRACE_6("",_pos,_scale,count _markers,_mapType,_userCode isEqualTo {},_resolutio
 _markers = _markers apply { // convert marker array to draw command
     _x params [["_xPos", [0,0,0], [[]]], ["_xText", "", [""]], ["_xIcon", "mil_dot", [""]], ["_xColor", [1,0,0,1], [[]]]];
     private _size = 0;
-    if (isClass (configFile >> "CfgMarkers" >> _xIcon)) then {
-        _size = 0.5 * getNumber (configFile >> "CfgMarkers" >> _xIcon >> "size");
-        _xIcon = getText (configFile >> "CfgMarkers" >> _xIcon >> "icon"); // don't swap order
+    private _config = configFile >> "CfgMarkers" >> _xIcon;
+    if (isClass _config) then {
+        _size = 0.5 * getNumber (_config >> "size");
+        _xIcon = getText (_config >> "icon"); // don't swap order
     } else {
-        if (_xIcon != "") then { _size = 16 }; // could be file or CfgVehicleIcons
+        if (_xIcon != "") then { _size = 16 }; // could be a file or a CfgVehicleIcons class
     };
     [_xIcon, _xColor, _xPos, _size, _size, 0, _xText, 0, 0.08]
 };
