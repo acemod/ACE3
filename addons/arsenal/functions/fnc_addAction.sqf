@@ -19,7 +19,7 @@
  *      ["text", "Text", {true}, "Text"],
  *      ["statement", "Statement", {true}, "", {[_this select 0] call tag_fnc_myTextStatement}],
  *      ["button", "Button", {true}, "", {}, {_this call tag_fnc_myAction}]
- *  ]] call ace_arsenal_fnc_addAction;
+ *  ]] call ace_arsenal_fnc_addAction
  *
  * Public: Yes
  */
