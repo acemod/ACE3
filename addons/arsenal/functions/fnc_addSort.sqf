@@ -27,7 +27,7 @@
  *
  *      _fireRate sort true;
  *      _fireRate param [0, 0]
- *  }] call ace_arsenal_fnc_addSort;
+ *  }] call ace_arsenal_fnc_addSort
  *
  * Public: Yes
  */
