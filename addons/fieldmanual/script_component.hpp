@@ -1,5 +1,5 @@
 #define COMPONENT fieldmanual
-#define COMPONENT_BEAUTIFIED FieldManual
+#define COMPONENT_BEAUTIFIED Field Manual
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
