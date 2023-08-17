@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: KJW
- * Updates selected category and page variables on new category selection
+ * Updates selected category and page variables on new category selection Used in GUI statements.
  *
  * Arguments:
  * 0: Category <STRING>
