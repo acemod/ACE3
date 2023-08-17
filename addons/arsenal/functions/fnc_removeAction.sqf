@@ -38,4 +38,4 @@ call FUNC(compileActions);
     } forEach (GVAR(actionList) select _tab);
 } forEach _IDList;
 
-nil
+nil // return
