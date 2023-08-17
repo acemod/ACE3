@@ -17,9 +17,7 @@
 
  params ["_category"];
 
-if (GVAR(selectedCategory) isEqualTo 'triage') then {
-    GVAR(selectedCategory) = _category;
+GVAR(selectedCategory) = _category;
+if (GVAR(selectedCategory) isEqualTo _category) then {
     GVAR(page) = GVAR(page) + 1;
-} else {
-    GVAR(selectedCategory) = _category;
 };
