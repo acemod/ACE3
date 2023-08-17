@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM), PabstMirror
+ * Author: tcvm, PabstMirror
  * Handles the use of proxy weapons to fix engine-reload times
  *
  * Arguments:
