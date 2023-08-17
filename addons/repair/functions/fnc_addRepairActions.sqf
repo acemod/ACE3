@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, SilentSpike
+ * Author: commy2, kymckay
  * Checks if the vehicles class already has the actions initialized, otherwise add all available repair options. Calleed from init EH.
  *
  * Arguments:
