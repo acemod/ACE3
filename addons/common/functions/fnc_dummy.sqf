@@ -1,5 +1,5 @@
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * A dummy function which does nothing. Can be useful.
  *
  * Arguments:

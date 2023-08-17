@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Author: Jonpas, SilentSpike
+# Author: Jonpas, kymckay
 
 import os
 import sys
