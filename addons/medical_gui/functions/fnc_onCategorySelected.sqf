@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * ["triage"] call ace_medical_gui_fnc_updateCategories
+ * ["triage"] call ace_medical_gui_fnc_onCategorySelected
  *
  * Public: No
  */
