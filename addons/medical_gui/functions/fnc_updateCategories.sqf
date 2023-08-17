@@ -36,8 +36,7 @@ params ["_display"];
     _color set [-1, 0.8]; // Mouseover change
     _ctrl ctrlSetActiveColor _color;
 
-    private _actionsCount = count GVAR(possibleActions);
-    private _pageCount = ceil (_actionsCount/9);
+    private _pageCount = ceil PAGE_COUNT;
 
     // Change icon based on page
     if (GVAR(selectedCategory) isEqualTo _category && {_pageCount > 1}) then {
