@@ -12,7 +12,7 @@
 
     if (_newCamera == "") then { // switched back to player view
         private _status = IS_UNCONSCIOUS(_unit);
-        [_unit, _status, true] call FUNC(setStatusEffects);
+        [_unit, _status] call FUNC(setStatusEffects);
     } else {
         [_unit, false, true] call FUNC(setStatusEffects);
     };
