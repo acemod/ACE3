@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Author: SilentSpike
+Author: kymckay
 Crawl function headers to produce appropriate documentation of public functions.
 
 Supported header sections:

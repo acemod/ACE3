@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Check if a unit is a medic
  *
  * Arguments:
