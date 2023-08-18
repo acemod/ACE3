@@ -21,9 +21,8 @@ params ["_vehicle", ["_targetTurret", true, [[], true]]];
 private _return = [[], []];
 
 if !(_vehicle isKindOf "StaticWeapon") exitWith {_return}; // limit to statics for now
-if (GVAR(ammoHandling) isEqualTo 0) exitWith {_return};
 // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
-if !([false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3])) exitWith {_return};
+if ((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]))}) exitWith {_return};
 
 private _turretMagsCSW = _return select 0;
 private _allCarryMags = _return select 1;
