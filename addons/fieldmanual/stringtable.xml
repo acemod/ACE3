@@ -29,22 +29,6 @@
             <Original>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</Original>
             <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</English>
         </Key>
-        <Key ID="STR_ACE_FieldManual_Fortify_DisplayName">
-            <Original>Fortify</Original>
-            <English>Fortify</English>
-        </Key>
-        <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_DisplayName">
-            <Original>Fortify Tool</Original>
-            <English>Fortify Tool</English>
-        </Key>
-        <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_ShortName">
-            <Original>Build Fortifications</Original>
-            <English>Build Fortifications</English>
-        </Key>
-        <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_Description">
-            <Original>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</Original>
-            <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
-        </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
             <Original>Items - Medical</Original>
             <English>Items - Medical</English>
@@ -222,12 +206,12 @@
             <English>DAGR</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DAGR_ShortName">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>Navigate</Original>
+            <English>Navigate</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DAGR_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;    %2Data View: WIP&lt;br/&gt;    %2GoTo WP: Select a waypoint to track.&lt;br/&gt;    %2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;    %2Connect To: Connect %3DAGR%4 to %3Vector%4.&lt;br/&gt;    %2Options</Original>
+            <English>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;    %2Data View: WIP&lt;br/&gt;    %2GoTo WP: Select a waypoint to track.&lt;br/&gt;    %2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;    %2Connect To: Connect %3DAGR%4 to %3Vector%4.&lt;br/&gt;    %2Options</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_DisplayName">
             <Original>Dead Man's Switch</Original>
@@ -342,12 +326,12 @@
             <English>MicroDAGR GPS</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_ShortName">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>Advanced DAGR</Original>
+            <English>Advanced DAGR</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>The %3MicroDAGR GPS%4 is an advanced version of the %3DAGR%4. It provides position, navigation, and timing (PNT) data to include:&lt;br/&gt;%2Compass and headings&lt;br/&gt;%2Date and hour synced to the mission&lt;br/&gt;%2Elevation (above or below sea level)&lt;br/&gt;%2Current speed&lt;br/&gt;%2GPS with topographic and satellite view&lt;br/&gt;%2Creating, naming, deleting waypoints&lt;br/&gt;%2Friendly identification (Needs ACE BLUFOR Tracker Setting)&lt;br/&gt;Connection to vector for data import&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2For usage instructions, please visit the dedicated %3MicroDAGR%4 wiki.</Original>
+            <English>The %3MicroDAGR GPS%4 is an advanced version of the %3DAGR%4. It provides position, navigation, and timing (PNT) data to include:&lt;br/&gt;%2Compass and headings&lt;br/&gt;%2Date and hour synced to the mission&lt;br/&gt;%2Elevation (above or below sea level)&lt;br/&gt;%2Current speed&lt;br/&gt;%2GPS with topographic and satellite view&lt;br/&gt;%2Creating, naming, deleting waypoints&lt;br/&gt;%2Friendly identification (Needs ACE BLUFOR Tracker Setting)&lt;br/&gt;Connection to vector for data import&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2For usage instructions, please visit the dedicated %3MicroDAGR%4 wiki.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_DisplayName">
             <Original>Range Tables</Original>
@@ -464,6 +448,18 @@
         <Key ID="STR_ACE_FieldManual_HintCategory_FieldManual_DisplayName">
             <Original>ACE3</Original>
             <English>ACE3</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_FortifyTool_DisplayName">
+            <English>Fortify Tool</English>
+            <Original>Fortify Tool</Original>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_FortifyTool_ShortName">
+            <English>Build Fortifications</English>
+            <Original>Build Fortifications</Original>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_FortifyTool_Description">
+            <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
+            <Original>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</Original>
         </Key>
     </Package>
 </Project>

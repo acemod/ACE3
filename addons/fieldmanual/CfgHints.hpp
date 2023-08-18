@@ -122,6 +122,7 @@ class CfgHints {
             displayName = CSTRING(Items_DeadManSwitch_DisplayName);
             displayNameShort = CSTRING(Items_DeadManSwitch_ShortName);
             description = CSTRING(Items_DeadManSwitch_Description);
+            tip = "<a href='https://ace3.acemod.org/wiki/feature/explosives'>Explosives Wiki</a>";
         };
         class ACE_DefusalKit: ACE_Items_Base {
             logicalOrder = 9;
@@ -149,89 +150,97 @@ class CfgHints {
             description = CSTRING(Items_Flashlights_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/flashlights'>Flashlights Wiki</a>";
         };
-        class ACE_HuntIR_Monitor: ACE_Items_Base {
+        class ACE_FortifyTool: ACE_Items_Base {
             logicalOrder = 13;
+            displayName = CSTRING(Items_FortifyTool_DisplayName);
+            displayNameShort = CSTRING(Items_FortifyTool_ShortName);
+            description = CSTRING(Items_FortifyTool_Description);
+            tip = "<a href='https://ace3.acemod.org/wiki/feature/fortify'>Fortify Wiki</a>";
+        };
+        class ACE_HuntIR_Monitor: ACE_Items_Base {
+            logicalOrder = 14;
             displayName = CSTRING(Items_HuntIR_Monitor_DisplayName);
             displayNameShort = CSTRING(Items_HuntIR_Monitor_ShortName);
             description = CSTRING(Items_HuntIR_Monitor_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/huntir'>HuntIR Wiki</a>";
         };
         class ACE_IR_Strobe: ACE_Items_Base {
-            logicalOrder = 14;
+            logicalOrder = 15;
             displayName = CSTRING(Items_IR_Strobe_DisplayName);
             displayNameShort = CSTRING(Items_IR_Strobe_ShortName);
             description = CSTRING(Items_IR_Strobe_Description);
         };
         class ACE_Kestrel4500: ACE_Items_Base {
-            logicalOrder = 15;
+            logicalOrder = 16;
             displayName = CSTRING(Items_Kestrel4500_DisplayName);
             displayNameShort = CSTRING(Items_Kestrel4500_ShortName);
             description = CSTRING(Items_Kestrel4500_Description);
         };
         class ACE_MapTools: ACE_Items_Base {
-            logicalOrder = 16;
+            logicalOrder = 17;
             displayName = CSTRING(Items_MapTools_DisplayName);
             displayNameShort = CSTRING(Items_MapTools_ShortName);
             description = CSTRING(Items_MapTools_Description);
         };
         class ACE_MicroDAGR: ACE_Items_Base {
-            logicalOrder = 17;
+            logicalOrder = 18;
             displayName = CSTRING(Items_MicroDAGR_DisplayName);
             displayNameShort = CSTRING(Items_MicroDAGR_ShortName);
             description = CSTRING(Items_MicroDAGR_Description);
+            tip = "<a href='https://ace3.acemod.org/wiki/feature/microdagr.html'>MicroDAGR Wiki</a>";
         };
         // Combine all range tables under one roof [mortar, artillery, rifle]
         class ACE_RangeTables: ACE_Items_Base {
-            logicalOrder = 18;
+            logicalOrder = 19;
             displayName = CSTRING(Items_RangeTables_DisplayName);
             displayNameShort = CSTRING(Items_RangeTables_ShortName);
             description = CSTRING(Items_RangeTables_Description);
         };
         class ACE_Ropes: ACE_Items_Base {
-            logicalOrder = 19;
+            logicalOrder = 20;
             displayName = CSTRING(Items_Ropes_DisplayName);
             displayNameShort = CSTRING(Items_Ropes_ShortName);
             description = CSTRING(Items_Ropes_Description);
         };
         class ACE_Sandbag: ACE_Items_Base {
-            logicalOrder = 20;
+            logicalOrder = 21;
             displayName = CSTRING(Items_Sandbag_DisplayName);
             displayNameShort = CSTRING(Items_Sandbag_ShortName);
             description = CSTRING(Items_Sandbag_Description);
         };
         class ACE_SpareBarrels: ACE_Items_Base {
-            logicalOrder = 21;
+            logicalOrder = 22;
             displayName = CSTRING(Items_SpareBarrels_DisplayName);
             displayNameShort = CSTRING(Items_SpareBarrels_ShortName);
             description = CSTRING(Items_SpareBarrels_Description);
         };
         class ACE_SprayPaint: ACE_Items_Base {
-            logicalOrder = 22;
+            logicalOrder = 23;
             displayName = CSTRING(Items_SprayPaint_DisplayName);
             displayNameShort = CSTRING(Items_SprayPaint_ShortName);
             description = CSTRING(Items_SprayPaint_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/tagging'>Tagging Wiki</a>";
         };
         class ACE_Tripod: ACE_Items_Base {
-            logicalOrder = 23;
+            logicalOrder = 24;
             displayName = CSTRING(Items_Tripod_DisplayName);
             displayNameShort = CSTRING(Items_Tripod_ShortName);
             description = CSTRING(Items_Tripod_Description);
         };
         class ACE_UAVBattery: ACE_Items_Base {
-            logicalOrder = 24;
+            logicalOrder = 25;
             displayName = CSTRING(Items_UAVBattery_DisplayName);
             displayNameShort = CSTRING(Items_UAVBattery_ShortName);
             description = CSTRING(Items_UAVBattery_Description);
         };
         class ACE_Wirecutter: ACE_Items_Base {
-            logicalOrder = 25;
+            logicalOrder = 26;
             displayName = CSTRING(Items_Wirecutter_DisplayName);
             displayNameShort = CSTRING(Items_Wirecutter_ShortName);
             description = CSTRING(Items_Wirecutter_Description);
         };
     };
-
+    // ACE Field Rations
     class ACE_Field_Rations {
         displayName = CSTRING(Field_Rations_DisplayName);
         category = "ACE_FieldManual";
@@ -283,24 +292,7 @@ class CfgHints {
             description = CSTRING(Field_Rations_Thirst_Description);
         };
     };
-
-    class ACE_Fortify {
-        displayName = CSTRING(Fortify_DisplayName);
-        category = "ACE_FieldManual";
-
-        class ACE_Fortify_Base {
-            image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
-            tip = "<a href='https://ace3.acemod.org/wiki/feature/fortify'>Fortify Wiki</a>";
-        };
-
-        class ACE_FortifyTool: ACE_Fortify_Base {
-            logicalOrder = 1;
-            displayName = CSTRING(Fortify_FortifyTool_DisplayName);
-            displayNameShort = CSTRING(Fortify_FortifyTool_ShortName);
-            description = CSTRING(Fortify_FortifyTool_Description);
-        };
-    };
-
+    // ACE Medical
     class ACE_Medical_Treatment {
         displayName = "Medical Treatment";
         category = "ACE_FieldManual";
