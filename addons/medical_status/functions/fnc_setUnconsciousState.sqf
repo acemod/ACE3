@@ -28,6 +28,7 @@ _unit setVariable [VAR_UNCON, _active, true];
 // Toggle unit ragdoll state
 [_unit, _active] call EFUNC(medical_engine,setUnconsciousAnim);
 
+// Handle hiding from AI and talking blocks.
 [_unit, _active] call FUNC(setStatusEffects);
 
 if (_active) then {
