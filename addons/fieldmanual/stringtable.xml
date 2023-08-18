@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="ACE_FieldManual">
-  <Package name="ACE_FieldManual">
+<Project name="ACE">
+  <Package name="FieldManual">
     <Container name="ACE_Field_Rations">
       <Key ID="STR_ACE_FieldManual_Field_Rations_DisplayName">
         <Original>Field Rations</Original>
