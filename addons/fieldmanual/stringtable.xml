@@ -54,8 +54,8 @@
             <English>Close Wounds</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
-            <Original>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</Original>
-            <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
+            <Original>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%2%3Field Dressing:%4&lt;br/&gt;%21&lt;t color='#D9D900'&gt;Average&lt;/t&gt; In All Categories&lt;br/&gt;%2%3Packing Bandage:%4&lt;br/&gt;%21&lt;t color='#D9D900'&gt;Average&lt;/t&gt; Treatment&lt;br/&gt;%21&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%21&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Elastic Bandage:%4&lt;br/&gt;%21&lt;t color='#00CC00'&gt;Higher&lt;/t&gt; Treatment&lt;br/&gt;%21&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%21&lt;t color='#E60000'&gt;Shorter&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%21&lt;t color='#E60000'&gt;Lower&lt;/t&gt; Treatment&lt;br/&gt;%21&lt;t color='#00CC00'&gt;Lower&lt;/t&gt; Reopen Chance&lt;br/&gt;%21&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopening Delay&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</Original>
+            <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%2%3Field Dressing:%4&lt;br/&gt;%21&lt;t color='#D9D900'&gt;Average&lt;/t&gt; In All Categories&lt;br/&gt;%2%3Packing Bandage:%4&lt;br/&gt;%21&lt;t color='#D9D900'&gt;Average&lt;/t&gt; Treatment&lt;br/&gt;%21&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%21&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Elastic Bandage:%4&lt;br/&gt;%21&lt;t color='#00CC00'&gt;Higher&lt;/t&gt; Treatment&lt;br/&gt;%21&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%21&lt;t color='#E60000'&gt;Shorter&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%21&lt;t color='#E60000'&gt;Lower&lt;/t&gt; Treatment&lt;br/&gt;%21&lt;t color='#00CC00'&gt;Lower&lt;/t&gt; Reopen Chance&lt;br/&gt;%21&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopening Delay&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
             <Original>IV Fluids</Original>
@@ -90,8 +90,8 @@
             <English>Restore Like New</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>The %3Personal Aid Kit%4 is an item that allows a soldier to be fully healed. Independent of %3ACE Settings%4, it requires that the patient is in %3Stable Condition%4 before use.&lt;br/&gt;&lt;br/&gt;%3Stable Condition%4 qualifies as:&lt;br/&gt;%2Unit is %3Alive%4.&lt;br/&gt;%2Unit is %3Conscious%4.&lt;br/&gt;%2Unit has no active %3Bleeding%4.&lt;br/&gt;%2Heart Rate &gt;= 40.&lt;br/&gt;%2Systolic BP &gt;= 60.&lt;br/&gt;%2Diastolic BP &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move to appropriate location depending on %3ACE Settings%4.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Advanced Treatments%4&lt;br/&gt;%2Select %3Use Personal Aid Kit%4.</Original>
+            <English>The %3Personal Aid Kit%4 is an item that allows a soldier to be fully healed. Independent of %3ACE Settings%4, it requires that the patient is in %3Stable Condition%4 before use.&lt;br/&gt;&lt;br/&gt;%3Stable Condition%4 qualifies as:&lt;br/&gt;%2Unit is %3Alive%4.&lt;br/&gt;%2Unit is %3Conscious%4.&lt;br/&gt;%2Unit has no active %3Bleeding%4.&lt;br/&gt;%2Heart Rate &gt;= 40.&lt;br/&gt;%2Systolic BP &gt;= 60.&lt;br/&gt;%2Diastolic BP &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move to appropriate location depending on %3ACE Settings%4.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Advanced Treatments%4&lt;br/&gt;%2Select %3Use Personal Aid Kit%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_DisplayName">
             <Original>Splint</Original>
@@ -150,8 +150,8 @@
             <English>Bring Out Your Dead</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
-            <Original>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_bodybag_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</Original>
-            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_bodybag_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</English>
+            <Original>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</Original>
+            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_CableTie_DisplayName">
             <Original>Cable Tie</Original>
@@ -162,8 +162,8 @@
             <English>Take Prisoners</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_CableTie_Description">
-            <Original>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_cabletie_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</Original>
-            <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_cabletie_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
+            <Original>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</Original>
+            <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Cellphone_DisplayName">
             <Original>Cellphone</Original>
@@ -210,8 +210,8 @@
             <English>Navigate</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DAGR_Description">
-            <Original>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;    %2Data View: WIP&lt;br/&gt;    %2GoTo WP: Select a waypoint to track.&lt;br/&gt;    %2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;    %2Connect To: Connect %3DAGR%4 to %3Vector%4.&lt;br/&gt;    %2Options</Original>
-            <English>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;    %2Data View: WIP&lt;br/&gt;    %2GoTo WP: Select a waypoint to track.&lt;br/&gt;    %2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;    %2Connect To: Connect %3DAGR%4 to %3Vector%4.&lt;br/&gt;    %2Options</English>
+            <Original>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;%21%2Data View: WIP&lt;br/&gt;%21%2GoTo WP: Select a waypoint to track.&lt;br/&gt;%21%2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;%21%2Connect To: Connect %3DAGR%4 to %3Vector%4.&lt;br/&gt;%21%2Options</Original>
+            <English>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;%21%2Data View: WIP&lt;br/&gt;%21%2GoTo WP: Select a waypoint to track.&lt;br/&gt;%21%2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;%21%2Connect To: Connect %3DAGR%4 to %3Vector%4.&lt;br/&gt;%21%2Options</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_DisplayName">
             <Original>Dead Man's Switch</Original>
@@ -230,12 +230,12 @@
             <English>Defusal Kit</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DefusalKit_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>The %3Defusal Kit%4 allows defusal of explosives.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Difusal Kit%4.&lt;br/&gt;%2Safely approach an %3Explosive%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Defuse%4.</Original>
+            <English>The %3Defusal Kit%4 allows defusal of explosives.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Difusal Kit%4.&lt;br/&gt;%2Safely approach an %3Explosive%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Defuse%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DefusalKit_ShortName">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>Defuse Explosives</Original>
+            <English>Defuse Explosives</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EarPlugs_DisplayName">
             <Original>Ear Plugs</Original>
@@ -246,20 +246,20 @@
             <English>Protect Your Hearing</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EarPlugs_Description">
-            <Original>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_earplugs_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</Original>
-            <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_earplugs_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</English>
+            <Original>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</Original>
+            <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_DisplayName">
-            <Original>Work In Progress</Original>
+            <Original>Entrenching Tool</Original>
             <English>Entrenching Tool</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_ShortName">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>Get To Cover</Original>
+            <English>Get To Cover</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>The %3Entrenching Tool%4 allows soldiers to dig impromtu trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the size trench you wish to build.</Original>
+            <English>The %3Entrenching Tool%4 allows soldiers to dig impromtu trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the size trench you wish to build.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Flashlights_DisplayName">
             <Original>Flashlights</Original>
@@ -302,12 +302,12 @@
             <English>Kestrel 4500</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_ShortName">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>Pocket Weatherstation</Original>
+            <English>Pocket Weatherstation</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original> The %3Kestrel 4500 Pocket Weather Tracker%4 is a mini weather station useful for collecting the the following weather data:&lt;br/&gt;%2Heading and wind direction&lt;br/&gt;%2Crosswind and headwind&lt;br/&gt;%2Altitudeand barometric pressure&lt;br/&gt;%2Wet bulb temperature&lt;br/&gt;%2Humidity and dewpoint&lt;br/&gt;%2Density altitude&lt;br/&gt;%2Wind chill and temperature&lt;br/&gt;%2Time and date&lt;br/&gt;%2Minimum, maximum, and average values&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Kestrel%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Open%4.</Original>
+            <English> The %3Kestrel 4500 Pocket Weather Tracker%4 is a mini weather station useful for collecting the the following weather data:&lt;br/&gt;%2Heading and wind direction&lt;br/&gt;%2Crosswind and headwind&lt;br/&gt;%2Altitudeand barometric pressure&lt;br/&gt;%2Wet bulb temperature&lt;br/&gt;%2Humidity and dewpoint&lt;br/&gt;%2Density altitude&lt;br/&gt;%2Wind chill and temperature&lt;br/&gt;%2Time and date&lt;br/&gt;%2Minimum, maximum, and average values&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Kestrel%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Open%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MapTools_DisplayName">
             <Original>Map Tools</Original>
@@ -342,20 +342,8 @@
             <English>Get A Firing Solution</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
-            <Original>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</Original>
-            <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
-        </Key>
-        <Key ID="STR_ACE_FieldManual_Items_RangeCard_DisplayName">
-            <Original>Range Card</Original>
-            <English>Range Card</English>
-        </Key>
-        <Key ID="STR_ACE_FieldManual_Items_RangeCard_ShortName">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
-        </Key>
-        <Key ID="STR_ACE_FieldManual_Items_RangeCard_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</Original>
+            <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Ropes_DisplayName">
             <Original>Ropes</Original>
@@ -374,12 +362,12 @@
             <English>Sandbags</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Sandbag_ShortName">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>Expand Your Fortifications</Original>
+            <English>Expand Your Fortifications</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Sandbag_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>%3Sandbags%4 are sacks made of sturdy material, filled with sand, used for a variety of purposes such as creating barriers or providing stability in construction projects. Useful in expanding larger placed fortifications.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Sandbag (Empty)%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Deploy Sandbag%4.&lt;br/&gt;%2Follow on-screen instructions for placement.</Original>
+            <English>%3Sandbags%4 are sacks made of sturdy material, filled with sand, used for a variety of purposes such as creating barriers or providing stability in construction projects. Useful in expanding larger placed fortifications.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Sandbag (Empty)%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Deploy Sandbag%4.&lt;br/&gt;%2Follow on-screen instructions for placement.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_DisplayName">
             <Original>Spare Barrels</Original>
@@ -402,8 +390,8 @@
             <English>Tag Your Territory</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SprayPaint_Description">
-            <Original>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_spraypaint_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</Original>
-            <English>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_spraypaint_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
+            <Original>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</Original>
+            <English>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Tripod_DisplayName">
             <Original>SSWT Kit</Original>
@@ -414,8 +402,8 @@
             <English>Brace From Anywhere</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Tripod_Description">
-            <Original>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_tripod_1024x512.paa' /&gt;</Original>
-            <English>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_tripod_1024x512.paa' /&gt;</English>
+            <Original>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.</Original>
+            <English>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_UAVBattery_DisplayName">
             <Original>UAV Battery</Original>
@@ -426,8 +414,8 @@
             <English>Keep Eyes In The Sky</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_UAVBattery_Description">
-            <Original>Work In Progress</Original>
-            <English>Work In Progress</English>
+            <Original>%3UAV Batteries%4 are used to recharge a UAV's energy storage. Especially useful for small UAVs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3UAV Battery%4&lt;br/&gt;%2Approach a %3UAV%4 with its %3Engine Off%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Recharge%4.</Original>
+            <English>%3UAV Batteries%4 are used to recharge a UAV's energy storage. Especially useful for small UAVs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3UAV Battery%4&lt;br/&gt;%2Approach a %3UAV%4 with its %3Engine Off%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Recharge%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Wirecutter_DisplayName">
             <Original>Wirecutters</Original>
@@ -438,8 +426,8 @@
             <English>Making An Entrance</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
-            <Original>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_wirecutter_1024x512.paa' /&gt;</Original>
-            <English>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_wirecutter_1024x512.paa' /&gt;</English>
+            <Original>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.</Original>
+            <English>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DisplayName">
             <Original>Items</Original>

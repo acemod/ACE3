@@ -4,35 +4,6 @@
     Can Embed Images Into Description = 1024x512
         - Shadow = '0'
         - Size = '9'
-
-    // ----- Arguments (For Keybinds To Show) ----- //
-
-    // SELF INTERACT KEYBIND
-    "
-        private _localized = 'Self Interact Key';
-        if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {
-            _localized = ['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
-        };
-        _localized
-    "
-
-    // INTERACT KEYBIND
-    "
-        private _localized = 'Interact Key';
-        if !(isNil {['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind}) then {
-            _localized = ['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
-        };
-        _localized
-    "
-
-    // MEDICAL MENU KEYBIND
-    "
-        private _localized = 'Medical Menu Key';
-        if !(isNil {['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind}) then {
-            _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
-        };
-        _localized
-    "
 */
 
 class CfgHints {    
@@ -67,7 +38,15 @@ class CfgHints {
                         _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
                     };
                     _localized
-                "
+                ",
+
+                // PLACEHOLDERS FOR OTHER KEYBINDS - %14 - %20
+                // EMPTY STRING - CANNOT BE NIL
+                "''","''","''","''","''","''","''",
+
+                // FORMATTING - >= %21
+                // INDENT
+                "'    '"
             };
             image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
         };
@@ -246,8 +225,7 @@ class CfgHints {
         category = "ACE_FieldManual";
 
         class ACE_Field_Rations_Base {
-            arguments[] =
-            {
+            arguments[] = {
                 // SELF INTERACT KEYBIND - %11
                 "
                     private _localized = 'Self Interact Key';
@@ -273,7 +251,15 @@ class CfgHints {
                         _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
                     };
                     _localized
-                "
+                ",
+
+                // PLACEHOLDERS FOR OTHER KEYBINDS - %14 - %20
+                // EMPTY STRING - CANNOT BE NIL
+                "''","''","''","''","''","''","''",
+
+                // FORMATTING - >= %21
+                // INDENT
+                "'    '"
             };
             image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
             tip = "<a href='https://ace3.acemod.org/wiki/framework/field-rations-framework'>Field Rations Wiki</a>";
@@ -324,7 +310,15 @@ class CfgHints {
                         _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
                     };
                     _localized
-                "
+                ",
+
+                // PLACEHOLDERS FOR OTHER KEYBINDS - %14 - %20
+                // EMPTY STRING - CANNOT BE NIL
+                "''","''","''","''","''","''","''",
+
+                // FORMATTING - >= %21
+                // INDENT
+                "'    '"
             };
             image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
             tip = "<a href='https://ace3.acemod.org/wiki/feature/medical-system'>Medical Wiki</a>";
