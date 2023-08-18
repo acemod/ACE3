@@ -69,7 +69,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     private _ammoActionPath = [];
     private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");
     private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-        // If CSW isn't disabled for this static we enabled ammo handling
+        // If CSW isn't disabled for this static we enable ammo handling
         ((_target getVariable [QGVAR(assemblyMode), 3]) != 0) &&
         {[_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)}
     };
