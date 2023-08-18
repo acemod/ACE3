@@ -10,7 +10,7 @@ PREP(handleTriageSelect);
 PREP(menuPFH);
 PREP(modifyAction);
 PREP(modifyActionTriageLevel);
-PREP(onCateorySelected);
+PREP(onCategorySelected);
 PREP(onMenuClose);
 PREP(onMenuOpen);
 PREP(openMenu);
