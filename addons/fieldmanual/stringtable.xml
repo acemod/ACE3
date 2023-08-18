@@ -1,488 +1,469 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="FieldManual">
-    <Container name="ACE_Field_Rations">
-      <Key ID="STR_ACE_FieldManual_Field_Rations_DisplayName">
-        <Original>Field Rations</Original>
-        <English>Field Rations</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_DisplayName">
-        <Original>Hunger</Original>
-        <English>Hunger</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_ShortName">
-        <Original>Hunger</Original>
-        <English>Hunger</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
-        <Original>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</Original>
-        <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
-        <Original>Thirst</Original>
-        <English>Thirst</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_ShortName">
-        <Original>Thirst</Original>
-        <English>Thirst</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
-        <Original>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</Original>
-        <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</English>
-      </Key>
-    </Container>
-    <Container name="ACE_Fortify">
-      <Key ID="STR_ACE_FieldManual_Fortify_DisplayName">
-        <Original>Fortify</Original>
-        <English>Fortify</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_DisplayName">
-        <Original>Fortify Tool</Original>
-        <English>Fortify Tool</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_ShortName">
-        <Original>Build Fortifications</Original>
-        <English>Build Fortifications</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_Description">
-        <Original>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</Original>
-        <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
-      </Key>
-    </Container>
-    <Container name="ACE_Medical_Treatment">
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
-        <Original>Items - Medical</Original>
-        <English>Items - Medical</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_DisplayName">
-        <Original>Adenosine</Original>
-        <English>Adenosine</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_ShortName">
-        <Original>Decrease Heart Rate</Original>
-        <English>Decrease Heart Rate</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
-        <Original>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</Original>
-        <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_DisplayName">
-        <Original>Bandages</Original>
-        <English>Bandages</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_ShortName">
-        <Original>Close Wounds</Original>
-        <English>Close Wounds</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
-        <Original>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</Original>
-        <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
-        <Original>IV Fluids</Original>
-        <English>IV Fluids</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_ShortName">
-        <Original>Restore Blood Volume</Original>
-        <English>Restore Blood Volume</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_Description">
-        <Original>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Restore blood voluem by selecting desired %3IV Fluid%4 type.</Original>
-        <English>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Restore blood voluem by selecting desired %3IV Fluid%4 type.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_DisplayName">
-        <Original>Epinephrine</Original>
-        <English>Epinephrine</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_ShortName">
-        <Original>Increase Heartrate | Increase Conscious Chance</Original>
-        <English>Increase Heartrate | Increase Conscious Chance</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_Description">
-        <Original>%3Epinephrine%4 increases Heartrate as well as decreases the time between conscious checks (effectively increasing conscious chance).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</Original>
-        <English>%3Epinephrine%4 increases Heartrate as well as decreases the time between conscious checks (effectively increasing conscious chance).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_DisplayName">
-        <Original>Personal Aid Kit</Original>
-        <English>Personal Aid Kit</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_ShortName">
-        <Original>Restore Like New</Original>
-        <English>Restore Like New</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_DisplayName">
-        <Original>Splint</Original>
-        <English>Splint</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_ShortName">
-        <Original>Fix Fractures</Original>
-        <English>Fix Fractures</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_Description">
-        <Original>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</Original>
-        <English>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_DisplayName">
-        <Original>Surgical Kit</Original>
-        <English>Surgical Kit</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_ShortName">
-        <Original>Prevent Wounds From Reopening</Original>
-        <English>Prevent Wounds From Reopening</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
-        <Original>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</Original>
-        <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_DisplayName">
-        <Original>Tourniquet</Original>
-        <English>Tourniquet</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_ShortName">
-        <Original>Stop Bleeding</Original>
-        <English>Stop Bleeding</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
-        <Original>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</Original>
-        <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
-      </Key>
-    </Container>
-    <Container name="ACE_Items">
-      <Key ID="STR_ACE_FieldManual_Items_ATragMX_DisplayName">
-        <Original>ATragMX</Original>
-        <English>ATragMX</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_ATragMX_ShortName">
-        <Original>Portable, Precise, Rugged</Original>
-        <English>Portable, Precise, Rugged</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_ATragMX_Description">
-        <Original>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information</Original>
-        <English>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_BodyBag_DisplayName">
-        <Original>Body Bags</Original>
-        <English>Body Bags</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
-        <Original>Bring Out Your Dead</Original>
-        <English>Bring Out Your Dead</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
-        <Original>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_bodybag_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</Original>
-        <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_bodybag_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_CableTie_DisplayName">
-        <Original>Cable Tie</Original>
-        <English>Cable Tie</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_CableTie_ShortName">
-        <Original>Take Prisoners</Original>
-        <English>Take Prisoners</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_CableTie_Description">
-        <Original>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_cabletie_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</Original>
-        <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_cabletie_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Cellphone_DisplayName">
-        <Original>Cellphone</Original>
-        <English>Cellphone</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Cellphone_ShortName">
-        <Original>Phone In An Explosion</Original>
-        <English>Phone In An Explosion</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Cellphone_Description">
-        <Original>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Cellphone%4.&lt;br/&gt;%2Open the cellphone interface with [%3%11%4].&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number.&lt;br/&gt;%2Call the number to detonate.</Original>
-        <English>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Cellphone%4.&lt;br/&gt;%2Open the cellphone interface with [%3%11%4].&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number.&lt;br/&gt;%2Call the number to detonate.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_DisplayName">
-        <Original>Chemlight Shield</Original>
-        <English>Chemlight Shield</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_ShortName">
-        <Original>Portable Reading Lights</Original>
-        <English>Portable Reading Lights</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_Description">
-        <Original>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</Original>
-        <English>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Clackers_DisplayName">
-        <Original>Clackers</Original>
-        <English>Clackers</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
-        <Original>Remote Detonation</Original>
-        <English>Remote Detonation</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
-        <Original>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to the clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Clacker%4.&lt;br/&gt;%2Open the ACE interface with [%3%11%4].&lt;br/&gt;%2Select %3Explosives%4 and select %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</Original>
-        <English>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to the clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Clacker%4.&lt;br/&gt;%2Open the ACE interface with [%3%11%4].&lt;br/&gt;%2Select %3Explosives%4 and select %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DAGR_DisplayName">
-        <Original>DAGR</Original>
-        <English>DAGR</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DAGR_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DAGR_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_DisplayName">
-        <Original>Dead Man's Switch</Original>
-        <English>Dead Man's Switch</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_ShortName">
-        <Original>Explosive Revenge</Original>
-        <English>Explosive Revenge</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_Description">
-        <Original>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</Original>
-        <English>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DefusalKit_DisplayName">
-        <Original>Defusal Kit</Original>
-        <English>Defusal Kit</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DefusalKit_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DefusalKit_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_EarPlugs_DisplayName">
-        <Original>Ear Plugs</Original>
-        <English>Ear Plugs</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_EarPlugs_ShortName">
-        <Original>Protect Your Hearing</Original>
-        <English>Protect Your Hearing</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_EarPlugs_Description">
-        <Original>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_earplugs_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</Original>
-        <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_earplugs_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_DisplayName">
-        <Original>Work In Progress</Original>
-        <English>Entrenching Tool</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Flashlights_DisplayName">
-        <Original>Flashlights</Original>
-        <English>Flashlights</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Flashlights_ShortName">
-        <Original>Illuminate Your Map</Original>
-        <English>Illuminate Your Map</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Flashlights_Description">
-        <Original>%3Flashlights%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Flashlights%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%11%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent</Original>
-        <English>%3Flashlights%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Flashlights%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%11%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent</English>
-        <Czech />
-        <French />
-        <Spanish />
-        <Italian />
-        <Polish />
-        <Portuguese />
-        <Russian />
-        <German />
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_DisplayName">
-        <Original>HuntIR Monitor</Original>
-        <English>HuntIR Monitor</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_ShortName">
-        <Original>Observe From The Skies</Original>
-        <English>Observe From The Skies</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_Description">
-        <Original>The %3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 is designed to be fired from a grenade launcher. After being fired in the air, the built-in parachute will be deployed and the IR CMOS camera will activate, providing a video stream until it touches the ground or is shot down.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3HuntIR Monitor%4 and compatible ammunition.&lt;br/&gt;%2Fire the %3HuntIR Round%4 as high as possible over the area you want to observe.&lt;br/&gt;%2Open the %3HuntIR Monitor%4.&lt;br/&gt;%2Use [%3%11%4], select %3Equipment%4.&lt;br/&gt;%2Select %3Activate HuntIR Monitor%4.</Original>
-        <English>The %3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 is designed to be fired from a grenade launcher. After being fired in the air, the built-in parachute will be deployed and the IR CMOS camera will activate, providing a video stream until it touches the ground or is shot down.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3HuntIR Monitor%4 and compatible ammunition.&lt;br/&gt;%2Fire the %3HuntIR Round%4 as high as possible over the area you want to observe.&lt;br/&gt;%2Open the %3HuntIR Monitor%4.&lt;br/&gt;%2Use [%3%11%4], select %3Equipment%4.&lt;br/&gt;%2Select %3Activate HuntIR Monitor%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_DisplayName">
-        <Original>IR Strobe</Original>
-        <English>IR Strobe</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_ShortName">
-        <Original>Track Your Team With Stealth</Original>
-        <English>Track Your Team With Stealth</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_Description">
-        <Original>The %3IR Strobe%4 is a throwable that emits an IR light pulse intermittently. The %3IR Strobe%4 can also be attached to a soldier, making it useful for tracking teammates under night vision devices.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Attach%4 and select the %3IR Strobe%4.</Original>
-        <English>The %3IR Strobe%4 is a throwable that emits an IR light pulse intermittently. The %3IR Strobe%4 can also be attached to a soldier, making it useful for tracking teammates under night vision devices.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Attach%4 and select the %3IR Strobe%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_DisplayName">
-        <Original>Kestrel 4500</Original>
-        <English>Kestrel 4500</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_MapTools_DisplayName">
-        <Original>Map Tools</Original>
-        <English>Map Tools</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_MapTools_ShortName">
-        <Original>Triangulate Your Position</Original>
-        <English>Triangulate Your Position</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_MapTools_Description">
-        <Original>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for triangulating your position, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Map Tools%4.&lt;br/&gt;%2 Tool can be moved with [%3Left-Click%4] and [%3ALT%4].</Original>
-        <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for triangulating your position, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Map Tools%4.&lt;br/&gt;%2 Tool can be moved with [%3Left-Click%4] and [%3ALT%4].</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_DisplayName">
-        <Original>MicroDAGR GPS</Original>
-        <English>MicroDAGR GPS</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_RangeTables_DisplayName">
-        <Original>Range Tables</Original>
-        <English>Range Tables</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_RangeTables_ShortName">
-        <Original>Get A Firing Solution</Original>
-        <English>Get A Firing Solution</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
-        <Original>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</Original>
-        <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_RangeCard_DisplayName">
-        <Original>Range Card</Original>
-        <English>Range Card</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_RangeCard_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_RangeCard_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Ropes_DisplayName">
-        <Original>Ropes</Original>
-        <English>Ropes</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Ropes_ShortName">
-        <Original>Tow With Ease</Original>
-        <English>Tow With Ease</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Ropes_Description">
-        <Original>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%12%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</Original>
-        <English>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%12%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Sandbag_DisplayName">
-        <Original>Sandbags</Original>
-        <English>Sandbags</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Sandbag_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Sandbag_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_DisplayName">
-        <Original>Spare Barrels</Original>
-        <English>Spare Barrels</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_ShortName">
-        <Original>Lower Firearm Temperature</Original>
-        <English>Lower Firearm Temperature</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_Description">
-        <Original>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</Original>
-        <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</English>
-        <French />
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_SprayPaint_DisplayName">
-        <Original>Spray Paint</Original>
-        <English>Spray Paint</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_SprayPaint_ShortName">
-        <Original>Tag Your Territory</Original>
-        <English>Tag Your Territory</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_SprayPaint_Description">
-        <Original>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_spraypaint_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</Original>
-        <English>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_spraypaint_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Tripod_DisplayName">
-        <Original>SSWT Kit</Original>
-        <English>SSWT Kit</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Tripod_ShortName">
-        <Original>Brace From Anywhere</Original>
-        <English>Brace From Anywhere</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Tripod_Description">
-        <Original>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_tripod_1024x512.paa' /&gt;</Original>
-        <English>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_tripod_1024x512.paa' /&gt;</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_UAVBattery_DisplayName">
-        <Original>UAV Battery</Original>
-        <English>UAV Battery</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_UAVBattery_ShortName">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_UAVBattery_Description">
-        <Original>Work In Progress</Original>
-        <English>Work In Progress</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Wirecutter_DisplayName">
-        <Original>Wirecutters</Original>
-        <English>Wirecutters</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Wirecutter_ShortName">
-        <Original>Making An Entrance</Original>
-        <English>Making An Entrance</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
-        <Original>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_wirecutter_1024x512.paa' /&gt;</Original>
-        <English>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_wirecutter_1024x512.paa' /&gt;</English>
-      </Key>
-      <Key ID="STR_ACE_FieldManual_Items_DisplayName">
-        <Original>Items</Original>
-        <English>Items</English>
-      </Key>
-    </Container>
-    <Container name="Hint Categories">
-      <Key ID="STR_ACE_FieldManual_HintCategory_FieldManual_DisplayName">
-        <Original>ACE3</Original>
-        <English>ACE3</English>
-      </Key>
-    </Container>
-  </Package>
+    <Package name="FieldManual">
+        <Key ID="STR_ACE_FieldManual_Field_Rations_DisplayName">
+            <Original>Field Rations</Original>
+            <English>Field Rations</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_DisplayName">
+            <Original>Hunger</Original>
+            <English>Hunger</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_ShortName">
+            <Original>Hunger</Original>
+            <English>Hunger</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
+            <Original>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</Original>
+            <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
+            <Original>Thirst</Original>
+            <English>Thirst</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_ShortName">
+            <Original>Thirst</Original>
+            <English>Thirst</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
+            <Original>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</Original>
+            <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Fortify_DisplayName">
+            <Original>Fortify</Original>
+            <English>Fortify</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_DisplayName">
+            <Original>Fortify Tool</Original>
+            <English>Fortify Tool</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_ShortName">
+            <Original>Build Fortifications</Original>
+            <English>Build Fortifications</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Fortify_FortifyTool_Description">
+            <Original>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</Original>
+            <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
+            <Original>Items - Medical</Original>
+            <English>Items - Medical</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_DisplayName">
+            <Original>Adenosine</Original>
+            <English>Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_ShortName">
+            <Original>Decrease Heart Rate</Original>
+            <English>Decrease Heart Rate</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
+            <Original>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</Original>
+            <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_DisplayName">
+            <Original>Bandages</Original>
+            <English>Bandages</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_ShortName">
+            <Original>Close Wounds</Original>
+            <English>Close Wounds</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
+            <Original>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</Original>
+            <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
+            <Original>IV Fluids</Original>
+            <English>IV Fluids</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_ShortName">
+            <Original>Restore Blood Volume</Original>
+            <English>Restore Blood Volume</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_Description">
+            <Original>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Restore blood voluem by selecting desired %3IV Fluid%4 type.</Original>
+            <English>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Restore blood voluem by selecting desired %3IV Fluid%4 type.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_DisplayName">
+            <Original>Epinephrine</Original>
+            <English>Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_ShortName">
+            <Original>Increase Heartrate | Increase Conscious Chance</Original>
+            <English>Increase Heartrate | Increase Conscious Chance</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_Description">
+            <Original>%3Epinephrine%4 increases Heartrate as well as decreases the time between conscious checks (effectively increasing conscious chance).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</Original>
+            <English>%3Epinephrine%4 increases Heartrate as well as decreases the time between conscious checks (effectively increasing conscious chance).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_DisplayName">
+            <Original>Personal Aid Kit</Original>
+            <English>Personal Aid Kit</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_ShortName">
+            <Original>Restore Like New</Original>
+            <English>Restore Like New</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_DisplayName">
+            <Original>Splint</Original>
+            <English>Splint</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_ShortName">
+            <Original>Fix Fractures</Original>
+            <English>Fix Fractures</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_Description">
+            <Original>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</Original>
+            <English>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_DisplayName">
+            <Original>Surgical Kit</Original>
+            <English>Surgical Kit</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_ShortName">
+            <Original>Prevent Wounds From Reopening</Original>
+            <English>Prevent Wounds From Reopening</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
+            <Original>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</Original>
+            <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_DisplayName">
+            <Original>Tourniquet</Original>
+            <English>Tourniquet</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_ShortName">
+            <Original>Stop Bleeding</Original>
+            <English>Stop Bleeding</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
+            <Original>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</Original>
+            <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_ATragMX_DisplayName">
+            <Original>ATragMX</Original>
+            <English>ATragMX</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_ATragMX_ShortName">
+            <Original>Portable, Precise, Rugged</Original>
+            <English>Portable, Precise, Rugged</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_ATragMX_Description">
+            <Original>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information</Original>
+            <English>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_BodyBag_DisplayName">
+            <Original>Body Bags</Original>
+            <English>Body Bags</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
+            <Original>Bring Out Your Dead</Original>
+            <English>Bring Out Your Dead</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
+            <Original>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_bodybag_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</Original>
+            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_bodybag_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_CableTie_DisplayName">
+            <Original>Cable Tie</Original>
+            <English>Cable Tie</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_CableTie_ShortName">
+            <Original>Take Prisoners</Original>
+            <English>Take Prisoners</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_CableTie_Description">
+            <Original>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_cabletie_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</Original>
+            <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_cabletie_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Cellphone_DisplayName">
+            <Original>Cellphone</Original>
+            <English>Cellphone</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Cellphone_ShortName">
+            <Original>Phone In An Explosion</Original>
+            <English>Phone In An Explosion</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Cellphone_Description">
+            <Original>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Cellphone%4.&lt;br/&gt;%2Open the cellphone interface with [%3%11%4].&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number.&lt;br/&gt;%2Call the number to detonate.</Original>
+            <English>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Cellphone%4.&lt;br/&gt;%2Open the cellphone interface with [%3%11%4].&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number.&lt;br/&gt;%2Call the number to detonate.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_DisplayName">
+            <Original>Chemlight Shield</Original>
+            <English>Chemlight Shield</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_ShortName">
+            <Original>Portable Reading Lights</Original>
+            <English>Portable Reading Lights</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_Description">
+            <Original>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</Original>
+            <English>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Clackers_DisplayName">
+            <Original>Clackers</Original>
+            <English>Clackers</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
+            <Original>Remote Detonation</Original>
+            <English>Remote Detonation</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
+            <Original>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to the clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Clacker%4.&lt;br/&gt;%2Open the ACE interface with [%3%11%4].&lt;br/&gt;%2Select %3Explosives%4 and select %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</Original>
+            <English>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to the clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Clacker%4.&lt;br/&gt;%2Open the ACE interface with [%3%11%4].&lt;br/&gt;%2Select %3Explosives%4 and select %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DAGR_DisplayName">
+            <Original>DAGR</Original>
+            <English>DAGR</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DAGR_ShortName">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DAGR_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_DisplayName">
+            <Original>Dead Man's Switch</Original>
+            <English>Dead Man's Switch</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_ShortName">
+            <Original>Explosive Revenge</Original>
+            <English>Explosive Revenge</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_Description">
+            <Original>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</Original>
+            <English>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DefusalKit_DisplayName">
+            <Original>Defusal Kit</Original>
+            <English>Defusal Kit</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DefusalKit_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DefusalKit_ShortName">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EarPlugs_DisplayName">
+            <Original>Ear Plugs</Original>
+            <English>Ear Plugs</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EarPlugs_ShortName">
+            <Original>Protect Your Hearing</Original>
+            <English>Protect Your Hearing</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EarPlugs_Description">
+            <Original>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_earplugs_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</Original>
+            <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_earplugs_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_DisplayName">
+            <Original>Work In Progress</Original>
+            <English>Entrenching Tool</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_ShortName">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Flashlights_DisplayName">
+            <Original>Flashlights</Original>
+            <English>Flashlights</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Flashlights_ShortName">
+            <Original>Illuminate Your Map</Original>
+            <English>Illuminate Your Map</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Flashlights_Description">
+            <Original>%3Flashlights%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Flashlights%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%11%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent</Original>
+            <English>%3Flashlights%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Flashlights%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%11%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_DisplayName">
+            <Original>HuntIR Monitor</Original>
+            <English>HuntIR Monitor</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_ShortName">
+            <Original>Observe From The Skies</Original>
+            <English>Observe From The Skies</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_Description">
+            <Original>The %3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 is designed to be fired from a grenade launcher. After being fired in the air, the built-in parachute will be deployed and the IR CMOS camera will activate, providing a video stream until it touches the ground or is shot down.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3HuntIR Monitor%4 and compatible ammunition.&lt;br/&gt;%2Fire the %3HuntIR Round%4 as high as possible over the area you want to observe.&lt;br/&gt;%2Open the %3HuntIR Monitor%4.&lt;br/&gt;%2Use [%3%11%4], select %3Equipment%4.&lt;br/&gt;%2Select %3Activate HuntIR Monitor%4.</Original>
+            <English>The %3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 is designed to be fired from a grenade launcher. After being fired in the air, the built-in parachute will be deployed and the IR CMOS camera will activate, providing a video stream until it touches the ground or is shot down.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3HuntIR Monitor%4 and compatible ammunition.&lt;br/&gt;%2Fire the %3HuntIR Round%4 as high as possible over the area you want to observe.&lt;br/&gt;%2Open the %3HuntIR Monitor%4.&lt;br/&gt;%2Use [%3%11%4], select %3Equipment%4.&lt;br/&gt;%2Select %3Activate HuntIR Monitor%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_DisplayName">
+            <Original>IR Strobe</Original>
+            <English>IR Strobe</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_ShortName">
+            <Original>Track Your Team With Stealth</Original>
+            <English>Track Your Team With Stealth</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_Description">
+            <Original>The %3IR Strobe%4 is a throwable that emits an IR light pulse intermittently. The %3IR Strobe%4 can also be attached to a soldier, making it useful for tracking teammates under night vision devices.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Attach%4 and select the %3IR Strobe%4.</Original>
+            <English>The %3IR Strobe%4 is a throwable that emits an IR light pulse intermittently. The %3IR Strobe%4 can also be attached to a soldier, making it useful for tracking teammates under night vision devices.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Attach%4 and select the %3IR Strobe%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_DisplayName">
+            <Original>Kestrel 4500</Original>
+            <English>Kestrel 4500</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_ShortName">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MapTools_DisplayName">
+            <Original>Map Tools</Original>
+            <English>Map Tools</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MapTools_ShortName">
+            <Original>Triangulate Your Position</Original>
+            <English>Triangulate Your Position</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MapTools_Description">
+            <Original>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for triangulating your position, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Map Tools%4.&lt;br/&gt;%2 Tool can be moved with [%3Left-Click%4] and [%3ALT%4].</Original>
+            <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for triangulating your position, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Map Tools%4.&lt;br/&gt;%2 Tool can be moved with [%3Left-Click%4] and [%3ALT%4].</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_DisplayName">
+            <Original>MicroDAGR GPS</Original>
+            <English>MicroDAGR GPS</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_ShortName">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeTables_DisplayName">
+            <Original>Range Tables</Original>
+            <English>Range Tables</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeTables_ShortName">
+            <Original>Get A Firing Solution</Original>
+            <English>Get A Firing Solution</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
+            <Original>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</Original>
+            <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_rangetable_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeCard_DisplayName">
+            <Original>Range Card</Original>
+            <English>Range Card</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeCard_ShortName">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeCard_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Ropes_DisplayName">
+            <Original>Ropes</Original>
+            <English>Ropes</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Ropes_ShortName">
+            <Original>Tow With Ease</Original>
+            <English>Tow With Ease</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Ropes_Description">
+            <Original>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%12%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</Original>
+            <English>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%12%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Sandbag_DisplayName">
+            <Original>Sandbags</Original>
+            <English>Sandbags</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Sandbag_ShortName">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Sandbag_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_DisplayName">
+            <Original>Spare Barrels</Original>
+            <English>Spare Barrels</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_ShortName">
+            <Original>Lower Firearm Temperature</Original>
+            <English>Lower Firearm Temperature</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_Description">
+            <Original>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</Original>
+            <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SprayPaint_DisplayName">
+            <Original>Spray Paint</Original>
+            <English>Spray Paint</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SprayPaint_ShortName">
+            <Original>Tag Your Territory</Original>
+            <English>Tag Your Territory</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SprayPaint_Description">
+            <Original>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_spraypaint_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</Original>
+            <English>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_spraypaint_1024x512.paa' /&gt;&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Tripod_DisplayName">
+            <Original>SSWT Kit</Original>
+            <English>SSWT Kit</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Tripod_ShortName">
+            <Original>Brace From Anywhere</Original>
+            <English>Brace From Anywhere</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Tripod_Description">
+            <Original>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_tripod_1024x512.paa' /&gt;</Original>
+            <English>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_tripod_1024x512.paa' /&gt;</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_UAVBattery_DisplayName">
+            <Original>UAV Battery</Original>
+            <English>UAV Battery</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_UAVBattery_ShortName">
+            <Original>Keep Eyes In The Sky</Original>
+            <English>Keep Eyes In The Sky</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_UAVBattery_Description">
+            <Original>Work In Progress</Original>
+            <English>Work In Progress</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Wirecutter_DisplayName">
+            <Original>Wirecutters</Original>
+            <English>Wirecutters</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Wirecutter_ShortName">
+            <Original>Making An Entrance</Original>
+            <English>Making An Entrance</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
+            <Original>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_wirecutter_1024x512.paa' /&gt;</Original>
+            <English>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.&lt;br/&gt;&lt;br/&gt;&lt;img shadow='0' size='9' image='\z\ace\addons\fieldmanual\data\ui\img\preview_wirecutter_1024x512.paa' /&gt;</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DisplayName">
+            <Original>Items</Original>
+            <English>Items</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_HintCategory_FieldManual_DisplayName">
+            <Original>ACE3</Original>
+            <English>ACE3</English>
+        </Key>
+    </Package>
 </Project>
