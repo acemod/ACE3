@@ -61,7 +61,7 @@ Static weapons are assembled when a tripod is placed down, and the weapon mounte
 
 ### 3.1 defaultAssemblyMode
 
-- Controls whether static weapons with CSW support will be forced to use its systems (disassembly and ammo handling).
+- Enables/Disables the ability to assemble the CSW through the addon (Non-Vanilla assembly)
 - Default: Off
 
 ### 3.2 handleExtraMagazines
