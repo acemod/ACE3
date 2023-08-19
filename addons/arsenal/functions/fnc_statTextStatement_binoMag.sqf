@@ -16,8 +16,8 @@
 params ["", "_config"];
 TRACE_1("statTextStatement_binoMag",_config);
 
-_minZoom = getNumber (_config >> "opticsZoomMin"); // FOV, so smaller is more zoomed in
-_maxZoom = getNumber (_config >> "opticsZoomMax");
+private _minZoom = getNumber (_config >> "opticsZoomMin"); // FOV, so smaller is more zoomed in
+private _maxZoom = getNumber (_config >> "opticsZoomMax");
 
 if (_minZoom == 0) exitWith {"?"};
 

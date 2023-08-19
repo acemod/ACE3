@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, SilentSpike
+ * Author: commy2, kymckay
  * HandleDamage EH where wound events are raised based on incoming damage.
  * Be aware that for each source of damage, the EH can fire multiple times (once for each hitpoint).
  * We store these incoming damages and compare them on our final hitpoint: "ace_hdbracket".
@@ -116,7 +116,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     _allDamages sort false;
     _allDamages = _allDamages apply {[_x select 2, _x select 3, _x select 0]};
-    
+
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them
     if (_ammo isEqualTo "") then {

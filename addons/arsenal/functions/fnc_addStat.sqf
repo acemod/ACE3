@@ -5,18 +5,18 @@
  *
  * Arguments:
  * 0: Tabs to add the stat to <ARRAY of ARRAYS>
- *   0.0: Left tab indexes <ARRAY of NUMBERS>
- *   0.1: Right tab indexes <ARRAY of NUMBERS>
+ * - 0: Left tab indexes <ARRAY of NUMBERS>
+ * - 1: Right tab indexes <ARRAY of NUMBERS>
  * 1: Stat class (unique string for each stat) <STRING>
  * 2: Config entries to pass <ARRAY of STRINGS>
  * 3: Title <STRING>
  * 4: Show bar / show text bools <ARRAY of BOOLS>
- *   4.0: Show bar <BOOL> (default: false)
- *   4.1: Show text <BOOL> (default: false)
+ * - 0: Show bar <BOOL> (default: false)
+ * - 1: Show text <BOOL> (default: false)
  * 5: Array of statements <ARRAY of CODE>
- *   5.0: Bar code <CODE> (default: {})
- *   5.1: Text code <CODE> (default: {})
- *   5.2: Condition code <CODE> (default: {true})
+ * - 0: Bar code <CODE> (default: {})
+ * - 1: Text code <CODE> (default: {})
+ * - 2: Condition code <CODE> (default: {true})
  * 6: Priority <NUMBER> (default: 0)
  *
  * Return Value:
@@ -82,7 +82,7 @@ private _fnc_addToTabs = {
             _stat = +_finalArray;
             _stat set [0, _statName];
 
-            _index = _currentTab findIf {count _x < 5};
+            private _index = _currentTab findIf {count _x < 5};
 
             // Add to existing page if there's enough space, otherwise create a new page
             if (_index != -1) then {
