@@ -14,5 +14,6 @@ PREP(isBeingDragged);
 PREP(isInStableCondition);
 PREP(setCardiacArrestState);
 PREP(setDead);
+PREP(setStatusEffects);
 PREP(setUnconsciousState);
 PREP(updateWoundBloodLoss);

@@ -215,7 +215,7 @@ if (is3DEN) then {
         _ctrl ctrlCommit 0;
     } forEach [IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia];
 
-    _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
+    private _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 } else {
     GVAR(centerNotPlayer) = GVAR(center) != player;

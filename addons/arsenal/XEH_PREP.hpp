@@ -1,3 +1,4 @@
+PREP(addAction);
 PREP(addDefaultLoadout);
 PREP(addListBoxItem);
 PREP(addRightPanelButton);
@@ -64,6 +65,7 @@ PREP(open3DEN);
 PREP(openBox);
 PREP(portVALoadouts);
 PREP(refresh);
+PREP(removeAction);
 PREP(removeBox);
 PREP(removeDefaultLoadout);
 PREP(removeSort);

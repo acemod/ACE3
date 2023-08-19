@@ -42,7 +42,7 @@ private _panel = [
 ] find GVAR(currentLeftPanel);
 
 private _groups = (GVAR(actionList) select _panel) select {
-    [GVAR(center)] call (_x select 1)
+    [GVAR(center)] call (_x select 2)
 };
 
 private _show = _groups isNotEqualTo [];
@@ -57,9 +57,11 @@ private _actionsCurrentPageCtrl = _display displayCtrl IDC_actionsCurrentPage;
 
 private _currentPage = GVAR(currentActionPage);
 private _pages = count _groups;
+
 if (_currentPage < 0) then {
     _currentPage = _pages - 1;
 };
+
 if (_currentPage >= _pages) then {
     _currentPage = 0;
     GVAR(currentActionPage) = _currentPage;
@@ -72,20 +74,22 @@ if (_currentPage >= _pages) then {
 } forEach [IDC_actionsPreviousPage, IDC_actionsNextPage];
 
 private _group = _groups select _currentPage;
-private _items = _group select 2 select {
-    [GVAR(center)] call (_x select 3)
+private _items = _group select 3 select {
+    [GVAR(center)] call (_x select 4)
 };
 
-_actionsCurrentPageCtrl ctrlSetText (_group select 0);
+_actionsCurrentPageCtrl ctrlSetText (_group select 1);
 _actionsCurrentPageCtrl ctrlSetFade 0;
 _actionsCurrentPageCtrl ctrlShow true;
 _actionsCurrentPageCtrl ctrlCommit 0;
 
 {
-    _x params ["_type", "_label", "_statement"];
+    _x params ["", "_type", "_label", "_statement"];
+
     private _idc = 9001 + _forEachIndex * 2;
     private _actionTextCtrl = _display displayCtrl _idc;
     private _actionButtonCtrl = _display displayCtrl (_idc + 1);
+
     switch (_type) do {
         case ACTION_TYPE_BUTTON: {
             _actionButtonCtrl ctrlRemoveAllEventHandlers "ButtonClick";
@@ -104,10 +108,12 @@ _actionsCurrentPageCtrl ctrlCommit 0;
             _actionTextCtrl ctrlCommit 0;
         };
         case ACTION_TYPE_TEXT: {
-            private _text = (call _statement);
+            private _text = call _statement;
+
             if (isNil "_text") then {
                 _text = "";
             };
+
             _actionTextCtrl ctrlSetText _text;
             _actionTextCtrl ctrlSetFade 0;
             _actionTextCtrl ctrlCommit 0;
@@ -129,6 +135,7 @@ private _actionCount = count _items;
     private _idc = 9001 + _x * 2;
     private _actionTextCtrl = _display displayCtrl _idc;
     private _actionButtonCtrl = _display displayCtrl (_idc + 1);
+
     _actionTextCtrl ctrlSetFade 1;
     _actionTextCtrl ctrlCommit 0;
     _actionButtonCtrl ctrlSetFade 1;
