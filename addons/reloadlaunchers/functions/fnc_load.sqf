@@ -35,19 +35,20 @@ private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGV
 private _onSuccess =  {
     (_this select 0) params ["_unit", "_target", "_weapon", "_magazine"];
 
-    // Get magazines that are of the correct type; Exclude empty mags
-    private _magazinesAmmoFull = (magazinesAmmoFull _unit) select {(_x select 0) == _magazine};
+    // Check if the unit has any of the same magazines and calculate max ammo
+    private _maxAmmo = 0;
 
-    // Get count of rounds in magazines, then select maximum
-    private _ammo = selectMax (_magazinesAmmoFull apply {_x select 1});
+    {
+        _maxAmmo = _maxAmmo max (_x select 1);
+    } forEach (magazinesAmmo _unit select {(_x select 0) == _magazine});
 
     // Try to remove magazine; If not possible, quit
-    if !([_unit, _magazine, _ammo] call EFUNC(common,removeSpecificMagazine)) exitWith {
+    if !([_unit, _magazine, _maxAmmo] call EFUNC(common,removeSpecificMagazine)) exitWith {
         [LELSTRING(common,ActionAborted)] call EFUNC(common,displayTextStructured);
     };
 
     // Reload target's launcher; Upon success, notify reloading unit about success
-    [QGVAR(reloadLauncher), [_unit, _target, _weapon, _magazine, _ammo], _target] call CBA_fnc_targetEvent;
+    [QGVAR(reloadLauncher), [_unit, _target, _weapon, _magazine, _maxAmmo], _target] call CBA_fnc_targetEvent;
 };
 
 private _onFailure = {
