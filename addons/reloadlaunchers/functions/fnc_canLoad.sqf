@@ -35,7 +35,7 @@ if (getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(enabled)) == 0) ex
 if !(_weapon in weapons _target) exitWith {false};
 
 // Check if the target's launcher's primary muzzle really needs to be reloaded
-if (((getUnitLoadout _target) select 1 param [4, []] param [1, 0]) != 0) exitWith {false};
+if (_target ammo _weapon != 0) exitWith {false};
 
 // Check if the magazine is compatible with target's launcher
 _magazine in ([_unit, _weapon] call FUNC(getLoadableMissiles))
