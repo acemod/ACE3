@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, johnb43
  * Check of the unit can reload the launcher of target unit.
  *
  * Arguments:
@@ -24,6 +24,9 @@ TRACE_4("params",_unit,_target,_weapon,_magazine);
 if (!alive _target) exitWith {false};
 if (vehicle _target != _target) exitWith {false};
 if !([_unit, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
+
+// Target must not be captive
+if (_target getVariable [QEGVAR(captives,isHandcuffed), false] || {_target getVariable [QEGVAR(captives,isSurrendering), false]}) exitWith {false};
 
 // target is awake
 if (_target getVariable ["ACE_isUnconscious", false]) exitWith {false};
