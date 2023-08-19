@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, johnb43
  * Reload a launcher
  * If the ammo argument is nil, a full magazine will be given.
  *
@@ -35,6 +35,7 @@ if ((_checkSelectedWeapon && {currentWeapon _target != _weapon}) || {currentMaga
     // If failed, readd magazine back to reloading unit
     [_unit, _magazine, _ammo, true] call CBA_fnc_addMagazine;
 
+    // Notify reloading unit about failure
     [QEGVAR(common,displayTextStructured), [LELSTRING(common,ActionAborted)], _unit] call CBA_fnc_targetEvent;
 };
 

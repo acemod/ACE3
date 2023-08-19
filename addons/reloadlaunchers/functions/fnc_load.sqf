@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, johnb43
  * Reload a launcher
  *
  * Arguments:
@@ -41,7 +41,7 @@ private _onSuccess =  {
     // Get count of rounds in magazines, then select maximum
     private _ammo = selectMax (_magazinesAmmoFull apply {_x select 1});
 
-    // Try to remove magazine; If failure, quit
+    // Try to remove magazine; If not possible, quit
     if !([_unit, _magazine, _ammo] call EFUNC(common,removeSpecificMagazine)) exitWith {
         [LELSTRING(common,ActionAborted)] call EFUNC(common,displayTextStructured);
     };
