@@ -163,7 +163,7 @@ class ACE_Medical_Menu_ActionButton: RscButtonMenu {
     style = ST_LEFT;
     x = 0;
     y = 0;
-    w = QUOTE(POS_W(12));
+    w = QUOTE(POS_W(11.833));
     h = QUOTE(POS_H(1));
     size = QUOTE(POS_H(0.9));
     class Attributes {
@@ -300,7 +300,7 @@ class ACE_Medical_Menu {
             idc = IDC_TRIAGE_CARD;
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
-            w = QUOTE(POS_W(12));
+            w = QUOTE(POS_W(11.833));
             h = QUOTE(POS_H(10));
             sizeEx = QUOTE(POS_H(0.7));
             colorSelect[] = {1, 1, 1, 1};
@@ -314,7 +314,7 @@ class ACE_Medical_Menu {
             idc = IDC_ACTION_BUTTON_GROUP;
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
-            w = QUOTE(POS_W(12));
+            w = QUOTE(POS_W(11.833));
             h = QUOTE(POS_H(10));
         };
         class BodyImage: GVAR(BodyImage) {};

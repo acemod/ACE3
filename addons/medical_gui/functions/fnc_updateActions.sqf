@@ -47,7 +47,7 @@ private _shownIndex = 0;
         };
         _ctrl = _actionButons # _shownIndex;
         _ctrl ctrlRemoveAllEventHandlers "ButtonClick";
-        _ctrl ctrlSetPositionY POS_H(_shownIndex);
+        _ctrl ctrlSetPositionY POS_H(1.1 * _shownIndex);
         _ctrl ctrlCommit 0;
 
         _ctrl ctrlSetText _displayName;
@@ -60,4 +60,4 @@ private _shownIndex = 0;
     };
 } forEach GVAR(actions);
 
-{ ctrlDelete _x } forEach (_actionButons select [_shownIndex]);
+{ ctrlDelete _x } forEach (_actionButons select [_shownIndex, 9999]);
