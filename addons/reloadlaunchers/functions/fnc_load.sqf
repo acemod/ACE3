@@ -42,13 +42,17 @@ private _onSuccess =  {
         _maxAmmo = _maxAmmo max (_x select 1);
     } forEach (magazinesAmmo _unit select {(_x select 0) == _magazine});
 
-    // Try to remove magazine; If not possible, quit
-    if !([_unit, _magazine, _maxAmmo] call EFUNC(common,removeSpecificMagazine)) exitWith {
+    // Check if the launcher can still be loaded; If possible, then try to remove magazine
+    if !([_unit, _target, _weapon, _magazine] call FUNC(canLoad) && {[_unit, _magazine, _maxAmmo] call EFUNC(common,removeSpecificMagazine)}) exitWith {
+        // Notify reloading unit about failure
         [LLSTRING(LauncherNotLoaded)] call EFUNC(common,displayTextStructured);
     };
 
-    // Reload target's launcher; Upon success, notify reloading unit about success
+    // Reload target's launcher
     [QGVAR(reloadLauncher), [_unit, _target, _weapon, _magazine, _maxAmmo], _target] call CBA_fnc_targetEvent;
+
+    // Notify reloading unit about success
+    [LLSTRING(LauncherLoaded)] call EFUNC(common,displayTextStructured);
 };
 
 private _onFailure = {
