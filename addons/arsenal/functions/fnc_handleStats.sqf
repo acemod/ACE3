@@ -99,7 +99,7 @@ private _fnc_handleStats = {
         call _fnc_hideEverything
     };
 
-   GVAR(currentStatPage) = GVAR(currentStatPage) min floor ((count _statsTab) / 5); 
+    GVAR(currentStatPage) = GVAR(currentStatPage) min floor ((count _statsTab) / 5);
     private _statsToDisplay = _statsTab select [GVAR(currentStatPage) * 5, 5];
 
 
@@ -113,7 +113,7 @@ private _fnc_handleStats = {
     private _textStatementResult = "";
 
     {
-        _x params ["_ID", "_configEntry", "_title", "_bools", "_statements"];
+        _x params ["", "_configEntry", "_title", "_bools", "_statements"];
         _bools params ["_showBar", "_showText"];
         _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
 
