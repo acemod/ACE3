@@ -23,7 +23,7 @@
 params ["_unit", "_target", "_weapon", "_magazine", "_ammo"];
 TRACE_5("params",_unit,_target,_weapon,_magazine,_ammo);
 
-private _checkSelectedWeapon = isPlayer _target || {!isNull (_target getVariable ["bis_fnc_moduleRemoteControl_owner", objNull])};
+private _checkSelectedWeapon = [_target] call EFUNC(common,isPlayer);
 
 // AI don't select launchers with selectWeapon/switchWeapon
 if (_checkSelectedWeapon) then {
