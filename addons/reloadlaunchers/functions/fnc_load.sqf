@@ -44,7 +44,7 @@ private _onSuccess =  {
 
     // Try to remove magazine; If not possible, quit
     if !([_unit, _magazine, _maxAmmo] call EFUNC(common,removeSpecificMagazine)) exitWith {
-        [LELSTRING(common,ActionAborted)] call EFUNC(common,displayTextStructured);
+        [LLSTRING(LauncherNotLoaded)] call EFUNC(common,displayTextStructured);
     };
 
     // Reload target's launcher; Upon success, notify reloading unit about success

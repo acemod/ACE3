@@ -36,7 +36,7 @@ if ((_checkSelectedWeapon && {currentWeapon _target != _weapon}) || {currentMaga
     [_unit, _magazine, _ammo, true] call CBA_fnc_addMagazine;
 
     // Notify reloading unit about failure
-    [QEGVAR(common,displayTextStructured), [LELSTRING(common,ActionAborted)], _unit] call CBA_fnc_targetEvent;
+    [QEGVAR(common,displayTextStructured), [LLSTRING(LauncherNotLoaded)], _unit] call CBA_fnc_targetEvent;
 };
 
 // Add magazine to launcher immediately

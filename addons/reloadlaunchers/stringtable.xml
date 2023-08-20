@@ -69,5 +69,10 @@
             <Chinese>裝載%1</Chinese>
             <Turkish>%1 Yüklendi</Turkish>
         </Key>
+        <Key ID="STR_ACE_ReloadLaunchers_LauncherNotLoaded">
+            <English>Launcher could not be loaded</English>
+            <German>Panzerabwehr konnte nicht geladen werden</German>
+            <French>Lanceur n'a pas pu être chargé</French>
+        </Key>
     </Package>
 </Project>
