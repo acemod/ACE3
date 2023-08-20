@@ -9,8 +9,8 @@
  *
  * Return Value:
  * Array <ARRAY>:
- *     0: In rotorwash <BOOL>
- *     1: Amount of rotor wash. <NUMBER>
+ * - 0: In rotorwash <BOOL>
+ * - 1: Amount of rotor wash. <NUMBER>
  *
  * Example:
  * if ([ace_player, 10] call ace_goggles_fnc_isInRotorWash select 0) then { hint "Rotor wash"; };

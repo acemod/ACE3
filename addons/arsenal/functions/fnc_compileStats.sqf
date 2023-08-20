@@ -68,7 +68,6 @@ private _statsListRightPanel = [
     []  // Misc 7
 ];
 
-//------------------------- Config handling
 private _finalArray = [];
 private _class = "";
 private _stats = [];
@@ -117,6 +116,5 @@ private _priority = 0;
 [_statsListLeftPanel] call _fnc_sortLists;
 [_statsListRightPanel] call _fnc_sortLists;
 
-//------------------------- Config Handling
 GVAR(statsListLeftPanel) = _statsListLeftPanel;
 GVAR(statsListRightPanel) = _statsListRightPanel;
