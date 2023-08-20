@@ -141,6 +141,7 @@ private _isTool = false;
 } forEach configProperties [_cfgWeapons, _filterFunction, true];
 
 // Get all grenades
+// Explicitly don't look at scope for these, we want hidden items to be sorted as grenades/explosives properly
 private _grenadeList = createHashMap;
 
 {
@@ -154,11 +155,17 @@ private _putList = createHashMap;
     _putList insert [true, (getArray (_cfgWeapons >> "Put" >> _x >> "magazines")) apply {_x call EFUNC(common,getConfigName)}, []];
 } forEach getArray (_cfgWeapons >> "Put" >> "muzzles");
 
+// Get all magazine misc items
+private _magazineMiscItems = createHashMap;
+
+{
+    _magazineMiscItems set [configName _x, nil];
+} forEach ((toString {getNumber (_x >> "ACE_isUnique") == 1}) configClasses _cfgMagazines);
+
 // Remove invalid/non-existent entries
 _grenadeList deleteAt "";
 _putList deleteAt "";
-
-private _magazineMiscItems = createHashMap;
+_magazineMiscItems deleteAt "";
 
 // Get all other grenades, explosives (and similar) and magazines
 {
@@ -166,9 +173,8 @@ private _magazineMiscItems = createHashMap;
 
     switch (true) do {
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
-        case (getNumber (_x >> "ACE_isUnique") isEqualTo 1): {
+        case (_x in _magazineMiscItems): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
-            _magazineMiscItems set [_className, nil];
             if (getNumber (_x >> "ACE_isTool") isEqualTo 1) then {_toolList set [_className, nil]};
         };
         // Grenades
