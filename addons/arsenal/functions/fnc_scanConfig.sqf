@@ -173,7 +173,7 @@ _magazineMiscItems deleteAt "";
 
     switch (true) do {
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
-        case (_x in _magazineMiscItems): {
+        case (_className in _magazineMiscItems): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             if (getNumber (_x >> "ACE_isTool") isEqualTo 1) then {_toolList set [_className, nil]};
         };
