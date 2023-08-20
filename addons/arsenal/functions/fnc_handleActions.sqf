@@ -94,10 +94,9 @@ _actionsCurrentPageCtrl ctrlCommit 0;
         case ACTION_TYPE_BUTTON: {
             _actionButtonCtrl ctrlRemoveAllEventHandlers "ButtonClick";
             _actionButtonCtrl ctrlAddEventHandler ["ButtonClick", {
-                if (is3DEN) exitWith {call FUNC(refresh)};
-
+                if (is3DEN) exitWith {[true] call FUNC(refresh)};
                 [{
-                    call FUNC(refresh);
+                    [true] call FUNC(refresh);
                 }] call CBA_fnc_execNextFrame;
             }];
             _actionButtonCtrl ctrlAddEventHandler ["ButtonClick", _statement];

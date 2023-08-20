@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Dedmen, johnb43
  * Add a listbox row.
@@ -20,6 +21,26 @@
 
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
 
+private _skip = GVAR(favoritesOnly) && {!(_className in GVAR(currentItems))} && {!((toLower _className) in GVAR(favorites))};
+if (_skip) then {
+    switch (GVAR(currentLeftPanel)) do {
+        case IDC_buttonPrimaryWeapon: {
+            _skip = !(_className in (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS));
+        };
+        case IDC_buttonHandgun: {
+            _skip = !(_className in (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS));
+        };
+        case IDC_buttonSecondaryWeapon: {
+            _skip = !(_className in (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS));
+        };
+        case IDC_buttonBinoculars: {
+            _skip = !(_className in (GVAR(currentItems) select IDX_CURR_BINO_ITEMS));
+        };
+    };
+};
+
+if (_skip) exitWith {};
+
 // Sanitise key, as it's public; If not in cache, find info and cache it for later use
 ((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_configCategory + _className, {
     // Get classname (config case), display name, picture and DLC
@@ -35,3 +56,8 @@ _ctrlPanel lbSetData [_lbAdd, _className];
 _ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
 _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIcons)];
 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
+
+if ((toLower _className) in GVAR(favorites)) then {
+    _ctrlPanel lbSetColor [_lbAdd, FAVORITES_COLOR];
+    _ctrlPanel lbSetSelectColor [_lbAdd, FAVORITES_COLOR];
+};
