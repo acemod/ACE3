@@ -6,11 +6,11 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
-
 if (isServer) then {
-    GVAR(assignNVGpfh) = -1;
+    GVAR(assignNVGthread) = false;
     GVAR(assignNVGstate) = false;
 };
+
+#include "initSettings.sqf"
 
 ADDON = true;

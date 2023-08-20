@@ -9,13 +9,10 @@ private _category = format ["ACE %1", LLSTRING(DisplayName)];
     {
         if (isServer) then {
             params ["_enabled"];
-            if (_enabled) then {
-                if (GVAR(assignNVGpfh) == -1) then {
-                    GVAR(assignNVGpfh) = [FUNC(assignNVGpfh), 300] call CBA_fnc_addPerFrameHandler;
-                };
-            } else {
-                [GVAR(assignNVGpfh)] call CBA_fnc_removePerFrameHandler;
-                GVAR(assignNVGpfh) = -1;
+            if (_enabled && {!GVAR(assignNVGthread)}) then {
+                TRACE_1("start loop",_this);
+                GVAR(assignNVGthread) = true;
+                [FUNC(assignNVGpfh), [], 1] call CBA_fnc_waitAndExecute;
             };
         };
     }

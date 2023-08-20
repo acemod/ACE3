@@ -19,7 +19,7 @@ if (!GVAR(assignNVG)) exitWith {};
 
 params ["_unit"];
 
-if (alive _unit && !isPlayer _unit) then {
+if (alive _unit && {!isPlayer _unit}) then {
     private _nvg = hmd _unit;
 
     if (GVAR(assignNVGstate)) then {
