@@ -151,7 +151,7 @@ def main(argv):
     publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_gm"), "2633534991", changelog_path)
 
     #ace_compat_sog: - https://steamcommunity.com/sharedfiles/filedetails/?id=2633537792
-    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_sog"), "2633537792", changelog_path)
+    # publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_sog"), "2633537792", changelog_path)
 
 
 
