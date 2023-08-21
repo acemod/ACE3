@@ -28,7 +28,7 @@ private _blurRadius = -1;
 
 // Adds Array of Params / Original ACE3's (ST's) by default. (NVG_GREEN_PRESET)
 private _preset = getArray (configFile >> "CfgWeapons" >> "NVGoggles" >> "colorPreset");
-if (alive ACE_player) then {
+if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
     if (((vehicle ACE_player) == ACE_player) || {
         // Test if we are using player's nvg or if sourced from vehicle:
 
