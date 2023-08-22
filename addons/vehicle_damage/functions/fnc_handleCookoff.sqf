@@ -9,7 +9,8 @@
  * 2: Intensity of cookoff <NUMBER>
  * 3: Person who instigated cookoff <OBJECT> (default: objNull)
  * 4: Part of vehicle which got hit <STRING> (default: "")
- * 5: Whether or not the vehicle can spawn ring-fire effect <BOO> (default: false)
+ * 5: Whether or not the vehicle can spawn ring-fire effect <BOOL> (default: false)
+ * 6: Can Jet <BOOL> (default: true)
  *
  * Return Value:
  * If cooked off
@@ -43,7 +44,8 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
         _source = ["hit_engine_point", "HitPoints"];
     };
 
-    [QEGVAR(cookOff,cookOff), [_vehicle, _intensity, _injurer, _delayWithSmoke, _fireDetonateChance, _detonateAfterCookoff, _source, _canRing, _canJet]] call CBA_fnc_localEvent;
+    // sending nil for _maxIntensity (9th param) to use default value in ace_cookoff_fnc_cookOff
+    [QEGVAR(cookOff,cookOff), [_vehicle, _intensity, _injurer, _delayWithSmoke, _fireDetonateChance, _detonateAfterCookoff, _source, _canRing, nil, _canJet]] call CBA_fnc_localEvent;
     _vehicle setVariable [QGVAR(cookingOff), true];
     LOG_4("Cooking-off [%1] with a chance-of-fire [%2] - Delayed Smoke | Detonate after cookoff [%3 | %4]",_vehicle,_chanceOfFire,_delayWithSmoke,_detonateAfterCookoff);
     [_vehicle] spawn FUNC(abandon);
