@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal, SilentSpike, mharis001
+ * Author: Glowbal, kymckay, mharis001
  * Updates the body image for given target.
  *
  * Arguments:
@@ -22,11 +22,15 @@ params ["_ctrlGroup", "_target"];
 private _tourniquets = GET_TOURNIQUETS(_target);
 private _fractures = GET_FRACTURES(_target);
 private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]];
+private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
 private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 
 {
-    _x params ["", "_bodyPartN", "_amountOf", "_bleeding"];
-    _bodyPartBloodLoss set [_bodyPartN, (_bodyPartBloodLoss select _bodyPartN) + (_bleeding * _amountOf)];
+    private _partIndex = ALL_BODY_PARTS find _x;
+    {
+        _x params ["", "_amountOf", "_bleeding"];
+        _bodyPartBloodLoss set [_partIndex, (_bodyPartBloodLoss select _partIndex) + (_bleeding * _amountOf)];
+    } forEach _y;
 } forEach GET_OPEN_WOUNDS(_target);
 
 {
@@ -67,6 +71,21 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
         [_bloodLoss] call FUNC(bloodLossToRGBA);
     } else {
         private _damage = _bodyPartDamage select _forEachIndex;
+        switch (true) do { // torso damage threshold doesn't need scaling
+            case (_forEachIndex > 3): { // legs: index 4 & 5
+                _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
+            };
+            case (_forEachIndex > 1): { // arms: index 2 & 3
+                _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+            };
+            case (_forEachIndex == 0): { // head: index 0
+                _damageThreshold = _damageThreshold * 1.25;
+            };
+            default { // torso: index 1
+                _damageThreshold = _damageThreshold * 1.5
+            };
+        };
+        _damage = (_damage / _damageThreshold) min 1;
         [_damage] call FUNC(damageToRGBA);
     };
 

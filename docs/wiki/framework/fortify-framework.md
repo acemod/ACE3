@@ -30,14 +30,14 @@ If the Fortify module is present in the mission, server admins can use chat comm
 
 ## 1.2 Adding custom presets
 
-There are two ways of adding custom presets to your mission, either via code or through desciption.ext.
+There are three ways of adding custom presets to your mission, either via code, through desciption.ext or through config.
 
 To add a preset via code you use the function `call ace_fortify_fnc_registerObjects`. Also enables Fortify.
 
 ```sqf
 * Registers the given objects in the given side's player interaction menu.
 * Players on that side must have the `Fortify Tool` item in their inventory to access the menu.
-* Classnames must be in the format [<classname>, <cost>]
+* Classnames must be in the format [<classname>, <cost>, <category(optional)>]
 * MUST BE CALLED ON SERVER!
 *
 * Arguments:
@@ -50,23 +50,31 @@ To add a preset via code you use the function `call ace_fortify_fnc_registerObje
 *
 * Example:
 * [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call ace_fortify_fnc_registerObjects
+* [west, 5000, [["Land_BagFence_Long_F", 5, "tan"], ["Land_BagFence_01_long_green_F", 5, "green"]]] call ace_fortify_fnc_registerObjects
 ```
 
-Adding it through `description.ext` you use:
+Adding it through `description.ext` or config you use:
 
 ```cpp
 class ACEX_Fortify_Presets {
-    class myMissionObjects {
+    class TAG_MyPreset {
         displayName = "My Preset";
         objects[] = {
             {"Sandbag", 5},
             {"Bunker", 50}
         };
     };
+    class TAG_categories {
+        displayName = "My Categories";
+        objects[] = {
+            {"Sandbag", 5, "A Category"},
+            {"Bunker", 50, "TAG_MyPreset"} // will use the localized displayName of that preset ("My Preset")
+        };
+    };
 };
  ```
 
-Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or the chat command: `#ace-fortify blufor myMissionObjects`.
+Then you will have to set the mission preset to `TAG_MyPreset` by either using the Fortify editor module or the chat command: `#ace-fortify blufor TAG_MyPreset`.
 
 ## 1.3 Adding custom deploy handlers
 

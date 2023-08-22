@@ -15,7 +15,6 @@ GVAR(showNamesTime) = -10;
 
     // Statement
     GVAR(showNamesTime) = CBA_missionTime;
-    // if (call FUNC(canShow)) then{ call FUNC(doShow); }; // This code doesn't work (canShow has a nil / has never worked??)
     // Return false so it doesn't block other actions
     false
 },

@@ -19,6 +19,11 @@ if (!hasInterface) exitWith {};
     };
 }] call EFUNC(common,arithmeticSetSource);
 
+// recheck weapon inertia after weapon swap, change of attachments or switching unit
+["weapon", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
+["loadout", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
+["unit", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
+
 ["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 

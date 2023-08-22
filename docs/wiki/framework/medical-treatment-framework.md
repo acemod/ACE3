@@ -38,3 +38,21 @@ class CfgVehicles {
     };
 };
 ```
+### 1.3 Treatment Items
+
+Items in `CfgWeapons` with `ACE_isMedicalItem` property will be added to the ACE Medical category in the ACE Arsenal.
+```cpp
+class CfgWeapons {
+    class MyMedicalItem {
+        ACE_isMedicalItem = 1;
+    };
+};
+```
+Required items in `ACE_Medical_Treatment_Actions` will also be added as a fallback.
+```cpp
+class ACE_Medical_Treatment_Actions {
+    class MyCustomTreatment {
+        items[] = {"MyMedicalItem"};
+    };
+};
+```

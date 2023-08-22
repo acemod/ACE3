@@ -7,8 +7,8 @@
  * 0: Unit <OBJECT>
  * 1: Range (-1 to ignore) <NUMBER>
  * 2: Explosives to detonate <ARRAY>
- *     0: Explosive <OBJECT>
- *     1: Fuse time <NUMBER>
+ * - 0: Explosive <OBJECT>
+ * - 1: Fuse time <NUMBER>
  * 3: Trigger Item Classname <STRING>
  *
  * Return Value:
