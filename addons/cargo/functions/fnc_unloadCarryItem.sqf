@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: GhostIsSpooky
+ * Author: Grim
  * Dragging integration. Unloader starts carrying unloaded object.
  *
  * Arguments:

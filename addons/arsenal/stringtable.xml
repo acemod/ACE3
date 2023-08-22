@@ -1240,6 +1240,70 @@
             <Turkish>Desteklenmiyor</Turkish>
             <Korean>지원되지 않음</Korean>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionModeGeneric">
+            <English>Vision Mode</English>
+            <German>Sichtmodus</German>
+            <Japanese>ビジョン モード</Japanese>
+            <Italian>Modalità Visiva</Italian>
+            <Chinese>視覺模式</Chinese>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Korean>보기 모드</Korean>
+            <French>Mode de vision</French>
+            <Polish>Tryb Wizji</Polish>
+            <Russian>Режим видения</Russian>
+            <Portuguese>Modo de Visão</Portuguese>
+            <Czech>Režim sledování</Czech>
+            <Turkish>Görüş Modu</Turkish>
+            <Spanish>Modo de visión</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionNormal">
+            <English>Normal</English>
+            <German>Normal</German>
+            <Polish>Normalna</Polish>
+            <Portuguese>Normal</Portuguese>
+            <Russian>Нормальное</Russian>
+            <Czech>Normální</Czech>
+            <Spanish>Normal</Spanish>
+            <Italian>Normale</Italian>
+            <French>Normale</French>
+            <Japanese>通常</Japanese>
+            <Korean>일반</Korean>
+            <Chinesesimp>正常</Chinesesimp>
+            <Chinese>正常</Chinese>
+            <Turkish>Normal</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionNight">
+            <English>Night</English>
+            <German>Nacht</German>
+            <Polish>Noc</Polish>
+            <Portuguese>Visão Norturna</Portuguese>
+            <Russian>Ночное</Russian>
+            <Czech>Noční</Czech>
+            <Spanish>Nocturna</Spanish>
+            <Italian>Notturno</Italian>
+            <French>Nocturne</French>
+            <Japanese>暗視装置</Japanese>
+            <Korean>야간</Korean>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
+            <Turkish>Gece</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionThermal">
+            <English>Thermal</English>
+            <German>Wärme</German>
+            <Polish>Termo</Polish>
+            <Portuguese>Térmica</Portuguese>
+            <Russian>Тепловизор</Russian>
+            <Czech>Termální</Czech>
+            <Spanish>Térmica</Spanish>
+            <Italian>Termico</Italian>
+            <French>Thermique</French>
+            <Japanese>熱源画像</Japanese>
+            <Korean>열상</Korean>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Chinese>熱成像</Chinese>
+            <Turkish>Termal</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <Spanish>Página</Spanish>
@@ -1469,16 +1533,59 @@
             <English>Save Face</English>
             <Korean>얼굴 저장</Korean>
             <Russian>Сохранить лицо</Russian>
+            <Spanish>Guardar Cara</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
             <Korean>목소리 저장</Korean>
             <Russian>Сохранить голос</Russian>
+            <Spanish>Guardar Voz</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
             <Korean>계급장 저장</Korean>
             <Russian>Сохранить эмблему</Russian>
+            <Spanish>Guardar Insignia</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortDescending">
+            <English>Descending</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortAscending">
+            <English>Ascending</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_toolsTab">
+            <English>Tools</English>
+            <Czech>Nástroje</Czech>
+            <German>Werkzeuge</German>
+            <Russian>Инструменты</Russian>
+            <Polish>Narzędzia</Polish>
+            <Italian>Strumenti</Italian>
+            <Spanish>Herramientas</Spanish>
+            <French>Outils</French>
+            <Chinese>工具</Chinese>
+            <Japanese>ツール</Japanese>
+            <Korean>도구</Korean>
+            <Portuguese>Ferramentas</Portuguese>
+            <Chinesesimp>工具</Chinesesimp>
+            <Turkish>Araçlar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statMagCount">
+            <English>Ammo count</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
+            <English>Default to Favorites</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
+            <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
+            <English>Favorites Color</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
+            <English>Highlight color for favorited items.</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
+            <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
         </Key>
     </Package>
 </Project>

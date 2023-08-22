@@ -232,6 +232,7 @@
             <Chinesesimp>伪装掩体</Chinesesimp>
             <Korean>참호 위장시키기</Korean>
             <Russian>Камуфлировать окоп</Russian>
+            <Spanish>Camuflar trinchera</Spanish>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>

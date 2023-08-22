@@ -314,5 +314,13 @@
             <Turkish>Halatla kaymak için halat gerekli</Turkish>
             <Korean>줄이 필요합니다</Korean>
         </Key>
+        <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_displayName">
+            <English>Auto-Equip FRIES</English>
+            <Polish>Automatycznie Zamontuj FRIES</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_description">
+            <English>Automatically add FRIES to helicopters that support them.</English>
+            <Polish>Automatycznie dodawaj FRIES do śmigłowców które je wspierają.</Polish>
+        </Key>
     </Package>
 </Project>
