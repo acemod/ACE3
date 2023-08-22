@@ -30,8 +30,8 @@
             <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
-            <Original>Items - Medical</Original>
-            <English>Items - Medical</English>
+            <Original>Medical Treatment</Original>
+            <English>Medical Treatment</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_DisplayName">
             <Original>Adenosine</Original>
@@ -448,6 +448,30 @@
         <Key ID="STR_ACE_FieldManual_Items_FortifyTool_Description">
             <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
             <Original>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</Original>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Lockpick_DisplayName">
+            <English>Lockpicks</English>
+            <Original>Lockpicks</Original>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Lockpick_ShortName">
+            <English>Breaking and Entering</English>
+            <Original>Breaking and Entering</Original>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Lockpick_Description">
+            <English>%3Lockpicks%4 are used to gain access to locked vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Lockpick%4.&lt;br/&gt;%2Approach a %3Locked%4 vehicle.&lt;br/&gt;Use [%3%12%4] and select %3Lockpick Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</English>
+            <Original>%3Lockpicks%4 are used to gain access to locked vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Lockpick%4.&lt;br/&gt;%2Approach a %3Locked%4 vehicle.&lt;br/&gt;Use [%3%12%4] and select %3Lockpick Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</Original>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_VehicleKey_DisplayName">
+            <English>Vehicle Keys</English>
+            <Original>Vehicle Keys</Original>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_VehicleKey_ShortName">
+            <English>Lock/Unlock Vehicles</English>
+            <Original>Lock/Unlock Vehicles</Original>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_VehicleKey_Description">
+            <English>%3Vehicle Keys%4 are used to lock/unlock your vehicles. Vehicle keys can exist for the whole side, or keys can be created for a particular vehicle itself.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Vehicle Key%4.&lt;br/&gt;%2Approach the vehicle that the key belongs to.&lt;br/&gt;Use [%3%12%4] and select %3Lock/Unlock Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</English>
+            <Original>%3Vehicle Keys%4 are used to lock/unlock your vehicles. Vehicle keys can exist for the whole side, or keys can be created for a particular vehicle itself.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Vehicle Key%4.&lt;br/&gt;%2Approach the vehicle that the key belongs to.&lt;br/&gt;Use [%3%12%4] and select %3Lock/Unlock Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</Original>
         </Key>
     </Package>
 </Project>
