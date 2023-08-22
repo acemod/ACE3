@@ -10,7 +10,7 @@
 {
     [QGVAR(addInventoryActions), _x] call CBA_fnc_localEvent;
 } forEach (allUnits + allDeadMen); 
-// apply to all future mans
+// apply to all future units
 ["CAManBase", "init", LINKFUNC(addInventoryActions), true, [], false] call CBA_fnc_addClassEventHandler;
 // Respawn is called locally
 ["CAManBase", "respawn", {
