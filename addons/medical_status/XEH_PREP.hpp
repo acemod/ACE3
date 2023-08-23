@@ -5,6 +5,7 @@ PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
 PREP(getMedicationCount);
+PREP(getStrokeVolume);
 PREP(handleKilled);
 PREP(handleKilledMission);
 PREP(hasStableVitals);
