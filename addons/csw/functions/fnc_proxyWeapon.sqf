@@ -37,6 +37,9 @@ if ((missionNamespace getVariable [_proxyWeapon, objNull]) isEqualType {}) then 
 };
 if (!_needed) exitWith { TRACE_2("not needed",_needed,_proxyWeapon); };
 
+// Rearm compatibility, prevent reloading entire static and breaking CSW
+_staticWeapon setVariable [QEGVAR(rearm,scriptedLoadout), true, true];
+
 TRACE_2("swapping to proxy weapon",_currentWeapon,_proxyWeapon);
 _staticWeapon removeWeaponTurret [_currentWeapon, _turret];
 _staticWeapon addWeaponTurret [_proxyWeapon, _turret];
