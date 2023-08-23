@@ -53,7 +53,9 @@ _markers = _markers apply { // convert marker array to draw command
 if (_mapType isEqualType 0) then {
     _mapType = [QGVAR(mapNormal), QGVAR(mapTopo), QGVAR(mapSat)] select _mapType;
 };
-if (!isClass (configFile >> _mapType)) then { ERROR_1("bad map type %1",_mapType); };
+if ((!isClass (configFile >> _mapType)) && {(!isClass (missionConfigFile >> _mapType))}) then {
+    ERROR_1("bad map type %1",_mapType);
+};
 
 // set data in hash
 if (isNil QGVAR(mapData)) then { GVAR(mapData) = createHashMap; };
