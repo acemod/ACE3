@@ -19,14 +19,14 @@ class CfgPatches {
             "ww2_spe_core_f_system_staticweapons_f",
             "ww2_spe_core_c_core_c_eventhandlers"
         };
-        author = ECSTRING(common, ACETeam);
+        author = ECSTRING(common,ACETeam);
         authors[] = {
             "sancron",
             "nomisum",
             "coldfront15/Henderson",
             "BrettMayson"
         };
-        url = ECSTRING(main, URL);
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

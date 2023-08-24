@@ -1,5 +1,4 @@
-class B_SPE_AssaultPack_Base;
-class B_SPE_US_Backpack: B_SPE_AssaultPack_Base {};
+class B_SPE_US_Backpack;
 
 class B_SPE_US_Backpack_roll: B_SPE_US_Backpack {
     EGVAR(trenches,entrenchingTool) = 1;
@@ -29,7 +28,7 @@ class B_SPE_US_Backpack_RocketBag_Empty: B_SPE_US_Backpack {
     EGVAR(trenches,entrenchingTool) = 1;
 };
 
-class B_SPE_US_packboard: B_SPE_AssaultPack_Base {};
+class B_SPE_US_packboard;
 class B_SPE_US_packboard_ammo: B_SPE_US_packboard {
     EGVAR(trenches,entrenchingTool) = 1;
 };

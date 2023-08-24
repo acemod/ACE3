@@ -13,7 +13,7 @@ class SPE_MG34: SPE_LMG {
     ACE_barrelTwist = 101.6;
     ACE_barrelLength = 627;
     EGVAR(overheating,mrbs) = 3000;
-    EGVAR(overheating,closedBolt) = 1;
+    EGVAR(overheating,closedBolt) = 0;
     EGVAR(overheating,slowdownFactor) = 1;
     EGVAR(overheating,allowSwapBarrel) = 1;
     EGVAR(overheating,dispersion) = 0.25;
@@ -49,7 +49,7 @@ class SPE_FM_24_M29: SPE_LMG {
     ACE_barrelTwist = 254;
     ACE_barrelLength = 635;
     EGVAR(overheating,mrbs) = 3000;
-    EGVAR(overheating,closedBolt) = 1;
+    EGVAR(overheating,closedBolt) = 0;
     EGVAR(overheating,slowdownFactor) = 1;
     EGVAR(overheating,allowSwapBarrel) = 1;
     EGVAR(overheating,dispersion) = 0.25;
@@ -123,7 +123,7 @@ class SPE_SMG;
 class SPE_MP40: SPE_SMG {
     ACE_barrelTwist = 203.2;
     ACE_barrelLength = 251;
-    EGVAR(overheating,closedBolt) = 1;
+    EGVAR(overheating,closedBolt) = 0;
 };
 class SPE_Sten_Mk2: SPE_SMG {
     ACE_barrelTwist = 254;

@@ -37,7 +37,7 @@ class SPE_Halftrack_base: SPE_WheeledTracked_APC_base {
 };
 
 
-// W H E E L E D - AXIS
+// WHEELED - AXIS
 class SPE_OpelBlitz_base: SPE_Truck_base {
     EGVAR(refuel,fuelCapacity) = 88;
 };
@@ -53,9 +53,7 @@ class SPE_OpelBlitz_Ambulance: SPE_OpelBlitz_base {
 };
 
 class SPE_OpelBlitz_Repair: SPE_OpelBlitz_base {
-    transportRepair = 0;
     EGVAR(repair,canRepair) = 1;
-    transportAmmo = 0;
     EGVAR(rearm,defaultSupply) = 1200;
 };
 
@@ -64,7 +62,7 @@ class SPE_OpelBlitz_Ammo: SPE_OpelBlitz_base {
     EGVAR(rearm,defaultSupply) = 1200;
 };
 
-// W H E E L E D ALLIED FORCES
+// WHEELED - ALLIED FORCES
 
 class SPE_US_M3_Halftrack_Fuel: SPE_Halftrack_base {
     transportFuel = 0;

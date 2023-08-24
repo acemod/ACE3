@@ -1,6 +1,4 @@
-class LauncherCore;
-class Launcher: LauncherCore {};
-class Launcher_Base_F: Launcher {};
+class Launcher_Base_F;
 
 // LAUNCHER
 class SPE_LAUNCHER: Launcher_Base_F {};
@@ -17,5 +15,3 @@ class SPE_PzFaust_30m: SPE_LAUNCHER {
     EGVAR(overpressure,priority) = 1;
     EGVAR(overpressure,range) = 10;
 };
-class SPE_PzFaust_60m: SPE_PzFaust_30m {};
-class SPE_Faustpatrone: SPE_PzFaust_30m {};

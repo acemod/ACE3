@@ -14,9 +14,7 @@ class SPE_Tank_base: Tank_F {
 };
 
 // ALLIED FORCES
-class SPE_Sherman_base: SPE_Tank_base {};
-class SPE_M4A1_Sherman_base: SPE_Sherman_base {};
-class SPE_M4A1_Sherman_HullMG_base: SPE_M4A1_Sherman_base {};
+class SPE_M4A1_Sherman_HullMG_base;
 
 class SPE_M4A1_75: SPE_M4A1_Sherman_HullMG_base {
     EGVAR(refuel,fuelCapacity) = 660;

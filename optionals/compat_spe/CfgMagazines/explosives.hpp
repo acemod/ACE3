@@ -195,7 +195,7 @@ class SPE_STMI_MINE_mag: SPE_Mine_Magazine {
     };
 };
 
-    class SPE_shumine_42_MINE_mag: SPE_Mine_Magazine {
+class SPE_shumine_42_MINE_mag: SPE_Mine_Magazine {
     EGVAR(explosives,Placeable) = 1;
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(shumine42);
     useAction = 0;

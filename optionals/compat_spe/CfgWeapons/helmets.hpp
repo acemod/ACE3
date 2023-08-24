@@ -3,11 +3,7 @@
 #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;
 #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
 
-class ItemCore;
-class H_HelmetB: ItemCore {
-    class ItemInfo;
-};
-class H_SPE_HelmetB: H_HelmetB {};
+class H_SPE_HelmetB;
 class H_SPE_Hat: H_SPE_HelmetB {};
 
 //ALLIED PILOT
