@@ -24,4 +24,5 @@ if ((alive _patient) && {!GVAR(allowBodyBagUnconscious)}) exitWith {
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
-[_this, "ACE_bodyBagObject"] call FUNC(placeInBodyBagOrGrave);
+// Body bag needs to be a little higher to prevent it from flipping
+[_this, "ACE_bodyBagObject", [0, 0, 0.2]] call FUNC(placeInBodyBagOrGrave);
