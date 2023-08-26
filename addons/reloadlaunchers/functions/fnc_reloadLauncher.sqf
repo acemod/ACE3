@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, johnb43
+ * Author: commy2, johnb43, drofseh
  * Reload a launcher
  * If the ammo argument is nil, a full magazine will be given.
  *
@@ -25,3 +25,8 @@ TRACE_5("params",_unit,_target,_weapon,_magazine,_ammo);
 
 // Add magazine to launcher immediately
 _target addWeaponItem [_weapon, [_magazine, _ammo], true];
+
+// Don't show notification if target is local AI
+if (GVAR(displayStatusText) && {!local _unit} && {_target call EFUNC(common,isPlayer)}) then {
+    [LSTRING(LauncherLoaded)] call EFUNC(common,displayTextStructured);
+};

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ReloadLaunchers">
+        <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextName">
+            <English>Display notifications for buddy loading.</English>
+        </Key>
+        <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextDesc">
+            <English>Displays notifications when an assistant loads a gunner's launcher.</English>
+        </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
             <English>Load launcher</English>
             <German>Panzerabwehr laden</German>
@@ -17,6 +23,12 @@
             <Chinesesimp>装填发射器</Chinesesimp>
             <Chinese>裝載發射器</Chinese>
             <Turkish>Fırlatıcıyı Yükle</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ReloadLaunchers_LoadingStarted">
+            <English>%1 is loading your launcher.</English>
+        </Key>
+        <Key ID="STR_ACE_ReloadLaunchers_LoadingAborted">
+            <English>%1 stopped loading your launcher.</English>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>
