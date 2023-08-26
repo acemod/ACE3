@@ -49,6 +49,8 @@ private _onFailure = {
     (_this select 0) params ["_unit"];
 
     [_unit, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
+
+    [LSTRING(BeltNotLinked)] call EFUNC(common,displayTextStructured);
 };
 
 [_unit, "PutDown"] call EFUNC(common,doGesture);
