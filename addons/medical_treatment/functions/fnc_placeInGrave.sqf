@@ -27,5 +27,5 @@ private _graveClassname = missionNameSpace getVariable [QGVAR(graveClassname), "
 // Land_Grave_dirt_F needs to be rotated 90 degrees to line up with the body
 private _graveRotation = missionNameSpace getVariable [QGVAR(graveRotation), 90]; 
 
-
 [_this, _graveClassname, [0,0,0], _graveRotation] call FUNC(placeInBodyBagOrGrave);
+
