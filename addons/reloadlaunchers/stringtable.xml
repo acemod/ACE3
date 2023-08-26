@@ -2,7 +2,7 @@
 <Project name="ACE">
     <Package name="ReloadLaunchers">
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextName">
-            <English>Display notifications for buddy loading.</English>
+            <English>Display notifications for buddy loading</English>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextDesc">
             <English>Displays notifications when an assistant loads a gunner's launcher.</English>
@@ -25,10 +25,14 @@
             <Turkish>Fırlatıcıyı Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingStarted">
-            <English>%1 is loading your launcher.</English>
+            <English>%1 is loading your launcher</English>
+            <German>%1 lädt deine Panzerabwehr</German>
+            <French>%1 charge ton lanceur</French>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingAborted">
-            <English>%1 stopped loading your launcher.</English>
+            <English>%1 stopped loading your launcher</English>
+            <German>%1 hat aufgehört, deine Panzerabwehr zu laden</German>
+            <French>%1 a arrêté de charger ton lanceur</French>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>

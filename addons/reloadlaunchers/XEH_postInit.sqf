@@ -2,16 +2,24 @@
 #include "script_component.hpp"
 
 [QGVAR(reloadStarted), {
-    if GVAR(displayStatusText) then {
-        private _message = format [localize LSTRING(LoadingStarted), _this select 0];
-        [_message] call DEFUNC(common,displayTextStructured)
+    params ["_unit", "_target"];
+
+    // Don't show notification if target is local AI
+    if (GVAR(displayStatusText) && {!local _unit} && {_target call EFUNC(common,isPlayer)}) then {
+        private _message = format [LLSTRING(LoadingStarted), _unit call EFUNC(common,getName)];
+
+        [_message] call EFUNC(common,displayTextStructured);
     };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(reloadAborted), {
-    if GVAR(displayStatusText) then {
-        private _message = format [localize LSTRING(LoadingAborted), _this select 0];
-        [_message] call DEFUNC(common,displayTextStructured)
+    params ["_unit", "_target"];
+
+    // Don't show notification if target is local AI
+    if (GVAR(displayStatusText) && {!local _unit} && {_target call EFUNC(common,isPlayer)}) then {
+        private _message = format [LLSTRING(LoadingAborted), _unit call EFUNC(common,getName)];
+
+        [_message] call EFUNC(common,displayTextStructured);
     };
 }] call CBA_fnc_addEventHandler;
 
