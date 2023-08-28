@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: commy2, johnb43
- * Return all magazine types from reloaders inventory that are compatible with given weapon.
+ * Return all magazine types from reloader's inventory that are compatible with the given launcher.
  *
  * Arguments:
- * 0: Unit to execute the reload <OBJECT>
+ * 0: Unit wanting to execute the reload <OBJECT>
  * 1: Launcher name <STRING>
  *
  * Return Value:

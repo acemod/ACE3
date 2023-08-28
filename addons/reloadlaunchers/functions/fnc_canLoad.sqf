@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: commy2, johnb43
- * Check of the unit can reload the launcher of target unit.
+ * Check if the unit can reload the launcher of the target unit.
  *
  * Arguments:
- * 0: Unit to execute the reload <OBJECT>
+ * 0: Unit wanting to execute the reload <OBJECT>
  * 1: Unit equipped with the launcher <OBJECT>
  * 2: Launcher name <STRING>
  * 3: Missile name <STRING>

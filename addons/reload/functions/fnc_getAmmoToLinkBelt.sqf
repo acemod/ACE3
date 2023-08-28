@@ -4,7 +4,7 @@
  * Check if the target has an MG equipped with belt system that a unit can link.
  *
  * Arguments:
- * 0: Unit wanting to execute the reload <OBJECT>
+ * 0: Unit wanting to link the belt <OBJECT>
  * 1: Unit equipped with the weapon <OBJECT>
  *
  * Return Value:
