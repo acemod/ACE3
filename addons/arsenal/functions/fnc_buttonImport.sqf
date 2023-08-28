@@ -51,7 +51,7 @@ if (GVAR(shiftState) && {is3DEN}) then {
         [GVAR(center), _extendedLoadout] call CBA_fnc_setLoadout;
 
         // Update current item list and unique items
-        call FUNC(refresh);
+        [true] call FUNC(refresh);
 
         _extendedLoadout params ["_loadout", "_extendedInfo"];
 

@@ -23,4 +23,4 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(reloadLauncher), {_this call DFUNC(reloadLauncher)}] call CBA_fnc_addEventHandler;
+[QGVAR(reloadLauncher), LINKFUNC(reloadLauncher)] call CBA_fnc_addEventHandler;

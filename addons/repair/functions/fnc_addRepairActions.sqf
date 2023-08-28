@@ -57,7 +57,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         // Wheels should always be unique
         if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
 
-        private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
+        private _position = compile format ["_target selectionPosition ['%1', 'HitPoints', 'AveragePoint'];", _selection];
 
         TRACE_3("Adding Wheel Actions",_hitpoint,_forEachIndex,_selection);
 

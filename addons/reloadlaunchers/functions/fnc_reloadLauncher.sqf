@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2, johnb43, drofseh
- * Reload a launcher
+ * Reload a launcher for the unit who has the launcher.
  * If the ammo argument is nil, a full magazine will be given.
  *
  * Arguments:
@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_reloadLauncher
+ * [player, cursorTarget, "launch_RPG32_F", "RPG32_F"] call ace_reloadlaunchers_fnc_reloadLauncher
  *
  * Public: No
  */

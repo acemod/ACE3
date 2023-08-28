@@ -780,10 +780,12 @@
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_DisplayName">
             <English>Pain Unconscious Threshold</English>
             <Russian>Порог боли для потери сознания</Russian>
+            <French>Seuil d'inconscience par la douleur.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
             <English>Sets the threshold for severe pain, above which a person can fall unconscious upon receiving damage.</English>
             <Russian>Устанавливает количество боли от полученной травмы, при котором юнит может потерять сознание.</Russian>
+            <French>Définis le niveau de douleur à partir duquel une personne peut perdre connaissance. Cf PainUnconsciousChance.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>

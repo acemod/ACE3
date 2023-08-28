@@ -95,6 +95,10 @@ GVAR(currentActionPage) = 0;
 // Update current item list
 call FUNC(updateCurrentItemsList);
 
+// Setup favorites button text and switch to default mode defined by setting
+[_display, _display displayCtrl IDC_buttonFavorites] call FUNC(buttonFavorites);
+GVAR(favorites) = profileNamespace getVariable [QGVAR(favorites), createHashMap];
+
 // This takes care of unique inventory items and unique equipment (arsenal doesn't have items/equipment whitelisted)
 call FUNC(updateUniqueItemsList);
 
