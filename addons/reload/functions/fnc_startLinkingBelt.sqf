@@ -4,7 +4,7 @@
  * Start linking the belt.
  *
  * Arguments:
- * 0: Unit executing the reload <OBJECT>
+ * 0: Unit linking the belt <OBJECT>
  * 1: Unit equipped with the weapon <OBJECT>
  *
  * Return Value:

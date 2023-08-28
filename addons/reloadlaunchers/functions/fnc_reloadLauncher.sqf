@@ -5,10 +5,10 @@
  * If the ammo argument is nil, a full magazine will be given.
  *
  * Arguments:
- * 0: Unit to do the reloading <OBJECT>
- * 1: Target to rload <OBJECT>
- * 2: weapon name <STRING>
- * 3: missile name <STRING>
+ * 0: Unit executing the reload <OBJECT>
+ * 1: Unit equipped with the launcher <OBJECT>
+ * 2: Launcher name <STRING>
+ * 3: Missile name <STRING>
  * 4: Ammo count <NUMBER>
  *
  * Return Value:

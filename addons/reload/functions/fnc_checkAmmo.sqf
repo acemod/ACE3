@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit equipped with the weapon <OBJECT>
- * 1: Unit to execute the reload <OBJECT>
+ * 1: Unit wanting to check the ammo <OBJECT>
  *
  * Return Value:
  * None
