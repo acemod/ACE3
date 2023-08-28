@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, johnb43
  * Check of the unit can reload the launcher of target unit.
  *
  * Arguments:
@@ -27,6 +27,9 @@ if !(_target call EFUNC(common,isAwake)) exitWith {false};
 // Target must not be in a vehicle
 if !(isNull objectParent _target) exitWith {false};
 if !([_unit, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
+
+// Target must not be captive
+if (_target getVariable [QEGVAR(captives,isHandcuffed), false] || {_target getVariable [QEGVAR(captives,isSurrendering), false]}) exitWith {false};
 
 // Check if the launcher is compatible
 if (getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(enabled)) == 0) exitWith {false};
