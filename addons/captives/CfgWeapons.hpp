@@ -4,6 +4,7 @@ class CfgWeapons {
 
     class ACE_CableTie: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
+        ace_captives_cableTie = 1;
         displayName = CSTRING(CableTie);
         descriptionShort = CSTRING(CableTieDescription);
         model = QPATHTOF(models\ace_cabletie.p3d);
