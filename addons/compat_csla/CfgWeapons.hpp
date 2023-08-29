@@ -42,7 +42,7 @@ class CfgWeapons {
     class US85_FIM92: US85_Launcher_AA {
         EGVAR(overpressure,angle) = 45;
         EGVAR(overpressure,damage) = 0.3;
-        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,range) = 6;
     };
 
     class US85_LAW72: US85_Launcher_AT {
