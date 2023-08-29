@@ -56,3 +56,10 @@ class ACE_Medical_Treatment_Actions {
     };
 };
 ```
+
+### 1.4 Grave Digging Object Configuration
+Grave type can be changed by setting mission variables
+```cpp
+ace_medical_treatment_graveClassname = "Land_Grave_11_F"; // classname, e.g. unmarked gravel (no headstone OR check actions)
+ace_medical_treatment_graveRotation = 0; // rotation angle (will depend on model classname)
+```
