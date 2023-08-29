@@ -23,6 +23,6 @@ playSound3D [QUOTE(PATHTO_R(sounds\cable_tie_zipping.ogg)), objNull, false, (get
 
 [QGVAR(setHandcuffed), [_target, true, _unit], [_target]] call CBA_fnc_targetEvent;
 
-private _cuffs = ((_unit call EFUNC(common,uniqueItems)) select {_x isKindOf ["ACE_CableTie", configFile >> "CfgWeapons"]});
+private _cuffs = ((_unit call EFUNC(common,uniqueItems)) arrayIntersect GVAR(cableTies);
 
 _unit removeItem (_cuffs#0);
