@@ -1,13 +1,22 @@
 #include "script_component.hpp"
-#include "\z\ace\addons\csw\script_config_macros_csw.hpp"
+
+#if __has_include("\rhsgref\addons\rhsgref_main\loadorder\config.bin")
+#else
+    #define PATCH_SKIP "RHS GREF"
+#endif
+
+#ifdef PATCH_SKIP
+ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
+#else
 
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {QGVAR(dshkm_carry)};
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_fastroping", "ace_explosives", "ace_csw", "rhsgref_main_loadorder"};
+        requiredAddons[] = {"rhsgref_main_loadorder"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror", "Ruthberg", "Anton"};
         url = ECSTRING(main,URL);
@@ -20,3 +29,5 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+
+#endif

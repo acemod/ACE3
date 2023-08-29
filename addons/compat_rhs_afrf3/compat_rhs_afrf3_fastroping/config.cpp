@@ -5,10 +5,11 @@
     #define PATCH_SKIP "RHS AFRF"
 #endif
 
-#if __has_include("\z\ace\addons\nightvision\script_component.hpp")
+#if __has_include("\z\ace\addons\fastroping\script_component.hpp")
+#include "\z\ace\addons\fastroping\script_macros.hpp"
 #else
     #ifndef PATCH_SKIP
-        #define PATCH_SKIP "ACE Night Vision"
+        #define PATCH_SKIP "ACE Fastroping"
     #endif
 #endif
 
@@ -24,16 +25,15 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "rhs_main_loadorder",
-            "ace_nightvision"
+            "ace_fastroping"
         };
-        author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "commy2", "Skengman2"};
-        url = ECSTRING(main,URL);
         skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
 
 #endif

@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 
-#if __has_include("\rhsafrf\addons\rhs_main\loadorder\config.bin")
+#if __has_include("\rhsgref\addons\rhsgref_main\loadorder\config.bin")
 #else
-    #define PATCH_SKIP "RHS AFRF"
+    #define PATCH_SKIP "RHS GREF"
 #endif
 
-#if __has_include("\z\ace\addons\nightvision\script_component.hpp")
+#if __has_include("\z\ace\addons\explosives\script_component.hpp")
 #else
     #ifndef PATCH_SKIP
-        #define PATCH_SKIP "ACE Night Vision"
+        #define PATCH_SKIP "ACE Explosives"
     #endif
 #endif
 
@@ -23,17 +23,18 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "rhs_main_loadorder",
-            "ace_nightvision"
+            "rhsgref_main_loadorder",
+            "ace_explosives"
         };
-        author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "commy2", "Skengman2"};
-        url = ECSTRING(main,URL);
         skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgWeapons.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
+#include "CfgVehicles.hpp"
 
 #endif

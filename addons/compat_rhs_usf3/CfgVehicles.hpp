@@ -1,179 +1,24 @@
-#if __has_include("\z\ace\addons\fastroping\script_macros.hpp")
-#include "\z\ace\addons\fastroping\script_macros.hpp"
-#else
-#define EQUIP_FRIES_ATTRIBUTE
-#endif
-
 class CfgVehicles {
-    class LandVehicle;
-    class Car: LandVehicle {
-        class ACE_Actions {
-            class ACE_MainActions {};
-        };
-    };
-    class Car_F: Car {};
-    class Truck_F: Car_F {};
-    class rhs_truck: Truck_F {};
-
-    class Tank: LandVehicle {
-        class NewTurret;
-        class ACE_Actions {
-            class ACE_MainActions {};
-        };
-    };
-    class Tank_F: Tank {
-        class Turrets {
-            class MainTurret: NewTurret {
-                class Turrets {
-                    class CommanderOptics;
-                };
-            };
-        };
-    };
-    class Air;
-    class Helicopter: Air {
-        class Turrets {
-            class MainTurret;
-        };
-    };
-
-    class MBT_01_base_F: Tank_F {};
-    class Helicopter_Base_F: Helicopter {
-        class Eventhandlers;
-    };
-    class Heli_Light_03_base_F: Helicopter_Base_F {};
+    class Heli_Light_03_base_F;
     class RHS_UH1_Base: Heli_light_03_base_F {
         EGVAR(refuel,fuelCapacity) = 1447;
     };
-
-    class RHS_UH1Y_base: RHS_UH1_Base {
-        class Attributes {
-            EQUIP_FRIES_ATTRIBUTE;
-        };
-    };
-    class RHS_UH1Y_US_base: RHS_UH1Y_base {};
-    class RHS_UH1Y: RHS_UH1Y_US_base {
-        EGVAR(fastroping,enabled) = 2;
-        EGVAR(fastroping,friesType) = "ACE_friesAnchorBar";
-        EGVAR(fastroping,friesAttachmentPoint)[] = {0, 2.38, -0.135};
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
-        EGVAR(fastroping,ropeOrigins)[] = {"ropeOriginLeft", "ropeOriginRight"};
-
-        class UserActions;
-        class EventHandlers: EventHandlers {
-            class RHSUSF_EventHandlers;
-        };
-    };
-    class RHS_UH1Y_FFAR: RHS_UH1Y {
-        class UserActions: UserActions {
-            class OpenCargoDoor;
-            class CloseCargoDoor: OpenCargoDoor {
-                condition = QUOTE([ARR_2(this,'doorRB')] call FUNC(canCloseDoor));
-            };
-            class CloseCargoLDoor: OpenCargoDoor {
-                condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
-            };
-        };
-    };
-
-    class Helicopter_Base_H: Helicopter_Base_F {
-        class Eventhandlers;
-    };
-    class Heli_Transport_01_base_F: Helicopter_Base_H {};
-
-    class RHS_MELB_base: Helicopter_Base_H {};
-    class RHS_MELB_MH6M: RHS_MELB_base {
-        EGVAR(fastroping,enabled) = 1;
-        EGVAR(fastroping,ropeOrigins)[] = {{1.166, 0.79, -0.01}, {-1.166, 0.79, -0.01}};
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
-    };
+    class Heli_Transport_01_base_F;
     class RHS_UH60_Base: Heli_Transport_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1360;
-    };
-
-    class RHS_UH60M_base: RHS_UH60_Base {
-        class Attributes {
-            EQUIP_FRIES_ATTRIBUTE;
-        };
-    };
-    class RHS_UH60M_US_base: RHS_UH60M_base {};
-    class RHS_UH60M: RHS_UH60M_US_base {
-        EGVAR(fastroping,enabled) = 2;
-        EGVAR(fastroping,friesType) = "ACE_friesAnchorBar";
-        EGVAR(fastroping,friesAttachmentPoint)[] = {0, 1.25, -0.65};
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
-        EGVAR(fastroping,ropeOrigins)[] = {"ropeOriginLeft", "ropeOriginRight"};
-
-        class UserActions {
-            class OpenCargoDoor;
-            class CloseCargoDoor: OpenCargoDoor {
-                condition = QUOTE([ARR_2(this,'doorRB')] call FUNC(canCloseDoor));
-            };
-            class CloseCargoLDoor: OpenCargoDoor {
-                condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
-            };
-        };
-    };
-    class RHS_UH60M2: RHS_UH60M {};
-
-    class RHS_UH60M_ESSS: RHS_UH60M2 {
-        EGVAR(fastroping,enabled) = 0;
-        class Attributes: Attributes {
-            delete EGVAR(fastroping,equipFRIES);
-        };
-    };
-
-    class RHS_UH60M_MEV: RHS_UH60M {
-        EGVAR(fastroping,enabled) = 0;
-        class Attributes: Attributes {
-            delete EGVAR(fastroping,equipFRIES);
-        };
-    };
-
-    class RHS_UH60M_MEV2: RHS_UH60M_MEV {
-        EGVAR(fastroping,enabled) = 2;
-        class Attributes: Attributes {
-            EQUIP_FRIES_ATTRIBUTE;
-        };
     };
 
     class Heli_Transport_02_base_F;
     class RHS_CH_47F_base: Heli_Transport_02_base_F {
         EGVAR(refuel,fuelCapacity) = 3914;
-        EGVAR(fastroping,enabled) = 1;
-        EGVAR(fastroping,ropeOrigins)[] = {{0.5, -7.15, -0.95}, {-0.5, -7.15, -0.95}};
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
-
-        class UserActions {
-            class OpenCargoDoor;
-            class CloseCargoDoor: OpenCargoDoor {
-                condition = QUOTE([ARR_2(this,'ramp_anim')] call FUNC(canCloseDoor));
-            };
-        };
     };
-
+    class Helicopter_Base_H;
     class rhsusf_CH53E_USMC: Helicopter_Base_H {
         EGVAR(interaction,bodyWidth) = 3.5;
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
-        EGVAR(fastroping,enabled) = 1;
-        EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
-
-        class UserActions {
-            class RampOpen;
-            class RampClose: RampOpen {
-                condition = QUOTE([ARR_2(this,'ramp_bottom')] call FUNC(canCloseDoor));
-            };
-        };
     };
 
-    class Heli_Attack_01_base_F: Helicopter_Base_F {};
-
+    class Heli_Attack_01_base_F;
     class RHS_AH1Z_base: Heli_Attack_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1600;
         EGVAR(hellfire,addLaserDesignator) = 1;
@@ -198,6 +43,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 302;
     };
 
+    class Truck_F;
     class Truck_01_base_F: Truck_F {};
     class rhsusf_fmtv_base: Truck_01_base_F {
         EGVAR(refuel,fuelCapacity) = 219;
@@ -234,7 +80,7 @@ class CfgVehicles {
         EGVAR(refuel,hooks)[] = {{-0.44,-4.87,0}, {0.5,-4.87,0}};
         EGVAR(refuel,fuelCargo) = 10000;
     };
-
+    class Tank_F;
     class APC_Tracked_02_base_F: Tank_F {};
     class rhsusf_m113tank_base: APC_Tracked_02_base_F {
         EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
@@ -284,6 +130,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,engineFireProb) = 0.7;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
     };
+    class MBT_01_base_F;
     class rhsusf_m1a1tank_base: MBT_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1909;
         EGVAR(vehicle_damage,hullDetonationProb) = 0;

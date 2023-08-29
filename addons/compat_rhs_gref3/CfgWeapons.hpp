@@ -116,14 +116,12 @@ class CfgWeapons {
         EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
     };
 
-    CREATE_CSW_PROXY(rhs_weap_DSHKM);
-
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
     };
 
-    class rhs_weap_panzerfaust60:  Launcher_Base_F {
+    class rhs_weap_panzerfaust60: Launcher_Base_F {
         EGVAR(overpressure,range) = 6;
         EGVAR(overpressure,angle) = 30;
         EGVAR(overpressure,damage) = 0.4;
@@ -132,31 +130,5 @@ class CfgWeapons {
     class rhs_weap_rpg75: Launcher_Base_F {
         EGVAR(overpressure,angle) = 40;
         EGVAR(overpressure,offset) = 0.9;
-    };
-
-    class GVAR(dshkm_carry): Launcher_Base_F {
-        class ACE_CSW {
-            type = "weapon";
-            deployTime = 4;
-            pickupTime = 4;
-            class assembleTo {
-                EGVAR(csw,kordTripod) = "rhsgref_ins_DSHKM";
-                EGVAR(csw,kordTripodLow) = "rhsgref_ins_DSHKM_Mini_TriPod";
-            };
-        };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            // One WeaponSlot with a positive value for iconScale forces game to use icon overlay method.
-            // Required, because the inventory icon has no accessory variants.
-            class MuzzleSlot {
-                iconScale = 0.1;
-            };
-            mass = 740;
-        };
-        displayName = ECSTRING(csw,dshk_gun);
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
-        modes[] = {};
-        picture = "\rhsafrf\addons\rhs_heavyweapons\data\mapico\icomap_DShKM_CA.paa";
     };
 };

@@ -6,9 +6,8 @@
 #endif
 
 #if __has_include("\z\ace\addons\refuel\script_component.hpp")
-    #else
-    #ifdef PATCH_SKIP
-    #else
+#else
+    #ifndef PATCH_SKIP
         #define PATCH_SKIP "ACE Refuel"
     #endif
 #endif

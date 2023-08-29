@@ -1,14 +1,15 @@
 #include "script_component.hpp"
 
-#if __has_include("\rhsafrf\addons\rhs_main\loadorder\config.bin")
+#if __has_include("\rhsgref\addons\rhsgref_main\loadorder\config.bin")
 #else
-    #define PATCH_SKIP "RHS AFRF"
+    #define PATCH_SKIP "RHS GREF"
 #endif
 
-#if __has_include("\z\ace\addons\nightvision\script_component.hpp")
+#if __has_include("\z\ace\addons\csw\script_component.hpp")
+    #include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 #else
     #ifndef PATCH_SKIP
-        #define PATCH_SKIP "ACE Night Vision"
+        #define PATCH_SKIP "ACE Crew Served Weapons"
     #endif
 #endif
 
@@ -20,20 +21,20 @@ class CfgPatches {
     class ADDON {
         name = QUOTE(COMPONENT);
         units[] = {};
-        weapons[] = {};
+        weapons[] = {QGVAR(dshkm_carry)};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "rhs_main_loadorder",
-            "ace_nightvision"
+            "rhsgref_main_loadorder",
+            "ace_csw"
         };
-        author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "commy2", "Skengman2"};
-        url = ECSTRING(main,URL);
         skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
+#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
 #endif

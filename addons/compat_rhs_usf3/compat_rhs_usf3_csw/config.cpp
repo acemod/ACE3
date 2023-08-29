@@ -8,8 +8,7 @@
 #if __has_include("\z\ace\addons\csw\script_component.hpp")
     #include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 #else
-    #ifdef PATCH_SKIP
-    #else
+    #ifndef PATCH_SKIP
         #define PATCH_SKIP "ACE Crew Served Weapons"
     #endif
 #endif
