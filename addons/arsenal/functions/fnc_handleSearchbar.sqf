@@ -16,12 +16,15 @@
 
 params ["_display", "_control"];
 
-private _searchString = format [".*?%1.*?", ctrlText _control];
+private _searchString = ctrlText _control;
+if (_searchString != "") then {
+    _searchString = ".*?" + ((_searchString splitString " ") joinString ".*?) + ".*?";
+};
 
 // Right panel search bar
 if ((ctrlIDC _control) == IDC_rightSearchbar) then {
     // Don't refill if there is no need
-    if (GVAR(lastSearchTextRight) != "" && {(_searchString find GVAR(lastSearchTextRight)) != 0}) then {
+    if (GVAR(lastSearchTextRight) != "" && {GVAR(lastSearchTextRight) isNotEqualTo _searchString}) then {
         [_display, _display displayCtrl GVAR(currentRightPanel)] call FUNC(fillRightPanel);
     };
 
@@ -120,7 +123,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 } else {
     // Left panel search bar
     // Don't refill if there is no need
-    if (GVAR(lastSearchTextLeft) != "" && {(_searchString find GVAR(lastSearchTextLeft)) != 0}) then {
+    if (GVAR(lastSearchTextLeft) != "" && {GVAR(lastSearchTextLeft) isNotEqualTo _searchString}) then {
         [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
     };
 
