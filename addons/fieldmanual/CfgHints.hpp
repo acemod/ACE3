@@ -11,28 +11,28 @@ class CfgHints {
         arguments[] = {
             // SELF INTERACT KEYBIND - %11
             "
-                private _localized = 'Self Interact Key';
-                if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {
-                    _localized = ['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
-                };
+                private _localized = 'Self Interact Key';\
+                if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {\
+                    _localized = ['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;\
+                };\
                 _localized
             ",
 
             // INTERACT KEYBIND - %12
             "
-                private _localized = 'Interact Key';
-                if !(isNil {['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind}) then {
-                    _localized = ['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
-                };
+                private _localized = 'Interact Key';\
+                if !(isNil {['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind}) then {\
+                    _localized = ['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;\
+                };\
                 _localized
             ",
 
             // MEDICAL MENU KEYBIND - %13
             "
-                private _localized = 'Medical Menu Key';
-                if !(isNil {['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind}) then {
-                    _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;
-                };
+                private _localized = 'Medical Menu Key';\
+                if !(isNil {['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind}) then {\
+                    _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;\
+                };\
                 _localized
             ",
 
