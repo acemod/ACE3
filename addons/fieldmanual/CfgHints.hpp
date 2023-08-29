@@ -15,7 +15,7 @@ class CfgHints {
                 if !(isNil {['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind}) then {\
                     _localized = ['ACE3 Common', 'ace_interact_menu_selfInteractKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;\
                 };\
-                _localized
+                _localized\
             ",
 
             // INTERACT KEYBIND - %12
@@ -24,7 +24,7 @@ class CfgHints {
                 if !(isNil {['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind}) then {\
                     _localized = ['ACE3 Common', 'ace_interact_menu_interactKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;\
                 };\
-                _localized
+                _localized\
             ",
 
             // MEDICAL MENU KEYBIND - %13
@@ -33,7 +33,7 @@ class CfgHints {
                 if !(isNil {['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind}) then {\
                     _localized = ['ACE3 Common', 'ace_medical_gui_openMedicalMenuKey'] call CBA_fnc_getKeybind select 8 select 0 call CBA_fnc_localizeKey;\
                 };\
-                _localized
+                _localized\
             ",
 
             // PLACEHOLDERS FOR OTHER KEYBINDS - %14 - %20
