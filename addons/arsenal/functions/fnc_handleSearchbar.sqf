@@ -18,7 +18,7 @@ params ["_display", "_control"];
 
 private _searchString = ctrlText _control;
 if (_searchString != "") then {
-    _searchString = ".*?" + ((_searchString splitString " ") joinString ".*?) + ".*?";
+    _searchString = ".*?" + ((_searchString splitString " ") joinString ".*?") + ".*?";
 };
 
 // Right panel search bar
