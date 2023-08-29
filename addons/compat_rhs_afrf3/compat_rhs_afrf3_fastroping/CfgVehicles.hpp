@@ -17,7 +17,7 @@ class CfgVehicles {
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{-1.13, 4.67, -0.89}};
         EGVAR(fastroping,onCut) = QEFUNC(compat_rhs_arf3,onCut);
-        EGVAR(fastroping,onPrepare) = QEFUNC(compat_rhs_arf3onPrepare);
+        EGVAR(fastroping,onPrepare) = QEFUNC(compat_rhs_arf3,onPrepare);
         class UserActions {
             class openDoor;
             class closeDoor_L: openDoor {
