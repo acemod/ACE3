@@ -73,7 +73,7 @@ class EGVAR(arsenal,stats) {
         displayName= CSTRING(ammoUsage_ai);
         showText= 1;
         textStatement = QUOTE(call FUNC(statTextStatement_magazineAiUsage));
-        condition = QUOTE(is3DEN || {!isNull getAssignedCuratorLogic player} || {missionName == 'Arsenal'});
+        condition = QUOTE(is3DEN || {!isNull getAssignedCuratorLogic player} || {missionNamespace getVariable [ARR_2(QQGVAR(showAIMagazineUse), missionName == 'Arsenal')]});
         tabs[] = {{}, {4}};
     };
 };
