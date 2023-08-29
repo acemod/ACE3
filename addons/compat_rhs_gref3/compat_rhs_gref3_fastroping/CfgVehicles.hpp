@@ -4,8 +4,8 @@ class CfgVehicles {
         EGVAR(fastroping,enabled) = 2;
         EGVAR(fastroping,friesType) = "ACE_friesAnchorBar";
         EGVAR(fastroping,friesAttachmentPoint)[] = {0, 1.95, -0.26};
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
+        EGVAR(fastroping,onCut) = QEFUNC(compat_rhs_gref3,onCut);
+        EGVAR(fastroping,onPrepare) = QEFUNC(compat_rhs_gref3,onPrepare);
         EGVAR(fastroping,ropeOrigins)[] = {"ropeOriginLeft", "ropeOriginRight"};
     };
 
@@ -21,7 +21,7 @@ class CfgVehicles {
             class Open_Side_Doors;
 
             class Close_Side_Doors: Open_Side_Doors {
-                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call FUNC(canCloseDoor));
+                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call EFUNC(compat_rhs_gref3,canCloseDoor));
             };
         };
 
@@ -36,7 +36,7 @@ class CfgVehicles {
             class Open_Side_Doors;
 
             class Close_Side_Doors: Open_Side_Doors {
-                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call FUNC(canCloseDoor));
+                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call EFUNC(compat_rhs_gref3,canCloseDoor));
             };
         };
         class Attributes {
@@ -49,7 +49,7 @@ class CfgVehicles {
         class UserActions {
             class Open_Side_Doors;
             class Close_Side_Doors: Open_Side_Doors {
-                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call FUNC(canCloseDoor));
+                condition = QUOTE([ARR_2(this,'close_cargo_doors')] call EFUNC(compat_rhs_gref3,canCloseDoor));
             };
         };
         class Attributes {

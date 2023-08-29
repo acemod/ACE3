@@ -16,8 +16,8 @@ class CfgVehicles {
     class RHS_Mi8amt_base: RHS_Mi8_base {
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{-1.13, 4.67, -0.89}};
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
+        EGVAR(fastroping,onCut) = QEFUNC(compat_rhs_arf3,onCut);
+        EGVAR(fastroping,onPrepare) = QEFUNC(compat_rhs_arf3onPrepare);
         class UserActions {
             class openDoor;
             class closeDoor_L: openDoor {
@@ -37,8 +37,8 @@ class CfgVehicles {
     class RHS_Mi8mt_Cargo_vvs: RHS_Mi8mt_vvs {
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{-1.13, 4.67, -0.89}};
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
+        EGVAR(fastroping,onCut) = QEFUNC(compat_rhs_arf3,onCut);
+        EGVAR(fastroping,onPrepare) = QEFUNC(compat_rhs_arf3,onPrepare);
 
         class UserActions {
             class openDoor_L;
