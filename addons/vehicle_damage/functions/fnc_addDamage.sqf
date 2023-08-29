@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Sets vehicle damage based on HitIndex. Failing that it falls back to HitPoint name.
  *
  * Arguments:

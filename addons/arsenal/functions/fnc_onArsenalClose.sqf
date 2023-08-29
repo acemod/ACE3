@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Not used
  * 1: Args <ARRAY>
- *   1.0: Not used
- *   1.1: Exit code <NUMBER>
+ * - 0: Not used
+ * - 1: Exit code <NUMBER>
  *
  * Return Value:
  * None
@@ -126,6 +126,10 @@ GVAR(statsInfo) =  nil;
 
 GVAR(showActions) = nil;
 GVAR(currentActionPage) = nil;
+
+profileNamespace setVariable [QGVAR(favorites), GVAR(favorites)];
+GVAR(favoritesOnly) = nil;
+GVAR(favorites) = nil;
 
 GVAR(center) = nil;
 GVAR(centerNotPlayer) = nil;

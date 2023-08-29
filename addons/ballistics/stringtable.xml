@@ -3511,5 +3511,26 @@
             <Turkish>Namlu çıkış hızı</Turkish>
             <Korean>총구 속도</Korean>
         </Key>
+        <Key ID="STR_ACE_Ballistics_ammoUsage_ai">
+            <English>AI Usage</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_ammoUsageShort_illumination">
+            <English>Illum</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_ammoUsageShort_concealment">
+            <English>Smoke</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_ammoUsageShort_infantry">
+            <English>Inf</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_ammoUsageShort_lightVehicle">
+            <English>Veh</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_ammoUsageShort_armor">
+            <English>Armor</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_ammoUsageShort_aircraft">
+            <English>Air</English>
+        </Key>
     </Package>
 </Project>
