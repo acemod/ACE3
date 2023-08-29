@@ -70,7 +70,7 @@ class EGVAR(arsenal,stats) {
         scope = 2;
         priority = 0;
         stats[] = {"aiAmmoUsageFlags"};
-        displayName= "AI Usage";
+        displayName= CSTRING(ammoUsage_ai);
         showText= 1;
         textStatement = QUOTE(call FUNC(statTextStatement_magazineAiUsage));
         condition = QUOTE(is3DEN || {!isNull getAssignedCuratorLogic player} || {missionName == 'Arsenal'});
