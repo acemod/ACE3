@@ -20,7 +20,7 @@ params ["_unit", "_target"];
 //Check sides, Player has cableTie, target is alive and not already handcuffed
 
 (GVAR(allowHandcuffOwnSide) || {(side _unit) != (side _target)}) &&
-{((_unit call EFUNC(common,uniqueItems)) select {_x isKindOf "ACE_CableTie"}) isNotEqualTo []} &&
+{((_unit call EFUNC(common,uniqueItems)) select {_x isKindOf ["ACE_CableTie", configFile >> "CfgWeapons"]}) isNotEqualTo []} &&
 {alive _target} &&
 {!(_target getVariable [QGVAR(isHandcuffed), false])} &&
 {
