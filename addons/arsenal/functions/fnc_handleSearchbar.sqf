@@ -49,8 +49,8 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
         // Go through all items in panel and see if they need to be deleted or not
         for "_lbIndex" from (lbSize _rightPanelCtrl) - 1 to 0 step -1 do {
-            _currentDisplayName = (_rightPanelCtrl lbText _lbIndex);
-            _currentClassname = (_rightPanelCtrl lbData _lbIndex);
+            _currentDisplayName = _rightPanelCtrl lbText _lbIndex;
+            _currentClassname = _rightPanelCtrl lbData _lbIndex;
 
             // Remove item in panel if it doesn't match search, skip otherwise
             if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchString) && {!(_currentClassname regexMatch _searchString)}}) then {
@@ -89,8 +89,8 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
         // Go through all items in panel and see if they need to be deleted or not
         for "_lbIndex" from (lnbSize _rightPanelCtrl select 0) - 1 to 0 step -1 do {
-            _currentDisplayName = (_rightPanelCtrl lnbText [_lbIndex, 1]);
-            _currentClassname = (_rightPanelCtrl lnbData [_lbIndex, 0]);
+            _currentDisplayName = _rightPanelCtrl lnbText [_lbIndex, 1];
+            _currentClassname = _rightPanelCtrl lnbData [_lbIndex, 0];
 
             // Remove item in panel if it doesn't match search, skip otherwise
             if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchString) && {!(_currentClassname regexMatch _searchString)}}) then {
@@ -145,8 +145,8 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     // Go through all items in panel and see if they need to be deleted or not
     for "_lbIndex" from (lbSize _leftPanelCtrl) - 1 to 0 step -1 do {
-        _currentDisplayName = (_leftPanelCtrl lbText _lbIndex);
-        _currentClassname = (_leftPanelCtrl lbData _lbIndex);
+        _currentDisplayName = _leftPanelCtrl lbText _lbIndex;
+        _currentClassname = _leftPanelCtrl lbData _lbIndex;
 
         // Remove item in panel if it doesn't match search, skip otherwise
         if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchString) && {!(_currentClassname regexMatch _searchString)}}) then {
