@@ -51,6 +51,7 @@ PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
 PREP(errorMessage);
+PREP(escapeRegex);
 PREP(findUnloadPosition);
 PREP(firedEH);
 PREP(fixCollision);
