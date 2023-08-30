@@ -48,6 +48,7 @@ class CfgWeapons {
         picture = QPATHTOF(Data\UI\Pliers.paa);
         model = "\A3\Structures_F\Items\Tools\Pliers_F.p3d";
         ACE_isTool = 1;
+        GVAR(defusalKit) = 1;
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 5;
