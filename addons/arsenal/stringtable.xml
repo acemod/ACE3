@@ -1587,5 +1587,8 @@
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
         </Key>
+        <Key ID="STR_ACE_Arsenal_buttonSearchTooltip">
+            <English>Search\nCTRL + Click to enable live results</English>
+        </Key>
     </Package>
 </Project>
