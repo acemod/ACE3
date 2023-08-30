@@ -18,7 +18,6 @@ params ["_display", "_control"];
 
 private _searchString = ctrlText _control;
 if (_searchString != "") then {
-    // Sanitize to prevent script errors
     _searchString = ".*?\Q" + (_searchString splitString " " joinString "\E.*?\Q") + "\E.*?/io";
 };
 
