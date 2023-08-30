@@ -16,4 +16,5 @@
  */
 params [["_string", "", [""]]];
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#escaping
 _string regexReplace ["[.?*+^$[\]\\(){}|-]/gio", "\\$&"]
