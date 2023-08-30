@@ -40,6 +40,7 @@ if sys.version_info[0] == 2:
 
 import os
 import os.path
+import pathlib
 import shutil
 import platform
 import glob
@@ -1538,6 +1539,16 @@ See the make.cfg file for additional build options.
         if len(failedBuilds) > 0:
             for failedBuild in failedBuilds:
                 print("- {} build failed!".format(failedBuild))
+                failedBuild_path = pathlib.Path(
+                    "P:/temp").joinpath(f"{failedBuild}.packing.log")
+                if (failedBuild_path.exists()):
+                    print(f"  Log {failedBuild_path} tail:")
+                    with open(failedBuild_path) as failedBuild_file:
+                        lines = failedBuild_file.readlines()
+                        for index, line in enumerate(lines[-3:]):
+                            print(f"    {len(lines) + index -2}: {line}", end='')
+                else:
+                    print(f"  Log {failedBuild_path} does not exist")
         if len(missingFiles) > 0:
             for missingFile in missingFiles:
                 print("- {} not found!".format(missingFile))
