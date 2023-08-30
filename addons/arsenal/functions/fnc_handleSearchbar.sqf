@@ -18,7 +18,8 @@ params ["_display", "_control"];
 
 private _searchString = ctrlText _control;
 if (_searchString != "") then {
-    _searchString = ".*?" + (_searchString splitString " " joinString ".*?") + ".*?/io";
+    // Sanitize to prevent script errors
+    _searchString = ".*?\Q" + (_searchString splitString " " joinString "\E.*?\Q") + "\E.*?/io";
 };
 
 // Right panel search bar
