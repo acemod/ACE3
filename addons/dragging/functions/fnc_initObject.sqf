@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Initialize variables for drag or carryable objects. Called from init EH.
+ * Initializes variables for draggable / carryable objects. Called from init EH.
  *
  * Arguments:
- * 0: Any object <OBJECT>
+ * 0: Object <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [box] call ace_dragging_fnc_initObject;
+ * [cursorTarget] call ace_dragging_fnc_initObject;
  *
  * Public: No
  */

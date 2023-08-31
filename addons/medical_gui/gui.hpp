@@ -4,6 +4,7 @@ class RscPicture;
 class RscListBox;
 class RscActivePicture;
 class RscButtonMenu;
+class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 
 class GVAR(BodyImage): RscControlsGroupNoScrollbars {
@@ -157,6 +158,22 @@ class GVAR(TriageSelect): RscControlsGroupNoScrollbars {
     };
 };
 
+class ACE_Medical_Menu_ActionButton: RscButtonMenu {
+    idc = -1;
+    style = ST_LEFT;
+    x = 0;
+    y = 0;
+    w = QUOTE(POS_W(11.833));
+    h = QUOTE(POS_H(1));
+    size = QUOTE(POS_H(0.9));
+    class Attributes {
+        align = "center";
+        color = "#E5E5E5";
+        font = "RobotoCondensed";
+        shadow = "false";
+    };
+};
+
 class ACE_Medical_Menu {
     idd = IDD_MEDICAL_MENU;
     movingEnable = 1;
@@ -224,6 +241,7 @@ class ACE_Medical_Menu {
             w = QUOTE(POS_W(1.5));
             h = QUOTE(POS_H(1.5));
             color[] = {1, 1, 1, 1};
+            colorActive[] = {1, 1, 1, 0.8};
             soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundClick", 0.09, 1};
             soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundEnter", 0.09, 1};
             soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundEscape", 0.09, 1};
@@ -282,7 +300,7 @@ class ACE_Medical_Menu {
             idc = IDC_TRIAGE_CARD;
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
-            w = QUOTE(POS_W(12));
+            w = QUOTE(POS_W(11.833));
             h = QUOTE(POS_H(10));
             sizeEx = QUOTE(POS_H(0.7));
             colorSelect[] = {1, 1, 1, 1};
@@ -292,52 +310,12 @@ class ACE_Medical_Menu {
             colorSelectBackground2[] = {0, 0, 0, 0};
             colorScrollbar[] = {0.9, 0.9, 0.9, 1};
         };
-        class Action1: RscButtonMenu {
-            idc = IDC_ACTION_1;
-            style = ST_LEFT;
+        class ActionButtonGroup: RscControlsGroup {
+            idc = IDC_ACTION_BUTTON_GROUP;
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
-            w = QUOTE(POS_W(12));
-            h = QUOTE(POS_H(1));
-            size = QUOTE(POS_H(0.9));
-            class Attributes {
-                align = "center";
-                color = "#E5E5E5";
-                font = "RobotoCondensed";
-                shadow = "false";
-            };
-        };
-        class Action2: Action1 {
-            idc = IDC_ACTION_2;
-            y = QUOTE(POS_Y(5.5));
-        };
-        class Action3: Action1 {
-            idc = IDC_ACTION_3;
-            y = QUOTE(POS_Y(6.6));
-        };
-        class Action4: Action1 {
-            idc = IDC_ACTION_4;
-            y = QUOTE(POS_Y(7.7));
-        };
-        class Action5: Action1 {
-            idc = IDC_ACTION_5;
-            y = QUOTE(POS_Y(8.8));
-        };
-        class Action6: Action1 {
-            idc = IDC_ACTION_6;
-            y = QUOTE(POS_Y(9.9));
-        };
-        class Action7: Action1 {
-            idc = IDC_ACTION_7;
-            y = QUOTE(POS_Y(11));
-        };
-        class Action8: Action1 {
-            idc = IDC_ACTION_8;
-            y = QUOTE(POS_Y(12.1));
-        };
-        class Action9: Action1 {
-            idc = IDC_ACTION_9;
-            y = QUOTE(POS_Y(13.2));
+            w = QUOTE(POS_W(11.833));
+            h = QUOTE(POS_H(10));
         };
         class BodyImage: GVAR(BodyImage) {};
         class SelectHead: RscButton {

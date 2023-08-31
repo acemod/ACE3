@@ -41,7 +41,10 @@ if (GVAR(freedrawing)) then {[_theMap, _textureWidth] call FUNC(drawLinesOnRoame
 // Update scale of both parts
 getResolution params ["_resWidth", "_resHeight", "", "", "_aspectRatio"];
 private _scaleX = 32 * _textureWidth * CONSTANT_SCALE * (call FUNC(calculateMapScale));
-private _scaleY = _scaleX * ((_resWidth / _resHeight) / _aspectRatio); //handle bad aspect ratios
+private _scaleY = _scaleX; 
+if (((productVersion # 2) < 213)) then { // remove block after 2.14 release
+    _scaleY = _scaleX * ((_resWidth / _resHeight) / _aspectRatio); // handle bad aspect ratios
+};
 
 // Position of the fixed part
 private _xPos = GVAR(mapTool_pos) select 0;
