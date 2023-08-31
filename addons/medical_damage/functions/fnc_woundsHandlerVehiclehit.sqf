@@ -29,7 +29,7 @@ private _damageToApply = (abs (_allDamages select 0 select 0));
 private _newDamages = [];
 
 // hitpoints are randomized, more damage means more wounds in different body parts
-for "_i" from 1 to (_damageToApply * 6) do {
+for "" from 1 to (_damageToApply * 6) do {
     _newDamages pushBack [_damageToApply * 6, selectRandom ALL_BODY_PARTS, _damageToApply * 6]
 };
 
