@@ -55,8 +55,8 @@ if (
     0
 };
 
-// Faster than (vehicle _unit) != _unit, also handles dead units
-private _inVehicle = !(isNull objectParent _unit);
+// Faster than (vehicle _unit), also handles dead units
+private _vehicle = objectParent _unit;
 
 // Crashing a vehicle doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // It does fire the EH multiple times, but this seems to scale with the intensity of the crash
@@ -64,7 +64,7 @@ if (
     EGVAR(medical,enableVehicleCrashes) &&
     {_hitPoint isEqualTo "#structural"} &&
     {_ammo isEqualTo ""} &&
-    {_inVehicle} &&
+    {!isNull _vehicle} &&
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
@@ -79,7 +79,7 @@ if (
 // Triggers twice, but that doesn't matter as damage is low
 if (
     _hitPoint isEqualTo "#structural" &&
-    {_inVehicle} &&
+    {!isNull _vehicle} &&
     {_ammo isNotEqualTo ""} &&
     {
         private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
