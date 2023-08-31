@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.\nWhen disabled, the CPR action will only be shown when performing CPR is appropriate.\nThe actions this setting enables are needed to determine whether a person is unconscious or in cardiac arrest.</English>
-            <Japanese>有効化すると通常の診断動作に代わり、心拍や血圧測定、反応を確認できます。</Japanese>
+            <Japanese>有効化すると通常の診断動作に代わり、脈拍や血圧測定、反応を確認できます。</Japanese>
             <French>Active le diagnostic avancé, permettant la vérification du pouls, de la pression sanguine, ainsi que la réponse du patient aux traitements.\nSi l'option est désactivée, l'action de RCP ne sera visible que si elle est effectivement appropriée.\nLe diagnostic avancé est indispensable pour différencier une personne inconsciente d'une personne en arrêt cardiaque.</French>
             <Russian>Включает действия «Проверить пульс», «Проверить давление» и «Проверить реакцию» вместо общего действия «Диагностика».</Russian>
             <Portuguese>Ativa as opções de Verificar Pulso, Verificar Pressão Sanguínea e Verificar Resposta, ao invés do diagnóstico geral.</Portuguese>
@@ -719,6 +719,7 @@
             <English>What should be consumed after use.</English>
             <German>Legt fest, ob etwas nach der Anwendung verwendet werden soll.</German>
             <Spanish>Qué debe ser consumido despues de su uso.</Spanish>
+            <Japanese>縫合キットの使用後に消費するかどうかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
@@ -951,7 +952,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
             <English>Max Litter Objects</English>
-            <Japanese>最大廃棄物数</Japanese>
+            <Japanese>廃棄物最大数</Japanese>
             <French>Nombre maximum de détritus</French>
             <Russian>Макс. кол-во мусора</Russian>
             <Portuguese>Máximo de Objetos de Lixo</Portuguese>
@@ -967,7 +968,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
-            <Japanese>生成される最大廃棄物数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
+            <Japanese>生成される廃棄物の最大数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
             <French>Définit le nombre maximal de détritus pouvant être affichés.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
             <Russian>Устанавливает максимальное количество создаваемых объектов мусора. Чрезмерное значение может вызвать задержку FPS.</Russian>
             <Portuguese>Define o limite máximo de objetos de lixo que podem ser criados, quantidade excessivas podem causar lag de FPS.</Portuguese>
@@ -998,7 +999,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
-            <Japanese>廃棄物の寿命を秒で決定できます。-1 で永遠です。</Japanese>
+            <Japanese>廃棄物の寿命を秒で決定できます。-1 にすると恒久的になります。</Japanese>
             <French>Définit la durée d'affichage des détritus, en secondes. Durée illimitée : -1.</French>
             <Russian>Управляет временем жизни объектов мусора в секундах. -1 означает Навсегда.</Russian>
             <Portuguese>Controla o tempo de vida de objetos de lixo criados em segundos. -1 é para sempre.</Portuguese>
@@ -1119,7 +1120,7 @@
             <French>Probabilité minimale de rétablir un rythme cardiaque suite à une RCP.\nCette valeur minimale est définie pour un patient à l'état "A perdu une quantité critique de sang".\nUne interpolation est faite entre la chance minimale et maximale, en fonction du volume sanguin du patient.</French>
             <Russian>Минимальная вероятность того, что выполнение искусственного дыхания восстановит сердечный ритм.\nЭто минимальное значение используется, когда пациент, по крайней мере, получил статус "Фатальная кровопотеря".\n Интерполированная вероятность используется, когда объем крови пациента находится между минимальным и максимальным порогами.</Russian>
             <Polish>Minimalna wartość szansy na to że CPR przywróci bicie serca.\nTa minimalna wartość jest używana gdy pacjent ma status "Stracił krytyczną ilość krwi".\nInterpolowana wartość szansy jest używana gdy pacjent ma poziom krwi będący pomiędzy minimum a maksimum.</Polish>
-            <Japanese>心肺蘇生を行うことで心拍が回復する最低成功確率を設定します。\nこの値は患者が"致命的な程失血している"時に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
+            <Japanese>心肺蘇生を行うことで脈拍が回復する最低成功確率を設定します。\nこの値は患者が"致命的な程失血している"時に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
             <German>Minimale Wahrscheinlichkeit, dass die Durchführung einer HLW den Herzrhythmus wiederherstellt.\nDieser Mindestwert wird verwendet, wenn der Patient mindestens "eine tödliche Menge Blut verloren" hat.\nEine interpolierte Wahrscheinlichkeit wird verwendet, wenn das Blutvolumen des Patienten zwischen dem minimalen und dem maximalen Schwellenwert liegt.</German>
             <Chinesesimp>实施心肺复苏恢复心律的最小可能性。\n当伤员至少有"致命失血量"时，就取该最小值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
             <Korean>심폐소생술 시 제일 낮은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "심각한 양의 혈액을 잃음"일 때 사용됩니다.</Korean>
@@ -1130,7 +1131,7 @@
             <French>Probabilité maximale de rétablir un rythme cardiaque suite à une RCP.\nCette valeur maximale est définie pour un patient à l'état "A perdu une faible quantité de sang".\nUne interpolation est faite entre la chance minimale et maximale, en fonction du volume sanguin du patient.</French>
             <Russian>Максимальная вероятность того, что выполнение искусственного дыхания восстановит сердечный ритм.\nЭто максимальное значение используется, когда пациент, по крайней мере, получил статус "Фатальная кровопотеря".\n Интерполированная вероятность используется, когда объем крови пациента находится между минимальным и максимальным порогами.</Russian>
             <Polish>Maksymalna wartość szansy na to że CPR przywróci bicie serca.\nTa maksymalna wartość jest używana gdy pacjent ma status "Stracił trochę krwi".\nInterpolowana wartość szansy jest używana gdy pacjent ma poziom krwi będący pomiędzy minimum a maksimum.</Polish>
-            <Japanese>心肺蘇生を行うことで心拍が回復する最高成功確率を設定します。\nこの値は患者が"いくらか失血している"時以上の場合に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
+            <Japanese>心肺蘇生を行うことで脈拍が回復する最高成功確率を設定します。\nこの値は患者が"いくらか失血している"時以上の場合に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
             <German>Maximale Wahrscheinlichkeit, dass die Durchführung einer HLW den Herzrhythmus wiederherstellt.\nDieser Maximalwert wird verwendet, wenn der Patient höchstens "Blut verloren" hat.\nEine interpolierte Wahrscheinlichkeit wird verwendet, wenn das Blutvolumen des Patienten zwischen dem minimalen und dem maximalen Schwellenwert liegt.</German>
             <Chinesesimp>实施心肺复苏恢复心律的最大可能性。\n当伤员最多“失血一些”时，就取该最大值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
             <Korean>심폐소생술 시 제일 높은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "혈액을 조금 잃음"일 때 사용됩니다.</Korean>
@@ -1174,7 +1175,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
-            <Japanese>何らかの治療をするには武器を下げるか収めるかどうかを決定します。\nなお次の診断行動は設定で例外できます: 心拍確認、血圧測定、反応確認</Japanese>
+            <Japanese>何らかの治療をするには武器を下げるか収めるかどうかを決定します。\nなお次の診断行動は設定で例外できます: 脈拍確認、血圧測定、反応確認</Japanese>
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
             <Chinesesimp>控制是否要先放下或把武器放起才能做出医疗行为。\n除了诊断—允许未放下或未收起的情况下进行一连串的诊断（检查脉搏，血压，反应）。</Chinesesimp>
             <French>Définit si les armes doivent être rengainées ou abaissées avant de pouvoir effectuer des actes médicaux.\nLes options "sauf examens" autorisent les examens (vérification du pouls, de la tension artérielle, de l'état de conscience) en toutes circonstances.</French>
@@ -1639,7 +1640,7 @@
             <Italian>Rallenta la perdita di sangue in caso di sanguinamento</Italian>
             <Portuguese>Reduz a velocidade da perda de sangue</Portuguese>
             <Czech>Zpomaluje ztráty krve při krvácení</Czech>
-            <Japanese>出血時に失血量を減らします。</Japanese>
+            <Japanese>出血時の失血を抑えます。</Japanese>
             <Korean>출혈 시 혈액손실을 늦춰줍니다</Korean>
             <Chinesesimp>减缓失血速度</Chinesesimp>
             <Chinese>減緩失血的速度</Chinese>
@@ -1656,7 +1657,7 @@
             <Italian>Un laccio emostatico usato per comprimere le vene e arterie per bloccare o rallentare la circolazione del sangue e quindi rallentare dissanguamenti.</Italian>
             <Portuguese>A aparelho que comprime as artérias e veias para diminuir a perda de sangue.</Portuguese>
             <Czech>Zařízení používané ke stlačení venózního a arteriálního oběhu. V důsledku dochází ke zpomalení toku krve a tedy i snížení ztrát krve.</Czech>
-            <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れを遅し失血を防ぎます。</Japanese>
+            <Japanese>静脈と動脈の循環を圧迫し、血流を抑制または減速させ、出血時の失血を抑えます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
             <Chinesesimp>用于压迫静脉与动脉的血液流动，以达到减缓失血速度的目的</Chinesesimp>
             <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的</Chinese>
@@ -1722,7 +1723,7 @@
             <Italian>Usato per combattere il dolore.</Italian>
             <Portuguese>Usado para combater dores moderadas e severas</Portuguese>
             <Czech>Slouží k tlumení středně těžkých a těžkých bolestí</Czech>
-            <Japanese>戦闘が収まった時に痛みに対して使います。</Japanese>
+            <Japanese>中等度から重度の痛みに対処するために使用される。</Japanese>
             <Korean>심한 통증을 완화하는데 쓰입니다</Korean>
             <Chinesesimp>用于削减中度至重度疼痛</Chinesesimp>
             <Chinese>減低中度至重度的疼痛感</Chinese>
@@ -1738,7 +1739,7 @@
             <Italian>Un analgesico usato per combattere il dolore.</Italian>
             <Portuguese>Um analgésico usado para combater dores moderadas e fortes.</Portuguese>
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
-            <Japanese>戦闘が収まった時にモルヒネを痛みに対して使います。</Japanese>
+            <Japanese>中等度から重度の痛みに対処するための鎮痛薬。</Japanese>
             <Korean>심한 통증을 완화하기 위해 쓰이는 진통제입니다.</Korean>
             <Chinesesimp>一种用于削减中度至重度疼痛的止痛药</Chinesesimp>
             <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感</Chinese>
@@ -1866,7 +1867,7 @@
             <Italian>Aumenta il battito cardiaco e combatte gli effetti di reazioni allergiche.</Italian>
             <Portuguese>Aumenta a frequência cardíaca e combate efeitos causados por reações alérgicas</Portuguese>
             <Czech>Zvyšuje srdeční frekvenci a chrání před alergickými reakcemi</Czech>
-            <Japanese>心拍数を増加させたり、アレルギー反応を収める効果もあります。</Japanese>
+            <Japanese>脈拍数を増加させたり、アレルギー反応を収める効果もあります。</Japanese>
             <Korean>심박수를 높이며 알러지 반응의 대응책입니다</Korean>
             <Chinesesimp>用于提升心率的一种药物</Chinesesimp>
             <Chinese>增加心跳速率的一種藥物</Chinese>
@@ -1882,7 +1883,7 @@
             <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
             <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
-            <Japanese>気管支を拡張するよう交感神経を拡張させ、心拍数を増加させます。それにアレルギー反応を収める効果もあります (アナフィラキシー ショック)。得られる効果は少ないですが、心停止している場合などにも使われます。</Japanese>
+            <Japanese>気管支を拡張するよう交感神経を拡張させ、脈拍数を増加させます。それにアレルギー反応を収める効果もあります (アナフィラキシー ショック)。得られる効果は少ないですが、心停止している場合などにも使われます。</Japanese>
             <Korean>기관지를 확장시키고 교감 신경 반응을 이끌어내는 약물로써, 심박을 높이고 알러지 효과(과민증)에 대응합니다. 심정지의 경우 호전이 되지 않을 때 사용합니다.</Korean>
             <Chinesesimp>俗称强心针，为一种支气管扩张药物, 会增加心跳速率并减缓过敏反应（过敏性休克）, 在心跳骤停时有恢复心跳的效果！</Chinesesimp>
             <Chinese>俗稱強心針, 為一種支氣管擴張藥物, 會增加心跳速率並減緩過敏反應(過敏性休克), 在心跳驟停時有恢復心跳的效果!</Chinese>
@@ -1914,7 +1915,7 @@
             <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
             <Portuguese>Suplemento para expandir o volume sanguíneo.</Portuguese>
             <Czech>Intravenózně podávaný doplněk k zvětšení objemu krve</Czech>
-            <Japanese>血液量を増加させる補助です。</Japanese>
+            <Japanese>血液量の増加を補助します。</Japanese>
             <Korean>혈액량을 늘리기위한 보조수단 입니다.</Korean>
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Chinese>可快速得到血液補充</Chinese>
@@ -1930,7 +1931,7 @@
             <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
             <Portuguese>Suplemento para expandir o volume sanguíneo.</Portuguese>
             <Czech>Intravenózně podávaný doplněk k zvětšení objemu krve</Czech>
-            <Japanese>血液量を増加させる補助です。</Japanese>
+            <Japanese>血液量の増加を補助します。</Japanese>
             <Korean>혈액량을 늘리기위한 보조수단 입니다.</Korean>
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Chinese>可快速得到血液補充</Chinese>
@@ -1997,7 +1998,7 @@
             <German>Blut IV, um den Bluthaushalt des Patienten wiederherzustellen.</German>
             <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.</Portuguese>
             <Czech>Krevní transfuze pro doplnění pacientovi krve</Czech>
-            <Japanese>血液 IV は、患者へ血液を補給します。</Japanese>
+            <Japanese>血液 IVは患者の血液量を回復させます。</Japanese>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다.</Korean>
             <Chinesesimp>血液，用于补充伤者流失的血液</Chinesesimp>
             <Chinese>血液, 用於補充傷者流失的血液</Chinese>
@@ -2014,7 +2015,7 @@
             <Portuguese>Sangue O- , utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento.</Portuguese>
             <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
             <Czech>0 Rh negativní krev se používá v vzácných případech k doplnění pacientovy hladiny krve, obvykle při převozu zraněné osoby do nemocnice.</Czech>
-            <Japanese>O 型への輸血はまれで厳格であり、通常は治療のための輸送段階で輸血をおこないます。</Japanese>
+            <Japanese>血液型O-の輸血は、厳密かつ稀な事象において行われる。通常、医療の搬送段階で血液を補充するために使用される。</Japanese>
             <Korean>O형 혈액 투여는 매우 엄격하고 드문 혈액 보급의 경우에 쓰이는데 주로 치료의 운송단계에서 사용됩니다.</Korean>
             <Chinesesimp>O型负值注射用血液，在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>
             <Chinese>O型陰性注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</Chinese>
@@ -2081,7 +2082,7 @@
             <German>Kochsalzlösung, ein medizinisches Volumenersatzmittel</German>
             <Portuguese>Solução Salina Intravenosa 0.9%, para restaurar o volume de sangue temporariamente.</Portuguese>
             <Czech>Fyziologický roztok se aplikuje intravenózně a slouží k obnově pacientovi krve</Czech>
-            <Japanese>生理食塩水 IV は、患者の血液量を補助します</Japanese>
+            <Japanese>生理食塩水 IVは患者の血液量を回復させます。</Japanese>
             <Korean>생리식염수, 환자의 혈액량을 보충할때 쓰입니다</Korean>
             <Chinesesimp>生理盐水，用于恢复伤者血液</Chinesesimp>
             <Chinese>生理食鹽水, 用於恢復傷者血液</Chinese>
@@ -2097,7 +2098,7 @@
             <German>Ein medizinisches Volumenersatzmittel, dass durch einen intravenösen Zugang in den Blutkreislauf verabreicht wird.</German>
             <Portuguese>Uma reposição temporaria para restaurar a pressão arterial perdida por perda de sangue.</Portuguese>
             <Czech>Fyziologický roztok se využívá nejčastěji jako infuze při dehydrataci organismu.</Czech>
-            <Japanese>生理食塩水 IV を静脈へ投与し、血液量を増加させることができます。</Japanese>
+            <Japanese>点滴で血液系に導入される医療用血液量補充剤。</Japanese>
             <Korean>혈류에 IV로 투여되는 의료 용적 대체 요법</Korean>
             <Chinesesimp>利用静脉注射进入人体血液系统，帮助伤者血液恢复</Chinesesimp>
             <Chinese>利用靜脈注射進入人體血液系統, 幫助傷者血液恢復</Chinese>
@@ -2325,16 +2326,19 @@
             <English>Suture</English>
             <German>Naht</German>
             <Spanish>Sutura</Spanish>
+            <Japanese>縫合糸</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Short">
             <English>Surgical Suture for stitching injuries.</English>
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
             <Spanish>Sutura quirúrjica para heridas de puntos.</Spanish>
+            <Japanese>傷害縫合用の外科縫合糸。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Use">
             <English>Surgical Suture for stitching injuries.</English>
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
             <Spanish>Sutura quirúrjica para heridas de puntos.</Spanish>
+            <Japanese>傷害縫合用の外科縫合糸。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bodybag_Display">
             <English>Bodybag</English>
@@ -2887,7 +2891,7 @@
             <Hungarian>Pulzus ellenőrzése</Hungarian>
             <Italian>Controlla il polso</Italian>
             <Portuguese>Checar Pulso</Portuguese>
-            <Japanese>心拍数を計る</Japanese>
+            <Japanese>脈拍を計る</Japanese>
             <Korean>맥박 확인</Korean>
             <Chinesesimp>检查脉搏</Chinesesimp>
             <Chinese>檢查脈搏</Chinese>
@@ -2938,7 +2942,7 @@
             <Hungarian>Érszorító</Hungarian>
             <Italian>Laccio emostatico</Italian>
             <Portuguese>Torniquete</Portuguese>
-            <Japanese>止血帯</Japanese>
+            <Japanese>止血帯を巻く</Japanese>
             <Korean>지혈대</Korean>
             <Chinesesimp>止血带</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
@@ -3004,7 +3008,7 @@
             <Hungarian>Diagnosztizálás</Hungarian>
             <Czech>Diagnóza</Czech>
             <Portuguese>Diagnosticar</Portuguese>
-            <Japanese>診断する</Japanese>
+            <Japanese>診断をする</Japanese>
             <Korean>진단</Korean>
             <Chinesesimp>诊断</Chinesesimp>
             <Chinese>診斷</Chinese>
@@ -3038,7 +3042,7 @@
             <Hungarian>Újraélesztés</Hungarian>
             <Czech>CPR</Czech>
             <Portuguese>SBV</Portuguese>
-            <Japanese>心肺蘇生</Japanese>
+            <Japanese>心肺蘇生をする</Japanese>
             <Korean>심폐소생술</Korean>
             <Chinesesimp>心肺复苏（CPR）</Chinesesimp>
             <Chinese>心肺復甦術</Chinese>
@@ -3369,7 +3373,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Status_MildPain">
             <English>In mild pain</English>
             <German>Hat leichte Schmerzen</German>
-            <Japanese>中くらいの痛みがある</Japanese>
+            <Japanese>軽い痛みがある</Japanese>
             <Russian>Небольшая боль</Russian>
             <French>Légère douleur</French>
             <Portuguese>Com dor leve</Portuguese>
@@ -3490,7 +3494,7 @@
             <Hungarian>%1 ellenőrizte a vérnyomást: %2</Hungarian>
             <Czech>%1 zkontroloval krevní tlak: %2</Czech>
             <Portuguese>%1 verificou pressão arterial: %2</Portuguese>
-            <Japanese>%1 が測った血圧は: %2</Japanese>
+            <Japanese>%1 が測定した血圧: %2</Japanese>
             <Korean>%1 (이)가 혈압을 측정했습니다: %2</Korean>
             <Chinesesimp>%1 测得血压为 %2</Chinesesimp>
             <Chinese>已由%1確認血壓: %2</Chinese>
@@ -3540,7 +3544,7 @@
             <Italian>La pressione sanguigna è bassa</Italian>
             <Portuguese>Pressão Arterial baixa</Portuguese>
             <Czech>Naměřil si nízký krevní tlak</Czech>
-            <Japanese>血圧はかなり低い</Japanese>
+            <Japanese>血圧は低い</Japanese>
             <Korean>혈압이 매우 낮습니다</Korean>
             <Chinesesimp>血压低</Chinesesimp>
             <Chinese>發現到低血壓</Chinese>
@@ -3557,7 +3561,7 @@
             <Italian>La pressione sanguigna è normale</Italian>
             <Portuguese>Pressão Arterial normal</Portuguese>
             <Czech>Naměřil si normální krevní tlak</Czech>
-            <Japanese>血圧は通常</Japanese>
+            <Japanese>血圧は正常</Japanese>
             <Korean>혈압이 정상입니다</Korean>
             <Chinesesimp>血压正常</Chinesesimp>
             <Chinese>發現到正常血壓</Chinese>
@@ -3574,7 +3578,7 @@
             <Italian>La pressione sanguigna è alta</Italian>
             <Portuguese>Pressão Arterial Alta</Portuguese>
             <Czech>Naměřil si vysoký krevní tlak</Czech>
-            <Japanese>血圧はかなり高い</Japanese>
+            <Japanese>血圧は高い</Japanese>
             <Korean>혈압이 매우 높습니다</Korean>
             <Chinesesimp>血压高</Chinesesimp>
             <Chinese>發現到高血壓</Chinese>
@@ -3608,7 +3612,7 @@
             <Italian>Manca strumento per misurare pressione sanguigna</Italian>
             <Portuguese>Você falhou em aferir a Pressão Arterial</Portuguese>
             <Czech>Nedokázal si změřit krevní tlak</Czech>
-            <Japanese>血圧を測るのに失敗</Japanese>
+            <Japanese>血圧を測るのに失敗した</Japanese>
             <Korean>혈압을 측정하는데 실패했습니다</Korean>
             <Chinesesimp>无法测得血压</Chinesesimp>
             <Chinese>檢查血壓的動作失敗</Chinese>
@@ -3642,7 +3646,7 @@
             <Hungarian>Normális</Hungarian>
             <Czech>Normální</Czech>
             <Portuguese>Normal</Portuguese>
-            <Japanese>通常</Japanese>
+            <Japanese>正常</Japanese>
             <Korean>보통</Korean>
             <Chinesesimp>正常</Chinesesimp>
             <Chinese>正常</Chinese>
@@ -3693,7 +3697,7 @@
             <Italian>Polso</Italian>
             <Portuguese>Pulso</Portuguese>
             <Czech>Puls</Czech>
-            <Japanese>心拍数</Japanese>
+            <Japanese>脈拍数</Japanese>
             <Korean>맥박</Korean>
             <Chinesesimp>脉搏</Chinesesimp>
             <Chinese>脈搏</Chinese>
@@ -3727,7 +3731,7 @@
             <Italian>Hai diagnosticato %1</Italian>
             <Portuguese>Você aferiu o paciente %1</Portuguese>
             <Czech>Zkontroloval si %1</Czech>
-            <Japanese>心拍数は %1</Japanese>
+            <Japanese>脈拍数は %1</Japanese>
             <Korean>맥박은 %1 입니다</Korean>
             <Chinesesimp>你已检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
@@ -3743,7 +3747,7 @@
             <Hungarian>%1 ellenőrizte a szívverés-számot: %2</Hungarian>
             <Czech>%1 zkontroloval srdeční tep: %2</Czech>
             <Portuguese>%1 verificou a frequência cardíaca: %2</Portuguese>
-            <Japanese>%1 が測った心拍数は: %2</Japanese>
+            <Japanese>%1 が測定した心拍数: %2</Japanese>
             <Korean>%1 (이)가 맥박을 측정했습니다: %2</Korean>
             <Chinesesimp>%1 测得心率为 %2</Chinesesimp>
             <Chinese>已由%1確認心跳: %2</Chinese>
@@ -3793,7 +3797,7 @@
             <Hungarian>Normális</Hungarian>
             <Czech>Normální</Czech>
             <Portuguese>Normal</Portuguese>
-            <Japanese>通常</Japanese>
+            <Japanese>正常</Japanese>
             <Korean>보통</Korean>
             <Chinesesimp>正常</Chinesesimp>
             <Chinese>正常</Chinese>
@@ -3843,7 +3847,7 @@
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca baixa</Portuguese>
             <Czech>Nahmatal jsi slabý srdeční puls</Czech>
-            <Japanese>心拍数は低い</Japanese>
+            <Japanese>心拍は弱い</Japanese>
             <Korean>약한 맥박입니다</Korean>
             <Chinesesimp>心率微弱</Chinesesimp>
             <Chinese>心跳微弱</Chinese>
@@ -3860,7 +3864,7 @@
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca normal</Portuguese>
             <Czech>Nahmatal jsi silný srdeční puls</Czech>
-            <Japanese>心拍数は強い</Japanese>
+            <Japanese>心拍は強い</Japanese>
             <Korean>강한 맥박입니다</Korean>
             <Chinesesimp>心率过快</Chinesesimp>
             <Chinese>心跳過快</Chinese>
@@ -3877,7 +3881,7 @@
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca alta</Portuguese>
             <Czech>Nahmatal jsi normální srdeční puls</Czech>
-            <Japanese>心拍数は通常</Japanese>
+            <Japanese>心拍は正常</Japanese>
             <Korean>보통 맥박입니다</Korean>
             <Chinesesimp>心率正常</Chinesesimp>
             <Chinese>心跳正常</Chinese>
@@ -3894,7 +3898,7 @@
             <Italian>Hai riscontrato una assenza di battito cardiaco</Italian>
             <Portuguese>Sem Freqüência Cardíaca</Portuguese>
             <Czech>Žádný puls</Czech>
-            <Japanese>心拍数を測れなかった</Japanese>
+            <Japanese>心拍を測れなかった</Japanese>
             <Korean>맥박을 찾을 수가 없습니다</Korean>
             <Chinesesimp>无法测得心率</Chinesesimp>
             <Chinese>量不到心跳</Chinese>
@@ -4500,7 +4504,7 @@
             <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
-            <Japanese>%1 は IV を投与した</Japanese>
+            <Japanese>%1 はIVを投与した</Japanese>
             <Korean>%1 (이)가 IV를 실시했다</Korean>
             <Chinesesimp>%1 已进行静脉注射</Chinesesimp>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
@@ -4665,7 +4669,7 @@
             <Czech>Žádné škrtidlo na této části těla!</Czech>
             <Italian>Non c'è nessun laccio emostatico su questa parte del corpo!</Italian>
             <French>Il n'y a pas de garrot sur ce membre !</French>
-            <Japanese>身体には止血帯が無い!</Japanese>
+            <Japanese>この部位には止血帯がない!</Japanese>
             <Korean>이 부위에는 지혈대가 없습니다!</Korean>
             <Chinesesimp>该部位没有使用止血带！</Chinesesimp>
             <Chinese>這部位沒有止血帶!</Chinese>
@@ -4675,7 +4679,7 @@
             <English>The body twitched and may not be dead!</English>
             <Russian>Тело дернулось и, возможно, пациент жив!</Russian>
             <French>L'unité a bougé et n'est peut-être pas morte !</French>
-            <Japanese>身体が動き死んでないようだ!</Japanese>
+            <Japanese>身体が痙攣している、まだ死んでないようだ!</Japanese>
             <Spanish>¡El cuerpo se retorció y puede que no esté muerto!</Spanish>
             <Polish>Ciało drgnęło i może nie być martwe!</Polish>
             <German>Der Körper zuckte und kann nicht tot sein!</German>

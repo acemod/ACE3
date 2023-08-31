@@ -566,7 +566,7 @@
             <German>Esse %1...</German>
             <Chinese>食用 %1...</Chinese>
             <Chinesesimp>食用 %1...</Chinesesimp>
-            <Japanese>%1を食べています・・・</Japanese>
+            <Japanese>%1 を食べています・・・</Japanese>
             <Polish>Jedzenie %1...</Polish>
             <Russian>Поедание %1...</Russian>
             <Turkish>%1 Yeniyor...</Turkish>
@@ -578,7 +578,7 @@
             <German>Trinke %1...</German>
             <Chinese>飲用自 %1...</Chinese>
             <Chinesesimp>饮用 %1...</Chinesesimp>
-            <Japanese>%1を飲んでいます・・・</Japanese>
+            <Japanese>%1 を飲んでいます・・・</Japanese>
             <Polish>Picie %1...</Polish>
             <Russian>Выпивание %1...</Russian>
             <Turkish>%1 Içiliyor...</Turkish>
@@ -590,7 +590,7 @@
             <German>Trinke von %1...</German>
             <Chinese>飲用%1的水中...</Chinese>
             <Chinesesimp>从%1饮用中...</Chinesesimp>
-            <Japanese>%1から飲んでいます・・・</Japanese>
+            <Japanese>%1 から飲んでいます・・・</Japanese>
             <Polish>Picie z %1...</Polish>
             <Russian>Выпивание из %1...</Russian>
             <Turkish>%1 den içiliyor...</Turkish>

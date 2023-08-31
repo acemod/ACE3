@@ -1325,7 +1325,7 @@
             <Spanish>Habilitar las pestañas de caras / voces / insignias</Spanish>
             <German>Aktiviere die Gesichter-, Stimmen- und Abzeichenübersicht</German>
             <French>Activer les onglets visages/voix/insignes</French>
-            <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
+            <Japanese>顔 / 声 / 記章(バッジ)タブを有効化</Japanese>
             <Chinesesimp>启用脸谱/语音/徽章选项</Chinesesimp>
             <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
             <Italian>Abilita volti, voci e insegne</Italian>
@@ -1534,24 +1534,29 @@
             <Korean>얼굴 저장</Korean>
             <Russian>Сохранить лицо</Russian>
             <Spanish>Guardar Cara</Spanish>
+            <Japanese>顔の保存</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
             <Korean>목소리 저장</Korean>
             <Russian>Сохранить голос</Russian>
             <Spanish>Guardar Voz</Spanish>
+            <Japanese>声の保存</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
             <Korean>계급장 저장</Korean>
             <Russian>Сохранить эмблему</Russian>
             <Spanish>Guardar Insignia</Spanish>
+            <Japanese>記章(バッジ)の保存</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortDescending">
             <English>Descending</English>
+            <Japanese>下降</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortAscending">
             <English>Ascending</English>
+            <Japanese>昇順</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
@@ -1571,21 +1576,27 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagCount">
             <English>Ammo count</English>
+            <Japanese>弾薬数</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
+            <Japanese>お気に入りをデフォルト</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
+            <Japanese>ACE Arsenalがデフォルトで全てのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
+            <Japanese>お気に入りの色</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
+            <Japanese>お気に入りアイテムのハイライト色。</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
+            <Japanese>Shiftを押しながらダブルクリックするとアイテムを追加・削除できます。</Japanese>
         </Key>
     </Package>
 </Project>

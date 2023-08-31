@@ -119,9 +119,11 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_brown_WP">
             <English>NV Goggles (Gen3, Brown, WP)</English>
+            <Japanese>暗視装置 (第3世代、ブラウン)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_WP_desc">
             <English>Night Vision Goggles, White Phosphor</English>
+            <Japanese>暗視装置、白色蛍光体</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green">
             <English>NV Goggles (Gen3, Green)</English>
@@ -142,6 +144,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green_WP">
             <English>NV Goggles (Gen3, Green, WP)</English>
+            <Japanese>暗視装置 (第3世代、グリーン、白色蛍光)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black">
             <English>NV Goggles (Gen3, Black)</English>
@@ -162,6 +165,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black_WP">
             <English>NV Goggles (Gen3, Black, WP)</English>
+            <Japanese>暗視装置 (第3世代、ブラック、白色蛍光)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_brown">
             <English>NV Goggles (Gen4, Brown)</English>
@@ -176,6 +180,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_brown_WP">
             <English>NV Goggles (Gen4, Brown, WP)</English>
+            <Japanese>暗視装置 (第4世代、ブラウン、白色蛍光)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
             <English>NV Goggles (Gen4, Black)</English>
@@ -190,6 +195,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black_WP">
             <English>NV Goggles (Gen4, Black, WP)</English>
+            <Japanese>暗視装置 (第3世代、ブラック、白色蛍光)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
             <English>NV Goggles (Gen4, Green)</English>
@@ -204,6 +210,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green_WP">
             <English>NV Goggles (Gen4, Green, WP)</English>
+            <Japanese>暗視装置 (第3世代、グリーン、白色蛍光)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
             <English>NV Goggles (Wide, Brown)</English>
@@ -218,6 +225,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown_WP">
             <English>NV Goggles (Wide, Brown, WP)</English>
+            <Japanese>暗視装置 (ワイド、ブラウン、白色蛍光)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
             <English>NV Goggles (Wide, Black)</English>
@@ -232,6 +240,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black_WP">
             <English>NV Goggles (Wide, Black, WP)</English>
+            <Japanese>暗視装置 (ワイド、ブラック、白色蛍光)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
             <English>NV Goggles (Wide, Green)</English>
@@ -246,6 +255,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green_WP">
             <English>NV Goggles (Wide, Green, WP)</English>
+            <Japanese>暗視装置 (ワイド、グリーン、白色蛍光)</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -423,7 +433,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
-            <Japanese>照準器を覗く時にぼかし</Japanese>
+            <Japanese>照準時のぼかし効果</Japanese>
             <German>Visierunschärfe</German>
             <Chinese>瞄準具模糊程度</Chinese>
             <Chinesesimp>瞄准具模糊程度</Chinesesimp>
@@ -498,9 +508,11 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVGeneration">
             <English>Night Vision Generation</English>
+            <Japanese>暗視装置の世代</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_statGen">
             <English>Gen %1</English>
+            <Japanese>第%1世代</Japanese>
         </Key>
     </Package>
 </Project>
