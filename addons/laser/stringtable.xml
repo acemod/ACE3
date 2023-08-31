@@ -87,9 +87,11 @@
         </Key>
         <Key ID="STR_ACE_Laser_LSTOn">
             <English>Laser Spot Tracker: On</English>
+            <Japanese>レーザースポットトラッカー: オン</Japanese>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOff">
             <English>Laser Spot Tracker: Off</English>
+            <Japanese>レーザースポットトラッカー: オフ</Japanese>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>

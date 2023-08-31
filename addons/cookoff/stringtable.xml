@@ -172,9 +172,11 @@
             <Chinesesimp>殉爆发生后摧毁载具</Chinesesimp>
             <Russian>Уничтожать технику после детонации</Russian>
             <Spanish>Destruir vehículos tras la detonación inducida por calor</Spanish>
+            <Japanese>誘爆後に車両を破壊する</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
             <English>Controls whether vehicles will always be destroyed after cooking off.</English>
+            <Japanese>誘爆後に車両を破壊するかどうかを設定する。</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>

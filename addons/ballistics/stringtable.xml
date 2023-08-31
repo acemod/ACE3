@@ -3513,24 +3513,31 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsage_ai">
             <English>AI Usage</English>
+            <Japanese>AIの使用</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_illumination">
             <English>Illum</English>
+            <Japanese>照明弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_concealment">
             <English>Smoke</English>
+            <Japanese>発煙弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_infantry">
             <English>Inf</English>
+            <Japanese>歩兵</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_lightVehicle">
             <English>Veh</English>
+            <Japanese>車両</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_armor">
             <English>Armor</English>
+            <Japanese>機甲</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_aircraft">
             <English>Air</English>
+            <Japanese>航空</Japanese>
         </Key>
     </Package>
 </Project>
