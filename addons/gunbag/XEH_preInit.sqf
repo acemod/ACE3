@@ -33,6 +33,7 @@ PREP_RECOMPILE_END;
         if (!isNil QEGVAR(arsenal,virtualItemsFlatAll)) then {
             private _weapon = (_gunbagWeapon select 0) call EFUNC(arsenal,baseWeapon);
             if !(_weapon in EGVAR(arsenal,virtualItemsFlatAll)) then {
+                INFO_1("removing [%1] from loadout",_gunbagWeapon);
                 _gunbagWeapon = [];
             };
         };
