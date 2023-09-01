@@ -32,7 +32,7 @@ PREP_RECOMPILE_END;
     if (_gunbagWeapon isNotEqualTo []) then {
         if (!isNil QEGVAR(arsenal,virtualItemsFlatAll)) then {
             private _weapon = (_gunbagWeapon select 0) call EFUNC(arsenal,baseWeapon);
-            if !(_weapon in QEGVAR(arsenal,virtualItemsFlatAll)) then {
+            if !(_weapon in EGVAR(arsenal,virtualItemsFlatAll)) then {
                 _gunbagWeapon = [];
             };
         };
