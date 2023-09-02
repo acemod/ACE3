@@ -53,7 +53,7 @@ private _fnc_filterLoadout = {
             // Handle arrays
             if (_x isEqualType []) then {
                 _itemArray = _x call _fnc_filterLoadout;
-                if ((_itemArray select 0) isEqualTo "") then {
+                if ((_itemArray select 0) isEqualTo "" && {!(_itemArray isEqualTypeParams ["","","","","",""])}) then {
                     _itemArray = [];
                 };
                 _itemArray
