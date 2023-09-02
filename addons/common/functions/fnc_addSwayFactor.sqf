@@ -20,9 +20,9 @@ params ["_type", "_code", "_id"];
 
 _type = toLower _type;
 
-if !(_type in ["baseline", "multiplier"]) exitWith {false};
+if !(_type in ["baseline", "multiplier"]) exitWith { ERROR_2("%1-%2 type unsupported",_type,_id); false };
 
-if !((call _code) isEqualType 0) exitWith {false};
+if !((call _code) isEqualType 0) exitWith { ERROR_2("%1-%2 bad return type",_type,_id); false };
 
 [missionNamespace, format ["ACE_setCustomAimCoef_%1", toLower _type], _id, _code] call FUNC(arithmeticSetSource);
 
