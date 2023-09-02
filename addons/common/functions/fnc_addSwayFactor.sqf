@@ -24,7 +24,7 @@ if !(_type in ["baseline", "multiplier"]) exitWith { ERROR_2("%1-%2 type unsuppo
 
 if !((call _code) isEqualType 0) exitWith { ERROR_2("%1-%2 bad return type",_type,_id); false };
 
-[missionNamespace, format ["ACE_setCustomAimCoef_%1", toLower _type], _id, _code] call FUNC(arithmeticSetSource);
+[missionNamespace, format ["ACE_setCustomAimCoef_%1", _type], _id, _code] call FUNC(arithmeticSetSource);
 
 if (_type isEqualTo "baseline") then {
     GVAR(swayFactorsBaseline) pushBackUnique [_id];
