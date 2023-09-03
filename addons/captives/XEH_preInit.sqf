@@ -8,6 +8,8 @@ PREP_RECOMPILE_END;
 
 GVAR(captivityEnabled) = false;
 
+GVAR(restraints) = call (uiNamespace getVariable QGVAR(restraints));
+
 #include "initSettings.sqf"
 
 ADDON = true;

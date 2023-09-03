@@ -683,7 +683,7 @@
             <Czech>Barva fontu ACE nápověd. Toto je standardní barva pro všechen text zobrazovaný ACE nápovědami, pokud nemá nápověda žádnou specifikanou barvu.</Czech>
             <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
             <Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</Portuguese>
-            <Japanese>ACE によるヒントの文章へ、色を設定できます。この色は ACE ヒント システムを介して表示される全文章の色と標準でなっており、特定の色を設定していても、標準色になります。</Japanese>
+            <Japanese>ACE によるヒントの文章に色を設定できます。この色は ACE ヒント システムを介して表示される全文章の色と標準でなっており、特定の色を設定していても、標準色になります。</Japanese>
             <Korean>ACE 힌트에 쓰이는 글씨 색입니다. 힌트 글씨의 색이 정해지지 않을경우 모든 힌트의 색은 기본으로 설정됩니다.</Korean>
             <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色</Chinese>
             <Chinesesimp>设定 ACE 提示文字的颜色。若提示字体并无指定其他颜色，将会自动选用 ACE 的预设颜色。</Chinesesimp>
@@ -1321,7 +1321,7 @@
             <Korean>ACE 무분류</Korean>
             <German>ACE Unkategorisiert</German>
             <Polish>ACE Nieskategoryzowane</Polish>
-            <Japanese>ACE 無区分</Japanese>
+            <Japanese>ACE 未区分</Japanese>
             <Russian>ACE Без категории</Russian>
             <Spanish>ACE Sin categoría</Spanish>
         </Key>
@@ -1515,7 +1515,7 @@
             <French>Joueurs et IA</French>
             <Hungarian>Játékosok és AI</Hungarian>
             <Italian>Giocatori ed IA</Italian>
-            <Japanese>プレイヤーと AI</Japanese>
+            <Japanese>プレイヤーとAI</Japanese>
             <Korean>플레이어 및 인공지능</Korean>
             <Chinesesimp>玩家与 AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
@@ -1660,6 +1660,22 @@
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
             <Russian>Разрядить оружие</Russian>
             <Spanish>Descargar arma</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Common_loadObject">
+            <English>Load</English>
+            <German>Beladen</German>
+            <Polish>Załaduj</Polish>
+            <Portuguese>Carregar</Portuguese>
+            <Russian>Загрузить</Russian>
+            <Czech>Naložit</Czech>
+            <Spanish>Cargar</Spanish>
+            <Italian>Carica</Italian>
+            <French>Charger</French>
+            <Japanese>積み込む</Japanese>
+            <Korean>싣기</Korean>
+            <Chinese>裝載</Chinese>
+            <Chinesesimp>装载</Chinesesimp>
+            <Turkish>Yükle</Turkish>
         </Key>
     </Package>
 </Project>

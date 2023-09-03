@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Start rope attach PFH
  *
  * Arguments:

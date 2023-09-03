@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Start a cook-off in the given vehicle.
  *
  * Arguments:
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false], ["_fireSource", ""], ["_canRing", true], ["_maxIntensity", MAX_COOKOFF_INTENSITY, [0]]];
+params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false], ["_fireSource", ""], ["_canRing", true], ["_maxIntensity", MAX_COOKOFF_INTENSITY, [0]], ["_canJet", true, [true]]];
 
 if (GVAR(enable) == 0) exitWith {};
 if !(GVAR(enableFire)) exitWith {};
@@ -25,7 +25,8 @@ if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] in [0, false]) exitWith {
 if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] isEqualTo 1 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} == -1}) exitWith {};
 
 
-TRACE_9("cooking off",_vehicle,_intensity,_instigator,_smokeDelayEnabled,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing,_maxIntensity);
+TRACE_2("cooking off",_vehicle,_intensity);
+TRACE_8("",_instigator,_smokeDelayEnabled,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing,_maxIntensity,_canJet);
 
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _vehicle setVariable [QGVAR(isCookingOff), true, true];
@@ -50,9 +51,6 @@ if (_positions isEqualTo []) then {
         _positions pushBack "#noselection";
     };
 };
-
-// default fire jet to enabled when not set in configs
-private _canJet = ([_config >> QGVAR(canHaveFireJet), "number", 1] call CBA_fnc_getConfigEntry) == 1;
 
 private _delay = 0;
 if (_smokeDelayEnabled) then {
