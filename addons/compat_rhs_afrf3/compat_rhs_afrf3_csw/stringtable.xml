@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_RHS_AFRF3_CSW">
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_VOG17m_30_displayName">
+            <English>[CSW] VOG-17M</English>
+            <Czech>[CSW] VOG-17M</Czech>
+            <French>[CSW] VOG-17M</French>
+            <Spanish>[CSW] VOG-17M</Spanish>
+            <Italian>[CSW] VOG-17M</Italian>
+            <Polish>[CSW] WOG-17M</Polish>
+            <Portuguese>[CSW] VOG-17M</Portuguese>
+            <Russian>[CSW] ВОГ-17М</Russian>
+            <German>[CSW] VOG-17M</German>
+            <Korean>[CSW] VOG-17M</Korean>
+            <Japanese>[CSW] VOG-17M</Japanese>
+            <Chinesesimp>[班组] VOG-17M</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_VOG30_30_displayName">
+            <English>[CSW] VOG-30</English>
+            <Czech>[CSW] VOG-30</Czech>
+            <French>[CSW] VOG-30</French>
+            <Spanish>[CSW] VOG-30</Spanish>
+            <Italian>[CSW] VOG-30</Italian>
+            <Polish>[CSW] WOG-30</Polish>
+            <Portuguese>[CSW] VOG-30</Portuguese>
+            <Russian>[CSW] ВОГ-30</Russian>
+            <German>[CSW] VOG-30</German>
+            <Korean>[CSW] VOG-30</Korean>
+            <Japanese>[CSW] VOG-30</Japanese>
+            <Chinesesimp>[班组] VOG-30</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_GPD30_30_displayName">
+            <English>[CSW] GPD-30</English>
+            <Czech>[CSW] GPD-30</Czech>
+            <French>[CSW] GPD-30</French>
+            <Spanish>[CSW] GPD-30</Spanish>
+            <Italian>[CSW] GPD-30</Italian>
+            <Polish>[CSW] GPD-30</Polish>
+            <Portuguese>[CSW] GPD-30</Portuguese>
+            <Russian>[CSW] ГПД-30</Russian>
+            <German>[CSW] GPD-30</German>
+            <Korean>[CSW] GPD-30</Korean>
+            <Japanese>[CSW] GPD-30</Japanese>
+            <Chinesesimp>[班组] GPD-30</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M131M_displayName">
+            <English>[CSW] ATGM 9M131M</English>
+            <Czech>[CSW] ATGM 9M131M</Czech>
+            <French>[CSW] ATGM 9M131M</French>
+            <Spanish>[CSW] ATGM 9M131M</Spanish>
+            <Italian>[CSW] ATGM 9M131M</Italian>
+            <Polish>[CSW] ATGM 9M131M</Polish>
+            <Portuguese>[CSW] ATGM 9M131M</Portuguese>
+            <Russian>[CSW] ПТРК 9М131М</Russian>
+            <German>[CSW] ATGM 9M131M</German>
+            <Korean>[CSW] 9M131M 대전차미사일</Korean>
+            <Japanese>[CSW] ATGM 9M131M</Japanese>
+            <Chinesesimp>[班组] 9M131M 反坦克导弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M131F_displayName">
+            <English>[CSW] ATGM 9M131F</English>
+            <Czech>[CSW] ATGM 9M131F</Czech>
+            <French>[CSW] ATGM 9M131F</French>
+            <Spanish>[CSW] ATGM 9M131F</Spanish>
+            <Italian>[CSW] ATGM 9M131F</Italian>
+            <Polish>[CSW] ATGM 9M131F</Polish>
+            <Portuguese>[CSW] ATGM 9M131F</Portuguese>
+            <Russian>[CSW] ПТРК 9М131Ф</Russian>
+            <German>[CSW] ATGM 9M131F</German>
+            <Korean>[CSW] 9M131F 대전차미사일</Korean>
+            <Japanese>[CSW] ATGM 9M131F</Japanese>
+            <Chinesesimp>[班组] 9M131F 反坦克导弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133F_displayName">
+            <English>[CSW] ATGM 9M133F</English>
+            <Czech>[CSW] ATGM 9M133F</Czech>
+            <French>[CSW] ATGM 9M133F</French>
+            <Spanish>[CSW] ATGM 9M133F</Spanish>
+            <Italian>[CSW] ATGM 9M133F</Italian>
+            <Polish>[CSW] ATGM 9M133F</Polish>
+            <Portuguese>[CSW] ATGM 9M133F</Portuguese>
+            <Russian>[CSW] ПТРК 9М133Ф</Russian>
+            <German>[CSW] ATGM 9M133F</German>
+            <Korean>[CSW] 9M133F 대전차미사일</Korean>
+            <Japanese>[CSW] ATGM 9M133F</Japanese>
+            <Chinesesimp>[班组] 9M133F 反坦克导弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133_displayName">
+            <English>[CSW] ATGM 9M133</English>
+            <Czech>[CSW] ATGM 9M133</Czech>
+            <French>[CSW] ATGM 9M133</French>
+            <Spanish>[CSW] ATGM 9M133</Spanish>
+            <Italian>[CSW] ATGM 9M133</Italian>
+            <Polish>[CSW] ATGM 9M133</Polish>
+            <Portuguese>[CSW] ATGM 9M133</Portuguese>
+            <Russian>[CSW] ПТРК 9М133</Russian>
+            <German>[CSW] ATGM 9M133</German>
+            <Korean>[CSW] 9M133 대전차미사일</Korean>
+            <Japanese>[CSW] ATGM 9M133</Japanese>
+            <Chinesesimp>[班组] 9M133 反坦克导弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M1331_displayName">
+            <English>[CSW] ATGM 9M133-1</English>
+            <Czech>[CSW] ATGM 9M133-1</Czech>
+            <French>[CSW] ATGM 9M133-1</French>
+            <Spanish>[CSW] ATGM 9M133-1</Spanish>
+            <Italian>[CSW] ATGM 9M133-1</Italian>
+            <Polish>[CSW] ATGM 9M133-1</Polish>
+            <Portuguese>[CSW] ATGM 9M133-1</Portuguese>
+            <Russian>[CSW] ПТРК 9М133-1</Russian>
+            <German>[CSW] ATGM 9M133-1</German>
+            <Korean>[CSW] 9M133-1 대전차미사일</Korean>
+            <Japanese>[CSW] ATGM 9M133-1</Japanese>
+            <Chinesesimp>[班组] 9M133-1 反坦克导弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133M2_displayName">
+            <English>[CSW] ATGM 9M133M2</English>
+            <Czech>[CSW] ATGM 9M133M2</Czech>
+            <French>[CSW] ATGM 9M133M2</French>
+            <Spanish>[CSW] ATGM 9M133M2</Spanish>
+            <Italian>[CSW] ATGM 9M133M2</Italian>
+            <Polish>[CSW] ATGM 9M133M2</Polish>
+            <Portuguese>[CSW] ATGM 9M133M2</Portuguese>
+            <Russian>[CSW] ПТРК 9М133M2</Russian>
+            <German>[CSW] ATGM 9M133M2</German>
+            <Korean>[CSW] 9M133M2 대전차미사일</Korean>
+            <Japanese>[CSW] ATGM 9M133M2</Japanese>
+            <Chinesesimp>[班组] 9M133M2 反坦克导弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9V_displayName">
+            <English>[CSW] HEAT PG-9V</English>
+            <Czech>[CSW] HEAT PG-9V</Czech>
+            <French>[CSW] HEAT PG-9V</French>
+            <Spanish>[CSW] AEAT PG-9V</Spanish>
+            <Italian>[CSW] HEAT PG-9V</Italian>
+            <Polish>[CSW] HEAT PG-9V</Polish>
+            <Portuguese>[CSW] HEAT PG-9V</Portuguese>
+            <Russian>[CSW] ПГ-9В</Russian>
+            <German>[CSW] HEAT PG-9V</German>
+            <Korean>[CSW] PG-9V 대전차고폭탄</Korean>
+            <Japanese>[CSW] HEAT PG-9V</Japanese>
+            <Chinesesimp>[班组] PG-9V 破甲弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9N_displayName">
+            <English>[CSW] HEAT PG-9N</English>
+            <Czech>[CSW] HEAT PG-9N</Czech>
+            <French>[CSW] HEAT PG-9N</French>
+            <Spanish>[CSW] AEAT PG-9N</Spanish>
+            <Italian>[CSW] HEAT PG-9N</Italian>
+            <Polish>[CSW] HEAT PG-9N</Polish>
+            <Portuguese>[CSW] HEAT PG-9N</Portuguese>
+            <Russian>[CSW] ПГ-9Н</Russian>
+            <German>[CSW] HEAT PG-9N</German>
+            <Korean>[CSW] PG-9N 대전차고폭탄</Korean>
+            <Japanese>[CSW] HEAT PG-9N</Japanese>
+            <Chinesesimp>[班组] PG-9N 破甲弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9VNT_displayName">
+            <English>[CSW] HEAT PG-9VNT</English>
+            <Czech>[CSW] HEAT PG-9VNT</Czech>
+            <French>[CSW] HEAT PG-9VNT</French>
+            <Spanish>[CSW] AEAT PG-9VNT</Spanish>
+            <Italian>[CSW] HEAT PG-9VNT</Italian>
+            <Polish>[CSW] HEAT PG-9VNT</Polish>
+            <Portuguese>[CSW] HEAT PG-9VNT</Portuguese>
+            <Russian>[CSW] ПГ-9ВНТ</Russian>
+            <German>[CSW] HEAT PG-9VNT</German>
+            <Korean>[CSW] PG-9VNT 대전차고폭탄</Korean>
+            <Japanese>[CSW] HEAT PG-9VNT</Japanese>
+            <Chinesesimp>[班组] PG-9VN 破甲弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_OG9V_displayName">
+            <English>[CSW] HE-FRAG OG-9V</English>
+            <Czech>[CSW] HE-FRAG OG-9V</Czech>
+            <French>[CSW] HE-FRAG OG-9V</French>
+            <Spanish>[CSW] AE-FRAG OG-9V</Spanish>
+            <Italian>[CSW] HE-FRAG OG-9V</Italian>
+            <Polish>[CSW] HE-FRAG OG-9V</Polish>
+            <Portuguese>[CSW] HE-FRAG OG-9V</Portuguese>
+            <Russian>[CSW] ОГ-9В</Russian>
+            <German>[CSW] HE-FRAG OG-9V</German>
+            <Korean>[CSW] OG-9V 고폭파편탄</Korean>
+            <Japanese>[CSW] HE-FRAG OG-9V</Japanese>
+            <Chinesesimp>[班组] OG-9V 高爆破片弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_OG9VM_displayName">
+            <English>[CSW] HE-FRAG OG-9VM</English>
+            <Czech>[CSW] HE-FRAG OG-9VM</Czech>
+            <French>[CSW] HE-FRAG OG-9VM</French>
+            <Spanish>[CSW] AE-FRAG OG-9VM</Spanish>
+            <Italian>[CSW] HE-FRAG OG-9VM</Italian>
+            <Polish>[CSW] HE-FRAG OG-9VM</Polish>
+            <Portuguese>[CSW] HE-FRAG OG-9VM</Portuguese>
+            <Russian>[CSW] ОГ-9ВМ</Russian>
+            <German>[CSW] HE-FRAG OG-9VM</German>
+            <Korean>[CSW] OG-9VM 고폭파편탄</Korean>
+            <Japanese>[CSW] HE-FRAG OG-9VM</Japanese>
+            <Chinesesimp>[班组] OG-9VM 高爆破片弹</Chinesesimp>
+        </Key>
+    </Package>
+</Project>
