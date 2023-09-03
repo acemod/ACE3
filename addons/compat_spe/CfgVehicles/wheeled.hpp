@@ -1,4 +1,5 @@
-class SPE_Truck_base {
+class Truck_F;
+class SPE_Truck_base: Truck_F {
     EGVAR(cargo,hasCargo) = 1;
     EGVAR(cargo,space) = 4;
     EGVAR(refuel,canReceive) = 1;
@@ -42,12 +43,6 @@ class SPE_OpelBlitz_base: SPE_Truck_base {
     EGVAR(refuel,fuelCapacity) = 88;
 };
 
-class SPE_OpelBlitz_Fuel: SPE_OpelBlitz_base {
-    transportFuel = 0;
-    EGVAR(refuel,hooks)[] = {{-0.23,-2.58,-0.59}};
-    EGVAR(refuel,fuelCargo) = 2000;
-};
-
 class SPE_OpelBlitz_Ambulance: SPE_OpelBlitz_base {
     EGVAR(medical,medicClass) = 1;
 };
@@ -58,28 +53,19 @@ class SPE_OpelBlitz_Repair: SPE_OpelBlitz_base {
 };
 
 class SPE_OpelBlitz_Ammo: SPE_OpelBlitz_base {
-    transportAmmo = 0;
     EGVAR(rearm,defaultSupply) = 1200;
 };
 
 // WHEELED - ALLIED FORCES
-
-class SPE_US_M3_Halftrack_Fuel: SPE_Halftrack_base {
-    transportFuel = 0;
-    EGVAR(refuel,hooks)[] = {{-0.23,-2.58,-0.59}};
-    EGVAR(refuel,fuelCargo) = 2000;
-};
 
 class SPE_US_M3_Halftrack_Ambulance: SPE_Halftrack_base {
     EGVAR(medical,medicClass) = 1;
 };
 
 class SPE_US_M3_Halftrack_Repair: SPE_Halftrack_base {
-    transportRepair = 0;
     EGVAR(repair,canRepair) = 1;
 };
 
 class SPE_US_M3_Halftrack_Ammo: SPE_Halftrack_base {
-    transportAmmo = 0;
     EGVAR(rearm,defaultSupply) = 1200;
 };

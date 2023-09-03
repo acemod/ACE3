@@ -148,25 +148,10 @@ class SPE_M3_GreaseGun: SPE_SMG {
 
 // VESTS
 class V_SPE_Vest_Camo_Base;
-class V_SPE_DAK_VestG43: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_DAK_VestKar98: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_DAK_VestMG: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_DAK_VestMP40: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_DAK_VestSTG: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_DAK_SaniVest2: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
 class V_SPE_GER_VestG43: V_SPE_Vest_Camo_Base {
+    EGVAR(trenches,entrenchingTool) = 1;
+};
+class V_SPE_DAK_VestG43: V_SPE_GER_VestG43 {
     EGVAR(trenches,entrenchingTool) = 1;
 };
 class V_SPE_GER_SaniVest2: V_SPE_Vest_Camo_Base {
@@ -187,24 +172,6 @@ class V_SPE_GER_VestSTG: V_SPE_Vest_Camo_Base {
 class V_SPE_US_Assault_Vest: V_SPE_Vest_Camo_Base {
     EGVAR(trenches,entrenchingTool) = 1;
 };
-class V_SPE_US_Assault_Vest_Bag: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_US_Assault_Vest_dday: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_US_Assault_Vest_dday_Bag: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_US_Assault_Vest_alt: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_US_Assault_Vest_rifle: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
-class V_SPE_US_Assault_Vest_rifle_M43: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-};
 class V_SPE_US_Vest_Garand_M43: V_SPE_Vest_Camo_Base {
     EGVAR(trenches,entrenchingTool) = 1;
 };
@@ -223,15 +190,11 @@ class V_SPE_US_Vest_Garand_eng: V_SPE_Vest_Camo_Base {
     EGVAR(trenches,entrenchingTool) = 1;
     ACE_isWirecutter = 1;
 };
-class V_SPE_US_Assault_Vest_eng: V_SPE_Vest_Camo_Base {
-    EGVAR(trenches,entrenchingTool) = 1;
-    ACE_isWirecutter = 1;
-};
 class V_SPE_GER_PioneerVest: V_SPE_Vest_Camo_Base {
     EGVAR(trenches,entrenchingTool) = 1;
     ACE_isWirecutter = 1;
 };
-class V_SPE_DAK_PioneerVest: V_SPE_Vest_Camo_Base {
+class V_SPE_DAK_PioneerVest: V_SPE_GER_PioneerVest {
     EGVAR(trenches,entrenchingTool) = 1;
     ACE_isWirecutter = 1;
 };

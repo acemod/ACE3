@@ -30,6 +30,6 @@ class SPE_Fuel_Barrel_US_01: SPE_Fuel_Barrel_base {
     EGVAR(refuel,fuelCargo) = 208;
     EGVAR(refuel,hooks)[] = {{0.2,0,0.22}};
 };
-class SPE_Fuel_Barrel_German_01: SPE_Fuel_Barrel_US_01 {
+class SPE_Fuel_Barrel_German_01: SPE_Fuel_Barrel_base {
     EGVAR(refuel,hooks)[] = {{0.32,0,-0.3}};
 };

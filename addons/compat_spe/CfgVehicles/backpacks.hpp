@@ -24,7 +24,7 @@ class B_SPE_US_Backpack_M43_GP: B_SPE_US_Backpack {
 class B_SPE_US_Backpack_RocketBag: B_SPE_US_Backpack {
     EGVAR(trenches,entrenchingTool) = 1;
 };
-class B_SPE_US_Backpack_RocketBag_Empty: B_SPE_US_Backpack {
+class B_SPE_US_Backpack_RocketBag_Empty: B_SPE_US_Backpack_RocketBag {
     EGVAR(trenches,entrenchingTool) = 1;
 };
 
