@@ -153,7 +153,6 @@ if (!isNull _loadoutsDisplay) then {
         };
     } else {
         // If in arsenal and a search bar is selected
-        private _updateSearchResults = GVAR(liveUpdateSearch);
         switch (true) do {
             // Close button
             case (_keyPressed == DIK_ESCAPE): {
@@ -162,7 +161,12 @@ if (!isNull _loadoutsDisplay) then {
             // Search
             case (_keyPressed == DIK_NUMPADENTER);
             case (_keyPressed == DIK_RETURN): {
-                _updateSearchResults = true;
+            if (GVAR(leftSearchbarFocus)) then {
+                [_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
+            };
+            if (GVAR(rightSearchbarFocus)) then {
+                [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
+            };
             };
             case (_keyPressed in [DIK_LEFT, DIK_RIGHT]);
             case (_keyPressed == DIK_BACKSPACE);
@@ -176,14 +180,6 @@ if (!isNull _loadoutsDisplay) then {
                 } else {
                     ctrlSetFocus (_display displayCtrl IDC_rightSearchbar);
                 };
-            };
-        };
-        if (_updateSearchResults) then {
-            if (GVAR(leftSearchbarFocus)) then {
-                [_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
-            };
-            if (GVAR(rightSearchbarFocus)) then {
-                [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
             };
         };
     };

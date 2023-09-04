@@ -638,6 +638,7 @@ class GVAR(display) {
             onSetFocus = QUOTE(GVAR(leftSearchbarFocus) = true);
             onKillFocus = QUOTE(GVAR(leftSearchbarFocus) = false);
             onMouseButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(clearSearchbar));
+            onEditChanged = QUOTE(call FUNC(handleSearchInputChanged));
             x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(74 * GRID_W);
