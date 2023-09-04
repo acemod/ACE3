@@ -19,6 +19,8 @@
 
 params ["_unit", "_deltaT", "_syncValue"];
 
+#define IDEAL_PPO2 0.255
+
 private _current = GET_SPO2(_unit);
 private _heartRate = GET_HEART_RATE(_unit);
 
@@ -32,7 +34,7 @@ private _po2 = if (missionNamespace getVariable ["ace_weather", false]) then {
     0.25725 * (_altitude / 1000 + 1)
 };
 
-private _oxygenSaturation = (0.255 min _po2) / 0.255;
+private _oxygenSaturation = (IDEAL_PPO2 min _po2) / IDEAL_PPO2;
 
 // Check gear for oxygen supply
 [goggles _unit, headgear _unit] findIf {
@@ -40,7 +42,7 @@ private _oxygenSaturation = (0.255 min _po2) / 0.255;
         private _condition = getText (configFile >> "CfgWeapons" >> _x >> QGVAR(oxygenSupply));
         if (_condition != "" && {ace_player call compile _condition}) then {
             _oxygenSaturation = 1;
-            _po2 = 0.255;
+            _po2 = IDEAL_PPO2;
             true
         } else {
             false
@@ -58,7 +60,10 @@ if (missionNamespace getVariable [QEGVAR(advanced_fatigue,enabled), false]) then
     _negativeChange = _negativeChange - ((1 - EGVAR(advanced_fatigue,aeReservePercentage)) * 0.5);
 };
 
-private _capture = 1 max ((_po2 / 0.255) ^ (-_po2 * 0.2));
+// Effectiveness of capturing oxygen
+// increases slightly as po2 starts lowering
+// but falls off quickly as po2 drops further
+private _capture = 1 max ((_po2 / IDEAL_PPO2) ^ (-_po2 * 0.2));
 private _positiveChange = _heartRate * 0.00368 * _oxygenSaturation * _capture;
 
 private _breathingEffectiveness = 1;
@@ -66,7 +71,9 @@ private _breathingEffectiveness = 1;
 private _rateOfChange = _negativeChange + (_positiveChange * _breathingEffectiveness);
 
 // We want to compensate even further when spo2 is dropping
-if (_rateOfChange < 0) then { _negativeChange + _rateOfChange } else {0}
+if (_rateOfChange < 0) then {
+    _negativeChange + _rateOfChange
+};
 
 private _spo2 = _current + (_rateOfChange * _deltaT);
 _spo2 = _spo2 max 0;
