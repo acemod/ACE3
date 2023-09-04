@@ -42,6 +42,7 @@
 #define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
 
 #define DEFAULT_HEART_RATE 80
+#define DEFAULT_SPO2 97
 #define DEFAULT_PERIPH_RES 100
 
 // --- blood
@@ -141,6 +142,7 @@
 #define VAR_WOUND_BLEEDING    QEGVAR(medical,woundBleeding)
 #define VAR_CRDC_ARRST        QEGVAR(medical,inCardiacArrest)
 #define VAR_HEART_RATE        QEGVAR(medical,heartRate)
+#define VAR_SPO2              QEGVAR(medical,spo2)
 #define VAR_PAIN              QEGVAR(medical,pain)
 #define VAR_PAIN_SUPP         QEGVAR(medical,painSuppress)
 #define VAR_PERIPH_RES        QEGVAR(medical,peripheralResistance)
@@ -163,6 +165,7 @@
 #define GET_BLOOD_VOLUME(unit)      (unit getVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME])
 #define GET_WOUND_BLEEDING(unit)    (unit getVariable [VAR_WOUND_BLEEDING, 0])
 #define GET_HEART_RATE(unit)        (unit getVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE])
+#define GET_SPO2(unit)              (unit getVariable [VAR_SPO2, DEFAULT_SPO2])
 #define GET_HEMORRHAGE(unit)        (unit getVariable [VAR_HEMORRHAGE, 0])
 #define GET_PAIN(unit)              (unit getVariable [VAR_PAIN, 0])
 #define GET_PAIN_SUPPRESS(unit)     (unit getVariable [VAR_PAIN_SUPP, 0])
