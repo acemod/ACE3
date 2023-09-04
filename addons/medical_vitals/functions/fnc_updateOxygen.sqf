@@ -26,7 +26,6 @@ private _altitude = (getPosASL _unit) select 2;
 private _po2 = if (missionNamespace getVariable ["ace_weather", false]) then {
     private _temperature = _altitude call EFUNC(weather,calculateTemperatureAtHeight);
     private _pressure = _altitude call EFUNC(weather,calculateBarometricPressure);
-    systemChat format ["Pressure: %1, Temperatue: %2", _pressure, _temperature];
     [_temperature, _pressure, EGVAR(weather,currentHumidity)] call EFUNC(weather,calculateOxygenDensity)
 } else {
     // Rough approximation of the partial pressure of oxygen in the air
