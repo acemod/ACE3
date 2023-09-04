@@ -22,6 +22,8 @@
     #include "stateMachine.sqf"
 
     GVAR(itemHash) = createHashMap; // move to preStart after 2.14
+    // key is Treatment Type (prefix @ represents a group of treatments)
+    // value is hash of item/treatment pairs
     {
         _x params ["_itemType", "_treatments"];
         private _typeHash = createHashMap;
