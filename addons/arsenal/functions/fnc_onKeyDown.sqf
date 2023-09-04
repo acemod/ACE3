@@ -164,6 +164,7 @@ if (!isNull _loadoutsDisplay) then {
                 if (GVAR(leftSearchbarFocus)) then {
                     [_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
                 };
+
                 if (GVAR(rightSearchbarFocus)) then {
                     [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
                 };
