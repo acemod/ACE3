@@ -13,3 +13,13 @@ private _categoryArray = [ELSTRING(medical,Category), "STR_TEAM_SWITCH_AI"];
     {[QGVAR(enabledFor), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(ignoreItemRequirements), "CHECKBOX",
+    [LSTRING(ignoreItemRequirements_title), LSTRING(ignoreItemRequirements_desc)],
+    _categoryArray,
+    true,
+    true, // isGlobal
+    {},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;

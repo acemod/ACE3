@@ -48,5 +48,11 @@
             <Czech>Pouze Server a HC</Czech>
             <Turkish>Sadece Sunucu ve HC de</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_AI_ignoreItemRequirements_title">
+            <English>Ignore Item Requirements</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_ignoreItemRequirements_desc">
+            <English>AI will ignore normal item requirements\nDisabling will require custom loadouts for AI</English>
+        </Key>
     </Package>
 </Project>
