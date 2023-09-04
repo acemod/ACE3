@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: mrschick
- * Tests if caller has a Contact DLC blindfold in their inventory to put on the captive
+ * Checks if caller can blindfold the captive
  *
  * Arguments:
- * 0: caller (player) <OBJECT>
- * 1: target <OBJECT>
+ * 0: Caller (player) <OBJECT>
+ * 1: Target <OBJECT>
  *
  * Return Value:
- * The return value <BOOL>
+ * Can blindfold <BOOL>
  *
  * Example:
  * [player, bob] call ACE_captives_fnc_canBlindfoldCaptive
@@ -17,7 +17,7 @@
  */
 
 params ["_unit", "_target"];
-//Alive, handcuffed, not being escorted, and caller has a Contact DLC blindfold in their inventory
+// Alive, handcuffed, not being escorted, and caller has a Contact DLC blindfold in their inventory
 
 (_target getVariable [QGVAR(isHandcuffed), false]) &&
 {isNull (attachedTo _target)} &&
