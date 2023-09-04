@@ -136,6 +136,23 @@
             <Chinesesimp>将俘虏带出载具</Chinesesimp>
             <Turkish>Tutukluyu indir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Captives_BlindfoldCaptive">
+            <English>Blindfold Captive</English>
+            <German>Augen verbinden</German>
+            <Spanish></Spanish>
+            <French></French>
+            <Polish></Polish>
+            <Czech></Czech>
+            <Hungarian></Hungarian>
+            <Russian></Russian>
+            <Portuguese></Portuguese>
+            <Italian>Benda gli occhi</Italian>
+            <Japanese></Japanese>
+            <Korean></Korean>
+            <Chinese></Chinese>
+            <Chinesesimp></Chinesesimp>
+            <Turkish></Turkish>
+        </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
             <German>Kabelbinder</German>

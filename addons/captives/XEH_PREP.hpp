@@ -1,5 +1,6 @@
 PREP(addLoadCaptiveActions);
 PREP(canApplyHandcuffs);
+PREP(canBlindfoldCaptive);
 PREP(canEscortCaptive);
 PREP(canLoadCaptive);
 PREP(canRemoveHandcuffs);
@@ -7,6 +8,7 @@ PREP(canStopEscorting);
 PREP(canSurrender);
 PREP(canUnloadCaptive);
 PREP(doApplyHandcuffs);
+PREP(doBlindfoldCaptive);
 PREP(doEscortCaptive);
 PREP(doLoadCaptive);
 PREP(doRemoveHandcuffs);
