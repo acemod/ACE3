@@ -1,17 +1,19 @@
 #include "script_component.hpp"
 /*
- * Author: BaerMitUmlaut, PabstMirror
- * Applies healing to target
+ * Author: PabstMirror
+ * Checks if healer has items
  *
  * Arguments:
  * 0: Healer <OBJECT>
  * 1: Treatment Type <STRING>
  *
  * Return Value:
- * Nothing
+ * 0: Has Item <BOOL>
+ * 1: Item Classname <STRING>
+ * 2: Treatment <STRING>
  *
  * Example:
- * [a, b] call ACE_medical_ai_fnc_healingLogic
+ * [cursorObject, "@bandage"] call ACE_medical_ai_fnc_itemCheck
  *
  * Public: No
  */
