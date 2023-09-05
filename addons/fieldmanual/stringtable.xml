@@ -173,7 +173,7 @@
             <English>Defusal Kit</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DefusalKit_Description">
-            <English>The %3Defusal Kit%4 allows defusal of explosives.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Difusal Kit%4.&lt;br/&gt;%2Safely approach an %3Explosive%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Defuse%4.</English>
+            <English>The %3Defusal Kit%4 allows defusal of explosives.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Defusal Kit%4.&lt;br/&gt;%2Safely approach an %3Explosive%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Defuse%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DefusalKit_ShortName">
             <English>Defuse Explosives</English>
