@@ -20,7 +20,7 @@
             <English>Thirst</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
-            <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking a drink item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose a drink item to consume.</English>
+            <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking liquids.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
             <English>Medical Treatment</English>
