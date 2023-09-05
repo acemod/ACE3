@@ -88,7 +88,7 @@ class SPE_US_Bangalore_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_Ladung_Big_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,enabled) = 1;
@@ -98,7 +98,7 @@ class SPE_Ladung_Big_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_Ladung_Small_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,enabled) = 1;
@@ -108,7 +108,7 @@ class SPE_Ladung_Small_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_US_M1A1_ATMINE_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -118,7 +118,7 @@ class SPE_US_M1A1_ATMINE_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_US_TNT_half_pound_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,enabled) = 1;
@@ -128,7 +128,7 @@ class SPE_US_TNT_half_pound_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_US_TNT_4pound_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,enabled) = 1;
@@ -138,7 +138,7 @@ class SPE_US_TNT_4pound_ammo: SPE_MAIN_pipebomb {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_US_M3_PRessure_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -148,7 +148,7 @@ class SPE_US_M3_PRessure_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_US_M3_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -158,7 +158,7 @@ class SPE_US_M3_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_shumine42_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -168,7 +168,7 @@ class SPE_shumine42_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_Shg24x7_Improvised_Mine_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -187,7 +187,7 @@ class SPE_SMI35_Pressure_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_SMI35_1_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -197,7 +197,7 @@ class SPE_SMI35_1_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_SMI35_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -207,7 +207,7 @@ class SPE_SMI35_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_STMI_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -217,7 +217,7 @@ class SPE_STMI_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
 class SPE_TMI42_ammo: SPE_MAIN_mine {
     EGVAR(frag,enabled) = 1;
@@ -227,5 +227,5 @@ class SPE_TMI42_ammo: SPE_MAIN_mine {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "3/5";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small"};
-    EGVAR(explosive,defuseObjectPosition)[] = {0, 0, 0.02};
+    EGVAR(explosives,defuseObjectPosition)[] = {0, 0, 0.02};
 };
