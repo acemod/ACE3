@@ -7,6 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_csw", "ace_explosives", "ace_refuel", "gm_core"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"sancron", "nomisum"};
         url = ECSTRING(main,URL);
