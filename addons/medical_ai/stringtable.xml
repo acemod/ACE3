@@ -52,7 +52,7 @@
             <English>Require Items</English>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_desc">
-            <English>AI healers will only treat if they have the necessary ACE medical items in their loadout</English>
+            <English>AI will only perform medical treatment if they have the necessary items in their inventory.\nRequires custom AI loadouts!</English>
         </Key>
     </Package>
 </Project>
