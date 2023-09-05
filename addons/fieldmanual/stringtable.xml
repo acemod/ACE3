@@ -194,7 +194,7 @@
             <English>Get To Cover</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
-            <English>The %3Entrenching Tool%4 allows soldiers to dig impromtu trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the size trench you wish to build.</English>
+            <English>The %3Entrenching Tool%4 allows soldiers to dig trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the size trench you wish to build.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Flashlights_DisplayName">
             <English>Flashlights</English>
@@ -203,7 +203,7 @@
             <English>Illuminate Your Map</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Flashlights_Description">
-            <English>%3Flashlights%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Flashlights%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%11%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent</English>
+            <English>%3Flashlights%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Flashlights%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%11%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_DisplayName">
             <English>HuntIR Monitor</English>
@@ -230,7 +230,7 @@
             <English>Pocket Weatherstation</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_Description">
-            <English> The %3Kestrel 4500 Pocket Weather Tracker%4 is a mini weather station useful for collecting the the following weather data:&lt;br/&gt;%2Heading and wind direction&lt;br/&gt;%2Crosswind and headwind&lt;br/&gt;%2Altitudeand barometric pressure&lt;br/&gt;%2Wet bulb temperature&lt;br/&gt;%2Humidity and dewpoint&lt;br/&gt;%2Density altitude&lt;br/&gt;%2Wind chill and temperature&lt;br/&gt;%2Time and date&lt;br/&gt;%2Minimum, maximum, and average values&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Kestrel%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Open%4.</English>
+            <English> The %3Kestrel 4500 Pocket Weather Tracker%4 is a mini weather station useful for collecting the the following weather data:&lt;br/&gt;%2Heading and wind direction&lt;br/&gt;%2Crosswind and headwind&lt;br/&gt;%2Altitude and barometric pressure&lt;br/&gt;%2Wet bulb temperature&lt;br/&gt;%2Humidity and dewpoint&lt;br/&gt;%2Density altitude&lt;br/&gt;%2Wind chill and temperature&lt;br/&gt;%2Time and date&lt;br/&gt;%2Minimum, maximum, and average values&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Kestrel%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Open%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MapTools_DisplayName">
             <English>Map Tools</English>
@@ -239,7 +239,7 @@
             <English>Triangulate Your Position</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MapTools_Description">
-            <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for triangulating your position, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Map Tools%4.&lt;br/&gt;%2 Tool can be moved with [%3Left-Click%4] and [%3ALT%4].</English>
+            <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for land, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Map Tools%4.&lt;br/&gt;%2 The Tool can be moved by dragging with [%3Left-Click%4] while holding [%3ALT%4].</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_DisplayName">
             <English>MicroDAGR GPS</English>
@@ -248,7 +248,7 @@
             <English>Advanced DAGR</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_Description">
-            <English>The %3MicroDAGR GPS%4 is an advanced version of the %3DAGR%4. It provides position, navigation, and timing (PNT) data to include:&lt;br/&gt;%2Compass and headings&lt;br/&gt;%2Date and hour synced to the mission&lt;br/&gt;%2Elevation (above or below sea level)&lt;br/&gt;%2Current speed&lt;br/&gt;%2GPS with topographic and satellite view&lt;br/&gt;%2Creating, naming, deleting waypoints&lt;br/&gt;%2Friendly identification (Needs ACE BLUFOR Tracker Setting)&lt;br/&gt;Connection to vector for data import&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2For usage instructions, please visit the dedicated %3MicroDAGR%4 wiki.</English>
+            <English>The %3MicroDAGR GPS%4 is an advanced version of the %3DAGR%4. It provides position, navigation, and timing (PNT) data to include:&lt;br/&gt;%2Compass and heading&lt;br/&gt;%2Date and hour synced to the mission&lt;br/&gt;%2Elevation (relative to sea level)&lt;br/&gt;%2Current speed&lt;br/&gt;%2GPS with topographic and satellite view&lt;br/&gt;%2Creating, naming, and deleting waypoints&lt;br/&gt;%2Friendly identification (Requires ACE BLUFOR Tracker Setting)&lt;br/&gt;Connection to the Vector-21 Rangefinder for data import (waypoint creation and grid reference of ranged targets)&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2For usage instructions, please visit the dedicated %3MicroDAGR%4 wiki.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_DisplayName">
             <English>Range Tables</English>
