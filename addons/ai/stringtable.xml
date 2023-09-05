@@ -82,7 +82,7 @@
             <Turkish>Bir yapı bulunamadı</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
-            <English>Assign NVG</English>
+            <English>Auto-Equip NVGs</English>
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_Description">
             <English>Equips NVG in inventory during night time and unequips it during day time.\nDoes not add NVGs to inventory!</English>
