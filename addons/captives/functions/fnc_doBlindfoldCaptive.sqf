@@ -23,15 +23,23 @@ private _validBlindfolds = ["G_Blindfold_01_black_F", "G_Blindfold_01_white_F"];
 private _carriedBlindfoldIdx = _validBlindfolds findAny (items _unit);
 if (_carriedBlindfoldIdx == -1) exitWith {};
 
-// Remove _target goggles if it is wearing any and move them to _unit inventory
+_unit removeItem (_validBlindfolds select _carriedBlindfoldIdx);
+
+// Remove _target goggles if it is wearing any and move them to _unit or _target inventory (if they can hold them)
 private _previousGoggles = goggles _target;
 if (_previousGoggles != "") then {
-    removeGoggles _target;
-    _unit addItem _previousGoggles;
+    if ([_unit, _previousGoggles] call CBA_fnc_canAddItem) exitWith {
+        removeGoggles _target;
+        _unit addItem _previousGoggles;
+    };
+    if ([_target, _previousGoggles] call CBA_fnc_canAddItem) exitWith {
+        removeGoggles _target;
+        _target addItem _previousGoggles;
+    };
+    // if the target goggles can fit in neither _unit nor _target inventory, drop them on the ground
+    [_target, _previousGoggles] call CBA_fnc_dropItem;
 };
 
-// Add blindfold to _target from _unit inventory
-_unit removeItem (_validBlindfolds select _carriedBlindfoldIdx);
 _target addGoggles (_validBlindfolds select _carriedBlindfoldIdx);
 
 
