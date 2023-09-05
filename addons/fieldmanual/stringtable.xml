@@ -140,7 +140,7 @@
             <English>Portable Reading Lights</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_Description">
-            <English>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you. Keep this in mind for PvP.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
+            <English>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Clackers_DisplayName">
             <English>Clackers</English>
