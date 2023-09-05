@@ -320,7 +320,7 @@
             <English>Making An Entrance</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
-            <English>%3Wirecutters%4 are a tool that allows a soldier to bipass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.</English>
+            <English>%3Wirecutters%4 are a tool that allows a soldier to bypass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%11%4] and select %3Cut Fence%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DisplayName">
             <English>Items</English>
