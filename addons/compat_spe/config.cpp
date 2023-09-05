@@ -1,14 +1,5 @@
 #include "script_component.hpp"
 
-#if __has_include("\WW2\SPE_Core_c\ZZZ_LastLoaded_c\config.bin")
-#else
-    #define PATCH_SKIP "Spearhead 1944"
-#endif
-
-#ifdef PATCH_SKIP
-ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
-#else
-
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -43,5 +34,3 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-
-#endif
