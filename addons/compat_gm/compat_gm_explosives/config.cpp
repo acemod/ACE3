@@ -2,21 +2,19 @@
 
 class CfgPatches {
     class ADDON {
-        name = COMPONENT_NAME;
+        addonRootClass = QUOTE(COMPONENT);
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_csw", "ace_refuel", "gm_core"};
+        requiredAddons[] = {
+            "gm_core",
+            "ace_explosives"
+        };
         skipWhenMissingDependencies = 1;
-        author = ECSTRING(common,ACETeam);
-        authors[] = {"sancron", "nomisum"};
-        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgAmmo.hpp"
-#include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
-#include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
