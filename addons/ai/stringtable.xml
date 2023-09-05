@@ -85,7 +85,7 @@
             <English>Assign NVG</English>
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_Description">
-            <English>Assigns NVG in AI's inventory during night time and unassigns it during day time.</English>
+            <English>Equips NVG in inventory during night time and unequips it during day time.\nDoes not add NVGs to inventory!</English>
         </Key>
     </Package>
 </Project>
