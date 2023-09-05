@@ -59,7 +59,7 @@
             <English>Increase Heartrate | Increase Conscious Chance</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_Description">
-            <English>%3Epinephrine%4 increases Heartrate as well as decreases the time between conscious checks (effectively increasing conscious chance).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
+            <English>%3Epinephrine%4 increases a patient's pulse as well as potentially decreasing the time between consciousnesss checks (effectively reducing the time needed for the patient to wake up).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%11%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_DisplayName">
             <English>Personal Aid Kit</English>
