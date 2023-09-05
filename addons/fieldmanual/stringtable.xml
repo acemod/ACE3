@@ -284,7 +284,7 @@
             <English>Lower Firearm Temperature</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_Description">
-            <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the barrel will be swapped and heat reduced. A soldier may also check the temp of any barrels within their inventory.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</English>
+            <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the weapon's barrel will be swapped and its heat reduced. A soldier may also check the temperature of any barrels within their inventory. Not all weapons support swapping barrels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SprayPaint_DisplayName">
             <English>Spray Paint</English>
