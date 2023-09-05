@@ -240,6 +240,8 @@ class CfgVehicles {
         EGVAR(medical,medicClass) = 1;
     };
 
+    // If any hard edits are made, move to an appropriate subcomponent
+    // fastroping not needed unlike RHS as no hard edits are made here
     // H E L I C O P T E R S
 
     class Helicopter_Base_F;
@@ -255,6 +257,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 3700;
         EGVAR(fastroping,enabled) = 0;
 
+        // TODO: stringtables
         class UserActions {
                 class openDoor_L {
                     displayNameDefault = "Open left Door";
