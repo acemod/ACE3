@@ -15,8 +15,8 @@ GVAR(greenLaserUnits) = [];
 ["CBA_settingsInitialized", {
     // If not enabled, dont't add draw eventhandler or PFEH (for performance)
     if (!GVAR(enabled)) exitWith {
-        ["ACE_acc_pointer_red", { false }] call CBA_fnc_addAttachementCondition;
-        ["ACE_acc_pointer_green", { false }] call CBA_fnc_addAttachementCondition;
+        ["ACE_acc_pointer_red", { false }] call CBA_fnc_addAttachmentCondition;
+        ["ACE_acc_pointer_green", { false }] call CBA_fnc_addAttachmentCondition;
         ["CBA_attachmentSwitched", {
             params ["_unit", "_prevItem", "_newItem", "_currWeaponType"];
             TRACE_4("CBA_attachmentSwitched eh",_unit,_prevItem,_newItem,_currWeaponType);
