@@ -6,7 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_csw", "ace_explosives", "ace_refuel", "gm_core"};
+        requiredAddons[] = {"ace_common", "gm_core"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"sancron", "nomisum"};
         url = ECSTRING(main,URL);
@@ -14,7 +15,6 @@ class CfgPatches {
     };
 };
 
-#include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
