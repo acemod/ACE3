@@ -155,6 +155,7 @@ def main():
 
     for root, _, files in os.walk(root_dir):
         for file in fnmatch.filter(files, "stringtable.xml"):
+            if (".hemttout" in root): continue
             stringtable_files.append(os.path.join(root, file))
 
     stringtable_files.sort()

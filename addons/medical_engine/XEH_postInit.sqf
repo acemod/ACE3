@@ -13,6 +13,7 @@
     // Check if last hit point is our dummy.
     private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
     reverse _allHitPoints;
+    while {(_allHitPoints param [0, ""]) select [0,1] == "#"} do { WARNING_1("Ignoring Reflector hitpoint %1", _allHitPoints deleteAt 0); };
 
     if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
         private _config = configOf _unit;
@@ -41,11 +42,22 @@
 // this handles moving units into vehicles via load functions or zeus
 // needed, because the vanilla INCAPACITATED state does not handle vehicles
 ["CAManBase", "GetInMan", {
-    params ["_unit"];
-    if (!local _unit) exitWith {};
+    params ["_unit", "", "_vehicle"];
 
-    if (lifeState _unit == "INCAPACITATED") then {
+    if (local _unit && {lifeState _unit == "INCAPACITATED"}) then {
         [_unit, true] call FUNC(setUnconsciousAnim);
+    };
+
+    if (local _vehicle) then {
+        [_unit] call FUNC(lockUnconsciousSeat);
+    };
+}] call CBA_fnc_addClassEventHandler;
+
+["CAManBase", "GetOutMan", {
+    params ["_unit", "", "_vehicle"];
+
+    if (local _vehicle) then {
+        [_unit] call FUNC(unlockUnconsciousSeat);
     };
 }] call CBA_fnc_addClassEventHandler;
 
@@ -70,3 +82,31 @@
         [_unit, false] call FUNC(setUnconsciousAnim);
     };
 }] call CBA_fnc_addClassEventHandler;
+
+["ace_unconscious", {
+    params ["_unit", "_unconscious"];
+    TRACE_3("unit uncon",_unit,objectParent _unit,local _unit);
+    if (!isNull objectParent _unit && {local objectParent _unit}) then {
+        if (_unconscious) then {
+            [_unit] call FUNC(lockUnconsciousSeat);
+        } else {
+            [_unit] call FUNC(unlockUnconsciousSeat);
+        };
+    };
+}] call CBA_fnc_addEventHandler;
+
+["ace_killed", { // global event
+    params ["_unit"];
+    TRACE_3("unit Killed",_unit,objectParent _unit,local _unit);
+    if (!isNull objectParent _unit && {local objectParent _unit}) exitWith {
+        [_unit] call FUNC(lockUnconsciousSeat);
+    };
+}] call CBA_fnc_addEventHandler;
+
+["CAManBase", "deleted", {
+    params ["_unit"];
+    TRACE_3("unit deleted",_unit,objectParent _unit,local _unit);
+    if ((!isNull objectParent _unit) && {local objectParent _unit}) then {
+        [_unit] call FUNC(unlockUnconsciousSeat);
+    };
+}, true, []] call CBA_fnc_addClassEventHandler;

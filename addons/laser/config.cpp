@@ -20,8 +20,6 @@ class CfgPatches {
 
 
 class RscControlsGroup;
-class VScrollbar;
-class HScrollbar;
 class RscText;
 class RscMapControl;
 class RscControlsGroupNoScrollbars;

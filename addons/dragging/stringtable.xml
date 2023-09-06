@@ -147,5 +147,21 @@
             <Chinesesimp>允许玩家在拖动时开火。</Chinesesimp>
             <Korean>플레이어가 무기를 끄는 동안에 무기를 사용할 수 있게합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Dragging_allowRunWithLightweight_DisplayName">
+            <English>Allow Running with Lightweight Objects</English>
+            <Japanese>軽量物を持って走れるようにする</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_allowRunWithLightweight_Description">
+            <English>Allow the player to run when carrying lightweight objects.</English>
+            <Japanese>プレイヤーが軽量オブジェクトを持ち運んでいるときに走れるようにする。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_skipContainerWeight_DisplayName">
+            <English>Skip Object Weight</English>
+            <Japanese>オブジェクトの重量を無視</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_skipContainerWeight_Description">
+            <English>Determines whether object's weight is added onto weight calculations.</English>
+            <Japanese>重量計算にオブジェクトの重量を追加するかどうかを決定します。</Japanese>
+        </Key>
     </Package>
 </Project>

@@ -1,12 +1,15 @@
 PREP(addCustomTag);
+PREP(addStencilTag);
 PREP(addTagActions);
 PREP(applyCustomTag);
 PREP(checkTaggable);
 PREP(compileConfigTags);
 PREP(compileTagAction);
 PREP(createTag);
+PREP(generateStencilTexture);
 PREP(moduleInit);
 PREP(parseConfigTag);
 PREP(quickTag);
+PREP(stencilVehicle);
 PREP(tag);
 PREP(tagTestingThread);

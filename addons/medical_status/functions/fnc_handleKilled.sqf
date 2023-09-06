@@ -53,4 +53,7 @@ if (_unit == player) then {
     ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
 };
 
+// Remove status effects before respawn, in case mission is using spectator
+[_unit, false] call FUNC(setStatusEffects);
+
 ["ace_killed", [_unit, _causeOfDeath, _killer, _instigator]] call CBA_fnc_globalEvent;

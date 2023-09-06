@@ -68,7 +68,7 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     QGVAR(persistentLaserEnabled),
     "CHECKBOX",
     [LSTRING(SettingPersistentLaserName), LSTRING(SettingPersistentLaserDesc)],
-    localize LSTRING(ACEKeybindCategoryWeapons),
+    LSTRING(ACEKeybindCategoryWeapons),
     false,
     false,
     LINKFUNC(switchPersistentLaser)

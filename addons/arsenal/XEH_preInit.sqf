@@ -1,27 +1,17 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
+#define TOOLS_TAB_ICON "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"
+
 ADDON = false;
 
 PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-// Arsenal
-[QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_fnc_addSetting;
-[QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_fnc_addSetting;
-[QGVAR(fontHeight), "SLIDER", [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)], localize LSTRING(settingCategory), [1, 10, 4.5, 1]] call CBA_fnc_addSetting;
-[QGVAR(enableIdentityTabs), "CHECKBOX", localize LSTRING(enableIdentityTabsSettings), localize LSTRING(settingCategory), true, true] call CBA_fnc_addSetting;
+#include "initSettings.sqf"
 
-// Arsenal loadouts
-[QGVAR(allowDefaultLoadouts), "CHECKBOX", [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)], [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true, true] call CBA_fnc_addSetting;
-[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true, true] call CBA_fnc_addSetting;
-[QGVAR(EnableRPTLog), "CHECKBOX", [LSTRING(printToRPTSetting), LSTRING(printToRPTTooltip)], [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false, false] call CBA_fnc_addSetting;
-
-[QGVAR(loadoutsSaveFace), "CHECKBOX", localize LSTRING(loadoutsSaveFaceSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false] call CBA_fnc_addSetting;
-[QGVAR(loadoutsSaveVoice), "CHECKBOX", localize LSTRING(loadoutsSaveVoiceSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false] call CBA_fnc_addSetting;
-[QGVAR(loadoutsSaveInsignia), "CHECKBOX", localize LSTRING(loadoutsSaveInsigniaSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true] call CBA_fnc_addSetting;
-
+// Arsenal events
 [QGVAR(statsToggle), {
     params ["_display", "_showStats"];
 
@@ -30,49 +20,71 @@ PREP_RECOMPILE_END;
     private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
     private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
 
-    private _statsButtonCtrl = _display displayCtrl IDC_statsButton;
-    private _statsButtonCloseCtrl = _display displayCtrl IDC_statsButtonClose;
-
     {
         _x ctrlShow (GVAR(showStats) && {_showStats});
     } forEach [
         _statsCtrlGroupCtrl,
         _statsPreviousPageCtrl,
         _statsNextPageCtrl,
-        _statsCurrentPageCtrl,
-        _statsButtonCloseCtrl
+        _statsCurrentPageCtrl
     ];
-
-    _statsButtonCtrl ctrlShow (!GVAR(showStats) && {_showStats})
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(statsButton), {
-    _this call FUNC(buttonStats);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(statsChangePage), {
     _this call FUNC(buttonStatsPage);
 }] call CBA_fnc_addEventHandler;
 
-
 [QGVAR(displayStats), {
     _this call FUNC(handleStats);
 }] call CBA_fnc_addEventHandler;
 
-call FUNC(compileStats);
+[QGVAR(actionsChangePage), {
+    _this call FUNC(buttonActionsPage);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(displayActions), {
+    _this call FUNC(handleActions);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(actionsToggle), {
+    params ["_display", "_showActions"];
+
+    private _actionsCtrlGroupCtrl = _display displayCtrl IDC_actionsBox;
+    private _actionsPreviousPageCtrl = _display displayCtrl IDC_actionsPreviousPage;
+    private _actionsNextPageCtrl = _display displayCtrl IDC_actionsNextPage;
+    private _actionsCurrentPageCtrl = _display displayCtrl IDC_actionsCurrentPage;
+
+    {
+        _x ctrlShow (GVAR(showActions) && {_showActions});
+    } forEach [
+        _actionsCtrlGroupCtrl,
+        _actionsPreviousPageCtrl,
+        _actionsNextPageCtrl,
+        _actionsCurrentPageCtrl
+    ];
+}] call CBA_fnc_addEventHandler;
+
+call FUNC(compileActions);
 call FUNC(compileSorts);
+call FUNC(compileStats);
 
 [QUOTE(ADDON), {!isNil QGVAR(camera)}] call CBA_fnc_registerFeatureCamera;
 
-// Compatibility with CBA scripted optics and dispoable framework
+// Compatibility with CBA scripted optics and disposable framework
 [QGVAR(displayOpened), {
-    "cba_optics_arsenalOpened" call CBA_fnc_localEvent;
-    "cba_disposable_arsenalOpened" call CBA_fnc_localEvent;
+    "CBA_optics_arsenalOpened" call CBA_fnc_localEvent;
+    "CBA_disposable_arsenalOpened" call CBA_fnc_localEvent;
+    EGVAR(common,blockItemReplacement) = true;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(displayClosed), {
-    "cba_optics_arsenalClosed" call CBA_fnc_localEvent;
-    "cba_disposable_arsenalClosed" call CBA_fnc_localEvent;
+    "CBA_optics_arsenalClosed" call CBA_fnc_localEvent;
+    "CBA_disposable_arsenalClosed" call CBA_fnc_localEvent;
+    EGVAR(common,blockItemReplacement) = false;
 }] call CBA_fnc_addEventHandler;
+
+// Setup Tools tab
+[keys (uiNamespace getVariable [QGVAR(configItemsTools), createHashMap]), LLSTRING(toolsTab), TOOLS_TAB_ICON, -1, true] call FUNC(addRightPanelButton);
+
 
 ADDON = true;

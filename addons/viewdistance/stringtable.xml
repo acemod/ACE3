@@ -390,7 +390,7 @@
             <Hungarian>Látótávolság:</Hungarian>
             <Russian>Дальность видимости:</Russian>
             <Italian>Distanza Visiva:</Italian>
-            <Japanese>視界距離：</Japanese>
+            <Japanese>視界距離:</Japanese>
             <Korean>시야:</Korean>
             <Chinesesimp>视距：</Chinesesimp>
             <Chinese>視野距離:</Chinese>
@@ -423,7 +423,7 @@
             <Hungarian>Ez a beállítás érvénytelen! A maximum mennyiség</Hungarian>
             <Russian>Настройка не верна! Текущий предел</Russian>
             <Italian>Questa opzione è invalida! Il limite è</Italian>
-            <Japanese>このオプションは無効です！制限は</Japanese>
+            <Japanese>このオプションは無効です! 制限は</Japanese>
             <Korean>이 옵션은 불가능합니다! 제한은</Korean>
             <Chinesesimp>该选项是无效的！ 限制是</Chinesesimp>
             <Chinese>該選項是無效的! 限制是</Chinese>
