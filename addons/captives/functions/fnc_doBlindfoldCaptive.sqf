@@ -42,4 +42,3 @@ if (_previousGoggles != "") then {
 
 _target addGoggles (_validBlindfolds select _carriedBlindfoldIdx);
 
-
