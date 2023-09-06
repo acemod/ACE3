@@ -7,4 +7,4 @@ PREP(cookOffEffect);
 PREP(cookOffBox);
 PREP(detonateAmmunition);
 PREP(getVehicleAmmo);
-
+PREP(isMagazineFlare);

@@ -11,5 +11,8 @@ PREP_RECOMPILE_END;
 #include "initSettings.sqf"
 
 GVAR(detonationHandlers) = [];
+GVAR(excludedMines) = [];
+
+GVAR(defusalKits) = call (uiNamespace getVariable QGVAR(defusalKits));
 
 ADDON = true;

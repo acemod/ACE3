@@ -73,6 +73,7 @@ def main(argv):
     for filename in xml_list:
         allDefinedStrings = allDefinedStrings + getDefinedStrings(filename)
     for filename in sqf_list:
+        if ("compat_rhs" in filename): continue #ignore strings in sub-configs for rhs/csw
         allUsedStrings = allUsedStrings + getStringUsage(filename)
 
     allDefinedStrings = list(sorted(set(allDefinedStrings)))

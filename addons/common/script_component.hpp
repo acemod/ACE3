@@ -16,7 +16,7 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-
+// just kept for BWC, canDig now uses GVAR(canDigSurfaces)
 #define DIG_SURFACE_BLACKLIST [ \
     "concrete", "concrete_exp", "concrete_int", "int_concrete", "int_concrete_exp", \
     "pavement_exp", "int_pavement_exp", \

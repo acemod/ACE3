@@ -65,4 +65,6 @@ isClass _config
             default {false};
         };
     }
+} && {
+    _skipForZeus || {((getNumber (_config >> "allowedUnderwater")) == 1) || {!([_medic] call EFUNC(common,isSwimming))}}
 }

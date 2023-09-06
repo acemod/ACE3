@@ -43,7 +43,7 @@
             <Chinesesimp>总是在自我互动中显示检查弹药动作</Chinesesimp>
             <French>Toujours afficher l'action de vérification des munitions</French>
             <Portuguese>Sempre mostrar a opção de checar a própria munição</Portuguese>
-            <Russian>Всегда показывать проверку боеприпасов в меню взаимодействия с собой</Russian>
+            <Russian>Всегда показывать проверку боеприпасов</Russian>
             <Spanish>Mostrar siempre la autointeracción de comprobar munición</Spanish>
             <German>Zeige immer die Selbstinteraktion zur Prüfung der Munition an.</German>
             <Korean>상호작용에 탄약 확인을 항상 띄우기</Korean>
@@ -128,6 +128,18 @@
             <Korean>벨트 연결 중...</Korean>
             <Chinesesimp>正在连接弹链...</Chinesesimp>
             <Chinese>連接彈鏈中...</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Reload_BeltLinked">
+            <English>Belt was linked</English>
+            <French>Bande a été attachée</French>
+            <German>Gurt wurde angehängt</German>
+            <Japanese>ベルトがリンクされた</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Reload_BeltNotLinked">
+            <English>Belt could not be linked</English>
+            <French>Bande n'a pas pu être attachée</French>
+            <German>Gurt konnte nicht angehängt werden</German>
+            <Japanese>ベルトはリンクされなかった</Japanese>
         </Key>
     </Package>
 </Project>

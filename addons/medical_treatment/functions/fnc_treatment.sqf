@@ -54,7 +54,9 @@ private _userAndItem = if (GET_NUMBER_ENTRY(_config >> "consumeItem") == 1) then
 
 _userAndItem params ["_itemUser", "_usedItem"];
 
-if (_medic isNotEqualTo player || {isNull findDisplay 312}) then {
+private _isInZeus = !isNull findDisplay 312;
+
+if (_medic isNotEqualTo player || {!_isInZeus}) then {
     // Get treatment animation for the medic
     private _medicAnim = if (_medic isEqualTo _patient) then {
         getText (_config >> ["animationMedicSelf", "animationMedicSelfProne"] select (stance _medic == "PRONE"));
@@ -134,10 +136,16 @@ if (_medic isNotEqualTo player || {isNull findDisplay 312}) then {
     };
 
     // Play a random treatment sound globally if defined
-    if (isArray (_config >> "sounds")) then {
-        selectRandom getArray (_config >> "sounds") params ["_file", ["_volume", 1], ["_pitch", 1], ["_distance", 10]];
+    private _soundsConfig = _config >> "sounds";
+
+    if (isArray _soundsConfig) then {
+        (selectRandom (getArray _soundsConfig)) params ["_file", ["_volume", 1], ["_pitch", 1], ["_distance", 10]];
         playSound3D [_file, objNull, false, getPosASL _medic, _volume, _pitch, _distance];
     };
+};
+
+if (_isInZeus) then {
+    _treatmentTime = _treatmentTime * GVAR(treatmentTimeCoeffZeus);
 };
 
 GET_FUNCTION(_callbackStart,_config >> "callbackStart");
@@ -158,7 +166,7 @@ if (_callbackProgress isEqualTo {}) then {
     FUNC(treatmentFailure),
     getText (_config >> "displayNameProgress"),
     _callbackProgress,
-    ["isNotInside", "isNotInZeus"]
+    ["isNotInside", "isNotSwimming", "isNotInZeus"]
 ] call EFUNC(common,progressBar);
 
 true

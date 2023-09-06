@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 0: Target (ACE_DefuseObject) <OBJECT>
+ * 1: Target (ACE_DefuseObject) <OBJECT>
  *
  * Return Value:
  * Able to defuse <BOOL>
@@ -24,7 +24,7 @@ if (isNull _explosive) exitWith {
     deleteVehicle _target;
     false
 };
-if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (_unit call EFUNC(common,uniqueItems)))}) exitWith {false};
+if (vehicle _unit != _unit || {(_unit call EFUNC(common,uniqueItems)) findAny GVAR(defusalKits) == -1}) exitWith {false};
 
 if (GVAR(RequireSpecialist) && {!([_unit] call EFUNC(Common,isEOD))}) exitWith {false};
 

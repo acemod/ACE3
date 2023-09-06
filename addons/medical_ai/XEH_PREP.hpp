@@ -4,6 +4,7 @@ PREP(healSelf);
 PREP(healUnit);
 PREP(isInjured);
 PREP(isSafe);
+PREP(itemCheck);
 PREP(playTreatmentAnim);
 PREP(requestMedic);
 PREP(wasRequested);

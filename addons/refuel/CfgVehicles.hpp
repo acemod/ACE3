@@ -1,50 +1,7 @@
-#define MACRO_NOZZLE_ACTIONS \
-    class ACE_Actions { \
-        class ACE_MainActions { \
-            displayName = CSTRING(Refuel); \
-            distance = REFUEL_ACTION_DISTANCE; \
-            position = "[0,-0.025,0.125]"; \
-            condition = "true"; \
-            statement = ""; \
-            exceptions[] = {INTERACT_EXCEPTIONS}; \
-            showDisabled = 0; \
-            icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            class GVAR(PickUpNozzle) { \
-                displayName = CSTRING(TakeNozzle); \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
-                statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeNozzle)); \
-                exceptions[] = {INTERACT_EXCEPTIONS_REFUELING}; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            }; \
-            class GVAR(TurnOn) { \
-                displayName = CSTRING(TurnOn); \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn)); \
-                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOn)); \
-                exceptions[] = {INTERACT_EXCEPTIONS}; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            }; \
-            class GVAR(TurnOff) { \
-                displayName = CSTRING(TurnOff); \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff)); \
-                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOff)); \
-                exceptions[] = {INTERACT_EXCEPTIONS}; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            }; \
-            class GVAR(Disconnect) { \
-                displayName = CSTRING(Disconnect); \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
-                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
-                exceptions[] = {INTERACT_EXCEPTIONS_REFUELING}; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            }; \
-        }; \
-    };
-
 class CBA_Extended_EventHandlers;
 
 class CfgNonAIVehicles {
     class GVAR(fuelHoseSegment) {
-        access = 0;
         scope = 2;
         displayName = "Fuel Hose";
         simulation = "ropesegment";
@@ -92,14 +49,61 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        MACRO_NOZZLE_ACTIONS
         displayName = QGVAR(fuelNozzle);
         scope = 1;
         scopeCurator = 1;
         model = QPATHTOF(data\nozzle.p3d);
         destrType = "DestructNo";
+
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(Refuel);
+                distance = REFUEL_ACTION_DISTANCE;
+                position = "[0,-0.025,0.125]";
+                condition = "true";
+                statement = "";
+                exceptions[] = {INTERACT_EXCEPTIONS};
+                showDisabled = 0;
+                icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                class GVAR(PickUpNozzle) {
+                    displayName = CSTRING(TakeNozzle);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeNozzle));
+                    exceptions[] = {INTERACT_EXCEPTIONS_REFUELING};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+                class GVAR(TurnOn) {
+                    displayName = CSTRING(TurnOn);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(turnOn));
+                    exceptions[] = {INTERACT_EXCEPTIONS};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+                class GVAR(TurnOn_Container) {
+                    displayName = CSTRING(TurnOn_Container);
+                    condition = QUOTE([ARR_3(_player,_target,true)] call FUNC(canTurnOn));
+                    statement = QUOTE([ARR_3(_player,_target,true)] call FUNC(turnOn));
+                    exceptions[] = {INTERACT_EXCEPTIONS};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+                class GVAR(TurnOff) {
+                    displayName = CSTRING(TurnOff);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(turnOff));
+                    exceptions[] = {INTERACT_EXCEPTIONS};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+                class GVAR(Disconnect) {
+                    displayName = CSTRING(Disconnect);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(disconnect));
+                    exceptions[] = {INTERACT_EXCEPTIONS_REFUELING};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+            };
+        };
     };
-    
+
     class Rope;
     class GVAR(fuelHose): Rope {
         hiddenSelections[] = {"rope"};
@@ -268,7 +272,7 @@ class CfgVehicles {
     };
 
     class Van_01_fuel_base_F: Van_01_base_F {
-        GVAR(hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
+        GVAR(hooks)[] = {{0.38,-3.17,-0.7},{-0.41,-3.17,-0.7}};
         GVAR(fuelCargo) = 2000;
     };
     class C_Van_01_fuel_F: Van_01_fuel_base_F {
@@ -292,7 +296,7 @@ class CfgVehicles {
 
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         transportFuel = 0; //3k
-        GVAR(hooks)[] = {{-1.08,-4.81,-.8}};
+        GVAR(hooks)[] = {{-1.08,-4.81,-0.8}};
         GVAR(fuelCargo) = 1000;
     };
 
@@ -413,13 +417,13 @@ class CfgVehicles {
 
     class B_Truck_01_fuel_F: B_Truck_01_mover_F {
         transportFuel = 0; //3k
-        GVAR(hooks)[] = {{.28,-4.99,-.3},{-.25,-4.99,-.3}};
+        GVAR(hooks)[] = {{0.28,-4.99,-0.3},{-0.25,-4.99,-0.3}};
         GVAR(fuelCargo) = 10000;
     };
 
     class O_Truck_03_fuel_F: Truck_03_base_F {
         transportFuel = 0; //3k
-        GVAR(hooks)[] = {{1.3,-1.59,-.62},{-1.16,-1.59,-.62}};
+        GVAR(hooks)[] = {{1.3,-1.59,-0.62},{-1.16,-1.59,-0.62}};
         GVAR(fuelCargo) = 10000;
     };
 
@@ -433,7 +437,7 @@ class CfgVehicles {
     class Pod_Heli_Transport_04_base_F: Slingload_base_F {};
     class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
         transportFuel = 0; //3k
-        GVAR(hooks)[] = {{-1.49,1.41,-.3}};
+        GVAR(hooks)[] = {{-1.49,1.41,-0.3}};
         GVAR(fuelCargo) = 10000;
     };
 
@@ -496,7 +500,7 @@ class CfgVehicles {
 
     class Land_fs_feed_F: House_Small_F {
         transportFuel = 0; //50k
-        GVAR(hooks)[] = {{-0.4,0.022,-.23}};
+        GVAR(hooks)[] = {{-0.4,0.022,-0.23}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 

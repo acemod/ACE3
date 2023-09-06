@@ -53,6 +53,17 @@ class CfgVehicles {
         };
     };
 
+    class LandVehicle;
+    class Car: LandVehicle {
+        GVAR(canTag) = 1;
+    };
+    class Tank: LandVehicle {
+        GVAR(canTag) = 1;
+    };
+    class Air;
+    class Helicopter: Air {
+        GVAR(canTag) = 1;
+    };
 
     class Item_Base_F;
     class ACE_Item_SpraypaintBlack: Item_Base_F {

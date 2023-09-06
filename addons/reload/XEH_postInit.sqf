@@ -1,63 +1,55 @@
 // by esteldunedain
 #include "script_component.hpp"
 
-if (!hasInterface) exitWith {};
-
-// Add keybinds
-["ACE3 Weapons", QGVAR(checkAmmo), localize LSTRING(checkAmmo), {
-    // Conditions: canInteract
-    if !([ACE_player, vehicle ACE_player, ["isNotInside", "isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    // Conditions: specific
-    if !(ACE_player call FUNC(canCheckAmmoSelf)) exitWith {false};
-    // Ignore if controlling UAV (blocks radar keybind)
-    if (!isNull (ACE_controlledUAV param [0, objNull])) exitWith {false};
-
-    // Statement
-    [ACE_player, ACE_player] call FUNC(checkAmmo);
-    true
-}, {false}, [19, [false, true, false]], false] call CBA_fnc_addKeybind;
-
+// To propagate the setAmmo change, do it on all clients
+// See https://github.com/acemod/ACE3/issues/1119 and https://feedback.bistudio.com/T167015
 [QGVAR(syncAmmo), {
-    //To propagate the setAmmo change, do it on all clients
     params ["_unit", "_weapon", "_ammo"];
     TRACE_3("syncAmmo EH",_unit,_weapon,_ammo);
-
     _unit setAmmo [_weapon, _ammo];
 }] call CBA_fnc_addEventHandler;
 
 // Listen for attempts to link ammo
 [QGVAR(ammoLinked), {
-    params ["_receiver", "_giver", "_magazine"];
-
-    private _magazineType = currentMagazine _receiver;
-    private _magazineCfg = configFile >> "CfgMagazines" >> _magazineType;
+    params ["_target", "_unit", "_magazineInfo"];
+    _magazineInfo params ["_magazine", "_ammo"];
 
     // Return the magazine if it's the wrong type
-    if (_magazineType != (_magazine select 0)) exitWith {
-        [QGVAR(ammoReturned), [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
+    if (currentMagazine _target != _magazine) exitWith {
+        [QGVAR(ammoReturned), [_unit, _target, _magazineInfo, false], _unit] call CBA_fnc_targetEvent;
     };
 
-    private _ammoCount = _receiver ammo currentWeapon _receiver;
-    private _ammoMissing = getNumber (_magazineCfg >> "count") - _ammoCount;
+    private _currentWeapon = currentWeapon _target;
+    private _currentAmmo = _target ammo _currentWeapon;
+    private _magazineCfg = configFile >> "CfgMagazines" >> _magazine;
+    private _ammoMissing = getNumber (_magazineCfg >> "count") - _currentAmmo;
 
     // Return the magazine if the belt is full or empty
-    if ((_ammoCount == 0)  || _ammoMissing == 0) exitWith {
-        [QGVAR(ammoReturned), [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
+    if (_currentAmmo == 0 || {_ammoMissing == 0}) exitWith {
+        [QGVAR(ammoReturned), [_unit, _target, _magazineInfo, false], _unit] call CBA_fnc_targetEvent;
     };
 
     // Add the ammo
-    private _ammoAdded = _ammoMissing min (_magazine select 1);
-    [QGVAR(syncAmmo), [_receiver, currentWeapon _receiver, _ammoCount + _ammoAdded]] call CBA_fnc_globalEvent;
+    private _ammoAdded = _ammoMissing min _ammo;
+    [QGVAR(syncAmmo), [_target, _currentWeapon, _currentAmmo + _ammoAdded]] call CBA_fnc_globalEvent;
 
-    if ((_magazine select 1) - _ammoAdded > 0) then {
-        [QGVAR(ammoReturned), [_giver, _receiver, [_magazineType, (_magazine select 1) - _ammoAdded]], [_giver]] call CBA_fnc_targetEvent;
+    // Return left over ammo to reloading unit
+    if (_ammo - _ammoAdded > 0) then {
+        [QGVAR(ammoReturned), [_unit, _target, [_magazine, _ammo - _ammoAdded], true], _unit] call CBA_fnc_targetEvent;
     };
 }] call CBA_fnc_addEventHandler;
 
 // Listen for returned magazines
 [QGVAR(ammoReturned), {
-    params ["_receiver", "", "_magazine"];
-    TRACE_2("ammoReturned EH",_receiver,_magazine);
+    params ["_unit", "_target", "_magazineInfo", "_success"];
+    TRACE_3("ammoReturned EH",_unit,_target,_magazineInfo);
 
-    _receiver addMagazine _magazine;
+    // If inventory is full, magazine will be dropped on the ground
+    [_unit, _magazineInfo select 0, _magazineInfo select 1, true] call CBA_fnc_addMagazine;
+
+    [[LSTRING(BeltNotLinked), LSTRING(BeltLinked)] select _success] call EFUNC(common,displayTextStructured);
 }] call CBA_fnc_addEventHandler;
+
+if (!hasInterface) exitWith {};
+
+#include "initKeybinds.sqf"
