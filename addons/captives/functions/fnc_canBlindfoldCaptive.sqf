@@ -11,18 +11,17 @@
  * Can blindfold <BOOL>
  *
  * Example:
- * [player, bob] call ACE_captives_fnc_canBlindfoldCaptive
+ * [player, cursorObject] call ACE_captives_fnc_canBlindfoldCaptive
  *
  * Public: No
  */
 
 params ["_unit", "_target"];
-// Alive, handcuffed, not being escorted, and caller has a Contact DLC blindfold in their inventory
+// Alive, handcuffed, not being escorted, and caller has a blindfold in their inventory
 
 (_target getVariable [QGVAR(isHandcuffed), false]) &&
 {isNull (attachedTo _target)} &&
 {alive _target} &&
-{(vehicle _unit) == _unit} &&
-{(vehicle _target) == _target} &&
-{(GVAR(validBlindfolds) findAny (items _unit)) != -1}
-
+{isNull objectParent _unit} &&
+{isNull objectParent _target} &&
+{(GVAR(blindfolds) findAny (_unit call EFUNC(common,uniqueItems))) != -1}

@@ -18,12 +18,11 @@
 
 params ["_unit", "_target", "_state"];
 
-// check if _unit has a Contact DLC blindfold in its inventory, abort otherwise.
-private _validBlindfolds = GVAR(validBlindfolds);
-private _carriedBlindfoldIdx = _validBlindfolds findAny (items _unit);
-if (_carriedBlindfoldIdx == -1) exitWith {};
+// check if _unit has a blindfold in its inventory, abort otherwise.
+private _carriedBlindfoldIdx = GVAR(blindfolds) findAny (_unit call EFUNC(common,uniqueItems));
+if (_carriedBlindfoldIdx == -1) exitWith { ERROR("no blindfold"); };
 
-_unit removeItem (_validBlindfolds select _carriedBlindfoldIdx);
+_unit removeItem (GVAR(blindfolds) select _carriedBlindfoldIdx);
 
 // Remove _target goggles if it is wearing any and move them to _unit or _target inventory (if they can hold them)
 private _previousGoggles = goggles _target;
@@ -40,5 +39,5 @@ if (_previousGoggles != "") then {
     [_target, _previousGoggles] call CBA_fnc_dropItem;
 };
 
-_target addGoggles (_validBlindfolds select _carriedBlindfoldIdx);
+_target addGoggles (GVAR(blindfolds) select _carriedBlindfoldIdx);
 
