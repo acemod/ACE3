@@ -23,5 +23,11 @@
             <Chinesesimp>控制乘员是否受到车辆碰撞的伤害。</Chinesesimp>
             <Korean>차량 충돌로 인해 탑승인원들이 피해를 받을 지 결정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_displayName">
+            <English>Armor PassThrough Effect</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_displayName">
+            <English>Controls effect of armor 'passThrough' on final damage. Makes high armor values, like ones used in GL rigs, less effective.\nUse 0% for pre 3.16.0 armor behavior.\nOnly touch this if you know what you're doing!</English>
+        </Key>
     </Package>
 </Project>

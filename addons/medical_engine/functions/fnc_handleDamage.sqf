@@ -38,7 +38,9 @@ private _newDamage = _damage - _oldDamage;
 [_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
 private _realDamage = _newDamage * _armor;
 if (_hitPoint isNotEqualTo "#structural") then {
-    _newDamage = _newDamage * (_armor/_armorScaled);
+    private _armorCoef = _armor/_armorScaled;
+    private _damageCoef = linearConversion [0, 1, GVAR(damagePassThroughEffect), 1, _armorCoef];
+    _newDamage = _newDamage * _damageCoef;
 };
 TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
 
