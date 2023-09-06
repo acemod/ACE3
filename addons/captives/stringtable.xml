@@ -139,19 +139,19 @@
         <Key ID="STR_ACE_Captives_BlindfoldCaptive">
             <English>Blindfold Captive</English>
             <German>Augen verbinden</German>
-            <Spanish></Spanish>
-            <French></French>
-            <Polish></Polish>
-            <Czech></Czech>
-            <Hungarian></Hungarian>
-            <Russian></Russian>
-            <Portuguese></Portuguese>
+            <Spanish>Vendas los ojos al cautivo</Spanish>
+            <French>Bandes les yeux</French>
+            <Polish>zawiązujesz oczy jeńcowi</Polish>
+            <Czech>zavážete zajatci oči</Czech>
+            <Hungarian>bekötöd a fogoly szemét</Hungarian>
+            <Russian>Вы завязываете пленнику глаза</Russian>
+            <Portuguese>Vendas os olhos</Portuguese>
             <Italian>Benda gli occhi</Italian>
-            <Japanese></Japanese>
-            <Korean></Korean>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Turkish></Turkish>
+            <Japanese>捕虜に目隠しをする</Japanese>
+            <Korean>포로에게 눈을 가리고</Korean>
+            <Chinese>蒙住囚犯的眼睛</Chinese>
+            <Chinesesimp>蒙住囚犯的眼睛</Chinesesimp>
+            <Turkish>Esirin Gözlerini Bağlayın</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -477,31 +477,31 @@
             <English>Goggles that count as blindfolds</English>
             <German>Brillen-Items die Augenbinden sind</German>
             <Italian>Occhiali che sono bende per gli occhi</Italian>
-            <Japanese></Japanese>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Korean></Korean>
-            <Polish></Polish>
-            <Russian></Russian>
-            <Portuguese></Portuguese>
-            <French></French>
-            <Czech></Czech>
-            <Spanish></Spanish>
+            <Japanese>目隠しにもなるゴーグル</Japanese>
+            <Chinese>可用作眼罩的護目鏡</Chinese>
+            <Chinesesimp>可用作眼罩的护目镜</Chinesesimp>
+            <Korean>눈가리개로 사용할 수 있는 고글</Korean>
+            <Polish>Gogle, które liczą się jako opaski na oczy</Polish>
+            <Russian>Очки, которые можно считать повязками на глаза</Russian>
+            <Portuguese>Óculos que valem como vendas</Portuguese>
+            <French>Lunettes pouvant être utilisées comme bandeau</French>
+            <Czech>Brýle, které lze použít jako pásky přes oči</Czech>
+            <Spanish>Gafas que se pueden utilizar como vendas</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_validBlindfolds_description">
             <English>List of goggle items that ACE should consider as valid blindfolds to blind captives with</English>
             <German>Liste von  items die ACE als funktionierende Augenbinden werten sollte</German>
             <Italian>Lista di occhiali che ACE considera bende per gli occhi</Italian>
-            <Japanese></Japanese>
-            <Chinese></Chinese>
-            <Chinesesimp></Chinesesimp>
-            <Korean></Korean>
-            <Polish></Polish>
-            <Russian></Russian>
-            <Portuguese></Portuguese>
-            <French></French>
-            <Czech></Czech>
-            <Spanish></Spanish>
+            <Japanese>捕虜の目隠しとして有効なゴーグルのリスト</Japanese>
+            <Chinese>應被視為對失明俘虜有效的眼罩的護目鏡物品列表</Chinese>
+            <Chinesesimp>应视为有效眼罩的护目镜物品清单，可用于蒙住俘虏的眼睛</Chinesesimp>
+            <Korean>포로의 눈을 가릴 때 유효한 눈가리개로 간주해야 하는 고글 품목 목록은 다음과 같습니다.</Korean>
+            <Polish>Lista elementów gogli, które powinny być uważane za ważne opaski do oślepienia jeńców</Polish>
+            <Russian>Перечень очков, которые следует рассматривать как действительные повязки для ослепления пленных</Russian>
+            <Portuguese>Lista de artigos de óculos que devem ser considerados como vendas válidas para cegar os prisioneiros com</Portuguese>
+            <French>Liste des lunettes qui devraient être considérées comme des bandeaux valables pour aveugler les captifs.</French>
+            <Czech>Seznam brýlí, které by měly být považovány za platné pásky přes oči, jimiž lze oslepit zajatce</Czech>
+            <Spanish>Lista de gafas que deben considerarse como vendas válidas con las que cegar a los cautivos</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
