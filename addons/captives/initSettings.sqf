@@ -31,3 +31,12 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     false,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(validBlindfolds), "EDITBOX",
+    [LSTRING(ModuleSettings_validBlindfolds_name), LSTRING(ModuleSettings_validBlindfolds_description)],
+    _category,
+    '["G_Blindfold_01_black_F","G_Blindfold_01_white_F"]',
+    1,
+    {GVAR(validBlindfolds) = call compile GVAR(validBlindfolds);}
+] call CBA_fnc_addSetting;

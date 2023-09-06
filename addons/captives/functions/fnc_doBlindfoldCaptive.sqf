@@ -19,7 +19,7 @@
 params ["_unit", "_target", "_state"];
 
 // check if _unit has a Contact DLC blindfold in its inventory, abort otherwise.
-private _validBlindfolds = ["G_Blindfold_01_black_F", "G_Blindfold_01_white_F"];
+private _validBlindfolds = GVAR(validBlindfolds);
 private _carriedBlindfoldIdx = _validBlindfolds findAny (items _unit);
 if (_carriedBlindfoldIdx == -1) exitWith {};
 

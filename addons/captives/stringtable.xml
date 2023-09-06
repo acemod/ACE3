@@ -473,6 +473,36 @@
             <Czech>Vyžadovat, aby se AI prvně vzdala před umožněním zajetí</Czech>
             <Spanish>Requiere la rendición de la IA antes de poder arrestarlas</Spanish>
         </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_validBlindfolds_name">
+            <English>Goggles that count as blindfolds</English>
+            <German>Brillen-Items die Augenbinden sind</German>
+            <Italian>Occhiali che sono bende per gli occhi</Italian>
+            <Japanese></Japanese>
+            <Chinese></Chinese>
+            <Chinesesimp></Chinesesimp>
+            <Korean></Korean>
+            <Polish></Polish>
+            <Russian></Russian>
+            <Portuguese></Portuguese>
+            <French></French>
+            <Czech></Czech>
+            <Spanish></Spanish>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_validBlindfolds_description">
+            <English>List of goggle items that ACE should consider as valid blindfolds to blind captives with</English>
+            <German>Liste von  items die ACE als funktionierende Augenbinden werten sollte</German>
+            <Italian>Lista di occhiali che ACE considera bende per gli occhi</Italian>
+            <Japanese></Japanese>
+            <Chinese></Chinese>
+            <Chinesesimp></Chinesesimp>
+            <Korean></Korean>
+            <Polish></Polish>
+            <Russian></Russian>
+            <Portuguese></Portuguese>
+            <French></French>
+            <Czech></Czech>
+            <Spanish></Spanish>
+        </Key>
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
             <German>Nimmt die Einheit unter dem Cursor fest.</German>

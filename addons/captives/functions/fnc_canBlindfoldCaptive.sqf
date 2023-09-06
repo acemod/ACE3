@@ -24,5 +24,5 @@ params ["_unit", "_target"];
 {alive _target} &&
 {(vehicle _unit) == _unit} &&
 {(vehicle _target) == _target} &&
-{(["G_Blindfold_01_black_F", "G_Blindfold_01_white_F"] findAny (items _unit)) != -1}
+{(GVAR(validBlindfolds) findAny (items _unit)) != -1}
 
