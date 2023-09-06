@@ -4686,5 +4686,11 @@
             <Chinesesimp>身体抽搐了一下，可能还没死！</Chinesesimp>
             <Korean>꿈틀대는걸 보니 죽은 것 같지는 않습니다!</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
+            <English>Zeus treatment time coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_Description">
+            <English>Multiply all treatment times with this coefficient when in Zeus.</English>
+        </Key>
     </Package>
 </Project>
