@@ -7,6 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+            "data_f_lxWS_Loadorder",
             "ace_nouniformrestrictions"
         };
         skipWhenMissingDependencies = 1;
