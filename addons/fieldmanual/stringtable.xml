@@ -293,7 +293,7 @@
             <English>Tag Your Territory</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SprayPaint_Description">
-            <English>%3Spray Paint%4 is used to tag structures with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a wall.&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
+            <English>%3Spray Paint%4 is used to tag surfaces with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a surface (wall, vehicle, ground, etc).&lt;br/&gt;%2Use [%3%11%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Tripod_DisplayName">
             <English>SSWT Kit</English>
