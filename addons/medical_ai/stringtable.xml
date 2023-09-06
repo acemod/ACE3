@@ -48,5 +48,11 @@
             <Czech>Pouze Server a HC</Czech>
             <Turkish>Sadece Sunucu ve HC de</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_AI_requireItems_title">
+            <English>Require Items</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_requireItems_desc">
+            <English>AI will only perform medical treatment if they have the necessary items in their inventory.\nRequires custom AI loadouts!</English>
+        </Key>
     </Package>
 </Project>

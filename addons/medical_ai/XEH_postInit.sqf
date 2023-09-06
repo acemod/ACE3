@@ -20,4 +20,5 @@
     }] call CBA_fnc_addClassEventHandler;
 
     #include "stateMachine.sqf"
+
 }] call CBA_fnc_addEventHandler;
