@@ -1,21 +1,7 @@
 #include "script_component.hpp"
 
-#if __has_include("\rhsafrf\addons\rhs_main\loadorder\config.bin")
-#else
-    #define PATCH_SKIP "RHS AFRF"
-#endif
-
-#if __has_include("\z\ace\addons\fastroping\script_component.hpp")
+// Config will be binerized, so this include is only required at build-time
 #include "\z\ace\addons\fastroping\script_macros.hpp"
-#else
-    #ifndef PATCH_SKIP
-        #define PATCH_SKIP "ACE Fastroping"
-    #endif
-#endif
-
-#ifdef PATCH_SKIP
-ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
-#else
 
 class CfgPatches {
     class ADDON {
@@ -35,5 +21,3 @@ class CfgPatches {
 };
 
 #include "CfgVehicles.hpp"
-
-#endif
