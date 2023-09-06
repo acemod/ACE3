@@ -94,6 +94,3 @@ if (_overexhausted) then {
 };
 
 _unit setVariable [QGVAR(aimFatigue), _fatigue];
-
-private _aimCoef = [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult);
-_unit setCustomAimCoef _aimCoef;

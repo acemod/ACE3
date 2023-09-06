@@ -5,7 +5,7 @@
 
 #define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
 #define WIDTH_GAP (WIDTH_TOTAL / 100)
-#define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
+#define WIDTH_SINGLE ((WIDTH_TOTAL - 7 * WIDTH_GAP) / 6)
 
 // IDDs
 #define IDD_MISSION 46
@@ -18,6 +18,9 @@
 // Sorting
 #define ASCENDING 0
 #define DESCENDING 1
+
+// Favorites
+#define FAVORITES_COLOR (GVAR(favoritesColor) + [1])
 
 // IDCs
 #define IDD_ace_arsenal 1127001
@@ -39,6 +42,7 @@
 #define IDC_buttonLoadouts 1003
 #define IDC_buttonExport 1004
 #define IDC_buttonImport 1005
+#define IDC_buttonFavorites 1006
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102
@@ -142,8 +146,20 @@
 #define IDC_statsPreviousPage 52
 #define IDC_statsNextPage 53
 #define IDC_statsCurrentPage 54
-#define IDC_statsButton 55
-#define IDC_statsButtonClose 56
+#define IDC_actionsBox 90
+#define IDC_actionsText1 9001
+#define IDC_actionsButton1 9002
+#define IDC_actionsText2 9003
+#define IDC_actionsButton2 9004
+#define IDC_actionsText3 9005
+#define IDC_actionsButton3 9006
+#define IDC_actionsText4 9007
+#define IDC_actionsButton4 9008
+#define IDC_actionsText5 9009
+#define IDC_actionsButton5 9010
+#define IDC_actionsPreviousPage 91
+#define IDC_actionsNextPage 92
+#define IDC_actionsCurrentPage 93
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3

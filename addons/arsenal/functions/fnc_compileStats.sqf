@@ -23,7 +23,7 @@ private _fnc_addToTabs = {
     {
         // Make stat name
         _stat = +_finalArray;
-        _stat set [0, [_class, _tabSide, [str _x, format ["0%1", _x]] select (_x < 10)] joinString ""];
+        _stat set [5, [_class, _tabSide, [str _x, format ["0%1", _x]] select (_x < 10)] joinString ""];
 
         (_tabsList select _x) pushBack _stat;
     } forEach _tabsToAddTo;
@@ -31,39 +31,12 @@ private _fnc_addToTabs = {
 
 // Sort by priority
 private _fnc_sortLists = {
-    params ["_tabsList"];
+    params ["_tabs"];
 
     {
-        // Put priority up front
-        {
-            reverse _x;
-        } forEach _x;
-
         // Sort numerically
         _x sort false;
-
-        // Put it back at the rear
-        {
-            reverse _x;
-        } forEach _x;
-    } forEach _tabsList;
-};
-
-// Group stats into groups of 5
-private _fnc_toStatsArray = {
-    params ["_tabsList", "_tabsListAll"];
-
-    private _stats = [];
-
-    {
-        _stats = [];
-
-        for "_index" from 0 to count _x - 1 step 5 do {
-            _stats pushBack (_x select [_index, _index + 5]);
-        };
-
-        _tabsList set [_forEachIndex, _stats];
-    } forEach _tabsList;
+    } forEach _tabs;
 };
 
 private _statsListLeftPanel = [
@@ -95,7 +68,6 @@ private _statsListRightPanel = [
     []  // Misc 7
 ];
 
-//------------------------- Config handling
 private _finalArray = [];
 private _class = "";
 private _stats = [];
@@ -119,7 +91,7 @@ private _priority = 0;
         _condition = compile _condition;
     };
 
-    _finalArray = ["", _stats, _displayName, [_showBar, _showText], [{}, {}, _condition], _priority];
+    _finalArray = [_priority, _stats, _displayName, [_showBar, _showText], [{}, {}, _condition], ""];
 
     if (_showBar) then {
         (_finalArray select 4) set [0, compile (getText (_x >> "barStatement"))];
@@ -144,10 +116,5 @@ private _priority = 0;
 [_statsListLeftPanel] call _fnc_sortLists;
 [_statsListRightPanel] call _fnc_sortLists;
 
-// Group into 5 stats
-[_statsListLeftPanel] call _fnc_toStatsArray;
-[_statsListRightPanel] call _fnc_toStatsArray;
-
-//------------------------- Config Handling
 GVAR(statsListLeftPanel) = _statsListLeftPanel;
 GVAR(statsListRightPanel) = _statsListRightPanel;

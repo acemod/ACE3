@@ -37,11 +37,8 @@ private _extendedLoadout = switch (GVAR(currentLoadoutsTab)) do {
 // Apply loadout to unit
 [GVAR(center), _extendedLoadout, true] call CBA_fnc_setLoadout;
 
-// Update current item list
-call FUNC(updateCurrentItemsList);
-
-// This takes care of items that aren't available in the arsenal (either wrong tab or arsenal doesn't have it whitelisted)
-call FUNC(updateUniqueItemsList);
+// Update current item list and unique items
+[true] call FUNC(refresh);
 
 _extendedLoadout params ["_loadout", "_extendedInfo"];
 

@@ -1,22 +1,22 @@
 #include "script_component.hpp"
 /*
- * Author: Alganthe, johnb43
+ * Author: Alganthe, johnb43, LinkIsGrim
  * Adds a stat to ACE Arsenal.
  *
  * Arguments:
  * 0: Tabs to add the stat to <ARRAY of ARRAYS>
- *   0.0: Left tab indexes <ARRAY of NUMBERS>
- *   0.1: Right tab indexes <ARRAY of NUMBERS>
+ * - 0: Left tab indexes <ARRAY of NUMBERS>
+ * - 1: Right tab indexes <ARRAY of NUMBERS>
  * 1: Stat class (unique string for each stat) <STRING>
  * 2: Config entries to pass <ARRAY of STRINGS>
  * 3: Title <STRING>
  * 4: Show bar / show text bools <ARRAY of BOOLS>
- *   4.0: Show bar <BOOL> (default: false)
- *   4.1: Show text <BOOL> (default: false)
+ * - 0: Show bar <BOOL> (default: false)
+ * - 1: Show text <BOOL> (default: false)
  * 5: Array of statements <ARRAY of CODE>
- *   5.0: Bar code <CODE> (default: {})
- *   5.1: Text code <CODE> (default: {})
- *   5.2: Condition code <CODE> (default: {true})
+ * - 0: Bar code <CODE> (default: {})
+ * - 1: Text code <CODE> (default: {})
+ * - 2: Condition code <CODE> (default: {true})
  * 6: Priority <NUMBER> (default: 0)
  *
  * Return Value:
@@ -76,20 +76,13 @@ private _fnc_addToTabs = {
         _currentTab = _tabsList select _x;
 
         // Find if there is an entry with same ID
-        if (_currentTab findIf {_x findIf {_x select 0 == _statName} != -1} != -1) then {
+        if (_currentTab findIf {_x select 5 == _statName} != -1) then {
             TRACE_1("A stat with this ID already exists", _statName);
         } else {
             _stat = +_finalArray;
-            _stat set [0, _statName];
+            _stat set [5, _statName];
 
-            _index = _currentTab findIf {count _x < 5};
-
-            // Add to existing page if there's enough space, otherwise create a new page
-            if (_index != -1) then {
-                (_currentTab select _index) pushBack _stat;
-            } else {
-                _currentTab pushBack [_stat];
-            };
+            _currentTab pushBack _stat;
 
             _return pushBack _statName;
 
@@ -99,7 +92,7 @@ private _fnc_addToTabs = {
     } forEach _tabsToAddTo;
 };
 
-private _finalArray = ["", _stats, _title, [_showBar, _showText], [_barStatement, _textStatement, _condition], _priority];
+private _finalArray = [_priority, _stats, _title, [_showBar, _showText], [_barStatement, _textStatement, _condition], ""];
 
 if (_leftTabs isNotEqualTo []) then {
     [GVAR(statsListLeftPanel), _leftTabs, "L"] call _fnc_addToTabs;
@@ -109,7 +102,6 @@ if (_rightTabs isNotEqualTo []) then {
     [GVAR(statsListRightPanel), _rightTabs, "R"] call _fnc_addToTabs;
 };
 
-private _statsFlat = [];
 private _stats = [];
 private _tabToChange = [];
 
@@ -123,34 +115,10 @@ private _tabToChange = [];
         GVAR(statsListLeftPanel)
     };
 
-    _statsFlat = [];
+    _stats = _tabToChange select _tab;
 
-    // Get all stats of a tab into a single array
-    {
-        _statsFlat append _x;
-    } forEach (_tabToChange select _tab);
-
-    // Put priority up front
-    {
-        reverse _x;
-    } forEach _statsFlat;
-
-    // Sort numerically
-    _statsFlat sort false;
-
-    // Put it back at the rear
-    {
-        reverse _x;
-    } forEach _statsFlat;
-
-    _stats = [];
-
-    // Group stats into groups of 5
-    for "_index" from 0 to count _statsFlat - 1 step 5 do {
-        _stats pushBack (_statsFlat select [_index, _index + 5]);
-    };
-
-    _tabToChange set [_tab, _stats];
+    // Sort by priority
+    _stats sort false;
 } forEach _changes;
 
 _return

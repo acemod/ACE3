@@ -482,6 +482,23 @@ GVAR(reloadMutex_lastMagazines) = [];
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 //////////////////////////////////////////////////
+// Start the sway loop
+//////////////////////////////////////////////////
+["CBA_settingsInitialized", {
+    [{
+        // frame after settingsInitialized to ensure all other addons have added their factors
+        if ((GVAR(swayFactorsBaseline) + GVAR(swayFactorsMultiplier)) isNotEqualTo []) then {
+            call FUNC(swayLoop)
+        };
+        // check for pre-3.16 sway factors being added
+        if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {
+            WARNING("ACE_setCustomAimCoef no longer supported - use ace_common_fnc_addSwayFactor");
+            WARNING_1("source: %1",(missionNamespace getVariable "ACE_setCustomAimCoef") apply {_x});
+        };
+    }] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+
+//////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
 //////////////////////////////////////////////////
 
@@ -545,21 +562,30 @@ GVAR(deviceKeyCurrentIndex) = -1;
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
 
 
-["ACE3 Weapons", QGVAR(unloadWeapon), LLSTRING(unloadWeapon), {
-    // Conditions:
-    if !([ACE_player, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
+["ACE3 Weapons", QGVAR(unloadWeapon), LSTRING(unloadWeapon), {
+    private _unit = ACE_player;
 
-    private _currentWeapon = currentWeapon ACE_player;
-    if !(_currentWeapon != primaryWeapon _unit && {_currentWeapon != handgunWeapon _unit} && {_currentWeapon != secondaryWeapon _unit}) exitWith {false};
+    // Conditions
+    if !([_unit, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
 
-    private _currentMuzzle = currentMuzzle ACE_player;
-    private _currentAmmoCount = ACE_player ammo _currentMuzzle;
-    if (_currentAmmoCount < 1) exitWith {false};
+    if !(_unit call CBA_fnc_canUseWeapon) exitWith {false};
 
-    // Statement:
-    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount, false] call FUNC(unloadUnitWeapon);
+    (weaponState _unit) params ["_weapon", "_muzzle", "", "_magazine", "_ammo"];
+
+    // Check if there is any ammo
+    if (_ammo < 1) exitWith {false};
+
+    // Check if the unit has a weapon
+    if (_weapon == "") exitWith {false};
+
+    // Check if the unit has a weapon selected
+    if !(_weapon in [primaryWeapon _unit, handgunWeapon _unit, secondaryWeapon _unit]) exitWith {false};
+
+    // Statement
+    [_unit, _weapon, _muzzle, _magazine, _ammo, false] call FUNC(unloadUnitWeapon);
+
     true
-}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; //ALT + R Key
+}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; // Alt + R
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout"];
