@@ -26,7 +26,7 @@
         <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_displayName">
             <English>Armor PassThrough Effect</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_displayName">
+        <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_description">
             <English>Controls effect of armor 'passThrough' on final damage. Makes high armor values, like ones used in GL rigs, less effective.\nUse 0% for pre 3.16.0 armor behavior.\nOnly touch this if you know what you're doing!</English>
         </Key>
     </Package>
