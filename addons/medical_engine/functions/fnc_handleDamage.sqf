@@ -89,6 +89,18 @@ if (
 ) exitwith {
     TRACE_6("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
 
+    // Let Advanced Vehicle Damage handle if appropriate
+    if (
+        missionNamespace getVariable [QEGVAR(vehicle_damage,enabled), false] &&
+        {
+            missionNamespace getVariable [QEGVAR(vehicle_damage,enableCarDamage), false] && {_vehicle isKindOf "Car"} ||
+            {["Tank", "Wheeled_APC_F"] findIf {_vehicle isKindOf _x} != -1}
+        }
+    ) exitWith {
+        TRACE_1("Diverting to AVD",_vehicle);
+        0
+    };
+
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
