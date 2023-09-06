@@ -188,7 +188,9 @@ Every function should have a header of the following format appear before any co
  *
  * Arguments:
  * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
+ * 1: The second argument which contains sub values <ARRAY>
+ * - 0: Number of bannanas <NUMBER>
+ * - 1: Bannana Color <STRING>
  * 2: Multiple input types <STRING|ARRAY|CODE>
  * 3: Optional input <BOOL> (default: true)
  * 4: Optional input with multiple types <CODE|STRING> (default: {true})

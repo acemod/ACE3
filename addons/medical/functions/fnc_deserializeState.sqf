@@ -56,6 +56,13 @@ private _state = [_json] call CBA_fnc_parseJSON;
     _x params ["_var", "_default"];
     private _value = _state getVariable _x;
 
+    // Handle wound hashmaps deserialized as CBA_namespaces
+    if (typeName _value == "LOCATION") then {
+        private _keys = allVariables _value;
+        private _values = _keys apply {_value getVariable _x};
+        _value = _keys createHashMapFromArray _values;
+    };
+
     // Treat null as nil
     if (_value isEqualTo objNull) then {
         _value = _default;

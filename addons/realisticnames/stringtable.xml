@@ -114,7 +114,7 @@
             <Portuguese>Lança-mísseis Mini-Spike (AC)</Portuguese>
             <Hungarian>Mini-Spike rakétarendszer (Tankelhárító)</Hungarian>
             <Italian>Lanciatore Mini-Spike (AC)</Italian>
-            <Japanese>ミニスパイク ランチャー (対戦)</Japanese>
+            <Japanese>ミニスパイク ランチャー (対戦車)</Japanese>
             <Korean>스파이크 미사일 발사기 (대전차)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (反坦克)</Chinese>
             <Chinesesimp>"迷你长钉"（反坦）</Chinesesimp>
@@ -369,7 +369,7 @@
             <Portuguese>HEMTT Transporte</Portuguese>
             <Hungarian>HEMTT szállítójármű</Hungarian>
             <Italian>HEMTT da trasporto</Italian>
-            <Japanese>HEMTT 輸送型</Japanese>
+            <Japanese>HEMTT 輸送</Japanese>
             <Korean>HEMTT 수송</Korean>
             <Chinese>重型增程機動戰術卡車 (運輸)</Chinese>
             <Chinesesimp>HEMTT（运输）</Chinesesimp>
@@ -386,7 +386,7 @@
             <Portuguese>HEMTT Transporte (coberto)</Portuguese>
             <Hungarian>HEMTT szállítójármű (ponyvás)</Hungarian>
             <Italian>HEMTT da trasporto (coperto)</Italian>
-            <Japanese>HEMTT 輸送型 (幌)</Japanese>
+            <Japanese>HEMTT 輸送 (幌)</Japanese>
             <Korean>HEMTT 수송 (덮개)</Korean>
             <Chinese>重型增程機動戰術卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>HEMTT（运输，棚布）</Chinesesimp>
@@ -420,7 +420,7 @@
             <Portuguese>HEMTT Contêiner</Portuguese>
             <Hungarian>HEMTT (konténer)</Hungarian>
             <Italian>HEMTT portacontainer</Italian>
-            <Japanese>HEMTT コンテナ型</Japanese>
+            <Japanese>HEMTT コンテナ</Japanese>
             <Korean>HEMTT 컨테이너</Korean>
             <Chinese>重型增程機動戰術卡車 (貨櫃)</Chinese>
             <Chinesesimp>HEMTT（货柜）</Chinesesimp>
@@ -437,7 +437,7 @@
             <Portuguese>HEMTT Médico</Portuguese>
             <Hungarian>HEMTT (egészségügyi)</Hungarian>
             <Italian>HEMTT Medico</Italian>
-            <Japanese>HEMTT 救急車</Japanese>
+            <Japanese>HEMTT 衛生</Japanese>
             <Korean>HEMTT 의료</Korean>
             <Chinese>重型增程機動戰術卡車 (醫療)</Chinese>
             <Chinesesimp>HEMTT（医疗）</Chinesesimp>
@@ -454,7 +454,7 @@
             <Portuguese>HEMTT Munições</Portuguese>
             <Hungarian>HEMTT (lőszerszállító)</Hungarian>
             <Italian>HEMTT di rifornimento munizioni</Italian>
-            <Japanese>HEMTT 弾薬給弾型</Japanese>
+            <Japanese>HEMTT 弾薬</Japanese>
             <Korean>HEMTT 탄약</Korean>
             <Chinese>重型增程機動戰術卡車 (彈藥)</Chinese>
             <Chinesesimp>HEMTT（弹药）</Chinesesimp>
@@ -471,7 +471,7 @@
             <Portuguese>HEMTT Combustível</Portuguese>
             <Hungarian>HEMTT (üzemanyag-szállító)</Hungarian>
             <Italian>HEMTT di rifornimento carburante</Italian>
-            <Japanese>HEMTT 燃料給油車</Japanese>
+            <Japanese>HEMTT 燃料</Japanese>
             <Korean>HEMTT 연료</Korean>
             <Chinese>重型增程機動戰術卡車 (燃油)</Chinese>
             <Chinesesimp>HEMTT（燃油）</Chinesesimp>
@@ -488,7 +488,7 @@
             <Portuguese>HEMTT Reparador</Portuguese>
             <Hungarian>HEMTT (szerelő-jármű)</Hungarian>
             <Italian>HEMTT Riparatore</Italian>
-            <Japanese>HEMTT 修理型</Japanese>
+            <Japanese>HEMTT 修理</Japanese>
             <Korean>HEMTT 수리</Korean>
             <Chinese>重型增程機動戰術卡車 (維修)</Chinese>
             <Chinesesimp>HEMTT（维修）</Chinesesimp>
@@ -607,7 +607,7 @@
             <Portuguese>KamAZ Transporte</Portuguese>
             <Hungarian>KamAZ szállítójármű</Hungarian>
             <Italian>KamAZ da trasporto</Italian>
-            <Japanese>KamAZ 輸送型</Japanese>
+            <Japanese>KamAZ 輸送</Japanese>
             <Korean>카마즈 수송</Korean>
             <Chinese>"卡瑪斯"卡車 (運輸)</Chinese>
             <Chinesesimp>"卡玛兹"（运输）</Chinesesimp>
@@ -624,7 +624,7 @@
             <Portuguese>KamAZ Transporte (coberto)</Portuguese>
             <Hungarian>KamAZ szállítójármű (ponyvás)</Hungarian>
             <Italian>KamAZ da trasporto (coperto)</Italian>
-            <Japanese>KamAZ 輸送型 (幌)</Japanese>
+            <Japanese>KamAZ 輸送 (幌)</Japanese>
             <Korean>카마즈 수송 (덮개)</Korean>
             <Chinese>"卡瑪斯"卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>"卡玛兹"（运输，棚布）</Chinesesimp>
@@ -641,7 +641,7 @@
             <Portuguese>KamAZ Munições</Portuguese>
             <Hungarian>KamAZ (lőszerszállító)</Hungarian>
             <Italian>KamAZ  di rifornimento munizioni</Italian>
-            <Japanese>KamAZ 弾薬給弾型</Japanese>
+            <Japanese>KamAZ 弾薬</Japanese>
             <Korean>카마즈 탄약</Korean>
             <Chinese>"卡瑪斯"卡車 (彈藥)</Chinese>
             <Chinesesimp>"卡玛兹"（弹药）</Chinesesimp>
@@ -658,7 +658,7 @@
             <Portuguese>KamAZ Combustível</Portuguese>
             <Hungarian>KamAZ (üzemanyag-szállító)</Hungarian>
             <Italian>KamAZ  di rifornimento carburante</Italian>
-            <Japanese>KamzAZ 燃料給油車</Japanese>
+            <Japanese>KamAZ 燃料</Japanese>
             <Korean>카마즈 연료</Korean>
             <Chinese>"卡瑪斯"卡車 (燃油)</Chinese>
             <Chinesesimp>"卡玛兹"（燃油）</Chinesesimp>
@@ -675,7 +675,7 @@
             <Portuguese>KamAZ Reparador</Portuguese>
             <Hungarian>KamAZ (szerelő-jármű)</Hungarian>
             <Italian>KamAZ  riparatore</Italian>
-            <Japanese>KamzAZ 修理型</Japanese>
+            <Japanese>KamAZ 修理</Japanese>
             <Korean>카마즈 수리</Korean>
             <Chinese>"卡瑪斯"卡車 (維修)</Chinese>
             <Chinesesimp>"卡玛兹"（维修）</Chinesesimp>
@@ -692,7 +692,7 @@
             <Portuguese>KamAZ Médico</Portuguese>
             <Hungarian>KamAZ (egészségügyi)</Hungarian>
             <Italian>KamAZ Medico</Italian>
-            <Japanese>KamAZ 救急車</Japanese>
+            <Japanese>KamAZ 衛生</Japanese>
             <Korean>카마즈 의료</Korean>
             <Chinese>"卡瑪斯"卡車 (醫療)</Chinese>
             <Chinesesimp>"卡玛兹"（医疗）</Chinesesimp>
@@ -861,7 +861,7 @@
             <Portuguese>Typhoon Transporte</Portuguese>
             <Hungarian>Typhoon szállítójármű</Hungarian>
             <Italian>Typhoon da trasporto</Italian>
-            <Japanese>タイフーン 輸送型</Japanese>
+            <Japanese>タイフーン 輸送</Japanese>
             <Korean>타이푼 수송</Korean>
             <Chinese>"颱風"卡車 (運輸)</Chinese>
             <Chinesesimp>"台风"（运输）</Chinesesimp>
@@ -878,7 +878,7 @@
             <Portuguese>Typhoon Transporte (coberto)</Portuguese>
             <Hungarian>Typhoon szállítójármű (ponyvás)</Hungarian>
             <Italian>Typhoon da trasporto (coperto)</Italian>
-            <Japanese>タイフーン 輸送型 (幌)</Japanese>
+            <Japanese>タイフーン 輸送 (幌)</Japanese>
             <Korean>타이푼 수송 (덮개)</Korean>
             <Chinese>"颱風"卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>"台风"（运输，棚布）</Chinesesimp>
@@ -895,7 +895,7 @@
             <Portuguese>Typhoon Dispositivo</Portuguese>
             <Hungarian>Typhoon (eszköz)</Hungarian>
             <Italian>Typhoon per dispositivo</Italian>
-            <Japanese>タイフーン デバイス型</Japanese>
+            <Japanese>タイフーン デバイス</Japanese>
             <Korean>타이푼 장치</Korean>
             <Chinese>"颱風"卡車 (精密設備)</Chinese>
             <Chinesesimp>"台风"（装置）</Chinesesimp>
@@ -912,7 +912,7 @@
             <Portuguese>Typhoon Munições</Portuguese>
             <Hungarian>Typhoon (lőszerszállító)</Hungarian>
             <Italian>Typhoon di rifornimento munizioni</Italian>
-            <Japanese>タイフーン 弾薬給弾型</Japanese>
+            <Japanese>タイフーン 弾薬</Japanese>
             <Korean>타이푼 탄약</Korean>
             <Chinese>"颱風"卡車 (彈藥)</Chinese>
             <Chinesesimp>"台风"（弹药）</Chinesesimp>
@@ -929,7 +929,7 @@
             <Portuguese>Typhoon Combustível</Portuguese>
             <Hungarian>Typhoon (üzemanyag-szállító)</Hungarian>
             <Italian>Typhoon di rifornimento carburante</Italian>
-            <Japanese>タイフーン 燃料給油車</Japanese>
+            <Japanese>タイフーン 燃料</Japanese>
             <Korean>타이푼 연료</Korean>
             <Chinese>"颱風"卡車 (燃油)</Chinese>
             <Chinesesimp>"台风"（燃油）</Chinesesimp>
@@ -946,7 +946,7 @@
             <Portuguese>Typhoon Reparador</Portuguese>
             <Hungarian>Typhoon (szerelő-jármű)</Hungarian>
             <Italian>Typhoon riparatore</Italian>
-            <Japanese>タイフーン 修理型</Japanese>
+            <Japanese>タイフーン 修理</Japanese>
             <Korean>타이푼 수리</Korean>
             <Chinese>"颱風"卡車 (維修)</Chinese>
             <Chinesesimp>"台风"（维修）</Chinesesimp>
@@ -963,7 +963,7 @@
             <Portuguese>Typhoon Médico</Portuguese>
             <Hungarian>Typhoon (egészségügyi)</Hungarian>
             <Italian>Typhoon medico</Italian>
-            <Japanese>タイフーン 救急車</Japanese>
+            <Japanese>タイフーン 衛生</Japanese>
             <Korean>타이푼 의료</Korean>
             <Chinese>"颱風"卡車 (醫療)</Chinese>
             <Chinesesimp>"台风"（医疗）</Chinesesimp>
@@ -1216,7 +1216,7 @@
             <Portuguese>Ka-60 Kasatka (preto e branco)</Portuguese>
             <Russian>Ka-60 Касатка (чёрно-белый)</Russian>
             <Spanish>Ka-60 Kasatka (blanco y negro)</Spanish>
-            <Japanese>Ka-60 カサートカ (黒 &amp; 白）</Japanese>
+            <Japanese>Ka-60 カサートカ (黒 &amp; 白)</Japanese>
             <Korean>Ka-60 카사트카 (검정 및 하양)</Korean>
             <Chinese>Ka-60 "逆戟鯨"直升機 (黑&amp;白)</Chinese>
             <Chinesesimp>Ka-60 "虎鲸"（黑白）</Chinesesimp>
@@ -1783,7 +1783,7 @@
             <Russian>Mini-Spike (ПТРК)</Russian>
             <Portuguese>Mini-Spike (AT)</Portuguese>
             <Italian>Mini-Spike (AT)</Italian>
-            <Japanese>ミニスパイク (対地)</Japanese>
+            <Japanese>ミニスパイク (対戦車)</Japanese>
             <Korean>스파이크 미사일 (대전차)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (反坦克)</Chinese>
             <Chinesesimp>"迷你长钉"（反坦）</Chinesesimp>
@@ -1884,7 +1884,7 @@
             <Portuguese>MX (Cáqui)</Portuguese>
             <Korean>MX (카키)</Korean>
             <Chinesesimp>MX（卡其色）</Chinesesimp>
-            <Japanese>MX（カーキ）</Japanese>
+            <Japanese>MX (カーキ)</Japanese>
             <Turkish>MX (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
@@ -1934,7 +1934,7 @@
             <Portuguese>MXC (Cáqui)</Portuguese>
             <Korean>MXC (카키)</Korean>
             <Chinesesimp>MXC（卡其色）</Chinesesimp>
-            <Japanese>MXC（カーキ）</Japanese>
+            <Japanese>MXC (カーキ)</Japanese>
             <Turkish>MXC (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
@@ -1984,7 +1984,7 @@
             <Portuguese>MX 3GL (Cáqui)</Portuguese>
             <Korean>MX 3GL (카키)</Korean>
             <Chinesesimp>MX 3GL（卡其色）</Chinesesimp>
-            <Japanese>MX 3GL（カーキ）</Japanese>
+            <Japanese>MX 3GL (カーキ)</Japanese>
             <Turkish>MX 3GL (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
@@ -2034,7 +2034,7 @@
             <Portuguese>MX LSW (Cáqui)</Portuguese>
             <Korean>MX LSW (카키)</Korean>
             <Chinesesimp>MX LSW（卡其色）</Chinesesimp>
-            <Japanese>MX LSW（カーキ）</Japanese>
+            <Japanese>MX LSW (カーキ)</Japanese>
             <Turkish>MX LSW (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
@@ -2084,7 +2084,7 @@
             <Portuguese>MXM (Cáqui)</Portuguese>
             <Korean>MXM (카키)</Korean>
             <Chinesesimp>MXM（卡其色）</Chinesesimp>
-            <Japanese>MXM（カーキ）</Japanese>
+            <Japanese>MXM (カーキ)</Japanese>
             <Turkish>MXM (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
@@ -3620,7 +3620,7 @@
             <Chinesesimp>"北极星"（"迷你长钉"反坦）</Chinesesimp>
             <Chinese>"北極星"先進佈署越野車("迷你長釘"反坦克導彈發射器) </Chinese>
             <Italian>Polaris DAGOR (Mini-Spike AT)</Italian>
-            <Japanese>ポラリス DAGOR (ミニスパイク対戦)</Japanese>
+            <Japanese>ポラリス DAGOR (ミニスパイク 対戦車)</Japanese>
             <Polish>Polaris DAGOR (Mini-Spike AT)</Polish>
             <Russian>Polaris DAGOR (ПТ Mini-Spike)</Russian>
             <Portuguese>Polaris DAGOR (Mini-Spike AT)</Portuguese>
