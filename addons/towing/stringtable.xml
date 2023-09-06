@@ -128,6 +128,7 @@
             <Polish>Dodaj linkę holowniczą do ekwipunku pojazdów</Polish>
             <Korean>차량 소지품에 견인줄 추가</Korean>
             <Spanish>Añadir cuerda de remolcado al inventario del vehículo</Spanish>
+            <Japanese>車両のインベントリに牽引ロープを追加する</Japanese>
         </Key>
     </Package>
 </Project>

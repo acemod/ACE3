@@ -25,7 +25,7 @@ TRACE_1("Explosives interactEH",_interactionType);
 if (
     _interactionType != 0
     || {vehicle ACE_player != ACE_player}
-    || {!("ACE_DefusalKit" in (ACE_player call EFUNC(common,uniqueItems)))}
+    || {(ACE_player call EFUNC(common,uniqueItems)) findAny GVAR(defusalKits) == -1}
 ) exitWith {};
 
 [{

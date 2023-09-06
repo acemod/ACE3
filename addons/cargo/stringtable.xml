@@ -497,12 +497,14 @@
             <Korean>화물 내린 후 운반</Korean>
             <Russian>Нести после выгрузки</Russian>
             <Spanish>Llevar encima tras la descarga</Spanish>
+            <Japanese>荷降ろし後の運搬</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
             <English>Controls whether cargo items are carried or dragged after unloading.</English>
             <Korean>화물 아이템을 내린 후 들거나 끌지 여부를 결정합니다.</Korean>
             <Russian>Нужно ли переносить или тащить предметы после их выгрузки.</Russian>
             <Spanish>Controla si los objetos de carga son llevados encima o arrastrados despues de la descarga.</Spanish>
+            <Japanese>荷降ろし後、貨物アイテムを運ぶか引きずるかを制御する。</Japanese>
         </Key>
     </Package>
 </Project>

@@ -352,9 +352,11 @@
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle">
             <English>Vehicle ID Marking</English>
+            <Japanese>車両IDマーキング</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
             <English>Replaces clan tag with stenciled text</English>
+            <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
         </Key>
     </Package>
 </Project>

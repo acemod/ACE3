@@ -242,6 +242,19 @@ def mikero_windows_registry(path, access=winreg.KEY_READ):
 
 def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
+    # try running pboProject once if it's not in registry
+    try:
+        pboProject = mikero_windows_registry("pboProject")
+        print(f"pboProject found normally via registry")
+    except:
+        print(f"pboProject not in registry")
+        pboProject = shutil.which('pboProject')
+        if (pboProject is None):
+            print("pboProject not in sys path")
+        else:
+            print(f"pboProject startup")
+            ret = subprocess.call([pboProject, "-P"])
+
     requiredToolPaths = {"pboProject": None, "rapify": None, "MakePbo": None}
     failed = False
 
