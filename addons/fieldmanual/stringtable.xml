@@ -11,7 +11,7 @@
             <English>Hunger</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
-            <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating a food item.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a food item.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose a food item to consume.</English>
+            <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating food.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up food.&lt;br/&gt;%2Use [%3%11%4] and select %3Survival%4&lt;br/&gt;%2Choose an item to consume.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
             <English>Thirst</English>
@@ -104,7 +104,7 @@
             <English>Portable, Precise, Rugged</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_ATragMX_Description">
-            <English>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information</English>
+            <English>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_DisplayName">
             <English>Body Bags</English>
@@ -122,7 +122,7 @@
             <English>Take Prisoners</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_CableTie_Description">
-            <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit use [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
+            <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed. Depending on your settings, units may need to surrender before being taken captive.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit and use the [%3%12%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Cellphone_DisplayName">
             <English>Cellphone</English>
@@ -140,7 +140,7 @@
             <English>Portable Reading Lights</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_Description">
-            <English>%3Chemlight Shields%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Chemlight Shields%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
+            <English>%3Chemlight Shields%4 give you the ability to read your map, even in dark environments. However, when using %3Chemlight Shields%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Clackers_DisplayName">
             <English>Clackers</English>
@@ -149,7 +149,7 @@
             <English>Remote Detonation</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
-            <English>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to the clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select %3Clacker%4.&lt;br/&gt;%2Open the ACE interface with [%3%11%4].&lt;br/&gt;%2Select %3Explosives%4 and select %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</English>
+            <English>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to a clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%12%4], select %3Explosives%4, and select the %3Clacker%4 you wish to link to.&lt;br/&gt;%2Open the ACE interface with [%3%11%4].&lt;br/&gt;%2Select %3Explosives%4 and select a %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DAGR_DisplayName">
             <English>DAGR</English>
@@ -158,7 +158,7 @@
             <English>Navigate</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DAGR_Description">
-            <English>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;%21%2Data View: WIP&lt;br/&gt;%21%2GoTo WP: Select a waypoint to track.&lt;br/&gt;%21%2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;%21%2Connect To: Connect %3DAGR%4 to %3Vector%4.&lt;br/&gt;%21%2Options</English>
+            <English>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;%21%2Data View: WIP&lt;br/&gt;%21%2GoTo WP: Select a waypoint to track.&lt;br/&gt;%21%2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;%21%2Connect To: Connect %3DAGR%4 to the %3Vector 21 Rangefinder%4.&lt;br/&gt;%21%2Options</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_DisplayName">
             <English>Dead Man's Switch</English>
@@ -194,7 +194,7 @@
             <English>Get To Cover</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
-            <English>The %3Entrenching Tool%4 allows soldiers to dig trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the size trench you wish to build.</English>
+            <English>The %3Entrenching Tool%4 allows soldiers to dig trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%11%4] and select %3Equipment%4.&lt;br/&gt;%2Select the type of trench you wish to build.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Flashlights_DisplayName">
             <English>Flashlights</English>
@@ -203,7 +203,7 @@
             <English>Illuminate Your Map</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Flashlights_Description">
-            <English>%3Flashlights%4 give you the ability to read your map, even in the darkest environment. However, when using those %3Flashlights%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%11%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent</English>
+            <English>%3Flashlights%4 give you the ability to read your map, even in dark environments. However, when using %3Flashlights%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%11%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_DisplayName">
             <English>HuntIR Monitor</English>
