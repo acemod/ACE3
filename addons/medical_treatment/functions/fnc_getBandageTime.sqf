@@ -26,8 +26,10 @@ if (_partIndex < 0) exitWith { ERROR_1("invalid partIndex - %1",_this); 0 };
 private _targetWounds = [_patient, _bandage, _bodyPart] call FUNC(findMostEffectiveWounds);
 TRACE_1("findMostEffectiveWounds",_targetWounds);
 
+private _woundCount = count _targetWounds;
+
 // Everything is patched up on this body part already
-if (_targetWounds isEqualTo createHashMap) exitWith {0};
+if (_woundCount == 0) exitWith {0};
 
 // Base bandage time is based on wound size and remaining percentage
 private _bandageTimesArray = [BANDAGE_TIME_S, BANDAGE_TIME_M, BANDAGE_TIME_L];
@@ -62,7 +64,6 @@ if (_medic == _patient) then {
 };
 
 // Bandaging multiple injuries doesn't require opening a new bandage each time
-private _woundCount = count _targetWounds;
 if (_woundCount > 1) then {
     _bandageTime = _bandageTime - (2 * _woundCount);
 };
