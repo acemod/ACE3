@@ -40,7 +40,9 @@ private _clearConditionCache = false;
     _y params ["_effectiveness", "_woundIndex", "_impact"];
 
     // clear condition cache if we stopped all bleeding for this injury
-    _clearConditionCache = (_effectiveness >= _amountOf);
+    if (!_clearConditionCache) then {
+        _clearConditionCache = (_effectiveness >= _amountOf);
+    };
 
     // Reduce the amount this injury is present
     (_woundsOnPart select _woundIndex) set [1, _amountOf - _impact];
