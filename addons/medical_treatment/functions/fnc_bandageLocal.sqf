@@ -29,7 +29,7 @@ if (_woundsOnPart isEqualTo []) exitWith {};
 private _targetWounds = [_patient, _bandage, _bodyPart, GVAR(bandageEffectiveness)] call FUNC(findMostEffectiveWounds);
 
 // Everything is patched up on this body part already
-if (_targetWounds isEqualTo createHashMap) exitWith {};
+if (count _targetWounds == 0) exitWith {};
 
 private _treatedDamage = 0;
 private _clearConditionCache = false;
