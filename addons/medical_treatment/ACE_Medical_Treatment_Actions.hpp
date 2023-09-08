@@ -247,7 +247,7 @@ class GVAR(actions) {
         allowSelfTreatment = 0;
         medicRequired = 0;
         treatmentTime = QGVAR(treatmentTimeBodyBag);
-        items[] = {"ACE_bodyBag"};
+        items[] = {"ACE_bodyBag", "ACE_bodyBag_blue", "ACE_bodyBag_white"};
         condition = QFUNC(canPlaceInBodyBag);
         callbackSuccess = QFUNC(placeInBodyBag);
         consumeItem = 1;

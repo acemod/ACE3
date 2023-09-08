@@ -6,6 +6,10 @@
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
+ * 2: Body Part (unused) <STRING>
+ * 3: Treatment (unused) <STRING>
+ * 4: Item user (unused) <OBJECT>
+ * 5: Body bag classname <STRING>
  *
  * Return Value:
  * None
@@ -16,7 +20,7 @@
  * Public: No
  */
 
-params ["_medic", "_patient"];
+params ["_medic", "_patient", "", "", "", "_item"];
 TRACE_1("placeInBodyBag",_patient);
 
 if ((alive _patient) && {!GVAR(allowBodyBagUnconscious)}) exitWith {
@@ -45,7 +49,8 @@ private _direction = (_headPos vectorFromTo _spinePos) call CBA_fnc_vectDir;
 _patient setPosASL [-5000, -5000, 0];
 
 // Create the body bag object, set its position to prevent it from flipping
-private _bodyBag = createVehicle ["ACE_bodyBagObject", [0, 0, 0], [], 0, "NONE"];
+private _bodyBagClass = getText (configFile >> "CfgWeapons" >> _item >> QGVAR(bodyBagObject));
+private _bodyBag = createVehicle [_bodyBagClass, [0, 0, 0], [], 0, "NONE"];
 _bodyBag setPosASL _position;
 _bodyBag setDir _direction;
 

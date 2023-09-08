@@ -8,7 +8,7 @@ class CfgVehicles {
         };
 
         scope = 1;
-        scopeCurator = 2;
+        scopeCurator = 1;
         side = -1;
         model = QPATHTOEF(apl,ace_bodybag.p3d);
         icon = "";
@@ -31,6 +31,25 @@ class CfgVehicles {
                 selection = "";
             };
         };
+    };
+    class ACE_bodyBagObject_new: ACE_bodyBagObject {
+        hiddenSelections[] = {"camo"};
+        model = "\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_F.p3d";
+    };
+
+    class ACE_bodyBag_black: ACE_bodyBagObject_new {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0";
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_black_CO.paa"};
+    };
+
+    class ACE_bodyBag_blue: ACE_bodyBagObject_new {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_blue_f0";
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_blue_CO.paa"};
+    };
+
+    class ACE_bodyBag_white: ACE_bodyBagObject_new {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_white_f0";
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_white_CO.paa"};
     };
 
     // Medical litter classes
