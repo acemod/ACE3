@@ -115,7 +115,7 @@
             <English>Unconscious Drop Weapon</English>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
-            <English>The probability of a player dropping their weapon on loss of consciousness.</English>
+            <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
         </Key>
     </Package>
 </Project>
