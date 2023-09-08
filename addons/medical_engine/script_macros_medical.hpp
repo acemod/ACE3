@@ -54,6 +54,10 @@
 #define BLOOD_VOLUME_CLASS_4_HEMORRHAGE 3.600 // lost more than 40% blood, Class IV Hemorrhage
 #define BLOOD_VOLUME_FATAL 3.0 // Lost more than 50% blood, Unrecoverable
 
+// Minimum blood volume, in liters, for a patient to have the chance to wake up
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsHemorrhageThreshold)
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS_DEFAULT BLOOD_VOLUME_CLASS_2_HEMORRHAGE
+
 // IV Change per second calculation:
 // 250 ml should take 60 seconds to fill. 250 ml / 60 s ~ 4.1667 ml/s.
 #define IV_CHANGE_PER_SECOND 4.1667 // in milliliters per second
