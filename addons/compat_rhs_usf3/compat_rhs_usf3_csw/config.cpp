@@ -1,8 +1,5 @@
 #include "script_component.hpp"
 
-// Config will be binerized, so this include is only required at build-time
-#include "\z\ace\addons\csw\script_config_macros_csw.hpp"
-
 class CfgPatches {
     class SUBADDON {
         name = COMPONENT_NAME;
