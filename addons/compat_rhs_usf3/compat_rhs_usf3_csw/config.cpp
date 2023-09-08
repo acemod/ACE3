@@ -4,7 +4,7 @@
 #include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {QGVAR(m252_carry), QGVAR(m2_carry), QGVAR(mk19_carry), QGVAR(tow_carry)};

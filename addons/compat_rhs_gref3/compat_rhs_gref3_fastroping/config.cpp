@@ -4,7 +4,7 @@
 #include "\z\ace\addons\fastroping\script_macros.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};

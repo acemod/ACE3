@@ -16,10 +16,10 @@
      An example is the path that is built from defines. Some available in this file, others in mods and addons.
 
  Follows Standard:
-   Object variables: PREFIX_COMPONENT (or PREFIX_COMPONENT_SUBCOMPONENT)
+   Object variables: PREFIX_COMPONENT
    Main-object variables: PREFIX_main
-   Paths: MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\SCRIPTNAME.sqf (or MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\SUBCOMPONENT\SCRIPTNAME.sqf)
-   e.g: x\six\addons\sys_menu\fDate.sqf (or x\six\addons\sys_menu\compat\fDate.sqf)
+   Paths: MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\SCRIPTNAME.sqf
+   e.g: x\six\addons\sys_menu\fDate.sqf
 
  Usage:
    define PREFIX and COMPONENT, then include this file
@@ -31,6 +31,7 @@
 
    use in subcomponents (subconfigs)
    define SUBCOMPONENT and include parent component's script_component.hpp
+   currently only supported by SUBADDON, additional macros may be added in the future
 
  TODO:
    - Try only to use 1 string type " vs '
@@ -54,12 +55,11 @@
     #define MAINLOGIC main
 #endif
 
+#define ADDON DOUBLES(PREFIX,COMPONENT)
 #define MAIN_ADDON DOUBLES(PREFIX,main)
 
 #ifdef SUBCOMPONENT
-    #define ADDON TRIPLES(PREFIX,COMPONENT,SUBCOMPONENT)
-#else
-    #define ADDON DOUBLES(PREFIX,COMPONENT)
+    #define SUBADDON DOUBLES(ADDON,SUBCOMPONENT)
 #endif
 
 /* -------------------------------------------
@@ -897,10 +897,13 @@ Author:
     Sickboy
 ------------------------------------------- */
 #define GVAR(var1) DOUBLES(ADDON,var1)
+#define SUBGVAR(var1) TRIPLES(ADDON,SUBCOMPONENT,var1)
 #define EGVAR(var1,var2) TRIPLES(PREFIX,var1,var2)
 #define QGVAR(var1) QUOTE(GVAR(var1))
+#define QSUBGVAR(var1) QUOTE(SUBGVAR(var1))
 #define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
 #define QQGVAR(var1) QUOTE(QGVAR(var1))
+#define QQSUBGVAR(var1) QUOTE(QSUBGVAR(var1))
 #define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
 
 /* -------------------------------------------
