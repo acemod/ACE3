@@ -6,12 +6,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"RKSL_PMII", "RKSL_PMII_525"};
+        requiredAddons[] = {"RH_PDW"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg", "Dedmen"};
+        authors[] = {"Ruthberg"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
+#include "CfgAmmo.hpp"
 #include "CfgWeapons.hpp"

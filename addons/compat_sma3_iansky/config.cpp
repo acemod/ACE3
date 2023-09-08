@@ -7,6 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"iansky_opt"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg"};
         url = ECSTRING(main,URL);
