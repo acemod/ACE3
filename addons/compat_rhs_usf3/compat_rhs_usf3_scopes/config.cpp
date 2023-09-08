@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        addonRootClass = QUOTE(COMPONENT);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -11,7 +11,12 @@ class CfgPatches {
             "ace_scopes"
         };
         skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        authors[] = {};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(COMPONENT);
     };
 };
 

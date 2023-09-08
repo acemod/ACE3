@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        name = QUOTE(COMPONENT);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -10,10 +10,10 @@ class CfgPatches {
             "rhs_main_loadorder",
             "ace_explosives"
         };
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "commy2", "Skengman2"};
         url = ECSTRING(main,URL);
-        skipWhenMissingDependencies = 1;
         VERSION_CONFIG;
     };
 };

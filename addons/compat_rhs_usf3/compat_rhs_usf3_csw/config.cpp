@@ -5,7 +5,7 @@
 
 class CfgPatches {
     class ADDON {
-        addonRootClass = QUOTE(COMPONENT);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {QGVAR(m252_carry), QGVAR(m2_carry), QGVAR(mk19_carry), QGVAR(tow_carry)};
         requiredVersion = REQUIRED_VERSION;
@@ -14,7 +14,12 @@ class CfgPatches {
             "ace_csw"
         };
         skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        authors[] = {};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(COMPONENT);
     };
 };
 
