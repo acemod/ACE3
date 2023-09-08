@@ -15,11 +15,11 @@
    - Provide a solid structure that can be dynamic and easy editable (Which sometimes means we cannot adhere to Aim #1 ;-)
      An example is the path that is built from defines. Some available in this file, others in mods and addons.
 
- Follows  Standard:
-   Object variables: PREFIX_COMPONENT
+ Follows Standard:
+   Object variables: PREFIX_COMPONENT (or PREFIX_COMPONENT_SUBCOMPONENT)
    Main-object variables: PREFIX_main
-   Paths: MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\SCRIPTNAME.sqf
-   e.g: x\six\addons\sys_menu\fDate.sqf
+   Paths: MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\SCRIPTNAME.sqf (or MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\SUBCOMPONENT\SCRIPTNAME.sqf)
+   e.g: x\six\addons\sys_menu\fDate.sqf (or x\six\addons\sys_menu\compat\fDate.sqf)
 
  Usage:
    define PREFIX and COMPONENT, then include this file
@@ -28,6 +28,9 @@
    Then in your addons, add a component.hpp, define the COMPONENT,
    and include your mod's script_macros.hpp
    In your scripts you can then include the addon's component.hpp with relative path)
+
+   use in subcomponents (subconfigs)
+   define SUBCOMPONENT and include parent component's script_component.hpp
 
  TODO:
    - Try only to use 1 string type " vs '
@@ -51,8 +54,13 @@
     #define MAINLOGIC main
 #endif
 
-#define ADDON DOUBLES(PREFIX,COMPONENT)
 #define MAIN_ADDON DOUBLES(PREFIX,main)
+
+#ifdef SUBCOMPONENT
+    #define ADDON TRIPLES(PREFIX,COMPONENT,SUBCOMPONENT)
+#else
+    #define ADDON DOUBLES(PREFIX,COMPONENT)
+#endif
 
 /* -------------------------------------------
 Macro: VERSION_CONFIG
