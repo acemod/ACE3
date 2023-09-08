@@ -84,7 +84,8 @@
 #define PAIN_SUPPRESSION_FADE_TIME 1800
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
-#define SPONTANEOUS_WAKE_UP_INTERVAL 15
+#define SPONTANEOUS_WAKE_UP_INTERVAL EGVAR(medical,const_wakeUpCheckInterval)
+#define SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT 15
 
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD EGVAR(medical,const_limpingDamageThreshold)
