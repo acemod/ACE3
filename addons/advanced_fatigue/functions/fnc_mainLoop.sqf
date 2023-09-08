@@ -23,11 +23,7 @@ if (!alive ACE_player) exitWith {
     _staminaBarContainer ctrlCommit 1;
 };
 
-private _oxygen = if (missionNamespace getVariable ["ace_medical", false]) then {
-    (ACE_player getVariable [QEGVAR(medical,spo2), 90]) / 100
-} else {
-    0.9
-};
+private _oxygen = (ACE_player getVariable [QEGVAR(medical,spo2), 90]) / 100;
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
