@@ -75,11 +75,6 @@ private _breathingEffectiveness = 1;
 
 private _rateOfChange = _negativeChange + (_positiveChange * _breathingEffectiveness);
 
-// We want to compensate even further when spo2 is dropping
-if (_rateOfChange < 0) then {
-    _negativeChange + _rateOfChange
-};
-
 private _spo2 = (_current + (_rateOfChange * _deltaT)) max 0 min 100;
 
 _unit setVariable [QGVAR(oxygenDemand), _negativeChange - BASE_OXYGEN_USE];

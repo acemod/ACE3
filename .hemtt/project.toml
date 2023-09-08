@@ -44,10 +44,3 @@ workshop = [
 dlc = [
     "S.O.G. Prairie Fire",
 ]
-
-[hemtt.launch.cup]
-workshop = [
-    "450814997", # CBA_A3's Workshop ID
-    "583496184", # CUP Terrains - Core
-    "583544987", # CUP Terrains - Maps
-]
