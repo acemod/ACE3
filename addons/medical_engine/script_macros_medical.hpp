@@ -55,7 +55,7 @@
 #define BLOOD_VOLUME_FATAL 3.0 // Lost more than 50% blood, Unrecoverable
 
 // Minimum blood volume, in liters, for a patient to have the chance to wake up
-#define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsHemorrhageThreshold)
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsBloodThreshold)
 #define MINIMUM_BLOOD_FOR_STABLE_VITALS_DEFAULT BLOOD_VOLUME_CLASS_2_HEMORRHAGE
 
 // IV Change per second calculation:
