@@ -6,7 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"iansky_opt"};
+        requiredAddons[] = {"RH_m4_cfg"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg"};
         url = ECSTRING(main,URL);
@@ -14,4 +15,5 @@ class CfgPatches {
     };
 };
 
+#include "CfgAmmo.hpp"
 #include "CfgWeapons.hpp"
