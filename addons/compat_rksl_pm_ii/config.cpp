@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"RKSL_PMII", "RKSL_PMII_525"};
+        requiredAddons[] = {"ace_scopes", "RKSL_PMII", "RKSL_PMII_525"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg", "Dedmen"};
