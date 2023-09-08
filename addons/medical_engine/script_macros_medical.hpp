@@ -76,7 +76,7 @@
 #define DAMAGE_BLUE_THRESHOLD 0.8
 #define DAMAGE_TOTAL_COLORS 10
 
-// --- pain
+// Pain above which a unit can go unconscious upon receiving damage
 #define PAIN_UNCONSCIOUS EGVAR(medical,painUnconsciousThreshold)
 
 // Pain fade out time (time it takes until pain is guaranteed to be completly gone)
