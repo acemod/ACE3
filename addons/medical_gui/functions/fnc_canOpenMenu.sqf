@@ -20,7 +20,7 @@ params ["_player", "_target"];
 
 // If in Zeus
 if (!isNull findDisplay 312) exitWith {
-    !isNull _target &&
+    !isNull _target && {missionNamespace getVariable [QGVAR(enableZeusModule), true]} &&
     GVAR(enableMedicalMenu) > 0
 };
 
