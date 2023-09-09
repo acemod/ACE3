@@ -12,7 +12,7 @@ class CfgPatches {
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
-        addonRootClass = QUOTE(COMPONENT);
+        addonRootClass = QUOTE(ADDON);
     };
 };
 
