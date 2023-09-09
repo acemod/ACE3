@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
+    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/black/ACE3-Logo.png" width="480">
 </p>
 
 <p align="center">
