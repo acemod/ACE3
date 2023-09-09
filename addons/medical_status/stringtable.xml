@@ -112,7 +112,7 @@
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
-            <English>Unconscious Drop Weapon</English>
+            <English>Weapon Drop Chance</English>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
             <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
