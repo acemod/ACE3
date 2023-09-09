@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Determine path for projectile to take in accordance to zero-effort miss pro-nav, takes target acceleration into account. Super deadly
  *
  * Arguments:

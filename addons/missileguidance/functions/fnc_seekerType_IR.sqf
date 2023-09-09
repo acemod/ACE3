@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Infrared seeker. Checks if flares are popped
  *
  * Arguments:

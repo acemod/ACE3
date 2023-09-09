@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Whether or not we should filter out this target due to masking. Useful for only doppler radar types
  *
  * Arguments:
@@ -12,7 +12,7 @@
  * 5: Radar seeker angle <NUMBER>
  *
  * Return Value:
- * Whether or not to filter out this target
+ * Whether or not to filter out this target <BOOL>
  *
  * Example:
  * [] call call ace_missileguidance_fnc_shouldFilterRadarHit;

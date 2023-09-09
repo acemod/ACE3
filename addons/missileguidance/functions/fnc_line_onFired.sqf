@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Sets up line state arrays (called from missileGuidance's onFired).
  *
  * Arguments:

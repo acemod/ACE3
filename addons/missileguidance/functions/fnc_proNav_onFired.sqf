@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Sets up proportional navigation state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
