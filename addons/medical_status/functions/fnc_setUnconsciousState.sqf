@@ -42,16 +42,15 @@ if (_active) then {
         _unit setVariable [QEGVAR(medical,lastWakeUpCheck), _lastWakeUpCheck max CBA_missionTime];
     };
 
-    // Chance for player to drop weapon
-    if (EGVAR(medical,dropWeaponUnconsciousChance) != 0 && {_unit == ACE_player && {random 1 <= EGVAR(medical,dropWeaponUnconsciousChance)}}) then {
-        _unit call EFUNC(common,throwWeapon);
-    };
-
     if (_unit == ACE_player) then {
         if (visibleMap) then {openMap false};
 
         while {dialog} do {
             closeDialog 0;
+        };
+
+        if (EGVAR(medical,dropWeaponUnconsciousChance) != 0 && {random 1 < EGVAR(medical,dropWeaponUnconsciousChance)}) then {
+            _unit call EFUNC(common,throwWeapon);
         };
     };
     // Unlock controls for copilot if unit is pilot of aircraft
