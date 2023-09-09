@@ -71,4 +71,9 @@ parent:
         <p>Information about developing ACE3, from setting up the development environment to guidelines and tips.</p>
         <a href="{{ site.baseurl }}/wiki/development/" class="button">Learn more</a>
     </div>
+    <div class="large-6 medium-2 columns">
+        <h3>Functions</h3>
+        <p>Public API functions for use by mission makers and other mods to interface with ACE3.</p>
+        <a href="{{ site.baseurl }}/wiki/functions/" class="button">Learn more</a>
+    </div>
 </div>

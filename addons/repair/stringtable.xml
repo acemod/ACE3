@@ -35,6 +35,12 @@
             <Chinese>備用輪胎</Chinese>
             <Turkish>Yedek Tekerlek</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_Wheel">
+            <English>Wheel</English>
+            <German>Rad</German>
+            <Spanish>Rueda</Spanish>
+            <Japanese>タイヤ</Japanese>
+        </Key>
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
             <German>Reifen wechseln</German>
@@ -261,6 +267,14 @@
             <Chinese>維修載具中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_name">
+            <English>Full Repair Time Coefficient</English>
+            <Japanese>完全修理時間係数</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_description">
+            <English>Modifies how long it takes to perform a Full Repair.\nThe repair time is based on based on the amount of repairs needed for each part, including those normally inaccessible.</English>
+            <Japanese>完全修復にかかる時間を変更します。\n修理時間は、通常アクセスできない部品も含め、各部品に必要な修理量に基づいて決定されます。</Japanese>
+        </Key>
         <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
             <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
             <French>Améliore les compétences en ingénierie des unités en fonction du lieu où elles se trouvent ; notamment dans les véhicules de réparation ou les ateliers.\nUn soldat non formé devient ingénieur, un ingénieur devient ingénieur avancé.</French>
@@ -270,6 +284,7 @@
             <Polish>Zwiększ wyszkolenie inżynierów w pojazdach i budynkach naprawczych. Niewyszkoleni zostają inżynierami, inżynierowie zostają zaawansowanymi inżynierami.</Polish>
             <Chinesesimp>在修理车辆或设施时，提升工程师训练。未受过训练的变成工程师，工程师晋升为高级工程师。</Chinesesimp>
             <Korean>수리 차량이나 시설 주위에 있으면 수리 수준을 높입니다. 정비병이 아닌 사람은 정비병이 되고, 정비병은 정비사가 됩니다.</Korean>
+            <Spanish>Aumenta las capacidades del ingeniero cuando se encuentra en un vehículo o instalacion de raparacion de vehículos. Quien no es ingeniero, pasa a serlo, y quien es ingeniero, pasa a ser ingeniero avanzado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
@@ -360,7 +375,7 @@
             <Czech>Přidat náhradní díly do vozidla (vyžaduje úložný prostor)?</Czech>
             <Italian>Aggiungi parti di ricambio ai veicoli (richiede componente Cargo)?</Italian>
             <French>Ajoute des pièces de rechange aux véhicules (nécessite le système de cargaison).</French>
-            <Japanese>車両へ予備部品を追加しますか（カーゴ コンポーネントが必要)?</Japanese>
+            <Japanese>車両へ予備部品を追加しますか? (カーゴ コンポーネントが必要)</Japanese>
             <Korean>차량에 예비 부품을 더합니까?(짐칸 요소 필요)</Korean>
             <Chinesesimp>添加载具备件（需相关货物组件）？</Chinesesimp>
             <Chinese>添加載具備件 (需相關貨物組件)?</Chinese>
@@ -1205,19 +1220,11 @@
             <Turkish>Sadece Gelişmiş Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
-            <English>Allow Wheel</English>
+            <English>Allow Wheel Replacement</English>
             <German>Erlaube Radwechsel</German>
             <Polish>Wymiana kół</Polish>
-            <Portuguese>Permite rodas</Portuguese>
             <Russian>Разрешить замену колес</Russian>
-            <Czech>Možnost Výměny Kol</Czech>
-            <Spanish>Permitir rueda</Spanish>
-            <Italian>Consenti Ruota</Italian>
-            <French>Roues autorisées pour</French>
-            <Japanese>タイヤを許可</Japanese>
-            <Korean>바퀴 허가</Korean>
-            <Chinesesimp>允许轮胎</Chinesesimp>
-            <Chinese>允許輪胎</Chinese>
+            <Japanese>タイヤ交換の許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
@@ -1233,6 +1240,16 @@
             <Korean>누가 바퀴를 제거 및 교체할 수 있습니까?</Korean>
             <Chinesesimp>谁可维修轮胎？</Chinesesimp>
             <Chinese>誰可維修輪胎?</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelEnabled_name">
+            <English>Allow Wheel Patching</English>
+            <German>Erlaube Radflicken</German>
+            <Japanese>タイヤ補修を許可</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelEnabled_description">
+            <English>Who can patch wheels?</English>
+            <German>Wer kann Radflicken durchführen?</German>
+            <Japanese>誰がタイヤの補修を出来るようにしますか?</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
             <English>Allow Repair</English>
@@ -1280,7 +1297,7 @@
             <Chinese>維修門檻</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
-            <English>What is the maximum damage that can be repaired with a toolkit?</English>
+            <English>Maximum damage to which a part can be repaired with a toolkit.\n0% means all damage can be repaired.</English>
             <German>Der maximale Schaden, der von einem Reperatursatz behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przy pomocy narzędzi?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um kit de ferramentas?</Portuguese>
@@ -1310,7 +1327,7 @@
             <Chinese>維修門檻 (工兵)</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
-            <English>What is the maximum damage that can be repaired by an engineer?</English>
+            <English>Maximum damage to which a part can be repaired by an engineer above the minimum level required for the repair.\n0% means all damage can be repaired.</English>
             <German>Der maximale Schaden, der von einem Pionier behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przez mechanika?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um engenheiro?</Portuguese>
@@ -1855,7 +1872,7 @@
             <Chinese>選擇的備件數量</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_DisplayName">
-            <English>Wheel Repair Requirements</English>
+            <English>Wheel Change Requirements</English>
             <German>Bedingungen für die Reifenreperatur</German>
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
@@ -1864,7 +1881,7 @@
             <Czech>Vyžaduje opravu kol</Czech>
             <Italian>Requisiti riparazione ruote</Italian>
             <French>Exigences pour réparation des roues</French>
-            <Japanese>タイヤの修理を必要</Japanese>
+            <Japanese>タイヤ修理の要求</Japanese>
             <Korean>바퀴 교체 요구사항</Korean>
             <Chinesesimp>维修轮胎限制</Chinesesimp>
             <Chinese>維修輪胎限制</Chinese>
@@ -1883,6 +1900,16 @@
             <Korean>바퀴를 제거/교체하는데 필요한 물건을 정합니다.</Korean>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelRequiredItems_DisplayName">
+            <English>Wheel Patch Requirements</English>
+            <German>Bedingungen für die Radflicken</German>
+            <Japanese>タイヤ補修の要求</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
+            <English>Items required to patch a wheel.</English>
+            <German>Gegenstänge, die zum Reifenflicken benötigt werden.</German>
+            <Japanese>タイヤ補修にアイテムを必要としますか?</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
@@ -2048,6 +2075,66 @@
             <Czech>Automaticky vypne motor při zahájení oprav.</Czech>
             <Spanish>Apagar el motor automáticamente al efectuar una reparación</Spanish>
             <Korean>수리 시 엔진을 자동으로 끕니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Repair_miscRepairTime_name">
+            <English>Part Repair Time</English>
+            <Japanese>部分修理時間</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_miscRepairTime_description">
+            <English>Time in seconds to complete a repair.</English>
+            <Japanese>修理完了までの時間</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_wheelChangeTime_name">
+            <English>Wheel Change Time</English>
+            <Japanese>タイヤ交換時間</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_wheelChangeTime_description">
+            <English>Time in seconds to remove or change a wheel.</English>
+            <Japanese>タイヤの取り外しまたは交換にかかる時間。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_PatchWheel">
+            <English>Patch Wheel</English>
+            <German>Radflicken</German>
+            <Japanese>タイヤを補修する</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_PatchingWheel">
+            <English>Patching Wheel...</English>
+            <German>Radflicken...</German>
+            <Japanese>タイヤを補修しています・・・</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelTime_DisplayName">
+            <English>Wheel Patch Time</English>
+            <Japanese>タイヤ補修時間</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelTime_Description">
+            <English>Time it takes to patch a wheel by 5%.</English>
+            <Japanese>タイヤを5%補修するのにかかる時間。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">
+            <English>Patch Wheel Threshold</English>
+            <Japanese>タイヤ補修しきい値</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
+            <English>Maximum level to which a wheel can be patched.</English>
+            <Japanese>タイヤを補修できる最大の度合い。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
+            <English>Wheel Patch Location</English>
+            <Japanese>タイヤ補修場所</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
+            <English>Where the wheel can be patched.</English>
+            <Japanese>タイヤを補修できる場所。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelOnGround">
+            <English>On the ground</English>
+            <German>Auf dem Boden</German>
+            <Japanese>地上</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_patchWheelOnVehicle">
+            <English>On a vehicle</English>
+            <German>An einem Fahrzeug</German>
+            <Japanese>車両上</Japanese>
         </Key>
     </Package>
 </Project>

@@ -17,14 +17,11 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-
-#define __LaserDesignatorIGUI (uiNamespace getVariable ["ACE_RscOptics_LaserDesignator", nil])
-#define __LaserDesignatorIGUI_LaserCode (__LaserDesignatorIGUI displayCtrl 123001)
-#define __LaserDesignatorIGUI_ACE_Distance (__LaserDesignatorIGUI displayCtrl 123002)
-#define __LaserDesignatorIGUI_CA_Distance (__LaserDesignatorIGUI displayCtrl 151)
-#define __LaserDesignatorIGUI_LaserOn (__LaserDesignatorIGUI displayCtrl 158)
-
 #define IDC_MODECONTROLGROUP 1000
 #define IDC_ATTACKMODE 1001
 #define IDC_LASERCODE 1002
 #define IDC_LASERICON 1003
+
+#define IDC_LASERDESIGNATOR_LASERCODE 123001
+#define IDC_LASERDESIGNATOR_ACEDISTANCE 123002
+#define IDC_LASERDESIGNATOR_DISTANCE 151

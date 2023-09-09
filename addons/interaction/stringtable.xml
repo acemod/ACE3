@@ -332,6 +332,7 @@
             <Polish>Zmień nazwę grupy</Polish>
             <Chinesesimp>小队重命名</Chinesesimp>
             <Korean>그룹 명칭 다시 짓기</Korean>
+            <Spanish>Renombrar grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
@@ -342,6 +343,7 @@
             <Polish>Ta nazwa grupy jest już w użyciu.</Polish>
             <Chinesesimp>该小队名称已被使用</Chinesesimp>
             <Korean>그 명칭은 이미 사용 중 입니다.</Korean>
+            <Spanish>Este nombre de grupo ya está siendo usado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
@@ -352,6 +354,7 @@
             <Polish>NOWA NAZWA GRUPY:</Polish>
             <Chinesesimp>新的小队名：</Chinesesimp>
             <Korean>새 그룹 명칭:</Korean>
+            <Spanish>NUEVO NOMBRE DE GRUPO:</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -1066,7 +1069,7 @@
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
             <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewertungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
-            <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしても AI からの攻撃を防ぎます。</Japanese>
+            <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
             <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价？ 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军 AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
@@ -1279,6 +1282,7 @@
             <Polish>Zezwól na zmianę nazwy grupy</Polish>
             <Chinesesimp>允许小队重命名</Chinesesimp>
             <Korean>그룹 이름 재설정 허가</Korean>
+            <Spanish>Permitir renombrar grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
@@ -1289,6 +1293,7 @@
             <Polish>Pozwala liderowi grupy na zmianę jej nazwy, jeżeli ta nazwa nie jest już w użyciu.</Polish>
             <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
             <Korean>그룹 리더가 그룹 이름을 재설정 하는 것을 허가합니다.</Korean>
+            <Spanish>Permite al lider de un grupo renombrar a su grupo si el nombre no está siendo actualmente usado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1299,6 +1304,7 @@
             <Polish>Uwaga: niektóre obiekty mogą kolidować z innymi.</Polish>
             <Chinesesimp>警告：会导致一些物体与其他物体发生碰撞。</Chinesesimp>
             <Korean>주의: 물체끼리 충돌하는 현상이 있을 수 있음.</Korean>
+            <Spanish>Advertencia: puede provocar que algunos objetos choquen con otros.</Spanish>
         </Key>
     </Package>
 </Project>

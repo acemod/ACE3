@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Item <STRING>
- * 3: Data <STRING>
+ * 2: Data <STRING>
  *
  * Return Value:
  * Successful <BOOL>

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Calculates the time to bandage a wound based on it's size, the patient and the medic.
  *
  * Arguments:
@@ -18,19 +18,19 @@
  * Public: No
  */
 
-params ["_medic", "_patient", "_bodypart", "_bandage"];
+params ["_medic", "_patient", "_bodyPart", "_bandage"];
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 if (_partIndex < 0) exitWith { ERROR_1("invalid partIndex - %1",_this); 0 };
 
-private _targetWound = [_patient, _bandage, _partIndex] call FUNC(findMostEffectiveWound);
+private _targetWound = [_patient, _bandage, _bodyPart] call FUNC(findMostEffectiveWound);
 _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
 TRACE_3("findMostEffectiveWound",_wound,_woundIndex,_effectiveness);
 
 // Everything is patched up on this body part already
 if (_wound isEqualTo EMPTY_WOUND) exitWith {0};
 
-_wound params ["_classID", "", "_amountOf", "_bloodloss", "_damage"];
+_wound params ["_classID", "_amountOf", "_bloodloss", "_damage"];
 private _category = (_classID % 10);
 
 // Base bandage time is based on wound size and remaining percentage

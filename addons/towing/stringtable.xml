@@ -10,6 +10,7 @@
             <Polish>Holowanie</Polish>
             <Chinesesimp>牵引</Chinesesimp>
             <Korean>견인</Korean>
+            <Spanish>Remolcado</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_attach">
             <English>Attach Tow Rope</English>
@@ -20,6 +21,7 @@
             <Polish>Przypnij linkę holowniczą</Polish>
             <Chinesesimp>系上牵引绳</Chinesesimp>
             <Korean>견인줄 부착</Korean>
+            <Spanish>Sujetar cuerda de remolcado</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_canceled">
             <English>Attaching Cancelled</English>
@@ -30,6 +32,7 @@
             <Polish>Przyczepianie anulowane</Polish>
             <Chinesesimp>取消系上绳索</Chinesesimp>
             <Korean>견인 취소됨</Korean>
+            <Spanish>Sujección cancelada</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_start3">
             <English>Attach Tow Rope (3.2m)</English>
@@ -40,6 +43,7 @@
             <Polish>Przypnij linkę holowniczą (3,2m)</Polish>
             <Chinesesimp>系上牵引绳（3.2米）</Chinesesimp>
             <Korean>견인줄 부착(3.2M)</Korean>
+            <Spanish>Sujetar cuerda de remolcado (3.2m)</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_start6">
             <English>Attach Tow Rope (6.2m)</English>
@@ -50,6 +54,7 @@
             <Polish>Przypnij linkę holowniczą (6,2m)</Polish>
             <Chinesesimp>系上牵引绳（6.2米）</Chinesesimp>
             <Korean>견인줄 부착(6.2M)</Korean>
+            <Spanish>Sujetar cuerda de remolcado (6.2m)</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_start12">
             <English>Attach Tow Rope (12.2m)</English>
@@ -60,6 +65,7 @@
             <Polish>Przypnij linkę holowniczą (12,2m)</Polish>
             <Chinesesimp>系上牵引绳（12.2米）</Chinesesimp>
             <Korean>견인줄 부착(12.2M)</Korean>
+            <Spanish>Sujetar cuerda de remolcado (12.2m)</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_start15">
             <English>Attach Tow Rope (15.2m)</English>
@@ -70,6 +76,7 @@
             <Polish>Przypnij linkę holowniczą (15,2m)</Polish>
             <Chinesesimp>系上牵引绳（15.2米）</Chinesesimp>
             <Korean>견인줄 부착(15.2M)</Korean>
+            <Spanish>Sujetar cuerda de remolcado (15.2m)</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_start18">
             <English>Attach Tow Rope (18.3m)</English>
@@ -80,6 +87,7 @@
             <Polish>Przypnij linkę holowniczą (18,3m)</Polish>
             <Chinesesimp>系上牵引绳（18.3米）</Chinesesimp>
             <Korean>견인줄 부착(18.2M)</Korean>
+            <Spanish>Sujetar cuerda de remolcado (18.3m)</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_start27">
             <English>Attach Tow Rope (27.4m)</English>
@@ -90,6 +98,7 @@
             <Polish>Przypnij linkę holowniczą (27,4m)</Polish>
             <Chinesesimp>系上牵引绳（27.4米）</Chinesesimp>
             <Korean>견인줄 부착(27.4M)</Korean>
+            <Spanish>Sujetar cuerda de remolcado (27.4m)</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_start36">
             <English>Attach Tow Rope (36.6m)</English>
@@ -100,6 +109,7 @@
             <Polish>Przypnij linkę holowniczą (36,6m)</Polish>
             <Chinesesimp>系上牵引绳（36.6米）</Chinesesimp>
             <Korean>견인줄 부착(36.6M)</Korean>
+            <Spanish>Sujetar cuerda de remolcado (36.6m)</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_detach">
             <English>Detach Tow Rope</English>
@@ -110,12 +120,15 @@
             <Polish>Odepnij linkę holowniczą</Polish>
             <Chinesesimp>解开牵引绳</Chinesesimp>
             <Korean>견인줄 분리</Korean>
+            <Spanish>Desmontar cuerda de remolcado</Spanish>
         </Key>
         <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
             <English>Add Tow Rope to Vehicle Inventory</English>
             <Russian>Добавить буксировочный трос в инвентарь машин</Russian>
             <Polish>Dodaj linkę holowniczą do ekwipunku pojazdów</Polish>
             <Korean>차량 소지품에 견인줄 추가</Korean>
+            <Spanish>Añadir cuerda de remolcado al inventario del vehículo</Spanish>
+            <Japanese>車両のインベントリに牽引ロープを追加する</Japanese>
         </Key>
     </Package>
 </Project>

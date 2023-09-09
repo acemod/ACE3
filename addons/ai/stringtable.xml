@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="AI">
+        <Key ID="STR_ACE_AI_DisplayName">
+            <English>AI</English>
+            <Chinese>AI</Chinese>
+            <French>IA</French>
+            <Spanish>IA</Spanish>
+            <Italian>AI</Italian>
+            <Polish>SI</Polish>
+            <Russian>ИИ</Russian>
+            <German>KI</German>
+            <Czech>UI</Czech>
+            <Portuguese>IA</Portuguese>
+            <Korean>AI</Korean>
+            <Chinesesimp>AI</Chinesesimp>
+            <Japanese>AI</Japanese>
+            <Turkish>AI</Turkish>
+        </Key>
         <Key ID="STR_ACE_AI_GarrisonInvalidPosition">
             <English>Invalid position provided.</English>
             <German>Ungültige Position</German>
@@ -64,6 +80,12 @@
             <Spanish>No se ha encontrado ningún edificio.</Spanish>
             <Czech>Nenalezena žádná budova.</Czech>
             <Turkish>Bir yapı bulunamadı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
+            <English>Auto-Equip NVGs</English>
+        </Key>
+        <Key ID="STR_ACE_AI_AssignNVG_Description">
+            <English>Equips NVG in inventory during night time and unequips it during day time.\nDoes not add NVGs to inventory!</English>
         </Key>
     </Package>
 </Project>

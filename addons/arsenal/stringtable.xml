@@ -997,7 +997,7 @@
             <Spanish>Ninguna unidad de jugador disponible! Coloca una unidad y márcala como "Jugador".</Spanish>
             <French>Aucune unité joueur disponible ! Placez une unité et marquez-la en tant que "joueur".</French>
             <German>Keine Spielereinheit verfügbar. Setze eine Einheit und markiere sie als "Spieler".</German>
-            <Japanese>プレイヤー ユニットがありません!ユニットを設置し"Player"と名付けてください。</Japanese>
+            <Japanese>プレイヤーユニットがありません!ユニットを設置し"Player"と名付けてください。</Japanese>
             <Korean>플레이어 유닛을 사용할 수 없습니다! 유닛을 놓고 "플레이어"라고 표시하십시오.</Korean>
             <Chinese>沒有可用的玩家單位!請擺放一個單位並設定成"玩家"</Chinese>
             <Chinesesimp>没有可用的玩家单位！请摆放一个单位并设定成“玩家”。</Chinesesimp>
@@ -1240,6 +1240,70 @@
             <Turkish>Desteklenmiyor</Turkish>
             <Korean>지원되지 않음</Korean>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionModeGeneric">
+            <English>Vision Mode</English>
+            <German>Sichtmodus</German>
+            <Japanese>ビジョン モード</Japanese>
+            <Italian>Modalità Visiva</Italian>
+            <Chinese>視覺模式</Chinese>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Korean>보기 모드</Korean>
+            <French>Mode de vision</French>
+            <Polish>Tryb Wizji</Polish>
+            <Russian>Режим видения</Russian>
+            <Portuguese>Modo de Visão</Portuguese>
+            <Czech>Režim sledování</Czech>
+            <Turkish>Görüş Modu</Turkish>
+            <Spanish>Modo de visión</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionNormal">
+            <English>Normal</English>
+            <German>Normal</German>
+            <Polish>Normalna</Polish>
+            <Portuguese>Normal</Portuguese>
+            <Russian>Нормальное</Russian>
+            <Czech>Normální</Czech>
+            <Spanish>Normal</Spanish>
+            <Italian>Normale</Italian>
+            <French>Normale</French>
+            <Japanese>通常</Japanese>
+            <Korean>일반</Korean>
+            <Chinesesimp>正常</Chinesesimp>
+            <Chinese>正常</Chinese>
+            <Turkish>Normal</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionNight">
+            <English>Night</English>
+            <German>Nacht</German>
+            <Polish>Noc</Polish>
+            <Portuguese>Visão Norturna</Portuguese>
+            <Russian>Ночное</Russian>
+            <Czech>Noční</Czech>
+            <Spanish>Nocturna</Spanish>
+            <Italian>Notturno</Italian>
+            <French>Nocturne</French>
+            <Japanese>暗視装置</Japanese>
+            <Korean>야간</Korean>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
+            <Turkish>Gece</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionThermal">
+            <English>Thermal</English>
+            <German>Wärme</German>
+            <Polish>Termo</Polish>
+            <Portuguese>Térmica</Portuguese>
+            <Russian>Тепловизор</Russian>
+            <Czech>Termální</Czech>
+            <Spanish>Térmica</Spanish>
+            <Italian>Termico</Italian>
+            <French>Thermique</French>
+            <Japanese>熱源画像</Japanese>
+            <Korean>열상</Korean>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Chinese>熱成像</Chinese>
+            <Turkish>Termal</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <Spanish>Página</Spanish>
@@ -1261,7 +1325,7 @@
             <Spanish>Habilitar las pestañas de caras / voces / insignias</Spanish>
             <German>Aktiviere die Gesichter-, Stimmen- und Abzeichenübersicht</German>
             <French>Activer les onglets visages/voix/insignes</French>
-            <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
+            <Japanese>顔 / 声 / 記章(バッジ)タブを有効化</Japanese>
             <Chinesesimp>启用脸谱/语音/徽章选项</Chinesesimp>
             <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
             <Italian>Abilita volti, voci e insegne</Italian>
@@ -1469,16 +1533,70 @@
             <English>Save Face</English>
             <Korean>얼굴 저장</Korean>
             <Russian>Сохранить лицо</Russian>
+            <Spanish>Guardar Cara</Spanish>
+            <Japanese>顔の保存</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
             <Korean>목소리 저장</Korean>
             <Russian>Сохранить голос</Russian>
+            <Spanish>Guardar Voz</Spanish>
+            <Japanese>声の保存</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
             <Korean>계급장 저장</Korean>
             <Russian>Сохранить эмблему</Russian>
+            <Spanish>Guardar Insignia</Spanish>
+            <Japanese>記章(バッジ)の保存</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortDescending">
+            <English>Descending</English>
+            <Japanese>下降</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortAscending">
+            <English>Ascending</English>
+            <Japanese>昇順</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_toolsTab">
+            <English>Tools</English>
+            <Czech>Nástroje</Czech>
+            <German>Werkzeuge</German>
+            <Russian>Инструменты</Russian>
+            <Polish>Narzędzia</Polish>
+            <Italian>Strumenti</Italian>
+            <Spanish>Herramientas</Spanish>
+            <French>Outils</French>
+            <Chinese>工具</Chinese>
+            <Japanese>ツール</Japanese>
+            <Korean>도구</Korean>
+            <Portuguese>Ferramentas</Portuguese>
+            <Chinesesimp>工具</Chinesesimp>
+            <Turkish>Araçlar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statMagCount">
+            <English>Ammo count</English>
+            <Japanese>弾薬数</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
+            <English>Default to Favorites</English>
+            <Japanese>お気に入りをデフォルト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
+            <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
+            <Japanese>ACE Arsenalがデフォルトで全てのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
+            <English>Favorites Color</English>
+            <Japanese>お気に入りの色</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
+            <English>Highlight color for favorited items.</English>
+            <Japanese>お気に入りアイテムのハイライト色。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
+            <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
+            <Japanese>Shiftを押しながらダブルクリックするとアイテムを追加・削除できます。</Japanese>
         </Key>
     </Package>
 </Project>

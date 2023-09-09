@@ -38,6 +38,7 @@
             <German>Rechte Maustaste zum Zurücksetzen</German>
             <Chinesesimp>点击鼠标右键重置</Chinesesimp>
             <Korean>오른쪽 클릭으로 재설정</Korean>
+            <Spanish>Click botón derecho para restaurar</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>

@@ -14,7 +14,7 @@
  * Example:
  * ["2d", [0,0,0], 1] call ace_common_fnc_rscObjectHelper
  *
- * Public: Maybe
+ * Public: No
  */
 
 params ["_func", "_array", ["_scale", 1]];

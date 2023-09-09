@@ -26,12 +26,17 @@ if (isNil "_modelPath") then {
     private _cartridge = getText (configFile >> "CfgAmmo" >> _ammo >> "cartridge");
     //Default cartridge is a 5.56mm model
     _modelPath = switch (_cartridge) do {
-        case "FxCartridge_9mm":     { "A3\Weapons_f\ammo\cartridge_small.p3d" };
-        case "FxCartridge_65":      { "A3\weapons_f\ammo\cartridge_65.p3d" };
-        case "FxCartridge_762":     { "A3\weapons_f\ammo\cartridge_762.p3d" };
-        case "FxCartridge_127":     { "A3\weapons_f\ammo\cartridge_127.p3d" };
-        case "FxCartridge_slug":    { "A3\weapons_f\ammo\cartridge_slug.p3d" };
-        case "":                    { "" };
+        case "FxCartridge_9mm":         { "A3\Weapons_f\ammo\cartridge_small.p3d" };
+        case "FxCartridge_65":          { "A3\weapons_f\ammo\cartridge_65.p3d" };
+        case "FxCartridge_762":         { "A3\weapons_f\ammo\cartridge_762.p3d" };
+        case "FxCartridge_762x39":      { "A3\weapons_f_enoch\ammo\cartridge_762x39.p3d" };
+        case "FxCartridge_93x64_Ball":  { "A3\Weapons_F_Mark\Ammo\cartridge_93x64.p3d" };
+        case "FxCartridge_338_Ball":    { "A3\Weapons_F_Mark\Ammo\cartridge_338_LM.p3d" };
+        case "FxCartridge_338_NM":      { "A3\Weapons_F_Mark\Ammo\cartridge_338_NM.p3d" };
+        case "FxCartridge_127":         { "A3\weapons_f\ammo\cartridge_127.p3d" };
+        case "FxCartridge_127x54":      { "A3\Weapons_F_Mark\Ammo\cartridge_127x54.p3d" };
+        case "FxCartridge_slug":        { "A3\weapons_f\ammo\cartridge_slug.p3d" };
+        case "":                        { "" };
         default { "A3\Weapons_f\ammo\cartridge.p3d" };
     };
     GVAR(cachedCasings) set [_ammo, _modelPath];

@@ -419,7 +419,7 @@
             <French>Compétence globale de l'IA</French>
             <Russian>Мастерство ботов</Russian>
             <Czech>Globální zkušenosti AI</Czech>
-            <Japanese>総合的 AI スキル</Japanese>
+            <Japanese>総合的AIスキル</Japanese>
             <Polish>Globalne umiejętności AI</Polish>
             <German>Globale KI-Fähigkeit</German>
             <Korean>서버 인공지능 실력</Korean>
@@ -571,7 +571,7 @@
             <French>L'IA se met à couvert.</French>
             <Russian>Должны ли боты искать укрытия</Russian>
             <Czech>AI se bude snažit vyhledávat krytí</Czech>
-            <Japanese>AI は遮蔽を取るようになります</Japanese>
+            <Japanese>AIは遮蔽を取るようになります</Japanese>
             <Polish>Czy AI powinno szukać osłon</Polish>
             <German>Soll KI nach Deckung suchen</German>
             <Korean>인공지능이 엄폐물을 찾아갑니다</Korean>
@@ -601,7 +601,7 @@
             <French>L'IA passe automatiquement en mode combat.</French>
             <Russian>Должны ли боты автоматически переходить в режим боя</Russian>
             <Czech>AI se automaticky přepne do bojového režimu</Czech>
-            <Japanese>AI は自動的に戦闘状態へ切り替えます</Japanese>
+            <Japanese>AIは自動的に戦闘状態へ切り替えます</Japanese>
             <Polish>Czy AI powinno automatycznie przechodzić w tryb walki</Polish>
             <German>Soll KI automatisch in Kampfmodus umschalten</German>
             <Korean>인공지능이 자동적으로 교전 상태에 돌입합니다</Korean>
@@ -1134,7 +1134,7 @@
             <German>Spieler und KI's</German>
             <Italian>Giocati e AI</Italian>
             <Polish>Gracze i SI</Polish>
-            <Japanese>プレイヤーと AI</Japanese>
+            <Japanese>プレイヤーとAI</Japanese>
             <Russian>Игроки и ИИ</Russian>
             <Portuguese>Jogadores e IA</Portuguese>
             <Spanish>Jugadores e IA</Spanish>
@@ -1931,6 +1931,7 @@
             <Polish>Podpal Jednostkę</Polish>
             <Japanese>ユニットを燃やす</Japanese>
             <Russian>Поджечь юнита</Russian>
+            <Spanish>Quemar a unidad</Spanish>
         </Key>
     </Package>
 </Project>

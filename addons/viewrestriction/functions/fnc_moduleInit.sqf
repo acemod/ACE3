@@ -10,6 +10,8 @@
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
 
 params ["_logic", "_units", "_activated"];

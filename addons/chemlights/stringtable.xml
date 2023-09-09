@@ -102,7 +102,7 @@
             <Japanese>種類: 照明 - オレンジ&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - pomarańczowe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - orange&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류:밝은 오렌지&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+            <Korean>종류: 밝은 오렌지&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
             <French>Type : lumière - Orange&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
             <Italian>Tipo: Luce - Arancione&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 橘色&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
@@ -150,7 +150,7 @@
             <Japanese>種類: 照明 - 白&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - białe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - weiß&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류:하얀색&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+            <Korean>종류: 하얀색&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
             <French>Type : lumière - Blanche&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
             <Italian>Tipo: Luce - Bianca&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 白色&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
@@ -246,7 +246,7 @@
             <Japanese>種類: 照明 - 高輝度 黄 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe żółte (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - gelb, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류:밝은 노란색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
+            <Korean>종류: 밝은 노란색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
             <French>Type : lumière HL (30 minutes) - Jaune&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
             <Italian>Tipo: Luce - Gialla Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 超亮黃色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
@@ -518,7 +518,7 @@
             <Japanese>ケミライトを入れられます。シールドとケミライトを組み合わせることで、照明にもなりえます。</Japanese>
             <Polish>Osłona na świetliki. Połącz ją ze świetlikiem by stworzyć lampkę do czytania.</Polish>
             <German>Abschirmung für Knicklichter. Mit Knicklicht kombinieren, um Leselicht zu erhalten.</German>
-            <Korean>화학조명을 위한 가림막입니다. 화학조명과 같이 사용하여  읽을 때 씁니다.</Korean>
+            <Korean>화학조명을 위한 가림막입니다. 화학조명과 같이 사용하여 읽을 때 씁니다.</Korean>
             <French>Étui pour cyalume. Le combiner avec un cyalume pour obtenir une lampe de lecture.</French>
             <Italian>Scudo per luci chimiche. Combina con una luce chimica per una luce da lettura.</Italian>
             <Chinese>螢光棒的保護殼. 與螢光棒結合後可充當閱讀燈</Chinese>

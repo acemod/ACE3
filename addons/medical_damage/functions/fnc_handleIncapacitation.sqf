@@ -24,11 +24,11 @@ _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightA
 
 // Exclude non penetrating body damage
 {
-    _x params ["", "_bodyPartN", "_amountOf", "", "_damage"];
-    if (_bodyPartN == 1 && {_damage < PENETRATION_THRESHOLD}) then {
+    _x params ["", "_amountOf", "", "_damage"];
+    if (_damage < PENETRATION_THRESHOLD) then {
         _bodyDamage = _bodyDamage - (_amountOf * _damage);
     };
-} forEach GET_OPEN_WOUNDS(_unit);
+} forEach (GET_OPEN_WOUNDS(_unit) getOrDefault ["body", []]);
 
 private _damageThreshold = GET_DAMAGE_THRESHOLD(_unit);
 

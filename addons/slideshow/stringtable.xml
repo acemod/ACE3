@@ -222,7 +222,7 @@
             <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
             <Italian>Durata di ogni diapositiva. Default: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
-            <Japanese>各スライドの持続時間。標準：0 (自動的な切り替えは無効)</Japanese>
+            <Japanese>各スライドの持続時間。標準:0 (自動的な切り替えは無効)</Japanese>
             <Korean>매 슬라이드의 지속 시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>
@@ -236,6 +236,7 @@
             <Polish>Wybór Tekstury</Polish>
             <Japanese>テクスチャの選択</Japanese>
             <Russian>Выбор текстуры</Russian>
+            <Spanish>Selección de texturas</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Selection_Description">
             <English>Object texture selection. Default: 0</English>
@@ -246,6 +247,7 @@
             <Polish>Wybór tekstury obiektu. Domyślnie: 0</Polish>
             <Japanese>オブジェクトテクスチャの選択。デフォルト: 0</Japanese>
             <Russian>Выбор текстуры объекта. По умолчанию: 0</Russian>
+            <Spanish>Selección de textura de objeto. Defecto: 0</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>

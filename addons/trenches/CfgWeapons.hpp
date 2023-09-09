@@ -9,6 +9,7 @@ class CfgWeapons {
         model = QPATHTOEF(apl,ace_entrchtool.p3d);
         picture = QPATHTOF(ui\w_entrchtool_ca.paa);
         scope = 2;
+        ACE_isTool = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };

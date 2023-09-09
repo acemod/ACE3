@@ -215,7 +215,7 @@
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
             <Italian>Mostra i nomi delle le unità AI</Italian>
             <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
-            <Japanese>AI ユニットの名札を表示</Japanese>
+            <Japanese>AIユニットの名札を表示</Japanese>
             <Korean>인공지능 인원 이름 표시</Korean>
             <Chinesesimp>显示 AI 单位名字</Chinesesimp>
             <Chinese>顯示AI單位名稱</Chinese>
@@ -232,7 +232,7 @@
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать имена и звания дружественных ботов? По умолчанию: Не обязывать</Russian>
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
-            <Japanese>友軍の AI にも名前と階級を表示しますか? 標準: 強制しない</Japanese>
+            <Japanese>友軍のAIにも名前と階級を表示しますか? 標準: 強制しない</Japanese>
             <Korean>아군 인공지능의 계급을 표시합니까? 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示友军 AI 的名字和军阶？ 预设：不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>
@@ -434,7 +434,7 @@
             <Hungarian>Alap névcímke-szín (csoporton kívüli személyek)</Hungarian>
             <Italian>Colore dei nomi non appartenenti al gruppo</Italian>
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
-            <Japanese>標準の名札の色（グループ メンバ以外)</Japanese>
+            <Japanese>標準の名札の色 (グループメンバー以外)</Japanese>
             <Korean>기본 이름표 색상 (비그룹 멤버)</Korean>
             <Chinesesimp>预设名字颜色（非同小队队友）</Chinesesimp>
             <Chinese>預設名稱顏色 (非同小隊隊友) </Chinese>
@@ -534,6 +534,7 @@
             <Polish>Współczynnik jasności otoczenia </Polish>
             <Chinesesimp>铭牌的环境亮度系数</Chinesesimp>
             <Korean>이름표 배경 밝기 계수</Korean>
+            <Spanish>Coeficiente de brillo ambiental de Etiquetas de nombre</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">
             <English>Adjusts how strongly ambient brightness affects nametag view distance.</English>
@@ -544,6 +545,7 @@
             <Polish>Definiuje jak bardzo jasność otoczenia wpływa na zasięg wyświetlania imion postaci.</Polish>
             <Chinesesimp>调整环境亮度对铭牌查看距离的影响程度。</Chinesesimp>
             <Korean>배경 밝기가 이름표를 보는 거리에 얼마나 영향을 끼치는 지를 조절합니다.</Korean>
+            <Spanish>Ajusta cómo de fuerte afecta el brillo ambiental a la distancia de visión de las Etiquetas de nombre</Spanish>
         </Key>
     </Package>
 </Project>

@@ -40,6 +40,7 @@ if sys.version_info[0] == 2:
 
 import os
 import os.path
+import pathlib
 import shutil
 import platform
 import glob
@@ -241,13 +242,26 @@ def mikero_windows_registry(path, access=winreg.KEY_READ):
 
 def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
+    # try running pboProject once if it's not in registry
+    try:
+        pboProject = mikero_windows_registry("pboProject")
+        print(f"pboProject found normally via registry")
+    except:
+        print(f"pboProject not in registry")
+        pboProject = shutil.which('pboProject')
+        if (pboProject is None):
+            print("pboProject not in sys path")
+        else:
+            print(f"pboProject startup")
+            ret = subprocess.call([pboProject, "-P"])
+
     requiredToolPaths = {"pboProject": None, "rapify": None, "MakePbo": None}
     failed = False
 
     for tool in requiredToolPaths:
         try:
             k = mikero_windows_registry(tool)
-            path = winreg.QueryValueEx(k, "exe")[0]           
+            path = winreg.QueryValueEx(k, "exe")[0]
         except FileNotFoundError:
             print_error("Could not find {}".format(tool))
             failed = True
@@ -877,6 +891,7 @@ Examples:
 
 
 If a file called $NOBIN$ is found in the module directory, that module will not be binarized.
+If preprocess.enabled = false is set in the addon.toml, that module's config will not be binarized.
 
 See the make.cfg file for additional build options.
 """)
@@ -1187,7 +1202,7 @@ See the make.cfg file for additional build options.
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
 
-        # Always cleanup old sqfc    
+        # Always cleanup old sqfc
         for root, _dirs, files in os.walk(module_root_parent):
             for file in files:
                 if file.endswith(".sqfc"):
@@ -1293,15 +1308,26 @@ See the make.cfg file for additional build options.
             build_successful = False
             if build_tool == "pboproject":
                 try:
-                    nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 
-                    if os.path.isfile(nobinFilePath):
+                    skipPreprocessing = False
+                    addonTomlPath = os.path.join(work_drive, prefix, module, "addon.toml")
+                    if os.path.isfile(addonTomlPath):
+                        with open(addonTomlPath, "r") as f:
+                            tomlFile = f.read()
+                            if "preprocess = false" in tomlFile: 
+                                print_error("'preprocess = false' not supported")
+                                raise
+                            skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
+
+                    if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
-
+                    elif skipPreprocessing:
+                        print_green("addon.toml set [preprocess.enabled = false]. Proceeding with non-binerized config build!")
+                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
                     else:
                         cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
@@ -1457,7 +1483,7 @@ See the make.cfg file for additional build options.
 
     if sqfc_compiling:
         print_blue("\nCleaning up sqfc...")
-        # cleanup all old sqfc    
+        # cleanup all old sqfc
         for root, _dirs, files in os.walk(module_root_parent):
             for file in files:
                 if file.endswith(".sqfc"):
@@ -1526,6 +1552,16 @@ See the make.cfg file for additional build options.
         if len(failedBuilds) > 0:
             for failedBuild in failedBuilds:
                 print("- {} build failed!".format(failedBuild))
+                failedBuild_path = pathlib.Path(
+                    "P:/temp").joinpath(f"{failedBuild}.packing.log")
+                if (failedBuild_path.exists()):
+                    print(f"  Log {failedBuild_path} tail:")
+                    with open(failedBuild_path) as failedBuild_file:
+                        lines = failedBuild_file.readlines()
+                        for index, line in enumerate(lines[-3:]):
+                            print(f"    {len(lines) + index -2}: {line}", end='')
+                else:
+                    print(f"  Log {failedBuild_path} does not exist")
         if len(missingFiles) > 0:
             for missingFile in missingFiles:
                 print("- {} not found!".format(missingFile))

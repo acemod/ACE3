@@ -30,14 +30,15 @@ if (!isClass _config) exitWith {
 
 private _objects = getArray (_config >> "objects");
 
-// Attemp to filter bad input
+// Attempt to filter bad input
 _objects = _objects select {
-    if ((_x  isEqualTypeParams ["", 0])) then {
+    if ((_x isEqualTypeParams ["", 0]) || {_x isEqualTypeParams ["", 0, ""]}) then {
         _x params [["_classname", "#", [""]], ["_cost", -1, [0]]];
         if (isClass (configFile >> "CfgVehicles" >> _classname)) then {
             true
         } else {
             ERROR_2("Preset [%1] - Classname does not exist",_preset,_classname);
+            false
         };
     } else {
         ERROR_2("Preset [%1] - Bad data in objects array %2",_preset,_x);

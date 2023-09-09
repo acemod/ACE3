@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Process hit by projectile against vehicle and apply appropiate damage to part.
  *
  * Arguments:

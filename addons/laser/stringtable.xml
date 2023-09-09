@@ -85,6 +85,14 @@
             <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
             <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Laser_LSTOn">
+            <English>Laser Spot Tracker: On</English>
+            <Japanese>レーザースポットトラッカー: オン</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Laser_LSTOff">
+            <English>Laser Spot Tracker: Off</English>
+            <Japanese>レーザースポットトラッカー: オフ</Japanese>
+        </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>
             <Japanese>地図上にレーザーを表示する</Japanese>
@@ -92,6 +100,7 @@
             <Korean>맵에 레이저 그리기</Korean>
             <Chinesesimp>在地图上绘制激光</Chinesesimp>
             <Russian>Отображать лазер на карте</Russian>
+            <Spanish>Dibujar láser en mapa</Spanish>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap_tooltip">
             <English>Active laser designator's position will be drawn on the map</English>
@@ -100,6 +109,7 @@
             <Korean>지도에 능동 레이저 표시기의 위치가 그려집니다.</Korean>
             <Chinesesimp>激活的激光指示器本身及其标记的点会在地图上显示</Chinesesimp>
             <Russian>Точка, куда светит активный лазер, будет указана на карте</Russian>
+            <Spanish>La posición del designador láser activo será dibujada en el mapa</Spanish>
         </Key>
     </Package>
 </Project>

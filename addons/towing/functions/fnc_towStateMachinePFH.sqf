@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Called per frame. Handles current unit state for attaching a rope to two vehicles
  *
  * Arguments:
@@ -140,7 +140,7 @@ switch (_state) do {
         [_unit, _ropeClass, true] call CBA_fnc_addItem;
         _args set [0, TOW_STATE_CLEANUP];
         GVAR(cancel) = false;
-
+        [QGVAR(ropeDeployCanceled), [_unit, _ropeClass]] call CBA_fnc_localEvent;
         (localize LSTRING(canceled)) call CBA_fnc_notify;
     };
     case TOW_STATE_CLEANUP: {

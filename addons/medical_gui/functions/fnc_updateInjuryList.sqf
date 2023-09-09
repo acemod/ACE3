@@ -33,6 +33,43 @@ private _bodyPartName = [
 
 _entries pushBack [localize _bodyPartName, [1, 1, 1, 1]];
 
+// Damage taken tooltip
+if (GVAR(showDamageEntry)) then {
+    private _bodyPartDamage = (_target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]]) select _selectionN;
+    if (_bodyPartDamage > 0) then {
+        private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
+        switch (true) do {
+            case (_selectionN > 3): { // legs: index 4 & 5
+                _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
+            };
+            case (_selectionN > 1): { // arms: index 2 & 3
+                _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+            };
+            case (_selectionN == 0): { // head: index 0
+                _damageThreshold = _damageThreshold * 1.25;
+            };
+            default { // torso: index 1
+                _damageThreshold = _damageThreshold * 1.5;
+            };
+        };
+        _bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
+        switch (true) do {
+            case (_bodyPartDamage isEqualTo 1): {
+                _entries pushBack [localize LSTRING(traumaSustained4), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.75): {
+                _entries pushBack [localize LSTRING(traumaSustained3), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.5): {
+                _entries pushBack [localize LSTRING(traumaSustained2), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+            case (_bodyPartDamage >= 0.25): {
+                _entries pushBack [localize LSTRING(traumaSustained1), [_bodyPartDamage] call FUNC(damageToRGBA)];
+            };
+        };
+    };
+};
+
 // Indicate if unit is bleeding at all
 if (IS_BLEEDING(_target)) then {
     _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
@@ -78,10 +115,10 @@ if (_target call EFUNC(common,isAwake)) then {
     private _pain = GET_PAIN_PERCEIVED(_target);
     if (_pain > 0) then {
         private _painText = switch (true) do {
-            case (_pain > 0.5): {
+            case (_pain > PAIN_UNCONSCIOUS): {
                 ELSTRING(medical_treatment,Status_SeverePain);
             };
-            case (_pain > 0.1): {
+            case (_pain > (PAIN_UNCONSCIOUS / 5)): {
                 ELSTRING(medical_treatment,Status_Pain);
             };
             default {
@@ -110,9 +147,9 @@ private _fnc_processWounds = {
     params ["_wounds", "_format", "_color"];
 
     {
-        _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
+        _x params ["_woundClassID", "_amountOf"];
 
-        if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
+        if (_amountOf > 0) then {
             private _classIndex = _woundClassID / 10;
             private _category   = _woundClassID % 10;
 
@@ -128,7 +165,7 @@ private _fnc_processWounds = {
 
             _woundEntries pushBack [format [_format, _woundDescription], _color];
         };
-    } forEach _wounds;
+    } forEach (_wounds getOrDefault [ALL_BODY_PARTS select _selectionN, []]);
 };
 
 [GET_OPEN_WOUNDS(_target), "%1", [1, 1, 1, 1]] call _fnc_processWounds;

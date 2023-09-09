@@ -1,14 +1,14 @@
 name = "ACE3"
 prefix = "ace"
 author = "ACE-Team"
+mainprefix = "z"
 
 [files]
 include = [
     "*.dll",
     "*.so",
     "mod.cpp",
-    "README.md",
-    "docs/README_*.md",
+    "README*.md",  # Translated READMEs get moved to root in a hook (virtual file system)
     "AUTHORS.txt",
     "LICENSE",
     "logo_ace3_ca.paa",
@@ -17,10 +17,6 @@ include = [
 
 [version]
 git_hash = 0
-
-# TODO Enable once templating is added in v0.10
-#[properties]
-#version = "{{git \"id 8\"}}"
 
 [asc]
 enabled = true
@@ -34,4 +30,17 @@ exclude = [
 ]
 
 [hemtt.config]
-preset = "Hemtt" # TODO will change after v0.10-a14
+preset = "Hemtt"
+
+[hemtt.launch]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
+
+[hemtt.launch.vn]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
+dlc = [
+    "S.O.G. Prairie Fire",
+]
