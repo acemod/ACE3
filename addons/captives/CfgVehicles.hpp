@@ -61,7 +61,7 @@ class CfgVehicles {
                     displayName = CSTRING(BlindfoldCaptive);
                     distance = 4;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canBlindfoldCaptive));
-                    statement = QUOTE([ARR_3(_player, _target, true)] call FUNC(doBlindfoldCaptive));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doBlindfoldCaptive));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
                 };

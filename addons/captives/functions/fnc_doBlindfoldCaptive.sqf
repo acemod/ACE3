@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_unit", "_target", "_state"];
+params ["_unit", "_target"];
 
 // check if _unit has a blindfold in its inventory, abort otherwise.
 private _carriedBlindfoldIdx = GVAR(blindfolds) findAny (_unit call EFUNC(common,uniqueItems));
