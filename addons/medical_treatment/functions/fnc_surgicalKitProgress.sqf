@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, mharis001
  * Handles the surgical kit treatment by periodically closing bandaged wounds.

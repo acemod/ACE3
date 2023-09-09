@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay
  * Calculates the time to bandage a wound based on it's size, the patient and the medic.

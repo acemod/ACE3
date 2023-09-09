@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay, Brett
  * Zeus module function to change side of a group on dialog confirmation

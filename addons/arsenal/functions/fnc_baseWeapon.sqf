@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Karel Moricky, johnb43
  * Returns base weapon (weapon without any attachments), but it returns it in config sensitive case.

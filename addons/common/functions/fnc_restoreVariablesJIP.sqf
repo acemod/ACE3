@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Called from respawn eventhandler. Resets all public object namespace variables that are added via FUNC(setVariableJIP).

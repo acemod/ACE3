@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ir0n1E and mjc4wilton
  * Swap primary weapon and weapon in gunbag.

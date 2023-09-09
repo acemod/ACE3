@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim, johnb43
  * Adds inventory and open backpack actions to uncon units.

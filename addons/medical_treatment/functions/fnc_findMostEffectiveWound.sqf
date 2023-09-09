@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay
  * Finds the wound most effective to bandage on the given bodypart of the patient for the given bandage type.

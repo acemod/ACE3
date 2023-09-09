@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * Recieve an finger event, adds to the array (or updates if already present) and starts PFEH if not already running

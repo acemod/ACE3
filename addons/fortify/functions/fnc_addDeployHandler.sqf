@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Cuel, mharis001
  * Adds a custom deploy handler.
