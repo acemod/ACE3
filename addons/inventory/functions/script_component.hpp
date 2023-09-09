@@ -1,1 +1,1 @@
-#include "\z\ace\addons\inventory\script_component.hpp"
+#include "..\script_component.hpp"

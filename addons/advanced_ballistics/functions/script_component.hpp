@@ -1,1 +1,1 @@
-#include "\z\ace\addons\advanced_ballistics\script_component.hpp"
+#include "..\script_component.hpp"

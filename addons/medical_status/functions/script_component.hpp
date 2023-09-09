@@ -1,1 +1,1 @@
-#include "\z\ace\addons\medical_status\script_component.hpp"
+#include "..\script_component.hpp"

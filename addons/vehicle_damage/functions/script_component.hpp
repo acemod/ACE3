@@ -1,2 +1,2 @@
-#include "\z\ace\addons\vehicle_damage\script_component.hpp"
+#include "..\script_component.hpp"
 

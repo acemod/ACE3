@@ -1,1 +1,1 @@
-#include "\z\ace\addons\repair\script_component.hpp"
+#include "..\script_component.hpp"

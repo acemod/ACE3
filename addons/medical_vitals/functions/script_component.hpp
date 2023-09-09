@@ -1,1 +1,1 @@
-#include "\z\ace\addons\medical_vitals\script_component.hpp"
+#include "..\script_component.hpp"

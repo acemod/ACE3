@@ -1,1 +1,1 @@
-#include "\z\ace\addons\volume\script_component.hpp"
+#include "..\script_component.hpp"

@@ -1,1 +1,1 @@
-#include "\z\ace\addons\medical_damage\script_component.hpp"
+#include "..\script_component.hpp"

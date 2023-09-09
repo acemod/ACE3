@@ -1,1 +1,1 @@
-#include "\z\ace\addons\reload\script_component.hpp"
+#include "..\script_component.hpp"

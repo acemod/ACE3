@@ -1,1 +1,1 @@
-#include "\z\ace\addons\recoil\script_component.hpp"
+#include "..\script_component.hpp"
