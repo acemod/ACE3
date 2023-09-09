@@ -21,7 +21,7 @@ if (
     && {_unit in _unit && {(currentWeapon _unit) isNotEqualTo ""}}
     && {!isPlayer _unit || GVAR(dropWeapon >= 2)}
 ) then {
-    [_unit] call EFUNC(hitreactions,throwWeapon);
+    [_unit] call EFUNC(common,throwWeapon);
 };
 
 if (_unit isKindOf "CAManBase") then {

@@ -11,7 +11,7 @@
  * Weapon Holder
  *
  * Example:
- * player call ace_hitreactions_fnc_throwWeapon
+ * player call ace_common_fnc_throwWeapon
  *
  * Public: No
  */
