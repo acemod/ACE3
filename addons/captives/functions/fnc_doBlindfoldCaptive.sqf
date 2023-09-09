@@ -52,7 +52,7 @@ if (_state) then { // Blindfold target
     private _blindfold = goggles _target;
 
     // Abort if already not wearing a blindfold
-    if !(_blindfold in GVAR(blindfolds)) exitWith { ERROR("has blindfold on"); };
+    if !(_blindfold in GVAR(blindfolds)) exitWith { ERROR("no blindfold"); };
 
     if ([_unit, _blindfold] call CBA_fnc_canAddItem) exitWith {
         removeGoggles _target;
