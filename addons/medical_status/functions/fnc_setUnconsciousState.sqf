@@ -49,7 +49,7 @@ if (_active) then {
             closeDialog 0;
         };
 
-        if (EGVAR(medical,dropWeaponUnconsciousChance) != 0 && {random 1 < EGVAR(medical,dropWeaponUnconsciousChance)}) then {
+        if (EGVAR(medical,dropWeaponUnconsciousChance) != 0 && {random 1 <= EGVAR(medical,dropWeaponUnconsciousChance)}) then {
             _unit call EFUNC(common,throwWeapon);
         };
     };
