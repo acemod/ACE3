@@ -897,13 +897,10 @@ Author:
     Sickboy
 ------------------------------------------- */
 #define GVAR(var1) DOUBLES(ADDON,var1)
-#define SUBGVAR(var1) TRIPLES(ADDON,SUBCOMPONENT,var1)
 #define EGVAR(var1,var2) TRIPLES(PREFIX,var1,var2)
 #define QGVAR(var1) QUOTE(GVAR(var1))
-#define QSUBGVAR(var1) QUOTE(SUBGVAR(var1))
 #define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
 #define QQGVAR(var1) QUOTE(QGVAR(var1))
-#define QQSUBGVAR(var1) QUOTE(QSUBGVAR(var1))
 #define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
 
 /* -------------------------------------------
