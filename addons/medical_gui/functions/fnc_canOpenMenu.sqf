@@ -20,8 +20,9 @@ params ["_player", "_target"];
 
 // If in Zeus
 if (!isNull findDisplay 312) exitWith {
-    !isNull _target && {missionNamespace getVariable [QGVAR(enableZeusModule), true]} &&
-    GVAR(enableMedicalMenu) > 0
+    !isNull _target &&
+    {missionNamespace getVariable [QGVAR(enableZeusModule), true]} &&
+    {GVAR(enableMedicalMenu) > 0}
 };
 
 _player call EFUNC(common,isAwake) &&
