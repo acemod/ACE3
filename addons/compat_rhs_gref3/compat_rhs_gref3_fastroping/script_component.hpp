@@ -1,4 +1,4 @@
-#include "\z\ace\addons\compat_rhs_gref3\script_component.hpp"
+#include "..\script_component.hpp"
 
 #define SUBCOMPONENT fastroping
 #undef ADDON

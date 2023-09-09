@@ -1,4 +1,4 @@
-#include "\z\ace\addons\compat_ws\script_component.hpp"
+#include "..\script_component.hpp"
 
 #define SUBCOMPONENT nouniformrestrictions
 #undef ADDON
