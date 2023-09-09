@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mrschick
- * Checks if caller can blindfold the captive
+ * Checks if caller can blindfold the captive.
  *
  * Arguments:
  * 0: Caller (player) <OBJECT>
@@ -11,17 +11,18 @@
  * Can blindfold <BOOL>
  *
  * Example:
- * [player, cursorObject] call ACE_captives_fnc_canBlindfoldCaptive
+ * [player, cursorTarget] call ace_captives_fnc_canBlindfoldCaptive
  *
  * Public: No
  */
 
 params ["_unit", "_target"];
-// Alive, handcuffed, not being escorted, and caller has a blindfold in their inventory
+// Alive, handcuffed, not being escorted, caller has a blindfold in their inventory and target isn't already wearing a blindfold
 
 (_target getVariable [QGVAR(isHandcuffed), false]) &&
 {isNull (attachedTo _target)} &&
 {alive _target} &&
 {isNull objectParent _unit} &&
 {isNull objectParent _target} &&
-{(GVAR(blindfolds) findAny (_unit call EFUNC(common,uniqueItems))) != -1}
+{(GVAR(blindfolds) findAny (_unit call EFUNC(common,uniqueItems))) != -1} &&
+{!((goggles _target) in GVAR(blindfolds))}
