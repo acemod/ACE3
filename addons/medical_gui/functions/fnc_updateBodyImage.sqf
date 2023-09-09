@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal, SilentSpike, mharis001
+ * Author: Glowbal, kymckay, mharis001
  * Updates the body image for given target.
  *
  * Arguments:

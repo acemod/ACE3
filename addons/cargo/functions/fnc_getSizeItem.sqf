@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal, SilentSpike
+ * Author: Glowbal, kymckay
  * Get the cargo size of an object.
  *
  * Arguments:

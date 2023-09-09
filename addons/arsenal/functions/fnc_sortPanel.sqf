@@ -132,6 +132,7 @@ private _quantity = "";
 private _itemCfg = configNull;
 private _value = "";
 private _name = "";
+private _fillerChar = toString [1];
 
 private _magazineMiscItems = uiNamespace getVariable QGVAR(magazineMiscItems);
 private _sortCache = uiNamespace getVariable QGVAR(sortCache);
@@ -217,16 +218,20 @@ _for do {
 
     // Save the current row's item's name in a cache and set text to it's sorting value
     if (_right) then {
-        _originalNames set [_item, _panel lnbText [_i, 1]];
+        _name = _panel lnbText [_i, 1];
+        _originalNames set [_item, _name];
 
-        // Use tooltip to sort, as it also contains the classname, which means a fixed alphabetical order is guaranteed
-        _panel lnbSetText [[_i, 1], format ["%1%2", _value, _panel lbTooltip (_i * _countColumns)]];
+        // Use value, display name and classname to sort, which means a fixed alphabetical order is guaranteed
+        // Filler char has lowest lexicographical order possible
+        _panel lnbSetText [[_i, 1], format ["%1%2%4%3", _value, _name, _item, _fillerChar]];
     } else {
         if (_item != "") then {
-            _originalNames set [_item, _panel lbText _i];
+            _name = _panel lbText _i;
+            _originalNames set [_item, _name];
 
-            // Use tooltip to sort, as it also contains the classname, which means a fixed alphabetical order is guaranteed
-            _panel lbSetText [_i, format ["%1%2", _value, _panel lbTooltip _i]];
+            // Use value, display name and classname to sort, which means a fixed alphabetical order is guaranteed
+            // Filler char has lowest lexicographical order possible
+            _panel lbSetText [_i, format ["%1%2%4%3", _value, _name, _item, _fillerChar]];
         };
     };
 };

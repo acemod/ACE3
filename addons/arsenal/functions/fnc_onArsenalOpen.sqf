@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Not used
  * 1: Arguments <ARRAY>
- *  1.0: Arsenal display <DISPLAY>
+ * - 0: Arsenal display <DISPLAY>
  *
  * Return Value:
  * None
@@ -76,6 +76,8 @@ if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItemsFlat) = _virtualItemsFlat;
 };
 
+GVAR(virtualItemsFlatAll) = +GVAR(virtualItemsFlat);
+
 GVAR(currentFace) = face GVAR(center);
 GVAR(currentVoice) = speaker GVAR(center);
 GVAR(currentInsignia) = GVAR(center) call BIS_fnc_getUnitInsignia;
@@ -84,105 +86,20 @@ GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
 GVAR(showStats) = true;
-GVAR(statsPagesLeft) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-GVAR(statsPagesRight) = [0, 0, 0, 0, 0, 0, 0, 0];
-GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
+GVAR(currentStatPage) = 0;
+GVAR(statsInfo) = [true, controlNull, nil, nil];
 
-// Add the items the player has to virtualItems
-{
-    switch (_forEachIndex) do {
-        // Primary weapon, Secondary weapon, Handgun weapon, Binoculars
-        case IDX_LOADOUT_PRIMARY_WEAPON;
-        case IDX_LOADOUT_SECONDARY_WEAPON;
-        case IDX_LOADOUT_HANDGUN_WEAPON;
-        case IDX_LOADOUT_BINO: {
-            _x params [["_weapon", ""], ["_muzzle", ""], ["_flashlight", ""], ["_optics", ""], ["_primaryMagazine", []], ["_secondaryMagazine", []], ["_bipod", ""]];
-
-            // Add weapon
-            if (_weapon != "") then {
-                _weapon = _weapon call FUNC(baseWeapon);
-
-                // If bino, add it in a different place than regular weapons
-                if (_forEachIndex != IDX_LOADOUT_BINO) then {
-                    ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _forEachIndex) set [_weapon, nil];
-                } else {
-                    (GVAR(virtualItems) get IDX_VIRT_BINO) set [_weapon, nil];
-                };
-            };
-
-            // Add weapon attachments
-            {
-                if (_x != "") then {
-                    ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _forEachIndex) set [_x call FUNC(baseWeapon), nil];
-                };
-            } forEach [_optics, _flashlight, _muzzle, _bipod];
-
-            // Add magazines
-            {
-                // Check if there is a magazine (ammo count is unnecssary to check)
-                if ((_x param [0, ""]) != "") then {
-                    (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL) set [_x select 0, nil];
-                };
-            } forEach [_primaryMagazine, _secondaryMagazine];
-        };
-
-        // Uniform, vest, backpack
-        case IDX_LOADOUT_UNIFORM;
-        case IDX_LOADOUT_VEST;
-        case IDX_LOADOUT_BACKPACK: {
-            _x params [["_containerClass", ""]];
-
-            if (_containerClass != "") then {
-                (GVAR(virtualItems) get (_forEachIndex + 1)) set [_containerClass, nil];
-            };
-        };
-        // Helmet
-        case IDX_LOADOUT_HEADGEAR: {
-            if (_x != "") then {
-                (GVAR(virtualItems) get IDX_VIRT_HEADGEAR) set [_x, nil];
-            };
-        };
-        // Facewear
-        case IDX_LOADOUT_GOGGLES: {
-            if (_x != "") then {
-                (GVAR(virtualItems) get IDX_VIRT_GOGGLES) set [_x, nil];
-            };
-        };
-        // Assigned items: Map, Compass, Watch, GPS / UAV Terminal, Radio, NVGs
-        case IDX_LOADOUT_ASSIGNEDITEMS: {
-            {
-                // Order of storing virtualItems is different than what getUnitLoadout returns, so do some math
-                if (_x != "") then {
-                    (GVAR(virtualItems) get (IDX_VIRT_NVG + ([2, 6, 4, 3, 5, 0] select _forEachIndex))) set [_x, nil];
-                };
-            } forEach _x;
-        };
-    };
-} forEach (getUnitLoadout GVAR(center)); // Only need items, not extended loadout
-
-// Get a list of all virtual items, including single panel items that are unique
-private _virtualItemsFlat = +GVAR(virtualItems);
-private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;
-private _attachments = _virtualItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
-
-for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
-    _virtualItemsFlat merge [_virtualItemsFlat deleteAt _index, true];
-};
-
-for "_index" from IDX_VIRT_PRIMARY_WEAPONS to IDX_VIRT_HANDGUN_WEAPONS do {
-    _virtualItemsFlat merge [_weapons deleteAt _index, true];
-};
-
-for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
-    _virtualItemsFlat merge [_attachments deleteAt _index, true];
-};
-
-GVAR(virtualItemsFlatAll) = _virtualItemsFlat;
+GVAR(showActions) = true;
+GVAR(currentActionPage) = 0;
 
 // Update current item list
 call FUNC(updateCurrentItemsList);
 
-// This takes care of items that aren't available in the arsenal (either wrong tab or arsenal doesn't have it whitelisted)
+// Setup favorites button text and switch to default mode defined by setting
+[_display, _display displayCtrl IDC_buttonFavorites] call FUNC(buttonFavorites);
+GVAR(favorites) = profileNamespace getVariable [QGVAR(favorites), createHashMap];
+
+// This takes care of unique inventory items and unique equipment (arsenal doesn't have items/equipment whitelisted)
 call FUNC(updateUniqueItemsList);
 
 [QGVAR(displayOpened), [_display]] call CBA_fnc_localEvent;
@@ -223,7 +140,15 @@ _statsBoxCtrl ctrlSetPosition [
 _statsBoxCtrl ctrlEnable false;
 _statsBoxCtrl ctrlCommit 0;
 
-(_display displayCtrl IDC_statsButton) ctrlShow false;
+// Handle actions
+private _actionsBoxCtrl = _display displayCtrl IDC_actionsBox;
+_actionsBoxCtrl ctrlSetPosition [
+    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
+    safezoneY + 58.6 * GRID_H,
+    47 * GRID_W,
+    11 * GRID_H
+];
+_actionsBoxCtrl ctrlCommit 0;
 
 // Disable import in MP
 if (isMultiplayer) then {
@@ -291,7 +216,7 @@ if (is3DEN) then {
         _ctrl ctrlCommit 0;
     } forEach [IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia];
 
-    _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
+    private _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 } else {
     GVAR(centerNotPlayer) = GVAR(center) != player;

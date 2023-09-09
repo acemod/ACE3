@@ -129,5 +129,17 @@
             <Chinesesimp>正在连接弹链...</Chinesesimp>
             <Chinese>連接彈鏈中...</Chinese>
         </Key>
+        <Key ID="STR_ACE_Reload_BeltLinked">
+            <English>Belt was linked</English>
+            <French>Bande a été attachée</French>
+            <German>Gurt wurde angehängt</German>
+            <Japanese>ベルトがリンクされた</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Reload_BeltNotLinked">
+            <English>Belt could not be linked</English>
+            <French>Bande n'a pas pu être attachée</French>
+            <German>Gurt konnte nicht angehängt werden</German>
+            <Japanese>ベルトはリンクされなかった</Japanese>
+        </Key>
     </Package>
 </Project>

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Makes object catch fire. Only call from events. Local effects only.
  * Arbitrary values to ignite people. Assumed maximum is "10".
  *

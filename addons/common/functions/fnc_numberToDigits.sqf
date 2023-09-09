@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, SilentSpike
+ * Author: commy2, kymckay
  * Transforms a number to an array of the correspondending digits.
  *
  * Arguments:

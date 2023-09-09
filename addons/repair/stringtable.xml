@@ -39,6 +39,7 @@
             <English>Wheel</English>
             <German>Rad</German>
             <Spanish>Rueda</Spanish>
+            <Japanese>タイヤ</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
@@ -268,9 +269,11 @@
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_name">
             <English>Full Repair Time Coefficient</English>
+            <Japanese>完全修理時間係数</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_description">
             <English>Modifies how long it takes to perform a Full Repair.\nThe repair time is based on based on the amount of repairs needed for each part, including those normally inaccessible.</English>
+            <Japanese>完全修復にかかる時間を変更します。\n修理時間は、通常アクセスできない部品も含め、各部品に必要な修理量に基づいて決定されます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
             <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
@@ -372,7 +375,7 @@
             <Czech>Přidat náhradní díly do vozidla (vyžaduje úložný prostor)?</Czech>
             <Italian>Aggiungi parti di ricambio ai veicoli (richiede componente Cargo)?</Italian>
             <French>Ajoute des pièces de rechange aux véhicules (nécessite le système de cargaison).</French>
-            <Japanese>車両へ予備部品を追加しますか（カーゴ コンポーネントが必要)?</Japanese>
+            <Japanese>車両へ予備部品を追加しますか? (カーゴ コンポーネントが必要)</Japanese>
             <Korean>차량에 예비 부품을 더합니까?(짐칸 요소 필요)</Korean>
             <Chinesesimp>添加载具备件（需相关货物组件）？</Chinesesimp>
             <Chinese>添加載具備件 (需相關貨物組件)?</Chinese>
@@ -1221,6 +1224,7 @@
             <German>Erlaube Radwechsel</German>
             <Polish>Wymiana kół</Polish>
             <Russian>Разрешить замену колес</Russian>
+            <Japanese>タイヤ交換の許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
@@ -1240,10 +1244,12 @@
         <Key ID="STR_ACE_Repair_patchWheelEnabled_name">
             <English>Allow Wheel Patching</English>
             <German>Erlaube Radflicken</German>
+            <Japanese>タイヤ補修を許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelEnabled_description">
             <English>Who can patch wheels?</English>
             <German>Wer kann Radflicken durchführen?</German>
+            <Japanese>誰がタイヤの補修を出来るようにしますか?</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
             <English>Allow Repair</English>
@@ -1875,7 +1881,7 @@
             <Czech>Vyžaduje opravu kol</Czech>
             <Italian>Requisiti riparazione ruote</Italian>
             <French>Exigences pour réparation des roues</French>
-            <Japanese>タイヤの修理を必要</Japanese>
+            <Japanese>タイヤ修理の要求</Japanese>
             <Korean>바퀴 교체 요구사항</Korean>
             <Chinesesimp>维修轮胎限制</Chinesesimp>
             <Chinese>維修輪胎限制</Chinese>
@@ -1898,10 +1904,12 @@
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_DisplayName">
             <English>Wheel Patch Requirements</English>
             <German>Bedingungen für die Radflicken</German>
+            <Japanese>タイヤ補修の要求</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
             <English>Items required to patch a wheel.</English>
             <German>Gegenstänge, die zum Reifenflicken benötigt werden.</German>
+            <Japanese>タイヤ補修にアイテムを必要としますか?</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
@@ -2070,49 +2078,63 @@
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_name">
             <English>Part Repair Time</English>
+            <Japanese>部分修理時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_description">
             <English>Time in seconds to complete a repair.</English>
+            <Japanese>修理完了までの時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_name">
             <English>Wheel Change Time</English>
+            <Japanese>タイヤ交換時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_description">
             <English>Time in seconds to remove or change a wheel.</English>
+            <Japanese>タイヤの取り外しまたは交換にかかる時間。</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_PatchWheel">
             <English>Patch Wheel</English>
             <German>Radflicken</German>
+            <Japanese>タイヤを補修する</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_PatchingWheel">
             <English>Patching Wheel...</English>
             <German>Radflicken...</German>
+            <Japanese>タイヤを補修しています・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_DisplayName">
             <English>Wheel Patch Time</English>
+            <Japanese>タイヤ補修時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_Description">
             <English>Time it takes to patch a wheel by 5%.</English>
+            <Japanese>タイヤを5%補修するのにかかる時間。</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">
             <English>Patch Wheel Threshold</English>
+            <Japanese>タイヤ補修しきい値</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
             <English>Maximum level to which a wheel can be patched.</English>
+            <Japanese>タイヤを補修できる最大の度合い。</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
             <English>Wheel Patch Location</English>
+            <Japanese>タイヤ補修場所</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
             <English>Where the wheel can be patched.</English>
+            <Japanese>タイヤを補修できる場所。</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelOnGround">
             <English>On the ground</English>
             <German>Auf dem Boden</German>
+            <Japanese>地上</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelOnVehicle">
             <English>On a vehicle</English>
             <German>An einem Fahrzeug</German>
+            <Japanese>車両上</Japanese>
         </Key>
     </Package>
 </Project>

@@ -8,11 +8,11 @@
  * 1: Code to generate result (passed nothing, can return any) <CODE> (default: {})
  * 2: Array containing modifiers <ARRAY> (default: [])
  *   For Numbers:
- *     2.0: Show Delta change <BOOL> (default: true)
- *     2.1: Slider Min Value <NUMBER> (default: 0)
- *     2.1: Slider Max Value <NUMBER> (default: 0)
+ * - 0: Show Delta change <BOOL> (default: true)
+ * - 1: Slider Min Value <NUMBER> (default: 0)
+ * - 2: Slider Max Value <NUMBER> (default: 0)
  *   For Anything else:
- *     2.0: Number of structured text lines <NUMBER> (default: 1)
+ * + 0: Number of structured text lines <NUMBER> (default: 1)
  *
  * Return Value:
  * None

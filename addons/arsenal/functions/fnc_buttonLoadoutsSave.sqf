@@ -49,7 +49,7 @@ private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR
 private _extendedLoadout = GVAR(center) call CBA_fnc_getLoadout;
 _extendedLoadout params ["_loadout"];
 
-private _loadouts = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (is3DEN && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts});
+private _loadouts = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select ((call FUNC(canEditDefaultLoadout)) && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts});
 private _loadoutIndex = _loadouts findIf {(_x select 0) == _editBoxContent};
 
 // Return what loadout was saved
@@ -57,16 +57,14 @@ private _savedLoadout = switch (GVAR(currentLoadoutsTab)) do {
     // Local loadouts tab
     case IDC_buttonMyLoadouts: {
         // If saved to default loadout
-        if (GVAR(shiftState) && {is3DEN} && {_loadoutName != ""} && {_curSelRow != -1} && {_loadoutIndex != -1}) then {
+        if (GVAR(shiftState) && FUNC(canEditDefaultLoadout) && {_loadoutName != ""} && {_curSelRow != -1} && {_loadoutIndex != -1}) then {
             private _defaultLoadoutsSearch = GVAR(defaultLoadoutsList) findIf {(_x select 0) == _loadoutName};
 
-            if (_defaultLoadoutsSearch == -1) then {
-                _loadoutIndex = GVAR(defaultLoadoutsList) pushBack [_loadoutName, _curSelLoadout];
-            } else {
-                GVAR(defaultLoadoutsList) set [_defaultLoadoutsSearch, [_loadoutName, _curSelLoadout]];
-            };
+            [_loadoutName, _curSelLoadout, !is3DEN] call FUNC(addDefaultLoadout);
 
-            set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
+            if (_defaultLoadoutsSearch == -1) then {
+                _loadoutIndex = (count GVAR(defaultLoadoutsList)) - 1;
+            };
 
             _curSelLoadout
         } else {
@@ -111,18 +109,14 @@ private _savedLoadout = switch (GVAR(currentLoadoutsTab)) do {
     };
     // Default loadouts tab
     case IDC_buttonDefaultLoadouts: {
-        if (is3DEN) then {
-            // Replace unique items with their bases and replace weapons with their base weapons
-            _loadout = [_loadout] call FUNC(replaceUniqueItemsLoadout);
+        if (call FUNC(canEditDefaultLoadout)) then {
 
-            // Add or overwrite loadout in loadout storage
+            [_editBoxContent, _extendedLoadout, !is3DEN] call FUNC(addDefaultLoadout);
+
+            // Get loadout index
             if (_loadoutIndex == -1) then {
-                _loadoutIndex = GVAR(defaultLoadoutsList) pushBack [_editBoxContent, _extendedLoadout];
-            } else {
-                GVAR(defaultLoadoutsList) set [_loadoutIndex, [_editBoxContent, _extendedLoadout]];
+                _loadoutIndex = (count GVAR(defaultLoadoutsList)) - 1;
             };
-
-            set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
 
             // Refresh loadout list; Delete previous loadout row
             for "_lbIndex" from 0 to (lnbSize _contentPanelCtrl select 0) - 1 do {

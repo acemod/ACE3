@@ -20,24 +20,14 @@ PREP_RECOMPILE_END;
     private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
     private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
 
-    private _statsButtonCtrl = _display displayCtrl IDC_statsButton;
-    private _statsButtonCloseCtrl = _display displayCtrl IDC_statsButtonClose;
-
     {
         _x ctrlShow (GVAR(showStats) && {_showStats});
     } forEach [
         _statsCtrlGroupCtrl,
         _statsPreviousPageCtrl,
         _statsNextPageCtrl,
-        _statsCurrentPageCtrl,
-        _statsButtonCloseCtrl
+        _statsCurrentPageCtrl
     ];
-
-    _statsButtonCtrl ctrlShow (!GVAR(showStats) && {_showStats})
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(statsButton), {
-    _this call FUNC(buttonStats);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(statsChangePage), {
@@ -48,9 +38,35 @@ PREP_RECOMPILE_END;
     _this call FUNC(handleStats);
 }] call CBA_fnc_addEventHandler;
 
-// Compile sorts and stats
-call FUNC(compileStats);
+[QGVAR(actionsChangePage), {
+    _this call FUNC(buttonActionsPage);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(displayActions), {
+    _this call FUNC(handleActions);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(actionsToggle), {
+    params ["_display", "_showActions"];
+
+    private _actionsCtrlGroupCtrl = _display displayCtrl IDC_actionsBox;
+    private _actionsPreviousPageCtrl = _display displayCtrl IDC_actionsPreviousPage;
+    private _actionsNextPageCtrl = _display displayCtrl IDC_actionsNextPage;
+    private _actionsCurrentPageCtrl = _display displayCtrl IDC_actionsCurrentPage;
+
+    {
+        _x ctrlShow (GVAR(showActions) && {_showActions});
+    } forEach [
+        _actionsCtrlGroupCtrl,
+        _actionsPreviousPageCtrl,
+        _actionsNextPageCtrl,
+        _actionsCurrentPageCtrl
+    ];
+}] call CBA_fnc_addEventHandler;
+
+call FUNC(compileActions);
 call FUNC(compileSorts);
+call FUNC(compileStats);
 
 [QUOTE(ADDON), {!isNil QGVAR(camera)}] call CBA_fnc_registerFeatureCamera;
 

@@ -29,7 +29,7 @@ private _editBoxContent = ctrlText (_display displayCtrl IDC_textEditBox);
 // If it's the exact same name, don't do anything
 if (_editBoxContent isEqualTo _loadoutName) exitWith {};
 
-private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (is3DEN && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts});
+private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (call FUNC(canEditDefaultLoadout) && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts});
 
 // If there is a loadout with a similar name and it's not chosen to be renamed, don't rename and exit
 if (_editBoxContent != _loadoutName && {_data findIf {(_x select 0) == _editBoxContent} != -1}) exitWith {
@@ -42,8 +42,12 @@ private _loadoutIndex = _data findIf {(_x select 0) == _loadoutName};
 // Set new name
 (_data select _loadoutIndex) set [0, _editBoxContent];
 
-if (is3DEN && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts}) then {
-    set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
+if (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts) then {
+    if (is3DEN) then {
+        set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
+    } else {
+        [QGVAR(renameDefaultLoadout), [_loadoutName, _editBoxContent]] call CBA_fnc_remoteEvent;
+    };
 };
 
 private _currentLoadoutsTab = str GVAR(currentLoadoutsTab);

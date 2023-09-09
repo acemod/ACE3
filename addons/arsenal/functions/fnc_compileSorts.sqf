@@ -63,7 +63,6 @@ private _sortListRightPanel = [
     []  // Misc 7
 ];
 
-//------------------------- Config handling
 private _class = "";
 private _displayName = "";
 private _statement = "";

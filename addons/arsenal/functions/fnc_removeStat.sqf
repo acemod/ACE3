@@ -25,7 +25,6 @@ private _stringCount = 0;
 private _tabSide = "";
 private _tab = "";
 private _tabToChange = [];
-private _changes = [];
 
 {
     // Get tab info
@@ -44,41 +43,5 @@ private _changes = [];
     };
 
     // Delete stat
-    {
-        _x deleteAt (_x findIf {_x select 0 == _currentID});
-    } forEach _tabToChange;
-
-    // Store information, so that only tabs that were changed can be sorted again
-    _changes pushBackUnique [_tab, _tabSide];
+    _tabToChange deleteAt (_tabToChange findIf {_x select 5 == _currentID});
 } forEach _IDList;
-
-private _statsFlat = [];
-private _stats = [];
-
-// Fill empty spots
-{
-    _x params ["_tab", "_tabSide"];
-
-    _tabToChange = if (_tabSide == "R") then {
-        GVAR(statsListRightPanel)
-    } else {
-        GVAR(statsListLeftPanel)
-    };
-
-    _statsFlat = [];
-
-    // Get all stats of a tab into a single array
-    {
-        _statsFlat append _x;
-    } forEach (_tabToChange select _tab);
-
-    // Priority has stayed intact, so no need to sort
-    _stats = [];
-
-    // Group stats into groups of 5
-    for "_index" from 0 to count _statsFlat - 1 step 5 do {
-        _stats pushBack (_statsFlat select [_index, _index + 5]);
-    };
-
-    _tabToChange set [_tab, _stats];
-} forEach _changes;

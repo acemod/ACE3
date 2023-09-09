@@ -7,10 +7,10 @@
  * 0: Player <OBJECT>
  *
  * Return Value:
- * Can check ammo <BOOL>
+ * Can check ammo for self <BOOL>
  *
  * Example:
- * [cursorObject] call ace_reload_fnc_canCheckAmmoSelf
+ * [player] call ace_reload_fnc_canCheckAmmoSelf
  *
  * Public: No
  */

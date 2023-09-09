@@ -174,7 +174,13 @@ To do so:
 
 This loadout list can be exported to the clipboard by using <kbd>Shift</kbd> + <kbd>LMB</kbd>. on the export button, doing the same on the import button will import the list currently in the clipboard.
 
-### 4.2 Adding default loadouts via script
+You can also save one of your personal loadouts as a default loadout by <kbd>Shift</kbd> + <kbd>LMB</kbd> on the save button while highlighting or saving a loadout in My Loadouts.
+
+### 4.2 Adding default loadouts ingame
+
+Players with Zeus access can save default loadouts ingame, doing so will make the saved loadout available to all players. The procedure is the same as with 3DEN, but loadouts cannot be exported or imported in Multiplayer. Default loadouts are not deleted when their creator disconnects, unlike Public Loadouts.
+
+### 4.3 Adding default loadouts via script
 
 `ace_arsenal_fnc_addDefaultLoadout`
 
@@ -182,9 +188,10 @@ This loadout list can be exported to the clipboard by using <kbd>Shift</kbd> + <
 ---| -------- | ---- | ------------------------
 0  | Name of loadout | String | Required
 1  | getUnitLoadout array or CBA extended loadout array | Array | Required
+2  | Add loadout globally | Boolean | Optional (default: `false`)
 
 Example:
-`["Squad Leader", getUnitLoadout sql1] call ace_arsenal_fnc_addDefaultLoadout`
+`["Squad Leader", getUnitLoadout sql1, true] call ace_arsenal_fnc_addDefaultLoadout`
 
 If a loadout with the same name exists, it will be overwritten.
 
@@ -248,6 +255,8 @@ Example:
     getNumber (_itemCfg >> _statsArray select 0)
 }, {true}]] call ace_arsenal_fnc_addStat;
 ```
+
+If a stat already exists (so same class ID and tab), it will ignore the new addition.
 
 ### 5.3 Removing stats via a function
 
@@ -343,7 +352,7 @@ The argument passed to the condition is:
 1   | Stat class ID | String | Required
 2   | Title | String | Required
 3   | Algorithm | Code | Required
-4   | Condition | Code | Optional (default: `true`)
+4   | Condition | Code | Optional (default: `{true}`)
 
 Return Value:
 - Array of sort IDs
@@ -366,6 +375,8 @@ Example:
 
 Sorting method IDs are unique and are generated in the same fashion as the stat IDs (see `5.3 Removing stats via a function`).
 
+If a sorting method already exists (so same class ID and tab), it will ignore the new addition.
+
 ### 6.3 Removing sorting methods via a function
 
 `ace_arsenal_fnc_removeSort`
@@ -382,7 +393,89 @@ For config added sorts the classname is used, for function added ones the string
 
 The same numbers are used for sorting methods as for stats (see `5.4 Stat tab numbers`).
 
-## 7. Eventhandlers
+## 7. Actions
+
+ACE Arsenal actions are customizable, this will show you how.
+
+### 7.1 Adding actions via config
+
+```cpp
+class ace_arsenal_actions {
+    class TAG_myActions {
+        displayName = "My Actions";
+        condition = QUOTE(true);
+        scopeEditor = 2; // Only actions with scopeEditor = 2 are shown in 3DEN. Actions working with variables should take object variables being reset between editor view and mission start into account.
+        tabs[] = {0,5};
+        class text {
+            // A simple text label
+            text = "My text";
+        };
+        class statement {
+            // Statement output as text
+            textStatement = QUOTE([_this select 0] call tag_fnc_myTextStatement);
+        };
+        class button {
+            label = "My Action";
+            condition = QUOTE(true);
+            statement = QUOTE(_this call tag_fnc_myAction);
+        };
+    };
+};
+```
+The focused unit object is passed to the condition and statement functions.
+
+### 7.2 Adding sorting methods via a function
+
+`ace_arsenal_fnc_addAction`
+
+|   | Argument | Type | Optional (default value)
+--- | -------- | ---- | ------------------------
+0   | Tabs to add the sort to | Array of numbers | Required
+1   | Action class ID | String | Required
+2   | Title | String | Required
+3   | Actions | Array of arrays | Required
+4   | Condition | Code | Optional (default: `{true}`)
+5   | Scope editor | Number | Optional (default: `2`)
+
+Return Value:
+- Array of action IDs
+
+Example:
+```sqf
+[[0, 5], "TAG_myActions", "My Actions", [
+    ["text", "Text", {true}, "Text"],
+    ["statement", "Statement", {true}, "", {[_this select 0] call tag_fnc_myTextStatement}],
+    ["button", "Button", {true}, "", {}, {_this call tag_fnc_myAction}]
+]] call ace_arsenal_fnc_addAction;
+```
+
+The example above results in the same actions as in `7.1 Adding actions via config`.
+
+Action IDs are unique and are generated as a string in the following fashion:
+`_rootClassName + "~" + _class + "~" + _tab`
+
+The example above returns:
+`["TAG_myActions~text~0","TAG_myActions~statement~0","TAG_myActions~button~0","TAG_myActions~text~5","TAG_myActions~statement~5","TAG_myActions~button~5"]`
+
+If an action already exists (so same class ID and tab within an action), it will ignore the new addition.
+
+### 7.3 Removing actions via a function
+
+`ace_arsenal_fnc_removeAction`
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Array of IDs | Array | Required
+
+Action IDs are unique and their generation is explained in `7.2 Adding sorting methods via a function`.
+
+For config added actions the classname is used, for function added ones the string provided is used.
+
+### 7.4 Action tab numbers
+
+The same numbers are used for actions as for stats (see `5.4 Stat tab numbers`).
+
+## 8. Eventhandlers
 
 All are local.
 
@@ -409,9 +502,9 @@ All are local.
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 
-## 8. Custom sub item categories
+## 9. Custom sub item categories
 
-### 8.1 Adding a sub item category
+### 9.1 Adding a sub item category
 
 `ace_arsenal_fnc_addRightPanelButton`
 

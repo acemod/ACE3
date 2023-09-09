@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author:Dani (TCVM)
+ * Author:tcvm
  * Deploys the current CSW
  *
  * Arguments:

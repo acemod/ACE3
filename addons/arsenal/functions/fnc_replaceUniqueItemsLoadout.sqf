@@ -98,12 +98,16 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 
                             // Check weapon & weapon attachments
                             {
-                                // Magazines
+                                // Magazines in weapons have 2 entries: Name and ammo count
                                 if (_forEachIndex in [4, 5]) then {
-                                    _uniqueBaseCfgText = (getText (_cfgMagazines >> _x >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+                                    _x params [["_magazine", ""], "_count"];
 
-                                    if (_uniqueBaseCfgText != "") then {
-                                        _weaponsInfo set [_forEachIndex, _uniqueBaseCfgText];
+                                    if (_magazine != "") then {
+                                        _uniqueBaseCfgText = (getText (_cfgMagazines >> _magazine >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+
+                                        if (_uniqueBaseCfgText != "") then {
+                                            _weaponsInfo set [_forEachIndex, [_uniqueBaseCfgText, _count]];
+                                        };
                                     };
                                 } else {
                                     // Other
@@ -132,7 +136,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
         // Assigned items: Map, Compass, Watch, GPS / UAV Terminal, Radio, NVGs
         case IDX_LOADOUT_ASSIGNEDITEMS: {
             // Check if assignedItems have items that need replacing with a defined base
-            _items = _x;
+            private _items = _x;
 
             {
                 if (_x != "") then {

@@ -52,11 +52,10 @@ private _ctrl = controlNull;
     IDC_buttonCurrentMag2,
     IDC_iconBackgroundCurrentMag,
     IDC_iconBackgroundCurrentMag2,
-    IDC_statsButton,
     IDC_statsPreviousPage,
     IDC_statsNextPage,
-    IDC_statsCurrentPage,
-    IDC_statsButtonClose
+    IDC_statsCurrentPage
 ];
 
 [QGVAR(statsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;
+[QGVAR(actionsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;

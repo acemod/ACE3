@@ -75,6 +75,14 @@ class GVAR(stats) {
         textStatement = QUOTE(call FUNC(statTextStatement_scopeMag));
         tabs[] = {{}, {0}};
     };
+    class ACE_binoMagnification: statBase {
+        scope = 2;
+        priority = 2;
+        displayName = CSTRING(statMagnification);
+        showText = 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_binoMag));
+        tabs[] = {{9}, {}};
+    };
     class ACE_scopeVisionMode: statBase {
         scope = 2;
         priority = 1.6;
@@ -82,6 +90,14 @@ class GVAR(stats) {
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_scopeVisionMode));
         tabs[] = {{}, {0}};
+    };
+    class ACE_binoVisionMode: statBase {
+        scope = 2;
+        priority = 1.6;
+        displayName = CSTRING(statVisionModeGeneric);
+        showText = 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_binoVisionMode));
+        tabs[] = {{8,9}, {}};
     };
     class ACE_ballisticProtection: statBase {
         scope = 2;
@@ -127,5 +143,13 @@ class GVAR(stats) {
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_explosionTime));
         tabs[] = {{}, {5}};
+    };
+    class ACE_magCount: statBase {
+        scope = 2;
+        priority = 1;
+        displayName = CSTRING(statMagCount);
+        showText = 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_magCount));
+        tabs[] = {{}, {4}};
     };
 };

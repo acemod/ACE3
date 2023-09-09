@@ -48,7 +48,7 @@ switch (ctrlIDC _control) do {
     case IDC_buttonMyLoadouts: {
         _centerBoxTitleCtrl ctrlSetText LLSTRING(tabMyLoadoutsText);
 
-        if (is3DEN) then {
+        if (call FUNC(canEditDefaultLoadout)) then {
             _saveButtonCtrl ctrlSetTooltip format ["%1\n%2", LLSTRING(buttonSaveTooltip), LLSTRING(buttonSaveTooltip_shiftClick)];
         };
 
@@ -59,18 +59,18 @@ switch (ctrlIDC _control) do {
     case IDC_buttonDefaultLoadouts: {
         _centerBoxTitleCtrl ctrlSetText LLSTRING(tabDefaultLoadoutsText);
 
-        if (is3DEN) then {
+        if (call FUNC(canEditDefaultLoadout)) then {
             _saveButtonCtrl ctrlSetTooltip LLSTRING(buttonSaveTooltip);
         };
 
-        _saveButtonCtrl ctrlEnable is3DEN;
+        _saveButtonCtrl ctrlEnable call FUNC(canEditDefaultLoadout);
         _saveButtonCtrl ctrlCommit 0;
     };
     // Shared loadouts
     case IDC_buttonSharedLoadouts: {
         _centerBoxTitleCtrl ctrlSetText LLSTRING(tabSharedLoadoutsText);
 
-        if (is3DEN) then {
+        if (call FUNC(canEditDefaultLoadout)) then {
             _saveButtonCtrl ctrlSetTooltip LLSTRING(buttonSaveTooltip);
         };
 

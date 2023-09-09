@@ -40,8 +40,14 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
 };
 
 TRACE_2("",_currentShooter,_currentWeapon);
-if (((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) &&
-        {(getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(canSelect))) == 0}) exitWith {false};
+private _currentWeaponCfg = configFile >> "CfgWeapons" >> _currentWeapon;
+if (
+    (getNumber (_currentWeaponCfg  >> "laser") == 0) && 
+    { 
+        !(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false])  && 
+        {(getNumber (_currentWeaponCfg >> QGVAR(canSelect))) == 0}
+    }
+) exitWith {false};
 
 private _oldLaserCode = _currentShooter getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
 private _newLaserCode = _oldLaserCode;

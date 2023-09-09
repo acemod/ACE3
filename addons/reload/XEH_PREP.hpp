@@ -1,4 +1,3 @@
-
 PREP(canCheckAmmo);
 PREP(canCheckAmmoSelf);
 PREP(getAmmoToLinkBelt);
