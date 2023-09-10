@@ -83,7 +83,7 @@ if (GVAR(clearTrauma) == 2) then {
         _bodyPartDamage set [_partIndex, _newDam];
     };
     _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
-    TRACE_2("clearTrauma - healed damage",_partIndex,_treatedDamageOf);
+    TRACE_2("clearTrauma - healed damage",_partIndex,_treatedDamage);
 
     switch (_bodyPart) do {
         case "head": { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
