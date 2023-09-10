@@ -237,11 +237,8 @@
             currentChannel
         };
 
-        private _currentChannelName = if (_selectChannel < 5) then { // Engine channels can use names directly
-            CHANNEL_NAMES select _selectChannel;
-        } else {
-            (radioChannelInfo (_selectChannel - 5)) select 1 // Custom channels need an offset
-        };
+        // engine channels (0-4) can use names directly, custom channels need an offset for radioChannelInfo
+        private _currentChannelName = CHANNEL_NAMES param [_selectChannel, radioChannelInfo (_selectChannel - 5) select 1];
 
         // select current channel in list box, must be done after lbDelete
         for "_j" from 0 to (lbSize _channel - 1) do {
