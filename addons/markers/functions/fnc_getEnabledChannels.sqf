@@ -18,17 +18,22 @@
 params [["_localize", false, [false]]];
 
 private _enabledChannels = [];
+private _currentChannel = currentChannel;
 
-// Channel IDs go from 0 to 15
-for "_i" from 0 to 15 do {
-    // Only text channels
-    if ((channelEnabled _i) select 0) then {
+// Micro-optimization so we don't rebuild the array and localize in each iteration
+private _engineChannels = CHANNEL_NAMES;
+
+for "_channelId" from 0 to 15 do {
+    if (_channelId == 5) then {continue}; // Direct channel, ignore
+    if (setCurrentChannel _channelId) then {
         if (_localize) then {
-            _enabledChannels pushBack ((radioChannelInfo _i) select 1);
+            _enabledChannels pushBack (_engineChannels param [_channelId, (radioChannelInfo (_channelId - 5)) select 1]); // radioChannelInfo works off custom IDs only, offset engine channels
         } else {
-            _enabledChannels pushBack _i;
+            _enabledChannels pushBack _channelId;
         };
-    }
+    };
 };
+
+setCurrentChannel _currentChannel;
 
 _enabledChannels
