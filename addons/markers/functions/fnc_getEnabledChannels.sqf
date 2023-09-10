@@ -21,7 +21,8 @@ private _enabledChannels = [];
 
 // Channel IDs go from 0 to 15
 for "_i" from 0 to 15 do {
-    if (channelEnabled _i) then {
+    // Only text channels
+    if ((channelEnabled _i) select 0) then {
         if (_localize) then {
             _enabledChannels pushBack ((radioChannelInfo _i) select 1);
         } else {
