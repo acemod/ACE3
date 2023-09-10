@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, Timi007
+ * Author: commy2, Timi007, LinkIsGrim
  * Return enabled channels.
  *
  * Arguments:
@@ -17,37 +17,17 @@
 
 params [["_localize", false, [false]]];
 
-private _currentChannel = currentChannel;
 private _enabledChannels = [];
 
-if (_localize) then {
-    if (setCurrentChannel 0) then {
-        _enabledChannels pushBack localize "str_channel_global";
-    };
-
-    if (setCurrentChannel 1) then {
-        _enabledChannels pushBack localize "str_channel_side";
-    };
-
-    if (setCurrentChannel 2) then {
-        _enabledChannels pushBack localize "str_channel_command";
-    };
-
-    if (setCurrentChannel 3) then {
-        _enabledChannels pushBack localize "str_channel_group";
-    };
-
-    if (setCurrentChannel 4) then {
-        _enabledChannels pushBack localize "str_channel_vehicle";
-    };
-} else {
-    for "_i" from 0 to 4 do {
-        if (setCurrentChannel _i) then {
+// Channel IDs go from 0 to 15
+for "_i" from 0 to 15 do {
+    if (channelEnabled _i) then {
+        if (_localize) then {
+            _enabledChannels pushBack ((radioChannelInfo _i) select 1);
+        } else {
             _enabledChannels pushBack _i;
         };
-    };
+    }
 };
-
-setCurrentChannel _currentChannel;
 
 _enabledChannels
