@@ -37,8 +37,9 @@ private _lookDirection = if !(_shooter isKindOf "CAManBase" || {_shooter isKindO
             _shooter vectorModelToWorldVisual getPilotCameraDirection _shooter;
         };
     } else {
-        private _gBody = -deg(_shooter animationPhase _animationSourceBody);
-        private _gGun = deg(_shooter animationPhase _animationSourceGun);
+        // use animationSourcePhase
+        private _gBody = -deg(_shooter animationSourcePhase _animationSourceBody);
+        private _gGun = deg(_shooter animationSourcePhase _animationSourceGun);
         _shooter vectorModelToWorldVisual ([1, _gBody, _gGun] call CBA_fnc_polar2vect);
     };
     _finalLookDirection
@@ -64,4 +65,3 @@ _targetData set [0, _projPos vectorFromTo _returnPos];
 _targetData set [2, _returnPos vectorDistance getPosASLVisual _projectile];
 
 _returnPos
-
