@@ -1660,6 +1660,7 @@
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
             <Russian>Разрядить оружие</Russian>
             <Spanish>Descargar arma</Spanish>
+            <German>Waffe entladen</German>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>

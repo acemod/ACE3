@@ -4,10 +4,12 @@
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextName">
             <English>Display notifications for buddy loading</English>
             <Japanese>バディ装填時の通知表示</Japanese>
+            <German>Buddy Nachlade Nachricht anzeigen</German>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextDesc">
             <English>Displays notifications when an assistant loads a gunner's launcher.</English>
             <Japanese>助手が射手のランチャーを装填した際に通知を表示します。</Japanese>
+            <German>Zeigt Benachrichtigungen an, wenn ein Assistent den Werfer eines Richtschützen lädt.</German>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
             <English>Load launcher</English>
