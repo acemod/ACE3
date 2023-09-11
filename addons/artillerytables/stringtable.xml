@@ -80,7 +80,7 @@
             <Portuguese>Computador de Artilharia Desabilitado</Portuguese>
             <Spanish>Computadora de artillería deshabilitada</Spanish>
             <Turkish>Topçu Bilgisayarı Devre Dışı</Turkish>
-            <Russian>Артиллерийский Компьютер Отключён</Russian>
+            <Russian>Орудийный компьютер отключён</Russian>
             <Korean>탄도계산컴퓨터 비활성화</Korean>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
@@ -96,7 +96,7 @@
             <Portuguese>Desabilitar o computador de artilharia padrão</Portuguese>
             <Spanish>Deshabilita la computadora de artillería por defecto de Arma 3</Spanish>
             <Turkish>Topçu bilgisayarını devre dışı bırak</Turkish>
-            <Russian>Отключить ванильный артиллерийский компьютер</Russian>
+            <Russian>Отключить ванильный орудийный компьютер</Russian>
             <Korean>바닐라 탄도계산컴퓨터를 비활성화 합니다.</Korean>
         </Key>
     </Package>

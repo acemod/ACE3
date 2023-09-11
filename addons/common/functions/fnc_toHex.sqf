@@ -4,7 +4,7 @@
  * Converts number to hexadecimal number
  *
  * Arguments:
- * A number between 0 and 255 <NUMBER>
+ * 0: A number between 0 and 255 <NUMBER>
  *
  * Return Value:
  * A hexadecimal number as string <STRING>

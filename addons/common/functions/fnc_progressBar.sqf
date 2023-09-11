@@ -30,6 +30,15 @@ private _player = ACE_player;
 closeDialog 0;
 createDialog QGVAR(ProgressBar_Dialog);
 
+private _display = uiNamespace getVariable QGVAR(dlgProgress);
+
+// Ensure CBA keybindings are hooked into the display
+_display call (uiNamespace getVariable "CBA_events_fnc_initDisplayCurator");
+
+// Hide cursor by using custom transparent cursor
+private _map = _display displayCtrl 101;
+_map ctrlMapCursor ["", QGVAR(blank)];
+
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
 
 //Adjust position based on user setting:

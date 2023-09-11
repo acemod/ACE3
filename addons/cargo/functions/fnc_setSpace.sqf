@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Set the cargo space of any object. Has global effect.
  * Adds the cargo action menu if necessary.
  *

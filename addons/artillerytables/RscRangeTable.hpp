@@ -30,8 +30,8 @@ class GVAR(rangeTableDialog) {
             y = "3.76 * ((safeZoneH / 1.2) / 25) + (safezoneY + (safezoneH - (safeZoneH / 1.2)) / 2)";
             w = "16.2634559672906 * (safeZoneH / 40)";
             h = "20.24 * ((safeZoneH / 1.2) / 25)";
-            columns[] = {(10/867),(86/867),(171/867),(238/867),(320/867),(405/867),(485/867),(546/867),(607/867),(668/867),(729/867),(790/867)};
-            rowHeight = 0.015 * safeZoneH;
+            columns[] = {"10/867", "86/867", "171/867", "238/867", "320/867", "405/867", "485/867", "546/867", "607/867", "668/867", "729/867", "790/867"};
+            rowHeight = "0.015 * safeZoneH";
             sizeEx = "0.014 * safeZoneH";
             font = "EtelkaMonospacePro";
             drawSideArrows = 1;
@@ -48,7 +48,6 @@ class GVAR(rangeTableDialog) {
         };
         class ChargeListBox: RscListbox {
             idc = IDC_CHARGELIST;
-            style = ST_RIGHT;
             x = "13 *(safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH) / 2)";
             y = "2 * ((safeZoneH / 1.2) / 25) + (safezoneY + (safezoneH - (safeZoneH / 1.2)) / 2)";
             w = "5 * (safeZoneH / 40)";

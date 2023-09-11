@@ -60,3 +60,10 @@ Adds the ability to prevent the automatic shut-off of the engine when exiting ve
 ### 2.3 Turning cruise control on / off
 - To turn cruise control on press <kbd>Ins</kbd>.
 - To turn it off press <kbd>Ins</kbd> again.
+
+### 2.4 Changing speed limiter / cruise control speed
+- While active, use <kbd>Ctrl</kbd>+<kbd>Scroll Wheel</kbd> to increase or decrease the speed value.
+
+### 2.5 Resuming speed limiter / cruise control
+- To resume with the last speed value, press <kbd>Ctrl</kbd>+<kbd>Scroll Wheel Up</kbd>.
+- To resume with the current vehicle speed, press <kbd>Ctrl</kbd>+<kbd>Scroll Wheel Down</kbd>.

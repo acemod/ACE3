@@ -80,7 +80,7 @@
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_DisplayName">
             <English>Enable Weapon Swap</English>
             <Polish>Aktywuj wymianę broni</Polish>
-            <Russian>Включить обмен оружием</Russian>
+            <Russian>Вкл. обмен оружием</Russian>
             <French>Activer l'échange d'arme</French>
             <Japanese>武器交換を有効化</Japanese>
             <Turkish>Silah Değiştirmeyi Etkinleştir</Turkish>

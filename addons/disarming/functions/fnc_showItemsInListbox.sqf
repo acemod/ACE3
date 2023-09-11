@@ -51,7 +51,7 @@ params ["_listBoxCtrl", "_itemsCountArray"];
                 _picture = getText (_configPath >> _classname >> "picture");
             };
             default {
-                ERROR(format ["[%1] - bad classname", _classname]);
+                ERROR_1("[%1] - bad classname",_classname);
             };
         };
 

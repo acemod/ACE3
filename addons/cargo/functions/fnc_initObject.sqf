@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal, SilentSpike
+ * Author: Glowbal, kymckay
  * Initializes variables for loadable objects. Called from init EH.
  *
  * Arguments:

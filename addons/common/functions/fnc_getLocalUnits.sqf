@@ -6,7 +6,7 @@
  * Should be equivalent to `allUnits select {local _x}`
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
  * Array of local Units <ARRAY>

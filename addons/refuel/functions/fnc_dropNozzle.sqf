@@ -4,7 +4,7 @@
  * Detaches the fuel nozzle, drops it and removes player variables.
  *
  * Arguments:
- * 0: Unit <OBJECT> (optional)
+ * 0: Unit <OBJECT> (default: objNull)
  * 1: Nozzle <OBJECT>
  * 2: Disconnect Only <BOOL>
  *

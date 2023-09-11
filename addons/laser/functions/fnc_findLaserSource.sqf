@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle (shooter of laser) <OBJECT>
  * 6: Method Args <ARRAY>
- *      0: Laser Source selection on Vehicle <STRING>
+ * - 0: Laser Source selection on Vehicle <STRING>
  *
  * Return Value:
  * [position, direction] <ARRAY>

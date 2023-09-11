@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brett Mayson
+ * Author: Brett Mayson, Timi007
  * Adds the child actions for placing flags.
  *
  * Arguments:
@@ -20,12 +20,13 @@ params ["_unit"];
 private _actions = [];
 
 {
-    private _config = configFile >> "CfgWeapons" >> _x;
+    (GVAR(flagCache) get _x) params ["_vehicle", "_displayName", "_icon"];
+
     _actions pushBack [
         [
             _x,
-            getText (_config >> "displayName"),
-            getText (_config >> "picture"),
+            _displayName,
+            _icon,
             {[_this select 0, _this select 2] call FUNC(placeFlag)},
             {true},
             {},

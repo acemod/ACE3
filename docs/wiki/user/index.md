@@ -1,5 +1,5 @@
 ---
-title: User documentation
+title: User
 layout: default
 group: subNav
 order: 1

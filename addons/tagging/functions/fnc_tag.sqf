@@ -6,11 +6,11 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
- * 2: Material of the tag <STRING> (Optional)
- * 3: Tag Model <STRING> (optional)
+ * 2: Material of the tag <STRING> (default: "")
+ * 3: Tag Model <STRING> (default: "UserTexture1m_F")
  *
  * Return Value:
- * Sucess <BOOL>
+ * Success <BOOL>
  *
  * Example:
  * success = [player, "z\ace\addons\tagging\UI\tags\black\0.paa"] call ace_tagging_fnc_tag
@@ -29,6 +29,7 @@ if (isNull _unit || {_texture == ""}) exitWith {
     ERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
 };
 
+private _isVehicleTag = false;
 private _startPosASL = eyePos _unit;
 private _cameraPosASL =  AGLToASL positionCameraToWorld [0, 0, 0];
 private _cameraDir = (AGLToASL positionCameraToWorld [0, 0, 1]) vectorDiff _cameraPosASL;
@@ -50,6 +51,13 @@ TRACE_3("",_touchingPoint, _surfaceNormal, _object);
 if ((!isNull _object) && {
     // If the class is alright, do not exit
     if (_object isKindOf "Static") exitWith {false};
+
+    // Taggable vehicle, do not exit and tell server to change "clan" tag
+    if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true])
+    && {getText (configOf _object >> "selectionClan") in selectionNames _object}) exitWith {
+        _isVehicleTag = true;
+        false
+    };
 
     // If the class is not categorized correctly search the cache
     private _modelName = (getModelInfo _object) select 0;
@@ -100,10 +108,11 @@ private _fnc_isOk = {
     true
 };
 
-if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
+if ( (!_isVehicleTag) && {
+    !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([ 0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
-    {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}) exitWith {
+    {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}}) exitWith {
     TRACE_1("Unsuitable location:",_touchingPoint);
     false
 };
@@ -120,6 +129,6 @@ if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
 
     // Tell the server to create the tag and handle its destruction
     [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material, _tagModel], 0.6] call CBA_fnc_waitAndExecute;
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material, _tagModel, _isVehicleTag], 0.6] call CBA_fnc_waitAndExecute;
 
 true

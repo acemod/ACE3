@@ -4,7 +4,10 @@
  * Convert an array of booleans into a number.
  *
  * Arguments:
- * N: Booleans <ARRAY>
+ * 0: Boolean <BOOL>
+ * 1: Boolean <BOOL>
+ * 2: Boolean <BOOL>
+ * ...
  *
  * Return Value:
  * Bitmask <NUMBER>

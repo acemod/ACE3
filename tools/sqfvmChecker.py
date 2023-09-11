@@ -25,6 +25,25 @@ def get_files_to_process(basePath):
             if file.endswith(".sqf") or file == "config.cpp":
                 if file.lower() in files_to_ignore_lower:
                     continue
+                skipPreprocessing = False
+                addonTomlPath = os.path.join(root, "addon.toml")
+                if os.path.isfile(addonTomlPath):
+                    with open(addonTomlPath, "r") as f:
+                        tomlFile = f.read()
+                        if "preprocess = false" in tomlFile:
+                            print("'preprocess = false' not supported")
+                            raise
+                        skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
+                addonTomlPath = os.path.join(os.path.dirname(root), "addon.toml")
+                if os.path.isfile(addonTomlPath):
+                    with open(addonTomlPath, "r") as f:
+                        tomlFile = f.read()
+                        if "preprocess = false" in tomlFile:
+                            print("'preprocess = false' not supported")
+                            raise
+                        skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
+                if file == "config.cpp" and skipPreprocessing:
+                    continue  # ignore configs with __has_include
                 filePath = os.path.join(root, file)
                 arma_files.append(filePath)
     return arma_files

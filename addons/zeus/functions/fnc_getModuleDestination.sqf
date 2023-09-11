@@ -5,14 +5,13 @@
  *
  * Arguments:
  * 0: The souce object <OBJECT>
- * 1: Code to run when position is ready <CODE>
- * - Code is passed
- *  0: Successful <BOOL>
- *  1: Object <OBJECT>
- *  2: Position ASL <ARRAY>
- *  3: State of Shift <BOOL>
- *  4: State of Ctrl <BOOL>
- *  5: State of Alt <BOOL>
+ * 1: Code to run when position is ready (will be passed the following array) <CODE>
+ * - 0: Successful <BOOL>
+ * - 1: Object <OBJECT>
+ * - 2: Position ASL <ARRAY>
+ * - 3: State of Shift <BOOL>
+ * - 4: State of Ctrl <BOOL>
+ * - 5: State of Alt <BOOL>
  * 2: Text <STRING> (default: "")
  * 3: Icon image file <STRING> (default: "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa")
  * 4: Icon color <ARRAY> (default: [1,0,0,1])

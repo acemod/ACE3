@@ -29,7 +29,7 @@ if (isNil "_damageType") then {
 
     // config may define an invalid damage type
     if !(_damageType in GVAR(damageTypeDetails)) then {
-        WARNING_2("Damage type [%1] for ammo [%2] not found",_typeOfDamage,_typeOfProjectile);
+        WARNING_2("Damage type [%1] for ammo [%2] not found",_damageType,_typeOfProjectile);
         _damageType = "unknown";
     };
 

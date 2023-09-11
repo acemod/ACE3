@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Set the cargo size of any object. Has global effect.
  * Adds the load action menu if necessary.
  * Negative size makes unloadable.

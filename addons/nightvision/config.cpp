@@ -13,8 +13,11 @@ class CfgPatches {
             "ACE_NVG_Gen2",
             /*"ACE_NVG_Gen3",*/
             "ACE_NVG_Gen4_Black",
+            "ACE_NVG_Gen4_Black_WP",
             "ACE_NVG_Gen4",
+            "ACE_NVG_Gen4_WP",
             "ACE_NVG_Gen4_Green",
+            "ACE_NVG_Gen4_Green_WP",
             "ACE_NVG_Wide_Black",
             "ACE_NVG_Wide",
             "ACE_NVG_Wide_Green"
@@ -34,3 +37,4 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "ACE_Settings.hpp"
 #include "RscTitles.hpp"
+#include "ACE_Arsenal_Stats.hpp"
