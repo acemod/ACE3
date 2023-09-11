@@ -48,7 +48,10 @@ if (GETVAR(_unit,ACE_isUnconscious,false) && {GETMVAR(EGVAR(medical,moveUnitsFro
 
     // Preserve assignedTeam for each unit
     // Teams need to be gotten before removing units from group
-    _teams = _units apply {private _team = assignedTeam _x; ["MAIN", _team] select (_team != "")};
+    private _teams = _units apply {
+        private _team = assignedTeam _x;
+        [_team, "MAIN"] select (_team == "")
+    };
 
     {
         [_x] joinSilent _newGroup;
