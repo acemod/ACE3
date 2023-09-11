@@ -4,7 +4,6 @@ class CfgWeapons {
     class rhsusf_acc_anpeq15: acc_pointer_IR {
         baseWeapon = "rhsusf_acc_anpeq15";
     };
-    class rhsusf_acc_anpeq15;
     class rhsusf_acc_anpeq15_bk: rhsusf_acc_anpeq15 {
         baseWeapon = "rhsusf_acc_anpeq15_bk";
     };
