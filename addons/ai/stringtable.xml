@@ -83,9 +83,11 @@
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
             <English>Auto-Equip NVGs</English>
+            <Polish>Automatyczne zakładanie NVG</Polish>
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_Description">
             <English>Equips NVG in inventory during night time and unequips it during day time.\nDoes not add NVGs to inventory!</English>
+            <Polish>Zakłada NVG w nocy i zdejmuje je w ciągu dnia.\nNie dodaje NVG do ekwipunku!</Polish>
         </Key>
     </Package>
 </Project>

@@ -1535,6 +1535,7 @@
             <Russian>Сохранить лицо</Russian>
             <Spanish>Guardar Cara</Spanish>
             <Japanese>顔の保存</Japanese>
+            <Polish>Zapisz Twarz</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
@@ -1542,6 +1543,7 @@
             <Russian>Сохранить голос</Russian>
             <Spanish>Guardar Voz</Spanish>
             <Japanese>声の保存</Japanese>
+            <Polish>Zapisz Głos</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
@@ -1549,14 +1551,17 @@
             <Russian>Сохранить эмблему</Russian>
             <Spanish>Guardar Insignia</Spanish>
             <Japanese>記章(バッジ)の保存</Japanese>
+            <Polish>Zapisz Naszywkę</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortDescending">
             <English>Descending</English>
             <Japanese>下降</Japanese>
+            <Polish>Malejąco</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortAscending">
             <English>Ascending</English>
             <Japanese>昇順</Japanese>
+            <Polish>Rosnąco</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
@@ -1577,26 +1582,32 @@
         <Key ID="STR_ACE_Arsenal_statMagCount">
             <English>Ammo count</English>
             <Japanese>弾薬数</Japanese>
+            <Polish>Ilość amunicji</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
             <Japanese>お気に入りをデフォルト</Japanese>
+            <Polish>Domyślnie do Ulubionych</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
             <Japanese>ACE Arsenalがデフォルトで全てのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
+            <Polish>Kontroluje, czy ACE Arsenal domyślnie wyświetla wszystkie przedmioty, czy tylko ulubione.</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
             <Japanese>お気に入りの色</Japanese>
+            <Polish>Kolor Ulubionych</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
             <Japanese>お気に入りアイテムのハイライト色。</Japanese>
+            <Polish>Kolor podświetlenia ulubionych elementów.</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
             <Japanese>Shiftを押しながらダブルクリックするとアイテムを追加・削除できます。</Japanese>
+            <Polish>Przełączanie między wyświetlaniem wszystkich przedmiotów lub tylko ulubionych. \nKliknij dwukrotnie, przytrzymując Shift, aby dodać lub usunąć przedmiot.</Polish>
         </Key>
     </Package>
 </Project>

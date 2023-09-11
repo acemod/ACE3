@@ -119,9 +119,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
             <English>Weapon Drop Chance</English>
+            <Polish>Szansa Upuszczenia Broni</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
             <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
+            <Polish>Szansa na upuszczenie broni przez gracza, przy utracie przytomności. \nNie ma wpływu na AI.</Polish>
         </Key>
     </Package>
 </Project>
