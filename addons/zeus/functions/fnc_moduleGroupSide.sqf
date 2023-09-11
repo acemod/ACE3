@@ -44,11 +44,16 @@ if (GETVAR(_unit,ACE_isUnconscious,false) && {GETMVAR(EGVAR(medical,moveUnitsFro
 
     _unit setVariable [QEGVAR(common,previousGroupSwitchTo), _previousGroupsList, true];
 } else {
+    private _units = units _unit;
+
     // Preserve assignedTeam for each unit
+    // Teams need to be gotten before removing units from group
+    _teams = _units apply {private _team = assignedTeam _x; ["MAIN", _team] select (_team != "")};
+
     {
-        private _team = assignedTeam _x;
         [_x] joinSilent _newGroup;
-        _x assignTeam _team;
-    } forEach units _unit;
+        _x assignTeam (_teams select _forEachIndex);
+    } forEach _units;
+
     deleteGroup _oldGroup;
 };
