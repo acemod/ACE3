@@ -29,6 +29,7 @@
             <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
             <Russian>Размещать флажки где угодно вне зависимости от поверхности.</Russian>
             <Spanish>Permitir colocar las banderas de señalizado en cualquier lugar, al margen del tipo de superficie.</Spanish>
+            <German>Platzieren Sie die Markierungsfahne überall, unabhängig von der Oberfläche.</German>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Marker Flag</English>

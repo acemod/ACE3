@@ -4686,5 +4686,25 @@
             <Chinesesimp>身体抽搐了一下，可能还没死！</Chinesesimp>
             <Korean>꿈틀대는걸 보니 죽은 것 같지는 않습니다!</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
+            <English>Bandage Rollover</English>
+            <Polish>Bandażowanie Wielu Ran</Polish>
+            <German>Verbandüberschlag</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
+            <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
+            <Polish>Jeśli opcja jest włączona, bandaże mogą zamykać różne rodzaje ran na tej samej części ciała. \nOpatrywanie wielu ran będzie adekwatnie skalować czas bandażowania.</Polish>
+            <German>Wenn diese Option aktiviert ist, können Verbände verschiedene Arten von Wunden am selben Körperteil schließen.\nBeim Verbinden mehrerer Verletzungen wird die Verbandszeit entsprechend skaliert.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
+            <English>Bandage Effectiveness Coefficient</English>
+            <Polish>Współczynnik Efektywności Bandażowania</Polish>
+            <German>Verbandswirksamkeitskoeffizient</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_Description">
+            <English>Determines how effective bandages are at closing wounds.</English>
+            <Polish>Określa skuteczność bandaży w zamykaniu ran.</Polish>
+            <German>Bestimmt, wie wirksam Bandagen beim Verschließen von Wunden sind.</German>
+        </Key>
     </Package>
 </Project>

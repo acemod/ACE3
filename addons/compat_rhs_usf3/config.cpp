@@ -1,14 +1,5 @@
 #include "script_component.hpp"
 
-#if __has_include("\rhsusf\addons\rhsusf_main\loadorder\config.bin")
-#else
-    #define PATCH_SKIP "RHS USAF"
-#endif
-
-#ifdef PATCH_SKIP
-ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
-#else
-
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -31,5 +22,3 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgGlasses.hpp"
-
-#endif
