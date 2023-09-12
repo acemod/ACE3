@@ -1,5 +1,4 @@
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * PabstMirror
  * Dig trenchline
@@ -35,7 +34,7 @@ _logic setPos _startPos;
 
 
 // todo: it would be nice to show visually that trenches can only be dug north/south or east/west
-private _text = format ["%1 [%2]", LELSTRING(trenches,ConfirmDig), "+SHIFT to force"];
+private _text = format ["%1 %2", LELSTRING(trenches,ConfirmDig), LLSTRING(ModuleLayTrenchline_Tooltip)];
 [_logic, {
     params ["_successful", "_logic", "_mousePosASL", "_shift"];
     TRACE_4("getModuleDestination",_successful,_logic,_mousePosASL,_shift);

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Dig trenchline
@@ -10,7 +10,10 @@
  * 3: Cut Grass (optional: false) <BOOL>
  *
  * Return Value:
- * <ARRAY> [success<BOOL>, failure reason<STRING>, extra info<ANY>]
+ * <ARRAY>
+ * 0: Success <BOOL>
+ * 1: Failure reason <STRING>
+ * 2: Extra info <ANY>
  *
  * Example:
  * [a, b] call ace_trenches_fnc_blockTrench_place

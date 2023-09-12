@@ -1936,5 +1936,8 @@
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
+            <English>+SHIFT to force (Can only lay N/S or E/W)</English>
+        </Key>
     </Package>
 </Project>
