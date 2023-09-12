@@ -1,14 +1,12 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "loadorder_f_vietnam", "ace_compat_sog_trenches", "grad_trenches_main"
-        };
+        requiredAddons[] = {"loadorder_f_vietnam", "ace_compat_sog_trenches", "grad_trenches_main"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"BaerMitUmlaut", "veteran29"};

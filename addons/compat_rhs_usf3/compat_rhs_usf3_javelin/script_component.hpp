@@ -1,5 +1,3 @@
-#include "..\script_component.hpp"
-
 #define SUBCOMPONENT javelin
-#undef ADDON
-#define ADDON TRIPLES(PREFIX,COMPONENT,SUBCOMPONENT)
+#define SUBCOMPONENT_BEAUTIFIED Javelin
+#include "..\script_component.hpp"

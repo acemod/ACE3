@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
-        name = QUOTE(COMPONENT);
+    class SUBADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -10,10 +10,10 @@ class CfgPatches {
             "rhssaf_main_loadorder",
             "ace_explosives"
         };
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {};
         url = ECSTRING(main,URL);
-        skipWhenMissingDependencies = 1;
         VERSION_CONFIG;
     };
 };

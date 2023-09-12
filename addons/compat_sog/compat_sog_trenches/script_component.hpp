@@ -1,5 +1,3 @@
-#include "..\script_component.hpp"
-
 #define SUBCOMPONENT trenches
-#undef ADDON
-#define ADDON TRIPLES(PREFIX,COMPONENT,SUBCOMPONENT)
+#define SUBCOMPONENT_BEAUTIFIED Trenches
+#include "..\script_component.hpp"
