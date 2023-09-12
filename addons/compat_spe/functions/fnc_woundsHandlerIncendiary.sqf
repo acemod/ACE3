@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: veteran29
  * Custom wound handler for SOG: PF explosive incendiary ammunition.
