@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BIS, commy2, Timi007
  * Sets up the marker placement

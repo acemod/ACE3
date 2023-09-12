@@ -16,12 +16,18 @@ class CfgWeapons {
         modelOptics = "";
         GVAR(border) = QPATHTOF(data\nvg_mask_quad_4096.paa); // Use quad tube mask
         GVAR(bluRadius) = 0.26;
+        GVAR(generation) = 4;
     };
     class NVGogglesB_grn_F: NVGoggles { // APEX NVG/Thermal
         modelOptics = "\A3\weapons_f_exp\reticle\ENVG.p3d"; // use vanilla modelOptics so it will show in IR mode
+        GVAR(generation) = 4;
+    };
+    class NVGogglesB_blk_F: NVGoggles {
+        GVAR(generation) = 4;
     };
     class NVGogglesB_gry_F: NVGoggles {
         modelOptics = "\A3\weapons_f_exp\reticle\ENVG.p3d";
+        GVAR(generation) = 4;
     };
     class NVGoggles_OPFOR: NVGoggles {
         modelOptics = "";
@@ -105,6 +111,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_Wide_black);
+        GVAR(generation) = 4;
     };
     class ACE_NVG_Wide_Black_WP: ACE_NVG_Wide_Black {
         displayName = CSTRING(NVG_Wide_black_wP);
@@ -115,6 +122,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_Wide_brown);
+        GVAR(generation) = 4;
     };
     class ACE_NVG_Wide_WP: ACE_NVG_Wide {
         displayName = CSTRING(NVG_Wide_brown_WP);
@@ -125,6 +133,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_Wide_green);
+        GVAR(generation) = 4;
     };
     class ACE_NVG_Wide_Green_WP: ACE_NVG_Wide_Green {
         displayName = CSTRING(NVG_Wide_green_WP);

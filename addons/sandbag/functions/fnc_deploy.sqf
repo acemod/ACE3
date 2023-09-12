@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
  * Starts the deploy process for sandbags.

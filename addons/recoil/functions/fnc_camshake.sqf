@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Orginal by Ryan Schultz, edited by KoffeinFlummi, commy2
  * Adds camera shake when firing. Called from the unified fired EH only for the local player.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: drofseh, commy2, johnb43
  * Unload the magazine from the unit's weapon and attempt to put it in a sensible place.

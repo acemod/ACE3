@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Commy2 and esteldunedain
  * Handle weapon fire. Called from the unified fired EH 1- always for the local player 2- and for non local players if dispersion is simulated.

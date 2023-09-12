@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Calculates the current metabolic costs for a unit.
@@ -36,16 +36,19 @@ if (GVAR(isSwimming)) then {
     _terrainGradient = 0;
 };
 
+// Metabolic cost for walking and running is different
 if (_velocity > 2) then {
+    // Running
     (
         2.10 * SIM_BODYMASS
         + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + (SIM_BODYMASS + _gearMass) * (0.90 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
+        + (SIM_BODYMASS + _gearMass) * (0.9 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
     ) * 0.23 * _duty
 } else {
+    // Walking
     (
         1.05 * SIM_BODYMASS
-        + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
+        + 2 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
         + (SIM_BODYMASS + _gearMass) * (1.15 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
     ) * 0.23 * _duty
 };

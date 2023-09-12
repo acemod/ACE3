@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Freddo, commy2
  * When the timestamp checkbox is toggled.

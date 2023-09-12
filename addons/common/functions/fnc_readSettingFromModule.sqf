@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Reads a setting value from a module, set it and force it. Logs if the setting is missing from the module.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Handles double clicking a row in 3DEN's ace arsenal attribute listbox.

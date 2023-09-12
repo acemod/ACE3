@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Repairs a vehicle's wheel with a ACE_wheel spare part object.

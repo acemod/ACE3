@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: voiper
  * Kill chemlight and any dummy objects attached to it.
