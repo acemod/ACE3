@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Display Grenade information on grenade throw. Called from the unified fired EH only for the local player.

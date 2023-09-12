@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Grim
  * Handles a unit reaching the point of unconsciousness (calls for a status update).

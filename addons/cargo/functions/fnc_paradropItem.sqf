@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: marc_book, commy2, CAA-Picard
  * Unload and paradrop object from plane or helicopter.

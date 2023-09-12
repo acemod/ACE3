@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay
  * The ace_spectator respawn template, compatible with types 1,2,3,4 & 5

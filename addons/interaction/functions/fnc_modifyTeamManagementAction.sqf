@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: veteran29
  * Modifies the ACE_TeamManagement or join team action with given group color and icon.

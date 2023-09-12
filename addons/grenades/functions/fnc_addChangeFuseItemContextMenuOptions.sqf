@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Cyruz
  * Allows conversion of explosive charges in to throwable versions
