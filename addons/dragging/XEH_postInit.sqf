@@ -90,7 +90,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 ["featureCamera", {
     params ["_unit", "_camera"];
 
-    if (_camera == "") exitWith {};
+    if (_camera in ["", "splendid"]) exitWith {};
 
     _unit call FUNC(handleKilled);
 }] call CBA_fnc_addPlayerEventHandler;
