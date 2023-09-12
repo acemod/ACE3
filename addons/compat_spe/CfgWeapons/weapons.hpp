@@ -58,22 +58,22 @@ class SPE_FM_24_M29: SPE_LMG {
 // SELF LOADING RIFLES
 class SPE_RIFLE;
 class SPE_G43: SPE_RIFLE {
-    ACE_Overheating_JamChance = 0.0003;
+    EGVAR(overheating,JamChance) = 0.0003;
     ACE_barrelTwist = 254; // unknown set to 1:10
     ACE_barrelLength = 550;
 };
 class SPE_K98: SPE_RIFLE {
-    ACE_Overheating_JamChance = 0.0003;
+    EGVAR(overheating,JamChance) = 0.0003;
     ACE_barrelTwist = 254; // unknown set to 1:10
     ACE_barrelLength = 550;
 };
 class SPE_M1_Carbine: SPE_RIFLE {
-    ACE_Overheating_JamChance = 0.0003;
+    EGVAR(overheating,JamChance) = 0.0003;
     ACE_barrelTwist = 254; // unknown set to 1:10
     ACE_barrelLength = 460;
 };
 class SPE_M1_Garand: SPE_RIFLE {
-    ACE_Overheating_JamChance = 0.0003;
+    EGVAR(overheating,JamChance) = 0.0003;
     ACE_barrelTwist = 254;
     ACE_barrelLength = 609.6;
 };
@@ -84,7 +84,7 @@ class SPE_M1903A3_Springfield: SPE_RIFLE {
 
 // ASSAULT RIFLE
 class SPE_STG44: SPE_RIFLE {
-    ACE_Overheating_JamChance = 0.0015;
+    EGVAR(overheating,JamChance) = 0.0015;
     ACE_barrelTwist = 254; // unknown set to 1:10
     ACE_barrelLength = 420;
 };
