@@ -130,11 +130,6 @@ class SPE_Sten_Mk2: SPE_SMG {
     ACE_barrelLength = 196;
     EGVAR(overheating,closedBolt) = 0;
 };
-class SPE_Sten_Mk2_Suppressed: SPE_Sten_Mk2 {
-    ACE_barrelTwist = 254;
-    ACE_barrelLength = 196;
-    EGVAR(overheating,closedBolt) = 0;
-};
 class SPE_M1A1_Thompson: SPE_SMG {
     ACE_barrelTwist = 392;
     ACE_barrelLength = 270;
