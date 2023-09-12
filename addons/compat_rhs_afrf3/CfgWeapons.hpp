@@ -108,21 +108,18 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 1.65;
     };
 
-    #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
-    #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;
-    #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
     class H_HelmetB;
     class rhs_tsh4: H_HelmetB {
-        HEARING_PROTECTION_VICCREW
+        HEARING_PROTECTION_VICCREW;
     };
 
     class rhs_6b47_bare;
     class rhs_6b48: rhs_6b47_bare {
-        HEARING_PROTECTION_VICCREW
+        HEARING_PROTECTION_VICCREW;
     };
 
     class rhs_zsh7a: H_HelmetB {
-        HEARING_PROTECTION_VICCREW
+        HEARING_PROTECTION_VICCREW;
     };
     class rhs_zsh7a_alt: rhs_zsh7a {
         ACE_Protection = 1;
@@ -137,19 +134,19 @@ class CfgWeapons {
     };
 
     class rhs_gssh18: H_HelmetB {
-        HEARING_PROTECTION_EARMUFF
+        HEARING_PROTECTION_EARMUFF;
     };
 
     class rhs_6b47;
     class rhs_6b47_6m2: rhs_6b47 {
-        HEARING_PROTECTION_PELTOR
+        HEARING_PROTECTION_PELTOR;
     };
     class rhs_6b47_6m2_1: rhs_6b47 {
-        HEARING_PROTECTION_PELTOR
+        HEARING_PROTECTION_PELTOR;
     };
 
     class rhs_6m2: H_HelmetB {
-        HEARING_PROTECTION_PELTOR
+        HEARING_PROTECTION_PELTOR;
     };
 
     class rhs_weap_d81;
