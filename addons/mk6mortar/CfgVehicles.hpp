@@ -27,7 +27,7 @@ class CfgVehicles {
     };
     class Mortar_01_base_F: StaticMortar {
         class ace_csw {
-            proxyWeapon = QFUNC(csw_getProxyWeapon);
+            proxyWeapon = "ACE_mortar_82mm";
             magazineLocation = "_target selectionPosition 'usti hlavne'";
         };
         class Turrets: Turrets {
