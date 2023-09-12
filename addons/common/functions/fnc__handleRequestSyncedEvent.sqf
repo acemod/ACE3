@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Receives either requests for synchronization from clients, or the synchronization data from the server.

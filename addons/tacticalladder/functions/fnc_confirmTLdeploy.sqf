@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rocko, Ruthberg, commy2
  * Confirm tactical ladder deployment

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Locks the seat of an unconscious or dead unit to prevent automatic unloading.
@@ -11,10 +11,13 @@
  *
  * Public: No
  */
+if (missionNamespace getVariable [QGVAR(disableSeatLocking), false]) exitWith {};
 params ["_unit"];
 
 private _vehicle = objectParent _unit;
+TRACE_3("lockUnconsciousSeat",_unit,_vehicle,lifeState _unit);
 
+if (isNull _vehicle) exitWith {};
 if (alive _unit && {lifeState _unit != "INCAPACITATED"}) exitWith {};
 
 switch (true) do {
@@ -35,3 +38,4 @@ switch (true) do {
         _unit setVariable [QGVAR(lockedSeat), [_vehicle, "turret", _turretPath], true];
     };
 };
+TRACE_1("locked",_unit getVariable QGVAR(lockedSeat));

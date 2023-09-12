@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Handles a unit reaching the point of death (calls for a status update).
  *
  * Arguments:

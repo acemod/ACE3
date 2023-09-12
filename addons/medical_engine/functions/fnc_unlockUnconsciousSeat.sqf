@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Unlocks the seat of an unconscious or dead unit after getting moved out or waking up.
@@ -16,6 +16,7 @@ params ["_unit"];
 private _seat = _unit getVariable [QGVAR(lockedSeat), []];
 _seat params ["_vehicle", "_type", "_position"];
 
+TRACE_2("unlockUnconsciousSeat",_unit,_seat);
 if (_seat isEqualTo []) exitWith {};
 
 switch (_type) do {

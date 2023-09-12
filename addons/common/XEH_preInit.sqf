@@ -19,6 +19,9 @@ GVAR(isModLoadedCache) = createHashMap;
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
 
+GVAR(swayFactorsBaseline) = [];
+GVAR(swayFactorsMultiplier) = [];
+
 // @todo: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug

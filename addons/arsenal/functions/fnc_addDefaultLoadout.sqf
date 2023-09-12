@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 654wak654, johnb43
  * Adds a loadout to the "Default Loadouts" list.

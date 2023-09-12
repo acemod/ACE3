@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Updates spectator UI help element
  *
  * Note that there are some redundant conditions in this file

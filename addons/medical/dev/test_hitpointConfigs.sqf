@@ -2,7 +2,7 @@
 // ["medicalHitpoints"] call ace_common_fnc_runTests;
 // call compile preprocessFileLineNumbers "\z\ace\addons\medical\dev\test_hitpointConfigs.sqf"
 
-#include "\z\ace\addons\medical\script_component.hpp"
+#include "..\script_component.hpp"
 
 // UAV-AI should get filtered by scope check
 

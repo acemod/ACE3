@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Returns the current spectator camera attributes (see setCameraAttributes for details).
  *
  * Arguments:

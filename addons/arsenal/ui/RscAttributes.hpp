@@ -176,6 +176,7 @@ class GVAR(display) {
                     text = CSTRING(buttonHideText);
                     sizeEx = QUOTE(5 * GRID_H);
                     tooltip = CSTRING(buttonHideTooltip);
+                    onMouseEnter = QUOTE(ctrlSetFocus (_this select 0));
                     onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(buttonHide));
                 };
                 class buttonLoadouts: buttonHide {
@@ -199,10 +200,17 @@ class GVAR(display) {
                     tooltip = CSTRING(buttonImportTooltip);
                     onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(buttonImport));
                 };
+                class buttonFavorites: buttonHide {
+                    idc = IDC_buttonFavorites;
+                    x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
+                    text = "";
+                    tooltip = CSTRING(buttonFavoritesTooltip);
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), (_this select 0))] call FUNC(buttonFavorites));
+                };
                 class buttonClose: ctrlButtonOK {
                     idc = IDC_menuBarClose;
                     colorBackground[] = {0,0,0,0.8};
-                    x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
+                    x = QUOTE(6 * WIDTH_GAP + 5 * WIDTH_SINGLE);
                     y = QUOTE(0);
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(7 * GRID_H);
@@ -559,6 +567,7 @@ class GVAR(display) {
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
+            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
             onKillFocus = QUOTE(GVAR(leftTabFocus) = false);
             x = QUOTE(safezoneX + 13 * GRID_W);
@@ -572,6 +581,7 @@ class GVAR(display) {
             drawSideArrows = 1;
             disableOverflow = 1;
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRight));
+            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(rightTabFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabFocus) = false);
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
@@ -592,6 +602,7 @@ class GVAR(display) {
             drawSideArrows = 1;
             disableOverflow = 1;
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRightListnBox));
+            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(rightTabLnBFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabLnBFocus) = false);
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);

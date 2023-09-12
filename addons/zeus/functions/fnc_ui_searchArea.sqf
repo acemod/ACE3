@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Initializes the "Search Area" Zeus module display.
  *
  * Arguments:

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike, Glowbal
+ * Author: kymckay, Glowbal
  * Assigns a medic role from the medical module to a unit
  *
  * Arguments:

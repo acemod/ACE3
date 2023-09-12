@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, kymckay, LinkIsGrim
  * Get list of vehicle hitpoints to ignore
@@ -56,16 +56,6 @@ private _processedSelections = [];
         TRACE_3("Skipping glass",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping glass, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
-        #endif*/
-        _hitPointsToIgnore pushBackUnique _hitpoint;
-        _processedSelections pushBack _selection;
-        continue
-    };
-
-    if (_hitpoint select [0,1] isEqualTo "#" || {_hitpoint select [0,9] isEqualTo "hit_light"}) then { // skip lights
-        TRACE_3("Skipping light",_hitpoint,_forEachIndex,_selection);
-        /*#ifdef DEBUG_MODE_FULL
-        systemChat format ["Skipping light, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
         _hitPointsToIgnore pushBackUnique _hitpoint;
         _processedSelections pushBack _selection;

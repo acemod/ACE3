@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: alganthe
  * Draws AI garrison pathing while the Zeus display is open.

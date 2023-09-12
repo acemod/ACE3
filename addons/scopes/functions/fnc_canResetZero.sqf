@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, Ruthberg
  * Checks if the unit can reset the zero adjustment of the current scope

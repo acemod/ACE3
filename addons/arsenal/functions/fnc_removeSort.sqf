@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: johnb43
  * Remove a sort from ACE Arsenal.
@@ -10,8 +10,7 @@
  * None
  *
  * Example:
- *
- [["scopeSortL00", "scopeSortL01", "scopeSortL02", "scopeSortR07"]] call ace_arsenal_fnc_removeSort;
+ * [["scopeSortL00", "scopeSortL01", "scopeSortL02", "scopeSortR07"]] call ace_arsenal_fnc_removeSort;
  *
  * Public: Yes
 */
