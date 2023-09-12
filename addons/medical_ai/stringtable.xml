@@ -51,10 +51,12 @@
         <Key ID="STR_ACE_Medical_AI_requireItems_title">
             <English>Require Items</English>
             <Polish>Wymagane Przedmioty</Polish>
+            <German>Erfordere Gegenstände</German>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_desc">
             <English>AI will only perform medical treatment if they have the necessary items in their inventory.\nRequires custom AI loadouts!</English>
             <Polish>AI będzie wykonywać zabiegi medyczne tylko wtedy, gdy ma w ekwipunku niezbędne przedmioty. \nWymaga niestandardowego wyposażenia AI!</Polish>
+            <German>Die KI führt nur dann medizinische Behandlungen durch, wenn sie die erforderlichen Gegenstände in ihrem Inventar hat.\nErfordert benutzerdefinierte KI-Ausrüstungen!</German>
         </Key>
     </Package>
 </Project>

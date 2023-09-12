@@ -318,11 +318,13 @@
             <English>Auto-Equip FRIES</English>
             <Polish>Automatycznie Zamontuj FRIES</Polish>
             <Japanese>FRIESの自動装備</Japanese>
+            <German>FRIES automatisch ausrüsten</German>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_description">
             <English>Automatically add FRIES to helicopters that support them.</English>
             <Polish>Automatycznie dodawaj FRIES do śmigłowców które je wspierają.</Polish>
             <Japanese>FRIESをサポートするヘリコプターに自動的にFRIESを追加します。</Japanese>
+            <German>FRIES automatisch Helikoptern hinzufügen, die es unterstützen</German>
         </Key>
     </Package>
 </Project>

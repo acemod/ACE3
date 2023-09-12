@@ -8,6 +8,7 @@
             <Spanish>Hunter Killer</Spanish>
             <Japanese>ハンターキラー</Japanese>
             <Polish>Hunter Killer</Polish>
+            <German>Hunter Killer</German>
         </Key>
         <Key ID="STR_ACE_HunterKiller_override">
             <English>Override</English>
@@ -16,6 +17,7 @@
             <Spanish>Anular</Spanish>
             <Japanese>オーバーライド</Japanese>
             <Polish>Nadpisanie</Polish>
+            <German>Überschreibe</German>
         </Key>
         <Key ID="STR_ACE_HunterKiller_override_description">
             <English>Force other turret to slew onto your viewpoint</English>
@@ -24,6 +26,7 @@
             <Spanish>Forzar otra torreta a dirigirse hacia tu zona de apuntado.</Spanish>
             <Japanese>他のタレットを強制的に自分の視点に旋回させる</Japanese>
             <Polish>Obróć drugą wieżyczkę w kierunku, w którym zwrócona jest twoja wieżyczka.</Polish>
+            <German>Zwingt andere Türme, sich auf deine Blickrichtung zu drehen</German>
         </Key>
         <Key ID="STR_ACE_HunterKiller_observe">
             <English>Observe</English>
@@ -32,6 +35,7 @@
             <Spanish>Observar</Spanish>
             <Japanese>オブザーブ</Japanese>
             <Polish>Obserwowanie</Polish>
+            <German>Observiere</German>
         </Key>
         <Key ID="STR_ACE_HunterKiller_observe_description">
             <English>Slew your turret onto other turret's viewpoint</English>
@@ -40,6 +44,7 @@
             <Spanish>Dirigir tu propia torreta hacia la zona de apuntado de otra torreta.</Spanish>
             <Japanese>自分のタレットを相手のタレットの視点に旋回させる。</Japanese>
             <Polish>Obróć swoją wieżyczkę tam, gdzie patrzy druga.</Polish>
+            <German>Richtet deinen Turm auf die Blickrichtung eines anderen Turms</German>
         </Key>
     </Package>
 </Project>

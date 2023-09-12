@@ -55,6 +55,7 @@
             <Spanish>Caudal de llenado de la carga</Spanish>
             <Japanese>貨物流量</Japanese>
             <Polish>Prędkość Tankowania Ładunku</Polish>
+            <German>Frachtflussrate</German>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
             <English>How fast should a fuel source's tank be filled?</English>
@@ -62,6 +63,7 @@
             <Spanish>Cómo de rápido puede llenarse una fuente de combustible.</Spanish>
             <Japanese>どのくらいの速さで給油源へ給油しますか?</Japanese>
             <Polish>Jak szybko zbiornik paliwa powinien być napełniany?</Polish>
+            <German>Wie schnell sollte der Tank einer Kraftstoffquelle gefüllt werden?</German>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
@@ -511,6 +513,7 @@
             <Spanish>Tiempo de interacción con la Bomba/Manguera</Spanish>
             <Japanese>ポンプとホースのインタラクション時間</Japanese>
             <Polish>Czas Interakcji z Pompą/Wężem</Polish>
+            <German>Interaktionszeit zwischen Pumpe und Schlauch</German>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_Description">
             <English>How long refuel interactions take in seconds.</English>
@@ -520,6 +523,7 @@
             <Spanish>Cuanto tiempo en segundos tardan las interacciones de repostado.</Spanish>
             <Japanese>燃料補給にかかる時間 (秒)</Japanese>
             <Polish>Jak długo powinna trwać interakcja tankowania w sekundach.</Polish>
+            <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
         </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
             <English>Fuel Cargo Volume</English>

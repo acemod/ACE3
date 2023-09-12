@@ -174,11 +174,13 @@
             <Spanish>Destruir vehículos tras la detonación inducida por calor</Spanish>
             <Japanese>誘爆後に車両を破壊する</Japanese>
             <Polish>Zniszcz Pojazdy po Zakończeniu Samozapłonu</Polish>
+            <German>Zerstöre Fahrzeuge nach der Durchzündung</German>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
             <English>Controls whether vehicles will always be destroyed after cooking off.</English>
             <Japanese>誘爆後に車両を破壊するかどうかを設定する。</Japanese>
             <Polish>Kontroluje, czy pojazdy będą zawsze niszczone po samozapłonie.</Polish>
+            <German>Steuert, ob Fahrzeuge nach dem Durchzünden immer zerstört werden.</German>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>
