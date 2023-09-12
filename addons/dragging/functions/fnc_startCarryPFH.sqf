@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Checks for carrying conditions. If these are met, the unit will start carrying. Called from ace_dragging_fnc_startCarry.

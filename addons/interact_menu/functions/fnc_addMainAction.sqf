@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas, PabstMirror
  * Makes sure there is a ACE_MainActions on the object type

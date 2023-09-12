@@ -7,10 +7,10 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"rhssaf_main_loadorder"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {};
         url = ECSTRING(main,URL);
-        skipWhenMissingDependencies = 1;
         VERSION_CONFIG;
     };
 };

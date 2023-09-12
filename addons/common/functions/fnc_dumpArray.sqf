@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ?
  * Dumps an array to the RPT, showing the depth of each element.

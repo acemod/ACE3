@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain
  * Handles cleaning up bodies that were replaced by body bags.

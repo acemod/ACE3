@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: RedBery
  * Handles a unit leaving cardiac arrest (calls for a status update).

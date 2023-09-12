@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: QuantX
  * Gets the capacity of a fuel source's tank.

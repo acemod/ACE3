@@ -3,7 +3,6 @@
 class CfgPatches {
     class SUBADDON {
         name = COMPONENT_NAME;
-        addonRootClass = QUOTE(ADDON);
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -19,6 +18,8 @@ class CfgPatches {
         author = ECSTRING(common,ACETeam);
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 

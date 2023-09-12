@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dedmen, johnb43
  * Text statement for the scope Night vision support stat.

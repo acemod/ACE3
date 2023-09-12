@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Handles automatic slide transitions using waitAndExecute in a PFH-like manner resulting in no performance loss.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: joko // Jonas
  * Handle fire of Vehicle Weapons. Called from the unified fired EH only for the local player vehicle.
