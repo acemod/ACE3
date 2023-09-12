@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, commy2, esteldunedain, Ruthberg
  * Gets magazine children for interaciton menu.

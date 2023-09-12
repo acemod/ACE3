@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Tuupertunut
  * Returns the current ammo counts in all magazines of given class in turret.

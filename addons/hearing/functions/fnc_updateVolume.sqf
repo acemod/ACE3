@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2 and esteldunedain and Ruthberg
  * Updates and applies the current deafness. Called every 1 sec from a PFEH.

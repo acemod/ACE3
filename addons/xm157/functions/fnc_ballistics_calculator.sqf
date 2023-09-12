@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, Ruthberg (Based on ace_atragmx_fnc_calculate_solution)
  * Calculates elevation and windage

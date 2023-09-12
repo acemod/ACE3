@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: commy2

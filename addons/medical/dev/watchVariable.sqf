@@ -1,4 +1,4 @@
-#include "\z\ace\addons\medical\script_component.hpp"
+#include "..\script_component.hpp"
 
 if (missionNamespace getVariable [QGVAR(dev_watchVariableRunning), false]) exitWith {};
 GVAR(dev_watchVariableRunning) = true;
