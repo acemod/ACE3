@@ -119,9 +119,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
             <English>Weapon Drop Chance</English>
+            <German>Wahrscheinlichkeit, die Waffe fallen zu lassen</German>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
             <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
+            <German>Chance für einen Spieler, seine Waffe fallen zu lassen, wenn er bewusstlos wird.\nHat keine Auswirkung auf die KI.</German>
         </Key>
     </Package>
 </Project>
