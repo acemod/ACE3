@@ -17,6 +17,8 @@
 
 params [["_marker",""]];
 
+if ((markerShape _marker) == "POLYLINE") exitWith { false };
+
 switch (GVAR(moveRestriction)) do {
     case MOVE_RESTRICTION_NOBODY: {false};
     case MOVE_RESTRICTION_ALL: {true};

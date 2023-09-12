@@ -22,7 +22,7 @@ if (isNil QGVAR(menu)) then {
     private _arrayUp = {
         params ["", "_var", "_thing"];
         private _value = GVAR(data) getOrDefault [_var, 0];
-        private _value = (_value + 1 + count _thing) % count _thing;
+        _value = (_value + 1 + count _thing) % count _thing;
         GVAR(data) set [_var, _value];
     };
     private _arrayDown = {
