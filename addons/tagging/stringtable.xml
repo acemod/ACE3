@@ -363,11 +363,13 @@
         <Key ID="STR_ACE_Tagging_stencilVehicle">
             <English>Vehicle ID Marking</English>
             <Japanese>車両IDマーキング</Japanese>
+            <Polish>Oznaczenie identyfikacyjne pojazdu</Polish>
             <German>Fahrzeug ID Markierung</German>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
             <English>Replaces clan tag with stenciled text</English>
             <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
+            <Polish>Zastępuje tag klanu tekstem z szablonu</Polish>
             <German>Ersetzt das Clan-Tag durch Schablonentext</German>
         </Key>
     </Package>

@@ -782,6 +782,7 @@
             <Russian>Порог боли для потери сознания</Russian>
             <French>Seuil d'inconscience par la douleur.</French>
             <Japanese>気絶する痛みのしきい値</Japanese>
+            <Polish>Próg Nieprzytomności od Bólu</Polish>
             <German>Schmerz-Bewusstlosigkeit-Grenze</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
@@ -789,6 +790,7 @@
             <Russian>Устанавливает количество боли от полученной травмы, при котором юнит может потерять сознание.</Russian>
             <French>Définis le niveau de douleur à partir duquel une personne peut perdre connaissance. Cf PainUnconsciousChance.</French>
             <Japanese>激しい痛みのしきい値を設定します。このしきい値を超えた状態でダメージを受けると意識を失う可能性があります。</Japanese>
+            <Polish>Ustawia próg silnego bólu, powyżej którego osoba może stracić przytomność po otrzymaniu obrażeń.</Polish>
             <German>Legt die Grenze für starke Schmerzen fest, oberhalb derer eine Person bei erlittenem Schaden bewusstlos werden kann.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
