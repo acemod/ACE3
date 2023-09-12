@@ -1,5 +1,3 @@
-#include "\z\ace\addons\compat_spe\script_component.hpp"
-
 #define SUBCOMPONENT csw
-#undef ADDON
-#define ADDON TRIPLES(PREFIX,COMPONENT,SUBCOMPONENT)
+#define SUBCOMPONENT_BEAUTIFIED Crew-Served Weapons
+#include "..\script_component.hpp"
