@@ -86,19 +86,13 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 }] call CBA_fnc_addEventHandler;
 
-// When entering an arsenal, drop carried and dragged objects
-[QEGVAR(arsenal,displayOpened), {
-    // Only drop dragged and carried objects if player is arsenal center
-    if (missionNamespace getVariable [QEGVAR(arsenal,center), objNull] != ACE_player) exitWith {};
+// When changing cameras, drop carried and dragged objects
+["featureCamera", {
+    params ["_unit", "_camera"];
 
-    ACE_player call FUNC(handleKilled);
-}] call CBA_fnc_addEventHandler;
+    if (_camera == "") exitWith {};
 
-[missionNamespace, "arsenalOpened", {
-    // Only drop dragged and carried objects if player is arsenal center
-    if (missionNamespace getVariable ["BIS_fnc_arsenal_center", objNull] != ACE_player) exitWith {};
-
-    ACE_player call FUNC(handleKilled);
-}] call BIS_fnc_addScriptedEventHandler;
+    _unit call FUNC(handleKilled);
+}] call CBA_fnc_addPlayerEventHandler;
 
 #include "initKeybinds.sqf"
