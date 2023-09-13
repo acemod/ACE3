@@ -18,7 +18,11 @@
 
 params ["_unit", "_target"];
 
+private _unitItems = _unit call EFUNC(common,uniqueItems);
+private _restraintLocked = _target getVariable [QGVAR(cuffs), "ACE_CableTie"] findAny GVAR(lockedRestraints) != -1;
+
 //Unit is handcuffed and not currently being escorted
 _target getVariable [QGVAR(isHandcuffed), false] &&
 {isNull (attachedTo _target)} &&
-{(vehicle _target) == _target}
+{(vehicle _target) == _target} &&
+{(_restraintLocked && (_unitItems findAny GVAR(keys))) || !_restraintLocked}
