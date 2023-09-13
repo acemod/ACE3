@@ -16,6 +16,7 @@ class CfgWeapons {
     };
     class ACE_Handcuffs: ACE_CableTie {
         GVAR(reusable) = 1;
+        GVAR(locked) = 1;
         displayName = "Handcuffs"; //TODO: Localise
         descriptionShort = "A pair of reusable handcuffs used for restraining prisoners."; //TODO: Localise
         //model = QPATHTOF(models\ace_handcuffs.p3d); //No model source of current.
