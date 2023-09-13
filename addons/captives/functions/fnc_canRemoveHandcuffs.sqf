@@ -25,4 +25,4 @@ private _restraintLocked = _target getVariable [QGVAR(cuffs), "ACE_CableTie"] fi
 _target getVariable [QGVAR(isHandcuffed), false] &&
 {isNull (attachedTo _target)} &&
 {(vehicle _target) == _target} &&
-{(_restraintLocked && (_unitItems findAny GVAR(keys))) || !_restraintLocked}
+{(_restraintLocked && (_unitItems findAny GVAR(keys) != -1)) || !_restraintLocked}
