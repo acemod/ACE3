@@ -21,8 +21,9 @@ params ["_unit", "_target"];
 
 playSound3D [QUOTE(PATHTO_R(sounds\cable_tie_zipping.ogg)), objNull, false, (getPosASL _target), 1, 1, 10];
 
-[QGVAR(setHandcuffed), [_target, true, _unit], [_target]] call CBA_fnc_targetEvent;
-
 private _cuffs = (_unit call EFUNC(common,uniqueItems)) arrayIntersect GVAR(restraints);
+private _selectedCuffs = _cuffs#0;
 
-_unit removeItem (_cuffs#0);
+[QGVAR(setHandcuffed), [_target, true, _unit, _selectedCuffs], [_target]] call CBA_fnc_targetEvent;
+
+_unit removeItem _selectedCuffs;
