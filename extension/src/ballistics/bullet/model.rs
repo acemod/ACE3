@@ -59,7 +59,7 @@ impl Bullet {
 
         let temperature =
             Temperature::new_celsius(self.temperature.as_celsius() - 0.0065 * bullet_position.z());
-        let pressure = (1010.32 - 10.0 * self.overcast)
+        let pressure = (1013.25 - 10.0 * self.overcast)
             * (1.0
                 - (0.0065 * (self.altitude + bullet_position.z()))
                     / 0.0065f64.mul_add(self.altitude, temperature.as_kelvin()))
@@ -93,8 +93,9 @@ impl Bullet {
                     wind_source_obstacles.x(),
                     wind_source_obstacles.y(),
                 );
-                wind_attenuation *=
-                    0.0f64.max(height_atl / roughness_length.log(20.0 / roughness_length));
+                wind_attenuation *= 0.0f64.max(
+                    (height_atl / roughness_length).log10() / (20.0 / roughness_length).log10(),
+                )
             }
 
             wind *= wind_attenuation;
@@ -146,7 +147,7 @@ impl Bullet {
 
             let drag = if self.ballistic_coefficients.len() == self.velocity_boundaries.len() + 1 {
                 let mut ballistic_coefficient = self.ballistic_coefficients[0];
-                for (i, boundry) in self.velocity_boundaries.iter().enumerate() {
+                for (i, boundry) in self.velocity_boundaries.iter().enumerate().rev() {
                     if true_velocity.magnitude() < *boundry {
                         ballistic_coefficient = self.ballistic_coefficients[i + 1];
                         break;
@@ -199,13 +200,13 @@ impl Bullet {
             let lat = self.latitude;
             let accel = Vector3::new(
                 2.0 * EARTH_ANGULAR_SPEED
-                    * (bullet_velocity.y() * lat.sin() - bullet_velocity.x() * lat.cos()),
+                    * (bullet_velocity.y() * lat.sin() - bullet_velocity.z() * lat.cos()),
                 2.0 * EARTH_ANGULAR_SPEED * -(bullet_velocity.x() * lat.sin()),
                 2.0 * EARTH_ANGULAR_SPEED * (bullet_velocity.x() * lat.cos()),
             );
 
             velocity_offset += accel * dt;
-            bullet_velocity -= accel * dt + GRAVITY_ACCEL * dt;
+            bullet_velocity += accel * dt + GRAVITY_ACCEL * dt;
 
             tof += dt;
             time += dt;
