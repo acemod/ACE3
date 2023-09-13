@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: True to take captive, false to release captive <BOOL>
  * 2: Caller <OBJECT>
+ * 3: Selected Cuffs <STRING>
  *
  * Return Value:
  * None
@@ -17,7 +18,7 @@
  * Public: No
  */
 
-params ["_unit", "_state", ["_caller", objNull]];
+params ["_unit", "_state", ["_caller", objNull], "_selectedCuffs"];
 TRACE_3("params",_unit,_state,_caller);
 
 if (!local _unit) exitWith {
@@ -41,6 +42,7 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
+    _unit setVariable [QGVAR(cuffs), _selectedCuffs, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
     [_unit, "blockRadio", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
 
@@ -81,7 +83,9 @@ if (_state) then {
 
     }, [_unit], 0.01] call CBA_fnc_waitAndExecute;
 } else {
+    private _usedCuffs = _unit getVariable [QGVAR(cuffs), ""];
     _unit setVariable [QGVAR(isHandcuffed), false, true];
+    _unit setVariable [QGVAR(cuffs), "", true];
     [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
     [_unit, "blockRadio", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
 
@@ -102,6 +106,12 @@ if (_state) then {
 
     if (_unit == ACE_player) then {
         ["captive", []] call EFUNC(common,showHud); //same as showHud true;
+    };
+    
+    //Give de-arrestee restraint back if reusable.
+    private _reusable = getNumber (configFile >> "CfgWeapons" >> _usedCuffs >> QGVAR(reusable));
+    if (!(isNull _caller) && _reusable > 0) then {
+        [_caller, _usedCuffs, true] call CBA_fnc_addItem;
     };
 };
 
