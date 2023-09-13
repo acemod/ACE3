@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_unit", "_state", ["_caller", objNull], "_selectedCuffs"];
+params ["_unit", "_state", ["_caller", objNull], "_selectedRestraint"];
 TRACE_3("params",_unit,_state,_caller);
 
 if (!local _unit) exitWith {
