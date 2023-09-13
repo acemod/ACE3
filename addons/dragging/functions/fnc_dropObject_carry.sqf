@@ -22,6 +22,7 @@ TRACE_1("params",_this);
 
 // Remove drop action
 [_unit, "DefaultAction", _unit getVariable [QGVAR(releaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
+_unit setVariable [QGVAR(releaseActionID), nil];
 
 private _inBuilding = _unit call FUNC(isObjectOnObject);
 
