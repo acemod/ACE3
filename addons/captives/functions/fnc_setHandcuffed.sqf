@@ -42,7 +42,7 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
-    _unit setVariable [QGVAR(cuffs), _selectedCuffs, true];
+    _unit setVariable [QGVAR(cuffs), _selectedRestraint, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
     [_unit, "blockRadio", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
 
