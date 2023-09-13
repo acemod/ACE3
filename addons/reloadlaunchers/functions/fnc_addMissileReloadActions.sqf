@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Create one action per reloadable missile.
  *
  * Arguments:
  * 0: Unit equipped with the launcher <OBJECT>
- * 1: Unit to execute the reload <OBJECT>
+ * 1: Unit wanting to execute the reload <OBJECT>
  *
  * Return Value:
  * Children actions <ARRAY>

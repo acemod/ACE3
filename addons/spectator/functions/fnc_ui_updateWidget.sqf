@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nelson Duarte, kymckay
  * Updates spectator UI unit info widget

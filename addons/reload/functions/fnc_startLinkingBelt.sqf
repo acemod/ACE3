@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, johnb43
  * Start linking the belt.
  *
  * Arguments:
- * 0: Unit executing the reload <OBJECT>
+ * 0: Unit linking the belt <OBJECT>
  * 1: Unit equipped with the weapon <OBJECT>
  *
  * Return Value:

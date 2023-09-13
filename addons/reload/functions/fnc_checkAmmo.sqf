@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, esteldunedain
  * Play animation and display message.
  *
  * Arguments:
  * 0: Unit equipped with the weapon <OBJECT>
- * 1: Unit to execute the reload <OBJECT>
+ * 1: Unit wanting to check the ammo <OBJECT>
  *
  * Return Value:
  * None

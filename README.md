@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
+    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/black/ACE3-Logo.png" width="480">
 </p>
 
 <p align="center">
@@ -97,9 +97,7 @@ Please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues) to report
 
 ### Testing & building
 
-To help us test the latest development changes, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or [with git](https://help.github.com/articles/fetching-a-remote/)), then assemble a test build:
-
-- [Setting up the development environment](https://ace3.acemod.org/wiki/development/setting-up-the-development-environment.html) – step-by-step instructions on how to properly setup and build a version of ACE3 for testing purposes.
+To help us test the latest development changes, download the [artifact](https://github.com/acemod/ACE3/actions/workflows/arma.yml) of the branch you'd like to test or subscribe to [nightly build](https://steamcommunity.com/sharedfiles/filedetails/?id=1882627645) to test `master` branch. Alternatively [build your own version](https://ace3.acemod.org/wiki/development/setting-up-the-development-environment.html).
 
 ### Get in touch
 

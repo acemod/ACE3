@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Checks for dragging conditions. If these are met, the unit will start dragging. Called from ace_dragging_fnc_startDrag.

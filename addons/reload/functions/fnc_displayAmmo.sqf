@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, esteldunedain
  * Display the ammo of the currently loaded magazine of the target or count rifle grenades.

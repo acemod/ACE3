@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Katalam, mharis001, Brett Mayson
  * Checks if the patient's body part can be stitched.

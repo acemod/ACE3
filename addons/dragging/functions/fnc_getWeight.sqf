@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: L-H, edited by commy2, rewritten by joko // Jonas, re-rewritten by mharis001
  * Returns the weight of the given object.
