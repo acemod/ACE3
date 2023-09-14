@@ -10,8 +10,8 @@
  * 3: Code that is executed when 'Cancel' is pressed <CODE> (default: {})
  * 4: Display <DISPLAY> (default: call BIS_fnc_displayMission)
  * 5: Show buttons <ARRAY of BOOLS>
- *  5.0: Show ok button if ok has code <BOOL> (default: true)
- *  5.1: Show cancel button if cancel has code <BOOL> (default: true)
+ * - 0: Show ok button if ok has code <BOOL> (default: true)
+ * - 1: Show cancel button if cancel has code <BOOL> (default: true)
  *
  * Return Value:
  * None
