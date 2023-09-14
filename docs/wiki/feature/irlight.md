@@ -25,6 +25,7 @@ The DBAL-A3 is a multi function laser and can be run in the following modes:
 - Visible laser
 
 ### 1.2 SPIR
+
 The SPIR is an IR only flashlight. It uses a diffused laser, which improves its effective range considerably compared to a conventional flashlight. It has three modes with different beam widths to allow both easy terrain navigation and engagements at longer ranges during difficult lighting conditions.
 
 ### 1.3 Long Range Variants
