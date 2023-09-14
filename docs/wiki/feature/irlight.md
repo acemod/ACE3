@@ -29,6 +29,7 @@ The DBAL-A3 is a multi function laser and can be run in the following modes:
 The SPIR is an IR only flashlight. It uses a diffused laser, which improves its effective range considerably compared to a conventional flashlight. It has three modes with different beam widths to allow both easy terrain navigation and engagements at longer ranges during difficult lighting conditions.
 
 ### 1.3 Long Range Variants
+
 Due to Arma 3's dated lighting system, flashlights can shine through objects and walls. To avoid these visual bugs, we have opted to tone down their range considerably compared to their real life counterparts. Although the DBAL-A3 has a range of up to 4000 m according to its manufacturer, such intense lights are simply not feasible in Arma.
 
 Realism focused players which are not bothered by some visual bugs can use the long range variants of the DBAL-A3 and the SPIR. They are, besides their increased lighting power, identical to their normal range counterparts and can be accessed by appending `_LR` to the class name (see [Class Names](../class-names#ir-lights)). They still provide a lower lighting range than their real life counter parts, but should offer a nice middleground.
