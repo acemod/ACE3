@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: eRazeri, esteldunedain, PabstMirror
  * Attach an item to the unit

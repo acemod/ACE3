@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets all magazines inside of a vehicle.
@@ -8,8 +8,8 @@
  *
  * Return Value:
  * 0: Ammo Array <ARRAY>
- *      0: Magazine Classname <STRING>
- *      1: Ammo Count <NUMBER>
+ * - 0: Magazine Classname <STRING>
+ * - 1: Ammo Count <NUMBER>
  * 1: Total Ammo Count <NUMBER>
  *
  * Example:

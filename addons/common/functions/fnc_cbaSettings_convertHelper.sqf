@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Dev function: Converts ace_settings to code, outputs to clipboard
@@ -55,7 +55,7 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
 
     private _cbaSettingType = "";
     private _cbaValueInfo = [];
-    _cbaValueInfoHint = "default value";
+    private _cbaValueInfoHint = "default value";
     switch (_typeName) do {
     case ("SCALAR"): { // ACE's Scalar can be a float or an index for a list
             if (!isNumber (_config >> "value")) then {WARNING_2("Setting [%1] - value type [%2] is missing number",_varName,_typeName);};

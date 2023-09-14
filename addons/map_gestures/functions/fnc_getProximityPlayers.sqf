@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix
  * Returns all players in a given range and in the units vehicle.

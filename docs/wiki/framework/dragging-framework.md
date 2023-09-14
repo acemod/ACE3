@@ -21,11 +21,13 @@ class CfgVehicles {
         ace_dragging_canDrag = 1;  // Can be dragged (0-no, 1-yes)
         ace_dragging_dragPosition[] = {0, 1.2, 0};  // Offset of the model from the body while dragging (same as attachTo) (default: [0, 1.5, 0])
         ace_dragging_dragDirection = 0;  // Model direction while dragging (same as setDir after attachTo) (default: 0)
+        ace_dragging_ignoreWeight = 1; // Ignore weight limitation for dragging (0-no, 1-yes)
 
         // Carrying
         ace_dragging_canCarry = 1;  // Can be carried (0-no, 1-yes)
         ace_dragging_carryPosition[] = {0, 1.2, 0};  // Offset of the model from the body while dragging (same as attachTo) (default: [0, 1, 1])
         ace_dragging_carryDirection = 0;  // Model direction while dragging (same as setDir after attachTo) (default: 0)
+        ace_dragging_ignoreWeightCarry = 1; // Ignore weight limitation for carrying (0-no, 1-yes)
     };
 };
 ```
@@ -50,6 +52,7 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 1  | Enable dragging, true to enable, false to disable | Boolean | Required
 2  | Position to offset the object from player | Array | Optional (default: `[0, 1.5, 0]`)
 3  | Direction in degree to rotate the object | Number | Optional (default: `0`)
+4  | Ignore weight limitation for dragging | Boolean | Optional (default: `false`)
 **R** | None | None | Return value
 
 #### 2.1.1 Example 1
@@ -85,6 +88,7 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 1  | Enable carrying, true to enable, false to disable | Boolean | Required
 2  | Position to offset the object from player | Array | Optional (default: `[0, 1, 1]`)
 3  | Direction in degree to rotate the object | Number | Optional (default: `0`)
+4  | Ignore weight limitation for carrying | Boolean | Optional (default: `false`)
 **R** | None | None | Return value
 
 #### 2.2.1 Example

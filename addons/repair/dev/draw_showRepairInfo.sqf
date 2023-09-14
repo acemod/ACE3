@@ -1,7 +1,7 @@
 // PabstMirror
 // [] execVM "\z\ace\addons\repair\dev\draw_showRepairInfo.sqf";
 
-#include "\z\ace\addons\repair\script_component.hpp"
+#include "..\script_component.hpp"
 
 addMissionEventHandler ["Draw3D", {
     if !((cursorObject isKindOf "Car") || (cursorObject isKindOf "Tank") || (cursorObject isKindOf "Air")) exitWith {};

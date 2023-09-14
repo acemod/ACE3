@@ -1,7 +1,7 @@
 // execVM "z\ace\addons\interaction\dev\initReplaceTerrainCursorObject.sqf";
 // use "J" key to replace terrain cursorObject and add dragging actions to it
 
-#include "\z\ace\addons\interaction\script_component.hpp"
+#include "..\script_component.hpp"
 
 DFUNC(replaceTerrainModelsAdd) = {
     params ["_model", ["_class", ""]];

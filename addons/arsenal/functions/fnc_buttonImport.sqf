@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Import loadout / default loadouts list from clipboard.
  *
  * Arguments:
@@ -15,102 +15,69 @@
 
 params ["_display"];
 
-private _data = call (compile copyFromClipboard);
+// Can be either a singular loadout or an array of loadouts
+private _extendedLoadout = call compile copyFromClipboard;
 
-if (isNil "_data" || {!(_data isEqualType [])}) exitWith {
-    [_display, localize LSTRING(importFormatError)] call FUNC(message);
+// If error, exit
+if (isNil "_extendedLoadout" || {!(_extendedLoadout isEqualType [])}) exitWith {
+    [_display, LLSTRING(importFormatError)] call FUNC(message);
 };
 
 if (GVAR(shiftState) && {is3DEN}) then {
-
+    // Supports CBA extended loadout or getUnitLoadout arrays
     {
         if (
-                count _x == 2 &&
-                {_x select 0 isEqualType ""} &&
-                {_x select 0 != ""} &&
-                {_x select 1 isEqualType []} &&
-                {count (_x select 1) == 10}
+            count _x == 2 &&
+            {(_x select 0) isEqualType ""} &&
+            {(_x select 0) != ""} &&
+            {(_x select 1) isEqualType []} &&
+            {count (_x select 1) in [2, 10]}
         ) then {
             _x call FUNC(addDefaultLoadout);
         };
-    } foreach _data;
+    } forEach _extendedLoadout;
 
-    [_display, localize LSTRING(importedDefault)] call FUNC(message);
+    [_display, LLSTRING(importedDefault)] call FUNC(message);
+
     set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
-
 } else {
-    private _count = count _data;
-    if (_count == 10 || { _count == 2 }) then {
-        [GVAR(center), _data] call CBA_fnc_setLoadout;
+    // If _extendedLoadout is in getUnitLoadout array, change into CBA extended loadout array
+    if (count _extendedLoadout == 10) then {
+        _extendedLoadout = [_extendedLoadout, createHashMap];
+    };
 
-        GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
-        for "_index" from 0 to 15 do {
-            switch (_index) do {
-                case 0;
-                case 1;
-                case 2:{
-                    GVAR(currentItems) set [_index, ((LIST_DEFAULTS select 0) select _index)];
-                };
-                case 3;
-                case 4;
-                case 5;
-                case 6;
-                case 7;
-                case 8;
-                case 9: {
-                    GVAR(currentItems) set [_index, (LIST_DEFAULTS select _index) select 0];
+    // Check if CBA extended loadout array
+    if ((count _extendedLoadout) == 2) then {
+        [GVAR(center), _extendedLoadout] call CBA_fnc_setLoadout;
 
-                };
-                case 10: {
-                    {(GVAR(currentItems) select 15) pushBack _x} forEach (uniformItems GVAR(center));
-                };
-                case 11: {
-                    {(GVAR(currentItems) select 16) pushBack _x} forEach (vestItems GVAR(center));
-                };
-                case 12: {
-                    {(GVAR(currentItems) select 17) pushBack _x} forEach (backpackItems GVAR(center));
-                };
-                case 13: {
-                    GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + (primaryWeaponMagazine GVAR(center))];
-                };
-                case 14: {
-                    GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + (secondaryWeaponMagazine GVAR(center))];
-                };
-                case 15: {
-                    GVAR(currentItems) set [20, (handgunItems GVAR(center)) + (handgunMagazine GVAR(center))];
-                };
-            };
-        };
+        // Update current item list and unique items
+        [true] call FUNC(refresh);
 
-
-        {
-            private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
-            private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
-
-            GVAR(currentItems) set [_index, _x];
-        } foreach (assignedItems GVAR(center));
-
-        call FUNC(updateUniqueItemsList);
+        _extendedLoadout params ["_loadout", "_extendedInfo"];
 
         // Reapply insignia
-        if (QGVAR(insignia) in _loadout#1) then {
-            GVAR(currentInsignia) = _loadout#1 getOrDefault [QGVAR(insignia), ""];
+        if (QGVAR(insignia) in _extendedInfo) then {
+            GVAR(currentInsignia) = _extendedInfo getOrDefault [QGVAR(insignia), ""];
         } else {
-            [GVAR(center), ""] call bis_fnc_setUnitInsignia;
-            [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
+            [GVAR(center), ""] call BIS_fnc_setUnitInsignia;
+            [GVAR(center), GVAR(currentInsignia)] call BIS_fnc_setUnitInsignia;
         };
 
-        if (QGVAR(face) in _loadout#1) then {
-            GVAR(currentFace) = _loadout#1 getOrDefault [QGVAR(face), GVAR(currentFace)];
-        };
-        if (QGVAR(voice) in _loadout#1) then {
-            GVAR(currentVoice) = _loadout#1 getOrDefault [QGVAR(voice), GVAR(currentVoice)];
+        // Save face
+        if (QGVAR(face) in _extendedInfo) then {
+            GVAR(currentFace) = _extendedInfo getOrDefault [QGVAR(face), GVAR(currentFace)];
         };
 
+        // Save voice
+        if (QGVAR(voice) in _extendedInfo) then {
+            GVAR(currentVoice) = _extendedInfo getOrDefault [QGVAR(voice), GVAR(currentVoice)];
+        };
+
+        // Fill left panel
         [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
 
-        [_display, localize LSTRING(importedCurrent)] call FUNC(message);
+        [_display, LLSTRING(importedCurrent)] call FUNC(message);
     };
 };
 
-[QGVAR(loadoutImported), [_display, (GVAR(shiftState) && {is3DEN})]] call CBA_fnc_localEvent;
+[QGVAR(loadoutImported), [_display, GVAR(shiftState) && {is3DEN}]] call CBA_fnc_localEvent;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, commy2
  * Determines whether to place dust on the goggles, based on calibre of weapon fired and other requirements. Called from the unified fired EH only for the local player.
