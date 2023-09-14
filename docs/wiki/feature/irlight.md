@@ -16,6 +16,7 @@ version:
 ## 1. Overview
 
 ### 1.1 DBAL-A3
+
 The DBAL-A3 is a multi function laser and can be run in the following modes:
 
 - IR laser and IR illuminator
