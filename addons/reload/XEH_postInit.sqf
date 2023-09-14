@@ -53,3 +53,15 @@
 if (!hasInterface) exitWith {};
 
 #include "initKeybinds.sqf"
+
+// Reload when default reload keybind is pressed
+addUserActionEventHandler ["ReloadMagazine", "Activate", {
+    private _vehicle = objectParent ACE_player;
+
+    // If on foot, skip
+    if (isNull _vehicle) exitWith {};
+
+    if !([_vehicle, ACE_player] call FUNC(canSwapTurretMagazine)) exitWith {};
+
+    [_vehicle, ACE_player] call FUNC(swapTurretMagazine);
+}];
