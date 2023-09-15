@@ -4,9 +4,6 @@
 GVAR(mouseLeft) = false;
 GVAR(mouseRight) = false;
 
-GVAR(cancel) = false;
-GVAR(canAttach) = false;
-
 [QGVAR(ropeAttachTo), {
     params ["_child", "_relativeAttachPos", "_rope", "_helper"];
     TRACE_4("ropeAttachTo",_child,_relativeAttachPos,_rope,_helper);
