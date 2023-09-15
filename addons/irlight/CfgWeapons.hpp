@@ -136,7 +136,7 @@ class CfgWeapons {
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Red_IP";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Red_VP";
         MRT_SwitchItemHintText = CSTRING(Mode_IRDual);
-        GVAR(baseClass) = "ACE_DBAL_A3_Red";
+        baseWeapon = "ACE_DBAL_A3_Red";
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             DBAL_A3_FLASHLIGHT;
@@ -185,7 +185,7 @@ class CfgWeapons {
         scope = 1;
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Red_LR_IP";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Red_LR_VP";
-        GVAR(baseClass) = "ACE_DBAL_A3_Red_LR";
+        baseWeapon = "ACE_DBAL_A3_Red_LR";
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             DBAL_A3_FLASHLIGHT_LR;
@@ -196,13 +196,13 @@ class CfgWeapons {
     class ACE_DBAL_A3_Red_LR_IP: ACE_DBAL_A3_Red_IP {
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Red_LR_II";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Red_LR";
-        GVAR(baseClass) = "ACE_DBAL_A3_Red_LR";
+        baseWeapon = "ACE_DBAL_A3_Red_LR";
     };
 
     class ACE_DBAL_A3_Red_LR_II: ACE_DBAL_A3_Red_II {
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Red_LR_VP";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Red_LR_IP";
-        GVAR(baseClass) = "ACE_DBAL_A3_Red_LR";
+        baseWeapon = "ACE_DBAL_A3_Red_LR";
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             DBAL_A3_FLASHLIGHT_LR;
@@ -212,7 +212,7 @@ class CfgWeapons {
     class ACE_DBAL_A3_Red_LR_VP: ACE_DBAL_A3_Red_VP {
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Red_LR";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Red_LR_II";
-        GVAR(baseClass) = "ACE_DBAL_A3_Red_LR";
+        baseWeapon = "ACE_DBAL_A3_Red_LR";
     };
 
     // DBAL-A3 (green pointer)
@@ -221,21 +221,21 @@ class CfgWeapons {
         displayName = CSTRING(DBAL_A3_Green);
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green_IP";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green_VP";
-        GVAR(baseClass) = "ACE_DBAL_A3_Green";
+        baseWeapon = "ACE_DBAL_A3_Green";
     };
 
     class ACE_DBAL_A3_Green_IP: ACE_DBAL_A3_Red_IP {
         displayName = CSTRING(DBAL_A3_Green);
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green_II";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green";
-        GVAR(baseClass) = "ACE_DBAL_A3_Green";
+        baseWeapon = "ACE_DBAL_A3_Green";
     };
 
     class ACE_DBAL_A3_Green_II: ACE_DBAL_A3_Red_II {
         displayName = CSTRING(DBAL_A3_Green);
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green_VP";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green_IP";
-        GVAR(baseClass) = "ACE_DBAL_A3_Green";
+        baseWeapon = "ACE_DBAL_A3_Green";
     };
 
     class ACE_DBAL_A3_Green_VP: ACE_DBAL_A3_Red_VP {
@@ -243,7 +243,7 @@ class CfgWeapons {
         ACE_laserpointer = 2;
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green_II";
-        GVAR(baseClass) = "ACE_DBAL_A3_Green";
+        baseWeapon = "ACE_DBAL_A3_Green";
     };
 
     // DBAL-A3 (green pointer, long range)
@@ -251,7 +251,7 @@ class CfgWeapons {
         scope = 1;
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green_LR_IP";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green_LR_VP";
-        GVAR(baseClass) = "ACE_DBAL_A3_Green_LR";
+        baseWeapon = "ACE_DBAL_A3_Green_LR";
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             DBAL_A3_FLASHLIGHT;
@@ -262,13 +262,13 @@ class CfgWeapons {
     class ACE_DBAL_A3_Green_LR_IP: ACE_DBAL_A3_Green_IP {
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green_LR_II";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green_LR";
-        GVAR(baseClass) = "ACE_DBAL_A3_Green_LR";
+        baseWeapon = "ACE_DBAL_A3_Green_LR";
     };
 
     class ACE_DBAL_A3_Green_LR_II: ACE_DBAL_A3_Green_II {
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green_LR_VP";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green_LR_IP";
-        GVAR(baseClass) = "ACE_DBAL_A3_Green_LR";
+        baseWeapon = "ACE_DBAL_A3_Green_LR";
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             DBAL_A3_FLASHLIGHT;
@@ -278,7 +278,7 @@ class CfgWeapons {
     class ACE_DBAL_A3_Green_LR_VP: ACE_DBAL_A3_Green_VP {
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green_LR";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green_LR_II";
-        GVAR(baseClass) = "ACE_DBAL_A3_Green_LR";
+        baseWeapon = "ACE_DBAL_A3_Green_LR";
     };
 
     // SPIR

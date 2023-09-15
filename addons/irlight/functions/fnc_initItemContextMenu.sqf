@@ -22,12 +22,12 @@
         "ACE_DBAL_A3_Red", "POINTER", _displayName, [], "", {
             params ["", "", "_item", "", "_variant"];
 
-            private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> QGVAR(baseClass));
+            private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> "baseWeapon");
             _item != _baseClass + _variant
         }, {
             params ["", "", "_item", "", "_variant"];
 
-            private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> QGVAR(baseClass));
+            private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> "baseWeapon");
 
             ACE_player removePrimaryWeaponItem _item;
             ACE_player addPrimaryWeaponItem (_baseClass + _variant);
