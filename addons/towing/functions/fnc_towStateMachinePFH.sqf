@@ -18,11 +18,26 @@
 params ["_args", "_handle"];
 _args params ["_state", "_unit", "_parent", "_rope", "_length", "_ropeClass"];
 
+private _wasSwimming = GVAR(isSwimming);
+GVAR(isSwimming) = _unit call EFUNC(common,isSwimming);
+
+// skip this frame to wait for weapon in hands
+if (_wasSwimming && {!GVAR(isSwimming)}) exitWith {GVAR(putWeaponAwayNextFrame) = true;};
+// move weapon to back in next frame
+if (GVAR(putWeaponAwayNextFrame)) then {
+    if (currentWeapon _unit isNotEqualTo "") then {[_unit] call EFUNC(weaponselect,putWeaponAway)};
+    GVAR(putWeaponAwayNextFrame) = false;
+};
+
 private _exitCondition = !(
     (alive GVAR(attachHelper)) &&
     { alive _parent } &&
     { alive _unit } &&
-    { "" isEqualTo currentWeapon _unit || { _unit call EFUNC(common,isSwimming) }} &&
+    {
+        currentWeapon _unit isEqualTo ""
+        || {_unit call EFUNC(common,isSwimming)} // swimming in Wetsuit forces weapon in hands
+        || {getPosASLW _unit select 2 < -1.5} // walking-to-swimming animation in Wetsuit lasts for 3 seconds
+    } &&
     { [_unit, objNull, [INTERACTION_EXCEPTIONS]] call EFUNC(common,canInteractWith) } &&
     { "unconscious" isNotEqualTo toLower animationState _unit } &&
     { !(_unit getVariable ["ACE_isUnconscious", false]) } &&
@@ -151,4 +166,3 @@ switch (_state) do {
         call EFUNC(interaction,hideMouseHint);
     };
 };
-
