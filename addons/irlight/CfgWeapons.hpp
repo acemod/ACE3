@@ -290,6 +290,7 @@ class CfgWeapons {
         MRT_SwitchItemNextClass = "ACE_SPIR_Medium";
         MRT_SwitchItemPrevClass = "ACE_SPIR_Narrow";
         MRT_SwitchItemHintText = CSTRING(Mode_Wide);
+        baseWeapon = "ACE_SPIR";
 
         class ItemInfo: InventoryFlashlightItem_Base_F {
             class Flashlight {
@@ -344,6 +345,7 @@ class CfgWeapons {
         scope = 1;
         MRT_SwitchItemNextClass = "ACE_SPIR_LR_Medium";
         MRT_SwitchItemPrevClass = "ACE_SPIR_LR_Narrow";
+        baseWeapon = "ACE_SPIR_LR";
 
         class ItemInfo: InventoryFlashlightItem_Base_F {
             class Flashlight {
