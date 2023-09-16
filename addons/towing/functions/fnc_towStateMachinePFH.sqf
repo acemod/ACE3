@@ -29,14 +29,26 @@ if (GVAR(putWeaponAwayNextFrame)) then {
     GVAR(putWeaponAwayNextFrame) = false;
 };
 
+// block fire when swimming in wetsuit with weapon
+if (GVAR(isSwimming) && {currentWeapon _unit isNotEqualTo ""}) then {
+    if (GVAR(blockFireEHID) == -1) then {
+        GVAR(blockFireEHID) = [_unit, "DefaultAction", {true}, {}] call EFUNC(common,addActionEventHandler);
+    };
+} else {
+    if (GVAR(blockFireEHID) != -1) then {
+        [_unit, "DefaultAction", GVAR(blockFireEHID)] call EFUNC(common,removeActionEventHandler);
+        GVAR(blockFireEHID) = -1;
+    };
+};
+
 private _exitCondition = !(
     (alive GVAR(attachHelper)) &&
     { alive _parent } &&
     { alive _unit } &&
     {
         currentWeapon _unit isEqualTo ""
-        || {_unit call EFUNC(common,isSwimming)} // swimming in Wetsuit forces weapon in hands
-        || {getPosASLW _unit select 2 < -1.5} // walking-to-swimming animation in Wetsuit lasts for 3 seconds
+        || {_unit call EFUNC(common,isSwimming)} // swimming in wetsuit forces weapon in hands
+        || {getPosASLW _unit select 2 < -1.5} // walking-to-swimming animation in wetsuit lasts for 3 seconds
     } &&
     { [_unit, objNull, [INTERACTION_EXCEPTIONS]] call EFUNC(common,canInteractWith) } &&
     { "unconscious" isNotEqualTo toLower animationState _unit } &&
@@ -164,5 +176,9 @@ switch (_state) do {
         [_handle] call CBA_fnc_removePerFrameHandler;
         _unit setVariable [QGVAR(hint), []];
         call EFUNC(interaction,hideMouseHint);
+        if (GVAR(blockFireEHID) != -1) then {
+            [_unit, "DefaultAction", GVAR(blockFireEHID)] call EFUNC(common,removeActionEventHandler);
+            GVAR(blockFireEHID) = -1;
+        };
     };
 };
