@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm, veteran29
  * Handles burning reactions of an unit, like screaming or throwing the weapons away due to pain.

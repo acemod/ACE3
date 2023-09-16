@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Checks a unit's equipment to calculate the total armor on a hitpoint.

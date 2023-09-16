@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Caches all item classnames used in ACE_Medical_Treatment_Actions

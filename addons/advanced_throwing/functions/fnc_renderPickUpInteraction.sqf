@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, Jonpas
  * When interact_menu starts rendering (from "interact_keyDown" event).

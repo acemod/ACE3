@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Condition for whether or not this object is a simulation type which can be a tow parent (TankX or CarX)

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix
  * Receives and draws map gestures from nearby players.

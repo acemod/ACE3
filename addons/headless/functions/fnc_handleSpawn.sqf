@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Handles AI spawn and requests a rebalance if applicable.

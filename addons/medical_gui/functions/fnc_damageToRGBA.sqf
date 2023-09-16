@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ShackTac, kymckay
  * Converts a damage value into a representative RGBA colour.

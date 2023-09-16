@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Unit loads the target object into a vehicle. (logic same as canLoadCaptive)

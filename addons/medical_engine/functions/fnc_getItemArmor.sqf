@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Returns the armor value the given item provides to a particular hitpoint, either from a cache or by reading the item config.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Whether a unit can perform the defuse action

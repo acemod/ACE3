@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Uses one of the treatment items. Respects the priority defined by the allowSharedEquipment setting.

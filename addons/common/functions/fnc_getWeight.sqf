@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Returns the weight (from the loadAbs command) in lbs/kg (based on user option)

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.

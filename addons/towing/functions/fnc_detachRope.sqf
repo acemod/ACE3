@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Detaches rope of given hook and gives rope item back.
