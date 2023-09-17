@@ -41,10 +41,10 @@ Realism focused players which are not bothered by some visual bugs can use the l
 
 ## 2. Usage
 
-## 2.1 Momentary Switch
+### 2.1 Momentary Switch
 
 ACE IR Lights adds a keybind in the equipment category to temporarily turn on a flashlight or laser while holding down the key. There is no default keybind set.
 
-## 2.2 Function Mode Switching
+### 2.2 Function Mode Switching
 
 The DBAL-A3 function mode can be switched using the [CBA Accessory Functions](https://github.com/CBATeam/CBA_A3/wiki/Accessory-Functions) (default: <kbd>Ctrl</kbd> + <kbd>L</kbd>) or the item context menu, which can be accessed by double clicking the attachment in the inventory menu.
