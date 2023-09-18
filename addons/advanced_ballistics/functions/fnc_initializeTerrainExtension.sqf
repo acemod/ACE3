@@ -25,7 +25,7 @@ private _mapSize = worldSize;
     "ace" callExtension ["ballistics:map:init", [worldName, _mapSize]]
 ) params ["_data", "_code"];
 if (_code != 0) exitWith {
-    ERROR_1("Error initializing map")
+    ERROR("Error initializing map")
 };
 
 if (_data == "true") exitWith {
