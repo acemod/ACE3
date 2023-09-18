@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Checks if there is a taggable surface within 2.5m in front of the player.
@@ -41,6 +41,12 @@
     if ((!isNull _object) && {
         // If the class is alright, do not exit
         if (_object isKindOf "Static") exitWith {false};
+
+        // Taggable vehicle, do not exit
+        if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true]) 
+        && {getText (configOf _object >> "selectionClan") in selectionNames _object}) exitWith {
+            false
+        };
 
         // If the class is not categorized correctly search the cache
         private _modelName = (getModelInfo _object) select 0;

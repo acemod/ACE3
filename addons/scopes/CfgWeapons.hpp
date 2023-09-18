@@ -54,6 +54,10 @@ class CfgWeapons {
         ACE_ScopeHeightAboveRail = 3.88405;
     };
 
+    class optic_ico_01_base_f: ItemCore {
+        ACE_ScopeHeightAboveRail = 5.41148;
+    };
+
     class optic_Nightstalker: ItemCore {
         ACE_ScopeHeightAboveRail = 5.54325;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
@@ -87,6 +91,21 @@ class CfgWeapons {
     };
 
     class optic_TWS: ItemCore {
+        ACE_ScopeHeightAboveRail = 5.52874;
+        ACE_ScopeAdjust_Vertical[] = {-4, 30};
+        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class TWS {
+                    discreteDistance[] = {300};
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class optic_tws_mg: ItemCore {
         ACE_ScopeHeightAboveRail = 5.52874;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
         ACE_ScopeAdjust_Horizontal[] = {-6, 6};

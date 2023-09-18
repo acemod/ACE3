@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Adjusts the direction of a shell. Called from the unified fired EH only if the gunner is a player.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dedmen
  * Return how many items of type _itemType the player has in his containers (Uniform, Vest, Backpack)

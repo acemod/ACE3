@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Handles camera initialisation and destruction
  *
  * Arguments:

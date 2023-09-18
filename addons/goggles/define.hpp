@@ -18,8 +18,8 @@ class RscPicture {
     fixedWidth = 0;
     shadow = 0;
     text = "";
-    x = safezoneX;
-    y = safezoneY;
-    w = safezoneW;
-    h = safezoneH;
+    x = "safezoneX";
+    y = "safezoneY";
+    w = "safezoneW";
+    h = "safezoneH";
 };

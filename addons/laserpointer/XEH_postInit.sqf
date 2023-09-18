@@ -15,12 +15,14 @@ GVAR(greenLaserUnits) = [];
 ["CBA_settingsInitialized", {
     // If not enabled, dont't add draw eventhandler or PFEH (for performance)
     if (!GVAR(enabled)) exitWith {
+        ["ACE_acc_pointer_red", { false }] call CBA_fnc_addAttachmentCondition;
+        ["ACE_acc_pointer_green", { false }] call CBA_fnc_addAttachmentCondition;
         ["CBA_attachmentSwitched", {
             params ["_unit", "_prevItem", "_newItem", "_currWeaponType"];
             TRACE_4("CBA_attachmentSwitched eh",_unit,_prevItem,_newItem,_currWeaponType);
             if ((getNumber (configFile >> "CfgWeapons" >> _newItem >> "ACE_laserpointer")) > 0) then {
                 TRACE_1("removing ACE_laserpointer",getNumber (configFile >> "CfgWeapons" >> _newItem >> "ACE_laserpointer"));
-                [1, "prev"] call CBA_accessory_fnc_switchAttachment;
+                [1, "next"] call CBA_accessory_fnc_switchAttachment;
             };
         }] call CBA_fnc_addEventHandler;
     };
@@ -60,14 +62,19 @@ GVAR(greenLaserUnits) = [];
         };
         TRACE_3("",_weapon,_laser,_laserID);
 
-        if (_laserID isEqualTo 1) exitWith {
-            GVAR(redLaserUnits) pushBackUnique _unit;
-            GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
-        };
-
-        if (_laserID isEqualTo 2) exitWith {
-            GVAR(greenLaserUnits) pushBackUnique _unit;
-            GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+        switch (_laserID) do {
+            case 0: {
+                GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+                GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
+            };
+            case 1: {
+                GVAR(redLaserUnits) pushBackUnique _unit;
+                GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
+            };
+            case 2: {
+                GVAR(greenLaserUnits) pushBackUnique _unit;
+                GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+            };
         };
     };
 

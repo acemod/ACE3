@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix
  * Initializes Settings for the module and transcodes settings to a useable format.

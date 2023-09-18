@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Initializes the advanced ballistics extension with terrain data
@@ -19,7 +19,7 @@ if (!hasInterface) exitWith {};
 if (!GVAR(enabled)) exitWith {};
 
 private _initStartTime = diag_tickTime;
-private _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
+private _mapSize = worldSize;
 
 (
     "ace" callExtension ["ballistics:map:init", [worldName, _mapSize]]

@@ -11,6 +11,7 @@ PREP(handlePlayerChanged);
 PREP(handlePlayerInventoryChanged);
 PREP(handleScrollWheel);
 PREP(handleUnconscious);
+PREP(hasEntrenchingTool);
 PREP(placeCancel);
 PREP(placeConfirm);
 PREP(placeTrench);

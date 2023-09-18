@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Checks if the given treatment can be performed.
@@ -59,4 +59,6 @@ isClass _config
         };
         default {false};
     };
+} && {
+    ((getNumber (_config >> "allowedUnderwater")) == 1) || {!([_medic] call ace_common_fnc_isSwimming)}
 }

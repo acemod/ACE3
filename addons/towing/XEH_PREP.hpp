@@ -1,3 +1,4 @@
+PREP(addRopeToVehicle);
 PREP(attachRopePFH);
 PREP(canStartTow);
 PREP(detach);

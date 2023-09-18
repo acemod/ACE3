@@ -14,7 +14,7 @@
             <Italian>Tavola Balistica</Italian>
             <Japanese>射表</Japanese>
             <Korean>사거리표</Korean>
-            <Chinesesimp>弹道射表</Chinesesimp>
+            <Chinesesimp>射表</Chinesesimp>
             <Chinese>彈道射表</Chinese>
             <Turkish>Menzil Kartı</Turkish>
         </Key>
@@ -48,7 +48,7 @@
             <Italian>Apri Tavola Balistica</Italian>
             <Japanese>射表を開く</Japanese>
             <Korean>사거리표 열기</Korean>
-            <Chinesesimp>开启弹道射表</Chinesesimp>
+            <Chinesesimp>开启射表</Chinesesimp>
             <Chinese>開啟彈道射表</Chinese>
             <Turkish>Menzil Kartını Aç</Turkish>
         </Key>
@@ -65,7 +65,7 @@
             <Italian>Apri Copia Tavola Balistica</Italian>
             <Japanese>複製された射表を開く</Japanese>
             <Korean>복제 사거리표 열기</Korean>
-            <Chinesesimp>开启弹道射表副本</Chinesesimp>
+            <Chinesesimp>开启射表副本</Chinesesimp>
             <Chinese>開啟彈道射表副本</Chinese>
             <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
         </Key>
@@ -82,7 +82,7 @@
             <Italian>Apri Tavola Balistica</Italian>
             <Japanese>射表を開く</Japanese>
             <Korean>사거리표 열기</Korean>
-            <Chinesesimp>开启</Chinesesimp>
+            <Chinesesimp>开启射表</Chinesesimp>
             <Chinese>開啟彈道射表</Chinese>
             <Turkish>Menzil Kartını Aç</Turkish>
         </Key>
@@ -99,7 +99,7 @@
             <Italian>Apri Copia Tavola Balistica</Italian>
             <Japanese>複製された射表を開く</Japanese>
             <Korean>복제 사거리표 열기</Korean>
-            <Chinesesimp>开启弹道射表副本</Chinesesimp>
+            <Chinesesimp>开启射表副本</Chinesesimp>
             <Chinese>開啟彈道射表副本</Chinese>
             <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
         </Key>
@@ -116,7 +116,7 @@
             <Italian>Copia Tavola Balistica</Italian>
             <Japanese>射表を複製する</Japanese>
             <Korean>사거리표 복제</Korean>
-            <Chinesesimp>复制弹道射表</Chinesesimp>
+            <Chinesesimp>复制射表</Chinesesimp>
             <Chinese>複製彈道射表</Chinese>
             <Turkish>Menzil Kartını Kopyala</Turkish>
         </Key>

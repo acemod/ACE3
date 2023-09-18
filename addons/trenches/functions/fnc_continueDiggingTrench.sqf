@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support, esteldunedain
  * Continue process of digging trench.
@@ -67,7 +67,7 @@ private _fnc_onFailure = {
 };
 private _fnc_condition = {
     (_this select 0) params ["_unit"];
-    "ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))
+    _unit call FUNC(hasEntrenchingTool)
 };
 [(_digTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition] call EFUNC(common,progressBar);
 

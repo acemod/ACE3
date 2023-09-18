@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: voiper
  * Draw nearby lighting and sexy flashlight beams on main map.

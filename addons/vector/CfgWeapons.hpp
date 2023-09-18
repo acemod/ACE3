@@ -7,8 +7,8 @@ class CfgWeapons {
         model = QPATHTOF(ace_vector.p3d);
         picture = QPATHTOF(UI\ace_vector_x_ca.paa);
         visionMode[] = {"Normal","NVG"};
-        opticsZoomMax = 0.25/7;
-        opticsZoomMin = 0.25/7;
+        opticsZoomMax = "0.25/7";
+        opticsZoomMin = "0.25/7";
         modelOptics = "\A3\Weapons_F\empty.p3d";
 
         class CBA_ScriptedOptic {

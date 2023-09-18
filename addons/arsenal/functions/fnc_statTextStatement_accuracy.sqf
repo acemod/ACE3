@@ -1,34 +1,30 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Accuracy text statement.
  *
  * Arguments:
- * 0: stat (STRING)
- * 1: item config path (CONFIG)
- * 2: Args for configExtreme
- *  2.1: Stat limits (ARRAY of BOOL)
- *  2.2: Evaluate as a logarithmic number (BOOL)
+ * 0: Not used
+ * 1: Item config path <CONFIG>
  *
  * Return Value:
- * Number
+ * Stat Text <STRING>
  *
  * Public: No
 */
 
-params ["_stat", "_config", "_args"];
-_args params ["_statMinMax", "_configExtremeBool"];
+params ["", "_config"];
+TRACE_1("statTextStatement_accuracy",_config);
 
-private _fireModes = getArray (_config >> "modes");
 private _dispersion = [];
 
 {
     if (getNumber (_config >> _x >> "showToPlayer") != 0) then {
         _dispersion pushBackUnique (getNumber (_config >> _x >> "dispersion"));
     };
-} foreach _fireModes;
+} forEach (getArray (_config >> "modes"));
 
 _dispersion sort true;
 _dispersion = _dispersion param [0, 0];
 
-format ["%1 MIL (%2 MOA)", (_dispersion * 1000) toFixed 2, (_dispersion / pi * 10800) ToFixed 1];
+format ["%1 MIL (%2 MOA)", (_dispersion * 1000) toFixed 2, (_dispersion / pi * 10800) toFixed 1];

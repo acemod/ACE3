@@ -5,6 +5,7 @@ releases/*
 .vscode/*
 hemtt
 hemtt.exe
+.hemttout
 tools/temp
 *.cache
 *.pbo

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian, PabstMirror
  * Adapted from quickmount's addFreeSeatsActions

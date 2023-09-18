@@ -26,7 +26,7 @@ highlighter: rouge
 safe: true
 lsi: false
 
-exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README.md]
+exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README*.md, Dockerfile, docker-compose.yml, entrypoint.sh, package-lock.json, acebot.json]
 
 plugins:
   - jekyll-redirect-from

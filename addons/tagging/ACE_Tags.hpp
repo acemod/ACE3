@@ -4,7 +4,7 @@
         requiredItem = QUOTE(GLUE(ACE_Spraypaint,col)); \
         textures[] = {QPATHTOF(UI\tags\col\name.paa)}; \
         icon = QPATHTOF(UI\tags\col\name.paa); \
-    } \
+    }
 
 class ACE_Tags {
     class ACE_XBlack {
@@ -53,7 +53,7 @@ class ACE_Tags {
     TAG(square,Blue);
     TAG(triangle,Blue);
     TAG(triangle_inverted,Blue);
-    
+
     TAG(arrow_up,Green);
     TAG(arrow_down,Green);
     TAG(arrow_left,Green);

@@ -32,7 +32,7 @@ class GVAR(menu) {
             y = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "13 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            style = ST_LEFT + ST_SHADOW;
+            style = QUOTE(ST_LEFT + ST_SHADOW);
             font = "RobotoCondensed";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {0.95, 0.95, 0.95, 0.75};

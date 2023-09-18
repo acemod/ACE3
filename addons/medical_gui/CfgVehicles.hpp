@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Medical {
                 displayName = CSTRING(Medical);
                 condition = QGVAR(enableSelfActions);
-                exceptions[] = {"isNotInside", "isNotSitting"};
+                exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming"};
                 statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
                 runOnHover = 1;
                 icon = QPATHTOF(ui\cross.paa);
@@ -38,7 +38,7 @@ class CfgVehicles {
                 };
                 class ACE_Medical_Radial {
                     displayName = CSTRING(Medical);
-                    condition = QUOTE((GVAR(enableActions) == 1 || {GVAR(enableActions) != 2 && {vehicle _target != _target && {vehicle _target == vehicle _player}}}));
+                    condition = QUOTE((GVAR(enableActions) == 1 || {GVAR(enableActions) != 2 && {!isNull objectParent _target && {objectParent _target isEqualTo objectParent _player}}}));
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
                     runOnHover = 1;
@@ -49,7 +49,7 @@ class CfgVehicles {
                 };
                 class ACE_LoadPatient {
                     displayName = CSTRING(LoadPatient);
-                    condition = QUOTE(_target getVariable [ARR_2('ACE_isUnconscious',false)] && {alive _target} && {vehicle _target == _target});
+                    condition = QUOTE(_target getVariable [ARR_2('ACE_isUnconscious',false)] && {alive _target} && {isNull objectParent _target} && {(_target call EFUNC(common,nearestVehiclesFreeSeat)) isNotEqualTo []});
                     exceptions[] = {"isNotDragging", "isNotCarrying"};
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,loadUnit));
                     icon = QPATHTOF(ui\cross.paa);
@@ -57,7 +57,7 @@ class CfgVehicles {
                 };
                 class ACE_UnloadPatient {
                     displayName = CSTRING(UnloadPatient);
-                    condition = QUOTE(_target getVariable [ARR_2('ACE_isUnconscious',false)] && {vehicle _target != _target} && {vehicle _player == _player});
+                    condition = QUOTE((_target getVariable [ARR_2('ACE_isUnconscious',false)] || {!alive _target}) && {!isNull objectParent _target} && {isNull objectParent _player});
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,unloadUnit));
                     icon = QPATHTOF(ui\cross.paa);

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Handle mouse buttons.
@@ -40,18 +40,11 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
             if ((count GVAR(freeDrawingData)) != 3) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData));};
 
             GVAR(freeDrawingData) params ["", "_startStraightPos", "_endStraightPos"];
-           _startStraightPos set [2, 0];
-            _endStraightPos set [2, 0];
 
-            // Convert marker to rectangle and change it's pos/size/dir
-            _markerName setMarkerShape "RECTANGLE";
-
-            private _difPos = _endStraightPos vectorDiff _startStraightPos;
-            private _mag = vectorMagnitude _difPos;
-            _markerName setMarkerPos (_startStraightPos vectorAdd (_difPos vectorMultiply 0.5));
-            _markerName setMarkerSize [10, _mag / 2];
-            _markerName setMarkerDir (_difPos call CBA_fnc_vectDir);
-
+            _markerName setMarkerPolyline [
+                _startStraightPos#0, _startStraightPos#1,
+                _endStraightPos#0, _endStraightPos#1
+            ];
         }, []] call CBA_fnc_execNextFrame;
     } else {
         if (_ctrlKey && {_dir == 1}) then {
