@@ -12,6 +12,7 @@ class Launcher_Base_F: Launcher {
 // --- Gun Turrets -------------------------------------------------------------
 
 class GVAR(m2_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = ECSTRING(csw,m2_gun);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -39,6 +40,7 @@ class GVAR(m2_carry): Launcher_Base_F {
 };
 
 class GVAR(m1919a4_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m1919a4);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -66,6 +68,7 @@ class GVAR(m1919a4_carry): Launcher_Base_F {
 };
 
 class GVAR(m1919a6_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m1919a6);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -89,6 +92,7 @@ class GVAR(m1919a6_carry): Launcher_Base_F {
 };
 
 class GVAR(m60_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m60);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -116,6 +120,7 @@ class GVAR(m60_carry): Launcher_Base_F {
 };
 
 class GVAR(tow_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = ECSTRING(csw,tow_tube);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -142,6 +147,7 @@ class GVAR(tow_carry): Launcher_Base_F {
 };
 
 class GVAR(dshkm_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = ECSTRING(csw,dshk_gun);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -169,6 +175,7 @@ class GVAR(dshkm_carry): Launcher_Base_F {
 };
 
 class GVAR(dshkm_shield_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_dshkm_shield);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -195,6 +202,7 @@ class GVAR(dshkm_shield_carry): Launcher_Base_F {
 };
 
 class GVAR(dshkm_AA_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_dshkm_aa);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -221,6 +229,7 @@ class GVAR(dshkm_AA_carry): Launcher_Base_F {
 };
 
 class GVAR(rpd_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_rpd);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -247,6 +256,7 @@ class GVAR(rpd_carry): Launcher_Base_F {
 };
 
 class GVAR(pk_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_pk);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -274,6 +284,7 @@ class GVAR(pk_carry): Launcher_Base_F {
 };
 
 class GVAR(mortar_m29_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m29);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -300,6 +311,7 @@ class GVAR(mortar_m29_carry): Launcher_Base_F {
 };
 
 class GVAR(mg42_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_mg42);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -327,6 +339,7 @@ class GVAR(mg42_carry): Launcher_Base_F {
 };
 
 class GVAR(sgm_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_sgm);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -353,6 +366,7 @@ class GVAR(sgm_carry): Launcher_Base_F {
     };
 };
 class GVAR(sgm_shield_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_sgm_shield);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -379,6 +393,7 @@ class GVAR(sgm_shield_carry): Launcher_Base_F {
 };
 
 class GVAR(mk18_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_mk18);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -407,6 +422,7 @@ class GVAR(mk18_carry): Launcher_Base_F {
 // --- Mortars -----------------------------------------------------------------
 
 class GVAR(mortar_m2_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_m2);
     author = ECSTRING(common,ACETeam);
     scope = 2;
@@ -433,6 +449,7 @@ class GVAR(mortar_m2_carry): Launcher_Base_F {
 };
 
 class GVAR(mortar_type53_carry): Launcher_Base_F {
+    dlc = "ace";
     displayName = CSTRING(csw_type53);
     author = ECSTRING(common,ACETeam);
     scope = 2;

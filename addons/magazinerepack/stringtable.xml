@@ -175,6 +175,7 @@
             <Polish>Przepakuj załadowane magazynki</Polish>
             <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
             <Korean>장전된 탄창에 총알 채우는 중</Korean>
+            <Spanish>Reorganizar cargadores llenos</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
             <English>Repacking magazines, weapon unloaded</English>
@@ -185,6 +186,7 @@
             <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
             <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
             <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
+            <Spanish>Reorganizando cargadores, arma descargada</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackAnimation">
             <English>Repack Animation</English>
@@ -194,6 +196,7 @@
             <Japanese>詰め替え時のアニメーション</Japanese>
             <Chinesesimp>整理动画</Chinesesimp>
             <Russian>Анимация перепаковки</Russian>
+            <Spanish>Animación de reorganizar</Spanish>
         </Key>
     </Package>
 </Project>

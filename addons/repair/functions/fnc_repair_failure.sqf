@@ -29,9 +29,13 @@ TRACE_5("params",_caller,_target,_selectionName,_className,_usersOfItems);
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
+
+_caller removeEventHandler ["AnimDone", _caller getVariable [QGVAR(repairLoopAnimEh), -1]];
+_caller setVariable [QGVAR(repairLoopAnimEh), nil];
 if (vehicle _caller == _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
     [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
+_caller setVariable [QGVAR(repairCurrentAnimCaller), nil];
 _caller setVariable [QGVAR(repairPrevAnimCaller), nil];
 
 private _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);

@@ -28,11 +28,13 @@ _args params ["_unit", "_target", "_startTime"];
 
 if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
     TRACE_2("carry false",_unit,_target);
+    _unit setVariable [QGVAR(hint), nil];
+    [] call EFUNC(interaction,hideMouseHint);
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
 // drop if the crate is destroyed OR (target moved away from carrier (weapon disasembled))
-if (!alive _target || {_unit distance _target > 10}) then {
+if (!alive _target || {_unit distance _target > 10}) exitWith {
     TRACE_2("dead/distance",_unit,_target);
     if ((_unit distance _target > 10) && {(CBA_missionTime - _startTime) < 1}) exitWith {
         //attachTo seems to have some kind of network delay and target can return an odd position during the first few frames,
@@ -40,5 +42,36 @@ if (!alive _target || {_unit distance _target > 10}) then {
         TRACE_3("ignoring bad distance at start",_unit distance _target,_startTime,CBA_missionTime);
     };
     [_unit, _target] call FUNC(dropObject_carry);
+    _unit setVariable [QGVAR(hint), nil];
+    [] call EFUNC(interaction,hideMouseHint);
     [_idPFH] call CBA_fnc_removePerFrameHandler;
+};
+
+// Mouse hint
+private _hintLMB = localize LSTRING(Drop);
+getCursorObjectParams params ["_cursorObject", "", "_distance"];
+if (
+    !isNull _cursorObject
+    && {_distance < MAX_LOAD_DISTANCE}
+    && {([_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith))}
+    && {
+        if (_target isKindOf "CAManBase") then {
+            [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat) isNotEqualTo []
+        } else {
+            [_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)
+        }
+    }
+) then {
+    _hintLMB = localize ELSTRING(Cargo,loadObject);
+};
+
+private _hintMMB = localize LSTRING(RaiseLowerRotate);
+if (_target isKindOf "CAManBase") then {
+    _hintMMB = "";
+};
+
+private _hint = [_hintLMB, "", _hintMMB];
+if (_hint isNotEqualTo (_unit getVariable [QGVAR(hint), []])) then {
+    _unit setVariable [QGVAR(hint), _hint];
+    _hint call EFUNC(interaction,showMouseHint);
 };

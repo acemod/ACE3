@@ -403,6 +403,19 @@ class CfgVehicles {
         };
 
         editorPreview = QPATHTOF(data\preview_wheel.jpg);
+
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class GVAR(Patch) {
+                    displayName = CSTRING(PatchWheel);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canPatchRemovedWheel));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(patchRemovedWheel));
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotOnLadder", "isNotSwimming", "isNotSitting"};
+                    icon = QPATHTOF(ui\patch_ca.paa);
+                };
+            };
+        };
     };
 
     // disable vanilla repair

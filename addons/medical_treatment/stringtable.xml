@@ -74,6 +74,7 @@
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren</German>
             <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停</Chinesesimp>
             <Korean>활성화 및 사망/심정지 진찰가능</Korean>
+            <Spanish>Habilitado y poder diagnosticar Muerte/Parada cardíaca</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -186,6 +187,7 @@
             <Polish>Leczenie ran</Polish>
             <Chinesesimp>清理创伤</Chinesesimp>
             <Korean>상처 제거</Korean>
+            <Spanish>Despejar trauma</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_Description">
             <English>Controls when hitpoint damage from wounds is healed.</English>
@@ -196,6 +198,7 @@
             <Polish>Kontroluje kiedy punkty obrażeń od odniesionych ran są w pełni wyleczone.</Polish>
             <Chinesesimp>控制伤口治疗后确定受伤部位的受伤情况。</Chinesesimp>
             <Korean>상처가 언제 제거되는 지를 결정합니다.</Korean>
+            <Spanish>Controla cuando los puntos de daño de las heridas son curados.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterBandage">
             <English>After Bandage</English>
@@ -206,6 +209,7 @@
             <Polish>Po zabandażowaniu</Polish>
             <Chinesesimp>包扎后</Chinesesimp>
             <Korean>붕대 묶은 후</Korean>
+            <Spanish>Después de vendado</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
             <English>After Stitch</English>
@@ -216,6 +220,7 @@
             <Polish>Po zszyciu</Polish>
             <Chinesesimp>缝合后</Chinesesimp>
             <Korean>상처 봉합 후</Korean>
+            <Spanish>Después de sutura</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
@@ -713,6 +718,7 @@
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>What should be consumed after use.</English>
             <German>Legt fest, ob etwas nach der Anwendung verwendet werden soll.</German>
+            <Spanish>Qué debe ser consumido despues de su uso.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
@@ -1095,6 +1101,7 @@
             <German>HLW Minimale Erfolgschance</German>
             <Chinesesimp>心肺复苏的最低成功率</Chinesesimp>
             <Korean>최소 심폐소생술 성공 가능성</Korean>
+            <Spanish>RCP posibilidad mínima de resultado satisfactorio</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
             <English>CPR Success Chance Maximum</English>
@@ -1105,6 +1112,7 @@
             <German>HLW Maximale Erfolgschance</German>
             <Chinesesimp>心肺复苏的最高成功率</Chinesesimp>
             <Korean>최대 심폐소생술 성공 가능성</Korean>
+            <Spanish>RCP posibilidad máxima de resultado satisfactorio</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
             <English>Minimum probability that performing CPR will restore heart rhythm.\nThis minimum value is used when the patient has at least "Lost a fatal amount of blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
@@ -1115,6 +1123,7 @@
             <German>Minimale Wahrscheinlichkeit, dass die Durchführung einer HLW den Herzrhythmus wiederherstellt.\nDieser Mindestwert wird verwendet, wenn der Patient mindestens "eine tödliche Menge Blut verloren" hat.\nEine interpolierte Wahrscheinlichkeit wird verwendet, wenn das Blutvolumen des Patienten zwischen dem minimalen und dem maximalen Schwellenwert liegt.</German>
             <Chinesesimp>实施心肺复苏恢复心律的最小可能性。\n当伤员至少有"致命失血量"时，就取该最小值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
             <Korean>심폐소생술 시 제일 낮은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "심각한 양의 혈액을 잃음"일 때 사용됩니다.</Korean>
+            <Spanish>Probabilidad mínima de que realizar RCP restaure el ritmo cardíaco.\n Este valor mínimo es utilizado cuando el paciente tiene al menos "Pérdida fatal de sangre".\n Una probabilidad interpolada es usada cuando el volumen de sangre del paciente está entre el umbral mínimo y máximo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
             <English>Maximum probability that performing CPR will restore heart rhythm.\nThis maximum value is used when the patient has at most "Lost some blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
@@ -1125,6 +1134,7 @@
             <German>Maximale Wahrscheinlichkeit, dass die Durchführung einer HLW den Herzrhythmus wiederherstellt.\nDieser Maximalwert wird verwendet, wenn der Patient höchstens "Blut verloren" hat.\nEine interpolierte Wahrscheinlichkeit wird verwendet, wenn das Blutvolumen des Patienten zwischen dem minimalen und dem maximalen Schwellenwert liegt.</German>
             <Chinesesimp>实施心肺复苏恢复心律的最大可能性。\n当伤员最多“失血一些”时，就取该最大值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
             <Korean>심폐소생술 시 제일 높은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "혈액을 조금 잃음"일 때 사용됩니다.</Korean>
+            <Spanish>Probabilidad máxima de que realizar RCP restaure el ritmo cardíaco.\n Este valor máximo es utilizado cuando el paciente tiene como mucho "Pérdida de un poco de sangre".\n Una probabilidad interpolada es usada cuando el volumen de sangre del paciente está entre el umbral mínimo y máximo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
@@ -2314,14 +2324,17 @@
         <Key ID="STR_ACE_Medical_Treatment_Suture_Display">
             <English>Suture</English>
             <German>Naht</German>
+            <Spanish>Sutura</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Short">
             <English>Surgical Suture for stitching injuries.</English>
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
+            <Spanish>Sutura quirúrjica para heridas de puntos.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Use">
             <English>Surgical Suture for stitching injuries.</English>
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
+            <Spanish>Sutura quirúrjica para heridas de puntos.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bodybag_Display">
             <English>Bodybag</English>
@@ -3962,6 +3975,7 @@
             <Chinesesimp>%1没有反应，微软的喘着气和抽搐</Chinesesimp>
             <Korean>%1 은 반응이 없고, 얕은 헐떡임과 경련증세를 보입니다</Korean>
             <Russian>%1 не реагирует на раздражители, поверхностно дышит, в конвульсиях</Russian>
+            <Spanish>%1 no responde, dando pequeñas bocanadas y convulsionando</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -3972,6 +3986,7 @@
             <Chinesesimp>%1没有反应，一动不动，身体冰凉</Chinesesimp>
             <Korean>%1 은 반응이 없고, 움직임이 없으며 차갑습니다</Korean>
             <Russian>%1 не реагирует на раздражители, не шевелится и холодный</Russian>
+            <Spanish>%1 no responde, sin movimiento y frío</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>

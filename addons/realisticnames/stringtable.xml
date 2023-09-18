@@ -3991,6 +3991,7 @@
             <Chinesesimp>ELCAN SpecterOS（繁茂）</Chinesesimp>
             <Korean>엘칸 스펙터OS (초목)</Korean>
             <Russian>ELCAN SpecterOS (обильная растительность)</Russian>
+            <Spanish>ELCAN SpecterOS (Exuberante)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
@@ -4001,6 +4002,7 @@
             <Chinesesimp>ELCAN SpecterOS（干旱）</Chinesesimp>
             <Korean>엘칸 스펙터OS (건조)</Korean>
             <Russian>ELCAN SpecterOS (сухая местность)</Russian>
+            <Spanish>ELCAN SpecterOS (Árido)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
@@ -4011,6 +4013,7 @@
             <Chinesesimp>ELCAN SpecterOS 7.62（黑色）</Chinesesimp>
             <Korean>엘칸 스펙터OS 7.62 (검정)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (чёрный)</Russian>
+            <Spanish>ELCAN SpecterOS 7.62 (Negro)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
@@ -4021,6 +4024,7 @@
             <Chinesesimp>ELCAN SpecterOS 7.62（繁茂）</Chinesesimp>
             <Korean>엘칸 스펙터OS 7.62 (초목)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (обильная растительность)</Russian>
+            <Spanish>ELCAN SpecterOS 7.62 (Exuberante)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
@@ -4031,6 +4035,7 @@
             <Chinesesimp>ELCAN SpecterOS 7.62（干旱）</Chinesesimp>
             <Korean>엘칸 스펙터OS 7.62 (건조)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (сухая местность)</Russian>
+            <Spanish>ELCAN SpecterOS 7.62 (Árido)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4313,6 +4318,7 @@
             <Chinesesimp>Burris XTR II（陈旧）</Chinesesimp>
             <Korean>버리스 XTR II (낡음)</Korean>
             <Russian>Burris XTR II (старый)</Russian>
+            <Spanish>Burris XTR II (Viejo)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
@@ -4323,6 +4329,7 @@
             <Chinesesimp>Burris XTR II（ASP-1 Kir）</Chinesesimp>
             <Korean>버리스 XTR II (ASP-1 키르)</Korean>
             <Russian>Burris XTR II (ASP-1 Kir)</Russian>
+            <Spanish>Burris XTR II (ASP-1 Kir)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4381,6 +4388,7 @@
             <Chinesesimp>EOTech XPS3（繁茂）</Chinesesimp>
             <Korean>이오텍 XPS3 (초목)</Korean>
             <Russian>EOTech XPS3 (обильная растительность)</Russian>
+            <Spanish>EOTech XPS3 (Exuberante)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
@@ -4391,6 +4399,7 @@
             <Chinesesimp>EOTech XPS3（干旱）</Chinesesimp>
             <Korean>이오텍 XPS3 (건조)</Korean>
             <Russian>EOTech XPS3 (сухая местность)</Russian>
+            <Spanish>EOTech XPS3 (Árido)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>

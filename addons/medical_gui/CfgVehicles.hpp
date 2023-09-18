@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Medical {
                 displayName = CSTRING(Medical);
                 condition = QGVAR(enableSelfActions);
-                exceptions[] = {"isNotInside", "isNotSitting"};
+                exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming"};
                 statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
                 runOnHover = 1;
                 icon = QPATHTOF(ui\cross.paa);

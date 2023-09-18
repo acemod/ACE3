@@ -75,7 +75,7 @@ if (_smokeDelayEnabled) then {
             [_pfh] call CBA_fnc_removePerFrameHandler;
 
             if (GVAR(destroyVehicleAfterCookoff) || _detonateAfterCookoff) then {
-                _vehicle setDamage [1, _detonateAfterCookoff];
+                _vehicle setDamage [1, true];
             };
         };
 

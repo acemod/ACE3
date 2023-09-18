@@ -53,18 +53,11 @@ _unit setVariable [QGVAR(carriedObject), _target, true];
 _unit setVariable [QGVAR(ReleaseActionID), [
     _unit, "DefaultAction",
     {!isNull ((_this select 0) getVariable [QGVAR(carriedObject), objNull])},
-    {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry)}
+    {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull], true] call FUNC(dropObject_carry)}
 ] call EFUNC(common,addActionEventHandler)];
 
 // add anim changed EH
 [_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
-
-// show mouse hint
-if (_target isKindOf "CAManBase") then {
-    [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);
-} else {
-    [localize LSTRING(Drop), "", localize LSTRING(RaiseLowerRotate)] call EFUNC(interaction,showMouseHint);
-};
 
 // check everything
 [FUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;

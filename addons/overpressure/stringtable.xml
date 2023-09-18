@@ -9,6 +9,7 @@
             <Polish>Nadciśnienie</Polish>
             <Japanese>過圧</Japanese>
             <Russian>Перегрузка</Russian>
+            <Spanish>Sobrepresiòn</Spanish>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">
             <English>Overpressure Distance Coefficient</English>

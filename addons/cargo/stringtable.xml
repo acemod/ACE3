@@ -42,6 +42,7 @@
             <Polish>Nazwa zmieniona na:&lt;br/&gt;%1</Polish>
             <Chinesesimp>重命名为：&lt;br/&gt;%1</Chinesesimp>
             <Korean>%1(으)로 명칭을 바꿈</Korean>
+            <Spanish>Renombrado a:&lt;br/&gt;%1</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
@@ -52,6 +53,7 @@
             <Polish>Własna nazwa została usunięta</Polish>
             <Chinesesimp>自定义名称已被清除。</Chinesesimp>
             <Korean>임의로 지은 명칭을 지웠습니다.</Korean>
+            <Spanish>El nombre personalizado ha sido borrado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
@@ -62,6 +64,7 @@
             <Polish>Ustaw nową nazwę:</Polish>
             <Chinesesimp>设定新名称：</Chinesesimp>
             <Korean>새로운 명칭 설정:</Korean>
+            <Spanish>Establecer nuevo nombre:</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
@@ -72,6 +75,7 @@
             <Polish>Włącz możliwość zmiany nazwy</Polish>
             <Chinesesimp>启用重命名动作</Chinesesimp>
             <Korean>새로 명칭 짓기 행동 활성화</Korean>
+            <Spanish>Habilitar renombrado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
@@ -82,6 +86,7 @@
             <Polish>Włącza akcję zmiany nazwy dla obiektów z możliwością zmiany nazwy.</Polish>
             <Chinesesimp>启用可重命名物体的重命名动作。</Chinesesimp>
             <Korean>개체의 명칭을 새로 짓는 것을 허가합니다.</Korean>
+            <Spanish>Habilitar renombrado para los objetos renombrables.</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -298,6 +303,7 @@
             <Chinesesimp>自定义名称</Chinesesimp>
             <Korean>임의 명칭</Korean>
             <Russian>Собственное название</Russian>
+            <Spanish>Nombre personalizado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
@@ -308,6 +314,7 @@
             <Polish>Ustaw własną nazwę ładunku, używaną w menu ładunku.</Polish>
             <Chinesesimp>设置货物界面中使用的一个自定义货物名称。</Chinesesimp>
             <Korean>화물 인터페이스에 쓰일 화물의 명칭을 설정합니다.</Korean>
+            <Spanish>Establecer un nombre personalizado de carga en la interfaz de carga.</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
@@ -471,6 +478,7 @@
             <Polish>Ponownie otwórz menu załadunku</Polish>
             <Chinesesimp>重新打开货物菜单</Chinesesimp>
             <Korean>화물 메뉴 다시 열기</Korean>
+            <Spanish>Reabrir menú de carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
             <English>Reopen the Cargo Menu after successful unload.</English>
@@ -482,16 +490,19 @@
             <Polish>Ponownie otwórz menu załadunku po udanym wyładowaniu.</Polish>
             <Chinesesimp>成功卸货后，重新打开货物菜单。</Chinesesimp>
             <Korean>화물을 성공적으로 내리고 난 다음 화물 메뉴를 열지 결정합니다.</Korean>
+            <Spanish>Reabrir menú de carga despues de una descarga satisfactoria.</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload">
             <English>Carry After Unload</English>
             <Korean>화물 내린 후 운반</Korean>
             <Russian>Нести после выгрузки</Russian>
+            <Spanish>Llevar encima tras la descarga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
             <English>Controls whether cargo items are carried or dragged after unloading.</English>
             <Korean>화물 아이템을 내린 후 들거나 끌지 여부를 결정합니다.</Korean>
             <Russian>Нужно ли переносить или тащить предметы после их выгрузки.</Russian>
+            <Spanish>Controla si los objetos de carga son llevados encima o arrastrados despues de la descarga.</Spanish>
         </Key>
     </Package>
 </Project>
