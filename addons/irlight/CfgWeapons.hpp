@@ -1,3 +1,6 @@
+// Only a dependency when building
+#include "\z\ace\addons\laserpointer\script_macros_config.hpp"
+
 // Attenuation and Flashlight seem to not work with inheritance
 #define DBAL_A3_FLASHLIGHT \
     class Flashlight { \
@@ -95,28 +98,7 @@
         irLaserEnd = "laser dir"; \
         irDistance = 5; \
     }
-#define POINTER_VISIBLE_RED \
-    class Pointer { \
-        irLaserPos = "laser pos"; \
-        irLaserEnd = "laser dir"; \
-        irDistance = 5; \
-        isIR = 0; \
-        irDotSize = QUOTE(0.1/4); \
-        beamThickness = 0; \
-        dotColor[] = {8192, 0, 0}; \
-        beamColor[] = {0, 0, 0}; \
-    }
-#define POINTER_VISIBLE_GREEN \
-    class Pointer { \
-        irLaserPos = "laser pos"; \
-        irLaserEnd = "laser dir"; \
-        irDistance = 5; \
-        isIR = 0; \
-        irDotSize = QUOTE(0.1/4); \
-        beamThickness = 0; \
-        dotColor[] = {0, 16384, 0}; \
-        beamColor[] = {0, 0, 0}; \
-    }
+
 
 class CfgWeapons {
     class acc_pointer_IR;
