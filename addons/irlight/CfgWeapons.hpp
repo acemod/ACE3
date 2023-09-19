@@ -1,30 +1,4 @@
 // Attenuation and Flashlight seem to not work with inheritance
-#define VISIBLE_POINTER_FLASHLIGHT \
-    class Flashlight { \
-        color[] = {0, 0, 0}; \
-        ambient[] = {0, 0, 0}; \
-        size = 0; \
-        innerAngle = 0; \
-        outerAngle = 0; \
-        position = "laser pos"; \
-        direction = "laser dir"; \
-        useFlare = 0; \
-        flareSize = 0; \
-        flareMaxDistance = 0; \
-        coneFadeCoef = 0; \
-        intensity = 0; \
-        irLight = 0; \
-        volumeShape = ""; \
-        scale[] = {0, 0, 0}; \
-        class Attenuation { \
-            constant = 0; \
-            linear = 0; \
-            quadratic = 0; \
-            start = 0; \
-            hardLimitStart = 0; \
-            hardLimitEnd = 0; \
-        }; \
-    }
 #define DBAL_A3_FLASHLIGHT \
     class Flashlight { \
         color[] = {1, 1, 1}; \
