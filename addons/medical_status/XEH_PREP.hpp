@@ -1,3 +1,4 @@
+PREP(addInventoryActions);
 PREP(addMedicationAdjustment);
 PREP(adjustPainLevel);
 PREP(getBloodLoss);

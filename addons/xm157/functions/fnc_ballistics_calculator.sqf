@@ -95,7 +95,7 @@ if (_useAB && {(_bulletPos select 1) > 0}) then {
     };
     private _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
     private _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
-    private _windage = _windage + _spinDrift;
+    _windage = _windage + _spinDrift;
 };
 
 [17.453*_elevation, 17.453*_windage] // Convert to MRAD and return

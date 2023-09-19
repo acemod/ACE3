@@ -5,9 +5,15 @@
 
 if (!hasInterface) exitWith {};
 
-[missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
-    (linearConversion [0, 1, GET_PAIN_PERCEIVED(ACE_player), 1, 5, true]) + (ACE_player getVariable [QEGVAR(medical_engine,aimFracture), 0])
-}] call EFUNC(common,arithmeticSetSource);
+// Fractures affect base sway, pain makes it worse
+["baseline", {
+    ACE_player getVariable [QEGVAR(medical_engine,aimFracture), 0]
+}, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
+
+// Max pain = 5x sway
+["multiplier", {
+    1 + (GET_PAIN_PERCEIVED(ACE_player) * 4)
+}, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
 
 #ifdef DEBUG_MODE_FULL
     call compile preprocessFileLineNumbers QPATHTOF(dev\reportSettings.sqf);

@@ -477,6 +477,23 @@ GVAR(reloadMutex_lastMagazines) = [];
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 //////////////////////////////////////////////////
+// Start the sway loop
+//////////////////////////////////////////////////
+["CBA_settingsInitialized", {
+    [{
+        // frame after settingsInitialized to ensure all other addons have added their factors
+        if ((GVAR(swayFactorsBaseline) + GVAR(swayFactorsMultiplier)) isNotEqualTo []) then {
+            call FUNC(swayLoop)
+        };
+        // check for pre-3.16 sway factors being added
+        if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {
+            WARNING("ACE_setCustomAimCoef no longer supported - use ace_common_fnc_addSwayFactor");
+            WARNING_1("source: %1",(missionNamespace getVariable "ACE_setCustomAimCoef") apply {_x});
+        };
+    }] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+
+//////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
 //////////////////////////////////////////////////
 
