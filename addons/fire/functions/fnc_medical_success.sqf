@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Decreases burning intensity on successful medical action.
  *
  * Arguments:

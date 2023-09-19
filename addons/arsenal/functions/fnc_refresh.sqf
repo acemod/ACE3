@@ -4,17 +4,26 @@
  * Author: Brett Mayson, johnb43
  * Refreshes the arsenal to show external changes.
  *
+ * Arguments:
+ * 0: Update current and unique items lists <BOOL> (default: true)
+ *
  * Return Value:
  * None
  *
- * Public: No
+ * Example:
+ * call ace_arsenal_fnc_refresh
+ *
+ * Public: Yes
 */
+params [["_updateItems", true, [true]]];
 
-// Update current item list
-call FUNC(updateCurrentItemsList);
+if (_updateItems) then {
+    // Update current item list
+    call FUNC(updateCurrentItemsList);
 
-// This takes care of unique inventory items (arsenal doesn't have it whitelisted)
-call FUNC(updateUniqueItemsList);
+    // This takes care of unique inventory items (arsenal doesn't have it whitelisted)
+    call FUNC(updateUniqueItemsList);
+};
 
 // Don't refresh left panel if in loadout tab
 if (!isNull findDisplay IDD_loadouts_display) exitWith {};

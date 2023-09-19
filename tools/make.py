@@ -40,6 +40,7 @@ if sys.version_info[0] == 2:
 
 import os
 import os.path
+import pathlib
 import shutil
 import platform
 import glob
@@ -241,6 +242,19 @@ def mikero_windows_registry(path, access=winreg.KEY_READ):
 
 def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
+    # try running pboProject once if it's not in registry
+    try:
+        pboProject = mikero_windows_registry("pboProject")
+        print(f"pboProject found normally via registry")
+    except:
+        print(f"pboProject not in registry")
+        pboProject = shutil.which('pboProject')
+        if (pboProject is None):
+            print("pboProject not in sys path")
+        else:
+            print(f"pboProject startup")
+            ret = subprocess.call([pboProject, "-P"])
+
     requiredToolPaths = {"pboProject": None, "rapify": None, "MakePbo": None}
     failed = False
 
@@ -1538,6 +1552,16 @@ See the make.cfg file for additional build options.
         if len(failedBuilds) > 0:
             for failedBuild in failedBuilds:
                 print("- {} build failed!".format(failedBuild))
+                failedBuild_path = pathlib.Path(
+                    "P:/temp").joinpath(f"{failedBuild}.packing.log")
+                if (failedBuild_path.exists()):
+                    print(f"  Log {failedBuild_path} tail:")
+                    with open(failedBuild_path) as failedBuild_file:
+                        lines = failedBuild_file.readlines()
+                        for index, line in enumerate(lines[-3:]):
+                            print(f"    {len(lines) + index -2}: {line}", end='')
+                else:
+                    print(f"  Log {failedBuild_path} does not exist")
         if len(missingFiles) > 0:
             for missingFile in missingFiles:
                 print("- {} not found!".format(missingFile))

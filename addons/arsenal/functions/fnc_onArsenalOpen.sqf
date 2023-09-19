@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Not used
  * 1: Arguments <ARRAY>
- *  1.0: Arsenal display <DISPLAY>
+ * - 0: Arsenal display <DISPLAY>
  *
  * Return Value:
  * None
@@ -94,6 +94,10 @@ GVAR(currentActionPage) = 0;
 
 // Update current item list
 call FUNC(updateCurrentItemsList);
+
+// Setup favorites button text and switch to default mode defined by setting
+[_display, _display displayCtrl IDC_buttonFavorites] call FUNC(buttonFavorites);
+GVAR(favorites) = profileNamespace getVariable [QGVAR(favorites), createHashMap];
 
 // This takes care of unique inventory items and unique equipment (arsenal doesn't have items/equipment whitelisted)
 call FUNC(updateUniqueItemsList);
@@ -212,7 +216,7 @@ if (is3DEN) then {
         _ctrl ctrlCommit 0;
     } forEach [IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia];
 
-    _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
+    private _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 } else {
     GVAR(centerNotPlayer) = GVAR(center) != player;

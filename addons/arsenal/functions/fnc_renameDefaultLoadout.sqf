@@ -22,4 +22,4 @@ if (_currentName isEqualTo _newName) exitWith {};
 private _loadoutIndex = GVAR(defaultLoadoutsList) findIf {(_x select 0) == _currentName};
 if (_loadoutIndex isEqualTo -1) exitWith {};
 
-(GVAR(defaultLoadoutsList) select _index) set [0, _newName];
+(GVAR(defaultLoadoutsList) select _loadoutIndex) set [0, _newName];

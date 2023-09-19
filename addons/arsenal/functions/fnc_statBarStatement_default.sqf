@@ -7,9 +7,9 @@
  * 0: Stat <STRING>
  * 1: Item config path <CONFIG>
  * 2: Args for configExtreme <ARRAY>
- *  2.0: Stat limits <ARRAY of BOOLS>
- *  2.1: Bar limits <ARRAY of NUMBERS>
- *  2.2: Evaluate as a logarithmic number <BOOL>
+ * - 0: Stat limits <ARRAY of BOOLS>
+ * - 1: Bar limits <ARRAY of NUMBERS>
+ * - 2: Evaluate as a logarithmic number <BOOL>
  *
  * Return Value:
  * Bar statement <NUMBER>

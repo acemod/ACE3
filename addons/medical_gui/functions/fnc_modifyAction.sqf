@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: esteldunedain, SilentSpike, mharis001
+ * Author: esteldunedain, kymckay, mharis001
  * Modifies the medical action icons to show blood loss and tourniquets.
  *
  * Arguments:

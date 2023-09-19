@@ -167,7 +167,7 @@
             <German>Ersatz-Farbwert für Gruppenführer wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
             <Spanish>Color por defecto para líderes cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
             <French>Définit la couleur par défaut pour les chefs de groupe quand il n'y a pas de réglage de groupe. [Module : laisser vide pour ne pas forcer chez les clients.]</French>
-            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
+            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール:空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없는 경우 리더의 예비 색상 값입니다. [모듈: 클라이언트에서 강체하지 않기 위해 공백으로 비워둘 것]</Korean>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的指示颜色。[模块：此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
@@ -198,7 +198,7 @@
             <German>Ersatz-Farbwert wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
             <Spanish>Color por defecto cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
             <French>Définit la couleur par défaut quand il n'y a pas de réglage pour le groupe. [Module : laisser vide pour ne pas forcer chez les clients.]</French>
-            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
+            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール:空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없을 경우의 예비 색상입니다. [모듈: 클라이언트에서 강체하지 않기 위해 공백으로 비워둘 것]</Korean>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的指示颜色。[模块：此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>

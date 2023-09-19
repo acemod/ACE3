@@ -1,14 +1,9 @@
 // by PabstMirror, commy2
 #include "script_component.hpp"
 
-// Release object on disconnection. Function is identical to killed
 if (isServer) then {
-    // 'HandleDisconnect' EH triggers too late
-    addMissionEventHandler ["PlayerDisconnected", {
-        private _unit = (getUserInfo (_this select 5)) select 10;
-
-        _unit call FUNC(handleKilled);
-    }];
+    // Release object on disconnection. Function is identical to killed
+    addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleKilled)];
 
     // Handle surrending and handcuffing
     ["ace_captiveStatusChanged", {
