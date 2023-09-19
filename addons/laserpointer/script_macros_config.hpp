@@ -21,7 +21,7 @@
         isIR = 0; \
         irDotSize = QUOTE(0.1/4); \
         beamThickness = 0; \
-        beamMaxLength = 100; \
+        beamMaxLength = 50; \
         dotColor[] = {16384, 0, 0}; \
         beamColor[] = {0, 0, 0}; \
     }
@@ -33,7 +33,7 @@
         isIR = 0; \
         irDotSize = QUOTE(0.1/4); \
         beamThickness = 0; \
-        beamMaxLength = 150; \
+        beamMaxLength = 75; \
         dotColor[] = {0, 16384, 0}; \
         beamColor[] = {0, 0, 0}; \
     }
