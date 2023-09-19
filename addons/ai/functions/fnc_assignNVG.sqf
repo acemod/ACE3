@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Assigns AI first found NVG in their inventory during night time and unassigns it during day time.

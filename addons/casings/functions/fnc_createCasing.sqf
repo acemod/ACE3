@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain / Cyruz / diwako
  * Produces a casing matching the fired weapons caliber on the ground around the unit

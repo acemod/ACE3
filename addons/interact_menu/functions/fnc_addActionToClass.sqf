@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Insert an ACE action to a class, under a certain path

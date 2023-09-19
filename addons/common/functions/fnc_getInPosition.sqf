@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Move unit into given vehicle position or switch to that position if the unit is already inside the vehicle.

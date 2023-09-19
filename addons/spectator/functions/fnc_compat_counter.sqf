@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay
  * Handles integrating the counter respawn template into the spectator UI

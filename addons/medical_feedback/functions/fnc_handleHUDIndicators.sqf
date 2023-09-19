@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 10Dozen
  * Handles indication of the fractures, applied tourniquets and splints over Stance indicator.

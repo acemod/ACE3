@@ -15,7 +15,7 @@
    - Provide a solid structure that can be dynamic and easy editable (Which sometimes means we cannot adhere to Aim #1 ;-)
      An example is the path that is built from defines. Some available in this file, others in mods and addons.
 
- Follows  Standard:
+ Follows Standard:
    Object variables: PREFIX_COMPONENT
    Main-object variables: PREFIX_main
    Paths: MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\SCRIPTNAME.sqf
@@ -28,6 +28,10 @@
    Then in your addons, add a component.hpp, define the COMPONENT,
    and include your mod's script_macros.hpp
    In your scripts you can then include the addon's component.hpp with relative path)
+
+   use in subcomponents (subconfigs)
+   define SUBCOMPONENT and include parent component's script_component.hpp
+   currently only supported by SUBADDON, additional macros may be added in the future
 
  TODO:
    - Try only to use 1 string type " vs '
@@ -53,6 +57,10 @@
 
 #define ADDON DOUBLES(PREFIX,COMPONENT)
 #define MAIN_ADDON DOUBLES(PREFIX,main)
+
+#ifdef SUBCOMPONENT
+    #define SUBADDON DOUBLES(ADDON,SUBCOMPONENT)
+#endif
 
 /* -------------------------------------------
 Macro: VERSION_CONFIG

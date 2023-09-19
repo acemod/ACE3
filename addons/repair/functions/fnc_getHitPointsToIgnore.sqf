@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, kymckay, LinkIsGrim
  * Get list of vehicle hitpoints to ignore

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rocko
  * Calculate the maximum zoom level allowed for the current map

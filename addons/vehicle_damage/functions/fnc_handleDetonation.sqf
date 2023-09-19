@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Checks hitpoint damage and determines if a vehicle should cookoff.

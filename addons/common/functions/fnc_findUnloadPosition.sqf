@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, ViperMaul
  * Find a safe place near a vehicle to unload something.

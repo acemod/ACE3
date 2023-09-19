@@ -2,9 +2,9 @@
 
 ["ace_addCargo", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
 [QGVAR(paradropItem), {
-    params ["_item", "_vehicle"];
+    params ["_item", "_vehicle", ["_showHint", true]];
 
-    private _unloaded = [_item, _vehicle] call FUNC(paradropItem);
+    private _unloaded = [_item, _vehicle, _showHint] call FUNC(paradropItem);
 
     if (_unloaded && {GVAR(openAfterUnload) in [2, 3]}) then {
         GVAR(interactionVehicle) = _vehicle;

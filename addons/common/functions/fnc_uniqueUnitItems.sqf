@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: johnb43
  * Returns list of items (including magazines, backpacks and other) in a unit's inventory.

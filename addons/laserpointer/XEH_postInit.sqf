@@ -62,14 +62,19 @@ GVAR(greenLaserUnits) = [];
         };
         TRACE_3("",_weapon,_laser,_laserID);
 
-        if (_laserID isEqualTo 1) exitWith {
-            GVAR(redLaserUnits) pushBackUnique _unit;
-            GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
-        };
-
-        if (_laserID isEqualTo 2) exitWith {
-            GVAR(greenLaserUnits) pushBackUnique _unit;
-            GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+        switch (_laserID) do {
+            case 0: {
+                GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+                GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
+            };
+            case 1: {
+                GVAR(redLaserUnits) pushBackUnique _unit;
+                GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
+            };
+            case 2: {
+                GVAR(greenLaserUnits) pushBackUnique _unit;
+                GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+            };
         };
     };
 

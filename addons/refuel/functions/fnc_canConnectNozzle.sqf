@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: QuantX
  * Checks if an object can have a nozzle connected to it.

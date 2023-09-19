@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Handles attaching and setting up a carried object. Called from ace_dragging_fnc_startCarryPFH.

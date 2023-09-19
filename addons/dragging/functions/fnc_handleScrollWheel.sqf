@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: L-H, commy2
  * Handles raising and lowering the dragged weapon to be able to place it on top of objects.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi, commy2
  * Check if a unit is any engineer class.
