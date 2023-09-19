@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror &tcvm
  * Tests if unit can load a magazine into a static weapon.

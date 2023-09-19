@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, kymckay
  * HandleDamage EH where wound events are raised based on incoming damage.

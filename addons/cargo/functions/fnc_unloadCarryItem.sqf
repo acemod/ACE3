@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Grim
  * Dragging integration. Unloader starts carrying unloaded object.

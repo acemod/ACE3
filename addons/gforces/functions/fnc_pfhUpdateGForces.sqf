@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi and esteldunedain
  * Calculates average g-forces and triggers g-effects

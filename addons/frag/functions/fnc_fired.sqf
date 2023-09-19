@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: nou, jaynus, PabstMirror
  * Called from the unified fired EH for all.

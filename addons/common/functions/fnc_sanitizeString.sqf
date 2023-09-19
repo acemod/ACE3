@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, based on Killzone-Kid code
  * Removes quotation marks to avoid exploits and optionally html tags from text to avoid conflicts with structured text.

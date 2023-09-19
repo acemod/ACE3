@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, Dystopian
  * Gets magazine that the player can carry, suitable to vehicle magazine

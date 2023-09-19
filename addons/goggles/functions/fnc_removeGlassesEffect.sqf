@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Removes the glasses effect from the screen, removes dirt effect, removes rain effect, removes dust effect. Does not reset array (glasses will still be broken, dirty, ect.)
