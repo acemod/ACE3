@@ -46,9 +46,9 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class Pointer: Pointer {
                 isIR = 0; // visible laser
-                irDotSize = 0.1; // default size
+                irDotSize = QUOTE(0.1/4); // default size / 4
                 beamThickness = 0; // no visible beam
-                dotColor[] = {1024, 0, 0};
+                dotColor[] = {8192, 0, 0}; // 5mW/low-vis
                 beamColor[] = {0, 0, 0};
             };
         };
@@ -67,7 +67,7 @@ class CfgWeapons {
             class Pointer: Pointer { // properties can't be inherited
                 isIR = 0;
                 beamThickness = 0;
-                dotColor[] = {0, 1024, 0};
+                dotColor[] = {0, 16384, 0}; // high-vis
                 beamColor[] = {0, 0, 0};
             };
         };
