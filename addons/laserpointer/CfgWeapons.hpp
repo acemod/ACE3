@@ -1,9 +1,3 @@
-
-class SlotInfo;
-class PointerSlot: SlotInfo {
-    compatibleItems[] += {"ACE_acc_pointer_red","ACE_acc_pointer_green_IR","ACE_acc_pointer_green"};
-};
-
 class CfgWeapons {
     class ItemCore;
     class InventoryFlashLightItem_Base_F;
