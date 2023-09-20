@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // If not carrying, don't do anything
-if !(_unit getVariable [QGVAR(isDragging), false]) exitWith {};
+if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {};
 
 private _actionID = _unit getVariable QGVAR(releaseActionID);
 
