@@ -6,20 +6,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rhsusf_main_loadorder"};
-        skipWhenMissingDependencies = 1;
+        requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "Fyuran"};
+        authors[] = {"BaerMitUmlaut", "OmniMan"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgMagazineWells.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgGlasses.hpp"
 #include "CfgJointRails.hpp"
+#include "CfgWeapons.hpp"

@@ -1,5 +1,6 @@
 <p align="center">
-    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/black/ACE3-Logo.png" width="480">
+    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/black/ACE3-Logo.png#gh-light-mode-only" width="480">
+    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/white/ACE3-Logo.png#gh-dark-mode-only" width="480">
 </p>
 
 <p align="center">
