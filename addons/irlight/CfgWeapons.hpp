@@ -1,30 +1,7 @@
+// Only a dependency when building
+#include "\z\ace\addons\laserpointer\script_macros_config.hpp"
+
 // Attenuation and Flashlight seem to not work with inheritance
-#define VISIBLE_POINTER_FLASHLIGHT \
-    class Flashlight { \
-        color[] = {0, 0, 0}; \
-        ambient[] = {0, 0, 0}; \
-        size = 0; \
-        innerAngle = 0; \
-        outerAngle = 0; \
-        position = "laser pos"; \
-        direction = "laser dir"; \
-        useFlare = 0; \
-        flareSize = 0; \
-        flareMaxDistance = 0; \
-        coneFadeCoef = 0; \
-        intensity = 0; \
-        irLight = 0; \
-        volumeShape = ""; \
-        scale[] = {0, 0, 0}; \
-        class Attenuation { \
-            constant = 0; \
-            linear = 0; \
-            quadratic = 0; \
-            start = 0; \
-            hardLimitStart = 0; \
-            hardLimitEnd = 0; \
-        }; \
-    }
 #define DBAL_A3_FLASHLIGHT \
     class Flashlight { \
         color[] = {1, 1, 1}; \
@@ -115,12 +92,13 @@
         hardLimitStart = hardLimitStart; \
         hardLimitEnd = hardLimitEnd; \
     }
-#define POINTER \
+#define POINTER_IR \
     class Pointer { \
         irLaserPos = "laser pos"; \
         irLaserEnd = "laser dir"; \
         irDistance = 5; \
     }
+
 
 class CfgWeapons {
     class acc_pointer_IR;
@@ -128,6 +106,7 @@ class CfgWeapons {
     class InventoryFlashlightItem_Base_F;
 
     // DBAL-A3 (red pointer)
+    // IR Pointer + Illuminator
     class ACE_DBAL_A3_Red: acc_pointer_IR {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(DBAL_A3_Red);
@@ -140,10 +119,11 @@ class CfgWeapons {
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             DBAL_A3_FLASHLIGHT;
-            POINTER;
+            POINTER_IR;
         };
     };
 
+    // IR Pointer only
     class ACE_DBAL_A3_Red_IP: ACE_DBAL_A3_Red {
         scope = 1;
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Red_II";
@@ -152,10 +132,11 @@ class CfgWeapons {
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             class Flashlight {};
-            POINTER;
+            POINTER_IR;
         };
     };
 
+    // Illuminator only
     class ACE_DBAL_A3_Red_II: ACE_DBAL_A3_Red {
         scope = 1;
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Red_VP";
@@ -167,16 +148,16 @@ class CfgWeapons {
         };
     };
 
+    // Visible Pointer only
     class ACE_DBAL_A3_Red_VP: ACE_DBAL_A3_Red {
         scope = 1;
-        ACE_laserpointer = 1;
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Red";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Red_II";
         MRT_SwitchItemHintText = CSTRING(Mode_VisiblePointer);
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
-            VISIBLE_POINTER_FLASHLIGHT;
-            POINTER;
+            class Flashlight {};
+            POINTER_VISIBLE_RED;
         };
     };
 
@@ -189,7 +170,7 @@ class CfgWeapons {
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             DBAL_A3_FLASHLIGHT_LR;
-            POINTER;
+            POINTER_IR;
         };
     };
 
@@ -240,10 +221,12 @@ class CfgWeapons {
 
     class ACE_DBAL_A3_Green_VP: ACE_DBAL_A3_Red_VP {
         displayName = CSTRING(DBAL_A3_Green);
-        ACE_laserpointer = 2;
         MRT_SwitchItemNextClass = "ACE_DBAL_A3_Green";
         MRT_SwitchItemPrevClass = "ACE_DBAL_A3_Green_II";
         baseWeapon = "ACE_DBAL_A3_Green";
+        class ItemInfo: ItemInfo {
+            POINTER_VISIBLE_GREEN;
+        };
     };
 
     // DBAL-A3 (green pointer, long range)
@@ -255,7 +238,7 @@ class CfgWeapons {
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             DBAL_A3_FLASHLIGHT;
-            POINTER;
+            POINTER_IR;
         };
     };
 
