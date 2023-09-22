@@ -4,7 +4,7 @@ class CfgWeapons {
     class ACE_ropeBase: ACE_ItemCore {
         scope = 1;
         picture = QPATHTOF(data\m_rope_ca);
-        model = "\A3\Structures_F_Heli\Items\Tools\Rope_01_F.p3d";
+        // model = "\A3\Structures_F_Heli\Items\Tools\Rope_01_F.p3d"; // model is Locked to Helicopter DLC
         descriptionShort = CSTRING(descriptionShort);
     };
 

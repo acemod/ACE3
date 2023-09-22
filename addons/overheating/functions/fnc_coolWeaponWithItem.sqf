@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001, Glowbal, PabstMirror, drofseh
  * Cool a weapon with an item and consume the item being used to cool it.
@@ -61,7 +61,7 @@ private _fnc_onSuccess = {
     };
 
     // cool the weapon
-    private _barrelMass = _weapon call FUNC(getBarrelMass);
+    private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
     _temperature = [_temperature, _barrelMass, _liquidAmount * 10] call FUNC(calculateCooling);
     [_target, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 };

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Check if the player can stand up (is in sitting position).

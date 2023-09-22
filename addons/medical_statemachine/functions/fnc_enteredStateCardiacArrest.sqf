@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles a unit entering cardiac arrest (calls for a status update).
@@ -17,6 +17,9 @@
  */
 
 params ["_unit"];
+if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) exitWith {
+    WARNING_1("enteredStateCardiacArrest: State transition on dead or null unit - %1",_unit);
+};
 
 // 10% possible variance in cardiac arrest time
 private _time = GVAR(cardiacArrestTime);

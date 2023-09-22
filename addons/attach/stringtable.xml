@@ -13,7 +13,7 @@
             <Hungarian>Tárgy hozzácsatolása</Hungarian>
             <Russian>Прикрепить предмет</Russian>
             <Japanese>アイテムを取り付ける</Japanese>
-            <Korean>물건 부착</Korean>
+            <Korean>아이템 부착</Korean>
             <Chinese>附掛裝備&gt;&gt;</Chinese>
             <Chinesesimp>附挂装备&gt;&gt;</Chinesesimp>
             <Turkish>Eşyayı bağla</Turkish>
@@ -47,7 +47,7 @@
             <Hungarian>Tárgy lecsatolása</Hungarian>
             <Russian>Отсоединить</Russian>
             <Japanese>アイテムを外す</Japanese>
-            <Korean>분리</Korean>
+            <Korean>떼내기</Korean>
             <Chinese>取下裝備</Chinese>
             <Chinesesimp>取下装备</Chinesesimp>
             <Turkish>Eşyayı sök</Turkish>
@@ -66,7 +66,7 @@
             <Japanese>赤外線ストロボを取り付けました</Japanese>
             <Korean>적외선 스트로브 부착됨</Korean>
             <Chinese>已附掛紅外線頻閃器</Chinese>
-            <Chinesesimp>已附挂红外线频闪器</Chinesesimp>
+            <Chinesesimp>已附挂红外频闪器</Chinesesimp>
             <Turkish>IR Strobe Bağlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Detached">
@@ -81,9 +81,9 @@
             <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
             <Russian>ИК-маяк отсоединён</Russian>
             <Japanese>赤外線ストロボを外しました</Japanese>
-            <Korean>적외선 스트로브 분리됨</Korean>
+            <Korean>적외선 스트로브 떼어냄</Korean>
             <Chinese>已取下紅外線頻閃器</Chinese>
-            <Chinesesimp>已取下红外线频闪器</Chinesesimp>
+            <Chinesesimp>已取下红外频闪器</Chinesesimp>
             <Turkish>IR Strobe Söküldü</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Attached">
@@ -100,7 +100,7 @@
             <Japanese>赤外線グレネードを取り付けました</Japanese>
             <Korean>적외선 수류탄 부착됨</Korean>
             <Chinese>已附掛紅外線手榴彈</Chinese>
-            <Chinesesimp>已附挂红外线手榴弹</Chinesesimp>
+            <Chinesesimp>已附挂红外手雷</Chinesesimp>
             <Turkish>IR Bombası Bağlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Detached">
@@ -115,9 +115,9 @@
             <Hungarian>Infravörös gránát lecsatolva</Hungarian>
             <Russian>ИК-граната отсоединена</Russian>
             <Japanese>赤外線グレネードを外しました</Japanese>
-            <Korean>적외선 수류탄 분리됨</Korean>
+            <Korean>적외선 수류탄 떼어냄</Korean>
             <Chinese>已取下紅外線手榴彈</Chinese>
-            <Chinesesimp>已取下红外线手榴弹</Chinesesimp>
+            <Chinesesimp>已取下红外手雷</Chinesesimp>
             <Turkish>IR Bombası Söküldü</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Attached">
@@ -134,7 +134,7 @@
             <Japanese>ケミライトを取り付けました</Japanese>
             <Korean>켐라이트 부착됨</Korean>
             <Chinese>已附掛螢光棒</Chinese>
-            <Chinesesimp>已附挂萤光棒</Chinesesimp>
+            <Chinesesimp>已附挂荧光棒</Chinesesimp>
             <Turkish>Işık Çubuğu Bağlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Detached">
@@ -149,9 +149,9 @@
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
             <Russian>Химсвет отсоединён</Russian>
             <Japanese>ケミライトを外しました</Japanese>
-            <Korean>켐라이트 분리됨</Korean>
+            <Korean>켐라이트 떼어냄</Korean>
             <Chinese>已取下螢光棒</Chinese>
-            <Chinesesimp>已取下萤光棒</Chinesesimp>
+            <Chinesesimp>已取下荧光棒</Chinesesimp>
             <Turkish>Işık Çubuğu Söküldü</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Name">
@@ -168,7 +168,7 @@
             <Japanese>赤外線ストロボ</Japanese>
             <Korean>적외선 스트로브</Korean>
             <Chinese>紅外線頻閃器</Chinese>
-            <Chinesesimp>红外线频闪器</Chinesesimp>
+            <Chinesesimp>红外频闪器</Chinesesimp>
             <Turkish>IR Stroboskop</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Description">
@@ -185,7 +185,7 @@
             <Japanese>赤外線ストロボはあなたの位置を知らせますが、夜間暗視装置を介してでしか見れません。</Japanese>
             <Korean>적외선 스트로브는 자신의 위치를 반짝이면서 표시합니다. 이는 야간투시경으로 밖에 보지 못합니다.</Korean>
             <Chinese>紅外線閃頻器,藉由紅外線閃頻信號來辨識你的位置，僅能使用夜視系統來辨識紅外線信號</Chinese>
-            <Chinesesimp>红外线闪频器,藉由红外线闪频信号来辨识你的位置，仅能使用夜视系统来辨识红外线信号</Chinesesimp>
+            <Chinesesimp>红外频闪器制造只有用夜视仪才能看到的频闪信标，发出一个位置信号。</Chinesesimp>
             <Turkish>IR Stroboskop, yalnızca gece görüşlerinden gözükebilen titreşimli bir ışık aracılığıyla konumunuzu gösterir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_PlaceAction">
@@ -200,7 +200,7 @@
             <Hungarian>Elhelyez</Hungarian>
             <Russian>Установить</Russian>
             <Japanese>置く</Japanese>
-            <Korean>두기</Korean>
+            <Korean>놓기</Korean>
             <Chinese>放置</Chinese>
             <Chinesesimp>放置</Chinesesimp>
             <Turkish>Yerleştir</Turkish>
@@ -268,7 +268,7 @@
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
             <Japanese>%1&lt;br/&gt;を外しました</Japanese>
-            <Korean>%1&lt;br/&gt;분리됨</Korean>
+            <Korean>%1&lt;br/&gt;떼어냄</Korean>
             <Chinese>%1&lt;br/&gt;已取下</Chinese>
             <Chinesesimp>%1&lt;br/&gt;已取下</Chinesesimp>
             <Turkish>%1&lt;br/&gt;Söküldü</Turkish>

@@ -39,13 +39,13 @@
             <Spanish>Mostrar efectos de las gafas en tercera persona</Spanish>
             <Czech>Zobrazit efekt brýlí v třetí osobě</Czech>
             <French>Effets des lunettes à la 3ème personne</French>
-            <Russian>Отображать эффект очков от третьего лица</Russian>
+            <Russian>Вкл. эффект очков от 3-го лица</Russian>
             <Hungarian>Szemüveg-effekt mutatása külső nézetből</Hungarian>
             <Polish>Włącz efekty gogli w trzeciej osobie</Polish>
             <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
             <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
             <Japanese>三人称視点でもゴーグルによる効果を表示</Japanese>
-            <Korean>3인칭시에도 고글 효과를 보이게 합니다</Korean>
+            <Korean>3인칭 시에도 고글 효과를 보이게 합니다</Korean>
             <Chinesesimp>在第三人称视角显示护目镜效果</Chinesesimp>
             <Chinese>在第三人稱視角顯示護目鏡效果</Chinese>
             <Turkish>Gözlük efektlerini 3. şahıs görünümün de göster</Turkish>
@@ -92,7 +92,7 @@
             <Korean>색조</Korean>
             <French>Teinte</French>
             <Italian>Colore</Italian>
-            <Chinesesimp>染色</Chinesesimp>
+            <Chinesesimp>着色</Chinesesimp>
             <Chinese>染色</Chinese>
             <Portuguese>Cor</Portuguese>
             <Czech>Zabarvení</Czech>
@@ -124,7 +124,7 @@
             <Korean>색조+효과</Korean>
             <French>Teinte + effets</French>
             <Italian>Colore + Effetti</Italian>
-            <Chinesesimp>染色 + 影响</Chinesesimp>
+            <Chinesesimp>着色 + 效果</Chinesesimp>
             <Chinese>染色 + 影響</Chinese>
             <Portuguese>Cor + Efeitos</Portuguese>
             <Czech>Zabarvení + Efekty</Czech>
@@ -139,11 +139,13 @@
             <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>
             <Japanese>ゴーグル拭き取りをｾﾙﾌ ｲﾝﾀﾗｸｼｮﾝに表示</Japanese>
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
+            <Chinesesimp>在自我互动中显示擦拭护目镜的动作</Chinesesimp>
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
-            <Russian>Показывать Протереть очки в меню взаимодействия с собой</Russian>
+            <Russian>Показывать действие Протереть очки</Russian>
+            <Korean>자기상호작용에 고글 닦기 선택 보이기</Korean>
         </Key>
     </Package>
 </Project>

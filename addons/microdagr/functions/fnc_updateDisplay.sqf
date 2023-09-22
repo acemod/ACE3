@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
@@ -44,7 +44,7 @@ case (APP_MODE_INFODISPLAY): {
         (_display displayCtrl IDC_MODEDISPLAY_ELEVATIONNUM) ctrlSetText _aboveSeaLevelText;
 
         //Heading:
-        _compassAngleText = if (GVAR(settingUseMils)) then {
+        private _compassAngleText = if (GVAR(settingUseMils)) then {
             [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
             ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
@@ -65,8 +65,8 @@ case (APP_MODE_INFODISPLAY): {
         } else {
             private _targetPosName = "";
             private _targetPosLocationASL = [];
-            _bearingText = "----";
-            _rangeText = "----";
+            private _bearingText = "----";
+            private _rangeText = "----";
             _aboveSeaLevelText = "----";
 
             if (GVAR(currentWaypoint) == -2) then {
@@ -134,8 +134,8 @@ case (APP_MODE_COMPASS): {
                 _targetPosLocationASL = (_waypoints select GVAR(currentWaypoint)) select 1;
             };
 
-            _bearingText = "---";
-            _rangeText = "---";
+            private _bearingText = "---";
+            private _rangeText = "---";
 
             if (_targetPosLocationASL isNotEqualTo []) then {
                 private _bearing = [(getPosASL ACE_player), _targetPosLocationASL] call BIS_fnc_dirTo;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LorenLuke
  * Returns an approximate representation of temperature at a unit's location.

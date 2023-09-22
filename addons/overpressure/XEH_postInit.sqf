@@ -9,4 +9,6 @@
     // Register fire event handler
     ["ace_firedPlayer", LINKFUNC(firedEHBB)] call CBA_fnc_addEventHandler;
     ["ace_firedPlayerVehicle", LINKFUNC(firedEHOP)] call CBA_fnc_addEventHandler;
+
+    GVAR(cacheHash) = createHashMap;
 }] call CBA_fnc_addEventHandler;

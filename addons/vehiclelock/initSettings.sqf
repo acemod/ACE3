@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_vehicleLock]:
-
 [
     QGVAR(defaultLockpickStrength), "SLIDER",
     [LSTRING(DefaultLockpickStrength_DisplayName), LSTRING(DefaultLockpickStrength_Description)],

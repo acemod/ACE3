@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Show the resupplyable ammunition of all surrounding vehicles.
@@ -19,7 +19,12 @@
 params ["_truck", "_player"];
 
 private _vehicles = nearestObjects [_truck, ["AllVehicles"], GVAR(distance)];
-_vehicles = _vehicles select {(_x != _truck) && {!(_x isKindOf "CAManBase")} && {!(_x getVariable [QGVAR(disabled), false])}};
+_vehicles = _vehicles select {
+    _x != _truck
+    && {!(_x isKindOf "CAManBase")}
+    && {alive _x}
+    && {!(_x getVariable [QGVAR(disabled), false])}
+};
 
 private _cswCarryMagazines = [];
 private _vehicleActions = [];

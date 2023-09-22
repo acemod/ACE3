@@ -30,7 +30,7 @@ All good? Then proceed and fill out the items below.
 A clear and concise description of what the bug is.
 
 **Steps to reproduce:**
-_Follow [https://ace3mod.com/img/wiki/user/issue_flowchart.png](this flowchart)!_
+_Follow [https://ace3.acemod.org/img/wiki/user/issue_flowchart.webp](this flowchart)!_
 
 1. _Go to ..._
 2. _Click ..._

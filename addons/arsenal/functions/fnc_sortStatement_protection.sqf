@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Statement to sort items by their protection (combination of ballistic and explosive).
@@ -15,10 +15,8 @@
 */
 
 params ["_itemInfo", "_ballisticCo", "_explosiveCo"];
-_itemInfo params ["_itemCfg"];
+_itemInfo params ["_config"];
 
-(([[_itemCfg], ["passthrough", "armor"]] call BIS_fnc_configExtremes) select 1) params [["_passthroughMax", 0], ["_armorMax", 0]];
+(([[_config], ["passthrough", "armor"]] call BIS_fnc_configExtremes) select 1) params [["_passthroughMax", 0], ["_armorMax", 0]];
 
-private _protectionCombined = _passthroughMax * _ballisticCo + _armorMax * _explosiveCo;
-
-_protectionCombined
+_passthroughMax * _ballisticCo + _armorMax * _explosiveCo;

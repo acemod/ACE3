@@ -34,7 +34,7 @@ class CfgAmmo {
         cost = 500;
         simulationStep = 0.005;
         maxControlRange = 1500;
-        
+
         EGVAR(vehicle_damage,incendiary) = 1.0;
 
         class ace_missileguidance {

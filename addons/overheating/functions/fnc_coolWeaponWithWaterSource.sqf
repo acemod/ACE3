@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001, Glowbal, PabstMirror, drofseh
  * Cool a weapon with an AceX water source.
@@ -59,7 +59,7 @@ private _fnc_condition = {
         };
 
         //Cool the weapon down
-        private _barrelMass = _weapon call FUNC(getBarrelMass);
+        private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
         _temperature = [_temperature, _barrelMass, 20] call FUNC(calculateCooling);
         [_player, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 

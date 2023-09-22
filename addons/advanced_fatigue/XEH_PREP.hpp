@@ -2,6 +2,7 @@ PREP(addDutyFactor);
 PREP(createStaminaBar);
 PREP(getAnimDuty);
 PREP(getMetabolicCosts);
+PREP(getWeaponInertia);
 PREP(handleEffects);
 PREP(handlePlayerChanged);
 PREP(handleStaminaBar);

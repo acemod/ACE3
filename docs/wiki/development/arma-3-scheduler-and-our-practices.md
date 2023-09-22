@@ -45,7 +45,7 @@ It means we need to live outside of the spawn execution as much as possible. The
 
 The scheduler will also actually halt your script mid-execution, usually at the end of a given control block, and pause you to yield to other scripts. This can lead to drastically incorrect results when performing calculations and unexpected behaviours. For example, try the following code. Even though it doesn't seem logical, it will show a hint.
 
-```cpp
+```sqf
 myVar = true;
 0 spawn {
     while {true} do {
@@ -90,7 +90,7 @@ These rules follow from the rules of thumb above:
 #### 3.3.1 Per Frame Handler
 See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_addPerFrameHandler.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_addPerFrameHandler.sqf) for more details.
 
-```cpp
+```sqf
 [{code} , delay, [params]] call CBA_fnc_addPerFrameHandler;
 ```
 
@@ -98,7 +98,7 @@ See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_addPerFram
 #### 3.3.2 WaitAndExecute
 See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitAndExecute.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitAndExecute.sqf) for more details.
 
-```cpp
+```sqf
 [{delayed code}, [params], delay] call CBA_fnc_waitAndExecute;
 ```
 
@@ -106,6 +106,6 @@ See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitAndExe
 #### 3.3.3 WaitUntilAndExecute
 See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitUntilAndExecute.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitUntilAndExecute.sqf) for more details.
 
-```cpp
+```sqf
 [{condition}, {code}, [params]] call CBA_fnc_waitUntilAndExecute;
 ```

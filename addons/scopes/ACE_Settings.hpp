@@ -6,7 +6,7 @@ class ACE_Settings {
     class GVAR(forceUseOfAdjustmentTurrets) {
         movedToSQF = 1;
     };
-    
+
     // Auto corrects the zeroing in both vanilla- and advanced ballistics
     class GVAR(correctZeroing) {
         movedToSQF = 1;
@@ -19,7 +19,7 @@ class ACE_Settings {
     class GVAR(defaultZeroRange) {
         movedToSQF = 1;
     };
-    
+
     // Only relevant when advanced ballistics is enabled
     class GVAR(zeroReferenceTemperature) {
         movedToSQF = 1;
@@ -33,11 +33,11 @@ class ACE_Settings {
     class GVAR(deduceBarometricPressureFromTerrainAltitude) {
         movedToSQF = 1;
     };
-    
+
     class GVAR(useLegacyUI) {
         movedToSQF = 1;
     };
-    
+
     class GVAR(simplifiedZeroing) {
         movedToSQF = 1;
     };

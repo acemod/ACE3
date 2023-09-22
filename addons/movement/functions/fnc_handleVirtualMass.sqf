@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Recalculate the units loadCoef to emulate a mass added to uniform, vest or backpack.
@@ -23,9 +23,7 @@ if (isNull _unit) exitWith {};
 private _virtualLoad = 0;
 
 {
-    if (!isNull _x) then {
-        _virtualLoad = _virtualLoad + (_x getVariable [QGVAR(vLoad), 0]);
-    };
+    _virtualLoad = _virtualLoad + (_x getVariable [QGVAR(vLoad), 0]);
 } forEach [
     _unit,
     uniformContainer _unit,

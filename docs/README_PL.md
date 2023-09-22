@@ -2,7 +2,7 @@
     <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
 </p>
 <p align="center">
-    <a href="https://github.com/acemod/ACE3/releases">
+    <a href="https://github.com/acemod/ACE3/releases/latest">
         <img src="https://img.shields.io/badge/Wersja-0.0.0-blue.svg?style=flat-square" alt="ACE3 Wersja">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
@@ -14,8 +14,8 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/Licencja-GPLv2-red.svg?style=flat-square" alt="ACE3 Licencja">
     </a>
-    <a href="https://slackin.ace3mod.com/">
-        <img src="https://slackin.ace3mod.com/badge.svg?label=Slack&style=flat-square" alt="ACE3 Slack">
+    <a href="https://acemod.org/discord">
+        <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="ACE3 Discord">
     </a>
     <a href="https://circleci.com/gh/acemod/ACE3">
         <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
@@ -65,15 +65,15 @@ Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczo
 
 ### Poradniki i instrukcje
 Jeżeli zainstalowałeś ACE3 lecz masz problem ze zrozumieniem jak to wszystko działa, lub gdzie zacząć, zacznij od przeczytania tego:
-- [Wprowadzenie](https://ace3mod.com/wiki/user/getting-started.html)
+- [Wprowadzenie](https://ace3.acemod.org/wiki/user/getting-started.html)
 
 #### Współpraca
 Możesz pomóc w rozwoju addonu szukając potencjalnych bugów w naszym kodzie, lub zgłaszając nowe funkcje. Aby wnieść swój wkład do ACE3, po prostu zforkuj to repozytorium na swoje konto GitHub i zgłoś swoje pull requesty do przeglądu przez innych współpracowników. Pamiętaj, aby dodać siebie do listy autorów każdego PBO jakie edytujesz oraz do pliku ['AUTHORS.txt'](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodając także swój adres e-mail.
 
 Używaj naszego [Issue Tracker-a](https://github.com/acemod/ACE3/issues) aby zgłaszać bugi, proponować nowe funkcje lub sugerować zmiany do aktualnie istniejących. Zobacz także:
-- [Jak zgłosić bug-a](https://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-- [Jak zgłosić feature request-a](https://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [Jak zgłosić bug-a](https://ace3.acemod.org/wiki/user/how-to-report-an-issue.html)
+- [Jak zgłosić feature request-a](https://ace3.acemod.org/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testowanie i budowanie
 Aby pomóc nam w testowaniu najnowszych zmian rozwojowych, pobierz nasz master branch ([bezpośrednio](https://github.com/acemod/ACE3/archive/master.zip), lub [korzystając z git](https://help.github.com/articles/fetching-a-remote/)), a następnie złóż testowego build-a:
-- [Konfiguracja środowiska do testów](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – intrukcja krok-po-kroku jak poprawnie ustawić i zbudować wersję ACE3 do celów testowych.
+- [Konfiguracja środowiska do testów](https://ace3.acemod.org/wiki/development/setting-up-the-development-environment.html) – intrukcja krok-po-kroku jak poprawnie ustawić i zbudować wersję ACE3 do celów testowych.

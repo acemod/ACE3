@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Reports same as actionKeysNames(Array) but in a format processable by "keyDown".

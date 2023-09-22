@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain & drofseh
  * Update .
@@ -14,6 +14,11 @@
  *
  * Public: No
  */
+
+// If the ace_overheating_cookoffCoef setting is set to 0 mid mission we want to exit right away or it will immediate cause all player weapons to cook off.
+if (GVAR(cookoffCoef) isEqualTo 0) exitWith {
+    WARNING_1("'%1' has been set to 0 mid mission. Changing this setting requires mission restart.",GVAR(cookoffCoef));
+};
 
 private _currentWeapon = currentWeapon ACE_player;
 if ((_currentWeapon != "") && {_currentWeapon == primaryWeapon ACE_player || {_currentWeapon == handgunWeapon ACE_player}}) then {

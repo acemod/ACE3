@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, Glowbal, PabstMirror
  * Draw progress bar and execute given function if succesful.
@@ -29,6 +29,15 @@ private _player = ACE_player;
 //Open Dialog and set the title
 closeDialog 0;
 createDialog QGVAR(ProgressBar_Dialog);
+
+private _display = uiNamespace getVariable QGVAR(dlgProgress);
+
+// Ensure CBA keybindings are hooked into the display
+_display call (uiNamespace getVariable "CBA_events_fnc_initDisplayCurator");
+
+// Hide cursor by using custom transparent cursor
+private _map = _display displayCtrl 101;
+_map ctrlMapCursor ["", QGVAR(blank)];
 
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
 

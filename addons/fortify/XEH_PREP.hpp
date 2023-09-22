@@ -15,3 +15,4 @@ ACEX_PREP(getPlaceableSet);
 ACEX_PREP(modifyAction);
 ACEX_PREP(setupModule);
 ACEX_PREP(buildLocationModule);
+ACEX_PREP(createObjectMarker);

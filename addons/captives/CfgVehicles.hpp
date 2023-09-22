@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_ApplyHandcuffs {
                 displayName = CSTRING(SetCaptive);
                 selection = "righthand";
-                distance = 2;
+                distance = HANDCUFFS_DISTANCE;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
                 statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
                 exceptions[] = {"isNotSwimming", "isNotInside"};
@@ -16,7 +16,7 @@ class CfgVehicles {
                 class ACE_RemoveHandcuffs {
                     displayName = CSTRING(ReleaseCaptive);
                     selection = "righthand";
-                    distance = 2;
+                    distance = HANDCUFFS_DISTANCE;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
                     exceptions[] = {"isNotSwimming", "isNotInside"};

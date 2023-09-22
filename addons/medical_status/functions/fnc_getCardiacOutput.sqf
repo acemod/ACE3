@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Glowbal, SilentSpike
+ * Author: Glowbal, kymckay
  * Get the cardiac output from the Heart, based on current Heart Rate and Blood Volume.
  *
  * Arguments:

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Checks if Free Seats menu can be shown.
@@ -29,6 +29,7 @@ GVAR(enabled)
 }
 && {alive _vehicle}
 && {2 > locked _vehicle}
+&& {isNull getConnectedUAVUnit _unit}
 && {simulationEnabled _vehicle}
 && {
     -1 == crew _vehicle findIf {alive _x}

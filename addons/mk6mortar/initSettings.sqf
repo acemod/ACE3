@@ -1,4 +1,3 @@
-// CBA Settings [ADDON: ace_mk6mortar]:
 // These settings effect gameplay difficutly:  defaults will leave the mortar the same as vanilla
 
 private _category = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"], localize LSTRING(DisplayName)];

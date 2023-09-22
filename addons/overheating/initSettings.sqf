@@ -15,7 +15,37 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(heatCoef_displayName), LSTRING(heatCoef_description)],
     _category,
     [0, 5, 1, 2],
-    1
+    1,
+    {
+        if (!GVAR(enabled)) exitWith {};
+        TRACE_2("reseting cache",GVAR(heatCoef),count GVAR(cacheAmmoData));
+        GVAR(cacheAmmoData) = createHashMap;
+    },
+    false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(coolingCoef), "SLIDER",
+    [LSTRING(coolingCoef_displayName), LSTRING(coolingCoef_description)],
+    _category,
+    [0, 5, 1, 2],
+    1,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(suppressorCoef), "SLIDER",
+    [LSTRING(suppressorCoef_displayName), LSTRING(suppressorCoef_description)],
+    _category,
+    [0, 5, 1, 2],
+    1,
+    {
+        if (!GVAR(enabled)) exitWith {};
+        TRACE_2("reseting cache",GVAR(suppressorCoef),count GVAR(cacheSilencerData));
+        GVAR(cacheSilencerData) = createHashMap;
+    },
+    false
 ] call CBA_fnc_addSetting;
 
 [

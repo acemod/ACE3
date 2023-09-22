@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Loops through a string and filters out object names/variables to assign a value for given variable.

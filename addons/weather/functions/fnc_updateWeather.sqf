@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ACE2 Team, esteldunedain, Ruthberg
  * Updates the weather evolution on the server. Broadcasts relevant weather information to the clients.

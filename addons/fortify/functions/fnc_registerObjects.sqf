@@ -1,9 +1,9 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Kingsley
  * Registers the given objects in the given side's player interaction menu.
  * Players on that side must have the pickaxe item in their inventory to access the menu.
- * Classnames must be in the format [<classname>, <cost>]
+ * Classnames must be in the format [<classname>, <cost>, <category(optional)>]
  * MUST BE CALLED ON SERVER!
  *
  * Arguments:
@@ -16,6 +16,7 @@
  *
  * Example:
  * [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call ace_fortify_fnc_registerObjects
+ * [west, 5000, [["Land_BagFence_Long_F", 5, "tan"], ["Land_BagFence_01_long_green_F", 5, "green"]]] call ace_fortify_fnc_registerObjects
  *
  * Public: Yes
  */
@@ -29,6 +30,9 @@ if (_side isEqualTo sideUnknown) exitWith {ERROR_1("Bad Side %1",_this);};
 
 _objects select {
     private _isValid = _x params [["_xClassname", "", [""]], ["_xCost", 0, [0]]];
+    private _category = toLower (_x param [2, "", [""]]);
+    if (_category != "") then { _x set [2, _category]; };
+
     if (_isValid) then {
         _isValid = isClass (configFile >> "CfgVehicles" >> _xClassname);
         if (!_isValid) then {WARNING_1("Classname does not exist in CfgVehicles %1",_x);};

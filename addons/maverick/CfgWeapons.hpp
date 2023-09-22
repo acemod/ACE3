@@ -58,7 +58,7 @@ class CfgWeapons {
         };
         weaponLockDelay = 0.1;
         weaponLockSystem = 0;
-        
+
         EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
         EGVAR(laser,showHud) = 1; // show attack profile / lock on hud
         GVAR(enabled) = 1;

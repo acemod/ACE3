@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Commy2, based on KK_fnc_playerWeaponMulfunction from KillzoneKid
  * Jam the weapon
@@ -51,7 +51,9 @@ if (_jamTypesAllowed isEqualTo []) then {
     };
 };
 
-_unit setVariable [format [QGVAR(%1_jamType), _weapon], selectRandomWeighted _jamTypesAllowed];
+private _jamType = selectRandomWeighted _jamTypesAllowed;
+_unit setVariable [format [QGVAR(%1_jamType), _weapon], _jamType];
+
 
 // Stop current burst
 _unit setAmmo [_weapon, 0];
@@ -72,7 +74,7 @@ if (_weapon == primaryWeapon _unit) then {
 // only display the hint once, after you try to shoot an already jammed weapon
 GVAR(knowAboutJam) = false;
 
-["ace_weaponJammed", [_unit,_weapon]] call CBA_fnc_localEvent;
+["ace_weaponJammed", [_unit, _weapon, _jamType]] call CBA_fnc_localEvent;
 
 if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Winter
  * Sets the player's current view distance according to allowed values.
@@ -19,7 +19,7 @@
 params ["_viewDistance", "_showPrompt"];
 
 if (_viewDistance == 0) then { // Video Settings
-    _viewDistance = viewDistance;
+    _viewDistance = (getVideoOptions get "overallVisibility");
 };
 
 private _objectViewDistanceCoeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.

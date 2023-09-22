@@ -10,7 +10,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 
 [
     QGVAR(viewDistanceOnFoot), "SLIDER",
-    [LSTRING(onFoot_DisplayName), LSTRING(onFoot_Description)],
+    [LSTRING(onFoot_DisplayName), format ["%1\n%2", LLSTRING(onFoot_Description), LLSTRING(sliderExtraDescription)]],
     _category,
     [0, 10000, 0, -1],
     0,
@@ -19,7 +19,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 
 [
     QGVAR(viewDistanceLandVehicle), "SLIDER",
-    [LSTRING(landVehicle_DisplayName), LSTRING(landVehicle_Description)],
+    [LSTRING(landVehicle_DisplayName), format ["%1\n%2", LLSTRING(landVehicle_Description), LLSTRING(sliderExtraDescription)]],
     _category,
     [0, 10000, 0, -1],
     0,
@@ -28,7 +28,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 
 [
     QGVAR(viewDistanceAirVehicle), "SLIDER",
-    [LSTRING(airVehicle_DisplayName), LSTRING(airVehicle_Description)],
+    [LSTRING(airVehicle_DisplayName), format ["%1\n%2", LLSTRING(airVehicle_Description), LLSTRING(sliderExtraDescription)]],
     _category,
     [0, 10000, 0, -1],
     0,

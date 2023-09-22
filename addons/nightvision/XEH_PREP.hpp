@@ -11,3 +11,4 @@ PREP(refreshGoggleType);
 PREP(scaleCtrl);
 PREP(scotopicEffects);
 PREP(setupDisplayEffects);
+PREP(statTextStatement_NVGeneration);

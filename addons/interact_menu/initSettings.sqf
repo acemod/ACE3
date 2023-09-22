@@ -1,9 +1,10 @@
 private _category = format ["ACE %1", LLSTRING(Category_InteractionMenu)];
+private _categoryColors = [_category, format ["| %1 |", LELSTRING(common,subcategory_colors)]];
 
 [
     QGVAR(selectorColor), "COLOR",
     LSTRING(SelectorColor),
-    _category,
+    _categoryColors,
     [1, 0, 0],
     false,
     {GVAR(selectorColorHex) = _this call BIS_fnc_colorRGBtoHTML} // Stored in Hex to avoid constant conversion
@@ -12,7 +13,7 @@ private _category = format ["ACE %1", LLSTRING(Category_InteractionMenu)];
 [
     QGVAR(colorTextMax), "COLOR",
     LSTRING(ColorTextMax),
-    _category,
+    _categoryColors,
     [1, 1, 1, 1],
     0
 ] call CBA_fnc_addSetting;
@@ -20,7 +21,7 @@ private _category = format ["ACE %1", LLSTRING(Category_InteractionMenu)];
 [
     QGVAR(colorTextMin), "COLOR",
     LSTRING(ColorTextMin),
-    _category,
+    _categoryColors,
     [1, 1, 1, 0.25],
     0
 ] call CBA_fnc_addSetting;
@@ -28,7 +29,7 @@ private _category = format ["ACE %1", LLSTRING(Category_InteractionMenu)];
 [
     QGVAR(colorShadowMax), "COLOR",
     LSTRING(ColorShadowMax),
-    _category,
+    _categoryColors,
     [0, 0, 0, 1],
     0
 ] call CBA_fnc_addSetting;
@@ -36,7 +37,7 @@ private _category = format ["ACE %1", LLSTRING(Category_InteractionMenu)];
 [
     QGVAR(colorShadowMin), "COLOR",
     LSTRING(ColorShadowMin),
-    _category,
+    _categoryColors,
     [0, 0, 0, 0.25],
     0
 ] call CBA_fnc_addSetting;

@@ -13,6 +13,7 @@ PREP(moduleAddAceArsenal);
 PREP(moduleAddSpareTrack);
 PREP(moduleAddSpareWheel);
 PREP(moduleAddOrRemoveFRIES);
+PREP(moduleBurn);
 PREP(moduleCaptive);
 PREP(moduleCargoParadrop);
 PREP(moduleConfigurePylons);

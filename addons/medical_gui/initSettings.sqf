@@ -86,12 +86,13 @@ private _damageColors = [
     [0.00, 0.00, 1.00, 1]
 ];
 
+private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRING(common,subcategory_colors)]];
 {
     [
-        format ["%1_%2", QGVAR(bloodLossColor), _forEachIndex], 
+        format ["%1_%2", QGVAR(bloodLossColor), _forEachIndex],
         "COLOR",
         [format [localize LSTRING(BloodLossColorX_DisplayName), _forEachIndex], LSTRING(BloodLossColor_Description)],
-        [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
+        _categoryColors,
         _x,
         false // isGlobal
     ] call CBA_fnc_addSetting;
@@ -102,8 +103,26 @@ private _damageColors = [
         format ["%1_%2", QGVAR(damageColor), _forEachIndex],
         "COLOR",
         [format [localize LSTRING(DamageColorX_DisplayName), _forEachIndex], LSTRING(DamageColor_Description)],
-        [ELSTRING(medical,Category), LSTRING(DamageColors)],
+        _categoryColors,
         _x,
         false // isGlobal
     ] call CBA_fnc_addSetting;
 } forEach _damageColors;
+
+[
+    QGVAR(showDamageEntry),
+    "CHECKBOX",
+    [LSTRING(showDamageEntry_DisplayName), LSTRING(showDamageEntry_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    false,
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showBloodlossEntry),
+    "CHECKBOX",
+    [LSTRING(ShowBloodlossEntry_DisplayName), LSTRING(ShowBloodlossEntry_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    true,
+    true // isGlobal
+] call CBA_fnc_addSetting;

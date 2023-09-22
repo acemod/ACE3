@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Fire
+component: fire
 description: Ignite things and people.
 group: feature
 category: realism
@@ -29,7 +30,3 @@ Fire will burn you and cause intense pain. If on fire, you can stop, drop, and r
 
 - Enables/Disables whether or not to spawn a flare-light on the person on fire. Can be a bit gaudy at night
 - Default: Off
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="vehicle_damage" %}
