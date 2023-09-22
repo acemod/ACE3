@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Adjusts color and luminosity when in dark conditions. 
+ * Adjusts color and luminosity when in dark conditions.
  * Simulates rod and cones vision by decreasing color intensity when dark.
  *
  * Arguments:

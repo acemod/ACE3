@@ -538,5 +538,11 @@
             <Polish>Gen %1</Polish>
             <German>Gen %1</German>
         </Key>
+        <Key ID="STR_ACE_NightVision_scotopicEffects_DisplayName">
+            <English>Scotopic Effects</English>
+        </Key>
+        <Key ID="STR_ACE_NightVision_scotopicEffects_description">
+            <English>Adjusts color and luminosity when in dark conditions. Simulates rod and cones vision by decreasing color intensity when dark.</English>
+        </Key>
     </Package>
 </Project>
