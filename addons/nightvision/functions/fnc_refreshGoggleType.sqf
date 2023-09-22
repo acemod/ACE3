@@ -38,26 +38,10 @@ if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
         if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
         if ([ACE_player] call CBA_fnc_canUseWeapon) exitWith {true}; // FFV
 
-        if (ACE_player == (driver _currentVehicle)) exitWith {
-            !("NVG" in getArray (_vehConfig >> "ViewOptics" >> "visionMode"));
-        };
-        private _result = true;
-        private _turret = ACE_player call CBA_fnc_turretPath;
-        private _turretConfig = [_currentVehicle, _turret] call CBA_fnc_getTurret;
-
-        // Seems to cover things like the offroad technical
-        if ((isNumber (_turretConfig >> "optics")) && {(getNumber (_turretConfig >> "optics")) == 0}) exitWith {true};
-
-        private _turretConfigOpticsIn = _turretConfig >> "OpticsIn";
-        if (isClass _turretConfigOpticsIn) then {
-            for "_index" from 0 to (count _turretConfigOpticsIn - 1) do {
-                if ("NVG" in getArray (_turretConfigOpticsIn select _index >> "visionMode")) exitWith {_result = false};
-            };
-        } else {
-            // No OpticsIn usualy means RCWS, still need to test on more vehicles
-            _result = false;
-        };
-        _result
+        private _turret = _vehicle unitTurret _unit; // driver is [-1]
+        if (_turret isEqualTo []) exitWith { true };
+        (_vehicle currentVisionMode _turret) params ["_turretVisionMode"];
+        _turretVisionMode != 1 // if turret isn't giving nvg, then it must be unit's googles
     }) then {
         if ((cameraView == "GUNNER") && {currentWeapon ACE_player != ""} && {binocular ACE_player == currentWeapon ACE_player}) exitWith {
             TRACE_1("souce: binocular",binocular ACE_player); // Source is from player's binocular (Rangefinder/Vector21bNite)
