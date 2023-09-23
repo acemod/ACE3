@@ -101,7 +101,7 @@ class CfgAmmo {
         GVAR(dummy) = QGVAR(R_230mm_fly);
     };
 
-    class Sh_120mm_APFSDS: Shellbase {
+    class Sh_120mm_APFSDS: ShellBase {
         GVAR(caliber) = 120;
     };
     class Sh_105mm_APFSDS: Sh_120mm_APFSDS {
