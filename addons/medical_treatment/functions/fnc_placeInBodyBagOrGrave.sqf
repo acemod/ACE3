@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal, drofseh
- * Places a dead body inside a body bag.
+ * Places a dead body inside a body bag or grave.
  *
  * Arguments:
  * 0: Arguments <ARRAY>
