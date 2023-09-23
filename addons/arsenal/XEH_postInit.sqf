@@ -150,10 +150,6 @@ GVAR(lastSortDirectionRight) = DESCENDING;
     };
 }] call CBA_fnc_addEventHandler;
 
-#define ITEM_INDEX_SIDE 1
-#define ITEM_INDEX_OPTIC 2
-#define ITEM_INDEX_BIPOD 3
-
 // Compatibility for RHS attachment system. Also used by NIArms.
 // Will only work for ACE_player, different arsenal centers will be ignored. RHS limitation.
 if (!isNil "rhs_fnc_accGripod") then {
