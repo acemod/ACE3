@@ -38,9 +38,9 @@ if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
         if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
         if ([ACE_player] call CBA_fnc_canUseWeapon) exitWith {true}; // FFV
 
-        private _turret = _vehicle unitTurret ACE_player; // driver is [-1]
+        private _turret = _currentVehicle unitTurret ACE_player; // driver is [-1]
         if (_turret isEqualTo []) exitWith { true };
-        (_vehicle currentVisionMode _turret) params ["_turretVisionMode"];
+        (_currentVehicle currentVisionMode _turret) params ["_turretVisionMode"];
         _turretVisionMode != 1 // if turret isn't giving nvg, then it must be unit's googles
     }) then {
         if ((cameraView == "GUNNER") && {currentWeapon ACE_player != ""} && {binocular ACE_player == currentWeapon ACE_player}) exitWith {
