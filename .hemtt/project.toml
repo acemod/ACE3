@@ -36,3 +36,19 @@ preset = "Hemtt"
 workshop = [
     "450814997", # CBA_A3's Workshop ID
 ]
+
+[hemtt.launch.vn]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
+dlc = [
+    "S.O.G. Prairie Fire",
+]
+
+[hemtt.launch.ws]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
+dlc = [
+    "Western Sahara",
+]

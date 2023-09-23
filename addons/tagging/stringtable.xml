@@ -198,6 +198,7 @@
             <Korean>화살표(위)</Korean>
             <Russian>Стрелка вверх</Russian>
             <Spanish>Flecha Arriba</Spanish>
+            <German>Pfeil Hoch</German>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_down">
             <English>Down Arrow</English>
@@ -206,6 +207,7 @@
             <Korean>화살표(아래)</Korean>
             <Russian>Стрелка вниз</Russian>
             <Spanish>Flecha Abajo</Spanish>
+            <German>Pfeil Runter</German>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_left">
             <English>Left Arrow</English>
@@ -214,6 +216,7 @@
             <Korean>화살표(왼쪽)</Korean>
             <Russian>Стрелка влево</Russian>
             <Spanish>Flecha Izquierda</Spanish>
+            <German>Pfeil Links</German>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_right">
             <English>Right Arrow</English>
@@ -222,6 +225,7 @@
             <Korean>화살표(오른쪽)</Korean>
             <Russian>Стрелка вправо</Russian>
             <Spanish>Flecha Derecha</Spanish>
+            <German>Pfeil Rechts</German>
         </Key>
         <Key ID="STR_ACE_Tagging_circle">
             <English>Circle</English>
@@ -230,6 +234,7 @@
             <Korean>원</Korean>
             <Russian>Круг</Russian>
             <Spanish>Círculo</Spanish>
+            <German>Kreis</German>
         </Key>
         <Key ID="STR_ACE_Tagging_cross">
             <English>Cross</English>
@@ -238,6 +243,7 @@
             <Korean>십자</Korean>
             <Russian>Перекрестие</Russian>
             <Spanish>Cruz</Spanish>
+            <German>Kreuz</German>
         </Key>
         <Key ID="STR_ACE_Tagging_diamond">
             <English>Diamond</English>
@@ -246,6 +252,7 @@
             <Korean>마름모</Korean>
             <Russian>Алмаз</Russian>
             <Spanish>Diamante</Spanish>
+            <German>Diamant</German>
         </Key>
         <Key ID="STR_ACE_Tagging_square">
             <English>Square</English>
@@ -254,6 +261,7 @@
             <Korean>사각형</Korean>
             <Russian>Квадрат</Russian>
             <Spanish>Cuadrado</Spanish>
+            <German>Quadrat</German>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle">
             <English>Triangle</English>
@@ -262,6 +270,7 @@
             <Korean>삼각형</Korean>
             <Russian>Треугольник</Russian>
             <Spanish>Triángulo</Spanish>
+            <German>Dreieck</German>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle_inverted">
             <English>Triangle Inverted</English>
@@ -270,6 +279,7 @@
             <Korean>역삼각형</Korean>
             <Russian>Обратный треугольник</Russian>
             <Spanish>Triángulo invertido</Spanish>
+            <German>Invertiertes Dreieck</German>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
@@ -349,6 +359,18 @@
             <Korean>벽에 낙서할 수 있는 스프레이캔 입니다.</Korean>
             <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
             <Chinese>噴漆可噴塗在牆壁上</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_stencilVehicle">
+            <English>Vehicle ID Marking</English>
+            <Japanese>車両IDマーキング</Japanese>
+            <Polish>Oznaczenie identyfikacyjne pojazdu</Polish>
+            <German>Fahrzeug ID Markierung</German>
+        </Key>
+        <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
+            <English>Replaces clan tag with stenciled text</English>
+            <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
+            <Polish>Zastępuje tag klanu tekstem z szablonu</Polish>
+            <German>Ersetzt das Clan-Tag durch Schablonentext</German>
         </Key>
     </Package>
 </Project>

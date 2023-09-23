@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Githawk, PabstMirror
  * Adds rearm supply actions to a vehicle or ammo container.
@@ -15,16 +15,26 @@
  * Public: No
  */
 
-if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-clients
+if (!GVAR(enabled)) exitWith {};
 
 params ["_vehicle"];
+
 private _typeOf = typeOf _vehicle;
 private _configOf = configOf _vehicle;
 TRACE_2("initSupplyVehicle",_vehicle,_typeOf);
 
+if (local _vehicle && {getAmmoCargo _vehicle > 0}) then {
+    _vehicle setAmmoCargo 0;
+};
+
+if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-clients
+
 if (!alive _vehicle) exitWith {};
 
 private _configSupply = getNumber (_configOf >> QGVAR(defaultSupply));
+if (_configSupply == 0) then {
+    _configSupply = getNumber (_config >> "transportAmmo");
+};
 private _isSupplyVehicle = _vehicle getVariable [QGVAR(isSupplyVehicle), false];
 private _oldRearmConfig = isClass (_configOf >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(takeAmmo));
 TRACE_3("",_configSupply,_isSupplyVehicle,_oldRearmConfig);

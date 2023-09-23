@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus, PabstMirror
  * Main loop, handles scaning for targets and drawing the javelin optic

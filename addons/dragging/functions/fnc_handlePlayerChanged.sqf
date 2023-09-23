@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
- * Handle player changes.
+ * Handles player changes.
  *
  * Arguments:
  * 0: New Player Unit <OBJECT>

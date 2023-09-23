@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Testing function that spawns AI units in a spiral around the given point and optionally spawns a projectile at the center

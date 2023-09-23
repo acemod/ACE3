@@ -49,6 +49,18 @@
             },
             "args": [
                 "sqfvmChecker.py"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Validate headers",
+            "command": "${config:python.pythonPath}",
+            "options": {
+                "cwd": "${workspaceFolder}/docs/tools"
+            },
+            "args": [
+                "document_functions.py",
+                "--debug"
             ]
         },
         {
@@ -57,13 +69,14 @@
                 "Validate SQF",
                 "Validate Config",
                 "Validate Stringtables",
+                "Validate headers",
                 "Check Strings",
                 "SQFVM Checker"
             ],
             "group": {
                 "kind": "test",
                 "isDefault": true
-            },
+            }
         },
         {
             "label": "Build: make.py (pboProject)",

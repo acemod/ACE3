@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Collect treatment actions for medical menu from config.
@@ -48,3 +48,8 @@ if ("ace_dragging" call EFUNC(common,isModLoaded)) then {
         }
     ];
 };
+
+// testing code for multi-line
+// for "_i" from 0 to 12 do {
+//     GVAR(actions) pushBack [format ["Example %1", _i], "medication", {true}, compile format ['systemChat "%1"', _i]]
+// };

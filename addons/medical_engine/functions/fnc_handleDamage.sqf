@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: commy2, SilentSpike
+ * Author: commy2, kymckay
  * HandleDamage EH where wound events are raised based on incoming damage.
  * Be aware that for each source of damage, the EH can fire multiple times (once for each hitpoint).
  * We store these incoming damages and compare them on our final hitpoint: "ace_hdbracket".
@@ -32,9 +32,16 @@ if (_hitPoint isEqualTo "") then {
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 private _newDamage = _damage - _oldDamage;
-// Get armor value of hitpoint and calculate damage before armor
-private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
+// Get scaled armor value of hitpoint and calculate damage before armor
+// We scale using passThrough to handle explosive-resistant armor properly (#9063)
+// We need realDamage to determine which limb was hit correctly
+[_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
 private _realDamage = _newDamage * _armor;
+if (_hitPoint isNotEqualTo "#structural") then {
+    private _armorCoef = _armor/_armorScaled;
+    private _damageCoef = linearConversion [0, 1, GVAR(damagePassThroughEffect), 1, _armorCoef];
+    _newDamage = _newDamage * _damageCoef;
+};
 TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
 
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
@@ -101,8 +108,9 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     private _damageLeftLeg = _unit getVariable [QGVAR($HitLeftLeg), [0,0]];
     private _damageRightLeg = _unit getVariable [QGVAR($HitRightLeg), [0,0]];
 
-    // Find hit point that received the maxium damage
+    // Find hit point that received the maximum damage
     // Priority used for sorting if incoming damage is equal
+    // _realDamage, priority, _newDamage, body part name
     private _allDamages = [
         [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       "Head"],
         [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 1,       "Body"],
@@ -116,7 +124,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     _allDamages sort false;
     _allDamages = _allDamages apply {[_x select 2, _x select 3, _x select 0]};
-    
+
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them
     if (_ammo isEqualTo "") then {

@@ -18,6 +18,7 @@ class CfgMagazines {
         picture = QPATHTOF(ui\notepad_ca.paa);
         model = "\a3\structures_f\items\documents\notepad_f.p3d";
         GVAR(control) = QGVAR(RscNotepad);
+        ACE_isTool = 1;
     };
 
     class XGVAR(document): GVAR(base) {

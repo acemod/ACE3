@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Alganthe
- * Create the internal stats arrays when needed for the first time
+ * Author: Alganthe, johnb43
+ * Create the internal stat arrays when needed for the first time.
  *
  * Arguments:
  * None
@@ -15,121 +15,106 @@
 if (!isNil QGVAR(statsListLeftPanel)) exitWith {};
 
 private _fnc_addToTabs = {
-    params ["_tabsList", "_tabsToAddTo", "_sideString"];
+    params ["_tabsList", "_tabsToAddTo", "_tabSide"];
+
+    private _stat = [];
+
+    // First gather all stats for a tab
     {
-        private _currentTab = _tabsList select _x;
-        private _availablePagesCount = {count _x < 5} count _currentTab;
+        // Make stat name
+        _stat = +_finalArray;
+        _stat set [5, [_class, _tabSide, [str _x, format ["0%1", _x]] select (_x < 10)] joinString ""];
 
-        private _arrayToSave = +_finalArray;
-        _arrayToSave set [0, ([_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "")];
-
-        if (_availablePagesCount > 0) then {
-
-            {
-                if (count _x < 5) exitWith {
-                    (_currentTab select _forEachIndex) append [_arrayToSave];
-                };
-            } foreach _currentTab;
-        } else {
-            _currentTab pushBack [_arrayToSave];
-        };
-    } foreach _tabsToAddTo;
+        (_tabsList select _x) pushBack _stat;
+    } forEach _tabsToAddTo;
 };
 
+// Sort by priority
 private _fnc_sortLists = {
-    params ["_tabsList"];
+    params ["_tabs"];
 
     {
-        private _page = _x;
-        {
-            {
-                reverse _x;
-            } foreach _x;
-
-            _x sort false;
-
-            {
-                reverse _x;
-            } foreach _x;
-        } foreach _page;
-    } foreach _tabsList;
+        // Sort numerically
+        _x sort false;
+    } forEach _tabs;
 };
 
 private _statsListLeftPanel = [
-    [[]], // Primary 0
-    [[]], // Handgun 1
-    [[]], // Launcher 2
-    [[]], // Uniform 3
-    [[]], // Vests 4
-    [[]], // Backpacks 5
-    [[]], // Headgear 6
-    [[]], // Goggles 7
-    [[]], // NVGs 8
-    [[]], // Binoculars 9
-    [[]], // Map 10
-    [[]], // GPS 11
-    [[]], // Radio 12
-    [[]], // Compass 13
-    [[]] // Watch 14
+    [], // Primary 0
+    [], // Handgun 1
+    [], // Launcher 2
+    [], // Uniform 3
+    [], // Vests 4
+    [], // Backpacks 5
+    [], // Headgear 6
+    [], // Goggles 7
+    [], // NVGs 8
+    [], // Binoculars 9
+    [], // Map 10
+    [], // GPS 11
+    [], // Radio 12
+    [], // Compass 13
+    []  // Watch 14
 ];
 
 private _statsListRightPanel = [
-    [[]], // Optics 0
-    [[]], // Side accs 1
-    [[]], // Muzzle 2
-    [[]], // Bipod 3
-    [[]], // Mag 4
-    [[]], // Throw 5
-    [[]], // Put 6
-    [[]]  // Misc 7
+    [], // Optics 0
+    [], // Side accs 1
+    [], // Muzzle 2
+    [], // Bipod 3
+    [], // Mag 4
+    [], // Throw 5
+    [], // Put 6
+    []  // Misc 7
 ];
 
-//------------------------- Config handling
-private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> QGVAR(stats));
+private _finalArray = [];
+private _class = "";
+private _stats = [];
+private _displayName = "";
+private _showBar = false;
+private _showText = false;
+private _condition = "";
+private _priority = 0;
 
 {
-    private _finalArray = [];
-
-    private _class = configName _x;
-    private _stats = getArray (_x >> "stats");
-    private _displayName = getText (_x >> "displayName");
-    private _showBar = getNumber (_x >> "showBar") == 1;
-    private _showText = getNumber (_x >> "showText") == 1;
-    private _condition = getText (_x >> "condition");
-    private _priority = getNumber (_x >> "priority");
+    _class = configName _x;
+    _stats = getArray (_x >> "stats");
+    _displayName = getText (_x >> "displayName");
+    _showBar = getNumber (_x >> "showBar") == 1;
+    _showText = getNumber (_x >> "showText") == 1;
+    _condition = getText (_x >> "condition");
+    _priority = getNumber (_x >> "priority");
     (getArray (_x >> "tabs")) params ["_leftTabsList", "_rightTabsList"];
 
     if (_condition != "") then {
         _condition = compile _condition;
     };
 
-    _finalArray = ["", _stats, _displayName, [_showBar, _showText], [{}, {}, _condition], _priority];
+    _finalArray = [_priority, _stats, _displayName, [_showBar, _showText], [{}, {}, _condition], ""];
 
     if (_showBar) then {
-        private _barStatement = compile (getText (_x >> "barStatement"));
-        (_finalArray select 4) set [0, _barStatement];
+        (_finalArray select 4) set [0, compile (getText (_x >> "barStatement"))];
     };
 
     if (_showText) then {
-        private _textStatement = compile (getText (_x >> "textStatement"));
-        (_finalArray select 4) set [1, _textStatement];
+        (_finalArray select 4) set [1, compile (getText (_x >> "textStatement"))];
     };
 
     TRACE_3("stats array", _finalArray, _leftTabsList, _rightTabsList);
 
-    if (count _leftTabsList > 0) then {
+    if (_leftTabsList isNotEqualTo []) then {
         [_statsListLeftPanel, _leftTabsList, "L"] call _fnc_addToTabs;
     };
 
-    if (count _rightTabsList > 0) then {
+    if (_rightTabsList isNotEqualTo []) then {
         [_statsListRightPanel, _rightTabsList, "R"] call _fnc_addToTabs;
     };
-} foreach _configEntries;
+} forEach ("(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> "ace_arsenal_stats"));
 
+// Sort
 [_statsListLeftPanel] call _fnc_sortLists;
 [_statsListRightPanel] call _fnc_sortLists;
 
-//------------------------- Config Handling
-
-missionNamespace setVariable [QGVAR(statsListLeftPanel), _statsListLeftPanel];
-missionNamespace setVariable [QGVAR(statsListRightPanel), _statsListRightPanel];
+GVAR(statsListLeftPanel) = _statsListLeftPanel;
+GVAR(statsListRightPanel) = _statsListRightPanel;

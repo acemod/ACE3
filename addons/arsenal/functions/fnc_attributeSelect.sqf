@@ -1,8 +1,8 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: mharis001
- * Handles adding/removing an item from 3DEN attribute list.
+ * Handles adding/removing an item from 3DEN's ace arsenal attribute list.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -28,11 +28,12 @@ TRACE_2("Handling item selection",_itemClassname,_addItem);
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
 _attributeValue params ["_attributeItems", "_attributeMode"];
 
-private _findItem = _attributeItems find _itemClassname;
+private _itemIndex = _attributeItems find _itemClassname;
 
 // Add item if not already in list
-if (_addItem && {_findItem < 0}) exitWith {
+if (_addItem && {_itemIndex == -1}) exitWith {
     _attributeItems pushBack _itemClassname;
+
     // Change symbol and increase alpha
     _listbox lnbSetText [[_currentRow, 2], [SYMBOL_ITEM_VIRTUAL, SYMBOL_ITEM_REMOVE] select _attributeMode];
     _listbox lnbSetColor [[_currentRow, 1], [1, 1, 1, 1]];
@@ -40,8 +41,9 @@ if (_addItem && {_findItem < 0}) exitWith {
 };
 
 // Remove item if in list
-if (!_addItem && {_findItem > -1}) exitWith {
-    _attributeItems deleteAt _findItem;
+if (!_addItem && {_itemIndex != -1}) exitWith {
+    _attributeItems deleteAt _itemIndex;
+
     // Change symbol and reduce alpha
     _listbox lnbSetText [[_currentRow, 2], SYMBOL_ITEM_NONE];
     _listbox lnbSetColor [[_currentRow, 1], [1, 1, 1, 0.5]];

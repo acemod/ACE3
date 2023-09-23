@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function to open a full arsenal on a unit
