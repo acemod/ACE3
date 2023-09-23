@@ -12,7 +12,7 @@
             class ADDON {\
                 displayName = CSTRING(displayName);\
                 distance = TOW_ACTION_DISTANCE;\
-                condition = QUOTE(_target call DFUNC(isSuitableSimulation));\
+                condition = QUOTE(alive _target && {_target call DFUNC(isSuitableSimulation)});\
                 exceptions[] = { INTERACTION_EXCEPTIONS };\
                 insertChildren = QUOTE(_target call DFUNC(getDetachActions));\
                 TOW_ACTION(3);\
