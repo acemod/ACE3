@@ -274,7 +274,7 @@ uiNamespace setVariable [QGVAR(configItems), compileFinal _configItems];
 uiNamespace setVariable [QGVAR(configItemsFlat), compileFinal _configItemsFlat];
 uiNamespace setVariable [QGVAR(faceCache), compileFinal _faceCache];
 uiNamespace setVariable [QGVAR(voiceCache), compileFinal (_voiceCache createHashMapFromArray [])];
-uiNamespace setVariable [QGVAR(insigniaCache), compileFinal (_insigniaCache createHashMapFromArray)];
+uiNamespace setVariable [QGVAR(insigniaCache), compileFinal (_insigniaCache createHashMapFromArray [])];
 uiNamespace setVariable [QGVAR(grenadeCache), compileFinal _grenadeList];
 uiNamespace setVariable [QGVAR(putCache), compileFinal _putList];
 uiNamespace setVariable [QGVAR(magazineMiscItems), compileFinal _magazineMiscItems];
