@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: JasperRab
  * Gets the name of the item, and alternatively the custom name if requested and available.

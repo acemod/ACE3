@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: voiper
  * Check if an ammo classname is an IR chemlight.

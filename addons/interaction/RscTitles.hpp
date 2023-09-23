@@ -38,7 +38,7 @@ class ACE_Interaction_Button_Base {
 };
 
 class IGUIBack;
-class RscListbox;
+class RscListBox;
 class RscText;
 class RscPicture;
 class RscControlsGroupNoScrollbars;

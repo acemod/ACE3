@@ -234,6 +234,7 @@
             <Russian>Камуфлировать окоп</Russian>
             <Spanish>Camuflar trinchera</Spanish>
             <Japanese>塹壕を偽装</Japanese>
+            <German>Graben tarnen</German>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>

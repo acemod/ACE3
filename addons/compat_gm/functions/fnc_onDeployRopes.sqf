@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: nomisum
  * Function for animating ropes when actually dropping (first introduced for GM Bo 105).

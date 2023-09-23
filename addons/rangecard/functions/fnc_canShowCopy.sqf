@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Authors: Ruthberg
  * Tests if the Range Card copy can be shown

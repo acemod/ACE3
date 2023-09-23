@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: eRazeri and esteldunedain
  * Detach an item from a unit

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus, LinkIsGrim
  * Returns the regular and scaled armor values the given item provides to a particular hitpoint, either from a cache or by reading the item config.
@@ -41,14 +41,14 @@ if (isNil "_return") then {
         } else {
             private _entry = _unitCfg >> "HitPoints" >> _hitpoint;
             _armor = getNumber (_unitCfg >> "armor") * (1 max getNumber (_entry >> "armor"));
-            _passThrough = 0.01 max getNumber (_entry >> "passThrough"); // prevent dividing by 0
+            _passThrough = 0.1 max getNumber (_entry >> "passThrough") min 1; // prevent dividing by 0
         };
     } else {
         private _condition = format ["getText (_x >> 'hitpointName') == '%1'", _hitpoint];
         private _entry = configProperties [_itemInfo >> "HitpointsProtectionInfo", _condition] param [0, configNull];
         if (!isNull _entry) then {
             _armor = getNumber (_entry >> "armor");
-            _passThrough = 0.01 max getNumber (_entry >> "passThrough");
+            _passThrough = 0.1 max getNumber (_entry >> "passThrough") min 1;
         };
     };
 

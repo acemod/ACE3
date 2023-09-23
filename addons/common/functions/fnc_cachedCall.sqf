@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, Jaynus
  * Returns the result of the function and caches it up to a given time or event

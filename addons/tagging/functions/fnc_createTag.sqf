@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag and handle its destruction. Only execute on the server.
