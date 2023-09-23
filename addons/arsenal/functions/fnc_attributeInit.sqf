@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the objects 3DEN's ace arsenal attribute at scenario start.

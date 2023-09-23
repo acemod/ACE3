@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, johnb43
  * Return all magazine types from reloader's inventory that are compatible with the given launcher.

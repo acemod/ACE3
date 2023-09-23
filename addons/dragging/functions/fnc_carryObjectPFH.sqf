@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * PFH for carrying an object.
@@ -53,6 +53,11 @@ if !(alive _target && {_unit distance _target <= 10} && {_unit getHitPointDamage
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
+private _previousHint = _unit getVariable [QGVAR(hint), []];
+
+// If paused, don't show mouse button hints
+if (_previousHint isEqualType "") exitWith {};
+
 // Mouse hint
 private _hintLMB = LLSTRING(Drop);
 getCursorObjectParams params ["_cursorObject", "", "_distance"];
@@ -81,7 +86,7 @@ if (_target isKindOf "CAManBase") then {
 
 private _hint = [_hintLMB, "", _hintMMB];
 
-if (_hint isNotEqualTo (_unit getVariable [QGVAR(hint), []])) then {
+if (_hint isNotEqualTo _previousHint) then {
     _unit setVariable [QGVAR(hint), _hint];
     _hint call EFUNC(interaction,showMouseHint);
 };

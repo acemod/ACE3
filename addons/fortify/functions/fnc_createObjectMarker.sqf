@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Seb
  * Creates a map marker for a created static object but only for sides friendly to the creator side.

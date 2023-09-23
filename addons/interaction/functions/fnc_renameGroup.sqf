@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Seb
  * Renames a group to a given string (groupID), whilst checking that it is not an invalid name.

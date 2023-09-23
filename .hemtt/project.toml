@@ -44,3 +44,11 @@ workshop = [
 dlc = [
     "S.O.G. Prairie Fire",
 ]
+
+[hemtt.launch.ws]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
+dlc = [
+    "Western Sahara",
+]
