@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         addonRootClass = QUOTE(COMPONENT);
         units[] = {};
         weapons[] = {};
