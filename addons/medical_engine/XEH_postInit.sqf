@@ -61,20 +61,6 @@
     };
 }] call CBA_fnc_addClassEventHandler;
 
-// Guarantee aircraft crashes are more lethal
-["Air", "Killed", {
-    params ["_vehicle", "_killer"];
-    TRACE_3("air killed",_vehicle,typeOf _vehicle,velocity _vehicle);
-    if ((getText (configOf _vehicle >> "destrType")) == "") exitWith {};
-    if (unitIsUAV _vehicle) exitWith {};
-
-    private _lethality = linearConversion [0, 25, (vectorMagnitude velocity _vehicle), 0.5, 1];
-    TRACE_2("air crash",_lethality,crew _vehicle);
-    {
-        [QEGVAR(medical,woundReceived), [_x, [[_lethality, "Head", _lethality]], _killer, "#vehiclecrash"], _x] call CBA_fnc_targetEvent;
-    } forEach (crew _vehicle);
-}, true, ["ParachuteBase"]] call CBA_fnc_addClassEventHandler;
-
 // Fixes units being stuck in unconscious animation when being knocked over by a PhysX object
 ["CAManBase", "AnimDone", {
     params ["_unit", "_anim"];
