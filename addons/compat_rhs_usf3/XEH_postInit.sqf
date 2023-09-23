@@ -17,9 +17,6 @@ if ("ace_compat_rhs_afrf3_arsenal" call EFUNC(common,isModLoaded)) exitWith {};
         case ITEM_INDEX_SIDE: {
             call rhs_fnc_anpeq15_rail;
         };
-        case ITEM_INDEX_OPTIC: {
-            [] call rhs_fnc_preferredOptic;
-        };
         case ITEM_INDEX_BIPOD: {
             // Need this call to make sure RHS's functions are set
             call rhs_fnc_accGripod;
