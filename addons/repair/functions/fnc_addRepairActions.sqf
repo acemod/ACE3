@@ -94,7 +94,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         _processedSelections pushBack _selection;
     } else {
         // Skip ignored hitpoints
-        if (_hitpoint in _hitPointsToIgnore) exitWith {
+        if (_forEachIndex in (_hitPointsToIgnore getOrDefault [_hitpoint, []])) exitWith {
             TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
         };
 

@@ -30,7 +30,8 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
-private _hitPointsToIgnore = [""]; // always ignore empty hitpoints
+private _hitPointsToIgnore = createHashMap;
+_hitPointsToIgnore set ["", []]; // always ignore empty hitpoints
 private _processedSelections = [];
 
 {
@@ -47,7 +48,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping duplicate wheel, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        _hitPointsToIgnore pushBackUnique _hitpoint;
+        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -57,7 +58,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping glass, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        _hitPointsToIgnore pushBackUnique _hitpoint;
+        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -67,7 +68,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping ERA/SLAT, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        _hitPointsToIgnore pushBackUnique _hitpoint;
+        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -87,7 +88,7 @@ private _processedSelections = [];
         } forEach _turretPaths;
         if (_armorComponent == "") then {
             private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
-            if (_hitpointsCfg isNotEqualTo [] && {(getText (_hitpointsCfg # 0 >> "visual")) != ""}) then {
+            if (_hitpointsCfg isNotEqualTo [] && {(getText (_hitpointsCfg # 0 >> "visual")) != ""} || {(getNumber (_hitPointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1}) then {
                 _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
             };
         };
@@ -98,7 +99,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping no selection OR armor component, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        _hitPointsToIgnore pushBackUnique _hitpoint;
+        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -115,7 +116,7 @@ private _processedSelections = [];
             ERROR_1("group: %1",_hitpointGroups # _groupIndex);
         };
 
-        _hitPointsToIgnore pushBackUnique _hitpoint;
+        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -125,7 +126,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        _hitPointsToIgnore pushBackUnique _hitpoint;
+        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
