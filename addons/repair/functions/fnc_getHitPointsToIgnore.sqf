@@ -80,16 +80,29 @@ private _processedSelections = [];
             private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
             if (_hitpointsCfg isNotEqualTo []) exitWith {
                 TRACE_2("turret hitpoint configFound",_hitpoint,_x);
+                _hitpointsCfg = _hitpointsCfg # 0;
                  // only do turret hitpoints and stuff linked to visuals
-                if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1} || {(getText (_hitpointsCfg # 0 >> "visual")) != ""}) then {
-                    _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
+                if (
+                    (_hitpoint in ["hitturret", "hitgun"]) ||
+                    {(getNumber (_hitpointsCfg >> "isGun")) == 1} ||
+                    {(getNumber (_hitpointsCfg >> "isTurret")) == 1} ||
+                    {(getText (_hitpointsCfg >> "visual")) != ""}
+                ) then {
+                    _armorComponent = getText (_hitpointsCfg >> "armorComponent");
                 };
             };
         } forEach _turretPaths;
         if (_armorComponent == "") then {
             private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
-            if (_hitpointsCfg isNotEqualTo [] && {(getText (_hitpointsCfg # 0 >> "visual")) != ""} || {(getNumber (_hitPointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1}) then {
-                _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
+            if (_hitpointsCfg isNotEqualTo []) then {
+                _hitpointsCfg = _hitpointsCfg # 0;
+                if (
+                    (getNumber (_hitpointsCfg >> "isGun")) == 1 ||
+                    {(getNumber (_hitpointsCfg >> "isTurret")) == 1} ||
+                    {(getText (_hitpointsCfg >> "visual")) != ""}
+                ) then {
+                    _armorComponent = getText (_hitpointsCfg >> "armorComponent");
+                };
             };
         };
     };
