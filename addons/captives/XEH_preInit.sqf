@@ -8,7 +8,7 @@ PREP_RECOMPILE_END;
 
 GVAR(captivityEnabled) = false;
 
-GVAR(restraints) = call (uiNamespace getVariable QGVAR(restraints));
+GVAR(restraints) = keys (uiNamespace getVariable QGVAR(restraints));
 
 #include "initSettings.sqf"
 
