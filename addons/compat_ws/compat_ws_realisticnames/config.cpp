@@ -1,25 +1,21 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rhsusf_main_loadorder"};
+        requiredAddons[] = {
+            "data_f_lxWS_Loadorder",
+            "ace_realisticnames"
+        };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "Fyuran"};
+        authors[] = {"Mike"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgAmmo.hpp"
-#include "CfgEventHandlers.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgMagazineWells.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgGlasses.hpp"
-#include "CfgJointRails.hpp"

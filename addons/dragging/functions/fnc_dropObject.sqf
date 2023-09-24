@@ -20,7 +20,10 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // Remove drop action
-[GVAR(releaseActionID), "keydown"] call CBA_fnc_removeKeyHandler;
+if (!isNil QGVAR(releaseActionID)) then {
+    [GVAR(releaseActionID), "keydown"] call CBA_fnc_removeKeyHandler;
+    GVAR(releaseActionID) = nil;
+};
 
 // Stop blocking
 if !(GVAR(dragAndFire)) then {
