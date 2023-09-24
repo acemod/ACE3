@@ -18,7 +18,7 @@
 params [["_backpack", objNull, [objNull, ""]]];
 
 if (_backpack isEqualType objNull) exitWith {
-    maxLoad _backpack > 0
+    maxLoad _backpack > 0 && {getText (configOf _backpack >> "vehicleClass") == "backpacks"}
 };
 
 private _config = configFile >> "CfgVehicles" >> _backpack;
