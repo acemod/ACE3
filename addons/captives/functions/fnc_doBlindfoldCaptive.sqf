@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mrschick, johnb43
  * Puts a blindfold on a captive unit if the player has a blindfold in their inventory.
