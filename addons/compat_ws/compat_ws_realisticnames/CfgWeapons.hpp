@@ -118,5 +118,42 @@ class CfgWeapons {
         displayName = SUBCSTRING(Velko_R5_GL_Snake_Name);
     };
 
-    // XMS has not been added as it's a make believe hybrid of the XM8/VHS-K2: XM8+VHS = XMS
+    // XMS has no realistic name as it's a make believe hybrid of the XM8/VHS-K2: XM8+VHS = XMS, this just removes the 5.56 mm from the name.
+    class arifle_SPAR_01_base_F;
+    class arifle_XMS_Base_lxWS: arifle_SPAR_01_base_F {
+        displayName = SUBCSTRING(XMS_Name);
+    };
+    class arifle_XMS_Base_khk_lxWS: arifle_XMS_Base_lxWS {
+        displayName = SUBCSTRING(XMS_Khaki_Name);
+    };
+    class arifle_XMS_Base_Sand_lxWS: arifle_XMS_Base_lxWS {
+        displayName = SUBCSTRING(XMS_Sand_Name);
+    };
+    class arifle_XMS_GL_lxWS: arifle_XMS_Base_lxWS {
+        displayName = SUBCSTRING(XMS_GL_Name);
+    };
+    class arifle_XMS_GL_khk_lxWS: arifle_XMS_GL_lxWS {
+        displayName = SUBCSTRING(XMS_GL_Khaki_Name);
+    };
+    class arifle_XMS_GL_Sand_lxWS: arifle_XMS_GL_lxWS {
+        displayName = SUBCSTRING(XMS_GL_Sand_Name);
+    };
+    class arifle_XMS_Shot_lxWS: arifle_XMS_Base_lxWS {
+        displayName = SUBCSTRING(XMS_SG_Name);
+    };
+    class arifle_XMS_Shot_khk_lxWS: arifle_XMS_Shot_lxWS {
+        displayName = SUBCSTRING(XMS_SG_Khaki_Name);
+    };
+    class arifle_XMS_Shot_Sand_lxWS: arifle_XMS_Shot_lxWS {
+        displayName = SUBCSTRING(XMS_SG_Sand_Name);
+    };
+    class arifle_XMS_M_lxWS: arifle_XMS_Base_lxWS {
+        displayName = SUBCSTRING(XMS_SW_Name);
+    };
+    class arifle_XMS_M_khk_lxWS: arifle_XMS_M_lxWS {
+        displayName = SUBCSTRING(XMS_SW_Khaki_Name);
+    };
+    class arifle_XMS_M_Sand_lxWS: arifle_XMS_M_lxWS {
+        displayName = SUBCSTRING(XMS_SW_Sand_Name);
+    };
 };
