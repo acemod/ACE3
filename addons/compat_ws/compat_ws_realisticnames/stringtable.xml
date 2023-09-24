@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_WS_RealisticNames">
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Name">
+            <English>AA12</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Tan_Name">
+            <English>AA12 (Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Snake_Name">
+            <English>AA12 (Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
+            <English>Galil ARM</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Old_Name">
+            <English>Galil ARM (Old)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Name">
+            <English>GLX 160</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Snake_Name">
+            <English>GLX 160 (Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
+            <English>GLX 160 (Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_GreenHex_Name">
+            <English>GLX 160 (Green Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Camo_Name">
+            <English>GLX 160 (Camo)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Tan_Name">
+            <English>GLX 160 (Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Black_Name">
+            <English>Mk14 Mod 1 EBR (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Snake_Name">
+            <English>Mk14 Mod 1 EBR (Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Name">
+            <English>Vektor SS-77</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_AAF_Name">
+            <English>Vektor SS-77 (Camo)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Hex_Name">
+            <English>Vektor SS-77 (Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_GreenHex_Name">
+            <English>Vektor SS-77 (Green Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
+            <English>Vektor SS-77 (Desert)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Name">
+            <English>Vektor SS-77 Compact</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Snake_Name">
+            <English>Vektor SS-77 Compact (Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Wood_Name">
+            <English>FN FAL 50.00 (Wood)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Wood_Name">
+            <English>FN FAL 50.00 GL (Wood)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Name">
+            <English>FN FAL 50.00</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Name">
+            <English>FN FAL 50.00 GL</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Desert_Name">
+            <English>FN FAL 50.00 (Desert)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Camo_Name">
+            <English>FN FAL 50.00 (Jungle)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
+            <English>Vektor R4</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Name">
+            <English>Vektor R5 Carbine</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Name">
+            <English>Vektor R5 Carbine GL</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Snake_Name">
+            <English>Vektor R5 Carbine (Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Snake_Name">
+            <English>Vektor R5 Carbine GL (Snake)</English>
+        </Key>
+    </Package>
+</Project>

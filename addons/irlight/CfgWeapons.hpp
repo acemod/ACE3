@@ -103,7 +103,7 @@
 class CfgWeapons {
     class acc_pointer_IR;
     class acc_flashlight;
-    class InventoryFlashlightItem_Base_F;
+    class InventoryFlashLightItem_Base_F;
 
     // DBAL-A3 (red pointer)
     // IR Pointer + Illuminator
@@ -275,7 +275,7 @@ class CfgWeapons {
         MRT_SwitchItemHintText = CSTRING(Mode_Wide);
         baseWeapon = "ACE_SPIR";
 
-        class ItemInfo: InventoryFlashlightItem_Base_F {
+        class ItemInfo: InventoryFlashLightItem_Base_F {
             class Flashlight {
                 SPIR_FLASHLIGHT(50,70);
                 innerAngle = 20;
@@ -293,7 +293,7 @@ class CfgWeapons {
         MRT_SwitchItemPrevClass = "ACE_SPIR";
         MRT_SwitchItemHintText = CSTRING(Mode_Medium);
 
-        class ItemInfo: InventoryFlashlightItem_Base_F {
+        class ItemInfo: InventoryFlashLightItem_Base_F {
             class Flashlight {
                 SPIR_FLASHLIGHT(80,100);
                 intensity = 100;
@@ -311,7 +311,7 @@ class CfgWeapons {
         MRT_SwitchItemPrevClass = "ACE_SPIR_Medium";
         MRT_SwitchItemHintText = CSTRING(Mode_Narrow);
 
-        class ItemInfo: InventoryFlashlightItem_Base_F {
+        class ItemInfo: InventoryFlashLightItem_Base_F {
             class Flashlight {
                 SPIR_FLASHLIGHT(120,150);
                 intensity = 200;
@@ -330,7 +330,7 @@ class CfgWeapons {
         MRT_SwitchItemPrevClass = "ACE_SPIR_LR_Narrow";
         baseWeapon = "ACE_SPIR_LR";
 
-        class ItemInfo: InventoryFlashlightItem_Base_F {
+        class ItemInfo: InventoryFlashLightItem_Base_F {
             class Flashlight {
                 SPIR_FLASHLIGHT_LR(80,100);
                 innerAngle = 20;
@@ -347,7 +347,7 @@ class CfgWeapons {
         MRT_SwitchItemPrevClass = "ACE_SPIR_LR";
         MRT_SwitchItemHintText = CSTRING(Mode_Medium);
 
-        class ItemInfo: InventoryFlashlightItem_Base_F {
+        class ItemInfo: InventoryFlashLightItem_Base_F {
             class Flashlight {
                 SPIR_FLASHLIGHT_LR(100,120);
                 intensity = 100;
@@ -364,7 +364,7 @@ class CfgWeapons {
         MRT_SwitchItemPrevClass = "ACE_SPIR_LR_Medium";
         MRT_SwitchItemHintText = CSTRING(Mode_Narrow);
 
-        class ItemInfo: InventoryFlashlightItem_Base_F {
+        class ItemInfo: InventoryFlashLightItem_Base_F {
             class Flashlight {
                 SPIR_FLASHLIGHT_LR(180,200);
                 intensity = 200;

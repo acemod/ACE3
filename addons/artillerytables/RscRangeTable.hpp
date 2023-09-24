@@ -46,7 +46,7 @@ class GVAR(rangeTableDialog) {
                 color[] = {0,0,0,0.6};
             };
         };
-        class ChargeListBox: RscListbox {
+        class ChargeListBox: RscListBox {
             idc = IDC_CHARGELIST;
             x = "13 *(safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH) / 2)";
             y = "2 * ((safeZoneH / 1.2) / 25) + (safezoneY + (safezoneH - (safeZoneH / 1.2)) / 2)";

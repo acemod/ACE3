@@ -1,5 +1,5 @@
 class CfgVehicles {
-    class Heli_Light_03_base_F;
+    class Heli_light_03_base_F;
     class RHS_UH1_Base: Heli_light_03_base_F {
         EGVAR(refuel,fuelCapacity) = 1447;
     };
