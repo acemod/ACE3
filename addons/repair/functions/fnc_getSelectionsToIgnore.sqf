@@ -10,7 +10,7 @@
  * HitPoints to ignore <ARRAY>
  *
  * Example:
- * [vehicle] call ace_repair_fnc_getHitpointsToIgnore
+ * [vehicle] call ace_repair_fnc_getSelectionsToIgnore
  *
  * Public: No
  */
@@ -18,7 +18,7 @@
 params ["_vehicle"];
 
 private _type = typeOf _vehicle;
-TRACE_2("getHitPointsToIgnore",_vehicle,_type);
+TRACE_2("getSelectionsToIgnore",_vehicle,_type);
 private _initializedClasses = missionNamespace getVariable [QGVAR(hitPointsToIgnoreInitializedClasses), createHashMap];
 if (_type in _initializedClasses) exitWith {_initializedClasses get _type};
 
@@ -30,8 +30,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
-private _hitPointsToIgnore = createHashMap;
-_hitPointsToIgnore set ["", []]; // always ignore empty hitpoints
+private _indexesToIgnore = [];
 private _processedSelections = [];
 
 {
@@ -40,6 +39,7 @@ private _processedSelections = [];
     private _isWheelOrTrack = _selection in _wheelHitSelections || {_hitpoint in _wheelHitPoints} || {_hitpoint in TRACK_HITPOINTS};
 
     if (_hitpoint isEqualTo "") then { // skip empty hitpoint
+        _indexesToIgnore pushBack _forEachIndex;
         continue
     };
 
@@ -48,7 +48,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping duplicate wheel, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
+        _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -58,7 +58,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping glass, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
+        _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -68,7 +68,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping ERA/SLAT, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
+        _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -112,7 +112,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping no selection OR armor component, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
+        _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -129,7 +129,7 @@ private _processedSelections = [];
             ERROR_1("group: %1",_hitpointGroups # _groupIndex);
         };
 
-        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
+        _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -139,7 +139,7 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-        (_hitPointsToIgnore getOrDefault [_hitpoint, [], true]) pushBack _forEachIndex;
+        _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -147,7 +147,7 @@ private _processedSelections = [];
     _processedSelections pushBack _selection;
 } forEach _hitSelections;
 
-_initializedClasses set [_type, _hitPointsToIgnore];
+_initializedClasses set [_type, _indexesToIgnore];
 missionNamespace setVariable [QGVAR(hitPointsToIgnoreInitializedClasses), _initializedClasses];
 
-_hitPointsToIgnore
+_indexesToIgnore
