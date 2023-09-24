@@ -94,5 +94,41 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Snake_Name">
             <English>Vektor R5 Carbine GL (Snake)</English>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Name">
+            <English>XMS</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Khaki_Name">
+            <English>XMS (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Sand_Name">
+            <English>XMS (Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Name">
+            <English>XMS GL</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Khaki_Name">
+            <English>XMS GL (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Sand_Name">
+            <English>XMS GL (Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Name">
+            <English>XMS SG</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
+            <English>XMS SG (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Sand_Name">
+            <English>XMS SG (Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Name">
+            <English>XMS SW</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Khaki_Name">
+            <English>XMS SW (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Sand_Name">
+            <English>XMS SW (Sand)</English>
+        </Key>
     </Package>
 </Project>
