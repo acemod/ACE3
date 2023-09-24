@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg, commy2, esteldunedain, drofseh
  * Checks if a unit can dig a grave at the position of the patient.
