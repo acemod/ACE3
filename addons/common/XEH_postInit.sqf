@@ -165,7 +165,9 @@ if (isServer) then {
 
 [QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
-    [_this, "disableWeaponAssembly", "ace_common", false] call FUNC(statusEffect_set);
+    if ([] isNotEqualTo getArray (configOf _target >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", "ace_common_lockVehicle", false] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
