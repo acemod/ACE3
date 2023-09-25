@@ -41,9 +41,6 @@ workshop = [
 workshop = [
     "450814997", # CBA_A3
 ]
-optionals = [
-    "compat_spe"
-]
 dlc = [
     "spe"
 ]
