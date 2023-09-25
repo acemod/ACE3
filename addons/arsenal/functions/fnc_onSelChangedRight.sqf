@@ -57,6 +57,9 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [primaryWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_PRIMARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
         GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
@@ -102,6 +105,9 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [secondaryWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         if !(_isDisposable && {_itemIndex >= 4}) then {
             (getUnitLoadout GVAR(center) select IDX_LOADOUT_SECONDARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
@@ -141,6 +147,9 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [handgunWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_HANDGUN_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
         GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
@@ -177,6 +186,9 @@ switch (_currentItemsIndex) do {
                 };
             };
         };
+
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [binocular GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
 
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_BINO) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
