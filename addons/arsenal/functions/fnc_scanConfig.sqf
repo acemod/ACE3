@@ -280,3 +280,13 @@ uiNamespace setVariable [QGVAR(putCache), _putList];
 uiNamespace setVariable [QGVAR(magazineMiscItems), _magazineMiscItems];
 uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), _launchers];
 uiNamespace setVariable [QGVAR(configItemsTools), _toolList];
+
+// Compatibility: Override baseWeapon for RHS optics
+// No good way to do this via script for other attachments, needs manual compat
+private _baseWeaponCache = uiNamespace getVariable QGVAR(baseWeaponNameCache);
+{
+    private _baseAttachment = configName (_cfgWeapons >> getText (_x >> "rhs_optic_base"));
+    if (_baseAttachment != "") then {
+        _baseWeaponCache set [toLower configName _x, _baseAttachment];
+    };
+} forEach ("getText (_x >> 'rhs_optic_base') != ''" configClasses _cfgWeapons);

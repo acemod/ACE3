@@ -23,3 +23,4 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgGlasses.hpp"
+#include "CfgJointRails.hpp"

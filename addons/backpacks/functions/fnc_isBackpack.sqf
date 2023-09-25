@@ -17,10 +17,10 @@
 
 params [["_backpack", objNull, [objNull, ""]]];
 
-private _config = if (_backpack isEqualType objNull) then {
-    configOf _backpack
-} else {
-    configFile >> "CfgVehicles" >> _backpack
+if (_backpack isEqualType objNull) exitWith {
+    maxLoad _backpack > 0 && {getText (configOf _backpack >> "vehicleClass") == "backpacks"}
 };
+
+private _config = configFile >> "CfgVehicles" >> _backpack;
 
 getText (_config >> "vehicleClass") == "backpacks" && {getNumber (_config >> "maximumLoad") > 0} // return
