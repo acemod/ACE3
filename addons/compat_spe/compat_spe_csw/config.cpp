@@ -24,5 +24,6 @@ class CfgPatches {
 };
 
 #include "ACE_CSW_Groups.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
+// Todo: https://github.com/acemod/ACE3/pull/9292#discussion_r1327738181
+// #include "CfgVehicles.hpp"
+// #include "CfgWeapons.hpp"
