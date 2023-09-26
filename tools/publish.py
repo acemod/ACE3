@@ -132,6 +132,12 @@ def main(argv):
     #nocrosshair: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202412481
     publishFolder(os.path.join(ace_optionals_dir,"@ace_nocrosshair"), "2202412481", changelog_path)
 
+    #nomedical: - TODO
+    # publishFolder(os.path.join(ace_optionals_dir,"@ace_nomedical"), "TODO", changelog_path)
+
+    #norealisticnames: - TODO
+    # publishFolder(os.path.join(ace_optionals_dir,"@ace_norealisticnames"), "TODO", changelog_path)
+
     #nouniformrestrictions: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202413047
     publishFolder(os.path.join(ace_optionals_dir,"@ace_nouniformrestrictions"), "2202413047", changelog_path)
 
