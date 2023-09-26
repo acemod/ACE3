@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Compatibility With ACE_CSW (will be called by ace_csw, no dependency)

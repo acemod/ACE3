@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nelson Duarte, kymckay
  * Moves the spectator camera to a position relative to the camera focus.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, kymckay
  * Function used to toggle the whole user interface

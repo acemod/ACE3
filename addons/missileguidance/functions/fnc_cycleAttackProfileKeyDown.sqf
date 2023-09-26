@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Cycles fire mode for any missileGuidance enabled ammo that has multiple attack profiles

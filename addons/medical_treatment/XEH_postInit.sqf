@@ -25,7 +25,7 @@ if (isServer) then {
 [QGVAR(fullHealLocal), LINKFUNC(fullHealLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(ivBagLocal), LINKFUNC(ivBagLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(medicationLocal), LINKFUNC(medicationLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(placeInBodyBag), LINKFUNC(placeInBodyBag)] call CBA_fnc_addEventHandler;
+[QGVAR(placeInBodyBagOrGrave), LINKFUNC(placeInBodyBagOrGrave)] call CBA_fnc_addEventHandler;
 [QGVAR(splintLocal), LINKFUNC(splintLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(tourniquetLocal), LINKFUNC(tourniquetLocal)] call CBA_fnc_addEventHandler;
 
@@ -61,3 +61,35 @@ if (isServer) then {
         [_toReplace, _replacements] call EFUNC(common,registerItemReplacement);
     } forEach (configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"]);
 }] call CBA_fnc_addEventHandler;
+
+if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
+    if (hasInterface) then {
+        private _checkHeadstoneAction = [
+            QGVAR(checkHeadstone),
+            LLSTRING(checkHeadstoneName),
+            QPATHTOEF(medical_gui,ui\cross_grave.paa),
+            {
+                [
+                    [_target getVariable QGVAR(headstoneData)],
+                    true
+                ] call CBA_fnc_notify;
+            },
+            {!isNil {_target getVariable QGVAR(headstoneData)}},
+            {},
+            [],
+            [1.05, 0.02, 0.3] //position in centre of cross
+        ] call EFUNC(interact_menu,createAction);
+
+        ["Land_Grave_dirt_F", 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
+    };
+
+    if (isServer) then {
+        ["ace_placedInBodyBag", {
+            params ["_target", "_restingPlace"];
+            TRACE_2("ace_placedInBodyBag eh",_target,_restingPlace);
+
+            private _targetName = [_target, false, true] call EFUNC(common,getName);
+            _restingPlace setVariable [QGVAR(headstoneData), _targetName, true];
+        }] call CBA_fnc_addEventHandler;
+    };
+};

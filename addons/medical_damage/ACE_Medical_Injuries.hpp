@@ -167,6 +167,13 @@ class ACE_Medical_Injuries {
                 painMultiplier = 0.9;
             };
         };
+        class vehiclehit: explosive {
+            // vehicle explosions are usually caused by explosive damage and should behave similarly
+            thresholds[] = {{6, 3}, {4.5, 2}, {2, 2}, {0.8, 1}, {0.2, 1}, {0, 0}};
+            class woundHandlers: woundHandlers {
+                GVAR(vehiclehit) = QFUNC(woundsHandlerVehiclehit);
+            };
+        };
         class vehiclecrash {
             thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;

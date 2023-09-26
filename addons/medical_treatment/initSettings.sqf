@@ -26,6 +26,24 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(bandageRollover),
+    "CHECKBOX",
+    [LSTRING(bandageRollover_DisplayName), LSTRING(bandageRollover_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    false // server can force if necessary, otherwise client decides
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(bandageEffectiveness),
+    "SLIDER",
+    [LSTRING(bandageEffectiveness_DisplayName), LSTRING(bandageEffectiveness_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 5, 1, 2],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(woundReopenChance),
     "SLIDER",
     [LSTRING(WoundReopenChance_DisplayName), LSTRING(WoundReopenChance_Description)],
@@ -104,6 +122,15 @@
     [LSTRING(TreatmentTimeBodyBag_DisplayName), LSTRING(TreatmentTimeBodyBag_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 15, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(treatmentTimeGrave),
+    "SLIDER",
+    [LSTRING(TreatmentTimeGrave_DisplayName), LSTRING(TreatmentTimeGrave_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 120, 30, 1],
     true
 ] call CBA_fnc_addSetting;
 
@@ -284,6 +311,15 @@
     [LSTRING(AllowBodyBagUnconscious_DisplayName), LSTRING(AllowBodyBagUnconscious_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(allowGraveDigging),
+    "LIST",
+    [LSTRING(AllowGaveDigging_DisplayName), LSTRING(AllowGaveDigging_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(AllowGaveDigging_graveOnlyDead), ELSTRING(common,Yes)], 1],
     true
 ] call CBA_fnc_addSetting;
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Commy2, based on KK_fnc_playerWeaponMulfunction from KillzoneKid
  * Jam the weapon

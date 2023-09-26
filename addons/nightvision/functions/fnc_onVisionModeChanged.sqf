@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, Dslyecxi, PabstMirror
  * Disables turning on NVGs while the player aims down his sight.

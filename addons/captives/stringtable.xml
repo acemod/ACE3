@@ -136,6 +136,19 @@
             <Chinesesimp>将俘虏带出载具</Chinesesimp>
             <Turkish>Tutukluyu indir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Captives_BlindfoldCaptive">
+            <English>Blindfold Captive</English>
+            <German>Augen verbinden</German>
+            <French>Bandeau sur les yeux du captif</French>
+            <Portuguese>Vendar prisioneiro</Portuguese>
+            <Italian>Benda gli occhi</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_RemoveBlindfoldCaptive">
+            <English>Remove blindfold</English>
+            <German>Augenbinde entfernen</German>
+            <French>Enlever bandeau sur les yeux</French>
+            <Italian>Rimuovi la benda per gli occhi</Italian>
+        </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
             <German>Kabelbinder</German>
@@ -430,7 +443,7 @@
             <English>Require AI surrendering</English>
             <German>Benötigt für KI Kapitulation</German>
             <Italian>Necessita arresa AI</Italian>
-            <Japanese>AI の投降を必要とする</Japanese>
+            <Japanese>AIの投降を必要とする</Japanese>
             <Chinese>需要AI先行投降</Chinese>
             <Chinesesimp>需要 AI 先行投降</Chinesesimp>
             <Korean>AI 항복 필요</Korean>
@@ -445,7 +458,7 @@
             <English>Require AI to surrender before they can be arrested</English>
             <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
             <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
-            <Japanese>AI の拘束は AI が投降している場合に限り可能にします。</Japanese>
+            <Japanese>AIの拘束はAIが投降している場合に限り可能にします。</Japanese>
             <Chinese>在逮捕AI之前該AI必須先進入投降狀態</Chinese>
             <Chinesesimp>在俘获 AI 之前该 AI 必须先进入投降状态。</Chinesesimp>
             <Korean>포박하기 전에 먼저 AI가 투항해야만 합니다.</Korean>
