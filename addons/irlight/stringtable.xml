@@ -4,58 +4,72 @@
         <Key ID="STR_ACE_IRLight_DBAL_A3_Red">
             <English>DBAL-A3 (red)</English>
             <German>DBAL-A3 (rot)</German>
+            <Polish>DBAL-A3 (czerwony)</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_Green">
             <English>DBAL-A3 (green)</English>
             <German>DBAL-A3 (grün)</German>
+            <Polish>DBAL-A3 (zielony)</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF&lt;br&gt;Double click to switch mode</English>
             <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS&lt;br&gt;Doppelklick um Modus zu wechseln</German>
+            <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Włączanie/wyłączanie lasera&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionShort">
             <English>Dual Beam Aiming Laser</English>
             <German>Doppelstrahllaservisier</German>
+            <Polish>Laser Celowniczy z Podwójną Wiązką</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_VisiblePointer">
             <English>Visible Laser</English>
             <German>Sichtbarer Laser</German>
+            <Polish>Laser Widzialny</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRPointer">
             <English>IR Laser</English>
             <German>IR-Laser</German>
+            <Polish>Laser IR</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRIlluminator">
             <English>IR Illuminator</English>
             <German>IR-Taschenlampe</German>
+            <Polish>Iluminator IR</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRDual">
             <English>IR Laser and Illuminator</English>
             <German>IR-Laser und -Licht</German>
+            <Polish>Laser IR i Iluminator</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Wide">
             <English>Wide Beam</English>
             <German>Breiter Lichtstrahl</German>
+            <Polish>Szeroka Wiązka</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Medium">
             <English>Medium Beam</English>
             <German>Mittlerer Lichtstrahl</German>
+            <Polish>Średnia Wiązka</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Narrow">
             <English>Narrow Beam</English>
             <German>Schmaler Lichtstrahl</German>
+            <Polish>Wąska Wiązka</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Light ON/OFF&lt;br&gt;Double click to switch mode</English>
             <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Licht EIN/AUS&lt;br&gt;Doppelklick um Modus zu wechseln</German>
+            <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Iluminator włączony/wyłączony&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionShort">
             <English>Special Purpose IR LED Illuminator</English>
             <German>Infrarot LED Taschenlampe</German>
+            <Polish>Iluminator IR LED Specjalnego Przeznaczenia</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_MomentarySwitch">
             <English>Illuminator / Laser Momentary Switch</English>
             <German>Licht / Laser Tastschalter</German>
+            <Polish>Przełącznik Chwilowy Iluminator / Laser</Polish>
         </Key>
     </Package>
 </Project>

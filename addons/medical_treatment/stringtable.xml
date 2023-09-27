@@ -726,6 +726,7 @@
             <German>Legt fest, ob etwas nach der Anwendung verwendet werden soll.</German>
             <Spanish>Qué debe ser consumido despues de su uso.</Spanish>
             <Japanese>縫合キットの使用後に消費するかどうかを決定します。</Japanese>
+            <Polish>Co powinno zostać zużyte po zastosowaniu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
@@ -833,12 +834,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_DisplayName">
             <English>Allow Grave Digging</English>
+            <Polish>Zezwalaj na kopanie grobów</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_Description">
             <English>Enables digging graves to dispose of corpses.</English>
+            <Polish>Umożliwia kopanie grobów w celu pozbycia się zwłok.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_graveOnlyDead">
             <English>Only if dead</English>
+            <Polish>Tylko kiedy martwy</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -2342,18 +2346,21 @@
             <German>Naht</German>
             <Spanish>Sutura</Spanish>
             <Japanese>縫合糸</Japanese>
+            <Polish>Szew</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Short">
             <English>Surgical Suture for stitching injuries.</English>
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
             <Spanish>Sutura quirúrjica para heridas de puntos.</Spanish>
             <Japanese>傷害縫合用の外科縫合糸。</Japanese>
+            <Polish>Szew chirurgiczny do zszywania ran.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Use">
             <English>Surgical Suture for stitching injuries.</English>
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
             <Spanish>Sutura quirúrjica para heridas de puntos.</Spanish>
             <Japanese>傷害縫合用の外科縫合糸。</Japanese>
+            <Polish>Szew chirurgiczny do zszywania ran.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bodybag_Display">
             <English>Bodybag</English>
@@ -4709,6 +4716,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_checkHeadstoneName">
             <English>Check name on headstone</English>
+            <Polish>Sprawdź imię na grobie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
             <English>Bandage Rollover</English>
