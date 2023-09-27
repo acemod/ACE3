@@ -14,7 +14,7 @@
         <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF&lt;br&gt;Double click to switch mode</English>
             <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS&lt;br&gt;Doppelklick um Modus zu wechseln</German>
-            <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Włączanie/wyłączanie lasera&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
+            <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Laser WŁ/WYŁ&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionShort">
             <English>Dual Beam Aiming Laser</English>
@@ -59,7 +59,7 @@
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Light ON/OFF&lt;br&gt;Double click to switch mode</English>
             <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Licht EIN/AUS&lt;br&gt;Doppelklick um Modus zu wechseln</German>
-            <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Iluminator włączony/wyłączony&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
+            <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Iluminator WŁ/WYŁ&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
         </Key>
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionShort">
             <English>Special Purpose IR LED Illuminator</English>
