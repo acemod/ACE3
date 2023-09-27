@@ -1256,6 +1256,7 @@
             <Japanese>外傷の表示</Japanese>
             <Polish>Pokaż Doznane Urazy</Polish>
             <German>Zeigen Sie das erlittene Trauma</German>
+            <Korean>외상 지속 표시</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_Description">
             <English>Show trauma sustained in the injury list.</English>
@@ -1263,6 +1264,7 @@
             <Japanese>負傷リストに外傷を表示する。</Japanese>
             <Polish>Pokaż odniesione obrażenia na liście obrażeń.</Polish>
             <German>Zeigen Sie das erlittene Trauma in der Verletzungsliste an.</German>
+            <Korean>부상 목록에 발생한 외상을 표시합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
             <English>Minor Trauma</English>
@@ -1270,6 +1272,7 @@
             <Japanese>軽度の外傷</Japanese>
             <Polish>Niewielki Uraz</Polish>
             <German>Kleineres Trauma</German>
+            <Korean>약한 외상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained2">
             <English>Major Trauma</English>
@@ -1277,6 +1280,7 @@
             <Japanese>中度の外傷</Japanese>
             <Polish>Poważny Uraz</Polish>
             <German>Großes Trauma</German>
+            <Korean>중간 외상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained3">
             <English>Severe Trauma</English>
@@ -1284,6 +1288,7 @@
             <Japanese>重度の外傷</Japanese>
             <Polish>Ciężki Uraz</Polish>
             <German>Schweres Trauma</German>
+            <Korean>강한 외상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained4">
             <English>Chronic Trauma</English>
@@ -1291,6 +1296,7 @@
             <Japanese>慢性的な外傷</Japanese>
             <Polish>Przewlekły Uraz</Polish>
             <German>Chronisches Trauma</German>
+            <Korean>심각한 외상</Korean>
         </Key>
     </Package>
 </Project>

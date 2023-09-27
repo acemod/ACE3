@@ -3,96 +3,127 @@
     <Package name="Compat_WS_RealisticNames">
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Name">
             <English>AA12</English>
+            <Korean>AA-12</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Tan_Name">
             <English>AA12 (Sand)</English>
+            <Korean>AA-12 (모래)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Snake_Name">
             <English>AA12 (Snake)</English>
+            <Korean>AA-12 (뱀 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
             <English>Galil ARM</English>
+            <Korean>갈릴 ARM</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Old_Name">
             <English>Galil ARM (Old)</English>
+            <Korean>갈릴 ARM (낡음)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Name">
             <English>GLX 160</English>
+            <Korean>GLX-160</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Snake_Name">
             <English>GLX 160 (Snake)</English>
+            <Korean>GLX-160 (뱀 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
             <English>GLX 160 (Hex)</English>
+            <Korean>GLX-160 (육각)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_GreenHex_Name">
             <English>GLX 160 (Green Hex)</English>
+            <Korean>GLX-160 (초록육각)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Camo_Name">
             <English>GLX 160 (Camo)</English>
+            <Korean>GLX-160 (위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Tan_Name">
             <English>GLX 160 (Sand)</English>
+            <Korean>GLX-160 (모래)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Black_Name">
             <English>Mk14 Mod 1 EBR (Black)</English>
+            <Korean>Mk.14 Mod 1 EBR (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Snake_Name">
             <English>Mk14 Mod 1 EBR (Snake)</English>
+            <Korean>Mk.14 Mod 1 EBR (뱀 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Name">
             <English>Vektor SS-77</English>
+            <Korean>벡터 SS-77</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_AAF_Name">
             <English>Vektor SS-77 (Camo)</English>
+            <Korean>벡터 SS-77 (위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Hex_Name">
             <English>Vektor SS-77 (Hex)</English>
+            <Korean>벡터 SS-77 (육각)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_GreenHex_Name">
             <English>Vektor SS-77 (Green Hex)</English>
+            <Korean>벡터 SS-77 (초록육각)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
             <English>Vektor SS-77 (Desert)</English>
+            <Korean>벡터 SS-77 (사막)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Name">
             <English>Vektor SS-77 Compact</English>
+            <Korean>벡터 SS-77 단축형</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Snake_Name">
             <English>Vektor SS-77 Compact (Snake)</English>
+            <Korean>벡터 SS-77 단축형 (뱀 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Wood_Name">
             <English>FN FAL 50.00 (Wood)</English>
+            <Korean>FN FAL 50.00 (목재)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Wood_Name">
             <English>FN FAL 50.00 GL (Wood)</English>
+            <Korean>FN FAL 50.00 GL (목재)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Name">
             <English>FN FAL 50.00</English>
+            <Korean>FN FAL 50.00</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Name">
             <English>FN FAL 50.00 GL</English>
+            <Korean>FN FAL 50.00 GL</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Desert_Name">
             <English>FN FAL 50.00 (Desert)</English>
+            <Korean>FN FAL 50.00 (사막)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Camo_Name">
             <English>FN FAL 50.00 (Jungle)</English>
+            <Korean>FN FAL 50.00 (정글)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
+            <Korean>벡터 R4</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Name">
             <English>Vektor R5 Carbine</English>
+            <Korean>벡터 R5 카빈</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Name">
             <English>Vektor R5 Carbine GL</English>
+            <Korean>벡터 R5 카빈 GL</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Snake_Name">
             <English>Vektor R5 Carbine (Snake)</English>
+            <Korean>벡터 R5 카빈 (뱀 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Snake_Name">
             <English>Vektor R5 Carbine GL (Snake)</English>
+            <Korean>벡터 R5 카빈 GL (뱀 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Name">
             <English>XMS</English>
@@ -103,6 +134,7 @@
             <Spanish>XMS</Spanish>
             <Chinesesimp>XMS</Chinesesimp>
             <Russian>XMS</Russian>
+            <Korean>XMS</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Khaki_Name">
             <English>XMS (Khaki)</English>
@@ -113,6 +145,7 @@
             <Spanish>XMS (caqui)</Spanish>
             <Chinesesimp>XMS（卡其色）</Chinesesimp>
             <Russian>XMS (хаки)</Russian>
+            <Korean>XMS (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Sand_Name">
             <English>XMS (Sand)</English>
@@ -123,6 +156,7 @@
             <Spanish>XMS (arena)</Spanish>
             <Chinesesimp>XMS（沙色）</Chinesesimp>
             <Russian>XMS (песочный)</Russian>
+            <Korean>XMS (모래)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Name">
             <English>XMS GL</English>
@@ -133,6 +167,7 @@
             <Spanish>XMS GL</Spanish>
             <Chinesesimp>XMS GL</Chinesesimp>
             <Russian>XMS GL</Russian>
+            <Korean>XMS GL</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Khaki_Name">
             <English>XMS GL (Khaki)</English>
@@ -143,6 +178,7 @@
             <Spanish>XMS GL (caqui)</Spanish>
             <Chinesesimp>XMS GL（卡其色）</Chinesesimp>
             <Russian>XMS GL (хаки)</Russian>
+            <Korean>XMS GL (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Sand_Name">
             <English>XMS GL (Sand)</English>
@@ -153,6 +189,7 @@
             <Spanish>XMS GL (arena)</Spanish>
             <Chinesesimp>XMS GL（沙色）</Chinesesimp>
             <Russian>XMS GL (песочный)</Russian>
+            <Korean>XMS GL (모래)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Name">
             <English>XMS SG</English>
@@ -163,6 +200,7 @@
             <Spanish>XMS SG</Spanish>
             <Chinesesimp>XMS SG</Chinesesimp>
             <Russian>XMS SG</Russian>
+            <Korean>XMS SG</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
             <English>XMS SG (Khaki)</English>
@@ -173,6 +211,7 @@
             <Spanish>XMS SG (caqui)</Spanish>
             <Chinesesimp>XMS SG（卡其色）</Chinesesimp>
             <Russian>XMS SG (хаки)</Russian>
+            <Korean>XMS SG (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Sand_Name">
             <English>XMS SG (Sand)</English>
@@ -183,6 +222,7 @@
             <Spanish>XMS SG (arena)</Spanish>
             <Chinesesimp>XMS SG（沙色）</Chinesesimp>
             <Russian>XMS SG (песочный)</Russian>
+            <Korean>XMS SG (모래)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Name">
             <English>XMS SW</English>
@@ -193,6 +233,7 @@
             <Spanish>XMS SW</Spanish>
             <Chinesesimp>XMS SW</Chinesesimp>
             <Russian>XMS SW</Russian>
+            <Korean>XMS SW</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Khaki_Name">
             <English>XMS SW (Khaki)</English>
@@ -203,6 +244,7 @@
             <Spanish>XMS SW (caqui)</Spanish>
             <Chinesesimp>XMS SW（卡其色）</Chinesesimp>
             <Russian>XMS SW (хаки)</Russian>
+            <Korean>XMS SW (카키)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Sand_Name">
             <English>XMS SW (Sand)</English>
@@ -213,6 +255,7 @@
             <Spanish>XMS SW (arena)</Spanish>
             <Chinesesimp>XMS SW（沙色）</Chinesesimp>
             <Russian>XMS SW (песочный)</Russian>
+            <Korean>XMS SW (모래)</Korean>
         </Key>
     </Package>
 </Project>
