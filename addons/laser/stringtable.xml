@@ -90,12 +90,14 @@
             <Japanese>レーザースポットトラッカー: オン</Japanese>
             <Polish>Laserowe Śledzenie Punktu: Wł.</Polish>
             <German>Laserziel Verfolgung: An</German>
+            <Korean>레이저 스팟 추적기: 켬</Korean>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOff">
             <English>Laser Spot Tracker: Off</English>
             <Japanese>レーザースポットトラッカー: オフ</Japanese>
             <Polish>Laserowe Śledzenie Punktu: Wył.</Polish>
             <German>Laserziel Verfolgung: Aus</German>
+            <Korean>레이저 스팟 추적기: 끔</Korean>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>
