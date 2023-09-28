@@ -12,3 +12,8 @@ class vn_m16_mag_base;
 class vn_m63a_100_mag: vn_m16_mag_base {
     ACE_isBelt = 1;
 };
+class vn_mg42_50_mag: vn_lmgmag_base {
+    ACE_isBelt = 1;
+};
+class vn_mg42_50_t_mag: vn_mg42_50_mag {};
+class vn_rpd_125_mag: vn_rpd_100_mag {};
