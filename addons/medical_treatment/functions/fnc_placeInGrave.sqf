@@ -23,9 +23,14 @@ if ((alive _patient) && {GVAR(allowGraveDigging) < 2}) exitWith {
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
-private _graveClassname = missionNameSpace getVariable [QGVAR(graveClassname), "Land_Grave_dirt_F"];
+private _graveClassname = if (GVAR(graveDiggingMarker)) then {
+    missionNameSpace getVariable [QGVAR(graveClassname), "Land_Grave_dirt_F"]
+} else {
+    ""
+};
 // Land_Grave_dirt_F needs to be rotated 90 degrees to line up with the body
 private _graveRotation = missionNameSpace getVariable [QGVAR(graveRotation), 90]; 
 
-[_this, _graveClassname, [0,0,0], _graveRotation] call FUNC(placeInBodyBagOrGrave);
-
+["ace_placedInGrave", 
+    [_this, _graveClassname, [0,0,0], _graveRotation] call FUNC(placeInBodyBagOrGrave)
+] call CBA_fnc_globalEvent;
