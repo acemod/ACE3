@@ -80,7 +80,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
             [1.05, 0.02, 0.3] //position in centre of cross
         ] call EFUNC(interact_menu,createAction);
 
-        ["Land_Grave_dirt_F", 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
+        ["Land_ACE_Grave", 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (isServer) then {

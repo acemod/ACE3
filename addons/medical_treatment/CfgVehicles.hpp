@@ -33,6 +33,13 @@ class CfgVehicles {
         };
     };
 
+    // Grave vehicle
+	class Land_Grave_dirt_F;
+    class Land_ACE_Grave: Land_Grave_dirt_F {
+        model = QPATHTOF(data\grave.p3d);
+    };
+
+
     // Medical litter classes
     class Thing;
     class ACE_MedicalLitterBase: Thing {
