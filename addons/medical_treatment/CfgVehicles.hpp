@@ -29,6 +29,13 @@ class CfgVehicles {
                 statement = "";
                 icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
                 selection = "";
+                class GVAR(buryBodyBag) {
+                    displayName = CSTRING(DigGrave);
+                    distance = HANDCUFFS_DISTANCE;
+                    condition = QUOTE([_this#1] call FUNC(canDigGrave));
+                    statement = QUOTE(_this call FUNC(placeBodyBagInGrave));
+                    icon = QPATHTOEF(medical_gui,ui\grave.paa);
+                };
             };
         };
     };

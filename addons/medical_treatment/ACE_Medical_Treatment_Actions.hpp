@@ -256,7 +256,7 @@ class GVAR(actions) {
     class Grave: BodyBag {
         displayName = CSTRING(DigGrave);
         displayNameProgress = CSTRING(DiggingGrave);
-        icon = QPATHTOEF(medical_gui,ui\cross_grave.paa);
+        icon = QPATHTOEF(medical_gui,ui\grave.paa);
         treatmentTime = QGVAR(treatmentTimeGrave);
         condition = QFUNC(canDigGrave);
         callbackSuccess = QFUNC(placeInGrave);

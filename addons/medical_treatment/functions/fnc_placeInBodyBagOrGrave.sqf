@@ -37,7 +37,7 @@ if (alive _patient) then {
 private _position = getPosASL _patient;
 private _direction = 0;
 
-if (typeOf _patient == "ACE_bodyBagObject") then {
+if (_patient isKindOf "ACE_bodyBagObject") then {
     _direction getDir _patient;
 } else {
     private _headPos = _patient modelToWorldVisual (_patient selectionPosition "head");
