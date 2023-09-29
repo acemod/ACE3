@@ -47,7 +47,7 @@
             <English>IR Laser and Illuminator</English>
             <German>IR-Laser und -Licht</German>
             <Polish>Laser IR i Iluminator</Polish>
-            <Korean>적외선 레이저와 조병</Korean>
+            <Korean>적외선 레이저와 조명</Korean>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Wide">
             <English>Wide Beam</English>
@@ -71,7 +71,7 @@
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Light ON/OFF&lt;br&gt;Double click to switch mode</English>
             <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Licht EIN/AUS&lt;br&gt;Doppelklick um Modus zu wechseln</German>
             <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Iluminator WŁ/WYŁ&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
-            <Korean>&lt;t color='#9cf953'&gt;사용: &lt;/t&gt;조명 켜기/끄기&lt;br&gt;터블 클릭으로 모드 전환</Korean>
+            <Korean>&lt;t color='#9cf953'&gt;사용: &lt;/t&gt;조명 켜기/끄기&lt;br&gt;더블 클릭으로 모드 전환</Korean>
         </Key>
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionShort">
             <English>Special Purpose IR LED Illuminator</English>
