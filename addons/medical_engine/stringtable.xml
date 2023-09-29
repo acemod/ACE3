@@ -25,11 +25,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_displayName">
             <English>Armor PassThrough Effect</English>
-            <Polish>방어구 PassThrough 효과</Polish>
+            <Korean>방어구 PassThrough 효과</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_description">
             <English>Controls effect of armor 'passThrough' on final damage. Makes high armor values, like ones used in GL rigs, less effective.\nUse 0% for pre 3.16.0 armor behavior.\nOnly touch this if you know what you're doing!</English>
-            <Polish>최종 데미지에 대한 방어구의 'PassThrough' 효과를 조정합니다. GL 리그에 사용되는 것과 같은 높은 방호값을 덜 효과적으로 만듭니다\n3.16.0 이전의 방어구 동작에는 0%를 사용하십시오.\n당신이 뭘 하고 있는지 알고 있는 경우에만 이걸 설정하세요!</Polish>
+            <Korean>최종 데미지에 대한 방어구의 'PassThrough' 효과를 조정합니다. GL 리그에 사용되는 것과 같은 높은 방호값을 덜 효과적으로 만듭니다\n3.16.0 이전의 방어구 동작에는 0%를 사용하십시오.\n당신이 뭘 하고 있는지 알고 있는 경우에만 이걸 설정하세요!</Korean>
         </Key>
     </Package>
 </Project>
