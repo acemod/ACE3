@@ -35,7 +35,7 @@
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Spray Paint - Quick Tag</English>
             <Russian>Быстрый маркер</Russian>
-            <Japanese>スプレーペイント - クイック タグ</Japanese>
+            <Japanese>スプレーペイント - クイックタグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
             <German>Schnelle Markierung (Spraydose)</German>
             <Korean>스프레이 페인트 - 빠른 태그</Korean>
@@ -51,7 +51,7 @@
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
-            <Japanese>インタラクション ポイントにむけてタグ付けをします。</Japanese>
+            <Japanese>メインのインタラクションポイント(タグ)を選択した際に行われる動作。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>상호작용 시 표시할 낙서를 고릅니다.</Korean>
@@ -120,7 +120,7 @@
             <Czech>Označit</Czech>
             <Portuguese>Marcar</Portuguese>
             <Russian>Маркер</Russian>
-            <Japanese>タグ</Japanese>
+            <Japanese>タグ (スプレーペイント)</Japanese>
             <Korean>태그</Korean>
             <French>Tag</French>
             <Chinesesimp>喷漆</Chinesesimp>
@@ -217,7 +217,7 @@
         </Key>
         <Key ID="STR_ACE_Tagging_Custom_square_filled">
             <English>Filled Square</English>
-            <Japanese>四角(塗りつぶし)</Japanese>
+            <Japanese>四角 (塗りつぶし)</Japanese>
             <Polish>Wypełniony Kwadrat</Polish>
             <Korean>채워진 사각형</Korean>
             <Russian>Заполненный Квадрат</Russian>
@@ -252,7 +252,7 @@
             <Czech>Černý sprej</Czech>
             <Portuguese>Spray de tinta preta</Portuguese>
             <Russian>Черный спрей</Russian>
-            <Japanese>ペイントスプレー缶 (黒)</Japanese>
+            <Japanese>ペイントスプレー缶 (黒色)</Japanese>
             <Korean>검정 스프레이</Korean>
             <Chinesesimp>黑色喷漆</Chinesesimp>
             <Chinese>黑色噴漆</Chinese>
@@ -268,7 +268,7 @@
             <Czech>Červený sprej</Czech>
             <Portuguese>Spray de tinta vermelha</Portuguese>
             <Russian>Красный спрей</Russian>
-            <Japanese>ペイントスプレー缶 (赤)</Japanese>
+            <Japanese>ペイントスプレー缶 (赤色)</Japanese>
             <Korean>빨강 스프레이</Korean>
             <Chinesesimp>红色喷漆</Chinesesimp>
             <Chinese>紅色噴漆</Chinese>
@@ -284,7 +284,7 @@
             <Czech>Zelený sprej</Czech>
             <Portuguese>Spray de tinta verde</Portuguese>
             <Russian>Зелёный спрей</Russian>
-            <Japanese>ペイントスプレー缶 (緑)</Japanese>
+            <Japanese>ペイントスプレー缶 (緑色)</Japanese>
             <Korean>초록 스프레이</Korean>
             <Chinesesimp>绿色喷漆</Chinesesimp>
             <Chinese>綠色噴漆</Chinese>
@@ -300,7 +300,7 @@
             <Czech>Modrý sprej</Czech>
             <Portuguese>Spray de tinta azul</Portuguese>
             <Russian>Синий спрей</Russian>
-            <Japanese>ペイントスプレー缶 (青)</Japanese>
+            <Japanese>ペイントスプレー缶 (青色)</Japanese>
             <Korean>파랑 스프레이</Korean>
             <Chinesesimp>蓝色喷漆</Chinesesimp>
             <Chinese>藍色噴漆</Chinese>
@@ -316,7 +316,7 @@
             <Czech>Žlutý sprej</Czech>
             <Portuguese>Spray de tinta amarela</Portuguese>
             <Russian>Желтый спрей</Russian>
-            <Japanese>ペイントスプレー缶 (黄)</Japanese>
+            <Japanese>ペイントスプレー缶 (黄色)</Japanese>
             <Korean>노랑 스프레이</Korean>
             <Chinesesimp>黄色喷漆</Chinesesimp>
             <Chinese>黃色噴漆</Chinese>
@@ -332,7 +332,7 @@
             <Czech>Bílý sprej</Czech>
             <Portuguese>Spray de tinta branca</Portuguese>
             <Russian>Белый спрей</Russian>
-            <Japanese>ペイントスプレー缶 (白)</Japanese>
+            <Japanese>ペイントスプレー缶 (白色)</Japanese>
             <Korean>하양 스프레이</Korean>
             <Chinesesimp>白色喷漆</Chinesesimp>
             <Chinese>白色噴漆</Chinese>
@@ -348,7 +348,7 @@
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
-            <Japanese>壁にタグを付けるためのペイントスプレー缶。</Japanese>
+            <Japanese>壁にタグを描くためのペイントスプレー缶。</Japanese>
             <Korean>벽에 낙서할 수 있는 스프레이캔 입니다.</Korean>
             <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
             <Chinese>噴漆可噴塗在牆壁上</Chinese>
