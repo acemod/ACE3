@@ -34,10 +34,17 @@ if (alive _patient) then {
     [_patient, "buried_alive", _medic] call EFUNC(medical_status,setDead);
 };
 
-private _headPos = _patient modelToWorldVisual (_patient selectionPosition "head");
-private _spinePos = _patient modelToWorldVisual (_patient selectionPosition "Spine3");
-private _direction = (_headPos vectorFromTo _spinePos) call CBA_fnc_vectDir;
 private _position = getPosASL _patient;
+private _direction = 0;
+
+if (typeOf _patient == "ACE_bodyBagObject") then {
+    _direction getDir _patient;
+} else {
+    private _headPos = _patient modelToWorldVisual (_patient selectionPosition "head");
+    private _spinePos = _patient modelToWorldVisual (_patient selectionPosition "Spine3");
+    _direction = (_headPos vectorFromTo _spinePos) call CBA_fnc_vectDir;
+};
+
 // apply adjustments
 _position = _position vectorAdd _offset;
 _direction = _direction + _rotation;

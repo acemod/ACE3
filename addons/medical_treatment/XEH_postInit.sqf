@@ -62,6 +62,27 @@ if (isServer) then {
     } forEach (configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"]);
 }] call CBA_fnc_addEventHandler;
 
+
+private _buryBodyBag = [
+    QGVAR(buryBodyBag),
+    LLSTRING(DigGrave),
+    QPATHTOEF(medical_gui,ui\cross_grave.paa),
+    {
+        [
+            QGVAR(treatmentTimeGrave),
+            _this,
+            {
+                [[_this#1, _this#0], missionNameSpace getVariable [QGVAR(graveClassname), "Land_Grave_dirt_F"], [0,0,0], missionNameSpace getVariable [QGVAR(graveRotation), -90]] call FUNC(placeInBodyBagOrGrave);
+            },
+            {},
+            LLSTRING(DiggingGrave)
+        ] call EFUNC(common,progressBar);
+    },
+    {[_this#1] call FUNC(canDigGrave)}
+] call EFUNC(interact_menu,createAction);
+
+["ACE_bodyBagObject", 0, ["ACE_MainActions"], _buryBodyBag] call EFUNC(interact_menu,addActionToClass);
+
 if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
     if (hasInterface) then {
         private _checkHeadstoneAction = [
@@ -80,7 +101,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
             [1.05, 0.02, 0.3] //position in centre of cross
         ] call EFUNC(interact_menu,createAction);
 
-        ["Land_Grave_dirt_F", 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
+        [missionNameSpace getVariable [QGVAR(graveClassname), "Land_Grave_dirt_F"], 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (isServer) then {
@@ -88,7 +109,13 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
             params ["_target", "_restingPlace"];
             TRACE_2("ace_placedInBodyBag eh",_target,_restingPlace);
 
-            private _targetName = [_target, false, true] call EFUNC(common,getName);
+            private _targetName = "";
+            if (typeOf _target == "ACE_bodyBagObject") then {
+                _targetName = _target getVariable [QGVAR(headstoneData), ""];
+            } else {
+                _targetName = [_target, false, true] call EFUNC(common,getName);
+            };
+        
             _restingPlace setVariable [QGVAR(headstoneData), _targetName, true];
         }] call CBA_fnc_addEventHandler;
     };
