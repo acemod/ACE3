@@ -18,11 +18,6 @@ class EXPLOSIVES_PLACE(m18): EGVAR(explosives,Place) {
     };
 };
 
-// Claymore (Fuse)
-class EXPLOSIVES_PLACE(m18_fuze10): EXPLOSIVES_PLACE(m18) {
-    displayName = "$STR_VN_MINE_M18_FUZE10_MAG_DN";
-};
-
 // Claymore x3
 class EXPLOSIVES_PLACE(m18_x3): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_M18_X3_MAG_DN";
@@ -33,6 +28,12 @@ class EXPLOSIVES_PLACE(m18_x3): EGVAR(explosives,Place) {
             position = "[0, 0, 0.1]";
         };
     };
+};
+
+// WP Claymore
+class EXPLOSIVES_PLACE(m18_wp): EXPLOSIVES_PLACE(m18) {
+    displayName = "$STR_VN_MINE_M18_WP_MAG_DN";
+    model = "vn\weapons_f_vietnam_04\mines\m18\vn_mine_m18_wp"
 };
 
 // Toe-Popper
