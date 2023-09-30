@@ -33,7 +33,7 @@ class EXPLOSIVES_PLACE(m18_x3): EGVAR(explosives,Place) {
 // WP Claymore
 class EXPLOSIVES_PLACE(m18_wp): EXPLOSIVES_PLACE(m18) {
     displayName = "$STR_VN_MINE_M18_WP_MAG_DN";
-    model = "vn\weapons_f_vietnam_04\mines\m18\vn_mine_m18_wp"
+    model = "vn\weapons_f_vietnam_04\mines\m18\vn_mine_m18_wp";
 };
 
 // Toe-Popper
