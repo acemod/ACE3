@@ -18,6 +18,11 @@ class EXPLOSIVES_PLACE(m18): EGVAR(explosives,Place) {
     };
 };
 
+// Claymore (Fuse)
+class EXPLOSIVES_PLACE(m18_fuze10): EXPLOSIVES_PLACE(m18) {
+    displayName = "$STR_VN_MINE_M18_FUZE10_MAG_DN";
+};
+
 // Claymore x3
 class EXPLOSIVES_PLACE(m18_x3): EGVAR(explosives,Place) {
     displayName = "$STR_VN_MINE_M18_X3_MAG_DN";

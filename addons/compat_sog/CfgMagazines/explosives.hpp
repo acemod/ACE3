@@ -28,6 +28,19 @@ class vn_mine_m18_range_mag: vn_mine_m18_mag {
     };
 };
 
+// Claymore (Fuse)
+class vn_mine_m18_fuze10_mag: vn_mine_m18_mag {
+    EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(m18_fuze10);
+    class ACE_Triggers: ACE_Triggers {
+        class Command: Command {
+            fuseTime = 10;
+        };
+        class MK16_Transmitter: MK16_Transmitter {
+            fuseTime = 10;
+        };
+    };
+};
+
 // Claymore x3 (Remote)
 class vn_mine_m18_x3_mag: vn_mine_m18_mag {
     EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(m18_x3);
