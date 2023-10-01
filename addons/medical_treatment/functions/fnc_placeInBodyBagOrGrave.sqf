@@ -37,12 +37,12 @@ if (alive _patient) then {
 private _position = getPosASL _patient;
 private _direction = 0;
 
-if (_patient isKindOf "ACE_bodyBagObject") then {
-    _direction getDir _patient;
-} else {
+if (_patient isKindOf "CaManBase") then {
     private _headPos = _patient modelToWorldVisual (_patient selectionPosition "head");
     private _spinePos = _patient modelToWorldVisual (_patient selectionPosition "Spine3");
     _direction = (_headPos vectorFromTo _spinePos) call CBA_fnc_vectDir;
+} else {
+    _direction getDir _patient;
 };
 
 // apply adjustments
