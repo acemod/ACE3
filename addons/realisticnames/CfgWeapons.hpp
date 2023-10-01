@@ -148,7 +148,7 @@ class CfgWeapons {
     class SMG_03C_TR_hex: SMG_03C_TR_black {
         displayName = CSTRING(P90_TR_Hex_Name);
     };
-    class SMG_03C_black: SMG_03C_Base {
+    class SMG_03C_black: SMG_03C_BASE {
         displayName = CSTRING(P90_Black_Name);
     };
     class SMG_03C_khaki: SMG_03C_black {
@@ -709,7 +709,7 @@ class CfgWeapons {
 
     //attachments
 
-    class Itemcore;
+    class ItemCore;
 
     class acc_flashlight: ItemCore {
         displayName = "UTG Defender 126";
