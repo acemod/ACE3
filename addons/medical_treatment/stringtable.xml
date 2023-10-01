@@ -835,20 +835,36 @@
             <Chinesesimp>能够将昏迷的伤员装入尸袋中。</Chinesesimp>
             <Korean>기절상태의 인원을 시체운반용부대에 옮겨 담을 수 있는지를 정합니다.</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_DisplayName">
+        <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_DisplayName">
             <English>Allow Grave Digging</English>
             <Polish>Zezwalaj na kopanie grobów</Polish>
             <Korean>무덤 파기 허용</Korean>
+            <German>Erlaube Graben von Gräbern</German>
+            <Spanish>Permitir cavar tumbas</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_Description">
+        <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_Description">
             <English>Enables digging graves to dispose of corpses.</English>
             <Polish>Umożliwia kopanie grobów w celu pozbycia się zwłok.</Polish>
             <Korean>시체를 처리하기 위해 무덤을 파는 것을 허용합니다.</Korean>
+            <German>Erlaubt das Graben von Gräbern um Leichen zu entsorgen.</German>
+            <Spanish>Habilita cavar tumbas para deshacerse de los cadáveres.</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowGaveDigging_graveOnlyDead">
+        <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_graveOnlyDead">
             <English>Only if dead</English>
             <Polish>Tylko kiedy martwy</Polish>
             <Korean>죽었을 때에만</Korean>
+            <German>Nur wenn tot</German>
+            <Spanish>Solo si está muerto</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_DisplayName">
+            <English>Create Grave Markers</English>
+            <German>Erstelle Grabmal</German>
+            <Spanish>Crear Tumba</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_Description">
+            <English>Enables the creation of grave markers when digging graves.</English>
+            <German>Erstellt Grabmale beim Graben von Gräbern.</German>
+            <Spanish>Habilita la creación de Tumbas al cavar tumbas.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>

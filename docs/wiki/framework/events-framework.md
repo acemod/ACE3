@@ -37,6 +37,7 @@ The vehicle events will also have the following local variables available `_gunn
 |----------|---------|---------|---------|---------|---------|
 |`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed
 |`ace_placedInBodyBag` | [_target, _bodyBag] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted)
+|`ace_placedInGrave` | [_target, _grave] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted)
 |`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has started (local on the _caller)
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action is completed (local on the _caller)
 |`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has been interrupted (local on the _caller)
