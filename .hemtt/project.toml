@@ -24,7 +24,7 @@ exclude = [
     "/initsettings.sqf",
     "/initkeybinds.sqf",
     "/xeh_prep.sqf",
-    "dev",
+    "/dev/",
     "medical_ai/statemachine.sqf",
     "common/functions/fnc_dummy.sqf",
 ]
