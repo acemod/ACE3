@@ -23,7 +23,6 @@ if ((alive _patient) && {GVAR(allowGraveDigging) < 2}) exitWith {
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
-
 private _graveClassname = "";
 if (GVAR(graveDiggingMarker)) then {
     _graveClassname = missionNamespace getVariable [QGVAR(graveClassname), "ACE_Grave"];
