@@ -31,7 +31,6 @@ class CfgVehicles {
                 selection = "";
                 class GVAR(buryBodyBag) {
                     displayName = CSTRING(DigGrave);
-                    distance = HANDCUFFS_DISTANCE;
                     condition = QUOTE([_this#1] call FUNC(canDigGrave));
                     statement = QUOTE(_this call FUNC(placeBodyBagInGrave));
                     icon = QPATHTOEF(medical_gui,ui\grave.paa);
