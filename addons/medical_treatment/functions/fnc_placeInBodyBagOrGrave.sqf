@@ -54,6 +54,10 @@ _direction = _direction + _rotation;
 // This setPosASL seems to need to be called where the unit is local
 _patient setPosASL [-5000, -5000, 0];
 
+if (_restingPlaceClass == "") exitWith {
+    [_patient, objNull]
+};
+
 // Create the body bag object, set its position to prevent it from flipping
 private _restingPlace = createVehicle [_restingPlaceClass, [0, 0, 0], [], 0, "NONE"];
 _restingPlace setPosASL _position;
@@ -62,3 +66,5 @@ _restingPlace setDir _direction;
 // Server will handle hiding and deleting the body
 // Keep event name as body bag only to avoid breaking things for others
 ["ace_placedInBodyBag", [_patient, _restingPlace]] call CBA_fnc_globalEvent;
+
+[_patient, _restingPlace]
