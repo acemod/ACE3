@@ -258,7 +258,7 @@ class GVAR(actions) {
         displayNameProgress = CSTRING(DiggingGrave);
         icon = QPATHTOEF(medical_gui,ui\cross_grave.paa);
         treatmentTime = QGVAR(treatmentTimeGrave);
-        condition = QFUNC(canDigGrave);
+        condition = QUOTE(!([_this#1] call EFUNC(common,isAwake)) && {_this call FUNC(canDigGrave)});
         callbackSuccess = QFUNC(placeInGrave);
         items[] = {};
         consumeItem = 0;
