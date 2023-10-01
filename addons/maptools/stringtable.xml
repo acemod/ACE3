@@ -252,5 +252,83 @@
             <Turkish>Düz çizgiler çizmek için maptools'un kenarına çizin. Not: Silmek için orta noktada fareyle üzerine gelmeniz gerekir.</Turkish>
             <Spanish>Dibujar sobre el borde de las herramientas de mapa para dibujar líneas rectas. Nota: Debe situarse en el punto intermedio para eliminarla.</Spanish>
         </Key>
+        <Key ID="STR_ACE_MapTools_allowChannelDrawing_displayName">
+            <English>Allow Plotting Board Drawing channels</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
+            <English>Channels in which plotting board drawing is enabled.</English>
+        </Key>        
+        <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
+            <English>Plotting Board</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoardAcrylicLabel">
+            <English>Plotting Board Acrylic</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
+            <English>Plotting Board Ruler</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
+            <English>To Plotting Board</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
+            <English>To Plotting Board Acrylic</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
+            <English>To Plotting Board Ruler</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_WipeBoard">
+            <English>Wipe all map marks off Plotting Board</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
+            <English>Show Plotting Board</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_HidePlottingBoard">
+            <English>Plotting Board Options (Hide)</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
+            <English>Toggle Plotting Board Ruler</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_AlignTo">
+            <English>Align</English>
+            <German>Ausrichten</German>
+            <Spanish>Alinear</Spanish>
+            <French>Aligner</French>
+            <Italian>Allinea</Italian>
+            <Portuguese>Alinhar</Portuguese>
+            <Hungarian>Állítása</Hungarian>
+            <Polish>Wyrównaj</Polish>
+            <Czech>Srovnat</Czech>
+            <Russian>Выровнять</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToNorthLabel">
+            <English>To North</English>
+            <German>Nach Norden</German>
+            <Spanish>Al norte</Spanish>
+            <French>Sur le nord</French>
+            <Italian>Con il Nord</Italian>
+            <Portuguese>Com o Norte</Portuguese>
+            <Hungarian>Északhoz</Hungarian>
+            <Polish>Do północy</Polish>
+            <Czech>Na sever</Czech>
+            <Russian>На север</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToCompassLabel">
+            <English>To Compass</English>
+            <German>Am Kompass</German>
+            <Spanish>A la brújula</Spanish>
+            <French>Sur la boussole</French>
+            <Italian>Con la bussola</Italian>
+            <Portuguese>Com a Bússola</Portuguese>
+            <Hungarian>Iránytűhöz</Hungarian>
+            <Polish>Do kompasu</Polish>
+            <Czech>Ke kompasu</Czech>
+            <Russian>По компасу</Russian>
+        </Key>        
+        <Key ID="STR_ACE_MapTools_ToUpLabel">
+            <English>Up</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToMapToolLabel">
+            <English>To Maptool</English>
+        </Key>
     </Package>
 </Project>

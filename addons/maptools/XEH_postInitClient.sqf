@@ -15,6 +15,16 @@ GVAR(mapTool_isDragging) = false;
 GVAR(mapTool_isRotating) = false;
 GVAR(mapTool_moveToMouse) = true;  // used to display it in center of screen when opened
 
+GVAR(plottingBoard_Shown) = 0;
+GVAR(plottingBoard_pos) = [0,0];
+GVAR(plottingBoard_angle) = 0;
+GVAR(plottingBoard_acrylicAngle) = 0;
+GVAR(plottingBoard_rulerAngle) = 0;
+GVAR(plottingBoard_isDragging) = false;
+GVAR(plottingBoard_isRotating) = -1;
+GVAR(plottingBoard_moveToMouse) = true;  // used to display it in center of screen when opened
+GVAR(plottingBoard_markers) = createHashMap;
+
 //Install the event handers for the map tools on the main in-game map
 [{!isNull findDisplay 12},
 {
@@ -31,6 +41,14 @@ GVAR(mapTool_moveToMouse) = true;  // used to display it in center of screen whe
         GVAR(freedrawing) = false;
     };
 }] call CBA_fnc_addPlayerEventHandler;
+
+addMissionEventHandler ["markerCreated", {
+    [FUNC(handlePlottingBoardMarkers), [_this, false]] call CBA_fnc_execNextFrame
+}];
+
+addMissionEventHandler ["markerDeleted", {
+    [FUNC(handlePlottingBoardMarkers), [[_this select 0, null, null, _this select 1], true] ] call CBA_fnc_execNextFrame
+}];
 
 
 GVAR(freeDrawingData) = [];
