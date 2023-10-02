@@ -16,15 +16,24 @@
  * Public: No
  */
 
-params ["_bodybag"];
-TRACE_1("placeBodyBagInGrave",_bodybag);
+params ["_bodybag", "_medic"];
+TRACE_2("placeBodyBagInGrave",_bodybag,_medic);
 
 [
-    QGVAR(treatmentTimeGrave),
+    GVAR(treatmentTimeGrave),
     _this,
     {
-        [[_this#1, _this#0], missionNameSpace getVariable [QGVAR(graveClassname), "ACE_Grave"], [0,0,0], missionNameSpace getVariable [QGVAR(graveRotation), 0]] call FUNC(placeInBodyBagOrGrave);
+        TRACE_1("finished",_this);
+        (_this#0) params ["_bodybag","_medic"];
+        private _graveClassname = "";
+        if (GVAR(graveDiggingMarker)) then {
+            _graveClassname = missionNamespace getVariable [QGVAR(graveClassname), "ACE_Grave"];
+        };
+        private _graveRotation = missionNameSpace getVariable [QGVAR(graveRotation), 0]; 
+
+        [[_medic, _bodybag], _graveClassname, [0,0,0], _graveRotation, true] call FUNC(placeInBodyBagOrGrave);
     },
-    {},
+    {TRACE_1("failed",_this);},
     LLSTRING(DiggingGrave)
+    // ToDo: check FUNC(canDigGrave)? - what if body dragged/burried by someone else
 ] call EFUNC(common,progressBar);

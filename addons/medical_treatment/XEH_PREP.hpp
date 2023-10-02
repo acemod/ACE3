@@ -47,6 +47,7 @@ PREP(loadUnit);
 PREP(medication);
 PREP(medicationLocal);
 PREP(onMedicationUsage);
+PREP(placeBodyBagInGrave);
 PREP(placeInBodyBag);
 PREP(placeInBodyBagOrGrave);
 PREP(placeInGrave);
