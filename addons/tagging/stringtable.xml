@@ -215,7 +215,7 @@
             <Spanish>Cuadrado</Spanish>
             <German>Quadrat</German>
         </Key>
-        <Key ID="STR_ACE_Tagging_Custom_square_filled">
+        <Key ID="STR_ACE_Tagging_square_filled">
             <English>Filled Square</English>
             <Japanese>四角 (塗りつぶし)</Japanese>
             <Polish>Wypełniony Kwadrat</Polish>
