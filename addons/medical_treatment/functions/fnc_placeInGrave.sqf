@@ -29,6 +29,5 @@ if (GVAR(graveDiggingMarker)) then {
 };
 private _graveRotation = missionNameSpace getVariable [QGVAR(graveRotation), 0]; 
 
-["ace_placedInGrave", 
-    [_this, _graveClassname, [0,0,0], _graveRotation] call FUNC(placeInBodyBagOrGrave)
-] call CBA_fnc_globalEvent;
+[_this, _graveClassname, [0,0,0], _graveRotation, true] call FUNC(placeInBodyBagOrGrave)
+

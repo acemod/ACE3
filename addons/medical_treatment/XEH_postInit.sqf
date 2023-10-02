@@ -84,6 +84,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
         ["ace_placedInBodyBag", {
             params ["_target", "_restingPlace"];
             TRACE_2("ace_placedInBodyBag eh",_target,_restingPlace);
+            if (isNull _restingPlace) exitWith {};
 
             private _targetName = "";
             if (_target isKindOf "ACE_bodyBagObject") then {
@@ -92,6 +93,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
                 _targetName = [_target, false, true] call EFUNC(common,getName);
             };
 
+            if (_targetName == "") exitWith {};
             _restingPlace setVariable [QGVAR(headstoneData), _targetName, true];
         }] call CBA_fnc_addEventHandler;
     };
