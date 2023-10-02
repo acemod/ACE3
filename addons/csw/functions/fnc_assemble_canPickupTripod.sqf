@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author:tcvm
  * Checks if the player can pick-up the tripod.

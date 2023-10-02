@@ -1,14 +1,9 @@
 // by PabstMirror, commy2
 #include "script_component.hpp"
 
-// Release object on disconnection. Function is identical to killed
 if (isServer) then {
-    // 'HandleDisconnect' EH triggers too late
-    addMissionEventHandler ["PlayerDisconnected", {
-        private _unit = (getUserInfo (_this select 5)) select 10;
-
-        _unit call FUNC(handleKilled);
-    }];
+    // Release object on disconnection. Function is identical to killed
+    addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleKilled)];
 
     // Handle surrending and handcuffing
     ["ace_captiveStatusChanged", {
@@ -85,5 +80,28 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
         [_owner, _container] call FUNC(dropObject);
     };
 }] call CBA_fnc_addEventHandler;
+
+// When changing cameras, drop carried and dragged objects
+["featureCamera", {
+    params ["_unit", "_camera"];
+
+    // Unit can either drag or carry, functions themselves handle which ones are executed
+    switch (_camera) do {
+        // Default camera
+        case "": {
+            _unit call FUNC(resumeDrag);
+            _unit call FUNC(resumeCarry);
+        };
+        // Arsenals make the unit change animations, which makes the unit drop dragged/carried objects regardless
+        case "arsenal";
+        case "ace_arsenal": {
+            _unit call FUNC(handleKilled);
+        };
+        default {
+            _unit call FUNC(pauseDrag);
+            _unit call FUNC(pauseCarry);
+        };
+    };
+}] call CBA_fnc_addPlayerEventHandler;
 
 #include "initKeybinds.sqf"

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay (based on unmuteUnit)
  * Globally unhides a unit. Only unhides if the last reason was removed.

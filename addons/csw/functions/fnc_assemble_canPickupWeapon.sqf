@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author:tcvm
  * If the CSW is mounted or in use this will not allow you to dismount the weapon

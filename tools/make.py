@@ -40,6 +40,7 @@ if sys.version_info[0] == 2:
 
 import os
 import os.path
+import pathlib
 import shutil
 import platform
 import glob
@@ -241,6 +242,19 @@ def mikero_windows_registry(path, access=winreg.KEY_READ):
 
 def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
+    # try running pboProject once if it's not in registry
+    try:
+        pboProject = mikero_windows_registry("pboProject")
+        print(f"pboProject found normally via registry")
+    except:
+        print(f"pboProject not in registry")
+        pboProject = shutil.which('pboProject')
+        if (pboProject is None):
+            print("pboProject not in sys path")
+        else:
+            print(f"pboProject startup")
+            ret = subprocess.call([pboProject, "-P"])
+
     requiredToolPaths = {"pboProject": None, "rapify": None, "MakePbo": None}
     failed = False
 
@@ -268,13 +282,22 @@ def pboproject_settings():
     value_exclude = "thumbs.db,*.txt,*.h,*.dep,*.cpp,*.bak,*.png,*.log,*.pew,source,*.tga"
 
     try:
-        k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
+        pbok = mikero_windows_registry(r"pboProject")
+        try:
+            k = winreg.OpenKey(pbok, "Settings", access=winreg.KEY_SET_VALUE)
+        except:
+            print_yellow("WARNING: creating pboProject\Settings reg manually")
+            print_yellow("This should have happened before running make.py")
+            k = winreg.CreateKeyEx(pbok, "Settings", access=winreg.KEY_SET_VALUE)
         winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "wildcard_exclude_from_pbo_normal", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "wildcard_exclude_from_pbo_unbinarised_missions", 0, winreg.REG_SZ, value_exclude)
     except:
         raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
+    finally:
+        winreg.CloseKey(k)
+        winreg.CloseKey(pbok)
 
 
 def color(color):
@@ -1538,6 +1561,16 @@ See the make.cfg file for additional build options.
         if len(failedBuilds) > 0:
             for failedBuild in failedBuilds:
                 print("- {} build failed!".format(failedBuild))
+                failedBuild_path = pathlib.Path(
+                    "P:/temp").joinpath(f"{failedBuild}.packing.log")
+                if (failedBuild_path.exists()):
+                    print(f"  Log {failedBuild_path} tail:")
+                    with open(failedBuild_path) as failedBuild_file:
+                        lines = failedBuild_file.readlines()
+                        for index, line in enumerate(lines[-3:]):
+                            print(f"    {len(lines) + index -2}: {line}", end='')
+                else:
+                    print(f"  Log {failedBuild_path} does not exist")
         if len(missingFiles) > 0:
             for missingFile in missingFiles:
                 print("- {} not found!".format(missingFile))
