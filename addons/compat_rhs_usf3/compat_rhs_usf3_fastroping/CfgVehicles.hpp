@@ -4,7 +4,7 @@ class CfgVehicles {
     class Helicopter_Base_F: Helicopter {
         class Eventhandlers;
     };
-    class Heli_Light_03_base_F: Helicopter_Base_F {};
+    class Heli_light_03_base_F: Helicopter_Base_F {};
     class RHS_UH1_Base: Heli_light_03_base_F {};
     class RHS_UH1Y_base: RHS_UH1_Base {
         class Attributes {

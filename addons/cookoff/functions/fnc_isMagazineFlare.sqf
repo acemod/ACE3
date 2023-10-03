@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Cyruz
  * Checks if the magazine has ammo which is a flare

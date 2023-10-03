@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Handles full repair by periodically repairing damaged hitpoints.
@@ -32,11 +32,10 @@ if (_totalTime - _elapsedTime > ([_engineer, _vehicle] call FUNC(getFullRepairTi
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 _allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
-private _hitPointsToIgnore = [_vehicle] call FUNC(getHitPointsToIgnore);
+private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
 
 private _firstDamagedIndex = {
-    private _hitPoint = _hitPoints select _forEachIndex;
-    if (_x > 0 && {!(_hitPoint in _hitPointsToIgnore)}) exitWith {_forEachIndex};
+    if (_x > 0 && {!(_forEachIndex in _selectionsToIgnore)}) exitWith {_forEachIndex};
     -1
 } forEach _damageValues;
 

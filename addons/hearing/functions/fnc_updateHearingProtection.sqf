@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Updates the hearing protection and volume attenuation for player on earbuds/helmet change

@@ -21,7 +21,7 @@ PREP(fullRepairProgress);
 PREP(getClaimObjects);
 PREP(getFullRepairTime);
 PREP(getHitPointString);
-PREP(getHitPointsToIgnore);
+PREP(getSelectionsToIgnore);
 PREP(getPatchWheelTime);
 PREP(getPostRepairDamage);
 PREP(getRepairItems);

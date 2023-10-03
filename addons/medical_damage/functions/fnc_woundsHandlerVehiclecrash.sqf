@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Custom wound handler for vehicle crashes, sends damage to a random hitpoint

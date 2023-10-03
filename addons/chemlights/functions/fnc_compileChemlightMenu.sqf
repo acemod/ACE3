@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: voiper
  * Compile list of chemlight classnames and add to the "Chemlight shield" parent menu.

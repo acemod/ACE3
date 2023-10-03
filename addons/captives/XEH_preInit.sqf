@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 GVAR(captivityEnabled) = false;
 
 GVAR(restraints) = call (uiNamespace getVariable QGVAR(restraints));
+GVAR(blindfolds) = keys (uiNamespace getVariable QGVAR(blindfolds));
 
 #include "initSettings.sqf"
 

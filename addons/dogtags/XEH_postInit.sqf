@@ -32,7 +32,8 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
 
     if (isServer) then {
         ["ace_placedInBodyBag", {
-            params ["_target", "_bodyBag"];
+            params ["_target", "_bodyBag", "_isGrave"];
+            if (_isGrave) exitWith {};
             TRACE_2("ace_placedInBodyBag eh",_target,_bodyBag);
 
             private _dogTagData = [_target] call FUNC(getDogtagData);
