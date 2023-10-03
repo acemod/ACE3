@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay
  * Handles "compatibility" (i.e. override) for BI spectator respawn types 1, 4 & 5

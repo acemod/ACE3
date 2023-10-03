@@ -28,6 +28,7 @@
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["lockInventory", true, []] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -123,6 +124,12 @@
 [QGVAR(awake), {
     params ["_object", "_awake"];
     _object awake _awake;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lockInventory), {
+    params ["_object", "_set"];
+    TRACE_2("lockInventory EH",_object,_set);
+    _object lockInventory (_set > 0);
 }] call CBA_fnc_addEventHandler;
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit

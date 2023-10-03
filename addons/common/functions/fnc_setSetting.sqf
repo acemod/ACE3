@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Change the value of an existing setting if it was not previously forced. Force if neccesary.

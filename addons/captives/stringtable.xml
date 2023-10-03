@@ -136,6 +136,23 @@
             <Chinesesimp>将俘虏带出载具</Chinesesimp>
             <Turkish>Tutukluyu indir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Captives_BlindfoldCaptive">
+            <English>Blindfold Captive</English>
+            <German>Augen verbinden</German>
+            <French>Bandeau sur les yeux du captif</French>
+            <Portuguese>Vendar prisioneiro</Portuguese>
+            <Italian>Benda gli occhi</Italian>
+            <Polish>Załóż opaskę na oczy</Polish>
+            <Korean>포로 눈 가리기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Captives_RemoveBlindfoldCaptive">
+            <English>Remove blindfold</English>
+            <German>Augenbinde entfernen</German>
+            <French>Enlever bandeau sur les yeux</French>
+            <Italian>Rimuovi la benda per gli occhi</Italian>
+            <Polish>Zdejmij opaskę z oczu</Polish>
+            <Korean>눈가리개 풀기</Korean>
+        </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
             <German>Kabelbinder</German>

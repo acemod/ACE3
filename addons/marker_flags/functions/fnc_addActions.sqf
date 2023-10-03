@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson, Timi007
  * Adds the child actions for placing flags.

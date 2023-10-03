@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2 and CAA-Picard and joko and PabstMirror
  * Publish a variable, but wait a certain amount of time before allowing it to be published it again.

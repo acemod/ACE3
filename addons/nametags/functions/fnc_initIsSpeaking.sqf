@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, PabstMirror
  * Starts up a PFEH to monitor the when players are talking.

@@ -29,9 +29,24 @@ class CfgVehicles {
                 statement = "";
                 icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
                 selection = "";
+                class GVAR(buryBodyBag) {
+                    displayName = CSTRING(DigGrave);
+                    condition = QUOTE([ARR_2(_this#1, _this#0)] call FUNC(canDigGrave));
+                    statement = QUOTE(_this call FUNC(placeBodyBagInGrave));
+                    icon = QPATHTOEF(medical_gui,ui\grave.paa);
+                };
             };
         };
     };
+
+    // Grave vehicle
+    class Land_Grave_dirt_F;
+    class ACE_Grave: Land_Grave_dirt_F {
+        model = QPATHTOF(data\ACE_grave.p3d);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\Grave_co.paa)};
+    };
+
 
     // Medical litter classes
     class Thing;

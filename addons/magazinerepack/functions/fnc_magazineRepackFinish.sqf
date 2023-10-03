@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
  * Simulates repacking a set of magazines.

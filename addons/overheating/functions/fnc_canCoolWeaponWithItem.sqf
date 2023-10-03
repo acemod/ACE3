@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: drofseh
  * Return true if the target's weapon can be cooled with an item in the player's inventory

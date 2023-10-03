@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe, johnb43
  * Create the internal stat arrays when needed for the first time.

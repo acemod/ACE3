@@ -1,11 +1,8 @@
 #include "script_component.hpp"
 
-// Config will be binerized, so this include is only required at build-time
-#include "\z\ace\addons\csw\script_config_macros_csw.hpp"
-
 class CfgPatches {
-    class ADDON {
-        name = QUOTE(COMPONENT);
+    class SUBADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {QGVAR(dshkm_carry)};
         requiredVersion = REQUIRED_VERSION;
@@ -15,6 +12,7 @@ class CfgPatches {
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
+        authors[] = {};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

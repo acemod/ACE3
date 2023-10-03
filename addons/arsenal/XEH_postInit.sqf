@@ -149,3 +149,25 @@ GVAR(lastSortDirectionRight) = DESCENDING;
         };
     };
 }] call CBA_fnc_addEventHandler;
+
+// Compatibility for RHS attachment system. Also used by NIArms.
+// Will only work for ACE_player, different arsenal centers will be ignored. RHS limitation.
+if (!isNil "rhs_fnc_accGripod") then {
+    [QEGVAR(arsenal,weaponItemChanged), {
+        params ["_weapon", "_item", "_itemIndex"];
+        if (EGVAR(arsenal,center) != ACE_player) exitWith {};
+
+        switch (_itemIndex) do {
+            case ITEM_INDEX_SIDE: {
+                call rhs_fnc_anpeq15_rail;
+            };
+            case ITEM_INDEX_BIPOD: {
+                // Need this call to make sure RHS's functions are set
+                call rhs_fnc_accGripod;
+                if (getText (configFile >> "CfgWeapons" >> _item >> "rhs_grip_type") == "") then {
+                    call rhs_grip_deinitialize;
+                };
+            };
+        };
+    }] call CBA_fnc_addEventHandler;
+};

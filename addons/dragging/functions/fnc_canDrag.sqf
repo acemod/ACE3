@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, Dystopian
  * Checks if unit can drag the object. Doesn't check weight.

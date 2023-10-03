@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Handles a server-side request for synchronization ALL events on JIP to a client.
