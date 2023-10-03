@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, johnb43
  * Drops a draggable / carryable clone of a dead unit.
