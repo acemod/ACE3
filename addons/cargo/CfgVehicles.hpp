@@ -173,7 +173,7 @@ class CfgVehicles {
     };
 
 
-    // misc. vehicles
+    // Misc. vehicles
     class Quadbike_01_base_F: Car_F {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
@@ -184,7 +184,7 @@ class CfgVehicles {
         GVAR(hasCargo) = 0;
     };
 
-    // helicopters
+    // Helicopters
     class Air;
     class Helicopter: Air {
         GVAR(space) = 8;
@@ -224,7 +224,7 @@ class CfgVehicles {
     };
 
     class Heli_Transport_04_base_F: Helicopter_Base_H {
-        // note the double brackets are because loadmasterTurrets is an array of arrays / turret paths
+        // Note the double brackets are because loadmasterTurrets is an array of arrays / turret paths
         GVAR(loadmasterTurrets)[] = {{1}};
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
@@ -363,8 +363,9 @@ class CfgVehicles {
         GVAR(size) = 6;
     };
 
+    // Slingload pallets
     class Slingload_base_F: ReammoBox_F {};
-    class CargoNet_01_base_F: Slingload_base_F { //Slingload pallets
+    class CargoNet_01_base_F: Slingload_base_F {
         GVAR(size) = 6;
     };
 
