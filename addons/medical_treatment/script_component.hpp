@@ -55,4 +55,4 @@
 // Animations that would be played faster than this are instead skipped. (= Progress bar too quick for animation).
 #define ANIMATION_SPEED_MAX_COEFFICIENT 2.5
 
-#define MEDICAL_TREATMENT_ITEMS (call (uiNamespace getVariable [QGVAR(treatmentItems), {[]}]))
+#define MEDICAL_TREATMENT_ITEMS (keys (uiNamespace getVariable QGVAR(treatmentItems)))
