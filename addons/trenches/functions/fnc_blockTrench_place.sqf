@@ -8,6 +8,7 @@
  * 1: Position <ARRAY>
  * 2: Force - ignoring saftey checks (optional: false) <BOOL>
  * 3: Cut Grass (optional: false) <BOOL>
+ * 4: Dry Run - Just test if possible (can run on clients) <BOOL>
  *
  * Return Value:
  * <ARRAY>
@@ -21,10 +22,10 @@
  * Public: No
  */
 
-if (!isServer) exitWith { ERROR("function must be called on server"); [false, "server-only"]; };
+params [["_start2d", [], [[]]], ["_end2d", [], [[]]], ["_force", false, [false]], ["_cutGrass", false, [false]], ["_dryRun", false, [false]]];
+TRACE_4("blockTrench_place",_start2d,_end2d,_force,_dryRun);
 
-params [["_start2d", [], [[]]], ["_end2d", [], [[]]], ["_force", false, [false]], ["_cutGrass", false, [false]]];
-TRACE_3("blockTrench_place",_start2d,_end2d,_force);
+if ((!isServer) && {!_dryRun}) exitWith { ERROR("function must be called on server"); [false, "server-only"]; };
 
 scopeName "main";
 
@@ -70,6 +71,14 @@ if (_east) then {
 };
 TRACE_3("",_east,_origin2D,_length);
 if (_length < 2) exitWith { [false, "too short"] breakOut "main" };
+
+if (_dryRun) exitWith { // return an array of block positions
+    private _positions = [];
+    for "_i" from 0 to _length do { // intentionally inclusive
+        _positions pushBack (_origin2D vectorAdd (if (_east) then {[(_i + 0.5) * _cellsize, 0]} else {[0, (_i + 0.5) * _cellsize]}));
+    };
+    [true, "dry run", _positions]
+};
 
 
 // Test and get block data
