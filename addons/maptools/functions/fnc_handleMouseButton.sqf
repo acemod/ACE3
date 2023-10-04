@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: esteldunedain
+ * Author: esteldunedain & LorenLuke
  * Handle mouse buttons.
  *
  * Arguments:
@@ -22,6 +22,7 @@ TRACE_2("params",_dir,_params);
 
 // Using line drawing
 if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
+
     if (GVAR(freedrawing) && {_dir == 0}) then {
         GVAR(freedrawing) = false;
         if (_shiftKey) exitWith {
@@ -37,6 +38,8 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
             TRACE_3("Line Drawn",_markerName,_markerPos,_distanceCheck);
 
             if (_distanceCheck > 1) exitWith {WARNING("Wrong Marker!");};
+
+            
             if ((count GVAR(freeDrawingData)) != 3) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData));};
 
             GVAR(freeDrawingData) params ["", "_startStraightPos", "_endStraightPos"];
@@ -48,9 +51,10 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
         }, []] call CBA_fnc_execNextFrame;
     } else {
         if (_ctrlKey && {_dir == 1}) then {
+            private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
             GVAR(freeDrawingData) = [];
             GVAR(freedrawing) = true;
-            GVAR(drawPosStart) = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
+            GVAR(drawPosStart) = _pos
             TRACE_2("Starting Line",GVAR(freedrawing),GVAR(drawPosStart));
         } else {
             GVAR(freedrawing) = false;
@@ -72,44 +76,98 @@ if (_dir != 1) then {
         GVAR(mapTool_isRotating) = false;
         _handled = true;
     };
+    if (GVAR(plottingBoard_isDragging) || GVAR(plottingBoard_isRotating > -1)) then {
+        GVAR(plottingBoard_isDragging) = false;
+        GVAR(plottingBoard_isRotating) = -1;
+        _handled = true;
+    };
 } else {
     // If clicking
-    if !(call FUNC(canUseMapTools)) exitWith {};
+    if (call FUNC(canUseMapTools)) then {
 
-    // Transform mouse screen position to coordinates
-    private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
-    _pos set [count _pos, 0];
+        // Transform mouse screen position to coordinates
+        private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
+        _pos pushback 0;
 
-    GVAR(mapTool_isDragging) = false;
-    GVAR(mapTool_isRotating) = false;
+        GVAR(mapTool_isDragging) = false;
+        GVAR(mapTool_isRotating) = false;
 
-    // If no map tool marker then exit
-    if (GVAR(mapTool_Shown) == 0) exitWith {};
+        // If no map tool marker then exit
+        if (GVAR(mapTool_Shown) != 0) then {;
+            // Check if clicking the maptool
+            if (_pos call FUNC(isInsideMapTool)) then {
+                // Store data for dragging
+                GVAR(mapTool_startPos) = + GVAR(mapTool_pos);
+                GVAR(mapTool_startDragPos) = + _pos;
 
-    // Check if clicking the maptool
-    if (_pos call FUNC(isInsideMapTool)) exitWith {
-        // Store data for dragging
-        GVAR(mapTool_startPos) = + GVAR(mapTool_pos);
-        GVAR(mapTool_startDragPos) = + _pos;
+                private _rotateKeyPressed = switch (GVAR(rotateModifierKey)) do {
+                    case (1): {_altKey};
+                    case (2): {_ctrlKey};
+                    case (3): {_shiftKey};
+                    default {false};
+                };
 
-        private _rotateKeyPressed = switch (GVAR(rotateModifierKey)) do {
-            case (1): {_altKey};
-            case (2): {_ctrlKey};
-            case (3): {_shiftKey};
-            default {false};
+                if (_rotateKeyPressed) then {
+                    // Store data for rotating
+                    GVAR(mapTool_startAngle) = + GVAR(mapTool_angle);
+                    GVAR(mapTool_startDragAngle) = (180 + ((GVAR(mapTool_startDragPos) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mapTool_startDragPos) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
+                    // Start rotating
+                    GVAR(mapTool_isRotating) = true;
+                } else {
+                    // Start dragging
+                    GVAR(mapTool_isDragging) = true;
+                };
+                _handled = true;
+            };
         };
+    };
+    
+    if (call FUNC(canUsePlottingBoard)) then {
+        
+        // Transform mouse screen position to coordinates
+        private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
+        _pos pushBack 0;
+        
+        GVAR(plottingBoard_isDragging) = false;
+        GVAR(plottingBoard_isRotating) = -1;
+        
+        if (GVAR(plottingBoard_Shown) != 0) then {
+        
+            private _click = _pos call FUNC(isInsidePlottingBoard);
+            //hint str _click;
+            if (_click > -1) then {
 
-        if (_rotateKeyPressed) then {
-            // Store data for rotating
-            GVAR(mapTool_startAngle) = + GVAR(mapTool_angle);
-            GVAR(mapTool_startDragAngle) = (180 + ((GVAR(mapTool_startDragPos) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mapTool_startDragPos) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
-            // Start rotating
-            GVAR(mapTool_isRotating) = true;
-        } else {
-            // Start dragging
-            GVAR(mapTool_isDragging) = true;
+                GVAR(plottingBoard_startPos) = + GVAR(plottingBoard_pos);
+                GVAR(plottingBoard_startDragPos) = + _pos;
+
+                private _rotateKeyPressed = switch (GVAR(rotateModifierKey)) do {
+                    case (1): {_altKey};
+                    case (2): {_ctrlKey};
+                    case (3): {_shiftKey};
+                    default {false};
+                };
+
+                if (_rotateKeyPressed) then {
+                    // Store data for rotating
+                    private _ang = + GVAR(plottingBoard_angle);
+                    switch (_click) do {
+                        case (1): {_ang = GVAR(plottingBoard_acrylicAngle)};
+                        case (2): {_ang = GVAR(plottingBoard_rulerAngle)};
+                    };
+                    
+                    GVAR(plottingBoard_startAngle) = + _ang;
+                    GVAR(plottingBoard_startDragAngle) = (180 + ((GVAR(plottingBoard_startDragPos) select 0) - (GVAR(plottingBoard_startPos) select 0)) atan2 ((GVAR(plottingBoard_startDragPos) select 1) - (GVAR(plottingBoard_startPos) select 1)) mod 360);
+                    // Start rotating
+                    GVAR(plottingBoard_isRotating) = _click;
+                    
+                } else {
+                    // Start dragging
+                    GVAR(plottingBoard_isDragging) = true;
+                };
+                
+                _handled = true;
+            };
         };
-        _handled = true;
     };
 };
 
