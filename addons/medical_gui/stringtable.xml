@@ -282,6 +282,9 @@
             <Chinese>開起醫療選單</Chinese>
             <Turkish>Medikal Menüyü Aç</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfo">
+            <English>Peek Medical Info</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
             <Spanish>Cargar al paciente en</Spanish>

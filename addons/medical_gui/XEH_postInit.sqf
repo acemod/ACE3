@@ -71,6 +71,17 @@ GVAR(selfInteractionActions) = [];
     false
 }, [DIK_H, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
+["ACE3 Common", QGVAR(peekMedicalInfoKey), localize LSTRING(PeekMedicalInfo),
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+
+    // Statement
+    [ACE_player, 0] call FUNC(displayPatientInformation);
+}, {
+    QGVAR(RscPatientInfo) cutFadeOut 0.3;
+}, [DIK_H, [false, true, false]], false, 0] call CBA_fnc_addKeybind;
+
 
 // Close patient information display when interaction menu is closed
 ["ace_interactMenuClosed", {
