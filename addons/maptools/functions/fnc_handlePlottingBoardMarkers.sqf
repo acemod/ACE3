@@ -1,5 +1,25 @@
-#include "script_component.hpp"
-
+#include "..\script_component.hpp"
+/*
+ * Author: LorenLuke
+ * Handle mouse movement over the map tool.
+ *
+ * Arguments:
+ * 0: Arguments <ARRAY>
+ *  0-0: Marker Name <STRING>
+ *  0-1: Chat Channel Number <SCALAR>
+ *  0-2: Marker Owner <OBJECT>
+ *  0-3: Local Origin <BOOL>
+ * 1: Deleted <BOOL>
+ *
+ * Return Value:
+ * true if event was handled <BOOL>
+ *
+ * Example:
+ * [CONTROL, [0, 5]] call ACE_maptools_fnc_handlePlottingBoardMarkers
+ *
+ * Public: No
+ */
+ 
 params ["_args", "_deleted"];
 _args params ["_marker", "_channelNumber", "_owner", "_local"];
 
@@ -18,7 +38,7 @@ if (isMultiplayer) then {
             if (_channelNumber != 5) then {_continue = false};
         };
         case 1: {
-            if (_channelNumber != 5 || _channelNumber != 3) then {_continue = false};
+            if !(_channelNumber in [3,5]) then {_continue = false};
         };
     };
 };

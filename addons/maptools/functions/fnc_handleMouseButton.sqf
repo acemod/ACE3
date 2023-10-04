@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: esteldunedain
+ * Author: esteldunedain & LorenLuke
  * Handle mouse buttons.
  *
  * Arguments:
@@ -51,7 +51,7 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
         }, []] call CBA_fnc_execNextFrame;
     } else {
         if (_ctrlKey && {_dir == 1}) then {
-            private _pos  = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
+            private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
             GVAR(freeDrawingData) = [];
             GVAR(freedrawing) = true;
             GVAR(drawPosStart) = _pos
@@ -87,7 +87,7 @@ if (_dir != 1) then {
 
         // Transform mouse screen position to coordinates
         private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
-        _pos set [count _pos, 0];
+        _pos pushback 0;
 
         GVAR(mapTool_isDragging) = false;
         GVAR(mapTool_isRotating) = false;
@@ -126,7 +126,7 @@ if (_dir != 1) then {
         
         // Transform mouse screen position to coordinates
         private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
-        _pos set [count _pos, 0];
+        _pos pushBack 0;
         
         GVAR(plottingBoard_isDragging) = false;
         GVAR(plottingBoard_isRotating) = -1;
@@ -147,13 +147,12 @@ if (_dir != 1) then {
                     default {false};
                 };
 
-//
                 if (_rotateKeyPressed) then {
                     // Store data for rotating
                     private _ang = + GVAR(plottingBoard_angle);
                     switch (_click) do {
-                        case (1) : {_ang = GVAR(plottingBoard_acrylicAngle)};
-                        case (2) : {_ang = GVAR(plottingBoard_rulerAngle)};
+                        case (1): {_ang = GVAR(plottingBoard_acrylicAngle)};
+                        case (2): {_ang = GVAR(plottingBoard_rulerAngle)};
                     };
                     
                     GVAR(plottingBoard_startAngle) = + _ang;
@@ -165,7 +164,6 @@ if (_dir != 1) then {
                     // Start dragging
                     GVAR(plottingBoard_isDragging) = true;
                 };
-//
                 
                 _handled = true;
             };

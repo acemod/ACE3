@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: esteldunedain
+ * Author: esteldunedain & LorenLuke
  * Handle mouse movement over the map tool.
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * true if event was handled <BOOL>
  *
  * Example:
- * [CONTROL, [0, 5, 1]] call ACE_maptools_fnc_handleMouseMove
+ * [CONTROL, [0, 5]] call ACE_maptools_fnc_handleMouseMove
  *
  * Public: No
  */
@@ -40,7 +40,7 @@ if (GVAR(mapTool_isDragging)) exitWith {
 // Rotation
 if (GVAR(mapTool_isRotating)) exitWith {
     // Get new angle
-    private _angle =  (180 + ((_mousePosition select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((_mousePosition select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
+    private _angle = (180 + ((_mousePosition select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((_mousePosition select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
     GVAR(mapTool_angle) = GVAR(mapTool_startAngle) + _angle - GVAR(mapTool_startDragAngle);
 
     true
@@ -60,17 +60,16 @@ if (GVAR(plottingBoard_isDragging)) exitWith {
 if (GVAR(plottingBoard_isRotating) > -1) exitWith {
     // Get new angle
     
-    private _angle =  (180 + ((_mousePosition select 0) - (GVAR(plottingBoard_startPos) select 0)) atan2 ((_mousePosition select 1) - (GVAR(plottingBoard_startPos) select 1)) mod 360);
+    private _angle = (180 + ((_mousePosition select 0) - (GVAR(plottingBoard_startPos) select 0)) atan2 ((_mousePosition select 1) - (GVAR(plottingBoard_startPos) select 1)) mod 360);
     private _returnAngle = GVAR(plottingBoard_startAngle) + _angle - GVAR(plottingBoard_startDragAngle);
 
     switch (GVAR(plottingBoard_isRotating)) do {
-        case (0) : {GVAR(plottingBoard_angle) = _returnAngle};
-        case (1) : {GVAR(plottingBoard_acrylicAngle) = _returnAngle};
-        case (2) : {GVAR(plottingBoard_rulerAngle) = _returnAngle};
+        case (0): {GVAR(plottingBoard_angle) = _returnAngle};
+        case (1): {GVAR(plottingBoard_acrylicAngle) = _returnAngle};
+        case (2): {GVAR(plottingBoard_rulerAngle) = _returnAngle};
     };
 
     true
 };
-
 
 false

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: esteldunedain
+ * Author: esteldunedain & LorenLuke
  * Update the map tool markers, position, size, rotation and visibility.
  *
  * Arguments:
@@ -117,4 +117,3 @@ if (GVAR(mapTool_Shown) > 0) then {
 
     _theMap drawIcon [_rotatingTexture, [1,1,1,1], [_xPos,_yPos], _scaleX, _scaleY, GVAR(mapTool_angle), "", 0];
 };
-

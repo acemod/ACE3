@@ -1,4 +1,4 @@
-// by esteldunedain
+// by esteldunedain && LorenLuke
 
 #include "script_component.hpp"
 
@@ -53,4 +53,3 @@ addMissionEventHandler ["markerDeleted", {
 
 GVAR(freeDrawingData) = [];
 GVAR(freedrawing) = false;
-

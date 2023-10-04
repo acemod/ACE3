@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: esteldunedain
- * canUseMapTools
+ * Author: LorenLuke
+ * canUsePlottingBoard
  *
  * Arguments:
  * None
@@ -10,7 +10,7 @@
  * Boolean <BOOL>
  *
  * Example:
- * call ACE_maptools_fnc_canUseMapTools
+ * call ACE_maptools_fnc_canUsePlottingBoard
  *
  * Public: No
  */
