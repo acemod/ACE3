@@ -41,8 +41,6 @@ private _drawCode = {
     };
 };
 
-
-// todo: it would be nice to show visually that trenches can only be dug north/south or east/west
 private _text = format ["%1 %2", LELSTRING(trenches,ConfirmDig), LLSTRING(ModuleLayTrenchline_Tooltip)];
 [_logic, {
     params ["_successful", "_logic", "_mousePosASL", "_shift"];
