@@ -24,10 +24,10 @@ params ["_medic", "_patient", "", "", "", "_item"];
 TRACE_1("placeInBodyBag",_patient);
 
 if ((alive _patient) && {!GVAR(allowBodyBagUnconscious)}) exitWith {
-    [_medic, "ACE_bodyBag"] call EFUNC(common,addToInventory); // re-add slighly used bodybag?
+    [_medic, _item] call EFUNC(common,addToInventory); // re-add slighly used bodybag?
     [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
 };
 
 // Body bag needs to be a little higher to prevent it from flipping
 private _bodyBagClass = getText (configFile >> "CfgWeapons" >> _item >> QGVAR(bodyBagObject));
-[_this, _bodyBagClass, [0, 0, 0.2]] call FUNC(placeInBodyBagOrGrave);
+[_this, _bodyBagClass, [0, 0, 0.2], 0, false] call FUNC(placeInBodyBagOrGrave);

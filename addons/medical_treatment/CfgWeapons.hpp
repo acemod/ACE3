@@ -286,9 +286,7 @@ class CfgWeapons {
         scope = 2;
         author = ECSTRING(common,ACETeam);
         displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0"
-        model = "\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_folded_F.p3d";
-        hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_folded_black_CO.paa"};
+        model = QPATHTOF(data\bodybagItem.p3d);
         picture = QPATHTOF(ui\bodybag_ca.paa);
         descriptionShort = CSTRING(Bodybag_Desc_Short);
         descriptionUse = CSTRING(Bodybag_Desc_Use);
@@ -300,11 +298,17 @@ class CfgWeapons {
     };
     class ACE_bodyBag_blue: ACE_bodyBag {
         displayName = "$STR_a3_cfgvehicles_land_bodybag_01_blue_f0";
+        picture = QPATHTOF(ui\bodybag_blue_ca.paa);
+        model = "\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_folded_F.p3d"; // this model will show the dlc icon on the inventory
+        hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_folded_blue_CO.paa"};
         GVAR(bodyBagObject) = "ACE_bodyBag_blue";
     };
     class ACE_bodyBag_white: ACE_bodyBag {
         displayName = "$STR_a3_cfgvehicles_land_bodybag_01_white_f0";
+        picture = QPATHTOF(ui\bodybag_white_ca.paa);
+        model = "\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_folded_F.p3d";
+        hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_folded_white_CO.paa"};
         GVAR(bodyBagObject) = "ACE_bodyBag_white";
     };
