@@ -121,11 +121,13 @@
             <English>Weapon Drop Chance</English>
             <Polish>Szansa Upuszczenia Broni</Polish>
             <German>Wahrscheinlichkeit, die Waffe fallen zu lassen</German>
+            <Korean>무기 떨어뜨릴 확률</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
             <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
             <Polish>Szansa na upuszczenie broni przez gracza, przy utracie przytomności. \nNie ma wpływu na AI.</Polish>
             <German>Chance für einen Spieler, seine Waffe fallen zu lassen, wenn er bewusstlos wird.\nHat keine Auswirkung auf die KI.</German>
+            <Korean>플레이어가 기절할 때 무기를 떨어뜨릴 확률입니다.\nAI는 영향을 받지 않습니다.</Korean>
         </Key>
     </Package>
 </Project>

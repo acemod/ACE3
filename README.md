@@ -22,9 +22,6 @@
     <a href="https://acemod.org/discord">
         <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="ACE3 Discord">
     </a>
-    <a href="https://circleci.com/gh/acemod/ACE3">
-        <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
-    </a>
 </p>
 
 <p align="center">
@@ -98,7 +95,7 @@ Please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues) to report
 
 ### Testing & building
 
-To help us test the latest development changes, download the [artifact](https://github.com/acemod/ACE3/actions/workflows/arma.yml) of the branch you'd like to test or subscribe to [nightly build](https://steamcommunity.com/sharedfiles/filedetails/?id=1882627645) to test `master` branch. Alternatively [build your own version](https://ace3.acemod.org/wiki/development/setting-up-the-development-environment.html).
+To help us test the latest development changes, download the [artifact](https://github.com/acemod/ACE3/actions/workflows/arma.yml) of the branch you'd like to test or subscribe to "Anrop ACE3 Master" on the workshop to test `master` branch. Alternatively [build your own version](https://ace3.acemod.org/wiki/development/setting-up-the-development-environment.html).
 
 ### Get in touch
 
