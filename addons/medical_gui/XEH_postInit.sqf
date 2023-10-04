@@ -78,8 +78,10 @@ GVAR(selfInteractionActions) = [];
 
     // Statement
     [ACE_player, 0] call FUNC(displayPatientInformation);
+    false
 }, {
     QGVAR(RscPatientInfo) cutFadeOut 0.3;
+    false
 }, [DIK_H, [false, true, false]], false, 0] call CBA_fnc_addKeybind;
 
 
