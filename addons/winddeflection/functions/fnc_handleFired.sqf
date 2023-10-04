@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, Ruthberg
  * Handles wind deflection for projectiles. Called from the unified fired EH only for players on foot and their vehicles if required by settings.

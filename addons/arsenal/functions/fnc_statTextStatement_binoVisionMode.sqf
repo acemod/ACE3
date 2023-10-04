@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dedmen, johnb43, LinkIsGrim
  * Text statement for the binocular/NVG vision mode stat.

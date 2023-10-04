@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, kymckay
  * Initializes variables for loadable objects. Called from init EH.

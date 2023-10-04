@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: alganthe, mharis001
  * Initializes the "Toggle Flashlights" Zeus module display.

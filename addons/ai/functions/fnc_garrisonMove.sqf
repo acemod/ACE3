@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: alganthe
  * Internal function used by ace_ai_fnc_garrison to make the units move to the positions it picked.

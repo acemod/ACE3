@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, johnb43
  * Adds weapon to unit without taking a magazine.

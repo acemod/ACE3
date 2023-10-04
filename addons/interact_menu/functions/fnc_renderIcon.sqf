@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou, esteldunedain, mharis001
  * Render a single interaction icon.

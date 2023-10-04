@@ -253,6 +253,16 @@ class GVAR(actions) {
         consumeItem = 1;
         litter[] = {};
     };
+    class Grave: BodyBag {
+        displayName = CSTRING(DigGrave);
+        displayNameProgress = CSTRING(DiggingGrave);
+        icon = QPATHTOEF(medical_gui,ui\grave.paa);
+        treatmentTime = QGVAR(treatmentTimeGrave);
+        condition = QFUNC(canDigGrave);
+        callbackSuccess = QFUNC(placeInGrave);
+        items[] = {};
+        consumeItem = 0;
+    };
     class CPR: BasicBandage {
         displayName = CSTRING(Actions_CPR);
         displayNameProgress = CSTRING(Actions_PerformingCPR);
