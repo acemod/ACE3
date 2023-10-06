@@ -186,7 +186,7 @@ private _fnc_processWounds = {
 
 // Handle no wound entries
 if (_woundEntries isEqualTo []) then {
-    _entries pushBack [localize ELSTRING(medical_treatment,NoInjuriesBodypart), [1, 1, 1, 1]];
+    _entries pushBack [localize ELSTRING(medical_treatment,NoInjuriesBodypart), _nonissueColor];
 } else {
     _entries append _woundEntries;
 };
