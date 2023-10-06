@@ -20,10 +20,14 @@
 params ["_ctrl", "_target", "_selectionN"];
 
 private _entries = [];
+private _nonissueColor = [1, 1, 1, 0.33];
 
 if (GVAR(showBloodlossEntry)) then {
     // Give a qualitative description of the blood volume lost
     switch (GET_HEMORRHAGE(_target)) do {
+        case 0: {
+            _entries pushBack ["No blood loss", _nonissueColor];
+        };
         case 1: {
             _entries pushBack [localize LSTRING(Lost_Blood1), [1, 1, 0, 1]];
         };
@@ -42,6 +46,8 @@ if (GVAR(showBloodlossEntry)) then {
 // Indicate if unit is bleeding at all
 if (IS_BLEEDING(_target)) then {
     _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
+} else {
+    _entries pushBack ["Not bleeding", _nonissueColor];
 };
 
 // Show receiving IV volume remaining
@@ -53,6 +59,8 @@ private _totalIvVolume = 0;
 
 if (_totalIvVolume >= 1) then {
     _entries pushBack [format [localize ELSTRING(medical_treatment,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
+} else {
+    _entries pushBack ["No IV", _nonissueColor];
 };
 
 // Indicate the amount of pain the unit is in
@@ -71,6 +79,8 @@ if (_target call EFUNC(common,isAwake)) then {
             };
         };
         _entries pushBack [localize _painText, [1, 1, 1, 1]];
+    } else {
+        _entries pushBack ["Not in pain", _nonissueColor];
     };
 };
 
