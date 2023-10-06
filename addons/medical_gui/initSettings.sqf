@@ -132,6 +132,6 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
     "SLIDER",
     [LSTRING(PeekMedicalInfoReleaseDelay_DisplayName), LSTRING(PeekMedicalInfoReleaseDelay_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [0, 5, 1, 0],
+    [0, 5, 1, -1],
     false
 ] call CBA_fnc_addSetting;

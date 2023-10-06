@@ -80,7 +80,7 @@ GVAR(selfInteractionActions) = [];
     [ACE_player, 0] call FUNC(displayPatientInformation);
     false
 }, {
-    [{QGVAR(RscPatientInfo) cutFadeOut 0.3; false}, [], round GVAR(peekMedicalInfoReleaseDelay)] call CBA_fnc_waitAndExecute;
+    [{QGVAR(RscPatientInfo) cutFadeOut 0.3; false}, [], GVAR(peekMedicalInfoReleaseDelay)] call CBA_fnc_waitAndExecute;
 }, [DIK_H, [false, true, false]], false, 0] call CBA_fnc_addKeybind;
 
 
