@@ -76,3 +76,11 @@ GVAR(selfInteractionActions) = [];
 ["ace_interactMenuClosed", {
     QGVAR(RscPatientInfo) cutFadeOut 0.3;
 }] call CBA_fnc_addEventHandler;
+
+ACE_player addEventHandler
+["Hit",
+    {
+        [ACE_player, 0] call FUNC(displayPatientInformation);
+        [{QGVAR(RscPatientInfo) cutFadeOut 0.3;}, [], 3] call CBA_fnc_waitAndExecute;
+    }
+];
