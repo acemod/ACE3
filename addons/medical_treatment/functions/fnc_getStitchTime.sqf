@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay
  * Calculates the Surgical Kit treatment time based on the amount of stitchable wounds.

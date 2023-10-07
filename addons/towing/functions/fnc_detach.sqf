@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Detaches child from parent, and gives rope item back

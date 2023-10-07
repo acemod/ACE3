@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Makes object catch fire. Only call from events. Local effects only.

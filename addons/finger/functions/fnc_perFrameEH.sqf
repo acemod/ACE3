@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * The perFrameEventHandler to draw the icons

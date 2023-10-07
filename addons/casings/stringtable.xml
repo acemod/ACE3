@@ -9,6 +9,7 @@
             <Chinesesimp>ACE 弹壳</Chinesesimp>
             <Russian>ACE Гильзы</Russian>
             <Spanish>ACE Casquillos</Spanish>
+            <German>ACE Patronenhülsen</German>
         </Key>
         <Key ID="STR_ACE_Casings_displayName">
             <English>Casings Enabled</English>
@@ -18,6 +19,7 @@
             <Chinesesimp>开启弹壳生成</Chinesesimp>
             <Russian>Гильзы включены</Russian>
             <Spanish>Habilitar Casquillos</Spanish>
+            <German>Patronenhülsen aktiviert</German>
         </Key>
         <Key ID="STR_ACE_Casings_description">
             <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
@@ -27,6 +29,7 @@
             <Chinesesimp>开启生成持续存在的弹壳（可能对较老和性能不行的系统有影响）</Chinesesimp>
             <Russian>Включить постоянные гильзы (ПОТЕНЦИАЛЬНО может повлиять на производительность на старых/слабых системах)</Russian>
             <Spanish>Habilitar persistencia de casquillos (POTENCIAL impacto en el rendimiento de ordenadores antiguos o no potentes)</Spanish>
+            <German>Persistente Patronenhülsen aktivieren (POTENZIELLE Leistungseinbußen bei alten/schwachen Systemen)</German>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_displayName">
             <English>Maximum casings</English>
@@ -36,6 +39,7 @@
             <Chinesesimp>最大弹壳量</Chinesesimp>
             <Russian>Макс. кол-во гильз</Russian>
             <Spanish>Casquillos máximos</Spanish>
+            <German>Maximale Patronenhülsen</German>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_description">
             <English>Maximum amount of casings to display</English>
@@ -45,6 +49,7 @@
             <Chinesesimp>显示的最大弹壳数量</Chinesesimp>
             <Russian>Максимальное количество гильз для отображения</Russian>
             <Spanish>Máxima cantidad de casquillos para mostrar</Spanish>
+            <German>Maximale Anzahl an Patronenhülsen, die angezeigt werden</German>
         </Key>
     </Package>
 </Project>

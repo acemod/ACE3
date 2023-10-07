@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rosuto, Ruthberg
  * Handles incoming data packets from the Vectronix Vector LRF

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Dynamically adds "Defuse" actions to nearby mines when interact_menu is opened.

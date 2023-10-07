@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Checks if AI healer has items
@@ -18,7 +18,7 @@
  * Public: No
  */
 
-if (!GVAR(requireItems)) exitWith { [true] };
+if (GVAR(requireItems) == 0) exitWith { [true] };
 
 params ["_healer", "_treatementType"];
 

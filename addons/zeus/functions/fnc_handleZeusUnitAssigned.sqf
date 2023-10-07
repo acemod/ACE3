@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay
  * Contextually removes addons (given in ACE_Curator) from zeus based on their required addon(s)

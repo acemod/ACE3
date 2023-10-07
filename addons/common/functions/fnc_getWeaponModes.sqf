@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Get the available firing modes of a weapon. Will ignore the AI helper modes.

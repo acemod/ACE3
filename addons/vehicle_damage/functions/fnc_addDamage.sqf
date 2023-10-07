@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Sets vehicle damage based on HitIndex. Failing that it falls back to HitPoint name.

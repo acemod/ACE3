@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="IRLight">
+        <Key ID="STR_ACE_IRLight_DBAL_A3_Red">
+            <English>DBAL-A3 (red)</English>
+            <German>DBAL-A3 (rot)</German>
+            <Polish>DBAL-A3 (czerwony)</Polish>
+            <Korean>DBAL-A3 (빨강)</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_DBAL_A3_Green">
+            <English>DBAL-A3 (green)</English>
+            <German>DBAL-A3 (grün)</German>
+            <Polish>DBAL-A3 (zielony)</Polish>
+            <Korean>DBAL-A3 (녹색)</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionUse">
+            <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF&lt;br&gt;Double click to switch mode</English>
+            <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS&lt;br&gt;Doppelklick um Modus zu wechseln</German>
+            <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Laser WŁ/WYŁ&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
+            <Korean>&lt;t color='#9cf953'&gt;사용: &lt;/t&gt;레이저 켜기/끄기&lt;br&gt;터블 클릭으로 모드 전환</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionShort">
+            <English>Dual Beam Aiming Laser</English>
+            <German>Doppelstrahllaservisier</German>
+            <Polish>Laser Celowniczy z Podwójną Wiązką</Polish>
+            <Korean>이중 빔 조준 레이저</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_Mode_VisiblePointer">
+            <English>Visible Laser</English>
+            <German>Sichtbarer Laser</German>
+            <Polish>Laser Widzialny</Polish>
+            <Korean>가시 레이저</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_Mode_IRPointer">
+            <English>IR Laser</English>
+            <German>IR-Laser</German>
+            <Polish>Laser IR</Polish>
+            <Korean>적외선 레이저</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_Mode_IRIlluminator">
+            <English>IR Illuminator</English>
+            <German>IR-Taschenlampe</German>
+            <Polish>Iluminator IR</Polish>
+            <Korean>적외선 조명</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_Mode_IRDual">
+            <English>IR Laser and Illuminator</English>
+            <German>IR-Laser und -Licht</German>
+            <Polish>Laser IR i Iluminator</Polish>
+            <Korean>적외선 레이저와 조명</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_Mode_Wide">
+            <English>Wide Beam</English>
+            <German>Breiter Lichtstrahl</German>
+            <Polish>Szeroka Wiązka</Polish>
+            <Korean>넓은 빔</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_Mode_Medium">
+            <English>Medium Beam</English>
+            <German>Mittlerer Lichtstrahl</German>
+            <Polish>Średnia Wiązka</Polish>
+            <Korean>중간 빔</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_Mode_Narrow">
+            <English>Narrow Beam</English>
+            <German>Schmaler Lichtstrahl</German>
+            <Polish>Wąska Wiązka</Polish>
+            <Korean>좁은 빔</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_SPIR_DescriptionUse">
+            <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Light ON/OFF&lt;br&gt;Double click to switch mode</English>
+            <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Licht EIN/AUS&lt;br&gt;Doppelklick um Modus zu wechseln</German>
+            <Polish>&lt;t color='#9cf953'&gt;Użycie: &lt;/t&gt;Iluminator WŁ/WYŁ&lt;br&gt;Kliknij dwukrotnie, aby zmienić tryb</Polish>
+            <Korean>&lt;t color='#9cf953'&gt;사용: &lt;/t&gt;조명 켜기/끄기&lt;br&gt;더블 클릭으로 모드 전환</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_SPIR_DescriptionShort">
+            <English>Special Purpose IR LED Illuminator</English>
+            <German>Infrarot LED Taschenlampe</German>
+            <Polish>Iluminator IR LED Specjalnego Przeznaczenia</Polish>
+            <Korean>특수목적 적외선 LED 조명</Korean>
+        </Key>
+        <Key ID="STR_ACE_IRLight_MomentarySwitch">
+            <English>Illuminator / Laser Momentary Switch</English>
+            <German>Licht / Laser Tastschalter</German>
+            <Polish>Przełącznik Chwilowy Iluminator / Laser</Polish>
+            <Korean>조명/레이저 빠르게 스위치</Korean>
+        </Key>
+    </Package>
+</Project>

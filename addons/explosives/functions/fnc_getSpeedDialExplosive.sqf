@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Gets the explosive from the speed dial entry.

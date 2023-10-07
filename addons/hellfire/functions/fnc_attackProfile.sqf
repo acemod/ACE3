@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Hellfire attack profile. Handles all 4 modes LOBL, LOAL-DIR, LOAL-HI, LOAL-LO

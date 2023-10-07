@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: CAA-Picard, johnb43
  * Check if a unit can check the ammo of the target.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Calculate the distance to the first intersection of a line

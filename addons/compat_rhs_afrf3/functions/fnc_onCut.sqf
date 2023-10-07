@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Function for closing doors and retracting the hooks for RHS USF helos.

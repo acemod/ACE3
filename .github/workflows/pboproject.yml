@@ -66,6 +66,7 @@ jobs:
         pboproject -P
         xcopy /e /h /q z\ace\tools\pDummies\gm gm\
         xcopy /e /h /q z\ace\tools\pDummies\vn vn\
+        xcopy /e /h /q z\ace\tools\pDummies\WW2 WW2\
     - name: Build
       run: py P:\z\ace\tools\make.py ci
       env:

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: voiper
  * Check a unit for whether they're carrying a chemlight shield and a chemlight.

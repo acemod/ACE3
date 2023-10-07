@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nelson Duarte, kymckay
  * Removes the current camera interest and detaches dummy target.
