@@ -12,6 +12,8 @@ GVAR(pendingReopen) = false;
 
 GVAR(menuPFH) = -1;
 
+GVAR(peekLastOpenedOn) = -1;
+
 GVAR(selfInteractionActions) = [];
 [] call FUNC(addTreatmentActions);
 [] call FUNC(collectActions);
@@ -80,7 +82,14 @@ GVAR(selfInteractionActions) = [];
     [ACE_player, 0] call FUNC(displayPatientInformation);
     false
 }, {
-    [{QGVAR(RscPatientInfo) cutFadeOut 0.3; false}, [], GVAR(peekMedicalInfoReleaseDelay)] call CBA_fnc_waitAndExecute;
+    GVAR(peekLastOpenedOn) = CBA_missionTime;
+    [{
+        CBA_missionTime - GVAR(peekLastOpenedOn) > GVAR(peekMedicalInfoReleaseDelay)
+    }, {
+        QGVAR(RscPatientInfo) cutFadeOut 0.3;
+        false
+    }] call CBA_fnc_waitUntilAndExecute;
+    false
 }, [DIK_H, [false, true, false]], false, 0] call CBA_fnc_addKeybind;
 
 
