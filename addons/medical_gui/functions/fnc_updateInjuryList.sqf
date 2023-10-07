@@ -22,6 +22,13 @@ params ["_ctrl", "_target", "_selectionN"];
 private _entries = [];
 private _nonissueColor = [1, 1, 1, 0.33];
 
+// Indicate if unit is bleeding at all
+if (IS_BLEEDING(_target)) then {
+    _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
+} else {
+    _entries pushBack [localize LSTRING(Status_Nobleeding), _nonissueColor];
+};
+
 if (GVAR(showBloodlossEntry)) then {
     // Give a qualitative description of the blood volume lost
     switch (GET_HEMORRHAGE(_target)) do {
@@ -42,14 +49,6 @@ if (GVAR(showBloodlossEntry)) then {
         };
     };
 };
-
-// Indicate if unit is bleeding at all
-if (IS_BLEEDING(_target)) then {
-    _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
-} else {
-    _entries pushBack [localize LSTRING(Status_Nobleeding), _nonissueColor];
-};
-
 // Show receiving IV volume remaining
 private _totalIvVolume = 0;
 {
