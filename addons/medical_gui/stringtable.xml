@@ -286,10 +286,10 @@
             <English>Peek Medical Info</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
-            <English>Medical Info Peek Fadeout Delay</English>
+            <English>Medical Peek Duration</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
-            <English>Number of seconds the medical info peek remains open after releasing the key.</English>
+            <English>How long the medical info peek remains open after releasing the key.</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
