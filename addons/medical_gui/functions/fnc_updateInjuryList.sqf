@@ -74,7 +74,6 @@ if (GVAR(showDamageEntry)) then {
 if (IS_BLEEDING(_target)) then {
     // Give a qualitative description of the rate of bleeding
     private _bleed_rate = GET_BLOOD_LOSS(_target);
-    systemChat str _bleed_rate;
     switch (true) do {
         case (_bleed_rate <= BLEED_RATE_SLOW): {
             _entries pushBack [localize LSTRING(Bleed_Rate1), [1, 1, 0, 1]];
