@@ -72,7 +72,23 @@ if (GVAR(showDamageEntry)) then {
 
 // Indicate if unit is bleeding at all
 if (IS_BLEEDING(_target)) then {
-    _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
+    // Give a qualitative description of the rate of bleeding
+    private _bleed_rate = GET_BLOOD_LOSS(_target);
+    systemChat str _bleed_rate;
+    switch (true) do {
+        case (_bleed_rate <= BLEED_RATE_SLOW): {
+            _entries pushBack [localize LSTRING(Bleed_Rate1), [1, 1, 0, 1]];
+        };
+        case (_bleed_rate <= BLEED_RATE_MODERATE): {
+            _entries pushBack [localize LSTRING(Bleed_Rate2), [1, 0.67, 0, 1]];
+        };
+        case (_bleed_rate <= BLEED_RATE_SEVERE): {
+            _entries pushBack [localize LSTRING(Bleed_Rate3), [1, 0.33, 0, 1]];
+        };
+        case (_bleed_rate > BLEED_RATE_SEVERE): {
+            _entries pushBack [localize LSTRING(Bleed_Rate4), [1, 0, 0, 1]];
+        };
+    };
 };
 
 if (GVAR(showBloodlossEntry)) then {

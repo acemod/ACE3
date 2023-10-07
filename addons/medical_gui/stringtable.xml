@@ -957,6 +957,18 @@
             <Chinese>出血中</Chinese>
             <Turkish>Kanama var</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate1">
+            <English>Slow bleeding</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
+            <English>Moderate bleeding</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
+            <English>Severe bleeding</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
+            <English>Massive bleeding</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
             <German>hat Schmerzen</German>
