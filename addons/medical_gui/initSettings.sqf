@@ -129,9 +129,9 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
 
 [
     QGVAR(peekMedicalInfoReleaseDelay),
-    "SLIDER",
+    "TIME",
     [LSTRING(PeekMedicalInfoReleaseDelay_DisplayName), LSTRING(PeekMedicalInfoReleaseDelay_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [0, 5, 1, -1],
+    [0, 5, 1],
     false
 ] call CBA_fnc_addSetting;
