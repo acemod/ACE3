@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Sets up doppler radar state arrays (called from missileGuidance's onFired).

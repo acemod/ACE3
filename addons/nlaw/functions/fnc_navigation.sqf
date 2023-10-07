@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Attempts to hold angle as fed to by seeker. Does so with a simple proportional controller

@@ -1,1 +1,0 @@
-#include "\z\ace\addons\iron_dome\script_component.hpp"
