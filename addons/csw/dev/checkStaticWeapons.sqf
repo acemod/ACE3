@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "\z\ace\addons\csw\script_component.hpp"
+#include "..\script_component.hpp"
 
 // Dev only function to search for weapons used by static weapons
 // and check if their magazinese are compatible

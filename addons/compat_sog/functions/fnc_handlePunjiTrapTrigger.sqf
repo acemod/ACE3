@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GhostIsSpooky, veteran29
  * Handler for 'detonation' of a local punji trap. Workaround for local-only ammo hit event.

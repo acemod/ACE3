@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Parses all input fields in the gun-, atmosphere- and target column, the result input fields and the muzzle velocity data input fields

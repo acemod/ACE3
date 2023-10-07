@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pabst Mirror (based on Explosive attach by Garth de Wet (LH))
  * Approves placement of the lightObject, scans for an appropriate location and attaches

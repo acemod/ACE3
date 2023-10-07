@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, johnb43, drofseh
  * Start reloading a launcher, reload started by the unit who has the missile.

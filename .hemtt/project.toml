@@ -24,7 +24,7 @@ exclude = [
     "/initsettings.sqf",
     "/initkeybinds.sqf",
     "/xeh_prep.sqf",
-    "dev",
+    "/dev/",
     "medical_ai/statemachine.sqf",
     "common/functions/fnc_dummy.sqf",
 ]
@@ -34,7 +34,15 @@ preset = "Hemtt"
 
 [hemtt.launch]
 workshop = [
-    "450814997", # CBA_A3's Workshop ID
+    "450814997", # CBA_A3
+]
+
+[hemtt.launch.spe]
+workshop = [
+    "450814997", # CBA_A3
+]
+dlc = [
+    "spe"
 ]
 
 [hemtt.launch.vn]
@@ -43,4 +51,12 @@ workshop = [
 ]
 dlc = [
     "S.O.G. Prairie Fire",
+]
+
+[hemtt.launch.ws]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
+dlc = [
+    "Western Sahara",
 ]

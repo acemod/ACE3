@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handles the wounds received event by triggering any needed blood creation.

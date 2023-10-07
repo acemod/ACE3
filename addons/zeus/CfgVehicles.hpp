@@ -179,6 +179,11 @@ class CfgVehicles {
         function = QFUNC(moduleHeal);
         icon = QPATHTOF(ui\Icon_Module_Zeus_Heal_ca.paa);
     };
+    class GVAR(moduleLayTrench): GVAR(moduleBase) {
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleLayTrenchline_DisplayName);
+        function = QFUNC(moduleLayTrench);
+    };
     class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);

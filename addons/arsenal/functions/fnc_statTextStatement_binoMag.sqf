@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, LinkIsGrim
  * Text statement for the binocular magnification stat.
