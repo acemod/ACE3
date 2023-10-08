@@ -1256,6 +1256,12 @@
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
             <English>Temporarily show medical info when injured.</English>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
+            <English>Medical Peek Duration on Hit</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
+            <English>How long the medical info peek remains open after being injured.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
             <Portuguese>Mostrar Traumatismo Sofrido</Portuguese>

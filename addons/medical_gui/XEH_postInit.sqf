@@ -88,9 +88,9 @@ GVAR(selfInteractionActions) = [];
 
     [ACE_player, _bodypartIndex] call FUNC(displayPatientInformation);
 
-    if (CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > 3) then {
+    if (CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > GVAR(peekMedicalOnHitDuration)) then {
         [{
-            CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > 3
+            CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > GVAR(peekMedicalOnHitDuration)
         }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
     };
     GVAR(peekOnHitLastOpenedOn) = CBA_missionTime;
