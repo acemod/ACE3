@@ -79,16 +79,19 @@ GVAR(selfInteractionActions) = [];
     QGVAR(RscPatientInfo) cutFadeOut 0.3;
 }] call CBA_fnc_addEventHandler;
 
-ACE_player addEventHandler
-["Hit",
-    {
-        [ACE_player, 0] call FUNC(displayPatientInformation);
+[QEGVAR(medical,woundReceived), {
+    params ["_unit", "_allDamages", ""];
+    if !(ACE_PLAYER == _unit) exitWith {};
 
-        if (CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > 3) then {
-            [{
-                CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > 3
-            }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
-        };
-        GVAR(peekOnHitLastOpenedOn) = CBA_missionTime;
-    }
-];
+    private _bodypart = toLower (_allDamages select 0 select 1);
+    private _bodypartIndex = ALL_BODY_PARTS find _bodypart;
+
+    [ACE_player, _bodypartIndex] call FUNC(displayPatientInformation);
+
+    if (CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > 3) then {
+        [{
+            CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > 3
+        }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
+    };
+    GVAR(peekOnHitLastOpenedOn) = CBA_missionTime;
+}] call CBA_fnc_addEventHandler;
