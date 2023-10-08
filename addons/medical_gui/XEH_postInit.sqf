@@ -12,6 +12,8 @@ GVAR(pendingReopen) = false;
 
 GVAR(menuPFH) = -1;
 
+GVAR(peekLastOpenedOn) = -1;
+
 GVAR(selfInteractionActions) = [];
 [] call FUNC(addTreatmentActions);
 [] call FUNC(collectActions);
@@ -70,6 +72,24 @@ GVAR(selfInteractionActions) = [];
     };
     false
 }, [DIK_H, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
+
+["ACE3 Common", QGVAR(peekMedicalInfoKey), localize LSTRING(PeekMedicalInfo),
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+
+    // Statement
+    [ACE_player, 0] call FUNC(displayPatientInformation);
+    false
+}, {
+    if (CBA_missionTime - GVAR(peekLastOpenedOn) > GVAR(peekMedicalInfoReleaseDelay)) then {
+        [{
+            CBA_missionTime - GVAR(peekLastOpenedOn) > GVAR(peekMedicalInfoReleaseDelay)
+        }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
+    };
+    GVAR(peekLastOpenedOn) = CBA_missionTime;
+    false
+}, [DIK_H, [false, true, false]], false, 0] call CBA_fnc_addKeybind;
 
 
 // Close patient information display when interaction menu is closed
