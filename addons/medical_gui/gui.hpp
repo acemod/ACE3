@@ -610,6 +610,30 @@ class RscTitles {
                                 w = QUOTE(POS_W(8.5));
                                 h = QUOTE(POS_H(8.5));
                             };
+                            class HeadS: HeadS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class TorsoS: TorsoS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class ArmLeftS: ArmLeftS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class ArmRightS: ArmRightS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class LegLeftS: LegLeftS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class LegRightS: LegRightS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
                         };
                     };
                     class InjuriesLabel: RscText {
