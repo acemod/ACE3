@@ -37,13 +37,9 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 {
     _x params ["_bodyPartIDC", "_selectedIDC", ["_tourniquetIDC", -1], ["_fractureIDC", -1]];
 
-    if (_selectionN == _forEachIndex) then {
-        private _ctrlSelected = _ctrlGroup controlsGroupCtrl _selectedIDC;
-        _ctrlSelected ctrlShow true;
-    } else {
-        private _ctrlSelected = _ctrlGroup controlsGroupCtrl _selectedIDC;
-        _ctrlSelected ctrlShow false;
-    };
+    private _selected = _forEachIndex == _selectionN;
+    private _ctrlSelected = _ctrlGroup controlsGroupCtrl _selectedIDC;
+    _ctrlSelected ctrlShow _selected;
 
     // Show or hide the tourniquet icon
     if (_tourniquetIDC != -1) then {
