@@ -4,7 +4,7 @@ class EGVAR(arsenal,stats) {
         scope = 2;
         priority = -1;
         stats[] = {QGVAR(enabled)};
-        displayName = CSTRING(LoadLauncher);
+        displayName = CSTRING(featureDescription);
         showText = 1;
         textStatement = QUOTE(localize QUOTE(ELSTRING(Common,Enabled)));
         condition = QUOTE(params[ARR_2('_stat', '_config')]; (getNumber (_config >> _stat select 0)) == 1);
