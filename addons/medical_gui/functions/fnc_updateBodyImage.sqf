@@ -34,7 +34,15 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 } forEach GET_OPEN_WOUNDS(_target);
 
 {
-    _x params ["_bodyPartIDC", ["_tourniquetIDC", -1], ["_fractureIDC", -1]];
+    _x params ["_bodyPartIDC", "_selectedIDC", ["_tourniquetIDC", -1], ["_fractureIDC", -1]];
+
+    if (GVAR(selectedBodyPart) == _forEachIndex) then {
+        private _ctrlSelected = _ctrlGroup controlsGroupCtrl _selectedIDC;
+        _ctrlSelected ctrlShow true;
+    } else {
+        private _ctrlSelected = _ctrlGroup controlsGroupCtrl _selectedIDC;
+        _ctrlSelected ctrlShow false;
+    };
 
     // Show or hide the tourniquet icon
     if (_tourniquetIDC != -1) then {
@@ -92,10 +100,10 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
     private _ctrlBodyPart = _ctrlGroup controlsGroupCtrl _bodyPartIDC;
     _ctrlBodyPart ctrlSetTextColor _bodyPartColor;
 } forEach [
-    [IDC_BODY_HEAD],
-    [IDC_BODY_TORSO],
-    [IDC_BODY_ARMLEFT,  IDC_BODY_ARMLEFT_T,  IDC_BODY_ARMLEFT_B],
-    [IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_T, IDC_BODY_ARMRIGHT_B],
-    [IDC_BODY_LEGLEFT,  IDC_BODY_LEGLEFT_T,  IDC_BODY_LEGLEFT_B],
-    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B]
+    [IDC_BODY_HEAD, IDC_BODY_HEAD_S],
+    [IDC_BODY_TORSO, IDC_BODY_TORSO_S],
+    [IDC_BODY_ARMLEFT, IDC_BODY_ARMLEFT_S,  IDC_BODY_ARMLEFT_T,  IDC_BODY_ARMLEFT_B],
+    [IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_S, IDC_BODY_ARMRIGHT_T, IDC_BODY_ARMRIGHT_B],
+    [IDC_BODY_LEGLEFT, IDC_BODY_LEGLEFT_S,  IDC_BODY_LEGLEFT_T,  IDC_BODY_LEGLEFT_B],
+    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_S, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B]
 ];
