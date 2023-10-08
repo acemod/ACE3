@@ -12,6 +12,8 @@ GVAR(pendingReopen) = false;
 
 GVAR(menuPFH) = -1;
 
+GVAR(peekOnHitLastOpenedOn) = -1;
+
 GVAR(selfInteractionActions) = [];
 [] call FUNC(addTreatmentActions);
 [] call FUNC(collectActions);
@@ -81,6 +83,12 @@ ACE_player addEventHandler
 ["Hit",
     {
         [ACE_player, 0] call FUNC(displayPatientInformation);
-        [{QGVAR(RscPatientInfo) cutFadeOut 0.3;}, [], 3] call CBA_fnc_waitAndExecute;
+
+        if (CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > 3) then {
+            [{
+                CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > 3
+            }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
+        };
+        GVAR(peekOnHitLastOpenedOn) = CBA_missionTime;
     }
 ];
