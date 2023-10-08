@@ -6,17 +6,18 @@
  * Arguments:
  * 0: Body image controls group <CONTROL>
  * 1: Target <OBJECT>
+ * 2: Body part <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL, _target] call ace_medical_gui_fnc_updateBodyImage
+ * [CONTROL, _target, 0] call ace_medical_gui_fnc_updateBodyImage
  *
  * Public: No
  */
 
-params ["_ctrlGroup", "_target"];
+params ["_ctrlGroup", "_target", "_selectionN"];
 
 // Get tourniquets, damage, and blood loss for target
 private _tourniquets = GET_TOURNIQUETS(_target);
@@ -36,7 +37,7 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 {
     _x params ["_bodyPartIDC", "_selectedIDC", ["_tourniquetIDC", -1], ["_fractureIDC", -1]];
 
-    if (GVAR(selectedBodyPart) == _forEachIndex) then {
+    if (_selectionN == _forEachIndex) then {
         private _ctrlSelected = _ctrlGroup controlsGroupCtrl _selectedIDC;
         _ctrlSelected ctrlShow true;
     } else {
