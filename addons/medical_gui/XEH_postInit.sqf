@@ -81,7 +81,7 @@ GVAR(selfInteractionActions) = [];
 
 [QEGVAR(medical,woundReceived), {
     params ["_unit", "_allDamages", ""];
-    if !(ACE_PLAYER == _unit) exitWith {};
+    if !(GVAR(peekMedicalOnHit) && ACE_PLAYER == _unit) exitWith {};
 
     private _bodypart = toLower (_allDamages select 0 select 1);
     private _bodypartIndex = ALL_BODY_PARTS find _bodypart;
