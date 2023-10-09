@@ -1,4 +1,20 @@
 #include "..\script_component.hpp"
+/*
+ * Author: AmsteadRayle
+ * Counts how many of the given items are present between the medic and patient.
+ * If medic or patient are in a vehicle then vehicle's inventory will also be checked.
+ *
+ * Arguments:
+ * 0: Items <ARRAY>
+ *
+ * Return Value:
+ * Item count string <STRING>
+ *
+ * Example:
+ * [items] call ace_medical_gui_fnc_countItems
+ *
+ * Public: No
+ */
 
 params ["_items"];
 
