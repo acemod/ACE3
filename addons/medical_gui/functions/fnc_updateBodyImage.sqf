@@ -39,6 +39,7 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 
     private _selected = _forEachIndex == _selectionN;
     private _ctrlSelected = _ctrlGroup controlsGroupCtrl _selectedIDC;
+    _ctrlSelected ctrlSetTextColor GVAR(bodypartOutlineColor);
     _ctrlSelected ctrlShow _selected;
 
     // Show or hide the tourniquet icon

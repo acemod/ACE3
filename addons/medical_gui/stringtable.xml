@@ -1272,6 +1272,12 @@
             <German>Zeigen Sie das erlittene Trauma in der Verletzungsliste an.</German>
             <Korean>부상 목록에 발생한 외상을 표시합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_BodypartOutlineColor_DisplayName">
+            <English>Body part outline color</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BodypartOutlineColor_Description">
+            <English>Color of outline around selected body part.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
             <English>Minor Trauma</English>
             <Portuguese>Traumatismo Leve</Portuguese>
