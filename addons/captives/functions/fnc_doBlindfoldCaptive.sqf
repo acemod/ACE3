@@ -66,10 +66,16 @@ if (_state) then { // Blindfold target
     removeGoggles _target;
 };
 
-// Handle for things that need to be dropped to the ground
+// Handle for things that need to be dropped to the ground or in a vehicle inventory
 if (_dropGoggles) then {
     private _weaponHolder = nearestObject [_target, "WeaponHolder"];
-    if (isNull _weaponHolder || {_target distance _weaponHolder > 2}) then {
+    // if _target is in a vehicle, use vehicle inventory as container
+    private _inVehicle = !isNull objectParent _target;
+    if (_inVehicle) then {
+        _weaponHolder = objectParent _target;
+    };
+
+    if (!_inVehicle && {isNull _weaponHolder || {_target distance _weaponHolder > 2}}) then {
         _weaponHolder = createVehicle ["GroundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
         _weaponHolder setPosASL getPosASL _target;
     };

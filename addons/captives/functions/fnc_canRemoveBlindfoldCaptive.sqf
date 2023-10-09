@@ -22,6 +22,4 @@ params ["_unit", "_target"];
 (_target getVariable [QGVAR(isHandcuffed), false]) &&
 {isNull (attachedTo _target)} &&
 {alive _target} &&
-{isNull objectParent _unit} &&
-{isNull objectParent _target} &&
 {(goggles _target) in GVAR(blindfolds)}
