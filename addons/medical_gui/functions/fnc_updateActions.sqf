@@ -48,17 +48,7 @@ private _shownIndex = 0;
 
         private _countText = "";
         if (_items select 0 != "") then {
-            private _counts = [ACE_player, GVAR(target), _items] call FUNC(countItems);
-            // _counts = [99,99,99];
-            _counts params ["_medicCount", "_patientCount", "_vehicleCount"];
-
-            _patientCount = if (EGVAR(medical_treatment,allowSharedEquipment) != 2) then {
-                if (isNil {_patientCount}) then {"|—"} else {format ["|%1", _patientCount]};
-            } else {""};
-
-            _vehicleCount = if (isNil {_vehicleCount}) then {""} else {format ["|%1", _vehicleCount]};
-
-            _countText = format ["%1%2%3", _medicCount, _patientCount, _vehicleCount];
+            _countText = [_items] call FUNC(countItems);
         };
 
         _ctrl = _actionButons # _shownIndex;
