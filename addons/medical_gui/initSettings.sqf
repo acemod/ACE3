@@ -135,3 +135,21 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
     [0, 5, 1],
     false
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(peekMedicalOnHit),
+    "CHECKBOX",
+    [LSTRING(PeekMedicalOnHit_DisplayName), LSTRING(PeekMedicalOnHit_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    false,
+    false // isGlobal
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(peekMedicalOnHitDuration),
+    "TIME",
+    [LSTRING(PeekMedicalOnHitDuration_DisplayName), LSTRING(PeekMedicalOnHitDuration_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [0, 5, 1],
+    false
+] call CBA_fnc_addSetting;

@@ -13,6 +13,7 @@ GVAR(pendingReopen) = false;
 GVAR(menuPFH) = -1;
 
 GVAR(peekLastOpenedOn) = -1;
+GVAR(peekOnHitLastOpenedOn) = -1;
 
 GVAR(selfInteractionActions) = [];
 [] call FUNC(addTreatmentActions);
@@ -95,4 +96,21 @@ GVAR(selfInteractionActions) = [];
 // Close patient information display when interaction menu is closed
 ["ace_interactMenuClosed", {
     QGVAR(RscPatientInfo) cutFadeOut 0.3;
+}] call CBA_fnc_addEventHandler;
+
+[QEGVAR(medical,woundReceived), {
+    params ["_unit", "_allDamages", ""];
+    if !(GVAR(peekMedicalOnHit) && {_unit == ACE_player}) exitWith {};
+
+    private _bodypart = toLower (_allDamages select 0 select 1);
+    private _bodypartIndex = ALL_BODY_PARTS find _bodypart;
+
+    [ACE_player, _bodypartIndex] call FUNC(displayPatientInformation);
+
+    if (CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > GVAR(peekMedicalOnHitDuration)) then {
+        [{
+            CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > GVAR(peekMedicalOnHitDuration)
+        }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
+    };
+    GVAR(peekOnHitLastOpenedOn) = CBA_missionTime;
 }] call CBA_fnc_addEventHandler;
