@@ -150,6 +150,6 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
     "TIME",
     [LSTRING(PeekMedicalOnHitDuration_DisplayName), LSTRING(PeekMedicalOnHitDuration_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [1, 10, 3],
+    [0, 5, 1],
     false
 ] call CBA_fnc_addSetting;
