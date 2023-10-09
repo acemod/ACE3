@@ -38,19 +38,36 @@ if (_showTriage) exitWith {
 // Show treatment options on action buttons
 private _shownIndex = 0;
 {
-    _x params ["_displayName", "_category", "_condition", "_statement"];
+    _x params ["_displayName", "_category", "_condition", "_statement", ["_items", [""]]];
 
     // Check action category and condition
     if (_category == _selectedCategory && {call _condition}) then {
         private _ctrl = if (_shownIndex >= count _actionButons) then {
             _actionButons pushBack (_display ctrlCreate ["ACE_Medical_Menu_ActionButton", -1, _group]);
         };
+
+        private _countText = "";
+        if (_items select 0 != "") then {
+            private _counts = [ACE_player, GVAR(target), _items] call FUNC(countItems);
+            // _counts = [99,99,99];
+            _counts params ["_medicCount", "_patientCount", "_vehicleCount"];
+
+            _patientCount = if (EGVAR(medical_treatment,allowSharedEquipment) != 2) then {
+                if (isNil {_patientCount}) then {"|—"} else {format ["|%1", _patientCount]};
+            } else {""};
+
+            _vehicleCount = if (isNil {_vehicleCount}) then {""} else {format ["|%1", _vehicleCount]};
+
+            _countText = format ["%1%2%3", _medicCount, _patientCount, _vehicleCount];
+        };
+
         _ctrl = _actionButons # _shownIndex;
         _ctrl ctrlRemoveAllEventHandlers "ButtonClick";
         _ctrl ctrlSetPositionY POS_H(1.1 * _shownIndex);
         _ctrl ctrlCommit 0;
 
         _ctrl ctrlSetText _displayName;
+        _ctrl ctrlSetTextSecondary _countText;
         _ctrl ctrlShow true;
 
         _ctrl ctrlAddEventHandler ["ButtonClick", _statement];

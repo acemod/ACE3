@@ -2,6 +2,7 @@ PREP(addTreatmentActions);
 PREP(bloodLossToRGBA);
 PREP(canOpenMenu);
 PREP(collectActions);
+PREP(countItems);
 PREP(damageToRGBA);
 PREP(displayPatientInformation);
 PREP(displayTriageCard);
