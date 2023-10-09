@@ -128,6 +128,15 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(peekMedicalInfoReleaseDelay),
+    "TIME",
+    [LSTRING(PeekMedicalInfoReleaseDelay_DisplayName), LSTRING(PeekMedicalInfoReleaseDelay_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [0, 5, 1],
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(peekMedicalOnHit),
     "CHECKBOX",
     [LSTRING(PeekMedicalOnHit_DisplayName), LSTRING(PeekMedicalOnHit_Description)],

@@ -20,6 +20,70 @@
 params ["_ctrl", "_target", "_selectionN"];
 
 private _entries = [];
+private _nonissueColor = [1, 1, 1, 0.33];
+
+// Indicate if unit is bleeding at all
+if (IS_BLEEDING(_target)) then {
+    _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
+} else {
+    _entries pushBack [localize LSTRING(Status_Nobleeding), _nonissueColor];
+};
+
+if (GVAR(showBloodlossEntry)) then {
+    // Give a qualitative description of the blood volume lost
+    switch (GET_HEMORRHAGE(_target)) do {
+        case 0: {
+            _entries pushBack [localize LSTRING(Lost_Blood0), _nonissueColor];
+        };
+        case 1: {
+            _entries pushBack [localize LSTRING(Lost_Blood1), [1, 1, 0, 1]];
+        };
+        case 2: {
+            _entries pushBack [localize LSTRING(Lost_Blood2), [1, 0.67, 0, 1]];
+        };
+        case 3: {
+            _entries pushBack [localize LSTRING(Lost_Blood3), [1, 0.33, 0, 1]];
+        };
+        case 4: {
+            _entries pushBack [localize LSTRING(Lost_Blood4), [1, 0, 0, 1]];
+        };
+    };
+};
+// Show receiving IV volume remaining
+private _totalIvVolume = 0;
+{
+    _x params ["_volumeRemaining"];
+    _totalIvVolume = _totalIvVolume + _volumeRemaining;
+} forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
+
+if (_totalIvVolume >= 1) then {
+    _entries pushBack [format [localize ELSTRING(medical_treatment,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
+} else {
+    _entries pushBack [localize ELSTRING(medical_treatment,Status_NoIv), _nonissueColor];
+};
+
+// Indicate the amount of pain the unit is in
+if (_target call EFUNC(common,isAwake)) then {
+    private _pain = GET_PAIN_PERCEIVED(_target);
+    if (_pain > 0) then {
+        private _painText = switch (true) do {
+            case (_pain > PAIN_UNCONSCIOUS): {
+                ELSTRING(medical_treatment,Status_SeverePain);
+            };
+            case (_pain > (PAIN_UNCONSCIOUS / 5)): {
+                ELSTRING(medical_treatment,Status_Pain);
+            };
+            default {
+                ELSTRING(medical_treatment,Status_MildPain);
+            };
+        };
+        _entries pushBack [localize _painText, [1, 1, 1, 1]];
+    } else {
+        _entries pushBack [localize ELSTRING(medical_treatment,Status_NoPain), _nonissueColor];
+    };
+};
+
+_entries pushBack ["", [1, 1, 1, 1]];
 
 // Add selected body part name
 private _bodyPartName = [
@@ -70,29 +134,6 @@ if (GVAR(showDamageEntry)) then {
     };
 };
 
-// Indicate if unit is bleeding at all
-if (IS_BLEEDING(_target)) then {
-    _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
-};
-
-if (GVAR(showBloodlossEntry)) then {
-    // Give a qualitative description of the blood volume lost
-    switch (GET_HEMORRHAGE(_target)) do {
-        case 1: {
-            _entries pushBack [localize LSTRING(Lost_Blood1), [1, 1, 0, 1]];
-        };
-        case 2: {
-            _entries pushBack [localize LSTRING(Lost_Blood2), [1, 0.67, 0, 1]];
-        };
-        case 3: {
-            _entries pushBack [localize LSTRING(Lost_Blood3), [1, 0.33, 0, 1]];
-        };
-        case 4: {
-            _entries pushBack [localize LSTRING(Lost_Blood4), [1, 0, 0, 1]];
-        };
-    };
-};
-
 // Indicate if a tourniquet is applied
 if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
     _entries pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
@@ -108,36 +149,6 @@ switch (GET_FRACTURES(_target) select _selectionN) do {
             _entries pushBack [localize LSTRING(Status_SplintApplied), [0.2, 0.2, 1, 1]];
         };
     };
-};
-
-// Indicate the amount of pain the unit is in
-if (_target call EFUNC(common,isAwake)) then {
-    private _pain = GET_PAIN_PERCEIVED(_target);
-    if (_pain > 0) then {
-        private _painText = switch (true) do {
-            case (_pain > PAIN_UNCONSCIOUS): {
-                ELSTRING(medical_treatment,Status_SeverePain);
-            };
-            case (_pain > (PAIN_UNCONSCIOUS / 5)): {
-                ELSTRING(medical_treatment,Status_Pain);
-            };
-            default {
-                ELSTRING(medical_treatment,Status_MildPain);
-            };
-        };
-        _entries pushBack [localize _painText, [1, 1, 1, 1]];
-    };
-};
-
-// Show receiving IV volume remaining
-private _totalIvVolume = 0;
-{
-    _x params ["_volumeRemaining"];
-    _totalIvVolume = _totalIvVolume + _volumeRemaining;
-} forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
-
-if (_totalIvVolume >= 1) then {
-    _entries pushBack [format [localize ELSTRING(medical_treatment,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
 };
 
 // Add entries for open, bandaged, and stitched wounds
@@ -174,7 +185,7 @@ private _fnc_processWounds = {
 
 // Handle no wound entries
 if (_woundEntries isEqualTo []) then {
-    _entries pushBack [localize ELSTRING(medical_treatment,NoInjuriesBodypart), [1, 1, 1, 1]];
+    _entries pushBack [localize ELSTRING(medical_treatment,NoInjuriesBodypart), _nonissueColor];
 } else {
     _entries append _woundEntries;
 };
