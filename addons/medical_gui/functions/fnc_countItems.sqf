@@ -6,6 +6,8 @@ private _medicCount = 0;
 private _patientCount = nil;
 private _vehicleCount = nil;
 
+private _nullString = "——"; // Two em dashes to fill space with single horizontal bar
+
 // Medic
 {
     private _item = _x;
@@ -48,7 +50,7 @@ private _countStrings = [];
 _countStrings pushBack ([str _medicCount, 2] call _fnc_padLeft);
 
 if (EGVAR(medical_treatment,allowSharedEquipment) != 2) then {
-    _countStrings pushBack (if (isNil {_patientCount}) then {"——"} else {[str _patientCount, 2] call _fnc_padLeft});
+    _countStrings pushBack (if (isNil {_patientCount}) then {_nullString} else {[str _patientCount, 2] call _fnc_padLeft});
 };
 
 if (!isNil {_vehicleCount}) then {
