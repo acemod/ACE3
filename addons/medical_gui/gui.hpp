@@ -168,7 +168,7 @@ class ACE_Medical_Menu_ActionButton: RscButtonMenu {
     size = QUOTE(POS_H(0.9));
     fontSecondary = "EtelkaMonospaceProBold";
     colorSecondary[] = {0.6, 0.6, 0.6, 1};
-	sizeExSecondary = QUOTE(POS_H(0.675));
+    sizeExSecondary = QUOTE(POS_H(0.675));
     class Attributes {
         align = "center";
         color = "#E5E5E5";
