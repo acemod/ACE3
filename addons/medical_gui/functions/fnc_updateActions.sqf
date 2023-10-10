@@ -52,7 +52,8 @@ private _shownIndex = 0;
             && EGVAR(medical_treatment,consumeSurgicalKit) == 2) then {
                 _items = ["ACE_suture"];
             };
-            _countText = [_items] call FUNC(countItems);
+            private _counts = [_items] call FUNC(countTreatmentItems);
+            _countText = _counts call FUNC(formatItemCounts);
         };
 
         _ctrl = _actionButons # _shownIndex;
