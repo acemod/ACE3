@@ -35,7 +35,7 @@ if (ACE_player != GVAR(target)) then {
     _patientCount = 0;
     {
         private _item = _x;
-        _patientCount = _patientCount + ({_x == _item} count (items GVAR(target)));
+        _patientCount = _patientCount + ([GVAR(target), _item] call EFUNC(common,getCountOfItem));
     } forEach _items;
 };
 
