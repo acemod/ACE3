@@ -47,7 +47,7 @@ private _shownIndex = 0;
         };
 
         private _countText = "";
-        if (GVAR(showTreatmentItemCount) && (_items select 0 != "")) then {
+        if ((GVAR(showTreatmentItemCount) != 0) && (_items select 0 != "")) then {
             if (_displayName == localize ELSTRING(medical_treatment,Use_SurgicalKit)
             && EGVAR(medical_treatment,consumeSurgicalKit) == 2) then {
                 _items = ["ACE_suture"];
@@ -60,8 +60,12 @@ private _shownIndex = 0;
         _ctrl ctrlSetPositionY POS_H(1.1 * _shownIndex);
         _ctrl ctrlCommit 0;
 
+        switch GVAR(showTreatmentItemCount) do {
+            case 1: {_ctrl ctrlSetTextSecondary _countText};
+            case 2: {_ctrl ctrlSetTooltip _countText};
+        };
+
         _ctrl ctrlSetText _displayName;
-        _ctrl ctrlSetTextSecondary _countText;
         _ctrl ctrlShow true;
 
         _ctrl ctrlAddEventHandler ["ButtonClick", _statement];
