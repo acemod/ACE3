@@ -22,9 +22,6 @@ private _medicCount = 0;
 private _patientCount = nil;
 private _vehicleCount = nil;
 
-private _nullString = "——"; // Two em dashes to fill space with single horizontal bar
-private _columnWidth = 2;
-
 // Medic
 {
     private _item = _x;
@@ -63,6 +60,8 @@ _fnc_padLeft = {
 };
 
 private _countStrings = [];
+private _nullString = "——"; // Two em dashes to fill space with single horizontal bar
+private _columnWidth = 2;
 
 _countStrings pushBack ([str _medicCount, _columnWidth] call _fnc_padLeft);
 
