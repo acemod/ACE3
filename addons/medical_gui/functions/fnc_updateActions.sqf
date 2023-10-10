@@ -38,7 +38,7 @@ if (_showTriage) exitWith {
 // Show treatment options on action buttons
 private _shownIndex = 0;
 {
-    _x params ["_displayName", "_category", "_condition", "_statement", ["_items", [""]]];
+    _x params ["_displayName", "_category", "_condition", "_statement", "_items"];
 
     // Check action category and condition
     if (_category == _selectedCategory && {call _condition}) then {
@@ -47,7 +47,7 @@ private _shownIndex = 0;
         };
 
         private _countText = "";
-        if ((GVAR(showTreatmentItemCount) != 0) && (_items select 0 != "")) then {
+        if ((GVAR(showTreatmentItemCount) != 0) && (count _items != 0)) then {
             if (_displayName == localize ELSTRING(medical_treatment,Use_SurgicalKit)
             && EGVAR(medical_treatment,consumeSurgicalKit) == 2) then {
                 _items = ["ACE_suture"];
