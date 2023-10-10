@@ -38,7 +38,7 @@ if (_showTriage) exitWith {
 // Show treatment options on action buttons
 private _shownIndex = 0;
 {
-    _x params ["_displayName", "_category", "_condition", "_statement"];
+    _x params ["_displayName", "_category", "_condition", "_statement", "_items"];
 
     // Check action category and condition
     if (_category == _selectedCategory && {call _condition}) then {
@@ -49,6 +49,16 @@ private _shownIndex = 0;
         _ctrl ctrlRemoveAllEventHandlers "ButtonClick";
         _ctrl ctrlSetPositionY POS_H(1.1 * _shownIndex);
         _ctrl ctrlCommit 0;
+
+        // Show warning if tourniquet will interfere with action
+        if (((_category in ["examine", "medication"]) || (_items findIf {"IV" in _x}) > -1)
+        && HAS_TOURNIQUET_APPLIED_ON(GVAR(target),GVAR(selectedBodyPart))) then {
+            _ctrl ctrlSetTooltipColorText [1, 1, 0, 1];
+            _ctrl ctrlSetTooltip localize LSTRING(TourniquetWarning);
+        } else {
+            _ctrl ctrlSetTooltipColorText [1, 1, 1, 1];
+            _ctrl ctrlSetTooltip "";
+        };
 
         _ctrl ctrlSetText _displayName;
         _ctrl ctrlShow true;

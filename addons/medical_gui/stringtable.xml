@@ -1304,5 +1304,8 @@
             <German>Chronisches Trauma</German>
             <Korean>심각한 외상</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
+            <English>No effect while tourniqeted</English>
+        </Key>
     </Package>
 </Project>
