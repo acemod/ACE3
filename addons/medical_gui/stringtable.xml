@@ -1304,5 +1304,11 @@
             <German>Chronisches Trauma</German>
             <Korean>심각한 외상</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_ShowTreatmentItemCount_DisplayName">
+            <English>Show treatment item count</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_ShowTreatmentItemCount_Description">
+            <English>Show number of available treatment items in medical menu.</English>
+        </Key>
     </Package>
 </Project>

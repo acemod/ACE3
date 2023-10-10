@@ -47,7 +47,7 @@ private _shownIndex = 0;
         };
 
         private _countText = "";
-        if (_items select 0 != "") then {
+        if (GVAR(showTreatmentItemCount) && (_items select 0 != "")) then {
             if (_displayName == localize ELSTRING(medical_treatment,Use_SurgicalKit)
             && EGVAR(medical_treatment,consumeSurgicalKit) == 2) then {
                 _items = ["ACE_suture"];

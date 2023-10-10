@@ -126,3 +126,12 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
     true,
     true // isGlobal
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showTreatmentItemCount),
+    "CHECKBOX",
+    [LSTRING(ShowTreatmentItemCount_DisplayName), LSTRING(ShowTreatmentItemCount_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    true,
+    false // isGlobal
+] call CBA_fnc_addSetting;
