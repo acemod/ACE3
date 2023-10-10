@@ -51,14 +51,14 @@ _fnc_formatInTooltip = {
     params ["_medicCount", "_patientCount", "_vehicleCount"];
     private _columnWidth = 3;
 
-    private _countStrings = [format ["%1 %2", [str _medicCount, _columnWidth] call _fnc_padLeft, localize LSTRING(TreatmentItemCount_Medic)]];
+    private _countStrings = [format ["%1 %2", _medicCount, localize LSTRING(TreatmentItemCount_Medic)]];
 
     if ((EGVAR(medical_treatment,allowSharedEquipment) != 2) && (!isNil {_patientCount})) then {
-        _countStrings pushBack format ["%1 %2", [str _patientCount, _columnWidth] call _fnc_padLeft, localize LSTRING(TreatmentItemCount_Patient)];
+        _countStrings pushBack format ["%1 %2", _patientCount, localize LSTRING(TreatmentItemCount_Patient)];
     };
 
     if (!isNil {_vehicleCount}) then {
-        _countStrings pushBack format ["%1 %2", [str _vehicleCount, _columnWidth] call _fnc_padLeft, localize LSTRING(TreatmentItemCount_Vehicle)];
+        _countStrings pushBack format ["%1 %2", _vehicleCount, localize LSTRING(TreatmentItemCount_Vehicle)];
     };
 
     _countStrings joinString "\n"
