@@ -40,7 +40,7 @@ if (IS_BLEEDING(_target)) then {
         case (_bleedRate < _bleedRateKO * BLEED_RATE_SEVERE): {
             _entries pushBack [localize LSTRING(Bleed_Rate3), [1, 0.33, 0, 1]];
         };
-        case (_bleedRate >= _bleedRateKO * BLEED_RATE_SEVERE): {
+        default {
             _entries pushBack [localize LSTRING(Bleed_Rate4), [1, 0, 0, 1]];
         };
     };
