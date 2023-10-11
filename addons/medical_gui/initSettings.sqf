@@ -57,7 +57,7 @@
 * See: https://gka.github.io/palettes
 */
 private _bloodLossColors = [
-    [1.00, 1.00, 1.00, 1],
+    [0.00, 0.00, 0.00, 1],
     [1.00, 0.95, 0.64, 1],
     [1.00, 0.87, 0.46, 1],
     [1.00, 0.80, 0.33, 1],
@@ -74,7 +74,7 @@ private _bloodLossColors = [
 * See: https://gka.github.io/palettes
 */
 private _damageColors = [
-    [1.00, 1.00, 1.00, 1],
+    [0.00, 0.00, 0.00, 1],
     [0.75, 0.95, 1.00, 1],
     [0.62, 0.86, 1.00, 1],
     [0.54, 0.77, 1.00, 1],
