@@ -48,8 +48,7 @@ private _shownIndex = 0;
 
         private _countText = "";
         if ((GVAR(showTreatmentItemCount) != 0) && (count _items != 0)) then {
-            if (_displayName == localize ELSTRING(medical_treatment,Use_SurgicalKit)
-            && EGVAR(medical_treatment,consumeSurgicalKit) == 2) then {
+            if ("ACE_surgicalKit" in _items && {EGVAR(medical_treatment,consumeSurgicalKit) == 2}) then {
                 _items = ["ACE_suture"];
             };
             private _counts = [_items] call FUNC(countTreatmentItems);
