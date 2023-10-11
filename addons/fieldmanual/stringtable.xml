@@ -22,7 +22,7 @@
             <English>Hunger</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
-            <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating food.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up food.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4&lt;br/&gt;%2Choose an item to consume.</English>
+            <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating food.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up food.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
             <English>Thirst</English>
@@ -37,7 +37,7 @@
             <English>Decrease Heart Rate</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
-            <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
+            <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_DisplayName">
             <English>Bandages</English>
@@ -46,7 +46,7 @@
             <English>Close Wounds</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
-            <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%2%3Field Dressing:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; In All Categories&lt;br/&gt;%2%3Packing Bandage:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Elastic Bandage:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Higher&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#E60000'&gt;Shorter&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Lower&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lower&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopening Delay&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%14%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
+            <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%2%3Field Dressing:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; In All Categories&lt;br/&gt;%2%3Packing Bandage:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Elastic Bandage:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Higher&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#E60000'&gt;Shorter&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Lower&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lower&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopening Delay&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
             <English>IV Fluids</English>
@@ -55,37 +55,37 @@
             <English>Restore Blood Volume</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_Description">
-            <English>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Restore blood voluem by selecting desired %3IV Fluid%4 type.</English>
+            <English>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Restore blood volume by selecting desired %3IV Fluid%4 type.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_ShortName">
             <English>Increase Heart Rate | Wake Up Faster</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_Description">
-            <English>%3Epinephrine%4 increases a patient's pulse as well as potentially decreasing the time between consciousnesss checks (effectively reducing the time needed for the patient to wake up).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%12%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
+            <English>%3Epinephrine%4 increases a patient's pulse as well as potentially decreasing the time between consciousnesss checks (effectively reducing the time needed for the patient to wake up).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_ShortName">
             <English>Restore Like New</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
-            <English>The %3Personal Aid Kit%4 is an item that allows a soldier to be fully healed. Independent of %3ACE Settings%4, it requires that the patient is in %3Stable Condition%4 before use.&lt;br/&gt;&lt;br/&gt;%3Stable Condition%4 qualifies as:&lt;br/&gt;%2Unit is %3Alive%4.&lt;br/&gt;%2Unit is %3Conscious%4.&lt;br/&gt;%2Unit has no active %3Bleeding%4.&lt;br/&gt;%2Heart Rate &gt;= 40.&lt;br/&gt;%2Systolic BP &gt;= 60.&lt;br/&gt;%2Diastolic BP &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move to appropriate location depending on %3ACE Settings%4.&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatments%4&lt;br/&gt;%2Select %3Use Personal Aid Kit%4.</English>
+            <English>The %3Personal Aid Kit%4 is an item that allows a soldier to be fully healed. Independent of %3ACE Settings%4, it requires that the patient is in %3Stable Condition%4 before use.&lt;br/&gt;&lt;br/&gt;%3Stable Condition%4 qualifies as:&lt;br/&gt;%2Unit is %3Alive%4.&lt;br/&gt;%2Unit is %3Conscious%4.&lt;br/&gt;%2Unit has no active %3Bleeding%4.&lt;br/&gt;%2Heart Rate &gt;= 40.&lt;br/&gt;%2Systolic BP &gt;= 60.&lt;br/&gt;%2Diastolic BP &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move to appropriate location depending on %3ACE Settings%4.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Advanced Treatments%4&lt;br/&gt;%2Select %3Use Personal Aid Kit%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_ShortName">
             <English>Fix Fractures</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_Description">
-            <English>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%14%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</English>
+            <English>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_ShortName">
             <English>Prevent Wounds From Reopening</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
-            <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%14%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
+            <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_ShortName">
             <English>Stop Bleeding</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
-            <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%14%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
+            <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_ATragMX_ShortName">
             <English>Portable, Precise, Rugged</English>
@@ -97,7 +97,7 @@
             <English>Bring Out Your Dead</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
-            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Place Body In Bodybag%4.</English>
+            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%12%4] or [%3%13%4] and select %3Place Body In Bodybag%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_CableTie_ShortName">
             <English>Take Prisoners</English>
