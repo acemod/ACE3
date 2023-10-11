@@ -8,7 +8,7 @@
  * 0: Items <ARRAY>
  *
  * Return Value:
- * Counts <ARRAY>
+ * Counts (can be nil) <ARRAY>
  *
  * Example:
  * [items] call ace_medical_gui_fnc_countTreatmentItems
