@@ -23,6 +23,7 @@ if (GVAR(openedMenuType) < 0) exitWith {true};
 if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     (findDisplay 91919) closeDisplay 2;
 };
+if ((!isNull curatorCamera) && {!isNull (findDisplay 91919)}) then { closeDialog 2; };
 
 if (GVAR(actionSelected)) then {
     private _player = ACE_Player;

@@ -3417,6 +3417,9 @@
             <Chinese>呼吸極弱</Chinese>
             <Turkish>Neredeyse nefes almıyor</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Status_NoPain">
+            <English>No pain</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_MildPain">
             <English>In mild pain</English>
             <German>Hat leichte Schmerzen</German>
@@ -3495,6 +3498,9 @@
             <Korean>IV로 [%1ml] 수혈중</Korean>
             <Chinesesimp>正在接受静脉注射 [%1毫升]</Chinesesimp>
             <Chinese>接收靜脈注射液中 [%1毫升]</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Status_NoIv">
+            <English>No IV</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure">
             <English>Blood Pressure</English>
