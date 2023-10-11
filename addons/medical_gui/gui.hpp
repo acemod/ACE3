@@ -82,6 +82,32 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
             idc = IDC_BODY_LEGRIGHT_T;
             text = QPATHTOF(data\body_image\leg_right_t.paa);
         };
+        class HeadS: Background {
+            idc = IDC_BODY_HEAD_S;
+            text = QPATHTOF(data\body_image\head_s.paa);
+            colorText[] = {1.0, 1.0, 1.0, 1.0};
+            show = 0;
+        };
+        class TorsoS: HeadS {
+            idc = IDC_BODY_TORSO_S;
+            text = QPATHTOF(data\body_image\torso_s.paa);
+        };
+        class ArmLeftS: HeadS {
+            idc = IDC_BODY_ARMLEFT_S;
+            text = QPATHTOF(data\body_image\arm_left_s.paa);
+        };
+        class ArmRightS: HeadS {
+            idc = IDC_BODY_ARMRIGHT_S;
+            text = QPATHTOF(data\body_image\arm_right_s.paa);
+        };
+        class LegLeftS: HeadS {
+            idc = IDC_BODY_LEGLEFT_S;
+            text = QPATHTOF(data\body_image\leg_left_s.paa);
+        };
+        class LegRightS: HeadS {
+            idc = IDC_BODY_LEGRIGHT_S;
+            text = QPATHTOF(data\body_image\leg_right_s.paa);
+        };
     };
 };
 
@@ -581,6 +607,30 @@ class RscTitles {
                                 h = QUOTE(POS_H(8.5));
                             };
                             class LegRightT: LegRightT {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class HeadS: HeadS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class TorsoS: TorsoS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class ArmLeftS: ArmLeftS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class ArmRightS: ArmRightS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class LegLeftS: LegLeftS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class LegRightS: LegRightS {
                                 w = QUOTE(POS_W(8.5));
                                 h = QUOTE(POS_H(8.5));
                             };

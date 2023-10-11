@@ -128,6 +128,15 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(bodyPartOutlineColor),
+    "COLOR",
+    [LSTRING(bodyPartOutlineColor_DisplayName), LSTRING(bodyPartOutlineColor_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [1.00, 1.00, 1.00, 1],
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(peekMedicalInfoReleaseDelay),
     "TIME",
     [LSTRING(PeekMedicalInfoReleaseDelay_DisplayName), LSTRING(PeekMedicalInfoReleaseDelay_Description)],
