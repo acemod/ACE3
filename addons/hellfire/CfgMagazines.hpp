@@ -16,7 +16,7 @@ class CfgMagazines {
         count = 1;
         mass = 70;
         pylonWeapon = QGVAR(launcher);
-        hardpoints[] = {"SCALPEL_1RND"};
+        hardpoints[] = {"SCALPEL_1RND", "HellfireRail_MELB"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
     class PylonRack_1Rnd_ACE_Hellfire_AGM114K: 6Rnd_ACE_Hellfire_AGM114K { // 1x Launcher Support Rack

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Karel Moricky, modified by Alganthe, johnb43

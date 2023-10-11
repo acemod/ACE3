@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: commy2 and esteldunedain
- * Count the ammo of the currently loaded magazine or count rifle grenades. Play animation and display message.
+ * Author: commy2, esteldunedain
+ * Play animation and display message.
  *
  * Arguments:
- * 0: Target. <OBJECT>
- * 1: Player <OBJECT>
+ * 0: Unit equipped with the weapon <OBJECT>
+ * 1: Unit wanting to check the ammo <OBJECT>
  *
  * Return Value:
  * None
@@ -16,13 +16,14 @@
  * Public: No
  */
 
-params ["_target", "_player"];
+params ["_target", "_unit"];
 
-if (_player == _target) then {
+if (_unit == _target) then {
     if ((vehicle _target) isKindOf "StaticWeapon") then {
         _target = vehicle _target;
     };
-    [_player, "Gear", 1] call EFUNC(common,doGesture);
+
+    [_unit, "Gear", 1] call EFUNC(common,doGesture);
 };
 
-[FUNC(displayAmmo), [_target], 1] call CBA_fnc_waitAndExecute;
+[FUNC(displayAmmo), _target, 1] call CBA_fnc_waitAndExecute;

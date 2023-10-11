@@ -22,6 +22,14 @@
 // Favorites
 #define FAVORITES_COLOR (GVAR(favoritesColor) + [1])
 
+// Attachments
+#define ITEM_INDEX_MUZZLE 0
+#define ITEM_INDEX_SIDE 1
+#define ITEM_INDEX_OPTIC 2
+#define ITEM_INDEX_BIPOD 3
+#define ITEM_INDEX_MAGAZINE 4
+#define ITEM_INDEX_MAGAZINE_SECONDARY 5
+
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0

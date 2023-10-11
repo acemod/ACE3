@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: marc_book, commy2, CAA-Picard
  * Unload and paradrop object from plane or helicopter.
@@ -49,7 +49,7 @@ if (_item isEqualType objNull) then {
     _object setPosASL (AGLtoASL _posBehindVehicleAGL);
 };
 
-_object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
+[QEGVAR(common,setVelocity), [_object, ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5))], _object] call CBA_fnc_targetEvent;
 
 // open parachute and ir light effect
 [{
@@ -59,13 +59,20 @@ _object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir
 
     private _parachute = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 
+    // Prevent collision damage
+    [QEGVAR(common,fixCollision), _parachute] call CBA_fnc_localEvent;
+    [QEGVAR(common,fixCollision), _object, _object] call CBA_fnc_targetEvent;
+
     // cannot use setPos on parachutes without them closing down
     _parachute attachTo [_object, [0,0,0]];
     detach _parachute;
 
     private _velocity = velocity _object;
 
-    _object attachTo [_parachute, [0,0,1]];
+    // Attach to the middle of the object
+    (2 boundingBoxReal _object) params ["_bb1", "_bb2"];
+
+    _object attachTo [_parachute, [0, 0, ((_bb2 select 2) - (_bb1 select 2)) / 2]];
     _parachute setVelocity _velocity;
 
     if ((GVAR(disableParadropEffectsClasstypes) findIf {_object isKindOf _x}) == -1) then {

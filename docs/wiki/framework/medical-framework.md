@@ -214,7 +214,7 @@ class ACE_Medical_Injuries {
 ```
 {% endraw %}
 
-## 4.4 Wound Handler Function
+### 4.4 Wound Handler Function
 Custom wound handlers should follow the same spec as the built-in handler:
 
 `ace_medical_damage_fnc_woundsHandlerBase`
@@ -236,3 +236,8 @@ The damage elements are sorted in descending order according to how much damage 
 0  | `player` | Unit that was hit
 1  | `[[0.5, "Body", 1], [0.3, "Head", 0.6]]` | 0.5 damage to body (was 1 before armor), 0.3 damage to head (was 0.6 before armor)
 2  | `"grenade"` | type grenade (non-selection-specific)
+
+## 5. Tweaking internal variables
+Some of ACE Medical's underlying behavior, primarily related to damage handling and the vitals loop, can be fine-tuned by editing `ace_medical_const_` variables, found in [script_macros_medical.hpp](https://github.com/acemod/ACE3/blob/master/addons/medical_engine/script_macros_medical.hpp).
+
+Modification of those values should be done by advanced users only. Values and variable names are subject to change without prior warning. Modifying values mid-mission may lead to undefined behavior. Expect minimal support.

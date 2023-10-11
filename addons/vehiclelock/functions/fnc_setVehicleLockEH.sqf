@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Sets a vehicle lock state because of a "ace_vehiclelock_setVehicleLock" event

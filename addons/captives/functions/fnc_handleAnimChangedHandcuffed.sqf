@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nic547, commy2
  * Restart the handcuffing animation if it got interrupted. Called from a AnimChanged EH.

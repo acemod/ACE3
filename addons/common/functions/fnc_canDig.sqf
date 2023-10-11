@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg, commy2
  * Checks if the player can dig on the surface below (enough dust).
