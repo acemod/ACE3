@@ -20,14 +20,14 @@
 params ["_medicCount", "_patientCount", "_vehicleCount"];
 
 // Simple string padding function to control column width
-_fnc_padLeft = {
+private _fnc_padLeft = {
     params ["_string", "_length"];
     if (count _string >= _length) exitWith {_string};
     private _full = "    " + _string;
     _Full select [(count _full)-_length, _length];
 };
 
-_fnc_formatOnButton = {
+private _fnc_formatOnButton = {
     params ["_medicCount", "_patientCount", "_vehicleCount"];
     private _nullString = "——"; // Two em dashes to fill space with single horizontal bar
     private _columnWidth = 2;
@@ -47,7 +47,7 @@ _fnc_formatOnButton = {
     _countStrings joinString "|"
 };
 
-_fnc_formatInTooltip = {
+private _fnc_formatInTooltip = {
     params ["_medicCount", "_patientCount", "_vehicleCount"];
     private _columnWidth = 3;
 
