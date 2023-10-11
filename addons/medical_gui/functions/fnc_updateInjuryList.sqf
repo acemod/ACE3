@@ -73,18 +73,22 @@ if (GVAR(showDamageEntry)) then {
 // Indicate if unit is bleeding at all
 if (IS_BLEEDING(_target)) then {
     // Give a qualitative description of the rate of bleeding
-    private _bleed_rate = GET_BLOOD_LOSS(_target);
+    private _cardiacOutput = [_target] call EFUNC(medical_status,getCardiacOutput);
+    private _bleedRate = GET_BLOOD_LOSS(_target);
+    private _bleedRateKO = BLOOD_LOSS_KNOCK_OUT_THRESHOLD * (_cardiacOutput max 0.05);
+    // Use nonzero minimum cardiac output to prevent all bleeding showing as massive during cardiac arrest
+
     switch (true) do {
-        case (_bleed_rate <= BLEED_RATE_SLOW): {
+        case (_bleedRate < _bleedRateKO * BLEED_RATE_SLOW): {
             _entries pushBack [localize LSTRING(Bleed_Rate1), [1, 1, 0, 1]];
         };
-        case (_bleed_rate <= BLEED_RATE_MODERATE): {
+        case (_bleedRate < _bleedRateKO * BLEED_RATE_MODERATE): {
             _entries pushBack [localize LSTRING(Bleed_Rate2), [1, 0.67, 0, 1]];
         };
-        case (_bleed_rate <= BLEED_RATE_SEVERE): {
+        case (_bleedRate < _bleedRateKO * BLEED_RATE_SEVERE): {
             _entries pushBack [localize LSTRING(Bleed_Rate3), [1, 0.33, 0, 1]];
         };
-        case (_bleed_rate > BLEED_RATE_SEVERE): {
+        case (_bleedRate >= _bleedRateKO * BLEED_RATE_SEVERE): {
             _entries pushBack [localize LSTRING(Bleed_Rate4), [1, 0, 0, 1]];
         };
     };

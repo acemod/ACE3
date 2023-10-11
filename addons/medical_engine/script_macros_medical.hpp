@@ -76,11 +76,12 @@
 #define DAMAGE_BLUE_THRESHOLD 0.8
 #define DAMAGE_TOTAL_COLORS 10
 
-// Qualitative bleed rate thresholds in liters per second
-#define BLEED_RATE_SLOW 0.00625 // Slow - Fatal blood loss in 8-infinity minutes
-#define BLEED_RATE_MODERATE 0.0167 // Moderate - Fatal blood loss in 3-8 minutes
-#define BLEED_RATE_SEVERE 0.05 // Severe - Fatal blood loss in 1-3 minutes
-// Massive - Fatal blood loss in <1 minute
+// Qualitative bleed rate thresholds as a fraction of knock out blood loss
+// Note that half of knock out blood loss is considered unstable, and knock out blood loss is considered critical
+#define BLEED_RATE_SLOW 0.1 // Slow - One fifth of unstable blood loss
+#define BLEED_RATE_MODERATE 0.5 // Moderate - Vitals considered stable
+#define BLEED_RATE_SEVERE 1.0 // Severe - Vitals considered unstable
+// Massive - Vitals considered critical
 
 // Pain above which a unit can go unconscious upon receiving damage
 #define PAIN_UNCONSCIOUS EGVAR(medical,painUnconsciousThreshold)
