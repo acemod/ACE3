@@ -26,7 +26,7 @@ with missionNamespace do { // hint is calling from uiNamespace
         if (_localizeInfo isEqualTo []) then {
             _return = format ["%1 -> %2", _addon, _keyInfo select 2];
         } else {
-            _return = _localizeInfo call CBA_fnc_localizeKey;
+            _return = format ["%1 -> %2 (%3)", _addon, _keyInfo select 2, _localizeInfo call CBA_fnc_localizeKey];
         };
     };
 };
