@@ -128,9 +128,9 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(bodypartOutlineColor),
+    QGVAR(bodyPartOutlineColor),
     "COLOR",
-    [LSTRING(BodypartOutlineColor_DisplayName),LSTRING(BodypartOutlineColor_Description)],
+    [LSTRING(bodyPartOutlineColor_DisplayName), LSTRING(bodyPartOutlineColor_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [1.00, 1.00, 1.00, 1],
     false
