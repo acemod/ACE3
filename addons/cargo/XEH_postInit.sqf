@@ -153,7 +153,8 @@ private _objectClassesAddClassEH = call (uiNamespace getVariable [QGVAR(objectCl
 
 if (isServer) then {
     ["ace_placedInBodyBag", {
-        params ["_target", "_bodyBag"];
+        params ["_target", "_bodyBag", "_isGrave"];
+        if (_isGrave) exitWith {}; // assume graves aren't cargo
         _bodyBag setVariable [QGVAR(customName), [_target, false, true] call EFUNC(common,getName), true];
     }] call CBA_fnc_addEventHandler;
 };

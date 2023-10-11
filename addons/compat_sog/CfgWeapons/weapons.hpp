@@ -13,6 +13,12 @@ class vn_pk: vn_lmg {
 class vn_m60: vn_lmg {
     EGVAR(overheating,allowSwapBarrel) = 1;
 };
+class vn_mg42: vn_lmg {
+    EGVAR(overheating,allowSwapBarrel) = 1;
+};
+class vn_l4: vn_lmg {
+    EGVAR(overheating,allowSwapBarrel) = 1;
+};
 
 class vn_smg: vn_rifle {
     EGVAR(overheating,closedBolt) = 0;

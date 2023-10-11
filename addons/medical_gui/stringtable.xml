@@ -282,6 +282,15 @@
             <Chinese>開起醫療選單</Chinese>
             <Turkish>Medikal Menüyü Aç</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfo">
+            <English>Peek Medical Info</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
+            <English>Medical Peek Duration</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
+            <English>How long the medical info peek remains open after releasing the key.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
             <Spanish>Cargar al paciente en</Spanish>
@@ -957,6 +966,21 @@
             <Chinese>出血中</Chinese>
             <Turkish>Kanama var</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_STATUS_NOBLEEDING">
+            <English>No bleeding</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate1">
+            <English>Slow bleeding</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
+            <English>Moderate bleeding</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
+            <English>Severe bleeding</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
+            <English>Massive bleeding</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
             <German>hat Schmerzen</German>
@@ -1020,6 +1044,9 @@
             <Turkish>Atel Uygulandı</Turkish>
             <German>Schiene angelegt</German>
             <Korean>부목 적용함</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood0">
+            <English>No blood loss</English>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1250,12 +1277,25 @@
             <Russian>Показывать тяжесть кровопотери в списке ранений.</Russian>
             <Spanish>Mostrar la pérdida de sangre cualitativa en la lista de heridas.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
+            <English>Peek Medical Info on Hit</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
+            <English>Temporarily show medical info when injured.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
+            <English>Medical Peek Duration on Hit</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
+            <English>How long the medical info peek remains open after being injured.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
             <Portuguese>Mostrar Traumatismo Sofrido</Portuguese>
             <Japanese>外傷の表示</Japanese>
             <Polish>Pokaż Doznane Urazy</Polish>
             <German>Zeigen Sie das erlittene Trauma</German>
+            <Korean>외상 지속 표시</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_Description">
             <English>Show trauma sustained in the injury list.</English>
@@ -1263,6 +1303,13 @@
             <Japanese>負傷リストに外傷を表示する。</Japanese>
             <Polish>Pokaż odniesione obrażenia na liście obrażeń.</Polish>
             <German>Zeigen Sie das erlittene Trauma in der Verletzungsliste an.</German>
+            <Korean>부상 목록에 발생한 외상을 표시합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_DisplayName">
+            <English>Body Part Outline Color</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_Description">
+            <English>Color of outline around selected body part.</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
             <English>Minor Trauma</English>
@@ -1270,6 +1317,7 @@
             <Japanese>軽度の外傷</Japanese>
             <Polish>Niewielki Uraz</Polish>
             <German>Kleineres Trauma</German>
+            <Korean>약한 외상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained2">
             <English>Major Trauma</English>
@@ -1277,6 +1325,7 @@
             <Japanese>中度の外傷</Japanese>
             <Polish>Poważny Uraz</Polish>
             <German>Großes Trauma</German>
+            <Korean>중간 외상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained3">
             <English>Severe Trauma</English>
@@ -1284,6 +1333,7 @@
             <Japanese>重度の外傷</Japanese>
             <Polish>Ciężki Uraz</Polish>
             <German>Schweres Trauma</German>
+            <Korean>강한 외상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained4">
             <English>Chronic Trauma</English>
@@ -1291,6 +1341,7 @@
             <Japanese>慢性的な外傷</Japanese>
             <Polish>Przewlekły Uraz</Polish>
             <German>Chronisches Trauma</German>
+            <Korean>심각한 외상</Korean>
         </Key>
     </Package>
 </Project>
