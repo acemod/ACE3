@@ -16,6 +16,7 @@
  *
  * Public: No
 */
+// TODO: Is the airway category ever visible? Can the dynamic category stuff be removed?
 
 #define NUMBER_KEYS [DIK_1, DIK_2, DIK_3, DIK_4, DIK_5, DIK_6, DIK_7, DIK_8, DIK_9, DIK_0]
 
@@ -24,24 +25,23 @@ _args params ["_display", "_keyPressed", "_shiftState", "_ctrlState", "_altState
 
 private _return = true; // Override existing keybinds for keys used here
 
-private _fnc_isCategoryVisible = {
-    params ["_category"];
+private _visibleCategories = [
+    "bandage","medication","airway","advanced","drag"
+] select {
+    private _category = _x;
     (GVAR(actions) findIf {_category == _x select 1}) > -1
 };
 
-private _visibleCategories = [
-    "bandage","medication","airway","advanced","drag"
-] select {[_x] call _fnc_isCategoryVisible};
-
 private _allCategories = ["triage", "examine"] + _visibleCategories + ["toggle"];
 
+// Use hashmap as a shortcut to "zip" two arrays together
 // Use categories as keys in hashmap because there are fewer,
 // otherwise the hashmap is padded with nil
 private _keyCategoryPairs = _allCategories createHashMapFromArray NUMBER_KEYS;
 
 private _temp_category = "";
-switch (true) do {
 
+switch (true) do {
 // Dynamically assign number keys to visible categories
     {
         _temp_category = _x; // _x does not exist inside case code
