@@ -22,7 +22,7 @@
 params ["", "_args"];
 _args params ["_display", "_keyPressed", "_shiftState", "_ctrlState", "_altState"];
 
-private _return = true;
+private _return = true; // Override existing keybinds for keys used here
 
 private _fnc_isCategoryVisible = {
     params ["_category"];
@@ -41,14 +41,10 @@ private _keyCategoryPairs = _allCategories createHashMapFromArray NUMBER_KEYS;
 
 private _temp_category = "";
 switch (true) do {
-    case (_keyPressed == DIK_ESCAPE): {
-        closeDialog 0;
-        _return = false;
-    };
 
 // Dynamically assign number keys to visible categories
     {
-        _temp_category = _x;
+        _temp_category = _x; // _x does not exist inside case code
         case (_keyPressed == _y): {
             GVAR(selectedCategory) = _temp_category;
             if (_temp_category == "toggle") then {
@@ -61,7 +57,6 @@ switch (true) do {
 //     w
 //   a s d
 //    z x
-
     case (_keyPressed == DIK_W): {
         GVAR(selectedBodyPart) = 0;
     };
@@ -80,9 +75,14 @@ switch (true) do {
     case (_keyPressed == DIK_Z): {
         GVAR(selectedBodyPart) = 5;
     };
-    default {
+
+    case (_keyPressed == DIK_ESCAPE): {
+        closeDialog 0;
         _return = false;
     };
+    default {
+        _return = false; // Do not override existing keybinds for keys not used here
+    };
 };
-systemChat str _return;
+
 _return
