@@ -1343,5 +1343,11 @@
             <German>Chronisches Trauma</German>
             <Korean>심각한 외상</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_BodyLabelLeft">
+            <English>L</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BodyLabelRight">
+            <English>R</English>
+        </Key>
     </Package>
 </Project>
