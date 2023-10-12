@@ -76,10 +76,6 @@ switch (true) do {
         GVAR(selectedBodyPart) = 5;
     };
 
-    case (_keyPressed == DIK_ESCAPE): {
-        closeDialog 0;
-        _return = false;
-    };
     default {
         _return = false; // Do not override existing keybinds for keys not used here
     };
