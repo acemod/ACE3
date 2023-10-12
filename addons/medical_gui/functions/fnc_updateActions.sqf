@@ -47,7 +47,7 @@ private _shownIndex = 0;
         };
 
         private _countText = "";
-        if ((GVAR(showTreatmentItemCount) != 0) && (count _items != 0)) then {
+        if ((GVAR(showTreatmentItemCount) != 0) && (_items isNotEqualTo [])) then {
             if ("ACE_surgicalKit" in _items && {EGVAR(medical_treatment,consumeSurgicalKit) == 2}) then {
                 _items = ["ACE_suture"];
             };

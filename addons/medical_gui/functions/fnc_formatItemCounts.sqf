@@ -24,7 +24,7 @@ private _fnc_padLeft = {
     params ["_string", "_length"];
     if (count _string >= _length) exitWith {_string};
     private _full = "    " + _string;
-    _Full select [(count _full)-_length, _length];
+    _full select [(count _full)-_length, _length];
 };
 
 private _fnc_formatOnButton = {
@@ -37,10 +37,10 @@ private _fnc_formatOnButton = {
     // If sharing disabled, don't show at all
     // If sharing enabled but no target, show null column
     if (EGVAR(medical_treatment,allowSharedEquipment) != 2) then {
-        _countStrings pushBack (if (isNil {_patientCount}) then {_nullString} else {[str _patientCount, _columnWidth] call _fnc_padLeft});
+        _countStrings pushBack (if (isNil "_patientCount") then {_nullString} else {[str _patientCount, _columnWidth] call _fnc_padLeft});
     };
 
-    if (!isNil {_vehicleCount}) then {
+    if (!isNil "_vehicleCount") then {
         _countStrings pushBack ([str _vehicleCount, _columnWidth] call _fnc_padLeft);
     };
 
@@ -49,16 +49,15 @@ private _fnc_formatOnButton = {
 
 private _fnc_formatInTooltip = {
     params ["_medicCount", "_patientCount", "_vehicleCount"];
-    private _columnWidth = 3;
 
-    private _countStrings = [format ["%1 %2", _medicCount, localize LSTRING(TreatmentItemCount_Medic)]];
+    private _countStrings = [format ["%1 %2", _medicCount, LLSTRING(TreatmentItemCount_Medic)]];
 
-    if ((EGVAR(medical_treatment,allowSharedEquipment) != 2) && (!isNil {_patientCount})) then {
-        _countStrings pushBack format ["%1 %2", _patientCount, localize LSTRING(TreatmentItemCount_Patient)];
+    if ((EGVAR(medical_treatment,allowSharedEquipment) != 2) && {!isNil "_patientCount"}) then {
+        _countStrings pushBack format ["%1 %2", _patientCount, LLSTRING(TreatmentItemCount_Patient)];
     };
 
-    if (!isNil {_vehicleCount}) then {
-        _countStrings pushBack format ["%1 %2", _vehicleCount, localize LSTRING(TreatmentItemCount_Vehicle)];
+    if (!isNil "_vehicleCount") then {
+        _countStrings pushBack format ["%1 %2", _vehicleCount, LLSTRING(TreatmentItemCount_Vehicle)];
     };
 
     _countStrings joinString "\n"
