@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror, johnb43
- * Check if the player can reload their vehicles magazine to one with more ammo.
+ * Check if the player can reload their vehicle's magazine to one with more ammo.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
