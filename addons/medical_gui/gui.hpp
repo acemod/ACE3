@@ -406,6 +406,23 @@ class ACE_Medical_Menu {
         };
         class TriageToggle: GVAR(TriageToggle) {};
         class TriageSelect: GVAR(TriageSelect) {};
+        class BodyLabelLeft: RscText {
+            idc = -1;
+            style = ST_RIGHT;
+            text = CSTRING(BodyLabelLeft);
+            font = "RobotoCondensedBold";
+            x = QUOTE(POS_X(16.5));
+            y = QUOTE(POS_Y(10.5));
+            w = QUOTE(POS_W(6.0));
+            h = QUOTE(POS_H(2.0));
+            sizeEx = QUOTE(POS_H(1.4));
+            colorText[] = {1, 1, 1, 0.33};
+            shadow = 0;
+        };
+        class BodyLabelRight: BodyLabelLeft {
+            style = ST_LEFT;
+            text = CSTRING(BodyLabelRight);
+        };
     };
 };
 
