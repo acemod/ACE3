@@ -24,16 +24,14 @@ private _vehicleCount = nil;
 
 // Medic
 {
-    private _item = _x;
-    _medicCount = _medicCount + ([ACE_player, _item] call EFUNC(common,getCountOfItem));
+    _medicCount = _medicCount + ([ACE_player, _x] call EFUNC(common,getCountOfItem));
 } forEach _items;
 
 // Patient
 if (ACE_player != GVAR(target)) then {
     _patientCount = 0;
     {
-        private _item = _x;
-        _patientCount = _patientCount + ([GVAR(target), _item] call EFUNC(common,getCountOfItem));
+        _patientCount = _patientCount + ([GVAR(target), _x] call EFUNC(common,getCountOfItem));
     } forEach _items;
 };
 
