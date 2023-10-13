@@ -9,7 +9,7 @@ class RscControlsGroupNoScrollbars;
 
 class GVAR(BodyImage): RscControlsGroupNoScrollbars {
     idc = IDC_BODY_GROUP;
-    x = QUOTE(POS_X(13.33));
+    x = QUOTE(POS_X(13.83));
     y = QUOTE(POS_Y(2.73));
     w = QUOTE(POS_W(12.33));
     h = QUOTE(POS_H(12.33));
@@ -236,7 +236,7 @@ class ACE_Medical_Menu {
             idc = -1;
             style = ST_CENTER;
             text = CSTRING(EXAMINE_TREATMENT);
-            x = QUOTE(POS_X(1));
+            x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(1.5));
             w = QUOTE(POS_W(12.33));
             h = QUOTE(POS_H(1));
@@ -245,11 +245,12 @@ class ACE_Medical_Menu {
         };
         class NameHeader: TreatmentHeader {
             idc = IDC_NAME;
-            x = QUOTE(POS_X(13.33));
+            x = QUOTE(POS_X(13.83));
         };
         class OverviewHeader: TreatmentHeader {
             text = CSTRING(OVERVIEW);
-            x = QUOTE(POS_X(25.66));
+            w = QUOTE(POS_W(12.34)); // 12.33 + 12.33 + 12.34 = 37.00
+            x = QUOTE(POS_X(26.16));
         };
         class HeaderLine: RscText {
             idc = -1;
@@ -264,7 +265,7 @@ class ACE_Medical_Menu {
             onButtonClick = QUOTE(GVAR(selectedCategory) = 'triage');
             text = QPATHTOF(data\categories\triage_card.paa);
             tooltip = CSTRING(ViewTriageCard);
-            x = QUOTE(POS_X(1.5));
+            x = QUOTE(POS_X(1.75));
             y = QUOTE(POS_Y(2.73));
             w = QUOTE(POS_W(1.5));
             h = QUOTE(POS_H(1.5));
@@ -280,55 +281,54 @@ class ACE_Medical_Menu {
             onButtonClick = QUOTE(GVAR(selectedCategory) = 'examine');
             text = QPATHTOF(data\categories\examine_patient.paa);
             tooltip = CSTRING(ExaminePatient);
-            x = QUOTE(POS_X(3));
+            x = QUOTE(POS_X(3.25));
         };
         class Bandage: Triage {
             idc = IDC_BANDAGE;
             onButtonClick = QUOTE(GVAR(selectedCategory) = 'bandage');
             text = QPATHTOF(data\categories\bandage_fracture.paa);
             tooltip = CSTRING(BandageFractures);
-            x = QUOTE(POS_X(4.5));
+            x = QUOTE(POS_X(4.75));
         };
         class Medication: Triage {
             idc = IDC_MEDICATION;
             onButtonClick = QUOTE(GVAR(selectedCategory) = 'medication');
             text = QPATHTOF(data\categories\medication.paa);
             tooltip = CSTRING(Medication);
-            x = QUOTE(POS_X(6));
+            x = QUOTE(POS_X(6.25));
         };
         class Airway: Triage {
             idc = IDC_AIRWAY;
             onButtonClick = QUOTE(GVAR(selectedCategory) = 'airway');
             text = QPATHTOF(data\categories\airway_management.paa);
             tooltip = CSTRING(AirwayManagement);
-            x = QUOTE(POS_X(7.5));
+            x = QUOTE(POS_X(7.75));
         };
         class Advanced: Triage {
             idc = IDC_ADVANCED;
             onButtonClick = QUOTE(GVAR(selectedCategory) = 'advanced');
             text = QPATHTOF(data\categories\advanced_treatment.paa);
             tooltip = CSTRING(AdvancedTreatment);
-            x = QUOTE(POS_X(9));
+            x = QUOTE(POS_X(9.25));
         };
         class Drag: Triage {
             idc = IDC_DRAG;
             onButtonClick = QUOTE(GVAR(selectedCategory) = 'drag');
             text = QPATHTOF(data\categories\carry.paa);
             tooltip = CSTRING(DragCarry);
-            x = QUOTE(POS_X(10.5));
+            x = QUOTE(POS_X(10.75));
         };
         class Toggle: Triage {
             idc = IDC_TOGGLE;
             onButtonClick = QUOTE(call FUNC(handleToggle));
-            text = QPATHTOF(data\categories\toggle_self.paa);
-            tooltip = CSTRING(ToggleSelf);
+            text = QPATHTOF(data\categories\toggle_to_other.paa);
             x = QUOTE(POS_X(12));
         };
         class TriageCard: RscListBox {
             idc = IDC_TRIAGE_CARD;
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
-            w = QUOTE(POS_W(11.833));
+            w = QUOTE(POS_W(12.33));
             h = QUOTE(POS_H(10));
             sizeEx = QUOTE(POS_H(0.7));
             colorSelect[] = {1, 1, 1, 1};
@@ -342,7 +342,7 @@ class ACE_Medical_Menu {
             idc = IDC_ACTION_BUTTON_GROUP;
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
-            w = QUOTE(POS_W(11.833));
+            w = QUOTE(POS_W(12.33));
             h = QUOTE(POS_H(10));
         };
         class BodyImage: GVAR(BodyImage) {};
@@ -350,7 +350,7 @@ class ACE_Medical_Menu {
             idc = -1;
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 0);
             tooltip = CSTRING(SelectHead);
-            x = QUOTE(POS_X(18.8));
+            x = QUOTE(POS_X(19.3));
             y = QUOTE(POS_Y(3.2));
             w = QUOTE(POS_W(1.4));
             h = QUOTE(POS_H(1.8));
@@ -361,7 +361,7 @@ class ACE_Medical_Menu {
         class SelectTorso: SelectHead {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 1);
             tooltip = CSTRING(SelectTorso);
-            x = QUOTE(POS_X(18.4));
+            x = QUOTE(POS_X(18.9));
             y = QUOTE(POS_Y(5));
             w = QUOTE(POS_W(2.2));
             h = QUOTE(POS_H(3.8));
@@ -369,7 +369,7 @@ class ACE_Medical_Menu {
         class SelectArmLeft: SelectHead {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 2);
             tooltip = CSTRING(SelectLeftArm);
-            x = QUOTE(POS_X(20.6));
+            x = QUOTE(POS_X(21.1));
             y = QUOTE(POS_Y(5.1));
             w = QUOTE(POS_W(1.1));
             h = QUOTE(POS_H(4.6));
@@ -377,12 +377,12 @@ class ACE_Medical_Menu {
         class SelectArmRight: SelectArmLeft {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 3);
             tooltip = CSTRING(SelectRightArm);
-            x = QUOTE(POS_X(17.4));
+            x = QUOTE(POS_X(17.8));
         };
         class SelectLegLeft: SelectHead {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 4);
             tooltip = CSTRING(SelectLeftLeg);
-            x = QUOTE(POS_X(19.5));
+            x = QUOTE(POS_X(20.0));
             y = QUOTE(POS_Y(8.8));
             w = QUOTE(POS_W(1.1));
             h = QUOTE(POS_H(5.8));
@@ -390,11 +390,11 @@ class ACE_Medical_Menu {
         class SelectLegRight: SelectLegLeft {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 5);
             tooltip = CSTRING(SelectRightLeg);
-            x = QUOTE(POS_X(18.4));
+            x = QUOTE(POS_X(18.9));
         };
         class Injuries: TriageCard {
             idc = IDC_INJURIES;
-            x = QUOTE(POS_X(25.66));
+            x = QUOTE(POS_X(26.17));
             w = QUOTE(POS_W(12.33));
         };
         class ActivityHeader: TreatmentHeader {
@@ -406,27 +406,33 @@ class ACE_Medical_Menu {
         };
         class QuickViewHeader: ActivityHeader {
             text = CSTRING(QUICK_VIEW);
-            x = QUOTE(POS_X(19.5));
+            x = QUOTE(POS_X(20.0));
         };
         class LowerLine: HeaderLine {
             y = QUOTE(POS_Y(18.5));
+        };
+        class LowerDivider: HeaderLine {
+            x = QUOTE(POS_X(19.985));
+            y = QUOTE(POS_Y(18.75));
+            w = QUOTE(POS_W(0.03));
+            h = QUOTE(POS_H(7.6));
         };
         class Activity: Injuries {
             idc = IDC_ACTIVITY;
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(18.5));
             w = QUOTE(POS_W(18.5));
-            h = QUOTE(POS_H(6.5));
+            h = QUOTE(POS_H(7.6));
             colorBackground[] = {0, 0, 0, 0};
         };
         class QuickView: Activity {
             idc = IDC_QUICKVIEW;
-            x = QUOTE(POS_X(21.5));
+            x = QUOTE(POS_X(20.0));
         };
         class TriageStatus: RscText {
             idc = IDC_TRIAGE_STATUS;
             style = ST_CENTER;
-            x = QUOTE(POS_X(13.33));
+            x = QUOTE(POS_X(13.83));
             y = QUOTE(POS_Y(15.5));
             w = QUOTE(POS_W(12.33));
             h = QUOTE(POS_H(1.1));
@@ -439,7 +445,7 @@ class ACE_Medical_Menu {
             style = ST_RIGHT;
             text = CSTRING(BodyLabelLeft);
             font = "RobotoCondensedBold";
-            x = QUOTE(POS_X(16.5));
+            x = QUOTE(POS_X(17.0));
             y = QUOTE(POS_Y(10.5));
             w = QUOTE(POS_W(6.0));
             h = QUOTE(POS_H(2.0));
