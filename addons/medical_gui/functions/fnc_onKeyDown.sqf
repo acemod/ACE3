@@ -40,16 +40,20 @@ private _allCategories = ["triage", "examine"] + _visibleCategories + ["toggle"]
 private _keyCategoryPairs = _allCategories createHashMapFromArray NUMBER_KEYS;
 
 private _temp_category = "";
+private _temp_idc = 0;
 
 switch (true) do {
 // Dynamically assign number keys to visible categories
     {
         _temp_category = _x; // _x does not exist inside case code
+        _temp_idc = IDC_TRIAGE + _forEachIndex * 10;
         case (_keyPressed == _y): {
-            GVAR(selectedCategory) = _temp_category;
-            if (_temp_category == "toggle") then {
-                call FUNC(handleToggle);
-            }
+            if (ctrlEnabled _temp_idc) then {
+                GVAR(selectedCategory) = _temp_category;
+                if (_temp_category == "toggle") then {
+                    call FUNC(handleToggle);
+                };
+            };
         };
     } forEach _keyCategoryPairs;
 
@@ -79,6 +83,10 @@ switch (true) do {
     default {
         _return = false; // Do not override existing keybinds for keys not used here
     };
+};
+
+if (_return) then {
+    playSoundUI ["\a3\ui_f\data\sound\rscbuttonmenu\soundClick.wss", 0.09, 1];
 };
 
 _return
