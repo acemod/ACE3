@@ -126,12 +126,3 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
     true,
     true // isGlobal
 ] call CBA_fnc_addSetting;
-
-[
-    QGVAR(showTreatmentItemCount),
-    "LIST",
-    [LSTRING(ShowTreatmentItemCount_DisplayName), LSTRING(ShowTreatmentItemCount_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(ShowTreatmentItemCount_OnButton), LSTRING(ShowTreatmentItemCount_InTooltip)], 2],
-    false // isGlobal
-] call CBA_fnc_addSetting;

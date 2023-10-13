@@ -45,25 +45,20 @@ private _shownIndex = 0;
         private _ctrl = if (_shownIndex >= count _actionButons) then {
             _actionButons pushBack (_display ctrlCreate ["ACE_Medical_Menu_ActionButton", -1, _group]);
         };
+        _ctrl = _actionButons # _shownIndex;
+        _ctrl ctrlRemoveAllEventHandlers "ButtonClick";
+        _ctrl ctrlSetPositionY POS_H(1.1 * _shownIndex);
+        _ctrl ctrlCommit 0;
 
         private _countText = "";
-        if ((GVAR(showTreatmentItemCount) != 0) && (_items isNotEqualTo [])) then {
+        if (_items isNotEqualTo []) then {
             if ("ACE_surgicalKit" in _items && {EGVAR(medical_treatment,consumeSurgicalKit) == 2}) then {
                 _items = ["ACE_suture"];
             };
             private _counts = [_items] call FUNC(countTreatmentItems);
             _countText = _counts call FUNC(formatItemCounts);
         };
-
-        _ctrl = _actionButons # _shownIndex;
-        _ctrl ctrlRemoveAllEventHandlers "ButtonClick";
-        _ctrl ctrlSetPositionY POS_H(1.1 * _shownIndex);
-        _ctrl ctrlCommit 0;
-
-        switch GVAR(showTreatmentItemCount) do {
-            case 1: {_ctrl ctrlSetTextSecondary _countText};
-            case 2: {_ctrl ctrlSetTooltip _countText};
-        };
+        _ctrl ctrlSetTooltip _countText;
 
         _ctrl ctrlSetText _displayName;
         _ctrl ctrlShow true;
