@@ -94,7 +94,7 @@
             <English>Treatment, Simplified</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_Description">
-            <English>The %3Medical Menu%4 is a dedicated %3interface%4 to facilitate %3medical treatment%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%14%4] while looking at a patient to open the Medical Menu. Opening the menu without a patient allows for self-treatment.&lt;br/&gt;%2Alternatively, use [%3%12%4] or [%3%13%4] and select %3Medical Menu%4.&lt;br/&gt;&lt;br/&gt;%3Keybinds:%4&lt;br/&gt;%2Use [%3W, A, S, D, X, and Z%4] to select body parts.&lt;br/&gt;%2Use your %3number keys%4 to select treatment categories.</English>
+            <English>The %3Medical Menu%4 is a dedicated %3interface%4 to facilitate %3medical treatment%4. The %3R%4 and %3L%4 letters indicate the side of the patient's body being treated.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%14%4] while looking at a patient to open the Medical Menu. Opening the menu without a patient allows for self-treatment.&lt;br/&gt;%2Alternatively, use [%3%12%4] or [%3%13%4] and select %3Medical Menu%4.&lt;br/&gt;&lt;br/&gt;%3Keybinds:%4&lt;br/&gt;%2Use [%3W, A, S, D, X, and Z%4] to select body parts.&lt;br/&gt;%2Use your %3number keys%4 to select treatment categories.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_ATragMX_ShortName">
             <English>Portable, Precise, Rugged</English>
