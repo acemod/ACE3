@@ -59,7 +59,7 @@ private _countEnabled = {
     if (_category isEqualType "") then { _x set [1, (GVAR(actions) findIf {_category == _x select 1}) > -1]; };
     _x select 1
 } count _list;
-private _offsetX = POS_X(1.5) + 0.5 * (POS_X(12) - POS_X(_countEnabled * 1.5));
+private _offsetX = POS_X(1.75) + 0.5 * (POS_X(12) - POS_X(_countEnabled * 1.5));
 {
     _x params ["_idc", "_enabled"];
     private _ctrl = _display displayCtrl _idc;
