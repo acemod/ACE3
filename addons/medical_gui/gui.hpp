@@ -210,6 +210,7 @@ class ACE_Medical_Menu {
     class controlsBackground {
         class Title: RscText {
             idc = IDC_TITLE;
+            text = CSTRING(MENU_TITLE);
             x = QUOTE(POS_X(1));
             y = QUOTE(POS_Y(0));
             w = QUOTE(POS_W(38));

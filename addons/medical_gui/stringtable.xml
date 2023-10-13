@@ -325,6 +325,9 @@
             <Chinese>將傷者背出</Chinese>
             <Turkish>Kişiyi Indir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_MENU_TITLE">
+            <English>Medical Menu</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
             <German>Untersuchung &amp; Behandlung</German>
