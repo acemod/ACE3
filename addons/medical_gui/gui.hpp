@@ -319,8 +319,7 @@ class ACE_Medical_Menu {
         class Toggle: Triage {
             idc = IDC_TOGGLE;
             onButtonClick = QUOTE(call FUNC(handleToggle));
-            text = QPATHTOF(data\categories\toggle_self.paa);
-            tooltip = CSTRING(ToggleSelf);
+            text = QPATHTOF(data\categories\toggle_to_other.paa);
             x = QUOTE(POS_X(12));
         };
         class TriageCard: RscListBox {

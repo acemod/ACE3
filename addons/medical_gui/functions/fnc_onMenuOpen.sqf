@@ -71,3 +71,13 @@ private _offsetX = POS_X(1.5) + 0.5 * (POS_X(12) - POS_X(_countEnabled * 1.5));
         _ctrl ctrlShow false;
     };
 } forEach _list;
+
+// Set toggle button icon and tooltip
+private _ctrl = _display displayCtrl IDC_TOGGLE;
+if (GVAR(target) == ACE_player) then {
+    _ctrl ctrlSetText QPATHTOF(data\categories\toggle_to_other.paa);
+    _ctrl ctrlSetTooltip LLSTRING(ToggleToOther);
+} else {
+    _ctrl ctrlSetText QPATHTOF(data\categories\toggle_to_self.paa);
+    _ctrl ctrlSetTooltip LLSTRING(ToggleToSelf);
+};
