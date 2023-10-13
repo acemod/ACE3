@@ -82,6 +82,32 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
             idc = IDC_BODY_LEGRIGHT_T;
             text = QPATHTOF(data\body_image\leg_right_t.paa);
         };
+        class HeadS: Background {
+            idc = IDC_BODY_HEAD_S;
+            text = QPATHTOF(data\body_image\head_s.paa);
+            colorText[] = {1.0, 1.0, 1.0, 1.0};
+            show = 0;
+        };
+        class TorsoS: HeadS {
+            idc = IDC_BODY_TORSO_S;
+            text = QPATHTOF(data\body_image\torso_s.paa);
+        };
+        class ArmLeftS: HeadS {
+            idc = IDC_BODY_ARMLEFT_S;
+            text = QPATHTOF(data\body_image\arm_left_s.paa);
+        };
+        class ArmRightS: HeadS {
+            idc = IDC_BODY_ARMRIGHT_S;
+            text = QPATHTOF(data\body_image\arm_right_s.paa);
+        };
+        class LegLeftS: HeadS {
+            idc = IDC_BODY_LEGLEFT_S;
+            text = QPATHTOF(data\body_image\leg_left_s.paa);
+        };
+        class LegRightS: HeadS {
+            idc = IDC_BODY_LEGRIGHT_S;
+            text = QPATHTOF(data\body_image\leg_right_s.paa);
+        };
     };
 };
 
@@ -180,6 +206,7 @@ class ACE_Medical_Menu {
     enableSimulation = 1;
     onLoad = QUOTE(_this call FUNC(onMenuOpen));
     onUnload = QUOTE(_this call FUNC(onMenuClose));
+    onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onKeyDown));
     class controlsBackground {
         class Title: RscText {
             idc = IDC_TITLE;
@@ -406,6 +433,23 @@ class ACE_Medical_Menu {
         };
         class TriageToggle: GVAR(TriageToggle) {};
         class TriageSelect: GVAR(TriageSelect) {};
+        class BodyLabelLeft: RscText {
+            idc = -1;
+            style = ST_RIGHT;
+            text = CSTRING(BodyLabelLeft);
+            font = "RobotoCondensedBold";
+            x = QUOTE(POS_X(16.5));
+            y = QUOTE(POS_Y(10.5));
+            w = QUOTE(POS_W(6.0));
+            h = QUOTE(POS_H(2.0));
+            sizeEx = QUOTE(POS_H(1.4));
+            colorText[] = {1, 1, 1, 0.33};
+            shadow = 0;
+        };
+        class BodyLabelRight: BodyLabelLeft {
+            style = ST_LEFT;
+            text = CSTRING(BodyLabelRight);
+        };
     };
 };
 
@@ -581,6 +625,30 @@ class RscTitles {
                                 h = QUOTE(POS_H(8.5));
                             };
                             class LegRightT: LegRightT {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class HeadS: HeadS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class TorsoS: TorsoS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class ArmLeftS: ArmLeftS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class ArmRightS: ArmRightS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class LegLeftS: LegLeftS {
+                                w = QUOTE(POS_W(8.5));
+                                h = QUOTE(POS_H(8.5));
+                            };
+                            class LegRightS: LegRightS {
                                 w = QUOTE(POS_W(8.5));
                                 h = QUOTE(POS_H(8.5));
                             };

@@ -24,7 +24,26 @@ private _nonissueColor = [1, 1, 1, 0.33];
 
 // Indicate if unit is bleeding at all
 if (IS_BLEEDING(_target)) then {
-    _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
+    // Give a qualitative description of the rate of bleeding
+    private _cardiacOutput = [_target] call EFUNC(medical_status,getCardiacOutput);
+    private _bleedRate = GET_BLOOD_LOSS(_target);
+    private _bleedRateKO = BLOOD_LOSS_KNOCK_OUT_THRESHOLD * (_cardiacOutput max 0.05);
+    // Use nonzero minimum cardiac output to prevent all bleeding showing as massive during cardiac arrest
+
+    switch (true) do {
+        case (_bleedRate < _bleedRateKO * BLEED_RATE_SLOW): {
+            _entries pushBack [localize LSTRING(Bleed_Rate1), [1, 1, 0, 1]];
+        };
+        case (_bleedRate < _bleedRateKO * BLEED_RATE_MODERATE): {
+            _entries pushBack [localize LSTRING(Bleed_Rate2), [1, 0.67, 0, 1]];
+        };
+        case (_bleedRate < _bleedRateKO * BLEED_RATE_SEVERE): {
+            _entries pushBack [localize LSTRING(Bleed_Rate3), [1, 0.33, 0, 1]];
+        };
+        default {
+            _entries pushBack [localize LSTRING(Bleed_Rate4), [1, 0, 0, 1]];
+        };
+    };
 } else {
     _entries pushBack [localize LSTRING(Status_Nobleeding), _nonissueColor];
 };
