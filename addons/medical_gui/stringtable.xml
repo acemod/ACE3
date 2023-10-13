@@ -341,6 +341,22 @@
             <Chinese>檢查 &amp; 治療</Chinese>
             <Turkish>MUAYENE &amp; TEDAVİ</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_STATUS">
+            <English>STATUS</English>
+            <German>STATUS</German>
+            <Russian>СОСТОЯНИЕ</Russian>
+            <Spanish>ESTADO</Spanish>
+            <French>ÉTAT</French>
+            <Polish>STATUS</Polish>
+            <Portuguese>ESTADO</Portuguese>
+            <Czech>STAV</Czech>
+            <Italian>STATO</Italian>
+            <Japanese>状態</Japanese>
+            <Korean>상태</Korean>
+            <Chinesesimp>状态</Chinesesimp>
+            <Chinese>狀態</Chinese>
+            <Turkish>DURUM</Turkish>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_OVERVIEW">
             <English>OVERVIEW</English>
             <German>ÜBERSICHT</German>
