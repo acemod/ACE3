@@ -51,8 +51,9 @@ private _shownIndex = 0;
         _ctrl ctrlCommit 0;
 
         // Show warning if tourniquet will interfere with action
-        if (((_category in ["examine", "medication"]) || (_items findIf {"IV" in _x}) > -1)
-        && HAS_TOURNIQUET_APPLIED_ON(GVAR(target),GVAR(selectedBodyPart))) then {
+        if (GVAR(tourniquetWarning)
+        && {(_category in ["examine", "medication"]) || (_items findIf {"IV" in _x}) > -1}
+        && {HAS_TOURNIQUET_APPLIED_ON(GVAR(target),GVAR(selectedBodyPart))}) then {
             _ctrl ctrlSetTooltipColorText [1, 1, 0, 1];
             _ctrl ctrlSetTooltip localize LSTRING(TourniquetWarning);
         } else {

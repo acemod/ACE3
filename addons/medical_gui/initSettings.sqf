@@ -126,3 +126,12 @@ private _categoryColors = [ELSTRING(medical,Category), format ["| %1 |", LELSTRI
     true,
     true // isGlobal
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(tourniquetWarning),
+    "CHECKBOX",
+    [LSTRING(TourniquetWarning_DisplayName), LSTRING(TourniquetWarning_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    false,
+    false
+] call CBA_fnc_addSetting;
