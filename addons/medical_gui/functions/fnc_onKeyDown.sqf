@@ -48,11 +48,12 @@ switch (true) do {
     {
         _temp_category = _x; // _x does not exist inside case code
         _temp_idc = IDC_TRIAGE + (ALL_CATEGORIES find _temp_category) * 10;
-        case (_keyPressed == _y && {GVAR(selectedCategory) != _temp_category || {GVAR(selectedCategory) == "toggle"}}): {
+        case (_keyPressed == _y && {GVAR(selectedCategory) != _temp_category}): {
             if (ctrlEnabled _temp_idc) then {
-                GVAR(selectedCategory) = _temp_category;
                 if (_temp_category == "toggle") then {
                     call FUNC(handleToggle);
+                } else {
+                    GVAR(selectedCategory) = _temp_category;
                 };
             };
         };
