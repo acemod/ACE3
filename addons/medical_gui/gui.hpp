@@ -242,8 +242,8 @@ class ACE_Medical_Menu {
             sizeEx = QUOTE(POS_H(1.2));
             colorText[] = {1, 1, 1, 0.9};
         };
-        class StatusHeader: TreatmentHeader {
-            text = CSTRING(STATUS);
+        class NameHeader: TreatmentHeader {
+            idc = IDC_NAME;
             x = QUOTE(POS_X(13.33));
         };
         class OverviewHeader: TreatmentHeader {

@@ -26,8 +26,8 @@ if (EGVAR(interact_menu,menuBackground) == 2) then {0 cutRsc [QEGVAR(interact_me
     [{setMousePosition _this}, _this] call CBA_fnc_execNextFrame;
 }, getMousePosition] call CBA_fnc_execNextFrame;
 
-// Set target name as title
-private _ctrlTitle = _display displayCtrl IDC_TITLE;
+// Set middle header as target name
+private _ctrlTitle = _display displayCtrl IDC_NAME;
 _ctrlTitle ctrlSetText ([GVAR(target)] call EFUNC(common,getName));
 
 // Initially hide the triage select buttons
