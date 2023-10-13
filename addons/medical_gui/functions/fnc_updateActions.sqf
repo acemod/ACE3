@@ -50,16 +50,24 @@ private _shownIndex = 0;
         _ctrl ctrlSetPositionY POS_H(1.1 * _shownIndex);
         _ctrl ctrlCommit 0;
 
+        private _countText = "";
+        if (_items isNotEqualTo []) then {
+            if ("ACE_surgicalKit" in _items && {EGVAR(medical_treatment,consumeSurgicalKit) == 2}) then {
+                _items = ["ACE_suture"];
+            };
+            private _counts = [_items] call FUNC(countTreatmentItems);
+            _countText = _counts call FUNC(formatItemCounts);
+        };
+        _ctrl ctrlSetTooltipColorText [1, 1, 1, 1];
+        _ctrl ctrlSetTooltip _countText;
+
         // Show warning if tourniquet will interfere with action
         if (GVAR(tourniquetWarning)
         && {(_category in ["examine", "medication"]) || (_items findIf {"IV" in _x}) > -1}
         && {HAS_TOURNIQUET_APPLIED_ON(GVAR(target),GVAR(selectedBodyPart))}) then {
             _ctrl ctrlSetTooltipColorText [1, 1, 0, 1];
             _ctrl ctrlSetTooltip localize LSTRING(TourniquetWarning);
-        } else {
-            _ctrl ctrlSetTooltipColorText [1, 1, 1, 1];
-            _ctrl ctrlSetTooltip "";
-        };
+        }
 
         _ctrl ctrlSetText _displayName;
         _ctrl ctrlShow true;
