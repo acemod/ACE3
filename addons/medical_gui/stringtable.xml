@@ -1349,7 +1349,7 @@
             <English>in vehicle's inventory</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
-            <English>No effect while tourniqeted</English>
+            <English>No effect until tourniquet removed</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
             <English>Show Tourniquet Warning</English>
