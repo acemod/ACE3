@@ -411,6 +411,12 @@ class ACE_Medical_Menu {
         class LowerLine: HeaderLine {
             y = QUOTE(POS_Y(18.5));
         };
+        class LowerDivider: HeaderLine {
+            x = QUOTE(POS_X(19.985));
+            y = QUOTE(POS_Y(18.75));
+            w = QUOTE(POS_W(0.03));
+            h = QUOTE(POS_H(7.6));
+        };
         class Activity: Injuries {
             idc = IDC_ACTIVITY;
             x = QUOTE(POS_X(1.5));
