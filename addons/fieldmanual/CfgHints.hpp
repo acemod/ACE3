@@ -272,55 +272,61 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/feature/medical-system'>Medical Wiki</a>";
         };
 
-        class ACE_Adenosine: ACE_Medical_Treatment_Base {
+        class ACE_MedicalMenu: ACE_Medical_Treatment_Base {
             logicalOrder = 1;
+            displayName = CSTRING(Medical_Treatment_MedicalMenu_DisplayName);
+            displayNameShort = CSTRING(Medical_Treatment_MedicalMenu_ShortName);
+            description = CSTRING(Medical_Treatment_MedicalMenu_Description);
+        };
+        class ACE_Adenosine: ACE_Medical_Treatment_Base {
+            logicalOrder = 2;
             arguments[] += {QUOTE('ACE_adenosine' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_Adenosine_ShortName);
             description = CSTRING(Medical_Treatment_Adenosine_Description);
         };
         class ACE_Bandages: ACE_Medical_Treatment_Base {
-            logicalOrder = 2;
+            logicalOrder = 3;
             displayName = CSTRING(Medical_Treatment_Bandages_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_Bandages_ShortName);
             description = CSTRING(Medical_Treatment_Bandages_Description);
         };
         class ACE_Fluids: ACE_Medical_Treatment_Base {
-            logicalOrder = 3;
+            logicalOrder = 4;
             displayName = CSTRING(Medical_Treatment_IVFluids_DisplayName);
             displayNameShort = CSTRING(Medical_Treatment_IVFluids_ShortName);
             description = CSTRING(Medical_Treatment_IVFluids_Description);
         };
         class ACE_Epinephrine: ACE_Medical_Treatment_Base {
-            logicalOrder = 4;
+            logicalOrder = 5;
             arguments[] += {QUOTE('ACE_epinephrine' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_Epinephrine_ShortName);
             description = CSTRING(Medical_Treatment_Epinephrine_Description);
         };
         class ACE_PAK: ACE_Medical_Treatment_Base {
-            logicalOrder = 5;
+            logicalOrder = 6;
             arguments[] += {QUOTE('ACE_personalAidKit' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_PAK_ShortName);
             description = CSTRING(Medical_Treatment_PAK_Description);
         };
         class ACE_Splint: ACE_Medical_Treatment_Base {
-            logicalOrder = 6;
+            logicalOrder = 7;
             arguments[] += {QUOTE('ACE_splint' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_Splint_ShortName);
             description = CSTRING(Medical_Treatment_Splint_Description);
         };
         class ACE_SurgicalKit: ACE_Medical_Treatment_Base {
-            logicalOrder = 7;
+            logicalOrder = 8;
             arguments[] += {QUOTE('ACE_surgicalKit' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_SurgicalKit_ShortName);
             description = CSTRING(Medical_Treatment_SurgicalKit_Description);
         };
         class ACE_Tourniquet: ACE_Medical_Treatment_Base {
-            logicalOrder = 8;
+            logicalOrder = 9;
             arguments[] += {QUOTE('ACE_tourniquet' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_CAT_ShortName);

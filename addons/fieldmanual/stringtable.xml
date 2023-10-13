@@ -87,6 +87,15 @@
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
             <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
         </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_DisplayName">
+            <English>Medical Menu</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_ShortName">
+            <English>Treatment, Simplified</English>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_Description">
+            <English>The %3Medical Menu%4 is a dedicated %3interface%4 to facilitate %3medical treatment%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%14%4] while looking at a patient to open the Medical Menu. Opening the menu without a patient allows for self-treatment.&lt;br/&gt;%2Alternatively, use [%3%12%4] or [%3%13%4] and select %3Medical Menu%4.&lt;br/&gt;&lt;br/&gt;%3Keybinds:%4&lt;br/&gt;%2Use [%3W, A, S, D, X, and Z%4] to select body parts.&lt;br/&gt;%2Use your %3number keys%4 to select treatment categories.</English>
+        </Key>
         <Key ID="STR_ACE_FieldManual_Items_ATragMX_ShortName">
             <English>Portable, Precise, Rugged</English>
         </Key>
