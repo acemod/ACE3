@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: AmsteadRayle
- * Format item counts to be shown either on the treatment button or in the tooltip.
+ * Format item counts to be shown in the tooltip.
  *
  * Arguments:
  * 0: Medic count <NUMBER>
