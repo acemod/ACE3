@@ -1353,10 +1353,10 @@
             <English>in your inventory</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Patient">
-            <English>in patient inventory</English>
+            <English>in patient's inventory</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
-            <English>in vehicle inventory</English>
+            <English>in vehicle's inventory</English>
         </Key>
     </Package>
 </Project>
