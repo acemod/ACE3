@@ -8,7 +8,7 @@ private _category = [format ["ACE %1", LLSTRING(Module_DisplayName)]];
     true, // isGlobal
     {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(updateInterval), "SLIDER",
@@ -18,7 +18,7 @@ private _category = [format ["ACE %1", LLSTRING(Module_DisplayName)]];
     true, // isGlobal
     {[QGVAR(updateInterval), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(windSimulation), "CHECKBOX",
@@ -28,7 +28,7 @@ private _category = [format ["ACE %1", LLSTRING(Module_DisplayName)]];
     true, // isGlobal
     {[QGVAR(windSimulation), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(showCheckAirTemperature), "CHECKBOX",
@@ -36,4 +36,4 @@ private _category = [format ["ACE %1", LLSTRING(Module_DisplayName)]];
     _category,
     true, // default value
     false // isGlobal
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

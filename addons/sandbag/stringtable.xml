@@ -31,7 +31,7 @@
             <Portuguese>Saco de Areia (vazio)</Portuguese>
             <Japanese>土のう (空)</Japanese>
             <Korean>모래주머니(비어있음)</Korean>
-            <Chinesesimp>沙包 (空)</Chinesesimp>
+            <Chinesesimp>沙包（空）</Chinesesimp>
             <Chinese>沙包 (空)</Chinese>
             <Turkish>Kum Torbası (Boş)</Turkish>
         </Key>
@@ -133,7 +133,7 @@
             <Portuguese>Confirmar implantação</Portuguese>
             <Japanese>ここで作る</Japanese>
             <Korean>설치 확인</Korean>
-            <Chinesesimp>确认布署</Chinesesimp>
+            <Chinesesimp>确认部署</Chinesesimp>
             <Chinese>確認佈署</Chinese>
             <Turkish>Yerleştirmeyi Onayla</Turkish>
         </Key>
@@ -150,7 +150,7 @@
             <Portuguese>Cancelar implantação</Portuguese>
             <Japanese>作るのを止める</Japanese>
             <Korean>설치 취소</Korean>
-            <Chinesesimp>取消布署</Chinesesimp>
+            <Chinesesimp>取消部署</Chinesesimp>
             <Chinese>取消佈署</Chinese>
             <Turkish>Yerleştirmeyi İptal Et</Turkish>
         </Key>
@@ -167,7 +167,7 @@
             <Portuguese>Implantar saco de areia</Portuguese>
             <Japanese>土のうを設置</Japanese>
             <Korean>모래주머니 설치</Korean>
-            <Chinesesimp>布署沙包</Chinesesimp>
+            <Chinesesimp>部署沙包</Chinesesimp>
             <Chinese>佈署沙包</Chinese>
             <Turkish>Kum Torbasını Yerleştir</Turkish>
         </Key>

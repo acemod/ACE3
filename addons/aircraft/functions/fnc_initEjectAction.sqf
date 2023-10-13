@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Add Eject action to vehicle if needed.
@@ -19,7 +19,7 @@ params ["_vehicle"];
 
 if (unitIsUAV _vehicle) exitWith {};
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 private _addAction = false;
 

@@ -5,7 +5,7 @@
     LSTRING(Settings_DisplayName),
     false,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(restrictModes),
@@ -16,7 +16,7 @@
     true,
     {},
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(restrictVisions),
@@ -27,7 +27,7 @@
     true,
     {},
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(maxFollowDistance),
@@ -36,4 +36,4 @@
     LSTRING(Settings_DisplayName),
     [5, 25, 5, 1],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

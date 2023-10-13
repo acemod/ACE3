@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_csw]:
-
 private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
 
 [
@@ -10,7 +8,7 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     true, // isGlobal
     {[QGVAR(defaultAssemblyMode), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(handleExtraMagazines), "CHECKBOX",
@@ -20,7 +18,17 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     true, // isGlobal
     {[QGVAR(handleExtraMagazines), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(handleExtraMagazinesType), "LIST",
+    [LSTRING(handleExtraMagazinesType_displayName), LSTRING(handleExtraMagazinesType_description)],
+    _categoryArray,
+    [[0, 1], [LSTRING(handleExtraMagazinesType_weaponHolder), LSTRING(handleExtraMagazinesType_ammoBox)], 0],
+    true, // isGlobal
+    {[QGVAR(handleExtraMagazinesType), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(ammoHandling), "LIST",
@@ -30,7 +38,7 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     true, // isGlobal
     {[QGVAR(ammoHandling), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(progressBarTimeCoefficent), "SLIDER",
@@ -40,7 +48,7 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     true, // isGlobal
     {[QGVAR(progressBarTimeCoefficent), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(dragAfterDeploy), "CHECKBOX",
@@ -50,4 +58,4 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     false, // isGlobal
     {[QGVAR(dragAfterDeploy), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

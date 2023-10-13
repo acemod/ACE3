@@ -190,7 +190,7 @@ CODE will be passed `[Unit<OBJECT>, MaxRange <NUMBER>, Explosive <OBJECT>, FuzeT
 
 Jammer that blocks RF triggers:
 
-```cpp
+```sqf
 [{
     params ["_unit", "_range", "_explosive", "_fuzeTime", "_triggerItem"];
     if (_triggerItem == "ace_cellphone") exitWith { systemChat "Blocking Cell Phone"; false };  // always block cell phones
@@ -203,4 +203,13 @@ Jammer that blocks RF triggers:
     // allow anything else (like timers / wired clackers)
     true
 }] call ace_explosives_fnc_addDetonateHandler;
+```
+
+#### 5.4 Disabling `setShotParents`.
+
+ACE will set the owner/instigator of the explosive to the unit placeing/detonating it.
+This can be disabled by executing
+
+```sqf
+ace_explosives_setShotParents = false;
 ```

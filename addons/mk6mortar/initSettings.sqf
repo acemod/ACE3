@@ -1,4 +1,3 @@
-// CBA Settings [ADDON: ace_mk6mortar]:
 // These settings effect gameplay difficutly:  defaults will leave the mortar the same as vanilla
 
 private _category = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"], localize LSTRING(DisplayName)];
@@ -11,7 +10,7 @@ private _category = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"], l
     true, // isGlobal
     {[QGVAR(airResistanceEnabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowComputerRangefinder), "CHECKBOX",
@@ -21,7 +20,7 @@ private _category = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"], l
     true, // isGlobal
     {[QGVAR(allowComputerRangefinder), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowCompass), "CHECKBOX",
@@ -31,7 +30,7 @@ private _category = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"], l
     true, // isGlobal
     {[QGVAR(allowCompass), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(useAmmoHandling), "CHECKBOX",
@@ -41,4 +40,4 @@ private _category = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"], l
     true, // isGlobal
     {[QGVAR(useAmmoHandling), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

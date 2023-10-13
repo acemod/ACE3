@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make unit a suicide bomber.
@@ -61,7 +61,7 @@ if (_autoSeek) then {
 
     // Detonation
     private _nearObjects = (_unit nearObjects _activationRadius) select {side _x == _activationSide && {_x != _unit} && {alive _x}};
-    if !(_nearObjects isEqualTo []) then {
+    if (_nearObjects isNotEqualTo []) then {
         createVehicle [EXPLOSIVES select _explosionSize, _unit, [], 0, "CAN_COLLIDE"];
         [_pfhID] call CBA_fnc_removePerFrameHandler;
         LOG("Explosion created, PFH removed");

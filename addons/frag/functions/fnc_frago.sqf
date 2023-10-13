@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Server func to create the fragmentation for a round.
@@ -95,7 +95,7 @@ private _fragArcs = [];
 _fragArcs set [360, 0];
 
 private _doRandom = true;
-if (!(_objects isEqualTo [])) then {
+if (_objects isNotEqualTo []) then {
     if (GVAR(reflectionsEnabled)) then {
         [_lastPos, _shellType] call FUNC(doReflections);
     };

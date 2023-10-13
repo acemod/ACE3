@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Weapon Select
+component: weaponselect
 description: Ability to quickly select weapons using the number keys.
 group: feature
 category: interaction
@@ -36,7 +37,3 @@ Changes the grenade selection key bindings to help prevent accidents.
 Quick weapon selection is not bound by default, but can be bound in the controls menu under `ACE3 Weapons`.
 
 Quick vehicle weapon selection is not bound by default, but can be bound in the controls menu under `ACE3 Vehicles`.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="weaponselect" %}

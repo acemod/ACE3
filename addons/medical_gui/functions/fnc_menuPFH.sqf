@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Handles updating the Medical Menu UI for the current target.
@@ -40,7 +40,7 @@ private _ctrlInjuries = _display displayCtrl IDC_INJURIES;
 
 // Update body image
 private _ctrlBodyImage = _display displayCtrl IDC_BODY_GROUP;
-[_ctrlBodyImage, GVAR(target)] call FUNC(updateBodyImage);
+[_ctrlBodyImage, GVAR(target), GVAR(selectedBodyPart)] call FUNC(updateBodyImage);
 
 // Update activity and quick view logs
 private _ctrlActivityLog = _display displayCtrl IDC_ACTIVITY;

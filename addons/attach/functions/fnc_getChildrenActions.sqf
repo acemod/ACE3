@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth de Wet (LH), PabstMirror, mharis001
  * Returns children actions for attachable items.

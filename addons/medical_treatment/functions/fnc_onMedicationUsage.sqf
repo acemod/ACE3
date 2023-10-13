@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the medication given to a patient.
@@ -41,7 +41,7 @@ if (_maxDosage > 0) then {
     };
 } forEach _incompatibleMedication;
 
-if !(_overdosedMedications isEqualTo []) then {
+if (_overdosedMedications isNotEqualTo []) then {
     private _medicationConfig = (configFile >> "ace_medical_treatment" >> "Medication");
     private _onOverDose = getText (_medicationConfig >> "onOverDose");
     if (isClass (_medicationConfig >> _className)) then {

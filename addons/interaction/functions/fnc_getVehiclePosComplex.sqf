@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, PabstMirror
  * Return a suitable position for the action point for the given target vehicle
@@ -22,7 +22,7 @@ TRACE_2("params",_target,_cameraPosASL);
 private _bb = boundingBoxReal _target;
 (_bb select 0) params ["_bbX", "_bbY", "_bbZ"];
 
-private _config = configFile >> "CfgVehicles" >> (typeOf _target);
+private _config = configOf _target;
 if (isNumber (_config >> QGVAR(bodyWidth))) then {_bbX = getNumber (_config >> QGVAR(bodyWidth));};
 if (isNumber (_config >> QGVAR(bodyLength))) then {_bbY = getNumber (_config >> QGVAR(bodyLength));};
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * PFEH to handle refreshing effects.
@@ -45,7 +45,7 @@ if (!GVAR(running)) then {
 // Scale Border / Hex
 BEGIN_COUNTER(borderScaling);
 private _scale = (call EFUNC(common,getZoom)) * 1.12513;
-if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
+if (GVAR(defaultPositionBorder) isNotEqualTo []) then {
     // Prevents issues when "zooming out" on ultra wide monitors - The square mask would be narrower than the screen
     if ((GVAR(defaultPositionBorder) select 2) * _scale < safeZoneW) then {
         _scale = safeZoneW / (GVAR(defaultPositionBorder) select 2);
@@ -57,7 +57,7 @@ if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
 };
 END_COUNTER(borderScaling);
 
-if !(IS_MAGNIFIED isEqualTo GVAR(isUsingMagnification)) then {
+if (IS_MAGNIFIED isNotEqualTo GVAR(isUsingMagnification)) then {
     GVAR(isUsingMagnification) = IS_MAGNIFIED;
     GVAR(nextEffectsUpdate) = -1;
 };
@@ -140,7 +140,7 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // ColorCorrections - Changes brightness, contrast and "green" color of nvg
     // Params: [brightness(0..2), contrast(0..inf), offset(-x..+x), blendArray, colorizeArray, weightArray]
     GVAR(ppeffectColorCorrect) = ppEffectCreate ["ColorCorrections", 2003];
-    GVAR(ppeffectColorCorrect) ppEffectAdjust [_brightFinal, _contrastFinal, 0, [0.0, 0.0, 0.0, 0.0], [1.3, 1.2, 0.0, 0.9], [6, 1, 1, 0.0]];
+    GVAR(ppeffectColorCorrect) ppEffectAdjust [_brightFinal, _contrastFinal, GVAR(nvgOffset), GVAR(nvgBlend), GVAR(nvgColorize), GVAR(nvgWeight)];
     GVAR(ppeffectColorCorrect) ppEffectCommit 0;
     GVAR(ppeffectColorCorrect) ppEffectForceInNVG true;
     GVAR(ppeffectColorCorrect) ppEffectEnable true;

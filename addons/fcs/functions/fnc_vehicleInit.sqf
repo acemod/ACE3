@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Checks if a vehicle is equipped with an FCS and if so, adds the fired event handler. Execute on server.
@@ -18,7 +18,7 @@
 params ["_vehicle"];
 
 {
-    private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
+    private _turretConfig = [configOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) then {
         if (isNil QGVAR(jipID)) then {

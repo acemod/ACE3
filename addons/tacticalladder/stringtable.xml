@@ -12,8 +12,8 @@
             <Italian>Scala Telescopica</Italian>
             <Hungarian>Teleszkopikus létra</Hungarian>
             <Portuguese>Escada telescópica</Portuguese>
-            <Japanese>タクティカル ラダー</Japanese>
-            <Korean>로프 사다리</Korean>
+            <Japanese>伸縮はしご</Japanese>
+            <Korean>접이식 사다리</Korean>
             <Chinesesimp>伸缩梯子</Chinesesimp>
             <Chinese>伸縮梯子</Chinese>
             <Turkish>Katlanabilir Merdiven</Turkish>
@@ -29,9 +29,9 @@
             <Italian>Piazza scala</Italian>
             <Hungarian>Létra lerakása</Hungarian>
             <Portuguese>Implantar escada</Portuguese>
-            <Japanese>ラダーを設置</Japanese>
+            <Japanese>はしごを設置</Japanese>
             <Korean>사다리 배치</Korean>
-            <Chinesesimp>布署梯子</Chinesesimp>
+            <Chinesesimp>部署梯子</Chinesesimp>
             <Chinese>佈署梯子</Chinese>
             <Turkish>Merdiveni Konuşlandır</Turkish>
         </Key>
@@ -46,8 +46,8 @@
             <Italian>Lascia scala</Italian>
             <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
-            <Japanese>ラダーを落とす</Japanese>
-            <Korean>사다리 놓기</Korean>
+            <Japanese>はしごを落とす</Japanese>
+            <Korean>사다리 내려놓기</Korean>
             <Chinesesimp>降下梯子</Chinesesimp>
             <Chinese>降下梯子</Chinese>
             <Turkish>Merdiveni Bırak</Turkish>
@@ -79,7 +79,7 @@
             <French>+Ctrl incliner</French>
             <Italian>+Ctrl per inclinare</Italian>
             <Japanese>+Ctrl で傾ける</Japanese>
-            <Korean>+컨트롤키 기울이기</Korean>
+            <Korean>+컨트롤 키 기울이기</Korean>
             <Chinesesimp>+Ctrl 倾斜</Chinesesimp>
             <Chinese>+Ctrl 傾斜</Chinese>
         </Key>
@@ -94,8 +94,8 @@
             <Italian>Posiziona scala</Italian>
             <Hungarian>Létra elhelyezése</Hungarian>
             <Portuguese>Posicionar escada</Portuguese>
-            <Japanese>ラダーの位置</Japanese>
-            <Korean>사다리 위치</Korean>
+            <Japanese>はしごの位置</Japanese>
+            <Korean>사다리 설치</Korean>
             <Chinesesimp>梯子位置</Chinesesimp>
             <Chinese>梯子位置</Chinese>
             <Turkish>Merdiveni Taşı</Turkish>
@@ -111,7 +111,7 @@
             <Italian>Prendi scala</Italian>
             <Hungarian>Létra felvétele</Hungarian>
             <Portuguese>Pegar escada</Portuguese>
-            <Japanese>ラダーを拾う</Japanese>
+            <Japanese>はしごを拾う</Japanese>
             <Korean>사다리 줍기</Korean>
             <Chinesesimp>捡起梯子</Chinesesimp>
             <Chinese>撿起梯子</Chinese>

@@ -1,11 +1,11 @@
 class CfgAmmo {
     class MissileCore;
-    class MissileBase : MissileCore {
+    class MissileBase: MissileCore {
         class Components;
     };
-    class Missile_AGM_02_F : MissileBase {};
+    class Missile_AGM_02_F: MissileBase {};
 
-    class GVAR(L) : Missile_AGM_02_F {
+    class GVAR(L): Missile_AGM_02_F {
         author = "xrufix";
         autoSeekTarget = 0;
         irLock = 0;

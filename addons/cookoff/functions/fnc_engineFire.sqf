@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Start fire in engine block of a car.
@@ -43,7 +43,7 @@ _smoke attachTo [_vehicle, _position];
 [{
     (_this select 0) params ["_vehicle", "_smoke", "_time"];
 
-    if (!alive _vehicle || {_vehicle getHitPointDamage "HitEngine" < 0.9} || {CBA_missionTime > _time}) then {
+    if (isNull _vehicle || {!alive _vehicle} || {_vehicle getHitPointDamage "HitEngine" < 0.9} || {CBA_missionTime > _time}) then {
         deleteVehicle _smoke;
         _vehicle setVariable [QGVAR(isEngineSmoking), false];
         [_this select 1] call CBA_fnc_removePerFrameHandler;

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Recoil
+component: recoil
 description: Recoil overhaul.
 group: feature
 category: realism
@@ -22,7 +23,3 @@ Introducing camshake when firing on foot or as vehicle gunner depending on stanc
 
 ### 1.3 Burst dispersion
 Firing in longer burst (> 3 rounds per burst) slightly reduces the accuracy. Firing machine guns in bursts is now useful.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="recoil" %}

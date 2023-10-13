@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Author: Jonpas, SilentSpike
+# Author: Jonpas, kymckay
 
 import os
 import sys
@@ -8,7 +8,7 @@ import re
 
 ######## GLOBALS #########
 WIKI_FRAMEWORK = "wiki/framework"
-ACE3WEB_WIKI_FRAMEWORK = "http://ace3mod.com/{}".format(WIKI_FRAMEWORK)
+ACE3WEB_WIKI_FRAMEWORK = "http://ace3.acemod.org/{}".format(WIKI_FRAMEWORK)
 EXCLUDE = ["events-framework.md"]
 TEMP_LISTENABLE = "temp\\combined_events_listenable.md"
 TEMP_CALLABLE = "temp\\combined_events_callable.md"

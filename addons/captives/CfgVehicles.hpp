@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_ApplyHandcuffs {
                 displayName = CSTRING(SetCaptive);
                 selection = "righthand";
-                distance = 2;
+                distance = HANDCUFFS_DISTANCE;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
                 statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
                 exceptions[] = {"isNotSwimming", "isNotInside"};
@@ -16,7 +16,7 @@ class CfgVehicles {
                 class ACE_RemoveHandcuffs {
                     displayName = CSTRING(ReleaseCaptive);
                     selection = "righthand";
-                    distance = 2;
+                    distance = HANDCUFFS_DISTANCE;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
                     exceptions[] = {"isNotSwimming", "isNotInside"};
@@ -56,6 +56,22 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive));
                     exceptions[] = {"isNotSwimming"};
+                };
+                class GVAR(BlindfoldCaptive) {
+                    displayName = CSTRING(BlindfoldCaptive);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canBlindfoldCaptive));
+                    statement = QUOTE([ARR_3(_player, _target, true)] call FUNC(doBlindfoldCaptive));
+                    exceptions[] = {"isNotSwimming"};
+                    showDisabled = 0;
+                };
+                class GVAR(RemoveBlindfoldCaptive) {
+                    displayName = CSTRING(RemoveBlindfoldCaptive);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveBlindfoldCaptive));
+                    statement = QUOTE([ARR_3(_player, _target, false)] call FUNC(doBlindfoldCaptive));
+                    exceptions[] = {"isNotSwimming"};
+                    showDisabled = 0;
                 };
             };
         };

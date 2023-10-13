@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Validate the vehicle cargo space.
@@ -34,4 +34,4 @@ if (count _loaded != count _newLoaded) then {
     _vehicle setVariable [QGVAR(loaded), _newLoaded, true];
 };
 
-_vehicle setVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(space)) - _totalSpaceOccupied, true];
+_vehicle setVariable [QGVAR(space), getNumber (configOf _vehicle >> QGVAR(space)) - _totalSpaceOccupied, true];

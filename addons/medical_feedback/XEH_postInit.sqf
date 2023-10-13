@@ -49,6 +49,7 @@ GVAR(bloodTickCounter) = 0;
     private _volume = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), VOL_UNCONSCIOUS];
     [QUOTE(ADDON), _volume, _unconscious] call EFUNC(common,setHearingCapability);
 
+    [_unconscious, 1] call FUNC(effectUnconscious);
     [true] call FUNC(handleEffects);
     ["unconscious", _unconscious] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addEventHandler;
@@ -75,6 +76,26 @@ GVAR(bloodTickCounter) = 0;
     [QUOTE(ADDON), _volume, _status] call EFUNC(common,setHearingCapability);
     [true] call FUNC(handleEffects);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
+}] call CBA_fnc_addPlayerEventHandler;
+
+// Update effects for featureCamera (curator, arsenal, etc)
+["featureCamera", {
+    params ["_unit", "_newCamera"];
+
+    [true] call FUNC(handleEffects);
+
+    private _volume = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), VOL_UNCONSCIOUS];
+
+    if (_newCamera == "") then { // switched back to player view
+        private _status = IS_UNCONSCIOUS(_unit);
+        [!_status, _unit] call EFUNC(common,setVolume);
+        [QUOTE(ADDON), _volume, _status] call EFUNC(common,setHearingCapability);
+        ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
+    } else { // camera view
+        [true, _unit] call EFUNC(common,setVolume);
+        [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
+        ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
+    };
 }] call CBA_fnc_addPlayerEventHandler;
 
 // Forced say3D

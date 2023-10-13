@@ -1,3 +1,8 @@
+// This file was modified from the original to remove 3 duplicate defines
+// check for changes when updating includes
+#ifndef _RESINCL_HPP
+#define _RESINCL_HPP
+
 /*******************/
 /*  Tactical menu  */
 /*******************/
@@ -1309,6 +1314,8 @@ enum
 #define IDC_OPTIONS_SHADOW_VISIBILIT_TEXT       313
 #define IDC_OPTIONS_TRAFFIC_VISIBILITY_VALUE    314
 #define IDC_OPTIONS_TRAFFIC_VISIBILITY_SLIDER   315
+#define IDC_OPTIONS_PIP_VISIBILITY_VALUE        316
+#define IDC_OPTIONS_PIP_VISIBILITY_SLIDER       317
 
 #define IDC_OPTIONS_PIP_VALUE                   334
 #define IDC_OPTIONS_SW_VALUE                    335
@@ -1430,10 +1437,21 @@ enum
 #define IDC_OPTIONS_PLAYER_VOICE      112
 #define IDC_OPTIONS_VON_VALUE         113
 #define IDC_OPTIONS_VON_SLIDER        114
+//samples setting was replaced by audio output device
 #define IDC_OPTIONS_SAMPLES_VALUE     115
 #define IDC_OPTIONS_SAMPLES_SLIDER    116
+
+#define IDC_OPTIONS_AUDIO_OUTPUT_REFRESH  115
+#define IDC_OPTIONS_AUDIO_OUTPUT_COMBO    116
+
 #define IDC_OPTIONS_MIC_SENS_SLIDER   117
 #define IDC_OPTIONS_MIC_ADJUST        118
+
+#define IDC_OPTIONS_MAPDUCKING_VALUE  119
+#define IDC_OPTIONS_MAPDUCKING_SLIDER 120
+
+#define IDC_OPTIONS_UI_VALUE  121
+#define IDC_OPTIONS_UI_SLIDER 122
 
 // microphone adjustment
 #define IDC_OPTIONS_MIC_PROGRESS_BAR    1001
@@ -1657,8 +1675,8 @@ enum
 #define IDC_MULTI_FULL_FILTER         151
 #define IDC_MULTI_TYPE_FILTER         152
 #define IDC_MP_NEXT_SESSION           153
-#define IDC_MULTI_BATTLEYE_FILTER     154
-#define IDC_MULTI_EXPANSIONS_FILTER   155
+// #define IDC_MULTI_BATTLEYE_FILTER     154
+// #define IDC_MULTI_EXPANSIONS_FILTER   155
 #define IDC_MULTI_FAVORITE_COLUMN     156
 #define IDC_MULTI_FAVORITE_ICON       157
 #define IDC_MULTI_SERVER_COUNT        158
@@ -1680,7 +1698,7 @@ enum
 #define IDC_MP_QUICK_BEST_SERVER      112
 #define IDC_MP_QUICK_FIND_SERVER      113
 #define IDC_MP_QUICK_SHOW_SERVERS     114
-#define IDC_MP_QUICK_SHOW_SERVERS     114
+// #define IDC_MP_QUICK_SHOW_SERVERS     114
 #define IDC_MP_QUICK_MODE_TITLE       115
 #define IDC_MP_QUICK_MODE_PICTURE     116
 #define IDC_MP_QUICK_MODE_DESCRIPTION 117
@@ -3168,3 +3186,6 @@ enum
 #define HZ_VEH_CMDTRRT_TOTAL 31
 
 #define HZ_TANK_BOTH_TRACKS 32
+
+
+#endif

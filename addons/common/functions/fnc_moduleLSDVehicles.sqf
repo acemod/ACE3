@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, joko // Jonas
  * Nothing to see here, move along.
@@ -17,14 +17,14 @@
 
 params ["", "_units", "_activated"];
 
-if !(_activated) exitWith {};
+if (!_activated || {GVAR(epilepsyFriendlyMode)}) exitWith {};
 
 if (isNil QGVAR(LSD_Vehicles)) then {
     GVAR(LSD_Vehicles) = [];
 };
 
 {
-    _hSCount = count (getArray (configFile >> "CfgVehicles" >> typeOf _x >> "hiddenSelections"));
+    _hSCount = count (getArray (configOf _x >> "hiddenSelections"));
     if (_hSCount > 0) then {
         GVAR(LSD_Vehicles) pushBack [_x, _hSCount];
     };

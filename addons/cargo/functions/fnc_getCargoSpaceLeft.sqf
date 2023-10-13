@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Get the cargo space left on object.
@@ -18,4 +18,4 @@
 params ["_object"];
 // TRACE_1("params",_object);
 
-(_object getVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(space))]) max 0
+(_object getVariable [QGVAR(space), getNumber (configOf _object >> QGVAR(space))]) max 0

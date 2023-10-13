@@ -1,5 +1,5 @@
 #define ACE_DOGTAG_ITEM(DOGTAGBASE,DOGTAGID) \
-    class DOGTAGBASE##_##DOGTAGID : DOGTAGBASE { \
+    class DOGTAGBASE##_##DOGTAGID: DOGTAGBASE { \
         author = ECSTRING(common,ACETeam); \
         scope = 1; \
         scopeArsenal = 0; \

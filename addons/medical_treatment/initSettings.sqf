@@ -1,11 +1,11 @@
 [
     QGVAR(advancedDiagnose),
-    "CHECKBOX",
+    "LIST",
     [LSTRING(AdvancedDiagnose_DisplayName), LSTRING(AdvancedDiagnose_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    true,
+    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest)], 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(advancedMedication),
@@ -14,7 +14,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(advancedBandages),
@@ -23,7 +23,25 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedBandages_EnabledCanReopen)], 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(bandageRollover),
+    "CHECKBOX",
+    [LSTRING(bandageRollover_DisplayName), LSTRING(bandageRollover_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    false // server can force if necessary, otherwise client decides
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(bandageEffectiveness),
+    "SLIDER",
+    [LSTRING(bandageEffectiveness_DisplayName), LSTRING(bandageEffectiveness_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 5, 1, 2],
+    true
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(woundReopenChance),
@@ -32,26 +50,26 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 5, 1, 2],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(clearTraumaAfterBandage),
-    "CHECKBOX",
-    [LSTRING(ClearTraumaAfterBandage_DisplayName), LSTRING(ClearTraumaAfterBandage_Description)],
+    QGVAR(clearTrauma),
+    "LIST",
+    [LSTRING(ClearTrauma_DisplayName), LSTRING(ClearTrauma_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    false,
+    [[0, 1, 2], [ELSTRING(common,Never),  LSTRING(ClearTrauma_AfterStitch), LSTRING(ClearTrauma_AfterBandage)], 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // todo: should this setting differentiate between medical vehicles and facilities?
 [
     QGVAR(locationsBoostTraining),
     "CHECKBOX",
-    [LSTRING(LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
+    [ELSTRING(common,LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowSharedEquipment),
@@ -60,7 +78,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [LSTRING(AllowSharedEquipment_PriorityPatient), LSTRING(AllowSharedEquipment_PriorityMedic), ELSTRING(common,No)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(convertItems),
@@ -69,7 +87,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [ELSTRING(common,Enabled), LSTRING(ConvertItems_RemoveOnly), ELSTRING(common,Disabled)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(treatmentTimeAutoinjector),
@@ -78,7 +96,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 5, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(treatmentTimeTourniquet),
@@ -87,7 +105,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 7, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(treatmentTimeSplint),
@@ -96,7 +114,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 7, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(treatmentTimeBodyBag),
@@ -105,7 +123,16 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 15, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(treatmentTimeGrave),
+    "SLIDER",
+    [LSTRING(TreatmentTimeGrave_DisplayName), LSTRING(TreatmentTimeGrave_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 120, 30, 1],
+    true
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(medicEpinephrine),
@@ -114,7 +141,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(locationEpinephrine),
@@ -123,7 +150,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(medicPAK),
@@ -132,7 +159,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(locationPAK),
@@ -141,7 +168,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 3],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(consumePAK),
@@ -150,7 +177,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowSelfPAK),
@@ -159,7 +186,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(timeCoefficientPAK),
@@ -168,7 +195,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 5, 1, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(medicSurgicalKit),
@@ -177,7 +204,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(locationSurgicalKit),
@@ -186,16 +213,16 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 2],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(consumeSurgicalKit),
     "LIST",
     [LSTRING(ConsumeSurgicalKit_DisplayName), LSTRING(ConsumeSurgicalKit_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    [[0, 1, 2], ["str_eval_typenothing", LSTRING(SurgicalKit_Display), LSTRING(Suture_Display)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowSelfStitch),
@@ -204,7 +231,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(woundStitchTime),
@@ -213,7 +240,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 5, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(medicIV),
@@ -222,7 +249,16 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(locationIV),
+    "LIST",
+    [LSTRING(LocationIV_DisplayName), LSTRING(LocationIV_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
+    1
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowSelfIV),
@@ -231,7 +267,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(treatmentTimeIV),
@@ -240,16 +276,25 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 12, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(cprSuccessChance),
+    QGVAR(cprSuccessChanceMin),
     "SLIDER",
-    [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
+    [LSTRING(CPRSuccessChanceMin_DisplayName), LSTRING(CPRSuccessChanceMin_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 1, 0.4, 2, true],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cprSuccessChanceMax),
+    "SLIDER",
+    [LSTRING(CPRSuccessChanceMax_DisplayName), LSTRING(CPRSuccessChanceMax_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 1, 0.4, 2, true],
+    true
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(treatmentTimeCPR),
@@ -258,7 +303,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 15, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowBodyBagUnconscious),
@@ -267,7 +312,25 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(allowGraveDigging),
+    "LIST",
+    [LSTRING(AllowGraveDigging_DisplayName), LSTRING(AllowGraveDigging_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(AllowGraveDigging_graveOnlyDead), ELSTRING(common,Yes)], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(graveDiggingMarker),
+    "CHECKBOX",
+    [LSTRING(GraveDiggingMarker_DisplayName), LSTRING(GraveDiggingMarker_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    true
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(holsterRequired),
@@ -276,7 +339,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2, 3, 4], [ELSTRING(common,Disabled), LSTRING(HolsterRequired_Lowered), LSTRING(HolsterRequired_LoweredExam), LSTRING(HolsterRequired_Holstered), LSTRING(HolsterRequired_HolsteredExam)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowLitterCreation),
@@ -285,7 +348,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Litter)],
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(maxLitterObjects),
@@ -294,7 +357,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Litter)],
     [[50, 100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 5000], [/* settings function will auto create names */], 5],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(litterCleanupDelay),
@@ -303,4 +366,4 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Litter)],
     [-1, 3600, 600, 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Adjust tripod height
@@ -30,6 +30,7 @@ GVAR(adjustPFH) = [{
         [_unit, "DefaultAction", _unit getVariable [QGVAR(Adjust), -1]] call EFUNC(common,removeActionEventHandler);
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
+        GVAR(adjustPFH) = -1;
     };
 
     {

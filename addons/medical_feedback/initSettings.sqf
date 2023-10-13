@@ -39,3 +39,18 @@
         [true] call FUNC(initEffects);
     }
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableHUDIndicators),
+    "CHECKBOX",
+    [LSTRING(EnableHUDIndicators_DisplayName), LSTRING(EnableHUDIndicators_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    true,
+    false,
+    {
+        // --- Drop indication on disabling
+        if (!_this) exitWith {
+            [true] call FUNC(handleHUDIndicators);
+        };
+    }
+] call CBA_fnc_addSetting;

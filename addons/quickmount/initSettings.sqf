@@ -5,7 +5,7 @@
     format ["ACE %1", LLSTRING(Category)],
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(distance),
@@ -14,7 +14,7 @@
     format ["ACE %1", LLSTRING(Category)],
     [0, 10, DEFAULT_DISTANCE, 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(speed),
@@ -23,7 +23,7 @@
     format ["ACE %1", LLSTRING(Category)],
     [0, 30, DEFAULT_SPEED, 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(priority),
@@ -32,7 +32,7 @@
     format ["ACE %1", LLSTRING(Category)],
     [[0, 1, 2, 3], ["str_getin_pos_driver", "str_getin_pos_gunn", "str_getin_pos_comm", "str_getin_pos_passenger"], DEFAULT_PRIORITY],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableMenu),
@@ -49,4 +49,4 @@
         ],
         3
     ]
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

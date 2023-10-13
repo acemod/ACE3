@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Javelin
+component: javelin
 description: Javelin AT launcher and locking.
 group: feature
 category: equipment
@@ -33,7 +34,3 @@ The Titan / Javelin now posses the ability to be used in top down attack or dire
 - For this feature you need to have a compatible launcher.
 - When aiming with your launcher press <kbd>Ctrl</kbd> + <kbd>Tab&nbsp;↹</kbd>.
 - On the right side of the screen (for most launchers) you should see that `TOP`is now illumiated in green which means that your missile will be fired in top down mode.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="javelin" %}

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, Commy2
  * Make a unit start swapping the barrel of another unit

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Take weapon of safety lock.
@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  * 2: Muzzle <STRING>
+ * 3: Show hint <BOOL>
  *
  * Return Value:
  * None
@@ -17,7 +18,7 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", "_muzzle"];
+params ["_unit", "_weapon", "_muzzle", ["_hint", true, [true]]];
 
 private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 _safedWeapons deleteAt (_safedWeapons find _weapon);
@@ -77,6 +78,8 @@ if (inputAction "nextWeapon" > 0) then {
 // player hud
 [true] call FUNC(setSafeModeVisual);
 
-// show info box
-private _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize LSTRING(TookOffSafety), _picture] call EFUNC(common,displayTextPicture);
+// show info box unless disabled
+if (_hint) then {
+    private _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
+    [localize LSTRING(TookOffSafety), _picture] call EFUNC(common,displayTextPicture);
+};

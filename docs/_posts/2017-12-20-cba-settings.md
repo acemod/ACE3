@@ -2,7 +2,7 @@
 title: Using CBA Settings in ACE3
 description: With v3.12.0 we are dropping the ACE3 Settings System and now are using CBA Settings
 parent: posts
-image: /img/news/171220_cbaPost2.jpg
+image: /img/news/171220_cbaPost2.webp
 author: Pabstmirror, bux
 layout: post
 ---

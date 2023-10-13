@@ -20,4 +20,6 @@ GVAR(lastIterationIndex) = 0;
 GVAR(objects) = [];
 GVAR(arguments) = [];
 
+#include "initSettings.sqf"
+
 ADDON = true;

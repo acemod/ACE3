@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Rearm
+component: rearm
 description: Adds custom rearm system.
 group: feature
 category: interaction
@@ -87,7 +88,3 @@ Please check the <a href="{{ site.baseurl }}/wiki/framework/rearm-framework.html
 
 ### The limited supply option `Only specific Magazines` doesn't work. What's wrong?
 The mission creator has to use the framework to add specific magazines to the ammo truck(s). On this setting all ammo trucks are empty by default. For more information, please check the <a href="{{ site.baseurl }}/wiki/framework/rearm-framework.html">framework</a>  description.
-
-## 5. Dependencies
-
-{% include dependencies_list.md component="rearm" %}

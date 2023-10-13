@@ -53,6 +53,7 @@ class CfgAmmo {
         initTime = 0.3;
 
         EGVAR(rearm,caliber) = 178;
+        EGVAR(vehicle_damage,incendiary) = 1.0;
 
         class ace_missileguidance {
             enabled = 1;
@@ -111,12 +112,14 @@ class CfgAmmo {
         EGVAR(frag,metal) = 7100; // 1000 steel balls
         EGVAR(frag,charge) = 4100;
         EGVAR(frag,gurney_c) = 2700;
-        EGVAR(frag,gurney_k) = 3/5;
+        EGVAR(frag,gurney_k) = "3/5";
         EGVAR(frag,classes)[] = {"ACE_frag_small"};
 
         displayName = CSTRING(hot2mp);
         displayNameShort = CSTRING(hot2mp);
         description = CSTRING(missileType_Description_AP);
+
+        EGVAR(vehicle_damage,incendiary) = 0.1;
 
         class ace_missileguidance: ace_missileguidance {
             enabled = 1;

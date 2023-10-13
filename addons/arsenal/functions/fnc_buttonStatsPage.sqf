@@ -1,12 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
- * Handles the previous / next page buttons for stats
+ * Handles the previous / next page buttons for stats.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Previous or next <BOOL> (false = previous, true = next)
+ * 1: Stats page <CONTROL>
+ * 2: Previous (false) or next (true) page <BOOL>
  *
  * Return Value:
  * None
@@ -19,11 +20,8 @@ params ["_display", "_control", "_nextPage"];
 TRACE_1("control enabled", ctrlEnabled _control);
 if !(ctrlEnabled _control) exitWith {};
 
-GVAR(statsInfo) params ["_isLeftPanel", "_statsIndex", "_panelControl", "_curSel", "_itemCfg"];
+GVAR(currentStatPage) = [GVAR(currentStatPage) - 1, GVAR(currentStatPage) + 1] select _nextPage;
 
-private _pageList = [GVAR(statsPagesRight), GVAR(statsPagesLeft)] select (_isLeftPanel);
-private _newPageNumber = [(_pageList select _statsIndex) - 1, (_pageList select _statsIndex) + 1] select _nextPage;
-
-_pageList set [_statsIndex, _newPageNumber];
+GVAR(statsInfo) params ["_isLeftPanel", "_panelControl", "_curSel", "_itemCfg"];
 
 [QGVAR(displayStats), [_display, _panelControl, _curSel, _itemCfg]] call CBA_fnc_localEvent;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Tuupertunut
  * Sets the ammo counts of all magazines of given class in turret.
@@ -77,7 +77,7 @@ if (!_magLoadedInWeapon) then {
     {
         _x params ["_loopMagClass", "_loopAmmoCounts"];
 
-        if (!(_loopMagClass isEqualTo _magazineClass)) then {
+        if (_loopMagClass isNotEqualTo _magazineClass) then {
             {
                 _vehicle addMagazineTurret [_loopMagClass, _turretPath, _x];
             } forEach _loopAmmoCounts;

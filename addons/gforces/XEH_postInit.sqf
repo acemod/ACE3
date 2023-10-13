@@ -5,15 +5,15 @@ if (!hasInterface) exitWith {};
 GVAR(pfID) = -1;
 GVAR(playerIsVirtual) = false;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_1("SettingsInitialized eh",GVAR(enabledFor));
 
     if (GVAR(enabledFor) == 0) exitWith {}; //Module has no effect if enabledFor is "None"
 
     ["unit", { // Add unit changed EH to check if player is either virtual (logic) or a UAV AI
         params ["_unit"];
-        GVAR(playerIsVirtual) = ((getNumber (configFile >> "CfgVehicles" >> (typeOf _unit) >> "isPlayableLogic")) == 1) ||
-        {(getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")) == "UAVPilot"};
+        GVAR(playerIsVirtual) = ((getNumber (configOf _unit >> "isPlayableLogic")) == 1) ||
+        {(getText (configOf _unit >> "simulation")) == "UAVPilot"};
         TRACE_3("unit changed",_unit,typeOf _unit,GVAR(playerIsVirtual));
     }, true] call CBA_fnc_addPlayerEventHandler;
 

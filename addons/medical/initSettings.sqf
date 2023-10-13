@@ -7,7 +7,7 @@
     true,
     {},
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(fractures),
@@ -18,7 +18,7 @@
     true,
     {},
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(fractureChance),
@@ -27,7 +27,7 @@
     LSTRING(Category),
     [0, 1, 0.8, 2, true],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(spontaneousWakeUpChance),
@@ -36,7 +36,7 @@
     LSTRING(Category),
     [0, 1, 0.05, 2, true],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(spontaneousWakeUpEpinephrineBoost),
@@ -45,4 +45,4 @@
     LSTRING(Category),
     [1, 30, 1, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
