@@ -210,6 +210,7 @@ class ACE_Medical_Menu {
     class controlsBackground {
         class Title: RscText {
             idc = IDC_TITLE;
+            text = CSTRING(MedicalMenu);
             x = QUOTE(POS_X(1));
             y = QUOTE(POS_Y(0));
             w = QUOTE(POS_W(38));
@@ -242,8 +243,8 @@ class ACE_Medical_Menu {
             sizeEx = QUOTE(POS_H(1.2));
             colorText[] = {1, 1, 1, 0.9};
         };
-        class StatusHeader: TreatmentHeader {
-            text = CSTRING(STATUS);
+        class NameHeader: TreatmentHeader {
+            idc = IDC_NAME;
             x = QUOTE(POS_X(13.83));
         };
         class OverviewHeader: TreatmentHeader {
