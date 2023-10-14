@@ -62,6 +62,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_autoReplaceItems">
             <English>Auto Convert Items for AI</English>
+            <Polish>Automatyczna Konwersja Przedmiotów dla AI</Polish>
         </Key>
     </Package>
 </Project>
