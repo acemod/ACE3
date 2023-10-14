@@ -1348,5 +1348,14 @@
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
             <English>in vehicle's inventory</English>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
+            <English>No effect until tourniquet removed</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
+            <English>Show Tourniquet Warning</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
+            <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
+        </Key>
     </Package>
 </Project>
