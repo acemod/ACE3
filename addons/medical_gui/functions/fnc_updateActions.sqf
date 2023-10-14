@@ -68,7 +68,7 @@ private _shownIndex = 0;
             {HAS_TOURNIQUET_APPLIED_ON(GVAR(target),GVAR(selectedBodyPart))}
         ) then {
             _ctrl ctrlSetTooltipColorText [1, 1, 0, 1];
-            _ctrl ctrlSetTooltip localize LSTRING(TourniquetWarning);
+            _ctrl ctrlSetTooltip LLSTRING(TourniquetWarning);
         };
 
         _ctrl ctrlSetText _displayName;
