@@ -40,7 +40,6 @@ _projectile addEventHandler ["SubmunitionCreated", {
 
     [EFUNC(missileguidance,guidancePFH), 0, _guidanceArgs] call CBA_fnc_addPerFrameHandler;
     if (!isNil QEFUNC(frag,addPfhRound)) then {
-        systemChat "fraggo";
         [_firedEH # 0, _firedEH # 4, _submunitionProjectile] call EFUNC(frag,addPfhRound);
     };
 
