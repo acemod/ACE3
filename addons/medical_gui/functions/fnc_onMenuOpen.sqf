@@ -74,7 +74,7 @@ _ctrl ctrlCommit 0;
 {
     _x params ["_idc", "_enabled"];
 
-    if (_forEachIndex == 1 || {_forEachIndex == _countEnabled - 1}) then {
+    if (_forEachIndex == 1 || {_forEachIndex == count _list - 1}) then {
         _offsetX = _offsetX + POS_W(0.2);
     };
 
