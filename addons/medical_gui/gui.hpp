@@ -189,7 +189,7 @@ class ACE_Medical_Menu_ActionButton: RscButtonMenu {
     style = ST_LEFT;
     x = 0;
     y = 0;
-    w = QUOTE(POS_W(11.833));
+    w = QUOTE(POS_W(12.33));
     h = QUOTE(POS_H(1));
     size = QUOTE(POS_H(0.9));
     class Attributes {
