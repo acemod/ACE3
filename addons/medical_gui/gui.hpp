@@ -323,6 +323,17 @@ class ACE_Medical_Menu {
             text = QPATHTOF(data\categories\toggle_to_other.paa);
             x = QUOTE(POS_X(12));
         };
+        class TriageDivider: HeaderLine {
+            idc = IDC_TRIAGE_DIVIDER;
+            x = QUOTE(POS_X(3.265));
+            y = QUOTE(POS_Y(3.0));
+            w = QUOTE(POS_W(0.03));
+            h = QUOTE(POS_H(1.0));
+        };
+        class ToggleDivider: TriageDivider {
+            idc = IDC_TOGGLE_DIVIDER;
+            x = QUOTE(POS_X(3.265));
+        };
         class TriageCard: RscListBox {
             idc = IDC_TRIAGE_CARD;
             x = QUOTE(POS_X(1.5));
