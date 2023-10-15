@@ -265,7 +265,7 @@ class ACE_Medical_Menu {
             text = QPATHTOF(data\categories\triage_card.paa);
             tooltip = CSTRING(ViewTriageCard);
             x = QUOTE(POS_X(1.75));
-            y = QUOTE(POS_Y(2.73));
+            y = QUOTE(POS_Y(2.75));
             w = QUOTE(POS_W(1.5));
             h = QUOTE(POS_H(1.5));
             color[] = {1, 1, 1, 1};
