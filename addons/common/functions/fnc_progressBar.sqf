@@ -22,13 +22,17 @@
  * Public: Yes
  */
 
-params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
+params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []], ["_dialog", true]];
 
 private _player = ACE_player;
 
 //Open Dialog and set the title
 closeDialog 0;
-createDialog QGVAR(ProgressBar_Dialog);
+if (_dialog) then {
+    createDialog QGVAR(ProgressBar_Dialog);
+} else {
+    (findDisplay 46) createDisplay QGVAR(ProgressBar_Dialog);
+};
 
 private _display = uiNamespace getVariable QGVAR(dlgProgress);
 
@@ -53,7 +57,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
 
 [{
-    (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions", "_title"];
+    (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions", "_title", "_dialog"];
 
     private _elapsedTime = CBA_missionTime - _startTime;
     private _errorCode = -1;
@@ -84,7 +88,11 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
 
         //Only close dialog if it's the progressBar:
         if (!isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
-            closeDialog 0;
+            if (_dialog) then {
+                closeDialog 0;
+            } else {
+                (uiNamespace getVariable QGVAR(dlgProgress)) closeDisplay _errorCode;
+            };
         };
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -116,4 +124,4 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
             };
         };
     };
-}, 0, [_args, _onFinish, _onFail, _condition, _player, CBA_missionTime, _totalTime, _exceptions, _localizedTitle]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_args, _onFinish, _onFail, _condition, _player, CBA_missionTime, _totalTime, _exceptions, _localizedTitle, _dialog]] call CBA_fnc_addPerFrameHandler;
