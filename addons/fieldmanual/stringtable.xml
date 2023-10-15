@@ -376,7 +376,7 @@ Przetłumaczono z www.DeepL.com/Translator (wersja darmowa)</Polish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_FortifyTool_ShortName">
             <English>Build Fortifications</English>
-            <Polish>Budowanie  Fortyfikacji</Polish>
+            <Polish>Budowanie Fortyfikacji</Polish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_FortifyTool_Description">
             <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
