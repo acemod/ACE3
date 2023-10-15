@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="pike">
-        <Key ID="STR_ACE_pike_magazine_displayName">
+    <Package name="Pike">
+        <Key ID="STR_ACE_Pike_magazine_displayName">
             <English>40mm Pike</English>
+        </Key>
+        <Key ID="STR_ACE_Pike_magazine_displayNameShort">
+            <English>Pike SALH</English>
+        </Key>
+        <Key ID="STR_ACE_Pike_magazine_descriptionShort">
+            <English>Semi-Active Laser Guided 40mm Grenade</English>
         </Key>
     </Package>
 </Project>

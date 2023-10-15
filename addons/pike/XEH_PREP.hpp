@@ -1,1 +1,2 @@
-PREP(handleFired);
+LOG("prep");
+PREP(ammoFired);

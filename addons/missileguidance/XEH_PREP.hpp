@@ -7,6 +7,7 @@ PREP(checkSeekerAngle);
 PREP(checkLos);
 
 PREP(onFired);
+PREP(onFiredDeffered);
 PREP(onIncomingMissile);
 
 PREP(guidancePFH);
