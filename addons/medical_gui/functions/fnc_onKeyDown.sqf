@@ -88,7 +88,7 @@ switch (true) do {
 };
 
 if (_return) then {
-    playSoundUI ["\a3\ui_f\data\sound\rscbuttonmenu\soundClick.wss", 0.09, 1];
+    playSound ["SoundClick", true]
 };
 
 _return
