@@ -197,8 +197,7 @@
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_Description">
             <English>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</English>
-            <Polish>%3Czuwak%4 jest urządzeniem pozwalającym wysadzić %3Ładunek Wybuchowy%4 gdy żołnierz zginie.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Mat. Wybuchowe%4.&lt;br/&gt;%2Wybierz %3Czuwak%4 i połącz wybrany %3Ładunek Wybuchowy%4.&lt;br/&gt;%2W celu odłączenia powtórz czynności i wybierz odłącz.
-</Polish>
+            <Polish>%3Czuwak%4 jest urządzeniem pozwalającym wysadzić %3Ładunek Wybuchowy%4 gdy żołnierz zginie.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Mat. Wybuchowe%4.&lt;br/&gt;%2Wybierz %3Czuwak%4 i połącz wybrany %3Ładunek Wybuchowy%4.&lt;br/&gt;%2W celu odłączenia powtórz czynności i wybierz odłącz.</Polish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DefusalKit_Description">
             <English>The %3Defusal Kit%4 allows defusal of explosives.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Defusal Kit%4.&lt;br/&gt;%2Safely approach an %3Explosive%4.&lt;br/&gt;%2Use [%3%13%4] and select %3Defuse%4.</English>
