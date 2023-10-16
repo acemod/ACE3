@@ -415,10 +415,12 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_DisplayName">
             <English>Grave Digging Time</English>
             <Korean>무덤 파는 시간</Korean>
+            <Polish>Czas Kopania Grobu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
             <English>Time, in seconds, required to dig a grave for a body.</English>
             <Korean>시신의 무덤을 파는 데 필요한 시간(초 단위).</Korean>
+            <Polish>Czas, w sekundach wymagany do wykopania grobu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -860,11 +862,13 @@
             <English>Create Grave Markers</English>
             <German>Erstelle Grabmal</German>
             <Spanish>Crear Tumba</Spanish>
+            <Polish>Utwórz Nagrobek</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_Description">
             <English>Enables the creation of grave markers when digging graves.</English>
             <German>Erstellt Grabmale beim Graben von Gräbern.</German>
             <Spanish>Habilita la creación de Tumbas al cavar tumbas.</Spanish>
+            <Polish>Umożliwia tworzenie nagrobków podczas kopania grobów.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -3419,6 +3423,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoPain">
             <English>No pain</English>
+            <Polish>Nie odczuwa bólu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_MildPain">
             <English>In mild pain</English>
@@ -3501,6 +3506,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoIv">
             <English>No IV</English>
+            <Polish>Brak podpiętego IV</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -4501,10 +4507,12 @@
         <Key ID="STR_ACE_Medical_Treatment_DigGrave">
             <English>Dig grave for body</English>
             <Korean>시체를 위해 무덤 파기</Korean>
+            <Polish>Wykop grób na ciało</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
             <Korean>시체를 위한 무덤 파는 중...</Korean>
+            <Polish>Kopanie grobu...</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
