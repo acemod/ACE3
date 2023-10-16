@@ -18,7 +18,7 @@
 disableSerialization;
 params [["_selected", -1, [0]]];
 
-if (_select == -1) then {
+if (_selected == -1) then {
     private _display = uiNamespace getVariable QGVAR(menuDisplay);
     if (isNil "_display") exitWith {};
 
