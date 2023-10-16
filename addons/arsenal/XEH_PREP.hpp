@@ -92,6 +92,7 @@ PREP(statBarStatement_impact);
 PREP(statBarStatement_rateOfFIre);
 PREP(statTextStatement_accuracy);
 PREP(statTextStatement_explosionTime);
+PREP(statTextStatement_illuminators);
 PREP(statTextStatement_magCount);
 PREP(statTextStatement_mass);
 PREP(statTextStatement_rateOfFire);

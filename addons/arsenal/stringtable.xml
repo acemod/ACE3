@@ -1593,6 +1593,9 @@
             <German>Munitionszahl</German>
             <Korean>장탄 수</Korean>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statIlluminators">
+            <English>Illuminators</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
             <Japanese>お気に入りをデフォルト</Japanese>
