@@ -51,10 +51,29 @@ if (isServer) then {
 // Servers and HCs do not require action menus (beyond this point)
 if !(hasInterface) exitWith {};
 
+if (_vehicle getVariable [QGVAR(initVehicle),false]) exitWith {};
+private _tb = getNumber (_config >> "transportmaxbackpacks");
+private _tm = getNumber (_config >> "transportmaxmagazines");
+private _tw = getNumber (_config >> "transportmaxweapons");
+private _hasInventory = (_tb > 0 || _tm > 0 || _tw > 0);
+_vehicle setVariable [QGVAR(hasInventory), _hasInventory];
+
+// This is a Hack to add the Gear Action and thus the Cargo UI to vehicles/Objects that dont naturally have a Gear Action
+if (!_hasInventory) then {
+    private _cfgAction = configFile >> "CfgActions" >> "Gear";
+    private _title = getText (_cfgAction >> "text");
+    private _hideOnUse = getNumber (_cfgAction >> "hideOnUse") == 1;
+    private _showWindow = getNumber (_cfgAction >> "showWindow") == 1;
+    private _textDefault = getText (_cfgAction >> "textDefault");
+    private _shortcut = getText (_cfgAction >> "shortcut");
+    private _id = _vehicle addAction [_title, {
+        ACE_Player action ["Gear", objNull];
+    }, nil, 5.1, _showWindow, _hideOnUse, _shortcut, "!(lockedInventory _target)"];
+    _vehicle setUserActionText [_id, _title, _textDefault];
+};
+
 // Unnecessary to add actions to a vehicle class that's already got them
 if (_type in GVAR(initializedVehicleClasses)) exitWith {};
-if (_vehicle getVariable [QGVAR(initVehicle),false]) exitWith {};
-
 // Vehicles given cargo via eden have their actions added to the object
 // So this function may run for multiple of the same class in that case
 if (_hasCargoConfig) then {

@@ -4,7 +4,7 @@
  * Start unload action.
  *
  * Arguments:
- * None
+ * 0: Index of Unloading Item <NUMBER> (default: -1)
  *
  * Return Value:
  * None
@@ -16,16 +16,21 @@
  */
 
 disableSerialization;
+params [["_selected", -1, [0]]];
 
-private _display = uiNamespace getVariable QGVAR(menuDisplay);
-if (isNil "_display") exitWith {};
+if (_select == -1) then {
+    private _display = uiNamespace getVariable QGVAR(menuDisplay);
+    if (isNil "_display") exitWith {};
+
+    private _ctrl = _display displayCtrl 100;
+
+    _selected = (lbCurSel _ctrl) max 0;
+};
+
+if (_selected == -1) exitWith {};
 
 private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
 if (_loaded isEqualTo []) exitWith {};
-
-private _ctrl = _display displayCtrl 100;
-
-private _selected = (lbCurSel _ctrl) max 0;
 
 if (count _loaded <= _selected) exitWith {};
 private _item = _loaded select _selected; // This can be an object or a classname string

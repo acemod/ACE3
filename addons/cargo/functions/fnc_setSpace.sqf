@@ -46,6 +46,8 @@ if (_newSpace == (_vehicle getVariable [QGVAR(space), CARGO_SPACE(typeOf _vehicl
 
 // Apply new space globally
 _vehicle setVariable [QGVAR(space), _newSpace, true];
+// Set Maximal Space required for Inventory UI
+_vehicle setVariable [QGVAR(spaceMax), _newSpace, true];
 // Necessary to update value, even if no space, as API could be used again
 _vehicle setVariable [QGVAR(hasCargo), _space > 0, true];
 

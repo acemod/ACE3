@@ -16,3 +16,11 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_SCRIPT(XEH_postInit));
     };
 };
+
+class Extended_InventoryOpened_EventHandlers {
+    class CAManBase {
+        class GVAR(onOpenInventory) {
+            clientInventoryOpened = QUOTE(if (_this select 0 == ACE_player) then {_this call FUNC(onOpenInventory)};);
+        };
+    };
+};
