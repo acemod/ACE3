@@ -27,6 +27,7 @@ exclude = [
     "/dev/",
     "medical_ai/statemachine.sqf",
     "common/functions/fnc_dummy.sqf",
+    "zeus/functions/fnc_zeusAttributes.sqf",
 ]
 
 [hemtt.config]
