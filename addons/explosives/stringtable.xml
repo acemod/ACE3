@@ -249,7 +249,7 @@
             <Portuguese>M57 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M57</Russian>
             <Japanese>M57 起爆装置</Japanese>
-            <Korean>M57 격발기</Korean>
+            <Korean>격발기 (M57)</Korean>
             <Chinesesimp>M57 引爆装置</Chinesesimp>
             <Chinese>M57 引爆裝置</Chinese>
             <Turkish>M57 Ateşleme Cihazı</Turkish>
@@ -283,7 +283,7 @@
             <Portuguese>M152 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M152</Russian>
             <Japanese>M152 起爆装置</Japanese>
-            <Korean>M152 격발기</Korean>
+            <Korean>격발기 (M152)</Korean>
             <Chinesesimp>M152 引爆装置</Chinesesimp>
             <Chinese>M152 引爆裝置</Chinese>
             <Turkish>M152 Ateşleme Cihazı</Turkish>
@@ -504,7 +504,7 @@
             <Portuguese>Desarmando Explosivo...</Portuguese>
             <Russian>Обезвреживание...</Russian>
             <Japanese>爆発物を無力化しています・・・</Japanese>
-            <Korean>폭발물 해체중...</Korean>
+            <Korean>폭발물 해체 중...</Korean>
             <Chinesesimp>正在拆除爆炸物...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
             <Turkish>Patlayıcı Imha Ediliyor...</Turkish>
@@ -933,7 +933,7 @@
             <Portuguese>IED Grande (Urbano, Placa de pressão)</Portuguese>
             <Russian>Большое СВУ (городское, нажимного действия)</Russian>
             <Japanese>大きな IED (市街地用、圧力感知)</Japanese>
-            <Korean>대형 급조폭발물 (시가지, 압력식)</Korean>
+            <Korean>급조폭발물 (대형, 시가지, 압력식)</Korean>
             <Chinesesimp>大型 IED（地表上，压力盘）</Chinesesimp>
             <Chinese>大型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
         </Key>
@@ -948,7 +948,7 @@
             <Portuguese>IED Grande (Enterrado, Placa de pressão)</Portuguese>
             <Russian>Большое СВУ (закопанное, нажимного действия)</Russian>
             <Japanese>大きな IED (埋め込み型、圧力感知)</Japanese>
-            <Korean>대형 급조폭발물 (묻힘, 압력식)</Korean>
+            <Korean>급조폭발물 (대형, 묻힘, 압력식)</Korean>
             <Chinesesimp>大型 IED（地表下，压力盘）</Chinesesimp>
             <Chinese>大型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
         </Key>
@@ -963,7 +963,7 @@
             <Portuguese>IED Pequeno(Urbano, Placa de pressão)</Portuguese>
             <Russian>Малое СВУ (городское, нажимного действия)</Russian>
             <Japanese>小さな IED (市街地用、圧力感知)</Japanese>
-            <Korean>소형 급조폭발물 (시가지, 압력식)</Korean>
+            <Korean>급조폭발물 (소형, 시가지, 압력식)</Korean>
             <Chinesesimp>小型 IED（地表上，压力盘）</Chinesesimp>
             <Chinese>小型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
         </Key>
@@ -978,7 +978,7 @@
             <Portuguese>IED Pequeno (Enterrado, Placa de pressão)</Portuguese>
             <Russian>Малое СВУ (закопанное, нажимного действия)</Russian>
             <Japanese>小さな IED (埋め込み型、圧力感知)</Japanese>
-            <Korean>소형 급조폭발물 (묻힘, 압력식)</Korean>
+            <Korean>급조폭발물 (소형, 묻힘, 압력식)</Korean>
             <Chinesesimp>小型 IED（地表下，压力盘）</Chinesesimp>
             <Chinese>小型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
         </Key>
@@ -994,7 +994,7 @@
             <Italian>Collega a  %1</Italian>
             <Portuguese>Conectar à %1</Portuguese>
             <Japanese>%1 へ接続</Japanese>
-            <Korean>%1에 연결중</Korean>
+            <Korean>%1에 연결 중</Korean>
             <Chinesesimp>连接到%1</Chinesesimp>
             <Chinese>連接到%1</Chinese>
             <Turkish>Bağlandı %1</Turkish>
