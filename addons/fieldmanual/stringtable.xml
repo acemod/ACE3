@@ -140,7 +140,7 @@
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_ATragMX_Description">
             <English>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information.</English>
-            <Polish>%3Horus ATragMX%4 uwzględnia warunki atmosferyczne, dane broni, amunicję, zasięg, prędkość wylotową do wyliczenia precyzyjnych nastaw - ponadto uwzględnia %3Efekt Coriolisa%4 oraz %3Efekt Spinowy%4. %3ATragMX%4, załadowany na komputer przenośny wyprodukowany przez %3TDS Recon%4, jest łatwym i prostym w użyciu. %3Recon%4 spełnia rygorystyczne wymagania %3MIL-STD-810F%4 pod względem odporności na upadek, wibracje, wilgotność, wyskość oraz ekstremalne temperatury.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;Wejdź na wiki po więcej informacji.</Polish>
+            <Polish>%3Horus ATragMX%4 uwzględnia warunki atmosferyczne, dane broni, amunicję, zasięg, prędkość wylotową do wyliczenia precyzyjnych nastaw - ponadto uwzględnia %3Efekt Coriolisa%4 oraz %3Efekt Spinowy%4. %3ATragMX%4, załadowany na komputer przenośny wyprodukowany przez %3TDS Recon%4, jest łatwy i prosty w użyciu. %3Recon%4 spełnia rygorystyczne wymagania %3MIL-STD-810F%4 pod względem odporności na upadek, wibracje, wilgotność, wyskość oraz ekstremalne temperatury.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;Wejdź na wiki po więcej informacji.</Polish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
             <English>Bring Out Your Dead</English>
@@ -308,7 +308,7 @@
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_ShortName">
             <English>Lower Firearm Temperature</English>
-            <Polish>Niższa Temperatura twoje Broni</Polish>
+            <Polish>Niższa Temperatura twojej Broni</Polish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_Description">
             <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the weapon's barrel will be swapped and its heat reduced. A soldier may also check the temperature of any barrels within their inventory. Not all weapons support swapping barrels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</English>
@@ -392,7 +392,7 @@
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_VehicleKey_ShortName">
             <English>Lock/Unlock Vehicles</English>
-            <Polish>Zablokuj/Odbloku Pojazdy</Polish>
+            <Polish>Zablokuj/Odblokuj Pojazdy</Polish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_VehicleKey_Description">
             <English>%3Vehicle Keys%4 are used to lock/unlock your vehicles. Vehicle keys can exist for the whole side, or keys can be created for a particular vehicle itself.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Vehicle Key%4.&lt;br/&gt;%2Approach the vehicle that the key belongs to.&lt;br/&gt;Use [%3%13%4] and select %3Lock/Unlock Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</English>
