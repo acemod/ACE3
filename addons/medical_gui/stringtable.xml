@@ -284,12 +284,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfo">
             <English>Peek Medical Info</English>
+            <Polish>Podgląd Informacji Medycznych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
             <English>Medical Peek Duration</English>
+            <Polish>Czas Trwania Podglądu Medycznego</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
             <English>How long the medical info peek remains open after releasing the key.</English>
+            <Polish>Jak długo podgląd informacji medycznych pozostaje otwarty po zwolnieniu przycisku.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
@@ -534,21 +537,13 @@
             <Chinese>拖 / 背</Chinese>
             <Turkish>Sürükle / Taşı</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_ToggleSelf">
-            <English>Toggle (Self)</English>
-            <German>Umschalter (Selbst)</German>
-            <Russian>Лечить себя/другого раненого</Russian>
-            <French>Basculer (soi-même)</French>
-            <Polish>Przełącz (na siebie)</Polish>
-            <Spanish>Alternar</Spanish>
-            <Portuguese>Alternar (Si mesmo)</Portuguese>
-            <Czech>Přepnout (na sebe)</Czech>
-            <Italian>Attiva (Te Stesso)</Italian>
-            <Japanese>切り替え (自分)</Japanese>
-            <Korean>토글 (자신)</Korean>
-            <Chinesesimp>切换（自己）</Chinesesimp>
-            <Chinese>切換 (自己)</Chinese>
-            <Turkish>Değiştir (Şahsi)</Turkish>
+        <Key ID="STR_ACE_Medical_GUI_ToggleToSelf">
+            <English>Switch to self</English>
+            <Polish>Zmień na siebie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_ToggleToOther">
+            <English>Switch to target</English>
+            <Polish>Zmień na pacjenta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Head">
             <English>Head</English>
@@ -968,18 +963,23 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_NOBLEEDING">
             <English>No bleeding</English>
+            <Polish>Brak krwawienia</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate1">
             <English>Slow bleeding</English>
+            <Polish>Słabe krwawienie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
             <English>Moderate bleeding</English>
+            <Polish>Umiarkowane krwawienie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
             <English>Severe bleeding</English>
+            <Polish>Poważne krwawienie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
             <English>Massive bleeding</English>
+            <Polish>Bardzo silne krwawienie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
@@ -1047,6 +1047,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood0">
             <English>No blood loss</English>
+            <Polish>Brak utraty krwi</Polish>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1279,15 +1280,19 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
             <English>Peek Medical Info on Hit</English>
+            <Polish>Podgląd Informacji Medycznych po Zranieniu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
             <English>Temporarily show medical info when injured.</English>
+            <Polish>Tymczasowe wyświetlanie informacji medycznych po zranieniu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
             <English>Medical Peek Duration on Hit</English>
+            <Polish>Czas trwania podglądu informacji medycznych po zranieniu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
             <English>How long the medical info peek remains open after being injured.</English>
+            <Polish>Jak długo podgląd informacji medycznych pozostaje otwarty po otrzymaniu obrażeń.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
@@ -1307,9 +1312,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_DisplayName">
             <English>Body Part Outline Color</English>
+            <Polish>Kolor Konturu Części Ciała</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_Description">
             <English>Color of outline around selected body part.</English>
+            <Polish>Kolor konturu wokół wybranej części ciała.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
             <English>Minor Trauma</English>
@@ -1342,6 +1349,35 @@
             <Polish>Przewlekły Uraz</Polish>
             <German>Chronisches Trauma</German>
             <Korean>심각한 외상</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BodyLabelLeft">
+            <English>L</English>
+            <Polish>L</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BodyLabelRight">
+            <English>R</English>
+            <Polish>P</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Medic">
+            <English>in your inventory</English>
+            <Polish>w twoim ekwipunku</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Patient">
+            <English>in patient's inventory</English>
+            <Polish>w ekwipunku pacjenta</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
+            <English>in vehicle's inventory</English>
+            <Polish>w ekwipunku pojazdu</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
+            <English>No effect until tourniquet removed</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
+            <English>Show Tourniquet Warning</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
+            <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
         </Key>
     </Package>
 </Project>
