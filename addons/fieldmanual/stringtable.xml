@@ -99,7 +99,7 @@
             <Polish>Zapobiegaj Ponownemu Otwieraniu się Ran</Polish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
-            <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
+            <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma and may require additional %3Sutures%4 to close wounds. Sutures are consumable, much like bandages, and are not a replacement for the Surgical Kit.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
             <Polish>%3Zestaw do Szycia%4 jest używany do zapobiegania otwieraniu się ran po ich zabandażowaniu. W zależności od ustawień może także je leczyć.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz %3Zaawansowane Zabiegi%4.&lt;br/&gt;%2Wybierz %3Użyj Zestawu do Szycia%4.</Polish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_ShortName">
