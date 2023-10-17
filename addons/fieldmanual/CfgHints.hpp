@@ -122,7 +122,7 @@ class CfgHints {
         };
         class ACE_FortifyTool: ACE_FieldManual_Base {
             logicalOrder = 13;
-            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_HuntIR_Monitor' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_FortifyTool' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_FortifyTool_ShortName);
             description = CSTRING(Items_FortifyTool_Description);
@@ -130,7 +130,7 @@ class CfgHints {
         };
         class ACE_HuntIR_Monitor: ACE_FieldManual_Base {
             logicalOrder = 14;
-            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_CableTie' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_HuntIR_monitor' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_HuntIR_Monitor_ShortName);
             description = CSTRING(Items_HuntIR_Monitor_Description);
