@@ -114,7 +114,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
 class GVAR(TriageToggle): RscButton {
     idc = -1;
     onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(toggleTriageSelect));
-    x = QUOTE(POS_X(13.33));
+    x = QUOTE(POS_X(13.83));
     y = QUOTE(POS_Y(15.5));
     w = QUOTE(POS_W(12.33));
     h = QUOTE(POS_H(1.1));
@@ -125,7 +125,7 @@ class GVAR(TriageToggle): RscButton {
 
 class GVAR(TriageSelect): RscControlsGroupNoScrollbars {
     idc = IDC_TRIAGE_SELECT;
-    x = QUOTE(POS_X(13.33));
+    x = QUOTE(POS_X(13.83));
     y = QUOTE(POS_Y(16.6));
     w = QUOTE(POS_W(12.33));
     h = QUOTE(POS_H(5.5));
