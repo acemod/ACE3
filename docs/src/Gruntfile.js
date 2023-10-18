@@ -3,12 +3,7 @@ module.exports = function (grunt) {
     const sass = require("node-sass");
 
     var footer = [
-        "js/vendor/modernizr/modernizr.custom.18747.js",
-        "js/vendor/picturefill/picturefill.js",
-        "js/vendor/jquery/jquery.min.js",
-        "js/vendor/foundation/foundation.js",
-        "js/vendor/foundation/foundation.topbar.js",
-        "js/vendor/foundation/foundation.clearing.js",
+        "js/vendor/jquery/jquery-3.7.1.min.js",
         "js/vendor/slick/slick.js",
         "js/vendor/jekyll-toc/jekyll-toc.js",
         "js/core/utils.js",
