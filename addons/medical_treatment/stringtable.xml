@@ -4792,9 +4792,10 @@
             <Hungarian>Orvosi felszerelés</Hungarian>
             <Russian>Медицинские предметы</Russian>
             <Czech>Zdravotnický materiál</Czech>
-            <Turkish>Tıbbi ürünler</Turkish>
+            <Turkish>Tıbbi Ürünler</Turkish>
             <German>Medizinisches Material</German>
             <Japanese>医療品</Japanese>
+            <Spanish>Objetos médicos</Spanish>
         </Key>
     </Package>
 </Project>
