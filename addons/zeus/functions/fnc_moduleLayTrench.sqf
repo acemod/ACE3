@@ -27,7 +27,7 @@ if !(["ace_trenches"] call EFUNC(common,isModLoaded)) exitWith {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 };
 
-if (_logic getVariable [QGVAR(ran), false]) exitWith { WARNING("double run?") };
+if (_logic getVariable [QGVAR(ran), false]) exitWith {};
 _logic setVariable [QGVAR(ran), true];
 
 private _drawCode = {
