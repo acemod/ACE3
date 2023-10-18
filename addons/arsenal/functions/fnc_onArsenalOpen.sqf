@@ -42,7 +42,7 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     };
 };
 
-if (isNil (profileNamespace getVariable QGVAR(saved_loadouts))) then {
+if (isNil {profileNamespace getVariable QGVAR(saved_loadouts)}) then {
     profileNamespace setVariable [QGVAR(saved_loadouts), []];
 };
 
