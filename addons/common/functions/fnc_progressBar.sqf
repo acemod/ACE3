@@ -1,4 +1,5 @@
 #include "..\script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: commy2, Glowbal, PabstMirror
  * Draw progress bar and execute given function if succesful.
@@ -31,7 +32,7 @@ closeDialog 0;
 if (_dialog) then {
     createDialog QGVAR(ProgressBar_Dialog);
 } else {
-    (findDisplay 46) createDisplay QGVAR(ProgressBar_Dialog);
+    QGVAR(progressBarDisplay) cutRsc [QGVAR(ProgressBar_Display), "PLAIN NOFADE", 0];
 };
 
 private _display = uiNamespace getVariable QGVAR(dlgProgress);
@@ -40,8 +41,16 @@ private _display = uiNamespace getVariable QGVAR(dlgProgress);
 _display call (uiNamespace getVariable "CBA_events_fnc_initDisplayCurator");
 
 // Hide cursor by using custom transparent cursor
-private _map = _display displayCtrl 101;
-_map ctrlMapCursor ["", QGVAR(blank)];
+if (_dialog) then {
+    private _map = _display displayCtrl 101;
+    _map ctrlMapCursor ["", QGVAR(blank)];
+} else { // Add key handler for ESC to cancel
+    [DIK_ESCAPE, [false, false, false], {
+        QGVAR(progressBarDisplay) cutText ["", "PLAIN NOFADE", 0];
+        [QGVAR(progressBarKeyHandler), "keydown"] call CBA_fnc_removeKeyHandler;
+        true
+    }, "keydown", QGVAR(progressBarKeyHandler)] call CBA_fnc_addKeyHandler;
+};
 
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
 
@@ -75,8 +84,12 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
                 if !([_player, objNull, _exceptions] call EFUNC(common,canInteractWith)) then {
                     _errorCode = 4;
                 } else {
-                    if (_elapsedTime >= _totalTime) then {
-                        _errorCode = 0;
+                    if (!_dialog && {dialog}) then {
+                        _errorCode = 5;
+                    } else {
+                        if (_elapsedTime >= _totalTime) then {
+                            _errorCode = 0;
+                        };
                     };
                 };
             };
@@ -91,7 +104,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
             if (_dialog) then {
                 closeDialog 0;
             } else {
-                (uiNamespace getVariable QGVAR(dlgProgress)) closeDisplay _errorCode;
+                QGVAR(progressBarDisplay) cutText ["", "PLAIN NOFADE", 0];
             };
         };
 
