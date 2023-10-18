@@ -33,7 +33,7 @@ if (isNil "_return") then {
 
     private _itemInfo = configFile >> "CfgWeapons" >> _item >> "ItemInfo";
     private _itemType = getNumber (_itemInfo >> "type");
-    private _passThroughEffect = [1, 0.7] select (_itemType == TYPE_VEST);
+    private _passThroughEffect = [1, 0.72] select (_itemType == TYPE_VEST);
 
     if (_itemType == TYPE_UNIFORM) then {
         private _unitCfg = configFile >> "CfgVehicles" >> getText (_itemInfo >> "uniformClass");
