@@ -25,7 +25,7 @@
             <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
             <Japanese>永続的な薬莢を有効にする (古い/弱いシステムに対する潜在的なパフォーマンスの影響)</Japanese>
             <Polish>Włącz pozostawanie łusek (MOŻLIWY wpływ na wydajność na starych/słabych komputerach)</Polish>
-            <Korean>영구적으로 남는 탄피를 활성화합니다(오래되고 취약한 시스템에 잠재적인 성능에 영향을 미칩니다.)</Korean>
+            <Korean>영구적으로 남는 탄피를 활성화합니다(오래되거나 저사양에 잠재적인 성능 영향을 줄 수 있음)</Korean>
             <Chinesesimp>开启生成持续存在的弹壳（可能对较老和性能不行的系统有影响）</Chinesesimp>
             <Russian>Включить постоянные гильзы (ПОТЕНЦИАЛЬНО может повлиять на производительность на старых/слабых системах)</Russian>
             <Spanish>Habilitar persistencia de casquillos (POTENCIAL impacto en el rendimiento de ordenadores antiguos o no potentes)</Spanish>

@@ -285,14 +285,17 @@
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfo">
             <English>Peek Medical Info</English>
             <Polish>Podgląd Informacji Medycznych</Polish>
+            <Korean>의료 정보 보기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
             <English>Medical Peek Duration</English>
             <Polish>Czas Trwania Podglądu Medycznego</Polish>
+            <Korean>의료 정보 보기 지속 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
             <English>How long the medical info peek remains open after releasing the key.</English>
             <Polish>Jak długo podgląd informacji medycznych pozostaje otwarty po zwolnieniu przycisku.</Polish>
+            <Korean>키를 놓은 후 의료 정보가 열린 상태로 유지되는 시간입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
@@ -540,10 +543,12 @@
         <Key ID="STR_ACE_Medical_GUI_ToggleToSelf">
             <English>Switch to self</English>
             <Polish>Zmień na siebie</Polish>
+            <Korean>자신으로 전환</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ToggleToOther">
             <English>Switch to target</English>
             <Polish>Zmień na pacjenta</Polish>
+            <Korean>대상으로 전환</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Head">
             <English>Head</English>
@@ -964,22 +969,27 @@
         <Key ID="STR_ACE_Medical_GUI_STATUS_NOBLEEDING">
             <English>No bleeding</English>
             <Polish>Brak krwawienia</Polish>
+            <Korean>출혈 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate1">
             <English>Slow bleeding</English>
             <Polish>Słabe krwawienie</Polish>
+            <Korean>느린 출혈</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
             <English>Moderate bleeding</English>
             <Polish>Umiarkowane krwawienie</Polish>
+            <Korean>중간 출혈</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
             <English>Severe bleeding</English>
             <Polish>Poważne krwawienie</Polish>
+            <Korean>심한 출혈</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
             <English>Massive bleeding</English>
             <Polish>Bardzo silne krwawienie</Polish>
+            <Korean>과다 출혈</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
@@ -1048,6 +1058,7 @@
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood0">
             <English>No blood loss</English>
             <Polish>Brak utraty krwi</Polish>
+            <Korean>피를 잃지 않음</Korean>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1281,18 +1292,22 @@
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
             <English>Peek Medical Info on Hit</English>
             <Polish>Podgląd Informacji Medycznych po Zranieniu</Polish>
+            <Korean>맞을 시 의료 정보 보기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
             <English>Temporarily show medical info when injured.</English>
             <Polish>Tymczasowe wyświetlanie informacji medycznych po zranieniu.</Polish>
+            <Korean>부상을 입었을 때 일시적으로 의료 정보를 표시합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
             <English>Medical Peek Duration on Hit</English>
             <Polish>Czas trwania podglądu informacji medycznych po zranieniu</Polish>
+            <Korean>맞을 시 의료 정보 보기 지속 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
             <English>How long the medical info peek remains open after being injured.</English>
             <Polish>Jak długo podgląd informacji medycznych pozostaje otwarty po otrzymaniu obrażeń.</Polish>
+            <Korean>부상을 입은 후에도 의료 정보가 열린 상태로 지속되는 시간입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
@@ -1313,10 +1328,12 @@
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_DisplayName">
             <English>Body Part Outline Color</English>
             <Polish>Kolor Konturu Części Ciała</Polish>
+            <Korean>신체부위 윤곽선 색상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_Description">
             <English>Color of outline around selected body part.</English>
             <Polish>Kolor konturu wokół wybranej części ciała.</Polish>
+            <Korean>선택한 신체부위 주위의 윤곽선 색상입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
             <English>Minor Trauma</English>
@@ -1353,31 +1370,39 @@
         <Key ID="STR_ACE_Medical_GUI_BodyLabelLeft">
             <English>L</English>
             <Polish>L</Polish>
+            <Korean>좌</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BodyLabelRight">
             <English>R</English>
             <Polish>P</Polish>
+            <Korean>우</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Medic">
             <English>in your inventory</English>
             <Polish>w twoim ekwipunku</Polish>
+            <Korean>개: 당신의 소지품</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Patient">
             <English>in patient's inventory</English>
             <Polish>w ekwipunku pacjenta</Polish>
+            <Korean>개: 환자의 소지품</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
             <English>in vehicle's inventory</English>
             <Polish>w ekwipunku pojazdu</Polish>
+            <Korean>개: 차량의 소지품</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
             <English>No effect until tourniquet removed</English>
+            <Korean>지혈대를 제거할 때까지 효과 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
             <English>Show Tourniquet Warning</English>
+            <Korean>지혈 경고 표시</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
             <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
+            <Korean>지혈대가 의료 조치를 방해할 경우 경고 툴팁을 표시합니다.</Korean>
         </Key>
     </Package>
 </Project>

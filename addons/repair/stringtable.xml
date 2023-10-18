@@ -1320,7 +1320,7 @@
             <Italian>Qual'è il danno massimo che può essere riparato con il Toolkit?</Italian>
             <French>Définit la quantité maximale de dégâts pouvant être réparés avec une trousse à outils.</French>
             <Japanese>ツールキットで修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
-            <Korean>어느정도의 피해까지 툴킷으로 수리가 가능합니까?</Korean>
+            <Korean>어느정도의 피해까지 도구모음으로 수리가 가능합니까?</Korean>
             <Chinesesimp>工具包可以修复的最大损坏值？</Chinesesimp>
             <Chinese>工具包可以修復的最大損壞值?</Chinese>
         </Key>
@@ -1365,7 +1365,7 @@
             <Italian>Rimuovi Toolkit dopo l'uso</Italian>
             <French>Retirer la trousse à outils après usage</French>
             <Japanese>ツールキットを使うと削除</Japanese>
-            <Korean>툴킷 사용후 제거</Korean>
+            <Korean>도구모음 사용 후 제거</Korean>
             <Chinesesimp>使用后删除工具包</Chinesesimp>
             <Chinese>使用後刪除工具包</Chinese>
         </Key>
@@ -1380,7 +1380,7 @@
             <Italian>Il Toolkit dev'essere rimosso dopo l'uso?</Italian>
             <French>Définit si la trousse à outils doit être retirée après usage.</French>
             <Japanese>ツールキットを使うと削除しますか?</Japanese>
-            <Korean>툴킷을 사용하면 제거를 합니까?</Korean>
+            <Korean>도구모음을 사용하면 제거를 합니까?</Korean>
             <Chinesesimp>要在使用后删除工具包吗？</Chinesesimp>
             <Chinese>要在使用後刪除工具包嗎?</Chinese>
         </Key>

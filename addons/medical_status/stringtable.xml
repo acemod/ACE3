@@ -115,7 +115,7 @@
             <Polish>Kontroluje, jak szybko płyn wypływa z worków IV. Zmiana objętości worka IV jest obliczana jako:\n przedział czasowy * zmiana iv na sekundę (4,1667 mL/s) * natężenie przepływu (ten współczynnik).</Polish>
             <Spanish>Controla la rapidez con que fluye el líquido de las bolsas intravenosas. El cambio de volumen de la bolsa IV se calcula como: \n intervalo (s) de tiempo * cambio iv por segundo (4.1667 mL/s) * velocidad de flujo (este coeficiente).</Spanish>
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
-            <Korean>수액용기에서 얼마나 빨리 들어가는 지를 정합니다. 초당 4.16ml * 계수를 적용받습니다.</Korean>
+            <Korean>수액용기에서 액체가 얼마나 빠르게 흘러들어가는지를 제어합니다. 수액용기 부피 변화는 다음과 같이 계산됩니다:\n시간 간격 (초) x 초 당 수액 변화량(4.1667mL/s) x 흘러들어가는 양 (해당 계수).</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
             <English>Weapon Drop Chance</English>

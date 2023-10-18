@@ -21,50 +21,62 @@
         <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_DisplayName">
             <English>Hunger</English>
             <Polish>Głód</Polish>
+            <Korean>허기</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
             <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating food.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up food.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
             <Polish>%3Głód%4 zwiększa się liniowo wraz z prędkością ruchu. Odnawiany przez spożywanie jedzenia.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podnieś jedzenie.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Surwiwal%4.&lt;br/&gt;%2Wybierz pokarm do zjedzenia</Polish>
+            <Korean>%3허기%4는 병사의 이동속도에 따라 선형적으로 증가합니다. 음식을 섭취하여 회복하십시오.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2음식을 집으십시오.&lt;br/&gt;%2[%3%12%4]를 사용하여 %3생존%4을 선택하십시오.&lt;br/&gt;%2섭취할 아이템을 선택하십시오.</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
             <English>Thirst</English>
             <Polish>Pragnienie</Polish>
+            <Korean>갈증</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
             <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking liquids.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
             <Polish>%3Pragnienie%4 zwiększa się liniowo wraz z prędkością ruchu. Odnawiane przez spożywanie napojów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podnieś napój.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Surwiwal%4.&lt;br/&gt;%2Wybierz napój do wypicia.</Polish>
+            <Korean>%3허기%4은 병사의 이동속도에 따라 선형적으로 증가합니다. 음료를 섭취하여 회복하십시오.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2음료를 집으십시오.&lt;br/&gt;%2[%3%12%4]를 사용하여 %3생존%4을 선택하십시오.&lt;br/&gt;%2섭취할 아이템을 선택하십시오.</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
             <English>Medical Treatment</English>
             <Polish>Opieka Medyczna</Polish>
+            <Korean>의료 치료법</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_ShortName">
             <English>Decrease Heart Rate</English>
             <Polish>Obniża Tętno</Polish>
+            <Korean>심박수를 낮춥니다</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
             <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
             <Polish>%3Adenozyna%4 jest używana do obniżenia tętna.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz kończynę.&lt;br/&gt;%2Wstrzyknij %3Adenozynę%4.</Polish>
+            <Korean>%3아데노신%4은 심박수를 줄이기 위해 사용됩니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법%4&lt;br/&gt;%2[%3%13%4] 또는 [%3%14%4]를 사용하고 부속지를 선택하십시오.&lt;br/&gt;%2%3아데노신%4을 주사하십시오.</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_DisplayName">
             <English>Bandages</English>
             <Polish>Bandaże</Polish>
+            <Korean>붕대</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_ShortName">
             <English>Close Wounds</English>
             <Polish>Zamykają Rany</Polish>
+            <Korean>상처를 막습니다</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
             <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%2%3Field Dressing:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; In All Categories&lt;br/&gt;%2%3Packing Bandage:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Elastic Bandage:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Higher&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#E60000'&gt;Shorter&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Lower&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lower&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopening Delay&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
             <Polish>%3Bandaże%4 zatrzymają krwawienie i zamykają rany. W zależności od twoich ustawień, bandaże mogą się otwierać, jeżeli rany nie są zaszyte. &lt;br/&gt;&lt;br/&gt;%2%3Bandaż Jałowy:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Przeciętne&lt;/t&gt; We wszystkich kategoriach&lt;br/&gt;%2%3Bandaż Uciskowy: %4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Przeciętne&lt;/t&gt; Leczenie&lt;br/&gt;%11&lt;t color='#E60000'&gt;Wyższa&lt;/t&gt; Szansa Otwarcia&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Dłuższe&lt;/t&gt; Opóźnienie Otwarcia&lt;br/&gt;%2%3Bandaż Elastyczny: %4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lepsze&lt;/t&gt; Leczenie&lt;br/&gt;%11&lt;t color='#E60000'&gt;Wyższa&lt;/t&gt; Szansa Otwarcia&lt;br/&gt;%11&lt;t color='#E60000'&gt;Krótsze&lt;/t&gt; Opóźnienie Otwarcia&lt;br/&gt;%2%3Quickclot: %4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Gorsze&lt;/t&gt; Leczenie&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Niższa&lt;/t&gt; Szansa Otwarcia&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Dłuższe&lt;/t&gt; Opóźnienie Otwarcia&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz zranioną część ciała. &lt;br/&gt;%2Zabandażuj ranę wybierając typ %3Bandażu%4.</Polish>
+            <Korean>%3붕대%4는 출혈을 멈추고 상처를 치료합니다.설정에 따라 수술을 하지 않을 경우 붕대가 다시 풀릴 수 있습니다.&lt;br/&gt;&lt;br/&gt;%2%3붕대(기본):%4&lt;br/&gt;모든 카테고리에 대해 %11&lt;tcolor='#D9D900'&gt;평균&lt;/t&gt;적임&lt;br/&gt;%2%3붕대(거즈):%4&lt;br/&gt;&lt;br/&gt;%11&lt;t color='#D9D900'&gt;평균&lt;/t&gt;적인 치료 효과&lt;br/&gt;%11&lt;t color='#E60000'&gt;높은&lt;/t&gt; 풀림 확률&lt;br/&gt;%11&lt;t color='#00CC00'&gt;긴&lt;/t&gt; 풀림 딜레이&lt;br/&gt;%2%3붕대(압박):%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;높은&lt;/t&gt; 치료 효과&lt;br/&gt;%11&lt;t color='#E60000'&gt;높은&lt;/t&gt; 풀림 확률&lt;br/&gt;%11&lt;t color='#E60000'&gt;짧은&lt;/t&gt; 풀림 딜레이&lt;br/&gt;%2%3붕대(퀵 클롯):%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;낮은&lt;/t&gt; 치료 효과&lt;br/&gt;%11&lt;t color='#00CC00'&gt;낮은&lt;/t&gt; 풀림 확률&lt;br/&gt;%11&lt;t color='#00CC00'&gt;긴&lt;/t&gt; 풀림 딜레이&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%13%4] 또는 [%3%14%4]를 사용하고 부상당한 신체부위를 선택하십시오.&lt;br/&gt;%2원하는 종류의 %3붕대%4를 선택하여 신체부위에 붕대를 감으십시오.</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
             <English>IV Fluids</English>
             <Polish>Płyny IV</Polish>
+            <Korean>IV 수액</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_ShortName">
             <English>Restore Blood Volume</English>
             <Polish>Przywracają Krew</Polish>
+            <Korean>혈액량을 회복합니다</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_Description">
             <English>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Restore blood volume by selecting desired %3IV Fluid%4 type.</English>

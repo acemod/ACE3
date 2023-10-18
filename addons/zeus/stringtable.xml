@@ -1936,10 +1936,12 @@
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
             <Polish>Wykop Okop</Polish>
+            <Korean>참호라인 깔기</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
             <Polish>+SHIFT aby wymusić (Można wykopać tylko N/S lub E/W)</Polish>
+            <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
         </Key>
     </Package>
 </Project>

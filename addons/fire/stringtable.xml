@@ -43,7 +43,7 @@
             <Polish>Zezwól jednostkom na zapalenie się</Polish>
             <Spanish>Permitir que las unidades se incendien</Spanish>
             <Chinesesimp>允许单位着火</Chinesesimp>
-            <Korean>유닛이 불에 붙게합니다</Korean>
+            <Korean>유닛에 불이 붙게합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_FlareEnable">
             <English>Enable fire-flare at night</English>
