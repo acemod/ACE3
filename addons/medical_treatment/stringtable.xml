@@ -4784,5 +4784,18 @@
             <German>Bestimmt, wie wirksam Bandagen beim Verschließen von Wunden sind.</German>
             <Korean>붕대가 상처를 치료하는 데 얼마나 효과적으로 지속되는지 결정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_medicalTab">
+            <English>Medical Items</English>
+            <Polish>Przedmioty Medyczne</Polish>
+            <French>Matériel médical</French>
+            <Korean>의료 물품</Korean>
+            <Hungarian>Orvosi felszerelés</Hungarian>
+            <Russian>Медицинские предметы</Russian>
+            <Czech>Zdravotnický materiál</Czech>
+            <Turkish>Tıbbi Ürünler</Turkish>
+            <German>Medizinisches Material</German>
+            <Japanese>医療品</Japanese>
+            <Spanish>Objetos médicos</Spanish>
+        </Key>
     </Package>
 </Project>
