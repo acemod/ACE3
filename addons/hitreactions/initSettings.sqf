@@ -9,8 +9,8 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(weaponDropChance), "SLIDER",
-    LSTRING(weaponDropChance_displayName),
+    QGVAR(weaponDropChanceGunHit), "SLIDER",
+    LSTRING(weaponDropChanceGunHit_displayName),
     _category,
     [0, 1, 0.5, 1],
     1
