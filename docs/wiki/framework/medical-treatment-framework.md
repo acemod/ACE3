@@ -56,3 +56,17 @@ class ACE_Medical_Treatment_Actions {
     };
 };
 ```
+
+## 2. Mission Variables
+
+### 2.1 Grave Digging Object Configuration
+
+The object created when digging a grave can be modified by setting the `ace_medical_treatment_graveClassname` variable.
+```sqf
+ace_medical_treatment_graveClassname = "Land_Grave_11_F"; // classname, e.g. unmarked gravel (no headstone OR check actions)
+```
+
+The object's rotation can also be modified, if necessary.
+```sqf
+ace_medical_treatment_graveRotation = 0; // rotation angle (will depend on model classname)
+```

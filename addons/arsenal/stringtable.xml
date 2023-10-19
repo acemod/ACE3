@@ -1558,15 +1558,17 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_sortDescending">
             <English>Descending</English>
-            <Japanese>下降</Japanese>
+            <Japanese>降順</Japanese>
             <Polish>Malejąco</Polish>
             <German>Absteigend</German>
+            <Korean>내림차순</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortAscending">
             <English>Ascending</English>
             <Japanese>昇順</Japanese>
             <Polish>Rosnąco</Polish>
             <German>Aufsteigend</German>
+            <Korean>오름차순</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
@@ -1589,36 +1591,42 @@
             <Japanese>弾薬数</Japanese>
             <Polish>Ilość amunicji</Polish>
             <German>Munitionszahl</German>
+            <Korean>장탄 수</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
             <Japanese>お気に入りをデフォルト</Japanese>
             <Polish>Domyślnie do Ulubionych</Polish>
             <German>Standardmäßig auf Favoriten eingestellt</German>
+            <Korean>즐겨찾기 기본값</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
             <Japanese>ACE Arsenalがデフォルトで全てのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
             <Polish>Kontroluje, czy ACE Arsenal domyślnie wyświetla wszystkie przedmioty, czy tylko ulubione.</Polish>
             <German>Steuert, ob das ACE Arsenal standardmäßig alle Gegenstände oder nur Favoriten anzeigt.</German>
+            <Korean>ACE 아스널이 기본적으로 모든 아이템 또는 즐겨찾기를 표시할 지 여부를 조정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
             <Japanese>お気に入りの色</Japanese>
             <Polish>Kolor Ulubionych</Polish>
             <German>Favoritenfarbe</German>
+            <Korean>즐겨찾기 색상</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
             <Japanese>お気に入りアイテムのハイライト色。</Japanese>
             <Polish>Kolor podświetlenia ulubionych elementów.</Polish>
             <German>Hervorhebungsfarbe für Lieblingsgegenstände.</German>
+            <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
             <Japanese>Shiftを押しながらダブルクリックするとアイテムを追加・削除できます。</Japanese>
             <Polish>Przełączanie między wyświetlaniem wszystkich przedmiotów lub tylko ulubionych. \nKliknij dwukrotnie, przytrzymując Shift, aby dodać lub usunąć przedmiot.</Polish>
             <German>Wechseln Sie zwischen der Anzeige aller Elemente oder Ihrer Favoriten.\nDoppelklicken Sie bei gedrückter Umschalttaste, um ein Element hinzuzufügen oder zu entfernen.</German>
+            <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
         </Key>
     </Package>
 </Project>

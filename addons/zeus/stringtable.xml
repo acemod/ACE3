@@ -1933,5 +1933,13 @@
             <Russian>Поджечь юнита</Russian>
             <Spanish>Quemar a unidad</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
+            <English>Lay Trenchline</English>
+            <Polish>Wykop Okop</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
+            <English>+SHIFT to force (Can only lay N/S or E/W)</English>
+            <Polish>+SHIFT aby wymusić (Można wykopać tylko N/S lub E/W)</Polish>
+        </Key>
     </Package>
 </Project>

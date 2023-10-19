@@ -28,9 +28,10 @@ TRACE_2("addRepairActions", _vehicle,_type);
 // do nothing if the class is already initialized
 private _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (_type in _initializedClasses) exitWith {};
+if (_type == "") exitWith {};
 
-// get hitPoints to ignore
-private _hitPointsToIgnore = [_vehicle] call FUNC(getHitPointsToIgnore);
+// get selections to ignore
+private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
 
 // get all hitpoints and selections
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
@@ -41,7 +42,6 @@ private _hitPointsToIgnore = [_vehicle] call FUNC(getHitPointsToIgnore);
 private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
 private _hitPointsAddedAmount = [];
-private _processedSelections = [];
 private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 
 private _vehCfg = configOf _vehicle;
@@ -53,10 +53,14 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 {
     private _selection = _x;
     private _hitpoint = toLower (_hitPoints select _forEachIndex);
-    if (_selection in _wheelHitSelections) then {
-        // Wheels should always be unique
-        if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
 
+    // Skip ignored selections
+    if (_forEachIndex in _selectionsToIgnore) then {
+        TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
+        continue
+    };
+
+    if (_selection in _wheelHitSelections) then {
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints', 'AveragePoint'];", _selection];
 
         TRACE_3("Adding Wheel Actions",_hitpoint,_forEachIndex,_selection);
@@ -90,14 +94,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "PatchWheel"] call DFUNC(repair)};
         private _action = [_name, _text, _patchIcon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [_root], _action] call EFUNC(interact_menu,addActionToClass);
-
-        _processedSelections pushBack _selection;
     } else {
-        // Skip ignored hitpoints
-        if (_hitpoint in _hitPointsToIgnore) exitWith {
-            TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
-        };
-
         // Some hitpoints do not have a selection but do have an armorComponent value (seems to mainly be RHS)
         // Ref https://community.bistudio.com/wiki/Arma_3_Damage_Enhancement
         // this code won't support identically named hitpoints (e.g. commander turret: Duplicate HitPoint name 'HitTurret')
@@ -156,8 +153,6 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         _hitPointsAddedAmount = _trackArray select 2;
 
         if (_hitpoint in TRACK_HITPOINTS) then {
-            // Tracks should always be unique
-            if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
             _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             TRACE_4("Adding RepairTrack",_hitpoint,_forEachIndex,_selection,_text);
             private _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(canRepair)};
@@ -176,8 +171,6 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
                 [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
             };
         };
-
-        _processedSelections pushBack _selection;
     };
 } forEach _hitSelections;
 

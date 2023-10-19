@@ -1329,7 +1329,7 @@ See the make.cfg file for additional build options.
                             if "preprocess = false" in tomlFile: 
                                 print_error("'preprocess = false' not supported")
                                 raise
-                            skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
+                            skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile or "[rapify]\nenabled = false" in tomlFile
 
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")

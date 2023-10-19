@@ -42,6 +42,10 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     };
 };
 
+if (isNil {profileNamespace getVariable QGVAR(saved_loadouts)}) then {
+    profileNamespace setVariable [QGVAR(saved_loadouts), []];
+};
+
 if (isNil QGVAR(virtualItems)) then {
     private _virtualItems = [
         [IDX_VIRT_WEAPONS, createHashMapFromArray [[IDX_VIRT_PRIMARY_WEAPONS, createHashMap], [IDX_VIRT_SECONDARY_WEAPONS, createHashMap], [IDX_VIRT_HANDGUN_WEAPONS, createHashMap]]],

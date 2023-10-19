@@ -654,7 +654,7 @@ class GVAR(display) {
             w = QUOTE(6 * GRID_W);
             h = QUOTE(6 * GRID_H);
         };
-        class rightSearchbar: leftSearchBar {
+        class rightSearchbar: leftSearchbar {
             idc = IDC_rightSearchbar;
             onSetFocus = QUOTE(GVAR(rightSearchbarFocus) = true);
             onKillFocus = QUOTE(GVAR(rightSearchbarFocus) = false);
@@ -693,7 +693,7 @@ class GVAR(display) {
                     w = QUOTE(9 * GRID_W);
                     h = QUOTE(9 * GRID_H);
                 };
-                class iconBackgroundHandgun: IconBackgroundPrimaryWeapon {
+                class iconBackgroundHandgun: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundHandgun;
                     y = QUOTE(10 * GRID_H);
                 };
@@ -703,7 +703,7 @@ class GVAR(display) {
                     tooltip = "$STR_A3_RscDisplayArsenal_tab_Handgun";
                    y = QUOTE(10 * GRID_H);
                 };
-                class iconBackgroundSecondaryWeapon: IconBackgroundPrimaryWeapon {
+                class iconBackgroundSecondaryWeapon: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundSecondaryWeapon;
                     y = QUOTE(20 * GRID_H);
                 };
@@ -713,7 +713,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\SecondaryWeapon_ca.paa";
                     y = QUOTE(20 * GRID_H);
                 };
-                class iconBackgroundHeadgear: IconBackgroundPrimaryWeapon {
+                class iconBackgroundHeadgear: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundHeadgear;
                     y = QUOTE(30 * GRID_H);
                 };
@@ -723,7 +723,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Headgear_ca.paa";
                     y = QUOTE(30 * GRID_H);
                 };
-                class iconBackgroundUniform: IconBackgroundPrimaryWeapon {
+                class iconBackgroundUniform: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundUniform;
                     y = QUOTE(40 * GRID_H);
                 };
@@ -733,7 +733,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Uniform_ca.paa";
                     y = QUOTE(40 * GRID_H);
                 };
-                class iconBackgroundVest: IconBackgroundPrimaryWeapon {
+                class iconBackgroundVest: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundVest;
                     y = QUOTE(50 * GRID_H);
                 };
@@ -743,7 +743,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Vest_ca.paa";
                     y = QUOTE(50 * GRID_H);
                 };
-                class iconBackgroundBackpack: IconBackgroundPrimaryWeapon {
+                class iconBackgroundBackpack: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundBackpack;
                     y = QUOTE(60 * GRID_H);
                 };
@@ -753,7 +753,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Backpack_ca.paa";
                     y = QUOTE(60 * GRID_H);
                 };
-                class iconBackgroundGoggles: IconBackgroundPrimaryWeapon {
+                class iconBackgroundGoggles: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundGoggles;
                     y = QUOTE(70 * GRID_H);
                 };
@@ -763,7 +763,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Goggles_ca.paa";
                     y = QUOTE(70 * GRID_H);
                 };
-                class iconBackgroundNVG: IconBackgroundPrimaryWeapon {
+                class iconBackgroundNVG: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundNVG;
                     y = QUOTE(80 * GRID_H);
                 };
@@ -773,7 +773,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\NVGs_ca.paa";
                     y = QUOTE(80 * GRID_H);
                 };
-                class iconBackgroundBinoculars: IconBackgroundPrimaryWeapon {
+                class iconBackgroundBinoculars: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundBinoculars;
                     y = QUOTE(90 * GRID_H);
                 };
@@ -783,7 +783,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Binoculars_ca.paa";
                     y = QUOTE(90 * GRID_H);
                 };
-                class iconBackgroundMap: IconBackgroundPrimaryWeapon {
+                class iconBackgroundMap: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundMap;
                     y = QUOTE(100 * GRID_H);
                 };
@@ -793,7 +793,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Map_ca.paa";
                     y = QUOTE(100 * GRID_H);
                 };
-                class iconBackgroundGPS: IconBackgroundPrimaryWeapon {
+                class iconBackgroundGPS: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundGPS;
                    y = QUOTE(110 * GRID_H);
                 };
@@ -803,7 +803,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\GPS_ca.paa";
                     y = QUOTE(110 * GRID_H);
                 };
-                class iconBackgroundRadio: IconBackgroundPrimaryWeapon {
+                class iconBackgroundRadio: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundRadio;
                     y = QUOTE(120 * GRID_H);
                 };
@@ -813,7 +813,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Radio_ca.paa";
                     y = QUOTE(120 * GRID_H);
                 };
-                class iconBackgroundCompass: IconBackgroundPrimaryWeapon {
+                class iconBackgroundCompass: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundCompass;
                     y = QUOTE(130 * GRID_H);
                 };
@@ -823,7 +823,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Compass_ca.paa";
                     y = QUOTE(130 * GRID_H);
                 };
-                class iconBackgroundWatch: IconBackgroundPrimaryWeapon {
+                class iconBackgroundWatch: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundWatch;
                     y = QUOTE(140 * GRID_H);
                 };
@@ -833,7 +833,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Watch_ca.paa";
                     y = QUOTE(140 * GRID_H);
                 };
-                class iconBackgroundFace: IconBackgroundPrimaryWeapon {
+                class iconBackgroundFace: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundFace;
                     y = QUOTE(150 * GRID_H);
                 };
@@ -843,7 +843,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Face_ca.paa";
                     y = QUOTE(150 * GRID_H);
                 };
-                class iconBackgroundVoice: IconBackgroundPrimaryWeapon {
+                class iconBackgroundVoice: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundVoice;
                     y = QUOTE(160 * GRID_H);
                 };
@@ -853,7 +853,7 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Voice_ca.paa";
                     y = QUOTE(160 * GRID_H);
                 };
-                class iconBackgroundInsigna: IconBackgroundPrimaryWeapon {
+                class iconBackgroundInsigna: iconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundInsigna;
                     y = QUOTE(170 * GRID_H);
                 };
@@ -1041,7 +1041,7 @@ class GVAR(loadoutsDisplay) {
                     h = QUOTE(5 * GRID_H);
                     sizeEx = QUOTE(5 * GRID_H);
                 };
-                class contentPanel: RscListnBox {
+                class contentPanel: RscListNBox {
                     idc = IDC_contentPanel;
                     columns[] = {0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90};
                     drawSideArrows = 0;
