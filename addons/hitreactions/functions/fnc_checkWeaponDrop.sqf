@@ -26,7 +26,7 @@ private _weapon = currentWeapon _unit;
 
 if (_weapon in GVAR(undroppableGuns)) exitWith {};
 
-private _thrownGun = _unit call ace_common_fnc_throwWeapon;
+private _thrownGun = _unit call EFUNC(common,throwWeapon);
 [
     {
         params ["_thrownGun", "_weapon", "_unit"];
