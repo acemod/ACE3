@@ -17,8 +17,8 @@
             <Turkish>Düşmeyi tetikleyen min hasar</Turkish>
             <Spanish>Daño mínimo para provocar la caída</Spanish>
         </Key>
-        <Key ID="STR_ACE_HitReactions_weaponDropEnabled_displayName">
-            <English>Enable Weapon Drop on Gun Hit</English>
+        <Key ID="STR_ACE_HitReactions_weaponDropChance_displayName">
+            <English>Chance of Weapon Drop on Gun Hit. 0 to disable.</English>
         </Key>
     </Package>
 </Project>
