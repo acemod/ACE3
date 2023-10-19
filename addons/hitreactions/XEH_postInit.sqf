@@ -2,7 +2,7 @@
 
 ["ace_firedNonPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
-    private _willDrop = (random 1) > GVAR(weaponDropChance);
+    private _willDrop = (random 1) > GVAR(weaponDropChanceGunHit);
     if (!_willDrop) exitWith {};
     _projectile addEventHandler ["HitPart", { 
         params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
@@ -12,7 +12,7 @@
 
 ["ace_firedPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
-    private _willDrop = (random 1) > GVAR(weaponDropChance);
+    private _willDrop = (random 1) > GVAR(weaponDropChanceGunHit);
     if (!_willDrop) exitWith {};
     _projectile addEventHandler ["HitPart", { 
         params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
