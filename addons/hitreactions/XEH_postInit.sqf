@@ -2,7 +2,8 @@
 
 ["ace_firedNonPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
-    if (!GVAR(weaponDropEnabled)) exitWith {};
+    private _willDrop = (random 1) > GVAR(weaponDropChance);
+    if (!_willDrop || !GVAR(weaponDropEnabled)) exitWith {};
     _projectile addEventHandler ["HitPart", { 
         params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
         [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
@@ -11,7 +12,8 @@
 
 ["ace_firedPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
-    if (!GVAR(weaponDropEnabled)) exitWith {};
+    private _willDrop = (random 1) > GVAR(weaponDropChance);
+    if (!_willDrop || !GVAR(weaponDropEnabled)) exitWith {};
     _projectile addEventHandler ["HitPart", { 
         params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
         [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
