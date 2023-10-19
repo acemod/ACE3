@@ -21,8 +21,8 @@ params ["_surfaceType", "_components", "_position"];
 
 if (!(_surfaceType isEqualTo "" && _components isEqualTo [])) exitWith {}; // Could be potential for edge cases here however couldn't find any from testing.
 
-private _unit = nearestObject [_pos, "CAManBase"];
 private _weapon = currentWeapon _unit;
+private _unit = nearestObject [_pos, "CAManBase"];
 private _thrownGun = _unit call ace_common_fnc_throwWeapon;
 [
     {
