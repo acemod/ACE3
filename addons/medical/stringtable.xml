@@ -18,6 +18,9 @@
             <Turkish>ACE Medikal</Turkish>
             <Japanese>ACE 医療</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Interface_Category">
+            <English>ACE Medical Interface</English>
+        </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
             <German>Wahrscheinlichkeit um aufzuwachen</German>
