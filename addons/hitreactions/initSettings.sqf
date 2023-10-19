@@ -7,3 +7,10 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
     [-1, 1, 0.1, 1],
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(weaponDropEnabled, "CHECKBOX",
+    LSTRING(weaponDropEnabled_displayName),
+    _category,
+    true
+] call CBA_fnc_addSetting;
