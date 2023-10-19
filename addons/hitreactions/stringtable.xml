@@ -20,5 +20,8 @@
         <Key ID="STR_ACE_HitReactions_weaponDropChanceGunHit_displayName">
             <English>Chance of Weapon Drop on Gun Hit. 0 to disable.</English>
         </Key>
+        <Key ID="STR_ACE_HitReactions_weaponDropChanceArmHit_displayName">
+            <English>Chance of Weapon Drop on Arm Hit. 0 to disable.</English>
+        </Key>
     </Package>
 </Project>
