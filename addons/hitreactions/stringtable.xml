@@ -18,10 +18,10 @@
             <Spanish>Daño mínimo para provocar la caída</Spanish>
         </Key>
         <Key ID="STR_ACE_HitReactions_weaponDropChanceGunHit_displayName">
-            <English>Chance of Weapon Drop on Gun Hit. 0 to disable.</English>
+            <English>Weapon Drop Chance (Gun Hit)</English>
         </Key>
         <Key ID="STR_ACE_HitReactions_weaponDropChanceArmHit_displayName">
-            <English>Chance of Weapon Drop on Arm Hit. 0 to disable.</English>
+            <English>Weapon Drop Chance (Arm Hit)</English>
         </Key>
     </Package>
 </Project>

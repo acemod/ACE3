@@ -12,7 +12,7 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
     QGVAR(weaponDropChanceGunHit), "SLIDER",
     LSTRING(weaponDropChanceGunHit_displayName),
     _category,
-    [0, 1, 0.5, 1],
+    [0, 1, 0.5, 1, true],
     1
 ] call CBA_fnc_addSetting;
 
@@ -20,6 +20,6 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
     QGVAR(weaponDropChanceArmHit), "SLIDER",
     LSTRING(weaponDropChanceArmHit_displayName),
     _category,
-    [0, 1, 0.5, 1],
+    [0, 1, 0.5, 1, true],
     1
 ] call CBA_fnc_addSetting;
