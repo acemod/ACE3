@@ -9,13 +9,6 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(weaponDropEnabled), "CHECKBOX",
-    LSTRING(weaponDropEnabled_displayName),
-    _category,
-    true
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(weaponDropChance), "SLIDER",
     LSTRING(weaponDropChance_displayName),
     _category,
