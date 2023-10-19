@@ -21,7 +21,7 @@ params ["_surfaceType", "_components", "_position"];
 
 if (!(_surfaceType isEqualTo "" && _components findAny GVAR(armComponents) isEqualTo -1)) exitWith {}; // Could be potential for edge cases here however couldn't find any from testing.
 
-private _unit = nearestObject [_pos, "CAManBase"];
+private _unit = nearestObject [_position, "CAManBase"];
 private _weapon = currentWeapon _unit;
 
 if (_weapon in GVAR(undroppableGuns)) exitWith {};
