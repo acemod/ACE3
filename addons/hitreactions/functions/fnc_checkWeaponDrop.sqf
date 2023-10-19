@@ -27,6 +27,7 @@ private _weapon = currentWeapon _unit;
 if (_weapon in GVAR(undroppableGuns)) exitWith {};
 
 private _thrownGun = _unit call EFUNC(common,throwWeapon);
+if (hasInterface _unit) exitWith {}; // Don't make the player pick its own gun up.
 [
     {
         params ["_thrownGun", "_weapon", "_unit"];

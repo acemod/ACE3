@@ -15,8 +15,8 @@ GVAR(armComponents) = [
 ["ace_firedNonPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
     private _roll = random 1;
-    private _willDropGun = _roll > GVAR(weaponDropChanceGunHit);
-    private _willDropArm = _roll > GVAR(weaponDropChanceArmHit);
+    private _willDropGun = _roll < GVAR(weaponDropChanceGunHit);
+    private _willDropArm = _roll < GVAR(weaponDropChanceArmHit);
     if (!(_willDropGun || _willDropArm)) exitWith {};
     _projectile addEventHandler ["HitPart", {
         params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
@@ -27,8 +27,8 @@ GVAR(armComponents) = [
 ["ace_firedPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
     private _roll = random 1;
-    private _willDropGun = _roll > GVAR(weaponDropChanceGunHit);
-    private _willDropArm = _roll > GVAR(weaponDropChanceArmHit);
+    private _willDropGun = _roll < GVAR(weaponDropChanceGunHit);
+    private _willDropArm = _roll < GVAR(weaponDropChanceArmHit);
     if (!(_willDropGun && _willDropArm)) exitWith {};
     _projectile addEventHandler ["HitPart", { 
         params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
