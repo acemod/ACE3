@@ -59,6 +59,8 @@ switch (true) do {
                 } else {
                     GVAR(selectedCategory) = _temp_category;
                 };
+            } else {
+                _return = false;
             };
         };
     } forEach _keyCategoryPairs;
