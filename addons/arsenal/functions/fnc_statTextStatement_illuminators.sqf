@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Text statement for the illuminator//pointer slot.
+ * Text statement for the pointer slot capabilites.
  *
  * Arguments:
  * 0: Not used
@@ -25,26 +25,18 @@ if (_allItems isEqualTo []) then { _allItems = [configName _config] };
 
 {
     private _xCfg = configFile >> "CfgWeapons" >> _x >> "ItemInfo";
-    // DBAL can do both at same time, but lets just only list laser if it has it
-    private _text = switch (true) do { 
-        case (isClass (_xCfg >> "Pointer")): {
-            if (([_xCfg >> "Pointer" >> "isIR", "NUMBER", 1] call CBA_fnc_getConfigEntry) == 1) then {
-                "L-IR"
-            } else {
-                // private _color = vectorNormalized getArray (_xCfg >> "Pointer" >> "dotColor");
-                "L-C"
-            };
-        };
-        case ((getNumber (_xCfg >> "Flashlight" >> "intensity")) > 0): {
-            if (([_xCfg >> "Flashlight" >> "irLight", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1) then {
-                "F-IR"
-            } else {
-                "F-C"
-            };
-        };
-        default {"?"};
+    private _laser = (getText (_xCfg >> "Pointer" >> "irLaserPos")) != "";
+    private _illum = (getNumber (_xCfg >> "Flashlight" >> "intensity")) > 0;
+    private _isIR = (_laser && {([_xCfg >> "Pointer" >> "isIR", "NUMBER", 1] call CBA_fnc_getConfigEntry) == 1})
+                  || {_illum && {([_xCfg >> "Flashlight" >> "irLight", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1}};
+
+    private _text = switch (true) do { // shorthand roughly based on PEQ-15
+        case (_laser && _illum): { if (_isIR) then { "IR-D" } else { "VIS-D" } };
+        case (_laser): { if (_isIR) then { "IR-A" } else { "VIS-A" } }; // AIM
+        case (_illum): { if (_isIR) then { "IR-I" } else { "VIS-I" } }; // ILLUMIATION
+        default { "_" }; // there are some purely cosmetic attachements
     };
-    _allModes pushBack _text;
+    _allModes pushBackUnique _text;
 } forEach _allItems;
 
-_allModes joinString ","
+_allModes joinString ", "
