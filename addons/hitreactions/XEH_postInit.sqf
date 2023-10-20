@@ -12,8 +12,11 @@ GVAR(armComponents) = [
     "rightarm"
 ];
 
+GVAR(safePickupDistance) = 8;
+
 ["ace_firedNonPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
+    if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
     private _roll = random 1;
     private _willDropGun = _roll < GVAR(weaponDropChanceGunHit);
     private _willDropArm = _roll < GVAR(weaponDropChanceArmHit);
@@ -28,6 +31,7 @@ if (!hasInterface) exitWith {};
 
 ["ace_firedPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
+    if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
     private _roll = random 1;
     private _willDropGun = _roll < GVAR(weaponDropChanceGunHit);
     private _willDropArm = _roll < GVAR(weaponDropChanceArmHit);
@@ -46,9 +50,19 @@ if (!hasInterface) exitWith {};
     [
         {
             params ["_thrownGun", "_weapon", "_unit"];
-            _unit action ["TakeWeapon", _thrownGun, _weapon];
+            handgunWeapon _unit == "" && primaryWeapon _unit == "" || {(_unit distance (_unit findNearestEnemy _unit)) > GVAR(safePickupDistance)}
         },
-        [_thrownGun, _weapon, _unit],
-        random [1,2,3]
-    ] call CBA_fnc_waitAndExecute;
+        {
+            params ["_thrownGun", "_weapon", "_unit"];
+            [
+                {
+                    params ["_thrownGun", "_weapon", "_unit"];
+                    _unit action ["TakeWeapon", _thrownGun, _weapon];
+                },
+                [_thrownGun, _weapon, _unit],
+                random [1,2,3]
+            ] call CBA_fnc_waitAndExecute;
+        },
+        [_thrownGun, _weapon, _unit]
+    ] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
