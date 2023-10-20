@@ -1,6 +1,13 @@
-jQuery(document).foundation();
-
 jQuery(document).ready(function(){
+
+    const $navigation = jQuery("nav.top-bar");
+    const $navigationToggle = $navigation.find(".toggle-topbar a");
+    $navigationToggle.on("click", (e) => {
+        e.preventDefault();
+        $navigation.toggleClass("expanded");
+    });
+
+
     var $slider = jQuery(".slider");
     if ($slider.length > 0) {
         $slider.slick({
