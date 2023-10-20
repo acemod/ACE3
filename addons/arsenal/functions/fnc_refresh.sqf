@@ -35,6 +35,9 @@ if (isNil "_virtualItems") exitWith {
 if (_updateVirtualItems) then {
     GVAR(virtualItems) = +_virtualItems;
     call FUNC(updateVirtualItemsFlat);
+
+    // Gotta update this regardless of condition to prevent desync
+    call FUNC(updateUniqueItemsList);
 };
 
 // Don't refresh left panel if in loadout tab
