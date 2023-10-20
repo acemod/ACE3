@@ -1,4 +1,4 @@
-runs-on: self-hosted
+
 name: pboProject
 
 on:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   pboproject:
-    runs-on: windows-2022
+    runs-on: self-hosted
     steps:
     - name: Install Arma 3 Tools
       uses: arma-actions/arma3-tools@master
