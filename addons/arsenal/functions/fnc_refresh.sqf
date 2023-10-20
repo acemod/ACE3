@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
@@ -18,6 +19,8 @@
 */
 params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]]];
 
+TRACE_2("",_updateItems,_updateVirtualItems);
+
 if (_updateItems) then {
     // Update current item list
     call FUNC(updateCurrentItemsList);
@@ -28,6 +31,7 @@ if (_updateItems) then {
 
 private _virtualItems = GVAR(currentBox) getVariable QGVAR(virtualItems);
 if (isNil "_virtualItems") exitWith {
+    [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
     // Delay a frame in case this is running on display open
     [{(findDisplay IDD_ace_arsenal) closeDisplay 0}] call CBA_fnc_execNextFrame;
 };
