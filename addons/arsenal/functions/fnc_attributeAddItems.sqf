@@ -28,7 +28,7 @@ _attributeValue params ["_attributeItems", "_attributeMode"];
 TRACE_3("Populating list",_category,_filter,_attributeValue);
 if (_filter != "") then {
     _filter = _filter call EFUNC(common,escapeRegex);
-    _filter = ".*?" + (_filter splitString " " joinString ".*?" + ".*?/io");
+    _filter = ".*?" + (_filter splitString " " joinString ".*?") + ".*?/io";
 } else {
     _filter = ".*?/io";
 };
