@@ -63,6 +63,7 @@ if (_restingPlaceClass != "") then {
     _restingPlace = createVehicle [_restingPlaceClass, [0, 0, 0], [], 0, "NONE"];
     _restingPlace setPosASL _position;
     _restingPlace setDir _direction;
+    _restingPlace setVectorUp (surfaceNormal _position);
 };
 
 
