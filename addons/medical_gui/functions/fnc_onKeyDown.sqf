@@ -5,14 +5,18 @@
  * Handles keyboard inputs in medical menu.
  *
  * Arguments:
- * 0: Menu display <DISPLAY>
- * 1: Key being pressed <NUMBER>
- * 2: Shift state <BOOL>
- * 3: Ctrl state <BOOL>
- * 4: Alt state <BOOL>
+ * 1: Args <ARRAY>
+ * - 0: Menu display <DISPLAY>
+ * - 1: Key being pressed <NUMBER>
+ * - 2: Shift state <BOOL>
+ * - 3: Ctrl state <BOOL>
+ * - 4: Alt state <BOOL>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * ["", [displayNull, 5, false, false, false]] call ace_medical_gui_fnc_onKeyDown
  *
  * Public: No
 */
