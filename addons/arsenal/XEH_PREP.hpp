@@ -102,4 +102,5 @@ PREP(updateCamPos);
 PREP(updateRightPanel);
 PREP(updateCurrentItemsList);
 PREP(updateUniqueItemsList);
+PREP(updateVirtualItemsFlat);
 PREP(verifyLoadout);

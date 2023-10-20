@@ -6,6 +6,7 @@
  *
  * Arguments:
  * 0: Update current and unique items lists <BOOL> (default: true)
+ * 1: Update virtual items list <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -15,7 +16,7 @@
  *
  * Public: Yes
 */
-params [["_updateItems", true, [true]]];
+params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]]];
 
 if (_updateItems) then {
     // Update current item list
@@ -25,9 +26,19 @@ if (_updateItems) then {
     call FUNC(updateUniqueItemsList);
 };
 
+private _display = findDisplay IDD_ace_arsenal;
+private _virtualItems = GVAR(currentBox) getVariable QGVAR(virtualItems);
+if (isNil "_virtualItems") exitWith {
+    _display closeDisplay 0;
+};
+
+if (_updateVirtualItems) then {
+    GVAR(virtualItems) = +_virtualItems;
+    call FUNC(updateVirtualItemsFlat);
+};
+
 // Don't refresh left panel if in loadout tab
 if (!isNull findDisplay IDD_loadouts_display) exitWith {};
 
-private _display = findDisplay IDD_ace_arsenal;
 
 [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);

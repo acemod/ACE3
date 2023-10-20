@@ -123,3 +123,8 @@ if (_items isEqualType true) then {
 };
 
 _object setVariable [QGVAR(virtualItems), _cargo, _global];
+
+private _currentBox = !isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object};
+if (_currentBox) then {
+    [true, true] call FUNC(refresh);
+};
