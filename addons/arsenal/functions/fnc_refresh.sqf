@@ -26,10 +26,10 @@ if (_updateItems) then {
     call FUNC(updateUniqueItemsList);
 };
 
-private _display = findDisplay IDD_ace_arsenal;
 private _virtualItems = GVAR(currentBox) getVariable QGVAR(virtualItems);
 if (isNil "_virtualItems") exitWith {
-    _display closeDisplay 0;
+    // Delay a frame in case this is running on display open
+    [{(findDisplay IDD_ace_arsenal) closeDisplay 0}] call CBA_fnc_execNextFrame;
 };
 
 if (_updateVirtualItems) then {
@@ -43,5 +43,6 @@ if (_updateVirtualItems) then {
 // Don't refresh left panel if in loadout tab
 if (!isNull findDisplay IDD_loadouts_display) exitWith {};
 
+private _display = findDisplay IDD_ace_arsenal;
 
 [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);

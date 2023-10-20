@@ -25,7 +25,8 @@ if (isNull _object || {_items isEqualTo []}) exitWith {};
 
 private _currentBox = !isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object};
 private _fnc_closeArsenal = {
-    (findDisplay IDD_ace_arsenal) closeDisplay 0;
+    // Delay a frame in case this is running on display open
+    [{(findDisplay IDD_ace_arsenal) closeDisplay 0}] call CBA_fnc_execNextFrame;
 };
 
 if (_items isEqualType true) then {
