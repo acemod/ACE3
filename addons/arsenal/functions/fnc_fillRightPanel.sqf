@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Tab control <CONTROL>
+ * 2: Animate panel refresh <BOOL>
  *
  * Return Value:
  * None
@@ -14,13 +15,13 @@
  * Public: No
 */
 
-params ["_display", "_control"];
+params ["_display", "_control", ["_animate", false]];
 
 // Fade old control background
 if (!isNil QGVAR(currentRightPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentRightPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
-    _previousCtrlBackground ctrlCommit FADE_DELAY;
+    _previousCtrlBackground ctrlCommit ([0, FADE_DELAY] select _animate);
 };
 
 // Show new control background
@@ -28,7 +29,7 @@ private _ctrlIDC = ctrlIDC _control;
 private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
 _ctrlBackground ctrlShow true;
 _ctrlBackground ctrlSetFade 0;
-_ctrlBackground ctrlCommit FADE_DELAY;
+_ctrlBackground ctrlCommit ([0, FADE_DELAY] select _animate);
 
 private _searchbarCtrl = _display displayCtrl IDC_rightSearchbar;
 
@@ -183,10 +184,12 @@ switch (GVAR(currentLeftPanel)) do {
 };
 
 // Force a "refresh" animation of the panel
-_ctrlPanel ctrlSetFade 1;
-_ctrlPanel ctrlCommit 0;
-_ctrlPanel ctrlSetFade 0;
-_ctrlPanel ctrlCommit FADE_DELAY;
+if (_animate) then {
+    _ctrlPanel ctrlSetFade 1;
+    _ctrlPanel ctrlCommit 0;
+    _ctrlPanel ctrlSetFade 0;
+    _ctrlPanel ctrlCommit FADE_DELAY;
+};
 
 // Check if the left panel is a weapon. If so, right panel will be compatible items with weapon only
 private _leftPanelState = GVAR(currentLeftPanel) in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon, IDC_buttonBinoculars];

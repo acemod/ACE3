@@ -30,4 +30,4 @@ if (!isNull findDisplay IDD_loadouts_display) exitWith {};
 
 private _display = findDisplay IDD_ace_arsenal;
 
-[_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
+[_display, _display displayCtrl GVAR(currentLeftPanel), false] call FUNC(fillLeftPanel);
