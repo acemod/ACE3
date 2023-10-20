@@ -19,7 +19,7 @@
 
 params ["_surfaceType", "_components", "_position"];
 
-if (_surfaceType isNotEqualTo "" && (_components findAny GVAR(armComponents) isNotEqualTo -1)) exitWith {}; // Could be potential for edge cases here however couldn't find any from testing.
+if (_surfaceType isNotEqualTo "" && (_components findAny GVAR(armComponents) isNotEqualTo -1)) exitWith {systemChat "Exititititted"}; // Could be potential for edge cases here however couldn't find any from testing.
 
 private _unit = nearestObject [_position, "CAManBase"];
 private _weapon = currentWeapon _unit;
@@ -27,7 +27,7 @@ private _weapon = currentWeapon _unit;
 if (_weapon in GVAR(undroppableGuns)) exitWith {};
 
 private _thrownGun = _unit call EFUNC(common,throwWeapon);
-if (hasInterface _unit) exitWith {}; // Don't make the player pick its own gun up.
+if (isPlayer _unit) exitWith {}; // Don't make the player pick its own gun up.
 [
     {
         params ["_thrownGun", "_weapon", "_unit"];
