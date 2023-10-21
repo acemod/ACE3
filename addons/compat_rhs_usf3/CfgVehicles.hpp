@@ -158,7 +158,9 @@ class CfgVehicles {
         };
         EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };
-    class RHS_M2A3;
+    class RHS_M2A3: RHS_M2A2 {
+        ace_hunterkiller = 1;
+    };
     class RHS_M2A3_BUSKI: RHS_M2A3 {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
