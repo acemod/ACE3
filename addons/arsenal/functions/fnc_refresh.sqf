@@ -25,7 +25,9 @@ if (_updateItems) then {
     call FUNC(updateCurrentItemsList);
 
     // This takes care of unique inventory items (arsenal doesn't have it whitelisted)
-    call FUNC(updateUniqueItemsList);
+    if (!_updateVirtualItems) then {
+        call FUNC(updateUniqueItemsList);
+    };
 };
 
 private _virtualItems = GVAR(currentBox) getVariable QGVAR(virtualItems);
