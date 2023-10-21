@@ -24,7 +24,6 @@ private _clone = createVehicle [QGVAR(clone), _posATL];
 
 // Clone loadout
 [_clone, _target call CBA_fnc_getLoadout] call CBA_fnc_setLoadout;
-[_clone, _target call BIS_fnc_getUnitInsignia] call BIS_fnc_setUnitInsignia;
 
 // Hide unit until it can be moved below terrain
 private _isObjectHidden = isObjectHidden _target;
