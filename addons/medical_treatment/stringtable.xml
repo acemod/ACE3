@@ -416,11 +416,13 @@
             <English>Grave Digging Time</English>
             <Korean>무덤 파는 시간</Korean>
             <Polish>Czas Kopania Grobu</Polish>
+            <French>Durée pour creuser une tombe</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
             <English>Time, in seconds, required to dig a grave for a body.</English>
             <Korean>시신의 무덤을 파는 데 필요한 시간(초 단위).</Korean>
             <Polish>Czas, w sekundach wymagany do wykopania grobu.</Polish>
+            <French>Durée, en secondes, requise pour creuser une tombe pour un corps.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -843,6 +845,7 @@
             <Korean>무덤 파기 허용</Korean>
             <German>Erlaube Graben von Gräbern</German>
             <Spanish>Permitir cavar tumbas</Spanish>
+            <French>Autoriser le creusement de tombes</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_Description">
             <English>Enables digging graves to dispose of corpses.</English>
@@ -850,6 +853,7 @@
             <Korean>시체를 처리하기 위해 무덤을 파는 것을 허용합니다.</Korean>
             <German>Erlaubt das Graben von Gräbern um Leichen zu entsorgen.</German>
             <Spanish>Habilita cavar tumbas para deshacerse de los cadáveres.</Spanish>
+            <French>Active la possibilité de creuser des tombes pour enterrer les cadavres.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_graveOnlyDead">
             <English>Only if dead</English>
@@ -857,18 +861,21 @@
             <Korean>죽었을 때에만</Korean>
             <German>Nur wenn tot</German>
             <Spanish>Solo si está muerto</Spanish>
+            <French>Uniquement s'il est mort</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_DisplayName">
             <English>Create Grave Markers</English>
             <German>Erstelle Grabmal</German>
             <Spanish>Crear Tumba</Spanish>
             <Polish>Utwórz Nagrobek</Polish>
+            <French>Créer des pierres tombales</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_Description">
             <English>Enables the creation of grave markers when digging graves.</English>
             <German>Erstellt Grabmale beim Graben von Gräbern.</German>
             <Spanish>Habilita la creación de Tumbas al cavar tumbas.</Spanish>
             <Polish>Umożliwia tworzenie nagrobków podczas kopania grobów.</Polish>
+            <French>Active la création de pierres tombales lors de l'enterrement de cadavres.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -2374,6 +2381,7 @@
             <Japanese>縫合糸</Japanese>
             <Polish>Szew</Polish>
             <Korean>봉합술</Korean>
+            <French>Suture</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Short">
             <English>Surgical Suture for stitching injuries.</English>
@@ -2382,6 +2390,7 @@
             <Japanese>傷害縫合用の外科縫合糸。</Japanese>
             <Polish>Szew chirurgiczny do zszywania ran.</Polish>
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
+            <French>Suture chirurgicale pour suturer les blessures.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Use">
             <English>Surgical Suture for stitching injuries.</English>
@@ -2390,6 +2399,7 @@
             <Japanese>傷害縫合用の外科縫合糸。</Japanese>
             <Polish>Szew chirurgiczny do zszywania ran.</Polish>
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
+            <French>Suture chirurgicale pour suturer les blessures.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bodybag_Display">
             <English>Bodybag</English>
@@ -3424,6 +3434,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Status_NoPain">
             <English>No pain</English>
             <Polish>Nie odczuwa bólu</Polish>
+            <French>Pas de douleur</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_MildPain">
             <English>In mild pain</English>
@@ -3507,6 +3518,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Status_NoIv">
             <English>No IV</English>
             <Polish>Brak podpiętego IV</Polish>
+            <French>Pas de transfusion</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -4508,11 +4520,13 @@
             <English>Dig grave for body</English>
             <Korean>시체를 위해 무덤 파기</Korean>
             <Polish>Wykop grób na ciało</Polish>
+            <French>Enterrer le corps</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
             <Korean>시체를 위한 무덤 파는 중...</Korean>
             <Polish>Kopanie grobu...</Polish>
+            <French>Enterrement du corps...</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -4759,30 +4773,35 @@
             <English>Check name on headstone</English>
             <Polish>Sprawdź imię na grobie</Polish>
             <Korean>묘비 이름 확인</Korean>
+            <French>Vérifier le nom sur la pierre tombale</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
             <English>Bandage Rollover</English>
             <Polish>Bandażowanie Wielu Ran</Polish>
             <German>Verbandüberschlag</German>
             <Korean>붕대 모두 감기</Korean>
+            <French>Pansement de plaies multiples</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
             <Polish>Jeśli opcja jest włączona, bandaże mogą zamykać różne rodzaje ran na tej samej części ciała. \nOpatrywanie wielu ran będzie adekwatnie skalować czas bandażowania.</Polish>
             <German>Wenn diese Option aktiviert ist, können Verbände verschiedene Arten von Wunden am selben Körperteil schließen.\nBeim Verbinden mehrerer Verletzungen wird die Verbandszeit entsprechend skaliert.</German>
             <Korean>활성회된 경우 붕대로 동일한 신체 부위에 있는 다른 유형에 상처를 막을 수 있습니다.\n여러 부상을 붕대로 감으면 붕대 감는 시간이 그만큼 늘어납니다.</Korean>
+            <French>Si activé, les bandages peuvent fermer plusieurs types de blessures sur la même partie du corps.\nPanser de multiples blessures modifiera la durée d'application en conséquence.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
             <English>Bandage Effectiveness Coefficient</English>
             <Polish>Współczynnik Efektywności Bandażowania</Polish>
             <German>Verbandswirksamkeitskoeffizient</German>
             <Korean>붕대 효과 계수</Korean>
+            <French>Coefficient d'efficacité des bandages</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_Description">
             <English>Determines how effective bandages are at closing wounds.</English>
             <Polish>Określa skuteczność bandaży w zamykaniu ran.</Polish>
             <German>Bestimmt, wie wirksam Bandagen beim Verschließen von Wunden sind.</German>
             <Korean>붕대가 상처를 치료하는 데 얼마나 효과적으로 지속되는지 결정합니다.</Korean>
+            <French>Défini l'efficacité des bandages à refermer des plaies.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalTab">
             <English>Medical Items</English>

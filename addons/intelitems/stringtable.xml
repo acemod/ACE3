@@ -12,6 +12,7 @@
             <Turkish>ACE Istihbarat Eşyaları</Turkish>
             <Korean>ACE 정보 아이템</Korean>
             <Spanish>ACE Objetos de Inteligencia</Spanish>
+            <French>ACE Objets de Renseignements</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_DisplayName">
             <English>Intel Items</English>
@@ -24,6 +25,7 @@
             <Turkish>Istihbarat Eşyaları</Turkish>
             <Korean>정보 아이템</Korean>
             <Spanish>Objetos de Inteligencia</Spanish>
+            <French>Objets de Renseignements</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_DisplayName">
             <English>Notepad</English>
@@ -36,6 +38,7 @@
             <Turkish>Not Defteri</Turkish>
             <Korean>노트패드</Korean>
             <Spanish>Bloc de notas</Spanish>
+            <French>Bloc-notes</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_Description">
             <English>Notepad - Can access from the map screen</English>
@@ -48,6 +51,7 @@
             <Turkish>Not Defteri - Haritadan erişim sağlanabilinir</Turkish>
             <Korean>노트패드 - 지도에서 확인 가능합니다</Korean>
             <Spanish>Block de notas - Puede accederse desde la pantalla de mapa</Spanish>
+            <French>Bloc-note - Consultable depuis la carte</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_Document_DisplayName">
             <English>Document</English>
@@ -60,6 +64,7 @@
             <Turkish>Döküman</Turkish>
             <Korean>문서</Korean>
             <Spanish>Documento</Spanish>
+            <French>Document</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_Document_Description">
             <English>Printed Document - Can access from the map screen</English>
@@ -72,6 +77,7 @@
             <Turkish>Yazılı Döküman - Haritadan erişim sağlanabilinir</Turkish>
             <Korean>문서들 - 지도에서 확인 가능합니다</Korean>
             <Spanish>Documento Impreso - Puede accederse desde la pantalla de mapa</Spanish>
+            <French>Document imprimé - Consultable depuis la carte</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_DisplayName">
             <English>Photo</English>
@@ -84,6 +90,7 @@
             <Turkish>Fotoğraf</Turkish>
             <Korean>사진</Korean>
             <Spanish>Fotografía</Spanish>
+            <French>Photo</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_Description">
             <English>Photo - Can access from the map screen</English>
@@ -96,6 +103,7 @@
             <Turkish>Fotoğraf - Haritadan erişim sağlanabilinir</Turkish>
             <Korean>사진 - 지도에서 확인 가능합니다</Korean>
             <Spanish>Fotografía - Puede accederse desde la pantalla de mapa</Spanish>
+            <French>Photo - Consultable depuis la carte</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_Text">
             <English>Text</English>
@@ -124,6 +132,7 @@
             <Turkish>Fotoğraf Dosya Adı</Turkish>
             <Korean>사진명</Korean>
             <Spanish>Nombre de fichero de la Fotografía</Spanish>
+            <French>Nom du fichier photo</French>
         </Key>
         <Key ID="STR_ACE_IntelItems_Pickup">
             <English>Pick Up</English>
