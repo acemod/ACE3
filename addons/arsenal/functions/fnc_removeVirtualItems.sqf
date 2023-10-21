@@ -23,28 +23,15 @@ params [["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global
 
 if (isNull _object || {_items isEqualTo []}) exitWith {};
 
-private _currentBox = !isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object};
-private _fnc_closeArsenal = {
-    [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
-    // Delay a frame in case this is running on display open
-    [{(findDisplay IDD_ace_arsenal) closeDisplay 0}] call CBA_fnc_execNextFrame;
-};
-
 if (_items isEqualType true) then {
     if (_items) then {
         [_object, _global] call FUNC(removeBox);
-        if (_currentBox) then {
-            call _fnc_closeArsenal;
-        };
     };
 } else {
     private _cargo = _object getVariable QGVAR(virtualItems);
 
     if (isNil "_cargo") exitWith {
         [_object, _global] call FUNC(removeBox);
-        if (_currentBox) then {
-            call _fnc_closeArsenal;
-        };
     };
 
     // Make sure all items are in string form, then convert to config case (non-existent items return "")
@@ -111,12 +98,10 @@ if (_items isEqualType true) then {
     // If nothing is left, remove arsenal from object
     if (_cargo isEqualTo _empty) then {
         [_object, _global] call FUNC(removeBox);
-        if (_currentBox) then {
-            call _fnc_closeArsenal;
-        };
     } else {
         _object setVariable [QGVAR(virtualItems), _cargo, _global];
-        if (_currentBox) then {
+        // If the arsenal is already open, refresh arsenal display
+        if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
             [true, true] call FUNC(refresh);
         };
     };

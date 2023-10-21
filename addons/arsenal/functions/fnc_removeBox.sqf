@@ -39,3 +39,10 @@ if (_global && {isMultiplayer} && {!isNil "_id"}) then {
     [_object, 0, ["ACE_MainActions", QGVAR(interaction)]] call EFUNC(interact_menu,removeActionFromObject);
     [QGVAR(boxRemoved), _object] call CBA_fnc_localEvent;
 };
+
+// If the arsenal is already open, close arsenal display
+if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
+    [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
+    // Delay a frame in case this is running on display open
+    [{(findDisplay IDD_ace_arsenal) closeDisplay 0}] call CBA_fnc_execNextFrame;
+};
