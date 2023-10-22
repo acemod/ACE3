@@ -299,17 +299,15 @@ class CfgWeapons {
     class ACE_bodyBag_blue: ACE_bodyBag {
         displayName = "$STR_a3_cfgvehicles_land_bodybag_01_blue_f0";
         picture = QPATHTOF(ui\bodybag_blue_ca.paa);
-        model = "\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_folded_F.p3d"; // this model will show the dlc icon on the inventory
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_folded_blue_CO.paa"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_blue_co.paa)};
         GVAR(bodyBagObject) = "ACE_bodyBag_blue";
     };
     class ACE_bodyBag_white: ACE_bodyBag {
         displayName = "$STR_a3_cfgvehicles_land_bodybag_01_white_f0";
         picture = QPATHTOF(ui\bodybag_white_ca.paa);
-        model = "\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_folded_F.p3d";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_folded_white_CO.paa"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_white_co.paa)};
         GVAR(bodyBagObject) = "ACE_bodyBag_white";
     };
 };
