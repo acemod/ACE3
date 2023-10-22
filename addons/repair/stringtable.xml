@@ -502,7 +502,7 @@
             <Chinese>完整維修部分</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedPartially">
-            <English>Partially repaired %1</English>
+            <English>Partially repaired part</English>
             <German>Bauteil zum Teil repariert</German>
             <Polish>Częściowo naprawiono: %1</Polish>
             <Portuguese>%1 parcialmente reparado</Portuguese>
@@ -579,6 +579,22 @@
             <Chinesesimp>车壳</Chinesesimp>
             <Chinese>車殼</Chinese>
             <Turkish>Gövde</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitLight">
+            <English>Light</English>
+            <Chinese>輕</Chinese>
+            <French>Léger</French>
+            <Spanish>Claro</Spanish>
+            <Italian>Chiaro</Italian>
+            <Polish>Light</Polish>
+            <Russian>Светлый</Russian>
+            <German>Hell</German>
+            <Czech>Světlá</Czech>
+            <Portuguese>Claro</Portuguese>
+            <Korean>밝은</Korean>
+            <Chinesesimp>轻型</Chinesesimp>
+            <Japanese>軽</Japanese>
+            <Turkish>Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitEngine">
             <English>Engine</English>
