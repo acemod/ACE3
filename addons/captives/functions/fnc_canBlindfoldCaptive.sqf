@@ -22,7 +22,5 @@ params ["_unit", "_target"];
 (_target getVariable [QGVAR(isHandcuffed), false]) &&
 {isNull (attachedTo _target)} &&
 {alive _target} &&
-{isNull objectParent _unit} &&
-{isNull objectParent _target} &&
 {(GVAR(blindfolds) findAny (_unit call EFUNC(common,uniqueItems))) != -1} &&
 {!((goggles _target) in GVAR(blindfolds))}

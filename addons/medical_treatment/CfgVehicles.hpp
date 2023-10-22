@@ -373,6 +373,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_personalAidKit,3);
             MACRO_ADDITEM(ACE_surgicalKit,2);
             MACRO_ADDITEM(ACE_bodyBag,5);
+            MACRO_ADDITEM(ACE_suture,60);
         };
     };
 

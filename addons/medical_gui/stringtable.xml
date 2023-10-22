@@ -282,6 +282,18 @@
             <Chinese>開起醫療選單</Chinese>
             <Turkish>Medikal Menüyü Aç</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfo">
+            <English>Peek Medical Info</English>
+            <Polish>Podgląd Informacji Medycznych</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
+            <English>Medical Peek Duration</English>
+            <Polish>Czas Trwania Podglądu Medycznego</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
+            <English>How long the medical info peek remains open after releasing the key.</English>
+            <Polish>Jak długo podgląd informacji medycznych pozostaje otwarty po zwolnieniu przycisku.</Polish>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
             <Spanish>Cargar al paciente en</Spanish>
@@ -525,21 +537,13 @@
             <Chinese>拖 / 背</Chinese>
             <Turkish>Sürükle / Taşı</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_ToggleSelf">
-            <English>Toggle (Self)</English>
-            <German>Umschalter (Selbst)</German>
-            <Russian>Лечить себя/другого раненого</Russian>
-            <French>Basculer (soi-même)</French>
-            <Polish>Przełącz (na siebie)</Polish>
-            <Spanish>Alternar</Spanish>
-            <Portuguese>Alternar (Si mesmo)</Portuguese>
-            <Czech>Přepnout (na sebe)</Czech>
-            <Italian>Attiva (Te Stesso)</Italian>
-            <Japanese>切り替え (自分)</Japanese>
-            <Korean>토글 (자신)</Korean>
-            <Chinesesimp>切换（自己）</Chinesesimp>
-            <Chinese>切換 (自己)</Chinese>
-            <Turkish>Değiştir (Şahsi)</Turkish>
+        <Key ID="STR_ACE_Medical_GUI_ToggleToSelf">
+            <English>Switch to self</English>
+            <Polish>Zmień na siebie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_ToggleToOther">
+            <English>Switch to target</English>
+            <Polish>Zmień na pacjenta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Head">
             <English>Head</English>
@@ -957,6 +961,26 @@
             <Chinese>出血中</Chinese>
             <Turkish>Kanama var</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_STATUS_NOBLEEDING">
+            <English>No bleeding</English>
+            <Polish>Brak krwawienia</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate1">
+            <English>Slow bleeding</English>
+            <Polish>Słabe krwawienie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
+            <English>Moderate bleeding</English>
+            <Polish>Umiarkowane krwawienie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
+            <English>Severe bleeding</English>
+            <Polish>Poważne krwawienie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
+            <English>Massive bleeding</English>
+            <Polish>Bardzo silne krwawienie</Polish>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
             <German>hat Schmerzen</German>
@@ -1020,6 +1044,10 @@
             <Turkish>Atel Uygulandı</Turkish>
             <German>Schiene angelegt</German>
             <Korean>부목 적용함</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood0">
+            <English>No blood loss</English>
+            <Polish>Brak utraty krwi</Polish>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1250,6 +1278,26 @@
             <Russian>Показывать тяжесть кровопотери в списке ранений.</Russian>
             <Spanish>Mostrar la pérdida de sangre cualitativa en la lista de heridas.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
+            <English>Peek Medical Info on Hit</English>
+            <Polish>Podgląd Informacji Medycznych po Zranieniu</Polish>
+            <Chinesesimp>点击查看医疗信息</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
+            <English>Temporarily show medical info when injured.</English>
+            <Polish>Tymczasowe wyświetlanie informacji medycznych po zranieniu.</Polish>
+            <Chinesesimp>受伤时暂时显示医疗信息。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
+            <English>Medical Peek Duration on Hit</English>
+            <Polish>Czas trwania podglądu informacji medycznych po zranieniu</Polish>
+            <Chinesesimp>击中时的医疗信息显示持续时间</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
+            <English>How long the medical info peek remains open after being injured.</English>
+            <Polish>Jak długo podgląd informacji medycznych pozostaje otwarty po otrzymaniu obrażeń.</Polish>
+            <Chinesesimp>受伤后医疗信息会开放多长时间?</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
             <Portuguese>Mostrar Traumatismo Sofrido</Portuguese>
@@ -1257,6 +1305,7 @@
             <Polish>Pokaż Doznane Urazy</Polish>
             <German>Zeigen Sie das erlittene Trauma</German>
             <Korean>외상 지속 표시</Korean>
+            <Chinesesimp>显示遭受的创伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_Description">
             <English>Show trauma sustained in the injury list.</English>
@@ -1265,6 +1314,17 @@
             <Polish>Pokaż odniesione obrażenia na liście obrażeń.</Polish>
             <German>Zeigen Sie das erlittene Trauma in der Verletzungsliste an.</German>
             <Korean>부상 목록에 발생한 외상을 표시합니다.</Korean>
+            <Chinesesimp>在伤情表上显示创伤</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_DisplayName">
+            <English>Body Part Outline Color</English>
+            <Polish>Kolor Konturu Części Ciała</Polish>
+            <Chinesesimp>身体部位轮廓颜色</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_Description">
+            <English>Color of outline around selected body part.</English>
+            <Polish>Kolor konturu wokół wybranej części ciała.</Polish>
+            <Chinesesimp>选定身体部位周围的轮廓颜色。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
             <English>Minor Trauma</English>
@@ -1273,6 +1333,7 @@
             <Polish>Niewielki Uraz</Polish>
             <German>Kleineres Trauma</German>
             <Korean>약한 외상</Korean>
+            <Chinesesimp>轻微创伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained2">
             <English>Major Trauma</English>
@@ -1281,6 +1342,7 @@
             <Polish>Poważny Uraz</Polish>
             <German>Großes Trauma</German>
             <Korean>중간 외상</Korean>
+            <Chinesesimp>中度创伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained3">
             <English>Severe Trauma</English>
@@ -1289,6 +1351,7 @@
             <Polish>Ciężki Uraz</Polish>
             <German>Schweres Trauma</German>
             <Korean>강한 외상</Korean>
+            <Chinesesimp>重度创伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained4">
             <English>Chronic Trauma</English>
@@ -1297,6 +1360,44 @@
             <Polish>Przewlekły Uraz</Polish>
             <German>Chronisches Trauma</German>
             <Korean>심각한 외상</Korean>
+            <Chinesesimp>慢性创伤</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BodyLabelLeft">
+            <English>L</English>
+            <Polish>L</Polish>
+            <Chinesesimp>L</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BodyLabelRight">
+            <English>R</English>
+            <Polish>P</Polish>
+            <Chinesesimp>R</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Medic">
+            <English>in your inventory</English>
+            <Polish>w twoim ekwipunku</Polish>
+            <Chinesesimp>在你的库存中</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Patient">
+            <English>in patient's inventory</English>
+            <Polish>w ekwipunku pacjenta</Polish>
+            <Chinesesimp>在病人库存中</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
+            <English>in vehicle's inventory</English>
+            <Polish>w ekwipunku pojazdu</Polish>
+            <Chinesesimp>在车辆库存中</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
+            <English>No effect until tourniquet removed</English>
+            <Chinesesimp>止血带取下后才有效果</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
+            <English>Show Tourniquet Warning</English>
+            <Chinesesimp>显示止血带警告</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
+            <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
+            <Chinesesimp>当止血带干扰医疗操作时，显示警告提示。</Chinesesimp>
         </Key>
     </Package>
 </Project>

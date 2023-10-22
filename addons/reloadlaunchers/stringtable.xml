@@ -107,5 +107,9 @@
             <Polish>Wyrzutnia nie mogła być załadowana</Polish>
             <Korean>발사기를 장전할 수 없습니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_ReloadLaunchers_featureDescription">
+            <English>Buddy Loading</English>
+            <Polish>Ładowanie przez Asystenta</Polish>
+        </Key>
     </Package>
 </Project>

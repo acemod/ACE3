@@ -55,10 +55,14 @@
             <Korean>아이템 필요</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_desc">
-            <English>AI will only perform medical treatment if they have the necessary items in their inventory.\nRequires custom AI loadouts!</English>
-            <Polish>AI będzie wykonywać zabiegi medyczne tylko wtedy, gdy ma w ekwipunku niezbędne przedmioty. \nWymaga niestandardowego wyposażenia AI!</Polish>
-            <German>Die KI führt nur dann medizinische Behandlungen durch, wenn sie die erforderlichen Gegenstände in ihrem Inventar hat.\nErfordert benutzerdefinierte KI-Ausrüstungen!</German>
-            <Korean>소지품에 필요한 아이템이 있을 경우에만 인공지능이 치료를 진행합니다.\n커스텀한 인공지능 로드아웃이 필요합니다!</Korean>
+            <English>AI will only perform medical treatment if they have the necessary items in their inventory.</English>
+            <Polish>AI będzie wykonywać zabiegi medyczne tylko wtedy, gdy ma w ekwipunku niezbędne przedmioty.</Polish>
+            <German>Die KI führt nur dann medizinische Behandlungen durch, wenn sie die erforderlichen Gegenstände in ihrem Inventar hat.</German>
+            <Korean>소지품에 필요한 아이템이 있을 경우에만 인공지능이 치료를 진행합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_requireItems_autoReplaceItems">
+            <English>Auto Convert Items for AI</English>
+            <Polish>Automatyczna Konwersja Przedmiotów dla AI</Polish>
         </Key>
     </Package>
 </Project>

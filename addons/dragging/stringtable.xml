@@ -133,7 +133,7 @@
             <Polish>Pozwól na strzelanie podczas przeciągania</Polish>
             <Japanese>搬送中に射撃許可</Japanese>
             <Chinesesimp>允许在拖动时开火</Chinesesimp>
-            <Korean>사격 중 끌기 가능하게 하기</Korean>
+            <Korean>끌기 중 사격 가능하게 하기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
@@ -145,7 +145,7 @@
             <Polish>Pozwala graczom strzelać z broni podczas przeciągania obiektów.</Polish>
             <Japanese>プレイヤーが引きずっている最中でも射撃できるようにします。</Japanese>
             <Chinesesimp>允许玩家在拖动时开火。</Chinesesimp>
-            <Korean>플레이어가 무기를 끄는 동안에 무기를 사용할 수 있게합니다.</Korean>
+            <Korean>플레이어가 뭔가를 끌고 있는 동안에 무기를 사용할 수 있게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_allowRunWithLightweight_DisplayName">
             <English>Allow Running with Lightweight Objects</English>

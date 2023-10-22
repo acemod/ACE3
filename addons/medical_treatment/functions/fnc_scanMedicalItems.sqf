@@ -35,4 +35,4 @@ private _fnc_isMedicalItem = toString {
     _list pushBack (configName _x);
 } forEach (_fnc_isMedicalItem configClasses (configFile >> "CfgMagazines"));
 
-uiNamespace setVariable [QGVAR(treatmentItems), compileFinal str (_list arrayIntersect _list)]
+uiNamespace setVariable [QGVAR(treatmentItems), compileFinal (_list createHashMapFromArray [])]

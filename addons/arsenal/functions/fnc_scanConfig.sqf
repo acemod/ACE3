@@ -270,16 +270,16 @@ for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
 };
 
 // This contains config case entries only
-uiNamespace setVariable [QGVAR(configItems), _configItems];
-uiNamespace setVariable [QGVAR(configItemsFlat), _configItemsFlat];
-uiNamespace setVariable [QGVAR(faceCache), _faceCache];
-uiNamespace setVariable [QGVAR(voiceCache), _voiceCache];
-uiNamespace setVariable [QGVAR(insigniaCache), _insigniaCache];
-uiNamespace setVariable [QGVAR(grenadeCache), _grenadeList];
-uiNamespace setVariable [QGVAR(putCache), _putList];
-uiNamespace setVariable [QGVAR(magazineMiscItems), _magazineMiscItems];
-uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), _launchers];
-uiNamespace setVariable [QGVAR(configItemsTools), _toolList];
+uiNamespace setVariable [QGVAR(configItems), compileFinal _configItems];
+uiNamespace setVariable [QGVAR(configItemsFlat), compileFinal _configItemsFlat];
+uiNamespace setVariable [QGVAR(faceCache), compileFinal _faceCache];
+uiNamespace setVariable [QGVAR(voiceCache), compileFinal (_voiceCache createHashMapFromArray [])];
+uiNamespace setVariable [QGVAR(insigniaCache), compileFinal (_insigniaCache createHashMapFromArray [])];
+uiNamespace setVariable [QGVAR(grenadeCache), compileFinal _grenadeList];
+uiNamespace setVariable [QGVAR(putCache), compileFinal _putList];
+uiNamespace setVariable [QGVAR(magazineMiscItems), compileFinal _magazineMiscItems];
+uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), compileFinal _launchers];
+uiNamespace setVariable [QGVAR(configItemsTools), compileFinal _toolList];
 
 // Compatibility: Override baseWeapon for RHS optics
 // No good way to do this via script for other attachments, needs manual compat
