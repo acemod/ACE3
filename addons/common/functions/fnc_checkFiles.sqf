@@ -45,6 +45,7 @@ private _oldCompats = [];
     if (getText (configFile >> "CfgPatches" >> _x >> "versionStr") != _version) then {
         private _errorMsg = format ["File %1.pbo is outdated.", _x];
 
+        call FUNC(checkFiles_diagnoseACE);
         ERROR(_errorMsg);
 
         if ((_x select [0, 10]) != "ace_compat") then {
@@ -130,6 +131,7 @@ if (isMultiplayer) then {
             if (_version != GVAR(ServerVersion)) then {
                 private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
 
+                call FUNC(checkFiles_diagnoseACE);
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
@@ -141,6 +143,7 @@ if (isMultiplayer) then {
             if (_addons isNotEqualTo []) then {
                 private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
+                call FUNC(checkFiles_diagnoseACE);
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
