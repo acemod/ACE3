@@ -1324,6 +1324,7 @@
             <Japanese>ACE 未区分</Japanese>
             <Russian>ACE Без категории</Russian>
             <Spanish>ACE Sin categoría</Spanish>
+            <French>ACE Non classé</French>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1503,6 +1504,7 @@
             <Japanese>AIのみ</Japanese>
             <Russian>Только ИИ</Russian>
             <Spanish>Sólo IA</Spanish>
+            <French>IA uniquement</French>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
@@ -1661,6 +1663,7 @@
             <Russian>Разрядить оружие</Russian>
             <Spanish>Descargar arma</Spanish>
             <German>Waffe entladen</German>
+            <French>Décharger l'arme</French>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>

@@ -186,15 +186,19 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RestedSwayFactor">
             <English>Rested sway factor</English>
+            <French>Facteur de balancement au repos</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RestedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is rested.</English>
+            <French>Influence le degré de balancement de l'arme au repos.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor">
             <English>Deployed sway factor</English>
+            <French>Facteur de balancement déployé</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is deployed.</English>
+            <French>Influence le degré de balancement de l'arme déployée.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
