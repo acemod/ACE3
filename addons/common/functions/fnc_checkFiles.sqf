@@ -74,9 +74,9 @@ if (_oldAddons isNotEqualTo []) then {
     _oldAddons = _oldAddons apply {"%1.pbo", _x};
 
     private _errorMsg = if (count _oldAddons > 3) then {
-        format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3.<br/>Loaded mods with outdated ACE files: %4", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) - 3, _mainVersion, _oldSources joinString ", "];
+        format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3 from %4.<br/>Loaded mods with outdated ACE files: %5", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) - 3, _mainVersion, _mainSource, _oldSources joinString ", "];
     } else {
-        format ["The following files are outdated: %1.<br/>ACE Main version is %2.<br/>Loaded mods with outdated ACE files: %3", _oldAddons joinString ", ", _mainVersion, _oldSources joinString ", "];
+        format ["The following files are outdated: %1.<br/>ACE Main version is %2 from %3.<br/>Loaded mods with outdated ACE files: %4", _oldAddons joinString ", ", _mainVersion, _mainSource, _oldSources joinString ", "];
     };
 
     if (hasInterface) then {
@@ -87,7 +87,7 @@ if (_oldAddons isNotEqualTo []) then {
 };
 
 if (_oldCompats isNotEqualTo []) then {
-    _oldCompats = _oldCompats apply {format ["%1 (%2, source: %3)", _x select 0, _x select 1]};
+    _oldCompats = _oldCompats apply {format ["%1 (%2)", _x select 0, _x select 1]};
 
     [{
         // Lasts for ~10 seconds
