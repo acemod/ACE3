@@ -183,7 +183,7 @@
             <Korean>개체 무게 무시</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_arcadeMode_Description">
-            <English>Ignore all object and inventory weight. Overrides Skip Object Weight</English>
+            <English>Ignore all weight calculations. Overrides Skip Object Weight.</English>
         </Key>
     </Package>
 </Project>
