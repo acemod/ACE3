@@ -55,7 +55,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
         // Go through all items in panel and see if they need to be deleted or not
         for "_lbIndex" from (lbSize _rightPanelCtrl) - 1 to 0 step -1 do {
-            _currentDisplayName = toLower _rightPanelCtrl lbText _lbIndex;
+            _currentDisplayName = toLower (_rightPanelCtrl lbText _lbIndex);
             _currentClassname = _rightPanelCtrl lbData _lbIndex;
 
             // Remove item in panel if it doesn't match search, skip otherwise
