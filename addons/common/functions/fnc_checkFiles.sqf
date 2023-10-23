@@ -18,7 +18,9 @@
 ///////////////
 // check addons
 ///////////////
-private _mainVersion = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
+private _mainCfg = configFile >> "CfgPatches" >> "ace_main";
+private _mainVersion = getText (_mainCfg >> "versionStr");
+private _mainSource = configSourceMod _mainCfg;
 
 //CBA Versioning check - close main display if using incompatible version
 private _cbaVersionAr = getArray (configFile >> "CfgPatches" >> "cba_main" >> "versionAr");
@@ -64,9 +66,9 @@ if (_oldAddons isNotEqualTo []) then {
     _oldAddons = _oldAddons apply {"%1.pbo", _x};
     private _errorMsg = "";
     if (count _oldAddons > 3) then {
-        _errorMsg = format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3.<br/>Loaded mods with outdated ACE files: %4", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) -3, _mainVersion, (_oldSources joinString ", ")];
+        _errorMsg = format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3 from %4.<br/>Loaded mods with outdated ACE files: %5", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) -3, _mainVersion, _mainSource, (_oldSources joinString ", ")];
     } else {
-        _errorMsg = format ["The following files are outdated: %1.<br/>ACE Main version is %2.<br/>Loaded mods with outdated ACE files: %3", (_oldAddons) joinString ", ", _mainVersion, (_oldSources) joinString ", "];
+        _errorMsg = format ["The following files are outdated: %1.<br/>ACE Main version is %2 from %3.<br/>Loaded mods with outdated ACE files: %4", (_oldAddons) joinString ", ", _mainVersion, _mainSource, (_oldSources) joinString ", "];
     };
     if (hasInterface) then {
         ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
@@ -75,11 +77,11 @@ if (_oldAddons isNotEqualTo []) then {
 };
 
 if (_oldCompats isNotEqualTo []) then {
-    _oldCompats = _oldCompats apply {format ["%1 (%2, source: %3)", _x select 0, _x select 1]};
+    _oldCompats = _oldCompats apply {format ["%1 (%2)", _x select 0, _x select 1]};
     [{
         // Lasts for ~10 seconds
-        ERROR_WITH_TITLE_2("The following ACE compatiblity PBOs are outdated", "%1. ACE Main version is %2",_this select 0,_this select 1);
-    }, [_oldCompats, _mainVersion], 1] call CBA_fnc_waitAndExecute;
+        ERROR_WITH_TITLE_3("The following ACE compatiblity PBOs are outdated", "%1. ACE Main version is %2 from %3.",_this select 0,_this select 1,_this select 2);
+    }, [_oldCompats, _mainVersion, _mainSource], 1] call CBA_fnc_waitAndExecute;
 };
 
 ///////////////
