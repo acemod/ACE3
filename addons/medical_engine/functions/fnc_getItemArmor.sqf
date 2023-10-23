@@ -55,9 +55,13 @@ if (isNil "_return") then {
     };
 
     // Scale armor using passthrough to fix explosive-resistant armor (#9063)
-    // Skip scaling for items that don't cover the hitpoint to prevent infinite armor
+    // Skip scaling for uniforms and items that don't cover the hitpoint to prevent infinite armor
     if (_armor > 0) then {
-        _armorScaled = (log (_armor / (_passThrough ^ _passThroughEffect))) * 10;
+        if (_itemType == TYPE_UNIFORM) then {
+            _armorScaled = _armor;
+        } else {
+            _armorScaled = (log (_armor / (_passThrough ^ _passThroughEffect))) * 10;
+        };
     };
     _return = [_armor, _armorScaled];
     GVAR(armorCache) set [_key, _return];
