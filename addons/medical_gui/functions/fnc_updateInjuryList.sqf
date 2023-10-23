@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Injury list <CONTROL>
  * 1: Target <OBJECT>
- * 2: Body part <NUMBER>
+ * 2: Body part, -1 to only show overall health info <NUMBER>
  *
  * Return Value:
  * None
@@ -102,6 +102,7 @@ if (_target call EFUNC(common,isAwake)) then {
     };
 };
 
+// Skip the rest as they're body part specific
 if (_selectionN == -1) exitWith {
     // Add all entries to injury list
     lbClear _ctrl;
