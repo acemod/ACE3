@@ -18,6 +18,9 @@
 
 params ["_object"];
 
+// Skip weight checking for arcade mode
+if (GVAR(arcadeMode)) exitWith {0};
+
 private _weight = loadAbs _object;
 
 if !(GVAR(skipContainerWeight)) then {
