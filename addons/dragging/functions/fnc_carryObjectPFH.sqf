@@ -53,8 +53,8 @@ if !(alive _target && {_unit distance _target <= 10} && {_unit getHitPointDamage
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Drop static if crew is in it
-if (_target isKindOf "StaticWeapon" && {(crew _target) isNotEqualTo []}) then {
+// Drop static if crew is in it (UAV crew deletion may take a few frames)
+if (_target isKindOf "StaticWeapon" && {(crew _target) isNotEqualTo []} && {!(_target getVariable [QGVAR(isUAV), false])}) then {
     TRACE_2("static weapon crewed",_unit,_target);
 
     [_unit, _target] call FUNC(dropObject_carry);
