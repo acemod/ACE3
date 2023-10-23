@@ -32,7 +32,7 @@ if (isNil "_isFlashlight") then {
             _weaponConfig >> "FlashLight"
         ] findIf {
             isText (_x >> "ACE_Flashlight_Colour")
-            || {!(getArray (_x >> "ambient") in [[], [0,0,0]])}
+            || {!(getArray (_x >> "ambient") in [[], [0,0,0]]) && {getNumber (_x >> "irLight") == 0}}
         } != -1 // return
     } != -1;
 

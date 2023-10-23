@@ -865,15 +865,10 @@ Author:
 #define COMPILE_SCRIPT(var1) compileScript ['PATHTO_SYS(PREFIX,COMPONENT_F,var1)']
 
 
-#define VERSIONING_SYS(var1) class CfgSettings \
-{ \
-    class CBA \
-    { \
-        class Versioning \
-        { \
-            class var1 \
-            { \
-            }; \
+#define VERSIONING_SYS(var1) class CfgSettings { \
+    class CBA { \
+        class Versioning { \
+            class var1 {}; \
         }; \
     }; \
 };
@@ -1040,12 +1035,9 @@ Author:
 #define QQEFUNC(var1,var2) QUOTE(QEFUNC(var1,var2))
 
 #ifndef PRELOAD_ADDONS
-    #define PRELOAD_ADDONS class CfgAddons \
-{ \
-    class PreloadAddons \
-    { \
-        class ADDON \
-        { \
+    #define PRELOAD_ADDONS class CfgAddons { \
+    class PreloadAddons { \
+        class ADDON { \
             list[]={ QUOTE(ADDON) }; \
         }; \
     }; \
@@ -1283,9 +1275,11 @@ Author:
     #define ELSTRING(var1,var2) QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
     #define CSTRING(var1) QUOTE(TRIPLES($STR,ADDON,var1))
     #define ECSTRING(var1,var2) QUOTE(TRIPLES($STR,DOUBLES(PREFIX,var1),var2))
+    #define SUBCSTRING(var1) QUOTE(TRIPLES($STR,SUBADDON,var1))
 
     #define LLSTRING(var1) localize QUOTE(TRIPLES(STR,ADDON,var1))
     #define LELSTRING(var1,var2) localize QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
+    #define LSUBLSTRING(var1) localize QUOTE(TRIPLES(STR,SUBADDON,var1))
 #endif
 
 

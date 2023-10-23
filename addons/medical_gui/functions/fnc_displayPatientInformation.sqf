@@ -45,7 +45,7 @@ if (isNull _display) then {
 
         // Update body image
         private _ctrlBodyImage = _display displayCtrl IDC_BODY_GROUP;
-        [_ctrlBodyImage, _target] call FUNC(updateBodyImage);
+        [_ctrlBodyImage, _target, _selectionN] call FUNC(updateBodyImage);
 
         // Update injury list
         private _ctrlInjuries = _display displayCtrl IDC_INJURIES;

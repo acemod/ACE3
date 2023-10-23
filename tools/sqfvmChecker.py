@@ -2,8 +2,9 @@ import os
 import sys
 import subprocess
 import concurrent.futures
+import tomllib
 
-addon_base_path = os.path.dirname(os.getcwd())
+addon_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 files_to_ignore_lower = [
     x.lower() for x in ["initSettings.sqf", "initKeybinds.sqf", "XEH_PREP.sqf"]
@@ -26,22 +27,14 @@ def get_files_to_process(basePath):
                 if file.lower() in files_to_ignore_lower:
                     continue
                 skipPreprocessing = False
-                addonTomlPath = os.path.join(root, "addon.toml")
-                if os.path.isfile(addonTomlPath):
-                    with open(addonTomlPath, "r") as f:
-                        tomlFile = f.read()
-                        if "preprocess = false" in tomlFile:
-                            print("'preprocess = false' not supported")
-                            raise
-                        skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
-                addonTomlPath = os.path.join(os.path.dirname(root), "addon.toml")
-                if os.path.isfile(addonTomlPath):
-                    with open(addonTomlPath, "r") as f:
-                        tomlFile = f.read()
-                        if "preprocess = false" in tomlFile:
-                            print("'preprocess = false' not supported")
-                            raise
-                        skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
+                for addonTomlPath in [os.path.join(root, "addon.toml"), os.path.join(os.path.dirname(root), "addon.toml")]:
+                    if os.path.isfile(addonTomlPath):
+                        with open(addonTomlPath, "rb") as f:
+                            tomlFile = tomllib.load(f)
+                            try:
+                                skipPreprocessing = not tomlFile.get('rapify')['enabled']
+                            except:
+                                pass
                 if file == "config.cpp" and skipPreprocessing:
                     continue  # ignore configs with __has_include
                 filePath = os.path.join(root, file)

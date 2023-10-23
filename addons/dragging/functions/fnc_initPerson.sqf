@@ -16,6 +16,7 @@
  */
 
 params ["_unit"];
+if (isNull _unit) exitWith { WARNING_1("%1 became null",_unit) };
 
 [_unit, true, [0, 1.1, 0.092], 180] call FUNC(setDraggable);
 [_unit, true, [0.4, -0.1, -1.25], 195] call FUNC(setCarryable); // Hard-coded selection: "LeftShoulder"
