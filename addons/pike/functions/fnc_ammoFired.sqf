@@ -15,14 +15,15 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
-TRACE_8("ammoFired",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
+params ["_unit", "", "", "", "_ammo", "", "_projectile", "_gunner"];
+TRACE_4("ammoFired",_unit,_ammo,_projectile,_gunner);
 
 if (!local _gunner) exitWith {};
 if (isNull _projectile) exitWith {};
 
 // Get MissileGuidance args now
 private _firedEH = +_this;
+// Inject the submuntion ammo into guidance args
 _firedEH set [4, getText (configFile >> "CfgAmmo" >> _ammo >> "submunitionAmmo")];
 private _guidanceArgs = _firedEH call EFUNC(missileguidance,onFiredDeffered);
 _projectile setVariable [QGVAR(guidanceArgs), _guidanceArgs];
@@ -34,6 +35,7 @@ _projectile addEventHandler ["SubmunitionCreated", {
 
     private _guidanceArgs = _projectile getVariable [QGVAR(guidanceArgs), []];
     if (_guidanceArgs isEqualTo []) exitWith { ERROR_1("bad args %1",_projectile); };
+    // Inject the submuntion projectile and time into guidance args
     _guidanceArgs params ["_firedEH", "", "", "", "_stateParams"];
     _firedEH set [6, _submunitionProjectile]; // _firedEH params ["","","","","","","_projectile"];
     _stateParams set [0, diag_tickTime]; // _stateParams params ["_lastRunTime"]
@@ -48,6 +50,7 @@ _projectile addEventHandler ["SubmunitionCreated", {
         params ["_time", "_projectile"];
         if (isNull _projectile) exitWith {true};
         systemChat format ["%1 - %2", CBA_missionTime - _time, vectorMagnitude velocity _projectile];
+        false
     }, {}, [CBA_missionTime, _submunitionProjectile]] call CBA_fnc_waitUntilAndExecute;
     #endif
 }];
