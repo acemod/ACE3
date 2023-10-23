@@ -20,6 +20,11 @@ params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]]]
 
 TRACE_2("",_updateItems,_updateVirtualItems);
 
+// Don't execute in scheduled environment
+if (canSuspend) exitWith {
+    [{_this call FUNC(refresh)}, _this] call CBA_fnc_directCall;
+};
+
 if (_updateItems) then {
     // Update current item list
     call FUNC(updateCurrentItemsList);
