@@ -16,23 +16,25 @@
 
 params ["_display", "_control"];
 
-private _searchString = ctrlText _control;
+// Have to use toLower here and displayName to handle non-ANSI characters
+private _searchString = toLower ctrlText _control;
+private _searchPattern = "";
 if (_searchString != "") then {
-    _searchString = _searchString call EFUNC(common,escapeRegex);
-    _searchString = ".*?" + (_searchString splitString " " joinString ".*?") + ".*?/io";
+    _searchPattern = _searchString call EFUNC(common,escapeRegex);
+    _searchPattern = ".*?" + (_searchPattern splitString " " joinString ".*?") + ".*?/io";
 };
 
 // Right panel search bar
 if ((ctrlIDC _control) == IDC_rightSearchbar) then {
     // Don't refill if there is no need
-    if (GVAR(lastSearchTextRight) != "" && {GVAR(lastSearchTextRight) isNotEqualTo _searchString}) then {
+    if (GVAR(lastSearchTextRight) != "" && {(_searchString find GVAR(lastSearchTextRight)) != 0}) then {
         [_display, _display displayCtrl GVAR(currentRightPanel)] call FUNC(fillRightPanel);
     };
 
     GVAR(lastSearchTextRight) = _searchString;
 
     // If nothing searched, quit here
-    if (_searchString == "") exitWith {};
+    if (_searchPattern == "") exitWith {};
 
     private _rightPanelState = GVAR(currentLeftPanel) in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon, IDC_buttonBinoculars];
     private _rightPanelCtrl = [_display displayCtrl IDC_rightTabContentListnBox, _display displayCtrl IDC_rightTabContent] select _rightPanelState;
@@ -53,11 +55,11 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
         // Go through all items in panel and see if they need to be deleted or not
         for "_lbIndex" from (lbSize _rightPanelCtrl) - 1 to 0 step -1 do {
-            _currentDisplayName = _rightPanelCtrl lbText _lbIndex;
+            _currentDisplayName = toLower (_rightPanelCtrl lbText _lbIndex);
             _currentClassname = _rightPanelCtrl lbData _lbIndex;
 
             // Remove item in panel if it doesn't match search, skip otherwise
-            if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchString) && {!(_currentClassname regexMatch _searchString)}}) then {
+            if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern)}}) then {
                 _rightPanelCtrl lbDelete _lbIndex;
             };
         };
@@ -97,7 +99,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
             _currentClassname = _rightPanelCtrl lnbData [_lbIndex, 0];
 
             // Remove item in panel if it doesn't match search, skip otherwise
-            if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchString) && {!(_currentClassname regexMatch _searchString)}}) then {
+            if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern)}}) then {
                 _rightPanelCtrl lnbDeleteRow _lbIndex;
             };
         };
@@ -124,14 +126,14 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 } else {
     // Left panel search bar
     // Don't refill if there is no need
-    if (GVAR(lastSearchTextLeft) != "" && {GVAR(lastSearchTextLeft) isNotEqualTo _searchString}) then {
+    if (GVAR(lastSearchTextLeft) != "" && {(_searchString find GVAR(lastSearchTextRight)) != 0}) then {
         [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
     };
 
     GVAR(lastSearchTextLeft) = _searchString;
 
     // If nothing searched, quit here
-    if (_searchString == "") exitWith {};
+    if (_searchPattern == "") exitWith {};
 
     private _leftPanelCtrl = _display displayCtrl IDC_leftTabContent;
 
@@ -149,11 +151,11 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     // Go through all items in panel and see if they need to be deleted or not
     for "_lbIndex" from (lbSize _leftPanelCtrl) - 1 to 0 step -1 do {
-        _currentDisplayName = _leftPanelCtrl lbText _lbIndex;
+        _currentDisplayName = toLower (_leftPanelCtrl lbText _lbIndex);
         _currentClassname = _leftPanelCtrl lbData _lbIndex;
 
         // Remove item in panel if it doesn't match search, skip otherwise
-        if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchString) && {!(_currentClassname regexMatch _searchString)}}) then {
+        if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern)}}) then {
             _leftPanelCtrl lbDelete _lbIndex;
         };
     };
