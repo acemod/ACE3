@@ -109,6 +109,7 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_featureDescription">
             <English>Buddy Loading</English>
+            <Polish>Ładowanie przez Asystenta</Polish>
         </Key>
     </Package>
 </Project>

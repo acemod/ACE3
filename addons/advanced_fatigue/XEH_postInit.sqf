@@ -17,7 +17,19 @@ if (!hasInterface) exitWith {};
     };
 }, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
 
-["multiplier", {GVAR(swayFactor)}, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
+["multiplier", {
+    switch (true) do {
+        case (isWeaponRested ACE_player): {
+            GVAR(swayFactor) * GVAR(restedSwayFactor)
+        };
+        case (isWeaponDeployed ACE_player): {
+            GVAR(swayFactor) * GVAR(deployedSwayFactor)
+        };
+        default {
+            GVAR(swayFactor)
+        };
+    };
+}, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
 
 // recheck weapon inertia after weapon swap, change of attachments or switching unit
 ["weapon", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
