@@ -3446,7 +3446,8 @@ jQuery(document).ready(function(){
     if ($toc.length > 0) {
         $toc.toc({
             headers: "#content h2, #content h3, #content h4, #content h5, #content h6",
-            showEffect: "none"
+            showEffect: "none",
+            noBackToTopLinks: true
         });
 
         if ($toc.html() === "") {
