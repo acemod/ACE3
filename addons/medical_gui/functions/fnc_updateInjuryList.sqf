@@ -104,6 +104,19 @@ if (_target call EFUNC(common,isAwake)) then {
 
 _entries pushBack ["", [1, 1, 1, 1]];
 
+if (_selectionN == -1) exitWith {
+    // Add all entries to injury list
+    lbClear _ctrl;
+
+    {
+        _x params ["_text", "_color"];
+
+        _ctrl lbSetColor [_ctrl lbAdd _text, _color];
+    } forEach _entries;
+
+    _ctrl lbSetCurSel -1;
+};
+
 // Add selected body part name
 private _bodyPartName = [
     LSTRING(Head),
