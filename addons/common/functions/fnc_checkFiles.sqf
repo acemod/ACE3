@@ -75,7 +75,7 @@ if (_oldAddons isNotEqualTo []) then {
 };
 
 if (_oldCompats isNotEqualTo []) then {
-    _oldCompats = _oldCompats apply {format ["%1 (%2, source: %3)", _x select 0, _x select 1, _x select 2]};
+    _oldCompats = _oldCompats apply {format ["%1 (%2, source: %3)", _x select 0, _x select 1]};
     [{
         // Lasts for ~10 seconds
         ERROR_WITH_TITLE_2("The following ACE compatiblity PBOs are outdated", "%1. ACE Main version is %2",_this select 0,_this select 1);
