@@ -49,7 +49,7 @@ private _allMods = createHashMap;
     (getLoadedModsInfo param [_index, []]) params [["_modName", "$Error$"], "", "", "", "", "", "", ["_actualID", ""]];
 
     if (_actualID != _expectedSteamID) then {
-        private _errorMsg = format ["%1[%2] unexpected workshopID [%3]",_modDir,_modName,_actualID];
+        private _errorMsg = format ["%1 [%2] unexpected workshopID [%3]",_modDir,_modName,_actualID];
         systemChat _errorMsg;
         WARNING_1("%1",_errorMsg);
     };
