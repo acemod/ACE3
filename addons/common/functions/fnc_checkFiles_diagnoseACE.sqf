@@ -43,7 +43,7 @@ private _allMods = createHashMap;
 // Check all ACE ModDirs have expected steam WS ID
 {
     private _modDir = _x;
-    if ((count _y) != 1) then { ERROR_2("Unexpectd multiple steamIDs %1 - %2",_modDir,_y) };
+    if ((count _y) != 1) then { ERROR_2("Unexpected multiple steamIDs %1 - %2",_modDir,_y) };
     private _expectedSteamID = _y # 0;
     private _index = getLoadedModsInfo findIf {_x#1 == _modDir};
     (getLoadedModsInfo param [_index, []]) params [["_modName", "$Error$"], "", "", "", "", "", "", ["_actualID", ""]];
