@@ -291,7 +291,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Bodybag_Desc_Short);
         descriptionUse = CSTRING(Bodybag_Desc_Use);
         ACE_isMedicalItem = 1;
-        GVAR(bodyBagObject) = "ACE_bodyBag_black";
+        GVAR(bodyBagObject) = "ACE_bodyBagObject";
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 7;
         };
@@ -301,13 +301,13 @@ class CfgWeapons {
         picture = QPATHTOF(ui\bodybag_blue_ca.paa);
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_blue_co.paa)};
-        GVAR(bodyBagObject) = "ACE_bodyBag_blue";
+        GVAR(bodyBagObject) = "ACE_bodyBagObject_blue";
     };
     class ACE_bodyBag_white: ACE_bodyBag {
         displayName = "$STR_a3_cfgvehicles_land_bodybag_01_white_f0";
         picture = QPATHTOF(ui\bodybag_white_ca.paa);
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_white_co.paa)};
-        GVAR(bodyBagObject) = "ACE_bodyBag_white";
+        GVAR(bodyBagObject) = "ACE_bodyBagObject_white";
     };
 };
