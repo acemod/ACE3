@@ -19,7 +19,8 @@
 params ["_controlsGroup"];
 
 private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY);
-private _filter = ctrlText (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR);
+// Have to use toLower here and displayName to handle non-ANSI characters
+private _filter = toLower ctrlText (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR);
 private _configItems = uiNamespace getVariable QGVAR(configItems);
 private _magazineMiscItems = uiNamespace getVariable QGVAR(magazineMiscItems);
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
@@ -28,7 +29,7 @@ _attributeValue params ["_attributeItems", "_attributeMode"];
 TRACE_3("Populating list",_category,_filter,_attributeValue);
 if (_filter != "") then {
     _filter = _filter call EFUNC(common,escapeRegex);
-    _filter = ".*?" + (_filter splitString " " joinString ".*?" + ".*?/io");
+    _filter = ".*?" + (_filter splitString " " joinString ".*?") + ".*?/io";
 } else {
     _filter = ".*?/io";
 };
@@ -63,7 +64,7 @@ if (_category == IDX_CAT_ALL) exitWith {
             default {_cfgWeapons >> _x};
         };
 
-        _displayName = getText (_config >> "displayName");
+        _displayName = toLower getText (_config >> "displayName");
 
         // Add item if not filtered
         if (_displayName regexMatch _filter || {_x regexMatch _filter}) then {
@@ -115,7 +116,7 @@ private _config = _cfgClass;
         _config = [_cfgClass, _cfgMagazines] select (_x in _magazineMiscItems);
     };
 
-    _displayName = getText (_config >> _x >> "displayName");
+    _displayName = toLower getText (_config >> _x >> "displayName");
 
     // Add item if not filtered
     if (_displayName regexMatch _filter || {_x regexMatch _filter}) then {

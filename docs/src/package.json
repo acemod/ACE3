@@ -1,6 +1,10 @@
 {
   "name": "ace3",
   "version": "0.1.0",
+  "scripts": {
+    "dev": "grunt",
+    "build": "grunt build"
+  },
   "dependencies": {
     "lodash": "^4.17.21"
   },
