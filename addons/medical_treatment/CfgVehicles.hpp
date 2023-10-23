@@ -7,6 +7,7 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0";
         scope = 1;
         scopeCurator = 1;
         side = -1;
