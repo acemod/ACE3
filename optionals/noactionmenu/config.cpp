@@ -12,6 +12,8 @@ class CfgPatches {
         authors[] = {"commy2"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+        ACE_expectedModDir = "@ACE No Action Menu";
+        ACE_expectedSteamID = "2202412030";
     };
 };
 

@@ -154,6 +154,7 @@
             <Polish>Transfer Wyposażenia</Polish>
             <Korean>로드아웃 전송</Korean>
             <Spanish>Transferir equipamiento</Spanish>
+            <French>Transfert équipement</French>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutDesc">
             <English>Transfer loadout of units attempts to work around an issue where units appear naked after transferring to a Headless Client.</English>
@@ -165,6 +166,7 @@
             <Polish>Transfer Wyposażenia jednostek usiłuje uniknąć problemu z nagimi jednostkami po transferze do Headless Clienta</Polish>
             <Korean>헤드리스 클라이언트로 넘어갈 때 유닛이 벌거벗고 있는 상황을 해결하기 위해 로드아웃을 유닛에 전송합니다.</Korean>
             <Spanish>Transferir el equipamiento de unidades intenta solventar el problema por el cual las unidades aparecen desnudas despues de ser transferidas a un Headless Client.</Spanish>
+            <French>Transférer l'équipement des unités pour contourner une erreur où les unités apparaissent nues après un transfer vers le Headless Client.</French>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutCurrent">
             <English>Current Loadout</English>
@@ -176,6 +178,7 @@
             <Polish>Obecne wyposażenie</Polish>
             <Korean>현재 로드아웃</Korean>
             <Spanish>Equipamiento actual</Spanish>
+            <French>Equipement actuel</French>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutConfig">
             <English>Config Loadout</English>
@@ -187,6 +190,7 @@
             <Polish>Konfiguracja Wyposażenia</Polish>
             <Korean>로드아웃 설정</Korean>
             <Spanish>Configuración de equipamiento</Spanish>
+            <French>Configuration de l'équipement</French>
         </Key>
         <Key ID="STR_ACE_Headless_BlacklistEden">
             <English>Headless Blacklist</English>

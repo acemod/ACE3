@@ -542,3 +542,37 @@ private _buttonId = [["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1"], "Flashligh
 [["ACE_Flashlight_XL50"], "better flashlight", "\path\to\a\pictureWithAFlashlight.paa", _buttonId] call ace_arsenal_fnc_addRightPanelButton
 ```
 If an overwritten button is not moved, its items will be added back to Misc. Items.
+
+## 10. Scripting Examples
+
+### 10.1 Getting a list of all virtual items available to an arsenal
+
+```sqf
+private _items = [cursorObject] call ace_arsenal_fnc_getVirtualItems
+systemChat str _items
+```
+
+### 10.1 Blacklist items from all arsenals
+
+The following code can be used to remove items from any arsenal a player opens. Modify the `TAG_my_arsenal_blacklist` variable with a list of classnames you'd like to remove.
+The code will only have effect on clients where it is executed. It can placed in a mission's `initPlayerLocal.sqf` file or any object's init box in the editor. Do not add more than once.
+
+```sqf
+TAG_my_arsenal_blacklist = ["arifle_AK12_F", "LMG_03_F"]; // modify this
+
+["ace_arsenal_displayOpened", {
+    [ace_arsenal_currentBox, TAG_my_arsenal_blacklist] call ace_arsenal_fnc_removeVirtualItems
+}] call CBA_fnc_addEventHandler;
+```
+
+### 10.2 Making items available to all arsenals
+
+Same as above, but instead of `ace_arsenal_fnc_removeVirtualItems`, use `ace_arsenal_fnc_addVirtualItems`.
+
+```sqf
+TAG_my_arsenal_essentials = ["arifle_AK12_F", "LMG_03_F"];
+
+["ace_arsenal_displayOpened", {
+    [ace_arsenal_currentBox, TAG_my_arsenal_essentials] call ace_arsenal_fnc_addVirtualItems
+}] call CBA_fnc_addEventHandler;
+```
