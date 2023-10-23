@@ -176,11 +176,7 @@
             <Korean>무게 계산에 개체의 무게를 추가할 지 여부를 결정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_arcadeMode_DisplayName">
-            <English>Arcade Mode</English>
-            <Japanese>オブジェクトの重量を無視</Japanese>
-            <Polish>Pomiń Wagę Obiektu</Polish>
-            <German>Objektgewicht überspringen</German>
-            <Korean>개체 무게 무시</Korean>
+            <English>Ignore Weight</English>
         </Key>
         <Key ID="STR_ACE_Dragging_arcadeMode_Description">
             <English>Ignore all weight calculations. Overrides Skip Object Weight.</English>
