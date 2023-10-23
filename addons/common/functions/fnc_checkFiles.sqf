@@ -20,6 +20,7 @@
 ///////////////
 private _cfgPatches = configFile >> "CfgPatches";
 private _mainVersion = getText (_cfgPatches >> "ace_main" >> "versionStr");
+private _mainSource = configSourceMod (_cfgPatches >> "ace_main");
 
 // CBA Versioning check - close main display if using incompatible version
 private _cbaVersionAr = getArray (_cfgPatches >> "cba_main" >> "versionAr");
@@ -91,8 +92,8 @@ if (_oldCompats isNotEqualTo []) then {
 
     [{
         // Lasts for ~10 seconds
-        ERROR_WITH_TITLE_2("The following ACE compatiblity PBOs are outdated", "%1. ACE Main version is %2",_this select 0,_this select 1);
-    }, [_oldCompats, _mainVersion], 1] call CBA_fnc_waitAndExecute;
+        ERROR_WITH_TITLE_3("The following ACE compatiblity PBOs are outdated", "%1. ACE Main version is %2 from %3.",_this select 0,_this select 1,_this select 2);
+    }, [_oldCompats, _mainVersion, _mainSource], 1] call CBA_fnc_waitAndExecute;
 };
 
 ///////////////
