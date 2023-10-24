@@ -1,7 +1,7 @@
 [
-    QGVAR(weightCoefficent),
+    QGVAR(weightCoefficient),
     "SLIDER",
-    [LSTRING(weightCoefficent_DisplayName), LSTRING(weightCoefficent_Description)],
+    [LSTRING(weightCoefficient_DisplayName), LSTRING(weightCoefficient_Description)],
     LLSTRING(SettingsName),
     [0, 2, 1, 2],
     true

@@ -19,7 +19,7 @@
 params ["_object"];
 
 // Skip weight checking if it will be 0
-if (GVAR(weightCoefficent) == 0) exitWith {0};
+if (GVAR(weightCoefficient) == 0) exitWith {0};
 
 private _weight = loadAbs _object;
 
@@ -39,4 +39,4 @@ if !(GVAR(skipContainerWeight)) then {
 
 // Mass in Arma isn't an exact amount but rather a volume/weight value
 // This attempts to work around that by making it a usable value (sort of)
-GVAR(weightCoefficent) * _weight * 0.5 // return
+GVAR(weightCoefficient) * _weight * 0.5 // return
