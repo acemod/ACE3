@@ -1434,7 +1434,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
             <English>in vehicle's inventory</English>
-            <Polish>w ekwipunku pojazdu</Polish>
+            <Chinesesimp>在车辆库存中</Chinesesimp>
+            <French>dans l'inventaire du véhicule</French>
             <Korean>개: 차량의 소지품</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
@@ -1451,8 +1452,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
             <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
-            <Chinesesimp>在车辆库存中</Chinesesimp>
-            <French>dans l'inventaire du véhicule</French>
+            <Chinesesimp>当止血带干扰医疗操作时，显示警告提示。</Chinesesimp>
+            <French>Affiche un avertissement lorsqu'un garrot interfère avec une action médicale.</French>
             <Korean>지혈대가 의료 조치를 방해할 경우 경고 툴팁을 표시합니다.</Korean>
         </Key>
     </Package>
