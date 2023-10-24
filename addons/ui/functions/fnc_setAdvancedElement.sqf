@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Sets advanced visible element of the UI using displays and controls.
@@ -33,9 +33,10 @@ _cachedElement params ["_idd", "_elements", "_location", "_conditions"];
 
 // Exit if main vehicle type condition not fitting
 private _canUseWeaponOrInCargo = ACE_player call CBA_fnc_canUseWeapon || {-1 < vehicle ACE_player getCargoIndex ACE_player};
+private _inUAVCamera = !isNull getConnectedUAVUnit player; // explictly using player
 if (
-    (_canUseWeaponOrInCargo && {_location == VEHICLE_ONLY})
-    || {!_canUseWeaponOrInCargo && {_location == GROUND_ONLY}}
+    (_canUseWeaponOrInCargo && {!_inUAVCamera} && {_location == VEHICLE_ONLY})
+    || {(!_canUseWeaponOrInCargo || {_inUAVCamera}) && {_location == GROUND_ONLY}}
 ) exitWith {
     TRACE_3("skip location",_this,_canUseWeaponOrInCargo,_location);
     false
@@ -51,7 +52,7 @@ if (
         };
         _show = false;
     };
-} count _conditions;
+} forEach _conditions;
 
 // Get setting from scripted API
 if (!_force) then {
@@ -85,8 +86,7 @@ private _success = false;
 
         _control ctrlSetFade _fade;
         _control ctrlCommit 0;
-    } count _displays;
-    nil
-} count _elements;
+    } forEach _displays;
+} forEach _elements;
 
 _success

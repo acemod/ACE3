@@ -1,24 +1,24 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
-* Author: PabstMirror
-* Runs each frame while inside of a vehicle with viewports
-*
-* Arguments:
-* 0: PFEH Args <ARRAY>
-*   0: Player <OBJECT>
-*   1: Vehicle <OBJECT>
-*   2: Viewport configuration <ARRAY>
-*   3: Viewport index shown (-1 for none) <NUMBER>
-*   4: Last visionmode <NUMBER>
-*
-* Return Value:
-* None
-*
-* Example:
-* [] call ace_viewports_fnc_eachFrame
-*
-* Public: No
-*/
+ * Author: PabstMirror
+ * Runs each frame while inside of a vehicle with viewports
+ *
+ * Arguments:
+ * 0: PFEH Args <ARRAY>
+ *   0: Player <OBJECT>
+ *   1: Vehicle <OBJECT>
+ *   2: Viewport configuration <ARRAY>
+ *   3: Viewport index shown (-1 for none) <NUMBER>
+ *   4: Last visionmode <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_viewports_fnc_eachFrame
+ *
+ * Public: No
+ */
 
 params ["_args", "_pfID"];
 _args params ["_player", "_vehicle", "_viewports", "_shownIndex", "_lastVisionMode"];
@@ -37,7 +37,7 @@ if (cba_events_control) then {
     };
 
     ([_player] call FUNC(getSeatInfo)) params ["_role", "", "", "_comparment"];
-    
+
     private _newIndexAngle = 45; // Controls the max angle
     private _eyesPosASL = AGLtoASL (positionCameraToWorld [0, 0, 0]);
     private _eyesDir = (AGLtoASL (positionCameraToWorld [0, 0, 1])) vectorDiff _eyesPosASL;
@@ -51,7 +51,7 @@ if (cba_events_control) then {
         systemChat format ["%1: %2 @ %3",_forEachIndex,round _viewAngle, vectorMagnitude _viewDiff];
         #endif
         if (
-            (_viewAngle < _newIndexAngle) 
+            (_viewAngle < _newIndexAngle)
             && {(_compartments isEqualTo []) || {(toLower _comparment) in _compartments}}
             && {(_roles isEqualTo []) || {(toLower _role) in _roles}}
             && {(vectorMagnitude _viewDiff) < _maxDistance}

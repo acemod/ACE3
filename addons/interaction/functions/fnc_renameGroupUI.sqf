@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Seb
  * Shows a UI to allow a unit to change its group ID.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -16,12 +16,13 @@
 params ["_display"];
 
 private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
+private _ctrl = controlNull;
 
 {
-    private _ctrl = _display displayctrl _x;
-    _ctrl ctrlshow _showToggle;
-    _ctrl ctrlcommit 0.15;
-} foreach [
+    _ctrl = _display displayCtrl _x;
+    _ctrl ctrlShow _showToggle;
+    _ctrl ctrlCommit FADE_DELAY;
+} forEach [
     IDC_blockLeftFrame,
     IDC_blockLeftBackground,
     IDC_blockRightFrame,
@@ -35,6 +36,8 @@ private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
     IDC_rightTabContentListnBox,
     IDC_sortLeftTab,
     IDC_sortRightTab,
+    IDC_sortLeftTabDirection,
+    IDC_sortRightTabDirection,
     IDC_leftSearchbarButton,
     IDC_rightSearchbarButton,
     IDC_leftSearchbar,
@@ -49,11 +52,10 @@ private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
     IDC_buttonCurrentMag2,
     IDC_iconBackgroundCurrentMag,
     IDC_iconBackgroundCurrentMag2,
-    IDC_statsButton,
     IDC_statsPreviousPage,
     IDC_statsNextPage,
-    IDC_statsCurrentPage,
-    IDC_statsButtonClose
+    IDC_statsCurrentPage
 ];
 
 [QGVAR(statsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;
+[QGVAR(actionsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;

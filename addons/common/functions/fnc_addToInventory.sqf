@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Adds an item, weapon, or magazine to the unit's inventory or places it in a weaponHolder if no space.
@@ -112,13 +112,13 @@ switch (_type select 0) do {
 
             switch (_container) do {
                 case "vest": {
-                    (vestContainer _unit) addMagazineCargoGlobal [_classname, 1/*_ammoCount*/]; //@todo Bug! This isn't really the ammo, but magazine count. No such command.
+                    _unit addItemToVest _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
                 };
                 case "backpack": {
-                    (backpackContainer _unit) addMagazineCargoGlobal [_classname, 1/*_ammoCount*/]; //@todo Bug! This isn't really the ammo, but magazine count. No such command.
+                    _unit addItemToBackpack _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
                 };
                 case "uniform": {
-                    (uniformContainer _unit) addMagazineCargoGlobal [_classname, 1/*_ammoCount*/]; //@todo Bug! This isn't really the ammo, but magazine count. No such command.
+                    _unit addItemToUniform _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
                 };
                 default {
                     _unit addMagazine [_classname, _ammoCount];

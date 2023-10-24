@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handling of the open wounds & injuries upon the handleDamage eventhandler.
@@ -41,12 +41,13 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 // process wounds separately for each body part hit
 {   // forEach _allDamages
     _x params ["_damage", "_bodyPart"];
+    _bodyPart = toLower _bodyPart;
 
     // silently ignore structural damage
     if (_bodyPart == "#structural") then {continue};
 
     // Convert the selectionName to a number and ensure it is a valid selection.
-    private _bodyPartNToAdd = ALL_BODY_PARTS find toLower _bodyPart;
+    private _bodyPartNToAdd = ALL_BODY_PARTS find _bodyPart;
     if (_bodyPartNToAdd < 0) then {
         ERROR_1("invalid body part %1",_bodyPart);
         continue
@@ -84,7 +85,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         };
         GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture"];
         private _woundClassIDToAdd = GVAR(woundClassNames) find _woundTypeToAdd;
-    
+
         // Add a bit of random variance to wounds
         private _woundDamage = _dmgPerWound * _dmgMultiplier * random [0.9, 1, 1.1];
 
@@ -99,7 +100,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         // Config specifies bleeding and pain for worst possible wound
         // Worse wound correlates to higher damage, damage is not capped at 1
         private _woundSize = linearConversion [0.1, _worstDamage, _woundDamage * _sizeMultiplier, LARGE_WOUND_THRESHOLD^3, 1, true];
-    
+
         private _pain = _woundSize * _painMultiplier * _injuryPain;
         _painLevel = _painLevel + _pain;
 
@@ -112,10 +113,10 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
         private _classComplex = 10 * _woundClassIDToAdd + _category;
 
-        // Create a new injury. Format [0:classComplex, 1:bodypart, 2:amountOf, 3:bleedingRate, 4:woundDamage]
-        private _injury = [_classComplex, _bodyPartNToAdd, 1, _bleeding, _woundDamage];
+        // Create a new injury. Format [0:classComplex, 1:amountOf, 2:bleedingRate, 3:woundDamage]
+        private _injury = [_classComplex, 1, _bleeding, _woundDamage];
 
-        if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_woundDamage > PENETRATION_THRESHOLD}}) then {
+        if (_bodyPart isEqualTo "head" || {_bodyPart isEqualTo "body" && {_woundDamage > PENETRATION_THRESHOLD}}) then {
             _criticalDamage = true;
         };
         if ([_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)) then {
@@ -158,28 +159,28 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
         // if possible merge into existing wounds
         private _createNewWound = true;
+        private _existingWounds = _openWounds getOrDefault [_bodyPart, [], true];
         {
-            _x params ["_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
+            _x params ["_classID", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
             if (
                     (_classComplex == _classID) &&
-                    {_bodyPartNToAdd == _bodyPartN} &&
-                    {(_bodyPartNToAdd != 1) || {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}} && // penetrating body damage is handled differently
+                    {(_bodyPart isNotEqualTo "body") || {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}} && // penetrating body damage is handled differently
                     {(_bodyPartNToAdd > 3) || {!_causeLimping} || {(_woundDamage <= LIMPING_DAMAGE_THRESHOLD) isEqualTo (_oldDamage <= LIMPING_DAMAGE_THRESHOLD)}} // ensure limping damage is stacked correctly
                     ) exitWith {
                 TRACE_2("merging with existing wound",_injury,_x);
                 private _newAmountOf = _oldAmountOf + 1;
-                _x set [2, _newAmountOf];
+                _x set [1, _newAmountOf];
                 private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
-                _x set [3, _newBleeding];
+                _x set [2, _newBleeding];
                 private _newDamage = (_oldAmountOf * _oldDamage + _woundDamage) / _newAmountOf;
-                _x set [4, _newDamage];
+                _x set [3, _newDamage];
                 _createNewWound = false;
             };
-        } forEach _openWounds;
+        } forEach _existingWounds;
 
         if (_createNewWound) then {
             TRACE_1("adding new wound",_injury);
-            _openWounds pushBack _injury;
+            _existingWounds pushBack _injury;
         };
         _createdWounds = true;
     };

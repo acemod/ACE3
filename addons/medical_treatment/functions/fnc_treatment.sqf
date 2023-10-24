@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi, mharis001
  * Starts the treatment process.
@@ -156,7 +156,7 @@ if (_callbackProgress isEqualTo {}) then {
     FUNC(treatmentFailure),
     getText (_config >> "displayNameProgress"),
     _callbackProgress,
-    ["isNotInside"]
+    ["isNotInside", "isNotSwimming"]
 ] call EFUNC(common,progressBar);
 
 true

@@ -43,7 +43,11 @@ sitemap:
                     <h2 class="subheader">{{ page.browserTitle }}</h2>
                 </div>
                 <div class="large-5 columns">
-                    <a class="button" target="_blank" href="{{site.ace.githubUrl}}/releases/latest" rel="noopener"><i class="fa fa-download"></i> Get ACE3 v{{site.ace.version.major}}.{{site.ace.version.minor}}.{{site.ace.version.patch}}</a><br>
+                    <a class="button" target="_blank" href="{{site.ace.githubUrl}}/releases/latest" rel="noopener">
+                        Get ACE3 v{{site.ace.version.major}}.{{site.ace.version.minor}}.{{site.ace.version.patch}}
+                        <img class="icon" src="{{ site.baseurl }}/img/icons/download.svg" alt="Download ACE3" width="24" height="24" aria-hidden="true">
+                    </a>
+                    <br>
                     <a href="{{site.baseurl}}/wiki/user/installation-guide.html">Installation Guide</a>
                 </div>
             </div>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="FieldManual">
+        <Key ID="STR_ACE_FieldManual_Field_Rations_DisplayName">
+            <English>Field Rations</English>
+            <Chinese>戰地口糧</Chinese>
+            <Chinesesimp>野战军粮</Chinesesimp>
+            <Czech>Poměrové pole</Czech>
+            <French>Rations sur le terrain</French>
+            <German>Feld Rationen</German>
+            <Hungarian>Terepi adagok</Hungarian>
+            <Italian>Razioni di campo</Italian>
+            <Japanese>フィールド レーション</Japanese>
+            <Korean>전투식량</Korean>
+            <Polish>Racje polowe</Polish>
+            <Portuguese>Rações de campo</Portuguese>
+            <Russian>Полевые рационы</Russian>
+            <Spanish>Raciones de campo</Spanish>
+            <Turkish>Gıda Ihtiyaçları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_DisplayName">
+            <English>Hunger</English>
+            <Polish>Głód</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
+            <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating food.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up food.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
+            <Polish>%3Głód%4 zwiększa się liniowo wraz z prędkością ruchu. Odnawiany przez spożywanie jedzenia.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podnieś jedzenie.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Surwiwal%4.&lt;br/&gt;%2Wybierz pokarm do zjedzenia</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
+            <English>Thirst</English>
+            <Polish>Pragnienie</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
+            <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking liquids.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
+            <Polish>%3Pragnienie%4 zwiększa się liniowo wraz z prędkością ruchu. Odnawiane przez spożywanie napojów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podnieś napój.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Surwiwal%4.&lt;br/&gt;%2Wybierz napój do wypicia.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
+            <English>Medical Treatment</English>
+            <Polish>Opieka Medyczna</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_ShortName">
+            <English>Decrease Heart Rate</English>
+            <Polish>Obniża Tętno</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
+            <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
+            <Polish>%3Adenozyna%4 jest używana do obniżenia tętna.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz kończynę.&lt;br/&gt;%2Wstrzyknij %3Adenozynę%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_DisplayName">
+            <English>Bandages</English>
+            <Polish>Bandaże</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_ShortName">
+            <English>Close Wounds</English>
+            <Polish>Zamykają Rany</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
+            <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%2%3Field Dressing:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; In All Categories&lt;br/&gt;%2%3Packing Bandage:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Elastic Bandage:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Higher&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#E60000'&gt;Shorter&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Lower&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lower&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopening Delay&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
+            <Polish>%3Bandaże%4 zatrzymają krwawienie i zamykają rany. W zależności od twoich ustawień, bandaże mogą się otwierać, jeżeli rany nie są zaszyte. &lt;br/&gt;&lt;br/&gt;%2%3Bandaż Jałowy:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Przeciętne&lt;/t&gt; We wszystkich kategoriach&lt;br/&gt;%2%3Bandaż Uciskowy: %4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Przeciętne&lt;/t&gt; Leczenie&lt;br/&gt;%11&lt;t color='#E60000'&gt;Wyższa&lt;/t&gt; Szansa Otwarcia&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Dłuższe&lt;/t&gt; Opóźnienie Otwarcia&lt;br/&gt;%2%3Bandaż Elastyczny: %4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lepsze&lt;/t&gt; Leczenie&lt;br/&gt;%11&lt;t color='#E60000'&gt;Wyższa&lt;/t&gt; Szansa Otwarcia&lt;br/&gt;%11&lt;t color='#E60000'&gt;Krótsze&lt;/t&gt; Opóźnienie Otwarcia&lt;br/&gt;%2%3Quickclot: %4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Gorsze&lt;/t&gt; Leczenie&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Niższa&lt;/t&gt; Szansa Otwarcia&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Dłuższe&lt;/t&gt; Opóźnienie Otwarcia&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz zranioną część ciała. &lt;br/&gt;%2Zabandażuj ranę wybierając typ %3Bandażu%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
+            <English>IV Fluids</English>
+            <Polish>Płyny IV</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_ShortName">
+            <English>Restore Blood Volume</English>
+            <Polish>Przywracają Krew</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_Description">
+            <English>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Restore blood volume by selecting desired %3IV Fluid%4 type.</English>
+            <Polish>%3Płyny IV%4 przywracają poziom krwi. Krew, Osocze, i Sól Fizjologiczna są takie same pod względem funkcjonalności.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz kończynę.&lt;br/&gt;%2Przywróć poziom krwi przez podanie wybrego %3Płynu IV%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_ShortName">
+            <English>Increase Heart Rate | Wake Up Faster</English>
+            <Polish>Zwiększ Tętno | Obudź się Szybciej</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_Description">
+            <English>%3Epinephrine%4 increases a patient's pulse as well as potentially decreasing the time between consciousnesss checks (effectively reducing the time needed for the patient to wake up).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
+            <Polish>%3Adrenalina%4 zwiększa tętno pacjenta, zmniejszając czas pomiędzy sprawdzeniami przytomności (efektywnie redukując czas potrzebny do przebudzenia się pacjenta).&lt;br/&gt;&lt;br/&gt;%3Użycie%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz kończynę.&lt;br/&gt;%2Wstrzyknij %3Adrenalinę%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_ShortName">
+            <English>Restore Like New</English>
+            <Polish>Jak Nowo Narodzony</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
+            <English>The %3Personal Aid Kit%4 is an item that allows a soldier to be fully healed. Independent of %3ACE Settings%4, it requires that the patient is in %3Stable Condition%4 before use.&lt;br/&gt;&lt;br/&gt;%3Stable Condition%4 qualifies as:&lt;br/&gt;%2Unit is %3Alive%4.&lt;br/&gt;%2Unit is %3Conscious%4.&lt;br/&gt;%2Unit has no active %3Bleeding%4.&lt;br/&gt;%2Heart Rate &gt;= 40.&lt;br/&gt;%2Systolic BP &gt;= 60.&lt;br/&gt;%2Diastolic BP &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move to appropriate location depending on %3ACE Settings%4.&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatments%4&lt;br/&gt;%2Select %3Use Personal Aid Kit%4.</English>
+            <Polish>%3Apteczka Osobista%4 jest przedmiotem pozwalającym na pełne uleczenie gracza. Niezależnie od %3Ustawień ACE%4, wymagane jest, aby pacjent był w%3Stanie Stabilnym%4 przed jej użyciem.&lt;br/&gt;&lt;br/&gt;%3Stan Stabilny%4 występuje gdy:&lt;br/&gt;%2Jednostka jest %3Żywa%4.&lt;br/&gt;%2Jednostka jest  %3Przytomna%4.&lt;br/&gt;%2Jednostka nie%3Krwawu%4.&lt;br/&gt;%2Tętno&gt;= 40. &lt;br/&gt;%2Ciśnienie Skurczowe &gt;= 60.&lt;br/&gt;%2Ciśnienie Rozkurczowe &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Udaj się do właściwej lokacji żależnej od %3Ustawień ACE%4.&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz %3Zaawansowane Zabiegi%4.&lt;br/&gt;%2Wybierz %3Użyj Apteczki Osobistej%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_ShortName">
+            <English>Fix Fractures</English>
+            <Polish>Opatrywanie Złamań</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_Description">
+            <English>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</English>
+            <Polish>%3Szyna%4 jest używana do leczenie złamań. %3Szyna%4 jest zużywana po wykorzystaniu.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz kończynę, na którą ma być założona.&lt;br/&gt;%2Wybierz %3Załóż Szynę%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_ShortName">
+            <English>Prevent Wounds From Reopening</English>
+            <Polish>Zapobiegaj Ponownemu Otwieraniu się Ran</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
+            <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma and may require additional %3Sutures%4 to close wounds. Sutures are consumable, much like bandages, and are not a replacement for the Surgical Kit.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
+            <Polish>%3Zestaw do Szycia%4 jest używany do zapobiegania otwieraniu się ran po ich zabandażowaniu. W zależności od ustawień może także je leczyć.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz %3Zaawansowane Zabiegi%4.&lt;br/&gt;%2Wybierz %3Użyj Zestawu do Szycia%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_ShortName">
+            <English>Stop Bleeding</English>
+            <Polish>Zatamuj Krwawienie</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
+            <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
+            <Polish>%3Staza%4 czasowo zatrzymuje krwawienie pozwalając na zabandażowanie ran. Może być użyta tylko na kończynach.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz kończynę.&lt;br/&gt;%2Wybierz %3Załóż Stazę%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_DisplayName">
+            <English>Medical Menu</English>
+            <German>Sanitätsmenü</German>
+            <Polish>Menu medyczne</Polish>
+            <Portuguese>Menu Médico</Portuguese>
+            <Russian>Медицинское меню</Russian>
+            <Spanish>Menú médico</Spanish>
+            <Czech>Zdravotnická nabídka</Czech>
+            <Italian>Menù Medico</Italian>
+            <French>Menu médical</French>
+            <Japanese>治療メニュー</Japanese>
+            <Korean>의료 메뉴</Korean>
+            <Chinesesimp>医疗菜单</Chinesesimp>
+            <Chinese>醫療選單</Chinese>
+            <Turkish>Medikal Menü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_ShortName">
+            <English>Treatment, Simplified</English>
+            <Polish>Leczenie, Uproszczone</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_Description">
+            <English>The %3Medical Menu%4 is a dedicated %3interface%4 to facilitate %3medical treatment%4. The %3R%4 and %3L%4 letters indicate the side of the patient's body being treated.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%14%4] while looking at a patient to open the Medical Menu. Opening the menu without a patient allows for self-treatment.&lt;br/&gt;%2Alternatively, use [%3%12%4] or [%3%13%4] and select %3Medical Menu%4.&lt;br/&gt;&lt;br/&gt;%3Keybinds:%4&lt;br/&gt;%2Use [%3W, A, S, D, X, and Z%4] to select body parts.&lt;br/&gt;%2Use your %3number keys%4 to select treatment categories.</English>
+            <Polish>%3Menu Medyczne%4 jest dedykowanym %3interfejsem%4 ułatwiającym %3zabiegi medyczne%4. Litery %3P%4 i %3L%4 wskazują, która część ciała pacjenta jest opatrywana.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%14%4] podczas patrzenia na pacjenta aby otworzyć Menu Medyczne. Otwarcie menu bez patrzenia na pacjenta otwiera menu leczenia własnej postaci.&lt;br/&gt;%2Alternatywnie, użyj [%3%12%4] lub [%3%13%4] i wybierz %3Menu Medyczne%4.&lt;br/&gt;&lt;br/&gt;%3Przypisanie Klawiszy:%4&lt;br/&gt;%2Użyj [%3W, A, S, D, X, i Z%4] aby wybrać części ciała.&lt;br/&gt;%2Użyj %3klawiszy numerycznych%4 do wybrania kategorii leczenia.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_ATragMX_ShortName">
+            <English>Portable, Precise, Rugged</English>
+            <Polish>Przenośny, Precyzyjny, Wytrzymały</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_ATragMX_Description">
+            <English>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information.</English>
+            <Polish>%3Horus ATragMX%4 uwzględnia warunki atmosferyczne, dane broni, amunicję, zasięg, prędkość wylotową do wyliczenia precyzyjnych nastaw - ponadto uwzględnia %3Efekt Coriolisa%4 oraz %3Efekt Spinowy%4. %3ATragMX%4, załadowany na komputer przenośny wyprodukowany przez %3TDS Recon%4, jest łatwy i prosty w użyciu. %3Recon%4 spełnia rygorystyczne wymagania %3MIL-STD-810F%4 pod względem odporności na upadek, wibracje, wilgotność, wyskość oraz ekstremalne temperatury.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;Wejdź na wiki po więcej informacji.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
+            <English>Bring Out Your Dead</English>
+            <Polish>Przyprowadź Swoich Zmarłych</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
+            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Place Body In Bodybag%4.</English>
+            <Polish>%3Worki na Zwłoki%4 są używane do transportu ciał. Worki mogą być przeciągane i ładowanie do pojazdów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podejdź do martwego ciała.&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz %3Umieść Ciało w Worku na Zwłoki%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_CableTie_ShortName">
+            <English>Take Prisoners</English>
+            <Polish>Weź Więźniów</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_CableTie_Description">
+            <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed. Depending on your settings, units may need to surrender before being taken captive.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit and use the [%3%13%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
+            <Polish>%3Opaski Zaciskowe%4 umożliwiają żołnierzowi pojmanie i zatrzymanie innego żołnierza, a po zatrzymaniu pozwalają na sprawdzenia ekwipunku więźnia, uwolnienia go lub przeniesienia w inne miejsce, a także załadowania go do pojazdu, jeśli zajdzie taka potrzeba. W zależności od ustawień, jednostka może wymagać poddania się przed wzięciem do niewoli.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podejdź do jednostki i użyj [%3%13%4].&lt;br/&gt;%2Interakcja jest zlokalizowana na rękach pod postacią ikony kajdanek.&lt;br/&gt;%2Użyj ponownie aby uwolnić.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Cellphone_ShortName">
+            <English>Phone In An Explosion</English>
+            <Polish>Zadzwoń po Eksplozję</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Cellphone_Description">
+            <English>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%13%4], select %3Explosives%4, and select %3Cellphone%4.&lt;br/&gt;%2Open the cellphone interface with [%3%12%4].&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number.&lt;br/&gt;%2Call the number to detonate.</English>
+            <Polish>%3Telefon%4 jest funkcjonalnie %3Detonatorem%4. Użyj go, aby podłączyć i zdetonować ładunek wybuchowy. Wiele urządzeń może być połączonych z jednym telefonem komórkowym i wywoływanych za pomocą książki telefonicznej.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Połóż ładunek wybuchowy&lt;br/&gt;%2Użyj [%3%13%4], wybierz %3Ładunki Wybuchowe%4, i wybierz %3Telefon%4. &lt;br/&gt;%2Otwórz interfejs telefonu za pomocą [%3%12%4].&lt;br/&gt;%2Nawiguj po książce telefonicznej za pomocą strzałek i wybierz żądany numer.&lt;br/&gt;%2Zadzwoń pod niego aby wywołać wybuch.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_ShortName">
+            <English>Portable Reading Lights</English>
+            <Polish>Przenośne Lampki do Czytania</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_Description">
+            <English>%3Chemlight Shields%4 give you the ability to read your map, even in dark environments. However, when using %3Chemlight Shields%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
+            <Polish>%3Osłony na Świetliki%4 dają ci możliwość czytania mapy nawet w najciemniejszym otoczeniu. Jednak podczas korzystania z %3Świetlików%4,  wokół ciebie będzie widoczna lekka poświata&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Ekwipunek%4. &lt;br/&gt;%2Wybierz %3Świetlik%4 i %3Przygotuj Osłonę Świetlika (Kolor)%4.&lt;br/&gt;%2Otwórz%3Mapę%4.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Latarki%4 gdzie znajdziesz twoją osłonę na świetlik.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
+            <English>Remote Detonation</English>
+            <Polish>Zdalna Detonacja</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
+            <English>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to a clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%13%4], select %3Explosives%4, and select the %3Clacker%4 you wish to link to.&lt;br/&gt;%2Open the ACE interface with [%3%12%4].&lt;br/&gt;%2Select %3Explosives%4 and select a %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</English>
+            <Polish>Użyj%3Detonatora%4 do podłączenia i wysadzenia ładunku. Do jednego ładunku może być podłączonych wiele ładunków na różnych kanałach.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Połóż ładunek wybuchowy.&lt;br/&gt;%2Użyj [%3%13%4], wybierz%3Mat. Wybuchowe%4, i wybierz %3Detonator%4, do którego chcesz go podłączyć.&lt;br/&gt;%2Otwórz menu interakcji ACE [%3%12%4].&lt;br/&gt;%2Wybierz %3Mat. Wybuchowe%4 i wybierz %3Detonator%4.&lt;br/&gt;%2Wybierz %3Ładunek%4 który chcesz wysadzić.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DAGR_ShortName">
+            <English>Navigate</English>
+            <Polish>Nawigacja</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DAGR_Description">
+            <English>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;%11%2Data View: WIP&lt;br/&gt;%11%2GoTo WP: Select a waypoint to track.&lt;br/&gt;%11%2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;%11%2Connect To: Connect %3DAGR%4 to the %3Vector 21 Rangefinder%4.&lt;br/&gt;%11%2Options</English>
+            <Polish>%3DAGR%4 jest uproszczoną wersją%3MicroDAGR GPS%4. Posiada podobne funkcje, ale brakuje mu map dostępnych w %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Wyekwipuj %3DAGR%4.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Konfiguruj%4 lub %3Przełącz%4.&lt;br/&gt;&lt;br/&gt;Poniższe menu są dostępne podczas konfiguracji %3DAGR:%4&lt;br/&gt;%11%2Widok Danych: WIP&lt;br/&gt;%11%2GoTo WP: Wybierz waypoint do śledzenia.&lt;br/&gt;%11%2WP List: Dodaj/Edytuj/Usuń waypointy.&lt;br/&gt;%11%2Połącz do: Połącz %3DAGR%4 do dalmierza %3Vector 21%4.&lt;br/&gt;%11%2Opcje</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_ShortName">
+            <English>Explosive Revenge</English>
+            <Polish>Wybuchowa Zemsta</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_Description">
+            <English>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</English>
+            <Polish>%3Czuwak%4 jest urządzeniem pozwalającym wysadzić %3Ładunek Wybuchowy%4 gdy żołnierz zginie.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Mat. Wybuchowe%4.&lt;br/&gt;%2Wybierz %3Czuwak%4 i połącz wybrany %3Ładunek Wybuchowy%4.&lt;br/&gt;%2W celu odłączenia powtórz czynności i wybierz odłącz.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DefusalKit_Description">
+            <English>The %3Defusal Kit%4 allows defusal of explosives.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Defusal Kit%4.&lt;br/&gt;%2Safely approach an %3Explosive%4.&lt;br/&gt;%2Use [%3%13%4] and select %3Defuse%4.</English>
+            <Polish>%3Zestaw do Rozbrajania%4 pozwala rozbrajać ładunki wybuchowe.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Wyekwipuj %3Zestaw do Rozbrajania%4.&lt;br/&gt;%2Ostrożnie podejdź pod %3Ładunek Wybuchowy%4.&lt;br/&gt;%2Użyj [%3%13%4] i wybierz %3Rozbrój%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DefusalKit_ShortName">
+            <English>Defuse Explosives</English>
+            <Polish>Rozbrajanie Ładunków</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EarPlugs_ShortName">
+            <English>Protect Your Hearing</English>
+            <Polish>Dbaj o Swój Słuch</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EarPlugs_Description">
+            <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</English>
+            <Polish>%3Stopery do Uszu%4 zapobiegają uszkodzeniom słuchu na skutek wybuchów i strzałów w pobliżu żołnierza. Włóż %3Stopery do Uszu%4 w celu wyciszenia otoczenia i uniknięcia %3Głuchoty Bojowej%4.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Ekwipunek%4.&lt;br/&gt;%2Włóż %3Stopery do Uszu%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_ShortName">
+            <English>Get To Cover</English>
+            <Polish>Łap Osłonę</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
+            <English>The %3Entrenching Tool%4 allows soldiers to dig trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the type of trench you wish to build.</English>
+            <Polish>%3Saperka%4 pozwala żołnierzowi kopać okopy w celu obrony swoich pozycji. Żołnierz musi być na glebie, aby wykopać okop.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Wyekwipuj %3Saperkę%4.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Ekwipunek%4.&lt;br/&gt;%2Wybierz rodzaj okopu, który chcesz wykopać.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Flashlights_DisplayName">
+            <English>Flashlights</English>
+            <Polish>Latarki</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Flashlights_ShortName">
+            <English>Illuminate Your Map</English>
+            <Polish>Rozświetlij Swoją Mapę</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Flashlights_Description">
+            <English>%3Flashlights%4 give you the ability to read your map, even in dark environments. However, when using %3Flashlights%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%12%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent.</English>
+            <Polish>%3Latarki%4 pozwalają czytać mapę, nawet w ciemnościach. Jednakże podczas używani %3Latarki%4, będziesz miał wokół siebie delikatną poświatę.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2W widoku mapy użyj [%3%12%4] i wybierz %3Latarki%4.&lt;br/&gt;%2Wybierz %3Latarkę%4, którą chcesz użyć i wybierz %3Włącz%4.&lt;br/&gt;&lt;br/&gt;%3Dostępne latarki%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Stan latarki jest trwały.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_ShortName">
+            <English>Observe From The Skies</English>
+            <Polish>Obserwuj Świat z Góry</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_Description">
+            <English>The %3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 is designed to be fired from a grenade launcher. After being fired in the air, the built-in parachute will be deployed and the IR CMOS camera will activate, providing a video stream until it touches the ground or is shot down.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3HuntIR Monitor%4 and compatible ammunition.&lt;br/&gt;%2Fire the %3HuntIR Round%4 as high as possible over the area you want to observe.&lt;br/&gt;%2Open the %3HuntIR Monitor%4.&lt;br/&gt;%2Use [%3%12%4], select %3Equipment%4.&lt;br/&gt;%2Select %3Activate HuntIR Monitor%4.</English>
+            <Polish>%3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 przeznaczony jest do wystrzeliwania z granatnika. Po wystrzeleniu, wbudowany spadochron zostanie otwarty i uruchomi się kamera IR CMOS, zapewniająca obraz wideo do momentu zetknięcia się z ziemią lub zestrzelenia.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Wyekwipuj %3Monitor HuntIR%4 i kompatybilną amunicję.&lt;br/&gt;%2Wystrzel %3Pocisk HuntIR%4 najwyżej jak to tylko możliwe nad teren, który chcesz obserwować.&lt;br/&gt;%2Otwórz%3Monitor HuntIR%4.&lt;br/&gt;%2Użyj [%3%12%4], wybierz %3Ekwipunek%4.&lt;br/&gt;%2Wybierz %3Aktywuj Monitor HuntIR%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_ShortName">
+            <English>Track Your Team With Stealth</English>
+            <Polish>Śledź Swój Zespół w Ciszy</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_Description">
+            <English>The %3IR Strobe%4 is a throwable that emits an IR light pulse intermittently. The %3IR Strobe%4 can also be attached to a soldier, making it useful for tracking teammates under night vision devices.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Attach%4 and select the %3IR Strobe%4.</English>
+            <Polish>%3Stroboskop IR%4 jest rzucanym przedmiotem emitującym pulsujące światło podczerwone. %3Stroboskop IR%4 może być także przypięty do munduru, tworząc z niego użyteczne urządzenie do śledzenia żołnierzy z użyciem noktowizji.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Ekwipunek%4.&lt;br/&gt;%2Wybierz %3Przyczep%4 i wybierz %3Stroboskop IR%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_ShortName">
+            <English>Pocket Weatherstation</English>
+            <Polish>Przenośna Pogodynka</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_Description">
+            <English> The %3Kestrel 4500 Pocket Weather Tracker%4 is a mini weather station useful for collecting the the following weather data:&lt;br/&gt;%2Heading and wind direction&lt;br/&gt;%2Crosswind and headwind&lt;br/&gt;%2Altitude and barometric pressure&lt;br/&gt;%2Wet bulb temperature&lt;br/&gt;%2Humidity and dewpoint&lt;br/&gt;%2Density altitude&lt;br/&gt;%2Wind chill and temperature&lt;br/&gt;%2Time and date&lt;br/&gt;%2Minimum, maximum, and average values&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Kestrel%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Open%4.</English>
+            <Polish>%3Kestrel 4500 Pocket Weather Tracker%4 jest przenośną stacją pogodową pozwalającą zbierać takie dane jak: &lt;br/&gt;%2Kurs i kierunek wiatru&lt;br/&gt;%2Wiatr boczny i czołowy&lt;br/&gt;%2Wysokość i ciśnienie barometryczne&lt;br/&gt;%2Temperatua mokrego termometru&lt;br/&gt;%2Wilgotność i punkt rosy&lt;br/&gt;%2Gęstość powietrza&lt;br/&gt;%2Temperatura i temperatura odczuwalna&lt;br/&gt;%2Czas i data&lt;br/&gt;%2Wartości minimalne, maksymalne oraz średnie&lt;br/&gt;&lt;br/&gt;%3Użycie: %4&lt;br/&gt;%2Wyekwipuj %3Kestrela%4. &lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Ekwipunek%4.&lt;br/&gt;%2Wybierz %3Otwórz%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MapTools_ShortName">
+            <English>Triangulate Your Position</English>
+            <Polish>Trianguluj Swoją Pozycję</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MapTools_Description">
+            <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for land, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Map Tools%4.&lt;br/&gt;%2 The Tool can be moved by dragging with [%3Left-Click%4] while holding [%3ALT%4].</English>
+            <Polish>%3Narzędzia Nawigacyjne%4 są zestawem narzędzi pozwalającym mierzyć dystans i kąt. Użyteczne do wyliczania parametrów strzałów dla artylerii.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Otwórz%3Mapę%4.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Narzędzia Nawigacyjne%4.&lt;br/&gt;%2 Narzędzia mogą być przeciągane za pomocą [%3LPM%4] trzymając [%3ALT%4].</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_ShortName">
+            <English>Advanced DAGR</English>
+            <Polish>Zaawansowany DAGR</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_Description">
+            <English>The %3MicroDAGR GPS%4 is an advanced version of the %3DAGR%4. It provides position, navigation, and timing (PNT) data to include:&lt;br/&gt;%2Compass and heading&lt;br/&gt;%2Date and hour synced to the mission&lt;br/&gt;%2Elevation (relative to sea level)&lt;br/&gt;%2Current speed&lt;br/&gt;%2GPS with topographic and satellite view&lt;br/&gt;%2Creating, naming, and deleting waypoints&lt;br/&gt;%2Friendly identification (Requires ACE BLUFOR Tracker Setting)&lt;br/&gt;Connection to the Vector-21 Rangefinder for data import (waypoint creation and grid reference of ranged targets)&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2For usage instructions, please visit the dedicated %3MicroDAGR%4 wiki.</English>
+            <Polish>%3MicroDAGR GPS%4 jest zaawansowaną wersją %3DAGR%4. Dostarcza dane oparte o pozycję, nawigację, i czas (PNT): &lt;br/&gt;%2Kompas i kierunek&lt;br/&gt;%2Datę i godzinę zsynchronizowaną z misją&lt;br/&gt;%2Elewację (relatywną do poziomu morza)&lt;br/&gt;%2Obecną prędkość&lt;br/&gt;%2GPS z widokiem topograficznym i satelitarnym&lt;br/&gt;%2Tworzenie, nazywanie oraz usuwanie waypointów&lt;br/&gt;%2Identyfikację sojuszników (Wymaga ACE BLUFOR Tracker)&lt;br/&gt;Połączenie do dalmierza Vector-21 w celu importu danych (waypointy i współrzędne zmierzonego celu)&lt;br/&gt;&lt;br/&gt;%3Użycie: %4&lt;br/&gt;%2Po instrukcję użycia odwiedź %3MicroDAGR%4 wiki.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeTables_DisplayName">
+            <English>Range Tables</English>
+            <Polish>Tabele Strzelnicze</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeTables_ShortName">
+            <English>Get A Firing Solution</English>
+            <Polish>Strzelaj Celnie</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
+            <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
+            <Polish>%3Tabele Strzelnicze%4 pozwalają żołnierzowi oszacować dokładne rozmieszczenie strzałów na cele bezpośrednie lub pośrednie (w zależności od zasobu). %3Tabele Strzelnicze%4 wypełnią się automatycznie w zależności od wybranej broni/pojazdu.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4%2Użyj [%3%12%4] i wybierz %3Ekwipunek%4&lt;br/&gt;.&lt;br/&gt;%2Wybierz żądaną%3Tabelę Strzelniczą%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Ropes_DisplayName">
+            <English>Ropes</English>
+            <Polish>Liny</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Ropes_ShortName">
+            <English>Tow With Ease</English>
+            <Polish>Holowanie bez Wysiłku</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Ropes_Description">
+            <English>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%13%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</English>
+            <Polish>%3Liny%4 mają wiele zastosowań, takich jak %3Holowanie%4 pojazdów czy %3Zjeżdżanie na Linach%4 z helikopterów.&lt;br/&gt;&lt;br/&gt;%3Holowanie:%4&lt;br/&gt;%2Podejdź pod pojazd.&lt;br/&gt;%2Użyj [%3%13%4] i wybierz %3Holowanie%4.&lt;br/&gt;%2Wybierz długość liny. &lt;br/&gt;%2Wybierz punkt zaczepu liny na holującym pojeździe.&lt;br/&gt;%2Wybierz punkt zaczepu liny na holowanym pojeździe.&lt;br/&gt;&lt;br/&gt;%3Dostępne Długości Liny:%4&lt;br/&gt;%2 3.2 metera&lt;br/&gt;%2 6.2 metera&lt;br/&gt;%2 12.2 metera&lt;br/&gt;%2 15.2 metera&lt;br/&gt;%2 18.3 metera&lt;br/&gt;%2 27.4 metera&lt;br/&gt;%2 36.6 metera</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Sandbag_ShortName">
+            <English>Expand Your Fortifications</English>
+            <Polish>Powiększ Swoje Fortyfikacje</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Sandbag_Description">
+            <English>%3Sandbags%4 are sacks made of sturdy material, filled with sand, used for a variety of purposes such as creating barriers or providing stability in construction projects. Useful in expanding larger placed fortifications.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Sandbag (Empty)%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Deploy Sandbag%4.&lt;br/&gt;%2Follow on-screen instructions for placement.</English>
+            <Polish>%3Worki z Piaskiem%4 to worki wykonane z mocnego materiału, wypełnione piaskiem, używane do różnych celów, takich jak tworzenie barier lub zapewnianie stabilności w projektach budowlanych. Przydatne przy tworzeniu większych fortyfikacji.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Wyekwipuj %3Worek z Piaskiem (Pusty%4.&lt;br/&gt;%2Use [%3%12%4] i wybierz %3Rozłóż Worek z Piaskiem%4.&lt;br/&gt;%2Podążaj za instrukcjami na ekranie.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_ShortName">
+            <English>Lower Firearm Temperature</English>
+            <Polish>Niższa Temperatura twojej Broni</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_Description">
+            <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the weapon's barrel will be swapped and its heat reduced. A soldier may also check the temperature of any barrels within their inventory. Not all weapons support swapping barrels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</English>
+            <Polish>%3Zapasowa Lufa%4 pozwala żołnierzowi znacznie zmniejszyć ciepło broni. Po krótkim czasie lufa broni zostanie zamieniona, a jej temperatura zostanie zmniejszona. Żołnierz może również sprawdzić temperaturę każdej lufy w swoim ekwipunku. Nie wszystkie bronie obsługują zamianę luf.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Ekwipunek%4.&lt;br/&gt;%2Wybierz %3Zmień Lufę%4.&lt;br/&gt;%2.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SprayPaint_DisplayName">
+            <English>Spray Paint</English>
+            <Polish>Farba w Sprayu</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SprayPaint_ShortName">
+            <English>Tag Your Territory</English>
+            <Polish>Zaznacz Swój Teren</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_SprayPaint_Description">
+            <English>%3Spray Paint%4 is used to tag surfaces with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a surface (wall, vehicle, ground, etc).&lt;br/&gt;%2Use [%3%12%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
+            <Polish>%3Farba w Sprayu%4 jest używana do oznaczania powierzchni różnymi symbolami.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podejdź blisko powierzchni (ściany, pojazdu, ziemi, etc). &lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Malowanie%4.&lt;br/&gt;%2Wybierz Symbol.&lt;br/&gt;&lt;br/&gt;%3Dostępne Kolory:%4&lt;br/&gt;%2Czarny&lt;br/&gt;%2Niebieski&lt;br/&gt;%2Zielony&lt;br/&gt;%2Czerwony</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Tripod_ShortName">
+            <English>Brace From Anywhere</English>
+            <Polish>Zawsze Stabilny</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Tripod_Description">
+            <English>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.</English>
+            <Polish>%3Trójnóg Snajperski%4 jest to rozkładany statyw, który pozwala żołnierzowi dokładnie przycelować, gdy jest rozłożony. Używaj go, gdy potrzebujesz stabilnej pozycji strzeleckiej, a wokół nie ma innych obiektów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Ekwipunek%4.&lt;br/&gt;%2Wybierz %3Trójnóg Snajperski%4 i podążaj za instrukcjami wyświetlanymi na ekranie.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_UAVBattery_ShortName">
+            <English>Keep Eyes In The Sky</English>
+            <Polish>Trzymaj Głowę w Górze</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_UAVBattery_Description">
+            <English>%3UAV Batteries%4 are used to recharge a UAV's energy storage. Especially useful for small UAVs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3UAV Battery%4&lt;br/&gt;%2Approach a %3UAV%4 with its %3Engine Off%4.&lt;br/&gt;%2Use [%3%13%4] and select %3Recharge%4.</English>
+            <Polish>%3Baterie UAV%4 są używane do zasilania UAV. Zwłaszcza tych małych.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Wyekwipuj %3Baterię UAV%4&lt;br/&gt;%2Podejdź pod %3UAV%4 z %3Wyłączonym Silnikiem%4.&lt;br/&gt;%2Użyj [%3%13%4] i wybierz %3Naładuj%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Wirecutter_ShortName">
+            <English>Making An Entrance</English>
+            <Polish>Robienie Własnego Wejścia</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
+            <English>%3Wirecutters%4 are a tool that allows a soldier to bypass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%12%4] and select %3Cut Fence%4.</English>
+            <Polish>%3Nożyce do Cięcia Drutu%4 są narzędziem pozwalającym pokonywać zapory z siatki oraz drutu. Użyteczne przy tworzenia tylnego wejścia do pilnownej strefy.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podejdź pod ogrodzenie.&lt;br/&gt;%2Użyj[%3%12%4] i wybierz %3Przetnij Płot%4.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_DisplayName">
+            <English>Items</English>
+            <Chinese>物品</Chinese>
+            <French>Objets</French>
+            <Spanish>Objetos</Spanish>
+            <Italian>Oggetti</Italian>
+            <Polish>Przedmioty</Polish>
+            <Russian>Предметы</Russian>
+            <German>Gegenstände</German>
+            <Czech>Předměty</Czech>
+            <Portuguese>Itens</Portuguese>
+            <Korean>물품</Korean>
+            <Chinesesimp>物品</Chinesesimp>
+            <Japanese>アイテム</Japanese>
+            <Turkish>Eşyalar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_HintCategory_FieldManual_DisplayName">
+            <English>ACE3</English>
+            <Polish>ACE3</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_FortifyTool_ShortName">
+            <English>Build Fortifications</English>
+            <Polish>Budowanie Fortyfikacji</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_FortifyTool_Description">
+            <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
+            <Polish>%3Narzędzie do fortyfikowania%4 pozwala żołnierzom budować fortyfikacje wybrane przez twórcę misji.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podnieś %3Narzędzie do fortyfikowania%4.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Fortyfikuj%4.&lt;br/&gt;%2Wybierz dostępną fortyfikację i postępuj zgodnie ze wskazówkami na ekranie.</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Lockpick_ShortName">
+            <English>Breaking and Entering</English>
+            <Polish>Włamywanie i Otwieranie</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_Lockpick_Description">
+            <English>%3Lockpicks%4 are used to gain access to locked vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Lockpick%4.&lt;br/&gt;%2Approach a %3Locked%4 vehicle.&lt;br/&gt;Use [%3%13%4] and select %3Lockpick Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</English>
+            <Polish>%3Wytrychy%4 są używane w celu uzyskania dostępu do zablokowanych pojazdów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Wyekwipuj %3Wytrych%4.&lt;br/&gt;%2Podejdź do %3Zablokowanego%4 pojazdu. &lt;br/&gt;Użyj [%3%13%4] i wybierz %3Otwórz Zamek%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Uwaga:%4&lt;/t&gt; Klucze i wytrychy są dostępne tylko przy zastosowaniu skryptów lub użyciu modułu ACE Zamknięcie Pojazdu</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_VehicleKey_DisplayName">
+            <English>Vehicle Keys</English>
+            <Polish>Kluczyki od Pojazdu</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_VehicleKey_ShortName">
+            <English>Lock/Unlock Vehicles</English>
+            <Polish>Zablokuj/Odblokuj Pojazdy</Polish>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_VehicleKey_Description">
+            <English>%3Vehicle Keys%4 are used to lock/unlock your vehicles. Vehicle keys can exist for the whole side, or keys can be created for a particular vehicle itself.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Vehicle Key%4.&lt;br/&gt;%2Approach the vehicle that the key belongs to.&lt;br/&gt;Use [%3%13%4] and select %3Lock/Unlock Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</English>
+            <Polish>%3Kluczyki od Pojazdów%4 są używane w celu ich zablokowania/odblokowania. Kluczyki mogą istnieć dla całej strony, lub być tworzone tylko dla wybranych pojazdów&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Wyekwipuj %3Kluczyk do Pojazdu%4.&lt;br/&gt;%2Podejdź do samochodu, do którego pasuje kluczyk. &lt;br/&gt;Użyj [%3%13%4] i wybierz %3Zablokuj/Odblokuj Pojazd%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Uwaga:%4&lt;/t&gt; Klucze i wytrychy są dostępne tylko przy zastosowaniu skryptów lub użyciu modułu ACE Zamknięcie Pojazdu</Polish>
+        </Key>
+    </Package>
+</Project>

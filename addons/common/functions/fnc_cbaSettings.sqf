@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Called at pre-init: Loads all ace_settings and converts them to CBA Settings.

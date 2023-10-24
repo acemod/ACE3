@@ -2,22 +2,39 @@
 
 if (!hasInterface) exitWith {};
 
-[missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
-    private _unit = ACE_player;
-    private _fatigue = _unit getVariable [QGVAR(aimFatigue), 0];
-
-    switch (stance _unit) do {
+["baseline", {
+    private _fatigue = ACE_player getVariable [QGVAR(aimFatigue), 0];
+    switch (stance ACE_player) do {
         case ("CROUCH"): {
-            (1.0 + _fatigue ^ 2 * 0.1) * GVAR(swayFactor)
+            (1.0 + _fatigue ^ 2 * 0.1)
         };
         case ("PRONE"): {
-            (1.0 + _fatigue ^ 2 * 2.0) * GVAR(swayFactor)
+            (1.0 + _fatigue ^ 2 * 2.0)
         };
         default {
-            (1.5 + _fatigue ^ 2 * 3.0) * GVAR(swayFactor)
+            (1.5 + _fatigue ^ 2 * 3.0)
         };
     };
-}] call EFUNC(common,arithmeticSetSource);
+}, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
+
+["multiplier", {
+    switch (true) do {
+        case (isWeaponRested ACE_player): {
+            GVAR(swayFactor) * GVAR(restedSwayFactor)
+        };
+        case (isWeaponDeployed ACE_player): {
+            GVAR(swayFactor) * GVAR(deployedSwayFactor)
+        };
+        default {
+            GVAR(swayFactor)
+        };
+    };
+}, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
+
+// recheck weapon inertia after weapon swap, change of attachments or switching unit
+["weapon", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
+["loadout", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
+["unit", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
 
 ["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};

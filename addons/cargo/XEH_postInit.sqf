@@ -2,9 +2,9 @@
 
 ["ace_addCargo", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
 [QGVAR(paradropItem), {
-    params ["_item", "_vehicle"];
+    params ["_item", "_vehicle", ["_showHint", true]];
 
-    private _unloaded = [_item, _vehicle] call FUNC(paradropItem);
+    private _unloaded = [_item, _vehicle, _showHint] call FUNC(paradropItem);
 
     if (_unloaded && {GVAR(openAfterUnload) in [2, 3]}) then {
         GVAR(interactionVehicle) = _vehicle;
@@ -153,7 +153,8 @@ private _objectClassesAddClassEH = call (uiNamespace getVariable [QGVAR(objectCl
 
 if (isServer) then {
     ["ace_placedInBodyBag", {
-        params ["_target", "_bodyBag"];
+        params ["_target", "_bodyBag", "_isGrave"];
+        if (_isGrave) exitWith {}; // assume graves aren't cargo
         _bodyBag setVariable [QGVAR(customName), [_target, false, true] call EFUNC(common,getName), true];
     }] call CBA_fnc_addEventHandler;
 };

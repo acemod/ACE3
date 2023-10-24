@@ -1,5 +1,5 @@
 // by commy2
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 private _aceWhitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
 private _files = CBA_common_addons select {

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Sets the structural damage of a vehicle without altering the hitPoints, requires local vehicle.
@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
  * 1: Total Damage <NUMBER>
- # 2: Use destruction effects <BOOL>
+ * 2: Use destruction effects <BOOL>
  *
  * Return Value:
  * None

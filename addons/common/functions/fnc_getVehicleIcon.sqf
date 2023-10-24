@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: AACO
  * Function used to get the vehicle icon for provided object (cached for repeat use)
  *
  * Arguments:
- * 0: Object to get icon of <OBJECT/STRING>
+ * 0: Object to get icon of <OBJECT, STRING>
  *
  * Return Value:
  * Icon of vehicle <STRING>

@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_Medical_Feedback_SubCategory">
             <English>Feedback</English>
             <German>Rückmeldung</German>
-            <Japanese>感触</Japanese>
+            <Japanese>フィードバック</Japanese>
             <Russian>Реакция на ранения</Russian>
             <French>Réaction aux blessures</French>
             <Portuguese>Reação a Lesões</Portuguese>
@@ -28,7 +28,7 @@
             <Hungarian>Fájdalom-effekt típusa</Hungarian>
             <Portuguese>Tipo do efeito de dor</Portuguese>
             <Czech>Efekt pro bolest</Czech>
-            <Japanese>痛み効果種類</Japanese>
+            <Japanese>痛み効果の種類</Japanese>
             <Korean>고통 효과 종류</Korean>
             <Chinese>疼痛效果類型</Chinese>
             <Chinesesimp>疼痛效果类型</Chinesesimp>
@@ -36,7 +36,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
             <English>Selects the used pain effect type.</English>
-            <Japanese>痛みの効果を選択できます。</Japanese>
+            <Japanese>痛みの画面効果を選択できます。</Japanese>
             <French>Permet de choisir quel effet provoque la douleur.</French>
             <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
             <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
@@ -93,7 +93,7 @@
             <Hungarian>Kromatikus aberráció</Hungarian>
             <Czech>Chromatická aberace</Czech>
             <Portuguese>Aberração cromática</Portuguese>
-            <Japanese>色の収差</Japanese>
+            <Japanese>色収差</Japanese>
             <Korean>색수차</Korean>
             <Chinesesimp>色差</Chinesesimp>
             <Chinese>色差</Chinese>
@@ -101,7 +101,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
             <English>Only high pain effect</English>
-            <Japanese>強い痛みの時のみ</Japanese>
+            <Japanese>強い痛み効果のみ</Japanese>
             <Chinese>只有在強烈疼痛時使用</Chinese>
             <Chinesesimp>仅在剧烈疼痛下启用</Chinesesimp>
             <French>Juste un fort effet douloureux</French>
@@ -119,7 +119,7 @@
             <English>Low Blood Volume Effect Type</English>
             <Russian>Визуальный эффект низкого объема крови</Russian>
             <French>Effet de faible volume sanguin</French>
-            <Japanese>低血液量時の効果種類</Japanese>
+            <Japanese>低血液量時効果の種類</Japanese>
             <Czech>Efekt pro nízké množství krve</Czech>
             <Polish>Efekt po utracie znacznej ilości krwi</Polish>
             <Turkish>Düşük Kan Efekt Türü</Turkish>
@@ -132,7 +132,7 @@
             <English>Selects the used low blood volume effect type.</English>
             <Russian>Выбирает тип визуализации эффекта низкого объема крови.</Russian>
             <French>Permet de choisir quel effet provoque un faible volume sanguin.</French>
-            <Japanese>低血液量時の効果を選択できます。</Japanese>
+            <Japanese>低血液量時の画面効果を選択できます。</Japanese>
             <Czech>Nastavuje který efekt pro nízké množství krve bude používán.</Czech>
             <Polish>Wybiera efekt ktory będzie pokazywany po utracie znacznej ilości krwi.</Polish>
             <Turkish>Kullanılan düşük kan hacmi efekt türünü seçer.</Turkish>
@@ -209,7 +209,7 @@
                 <French>Si cette option est activée, les unités blessées crieront, voire hurleront sous l'effet de la douleur.</French>
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
                 <Italian>Abilita Grida da parte delle unità ferite</Italian>
-                <Japanese>負傷したユニットを叫ぶようにします。</Japanese>
+                <Japanese>負傷したユニットが叫ぶようにします。</Japanese>
                 <Korean>부상당한 인원이 소리지르는 것을 활성화합니다</Korean>
                 <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
@@ -224,6 +224,7 @@
                 <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
                 <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
                 <Korean>골절/지혈대/부목 표시 활성화</Korean>
+                <Spanish>Habilitar indicadores de Fractura/Torniquete</Spanish>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
@@ -234,6 +235,7 @@
                 <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
                 <Chinesesimp>在姿态指示器上启用骨折、应用止血带和夹板指示器。</Chinesesimp>
                 <Korean>자세 표시기 옆에 골절, 지혈대, 부목의 여부를 표시합니다.</Korean>
+                <Spanish>Habilita los indicadores para fracturas y torniquetes apllicados y férulas sobre el indicador de posición del personaje.</Spanish>
             </Key>
         </Container>
     </Package>

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: GhostIsSpooky
+ * Author: Grim
  * Handles a unit reaching the point of unconsciousness (calls for a status update).
  *
  * Arguments:

@@ -11,11 +11,16 @@ GVAR(syncedEvents) = createHashMap;
 GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
 
+GVAR(blockItemReplacement) = false;
+
 // Cache for FUNC(isModLoaded)
 GVAR(isModLoadedCache) = createHashMap;
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
+
+GVAR(swayFactorsBaseline) = [];
+GVAR(swayFactorsMultiplier) = [];
 
 // @todo: Generic local-managed global-synced objects (createVehicleLocal)
 

@@ -117,5 +117,19 @@
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
             <Korean>수액용기에서 얼마나 빨리 들어가는 지를 정합니다. 초당 4.16ml * 계수를 적용받습니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
+            <English>Weapon Drop Chance</English>
+            <Polish>Szansa Upuszczenia Broni</Polish>
+            <German>Wahrscheinlichkeit, die Waffe fallen zu lassen</German>
+            <Korean>무기 떨어뜨릴 확률</Korean>
+            <French>Risque de perte d'arme</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
+            <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
+            <Polish>Szansa na upuszczenie broni przez gracza, przy utracie przytomności. \nNie ma wpływu na AI.</Polish>
+            <German>Chance für einen Spieler, seine Waffe fallen zu lassen, wenn er bewusstlos wird.\nHat keine Auswirkung auf die KI.</German>
+            <Korean>플레이어가 기절할 때 무기를 떨어뜨릴 확률입니다.\nAI는 영향을 받지 않습니다.</Korean>
+            <French>Pourcentage de chances pour un joueur de lâcher son arme lorsqu'il perd connaissance.\nAucun effet sur les IA.</French>
+        </Key>
     </Package>
 </Project>

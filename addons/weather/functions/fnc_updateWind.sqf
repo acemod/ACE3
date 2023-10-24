@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ACE2 Team, Ruthberg
  * Smoothly updates wind on the server (based on time of year and map data)

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: joko // Jonas
  * Handle fire of local launchers. Called from the unified fired EH only for the local player.
@@ -41,18 +41,23 @@ private _distance = 2 * ([_position, _direction, _backblastRange, _unit] call FU
 TRACE_1("Distance",_distance);
 
 if (_distance < _backblastRange) then {
-    private _alpha = sqrt (1 - _distance / _backblastRange);
-    private _beta = sqrt 0.5;
+    TRACE_2("",isDamageAllowed _unit,_unit getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
-    private _damage = _alpha * _beta * _backblastDamage;
-    [_damage * 100] call BIS_fnc_bloodEffect;
+    // Skip damage if not allowed
+    if (isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
+        private _alpha = sqrt (1 - _distance / _backblastRange);
+        private _beta = sqrt 0.5;
 
-    if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
-        [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
-    } else {
-        TRACE_1("",isDamageAllowed _unit);
-        if (!isDamageAllowed _unit) exitWith {}; // Skip damage if not allowed
-        _unit setDamage (damage _unit + _damage);
+        private _damage = _alpha * _beta * _backblastDamage;
+        TRACE_1("",_damage);
+
+        [_damage * 100] call BIS_fnc_bloodEffect;
+
+        if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+            [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
+        } else {
+            _unit setDamage (damage _unit + _damage);
+        };
     };
 };
 

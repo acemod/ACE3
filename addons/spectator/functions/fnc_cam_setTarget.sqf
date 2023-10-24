@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Sets the current camera interest using dummy target.
  *
  * Arguments:
