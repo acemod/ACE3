@@ -110,6 +110,7 @@
         <Key ID="STR_ACE_ReloadLaunchers_featureDescription">
             <English>Buddy Loading</English>
             <Polish>Ładowanie przez Asystenta</Polish>
+            <Korean>부사수 장전 중</Korean>
         </Key>
     </Package>
 </Project>
