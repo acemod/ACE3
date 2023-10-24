@@ -24,7 +24,6 @@ class CfgMagazines {
 
     class ATMine_Range_Mag;
     class rhs_mine_M19_mag: ATMine_Range_Mag {
-        "ace_explosives_Place_rhsusf_mine_M19"
         EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_mine_M19);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
