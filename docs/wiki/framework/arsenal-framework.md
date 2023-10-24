@@ -557,7 +557,7 @@ private _items = [cursorObject] call ace_arsenal_fnc_getVirtualItems
 systemChat str _items
 ```
 
-### 10.1 Blacklist items from all arsenals
+### 10.2 Blacklist items from all arsenals
 
 The following code can be used to remove items from any arsenal a player opens. Modify the `TAG_my_arsenal_blacklist` variable with a list of classnames you'd like to remove.
 The code will only have effect on clients where it is executed. It can placed in a mission's `initPlayerLocal.sqf` file or any object's init box in the editor. Do not add more than once.
@@ -570,7 +570,7 @@ TAG_my_arsenal_blacklist = ["arifle_AK12_F", "LMG_03_F"]; // modify this
 }] call CBA_fnc_addEventHandler;
 ```
 
-### 10.2 Making items available to all arsenals
+### 10.3 Making items available to all arsenals
 
 Same as above, but instead of `ace_arsenal_fnc_removeVirtualItems`, use `ace_arsenal_fnc_addVirtualItems`.
 
