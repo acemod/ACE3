@@ -29,7 +29,7 @@ parent:
                     {{ post.excerpt }}
                     <footer>
                         <a class="button small" href="{{ post.url }}">
-                            <i class="fa fa-chevron-right"></i>&nbsp;Read more
+                           Read more&nbsp;<img class="icon" src="{{ site.baseurl }}/img/icons/chevronrightwhite.svg" alt="Back" width="16" height="16" aria-hidden="true">
                         </a>
                     </footer>
                 </article>

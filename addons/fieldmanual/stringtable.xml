@@ -119,7 +119,7 @@
             <Korean>상처가 재발하지 않도록 방지합니다</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
-            <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
+            <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma and may require additional %3Sutures%4 to close wounds. Sutures are consumable, much like bandages, and are not a replacement for the Surgical Kit.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
             <Polish>%3Zestaw do Szycia%4 jest używany do zapobiegania otwieraniu się ran po ich zabandażowaniu. W zależności od ustawień może także je leczyć.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz %3Zaawansowane Zabiegi%4.&lt;br/&gt;%2Wybierz %3Użyj Zestawu do Szycia%4.</Polish>
             <Korean>%3봉합 키트%4는 붕대를 감은 후 상처가 다시 열리는 것을 방지하기 위해 사용됩니다. 설정에 따라 외상을 치료할 수도 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%13%4] 또는 [%3%14%4]를 사용하여 %3고급 치료%4를 선택하십시오.&lt;br/&gt;%2%3봉합 키트%4를 선택하십시오.</Korean>
         </Key>

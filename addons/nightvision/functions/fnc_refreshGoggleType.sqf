@@ -27,7 +27,8 @@ private _nvgGen = 3;
 private _blurRadius = -1;
 
 // Adds Array of Params / Original ACE3's (ST's) by default. (NVG_GREEN_PRESET)
-private _preset = getArray (configFile >> "CfgWeapons" >> "NVGoggles" >> "colorPreset");
+private _preset = getArray (configFile >> "CfgWeapons" >> "NVGoggles" >> QGVAR(colorPreset));
+
 if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
     if (((vehicle ACE_player) == ACE_player) || {
         // Test if we are using player's nvg or if sourced from vehicle:
@@ -47,7 +48,7 @@ if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
             TRACE_1("souce: binocular",binocular ACE_player); // Source is from player's binocular (Rangefinder/Vector21bNite)
             private _config = configFile >> "CfgWeapons" >> (binocular ACE_player);
             if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
-            if (isArray (_config >> "colorPreset")) then {_preset = getArray (_config >> "colorPreset");};
+            if (isArray (_config >> QGVAR(colorPreset))) then {_preset = getArray (_config >> QGVAR(colorPreset));};
         };
 
         TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope, but no good way to detect that)
@@ -62,7 +63,7 @@ if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
             if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
         };
         if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
-        if (isArray (_config >> "colorPreset")) then {_preset = getArray (_config >> "colorPreset");};
+        if (isArray (_config >> QGVAR(colorPreset))) then {_preset = getArray (_config >> QGVAR(colorPreset));};
     } else {
         TRACE_1("source: vehicle - defaults",typeOf vehicle ACE_player);
     };

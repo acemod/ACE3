@@ -152,4 +152,13 @@ class GVAR(stats) {
         textStatement = QUOTE(call FUNC(statTextStatement_magCount));
         tabs[] = {{}, {4}};
     };
+    class ACE_illuminators: statBase {
+        scope = 2;
+        priority = 1;
+        stats[] = {};
+        displayName = CSTRING(statIlluminators);
+        showText = 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_illuminators));
+        tabs[] = {{}, {1}};
+    };
 };

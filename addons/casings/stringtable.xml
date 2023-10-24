@@ -10,6 +10,7 @@
             <Russian>ACE Гильзы</Russian>
             <Spanish>ACE Casquillos</Spanish>
             <German>ACE Patronenhülsen</German>
+            <French>ACE Douilles</French>
         </Key>
         <Key ID="STR_ACE_Casings_displayName">
             <English>Casings Enabled</English>
@@ -20,6 +21,7 @@
             <Russian>Гильзы включены</Russian>
             <Spanish>Habilitar Casquillos</Spanish>
             <German>Patronenhülsen aktiviert</German>
+            <French>Douilles activées</French>
         </Key>
         <Key ID="STR_ACE_Casings_description">
             <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
@@ -30,6 +32,7 @@
             <Russian>Включить постоянные гильзы (ПОТЕНЦИАЛЬНО может повлиять на производительность на старых/слабых системах)</Russian>
             <Spanish>Habilitar persistencia de casquillos (POTENCIAL impacto en el rendimiento de ordenadores antiguos o no potentes)</Spanish>
             <German>Persistente Patronenhülsen aktivieren (POTENZIELLE Leistungseinbußen bei alten/schwachen Systemen)</German>
+            <French>Active la persistance des douilles (POTENTIEL impact sur les performances sur les anciens/faibles systèmes)</French>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_displayName">
             <English>Maximum casings</English>
@@ -40,6 +43,7 @@
             <Russian>Макс. кол-во гильз</Russian>
             <Spanish>Casquillos máximos</Spanish>
             <German>Maximale Patronenhülsen</German>
+            <French>Nombre maximum de douilles</French>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_description">
             <English>Maximum amount of casings to display</English>
@@ -50,6 +54,7 @@
             <Russian>Максимальное количество гильз для отображения</Russian>
             <Spanish>Máxima cantidad de casquillos para mostrar</Spanish>
             <German>Maximale Anzahl an Patronenhülsen, die angezeigt werden</German>
+            <French>Nombre maximum de douilles à afficher</French>
         </Key>
     </Package>
 </Project>

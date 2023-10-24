@@ -237,6 +237,7 @@
             <Japanese>テクスチャの選択</Japanese>
             <Russian>Выбор текстуры</Russian>
             <Spanish>Selección de texturas</Spanish>
+            <French>Sélection de texture</French>
         </Key>
         <Key ID="STR_ACE_Slideshow_Selection_Description">
             <English>Object texture selection. Default: 0</English>
@@ -248,6 +249,7 @@
             <Japanese>オブジェクトテクスチャの選択。デフォルト: 0</Japanese>
             <Russian>Выбор текстуры объекта. По умолчанию: 0</Russian>
             <Spanish>Selección de textura de objeto. Defecto: 0</Spanish>
+            <French>Sélection de la texture de l'objet. Valeur par défaut : 0</French>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>

@@ -1932,16 +1932,19 @@
             <Japanese>ユニットを燃やす</Japanese>
             <Russian>Поджечь юнита</Russian>
             <Spanish>Quemar a unidad</Spanish>
+            <French>Brûler l'unité</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
             <Polish>Wykop Okop</Polish>
             <Korean>참호라인 깔기</Korean>
+            <French>Poser une tranchée</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
             <Polish>+SHIFT aby wymusić (Można wykopać tylko N/S lub E/W)</Polish>
             <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
+            <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
         </Key>
     </Package>
 </Project>
