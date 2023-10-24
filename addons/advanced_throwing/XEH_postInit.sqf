@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 // Fired XEH
+GVAR(ammoEventHandlers) = createHashMap;
 [QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
 // Exit on HC

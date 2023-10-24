@@ -68,18 +68,8 @@ if !(GVAR(dragAndFire)) then {
 // Add anim changed EH
 [_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
 
-// Check everything
-[FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-
-// Reset current dragging height.
-GVAR(currentHeightChange) = 0;
-
 // Prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
-
-// Fixes not being able to move when in combat pace
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-
 if (_UAVCrew isNotEqualTo []) then {
     {
         _target deleteVehicleCrew _x;
@@ -87,3 +77,12 @@ if (_UAVCrew isNotEqualTo []) then {
 
     _target setVariable [QGVAR(isUAV), true, true];
 };
+
+// Check everything
+[FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+
+// Reset current dragging height.
+GVAR(currentHeightChange) = 0;
+
+// Fixes not being able to move when in combat pace
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
