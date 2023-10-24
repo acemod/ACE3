@@ -1,9 +1,10 @@
 [
-    QGVAR(arcadeMode),
-    "CHECKBOX",
-    [LSTRING(arcadeMode_DisplayName), LSTRING(arcadeMode_Description)],
+    QGVAR(weightCoefficent),
+    "SLIDER",
+    [LSTRING(weightCoefficent_DisplayName), LSTRING(weightCoefficent_Description)],
     LLSTRING(SettingsName),
-    false
+    [0, 2, 1, 2],
+    true
 ] call CBA_fnc_addSetting;
 
 [
