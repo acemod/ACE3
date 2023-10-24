@@ -41,7 +41,7 @@ fn calculate_table(
                 .into_par_iter()
                 .enumerate()
                 .for_each(|(idx, range)| {
-                    ctx.callback_data(
+                    if let Err(e) = ctx.callback_data(
                         "ace:artillery",
                         "calculate_table",
                         (
@@ -55,7 +55,9 @@ fn calculate_table(
                                 high_arc,
                             ),
                         ),
-                    );
+                    ) {
+                        eprintln!("calculate table error: {:?}", e);
+                    }
                 });
         }
     });
@@ -345,18 +347,16 @@ mod tests {
             .command("calc", calculate_table)
             .finish()
             .testing();
-        let (output, code) = unsafe {
-            extension.call(
-                "calc",
-                Some(vec![
-                    400.0.to_string(),
-                    (-0.00005).to_string(),
-                    (-5.0).to_string(),
-                    80.0.to_string(),
-                    true.to_string(),
-                ]),
-            )
-        };
+        let (output, code) = extension.call(
+            "calc",
+            Some(vec![
+                400.0.to_string(),
+                (-0.00005).to_string(),
+                (-5.0).to_string(),
+                80.0.to_string(),
+                true.to_string(),
+            ]),
+        );
         println!("{:?}", output);
         let (best, lines): (f64, i8) = FromArma::from_arma(output).unwrap();
         assert!(best - 10_393.560_433_295_957 < EPSILON);

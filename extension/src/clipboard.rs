@@ -20,6 +20,7 @@ static mut BUFFER: String = String::new();
 
 #[cfg(feature = "clipboard")]
 pub fn clear() {
+    // Safety: this is all single threaded, so no need to lock
     unsafe {
         BUFFER.clear();
     }
@@ -27,6 +28,7 @@ pub fn clear() {
 
 #[cfg(feature = "clipboard")]
 pub fn append(text: String) {
+    // Safety: this is all single threaded, so no need to lock
     unsafe {
         BUFFER.push_str(&text);
     }
@@ -34,6 +36,7 @@ pub fn append(text: String) {
 
 #[cfg(feature = "clipboard")]
 pub fn complete() -> Result<(), String> {
+    // Safety: this is all single threaded, so no need to lock
     let mut ctx = ClipboardContext::new().map_err(|e| e.to_string())?;
     ctx.set_contents(unsafe { BUFFER.clone() })
         .map_err(|e| e.to_string())?;
