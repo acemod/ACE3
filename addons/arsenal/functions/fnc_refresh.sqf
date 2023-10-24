@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Update current and unique items lists <BOOL> (default: true)
  * 1: Update virtual items list <BOOL> (default: false)
+ * 2: Use panel refresh animation <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -16,7 +17,7 @@
  *
  * Public: Yes
 */
-params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]]];
+params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]], ["_animate", false, [false]]];
 
 TRACE_2("",_updateItems,_updateVirtualItems);
 
@@ -53,6 +54,11 @@ if (_updateVirtualItems) then {
 // Don't refresh left panel if in loadout tab
 if (!isNull findDisplay IDD_loadouts_display) exitWith {};
 
+if (!_animate) then {
+    GVAR(refreshing) = true;
+    [{GVAR(refreshing) = false}, nil, 3] call CBA_fnc_execAfterNFrames;
+};
+
 private _display = findDisplay IDD_ace_arsenal;
 
-[_display, _display displayCtrl GVAR(currentLeftPanel), false] call FUNC(fillLeftPanel);
+[_display, _display displayCtrl GVAR(currentLeftPanel), _animate] call FUNC(fillLeftPanel);

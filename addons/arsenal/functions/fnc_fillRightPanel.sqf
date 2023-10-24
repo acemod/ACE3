@@ -15,7 +15,7 @@
  * Public: No
 */
 
-params ["_display", "_control", ["_animate", false]];
+params ["_display", "_control", ["_animate", true]];
 
 // Fade old control background
 if (!isNil QGVAR(currentRightPanel)) then {
