@@ -39,6 +39,7 @@ PREP(fillLeftPanel);
 PREP(fillLoadoutsList);
 PREP(fillRightPanel);
 PREP(fillSort);
+PREP(filterStatement_weaponType);
 PREP(getVirtualItems);
 PREP(handleActions);
 PREP(handleLoadoutsSearchbar);
