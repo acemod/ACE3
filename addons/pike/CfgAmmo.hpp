@@ -77,7 +77,7 @@ class CfgAmmo {
 
             // Attack profile type selection
             defaultAttackProfile = "LIN";
-            attackProfiles[] = { "LIN" };
+            attackProfiles[] = {"LIN"};
         };
     };
 };

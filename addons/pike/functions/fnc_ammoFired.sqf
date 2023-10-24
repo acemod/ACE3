@@ -23,7 +23,7 @@ if (isNull _projectile) exitWith {};
 
 // Get MissileGuidance args now
 private _firedEH = +_this;
-// Inject the submuntion ammo into guidance args
+// Inject the submunition ammo into guidance args
 _firedEH set [4, getText (configFile >> "CfgAmmo" >> _ammo >> "submunitionAmmo")];
 private _guidanceArgs = _firedEH call EFUNC(missileguidance,onFiredDeferred);
 _projectile setVariable [QGVAR(guidanceArgs), _guidanceArgs];
@@ -35,7 +35,7 @@ _projectile addEventHandler ["SubmunitionCreated", {
 
     private _guidanceArgs = _projectile getVariable [QGVAR(guidanceArgs), []];
     if (_guidanceArgs isEqualTo []) exitWith { ERROR_1("bad args %1",_projectile); };
-    // Inject the submuntion projectile and time into guidance args
+    // Inject the submunition projectile and time into guidance args
     _guidanceArgs params ["_firedEH", "", "", "", "_stateParams"];
     _firedEH set [6, _submunitionProjectile]; // _firedEH params ["","","","","","","_projectile"];
     _stateParams set [0, diag_tickTime]; // _stateParams params ["_lastRunTime"]
