@@ -179,5 +179,11 @@
             <Korean>무게 계산에 개체의 무게를 추가할 지 여부를 결정합니다.</Korean>
             <French>Défini si le poids d'un objet est ajouté aux calculs du poids.</French>
         </Key>
+        <Key ID="STR_ACE_Dragging_weightCoefficient_DisplayName">
+            <English>Max Weight Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_weightCoefficient_Description">
+            <English>Modifies weight limit calculations. Set to 0 to ignore.</English>
+        </Key>
     </Package>
 </Project>
