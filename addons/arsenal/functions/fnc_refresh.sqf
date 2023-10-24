@@ -18,7 +18,6 @@
  * Public: Yes
 */
 params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]], ["_animate", false, [false]]];
-
 TRACE_2("",_updateItems,_updateVirtualItems);
 
 // Don't execute in scheduled environment
@@ -37,6 +36,12 @@ if (_updateItems) then {
 };
 
 private _virtualItems = GVAR(currentBox) getVariable QGVAR(virtualItems);
+
+if (is3DEN) then {
+    _virtualItems = uiNamespace getVariable QGVAR(configItems); // GVAR(currentBox) is nil in 3DEN
+    _animate = true; // CBA frame functions are disabled during preInit
+};
+
 if (isNil "_virtualItems") exitWith {
     [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
     // Delay a frame in case this is running on display open
