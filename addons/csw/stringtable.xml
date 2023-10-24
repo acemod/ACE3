@@ -182,6 +182,7 @@
             <Chinesesimp>弹药存储</Chinesesimp>
             <Russian>Хранилище боеприпасов</Russian>
             <Spanish>Almacenamiento de munición</Spanish>
+            <French>Stockage des munitions</French>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_description">
             <English>Determines whether extra magazines are stored on the ground or inside an ammo box</English>
@@ -192,6 +193,7 @@
             <Chinesesimp>设置多余的弹夹是存放在地面上还是弹药箱内</Chinesesimp>
             <Russian>Определяет будут ли дополнительные магазины лежать на земле или внутри хранилища</Russian>
             <Spanish>Determina si los cargadores extra son almacenados en el suelo o en una caja de munición</Spanish>
+            <French>Détermine si les chargeurs supplémentaires sont stockés par terre ou dans une caisse de munitions.</French>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_weaponHolder">
             <English>Ground</English>
@@ -202,6 +204,7 @@
             <Chinesesimp>地面</Chinesesimp>
             <Russian>Земля</Russian>
             <Spanish>Suelo</Spanish>
+            <French>Sol</French>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_ammoBox">
             <English>Ammo Box</English>
@@ -212,6 +215,7 @@
             <Chinesesimp>弹药箱</Chinesesimp>
             <Russian>Коробка с боеприпасами</Russian>
             <Spanish>Caja de munición</Spanish>
+            <French>Caisse de munitions</French>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
