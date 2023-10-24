@@ -27,3 +27,7 @@ aside {
         overflow: hidden;
     }
 }
+
+a {
+    transition: $transition-default;
+}

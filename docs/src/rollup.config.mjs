@@ -1,5 +1,6 @@
 import terser from "@rollup/plugin-terser";
 import scss from "rollup-plugin-scss";
+import svgicons from "rollup-plugin-svg-icons";
 
 export default {
     input: "./main.js",
@@ -19,6 +20,10 @@ export default {
             fileName: "bundle.css",
             sourceMap: true,
             outputStyle: "compressed",
+        }),
+        svgicons({
+            inputFolder: "./icons",
+            output: "../dist/icons.svg",
         }),
     ],
 };

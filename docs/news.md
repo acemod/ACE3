@@ -28,8 +28,13 @@ parent:
                     </header>
                     {{ post.excerpt }}
                     <footer>
-                        <a class="button small" href="{{ post.url }}">
-                           Read more&nbsp;<img class="icon" src="{{ site.baseurl }}/img/icons/chevronrightwhite.svg" alt="Back" width="16" height="16" aria-hidden="true">
+                        <a class="button button--icon small" href="{{ post.url }}">
+                           <span>Read more</span>
+                           <i class="icon icon--white" aria-hidden="true">
+                                <svg>
+                                    <use href="/dist/icons.svg#chevronright" />
+                                </svg>
+                            </i>
                         </a>
                     </footer>
                 </article>

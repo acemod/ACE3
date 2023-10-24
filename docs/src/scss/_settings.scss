@@ -120,10 +120,12 @@ $font-weight-bold: 700;
 // $jet         : #222222;
 // $black       : #000000;
 
+$transition-default: all .15s ease;
+
 // We use these as default colors throughout
 // $primary-color: #008CBA;
 $primary-color: $ace-primary-color;
-
+$primary-color-lighter: lighten($primary-color, 28%);
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
