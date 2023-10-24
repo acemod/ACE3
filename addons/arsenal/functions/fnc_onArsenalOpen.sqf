@@ -81,6 +81,8 @@ GVAR(statsInfo) = [true, controlNull, nil, nil];
 GVAR(showActions) = true;
 GVAR(currentActionPage) = 0;
 
+GVAR(showFilters) = true;
+
 // Update current item list
 call FUNC(updateCurrentItemsList);
 
@@ -138,6 +140,16 @@ _actionsBoxCtrl ctrlSetPosition [
     11 * GRID_H
 ];
 _actionsBoxCtrl ctrlCommit 0;
+
+// // Handle filters
+// private _filtersBoxCtrl = _display displayCtrl IDC_filtersBox;
+// _filtersBoxCtrl ctrlSetPosition [
+//     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
+//     safezoneY + 78.6 * GRID_H,
+//     47 * GRID_W,
+//     11 * GRID_H
+// ];
+// _filtersBoxCtrl ctrlCommit 0;
 
 // Disable import in MP
 if (isMultiplayer) then {

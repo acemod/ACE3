@@ -64,9 +64,22 @@ PREP_RECOMPILE_END;
     ];
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(displayFilters), {
+    _this call FUNC(handleFilters);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(filtersToggle), {
+    params ["_display", "_showFilters"];
+
+    private _filtersCtrlGroupCtrl = _display displayCtrl IDC_filtersBox;
+
+    _filtersCtrlGroupCtrl ctrlShow (GVAR(showFilters) && {_showFilters});
+}] call CBA_fnc_addEventHandler;
+
 call FUNC(compileActions);
 call FUNC(compileSorts);
 call FUNC(compileStats);
+call FUNC(compileFilters);
 
 [QUOTE(ADDON), {!isNil QGVAR(camera)}] call CBA_fnc_registerFeatureCamera;
 
