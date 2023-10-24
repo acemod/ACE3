@@ -1,7 +1,7 @@
 name: Extensions
 
 on:
-  pull_request:
+  push:
     paths:
     - 'extension/**'
 
@@ -33,7 +33,6 @@ jobs:
       run: cargo tarpaulin --verbose --no-default-features --workspace --timeout 240
 
   build:
-    needs: test
     strategy:
       matrix:
         arrays: [
@@ -50,6 +49,8 @@ jobs:
         target: ${{ matrix.arrays.os.target }}
         toolchain: stable
         default: true
+    - name: Rust Cache
+      uses: Swatinem/rust-cache@v2
     - name: Build
       run: cargo build --verbose
     - name: Upload
