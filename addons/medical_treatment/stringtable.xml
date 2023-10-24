@@ -2890,7 +2890,7 @@
             <French>Prendre la tension</French>
             <Hungarian>Vérnyomás megmérése</Hungarian>
             <Italian>Controlla pressionsa sanguigna</Italian>
-            <Portuguese>Chegar Pressão Sanguínea</Portuguese>
+            <Portuguese>Checar Pressão Arterial</Portuguese>
             <Japanese>血圧を計る</Japanese>
             <Korean>혈압 확인</Korean>
             <Chinesesimp>检查血压</Chinesesimp>
@@ -3024,7 +3024,7 @@
             <Spanish>RCP</Spanish>
             <Hungarian>Újraélesztés</Hungarian>
             <Czech>CPR</Czech>
-            <Portuguese>SBV</Portuguese>
+            <Portuguese>RCP</Portuguese>
             <Japanese>心肺蘇生</Japanese>
             <Korean>심폐소생술</Korean>
             <Chinesesimp>心肺复苏（CPR）</Chinesesimp>
@@ -3041,7 +3041,7 @@
             <Spanish>Realizando RCP...</Spanish>
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
             <Czech>Provádím CPR...</Czech>
-            <Portuguese>Realizando o SBV...</Portuguese>
+            <Portuguese>Realizando o RCP...</Portuguese>
             <Japanese>心肺蘇生をしています・・・</Japanese>
             <Korean>심폐소생 중...</Korean>
             <Chinesesimp>正在进行心肺复苏...</Chinesesimp>
@@ -3812,7 +3812,7 @@
             <German>Herzfrequenz ist %2</German>
             <Hungarian>A szívverés-szám %2</Hungarian>
             <Italian>Il battito cardiaco è %2</Italian>
-            <Portuguese>A Freqüência Cardíaca é de %2</Portuguese>
+            <Portuguese>A Frequência Cardíaca é de %2</Portuguese>
             <Czech>Nahmatal jsi srdeční tep u %2</Czech>
             <Japanese>心拍数は %2</Japanese>
             <Korean>맥박이 %2 입니다</Korean>
@@ -3828,7 +3828,7 @@
             <German>Schwacher Puls</German>
             <Hungarian>A szívverés-szám alacsony</Hungarian>
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
-            <Portuguese>Freqüência Cardíaca baixa</Portuguese>
+            <Portuguese>Frequência Cardíaca baixa</Portuguese>
             <Czech>Nahmatal jsi slabý srdeční puls</Czech>
             <Japanese>心拍数は低い</Japanese>
             <Korean>약한 맥박입니다</Korean>
@@ -3845,7 +3845,7 @@
             <German>Starker Puls</German>
             <Hungarian>A szívverés-szám magas</Hungarian>
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
-            <Portuguese>Freqüência Cardíaca normal</Portuguese>
+            <Portuguese>Frequência Cardíaca normal</Portuguese>
             <Czech>Nahmatal jsi silný srdeční puls</Czech>
             <Japanese>心拍数は強い</Japanese>
             <Korean>강한 맥박입니다</Korean>
@@ -3862,7 +3862,7 @@
             <German>Normaler Puls</German>
             <Hungarian>A szívverés-szám normális</Hungarian>
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
-            <Portuguese>Freqüência Cardíaca alta</Portuguese>
+            <Portuguese>Frequência Cardíaca alta</Portuguese>
             <Czech>Nahmatal jsi normální srdeční puls</Czech>
             <Japanese>心拍数は通常</Japanese>
             <Korean>보통 맥박입니다</Korean>
@@ -3879,7 +3879,7 @@
             <German>Kein Puls gefunden</German>
             <Hungarian>Nem észlelhető szívverés</Hungarian>
             <Italian>Hai riscontrato una assenza di battito cardiaco</Italian>
-            <Portuguese>Sem Freqüência Cardíaca</Portuguese>
+            <Portuguese>Sem Frequência Cardíaca</Portuguese>
             <Czech>Žádný puls</Czech>
             <Japanese>心拍数を測れなかった</Japanese>
             <Korean>맥박을 찾을 수가 없습니다</Korean>
@@ -4596,7 +4596,7 @@
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
-            <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
+            <Portuguese>Curar membros totalmente enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura hitpoints completamente bendati</Italian>
             <French>Guérir les plaies entièrement bandées</French>
