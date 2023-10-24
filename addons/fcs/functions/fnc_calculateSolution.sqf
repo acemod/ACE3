@@ -65,7 +65,7 @@ private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurret
             false
         } count (_vehicle weaponsTurret _turret);
 
-        private _offset = "ace" callExtension ["fcs", [_initSpeed, _airFriction, _angleTarget, _distance]];
+        private _offset = ("ace" callExtension ["fcs", [_initSpeed, _airFriction, _angleTarget, _distance]]) # 0;
         _offset = parseNumber _offset;
 
         _FCSInitSpeed pushBack _initSpeed;
