@@ -1439,32 +1439,21 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
             <English>No effect until tourniquet removed</English>
-            <Korean>지혈대를 제거할 때까지 효과 없음</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
-            <English>Show Tourniquet Warning</English>
-            <Korean>지혈 경고 표시</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
-            <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
-            <Korean>지혈대가 의료 조치를 방해할 경우 경고 툴팁을 표시합니다.</Korean>
-            <Chinesesimp>在车辆库存中</Chinesesimp>
-            <French>dans l'inventaire du véhicule</French>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
-            <English>No effect until tourniquet removed</English>
             <Chinesesimp>止血带取下后才有效果</Chinesesimp>
             <French>Aucun effet jusqu'à ce que le garrot soit retiré</French>
+            <Korean>지혈대를 제거할 때까지 효과 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
             <English>Show Tourniquet Warning</English>
             <Chinesesimp>显示止血带警告</Chinesesimp>
             <French>Afficher l'avertissement du garrot</French>
+            <Korean>지혈 경고 표시</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
             <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
-            <Chinesesimp>当止血带干扰医疗操作时，显示警告提示。</Chinesesimp>
-            <French>Affiche un avertissement lorsqu'un garrot interfère avec une action médicale.</French>
+            <Chinesesimp>在车辆库存中</Chinesesimp>
+            <French>dans l'inventaire du véhicule</French>
+            <Korean>지혈대가 의료 조치를 방해할 경우 경고 툴팁을 표시합니다.</Korean>
         </Key>
     </Package>
 </Project>
