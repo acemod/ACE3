@@ -396,7 +396,7 @@ The same numbers are used for sorting methods as for stats (see `5.4 Stat tab nu
 ## 7. Actions
 
 Actions are a way to execute mission/addon-maker defined scripting from a user-interactable control. They can be used to, for example, equip earplugs, modify weapons, or interact with an equipped gunbag directly from the arsenal.
-When an execution is executed (i.e. the button is clicked), the action's code is executed, and the arsenal display is refreshed on the following frame to take external changes into account.
+When an action is executed (i.e. the button is clicked), the action's code is executed, and the arsenal display is refreshed on the following frame to take external changes into account.
 
 For actions involving frame delays or timers, a second call of the `ace_arsenal_fnc_refresh` function may be required.
 
