@@ -149,7 +149,7 @@
             <Spanish>Efectos de partículas</Spanish>
             <French>Effets de particules </French>
             <Czech>Částicové efekty přehřívání</Czech>
-            <Portuguese>Efeito de parícula de superaquecimento</Portuguese>
+            <Portuguese>Efeito de partícula de superaquecimento</Portuguese>
             <Russian>Эффект частиц при перегреве</Russian>
             <Japanese>過熱の視覚効果</Japanese>
             <Korean>과열 입자 효과</Korean>
@@ -164,7 +164,7 @@
             <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
             <French>Affiche des effets de particules lorsqu'une arme surchauffe.</French>
-            <Portuguese>Mostra efeitos de párticula quando a arma superaquece</Portuguese>
+            <Portuguese>Mostra efeitos de partícula quando a arma superaquece</Portuguese>
             <Russian>Показывать эффект частиц, когда оружие перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
             <Japanese>武器を過熱すると視覚表現を表示します</Japanese>
@@ -212,7 +212,7 @@
             <Italian>Dispersione Surriscaldamento</Italian>
             <Spanish>Dispersión</Spanish>
             <French>Dispersion</French>
-            <Portuguese>Disperção de superaquecimento</Portuguese>
+            <Portuguese>Dispersão de superaquecimento</Portuguese>
             <Russian>Разброс при перегреве</Russian>
             <Czech>Důsledky přehřátí zbraně</Czech>
             <Japanese>過熱による精度の低下</Japanese>
@@ -436,7 +436,7 @@
             <French>Utilisé pour changer de canon.</French>
             <Russian>Используется для смены ствола.</Russian>
             <Hungarian>Használd a cső kicseréléséhez.</Hungarian>
-            <Portuguese>Use para trocar o cano/estriamento.</Portuguese>
+            <Portuguese>Use para trocar o cano.</Portuguese>
             <Italian>Usata per cambiare la canna.</Italian>
             <Japanese>予身の交換に使用します。</Japanese>
             <Korean>총열을 바꿀 때 사용합니다.</Korean>

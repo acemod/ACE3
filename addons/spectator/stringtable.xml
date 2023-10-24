@@ -75,7 +75,7 @@
             <French>Rend les unités IA visibles en spectateur.</French>
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
             <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
-            <Portuguese>Permite que IA seja visivel no espectador</Portuguese>
+            <Portuguese>Permite que IA seja visível no espectador</Portuguese>
             <Czech>Umožňuje sledovat AI v módu diváka</Czech>
             <Spanish>Permitir ver a la IA en espectador</Spanish>
         </Key>
@@ -83,7 +83,7 @@
             <English>Camera modes</English>
             <German>Kameramodus</German>
             <Polish>Tryby kamery</Polish>
-            <Portuguese>Modos de camera</Portuguese>
+            <Portuguese>Modos de câmera</Portuguese>
             <Russian>Режимы камеры</Russian>
             <Czech>Módy kamery</Czech>
             <Spanish>Modos de cámara</Spanish>
@@ -99,7 +99,7 @@
             <English>Camera modes that can be used</English>
             <German>Verwendbare Kameramodi</German>
             <Polish>Tryby kamery, jakie mogą być używane.</Polish>
-            <Portuguese>Modos de camera que podem ser utilizados</Portuguese>
+            <Portuguese>Modos de câmera que podem ser utilizados</Portuguese>
             <Russian>Режимы камеры, которые могут быть использованы</Russian>
             <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
             <Czech>Módy kamery které mohou být použity.</Czech>
@@ -288,7 +288,7 @@
             <English>Night</English>
             <German>Nacht</German>
             <Polish>Noc</Polish>
-            <Portuguese>Visão Norturna</Portuguese>
+            <Portuguese>Visão Noturna</Portuguese>
             <Russian>Ночное</Russian>
             <Czech>Noční</Czech>
             <Spanish>Nocturna</Spanish>
