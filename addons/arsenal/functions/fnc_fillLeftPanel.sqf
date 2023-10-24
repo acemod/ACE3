@@ -247,7 +247,7 @@ if (GVAR(currentLeftPanel) != _ctrlIDC) then {
 
 // Trigger event
 GVAR(currentLeftPanel) = _ctrlIDC;
-[QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel), _animate]] call CBA_fnc_localEvent;
+[QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
 [_display, _control, _display displayCtrl IDC_sortLeftTab, _display displayCtrl IDC_sortLeftTabDirection] call FUNC(fillSort);
