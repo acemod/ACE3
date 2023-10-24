@@ -168,6 +168,17 @@
 #define IDC_actionsPreviousPage 91
 #define IDC_actionsNextPage 92
 #define IDC_actionsCurrentPage 93
+#define IDC_filtersBox 80
+#define IDC_filtersText1 8001
+#define IDC_filtersCheckbox1 8002
+#define IDC_filtersText2 8003
+#define IDC_filtersCheckbox2 8004
+#define IDC_filtersText3 8005
+#define IDC_filtersCheckbox3 8006
+#define IDC_filtersText4 8007
+#define IDC_filtersCheckbox4 8008
+#define IDC_filtersText5 8009
+#define IDC_filtersCheckbox5 8010
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3
