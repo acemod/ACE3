@@ -12,7 +12,7 @@
  * Args <Array>
  *
  * Example:
- * [player, "", "", "", "ACE_Javelin_FGM148", "", theMissile] call ace_missileguidance_fnc_onFiredDeffered
+ * [player, "", "", "", "ACE_Javelin_FGM148", "", theMissile] call ace_missileguidance_fnc_onFiredDeferred
  *
  * Public: No
  */

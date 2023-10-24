@@ -25,7 +25,7 @@ if (isNull _projectile) exitWith {};
 private _firedEH = +_this;
 // Inject the submuntion ammo into guidance args
 _firedEH set [4, getText (configFile >> "CfgAmmo" >> _ammo >> "submunitionAmmo")];
-private _guidanceArgs = _firedEH call EFUNC(missileguidance,onFiredDeffered);
+private _guidanceArgs = _firedEH call EFUNC(missileguidance,onFiredDeferred);
 _projectile setVariable [QGVAR(guidanceArgs), _guidanceArgs];
 
 // On missile deploy start guidance
