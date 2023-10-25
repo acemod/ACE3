@@ -53,7 +53,8 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Open the `Gun` column, check and update the `Bore (inches)`, `Bullet Weight (grains)`, `Bullet Diam (inches)`, `Rifle Twist (in/trn)` and `Done`.
 - Select `M` (Metric unit) at the top right.
 - Open the `Gun` column, check and update the `Muzzle Velocity (m/s)`, the `Zero Range (meters)` and `Done`. 
-- *The Muzzle Velocity Table (`Options`) may need a manual update according to the range card.*
+- *Muzzle Velocities (`Options` - `Muz Vel table`) may need a manual update according to the range card.*
+- *More information about C1: [Example with `Add New Gun` in `GunList`](#35-example-with-add-new-gun-in-gunlist).*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 **In position:**
@@ -68,7 +69,8 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* (Horus manual p.33)
 - `Target Speed`: *Target Speed Assist* (Horus manual p.21)
 - `Target Range (meters)`: *Parameter Limits: 25 - 3700 meters.* (Horus manual p.17)
-- Apply the vertical and horizontal elevations on the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
+- Apply vertical and horizontal elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
+- Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default). 
  
 ### 3.3 Example with Truing tool
 
@@ -117,6 +119,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
+- *For a better accuracy, a Ballistic Coefficient vs. Distance Interpolation table can be used: `Options` - `Drag Coef Table` (Horus manual p.22)*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
 
@@ -130,11 +133,18 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - [ATragMX Framework]({{ site.baseurl }}/wiki/framework/atragmx.html)
 
-### 3.7 Reseting the AtragMx `GunList`
+### 3.7 Reseting AtragMx `GunList`
 
 - Open the Eden Editor and the Extended Debug Console (Ctrl+D).
 - Execute `call ace_atragmx_fnc_clear_user_data` or `call ace_atragmx_fnc_initGunList` (LOCAL EXEC).
 - The original ACE3 `GunList` will be restored (all `Add New Gun` entries deleted).
+
+### 3.8 Example with AtragMx and default ballistic
+
+> Note: ACE3 has two ballistics: the vanilla default ballistic (enabled as default) and the Advanced Ballistics (must be enabled with OPTIONS/ADDON OPTIONS).
+The ACE3 default ballistic doesn't take atmospheric conditions, powder temperature, rifle twist and Earth effects into account.
+The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Velocity` and `Zero Range`. With `Target` column, `Latitude` and `Dir of Fire` are useless. `Atmsphr` column mustn't be updated.
+
 
 
 ## 4. Official References
