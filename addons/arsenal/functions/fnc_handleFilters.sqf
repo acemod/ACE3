@@ -16,6 +16,9 @@
 
 params ["_display", "_ctrlIDC"];
 
+private _filterCtrl = _display displayCtrl IDC_filtersListBox;
+lbClear _filterCtrl;
+
 // Handle sorting
 private _filters = 	GVAR(filterListLeftPanel) select (
 [
@@ -39,16 +42,17 @@ private _filters = 	GVAR(filterListLeftPanel) select (
 	IDC_buttonInsignia
 ] find _ctrlIDC);
 
-// {
-//     if (_x isEqualTo []) then {
-//         continue;
-//     };
+{
+    if (_x isEqualTo []) then {
+        continue;
+    };
+    _x params ["_filterName", "_displayName"];
 
-//     _x params ["_filterName", "_displayName"];
-
-// 	_index = _sortCtrl lbAdd _displayName;
-// 	_sortCtrl lbSetData [_index, _sortName];
-// } forEach _filters;
+	_index = _filterCtrl lbAdd _displayName;
+	_filterCtrl lbSetData [_index, _sortName];
+	_filterCtrl lbSetPicture [_index, "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa"];
+} forEach _filters;
+_filterCtrl lbSetSelected [-1, true, true]; // Start with all filters selected - all items shown
 
 private _show = _filters isNotEqualTo [];
 private _ctrl = _display displayCtrl IDC_filtersBox;
