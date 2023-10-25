@@ -64,10 +64,6 @@ PREP_RECOMPILE_END;
     ];
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(displayFilters), {
-    _this call FUNC(handleFilters);
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(filtersToggle), {
     params ["_display", "_showFilters"];
 
