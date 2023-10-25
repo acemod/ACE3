@@ -278,9 +278,9 @@ class GVAR(display) {
         class filtersBox: RscControlsGroupNoScrollbars {
             idc = IDC_filtersBox;
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
-            y = QUOTE(safeZoneH + safezoneY - 80 * GRID_H);
+            y = QUOTE(safeZoneH + safezoneY - 50 * GRID_H);
             w = QUOTE(47 * GRID_W);
-            h = QUOTE(55 * GRID_H);
+            h = QUOTE(37 * GRID_H);
             class controls {
                 class filtersStaticBackground1: ctrlStaticBackground {
                     idc = -1;
@@ -298,58 +298,30 @@ class GVAR(display) {
                     h = QUOTE(5 * GRID_H);
                     colorBackground[]={0.1,0.1,0.1,0.8};
                 };
-                class filtersText1: RscText {
-                    idc = IDC_filtersText1;
-                    fade = 1;
-                    x = QUOTE(4 * GRID_W);
-                    y = QUOTE(5 * GRID_H);
-                    w = QUOTE(41 * GRID_W);
-                    h = QUOTE(5 * GRID_H);
+                class filtersTitle: RscText {
+                    idc = -1;
+                    style = ST_CENTER;
+                    x = QUOTE(5 * GRID_W);
+                    w = QUOTE(37 * GRID_W);
                     colorBackground[]={0,0,0,0};
-                    colorText[]={0.7,0.7,0.7,1};
+                    shadow=2;
                     sizeEx = QUOTE(5 * GRID_H);
-                    text = "";
+                    text = "Filters";
                 };
-                class filtersCheckbox1: RscCheckbox {
-                    idc = IDC_filtersCheckbox1;
-                    fade = 1;
-                    text = "";
-                    x = QUOTE(1 * GRID_W);
+                class filtersListBox:  RscListBox {
+                    idc = IDC_filtersListBox;
+                    style = LB_MULTI + LB_TEXTURES;
+                    x = QUOTE(0);
                     y = QUOTE(5 * GRID_H);
-                    w = QUOTE(4 * GRID_W);
-                    h = QUOTE(4 * GRID_H);
-                };
-                class filtersText2: filtersText1 {
-                    idc = IDC_filtersText2;
-                    y = QUOTE(10 * GRID_H);
-                };
-                class filtersCheckbox2: filtersCheckbox1 {
-                    idc = IDC_filtersCheckbox2;
-                    y = QUOTE(10 * GRID_H);
-                };
-                class filtersText3: filtersText1 {
-                    idc = IDC_filtersText3;
-                    y = QUOTE(15 * GRID_H);
-                };
-                class filtersCheckbox3: filtersCheckbox1 {
-                    idc = IDC_filtersCheckbox3;
-                    y = QUOTE(15 * GRID_H);
-                };
-                class filtersText4: filtersText1 {
-                    idc = IDC_filtersText4;
-                    y = QUOTE(20 * GRID_H);
-                };
-                class filtersCheckbox4: filtersCheckbox1 {
-                    idc = IDC_filtersCheckbox4;
-                    y = QUOTE(20 * GRID_H);
-                };
-                class filtersText5: filtersText1 {
-                    idc = IDC_filtersText5;
-                    y = QUOTE(25 * GRID_H);
-                };
-                class filtersCheckbox5: filtersCheckbox1 {
-                    idc = IDC_filtersCheckbox5;
-                    y = QUOTE(25 * GRID_H);
+                    w = QUOTE(47 * GRID_W);
+                    h = QUOTE(51 * GRID_H);
+                    colorSelectBackground[] = {1,1,1,0.4};
+                    colorSelectBackground2[] = {1,1,1,0.4};
+                    colorPictureSelected[] = {1,1,1,1};
+                    colorSelect[] = {1,1,1,1};
+                    colorSelect2[] = {1,1,1,1};
+                    colorPictureRightSelected[] = {1,1,1,1};
+                    sizeEx = QUOTE(5 * GRID_H);
                 };
             };
         };
