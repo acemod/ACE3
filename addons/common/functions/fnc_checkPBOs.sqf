@@ -24,7 +24,7 @@
 params ["_mode", ["_checkAll", false], ["_whitelist", "", [""]]];
 TRACE_3("params",_mode,_checkAll,_whitelist);
 
-// Lowercase and convert whiteList string into array of strings:
+// Lowercase and convert whiteList string into array of strings
 _whitelist = toLower _whitelist;
 _whitelist = _whitelist splitString "[,""']";
 TRACE_1("Array",_whitelist);
@@ -41,15 +41,15 @@ if (!isServer) then {
         [_thisType, _thisId] call CBA_fnc_removeEventHandler;
 
         params ["_clientErrors"];
-        _clientErrors params ["_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer"];
+        _clientErrors params ["_missingAddonClient", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer"];
         _thisArgs params ["_mode"];
 
         // Display error message(s)
-        if (_missingAddon || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {
+        if (_missingAddonClient || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {
             private _errorMsg = "[ACE] Version mismatch:<br/><br/>";
             private _error = format ["ACE version mismatch: %1: ", profileName];
 
-            if (_missingAddon) then {
+            if (_missingAddonClient) then {
                 _errorMsg = _errorMsg + "Detected missing addon on client<br/>";
                 _error = _error + "Missing file(s); ";
             };

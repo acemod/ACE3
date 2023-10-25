@@ -9,10 +9,18 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_common_fnc_checkVersionNumber
+ *
  * Public: No
  */
 
-private _whitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
+// Don't execute in scheduled environment
+if (canSuspend) exitWith {
+    [FUNC(checkVersionNumber), _this] call CBA_fnc_directCall;
+};
+
+params [["_whitelist", missionNamespace getVariable ["ACE_Version_Whitelist", []]]];
 
 private _files = CBA_common_addons select {
     (_x select [0, 3] != "a3_") &&
@@ -86,123 +94,54 @@ private _fnc_check = {
         };
     } forEach _files;
 
-    // Client missing addon
-    private _missingAddon = _missingAddons isNotEqualTo [];
 
-    if (_missingAddon) then {
-        private _error = [format ["[ACE] %1: ERROR client missing addon(s): ", _client]];
-        private _cutComma = true;
+    // Check for client missing addons, server missing addons, client outdated addons and server outdated addons
+    private _clientErrors = [];
+    private _errorLog = [];
+    private _errorMsg = "";
+    private _count = 0;
 
-        {
-            if (_forEachIndex >= 11) exitWith {
-                _error pushBack format ["and %1 more.", (count _missingAddons) - 11];
-                _cutComma = false;
+    #define DISPLAY_NUMBER_ADDONS (10 + 1) // +1 to account for header
+
+    {
+        params ["_items", "_string"];
+
+        // Check if something is either missing or outdated
+        _missing = _items isNotEqualTo [];
+
+        if (_missing) then {
+            // Generate error message
+            _errorLog = [format ["[ACE] %1: ERROR %2 addon(s): ", _client, _string]];
+
+            _errorLog append _items;
+
+            // Don't display all missing items, as they are logged
+            _errorMsg = (_errorLog select [0, DISPLAY_NUMBER_ADDONS]) joinString ", ";
+            _errorLog = _errorLog joinString ", ";
+
+            _count = count _items;
+
+            if (_count > DISPLAY_NUMBER_ADDONS) then {
+                _errorMsg = _errorMsg + format ["and %1 more.", _count - DISPLAY_NUMBER_ADDONS];
             };
 
-            _error pushBack format ["%1, ", _x];
-        } forEach _missingAddons;
-
-        _error = _error joinString "";
-
-        // Remove last comma and whitespace
-        if (_cutComma) then {
-            _error = _error select [0, count _error - 2];
+            // Log and display error messages
+            diag_log text _errorLog;
+            [QGVAR(serverLog), _errorLog] call CBA_fnc_serverEvent;
+            [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
         };
 
-        // Display and log error messages
-        diag_log text _error;
-        [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
-        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
-    };
+        _clientErrors pushBack _missing;
+    } forEach [
+        [_missingAddonsClient, "client missing"],
+        [_missingAddonsServer, "server missing"],
+        [_oldVersionsClient, "outdated client"],
+        [_oldVersionsServer, "outdated server"]
+    ];
 
-    // Server missing addon
-    private _missingAddonServer = _missingAddonsServer isNotEqualTo [];
+    TRACE_4("",_missingAddonsClient,_missingAddonsServer,_oldVersionsClient,_oldVersionsServer);
 
-    if (_missingAddonServer) then {
-        private _error = [format ["[ACE] %1: ERROR server missing addon(s): ", _client]];
-        private _cutComma = true;
-
-        {
-            if (_forEachIndex >= 11) exitWith {
-                _error pushBack format ["and %1 more.", (count _missingAddonsServer) - 11];
-                _cutComma = false;
-            };
-
-            _error pushBack format ["%1, ", _x];
-        } forEach _missingAddonsServer;
-
-        _error = _error joinString "";
-
-        // Remove last comma and whitespace
-        if (_cutComma) then {
-            _error = _error select [0, count _error - 2];
-        };
-
-        // Display and log error messages
-        diag_log text _error;
-        [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
-        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
-    };
-
-    // Client outdated addon
-    private _oldVersionClient = _oldVersionsClient isNotEqualTo [];
-
-    if (_oldVersionClient) then {
-        private _error = [format ["[ACE] %1: ERROR outdated client addon(s): ", _client]];
-        private _cutComma = true;
-
-        {
-            if (_forEachIndex >= 11) exitWith {
-                _error pushBack format ["and %1 more.", (count _oldVersionsClient) - 11];
-                _cutComma = false;
-            };
-
-            _error pushBack format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
-        } forEach _oldVersionsClient;
-
-        _error = _error joinString "";
-
-        // Remove last comma and whitespace
-        if (_cutComma) then {
-            _error = _error select [0, count _error - 2];
-        };
-
-        // Display and log error messages
-        diag_log text _error;
-        [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
-        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
-    };
-
-    // Server outdated addon
-    private _oldVersionServer = _oldVersionsServer isNotEqualTo [];
-
-    if (_oldVersionServer) then {
-        private _error = [format ["[ACE] %1: ERROR outdated server addon(s): ", _client]];
-        private _cutComma = true;
-
-        {
-            if (_forEachIndex >= 11) exitWith {
-                _error pushBack format ["and %1 more.", (count _oldVersionsServer) - 11];
-                _cutComma = false;
-            };
-
-            _error pushBack format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
-        } forEach _oldVersionsServer;
-
-        _error = _error joinString "";
-
-        // Remove last comma and whitespace
-        if (_cutComma) then {
-            _error = _error select [0, count _error - 2];
-        };
-
-        // Display and log error messages
-        diag_log text _error;
-        [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
-        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
-    };
-
-    ACE_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];
+    ACE_Version_ClientErrors = _clientErrors;
 
     // Raise event when done
     ["ace_versioning_clientCheckDone", [+ACE_Version_ClientErrors]] call CBA_fnc_localEvent;

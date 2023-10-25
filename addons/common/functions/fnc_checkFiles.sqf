@@ -15,6 +15,11 @@
  * Public: No
  */
 
+ // Don't execute in scheduled environment
+ if (canSuspend) exitWith {
+     [FUNC(checkFiles), nil] call CBA_fnc_directCall;
+ };
+
 ///////////////
 // Check addons
 ///////////////
@@ -158,20 +163,21 @@ if (isMultiplayer) then {
 
     if (isServer) then {
         // Send server's version of ACE to all clients
-        GVAR(ServerVersion) = _mainVersion;
-        GVAR(ServerAddons) = _addons;
-        publicVariable QGVAR(ServerVersion);
-        publicVariable QGVAR(ServerAddons);
+        GVAR(serverVersion) = _mainVersion;
+        GVAR(serverAddons) = _addons;
+        publicVariable QGVAR(serverVersion);
+        publicVariable QGVAR(serverAddons);
     } else {
-        GVAR(ClientVersion) = _version;
-        GVAR(ClientAddons) = _addons;
+        GVAR(clientVersion) = _version;
+        GVAR(clientAddons) = _addons;
 
         private _fnc_check = {
-            if (GVAR(ClientVersion) != GVAR(ServerVersion)) then {
-                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), GVAR(ClientVersion)];
+            if (GVAR(clientVersion) != GVAR(serverVersion)) then {
+                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(serverVersion), GVAR(clientVersion)];
 
                 // Check ACE install
                 call FUNC(checkFiles_diagnoseACE);
+
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
@@ -179,13 +185,14 @@ if (isMultiplayer) then {
                 };
             };
 
-            private _addons = GVAR(ClientAddons) - GVAR(ServerAddons);
+            private _addons = GVAR(clientAddons) - GVAR(serverAddons);
 
             if (_addons isNotEqualTo []) then {
                 private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.", _addons];
 
                 // Check ACE install
                 call FUNC(checkFiles_diagnoseACE);
+
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
@@ -195,8 +202,8 @@ if (isMultiplayer) then {
         };
 
         // Clients have to wait for the variables
-        if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) then {
-            GVAR(ServerVersion) addPublicVariableEventHandler _fnc_check;
+        if (isNil QGVAR(serverVersion) || isNil QGVAR(serverAddons)) then {
+            GVAR(serverVersion) addPublicVariableEventHandler _fnc_check;
         } else {
             call _fnc_check;
         };
