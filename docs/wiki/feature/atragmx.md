@@ -22,7 +22,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ## 2. Requirement
 
-- [Advanced Ballistics module enabled]({{ site.baseurl }}/wiki/feature/advanced-ballistics.html)
+- [Advanced Ballistics enabled]({{ site.baseurl }}/wiki/feature/advanced-ballistics.html)
 
 
 ## 3. Usage
@@ -43,37 +43,41 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 **Start of the mission:**
 
-- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the cartridge, the zeroed distance, the rifle twist, the muzzle velocity at 15°C and the bore height.
+- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the ammunition: bullet diameter, bullet weight, rifle twist, muzzle velocity at 15°C, zeroed distance and bore height.
 
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx1.webp" width="1400" height="600" alt="Range card" /> 
 
-- Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
-- `Open Gun` the 7.62x51mm M80 in the `GunList`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=25)
-- Select `E` (English unit) at the top right. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=10)
-- Open the `Gun` column, check and update the `Bore`, the `Rifle Twist` and `Done`.
+- Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
+- `Open Gun` the 7.62x51mm M80 in the `GunList`.
+- Select `E` (English unit) at the top right.
+- Open the `Gun` column, check and update the `Bore (inches)`, `Bullet Weight (grains)`, `Bullet Diam (inches)`, `Rifle Twist (in/trn)` and `Done`.
 - Select `M` (Metric unit) at the top right.
-- Open the `Gun` column, check and update the `Muzzle Velocity`, the `Zero Range` and `Done`. 
-- *The Muzzle Velocity Table will be automatically updated.* [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
-- *(Must be edited manually for specific cartridges according with the range card)*
+- Open the `Gun` column, check and update the `Muzzle Velocity (m/s)`, the `Zero Range (meters)` and `Done`. 
+- *The Muzzle Velocity Table (`Options`) may need a manual update according to the range card.*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 **In position:**
 
-- Update the `Atmsphr` column with the [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html) and `Done`.
+- Update the `Atmsphr` column and `Done`. Basic tool needed: [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html).
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
-- Update the `Target` column (the [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html) will also help). [[1]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=16) [[2]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30) [[3]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=32) [[4]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=33)
-- *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf).*
+- Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipments]({{ site.baseurl }}/wiki/feature.html)
+- `Latitude`: *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or the Eden Editor's Extended Debug Console: Watch `ace_common_maplatitude`.*
+- `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* (Horus manual p.14)
+- `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* (Horus manual p.32)
+- `Wind Diretion (clock)`: *[...], wind is always described in terms of where it is coming from.* (Horus manual p.16)
+- `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* (Horus manual p.33)
+- `Target Speed`: *Target Speed Assist* (Horus manual p.21)
+- `Target Range (meters)`: *Parameter Limits: 25 - 3700 meters.* (Horus manual p.17)
 - Apply the vertical and horizontal elevations on the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
-- Control the breath and press.
  
 ### 3.3 Example with Truing tool
 
-- Open the `Truing Drop` in the `Options` menu. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=23)
+- Open the `Truing Drop` in the `Options` menu.
 - Add the actual `Target Range` in the `SUPER` column and `Calc`.
 - Add the same `Target Range` in the `SUB` column  and `Calc`.
 - Apply the actual scope elevation in the `Drop` field and `Calc`.
 - `Accept` the new `C1`, `Gun` column and `Elev` are updated.
-- *The Drag Coefficient Table will be automatically updated.* [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
+- *The Drag Coefficient Table will be automatically updated.*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.webp" width="1127" height="600" alt="Calculation" />
@@ -87,23 +91,24 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 ### 3.4 Example with overwritten zero distance
 
 - The `Default zero distance` can be overwritten with the [Scopes Options]({{ site.baseurl }}/wiki/feature/scopes.html), the [Scopes Framework]({{ site.baseurl }}/wiki/framework/scopes-framework.html) or the [CBA Settings System](https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System).
-- In this case, the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) will be automatically updated, NOT the AtragMx.
-- Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
+- In this case, the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) will be automatically updated, **NOT the AtragMx**.
+- Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx41.webp" width="1400" height="600" alt="Zero distance 300m" />
 
 ### 3.5 Example with `Add New Gun` in `GunList`
 
-- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the bullet diameter, the bullet weight, the **(bullet Class Name)** and the muzzle velocities.
-- Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
-- Select `Add New Gun` in the `GunList`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=25)
+- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the ammunition: **bullet Class Name**, bullet diameter, bullet weight, rifle twist, muzzle velocities, zeroed distance and bore height.
+- Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
+- Select `Add New Gun` in the `GunList`.
 - Add a `New Gun Name` and `Open Gun`.
-- Select `E` (English unit) at the top right. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=10)
-- Open the `Gun` column, check and update the `Bullet Weight (grains)`, the `Bullet Diam (inches)` and `Done`.
+- Select `E` (English unit) at the top right.
+- Open the `Gun` column, check and update the `Bore (inches)`, `Bullet Weight (grains)`, `Bullet Diam (inches)`, `Rifle Twist (in/trn)` and `Done`.
 - Select `M` (Metric unit) at the top right.
+- Open the `Gun` column, check and update the `Zero Range (meters)` and `Done`. 
 - Open the `Muz Vel Table` in the `Options` menu or click on `MV` in the `Gun` column. 
-- Edit manually the `Muzzle Velocity Table` according with the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
+- Edit manually the `Muzzle Velocity Table` according to the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and `Done`.
 - The `C1 coefficient` of the bullet can be found with the Eden Editor `Config Viewer`:
 
 > configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "ACE_ballisticCoefficients"
@@ -128,7 +133,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 ### 3.7 Reseting the AtragMx `GunList`
 
 - Open the Eden Editor and the Extended Debug Console (Ctrl+D).
-- Execute `call ace_atragmx_fnc_clear_user_data` (LOCAL EXEC).
+- Execute `call ace_atragmx_fnc_clear_user_data` or `call ace_atragmx_fnc_initGunList` (LOCAL EXEC).
 - The original ACE3 `GunList` will be restored (all `Add New Gun` entries deleted).
 
 
