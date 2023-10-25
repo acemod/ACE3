@@ -31,6 +31,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
 private _indexesToIgnore = [];
+private _dependsArray = [];
 private _processedSelections = [];
 
 {
@@ -128,8 +129,10 @@ private _processedSelections = [];
             ERROR_2("[%1] hitpoint [%2] is both a group-parent and a depends and will be unrepairable",_type,_hitpoint);
             ERROR_1("group: %1",_hitpointGroups # _groupIndex);
         };
+        private _dependsParentHitpoint = [_vehCfg >> "HitPoints" >> _hitpoint, "depends"] call BIS_fnc_returnConfigEntry;
 
         _indexesToIgnore pushBack _forEachIndex;
+        _dependsArray pushBack [_dependsParentHitpoint, _hitpoint];
         _processedSelections pushBack _selection;
         continue
     };
@@ -150,4 +153,4 @@ private _processedSelections = [];
 _initializedClasses set [_type, _indexesToIgnore];
 missionNamespace setVariable [QGVAR(hitPointsToIgnoreInitializedClasses), _initializedClasses];
 
-_indexesToIgnore
+[_indexesToIgnore, _dependsArray]

@@ -31,7 +31,7 @@ if (_type in _initializedClasses) exitWith {};
 if (_type == "") exitWith {};
 
 // get selections to ignore
-private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
+([_vehicle] call FUNC(getSelectionsToIgnore)) params["_selectionsToIgnore", "_dependsArray"];
 
 // get all hitpoints and selections
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
@@ -155,6 +155,15 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         _hitPointsAddedNames = _trackArray select 0;
         _hitPointsAddedStrings = _trackArray select 1;
         _hitPointsAddedAmount = _trackArray select 2;
+
+        // Add name of dependant hitpoints to the parent hitpoint
+        { 
+            if (_hitpoint == (_x select 0)) then {
+                private _dependsHitpoint = (_x select 1);
+                ([_dependsHitpoint, "%1", _dependsHitpoint, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_dependsText", ""];
+                _text = _text + " / " + _dependsText;
+            };
+        } forEach _dependsArray;
 
         if (_hitpoint in TRACK_HITPOINTS) then {
             _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
