@@ -98,7 +98,7 @@
             <Turkish>Kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_noVirtualItems">
-            <English>No virtual item available</English>
+            <English>No virtual items available</English>
             <Spanish>Ningún objeto virtual disponible</Spanish>
             <French>Aucun objet virtuel disponible.</French>
             <German>Kein virtuelles Objekt verfügbar</German>
@@ -1537,6 +1537,7 @@
             <Japanese>顔の保存</Japanese>
             <Polish>Zapisz Twarz</Polish>
             <German>Gesicht Speichern</German>
+            <French>Sauvegarder le visage</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
@@ -1546,6 +1547,7 @@
             <Japanese>声の保存</Japanese>
             <Polish>Zapisz Głos</Polish>
             <German>Stimme Speichern</German>
+            <French>Sauvegarder la voix</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
@@ -1555,13 +1557,15 @@
             <Japanese>記章(バッジ)の保存</Japanese>
             <Polish>Zapisz Naszywkę</Polish>
             <German>Insignia Speichern</German>
+            <French>Sauvegarder l'insigne</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortDescending">
             <English>Descending</English>
-            <Japanese>下降</Japanese>
+            <Japanese>降順</Japanese>
             <Polish>Malejąco</Polish>
             <German>Absteigend</German>
             <Korean>내림차순</Korean>
+            <French>Décroissant</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortAscending">
             <English>Ascending</English>
@@ -1569,6 +1573,7 @@
             <Polish>Rosnąco</Polish>
             <German>Aufsteigend</German>
             <Korean>오름차순</Korean>
+            <French>Croissant</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
@@ -1592,6 +1597,12 @@
             <Polish>Ilość amunicji</Polish>
             <German>Munitionszahl</German>
             <Korean>장탄 수</Korean>
+            <French>Nombre de munitions</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statIlluminators">
+            <English>Illuminators</English>
+            <French>Illuminateurs</French>
+            <Korean>조명</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
@@ -1599,6 +1610,7 @@
             <Polish>Domyślnie do Ulubionych</Polish>
             <German>Standardmäßig auf Favoriten eingestellt</German>
             <Korean>즐겨찾기 기본값</Korean>
+            <French>Favoris par défaut</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
@@ -1606,6 +1618,7 @@
             <Polish>Kontroluje, czy ACE Arsenal domyślnie wyświetla wszystkie przedmioty, czy tylko ulubione.</Polish>
             <German>Steuert, ob das ACE Arsenal standardmäßig alle Gegenstände oder nur Favoriten anzeigt.</German>
             <Korean>ACE 아스널이 기본적으로 모든 아이템 또는 즐겨찾기를 표시할 지 여부를 조정합니다.</Korean>
+            <French>Contrôle si l'arsenal ACE affiche par défaut tous les éléments ou les favoris.</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
@@ -1613,6 +1626,7 @@
             <Polish>Kolor Ulubionych</Polish>
             <German>Favoritenfarbe</German>
             <Korean>즐겨찾기 색상</Korean>
+            <French>Couleurs favorites</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
@@ -1620,6 +1634,7 @@
             <Polish>Kolor podświetlenia ulubionych elementów.</Polish>
             <German>Hervorhebungsfarbe für Lieblingsgegenstände.</German>
             <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
+            <French>Met en surbrillance les éléments favoris.</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
@@ -1627,6 +1642,7 @@
             <Polish>Przełączanie między wyświetlaniem wszystkich przedmiotów lub tylko ulubionych. \nKliknij dwukrotnie, przytrzymując Shift, aby dodać lub usunąć przedmiot.</Polish>
             <German>Wechseln Sie zwischen der Anzeige aller Elemente oder Ihrer Favoriten.\nDoppelklicken Sie bei gedrückter Umschalttaste, um ein Element hinzuzufügen oder zu entfernen.</German>
             <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
+            <French>Change entre l'affichage de tous les éléments ou de vos favoris.\nDouble-cliquez en maintenant la touche Maj enfoncée pour ajouter ou supprimer un élément.</French>
         </Key>
     </Package>
 </Project>

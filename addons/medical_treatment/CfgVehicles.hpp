@@ -7,20 +7,20 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0";
         scope = 1;
-        scopeCurator = 2;
+        scopeCurator = 1;
         side = -1;
-        model = QPATHTOEF(apl,ace_bodybag.p3d);
         icon = "";
-        displayName = CSTRING(Bodybag_Display);
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition)[] = {0,1.2,0};
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
         EGVAR(cargo,noRename) = 1;
+        model = "\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_F.p3d";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {QPATHTOEF(apl,data\bodybag_co.paa)};
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_black_CO.paa"};
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
@@ -37,6 +37,20 @@ class CfgVehicles {
                 };
             };
         };
+    };
+    class ACE_bodyBagObject_blue: ACE_bodyBagObject {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_blue_f0";
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_blue_CO.paa"};
+    };
+    class ACE_bodyBagObject_white: ACE_bodyBagObject {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_white_f0";
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_white_CO.paa"};
+    };
+    class ACE_bodyBagObject_old: ACE_bodyBagObject {
+        displayName = CSTRING(Bodybag_Display);
+        model = QPATHTOEF(apl,ace_bodybag.p3d);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOEF(apl,data\bodybag_co.paa)};
     };
 
     // Grave vehicle
@@ -354,6 +368,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_personalAidKit,3);
             MACRO_ADDITEM(ACE_surgicalKit,2);
             MACRO_ADDITEM(ACE_bodyBag,5);
+            MACRO_ADDITEM(ACE_suture,60);
         };
     };
 

@@ -184,6 +184,26 @@
             <Czech>Ovlivňuje množství kývání zbraní. Vyšší znamená více kývání.</Czech>
             <Korean>손떨림의 정도를 정합니다. 높을 수록 많이 휘적입니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_RestedSwayFactor">
+            <English>Rested sway factor</English>
+            <French>Facteur de balancement au repos</French>
+            <Korean>휴식 시 손떨림 정도</Korean>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_RestedSwayFactor_Description">
+            <English>Influences the amount of weapon sway while weapon is rested.</English>
+            <French>Influence le degré de balancement de l'arme au repos.</French>
+            <Korean>무기가 아무런 행동도 하지 않는 동안 무기가 흔들리는 정도를 정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor">
+            <English>Deployed sway factor</English>
+            <French>Facteur de balancement déployé</French>
+            <Korean>거치 시 손떨림 정도</Korean>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor_Description">
+            <English>Influences the amount of weapon sway while weapon is deployed.</English>
+            <French>Influence le degré de balancement de l'arme déployée.</French>
+            <Korean>무기를 거치하는 동안 무기를 흔드는 정도를 정합니다.</Korean>
+        </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
             <Spanish>Activada</Spanish>

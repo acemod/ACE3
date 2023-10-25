@@ -27,6 +27,7 @@ PREP(canGetInPosition);
 PREP(canInteractWith);
 PREP(changeProjectileDirection);
 PREP(checkFiles);
+PREP(checkFiles_diagnoseACE);
 PREP(checkPBOs);
 PREP(claim);
 PREP(claimSafeServer);

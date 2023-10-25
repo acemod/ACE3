@@ -1,6 +1,13 @@
-jQuery(document).foundation();
-
 jQuery(document).ready(function(){
+
+    const $navigation = jQuery("nav.top-bar");
+    const $navigationToggle = $navigation.find(".toggle-topbar a");
+    $navigationToggle.on("click", (e) => {
+        e.preventDefault();
+        $navigation.toggleClass("expanded");
+    });
+
+
     var $slider = jQuery(".slider");
     if ($slider.length > 0) {
         $slider.slick({
@@ -26,7 +33,8 @@ jQuery(document).ready(function(){
     if ($toc.length > 0) {
         $toc.toc({
             headers: "#content h2, #content h3, #content h4, #content h5, #content h6",
-            showEffect: "none"
+            showEffect: "none",
+            noBackToTopLinks: true
         });
 
         if ($toc.html() === "") {

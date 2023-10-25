@@ -17,7 +17,7 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
             {!isNil {_target getVariable QGVAR(dogtagData)}}
         ] call EFUNC(interact_menu,createAction);
 
-        ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _checkTagAction] call EFUNC(interact_menu,addActionToClass);
+        ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _checkTagAction, true] call EFUNC(interact_menu,addActionToClass);
 
         private _takeTagAction = [
             "ACE_TakeDogtag",
@@ -27,7 +27,7 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
             {(!isNil {_target getVariable QGVAR(dogtagData)}) && {((_target getVariable [QGVAR(dogtagTaken), objNull]) != _target)}}
         ] call EFUNC(interact_menu,createAction);
 
-        ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _takeTagAction] call EFUNC(interact_menu,addActionToClass);
+        ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _takeTagAction, true] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (isServer) then {

@@ -78,6 +78,7 @@
             <Japanese>冷却係数</Japanese>
             <Russian>Коэф. остывания</Russian>
             <Spanish>Coeficiente de enfriado</Spanish>
+            <French>Coefficient de refroidissement</French>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
@@ -88,6 +89,7 @@
             <Japanese>武器の冷却速度の係数。\n値を大きくすると冷却速度が速くなります。</Japanese>
             <Russian>Коэффициент скорости остывания орудия.\nЧем больше значение, тем быстрее остывает.</Russian>
             <Spanish>Coeficiente para cómo de rápido se enfría un arma.\nValores más altos incrementan la velocidad de enfriamiento.</Spanish>
+            <French>Coefficient de rapidité de refroidissement de l'arme.\nUne valeur élevée augmente la vitesse de refroidissement.</French>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
             <English>Suppressor Coefficient</English>
@@ -98,6 +100,7 @@
             <Japanese>サプレッサー係数</Japanese>
             <Russian>Коэф. глушителя</Russian>
             <Spanish>Coeficiente del silenciador</Spanish>
+            <French>Coefficient de suppresion</French>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
@@ -108,6 +111,7 @@
             <Japanese>サプレッサーを取り付けることで追加される熱量の係数。\n値が大きいほど熱が増加し、0はサプレッサーからの追加の熱がないことを意味します。</Japanese>
             <Russian>Коэффициент указывающий как много дополнительного тепла будет выделяться прикреплённым глушителем.\nБольшее значение увеличивает выделение тепла, 0 - отсутствие дополнительного тепла.</Russian>
             <Spanish>Coeficiente para cuanto calor adicional es añadido por tener un silenciador montado.\nValores más altos incrementan el calor. 0 significa que el silenciador no añade calor adicional.</Spanish>
+            <French>Coefficient d'ajout de chaleur lorsqu'un suppresseur est installé.\nUne valeur élevée augmente la chaleur, 0 signifique qu'aucune chaleur ne sera ajouté par le suppresseur.</French>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>
@@ -149,7 +153,7 @@
             <Spanish>Efectos de partículas</Spanish>
             <French>Effets de particules </French>
             <Czech>Částicové efekty přehřívání</Czech>
-            <Portuguese>Efeito de parícula de superaquecimento</Portuguese>
+            <Portuguese>Efeito de partícula de superaquecimento</Portuguese>
             <Russian>Эффект частиц при перегреве</Russian>
             <Japanese>過熱の視覚効果</Japanese>
             <Korean>과열 입자 효과</Korean>
@@ -164,7 +168,7 @@
             <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
             <French>Affiche des effets de particules lorsqu'une arme surchauffe.</French>
-            <Portuguese>Mostra efeitos de párticula quando a arma superaquece</Portuguese>
+            <Portuguese>Mostra efeitos de partícula quando a arma superaquece</Portuguese>
             <Russian>Показывать эффект частиц, когда оружие перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
             <Japanese>武器を過熱すると視覚表現を表示します</Japanese>
@@ -212,7 +216,7 @@
             <Italian>Dispersione Surriscaldamento</Italian>
             <Spanish>Dispersión</Spanish>
             <French>Dispersion</French>
-            <Portuguese>Disperção de superaquecimento</Portuguese>
+            <Portuguese>Dispersão de superaquecimento</Portuguese>
             <Russian>Разброс при перегреве</Russian>
             <Czech>Důsledky přehřátí zbraně</Czech>
             <Japanese>過熱による精度の低下</Japanese>
@@ -436,7 +440,7 @@
             <French>Utilisé pour changer de canon.</French>
             <Russian>Используется для смены ствола.</Russian>
             <Hungarian>Használd a cső kicseréléséhez.</Hungarian>
-            <Portuguese>Use para trocar o cano/estriamento.</Portuguese>
+            <Portuguese>Use para trocar o cano.</Portuguese>
             <Italian>Usata per cambiare la canna.</Italian>
             <Japanese>予身の交換に使用します。</Japanese>
             <Korean>총열을 바꿀 때 사용합니다.</Korean>
