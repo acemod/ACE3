@@ -53,7 +53,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Open the `Gun` column, check and update the `Bore (inches)`, `Bullet Weight (grains)`, `Bullet Diam (inches)`, `Rifle Twist (in/trn)` and `Done`.
 - Select `M` (Metric unit) at the top right.
 - Open the `Gun` column, check and update the `Muzzle Velocity (m/s)`, the `Zero Range (meters)` and `Done`. 
-- *Muzzle Velocities (`Options` - `Muz Vel table`) may need a manual update according to the range card.*
+- *Muzzle Velocities (`Options` / `Muz Vel table`) may need a manual update according to the range card.*
 - *More information about C1: [Example with `Add New Gun` in `GunList`](#35-example-with-add-new-gun-in-gunlist).*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
@@ -65,7 +65,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - `Latitude`: *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or the Eden Editor's Extended Debug Console: Watch `ace_common_maplatitude`.*
 - `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* (Horus manual p.14)
 - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* (Horus manual p.32)
-- `Wind Diretion (clock)`: *[...], wind is always described in terms of where it is coming from.* (Horus manual p.16)
+- `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* (Horus manual p.16)
 - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* (Horus manual p.33)
 - `Target Speed`: *Target Speed Assist* (Horus manual p.21)
 - `Target Range (meters)`: *Parameter Limits: 25 - 3700 meters.* (Horus manual p.17)
@@ -119,7 +119,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
-- *For a better accuracy, a Ballistic Coefficient vs. Distance Interpolation table can be used: `Options` - `Drag Coef Table` (Horus manual p.22)*
+- *For a better accuracy, a Ballistic Coefficient vs. Distance Interpolation table can be used: `Options` / `Drag Coef Table` (Horus manual p.22)*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
 
@@ -141,11 +141,36 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ### 3.8 Example with AtragMx and default ballistic
 
-> Note: ACE3 has two ballistics: the vanilla default ballistic (enabled as default) and the Advanced Ballistics (must be enabled with OPTIONS/ADDON OPTIONS).
+> Note: ACE3 has two ballistics: the vanilla default ballistic (enabled as default) and the [Advanced Ballistics]({{ site.baseurl }}/wiki/feature/advanced-ballistics.html) (must be enabled).
 The ACE3 default ballistic doesn't take atmospheric conditions, powder temperature, rifle twist and Earth effects into account.
 The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Velocity` and `Zero Range`. With `Target` column, `Latitude` and `Dir of Fire` are useless. `Atmsphr` column mustn't be updated.
 
+**Start of the mission:**
 
+- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the ammunition: **bullet Class Name**, muzzle velocity, zeroed distance and bore height.
+- Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
+- Select `E` (English unit) at the top right.
+- Open the `Gun` column, check and update the `Bore (inches)` and `Done`.
+- Select `M` (Metric unit) at the top right.
+- Open the `Gun` column, check and update the `Muzzle Velocity (m/s)`, the `Zero Range (meters)` and `Done`. 
+- `C1 coefficient` of the bullet = `airFriction x -1000`.
+- `airFriction` can be found with the Eden Editor `Config Viewer`:
+
+> configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "airFriction"
+
+- *AtragMx is configured with `C1 coefficient` according to vanilla weapons in `GunList`.*
+- Optionally, `Save Gun` and `Done` in the `GunList`.
+ 
+**In position:**
+
+- Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipments]({{ site.baseurl }}/wiki/feature.html)
+- `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* (Horus manual p.32)
+- `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* (Horus manual p.16)
+- `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* (Horus manual p.33)
+- `Target Speed`: *Target Speed Assist* (Horus manual p.21)
+- `Target Range (meters)`: *Parameter Limits: 25 - 3700 meters.* (Horus manual p.17)
+- Apply vertical and horizontal elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
+- Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default). 
 
 ## 4. Official References
 
