@@ -21,7 +21,7 @@ lbClear _filterCtrl;
 GVAR(filters) = [];
 
 // Handle sorting
-private _filters = 	GVAR(filterListLeftPanel) select (
+private _filters = GVAR(filterListLeftPanel) select (
 [
     IDC_buttonPrimaryWeapon,
     IDC_buttonHandgun,
