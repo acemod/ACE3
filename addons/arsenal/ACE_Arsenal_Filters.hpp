@@ -9,49 +9,49 @@ class GVAR(filters) {
 
     class ACE_weaponTypeARifle: filterBase {
         scope = 2;
-        displayName = "$STR_a3_rscdisplayarsenal_filter_weaponTypeARifle";
+        displayName = CSTRING(filterARifleText);
         tabs[] = {{0}, {}};
         statement = QUOTE([ARR_2(_this, 'arifle')] call FUNC(filterStatement_weaponType));
     };
 
     class ACE_weaponTypeSRifle: filterBase {
         scope = 2;
-        displayName = "$STR_a3_rscdisplayarsenal_filter_weaponTypeSRifle";
+        displayName = CSTRING(filterSRifleText);
         tabs[] = {{0}, {}};
         statement = QUOTE([ARR_2(_this, 'srifle')] call FUNC(filterStatement_weaponType));
     };
 
     class ACE_weaponTypeMG: filterBase {
         scope = 2;
-        displayName = "$STR_a3_rscdisplayarsenal_filter_weaponTypeMG";
+        displayName = CSTRING(filterMGText);
         tabs[] = {{0}, {}};
         statement = QUOTE([ARR_2(_this, 'mg')] call FUNC(filterStatement_weaponType));
     };
 
     class ACE_weaponTypeHGun: filterBase {
         scope = 2;
-        displayName = "$STR_a3_rscdisplayarsenal_filter_weaponTypeHGun";
+        displayName = CSTRING(filterHGunText);
         tabs[] = {{1}, {}};
         statement = QUOTE([ARR_2(_this, 'hgun')] call FUNC(filterStatement_weaponType));
     };
 
     class ACE_weaponTypeMissile: filterBase {
         scope = 2;
-        displayName = "$STR_a3_rscdisplayarsenal_filter_weaponTypeMissile";
+        displayName = CSTRING(filterMissileText);
         tabs[] = {{2}, {}};
         statement = QUOTE([ARR_2(_this, 'missile')] call FUNC(filterStatement_weaponType));
     };
 
     class ACE_weaponTypeRocket: filterBase {
         scope = 2;
-        displayName = "$STR_a3_rscdisplayarsenal_filter_weaponTypeRocket";
+        displayName = CSTRING(filterRocketText);
         tabs[] = {{2}, {}};
         statement = QUOTE([ARR_2(_this, 'rocket')] call FUNC(filterStatement_weaponType));
     };
 
     class ACE_weaponTypeOther: filterBase {
         scope = 2;
-        displayName = "$STR_a3_rscdisplayarsenal_filter_weaponTypeOther";
+        displayName = CSTRING(filterOtherText);
         tabs[] = {{0,1,2}, {}};
         statement = QUOTE([ARR_2(_this, 'other')] call FUNC(filterStatement_weaponType));
     };
