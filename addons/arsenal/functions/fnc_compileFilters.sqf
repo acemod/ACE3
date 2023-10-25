@@ -85,6 +85,7 @@ private _finalArray = [];
     };
 
     _finalArray = ["", _displayName, _statement, _condition];
+    TRACE_3("Filter array:", _finalArray, _leftTabsList, _rightTabsList);
 
     if (_leftTabsList isNotEqualTo []) then {
         [_filterListLeftPanel, _leftTabsList, "L"] call _fnc_addToTabs;

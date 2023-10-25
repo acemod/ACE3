@@ -236,10 +236,13 @@ private _selectedItem = switch (true) do {
     };
 };
 
-// When switching tabs, clear searchbox
+// When switching tabs...
 if (GVAR(currentLeftPanel) != _ctrlIDC) then {
+    // Clear searchbox
     (_display displayCtrl IDC_leftSearchbar) ctrlSetText "";
     (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
+    // Find new filters
+    [_display, _ctrlIDC] call FUNC(fillFilters);
 };
 
 // Trigger event
@@ -248,8 +251,6 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 
 // Sort
 [_display, _control, _display displayCtrl IDC_sortLeftTab, _display displayCtrl IDC_sortLeftTabDirection] call FUNC(fillSort);
-
-[_display, _ctrlIDC] call FUNC(fillFilters);
 
 // Try to select previously selected item again, otherwise select first item ("Empty")
 if (_selectedItem != "") then {

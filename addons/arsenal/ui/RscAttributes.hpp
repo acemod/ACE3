@@ -322,6 +322,7 @@ class GVAR(display) {
                     colorSelect2[] = {1,1,1,1};
                     colorPictureRightSelected[] = {1,1,1,1};
                     sizeEx = QUOTE(5 * GRID_H);
+                    onLBSelChanged = QUOTE(_this call FUNC(handleFilters));
                 };
             };
         };

@@ -44,6 +44,7 @@ PREP(fillSort);
 PREP(filterStatement_weaponType);
 PREP(getVirtualItems);
 PREP(handleActions);
+PREP(handleFilters);
 PREP(handleLoadoutsSearchbar);
 PREP(handleMouse);
 PREP(handleScrollWheel);
