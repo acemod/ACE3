@@ -20,7 +20,7 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH"];
 _firedEH params ["","","","","","","_projectile"];
-_attackProfileStateParams params ["", "_trajectoryBallistic", "_checkOrientation"];
+_attackProfileStateParams params ["_trajectoryBallistic", "_checkOrientation"];
 
 private _projectilePos = getPosASL _projectile;
 private _projectileVelocity = velocity _projectile;
@@ -61,9 +61,9 @@ if (_aimElev > _velocityElev) then {
 
 // prevent rare "boomerang" at extremely high elevation shots the round won't flip correctly at apex
 if (_isFalling && _checkOrientation) then {
-    _attackProfileStateParams set [2, false];
+    TRACE_1("kicking missle over",_projectile);
+    _attackProfileStateParams set [1, false];
     [_projectile, vectorNormalized _projectileVelocity] call EFUNC(missileguidance,changeMissileDirection);
 };
 
 _aimASL
-

@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, "", "", "", "ACE_Javelin_FGM148", "", theMissile] call ace_missileguidance_fnc_onFired;
+ * [player, "", "", "", "ACE_Javelin_FGM148", "", theMissile] call ace_missileguidance_fnc_onFiredDeferred;
  *
  * Public: No
  */
@@ -103,7 +103,7 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ CBA_missionTime, [], [], _lastKnownPosState, _submunitionArray ]
+            [ diag_tickTime, [], [], _lastKnownPosState, _submunitionArray ]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");

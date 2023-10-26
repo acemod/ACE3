@@ -3,10 +3,11 @@ class CfgAmmo {
     class SubmunitionBase;
     class ace_155mm_m712_launch: SubmunitionBase {
         model = "\A3\weapons_f\ammo\shell";
-        hit = 160;
+        hit = 160; // low for testing
         indirectHit = 50;
         indirectHitRange = 8;
 
+        GVAR(deployCondition) = QFUNC(copperhead_deployCondition);
         submunitionAmmo = "ace_155mm_m712_guidance";
         submunitionCount = 1;
         submunitionConeAngle = 0;
@@ -15,7 +16,9 @@ class CfgAmmo {
         airFriction = 0;
 
         EGVAR(frag,skip) = 1; // don't frag because this is a scripted ammo
-
+        class Eventhandlers {
+            fired = QUOTE(call FUNC(submunition_ammoFired));
+        };
         class CamShakeFire {
             power = 3.00922;
             duration = 1.8;
@@ -27,10 +30,6 @@ class CfgAmmo {
             duration = 0.1;
             frequency = 20;
             distance = 1;
-        };
-        class ace_missileguidance {
-            enabled = 1;
-            submunitionCondition = QFUNC(copperhead_submunitionCondition);
         };
     };
 
@@ -72,9 +71,11 @@ class CfgAmmo {
         timeToLive = 200;
 
         class ace_missileguidance {
-            enabled = 1;
+            enabled = 2;
 
             useVanillaDeflection = 1; // use missileTarget for deflection
+            minDeflection = 0.01;      // Minium flap deflection for guidance
+            maxDeflection = 0.01;       // Maximum flap deflection for guidance
 
             canVanillaLock = 0;
 
@@ -85,11 +86,11 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL" };
 
-            seekerAngle = 30;           // Angle in front of the missile which can be searched
+            seekerAngle = 70;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
 
             seekerMinRange = 0;
-            seekerMaxRange = 1750;      // Range from the missile which the seeker can visually search
+            seekerMaxRange = 3000;      // Range from the missile which the seeker can visually search
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
 
