@@ -19,6 +19,8 @@
 
 params ["_unit", "_deltaT", "_syncValue"];
 
+if (!GVAR(simulateSpO2)) exitWith {};
+
 #define IDEAL_PPO2 0.255
 
 private _current = GET_SPO2(_unit);
