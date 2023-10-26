@@ -22,7 +22,7 @@ params ["_surfaceType", "_components", "_position"];
 private _didHitArm = _components findAny GVAR(armComponents) isNotEqualTo -1;
 private _didHitGun = _surfaceType isEqualTo "" && _components isEqualTo [];  // Could be potential for edge cases here however couldn't find any from testing.
 
-if (!_didHitArm && !_didHitGun) exitWith {}; // Exit if it didn't hit an arm and also didn't hit a gun.
+if !(_didHitArm || _didHitGun) exitWith {};
 
 private _unit = nearestObject [_position, "CAManBase"];
 private _weapon = currentWeapon _unit;
