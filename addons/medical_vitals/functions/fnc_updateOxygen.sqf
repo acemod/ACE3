@@ -61,7 +61,7 @@ private _oxygenSaturation = (IDEAL_PPO2 min _po2) / IDEAL_PPO2;
 private _negativeChange = BASE_OXYGEN_USE;
 
 // Fatigue will demand more oxygen
-if (_unit == player && {missionNamespace getVariable [QEGVAR(advanced_fatigue,enabled), false]}) then {
+if (_unit == ACE_player && {missionNamespace getVariable [QEGVAR(advanced_fatigue,enabled), false]}) then {
     _negativeChange = _negativeChange - ((1 - EGVAR(advanced_fatigue,aeReservePercentage)) * 0.5);
 };
 
