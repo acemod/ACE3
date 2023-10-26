@@ -4537,7 +4537,7 @@
             <Korean>시체를 위한 무덤 파는 중...</Korean>
             <Polish>Kopanie grobu...</Polish>
             <French>Enterrement du corps...</French>
-            <German>Grab für Leiche ausheben...</German>
+            <German>Grab für Leichnam ausheben ...</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
