@@ -172,7 +172,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
             <English>Influences the amount of weapon sway. Higher means more sway.</English>
             <Spanish>Afecta al la estabilidad de la mira. Más alto significa más balanceo</Spanish>
-            <German>Beeinflusst den Faktor, wie ruhig man eine Waffe halten kann. Ein höherer Wert bedeutet weniger Stabilisierung.</German>
+            <German>Beeinflusst, wie ruhig man eine Waffe halten kann. Ein höherer Wert bedeutet weniger Stabilisierung.</German>
             <Japanese>武器を持つ手のぶれ度合いを設定します。 値が高ければ高いほど、手ぶれが強くなります。</Japanese>
             <Chinesesimp>影响手持武器的晃动程度，数值越高，抖动的越厉害。</Chinesesimp>
             <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
@@ -188,25 +188,25 @@
             <English>Rested sway factor</English>
             <French>Facteur de balancement au repos</French>
             <Korean>휴식 시 손떨림 정도</Korean>
-            <German>Verwacklungsfaktor, wenn ruhig</German>
+            <German>Verwacklungsfaktor, wenn aufgelegt</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RestedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is rested.</English>
             <French>Influence le degré de balancement de l'arme au repos.</French>
             <Korean>무기가 아무런 행동도 하지 않는 동안 무기가 흔들리는 정도를 정합니다.</Korean>
-            <German>Beeinflusst den Faktor, wie ruhig man eine Waffe halten kann, während die Waffe ruht.</German>
+            <German>Beeinflusst, wie ruhig man die Waffe hält, während sie aufgelegt ist.</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor">
             <English>Deployed sway factor</English>
             <French>Facteur de balancement déployé</French>
             <Korean>거치 시 손떨림 정도</Korean>
-            <German>Verwacklungsfaktor, wenn aufgelegt</German>
+            <German>Verwacklungsfaktor, wenn Zweibein aufgestellt ist.</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is deployed.</English>
             <French>Influence le degré de balancement de l'arme déployée.</French>
             <Korean>무기를 거치하는 동안 무기를 흔드는 정도를 정합니다.</Korean>
-            <German>Beeinflusst den Faktor, wie ruhig man eine Waffe halten kann, während die Waffe aufgelegt ist.</German>
+            <German>Beeinflusst, wie ruhig man die Waffen hält, während das Zweibein aufgestellt ist.</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
