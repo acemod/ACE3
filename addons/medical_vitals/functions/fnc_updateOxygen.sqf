@@ -25,7 +25,7 @@ private _current = GET_SPO2(_unit);
 private _heartRate = GET_HEART_RATE(_unit);
 
 private _altitude = EGVAR(common,mapAltitude) + ((getPosASL _unit) select 2);
-private _po2 = if (missionNamespace getVariable ["ace_weather", false]) then {
+private _po2 = if (missionNamespace getVariable [QEGVAR(weather,enabled), false]) then {
     private _temperature = _altitude call EFUNC(weather,calculateTemperatureAtHeight);
     private _pressure = _altitude call EFUNC(weather,calculateBarometricPressure);
     [_temperature, _pressure, EGVAR(weather,currentHumidity)] call EFUNC(weather,calculateOxygenDensity)
