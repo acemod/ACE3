@@ -61,7 +61,7 @@
             <Italian>Metti l'arma nella borsa per armi</Italian>
             <Chinesesimp>将武器放置枪袋</Chinesesimp>
             <Chinese>將武器放置槍袋</Chinese>
-            <Portuguese>Colocar arma na Bosla de Arma</Portuguese>
+            <Portuguese>Colocar arma na Bolsa de Arma</Portuguese>
             <Turkish>Silahını silah çantasına koy</Turkish>
             <Spanish>Poner el arma en la funda</Spanish>
         </Key>
@@ -99,7 +99,7 @@
             <Spanish>Permitir interacción para intercambiar el arma principal y el arma guardada.</Spanish>
             <German>Erlaube den direkten Wechsel von Primärer und verstauter Waffe über das Interaktionsmenü.</German>
             <Chinesesimp>允许互动直接切换主武器和存储武器。</Chinesesimp>
-            <Korean>보관 중인 무기와 주무기와 바로 바꾸는 것을 허용합니다.</Korean>
+            <Korean>보관 중인 무기를 주무기와 바로 바꾸는 것을 허용합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>

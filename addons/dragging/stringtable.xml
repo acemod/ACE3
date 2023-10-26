@@ -153,6 +153,7 @@
             <Polish>Zezwól na Bieganie z Lekkimi Obiektami</Polish>
             <German>Erlauben das Sprinten mit leichten Gegenständen</German>
             <Korean>가벼운 개체 들고 달리기 허용</Korean>
+            <French>Autoriser la course avec des objets légers</French>
         </Key>
         <Key ID="STR_ACE_Dragging_allowRunWithLightweight_Description">
             <English>Allow the player to run when carrying lightweight objects.</English>
@@ -160,6 +161,7 @@
             <Polish>Zezwalaj graczowi na bieganie podczas przenoszenia lekkich przedmiotów.</Polish>
             <German>Erlauben Sie dem Spieler, zu rennen, wenn er leichte Gegenstände trägt.</German>
             <Korean>가벼운 개체를 들고 다닐 때 플레이어가 뛸 수 있도록 허용합니다.</Korean>
+            <French>Autorise le joueur à courir lorsqu'il porte un objet léger.</French>
         </Key>
         <Key ID="STR_ACE_Dragging_skipContainerWeight_DisplayName">
             <English>Skip Object Weight</English>
@@ -167,6 +169,7 @@
             <Polish>Pomiń Wagę Obiektu</Polish>
             <German>Objektgewicht überspringen</German>
             <Korean>개체 무게 무시</Korean>
+            <French>Ignorer le poids de l'objet</French>
         </Key>
         <Key ID="STR_ACE_Dragging_skipContainerWeight_Description">
             <English>Determines whether object's weight is added onto weight calculations.</English>
@@ -174,6 +177,17 @@
             <Polish>Określa, czy waga obiektu jest dodawana do obliczeń ciężaru.</Polish>
             <German>Legt fest, ob das Gewicht des Objekts zu den Gewichtsberechnungen hinzugefügt wird.</German>
             <Korean>무게 계산에 개체의 무게를 추가할 지 여부를 결정합니다.</Korean>
+            <French>Défini si le poids d'un objet est ajouté aux calculs du poids.</French>
+        </Key>
+        <Key ID="STR_ACE_Dragging_weightCoefficient_DisplayName">
+            <English>Max Weight Coefficient</English>
+            <French>Coefficient de poids maximal</French>
+            <Korean>최대 무게 계수</Korean>
+        </Key>
+        <Key ID="STR_ACE_Dragging_weightCoefficient_Description">
+            <English>Modifies weight limit calculations. Set to 0 to ignore.</English>
+            <French>Modifie les calculs de limite de poids. Configurer à 0 pour ignorer.</French>
+            <Korean>무게 제한 계산을 수정합니다. 무시하려면 0으로 설정하십시오.</Korean>
         </Key>
     </Package>
 </Project>

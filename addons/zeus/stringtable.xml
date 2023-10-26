@@ -72,7 +72,7 @@
             <Spanish>Mostrar mensajes emergentes globales cuando a un jugador se le asigna como Zeus.</Spanish>
             <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
-            <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
+            <Portuguese>Mostra uma mensagem popup quando um jogador é atribuído ao Zeus.</Portuguese>
             <French>Affiche des messages popup globaux lorsqu'un joueur est élevé au rang de Zeus.</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
@@ -1932,14 +1932,19 @@
             <Japanese>ユニットを燃やす</Japanese>
             <Russian>Поджечь юнита</Russian>
             <Spanish>Quemar a unidad</Spanish>
+            <French>Brûler l'unité</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
             <Polish>Wykop Okop</Polish>
+            <Korean>참호라인 깔기</Korean>
+            <French>Poser une tranchée</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
             <Polish>+SHIFT aby wymusić (Można wykopać tylko N/S lub E/W)</Polish>
+            <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
+            <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
         </Key>
     </Package>
 </Project>

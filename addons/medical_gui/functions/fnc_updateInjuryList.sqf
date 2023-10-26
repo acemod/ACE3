@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Injury list <CONTROL>
  * 1: Target <OBJECT>
- * 2: Body part <NUMBER>
+ * 2: Body part, -1 to only show overall health info <NUMBER>
  *
  * Return Value:
  * None
@@ -100,6 +100,20 @@ if (_target call EFUNC(common,isAwake)) then {
     } else {
         _entries pushBack [localize ELSTRING(medical_treatment,Status_NoPain), _nonissueColor];
     };
+};
+
+// Skip the rest as they're body part specific
+if (_selectionN == -1) exitWith {
+    // Add all entries to injury list
+    lbClear _ctrl;
+
+    {
+        _x params ["_text", "_color"];
+
+        _ctrl lbSetColor [_ctrl lbAdd _text, _color];
+    } forEach _entries;
+
+    _ctrl lbSetCurSel -1;
 };
 
 _entries pushBack ["", [1, 1, 1, 1]];

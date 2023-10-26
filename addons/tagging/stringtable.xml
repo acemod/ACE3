@@ -151,6 +151,7 @@
             <Russian>Стрелка вверх</Russian>
             <Spanish>Flecha Arriba</Spanish>
             <German>Pfeil Hoch</German>
+            <French>Flèche du haut</French>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_down">
             <English>Down Arrow</English>
@@ -160,6 +161,7 @@
             <Russian>Стрелка вниз</Russian>
             <Spanish>Flecha Abajo</Spanish>
             <German>Pfeil Runter</German>
+            <French>Flèche du bas</French>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_left">
             <English>Left Arrow</English>
@@ -169,6 +171,7 @@
             <Russian>Стрелка влево</Russian>
             <Spanish>Flecha Izquierda</Spanish>
             <German>Pfeil Links</German>
+            <French>Flèche gauche</French>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_right">
             <English>Right Arrow</English>
@@ -178,6 +181,7 @@
             <Russian>Стрелка вправо</Russian>
             <Spanish>Flecha Derecha</Spanish>
             <German>Pfeil Rechts</German>
+            <French>Flèche droite</French>
         </Key>
         <Key ID="STR_ACE_Tagging_circle">
             <English>Circle</English>
@@ -187,6 +191,7 @@
             <Russian>Круг</Russian>
             <Spanish>Círculo</Spanish>
             <German>Kreis</German>
+            <French>Cercle</French>
         </Key>
         <Key ID="STR_ACE_Tagging_cross">
             <English>Cross</English>
@@ -196,6 +201,7 @@
             <Russian>Перекрестие</Russian>
             <Spanish>Cruz</Spanish>
             <German>Kreuz</German>
+            <French>Croix</French>
         </Key>
         <Key ID="STR_ACE_Tagging_diamond">
             <English>Diamond</English>
@@ -205,6 +211,7 @@
             <Russian>Алмаз</Russian>
             <Spanish>Diamante</Spanish>
             <German>Diamant</German>
+            <French>Losange</French>
         </Key>
         <Key ID="STR_ACE_Tagging_square">
             <English>Square</English>
@@ -214,6 +221,7 @@
             <Russian>Квадрат</Russian>
             <Spanish>Cuadrado</Spanish>
             <German>Quadrat</German>
+            <French>Carré</French>
         </Key>
         <Key ID="STR_ACE_Tagging_square_filled">
             <English>Filled Square</English>
@@ -223,6 +231,7 @@
             <Russian>Заполненный Квадрат</Russian>
             <Spanish>Cuadrado Lleno</Spanish>
             <German>Gefülltes Quadrat</German>
+            <French>Carré rempli</French>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle">
             <English>Triangle</English>
@@ -232,6 +241,7 @@
             <Russian>Треугольник</Russian>
             <Spanish>Triángulo</Spanish>
             <German>Dreieck</German>
+            <French>Triangle</French>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle_inverted">
             <English>Triangle Inverted</English>
@@ -241,6 +251,7 @@
             <Russian>Обратный треугольник</Russian>
             <Spanish>Triángulo invertido</Spanish>
             <German>Invertiertes Dreieck</German>
+            <French>Triangle inversé</French>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
@@ -359,6 +370,7 @@
             <Polish>Oznaczenie identyfikacyjne pojazdu</Polish>
             <German>Fahrzeug ID Markierung</German>
             <Korean>차량 ID 마킹</Korean>
+            <French>Marquage ID des véhicules</French>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
             <English>Replaces clan tag with stenciled text</English>
@@ -366,6 +378,7 @@
             <Polish>Zastępuje tag klanu tekstem z szablonu</Polish>
             <German>Ersetzt das Clan-Tag durch Schablonentext</German>
             <Korean>클랜 태그를 스텐실 텍스트로 바꿉니다.</Korean>
+            <French>Remplace le tag du clan par un texte au pochoir</French>
         </Key>
     </Package>
 </Project>

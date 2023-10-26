@@ -80,9 +80,14 @@ if (_unit getVariable ["ACE_isUnconscious", false]) then {
     [_unit, "unconscious", 2] call EFUNC(common,doAnimation);
 };
 
-// Recreate UAV crew
+// Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
 if (_target getVariable [QGVAR(isUAV), false]) then {
-    createVehicleCrew _target;
+    [{  
+        params ["_target"];
+        if (!alive _target) exitWith {};
+        TRACE_2("restoring uav crew",_target,getPosASL _target);
+        createVehicleCrew _target;
+    }, [_target]] call CBA_fnc_execNextFrame;
 };
 
 // Fixes not being able to move when in combat pace

@@ -56,6 +56,7 @@
             <Japanese>貨物流量</Japanese>
             <Polish>Prędkość Tankowania Ładunku</Polish>
             <German>Frachtflussrate</German>
+            <French>Vitesse de ravitaillement</French>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
             <English>How fast should a fuel source's tank be filled?</English>
@@ -64,6 +65,7 @@
             <Japanese>どのくらいの速さで給油源へ給油しますか?</Japanese>
             <Polish>Jak szybko zbiornik paliwa powinien być napełniany?</Polish>
             <German>Wie schnell sollte der Tank einer Kraftstoffquelle gefüllt werden?</German>
+            <French>A quelle vitesse le réservoir de carburant doit-il être rempli ?</French>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
@@ -312,6 +314,7 @@
             <Spanish>Iniciando repostado (contenedor)</Spanish>
             <Japanese>給油を始める (コンテナ)</Japanese>
             <Polish>Rozpocznij tankowanie (zbiornik)</Polish>
+            <French>Commencer le ravitaillement (container)</French>
         </Key>
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
@@ -514,6 +517,7 @@
             <Japanese>ポンプとホースのインタラクション時間</Japanese>
             <Polish>Czas Interakcji z Pompą/Wężem</Polish>
             <German>Interaktionszeit zwischen Pumpe und Schlauch</German>
+            <French>Temps d'interaction pompe/tuyau</French>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_Description">
             <English>How long refuel interactions take in seconds.</English>
@@ -524,6 +528,7 @@
             <Japanese>燃料補給にかかる時間 (秒)</Japanese>
             <Polish>Jak długo powinna trwać interakcja tankowania w sekundach.</Polish>
             <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
+            <French>Durée des interactions de ravitaillement en secondes.</French>
         </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
             <English>Fuel Cargo Volume</English>
