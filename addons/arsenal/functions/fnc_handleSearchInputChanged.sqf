@@ -21,8 +21,8 @@ if (!GVAR(liveUpdateSearch)) exitWith {};
 private _display = ctrlParent _ctrl;
 
 if (GVAR(leftSearchbarFocus)) then {
-    [_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
+    [_display, _display displayCtrl IDC_leftSearchbar, false] call FUNC(handleSearchBar);
 };
 if (GVAR(rightSearchbarFocus)) then {
-    [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
+    [_display, _display displayCtrl IDC_rightSearchbar, false] call FUNC(handleSearchBar);
 };
