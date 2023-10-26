@@ -194,7 +194,7 @@
             <English>Influences the amount of weapon sway while weapon is rested.</English>
             <French>Influence le degré de balancement de l'arme au repos.</French>
             <Korean>무기가 아무런 행동도 하지 않는 동안 무기가 흔들리는 정도를 정합니다.</Korean>
-            <German>Beeinflusst den Faktor, wie ruhig man eine Waffe halten kann, während die Waffe ruhig gehalten wird.</German>
+            <German>Beeinflusst den Faktor, wie ruhig man eine Waffe halten kann, während die Waffe ruht.</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor">
             <English>Deployed sway factor</English>
