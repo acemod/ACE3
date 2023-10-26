@@ -24,18 +24,16 @@ params ["_args", "_pfID"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams"];
-_flightParams params ["_minDeflection", "_maxDeflection", "_incDeflection", "_useVanillaDeflection"];
-_stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_submunitionArray"];
-
-if ((_submunitionArray isNotEqualTo []) && {_args call FUNC(deploySubmunition)}) exitWith {};
+_flightParams params ["_minDeflection", "_maxDeflection", "", "_useVanillaDeflection"];
+_stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 
 if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     [_pfID] call CBA_fnc_removePerFrameHandler;
     END_COUNTER(guidancePFH);
 };
 
-private _runtimeDelta = cba_missionTime - _lastRunTime;
-_stateParams set [0, cba_missionTime];
+private _runtimeDelta = CBA_missionTime - _lastRunTime;
+_stateParams set [0, CBA_missionTime];
 private _adjustTime = _runtimeDelta / TIMESTEP_FACTOR;
 
 private _projectilePos = getPosASL _projectile;
@@ -57,7 +55,6 @@ if (_profileAdjustedTargetPos isNotEqualTo [0,0,0]) then {
 
     _minDeflection = _minDeflection * _adjustTime;
     _maxDeflection = _maxDeflection * _adjustTime;
-    // _incDeflection = _flightParams select 2; // todo
     // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
     if ((_minDeflection == 0) && {_maxDeflection == 0}) exitWith {};
 
@@ -109,11 +106,10 @@ drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0.5,0,1,1], ASL
     format ["V: %1 (%2)", round vectorMagnitude velocity _projectile, round ((velocity _projectile) # 2)], 1, 0.025, "TahomaB"];
 drawLine3D [ASLtoAGL _projectilePos, ASLtoAGL _forwardPosition, [0.5,0,1,1]];
 
-if (productVersion #4 != "Diag") then {
-    private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
-    _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
-    _PS setDropInterval 3.0;
-};
+
+private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
+_PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
+_PS setDropInterval 3.0;
 #endif
 
 END_COUNTER(guidancePFH);

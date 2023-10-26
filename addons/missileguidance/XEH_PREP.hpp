@@ -6,8 +6,8 @@ PREP(changeMissileDirection);
 PREP(checkSeekerAngle);
 PREP(checkLos);
 
-PREP(deploySubmunition);
 PREP(onFired);
+PREP(onFiredDeferred);
 PREP(onIncomingMissile);
 
 PREP(guidancePFH);

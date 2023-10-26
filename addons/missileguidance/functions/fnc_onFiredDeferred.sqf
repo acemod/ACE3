@@ -19,21 +19,8 @@
 
 params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
 
-// Bail on not missile
-if (!(_ammo isKindOf "MissileBase")) exitWith {};
-
 // Bail if guidance is disabled for this ammo
-if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
-
-// Bail on locality of the projectile, it should be local to us
-if (GVAR(enabled) < 1 || {!local _projectile} ) exitWith {};
-
-// Bail if shooter isn't player AND system not enabled for AI:
-if ( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith {};
-
-// Verify ammo has explicity added guidance config (ignore inheritances)
-private _configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
-if ((count _configs) < 1) exitWith {};
+if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 2) exitWith { ERROR("not enabled=2"); [] };
 
 // MissileGuidance is enabled for this shot
 TRACE_4("enabled",_shooter,_ammo,_projectile,typeOf _shooter);
@@ -143,12 +130,4 @@ if (_onFiredFunc != "") then {
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
-[FUNC(guidancePFH), 0, _args] call CBA_fnc_addPerFrameHandler;
-
-
-/* Clears locking settings
-(vehicle _shooter) setVariable [QGVAR(target), nil];
-(vehicle _shooter) setVariable [QGVAR(seekerType), nil];
-(vehicle _shooter) setVariable [QGVAR(attackProfile), nil];
-(vehicle _shooter) setVariable [QGVAR(lockMode), nil];
- */
+_args
