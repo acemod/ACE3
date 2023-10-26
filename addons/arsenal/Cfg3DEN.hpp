@@ -129,7 +129,8 @@ class Cfg3DEN {
                 };
                 class SearchButton: ctrlButtonPicture {
                     idc = IDC_ATTRIBUTE_SEARCH_BUTTON;
-                    onButtonClick = QUOTE( \
+                    #pragma hemtt suppress pw3_padded_arg
+                    onButtonClick = QUOTE(\
                         params ['_searchButton']; \
                         private _controlsGroup = ctrlParentControlsGroup _searchButton; \
                         private _searchBar = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR; \
@@ -147,7 +148,8 @@ class Cfg3DEN {
                 class SearchBar: ctrlEdit {
                     idc = IDC_ATTRIBUTE_SEARCHBAR;
                     onKeyUp = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddItems));
-                    onMouseButtonClick = QUOTE( \
+                    #pragma hemtt suppress pw3_padded_arg
+                    onMouseButtonClick = QUOTE(\
                         params [ARR_2('_searchBar','_button')]; \
                         if (_button != 1) exitWith {}; \
                         _searchBar ctrlSetText ''; \

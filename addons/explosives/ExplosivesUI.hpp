@@ -142,7 +142,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safezoneW";
             h = "0.033 * safezoneH";
             tooltip = CSTRING(Phone_AddToSpeedDial);
-            action = QUOTE([ARR_2(ctrlText 1401,ctrlText 1400)] call FUNC(addToSpeedDial););
+            action = QUOTE([ARR_2(ctrlText 1401,ctrlText 1400)] call FUNC(addToSpeedDial));
         };
         class clear: Rsc_ACE_HiddenButton {
             idc = 1610;
@@ -160,7 +160,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.04125 * safezoneW";
             h = "0.033 * safezoneH";
             tooltip = CSTRING(Phone_Dial);
-            action = QUOTE([ARR_2(ace_player,ctrlText 1400)] call FUNC(dialPhone););
+            action = QUOTE([ARR_2(ace_player,ctrlText 1400)] call FUNC(dialPhone));
         };
         class up: Rsc_ACE_HiddenButton {
             idc = 1612;
