@@ -1,23 +1,9 @@
 #include "script_component.hpp"
 
-GVAR(armComponents) = [
-    "leftshoulder",
-    "rightshoulder",
-    "lefthand",
-    "leftforearm",
-    "leftarmroll",
-    "rightforearm",
-    "rightarmroll",
-    "righthand",
-    "rightarm"
-];
-
-GVAR(safePickupDistance) = DEFAULT_PICKUP_DISTANCE;
-if (isNil QGVAR(undroppableGuns)) then {GVAR(undroppableGuns) = DEFAULT_UNDROPPABLE_GUNS};
+if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
 
 ["ace_firedNonPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
-    if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
     private _roll = random 1;
     if (!(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit))) exitWith {};
     _projectile addEventHandler ["HitPart", {
@@ -30,7 +16,6 @@ if (!hasInterface) exitWith {};
 
 ["ace_firedPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
-    if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
     private _roll = random 1;
     if (!(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit))) exitWith {};
     _projectile addEventHandler ["HitPart", { 
