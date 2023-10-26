@@ -12,7 +12,8 @@ GVAR(armComponents) = [
     "rightarm"
 ];
 
-GVAR(safePickupDistance) = 8;
+GVAR(safePickupDistance) = DEFAULT_PICKUP_DISTANCE;
+GVAR(undroppableGuns) = DEFAULT_UNDROPPABLE_GUNS;
 
 ["ace_firedNonPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
