@@ -417,12 +417,14 @@
             <Korean>무덤 파는 시간</Korean>
             <Polish>Czas Kopania Grobu</Polish>
             <French>Durée pour creuser une tombe</French>
+            <German>Zeit zum Graben von Gräbern</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
             <English>Time, in seconds, required to dig a grave for a body.</English>
             <Korean>시신의 무덤을 파는 데 필요한 시간(초 단위).</Korean>
             <Polish>Czas, w sekundach wymagany do wykopania grobu.</Polish>
             <French>Durée, en secondes, requise pour creuser une tombe pour un corps.</French>
+            <German>Zeit (in Sekunden), die benötigt wird, um ein Grab für einen Leichnam auszuheben.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -3439,6 +3441,7 @@
             <Polish>Nie odczuwa bólu</Polish>
             <Korean>고통 없음</Korean>
             <French>Pas de douleur</French>
+            <German>Kein Schmerz</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_MildPain">
             <English>In mild pain</English>
@@ -3524,6 +3527,7 @@
             <Polish>Brak podpiętego IV</Polish>
             <Korean>수혈 없음</Korean>
             <French>Pas de transfusion</French>
+            <German>Kein IV</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -4526,12 +4530,14 @@
             <Korean>시체를 위해 무덤 파기</Korean>
             <Polish>Wykop grób na ciało</Polish>
             <French>Enterrer le corps</French>
+            <German>Grabe ein Grab für den Leichnam</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
             <Korean>시체를 위한 무덤 파는 중...</Korean>
             <Polish>Kopanie grobu...</Polish>
             <French>Enterrement du corps...</French>
+            <German>Grab für Leichnam ausheben ...</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -4779,6 +4785,7 @@
             <Polish>Sprawdź imię na grobie</Polish>
             <Korean>묘비 이름 확인</Korean>
             <French>Vérifier le nom sur la pierre tombale</French>
+            <German>Überprüfe Name auf dem Grabstein</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
             <English>Bandage Rollover</English>

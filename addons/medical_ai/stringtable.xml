@@ -67,6 +67,7 @@
             <Polish>Automatyczna Konwersja Przedmiotów dla AI</Polish>
             <Korean>인공지능 아이템 자동 변환</Korean>
             <French>Conversion automatique des items pour les IA</French>
+            <German>Automatische Konvertierung von Gegenständen der KI</German>
         </Key>
     </Package>
 </Project>
