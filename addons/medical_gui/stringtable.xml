@@ -551,14 +551,14 @@
             <Polish>Zmień na siebie</Polish>
             <Korean>자신으로 전환</Korean>
             <French>Passer à soi-même</French>
-            <German>Wechseln auf selbst</German>
+            <German>Wechseln zu selbst</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ToggleToOther">
             <English>Switch to target</English>
             <Polish>Zmień na pacjenta</Polish>
             <Korean>대상으로 전환</Korean>
             <French>Passer à la cible</French>
-            <German>Wechseln auf ziel</German>
+            <German>Wechseln zu Ziel</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Head">
             <English>Head</English>
@@ -1343,7 +1343,7 @@
             <Korean>부상을 입은 후에도 의료 정보가 열린 상태로 지속되는 시간입니다.</Korean>
             <Chinesesimp>受伤后医疗信息会开放多长时间?</Chinesesimp>
             <French>Durée de l'affichage des informations médicales lors d'une blessure.</French>
-            <German>Wie lange die medizinische Info nach einer Verletzung offen bleibt.</German>
+            <German>Wie lange die medizinische Info nach einer Verletzung angezeigt wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
