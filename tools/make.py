@@ -490,6 +490,22 @@ def cleanup_optionals(mod):
         print_error("Cleaning Optionals Failed")
         raise
 
+# mikro tools (before 2023?) don't understand #pragma
+def toggle_config_pragmas(do_restore=False):
+        token_from = "//#pragma-backup-make.py " if do_restore else "#pragma "
+        token_to = "#pragma " if do_restore else "//#pragma-backup-make.py "
+        print_green(f"Checking configs for {token_from}")
+        for root, _dirs, files in os.walk(module_root):
+            for file in files:
+                if file.endswith(".cpp") or file.endswith(".hpp"):
+                    with open(os.path.join(root, file), "r", encoding="utf-8") as f:
+                        content = f.read()
+                    if (not token_from in content): continue
+                    print(f"- Replacing {token_from} in {os.path.join(root, file)}")
+                    content = re.sub(token_from, token_to, content)
+                    with open(os.path.join(root, file), "w", encoding="utf-8") as f:
+                        f.write(content)
+
 
 def purge(dir, pattern, friendlyPattern="files"):
     print_green("Deleting {} files from directory: {}".format(friendlyPattern,dir))
@@ -1133,6 +1149,9 @@ See the make.cfg file for additional build options.
             optional_files = []
             copy_optionals_for_building(optionals_modules,optional_files)
 
+        # hide #pragma from pboProject's sensitive eyes
+        toggle_config_pragmas(False)
+
         # Get list of subdirs in make root.
         dirs = next(os.walk(module_root))[1]
 
@@ -1473,6 +1492,8 @@ See the make.cfg file for additional build options.
         copy_important_files(module_root_parent,os.path.join(release_dir, project))
         if (os.path.isdir(optionals_root)):
             cleanup_optionals(optionals_modules)
+        #restore #pragma
+        toggle_config_pragmas(True)
         if not version_update:
             restore_version_files()
 
