@@ -18,6 +18,21 @@ jobs:
       uses: actions/checkout@v4
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
+    - name: Checkout pull request
+      uses: actions/checkout@v4
+      if: ${{ github.event_name == 'pull_request_target' }}
+      with:
+        path: pullrequest
+        ref: 'refs/pull/${{ github.event.number }}/merge'
+    - name: Replace addons with pull request addons
+      if: ${{ github.event_name == 'pull_request_target' }}
+      run: |
+        rm -r addons\
+        rm -r optionals\
+        rm -r include\
+        xcopy /e /h /q pullrequest\addons addons\
+        xcopy /e /h /q pullrequest\optionals optionals\
+        xcopy /e /h /q pullrequest\include include\
     - name: Run HEMTT build
       run: hemtt build
     - name: Rename build folder
