@@ -37,23 +37,13 @@ private _po2 = if (missionNamespace getVariable [QEGVAR(weather,enabled), false]
 private _oxygenSaturation = (IDEAL_PPO2 min _po2) / IDEAL_PPO2;
 
 // Check gear for oxygen supply
-[goggles _unit, headgear _unit] findIf {
-    if (_x != "") then {
-        if (isNil QGVAR(oxygenSupplyConditionCache)) then {
-            GVAR(oxygenSupplyConditionCache) = createHashmap;
-        };
-        private _condition = GVAR(oxygenSupplyConditionCache) getOrDefaultCall [_x, {
-            compile getText (configFile >> "CfgWeapons" >> _x >> QGVAR(oxygenSupply))
-        }, true];
-        if (_condition isNotEqualTo {} && {ACE_player call _condition}) then {
-            _oxygenSaturation = 1;
-            _po2 = IDEAL_PPO2;
-            true
-        } else {
-            false
-        }
-    } else {
-        false
+[goggles _unit, headgear _unit, vest _unit] findIf {
+    _x in GVAR(oxygenSupplyConditionCache) &&
+    {ACE_player call (GVAR(oxygenSupplyConditionCache) get _x)} &&
+    { // Will only run this if other conditions are met due to lazy eval
+        _oxygenSaturation = 1;
+        _po2 = IDEAL_PPO2;
+        true
     }
 };
 
