@@ -109,7 +109,7 @@
             <Italian>Attacca la tracolla</Italian>
             <Portuguese>Ligar cintos de munição</Portuguese>
             <Japanese>ベルトを繋げる</Japanese>
-            <Korean>벨트 연결</Korean>
+            <Korean>탄띠 연결</Korean>
             <Chinesesimp>连接弹链</Chinesesimp>
             <Chinese>連接彈鏈</Chinese>
         </Key>
@@ -125,7 +125,7 @@
             <Italian>Attaccando la tracolla...</Italian>
             <Portuguese>Ligando cintos...</Portuguese>
             <Japanese>ベルトを繋げています・・・</Japanese>
-            <Korean>벨트 연결 중...</Korean>
+            <Korean>탄띠 연결 중...</Korean>
             <Chinesesimp>正在连接弹链...</Chinesesimp>
             <Chinese>連接彈鏈中...</Chinese>
         </Key>
@@ -135,6 +135,7 @@
             <German>Gurt wurde angehängt</German>
             <Japanese>ベルトがリンクされた</Japanese>
             <Polish>Taśma została połączona</Polish>
+            <Korean>탄띠가 연결되었습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Reload_BeltNotLinked">
             <English>Belt could not be linked</English>
@@ -142,6 +143,7 @@
             <German>Gurt konnte nicht angehängt werden</German>
             <Japanese>ベルトはリンクされなかった</Japanese>
             <Polish>Taśma nie mogła być połączona</Polish>
+            <Korean>탄띠를 연결할 수 없습니다</Korean>
         </Key>
     </Package>
 </Project>

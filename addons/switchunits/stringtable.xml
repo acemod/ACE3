@@ -152,7 +152,7 @@
             <Spanish>¿Cambiar a Independiente?</Spanish>
             <German>Nach INDFOR wechseln?</German>
             <Czech>Přesunout k INDFOR?</Czech>
-            <Portuguese>Trocar para Indenpendente</Portuguese>
+            <Portuguese>Trocar para Independente</Portuguese>
             <French>Passage en Indépendant</French>
             <Hungarian>Átváltás INDFOR-ra?</Hungarian>
             <Russian>На независимых?</Russian>
@@ -169,7 +169,7 @@
             <Spanish>¿Permitir cambios a unidades Independientes?</Spanish>
             <German>Erlaube das Wechseln zu INDFOR-Einheiten?</German>
             <Czech>Povolit přesun k INDFOR?</Czech>
-            <Portuguese>Permitir troca de unidades para o Indenpendente?</Portuguese>
+            <Portuguese>Permitir troca de unidades para o Independente?</Portuguese>
             <French>Autorise le passage en unité Indépendante.</French>
             <Hungarian>Független egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на независимых юнитов?</Russian>
@@ -234,7 +234,7 @@
             <Spanish>Habilita una zona segura alrededor de las unidades enemigas. Los jugadores no pueden cambiar de unidad dentro de la zona segura.</Spanish>
             <German>Aktiviere eine Sicherheitszone um feindliche Einheiten? Spieler können nicht zu Einheiten in der Sicherheitszone wechseln.</German>
             <Czech>Povolit bezpečnou zónu kolem nepřátelských jednotek? Hráči nemohou změnit strany/jednotky uvnitř bezpečné zóny.</Czech>
-            <Portuguese>Habilitar uma zona segur ao redor das unidades inimigas? Jogadores não conseguirão trocar para unidades dentro dessa zona segura.</Portuguese>
+            <Portuguese>Habilitar uma zona segura ao redor das unidades inimigas? Jogadores não conseguirão trocar para unidades dentro dessa zona segura.</Portuguese>
             <French>Active une zone de sécurité autour des unités ennemies. Les joueurs ne peuvent pas changer de camp à l'intérieur de cette zone.</French>
             <Hungarian>Engedélyezve legyen-e egy biztonságos zóna az ellenségek körül? A játékosok nem tudnak a biztonságos zónán belüli egységekre váltani.</Hungarian>
             <Russian>Включить безопасную зону вокруг вражеских юнитов? Игроки не могут переключаться на юнитов, находящихся в безопасной зоне.</Russian>

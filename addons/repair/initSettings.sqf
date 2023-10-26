@@ -1,4 +1,5 @@
 private _category = format ["ACE %1", LLSTRING(Repair)];
+private _catFullRepair = [_category, LLSTRING(fullRepair)];
 
 [
     QGVAR(enabled), "CHECKBOX",
@@ -102,7 +103,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
 [
     QGVAR(fullRepairLocation), "LIST",
     [LSTRING(fullRepairLocation), LSTRING(fullRepairLocation_description)],
-    _category,
+    _catFullRepair,
     [[0,1,2,3,4],[LSTRING(useAnywhere), LSTRING(repairVehicleOnly), LSTRING(repairFacilityOnly), LSTRING(vehicleAndFacility), ELSTRING(common,Disabled)],2], // [values, titles, defaultIndex]
     true, // isGlobal
     {[QGVAR(fullRepairLocation), _this] call EFUNC(common,cbaSettings_settingChanged)}
@@ -111,7 +112,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
 [
     QGVAR(engineerSetting_fullRepair), "LIST",
     [LSTRING(engineerSetting_fullRepair_name), LSTRING(engineerSetting_fullRepair_description)],
-    _category,
+    _catFullRepair,
     [[0,1,2],[LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],2], // [values, titles, defaultIndex]
     true, // isGlobal
     {[QGVAR(engineerSetting_fullRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
@@ -120,7 +121,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
 [
     QGVAR(timeCoefficientFullRepair), "SLIDER",
     [LSTRING(timeCoefficientFullRepair_name), LSTRING(timeCoefficientFullRepair_description)],
-    _category,
+    _catFullRepair,
     [0,3,1.5,2],
     true
 ] call CBA_fnc_addSetting;
@@ -157,7 +158,7 @@ private _category = format ["ACE %1", LLSTRING(Repair)];
     QGVAR(fullRepairRequiredItems),
     "LIST",
     [LSTRING(FullRepairRequiredItems_DisplayName), LSTRING(FullRepairRequiredItems_Description)],
-    _category,
+    _catFullRepair,
     [[[], [ANY_TOOLKIT_FAKECLASS]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
     true
 ] call CBA_fnc_addSetting;

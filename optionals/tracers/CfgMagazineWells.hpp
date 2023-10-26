@@ -123,14 +123,14 @@ class CfgMagazineWells {
     };
     class CBA_762x51_M14 {
         ADDON[] = {
-            "ACE_20Rnd_762x51_Mag_Tracer_green",
-            "ACE_20Rnd_762x51_Mag_Tracer_yellow"
+            "ACE_20Rnd_762x51_Mag_tracer_green",
+            "ACE_20Rnd_762x51_Mag_tracer_yellow"
         };
     };
     class CBA_762x51_G3 {
         ADDON[] = {
-            "ACE_20Rnd_762x51_Mag_Tracer_green",
-            "ACE_20Rnd_762x51_Mag_Tracer_yellow"
+            "ACE_20Rnd_762x51_Mag_tracer_green",
+            "ACE_20Rnd_762x51_Mag_tracer_yellow"
         };
     };
     class CBA_762x54R_LINKS {

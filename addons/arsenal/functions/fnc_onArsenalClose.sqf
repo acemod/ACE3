@@ -110,6 +110,7 @@ GVAR(leftTabFocus) = nil;
 GVAR(rightTabFocus) = nil;
 GVAR(rightTabLnBFocus) = nil;
 GVAR(ignoreFirstSortPanelCall) = nil;
+GVAR(refreshing) = nil;
 
 GVAR(selectedWeaponType) = nil;
 GVAR(virtualItems) = nil;

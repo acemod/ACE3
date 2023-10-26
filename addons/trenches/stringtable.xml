@@ -137,7 +137,7 @@
             <Spanish>Confirmar cavado</Spanish>
             <French>Confirmer l'excavation</French>
             <Czech>Potvrdit kopání</Czech>
-            <Portuguese>Confirmar excavação</Portuguese>
+            <Portuguese>Confirmar escavação</Portuguese>
             <Russian>Копать</Russian>
             <Japanese>ここに掘る</Japanese>
             <Korean>여기에 파기</Korean>
@@ -153,7 +153,7 @@
             <Spanish>Cancelar cavado</Spanish>
             <French>Annuler l'excavation</French>
             <Czech>Zrušit kopání</Czech>
-            <Portuguese>Cancelar excavação</Portuguese>
+            <Portuguese>Cancelar escavação</Portuguese>
             <Russian>Отменить копание</Russian>
             <Japanese>掘るのを中止</Japanese>
             <Korean>취소하기</Korean>
@@ -229,6 +229,7 @@
         <Key ID="STR_ACE_Trenches_CamouflageTrench">
             <English>Camouflage Trench</English>
             <Polish>Zakamufluj okop</Polish>
+            <French>Camoufler la tranchée</French>
             <Chinesesimp>伪装掩体</Chinesesimp>
             <Korean>참호 위장시키기</Korean>
             <Russian>Камуфлировать окоп</Russian>
@@ -239,7 +240,7 @@
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
             <Polish>Usuwanie okopu</Polish>
-            <Portuguese>Removendo tricnheira</Portuguese>
+            <Portuguese>Removendo trincheira</Portuguese>
             <French>Retrait de la tranchée</French>
             <Russian>Убирание окопа</Russian>
             <Czech>Odstraňuji zákop</Czech>

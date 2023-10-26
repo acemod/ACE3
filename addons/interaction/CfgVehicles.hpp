@@ -715,6 +715,14 @@ class CfgVehicles {
             };
         };
     };
+    // Don't enable for scripted
+    class WeaponHolderSimulated_Scripted: WeaponHolderSimulated {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                delete GVAR(Gear);
+            };
+        };
+    };
 
     class ReammoBox;
     // dropped weapons/gear
@@ -730,6 +738,19 @@ class CfgVehicles {
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
                     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
                 };
+            };
+        };
+    };
+    // Don't enable for scripted
+    class GroundWeaponHolder: WeaponHolder {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class GroundWeaponHolder_Scripted: GroundWeaponHolder {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                delete GVAR(Gear);
             };
         };
     };
