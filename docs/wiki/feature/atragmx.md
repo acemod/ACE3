@@ -54,6 +54,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Select `M` (Metric unit) at the top right.
 - Open the `Gun` column, check and update the `Muzzle Velocity (m/s)`, the `Zero Range (meters)` and `Done`. 
 - *Muzzle Velocities (`Options` / `Muz Vel table`) may need a manual update according to the range card.*
+- *AtragMx is configured with `C1 coefficient` according to vanilla weapons in `GunList`.*
 - *More information about C1: [Example with `Add New Gun` in `GunList`](#35-example-with-add-new-gun-in-gunlist).*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
@@ -61,7 +62,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - Update the `Atmsphr` column and `Done`. Basic tool needed: [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html).
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
-- Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipments]({{ site.baseurl }}/wiki/feature.html)
+- Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html)
 - `Latitude`: *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or the Eden Editor's Extended Debug Console: Watch `ace_common_maplatitude`.*
 - `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* (Horus manual p.14)
 - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* (Horus manual p.32)
@@ -120,6 +121,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
 - *For a better accuracy, a Ballistic Coefficient vs. Distance Interpolation table can be used: `Options` / `Drag Coef Table` (Horus manual p.22)*
+- *AtragMx is configured with `C1 coefficient` according to vanilla weapons in `GunList`.*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
 
@@ -163,7 +165,8 @@ The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Veloci
  
 **In position:**
 
-- Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipments]({{ site.baseurl }}/wiki/feature.html)
+- **Do not update the `Atmsphr` column.** Default ballistic doesn't take into account temperature, pressure and humidity.
+- Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html)
 - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* (Horus manual p.32)
 - `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* (Horus manual p.16)
 - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* (Horus manual p.33)
@@ -175,3 +178,11 @@ The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Veloci
 ## 4. Official References
 
 - [Official Manual]({{ site.ace.githubUrl }}/blob/master/extras/manual_Horus_ATrag-v385.pdf)
+
+## 5. Resources
+
+Missions by Ruthberg, author of Advanced Ballistics and its tools:
+
+- [360 Degree Training Course v1.3](https://mega.nz/file/w0swQZBQ#hfZJVCz-bUjSbVVK7uBAXv48hlX7_A9FKy7g52zkf6I) (Arma3 Missions folder).
+- [360 Degree Training Course Framework](https://mega.nz/file/0lEA2LjJ#g7l4LJnr7mJyGh0ai59RR6ecO_hmkAqFA17zDqF1lCI) (Eden Editor mission)
+- [AB Verification ACE VR](https://mega.nz/file/8l9XzbpA#uw3DUOCxGhynJ0TFPZEW3PCTnVbguq95M8n8G5c3MAs) (Eden Editor mission)
