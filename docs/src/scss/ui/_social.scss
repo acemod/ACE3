@@ -1,4 +1,17 @@
 .social-icons {
     display: flex;
     gap: 10px;
+
+    &__icon {
+
+        svg {
+            fill: $primary-color-lighter;
+        }
+
+        &:hover {
+            svg {
+                fill: $primary-color;
+            }
+        }
+    }
 }

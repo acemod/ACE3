@@ -1602,6 +1602,7 @@
         <Key ID="STR_ACE_Arsenal_statIlluminators">
             <English>Illuminators</English>
             <French>Illuminateurs</French>
+            <Korean>조명</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>

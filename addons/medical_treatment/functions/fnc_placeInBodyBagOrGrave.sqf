@@ -16,7 +16,7 @@
  * None
  *
  * Example:
- * [[player, cursorObject], "ACE_bodyBagObject"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave
+ * [[player, cursorObject], "ACE_bodyBagObject_blue"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave
  *
  * Public: No
  */

@@ -126,7 +126,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 } else {
     // Left panel search bar
     // Don't refill if there is no need
-    if (GVAR(lastSearchTextLeft) != "" && {(_searchString find GVAR(lastSearchTextRight)) != 0}) then {
+    if (GVAR(lastSearchTextLeft) != "" && {(_searchString find GVAR(lastSearchTextLeft)) != 0}) then {
         [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
     };
 

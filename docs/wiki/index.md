@@ -18,13 +18,20 @@ parent:
         <div id="liveSearch" class="contentSearch">
             <div class="contentSearch-wrapper row small-collapse">
                 <div class="small-12 medium-8 columns">
-                    <input type="search" class="liveSearch-field" name="searchTerm" placeholder="Search &hellip;"/>
+                    <input type="search" class="liveSearch-field" name="searchTerm" />
                     <div class="liveSearch-result">
                         <ul class="liveSearch-result-list hidden"></ul>
                     </div>
                 </div>
                 <div class="hide-for-small-only medium-4 columns">
-                    <a href="#" class="liveSearch-button button tiny"><i class="fa fa-search"></i>&nbsp;Search</a>
+                    <button type="button" class="liveSearch-button button button--icon tiny">
+                        <span>Search</span>
+                        <i class="icon icon--white" aria-hidden="true">
+                            <svg>
+                                <use href="/dist/icons.svg#search" />
+                            </svg>
+                        </i>
+                    </button>
                 </div>
             </div>
         </div>
