@@ -1,4 +1,7 @@
 
+PREP(blockTrench_place);
+PREP(camouflageTrench);
+PREP(canCamouflageTrench);
 PREP(canContinueDiggingTrench);
 PREP(canDigTrench);
 PREP(canRemoveTrench);
@@ -9,6 +12,7 @@ PREP(handlePlayerChanged);
 PREP(handlePlayerInventoryChanged);
 PREP(handleScrollWheel);
 PREP(handleUnconscious);
+PREP(hasEntrenchingTool);
 PREP(placeCancel);
 PREP(placeConfirm);
 PREP(placeTrench);

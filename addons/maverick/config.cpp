@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-     class ADDON {
+    class ADDON {
         name = COMPONENT_NAME;
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_missileguidance"};
@@ -10,7 +10,7 @@ class CfgPatches {
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
         ammo[] = {
-            GVAR(L),
+            QGVAR(L),
             "ace_kh25ml"
         };
         magazines[] = {
@@ -26,12 +26,12 @@ class CfgPatches {
             "ace_kh25ml_pylonmissile_int_x1"
         };
         weapons[] = {
-            GVAR(L_Launcher_Plane),
-            GVAR(L_Launcher),
+            QGVAR(L_Launcher_Plane),
+            QGVAR(L_Launcher),
             "ace_kh25ml_launcher"
         };
         units[] = {};
-     };
+    };
 };
 
 

@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Convert between screen and 3d object cordinates
+ * Convert between screen and 3d object coordinates
  *
  * Arguments:
  * 0: Function <STRING>
@@ -14,9 +14,9 @@
  * Example:
  * ["2d", [0,0,0], 1] call ace_common_fnc_rscObjectHelper
  *
- * Public: Maybe
+ * Public: No
  */
- 
+
 params ["_func", "_array", ["_scale", 1]];
 
 private _adjustCam = 1;

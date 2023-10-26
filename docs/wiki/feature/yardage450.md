@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Yardage 450
+component: yardage450
 description: Adds the Bushnell Yardage Pro Sport 450 Laser Rangefinder.
 group: feature
 category: equipment
@@ -23,7 +24,3 @@ Adds the Bushnell Yardage Pro Sport 450 Laser Rangefinder.
 - Tap <kbd>R</kbd> once to activate the device.
 - Sight the target and Hold <kbd>R</kbd> until `TARGET AQCUIRED` appears on top of the screen.
 - The range in meters should now appear at the bottom of the screen.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="yardage450" %}

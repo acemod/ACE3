@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Report awake animation of unit inside vehicle.
@@ -42,7 +42,9 @@ if (_turret isNotEqualTo []) exitWith {
 private _cargoIndex = _vehicle getCargoIndex _unit;
 
 if (_cargoIndex != -1) exitWith {
-    getText (configFile >> "CfgMovesBasic" >> "ManActions" >> getArray (_config >> "cargoAction") select _cargoIndex) // return
+    private _cargoAction = getArray (_config >> "cargoAction");
+    _cargoIndex = _cargoIndex min (count _cargoAction - 1); // The array can be smaller than the max cargo index, just use last element
+    getText (configFile >> "CfgMovesBasic" >> "ManActions" >> (_cargoAction select _cargoIndex)) // return
 };
 
 // --- default

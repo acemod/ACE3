@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Test Missions
+component: testmissions
 description: Adds ACE3 Test Missions.
 group: feature
 category: general
@@ -16,7 +17,3 @@ version:
 ## 1. Overview
 
 Adds an ACE3 Test Missions
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="testmissions" %}

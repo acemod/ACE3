@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 diag_log text "-------------------------------------------";
 INFO("Showing entries with custom configs");
 diag_log text "-------------------------------------------";

@@ -86,6 +86,10 @@ class CfgVehicles {
             dayLight = 0;
             onlyInNvg = 1;
             useFlare = 0;
+            maxLifetime = "8 * 60 * 60";
+            blinkingPattern[] = {0.1, 1.1}; // 0.1 s on, 1.1 s off
+            blinkingStartsOn = 1;
+            blinkingPatternGuarantee = 1;
         };
 
         side = 7;//-1=NO_SIDE yellow box,3=CIV grey box,4=NEUTRAL yellow box,6=FRIENDLY green box,7=LOGIC no radar signature
@@ -100,6 +104,12 @@ class CfgVehicles {
         nvTarget = 1;
         destrType = "DestructNo";
         brightness = 10;
+    };
+
+    class NVG_TargetBase: All {
+        class NVGMarker {
+            maxLifetime = "8 * 60 * 60";
+        };
     };
 
     class NATO_Box_Base;

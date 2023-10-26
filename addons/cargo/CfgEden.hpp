@@ -3,6 +3,18 @@ class Cfg3DEN {
         class AttributeCategories {
             class ace_attributes {
                 class Attributes {
+                    class GVAR(customName) {
+                        displayName = CSTRING(customName_edenName);
+                        tooltip = CSTRING(customName_edenDesc);
+                        property = QGVAR(customName);
+                        control = "Edit";
+
+                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(customName), _value, true)];);
+                        defaultValue = "''";
+
+                        condition = "objectHasInventoryCargo - objectVehicle";
+                        typeName = "STRING";
+                    };
                     class GVAR(space) {
                         displayName = CSTRING(space_edenName);
                         tooltip = CSTRING(space_edenDesc);

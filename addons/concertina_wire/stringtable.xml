@@ -30,7 +30,7 @@
             <Hungarian>Concertina wire coil</Hungarian>
             <Portuguese>Bobina de arame farpado</Portuguese>
             <Japanese>鉄条網コイル</Japanese>
-            <Korean>윤형 철조망</Korean>
+            <Korean>코일형 철조망</Korean>
             <Chinese>鐵絲網捲</Chinese>
             <Chinesesimp>铁丝网卷</Chinesesimp>
             <Turkish>Bıçaklı Tel Rulo</Turkish>
@@ -66,7 +66,7 @@
             <Japanese>鉄条網を置く</Japanese>
             <Korean>철조망 배치</Korean>
             <Chinese>佈署鐵絲網</Chinese>
-            <Chinesesimp>布署铁丝网</Chinesesimp>
+            <Chinesesimp>部署铁丝网</Chinesesimp>
             <Turkish>Bıçaklı Telleri Yerleştir</Turkish>
         </Key>
     </Package>

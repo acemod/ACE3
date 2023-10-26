@@ -186,6 +186,12 @@ class CfgWeapons {
         };
     };
 
+    class LMG_03_Base_F;
+
+    class LMG_03_F: LMG_03_Base_F {
+        magazineReloadTime = 0; // Fix for reloading every time weapon is equipped
+    };
+
     // Sniper and anti-materiel rifles /////////////////////////////////
 
     class EBR_base_F: Rifle_Long_Base_F {

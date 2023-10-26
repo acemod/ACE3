@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the track key being held down.
@@ -65,7 +65,7 @@ playSound "ACE_Sound_Click";
         _args set [3, false];
     } else {
         // smoothing factor alpha - higher values will be more responsive to change, but also spike higher on jerky mouse movmeent
-        private _alpha = _deltaT / 3; 
+        private _alpha = _deltaT / 3;
         GVAR(yawChange) = (_yawChange * _alpha) + GVAR(yawChange) * (1 - _alpha);
         GVAR(pitchChange) = (_pitchChange * _alpha) + GVAR(pitchChange) * (1 - _alpha);
     };

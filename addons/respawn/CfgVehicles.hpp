@@ -64,7 +64,7 @@ class CfgVehicles {
 
     // team leader
     class Man;
-    class CAManBase : Man {
+    class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_MoveRallypoint {
                 displayName = CSTRING(Rallypoint_MoveRallypoint);

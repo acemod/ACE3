@@ -65,7 +65,7 @@ If the interface is not forced then the player can close spectator with the <kbd
 
 If the player is hidden they will become invisible, invulnerable and removed from their group until they exit spectator.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Spectator state of local client <BOOL> (default: true)
  * 1: Force interface <BOOL> (default: true)
@@ -85,7 +85,7 @@ Whitelisted units will always show in the unit list regardless of the usual filt
 
 Note that this function takes local effect, so only the local player will see these changes.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Units to show in the list <ARRAY>
  * 1: Units to hide in the list <ARRAY>
@@ -104,7 +104,7 @@ By default, units on all 4 sides (`west`, `east`, `independent` and `civilian`) 
 
 Note that this function takes local effect, so only the local player will see these changes.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Sides to add <ARRAY>
  * 1: Sides to remove <ARRAY>
@@ -123,7 +123,7 @@ You can change the spectator camera modes available at any point during the miss
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
-```cpp
+```sqf
  * Possible camera modes are:
  *   - 0: Free
  *   - 1: First person
@@ -147,7 +147,7 @@ You can change the spectator vision modes available at any point during the miss
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
-```cpp
+```sqf
  * Possible vision modes are:
  *   - -2: Normal
  *   - -1: Night vision
@@ -178,7 +178,7 @@ You can change any of the listed camera attributes at any time during a mission 
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
-```cpp
+```sqf
  * Arguments:
  * 0: Camera mode <NUMBER>
  *   - 0: Free
@@ -211,7 +211,7 @@ Note that this function takes local effect, so only the local player will experi
 `ace_spectator_fnc_getCameraAttributes`
 Returns an array of the listed camera attributes (see `setCameraAttributes` for more details) for the local player. If the spectator camera is not currently active any pre-set attributes will be returned (otherwise default values will be returned - position will be `[0,0,0]` if unset).
 
-```cpp
+```sqf
  * Arguments:
  * None
  *
@@ -227,7 +227,7 @@ Returns an array of the listed camera attributes (see `setCameraAttributes` for 
 `ace_spectator_fnc_players`
 Will return both alive and dead players (note that dead player corpses are never deleted until the player has respawned - even when `deleteVehicle` is used on them).
 
-```cpp
+```sqf
  * Arguments:
  * None
  *

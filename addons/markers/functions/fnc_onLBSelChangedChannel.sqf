@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, LinkIsGrim
  * When the channel list box is changed.
  *
  * Arguments:
@@ -19,6 +19,6 @@
 params ["_ctrl", "_index"];
 TRACE_2("params",_ctrl,_index);
 
-private _channelName = _ctrl lbText _index;
+private _enabledChannels = false call FUNC(getEnabledChannels);
 
-setCurrentChannel (CHANNEL_NAMES find _channelName);
+setCurrentChannel (_enabledChannels select _index);

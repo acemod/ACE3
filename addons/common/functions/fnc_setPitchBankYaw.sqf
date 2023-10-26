@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Bohemia Interactive edit by KoffeinFlummi
  * Sets the value of an ACE_Parameter and makes it public.

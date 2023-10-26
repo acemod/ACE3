@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ACE-Team
  * Add HitPart EventHandler to objects in the projectile's path

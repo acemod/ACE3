@@ -27,8 +27,4 @@ class ACE_Extensions {
         windows = 1;
         client = 1;
     };
-    class ace_parse_imagepath {
-        windows = 1;
-        client = 1;
-    };
 };

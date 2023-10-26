@@ -21,6 +21,7 @@ class CfgVehicles {
             };
         };
         MACRO_HASRESERVE
+        GVAR(failureDelay) = 2;
     };
     class ParachuteWest: ParachuteBase {
         MACRO_HASRESERVE
@@ -56,7 +57,7 @@ class CfgVehicles {
         MACRO_HASRESERVE
     };
     class Bag_Base;
-    class B_Parachute:Bag_Base {
+    class B_Parachute: Bag_Base {
         MACRO_HASRESERVE
     };
     class B_B_Parachute_02_F: B_Parachute {

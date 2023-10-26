@@ -1,12 +1,12 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Add or remove item(s) when the + or - button is pressed in the right panel.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Add or remove <SCALAR> (-1: remove, 1: Add)
+ * 1: Add (1) or remove (-1) item <NUMBER>
  *
  * Return Value:
  * None
@@ -16,77 +16,110 @@
 
 params ["_display", "_addOrRemove"];
 
-private _load = 0;
-private _maxLoad = "";
-private _items = [];
-private _ctrlList = (_display displayCtrl IDC_rightTabContentListnBox);
+private _add = _addOrRemove > 0;
+
+private _ctrlList = _display displayCtrl IDC_rightTabContentListnBox;
 private _lnbCurSel = lnbCurSelRow _ctrlList;
+private _isUnique = (_ctrlList lnbValue [_lnbCurSel, 2]) == 1;
+
+// If item is unique, don't allow adding more
+if (_add && {_isUnique}) exitWith {};
+
+private _containerItems = [];
 private _item = _ctrlList lnbData [_lnbCurSel, 0];
 
-if ((_ctrlList lnbValue [_lnbCurSel, 2]) == 1 && {_addOrRemove == 1}) exitWith {};
-
-// Update item count and currentItems array
-switch GVAR(currentLeftPanel) do {
-
-    case IDC_buttonUniform : {
-        if (_addOrRemove > 0) then {
-                for "_count" from 1 to ([1, 5] select (GVAR(shiftState))) do {
-                    GVAR(center) addItemToUniform _item;
-                };
+// Update item count and currentItems array & get relevant container
+private _container = switch (GVAR(currentLeftPanel)) do {
+    // Uniform
+    case IDC_buttonUniform: {
+        if (_add) then {
+            for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
+                GVAR(center) addItemToUniform _item;
+            };
+        } else {
+            // Backpacks need special command to be removed
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) get IDX_VIRT_BACKPACK)}) then {
+                [uniformContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
             } else {
-                for "_count" from 1 to ([1, 5] select (GVAR(shiftState))) do {
+                for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                     GVAR(center) removeItemFromUniform _item;
                 };
             };
+        };
 
-        _load = loadUniform GVAR(center);
-        _maxLoad = gettext (configfile >> "CfgWeapons" >> uniform GVAR(center) >> "ItemInfo" >> "containerClass");
-        _items = uniformItems GVAR(center);
-        GVAR(currentItems) set [15 ,_items];
+        /// Get all items from container (excluding container itself)
+        _containerItems = [GVAR(center), 0, 3, 0, 0, false] call EFUNC(common,uniqueUnitItems);
+
+        // Update currentItems
+        GVAR(currentItems) set [IDX_CURR_UNIFORM_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_UNIFORM) param [1, []]];
+
+        // Update load bar
+        (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadUniform GVAR(center));
+
+        uniformContainer GVAR(center)
     };
-
-    case IDC_buttonVest : {
-        if (_addOrRemove > 0) then {
-                for "_count" from 1 to ([1, 5] select (GVAR(shiftState))) do {
-                    GVAR(center) addItemToVest _item;
-                };
+    // Vest
+    case IDC_buttonVest: {
+        if (_add) then {
+            for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
+                GVAR(center) addItemToVest _item;
+            };
+        } else {
+            // Backpacks need special command to be removed
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) get IDX_VIRT_BACKPACK)}) then {
+                [vestContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
             } else {
-                for "_count" from 1 to ([1, 5] select (GVAR(shiftState))) do {
+                for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                     GVAR(center) removeItemFromVest _item;
                 };
             };
+        };
 
-        _load = loadVest GVAR(center);
-        _maxLoad = gettext (configfile >> "CfgWeapons" >> vest GVAR(center) >> "ItemInfo" >> "containerClass");
-        _items = vestItems GVAR(center);
-        GVAR(currentItems) set [16,_items];
+        // Get all items from container (excluding container itself)
+        _containerItems = [GVAR(center), 0, 0, 3, 0, false] call EFUNC(common,uniqueUnitItems);
+
+        // Update currentItems
+        GVAR(currentItems) set [IDX_CURR_VEST_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_VEST) param [1, []]];
+
+        // Update load bar
+        (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadVest GVAR(center));
+
+        vestContainer GVAR(center)
     };
-
-    case IDC_buttonBackpack : {
-        if (_addOrRemove > 0) then {
-                for "_count" from 1 to ([1, 5] select (GVAR(shiftState))) do {
-                    GVAR(center) addItemToBackpack _item;
-                };
+    // Backpack
+    case IDC_buttonBackpack: {
+        if (_add) then {
+            for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
+                GVAR(center) addItemToBackpack _item;
+            };
+        } else {
+            // Backpacks need special command to be removed
+            if (_isUnique && {_item in ((uiNamespace getVariable QGVAR(configItems)) get IDX_VIRT_BACKPACK)}) then {
+                [backpackContainer GVAR(center), _item, [1, 5] select GVAR(shiftState)] call CBA_fnc_removeBackpackCargo;
             } else {
-                for "_count" from 1 to ([1, 5] select (GVAR(shiftState))) do {
+                for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                     GVAR(center) removeItemFromBackpack _item;
                 };
             };
+        };
 
-        _load = loadBackpack GVAR(center);
-        _maxLoad = backpack GVAR(center);
-        _items = backpackItems GVAR(center);
-        GVAR(currentItems) set [17,_items];
+        // Get all items from container (excluding container itself)
+        _containerItems = [GVAR(center), 0, 0, 0, 3, false] call EFUNC(common,uniqueUnitItems);
+
+        // Update currentItems
+        GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_BACKPACK) param [1, []]];
+
+        // Update load bar
+        (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadBackpack GVAR(center));
+
+        backpackContainer GVAR(center)
     };
 };
 
-// Update progress bar status, weight info
-private _loadIndicatorBarCtrl = _display displayCtrl IDC_loadIndicatorBar;
-_loadIndicatorBarCtrl progressSetPosition _load;
-
-private _value = {_x == _item} count _items;
-_ctrlList lnbSetText [[_lnbCurSel, 2],str _value];
+// Find out how many items of that type there are and update the number displayed
+_ctrlList lnbSetText [[_lnbCurSel, 2], str (_containerItems getOrDefault [_item, 0])];
 
 [QGVAR(cargoChanged), [_display, _item, _addOrRemove, GVAR(shiftState)]] call CBA_fnc_localEvent;
 
-[_ctrlList, _maxLoad] call FUNC(updateRightPanel);
+// Refresh availibility of items based on space remaining in container
+[_ctrlList, _container, _containerItems isNotEqualTo []] call FUNC(updateRightPanel);

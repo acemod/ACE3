@@ -20,7 +20,7 @@ GVAR(mainAction) = [
     {
         alive _target
         && {[_player, _target, [INTERACT_EXCEPTIONS]] call EFUNC(common,canInteractWith)}
-        && {REFUEL_DISABLED_FUEL != [_target] call FUNC(getFuel)}
+        && {REFUEL_DISABLED_FUEL != ([_target] call FUNC(getCapacity))}
     },
     {}, [], [0,0,0],
     REFUEL_ACTION_DISTANCE

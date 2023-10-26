@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Logistics - UAV Battery
+component: logistics_uavbattery
 description: UAV recharging.
 group: feature
 category: equipment
@@ -23,7 +24,3 @@ Adds an item `ACE_UAVBattery` that allows refuelling / recharging of the "Darter
 - For this you need a `UAV battery` and the UAV needs to be a quad-copter.
 - Interact with the UAV <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`)
 - Select `Recharge`
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="logistics_uavbattery" %}

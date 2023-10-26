@@ -6,7 +6,7 @@ class GVAR(menu) {
     onLoad = QUOTE([_this select 0] call FUNC(onMenuOpen));
     onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(menuDisplay)),nil)];);
     class controlsBackground {
-        class HeaderBackground: ACE_gui_backgroundBase{
+        class HeaderBackground: ACE_gui_backgroundBase {
             idc = -1;
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             x = "13 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -32,7 +32,7 @@ class GVAR(menu) {
             y = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "13 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            style = ST_LEFT + ST_SHADOW;
+            style = QUOTE(ST_LEFT + ST_SHADOW);
             font = "RobotoCondensed";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {0.95, 0.95, 0.95, 0.75};

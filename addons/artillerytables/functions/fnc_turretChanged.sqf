@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Turret changed, determine if we are in the gunner seat of an artillery vehicle.
@@ -19,7 +19,7 @@
 params ["_player", "_turret"];
 private _vehicle = vehicle _player;
 private _typeOf = typeOf _vehicle;
-private _vehicleCfg = configFile >> "CfgVehicles" >> _typeOf;
+private _vehicleCfg = configOf _vehicle;
 
 // config "ace_artillerytables_showGunLaying" [0 disabled, 1 enabled, 2 enabled w/ alt elevationMode] falls back to artilleryScanner
 private _showGunLaying = if (isNumber (_vehicleCfg >> QGVAR(showGunLaying))) then {

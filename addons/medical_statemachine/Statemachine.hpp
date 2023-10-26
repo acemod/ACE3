@@ -43,10 +43,10 @@ class ACE_Medical_StateMachine {
     };
     class Unconscious {
         onState = QFUNC(handleStateUnconscious);
-        onStateEntered = QUOTE([ARR_2(_this,true)] call EFUNC(medical_status,setUnconsciousState));
+        onStateEntered = QFUNC(enteredStateUnconscious);
         class DeathAI {
             targetState = "Dead";
-            condition = QUOTE(!GVAR(AIUnconsciousness) && {!isPlayer _this});
+            condition = QUOTE(!(_this getVariable [ARR_2(QQGVAR(AIUnconsciousness), GVAR(AIUnconsciousness))]) && {!isPlayer _this});
         };
         class WakeUp {
             targetState = "Injured";

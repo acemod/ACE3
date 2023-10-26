@@ -179,6 +179,11 @@ class CfgVehicles {
         function = QFUNC(moduleHeal);
         icon = QPATHTOF(ui\Icon_Module_Zeus_Heal_ca.paa);
     };
+    class GVAR(moduleLayTrench): GVAR(moduleBase) {
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleLayTrenchline_DisplayName);
+        function = QFUNC(moduleLayTrench);
+    };
     class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
@@ -323,6 +328,13 @@ class CfgVehicles {
     };
     class ModuleArsenal_F: Module_F {
         function=QFUNC(bi_moduleArsenal);
+    };
+    class GVAR(moduleBurn): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Medical);
+        displayName = CSTRING(ModuleBurn_DisplayName);
+        function = QFUNC(moduleBurn);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Burn_ca.paa);
     };
 
     class Man;

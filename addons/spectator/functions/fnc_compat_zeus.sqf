@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Handles compatibility with curator interface (i.e. re-opens spectator if applicable)
  *
  * Called from the RscDisplayCurator XEH

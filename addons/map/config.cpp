@@ -100,7 +100,7 @@ class RscDisplayMainMap {
     class objects {
         class Compass: RscObject {
             scale = 0.7;
-            zoomDuration = 0;
+            zoomDuration = 0.1; // 0 (instant transition) breaks Arma saving position/size
         };
     };
 };

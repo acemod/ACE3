@@ -34,22 +34,22 @@ class CfgVehicles {
                 source = "user";
                 animPeriod = 1e-007;
             };
-            class wire_3: wire_2{};
-            class wire_4: wire_2{};
-            class wire_5: wire_2{};
-            class wire_6: wire_2{};
-            class wire_7: wire_2{};
-            class wire_8: wire_2{};
-            class wire_9: wire_2{};
-            class wire_10: wire_2{};
-            class wire_11: wire_2{};
-            class wire_12: wire_2{};
-            class wire_13: wire_2{};
-            class wire_14: wire_2{};
-            class wire_15: wire_2{};
-            class wire_16: wire_2{};
-            class wire_17: wire_2{};
-            class wire_18: wire_2{};
+            class wire_3: wire_2 {};
+            class wire_4: wire_2 {};
+            class wire_5: wire_2 {};
+            class wire_6: wire_2 {};
+            class wire_7: wire_2 {};
+            class wire_8: wire_2 {};
+            class wire_9: wire_2 {};
+            class wire_10: wire_2 {};
+            class wire_11: wire_2 {};
+            class wire_12: wire_2 {};
+            class wire_13: wire_2 {};
+            class wire_14: wire_2 {};
+            class wire_15: wire_2 {};
+            class wire_16: wire_2 {};
+            class wire_17: wire_2 {};
+            class wire_18: wire_2 {};
 
             class wire_2_1: wire_2 {
                 animPeriod = 8;
@@ -75,6 +75,7 @@ class CfgVehicles {
     class ACE_ConcertinaWire: ACE_ConcertinaWireNoGeo {
         scope = 2;
         displayName = CSTRING(DisplayName);
+        editorPreview = QPATHTOF(data\preview_concertina_wire.jpg);
         model = QPATHTOF(data\ACE_ConcertinaWire.p3d);
         EGVAR(logistics_wirecutter,isFence) = 1;
         class ACE_Actions {
@@ -104,7 +105,9 @@ class CfgVehicles {
 
         scope = 2;
         displayName = CSTRING(Coil_DisplayName);
+        editorPreview = QPATHTOF(data\preview_concertina_wire_coil.jpg);
         model = QPATHTOF(data\ACE_ConcertinaWireCoil.p3d);
+        icon = "iconObject_circle";
         mapsize = 0.5;
         animated = 0;
         nameSound = "fence";

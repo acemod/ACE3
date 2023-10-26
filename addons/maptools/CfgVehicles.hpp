@@ -32,14 +32,14 @@ class CfgVehicles {
                 class ACE_MapToolsShowNormal {
                     displayName = CSTRING(MapToolsShowNormal);
                     condition = QUOTE(GVAR(mapTool_Shown) != 1);
-                    statement = QUOTE(GVAR(mapTool_Shown) = 1;);
+                    statement = QUOTE(if (GVAR(mapTool_Shown) == 0) then {GVAR(mapTool_moveToMouse) = true}; GVAR(mapTool_Shown) = 1;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                 };
                 class ACE_MapToolsShowSmall {
                     displayName = CSTRING(MapToolsShowSmall);
                     condition = QUOTE(GVAR(mapTool_Shown) != 2);
-                    statement = QUOTE(GVAR(mapTool_Shown) = 2;);
+                    statement = QUOTE(if (GVAR(mapTool_Shown) == 0) then {GVAR(mapTool_moveToMouse) = true}; GVAR(mapTool_Shown) = 2;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                 };
@@ -52,7 +52,7 @@ class CfgVehicles {
                 };
                 class ACE_MapToolsAlignCompass {
                     displayName = CSTRING(MapToolsAlignCompass);
-                    condition = QUOTE((GVAR(mapTool_Shown) != 0) && {'ItemCompass' in assigneditems ACE_player});
+                    condition = QUOTE(GVAR(mapTool_Shown) != 0 && {getUnitLoadout ACE_player param [ARR_2(9, [])] param [ARR_2(3, '')] != ''});
                     statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;

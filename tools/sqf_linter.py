@@ -1,66 +1,87 @@
 #!/usr/bin/env python3
-
 # Requires: https://github.com/LordGolias/sqf
 
-import fnmatch
 import os
 import sys
 import argparse
+import concurrent.futures
 from sqf.parser import parse
 import sqf.analyzer
 from sqf.exceptions import SQFParserError
 
+addon_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
-def analyze(filename, writer=sys.stdout):
-    warnings = 0
-    errors = 0
-    with open(filename, 'r') as file:
-        code = file.read()
-        try:
-            result = parse(code)
-        except SQFParserError as e:
-            print("{}:".format(filename))
-            writer.write('    [%d,%d]:%s\n' % (e.position[0], e.position[1] - 1, e.message))
-            return 0, 1
+files_to_ignore_lower = [
+    x.lower() for x in ["initSettings.sqf", "initKeybinds.sqf", "XEH_PREP.sqf"]
+]
 
-        exceptions = sqf.analyzer.analyze(result).exceptions
+
+def get_files_to_process(basePath):
+    arma_files = []
+    for (root, _dirs, files) in os.walk(basePath):
+        for file in files:
+            if file.endswith(".sqf"):
+                if file.lower() in files_to_ignore_lower:
+                    continue
+                filePath = os.path.join(root, file)
+                arma_files.append(filePath)
+    return arma_files
+
+
+def process_file(filePath):
+    errors = []
+    warnings = []
+    try:
+        with open(filePath, "r", encoding="utf-8", errors="ignore") as file:
+            content = file.read()
+            if "#ASC_ignoreFile" in content:
+                return (filePath, errors, warnings)
+        sqfLintParse = parse(content)
+        exceptions = sqf.analyzer.analyze(sqfLintParse).exceptions
         if (exceptions):
-            print("{}:".format(filename))
             for e in exceptions:
-                if (e.message.startswith("error")):
-                    errors += 1
-                else:
-                    warnings += 1
-                writer.write('    [%d,%d]:%s\n' % (e.position[0], e.position[1] - 1, e.message))
+                if ("assigned to an outer scope" in e.message):
+                    warnings.append(f"[{e.position[0]},{e.position[1]}] {e.message}")
+                if ("is not from this scope" in e.message):
+                    warnings.append(f"[{e.position[0]},{e.position[1]}] {e.message}")
+                if ("not used" in e.message):
+                    warnings.append(f"[{e.position[0]},{e.position[1]}] {e.message}")
 
-    return warnings, errors
+                # most of this is just noise about macro parsing:
+                # if (e.message.startswith("error")):
+                #   errors.append(f"[{e.position[0]},{e.position[1]}] {e.message}")
+                # else:
+                #   warnings.append(f"[{e.position[0]},{e.position[1]}] {e.message}")
+    except Exception as e:
+        # errors.append(f"Exception {e}")
+        pass
+    return (filePath, errors, warnings)
+
 
 def main():
-    print("#########################")
-    print("# Lint Check  #")
-    print("#########################")
-
-    sqf_list = []
-    all_warnings = 0
-    all_errors = 0
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
+    parser.add_argument('-m', '--module', help='only search specified module addon folder', required=False, default=".")
     args = parser.parse_args()
 
-    for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
-        for filename in fnmatch.filter(filenames, '*.sqf'):
-            sqf_list.append(os.path.join(root, filename))
+    error_count = 0
+    addon_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    if (args.module): addon_base_path = os.path.join(addon_base_path, "addons", args.module)
+    arma_files = get_files_to_process(addon_base_path)
+    print(f"Checking {len(arma_files)} files from {addon_base_path}")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=12) as executor:
+        for (filePath, errors, warnings) in executor.map(process_file, arma_files):
+            if errors or warnings:
+                error_count += 1
+                print(f"{filePath}")
+                for e in errors:
+                    print(f"  {e}")
+                for e in warnings:
+                    print(f"  {e}")
 
-    for filename in sqf_list:
-        warnings, errors = analyze(filename)
-        all_warnings += warnings
-        all_errors += errors
+    print("Errors: {}".format(error_count))
+    return error_count
 
-    print ("Parse Errors {0} - Warnings {1}".format(all_errors,all_warnings))
-
-    # return (all_errors + all_warnings)
-    return all_errors
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Map Gestures
+component: map_gestures
 description: Allow players to gesture on map.
 group: feature
 category: interaction
@@ -23,7 +24,3 @@ Allow players to gesture/point on their map.
 ### 2.1 Gesturing on map
 
 - To gesture on map hold <kbd>Left Mouse Btn</kbd>.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="map_gestures" %}

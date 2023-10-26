@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
@@ -7,6 +7,7 @@
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
  * 2: Selected hitpointIndex <NUMBER>
+ * 3: Repair action classname <STRING>
  *
  * Return Value:
  * None
@@ -17,10 +18,11 @@
  * Public: No
  */
 
-params ["_unit", "_vehicle", "_hitPointIndex"];
-TRACE_3("params",_unit,_vehicle,_hitPointIndex);
+params ["_unit", "_vehicle", "_hitPointIndex", "_action"];
+TRACE_4("params",_unit,_vehicle,_hitPointIndex,_action);
 
-private _postRepairDamageMin = [_unit] call FUNC(getPostRepairDamage);
+// override minimum damage if doing full repair
+private _postRepairDamageMin = [_unit, _action isEqualTo "fullRepair"] call FUNC(getPostRepairDamage);
 
 (getAllHitPointsDamage _vehicle) params ["_allHitPoints"];
 private _hitPointClassname = _allHitPoints select _hitPointIndex;

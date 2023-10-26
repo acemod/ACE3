@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Commy2 and esteldunedain
  * Make the player check the temperature of his weapon
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, currentWeapon player] call ace_overheating_fnc_checkTemperature
+ * [player, player, currentWeapon player] call ace_overheating_fnc_checkTemperature
  *
  * Public: No
  */

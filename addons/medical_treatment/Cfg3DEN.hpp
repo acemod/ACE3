@@ -23,9 +23,9 @@ class Cfg3DEN {
                 class Title: Title {};
                 class Value: ctrlToolbox {
                     idc = 100;
-                    x = 48 * GRID_3DEN_W;
-                    w = 82 * GRID_3DEN_W;
-                    h = 5  * GRID_3DEN_H;
+                    x = QUOTE(48 * GRID_3DEN_W);
+                    w = QUOTE(82 * GRID_3DEN_W);
+                    h = QUOTE(5  * GRID_3DEN_H);
                     rows = 1;
                     columns = 4;
                     strings[] = {

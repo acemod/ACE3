@@ -32,11 +32,11 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Setting changed added here so color setup happens once at init
-    ["ace_settingChanged", {
+    ["CBA_SettingChanged", {
         params ["_name"];
         if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
             [] call FUNC(setupTextColors);
@@ -111,4 +111,12 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
     private _menuBackgroundSetting = [GVAR(menuBackground), GVAR(menuBackgroundSelf)] select _menuType;
     if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
     if (_menuBackgroundSetting == 2) exitWith {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
+}] call CBA_fnc_addEventHandler;
+
+
+// init menu reordering
+[QGVAR(newControllableObject), {
+    params ["_class"];
+    if !(_class isKindOf "CAManBase") exitWith {};
+    _class call FUNC(initMenuReorder);
 }] call CBA_fnc_addEventHandler;

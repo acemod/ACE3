@@ -1,3 +1,5 @@
+//pragma SKIP_COMPILE - Inline file
+
 GVAR(stateMachine) = [{call EFUNC(common,getLocalUnits)}, true] call CBA_statemachine_fnc_create;
 
 // Add states [statemachine, onState, onStateEntered, onStateLeaving, name]

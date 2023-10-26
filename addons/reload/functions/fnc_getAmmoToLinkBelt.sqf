@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, phyma
- * Check if the target has an MG equiped with belt system that the player can link
+ * Check if the target has an MG equipped with belt system that a unit can link.
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Unit wanting to link the belt <OBJECT>
+ * 1: Unit equipped with the weapon <OBJECT>
  *
  * Return Value:
  * Maximum ammo of magazine (-1 on error) <NUMBER>
@@ -16,12 +16,12 @@
  * Public: No
  */
 
-params ["_player", "_target"];
+params ["_unit", "_target"];
 
-if (vehicle _target != _target) exitWith {-1};
+if !(isNull objectParent _target) exitWith {-1};
 
-private _magazineType = currentMagazine _target;
-private _magazineCfg = configFile >> "CfgMagazines" >> _magazineType;
+private _magazine = currentMagazine _target;
+private _magazineCfg = configFile >> "CfgMagazines" >> _magazine;
 
 if (getNumber (_magazineCfg >> "ACE_isBelt") == 0) exitWith {-1};
 
@@ -29,14 +29,13 @@ if (getNumber (_magazineCfg >> "ACE_isBelt") == 0) exitWith {-1};
 private _ammoCount = _target ammo currentWeapon _target;
 
 // Exit if the belt is full or empty
-if (_ammoCount == 0 || getNumber (_magazineCfg >> "count") - _ammoCount == 0) exitWith {-1};
+if (_ammoCount == 0 || {getNumber (_magazineCfg >> "count") - _ammoCount == 0}) exitWith {-1};
 
-// Check if the player has any of the same magazines
-// Calculate max ammo
+// Check if the unit has any of the same magazines and calculate max ammo
 private _maxAmmo = 0;
 
 {
     _maxAmmo = _maxAmmo max (_x select 1);
-} forEach (magazinesAmmo _player select {_x select 0 == _magazineType});
+} forEach (magazinesAmmo _unit select {(_x select 0) == _magazine});
 
 _maxAmmo
