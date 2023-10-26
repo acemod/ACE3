@@ -35,18 +35,18 @@ jobs:
         RHSSAF_URL: ${{ secrets.RHSSAF_URL }}
         RHSUSF_URL: ${{ secrets.RHSUSF_URL }}
     - name: Checkout CBA A3
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: x\cba
         ref: master
         repository: CBATeam/CBA_A3.git
     - name: Checkout ACE3
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: z\ace
         persist-credentials: false
     - name: Checkout pull request
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       if: ${{ github.event_name == 'pull_request_target' }}
       with:
         path: pullrequest
