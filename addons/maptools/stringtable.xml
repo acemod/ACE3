@@ -35,6 +35,12 @@
             <Chinese>地圖工具能夠讓你在地圖上測量距離與角度</Chinese>
             <Turkish>Harita Araçları, haritadaki mesafeleri ve açıları ölçmenize olanak tanır.</Turkish>
         </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoard_Name">
+            <English>ACE Plotting Board</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
+            <English>The ACE Plotting Board is a map tool utilised in the designed for use in the directing of short range indirect fires.</English>
+        </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
             <Spanish>Herramientas de mapa</Spanish>
@@ -257,7 +263,13 @@
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
             <English>Channels in which plotting board drawing is enabled.</English>
-        </Key>        
+        </Key>
+        <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
+            <English>Allow Direct Comms Only (Polylines Only)</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_allowDirectGroupComms">
+            <English>Allow Direct/Group Comms (Polylines and Group Markers)</English>
+        </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
             <English>Plotting Board</English>
         </Key>
@@ -323,7 +335,7 @@
             <Polish>Do kompasu</Polish>
             <Czech>Ke kompasu</Czech>
             <Russian>По компасу</Russian>
-        </Key>        
+        </Key>
         <Key ID="STR_ACE_MapTools_ToUpLabel">
             <English>Up</English>
         </Key>

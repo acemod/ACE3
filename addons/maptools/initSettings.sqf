@@ -18,8 +18,8 @@ private _category = format ["ACE %1", localize LSTRING(Name)];
 
 [
     QGVAR(plottingBoardAllowChannelDrawing), "LIST",
-    ["plottingBoardAllowChannelDrawing", "allows drawing on plotting board with following channels"],
+    [LSTRING(allowChannelDrawing_displayName), LSTRING(allowChannelDrawing_description)],
     _category,
-    [[0, 1], ["Direct Comms Only (Polylines Only)", "Direct/Group Comms"], 1],
+    [[0, 1], [LSTRING(allowDirectCommsOnly), LSTRING(allowDirectGroupComms)], 1],
     0
 ] call CBA_fnc_addSetting;
