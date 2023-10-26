@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Copperhead: submunition condition, checks if shell should become missile (wings deploy)

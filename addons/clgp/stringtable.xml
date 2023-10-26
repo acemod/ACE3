@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="clgp">
+    <Package name="CLGP">
         <Key ID="STR_ACE_CLGP_copperhead_action">
             <English>Configure M712 Shell</English>
         </Key>

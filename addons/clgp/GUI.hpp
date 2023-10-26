@@ -31,7 +31,7 @@ class GVAR(copperhead_dialog) {
         class TheThing: RscObject {
             type = 82; 
             idc = 100;
-            model = QPATHTOF(data\ace_cuhead.p3d);
+            model = QPATHTOF(data\ace_copperhead_interactive.p3d);
             direction[] = {0,0,1};
             up[] = {0,1,0};
             position[] = {0,-0.338,0.5};
@@ -39,7 +39,7 @@ class GVAR(copperhead_dialog) {
             enableZoom = 0;
             zoomDuration = 1;
             scale = 1;
-			inBack = 0;
+            inBack = 0;
             class Areas {
                 class Dial1 {
                     selection = "dial1";

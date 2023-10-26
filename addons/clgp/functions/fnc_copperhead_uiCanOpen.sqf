@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Condition for showing copperhead interface, used in both interaction menu and inside dialog loop
