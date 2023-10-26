@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BIS, commy2, Timi007
  * Sets up the marker placement
@@ -223,8 +223,7 @@
         while {_i < lbSize _channel} do {
             private _channelName = _channel lbText _i;
 
-            // _enabledChannels can not include custom channels names. Therefore also check if it's a custom one. Blame BI if the unit should not access the channel.
-            if (_channelName in _enabledChannels || {!(_channelName in CHANNEL_NAMES)}) then {
+            if (_channelName in _enabledChannels) then {
                 _i = _i + 1;
             } else {
                 _channel lbDelete _i;
@@ -238,13 +237,14 @@
             currentChannel
         };
 
-        private _currentChannelName = CHANNEL_NAMES param [_selectChannel, localize "str_channel_group"];
+        // engine channels (0-4) can use names directly, custom channels need an offset for radioChannelInfo
+        private _selectChannelName = CHANNEL_NAMES param [_selectChannel, radioChannelInfo (_selectChannel - 5) select 1];
 
         // select current channel in list box, must be done after lbDelete
         for "_j" from 0 to (lbSize _channel - 1) do {
-            if (_channel lbText _j == _currentChannelName) then {
+            if (_channel lbText _j == _selectChannelName) then {
                 _channel lbSetCurSel _j;
-                setCurrentChannel (CHANNEL_NAMES find _currentChannelName);
+                setCurrentChannel _selectChannel;
             };
         };
 

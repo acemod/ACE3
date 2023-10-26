@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth de Wet (LH), mharis001
  * Shows an interaction hint for mouse buttons.

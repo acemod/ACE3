@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Sends a near civilian crowd away with a chance of failure.

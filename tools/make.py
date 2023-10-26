@@ -282,13 +282,22 @@ def pboproject_settings():
     value_exclude = "thumbs.db,*.txt,*.h,*.dep,*.cpp,*.bak,*.png,*.log,*.pew,source,*.tga"
 
     try:
-        k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
+        pbok = mikero_windows_registry(r"pboProject")
+        try:
+            k = winreg.OpenKey(pbok, "Settings", access=winreg.KEY_SET_VALUE)
+        except:
+            print_yellow("WARNING: creating pboProject\Settings reg manually")
+            print_yellow("This should have happened before running make.py")
+            k = winreg.CreateKeyEx(pbok, "Settings", access=winreg.KEY_SET_VALUE)
         winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "wildcard_exclude_from_pbo_normal", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "wildcard_exclude_from_pbo_unbinarised_missions", 0, winreg.REG_SZ, value_exclude)
     except:
         raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
+    finally:
+        winreg.CloseKey(k)
+        winreg.CloseKey(pbok)
 
 
 def color(color):
@@ -1320,7 +1329,7 @@ See the make.cfg file for additional build options.
                             if "preprocess = false" in tomlFile: 
                                 print_error("'preprocess = false' not supported")
                                 raise
-                            skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
+                            skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile or "[rapify]\nenabled = false" in tomlFile
 
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")

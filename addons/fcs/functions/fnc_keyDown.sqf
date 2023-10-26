@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Starts watching the target for sideways correction.

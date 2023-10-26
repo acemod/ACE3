@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Calculates and applies final sway coefficient from sway factors
@@ -27,4 +27,4 @@ if (GVAR(swayFactorsMultiplier) isNotEqualTo []) then {
 
 ACE_player setCustomAimCoef (_baseline * _multiplier);
 
-[FUNC(swayLoop), [], 1] call CBA_fnc_waitAndExecute
+[FUNC(swayLoop), [], 0.5] call CBA_fnc_waitAndExecute

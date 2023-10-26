@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Used to execute the checkPBOs module without placing the module. Don't use this together with the module.

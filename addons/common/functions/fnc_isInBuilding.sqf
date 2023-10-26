@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Check if the unit is in a building. Will return true if the unit is sitting in a bush.

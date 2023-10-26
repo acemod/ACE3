@@ -888,7 +888,7 @@
             <French>Hors de portée</French>
             <Spanish>Fuera de rango</Spanish>
             <Russian>Слишком далеко</Russian>
-            <Portuguese>Fora do Alcançe</Portuguese>
+            <Portuguese>Fora do Alcance</Portuguese>
             <Hungarian>Hatótávolságon kívül</Hungarian>
             <Polish>Poza zasięgiem</Polish>
             <Czech>Mimo dosah</Czech>
@@ -1292,7 +1292,7 @@
             <German>Erlaube Gruppenführer das Umbenennen Ihrer Gruppe, wenn der Name nicht bereits vergeben ist.</German>
             <Polish>Pozwala liderowi grupy na zmianę jej nazwy, jeżeli ta nazwa nie jest już w użyciu.</Polish>
             <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
-            <Korean>그룹 리더가 그룹 이름을 재설정 하는 것을 허가합니다.</Korean>
+            <Korean>그룹 리더가 그룹 이름을 재설정하는 것을 허가합니다.</Korean>
             <Spanish>Permite al lider de un grupo renombrar a su grupo si el nombre no está siendo actualmente usado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">

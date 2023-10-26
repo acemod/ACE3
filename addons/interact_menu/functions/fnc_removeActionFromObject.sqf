@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, NouberNou and esteldunedain
  * Removes an action from an object

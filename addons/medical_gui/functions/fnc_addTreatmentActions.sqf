@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, mharis001
  * Creates actions for treatments from config and adds them to the interaction menu.

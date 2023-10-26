@@ -1,7 +1,7 @@
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscText;
-class RscListbox;
+class RscListBox;
 class RscCombo;
 class RscEdit;
 class RscXSliderH;
@@ -373,7 +373,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                             h = QUOTE(H_PART(1));
                             colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class Unit: RscListbox {
+                        class Unit: RscListBox {
                             idc = 16189;
                             x = 0;
                             y = QUOTE(H_PART(1.1));
@@ -475,7 +475,7 @@ class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
 class RscDisplayAttributesVehicle: RscDisplayAttributes {
     class Controls: Controls {
         class Content: Content {
-            class Controls: controls {
+            class controls: controls {
                 class ace_cargo: GVAR(AttributeCargo) { };
             };
         };
@@ -485,7 +485,7 @@ class RscDisplayAttributesVehicle: RscDisplayAttributes {
 class RscDisplayAttributesVehicleEmpty: RscDisplayAttributes {
     class Controls: Controls {
         class Content: Content {
-            class Controls: controls {
+            class controls: controls {
                 class ace_cargo: GVAR(AttributeCargo) { };
             };
         };
@@ -542,7 +542,7 @@ class GVAR(RscGarrison): RscDisplayAttributes {
                             y = QUOTE(H_PART(2.2));
                             w = QUOTE(W_PART(26));
                         };
-                        class FillingMode: RscListbox {
+                        class FillingMode: RscListBox {
                             idc = 73063;
                             x = 0;
                             y = QUOTE(H_PART(3.2));

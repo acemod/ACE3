@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Karel Moricky, modified by Alganthe
  * Update camera position.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Used to normalize dependant hitpoints. May overwrite some global variables that are named like hitpoints or "Total" though...

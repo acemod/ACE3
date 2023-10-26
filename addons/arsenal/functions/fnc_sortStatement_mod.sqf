@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson, johnb43
  * Statement to sort items by the mod they belong to.

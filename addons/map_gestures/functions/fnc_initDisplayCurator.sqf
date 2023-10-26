@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: joko // Jonas
  * Binds Draw EventHandlers to Zeus map.

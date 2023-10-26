@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, PabstMirror
  * Return a suitable position for the action point for the given target vehicle

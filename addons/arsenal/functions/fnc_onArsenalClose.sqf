@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe
  * onUnLoad EH for arsenal.
@@ -109,6 +109,7 @@ GVAR(leftTabFocus) = nil;
 GVAR(rightTabFocus) = nil;
 GVAR(rightTabLnBFocus) = nil;
 GVAR(ignoreFirstSortPanelCall) = nil;
+GVAR(refreshing) = nil;
 
 GVAR(selectedWeaponType) = nil;
 GVAR(virtualItems) = nil;

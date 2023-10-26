@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Returns gunner using specified weapon type in vehicle. Only works if all turrets have different weapons.

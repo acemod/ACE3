@@ -1,13 +1,7 @@
 #include "script_component.hpp"
-
-#if __has_include("\vn\weapons_f_vietnam\config.bin")
-#else
-    #define PATCH_SKIP "SOG-Vietnam"
-#endif
-
-#ifdef PATCH_SKIP
-ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
-#else
+// ToDo: move refuel to subconfig
+#include "\z\ace\addons\refuel\defines.hpp"
+#include "\z\ace\addons\hearing\script_macros_hearingProtection.hpp"
 
 class CfgPatches {
     class ADDON {
@@ -44,9 +38,7 @@ class CfgPatches {
             QGVAR(mortar_type53_carry)
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "loadorder_f_vietnam"
-        };
+        requiredAddons[] = {"ace_common", "loadorder_f_vietnam"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"BaerMitUmlaut", "veteran29"};
@@ -65,5 +57,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "EMM_mainMenu_CfgMenus.hpp"
-
-#endif

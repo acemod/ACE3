@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001, Glowbal, PabstMirror, drofseh
  * Cool a weapon with an item and consume the item being used to cool it.

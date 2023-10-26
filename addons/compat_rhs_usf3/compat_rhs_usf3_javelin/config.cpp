@@ -1,24 +1,8 @@
 #include "script_component.hpp"
 
-#if __has_include("\rhsusf\addons\rhsusf_main\loadorder\config.bin")
-#else
-    #define PATCH_SKIP "RHS USAF"
-#endif
-
-#if __has_include("\z\ace\addons\javelin\script_component.hpp")
-#else
-    #ifndef PATCH_SKIP
-        #define PATCH_SKIP "ACE Javelin"
-    #endif
-#endif
-
-#ifdef PATCH_SKIP
-ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
-#else
-
 class CfgPatches {
-    class ADDON {
-        addonRootClass = QUOTE(COMPONENT);
+    class SUBADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -27,11 +11,14 @@ class CfgPatches {
             "ace_javelin"
         };
         skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        authors[] = {};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 
 #include "CfgAmmo.hpp"
 #include "CfgWeapons.hpp"
-
-#endif
