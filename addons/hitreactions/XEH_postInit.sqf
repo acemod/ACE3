@@ -19,9 +19,7 @@ if (isNil QGVAR(undroppableGuns)) then {GVAR(undroppableGuns) = DEFAULT_UNDROPPA
     params ["", "", "", "", "", "", "_projectile"];
     if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
     private _roll = random 1;
-    private _willDropGun = _roll < GVAR(weaponDropChanceGunHit);
-    private _willDropArm = _roll < GVAR(weaponDropChanceArmHit);
-    if (!(_willDropGun || _willDropArm)) exitWith {};
+    if (!(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit))) exitWith {};
     _projectile addEventHandler ["HitPart", {
         params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
         [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
@@ -34,9 +32,7 @@ if (!hasInterface) exitWith {};
     params ["", "", "", "", "", "", "_projectile"];
     if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
     private _roll = random 1;
-    private _willDropGun = _roll < GVAR(weaponDropChanceGunHit);
-    private _willDropArm = _roll < GVAR(weaponDropChanceArmHit);
-    if (!(_willDropGun && _willDropArm)) exitWith {};
+    if (!(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit))) exitWith {};
     _projectile addEventHandler ["HitPart", { 
         params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
         [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
