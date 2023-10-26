@@ -4530,7 +4530,7 @@
             <Korean>시체를 위해 무덤 파기</Korean>
             <Polish>Wykop grób na ciało</Polish>
             <French>Enterrer le corps</French>
-            <German>Grabe ein Grab für die Leiche</German>
+            <German>Grabe ein Grab für den Leichnam</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
