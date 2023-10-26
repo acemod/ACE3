@@ -1451,7 +1451,7 @@
             <Korean>개: 환자의 소지품</Korean>
             <Chinesesimp>在病人库存中</Chinesesimp>
             <French>dans l'inventaire du patient</French>
-            <German>in patient's inventory</German>
+            <German>im Inventar des Patienten</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
             <English>in vehicle's inventory</English>
