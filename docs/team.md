@@ -7,7 +7,7 @@ order: 3
 
 This page lists all current maintainers for the ACE3 projects with their areas of expertise and roles.
 
-## Project maintainers
+## Project Managers
 
 This lists all the maintainers responsible for project management and the overall direction of the ACE3 project.
 
@@ -26,7 +26,7 @@ This lists all the maintainers responsible for project management and the overal
 - [Glowbal](https://github.com/thojkooi){:target="_blank"}
   - Build automation, project management, architecture
 
-## Core maintainers
+## Core Maintainers
 
 - [BaerMitUmlaut](https://github.com/BaerMitUmlaut){:target="_blank"}
   - Scripting, Config
@@ -64,6 +64,11 @@ This lists all the maintainers responsible for project management and the overal
 - [Dahlgren](https://github.com/Dahlgren){:target="_blank"}
 - [BrettMayson](https://github.com/BrettMayson){:target="_blank"}
 - [Grim](https://github.com/LinkIsGrim){:target="_blank"}
+
+## Moderators
+
+-
+-
 
 ## Contributors
 
