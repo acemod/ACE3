@@ -42,6 +42,7 @@ PREP(fillLoadoutsList);
 PREP(fillRightPanel);
 PREP(fillSort);
 PREP(filterStatement_weaponType);
+PREP(filterStatement_backpackType);
 PREP(getVirtualItems);
 PREP(handleActions);
 PREP(handleFilters);

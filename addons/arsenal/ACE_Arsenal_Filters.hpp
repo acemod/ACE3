@@ -55,4 +55,25 @@ class GVAR(filters) {
         tabs[] = {{0,1,2}, {}};
         statement = QUOTE([ARR_2(_this, 'other')] call FUNC(filterStatement_weaponType));
     };
+
+    class ACE_backpackTypeBag: filterBase {
+        scope = 2;
+        displayName = CSTRING(filterBagText);
+        tabs[] = {{5}, {}};
+        statement = QUOTE([ARR_2(_this, 'bag')] call FUNC(filterStatement_backpackType));
+    };
+
+    class ACE_backpackTypeDeployable: filterBase {
+        scope = 2;
+        displayName = CSTRING(filterDeployableText);
+        tabs[] = {{5}, {}};
+        statement = QUOTE([ARR_2(_this, 'deployable')] call FUNC(filterStatement_backpackType));
+    };
+
+    class ACE_backpackTypeOther: filterBase {
+        scope = 2;
+        displayName = CSTRING(filterOtherText);
+        tabs[] = {{5}, {}};
+        statement = QUOTE([ARR_2(_this, 'other')] call FUNC(filterStatement_backpackType));
+    };
 };

@@ -1661,6 +1661,12 @@
         <Key ID="STR_ACE_Arsenal_filterRocketText">
             <English>Unguided</English>
         </Key>
+        <Key ID="STR_ACE_Arsenal_filterBagText">
+            <English>Backpack</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterDeployableText">
+            <English>Deployable</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_filterOtherText">
             <English>Other</English>
         </Key>
