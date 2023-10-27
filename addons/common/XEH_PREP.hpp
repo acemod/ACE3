@@ -7,6 +7,7 @@ PREP(cbaSettings_settingChanged);
 PREP(cbaSettings_transferUserSettings);
 PREP(readSettingsFromParamsArray);
 
+PREP(actionKeyPressed);
 PREP(actionKeysNamesConverted);
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);

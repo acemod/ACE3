@@ -46,7 +46,7 @@ if (_state) then {
         _map ctrlMapCursor ["", QGVAR(blank)];
 
         _display displayAddEventHandler ["KeyDown", {
-            params ["", "_key"];
+            params ["", "_key", "_shift", "_ctrl", "_alt"];
 
             if (_key == 1 && {alive player}) then {
                 createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
@@ -76,7 +76,7 @@ if (_state) then {
                 _ctrl ctrlSetTooltip "Respawn.";
             };
 
-            if (_key in actionKeys "TeamSwitch" && {teamSwitchEnabled}) then {
+            if ((["TeamSwitch", _key, _shift, _ctrl, _alt] call FUNC(actionKeyPressed)) && {teamSwitchEnabled}) then {
                 (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
 
                 private _acc = accTime;
