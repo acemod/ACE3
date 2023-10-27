@@ -116,7 +116,7 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState, _submunitionArray ]
+            [ diag_tickTime, [], [], _lastKnownPosState ]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
