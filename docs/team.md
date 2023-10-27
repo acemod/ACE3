@@ -13,18 +13,18 @@ This lists all the maintainers responsible for project management and the overal
 
 - [bux](https://github.com/bux){:target="_blank"}
   - Scripting, Testing
-- [Jonpas](https://github.com/Jonpas){:target="_blank"}
-  - Scripting, Tools, Documentation
 - [Felix Wiegand](https://github.com/koffeinflummi){:target="_blank"}
   - Scripting, Model Import
+- [Glowbal](https://github.com/thojkooi){:target="_blank"}
+  - Build automation, project management, architecture
+- [Jonpas](https://github.com/Jonpas){:target="_blank"}
+  - Scripting, Tools, Documentation
 - [NouberNou](https://github.com/Noubernou){:target="_blank"}
   - Coding, Modeling, Performance, SME
 - [PabstMirror](https://github.com/PabstMirror){:target="_blank"}
   - Scripting, Config
 - [ViperMaul](https://github.com/vipermaul){:target="_blank"}
   - Project management
-- [Glowbal](https://github.com/thojkooi){:target="_blank"}
-  - Build automation, project management, architecture
 
 ## Core Maintainers
 
@@ -47,23 +47,23 @@ This lists all the maintainers responsible for project management and the overal
 
 ## Maintainers
 
+- [654wak654](https://github.com/654wak654){:target="_blank"}
 - [Alganthe](https://github.com/alganthe){:target="_blank"}
-- [TheMagnetar](https://github.com/TheMagnetar){:target="_blank"}
-  - Scripting
+- [BrettMayson](https://github.com/BrettMayson){:target="_blank"}
+- [Dahlgren](https://github.com/Dahlgren){:target="_blank"}
 - [Garth "L-H" de Wet](https://github.com/CorruptedHeart){:target="_blank"}
   - Scripting, Config
+- [Giallustio](https://github.com/Giallustio){:target="_blank"}
+- [Grim](https://github.com/LinkIsGrim){:target="_blank"}
 - gundy
 - Janus
-- tpM
 - [Kieran](https://github.com/kieran-s){:target="_blank"}
-- [Giallustio](https://github.com/Giallustio){:target="_blank"}
-- [654wak654](https://github.com/654wak654){:target="_blank"}
 - [mharis001](https://github.com/mharis001){:target="_blank"}
 - [tcvm](https://github.com/TheCandianVendingMachine){:target="_blank"}
+- [TheMagnetar](https://github.com/TheMagnetar){:target="_blank"}
+  - Scripting
+- tpM
 - [veteran29](https://github.com/veteran29){:target="_blank"}
-- [Dahlgren](https://github.com/Dahlgren){:target="_blank"}
-- [BrettMayson](https://github.com/BrettMayson){:target="_blank"}
-- [Grim](https://github.com/LinkIsGrim){:target="_blank"}
 
 ## Moderators
 
