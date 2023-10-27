@@ -699,6 +699,7 @@
             <Russian>Спрятать иконку действия по умолчанию</Russian>
             <Spanish>Ocultar el icono de acción por defecto</Spanish>
             <German>Standardaktionssymbol ausblenden</German>
+            <French>Masquer l'icône d'action par défaut</French>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
             <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
@@ -709,6 +710,7 @@
             <Russian>Прячет иконку, которая показывается автоматически когда что-то находиться перед курсором. Требует рестарта игры.\nВнимание: не убирает само действие! Рекомендуется убрать комбинацию клавиш с настройки "Выполнить действие по умолчанию" чтобы предостеречься от нежеланных действий.</Russian>
             <Spanish>Oculta el icono que se muestra automáticamente cuando algo se sitúa enfrente del cursor. Requiere reinicio del juego.\nAdvertencia: No elimina la propia acción! Es recomendable desactivar la tecla "Usar acción por defecto" para prevenir interacciones no deseadas.</Spanish>
             <German>Blendet das Symbol aus, das automatisch angezeigt wird, wenn sich etwas vor dem Cursor befindet. Erfordert einen Neustart des Spiels.\nWarnung: Die Aktion selbst wird nicht entfernt! Es empfiehlt sich, die Belegung der Taste 'Standardaktion verwenden' aufzuheben, um unerwünschte Interaktionen zu verhindern.</German>
+            <French>Cache l'icône qui s'affiche automatiquement lorsque quelque chose est devant le curseur. Nécessite un redémarrage du jeu.\nAvertissement : l'action n'est pas supprimée ! Il est recommandé d'annuler l'affectation du bouton 'Utiliser l'action par défaut' afin d'éviter des interactions indésirables.</French>
         </Key>
     </Package>
 </Project>

@@ -395,7 +395,12 @@ The same numbers are used for sorting methods as for stats (see `5.4 Stat tab nu
 
 ## 7. Actions
 
-ACE Arsenal actions are customizable, this will show you how.
+Actions are a way to execute mission/addon-maker defined scripting from a user-interactable control. They can be used to, for example, equip earplugs, modify weapons, or interact with an equipped gunbag directly from the arsenal.
+When an action is executed (i.e. the button is clicked), the action's code is executed, and the arsenal display is refreshed on the following frame to take external changes into account.
+
+For actions involving frame delays or timers, a second call of the `ace_arsenal_fnc_refresh` function may be required.
+
+Since CBA frame functions are deactivated during preInit as of Oct 24th 2023, the refresh function is executed immediatelly after the action code is executed. Take note of this information and the comment below if you'd like your actions to be usable in 3DEN.
 
 ### 7.1 Adding actions via config
 
@@ -424,7 +429,7 @@ class ace_arsenal_actions {
 ```
 The focused unit object is passed to the condition and statement functions.
 
-### 7.2 Adding sorting methods via a function
+### 7.2 Adding actions via scripting
 
 `ace_arsenal_fnc_addAction`
 
@@ -459,7 +464,7 @@ The example above returns:
 
 If an action already exists (so same class ID and tab within an action), it will ignore the new addition.
 
-### 7.3 Removing actions via a function
+### 7.3 Removing actions via scripting
 
 `ace_arsenal_fnc_removeAction`
 
@@ -552,7 +557,7 @@ private _items = [cursorObject] call ace_arsenal_fnc_getVirtualItems
 systemChat str _items
 ```
 
-### 10.1 Blacklist items from all arsenals
+### 10.2 Blacklist items from all arsenals
 
 The following code can be used to remove items from any arsenal a player opens. Modify the `TAG_my_arsenal_blacklist` variable with a list of classnames you'd like to remove.
 The code will only have effect on clients where it is executed. It can placed in a mission's `initPlayerLocal.sqf` file or any object's init box in the editor. Do not add more than once.
@@ -565,7 +570,7 @@ TAG_my_arsenal_blacklist = ["arifle_AK12_F", "LMG_03_F"]; // modify this
 }] call CBA_fnc_addEventHandler;
 ```
 
-### 10.2 Making items available to all arsenals
+### 10.3 Making items available to all arsenals
 
 Same as above, but instead of `ace_arsenal_fnc_removeVirtualItems`, use `ace_arsenal_fnc_addVirtualItems`.
 
