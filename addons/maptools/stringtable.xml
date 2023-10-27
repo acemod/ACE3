@@ -36,10 +36,10 @@
             <Turkish>Harita Araçları, haritadaki mesafeleri ve açıları ölçmenize olanak tanır.</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Name">
-            <English>ACE Plotting Board</English>
+            <English>Plotting Board</English>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
-            <English>The ACE Plotting Board is a map tool utilised in the designed for use in the directing of short range indirect fires.</English>
+            <English>The Plotting Board is a map tool designed for use in the directing of short range indirect fires.</English>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
