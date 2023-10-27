@@ -237,7 +237,8 @@ private _selectedItem = switch (true) do {
 };
 
 // When switching tabs...
-if (GVAR(currentLeftPanel) != _ctrlIDC) then {
+if (isNil {GVAR(currentLeftPanel)} || {GVAR(currentLeftPanel) != _ctrlIDC}) then {
+    GVAR(currentLeftPanel) = _ctrlIDC;
     // Clear searchbox
     (_display displayCtrl IDC_leftSearchbar) ctrlSetText "";
     (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
@@ -246,7 +247,6 @@ if (GVAR(currentLeftPanel) != _ctrlIDC) then {
 };
 
 // Trigger event
-GVAR(currentLeftPanel) = _ctrlIDC;
 [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
