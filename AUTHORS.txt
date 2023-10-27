@@ -10,6 +10,7 @@ Brett Mayson
 bux578 <github@jonathandavid.de>
 commy2
 Dahlgren
+Drofseh <drofseh.arma@gmail.com>
 tcvm <baileydanyluk@gmail.com>
 esteldunedain <nicolas.d.badano@gmail.com>
 Felix Wiegand <koffeinflummi@gmail.com>
@@ -80,7 +81,6 @@ diwako
 dixon13 <dixonbegay@gmail.com>
 Drift_91
 Drill <drill87@gmail.com>
-Drofseh <drofseh@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
 Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Eclipser <jms@modeemi.fi>
