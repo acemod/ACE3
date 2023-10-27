@@ -141,16 +141,6 @@ _actionsBoxCtrl ctrlSetPosition [
 ];
 _actionsBoxCtrl ctrlCommit 0;
 
-// // Handle filters
-// private _filtersBoxCtrl = _display displayCtrl IDC_filtersBox;
-// _filtersBoxCtrl ctrlSetPosition [
-//     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-//     safezoneY + 78.6 * GRID_H,
-//     47 * GRID_W,
-//     11 * GRID_H
-// ];
-// _filtersBoxCtrl ctrlCommit 0;
-
 // Disable import in MP
 if (isMultiplayer) then {
     private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
