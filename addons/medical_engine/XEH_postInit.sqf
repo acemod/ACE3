@@ -30,6 +30,11 @@
     };
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
+if !("ace_medical_treatment" call EFUNC(common,isModLoaded)) then {
+    [TYPE_FIRST_AID_KIT, ""] call EFUNC(common,registerItemReplacement);
+    [TYPE_MEDIKIT, ""] call EFUNC(common,registerItemReplacement);
+};
+
 #ifdef DEBUG_MODE_FULL
 [QEGVAR(medical,woundReceived), {
     params ["_unit", "_damages", "_shooter", "_ammo"];
@@ -37,7 +42,6 @@
     //systemChat str _this;
 }] call CBA_fnc_addEventHandler;
 #endif
-
 
 // this handles moving units into vehicles via load functions or zeus
 // needed, because the vanilla INCAPACITATED state does not handle vehicles
@@ -96,3 +100,13 @@
         [_unit] call FUNC(unlockUnconsciousSeat);
     };
 }, true, []] call CBA_fnc_addClassEventHandler;
+
+// Used for preventing vanilla heal by replacing items
+addMissionEventHandler ["GroupCreated", {
+    params ["_group"];
+    _group addEventHandler ["CommandChanged", {_this call FUNC(commandChanged)}];
+}];
+
+{
+    _x addEventHandler ["CommandChanged", {_this call FUNC(commandChanged)}];
+} forEach allGroups;
