@@ -1,15 +1,17 @@
 #include "..\script_component.hpp"
 /*
- * Author: jaynus / nou
- * Fired event handler, starts guidance if enabled for ammo
+ * Author: PabstMirror (mostly copy of onFired)
+ * Fired event handler for defered ammos (clgp), returns guidance args
  *
  * Arguments:
  * 0: Shooter (Man/Vehicle) <OBJECT>
- * 4: Ammo <STRING>
+ * 1: Weapon <STIRNG>
+ * 3: Mode <STRING>
+ * 4: Ammo (in the future) <STRING>
  * 6: Projectile <OBJECT>
  *
  * Return Value:
- * None
+ * <ARRAY>
  *
  * Example:
  * [player, "", "", "", "ACE_Javelin_FGM148", "", theMissile] call ace_missileguidance_fnc_onFiredDeferred;
@@ -94,8 +96,7 @@ private _args = [_this,
             [
                 getNumber ( _config >> "minDeflection" ),
                 getNumber ( _config >> "maxDeflection" ),
-                getNumber ( _config >> "incDeflection" ), // not used?
-                1 == getNumber ( _config >> "useVanillaDeflection" )
+                getNumber ( _config >> "incDeflection" )
             ],
             [
                 getNumber ( _config >> "seekerAngle" ),
@@ -103,21 +104,24 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState ]
+            [ diag_tickTime, [], [], _lastKnownPosState]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
-TRACE_1("seeker",_onFiredFunc);
+TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
+
 _onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
-TRACE_1("attackProfile",_onFiredFunc);
+TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
+
+// Run the "onFired" function passing the full guidance args array
 _onFiredFunc = getText (_config >> "onFired");
-TRACE_1("ammo",_onFiredFunc);
+TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };

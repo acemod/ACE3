@@ -37,13 +37,14 @@ if (hasInterface) then {
         call compile "diag_mergeConfigFile ['P:\z\ace\addons\clgp\config.cpp']";
     };
     false
-}, {false}, [33, [false, false, false]], false] call CBA_fnc_addKeybind; // F Key
+}, {false}, [59, [false, false, false]], false] call CBA_fnc_addKeybind; // F1 Key
 
  ["turret", {
     params ["_player", "_turret"];
     private _veh = vehicle _player;
     if (currentWeapon _veh == "mortar_155mm_AMOS") then {
-        systemChat "loading";
+        if (currentMagazine _veh == "ace_1rnd_155mm_m712") exitWith {};
+        systemChat "loading mags";
         _veh addMagazineTurret ["ace_1rnd_155mm_m712", [0], 1];
         _veh addMagazineTurret ["ace_1rnd_155mm_m712", [0], 1];
         _veh addMagazineTurret ["ace_1rnd_155mm_m712", [0], 1];
@@ -52,7 +53,5 @@ if (hasInterface) then {
         _veh addMagazineTurret ["ace_1rnd_155mm_m712", [0], 1];
         _veh loadMagazine [[0], "mortar_155mm_AMOS", "ace_1rnd_155mm_m712"];
     };
- }, true] call CBA_fnc_addPlayerEventHandler
-
-
+ }, true] call CBA_fnc_addPlayerEventHandler;
 #endif

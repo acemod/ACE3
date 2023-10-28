@@ -3,9 +3,9 @@ class CfgAmmo {
     class SubmunitionBase;
     class ace_155mm_m712_launch: SubmunitionBase {
         model = "\A3\weapons_f\ammo\shell";
-        hit = 160; // low for testing
-        indirectHit = 50;
-        indirectHitRange = 8;
+        hit = 1200;
+        indirectHit = 200;
+        indirectHitRange = 4;
 
         GVAR(deployCondition) = QFUNC(copperhead_deployCondition);
         submunitionAmmo = "ace_155mm_m712_guidance";
@@ -36,9 +36,10 @@ class CfgAmmo {
     class ammo_Bomb_LaserGuidedBase;
     class ace_155mm_m712_guidance: ammo_Bomb_LaserGuidedBase {
         model = "\A3\Weapons_F_EPC\Ammo\Bomb_04_fly_F.p3d";
-        hit = 160;
-        indirectHit = 50;
-        indirectHitRange = 8;
+        hit = 1200;
+        indirectHit = 200;
+        indirectHitRange = 4;
+        // todo frag
 
         maneuvrability = 12;
         airFriction = 0.04; // note: works differently from shell (v^3...) 
@@ -50,18 +51,8 @@ class CfgAmmo {
         thrustTime = 0;
         thrust = 0; // free fall
 
-        flightProfiles[] = { "Direct" };
-        class Direct {};
-        class Components {};
-
-        manualControl = 1;
-        maxControlRange = 100000;
-        missileManualControlCone = 360;
-        missileLockCone = 360;
-        missileKeepLockedCone = 360;
-        missileLockMaxDistance = 100000;
-        missileLockMinDistance = 0;
-
+        manualControl = 0;
+        flightProfiles[] = {};
         autoSeekTarget = 0;
         weaponLockSystem = 0;
         irLock = 0;
@@ -74,8 +65,8 @@ class CfgAmmo {
             enabled = 2;
 
             useVanillaDeflection = 1; // use missileTarget for deflection
-            minDeflection = 0.01;      // Minium flap deflection for guidance
-            maxDeflection = 0.01;       // Maximum flap deflection for guidance
+            minDeflection = 0.002;      // Minium flap deflection for guidance
+            maxDeflection = 0.002;       // Maximum flap deflection for guidance
 
             canVanillaLock = 0;
 

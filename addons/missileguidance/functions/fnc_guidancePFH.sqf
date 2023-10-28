@@ -24,7 +24,6 @@ params ["_args", "_pfID"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams"];
-_flightParams params ["", "", "", "_useVanillaDeflection"];
 _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 
 if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
@@ -58,12 +57,6 @@ private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStat
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
 if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos isNotEqualTo [0,0,0]}) then {
-    if (_useVanillaDeflection) exitWith {
-        _projectile setMissileTargetPos ASLtoAGL _profileAdjustedTargetPos;
-        #ifdef DRAW_GUIDANCE_INFO
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0.5,1,0,1], ASLtoAGL (missileTargetPos _projectile), 1, 1, diag_tickTime * 60, "", 1, 0.025, "TahomaB"];
-        #endif
-    };
 
     private _targetVector = _projectilePos vectorFromTo _profileAdjustedTargetPos;
     private _adjustVector = _targetVector vectorDiff (vectorDir _projectile);

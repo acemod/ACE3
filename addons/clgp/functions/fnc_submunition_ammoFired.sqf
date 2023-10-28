@@ -21,12 +21,14 @@ if (isNull _projectile) exitWith {};
 private _cfg = configOf _projectile;
 TRACE_4("ammoFired local",_unit,_ammo,_projectile,_gunner);
 
+// systemChat format ["v = %1", vectorMagnitude velocity _projectile];
+
 // Get MissileGuidance args now
 private _firedEH = +_this;
 // Inject the submunition ammo into guidance args
 _firedEH set [4, getText (_cfg >> "submunitionAmmo")];
 private _guidanceArgs = _firedEH call EFUNC(missileguidance,onFiredDeferred);
-if (_guidanceArgs isEqualTo []) exitWith { WARNING_1("no args %1",_projectile); };
+if (_guidanceArgs isEqualTo []) then { WARNING_1("no args %1",_projectile); };
 _projectile setVariable [QGVAR(guidanceArgs), _guidanceArgs];
 
 // On missile deploy start guidance/frag

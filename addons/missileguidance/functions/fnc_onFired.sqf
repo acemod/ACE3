@@ -107,8 +107,7 @@ private _args = [_this,
             [
                 getNumber ( _config >> "minDeflection" ),
                 getNumber ( _config >> "maxDeflection" ),
-                getNumber ( _config >> "incDeflection" ), // not used?
-                1 == getNumber ( _config >> "useVanillaDeflection" )
+                getNumber ( _config >> "incDeflection" )
             ],
             [
                 getNumber ( _config >> "seekerAngle" ),
@@ -116,21 +115,24 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState ]
+            [ diag_tickTime, [], [], _lastKnownPosState]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
-TRACE_1("seeker",_onFiredFunc);
+TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
+
 _onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
-TRACE_1("attackProfile",_onFiredFunc);
+TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
+
+// Run the "onFired" function passing the full guidance args array
 _onFiredFunc = getText (_config >> "onFired");
-TRACE_1("ammo",_onFiredFunc);
+TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
@@ -143,7 +145,7 @@ if (_onFiredFunc != "") then {
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
-[FUNC(guidancePFH), 0, _args] call CBA_fnc_addPerFrameHandler;
+[FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 
 
 /* Clears locking settings

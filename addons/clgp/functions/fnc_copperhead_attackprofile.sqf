@@ -12,7 +12,7 @@
  * Missile Aim PosASL <ARRAY>
  *
  * Example:
- * [[1,2,3], [], []] call ace_copperhead_fnc_attackProfile
+ * [[1,2,3], [], []] call ace_clgp_fnc_copperhead_attackProfile
  *
  * Public: No
  */
@@ -30,10 +30,9 @@ private _isFalling = _velocityElev < 90;
 private _aimASL = []; // return
 
 if (_seekerTargetPos isEqualTo [0,0,0]) then {
-    // no target
-    _aimASL = _projectilePos vectorAdd _projectileVelocity;
-    if (_isFalling && {!_trajectoryBallistic}) then { 
+    if (_isFalling && {!_trajectoryBallistic}) then {
         // Shaped Trajectory - Try to glide level - adjusted to correct AoA below
+        _aimASL = _projectile modelToWorldWorld [0,50,0];
         _aimASL set [2, _projectilePos # 2];
     };
  } else { 
@@ -49,14 +48,18 @@ if (_seekerTargetPos isEqualTo [0,0,0]) then {
  };
 
 // Limit max elevation to prevent stalling - unpowered gliding
-private _maxElev = 68; // ~2.5 glide ratio
-private _aimDiff = _aimASL vectorDiff _projectilePos;
-private _aimElev = acos (_aimDiff vectorCos [0,0,-1]);
-if (_aimElev > _velocityElev) then {
-    private _adjustAngle = (_maxElev max _velocityElev) - _aimElev;
-    if (_adjustAngle >= 0) exitWith {};
-    private _adjustOffset = (sin _adjustAngle) * vectorMagnitude _aimDiff;
-    _aimASL = _aimASL vectorAdd [0,0,_adjustOffset];
+if (_aimASL isEqualTo []) then {
+    _aimASL = [0,0,0];
+} else {
+    private _maxElev = 68; // ~2.5 glide ratio (another source says 20-25deg flyout angle)
+    private _aimDiff = _aimASL vectorDiff _projectilePos;
+    private _aimElev = acos (_aimDiff vectorCos [0,0,-1]);
+    if (_aimElev > _velocityElev) then {
+        private _adjustAngle = (_maxElev max _velocityElev) - _aimElev;
+        if (_adjustAngle >= 0) exitWith {};
+        private _adjustOffset = (sin _adjustAngle) * vectorMagnitude _aimDiff;
+        _aimASL = _aimASL vectorAdd [0,0,_adjustOffset];
+    };
 };
 
 // prevent rare "boomerang" at extremely high elevation shots the round won't flip correctly at apex
