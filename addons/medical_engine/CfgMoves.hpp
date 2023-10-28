@@ -11,6 +11,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class DeadState;
         class UNCON_ANIM(1): DeadState {
             file = QPATHTO_T(data\ace_unconscious_1.rtm);
+            collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
         };
 
         class UNCON_ANIM(2): UNCON_ANIM(1) {
@@ -75,19 +76,31 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 
         /* added for the "ace_unc" part */
         class KIA_passenger_boat_holdleft;
-        class UNCON_ANIM(9): KIA_passenger_boat_holdleft {};
+        class UNCON_ANIM(9): KIA_passenger_boat_holdleft {
+            collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+        };
 
         class KIA_driver_boat01;
-        class UNCON_ANIM(10): KIA_driver_boat01 {};
+        class UNCON_ANIM(10): KIA_driver_boat01 {
+            collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+        };
 
         class Unconscious;
-        class UNCON_ANIM(faceDown): Unconscious {};
+        class UNCON_ANIM(faceDown): Unconscious {
+            collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+        };
 
-        class UNCON_ANIM(faceLeft): Unconscious {};
+        class UNCON_ANIM(faceLeft): Unconscious {
+            collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+        };
 
-        class UNCON_ANIM(faceRight): Unconscious {};
+        class UNCON_ANIM(faceRight): Unconscious {
+            collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+        };
 
-        class UNCON_ANIM(faceUp): Unconscious {};
+        class UNCON_ANIM(faceUp): Unconscious {
+            collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+        };
 
         class AmovPpneMstpSnonWnonDnon;
         class ACE_UnconsciousOutProne: AmovPpneMstpSnonWnonDnon {
