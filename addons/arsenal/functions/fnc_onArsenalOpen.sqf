@@ -234,6 +234,7 @@ GVAR(leftTabFocus) = false;
 GVAR(rightTabFocus) = false;
 GVAR(rightTabLnBFocus) = false;
 GVAR(ignoreFirstSortPanelCall) = false;
+GVAR(refreshing) = false;
 
 {
     private _panel = _display displayCtrl _x;

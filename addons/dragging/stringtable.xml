@@ -193,12 +193,14 @@
             <French>Coefficient de poids maximal</French>
             <Korean>최대 무게 계수</Korean>
             <Portuguese>Coeficiente Máximo de Peso</Portuguese>
+            <German>Maximaler Gewichtskoeffizient</German>
         </Key>
         <Key ID="STR_ACE_Dragging_weightCoefficient_Description">
             <English>Modifies weight limit calculations. Set to 0 to ignore.</English>
             <French>Modifie les calculs de limite de poids. Configurer à 0 pour ignorer.</French>
             <Korean>무게 제한 계산을 수정합니다. 무시하려면 0으로 설정하십시오.</Korean>
             <Portuguese>Modifica os cálculos do limite de peso. Defina como 0 para ignorar.</Portuguese>
+            <German>Ändert die Berechnung der Gewichtsbegrenzung. Zum Ignorieren auf 0 setzen.</German>
         </Key>
     </Package>
 </Project>
