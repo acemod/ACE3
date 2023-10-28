@@ -1,12 +1,12 @@
 class CfgVehicles {
-	class LandVehicle;
-	class StaticWeapon: LandVehicle {
+    class LandVehicle;
+    class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions;
         };
     };
 
-	class StaticMortar;
+    class StaticMortar;
     class CUP_2b14_82mm_Base: StaticMortar {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -40,7 +40,7 @@ class CfgVehicles {
         };
     };
 
-	class StaticMGWeapon;
+    class StaticMGWeapon;
     class CUP_M2StaticMG_base: StaticMGWeapon {
         class ace_csw {
             enabled = 1;
@@ -101,7 +101,7 @@ class CfgVehicles {
         };
     };
 
-	class StaticGrenadeLauncher;
+    class StaticGrenadeLauncher;
     class CUP_AGS_base: StaticGrenadeLauncher {
         class ace_csw {
             enabled = 1;
@@ -115,7 +115,7 @@ class CfgVehicles {
         };
     };
 
-	class CUP_MK19_TriPod_base: StaticGrenadeLauncher {
+    class CUP_MK19_TriPod_base: StaticGrenadeLauncher {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "CUP_proxy_MK19";
@@ -128,8 +128,8 @@ class CfgVehicles {
         };
     };
 
-	class AT_01_base_F;
-	class CUP_Metis_Base: AT_01_base_F {
+    class AT_01_base_F;
+    class CUP_Metis_Base: AT_01_base_F {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "CUP_proxy_AT13";
@@ -142,7 +142,7 @@ class CfgVehicles {
         };
     };
 
-	class StaticATWeapon;
+    class StaticATWeapon;
     class CUP_TOW_TriPod_base: StaticATWeapon {
         class ace_csw {
             enabled = 1;
@@ -175,13 +175,13 @@ class CfgVehicles {
         };
     };
 
-	class StaticCannon;
+    class StaticCannon;
     class CUP_D30_base: StaticCannon {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "CUP_proxy_D30";
             magazineLocation = "_target selectionPosition 'otochlaven'";
-			desiredAmmo = 1;
+            desiredAmmo = 1;
             ammoLoadTime = 5;
             ammoUnloadTime = 5;
         };

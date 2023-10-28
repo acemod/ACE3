@@ -1,10 +1,10 @@
 class CfgWeapons {
     class Launcher;
-	class Launcher_Base_F: Launcher {
-		class WeaponSlotsInfo;
-	};
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
+    };
 
-	class CUP_2b14_carry: Launcher_Base_F {
+    class CUP_2b14_carry: Launcher_Base_F {
         displayName = ECSTRING(csw,2b14_tube);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
@@ -26,7 +26,7 @@ class CfgWeapons {
         };
     };
 
-	class CUP_m252_carry: CUP_2b14_carry {
+    class CUP_m252_carry: CUP_2b14_carry {
         displayName = ECSTRING(csw,m252_tube);
         picture = "\CUP\Weapons\CUP_Weapons_StaticWeapons\M252\data\ui\icomap_mortar_m251_ca.paa";
         class ace_csw: ace_csw {
@@ -36,9 +36,9 @@ class CfgWeapons {
         };
     };
 
-	class CUP_l16a2_carry: CUP_2b14_carry {
+    class CUP_l16a2_carry: CUP_2b14_carry {
         displayName = ECSTRING(csw,m252_tube);
-		scope = 1;
+        scope = 1;
         picture = "\CUP\Weapons\CUP_Weapons_StaticWeapons\M252\data\ui\icomap_mortar_m251_ca.paa";
         class ace_csw: ace_csw {
             class assembleTo {
@@ -143,7 +143,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-		picture = "\CUP\Weapons\CUP_Weapons_StaticWeapons\Mk19\data\ui\icomap_mk19_stat_ca.paa";
+        picture = "\CUP\Weapons\CUP_Weapons_StaticWeapons\Mk19\data\ui\icomap_mk19_stat_ca.paa";
         class ace_csw {
             type = "weapon";
             deployTime = 4;
@@ -161,9 +161,9 @@ class CfgWeapons {
     };
 
     class CUP_launch_Metis: Launcher_Base_F {
-		ace_overpressure_angle = 45;
-		ace_overpressure_range = 15;
-		ace_overpressure_damage = 0.7;
+        ace_overpressure_angle = 45;
+        ace_overpressure_range = 15;
+        ace_overpressure_damage = 0.7;
         class ace_csw {
             type = "mount";
             deployTime = 4;
@@ -172,7 +172,7 @@ class CfgWeapons {
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 300;
-		};
+        };
     };
 
     class CUP_TOW_carry: Launcher_Base_F {
@@ -206,9 +206,9 @@ class CfgWeapons {
     };
 
     class CUP_SPG9_carry: Launcher_Base_F {
-		displayName = ECSTRING(csw,spg9_tube);
+        displayName = ECSTRING(csw,spg9_tube);
         scope = 2;
-		model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\CUP\Weapons\CUP_Weapons_StaticWeapons\SPG9\data\ui\icon_spg9_ca.paa";
         class ace_csw {
@@ -235,56 +235,56 @@ class CfgWeapons {
     class CUP_Vhmg_M2_static;
     class CUP_proxy_m2: CUP_Vhmg_M2_static {
         magazineReloadTime = 0.5;
-	};
+    };
 
     class CUP_Vhmg_DSHKM_veh;
     class CUP_proxy_DSHKM: CUP_Vhmg_DSHKM_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
     class CUP_Vhmg_KORD_veh;
     class CUP_proxy_KORD: CUP_Vhmg_KORD_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
-	class CUP_Vhmg_AGS30_veh;
+    class CUP_Vhmg_AGS30_veh;
     class CUP_proxy_AGS30: CUP_Vhmg_AGS30_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
-	class CUP_Vgmg_MK19_veh;
+    class CUP_Vgmg_MK19_veh;
     class CUP_proxy_MK19: CUP_Vgmg_MK19_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
-   	class CUP_Vmlauncher_AT13_single_veh;
+       class CUP_Vmlauncher_AT13_single_veh;
     class CUP_proxy_AT13: CUP_Vmlauncher_AT13_single_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
-   	class CUP_Vmlauncher_TOW_single_veh;
+       class CUP_Vmlauncher_TOW_single_veh;
     class CUP_proxy_TOW: CUP_Vmlauncher_TOW_single_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
-	class CUP_Vacannon_SPG9_veh;
+    class CUP_Vacannon_SPG9_veh;
     class CUP_proxy_SPG9: CUP_Vacannon_SPG9_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
-  	class CUP_Vcannon_M119_veh;
+      class CUP_Vcannon_M119_veh;
     class CUP_proxy_M119: CUP_Vcannon_M119_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
-	class CUP_Vcannon_D30_veh;
+    class CUP_Vcannon_D30_veh;
     class CUP_proxy_D30: CUP_Vcannon_D30_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 
-	class CUP_Vcannon_D30AT_veh;
+    class CUP_Vcannon_D30AT_veh;
     class CUP_proxy_D30AT: CUP_Vcannon_D30AT_veh {
         magazineReloadTime = 0.5;
-	};
+    };
 };
 
