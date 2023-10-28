@@ -176,6 +176,7 @@
             <Polish>Zniszcz Pojazdy po Zakończeniu Samozapłonu</Polish>
             <German>Zerstöre Fahrzeuge nach der Durchzündung</German>
             <French>Destruction des véhicules après auto-inflammation</French>
+            <Portuguese>Destruir veículos após cozinhamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
             <English>Controls whether vehicles will always be destroyed after cooking off.</English>
@@ -184,6 +185,7 @@
             <German>Steuert, ob Fahrzeuge nach dem Durchzünden immer zerstört werden.</German>
             <Korean>쿡오프 후 차량이 항상 파괴되는지 여부를 조정합니다.</Korean>
             <French>Contrôle si les véhicules seront toujours détruits après l'auto-inflammation.</French>
+            <Portuguese>Define se os veículos serão sempre destruídos após cozinhamento.</Portuguese>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>
@@ -195,6 +197,7 @@
             <Chinesesimp>启用殉爆载具火灾</Chinesesimp>
             <Korean>차량 쿡오프 화재 활성화</Korean>
             <Spanish>Habilitar incendio a causa de la detonación inducida por calor</Spanish>
+            <Portuguese>Ativar incêndio de veículo durante cozinhamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
             <English>Whether or not vehicles will catch on fire during cook-off</English>
@@ -206,6 +209,7 @@
             <Chinesesimp>车辆在殉爆过程中是否会起火</Chinesesimp>
             <Korean>쿡오프가 일어나면 차량에 불이 붙습니다.</Korean>
             <Spanish>Define si los vehículos salen ardiendo despues de una detonación inducida por calor.</Spanish>
+            <Portuguese>Define se os veículos pegarão fogo durante o cozinhamento.</Portuguese>
         </Key>
     </Package>
 </Project>
