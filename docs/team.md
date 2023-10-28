@@ -57,6 +57,7 @@ This lists all the maintainers responsible for project management and the overal
 - [Grim](https://github.com/LinkIsGrim){:target="_blank"}
 - gundy
 - Janus
+- [johnb43](https://github.com/johnb432){:target="_blank"}
 - [Kieran](https://github.com/kieran-s){:target="_blank"}
 - [mharis001](https://github.com/mharis001){:target="_blank"}
 - [tcvm](https://github.com/TheCandianVendingMachine){:target="_blank"}
