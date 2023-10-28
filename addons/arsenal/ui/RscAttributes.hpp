@@ -638,6 +638,7 @@ class GVAR(display) {
             onSetFocus = QUOTE(GVAR(leftSearchbarFocus) = true);
             onKillFocus = QUOTE(GVAR(leftSearchbarFocus) = false);
             onMouseButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(clearSearchbar));
+            onEditChanged = QUOTE(call FUNC(handleSearchInputChanged));
             x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(74 * GRID_W);
@@ -647,8 +648,10 @@ class GVAR(display) {
         class leftSearchbarButton: ctrlButtonPicture {
             idc = IDC_leftSearchbarButton;
             text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
+            tooltip = CSTRING(buttonSearchTooltip);
             colorBackground[] = {0,0,0,0.5};
             onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), ctrlParent (_this select 0) displayCtrl IDC_leftSearchbar)] call FUNC(handleSearchbar));
+            onMouseButtonDown = QUOTE(call FUNC(handleSearchModeToggle));
             x = QUOTE(safezoneX + 87 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(6 * GRID_W);
