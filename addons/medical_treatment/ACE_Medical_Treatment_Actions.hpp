@@ -255,12 +255,10 @@ class GVAR(actions) {
     };
     class BodyBagBlue: BodyBag {
         displayName = CSTRING(PlaceInBodyBagBlue);
-        icon = QPATHTOEF(medical_gui,ui\bodybag.paa);
         items[] = {"ACE_bodyBag_blue"};
     };
     class BodyBagWhite: BodyBag {
         displayName = CSTRING(PlaceInBodyBagWhite);
-        icon = QPATHTOEF(medical_gui,ui\bodybag.paa);
         items[] = {"ACE_bodyBag_white"};
     };
     class Grave: BodyBag {
