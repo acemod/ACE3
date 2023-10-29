@@ -60,6 +60,8 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _projectile setVelocity _bulletVelocity;
 };
 
+// For compatiblity with other addons
+_projectile setVariable [QGVAR(kFactor), _kFactor];
 
 [{
     params ["_projectile", "_kFactor", "_time"];

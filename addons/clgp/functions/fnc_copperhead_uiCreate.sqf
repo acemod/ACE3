@@ -52,7 +52,7 @@
     };
     {
         (_display displayCtrl _x) ctrlAddEventHandler ["MouseButtonUp", _fnc_dialClick];
-    } forEach [111, 112, 113,114, 115];
+    } forEach [111, 112, 113, 114, 115];
 
 
     // Update display each frame

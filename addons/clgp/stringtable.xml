@@ -4,5 +4,14 @@
         <Key ID="STR_ACE_CLGP_copperhead_action">
             <English>Configure M712 Shell</English>
         </Key>
+        <Key ID="STR_ACE_CLGP_copperhead_dial_FlightProfile">
+            <English>Flight Profile</English>
+        </Key>
+        <Key ID="STR_ACE_CLGP_copperhead_dial_GuidanceDelay">
+            <English>Guidance Delay</English>
+        </Key>
+        <Key ID="STR_ACE_CLGP_copperhead_dial_LaserCode">
+            <English>Laser Code</English>
+        </Key>
     </Package>
 </Project>

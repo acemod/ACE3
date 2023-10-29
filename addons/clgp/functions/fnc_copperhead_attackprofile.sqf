@@ -20,7 +20,11 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH"];
 _firedEH params ["","","","","","","_projectile"];
-_attackProfileStateParams params ["_trajectoryBallistic", "_checkOrientation"];
+_attackProfileStateParams params ["_trajectoryShaped"];
+
+// Apply CLGP Drag
+private _dragArray = _projectile getVariable [QGVAR(dragArray), []];
+if (_dragArray isNotEqualTo []) then { _dragArray call FUNC(submunition_applyDrag) };
 
 private _projectilePos = getPosASL _projectile;
 private _projectileVelocity = velocity _projectile;
@@ -30,7 +34,7 @@ private _isFalling = _velocityElev < 90;
 private _aimASL = []; // return
 
 if (_seekerTargetPos isEqualTo [0,0,0]) then {
-    if (_isFalling && {!_trajectoryBallistic}) then {
+    if (_isFalling && {_trajectoryShaped}) then {
         // Shaped Trajectory - Try to glide level - adjusted to correct AoA below
         _aimASL = _projectile modelToWorldWorld [0,50,0];
         _aimASL set [2, _projectilePos # 2];
@@ -38,13 +42,6 @@ if (_seekerTargetPos isEqualTo [0,0,0]) then {
  } else { 
      // have valid seeker target
     _aimASL = _seekerTargetPos;
-    // aim above target due to gravity drop
-    private _distance2d = _projectilePos distance2d _aimASL;
-    private _speed2d = vectorMagnitude [_projectileVelocity#0, _projectileVelocity#1, 0];
-    private _tof = (_distance2d / (_speed2d max 1)) min 15;
-    if (_tof > 1.5) then {
-        _aimASL = _aimASL vectorAdd [0,0, 2 * _tof ^2];
-    };
  };
 
 // Limit max elevation to prevent stalling - unpowered gliding
@@ -60,13 +57,6 @@ if (_aimASL isEqualTo []) then {
         private _adjustOffset = (sin _adjustAngle) * vectorMagnitude _aimDiff;
         _aimASL = _aimASL vectorAdd [0,0,_adjustOffset];
     };
-};
-
-// prevent rare "boomerang" at extremely high elevation shots the round won't flip correctly at apex
-if (_isFalling && _checkOrientation) then {
-    TRACE_1("kicking missle over",_projectile);
-    _attackProfileStateParams set [1, false];
-    [_projectile, vectorNormalized _projectileVelocity] call EFUNC(missileguidance,changeMissileDirection);
 };
 
 _aimASL

@@ -44,45 +44,45 @@ class GVAR(copperhead_dialog) {
                 class Dial1 {
                     selection = "dial1";
                     class Controls {
-                        class ButtonDial1: GVAR(copperhead_dialButton) {
+                        class ButtonDial: GVAR(copperhead_dialButton) {
                             idc = 111;
-                            tooltip = "Flight Profile";
+                            tooltip = CSTRING(copperhead_dial_FlightProfile);
                         };
                     };
                 };
                 class Dial2 {
                     selection = "dial2";
                     class Controls {
-                        class ButtonDial2: GVAR(copperhead_dialButton) {
+                        class ButtonDial: GVAR(copperhead_dialButton) {
                             idc = 112;
-                            tooltip = "Guidance Delay";
+                            tooltip = CSTRING(copperhead_dial_GuidanceDelay);
                         };
                     };
                 };
                 class Dial3 {
                     selection = "dial3";
                     class Controls {
-                        class ButtonDial3: GVAR(copperhead_dialButton) {
+                        class ButtonDial: GVAR(copperhead_dialButton) {
                             idc = 113;
-                            tooltip = "Laser Code";
+                            tooltip = CSTRING(copperhead_dial_LaserCode);
                         };
                     };
                 };
                 class Dial4 {
                     selection = "dial4";
                     class Controls {
-                        class ButtonDial4: GVAR(copperhead_dialButton) {
+                        class ButtonDial: GVAR(copperhead_dialButton) {
                             idc = 114;
-                            tooltip = "Laser Code";
+                            tooltip = CSTRING(copperhead_dial_LaserCode);
                         };
                     };
                 };
                 class Dial5 {
                     selection = "dial5";
                     class Controls {
-                        class ButtonDial5: GVAR(copperhead_dialButton) {
+                        class ButtonDial: GVAR(copperhead_dialButton) {
                             idc = 115;
-                            tooltip = "Laser Code";
+                            tooltip = CSTRING(copperhead_dial_LaserCode);
                         };
                     };
                 };

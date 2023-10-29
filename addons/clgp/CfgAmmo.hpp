@@ -1,5 +1,4 @@
 class CfgAmmo {
-
     class SubmunitionBase;
     class ace_155mm_m712_launch: SubmunitionBase {
         model = "\A3\weapons_f\ammo\shell";
@@ -7,6 +6,7 @@ class CfgAmmo {
         indirectHit = 200;
         indirectHitRange = 4;
 
+        GVAR(deployApplyDrag) = 1;
         GVAR(deployCondition) = QFUNC(copperhead_deployCondition);
         submunitionAmmo = "ace_155mm_m712_guidance";
         submunitionCount = 1;
@@ -41,9 +41,9 @@ class CfgAmmo {
         indirectHitRange = 4;
         // todo frag
 
-        maneuvrability = 12;
-        airFriction = 0.04; // note: works differently from shell (v^3...) 
-        sideAirFriction = 0.225;
+        maneuvrability = 10;
+        airFriction = 0; // note: works differently from shellsim (v^3...)
+        sideAirFriction = 0;
 
         artilleryLock = 0; // would keep shell pointed towards velocity, but disables manuverability and airfric
 
@@ -58,17 +58,13 @@ class CfgAmmo {
         irLock = 0;
         laserLock = 0;
         airLock = 0;
-        
+
         timeToLive = 200;
 
         class ace_missileguidance {
             enabled = 2;
-
-            useVanillaDeflection = 1; // use missileTarget for deflection
-            minDeflection = 0.002;      // Minium flap deflection for guidance
-            maxDeflection = 0.002;       // Maximum flap deflection for guidance
-
-            canVanillaLock = 0;
+            minDeflection = 0.001;       // Minium flap deflection for guidance
+            maxDeflection = 0.001;       // Maximum flap deflection for guidance
 
             // Guidance type for munitions
             defaultSeekerType = "SALH";
@@ -89,7 +85,7 @@ class CfgAmmo {
             defaultAttackProfile = "copperhead";
             attackProfiles[] = {"copperhead"};
             useModeForAttackProfile = 0;
+            canVanillaLock = 0;
         };
     };
-
 };
