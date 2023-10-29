@@ -133,7 +133,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 > Note: The ballistic coefficient can be calculated by using the [360 Degree Training Course mission](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, an another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
 
-> Example direct conversion with .408 Cheytac 305 grains G7 BC 0.279 at 2000 meters ICAO conditions (15°C, 1013.25hPa, 0%):
+> Example direct conversion with .408 Cheytac, 305 grains, G7 BC 0.279 at 2000 meters, ICAO conditions (15°C, 1013.25hPa, 0%):
 
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx5.webp" width="1400" height="600" alt="Conversion G7/G1 BC" />
 
@@ -179,8 +179,8 @@ The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Veloci
     - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* **[Horus manual p.33]**
     - `Target Speed`: *Target Speed Assist* **[Horus manual p.21]**
     - `Target Range (meters)`: *Parameter Limits minimum and maximum values: 25 - 3700 meters.* **[Horus manual p.17]**
-    - Apply vertical and horizontal elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
-    - Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default). 
+- Apply vertical and horizontal elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
+- Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default). 
 
 ## 4. Official References
 
