@@ -63,10 +63,10 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Update the `Atmsphr` column and `Done`. Basic tool needed: [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html).
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
 - Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html)
-    - `Latitude`: *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or the Eden Editor's Extended Debug Console: Watch:* `ace_common_maplatitude`.
+    - `Latitude`: *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or with the Eden Editor's Extended Debug Console: Watch:* `ace_common_maplatitude`.
     - `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* **[Horus manual p.14]**
     - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* **[Horus manual p.32]**
-        - *Wind takes into account geographic location, season, time of day, altitude, obstacles and surface roughness: [Wind Profile](https://wind-data.ch/tools/profile.php?lng=en).*
+        - *Wind takes into account geographic location, season, time of day, obstacles, altitude and surface roughness: [Wind Profile](https://wind-data.ch/tools/profile.php?lng=en).*
     - `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* **[Horus manual p.16]**
     - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* **[Horus manual p.33]**
     - `Target Speed`: *Target Speed Assist* **[Horus manual p.21]**
@@ -76,7 +76,9 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
  
 ### 3.3 Example with Truing tool
 
-> The Truing Drop function is opened from ATrag’s main screen by selecting “Options” [...], then selecting “Truing Drop” from the menu that appears. **[Horus manual p.23]**
+> This process is called “Truing Drop”, or simply “Truing”. It involves taking 2 or 3 real flight data points (finding bullet drop at 2 or 3 places along its flight) and feeding it into the calculation parameters. **[Horus manual p.23]**
+
+> The Truing Drop function is opened from ATrag’s main screen by selecting “Options” [...], then selecting “Truing Drop” from the menu that appears.
 
 > With C1, you can also insert the new BC into the C1 table (with the target range value), or you can replace the C1 table with the following values:
 > 1. first entry: Zero Range, original C1.
@@ -88,12 +90,12 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Add the same `Target Range` in the `SUB` column  and `Calc`.
 - Apply the actual scope elevation in the `Drop` field and `Calc`.
 - `Accept` the new `C1`, `Gun` column and `Elev` are updated.
-- *C1 Ballistic Coefficient vs. Distance Interpolation Table (`Options` / `Drag Coef Table`) will be automatically updated.*
+- *C1 Ballistic Coefficient vs. Distance Interpolation Table (`Options` / `Drag Coef Table`) will be updated.*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.webp" width="1127" height="600" alt="Calculation" />
  
-- If a new `Target Range` is applied in the `Target` column, the ballistic coefficient `C1` and the elevation `Elev` will be automatically recalculated.
+- If a new `Target Range` is applied in the `Target` column, the ballistic coefficient `C1` and the elevation `Elev` will be recalculated.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx31.webp" width="1123" height="600" alt="Interpolation" />
 
@@ -127,7 +129,6 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 > configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "ACE_dragModel"
 
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
-- *AtragMx is configured with `C1 coefficient` according to vanilla weapons and its ammunitions in `GunList`.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
@@ -140,10 +141,15 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 ### 3.6 Adding ATragMX Presets
 
 - [ATragMX Framework]({{ site.baseurl }}/wiki/framework/atragmx.html)
+- Scope Base Angle value:
+    - Load custom profile (with an arbitrary scope base angle) into the ATragMx.
+    - Open the `Gun` column and `Done`.
+    - Execute `copyToClipboard Str(ace_atragmx_workingMemory select 3);` [LOCAL EXEC] with the Eden Editor's Extended Debug Console.
+    - Paste new value in the `preset`.
 
 ### 3.7 Reseting AtragMx `GunList`
 
-- Open the Eden Editor and the Extended Debug Console (Ctrl+D).
+- Open the Eden Editor's Extended Debug Console.
 - Execute `call ace_atragmx_fnc_clear_user_data` or `call ace_atragmx_fnc_initGunList` [LOCAL EXEC], (`RESTART` eventually needed).
 - The original ACE3 `GunList` will be restored (all `Add New Gun` entries deleted).
 
@@ -151,7 +157,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 > Note: ACE3 has two ballistics: the vanilla default ballistic (enabled as default) and the [Advanced Ballistics]({{ site.baseurl }}/wiki/feature/advanced-ballistics.html) (must be enabled).
 The ACE3 default ballistic doesn't take atmospheric conditions, powder temperature, rifle twist and Earth effects into account.
-The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Velocity` and `Zero Range`. With `Target` column, `Latitude` and `Dir of Fire` are useless. `Atmsphr` column mustn't be updated.
+The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Velocity` and `Zero Range`. With `Target` column, `Latitude` and `Dir of Fire` are useless. `Atmsphr` column must not be updated.
 
 **Start of the mission:**
 
