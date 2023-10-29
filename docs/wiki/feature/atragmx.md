@@ -54,7 +54,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Select `M` (Metric unit) at the top right.
 - Open the `Gun` column, check and update the `Muzzle Velocity (m/s)`, the `Zero Range (meters)` and `Done`. 
 - *Muzzle Velocities (`Options` / `Muz Vel table`) may need a manual update according to the range card.*
-- *AtragMx is configured with `C1 coefficient` according to vanilla weapons in `GunList`.*
+- *AtragMx is configured with `C1 coefficient` according to vanilla weapons and its ammunitions in `GunList`.*
 - *More information about C1: [Example with `Add New Gun` in `GunList`](#35-example-with-add-new-gun-in-gunlist).*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
@@ -63,24 +63,32 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Update the `Atmsphr` column and `Done`. Basic tool needed: [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html).
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
 - Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html)
-- `Latitude`: *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or the Eden Editor's Extended Debug Console: Watch `ace_common_maplatitude`.*
-- `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* (Horus manual p.14)
-- `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* (Horus manual p.32)
-- `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* (Horus manual p.16)
-- `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* (Horus manual p.33)
-- `Target Speed`: *Target Speed Assist* (Horus manual p.21)
-- `Target Range (meters)`: *Parameter Limits: 25 - 3700 meters.* (Horus manual p.17)
+    - `Latitude`: *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or the Eden Editor's Extended Debug Console: Watch:* `ace_common_maplatitude`.
+    - `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* **[Horus manual p.14]**
+    - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* **[Horus manual p.32]**
+        - *Wind takes into account geographic location, season, time of day, altitude, obstacles and surface roughness: [Wind Profile](https://wind-data.ch/tools/profile.php?lng=en).*
+    - `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* **[Horus manual p.16]**
+    - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* **[Horus manual p.33]**
+    - `Target Speed`: *Target Speed Assist* **[Horus manual p.21]**
+    - `Target Range (meters)`: *Parameter Limits minimum and maximum values: 25 - 3700 meters.* **[Horus manual p.17]**
 - Apply vertical and horizontal elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
 - Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default). 
  
 ### 3.3 Example with Truing tool
+
+> The Truing Drop function is opened from ATrag’s main screen by selecting “Options” [...], then selecting “Truing Drop” from the menu that appears. **[Horus manual p.23]**
+
+> With C1, you can also insert the new BC into the C1 table (with the target range value), or you can replace the C1 table with the following values:
+> 1. first entry: Zero Range, original C1.
+> 2. second entry: range at 75% of distance between transonic start and subsonic start, with original C1.
+> 3. third entry: range 200 (y/m) beyond subsonic start, with new calculated C1. **[Horus manual p.24]**
 
 - Open the `Truing Drop` in the `Options` menu.
 - Add the actual `Target Range` in the `SUPER` column and `Calc`.
 - Add the same `Target Range` in the `SUB` column  and `Calc`.
 - Apply the actual scope elevation in the `Drop` field and `Calc`.
 - `Accept` the new `C1`, `Gun` column and `Elev` are updated.
-- *The Drag Coefficient Table will be automatically updated.*
+- *C1 Ballistic Coefficient vs. Distance Interpolation Table (`Options` / `Drag Coef Table`) will be automatically updated.*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.webp" width="1127" height="600" alt="Calculation" />
@@ -119,15 +127,13 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 > configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "ACE_dragModel"
 
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
+- *AtragMx is configured with `C1 coefficient` according to vanilla weapons and its ammunitions in `GunList`.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
-- *For a better accuracy, a Ballistic Coefficient vs. Distance Interpolation table can be used: `Options` / `Drag Coef Table` (Horus manual p.22)*
-- *AtragMx is configured with `C1 coefficient` according to vanilla weapons in `GunList`.*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
-
 
 > Note: The ballistic coefficient can be calculated by using the [360 Degree Training Course mission](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, an another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
 
-> Example direct conversion with .408 Cheytac 305 grains G7 BC 0.279 at 2000 meters 15°C:
+> Example direct conversion with .408 Cheytac 305 grains G7 BC 0.279 at 2000 meters ICAO conditions (15°C, 1013.25hPa, 0%):
 
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx5.webp" width="1400" height="600" alt="Conversion G7/G1 BC" />
 
@@ -138,7 +144,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 ### 3.7 Reseting AtragMx `GunList`
 
 - Open the Eden Editor and the Extended Debug Console (Ctrl+D).
-- Execute `call ace_atragmx_fnc_clear_user_data` or `call ace_atragmx_fnc_initGunList` (LOCAL EXEC).
+- Execute `call ace_atragmx_fnc_clear_user_data` or `call ace_atragmx_fnc_initGunList` [LOCAL EXEC], (`RESTART` eventually needed).
 - The original ACE3 `GunList` will be restored (all `Add New Gun` entries deleted).
 
 ### 3.8 Example with AtragMx and default ballistic
@@ -160,29 +166,30 @@ The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Veloci
 
 > configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "airFriction"
 
-- *AtragMx is configured with `C1 coefficient` according to vanilla weapons in `GunList`.*
+- *AtragMx is configured with `C1 coefficient` according to vanilla weapons and its ammunitions in `GunList`.*
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 **In position:**
 
 - **Do not update the `Atmsphr` column.** Default ballistic doesn't take into account temperature, pressure and humidity.
 - Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html)
-- `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* (Horus manual p.32)
-- `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* (Horus manual p.16)
-- `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* (Horus manual p.33)
-- `Target Speed`: *Target Speed Assist* (Horus manual p.21)
-- `Target Range (meters)`: *Parameter Limits: 25 - 3700 meters.* (Horus manual p.17)
-- Apply vertical and horizontal elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
-- Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default). 
+    - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* **[Horus manual p.32]**
+        - *Wind takes into account geographic location, season, time of day and obstacles.*
+    - `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* **[Horus manual p.16]**
+    - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* **[Horus manual p.33]**
+    - `Target Speed`: *Target Speed Assist* **[Horus manual p.21]**
+    - `Target Range (meters)`: *Parameter Limits minimum and maximum values: 25 - 3700 meters.* **[Horus manual p.17]**
+    - Apply vertical and horizontal elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
+    - Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default). 
 
 ## 4. Official References
 
-- [Official Manual]({{ site.ace.githubUrl }}/blob/master/extras/manual_Horus_ATrag-v385.pdf)
+- [Horus AtragMx Manual]({{ site.ace.githubUrl }}/blob/master/extras/manual_Horus_ATrag-v385.pdf)
 
 ## 5. Resources
 
 Missions by Ruthberg, author of Advanced Ballistics and its tools:
 
-- [360 Degree Training Course v1.3](https://mega.nz/file/w0swQZBQ#hfZJVCz-bUjSbVVK7uBAXv48hlX7_A9FKy7g52zkf6I) (Arma3 Missions folder).
-- [360 Degree Training Course Framework](https://mega.nz/file/0lEA2LjJ#g7l4LJnr7mJyGh0ai59RR6ecO_hmkAqFA17zDqF1lCI) (Eden Editor mission)
-- [AB Verification ACE VR](https://mega.nz/file/8l9XzbpA#uw3DUOCxGhynJ0TFPZEW3PCTnVbguq95M8n8G5c3MAs) (Eden Editor mission)
+- Arma3 Missions folder: [360 Degree Training Course v1.3](https://mega.nz/file/w0swQZBQ#hfZJVCz-bUjSbVVK7uBAXv48hlX7_A9FKy7g52zkf6I), *([features](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/))*.
+- Eden Editor mission: [360 Degree Training Course Framework](https://mega.nz/file/0lEA2LjJ#g7l4LJnr7mJyGh0ai59RR6ecO_hmkAqFA17zDqF1lCI)
+- Eden Editor mission: [AB Verification ACE VR](https://mega.nz/file/8l9XzbpA#uw3DUOCxGhynJ0TFPZEW3PCTnVbguq95M8n8G5c3MAs)
