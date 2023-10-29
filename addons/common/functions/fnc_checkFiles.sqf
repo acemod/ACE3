@@ -68,10 +68,11 @@ private _oldCompats = [];
         // Check ACE install
         call FUNC(checkFiles_diagnoseACE);
 
+        // Don't block game if it's just an old compat pbo
         if ((_x select [0, 10]) != "ace_compat") then {
             _oldAddons pushBack _x;
         } else {
-            _oldCompats pushBack [_x, _addonVersion];  // Don't block game if it's just an old compat pbo
+            _oldCompats pushBack [_x, _addonVersion];
         };
     };
 } forEach _addons;
@@ -165,15 +166,18 @@ if (isMultiplayer) then {
         // Send server's version of ACE to all clients
         GVAR(serverVersion) = _mainVersion;
         GVAR(serverAddons) = _addons;
+        GVAR(serverSource) = _mainSource;
+
         publicVariable QGVAR(serverVersion);
         publicVariable QGVAR(serverAddons);
+        publicVariable QGVAR(serverSource);
     } else {
         GVAR(clientVersion) = _version;
         GVAR(clientAddons) = _addons;
 
         private _fnc_check = {
             if (GVAR(clientVersion) != GVAR(serverVersion)) then {
-                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(serverVersion), GVAR(clientVersion)];
+                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2. Server modDir: %3", GVAR(serverVersion), GVAR(clientVersion), GVAR(serverSource)];
 
                 // Check ACE install
                 call FUNC(checkFiles_diagnoseACE);
@@ -188,7 +192,7 @@ if (isMultiplayer) then {
             private _addons = GVAR(clientAddons) - GVAR(serverAddons);
 
             if (_addons isNotEqualTo []) then {
-                private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.", _addons];
+                private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1. Server modDir: %2", _addons, GVAR(serverSource)];
 
                 // Check ACE install
                 call FUNC(checkFiles_diagnoseACE);
