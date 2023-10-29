@@ -17,8 +17,9 @@
 
 params ["_display", "_control", ["_animate", true]];
 
-// Have to use toLower here and displayName to handle non-ANSI characters
-private _searchString = toLower ctrlText _control;
+forceUnicode 0; // handle non-ANSI characters
+
+private _searchString = ctrlText _control;
 private _searchPattern = "";
 if (_searchString != "") then {
     _searchPattern = _searchString call EFUNC(common,escapeRegex);
@@ -56,7 +57,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
         // Go through all items in panel and see if they need to be deleted or not
         for "_lbIndex" from (lbSize _rightPanelCtrl) - 1 to 0 step -1 do {
-            _currentDisplayName = toLower (_rightPanelCtrl lbText _lbIndex);
+            _currentDisplayName = _rightPanelCtrl lbText _lbIndex;
             _currentClassname = _rightPanelCtrl lbData _lbIndex;
 
             // Remove item in panel if it doesn't match search, skip otherwise
@@ -152,7 +153,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     // Go through all items in panel and see if they need to be deleted or not
     for "_lbIndex" from (lbSize _leftPanelCtrl) - 1 to 0 step -1 do {
-        _currentDisplayName = toLower (_leftPanelCtrl lbText _lbIndex);
+        _currentDisplayName = _leftPanelCtrl lbText _lbIndex;
         _currentClassname = _leftPanelCtrl lbData _lbIndex;
 
         // Remove item in panel if it doesn't match search, skip otherwise
