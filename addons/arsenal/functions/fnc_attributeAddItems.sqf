@@ -64,10 +64,10 @@ if (_category == IDX_CAT_ALL) exitWith {
             default {_cfgWeapons >> _x};
         };
 
-        _displayName = toLower getText (_config >> "displayName");
+        _displayName = getText (_config >> "displayName");
 
         // Add item if not filtered
-        if (_displayName regexMatch _filter || {_x regexMatch _filter}) then {
+        if (toLower _displayName regexMatch _filter || {_x regexMatch _filter}) then {
             _index = _listbox lnbAddRow ["", _displayName, _modeSymbol];
             _listbox lnbSetData [[_index, 1], _x];
             _listbox lnbSetPicture [[_index, 0], getText (_config >> "picture")];
@@ -116,10 +116,10 @@ private _config = _cfgClass;
         _config = [_cfgClass, _cfgMagazines] select (_x in _magazineMiscItems);
     };
 
-    _displayName = toLower getText (_config >> _x >> "displayName");
+    _displayName = getText (_config >> _x >> "displayName");
 
     // Add item if not filtered
-    if (_displayName regexMatch _filter || {_x regexMatch _filter}) then {
+    if (toLower _displayName regexMatch _filter || {_x regexMatch _filter}) then {
         // Change symbol and alpha if item already selected
         if (_x in _attributeItems) then {
             _symbol = _modeSymbol;

@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Searchbar control <CONTROL>
+ * 2: Animate panel refresh <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -14,7 +15,7 @@
  * Public: No
 */
 
-params ["_display", "_control"];
+params ["_display", "_control", ["_animate", true]];
 
 // Have to use toLower here and displayName to handle non-ANSI characters
 private _searchString = toLower ctrlText _control;
@@ -28,7 +29,7 @@ if (_searchString != "") then {
 if ((ctrlIDC _control) == IDC_rightSearchbar) then {
     // Don't refill if there is no need
     if (GVAR(lastSearchTextRight) != "" && {(_searchString find GVAR(lastSearchTextRight)) != 0}) then {
-        [_display, _display displayCtrl GVAR(currentRightPanel)] call FUNC(fillRightPanel);
+        [_display, _display displayCtrl GVAR(currentRightPanel), _animate] call FUNC(fillRightPanel);
     };
 
     GVAR(lastSearchTextRight) = _searchString;
@@ -127,7 +128,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
     // Left panel search bar
     // Don't refill if there is no need
     if (GVAR(lastSearchTextLeft) != "" && {(_searchString find GVAR(lastSearchTextLeft)) != 0}) then {
-        [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
+        [_display, _display displayCtrl GVAR(currentLeftPanel), _animate] call FUNC(fillLeftPanel);
     };
 
     GVAR(lastSearchTextLeft) = _searchString;
