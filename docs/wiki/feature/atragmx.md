@@ -45,7 +45,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the ammunition: bullet diameter, bullet weight, rifle twist, muzzle velocity at 15°C, zeroed distance and bore height.
 
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx1.webp" width="1400" height="600" alt="Range card" /> 
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx1ab.webp" width="1400" height="600" alt="Range card" /> 
 
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
 - `Open Gun` the 7.62x51mm M80 in the `GunList`.
@@ -78,20 +78,24 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 > This process is called “Truing Drop”, or simply “Truing”. It involves taking 2 or 3 real flight data points (finding bullet drop at 2 or 3 places along its flight) and feeding it into the calculation parameters. **[Horus manual p.23]**
 
-> The Truing Drop function is opened from ATrag’s main screen by selecting “Options” [...], then selecting “Truing Drop” from the menu that appears.
+> The Truing Drop function is opened from ATrag’s main screen by selecting “Options” [...], then selecting “Truing Drop” from the menu that appears. **[Horus manual p.23]**
 
 > With C1, you can also insert the new BC into the C1 table (with the target range value), or you can replace the C1 table with the following values:
 > 1. first entry: Zero Range, original C1.
 > 2. second entry: range at 75% of distance between transonic start and subsonic start, with original C1.
 > 3. third entry: range 200 (y/m) beyond subsonic start, with new calculated C1. **[Horus manual p.24]**
 
-- Open the `Truing Drop` in the `Options` menu.
-- Add the actual `Target Range` in the `SUPER` column and `Calc`.
-- Add the same `Target Range` in the `SUB` column  and `Calc`.
-- Apply the actual scope elevation in the `Drop` field and `Calc`.
-- `Accept` the new `C1`, `Gun` column and `Elev` are updated.
-- *C1 Ballistic Coefficient vs. Distance Interpolation Table (`Options` / `Drag Coef Table`) will be updated.*
-- Optionally, `Save Gun` and `Done` in the `GunList`.
+- Basic example with ammunition 7.62x51mm G7 ballistic coefficient.
+    - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
+    - `Open Gun` a custom profile in the `GunList`.
+    - *More information about custom profile: [Example with `Add New Gun` in `GunList`](#35-example-with-add-new-gun-in-gunlist).*
+    - Open the `Truing Drop` in the `Options` menu.
+    - Add the actual `Target Range` in the `SUPER` column and `Calc`.
+    - Add the same `Target Range` in the `SUB` column  and `Calc`.
+    - Apply the actual scope elevation in the `Drop` field and `Calc`.
+    - `Accept` the new `C1`, `Gun` column and `Elev` are updated.
+    - *C1 Ballistic Coefficient vs. Distance Interpolation Table (`Options` / `Drag Coef Table`) will be updated.*
+    - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.webp" width="1127" height="600" alt="Calculation" />
  
@@ -104,7 +108,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 ### 3.4 Example with overwritten zero distance
 
 - The `Default zero distance` can be overwritten with the [Scopes Options]({{ site.baseurl }}/wiki/feature/scopes.html), the [Scopes Framework]({{ site.baseurl }}/wiki/framework/scopes-framework.html) or the [CBA Settings System](https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System).
-- In this case, the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) will be automatically updated, **NOT the AtragMx**.
+- In this case, the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) will be updated, **NOT the AtragMx**.
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
  
@@ -132,7 +136,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
-> Note: The ballistic coefficient can be calculated by using the [360 Degree Training Course mission](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, an another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
+> Note: The ballistic coefficient can be calculated by using the [360 Degree Training Course mission](#5-resources) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, an another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
 
 > Example direct conversion with .408 Cheytac 305 grains, G7 BC 0.279 at 2000 meters, ICAO conditions (15°C, 1013.25hPa, 0%):
 
@@ -141,12 +145,15 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 ### 3.6 Adding AtragMx Presets
 
 - [AtragMx Framework]({{ site.baseurl }}/wiki/framework/atragmx.html)
-- Scope Base Angle value:
-    - Load custom profile (with an arbitrary scope base angle) into the AtragMx.
-    - Open the `Gun` column and `Done`.
-    - Execute `copyToClipboard Str(ace_atragmx_workingMemory select 3);` [LOCAL EXEC] with the Eden Editor's Extended Debug Console.
-    - Paste new value to the `preset`.
-    - Check `Elev` = 0 with `TR` = `ZR`.
+
+> Scope Base Angle value:
+> - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
+> - `Open Gun` the custom profile (with an arbitrary scope base angle) in the `GunList`.
+> - Check `Elev` vakue with `TR` = `ZR`.
+> - Open the `Gun` column and `Done`.
+> - Execute `copyToClipboard Str(ace_atragmx_workingMemory select 3);` [LOCAL EXEC] with the Eden Editor's Extended Debug Console.
+> - Paste new value to the `preset`.
+> - After new test, check `Elev` = 0 with `TR` = `ZR`.
 
 ### 3.7 Reseting AtragMx `GunList`
 
@@ -154,13 +161,16 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Execute `call ace_atragmx_fnc_clear_user_data` or `call ace_atragmx_fnc_initGunList` [LOCAL EXEC], (`RESTART` eventually needed).
 - The original ACE3 `GunList` will be restored (all `Add New Gun` entries deleted).
 
-### 3.8 Example with AtragMx and default ballistic
+### 3.8 Example with AtragMx and default ballistic (M14, 7.62mm 20Rnd Mag)
 
-> Note: ACE3 has two ballistics: the vanilla default ballistic (enabled as default) and the [Advanced Ballistics]({{ site.baseurl }}/wiki/feature/advanced-ballistics.html) (must be enabled). The ACE3 default ballistic doesn't take atmospheric conditions, powder temperature, rifle twist and Earth effects into account. The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Velocity` and `Zero Range`. With `Target` column, `Latitude` and `Dir of Fire` are useless. `Atmsphr` column must not be updated.
+> Note: ACE3 has two external ballistics, the vanilla default ballistic (enabled as default) and the [Advanced Ballistics]({{ site.baseurl }}/wiki/feature/advanced-ballistics.html) (must be enabled). The ACE3 default ballistic doesn't take atmospheric conditions, powder temperature, rifle twist and Earth effects into account. The AtragMx will need for `Gun` column: `Bore`, `C1 Coefficient`, `Muzzle Velocity` and `Zero Range`. With `Target` column, `Latitude` and `Dir of Fire` are useless. `Atmsphr` column must not be updated.
 
 **Start of the mission:**
 
 - Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the ammunition: **bullet Class Name**, muzzle velocity, zeroed distance and bore height.
+
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx1db.webp" width="1400" height="600" alt="Range card" />
+  
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
 - Select `E` (English unit) at the top right.
 - Open the `Gun` column, check and update the `Bore (inches)` and `Done`.
@@ -195,6 +205,6 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 Missions by Ruthberg, author of Advanced Ballistics and its tools:
 
-- Arma3 Missions folder: [360 Degree Training Course v1.3](https://mega.nz/file/w0swQZBQ#hfZJVCz-bUjSbVVK7uBAXv48hlX7_A9FKy7g52zkf6I), *([features](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/))*.
+- Arma3 Missions folder: [360 Degree Training Course v1.3](https://mega.nz/file/w0swQZBQ#hfZJVCz-bUjSbVVK7uBAXv48hlX7_A9FKy7g52zkf6I), *[Features](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/)*
 - Eden Editor mission: [360 Degree Training Course Framework](https://mega.nz/file/0lEA2LjJ#g7l4LJnr7mJyGh0ai59RR6ecO_hmkAqFA17zDqF1lCI)
 - Eden Editor mission: [AB Verification ACE VR](https://mega.nz/file/8l9XzbpA#uw3DUOCxGhynJ0TFPZEW3PCTnVbguq95M8n8G5c3MAs)
