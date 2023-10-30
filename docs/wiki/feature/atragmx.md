@@ -149,7 +149,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 > Scope Base Angle value:
 > - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
 > - `Open Gun` the custom profile (with an arbitrary scope base angle) in the `GunList`.
-> - Check `Elev` vakue with `TR` = `ZR`.
+> - Check `Elev` value with `TR` = `ZR`.
 > - Open the `Gun` column and `Done`.
 > - Execute `copyToClipboard Str(ace_atragmx_workingMemory select 3);` [LOCAL EXEC] with the Eden Editor's Extended Debug Console.
 > - Paste new value to the `preset`.
