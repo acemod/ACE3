@@ -32,6 +32,9 @@ switch (false) do {
     case (["ace_medical_gui"] call EFUNC(common,isModLoaded)): {
         [LSTRING(RequiresAddon)] call FUNC(showMessage);
     };
+    case ([objNull, _unit] call EFUNC(medical_gui,canOpenMenu)): {
+        [LSTRING(MedicalMenuDisabled)] call FUNC(showMessage);
+    };
     default {
         [_unit] call EFUNC(medical_gui,openMenu);
     };
