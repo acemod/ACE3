@@ -62,5 +62,6 @@ if (!_show) exitWith {};
 
 GVAR(filters) = _filters;
 _filterCtrl lbSetSelected [-1, true, true]; // Start with all filters selected - all items shown
+                                            // Third argument fires `onLBSelChanged` event
 
 TRACE_1("Filled filters:", GVAR(filters));

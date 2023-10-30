@@ -15,8 +15,8 @@
 
 params ["_config", "_targetType"];
 
-private _isBag = (getContainerMaxLoad configName _config > 0);
-private _isDeployable = isClass (_config >> "assembleInfo");
+private _isBag = (getContainerMaxLoad configName _config > 0); // Bags have non-zero load
+private _isDeployable = isClass (_config >> "assembleInfo"); // Deployables have `assembleInfo` config entry
 
 private _return = false;
 switch (true) do {

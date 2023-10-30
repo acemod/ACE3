@@ -22,6 +22,7 @@ if (lbSize _control == 0) exitWith {}; // Skip if no available filters
 
 private _display = ctrlParent _control;
 
+// Set filter button icons (checkboxes)
 // Default to unchecked icon
 for "_i" from 0 to (lbSize _control) -1 do {
     _control lbSetPicture [_i, "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa"];
@@ -37,23 +38,30 @@ private _leftPanelCtrl = _display displayCtrl IDC_leftTabContent;
 private _leftItemCount = lbSize _leftPanelCtrl;
 TRACE_1("# of items:", _leftItemCount);
 
+// Compute filters
 private _passedFilter = [];
-_passedFilter resize [_leftItemCount, false];
+_passedFilter resize [_leftItemCount, false]; // Array of falses
 
 {
     if !(_forEachIndex in _selectedIndices) then {continue};
     private _statement = _x select 2;
     TRACE_1("Statement:", _statement);
     {
-        _passedFilter set [_forEachIndex, _x || (((_leftPanelCtrl lbData _forEachIndex) call CBA_fnc_getItemConfig) call _statement)];
+        // If entry already passed a filter, `||` short circuits any further filter checks
+        _passedFilter set [
+            _forEachIndex,
+            _x || {((_leftPanelCtrl lbData _forEachIndex) call CBA_fnc_getItemConfig) call _statement}
+        ];
     } forEach _passedFilter;
 } forEach GVAR(filters);
 
 TRACE_1("# passed filter:", {_x} count _passedFilter);
 
+// Apply filters
 {
     if (_x) then {continue};
     _leftPanelCtrl lbDelete _forEachIndex;
 } forEachReversed _passedFilter;
 
+// Reapply search to filtered list
 [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
