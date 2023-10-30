@@ -4491,22 +4491,35 @@
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBag">
-            <English>Place body in bodybag</English>
-            <Spanish>Colocar cuerpo en bolsa para cadáveres</Spanish>
-            <Russian>Поместить тело в мешок для трупов</Russian>
-            <German>Körper in Leichesack verstauen</German>
-            <Polish>Zapakuj ciało do worka na zwłoki</Polish>
-            <French>Mettre le corps dans la housse mortuaire</French>
-            <Hungarian>Test hullazsákba helyezése</Hungarian>
-            <Italian>Metti il corpo nella sacca per cadaveri</Italian>
-            <Portuguese>Colocar corpo dentro do saco para cadáver</Portuguese>
-            <Czech>Umístit tělo do pytle na mrtvoly</Czech>
-            <Japanese>死体袋に入れる</Japanese>
-            <Korean>시체 운반용 부대에 담기</Korean>
-            <Chinesesimp>将尸体装入尸袋</Chinesesimp>
-            <Chinese>將屍體放入屍袋</Chinese>
-            <Turkish>Vücudu ceset torbasına yerleştir</Turkish>
+        <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlack">
+            <English>Place body in black bodybag</English>
+            <Spanish>Colocar cuerpo en bolsa para cadáveres negra</Spanish>
+            <German>Körper in schwarzen Leichensack verstauen</German>
+            <French>Mettre le corps dans la housse mortuaire noir</French>
+            <Italian>Metti il corpo nella sacca per cadaveri nera</Italian>
+            <Portuguese>Colocar corpo dentro do saco para cadáver preto</Portuguese>
+            <Czech>Umístit tělo do černého pytle na mrtvoly</Czech>
+            <Turkish>Vücudu siyah ceset torbasına yerleştir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlue">
+            <English>Place body in blue bodybag</English>
+            <Spanish>Colocar cuerpo en bolsa para cadáveres azule</Spanish>
+            <German>Körper in Blau Leichensack verstauen</German>
+            <French>Mettre le corps dans la housse mortuaire bleu</French>
+            <Italian>Metti il corpo nella sacca per cadaveri blu</Italian>
+            <Portuguese>Colocar corpo dentro do saco para cadáver azul</Portuguese>
+            <Czech>Umístit tělo do modrého pytle na mrtvoly</Czech>
+            <Turkish>Vücudu mavi ceset torbasına yerleştir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagWhite">
+            <English>Place body in white bodybag</English>
+            <Spanish>Colocar cuerpo en bolsa para cadáveres blanca</Spanish>
+            <German>Körper in weißen Leichensack verstauen</German>
+            <French>Mettre le corps dans la housse mortuaire blanc</French>
+            <Italian>Metti il corpo nella sacca per cadaveri bianca</Italian>
+            <Portuguese>Colocar corpo dentro do saco para cadáver branco</Portuguese>
+            <Czech>Umístit tělo do bílého pytle na mrtvoly</Czech>
+            <Turkish>Vücudu beyaz ceset torbasına yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>

@@ -104,6 +104,7 @@ GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
 GVAR(leftSearchbarFocus) = nil;
 GVAR(rightSearchbarFocus) = nil;
+GVAR(liveUpdateSearch) = nil;
 GVAR(shiftState) = nil;
 GVAR(leftTabFocus) = nil;
 GVAR(rightTabFocus) = nil;

@@ -340,7 +340,7 @@ class ACE_Medical_Menu {
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
             w = QUOTE(POS_W(12.33));
-            h = QUOTE(POS_H(10));
+            h = QUOTE(POS_H(12.2));
             sizeEx = QUOTE(POS_H(0.7));
             colorSelect[] = {1, 1, 1, 1};
             colorSelect2[] = {1, 1, 1, 1};
@@ -354,7 +354,7 @@ class ACE_Medical_Menu {
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
             w = QUOTE(POS_W(12.33));
-            h = QUOTE(POS_H(10));
+            h = QUOTE(POS_H(12.2));
         };
         class BodyImage: GVAR(BodyImage) {};
         class SelectHead: RscButton {
@@ -406,7 +406,9 @@ class ACE_Medical_Menu {
         class Injuries: TriageCard {
             idc = IDC_INJURIES;
             x = QUOTE(POS_X(26.17));
+            y = QUOTE(POS_Y(3.3));
             w = QUOTE(POS_W(12.33));
+            h = QUOTE(POS_Y(13.3));
         };
         class ActivityHeader: TreatmentHeader {
             text = CSTRING(ACTIVITY_LOG);
