@@ -315,22 +315,23 @@ class GVAR(display) {
                     y = QUOTE(5 * GRID_H);
                     w = QUOTE(47 * GRID_W);
                     h = QUOTE(51 * GRID_H);
-                    colorSelectBackground[] = {1,1,1,0.4};
-                    colorSelectBackground2[] = {1,1,1,0.4};
-                    colorPictureSelected[] = {1,1,1,1};
                     colorSelect[] = {1,1,1,1};
                     colorSelect2[] = {1,1,1,1};
-                    colorPictureRightSelected[] = {1,1,1,1};
+                    colorSelectBackground[] = {1,1,1,0.0};
+                    colorSelectBackground2[] = {1,1,1,0.0};
+                    colorPicture[] = {1,1,1,0.7};
+                    colorPictureSelected[] = {1,1,1,1};
                     sizeEx = QUOTE(5 * GRID_H);
                     onLBSelChanged = QUOTE(_this call FUNC(handleFilters));
                 };
                 class filtersAllCheckBox: RscCheckBox {
                     idc = IDC_filtersAllCheckBox;
                     onCheckedChanged = QUOTE(_this call FUNC(toggleAllFilters));
-                    x = QUOTE(0);
+                    x = QUOTE(1.75 * GRID_W);
                     y = QUOTE(0);
                     w = QUOTE(5 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    colorFocused[] = {1,1,1,0.7};
                 };
             };
         };
