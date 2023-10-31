@@ -1654,7 +1654,7 @@
             <German>Hervorhebungsfarbe für Lieblingsgegenstände.</German>
             <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
             <French>Met en surbrillance les éléments favoris.</French>
-            <Portuguese>Cor de destaque para itens favoritos.</Portuguese>
+            <Portuguese>Cor de destaque para itens favoritados.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
