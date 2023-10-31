@@ -62,8 +62,9 @@ if (!_show) exitWith {};
 
 GVAR(filters) = _filters;
 GVAR(programSetFilters) = true;
-_filterCtrl lbSetSelected [-1, true, true]; // Start with all filters selected - all items shown
-                                            // Third argument fires `onLBSelChanged` event
+_filterCtrl lbSetSelected [-1, true, false]; // Start with all filters selected - all items shown
+                                             // Third argument is whether to fire `onLBSelChanged` event
+_filterCtrl lbSetCurSel -1; // Remove frame from "selected" item
 GVAR(programSetFilters) = false;
 
 TRACE_1("Filled filters:", GVAR(filters));

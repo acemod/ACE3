@@ -19,5 +19,6 @@ params ["_control", ""]; // The state passed by the event is an integer, not a b
 private _display = ctrlParent _control;
 private _filterCtrl = _display displayCtrl IDC_filtersListBox;
 GVAR(programSetFilters) = true;
-_filterCtrl lbSetSelected [-1, cbChecked _control, true];
+_filterCtrl lbSetSelected [-1, cbChecked _control, false];
+_filterCtrl lbSetCurSel -1; // Remove frame from "selected" item
 GVAR(programSetFilters) = false;
