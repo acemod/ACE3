@@ -79,7 +79,7 @@
             <Chinesesimp>启用重命名动作</Chinesesimp>
             <Korean>새로 명칭 짓기 행동 활성화</Korean>
             <Spanish>Habilitar renombrado</Spanish>
-            <Portuguese>Ativar ação de renomear</Portuguese>
+            <Portuguese>Habilitar ação de renomear</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
