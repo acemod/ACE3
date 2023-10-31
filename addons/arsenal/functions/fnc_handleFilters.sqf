@@ -81,7 +81,7 @@ TRACE_1("# passed filter:", {_x} count _passedFilter);
 } forEachReversed _passedFilter;
 
 // Reapply search to filtered list
-[_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
+[_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
 
 // Check or uncheck the box for toggling all filters
 private _filtersCheckBox = _display displayCtrl IDC_filtersAllCheckBox;
