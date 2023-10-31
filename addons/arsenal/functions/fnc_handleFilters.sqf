@@ -20,6 +20,23 @@ TRACE_3("Handling filters", _control, _newIndex, _selectedIndices);
 
 if (lbSize _control == 0) exitWith {}; // Skip if no available filters
 
+// Make the listbox behave like a set of checkboxes
+// Override user selections but not program-driven selections
+if !(GVAR(programSetFilters)) then {
+    private _newSelection = GVAR(lastSelectedFilters);
+    if (_newIndex in GVAR(lastSelectedFilters)) then {
+        _newSelection = _newSelection - [_newIndex]; // Uncheck
+    } else {
+        _newSelection = _newSelection + [_newIndex]; // Check
+    };
+
+    _control lbSetSelected [_newSelection, true];
+    GVAR(lastSelectedFilters) = _newSelection;
+} else {
+    GVAR(lastSelectedFilters) = _selectedIndices;
+};
+_selectedIndices = GVAR(lastSelectedFilters);
+
 private _display = ctrlParent _control;
 
 // Set filter button icons (checkboxes)
