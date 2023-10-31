@@ -128,6 +128,8 @@
             <Polish>Jak Nowo Narodzony</Polish>
             <Korean>신체 완치</Korean>
             <Portuguese>Restaurar como novo</Portuguese>
+            <German>Wie neu wiederherstellen</German>
+        </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
             <English>The %3Personal Aid Kit%4 is an item that allows a soldier to be fully healed. Independent of %3ACE Settings%4, it requires that the patient is in %3Stable Condition%4 before use.&lt;br/&gt;&lt;br/&gt;%3Stable Condition%4 qualifies as:&lt;br/&gt;%2Unit is %3Alive%4.&lt;br/&gt;%2Unit is %3Conscious%4.&lt;br/&gt;%2Unit has no active %3Bleeding%4.&lt;br/&gt;%2Heart Rate &gt;= 40.&lt;br/&gt;%2Systolic BP &gt;= 60.&lt;br/&gt;%2Diastolic BP &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move to appropriate location depending on %3ACE Settings%4.&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatments%4&lt;br/&gt;%2Select %3Use Personal Aid Kit%4.</English>
             <Polish>%3Apteczka Osobista%4 jest przedmiotem pozwalającym na pełne uleczenie gracza. Niezależnie od %3Ustawień ACE%4, wymagane jest, aby pacjent był w%3Stanie Stabilnym%4 przed jej użyciem.&lt;br/&gt;&lt;br/&gt;%3Stan Stabilny%4 występuje gdy:&lt;br/&gt;%2Jednostka jest %3Żywa%4.&lt;br/&gt;%2Jednostka jest  %3Przytomna%4.&lt;br/&gt;%2Jednostka nie%3Krwawu%4.&lt;br/&gt;%2Tętno&gt;= 40. &lt;br/&gt;%2Ciśnienie Skurczowe &gt;= 60.&lt;br/&gt;%2Ciśnienie Rozkurczowe &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Udaj się do właściwej lokacji żależnej od %3Ustawień ACE%4.&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz %3Zaawansowane Zabiegi%4.&lt;br/&gt;%2Wybierz %3Użyj Apteczki Osobistej%4.</Polish>
