@@ -405,7 +405,7 @@
             <Polish>Sortuj po szybkostrzelności</Polish>
             <Korean>발사속도 순서로 정렬</Korean>
             <Chinesesimp>以射速排序</Chinesesimp>
-            <Portuguese>Ordenar por cadência de tiro</Portuguese>
+            <Portuguese>Ordenar por cadência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
