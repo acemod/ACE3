@@ -6,7 +6,7 @@ class CfgVehicles {
         };
     };
 
-    class StaticMortar;
+    class StaticMortar: StaticWeapon {};
     class CUP_2b14_82mm_Base: StaticMortar {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {

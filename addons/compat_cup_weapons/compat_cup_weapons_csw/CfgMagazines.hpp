@@ -11,7 +11,7 @@ class CfgMagazines {
         mass = 40;
         displayName = SUBCSTRING(mag_AGS30_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        picture ="\z\ace\addons\csw\UI\ammoBox_50bmg_ca.paa";
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
     };
 
     class 200Rnd_40mm_G_belt;
@@ -26,7 +26,7 @@ class CfgMagazines {
         mass = 40;
         displayname = SUBCSTRING(mag_MK19_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        picture ="\z\ace\addons\csw\UI\ammoBox_50bmg_ca.paa";
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
     };
 
     class CUP_6Rnd_TOW_HMMWV_M;
