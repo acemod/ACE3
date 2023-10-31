@@ -306,7 +306,7 @@ class GVAR(display) {
                     colorBackground[]={0,0,0,0};
                     shadow=2;
                     sizeEx = QUOTE(5 * GRID_H);
-                    text = "Filters";
+                    text = CSTRING(filtersTitleText);
                 };
                 class filtersListBox: RscListBox {
                     idc = IDC_filtersListBox;

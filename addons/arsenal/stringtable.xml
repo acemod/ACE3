@@ -1643,6 +1643,9 @@
             <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
             <French>Change entre l'affichage de tous les éléments ou de vos favoris.\nDouble-cliquez en maintenant la touche Maj enfoncée pour ajouter ou supprimer un élément.</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_filtersTitleText">
+            <English>Filters</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_filterARifleText">
             <English>Rifle / SMG</English>
         </Key>
