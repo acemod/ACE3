@@ -6,7 +6,6 @@
     [_new] call FUNC(updateDamageEffects); // Run on new controlled unit to update QGVAR(aimFracture)
 }, true] call CBA_fnc_addPlayerEventHandler;
 
-
 ["CAManBase", "init", {
     params ["_unit"];
 

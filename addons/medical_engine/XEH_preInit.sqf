@@ -31,6 +31,8 @@ if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIB
     FATAL_SUM_DAMAGE_WEIBULL_L = _x1 / _b1^(1/FATAL_SUM_DAMAGE_WEIBULL_K);
 };
 
+OVERRIDDEN_COMMANDS = ["HEAL", "HEAL SOLDIER", "PATCH SOLDIER", "FIRST AID", "HEAL SELF", "SUPPORT"] createHashMapFromArray [];
+
 // Cache for armor values of equipped items (vests etc)
 GVAR(armorCache) = createHashMap;
 

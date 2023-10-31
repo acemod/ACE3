@@ -106,6 +106,9 @@
 #define FRACTURE_DAMAGE_THRESHOLD EGVAR(medical,const_fractureDamageThreshold)
 #define FRACTURE_DAMAGE_THRESHOLD_DEFAULT 0.50
 
+// Overridden commands for group healing
+#define OVERRIDDEN_COMMANDS EGVAR(medical,overriddenCommands)
+
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 

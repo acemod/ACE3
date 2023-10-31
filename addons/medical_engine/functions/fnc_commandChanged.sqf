@@ -9,19 +9,16 @@
  * Return Value:
  * None
  *
- * Example:
- * [] call ace_medical_engine_fnc_commandChanged
- *
  * Public: No
  */
 params ["_group", "_newCommand"];
 
 if (!local _group) exitWith {};
-if !(_newCommand in ["HEAL", "HEAL SOLDIER", "PATCH SOLDIER", "FIRST AID", "HEAL SELF", "SUPPORT"]) exitWith {};
+if !(_newCommand in OVERRIDDEN_COMMANDS) exitWith {};
 
 {
     _x call EFUNC(common,replaceRegisteredItems);
-    if (!unitReady _x) then {
-        [_x] joinSilent (leader _group)
-    };
-} forEach (units _group);
+    private _assignedTeam = assignedTeam _x;
+    [_x] joinSilent (leader _group);
+    _x assignTeam _assignedTeam;
+} forEach ((units _group) select {(currentCommand _x) == _newCommand});
