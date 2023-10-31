@@ -91,7 +91,7 @@
             <Chinesesimp>启用可重命名物体的重命名动作。</Chinesesimp>
             <Korean>개체의 명칭을 새로 짓는 것을 허가합니다.</Korean>
             <Spanish>Habilitar renombrado para los objetos renombrables.</Spanish>
-            <Portuguese>Ativa a ação de renomear para objetos renomeáveis.</Portuguese>
+            <Portuguese>Habilita a ação de renomear para objetos renomeáveis.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
