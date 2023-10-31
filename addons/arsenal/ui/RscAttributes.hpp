@@ -308,7 +308,7 @@ class GVAR(display) {
                     sizeEx = QUOTE(5 * GRID_H);
                     text = "Filters";
                 };
-                class filtersListBox:  RscListBox {
+                class filtersListBox: RscListBox {
                     idc = IDC_filtersListBox;
                     style = LB_MULTI + LB_TEXTURES;
                     x = QUOTE(0);
@@ -323,6 +323,14 @@ class GVAR(display) {
                     colorPictureRightSelected[] = {1,1,1,1};
                     sizeEx = QUOTE(5 * GRID_H);
                     onLBSelChanged = QUOTE(_this call FUNC(handleFilters));
+                };
+                class filtersAllCheckBox: RscCheckBox {
+                    idc = IDC_filtersAllCheckBox;
+                    onCheckedChanged = QUOTE(_this call FUNC(toggleAllFilters));
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(5 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
                 };
             };
         };

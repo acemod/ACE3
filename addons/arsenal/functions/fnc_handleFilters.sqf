@@ -65,3 +65,7 @@ TRACE_1("# passed filter:", {_x} count _passedFilter);
 
 // Reapply search to filtered list
 [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
+
+// Check or uncheck the box for toggling all filters
+private _filtersCheckBox = _display displayCtrl IDC_filtersAllCheckBox;
+_filtersCheckbox cbSetChecked (lbSize _control == count _selectedIndices);

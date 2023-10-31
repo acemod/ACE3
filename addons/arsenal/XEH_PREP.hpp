@@ -105,6 +105,7 @@ PREP(statTextStatement_rateOfFire);
 PREP(statTextStatement_scopeMag);
 PREP(statTextStatement_scopeVisionMode);
 PREP(statTextStatement_smokeChemTTL);
+PREP(toggleAllFilters);
 PREP(updateCamPos);
 PREP(updateRightPanel);
 PREP(updateCurrentItemsList);
