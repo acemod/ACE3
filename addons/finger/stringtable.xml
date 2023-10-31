@@ -95,6 +95,7 @@
             <Russian>Коэф. размера маркера</Russian>
             <Spanish>Coeficiente del tamaño del marcador visual</Spanish>
             <French>Coefficient taille des marqueurs visuels</French>
+            <Portuguese>Coeficiente de tamanho do marcador visual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Finger_sizeCoef_description">
             <English>Adjusts the size of the visual marker.</English>
@@ -106,6 +107,7 @@
             <Russian>Настраивает размер визуального маркера</Russian>
             <Spanish>Ajusta el tamaño del marcador visual.</Spanish>
             <French>Ajuste la taille des marqueurs visuels</French>
+            <Portuguese>Ajusta o tamanho do marcador visual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_displayName">
             <English>Proximity Scaling</English>
@@ -117,6 +119,7 @@
             <Russian>Масштабирование от дальности</Russian>
             <Spanish>Escalado de cercanía</Spanish>
             <French>Mise à l'échelle</French>
+            <Portuguese>Escala por proximidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_description">
             <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
@@ -128,6 +131,7 @@
             <Russian>Масштабирует размер визуального маркера в зависимости от дальности от игрока до точки указания.</Russian>
             <Spanish>Escala el tamaño del marcador visual dependiendo de la distancia entre el jugador observador y el jugador que señala.</Spanish>
             <French>Modifie la taille du marqueur visuel en fonction de la distance entre le joueur qui observe et le joueur qui pointe.</French>
+            <Portuguese>Redimensiona o tamanho do marcador visual baseado na distância entre o jogador observador e o jogador que aponta.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>

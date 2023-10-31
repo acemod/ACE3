@@ -11,6 +11,7 @@
             <Russian>ACE Счётчик убийств</Russian>
             <Spanish>ACE Eventos de Muertes</Spanish>
             <French>ACE Evénements Morts</French>
+            <Portuguese>ACE Contagem de Abates</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_TotalKills">
             <English>Total Kills:</English>
@@ -23,6 +24,7 @@
             <Korean>총 사살수:</Korean>
             <Spanish>Muertes totales:</Spanish>
             <French>Total de morts :</French>
+            <Portuguese>Abates totais:</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Kill">
             <English>Kill: %1 %2</English>
@@ -35,6 +37,7 @@
             <Korean>사살: %1 %2</Korean>
             <Spanish>Muertes: %1 %2</Spanish>
             <French>Meurtre : %1 %2</French>
+            <Portuguese>Abate: %1 %2</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Killer">
             <English>Killer: %1 %2</English>
@@ -47,6 +50,7 @@
             <Korean>사살자: %1 %2</Korean>
             <Spanish>Asesino: %1 %2</Spanish>
             <French>Tueur : %1 %2</French>
+            <Portuguese>Assassino: %1 %2</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Vehicle">
             <English>Vehicle: %1</English>
@@ -59,6 +63,7 @@
             <Korean>차량: %1</Korean>
             <Spanish>Vehículo: %1</Spanish>
             <French>Véhicule : %1</French>
+            <Portuguese>Veículo: %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_FriendlyFire">
             <English>Friendly Fire</English>

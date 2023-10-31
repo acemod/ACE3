@@ -11,6 +11,7 @@
             <Russian>Флажки</Russian>
             <Spanish>Banderas de señalizado</Spanish>
             <French>Drapeaux de marquage</French>
+            <Portuguese>Bandeiras de marcação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
             <English>Place Anywhere</English>
@@ -22,6 +23,7 @@
             <Russian>Размещать где угодно</Russian>
             <Spanish>Colocar en cualquier lugar</Spanish>
             <French>Placer partout</French>
+            <Portuguese>Colocar em qualquer lugar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
             <English>Place marker flag anywhere regardless of surface.</English>
@@ -33,6 +35,7 @@
             <Spanish>Permitir colocar las banderas de señalizado en cualquier lugar, al margen del tipo de superficie.</Spanish>
             <German>Platzieren Sie die Markierungsfahne überall, unabhängig von der Oberfläche.</German>
             <French>Place un drapeau de marquage n'importe où, quelle que soit la surface.</French>
+            <Portuguese>Permite colocar as bandeiras de marcação em qualquer lugar, independente do tipo de superfice</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Marker Flag</English>

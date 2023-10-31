@@ -500,6 +500,7 @@
             <Polish>Połącz akcje podrzędne</Polish>
             <Chinesesimp>整合子操作</Chinesesimp>
             <Korean>하위 동작 통합</Korean>
+            <Portuguese>Consolidar sub-ações únicas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
             <English>Combines parent action with only one child action together.</English>
@@ -511,6 +512,7 @@
             <Polish>Gdy menu zawiera tylko jedną akcję podrzędną, łączy ją z akcją nadrzędną.</Polish>
             <Chinesesimp>主操作与子操作集成显示。</Chinesesimp>
             <Korean>대분류로 나뉜 행동을 한눈에 보여줍니다</Korean>
+            <Portuguese>Quando um menu contém apenas uma subação, ele é combinado com seu menu pai.</Portuguese>
         </Key>
     </Package>
 </Project>

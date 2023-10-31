@@ -270,7 +270,6 @@
             <English>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to a clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%13%4], select %3Explosives%4, and select the %3Clacker%4 you wish to link to.&lt;br/&gt;%2Open the ACE interface with [%3%12%4].&lt;br/&gt;%2Select %3Explosives%4 and select a %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</English>
             <Polish>Użyj%3Detonatora%4 do podłączenia i wysadzenia ładunku. Do jednego ładunku może być podłączonych wiele ładunków na różnych kanałach.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Połóż ładunek wybuchowy.&lt;br/&gt;%2Użyj [%3%13%4], wybierz%3Mat. Wybuchowe%4, i wybierz %3Detonator%4, do którego chcesz go podłączyć.&lt;br/&gt;%2Otwórz menu interakcji ACE [%3%12%4].&lt;br/&gt;%2Wybierz %3Mat. Wybuchowe%4 i wybierz %3Detonator%4.&lt;br/&gt;%2Wybierz %3Ładunek%4 który chcesz wysadzić.</Polish>
             <Korean>%3격발기%4를 사용하여 폭발물을 연결하고 폭발시킬 수 있습니다. 여러 폭발물을 다른 채널에 연결하여 폭발시킬 수도 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2폭발물을 설치합니다.&lt;br/&gt;%2[%3%13%4]를 사용하여 %3폭발물%4을 선택하고 연결할 %3격발기%4를 선택하십시오.&lt;br/&gt;%2[%3%12%4] 키로 ACE 인터페이스를 여십시오.&lt;br/&gt;%2%3폭발물%4을 선택하고 %3격발기%4를 선택하십시오.&lt;br/&gt;%2%3폭발물%4을 선택하면 폭발합니다.</Korean>
-
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DAGR_ShortName">
             <English>Navigate</English>
