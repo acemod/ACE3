@@ -36,13 +36,15 @@ jobs:
       uses: arma-actions/sqflint@master
       continue-on-error: true # No failure due to many false-positives
 
-  build:
+  hemtt-nobin:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
       uses: actions/checkout@v4
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
+    - name: Convert to full coverage
+      uses: python3 tools/convertToFullCoverage.py
     - name: Run HEMTT build
       run: hemtt build
     - name: Rename build folder
@@ -50,5 +52,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: ace3-${{ github.sha }}-nobin
+        name: ace3-${{ github.sha }}-nobin-fullcoverage
         path: .hemttout/@*
