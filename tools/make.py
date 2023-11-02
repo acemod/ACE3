@@ -1345,16 +1345,13 @@ See the make.cfg file for additional build options.
                     if os.path.isfile(addonTomlPath):
                         with open(addonTomlPath, "r") as f:
                             tomlFile = f.read()
-                            if "preprocess = false" in tomlFile: 
-                                print_error("'preprocess = false' not supported")
-                                raise
-                            skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile or "[rapify]\nenabled = false" in tomlFile
+                            skipPreprocessing = "pboProject_noBinConfig = true".lower() in tomlFile.lower()
 
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
                     elif skipPreprocessing:
-                        print_green("addon.toml set [preprocess.enabled = false]. Proceeding with non-binerized config build!")
+                        print_green("addon.toml set [pboProject_noBinConfig = true]. Proceeding with non-binerized config build!")
                         cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
                     else:
                         cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
