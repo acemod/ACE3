@@ -44,7 +44,7 @@ jobs:
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
     - name: Convert to full coverage
-      uses: python3 tools/convertToFullCoverage.py
+      run: python3 tools/convertToFullCoverage.py
     - name: Run HEMTT build
       run: hemtt build
     - name: Rename build folder
