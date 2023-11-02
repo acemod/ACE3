@@ -187,6 +187,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 > configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "airFriction"
 
 - *AtragMx is configured with `C1 coefficient` according to vanilla weapons and its ammunitions in `GunList`.*
+- *Spin drift and Earth effects not taken into account, `Options` / `Show Coriolis` can be disabled.*
 - Check `Elev` = 0 with `ZR` = `TR` *(if not, open `Gun` column and `Done`)*.
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
