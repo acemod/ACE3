@@ -36,7 +36,7 @@ jobs:
       uses: arma-actions/sqflint@master
       continue-on-error: true # No failure due to many false-positives
 
-  hemtt-nobin:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
