@@ -113,7 +113,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - In this case, the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) will be updated, **NOT the AtragMx**.
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
-- Check `Elev` = 0 with `ZR` = `TR` (*if not, open `Gun` column and `Done`*).
+- Check `Elev` = 0 with `ZR` = `TR` *(if not, open `Gun` column and `Done`)*.
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx41.webp" width="1400" height="600" alt="Zero distance 300m" />
@@ -203,9 +203,11 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Apply vertical and horizontal elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
 - Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default).
 
+
 ## 4. Official References
 
 - [Horus AtragMx Manual]({{ site.ace.githubUrl }}/blob/master/extras/manual_Horus_ATrag-v385.pdf)
+
 
 ## 5. Resources
 
