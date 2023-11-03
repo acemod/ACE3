@@ -26,7 +26,7 @@ if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
 // Restart display if null (not just at start, this will happen periodicly)
 if (isNull (uiNamespace getVariable [QGVAR(display), displayNull])) then {
     TRACE_1("creating display",_this);
-    ([QGVAR(modeDisplay)] call BIS_fnc_rscLayer) cutRsc [QGVAR(modeDisplay), "PLAIN", 1, false];
+    QGVAR(modeDisplay) cutRsc [QGVAR(modeDisplay), "PLAIN", 1, false];
 };
 
 private _ctrlGroup = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl 1000;

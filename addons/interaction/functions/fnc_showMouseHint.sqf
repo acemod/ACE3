@@ -21,7 +21,7 @@
 
 params ["_textLMB", "_textRMB", ["_textMMB", ""], ["_extraIconSets", []]];
 
-(QGVAR(RscMouseHint) call BIS_fnc_rscLayer) cutRsc [QGVAR(RscMouseHint), "PLAIN", -1, false];
+QGVAR(RscMouseHint) cutRsc [QGVAR(RscMouseHint), "PLAIN", -1, false];
 private _display = uiNamespace getVariable [QGVAR(mouseHint), displayNull];
 
 // Set text for buttons, hide if empty string

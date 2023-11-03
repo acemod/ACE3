@@ -63,7 +63,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     };
     //"\A3\Weapons_F\empty.p3d" is fine, but ctrlSetModel ""; - will crash game!
     if (_model == "") exitWith {ERROR("No Model");};
-    (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
+    QGVAR(virtualAmmo) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
     ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModel _model;
 
     [{
@@ -92,7 +92,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             _unit removeAction _actionID;
 
-            (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+            QGVAR(virtualAmmo) cutText ["", "PLAIN"];
 
             if (GVAR(placeAction) == PLACE_APPROVE) then {
                 [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _virtualPos] call FUNC(placeApprove);

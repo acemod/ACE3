@@ -42,7 +42,7 @@ if (typeName _text != "TEXT") then {
 
 private _isShown = ctrlShown (uiNamespace getVariable ["ACE_ctrlHint", controlNull]);
 
-("ACE_RscHint" call BIS_fnc_rscLayer) cutRsc ["ACE_RscHint", "PLAIN", 0, true];
+"ACE_RscHint" cutRsc ["ACE_RscHint", "PLAIN", 0, true];
 
 disableSerialization;
 private _ctrlHint = uiNamespace getVariable "ACE_ctrlHint";

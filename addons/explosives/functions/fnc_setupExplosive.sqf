@@ -38,7 +38,7 @@ _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(
 _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(placeAction) = PLACE_CANCEL;}] call EFUNC(common,AddActionEventHandler)];
 
 //Display to show virtual object:
-(QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
+QGVAR(virtualAmmo) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModel _p3dModel;
 
 //Make sure it has a trigger that works when attached (eg, no tripwires that only do pressurePlate)
@@ -155,7 +155,7 @@ GVAR(TweakedAngle) = 0;
         [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
         [_unit, "zoomtemp", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);
 
-        (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+        QGVAR(virtualAmmo) cutText ["", "PLAIN"];
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
             private _placeAngle = 0;

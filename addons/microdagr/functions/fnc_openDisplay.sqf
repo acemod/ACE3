@@ -43,7 +43,7 @@ if (_newDisplayShowMode in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
     };
 
     //Close the display:
-    (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+    QGVAR(TheRscTitleDisplay) cutText ["", "PLAIN"];
 } else {
     if (_newDisplayShowMode == DISPLAY_MODE_DISPLAY) then {
         //If Dialog is open, back it up before closing:
@@ -52,10 +52,10 @@ if (_newDisplayShowMode in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
             closeDialog 0;
         };
         //Open the display:
-        (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutRsc [QGVAR(TheRscTitleDisplay), "PLAIN", 0, true];
+        QGVAR(TheRscTitleDisplay) cutRsc [QGVAR(TheRscTitleDisplay), "PLAIN", 0, true];
     } else { //DISPLAY_MODE_DIALOG
         //Close the display:
-        (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+        QGVAR(TheRscTitleDisplay) cutText ["", "PLAIN"];
         //Open the dialog:
         createDialog QGVAR(TheDialog);
     };

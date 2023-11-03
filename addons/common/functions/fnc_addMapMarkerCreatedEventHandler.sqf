@@ -29,7 +29,7 @@ _id = _id + 1;
 
 if (_id == 0) then {
     uiNamespace setVariable ["ACE_EventHandler_MapMarker", count allMapMarkers];
-    ("ACE_EventHandlerHelper2" call BIS_fnc_rscLayer) cutRsc ["ACE_EventHandlerHelper2", "PLAIN"];
+    "ACE_EventHandlerHelper2" cutRsc ["ACE_EventHandlerHelper2", "PLAIN"];
 };
 
 _actionIDs pushBack _id;

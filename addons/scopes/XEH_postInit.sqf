@@ -31,8 +31,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
         params ["_player", "_newCameraView"];
 
         if (_newCameraView == "GUNNER") then {
-            private _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
-            _layer cutText ["", "PLAIN", 0];
+            QGVAR(Zeroing) cutText ["", "PLAIN", 0];
 
             if (!isNil QGVAR(fadePFH)) then {
                 [GVAR(fadePFH)] call CBA_fnc_removePerFrameHandler;

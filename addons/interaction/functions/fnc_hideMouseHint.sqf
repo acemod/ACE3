@@ -15,7 +15,7 @@
  * Public: No
  */
 
-(QGVAR(RscMouseHint) call BIS_fnc_rscLayer) cutFadeOut 0.2;
+QGVAR(RscMouseHint) cutFadeOut 0.2;
 
 // Re-enable action menu
 inGameUISetEventHandler ["PrevAction", "false"];

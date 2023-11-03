@@ -40,7 +40,7 @@ if ((!_enabled) && (GVAR(pfID) < 0)) exitWith {TRACE_2("Disabled - No Change",_e
 TRACE_2("Cleaning up old pfeh and display",_enabled,GVAR(pfID));
 [GVAR(pfID)] call CBA_fnc_removePerFrameHandler;
 if (!isNull (uiNamespace getVariable [QGVAR(display), displayNull])) then {
-    ([QGVAR(modeDisplay)] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+    QGVAR(modeDisplay) cutText ["", "PLAIN"];
 };
 GVAR(pfID) = -1;
 
@@ -64,7 +64,7 @@ GVAR(pfID) = [{
     // Restart display if null (not just at start, this will happen periodicly)
     if (isNull (uiNamespace getVariable [QGVAR(display), displayNull])) then {
         TRACE_1("creating display",_this);
-        ([QGVAR(modeDisplay)] call BIS_fnc_rscLayer) cutRsc [QGVAR(modeDisplay), "PLAIN", 1, false];
+        QGVAR(modeDisplay) cutRsc [QGVAR(modeDisplay), "PLAIN", 1, false];
         if (_adjustDown) then {
             private _ctrl = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_MODECONTROLGROUP;
             private _pos = ctrlPosition _ctrl;

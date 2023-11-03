@@ -23,8 +23,7 @@ if (_weaponIndex < 0) exitWith {};
 private _adjustment = ACE_player getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
 
 // Display the adjustment knobs
-private _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
-_layer cutRsc [QGVAR(Zeroing), "PLAIN", 0, false];
+QGVAR(Zeroing) cutRsc [QGVAR(Zeroing), "PLAIN", 0, false];
 
 // Find the display
 private _display = uiNamespace getVariable [QGVAR(ZeroingDisplay), displayNull];
@@ -72,9 +71,8 @@ if (!isNil QGVAR(fadePFH)) exitWith {};
 // Launch a PFH to wait and fade out the knobs
 GVAR(fadePFH) = [{
     if (diag_tickTime >= GVAR(timeToHide)) exitWith {
-        private _pfhId = _this select 1;
-        private _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
-        _layer cutFadeOut 2;
+
+        QGVAR(Zeroing) cutFadeOut 2;
 
         GVAR(fadePFH) = nil;
         [_pfhId] call CBA_fnc_removePerFrameHandler;

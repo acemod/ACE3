@@ -34,7 +34,7 @@ if (GVAR(pfID) >= 0) then {
     [GVAR(pfID)] call CBA_fnc_removePerFrameHandler;
     GVAR(pfID) = -1;
     if (!isNull (uiNamespace getVariable [QGVAR(display), displayNull])) then {
-        ([QGVAR(modeDisplay)] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+        QGVAR(modeDisplay) cutText ["", "PLAIN"];
     };
 };
 

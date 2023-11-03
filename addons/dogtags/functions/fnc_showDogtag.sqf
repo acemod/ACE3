@@ -23,9 +23,9 @@ params ["_dogtagData", ["_doubleTags", false, [false]]];
 if (!hasInterface || {_dogtagData isEqualTo []}) exitWith {};
 
 if (_doubleTags) then {
-    (QGVAR(tag) call BIS_fnc_rscLayer) cutRsc [QGVAR(doubleTag), "PLAIN", 1, true];
+    QGVAR(tag) cutRsc [QGVAR(doubleTag), "PLAIN", 1, true];
 } else {
-    (QGVAR(tag) call BIS_fnc_rscLayer) cutRsc [QGVAR(singleTag), "PLAIN", 1, true];
+    QGVAR(tag) cutRsc [QGVAR(singleTag), "PLAIN", 1, true];
 };
 private _display = uiNamespace getvariable [QGVAR(tag), displayNull];
 if(isNull _display) exitWith {};

@@ -70,9 +70,7 @@ if (!isServer) then {
 
             if (_mode < 2) then {
                 _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
-
-                private _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
-                _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
+                "ACE_RscErrorHint" cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
 
                 disableSerialization;
                 private _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
