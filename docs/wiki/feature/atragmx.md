@@ -64,7 +64,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Update the `Atmsphr` column and `Done`. Basic tool needed: [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html).
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
 - Update the `Target` column and `Done`. Basic tools needed: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
-    - `Latitude`: *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or with the Eden Editor's Extended Debug Console: Watch:* `ace_common_maplatitude`.
+    - `Latitude`: *[ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or Eden Editor's Extended Debug Console: Watch:* `ace_common_maplatitude`.
     - `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* **[Horus manual p.14]**
     - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* **[Horus manual p.32]**
         - *Wind takes into account geographic location, season, time of day, obstacles, altitude and surface roughness: [Wind Profile](https://wind-data.ch/tools/profile.php?lng=en).*
