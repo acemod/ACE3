@@ -51,11 +51,7 @@ if (GVAR(fogScaling) > 0) then {
 // Note: Using BIS_fnc_rscLayer because of bug with string syntax - https://feedback.bistudio.com/T120768
 (QGVAR(display) call BIS_fnc_rscLayer) cutText ["", "PLAIN"]; // Cleanup Old Display
 if (_activated) then { // Create New Display
-    if (productVersion select 2 > 214) then { // TODO remove block after 2.16 release
-        (QGVAR(display) call BIS_fnc_rscLayer) cutRsc [QGVAR(title), "PLAIN", 0, false, false]; // draw under HUD
-    } else {
-        (QGVAR(display) call BIS_fnc_rscLayer) cutRsc [QGVAR(title), "PLAIN", 0, false];
-    };
+    (QGVAR(display) call BIS_fnc_rscLayer) cutRsc [QGVAR(title), "PLAIN", 0, false, false]; // draw under HUD
 };
 
 // Cleanup Old PP Effects
