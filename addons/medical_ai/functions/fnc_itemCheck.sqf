@@ -18,7 +18,7 @@
  * Public: No
  */
 
-if (!GVAR(requireItems)) exitWith { [true] };
+if (GVAR(requireItems) == 0) exitWith { [true] };
 
 params ["_healer", "_treatementType"];
 

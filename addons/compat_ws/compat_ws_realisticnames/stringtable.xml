@@ -4,126 +4,157 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Name">
             <English>AA12</English>
             <Korean>AA-12</Korean>
+            <German>AA12</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Tan_Name">
             <English>AA12 (Sand)</English>
             <Korean>AA-12 (모래)</Korean>
+            <German>AA12 (Sand)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Snake_Name">
             <English>AA12 (Snake)</English>
             <Korean>AA-12 (뱀 위장)</Korean>
+            <German>AA12 (Schlange)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
             <English>Galil ARM</English>
             <Korean>갈릴 ARM</Korean>
+            <German>Galil ARM</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Old_Name">
             <English>Galil ARM (Old)</English>
             <Korean>갈릴 ARM (낡음)</Korean>
+            <German>Galil ARM (Alt)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Name">
             <English>GLX 160</English>
             <Korean>GLX-160</Korean>
+            <German>GLX 160</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Snake_Name">
             <English>GLX 160 (Snake)</English>
             <Korean>GLX-160 (뱀 위장)</Korean>
+            <German>GLX 160 (Schlange)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
             <English>GLX 160 (Hex)</English>
             <Korean>GLX-160 (육각)</Korean>
+            <German>GLX 160 (Hex)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_GreenHex_Name">
             <English>GLX 160 (Green Hex)</English>
             <Korean>GLX-160 (초록육각)</Korean>
+            <German>GLX 160 (Grün Hex)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Camo_Name">
             <English>GLX 160 (Camo)</English>
             <Korean>GLX-160 (위장)</Korean>
+            <German>GLX 160 (Tarn)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Tan_Name">
             <English>GLX 160 (Sand)</English>
             <Korean>GLX-160 (모래)</Korean>
+            <German>GLX 160 (Sand)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Black_Name">
             <English>Mk14 Mod 1 EBR (Black)</English>
             <Korean>Mk.14 Mod 1 EBR (검정)</Korean>
+            <German>Mk14 Mod 1 EBR (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Snake_Name">
             <English>Mk14 Mod 1 EBR (Snake)</English>
             <Korean>Mk.14 Mod 1 EBR (뱀 위장)</Korean>
+            <German>Mk14 Mod 1 EBR (Schlange)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Name">
             <English>Vektor SS-77</English>
             <Korean>벡터 SS-77</Korean>
+            <German>Vektor SS-77</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_AAF_Name">
             <English>Vektor SS-77 (Camo)</English>
             <Korean>벡터 SS-77 (위장)</Korean>
+            <German>Vektor SS-77 (Tarn)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Hex_Name">
             <English>Vektor SS-77 (Hex)</English>
             <Korean>벡터 SS-77 (육각)</Korean>
+            <German>Vektor SS-77 (Hex)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_GreenHex_Name">
             <English>Vektor SS-77 (Green Hex)</English>
             <Korean>벡터 SS-77 (초록육각)</Korean>
+            <German>Vektor SS-77 (Grün Hex)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
             <English>Vektor SS-77 (Desert)</English>
             <Korean>벡터 SS-77 (사막)</Korean>
+            <German>Vektor SS-77 (Wüstet)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Name">
             <English>Vektor SS-77 Compact</English>
             <Korean>벡터 SS-77 단축형</Korean>
+            <German>Vektor SS-77 Kompakt</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Snake_Name">
             <English>Vektor SS-77 Compact (Snake)</English>
             <Korean>벡터 SS-77 단축형 (뱀 위장)</Korean>
+            <German>Vektor SS-77 Compact (Schlange)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Wood_Name">
             <English>FN FAL 50.00 (Wood)</English>
             <Korean>FN FAL 50.00 (목재)</Korean>
+            <German>FN FAL 50.00 (Holz)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Wood_Name">
             <English>FN FAL 50.00 GL (Wood)</English>
             <Korean>FN FAL 50.00 GL (목재)</Korean>
+            <German>FN FAL 50.00 GL (Holz)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Name">
             <English>FN FAL 50.00</English>
             <Korean>FN FAL 50.00</Korean>
+            <German>FN FAL 50.00</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Name">
             <English>FN FAL 50.00 GL</English>
             <Korean>FN FAL 50.00 GL</Korean>
+            <German>FN FAL 50.00 GL</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Desert_Name">
             <English>FN FAL 50.00 (Desert)</English>
             <Korean>FN FAL 50.00 (사막)</Korean>
+            <German>FN FAL 50.00 (Wüstet)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Camo_Name">
             <English>FN FAL 50.00 (Jungle)</English>
             <Korean>FN FAL 50.00 (정글)</Korean>
+            <German>FN FAL 50,00 (Dschungel)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
             <Korean>벡터 R4</Korean>
+            <German>Vektor R4</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Name">
             <English>Vektor R5 Carbine</English>
             <Korean>벡터 R5 카빈</Korean>
+            <German>Vektor R5 Carbine</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Name">
             <English>Vektor R5 Carbine GL</English>
             <Korean>벡터 R5 카빈 GL</Korean>
+            <German>Vektor R5 Carbine GL</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Snake_Name">
             <English>Vektor R5 Carbine (Snake)</English>
             <Korean>벡터 R5 카빈 (뱀 위장)</Korean>
+            <German>Vektor R5 Carbine (Schlange)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Snake_Name">
             <English>Vektor R5 Carbine GL (Snake)</English>
             <Korean>벡터 R5 카빈 GL (뱀 위장)</Korean>
+            <German>Vektor R5 Carbine GL (Schlange)</German>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Name">
             <English>XMS</English>

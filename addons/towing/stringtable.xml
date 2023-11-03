@@ -130,6 +130,7 @@
             <Spanish>Añadir cuerda de remolcado al inventario del vehículo</Spanish>
             <Japanese>車両のインベントリに牽引ロープを追加する</Japanese>
             <German>Abschleppseil zum Fahrzeuginventar hinzufügen</German>
+            <French>Ajouter une corde à l'inventaire des véhicules</French>
         </Key>
     </Package>
 </Project>

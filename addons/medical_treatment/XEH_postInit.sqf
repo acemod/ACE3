@@ -67,28 +67,33 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
         private _checkHeadstoneAction = [
             QGVAR(checkHeadstone),
             LLSTRING(checkHeadstoneName),
-            QPATHTOEF(medical_gui,ui\cross_grave.paa),
+            QPATHTOEF(medical_gui,ui\grave.paa),
             {
                 [
                     [_target getVariable QGVAR(headstoneData)],
                     true
                 ] call CBA_fnc_notify;
             },
-            {!isNil {_target getVariable QGVAR(headstoneData)}},
-            {},
-            [],
-            [1.05, 0.02, 0.3] //position in centre of cross
+            {!isNil {_target getVariable QGVAR(headstoneData)}}
         ] call EFUNC(interact_menu,createAction);
 
-        ["Land_Grave_dirt_F", 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
+        [missionNameSpace getVariable [QGVAR(graveClassname), "ACE_Grave"], 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (isServer) then {
         ["ace_placedInBodyBag", {
             params ["_target", "_restingPlace"];
             TRACE_2("ace_placedInBodyBag eh",_target,_restingPlace);
+            if (isNull _restingPlace) exitWith {};
 
-            private _targetName = [_target, false, true] call EFUNC(common,getName);
+            private _targetName = "";
+            if (_target isKindOf "ACE_bodyBagObject") then {
+                _targetName = _target getVariable [QGVAR(headstoneData), ""];
+            } else {
+                _targetName = [_target, false, true] call EFUNC(common,getName);
+            };
+
+            if (_targetName == "") exitWith {};
             _restingPlace setVariable [QGVAR(headstoneData), _targetName, true];
         }] call CBA_fnc_addEventHandler;
     };

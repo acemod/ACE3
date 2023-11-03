@@ -13,6 +13,6 @@ PREP_RECOMPILE_END;
 GVAR(detonationHandlers) = [];
 GVAR(excludedMines) = [];
 
-GVAR(defusalKits) = call (uiNamespace getVariable QGVAR(defusalKits));
+GVAR(defusalKits) = keys (uiNamespace getVariable QGVAR(defusalKits));
 
 ADDON = true;

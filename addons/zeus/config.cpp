@@ -92,6 +92,11 @@ class CfgPatches {
             QGVAR(moduleBurn)
         };
     };
+    class GVAR(trenches): ADDON {
+        units[] = {
+            QGVAR(moduleLayTrench)
+        };
+    };
 };
 
 class ACE_Curator {
@@ -104,6 +109,7 @@ class ACE_Curator {
     GVAR(pylons) = "ace_pylons";
     GVAR(arsenal) = "ace_arsenal";
     GVAR(fire) = "ace_fire";
+    GVAR(trenches) = "ace_trenches";
 };
 
 #include "CfgFactionClasses.hpp"

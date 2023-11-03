@@ -31,7 +31,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             modelOptics = "\x\cba\addons\optics\cba_optic_big_100.p3d";
             class OpticsModes {
-				class optic {
+                class optic {
                     opticsID=1;
                     useModelOptics=1;
                     opticsPPEffects[]={ "OpticsCHAbera1", "OpticsBlur1" };

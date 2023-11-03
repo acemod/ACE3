@@ -317,9 +317,18 @@
 [
     QGVAR(allowGraveDigging),
     "LIST",
-    [LSTRING(AllowGaveDigging_DisplayName), LSTRING(AllowGaveDigging_Description)],
+    [LSTRING(AllowGraveDigging_DisplayName), LSTRING(AllowGraveDigging_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(AllowGaveDigging_graveOnlyDead), ELSTRING(common,Yes)], 1],
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(AllowGraveDigging_graveOnlyDead), ELSTRING(common,Yes)], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(graveDiggingMarker),
+    "CHECKBOX",
+    [LSTRING(GraveDiggingMarker_DisplayName), LSTRING(GraveDiggingMarker_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
     true
 ] call CBA_fnc_addSetting;
 

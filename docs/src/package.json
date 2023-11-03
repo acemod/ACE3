@@ -1,16 +1,15 @@
 {
   "name": "ace3",
   "version": "0.1.0",
-  "dependencies": {
-    "lodash": "^4.17.21"
+  "scripts": {
+    "build": "rollup --config"
   },
   "devDependencies": {
-    "grunt": "^1.6.1",
-    "grunt-contrib-concat": "^2.1.0",
-    "grunt-contrib-imagemin": "^4.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-sass": "^3.1.0",
-    "node-sass": "^9.0.0"
+    "@rollup/plugin-terser": "^0.4.4",
+    "node-sass": "^9.0.0",
+    "rollup": "^4.1.4",
+    "rollup-plugin-scss": "^4.0.0",
+    "rollup-plugin-svg-icons": "^2.1.2",
+    "rollup-plugin-svg-sprite-loader": "^0.0.4"
   }
 }
