@@ -14,7 +14,7 @@ class RscInGameUI {
         onLoad = QUOTE(with uiNamespace do {ACE_RscOptics_javelin = _this select 0;};);
 
         class GVAR(mapHelper): RscMapControl {
-            onDraw = QUOTE(_this call FUNC(mapHelperDraw););
+            onDraw = QUOTE(_this call FUNC(mapHelperDraw));
             x = -10;
             y = -10;
             w = 0;

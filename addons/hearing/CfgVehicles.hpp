@@ -13,7 +13,7 @@ class CfgVehicles {
                 };
                 class ACE_RemoveEarplugs {
                     displayName = CSTRING(EarPlugs_Off);
-                    condition = QUOTE( GVAR(EnableCombatDeafness) && {[_player] call FUNC(hasEarPlugsIn)});
+                    condition = QUOTE(GVAR(EnableCombatDeafness) && {[_player] call FUNC(hasEarPlugsIn)});
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                     statement = QUOTE([ARR_2(_player, true)] call FUNC(removeEarPlugs));
                     showDisabled = 0;

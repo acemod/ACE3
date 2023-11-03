@@ -32,6 +32,7 @@
             <French>Effet de pénétration d'armure</French>
             <German>Effekt des Panzerungsdurchschlags</German>
             <Portuguese>Efeito de Penetração de Blindagem</Portuguese>
+            <Japanese>装甲貫通効果</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_description">
             <English>Controls effect of armor 'passThrough' on final damage. Makes high armor values, like ones used in GL rigs, less effective.\nUse 0% for pre 3.16.0 armor behavior.\nOnly touch this if you know what you're doing!</English>
@@ -40,6 +41,7 @@
             <French>Contrôle l'effet de la "pénétration" de l'armure sur les dégâts finaux. Rend les valeurs d'armures élevées, comme celles utilisées dans les gilets GL, moins efficaces.\nUtilisez 0% pour le comportement des armures des versions antérieures à 3.16.0.\nNe modifiez la valeur que si vous savez ce que vous faîtes !</French>
             <German>Steuert den Effekt des „Durchschlagens“ von Panzerung auf den Gesamtschaden. Macht hohe Panzerungswerte, wie sie in GL-Westen verwendet werden, weniger effektiv.\nVerwende 0% für das Panzerungsverhalten vor 3.16.0.\nÄndere den Wert nur, wenn du weißt, was du tust!</German>
             <Portuguese>Controla o efeito de penetração (passThrough) da blindagem no dano final. Torna valores de blindagem altos, como os usados em coletes GL, menos eficazes.\nUse 0% para o comportamento de blindagem anterior à versão 3.16.0.\nSó mexa nisso se souber o que está fazendo!</Portuguese>
+            <Japanese>ボディアーマーの'passThrough'値が最終的な身体ダメージに与える影響を調整します。擲弾兵リグで使用されるような高い装甲値では効果が低くなります。\n3.16.0以前の挙動にするには0%にしてください。\nこれが何かわからない場合は変更しないことをお勧めします。</Japanese>
         </Key>
     </Package>
 </Project>

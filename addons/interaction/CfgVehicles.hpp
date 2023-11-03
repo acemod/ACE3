@@ -815,6 +815,7 @@ class CfgVehicles {
                     displayName = CSTRING(TurnOn);
                     icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
                     condition = QUOTE(alive _target);
+                    #pragma hemtt suppress pw3_padded_arg
                     statement = QUOTE(\
                         private _position = getPosATL _target;\
                         private _vectorDirAndUp = [ARR_2(vectorDir _target,vectorUp _target)];\

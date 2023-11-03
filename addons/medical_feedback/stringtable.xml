@@ -197,7 +197,7 @@
                 <French>Activer les cris</French>
                 <Hungarian>Kiáltások engedélyezése</Hungarian>
                 <Italian>Abilita Grida</Italian>
-                <Japanese>叫びを有効化</Japanese>
+                <Japanese>悲鳴を有効化</Japanese>
                 <Korean>비명 활성화</Korean>
                 <Chinesesimp>启用惨叫</Chinesesimp>
                 <Chinese>啟用尖叫</Chinese>
@@ -214,7 +214,7 @@
                 <French>Si cette option est activée, les unités blessées crieront, voire hurleront sous l'effet de la douleur.</French>
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
                 <Italian>Abilita Grida da parte delle unità ferite</Italian>
-                <Japanese>負傷したユニットが叫ぶようにします。</Japanese>
+                <Japanese>負傷したユニットが悲鳴をあげるようにします。</Japanese>
                 <Korean>부상당한 인원이 소리지르는 것을 활성화합니다</Korean>
                 <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
@@ -223,7 +223,7 @@
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
                 <English>Enable Fracture/Tourniquet/Splint Indicators</English>
                 <Russian>Вкл. индикаторы переломов/жгутов/шин</Russian>
-                <Japanese>骨折/止血帯の表記を有効化</Japanese>
+                <Japanese>骨折/止血帯/副子の表記を有効化</Japanese>
                 <French>Indicateurs de fractures/garrots/attelles</French>
                 <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
                 <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
@@ -235,7 +235,7 @@
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
                 <Russian>Включает индикацию переломов, наложенных шин и жгутов поверх индикатора положения тела.</Russian>
-                <Japanese>体勢インジケータに骨折や添え木、止血帯の有無を表示するかどうかを設定できます。</Japanese>
+                <Japanese>体勢インジケータに骨折や副子、止血帯の有無を表示するかどうかを設定できます。</Japanese>
                 <French>Affiche des icônes au niveau de l'indicateur de posture, indiquant si le personnage souffre de fractures ou si des garrots ou des attelles sont appliqués.</French>
                 <German>Aktiviert Indikatoren für Frakturen mit angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
                 <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
