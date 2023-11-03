@@ -4,7 +4,7 @@ class GVAR(menu) {
     idd = 314614;
     movingEnable = 1;
     onLoad = QUOTE([_this select 0] call FUNC(onMenuOpen));
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(menuDisplay),nil)];);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(menuDisplay),nil)]);
     class controlsBackground {
         class HeaderBackground: ACE_gui_backgroundBase {
             idc = -1;
