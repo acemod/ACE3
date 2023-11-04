@@ -141,3 +141,6 @@ private _config = _cfgClass;
 
 // Sort alphabetically
 _listbox lnbSort [1, false];
+
+// Reset unicode flag
+forceUnicode -1;
