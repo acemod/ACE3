@@ -85,7 +85,7 @@ You can then register the listener in ``CfgEventHandlers``:
 ```cpp
 class Extended_InitPost_Eventhandlers {
 	class new_attachable_item_classname {
-	 	init = QUOTE( _this call FUNC(initEvent));
+	 	init = QUOTE(_this call FUNC(initEvent));
 	};
 };
 ```
