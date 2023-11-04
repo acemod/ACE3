@@ -10,11 +10,11 @@
 // SELF INTERACT KEYBIND - %12
 // INTERACT KEYBIND - %13
 #define BASE_ARGUMENTS "'    '", \
-QUOTE([ARR_2('ACE3 Common', QQEGVAR(interact_menu,selfInteractKey))] call FUNC(getKeybindName)), \
-QUOTE([ARR_2('ACE3 Common', QQEGVAR(interact_menu,interactKey))] call FUNC(getKeybindName))
+QUOTE([ARR_2('ACE3 Common',QQEGVAR(interact_menu,selfInteractKey))] call FUNC(getKeybindName)), \
+QUOTE([ARR_2('ACE3 Common',QQEGVAR(interact_menu,interactKey))] call FUNC(getKeybindName))
 
 // MEDCIAL MENU KEYBIND - %14
-#define MEDICAL_MENU_KEYBIND QUOTE([ARR_2('ACE3 Common', QQEGVAR(medical_gui,openMedicalMenuKey))] call FUNC(getKeybindName))
+#define MEDICAL_MENU_KEYBIND QUOTE([ARR_2('ACE3 Common',QQEGVAR(medical_gui,openMedicalMenuKey))] call FUNC(getKeybindName))
 
 
 class CfgHints {
