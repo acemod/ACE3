@@ -179,3 +179,6 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     [_display, nil, nil, configNull] call FUNC(itemInfo);
 };
+
+// Reset unicode flag
+forceUnicode -1;
