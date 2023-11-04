@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal (moved to separate function by Smith)
  * Get selected item from cargo menu.
