@@ -52,17 +52,25 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(serverUnload), {
+// Direction must be set before setting position according to wiki
+[QGVAR(setDirAndUnload), {
     params ["_item", "_emptyPosAGL", "_direction"];
+
+    _item setDir _direction;
+
+    [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
+}] call CBA_fnc_addEventHandler;
+
+// hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
+// Do both on server to ensure they are executed in the correct order
+[QGVAR(serverUnload), {
+    params ["_item", "_emptyPosAGL"];
 
     _item hideObjectGlobal false;
     _item setPosASL (AGLtoASL _emptyPosAGL);
 
-    if (!isNil "_direction") then {
-        _item setDir _direction;
-    };
-
-    [_item, "blockDamage", "ACE_cargo", false] call EFUNC(common,statusEffect_set);
+    // Let objects remain invulernable for a short while after placement
+    [EFUNC(common,statusEffect_set), [_item, "blockDamage", "ACE_cargo", false], 2] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 // Private events to handle adding actions globally via public functions
@@ -162,3 +170,38 @@ if (isServer) then {
         _bodyBag setVariable [QGVAR(customName), [_target, false, true] call EFUNC(common,getName), true];
     }] call CBA_fnc_addEventHandler;
 };
+
+// Set variables, even on machines without interfaces, just to be safe
+GVAR(selectedItem) = objNull;
+GVAR(itemPreviewObject) = objNull;
+GVAR(deployPFH) = -1;
+GVAR(deployDistance) = -1;
+GVAR(deployDirection) = 0;
+GVAR(deployHeight) = 0;
+GVAR(canDeploy) = false;
+
+if (!hasInterface) exitWith {};
+
+// Cancel object deployment if interact menu opened
+["ace_interactMenuOpened", {ACE_player call FUNC(handleDeployInterrupt)}] call CBA_fnc_addEventHandler;
+
+// Cancel deploy on player change. This does work when returning to lobby, but not when hard disconnecting
+["unit", LINKFUNC(handleDeployInterrupt)] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
+["weapon", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
+
+// When changing feature cameras, stop deployment
+["featureCamera", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
+
+// Handle waking up dragged unit and falling unconscious while trying to deploy
+["ace_unconscious", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addEventHandler;
+
+// Handle surrendering and handcuffing
+["ace_captiveStatusChanged", {
+    params ["_unit", "_state"];
+
+    // If surrendered or handcuffed, stop deployment
+    if (_state) then {
+        _unit call FUNC(handleDeployInterrupt);
+    };
+}] call CBA_fnc_addEventHandler;

@@ -18,18 +18,14 @@
  */
 
 params ["_item", "_vehicle", ["_unloader", objNull], ["_place", []]];
+_place params ["_emptyPosAGL", "_direction"];
+
 TRACE_4("params",_item,_vehicle,_unloader,_place);
 
-private ["_emptyPosAGL", "_direction"];
-
-if (2 == count _place) then {
-    // case when player unloads via placement
-    _emptyPosAGL = _place select 0;
-    _direction = _place select 1;
-    TRACE_2("place",_emptyPosAGL,_direction);
-} else {
-    // this covers testing vehicle stability and finding a safe position
+if (_place isEqualTo []) then {
+    // This covers testing vehicle stability and finding a safe position
     _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
+
     TRACE_1("findUnloadPosition",_emptyPosAGL);
 };
 
@@ -56,27 +52,35 @@ private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
+private _isDeployed = !isNil "_direction";
 private _object = _item;
 if (_object isEqualType objNull) then {
     detach _object;
-    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
-    // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_object, _emptyPosAGL, _direction]] call CBA_fnc_serverEvent;
+
+    // If player unloads via deployment, set direction first, then unload
+    if (_isDeployed) then {
+        [QGVAR(setDirAndUnload), [_object, _emptyPosAGL, _direction], _object] call CBA_fnc_targetEvent;
+    } else {
+        [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
+    };
 } else {
     _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
-    _object setPosASL (AGLtoASL _emptyPosAGL);
 
-    // case when player unloads via placement
-    if (!isNil "_direction") then {
+    // If player unloads via deployment, set direction. Must happen before setPosASL command according to wiki
+    if (_isDeployed) then {
         _object setDir _direction;
     };
+
+    _object setPosASL (AGLtoASL _emptyPosAGL);
 
     [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
     [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;
 };
 
 // Dragging integration
-[_unloader, _object] call FUNC(unloadCarryItem);
+if (!_isDeployed) then {
+    [_unloader, _object] call FUNC(unloadCarryItem);
+};
 
 // Invoke listenable event
 ["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;

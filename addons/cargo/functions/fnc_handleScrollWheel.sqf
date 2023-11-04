@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: Smith
- * Handles object to unload rotation.
+ * Handles rotation of object to unload.
  *
  * Arguments:
- * 0: scroll amount <NUMBER>
+ * 0: Scroll amount <NUMBER>
  *
  * Return Value:
- * handled <BOOL>
+ * If the scroll was handled <BOOL>
  *
  * Example:
- * [1.2] call ace_cargo_fnc_handleScrollWheel
+ * 1.2 call ace_cargo_fnc_handleScrollWheel
  *
  * Public: No
  */
@@ -19,15 +19,21 @@ if (GVAR(deployPFH) == -1) exitWith {false};
 
 params ["_scroll"];
 
-if (cba_events_control) exitWith {
+// Change direction
+if (CBA_events_control) exitWith {
     GVAR(deployDirection) = GVAR(deployDirection) + (_scroll * 5);
+
     true
 };
 
-if (cba_events_alt) exitWith {
+// Change height
+if (CBA_events_alt) exitWith {
     GVAR(deployHeight) = 2 min (-2 max GVAR(deployHeight) + (_scroll * 0.1));
+
     true
 };
 
-GVAR(deployDistance) = 4 min (1 max GVAR(deployDistance) + (_scroll * 0.1));
+// Change distance
+GVAR(deployDistance) = MAX_LOAD_DISTANCE min (1 max GVAR(deployDistance) + (_scroll * 0.1));
+
 true

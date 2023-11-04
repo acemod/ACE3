@@ -103,7 +103,7 @@ class GVAR(menu) {
             text = CSTRING(placeObject);
             idc = 13;
             y = "15.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            action = QUOTE([] call FUNC(deploy););
+            action = QUOTE(ACE_player call FUNC(deploy));
         };
     };
 };
