@@ -22,11 +22,11 @@ class RscInGameUI {
     };
 
     class RscUnitInfo_AH64D_gunner {
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_dlgAircraft',_this select 0)]; [ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'Aircraft')])]    call CBA_fnc_localEvent;);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_dlgAircraft',_this select 0)]; [ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'Aircraft')])] call CBA_fnc_localEvent;);
     };
 
     class RscUnitInfoUAV {
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_dlgUAV',_this select 0)]; [ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'UAV')])]         call CBA_fnc_localEvent;);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_dlgUAV',_this select 0)]; [ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'UAV')])] call CBA_fnc_localEvent;);
     };
 
     class RscUnitInfoSubmarine: RscUnitInfo {
@@ -46,11 +46,11 @@ class RscInGameUI {
     };
 
     class RscWeaponRangeArtillery {
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_dlgArtillery',_this select 0)]; [ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'Artillery')])]   call CBA_fnc_localEvent;);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_dlgArtillery',_this select 0)]; [ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'Artillery')])] call CBA_fnc_localEvent;);
     };
 
     class RscWeaponRangeArtilleryAuto {
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_dlgArtillery',_this select 0)]; [ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'Artillery')])]   call CBA_fnc_localEvent;);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_dlgArtillery',_this select 0)]; [ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'Artillery')])] call CBA_fnc_localEvent;);
     };
 
     class RscWeaponRangeFinderPAS13 {
