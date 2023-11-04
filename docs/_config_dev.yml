@@ -8,9 +8,9 @@ ace:
   githubUrl: https://github.com/acemod/ACE3
   version:
     major: 3
-    minor: 13
-    patch: 2
-    build: 49
+    minor: 16
+    patch: 1
+    build: 74
 
 
 markdown: kramdown
@@ -26,7 +26,7 @@ highlighter: rouge
 safe: true
 lsi: false
 
-exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README.md]
+exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README*.md, Dockerfile, docker-compose.yml, entrypoint.sh, package-lock.json, acebot.json]
 
 plugins:
   - jekyll-redirect-from

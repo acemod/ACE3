@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for initalizing zeus
@@ -73,7 +73,8 @@ if (_activated) then {
                     _class = _cfgPatches select _i;
                     if (isclass _class) then {_addons set [count _addons,configname _class];};
                 };
-                _addons call bis_fnc_activateaddons;
+                // Modified by ace_zeus - bis_fnc_activateaddons will error if time > 0 so only call if at start
+                if (time <= 0) then { _addons call bis_fnc_activateaddons; };
                 removeallcuratoraddons _logic;
                 _logic addcuratoraddons _addons;
             };
@@ -249,7 +250,8 @@ if (_activated) then {
                 } foreach _paramAddons;
             };
         } foreach (synchronizedobjects _logic);
-        _addons call bis_fnc_activateaddons;
+        // Modified by ace_zeus - bis_fnc_activateaddons will error if time > 0 so only call if at start
+        if (time <= 0) then { _addons call bis_fnc_activateaddons; };
     };
 
     //--- Player

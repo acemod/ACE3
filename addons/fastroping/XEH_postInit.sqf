@@ -32,6 +32,17 @@
 }, {false}] call CBA_fnc_addKeybind;
 
 
+if (isServer) then {
+    ["Helicopter", "init", {
+        if (!GVAR(autoAddFRIES)) exitWith {};
+        params ["_vehicle"];
+        if (isNumber (configOf _vehicle >> QGVAR(enabled)) && {isNil {_vehicle getVariable [QGVAR(FRIES), nil]}}) then {
+            [_vehicle] call FUNC(equipFRIES);
+        };
+    }, true, ["ACE_friesBase"], true] call CBA_fnc_addClassEventHandler;
+};
+
+
 #ifdef DRAW_FASTROPE_INFO
 addMissionEventHandler ["Draw3D", {
     if (!(cursorObject isKindOf "Helicopter")) exitWith {};

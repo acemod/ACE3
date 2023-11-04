@@ -43,7 +43,7 @@
             <Polish>Zezwól jednostkom na zapalenie się</Polish>
             <Spanish>Permitir que las unidades se incendien</Spanish>
             <Chinesesimp>允许单位着火</Chinesesimp>
-            <Korean>유닛이 불에 붙게합니다</Korean>
+            <Korean>유닛에 불이 붙게합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_FlareEnable">
             <English>Enable fire-flare at night</English>
@@ -75,6 +75,8 @@
             <German>Schreie von brennenden Einheiten aktivieren</German>
             <Polish>Włącz krzyki podpalonych jednostek</Polish>
             <Japanese>炎上中の悲鳴を有効</Japanese>
+            <Russian>Вкл. крики от горения</Russian>
+            <French>Activer les cris des unités en feu</French>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
             <English>Enables if units on fire will play the screaming sound</English>
@@ -84,6 +86,8 @@
             <German>Aktiviert, ob brennende Einheiten den Schrei-Ton abspielen</German>
             <Polish>Włącza, czy płonące jednostki będą odtwarzać dźwięk krzyku</Polish>
             <Japanese>有効化すると炎上しているユニットが悲鳴を上げます</Japanese>
+            <Russian>Включает воспроизведение криков когда юнит загорается</Russian>
+            <French>Active un son de hurlement si les unités sont en feu</French>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
             <English>Drop Weapons When on Fire</English>
@@ -93,6 +97,8 @@
             <Korean>불 붙을 경우 무기 내려놓음</Korean>
             <German>Waffen fallen lassen, wenn in Brand geraten.</German>
             <Japanese>炎上時に武器を落とす</Japanese>
+            <Russian>Бросать оружие из-за горения</Russian>
+            <French>Lâche les armes si en feu</French>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
             <English>Controls whether units drop their weapons when on fire.</English>
@@ -102,6 +108,8 @@
             <Korean>유닛이 불에 붙이면 무기를 떨굴지를 결정합니다.</Korean>
             <German>Steuert, ob Einheiten ihre Waffen fallen lassen, wenn sie brennen.</German>
             <Japanese>ユニットが炎上時に武器を落とすかどうかを定義します。</Japanese>
+            <Russian>Должны ли юниты выбрасывать оружие когда загораются.</Russian>
+            <French>Contrôle si les unités lâchent leurs armes lorsqu'elles sont en feu.</French>
         </Key>
     </Package>
 </Project>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_RHS_USF3_CSW">
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW_displayName">
+            <English>[CSW] BGM-71A TOW</English>
+            <Korean>[CSW] BGM-71A TOW</Korean>
+            <Japanese>[CSW] BGM-71A TOW</Japanese>
+            <Chinesesimp>[班组] BGM-71A TOW</Chinesesimp>
+            <Russian>[CSW] BGM-71A TOW</Russian>
+            <Spanish>[CSW] BGM-71A TOW</Spanish>
+            <German>[CSW] BGM-71A TOW</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOWB_displayName">
+            <English>[CSW] BGM-71B TOW</English>
+            <Korean>[CSW] BGM-71B TOW</Korean>
+            <Japanese>[CSW] BGM-71B TOW</Japanese>
+            <Chinesesimp>[班组] BGM-71B TOW</Chinesesimp>
+            <Russian>[CSW] BGM-71B TOW</Russian>
+            <Spanish>[CSW] BGM-71B TOW</Spanish>
+            <German>[CSW] BGM-71B TOW</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_ITOW_displayName">
+            <English>[CSW] BGM-71C ITOW</English>
+            <Korean>[CSW] BGM-71C ITOW</Korean>
+            <Japanese>[CSW] BGM-71C ITOW</Japanese>
+            <Chinesesimp>[班组] BGM-71C ITOW</Chinesesimp>
+            <Russian>[CSW] BGM-71C ITOW</Russian>
+            <Spanish>[CSW] BGM-71C ITOW</Spanish>
+            <German>[CSW] BGM-71C ITOW</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2_displayName">
+            <English>[CSW] BGM-71D TOW-2</English>
+            <Korean>[CSW] BGM-71D TOW-2</Korean>
+            <Japanese>[CSW] BGM-71D TOW-2</Japanese>
+            <Chinesesimp>[班组] BGM-71D TOW-2</Chinesesimp>
+            <Russian>[CSW] BGM-71D TOW-2</Russian>
+            <Spanish>[CSW] BGM-71D TOW-2</Spanish>
+            <German>[CSW] BGM-71D TOW-2</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2A_displayName">
+            <English>[CSW] BGM-71E TOW-2A</English>
+            <Korean>[CSW] BGM-71E TOW-2A</Korean>
+            <Japanese>[CSW] BGM-71E TOW-2A</Japanese>
+            <Chinesesimp>[班组] BGM-71E TOW-2A</Chinesesimp>
+            <Russian>[CSW] BGM-71E TOW-2A</Russian>
+            <Spanish>[CSW] BGM-71E TOW-2A</Spanish>
+            <German>[CSW] BGM-71E TOW-2A</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2b_displayName">
+            <English>[CSW] BGM-71F TOW-2B</English>
+            <Korean>[CSW] BGM-71F TOW-2B</Korean>
+            <Japanese>[CSW] BGM-71F TOW-2B</Japanese>
+            <Chinesesimp>[班组] BGM-71F TOW-2B</Chinesesimp>
+            <Russian>[CSW] BGM-71F TOW-2B</Russian>
+            <Spanish>[CSW] BGM-71F TOW-2B</Spanish>
+            <German>[CSW] BGM-71F TOW-2B</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2b_aero_displayName">
+            <English>[CSW] BGM-71F-3 TOW-2B AERO</English>
+            <Korean>[CSW] BGM-71F-3 TOW-2B AERO</Korean>
+            <Japanese>[CSW] BGM-71F-3 TOW-2B AERO</Japanese>
+            <Chinesesimp>[班组] BGM-71F-3 TOW-2B AERO</Chinesesimp>
+            <Russian>[CSW] BGM-71F-3 TOW-2B AERO</Russian>
+            <Spanish>[CSW] BGM-71F-3 TOW-2B AERO</Spanish>
+            <German>[CSW] BGM-71F-3 TOW-2B AERO</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2bb_displayName">
+            <English>[CSW] BGM-71H Bunker Buster</English>
+            <Korean>[CSW] BGM-71H 벙커버스터</Korean>
+            <Japanese>[CSW] BGM-71H Bunker Buster</Japanese>
+            <Chinesesimp>[班组] BGM-71H “碉堡克星”</Chinesesimp>
+            <Russian>[CSW] BGM-71H Bunker Buster</Russian>
+            <Spanish>[CSW] BGM-71H Anti-Búnquer</Spanish>
+            <German>[CSW] BGM-71H Bunker Buster</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_48Rnd_40mm_MK19_displayName">
+            <English>[CSW] Mk. 19 40mm M384 HE</English>
+            <Korean>[CSW] Mk.19 40mm M384 HE</Korean>
+            <Japanese>[CSW] Mk. 19 40mm M384 HE</Japanese>
+            <Chinesesimp>[班组] Mk. 19 40mm M384 高爆</Chinesesimp>
+            <Russian>[CSW] Mk. 19 40 мм M384 HE</Russian>
+            <Spanish>[CSW] Mk. 19 40mm M384 HE</Spanish>
+            <German>[CSW] Mk. 19 40mm M384 HE</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_48Rnd_40mm_MK19_M430I_displayName">
+            <English>[CSW] Mk. 19 40mm M430I HEDP</English>
+            <Korean>[CSW] Mk.19 40mm M430I 이중목적고폭탄</Korean>
+            <Japanese>[CSW] Mk. 19 40mm M430I HEDP</Japanese>
+            <Chinesesimp>[班组] Mk. 19 40mm M430I 两用高爆</Chinesesimp>
+            <Russian>[CSW] Mk. 19 40 мм M430I HEDP</Russian>
+            <Spanish>[CSW] Mk. 19 40mm M430I HEDP</Spanish>
+            <German>[CSW] Mk. 19 40mm M430I HEDP</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_48Rnd_40mm_MK19_M430A1_displayName">
+            <English>[CSW] Mk. 19 40mm M430A1 HEDP</English>
+            <Korean>[CSW] Mk.19 40mm M430A1 이중목적고폭탄</Korean>
+            <Japanese>[CSW] Mk. 19 40mm M430A1 HEDP</Japanese>
+            <Chinesesimp>[班组] Mk. 19 40mm M430A1 两用高爆</Chinesesimp>
+            <Russian>[CSW] Mk. 19 40 мм M430A1 HEDP</Russian>
+            <Spanish>[CSW] Mk. 19 40mm M430A1 HEDP</Spanish>
+            <German>[CSW] Mk. 19 40mm M430A1 HEDP</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_RHS_USF3_CSW_48Rnd_40mm_MK19_M1001_displayName">
+            <English>[CSW] Mk. 19 40mm M1001 Canister</English>
+            <Korean>[CSW] Mk.19 40mm M1001 산탄</Korean>
+            <Japanese>[CSW] Mk. 19 40mm M1001 キャニスター</Japanese>
+            <Chinesesimp>[班组] Mk. 19 40mm M1001 霰弹</Chinesesimp>
+            <Russian>[CSW] Mk. 19 40 мм M1001 Канистровый</Russian>
+            <Spanish>[CSW] Mk. 19 40mm M1001 Bote de metralla</Spanish>
+            <German>[CSW] Mk. 19 40mm M1001 Kanister</German>
+        </Key>
+    </Package>
+</Project>

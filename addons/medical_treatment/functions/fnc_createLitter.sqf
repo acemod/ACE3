@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Creates litter around the patient based on the treatment.
@@ -28,10 +28,9 @@ if (vehicle _medic != _medic || {vehicle _patient != _patient}) exitWith {};
 
 // Determine if treated body part is bleeding
 private _index = ALL_BODY_PARTS find toLower _bodyPart;
-private _isBleeding = GET_OPEN_WOUNDS(_patient) findIf {
-    _x params ["", "_bodyPartN", "_amountOf", "_bleeding"];
-
-    _bodyPartN == _index && {_amountOf * _bleeding > 0}
+private _isBleeding = (GET_OPEN_WOUNDS(_patient) get _bodyPart) findIf {
+    _x params ["", "_amountOf", "_bleeding"];
+    _amountOf * _bleeding > 0
 } != -1;
 
 // Get litter config for the treatment

@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_Description">
             <English>Enables the creation of blood drops when units are bleeding or take damage.</English>
-            <Japanese>ユニットが出血かダメージを受けた時に、血痕を残すようにします。</Japanese>
+            <Japanese>ユニットが出血や負傷した時に、血痕を残すようにします。</Japanese>
             <French>Si une unité saigne, elle laissera des traces de sang derrière elle.</French>
             <Russian>Разрешает создание капель крови при кровотечении или получении урона</Russian>
             <Portuguese>Permitir a criação de gotas de sangue quando as unidades recebem ferimentos ou estão sangrando.</Portuguese>
@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
             <English>Max Blood Objects</English>
-            <Japanese>最大血痕数</Japanese>
+            <Japanese>血痕最大数</Japanese>
             <French>Quantité de sang à afficher</French>
             <Russian>Макс. кол-во капель крови</Russian>
             <Portuguese>Limite de objetos de sangue</Portuguese>
@@ -67,7 +67,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
             <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
-            <Japanese>生成される血痕オブジェクト数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
+            <Japanese>生成される血痕オブジェクト数を設定できます。極端に設定するとFPSのラグを引き起こす可能性があります。</Japanese>
             <French>Définit le nombre maximal de traces de sangs pouvant être affichées.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
             <Russian>Задает макс. количество создаваемых объектов капель крови. Чрезмерное количество может вызвать задержку FPS</Russian>
             <Portuguese>Define o limite máximo de objetos de gota de sangue que podem ser criados, quantidades excessivas podem causar lag de FPS.</Portuguese>

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * On keypress, point and send position to nearby players

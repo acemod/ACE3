@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Shifts all muzzle velocity entries in the muzzle velocity vs. temperature interpolation table

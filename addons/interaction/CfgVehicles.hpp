@@ -162,6 +162,12 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getout_ca.paa";
                 };
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    condition = QUOTE(!(lifeState _target in [ARR_2('HEALTHY','INJURED')]) && {isNull objectParent _target});
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
             };
 
             class ACE_Torso {
@@ -693,6 +699,62 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
+    // weapons dropped from dead body
+    class WeaponHolderSimulated: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 3;
+                position = QUOTE(_target worldToModel ASLToAGL getPosASL _target);
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
+            };
+        };
+    };
+    // Don't enable for scripted
+    class WeaponHolderSimulated_Scripted: WeaponHolderSimulated {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                delete GVAR(Gear);
+            };
+        };
+    };
+
+    class ReammoBox;
+    // dropped weapons/gear
+    class WeaponHolder: ReammoBox {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 3;
+                position = QUOTE(_target worldToModel ASLToAGL getPosASL _target);
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
+            };
+        };
+    };
+    // Don't enable for scripted
+    class GroundWeaponHolder: WeaponHolder {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class GroundWeaponHolder_Scripted: GroundWeaponHolder {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                delete GVAR(Gear);
+            };
+        };
+    };
+
     class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
         class EventHandlers {
@@ -753,6 +815,7 @@ class CfgVehicles {
                     displayName = CSTRING(TurnOn);
                     icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
                     condition = QUOTE(alive _target);
+                    #pragma hemtt suppress pw3_padded_arg
                     statement = QUOTE(\
                         private _position = getPosATL _target;\
                         private _vectorDirAndUp = [ARR_2(vectorDir _target,vectorUp _target)];\

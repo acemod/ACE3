@@ -8,6 +8,9 @@
             <Korean>과중압력</Korean>
             <Polish>Nadciśnienie</Polish>
             <Japanese>過圧</Japanese>
+            <Russian>Перегрузка</Russian>
+            <Spanish>Sobrepresiòn</Spanish>
+            <French>Surpression</French>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">
             <English>Overpressure Distance Coefficient</English>
@@ -19,7 +22,7 @@
             <Italian>Coefficente Distanza Sovrapressione</Italian>
             <Chinesesimp>超压影响距离系数</Chinesesimp>
             <Chinese>高壓影響距離係數</Chinese>
-            <Russian>Коэффициент избыточного давления</Russian>
+            <Russian>Коэф. избыточного давления</Russian>
             <Portuguese>Coeficiente de Distância de Sobrepressão</Portuguese>
             <Hungarian>Túlnyomás-távolság együtthatója</Hungarian>
             <Czech>Koeficient vzdálenosti přetlaku</Czech>

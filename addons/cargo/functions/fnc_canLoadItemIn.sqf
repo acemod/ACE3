@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Check if item can be loaded into other Object.
@@ -36,7 +36,9 @@ if (_item  isEqualType "") then {
     _validItem =
         (alive _item) &&
         {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}} &&
-        {!(_item getVariable [QEGVAR(cookoff,isCookingOff), false])};
+        {!(_item getVariable [QEGVAR(cookoff,isCookingOff), false])} &&
+        {isNull(_item getVariable [QEGVAR(refuel,nozzle), objNull])} && // Objects which have a refueling nozzle connected to them cannot be loaded
+        {isNull(_item getVariable [QEGVAR(refuel,ownedNozzle), objNull])}; // Fuel sources which have their nozzle out cannot be loaded
 };
 
 _validItem &&

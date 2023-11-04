@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Starts the setup process for the passed explosive. Player only.
@@ -187,6 +187,7 @@ GVAR(TweakedAngle) = 0;
             _unit setVariable [QGVAR(PlantingExplosive), true];
             [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call CBA_fnc_waitAndExecute;
 
+            [QGVAR(setup), [_expSetupVehicle, _magClassname, _unit]] call CBA_fnc_globalEvent;
         };
     } else {
         private _screenPos = worldToScreen (_virtualPosASL call EFUNC(common,ASLToPosition));

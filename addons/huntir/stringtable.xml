@@ -13,7 +13,7 @@
             <Hungarian>HuntIR Transport Box</Hungarian>
             <Portuguese>Caixa de transporte do HuntIR</Portuguese>
             <Japanese>HuntIR 輸送箱</Japanese>
-            <Korean>HuntIR 수송함</Korean>
+            <Korean>헌트IR 운반함</Korean>
             <Chinesesimp>高空战术摄像头运输箱</Chinesesimp>
             <Chinese>高空戰術成像器運輸箱</Chinese>
             <Turkish>HuntIR Taşıma Kutusu</Turkish>
@@ -30,7 +30,7 @@
             <Hungarian>HuntIR lövedék</Hungarian>
             <Portuguese>Cartucho HuntIR</Portuguese>
             <Japanese>HuntIR 弾頭</Japanese>
-            <Korean>HuntIR 유탄</Korean>
+            <Korean>헌트IR 유탄</Korean>
             <Chinesesimp>高空战术摄像头弹药</Chinesesimp>
             <Chinese>高空戰術成像器彈藥</Chinese>
             <Turkish>HuntIR Mermisi</Turkish>
@@ -47,7 +47,7 @@
             <Hungarian>HuntIR Monitor</Hungarian>
             <Portuguese>Monitor HuntIR</Portuguese>
             <Japanese>HuntIR モニタ</Japanese>
-            <Korean>HuntIR 모니터</Korean>
+            <Korean>헌트IR 모니터</Korean>
             <Chinesesimp>高空战术摄像头显示面板</Chinesesimp>
             <Chinese>高空戰術成像器顯示面板</Chinese>
             <Turkish>HuntIR Ekranı</Turkish>
@@ -64,7 +64,7 @@
             <Hungarian>HuntIR monitor aktiválása</Hungarian>
             <Portuguese>Ativar monitor do HuntIR</Portuguese>
             <Japanese>HuntIR を起動する</Japanese>
-            <Korean>HuntIR 모니터 켜기</Korean>
+            <Korean>헌트IR 모니터 켜기</Korean>
             <Chinesesimp>开启高空战术摄像头显示面板</Chinesesimp>
             <Chinese>開啟高空戰術成像器顯示面板</Chinese>
             <Turkish>HuntIR Ekranı Aktif</Turkish>
@@ -210,7 +210,7 @@
             <German>Hoch/Runter - Neige Kamera</German>
             <Spanish>Up/Down - Subir/bajar camara</Spanish>
             <Czech>Nahoru/Dolu - Zvýšít/snížit úhel pohledu kamery</Czech>
-            <Russian>Вверх/Вниз - Поднять/Опустить камеру</Russian>
+            <Russian>Вверх/Вниз - Поднять/опустить камеру</Russian>
             <Italian>Up/Down - Alza/abbassa telecamera</Italian>
             <Polish>Góra/Dół - obrót kamery w pionie</Polish>
             <French>Haut/Bas - Monter/descendre la caméra</French>

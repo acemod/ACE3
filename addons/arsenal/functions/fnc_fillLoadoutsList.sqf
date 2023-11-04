@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Fill loadouts list.
  *
  * Arguments:
@@ -16,11 +16,9 @@
 
 params ["_display", "_control"];
 
+(_display displayCtrl IDC_textEditBox) ctrlSetText "";
+
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
-private _textEditBoxCtrl= _display displayCtrl IDC_textEditBox;
-_textEditBoxCtrl ctrlSetText "";
-private _sharingEnabled = (GVAR(allowSharedLoadouts) && {isMultiplayer});
-private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
 
 // Force a "refresh" animation of the panel
 _contentPanelCtrl ctrlSetFade 1;
@@ -31,98 +29,107 @@ _contentPanelCtrl ctrlCommit FADE_DELAY;
 _contentPanelCtrl lnbSetCurSelRow -1;
 lnbClear _contentPanelCtrl;
 
-private _data = +(profileNamespace getvariable [QGVAR(saved_loadouts),[]]);
+private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
+private _cfgWeapons = configFile >> "CfgWeapons";
+private _newRow = -1;
 
 if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
+    private _loadoutNameAndTab = "";
+    private _loadoutCachedInfo = "";
+    private _sharingEnabled = GVAR(allowSharedLoadouts) && {isMultiplayer};
 
+    // Add all loadouts to loadout list
     {
         _x params ["_loadoutName", "_loadoutData"];
 
-        private _loadoutCachedInfo = _contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab));
+        _loadoutNameAndTab = _loadoutName + str GVAR(currentLoadoutsTab);
+        _loadoutCachedInfo = _contentPanelCtrl getVariable _loadoutNameAndTab;
 
+        // If not in cache, get info and cache it
         if (isNil "_loadoutCachedInfo") then {
-            [_loadoutData] call FUNC(verifyLoadout)
-        } else {
-            _loadoutCachedInfo
-        } params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
+            _loadoutCachedInfo = [_loadoutData] call FUNC(verifyLoadout);
+            _contentPanelCtrl setVariable [_loadoutNameAndTab, _loadoutCachedInfo];
 
-        // Log missing / nil items to RPT
-        if (GVAR(EnableRPTLog) && {isNil "_loadoutCachedInfo"} && {(_nullItemsAmount > 0) || {_unavailableItemsAmount > 0}}) then {
+            _loadoutCachedInfo params ["", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
-            private _printComponent = "ACE_Arsenal - Loadout:";
-            private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
-            private _printUnavailableItemsList = ["Unavailable items:", str _unavailableItemsList] joinString " ";
+            // Log missing / nil items to RPT (only once per arsenal session)
+            if (GVAR(EnableRPTLog) && {(_nullItemsAmount > 0) || {_unavailableItemsAmount > 0}}) then {
+                private _printComponent = "ACE_Arsenal - Loadout:";
+                private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
+                private _printUnavailableItemsList = ["Unavailable items:", str _unavailableItemsList] joinString " ";
 
-            diag_log text (format ["%1%5    %2%5    %3%5    %4", _printComponent, "Name: " + _loadoutName, _printNullItemsList, _printUnavailableItemsList, endl]);
+                diag_log text (format ["%1%5    %2%5    %3%5    %4", _printComponent, "Name: " + _loadoutName, _printNullItemsList, _printUnavailableItemsList, endl]);
+            };
         };
 
+        // Set position of loadouts different if in default loadout tab or if sharing is disabled
         if (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts || {!_sharingEnabled}) then {
             _contentPanelCtrl lnbSetColumnsPos [0, 0, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
         } else {
             _contentPanelCtrl lnbSetColumnsPos [0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
         };
 
-        private _newRow = _contentPanelCtrl lnbAddRow ["",_loadoutName];
-
+        _loadoutCachedInfo params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount"];
         _extendedLoadout params ["_loadout"];
+
+        _newRow = _contentPanelCtrl lnbAddRow ["", _loadoutName];
+
         ADD_LOADOUTS_LIST_PICTURES
 
+        // Change color on loadout lines that have items that aren't available or don't exist
         if (_nullItemsAmount > 0) then {
-
-            _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]];
+            _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
         } else {
-
             if (_unavailableItemsAmount > 0) then {
-                _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
+                _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
             };
         };
 
-        _contentPanelCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), [_extendedLoadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]];
-
-        if ((profileName + _loadoutName) in _sharedLoadoutsVars && {GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts}) then {
+        // If it's a shared loadout and player is in the private loadouts tab, add icon
+        if (((profileName + _loadoutName) in _sharedLoadoutsVars) && {GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts}) then {
             _contentPanelCtrl lnbSetPicture [[_newRow, 0], QPATHTOF(data\iconPublic.paa)];
             _contentPanelCtrl lnbSetValue [[_newRow, 0], 1];
         };
-    } foreach ([_data, +GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
+    } forEach ([profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {
+    private _allPlayerNames = allPlayers apply {name _x};
+    private _loadoutVar = "";
 
     {
         _x params ["_playerName", "_loadoutName", "_loadoutData"];
 
-        if ((allPlayers apply {name _x}) find _playerName == -1) then {
+        _loadoutVar = _playerName + _loadoutName;
 
-            private _loadoutVar = _playerName + _loadoutName;
-
+        // If player who shared loadout doesn't exist anymore, unshare loadout
+        if !(_playerName in _allPlayerNames) then {
             GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
-            _sharedLoadoutsVars = _sharedLoadoutsVars - [_loadoutVar];
-            GVAR(sharedLoadoutsNamespace) setVariable [QGVAR(sharedLoadoutsNamespace), _sharedLoadoutsVars, true];
+            GVAR(sharedLoadoutsNamespace) setVariable [QGVAR(sharedLoadoutsNamespace), _sharedLoadoutsVars - [_loadoutVar], true];
 
             [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
         } else {
-
             ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount"];
+            _extendedLoadout params ["_loadout"];
 
             _contentPanelCtrl lnbSetColumnsPos [0, 0.15, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
-            private _newRow = _contentPanelCtrl lnbAddRow [_playerName, _loadoutName];
+            _newRow = _contentPanelCtrl lnbAddRow [_playerName, _loadoutName];
 
-            _extendedLoadout params ["_loadout"];
             ADD_LOADOUTS_LIST_PICTURES
 
-            _contentPanelCtrl lnbSetData [[_newRow, 1], _playerName + _loadoutName];
+            _contentPanelCtrl lnbSetData [[_newRow, 1], _loadoutVar];
 
+            // Change color on loadout lines that have items that aren't available or don't exist
             if (_nullItemsAmount > 0) then {
-
-                _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]];
+                _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
             } else {
-
                 if (_unavailableItemsAmount > 0) then {
-                    _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
+                    _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
                 };
             };
         };
-    } foreach (_sharedLoadoutsVars apply {GVAR(sharedLoadoutsNamespace) getVariable _x});
+    } forEach (_sharedLoadoutsVars apply {GVAR(sharedLoadoutsNamespace) getVariable _x});
 };
 
 [QGVAR(loadoutsListFilled), [_display, _control]] call CBA_fnc_localEvent;
 
+// Sort loadouts alphabetically
 _contentPanelCtrl lnbSort [1, false];

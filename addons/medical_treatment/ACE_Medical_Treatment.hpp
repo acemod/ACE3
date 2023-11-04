@@ -154,7 +154,7 @@ class ADDON {
             };
         };
 
-        class PackingBandage: fieldDressing {
+        class PackingBandage: FieldDressing {
             class Abrasion {
                 effectiveness = 3;
                 reopeningChance = 0.6;
@@ -289,7 +289,7 @@ class ADDON {
             };
         };
 
-        class ElasticBandage: fieldDressing {
+        class ElasticBandage: FieldDressing {
             class Abrasion {
                 effectiveness = 4;
                 reopeningChance = 0.6;
@@ -424,7 +424,7 @@ class ADDON {
             };
         };
 
-        class QuikClot: fieldDressing {
+        class QuikClot: FieldDressing {
             class Abrasion {
                 effectiveness = 2;
                 reopeningChance = 0.3;

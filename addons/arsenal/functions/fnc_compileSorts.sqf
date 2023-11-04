@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Brett Mayson
- * Create the internal stats arrays when needed for the first time
+ * Author: Brett Mayson, johnb43
+ * Create the internal sort arrays when needed for the first time.
  *
  * Arguments:
  * None
@@ -15,11 +15,19 @@
 if (!isNil QGVAR(sortListLeftPanel)) exitWith {};
 
 private _fnc_addToTabs = {
-    params ["_tabsList", "_tabsToAddTo", "_sideString"];
+    params ["_tabsList", "_tabsToAddTo", "_tabSide"];
+
+    private _sort = [];
+
     {
-        private _arrayToSave = +_finalArray;
-        _arrayToSave set [0, [_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString ""];
-        (_tabsList select _x) pushBack _arrayToSave;
+        // Copy title, statement and condition
+        _sort = +_finalArray;
+
+        // Make sort name
+        _sort set [0, [_class, _tabSide, [str _x, format ["0%1", _x]] select (_x < 10)] joinString ""];
+
+        // No duplicates are possible here
+        (_tabsList select _x) pushBack _sort;
     } forEach _tabsToAddTo;
 };
 
@@ -55,16 +63,17 @@ private _sortListRightPanel = [
     []  // Misc 7
 ];
 
-//------------------------- Config handling
-private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> QGVAR(sorts));
+private _class = "";
+private _displayName = "";
+private _statement = "";
+private _condition = "";
+private _finalArray = [];
 
 {
-    private _finalArray = [];
-
-    private _class = configName _x;
-    private _displayName = getText (_x >> "displayName");
-    private _statement = getText (_x >> "statement");
-    private _condition = getText (_x >> "condition");
+    _class = configName _x;
+    _displayName = getText (_x >> "displayName");
+    _statement = getText (_x >> "statement");
+    _condition = getText (_x >> "condition");
     (getArray (_x >> "tabs")) params ["_leftTabsList", "_rightTabsList"];
 
     if (_statement != "") then {
@@ -84,7 +93,7 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
     if (_rightTabsList isNotEqualTo []) then {
         [_sortListRightPanel, _rightTabsList, "R"] call _fnc_addToTabs;
     };
-} foreach _configEntries;
+} forEach ("(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> QGVAR(sorts)));
 
-missionNamespace setVariable [QGVAR(sortListLeftPanel), _sortListLeftPanel];
-missionNamespace setVariable [QGVAR(sortListRightPanel), _sortListRightPanel];
+GVAR(sortListLeftPanel) = _sortListLeftPanel;
+GVAR(sortListRightPanel) = _sortListRightPanel;

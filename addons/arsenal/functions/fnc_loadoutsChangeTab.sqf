@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -27,7 +27,6 @@ private _renameButtonCtrl = _display displayCtrl IDC_buttonRename;
 
 // Update UI visual elements
 if (GVAR(currentLoadoutsTab) != -1) then {
-
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLoadoutsTab) - 1);
     _previousCtrlBackground ctrlSetBackgroundColor [0, 0, 0, 0.8];
     _previousCtrlBackground ctrlCommit 0;
@@ -45,26 +44,36 @@ _control ctrlSetTextColor [0, 0, 0, 1];
 _control ctrlCommit 0;
 
 switch (ctrlIDC _control) do {
+    // Local loadouts
     case IDC_buttonMyLoadouts: {
-        _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabMyLoadoutsText));
+        _centerBoxTitleCtrl ctrlSetText LLSTRING(tabMyLoadoutsText);
 
-        if (is3den) then { _saveButtonCtrl ctrlSetTooltip format ["%1\n%2", localize LSTRING(buttonSaveTooltip), localize LSTRING(buttonSaveTooltip_shiftClick)]; };
+        if (call FUNC(canEditDefaultLoadout)) then {
+            _saveButtonCtrl ctrlSetTooltip format ["%1\n%2", LLSTRING(buttonSaveTooltip), LLSTRING(buttonSaveTooltip_shiftClick)];
+        };
+
         _saveButtonCtrl ctrlEnable true;
         _saveButtonCtrl ctrlCommit 0;
     };
-
+    // Default loadouts
     case IDC_buttonDefaultLoadouts: {
-        _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabDefaultLoadoutsText));
+        _centerBoxTitleCtrl ctrlSetText LLSTRING(tabDefaultLoadoutsText);
 
-        if (is3den) then { _saveButtonCtrl ctrlSetTooltip localize LSTRING(buttonSaveTooltip); };
-        _saveButtonCtrl ctrlEnable (is3DEN);
+        if (call FUNC(canEditDefaultLoadout)) then {
+            _saveButtonCtrl ctrlSetTooltip LLSTRING(buttonSaveTooltip);
+        };
+
+        _saveButtonCtrl ctrlEnable call FUNC(canEditDefaultLoadout);
         _saveButtonCtrl ctrlCommit 0;
     };
-
+    // Shared loadouts
     case IDC_buttonSharedLoadouts: {
-        _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabSharedLoadoutsText));
+        _centerBoxTitleCtrl ctrlSetText LLSTRING(tabSharedLoadoutsText);
 
-        if (is3den) then { _saveButtonCtrl ctrlSetTooltip localize LSTRING(buttonSaveTooltip); };
+        if (call FUNC(canEditDefaultLoadout)) then {
+            _saveButtonCtrl ctrlSetTooltip LLSTRING(buttonSaveTooltip);
+        };
+
         _saveButtonCtrl ctrlEnable false;
         _saveButtonCtrl ctrlCommit 0;
     };
@@ -73,8 +82,9 @@ switch (ctrlIDC _control) do {
 {
     _x ctrlEnable false;
     _x ctrlCommit 0;
-} foreach [_shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl, _renameButtonCtrl];
+} forEach [_shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl, _renameButtonCtrl];
 
+// Save new tab as current tab
 GVAR(currentLoadoutsTab) = ctrlIDC _control;
 
 [QGVAR(loadoutsTabChanged), [_display, _control]] call CBA_fnc_localEvent;

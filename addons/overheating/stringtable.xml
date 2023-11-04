@@ -51,11 +51,12 @@
             <English>Heating Coefficient</English>
             <Japanese>過熱係数</Japanese>
             <French>Coefficient de surchauffe</French>
-            <Russian>Коэффициент нагрева</Russian>
+            <Russian>Коэф. нагрева</Russian>
             <German>Erhitzungs-Koeffizient</German>
             <Polish>Współczynnik nagrzewania</Polish>
             <Chinesesimp>过热系数</Chinesesimp>
             <Korean>과열 계수</Korean>
+            <Spanish>Coeficiente de calentamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_heatCoef_description">
             <English>Coefficient for the amount of heat a weapon generates per shot.\nHigher value increases heat.</English>
@@ -66,6 +67,7 @@
             <Polish>Współczynnik wpływający na ilość ciepła generowanego przez broń przy każdym strzale.</Polish>
             <Chinesesimp>武器每次射击产生的热量系数。\n数值越高，热量越高。</Chinesesimp>
             <Korean>매 발사마다 만들어지는 열에 계수를 적용합니다.\n높은 계수는 더 많은 열을 발생시킵니다.</Korean>
+            <Spanish>Coeficiente para la cantidad de calor que genera un arma por disparo.\nValores más altos incrementan el calor</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_displayName">
             <English>Cooling Coefficient</English>
@@ -74,6 +76,9 @@
             <German>Abkühlungskoeffizienten</German>
             <Polish>Współczynnik chłodzenia</Polish>
             <Japanese>冷却係数</Japanese>
+            <Russian>Коэф. остывания</Russian>
+            <Spanish>Coeficiente de enfriado</Spanish>
+            <French>Coefficient de refroidissement</French>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
@@ -82,6 +87,9 @@
             <German>Koeffizient, der angibt, wie schnell eine Waffe abkühlt.\nEin höherer Wert erhöht die Abkühlgeschwindigkeit.</German>
             <Polish>Współczynnik szybkości chłodzenia broni.\nWiększa wartość zwiększa szybkość chłodzenia.</Polish>
             <Japanese>武器の冷却速度の係数。\n値を大きくすると冷却速度が速くなります。</Japanese>
+            <Russian>Коэффициент скорости остывания орудия.\nЧем больше значение, тем быстрее остывает.</Russian>
+            <Spanish>Coeficiente para cómo de rápido se enfría un arma.\nValores más altos incrementan la velocidad de enfriamiento.</Spanish>
+            <French>Coefficient de rapidité de refroidissement de l'arme.\nUne valeur élevée augmente la vitesse de refroidissement.</French>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
             <English>Suppressor Coefficient</English>
@@ -90,6 +98,9 @@
             <German>Schalldämpfer-Koeffizient</German>
             <Polish>Współczynnik tłumika</Polish>
             <Japanese>サプレッサー係数</Japanese>
+            <Russian>Коэф. глушителя</Russian>
+            <Spanish>Coeficiente del silenciador</Spanish>
+            <French>Coefficient de suppresion</French>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
@@ -98,6 +109,9 @@
             <German>Koeffizient, der angibt, wie viel zusätzliche Wärme durch das Anbringen eines Schalldämpfers hinzugefügt wird. Ein höherer Wert erhöht die Menge an Wärme, 0 bedeutet, dass keine zusätzliche Wärme durch den Schalldämpfer hinzukommt.</German>
             <Polish>Współczynnik określający, ile dodatkowego ciepła jest dodawane z założonego tłumika.\nWyższa wartość zwiększa ciepło, 0 oznacza brak dodatkowego ciepła z tłumika.</Polish>
             <Japanese>サプレッサーを取り付けることで追加される熱量の係数。\n値が大きいほど熱が増加し、0はサプレッサーからの追加の熱がないことを意味します。</Japanese>
+            <Russian>Коэффициент указывающий как много дополнительного тепла будет выделяться прикреплённым глушителем.\nБольшее значение увеличивает выделение тепла, 0 - отсутствие дополнительного тепла.</Russian>
+            <Spanish>Coeficiente para cuanto calor adicional es añadido por tener un silenciador montado.\nValores más altos incrementan el calor. 0 significa que el silenciador no añade calor adicional.</Spanish>
+            <French>Coefficient d'ajout de chaleur lorsqu'un suppresseur est installé.\nUne valeur élevée augmente la chaleur, 0 signifique qu'aucune chaleur ne sera ajouté par le suppresseur.</French>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>
@@ -139,7 +153,7 @@
             <Spanish>Efectos de partículas</Spanish>
             <French>Effets de particules </French>
             <Czech>Částicové efekty přehřívání</Czech>
-            <Portuguese>Efeito de parícula de superaquecimento</Portuguese>
+            <Portuguese>Efeito de partícula de superaquecimento</Portuguese>
             <Russian>Эффект частиц при перегреве</Russian>
             <Japanese>過熱の視覚効果</Japanese>
             <Korean>과열 입자 효과</Korean>
@@ -154,7 +168,7 @@
             <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
             <French>Affiche des effets de particules lorsqu'une arme surchauffe.</French>
-            <Portuguese>Mostra efeitos de párticula quando a arma superaquece</Portuguese>
+            <Portuguese>Mostra efeitos de partícula quando a arma superaquece</Portuguese>
             <Russian>Показывать эффект частиц, когда оружие перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
             <Japanese>武器を過熱すると視覚表現を表示します</Japanese>
@@ -202,7 +216,7 @@
             <Italian>Dispersione Surriscaldamento</Italian>
             <Spanish>Dispersión</Spanish>
             <French>Dispersion</French>
-            <Portuguese>Disperção de superaquecimento</Portuguese>
+            <Portuguese>Dispersão de superaquecimento</Portuguese>
             <Russian>Разброс при перегреве</Russian>
             <Czech>Důsledky přehřátí zbraně</Czech>
             <Japanese>過熱による精度の低下</Japanese>
@@ -231,11 +245,12 @@
             <English>Distance for Effects and Dispersion</English>
             <Japanese>エフェクトと分散用距離</Japanese>
             <French>Distance des effets et de la dispersion</French>
-            <Russian>Дистанция для Еффектов и Разброса</Russian>
+            <Russian>Дистанция для эффектов и разброса</Russian>
             <German>Abstand für Effekte und Dispersion</German>
             <Polish>Odległość efektów i rozproszenia</Polish>
             <Chinesesimp>效果和扩散距离</Chinesesimp>
             <Korean>효과와 분산 거리</Korean>
+            <Spanish>Distancia para Efectos y Dispersión</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
             <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
@@ -246,6 +261,7 @@
             <Polish>Określa odległość w metrach, do której widoczne są efekty cząsteczkowe i rozproszenie.</Polish>
             <Chinesesimp>距离玩家的距离（米），在这个距离内可以看到过热的粒子效应和扩散。</Chinesesimp>
             <Korean>미터 단위로, 과열 시 입자효과와 분산 정도가 플레이어로부터 얼마나 떨어진 곳까지 보여지는지를 결정합니다.</Korean>
+            <Spanish>La distancia, en metros, desde la cual los efectos de sobrecalentamiento de particulas y dispersión son visibles.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
             <English>Heat Increases Fire Rate</English>
@@ -256,6 +272,7 @@
             <Polish>Ciepło zwiększa szybkostrzelność</Polish>
             <Chinesesimp>过热增加射速</Chinesesimp>
             <Korean>과열 시 발사속도 증가</Korean>
+            <Spanish>Calentamiento incrementa la cadencia de tiro.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_description">
             <English>As weapons heat up, their rate of fire increases by up to 10%.</English>
@@ -266,6 +283,7 @@
             <Polish>Gdy broń się nagrzewa, jej szybkostrzelność może wzrosnąć nawet o 10%.</Polish>
             <Chinesesimp>随着武器的过热，其射速最多增加10%。</Chinesesimp>
             <Korean>과열될수록 발사속도가 최대 10%까지 올라갑니다.</Korean>
+            <Spanish>Según se calienta el arma, su cadencia de tiro aumenta hasta un 10%.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
             <English>Jam Chance Coefficient</English>
@@ -276,6 +294,7 @@
             <Polish>Szansa na zacięcie</Polish>
             <Chinesesimp>卡弹概率系数</Chinesesimp>
             <Korean>기능고장 확률 계수</Korean>
+            <Spanish>Coeficiente de posibilidad de encasquillamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
             <English>Coefficient for the chance that a weapon will jam from overheating.\nHigher value make jams more likely.\nSet to 0 to disable jamming.</English>
@@ -286,6 +305,7 @@
             <Polish>Współczynnik zmieniający szansę na zacięcie się broni z powodu przegrzania.\nIm wyższa wartość, tym większe ryzyko zacięcia się broni.\nUstaw na 0, aby wyłączyć zacinanie się broni.</Polish>
             <Chinesesimp>武器因过热而卡弹的概率系数。\n数值越高，卡住的可能性越大。\n设置为0以禁用卡弹。</Chinesesimp>
             <Korean>과열로 인해 얼마나 고장나는지에 대한 계수를 정합니다.\n높을 수록 더 고장이 잘납니다.\n0으로 설정하면 고장이 일어나지 않습니다.</Korean>
+            <Spanish>Coeficiente de posibilidad de que un arma se encasquille debido al sobrecalentamiento.\nValores más altos hacen más posible que se encasquille.\n Establecer a 0 para deshabilitar el encasquillamiento.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnReload_displayName">
             <English>Unjam Weapon on Reload</English>
@@ -323,11 +343,12 @@
             <English>Unjam on Barrel Swap</English>
             <Japanese>銃身交換で弾詰まり解消</Japanese>
             <French>Désenrayer l'arme au changement de canon</French>
-            <Russian>Замена ствола устраняет заклинивание оружия.</Russian>
+            <Russian>Замена ствола устраняет клин оружия</Russian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
             <Chinesesimp>更换枪管清除卡弹</Chinesesimp>
             <Korean>총열 교환 시 기능고장 해결</Korean>
             <German>Ladehemmung beim Wechseln des Laufes beheben.</German>
+            <Spanish>Desencasquillar con el cambio de cañón</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
             <English>Controls whether swapping barrels clears a weapon jam.</English>
@@ -338,6 +359,7 @@
             <Polish>Określa, czy wymiana lufy usuwa zacięcie się broni.</Polish>
             <Chinesesimp>通过更换枪管，以便清除卡弹。</Chinesesimp>
             <Korean>총열을 교체하면서 기능고장을 해결합니다.</Korean>
+            <Spanish>Controla si cambiar el cañón del arma la desencasquilla.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of Unjam Failing</English>
@@ -375,21 +397,23 @@
             <English>Overheating Cookoff Coefficient</English>
             <Japanese>過熱誘爆係数</Japanese>
             <French>Coefficient de l'auto-inflammation</French>
-            <Russian>Коеффициент возгорания при перегреве</Russian>
+            <Russian>Коэф. возгорания при перегреве</Russian>
             <German>Selbstzündungskoeffizient bei Überhitzung</German>
             <Polish>Współczynnik samozapłonu</Polish>
             <Chinesesimp>过热诱发系数</Chinesesimp>
             <Korean>과열 쿡오프 계수</Korean>
+            <Spanish>Coeficiente para detonación inducida por calor debido a sobrecalentamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_description">
             <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
             <Japanese>過熱によって誘爆が起きる確立係数を設定します。\n高い値では誘爆までに必要な過熱量が増加し、0 で誘爆が無効化されます。</Japanese>
             <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment dans la chambre de l'arme.\nPlus la valeur est élevée, plus l'arme doit être chaude pour que les munitions s'auto-inflamment.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
-            <Russian>Коеффициент нагрева, при котором возникает возгорание.</Russian>
+            <Russian>Коэффициент нагрева, при котором возникает возгорание.</Russian>
             <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
             <Polish>Współczynnik modyfikujący ilość ciepła wymaganego do samozapłonu amunicji w komorze broni.\nIm wyższa wartość, tym gorętsza musi być broń, aby amunicja uległa samozapłonowi\nUstaw 0, aby wyłączyć samozapłon.</Polish>
             <Chinesesimp>发生热诱发的过热系数。\n数值越高，热诱发所需要的过热值越高。\n设置为0禁用热诱发。</Chinesesimp>
             <Korean>쿡오프가 되기 위해 얼마나 과열되는가를 결정합니다. \n높을 수록 쿡오프 되기위해 더 뜨거운 열을 필요로 합니다.\n 0으로 설정하면 쿡오프 현상이 없어집니다.</Korean>
+            <Spanish>Coeficiente para el calor requerido para que suceda la detonación inducida por calor.\nValores más altos requieren más calor para que se produzca.\nEstablecer a 0 para deshabilitar la detonación inducida por calor.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -416,7 +440,7 @@
             <French>Utilisé pour changer de canon.</French>
             <Russian>Используется для смены ствола.</Russian>
             <Hungarian>Használd a cső kicseréléséhez.</Hungarian>
-            <Portuguese>Use para trocar o cano/estriamento.</Portuguese>
+            <Portuguese>Use para trocar o cano.</Portuguese>
             <Italian>Usata per cambiare la canna.</Italian>
             <Japanese>予身の交換に使用します。</Japanese>
             <Korean>총열을 바꿀 때 사용합니다.</Korean>
@@ -448,6 +472,7 @@
             <Polish>Samozapłon amunicji!</Polish>
             <Chinesesimp>武器发生热诱发！</Chinesesimp>
             <Korean>쿡오프가 일어납니다!</Korean>
+            <Spanish>Arma disparada por sobrecalentamiento!</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToEject">
             <English>Failure to eject.</English>
@@ -458,6 +483,7 @@
             <Polish>Nie udało się wyrzucić łuski.</Polish>
             <Chinesesimp>抛壳失败。</Chinesesimp>
             <Korean>탄피가 약실에 낌.</Korean>
+            <Spanish>Fallo en la expulsión.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToExtract">
             <English>Failure to extract.</English>
@@ -468,6 +494,7 @@
             <Polish>Nie udało się wyjąć łuski.</Polish>
             <Chinesesimp>抽壳失败。</Chinesesimp>
             <Korean>탄피가 배출되지 않음.</Korean>
+            <Spanish>Fallo en la extracción.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFeed">
             <English>Failure to feed.</English>
@@ -478,6 +505,7 @@
             <Polish>Nie udało się załadować naboju.</Polish>
             <Chinesesimp>供弹失败。</Chinesesimp>
             <Korean>탄이 장전 중 걸림.</Korean>
+            <Spanish>Fallo en la alimentación.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFire">
             <English>Failure to fire.</English>
@@ -488,6 +516,7 @@
             <Polish>Nie udało się strzelić.</Polish>
             <Chinesesimp>未能开火。</Chinesesimp>
             <Korean>발사가 되지 않음.</Korean>
+            <Spanish>Fallo al disparar.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_UnjamWeapon">
             <English>Clear jam</English>
@@ -671,6 +700,7 @@
             <Polish>Schłódź broń za pomocą...</Polish>
             <Chinesesimp>冷却武器...</Chinesesimp>
             <Korean>무기 온도 낮추기</Korean>
+            <Spanish>Enfriar arma con...</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolingWeaponWithItem">
             <English>Cooling %1 with %2.</English>
@@ -681,6 +711,7 @@
             <Polish>Chłodzenie %1 za pomocą %2.</Polish>
             <Chinesesimp>冷却 %1 至 %2。</Chinesesimp>
             <Korean>%1을 %2로 식히는 중.</Korean>
+            <Spanish>Enfriando %1 con %2.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponWithWaterSource">
             <English>Cool weapon in water source.</English>
@@ -691,6 +722,7 @@
             <Polish>Schłódź broń wodą.</Polish>
             <Chinesesimp>用水源冷却武器。</Chinesesimp>
             <Korean>물로 무기 식히기</Korean>
+            <Spanish>Enfriar arma con agua.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolingWeaponWithWaterSource">
             <English>Cooling weapon in water source.</English>
@@ -701,6 +733,7 @@
             <Polish>Chłodzenie broni wodą.</Polish>
             <Chinesesimp>在水源中冷却武器。</Chinesesimp>
             <Korean>물로 무기 식히는 중.</Korean>
+            <Spanish>Enfriando arma con agua...</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponNotEnoughWater">
             <English>Container doesn't have enough water.</English>
@@ -711,6 +744,7 @@
             <Polish>Zbiornik nie ma wystarczającej ilości wody</Polish>
             <Chinesesimp>容器里的水不够。</Chinesesimp>
             <Korean>물이 충분치 않습니다.</Korean>
+            <Spanish>El contenedor no tiene suficiente agua.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponIsCool">
             <English>Weapon is cool enough the water has stopped boiling.</English>
@@ -721,6 +755,7 @@
             <Polish>Broń jest wystarczająco schłodzona. Woda przestała się gotować.</Polish>
             <Chinesesimp>武器已经冷却，水已经停止沸腾了。</Chinesesimp>
             <Korean>물이 끓지 않는 걸 보아 무기가 식은듯 하다.</Korean>
+            <Spanish>El arma está lo suficientemente fría para no hacer hervir el agua.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>

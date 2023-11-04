@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Walthzer
  * Sets if a dynamic defuse action is allowed to be added to a mine.

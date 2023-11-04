@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: PabstMirror &Dani (TCVM)
+ * Author: PabstMirror &tcvm
  * Tests if unit can load a magazine into a static weapon.
  *
  * Arguments:
@@ -38,6 +38,7 @@ if (
 // solve config lookups
 private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgMagazinesCarryMag = _cfgMagazines >> _carryMag;
+private _cfgGroupsCarryMag = configFile >> QGVAR(groups) >> _carryMag;
 
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
@@ -53,7 +54,7 @@ scopeName "main";
         _loadedMag = _xMag;
         if (_xAmmo > 0) then {
             // There is a magazine with ammo loaded in the turret (are there any multi-muzzle static weapons??), see if we can add to this mag
-            if (getNumber (_cfgMagazinesCarryMag >> _xMag) != 1) exitWith {
+            if (getNumber (_cfgGroupsCarryMag >> _xMag) != 1) exitWith {
                 [false, _loadedMag, -4, false] breakOut "main"; // Carry mag cannot be added to existing vehicle mag (e.g. red to green tracers)
             };
             if (getNumber (_cfgMagazinesCarryMag >> "ACE_isBelt") == 0) exitWith {

@@ -1,12 +1,12 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Handles selection changes on the right panel (listnbox).
  *
  * Arguments:
  * 0: Right panel control <CONTROL>
- * 1: Right panel selection <SCALAR>
+ * 1: Right panel selection <NUMBER>
  *
  * Return Value:
  * None
@@ -16,36 +16,41 @@
 
 params ["_control", "_curSel"];
 
-if (_curSel < 0) exitwith {};
+if (_curSel < 0 || {!(GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack])}) exitWith {};
 
-private _ctrlIDC = ctrlIDC _control;
-private _display = ctrlParent _control;
-private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
+private _hasItems = false;
 
-private _fnc_selectRight = {
-    params ["_item", "_cfgEntry"];
+// Get relevant container
+private _container = switch (GVAR(currentLeftPanel)) do {
+    case IDC_buttonUniform: {
+        _hasItems = (GVAR(currentItems) select IDX_CURR_UNIFORM_ITEMS) isNotEqualTo [];
 
-    // Load remaining
-    private _maxLoad = switch (GVAR(currentLeftPanel)) do {
-        case IDC_buttonUniform: {
-            gettext (configfile >> "CfgWeapons" >> uniform GVAR(center) >> "ItemInfo" >> "containerClass")
-        };
-        case IDC_buttonVest: {
-            gettext (configfile >> "CfgWeapons" >> vest GVAR(center) >> "ItemInfo" >> "containerClass")
-        };
-        case IDC_buttonBackpack: {
-            backpack GVAR(center)
-        };
+        uniformContainer GVAR(center)
     };
+    case IDC_buttonVest: {
+        _hasItems = (GVAR(currentItems) select IDX_CURR_VEST_ITEMS) isNotEqualTo [];
 
-    [_control, _maxLoad] call FUNC(updateRightPanel);
-    [_display, _control, _curSel, (configFile >> _cfgEntry >> _item)] call FUNC(itemInfo);
+        vestContainer GVAR(center)
+    };
+    case IDC_buttonBackpack: {
+        _hasItems = (GVAR(currentItems) select IDX_CURR_BACKPACK_ITEMS) isNotEqualTo [];
+
+        backpackContainer GVAR(center)
+    };
 };
 
-if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
+// Refresh availibility of items based on space remaining in container
+[_control, _container, _hasItems] call FUNC(updateRightPanel);
 
-    [
-        _item,
-        ["CfgWeapons", "CfgMagazines"] select (GVAR(currentRightPanel) in [IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut])
-    ] call _fnc_selectRight;
+private _item = _control lnbData [_curSel, 0];
+private _cfgEntry = ["CfgWeapons", "CfgMagazines"] select (GVAR(currentRightPanel) in [IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut] || {_item in (uiNamespace getVariable [QGVAR(magazineMiscItems), []])});
+
+_cfgEntry = configFile >> _cfgEntry >> _item;
+
+// If e.g. in misc. items, item could be e.g. a backpack
+if (isNull _cfgEntry) then {
+    _cfgEntry = _item call CBA_fnc_getItemConfig;
 };
+
+// Display item info on the bottom right
+[ctrlParent _control, _control, _curSel, _cfgEntry] call FUNC(itemInfo);

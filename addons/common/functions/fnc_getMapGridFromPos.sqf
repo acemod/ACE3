@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: VKing, PabstMirror
  * Gets a 10-digit map grid for the given world position

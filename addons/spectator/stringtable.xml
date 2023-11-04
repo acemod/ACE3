@@ -25,7 +25,7 @@
             <French>ACE Spectateur</French>
             <Chinesesimp>ACE 旁观者</Chinesesimp>
             <Chinese>ACE 旁觀者</Chinese>
-            <Polish>Obserwator ACE</Polish>
+            <Polish>ACE Obserwator</Polish>
             <Korean>ACE 관전자</Korean>
             <Russian>ACE Зритель</Russian>
             <Portuguese>ACE Espectador</Portuguese>
@@ -38,7 +38,7 @@
             <German>Konfiguriert den Zuschauermodus</German>
             <Polish>Skonfiguruj domyślne ustawienia obserwatora.</Polish>
             <Portuguese>Configura como o sistema de espectador operará por padrão.</Portuguese>
-            <Russian>Определяют, как система спектатора будет функционировать по-умолчанию.</Russian>
+            <Russian>Определяют, как система спектатора будет функционировать по умолчанию.</Russian>
             <Spanish>Configurar cómo el sistema de espectador funcionará por defecto.</Spanish>
             <Czech>Konfigurovat výchozí nastavení pozorovatele</Czech>
             <Italian>Configura come il sistema spettatore si comporterà di default.</Italian>
@@ -51,7 +51,7 @@
         <Key ID="STR_ACE_Spectator_ai_DisplayName">
             <English>AI Enabled</English>
             <German>KI Sichtbarkeit</German>
-            <Japanese>AI にも有効化</Japanese>
+            <Japanese>AIにも有効化</Japanese>
             <Italian>AI Abilitate</Italian>
             <Chinese>可觀察AI</Chinese>
             <Chinesesimp>可观察 AI</Chinesesimp>
@@ -67,7 +67,7 @@
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
             <German>Macht KI-Einheiten den Zuschauern sichtbar</German>
-            <Japanese>スペクテイターで AI 視点を可能に</Japanese>
+            <Japanese>スペクテイターでAI視点を可能に</Japanese>
             <Italian>Permette la visibilità delle AI in spettatore</Italian>
             <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
             <Chinesesimp>开启此功能后可在观察者模式下观察 AI 单位。</Chinesesimp>
@@ -75,7 +75,7 @@
             <French>Rend les unités IA visibles en spectateur.</French>
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
             <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
-            <Portuguese>Permite que IA seja visivel no espectador</Portuguese>
+            <Portuguese>Permite que IA seja visível no espectador</Portuguese>
             <Czech>Umožňuje sledovat AI v módu diváka</Czech>
             <Spanish>Permitir ver a la IA en espectador</Spanish>
         </Key>
@@ -83,7 +83,7 @@
             <English>Camera modes</English>
             <German>Kameramodus</German>
             <Polish>Tryby kamery</Polish>
-            <Portuguese>Modos de camera</Portuguese>
+            <Portuguese>Modos de câmera</Portuguese>
             <Russian>Режимы камеры</Russian>
             <Czech>Módy kamery</Czech>
             <Spanish>Modos de cámara</Spanish>
@@ -99,14 +99,14 @@
             <English>Camera modes that can be used</English>
             <German>Verwendbare Kameramodi</German>
             <Polish>Tryby kamery, jakie mogą być używane.</Polish>
-            <Portuguese>Modos de camera que podem ser utilizados</Portuguese>
+            <Portuguese>Modos de câmera que podem ser utilizados</Portuguese>
             <Russian>Режимы камеры, которые могут быть использованы</Russian>
             <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
             <Czech>Módy kamery které mohou být použity.</Czech>
             <Italian>Modalità che la camera può utilizzare.</Italian>
             <French>Modes de caméra pouvant être utilisés.</French>
             <Japanese>カメラ モードを設定できます。</Japanese>
-            <Korean>사용할 수 있는 카메라 모드들 입니다</Korean>
+            <Korean>사용할 수 있는 카메라 모드들입니다</Korean>
             <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
             <Chinese>設定可使用的攝影機模式</Chinese>
         </Key>
@@ -169,7 +169,7 @@
             <Italian>Modalità visuali che possono essere usate.</Italian>
             <French>Modes de visualisation pouvant être utilisés.</French>
             <Japanese>ビジョン モードを設定できます。</Japanese>
-            <Korean>사용할 수 있는 시야 모드들 입니다</Korean>
+            <Korean>사용할 수 있는 시야 모드들입니다</Korean>
             <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
             <Chinese>設定可使用的視覺模式</Chinese>
         </Key>
@@ -288,7 +288,7 @@
             <English>Night</English>
             <German>Nacht</German>
             <Polish>Noc</Polish>
-            <Portuguese>Visão Norturna</Portuguese>
+            <Portuguese>Visão Noturna</Portuguese>
             <Russian>Ночное</Russian>
             <Czech>Noční</Czech>
             <Spanish>Nocturna</Spanish>

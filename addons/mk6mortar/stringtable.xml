@@ -174,7 +174,7 @@
             <Spanish>Habilitar brujula del Mk6</Spanish>
             <German>Erlaube Mk6-Kompass</German>
             <Czech>Mk6 - Povolit kompas</Czech>
-            <Portuguese>Permitir bússula do Mk6</Portuguese>
+            <Portuguese>Permitir bússola do Mk6</Portuguese>
             <French>Activer la boussole du Mk6</French>
             <Hungarian>Mk6 iránytű engedélyezése</Hungarian>
             <Russian>Разрешить компас Mk6</Russian>
@@ -191,7 +191,7 @@
             <Spanish>Muestra la brujula digital en el Mk6</Spanish>
             <German>Zeige Mk6-Digitaler-Kompass</German>
             <Czech>Mk6 - Zobrazit digitální kompas</Czech>
-            <Portuguese>Mostra a bússula digital do Mk6</Portuguese>
+            <Portuguese>Mostra a bússola digital do Mk6</Portuguese>
             <French>Affiche la boussole numérique du Mk6.</French>
             <Hungarian>Az Mk6 digitális iránytű megjelenítése</Hungarian>
             <Russian>Показывает цифровой компас Mk6</Russian>
@@ -225,7 +225,7 @@
             <French>Utiliser la gestion des munitions</French>
             <Italian>Utilizza la gestione delle munizioni</Italian>
             <Portuguese>Usar manejo de munição</Portuguese>
-            <Russian>Использовать манипуляции с боеприпасами</Russian>
+            <Russian>Манипуляции с боеприпасами</Russian>
             <Japanese>弾薬の取り扱い</Japanese>
             <Korean>탄약 관리 활성화</Korean>
             <Chinesesimp>使用手动弹药装卸</Chinesesimp>
@@ -240,8 +240,8 @@
             <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement. N'affecte pas les mortiers IA.</French>
             <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
-            <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжащим. Не влияет на артиллерию ИИ.</Russian>
-            <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI 迫撃砲へ影響を与えません。</Japanese>
+            <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжающим. Не влияет на артиллерию ИИ.</Russian>
+            <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI迫撃砲へ影響を与えません。</Japanese>
             <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
             <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由 AI 射击的迫击炮</Chinesesimp>
             <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填。此功能並不影響由AI射擊的迫擊砲</Chinese>

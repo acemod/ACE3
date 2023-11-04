@@ -18,7 +18,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_LoadoutsFor">
             <English>Loadouts for %1</English>
-            <Japanese>%1の兵装</Japanese>
+            <Japanese>%1 の兵装</Japanese>
             <Italian>Armamenti per %1</Italian>
             <Chinese>%1用的武裝配置</Chinese>
             <Chinesesimp>%1用的武器配置</Chinesesimp>
@@ -37,7 +37,7 @@
             <Italian>Configura Piloni</Italian>
             <Chinese>定義派龍架</Chinese>
             <Chinesesimp>设定导弹挂架</Chinesesimp>
-            <Korean>파일런 설정</Korean>
+            <Korean>무장창 설정</Korean>
             <German>Konfiguriere Außenlaststationen</German>
             <French>Configurer les pylônes</French>
             <Polish>Konfiguruj Pylony</Polish>
@@ -52,10 +52,10 @@
             <Italian>ACE Piloni</Italian>
             <Chinese>ACE 派龍架</Chinese>
             <Chinesesimp>ACE 导弹挂架</Chinesesimp>
-            <Korean>ACE 파일런</Korean>
+            <Korean>ACE 무장창</Korean>
             <German>ACE Außenlaststationen</German>
             <French>ACE Pylônes</French>
-            <Polish>Pylony ACE</Polish>
+            <Polish>ACE Pylony</Polish>
             <Russian>ACE Пилоны</Russian>
             <Portuguese>ACE Pylons</Portuguese>
             <Czech>ACE Pylony</Czech>
@@ -83,7 +83,7 @@
             <Italian>I piloni di colore rosso devono essere riarmati manualmente.</Italian>
             <Chinese>以紅色標記出的派龍架必須以手動方式進行彈藥整補</Chinese>
             <Chinesesimp>以红色标记出的导弹挂架必须以手动方式进行弹药整补。</Chinesesimp>
-            <Korean>붉은색의 파일런은 수동으로 재무장해야 합니다.</Korean>
+            <Korean>붉은색의 무장창은 수동으로 재무장해야 합니다.</Korean>
             <German>Außenlaststationen, die rot markiert sind, müssen manuell aufmunitioniert werden.</German>
             <French>Les pylônes colorés en rouge devront être réarmés manuellement.</French>
             <Polish>Pylony, które są w kolorze czerwonym muszą być manualnie dozbrojone.</Polish>
@@ -94,7 +94,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>
-            <Japanese>%1はすでにこの機体へ設定されています!</Japanese>
+            <Japanese>%1 はすでにこの機体へ設定されています!</Japanese>
             <Italian>% sta già configurando questo aereo!</Italian>
             <Chinese>%1已經正在定義此飛機的武裝配置!</Chinese>
             <Chinesesimp>%1已经正在定义此飞机的武器配置！</Chinesesimp>
@@ -109,7 +109,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_ReplacingPylon">
             <English>Replacing pylon %1 out of %2...</English>
-            <Japanese>パイロン%1を作業し残り%2・・・</Japanese>
+            <Japanese>%2 中 %1 のパイロンを交換しています・・・</Japanese>
             <Italian>Sostituendo pilone %1 al posto di %2...</Italian>
             <Chinese>共有%2個派龍架，正在整補%1號派龍架中...</Chinese>
             <Chinesesimp>共有%2个发射架，正在整装%1号挂架...</Chinesesimp>
@@ -124,11 +124,11 @@
         </Key>
         <Key ID="STR_ACE_Pylons_Stopped">
             <English>Stopped at pylon %1!</English>
-            <Japanese>パイロン%1で停止しました!</Japanese>
+            <Japanese>パイロン %1 で中断しました!</Japanese>
             <Italian>Fermato al pilone %1!</Italian>
             <Chinese>已停止在%1號派龍架!</Chinese>
             <Chinesesimp>已在整装%1号挂架时停止！</Chinesesimp>
-            <Korean>%1 파일런이 멈춤</Korean>
+            <Korean>%1 무장창이 멈춤</Korean>
             <German>Gestoppt bei Außenlaststation %1</German>
             <French>Arrêté au pylône %1 !</French>
             <Polish>Zatrzymano na pylonie %1!</Polish>
@@ -165,7 +165,7 @@
             <Portuguese>Ativar Menu de Pylon para Zeus</Portuguese>
             <Czech>Povolit menu s pylony pro Zeuse</Czech>
             <Spanish>Habilitar menú de pilones para Zeus</Spanish>
-            <Korean>제우스 파일런 메뉴 활성화</Korean>
+            <Korean>제우스 무장창 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
             <English>Enables use of the zeus module.</English>
@@ -180,7 +180,7 @@
             <Portuguese>Permite usar o módulo de Zeus</Portuguese>
             <Czech>Povoluje použití daného Zeus modulu.</Czech>
             <Spanish>Habilita el uso del módulo de Zeus.</Spanish>
-            <Korean>제우스 파일런 메뉴를 사용할 수 있게 합니다.</Korean>
+            <Korean>제우스 무장창 메뉴를 사용할 수 있게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
             <English>Enable Pylons Menu from Ammo Trucks</English>
@@ -195,7 +195,7 @@
             <Portuguese>Ativar Menu de Pylons de Caminhões de Munição</Portuguese>
             <Czech>Povolit menu s pylony z muničních náklaďáků.</Czech>
             <Spanish>Habilitar menú de pilones desde camiones de munición</Spanish>
-            <Korean>탄약 차량 파일런 메뉴 활성화</Korean>
+            <Korean>탄약 차량 무장창 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
             <English>Enables use of pylons menu from ammo trucks.</English>
@@ -210,7 +210,7 @@
             <Portuguese>Permite abrir o menu de pylons através de veículos de munição.</Portuguese>
             <Czech>Povoluje použití menu na nastavení pylonů z náklaďáků s municí.</Czech>
             <Spanish>Habilita el uso del menú de pilones desde camiones de munición.</Spanish>
-            <Korean>탄약 차량에서 파일런 메뉴를 불러올 수 있게 합니다.</Korean>
+            <Korean>탄약 차량에서 무장창 메뉴를 불러올 수 있게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
             <English>This aircraft doesn't have pylons</English>
@@ -225,7 +225,7 @@
             <Portuguese>Essa aeronave não possui pylons</Portuguese>
             <Czech>Toto letadlo nemá pylony</Czech>
             <Spanish>Esta aeronave no tiene pilones</Spanish>
-            <Korean>이 비행기는 파일런이 없습니다.</Korean>
+            <Korean>이 비행기는 무장창이 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
             <English>Configure pylons module is disabled for zeus</English>
@@ -240,7 +240,7 @@
             <Portuguese>O Módulo de configurar pylons está desativado para o Zeus</Portuguese>
             <Czech>Nastavení pylonů je vypnuto pro Zeuse</Czech>
             <Spanish>La configuración del módulo de pilones está deshabilitada para Zeus</Spanish>
-            <Korean>제우스 파일런 모듈 설정이 비활성화 되어있습니다.</Korean>
+            <Korean>제우스 무장창 모듈 설정이 비활성화 되어있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
@@ -248,7 +248,7 @@
             <Italian>Riarma Nuovi Piloni</Italian>
             <Chinese>重新整装新的导弹挂架</Chinese>
             <Chinesesimp>重新武装新的派龙架</Chinesesimp>
-            <Korean>새 파일런 재무장</Korean>
+            <Korean>새 무장창 재무장</Korean>
             <German>Neue Außenlaststationen. aufmunitionieren</German>
             <French>Réarmer les nouveaux pylônes</French>
             <Polish>Dozbrój Nowe Pylony</Polish>
@@ -263,7 +263,7 @@
             <Italian>Riarma automaticamente i nuovi piloni dal veicoli di riarmo più vicino.</Italian>
             <Chinese>自動從附近的整補載具中為派龍架進行彈藥整補</Chinese>
             <Chinesesimp>自动从附近的整装载具中为导弹挂架进行弹药整装。</Chinesesimp>
-            <Korean>근처의 재무장 차량에서 빈 파일런을 자동으로 재무장 합니다.</Korean>
+            <Korean>근처의 재무장 차량에서 빈 무장창을 자동으로 재무장 합니다.</Korean>
             <German>Neue Außenlaststationen. automatisch vom nächsten Munitionsfahrzeug aufmunitionieren</German>
             <French>Réarme automatiquement les nouveaux pylônes à partir du véhicule de ravitaillement le plus proche.</French>
             <Polish>Automatycznie dozbrajaj nowe pylony z najbliższego pojazdu dozbrajania.</Polish>
@@ -278,7 +278,7 @@
             <Italian>Tempo Per Pilone</Italian>
             <Chinese>派龍架整補所需時間(個別)</Chinese>
             <Chinesesimp>导弹挂架整装所需时间（个别）</Chinesesimp>
-            <Korean>파일런 당 시간</Korean>
+            <Korean>무장창 당 시간</Korean>
             <German>Zeit pro Außenlaststation</German>
             <French>Durée par pylône</French>
             <Polish>Czas na Pylon</Polish>
@@ -293,7 +293,7 @@
             <Italian>Il tempo che impiega ogni pilone ad essere sostituito (in secondi).</Italian>
             <Chinese>每個派龍架需花多久時間進行整補(單位為秒)</Chinese>
             <Chinesesimp>每个挂架需花多久时间进行整装（单位为秒）。</Chinesesimp>
-            <Korean>파일런을 재설정 하는데 걸리는 시간 (초)</Korean>
+            <Korean>무장창을 재설정 하는데 걸리는 시간 (초)</Korean>
             <German>Die benötigte Zeit, um einzelne Außenlaststationen zu ersetzen (in Sekunden).</German>
             <French>Le temps nécessaire pour remplacer chaque pylône (en secondes).</French>
             <Polish>Czas, jaki trwa wymiana każdego z pylonów (w sekundach).</Polish>

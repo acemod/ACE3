@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Glowbal, GhostIsSpooky
+ * Author: Glowbal, Grim
  * Check in CfgPatches if modification is loaded
  *
  * Arguments:

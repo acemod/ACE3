@@ -38,6 +38,7 @@
             <German>Rechte Maustaste zum Zurücksetzen</German>
             <Chinesesimp>点击鼠标右键重置</Chinesesimp>
             <Korean>오른쪽 클릭으로 재설정</Korean>
+            <Spanish>Click botón derecho para restaurar</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
@@ -128,7 +129,7 @@
             <Korean>관리자</Korean>
             <Polish>Administratorzy</Polish>
             <Russian>Админов</Russian>
-            <Portuguese>Admins</Portuguese>
+            <Portuguese>Administradores</Portuguese>
             <French>Admins</French>
             <Czech>Administrátoři</Czech>
             <Turkish>Adminler</Turkish>
@@ -160,7 +161,7 @@
             <Korean>분대장과 관리자</Korean>
             <Polish>Przywódcy grup i Administratorzy</Polish>
             <Russian>Лидеров групп и Админов</Russian>
-            <Portuguese>Líderes de grupo e Admins</Portuguese>
+            <Portuguese>Líderes de grupo e Administradores</Portuguese>
             <French>Chefs de groupe et Admins</French>
             <Czech>Velitelé jednotek a Administrátoři</Czech>
             <Turkish>Grup Liderleri Ve Adminler</Turkish>
@@ -184,7 +185,7 @@
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabled">
             <English>Allow Timestamps</English>
-            <Russian>Включить отображение времени на метках</Russian>
+            <Russian>Вкл. отображение времени на метках</Russian>
             <French>Permettre l'horodatage</French>
             <Japanese>タイムスタンプ許可</Japanese>
             <Spanish>Permitir marcas de tiempo</Spanish>

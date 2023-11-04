@@ -1,5 +1,5 @@
 //pragma SKIP_COMPILE
-// #include "\z\ace\addons\artillerytables\script_component.hpp"
+// #include "..\script_component.hpp"
 
 INFO("showing shot info");
 

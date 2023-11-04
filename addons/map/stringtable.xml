@@ -234,7 +234,7 @@
             <Spanish>Activar Blue Force Tracking. Por defecto: No</Spanish>
             <French>Active le SFA. Valeur par défaut : désactivé.</French>
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
-            <Russian>Включает систему служения BFT. По-умолчанию: Нет</Russian>
+            <Russian>Включает систему служения BFT. По умолчанию: Нет</Russian>
             <Italian>Abilita Blue Force Tracking. Default: No</Italian>
             <Japanese>ブルー フォース トラッキングを有効化します。標準: 無効</Japanese>
             <Korean>GPS 피아식별기 켭니다. 기본설정: 아니요</Korean>
@@ -284,7 +284,7 @@
             <Hungarian>AI csoportok elrejtése</Hungarian>
             <Russian>Скрыть группы ботов</Russian>
             <Italian>Nascondere gruppi IA</Italian>
-            <Japanese>AI グループを非表示</Japanese>
+            <Japanese>AIグループを非表示</Japanese>
             <Korean>인공지능 그룹 숨기기</Korean>
             <Chinesesimp>隐藏 AI 小队</Chinesesimp>
             <Chinese>隱藏AI小隊</Chinese>
@@ -300,7 +300,7 @@
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
             <Italian>Nascondi markers per gruppi di sole IA?</Italian>
-            <Japanese>'AI のみ'グループのマーカー表示有無を設定できます。</Japanese>
+            <Japanese>'AIのみ'グループのマーカー表示有無を設定できます。</Japanese>
             <Korean>인공지능만 있는 그룹의 마커를 숨깁니까?</Korean>
             <Chinesesimp>隐藏'AI 小队'的追踪？</Chinesesimp>
             <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>

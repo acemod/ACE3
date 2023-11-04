@@ -11,7 +11,7 @@ class EGVAR(arsenal,stats) {
     };
     class ACE_volumeMuffling: statBase {
         scope = 2;
-        priority = 1;
+        priority = 1.75;
         stats[] = {QGVAR(lowerVolume)};
         displayName= CSTRING(statHearingLowerVolume);
         showBar = 1;

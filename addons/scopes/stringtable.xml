@@ -27,7 +27,7 @@
             <Italian>Abilita Regolazione mirino ACE</Italian>
             <Chinesesimp>开启 ACE 瞄准镜归零调节</Chinesesimp>
             <Chinese>開啟ACE瞄準鏡歸零調節</Chinese>
-            <Russian>Включить настройку прицелов ACE</Russian>
+            <Russian>Вкл. настройку прицелов ACE</Russian>
             <Portuguese>Permitir ajustes de Mira do ACE</Portuguese>
             <Czech>Povolit ACE náměr puškohledů</Czech>
             <Spanish>Activar ACE Ajuste de visores</Spanish>
@@ -57,7 +57,7 @@
             <Italian>Forza la regolazione delle torrette</Italian>
             <Chinesesimp>强制使用归零调节</Chinesesimp>
             <Chinese>強制使用歸零調節</Chinese>
-            <Russian>Включить регулировку ненастроенных прицелов</Russian>
+            <Russian>Регулировка ненастроенных прицелов</Russian>
             <Portuguese>Força ajustes ACE para Miras</Portuguese>
             <Czech>Vynutit použití komínků</Czech>
             <Spanish>Forzar torretas de ajuste</Spanish>
@@ -238,7 +238,7 @@
             <Chinesesimp>参考湿度</Chinesesimp>
             <Chinese>參考濕度</Chinese>
             <Russian>Референсная влажность</Russian>
-            <Portuguese>Humidade de Referência</Portuguese>
+            <Portuguese>Umidade de Referência</Portuguese>
             <Czech>Referenční vlhkost vzduchu</Czech>
             <Spanish>Humedad de referencia</Spanish>
         </Key>
@@ -253,7 +253,7 @@
             <Chinesesimp>武器参考多少湿度来进行归零。</Chinesesimp>
             <Chinese>武器參考多少濕度來進行歸零。</Chinese>
             <Russian>Влажность, при которой выполнена пристрелка прицела</Russian>
-            <Portuguese>Humidade na qual a mira foi zerada.</Portuguese>
+            <Portuguese>Umidade na qual a mira foi zerada.</Portuguese>
             <Czech>Vlhkost vzduchu za které byl puškohled naměřen</Czech>
             <Spanish>Humedad a la cual el visor ha sido homogeneizado</Spanish>
         </Key>
@@ -501,7 +501,7 @@
             <Chinesesimp>重设归零</Chinesesimp>
             <Polish>Zresetuj wyzerowanie</Polish>
             <Russian>Сбросить дальность пристрелки</Russian>
-            <Portuguese>Resetar Ajuste Zero</Portuguese>
+            <Portuguese>Restaurar Ajuste Zero</Portuguese>
             <French>Réinitialiser le réglage du zéro</French>
             <Czech>Reset vynulování</Czech>
             <Spanish>Restaurar ajuste de homogeneizado</Spanish>

@@ -28,6 +28,7 @@ Config Name | Type | Description
 `acex_field_rations_refillItem` | String | Makes an item refillable, class name of item added when refilled (OPTIONAL)
 `acex_field_rations_refillAmount` | Number | Amount of water required to refill item (OPTIONAL)
 `acex_field_rations_refillTime` | Number | Time required to refill item (in seconds) (OPTIONAL)
+`ACE_isFieldRationItem` | Number | Force adds the item to the ACE Field Rations category in ACE Arsenal (OPTIONAL)
 
 
 _* Value range is 0 to 100 and can be modified by the corresponding coefficient setting._

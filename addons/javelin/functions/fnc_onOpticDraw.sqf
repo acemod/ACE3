@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus, PabstMirror
  * Main loop, handles scaning for targets and drawing the javelin optic
@@ -55,6 +55,19 @@ if ((_ammoCount == 0) || // No ammo loaded
     _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
     _this set [0, diag_frameno];
     _this set [4, _fireDisabledEH];
+
+    // Fix weapon being in top-attack when loading AP magazine (https://feedback.bistudio.com/T171012)
+    if ((_currentShooter == ACE_player) && {_currentMagazine == "Titan_AP"} && {currentWeaponMode ACE_player == "TopDown"}) then {
+        {
+            _x params ["_xIndex", "", "", "", "_xMode"];
+            if (_xMode == "Single") exitWith {
+                ACE_player action ["SwitchWeapon", _currentShooter, ACE_player, _xIndex];
+                __JavelinIGUITop ctrlSetTextColor __ColorGray;
+                __JavelinIGUIDir ctrlSetTextColor __ColorGreen;
+                TRACE_2("fix top-attack for AP",weaponState _currentShooter,_x);
+            };
+        } forEach (ACE_player weaponsInfo [_currentWeapon, true]);
+    };
 };
 
 

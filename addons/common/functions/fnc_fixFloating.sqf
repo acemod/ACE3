@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Attempt to fix floating physx with disabled damage after setPosXXX commands.

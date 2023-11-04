@@ -217,12 +217,12 @@
             <Polish>Czas trwania poszczególnych slajdów. Domyślnie: 0 (Automatyczne przejścia wyłączone)</Polish>
             <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
             <Portuguese>Duração de cada slide. Padrão: 0 (Transição automática desabilitada)</Portuguese>
-            <Russian>Длительность каждого слайда. По-умолчанию: 0 (автоматический переход отключен)</Russian>
+            <Russian>Длительность каждого слайда. По умолчанию: 0 (автоматический переход отключен)</Russian>
             <Spanish>Duración de cada diapositiva. Por defecto: 0 (Transiciones automáticas desactivadas)</Spanish>
             <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
             <Italian>Durata di ogni diapositiva. Default: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
-            <Japanese>各スライドの持続時間。標準：0 (自動的な切り替えは無効)</Japanese>
+            <Japanese>各スライドの持続時間。標準:0 (自動的な切り替えは無効)</Japanese>
             <Korean>매 슬라이드의 지속 시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>
@@ -235,6 +235,9 @@
             <German>Auswahl der Textur</German>
             <Polish>Wybór Tekstury</Polish>
             <Japanese>テクスチャの選択</Japanese>
+            <Russian>Выбор текстуры</Russian>
+            <Spanish>Selección de texturas</Spanish>
+            <French>Sélection de texture</French>
         </Key>
         <Key ID="STR_ACE_Slideshow_Selection_Description">
             <English>Object texture selection. Default: 0</English>
@@ -244,6 +247,9 @@
             <German>Auswahl der Objekttextur. Standard: 0</German>
             <Polish>Wybór tekstury obiektu. Domyślnie: 0</Polish>
             <Japanese>オブジェクトテクスチャの選択。デフォルト: 0</Japanese>
+            <Russian>Выбор текстуры объекта. По умолчанию: 0</Russian>
+            <Spanish>Selección de textura de objeto. Defecto: 0</Spanish>
+            <French>Sélection de la texture de l'objet. Valeur par défaut : 0</French>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>

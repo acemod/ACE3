@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * PFH which allows the user to attach a rope to the given target vehicle
  *
  * Arguments:
