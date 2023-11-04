@@ -193,7 +193,7 @@ if (!hasInterface) exitWith {};
 // When changing feature cameras, stop deployment
 ["featureCamera", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
 
-// Handle waking up dragged unit and falling unconscious while trying to deploy
+// Handle falling unconscious while trying to deploy
 ["ace_unconscious", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addEventHandler;
 
 // Handle surrendering and handcuffing
