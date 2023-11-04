@@ -79,7 +79,7 @@
             <Chinese>裝填 %1</Chinese>
             <Chinesesimp>装填 %1</Chinesesimp>
             <Turkish>Yükle %1</Turkish>
-            <Korean>%1 싣는중</Korean>
+            <Korean>%1 싣기</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_unloadX">
             <English>Unload %1</English>
@@ -96,7 +96,7 @@
             <Chinese>卸載 %1</Chinese>
             <Chinesesimp>卸载 %1</Chinesesimp>
             <Turkish>Boşalt %1</Turkish>
-            <Korean>%1 내리는중</Korean>
+            <Korean>%1 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
