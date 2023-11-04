@@ -26,13 +26,20 @@ if ((_itemClassname == "") || {(!_silentScripted) && {!(_this call FUNC(canAttac
 
 private _itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
 private _onAttachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
+private _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_attachable_orientation");
 
 if (_itemVehClass == "") then {
     _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
     _onAttachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
+    _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_attachable_orientation");
 };
 
 if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
+
+// If orientation is not set in config, use default [1,0,0]
+if (count _itemModelOrientation < 3) then {
+    _itemModelOrientation = [1,0,0];
+};
 
 private _onAttachText = format [localize LSTRING(Item_Attached), _onAttachText];
 
@@ -68,7 +75,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [{
         params ["_args","_idPFH"];
-        _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAttachText","_actionID"];
+        _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAttachText","_actionID", "_itemModelOrientation"];
 
         private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
         if (cameraView == "EXTERNAL") then {
@@ -95,7 +102,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 
             if (GVAR(placeAction) == PLACE_APPROVE) then {
-                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _virtualPos] call FUNC(placeApprove);
+                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _virtualPos, _itemModelOrientation] call FUNC(placeApprove);
             };
         } else {
             //Show the virtual object:
@@ -113,8 +120,8 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 private _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
                 private _angle = asin (_dir select 2);
                 private _up = [0, cos _angle, sin _angle];
-                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [[1,0,0], _up];
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [_itemModelOrientation, _up];
             };
         };
-    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _actionID]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _actionID, _itemModelOrientation]] call CBA_fnc_addPerFrameHandler;
 };

@@ -15,6 +15,7 @@
  * 3: Light Vehicle Classname <STRING>
  * 4: On Attach Text <STRING>
  * 5: Starting Pos of dummy item <ARRAY>
+ * 5: Orientation of model <ARRAY>
  *
  * Return Value:
  * None
@@ -25,7 +26,7 @@
  * Public: No
  */
 
-params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAttachText", "_startingPosition"];
+params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAttachText", "_startingPosition", "_itemModelOrientation"];
 TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAttachText,_startingPosition);
 
 private _startingOffset = _attachToVehicle worldToModel _startingPosition;
@@ -92,6 +93,13 @@ private _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vector
 _endPosTestOffset set [2, (_startingOffset select 2)];
 private _attachedObject = _itemVehClass createVehicle (getPos _unit);
 _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
+
+// Convert dir from player perspective to world, then to attached object space
+_itemModelOrientation = _unit vectorModelToWorldVisual _itemModelOrientation;
+_itemModelOrientation = _attachToVehicle vectorWorldToModelVisual _itemModelOrientation;
+_attachedObject setVectorDirAndUp [_itemModelOrientation, vectorUp _attachedObject];
+// call pos set, to sync direction across MP
+_attachedObject setPosWorld getPosWorld _attachedObject;
 
 //Remove Item from inventory
 _unit removeItem _itemClassname;
