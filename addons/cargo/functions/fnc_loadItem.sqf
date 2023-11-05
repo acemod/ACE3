@@ -50,7 +50,7 @@ if (_item isEqualType objNull) then {
     [QEGVAR(common,hideObjectGlobal), [_item, true]] call CBA_fnc_serverEvent;
 
     // Some objects below water will take damage over time, eventually becoming "water logged" and unfixable (because of negative z attach)
-    [_item, "blockDamage", "ACE_cargo", true] call EFUNC(common,statusEffect_set);
+    [_item, "blockDamage", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 };
 
 // Invoke listenable event

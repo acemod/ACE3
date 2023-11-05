@@ -42,7 +42,7 @@
     _item hideObjectGlobal false;
     _item setPosASL (AGLtoASL _emptyPosAGL);
 
-    [_item, "blockDamage", "ACE_cargo", false] call EFUNC(common,statusEffect_set);
+    [_item, "blockDamage", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(paradropItem), {
