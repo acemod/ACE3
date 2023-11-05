@@ -52,7 +52,7 @@ class CfgVehicles {
                 };
                 class ACE_MapToolsAlignCompass {
                     displayName = CSTRING(MapToolsAlignCompass);
-                    condition = QUOTE(GVAR(mapTool_Shown) != 0 && {getUnitLoadout ACE_player param [ARR_2(9, [])] param [ARR_2(3, '')] != ''});
+                    condition = QUOTE(GVAR(mapTool_Shown) != 0 && {getUnitLoadout ACE_player param [ARR_2(9,[])] param [ARR_2(3,'')] != ''});
                     statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;

@@ -285,7 +285,7 @@ class CfgWeapons {
     class ACE_bodyBag: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);
-        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0"
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0";
         model = QPATHTOF(data\bodybagItem.p3d);
         picture = QPATHTOF(ui\bodybag_ca.paa);
         descriptionShort = CSTRING(Bodybag_Desc_Short);

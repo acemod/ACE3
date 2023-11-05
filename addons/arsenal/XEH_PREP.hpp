@@ -45,6 +45,8 @@ PREP(handleLoadoutsSearchbar);
 PREP(handleMouse);
 PREP(handleScrollWheel);
 PREP(handleSearchbar);
+PREP(handleSearchInputChanged);
+PREP(handleSearchModeToggle);
 PREP(handleStats);
 PREP(initBox);
 PREP(itemInfo);
