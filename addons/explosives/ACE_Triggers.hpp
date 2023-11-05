@@ -56,7 +56,7 @@ class ACE_Triggers {
         isAttachable = 1;
         displayName = CSTRING(timerName);
         picture = QPATHTOF(data\UI\Timer.paa);
-        onPlace = QUOTE([ARR_4(_this select 1, _this select 3 select 0, nil, _this select 0)] call FUNC(startTimer); false);
+        onPlace = QUOTE([ARR_4(_this select 1,_this select 3 select 0,nil,_this select 0)] call FUNC(startTimer); false);
         onSetup = QUOTE(_this call FUNC(openTimerUI));
     };
     class Tripwire {
