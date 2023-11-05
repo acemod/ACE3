@@ -43,8 +43,8 @@ switch (_state) do {
             // can't use unit hand because rope doesn't change position when hand moving
             // can't use createVehicleLocal because rope can be non-local (like parent) and it must be attached to global vehicle
             GVAR(helper) = createVehicle [QGVAR(helper), [0, 0, 0], [], 0, "CAN_COLLIDE"];
-            GVAR(helper) attachTo [_unit, [0,0,0], "LeftHand", true];
-            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), GVAR(helper), [0,0,0], _length];
+            GVAR(helper) attachTo [_unit, [0, 0, 0], "LeftHand", true];
+            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), GVAR(helper), [0, 0, 0], _length];
             _args set [3, _rope];
         };
 

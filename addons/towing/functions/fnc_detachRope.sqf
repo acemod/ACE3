@@ -26,15 +26,12 @@ if (isNil "_hookVars") then { // this is hookParent
 
 _hookVars params ["_parent", "_child", "_rope", "_ropeClass", "_hookParent"];
 
-TRACE_7("detachRope",_unit,_parent,_child,_hook,_hookParent,_rope,_deletedObject);
+TRACE_8("detachRope",_unit,_parent,_child,_hook,_hookParent,_rope,_ropeClass,_deletedObject);
 
 ropeDestroy _rope; // can run on client
 
-if (!isNull _unit) then {
-    TRACE_1("rope",_ropeClass);
-    if (!isNull _unit && {_ropeClass isNotEqualTo ""}) then {
-        [_unit, _ropeClass, true] call CBA_fnc_addItem;
-    };
+if (!isNull _unit && {_ropeClass isNotEqualTo ""}) then {
+    [_unit, _ropeClass, true] call CBA_fnc_addItem;
 };
 
 {

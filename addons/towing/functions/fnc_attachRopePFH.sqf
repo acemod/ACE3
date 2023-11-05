@@ -65,7 +65,7 @@ if (_intersections isNotEqualTo []) then {
     if (GVAR(canAttach)) then {
         // TRACE_4("can attach",_target,_intersectObject,_ignoreParent,_ignoreRope);
         GVAR(attachHelper) setPosASL _intersectPosition;
-        _hintLMB = localize LSTRING(attach);
+        _hintLMB = LLSTRING(attach);
 
         GVAR(attachHelper) setVariable [QGVAR(object), _intersectObject];
     };

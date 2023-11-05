@@ -28,6 +28,6 @@ GVAR(allChildren) = GVAR(allChildren) - [_child];
 private _childChildHooks = _child getVariable [QGVAR(childHooks), []];
 if (_childChildHooks isEqualTo []) then {
     TRACE_1("remove Deleted EH",_child);
-    _child removeEventHandler ["Deleted", _child getVariable QGVAR(DeletedEHID)];
+    _child removeEventHandler ["Deleted", _child getVariable [QGVAR(DeletedEHID), -1]];
     _child setVariable [QGVAR(DeletedEHID), -1];
 };

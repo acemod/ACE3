@@ -27,7 +27,7 @@ private _childHooks = _vehicle getVariable [QGVAR(childHooks), []];
 (_parentHooks + _childHooks) apply {
     private _hook = _x;
     _hook getVariable QGVAR(vars) params ["_hookParent", "_hookChild"];
-    private _partner = if (_vehicle == _hookParent) then {_hookChild} else {_hookParent};
+    private _partner = [_hookParent, _hookChild] select (_vehicle == _hookParent);
     private _partnerName = getText (configOf _partner >> "displayName");
     private _partnerOwnerName = [_partner, true] call EFUNC(common,getName);
     if (_partnerOwnerName != "") then {

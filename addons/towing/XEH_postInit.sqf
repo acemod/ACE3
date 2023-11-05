@@ -20,12 +20,12 @@ if (!isServer) exitWith {};
 [QGVAR(cleanupParent), {
     params ["_parent"];
     TRACE_1("cleanupParent",_parent);
-    _parent removeEventHandler ["RopeBreak", _parent getVariable QGVAR(RopeBreakEHID)];
+    _parent removeEventHandler ["RopeBreak", _parent getVariable [QGVAR(RopeBreakEHID), -1]];
     _parent setVariable [QGVAR(RopeBreakEHID), -1];
     private _parentParentHooks = _parent getVariable [QGVAR(parentHooks), []];
     if (_parentParentHooks isEqualTo []) then {
         TRACE_1("remove Deleted EH",_parent);
-        _parent removeEventHandler ["Deleted", _parent getVariable QGVAR(DeletedEHID)];
+        _parent removeEventHandler ["Deleted", _parent getVariable [QGVAR(DeletedEHID), -1]];
         _parent setVariable [QGVAR(DeletedEHID), -1];
     };
 }] call CBA_fnc_addEventHandler;
