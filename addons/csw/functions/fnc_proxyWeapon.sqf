@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Brandon (TCVM), PabstMirror
+ * Author: tcvm, PabstMirror
  * Handles the use of proxy weapons to fix engine-reload times
  *
  * Arguments:
@@ -23,10 +23,9 @@ TRACE_4("proxyWeapon",_staticWeapon,_turret,_needed,_emptyWeapon);
 
 if (_staticWeapon getVariable [format [QGVAR(proxyHandled_%1), _turret], false]) exitWith { TRACE_1("already handled",typeOf _staticWeapon); };
 
-private _typeOf = typeOf _staticWeapon;
-private _proxyWeapon = getText(configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "proxyWeapon");
+private _proxyWeapon = getText (configOf _staticWeapon >> "ace_csw" >> "proxyWeapon");
 
-TRACE_2("",_typeOf,_proxyWeapon);
+TRACE_2("",typeOf _staticWeapon,_proxyWeapon);
 if (_proxyWeapon == "") exitWith {};
 
 private _currentWeapon = (_staticWeapon weaponsTurret [0]) param [0, "#none"];
@@ -37,6 +36,9 @@ if ((missionNamespace getVariable [_proxyWeapon, objNull]) isEqualType {}) then 
     _needed = _proxyWeapon != "";
 };
 if (!_needed) exitWith { TRACE_2("not needed",_needed,_proxyWeapon); };
+
+// Rearm compatibility, prevent reloading entire static and breaking CSW
+_staticWeapon setVariable [QEGVAR(rearm,scriptedLoadout), true, true];
 
 TRACE_2("swapping to proxy weapon",_currentWeapon,_proxyWeapon);
 _staticWeapon removeWeaponTurret [_currentWeapon, _turret];

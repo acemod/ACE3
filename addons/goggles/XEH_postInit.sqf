@@ -14,8 +14,8 @@ if (!hasInterface) exitWith {};
 [20, [true, true, false]], false] call CBA_fnc_addKeybind;
 
 
-["ace_settingsInitialized", {
-    TRACE_2("ace_settingsInitialized eh",GVAR(effects),GVAR(showInThirdPerson));
+["CBA_settingsInitialized", {
+    TRACE_2("CBA_settingsInitialized eh",GVAR(effects),GVAR(showInThirdPerson));
 
     if (GVAR(effects) == 0) exitWith {};
 

@@ -15,7 +15,7 @@ GVAR(canAdjustElevation) = [false, false, false];
 GVAR(canAdjustWindage) = [false, false, false];
 GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
 
     if (!GVAR(enabled)) exitWith {};
 

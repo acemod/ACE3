@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brostrom.A
  * Safe or unsafe the given weapon based on weapon state; locked or unlocked.
@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  * 2: State <BOOL>
+ * 3: Show hint <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -20,7 +21,8 @@
 params [
     ["_unit", objNull, [objNull]],
     ["_weapon", "", [""]],
-    ["_state", true, [true]]
+    ["_state", true, [true]],
+    ["_hint", true, [true]]
 ];
 
 if (_weapon == "") exitWith {};
@@ -32,5 +34,5 @@ _weapon = configName (configFile >> "CfgWeapons" >> _weapon);
 private _muzzle = currentMuzzle _unit;
 
 if (_state isNotEqualTo (_weapon in _safedWeapons)) then {
-    [_unit, _weapon, _muzzle] call FUNC(lockSafety);
+    [_unit, _weapon, _muzzle, _hint] call FUNC(lockSafety);
 };

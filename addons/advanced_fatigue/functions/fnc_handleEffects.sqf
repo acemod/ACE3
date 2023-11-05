@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles any audible, visual and physical effects of fatigue.
@@ -94,6 +94,3 @@ if (_overexhausted) then {
 };
 
 _unit setVariable [QGVAR(aimFatigue), _fatigue];
-
-private _aimCoef = [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult);
-_unit setCustomAimCoef _aimCoef;

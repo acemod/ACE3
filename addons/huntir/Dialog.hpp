@@ -64,33 +64,33 @@ class GVAR(cam_dialog) {
     controlsBackground[] = { };
     objects[] = { };
     controls[] = {
-        TOP_BORDER,
-        BOTTOM_BORDER,
-        LEFT_BORDER,
-        RIGHT_BORDER,
-        //HELP_DIALOG,
-        CAM_BG,
-        CAM_HEIGHT,
-        CAM_ALT,
-        CAM_No,
-        CAM_NO_x,
-        CAM_TIME_REMAIN,
-        CAM_TIME,
-        CAM_ZOOM,
-        ZOOM_X,
-        CAM_POS,
-        CAM_POS_X,
-        CAM_DIR,
-        CAM_DIR_x
+        "TOP_BORDER",
+        "BOTTOM_BORDER",
+        "LEFT_BORDER",
+        "RIGHT_BORDER",
+        //"HELP_DIALOG",
+        "CAM_BG",
+        "CAM_HEIGHT",
+        "CAM_ALT",
+        "CAM_No",
+        "CAM_NO_x",
+        "CAM_TIME_REMAIN",
+        "CAM_TIME",
+        "CAM_ZOOM",
+        "ZOOM_X",
+        "CAM_POS",
+        "CAM_POS_X",
+        "CAM_DIR",
+        "CAM_DIR_x"
     };
 
     class TOP_BORDER {
         idc = -1;
         type = CT_STATIC;
         style = ST_CENTER;
-        x = __XA;
-        y = __Y;
-        w = __WA;
+        x = QUOTE(__XA);
+        y = QUOTE(__Y);
+        w = QUOTE(__WA);
         h = 0.08;
         font = FontM;
         sizeEx = 0.04;
@@ -100,17 +100,17 @@ class GVAR(cam_dialog) {
         blinkingPeriod = 0;
     };
     class BOTTOM_BORDER: TOP_BORDER {
-        y = __Y + __H - 0.05;
+        y = QUOTE(__Y + __H - 0.05);
         h = 0.05;
     };
     class LEFT_BORDER: TOP_BORDER {
-        w = (abs(__XA) - abs(__X)) + 0.05;
-        h = __H;
+        w = QUOTE((abs(__XA) - abs(__X)) + 0.05);
+        h = QUOTE(__H);
     };
     class RIGHT_BORDER: TOP_BORDER {
-        x = __X + __W - 0.05;
-        w = (__WA - __W) + 0.05;
-        h = __H;
+        x = QUOTE(__X + __W - 0.05);
+        w = QUOTE((__WA - __W) + 0.05);
+        h = QUOTE(__H);
     };
     class HELP_DIALOG {
         idc = -1;
@@ -135,8 +135,10 @@ class GVAR(cam_dialog) {
         soundPush[] = { "buttonpushed.ogg", 0.1, 1 };
         soundClick[] = { "", 0, 1 };
         soundEscape[] = { "", 0, 1 };
-        x = __X + (2*0.8); y = __Y + 0.045;
-        w = 0.05; h = 0.02;
+        x = QUOTE(__X + (2*0.8));
+        y = QUOTE(__Y + 0.045);
+        w = 0.05;
+        h = 0.02;
         text = CSTRING(HELP);
         action = QUOTE(createDialog QQGVAR(help_dialog));
     };
@@ -149,10 +151,10 @@ class GVAR(cam_dialog) {
         font = "RobotoCondensed";
         sizeEx = 0.021;
         lineSpacing = 1;
-        x = __X;
-        y = __Y + 0.08;
-        w = __W;
-        h = __H + 0.2;
+        x = QUOTE(__X);
+        y = QUOTE(__Y + 0.08);
+        w = QUOTE(__W);
+        h = QUOTE(__H + 0.2);
         border = 0;
         text = QPATHTOF(UI\ace_huntir_monitor_on.paa);
     };
@@ -164,65 +166,65 @@ class GVAR(cam_dialog) {
         colorText[] = {1, 1, 1, 1};
         font = FontM;
         sizeEx = 0.02;
-        x = __X + 0.42;
-        y = __Y + 0.32;
+        x = QUOTE(__X + 0.42);
+        y = QUOTE(__Y + 0.32);
         w = 0.08;
         h = 0.04;
         text = "";
         blinkingPeriod = 0;
     };
     class CAM_ALT: CAM_HEIGHT {
-        x = __X + 0.35;
+        x = QUOTE(__X + 0.35);
         text = CSTRING(ALT);
     };
     class CAM_No: CAM_HEIGHT {
-        x = __X + __W - 0.64;
+        x = QUOTE(__X + __W - 0.64);
         text = CSTRING(CAM);
     };
     class CAM_NO_x: CAM_HEIGHT {
         idc = 2;
-        x = __X + __W - 0.56;
-        y = __Y + 0.32;
+        x = QUOTE(__X + __W - 0.56);
+        y = QUOTE(__Y + 0.32);
         text = "";
     };
     class CAM_TIME: CAM_HEIGHT {
-        x = __X + 0.35;
-        y = __Y + __H - 0.65;
+        x = QUOTE(__X + 0.35);
+        y = QUOTE(__Y + __H - 0.65);
         w = 0.12;
         text = CSTRING(TIME);
     };
     class CAM_TIME_REMAIN: CAM_TIME {
         idc = 3;
-        x = __X + 0.46;
+        x = QUOTE(__X + 0.46);
         text = "";
     };
     class CAM_ZOOM: CAM_No {
-        y = __Y + 0.36;
+        y = QUOTE(__Y + 0.36);
         text = "Zoom:";
     };
     class ZOOM_X: CAM_ZOOM {
         idc = 4;
-        x = __X + __W - 0.56;
+        x = QUOTE(__X + __W - 0.56);
         text = "";
     };
     class CAM_POS: CAM_HEIGHT {
-        x = __X + 0.35;
-        y = __Y + 0.36;
+        x = QUOTE(__X + 0.35);
+        y = QUOTE(__Y + 0.36);
         text = "GPS Pos:";
     };
     class CAM_POS_X: CAM_POS {
         idc = 5;
-        x = __X + 0.42;
+        x = QUOTE(__X + 0.42);
         w = 0.16;
         text = "";
     };
     class CAM_DIR: CAM_POS {
-        y = __Y + 0.4;
+        y = QUOTE(__Y + 0.4);
         text = ""; //"Az:";
     };
     class CAM_DIR_x: CAM_DIR {
         idc = 6;
-        x = __X + 0.42;
+        x = QUOTE(__X + 0.42);
         w = 0.16;
         text = "";
     };
@@ -231,14 +233,14 @@ class GVAR(cam_dialog) {
 class GVAR(cam_dialog_inactive): GVAR(cam_dialog) {
     idd = 18881;
     controls[] = {
-        TOP_BORDER,
-        BOTTOM_BORDER,
-        LEFT_BORDER,
-        RIGHT_BORDER,
-        //HELP_DIALOG,
-        //PRESS_HELP,
-        CAM_BG,
-        SEARCHING_CAM
+        "TOP_BORDER",
+        "BOTTOM_BORDER",
+        "LEFT_BORDER",
+        "RIGHT_BORDER",
+        //"HELP_DIALOG",
+        //"PRESS_HELP",
+        "CAM_BG",
+        "SEARCHING_CAM"
     };
 
     class TOP_BORDER: TOP_BORDER {};
@@ -249,8 +251,8 @@ class GVAR(cam_dialog_inactive): GVAR(cam_dialog) {
         idc = -1;
         type = CT_STATIC;
         style = ST_LEFT;
-        x = __X + (__W - 0.2);
-        y = __Y + 0.06;
+        x = QUOTE(__X + (__W - 0.2));
+        y = QUOTE(__Y + 0.06);
         w = 0.4;
         h = 0.02;
         font = FontM;
@@ -264,8 +266,8 @@ class GVAR(cam_dialog_inactive): GVAR(cam_dialog) {
         idc = -1;
         type = CT_STATIC;
         style = ST_LEFT;
-        x = __X + (__W - 0.2);
-        y = __Y + 0.03;
+        x = QUOTE(__X + (__W - 0.2));
+        y = QUOTE(__Y + 0.03);
         w = 0.4;
         h = 0.02;
         font = FontM;
@@ -282,8 +284,8 @@ class GVAR(cam_dialog_inactive): GVAR(cam_dialog) {
         style = ST_LEFT;
         colorText[] = {1, 1, 1, 1};
         colorBackground[] = {0,0,0,0};
-        x = __X + (__W/2) - 0.07;
-        y = __Y + (__H/2);
+        x = QUOTE(__X + (__W/2) - 0.07);
+        y = QUOTE(__Y + (__H/2));
         w = 0.6;
         h = 0.08;
         font = FontM;
@@ -296,13 +298,13 @@ class GVAR(cam_dialog_inactive): GVAR(cam_dialog) {
 class GVAR(cam_dialog_off): GVAR(cam_dialog_inactive) {
     idd = 18882;
     controls[] = {
-        TOP_BORDER,
-        BOTTOM_BORDER,
-        LEFT_BORDER,
-        RIGHT_BORDER,
-        //HELP_DIALOG,
-        //PRESS_HELP,
-        CAM_BG
+        "TOP_BORDER",
+        "BOTTOM_BORDER",
+        "LEFT_BORDER",
+        "RIGHT_BORDER",
+        //"HELP_DIALOG",
+        //"PRESS_HELP",
+        "CAM_BG"
     };
 
     class TOP_BORDER: TOP_BORDER {};
@@ -317,30 +319,30 @@ class GVAR(cam_dialog_off): GVAR(cam_dialog_inactive) {
 class GVAR(help_dialog): GVAR(cam_dialog) {
     idd = -1;
     controls[] = {
-        TOP_BORDER,
-        BOTTOM_BORDER,
-        LEFT_BORDER,
-        RIGHT_BORDER,
-        CAM_BG,
-        CAM_HEIGHT,
-        CAM_ALT,
-        CAM_TIME_REMAIN,
-        CAM_TIME,
-        CAM_ZOOM,
-        ZOOM_X,
-        CAM_POS,
-        CAM_POS_x,
-        CAM_No,
-        CAM_No_X,
-        CAM_DIR,
-        CAM_DIR_x,
-        HELP0,
-        HELP1,
-        HELP2,
-        HELP3,
-        HELP4,
-        HELP5,
-        HELP6
+        "TOP_BORDER",
+        "BOTTOM_BORDER",
+        "LEFT_BORDER",
+        "RIGHT_BORDER",
+        "CAM_BG",
+        "CAM_HEIGHT",
+        "CAM_ALT",
+        "CAM_TIME_REMAIN",
+        "CAM_TIME",
+        "CAM_ZOOM",
+        "ZOOM_X",
+        "CAM_POS",
+        "CAM_POS_x",
+        "CAM_No",
+        "CAM_No_X",
+        "CAM_DIR",
+        "CAM_DIR_x",
+        "HELP0",
+        "HELP1",
+        "HELP2",
+        "HELP3",
+        "HELP4",
+        "HELP5",
+        "HELP6"
     };
     class TOP_BORDER: TOP_BORDER {};
     class BOTTOM_BORDER: BOTTOM_BORDER {};
@@ -363,8 +365,8 @@ class GVAR(help_dialog): GVAR(cam_dialog) {
         idc = -1;
         type = CT_STATIC;
         style = ST_LEFT;
-        x = __X + (__W - 0.3);
-        y = __Y + 0.03;
+        x = QUOTE(__X + (__W - 0.3));
+        y = QUOTE(__Y + 0.03);
         w = 0.4;
         h = 0.03;
         font = FontM;
@@ -375,27 +377,27 @@ class GVAR(help_dialog): GVAR(cam_dialog) {
         blinkingPeriod = 0;
     };
     class HELP1: HELP0 {
-        y = __Y + 0.06;
+        y = QUOTE(__Y + 0.06);
         text = CSTRING(HELP_ZOOM);
     };
     class HELP2: HELP0 {
-        y = __Y + 0.09;
+        y = QUOTE(__Y + 0.09);
         text = CSTRING(HELP_CAM);
     };
     class HELP3: HELP0 {
-        y = __Y + 0.12;
+        y = QUOTE(__Y + 0.12);
         text = CSTRING(HELP_ROT);
     };
     class HELP4: HELP0 {
-        y = __Y + 0.15;
+        y = QUOTE(__Y + 0.15);
         text = CSTRING(HELP_ELV);
     };
     class HELP5: HELP0 {
-        y = __Y + 0.18;
+        y = QUOTE(__Y + 0.18);
         text = CSTRING(HELP_MOD);
     };
     class HELP6: HELP0 {
-        y = __Y + 0.21;
+        y = QUOTE(__Y + 0.21);
         text = CSTRING(HELP_RES);
     };
 };

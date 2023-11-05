@@ -45,4 +45,4 @@ During this release process between the Friday and Tuesday, the day of release, 
 
 ### 3.2 Diagram
 
-<a href="{{ site.baseurl }}/img/wiki/development/release_and_branching.jpg"><img src="{{ site.baseurl }}/img/wiki/development/release_and_branching.jpg" alt="Release and branching flowchart" /></a>
+<a href="{{ site.baseurl }}/img/wiki/development/release_and_branching.webp"><img src="{{ site.baseurl }}/img/wiki/development/release_and_branching.webp" alt="Release and branching flowchart" /></a>

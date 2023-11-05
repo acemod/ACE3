@@ -23,7 +23,7 @@ GVAR(ppeffectBlur) = -1;
 
 GVAR(isUsingMagnification) = false;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_4("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling));
 
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
@@ -31,6 +31,7 @@ GVAR(isUsingMagnification) = false;
     ["cameraView", LINKFUNC(onCameraViewChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["vehicle", LINKFUNC(refreshGoggleType), false] call CBA_fnc_addPlayerEventHandler;
     ["turret", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
+    ["ACE_controlledUAV", LINKFUNC(refreshGoggleType)] call CBA_fnc_addEventHandler;
 
     // handle only brightness if effects are disabled
     GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];

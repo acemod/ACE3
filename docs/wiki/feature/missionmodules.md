@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Mission Modules
+component: missionmodules
 description: Modules that can be used by mission makers.
 group: feature
 category: general
@@ -15,7 +16,3 @@ version:
 ## 1. Overview
 
 Add modules that can be used by mission makers, such as ambient sounds.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="missionmodules" %}

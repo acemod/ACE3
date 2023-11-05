@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Rearms a vehicle on the turret owner.
@@ -74,7 +74,7 @@ while {((count _ammoCounts) < _maxMagazines) && {_ammoToAdd > 0}} do {
     _ammoToAdd = _ammoToAdd - _xAdd;
     _ammoAdded = _ammoAdded + _xAdd;
     _ammoCounts pushBack _xAdd;
-    if (!_arrayModified) then {
+    if (_arrayModified) then {
         TRACE_1("adding new mag to array",_xAdd);
     } else {
         TRACE_1("adding new mag directly",_xAdd);

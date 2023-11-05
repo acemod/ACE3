@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_csw]:
-
 private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
 
 [
@@ -19,6 +17,16 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     true, // default value
     true, // isGlobal
     {[QGVAR(handleExtraMagazines), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(handleExtraMagazinesType), "LIST",
+    [LSTRING(handleExtraMagazinesType_displayName), LSTRING(handleExtraMagazinesType_description)],
+    _categoryArray,
+    [[0, 1], [LSTRING(handleExtraMagazinesType_weaponHolder), LSTRING(handleExtraMagazinesType_ammoBox)], 0],
+    true, // isGlobal
+    {[QGVAR(handleExtraMagazinesType), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_fnc_addSetting;
 

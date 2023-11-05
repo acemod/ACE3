@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Server func to create the fragmentation for a round.

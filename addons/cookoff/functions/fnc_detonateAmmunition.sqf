@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Detonates ammunition from a vehicle until no ammo left
@@ -6,8 +6,8 @@
  * Arguments:
  * 0: vehicle <OBJECT>
  * 1: Ammo Array <ARRAY>
- *      0: Magazine Classname <STRING>
- *      1: Ammo Count <NUMBER>
+ * - 0: Magazine Classname <STRING>
+ * - 1: Ammo Count <NUMBER>
  * 2: Total Ammo Count <NUMBER>
  *
  * Return Value:
@@ -18,9 +18,11 @@
  *
  * Public: No
  */
-#define MAX_TIME_BETWEEN_AMMO_DET 25
 
 params ["_vehicle", "_magazines", "_totalAmmo"];
+
+if (GVAR(enable) == 0) exitWith {};
+if !(GVAR(enableAmmoCookoff)) exitWith {};
 
 if (isNull _vehicle) exitWith {}; // vehicle got deleted
 if (_magazines isEqualTo []) exitWith {}; // nothing to detonate anymore

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Backpacks
+component: backpacks
 description: Notifies a player when his backpack is opened.
 group: feature
 category: equipment
@@ -16,7 +17,3 @@ version:
 
 ### 1.1 Zipping sounds
 A zipper sound is played when someone opens your backpack.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="backpacks" %}

@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 GVAR(pfID) = -1;
 GVAR(playerIsVirtual) = false;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_1("SettingsInitialized eh",GVAR(enabledFor));
 
     if (GVAR(enabledFor) == 0) exitWith {}; //Module has no effect if enabledFor is "None"

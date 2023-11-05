@@ -49,6 +49,6 @@ e.g. RCWS turrets
 
 ```
 class MyVehicle {
-    ace_cookoff_ignoreTurret = 1;
+    ace_vehicle_damage_turretFireProb = 0;
 };
 ```

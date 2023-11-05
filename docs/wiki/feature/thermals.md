@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Thermals
+component: thermals
 description: Improves thermal properties.
 group: feature
 category: equipment
@@ -16,7 +17,3 @@ version:
 
 ### 1.1 Body Warmth
 Adjusts the thermal properties of humans making them less like torches.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="thermals" %}

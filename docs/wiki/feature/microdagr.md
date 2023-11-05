@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: MicroDAGR
+component: microdagr
 description: A GPS device and much more.
 group: feature
 category: equipment
@@ -55,20 +56,20 @@ The MicroDAGR position on the UI is where your GPS is, you can modify it in Opti
     <div class="small-12 columns">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <img src="{{ site.baseurl }}/img/wiki/feature/microdagr1.jpg" width="300" height="394" alt="main menu" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/microdagr1.webp" width="300" height="394" alt="main menu" />
             </div>
             <div class="small-12 medium-6 columns">
-                <img src="{{ site.baseurl }}/img/wiki/feature/microdagr2.jpg" width="300" height="394" alt="compass view" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/microdagr2.webp" width="300" height="394" alt="compass view" />
             </div>
         </div>
     </div>
     <div class="small-12 columns">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <img src="{{ site.baseurl }}/img/wiki/feature/microdagr3.jpg" width="300" height="394" alt="map view" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/microdagr3.webp" width="300" height="394" alt="map view" />
             </div>
             <div class="small-12 medium-6 columns">
-                <img src="{{ site.baseurl }}/img/wiki/feature/microdagr4.jpg" width="300" height="394" alt="options menu" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/microdagr4.webp" width="300" height="394" alt="options menu" />
             </div>
         </div>
     </div>
@@ -182,8 +183,3 @@ There are three ways of adding a waypoint.
 1. Note that the compass menu also changed and now features the azimuth, compass bearing, distance and grid position of the point you sighted.
 
 Note that the results of the measure you took won't change until you do an other measure.
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="microdagr" %}

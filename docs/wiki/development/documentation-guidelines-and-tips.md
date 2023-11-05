@@ -12,7 +12,7 @@ order: 19
     - This is especially necessary for the kramdown markup syntax. Kramdown needs a line break between each block level element (paragraphs, lists, codeblocks, etc ...)
 - Use `ACE3` instead of `ACE 3`.
 - Remove each entry that is not used.
-- Don't forget to say what you're going to work on in #documentation in slack or [this topic](https://github.com/acemod/ACE3/issues/1166)
+- Don't forget to say what you're going to work on in #dev in Discord or [this topic](https://github.com/acemod/ACE3/issues/1166)
 - Keybinds in ``` <kbd>keyboard tags</kbd>  ```
 - Keywords in ``` `backticks`  ```
 - Capitals at the start of a sentence and `.`at the end.

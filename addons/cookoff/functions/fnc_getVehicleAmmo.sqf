@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets all magazines inside of a vehicle.
@@ -8,8 +8,8 @@
  *
  * Return Value:
  * 0: Ammo Array <ARRAY>
- *      0: Magazine Classname <STRING>
- *      1: Ammo Count <NUMBER>
+ * - 0: Magazine Classname <STRING>
+ * - 1: Ammo Count <NUMBER>
  * 1: Total Ammo Count <NUMBER>
  *
  * Example:
@@ -26,24 +26,27 @@ private _totalAmmo = 0;
 
 // Get ammo from turrets
 {
-    _x params ["_mag", "", "_count"];
+    _x params ["_mag", "_turret", "_count"];
+    // if the turret is an FFV seat, it takes magazines from the soldier
     if (_count > 0) then {
+        if (_mag call FUNC(isMagazineFlare)) then {continue};
         private _ammo = getText (configFile >> "CfgMagazines" >> _mag >> "ammo");
         private _model = getText (configFile >> "CfgAmmo" >> _ammo >> "model");
         if (_model == "\A3\weapons_f\empty") exitWith {TRACE_3("skipping",_mag,_ammo,_model);};
         _ammoToDetonate pushBack [_mag, _count];
         _totalAmmo = _totalAmmo + _count;
     };
-} forEach (magazinesAllTurrets _vehicle);
+} forEach (magazinesAllTurrets [_vehicle, true]);
 
 // Get ammo from cargo space
 {
     _x params ["_mag", "_count"];
     if (_count > 0) then {
+        if (_mag call FUNC(isMagazineFlare)) then {continue};
         _ammoToDetonate pushBack [_mag, _count];
         _totalAmmo = _totalAmmo + _count;
     };
-} forEach (magazinesAmmoCargo  _vehicle);
+} forEach (magazinesAmmoCargo _vehicle);
 
 // Get ammo from transportAmmo / ace_rearm
 private _vehCfg = configOf _vehicle;
@@ -56,6 +59,8 @@ if (_vehicle getVariable [QEGVAR(rearm,isSupplyVehicle), (_configSupply > 0)]) t
     _totalAmmo = _totalAmmo + 2000;
     _ammoToDetonate pushBack ["20Rnd_105mm_HEAT_MP", 100];
     _totalAmmo = _totalAmmo + 100;
+    _ammoToDetonate pushBack ["SatchelCharge_Remote_Mag", 10];
+    _totalAmmo = _totalAmmo + 10;
 };
 
 [_ammoToDetonate, _totalAmmo]

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Handler function for finding position and direction of a vanilla laser.
@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle (shooter of laser) <OBJECT>
  * 6: Method Args <ARRAY>
- *      0: Laser Source selection on Vehicle <STRING>
+ * - 0: Laser Source selection on Vehicle <STRING>
  *
  * Return Value:
  * [position, direction] <ARRAY>
@@ -28,7 +28,7 @@ if (surfaceIsWater _targetPos && {(_targetPos select 2) < 0}) then {
     _targetPos set [2, 0.25];
 };
 
-private _povPos = AGLtoASL (_vehicle modelToWorldVisual (_vehicle selectionPosition _ownerSelection));
+private _povPos = _vehicle modelToWorldVisualWorld (_vehicle selectionPosition _ownerSelection);
 private _povDir = _povPos vectorFromTo _targetPos;
 
 TRACE_4("",_vehicle,_targetObject,_povPos,_povDir);

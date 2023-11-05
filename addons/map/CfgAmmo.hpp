@@ -1,7 +1,7 @@
 class CfgAmmo {
-    
+
     class Grenade;
-    
+
     class ACE_FlashlightProxy_White: Grenade {
         effectsSmoke = "ACE_FlashlightEffect_White";
         explosionTime = 0.01;
@@ -12,7 +12,7 @@ class CfgAmmo {
         simulation = "shotSmokeX";
         smokeColor[] = {1,1,1,1};
         timeToLive = 1e10;
-        
+
         impactArmor[] = {};
         impactConcrete[] = {};
         impactDefault[] = {};
@@ -30,23 +30,23 @@ class CfgAmmo {
         impactWater[] = {};
         impactWood[] = {};
     };
-    
+
     class ACE_FlashlightProxy_Red: ACE_FlashlightProxy_White {
         effectsSmoke = "ACE_FlashlightEffect_Red";
     };
-    
+
     class ACE_FlashlightProxy_Blue: ACE_FlashlightProxy_White {
         effectsSmoke = "ACE_FlashlightEffect_Blue";
     };
-    
+
     class ACE_FlashlightProxy_Green: ACE_FlashlightProxy_White {
         effectsSmoke = "ACE_FlashlightEffect_Green";
     };
-    
+
     class ACE_FlashlightProxy_Yellow: ACE_FlashlightProxy_White {
         effectsSmoke = "ACE_FlashlightEffect_Yellow";
     };
-    
+
     class ACE_FlashlightProxy_Orange: ACE_FlashlightProxy_White {
         effectsSmoke = "ACE_FlashlightEffect_Orange";
     };

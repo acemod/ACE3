@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Checks if the given treatment can be performed.
@@ -40,7 +40,7 @@ isClass _config
         if (_condition isEqualTo {}) exitWith {
             _condition = true;
         };
-        
+
         _condition = call _condition;
     };
 
@@ -59,4 +59,6 @@ isClass _config
         };
         default {false};
     };
+} && {
+    ((getNumber (_config >> "allowedUnderwater")) == 1) || {!([_medic] call ace_common_fnc_isSwimming)}
 }

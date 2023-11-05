@@ -1,9 +1,9 @@
 [
     QGVAR(advancedDiagnose),
-    "CHECKBOX",
+    "LIST",
     [LSTRING(AdvancedDiagnose_DisplayName), LSTRING(AdvancedDiagnose_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    true,
+    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest)], 1],
     true
 ] call CBA_fnc_addSetting;
 
@@ -26,6 +26,24 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(bandageRollover),
+    "CHECKBOX",
+    [LSTRING(bandageRollover_DisplayName), LSTRING(bandageRollover_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    false // server can force if necessary, otherwise client decides
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(bandageEffectiveness),
+    "SLIDER",
+    [LSTRING(bandageEffectiveness_DisplayName), LSTRING(bandageEffectiveness_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 5, 1, 2],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(woundReopenChance),
     "SLIDER",
     [LSTRING(WoundReopenChance_DisplayName), LSTRING(WoundReopenChance_Description)],
@@ -35,11 +53,11 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(clearTraumaAfterBandage),
-    "CHECKBOX",
-    [LSTRING(ClearTraumaAfterBandage_DisplayName), LSTRING(ClearTraumaAfterBandage_Description)],
+    QGVAR(clearTrauma),
+    "LIST",
+    [LSTRING(ClearTrauma_DisplayName), LSTRING(ClearTrauma_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    false,
+    [[0, 1, 2], [ELSTRING(common,Never),  LSTRING(ClearTrauma_AfterStitch), LSTRING(ClearTrauma_AfterBandage)], 1],
     true
 ] call CBA_fnc_addSetting;
 
@@ -47,7 +65,7 @@
 [
     QGVAR(locationsBoostTraining),
     "CHECKBOX",
-    [LSTRING(LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
+    [ELSTRING(common,LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
     true
@@ -104,6 +122,15 @@
     [LSTRING(TreatmentTimeBodyBag_DisplayName), LSTRING(TreatmentTimeBodyBag_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0.1, 60, 15, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(treatmentTimeGrave),
+    "SLIDER",
+    [LSTRING(TreatmentTimeGrave_DisplayName), LSTRING(TreatmentTimeGrave_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 120, 30, 1],
     true
 ] call CBA_fnc_addSetting;
 
@@ -193,7 +220,7 @@
     "LIST",
     [LSTRING(ConsumeSurgicalKit_DisplayName), LSTRING(ConsumeSurgicalKit_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    [[0, 1, 2], ["str_eval_typenothing", LSTRING(SurgicalKit_Display), LSTRING(Suture_Display)], 0],
     true
 ] call CBA_fnc_addSetting;
 
@@ -252,9 +279,18 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(cprSuccessChance),
+    QGVAR(cprSuccessChanceMin),
     "SLIDER",
-    [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
+    [LSTRING(CPRSuccessChanceMin_DisplayName), LSTRING(CPRSuccessChanceMin_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 1, 0.4, 2, true],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cprSuccessChanceMax),
+    "SLIDER",
+    [LSTRING(CPRSuccessChanceMax_DisplayName), LSTRING(CPRSuccessChanceMax_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 1, 0.4, 2, true],
     true
@@ -275,6 +311,24 @@
     [LSTRING(AllowBodyBagUnconscious_DisplayName), LSTRING(AllowBodyBagUnconscious_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(allowGraveDigging),
+    "LIST",
+    [LSTRING(AllowGraveDigging_DisplayName), LSTRING(AllowGraveDigging_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(AllowGraveDigging_graveOnlyDead), ELSTRING(common,Yes)], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(graveDiggingMarker),
+    "CHECKBOX",
+    [LSTRING(GraveDiggingMarker_DisplayName), LSTRING(GraveDiggingMarker_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
     true
 ] call CBA_fnc_addSetting;
 

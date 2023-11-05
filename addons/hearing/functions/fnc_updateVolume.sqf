@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2 and esteldunedain and Ruthberg
  * Updates and applies the current deafness. Called every 1 sec from a PFEH.
  *
  * Arguments:
  * 0: Args <ARRAY>
- *   0: Just update volume (skip ringing/recovery) <BOOL> (default: false)
+ * - 0: Just update volume (skip ringing/recovery) <BOOL> (default: false)
  *
  * Return Value:
  * None

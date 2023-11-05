@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: View Distance
+component: viewdistance
 description: The view distance module adds extra view distance settings
 group: feature
 category: interaction
@@ -19,7 +20,3 @@ ACE3 View Distance adds the ability to have different view distance settings whe
 - When in-game, press <kbd>ESC</kbd>.
 - Click `ACE Options` in the top-left corner.
 - Scroll down to the `Client View Distance` settings.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="viewdistance" %}

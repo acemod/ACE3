@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe
  * Text statement for the magazine ammo muzzle velocity stat.
@@ -13,36 +13,43 @@
  * Public: No
 */
 
-params ["", "_config"];
+params ["", "_configMagazine"];
 
 if (EGVAR(arsenal,currentLeftPanel) == 2002) then {
     private _primaryMag = primaryWeaponMagazine EGVAR(arsenal,center);
-
-    [primaryWeapon EGVAR(arsenal,center), configName _config]
+    [primaryWeapon EGVAR(arsenal,center), _primaryMag param [0, ""]]
 } else {
     private _primaryMag = handgunMagazine EGVAR(arsenal,center);
-
-    [handgunWeapon EGVAR(arsenal,center), configName _config]
+    [handgunWeapon EGVAR(arsenal,center), _primaryMag param [0, ""]]
 } params ["_weapon", "_magazine"];
 
-if (_magazine isEqualTo "") then {
-    localize "str_empty";
-} else {
-    private _weaponCfg = configFile >> "CfgWeapons" >> _weapon;
-    private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (configFile >> "CfgMagazines" >> _magazine >> "ammo")));
-    private _barrelLength = getNumber (_weaponCfg >> "ACE_barrelLength");
-    private _muzzleVelocityTable = getArray (_ammoCfg >> "ACE_muzzleVelocities");
-    private _barrelLengthTable = getArray (_ammoCfg >> "ACE_barrelLengths");
+// we might be looking at random mags not related to our weapon
+private _magIsForCurrentWeapon = (configName _configMagazine == _magazine) && {_weapon != ""};
+private _configWeapon = configNull;
 
-    if (_barrelLength != 0 && {count _muzzleVelocityTable > 0} && {count _barrelLengthTable > 0}) then {
-        private _muzzleVelocity = if (["ace_advanced_ballistics"] call EFUNC(common,isModLoaded)) then {
-            [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
-        } else {
-            getNumber (_config >> "initSpeed")
-        };
+private _muzzleVelocity = getNumber (_configMagazine >> "initSpeed");
+private _initSpeedCoef = 0;
+if (_magIsForCurrentWeapon) then {
+    _configWeapon = configFile >> "CfgWeapons" >> _weapon;
+    _initSpeedCoef = getNumber (_configWeapon >> "initSpeed");
+};
+if (_initSpeedCoef < 0) then {
+    _muzzleVelocity = _muzzleVelocity * -_initSpeedCoef;
+};
+if (_initSpeedCoef > 0) then {
+    _muzzleVelocity = _initSpeedCoef;
+};
 
-        format ["%1 m/s (%2 ft/s)", _muzzleVelocity toFixed 0, (_muzzleVelocity * 3.28084) toFixed 0]
-    } else {
-        localize "str_empty";
+private _abAdjustText = "";
+if (_magIsForCurrentWeapon && {["ace_advanced_ballistics"] call EFUNC(common,isModLoaded)}) then {
+    private _configAmmo = (configFile >> "CfgAmmo" >> (getText (_configMagazine >> "ammo")));
+    private _barrelLength = getNumber (_configWeapon >> "ACE_barrelLength");
+    private _muzzleVelocityTable = getArray (_configAmmo >> "ACE_muzzleVelocities");
+    private _barrelLengthTable = getArray (_configAmmo >> "ACE_barrelLengths");
+    private _abShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
+    if (_abShift != 0) then {
+        _abAdjustText = " [AB]",
+        _muzzleVelocity = _abShift;
     };
 };
+format ["%1 m/s (%2 ft/s)%3", _muzzleVelocity toFixed 0, (_muzzleVelocity * 3.28084) toFixed 0, _abAdjustText]

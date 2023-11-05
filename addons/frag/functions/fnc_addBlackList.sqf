@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Adds a round to the blacklist (will be ignored).

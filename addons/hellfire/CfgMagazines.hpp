@@ -1,6 +1,6 @@
 class CfgMagazines {
     class 12Rnd_PG_missiles;
-    
+
     // Kilo - tandem shaped charge HEAT (anti-tank)
     class 6Rnd_ACE_Hellfire_AGM114K: 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
@@ -16,7 +16,7 @@ class CfgMagazines {
         count = 1;
         mass = 70;
         pylonWeapon = QGVAR(launcher);
-        hardpoints[] = {"SCALPEL_1RND"};
+        hardpoints[] = {"SCALPEL_1RND", "HellfireRail_MELB"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
     class PylonRack_1Rnd_ACE_Hellfire_AGM114K: 6Rnd_ACE_Hellfire_AGM114K { // 1x Launcher Support Rack
@@ -84,7 +84,7 @@ class CfgMagazines {
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
-    
+
     // Lima - tandem shaped charge HEAT (anti-tank) Fire and Forget Active Radar Homing
     class 6Rnd_ACE_Hellfire_AGM114L: 6Rnd_ACE_Hellfire_AGM114K { // Old style vehicle magazine
         count = 6;

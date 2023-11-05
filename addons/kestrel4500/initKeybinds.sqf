@@ -32,7 +32,7 @@ private _conditonCode = {
 };
 private _toggleCode = {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     if (!GVAR(Overlay)) then {

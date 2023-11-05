@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * Recieve an finger event, adds to the array (or updates if already present) and starts PFEH if not already running
@@ -27,8 +27,8 @@ private _fingerPos = if (_sourceUnit == ACE_player) then {
 
 TRACE_3("incoming finger:", _sourceUnit, _fingerPosPrecise, _fingerPos);
 
-private _data = [diag_tickTime, _fingerPos, ([_sourceUnit, false, true] call EFUNC(common,getName))];
-[GVAR(fingersHash), _sourceUnit, _data] call CBA_fnc_hashSet;
+private _data = [diag_tickTime, _fingerPos, ([_sourceUnit, false, true] call EFUNC(common,getName)), _sourceUnit];
+GVAR(fingersHash) set [hashValue _sourceUnit, _data];
 
 if (GVAR(pfeh_id) == -1) then {
     GVAR(pfeh_id) = [DFUNC(perFrameEH), 0, []] call CBA_fnc_addPerFrameHandler;

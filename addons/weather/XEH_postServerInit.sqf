@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
     GVAR(temperatureShift) = random [-SD_TO_MIN_MAX(4), 0, SD_TO_MIN_MAX(4)]; // Gauss(0, 4)
