@@ -5,7 +5,7 @@
  * However, player bodies cannot be deleted until they respawn, so it is hidden and deleted later.
  *
  * Arguments:
- * 0: Body <OBJECT>
+ * 0: Body or Bodybag <OBJECT>
  *
  * Return Value:
  * None

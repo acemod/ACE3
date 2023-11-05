@@ -126,6 +126,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(treatmentTimeGrave),
+    "SLIDER",
+    [LSTRING(TreatmentTimeGrave_DisplayName), LSTRING(TreatmentTimeGrave_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 120, 30, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(medicEpinephrine),
     "LIST",
     [LSTRING(MedicEpinephrine_DisplayName), LSTRING(MedicEpinephrine_Description)],
@@ -302,6 +311,24 @@
     [LSTRING(AllowBodyBagUnconscious_DisplayName), LSTRING(AllowBodyBagUnconscious_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(allowGraveDigging),
+    "LIST",
+    [LSTRING(AllowGraveDigging_DisplayName), LSTRING(AllowGraveDigging_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(AllowGraveDigging_graveOnlyDead), ELSTRING(common,Yes)], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(graveDiggingMarker),
+    "CHECKBOX",
+    [LSTRING(GraveDiggingMarker_DisplayName), LSTRING(GraveDiggingMarker_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
     true
 ] call CBA_fnc_addSetting;
 

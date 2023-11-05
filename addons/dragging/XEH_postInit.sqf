@@ -81,4 +81,27 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 }] call CBA_fnc_addEventHandler;
 
+// When changing cameras, drop carried and dragged objects
+["featureCamera", {
+    params ["_unit", "_camera"];
+
+    // Unit can either drag or carry, functions themselves handle which ones are executed
+    switch (_camera) do {
+        // Default camera
+        case "": {
+            _unit call FUNC(resumeDrag);
+            _unit call FUNC(resumeCarry);
+        };
+        // Arsenals make the unit change animations, which makes the unit drop dragged/carried objects regardless
+        case "arsenal";
+        case "ace_arsenal": {
+            _unit call FUNC(handleKilled);
+        };
+        default {
+            _unit call FUNC(pauseDrag);
+            _unit call FUNC(pauseCarry);
+        };
+    };
+}] call CBA_fnc_addPlayerEventHandler;
+
 #include "initKeybinds.sqf"
