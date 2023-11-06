@@ -9,5 +9,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-// #define COPPERHEAD_DEFUALT_SETTINGS [ARR_5(1,1,1,1,1)]
-#define COPPERHEAD_DEFUALT_SETTINGS [ARR_5(1,1,6,8,8)]
+#define COPPERHEAD_DEFUALT_SETTINGS [ARR_5(1,1,1,1,1)]
