@@ -25,4 +25,4 @@ If a unit's weapon is shot it will be dropped based on the chance set. The defau
 #### 1.2.2 Arm hits
 If a unit's arm is shot it will cause the gun to be dropped based on the chance set. The default is 0.
 #### Undroppable guns
-Guns found in the `ace_hitreactions_undroppableGuns` array will not be dropped.
+Guns found in the `ace_hitreactions_undroppableGuns` array will not be dropped. Classnames are case sensitive.
