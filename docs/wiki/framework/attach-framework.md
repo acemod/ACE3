@@ -39,15 +39,15 @@ class CfgVehicles {
 ```
 
 ### 1.2 Define attach orientation for non-symmetric items
-In the case the item needs to have a particular orientation when attached, add the config value: ``ACE_attachable_orientation`` which is an array describing the ``vectorDir`` orientation of the object.  
-The default value is: ``[1,0,0]``. 
+In the case the item needs to have a particular orientation when attached, add the config value: ``ace_attach_orientation`` which is an array describing the ``roll`` and ``yaw`` orientation of the object.  
+The default value is: ``[0,0]``. 
 
 Example: 
 ```cpp
 class CfgWeapons {
     class attach_item: CBA_MiscItem {
         ACE_attachable = "new_attachable_item_classname";
-        ACE_attachable_orientation[] = {-1,0,0};
+        ace_attach_orientation[] = {0,180}; // 180deg yaw
     };
 };
 ```
@@ -91,4 +91,5 @@ class Extended_InitPost_Eventhandlers {
 ```
 
 Make sure that the classname you are listening to is the one defined in ``CfgVehicles`` as this is the physical item that gets created when attached.   
+
 **NOTE:** If attaching the object to yourself, as a player, then the init event will be rerun everytime you leave a vehicle, as ACE Attach system will remove and re-add player attached items whenever they enter and leave vehicles.   

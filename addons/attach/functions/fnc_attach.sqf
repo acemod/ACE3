@@ -26,20 +26,15 @@ if ((_itemClassname == "") || {(!_silentScripted) && {!(_this call FUNC(canAttac
 
 private _itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
 private _onAttachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
-private _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_attachable_orientation");
+private _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> QGVAR(orientation));
 
 if (_itemVehClass == "") then {
     _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
     _onAttachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
-    _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_attachable_orientation");
+    _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> QGVAR(orientation));
 };
 
 if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
-
-// If orientation is not set in config, use default [1,0,0]
-if (count _itemModelOrientation < 3) then {
-    _itemModelOrientation = [1,0,0];
-};
 
 private _onAttachText = format [localize LSTRING(Item_Attached), _onAttachText];
 
@@ -119,8 +114,13 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
                 private _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
                 private _angle = asin (_dir select 2);
-                private _up = [0, cos _angle, sin _angle];
-                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [_itemModelOrientation, _up];
+
+                // default for current ACE attach behaviour is 90deg rotation in yaw, so setting defaults to that to not break backwards compatibility
+                _itemModelOrientation params [["_roll", 0], ["_yaw", 90]];
+                // do rotation for how the model should be oriented in roll and yaw, and then in pitch for the view angle
+                private _dirAndUp = [[[0,1,0], [0,0,1]], _yaw, 0, _roll] call BIS_fnc_transformVectorDirAndUp;
+                private _dirAndUp = [_dirAndUp, 0, _angle, 0] call BIS_fnc_transformVectorDirAndUp;
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp _dirAndUp;
             };
         };
     }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _actionID, _itemModelOrientation]] call CBA_fnc_addPerFrameHandler;

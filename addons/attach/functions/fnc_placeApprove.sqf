@@ -94,12 +94,18 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
 private _attachedObject = _itemVehClass createVehicle (getPos _unit);
 _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
 
-// Convert dir from player perspective to world, then to attached object space
-_itemModelOrientation = _unit vectorModelToWorldVisual _itemModelOrientation;
-_itemModelOrientation = _attachToVehicle vectorWorldToModelVisual _itemModelOrientation;
-_attachedObject setVectorDirAndUp [_itemModelOrientation, vectorUp _attachedObject];
-// call pos set, to sync direction across MP
-_attachedObject setPosWorld getPosWorld _attachedObject;
+// get wanted orientation if any is set
+_itemModelOrientation params [["_roll", 0], ["_yaw", 90]];
+private _dirAndUp = [[[0,1,0],[0,0,1]], -_yaw, 0, _roll] call BIS_fnc_transformVectorDirAndUp;
+
+// transform dir and up vector from player model to world, then to model-space of _attachToVehicle
+private _dir = _unit vectorModelToWorldVisual _dirAndUp#0;
+_dir = _attachToVehicle vectorWorldToModelVisual _dir; 
+
+private _up = _unit vectorModelToWorldVisual _dirAndUp#1;
+_up = _attachToVehicle vectorWorldToModelVisual _up;
+
+_attachedObject setVectorDirAndUp [_dir, _up];
 
 //Remove Item from inventory
 _unit removeItem _itemClassname;
