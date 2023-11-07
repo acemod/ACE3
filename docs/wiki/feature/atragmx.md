@@ -31,9 +31,9 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 #### 3.1.1 Interaction Menu
 
-- Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
-- Select `Equipment`
-- Select `Open AtragMx`
+- Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>.
+- Select `Equipment`.
+- Select `Open AtragMx`.
 
 #### 3.1.2 Custom key
 
@@ -147,7 +147,18 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx5.webp" width="1400" height="600" alt="Conversion G7/G1 BC" />
 
-### 3.6 Adding AtragMx Presets
+### 3.6 Connecting AtragMx with Vector 21 and DAGR
+
+- Requirement: [Vector]({{ site.baseurl }}/wiki/framework/vector.html) and [DAGR]({{ site.baseurl }}/wiki/framework/dagr.html).
+- Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>.
+- Select `Equipment`.
+- Select `Configure DAGR` and `CONNECT TO` (DOWN and HELP/SEL) `Vector 21`(HELP/SEL).
+- Equip and use the Vector 21 (B key as default).
+- Check target's [slope distance and azimuth]({{ site.baseurl }}/wiki/feature/vector#23-slope-distance-and-azimuth.html) (hold both R and Tab keys as default).
+- Open the [AtragMx properly configured]({{ site.baseurl }}/wiki/feature/atragmx#32-example-with-m14-and-default-762mm-20rnd-mag.html) according to current rifle and ammunition.
+- Open the `Target` column: `Dir of Fire (deg from N)`, `Inclination Angle` and `Target Range (meters)` updated with Vector 21 values.
+
+### 3.7 Adding AtragMx Presets
 
 - [AtragMx Framework]({{ site.baseurl }}/wiki/framework/atragmx.html)
 
