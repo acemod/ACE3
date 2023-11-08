@@ -12,6 +12,7 @@ class CfgPatches {
             "CAStructuresHouse_A_FuelStation",
             "CAStructures_E_Ind_Ind_FuelStation",
             "CAStructures_PMC_FuelStation",
+            "CUP_Buildings_Config",
             "ace_refuel"
         };
         skipWhenMissingDependencies = 1;
