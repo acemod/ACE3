@@ -26,7 +26,7 @@ class Display3DEN {
                 class GVAR(portVALoadouts) {
                     text = CSTRING(portLoadoutsText);
                     picture = QPATHTOEF(common,data\logo_ace3_ca.paa);
-                    action = QUOTE(call DFUNC(portVALoadouts););
+                    action = QUOTE(call DFUNC(portVALoadouts));
                 };
             };
         };

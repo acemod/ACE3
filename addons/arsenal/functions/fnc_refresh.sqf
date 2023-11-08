@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Update current and unique items lists <BOOL> (default: true)
  * 1: Update virtual items list <BOOL> (default: false)
+ * 2: Use panel refresh animation <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -16,8 +17,7 @@
  *
  * Public: Yes
 */
-params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]]];
-
+params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]], ["_animate", false, [false]]];
 TRACE_2("",_updateItems,_updateVirtualItems);
 
 // Don't execute in scheduled environment
@@ -36,6 +36,12 @@ if (_updateItems) then {
 };
 
 private _virtualItems = GVAR(currentBox) getVariable QGVAR(virtualItems);
+
+if (is3DEN) then {
+    _virtualItems = uiNamespace getVariable QGVAR(configItems); // GVAR(currentBox) is nil in 3DEN
+    _animate = true; // CBA frame functions are disabled during preInit
+};
+
 if (isNil "_virtualItems") exitWith {
     [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
     // Delay a frame in case this is running on display open
@@ -53,6 +59,11 @@ if (_updateVirtualItems) then {
 // Don't refresh left panel if in loadout tab
 if (!isNull findDisplay IDD_loadouts_display) exitWith {};
 
+if (!_animate) then {
+    GVAR(refreshing) = true;
+    [{GVAR(refreshing) = false}, nil, 3] call CBA_fnc_execAfterNFrames;
+};
+
 private _display = findDisplay IDD_ace_arsenal;
 
-[_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
+[_display, _display displayCtrl GVAR(currentLeftPanel), _animate] call FUNC(fillLeftPanel);

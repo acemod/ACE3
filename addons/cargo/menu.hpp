@@ -97,7 +97,7 @@ class GVAR(menu) {
             text = CSTRING(unloadObject);
             idc = 12;
             x = "20.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            action = QUOTE([] call FUNC(startUnload););
+            action = QUOTE([] call FUNC(startUnload));
         };
     };
 };

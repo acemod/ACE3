@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Install Python packages
       run: |
         pip3 install wheel
@@ -33,7 +33,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Extract Dependencies
       run: python3 tools/extract_dependencies.py --markdown
