@@ -44,7 +44,7 @@ if (_rags != _prevRags) then {
         _armorScaled = _armorScaled + _itemArmorScaled;
     } forEach _gear;
 
-    _unit setVariable [_var, [_rags, _armor, _armorScaled]];
+    _unit setVariable [_var, [_rags, _armor max 1, _armorScaled max 1]];
 };
 
 [_armor, _armorScaled] // return
