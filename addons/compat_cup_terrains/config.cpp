@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\z\ace\addons\refuel\defines.hpp"
 
 class CfgPatches {
     class ADDON {
