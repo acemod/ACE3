@@ -208,7 +208,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Update the `Target` column and `Done`. Requirement: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
     - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* **[Horus manual p.32]**
         - *Wind takes into account geographic location, season, time of day and obstacles.*
-    - `Wind Direction (clock)`: *[...], wind is always described in terms of where it is coming from.* **[Horus manual p.16]**
+    - `Wind Direction (clock)`: *Wind Direction is expressed in clock points.[...], wind is always described in terms of where it is coming from.* **[Horus manual p.16]**
     - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* **[Horus manual p.33]**
     - `Target Speed`: *Target Speed Assist* **[Horus manual p.21]**
     - `Target Range (meters)`: *Parameter Limits minimum and maximum values: 25 - 3700 meters.* **[Horus manual p.17]**
