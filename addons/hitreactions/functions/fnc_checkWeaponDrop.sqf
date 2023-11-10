@@ -20,7 +20,7 @@
 params ["_surfaceType", "_components", "_position"];
 
 private _didHitArm = _components findAny GVAR(armComponents) isNotEqualTo -1;
-private _didHitGun = _surfaceType isEqualTo "" && _components isEqualTo [];  // Could be potential for edge cases here however couldn't find any from testing.
+private _didHitGun = _surfaceType isEqualTo "" && _components isEqualTo [];  // for potential edge cases
 
 if !(_didHitArm || _didHitGun) exitWith {};
 
