@@ -1,18 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: KJW
- * Checks if unit should drop weapon based on projectile hit info
+ * Checks if the unit should drop their weapon based on projectile hit info.
  *
  * Arguments:
- * 0: surfaceType <STRING>
- * 1: components <ARRAY>
- * 2: position <ARRAY>
+ * 0: Surface type <STRING>
+ * 1: Components <ARRAY>
+ * 2: Position <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["", [], [1,1,1]] call ACE_hitreactions_fnc_checkWeaponDrop
+ * ["", [], [1, 1, 1]] call ace_hitreactions_fnc_checkWeaponDrop
  *
  * Public: No
  */
