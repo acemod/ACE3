@@ -75,12 +75,10 @@ private _hintLMB = LLSTRING(Drop);
 getCursorObjectParams params ["_cursorObject", "", "_distance"];
 
 if (
-    !isNull _cursorObject &&
-    {_distance < MAX_LOAD_DISTANCE} &&
-    {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)} &&
+    !isNull _cursorObject && {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)} &&
     {
         if (_target isKindOf "CAManBase") then {
-            [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat) isNotEqualTo []
+            (_distance <= MAX_LOAD_DISTANCE_MAN) && {[_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat) isNotEqualTo []}
         } else {
             ["ace_cargo"] call EFUNC(common,isModLoaded) &&
             {[_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)}
