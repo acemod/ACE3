@@ -45,7 +45,7 @@ private _action = [QGVAR(Refuel),
 
 // Add pickup
 _action = [QGVAR(PickUpNozzle),
-    localize LSTRING(TakeNozzle),
+    localize LSTRING(TakeFuelCanister),
     QPATHTOF(ui\icon_refuel_interact.paa),
     {[_player, _target] call FUNC(takeNozzle)},
     {[_player, _target] call FUNC(canTakeNozzle)},
@@ -105,7 +105,7 @@ _action = [QGVAR(TurnOff),
 
 // Add disconnect
 _action = [QGVAR(Disconnect),
-    localize LSTRING(Disconnect),
+    localize LSTRING(DisconnectFuelCanister),
     QPATHTOF(ui\icon_refuel_interact.paa),
     {[_player, _target] call FUNC(disconnect)},
     {[_player, _target] call FUNC(canDisconnect)},

@@ -77,11 +77,11 @@ params [
             [_source, "blockEngine", "ACE_Refuel", true] call EFUNC(common,statusEffect_set);
             _source setVariable [QGVAR(isConnected), true, true];
             _source setVariable [QGVAR(ownedNozzle), _nozzle, true];
-            
+
             // Prevent moving the fuel source while the hose is out
             _source setVariable [QGVAR(canCarryLast), _source getVariable [QEGVAR(dragging,canCarry), false], true];
             _source setVariable [QGVAR(canDragLast),  _source getVariable [QEGVAR(dragging,canDrag),  false], true];
-            
+
             _source setVariable [QEGVAR(dragging,canCarry), false, true];
             _source setVariable [QEGVAR(dragging,canDrag), false, true];
         };
@@ -100,7 +100,7 @@ params [
         [_unit, _nozzle] call FUNC(startNozzleInHandsPFH);
     },
     {},
-    localize LSTRING(TakeNozzleAction),
+    localize ([LSTRING(TakeNozzleAction), LSTRING(TakeFuelCanisterAction)] select (_object getVariable [QGVAR(jerryCan), false])),
     {true},
     [INTERACT_EXCEPTIONS_REFUELING]
 ] call EFUNC(common,progressBar);
