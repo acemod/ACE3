@@ -18,7 +18,7 @@
 
 params ["_player", "_vehicle"];
 
-private _sidePlayer = side _player;
+private _sidePlayer = side group _player;
 
 ((crew _vehicle) select {_x != _player && {!unitIsUAV _x}}) findIf { // ignore player and UAV units
     // Units must all be unconscious, captive or friendly (side group is used in case unit is captive/unconscious) for actions to show up
