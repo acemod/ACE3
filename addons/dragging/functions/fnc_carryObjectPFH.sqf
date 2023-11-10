@@ -81,6 +81,7 @@ if (
             (_distance <= MAX_LOAD_DISTANCE_MAN) && {[_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat) isNotEqualTo []}
         } else {
             ["ace_cargo"] call EFUNC(common,isModLoaded) &&
+            {EGVAR(cargo,enable)} &&
             {[_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)}
         }
     }
