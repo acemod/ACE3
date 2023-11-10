@@ -15,28 +15,23 @@ version:
 ## 1. Config Values
 ### 1.1 Make item attachable
 
-An item can be added to ACEs "Attach to Vehicle" and "Attach to Self" system by adding the following config value to the ``CfgWeapons`` or ``CfgMagazines`` configs:
+An item can be added to the ACE Attach framework by adding the ``ACE_attachable``` property to a class in ``CfgWeapons`` or ``CfgMagazines``. The value must be the classname of a valid class in ``CfgVehicles``:
 ```cpp
 class CfgWeapons {
     class attach_item: CBA_MiscItem {
         ACE_attachable = "new_attachable_item_classname";
     };
 };
-```
 
-The classname in ``ACE_attachable`` has to match a config value in ``CfgVehicle`` which to be able to spawn the physical item in the world. Example:
-```cpp
 class CfgVehicles {
     class ThingX;
-	// The object that gets created and attached in ACE
     class new_attachable_item_classname: ThingX {
-        scope = HIDDEN;
+        scope = 1; // Should be 1 (private) or 2 (public), scope 0 will cause errors on object creation
         displayName = "New ACE attachable item";
-        model = QPATHTOF(data\model_file.p3d);
+        model = "\path\to\my\model.p3d";
 		vehicleClass = "";
     };
 };
-```
 
 ### 1.2 Define attach orientation for non-symmetric items
 In the case the item needs to have a particular orientation when attached, add the config value: ``ace_attach_orientation`` which is an array describing the ``roll`` and ``yaw`` orientation of the object.  
@@ -53,13 +48,11 @@ class CfgWeapons {
 ```
 
 ## 2. Event Handlers
-### 2.1 Attach Events   
-Attach system have certain events for attaching and detatching you can listen to:  
-
+### 2.1 Listenable Events   
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
-|`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle
-|`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle.
+|`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | Called after an item is attached to an object. `_temporary` flag means the item is being re-attached (after a unit is exiting a vehicle, for example)
+|`ace_attach_detaching` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | Called just before an item is detached/removed from an object. `_temporary` flag means the item will be reattached later, see above.
 
 
 ### 2.2 Init event for newly attached objects
