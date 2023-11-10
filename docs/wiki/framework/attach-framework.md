@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Attach Framework
-description: Explains how to add items to ACE's Attach system.
+description: Explains how to add items to the ACE Attach Framework.
 group: framework
 order: 0
 parent: wiki
