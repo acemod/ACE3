@@ -82,4 +82,4 @@ if (GVAR(interactionParadrop)) then {
     } forEach (_vehicle getVariable [QGVAR(loaded), []]);
 
     _label ctrlSetText format [LLSTRING(labelSpace), (_vehicle call FUNC(getCargoSpaceLeft)) max 0];
-}, 0.25, GVAR(interactionVehicle)] call CBA_fnc_addPerFrameHandler;
+}, 0, GVAR(interactionVehicle)] call CBA_fnc_addPerFrameHandler;
