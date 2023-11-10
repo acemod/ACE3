@@ -115,9 +115,8 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 private _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
                 private _angle = asin (_dir select 2);
 
-                // default for current ACE attach behaviour is 90deg rotation in yaw, so setting defaults to that to not break backwards compatibility
+                // Tranform yaw/roll angle to vector, defaults are pre-#9623 behavior
                 _itemModelOrientation params [["_roll", 0], ["_yaw", 90]];
-                // do rotation for how the model should be oriented in roll and yaw, and then in pitch for the view angle
                 private _dirAndUp = [[[0,1,0], [0,0,1]], _yaw, 0, _roll] call BIS_fnc_transformVectorDirAndUp;
                 private _dirAndUp = [_dirAndUp, 0, _angle, 0] call BIS_fnc_transformVectorDirAndUp;
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp _dirAndUp;
