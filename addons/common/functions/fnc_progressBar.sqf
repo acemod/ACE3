@@ -32,7 +32,7 @@ closeDialog 0;
 if (_dialog) then {
     createDialog QGVAR(ProgressBar_Dialog);
 } else {
-    QGVAR(progressBarDisplay) cutRsc [QGVAR(ProgressBar_Display), "PLAIN NOFADE", 0];
+    QGVAR(progressBarDisplay) cutRsc [QGVAR(ProgressBar_Display), "PLAIN"];
 };
 
 private _display = uiNamespace getVariable QGVAR(dlgProgress);
@@ -46,7 +46,7 @@ if (_dialog) then {
     _map ctrlMapCursor ["", QGVAR(blank)];
 } else { // Add key handler for ESC to cancel
     [DIK_ESCAPE, [false, false, false], {
-        QGVAR(progressBarDisplay) cutText ["", "PLAIN NOFADE", 0];
+        QGVAR(progressBarDisplay) cutText ["", "PLAIN"];
         [QGVAR(progressBarKeyHandler), "keydown"] call CBA_fnc_removeKeyHandler;
         true
     }, "keydown", QGVAR(progressBarKeyHandler)] call CBA_fnc_addKeyHandler;
@@ -104,7 +104,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
             if (_dialog) then {
                 closeDialog 0;
             } else {
-                QGVAR(progressBarDisplay) cutText ["", "PLAIN NOFADE", 0];
+                QGVAR(progressBarDisplay) cutText ["", "PLAIN"];
             };
         };
 
