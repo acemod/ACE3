@@ -79,7 +79,7 @@ if !(_target isKindOf "CAManBase") then {
 
 // Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
 if (_target getVariable [QGVAR(isUAV), false]) then {
-    [{  
+    [{
         params ["_target"];
         if (!alive _target) exitWith {};
         TRACE_2("restoring uav crew",_target,getPosASL _target);
@@ -97,11 +97,13 @@ if (_mass != 0) then {
 // Reset temp direction
 _target setVariable [QGVAR(carryDirection_temp), nil];
 
-private _cursorObject = cursorObject;
+getCursorObjectParams params ["_cursorObject", "", "_distance"];
 
 // Try loading into vehicle
 if (_tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)}) then {
     if (_target isKindOf "CAManBase") then {
+        if (_distance > MAX_LOAD_DISTANCE_MAN) exitWith {};
+
         private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
 
         if ([_cursorObject] isEqualTo _vehicles) then {
