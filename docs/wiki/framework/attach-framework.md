@@ -55,35 +55,5 @@ class CfgWeapons {
 |`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Called after an item is attached to an object. `_temporary` flag means the item is being re-attached (after a unit is exiting a vehicle, for example)
 |`ace_attach_detaching` | [_attachedObject, _itemClassname, _temporary] | Local | Called just before an item is detached/removed from an object. `_temporary` flag means the item will be reattached later, see above.
 
-
-### 2.2 Init event for newly attached objects
-If you wish to listen to the ``postInit`` event of the physical object that gets attached after its created and attached, use ``CBA_Extended_EventHandlers`` in the ``CfgVehicles`` config of your new item:
-```cpp
-class CBA_Extended_EventHandlers_base;
-class CfgVehicles {
-    class ThingX;
-	// The object that gets created and attached in ACE
-    class new_attachable_item_classname: ThingX {
-        scope = HIDDEN;
-        displayName = "New ACE attachable item";
-        model = QPATHTOF(data\model_file.p3d);
-		vehicleClass = "";
-        
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
-    };
-};
-```
-You can then register the listener in ``CfgEventHandlers``:
-```cpp
-class Extended_InitPost_Eventhandlers {
-	class new_attachable_item_classname {
-	 	init = QUOTE(_this call FUNC(initEvent));
-	};
-};
-```
-
-Make sure that the classname you are listening to is the one defined in ``CfgVehicles`` as this is the physical item that gets created when attached.   
-
-**NOTE:** If attaching the object to yourself, as a player, then the init event will be rerun everytime you leave a vehicle, as ACE Attach system will remove and re-add player attached items whenever they enter and leave vehicles.   
+### 2.2 Other events for attached objects
+Use [CBA Extended Event Handlers](https://github.com/CBATeam/CBA_A3/wiki/Extended-Event-Handlers-(new)). Note that objects attached to units will be deleted/created upon entering/exiting vehicles and should be handled accordingly.
