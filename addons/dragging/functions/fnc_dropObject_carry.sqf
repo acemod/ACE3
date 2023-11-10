@@ -114,6 +114,7 @@ if (_tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, ["isNotCarryi
     } else {
         if (
             ["ace_cargo"] call EFUNC(common,isModLoaded) &&
+            {EGVAR(cargo,enable)} &&
             {[_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)}
         ) then {
             [_unit, _target, _cursorObject] call EFUNC(cargo,startLoadIn);
