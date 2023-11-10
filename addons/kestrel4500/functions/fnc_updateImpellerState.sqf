@@ -10,6 +10,7 @@
  * None
  *
  * Example:
+ * call ace_kestrel4500_fnc_updateImpellerState
  *
  * Public: No
  */
