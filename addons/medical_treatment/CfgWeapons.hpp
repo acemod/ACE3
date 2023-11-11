@@ -31,7 +31,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Bandage_Basic_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_packingBandage: ACE_ItemCore {
@@ -44,7 +44,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Packing_Bandage_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_elasticBandage: ACE_ItemCore {
@@ -57,7 +57,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Bandage_Elastic_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_tourniquet: ACE_ItemCore {
@@ -150,7 +150,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Plasma_IV_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 10;
+            mass = 7;
         };
     };
     class ACE_plasmaIV_500: ACE_plasmaIV {
@@ -158,7 +158,7 @@ class CfgWeapons {
         model = QPATHTOF(data\IVBag_500ml.p3d);
         hiddenSelectionsTextures[] = {QPATHTOF(data\IVBag_plasma_500ml_ca.paa)};
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
+            mass = 4;
         };
     };
     class ACE_plasmaIV_250: ACE_plasmaIV {
@@ -181,7 +181,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Blood_IV_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 10;
+            mass = 7;
         };
     };
     class ACE_bloodIV_500: ACE_bloodIV {
@@ -189,7 +189,7 @@ class CfgWeapons {
         model = QPATHTOF(data\IVBag_500ml.p3d);
         hiddenSelectionsTextures[] = {QPATHTOF(data\IVBag_blood_500ml_ca.paa)};
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
+            mass = 4;
         };
     };
     class ACE_bloodIV_250: ACE_bloodIV {
@@ -212,7 +212,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Saline_IV_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 10;
+            mass = 7;
         };
     };
     class ACE_salineIV_500: ACE_salineIV {
@@ -220,7 +220,7 @@ class CfgWeapons {
         model = QPATHTOF(data\IVBag_500ml.p3d);
         hiddenSelectionsTextures[] = {QPATHTOF(data\IVBag_saline_500ml_ca.paa)};
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
+            mass = 4;
         };
     };
     class ACE_salineIV_250: ACE_salineIV {
@@ -241,7 +241,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(QuikClot_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.5;
         };
     };
     class ACE_personalAidKit: ACE_ItemCore {
