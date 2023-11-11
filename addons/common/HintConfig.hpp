@@ -11,7 +11,7 @@ class GVAR(debug_structuredText): ctrlStructuredText {
 
 class RscTitles {
     class GVAR(ProgressBar_Display): GVAR(ProgressBar_Dialog) {
-        duration = 1e11;
+        duration = 1e11; // forever, essentially
         fadeIn = 0;
         fadeOut = 0;
     };
