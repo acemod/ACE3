@@ -241,7 +241,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(QuikClot_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 0.5;
+            mass = 0.6;
         };
     };
     class ACE_personalAidKit: ACE_ItemCore {
