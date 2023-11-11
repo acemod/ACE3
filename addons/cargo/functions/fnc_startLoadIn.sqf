@@ -62,14 +62,20 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
         },
         {
             TRACE_1("load fail",_this);
-            private _item = _this select 0 select 0;
+            (_this select 0) params ["_item", "_vehicle"];
 
             [objNull, _item, true] call EFUNC(common,claim);
 
             // Fix cancelling loading a carried item
             if (!isNull attachedTo _item) then {
                 detach _item;
-                [{_this awake true}, _item] call CBA_fnc_execNextFrame;
+
+                // Prevent coliisions between item and vehicle
+                [QEGVAR(common,fixCollision), _vehicle, _vehicle] call CBA_fnc_targetEvent;
+                [QEGVAR(common,fixCollision), _item, _item] call CBA_fnc_targetEvent;
+
+                [QEGVAR(common,fixPosition), _item, _item] call CBA_fnc_targetEvent;
+                [QEGVAR(common,fixFloating), _item, _item] call CBA_fnc_targetEvent;
             };
         },
         LLSTRING(loadingItem),
@@ -82,9 +88,17 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
     true // return
 } else {
     [[LSTRING(loadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
+
+    // Fix cancelling loading a carried item
     if (!isNull attachedTo _item) then {
         detach _item;
-        _item awake true;
+
+        // Prevent coliisions between item and vehicle
+        [QEGVAR(common,fixCollision), _vehicle, _vehicle] call CBA_fnc_targetEvent;
+        [QEGVAR(common,fixCollision), _item, _item] call CBA_fnc_targetEvent;
+
+        [QEGVAR(common,fixPosition), _item, _item] call CBA_fnc_targetEvent;
+        [QEGVAR(common,fixFloating), _item, _item] call CBA_fnc_targetEvent;
     };
 
     false // return

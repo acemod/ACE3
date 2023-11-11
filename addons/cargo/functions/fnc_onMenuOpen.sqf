@@ -35,6 +35,7 @@ if (GVAR(interactionParadrop)) then {
     if (isNil "_display") exitWith {
         GVAR(interactionVehicle) = nil;
         GVAR(interactionParadrop) = nil;
+
         _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
@@ -46,8 +47,10 @@ if (GVAR(interactionParadrop)) then {
         {(([ACE_player, _vehicle] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE) && {(vehicle ACE_player) != _vehicle}}
     ) exitWith {
         closeDialog 0;
+
         GVAR(interactionVehicle) = nil;
         GVAR(interactionParadrop) = nil;
+
         _pfhID call CBA_fnc_removePerFrameHandler;
     };
 

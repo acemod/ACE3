@@ -80,7 +80,7 @@ if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
         // Close cargo menu
         closeDialog 0;
 
-        ["ace_unloadCargo", [_item, GVAR(interactionVehicle), _unit]] call CBA_fnc_localEvent
+        ["ace_unloadCargo", [_item, GVAR(interactionVehicle), _unit]] call CBA_fnc_localEvent;
     };
 
     [
