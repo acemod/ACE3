@@ -20,15 +20,18 @@
 
 params ["_vehicles", "_statement", "_target"];
 
+_vehicles = _vehicles apply {[_x distanceSqr _target, _x]};
+_vehicles sort true;
+
 _vehicles apply {
-    private _name = getText ((configOf _x) >> "displayName");
-    private _ownerName = [_x, true] call EFUNC(common,getName);
+    private _name = getText ((configOf (_x select 1)) >> "displayName");
+    private _ownerName = [_x select 1, true] call EFUNC(common,getName);
     if ("" != _ownerName) then {
         _name = format ["%1 (%2)", _name, _ownerName];
     } else {
-        _name = format ["%1 (%2m)", _name, (ACE_player distance _x) toFixed 1];
+        _name = format ["%1 (%2m)", _name, sqrt (_x select 0) toFixed 1];
     };
-    private _icon = [_x] call EFUNC(common,getVehicleIcon);
-    private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+    private _icon = [_x select 1] call EFUNC(common,getVehicleIcon);
+    private _action = [format ["%1", _x select 1], _name, _icon, _statement, {true}, {}, _x select 1] call EFUNC(interact_menu,createAction);
     [_action, [], _target]
 }
