@@ -23,10 +23,14 @@ TRACE_3("params",_item,_vehicle,_amount);
 // Get config sensitive case name
 if (_item isEqualType "") then {
     _item = _item call EFUNC(common,getConfigName);
-};
 
-for "_i" from 1 to _amount do {
+    for "_i" from 1 to _amount do {
+        [_item, _vehicle] call FUNC(loadItem);
+    };
+} else {
     [_item, _vehicle] call FUNC(loadItem);
+
+    _item = typeOf _item;
 };
 
 // Invoke listenable event
