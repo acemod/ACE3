@@ -62,8 +62,15 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
         },
         {
             TRACE_1("load fail",_this);
+            private _item = _this select 0 select 0;
 
-            [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
+            [objNull, _item, true] call EFUNC(common,claim);
+
+            // Fix cancelling loading a carried item
+            if (!isNull attachedTo _item) then {
+                detach _item;
+                [{_this awake true}, _item] call CBA_fnc_execNextFrame;
+            };
         },
         LLSTRING(loadingItem),
         {
@@ -75,6 +82,10 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
     true // return
 } else {
     [[LSTRING(loadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
+    if (!isNull attachedTo _item) then {
+        detach _item;
+        _item awake true;
+    };
 
     false // return
 };
