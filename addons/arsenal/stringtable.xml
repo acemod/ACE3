@@ -1602,6 +1602,7 @@
         <Key ID="STR_ACE_Arsenal_statIlluminators">
             <English>Illuminators</English>
             <French>Illuminateurs</French>
+            <Korean>조명</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
@@ -1642,6 +1643,9 @@
             <German>Wechseln Sie zwischen der Anzeige aller Elemente oder Ihrer Favoriten.\nDoppelklicken Sie bei gedrückter Umschalttaste, um ein Element hinzuzufügen oder zu entfernen.</German>
             <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
             <French>Change entre l'affichage de tous les éléments ou de vos favoris.\nDouble-cliquez en maintenant la touche Maj enfoncée pour ajouter ou supprimer un élément.</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonSearchTooltip">
+            <English>Search\nCTRL + Click to enable live results</English>
         </Key>
     </Package>
 </Project>

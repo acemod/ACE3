@@ -9,7 +9,7 @@
  * 1: Direction vector (will be normalized) <ARRAY>
  * 2: Seeker FOV in degrees <NUMBER>
  * 3: Seeker max distance in meters <NUMBER>
- * 4: Seeker wavelength sensitivity range, [1064,1064] is common <ARRAY>
+ * 4: Seeker wavelength sensitivity range, [1550,1550] is common <ARRAY>
  * 5: Seeker laser code. <NUMBER>
  * 6: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
  * 7: Ignore 2 (e.g. Attached object) <OBJECT> (default: objNull)
@@ -19,7 +19,7 @@
  * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found <ARRAY>
  *
  * Example:
- * [getPosASL player, [0,1,0], 90, [1064, 1064], 1688, player] call ace_laser_fnc_seekerFindLaserSpot
+ * [getPosASL player, [0,1,0], 90, [1550, 1550], 1111, player] call ace_laser_fnc_seekerFindLaserSpot
  *
  * Public: No
  */

@@ -60,7 +60,7 @@ if (_state) then {
                 };
 
                 private _ctrl = _dlg displayctrl 103;
-                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput);)];
+                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput))];
                 _ctrl ctrlEnable true;
                 _ctrl ctrlSetText "ABORT";
                 _ctrl ctrlSetTooltip "Abort.";
@@ -69,7 +69,7 @@ if (_state) then {
                 if (["ace_medical"] call FUNC(isModLoaded)) then {
                     _ctrl ctrlSetEventHandler ["buttonClick", 'closeDialog 0; [player, "respawn_button"] call EFUNC(medical_status,setDead); [false] call DFUNC(disableUserInput);'];
                 } else {
-                    _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
+                    _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput))];
                 };
                 _ctrl ctrlEnable ((getMissionConfigValue ["respawnButton", -1]) != 0); // handles 3den attribute or description.ext
                 _ctrl ctrlSetText localize "$str_3den_multiplayer_attributecategory_respawn_displayname";

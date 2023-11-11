@@ -275,6 +275,7 @@
             <Turkish>Araç türleri için görünümü koru</Turkish>
             <Korean>차량 타입에 따른 시야 정보 저장</Korean>
             <Spanish>Preservar vista para los tipos de vehículos</Spanish>
+            <French>Conserver la vue pour les types de véhicules</French>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewDesc">
             <English>Switch view on vehicle change to last used in this vehicle type (Requires Mode: Disabled)</English>
@@ -287,6 +288,7 @@
             <Turkish>Araçlar için en son kullanılan bakış  türünü kaydet.</Turkish>
             <Korean>해당 차량 타입에서 마지막으로 사용했던 시야로 설정하여 봅니다 (모드 - 사용 안함 필요)</Korean>
             <Spanish>Cambiar vista en el cambio de vehículo hacia la última usada en ese tipo de vehículo (Requiere Modo: Deshabilitado)</Spanish>
+            <French>Lors d'un changement de véhicule, change la vue pour la dernière utilisée dans ce type de véhicule (Mod requis : désactivé).</French>
         </Key>
     </Package>
 </Project>

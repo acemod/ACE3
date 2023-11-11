@@ -10,7 +10,7 @@ Brett Mayson
 bux578 <github@jonathandavid.de>
 commy2
 Dahlgren
-tcvm <baileydanyluk@gmail.com>
+Drofseh <drofseh.arma@gmail.com>
 esteldunedain <nicolas.d.badano@gmail.com>
 Felix Wiegand <koffeinflummi@gmail.com>
 Garth "L-H" de Wet <garthofhearts@gmail.com>
@@ -18,14 +18,17 @@ Giallustio
 Glowbal
 Grim
 Janus
+johnb43
 jokoho482 <jokoho482@gmail.com>
 Jonpas <jonpas33@gmail.com>
 Kieran
 kymckay
 mharis001 <mhariszakar@gmail.com>
+MikeMF
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
 Ruthberg <ulteq@web.de>
+tcvm <baileydanyluk@gmail.com>
 tpM
 veteran29
 ViperMaul
@@ -79,7 +82,6 @@ diwako
 dixon13 <dixonbegay@gmail.com>
 Drift_91
 Drill <drill87@gmail.com>
-Drofseh <drofseh@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
 Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Eclipser <jms@modeemi.fi>
@@ -135,7 +137,6 @@ MarcBook
 meat <p.humberdroz@gmail.com>
 Michail Nikolaev
 MikeMatrix <m.braun92@gmail.com>
-MikeMF
 mjc4wilton <mjc4wilton@gmail.com>
 Mysteryjuju
 nic547 <nic547@outlook.com>
