@@ -25,6 +25,8 @@ _vehicles apply {
     private _ownerName = [_x, true] call EFUNC(common,getName);
     if ("" != _ownerName) then {
         _name = format ["%1 (%2)", _name, _ownerName];
+    } else {
+        _name = format ["%1 (%2m)", _name, (ACE_player distance _x) toFixed 1];
     };
     private _icon = [_x] call EFUNC(common,getVehicleIcon);
     private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
