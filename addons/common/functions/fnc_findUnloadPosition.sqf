@@ -62,7 +62,7 @@ if (_cargo isKindOf "CAManBase") then {
     };
 };
 
-if (isNull _theUnloader) then {_theUnloader = _vehicle;};
+if (isNull _theUnloader || {_theUnloader in _vehicle}) then {_theUnloader = _vehicle;};
 
 //Ideal unload pos is halfway between unloader and vehicle (at the unloader's height)
 private _originASL = ((getPosASL _theUnloader) vectorAdd (getPosASL _vehicle)) vectorMultiply 0.5;
