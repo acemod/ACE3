@@ -37,13 +37,12 @@ if (!hasInterface) exitWith {};
             handgunWeapon _unit == "" && primaryWeapon _unit == "" || {(_unit distance (_unit findNearestEnemy _unit)) > GVAR(safePickupDistance)}
         },
         {
-            params ["_thrownGun", "_weapon", "_unit"];
             [
                 {
                     params ["_thrownGun", "_weapon", "_unit"];
                     _unit action ["TakeWeapon", _thrownGun, _weapon];
                 },
-                [_thrownGun, _weapon, _unit],
+                _this,
                 random [1,2,3]
             ] call CBA_fnc_waitAndExecute;
         },
