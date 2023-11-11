@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 
 ["ace_firedNonPlayer", {
-    private _roll = random 1;
-    if !(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit)) exitWith {};
+    if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
     
     params ["", "", "", "", "", "", "_projectile"];
     
@@ -13,8 +12,7 @@
 }] call CBA_fnc_addEventHandler;
 
 ["ace_firedPlayer", {
-    private _roll = random 1;
-    if !(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit)) exitWith {};
+    if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
     
     params ["", "", "", "", "", "", "_projectile"];
     
