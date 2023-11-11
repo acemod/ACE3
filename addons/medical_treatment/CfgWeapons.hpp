@@ -279,7 +279,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Suture_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.1;
         };
     };
     class ACE_bodyBag: ACE_ItemCore {
