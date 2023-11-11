@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
-
 ["ace_firedNonPlayer", {
     params ["", "", "", "", "", "", "_projectile"];
     private _roll = random 1;
