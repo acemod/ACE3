@@ -19,10 +19,14 @@
 
 params ["_surfaceType", "_components", "_position"];
 
+private _roll = random 1;
+private _passedArm = _roll < GVAR(weaponDropChanceArmHit);
+private _passedGun = _roll < GVAR(weaponDropChanceGunHit);
+
 private _didHitArm = _components findAny GVAR(armComponents) != -1;
 private _didHitGun = _surfaceType isEqualTo "" && _components isEqualTo [];  // for potential edge cases
 
-if !(_didHitArm || _didHitGun) exitWith {};
+if !(_didHitArm && _passedArm || _didHitGun && _passedGun) exitWith {};
 
 private _unit = nearestObject [_position, "CAManBase"];
 private _weapon = currentWeapon _unit;
