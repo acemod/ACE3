@@ -1,11 +1,13 @@
 #include "script_component.hpp"
 
 ["ace_firedNonPlayer", {
-    params ["", "", "", "", "", "", "_projectile"];
     private _roll = random 1;
-    if (!(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit))) exitWith {};
+    if !(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit)) exitWith {};
+    
+    params ["", "", "", "", "", "", "_projectile"];
+    
     _projectile addEventHandler ["HitPart", {
-        params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
+        params ["", "", "", "_pos", "", "", "_components", "" ,"_surfaceType"];
         [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
     }];
 }] call CBA_fnc_addEventHandler;
@@ -13,11 +15,13 @@
 if (!hasInterface) exitWith {};
 
 ["ace_firedPlayer", {
-    params ["", "", "", "", "", "", "_projectile"];
     private _roll = random 1;
-    if (!(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit))) exitWith {};
+    if !(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit)) exitWith {};
+    
+    params ["", "", "", "", "", "", "_projectile"];
+    
     _projectile addEventHandler ["HitPart", { 
-        params ["_projectile", "_hitEntity", "_projectileOwner", "_pos", "_velocity", "_normal", "_components", "_radius" ,"_surfaceType"];
+       params ["", "", "", "_pos", "", "", "_components", "" ,"_surfaceType"];
         [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
     }];
 }] call CBA_fnc_addEventHandler;
