@@ -28,7 +28,7 @@ if (_item isEqualType objNull && {{alive _x && {getText (configOf _x >> "simulat
 
 private _itemSize = [_item] call FUNC(getSizeItem);
 private _validItem = false;
-if (_item  isEqualType "") then {
+if (_item isEqualType "") then {
     _validItem =
         isClass (configFile >> "CfgVehicles" >> _item) &&
         {getNumber (configFile >> "CfgVehicles" >> _item >> QGVAR(canLoad)) == 1};

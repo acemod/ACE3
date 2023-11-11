@@ -111,7 +111,7 @@ class FunctionFile:
 
         # Process example
         if example_raw:
-            self.example = example_raw.strip()
+            self.example = self.process_example(example_raw)
 
         return self.errors
 
@@ -220,6 +220,19 @@ class FunctionFile:
             return ["Malformed", ""]
 
         return [return_name, return_types]
+
+    def process_example(self, raw):
+        return_value = raw.strip()
+        if return_value == "None":
+            return return_value
+
+        path_match = re.match(r".*addons.(.*).functions.(.*).sqf", self.path)
+        expected_func = f"ace_{path_match.group(1)}_{path_match.group(2)}"
+        if (not expected_func.lower() in return_value.lower()) and ((not return_value.startswith("Handled by")) and (not return_value.startswith("Called By"))):
+            self.feedback(f"Malformed example {return_value} should contain func {expected_func}", 2)
+
+        return return_value
+
 
     def document(self, component):
         str_list = []

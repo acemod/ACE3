@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [bob1, bob2] call ACE_captives_fnc_handlePlayerChange
+ * [bob1, bob2] call ACE_captives_fnc_handlePlayerChanged
  *
  * Public: No
  */

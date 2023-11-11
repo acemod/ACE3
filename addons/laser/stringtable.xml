@@ -125,6 +125,7 @@
             <Polish>Laserowe Śledzenie Punktu: Wł.</Polish>
             <German>Laserziel Verfolgung: An</German>
             <Korean>레이저 스팟 추적기: 켬</Korean>
+            <French>Traqueur laser : activé</French>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOff">
             <English>Laser Spot Tracker: Off</English>
@@ -132,6 +133,7 @@
             <Polish>Laserowe Śledzenie Punktu: Wył.</Polish>
             <German>Laserziel Verfolgung: Aus</German>
             <Korean>레이저 스팟 추적기: 끔</Korean>
+            <French>Traqueur laser : désactivé</French>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>
@@ -142,6 +144,7 @@
             <Russian>Отображать лазер на карте</Russian>
             <Spanish>Dibujar láser en mapa</Spanish>
             <German>Laser auf Karte zeichnen</German>
+            <French>Dessiner le laser sur la carte</French>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap_tooltip">
             <English>Active laser designator's position will be drawn on the map</English>
@@ -152,6 +155,7 @@
             <Russian>Точка, куда светит активный лазер, будет указана на карте</Russian>
             <Spanish>La posición del designador láser activo será dibujada en el mapa</Spanish>
             <German>Die Position des aktiven Lasermarkierers wird auf der Karte eingezeichnet</German>
+            <French>Active la position du désignateur laser sur la carte.</French>
         </Key>
     </Package>
 </Project>

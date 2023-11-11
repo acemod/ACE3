@@ -77,9 +77,14 @@ if !(_target isKindOf "CAManBase") then {
     [QEGVAR(common,fixFloating), _target, _target] call CBA_fnc_targetEvent;
 };
 
-// Recreate UAV crew
+// Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
 if (_target getVariable [QGVAR(isUAV), false]) then {
-    createVehicleCrew _target;
+    [{
+        params ["_target"];
+        if (!alive _target) exitWith {};
+        TRACE_2("restoring uav crew",_target,getPosASL _target);
+        createVehicleCrew _target;
+    }, [_target]] call CBA_fnc_execNextFrame;
 };
 
 // Reset mass
@@ -92,11 +97,13 @@ if (_mass != 0) then {
 // Reset temp direction
 _target setVariable [QGVAR(carryDirection_temp), nil];
 
-private _cursorObject = cursorObject;
+getCursorObjectParams params ["_cursorObject", "", "_distance"];
 
 // Try loading into vehicle
 if (_tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)}) then {
     if (_target isKindOf "CAManBase") then {
+        if (_distance > MAX_LOAD_DISTANCE_MAN) exitWith {};
+
         private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
 
         if ([_cursorObject] isEqualTo _vehicles) then {
@@ -109,6 +116,7 @@ if (_tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, ["isNotCarryi
     } else {
         if (
             ["ace_cargo"] call EFUNC(common,isModLoaded) &&
+            {EGVAR(cargo,enable)} &&
             {[_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)}
         ) then {
             [_unit, _target, _cursorObject] call EFUNC(cargo,startLoadIn);

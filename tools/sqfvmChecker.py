@@ -2,8 +2,9 @@ import os
 import sys
 import subprocess
 import concurrent.futures
+import tomllib
 
-addon_base_path = os.path.dirname(os.getcwd())
+addon_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 files_to_ignore_lower = [
     x.lower() for x in ["initSettings.sqf", "initKeybinds.sqf", "XEH_PREP.sqf"]
@@ -26,22 +27,14 @@ def get_files_to_process(basePath):
                 if file.lower() in files_to_ignore_lower:
                     continue
                 skipPreprocessing = False
-                addonTomlPath = os.path.join(root, "addon.toml")
-                if os.path.isfile(addonTomlPath):
-                    with open(addonTomlPath, "r") as f:
-                        tomlFile = f.read()
-                        if "preprocess = false" in tomlFile:
-                            print("'preprocess = false' not supported")
-                            raise
-                        skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
-                addonTomlPath = os.path.join(os.path.dirname(root), "addon.toml")
-                if os.path.isfile(addonTomlPath):
-                    with open(addonTomlPath, "r") as f:
-                        tomlFile = f.read()
-                        if "preprocess = false" in tomlFile:
-                            print("'preprocess = false' not supported")
-                            raise
-                        skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
+                for addonTomlPath in [os.path.join(root, "addon.toml"), os.path.join(os.path.dirname(root), "addon.toml")]:
+                    if os.path.isfile(addonTomlPath):
+                        with open(addonTomlPath, "rb") as f:
+                            tomlFile = tomllib.load(f)
+                            try:
+                                skipPreprocessing = tomlFile.get('tools')['sqfvm_skipConfigChecks']
+                            except:
+                                pass
                 if file == "config.cpp" and skipPreprocessing:
                     continue  # ignore configs with __has_include
                 filePath = os.path.join(root, file)
@@ -49,7 +42,7 @@ def get_files_to_process(basePath):
     return arma_files
 
 
-def process_file(filePath, skipA3Warnings=True):
+def process_file(filePath, skipA3Warnings=True, skipPragmaHemtt=True):
     with open(filePath, "r", encoding="utf-8", errors="ignore") as file:
         content = file.read()
         if content.startswith("//pragma SKIP_COMPILE"):
@@ -78,10 +71,8 @@ def process_file(filePath, skipA3Warnings=True):
             if line.startswith("[ERR]"):
                 fileHasError = True
             if not (
-                skipA3Warnings
-                and line.startswith("[WRN]")
-                and ("a3/" in line)
-                and (("Unexpected IFDEF" in line) or ("defined twice" in line))
+                (skipA3Warnings and line.startswith("[WRN]") and ("a3/" in line) and (("Unexpected IFDEF" in line) or ("defined twice" in line)))
+                or (skipPragmaHemtt and line.startswith("[WRN]") and ("Unknown pragma instruction 'hemtt'" in line))
             ):
                 print("  {}".format(line))
     return fileHasError

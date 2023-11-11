@@ -500,6 +500,7 @@
             <Japanese>荷降ろし後の運搬</Japanese>
             <Polish>Niesienie Po Rozładowaniu</Polish>
             <German>Nach dem Entladen tragen</German>
+            <French>Porter après déchargement</French>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
             <English>Controls whether cargo items are carried or dragged after unloading.</English>
@@ -509,6 +510,7 @@
             <Japanese>荷降ろし後、貨物アイテムを運ぶか引きずるかを制御する。</Japanese>
             <Polish>Kontroluje, czy przedmioty z ładunku są przenoszone lub ciągnięte po ich wyładowaniu.</Polish>
             <German>Steuert, ob Objekte nach dem Entladen getragen oder gezogen werden.</German>
+            <French>Active si les éléments de cargaison sont portés ou traînés après le déchargement.</French>
         </Key>
     </Package>
 </Project>

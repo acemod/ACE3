@@ -424,7 +424,7 @@ class ADDON {
             };
         };
 
-        class QuikClot: fieldDressing {
+        class QuikClot: FieldDressing {
             class Abrasion {
                 effectiveness = 2;
                 reopeningChance = 0.3;
