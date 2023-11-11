@@ -29,4 +29,4 @@ private _weapon = currentWeapon _unit;
 
 if (_weapon in GVAR(undroppableGuns)) exitWith {};
 
-[QGVAR(dropGun), [_unit], _unit] call CBA_fnc_targetEvent;
+[QGVAR(dropGun), _unit, _unit] call CBA_fnc_targetEvent;
