@@ -2,22 +2,22 @@
 
 ["ace_firedNonPlayer", {
     if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
-    
+
     params ["", "", "", "", "", "", "_projectile"];
-    
+
     _projectile addEventHandler ["HitPart", {
-        params ["", "", "", "_pos", "", "", "_components", "" ,"_surfaceType"];
+        params ["", "", "", "_pos", "", "", "_components", "", "_surfaceType"];
         [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
     }];
 }] call CBA_fnc_addEventHandler;
 
 ["ace_firedPlayer", {
     if (GVAR(weaponDropChanceGunHit) + GVAR(weaponDropChanceArmHit) == 0) exitWith {};
-    
+
     params ["", "", "", "", "", "", "_projectile"];
-    
-    _projectile addEventHandler ["HitPart", { 
-       params ["", "", "", "_pos", "", "", "_components", "" ,"_surfaceType"];
+
+    _projectile addEventHandler ["HitPart", {
+        params ["", "", "", "_pos", "", "", "_components", "", "_surfaceType"];
         [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
     }];
 }] call CBA_fnc_addEventHandler;
