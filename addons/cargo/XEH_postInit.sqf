@@ -76,6 +76,7 @@ GVAR(vehicleAction) = [
         {locked _target < 2} &&
         {(_target getVariable [QGVAR(hasCargo), getNumber (configOf _target >> QGVAR(hasCargo)) == 1])} &&
         {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+        {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
         {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
     }
 ] call EFUNC(interact_menu,createAction);
@@ -92,9 +93,10 @@ GVAR(objectActions) = [
             GVAR(enable) &&
             {GVAR(enableRename)} &&
             {alive _target} &&
-            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
             {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
-            {!(_target getVariable [QGVAR(noRename), getNumber (configOf _target >> QGVAR(noRename)) == 1])}
+            {!(_target getVariable [QGVAR(noRename), getNumber (configOf _target >> QGVAR(noRename)) == 1])} &&
+            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)}
         }
     ] call EFUNC(interact_menu,createAction),
     [QGVAR(load), LLSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
@@ -107,8 +109,9 @@ GVAR(objectActions) = [
             GVAR(enable) &&
             {alive _target} &&
             {locked _target < 2} &&
-            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
             {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
+            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
             {((nearestObjects [_target, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE + 10]) findIf {
                 _x != _target &&
                 {alive _x} &&

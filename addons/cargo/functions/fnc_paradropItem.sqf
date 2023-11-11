@@ -111,7 +111,7 @@ if (_item isEqualType objNull) then {
 
         if ((GVAR(disableParadropEffectsClasstypes) findIf {_object isKindOf _x}) == -1) then {
             private _smoke = "SmokeshellYellow" createVehicle [0, 0, 0];
-            _smoke attachTo [_object, [0,0,0]];
+            _smoke attachTo [_object, [0, 0, 0]];
         };
     };
 }, 1, _object] call CBA_fnc_addPerFrameHandler;

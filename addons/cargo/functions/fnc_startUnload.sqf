@@ -67,7 +67,8 @@ if (GVAR(interactionParadrop)) exitWith {
 
             true
         },
-        ["isNotSwimming", "isNotInside"]
+        ["isNotSwimming", "isNotInside"],
+        false
     ] call EFUNC(common,progressBar);
 };
 
