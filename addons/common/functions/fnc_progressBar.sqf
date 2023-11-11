@@ -10,10 +10,10 @@
  * 1: Arguments, passed to condition, fail and finish <ARRAY>
  * 2: On Finish: Code called or STRING raised as event. <CODE, STRING>
  * 3: On Failure: Code called or STRING raised as event. <CODE, STRING>
- * 4: Localized Title (default: "") <STRING>
- * 5: Code to check each frame (default: {true}) <CODE>
- * 6: Exceptions for checking ace_common_fnc_canInteractWith (default: []) <ARRAY>
- * 7: Create progress bar as dialog, this blocks user input (default: true) <BOOL>
+ * 4: Localized Title <STRING> (default: "")
+ * 5: Code to check each frame <CODE> (default: {true})
+ * 6: Exceptions for checking ace_common_fnc_canInteractWith <ARRAY> (default: [])
+ * 7: Create progress bar as dialog, this blocks user input <BOOL> (default: true)
  *
  * Return Value:
  * None
