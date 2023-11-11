@@ -492,6 +492,21 @@
             <Chinese>已加入%1公升</Chinese>
             <Turkish>%1 litre dolduruldu</Turkish>
         </Key>
+        <Key ID="STR_ACE_Refuel_TakeFuelCanister">
+            <English>Pick up fuel canister</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_TakeFuelCanisterAction">
+            <English>Picking fuel canister up...</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_ConnectFuelCanister">
+            <English>Connect fuel canister</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_ConnectFuelCanisterAction">
+            <English>Connecting fuel canister...</English>
+        </Key>
+        <Key ID="STR_ACE_Refuel_DisconnectFuelCanister">
+            <English>Disconnect fuel canister</English>
+        </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>
             <German>Betankung Schlauchlänge</German>
