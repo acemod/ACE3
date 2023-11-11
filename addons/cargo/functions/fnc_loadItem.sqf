@@ -60,7 +60,7 @@ if (_item isEqualType objNull) then {
         [QEGVAR(zeus,removeObjects), [[_item], _objectCurators]] call CBA_fnc_serverEvent;
     };
 
-    // Some objects below water will take damage over time and eventualy become "water logged" and unfixable (because of negative z attach)
+    // Some objects below water will take damage over time, eventually becoming "water logged" and unfixable (because of negative z attach)
     [_item, "blockDamage", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 };
 
