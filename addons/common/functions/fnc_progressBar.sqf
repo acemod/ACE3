@@ -106,6 +106,8 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
                 closeDialog 0;
             } else {
                 QGVAR(progressBarDisplay) cutText ["", "PLAIN"];
+                // Remove key handler for non-dialog bar
+                [QGVAR(progressBarKeyHandler), "keydown"] call CBA_fnc_removeKeyHandler;
             };
         };
 
