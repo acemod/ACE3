@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call acex_field_rations_fnc_scanFieldRations
+ * call ace_field_rations_fnc_scanFieldRations
  *
  * Public: No
  */

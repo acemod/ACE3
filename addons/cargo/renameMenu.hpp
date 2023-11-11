@@ -40,7 +40,7 @@ class GVAR(renameMenu) {
             text = CSTRING(renameObjectUI);
         };
         class edit: ACE_gui_editBase {
-            onLoad = QUOTE((_this select 0) ctrlSetText (GVAR(interactionVehicle) getVariable [ARR_2(QUOTE(QGVAR(customName)), '')]));
+            onLoad = QUOTE((_this select 0) ctrlSetText (GVAR(interactionVehicle) getVariable [ARR_2(QUOTE(QGVAR(customName)),'')]));
             idc = 100;
             canModify = 1;
             x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";

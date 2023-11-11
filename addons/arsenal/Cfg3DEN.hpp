@@ -28,7 +28,7 @@ class Cfg3DEN {
             w = QUOTE(130 * ATTRIBUTE_W);
             h = QUOTE(106.83 * ATTRIBUTE_H);
             attributeLoad = QUOTE([ARR_2(_this,+_value)] call FUNC(attributeLoad));
-            attributeSave = QUOTE(uiNamespace getVariable [ARR_2(QQGVAR(attributeValue),[ARR_2([], 0)])]);
+            attributeSave = QUOTE(uiNamespace getVariable [ARR_2(QQGVAR(attributeValue),[ARR_2([],0)])]);
             class controls {
                 class ModeTitle: ctrlStatic {
                     idc = -1;
@@ -40,7 +40,7 @@ class Cfg3DEN {
                 };
                 class Mode: ctrlToolbox {
                     idc = IDC_ATTRIBUTE_MODE;
-                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0), _this select 1)] call FUNC(attributeMode));
+                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0),_this select 1)] call FUNC(attributeMode));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(5 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);
@@ -55,7 +55,7 @@ class Cfg3DEN {
                 };
                 class Category: ctrlToolboxPictureKeepAspect {
                     idc = IDC_ATTRIBUTE_CATEGORY;
-                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0), _this select 1)] call FUNC(attributeCategory));
+                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0),_this select 1)] call FUNC(attributeCategory));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(15 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);

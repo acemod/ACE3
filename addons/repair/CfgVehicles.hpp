@@ -405,8 +405,8 @@ class CfgVehicles {
                 class GVAR(Patch) {
                     displayName = CSTRING(PatchWheel);
                     distance = 4;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canPatchRemovedWheel));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(patchRemovedWheel));
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canPatchRemovedWheel));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(patchRemovedWheel));
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotOnLadder", "isNotSwimming", "isNotSitting"};
                     icon = QPATHTOF(ui\patch_ca.paa);
                 };

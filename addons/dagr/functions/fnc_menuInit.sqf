@@ -10,6 +10,7 @@
  * None
  *
  * Example:
+ * [] call ace_dagr_fnc_menuInit
  *
  * Public: No
  */

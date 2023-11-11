@@ -38,7 +38,7 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
         drawLine3D [ASLtoAGL _testSeekerPosASL, ASLtoAGL _resultPos, [0,0,1,1]];
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [0,0,1,1], (ASLtoAGL _resultPos), 1.5, 1.5, 45, format ["%1 from %2", _code, _results select 1], 0.5, 0.025, "TahomaB"];
     };
-} forEach [1111, ACE_DEFAULT_LASER_CODE]; // Scan at codes 1111 and 1688
+} forEach [ACE_DEFAULT_LASER_CODE, 1688]; // Scan at codes 1111 and 1688
 
 
 // Draw all lasers

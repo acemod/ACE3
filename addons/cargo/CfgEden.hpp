@@ -9,7 +9,7 @@ class Cfg3DEN {
                         property = QGVAR(customName);
                         control = "Edit";
 
-                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(customName), _value, true)];);
+                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(customName),_value,true)];);
                         defaultValue = "''";
 
                         condition = "objectHasInventoryCargo - objectVehicle";
