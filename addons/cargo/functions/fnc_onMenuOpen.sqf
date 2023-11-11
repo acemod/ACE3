@@ -40,7 +40,7 @@ if (GVAR(interactionParadrop)) then {
     if (
         !alive _vehicle ||
         {locked _vehicle >= 2} ||
-        {!(_vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1])} ||
+        {!(_vehicle getVariable [QGVAR(hasCargo), true])} || // if the cargo menu could be opened, the vehicle has QGVAR(hasCargo) in its config or the variable is set using FUNC(setSpace)
         {(([ACE_player, _vehicle] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE) && {(vehicle ACE_player) != _vehicle}}
     ) exitWith {
         closeDialog 0;
