@@ -12,8 +12,6 @@
     }];
 }] call CBA_fnc_addEventHandler;
 
-if (!hasInterface) exitWith {};
-
 ["ace_firedPlayer", {
     private _roll = random 1;
     if !(_roll < GVAR(weaponDropChanceGunHit) || _roll < GVAR(weaponDropChanceArmHit)) exitWith {};
