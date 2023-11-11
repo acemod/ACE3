@@ -42,7 +42,6 @@ if (_lockTarget) then {
         [QGVAR(unlockVehicle), _target, _target] call CBA_fnc_targetEvent;
     };
 };
-};
 
 if (!isNull _unit) then {
     TRACE_2("claim success",_unit,_target);
