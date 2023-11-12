@@ -22,22 +22,19 @@ private _aceTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
 
 // handle timestamp
 if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
-    private _time = [];
-
-    switch (GVAR(timestampTimezone)) do {
+    private _time = switch (GVAR(timestampTimezone)) do {
         case 1: {
             systemTime params ["", "", "", "_hour", "_min", "_sec"];
-            _time = _hour + _min/60 + _sec/3600;
+            _hour + _min/60 + _sec/3600
         };
         case 2: {
-            _offset = GVAR(timestampUTCOffset);
-            systemTimeUTC params["", "", "", "_hour", "_min", "_sec"];
-            _hour = _hour + round(_offset);
+            systemTimeUTC params ["", "", "", "_hour", "_min", "_sec"];
+            _hour = _hour + round (GVAR(timestampUTCOffset));
             _hour = _hour % 24;
-            _time = _hour + _min/60 + _sec/3600;
+            _hour + _min/60 + _sec/3600
         };
         default {
-            _time = dayTime;
+            dayTime
         };
     };
 
