@@ -24,7 +24,7 @@ _vehicles apply {
     private _name = getText ((configOf _x) >> "displayName");
     private _ownerName = [_x, true] call EFUNC(common,getName);
     if ("" != _ownerName) then {
-        _name = format ["%1 (%2)", _name, _ownerName];
+        _name = format ["%1 (%2, %3m)", _name, _ownerName, (ACE_player distance _x) toFixed 1];
     } else {
         _name = format ["%1 (%2m)", _name, (ACE_player distance _x) toFixed 1];
     };
