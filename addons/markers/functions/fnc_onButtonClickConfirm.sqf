@@ -25,9 +25,6 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
     private _time = [];
 
     switch (GVAR(timestampTimezone)) do {
-        default {
-            _time = dayTime;
-        };
         case 1: {
             systemTime params ["", "", "", "_hour", "_min", "_sec"];
             _time = _hour + _min/60 + _sec/3600;
@@ -36,13 +33,11 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
             _offset = GVAR(timestampUTCOffset);
             systemTimeUTC params["", "", "", "_hour", "_min", "_sec"];
             _hour = _hour + round(_offset);
-            if (_hour < 0) then {
-                _hour = 24 + _hour;
-            };
-            if (_hour > 24) then {
-                _hour = _hour - 24;
-            };
+            _hour = _hour % 24;
             _time = _hour + _min/60 + _sec/3600;
+        };
+        default {
+            _time = dayTime;
         };
     };
 
