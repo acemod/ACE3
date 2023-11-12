@@ -7,20 +7,20 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0";
         scope = 1;
-        scopeCurator = 2;
+        scopeCurator = 1;
         side = -1;
-        model = QPATHTOEF(apl,ace_bodybag.p3d);
         icon = "";
-        displayName = CSTRING(Bodybag_Display);
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition)[] = {0,1.2,0};
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
         EGVAR(cargo,noRename) = 1;
+        model = "\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_F.p3d";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {QPATHTOEF(apl,data\bodybag_co.paa)};
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_black_CO.paa"};
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
@@ -29,9 +29,38 @@ class CfgVehicles {
                 statement = "";
                 icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
                 selection = "";
+                class GVAR(buryBodyBag) {
+                    displayName = CSTRING(DigGrave);
+                    condition = QUOTE([ARR_2(_this#1,_this#0)] call FUNC(canDigGrave));
+                    statement = QUOTE(_this call FUNC(placeBodyBagInGrave));
+                    icon = QPATHTOEF(medical_gui,ui\grave.paa);
+                };
             };
         };
     };
+    class ACE_bodyBagObject_blue: ACE_bodyBagObject {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_blue_f0";
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_blue_CO.paa"};
+    };
+    class ACE_bodyBagObject_white: ACE_bodyBagObject {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_white_f0";
+        hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_white_CO.paa"};
+    };
+    class ACE_bodyBagObject_old: ACE_bodyBagObject {
+        displayName = CSTRING(Bodybag_Display);
+        model = QPATHTOEF(apl,ace_bodybag.p3d);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOEF(apl,data\bodybag_co.paa)};
+    };
+
+    // Grave vehicle
+    class Land_Grave_dirt_F;
+    class ACE_Grave: Land_Grave_dirt_F {
+        model = QPATHTOF(data\ACE_grave.p3d);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\Grave_co.paa)};
+    };
+
 
     // Medical litter classes
     class Thing;
@@ -77,6 +106,9 @@ class CfgVehicles {
     };
     class ACE_MedicalLitter_splint: ACE_MedicalLitterBase {
         model = QPATHTOF(data\littergeneric_splint.p3d);
+    };
+    class ACE_MedicalLitter_suture: ACE_MedicalLitterBase {
+        model = QPATHTOF(data\littergeneric_suture.p3d);
     };
 
     // Treatment items
@@ -232,6 +264,16 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_surgicalKit,1);
         };
     };
+    class ACE_sutureItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(Suture_Display);
+        author = ECSTRING(common,ACETeam);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_suture,1);
+        };
+    };
     class ACE_bodyBagItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -326,6 +368,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_personalAidKit,3);
             MACRO_ADDITEM(ACE_surgicalKit,2);
             MACRO_ADDITEM(ACE_bodyBag,5);
+            MACRO_ADDITEM(ACE_suture,60);
         };
     };
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag and handle its destruction. Only execute on the server.
@@ -32,6 +32,7 @@ if (_texture == "") exitWith {
 if (_isVehicleTag) exitWith {
     TRACE_3("tagging vehicle",_object,typeOf _object,_texture);
     _object setObjectTextureGlobal [getText (configOf _object >> "selectionClan"), _texture];
+    _object setVariable [QGVAR(hasTag), true, true];
     // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
     ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
 };

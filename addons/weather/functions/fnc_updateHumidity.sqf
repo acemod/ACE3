@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ACE2 Team
  * Smoothly updates GVAR(currentHumidity) on the server (based on time of day and map data)

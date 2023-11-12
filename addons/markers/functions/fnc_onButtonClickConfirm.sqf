@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Freddo, Daniël H.
  * When the confirm button is pressed.

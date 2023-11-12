@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk et.al.
  * Calculates a connection for refueling.
@@ -73,6 +73,8 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
 
+        private _source = _nozzle getVariable QGVAR(source);
+
         detach _nozzle;
         _nozzle attachTo [_sink, _endPosTestOffset];
         _endPosTestOffset params ["_x", "_y"];
@@ -111,25 +113,38 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _sink setVariable [QGVAR(nozzle), _nozzle, true];
 
-        _source = _nozzle getVariable QGVAR(source);
-        private _fuel = [_source] call FUNC(getFuel);
-        if (_fuel == REFUEL_INFINITE_FUEL) then {
-            _source setVariable [QGVAR(fuelCounter), 0, true];
-        } else {
-            _source setVariable [QGVAR(fuelCounter), _fuel, true];
-        };
+        // Reset fuel counter
+        _source setVariable [QGVAR(fuelCounter), 0, true];
 
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
 
-        if ([_unit, _nozzle] call FUNC(canTurnOn)) then {
-            _unit setVariable [QGVAR(tempFuel), nil];
-            [_unit, _nozzle] call FUNC(turnOn);
-        } else {
-            [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+        private _canReceive = getNumber ((configOf _sink) >> QGVAR(canReceive)) == 1;
+        private _isContainer = ([_sink] call FUNC(getCapacity)) != REFUEL_DISABLED_FUEL;
+
+        // Decide if cargo or vehicle will be refueled
+        switch (true) do {
+            case (_canReceive && {!_isContainer || {_sink == _source}}): {
+                // is not a refueling vehicle or refueling vehicle tries to refuel itself
+                if ([_unit, _nozzle, false] call FUNC(canTurnOn)) then {
+                    [_unit, _nozzle, false] call FUNC(turnOn);
+                } else {
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayTextStructured);
+                };
+            };
+            case (!_canReceive && _isContainer): {
+                if ([_unit, _nozzle, true] call FUNC(canTurnOn)) then {
+                    [_unit, _nozzle, true] call FUNC(turnOn);
+                } else {
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayTextStructured);
+                };
+            };
+            default {
+                /* Target is a refueling vehicle, let user manually decide if he wants to refuel cargo or vehicle itself */
+            };
         };
     },
     "",
-    localize LSTRING(ConnectAction),
+    localize ([LSTRING(ConnectAction), LSTRING(ConnectFuelCanisterAction)] select (_nozzle getVariable [QGVAR(jerryCan), false])),
     {true},
     [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

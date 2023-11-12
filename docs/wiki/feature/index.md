@@ -1,5 +1,5 @@
 ---
-title: ACE3 Feature documentation
+title: Features
 layout: default
 group: subNav
 order: 1
@@ -10,7 +10,7 @@ redirect_from: "/wiki/featurex"
 
 <div class="row">
     <div class="large-12 columns">
-        <h1>ACE3 Features</h1>
+        <h1>Features</h1>
         <p>Overviews and details of ACE3 features, their usage and implementations.</p>
     </div>
 </div>

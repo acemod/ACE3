@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, CAA-Picard, mharis001
  * Returns children actions for explosive magazines in the player's inventory.

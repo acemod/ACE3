@@ -1,4 +1,5 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: commy2, Glowbal, PabstMirror
  * Draw progress bar and execute given function if succesful.
@@ -9,9 +10,10 @@
  * 1: Arguments, passed to condition, fail and finish <ARRAY>
  * 2: On Finish: Code called or STRING raised as event. <CODE, STRING>
  * 3: On Failure: Code called or STRING raised as event. <CODE, STRING>
- * 4: (Optional) Localized Title <STRING>
- * 5: Code to check each frame (Optional) <CODE>
- * 6: Exceptions for checking EFUNC(common,canInteractWith) (Optional)<ARRAY>
+ * 4: Localized Title <STRING> (default: "")
+ * 5: Code to check each frame <CODE> (default: {true})
+ * 6: Exceptions for checking ace_common_fnc_canInteractWith <ARRAY> (default: [])
+ * 7: Create progress bar as dialog, this blocks user input <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -22,13 +24,34 @@
  * Public: Yes
  */
 
-params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
+params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []], ["_dialog", true]];
 
 private _player = ACE_player;
 
 //Open Dialog and set the title
 closeDialog 0;
-createDialog QGVAR(ProgressBar_Dialog);
+if (_dialog) then {
+    createDialog QGVAR(ProgressBar_Dialog);
+} else {
+    QGVAR(progressBarDisplay) cutRsc [QGVAR(ProgressBar_Display), "PLAIN"];
+};
+
+private _display = uiNamespace getVariable QGVAR(dlgProgress);
+
+// Ensure CBA keybindings are hooked into the display
+_display call (uiNamespace getVariable "CBA_events_fnc_initDisplayCurator");
+
+// Hide cursor by using custom transparent cursor
+if (_dialog) then {
+    private _map = _display displayCtrl 101;
+    _map ctrlMapCursor ["", QGVAR(blank)];
+} else { // Add key handler for ESC to cancel
+    [DIK_ESCAPE, [false, false, false], {
+        QGVAR(progressBarDisplay) cutText ["", "PLAIN"];
+        [QGVAR(progressBarKeyHandler), "keydown"] call CBA_fnc_removeKeyHandler;
+        true
+    }, "keydown", QGVAR(progressBarKeyHandler)] call CBA_fnc_addKeyHandler;
+};
 
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
 
@@ -44,7 +67,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
 
 [{
-    (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions", "_title"];
+    (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions", "_title", "_dialog"];
 
     private _elapsedTime = CBA_missionTime - _startTime;
     private _errorCode = -1;
@@ -62,8 +85,12 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
                 if !([_player, objNull, _exceptions] call EFUNC(common,canInteractWith)) then {
                     _errorCode = 4;
                 } else {
-                    if (_elapsedTime >= _totalTime) then {
-                        _errorCode = 0;
+                    if (!_dialog && {dialog}) then {
+                        _errorCode = 5;
+                    } else {
+                        if (_elapsedTime >= _totalTime) then {
+                            _errorCode = 0;
+                        };
                     };
                 };
             };
@@ -75,7 +102,13 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
 
         //Only close dialog if it's the progressBar:
         if (!isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
-            closeDialog 0;
+            if (_dialog) then {
+                closeDialog 0;
+            } else {
+                QGVAR(progressBarDisplay) cutText ["", "PLAIN"];
+                // Remove key handler for non-dialog bar
+                [QGVAR(progressBarKeyHandler), "keydown"] call CBA_fnc_removeKeyHandler;
+            };
         };
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -107,4 +140,4 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
             };
         };
     };
-}, 0, [_args, _onFinish, _onFail, _condition, _player, CBA_missionTime, _totalTime, _exceptions, _localizedTitle]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_args, _onFinish, _onFail, _condition, _player, CBA_missionTime, _totalTime, _exceptions, _localizedTitle, _dialog]] call CBA_fnc_addPerFrameHandler;

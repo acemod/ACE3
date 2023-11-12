@@ -6,24 +6,29 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+Brett Mayson
 bux578 <github@jonathandavid.de>
 commy2
 Dahlgren
-Dani (TCVM) <baileydanyluk@gmail.com>
+Drofseh <drofseh.arma@gmail.com>
 esteldunedain <nicolas.d.badano@gmail.com>
 Felix Wiegand <koffeinflummi@gmail.com>
 Garth "L-H" de Wet <garthofhearts@gmail.com>
 Giallustio
 Glowbal
+Grim
 Janus
+johnb43
 jokoho482 <jokoho482@gmail.com>
 Jonpas <jonpas33@gmail.com>
 Kieran
+kymckay
 mharis001 <mhariszakar@gmail.com>
+MikeMF
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
 Ruthberg <ulteq@web.de>
-SilentSpike <SilentSpike100@gmail.com>
+tcvm <baileydanyluk@gmail.com>
 tpM
 veteran29
 ViperMaul
@@ -42,6 +47,7 @@ aeroson
 Aggr094 <bastards4glory@gmail.com>
 alef <alefor@gmail.com>
 Aleksey EpMAK Yermakov <epmak777@gmail.com>
+AleM
 Alganthe <alganthe@live.fr>
 Andrea "AtixNeon" Verano <veranoandrea88@gmail.com>
 Anthariel <Contact@storm-simulation.com>
@@ -57,7 +63,6 @@ Bla1337
 BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
 Brakoviejo
-Brett Mayson
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>
@@ -77,7 +82,6 @@ diwako
 dixon13 <dixonbegay@gmail.com>
 Drift_91
 Drill <drill87@gmail.com>
-Drofseh <drofseh@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
 Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Eclipser <jms@modeemi.fi>
@@ -111,7 +115,9 @@ havena <silveredenis@gmail.com>
 Hawkins
 Head <brobergsebastian@gmail.com>
 Hybrid V
+Hypoxic <martini_a@outlook.com>
 JasperRab <jasper@jasperrab.eu>
+JDT
 john681611 <john681611@hotmail.com>
 JoramD
 Karneck <dschultz26@hotmail.com>
@@ -119,6 +125,7 @@ Kavinsky <nmunozfernandez@gmail.com>
 Keithen <Keithen.Neu@gmail.com>
 Kllrt <kllrtik@gmail.com>
 KokaKolaA3
+Krzyciu
 legman <juicemelon@msn.com>
 Legolasindar "Viper" <legolasindar@gmail.com>
 licht-im-Norden87 <lichtimnorden87@gmail.com>
@@ -145,6 +152,7 @@ PiZZADOX <509thParachuteInfantry@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
 Pterolatypus <pterolatypus@gmail.com>
+QuantX
 QuickDagger
 rakowozz
 ramius86 <pasini86@hotmail.com>
@@ -172,7 +180,6 @@ Toaster <jonathan.pereira@gmail.com>
 Tonic
 Tourorist <tourorist@gmail.com>
 Tuupertunut
-TyroneMF <TyroneMF@hotmail.com>
 Valentin Torikian <valentin.torikian@gmail.com>
 voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>

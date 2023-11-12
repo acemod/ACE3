@@ -1,22 +1,20 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
- * Handle the animaion for a Unit for Dragging Module
+ * Handle the animation for a unit for the dragging module.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: animaion <STRING>
+ * 1: Animaion <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_unit, "amovpercmstpsnonwnondnon"] call ace_dragging_fnc_handleAnimChanged;
+ * [player, "amovpercmstpsnonwnondnon"] call ace_dragging_fnc_handleAnimChanged;
  *
  * Public: No
 */
-
-//IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisID"]; // From CBA_fnc_addBISEventHandler;
 
 params ["_unit", "_anim"];
 _thisArgs params ["_realUnit"];
@@ -28,8 +26,7 @@ if (_unit != _realUnit) exitWith {
 };
 
 if (_unit getVariable [QGVAR(isDragging), false]) then {
-
-    // drop dragged object when not in valid animation
+    // Drop dragged object when not in valid animation
     if (!(_anim in DRAG_ANIMATIONS) && {!(_unit call EFUNC(common,isSwimming))}) then {
         private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
 
@@ -39,10 +36,8 @@ if (_unit getVariable [QGVAR(isDragging), false]) then {
         };
     };
 } else {
-
     if (_unit getVariable [QGVAR(isCarrying), false]) then {
-
-        // drop carried object when not standing; also some exceptions when picking up crate
+        // Drop carried object when not standing; also some exceptions when picking up crate
         if (stance _unit != "STAND" && {_anim != "amovpercmstpsnonwnondnon"}) then {
             private _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
 

@@ -1,4 +1,4 @@
-#include "\z\ace\addons\medical\script_component.hpp"
+#include "..\script_component.hpp"
 
 if (missionNamespace getVariable [QGVAR(dev_watchVariableRunning), false]) exitWith {};
 GVAR(dev_watchVariableRunning) = true;
@@ -95,24 +95,33 @@ GVAR(dev_watchVariableRunning) = true;
     _return pushBack "------- Open Wounds: -------";
     private _wounds = GET_OPEN_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        private _bodyPart = _x;
+        {
+            _x params ["_xClassID", "_xAmountOf", "_xBleeding", "_xDamage"];
+            _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", _bodyPart, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        } forEach _y;
     } forEach _wounds;
 
     // Bandaged Wounds:
     _return pushBack "------- Bandaged Wounds: -------";
     private _wounds = GET_BANDAGED_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        private _bodyPart = _x;
+        {
+            _x params ["_xClassID", "_xAmountOf", "_xBleeding", "_xDamage"];
+            _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", _bodyPart, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        } forEach _y;
     } forEach _wounds;
 
     // Stitched Wounds:
     _return pushBack "------- Stitched Wounds: -------";
     private _wounds = GET_STITCHED_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        private _bodyPart = _x;
+        {
+            _x params ["_xClassID", "_xAmountOf", "_xBleeding", "_xDamage"];
+            _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", _bodyPart, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        } forEach _y;
     } forEach _wounds;
 
     // IVs:

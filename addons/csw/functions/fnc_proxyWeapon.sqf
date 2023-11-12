@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM), PabstMirror
+ * Author: tcvm, PabstMirror
  * Handles the use of proxy weapons to fix engine-reload times
  *
  * Arguments:
@@ -36,6 +36,9 @@ if ((missionNamespace getVariable [_proxyWeapon, objNull]) isEqualType {}) then 
     _needed = _proxyWeapon != "";
 };
 if (!_needed) exitWith { TRACE_2("not needed",_needed,_proxyWeapon); };
+
+// Rearm compatibility, prevent reloading entire static and breaking CSW
+_staticWeapon setVariable [QEGVAR(rearm,scriptedLoadout), true, true];
 
 TRACE_2("swapping to proxy weapon",_currentWeapon,_proxyWeapon);
 _staticWeapon removeWeaponTurret [_currentWeapon, _turret];

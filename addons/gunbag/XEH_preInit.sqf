@@ -26,28 +26,17 @@ PREP_RECOMPILE_END;
     }, _this] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addClassEventHandler;
 
-[QEGVAR(arsenal,displayOpened), {
-
-    private _center = EGVAR(arsenal,center);
-
-    if (_center call FUNC(hasGunBag)) then {
-        GVAR(arsenalCache) = (backpackContainer _center) getVariable [QGVAR(gunbagWeapon), []];
-    };
-}] call CBA_fnc_addEventHandler;
-
-[QEGVAR(arsenal,displayClosed), {
-
-    if (!isNil QGVAR(arsenalCache)) then {
-        (backpackContainer EGVAR(arsenal,center)) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
-    };
-
-    GVAR(arsenalCache) = nil;
-}] call CBA_fnc_addEventHandler;
-
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout", "_extendedInfo"];
     private _gunbagWeapon = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
     if (_gunbagWeapon isNotEqualTo []) then {
+        if (!isNil QEGVAR(arsenal,virtualItemsFlatAll)) then {
+            private _weapon = (_gunbagWeapon select 0) call EFUNC(arsenal,baseWeapon);
+            if !(_weapon in EGVAR(arsenal,virtualItemsFlatAll)) then {
+                INFO_1("removing [%1] from loadout",_gunbagWeapon);
+                _gunbagWeapon = [];
+            };
+        };
         (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon), _gunbagWeapon, true];
     };
 }] call CBA_fnc_addEventHandler;

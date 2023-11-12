@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Start unload action.
@@ -60,7 +60,8 @@ if (GVAR(interactionParadrop)) exitWith {
             if ((speed _target) < -5) exitWith {false}; // check reverse
             true
         },
-        ["isNotSwimming", "isNotInside"]
+        ["isNotSwimming", "isNotInside"],
+        false
     ] call EFUNC(common,progressBar);
 };
 

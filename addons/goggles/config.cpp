@@ -58,13 +58,13 @@ class CfgGlasses {
     };
 
     class G_Lowprofile: None {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 2;
         ACE_Protection = 1;
     };
 
     class G_Shades_Black: None {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 1;
     };
 
@@ -92,7 +92,7 @@ class CfgGlasses {
     };
 
     class G_Spectacles_Tinted: None {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 1;
     };
 
@@ -109,22 +109,22 @@ class CfgGlasses {
     };
 
     class G_Sport_Blackyellow: None {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 1;
     };
 
     class G_Sport_Checkered: None {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 1;
     };
 
     class G_Sport_Greenblack: None {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 1;
     };
 
     class G_Sport_Red: None {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Color[] = {0,0,0};
         ACE_Resistance = 1;
     };
@@ -170,7 +170,7 @@ class CfgGlasses {
     };
 
     class G_Lady_Dark: None {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 1;
     };
 
@@ -186,7 +186,7 @@ class CfgGlasses {
     };
 
     class G_Balaclava_lowprofile: G_Balaclava_blk {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 2;
         ACE_Protection = 1;
     };
@@ -203,7 +203,7 @@ class CfgGlasses {
 
     class G_Bandanna_blk;
     class G_Bandanna_shades: G_Bandanna_blk {
-        ACE_TintAmount=COLOUR*2;
+        ACE_TintAmount=QUOTE(COLOUR*2);
         ACE_Resistance = 1;
         ACE_Protection = 1;
     };

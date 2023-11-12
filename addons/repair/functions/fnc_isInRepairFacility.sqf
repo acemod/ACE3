@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Checks if a unit is in a repair facility.
@@ -10,33 +10,32 @@
  * Is inside a repair facility <BOOL>
  *
  * Example:
- * [unit] call ace_repair_fnc_isInRepairFacility
+ * player call ace_repair_fnc_isInRepairFacility
  *
  * Public: Yes
  */
 
-params [["_object", objNull, [objNull]]];
-TRACE_1("params",_object);
+#define CHECK_OBJECTS(var) ((var) findIf _checkObject != -1)
 
-private _position = getPosASL _object;
-private _isInBuilding = false;
+params [["_unit", objNull, [objNull]]];
+TRACE_1("params",_unit);
 
 private _checkObject = {
-    if (
-        _x getVariable ["ACE_isRepairFacility", getNumber (configOf _x >> QGVAR(canRepair))] > 0
-        && {!(_x isKindOf "AllVehicles")} // check if it's not repair vehicle
-        && {alive _x}
-    ) exitWith {
-        _isInBuilding = true;
+    private _config = configOf _x;
+    private _canRepair = getNumber (_config >> QGVAR(canRepair));
+    if (_canRepair == 0) then {
+        _canRepair = getNumber (_config >> "transportRepair");
     };
+
+    _x getVariable ["ACE_isRepairFacility", _canRepair > 0] in [1, true] // can be integer or boolean
+    && {!(_x isKindOf "AllVehicles")} // check if it's not repair vehicle
+    && {alive _x}
 };
 
-private _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
-_checkObject forEach _objects;
+private _fnc_check = {
+    private _position = _unit modelToWorldVisual [0, 0, eyePos _unit select 2];
+    CHECK_OBJECTS(lineIntersectsWith [ARR_3(_position, _position vectorAdd [ARR_3(0, 0, 10)], _unit)])
+    || {CHECK_OBJECTS(_unit nearObjects 7.5)}
+};
 
-if (_isInBuilding) exitWith {true};
-
-_objects = _object nearObjects 7.5;
-_checkObject forEach _objects;
-
-_isInBuilding
+[[], _fnc_check, _unit, QGVAR(inRepairFacilityCache), IN_REPAIR_FACILITY_CACHE_EXPIRY] call EFUNC(common,cachedCall);

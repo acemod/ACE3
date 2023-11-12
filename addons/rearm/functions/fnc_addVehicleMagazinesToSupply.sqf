@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Adds all magazines of a vehicle to the supply.
@@ -27,7 +27,7 @@ TRACE_2("addVehicleMagazinesToSupply",_truck,_vehicle);
 if (isNull _truck) exitWith {};
 if (_vehicle isEqualType objNull) then {_vehicle = typeOf _vehicle};
 if (_vehicle == "") exitWith {
-    ERROR_1("VehicleType [%1] is empty in ace_rearm_fnc_addVehicleMagazinesToSupply",_string);
+    ERROR_1("VehicleType [%1] is empty in ace_rearm_fnc_addVehicleMagazinesToSupply",_vehicle);
 };
 private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
 {

@@ -33,19 +33,19 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         };
         class GVAR(drinkStandCan): GVAR(drinkStand) {
             file = QPATHTOF(anim\drink_stand_can.rtm);
-            speed = 1/9;
+            speed = "1/9";
         };
         class GVAR(drinkCrouchCan): GVAR(drinkCrouch) {
             file = QPATHTOF(anim\drink_crouch_can.rtm);
-            speed = 1/9;
+            speed = "1/9";
         };
         class GVAR(drinkProneCan): GVAR(drinkProne) {
             file = QPATHTOF(anim\drink_prone_can.rtm);
-            speed = 1/9;
+            speed = "1/9";
         };
         class GVAR(drinkFromSource): GVAR(drinkStand) {
             file = QPATHTOF(anim\drink_source.rtm);
-            speed = 1/8;
+            speed = "1/8";
         };
         class GVAR(drinkFromSourceHigh): GVAR(drinkFromSource) {
             file = QPATHTOF(anim\drink_source_high.rtm);

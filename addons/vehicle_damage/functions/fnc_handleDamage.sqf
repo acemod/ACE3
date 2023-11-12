@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Called by "HandleDamage" event handler. Sets up hit array for this frame's damage.
  *
  * Arguments:
@@ -22,7 +22,15 @@
  * Public: No
  */
 
-params ["_vehicle", "", "_damage", "", "_projectile", "_hitIndex", "", "_hitPoint"];
+params ["_vehicle", "_hitSelection", "_damage", "", "_projectile", "_hitIndex", "", "_hitPoint"];
+TRACE_6("HandleDamage event inputs",_vehicle,_hitSelection,_damage,_projectile,_hitIndex,_hitPoint);
+
+private _returnHit = if (_hitSelection isNotEqualTo "") then {
+    _vehicle getHitIndex _hitIndex
+} else {
+    damage _vehicle
+};
+
 if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
     if (local _vehicle) then {
         // set up hit array so we can execute all damage next frame. Always in order of hit done.
@@ -47,8 +55,15 @@ if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
                     TRACE_3("processing data from old frame",diag_frameNo,_processingFrame,_hitArray);
                     {
                         _x params ["_vehicle", "_selection", "_damage", "_injurer", "_projectile", "_hitIndex", "", "_hitPoint"];
-                        private _newDamage = _damage - (_vehicle getHitIndex _hitIndex);
-                        if !([_vehicle, _hitPoint, _hitIndex, _injurer, _vehicle getHitIndex _hitIndex, _newDamage, _projectile, _selection] call FUNC(handleVehicleDamage)) exitWith {
+
+                        private _returnHit = if (_selection isNotEqualTo "") then {
+                            _vehicle getHitIndex _hitIndex
+                        } else {
+                            damage _vehicle
+                        };
+
+                        private _newDamage = _damage - _returnHit;
+                        if !([_vehicle, _hitPoint, _hitIndex, _injurer, _returnHit, _newDamage, _projectile, _selection] call FUNC(handleVehicleDamage)) exitWith {
                             LOG_2("cancelling rest of vehicle damage queue ( [%1] items left out of [%2] )",(count (_hitArray#1)) - _forEachIndex,count (_hitArray#1))
                         };
                     } forEach _hitArray;
@@ -67,7 +82,6 @@ if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
 
 // damage is never to be handled in-engine. Always handle out of engine with this event handler
 // don't return 0 or else old parts will be reset in damage
-private _returnHit = _vehicle getHitIndex _hitIndex;
 private _criticalDamageIndex = (CRITICAL_HITPOINTS findIf { _x isEqualTo _hitPoint }) + 1;
 if (_criticalDamageIndex > 0) then {
     _returnHit = (_returnHit min (CRITICAL_HITPOINTS select _criticalDamageIndex));

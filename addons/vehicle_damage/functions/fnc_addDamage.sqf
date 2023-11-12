@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Sets vehicle damage based on HitIndex. Failing that it falls back to HitPoint name.
  *
  * Arguments:
@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [vehicle player, 234, "HitHull"] call ace_vehicle_damage_fnc_knockOut
+ * [vehicle player, 234, "HitHull"] call ace_vehicle_damage_fnc_addDamage
  *
  * Public: No
  */

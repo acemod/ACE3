@@ -27,10 +27,10 @@ class RscCombo;
 #define W_MAKEITBIGGA(num) (num * (safeZoneH / 40))
 #define H_MAKEITBIGGA(num) (num * (safeZoneH / 30))
 
-#define X_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)), 0)]), X_BIS(num), X_MAKEITBIGGA(num))])
-#define Y_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)), 0)]), Y_BIS(num), Y_MAKEITBIGGA(num))])
-#define W_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)), 0)]), W_BIS(num), W_MAKEITBIGGA(num))])
-#define H_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)), 0)]), H_BIS(num), H_MAKEITBIGGA(num))])
+#define X_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)),0)]),X_BIS(num),X_MAKEITBIGGA(num))])
+#define Y_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)),0)]),Y_BIS(num),Y_MAKEITBIGGA(num))])
+#define W_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)),0)]),W_BIS(num),W_MAKEITBIGGA(num))])
+#define H_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)),0)]),H_BIS(num),H_MAKEITBIGGA(num))])
 
 class RscDisplayInventory {
     class controls {

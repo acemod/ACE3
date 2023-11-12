@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Create one action per passenger.
@@ -6,65 +6,68 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Player <OBJECT>
- * 3: Parameters <ARRAY>
+ * 2: Parameters <ARRAY>
  *
  * Return Value:
  * Children actions <ARRAY>
  *
  * Example:
- * [target, player, [params]] call ace_interaction_fnc_addPassengersActions
+ * [cursorObject, player, [params]] call ace_interaction_fnc_addPassengersActions
  *
  * Public: No
  */
 
 params ["_vehicle", "_player"];
 
+// If player is not in vehicle and the crew is hostile, do not show any actions
+if !(_player in _vehicle || {[_player, _vehicle] call FUNC(canInteractWithVehicleCrew)}) exitWith {
+    [] // return
+};
+
 private _actions = [];
+private _icon = "";
 
 {
-    private _unit = _x;
+    _x params ["_unit", "_role"];
 
-    if (_unit != _player && {getText (configOf _unit >> "simulation") != "UAVPilot"}) then {
-        private _icon = [
-            "",
-            "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa",
-            "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa",
-            "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa"
-        ] select (([driver _vehicle, gunner _vehicle, commander _vehicle] find _unit) + 1);
+    _icon = [
+        "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa",
+        "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa",
+        "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa",
+        ""
+    ] select (["driver", "gunner", "commander"] find _role);
 
-        if (_unit getVariable [QEGVAR(captives,isHandcuffed), false]) then {
-            _icon = QPATHTOEF(captives,UI\handcuff_ca.paa);
-        };
-
-        _actions pushBack [
-            [
-                format ["%1", _unit],
-                [_unit, true] call EFUNC(common,getName),
-                [_icon, "#FFFFFF"],
-                {
-                    //statement (Run on hover) - reset the cache so we will insert actions immedietly when hovering over new unit
-                    TRACE_2("Cleaning Cache",_target,vehicle _target);
-                    [vehicle _target, QEGVAR(interact_menu,ATCache_ACE_SelfActions)] call EFUNC(common,eraseCache);
-                },
-                {true},
-                {
-                    if (EGVAR(interact_menu,selectedTarget) isEqualTo _target) then {
-                        _this call FUNC(addPassengerActions)
-                    } else {
-                        [] //not selected, don't waste time on actions
-                    };
-                },
-                [_unit],
-                {[0, 0, 0]},
-                2,
-                [false,false,false,true,false], //add run on hover (4th bit true)
-                {if (["ace_medical_gui"] call EFUNC(common,isModLoaded)) then {call EFUNC(medical_gui,modifyActionTriageLevel)}}
-                ] call EFUNC(interact_menu,createAction),
-                [],
-                _unit
-            ];
+    if (_unit getVariable [QEGVAR(captives,isHandcuffed), false]) then {
+        _icon = QPATHTOEF(captives,UI\handcuff_ca.paa);
     };
-    false
-} count crew _vehicle;
+
+    _actions pushBack [
+        [
+            format ["%1", _unit],
+            [_unit, true] call EFUNC(common,getName),
+            [_icon, "#FFFFFF"],
+            {
+                // statement (Run on hover) - reset the cache so we will insert actions immediately when hovering over new unit
+                TRACE_2("Cleaning Cache",_target,objectParent _target);
+                [objectParent _target, QEGVAR(interact_menu,ATCache_ACE_SelfActions)] call EFUNC(common,eraseCache);
+            },
+            {true},
+            {
+                if (EGVAR(interact_menu,selectedTarget) isEqualTo _target) then {
+                    _this call FUNC(addPassengerActions)
+                } else {
+                    [] // not selected, don't waste time on actions
+                };
+            },
+            [_unit],
+            {[0, 0, 0]},
+            2,
+            [false, false, false, true, false], // add run on hover (4th bit true)
+            {if (["ace_medical_gui"] call EFUNC(common,isModLoaded)) then {call EFUNC(medical_gui,modifyActionTriageLevel)}}
+        ] call EFUNC(interact_menu,createAction),
+        [],
+        _unit
+    ];
+} forEach ((fullCrew _vehicle) select {_x select 0 != _player && {!unitIsUAV (_x select 0)}});
 
 _actions
