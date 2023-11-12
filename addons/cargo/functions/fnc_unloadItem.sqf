@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, ViperMaul
  * Unload object from vehicle.
@@ -53,6 +53,15 @@ if (_object isEqualType objNull) then {
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
     [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
+
+    if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
+        // Get which curators had this object as editable
+        private _objectCurators = _object getVariable [QGVAR(objectCurators), []];
+
+        if (_objectCurators isEqualTo []) exitWith {};
+
+        [QEGVAR(zeus,addObjects), [[_object], _objectCurators]] call CBA_fnc_serverEvent;
+    };
 } else {
     _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
     _object setPosASL (AGLtoASL _emptyPosAGL);
@@ -60,6 +69,10 @@ if (_object isEqualType objNull) then {
     [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
     [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;
 };
+
+// Dragging integration
+[_unloader, _object] call FUNC(unloadCarryItem);
+
 // Invoke listenable event
 ["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;
 true

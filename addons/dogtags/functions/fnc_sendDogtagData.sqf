@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
  * Server: returns to client data on given dogtag.

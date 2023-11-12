@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Load object into vehicle.
@@ -37,6 +37,17 @@ if (_item isEqualType objNull) then {
     detach _item;
     _item attachTo [_vehicle,[0,0,-100]];
     [QEGVAR(common,hideObjectGlobal), [_item, true]] call CBA_fnc_serverEvent;
+
+    if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
+        private _objectCurators = objectCurators _item;
+
+        // Save which curators had this object as editable
+        _item setVariable [QGVAR(objectCurators), _objectCurators, true];
+
+        if (_objectCurators isEqualTo []) exitWith {};
+
+        [QEGVAR(zeus,removeObjects), [[_item], _objectCurators]] call CBA_fnc_serverEvent;
+    };
 
     // Some objects below water will take damage over time and eventualy become "water logged" and unfixable (because of negative z attach)
     [_item, "blockDamage", "ACE_cargo", true] call EFUNC(common,statusEffect_set);

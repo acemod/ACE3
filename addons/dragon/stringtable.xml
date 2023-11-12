@@ -8,7 +8,7 @@
             <French>[CSW] M47 Super-Dragon</French>
             <Japanese>[CSW] M47 スーパー ドラゴン</Japanese>
             <Chinese>[CSW] M47龍式</Chinese>
-            <Chinesesimp>[CSW] M47龙式反坦克导弹</Chinesesimp>
+            <Chinesesimp>[班组] M47 龙式反坦克导弹</Chinesesimp>
             <Italian>[CSW] M47 Super-Dragon</Italian>
             <Czech>[CSW] M47 Super-Dragon</Czech>
             <Polish>[CSW] M47 Super-Dragon</Polish>
@@ -24,7 +24,7 @@
             <French>M47 Super-Dragon</French>
             <Japanese>M47 スーパー ドラゴン</Japanese>
             <Chinese>M47 龍式</Chinese>
-            <Chinesesimp>M47龙式反坦克导弹</Chinesesimp>
+            <Chinesesimp>M47 龙式反坦克导弹</Chinesesimp>
             <Italian>M47 Super-Dragon</Italian>
             <Czech>M47 Super-Dragon</Czech>
             <Polish>M47 Super-Dragon</Polish>
@@ -90,7 +90,7 @@
             <Italian>Una luce,un mirino usato per le operazioni diurne.Contiene il computer di guida per l'intero sistema </Italian>
             <Czech>Lehký a levný puškohled pro použití za denního světla. Obsahuje navigační počítač pro celý systém.</Czech>
             <Polish>Lekki, tani celownik używany do działania w trakcie dnia. Zawiera komputer naprowadząjący dla całego systemu</Polish>
-            <Russian>Легкий дешёвый прицел, используемый для дневных операций. Содержит компьютер для всей системы</Russian>
+            <Russian>Лёгкий дешёвый прицел, используемый для дневных операций. Содержит компьютер для всей системы</Russian>
             <Spanish>Un visor ligero y barato utilizado en operaciones diurnas. Contiene el ordenador de guiado para todo el sistema.</Spanish>
             <Korean>싸고 가벼운 주간조준기입니다. 사격을 하기 위한 통제컴퓨터가 포함되있습니다.</Korean>
         </Key>

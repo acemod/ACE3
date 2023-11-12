@@ -30,3 +30,5 @@ private _waterSourceOffsets = [
 
 uiNamespace setVariable [QGVAR(cacheP3Ds), compileFinal str [_waterSourceP3Ds, _waterSourceOffsets]];
 TRACE_1("compiled",count _waterSourceP3Ds);
+
+call FUNC(scanFieldRations);

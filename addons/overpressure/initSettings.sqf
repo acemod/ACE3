@@ -1,4 +1,4 @@
-private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(DisplayName)];
 
 [
     QGVAR(distanceCoefficient), "SLIDER",

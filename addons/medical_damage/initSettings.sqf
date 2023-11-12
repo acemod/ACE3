@@ -3,7 +3,7 @@
     "LIST",
     [LSTRING(fatalDamageSource_DisplayName), LSTRING(fatalDamageSource_Description)],
     [ELSTRING(medical,Category)],
-    [[0, 1, 2], [LSTRING(fatalDamageSource_vitalShotsOnly), LSTRING(fatalDamageSource_trauma), LSTRING(fatalDamageSource_both)], 0],
+    [[0, 1, 2], [LSTRING(fatalDamageSource_vitalShotsOnly), LSTRING(fatalDamageSource_trauma), LSTRING(fatalDamageSource_both)], 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -31,6 +31,15 @@
     [LSTRING(PainUnconsciousChance_DisplayName), LSTRING(PainUnconsciousChance_Description)],
     ELSTRING(medical,Category),
     [0, 1, 0.1, 2, true],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QEGVAR(medical,painUnconsciousThreshold),
+    "SLIDER",
+    [LSTRING(PainUnconsciousThreshold_DisplayName), LSTRING(PainUnconsciousThreshold_Description)],
+    ELSTRING(medical,Category),
+    [0, 1, 0.5, 2, false],
     true
 ] call CBA_fnc_addSetting;
 

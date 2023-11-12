@@ -4,13 +4,18 @@ on:
   push:
     branches:
     - master
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
+      uses: actions/checkout@v4
     - name: Install Python packages
       run: |
         pip3 install wheel
@@ -22,3 +27,59 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.DOCS_TOKEN }}
       run: python3 tools/deploy.py
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Extract Dependencies
+      run: python3 tools/extract_dependencies.py --markdown
+    - name: Document Functions
+      run: python3 docs/tools/document_functions.py
+
+    - name: Build with Jekyll
+      uses: actions/jekyll-build-pages@v1
+      with:
+        source: docs/
+        destination: docs/_site/
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: jekyll-site
+        path: docs/_site/
+        retention-days: 1
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build]
+
+    environment:
+      name: netlify
+      url: ${{ steps.deployment.outputs.deploy-url }}
+
+    steps:
+    - name: Download Artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: jekyll-site
+        path: _site/
+
+    - name: Deploy to Netlify
+      id: deployment
+      uses: nwtgck/actions-netlify@v2
+      with:
+        publish-dir: _site/
+        production-branch: master
+        production-deploy: true
+        deploy-message: ${{ github.event.head_commit.message }}
+        enable-pull-request-comment: false
+        enable-commit-comment: false
+        enable-commit-status: true
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      timeout-minutes: 1

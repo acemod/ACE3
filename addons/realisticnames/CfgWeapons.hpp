@@ -148,7 +148,7 @@ class CfgWeapons {
     class SMG_03C_TR_hex: SMG_03C_TR_black {
         displayName = CSTRING(P90_TR_Hex_Name);
     };
-    class SMG_03C_black: SMG_03C_Base {
+    class SMG_03C_black: SMG_03C_BASE {
         displayName = CSTRING(P90_Black_Name);
     };
     class SMG_03C_khaki: SMG_03C_black {
@@ -517,6 +517,13 @@ class CfgWeapons {
         };
     };
 
+    class LMG_Minigun_heli: LMG_Minigun {
+        displayName = "M134 Minigun";
+        class manual: manual {
+            displayName = "M134 Minigun";
+        };
+    };
+
     class HMG_127: LMG_RCWS {
         displayName = "M2";
         class manual: MGun {
@@ -702,16 +709,16 @@ class CfgWeapons {
 
     //attachments
 
-    class Itemcore;
+    class ItemCore;
 
     class acc_flashlight: ItemCore {
         displayName = "UTG Defender 126";
     };
 
-    class optic_hamr: ItemCore {
+    class optic_Hamr: ItemCore {
         displayName = CSTRING(optic_hamr);
     };
-    class optic_Hamr_khk_F: optic_hamr {
+    class optic_Hamr_khk_F: optic_Hamr {
         displayName = CSTRING(optic_hamr_khk);
     };
     class ACE_optic_Hamr_2D: optic_Hamr {

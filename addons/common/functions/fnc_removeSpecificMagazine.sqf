@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Removes a magazine from the unit or object that has a specific ammo count
@@ -25,19 +25,8 @@ private _fnc_removeMagazine = {
     params ["_container", "_magArray"];
     _magArray params ["_magazineType", "_ammoCount"];
 
-    private _allMagazines = magazinesAmmoCargo _container;
-    private _specificMagazineIndex = _allMagazines findIf {_x isEqualTo _magArray};
-    _allMagazines deleteAt _specificMagazineIndex;
-
-    if (_specificMagazineIndex > -1) exitWith {
-        clearMagazineCargoGlobal _container;
-        private _containerType = typeOf _container;
-        if (_containerType in ["GroundWeaponHolder", "WeaponHolderSimulated"]) then {
-            _container = createVehicle [_containerType, getPosATL _container, [], 0, "CAN_COLLIDE"];
-        };
-        {
-            _container addMagazineAmmoCargo [_x select 0, 1, _x select 1];
-        } forEach _allMagazines;
+    if (_magArray in (magazinesAmmoCargo _container)) exitWith {
+        _container addMagazineAmmoCargo [_magazineType, -1, _ammoCount];
         true
     };
     false

@@ -2,9 +2,9 @@
 
 ["ace_addCargo", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
 [QGVAR(paradropItem), {
-    params ["_item", "_vehicle"];
+    params ["_item", "_vehicle", ["_showHint", true]];
 
-    private _unloaded = [_item, _vehicle] call FUNC(paradropItem);
+    private _unloaded = [_item, _vehicle, _showHint] call FUNC(paradropItem);
 
     if (_unloaded && {GVAR(openAfterUnload) in [2, 3]}) then {
         GVAR(interactionVehicle) = _vehicle;
@@ -50,8 +50,6 @@
         GVAR(interactionParadrop) = false;
         createDialog QGVAR(menu);
     };
-
-    // TOOO maybe drag/carry the unloaded item?
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(serverUnload), {
@@ -83,7 +81,8 @@ GVAR(vehicleAction) = [
         {locked _target < 2} &&
         {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE} &&
         {alive _target} &&
-        {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
+        {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+        {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)}
     }
 ] call EFUNC(interact_menu,createAction);
 
@@ -101,7 +100,8 @@ GVAR(objectActions) = [
             {(_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad))]) in [true, 1]} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-            {(getNumber ((configOf _target) >> QGVAR(noRename))) == 0}
+            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
+            {(_target getVariable [QGVAR(noRename), getNumber (configOf _target >> QGVAR(noRename))]) in [false, 0]}
         }
     ] call EFUNC(interact_menu,createAction),
     [QGVAR(load), localize LSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
@@ -116,6 +116,7 @@ GVAR(objectActions) = [
             {locked _target < 2} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
             {((nearestObjects [_target, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]) findIf {
                 private _hasCargoConfig = 1 == getNumber (configOf _x >> QGVAR(hasCargo));
                 private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
@@ -155,7 +156,8 @@ private _objectClassesAddClassEH = call (uiNamespace getVariable [QGVAR(objectCl
 
 if (isServer) then {
     ["ace_placedInBodyBag", {
-        params ["_target", "_bodyBag"];
+        params ["_target", "_bodyBag", "_isGrave"];
+        if (_isGrave) exitWith {}; // assume graves aren't cargo
         _bodyBag setVariable [QGVAR(customName), [_target, false, true] call EFUNC(common,getName), true];
     }] call CBA_fnc_addEventHandler;
 };

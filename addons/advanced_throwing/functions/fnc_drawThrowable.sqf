@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dslyecxi, Jonpas, SilentSpike
+ * Author: Dslyecxi, Jonpas, kymckay
  * Handles drawing the currently selected or cooked throwable.
  *
  * Arguments:

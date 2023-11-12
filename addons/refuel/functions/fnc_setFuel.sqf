@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Set the remaining fuel amount.
@@ -18,7 +18,12 @@
 
 params [["_source", objNull, [objNull]], ["_fuel", nil, [0]]];
 
-if (isNull _source ||
-    {isNil "_fuel"}) exitWith {};
+// Ensure valid fuel quantity
+if (isNull _source || {isNil "_fuel"}) exitWith {};
 
-_source setVariable [QGVAR(currentFuelCargo), _fuel, true];
+// Make sure this is actually a finite fuel source
+private _capacity = [_source] call FUNC(getCapacity);
+if (_capacity in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL]) exitWith {};
+
+// Don't overfill or underfill tank
+_source setVariable [QGVAR(currentFuelCargo), (_fuel min _capacity) max 0, true];

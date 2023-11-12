@@ -1,10 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Returns the damage threshold based on settings and unit type.
  *
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
+ * 1: Override for full repair <BOOL> (default: false)
  *
  * Return Value:
  * 0: Repair Damage Threshold <NUMBER>
@@ -15,11 +16,11 @@
  * Public: No
  */
 
-params ["_unit"];
-TRACE_1("params",_unit);
+params ["_unit", ["_override", false]];
+TRACE_2("params",_unit,_override);
 
-//If in facility or near vehicle then complete repair of hitpoint:
-if (([_unit] call FUNC(isInRepairFacility) || {[_unit] call FUNC(isNearRepairVehicle)})) exitWith {0};
+//If in facility, near vehicle, or doing full repair then complete repair of hitpoint:
+if ((_override || {[_unit] call FUNC(isInRepairFacility)} || {[_unit] call FUNC(isNearRepairVehicle)})) exitWith {0};
 
 private _class = _unit getVariable ["ACE_IsEngineer", getNumber (configOf _unit >> "engineer")];
 //If advanced or more qualified than min, then use engineer threshold:

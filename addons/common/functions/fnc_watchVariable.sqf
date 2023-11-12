@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Shows multiple watched variables on the main display (for easy debugging).
@@ -7,12 +7,12 @@
  * 0: Title (var name) <STRING> (default: "")
  * 1: Code to generate result (passed nothing, can return any) <CODE> (default: {})
  * 2: Array containing modifiers <ARRAY> (default: [])
- * For Numbers:
- *      0: Show Delta change <BOOL> (default: true)
- *      1: Slider Min Value <NUMBER> (default: 0)
- *      1: Slider Max Value <NUMBER> (default: 0)
- * For Anything else:
- *      0: Number of structured text lines <NUMBER> (default: 1)
+ *   For Numbers:
+ * - 0: Show Delta change <BOOL> (default: true)
+ * - 1: Slider Min Value <NUMBER> (default: 0)
+ * - 2: Slider Max Value <NUMBER> (default: 0)
+ *   For Anything else:
+ * + 0: Number of structured text lines <NUMBER> (default: 1)
  *
  * Return Value:
  * None

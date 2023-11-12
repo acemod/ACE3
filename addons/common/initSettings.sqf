@@ -1,5 +1,5 @@
-private _category = LLSTRING(ACEKeybindCategoryCommon);
-private _categoryColors = [_category, format ["| %1 |", LELSTRING(common,subcategory_colors)]];
+private _category = format ["ACE %1", LLSTRING(DisplayName)];
+private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_colors)]];
 
 [
     QGVAR(checkPBOsAction),
@@ -68,7 +68,7 @@ private _categoryColors = [_category, format ["| %1 |", LELSTRING(common,subcate
     QGVAR(persistentLaserEnabled),
     "CHECKBOX",
     [LSTRING(SettingPersistentLaserName), LSTRING(SettingPersistentLaserDesc)],
-    localize LSTRING(ACEKeybindCategoryWeapons),
+    LSTRING(ACEKeybindCategoryWeapons),
     false,
     false,
     LINKFUNC(switchPersistentLaser)

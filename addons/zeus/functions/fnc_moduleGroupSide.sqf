@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike, Brett
+ * Author: kymckay, Brett
  * Zeus module function to change side of a group on dialog confirmation
  *
  * Arguments:
@@ -44,11 +44,19 @@ if (GETVAR(_unit,ACE_isUnconscious,false) && {GETMVAR(EGVAR(medical,moveUnitsFro
 
     _unit setVariable [QEGVAR(common,previousGroupSwitchTo), _previousGroupsList, true];
 } else {
+    private _units = units _unit;
+
     // Preserve assignedTeam for each unit
-    {
+    // Teams need to be gotten before removing units from group
+    private _teams = _units apply {
         private _team = assignedTeam _x;
+        [_team, "MAIN"] select (_team == "")
+    };
+
+    {
         [_x] joinSilent _newGroup;
-        _x assignTeam _team;
-    } forEach units _unit;
+        _x assignTeam (_teams select _forEachIndex);
+    } forEach _units;
+
     deleteGroup _oldGroup;
 };

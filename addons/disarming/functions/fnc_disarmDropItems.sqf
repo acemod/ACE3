@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -38,6 +38,11 @@ if (_doNotDropAmmo && {({_x in _listOfItemsToRemove} count (magazines _target)) 
 };
 
 private _holder = objNull;
+
+// if _target is in a vehicle, use vehicle inventory as container
+if (!isNull objectParent _target) then {
+    _holder = objectParent _target;
+};
 
 //If not dropping ammo, don't use an existing container
 if (!_doNotDropAmmo) then {

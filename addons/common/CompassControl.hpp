@@ -19,6 +19,7 @@ class RscPicture;
 class RscControlsGroupNoScrollbars;
 
 class GVAR(CompassControl): RscControlsGroupNoScrollbars {
+    #pragma hemtt suppress pw3_padded_arg
     onLoad = QUOTE(\
         params ['_control'];\
         private _display = ctrlParent _control;\
@@ -37,27 +38,28 @@ class GVAR(CompassControl): RscControlsGroupNoScrollbars {
         _display displayAddEventHandler [ARR_2('MouseMoving',_fnc_update)];\
         _display displayAddEventHandler [ARR_2('MouseHolding',_fnc_update)];\
     );
-    x = LEFT;
-    y = TOP;
-    w = WIDTH;
-    h = HEIGHT;
+    x = QUOTE(LEFT);
+    y = QUOTE(TOP);
+    w = QUOTE(WIDTH);
+    h = QUOTE(HEIGHT);
 
     class controls {
         class Background: RscText {
             colorBackground[] = BACKGROUND_COLOR;
             x = 0;
             y = 0;
-            w = WIDTH;
-            h = HEIGHT;
+            w = QUOTE(WIDTH);
+            h = QUOTE(HEIGHT);
         };
         class Pointer: RscText {
             colorBackground[] = POINTER_COLOR;
-            x = WIDTH/2 - WIDTH*POINTER_WIDTH_FACTOR/2;
+            x = QUOTE(WIDTH/2 - WIDTH*POINTER_WIDTH_FACTOR/2);
             y = 0;
-            w = WIDTH*POINTER_WIDTH_FACTOR;
-            h = HEIGHT;
+            w = QUOTE(WIDTH*POINTER_WIDTH_FACTOR);
+            h = QUOTE(HEIGHT);
         };
         class CompassGroup: RscControlsGroupNoScrollbars {
+            #pragma hemtt suppress pw3_padded_arg
             onLoad = QUOTE(\
                 params ['_control'];\
                 private _display = ctrlParent _control;\
@@ -65,44 +67,44 @@ class GVAR(CompassControl): RscControlsGroupNoScrollbars {
             );
             x = 0;
             y = 0;
-            w = 2*WIDTH;
-            h = 2*HEIGHT;
+            w = QUOTE(2*WIDTH);
+            h = QUOTE(2*HEIGHT);
 
             class controls {
                 class Compass0: RscPicture {
                     text = TEXTURE_0;
-                    x = 0 * (WIDTH / 4);
+                    x = QUOTE(0 * (WIDTH / 4));
                     y = 0;
-                    w = WIDTH/4;
-                    h = HEIGHT;
+                    w = QUOTE(WIDTH/4);
+                    h = QUOTE(HEIGHT);
                 };
                 class Compass1: Compass0 {
                     text = TEXTURE_1;
-                    x = 1 * (WIDTH / 4);
+                    x = QUOTE(1 * (WIDTH / 4));
                 };
                 class Compass2: Compass0 {
                     text = TEXTURE_2;
-                    x = 2 * (WIDTH / 4);
+                    x = QUOTE(2 * (WIDTH / 4));
                 };
                 class Compass3: Compass0 {
                     text = TEXTURE_3;
-                    x = 3 * (WIDTH / 4);
+                    x = QUOTE(3 * (WIDTH / 4));
                 };
                 class Compass4: Compass0 {
                     text = TEXTURE_0;
-                    x = 4 * (WIDTH / 4);
+                    x = QUOTE(4 * (WIDTH / 4));
                 };
                 class Compass5: Compass0 {
                     text = TEXTURE_1;
-                    x = 5 * (WIDTH / 4);
+                    x = QUOTE(5 * (WIDTH / 4));
                 };
                 class Compass6: Compass0 {
                     text = TEXTURE_2;
-                    x = 6 * (WIDTH / 4);
+                    x = QUOTE(6 * (WIDTH / 4));
                 };
                 class Compass7: Compass0 {
                     text = TEXTURE_3;
-                    x = 7 * (WIDTH / 4);
+                    x = QUOTE(7 * (WIDTH / 4));
                 };
             };
         };

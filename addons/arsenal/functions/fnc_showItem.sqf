@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -15,54 +15,46 @@
 
 if (GVAR(centerNotPlayer)) exitWith {};
 
+// Determine action to play based on current category selection
 private _nextAction = switch (GVAR(currentLeftPanel)) do {
-
-    case IDC_buttonPrimaryWeapon : {
-        ["Civil", "PrimaryWeapon"] select ((GVAR(currentItems) select 0) != "")
+    // Primary weapon
+    case IDC_buttonPrimaryWeapon: {
+        ["Civil", "PrimaryWeapon"] select ((GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON) != "")
     };
-    case IDC_buttonSecondaryWeapon : {
-        ["Civil", "SecondaryWeapon"] select (GVAR(currentItems) select 1 != "")
+    // Secondary weapon
+    case IDC_buttonSecondaryWeapon: {
+        ["Civil", "SecondaryWeapon"] select ((GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON) != "")
     };
-    case IDC_buttonHandgun : {
-        ["Civil", "HandGunOn"] select (GVAR(currentItems) select 2 != "")
+    // Handgun weapon
+    case IDC_buttonHandgun: {
+        ["Civil", "HandGunOn"] select ((GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON) != "")
     };
-    case IDC_buttonHeadgear;
-    case IDC_buttonUniform;
-    case IDC_buttonVest;
-    case IDC_buttonBackpack;
-    case IDC_buttonGoggles;
-    case IDC_buttonMap;
-    case IDC_buttonGPS;
-    case IDC_buttonRadio;
-    case IDC_buttonCompass;
-    case IDC_buttonWatch;
-    case IDC_buttonFace;
-    case IDC_buttonNVG : {
-        "Civil"
+    // Binoculars
+    case IDC_buttonBinoculars: {
+        ["Civil", "Binoculars"] select ((GVAR(currentItems) select IDX_CURR_BINO) != "")
     };
-    case IDC_buttonBinoculars : {
-        ["Civil", "Binoculars"] select (GVAR(currentItems) select 9 != "")
-    };
-    case IDC_buttonInsignia : {
+    // Insignia
+    case IDC_buttonInsignia: {
         "Salute"
     };
-    case IDC_buttonVoice : {
+    // Voice
+    case IDC_buttonVoice: {
         GVAR(center) directSay "CuratorObjectPlaced";
+        "Civil"
+    };
+    // Other
+    default {
         "Civil"
     };
 };
 
+// Play the action if a new category of item was selected
 if (_nextAction != GVAR(currentAction)) then {
-    switch (_nextAction) do {
-        case "PrimaryWeapon": {
-            GVAR(selectedWeaponType) = 0;
-        };
-        case "SecondaryWeapon": {
-            GVAR(selectedWeaponType) = 1;
-        };
-        case "HandGunOn": {
-            GVAR(selectedWeaponType) = 2;
-        };
+    GVAR(selectedWeaponType) = switch (_nextAction) do {
+        case "PrimaryWeapon": {0};
+        case "SecondaryWeapon": {1};
+        case "HandGunOn": {2};
+        default {GVAR(selectedWeaponType)};
     };
 
     if (simulationEnabled GVAR(center)) then {

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: tcvm
  * Active Radar Homing seeker
  *
  * Arguments:

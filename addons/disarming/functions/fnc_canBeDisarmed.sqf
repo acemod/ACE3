@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -29,7 +29,6 @@ if (_putDownAnim != "") exitWith { false };
 
 (alive _target) &&
 {(abs (speed _target)) < 1} &&
-{(vehicle _target) == _target} &&
 {(_target getVariable ["ACE_isUnconscious", false]) ||
     {_target getVariable [QEGVAR(captives,isHandcuffed), false]} ||
     {_target getVariable [QEGVAR(captives,isSurrendering), false]}}

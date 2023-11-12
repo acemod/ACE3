@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: drofseh
  * Return true if the target's weapon can be cooled with an item in the player's inventory
@@ -20,7 +20,7 @@ params ["_unit", "_player"];
 TRACE_2("canCoolWeaponWithItem",_unit,_player);
 
 GVAR(enabled)
-&& {isClass (configfile >> "CfgPatches" >> "acex_field_rations")}
+&& {["acex_field_rations"] call EFUNC(common,isModLoaded)}
 && {!(_unit getVariable [QEGVAR(captives,isSurrendering), false])} // interaction point will overlap with ace_captives
 && {!(_unit getVariable [QEGVAR(captives,isHandcuffed), false])}
 && {[_unit, currentWeapon _unit] call FUNC(getWeaponTemperature) > (ambientTemperature select 0)}

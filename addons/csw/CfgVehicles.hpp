@@ -272,5 +272,15 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
+    // Ammo holder for returning ammo
+    class ReammoBox_F;
+    class GVAR(ammo_holder): ReammoBox_F {
+        EGVAR(cargo,canLoad) = 0;
+        EGVAR(cargo,noRename) = 1;
+        EGVAR(dragging,canCarry) = 1; // Allow this to be moved alongside the weapon
+        EGVAR(dragging,canDrag) = 1;
+        scope = 1;
+        maximumLoad = 0; // don't allow anything to be placed inside, only removed
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+    };
 };
-

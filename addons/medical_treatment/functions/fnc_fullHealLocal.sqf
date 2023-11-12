@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Local callback for fully healing a patient.
@@ -50,9 +50,9 @@ _patient setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _patient setVariable [QGVAR(occludedMedications), nil, true];
 
 // Wounds and Injuries
-_patient setVariable [VAR_OPEN_WOUNDS, [], true];
-_patient setVariable [VAR_BANDAGED_WOUNDS, [], true];
-_patient setVariable [VAR_STITCHED_WOUNDS, [], true];
+_patient setVariable [VAR_OPEN_WOUNDS, createHashMap, true];
+_patient setVariable [VAR_BANDAGED_WOUNDS, createHashMap, true];
+_patient setVariable [VAR_STITCHED_WOUNDS, createHashMap, true];
 _patient setVariable [QEGVAR(medical,isLimping), false, true];
 _patient setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rosuto, Ruthberg
  * Creates the DAGR menu dialog
@@ -10,6 +10,7 @@
  * None
  *
  * Example:
+ * [] call ace_dagr_fnc_menuInit
  *
  * Public: No
  */

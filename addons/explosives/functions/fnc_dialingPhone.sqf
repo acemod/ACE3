@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Performs the dial tones and detonation of explosive.
@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [FUNC(dialingPhone), 0.25, [_unit,4,_arr,_code]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
+ * [ace_explosives_fnc_dialingPhone, 0.25, [_unit,4,_arr,_code]] call CBA_fnc_addPerFrameHandler;
  *
  * Public: No
  */
@@ -39,9 +39,14 @@ if (_i >= (count _arr + 2)) then {
         ctrlSetText [1400,"Call Ended!"];
     };
 };
+
 if (_i == (count _arr)) then {
-    if ((count _explosive) > 0) then {
-        playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_explosive select 0),3.16228,1,75];
+    if (
+        ((count _explosive) > 0) &&
+        {[_unit, -1, (_explosive # 0), (_explosive # 2), "ACE_Cellphone"] call FUNC(checkDetonateHandlers)}
+    ) then {
+        playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)), objNull, false, (getPosASL (_explosive # 0)), 3.16228, 1, 75];
     };
 };
+
 _args set [1, _i + 1];

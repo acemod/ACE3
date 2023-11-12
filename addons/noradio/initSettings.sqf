@@ -1,9 +1,7 @@
-private _category = [LELSTRING(common,ACEKeybindCategoryCommon), QUOTE(COMPONENT_BEAUTIFIED)];
-
 [
     QGVAR(enabled), "CHECKBOX", 
     [LSTRING(setting), LSTRING(setting_tooltip)], 
-    _category,
+    [LELSTRING(Common,CategoryUncategorized), LLSTRING(DisplayName)],
     true, 
     true, {
     params ["_enabled"];

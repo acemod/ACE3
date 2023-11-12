@@ -31,3 +31,11 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     true,
     0
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(repackAnimation), "CHECKBOX",
+    LSTRING(repackAnimation),
+    _category,
+    true,
+    0
+] call CBA_fnc_addSetting;
