@@ -48,7 +48,7 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
     QGVAR(timestampUTCOffset), "SLIDER",
     [LSTRING(TimestampUTCOffset), LSTRING(TimestampUTCOffsetDescription)],
     [_categoryName, LLSTRING(Module_DisplayName)],
-    [-12, 12, 0, 0],
+    [-12, 14, 0, 0],
     true
 ] call CBA_fnc_addSetting;
 
