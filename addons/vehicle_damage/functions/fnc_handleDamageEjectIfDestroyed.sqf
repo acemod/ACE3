@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * _this call ace_cookoff_fnc_handleDamageEjectIfDestroyed
+ * _this call ace_vehicle_damage_fnc_handleDamageEjectIfDestroyed
  *
  * Public: No
  */

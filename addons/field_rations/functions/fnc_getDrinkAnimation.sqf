@@ -11,7 +11,7 @@
  * Animation <STRING>
  *
  * Example:
- * [_player, _source] call ace_field_rations_getDrinkAnimation
+ * [_player, _source] call ace_field_rations_fnc_getDrinkAnimation
  *
  * Public: No
  */

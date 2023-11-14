@@ -63,6 +63,15 @@ if (_object isEqualType objNull) then {
     } else {
         [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
     };
+
+    if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
+        // Get which curators had this object as editable
+        private _objectCurators = _object getVariable [QGVAR(objectCurators), []];
+
+        if (_objectCurators isEqualTo []) exitWith {};
+
+        [QEGVAR(zeus,addObjects), [[_object], _objectCurators]] call CBA_fnc_serverEvent;
+    };
 } else {
     _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
 

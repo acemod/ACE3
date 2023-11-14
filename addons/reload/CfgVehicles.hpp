@@ -17,8 +17,8 @@ class CfgVehicles {
                 class GVAR(linkBelt) {
                     displayName = CSTRING(linkBelt);
                     distance = 2;
-                    condition = QUOTE(([ARR_2(_player, _target)] call FUNC(getAmmoToLinkBelt)) > 0);
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(startLinkingBelt));
+                    condition = QUOTE(([ARR_2(_player,_target)] call FUNC(getAmmoToLinkBelt)) > 0);
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(startLinkingBelt));
                     exceptions[] = {"isNotInside"};
                 };
                 class GVAR(checkAmmo) {

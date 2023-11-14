@@ -93,7 +93,8 @@ GVAR(vehicleAction) = [
         {locked _target < 2} &&
         {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE} &&
         {alive _target} &&
-        {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
+        {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+        {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)}
     }
 ] call EFUNC(interact_menu,createAction);
 
@@ -111,6 +112,7 @@ GVAR(objectActions) = [
             {(_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad))]) in [true, 1]} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
             {(_target getVariable [QGVAR(noRename), getNumber (configOf _target >> QGVAR(noRename))]) in [false, 0]}
         }
     ] call EFUNC(interact_menu,createAction),
@@ -126,6 +128,7 @@ GVAR(objectActions) = [
             {locked _target < 2} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
             {((nearestObjects [_target, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]) findIf {
                 private _hasCargoConfig = 1 == getNumber (configOf _x >> QGVAR(hasCargo));
                 private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];

@@ -18,7 +18,7 @@
  * Whether or not to continue handling last frame's damage
  *
  * Example:
- * [ace_vehicle_damage_fnc_handleTankDamage, tank1, "Hit_Engine", 12]] call CBA_fnc_execNextFrame
+ * [ace_vehicle_damage_fnc_handleVehicleDamage, tank1, "Hit_Engine", 12]] call CBA_fnc_execNextFrame
  *
  * Public: No
  */
