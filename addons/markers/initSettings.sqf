@@ -58,7 +58,7 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
     [_categoryName, LLSTRING(Module_DisplayName)],
     [
         [0, 15, 30, 45],
-        [+00, +15, +30, +45],
+        [0, 15, 30, 45],
         0
     ]
 ] call CBA_fnc_addSetting;
