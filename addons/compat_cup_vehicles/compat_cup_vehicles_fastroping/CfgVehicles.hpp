@@ -23,7 +23,7 @@ class CfgVehicles {
 
         class UserActions {
             class CloseRdoor {
-                condition = QUOTE(this doorPhase 'CargoDoorR' > 0.5 && ((this getCargoIndex player) isEqualTo 0) && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)), false)]));
+                condition = QUOTE(this doorPhase 'CargoDoorR' > 0.5 && ((this getCargoIndex player) isEqualTo 0) && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]));
             };
         };
     };
@@ -39,7 +39,7 @@ class CfgVehicles {
 
         class UserActions {
             class RampClose {
-                condition = QUOTE(this animationPhase 'ramp_bottom' >= 0.56 && player == driver this && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)), false)]));
+                condition = QUOTE(this animationPhase 'ramp_bottom' >= 0.56 && player == driver this && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]));
             };
         };
     };
@@ -52,7 +52,7 @@ class CfgVehicles {
 
         class UserActions {
             class CloseRdoor {
-                condition = QUOTE(this doorPhase 'dvere_p' > 0.5 && {(this getCargoIndex player) isEqualTo 0} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)), false)])});
+                condition = QUOTE(this doorPhase 'dvere_p' > 0.5 && {(this getCargoIndex player) isEqualTo 0} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});
             };
             class OutWinch {
                 condition = "false";
@@ -75,7 +75,7 @@ class CfgVehicles {
         class UserActions {
             class OpenDoors;
             class CloseDoors: OpenDoors {
-                condition = QUOTE(this animationPhase 'doors' > 0.5 && driver this == player && alive (this) && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)), false)]));
+                condition = QUOTE(this animationPhase 'doors' > 0.5 && driver this == player && alive (this) && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]));
             };
         };
     };
@@ -100,10 +100,10 @@ class CfgVehicles {
 
         class UserActions {
             class CloseRdoor {
-                condition = QUOTE(alive this && {this doorPhase 'ofrp_puma_porte_droite' > 0.5} && {(this getCargoIndex player) isEqualTo 0} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)), false)])});
+                condition = QUOTE(alive this && {this doorPhase 'ofrp_puma_porte_droite' > 0.5} && {(this getCargoIndex player) isEqualTo 0} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});
             };
             class CloseLdoor {
-                condition = QUOTE(alive this && {this doorPhase 'ofrp_puma_porte_gauche' > 0.5} && {(this getCargoIndex player) isEqualTo 1} && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)), false)]));
+                condition = QUOTE(alive this && {this doorPhase 'ofrp_puma_porte_gauche' > 0.5} && {(this getCargoIndex player) isEqualTo 1} && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]));
             };
         };
     };
@@ -136,7 +136,7 @@ class CfgVehicles {
         class UserActions {
             class OpenDoors;
             class CloseDoors: OpenDoors {
-                condition = QUOTE(this animationPhase 'doors' > 0.5 && driver this == player && alive (this) && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)), false)]));
+                condition = QUOTE(this animationPhase 'doors' > 0.5 && driver this == player && alive (this) && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]));
             };
         };
     };
