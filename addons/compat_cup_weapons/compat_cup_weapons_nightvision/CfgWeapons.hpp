@@ -18,7 +18,7 @@ class CfgWeapons {
         modelOptics = "";
         ace_nightvision_border = QPATHTOEF(nightvision,data\nvg_mask_4096.paa);
         ace_nightvision_bluRadius = 0;
-        ace_nightvision_eyeCups = 0;
+        ace_nightvision_eyeCups = 1;
         ace_nightvision_generation = 3;
         ace_nightvision_colorPreset[] = {0, {0.0, 0.0, 0.0, 0.0}, {1.3, 1.2, 0.0, 0.9}, {6, 1, 1, 0.0}};
     };
