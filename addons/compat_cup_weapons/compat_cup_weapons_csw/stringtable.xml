@@ -7,6 +7,12 @@
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_MK19_displayName">
             <English>[CSW] MK19 Belt</English>
         </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW_displayName">
+            <English>[CSW] TOW Tube</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW2_displayName">
+            <English>[CSW] TOW2 Tube</English>
+        </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_PG9_displayName">
             <English>[CSW] PG-9 Round</English>
         </Key>

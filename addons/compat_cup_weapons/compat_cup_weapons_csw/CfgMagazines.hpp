@@ -35,7 +35,7 @@ class CfgMagazines {
         type = 256;
         count = 1;
         mass = 200;
-        displayname = "[CSW] TOW Tube"; // the fuck?
+        displayname = SUBCSTRING(mag_TOW_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
         picture = "\A3\Weapons_F_beta\Launchers\titan\Data\UI\gear_titan_missile_at_ca.paa";
     };
@@ -46,7 +46,7 @@ class CfgMagazines {
         type = 256;
         count = 1;
         mass = 200;
-        displayname = "[CSW] TOW2 Tube";
+        displayname = SUBCSTRING(mag_TOW2_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
         picture = "\A3\Weapons_F_beta\Launchers\titan\Data\UI\gear_titan_missile_at_ca.paa";
     };
