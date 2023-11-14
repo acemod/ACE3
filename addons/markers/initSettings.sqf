@@ -53,6 +53,17 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(TimestampUTCMinutesOffset), "LIST",
+    [LSTRING(TimestampUTCMinutesOffset), LSTRING(TimestampUTCMinutesOffsetDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    [
+        [0, 15, 30, 45],
+        [+00, +15, +30, +45],
+        0
+    ]
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(timestampHourFormat), "LIST",
     [LSTRING(TimestampHourFormat), LSTRING(TimestampHourFormatDescription)],
     [_categoryName, LLSTRING(Module_DisplayName)],
