@@ -239,7 +239,7 @@
             <Korean>시간대</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTimezoneDescription">
-            <English>Change the time zone for the timestamp</English>
+            <English>Changes the time zone for the timestamp</English>
             <Russian>Измените часовой пояс для метки времени</Russian>
             <French>Modifiez le fuseau horaire pour l'horodatage</French>
             <Japanese>タイムスタンプの時間帯を変更します</Japanese>
@@ -294,7 +294,7 @@
             <Korean>UTC 오프셋</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCOffsetDescription">
-            <English>Change the time offset for the UTC timestamp</English>
+            <English>Changes the time offset for the UTC timestamp</English>
             <Russian>Измените смещение времени для метки времени UTC</Russian>
             <French>Modifier le décalage horaire pour l'horodatage UTC</French>
             <Japanese>UTCタイムスタンプの時差を変更する</Japanese>
