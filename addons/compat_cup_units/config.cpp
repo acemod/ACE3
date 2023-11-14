@@ -9,7 +9,7 @@ class CfgPatches {
         requiredAddons[] = {"CUP_Creatures_People_LoadOrder"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Community Upgrade Project", "Mike"};
+        authors[] = {"Mike", "Jonpas"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
