@@ -25,12 +25,12 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
     // determine marker timestamp based on time settings
     private _time = switch (GVAR(timestampTimezone)) do {
         case 1: {
-            // use system time
+            // calculate timestamp based on systemTime
             systemTime params ["", "", "", "_hour", "_min", "_sec"];
             _hour + _min/60 + _sec/3600
         };
         case 2: {
-            // calculate UTC timestamp based on utc timezone (hour and minutes offset)
+            // calculate timestamp based on UTC timezone (set in settings)
             systemTimeUTC params ["", "", "", "_hour", "_min", "_sec"];
             _hourOffset = round (GVAR(timestampUTCOffset));
             _hour = _hour + _hourOffset;
