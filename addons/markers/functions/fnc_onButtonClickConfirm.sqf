@@ -22,12 +22,15 @@ private _aceTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
 
 // handle timestamp
 if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
+    // determine marker timestamp based on time settings
     private _time = switch (GVAR(timestampTimezone)) do {
         case 1: {
+            // use system time
             systemTime params ["", "", "", "_hour", "_min", "_sec"];
             _hour + _min/60 + _sec/3600
         };
         case 2: {
+            // calculate UTC timestamp based on utc timezone (hour and minutes offset)
             systemTimeUTC params ["", "", "", "_hour", "_min", "_sec"];
             _hourOffset = round (GVAR(timestampUTCOffset));
             _hour = _hour + _hourOffset;
@@ -36,6 +39,7 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
             _time % 24
         };
         default {
+            // use in-game time
             dayTime
         };
     };
