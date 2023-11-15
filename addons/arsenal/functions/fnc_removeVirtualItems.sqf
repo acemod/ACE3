@@ -19,6 +19,11 @@
  * Public: Yes
 */
 
+// Only run this after FUNC(initBox) has run (easier to check if the settings are initialized)
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(removeVirtualItems), _this];
+};
+
 params [["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]]];
 
 if (isNull _object || {_items isEqualTo []}) exitWith {};
@@ -32,6 +37,19 @@ if (_items isEqualType true) then {
 
     if (isNil "_cargo") exitWith {
         [_object, _global] call FUNC(removeBox);
+    };
+
+    if (_global) exitWith {
+        private _id = [QGVAR(removeVirtualItems), [_object, _items]] call CBA_fnc_globalEventJIP;
+
+        [_id, _object] call CBA_fnc_removeGlobalEventJIP;
+
+        // FUNC(removeVirtualItems) might be called multiple times on the same object
+        private _jipIDs = _object getVariable [QGVAR(removeVirtualItemsJipIDs), []];
+
+        _jipIDs pushBack _id;
+
+        _object setVariable [QGVAR(removeVirtualItemsJipIDs), _jipIDs];
     };
 
     // Make sure all items are in string form, then convert to config case (non-existent items return "")
@@ -99,7 +117,8 @@ if (_items isEqualType true) then {
     if (_cargo isEqualTo _empty) then {
         [_object, _global] call FUNC(removeBox);
     } else {
-        _object setVariable [QGVAR(virtualItems), _cargo, _global];
+        _object setVariable [QGVAR(virtualItems), _cargo];
+
         // If the arsenal is already open, refresh arsenal display
         if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
             [true, true] call FUNC(refresh);

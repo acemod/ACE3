@@ -17,6 +17,11 @@
  * Public: Yes
 */
 
+// Only run this after FUNC(initBox) has run (easier to check if the settings are initialized)
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(removeBox), _this];
+};
+
 params [["_object", objNull, [objNull]], ["_global", true, [true]]];
 
 if (isNull _object) exitWith {};
@@ -25,10 +30,19 @@ private _id = _object getVariable QGVAR(initBoxJIP);
 
 if (_global && {isMultiplayer} && {!isNil "_id"}) then {
     // Remove event from JIP queue
-    [_id] call CBA_fnc_removeGlobalEventJIP;
+    _id call CBA_fnc_removeGlobalEventJIP;
 
     // Reset JIP ID
     _object setVariable [QGVAR(initBoxJIP), nil, true];
+
+    // Remove all JIP events for adding and remove items to the object's arsenal
+    {
+        _x call CBA_fnc_removeGlobalEventJIP;
+    } forEach (_object getVariable [QGVAR(addVirtualItemsJipIDs), []]);
+
+    {
+        _x call CBA_fnc_removeGlobalEventJIP;
+    } forEach (_object getVariable [QGVAR(removeVirtualItemsJipIDs), []]);
 
     // Remove box for everyone
     [QGVAR(removeBox), [_object, false]] call CBA_fnc_globalEvent;

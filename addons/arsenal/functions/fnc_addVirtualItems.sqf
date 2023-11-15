@@ -19,9 +19,27 @@
  * Public: Yes
 */
 
+// Only run this after FUNC(initBox) has run (easier to check if the settings are initialized)
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addVirtualItems), _this];
+};
+
 params [["_object", objNull, [objNull]], ["_items", [], [true, []]], ["_global", false, [false]]];
 
 if (isNull _object || {_items isEqualTo []}) exitWith {};
+
+if (_global) exitWith {
+    private _id = [QGVAR(addVirtualItems), [_object, _items]] call CBA_fnc_globalEventJIP;
+
+    [_id, _object] call CBA_fnc_removeGlobalEventJIP;
+
+    // FUNC(addVirtualItems) might be called multiple times on the same object
+    private _jipIDs = _object getVariable [QGVAR(addVirtualItemsJipIDs), []];
+
+    _jipIDs pushBack _id;
+
+    _object setVariable [QGVAR(addVirtualItemsJipIDs), _jipIDs];
+};
 
 private _cargo = _object getVariable QGVAR(virtualItems);
 
@@ -122,7 +140,7 @@ if (_items isEqualType true) then {
     } forEach _items;
 };
 
-_object setVariable [QGVAR(virtualItems), _cargo, _global];
+_object setVariable [QGVAR(virtualItems), _cargo];
 
 // If the arsenal is already open, refresh arsenal display
 if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
