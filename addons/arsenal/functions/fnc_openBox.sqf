@@ -52,6 +52,8 @@ if (_mode) then {
     // Add all the items from the game that the arsenal has detected
     GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
     GVAR(virtualItemsFlat) = +(uiNamespace getVariable QGVAR(configItemsFlat));
+
+    GVAR(ignoredVirtualItems) = true;
 } else {
     // Add only specified items to the arsenal
     private _virtualItems = _object getVariable QGVAR(virtualItems);
