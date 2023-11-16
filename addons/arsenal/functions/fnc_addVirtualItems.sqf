@@ -127,6 +127,7 @@ if (_items isEqualType true) then {
     } forEach _items;
 };
 
+_object setVariable [QGVAR(virtualItems), _cargo, _global];
 
 // If the arsenal is already open, refresh arsenal display
 if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
