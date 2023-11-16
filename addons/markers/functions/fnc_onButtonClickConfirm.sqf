@@ -25,21 +25,22 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
     // determine marker timestamp based on time settings
     private _time = switch (GVAR(timestampTimezone)) do {
         case 1: {
-            // calculate timestamp based on systemTime
             systemTime params ["", "", "", "_hour", "_min", "_sec"];
             _hour + _min/60 + _sec/3600
         };
         case 2: {
-            // calculate timestamp based on UTC timezone (set in settings)
             systemTimeUTC params ["", "", "", "_hour", "_min", "_sec"];
             _hourOffset = round (GVAR(timestampUTCOffset));
             _hour = _hour + _hourOffset;
+
+            // add or subtract minutes offset based on the negative or positive timezone
             _min = if (_hourOffset < 0) then { _min - GVAR(timestampUTCMinutesOffset) } else { _min + GVAR(timestampUTCMinutesOffset) };
-            _time = (_hour + _min/60 + _sec/3600) % 24 + 24;
-            _time % 24
+
+            // prevent the timestamp from exceeding 24 hours or going below 0 hours
+            _time = ((_hour + _min/60 + _sec/3600) % 24 + 24) % 24;
+            _time
         };
         default {
-            // use in-game time
             dayTime
         };
     };
