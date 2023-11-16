@@ -33,18 +33,19 @@ if (isNil "_item") exitWith {};
 params ["_unit"];
 
 if (GVAR(interactionParadrop)) exitWith {
+    // Close the cargo menu
+    closeDialog 0;
+
     private _duration = GVAR(paradropTimeCoefficent) * (_item call FUNC(getSizeItem));
 
     // If drop time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {
-        // Close cargo menu
-        closeDialog 0;
-
         [QGVAR(paradropItem), [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
     };
 
     // Start progress bar - paradrop
-    [
+    // Delay execution by a frame, to avoid progress bar stopping prematurely because of the cargo menu still being open
+    [EFUNC(common,progressBar), [
         _duration,
         [_item, GVAR(interactionVehicle)],
         {
@@ -69,18 +70,18 @@ if (GVAR(interactionParadrop)) exitWith {
         },
         ["isNotSwimming", "isNotInside"],
         false
-    ] call EFUNC(common,progressBar);
+    ]] call CBA_fnc_execNextFrame;
 };
 
 // Start progress bar - normal ground unload
 if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
+    // Close the cargo menu
+    closeDialog 0;
+
     private _duration = GVAR(loadTimeCoefficient) * (_item call FUNC(getSizeItem));
 
     // If unload time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {
-        // Close cargo menu
-        closeDialog 0;
-
         ["ace_unloadCargo", [_item, GVAR(interactionVehicle), _unit]] call CBA_fnc_localEvent;
     };
 

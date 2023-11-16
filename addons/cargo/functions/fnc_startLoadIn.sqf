@@ -40,8 +40,6 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
 
     // If load time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {
-        closeDialog 0;
-
         ["ace_loadCargo", [_item, _vehicle]] call CBA_fnc_localEvent;
 
         true // return
