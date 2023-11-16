@@ -39,19 +39,6 @@ if (_items isEqualType true) then {
         [_object, _global] call FUNC(removeBox);
     };
 
-    if (_global) exitWith {
-        private _id = [QGVAR(removeVirtualItems), [_object, _items]] call CBA_fnc_globalEventJIP;
-
-        [_id, _object] call CBA_fnc_removeGlobalEventJIP;
-
-        // FUNC(removeVirtualItems) might be called multiple times on the same object
-        private _jipIDs = _object getVariable [QGVAR(removeVirtualItemsJipIDs), []];
-
-        _jipIDs pushBack _id;
-
-        _object setVariable [QGVAR(removeVirtualItemsJipIDs), _jipIDs];
-    };
-
     // Make sure all items are in string form, then convert to config case (non-existent items return "")
     _items = (_items select {_x isEqualType ""}) apply {_x call EFUNC(common,getConfigName)};
 
@@ -117,7 +104,7 @@ if (_items isEqualType true) then {
     if (_cargo isEqualTo _empty) then {
         [_object, _global] call FUNC(removeBox);
     } else {
-        _object setVariable [QGVAR(virtualItems), _cargo];
+        _object setVariable [QGVAR(virtualItems), _cargo, _global];
 
         // If the arsenal is already open, refresh arsenal display
         if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {

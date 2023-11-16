@@ -23,7 +23,13 @@ TRACE_2("Initializing object with attribute",_object,_value);
 if (_mode > 0) then {
     // Blacklist: add full arsenal and take items away
     [_object, true, true] call FUNC(initBox);
-    [_object, _items, true] call FUNC(removeVirtualItems);
+
+    // Wait until all items have been added, so that the blacklisted items can be removed
+    [{
+        !isNil {(_this select 0) getVariable QGVAR(virtualItems)}
+    }, {
+        [_this select 0, _this select 1, true] call FUNC(removeVirtualItems);
+    }, [_object, _items], 20] call CBA_fnc_waitUntilAndExecute; // 20s timeout in case of failure
 } else {
      // Exit on whitelist mode with no items
     if (_items isEqualTo []) exitWith {};

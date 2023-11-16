@@ -35,15 +35,6 @@ if (_global && {isMultiplayer} && {!isNil "_id"}) then {
     // Reset JIP ID
     _object setVariable [QGVAR(initBoxJIP), nil, true];
 
-    // Remove all JIP events for adding and remove items to the object's arsenal
-    {
-        _x call CBA_fnc_removeGlobalEventJIP;
-    } forEach (_object getVariable [QGVAR(addVirtualItemsJipIDs), []]);
-
-    {
-        _x call CBA_fnc_removeGlobalEventJIP;
-    } forEach (_object getVariable [QGVAR(removeVirtualItemsJipIDs), []]);
-
     // Remove box for everyone
     [QGVAR(removeBox), [_object, false]] call CBA_fnc_globalEvent;
 

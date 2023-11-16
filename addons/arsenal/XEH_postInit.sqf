@@ -14,8 +14,6 @@ GVAR(lastSortDirectionRight) = DESCENDING;
 
 [QGVAR(initBox), LINKFUNC(initBox)] call CBA_fnc_addEventHandler;
 [QGVAR(removeBox), LINKFUNC(removeBox)] call CBA_fnc_addEventHandler;
-[QGVAR(addVirtualItems), LINKFUNC(addVirtualItems)] call CBA_fnc_addEventHandler;
-[QGVAR(removeVirtualItems), LINKFUNC(removeVirtualItems)] call CBA_fnc_addEventHandler;
 [QGVAR(addDefaultLoadout), LINKFUNC(addDefaultLoadout)] call CBA_fnc_addEventHandler;
 [QGVAR(removeDefaultLoadout), LINKFUNC(removeDefaultLoadout)] call CBA_fnc_addEventHandler;
 [QGVAR(renameDefaultLoadout), LINKFUNC(renameDefaultLoadout)] call CBA_fnc_addEventHandler;
