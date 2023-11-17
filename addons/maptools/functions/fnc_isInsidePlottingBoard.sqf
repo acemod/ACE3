@@ -34,7 +34,7 @@ if (GVAR(plottingBoard_Shown) == 2) then {
     private _rulerAng = acos(_rulerVector vectorCos _relPos);
 
     if (cos(_rulerAng) > 0 && {tan(_rulerAng) * _dist < PLOTTINGBOARD_RULERHALFWIDTH}) then {_isRuler = true};
-    
+
     if (_dist > PLOTTINGBOARD_RULERINNERCIRCLE && {_dist < PLOTTINGBOARD_RULEROUTERCIRCLE && {abs(_rulerAng * DEGTOMILS) < PLOTTINGBOAR_RULEROUTERHALFANGLE}}) then {_isRuler = true};
 };
 
@@ -53,5 +53,5 @@ private _ang2 = acos(_dirRightVector vectorCos _relPos);
 private _relPosAdjusted = [cos(_ang2) * _dist/PLOTTINGBOARD_DRAWRANGE, cos(_ang) * _dist/PLOTTINGBOARD_DRAWRANGE];
 
 if ((_relPosAdjusted select 0 > 0) && (_relPosAdjusted select 0 < 1) && (abs(_relPosAdjusted select 1) < 1)) exitWith {0};
- 
+
 -1

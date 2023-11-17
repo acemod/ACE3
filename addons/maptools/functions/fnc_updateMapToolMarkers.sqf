@@ -17,15 +17,15 @@
 
 params ["_theMap"];
 
-if (GVAR(plottingBoard_Shown == 0)) then {
+if (GVAR(plottingBoard_Shown) == 0) then {
     {
-        private _marker = _x; 
+        private _marker = _x;
         _marker setMarkerAlpha 0;
     } forEach GVAR(plottingBoard_markers);
 };
 
 
-if ( ((GVAR(mapTool_Shown) == 0) && {GVAR(plottingBoard_Shown == 0)}) || {!(("ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems))) || {"ACE_PlottingBoard" in (ACE_player call EFUNC(common,uniqueItems))})}) exitWith {};
+if ( ((GVAR(mapTool_Shown) == 0) && {GVAR(plottingBoard_Shown) == 0}) || {!(("ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems))) || {"ACE_PlottingBoard" in (ACE_player call EFUNC(common,uniqueItems))})}) exitWith {};
 
 
 if (GVAR(plottingBoard_Shown) > 0) then {
@@ -43,15 +43,15 @@ if (GVAR(plottingBoard_Shown) > 0) then {
 
     _theMap drawIcon [QPATHTOF(data\plottingBoardBack.paa), [1,1,1,1], GVAR(plottingBoard_pos), _scaleX, _scaleY, GVAR(plottingBoard_angle), "", 0];
     _theMap drawIcon [QPATHTOF(data\plottingBoardAcrylic.paa), [1,1,1,1], GVAR(plottingBoard_pos), _scaleX, _scaleY, GVAR(plottingBoard_acrylicAngle), "", 0];
- 
- 
+
+
     if (GVAR(plottingBoard_Shown) == 2) then {
         _theMap drawIcon [QPATHTOF(data\plottingBoardRuler.paa), [1,1,1,1], GVAR(plottingBoard_pos), _scaleX, _scaleY, GVAR(plottingBoard_rulerAngle), "", 0];
     };
 
-    
+
     {
-        private _marker = _x; 
+        private _marker = _x;
         _y params ["_markerPos", "_polyline", "_lastAngle", "_lastBoardPos"];
         _marker setMarkerAlpha 1;
         private _angle = GVAR(plottingBoard_acrylicAngle);
@@ -60,9 +60,9 @@ if (GVAR(plottingBoard_Shown) > 0) then {
 
         private _rotatedPos = [[0,0,0], _markerPos, -_angle] call CBA_fnc_vectRotate2D;
         private _rotatedPolyline = [];
-        
+
         if (count _polyline  > 0) then {
-        
+
             for "_i" from 0 to ((count _polyline) - 1) step 2 do {
                 private _rotatedPolyPos = [[0,0], [_polyline select _i, _polyline select (_i + 1)], -_angle] call CBA_fnc_vectRotate2D;
                 _rotatedPolyPos = _rotatedPolyPos vectorAdd _boardPos;
@@ -75,7 +75,7 @@ if (GVAR(plottingBoard_Shown) > 0) then {
         _marker setMarkerPos (_boardPos vectorAdd _rotatedPos);
         _y set [2, _angle];
         _y set [3, +_boardPos];
-        
+
     } forEach GVAR(plottingBoard_markers);
 };
 

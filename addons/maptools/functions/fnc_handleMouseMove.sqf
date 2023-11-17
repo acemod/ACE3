@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: esteldunedain & LorenLuke
+ * Author: esteldunedain, LorenLuke
  * Handle mouse movement over the map tool.
  *
  * Arguments:
@@ -59,7 +59,7 @@ if (GVAR(plottingBoard_isDragging)) exitWith {
 // Rotation
 if (GVAR(plottingBoard_isRotating) > -1) exitWith {
     // Get new angle
-    
+
     private _angle = (180 + ((_mousePosition select 0) - (GVAR(plottingBoard_startPos) select 0)) atan2 ((_mousePosition select 1) - (GVAR(plottingBoard_startPos) select 1)) mod 360);
     private _returnAngle = GVAR(plottingBoard_startAngle) + _angle - GVAR(plottingBoard_startDragAngle);
 

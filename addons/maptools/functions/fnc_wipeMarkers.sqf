@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: LorenLuke
- * Delete all markers on the Plotting Board. 
+ * Delete all markers on the Plotting Board.
  *
  * Arguments:
  * None
@@ -17,5 +17,6 @@
 
 {
     deleteMarker _x;
-    GVAR(plottingBoard_markers) deleteAt _x; 
 } forEach GVAR(plottingBoard_markers);
+
+GVAR(plottingBoard_markers) = createHashMap;

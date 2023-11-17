@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: LorenLuke
- * canUsePlottingBoard
+ * Returns if the plotting board can be used.
  *
  * Arguments:
  * None

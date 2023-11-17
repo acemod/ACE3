@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: esteldunedain & LorenLuke
+ * Author: esteldunedain, LorenLuke
  * Handle mouse buttons.
  *
  * Arguments:
@@ -39,7 +39,7 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
 
             if (_distanceCheck > 1) exitWith {WARNING("Wrong Marker!");};
 
-            
+
             if ((count GVAR(freeDrawingData)) != 3) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData));};
 
             GVAR(freeDrawingData) params ["", "_startStraightPos", "_endStraightPos"];
@@ -76,7 +76,7 @@ if (_dir != 1) then {
         GVAR(mapTool_isRotating) = false;
         _handled = true;
     };
-    if (GVAR(plottingBoard_isDragging) || GVAR(plottingBoard_isRotating > -1)) then {
+    if (GVAR(plottingBoard_isDragging) || GVAR(plottingBoard_isRotating) > -1) then {
         GVAR(plottingBoard_isDragging) = false;
         GVAR(plottingBoard_isRotating) = -1;
         _handled = true;
@@ -121,18 +121,18 @@ if (_dir != 1) then {
             };
         };
     };
-    
+
     if (call FUNC(canUsePlottingBoard)) then {
-        
+
         // Transform mouse screen position to coordinates
         private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
         _pos pushBack 0;
-        
+
         GVAR(plottingBoard_isDragging) = false;
         GVAR(plottingBoard_isRotating) = -1;
-        
+
         if (GVAR(plottingBoard_Shown) != 0) then {
-        
+
             private _click = _pos call FUNC(isInsidePlottingBoard);
             //hint str _click;
             if (_click > -1) then {
@@ -154,17 +154,17 @@ if (_dir != 1) then {
                         case (1): {_ang = GVAR(plottingBoard_acrylicAngle)};
                         case (2): {_ang = GVAR(plottingBoard_rulerAngle)};
                     };
-                    
+
                     GVAR(plottingBoard_startAngle) = + _ang;
                     GVAR(plottingBoard_startDragAngle) = (180 + ((GVAR(plottingBoard_startDragPos) select 0) - (GVAR(plottingBoard_startPos) select 0)) atan2 ((GVAR(plottingBoard_startDragPos) select 1) - (GVAR(plottingBoard_startPos) select 1)) mod 360);
                     // Start rotating
                     GVAR(plottingBoard_isRotating) = _click;
-                    
+
                 } else {
                     // Start dragging
                     GVAR(plottingBoard_isDragging) = true;
                 };
-                
+
                 _handled = true;
             };
         };

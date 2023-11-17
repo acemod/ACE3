@@ -43,11 +43,11 @@ GVAR(plottingBoard_markers) = createHashMap;
 }] call CBA_fnc_addPlayerEventHandler;
 
 addMissionEventHandler ["markerCreated", {
-    [FUNC(handlePlottingBoardMarkers), [_this, false]] call CBA_fnc_execNextFrame
+    [FUNC(handlePlottingBoardMarkers), [_this, false]] call CBA_fnc_execNextFrame;
 }];
 
 addMissionEventHandler ["markerDeleted", {
-    [FUNC(handlePlottingBoardMarkers), [[_this select 0, null, null, _this select 1], true] ] call CBA_fnc_execNextFrame
+    [FUNC(handlePlottingBoardMarkers), [[_this select 0, -1, objNull, _this select 1], true] ] call CBA_fnc_execNextFrame;
 }];
 
 
