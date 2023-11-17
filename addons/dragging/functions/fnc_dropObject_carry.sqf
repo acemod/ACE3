@@ -30,7 +30,7 @@ private _inBuilding = _unit call FUNC(isObjectOnObject);
 [QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
 [QEGVAR(common,fixCollision), _target, _target] call CBA_fnc_targetEvent;
 
-getCursorObjectParams params ["_cursorObject", "", "_distance"];
+private _cursorObject = cursorObject;
 _tryLoad = _tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)};
 private _loadCargo = false;
 
@@ -110,7 +110,7 @@ _target setVariable [QGVAR(carryDirection_temp), nil];
 if (_loadCargo) then {
     [_unit, _target, _cursorObject] call EFUNC(cargo,startLoadIn);
 } else {
-    if (_tryLoad && {_distance <= MAX_LOAD_DISTANCE_MAN} && {_target isKindOf "CAManBase"}) then {
+    if (_tryLoad && {_unit distance _cursorObject <= MAX_LOAD_DISTANCE_MAN} && {_target isKindOf "CAManBase"}) then {
         private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
 
         if ([_cursorObject] isEqualTo _vehicles) then {
