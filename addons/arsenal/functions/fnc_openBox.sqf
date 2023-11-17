@@ -18,11 +18,6 @@
  * Public: Yes
 */
 
-// Only run this after FUNC(initBox) has run (easier to check if the settings are initialized)
-if !(EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(openBox), _this];
-};
-
 params [["_object", objNull, [objNull]], ["_center", objNull, [objNull]], ["_mode", false, [false]]];
 
 if (

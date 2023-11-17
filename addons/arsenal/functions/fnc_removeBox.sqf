@@ -17,11 +17,6 @@
  * Public: Yes
 */
 
-// Only run this after FUNC(initBox) has run (easier to check if the settings are initialized)
-if !(EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(removeBox), _this];
-};
-
 params [["_object", objNull, [objNull]], ["_global", true, [true]]];
 
 if (isNull _object) exitWith {};
