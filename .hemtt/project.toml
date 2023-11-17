@@ -27,6 +27,7 @@ exclude = [
     "/dev/",
     "medical_ai/statemachine.sqf",
     "common/functions/fnc_dummy.sqf",
+    "zeus/functions/fnc_zeusAttributes.sqf",
 ]
 
 [hemtt.config]
@@ -59,4 +60,13 @@ workshop = [
 ]
 dlc = [
     "Western Sahara",
+]
+
+[hemtt.launch.rhs]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+    "843425103", # RHS AFRF Workshop ID
+    "843577117", # RHS USAF Workshop ID
+    "843593391", # RHS GREF Workshop ID
+    "843632231", # RHS SAF  Workshop ID
 ]

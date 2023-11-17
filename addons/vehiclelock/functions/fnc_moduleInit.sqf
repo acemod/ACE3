@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [fromModule] call ACE_VehicleLock_fnc_hasKeyForVehicle;
+ * [fromModule] call ace_vehiclelock_fnc_moduleInit;
  *
  * Public: No
  */

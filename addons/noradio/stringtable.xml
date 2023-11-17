@@ -10,6 +10,7 @@
             <Japanese>無線無し</Japanese>
             <Russian>Нет рации</Russian>
             <Spanish>No Radio</Spanish>
+            <French>Pas de radio</French>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting">
             <English>Mute Player</English>

@@ -92,7 +92,7 @@ class CfgVehicles {
                 statement = QUOTE(GVAR(plottingBoard_Shown) = 1;);
                 exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                 showDisabled = 0;
-            };                
+            };
             class ACE_PlottingBoardHide {
                 displayName = CSTRING(HidePlottingBoard);
                 condition = QUOTE(call FUNC(canUsePlottingBoard) && GVAR(plottingBoard_Shown) != 0);

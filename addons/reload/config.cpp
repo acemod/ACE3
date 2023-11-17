@@ -14,6 +14,7 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Arsenal_Stats.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgEventHandlers.hpp"

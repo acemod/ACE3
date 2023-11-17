@@ -179,6 +179,11 @@ class CfgVehicles {
         function = QFUNC(moduleHeal);
         icon = QPATHTOF(ui\Icon_Module_Zeus_Heal_ca.paa);
     };
+    class GVAR(moduleLayTrench): GVAR(moduleBase) {
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleLayTrenchline_DisplayName);
+        function = QFUNC(moduleLayTrench);
+    };
     class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
@@ -340,7 +345,7 @@ class CfgVehicles {
                 condition = QUOTE(call FUNC(canCreateModule));
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                 //Set GVAR(zeus) to null first to disable the action through the isNil check
-                statement = QUOTE(GVAR(zeus) = objNull; [ARR_2(QQGVAR(createZeus), ACE_player)] call CBA_fnc_serverEvent);
+                statement = QUOTE(GVAR(zeus) = objNull; [ARR_2(QQGVAR(createZeus),ACE_player)] call CBA_fnc_serverEvent);
                 showDisabled = 1;
                 icon = "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa";
             };

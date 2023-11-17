@@ -52,6 +52,8 @@ if (_mode) then {
     // Add all the items from the game that the arsenal has detected
     GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
     GVAR(virtualItemsFlat) = +(uiNamespace getVariable QGVAR(configItemsFlat));
+
+    GVAR(ignoredVirtualItems) = true;
 } else {
     // Add only specified items to the arsenal
     private _virtualItems = _object getVariable QGVAR(virtualItems);
@@ -72,23 +74,7 @@ if (_mode) then {
     };
 
     // Flatten out hashmaps for easy checking later
-    private _virtualItemsFlat = +_virtualItems;
-    private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;
-    private _attachments = _virtualItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
-
-    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
-        _virtualItemsFlat merge [_virtualItemsFlat deleteAt _index, true];
-    };
-
-    for "_index" from IDX_VIRT_PRIMARY_WEAPONS to IDX_VIRT_HANDGUN_WEAPONS do {
-        _virtualItemsFlat merge [_weapons deleteAt _index, true];
-    };
-
-    for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
-        _virtualItemsFlat merge [_attachments deleteAt _index, true];
-    };
-
-    GVAR(virtualItemsFlat) = _virtualItemsFlat;
+    call FUNC(updateVirtualItemsFlat);
 };
 
 GVAR(center) = _center;

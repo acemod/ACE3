@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [FUNC(fireManagerPFH), 0.25, [_unit]] call CBA_fnc_addPerFrameHandler
+ * [ace_fire_fnc_fireManagerPFH, 0.25, [_unit]] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */
