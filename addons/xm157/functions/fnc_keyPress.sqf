@@ -22,6 +22,11 @@ if (!GVAR(shown)) exitWith { false }; // fast exit if not shown
 if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith { false };
 if (!(ACE_player call CBA_fnc_canUseWeapon)) exitWith { false };
 
+private _scope = (ACE_player weaponAccessories currentMuzzle ACE_player) param [2, ""];
+
+if (_scope == "") exitWith { false }; // should not happen, but put as a precaution
+if (getText (_scope call CBA_fnc_getItemConfig >> "weaponInfoType") != "ace_xm157_info") exitWith { false }; // allow the usage of zeroing changing for e.g. UGLs
+
 private _display = uinamespace getVariable [QGVAR(display), displayNull];
 if (isNull _display) exitWith { ERROR("keyPress-no display"); false };
 
