@@ -25,7 +25,7 @@ private _id = _object getVariable QGVAR(initBoxJIP);
 
 if (_global && {isMultiplayer} && {!isNil "_id"}) then {
     // Remove event from JIP queue
-    [_id] call CBA_fnc_removeGlobalEventJIP;
+    _id call CBA_fnc_removeGlobalEventJIP;
 
     // Reset JIP ID
     _object setVariable [QGVAR(initBoxJIP), nil, true];
