@@ -27,7 +27,7 @@
             <Spanish>Descargar</Spanish>
             <Italian>Scarica</Italian>
             <French>Décharger</French>
-            <Japanese>下ろす</Japanese>
+            <Japanese>降ろす</Japanese>
             <Korean>내리기</Korean>
             <Chinese>卸載</Chinese>
             <Chinesesimp>卸载</Chinesesimp>
@@ -46,7 +46,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
-            <Japanese>カスタム名が削除されました。</Japanese>
+            <Japanese>カスタムネームが削除されました。</Japanese>
             <French>Le nom personnalisé a été supprimé.</French>
             <Russian>Пользовательское название удалено.</Russian>
             <German>Eigener Name wurde gelöscht.</German>
@@ -306,7 +306,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
-            <Japanese>カスタム名</Japanese>
+            <Japanese>カスタムネーム</Japanese>
             <French>Nom personnalisé</French>
             <German>Eigener Name</German>
             <Polish>Własna nazwa</Polish>
@@ -317,7 +317,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
-            <Japanese>カーゴ欄で使われるカスタム名を設定します。</Japanese>
+            <Japanese>カーゴ一覧で使用されるカスタムネームを設定します。</Japanese>
             <French>Définit un nom de fret personnalisé qui sera visible dans le menu de cargaison.</French>
             <Russian>Установить пользовательское имя груза, используемое в интерфейсе погрузки.</Russian>
             <German>Definiere eigenen Frachtnamen, welcher im Frachtraum genutzt wird.</German>
@@ -377,7 +377,7 @@
             <English>The cargo space required to hold this object (-1 for not loadable)</English>
             <German>Frachtraumgröße, welche zum Einladen dieses Objektes benötigt wird (-1 nicht einladbar)</German>
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
-            <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
+            <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可にします)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
             <Chinesesimp>此货物会占掉多少空间（设定 -1 的话此货物就不能被装载）</Chinesesimp>
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>

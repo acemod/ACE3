@@ -29,7 +29,7 @@
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
             <Italian>Ricevitore GPS avanzato MicroDAGR</Italian>
             <Portuguese>Receptor GPS avançado MicroDAGR</Portuguese>
-            <Japanese>MicroDAGR は改良された GPS 受信機です</Japanese>
+            <Japanese>改良された高度なGPS受信機</Japanese>
             <Korean>마이크로DAGR 고급 위성항법 수신기</Korean>
             <Chinesesimp>微型军用高级防御 GPS 接收器</Chinesesimp>
             <Chinese>微型軍用高級防禦GPS接收器</Chinese>
@@ -45,7 +45,7 @@
             <Hungarian>Szögmértékegység:</Hungarian>
             <Italian>Unità angolare:</Italian>
             <Portuguese>Unidade Angular:</Portuguese>
-            <Japanese>角度の種類:</Japanese>
+            <Japanese>角度の単位:</Japanese>
             <Korean>각도의 단위:</Korean>
             <Chinesesimp>角密位：</Chinesesimp>
             <Chinese>角密位:</Chinese>
@@ -61,7 +61,7 @@
             <Hungarian>Fok</Hungarian>
             <Italian>Gradi</Italian>
             <Portuguese>Graus</Portuguese>
-            <Japanese>角度</Japanese>
+            <Japanese>度</Japanese>
             <Korean>각도</Korean>
             <Chinesesimp>度</Chinesesimp>
             <Chinese>度</Chinese>
@@ -93,7 +93,7 @@
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
             <Italian>Mostra waypoint sulla mappa:</Italian>
             <Portuguese>Mostrar Waypoints no mapa:</Portuguese>
-            <Japanese>地図へｳｪｲﾎﾟｲﾝﾄを表示:</Japanese>
+            <Japanese>地図にｳｪｲﾎﾟｲﾝﾄを表示:</Japanese>
             <Korean>웨이포인트를 지도에 보이기:</Korean>
             <Chinesesimp>显示路径点在地图上：</Chinesesimp>
             <Chinese>顯示路徑點在地圖上:</Chinese>
@@ -109,7 +109,7 @@
             <Russian>Вкл.</Russian>
             <Spanish>Encendido</Spanish>
             <Hungarian>Be</Hungarian>
-            <Japanese>有効</Japanese>
+            <Japanese>オン</Japanese>
             <Korean>켜기</Korean>
             <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟</Chinese>
@@ -126,7 +126,7 @@
             <Russian>Выкл.</Russian>
             <Spanish>Apagado</Spanish>
             <Hungarian>Ki</Hungarian>
-            <Japanese>無効</Japanese>
+            <Japanese>オフ</Japanese>
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
@@ -159,7 +159,7 @@
             <Hungarian>[%1] neve</Hungarian>
             <Italian>Nome di [%1]</Italian>
             <Portuguese>Nome do [%1]</Portuguese>
-            <Japanese>[%1] の名前</Japanese>
+            <Japanese>[%1] の名称</Japanese>
             <Korean>[%1] 의 이름</Korean>
             <Chinesesimp>名称 [%1]</Chinesesimp>
             <Chinese>名稱 [%1]</Chinese>
@@ -223,7 +223,7 @@
             <Hungarian>Irányszög</Hungarian>
             <Italian>Azimut</Italian>
             <Portuguese>Direção na bússola</Portuguese>
-            <Japanese>方位磁石での方位</Japanese>
+            <Japanese>磁気方位</Japanese>
             <Korean>방위</Korean>
             <Chinesesimp>指南针方位</Chinesesimp>
             <Chinese>指北針方位</Chinese>
@@ -271,7 +271,7 @@
             <Hungarian>Csatlakozás</Hungarian>
             <Italian>Collega a </Italian>
             <Portuguese>Conectar à</Portuguese>
-            <Japanese>次に接続</Japanese>
+            <Japanese>接続</Japanese>
             <Korean>연결</Korean>
             <Chinesesimp>连接到</Chinesesimp>
             <Chinese>連接到</Chinese>
@@ -303,7 +303,7 @@
             <Hungarian>UP Beállítása</Hungarian>
             <Italian>Definisci WayPoints</Italian>
             <Portuguese>Definir WP</Portuguese>
-            <Japanese>WP設定</Japanese>
+            <Japanese>WPｾｯﾄ</Japanese>
             <Korean>웨이포인트 설정</Korean>
             <Chinesesimp>设置路径点</Chinesesimp>
             <Chinese>設置路徑點</Chinese>
@@ -351,7 +351,7 @@
             <Hungarian>MicroDAGR kijelzési mód váltása</Hungarian>
             <Italian>Alterna modalità display MicroDAGR</Italian>
             <Portuguese>Alternar Modo de Display do MicroDAGR</Portuguese>
-            <Japanese>MicroDAGR の表示モード</Japanese>
+            <Japanese>MicroDAGR の表示モード切り替え</Japanese>
             <Korean>마이크로DAGR 화면 모드 토글</Korean>
             <Chinesesimp>切换微型军用 GPS 接收器显示模式</Chinesesimp>
             <Chinese>切換微型軍用GPS接收器顯示模式</Chinese>
