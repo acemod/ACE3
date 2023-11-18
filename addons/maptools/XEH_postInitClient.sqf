@@ -46,7 +46,7 @@ addMissionEventHandler ["MarkerCreated", {
     [FUNC(handlePlottingBoardMarkers), [_this, false]] call CBA_fnc_execNextFrame;
 }];
 
-addMissionEventHandler ["markerDeleted", {
+addMissionEventHandler ["MarkerDeleted", {
     [FUNC(handlePlottingBoardMarkers), [[_this select 0, -1, objNull, _this select 1], true] ] call CBA_fnc_execNextFrame;
 }];
 
