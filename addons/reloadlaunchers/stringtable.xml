@@ -3,7 +3,7 @@
     <Package name="ReloadLaunchers">
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextName">
             <English>Display notifications for buddy loading</English>
-            <Japanese>バディ装填時の通知表示</Japanese>
+            <Japanese>バディローディング時の通知表示</Japanese>
             <Polish>Wyświetlanie powiadomień o ładowaniu przez asystenta</Polish>
             <German>Buddy Nachlade Nachricht anzeigen</German>
             <Korean>동료의 장전에 대한 알림 표시</Korean>
@@ -115,6 +115,7 @@
             <Korean>부사수 장전 중</Korean>
             <French>Chargement par un ami</French>
             <German>Nachladen durch Kamerad</German>
+            <Japanese>バディローディング</Japanese>
         </Key>
     </Package>
 </Project>
