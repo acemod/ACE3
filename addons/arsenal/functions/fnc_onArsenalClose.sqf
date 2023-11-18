@@ -136,4 +136,6 @@ GVAR(favorites) = nil;
 GVAR(center) = nil;
 GVAR(centerNotPlayer) = nil;
 
+GVAR(ignoredVirtualItems) = nil;
+
 [QUOTE(ADDON), []] call EFUNC(common,showHud);
