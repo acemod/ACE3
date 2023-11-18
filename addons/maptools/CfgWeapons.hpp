@@ -24,7 +24,7 @@ class CfgWeapons {
         scope = 2;
         ACE_isTool = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.5;
         };
     };
 };
