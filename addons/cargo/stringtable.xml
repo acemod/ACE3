@@ -298,11 +298,13 @@
             <English>Can't be unloaded</English>
             <German>Kann nicht entladen werden</German>
             <French>Ne peut pas être déchargé</French>
+            <Japanese>降ろせません</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
             <German>Frachtgröße: %1</German>
             <French>Encombrement fret: %1</French>
+            <Japanese>カーゴ サイズ: %1</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
