@@ -42,7 +42,7 @@ GVAR(plottingBoard_markers) = createHashMap;
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
-addMissionEventHandler ["markerCreated", {
+addMissionEventHandler ["MarkerCreated", {
     [FUNC(handlePlottingBoardMarkers), [_this, false]] call CBA_fnc_execNextFrame;
 }];
 
