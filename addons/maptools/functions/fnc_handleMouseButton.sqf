@@ -93,7 +93,7 @@ if (_dir != 1) then {
         GVAR(mapTool_isRotating) = false;
 
         // If no map tool marker then exit
-        if (GVAR(mapTool_Shown) != 0) then {;
+        if (GVAR(mapTool_Shown) != 0) then {
             // Check if clicking the maptool
             if (_pos call FUNC(isInsideMapTool)) then {
                 // Store data for dragging
