@@ -7,8 +7,8 @@
  * 0: Item to be unloaded <STRING> or <OBJECT> (default: "")
  * 1: Holder object (vehicle) <OBJECT> (default: objNull)
  * 2: Unloader <OBJECT> (default: objNull)
- * 3: Place parameters <ARRAY> (default: [])
- * - 0: Position (AGL format) <ARRAY>
+ * 3: Deploy parameters <ARRAY> (default: [])
+ * - 0: Position AGL <ARRAY>
  * - 1: Direction <NUMBER>
  *
  * Return Value:
@@ -20,10 +20,10 @@
  * Public: Yes
  */
 
-params [["_item", "", [objNull, ""]], ["_vehicle", objNull, [objNull]], ["_unloader", objNull, [objNull]], ["_place", []]];
-_place params ["_emptyPosAGL", "_direction"];
+params [["_item", "", [objNull, ""]], ["_vehicle", objNull, [objNull]], ["_unloader", objNull, [objNull]], ["_deploy", []]];
+_deploy params ["_emptyPosAGL", "_direction"];
 
-TRACE_4("params",_item,_vehicle,_unloader,_place);
+TRACE_4("params",_item,_vehicle,_unloader,_deploy);
 
 // Get config sensitive case name
 if (_item isEqualType "") then {
@@ -46,11 +46,15 @@ if (_itemSize < 0) exitWith {
     false // return
 };
 
-private _isDeployed = _place isEqualTo [];
+private _deployed = _deploy isNotEqualTo [];
 
-if (!_isDeployed) then {
+if (!_deployed) then {
     // This covers testing vehicle stability and finding a safe position
-    _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
+    for "_i" from 1 to 3 do {
+        _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
+
+        if (_emptyPosAGL isNotEqualTo []) exitWith {};
+    };
 
     TRACE_1("findUnloadPosition",_emptyPosAGL);
 };
@@ -78,7 +82,7 @@ if (_object isEqualType objNull) then {
     detach _object;
 
     // If player unloads via deployment, set direction first, then unload
-    if (_isDeployed) then {
+    if (_deployed) then {
         [QGVAR(setDirAndUnload), [_object, _emptyPosAGL, _direction], _object] call CBA_fnc_targetEvent;
     } else {
         [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
@@ -96,7 +100,7 @@ if (_object isEqualType objNull) then {
     _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
 
     // If player unloads via deployment, set direction. Must happen before setPosASL command according to wiki
-    if (_isDeployed) then {
+    if (_deployed) then {
         _object setDir _direction;
     };
 
@@ -107,7 +111,7 @@ if (_object isEqualType objNull) then {
 };
 
 // Dragging integration
-if (!_isDeployed) then {
+if (!_deployed) then {
     [_unloader, _object] call FUNC(unloadCarryItem);
 };
 

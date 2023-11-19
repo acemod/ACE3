@@ -34,7 +34,6 @@ if (GVAR(interactionParadrop)) then {
     private _display = uiNamespace getVariable QGVAR(menuDisplay);
 
     if (isNil "_display") exitWith {
-        GVAR(interactionVehicle) = nil;
         GVAR(interactionParadrop) = nil;
 
         _pfhID call CBA_fnc_removePerFrameHandler;
@@ -49,7 +48,6 @@ if (GVAR(interactionParadrop)) then {
     ) exitWith {
         closeDialog 0;
 
-        GVAR(interactionVehicle) = nil;
         GVAR(interactionParadrop) = nil;
 
         _pfhID call CBA_fnc_removePerFrameHandler;

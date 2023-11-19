@@ -24,7 +24,7 @@ params ["_unit"];
 
 if (GVAR(interactionParadrop)) exitWith {
     // Close the cargo menu
-    closeDialog 0;
+    closeDialog 1;
 
     private _duration = GVAR(paradropTimeCoefficent) * (_item call FUNC(getSizeItem));
 
@@ -50,11 +50,11 @@ if (GVAR(interactionParadrop)) exitWith {
         },
         LLSTRING(unloadingItem),
         {
-            (_this select 0) params ["", "_target"];
+            (_this select 0) params ["", "_vehicle"];
 
-            if ((acos ((vectorUp _target) select 2)) > 30) exitWith {false}; // check flight level
-            if (((getPos _target) select 2) < 25) exitWith {false}; // check height
-            if ((speed _target) < -5) exitWith {false}; // check reverse
+            if ((acos ((vectorUp _vehicle) select 2)) > 30) exitWith {false}; // check flight level
+            if (((getPos _vehicle) select 2) < 25) exitWith {false}; // check height
+            if ((speed _vehicle) < -5) exitWith {false}; // check reverse
 
             true
         },
@@ -66,7 +66,7 @@ if (GVAR(interactionParadrop)) exitWith {
 // Start progress bar - normal ground unload
 if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
     // Close the cargo menu
-    closeDialog 0;
+    closeDialog 1;
 
     private _duration = GVAR(loadTimeCoefficient) * (_item call FUNC(getSizeItem));
 

@@ -35,7 +35,7 @@ GVAR(selectedItem) = _item;
 
 private _classname = _item;
 
-if (_classname isEqualType ObjNull) then {
+if (_classname isEqualType objNull) then {
     _classname = typeOf _classname;
 };
 
@@ -68,11 +68,7 @@ GVAR(deployPFH) = [{
 
     if !(
         !isNull _itemPreviewObject &&
-        {alive _vehicle} &&
-        {locked _vehicle < 2} &&
-        {_vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]} &&
-        {([_unit, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE} &&
-        {_item in (_vehicle getVariable [QGVAR(loaded), []])}
+        {[_item, _vehicle, _unit, false, true] call FUNC(canUnloadItem)} // don't check for a suitable unloading position when deploying
     ) exitWith {
         _unit call FUNC(deployCancel);
     };

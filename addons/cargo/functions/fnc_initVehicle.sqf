@@ -22,11 +22,17 @@ private _type = typeOf _vehicle;
 private _config = configOf _vehicle;
 
 // If vehicle had space given to it via eden/public, then override config hasCargo setting
-private _hasCargoPublic = _vehicle getVariable [QGVAR(hasCargo), false];
+private _hasCargoPublic = _item getVariable QGVAR(hasCargo);
+private _hasCargoPublicDefined = !isNil "_canLoadPublic";
+
+if (_hasCargoPublicDefined && {!(_hasCargoPublic isEqualType false)}) then {
+    WARNING_4("%1[%2] - Variable %3 is %4 - Should be bool",_item,_type,QGVAR(hasCargo),_hasCargoPublic);
+};
+
 private _hasCargoConfig = getNumber (_config >> QGVAR(hasCargo)) == 1;
 
 // Nothing to do here if vehicle has no cargo space
-if !(_hasCargoConfig || _hasCargoPublic) exitWith {};
+if !((_hasCargoPublicDefined && {_hasCargoPublic in [true, 1]}) || {!_hasCargoPublicDefined && {_hasCargoConfig}}) exitWith {};
 
 // Check if cargo is in cargo holder types (checked when trying to search for loadable objects)
 private _addCargoType = GVAR(cargoHolderTypes) findIf {_type isKindOf _x} == -1;
