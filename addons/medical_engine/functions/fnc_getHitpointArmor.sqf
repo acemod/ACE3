@@ -44,6 +44,10 @@ if (_rags != _prevRags) then {
         _armorScaled = _armorScaled + _itemArmorScaled;
     } forEach _gear;
 
+    // Armor should be at least 1 to prevent dividing by 0
+    _armor = _armor max 1;
+    _armorScaled = _armorScaled max 1;
+
     _unit setVariable [_var, [_rags, _armor, _armorScaled]];
 };
 

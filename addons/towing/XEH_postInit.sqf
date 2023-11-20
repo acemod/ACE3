@@ -3,6 +3,7 @@
 ["MouseButtonUp", LINKFUNC(onMouseButtonUp)] call CBA_fnc_addDisplayHandler;
 GVAR(mouseLeft) = false;
 GVAR(mouseRight) = false;
+GVAR(blockFireEHID) = -1;
 
 [QGVAR(ropeAttachTo), {
     params ["_child", "_relativeAttachPos", "_rope", "_helper"];

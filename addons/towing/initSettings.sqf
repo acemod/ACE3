@@ -1,7 +1,7 @@
 [
     QGVAR(addRopeToVehicleInventory), "CHECKBOX",
     LSTRING(Setting_addRopeToVehicleInventory_DisplayName),
-    LELSTRING(OptionsMenu,CategoryLogistics),
+    ELSTRING(OptionsMenu,CategoryLogistics),
     true,
     true,
     {

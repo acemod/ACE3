@@ -28,6 +28,8 @@ if (_ropeLength == 0) then {
 
 _unit removeItem _ropeClass;
 
+GVAR(isSwimming) = _unit call EFUNC(common,isSwimming);
+GVAR(putWeaponAwayNextFrame) = false;
 GVAR(cancel) = false;
 GVAR(canAttach) = false;
 GVAR(onMouseButtonDownEHID) = ["MouseButtonDown", LINKFUNC(onMouseButtonDown)] call CBA_fnc_addDisplayHandler;
