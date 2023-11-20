@@ -268,7 +268,7 @@
             <English>Preserve view for vehicle types</English>
             <German>Behalte die Ansicht bei Fahrzeugtypen bei</German>
             <Russian>Запоминать вид для типов техники</Russian>
-            <Japanese>車両の種類により視点を変更</Japanese>
+            <Japanese>車両の種別により視点を変更</Japanese>
             <Chinese>保留載具的視野模式</Chinese>
             <Chinesesimp>保留载具的人称模式</Chinesesimp>
             <Polish>Zachowaj ustawienie widoku dla pojazdów</Polish>
@@ -281,7 +281,7 @@
             <English>Switch view on vehicle change to last used in this vehicle type (Requires Mode: Disabled)</English>
             <German>Wechsel die Ansicht bei Fahrzeugwechsel zu der zuletzt genutzen in diesen Fahrzeugtyp. (Benötigt Modus: Ausgeschaltet)</German>
             <Russian>Переключать вид при смене техники на последний использованный в данном типе техники (требуется режим: Отключено)</Russian>
-            <Japanese>車両の種類により最後に使用した視点へ切り替え (無効モードでのみ有効)</Japanese>
+            <Japanese>車両変更時の視点をその車両種別で最後に使用したものに切り替えます (要求モード: 無効)</Japanese>
             <Chinese>切換到載具時自動切換到上次最後使用的視野模式(需求模式:關閉)</Chinese>
             <Chinesesimp>切换到载具时自动切换到上次最后使用的人称模式（需求模式：关闭）</Chinesesimp>
             <Polish>Zmień widok podczas zmiany pojazdu na ustawienie widoku z ostatniego używanego pojazdu tego typu (Wymaga Tryb: Wyłączony</Polish>

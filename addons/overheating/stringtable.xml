@@ -243,7 +243,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_displayName">
             <English>Distance for Effects and Dispersion</English>
-            <Japanese>エフェクトと分散用距離</Japanese>
+            <Japanese>エフェクトと分散の距離</Japanese>
             <French>Distance des effets et de la dispersion</French>
             <Russian>Дистанция для эффектов и разброса</Russian>
             <German>Abstand für Effekte und Dispersion</German>
@@ -298,7 +298,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
             <English>Coefficient for the chance that a weapon will jam from overheating.\nHigher value make jams more likely.\nSet to 0 to disable jamming.</English>
-            <Japanese>武器が過熱によって弾詰まりする確立係数を設定します。\n高い値では弾詰まりが起こりやすくなり、0 で弾詰まりが無効化されます。</Japanese>
+            <Japanese>武器が過熱によって弾詰まりする確率係数を設定します。\n高い値では弾詰まりが起こりやすくなり、0 で弾詰まりが無効化されます。</Japanese>
             <French>Coefficient modifiant les chances qu'une arme s'enraye à cause de la surchauffe.\nPlus la valeur est élevée, plus grand est le risque que l'arme s'enraye.\nDéfinir à 0 pour désactiver l'enrayement des armes.</French>
             <Russian>Шанс заклинивания оружия от перегрева.\nБольшие значения повышают шанс заклинивания.\nУстановите 0 для отключения заклинивания.</Russian>
             <German>Koeffizient für die Wahrscheinlichkeit, dass eine Waffe eine Ladehemmung hat.\Höhere Werte erhöhen die Wahrscheinlichkeit.\Auf 0 setzen, um Ladehemmungen zu deaktivieren.</German>
@@ -406,7 +406,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_description">
             <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
-            <Japanese>過熱によって誘爆が起きる確立係数を設定します。\n高い値では誘爆までに必要な過熱量が増加し、0 で誘爆が無効化されます。</Japanese>
+            <Japanese>過熱によって誘爆が起きる確率係数を設定します。\n高い値では誘爆までに必要な過熱量が増加し、0 で誘爆が無効化されます。</Japanese>
             <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment dans la chambre de l'arme.\nPlus la valeur est élevée, plus l'arme doit être chaude pour que les munitions s'auto-inflamment.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
             <Russian>Коэффициент нагрева, при котором возникает возгорание.</Russian>
             <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
