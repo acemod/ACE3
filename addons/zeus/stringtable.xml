@@ -1944,7 +1944,7 @@
             <Czech>Zdravotnická nabídka</Czech>
             <Italian>Menù Medico</Italian>
             <French>Menu médical</French>
-            <Japanese>治療メニュー</Japanese>
+            <Japanese>医療メニュー</Japanese>
             <Korean>의료 메뉴</Korean>
             <Chinesesimp>医疗菜单</Chinesesimp>
             <Chinese>醫療選單</Chinese>
@@ -1952,6 +1952,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_MedicalMenuDisabled">
             <English>The medical menu is disabled</English>
+            <Japanese>医療メニューは無効になっています</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
