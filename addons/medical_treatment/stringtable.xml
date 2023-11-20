@@ -36,7 +36,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
             <German>Erweiterte Diagnose</German>
-            <Japanese>アドバンスド診断</Japanese>
+            <Japanese>高度な診断</Japanese>
             <Russian>Расширенная Диагностика</Russian>
             <French>Diagnostic avancé</French>
             <Portuguese>Diagnóstico Avançado</Portuguese>
@@ -79,7 +79,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
             <German>Erweiterte Medikation</German>
-            <Japanese>アドバンスド医薬品</Japanese>
+            <Japanese>高度な医薬品</Japanese>
             <Russian>Расширенные Лекарства</Russian>
             <French>Médication avancée</French>
             <Portuguese>Medicação Avançada</Portuguese>
@@ -110,7 +110,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
             <German>Erweiterte Bandagen</German>
-            <Japanese>アドバンスド包帯</Japanese>
+            <Japanese>高度な包帯</Japanese>
             <Russian>Расширенная Перевязка</Russian>
             <French>Pansements avancés</French>
             <Portuguese>Ataduras Avançadas</Portuguese>
@@ -126,7 +126,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
             <German>Ermöglicht Behandlungsaktionen für verschiedene Bandagentypen anstelle der gewöhnlichen Bandageaktionen.</German>
-            <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。\nまた、創傷の再解放も有効化できます。</Japanese>
+            <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。\nまた、創傷の再開放も有効化できます。</Japanese>
             <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
             <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
             <Portuguese>Ativa o uso de tipos diferentes de ataduras ao invés de apenas a atadura básica.</Portuguese>
@@ -159,7 +159,7 @@
             <Czech>Koeficient opětovného otevření rány</Czech>
             <Russian>Коэф. повторного открытия раны</Russian>
             <Polish>Współczynnik ponownego otwierania ran</Polish>
-            <Japanese>再開放係数</Japanese>
+            <Japanese>創傷再開放係数</Japanese>
             <Turkish>Yara Yeniden Açılma Katsayısı</Turkish>
             <Spanish>Coeficiente de reapertura de heridas</Spanish>
             <Chinesesimp>伤口开裂系数</Chinesesimp>
@@ -172,7 +172,7 @@
             <Czech>Koeficient pro řízení šance na opětovné otevření rány. Konečná šance na opětovné otevření se stanoví vynásobením této hodnoty specifickou šancí na opětovné otevření pro použitý typ rány a obvaz.</Czech>
             <Russian>Коэффициент контроля вероятности повторного открытия раны. Окончательный шанс повторного открытия определяется путем умножения этого значения на определенный шанс повторного открытия для используемого типа раны и повязки.</Russian>
             <Polish>Współczynnik kontroluje szanse na ponowne otworzenie rany. Końcowa szansa na otworzenie jest ustalana przez pomnożenie tej wartości z wartością szansy na otworzenie rany dla typu rany oraz typu bandaża.</Polish>
-            <Japanese>傷が再開放する確率の係数を設定できます。再開放は、この数値と傷の種類、そして使用した包帯に応じて左右されます。</Japanese>
+            <Japanese>創傷が再開放する確率の係数を設定できます。再開放は、この数値と傷の種類、そして使用した包帯に応じて左右されます。</Japanese>
             <Turkish>Yaranın yeniden açılma şansını kontrol etme katsayısı. Son yeniden açılma şansı, bu değerin kullanılan yara tipi ve bandaj için spesifik yeniden açılma şansı ile çarpılmasıyla belirlenir.</Turkish>
             <Spanish>Coeficiente que controla la probabilidad de reapertura de heridas. La probabilidad final de reapertura de heridas queda determinada multiplicando este valor por la probabilidad específica del tipo de herida y venda usada.</Spanish>
             <Chinesesimp>用于控制伤口开裂概率的系数。最终的重开放概率=该值x伤口类型x所使用的绷带的具体开裂概率。</Chinesesimp>
@@ -180,7 +180,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_DisplayName">
             <English>Clear Trauma</English>
-            <Japanese>外傷の削除</Japanese>
+            <Japanese>外傷を取り除く</Japanese>
             <French>Soigner les blessures</French>
             <Russian>Очистить рану</Russian>
             <German>Traumata entfernen</German>
@@ -256,7 +256,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
-            <Japanese>患者と衛生兵との間で医療品の共有をするかどうかを決定します。</Japanese>
+            <Japanese>患者と治療者との間で医療品の共有をするかどうかを決定します。</Japanese>
             <French>Définit si l'équipement médical du médecin et du patient sont mis en commun, et quel matériel est à utiliser en priorité, le cas échéant.</French>
             <Russian>Контролирует, можно ли разделить медикаменты между пациентом и врачом.</Russian>
             <Portuguese>Controla se um item médico pode ser compartilhado entre médico e paciente.</Portuguese>
@@ -288,7 +288,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
-            <Japanese>衛生兵の装備を先に使用</Japanese>
+            <Japanese>治療者の装備を先に使用</Japanese>
             <French>Matériel du médecin d'abord</French>
             <Russian>Сначала медикаменты врача</Russian>
             <Portuguese>Usar do Médico Primeiro</Portuguese>
@@ -446,7 +446,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
-            <Japanese>アドレナリンの使用に訓練レベルを必要とさせます。</Japanese>
+            <Japanese>アドレナリンの使用に必要な訓練レベル。</Japanese>
             <French>Définit la qualification médicale requise pour utiliser l'épinéphrine.</French>
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar epinefrina.</Portuguese>
@@ -511,7 +511,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
-            <Japanese>PAKの使用に訓練レベルを必要とさせます。</Japanese>
+            <Japanese>PAKの使用に必要な訓練レベル。</Japanese>
             <French>Définit la qualification médicale requise pour utiliser la trousse sanitaire.</French>
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
@@ -670,7 +670,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
-            <Japanese>手術キットの使用に訓練レベルを必要とさせます。</Japanese>
+            <Japanese>手術キットの使用に必要な訓練レベル。</Japanese>
             <French>Définit la qualification médicale requise pour utiliser la trousse chirurgicale.</French>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
@@ -735,7 +735,7 @@
             <English>What should be consumed after use.</English>
             <German>Legt fest, ob etwas nach der Anwendung verwendet werden soll.</German>
             <Spanish>Qué debe ser consumido despues de su uso.</Spanish>
-            <Japanese>手術キットの使用後に消費するかどうかを決定します。</Japanese>
+            <Japanese>使用後に何を消費するか設定します。</Japanese>
             <Polish>Co powinno zostać zużyte po zastosowaniu.</Polish>
             <Korean>봉합키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
             <French>Ce qui doit être consommé après l'utilisation.</French>
@@ -796,7 +796,7 @@
             <English>Self IV Transfusion</English>
             <German>Eigennutzung von Bluttransfusionen</German>
             <Russian>Внутривенное переливание на себе</Russian>
-            <Japanese>自己 IV 輸血</Japanese>
+            <Japanese>自己 IV 輸液</Japanese>
             <French>Pose d'IV sur soi-même</French>
             <Portuguese>Autotransfusão de IV</Portuguese>
             <Chinese>自我注射點滴</Chinese>
@@ -811,7 +811,7 @@
             <English>Enables the use of IV transfusions on oneself.</English>
             <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
-            <Japanese>自らに対して IV 輸血を可能にします。</Japanese>
+            <Japanese>自らに対して IV 輸液を可能にします。</Japanese>
             <French>Active la possibilité de s'auto-poser des IVs.</French>
             <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
@@ -896,7 +896,7 @@
             <French>Pose de perfusions autorisée pour</French>
             <Chinese>允許操作點滴</Chinese>
             <Chinesesimp>允许静脉输液</Chinesesimp>
-            <Japanese>IV 輸血の制限</Japanese>
+            <Japanese>IV 輸液の制限</Japanese>
             <Czech>Povolit IV transfuzi</Czech>
             <Russian>Разрешить внутривенное переливание</Russian>
             <Spanish>Permitir transfusión de IV</Spanish>
@@ -909,7 +909,7 @@
             <French>Définit la qualification médicale requise pour poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Chinesesimp>静脉输液所需的医疗水平。</Chinesesimp>
-            <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
+            <Japanese>IV 輸液を行うのに必要な訓練レベル。</Japanese>
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
             <Russian>Уровень навыка, требуемый для осуществления внутривенного переливания.</Russian>
             <Spanish>Nivel de capacitación requerido para transfusiones de IV.</Spanish>
@@ -1239,7 +1239,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
-            <Japanese>何らかの治療をするには武器を下げるか収めるかどうかを決定します。\nなお次の診断行動は設定で例外できます: 脈拍の確認、血圧の確認、反応の確認</Japanese>
+            <Japanese>何らかの治療をするには武器を下げるか収める必要があるかを設定します。\nなお次の診断行動は設定で例外できます: 脈拍の確認、血圧の確認、反応の確認</Japanese>
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
             <Chinesesimp>控制是否要先放下或把武器放起才能做出医疗行为。\n除了诊断—允许未放下或未收起的情况下进行一连串的诊断（检查脉搏，血压，反应）。</Chinesesimp>
             <French>Définit si les armes doivent être rengainées ou abaissées avant de pouvoir effectuer des actes médicaux.\nLes options "sauf examens" autorisent les examens (vérification du pouls, de la tension artérielle, de l'état de conscience) en toutes circonstances.</French>
@@ -1400,7 +1400,7 @@
             <Russian>Этот модуль позволяет назначить класс медика выбранным юнитам.</Russian>
             <Spanish>Este módulo permite asignar la clase médico a las unidades seleccionadas.</Spanish>
             <Italian>Questo modulo ti permette di assegnare la classe Medico alle unità selezionate.</Italian>
-            <Japanese>選択されたユニットを衛生兵として指定します。</Japanese>
+            <Japanese>このモジュールは選択されたユニットを衛生兵として指定します。</Japanese>
             <Korean>이 모듈로 선택한 유닛을 의무병으로 만들 수 있습니다.</Korean>
             <Chinesesimp>本模块可让被同步的单位成为医疗兵</Chinesesimp>
             <Chinese>本模塊可讓被同步的單位成為醫療兵</Chinese>
@@ -1534,7 +1534,7 @@
             <Hungarian>Kötszer (Általános)</Hungarian>
             <Italian>Bendaggio (base)</Italian>
             <Portuguese>Bandagem(Básico)</Portuguese>
-            <Japanese>包帯 (緊急圧迫)</Japanese>
+            <Japanese>包帯 (緊急圧迫止血)</Japanese>
             <Korean>붕대 (기본)</Korean>
             <Chinesesimp>绷带（基础型）</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
@@ -2627,7 +2627,7 @@
             <Hungarian>Kötözés</Hungarian>
             <Portuguese>Atadura</Portuguese>
             <Russian>Перевязать</Russian>
-            <Japanese>包帯を巻く</Japanese>
+            <Japanese>包帯</Japanese>
             <Korean>붕대</Korean>
             <Chinesesimp>包扎</Chinesesimp>
             <Chinese>繃帶</Chinese>
@@ -2898,7 +2898,7 @@
             <Hungarian>Zárókötszer</Hungarian>
             <Italian>Bendaggio rapido</Italian>
             <Portuguese>Curativo de Campo</Portuguese>
-            <Japanese>包帯を巻く (緊急圧迫包帯)</Japanese>
+            <Japanese>緊急圧迫止血包帯</Japanese>
             <Korean>붕대 (기본)</Korean>
             <Chinesesimp>绷带（基础型）</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
@@ -2914,7 +2914,7 @@
             <French>Bandage compressif</French>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz Tlakový</Czech>
-            <Japanese>包帯を巻く (弾性包帯)</Japanese>
+            <Japanese>弾性包帯</Japanese>
             <Korean>붕대 (거즈)</Korean>
             <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Chinese>包紮繃帶</Chinese>
@@ -2931,7 +2931,7 @@
             <Hungarian>Rögzitő kötszer</Hungarian>
             <Italian>Bendaggio elastico</Italian>
             <Portuguese>Bandagem Elástica</Portuguese>
-            <Japanese>包帯を巻く (伸縮包帯)</Japanese>
+            <Japanese>伸縮包帯</Japanese>
             <Korean>붕대 (압박)</Korean>
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
@@ -2948,7 +2948,7 @@
             <Hungarian>QuikClot</Hungarian>
             <Italian>QuikClot (polvere emostatica)</Italian>
             <Portuguese>QuikClot</Portuguese>
-            <Japanese>包帯を巻く (クイッククロット)</Japanese>
+            <Japanese>クイッククロット</Japanese>
             <Korean>붕대 (퀵 클롯)</Korean>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Chinese>止血粉</Chinese>
@@ -3015,7 +3015,7 @@
             <Hungarian>Érszorító</Hungarian>
             <Italian>Laccio emostatico</Italian>
             <Portuguese>Torniquete</Portuguese>
-            <Japanese>止血帯を巻く</Japanese>
+            <Japanese>止血帯</Japanese>
             <Korean>지혈대</Korean>
             <Chinesesimp>止血带</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
@@ -3115,7 +3115,7 @@
             <Hungarian>Újraélesztés</Hungarian>
             <Czech>CPR</Czech>
             <Portuguese>RCP</Portuguese>
-            <Japanese>心肺蘇生(CPR)する</Japanese>
+            <Japanese>心肺蘇生(CPR)</Japanese>
             <Korean>심폐소생술</Korean>
             <Chinesesimp>心肺复苏（CPR）</Chinesesimp>
             <Chinese>心肺復甦術</Chinese>
@@ -3386,7 +3386,7 @@
             <Hungarian>Normális légzés</Hungarian>
             <Italian>Respiro normale</Italian>
             <Portuguese>Respiração normal</Portuguese>
-            <Japanese>正常な呼吸をしている</Japanese>
+            <Japanese>呼吸は正常</Japanese>
             <Korean>정상 호흡</Korean>
             <Chinesesimp>呼吸正常</Chinesesimp>
             <Chinese>呼吸正常</Chinese>
@@ -4244,7 +4244,7 @@
             <German>verbunden</German>
             <Portuguese>Enfaixado</Portuguese>
             <Czech>Obvázaný</Czech>
-            <Japanese>包帯</Japanese>
+            <Japanese>包帯を巻いた</Japanese>
             <Korean>붕대 감음</Korean>
             <Chinesesimp>包扎</Chinesesimp>
             <Chinese>繃帶</Chinese>
@@ -4261,7 +4261,7 @@
             <German>Du verbindest %1 (%2)</German>
             <Portuguese>Você aplica bandagem no paciente %1 (%2)</Portuguese>
             <Czech>Obvazuješ %1 (%2)</Czech>
-            <Japanese>%1 (%2) 包帯を使った</Japanese>
+            <Japanese>%1 (%2) に包帯を使った</Japanese>
             <Korean>%1 (%2) 붕대를 감았다</Korean>
             <Chinesesimp>你正在使用 %2 包扎 %1</Chinesesimp>
             <Chinese>你正在對 %1 (%2) 包紮繃帶中</Chinese>
@@ -4327,7 +4327,7 @@
             <Italian>Controlli le vie respiratorie di %1</Italian>
             <Portuguese>Você entuba o %1</Portuguese>
             <Czech>Ošetřuješ dýchací cesty %1</Czech>
-            <Japanese>%1 の気道を診断する</Japanese>
+            <Japanese>あなたは %1 の気道を治療した</Japanese>
             <Korean>%1의 기도를 확보했다</Korean>
             <Chinesesimp>你正在治疗 %1 的呼吸道</Chinesesimp>
             <Chinese>你治療 %1 的呼吸道</Chinese>
@@ -4361,7 +4361,7 @@
             <Italian>%1 ti sta trattando le vie respiratorie</Italian>
             <Portuguese>%1 está te entubando</Portuguese>
             <Czech>%1 ošetřuje tvoje dýchací cesty</Czech>
-            <Japanese>%1 はあなたの気道を見ている</Japanese>
+            <Japanese>%1 があなたの気道を治療中</Japanese>
             <Korean>%1 (이)가 나의 기도를 확보 중이다</Korean>
             <Chinesesimp>%1 正在治疗你的呼吸道</Chinesesimp>
             <Chinese>%1 正在治療你的呼吸道</Chinese>
@@ -4479,7 +4479,7 @@
             <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
-            <Japanese>%1&lt;br/&gt;は&lt;br/&gt;%2へ積み込まれました</Japanese>
+            <Japanese>%1&lt;br/&gt;が&lt;br/&gt;%2へ積み込まれました</Japanese>
             <Korean>%1&lt;br/&gt;(은)는&lt;br/&gt;%2 에 실림</Korean>
             <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
             <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
@@ -4790,7 +4790,7 @@
             <Czech>Žádné škrtidlo na této části těla!</Czech>
             <Italian>Non c'è nessun laccio emostatico su questa parte del corpo!</Italian>
             <French>Il n'y a pas de garrot sur ce membre !</French>
-            <Japanese>この部位には止血帯がない!</Japanese>
+            <Japanese>この部位に止血帯はありません!</Japanese>
             <Korean>이 부위에는 지혈대가 없습니다!</Korean>
             <Chinesesimp>该部位没有使用止血带！</Chinesesimp>
             <Chinese>這部位沒有止血帶!</Chinese>
