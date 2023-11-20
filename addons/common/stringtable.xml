@@ -5,7 +5,7 @@
             <English>Common</English>
             <German>Allgemein</German>
             <Italian>Comune</Italian>
-            <Japanese>全般</Japanese>
+            <Japanese>一般</Japanese>
             <Chinese>通用</Chinese>
             <Chinesesimp>通用</Chinesesimp>
             <Korean>일반</Korean>
@@ -334,7 +334,7 @@
             <Portuguese>ONO</Portuguese>
             <Hungarian>NyÉNy</Hungarian>
             <Italian>ONO</Italian>
-            <Japanese>北北西</Japanese>
+            <Japanese>西北西</Japanese>
             <Korean>서북서</Korean>
             <Chinese>西北西</Chinese>
             <Chinesesimp>西北偏西</Chinesesimp>
@@ -482,7 +482,7 @@
             <Italian>Controlla Azioni PBO</Italian>
             <Chinese>檢查PBO動作</Chinese>
             <Chinesesimp>检查 PBO 动作</Chinesesimp>
-            <Japanese>PBO 検査の挙動</Japanese>
+            <Japanese>PBO検査の挙動</Japanese>
             <Korean>PBO 검사</Korean>
             <Polish>Sprawdź akcję PBO</Polish>
             <Russian>Действие при проверке PBO</Russian>
@@ -498,7 +498,7 @@
             <Chinesesimp>设定当玩家有错误的 PBO 时要如何处理。</Chinesesimp>
             <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
             <Polish>Określa akcję, która ma być podjęta, jeśli gracz nie ma właściwych PBO.</Polish>
-            <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
+            <Japanese>プレイヤーが不正規のPBOを所持している場合の動作を決定します。</Japanese>
             <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
             <Russian>Определяет, какое действие будет предпринято, если игрок не имеет корректные PBO.</Russian>
             <German>Definiert, was passieren soll, wenn ein Spieler nicht die korrekten PBOs nutzt.</German>
@@ -510,7 +510,7 @@
             <Italian>Controlla Tutti i PBO</Italian>
             <Chinese>檢查所有PBO</Chinese>
             <Chinesesimp>检查所有 PBO</Chinesesimp>
-            <Japanese>PBO 全てを検査</Japanese>
+            <Japanese>全てのPBOを検査</Japanese>
             <Korean>모든 PBO 검사</Korean>
             <Polish>Sprawdź wszystkie PBO</Polish>
             <Russian>Проверять все PBO</Russian>
@@ -526,7 +526,7 @@
             <Chinesesimp>检查全部插件而非只有 ACE。</Chinesesimp>
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
             <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
-            <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
+            <Japanese>ACE だけでなく、全てのアドオンを検査します。</Japanese>
             <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
             <Russian>Проверять все аддоны, а не только ACE.</Russian>
             <German>Überprüft alle Erweiterungen, nicht nur die von ACE.</German>
@@ -538,7 +538,7 @@
             <Italian>Controlla Whitelist PBO</Italian>
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查 PBO 白名单</Chinesesimp>
-            <Japanese>許可リスト内の PBO を検査</Japanese>
+            <Japanese>PBO 検査のホワイトリスト</Japanese>
             <Korean>PBO 화이트리스트 확인</Korean>
             <Polish>Sprawdź białą listę PBO</Polish>
             <Russian>Белый список для проверки PBO</Russian>
@@ -554,7 +554,7 @@
             <Chinesesimp>定义哪些插件是允许使用的。</Chinesesimp>
             <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
             <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
-            <Japanese>許可するアドオンを定義します。</Japanese>
+            <Japanese>関係なく使用が許可されるアドオンのリストを定義します。</Japanese>
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
             <Russian>Задать список непроверяемых аддонов.</Russian>
             <German>Ermöglicht das Erstellen einer Liste von immer erlaubten Erweiterungen.</German>
@@ -587,7 +587,7 @@
             <Czech>Nastavuje pozici nebo vypíná pomocné ikony. Tyto ikony ukazují extra informace ke stavu postavy a vykonávaných činností.</Czech>
             <Hungarian>Itt beállítható a visszajelző ikonok képernyőn lévő helyzete és jelenléte. Ezek az ikonok extra visszajelzést biztosítanak a karaktered állapotán és végrehajtott cselekvésein.</Hungarian>
             <Portuguese>Selecione a posição ou disabilite a posição dos ícones de feedback na sua tela. Esses ícones irão aparecer para mostrar feedback extra do status do seu personagem e ações realizadas.</Portuguese>
-            <Japanese>画面上に表示するフィードバック アイコンの位置や無効化を選択できます。このアイコンは自キャラクター状態や動作の状況をフィードバックするために表示されています。</Japanese>
+            <Japanese>画面上のフィードバック アイコンの位置を選択するか、無効にします。 これらのアイコンは、キャラクターのステータスと実行されたアクションに関する追加のフィードバックを提供するために表示されます。</Japanese>
             <Korean>피드백 아이콘의 위치를 설정하거나 비활성화합니다. 피드백 아이콘은 캐릭터의 상세정보와 행동을 보여줍니다.</Korean>
             <Chinese>選擇位置或取消回饋圖標顯示在螢幕上。這些圖標將顯示出你角色額外的狀態與行動等資訊</Chinese>
             <Chinesesimp>选择位置或取消回馈图标显示在屏幕上。这些图标将显示出你角色额外的状态与行动等信息。</Chinesesimp>
@@ -603,7 +603,7 @@
             <Czech>Pozice ukazetele průběhu činnosti</Czech>
             <Hungarian>Állapotjelző sáv helyzete</Hungarian>
             <Portuguese>Local da barra de progresso</Portuguese>
-            <Japanese>プログレス バーの位置</Japanese>
+            <Japanese>進捗バーの位置</Japanese>
             <Korean>진행 막대의 위치</Korean>
             <Chinese>進度欄位置</Chinese>
             <Chinesesimp>进度栏位置</Chinesesimp>
@@ -619,7 +619,7 @@
             <Czech>Nastavuje pozici ukazetele průběhu činnosti na vaší obrazovce.</Czech>
             <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
             <Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
-            <Japanese>画面上に表示されるプログレス バーの位置を設定できます。</Japanese>
+            <Japanese>画面上に表示される進捗バーの位置を設定できます。</Japanese>
             <Korean>진행 막대를 원하는 곳에 배치합니다.</Korean>
             <Chinese>設定進度欄在畫面中的位置</Chinese>
             <Chinesesimp>设定进度栏在画面中的位置</Chinesesimp>
@@ -667,7 +667,7 @@
             <Czech>Barva fontu nápovědy.</Czech>
             <Hungarian>Súgószöveg betűinek színe</Hungarian>
             <Portuguese>Cor do do texto da hint</Portuguese>
-            <Japanese>ヒント文章の色</Japanese>
+            <Japanese>ヒント文章の文字色</Japanese>
             <Korean>힌트 글씨색</Korean>
             <Chinese>提示文字的顏色</Chinese>
             <Chinesesimp>提示文字的颜色</Chinesesimp>
@@ -683,7 +683,7 @@
             <Czech>Barva fontu ACE nápověd. Toto je standardní barva pro všechen text zobrazovaný ACE nápovědami, pokud nemá nápověda žádnou specifikanou barvu.</Czech>
             <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
             <Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</Portuguese>
-            <Japanese>ACE によるヒントの文章に色を設定できます。この色は ACE ヒント システムを介して表示される全文章の色と標準でなっており、特定の色を設定していても、標準色になります。</Japanese>
+            <Japanese>ACE ヒント文章の文字色。 ヒント文章に他の色が指定されていない場合、この色は、ACE ヒント システムを通じて表示されるすべての文章の標準色になります。</Japanese>
             <Korean>ACE 힌트에 쓰이는 글씨 색입니다. 힌트 글씨의 색이 정해지지 않을경우 모든 힌트의 색은 기본으로 설정됩니다.</Korean>
             <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色</Chinese>
             <Chinesesimp>设定 ACE 提示文字的颜色。若提示字体并无指定其他颜色，将会自动选用 ACE 的预设颜色。</Chinesesimp>
@@ -705,7 +705,7 @@
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
             <English>Persistent weapon laserpointer/flashlight</English>
             <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
-            <Japanese>武器のレーザー ポインタ/フラッシュライトの永続</Japanese>
+            <Japanese>武器のレーザー ポインタ/フラッシュライトの永続性</Japanese>
             <Italian>Laser/torcia dell'arma costantemente accesi</Italian>
             <Korean>무기 레이저 지시기/손전등 지속</Korean>
             <German>Kontinuität des Laserpointers/Taktischen Lichts</German>
@@ -775,7 +775,7 @@
             <Hungarian>PBO-k ellenőrzése</Hungarian>
             <Russian>Проверка аддонов</Russian>
             <Italian>Controlla PBO</Italian>
-            <Japanese>PBO を検査</Japanese>
+            <Japanese>PBOを検査</Japanese>
             <Korean>PBO 검사</Korean>
             <Chinese>檢查PBO檔</Chinese>
             <Chinesesimp>检查 PBO</Chinesesimp>
@@ -790,7 +790,7 @@
             <Russian>Выполняет проверку версий аддонов ACE у подключаемых игроков</Russian>
             <French>/!\ Module obsolète /!\ - Vérifie l'intégrité des addons avec le serveur, et effectue l'action sélectionnée si un addon est manquant.</French>
             <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
-            <Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
+            <Japanese>サーバーとのアドオンの整合性をチェックし、不備があった場合は選択したアクションを実行します。</Japanese>
             <Korean>서버 애드온의 무결성을 검사하고 사라진 애드온이 있을 경우 행동을 선택합니다.</Korean>
             <Chinese>檢查客戶端與伺服器端的模組清單是否一致且完整，並提供訊息表示遺失的模組</Chinese>
             <Chinesesimp>检查客户端与服务器端的模组清单是否一致且完整，并提供信息表示遗失的模组。</Chinesesimp>
@@ -822,7 +822,7 @@
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
-            <Japanese>プレイヤーが正しい PBO を持っていない場合は?</Japanese>
+            <Japanese>プレイヤーが正しいPBOを持っていない場合は?</Japanese>
             <Korean>올바르지 않은 PBO를 가진 사람을 어떻게 할까요?</Korean>
             <Chinese>若玩家沒有正確的PBO檔時，將採取何種動作?</Chinese>
             <Chinesesimp>若玩家没有正确的 PBO 档时，将采取何种动作？</Chinesesimp>
@@ -838,7 +838,7 @@
             <Hungarian>Egyszeri figyelmeztetés</Hungarian>
             <Russian>Предупредить один раз</Russian>
             <Italian>Avverti una volta</Italian>
-            <Japanese>一度の警告</Japanese>
+            <Japanese>一度警告</Japanese>
             <Korean>경고 한 번</Korean>
             <Chinese>警告 (一次)</Chinese>
             <Chinesesimp>警告（一次）</Chinesesimp>
@@ -855,7 +855,7 @@
             <Hungarian>Figyelmeztetés (tartós)</Hungarian>
             <Russian>Предупреждать (постоянно)</Russian>
             <Italian>Avverti (permanente)</Italian>
-            <Japanese>警告 (永久的)</Japanese>
+            <Japanese>警告 (永続)</Japanese>
             <Korean>경고 (영구적)</Korean>
             <Chinese>警告 (持續)</Chinese>
             <Chinesesimp>警告（持续）</Chinesesimp>
@@ -905,7 +905,7 @@
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
             <Russian>Проверять все аддоны, а не только ACE?</Russian>
             <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
-            <Japanese>ACE MOD の代わりに全アドオンを検査しますか?</Japanese>
+            <Japanese>ACE のアドオンだけではなく、すべてのアドオンをチェックしますか?</Japanese>
             <Korean>ACE를 제외한 모든 모드를 검사할까요?</Korean>
             <Chinese>檢查包含ACE之外的其他模組?</Chinese>
             <Chinesesimp>检查包含 ACE 之外的其他模组？</Chinesesimp>
@@ -921,7 +921,7 @@
             <Hungarian>Fehérlista</Hungarian>
             <Russian>Вайтлист доп. аддонов</Russian>
             <Italian>Lista Bianca</Italian>
-            <Japanese>許可制</Japanese>
+            <Japanese>ホワイトリスト</Japanese>
             <Korean>화이트리스트</Korean>
             <Chinese>白名單</Chinese>
             <Chinesesimp>白名单</Chinesesimp>
@@ -970,7 +970,7 @@
             <Hungarian>LSD-effekt hozzáadása a szinkronizált járművekhez</Hungarian>
             <Russian>Добавляет эффект LSD (мигание всеми цветами радуги) синхронизированным транспортным средствам</Russian>
             <Italian>Aggiunge effetti LSD ai veicoli sincronizzati</Italian>
-            <Japanese>同期されたオブジェクトに LSD の効果を追加します</Japanese>
+            <Japanese>同期された車両に LSD 効果を追加します</Japanese>
             <Korean>동기화된 차량에 LSD 효과를 추가합니다.</Korean>
             <Chinese>使被同步的載具產生瘋狂的迷幻效果。(後果自負)</Chinese>
             <Chinesesimp>使被同步的载具产生疯狂的迷幻效果。（后果自负）</Chinesesimp>
@@ -1414,7 +1414,7 @@
             <Korean>ACE 스크립트가 음악을 끌 수 있습니다.</Korean>
             <Chinese>允許ACE腳本去控制音樂的音量</Chinese>
             <Chinesesimp>允许 ACE 脚本去控制音乐的音量。</Chinesesimp>
-            <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
+            <Japanese>ACEのスクリプトに音量低下を許可します。</Japanese>
             <Italian>Permetti agli script di ACEdi abbassare la musica.</Italian>
             <Polish>Zezwól skrypty ACE na przyciszanie muzyki.</Polish>
             <Russian>Позволить скриптам ACE приглушать музыку</Russian>
