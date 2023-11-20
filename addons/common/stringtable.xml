@@ -5,7 +5,7 @@
             <English>Common</English>
             <German>Allgemein</German>
             <Italian>Comune</Italian>
-            <Japanese>一般</Japanese>
+            <Japanese>共通</Japanese>
             <Chinese>通用</Chinese>
             <Chinesesimp>通用</Chinesesimp>
             <Korean>일반</Korean>
@@ -986,7 +986,7 @@
             <Hungarian>Kézi eszköz kapcsolása</Hungarian>
             <Russian>Включить портативное устройство</Russian>
             <Italian>Apri dispositivo palmare</Italian>
-            <Japanese>デバイスを常に表示</Japanese>
+            <Japanese>携帯装置の表示を切り替え</Japanese>
             <Korean>휴대장치 토글</Korean>
             <Chinese>切換手持裝備</Chinese>
             <Chinesesimp>切换手持装备</Chinesesimp>
@@ -1002,7 +1002,7 @@
             <Hungarian>Kézi eszköz bezárása</Hungarian>
             <Russian>Закрыть портативное устройство</Russian>
             <Italian>Chiudi dispositivo palmare</Italian>
-            <Japanese>デバイスを閉じる</Japanese>
+            <Japanese>携帯装置を閉じる</Japanese>
             <Korean>휴대장치 닫기</Korean>
             <Chinese>關閉手持裝備</Chinese>
             <Chinesesimp>关闭手持装备</Chinesesimp>
@@ -1018,7 +1018,7 @@
             <Hungarian>Kézi eszköz váltása</Hungarian>
             <Russian>Следующее портативное устройство</Russian>
             <Italian>Cicla tra dispositivi palmari</Italian>
-            <Japanese>表示するデバイスを変える</Japanese>
+            <Japanese>表示する携帯装置をサイクル</Japanese>
             <Korean>휴대장치 순환</Korean>
             <Chinese>循環切換手持裝備</Chinese>
             <Chinesesimp>循环切换手持装备</Chinesesimp>
@@ -1246,7 +1246,7 @@
             <Czech>ACE Obecné</Czech>
             <Italian>ACE Comune</Italian>
             <French>ACE Commun</French>
-            <Japanese>ACE 全般</Japanese>
+            <Japanese>ACE 共通</Japanese>
             <Korean>ACE 일반</Korean>
             <Chinese>ACE 通用按鍵</Chinese>
             <Chinesesimp>ACE 通用</Chinesesimp>
@@ -1321,7 +1321,7 @@
             <Korean>ACE 무분류</Korean>
             <German>ACE Unkategorisiert</German>
             <Polish>ACE Nieskategoryzowane</Polish>
-            <Japanese>ACE 未区分</Japanese>
+            <Japanese>ACE 未分類</Japanese>
             <Russian>ACE Без категории</Russian>
             <Spanish>ACE Sin categoría</Spanish>
             <French>ACE Non classé</French>
@@ -1438,7 +1438,7 @@
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
             <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
-            <Japanese>点滅する光エフェクトを無効化し、けいれんする恐れを低下させます。</Japanese>
+            <Japanese>いくつかの光点滅エフェクトを無効化し、けいれんの恐れを低下させます。</Japanese>
             <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
             <French>Désactive certains effets de lumière clignotante afin de réduire les risques de crise d'épilepsie.</French>
             <Chinesesimp>禁用一些闪烁的灯光效果，以降低癫痫发作的风险。</Chinesesimp>
@@ -1530,7 +1530,7 @@
             <Chinesesimp>在自我互动菜单内显示动作</Chinesesimp>
             <Polish>Pokaż akcje w menu interakcji własnej</Polish>
             <Portuguese>Mostra a ação no menu de auto-interação</Portuguese>
-            <Japanese>セルフ インタラクションに動作を表示</Japanese>
+            <Japanese>セルフ インタラクションにアクションを表示</Japanese>
             <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
             <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
             <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
@@ -1553,7 +1553,7 @@
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
-            <Japanese>プログレス バー詳細情報</Japanese>
+            <Japanese>進捗バーの詳細情報</Japanese>
             <French>Infos supplémentaires de la barre de progression</French>
             <Russian>Доп. информация индикатора процесса</Russian>
             <German>Zusätzliche Informationen beim Fortschrittsbalken</German>
@@ -1564,7 +1564,7 @@
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
-            <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
+            <Japanese>進捗バーへ表示される情報量を決定します。</Japanese>
             <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
             <Russian>Устанавливает дополнительную информацию в индикаторе процесса.</Russian>
             <German>Kontrolliert zusätzliche Informationen beim Fortschrittsbalkens</German>
@@ -1629,7 +1629,7 @@
         </Key>
         <Key ID="STR_ACE_Common_TimeLeft">
             <English>Time left: %1s</English>
-            <Japanese>残り時間: %1 秒</Japanese>
+            <Japanese>残り時間: %1秒</Japanese>
             <French>Temps restant : %1 s</French>
             <Russian>Оставшееся время: %1s</Russian>
             <German>Zeit übrig %1s</German>
@@ -1648,7 +1648,7 @@
             <Portuguese>Localização melhora treinamento</Portuguese>
             <French>Le lieu améliore l'efficacité</French>
             <Russian>Места ускоренного обучения</Russian>
-            <Japanese>衛生能力の上昇位置</Japanese>
+            <Japanese>能力が向上する場所</Japanese>
             <Korean>교육 증가 지역</Korean>
             <Chinesesimp>位置提升能力</Chinesesimp>
             <Chinese>受所在位置影響提升醫療能力</Chinese>
