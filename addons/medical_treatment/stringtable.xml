@@ -256,7 +256,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
-            <Japanese>患者と治療者との間で医療品の共有をするかどうかを決定します。</Japanese>
+            <Japanese>患者と救護者との間で医療品の共有をするかどうかを決定します。</Japanese>
             <French>Définit si l'équipement médical du médecin et du patient sont mis en commun, et quel matériel est à utiliser en priorité, le cas échéant.</French>
             <Russian>Контролирует, можно ли разделить медикаменты между пациентом и врачом.</Russian>
             <Portuguese>Controla se um item médico pode ser compartilhado entre médico e paciente.</Portuguese>
@@ -288,7 +288,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
-            <Japanese>治療者の装備を先に使用</Japanese>
+            <Japanese>救護者の装備を先に使用</Japanese>
             <French>Matériel du médecin d'abord</French>
             <Russian>Сначала медикаменты врача</Russian>
             <Portuguese>Usar do Médico Primeiro</Portuguese>
@@ -470,7 +470,7 @@
             <Czech>Oblast pro použití epinefrinu</Czech>
             <Portuguese>Localizações de Epinefrina</Portuguese>
             <Russian>Места использования Адреналина</Russian>
-            <Japanese>アドレナリンの使用可能場所</Japanese>
+            <Japanese>アドレナリンの使用可能な場所</Japanese>
             <Korean>에피네프린 사용 장소</Korean>
             <Chinesesimp>肾上腺素使用地点</Chinesesimp>
             <Chinese>腎上腺素使用地點</Chinese>
@@ -536,7 +536,7 @@
             <French>Lieux trousse sanitaire</French>
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
             <Italian>Locazioni Kit Pronto Soccorso</Italian>
-            <Japanese>PAKの使用可能場所</Japanese>
+            <Japanese>PAKの使用可能な場所</Japanese>
             <Korean>개인응급키트 사용 장소</Korean>
             <Chinesesimp>个人急救包使用地点</Chinesesimp>
             <Chinese>個人急救包使用地點</Chinese>
@@ -686,7 +686,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
-            <Japanese>手術キットの使用可能場所</Japanese>
+            <Japanese>手術キットの使用可能な場所</Japanese>
             <French>Lieux trousse chirurgicale</French>
             <Russian>Места использования Хирургического набора</Russian>
             <Portuguese>Locais para Kit Cirúrgico</Portuguese>
@@ -1501,7 +1501,7 @@
             <French>Médecin (uniquement en médecine avancée)</French>
             <Hungarian>Doktor (csak fejlett orvosok)</Hungarian>
             <Italian>Dottore (Solo Medici Avanzati)</Italian>
-            <Japanese>医師 (アドバンスド医療のみ)</Japanese>
+            <Japanese>医師 (上級衛生兵のみ)</Japanese>
             <Korean>군의관 (오직 고급 의료에서만)</Korean>
             <Chinesesimp>军医（只限进阶医疗系统）</Chinesesimp>
             <Chinese>軍醫 (只限進階醫療系統)</Chinese>

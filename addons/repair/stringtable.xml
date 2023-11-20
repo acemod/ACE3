@@ -577,7 +577,7 @@
             <Italian>Scafo</Italian>
             <Hungarian>Test</Hungarian>
             <Russian>Корпус</Russian>
-            <Japanese>機体</Japanese>
+            <Japanese>構造体</Japanese>
             <Korean>선체</Korean>
             <Chinesesimp>车壳</Chinesesimp>
             <Chinese>車殼</Chinese>
@@ -596,7 +596,7 @@
             <Portuguese>Claro</Portuguese>
             <Korean>밝은</Korean>
             <Chinesesimp>轻型</Chinesesimp>
-            <Japanese>軽</Japanese>
+            <Japanese>照明</Japanese>
             <Turkish>Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitEngine">
@@ -626,7 +626,7 @@
             <Italian>Stabilizzatore Orizzontale Sinistro</Italian>
             <French>Stabilisateur horizontal gauche</French>
             <German>Linkes Höhenleitwerk</German>
-            <Japanese>左側の水平安定機</Japanese>
+            <Japanese>左側水平安定装置</Japanese>
             <Korean>왼쪽 수평안정판</Korean>
             <Chinesesimp>左侧悬挂稳定</Chinesesimp>
             <Chinese>左側懸掛穩定</Chinese>
@@ -642,7 +642,7 @@
             <Italian>Stabilizzatore Orizzontale Destro</Italian>
             <French>Stabilisateur horizontal droit</French>
             <German>Rechtes Höhenleitwerk</German>
-            <Japanese>右側の水平安定機</Japanese>
+            <Japanese>右側水平安定装置</Japanese>
             <Korean>오른쪽 수평안정판</Korean>
             <Chinesesimp>右侧悬挂稳定</Chinesesimp>
             <Chinese>右側懸掛穩定</Chinese>
@@ -658,7 +658,7 @@
             <Italian>Stabilizzatore Verticale</Italian>
             <French>Stabilisateur vertical</French>
             <German>Seitenleitwerk</German>
-            <Japanese>車両スタビライザ</Japanese>
+            <Japanese>垂直安定装置</Japanese>
             <Korean>수직 안정판</Korean>
             <Chinesesimp>垂直稳定</Chinesesimp>
             <Chinese>垂直穩定</Chinese>
@@ -771,7 +771,7 @@
             <Czech>Statický port</Czech>
             <Italian>Porta Statica</Italian>
             <French>Système pitot-statique</French>
-            <Japanese>スタティック ポート</Japanese>
+            <Japanese>静圧管</Japanese>
             <Korean>정압공</Korean>
             <Chinesesimp>静态端口</Chinesesimp>
             <Chinese>靜態端口</Chinese>
@@ -837,7 +837,7 @@
             <Italian>Comandante Torretta</Italian>
             <Hungarian>Parancsnok Lövegtorony</Hungarian>
             <Russian>Башня командира</Russian>
-            <Japanese>車長の砲塔</Japanese>
+            <Japanese>車長砲塔</Japanese>
             <Korean>지휘관 포탑</Korean>
             <Chinesesimp>指挥官 炮塔</Chinesesimp>
             <Chinese>指揮官 砲塔</Chinese>
@@ -854,7 +854,7 @@
             <Italian>Comandante Cannone</Italian>
             <Hungarian>Parancsnok Ágyú</Hungarian>
             <Russian>Пушка командира</Russian>
-            <Japanese>車長の砲</Japanese>
+            <Japanese>車長砲</Japanese>
             <Korean>지휘관 포</Korean>
             <Chinesesimp>指挥官 枪</Chinesesimp>
             <Chinese>指揮官 槍</Chinese>
@@ -887,7 +887,7 @@
             <Italian>Cingolo sinistro</Italian>
             <Hungarian>Bal lánctalp</Hungarian>
             <Russian>Левую гусеницу</Russian>
-            <Japanese>左の履帯</Japanese>
+            <Japanese>左履帯</Japanese>
             <Korean>왼쪽 궤도</Korean>
             <Chinesesimp>左履带</Chinesesimp>
             <Chinese>左履帶</Chinese>
@@ -903,7 +903,7 @@
             <Italian>Cingolo destro</Italian>
             <Hungarian>Jobb lánctalp</Hungarian>
             <Russian>Правую гусеницу</Russian>
-            <Japanese>右の履帯</Japanese>
+            <Japanese>右履帯</Japanese>
             <Korean>오른쪽 궤도</Korean>
             <Chinesesimp>右履带</Chinesesimp>
             <Chinese>右履帶</Chinese>
@@ -919,7 +919,7 @@
             <Italian>Ruota frontale sinistra</Italian>
             <Hungarian>Bal első kerék</Hungarian>
             <Russian>Левое переднее колесо</Russian>
-            <Japanese>左の前輪</Japanese>
+            <Japanese>左前輪</Japanese>
             <Korean>왼쪽 앞바퀴</Korean>
             <Chinesesimp>左前轮</Chinesesimp>
             <Chinese>左前輪</Chinese>
@@ -935,7 +935,7 @@
             <Italian>Ruota frontale destra</Italian>
             <Hungarian>Jobb első kerék</Hungarian>
             <Russian>Правое переднее колесо</Russian>
-            <Japanese>右の前輪</Japanese>
+            <Japanese>右前輪</Japanese>
             <Korean>오른쪽 앞바퀴</Korean>
             <Chinesesimp>右前轮</Chinesesimp>
             <Chinese>右前輪</Chinese>
@@ -951,7 +951,7 @@
             <Italian>Seconda ruota frontale sinistra</Italian>
             <Hungarian>Második bal első kerék</Hungarian>
             <Russian>Второе переднее левое колесо</Russian>
-            <Japanese>左の 2 つめの前輪</Japanese>
+            <Japanese>左第二前輪</Japanese>
             <Korean>왼쪽 두번째 바퀴</Korean>
             <Chinesesimp>第二左前轮</Chinesesimp>
             <Chinese>第二左前輪</Chinese>
@@ -967,7 +967,7 @@
             <Italian>Seconda ruota frontale destra</Italian>
             <Hungarian>Második jobb hátsó kerék</Hungarian>
             <Russian>Второе правое переднее колесо</Russian>
-            <Japanese>右の 2 つめの前輪</Japanese>
+            <Japanese>右第二前輪</Japanese>
             <Korean>오른쪽 두번째 바퀴</Korean>
             <Chinesesimp>第二右前轮</Chinesesimp>
             <Chinese>第二右前輪</Chinese>
@@ -983,7 +983,7 @@
             <Italian>Ruota centrale sinistra</Italian>
             <Hungarian>Bal középső kerék</Hungarian>
             <Russian>Левое среднее колесо</Russian>
-            <Japanese>左の中央の前輪</Japanese>
+            <Japanese>左中央輪</Japanese>
             <Korean>왼쪽 가운데 바퀴</Korean>
             <Chinesesimp>左中轮</Chinesesimp>
             <Chinese>左中輪</Chinese>
@@ -999,7 +999,7 @@
             <Italian>Ruota centrale destra</Italian>
             <Hungarian>Jobb középső kerék</Hungarian>
             <Russian>Правое среднее колесо</Russian>
-            <Japanese>右の中央の前輪</Japanese>
+            <Japanese>右中央輪</Japanese>
             <Korean>오른족 가운데 바퀴</Korean>
             <Chinesesimp>右中轮</Chinesesimp>
             <Chinese>右中輪</Chinese>
@@ -1015,7 +1015,7 @@
             <Italian>Ruota posteriore sinistra</Italian>
             <Hungarian>Bal hátsó kerék</Hungarian>
             <Russian>Левое заднее колесо</Russian>
-            <Japanese>左の後輪</Japanese>
+            <Japanese>左後輪</Japanese>
             <Korean>왼쪽 뒤쪽 바퀴</Korean>
             <Chinesesimp>左后轮</Chinesesimp>
             <Chinese>左後輪</Chinese>
@@ -1031,7 +1031,7 @@
             <Italian>Ruota posteriore destra</Italian>
             <Hungarian>Jobb hátsó kerék</Hungarian>
             <Russian>Правое заднее колесо</Russian>
-            <Japanese>右の後輪</Japanese>
+            <Japanese>右後輪</Japanese>
             <Korean>오른쪽 뒤쪽 바퀴</Korean>
             <Chinesesimp>右后轮</Chinesesimp>
             <Chinese>右後輪</Chinese>
@@ -1063,7 +1063,7 @@
             <Italian>Rotore principale</Italian>
             <Hungarian>Főrotor</Hungarian>
             <Russian>Несущий винт</Russian>
-            <Japanese>主翼</Japanese>
+            <Japanese>メインローター</Japanese>
             <Korean>주 로터</Korean>
             <Chinesesimp>主旋翼</Chinesesimp>
             <Chinese>主旋翼</Chinese>
@@ -1080,7 +1080,7 @@
             <Italian>Rotore di coda</Italian>
             <Hungarian>Farokrotor</Hungarian>
             <Russian>Рулевой винт</Russian>
-            <Japanese>テイル ローター</Japanese>
+            <Japanese>テールローター</Japanese>
             <Korean>꼬리 로터</Korean>
             <Chinesesimp>尾桨</Chinesesimp>
             <Chinese>尾槳</Chinese>
@@ -1193,7 +1193,7 @@
             <Czech>Poskytuje rozsáhlý systém oprav pro všechny typy vozidel.</Czech>
             <Italian>Fornisce un sistema di riparazione per tutti i tipi di veicoli.</Italian>
             <French>Fournit un système de réparation pour tous les types de véhicules.</French>
-            <Japanese>全種類の車両に修理システムを適用しますか?</Japanese>
+            <Japanese>あらゆる車種に対応した修理システムを提供します。</Japanese>
             <Korean>모든 차량에 대해 수리 시스템을 제공합니다.</Korean>
             <Chinesesimp>提供修复系统给所有载具</Chinesesimp>
             <Chinese>提供修復系統給所有載具</Chinese>
@@ -1341,7 +1341,7 @@
             <Czech>Jaké maximální poškození může být opraveno pomocí opravárenské sady?</Czech>
             <Italian>Qual'è il danno massimo che può essere riparato con il Toolkit?</Italian>
             <French>Définit la quantité maximale de dégâts pouvant être réparés avec une trousse à outils.</French>
-            <Japanese>ツールキットで修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
+            <Japanese>ツールキットを使用して修復できるパーツの最大ダメージ。\n0% はすべてのダメージを修復できることを意味します。</Japanese>
             <Korean>어느정도의 피해까지 도구모음으로 수리가 가능합니까?</Korean>
             <Chinesesimp>工具包可以修复的最大损坏值？</Chinesesimp>
             <Chinese>工具包可以修復的最大損壞值?</Chinese>
@@ -1371,7 +1371,7 @@
             <Czech>Jaké maximální poškození může být opraveno pomoci inženýra?</Czech>
             <Italian>Qual'è il danno massimo che può essere riparato da un Geniere?</Italian>
             <French>Définit la quantité maximale de dégâts qu'un ingénieur peut réparer.</French>
-            <Japanese>工兵が修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
+            <Japanese>修理に必要な最小レベルを超える工兵が修復できるパーツの最大ダメージ。\n0% は、すべてのダメージを修復できることを意味します。</Japanese>
             <Korean>정비공은 어느정도의 피해까지 수리할 수 있습니까?</Korean>
             <Chinesesimp>工兵可以修复的最大损坏值？</Chinesesimp>
             <Chinese>工兵可以修復的最大損壞值?</Chinese>
@@ -1386,7 +1386,7 @@
             <Czech>Odstranit sadu nástrojů po použití</Czech>
             <Italian>Rimuovi Toolkit dopo l'uso</Italian>
             <French>Retirer la trousse à outils après usage</French>
-            <Japanese>ツールキットを使うと削除</Japanese>
+            <Japanese>ツールキットを使用後に削除</Japanese>
             <Korean>도구모음 사용 후 제거</Korean>
             <Chinesesimp>使用后删除工具包</Chinesesimp>
             <Chinese>使用後刪除工具包</Chinese>
@@ -1401,7 +1401,7 @@
             <Czech>Má být odstraněna sada nástroju po použití?</Czech>
             <Italian>Il Toolkit dev'essere rimosso dopo l'uso?</Italian>
             <French>Définit si la trousse à outils doit être retirée après usage.</French>
-            <Japanese>ツールキットを使うと削除しますか?</Japanese>
+            <Japanese>ツールキットを使用時に消費しますか?</Japanese>
             <Korean>도구모음을 사용하면 제거를 합니까?</Korean>
             <Chinesesimp>要在使用后删除工具包吗？</Chinesesimp>
             <Chinese>要在使用後刪除工具包嗎?</Chinese>
@@ -1506,7 +1506,7 @@
             <Czech>Seznam jmen jednotek, které budou klasifikovány jako inženýr, oddělit čárkami.</Czech>
             <Italian>Lista di unità che verranno classificate come genieri, separate da virgole.</Italian>
             <French>Liste d'unités qui seront classées comme ingénieurs, séparées par des virgules.</French>
-            <Japanese>一覧に記載されたユニット名を、工兵として指定します。コンマで複数を指定できます。</Japanese>
+            <Japanese>工兵に指定されるユニットのリスト。カンマで区切ります。</Japanese>
             <Korean>목록 내 보직이름은 정비공으로 분류됩니다. 쉼표로 구분합니다.</Korean>
             <Chinesesimp>工兵名单，把单位名称输入在这边即可定义其为工兵。每个单位使用逗号以做区隔。</Chinesesimp>
             <Chinese>工兵名單，把單位名稱輸入在這邊即可定義其為工兵。每個單位使用逗號以做區隔。</Chinese>
@@ -1521,7 +1521,7 @@
             <Czech>Inženýr</Czech>
             <Italian>E' Geniere</Italian>
             <French>Qualification technique</French>
-            <Japanese>工兵とする</Japanese>
+            <Japanese>工兵にする</Japanese>
             <Korean>은 정비공이다</Korean>
             <Chinesesimp>是工兵</Chinesesimp>
             <Chinese>是工兵</Chinese>
@@ -1536,7 +1536,7 @@
             <Czech>Vyberte úroveň dovednosti inženýra pro jednotku</Czech>
             <Italian>Seleziona il livello di abilità geniere dell'unità</Italian>
             <French>Choix du niveau de compétence technique de l'unité.</French>
-            <Japanese>ユニットへの工兵スキルを選択</Japanese>
+            <Japanese>ユニットの工兵スキルを選択</Japanese>
             <Korean>선택한 인원의 정비 실력을 고르십시요</Korean>
             <Chinesesimp>选择工兵的技术水平</Chinesesimp>
             <Chinese>選擇工兵的技術水平</Chinese>
@@ -1600,7 +1600,7 @@
             <Czech>Přiřaďte jednu nebo více osob jako inženýra</Czech>
             <Italian>Assegna una o più unità come genieri</Italian>
             <French>Assigne une ou plusieurs unités en tant qu'ingénieur.</French>
-            <Japanese>修理車両として指定</Japanese>
+            <Japanese>単体、または複数のユニットを工兵として割り当てます</Japanese>
             <Korean>하나 혹은 여러 인원을 정비공으로 등록합니다</Korean>
             <Chinesesimp>指定一个或多个单位为工兵</Chinesesimp>
             <Chinese>指定一個或多個單位為工兵</Chinese>
@@ -1645,7 +1645,7 @@
             <Czech>Seznam vozidel, která budou klasifikována jako opravárenská, oddělit čárkami.</Czech>
             <Italian>Lista di Veicoli che verranno considerati veicoli riparazioni, separati da virgole.</Italian>
             <French>Liste de véhicules qui seront classés comme véhicules de réparation, séparés par des virgules.</French>
-            <Japanese>一覧に記載されたユニット名を、修理車両として指定します。コンマで複数を指定できます。</Japanese>
+            <Japanese>修理車両に指定される車両のリスト。カンマで区切ります。</Japanese>
             <Korean>목록내 차량은 정비 차량으로 분류됩니다. 쉼표로 구분합니다.</Korean>
             <Chinesesimp>载具名单，把载具名称输入在这边即可定义其为维修载具。每个载具使用逗号以做区隔。</Chinesesimp>
             <Chinese>載具名單，把載具名稱輸入在這邊即可定義其為維修載具。每個載具使用逗號以做區隔。</Chinese>
@@ -1660,7 +1660,7 @@
             <Czech>Opravárenské vozidlo</Czech>
             <Italian>E' Veicolo Riparazioni</Italian>
             <French>Est un véhicule de réparation</French>
-            <Japanese>修理車両とする</Japanese>
+            <Japanese>修理車両にする</Japanese>
             <Korean>은 정비 차량이다</Korean>
             <Chinesesimp>是维修载具</Chinesesimp>
             <Chinese>是維修載具</Chinese>
@@ -1675,7 +1675,7 @@
             <Czech>Je vozidlo klasifikováno jako opravárenské?</Czech>
             <Italian>Il veicolo è classificato dome veicolo riparazioni?</Italian>
             <French>Définit s'il s'agit d'un véhicule de réparation.</French>
-            <Japanese>車両を修理車両と指定しますか?</Japanese>
+            <Japanese>車両を修理車両に指定しますか?</Japanese>
             <Korean>이 차량을 정비 차량으로 분류합니까?</Korean>
             <Chinesesimp>此载具是维修载具吗？</Chinesesimp>
             <Chinese>此載具是維修載具嗎?</Chinese>
@@ -1690,7 +1690,7 @@
             <Czech>Přiřaďte jedno nebo více vozidel jako opravárenské vozidlo</Czech>
             <Italian>Assegna uno o più veicoli come veicoli riparazioni</Italian>
             <French>Affecte un ou plusieurs véhicules en tant que véhicule de réparation</French>
-            <Japanese>単体、または複数の車両を修理車両とします</Japanese>
+            <Japanese>単体、または複数の車両を修理車両として割り当てます</Japanese>
             <Korean>하나 혹은 여러 차량을 정비 차량으로 등록합니다</Korean>
             <Chinesesimp>指定一个或多个载具作为维修载具</Chinesesimp>
             <Chinese>指定一個或多個載具作為維修載具</Chinese>
@@ -1735,7 +1735,7 @@
             <Czech>Seznam objektů, které budou klasifikovány jako opravárenské zařízení, oddělit čárkami.</Czech>
             <Italian>Lista di oggetti che verranno classificati come strutture riparazioni, separate da virgole.</Italian>
             <French>Liste d'objets qui seront classés comme ateliers de réparation, séparés par des virgules.</French>
-            <Japanese>一覧に記載されたユニット名を、修理施設として指定します。コンマで複数を指定できます。</Japanese>
+            <Japanese>修理施設に指定されるオブジェクトのリスト。カンマで区切ります。</Japanese>
             <Korean>목록내 시설은 정비 시설으로 분류됩니다. 쉼표로 구분합니다.</Korean>
             <Chinesesimp>设施名单，把设施名称输入在这边即可定义其为维修设施。每个设施使用逗号以做区隔。</Chinesesimp>
             <Chinese>設施名單，把設施名稱輸入在這邊即可定義其為維修設施。每個設施使用逗號以做區隔。</Chinese>
@@ -1780,7 +1780,7 @@
             <Czech>Přiřaďte jeden nebo více objektů jako opravárenské zařízení</Czech>
             <Italian>Assegna uno o più oggetti come strutture riparazioni</Italian>
             <French>Assigne un ou plusieurs objets en tant qu'atelier de réparation.</French>
-            <Japanese>ひとつ、または複数オブジェクトに予備部品を追加</Japanese>
+            <Japanese>単体、または複数のオブジェクトを修理施設として割り当てます</Japanese>
             <Korean>하나 혹은 여러 시설을 정비 시설로 등록합니다</Korean>
             <Chinesesimp>指定一个或多个物体作为维修设施</Chinesesimp>
             <Chinese>指定一個或多個對象作為維修設施</Chinese>
@@ -1810,7 +1810,7 @@
             <Czech>Přidat náhradní díly do jednoho nebo více objektů</Czech>
             <Italian>Aggiungi parti di ricambio ad uno o più oggetti</Italian>
             <French>Ajoute des pièces de rechange à un ou plusieurs objets.</French>
-            <Japanese>一覧に追加されたオブジェクトへ予備部品を与えます。コンマで複数を指定できます。</Japanese>
+            <Japanese>単体、または複数のオブジェクトに予備部品の追加を割り当てます</Japanese>
             <Korean>하나 혹은 여러 물체가 예비 부품을 더합니다</Korean>
             <Chinesesimp>添加备件到一个或多个物体上</Chinesesimp>
             <Chinese>添加備件到一個或多個對象上</Chinese>
@@ -1841,7 +1841,7 @@
             <Czech>Seznam objektů, které dostanou náhradní díly, oddělit čárkami.</Czech>
             <Italian>Lista di oggetti a cui verranno aggiunte parti di ricambio, separate da virgole.</Italian>
             <French>Liste d'objets dans lesquels des pièces de rechange seront ajoutées, séparés par des virgules.</French>
-            <Japanese>一覧に追加されたオブジェクトへ予備部品を与えます。コンマで複数を指定できます。</Japanese>
+            <Japanese>予備部品が追加されるオブジェクトのリスト。カンマで区切ります。</Japanese>
             <Korean>목록내 물체는 예비 부품을 받습니다, 쉼표로 구분합니다.</Korean>
             <Chinesesimp>添加备件到名单的载具上。每个载具使用逗号以做区隔。</Chinesesimp>
             <Chinese>添加備件到名單的載具上。每個載具使用逗號以做區隔。</Chinese>
@@ -1886,7 +1886,7 @@
             <Czech>Množství</Czech>
             <Italian>Quantità</Italian>
             <French>Quantité</French>
-            <Japanese>量</Japanese>
+            <Japanese>数量</Japanese>
             <Korean>수량</Korean>
             <Chinesesimp>数量</Chinesesimp>
             <Chinese>數量</Chinese>
@@ -1901,7 +1901,7 @@
             <Czech>Počet vybraných náhradních dílů.</Czech>
             <Italian>Numero di parti di ricambio selezionate.</Italian>
             <French>Nombre de pièces de rechange séléctionnées.</French>
-            <Japanese>選択された予備部品の数を選択します。</Japanese>
+            <Japanese>選択された予備部品の数量を選択します。</Japanese>
             <Korean>선택한 부품의 수</Korean>
             <Chinesesimp>选择的备件数量</Chinesesimp>
             <Chinese>選擇的備件數量</Chinese>
@@ -1931,7 +1931,7 @@
             <Czech>Položka vyžaduje odstraněná/vyměněná kola</Czech>
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
             <French>Outils nécessaires pour le démontage ou le remplacement des roues.</French>
-            <Japanese>タイヤの除去と交換にアイテムを必要としますか?</Japanese>
+            <Japanese>タイヤの除去と交換にアイテムを必要とします。</Japanese>
             <Korean>바퀴를 제거/교체하는데 필요한 물건을 정합니다.</Korean>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
@@ -1947,7 +1947,7 @@
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
             <English>Items required to patch a wheel.</English>
             <German>Gegenstänge, die zum Reifenflicken benötigt werden.</German>
-            <Japanese>タイヤ補修にアイテムを必要としますか?</Japanese>
+            <Japanese>タイヤ補修にアイテムを必要とします。</Japanese>
             <Polish>Przedmioty wymagane do załatania koła</Polish>
             <Korean>바퀴를 수리하기 위해 아이템이 필요합니다.</Korean>
             <French>Equipements requis pour rafistoler une roue.</French>
@@ -1955,7 +1955,7 @@
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
             <German>Sonstige Reparaturbedingungen</German>
-            <Japanese>部分修理条件</Japanese>
+            <Japanese>部分修理の条件</Japanese>
             <Chinese>額外修理條件</Chinese>
             <Chinesesimp>部分全面维修条件</Chinesesimp>
             <French>Exigences pour réparations diverses</French>
@@ -1970,7 +1970,7 @@
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
             <German>Gegenstände die benötigt werden, um eine spezifische Fahrzeugkomponente oder eine Kette zu entfernen/auszutauschen.</German>
-            <Japanese>車両の特定コンポーネントか履帯の除去/交換にアイテムを必要とします。</Japanese>
+            <Japanese>車両の特定コンポーネントの修理や履帯の除去/交換にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
             <Chinesesimp>维修特定车辆部件或拆除/更换轨道所需的物品。</Chinesesimp>
             <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
@@ -1985,7 +1985,7 @@
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
             <German>Bedingungen für vollständige Reparatur</German>
-            <Japanese>完全修理条件</Japanese>
+            <Japanese>完全修理の条件</Japanese>
             <Chinese>完整修復條件</Chinese>
             <Chinesesimp>全面维修条件</Chinesesimp>
             <French>Exigences pour réparations complètes</French>
@@ -2020,7 +2020,7 @@
             <Portuguese>O motor deve estar desligado para manutenção</Portuguese>
             <French>Le moteur doit être arrêté pour la réparation.</French>
             <Russian>Двигатель должен быть выключен для ремонта</Russian>
-            <Japanese>修理のためにエンジンを停止させる必要があります。</Japanese>
+            <Japanese>修理するにはエンジンを停止する必要があります</Japanese>
             <Polish>Silnik musi być wyłączony w celu naprawy</Polish>
             <Korean>수리를 위해서는 엔진을 꺼야만 합니다</Korean>
             <Italian>Il motore deve essere spento per poter riparare</Italian>
@@ -2045,7 +2045,7 @@
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
             <German>Anzahl der Ersatzketten im Laderaum.</German>
-            <Japanese>カーゴ内にある予備履帯の数を指定します。</Japanese>
+            <Japanese>カーゴ内の予備履帯の数を指定</Japanese>
             <Italian>Numero dei cingoli di scorta nel cargo.</Italian>
             <Chinese>設定載具在貨艙內攜帶的備用履帶數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
@@ -2075,7 +2075,7 @@
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
             <German>Anzahl der Ersatzreifen im Laderaum.</German>
-            <Japanese>カーゴ内にある予備タイヤの数を指定します。</Japanese>
+            <Japanese>カーゴ内の予備タイヤの数を指定</Japanese>
             <Italian>Numero delle ruote di scorta nel cargo.</Italian>
             <Chinese>設定載具在貨艙內攜帶的備用輪胎數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
@@ -2090,7 +2090,7 @@
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
             <German>Motor automatisch ausschalten</German>
-            <Japanese>修理時にエンジン自動停止</Japanese>
+            <Japanese>修理時にエンジンを自動停止</Japanese>
             <Chinesesimp>维修时自动关闭发动机</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Italian>Motore spento automaticamente durante la riparazione</Italian>
@@ -2105,7 +2105,7 @@
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
             <German>Schaltet den Motor automatisch aus, sobald das Fahrzeug repariert wird.</German>
-            <Japanese>修理時にエンジンを自動で停止します。</Japanese>
+            <Japanese>修理時は自動的にエンジンを停止します。</Japanese>
             <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
