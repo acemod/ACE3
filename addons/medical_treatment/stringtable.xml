@@ -917,7 +917,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
             <English>Locations IV Transfusion</English>
-            <Japanese>IV 輸血の場所制限</Japanese>
+            <Japanese>IV 輸液の場所制限</Japanese>
             <Spanish>Ubicación para transfusiones IV</Spanish>
             <French>Lieux perfusions IV</French>
             <Russian>Места введения пакетов внутривенного переливания</Russian>
@@ -928,7 +928,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
-            <Japanese>IV 輸血を行える場所を決定できます。</Japanese>
+            <Japanese>IV 輸液を行える場所を決定できます。</Japanese>
             <Spanish>Controla dónde pueden ser realizadas las transfusiones IV.</Spanish>
             <French>Définit les lieux où la pose de perfusions est autorisée.</French>
             <Russian>Определяет к каким частям тела разрешено применять пакеты внутренного переливания.</Russian>
@@ -2559,7 +2559,7 @@
             <Hungarian>Infúzió (vér)</Hungarian>
             <Portuguese>Transfundir Sangue</Portuguese>
             <Italian>Trasfusione di sangue</Italian>
-            <Japanese>輸血用血液を投与</Japanese>
+            <Japanese>血液を投与</Japanese>
             <Korean>혈액 수혈</Korean>
             <Chinesesimp>输入血液</Chinesesimp>
             <Chinese>輸血液</Chinese>
@@ -2813,7 +2813,7 @@
             <Hungarian>Infúzió vérrel...</Hungarian>
             <Portuguese>Transfundindo Sangue...</Portuguese>
             <Italian>Effettuo la trasfusione di sangue...</Italian>
-            <Japanese>輸血用血液を投与しています・・・</Japanese>
+            <Japanese>血液を投与しています・・・</Japanese>
             <Korean>혈액 수혈 중...</Korean>
             <Chinesesimp>正在输入血液...</Chinesesimp>
             <Chinese>輸血液中 ...</Chinese>

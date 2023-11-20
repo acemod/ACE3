@@ -23,7 +23,7 @@
             <French>Masque l'interface</French>
             <German>Oberfläche verstecken</German>
             <Polish>Ukryj interfejs</Polish>
-            <Japanese>インターフェイスを隠す</Japanese>
+            <Japanese>インターフェースを隠す</Japanese>
             <Italian>Nascondi interfaccia</Italian>
             <Korean>인터페이스 숨기기</Korean>
             <Chinese>隱藏介面</Chinese>
@@ -103,7 +103,7 @@
             <French>Aucun objet virtuel disponible.</French>
             <German>Kein virtuelles Objekt verfügbar</German>
             <Polish>Brak dostępnych przedmiotów wirtualnych</Polish>
-            <Japanese>利用可能なバーチャル アイテムはありません</Japanese>
+            <Japanese>利用可能な仮想アイテムはありません</Japanese>
             <Italian>Nessun oggetto virtuale disponibile</Italian>
             <Korean>가상장비 사용 불가</Korean>
             <Chinese>沒有可用的虛擬物品</Chinese>
@@ -149,7 +149,7 @@
             <English>[Shift+Click to save to mission defaults]</English>
             <Spanish>[Shift+Click para guardar equipamiento predefinido</Spanish>
             <German>[Umschalt+Linksklick um als Standard-Missionsausrüstung zu speichern]</German>
-            <Japanese>[Shift + クリックでミッション標準として保存します]</Japanese>
+            <Japanese>[Shift + クリックでミッションの標準装備として保存します]</Japanese>
             <Polish>Shift + Klik aby zapisac jako domyślne dla misji </Polish>
             <Russian>[Shift+Клик, чтобы сохранить в настройках по умолчанию]</Russian>
             <Portuguese>[Shift+Clique para salvar nos padrões da missão]</Portuguese>

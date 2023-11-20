@@ -705,7 +705,7 @@
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
             <English>Persistent weapon laserpointer/flashlight</English>
             <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
-            <Japanese>武器のレーザー ポインタ/フラッシュライトの永続性</Japanese>
+            <Japanese>武器のレーザー ポインター/フラッシュライトの永続性</Japanese>
             <Italian>Laser/torcia dell'arma costantemente accesi</Italian>
             <Korean>무기 레이저 지시기/손전등 지속</Korean>
             <German>Kontinuität des Laserpointers/Taktischen Lichts</German>
