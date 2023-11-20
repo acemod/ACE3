@@ -28,13 +28,15 @@ if (
 ) exitWith {};
 
 // If object has no arsenal and chosen option is to not ignore virtual items of object, exit
-if (isNil {_object getVariable QGVAR(virtualItems)} && {!_mode}) exitWith {
+private _virtualItems = _object getVariable QGVAR(virtualItems);
+
+if (isNil "_virtualItems" && {!_mode}) exitWith {
     [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
 };
 
 // Don't execute in scheduled environment
 if (canSuspend) exitWith {
-    [{_this call FUNC(openBox)}, _this] call CBA_fnc_directCall;
+    [FUNC(openBox), _this] call CBA_fnc_directCall;
 };
 
 private _displayToUse = findDisplay IDD_RSCDISPLAYCURATOR;
@@ -46,36 +48,22 @@ if (isNull _displayToUse || {!isNil QGVAR(camera)}) exitWith {
     [LLSTRING(CantOpenDisplay), false, 5, 1] call EFUNC(common,displayText);
 };
 
+GVAR(center) = _center;
 GVAR(currentBox) = _object;
 
 if (_mode) then {
     // Add all the items from the game that the arsenal has detected
     GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
     GVAR(virtualItemsFlat) = +(uiNamespace getVariable QGVAR(configItemsFlat));
+
+    GVAR(ignoredVirtualItems) = true;
 } else {
     // Add only specified items to the arsenal
-    private _virtualItems = _object getVariable QGVAR(virtualItems);
-
-    GVAR(virtualItems) = if (isNil "_virtualItems") then {
-        _virtualItems = [
-            [IDX_VIRT_WEAPONS, createHashMapFromArray [[IDX_VIRT_PRIMARY_WEAPONS, createHashMap], [IDX_VIRT_SECONDARY_WEAPONS, createHashMap], [IDX_VIRT_HANDGUN_WEAPONS, createHashMap]]],
-            [IDX_VIRT_ATTACHMENTS, createHashMapFromArray [[IDX_VIRT_OPTICS_ATTACHMENTS, createHashMap], [IDX_VIRT_FLASHLIGHT_ATTACHMENTS, createHashMap], [IDX_VIRT_MUZZLE_ATTACHMENTS, createHashMap], [IDX_VIRT_BIPOD_ATTACHMENTS, createHashMap]]]
-        ];
-
-        _virtualItems = createHashMapFromArray _virtualItems;
-
-        for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
-            _virtualItems set [_index, createHashMap];
-        };
-    } else {
-        +_virtualItems
-    };
+    GVAR(virtualItems) = +_virtualItems;
 
     // Flatten out hashmaps for easy checking later
     call FUNC(updateVirtualItemsFlat);
 };
-
-GVAR(center) = _center;
 
 if (is3DEN) then {
     _displayToUse createDisplay QGVAR(display);

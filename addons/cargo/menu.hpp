@@ -4,7 +4,7 @@ class GVAR(menu) {
     idd = 314614;
     movingEnable = 1;
     onLoad = QUOTE([_this select 0] call FUNC(onMenuOpen));
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(menuDisplay)),nil)];);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(menuDisplay),nil)]);
     class controlsBackground {
         class HeaderBackground: ACE_gui_backgroundBase {
             idc = -1;
@@ -20,7 +20,7 @@ class GVAR(menu) {
             h = "13.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0.8)";
             colorText[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
-            colorBackground[] = {0,0,0,"(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
+            colorBackground[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
         };
     };
 
@@ -46,8 +46,8 @@ class GVAR(menu) {
             w = "13 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             style = ST_CENTER;
-            colorText[] = {1, 1, 1.0, 0.9};
-            colorBackground[] = {0,0,0,0};
+            colorText[] = {1, 1, 1, 0.9};
+            colorBackground[] = {0, 0, 0, 0};
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
             text = "";
         };
@@ -83,12 +83,12 @@ class GVAR(menu) {
             animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
             animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
             color[] = {1, 1, 1, 1};
-            color2[] = {0,0,0, 1};
-            colorBackgroundFocused[] = {1,1,1,1};
-            colorBackground[] = {1,1,1,1};
-            colorbackground2[] = {1,1,1,1};
-            colorDisabled[] = {1,1,1,1};
-            colorFocused[] = {0,0,0,1};
+            color2[] = {0, 0, 0, 1};
+            colorBackgroundFocused[] = {1, 1, 1, 1};
+            colorBackground[] = {1, 1, 1, 1};
+            colorbackground2[] = {1, 1, 1, 1};
+            colorDisabled[] = {1, 1, 1, 1};
+            colorFocused[] = {0, 0, 0, 1};
             periodFocus = 1;
             periodOver = 1;
             action = QUOTE(closeDialog 0);
@@ -97,7 +97,7 @@ class GVAR(menu) {
             text = CSTRING(unloadObject);
             idc = 12;
             x = "20.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            action = QUOTE([] call FUNC(startUnload););
+            action = QUOTE(ACE_player call FUNC(startUnload));
         };
     };
 };

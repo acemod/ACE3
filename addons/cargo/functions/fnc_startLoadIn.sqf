@@ -1,67 +1,103 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Start load item.
+ * Starts loading item.
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Object <OBJECT>
- * 2: Vehicle <OBJECT> (Optional)
+ * 0: Unit doing the loading <OBJECT>
+ * 1: Item to be loaded <OBJECT>
+ * 2: Holder object (vehicle) <OBJECT> (default: objNull)
  *
  * Return Value:
  * Load ProgressBar Started <BOOL>
  *
  * Example:
- * [player, cursorTarget] call ace_cargo_fnc_startLoadIn
+ * [player, cursorObject] call ace_cargo_fnc_startLoadIn
  *
  * Public: No
  */
 
-params ["_player", "_object", ["_cargoVehicle", objNull]];
-TRACE_3("params",_player,_object,_cargoVehicle);
+params ["_loader", "_item", ["_vehicle", objNull]];
+TRACE_3("params",_loader,_item,_vehicle);
 
-private _vehicle = _cargoVehicle;
 if (isNull _vehicle) then {
     {
-        if ([_object, _x] call FUNC(canLoadItemIn)) exitWith {_vehicle = _x};
-    } forEach (nearestObjects [_player, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]);
+        if ([_item, _x] call FUNC(canLoadItemIn)) exitWith {
+            _vehicle = _x;
+        };
+    } forEach (nearestObjects [_loader, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE + 10]);
 };
 
 if (isNull _vehicle) exitWith {
-    TRACE_3("Could not find vehicle",_player,_object,_vehicle);
-    false
+    TRACE_3("Could not find vehicle",_loader,_item,_vehicle);
+
+    false // return
 };
 
-private _return = false;
 // Start progress bar
-if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
-    [_player, _object, true] call EFUNC(common,claim);
-    private _size = [_object] call FUNC(getSizeItem);
+if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
+    private _duration = GVAR(loadTimeCoefficient) * (_item call FUNC(getSizeItem));
+
+    // If load time is 0, don't show a progress bar
+    if (_duration <= 0) exitWith {
+        ["ace_loadCargo", [_item, _vehicle]] call CBA_fnc_localEvent;
+
+        true // return
+    };
+
+    // Claim so nobody else can interact with it
+    [_loader, _item, true] call EFUNC(common,claim);
 
     [
-        GVAR(loadTimeCoefficient) * _size,
-        [_object, _vehicle],
+        _duration,
+        [_item, _vehicle],
         {
             TRACE_1("load finish",_this);
+
             [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
+
             ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
         },
         {
             TRACE_1("load fail",_this);
-            [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
+            (_this select 0) params ["_item", "_vehicle"];
+
+            [objNull, _item, true] call EFUNC(common,claim);
+
+            // Fix cancelling loading a carried item
+            if (!isNull attachedTo _item) then {
+                detach _item;
+
+                // Prevent coliisions between item and vehicle
+                [QEGVAR(common,fixCollision), _vehicle, _vehicle] call CBA_fnc_targetEvent;
+                [QEGVAR(common,fixCollision), _item, _item] call CBA_fnc_targetEvent;
+
+                [QEGVAR(common,fixPosition), _item, _item] call CBA_fnc_targetEvent;
+                [QEGVAR(common,fixFloating), _item, _item] call CBA_fnc_targetEvent;
+            };
         },
-        localize LSTRING(LoadingItem),
+        LLSTRING(loadingItem),
         {
-            (_this select 0) params ["_item", "_target"];
-            (alive _target) && {locked _target < 2} && {alive _item}
-                && {([_item, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+            (_this select 0) call FUNC(canLoadItemIn)
         },
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
-    _return = true;
-} else {
-    private _displayName = [_object, true] call FUNC(getNameItem);
-    [[LSTRING(LoadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
-};
 
-_return
+    true // return
+} else {
+    [[LSTRING(loadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
+
+    // Fix cancelling loading a carried item
+    if (!isNull attachedTo _item) then {
+        detach _item;
+
+        // Prevent coliisions between item and vehicle
+        [QEGVAR(common,fixCollision), _vehicle, _vehicle] call CBA_fnc_targetEvent;
+        [QEGVAR(common,fixCollision), _item, _item] call CBA_fnc_targetEvent;
+
+        [QEGVAR(common,fixPosition), _item, _item] call CBA_fnc_targetEvent;
+        [QEGVAR(common,fixFloating), _item, _item] call CBA_fnc_targetEvent;
+    };
+
+    false // return
+};

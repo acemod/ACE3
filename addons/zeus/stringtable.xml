@@ -1934,12 +1934,32 @@
             <Spanish>Quemar a unidad</Spanish>
             <French>Brûler l'unité</French>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleMedicalMenu_DisplayName">
+            <English>Medical Menu</English>
+            <German>Sanitätsmenü</German>
+            <Polish>Menu medyczne</Polish>
+            <Portuguese>Menu Médico</Portuguese>
+            <Russian>Медицинское меню</Russian>
+            <Spanish>Menú médico</Spanish>
+            <Czech>Zdravotnická nabídka</Czech>
+            <Italian>Menù Medico</Italian>
+            <French>Menu médical</French>
+            <Japanese>治療メニュー</Japanese>
+            <Korean>의료 메뉴</Korean>
+            <Chinesesimp>医疗菜单</Chinesesimp>
+            <Chinese>醫療選單</Chinese>
+            <Turkish>Medikal Menü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_MedicalMenuDisabled">
+            <English>The medical menu is disabled</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
             <Polish>Wykop Okop</Polish>
             <Korean>참호라인 깔기</Korean>
             <French>Poser une tranchée</French>
             <German>Grabenlinie legen</German>
+            <Japanese>塹壕溝線を敷設</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
@@ -1947,6 +1967,7 @@
             <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
             <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
             <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
+            <Japanese>=+SHIFT で強制的に敷設 (北/南 または 東/西 方向にのみ配置可能)</Japanese>
         </Key>
     </Package>
 </Project>

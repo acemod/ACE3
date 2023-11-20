@@ -21,6 +21,10 @@ categories:
     labels:
       - 'kind/cleanup'
       - 'area/compatibility'
+      - 'kind/change'
+  - title: '**SETTINGS:**'
+    labels:
+      - 'kind/setting'
   - title: '**TRANSLATIONS:**'
     labels:
       - 'area/translations'
@@ -39,5 +43,5 @@ template: |
 
 replacers:
   # Category titles
-  - search: '/\#\# (\*\*(ADDED|FIXED|IMPROVED|CHANGED|TRANSLATIONS):\*\*)/g'
+  - search: '/\#\# (\*\*(ADDED|FIXED|IMPROVED|CHANGED|SETTINGS|TRANSLATIONS):\*\*)/g'
     replace: '$1'

@@ -42,7 +42,8 @@ if (is3DEN) then {
     _animate = true; // CBA frame functions are disabled during preInit
 };
 
-if (isNil "_virtualItems") exitWith {
+// Do not close an arsenal if it was opened with ignoring the existing content (see FUNC(openBox))
+if (isNil "_virtualItems" && {isNil QGVAR(ignoredVirtualItems)}) exitWith {
     [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
     // Delay a frame in case this is running on display open
     [{(findDisplay IDD_ace_arsenal) closeDisplay 0}] call CBA_fnc_execNextFrame;

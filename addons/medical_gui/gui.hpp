@@ -206,7 +206,7 @@ class ACE_Medical_Menu {
     enableSimulation = 1;
     onLoad = QUOTE(_this call FUNC(onMenuOpen));
     onUnload = QUOTE(_this call FUNC(onMenuClose));
-    onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onKeyDown));
+    onKeyDown = QUOTE([ARR_3('onKeyDown',_this,QQGVAR(display))] call FUNC(onKeyDown));
     class controlsBackground {
         class Title: RscText {
             idc = IDC_TITLE;
@@ -476,7 +476,7 @@ class ACE_Medical_Menu {
 class GVAR(RscTriageCard) {
     idd = -1;
     movingEnable = 1;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscTriageCard), _this select 0)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscTriageCard),_this select 0)]);
     class controls {
         class Background: RscText {
             idc = -1;
@@ -573,7 +573,7 @@ class RscTitles {
         fadeOut = 0.3;
         duration = 999999;
         movingEnable = 0;
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscPatientInfo), _this select 0)]);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscPatientInfo),_this select 0)]);
         class controls {
             class PatientInfoContainer: RscControlsGroupNoScrollbars {
                 idc = -1;
