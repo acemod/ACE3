@@ -1934,6 +1934,25 @@
             <Spanish>Quemar a unidad</Spanish>
             <French>Brûler l'unité</French>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleMedicalMenu_DisplayName">
+            <English>Medical Menu</English>
+            <German>Sanitätsmenü</German>
+            <Polish>Menu medyczne</Polish>
+            <Portuguese>Menu Médico</Portuguese>
+            <Russian>Медицинское меню</Russian>
+            <Spanish>Menú médico</Spanish>
+            <Czech>Zdravotnická nabídka</Czech>
+            <Italian>Menù Medico</Italian>
+            <French>Menu médical</French>
+            <Japanese>治療メニュー</Japanese>
+            <Korean>의료 메뉴</Korean>
+            <Chinesesimp>医疗菜单</Chinesesimp>
+            <Chinese>醫療選單</Chinese>
+            <Turkish>Medikal Menü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_MedicalMenuDisabled">
+            <English>The medical menu is disabled</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
             <Polish>Wykop Okop</Polish>

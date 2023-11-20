@@ -4860,5 +4860,11 @@
             <Japanese>医療品</Japanese>
             <Spanish>Objetos médicos</Spanish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
+            <English>Zeus Treatment Time Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_Description">
+            <English>Multiply all treatment times with this coefficient when in Zeus.</English>
+        </Key>
     </Package>
 </Project>
