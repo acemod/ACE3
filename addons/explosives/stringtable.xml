@@ -806,7 +806,7 @@
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
-            <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。標準: 無効化</Japanese>
+            <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。 デフォルト: 無効化</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要爆破专业兵才能拆除爆炸物？ 预设：否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
@@ -839,7 +839,7 @@
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
-            <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
+            <Japanese>非特技兵は動作完了までの時間を増加させますか? デフォルト: 有効化</Japanese>
             <Korean>비전문가가 폭발물을 해제 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
@@ -871,7 +871,7 @@
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
-            <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
+            <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? デフォルト: 有効化</Japanese>
             <Korean>특정 폭발물이 해제 시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后，某些爆炸物会在拆除时引爆？ 预设：是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>

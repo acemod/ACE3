@@ -1607,7 +1607,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
-            <Japanese>お気に入りをデフォルト</Japanese>
+            <Japanese>お気に入りを標準に</Japanese>
             <Polish>Domyślnie do Ulubionych</Polish>
             <German>Standardmäßig auf Favoriten eingestellt</German>
             <Korean>즐겨찾기 기본값</Korean>
@@ -1615,7 +1615,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
-            <Japanese>ACE Arsenalがデフォルトで全てのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
+            <Japanese>ACE Arsenalが標準で全てのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
             <Polish>Kontroluje, czy ACE Arsenal domyślnie wyświetla wszystkie przedmioty, czy tylko ulubione.</Polish>
             <German>Steuert, ob das ACE Arsenal standardmäßig alle Gegenstände oder nur Favoriten anzeigt.</German>
             <Korean>ACE 아스널이 기본적으로 모든 아이템 또는 즐겨찾기를 표시할 지 여부를 조정합니다.</Korean>

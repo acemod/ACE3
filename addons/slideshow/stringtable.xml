@@ -128,7 +128,7 @@
             <Spanish>Lista de imágenes que se utilizarán para la presentación de diapositivas, separadas por comas, con la ruta completa en formato correcto (ej. imágenes\image.paa).</Spanish>
             <Czech>Seznam obrázků které budou použity v prezentaci, oddělené čárkami, s kompletní cestou ve správném formátu (např. image\image.paa).</Czech>
             <Italian>Lista di immagini che verranno usate durante la presentazione, separati da virgole, con il formato completo del percorso (es. images\image.paa)</Italian>
-            <Japanese>完全なパスでスライドショーに使う画像一覧を入力してください。コンマで区別できます。(例: images\image.paa)</Japanese>
+            <Japanese>スライド ショーに使用される画像のリスト。完全パスで入力してください。コンマで区切ります。(例: images\image.paa)</Japanese>
             <Korean>슬라이드 쇼에 쓰일 사진목록입니다, 쉼표로 구분됩니다, 경로설정을 정확히 하십시요. (예: 사진\사진.ppa)</Korean>
             <Chinese>要做為幻燈片的圖片清單，每個圖片請已逗號區隔，並輸入完整路徑位址 (例如:images\image.paa)</Chinese>
             <Chinesesimp>要做为幻灯片的图片清单，每个图片请已逗号区隔，并输入完整路径位址（例如：images\image.paa）</Chinesesimp>
@@ -184,7 +184,7 @@
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
             <German>Name der für den Hauptinteraktionseintrag benutzt wird (um mehrere Diavorführungen voneinander zu trennen).</German>
             <Polish>Nazwa, która będzie użyta w głównym menu interakcji (w celu rozróżnienia różnych slajdów). Domyślnie: "Slides"</Polish>
-            <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。標準: "Slides"</Japanese>
+            <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。 デフォルト: "Slides"</Japanese>
             <French>Nom qui sera utilisé pour l'entrée d'interaction principale (pour distinguer plusieurs diaporamas). Valeur par défaut : "Slides".</French>
             <Italian>Nome che sarà utilizzato per le principali interazioni (per distinguere le multiple diapositive). Predefinito: "Slides"</Italian>
             <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片) 預設名稱: "幻燈片"</Chinese>
@@ -222,7 +222,7 @@
             <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
             <Italian>Durata di ogni diapositiva. Default: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
-            <Japanese>各スライドの持続時間。標準:0 (自動的な切り替えは無効)</Japanese>
+            <Japanese>各スライドの持続時間。 デフォルト: 0 (自動的な切り替えは無効)</Japanese>
             <Korean>매 슬라이드의 지속 시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>
@@ -246,7 +246,7 @@
             <Korean>물체의 텍스쳐를 선택합니다. 기본: 0</Korean>
             <German>Auswahl der Objekttextur. Standard: 0</German>
             <Polish>Wybór tekstury obiektu. Domyślnie: 0</Polish>
-            <Japanese>オブジェクトテクスチャの選択。デフォルト: 0</Japanese>
+            <Japanese>オブジェクトテクスチャの選択。 デフォルト: 0</Japanese>
             <Russian>Выбор текстуры объекта. По умолчанию: 0</Russian>
             <Spanish>Selección de textura de objeto. Defecto: 0</Spanish>
             <French>Sélection de la texture de l'objet. Valeur par défaut : 0</French>

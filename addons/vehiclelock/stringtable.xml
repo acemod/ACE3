@@ -364,7 +364,7 @@
             <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
             <Russian>Время для взлома замка отмычкой (в секундах). По умолчанию: 10</Russian>
             <Italian>Tempo Default richiesto per forzare serrature (in secondi). Default: 10</Italian>
-            <Japanese>ピッキング ツールを使った作業時間の標準設定。(秒) 標準: 10</Japanese>
+            <Japanese>ピッキング ツールを使った作業時間の標準設定。(秒) デフォルト: 10</Japanese>
             <Korean>해정을 위해 들이는 기본시간입니다(초 단위). 기본설정: 10</Korean>
             <Chinesesimp>开锁时间（秒）。预设：10</Chinesesimp>
             <Chinese>開鎖時間(秒)。預設:10</Chinese>
@@ -412,7 +412,7 @@
             <Hungarian>Szinkronizál a járművekkel és játékosokkal. Egyedi kulcsokat oszt ki a játékosoknak minden szinkronizált járműhöz. Csak a küldetés indításakor jelenlévő járművekhez érvényes.</Hungarian>
             <Russian>Синхронизируйте с транспортом и игроком. Это выдаст игроку ключи от всех синхронизированных транспортных средств. Работает только для объектов, присутствующих на старте миссии</Russian>
             <Italian>Sincronizza con veicoli e giocatori. Distribuirà chiavi ai giocatori per ogni veicolo sincronizzato. Valido solo per oggetti presenti ad inizio missione.</Italian>
-            <Japanese>車両とプレイヤへ同期します。プレイヤへ同期された車両のカスタム キーを作ります。これはミッション開始時に作成されたオブジェクトでのみ有効です。</Japanese>
+            <Japanese>車両とプレイヤーへ同期します。プレイヤーへ同期された車両のカスタム キーを作ります。これはミッション開始時に作成されたオブジェクトでのみ有効です。</Japanese>
             <Korean>차량과 플레이어에게 동기화됩니다. 동기화된 차량은 플레이어에게 열쇠를 지급합니다. 오직 미션 시작 시에 생긴 물체들만 유효합니다.</Korean>
             <Chinesesimp>可同步在载具与玩家身上。将使被同步的玩家掌握其他被同步载具的钥匙。此模块只会在任务刚开始时触发。</Chinesesimp>
             <Chinese>可同步在載具與玩家身上。將使被同步的玩家掌握其他被同步載具的鑰匙。此模塊只會在任務剛開始時觸發</Chinese>
