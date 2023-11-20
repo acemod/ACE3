@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: LorenLuke
- * Delete all markers on the Plotting Board.
+ * Delete all markers on the plotting board.
  *
  * Arguments:
  * None
@@ -10,13 +10,14 @@
  * None
  *
  * Example:
- * [CONTROL] call ACE_maptools_fnc_wipeMarkers
+ * call ace_maptools_fnc_wipeMarkers
  *
  * Public: No
  */
 
 {
     deleteMarker _x;
-} forEach GVAR(plottingBoard_markers);
+} forEach (keys GVAR(plottingBoard_markers));
 
+// Reset list
 GVAR(plottingBoard_markers) = createHashMap;

@@ -7,17 +7,16 @@
  * None
  *
  * Return Value:
- * Boolean <BOOL>
+ * Plotting board can be used <BOOL>
  *
  * Example:
- * call ACE_maptools_fnc_canUsePlottingBoard
+ * call ace_maptools_fnc_canUsePlottingBoard
  *
  * Public: No
  */
 
 visibleMap &&
 {alive ACE_player} &&
-{"ACE_PlottingBoard" in (ACE_player call EFUNC(common,uniqueItems))} &&
+{[ACE_player, "ACE_PlottingBoard"] call EFUNC(common,hasItem)} &&
 {!GVAR(plottingBoard_isDragging)} &&
-{GVAR(plottingBoard_isRotating) == -1} &&
-{getUnitLoadout ACE_player param [9, []] param [0, ""] != ""}
+{GVAR(plottingBoard_isRotating) == -1}

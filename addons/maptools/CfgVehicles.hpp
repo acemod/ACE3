@@ -76,7 +76,7 @@ class CfgVehicles {
                     };
                     class ACE_MapToolsAlignCompass {
                         displayName = CSTRING(ToCompassLabel);
-                        condition = QUOTE(GVAR(mapTool_Shown) != 0 && {getUnitLoadout ACE_player param [ARR_2(9,[])] param [ARR_2(3,'')] != ''});
+                        condition = QUOTE(GVAR(mapTool_Shown) != 0 && {ACE_player getSlotItemName TYPE_COMPASS != ''});
                         statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player);
                         EXCEPTIONS;
                         showDisabled = 1;
@@ -104,80 +104,6 @@ class CfgVehicles {
                 EXCEPTIONS;
                 showDisabled = 0;
 
-                class ACE_PlottingBoardAlign {
-                    displayName = CSTRING(AlignTo);
-                    condition = QUOTE(GVAR(plottingBoard_Shown) > 0);
-                    statement = "";
-                    EXCEPTIONS;
-                    showDisabled = 0;
-
-                    class ACE_PlottingBoardAlignBoard {
-                        displayName = CSTRING(PlottingBoardLabel);
-                        condition = QUOTE(GVAR(plottingBoard_Shown) > 0);
-                        statement = "";
-                        EXCEPTIONS;
-                        showDisabled = 0;
-
-                        class ACE_PlottingBoardAlignBoardMaptool {
-                            displayName = CSTRING(Name);
-                            condition = QUOTE(GVAR(plottingBoard_Shown) > 0 && GVAR(mapTool_Shown) > 0 && GVAR(plottingBoard_angle) != GVAR(mapTool_angle));
-                            statement = QUOTE(GVAR(plottingBoard_angle) = GVAR(mapTool_angle));
-                            EXCEPTIONS;
-                            showDisabled = 0;
-                        };
-                        class ACE_PlottingBoardAlignBoardUp {
-                            displayName = CSTRING(ToUpLabel);
-                            condition = QUOTE(GVAR(plottingBoard_angle) != 0);
-                            statement = QUOTE(GVAR(plottingBoard_angle) = 0);
-                            EXCEPTIONS;
-                            showDisabled = 0;
-                        };
-                    };
-                    class ACE_PlottingBoardAlignAcrylic {
-                        displayName = CSTRING(PlottingBoardAcrylicLabel);
-                        condition = QUOTE(GVAR(plottingBoard_Shown) > 0);
-                        statement = "";
-                        EXCEPTIONS;
-                        showDisabled = 0;
-
-                        class ACE_PlottingBoardAlignAcrylicMaptool {
-                            displayName = CSTRING(Name);
-                            condition = QUOTE(GVAR(plottingBoard_Shown) > 0 && GVAR(mapTool_Shown) > 0 && GVAR(plottingBoard_acrylicAngle) != GVAR(mapTool_angle));
-                            statement = QUOTE(GVAR(plottingBoard_acrylicAngle) = GVAR(mapTool_angle));
-                            EXCEPTIONS;
-                            showDisabled = 0;
-                        };
-                        class ACE_PlottingBoardAlignAcrylicUp {
-                            displayName = CSTRING(ToUpLabel);
-                            condition = QUOTE(GVAR(plottingBoard_acrylicAngle) != 0);
-                            statement = QUOTE(GVAR(plottingBoard_acrylicAngle) = 0);
-                            EXCEPTIONS;
-                            showDisabled = 0;
-                        };
-                    };
-                    class ACE_PlottingBoardAlignRuler {
-                        displayName = CSTRING(PlottingBoardRulerLabel);
-                        condition = QUOTE(GVAR(plottingBoard_Shown) == 2);
-                        statement = "";
-                        EXCEPTIONS;
-                        showDisabled = 0;
-
-                        class ACE_PlottingBoardAlignRulerMaptool {
-                            displayName = CSTRING(Name);
-                            condition = QUOTE(GVAR(plottingBoard_Shown) == 2 && GVAR(mapTool_Shown) > 0);
-                            statement = QUOTE(GVAR(plottingBoard_rulerAngle) = GVAR(mapTool_angle));
-                            EXCEPTIONS;
-                            showDisabled = 0;
-                        };
-                        class ACE_PlottingBoardAlignRulerUp {
-                            displayName = CSTRING(ToUpLabel);
-                            condition = QUOTE(GVAR(plottingBoard_Shown) == 2 && GVAR(plottingBoard_rulerAngle) != 0 && GVAR(plottingBoard_rulerAngle) != GVAR(mapTool_angle));
-                            statement = QUOTE(GVAR(plottingBoard_rulerAngle) = 0);
-                            EXCEPTIONS;
-                            showDisabled = 0;
-                        };
-                    };
-                };
                 class ACE_PlottingBoardRulerShow {
                     displayName = CSTRING(TogglePlottingBoardRuler);
                     condition = QUOTE(GVAR(plottingBoard_Shown) == 1);
@@ -199,6 +125,80 @@ class CfgVehicles {
                     EXCEPTIONS;
                     showDisabled = 1;
                 };
+                class ACE_PlottingBoardAlign {
+                    displayName = CSTRING(AlignTo);
+                    condition = QUOTE(GVAR(plottingBoard_Shown) > 0);
+                    statement = "";
+                    EXCEPTIONS;
+                    showDisabled = 0;
+
+                    class ACE_PlottingBoardAlignBoard {
+                        displayName = CSTRING(PlottingBoardLabel);
+                        condition = QUOTE(true);
+                        statement = "";
+                        EXCEPTIONS;
+                        showDisabled = 0;
+
+                        class ACE_PlottingBoardAlignBoardMaptool {
+                            displayName = CSTRING(Name);
+                            condition = QUOTE(GVAR(mapTool_Shown) > 0 && GVAR(plottingBoard_angle) != GVAR(mapTool_angle));
+                            statement = QUOTE(GVAR(plottingBoard_angle) = GVAR(mapTool_angle));
+                            EXCEPTIONS;
+                            showDisabled = 0;
+                        };
+                        class ACE_PlottingBoardAlignBoardUp {
+                            displayName = CSTRING(ToUpLabel);
+                            condition = QUOTE(GVAR(plottingBoard_angle) != 0);
+                            statement = QUOTE(GVAR(plottingBoard_angle) = 0);
+                            EXCEPTIONS;
+                            showDisabled = 0;
+                        };
+                    };
+                    class ACE_PlottingBoardAlignAcrylic {
+                        displayName = CSTRING(PlottingBoardAcrylicLabel);
+                        condition = QUOTE(true);
+                        statement = "";
+                        EXCEPTIONS;
+                        showDisabled = 0;
+
+                        class ACE_PlottingBoardAlignAcrylicMaptool {
+                            displayName = CSTRING(Name);
+                            condition = QUOTE(GVAR(mapTool_Shown) > 0 && GVAR(plottingBoard_acrylicAngle) != GVAR(mapTool_angle));
+                            statement = QUOTE(GVAR(plottingBoard_acrylicAngle) = GVAR(mapTool_angle));
+                            EXCEPTIONS;
+                            showDisabled = 0;
+                        };
+                        class ACE_PlottingBoardAlignAcrylicUp {
+                            displayName = CSTRING(ToUpLabel);
+                            condition = QUOTE(GVAR(plottingBoard_acrylicAngle) != 0);
+                            statement = QUOTE(GVAR(plottingBoard_acrylicAngle) = 0);
+                            EXCEPTIONS;
+                            showDisabled = 0;
+                        };
+                    };
+                    class ACE_PlottingBoardAlignRuler {
+                        displayName = CSTRING(PlottingBoardRulerLabel);
+                        condition = QUOTE(GVAR(plottingBoard_Shown) == 2);
+                        statement = "";
+                        EXCEPTIONS;
+                        showDisabled = 0;
+
+                        class ACE_PlottingBoardAlignRulerMaptool {
+                            displayName = CSTRING(Name);
+                            condition = QUOTE(GVAR(mapTool_Shown) > 0 && GVAR(plottingBoard_rulerAngle) != GVAR(mapTool_angle));
+                            statement = QUOTE(GVAR(plottingBoard_rulerAngle) = GVAR(mapTool_angle));
+                            EXCEPTIONS;
+                            showDisabled = 0;
+                        };
+                        class ACE_PlottingBoardAlignRulerUp {
+                            displayName = CSTRING(ToUpLabel);
+                            condition = QUOTE(GVAR(plottingBoard_rulerAngle) != 0);
+                            statement = QUOTE(GVAR(plottingBoard_rulerAngle) = 0);
+                            EXCEPTIONS;
+                            showDisabled = 0;
+                        };
+                    };
+                };
             };
         };
     };
@@ -211,30 +211,35 @@ class CfgVehicles {
     class Box_NATO_Support_F: NATO_Box_Base {
         class TransportItems {
             MACRO_ADDITEM(ACE_MapTools,12);
+            MACRO_ADDITEM(ACE_PlottingBoard,12);
         };
     };
 
     class Box_East_Support_F: EAST_Box_Base {
         class TransportItems {
             MACRO_ADDITEM(ACE_MapTools,12);
+            MACRO_ADDITEM(ACE_PlottingBoard,12);
         };
     };
 
     class Box_IND_Support_F: IND_Box_Base {
         class TransportItems {
             MACRO_ADDITEM(ACE_MapTools,12);
+            MACRO_ADDITEM(ACE_PlottingBoard,12);
         };
     };
 
     class Box_FIA_Support_F: FIA_Box_Base_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_MapTools,12);
+            MACRO_ADDITEM(ACE_PlottingBoard,12);
         };
     };
 
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_MapTools,12);
+            MACRO_ADDITEM(ACE_PlottingBoard,12);
         };
     };
 };

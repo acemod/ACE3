@@ -1,4 +1,4 @@
-// by esteldunedain && LorenLuke
+// by esteldunedain, LorenLuke
 
 #include "script_component.hpp"
 
@@ -9,14 +9,14 @@ GVAR(mapGpsShow) = true;
 GVAR(mapGpsNextUpdate) = -1;
 
 GVAR(mapTool_Shown) = 0;
-GVAR(mapTool_pos) = [0,0];
+GVAR(mapTool_pos) = [0, 0];
 GVAR(mapTool_angle) = 0;
 GVAR(mapTool_isDragging) = false;
 GVAR(mapTool_isRotating) = false;
 GVAR(mapTool_moveToMouse) = true;  // used to display it in center of screen when opened
 
 GVAR(plottingBoard_Shown) = 0;
-GVAR(plottingBoard_pos) = [0,0];
+GVAR(plottingBoard_pos) = [0, 0];
 GVAR(plottingBoard_angle) = 0;
 GVAR(plottingBoard_acrylicAngle) = 0;
 GVAR(plottingBoard_rulerAngle) = 0;
@@ -43,13 +43,12 @@ GVAR(plottingBoard_markers) = createHashMap;
 }] call CBA_fnc_addPlayerEventHandler;
 
 addMissionEventHandler ["MarkerCreated", {
-    [FUNC(handlePlottingBoardMarkers), [_this, false]] call CBA_fnc_execNextFrame;
+    [_this, false] call FUNC(handlePlottingBoardMarkers);
 }];
 
 addMissionEventHandler ["MarkerDeleted", {
-    [FUNC(handlePlottingBoardMarkers), [[_this select 0, -1, objNull, _this select 1], true] ] call CBA_fnc_execNextFrame;
+    [[_this select 0, -1, objNull, _this select 1], true] call FUNC(handlePlottingBoardMarkers);
 }];
-
 
 GVAR(freeDrawingData) = [];
 GVAR(freedrawing) = false;

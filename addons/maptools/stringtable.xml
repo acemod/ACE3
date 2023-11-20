@@ -289,13 +289,13 @@
             <English>To Plotting Board Ruler</English>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
-            <English>Wipe all map marks off Plotting Board</English>
+            <English>Wipe all markers off Plotting Board</English>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
             <English>Show Plotting Board</English>
         </Key>
         <Key ID="STR_ACE_MapTools_HidePlottingBoard">
-            <English>Plotting Board Options (Hide)</English>
+            <English>Hide Plotting Board</English>
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
             <English>Toggle Plotting Board Ruler</English>
