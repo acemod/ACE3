@@ -1,3 +1,5 @@
+#pragma hemtt suppress pw3_padded_arg file
+
 class CfgAmmo {
     class Default;
     class BulletCore;

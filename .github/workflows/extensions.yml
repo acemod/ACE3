@@ -42,7 +42,7 @@ jobs:
     runs-on: ${{ matrix.arrays.os.tag }}
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
+      uses: actions/checkout@v4
     - name: Install stable Rust
       uses: actions-rs/toolchain@v1
       with:

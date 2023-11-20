@@ -16,7 +16,10 @@
  */
 
 // Check if menu should stay open for target
-if !([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith) && {[ACE_player, GVAR(target)] call FUNC(canOpenMenu)}) then {
+if !(
+    ([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith) || {!isNull findDisplay 312}) && // Allow player to look at himself when unconsious and in Zeus
+    {[ACE_player, GVAR(target)] call FUNC(canOpenMenu)}
+) then {
     closeDialog 0;
     // Show hint if distance condition failed
     if ((ACE_player distance GVAR(target) > GVAR(maxDistance)) && {vehicle ACE_player != vehicle GVAR(target)}) then {

@@ -72,7 +72,7 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
-        
+
         private _source = _nozzle getVariable QGVAR(source);
 
         detach _nozzle;
@@ -128,14 +128,14 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
                 if ([_unit, _nozzle, false] call FUNC(canTurnOn)) then {
                     [_unit, _nozzle, false] call FUNC(turnOn);
                 } else {
-                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayTextStructured);
                 };
             };
             case (!_canReceive && _isContainer): {
                 if ([_unit, _nozzle, true] call FUNC(canTurnOn)) then {
                     [_unit, _nozzle, true] call FUNC(turnOn);
                 } else {
-                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayTextStructured);
                 };
             };
             default {
@@ -144,7 +144,7 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         };
     },
     "",
-    localize LSTRING(ConnectAction),
+    localize ([LSTRING(ConnectAction), LSTRING(ConnectFuelCanisterAction)] select (_nozzle getVariable [QGVAR(jerryCan), false])),
     {true},
     [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

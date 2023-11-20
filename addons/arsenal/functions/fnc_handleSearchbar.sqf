@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Searchbar control <CONTROL>
+ * 2: Animate panel refresh <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -14,10 +15,11 @@
  * Public: No
 */
 
-params ["_display", "_control"];
+params ["_display", "_control", ["_animate", true]];
 
-// Have to use toLower here and displayName to handle non-ANSI characters
-private _searchString = toLower ctrlText _control;
+forceUnicode 0; // handle non-ANSI characters
+
+private _searchString = ctrlText _control;
 private _searchPattern = "";
 if (_searchString != "") then {
     _searchPattern = _searchString call EFUNC(common,escapeRegex);
@@ -28,7 +30,7 @@ if (_searchString != "") then {
 if ((ctrlIDC _control) == IDC_rightSearchbar) then {
     // Don't refill if there is no need
     if (GVAR(lastSearchTextRight) != "" && {(_searchString find GVAR(lastSearchTextRight)) != 0}) then {
-        [_display, _display displayCtrl GVAR(currentRightPanel)] call FUNC(fillRightPanel);
+        [_display, _display displayCtrl GVAR(currentRightPanel), _animate] call FUNC(fillRightPanel);
     };
 
     GVAR(lastSearchTextRight) = _searchString;
@@ -55,7 +57,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
         // Go through all items in panel and see if they need to be deleted or not
         for "_lbIndex" from (lbSize _rightPanelCtrl) - 1 to 0 step -1 do {
-            _currentDisplayName = toLower (_rightPanelCtrl lbText _lbIndex);
+            _currentDisplayName = _rightPanelCtrl lbText _lbIndex;
             _currentClassname = _rightPanelCtrl lbData _lbIndex;
 
             // Remove item in panel if it doesn't match search, skip otherwise
@@ -126,8 +128,8 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 } else {
     // Left panel search bar
     // Don't refill if there is no need
-    if (GVAR(lastSearchTextLeft) != "" && {(_searchString find GVAR(lastSearchTextRight)) != 0}) then {
-        [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
+    if (GVAR(lastSearchTextLeft) != "" && {(_searchString find GVAR(lastSearchTextLeft)) != 0}) then {
+        [_display, _display displayCtrl GVAR(currentLeftPanel), _animate] call FUNC(fillLeftPanel);
     };
 
     GVAR(lastSearchTextLeft) = _searchString;
@@ -151,7 +153,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     // Go through all items in panel and see if they need to be deleted or not
     for "_lbIndex" from (lbSize _leftPanelCtrl) - 1 to 0 step -1 do {
-        _currentDisplayName = toLower (_leftPanelCtrl lbText _lbIndex);
+        _currentDisplayName = _leftPanelCtrl lbText _lbIndex;
         _currentClassname = _leftPanelCtrl lbData _lbIndex;
 
         // Remove item in panel if it doesn't match search, skip otherwise
@@ -177,3 +179,6 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     [_display, nil, nil, configNull] call FUNC(itemInfo);
 };
+
+// Reset unicode flag
+forceUnicode -1;
