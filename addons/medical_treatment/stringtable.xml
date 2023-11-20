@@ -372,7 +372,7 @@
             <English>Splint Treatment Time</English>
             <French>Durée d'interaction - Attelles</French>
             <German>Schienenbehandlungszeit</German>
-            <Japanese>副子の使用時間</Japanese>
+            <Japanese>添え木の使用時間</Japanese>
             <Spanish>TIempo de tratamiento de férula</Spanish>
             <Russian>Время наложения шины</Russian>
             <Polish>Czas aplikacji szyny</Polish>
@@ -383,7 +383,7 @@
             <English>Time, in seconds, required to apply a splint.</English>
             <French>Définit le temps nécessaire à l'application d'une attelle (en secondes).</French>
             <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
-            <Japanese>副子の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>添え木の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>TIempo, en segundos, requerido para aplicar una férula.</Spanish>
             <Russian>Время, необходимое для наложения шины (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na aplikację szyny.</Polish>
@@ -1730,7 +1730,7 @@
         <Key ID="STR_ACE_Medical_Treatment_splint_Display">
             <English>Splint</English>
             <Russian>Шина</Russian>
-            <Japanese>副子</Japanese>
+            <Japanese>添え木</Japanese>
             <French>Attelle</French>
             <Portuguese>Tala</Portuguese>
             <Chinese>固定板</Chinese>
@@ -3041,7 +3041,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Apply_Splint">
             <English>Apply Splint</English>
             <Russian>Наложить Шину</Russian>
-            <Japanese>副子を当てる</Japanese>
+            <Japanese>添え木を当てる</Japanese>
             <French>Poser une attelle</French>
             <Portuguese>Aplicar Tala</Portuguese>
             <Chinese>套上固定板</Chinese>
@@ -3057,7 +3057,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Applying_Splint">
             <English>Applying Splint...</English>
             <Russian>Накладывается Шина...</Russian>
-            <Japanese>副子を当てています・・・</Japanese>
+            <Japanese>添え木を当てています・・・</Japanese>
             <French>Application de l'attelle...</French>
             <Portuguese>Aplicando Tala...</Portuguese>
             <Chinese>套用固定板中...</Chinese>
@@ -4656,7 +4656,7 @@
             <Chinese>%1 已套用固定板</Chinese>
             <Italian>%1 ha applicato una gessatura</Italian>
             <Czech>%1 použil dlahu</Czech>
-            <Japanese>%1 は副子を当てた</Japanese>
+            <Japanese>%1 は添え木を当てた</Japanese>
             <Polish>%1 założył szynę</Polish>
             <Spanish>%1 aplicada una férula</Spanish>
             <German>%1 hat eine Schiene angelegt</German>

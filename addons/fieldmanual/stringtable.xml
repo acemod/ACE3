@@ -149,7 +149,7 @@
             <Polish>%3Szyna%4 jest używana do leczenie złamań. %3Szyna%4 jest zużywana po wykorzystaniu.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz kończynę, na którą ma być założona.&lt;br/&gt;%2Wybierz %3Załóż Szynę%4.</Polish>
             <Korean>%3부목%4은 골절을 치료하는 데 사용되며 %3부목%4은 사용 시 소모됩니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법%4&lt;br/&gt;%2[%3%13%4] 또는 [%3%14%4]를 사용하여 해당 부위를 선택하십시오.&lt;br/&gt;%2%3부목 대기%4를 선택하십시오.</Korean>
             <German>Ein %3Splint%4 wird zur Fixierung von Frakturen verwendet. Der %3Splint%4 wird bei Verwendung verbraucht.&lt;br/&gt;&lt;br/&gt;%3Verwendung:%4&lt;br/&gt;%2Verwende [%3%13%4] oder [%3%14%4] und wählen ein Körperteil aus.&lt;br/&gt;%2Wähle %3Schiene verwenden%4.</German>
-            <Japanese>%3副子%4は骨折の治療に使います。%3副子%4は使用時に消費します。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って使用したい四肢を選択します。&lt;br/&gt;%2%3副子を当てる%4を選択して使用します。</Japanese>
+            <Japanese>%3添え木%4は骨折の治療に使います。%3添え木%4は使用時に消費します。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って使用したい四肢を選択します。&lt;br/&gt;%2%3添え木を当てる%4を選択して使用します。</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_ShortName">
             <English>Prevent Wounds From Reopening</English>

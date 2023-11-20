@@ -609,7 +609,7 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_DisplayName">
             <English>Fatal Damage Source</English>
             <Russian>Причина смертельного урона</Russian>
-            <Japanese>致命傷の原因</Japanese>
+            <Japanese>致命ダメージの原因</Japanese>
             <Chinese>致命傷來源</Chinese>
             <Chinesesimp>致命伤来源</Chinesesimp>
             <French>Cause de blessure mortelle</French>
@@ -625,7 +625,7 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
             <English>Determines what damage can be fatal</English>
             <Russian>Определяет какой урон будет смертельным</Russian>
-            <Japanese>致命傷となるダメージの種類を決定します。</Japanese>
+            <Japanese>致命となるダメージの種類を決定します。</Japanese>
             <Chinese>決定何種傷害為致命</Chinese>
             <Chinesesimp>确定哪些伤害可能是致命的</Chinesesimp>
             <Italian>Determina quali danni possono essere fatali</Italian>
@@ -641,7 +641,7 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
             <Russian>Только серьезные попадания в жизненно важные органы</Russian>
-            <Japanese>重要臓器に大きなダメージを受けた時のみ</Japanese>
+            <Japanese>重要臓器に大きな被弾があった時のみ</Japanese>
             <Chinese>只有重要器官之重傷</Chinese>
             <Chinesesimp>只有重要器官受到重创</Chinesesimp>
             <French>Grosses blessures sur organes vitaux</French>
