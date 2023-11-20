@@ -1948,7 +1948,7 @@
             <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
             <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
             <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
-            <Japanese>+シフトキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
+            <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
         </Key>
     </Package>
 </Project>

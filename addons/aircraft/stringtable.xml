@@ -61,7 +61,7 @@
             <Polish>30mm Odłamkowo-Burzące - Zapalające</Polish>
             <Turkish>30mm Yüksek Patlayıcı </Turkish>
             <German>30mm Hochexplosiv/Brandladung</German>
-            <Japanese>30mm 焼夷りゅう弾</Japanese>
+            <Japanese>30mm 焼夷榴弾</Japanese>
             <Czech>30mm Tříštivo-trhavá zápalná střela</Czech>
             <Russian>30мм Осколочно-Фугасный Зажигательный</Russian>
             <Korean>30mm 고폭소이탄</Korean>
@@ -89,7 +89,7 @@
             <Polish>30mm Zubożony Uran - Przebijające</Polish>
             <Turkish>30mm DU Zırh Delici</Turkish>
             <German>30mm abgereichertes panzerbrechendes Uraniumgeschoss</German>
-            <Japanese>30mm DU 徹甲弾</Japanese>
+            <Japanese>30mm 劣化ウラン徹甲弾</Japanese>
             <Czech>30mm Protipancéřová střela z ochuzeného Uranu</Czech>
             <Russian>30мм ОУ Бронебойный Снаряд</Russian>
             <Korean>30mm 열화우라늄 철갑탄</Korean>
@@ -117,7 +117,7 @@
             <Polish>30mm Mieszanka bojowa 4:1 ZU:OB-Z</Polish>
             <Turkish>30mm Combat Mix 4:1 DU:HEI</Turkish>
             <German>30mm Kampfmischung 4:1 DU:HEB</German>
-            <Japanese>30mm コンバット ミックス 4:1 DU:HEI</Japanese>
+            <Japanese>30mm コンバット ミックス 4:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
             <Czech>30mm Bojový Mix 4:1 DU:HEI</Czech>
             <Russian>30мм Смешанное боепитание 4:1 ОУ:ОФЗ</Russian>
             <Korean>30mm 4:1 열화:고폭소이</Korean>
@@ -145,7 +145,7 @@
             <Polish>30mm Mieszanka bojowa 5:1 ZU:OB-Z</Polish>
             <Turkish>30mm Combat Mix 5:1 DU:HEI</Turkish>
             <German>30mm Kampfmischung 5:1 DU:HEB</German>
-            <Japanese>30mm コンバット ミックス 5:1 DU:HEI</Japanese>
+            <Japanese>30mm コンバット ミックス 5:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
             <Czech>30mm Bojový Mix 5:1 DU:HEI</Czech>
             <Russian>30мм Смешанное боепитание 5:1 ОУ:ОФЗ</Russian>
             <Korean>30mm 5:1 열화:고폭소이</Korean>

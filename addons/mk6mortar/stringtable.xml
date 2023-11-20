@@ -321,7 +321,7 @@
             <Czech>Nabít HE</Czech>
             <Portuguese>Carregar HE</Portuguese>
             <Russian>Зарядить фугасный</Russian>
-            <Japanese>りゅう弾を装填</Japanese>
+            <Japanese>榴弾を装填</Japanese>
             <Korean>고폭탄 장전</Korean>
             <Chinesesimp>装载高爆弹</Chinesesimp>
             <Chinese>裝載高爆彈</Chinese>
@@ -369,7 +369,7 @@
             <Czech>Nabít HE (Naváděné)</Czech>
             <Portuguese>Carregar HE Guiada</Portuguese>
             <Russian>Зарядить фугасный управляемый</Russian>
-            <Japanese>誘導りゅう弾を装填</Japanese>
+            <Japanese>誘導榴弾を装填</Japanese>
             <Korean>유도 고폭탄 장전</Korean>
             <Chinesesimp>装载制导高爆弹</Chinesesimp>
             <Chinese>裝載導引高爆彈</Chinese>
@@ -385,7 +385,7 @@
             <Czech>Nabít HE (Naváděné laserem)</Czech>
             <Portuguese>Carregar HE Guiada por Laser</Portuguese>
             <Russian>Зарядить фугасный управляемый по ЛЦУ</Russian>
-            <Japanese>レーザー誘導りゅう弾を装填</Japanese>
+            <Japanese>レーザー誘導榴弾を装填</Japanese>
             <Korean>레이저 유도 고폭탄 장전</Korean>
             <Chinesesimp>装填激光制导高爆弹</Chinesesimp>
             <Chinese>裝載雷射導引高爆彈</Chinese>
@@ -401,7 +401,7 @@
             <Czech>[CSW] 82mm HE náboj</Czech>
             <Portuguese>[CSW] Munição 82mm HE</Portuguese>
             <Russian>[CSW] Фугасный снаряд 82мм</Russian>
-            <Japanese>[CSW] 82mm りゅう弾</Japanese>
+            <Japanese>[CSW] 82mm 榴弾</Japanese>
             <Korean>[CSW] 82mm 고폭탄</Korean>
             <Chinesesimp>[班组] 82 mm 高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米高爆彈</Chinese>
@@ -449,7 +449,7 @@
             <Czech>[CSW] 82mm HE náboj (naváděný)</Czech>
             <Portuguese>[CSW] Munição 82mm HE Guiada</Portuguese>
             <Russian>[CSW] Фугасный снаряд управляемый 82мм</Russian>
-            <Japanese>[CSW] 82mm 誘導りゅう弾</Japanese>
+            <Japanese>[CSW] 82mm 誘導榴弾</Japanese>
             <Korean>[CSW] 82mm 유도 고폭탄</Korean>
             <Chinesesimp>[班组] 82 mm 制导高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米導引高爆彈</Chinese>
@@ -465,7 +465,7 @@
             <Czech>[CSW] 82mm HE náboj (naváděný laserem)</Czech>
             <Portuguese>[CSW] Munição 82mm HE Guiada por Laser </Portuguese>
             <Russian>[CSW] Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
-            <Japanese>[CSW] 82mm レーザー誘導りゅう弾</Japanese>
+            <Japanese>[CSW] 82mm レーザー誘導榴弾</Japanese>
             <Korean>[CSW] 82mm 레이저 유도 고폭탄</Korean>
             <Chinesesimp>[班组] 82 mm 激光制导高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米雷射導引高爆彈</Chinese>
@@ -481,7 +481,7 @@
             <Czech>Používá se u minometu Mk6</Czech>
             <Portuguese>Usada no Morteiro MK6</Portuguese>
             <Russian>Использовался в миномете Mk6</Russian>
-            <Japanese>Mk6 mortar で使います</Japanese>
+            <Japanese>Mk6 迫撃砲 で使用</Japanese>
             <Korean>Mk6 박격포에 사용됨</Korean>
             <Chinesesimp>用于 Mk6 迫击炮</Chinesesimp>
             <Chinese>用於Mk6迫擊砲</Chinese>
@@ -496,7 +496,7 @@
             <Czech>[ACE] Bedna s municí (82mm HE)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm HE</Portuguese>
             <Russian>[ACE] Ящик фугасных снарядов 82мм</Russian>
-            <Japanese>[ACE] 82mm りゅう弾入り弾薬箱</Japanese>
+            <Japanese>[ACE] 82mm 榴弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 고폭탄 상자</Korean>
             <Chinesesimp>[ACE] 82 mm 高爆弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米高爆彈藥箱</Chinese>

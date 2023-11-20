@@ -1327,7 +1327,7 @@
         <Key ID="STR_ACE_RealisticNames_SatchelChargeThrowable_Name">
             <English>M183 Demolition Charge (Throwable)</English>
             <French>M183 Charge de démolition (lançable)</French>
-            <Japanese>M183 梱包爆薬 (投てき仕様)</Japanese>
+            <Japanese>M183 梱包爆薬 (投擲仕様)</Japanese>
             <Turkish>M183 Demolition Charge (Throwable)</Turkish>
             <Spanish>Carga de demolición M183 (Lanzable)</Spanish>
             <Russian>M183 комплектный подрывной заряд (бросаемый)</Russian>
@@ -1356,7 +1356,7 @@
         <Key ID="STR_ACE_RealisticNames_DemoChargeThrowable_Name">
             <English>M112 Demolition Charge (Throwable)</English>
             <French>M112 Bloc de démolition (lançable)</French>
-            <Japanese>M112 爆薬ブロック (投てき仕様)</Japanese>
+            <Japanese>M112 爆薬ブロック (投擲仕様)</Japanese>
             <Turkish>M112 Demolition Charge (Throwable)</Turkish>
             <Spanish>Bloque de demolición M112 (Lanzable)</Spanish>
             <Russian>M112 подрывной заряд (бросаемый)</Russian>

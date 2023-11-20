@@ -25,7 +25,7 @@
             <Chinese>#00 鹿彈(8.38 mm)</Chinese>
             <Chinesesimp>#00 鹿弹（8.38 mm）</Chinesesimp>
             <Italian>#00 Buckshot</Italian>
-            <Japanese>#00 バックショット</Japanese>
+            <Japanese>#00 バックショット - 直径 8.38 mm粒弾</Japanese>
             <French>Chevrotine #00</French>
             <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
             <Polish>#00 Śrut</Polish>
@@ -57,7 +57,7 @@
             <Chinese>#0 鹿彈</Chinese>
             <Chinesesimp>#0 鹿弹（8.1 mm）</Chinesesimp>
             <Italian>#0 Buckshot</Italian>
-            <Japanese>#0 バックショット</Japanese>
+            <Japanese>#0 バックショット - 直径 8.1 mm粒弾</Japanese>
             <French>Chevrotine #0</French>
             <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
             <Polish>#0 Śrut</Polish>
@@ -89,7 +89,7 @@
             <Chinese>#1 鹿彈</Chinese>
             <Chinesesimp>#1 鹿弹（7.6 mm）</Chinesesimp>
             <Italian>#1 Buckshot</Italian>
-            <Japanese>#1 バックショット</Japanese>
+            <Japanese>#1 バックショット - 直径 7.6 mm粒弾</Japanese>
             <French>Chevrotine #1</French>
             <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
             <Polish>#1 Śrut</Polish>
@@ -121,7 +121,7 @@
             <Chinese>#2 鹿彈</Chinese>
             <Chinesesimp>#2 鹿弹（6.9 mm）</Chinesesimp>
             <Italian>#2 Buckshot</Italian>
-            <Japanese>#2 バックショット</Japanese>
+            <Japanese>#2 バックショット - 直径 6.9 mm粒弾</Japanese>
             <French>Chevrotine #2</French>
             <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
             <Polish>#2 Śrut</Polish>
@@ -153,7 +153,7 @@
             <Chinese>#3 鹿彈</Chinese>
             <Chinesesimp>#3 鹿弹（6.4 mm）</Chinesesimp>
             <Italian>#3 Buckshot</Italian>
-            <Japanese>#3 バックショット</Japanese>
+            <Japanese>#3 バックショット - 直径 6.4 mm粒弾</Japanese>
             <French>Chevrotine #3</French>
             <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
             <Polish>#3 Śrut</Polish>
@@ -185,7 +185,7 @@
             <Chinese>#4 鹿彈</Chinese>
             <Chinesesimp>#4 鹿弹（6.10 mm）</Chinesesimp>
             <Italian>#4 Buckshot</Italian>
-            <Japanese>#4 バックショット</Japanese>
+            <Japanese>#4 バックショット - 直径 6.1 mm粒弾</Japanese>
             <French>Chevrotine #4</French>
             <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
             <Polish>#4 Śrut</Polish>
@@ -201,7 +201,7 @@
             <Chinese>#4 鳥彈</Chinese>
             <Chinesesimp>#4 鸟弹</Chinesesimp>
             <Italian>#4 Birdshot</Italian>
-            <Japanese>#4 バックショット</Japanese>
+            <Japanese>#4 バードショット</Japanese>
             <French>Grenaille No.4</French>
             <Czech>#4 Broky malé</Czech>
             <Polish>#4 Śrut Drobny</Polish>
@@ -216,7 +216,7 @@
             <Chinese>#4 鳥彈</Chinese>
             <Chinesesimp>#4 鸟弹（3.30 mm）</Chinesesimp>
             <Italian>#4 Birdshot</Italian>
-            <Japanese>#4 バックショット</Japanese>
+            <Japanese>#4 バードショット - 直径 3.3 mm粒弾</Japanese>
             <French>Grenaille No.4</French>
             <Czech>#4 Broky malé - kalibr 3.3 mm</Czech>
             <Polish>#4 Śrut Drobny (Birdshot)</Polish>
@@ -327,7 +327,7 @@
             <Chinese>12鉛徑 2發  #4 鳥彈</Chinese>
             <Chinesesimp>12铅径 2发 #4 鸟弹</Chinesesimp>
             <Italian>12 Gauge 2Rnd #4 Birdshot</Italian>
-            <Japanese>12 ゲージ 2 発入り #4 バックショット</Japanese>
+            <Japanese>12 ゲージ 2 発入り #4 バードショット</Japanese>
             <French>2 balles cal. 12 Grenaille No.4</French>
             <Czech>2x #4 Broky malé (kalibr 3.3 mm)</Czech>
             <Polish>12 Gauge 2 naboje #4 Śrut</Polish>
@@ -439,7 +439,7 @@
             <Chinese>12鉛徑 6發  #4 鳥彈</Chinese>
             <Chinesesimp>12铅径 6发 #4 鸟弹</Chinesesimp>
             <Italian>12 Gauge 6Rnd #4 Birdshot</Italian>
-            <Japanese>12 ゲージ 6 発入り #4 バックショット</Japanese>
+            <Japanese>12 ゲージ 6 発入り #4 バードショット</Japanese>
             <French>6 balles cal. 12 Grenaille No.4</French>
             <Czech>6x #4 Broky malé (kalibr 3.3 mm)</Czech>
             <Polish>12 Gauge 6 naboi #4 Śrut</Polish>
@@ -526,7 +526,7 @@
             <Czech>6.5 mm Creedmor 20náb. Zásobník</Czech>
             <Portuguese>Carregador 6.5 mm com 20 cartuchos Creedmor</Portuguese>
             <Hungarian>6,5 mm Creedmor 20-lövedékes tár</Hungarian>
-            <Japanese>6.5 mm Creedmor 20発入り 弾倉</Japanese>
+            <Japanese>6.5 mm クリードモア 20発入り 弾倉</Japanese>
             <Korean>20발 들이 6.5mm 크리드무어 탄창</Korean>
             <Chinese>6.5毫米 20發 彈匣 (克里德莫爾(CM) 狙擊專用彈)</Chinese>
             <Chinesesimp>6.5 mm 20发 弹匣（Creedmor）</Chinesesimp>
@@ -560,7 +560,7 @@
             <Czech>Ráže: 6.5x47 mm Creedmor&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: QBU-88</Czech>
             <Portuguese>Calibre: 6.5x47 mm Creedmor&lt;br/&gt;Cartuchos: 20&lt;br/&gt;Usado em: QBU-88</Portuguese>
             <Hungarian>Kaliber: 6,5x47 mm Creedmor&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: QBU-88</Hungarian>
-            <Japanese>口径: 6.5x47 mm Creedmor&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: QBU-88</Japanese>
+            <Japanese>口径: 6.5x47 mm クリードモア&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: QBU-88</Japanese>
             <Korean>구경: 6.5x47mm 크리드무어&lt;br/&gt;장탄수: 20&lt;br/&gt;사용처: QBU-88</Korean>
             <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
             <Chinesesimp>口径：6.5x47 mm Creedmor 狙击专用弹&lt;br /&gt;发数：20&lt;br /&gt;使用于：QBU-88</Chinesesimp>
@@ -3382,21 +3382,21 @@
             <Turkish>Kalibre: 12.7x99 mm (AMAX)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_127x99_AMAX_Mag_NameShort">
-            <English>12.7 mm</English>
-            <French>12,7 mm</French>
-            <Spanish>12.7 mm</Spanish>
-            <Polish>12,7 mm</Polish>
-            <Russian>12,7 мм</Russian>
-            <German>12,7 mm</German>
-            <Italian>12.7 mm</Italian>
-            <Czech>12.7 mm</Czech>
-            <Portuguese>12.7 mm</Portuguese>
-            <Hungarian>12,7 mm</Hungarian>
-            <Japanese>12.7 mm</Japanese>
-            <Korean>12.7mm</Korean>
+            <English>12.7 mm AMAX</English>
+            <French>12,7 mm AMAX</French>
+            <Spanish>12.7 mm AMAX</Spanish>
+            <Polish>12,7 mm AMAX</Polish>
+            <Russian>12,7 мм AMAX</Russian>
+            <German>12,7 mm AMAX</German>
+            <Italian>12.7 mm AMAX</Italian>
+            <Czech>12.7 mm AMAX</Czech>
+            <Portuguese>12.7 mm AMAX</Portuguese>
+            <Hungarian>12,7 mm AMAX</Hungarian>
+            <Japanese>12.7 mm AMAX</Japanese>
+            <Korean>12.7mm AMAX</Korean>
             <Chinese>12.7毫米 AMAX 比賽專用彈</Chinese>
-            <Chinesesimp>12.7 mm</Chinesesimp>
-            <Turkish>12.7 mm</Turkish>
+            <Chinesesimp>12.7 mm AMAX</Chinesesimp>
+            <Turkish>12.7 mm AMAX</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_127x99_API_Mag_NameShort">
             <English>12.7 mm API</English>
@@ -3409,7 +3409,7 @@
             <Czech>12.7 mm API</Czech>
             <Portuguese>12.7 mm API</Portuguese>
             <Hungarian>12,7 mm páncéltörő-gyújtó</Hungarian>
-            <Japanese>12.7 mm 焼夷徹甲弾</Japanese>
+            <Japanese>12.7 mm API</Japanese>
             <Korean>12.7mm 철갑소이탄</Korean>
             <Chinese>12.7毫米 穿甲燃燒彈</Chinese>
             <Chinesesimp>12.7 mm 穿燃</Chinesesimp>
@@ -3435,7 +3435,7 @@
         <Key ID="STR_ACE_Ballistics_statBarrelTwist">
             <English>Barrel twist</English>
             <German>Dralllänge</German>
-            <Japanese>銃身の転度</Japanese>
+            <Japanese>銃身転度</Japanese>
             <Chinesesimp>膛线缠距</Chinesesimp>
             <Chinese>膛線扭度</Chinese>
             <Italian>Rigatura della canna</Italian>

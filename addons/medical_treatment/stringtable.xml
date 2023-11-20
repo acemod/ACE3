@@ -1204,7 +1204,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
             <French>RCP - Durée d'interaction</French>
-            <Japanese>心肺蘇生(CPR)の動作時間</Japanese>
+            <Japanese>心肺蘇生(CPR)の治療時間</Japanese>
             <Spanish>Tiempo de tratamiento de RCP</Spanish>
             <Russian>Время проведения СЛР</Russian>
             <Polish>Czas potrzebny na wykonanie CPR</Polish>

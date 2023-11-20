@@ -12,7 +12,7 @@
             <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
             <Italian>Mostra indicazioni nel lancio granate</Italian>
             <Portuguese>Mostrar texto ao lançar granada</Portuguese>
-            <Japanese>手榴弾投てき時に通知</Japanese>
+            <Japanese>手榴弾投擲時に通知</Japanese>
             <Korean>수류탄 투척 시 화면에 문자 표시</Korean>
             <Chinesesimp>投掷手榴弹时显示提示信息</Chinesesimp>
             <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
@@ -299,7 +299,7 @@
             <Portuguese>Lançar Granada Selecionada</Portuguese>
             <Italian>Lancia la Granata Selezionata</Italian>
             <Russian>Бросить выбранную гранату</Russian>
-            <Japanese>選択された手榴弾を投てき</Japanese>
+            <Japanese>選択された手榴弾を投擲</Japanese>
             <Korean>선택된 투척물 투척</Korean>
             <Chinesesimp>投掷选择的手榴弹</Chinesesimp>
             <Chinese>投擲選擇的手榴彈</Chinese>

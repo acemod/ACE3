@@ -387,7 +387,7 @@
             <Portuguese>Probabilidade que uma ação de desemperramento falhe, tendo que ser repetida</Portuguese>
             <Russian>Вертоятность того, что устранение заклинивания не сработает, и его придется повторить.</Russian>
             <Czech>Pravděpodobnost, že uvolnění zbraně selže, je proto nutné tuto akci opakovat. </Czech>
-            <Japanese>弾詰りの除去を失敗する可能性が生まれ、もう一度動作を行う必要があります。</Japanese>
+            <Japanese>弾詰まり解除アクションに失敗し、繰り返しが必要になる確率。</Japanese>
             <Korean>기능고장 해결 시도시 실패할 확률이 있습니다. 이는 다시 기능고장 해결을 시도해야함을 의미합니다.</Korean>
             <Chinesesimp>清除卡弹时有可能会失败，需要反覆进行清枪。</Chinesesimp>
             <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>

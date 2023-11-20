@@ -313,7 +313,7 @@
             <English>Allow Spectator</English>
             <Russian>Разрешить видеть в спектаторе</Russian>
             <French>Autoriser les spectateurs</French>
-            <Japanese>スペクテイターに許可</Japanese>
+            <Japanese>観戦者に許可</Japanese>
             <Spanish>Permitir espectador</Spanish>
             <Polish>Zezwól na Obserwatora</Polish>
             <German>Erlaube Zuschauer</German>
@@ -324,7 +324,7 @@
             <English>Allows Spectator to See Map Gestures</English>
             <Russian>Позволяет наблюдателю видеть жесты на карте</Russian>
             <French>Permet aux spectateurs de voir le pointage des autres joueurs.</French>
-            <Japanese>スペクテイターからマップ ジェスチャーを表示できるようにします。</Japanese>
+            <Japanese>観戦者からマップ ジェスチャーを表示できるようにします。</Japanese>
             <Spanish>Permitir al espectador ver los gestos de mapa</Spanish>
             <Polish>Zezwól Obserwatorowi widzieć Gesty na mapie</Polish>
             <German>Erlaube, dass Zuschauer das Kartenzeichen sehen können</German>

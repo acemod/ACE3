@@ -14,7 +14,7 @@
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_HE">
             <English>M49A2 60mm HE</English>
             <German>M49A2 60mm HE</German>
-            <Japanese>M49A2 60mm りゅう弾</Japanese>
+            <Japanese>M49A2 60mm 榴弾</Japanese>
             <Polish>M49A2 60mm HE</Polish>
             <Korean>M49A2 60mm 고폭</Korean>
             <Chinesesimp>M49A2 60 mm 高爆弹</Chinesesimp>
@@ -44,7 +44,7 @@
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_HE">
             <English>M374 81mm HE</English>
             <German>M374 81mm HE</German>
-            <Japanese>M374 81mm りゅう弾</Japanese>
+            <Japanese>M374 81mm 榴弾</Japanese>
             <Polish>M374 81mm HE</Polish>
             <Korean>M374 81mm 고폭</Korean>
             <Chinesesimp>M374 81 mm 高爆弹</Chinesesimp>
@@ -84,7 +84,7 @@
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_HE">
             <English>O-832D 82mm HE</English>
             <German>O-832D 82mm HE</German>
-            <Japanese>O-832D 82mm りゅう弾</Japanese>
+            <Japanese>O-832D 82mm 榴弾</Japanese>
             <Polish>O-832D 82mm HE</Polish>
             <Korean>O-832D 82mm 고폭</Korean>
             <Chinesesimp>O-832D 82 mm 高爆弹</Chinesesimp>
@@ -114,7 +114,7 @@
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_HE">
             <English>[ACE] M49A2 60mm HE Box</English>
             <German>[ACE] M49A2 60mm HE Box</German>
-            <Japanese>[ACE] M49A2 60mm りゅう弾入り弾薬箱</Japanese>
+            <Japanese>[ACE] M49A2 60mm 榴弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia M49A2 60mm HE</Polish>
             <Korean>[ACE] M49A2 60mm 고폭 상자</Korean>
             <Chinesesimp>[ACE] M49A2 60 mm 高爆弹弹药箱</Chinesesimp>
@@ -144,7 +144,7 @@
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_HE">
             <English>[ACE] M374 81mm HE Box</English>
             <German>[ACE] M374 81mm HE Box</German>
-            <Japanese>[ACE] M374 81mm りゅう弾入り弾薬箱</Japanese>
+            <Japanese>[ACE] M374 81mm 榴弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia M374 81mm HE</Polish>
             <Korean>[ACE] M374 81mm 고폭 상자</Korean>
             <Chinesesimp>[ACE] M374 81 mm 高爆弹弹药箱</Chinesesimp>
@@ -184,7 +184,7 @@
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_HE">
             <English>[ACE] O-832D 82mm HE Box</English>
             <German>[ACE] O-832D 82mm HE Box</German>
-            <Japanese>[ACE] O-832D 82mm りゅう弾入り弾薬箱</Japanese>
+            <Japanese>[ACE] O-832D 82mm 榴弾入り弾薬箱</Japanese>
             <Polish>[ACE] Skrzynia O-832D 82mm HE</Polish>
             <Korean>[ACE] O-832D 82mm 고폭 상자</Korean>
             <Chinesesimp>[ACE] O-832D 82 mm 高爆弹弹药箱</Chinesesimp>
