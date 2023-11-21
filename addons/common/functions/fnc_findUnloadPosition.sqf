@@ -54,7 +54,7 @@ if (_item isKindOf "CAManBase") then {
     };
 };
 
-if (isNull _unloader || {__unloader in _vehicle}) then {
+if (isNull _unloader || {_unloader in _vehicle}) then {
     _unloader = _vehicle;
 };
 
