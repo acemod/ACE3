@@ -603,7 +603,7 @@
             <Czech>Pozice ukazetele průběhu činnosti</Czech>
             <Hungarian>Állapotjelző sáv helyzete</Hungarian>
             <Portuguese>Local da barra de progresso</Portuguese>
-            <Japanese>進捗バーの位置</Japanese>
+            <Japanese>プログレス バーの位置</Japanese>
             <Korean>진행 막대의 위치</Korean>
             <Chinese>進度欄位置</Chinese>
             <Chinesesimp>进度栏位置</Chinesesimp>
@@ -619,7 +619,7 @@
             <Czech>Nastavuje pozici ukazetele průběhu činnosti na vaší obrazovce.</Czech>
             <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
             <Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
-            <Japanese>画面上に表示される進捗バーの位置を設定できます。</Japanese>
+            <Japanese>画面上に表示されるプログレス バーの位置を設定できます。</Japanese>
             <Korean>진행 막대를 원하는 곳에 배치합니다.</Korean>
             <Chinese>設定進度欄在畫面中的位置</Chinese>
             <Chinesesimp>设定进度栏在画面中的位置</Chinesesimp>
@@ -1553,7 +1553,7 @@
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
-            <Japanese>進捗バーの詳細情報</Japanese>
+            <Japanese>プログレス バーの詳細情報</Japanese>
             <French>Infos supplémentaires de la barre de progression</French>
             <Russian>Доп. информация индикатора процесса</Russian>
             <German>Zusätzliche Informationen beim Fortschrittsbalken</German>
@@ -1564,7 +1564,7 @@
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
-            <Japanese>進捗バーへ表示される情報量を決定します。</Japanese>
+            <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
             <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
             <Russian>Устанавливает дополнительную информацию в индикаторе процесса.</Russian>
             <German>Kontrolliert zusätzliche Informationen beim Fortschrittsbalkens</German>
