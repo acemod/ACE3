@@ -51,7 +51,7 @@ if (isArray _cfgPositions) then {
     } forEach allMissionObjects "";
 } else {
     // here are both terrain and editor static objects
-    WARNING_2("World %1: no configured %2; can be loaded slower",worldName,QGVAR(positions));
+    WARNING_2("World %1: %2 is not configured; can load slower",worldName,QGVAR(positions));
     private _worldSize = worldSize;
     private _worldCenter = [_worldSize / 2, _worldSize / 2];
     private _refuelMissionObjects = allMissionObjects "" select {0 < getFuelCargo _x};
