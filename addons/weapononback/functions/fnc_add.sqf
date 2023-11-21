@@ -29,7 +29,7 @@ if (!isNull _weaponHolder) then {
 };
 
 _weaponHolder = QGVAR(weaponHolder) createVehicleLocal [0, 0, 0];
-_weaponHolder attachTo [_unit, [0, 0, 0], "proxy:\a3\characters_f\proxies\launcher.001"];
+_weaponHolder attachTo [_unit, [0, 0, -2], "proxy:\a3\characters_f\proxies\launcher.001"];
 
 // Add weapon to weapon holder
 _weaponHolder addWeaponWithAttachmentsCargo [_weaponsItems, 1];
@@ -39,6 +39,8 @@ _weaponHolder enableSimulation false;
 
 _unit setVariable [QGVAR(weaponHolder), _weaponHolder];
 GVAR(units) pushBack _unit;
+
+_weaponHolder hideObject true;
 
 if (local _unit) then {
     private _oldMass = _unit getVariable [QGVAR(weaponMass), 0];
@@ -74,6 +76,6 @@ if (local _unit) then {
     [] call FUNC(updateInventory);
 };
 
-if (isNil QGVAR(renderPFH)) then {
-    GVAR(renderPFH) = [FUNC(renderPFH), 0, []] call CBA_fnc_addPerFrameHandler;
-};
+// if (isNil QGVAR(renderPFH)) then {
+//     GVAR(renderPFH) = [FUNC(renderPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+// };

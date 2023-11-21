@@ -9,6 +9,6 @@ PREP(onInventoryOpened);
 PREP(onWeaponChange);
 PREP(onWHSInit);
 PREP(remove);
-PREP(renderPFH);
+//PREP(renderPFH);
 PREP(swap);
 PREP(updateInventory);

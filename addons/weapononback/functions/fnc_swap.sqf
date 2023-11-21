@@ -13,6 +13,7 @@
  */
 
 private _oldPrimary = (getUnitLoadout ACE_player)#0;
+private _oldPrimaryMagazine = primaryWeaponMagazine ACE_player;
 private _newPrimary = [ACE_player] call FUNC(get);
 
 // Save scope adjustment
@@ -37,23 +38,25 @@ if !(_newPrimary isEqualTo []) then {
     ACE_player addWeapon _weapon;
 
     // Readd lost magazines
-    {
-        private _container = _x;
-        private _before = _containerMags#_forEachIndex;
-        private _after = magazinesAmmo _container;
-
+    if !(count _oldPrimaryMagazine == 0) then {        
         {
-            _before deleteAt (_before find _x);
-        } forEach _after;
+            private _container = _x;
+            private _before = _containerMags#_forEachIndex;
+            private _after = magazinesAmmo _container;
 
-        {
-            _container addMagazineAmmoCargo [_x#0, 1, _x#1];
-        } forEach _before;
-    } forEach [
-        uniformContainer ACE_player,
-        vestContainer ACE_player,
-        backpackContainer ACE_player
-    ];
+            {
+                _before deleteAt (_before find _x);
+            } forEach _after;
+
+            {
+                _container addMagazineAmmoCargo [_x#0, 1, _x#1];
+            } forEach _before;
+        } forEach [
+            uniformContainer ACE_player,
+            vestContainer ACE_player,
+            backpackContainer ACE_player
+        ];
+    };
 
     removeAllPrimaryWeaponItems ACE_player;
     {
