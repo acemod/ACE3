@@ -17,6 +17,7 @@ class CfgVehicles {
         side = 1;
         faction = "BLU_F";
         crew = "B_soldier_f";
+        class Newturret{};		
         model = QPATHTOF(models\ace_m47_static.p3d);
         editorPreview = QPATHTOF(data\ace_dragon_staticAssembled.jpg);
         picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
@@ -45,7 +46,8 @@ class CfgVehicles {
             class MainTurret: MainTurret {
                 optics = 1;
                 turretInfoType = "RscWeaponEmpty";
-                gunnerOpticsModel = QPATHTOF(models\optics_m47.p3d);
+                gunnerOpticsModel = QPATHTOF(models\wog_optics_m47.p3d);
+                gunnerOpticsEffect[] = {"OpticsBlur2","OpticsCHAbera2"};				
                 minElev = -30;
                 maxElev = 20;
                 weapons[] = { QGVAR(dummyStatic) };
@@ -67,9 +69,14 @@ class CfgVehicles {
                     initAngleY = 5;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    initFov = 0.055;
-                    minFov = 0.055; // 6 degree FOV
-                    maxFov = 0.055;
+                    initFov = 0.0415;
+                    minFov = 0.0415;
+                    maxFov = 0.0415;
+                    opticsZoomMin = 0.0415;
+                    opticsZoomMax = 0.0415;
+                    opticsZoomInit = 0.0415;
+                    distanceZoomMin = 500;
+                    distanceZoomMax = 500;
                     visionMode[] = {"Normal"};
                     thermalMode[] = {0};
                 };
@@ -108,7 +115,7 @@ class CfgVehicles {
         armorStructural = 10.0;
 
         class ACE_CSW {
-            disassembleTo = QGVAR(super);
+            disassembleTo = "ACE_M47_Dragon";
         };
 
         class ACE_Actions: ACE_Actions {
@@ -117,16 +124,19 @@ class CfgVehicles {
                 class GVAR(pickUp) {
                     displayName = ECSTRING(csw,Pickup_displayName);
                     condition = QUOTE(call FUNC(canPickupTripod));
+                    distance = 0.5;					
                     statement = QUOTE(call EFUNC(csw,assemble_pickupTripod));
                 };
                 class GVAR(attachSight) {
                     displayName = CSTRING(attachSight);
                     condition = QUOTE(call FUNC(sightCanAttach));
                     statement = QUOTE(call FUNC(sightAttach));
+                    distance = 0.5;
                     icon = QPATHTOF(data\m47_daysight_interaction_attach.paa);
                 };
                 class GVAR(detachSight) {
                     displayName = CSTRING(detachSight);
+                    distance = 0.5;                    
                     condition = QUOTE(call FUNC(sightCanDetach));
                     statement = QUOTE(call FUNC(sightDetach));
                     icon = QPATHTOF(data\m47_daysight_interaction_detach.paa);
@@ -146,6 +156,7 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = { QGVAR(superStatic) };
+                class HitPoints	{};			
             };
         };
     };
