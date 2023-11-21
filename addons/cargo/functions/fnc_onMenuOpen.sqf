@@ -75,7 +75,7 @@ if (GVAR(interactionParadrop)) then {
 
         if (_itemSize >= 0) then {
             _index = if (GVAR(interactionParadrop)) then {
-                _ctrl lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, GVAR(paradropTimeCoefficent) * _itemSize];
+                _ctrl lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, GVAR(paradropTimeCoefficent) * _itemSize]
             } else {
                 _ctrl lbAdd format ["%1. %2", _forEachIndex + 1, _displayName];
             };
