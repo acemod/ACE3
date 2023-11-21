@@ -35,13 +35,13 @@ _magazine params ["_magazineClassname", "_amountOfMagazines"];
 if (_amountOfMagazines > 0) exitWith {
     private _removed = _amountOfMagazines min floor(1 + random(6 / GVAR(ammoCookoffDuration)));
 
-    _amountOfMagazines = _amountOfMagazines - _removed;
+    _amountOfMagazines = _amountOfMagazines - _removed - _amountOfMagazines / 3;
     if (_amountOfMagazines <= 0) then {
         _magazines deleteAt _magazineIndex;
     } else {
         _magazine set [1, _amountOfMagazines]; // clear out the magazine
     };
-    private _timeBetweenAmmoDetonation = (((random 10) / (sqrt _totalAmmo)) min MAX_TIME_BETWEEN_AMMO_DET) max 0.1;
+    private _timeBetweenAmmoDetonation = (((random 10) / (sqrt _totalAmmo)) min MAX_TIME_BETWEEN_AMMO_DET) max 0.3;
     TRACE_2("",_totalAmmo,_timeBetweenAmmoDetonation);
     _totalAmmo = _totalAmmo - _removed;
 
@@ -89,7 +89,7 @@ if (_amountOfMagazines > 0) exitWith {
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1300];
 
         if (random 1 < 0.15) then {
-            [_vehicle, _ammo, _speed, true] call _spawnProjectile;
+            [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
         };
     };
     if (toLower _simType == "shotgrenade") then {

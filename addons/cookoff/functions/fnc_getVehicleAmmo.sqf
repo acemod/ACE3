@@ -57,10 +57,10 @@ if (_vehicle getVariable [QEGVAR(rearm,isSupplyVehicle), (_configSupply > 0)]) t
 
     _ammoToDetonate pushBack ["2000Rnd_65x39_belt", 2000];
     _totalAmmo = _totalAmmo + 2000;
-    _ammoToDetonate pushBack ["20Rnd_105mm_HEAT_MP", 100];
-    _totalAmmo = _totalAmmo + 100;
-    _ammoToDetonate pushBack ["SatchelCharge_Remote_Mag", 10];
-    _totalAmmo = _totalAmmo + 10;
+    _ammoToDetonate pushBack ["20Rnd_105mm_HEAT_MP", 6];
+    _totalAmmo = _totalAmmo + 6;
+    _ammoToDetonate pushBack ["SatchelCharge_Remote_Mag", 3];
+    _totalAmmo = _totalAmmo + 3;
 };
 
 [_ammoToDetonate, _totalAmmo]
