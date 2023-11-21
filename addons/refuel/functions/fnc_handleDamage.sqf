@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Restores vanilla fuel cargo when refuel vehicle is destroyed.
