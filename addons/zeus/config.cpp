@@ -56,6 +56,7 @@ class CfgPatches {
     class GVAR(cargo): ADDON {
         units[] = {
             QGVAR(moduleLoadIntoCargo),
+            QGVAR(moduleUnloadFromCargo),
             QGVAR(moduleCargoParadrop)
         };
     };
