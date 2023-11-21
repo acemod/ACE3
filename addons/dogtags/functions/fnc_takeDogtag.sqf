@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
  * If dogtag is not already taken triggers event on server.
@@ -23,7 +23,7 @@ params ["_player", "_target"];
 _player call EFUNC(common,goKneeling);
 
 // sound
-private _position = AGLToASL (_target modelToWorld (_target selectionPosition "neck"));
+private _position = _target modelToWorldWorld (_target selectionPosition "neck");
 
 playSound3D [
     selectRandom RUSTLING_SOUNDS,

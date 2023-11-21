@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Handles deafness due to large-caliber weapons going off near the player.

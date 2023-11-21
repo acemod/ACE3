@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Checks if a unit is near an engineering vehicle.
@@ -15,14 +15,14 @@
  * Public: Yes
  */
 
+#define CHECK_OBJECTS(var) ((var) findIf {alive _x && {[_x] call FUNC(isRepairVehicle)}} != -1)
+
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private _nearObjects = nearestObjects [_unit, ["Air", "LandVehicle", "Slingload_base_F"], 20];
+private _fnc_check = {
+    private _nearObjects = nearestObjects [_unit, ["Air", "LandVehicle", "Slingload_base_F"], 20];
+    CHECK_OBJECTS(_nearObjects)
+};
 
-private _return = false;
-{
-    if (alive _x && {[_x] call FUNC(isRepairVehicle)}) exitWith {_return = true;};
-} forEach _nearObjects;
-
-_return;
+[[], _fnc_check, _unit, QGVAR(nearRepairVehicleCache), NEAR_REPAIR_VEHICLE_CACHE_EXPIRY] call EFUNC(common,cachedCall);

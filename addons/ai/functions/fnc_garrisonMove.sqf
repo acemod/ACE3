@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: alganthe
  * Internal function used by ace_ai_fnc_garrison to make the units move to the positions it picked.
@@ -33,7 +33,7 @@ private _unitMoveListUnits = (_unitMoveList apply {_x select 0});
     _x setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
 } foreach _unitMoveListUnits;
 
-// Avoid duplicate PFHs 
+// Avoid duplicate PFHs
 if (isNil QGVAR(garrison_moveUnitPFH)) then {
     missionNameSpace setVariable [QGVAR(garrison_moveUnitPFH), true, true];
 
@@ -114,7 +114,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                         (_unit getVariable [QGVAR(garrisonMove_unitPosMemory), [CBA_missionTime, [0,0,0]]]) params ["_unitPosTimer", "_unitOldPos"];
 
                         // AI may sometimes not be able to report unitReady, this is to avoid the PFH running forever
-                        switch true do { 
+                        switch true do {
                             case ((_unitPos distance _pos) < 1.5) : {
                                 call _fnc_attemptSuccessful;
                             };
@@ -127,7 +127,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
 
                             default {
                                 _unit setVariable [QGVAR(garrisonMove_unitPosMemory), [CBA_missionTime, _unitPos]];
-                            }; 
+                            };
                         };
                     };
                 };

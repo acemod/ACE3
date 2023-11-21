@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Function for setup module.  Sets default lockpick strength and default lock state.
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [fromModule] call ACE_VehicleLock_fnc_hasKeyForVehicle;
+ * [fromModule] call ace_vehiclelock_fnc_moduleInit;
  *
  * Public: No
  */

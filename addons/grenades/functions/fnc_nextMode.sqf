@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Select the next throwing mode and display message.
@@ -33,7 +33,7 @@ private _hint = localize ([
     LSTRING(HighThrow),
     LSTRING(PreciseThrow),
     LSTRING(RollGrenade),
-    LSTRING(DropGrenade)  
+    LSTRING(DropGrenade)
 ] select _mode);
 
 [_hint] call EFUNC(common,displayTextStructured);

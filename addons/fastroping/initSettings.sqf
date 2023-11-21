@@ -1,6 +1,4 @@
-// CBA Settings [ADDON: ace_fastroping]:
-
-private _category = ["ACE Uncategorized", LLSTRING(setting_categoryMenu_displayName)];
+private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(setting_categoryMenu_displayName)];
 
 [
     QGVAR(requireRopeItems), "CHECKBOX",
@@ -10,4 +8,12 @@ private _category = ["ACE Uncategorized", LLSTRING(setting_categoryMenu_displayN
     true, // isGlobal
     {[QGVAR(requireRopeItems), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // needRestart
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(autoAddFRIES), "CHECKBOX",
+    [LSTRING(setting_autoAddFRIES_displayName), LSTRING(setting_autoAddFRIES_description)],
+    _category,
+    false, // default value
+    true // isGlobal
 ] call CBA_fnc_addSetting;

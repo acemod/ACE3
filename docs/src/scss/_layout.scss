@@ -1,7 +1,3 @@
-* {
-    transition: all 0.15s ease;
-}
-
 body {
     background-color: $oil;
 }
@@ -32,6 +28,6 @@ aside {
     }
 }
 
-/*.post > .row {
-    margin-bottom: 1.25rem;
-}*/
+a {
+    transition: $transition-default;
+}

@@ -12,7 +12,7 @@ class CfgWeapons {
         lockedTargetSound[] = {"",0,1};
         soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1",1,1.1,700};
         nameSound = "MissileLauncher";
-        sounds[] = {"StandardSound"};        
+        sounds[] = {"StandardSound"};
         class StandardSound {
             begin1[] = {"A3\Sounds_F\weapons\Rockets\missile_1",1.12202,1.3,1000};
             soundBegin[] = {"begin1",1};
@@ -45,7 +45,7 @@ class CfgWeapons {
         lockedTargetSound[] = {"",0,1};
         soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1",1,1.1,700};
         nameSound = "MissileLauncher";
-        sounds[] = {"StandardSound"};        
+        sounds[] = {"StandardSound"};
         class StandardSound {
             begin1[] = {"A3\Sounds_F\weapons\Rockets\missile_1",1.12202,1.3,1000};
             soundBegin[] = {"begin1",1};
@@ -54,7 +54,7 @@ class CfgWeapons {
         cursor = "EmptyCursor";
         cursorAim = "missile";
         showAimCursorInternal = 0;
-        
+
         autoReload = 1;
         magazineReloadTime = 20;
     };

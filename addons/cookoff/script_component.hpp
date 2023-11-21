@@ -24,8 +24,16 @@
 #define SMOKE_TIME 10.5
 #define COOKOFF_TIME 14 // Cook off time should be 20s at most due to length of sound files
 #define COOKOFF_TIME_BOX 82.5 // Cook off time for boxes should be significant to allow time for ammo to burn
+#define MIN_TIME_BETWEEN_FLAMES 5
+#define MAX_TIME_BETWEEN_FLAMES 15
+#define MAX_TIME_BETWEEN_AMMO_DET 25
+#define MAX_COOKOFF_INTENSITY 10
+
+#define MIN_AMMO_DETONATION_START_DELAY 1 // Min time to wait before a vehicle's ammo starts to cookoff
+#define MAX_AMMO_DETONATION_START_DELAY 6 // Max time to wait before a vehicle's ammo starts to cookoff
 
 // Delay between flame effect for players in a cooking off vehicle
 #define FLAME_EFFECT_DELAY 0.4
 
-#define EJECT_IF_DESTROYED_VEHICLES ["Boat_Transport_02_base_F", "Rubber_duck_base_F"]
+// Common commander hatch defines for default vehicles
+#define DEFAULT_COMMANDER_HATCHES ["osa_poklop_commander", "hatch_commander_axis"]

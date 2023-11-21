@@ -13,7 +13,7 @@ GVAR(damageCoefficent) = 1;
 GVAR(volumeAttenuation) = 1;
 GVAR(lastPlayerVehicle) = objNull;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_1("settingInit",GVAR(EnableCombatDeafness));
     // Only run PFEH and install event handlers if combat deafness is enabled
     if (!GVAR(EnableCombatDeafness)) exitWith {};

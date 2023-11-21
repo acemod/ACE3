@@ -20,8 +20,8 @@ class RscTitles {
             idc = ACE_CrewInfo_TextIDC;
             type = CT_STRUCTURED_TEXT;
             style = ST_LEFT;
-            x = SafeZonex + SafezoneW - 0.31;
-            y = SafeZoneY + SafeZoneH * 0.4;
+            x = "SafeZonex + SafezoneW - 0.31";
+            y = "SafeZoneY + SafeZoneH * 0.4";
             w = 0.3;
             h = 0.6;
             size = 0.018;
@@ -34,7 +34,7 @@ class RscTitles {
             };
             text = "";
             class Attributes {
-                align = right;
+                align = "right";
             };
         };
     };

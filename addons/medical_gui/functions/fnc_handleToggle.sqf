@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Handles toggling of Medical Menu between the player and previous target.
@@ -14,6 +14,9 @@
  *
  * Public: No
  */
+
+ // If in Zeus, ignore
+ if (!isNull findDisplay 312) exitWith {};
 
 // Find new target to switch to
 private _target = if (

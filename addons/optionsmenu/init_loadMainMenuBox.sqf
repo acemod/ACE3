@@ -51,7 +51,7 @@ if (profileNamespace getVariable [QGVAR(showNewsOnMainMenu), true]) then {
     _versionStr = _versionStr joinString ".";
 
     (_display displayCtrl IDC_MAIN_INFO_CURRENT_VERSION_INFO) ctrlSetText format ["Version: %1", _versionStr];
-    (_display displayCtrl IDC_MAIN_INFO_NEWEST_VERSION_INFO) htmlLoad "https://ace3mod.com/version.html";
+    (_display displayCtrl IDC_MAIN_INFO_NEWEST_VERSION_INFO) htmlLoad "https://ace3.acemod.org/version.html";
 } else {
     _controlsGroup ctrlShow false;
 };

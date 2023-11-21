@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_nightVision]:
-
 [
     QGVAR(effectScaling), "SLIDER",
     [LSTRING(effectScaling_DisplayName), LSTRING(effectScaling_Description)],

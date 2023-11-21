@@ -53,7 +53,7 @@ class CfgMagazines {
         mass = 50;
         ACE_isBelt = 1;
     };
-    
+
     class 40Rnd_20mm_G_belt;
     class GVAR(20Rnd_20mm_G_belt): 40Rnd_20mm_G_belt {
         author = ECSTRING(common,ACETeam);

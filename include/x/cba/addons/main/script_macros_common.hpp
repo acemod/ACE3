@@ -15,7 +15,7 @@
    - Provide a solid structure that can be dynamic and easy editable (Which sometimes means we cannot adhere to Aim #1 ;-)
      An example is the path that is built from defines. Some available in this file, others in mods and addons.
 
- Follows  Standard:
+ Follows Standard:
    Object variables: PREFIX_COMPONENT
    Main-object variables: PREFIX_main
    Paths: MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\SCRIPTNAME.sqf
@@ -28,6 +28,10 @@
    Then in your addons, add a component.hpp, define the COMPONENT,
    and include your mod's script_macros.hpp
    In your scripts you can then include the addon's component.hpp with relative path)
+
+   use in subcomponents (subconfigs)
+   define SUBCOMPONENT and include parent component's script_component.hpp
+   currently only supported by SUBADDON, additional macros may be added in the future
 
  TODO:
    - Try only to use 1 string type " vs '
@@ -53,6 +57,10 @@
 
 #define ADDON DOUBLES(PREFIX,COMPONENT)
 #define MAIN_ADDON DOUBLES(PREFIX,main)
+
+#ifdef SUBCOMPONENT
+    #define SUBADDON DOUBLES(ADDON,SUBCOMPONENT)
+#endif
 
 /* -------------------------------------------
 Macro: VERSION_CONFIG
@@ -197,7 +205,7 @@ Author:
 ------------------------------------------- */
 #ifdef DEBUG_MODE_FULL
 
-#define LOG(MESSAGE) LOG_SYS_FILELINENUMBERS('LOG',MESSAGE)
+#define LOG(MESSAGE) LOG_SYS('LOG',MESSAGE)
 #define LOG_1(MESSAGE,ARG1) LOG(FORMAT_1(MESSAGE,ARG1))
 #define LOG_2(MESSAGE,ARG1,ARG2) LOG(FORMAT_2(MESSAGE,ARG1,ARG2))
 #define LOG_3(MESSAGE,ARG1,ARG2,ARG3) LOG(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
@@ -265,7 +273,7 @@ Author:
 ------------------------------------------- */
 #ifdef DEBUG_MODE_NORMAL
 
-#define WARNING(MESSAGE) LOG_SYS_FILELINENUMBERS('WARNING',MESSAGE)
+#define WARNING(MESSAGE) LOG_SYS('WARNING',MESSAGE)
 #define WARNING_1(MESSAGE,ARG1) WARNING(FORMAT_1(MESSAGE,ARG1))
 #define WARNING_2(MESSAGE,ARG1,ARG2) WARNING(FORMAT_2(MESSAGE,ARG1,ARG2))
 #define WARNING_3(MESSAGE,ARG1,ARG2,ARG3) WARNING(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
@@ -304,7 +312,7 @@ Example:
 Author:
     Spooner
 ------------------------------------------- */
-#define ERROR(MESSAGE) LOG_SYS_FILELINENUMBERS('ERROR',MESSAGE)
+#define ERROR(MESSAGE) LOG_SYS('ERROR',MESSAGE)
 #define ERROR_1(MESSAGE,ARG1) ERROR(FORMAT_1(MESSAGE,ARG1))
 #define ERROR_2(MESSAGE,ARG1,ARG2) ERROR(FORMAT_2(MESSAGE,ARG1,ARG2))
 #define ERROR_3(MESSAGE,ARG1,ARG2,ARG3) ERROR(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
@@ -854,16 +862,13 @@ Author:
 #define COMPILE_FILE2(var1) COMPILE_FILE2_SYS('var1')
 #define COMPILE_FILE2_CFG(var1) COMPILE_FILE2_CFG_SYS('var1')
 
+#define COMPILE_SCRIPT(var1) compileScript ['PATHTO_SYS(PREFIX,COMPONENT_F,var1)']
 
-#define VERSIONING_SYS(var1) class CfgSettings \
-{ \
-    class CBA \
-    { \
-        class Versioning \
-        { \
-            class var1 \
-            { \
-            }; \
+
+#define VERSIONING_SYS(var1) class CfgSettings { \
+    class CBA { \
+        class Versioning { \
+            class var1 {}; \
         }; \
     }; \
 };
@@ -1030,12 +1035,9 @@ Author:
 #define QQEFUNC(var1,var2) QUOTE(QEFUNC(var1,var2))
 
 #ifndef PRELOAD_ADDONS
-    #define PRELOAD_ADDONS class CfgAddons \
-{ \
-    class PreloadAddons \
-    { \
-        class ADDON \
-        { \
+    #define PRELOAD_ADDONS class CfgAddons { \
+    class PreloadAddons { \
+        class ADDON { \
             list[]={ QUOTE(ADDON) }; \
         }; \
     }; \
@@ -1273,9 +1275,11 @@ Author:
     #define ELSTRING(var1,var2) QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
     #define CSTRING(var1) QUOTE(TRIPLES($STR,ADDON,var1))
     #define ECSTRING(var1,var2) QUOTE(TRIPLES($STR,DOUBLES(PREFIX,var1),var2))
+    #define SUBCSTRING(var1) QUOTE(TRIPLES($STR,SUBADDON,var1))
 
     #define LLSTRING(var1) localize QUOTE(TRIPLES(STR,ADDON,var1))
     #define LELSTRING(var1,var2) localize QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
+    #define LSUBLSTRING(var1) localize QUOTE(TRIPLES(STR,SUBADDON,var1))
 #endif
 
 
@@ -1812,9 +1816,9 @@ Author:
 
 /* -------------------------------------------
 Macro: FILE_EXISTS
-    Check if a file exists on machines with interface
+    Check if a file exists
 
-    Reports "false" if the file does not exist and throws an error in RPT.
+    Reports "false" if the file does not exist.
 
 Parameters:
     FILE - Path to the file
@@ -1828,17 +1832,4 @@ Example:
 Author:
     commy2
 ------------------------------------------- */
-#define FILE_EXISTS(FILE) (call {\
-    private _return = false;\
-    isNil {\
-        private _control = (uiNamespace getVariable ["RscDisplayMain", displayNull]) ctrlCreate ["RscHTML", -1];\
-        if (isNull _control) then {\
-            _return = loadFile (FILE) != "";\
-        } else {\
-            _control htmlLoad (FILE);\
-            _return = ctrlHTMLLoaded _control;\
-            ctrlDelete _control;\
-        };\
-    };\
-    _return\
-})
+#define FILE_EXISTS(FILE) (fileExists (FILE))

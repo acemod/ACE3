@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * The player will select the specified weapon and change to the first additional muzzle. E.g. the grenade launcher of a assault rifle.

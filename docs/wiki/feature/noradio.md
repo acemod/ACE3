@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: No Radio
+component: noradio
 description: Disable callouts.
 group: feature
 category: interaction
@@ -17,7 +18,3 @@ version:
 ### 1.1 Silent avatar
 Mutes the player's automatic callouts ("Enemy man, 100 meters, front!").
 Does not mute AI callouts.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="noradio" %}

@@ -4,7 +4,7 @@
 [QGVAR(setupCustomKey), {_this call FUNC(serverSetupCustomKeyEH)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVehicleLock), {_this call FUNC(setVehicleLockEH)}] call CBA_fnc_addEventHandler;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_2("SettingsInitialized eh",GVAR(LockVehicleInventory),GVAR(VehicleStartingLockState));
 
     if (hasInterface && {GVAR(LockVehicleInventory)}) then {

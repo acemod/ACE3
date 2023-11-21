@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Compiles and caches tags from ACE_Tags config.
@@ -23,7 +23,7 @@
         _result params ["_tagInfo", "_requiredItem"];
 
         GVAR(cachedTags) pushBack _tagInfo;
-        GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
+        _tagInfo call FUNC(compileTagAction);
     };
 } forEach ("true" configClasses (configFile >> "ACE_Tags"));
 
@@ -35,6 +35,6 @@
         _result params ["_tagInfo", "_requiredItem"];
 
         GVAR(cachedTags) pushBack _tagInfo;
-        GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
+        _tagInfo call FUNC(compileTagAction);
     };
 } forEach ("true" configClasses (missionConfigFile >> "ACE_Tags"));

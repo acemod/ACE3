@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Compile the action menu from config for an object's class
@@ -91,6 +91,7 @@ private _recurseFnc = {
             } else {
                 _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
             };
+            private _doNotCheckLOS = getNumber (_entryCfg >> "doNotCheckLOS") > 0;
 
             _condition = compile _condition;
             private _children = [_entryCfg, _distance] call _recurseFnc;
@@ -106,7 +107,7 @@ private _recurseFnc = {
                             [],
                             _position,
                             _distance,
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover, false],
+                            [_showDisabled, _enableInside, _canCollapse, _runOnHover, _doNotCheckLOS],
                             _modifierFunction
                         ],
                         _children

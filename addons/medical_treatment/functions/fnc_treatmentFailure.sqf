@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal, mharis001
  * Handles treatment process failure.
@@ -48,3 +48,5 @@ if (!isNil QEGVAR(advanced_fatigue,setAnimExclusions)) then {
 GET_FUNCTION(_callbackFailure,configFile >> QGVAR(actions) >> _classname >> "callbackFailure");
 
 _args call _callbackFailure;
+
+["ace_treatmentFailed", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;

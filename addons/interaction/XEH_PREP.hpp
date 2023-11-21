@@ -14,6 +14,7 @@ PREP(hideMouseHint);
 
 // interaction with units
 PREP(canInteractWithCivilian);
+PREP(canInteractWithVehicleCrew);
 PREP(getDown);
 PREP(sendAway);
 PREP(canJoinGroup);
@@ -32,6 +33,9 @@ PREP(canPardon);
 PREP(pardon);
 PREP(canPullOutBody);
 PREP(pullOutBody);
+PREP(canRenameGroup);
+PREP(renameGroupUI);
+PREP(renameGroup);
 
 // Weapon Attachments
 PREP(getWeaponAttachmentsActions);
@@ -48,4 +52,6 @@ PREP(openDoor);
 PREP(canPush);
 PREP(push);
 
+// misc
 PREP(canFlip);
+PREP(replaceTerrainObject);

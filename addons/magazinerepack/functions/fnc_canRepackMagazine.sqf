@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Checks if the given unit can repack magazines of the given type.
@@ -25,5 +25,5 @@ private _maxAmmoCount = getNumber (configFile >> "CfgMagazines" >> _magazine >> 
 
     _magazineType == _magazine // Magazine is of given type
     && {_ammoCount > 0 && {_ammoCount < _maxAmmoCount}} // Is a partial magazine
-    && {!_isLoaded || {[_unit, _magazineType] call CBA_fnc_canAddItem}} // In inventory or can be moved into it
+    && {!_isLoaded || {GVAR(repackLoadedMagazines) && {[_unit, _magazineType] call CBA_fnc_canAddItem}}} // In inventory or can be moved into it
 } count magazinesAmmoFull _unit > 1

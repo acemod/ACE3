@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bux, PabstMirror
  * Commands the selected unit or group to start suppressive fire on the unit, group or location the module is placed on

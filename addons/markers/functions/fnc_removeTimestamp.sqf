@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Removes timestamp from end of a string.
@@ -50,14 +50,14 @@ while {_keepCheckingDigits} do {
             _index = _index + 3;
         };
         case ("]"): {
-            _keepCheckingDigits = false; 
+            _keepCheckingDigits = false;
         };
         case (" "): {
             _keepCheckingDigits = false;
             if (!(_string select [_index+3, 3] in ["am]", "pm]"])) then {_validTimestamp = false; };
         };
         default {
-            _keepCheckingDigits = false; 
+            _keepCheckingDigits = false;
             _validTimestamp = false;
         };
     };

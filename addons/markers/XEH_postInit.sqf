@@ -15,6 +15,7 @@ if (isMultiplayer && {!isServer} && {hasInterface}) then {
 GVAR(mapDisplaysWithDrawEHs) = [];
 GVAR(currentMarkerPosition) = [];
 GVAR(currentMarkerAngle) = 0;
+GVAR(currentMarkerScale) = 1;
 GVAR(currentMarkerColorConfigName) = "";
 GVAR(currentMarkerConfigName) = "";
 

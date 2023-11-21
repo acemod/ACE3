@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Ballistics
+component: ballistics
 description: Realistic ballistic improvements.
 group: feature
 category: realism
@@ -31,7 +32,3 @@ The M14 EBR now uses ammunition with decreased muzzle velocity and air friction 
 
 ### 1.6 Fully config-based
 This module applies configuration changes only and does not decrease game performance.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="ballistics" %}
