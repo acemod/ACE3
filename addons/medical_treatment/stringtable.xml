@@ -1350,7 +1350,7 @@
             <French>Définit s'il s'agit d'un véhicule sanitaire.</French>
             <Portuguese>Se o objeto será ou não um veículo médico</Portuguese>
             <Russian>Будет ли объект считаться медицинским транспортом.</Russian>
-            <Japanese>どれでも、またはオブジェクトを医療車両として割り当てます。</Japanese>
+            <Japanese>対象が医療車両であるかどうか。</Japanese>
             <Korean>이 물체는 의료 차량이 됩니다.</Korean>
             <Chinesesimp>是否使该载具为医疗载具？</Chinesesimp>
             <Chinese>是否使該載具為醫療載具?</Chinese>
@@ -1366,7 +1366,7 @@
             <Czech>Lékařský výcvik</Czech>
             <Portuguese>Treino médico</Portuguese>
             <Russian>Медицинская подготовка</Russian>
-            <Japanese>医療訓練</Japanese>
+            <Japanese>ユニットの医療スキルのレベルを定義します。</Japanese>
             <Korean>의료 훈련</Korean>
             <Chinesesimp>医疗训练</Chinesesimp>
             <Chinese>醫療訓練</Chinese>
@@ -1383,7 +1383,7 @@
             <French>Qualification médicale</French>
             <Hungarian>Orvos-e</Hungarian>
             <Italian>E' Medico</Italian>
-            <Japanese>衛生兵に</Japanese>
+            <Japanese>衛生兵にする</Japanese>
             <Korean>의무병</Korean>
             <Chinesesimp>是医疗兵</Chinesesimp>
             <Chinese>是醫療兵</Chinese>
@@ -1434,7 +1434,7 @@
             <French>Infirmier</French>
             <Hungarian>Hagyományos orvos</Hungarian>
             <Italian>Medico Regolare</Italian>
-            <Japanese>通常の衛生兵</Japanese>
+            <Japanese>一般衛生兵</Japanese>
             <Korean>의무병</Korean>
             <Chinesesimp>普通医疗兵</Chinesesimp>
             <Chinese>普通醫療兵</Chinese>

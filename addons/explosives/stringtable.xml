@@ -738,7 +738,7 @@
             <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
             <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
-            <Japanese>点火装置から遠隔から起爆したい時に使います。</Japanese>
+            <Japanese>放した時に爆発物を遠隔で起爆させるためのデッドマンスイッチ。</Japanese>
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
             <Chinesesimp>当放开按钮时，将会引爆炸弹。</Chinesesimp>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
@@ -789,7 +789,7 @@
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
-            <Japanese>特技兵を必須</Japanese>
+            <Japanese>専門兵特性を必須にするか?</Japanese>
             <Korean>전문가가 필요합니까?</Korean>
             <Chinesesimp>需要专家？</Chinesesimp>
             <Chinese>需要專家?</Chinese>
@@ -806,7 +806,7 @@
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
-            <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。 デフォルト: 無効化</Japanese>
+            <Japanese>爆発物を無効にするために爆発物専門兵の特性を必要としますか? デフォルト: 不要</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要爆破专业兵才能拆除爆炸物？ 预设：否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
@@ -823,7 +823,7 @@
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
-            <Japanese>非特技兵へ足かせ</Japanese>
+            <Japanese>非専門兵にペナルティを与える?</Japanese>
             <Korean>비전문가에게 불이익을 줍니까?</Korean>
             <Chinesesimp>惩罚非专业人士？</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
@@ -839,7 +839,7 @@
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
-            <Japanese>非特技兵はアクション完了までの時間を増加させますか? デフォルト: 有効化</Japanese>
+            <Japanese>専門兵以外がアクション完了するのに必要な時間を増加しますか? デフォルト: 有効</Japanese>
             <Korean>비전문가가 폭발물을 해제 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
@@ -855,7 +855,7 @@
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминировании?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
-            <Japanese>解除中に爆発</Japanese>
+            <Japanese>解除中に爆発するか?</Japanese>
             <Korean>해제 시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆？</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
@@ -871,7 +871,7 @@
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
-            <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? デフォルト: 有効化</Japanese>
+            <Japanese>特定の爆発物を解除中に爆発可能にしますか? デフォルト: 有効</Japanese>
             <Korean>특정 폭발물이 해제 시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后，某些爆炸物会在拆除时引爆？ 预设：是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
@@ -887,7 +887,7 @@
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
             <Italian>Questo modulo cambia le impostazioni relative agli esplosivi</Italian>
-            <Japanese>モジュールを調節し爆発物に設定を反映させます。</Japanese>
+            <Japanese>このモジュールは爆発物に関する設定を調整します。</Japanese>
             <Korean>이 모듈은 폭발물에 관한 설정을 수정할 수 있게합니다.</Korean>
             <Chinesesimp>此模块用来调整炸药的相关设定</Chinesesimp>
             <Chinese>此模塊用來調整炸藥的相關設定</Chinese>
@@ -1064,7 +1064,7 @@
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
             <German>Kampfmittelbeseitigung</German>
-            <Japanese>EOD に</Japanese>
+            <Japanese>EODにする</Japanese>
             <French>Spécialiste en explosifs</French>
             <Chinese>是EOD</Chinese>
             <Chinesesimp>爆破专家</Chinesesimp>
@@ -1078,7 +1078,7 @@
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
             <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
-            <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
+            <Japanese>ユニットが爆発物専門兵であるかどうかを定義します。</Japanese>
             <French>Définit si l'unité est un spécialiste en explosifs.</French>
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
             <Chinesesimp>控制该单位是否是爆破专家</Chinesesimp>
