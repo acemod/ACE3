@@ -12,7 +12,7 @@
             <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
             <Czech>82mm Rangetable</Czech>
             <Italian>Tavola di tiro 82mm</Italian>
-            <Japanese>82mm 射表</Japanese>
+            <Japanese>82mm用 射表</Japanese>
             <Korean>82mm 사거리표</Korean>
             <Chinesesimp>82 mm 迫击炮射表</Chinesesimp>
             <Chinese>82毫米迫擊炮射表</Chinese>
@@ -29,7 +29,7 @@
             <Portuguese>Tabela de distâncias para morteiro Mk6 82mm</Portuguese>
             <Czech>Rangetable pro Mk6 82mm minomet</Czech>
             <Italian>Tavola di tiro per il mortaio calibro 82mm Mk6</Italian>
-            <Japanese>Mk6 82mm 迫撃砲の射表</Japanese>
+            <Japanese>Mk6 82mm迫撃砲専用の射撃表</Japanese>
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
             <Chinesesimp>MK6 82 mm 迫击炮射表</Chinesesimp>
             <Chinese>MK6 82毫米迫擊炮射表</Chinese>
@@ -46,7 +46,7 @@
             <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
             <Czech>Otevřít 82mm Rangetable</Czech>
             <Italian>Apri la tavola di tiro 82mm</Italian>
-            <Japanese>82mm 射表を開く</Japanese>
+            <Japanese>82mm用射表を開く</Japanese>
             <Korean>82mm 사거리표 열기</Korean>
             <Chinesesimp>开启82 mm 迫击炮射表</Chinesesimp>
             <Chinese>開啟82毫米迫擊炮射表</Chinese>
@@ -146,7 +146,7 @@
             <Hungarian>Mk6 számítógép engedélyezése</Hungarian>
             <Russian>Разрешить компьютер Mk6</Russian>
             <Italian>Consenti Computer Mk6</Italian>
-            <Japanese>Mk6 コンピュータを許可</Japanese>
+            <Japanese>Mk6の砲撃コンピュータを許可</Japanese>
             <Korean>Mk6 탄도계산컴퓨터 허가</Korean>
             <Chinesesimp>允许使用 MK6 弹道计算机</Chinesesimp>
             <Chinese>允許使用MK6射控電腦</Chinese>
@@ -163,7 +163,7 @@
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
-            <Japanese>コンピュータと距離を表示します (空気抵抗を有効化している場合は必ず削除してください)</Japanese>
+            <Japanese>砲撃コンピュータと距離計を表示します (空気抵抗を仕様する場合は必ず無効化する必要があります)</Japanese>
             <Korean>탄도계산컴퓨터와 거리측정기를 보여줍니다(공기저항을 활성화했을 경우 이 항목은 비활성화 되어야 합니다)</Korean>
             <Chinesesimp>显示弹道计算机和测距仪（如果有启用空气阻力功能时，须停用此项功能）</Chinesesimp>
             <Chinese>顯示射控電腦和測距儀 (如果有啟用空氣阻力功能時，須停用此項功能)</Chinese>
@@ -179,7 +179,7 @@
             <Hungarian>Mk6 iránytű engedélyezése</Hungarian>
             <Russian>Разрешить компас Mk6</Russian>
             <Italian>Consenti Bussola Mk6</Italian>
-            <Japanese>Mk6 への方位磁石を有効化</Japanese>
+            <Japanese>Mk6の方位磁石を許可</Japanese>
             <Korean>Mk6 나침반 허용</Korean>
             <Chinesesimp>允许使用 MK6 指南针</Chinesesimp>
             <Chinese>允許使用MK6指北針</Chinese>
@@ -196,7 +196,7 @@
             <Hungarian>Az Mk6 digitális iránytű megjelenítése</Hungarian>
             <Russian>Показывает цифровой компас Mk6</Russian>
             <Italian>Mostra la Bussola Digitale Mk6</Italian>
-            <Japanese>Mk6 のデジタル方位磁石を表示</Japanese>
+            <Japanese>Mk6迫撃砲のデジタル方位磁石を表示します</Japanese>
             <Korean>Mk6 에서 전자 나침반을 보여줍니다</Korean>
             <Chinesesimp>显示 MK6 的电子指南针</Chinesesimp>
             <Chinese>顯示MK6的數位指北針</Chinese>
@@ -212,7 +212,7 @@
             <French>Ce module permet de régler les options du mortier Mk6.</French>
             <Italian>Questo modulo ti consente di impostare i parametri del mortaio Mk6.</Italian>
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
-            <Japanese>Mk6 迫撃砲への設定をできます。</Japanese>
+            <Japanese>このモジュールでは、Mk6 迫撃砲の設定をセットアップできます。</Japanese>
             <Korean>이 모듈은 Mk6 설치 설정을 가능케 합니다.</Korean>
             <Chinesesimp>这个模块允许你设定 MK6 迫击炮的相关功能</Chinesesimp>
             <Chinese>這個模塊允許你設定MK6迫擊砲的相關功能</Chinese>

@@ -213,7 +213,7 @@
             <English>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information.</English>
             <Polish>%3Horus ATragMX%4 uwzględnia warunki atmosferyczne, dane broni, amunicję, zasięg, prędkość wylotową do wyliczenia precyzyjnych nastaw - ponadto uwzględnia %3Efekt Coriolisa%4 oraz %3Efekt Spinowy%4. %3ATragMX%4, załadowany na komputer przenośny wyprodukowany przez %3TDS Recon%4, jest łatwy i prosty w użyciu. %3Recon%4 spełnia rygorystyczne wymagania %3MIL-STD-810F%4 pod względem odporności na upadek, wibracje, wilgotność, wyskość oraz ekstremalne temperatury.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;Wejdź na wiki po więcej informacji.</Polish>
             <Korean>%3호러스 ATragMX%4는 대기 상태, 총기 데이터, 탄약, 사거리, 탄속 그리고 총구 속도를 고려하여 %3나타나는 결과%4로 정확한 해결책을 계산하고 %3코리올리 효과%4와 %3스핀 드리프트 효과%4도 설명합니다. %3TDS Recon%4 사에서 제작한 휴대용 컴퓨터에 탑재된 %3ATragMX%4는 사용하기 쉽고 매우 빠릅니다. %3Recon%4 사는 낙하, 진동, 습도, 고도 및 극한 온도에 대해 엄격한 %3%4MIL-STD-810F%4 군사 표준을 충족합니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;자세한 내용은 위키 페이지를 참조하십시오.</Korean>
-            <Japanese>%3ホルス ATragMX%4は、大気条件、銃のデータ、弾薬、射程、速度、および初速を考慮した計算を行い、%3最適な結果が得られる%4正確な照準を提供します。さらに、%3コリオリ効果%4および%3スピン ドリフト効果%4も考慮します。%3ATragMX%4は%3TDS Recon製%4の携帯コンピュータに読み込まれており、使いやすく、超高速です。%3Recon%4はは、落下、振動、湿度、高度、極端な温度に関する厳格な%3MIL-STD-810F%4軍事規格を満たしています。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;詳細については、Wiki ページを参照してください。</Japanese>
+            <Japanese>%3ホルス ATragMX%4は、大気条件、銃のデータ、弾薬、射程、速度、および初速を考慮した%3最適な結果が得られる%4正確な照準のための計算とその解法を提供します。さらに、%3コリオリ効果%4および%3スピン ドリフト効果%4も考慮します。%3ATragMX%4は%3TDS Recon製%4の携帯コンピュータに読み込まれており、使いやすく、超高速です。%3Recon%4はは、落下、振動、湿度、高度、極端な温度に関する厳格な%3MIL-STD-810F%4軍事規格を満たしています。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;詳細については、Wiki ページを参照してください。</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
             <English>Bring Out Your Dead</English>
@@ -291,7 +291,7 @@
             <English>Explosive Revenge</English>
             <Polish>Wybuchowa Zemsta</Polish>
             <Korean>'폭발'적인 복수입니다</Korean>
-            <Japanese>爆発的な復讐を君に</Japanese>
+            <Japanese>爆発的な復讐</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_Description">
             <English>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</English>
@@ -399,7 +399,7 @@
             <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for land, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Map Tools%4.&lt;br/&gt;%2 The Tool can be moved by dragging with [%3Left-Click%4] while holding [%3ALT%4].</English>
             <Polish>%3Narzędzia Nawigacyjne%4 są zestawem narzędzi pozwalającym mierzyć dystans i kąt. Użyteczne do wyliczania parametrów strzałów dla artylerii.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Otwórz%3Mapę%4.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Narzędzia Nawigacyjne%4.&lt;br/&gt;%2 Narzędzia mogą być przeciągane za pomocą [%3LPM%4] trzymając [%3ALT%4].</Polish>
             <Korean>%3독도용 도구%4는 병사가 거리와 각도를 측정할 수 있는 도구 세트입니다. 지상에서 유용하며 포병 사격 솔루션 계산에 유용합니다,&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3지도%4를 여십시오.&lt;br/&gt;%2[%3%12%4]를 사용하여 %3독도용 도구%4를 선택하십시오.&lt;br/&gt;%2도구는 [%3Alt 키%4]를 누른 상태에서 [%3마우스 왼쪽 클릭%4]으로 드래그하여 이동할 수 있습니다.</Korean>
-            <Japanese>%3マップ ツール%4は、兵士が距離と角度を測定できるようにするツールのセットです。陸上や大砲の射撃工程の計算に役立ちます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3マップ%4を開きます。&lt;br/&gt;%2[%3%12%4] を使って%3マップ ツール%4を選択します。&lt;br/&gt;%2 [%3ALT%4] を押しながら [%3左クリック%4] でドラッグするとツールを移動できます。</Japanese>
+            <Japanese>%3マップ ツール%4は、兵士が距離と角度を測定できるようにするツールのセットです。陸上や大砲の射撃工程の計算を解くのに役立ちます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3マップ%4を開きます。&lt;br/&gt;%2[%3%12%4] を使って%3マップ ツール%4を選択します。&lt;br/&gt;%2 [%3ALT%4] を押しながら [%3左クリック%4] でドラッグするとツールを移動できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_ShortName">
             <English>Advanced DAGR</English>
@@ -423,7 +423,7 @@
             <English>Get A Firing Solution</English>
             <Polish>Strzelaj Celnie</Polish>
             <Korean>사격 솔루션을 제공합니다</Korean>
-            <Japanese>撃ち方を心得る</Japanese>
+            <Japanese>撃ち方の解を心得る</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
             <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>

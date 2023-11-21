@@ -8,7 +8,7 @@
             <Chinesesimp>火炮射表</Chinesesimp>
             <Italian>Tavola balistica per artigliria </Italian>
             <Czech>Dělostřelecké tabulky střelby</Czech>
-            <Japanese>砲兵用射表</Japanese>
+            <Japanese>火砲用 射表</Japanese>
             <Polish>Tabela Strzelnicza</Polish>
             <French>Table de tir d'artillerie</French>
             <Portuguese>Tabela de Artilharia</Portuguese>
@@ -24,7 +24,7 @@
             <Chinesesimp>通用火炮射表</Chinesesimp>
             <Italian>Tavola balistica universale per artiglieria</Italian>
             <Czech>Univerzální dělostřelecká tabulka střelby</Czech>
-            <Japanese>汎用の砲兵火砲用の射程表</Japanese>
+            <Japanese>砲兵火砲用の汎用射撃表</Japanese>
             <Polish>Uniwersalna Tabela Strzelnicza</Polish>
             <French>Table de tir universelle pour l'artillerie.</French>
             <Portuguese>Tabela de Artilharia Universal</Portuguese>
@@ -74,7 +74,7 @@
             <Chinesesimp>停用弹道计算机</Chinesesimp>
             <Italian>Computer artiglieria disattivato</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače</Czech>
-            <Japanese>砲撃コンピュータ無効化</Japanese>
+            <Japanese>砲撃コンピュータの無効化</Japanese>
             <Polish>Wyłączony Komputer Artyleryjski</Polish>
             <French>Désactiver l'ordinateur de tir</French>
             <Portuguese>Computador de Artilharia Desabilitado</Portuguese>
