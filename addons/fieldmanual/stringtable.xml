@@ -423,7 +423,7 @@
             <English>Get A Firing Solution</English>
             <Polish>Strzelaj Celnie</Polish>
             <Korean>사격 솔루션을 제공합니다</Korean>
-            <Japanese>撃ち方の解を心得る</Japanese>
+            <Japanese>撃ち方の解を得る</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
             <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
