@@ -60,10 +60,10 @@ if (
 };
 
 // only add if menu doesn't already exist
-if (!(_fuelCargoConfig != 0 && {!isNil {_source getVariable QGVAR(initSource_jipID)}})) then {
-    private _jipID = [QGVAR(initSource), [_source]] call CBA_fnc_globalEventJIP;
-    [_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
-    _source setVariable [QGVAR(initSource_jipID), _jipID];
-};
+if (_fuelCargoConfig != REFUEL_DISABLED_FUEL || {!isNil {_source getVariable QGVAR(initSource_jipID)}}) exitWith {};
+
+private _jipID = [QGVAR(initSource), [_source]] call CBA_fnc_globalEventJIP;
+[_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
+_source setVariable [QGVAR(initSource_jipID), _jipID];
 
 [QGVAR(sourceInitialized), [_source]] call CBA_fnc_globalEvent;
