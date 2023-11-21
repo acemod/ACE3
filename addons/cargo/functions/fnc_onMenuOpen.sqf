@@ -77,7 +77,7 @@ if (GVAR(interactionParadrop)) then {
             _index = if (GVAR(interactionParadrop)) then {
                 _ctrl lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, GVAR(paradropTimeCoefficent) * _itemSize]
             } else {
-                _ctrl lbAdd format ["%1. %2", _forEachIndex + 1, _displayName];
+                _ctrl lbAdd format ["%1. %2", _forEachIndex + 1, _displayName]
             };
 
             private _tooltip = format ["%1\n%2", format [LLSTRING(sizeMenu), _itemSize], format ["%1: %2", localize "str_a3_normaldamage1", _damageStr]];
