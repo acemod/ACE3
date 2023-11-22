@@ -1316,6 +1316,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnloadFromCargo_DisplayName">
             <English>Unload from cargo</English>
+            <Japanese>カーゴから降ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
