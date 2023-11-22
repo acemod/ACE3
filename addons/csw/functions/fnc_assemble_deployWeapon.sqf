@@ -46,7 +46,7 @@
             // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
             _csw setVariable [QGVAR(assemblyMode), 2, true]; // Explicitly set advanced assembly mode + unload, and broadcast
             if (!GVAR(defaultAssemblyMode)) then {
-                [_csw, "disableWeaponAssembly", "ace_csw", true] call EFUNC(common,statusEffect_set);
+                [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
             };
             _csw setDir _tripodDir;
             _csw setPosATL _tripodPos;
