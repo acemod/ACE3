@@ -43,6 +43,7 @@
             <Chinesesimp>重命名为：&lt;br/&gt;%1</Chinesesimp>
             <Korean>%1(으)로 명칭을 바꿈</Korean>
             <Spanish>Renombrado a:&lt;br/&gt;%1</Spanish>
+            <Portuguese>Renomeado para: &lt;br/&gt;%1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
@@ -54,6 +55,7 @@
             <Chinesesimp>自定义名称已被清除。</Chinesesimp>
             <Korean>임의로 지은 명칭을 지웠습니다.</Korean>
             <Spanish>El nombre personalizado ha sido borrado.</Spanish>
+            <Portuguese>O nome personalizado foi apagado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
@@ -65,6 +67,7 @@
             <Chinesesimp>设定新名称：</Chinesesimp>
             <Korean>새로운 명칭 설정:</Korean>
             <Spanish>Establecer nuevo nombre:</Spanish>
+            <Portuguese>Definir novo nome:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
@@ -76,6 +79,7 @@
             <Chinesesimp>启用重命名动作</Chinesesimp>
             <Korean>새로 명칭 짓기 행동 활성화</Korean>
             <Spanish>Habilitar renombrado</Spanish>
+            <Portuguese>Habilitar ação de renomear</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
@@ -87,6 +91,7 @@
             <Chinesesimp>启用可重命名物体的重命名动作。</Chinesesimp>
             <Korean>개체의 명칭을 새로 짓는 것을 허가합니다.</Korean>
             <Spanish>Habilitar renombrado para los objetos renombrables.</Spanish>
+            <Portuguese>Habilita a ação de renomear para objetos renomeáveis.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -314,6 +319,7 @@
             <Korean>임의 명칭</Korean>
             <Russian>Собственное название</Russian>
             <Spanish>Nombre personalizado</Spanish>
+            <Portuguese>Nome personalizado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
@@ -325,6 +331,7 @@
             <Chinesesimp>设置货物界面中使用的一个自定义货物名称。</Chinesesimp>
             <Korean>화물 인터페이스에 쓰일 화물의 명칭을 설정합니다.</Korean>
             <Spanish>Establecer un nombre personalizado de carga en la interfaz de carga.</Spanish>
+            <Portuguese>Defina um nome de carga personalizado usado na interface de carga.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
@@ -489,6 +496,7 @@
             <Chinesesimp>重新打开货物菜单</Chinesesimp>
             <Korean>화물 메뉴 다시 열기</Korean>
             <Spanish>Reabrir menú de carga</Spanish>
+            <Portuguese>Reabrir menu de carga</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
             <English>Reopen the Cargo Menu after successful unload.</English>
@@ -501,6 +509,7 @@
             <Chinesesimp>成功卸货后，重新打开货物菜单。</Chinesesimp>
             <Korean>화물을 성공적으로 내리고 난 다음 화물 메뉴를 열지 결정합니다.</Korean>
             <Spanish>Reabrir menú de carga despues de una descarga satisfactoria.</Spanish>
+            <Portuguese>Reabre o menu de carga após uma descarga bem sucedida.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload">
             <English>Carry After Unload</English>
@@ -511,6 +520,7 @@
             <Polish>Niesienie Po Rozładowaniu</Polish>
             <German>Nach dem Entladen tragen</German>
             <French>Porter après déchargement</French>
+            <Portuguese>Transporte após descarregar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
             <English>Controls whether cargo items are carried or dragged after unloading.</English>
@@ -521,6 +531,7 @@
             <Polish>Kontroluje, czy przedmioty z ładunku są przenoszone lub ciągnięte po ich wyładowaniu.</Polish>
             <German>Steuert, ob Objekte nach dem Entladen getragen oder gezogen werden.</German>
             <French>Active si les éléments de cargaison sont portés ou traînés après le déchargement.</French>
+            <Portuguese>Controla se os itens de carga são carregados ou arrastados após a descarga.</Portuguese>
         </Key>
     </Package>
 </Project>
