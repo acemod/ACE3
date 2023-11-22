@@ -43,6 +43,7 @@ PREP(moduleToggleFlashlight);
 PREP(moduleToggleNvg);
 PREP(moduleUnconscious);
 PREP(moduleUnGarrison);
+PREP(moduleUnloadFromCargo);
 PREP(moduleZeusSettings);
 PREP(showMessage);
 PREP(ui_attributeCargo);

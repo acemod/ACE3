@@ -73,6 +73,19 @@ if (GVAR(interactionParadrop)) exitWith {
     ]] call CBA_fnc_execNextFrame;
 };
 
+// If in zeus
+if (!isNull findDisplay 312) exitWith {
+    // Do not check distance to unit, but do check for valid position
+    if !([_item, GVAR(interactionVehicle), objNull, true] call FUNC(canUnloadItem)) exitWith {
+        [[LSTRING(unloadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
+    };
+
+    // Close the cargo menu
+    closeDialog 1;
+
+    ["ace_unloadCargo", [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
+};
+
 // Start progress bar - normal ground unload
 if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
     // Close the cargo menu

@@ -1314,6 +1314,9 @@
             <French>Charger dans le véhicule</French>
             <Spanish>Cargar en la carga</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleUnloadFromCargo_DisplayName">
+            <English>Unload from cargo</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
