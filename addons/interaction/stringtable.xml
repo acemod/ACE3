@@ -194,7 +194,7 @@
             <Polish>Otwórz / Zamknij drzwi</Polish>
             <Czech>Otevřít / Zavřít dveře</Czech>
             <French>Ouvrir/Fermer la porte</French>
-            <Russian>Открыть / Закрыть двери</Russian>
+            <Russian>Открыть/закрыть двери</Russian>
             <Hungarian>Ajtó nyitása / zárása</Hungarian>
             <Portuguese>Abrir / Fechar Porta</Portuguese>
             <Italian>Apri / Chiudi la porta</Italian>
@@ -332,6 +332,8 @@
             <Polish>Zmień nazwę grupy</Polish>
             <Chinesesimp>小队重命名</Chinesesimp>
             <Korean>그룹 명칭 다시 짓기</Korean>
+            <Spanish>Renombrar grupo</Spanish>
+            <Portuguese>Renomear Grupo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
@@ -342,6 +344,8 @@
             <Polish>Ta nazwa grupy jest już w użyciu.</Polish>
             <Chinesesimp>该小队名称已被使用</Chinesesimp>
             <Korean>그 명칭은 이미 사용 중 입니다.</Korean>
+            <Spanish>Este nombre de grupo ya está siendo usado.</Spanish>
+            <Portuguese>Este nome de grupo já está em uso.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
@@ -352,6 +356,8 @@
             <Polish>NOWA NAZWA GRUPY:</Polish>
             <Chinesesimp>新的小队名：</Chinesesimp>
             <Korean>새 그룹 명칭:</Korean>
+            <Spanish>NUEVO NOMBRE DE GRUPO:</Spanish>
+            <Portuguese>NOVO NOME DE GRUPO:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -597,7 +603,7 @@
             <French>Vert</French>
             <Polish>Zielonych</Polish>
             <Czech>Zelený</Czech>
-            <Russian>Зеленый</Russian>
+            <Russian>Зелёный</Russian>
             <Portuguese>Verde</Portuguese>
             <Italian>Verde</Italian>
             <Hungarian>Zöld</Hungarian>
@@ -885,7 +891,7 @@
             <French>Hors de portée</French>
             <Spanish>Fuera de rango</Spanish>
             <Russian>Слишком далеко</Russian>
-            <Portuguese>Fora do Alcançe</Portuguese>
+            <Portuguese>Fora do Alcance</Portuguese>
             <Hungarian>Hatótávolságon kívül</Hungarian>
             <Polish>Poza zasięgiem</Polish>
             <Czech>Mimo dosah</Czech>
@@ -1037,7 +1043,7 @@
             <Spanish>¿Deben tener permitido los jugadores el uso del menu de gestión de equipos? Por defecto: Si</Spanish>
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
-            <Russian>Разрешить ли игрокам использовать меню управления группами? По-умолчани: Да</Russian>
+            <Russian>Разрешить ли игрокам использовать меню управления группами? По умолчанию: Да</Russian>
             <French>Permet aux joueurs d'utiliser la gestion d'équipe. Valeur par défaut : activé.</French>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
@@ -1057,7 +1063,7 @@
             <Chinesesimp>关闭负面评价</Chinesesimp>
             <Korean>부정행위 가중치 사용 안함</Korean>
             <Polish>Wyłącz negatywną ocenę</Polish>
-            <Russian>Отключить отрицательный рейтинг</Russian>
+            <Russian>Откл. отрицательный рейтинг</Russian>
             <Portuguese>Desativar avaliação negativa</Portuguese>
             <French>Désactiver la notation négative</French>
             <Czech>Vypnout negativní hodnocení</Czech>
@@ -1066,13 +1072,13 @@
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
             <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewertungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
-            <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしても AI からの攻撃を防ぎます。</Japanese>
+            <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
             <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价？ 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军 AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
             <Korean>플레이어의 부정행위 가중치를 계산합니까? 활성화된 플레이어는 낮은 부정행위 가중치를 가질 때, 아군의 장비나 병력을 사격해도 아군 AI의 사격을 받지 않습니다.</Korean>
             <Polish>Czy powinni gracze otrzymywać negatywną ocenę? Kiedy aktywowani gracze otrzymuję wyłącznie pozytywną ocenę, która zapobiega ognia przyjaznego SI podczas niszczenia przyjaznego wyposażenia lub zabijaniu członków drużyny.</Polish>
-            <Russian>Должны ли игроки получать отрицательный рейтинг? Когда включено, игроки получают только положительный рейтинг, что предотвращает дружественный огонь от ИИ при уничтожении дружественного оборудования или убийстве членов команды.</Russian>
+            <Russian>Должны ли игроки получать отрицательный рейтинг?\nКогда включено, игроки получают только положительный рейтинг, что предотвращает дружественный огонь от ИИ при уничтожении дружественного оборудования или убийстве членов команды.</Russian>
             <Portuguese>Jogadores devem receber uma avaliação negativa? Quando ativado, os jogadores estão recebendo avaliações positivas, prevenindo que IA amigável atire quando destruir algum equipamento aliado ou matar membros de equipe.</Portuguese>
             <French>Définit si les joueurs peuvent recevoir une note négative. Si l'option est activée, les joueurs obtiennent des notes positives exclusivement.\nCela permet d'éviter que les unités IA ne fassent du tir ami lorsque des joueurs détruisent de l'équipement allié, ou tuent des membres de l'équipe.</French>
             <Czech>Měli by hráči obdržet negativní hodnocení? Pokud ne, hráči obdrží pouze pozitivní hodnocení, což zabrání přátelské AI střílet na hráče pokud hráči ničí přátelské vybavení nebo zabíjejí vlastní tým.</Czech>
@@ -1247,6 +1253,7 @@
             <German>Befestige %1</German>
             <Chinesesimp>附加 %1</Chinesesimp>
             <Korean>%1 붙이기</Korean>
+            <Portuguese>Fixar %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
             <English>Detach %1</English>
@@ -1258,6 +1265,7 @@
             <German>Löse %1</German>
             <Chinesesimp>拆卸 %1</Chinesesimp>
             <Korean>%1 떼내기</Korean>
+            <Portuguese>Desfixar %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1269,6 +1277,7 @@
             <German>Aktiviert das Befestigen/Lösen von Waffenausätzen an der aktuellen Waffe.</German>
             <Chinesesimp>启用当前武器的附加/拆卸武器配件的动作。</Chinesesimp>
             <Korean>현재 사용하고 있는 무기에서 부착물을 붙이거나 떼냅니다.</Korean>
+            <Portuguese>Ativa as ações de fixar/desfixar acessórios para a arma atual.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
             <English>Allow group rename</English>
@@ -1279,6 +1288,8 @@
             <Polish>Zezwól na zmianę nazwy grupy</Polish>
             <Chinesesimp>允许小队重命名</Chinesesimp>
             <Korean>그룹 이름 재설정 허가</Korean>
+            <Spanish>Permitir renombrar grupo</Spanish>
+            <Portuguese>Permitir renomear grupo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
@@ -1288,7 +1299,9 @@
             <German>Erlaube Gruppenführer das Umbenennen Ihrer Gruppe, wenn der Name nicht bereits vergeben ist.</German>
             <Polish>Pozwala liderowi grupy na zmianę jej nazwy, jeżeli ta nazwa nie jest już w użyciu.</Polish>
             <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
-            <Korean>그룹 리더가 그룹 이름을 재설정 하는 것을 허가합니다.</Korean>
+            <Korean>그룹 리더가 그룹 이름을 재설정하는 것을 허가합니다.</Korean>
+            <Spanish>Permite al lider de un grupo renombrar a su grupo si el nombre no está siendo actualmente usado.</Spanish>
+            <Portuguese>Permite que o líder renomeie seu grupo se o nome não estiver sendo usado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1299,6 +1312,8 @@
             <Polish>Uwaga: niektóre obiekty mogą kolidować z innymi.</Polish>
             <Chinesesimp>警告：会导致一些物体与其他物体发生碰撞。</Chinesesimp>
             <Korean>주의: 물체끼리 충돌하는 현상이 있을 수 있음.</Korean>
+            <Spanish>Advertencia: puede provocar que algunos objetos choquen con otros.</Spanish>
+            <Portuguese>Aviso: pode causar que alguns objetos colidam com outros.</Portuguese>
         </Key>
     </Package>
 </Project>

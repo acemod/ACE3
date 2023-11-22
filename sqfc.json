@@ -11,7 +11,8 @@
         "xeh_prep.sqf",
         "\\dev\\",
         "medical_ai\\statemachine.sqf",
-        "common\\functions\\fnc_dummy.sqf"
+        "common\\functions\\fnc_dummy.sqf",
+        "zeus\\functions\\fnc_zeusAttributes.sqf"
     ],
     "outputDir": "P:/",
     "workerThreads": 12

@@ -11,6 +11,7 @@
             <Spanish>ACE Fuego</Spanish>
             <Chinesesimp>ACE 火</Chinesesimp>
             <Korean>ACE 불</Korean>
+            <Portuguese>ACE Fogo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PatDown">
             <English>Pat Down Fire</English>
@@ -22,6 +23,7 @@
             <Spanish>Extingir el fuego</Spanish>
             <Chinesesimp>灭火</Chinesesimp>
             <Korean>불 끄기</Korean>
+            <Portuguese>Apagar Fogo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PerformingPatDown">
             <English>Patting down fire...</English>
@@ -33,6 +35,7 @@
             <Spanish>Extinguiendo el fuego...</Spanish>
             <Chinesesimp>正在灭火...</Chinesesimp>
             <Korean>불 끄는 중...</Korean>
+            <Portuguese>Apagando Fogo...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_Description">
             <English>Allow units to catch fire</English>
@@ -43,7 +46,8 @@
             <Polish>Zezwól jednostkom na zapalenie się</Polish>
             <Spanish>Permitir que las unidades se incendien</Spanish>
             <Chinesesimp>允许单位着火</Chinesesimp>
-            <Korean>유닛이 불에 붙게합니다</Korean>
+            <Korean>유닛에 불이 붙게합니다</Korean>
+            <Portuguese>Permitir que as unidades peguem fogo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_FlareEnable">
             <English>Enable fire-flare at night</English>
@@ -55,6 +59,7 @@
             <Spanish>Habilitar bengalas de fuego por la noche</Spanish>
             <Chinesesimp>在夜间启用耀斑效果</Chinesesimp>
             <Korean>밤에 불로 인한 조명 활성화</Korean>
+            <Portuguese>Ativar brilho do fogo à noite</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_FlareDescription">
             <English>Uses a flare effect to increase fire intensity at night</English>
@@ -66,6 +71,7 @@
             <Spanish>Utiliza un efecto de bengala para aumentar la intensidad del fuego por la noche</Spanish>
             <Chinesesimp>启用耀斑效果，增加夜间火焰的强度。</Chinesesimp>
             <Korean>야간에 불로 인한 조명을 극대화 시킵니다</Korean>
+            <Portuguese>Usa um efeito de brilho para aumentar a intensidade do fogo à noite</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams">
             <English>Enable screams by units on fire</English>
@@ -75,6 +81,9 @@
             <German>Schreie von brennenden Einheiten aktivieren</German>
             <Polish>Włącz krzyki podpalonych jednostek</Polish>
             <Japanese>炎上中の悲鳴を有効</Japanese>
+            <Russian>Вкл. крики от горения</Russian>
+            <French>Activer les cris des unités en feu</French>
+            <Portuguese>Habilita os gritos das unidades em chamas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
             <English>Enables if units on fire will play the screaming sound</English>
@@ -84,6 +93,9 @@
             <German>Aktiviert, ob brennende Einheiten den Schrei-Ton abspielen</German>
             <Polish>Włącza, czy płonące jednostki będą odtwarzać dźwięk krzyku</Polish>
             <Japanese>有効化すると炎上しているユニットが悲鳴を上げます</Japanese>
+            <Russian>Включает воспроизведение криков когда юнит загорается</Russian>
+            <French>Active un son de hurlement si les unités sont en feu</French>
+            <Portuguese>Define se as unidades em chamas reproduzirão o som de grito</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
             <English>Drop Weapons When on Fire</English>
@@ -93,6 +105,9 @@
             <Korean>불 붙을 경우 무기 내려놓음</Korean>
             <German>Waffen fallen lassen, wenn in Brand geraten.</German>
             <Japanese>炎上時に武器を落とす</Japanese>
+            <Russian>Бросать оружие из-за горения</Russian>
+            <French>Lâche les armes si en feu</French>
+            <Portuguese>Soltar Armas Quando em Chamas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
             <English>Controls whether units drop their weapons when on fire.</English>
@@ -102,6 +117,9 @@
             <Korean>유닛이 불에 붙이면 무기를 떨굴지를 결정합니다.</Korean>
             <German>Steuert, ob Einheiten ihre Waffen fallen lassen, wenn sie brennen.</German>
             <Japanese>ユニットが炎上時に武器を落とすかどうかを定義します。</Japanese>
+            <Russian>Должны ли юниты выбрасывать оружие когда загораются.</Russian>
+            <French>Contrôle si les unités lâchent leurs armes lorsqu'elles sont en feu.</French>
+            <Portuguese>Controla se as unidades soltam suas armas quando estão em chamas.</Portuguese>
         </Key>
     </Package>
 </Project>

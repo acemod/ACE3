@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Starts the repair process.
@@ -95,7 +95,7 @@ if (!("All" in _repairLocations)) then {
 private _requiredObjects = getArray (_config >> "claimObjects");
 private _claimObjectsAvailable = [];
 if (_requiredObjects isNotEqualTo []) then {
-    _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
+    _claimObjectsAvailable = [_caller, 5, _requiredObjects, true] call FUNC(getClaimObjects);
     if (_claimObjectsAvailable isEqualTo []) then {
         TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
         _return = false
@@ -148,6 +148,7 @@ if (_callbackProgress == "") then {
 
 // Player Animation
 private _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
+private _loopAnim = (getNumber (_config >> "loopAnimation")) isEqualTo 1;
 _caller setVariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
 
 // Cannot use secondairy weapon for animation
@@ -171,8 +172,25 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         } else {
             _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
         };
+        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLower _callerAnim];
         [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
+};
+
+if (_loopAnim) then {
+    private _animDoneEh = _caller addEventHandler ["AnimDone", {
+        params ["_caller", "_anim"];
+        if (_anim isEqualTo (_caller getVariable [QGVAR(repairCurrentAnimCaller), ""])) then {
+            [{
+                params ["_caller", "_anim"];
+                if !(isNil {_caller getVariable QGVAR(repairCurrentAnimCaller)}) then {
+                    TRACE_2("loop",_caller,_anim);
+                    _this call EFUNC(common,doAnimation)
+                };
+            }, [_caller, _anim], 2.5] call CBA_fnc_waitAndExecute;
+        };
+    }];
+    _caller setVariable [QGVAR(repairLoopAnimEh), _animDoneEh];
 };
 
 private _soundPosition = _caller modelToWorldVisualWorld (_caller selectionPosition "RightHand");
@@ -213,7 +231,10 @@ private _hitPointClassname = if (_hitPoint isEqualType "") then {
 };
 private _processText = getText (_config >> "displayNameProgress");
 private _backupText = format [localize LSTRING(RepairingHitPoint), _hitPointClassname];
-([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) params ["_text"];
+private _text = _processText;
+if (getNumber (_config >> "forceDisplayName") isNotEqualTo 1) then {
+    _text = ([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) select 0;
+};
 
 TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
 

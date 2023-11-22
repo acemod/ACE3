@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ir0n1E
  * Check if client is able to interact with gunbag.

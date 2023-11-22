@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Mouse button down event.
@@ -42,10 +42,11 @@ private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.
 if (cameraView == "EXTERNAL") then {
     _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
 };
+
 if (
     !isNull _cursorObject
     && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}
-    && {1 == getNumber (configOf _cursorObject >> QGVAR(canReceive))}
+    && {[_cursorObject] call FUNC(canConnectNozzle)}
     && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}
     && {!lineIntersects [eyePos _unit, _virtualPosASL, _unit]}
 ) then {

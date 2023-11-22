@@ -39,13 +39,13 @@
             <Spanish>Mostrar efectos de las gafas en tercera persona</Spanish>
             <Czech>Zobrazit efekt brýlí v třetí osobě</Czech>
             <French>Effets des lunettes à la 3ème personne</French>
-            <Russian>Отображать эффект очков от третьего лица</Russian>
+            <Russian>Вкл. эффект очков от 3-го лица</Russian>
             <Hungarian>Szemüveg-effekt mutatása külső nézetből</Hungarian>
             <Polish>Włącz efekty gogli w trzeciej osobie</Polish>
             <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
             <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
             <Japanese>三人称視点でもゴーグルによる効果を表示</Japanese>
-            <Korean>3인칭 시에도 고글 효과를 보이게 합니다</Korean>
+            <Korean>3인칭 시에도 고글 효과를 보이게 하기</Korean>
             <Chinesesimp>在第三人称视角显示护目镜效果</Chinesesimp>
             <Chinese>在第三人稱視角顯示護目鏡效果</Chinese>
             <Turkish>Gözlük efektlerini 3. şahıs görünümün de göster</Turkish>
@@ -144,7 +144,7 @@
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
-            <Russian>Показывать Протереть очки в меню взаимодействия с собой</Russian>
+            <Russian>Показывать действие Протереть очки</Russian>
             <Korean>자기상호작용에 고글 닦기 선택 보이기</Korean>
         </Key>
     </Package>

@@ -1,5 +1,5 @@
-#include "script_component.hpp"
-#include "\a3\ui_f_curator\ui\defineresincldesign.inc"
+#include "..\script_component.hpp"
+#include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
 /*
  * Author: commy2
  * Disables key input. ESC can still be pressed to open the menu.
@@ -60,7 +60,7 @@ if (_state) then {
                 };
 
                 private _ctrl = _dlg displayctrl 103;
-                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput);)];
+                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput))];
                 _ctrl ctrlEnable true;
                 _ctrl ctrlSetText "ABORT";
                 _ctrl ctrlSetTooltip "Abort.";
@@ -69,7 +69,7 @@ if (_state) then {
                 if (["ace_medical"] call FUNC(isModLoaded)) then {
                     _ctrl ctrlSetEventHandler ["buttonClick", 'closeDialog 0; [player, "respawn_button"] call EFUNC(medical_status,setDead); [false] call DFUNC(disableUserInput);'];
                 } else {
-                    _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
+                    _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput))];
                 };
                 _ctrl ctrlEnable ((getMissionConfigValue ["respawnButton", -1]) != 0); // handles 3den attribute or description.ext
                 _ctrl ctrlSetText localize "$str_3den_multiplayer_attributecategory_respawn_displayname";
@@ -107,10 +107,23 @@ if (_state) then {
     };
 
     GVAR(disableInputPFH) = [{
-        if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && {isNull findDisplay IDD_INTERRUPT} && {isNull findDisplay IDD_RSCDISPLAYCURATOR} && {isNull findDisplay IDD_TEAMSWITCH}}) then {
+        if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && {isNull findDisplay IDD_INTERRUPT} && {isNull findDisplay IDD_RSCDISPLAYCURATOR} && {isNull findDisplay IDD_TEAMSWITCH}}) exitWith {
             [GVAR(disableInputPFH)] call CBA_fnc_removePerFrameHandler;
             GVAR(disableInputPFH) = nil;
             [true] call FUNC(disableUserInput);
+        };
+
+        // Allow user input if the player is respawning and a respawn template (menu position or spectator)
+        // is open (otherwise they cannot click the respawn button)
+        if (
+            !alive player
+            && {playerRespawnTime != -1}
+            && {
+                missionNamespace getVariable ["BIS_RscRespawnControlsMap_shown", false]
+                || {missionNamespace getVariable ["BIS_RscRespawnControlsSpectate_shown", false]}
+            }
+        ) exitWith {
+            [false] call FUNC(disableUserInput);
         };
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 } else {

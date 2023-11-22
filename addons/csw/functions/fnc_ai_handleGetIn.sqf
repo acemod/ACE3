@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: GhostIsSpooky
+ * Author: Grim
  * Handles AI GetIn on an empty weapon
  *
  * Arguments:

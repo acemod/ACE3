@@ -132,7 +132,7 @@
             <Russian>Действия Зевса</Russian>
             <Italian>Azioni Zeus</Italian>
             <Japanese>Zeus への動作</Japanese>
-            <Korean>Zeus 동작</Korean>
+            <Korean>제우스 동작</Korean>
             <Chinesesimp>宙斯操作</Chinesesimp>
             <Chinese>宙斯操作</Chinese>
             <Turkish>Zeus Etkileşimi</Turkish>
@@ -245,7 +245,7 @@
             <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
             <Czech>Provést akci při pustění klávesy menu</Czech>
             <French>Action au relâchement des touches</French>
-            <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
+            <Russian>Выполнять при отпускании кнопки меню</Russian>
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
@@ -463,7 +463,7 @@
             <German>Beschleunigt die Menüanmimationen und folglich das Öffnen eines Submenüs. </German>
             <Polish>Przyśpiesza animacje menu interakcji oraz czas wymagany do pokazania podmenu</Polish>
             <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
-            <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, dimiuindo a necessidade de esperar para mostrar as ações</Portuguese>
+            <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, diminuindo a necessidade de esperar para mostrar as ações</Portuguese>
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
             <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
@@ -492,7 +492,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
             <English>Consolidate single child actions</English>
-            <Russian>Объединять с единственным дочерним действием</Russian>
+            <Russian>Объединять ед. дочерные действия</Russian>
             <Japanese>サブ動作を統合</Japanese>
             <Spanish>Consolidar acciones hijo únicas</Spanish>
             <French>Combiner les sous-actions uniques</French>
@@ -500,6 +500,7 @@
             <Polish>Połącz akcje podrzędne</Polish>
             <Chinesesimp>整合子操作</Chinesesimp>
             <Korean>하위 동작 통합</Korean>
+            <Portuguese>Consolidar sub-ações únicas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
             <English>Combines parent action with only one child action together.</English>
@@ -511,6 +512,7 @@
             <Polish>Gdy menu zawiera tylko jedną akcję podrzędną, łączy ją z akcją nadrzędną.</Polish>
             <Chinesesimp>主操作与子操作集成显示。</Chinesesimp>
             <Korean>대분류로 나뉜 행동을 한눈에 보여줍니다</Korean>
+            <Portuguese>Quando um menu contém apenas uma subação, ele é combinado com seu menu pai.</Portuguese>
         </Key>
     </Package>
 </Project>

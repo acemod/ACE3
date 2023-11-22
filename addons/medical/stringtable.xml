@@ -18,10 +18,26 @@
             <Turkish>ACE Medikal</Turkish>
             <Japanese>ACE 医療</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Interface_Category">
+            <English>ACE Medical Interface</English>
+            <Russian>ACE Медицина Интерфейс</Russian>
+            <Polish>ACE Opcje medyczne Interfejs</Polish>
+            <Spanish>Médico ACE Interfaz</Spanish>
+            <German>ACE-Medicsystem Interface</German>
+            <Czech>ACE Zdravotnické Rozhraní</Czech>
+            <Portuguese>ACE Interface Médica</Portuguese>
+            <French>ACE Médical Interface</French>
+            <Italian>ACE Medical Interfaccia</Italian>
+            <Korean>ACE 의료 인터페이스</Korean>
+            <Chinesesimp>ACE 医疗 界面</Chinesesimp>
+            <Chinese>ACE 醫療系統 介面</Chinese>
+            <Turkish>ACE Medikal Arayüz</Turkish>
+            <Japanese>ACE 医療 インターフェイス</Japanese>
+        </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
             <German>Wahrscheinlichkeit um aufzuwachen</German>
-            <Japanese>気絶から覚醒の可能性</Japanese>
+            <Japanese>気絶時の覚醒確率</Japanese>
             <Russian>Шанс очнуться при потере сознания</Russian>
             <French>Chance de reprendre connaissance</French>
             <Portuguese>Chance de recuperar consciência</Portuguese>
@@ -37,7 +53,7 @@
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probability that a person with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
             <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht (Überprüfung alle 15 Sekunden)</German>
-            <Japanese>容体が安定しているユニットが気絶する確率を決定できます。(15 秒毎に確認)</Japanese>
+            <Japanese>容体が安定しているユニットが意識回復する確率を設定します。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
             <French>La probabilité pour qu'une unité inconsciente en état stable reprenne conscience spontanément (état vérifié toutes les 15 secondes).</French>
             <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
@@ -57,16 +73,17 @@
             <Chinese>腎上腺素甦醒率加成</Chinese>
             <Chinesesimp>肾上腺素苏醒概率加成</Chinesesimp>
             <German>Erhöhung der Aufwachüberprüfungsrate durch Epinephrin</German>
-            <Japanese>アドレナリン覚醒率の上昇</Japanese>
+            <Japanese>アドレナリンによる覚醒確率上昇</Japanese>
             <Czech>Zvýšení pravděpodobnosti probuzení s Epinefrinem</Czech>
             <Russian>Увеличение шанса очнуться от адреналина</Russian>
             <Turkish>Epinefrin Uyanma Şansı Artışı</Turkish>
             <Spanish>Aumento de probabilidad de despertarse por epinefrina</Spanish>
             <Korean>에피네프린 사용 시 추가 회복 확률</Korean>
+            <Portuguese>Aumento da Chance de Acordar com Epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
-            <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
-            <Japanese>患者がアドレナリンを投与されると自発的に覚醒する確率を上昇させます。</Japanese>
+            <English>When an unconscious patient has Epinephrine in their system, the time between spontaneous wake up checks is divided by this value.</English>
+            <Japanese>患者の体内に投与されたアドレナリンがある場合、\n覚醒計算の確率が上昇(値で除算)されます。</Japanese>
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
             <Chinesesimp>增加因病患的循环系统里面的肾上腺素自我苏醒的机率。</Chinesesimp>
             <French>Augmente la fréquence des tests de réveil lorsque le patient a de l'épinéphrine dans son système sanguin.\n(L'épinéphrine n'accélère pas la reprise de conscience si la valeur est définie sur 1.)</French>
@@ -83,7 +100,7 @@
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
             <Russian>Хромота</Russian>
-            <Japanese>跛行</Japanese>
+            <Japanese>足の引きずり(跛行)</Japanese>
             <French>Boitement</French>
             <Portuguese>Mancando</Portuguese>
             <Chinese>跛腳</Chinese>
@@ -98,14 +115,14 @@
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
-            <Japanese>創傷開放か傷があると跛行するかどうかを決定できます。</Japanese>
+            <Japanese>開放状態の負傷や包帯で治療した負傷がある時、\n足を引きずる(跛行する)かを設定します。</Japanese>
             <Chinese>控制裂開或者已包紮傷口是否會讓人跛腳。</Chinese>
             <Chinesesimp>控制裂开或者已包扎伤口是否会让人跛脚。</Chinesesimp>
             <French>Permet de définir si les plaies ouvertes ou pansées font boiter une personne.</French>
             <Italian>Controlla se le ferite aperte o bendate fanno zoppicare una persona.</Italian>
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
             <Polish>Kontroluje, czy otwarte lub zabandażowane rany powodują utykanie jednostki.</Polish>
-            <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
+            <Portuguese>Controla se ferimentos abertos ou atados causam a pessoa a mancar.</Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
             <German>Stellt ein, ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
             <Russian>Контролирует хромоту в случае открытых или забинтованных ран.</Russian>
@@ -115,7 +132,7 @@
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
             <Russian>Хромота при открытых ранах</Russian>
-            <Japanese>創傷開放時に跛行</Japanese>
+            <Japanese>開放創傷で跛行</Japanese>
             <French>Boiter si plaies ouvertes</French>
             <Portuguese>Mancar se possuir feridas abertas</Portuguese>
             <Chinese>傷口裂開時跛腳</Chinese>
@@ -131,7 +148,7 @@
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
             <Russian>Хромота при открытых или забинтованых ранах</Russian>
-            <Japanese>手当した傷か創傷開放すると跛行</Japanese>
+            <Japanese>開放創傷または包帯創傷で跛行</Japanese>
             <French>Boiter si plaies ouvertes ou pansées</French>
             <Portuguese>Mancar se possuir feridas abertas ou atadas</Portuguese>
             <Chinese>使裂開或者包紮過的傷口讓人跛腳</Chinese>
@@ -162,14 +179,14 @@
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
-            <Japanese>医療機能で骨折に添え木効果を使うかどうかを決定できます。\n無効化すると、骨折効果は表れません。</Japanese>
+            <Japanese>骨折の治療に副子を使用した際の効果を設定します。\n無効にすると、骨折しません。</Japanese>
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
             <Chinesesimp>控制是否让固定板能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
             <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
             <Italian>Controlla l'effetto dell'utilizzo di stecche per curare le fratture. Quando disabilitato, le lesioni non causano fratture.</Italian>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
             <Polish>Kontroluje efekt użycia szyn do leczenia złamań.\n Po wyłączeniu obrażenia nie powodują złamań.</Polish>
-            <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
+            <Portuguese>Controla o efeito de uso de talas para tratar fraturas.\nQuando desabilitado, ferimentos não causam fraturas.</Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
             <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
             <Russian>Управляет эффектом использования шин для лечения переломов.\nПри отключении травмы не вызывают переломов.</Russian>
@@ -179,9 +196,9 @@
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
             <Russian>Шины полностью лечат перелом</Russian>
-            <Japanese>添え木で骨折完治</Japanese>
+            <Japanese>副子で骨折完治</Japanese>
             <French>Les attelles guérissent complètement les fractures</French>
-            <Portuguese>Tala cura fraturas completamente</Portuguese>
+            <Portuguese>Talas curam fraturas completamente</Portuguese>
             <Chinese>固定板完全治癒骨折</Chinese>
             <Chinesesimp>固定板完全治愈骨折</Chinesesimp>
             <Italian>Le gessature curano al massimo le fratture</Italian>
@@ -195,9 +212,9 @@
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoSprint">
             <English>Splints Heal, but Cannot Sprint</English>
             <Russian>Шины вылечивают, но не дают бегать</Russian>
-            <Japanese>添え木で治癒可能、走れないように</Japanese>
+            <Japanese>副子で治癒可能、走れないように</Japanese>
             <French>Les attelles guérissent les fractures, mais empêchent de sprinter</French>
-            <Portuguese>Talas curam (mas não consegue correr)</Portuguese>
+            <Portuguese>Talas curam, mas não permitem correr</Portuguese>
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
             <Chinesesimp>固定板能治愈骨折，但无法奔跑</Chinesesimp>
             <Italian>Le gessature curano, ma non puoi correre</Italian>
@@ -211,7 +228,7 @@
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoJog">
             <English>Splints Heal, but Cannot Jog</English>
             <French>Les attelles guérissent les fractures, mais empêchent de courir</French>
-            <Japanese>添え木で治癒可能、駆け足できないように</Japanese>
+            <Japanese>副子で治癒可能、駆け足できないように</Japanese>
             <Turkish>Ateller İyileştirir, Ama Koşu Yapamaz</Turkish>
             <Spanish>Las férulas sanan, pero no pueden trotar</Spanish>
             <Russian>Шины вылечивают, но не дают бежать трусцой</Russian>
@@ -219,6 +236,7 @@
             <German>Schiene heilt, aber verhindert Sprinten</German>
             <Korean>부목이 치료는 하지만 빨리 걷지 못함</Korean>
             <Chinesesimp>固定板能治愈骨折，但无法慢跑</Chinesesimp>
+            <Portuguese>Talas curam, mas não permitem trotar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
@@ -232,11 +250,12 @@
             <Spanish>Probabilidad de fractura</Spanish>
             <German>Wahrscheinlichkeit einer Fraktur</German>
             <Korean>골절 확률</Korean>
+            <Portuguese>Chance de Fratura</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
             <French>La probabilité pour qu'une blessure pouvant causer une fracture en crée effectivement une.</French>
-            <Japanese>骨折の原因となる負傷で骨折する確率を決定します。</Japanese>
+            <Japanese>骨折の原因となる負傷が骨折に至る確率を設定します。</Japanese>
             <Chinesesimp>骨折导致的伤口再次骨折的可能性。</Chinesesimp>
             <Czech>Výška šance kdy zranění způsobující zlomeniny skutečně způsobí zlomeninu.</Czech>
             <Russian>Вероятность перелома при получении соответствующих ран.</Russian>
@@ -245,6 +264,7 @@
             <Spanish>La probabilidad de que una herida que pueda provocar una fractura, provoque una fractura.</Spanish>
             <German>Die Wahrscheinlichkeit, dass eine Wunde, die eine Fraktur verursachen würde, tatsächlich zu einer Fraktur führt.</German>
             <Korean>상처를 입을 때 골절에 얼마나 관여할지를 결정합니다.</Korean>
+            <Portuguese>A probabilidade de uma ferida passível de fratura causar uma fratura.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -274,7 +294,7 @@
             <French>Sélectionne pour quelles unités les soins avancés seront actifs.</French>
             <Hungarian>Kiválasztható, mely egységek számára legyen engedélyezve a fejlett orvosi rendszer</Hungarian>
             <Italian>Seleziona per quali unità verrà abilitato il sistema medico avanzato</Italian>
-            <Japanese>選択されたユニットが、アドバンスド医療が使えるようになります</Japanese>
+            <Japanese>選択されたユニットが、高度な医療が使えるようになります</Japanese>
             <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시요.</Korean>
             <Chinesesimp>选择进阶医疗系统影响的物体</Chinesesimp>
             <Chinese>選擇進階醫療系統影響的對象</Chinese>
@@ -308,7 +328,7 @@
             <French>Joueurs et IA</French>
             <Hungarian>Játékosok és AI</Hungarian>
             <Italian>Giocatori ed IA</Italian>
-            <Japanese>プレイヤーと AI</Japanese>
+            <Japanese>プレイヤーとAI</Japanese>
             <Korean>플레이어 및 인공지능</Korean>
             <Chinesesimp>玩家与 AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
@@ -342,7 +362,7 @@
             <French>Définit si les unités subissent des dégâts en cas d'accidents en véhicule.</French>
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
-            <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか?</Japanese>
+            <Japanese>ユニットが車両の衝突による負傷を受けるようにしますか?</Japanese>
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
             <Chinesesimp>设定人员是否会因为载具冲撞别的物体而产生伤害？</Chinesesimp>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
@@ -376,7 +396,7 @@
             <Portuguese>Estável</Portuguese>
             <Russian>После стабилизации</Russian>
             <Italian>Stabile</Italian>
-            <Japanese>安静下</Japanese>
+            <Japanese>安定下</Japanese>
             <Korean>안정된</Korean>
             <Chinesesimp>稳定状态下</Chinesesimp>
             <Chinese>穩定狀態下</Chinese>
@@ -409,7 +429,7 @@
             <Czech>%1 je příliš daleko, léčba není možná</Czech>
             <Italian>Distanza da %1 è diventata troppo alta per permettere trattamento</Italian>
             <French>%1 est trop loin pour être soigné.</French>
-            <Japanese>%1 は治療をできない所まで離れた</Japanese>
+            <Japanese>%1 は治療出来ない距離まで離れた</Japanese>
             <Korean>%1 부터의 거리가 너무 멀어 치료할 수 없습니다</Korean>
             <Chinesesimp>设定当距离超过%1将不能使用治疗动作</Chinesesimp>
             <Chinese>設定當距離超過%1將不能使用治療動作</Chinese>

@@ -19,7 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
-            <Russian>Коэффициент кровопотери</Russian>
+            <Russian>Коэф. кровопотери</Russian>
             <Polish>Mnożnik krwawienia</Polish>
             <Spanish>Coeficiente de sangrado</Spanish>
             <German>Verblutungsmultiplikator</German>
@@ -53,7 +53,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_DisplayName">
             <English>Pain Coefficient</English>
-            <Russian>Коэффициент боли</Russian>
+            <Russian>Коэф. боли</Russian>
             <Polish>Mnożnik bólu</Polish>
             <Spanish>Coeficiente de dolor</Spanish>
             <German>Schmerzmultiplikator</German>
@@ -75,7 +75,7 @@
             <Spanish>Coeficiente para modificar la intensidad del dolor</Spanish>
             <German>Multiplikator um die Schmerzintensität zu verändern</German>
             <Czech>Koeficient intenzity bolesti</Czech>
-            <Portuguese>Coeficiente para modificar a instensidade de dor</Portuguese>
+            <Portuguese>Coeficiente para modificar a intensidade de dor</Portuguese>
             <French>Coefficient permettant de définir l'intensité de la douleur.</French>
             <Hungarian>Egy szorzó a fájdalom erősségének szabályozására</Hungarian>
             <Italian>Coefficiente che modifica l'intensità del dolore</Italian>
@@ -107,7 +107,7 @@
             <Japanese>IV による輸血速度を変更できます</Japanese>
             <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
             <French>Définit la vitesse à laquelle le liquide s'écoule des poches de perfusion.\nLa variation du volume de poche IV est calculée selon la  formule suivante :\n intervalle de temps (s) * variation IV par seconde (4,1667 ml/s) * débit (ce coefficient).</French>
-            <Portuguese>Controla o quão rápido flúidos são extraídos de bolsas de IV. A mudança no volume da bolsa d IV é calculado assim:\nIntervalo de tempo (s) * mudança de iv por segundo (4.1667 mL/s) * Velocidade de transferência (esse valor)</Portuguese>
+            <Portuguese>Controla o quão rápido fluidos são extraídos de bolsas de IV. A mudança no volume da bolsa d IV é calculado assim:\nIntervalo de tempo (s) * mudança de iv por segundo (4.1667 mL/s) * Velocidade de transferência (esse valor)</Portuguese>
             <Chinese>控制從點滴輸入人體的液體流量多快。點滴的體積更改是以\n時間間隔（單位秒）乘上點滴每秒速度（4.1667毫升/秒）乘上流量（該係數）。</Chinese>
             <Chinesesimp>控制从点滴输入人体的液体流量多快。静脉输液袋容积变化的计算方法是：\n时间间隔（秒）x点滴每秒速度（4.1667毫升/秒）x流量（该系数）。</Chinesesimp>
             <Italian>Controlla la velocità con cui il fluido esce dalle sacche per flebo. La variazione di volume delle sacche IV è calcolata come:\intervallo di tempo (s) * variazione iv al secondo (4,1667 mL/s) * portata (questo coefficiente).</Italian>
@@ -115,7 +115,23 @@
             <Polish>Kontroluje, jak szybko płyn wypływa z worków IV. Zmiana objętości worka IV jest obliczana jako:\n przedział czasowy * zmiana iv na sekundę (4,1667 mL/s) * natężenie przepływu (ten współczynnik).</Polish>
             <Spanish>Controla la rapidez con que fluye el líquido de las bolsas intravenosas. El cambio de volumen de la bolsa IV se calcula como: \n intervalo (s) de tiempo * cambio iv por segundo (4.1667 mL/s) * velocidad de flujo (este coeficiente).</Spanish>
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
-            <Korean>수액용기에서 얼마나 빨리 들어가는 지를 정합니다. 초당 4.16ml * 계수를 적용받습니다.</Korean>
+            <Korean>수액용기에서 액체가 얼마나 빠르게 흘러들어가는지를 제어합니다. 수액용기 부피 변화는 다음과 같이 계산됩니다:\n시간 간격 (초) x 초 당 수액 변화량(4.1667mL/s) x 흘러들어가는 양 (해당 계수).</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
+            <English>Weapon Drop Chance</English>
+            <Polish>Szansa Upuszczenia Broni</Polish>
+            <German>Wahrscheinlichkeit, die Waffe fallen zu lassen</German>
+            <Korean>무기 떨어뜨릴 확률</Korean>
+            <French>Risque de perte d'arme</French>
+            <Japanese>武器を落とす確率</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
+            <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
+            <Polish>Szansa na upuszczenie broni przez gracza, przy utracie przytomności. \nNie ma wpływu na AI.</Polish>
+            <German>Chance für einen Spieler, seine Waffe fallen zu lassen, wenn er bewusstlos wird.\nHat keine Auswirkung auf die KI.</German>
+            <Korean>플레이어가 기절할 때 무기를 떨어뜨릴 확률입니다.\nAI는 영향을 받지 않습니다.</Korean>
+            <French>Pourcentage de chances pour un joueur de lâcher son arme lorsqu'il perd connaissance.\nAucun effet sur les IA.</French>
+            <Japanese>プレーヤーが意識を失ったときに武器を落とす可能性。\nAI には影響しません。</Japanese>
         </Key>
     </Package>
 </Project>

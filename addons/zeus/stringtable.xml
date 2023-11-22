@@ -72,7 +72,7 @@
             <Spanish>Mostrar mensajes emergentes globales cuando a un jugador se le asigna como Zeus.</Spanish>
             <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
-            <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
+            <Portuguese>Mostra uma mensagem popup quando um jogador é atribuído ao Zeus.</Portuguese>
             <French>Affiche des messages popup globaux lorsqu'un joueur est élevé au rang de Zeus.</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
@@ -419,7 +419,7 @@
             <French>Compétence globale de l'IA</French>
             <Russian>Мастерство ботов</Russian>
             <Czech>Globální zkušenosti AI</Czech>
-            <Japanese>総合的 AI スキル</Japanese>
+            <Japanese>総合的AIスキル</Japanese>
             <Polish>Globalne umiejętności AI</Polish>
             <German>Globale KI-Fähigkeit</German>
             <Korean>서버 인공지능 실력</Korean>
@@ -571,7 +571,7 @@
             <French>L'IA se met à couvert.</French>
             <Russian>Должны ли боты искать укрытия</Russian>
             <Czech>AI se bude snažit vyhledávat krytí</Czech>
-            <Japanese>AI は遮蔽を取るようになります</Japanese>
+            <Japanese>AIは遮蔽を取るようになります</Japanese>
             <Polish>Czy AI powinno szukać osłon</Polish>
             <German>Soll KI nach Deckung suchen</German>
             <Korean>인공지능이 엄폐물을 찾아갑니다</Korean>
@@ -601,7 +601,7 @@
             <French>L'IA passe automatiquement en mode combat.</French>
             <Russian>Должны ли боты автоматически переходить в режим боя</Russian>
             <Czech>AI se automaticky přepne do bojového režimu</Czech>
-            <Japanese>AI は自動的に戦闘状態へ切り替えます</Japanese>
+            <Japanese>AIは自動的に戦闘状態へ切り替えます</Japanese>
             <Polish>Czy AI powinno automatycznie przechodzić w tryb walki</Polish>
             <German>Soll KI automatisch in Kampfmodus umschalten</German>
             <Korean>인공지능이 자동적으로 교전 상태에 돌입합니다</Korean>
@@ -887,7 +887,7 @@
             <Italian>Attivatore Simulazione</Italian>
             <Chinesesimp>切换模拟</Chinesesimp>
             <Chinese>切換模擬</Chinese>
-            <Russian>Вкл/Выкл симуляцию</Russian>
+            <Russian>Переключить симуляцию</Russian>
             <Portuguese>Alternar Simulação</Portuguese>
             <Spanish>Activar simulación</Spanish>
             <Czech>Přepnout simulaci objektu</Czech>
@@ -1134,7 +1134,7 @@
             <German>Spieler und KI's</German>
             <Italian>Giocati e AI</Italian>
             <Polish>Gracze i SI</Polish>
-            <Japanese>プレイヤーと AI</Japanese>
+            <Japanese>プレイヤーとAI</Japanese>
             <Russian>Игроки и ИИ</Russian>
             <Portuguese>Jogadores e IA</Portuguese>
             <Spanish>Jugadores e IA</Spanish>
@@ -1314,6 +1314,9 @@
             <French>Charger dans le véhicule</French>
             <Spanish>Cargar en la carga</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleUnloadFromCargo_DisplayName">
+            <English>Unload from cargo</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
@@ -1324,7 +1327,7 @@
             <Chinesesimp>切换夜视仪</Chinesesimp>
             <Korean>야시경 토글</Korean>
             <Polish>Przełącz NVG</Polish>
-            <Russian>Вкл/Выкл ПНВ</Russian>
+            <Russian>Переключить ПНВ</Russian>
             <Portuguese>Alternar Visão Noturna</Portuguese>
             <Czech>Přepnout noktovizory</Czech>
             <Spanish>Alternar visión nocturna</Spanish>
@@ -1417,7 +1420,7 @@
             <Chinesesimp>切换手电筒</Chinesesimp>
             <Korean>손전등 토글</Korean>
             <Polish>Przełącz latarki</Polish>
-            <Russian>Вкл/Выкл Фонари</Russian>
+            <Russian>Переключить фонари</Russian>
             <Portuguese>Alternar Lanternas</Portuguese>
             <Spanish>Alternar linternas</Spanish>
             <Czech>Přepnout svítilny</Czech>
@@ -1930,6 +1933,44 @@
             <Korean>유닛 불로 태우기</Korean>
             <Polish>Podpal Jednostkę</Polish>
             <Japanese>ユニットを燃やす</Japanese>
+            <Russian>Поджечь юнита</Russian>
+            <Spanish>Quemar a unidad</Spanish>
+            <French>Brûler l'unité</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleMedicalMenu_DisplayName">
+            <English>Medical Menu</English>
+            <German>Sanitätsmenü</German>
+            <Polish>Menu medyczne</Polish>
+            <Portuguese>Menu Médico</Portuguese>
+            <Russian>Медицинское меню</Russian>
+            <Spanish>Menú médico</Spanish>
+            <Czech>Zdravotnická nabídka</Czech>
+            <Italian>Menù Medico</Italian>
+            <French>Menu médical</French>
+            <Japanese>治療メニュー</Japanese>
+            <Korean>의료 메뉴</Korean>
+            <Chinesesimp>医疗菜单</Chinesesimp>
+            <Chinese>醫療選單</Chinese>
+            <Turkish>Medikal Menü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_MedicalMenuDisabled">
+            <English>The medical menu is disabled</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
+            <English>Lay Trenchline</English>
+            <Polish>Wykop Okop</Polish>
+            <Korean>참호라인 깔기</Korean>
+            <French>Poser une tranchée</French>
+            <German>Grabenlinie legen</German>
+            <Japanese>塹壕溝線を敷設</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
+            <English>+SHIFT to force (Can only lay N/S or E/W)</English>
+            <Polish>+SHIFT aby wymusić (Można wykopać tylko N/S lub E/W)</Polish>
+            <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
+            <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
+            <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
+            <Japanese>=+SHIFT で強制的に敷設 (北/南 または 東/西 方向にのみ配置可能)</Japanese>
         </Key>
     </Package>
 </Project>

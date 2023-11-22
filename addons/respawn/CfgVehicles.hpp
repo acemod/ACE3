@@ -68,8 +68,8 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_MoveRallypoint {
                 displayName = CSTRING(Rallypoint_MoveRallypoint);
-                condition = QUOTE([ARR_2(_player, side group _player)] call FUNC(canMoveRallypoint));
-                statement = QUOTE([ARR_2(_player, side group _player)] call FUNC(moveRallypoint));
+                condition = QUOTE([ARR_2(_player,side group _player)] call FUNC(canMoveRallypoint));
+                statement = QUOTE([ARR_2(_player,side group _player)] call FUNC(moveRallypoint));
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
             };

@@ -4,10 +4,10 @@
         <Key ID="STR_ACE_Medical_AI_enableFor_title">
             <English>Medic AI</English>
             <German>Sanitäts KI</German>
-            <Japanese>AI 衛生兵</Japanese>
+            <Japanese>衛生兵AI</Japanese>
             <Russian>ИИ Медик</Russian>
             <French>Médecine IA</French>
-            <Portuguese>IA Médico</Portuguese>
+            <Portuguese>IA Médica</Portuguese>
             <Chinesesimp>AI 医疗兵</Chinesesimp>
             <Chinese>AI醫療兵</Chinese>
             <Italian>Medico AI</Italian>
@@ -20,7 +20,7 @@
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
             <German>KI reagiert auf Verletzungen und Bewusstlosigkeit</German>
-            <Japanese>AI が負傷者と気絶している人に対して行動するようになります。</Japanese>
+            <Japanese>AIが負傷者と気絶している人に対して行動するようになります。</Japanese>
             <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
             <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
@@ -47,6 +47,33 @@
             <Portuguese>Apenas Servidor e HC</Portuguese>
             <Czech>Pouze Server a HC</Czech>
             <Turkish>Sadece Sunucu ve HC de</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_requireItems_title">
+            <English>Require Items</English>
+            <Polish>Wymagane Przedmioty</Polish>
+            <German>Erfordere Gegenstände</German>
+            <Korean>아이템 필요</Korean>
+            <French>Items requis</French>
+            <Portuguese>Exigir Itens</Portuguese>
+            <Japanese>アイテムを要求</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_requireItems_desc">
+            <English>AI will only perform medical treatment if they have the necessary items in their inventory.</English>
+            <Polish>AI będzie wykonywać zabiegi medyczne tylko wtedy, gdy ma w ekwipunku niezbędne przedmioty.</Polish>
+            <German>Die KI führt nur dann medizinische Behandlungen durch, wenn sie die erforderlichen Gegenstände in ihrem Inventar hat.</German>
+            <Korean>소지품에 필요한 아이템이 있을 경우에만 인공지능이 치료를 진행합니다.</Korean>
+            <French>Les IA n'effectueront un traitement médical que si elles ont le matériel nécessaire dans leur inventaire.</French>
+            <Portuguese>A IA só irá realizar tratamento médico se tiver os itens necessários em seu inventário.</Portuguese>
+            <Japanese>AIのインベントリに必要なアイテムがある場合にのみ治療を実行します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_requireItems_autoReplaceItems">
+            <English>Auto Convert Items for AI</English>
+            <Polish>Automatyczna Konwersja Przedmiotów dla AI</Polish>
+            <Korean>인공지능 아이템 자동 변환</Korean>
+            <French>Conversion automatique des items pour les IA</French>
+            <German>Automatische Konvertierung von Gegenständen der KI</German>
+            <Portuguese>Conversão automática de itens para IA</Portuguese>
+            <Japanese>AIのアイテムを自動変換</Japanese>
         </Key>
     </Package>
 </Project>

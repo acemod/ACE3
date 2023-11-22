@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Initializes unit variables.
@@ -46,9 +46,9 @@ if (_isRespawn) then {
     _unit setVariable [VAR_PAIN_SUPP, 0, true];
 
     // - Wounds -------------------------------------------------------------------
-    _unit setVariable [VAR_OPEN_WOUNDS, [], true];
-    _unit setVariable [VAR_BANDAGED_WOUNDS, [], true];
-    _unit setVariable [VAR_STITCHED_WOUNDS, [], true];
+    _unit setVariable [VAR_OPEN_WOUNDS, createHashMap, true];
+    _unit setVariable [VAR_BANDAGED_WOUNDS, createHashMap, true];
+    _unit setVariable [VAR_STITCHED_WOUNDS, createHashMap, true];
     _unit setVariable [QEGVAR(medical,isLimping), false, true];
     _unit setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 
@@ -74,10 +74,10 @@ if (_isRespawn) then {
     _unit setVariable [VAR_MEDICATIONS, [], true];
 
     // Unconscious spontanious wake up chance
-    _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil];
+    _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil, true];
 
     // Cause of death
-    _unit setVariable [QEGVAR(medical,causeOfDeath), nil];
+    _unit setVariable [QEGVAR(medical,causeOfDeath), nil, true];
 };
 
 [{

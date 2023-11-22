@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Compiles tags from ACE_Tags and returns children actions.
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params ["_class", "_displayName", "_requiredItem", "_textures", "_icon", "_materials"];
+params ["_class", "_displayName", "_requiredItem", "_textures", "_icon", "_materials", "_tagModel"];
 
 private _actions = GVAR(itemActions) getOrDefault [_requiredItem, []];
 
@@ -24,7 +24,7 @@ _actions pushBack ([
     _displayName,
     _icon,
     {
-        (_this select 2) params ["_class", "_textures", "_materials"];
+        (_this select 2) params ["_class", "_textures", "_materials", "_tagModel"];
 
         (
             if (count _textures == count _materials) then {
@@ -35,12 +35,12 @@ _actions pushBack ([
             }
         ) params ["_randomTexture", "_randomMaterial"];
 
-        [_player, _randomTexture, _randomMaterial] call FUNC(tag);
+        [_player, _randomTexture, _randomMaterial, _tagModel] call FUNC(tag);
         _player setVariable [QGVAR(lastUsedTag), _class];
     },
     {true}, // required item is checked at an upper level
     {},
-    [_class, _textures, _materials]
+    [_class, _textures, _materials, _tagModel]
 ] call EFUNC(interact_menu,createAction));
 
 GVAR(itemActions) set [_requiredItem, _actions];

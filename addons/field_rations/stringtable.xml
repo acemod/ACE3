@@ -28,6 +28,8 @@
             <Russian>Индикаторы жажды и голода</Russian>
             <Turkish>ACE Gıda Göstergesi</Turkish>
             <Korean>ACE 전투식량 HUD</Korean>
+            <Spanish>ACE HUD de Raciones de campo</Spanish>
+            <Portuguese>ACE HUD de Rações de Campo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_IGUI_Description">
             <English>Indicates current hunger and thirst status.</English>
@@ -38,7 +40,7 @@
             <German>Zeigt den aktuellen Hunger- und Durststatus an.</German>
             <Hungarian>Jelzi az éhínség és a szomjúság állapotát.</Hungarian>
             <Italian>Indica lo stato attuale di fame e sete.</Italian>
-            <Japanese>現在の空腹感と渇きの状態を示します。</Japanese>
+            <Japanese>現在の喉の渇きと空腹度の状態を示します。</Japanese>
             <Korean>굶주림과 갈증 정도를 표시합니다.</Korean>
             <Polish>Wskazuje bieżący status głodu i pragnienia.</Polish>
             <Portuguese>Indica o status atual de fome e sede.</Portuguese>
@@ -72,6 +74,8 @@
             <Japanese>食べる/飲む</Japanese>
             <Chinesesimp>吃/喝</Chinesesimp>
             <Korean>먹기/마시기</Korean>
+            <Spanish>Comer/Beber</Spanish>
+            <Portuguese>Comer/Beber</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Enabled_Description">
             <English>Enable/Disable Field Rations</English>
@@ -99,7 +103,7 @@
             <German>Zeit ohne Wasser</German>
             <Hungarian>Víz nélküli idő</Hungarian>
             <Italian>Tempo senza acqua</Italian>
-            <Japanese>水なしの時間</Japanese>
+            <Japanese>水分無しでの耐久時間</Japanese>
             <Korean>물 없이 생존 가능 시간</Korean>
             <Polish>Czas bez wody</Polish>
             <Portuguese>Tempo sem água</Portuguese>
@@ -116,7 +120,7 @@
             <German>Wie lange sollte eine Einheit ohne Wasser auskommen (Stunden)?</German>
             <Hungarian>Mennyi ideig kell egy egység víz nélkül (óra)</Hungarian>
             <Italian>Mennyi ideig kell egy egység víz nélkül (óra)</Italian>
-            <Japanese>ユニットが水なしでどれくらい時間を過ごすことができるか (一時間単位)</Japanese>
+            <Japanese>ユニットが水分無しでどれくらいの時間耐えられるか (一時間単位)</Japanese>
             <Korean>물을 안 마시고 얼마나 생존할 수 있는지 정합니다 (시간)</Korean>
             <Polish>Jak długo jednostka powinna przetrwać bez wody (godziny)</Polish>
             <Portuguese>Quanto tempo uma unidade pode passar sem água (horas)</Portuguese>
@@ -133,7 +137,7 @@
             <German>Zeit ohne Essen</German>
             <Hungarian>Élelmiszer nélkül</Hungarian>
             <Italian>Tempo senza cibo</Italian>
-            <Japanese>食べ物なしの時間</Japanese>
+            <Japanese>食事抜きでの耐久時間</Japanese>
             <Korean>밥 없이 생존 가능 시간</Korean>
             <Polish>Czas bez jedzenia</Polish>
             <Portuguese>Tempo sem comida</Portuguese>
@@ -150,7 +154,7 @@
             <German>Wie lange sollte eine Einheit ohne Essen gehen können (Stunden)?</German>
             <Hungarian>Mennyi ideig kell egy egység élni nélkül (óra)</Hungarian>
             <Italian>Per quanto tempo un'unità dovrebbe essere in grado di andare senza cibo (ore)</Italian>
-            <Japanese>ユニットが食糧なしでどれくらい時間を過ごすことができるか (一時間単位)</Japanese>
+            <Japanese>ユニットが食事抜きでどれくらいの時間耐えられるか (一時間単位)</Japanese>
             <Korean>밥을 안 먹고 얼마나 생존할 수 있는지 정합니다 (시간)</Korean>
             <Polish>Jak długo jednostka powinna przetrwać bez jedzenia (godziny)</Polish>
             <Portuguese>Quanto tempo uma unidade pode ir sem alimentos (horas)</Portuguese>
@@ -163,54 +167,64 @@
             <German>Durst gestillt</German>
             <Chinese>止渴程度</Chinese>
             <Chinesesimp>解渴程度</Chinesesimp>
-            <Japanese>乾きの満たし</Japanese>
+            <Japanese>喉の渇き度の満たされ量</Japanese>
             <Russian>Утоление жажды</Russian>
             <Polish>Pragnienie zaspokojone</Polish>
             <Turkish>Susuzluk Giderme Katsayısı</Turkish>
             <Korean>갈증 해소</Korean>
+            <Spanish>Sed saciada</Spanish>
+            <Portuguese>Sede saciada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ThirstQuenched_Description">
             <English>Coefficient for the amount of thirst quenched from drinking.</English>
             <German>Koeffizient für die Menge des Dursts, der durch Trinken gestillt wird.</German>
             <Chinese>從飲用中能夠攝取多少水份。</Chinese>
             <Chinesesimp>通过喝水能够补充多少水份。</Chinesesimp>
-            <Japanese>飲むことによって得られる乾きの満たし量の係数を設定します</Japanese>
+            <Japanese>水分補給によって満たされる喉の渇きの量を表す係数。</Japanese>
             <Russian>Коэффициент утоления жажды от питья</Russian>
             <Polish>Współczynnik ilości zaspokojnego pragnienia od picia</Polish>
             <Turkish>Bir şey içince, susuzluğunun ne kadar giderileceğini belirler.</Turkish>
             <Korean>마심으로써 갈증이 얼마나 해소되는지를 정합니다</Korean>
+            <Spanish>Coeficiente del saciamiento de sed por beber.</Spanish>
+            <Portuguese>Coeficiente para a quantidade de sede saciada por beber.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HungerSatiated_DisplayName">
             <English>Hunger Satiated</English>
             <German>Hunger gesättigt</German>
             <Chinese>飽足感</Chinese>
             <Chinesesimp>饱腹感</Chinesesimp>
-            <Japanese>満腹感</Japanese>
+            <Japanese>空腹度の満たされ量</Japanese>
             <Russian>Утоление голода</Russian>
             <Polish>Głód Zaspokojony</Polish>
             <Turkish>Açlık Giderme Katsayısı</Turkish>
             <Korean>배부름</Korean>
+            <Spanish>Hambre saciada</Spanish>
+            <Portuguese>Fome saciada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HungerSatiated_Description">
             <English>Coefficient for the amount of hunger satiated from eating.</English>
             <German>Koeffizient für die Menge des Hungers, der durch essen gesättigt wird.</German>
             <Chinese>從飲食中獲取多少飽食感。</Chinese>
             <Chinesesimp>通过饮食能够补充多少能量。</Chinesesimp>
-            <Japanese>食べることによって得られる満腹感の量の係数を設定します</Japanese>
+            <Japanese>食事によって満たされる空腹度の量を表す係数。</Japanese>
             <Russian>Коэффициент утоления голода от принятия пищи</Russian>
             <Polish>Współczynnik ilosci zaspokojnego głodu od jedzenia</Polish>
             <Turkish>Bir şey yiyince, açlığın ne kadar giderileceğini belirler.</Turkish>
             <Korean>밥을 먹어서 배고픔이 얼마나 해결되는지를 정합니다</Korean>
+            <Spanish>Coeficiente del saciamiento del hambre por comer.</Spanish>
+            <Portuguese>Coeficiente para a quantidade de fome saciada por comer.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_DisplayName">
             <English>Water Source Actions</English>
             <Russian>Действия с источником воды</Russian>
             <Polish>Akcje przy źrodle wody</Polish>
             <Turkish>Su Içme Animasyonu</Turkish>
-            <Japanese>水源動作</Japanese>
+            <Japanese>水源での動作</Japanese>
             <German>Wasserquellen-Aktionen</German>
             <Chinesesimp>水源动作</Chinesesimp>
             <Korean>물 근처 행동</Korean>
+            <Spanish>Acciones para suministros de agua</Spanish>
+            <Portuguese>Ações para suprimentos de água</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_Description">
             <English>Controls what actions are available on water sources.</English>
@@ -221,36 +235,44 @@
             <German>Bestimmt, welche Aktionen an Wasserquellen verfügbar sind.</German>
             <Chinesesimp>控制对水源可用的动作。</Chinesesimp>
             <Korean>물가에서 어떤 행동을 취할지 정합니다</Korean>
+            <Spanish>Controla qué acciones están disponibles para los suministros de agua.</Spanish>
+            <Portuguese>Controla quais ações estão disponíveis para os suprimentos de água.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RefillOnly">
             <English>Refill Only</English>
             <Russian>Только пополнить</Russian>
             <Polish>Tylko napełnij</Polish>
             <Turkish>Sadece içeceği iç</Turkish>
-            <Japanese>汲むだけ</Japanese>
+            <Japanese>水汲みのみ</Japanese>
             <German>Nur Befüllen</German>
             <Chinesesimp>仅限取水</Chinesesimp>
             <Korean>다시 채우기만 가능</Korean>
+            <Spanish>Sólo rellenar</Spanish>
+            <Portuguese>Apenas reabastecer</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_DisplayName">
             <English>Terrain Object Actions</English>
             <Russian>Действия с объектами ландшафта</Russian>
             <Polish>Akcje Objektu terenu</Polish>
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
-            <Japanese>マップ オブジェクト動作</Japanese>
+            <Japanese>地形オブジェクトでの動作</Japanese>
             <German>Geländeobjekt-Aktionen</German>
             <Chinesesimp>地形物体动作</Chinesesimp>
             <Korean>지형 물체 상호작용</Korean>
+            <Spanish>Acciones sobre objetos del terreno</Spanish>
+            <Portuguese>Ações para objetos do terreno</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_Description">
             <English>Enables water source actions for terrain objects.</English>
             <Russian>Включает действия с источниками воды для объектов ландшафта.</Russian>
             <Polish>Umożliwia akcje przy źrodle wody na obiektach terenu.</Polish>
             <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
-            <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
+            <Japanese>地形に存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
             <German>Aktiviert Wasserquellen-Aktionen für Geländeobjekte.</German>
             <Chinesesimp>为地形物体启用水源动作。</Chinesesimp>
             <Korean>지형 물체에서 물을 얻는 게 가능해집니다.</Korean>
+            <Spanish>Habilitar acciones de suministros de agua para los objetos en el suelo.</Spanish>
+            <Portuguese>Habilita ações para suprimentos de água para objetos do terreno.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
             <English>Affect Advanced Fatigue</English>
@@ -262,17 +284,21 @@
             <Polish>Wpływ na zaawansowane zmęczenie</Polish>
             <Turkish>Gelişmiş Yorgunluk</Turkish>
             <Korean>고급 피로도에 영향을 끼침</Korean>
+            <Spanish>Afecta a la Fatiga Avanzada</Spanish>
+            <Portuguese>Afeta a Fadiga Avançada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_Description">
             <English>Controls if thirst and hunger should affect ACE Advanced Fatigue.</English>
             <German>Bestimmt, ob Durst und Hunger ACE Erweiterte Ausdauer beeinflussen sollen.</German>
             <Chinese>是否讓飲食影響到ACE的進階疲勞。</Chinese>
             <Chinesesimp>是否让饮食影响到 ACE 的进阶疲劳。</Chinesesimp>
-            <Japanese>喉の渇きと空腹感が ACE アドバンスド ファティーグへ与える影響を決定します</Japanese>
+            <Japanese>喉の渇きと空腹度が ACE アドバンスド ファティーグへ与える影響を定義します。</Japanese>
             <Russian>Определяет, будет ли жажда и голод влиять на продвинутую усталость ACE.</Russian>
             <Polish>Kontroluje czy pragnienie i głód mają wpływ na zaawansowane zmęczenie ACE.</Polish>
             <Turkish>Acıkınca veya susayınca kişinin yorulup yorulmayacağını belirler.</Turkish>
             <Korean>배고픔과 목마름이 고급 피로도에 영향을 끼칠지를 정합니다</Korean>
+            <Spanish>Controla si la sed y el hambre afectan a la Fatiga Avanzada de ACE</Spanish>
+            <Portuguese>Controla se a sede e a fome afetam a Fadiga Avançada do ACE.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudType_DisplayName">
             <English>HUD Type</English>
@@ -284,6 +310,8 @@
             <Russian>Тип индикаторов</Russian>
             <Turkish>HUD Tipi</Turkish>
             <Korean>HUD 종류</Korean>
+            <Spanish>Tipo de HUD</Spanish>
+            <Portuguese>Tipo de HUD</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudType_Description">
             <English>Selects which HUD style will be used.</English>
@@ -295,6 +323,8 @@
             <Russian>Выберите какой стиль индикаторов будет использован.</Russian>
             <Turkish>Hangi HUD sitilini kullanılacağını seçer.</Turkish>
             <Korean>사용될 HUD 스타일을 고르십시오.</Korean>
+            <Spanish>Selecciona qué estilo de HUD será utilizado.</Spanish>
+            <Portuguese>Seleciona qual estilo de HUD será usado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ColoredIcons">
             <English>Colored Icons</English>
@@ -306,17 +336,21 @@
             <Russian>Цветные иконки</Russian>
             <Turkish>Renkli Ikonlar</Turkish>
             <Korean>색깔 아이콘</Korean>
+            <Spanish>Iconos coloreados</Spanish>
+            <Portuguese>Ícones coloridos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrainingIcons">
             <English>Draining Icons</English>
             <German>Farblose Icons</German>
             <Chinese>增減化圖示</Chinese>
             <Chinesesimp>渐化图标</Chinesesimp>
-            <Japanese>ドレイン アイコン</Japanese>
+            <Japanese>レベルゲージアイコン</Japanese>
             <Polish>Ubywające ikony</Polish>
             <Russian>Исчезающие иконки</Russian>
             <Turkish>Içi Boşalan Ikonlar</Turkish>
             <Korean>빠지는 아이콘</Korean>
+            <Spanish>Iconos de drenado</Spanish>
+            <Portuguese>Ícones de drenagem</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudShowLevel_DisplayName">
             <English>HUD Show Level</English>
@@ -328,17 +362,21 @@
             <Russian>Уровень для отображения иконок</Russian>
             <Turkish>HUD Gösterilme Seviyesi</Turkish>
             <Korean>HUD 표시</Korean>
+            <Spanish>Mostrar nivel en HUD</Spanish>
+            <Portuguese>Mostrar nível no HUD</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudShowLevel_Description">
             <English>Automatically show the HUD when either thirst or hunger are above this level.</English>
             <German>Zeigt automatisch das HUD an, sobald Durst oder Hunger über diesem Level sind.</German>
             <Chinese>在飲食低於多少程度時顯示界面。</Chinese>
             <Chinesesimp>在饮食能量低于多少程度时显示界面。</Chinesesimp>
-            <Japanese>この値以上に空腹感か乾きを感じると自動的に HUD を表示します</Japanese>
+            <Japanese>この値以上に空腹度か喉の渇きを感じると自動的に HUD を表示します</Japanese>
             <Polish>Automatycznie pokaż HUD kiedy pragnienie albo głód przekroczy ten poziom</Polish>
             <Russian>Автоматически отображает иконки при достижении определенных уровней голода и жажды.</Russian>
             <Turkish>Susuzluk veya açlık belli bir seviyenin altına inince otomatik olarak HUD u göster.</Turkish>
             <Korean>정한 퍼센트 이하로 내려가면 HUD가 나타나게 합니다.</Korean>
+            <Spanish>Mostrar automáticamente el HUD cuando la sed o el hambre están por encima de este nivel.</Spanish>
+            <Portuguese>Mostrar automaticamente o HUD quando a sede ou a fome estão acima deste nível.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Always">
             <English>Always</English>
@@ -367,6 +405,8 @@
             <Russian>Прозрачность цветных иконок</Russian>
             <Turkish>Renkli Ikonlar -  Şeffaflaşan</Turkish>
             <Korean>색깔 아이콘 - 투명도</Korean>
+            <Spanish>Iconos coloreados - Transparencia</Spanish>
+            <Portuguese>Ícones coloridos - Transparência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudTransparency_Description">
             <English>Controls the transparency of the Colored Icons HUD. Dynamic setting makes the HUD less transparent as thirst or hunger increase.</English>
@@ -374,10 +414,12 @@
             <Chinese>控制顏色化圖示的透明度。設定為動態使其界面透明度與飲食需求一樣，越透明越需要。</Chinese>
             <Chinesesimp>控制彩色图标 HUD 的透明度。动态设置使 HUD 的透明度随着口渴或饥饿的增加而减弱。</Chinesesimp>
             <Polish>Kontroluje transparentność kolorowych ikon HUD. Dynamiczne ustawienie zmniejsza przejrzystość wraz z zwiększeniem głodu czy pragnienia.</Polish>
-            <Japanese>色付きアイコンの透明度を決定できます。動的に設定されると、喉の渇きや空腹感が増すにつれて、アイコンの透明度を下げます。</Japanese>
+            <Japanese>色付きアイコンの透明度を決定できます。動的に設定されると、空腹度や喉の渇きが増すにつれて、アイコンの透明度を下げます。</Japanese>
             <Russian>Настраивает прозрачность цветных иконок. «Динамическая» делает иконки менее прозрачными при увеличении жажды и голода.</Russian>
             <Turkish>Renkli Simgeler Gösterge Paneli'nin şeffaflığını kontrol eder. Dinamik ayar, susuzluk veya açlık arttıkça HUD'yi daha az şeffaf hale getirir.</Turkish>
             <Korean>색깔 아이콘의 투명도를 조절합니다. 동적 설정의 경우 배고픔이나 목마름이 해결되면 덜 투명하게 바뀝니다.</Korean>
+            <Spanish>Controla la transparencia de los Iconos coloreados en el HUD. La opción dinámica muestra el HUD menos transparente cuando la sed o el hambre aumentan.</Spanish>
+            <Portuguese>Controla a transparência dos ícones coloridos no HUD. A configuração dinâmica torna o HUD menos transparente à medida que a sede ou a fome aumentam.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Dynamic">
             <English>Dynamic</English>
@@ -405,6 +447,8 @@
             <Russian>Водные ресурсы</Russian>
             <Polish>Źródło wody</Polish>
             <Korean>식수 보급량</Korean>
+            <Spanish>Suministro de agua</Spanish>
+            <Portuguese>Suprimentos de água</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSupply_3DEN_Description">
             <English>The amount of water available for ACE Field Rations water source actions (-1 disabled, -10 infinite)</English>
@@ -415,6 +459,8 @@
             <Russian>Количество воды, доступной для использования в ACE Полевые рационы. (-1 - отключено, -10 - бесконечно)</Russian>
             <Polish>Ilość wody dostępnej dla Akcji ACE Źródła wody (-1 wyłączone, -10 nieskończone)</Polish>
             <Korean>ACE 전투식량 물 근처 행동에서 얼마나 물을 얻어 갈 수 있는지를 정합니다 (-1은 비활성화, -10은 무한대)</Korean>
+            <Spanish>La cantidad de agua disponible para las acciones de suministro de agua de las Raciones de Combate de ACE (-1 deshabilitado, -10 infinito)</Spanish>
+            <Portuguese>A quantidade de água disponível para as ações de suprimentos de água das Rações de Campo do ACE (-1 desativado, -10 infinito)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSource">
             <English>Water Source</English>
@@ -426,6 +472,8 @@
             <Russian>Источник воды</Russian>
             <Turkish>Matara</Turkish>
             <Korean>수원지</Korean>
+            <Spanish>Suministro de agua</Spanish>
+            <Portuguese>Fonte de água</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_CheckWater">
             <English>Check Remaining Water</English>
@@ -437,6 +485,8 @@
             <Russian>Проверить остаток воды</Russian>
             <Turkish>Kalan Suyu Kontrol Et</Turkish>
             <Korean>남은 물 확인</Korean>
+            <Spanish>Comprobar agua restante</Spanish>
+            <Portuguese>Verificar água restante</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_CheckingWater">
             <English>Checking remaining water...</English>
@@ -448,6 +498,8 @@
             <Russian>Проверяется остаток воды...</Russian>
             <Turkish>Kalan Su Kontrol Ediliyor...</Turkish>
             <Korean>남은 물 확인 중...</Korean>
+            <Spanish>Comprobando agua restante...</Spanish>
+            <Portuguese>Verificando água restante...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RemainingWater">
             <English>There are %1 litres left.</English>
@@ -459,17 +511,21 @@
             <Russian>Осталось %1 л воды</Russian>
             <Turkish>%1 Litre kaldı.</Turkish>
             <Korean>%1 리터의 물이 남아있습니다.</Korean>
+            <Spanish>Quedan %1 litros.</Spanish>
+            <Portuguese>Ainda há %1 litros.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
             <English>There is no water left.</English>
             <German>Es ist kein Wasser mehr übrig.</German>
             <Chinese>水已經用完了</Chinese>
             <Chinesesimp>水已经喝完了。</Chinesesimp>
-            <Japanese>水はもうありません。</Japanese>
+            <Japanese>水は残っていません。</Japanese>
             <Polish>Nie ma wody</Polish>
             <Russian>Воды больше не осталось</Russian>
             <Turkish>Hiç su kalmadı.</Turkish>
             <Korean>물이 한 방울도 없습니다.</Korean>
+            <Spanish>No queda agua.</Spanish>
+            <Portuguese>Não há mais água.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkFromSource">
             <English>Drink From Source</English>
@@ -480,6 +536,8 @@
             <Japanese>水源から飲む</Japanese>
             <Chinesesimp>从水源处喝水</Chinesesimp>
             <Korean>수원에서 물 마시기</Korean>
+            <Spanish>Beber desde el suministro</Spanish>
+            <Portuguese>Beber da fonte</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Refill">
             <English>Refill</English>
@@ -490,7 +548,7 @@
             <German>Nachfüllung</German>
             <Hungarian>Utántöltés</Hungarian>
             <Italian>Ricarica</Italian>
-            <Japanese>汲む</Japanese>
+            <Japanese>水を汲む</Japanese>
             <Korean>다시 채우기</Korean>
             <Polish>Uzupełnij</Polish>
             <Portuguese>Recarga</Portuguese>
@@ -537,33 +595,39 @@
             <German>Esse %1...</German>
             <Chinese>食用 %1...</Chinese>
             <Chinesesimp>食用 %1...</Chinesesimp>
-            <Japanese>%1を食べています・・・</Japanese>
+            <Japanese>%1 を食べています・・・</Japanese>
             <Polish>Jedzenie %1...</Polish>
             <Russian>Поедание %1...</Russian>
             <Turkish>%1 Yeniyor...</Turkish>
             <Korean>%1 먹는 중...</Korean>
+            <Spanish>Comiendo %1...</Spanish>
+            <Portuguese>Comendo %1...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkingX">
             <English>Drinking %1...</English>
             <German>Trinke %1...</German>
             <Chinese>飲用自 %1...</Chinese>
             <Chinesesimp>饮用 %1...</Chinesesimp>
-            <Japanese>%1を飲んでいます・・・</Japanese>
+            <Japanese>%1 を飲んでいます・・・</Japanese>
             <Polish>Picie %1...</Polish>
             <Russian>Выпивание %1...</Russian>
             <Turkish>%1 Içiliyor...</Turkish>
             <Korean>%1 마시는 중...</Korean>
+            <Spanish>Bebiendo %1...</Spanish>
+            <Portuguese>Bebendo %1...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkingFromX">
             <English>Drinking from %1...</English>
             <German>Trinke von %1...</German>
             <Chinese>飲用%1的水中...</Chinese>
             <Chinesesimp>从%1饮用中...</Chinesesimp>
-            <Japanese>%1から飲んでいます・・・</Japanese>
+            <Japanese>%1 から飲んでいます・・・</Japanese>
             <Polish>Picie z %1...</Polish>
             <Russian>Выпивание из %1...</Russian>
             <Turkish>%1 den içiliyor...</Turkish>
             <Korean>%1 으로 부터 마시는 중...</Korean>
+            <Spanish>Bebiendo desde %1...</Spanish>
+            <Portuguese>Bebendo de %1...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkingFromSource">
             <English>Drinking from source...</English>
@@ -574,6 +638,8 @@
             <German>Trinke von Quelle...</German>
             <Chinesesimp>从水源处喝水中...</Chinesesimp>
             <Korean>수원에서 마시는 중...</Korean>
+            <Spanish>Bebiendo desde el suministro...</Spanish>
+            <Portuguese>Bebendo da fonte...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottle_DisplayName">
             <English>Water Bottle</English>
@@ -584,10 +650,10 @@
             <German>Wasserflasche</German>
             <Hungarian>Vizesüveg</Hungarian>
             <Italian>Bottiglia d'acqua</Italian>
-            <Japanese>ウォーターボトル</Japanese>
+            <Japanese>水のペットボトル</Japanese>
             <Korean>물병</Korean>
             <Polish>Butelka wody</Polish>
-            <Portuguese>Garrafa de agua</Portuguese>
+            <Portuguese>Garrafa de água</Portuguese>
             <Russian>Бутылка воды (полная)</Russian>
             <Spanish>Botella de agua</Spanish>
             <Turkish>Su Şişesi</Turkish>
@@ -601,7 +667,7 @@
             <German>Eine Wasserflasche</German>
             <Hungarian>Egy vizes palackot</Hungarian>
             <Italian>Una bottiglia d'acqua</Italian>
-            <Japanese>ウォーター ボトル</Japanese>
+            <Japanese>水入りペットボトル</Japanese>
             <Korean>물병</Korean>
             <Polish>Butelka wody</Polish>
             <Portuguese>Uma garrafa de água</Portuguese>
@@ -618,7 +684,7 @@
             <German>Wasserflasche (Hälfte)</German>
             <Hungarian>Vízpalack (fél)</Hungarian>
             <Italian>Bottiglia d'acqua (metà)</Italian>
-            <Japanese>ウォーター ボトル (半分)</Japanese>
+            <Japanese>水のペットボトル (半分)</Japanese>
             <Korean>물병 (절반)</Korean>
             <Polish>Butelka wody (połowa)</Polish>
             <Portuguese>Garrafa de água (meio)</Portuguese>
@@ -635,7 +701,7 @@
             <German>Eine halbvolle Wasserflasche</German>
             <Hungarian>Fél-teljes vizes palack</Hungarian>
             <Italian>Una mezza bottiglia piena d'acqua</Italian>
-            <Japanese>半分入っているウォーター ボトル</Japanese>
+            <Japanese>半分残っている水入りペットボトル</Japanese>
             <Korean>절반만 차 있는 물병입니다.</Korean>
             <Polish>Pół butelki z wodą</Polish>
             <Portuguese>Uma garrafa de água meia cheia</Portuguese>
@@ -652,7 +718,7 @@
             <German>Wasserflasche (leer)</German>
             <Hungarian>Vízpalack (üres)</Hungarian>
             <Italian>Bottiglia d'acqua (vuota)</Italian>
-            <Japanese>ウォーター ボトル (空)</Japanese>
+            <Japanese>水のペットボトル (空)</Japanese>
             <Korean>물병 (비어 있음)</Korean>
             <Polish>Butelka na wodę (pusta)</Polish>
             <Portuguese>Garrafa de água (vazia)</Portuguese>
@@ -669,7 +735,7 @@
             <German>Eine leere Wasserflasche</German>
             <Hungarian>Egy üres palack</Hungarian>
             <Italian>Una bottiglia d'acqua vuota</Italian>
-            <Japanese>空のウォーター ボトル</Japanese>
+            <Japanese>空のウォーターボトル</Japanese>
             <Korean>빈 물병입니다</Korean>
             <Polish>Pusta butelka wody</Polish>
             <Portuguese>Uma garrafa de água vazia</Portuguese>
@@ -789,6 +855,8 @@
             <Russian>Освежающий напиток со вкусом лимона и лайма</Russian>
             <Turkish>Limon Ve Yeşil Limondan Yapılmış Gazlı Bir Içecek</Turkish>
             <Korean>상쾌한 레몬라임향의 탄산음료</Korean>
+            <Spanish>Bebida refrescante de sabor lima y limón</Spanish>
+            <Portuguese>Bebida refrescante de sabor limão e lima</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Can_Franta_Description">
             <English>Orange flavored soft drink with a tingly, fruity taste</English>
@@ -800,17 +868,21 @@
             <Russian>Напиток с апельсиновым вкусом</Russian>
             <Turkish>Gazlı Portakallı Bir Içecek</Turkish>
             <Korean>오렌지 향의 톡쏘는 탄산음료</Korean>
+            <Spanish>Bebida refrescante de sabor naranja, con un chispeante y afrutado sabor.</Spanish>
+            <Portuguese>Bebida refrescante de sabor laranja, com um sabor frutado e formigante.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Can_RedGull_Description">
             <English>Red Gull gives you wings</English>
             <German>Red Gull verleiht Flügel</German>
             <Chinese>紅鷹讓你猛虎添翼</Chinese>
             <Chinesesimp>红鹰让你猛虎添翼</Chinesesimp>
-            <Japanese>レッドガル 翼をさずける</Japanese>
+            <Japanese>レッドガル 翼を授ける</Japanese>
             <Polish>Red Gull doda ci skrzydeł</Polish>
             <Russian>Рэд Гулл окрыляет!</Russian>
             <Turkish>Red Gull kanatlandırrrrr</Turkish>
             <Korean>레드굴은 날개를 달아줘요</Korean>
+            <Spanish>Red Gull te da alas</Spanish>
+            <Portuguese>Red Gull te dá asas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_DisplayName">
             <English>MRE Lamb Curry</English>
@@ -843,7 +915,7 @@
             <Polish>MRE zawierające jagnięcine Curry. Podgrzej dla najlepszego efektu</Polish>
             <Portuguese>Um MRE contendo Lamb Curry. Calor para melhor efeito</Portuguese>
             <Russian>Сухой паёк, содержащий ягнятину карри. Перед употреблением рекомендуется разогреть</Russian>
-            <Spanish>Un MRE que contiene cordero al curry. Calor para el mejor efecto</Spanish>
+            <Spanish>Un MRE que contiene cordero al curry. Calentar para mejor efecto.</Spanish>
             <Turkish>Kuzu Köri içeren bir MRE.</Turkish>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_BeefStew_DisplayName">
@@ -856,6 +928,8 @@
             <Russian>ИРП Тушеная говядина</Russian>
             <Turkish>MRE Dana Yahni</Turkish>
             <Korean>MRE 비프스튜</Korean>
+            <Spanish>MRE Estofado de ternera</Spanish>
+            <Portuguese>MRE ensopado de carne</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_BeefStew_Description">
             <English>An MRE containing Beef Stew. Heat for best effect</English>
@@ -867,6 +941,8 @@
             <Russian>Сухой паёк, содержащий тушеную говядину. Перед употреблением рекомендуется разогреть</Russian>
             <Turkish>Sığır Yahni içeren bir MRE.</Turkish>
             <Korean>비프스튜가 들어있는 MRE입니다. 뜨겁게 먹을 때 가장 좋습니다</Korean>
+            <Spanish>Un MRE que contiene estofado de ternera. Calentar para mejor efecto.</Spanish>
+            <Portuguese>Um MRE contendo ensopado de carne. Aquecer para melhor efeito</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_CreamTomatoSoup_DisplayName">
             <English>MRE Cream Tomato Soup</English>
@@ -1097,7 +1173,7 @@
             <German>Eine humanitäre Ration, die dazu bestimmt ist, in Krisenzeiten als Nahrung für eine Person zu dienen</German>
             <Hungarian>Humanitárius eloszlás, amelynek célja az ember élelmezési ellátottsága a válság idején</Hungarian>
             <Italian>Una razione umanitaria destinata a servire come riserva di cibo di una persona durante le crisi</Italian>
-            <Japanese>人道危機を救う為に配布された食料品</Japanese>
+            <Japanese>危機に瀕した人々の供給食としての使用を目的とした人道配給食</Japanese>
             <Korean>재난 상황에 식량으로 쓸 수 있는 인도주의 차원의 배급식량입니다</Korean>
             <Polish>Racja humanitarna, która ma służyć jako żywność dla danej osoby podczas kryzysów</Polish>
             <Portuguese>Uma Ração Humanitária destinada a servir como alimento alimentar de uma pessoa durante as crises</Portuguese>
@@ -1111,6 +1187,9 @@
             <Polish>Nasiona Słonecznika</Polish>
             <Japanese>ヒマワリの種</Japanese>
             <Chinesesimp>葵花籽</Chinesesimp>
+            <Russian>Семечки подсолнуха</Russian>
+            <Spanish>Pipas de girasol</Spanish>
+            <Portuguese>Sementes de girassol</Portuguese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Description">
             <English>Roasted And Salted</English>
@@ -1119,6 +1198,9 @@
             <Polish>Pieczone i Solone</Polish>
             <Japanese>炒って塩で味付け済</Japanese>
             <Chinesesimp>焙烤盐焗</Chinesesimp>
+            <Russian>Поджаренные и солёные</Russian>
+            <Spanish>Tostadas y saladas</Spanish>
+            <Portuguese>Torradas e salgadas</Portuguese>
         </Key>
     </Package>
 </Project>

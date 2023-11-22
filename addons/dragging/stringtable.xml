@@ -37,7 +37,7 @@
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
-            <Russian>Тащить/Отпустить Объект</Russian>
+            <Russian>Тащить/отпустить объект</Russian>
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
             <Polish>Ciągnij/Puść Obiekt</Polish>
             <Czech>Táhnout/Položit Objekt</Czech>
@@ -55,7 +55,7 @@
         <Key ID="STR_ACE_Dragging_CarryKeybind">
             <English>Carry/Release Object</English>
             <French>Porter/Lâcher un objet</French>
-            <Russian>Нести/Отпустить Объект</Russian>
+            <Russian>Нести/отпустить объект</Russian>
             <Polish>Nieś/Puść objekt</Polish>
             <Japanese>オブジェクトを運ぶ/離す</Japanese>
             <Turkish>Objeyi Taşı/Bırak</Turkish>
@@ -63,6 +63,7 @@
             <German>Objekt tragen/loslassen</German>
             <Chinesesimp>背负/释放物体</Chinesesimp>
             <Korean>물건 업기/놓기</Korean>
+            <Portuguese>Carregar/Soltar Objeto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -104,12 +105,13 @@
             <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
             <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
             <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
-            <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
+            <Russian>Поднять/опустить | (Ctrl + Скролл) Крутить</Russian>
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
             <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
             <Chinesesimp>抬起/放低 |（Ctrl + 鼠标滚轮）旋转</Chinesesimp>
             <Korean>높이기/내리기 | (컨트롤 + 스크롤) 회전</Korean>
+            <Portuguese>Subir/Abaixar | (Ctrl + Scroll) Rotacionar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
             <English>ACE Dragging</English>
@@ -122,6 +124,7 @@
             <Japanese>ACE ドラッグ</Japanese>
             <Chinesesimp>ACE 拖曳</Chinesesimp>
             <Korean>ACE 끌기</Korean>
+            <Portuguese>ACE Arraste</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
@@ -133,7 +136,8 @@
             <Polish>Pozwól na strzelanie podczas przeciągania</Polish>
             <Japanese>搬送中に射撃許可</Japanese>
             <Chinesesimp>允许在拖动时开火</Chinesesimp>
-            <Korean>사격 중 끌기 가능하게 하기</Korean>
+            <Korean>끌기 중 사격 가능하게 하기</Korean>
+            <Portuguese>Permitir disparar enquanto arrasta</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
@@ -145,7 +149,60 @@
             <Polish>Pozwala graczom strzelać z broni podczas przeciągania obiektów.</Polish>
             <Japanese>プレイヤーが引きずっている最中でも射撃できるようにします。</Japanese>
             <Chinesesimp>允许玩家在拖动时开火。</Chinesesimp>
-            <Korean>플레이어가 무기를 끄는 동안에 무기를 사용할 수 있게합니다.</Korean>
+            <Korean>플레이어가 뭔가를 끌고 있는 동안에 무기를 사용할 수 있게 합니다.</Korean>
+            <Portuguese>Permite ao jogador disparar sua arma enquanto arrasta.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_allowRunWithLightweight_DisplayName">
+            <English>Allow Running with Lightweight Objects</English>
+            <Japanese>軽量物を持って走れるようにする</Japanese>
+            <Polish>Zezwól na Bieganie z Lekkimi Obiektami</Polish>
+            <German>Erlauben das Sprinten mit leichten Gegenständen</German>
+            <Korean>가벼운 개체 들고 달리기 허용</Korean>
+            <French>Autoriser la course avec des objets légers</French>
+            <Portuguese>Permitir corrida com objetos leves</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_allowRunWithLightweight_Description">
+            <English>Allow the player to run when carrying lightweight objects.</English>
+            <Japanese>プレイヤーが軽量オブジェクトを持ち運んでいるときに走れるようにする。</Japanese>
+            <Polish>Zezwalaj graczowi na bieganie podczas przenoszenia lekkich przedmiotów.</Polish>
+            <German>Erlauben Sie dem Spieler, zu rennen, wenn er leichte Gegenstände trägt.</German>
+            <Korean>가벼운 개체를 들고 다닐 때 플레이어가 뛸 수 있도록 허용합니다.</Korean>
+            <French>Autorise le joueur à courir lorsqu'il porte un objet léger.</French>
+            <Portuguese>Permite ao jogador correr enquanto carrega objetos leves.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_skipContainerWeight_DisplayName">
+            <English>Skip Object Weight</English>
+            <Japanese>オブジェクトの重量を無視</Japanese>
+            <Polish>Pomiń Wagę Obiektu</Polish>
+            <German>Objektgewicht überspringen</German>
+            <Korean>개체 무게 무시</Korean>
+            <French>Ignorer le poids de l'objet</French>
+            <Portuguese>Ignorar Peso do Objeto</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_skipContainerWeight_Description">
+            <English>Determines whether object's weight is added onto weight calculations.</English>
+            <Japanese>重量計算にオブジェクトの重量を追加するかどうかを決定します。</Japanese>
+            <Polish>Określa, czy waga obiektu jest dodawana do obliczeń ciężaru.</Polish>
+            <German>Legt fest, ob das Gewicht des Objekts zu den Gewichtsberechnungen hinzugefügt wird.</German>
+            <Korean>무게 계산에 개체의 무게를 추가할 지 여부를 결정합니다.</Korean>
+            <French>Défini si le poids d'un objet est ajouté aux calculs du poids.</French>
+            <Portuguese>Determina se o peso do objeto é adicionado aos cálculos de peso.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_weightCoefficient_DisplayName">
+            <English>Max Weight Coefficient</English>
+            <French>Coefficient de poids maximal</French>
+            <Korean>최대 무게 계수</Korean>
+            <Portuguese>Coeficiente Máximo de Peso</Portuguese>
+            <German>Maximaler Gewichtskoeffizient</German>
+            <Japanese>最大重量係数</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Dragging_weightCoefficient_Description">
+            <English>Modifies weight limit calculations. Set to 0 to ignore.</English>
+            <French>Modifie les calculs de limite de poids. Configurer à 0 pour ignorer.</French>
+            <Korean>무게 제한 계산을 수정합니다. 무시하려면 0으로 설정하십시오.</Korean>
+            <Portuguese>Modifica os cálculos do limite de peso. Defina como 0 para ignorar.</Portuguese>
+            <German>Ändert die Berechnung der Gewichtsbegrenzung. Zum Ignorieren auf 0 setzen.</German>
+            <Japanese>重量制限の計算を変更します。 無視するには 0 に設定します。</Japanese>
         </Key>
     </Package>
 </Project>

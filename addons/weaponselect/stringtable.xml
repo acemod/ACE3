@@ -11,7 +11,7 @@
             <French>Afficher du texte lors d'un lancé de grenade</French>
             <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
             <Italian>Mostra indicazioni nel lancio granate</Italian>
-            <Portuguese>Mostrat texto ao lançar granada</Portuguese>
+            <Portuguese>Mostrar texto ao lançar granada</Portuguese>
             <Japanese>手榴弾を投げるときに通知</Japanese>
             <Korean>수류탄 투척 시 화면에 문자 표시</Korean>
             <Chinesesimp>投掷手榴弹时显示提示信息</Chinesesimp>
@@ -27,7 +27,7 @@
             <French>Affiche un texte ou une notification lors d'un lancé de grenade.</French>
             <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
             <Italian>Mostra una notifica quando si lanciano granate</Italian>
-            <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
+            <Portuguese>Mostra uma notificação ou texto ao lançar uma granada</Portuguese>
             <Japanese>手榴弾を投げるときに、ヒントか文で通知します。</Japanese>
             <Korean>수류탄 투척 시 화면에 문자나 힌트를 표시합니다.</Korean>
             <Chinesesimp>投掷手榴弹时显示提示信息。</Chinesesimp>
@@ -397,7 +397,7 @@
             <Chinesesimp>切换碰撞灯</Chinesesimp>
             <Japanese>衝突防止灯を切り替え</Japanese>
             <Polish>Przełącz światła kolizyjne</Polish>
-            <Russian>Вкл/Выкл Бортовые огни</Russian>
+            <Russian>Переключить бортовые огни</Russian>
             <Portuguese>Alternar Luzes de Colisão</Portuguese>
             <Spanish>Alternar luces de colisión</Spanish>
             <Czech>Přepnout kolizní světla</Czech>

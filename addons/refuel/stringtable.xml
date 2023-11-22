@@ -49,6 +49,24 @@
             <Chinese>載具多快會加油完畢?</Chinese>
             <Turkish>Bir araca ne kadar hızlı yakıt ikmali yapılmalıdır?</Turkish>
         </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_DisplayName">
+            <English>Cargo Flow Rate</English>
+            <Korean>화물 주유량</Korean>
+            <Spanish>Caudal de llenado de la carga</Spanish>
+            <Japanese>貨物流量</Japanese>
+            <Polish>Prędkość Tankowania Ładunku</Polish>
+            <German>Frachtflussrate</German>
+            <French>Vitesse de ravitaillement</French>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
+            <English>How fast should a fuel source's tank be filled?</English>
+            <Korean>연료 공급처의 저장 탱크를 얼마나 빨리 채웁니까?</Korean>
+            <Spanish>Cómo de rápido puede llenarse una fuente de combustible.</Spanish>
+            <Japanese>どのくらいの速さで給油源へ給油しますか?</Japanese>
+            <Polish>Jak szybko zbiornik paliwa powinien być napełniany?</Polish>
+            <German>Wie schnell sollte der Tank einer Kraftstoffquelle gefüllt werden?</German>
+            <French>A quelle vitesse le réservoir de carburant doit-il être rempli ?</French>
+        </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
             <German>Betankung</German>
@@ -289,6 +307,15 @@
             <Chinese>開始加油</Chinese>
             <Turkish>Yakıt Doldurmayı Başlat</Turkish>
         </Key>
+        <Key ID="STR_ACE_Refuel_TurnOn_Container">
+            <English>Start fueling (container)</English>
+            <German>Betankung beginnen (Container)</German>
+            <Korean>연료 재급유 시작 (컨테이너)</Korean>
+            <Spanish>Iniciando repostado (contenedor)</Spanish>
+            <Japanese>給油を始める (コンテナ)</Japanese>
+            <Polish>Rozpocznij tankowanie (zbiornik)</Polish>
+            <French>Commencer le ravitaillement (container)</French>
+        </Key>
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
             <German>Kann Zapfpistole nicht anschalten</German>
@@ -465,6 +492,26 @@
             <Chinese>已加入%1公升</Chinese>
             <Turkish>%1 litre dolduruldu</Turkish>
         </Key>
+        <Key ID="STR_ACE_Refuel_TakeFuelCanister">
+            <English>Pick up fuel canister</English>
+            <Japanese>燃料キャニスターを持つ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Refuel_TakeFuelCanisterAction">
+            <English>Picking fuel canister up...</English>
+            <Japanese>燃料キャニスターを持ち上げています・・・</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Refuel_ConnectFuelCanister">
+            <English>Connect fuel canister</English>
+            <Japanese>燃料キャニスターを接続する</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Refuel_ConnectFuelCanisterAction">
+            <English>Connecting fuel canister...</English>
+            <Japanese>燃料キャニスターを接続しています・・・</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Refuel_DisconnectFuelCanister">
+            <English>Disconnect fuel canister</English>
+            <Japanese>燃料キャニスターを外します</Japanese>
+        </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>
             <German>Betankung Schlauchlänge</German>
@@ -484,10 +531,24 @@
         <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_DisplayName">
             <English>Pump/Hose Interaction Time</English>
             <Turkish>Pompa/Hortum Etkileşim Süresi</Turkish>
+            <Korean>펌프/호스 상호작용 시간</Korean>
+            <Russian>Время взаимодействия со шлангом</Russian>
+            <Spanish>Tiempo de interacción con la Bomba/Manguera</Spanish>
+            <Japanese>ポンプとホースのインタラクション時間</Japanese>
+            <Polish>Czas Interakcji z Pompą/Wężem</Polish>
+            <German>Interaktionszeit zwischen Pumpe und Schlauch</German>
+            <French>Temps d'interaction pompe/tuyau</French>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_Description">
             <English>How long refuel interactions take in seconds.</English>
             <Turkish>Saniye biriminde yakıt ikmali etkileşimlerinin süresi.</Turkish>
+            <Korean>연료 재보급 상호작용에 걸리는 시간(초)입니다.</Korean>
+            <Russian>Время в секундах, которое занимает взаимодействие со шлангом.</Russian>
+            <Spanish>Cuanto tiempo en segundos tardan las interacciones de repostado.</Spanish>
+            <Japanese>燃料補給にかかる時間 (秒)</Japanese>
+            <Polish>Jak długo powinna trwać interakcja tankowania w sekundach.</Polish>
+            <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
+            <French>Durée des interactions de ravitaillement en secondes.</French>
         </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
             <English>Fuel Cargo Volume</English>

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, Ruthberg, joko // Jonas
  * Handle the PFH for Bullets

@@ -62,7 +62,7 @@
             <Portuguese>Escoltar Prisioneiro</Portuguese>
             <Hungarian>Fogoly kísérése</Hungarian>
             <Russian>Конвоировать пленного</Russian>
-            <Japanese>捕虜を移動させる</Japanese>
+            <Japanese>捕虜を移送する</Japanese>
             <Korean>포로 호송하기</Korean>
             <Chinese>護送俘虜</Chinese>
             <Chinesesimp>护送俘虏</Chinesesimp>
@@ -79,7 +79,7 @@
             <Portuguese>Largar Prisioneiro</Portuguese>
             <Hungarian>Fogoly elengedése</Hungarian>
             <Russian>Прекратить конвоирование</Russian>
-            <Japanese>捕虜を解放する</Japanese>
+            <Japanese>捕虜を手放す</Japanese>
             <Korean>포로 풀어주기</Korean>
             <Chinese>停止護送俘虜</Chinese>
             <Chinesesimp>停止护送俘虏</Chinesesimp>
@@ -96,7 +96,7 @@
             <Portuguese>Você deve tomá-lo como prisioneiro primeiro!</Portuguese>
             <Hungarian>Először foglyul kell ejtened őt!</Hungarian>
             <Russian>Вы должны сначала арестовать его!</Russian>
-            <Japanese>捕虜を取っている必要があります!</Japanese>
+            <Japanese>先に対象を捕虜にする必要があります!</Japanese>
             <Korean>먼저 포로로 만들어야합니다!</Korean>
             <Chinese>你必須先逮捕他!</Chinese>
             <Chinesesimp>你必须先俘获他！</Chinesesimp>
@@ -136,6 +136,25 @@
             <Chinesesimp>将俘虏带出载具</Chinesesimp>
             <Turkish>Tutukluyu indir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Captives_BlindfoldCaptive">
+            <English>Blindfold Captive</English>
+            <German>Augen verbinden</German>
+            <French>Bandeau sur les yeux du captif</French>
+            <Portuguese>Vendar prisioneiro</Portuguese>
+            <Italian>Benda gli occhi</Italian>
+            <Polish>Załóż opaskę na oczy</Polish>
+            <Korean>포로 눈 가리기</Korean>
+            <Japanese>目隠しをする</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Captives_RemoveBlindfoldCaptive">
+            <English>Remove blindfold</English>
+            <German>Augenbinde entfernen</German>
+            <French>Enlever bandeau sur les yeux</French>
+            <Italian>Rimuovi la benda per gli occhi</Italian>
+            <Polish>Zdejmij opaskę z oczu</Polish>
+            <Korean>눈가리개 풀기</Korean>
+            <Japanese>目隠しを外す</Japanese>
+        </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
             <German>Kabelbinder</German>
@@ -164,7 +183,7 @@
             <Italian>Fascetta per arrestare i prigionieri</Italian>
             <Hungarian>Gyorskötöző, emberek foglyulejtéséhez használható.</Hungarian>
             <Russian>Кабельные стяжки используются для связывания рук при аресте</Russian>
-            <Japanese>ケーブル タイは捕虜を制圧できます。</Japanese>
+            <Japanese>ケーブル タイによって捕虜を拘束することが出来る。</Japanese>
             <Korean>케이블 타이는 포로를 구류시킬때 씁니다.</Korean>
             <Chinese>束線帶可以綁住俘虜</Chinese>
             <Chinesesimp>束线带可以绑住俘虏</Chinesesimp>
@@ -330,7 +349,7 @@
             <Russian>Разрешить игрокам арестовывать юнитов своей стороны</Russian>
             <Italian>I giocatori possono ammanettare unità alleate</Italian>
             <Japanese>プレイヤーが拘束したユニットの陣営を自陣営に変更させます。</Japanese>
-            <Korean>자기편에게 케이블타이를 사용할 수 있게합니다</Korean>
+            <Korean>자기 편에게 케이블 타이를 사용할 수 있게 합니다</Korean>
             <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
             <Chinesesimp>玩家可以使用束线带铐住同阵营队友</Chinesesimp>
         </Key>
@@ -430,7 +449,7 @@
             <English>Require AI surrendering</English>
             <German>Benötigt für KI Kapitulation</German>
             <Italian>Necessita arresa AI</Italian>
-            <Japanese>AI の投降を必要とする</Japanese>
+            <Japanese>AIの投降を必要とする</Japanese>
             <Chinese>需要AI先行投降</Chinese>
             <Chinesesimp>需要 AI 先行投降</Chinesesimp>
             <Korean>AI 항복 필요</Korean>
@@ -445,7 +464,7 @@
             <English>Require AI to surrender before they can be arrested</English>
             <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
             <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
-            <Japanese>AI の拘束は AI が投降している場合に限り可能にします。</Japanese>
+            <Japanese>AIの拘束はAIが投降している場合に限り可能にします。</Japanese>
             <Chinese>在逮捕AI之前該AI必須先進入投降狀態</Chinese>
             <Chinesesimp>在俘获 AI 之前该 AI 必须先进入投降状态。</Chinesesimp>
             <Korean>포박하기 전에 먼저 AI가 투항해야만 합니다.</Korean>

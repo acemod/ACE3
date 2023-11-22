@@ -62,7 +62,7 @@
             <Hungarian>Irányíthatatlan ejtőernyő</Hungarian>
             <Russian>Неуправляемый парашют</Russian>
             <Italian>Paracadute non manovrabile</Italian>
-            <Portuguese>Para-querdas não controlável</Portuguese>
+            <Portuguese>Paraquedas não controlável</Portuguese>
             <Japanese>非操作型パラシュート</Japanese>
             <Korean>비조종 낙하산</Korean>
             <Chinesesimp>非可操控降落伞</Chinesesimp>
@@ -92,7 +92,7 @@
             <French>Parachute de secours</French>
             <Polish>Spadochron awaryjny</Polish>
             <Hungarian>Tartalék ejtőernyő</Hungarian>
-            <Portuguese>Para-quedas de reserva</Portuguese>
+            <Portuguese>Paraquedas de reserva</Portuguese>
             <Russian>Запасной парашют</Russian>
             <Czech>Záložní padák</Czech>
             <Spanish>Paracaídas de reserva</Spanish>
@@ -144,6 +144,7 @@
             <German>Wahrscheinlichkeit, dass ein Fallschirm sich nicht öffnet</German>
             <Chinesesimp>开伞失败率</Chinesesimp>
             <Korean>낙하산 펼치기 실패 확률</Korean>
+            <Spanish>Probabilidad de fallo de paracaidas</Spanish>
         </Key>
     </Package>
 </Project>

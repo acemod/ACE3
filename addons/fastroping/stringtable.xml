@@ -162,7 +162,7 @@
             <French>Déployer les cordes de 3 m</French>
             <Polish>Wysuń linę o długości 3 m.</Polish>
             <Russian>Выпустить 3 м канат</Russian>
-            <Portuguese>Jogar cordar (3m)</Portuguese>
+            <Portuguese>Jogar cordas (3m)</Portuguese>
             <Italian>Dispiegamento corde 3m</Italian>
             <Czech>Připravit 3m lana</Czech>
             <Turkish>3m halat sal</Turkish>
@@ -178,7 +178,7 @@
             <French>Déployer les cordes de 6 m</French>
             <Polish>Wysuń linę o długości 6 m.</Polish>
             <Russian>Выпустить 6 м канат</Russian>
-            <Portuguese>Jogar cordar (6m)</Portuguese>
+            <Portuguese>Jogar cordas (6m)</Portuguese>
             <Italian>Dispiegamento corde 6m</Italian>
             <Czech>Připravit 6m lana</Czech>
             <Turkish>6m halat sal</Turkish>
@@ -195,7 +195,7 @@
             <Japanese>12m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 12 m.</Polish>
             <Russian>Выпустить 12 м канат</Russian>
-            <Portuguese>Jogar cordar (12m)</Portuguese>
+            <Portuguese>Jogar cordas (12m)</Portuguese>
             <Chinese>部屬12公尺長之繩索</Chinese>
             <Chinesesimp>部署12米长的绳索</Chinesesimp>
             <Italian>Dispiegamento corde 12m</Italian>
@@ -211,7 +211,7 @@
             <Japanese>15m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 15 m.</Polish>
             <Russian>Выпустить 15 м канат</Russian>
-            <Portuguese>Jogar cordar (15m)</Portuguese>
+            <Portuguese>Jogar cordas (15m)</Portuguese>
             <Chinese>部屬15公尺長之繩索</Chinese>
             <Chinesesimp>部署15米长的绳索</Chinesesimp>
             <Italian>Dispiegamento corde 15m</Italian>
@@ -227,7 +227,7 @@
             <Japanese>18m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 18 m.</Polish>
             <Russian>Выпустить 18 м канат</Russian>
-            <Portuguese>Jogar cordar (18m)</Portuguese>
+            <Portuguese>Jogar cordas (18m)</Portuguese>
             <Chinese>部屬18公尺長之繩索</Chinese>
             <Chinesesimp>部署18米长的绳索</Chinesesimp>
             <Italian>Dispiegamento corde 18m</Italian>
@@ -243,7 +243,7 @@
             <Japanese>27m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 27 m.</Polish>
             <Russian>Выпустить 27 м канат</Russian>
-            <Portuguese>Jogar cordar (27m)</Portuguese>
+            <Portuguese>Jogar cordas (27m)</Portuguese>
             <Chinese>部屬27公尺長之繩索</Chinese>
             <Chinesesimp>部署27米长的绳索</Chinesesimp>
             <Italian>Dispiegamento corde 27m</Italian>
@@ -259,7 +259,7 @@
             <Japanese>36m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 36 m.</Polish>
             <Russian>Выпустить 36 м канат</Russian>
-            <Portuguese>Jogar cordar (36m)</Portuguese>
+            <Portuguese>Jogar cordas (36m)</Portuguese>
             <Chinese>部屬36公尺長之繩索</Chinese>
             <Chinesesimp>部署36米长的绳索</Chinesesimp>
             <Italian>Dispiegamento corde 36m</Italian>
@@ -313,6 +313,24 @@
             <Spanish>Requiere una cuerda para desplegar</Spanish>
             <Turkish>Halatla kaymak için halat gerekli</Turkish>
             <Korean>줄이 필요합니다</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_displayName">
+            <English>Auto-Equip FRIES</English>
+            <Polish>Automatycznie Zamontuj FRIES</Polish>
+            <Japanese>FRIESの自動装備</Japanese>
+            <German>FRIES automatisch ausrüsten</German>
+            <Korean>FRIES 로프 자동 장착</Korean>
+            <French>Equipement automatique FRIES</French>
+            <Portuguese>Auto-equipar FRIES</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_description">
+            <English>Automatically add FRIES to helicopters that support them.</English>
+            <Polish>Automatycznie dodawaj FRIES do śmigłowców które je wspierają.</Polish>
+            <Japanese>FRIESをサポートするヘリコプターに自動的にFRIESを追加します。</Japanese>
+            <German>FRIES automatisch Helikoptern hinzufügen, die es unterstützen</German>
+            <Korean>로프를 지원하는 헬기에 자동으로 FRIES 로프를 추가합니다.</Korean>
+            <French>Ajoute automatiquement des FRIES aux hélicoptères qui les supportent.</French>
+            <Portuguese>Adiciona automaticamente FRIES a helicópteros que os suportam.</Portuguese>
         </Key>
     </Package>
 </Project>

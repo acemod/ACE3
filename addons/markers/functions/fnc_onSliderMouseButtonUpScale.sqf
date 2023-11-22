@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 10Dozen
  * Scale slider clicked handler. Resets slider pos to 1 on RMB button up.

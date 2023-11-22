@@ -12,7 +12,7 @@
             <Italian>Fulton MX-991</Italian>
             <French>Fulton MX-991</French>
             <Japanese>フルトン MX-991</Japanese>
-            <Korean>Fulton MX-991</Korean>
+            <Korean>풀턴 MX-991</Korean>
             <Chinesesimp>Fulton MX-991 手电筒</Chinesesimp>
             <Chinese>Fulton MX-991</Chinese>
             <Turkish>Fulton MX-991</Turkish>
@@ -44,7 +44,7 @@
             <Italian>Maglite XL50</Italian>
             <French>Maglite XL50</French>
             <Japanese>マグライト XL50</Japanese>
-            <Korean>Maglite XL50</Korean>
+            <Korean>매그라이트 XL50</Korean>
             <Chinesesimp>Maglite XL50 手电筒</Chinesesimp>
             <Chinese>Maglite XL50</Chinese>
             <Turkish>Maglite XL50</Turkish>
@@ -60,7 +60,7 @@
             <Italian>Mini-torcia bianca. Da usare in mappa.</Italian>
             <French>Mini lampe torche blanche. Pour utilisation sur carte.</French>
             <Japanese>白色光の小さなフラッシュライト。地図上で使用します。</Japanese>
-            <Korean>조그마한 하얀색 손전등. 지도를 비출때 씁니다.</Korean>
+            <Korean>조그마한 하얀색 손전등. 지도를 비출 때 씁니다.</Korean>
             <Chinesesimp>白色的迷你手电筒。用来照亮地图。</Chinesesimp>
             <Chinese>白色的迷你手電筒。用來照亮地圖。</Chinese>
             <Turkish>Beyaz küçük el feneri. Harita üzerin de kullanım için.</Turkish>
@@ -126,7 +126,8 @@
             <Turkish>Maglite ML300L</Turkish>
             <Spanish>Maglite ML300L</Spanish>
             <Russian>Maglite ML300L</Russian>
-            <Korean>Maglite ML300L</Korean>
+            <Korean>매그라이트 ML300L</Korean>
+            <Portuguese>Maglite ML300L</Portuguese>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
             <English>Powerful LED flashlight.</English>
@@ -142,6 +143,7 @@
             <Spanish>Linterna LED potente</Spanish>
             <Russian>Мощный светодиодный фонарь.</Russian>
             <Korean>고휘도 LED 손전등.</Korean>
+            <Portuguese>Potente lanterna LED.</Portuguese>
         </Key>
     </Package>
 </Project>

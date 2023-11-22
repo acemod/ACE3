@@ -125,6 +125,8 @@
             <German>Bei Einstellung auf 0 werden die Standard-Videoeinstellungen verwendet.</German>
             <Polish>Ustawienie na 0, spowoduje użycie domyślnych ustawień wideo.</Polish>
             <Japanese>0に設定すると、デフォルトのビデオ設定が使用されます</Japanese>
+            <Russian>Значение 0 будет использовать настройки видео по умолчанию</Russian>
+            <Spanish>Establecer a 0 utiliza las opciones de video por defecto</Spanish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
@@ -388,7 +390,7 @@
             <Hungarian>Látótávolság:</Hungarian>
             <Russian>Дальность видимости:</Russian>
             <Italian>Distanza Visiva:</Italian>
-            <Japanese>視界距離：</Japanese>
+            <Japanese>視界距離:</Japanese>
             <Korean>시야:</Korean>
             <Chinesesimp>视距：</Chinesesimp>
             <Chinese>視野距離:</Chinese>
@@ -416,12 +418,12 @@
             <Spanish>Esta opción no es valida! El limite es</Spanish>
             <Czech>Tato volba je neplatná! Limit je</Czech>
             <German>Diese Option ist ungültig! Die Grenze ist</German>
-            <Portuguese>Essa opção é inválida. O limte é</Portuguese>
+            <Portuguese>Essa opção é inválida. O limite é</Portuguese>
             <French>Cette option est non valide ! La limite est de</French>
             <Hungarian>Ez a beállítás érvénytelen! A maximum mennyiség</Hungarian>
             <Russian>Настройка не верна! Текущий предел</Russian>
             <Italian>Questa opzione è invalida! Il limite è</Italian>
-            <Japanese>このオプションは無効です！制限は</Japanese>
+            <Japanese>このオプションは無効です! 制限は</Japanese>
             <Korean>이 옵션은 불가능합니다! 제한은</Korean>
             <Chinesesimp>该选项是无效的！ 限制是</Chinesesimp>
             <Chinese>該選項是無效的! 限制是</Chinese>

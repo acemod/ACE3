@@ -3,7 +3,7 @@
     <Package name="Medical_Damage">
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_DisplayName">
             <English>Player Critical Damage Threshold</English>
-            <Japanese>プレイヤーのクリティカル ダメージしきい値</Japanese>
+            <Japanese>プレイヤーのクリティカルダメージしきい値</Japanese>
             <French>Seuil de dégât critique du joueur</French>
             <Russian>Порог критического урона игрока</Russian>
             <Portuguese>Limite de Dano Crítico do Jogador</Portuguese>
@@ -18,7 +18,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
-            <Japanese>プレイヤーが気絶になる前に受けられるダメージ量を決定できます。</Japanese>
+            <Japanese>プレイヤーが気絶するまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
             <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
             <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
@@ -34,7 +34,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
-            <Japanese>AI のクリティカル ダメージしきい値</Japanese>
+            <Japanese>AIのクリティカルダメージしきい値</Japanese>
             <French>Seuil de dégât critique de l'IA</French>
             <Russian>Порог критического урона AI</Russian>
             <Portuguese>Limite de Dano Crítico da IA</Portuguese>
@@ -49,7 +49,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
             <English>Sets the amount of damage an AI unit can receive before going unconscious (or dying when "Sum of Trauma" is enabled).</English>
-            <Japanese>AI が気絶になる前に受けられるダメージ量を決定できます。</Japanese>
+            <Japanese>AIが気絶するまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
             <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
@@ -209,7 +209,7 @@
             <Hungarian>Zúzódás</Hungarian>
             <Portuguese>Contusão</Portuguese>
             <Czech>Modřina</Czech>
-            <Japanese>打ち傷</Japanese>
+            <Japanese>打撲傷</Japanese>
             <Korean>멍</Korean>
             <Chinese>挫傷</Chinese>
             <Turkish>Yara</Turkish>
@@ -226,7 +226,7 @@
             <Hungarian>Kis zúzódás</Hungarian>
             <Portuguese>Contusão leve</Portuguese>
             <Czech>Malá modřina</Czech>
-            <Japanese>小さな打ち傷</Japanese>
+            <Japanese>小さな打撲傷</Japanese>
             <Korean>조금 멍듬</Korean>
             <Chinese>小挫傷</Chinese>
             <Turkish>Küçük Yara</Turkish>
@@ -243,7 +243,7 @@
             <Hungarian>Közepes zúzódás</Hungarian>
             <Portuguese>Contusão média</Portuguese>
             <Czech>Středně velká modřina</Czech>
-            <Japanese>中くらいの打ち傷</Japanese>
+            <Japanese>中くらいの打撲傷</Japanese>
             <Korean>꽤 멍듬</Korean>
             <Chinese>中度挫傷</Chinese>
             <Turkish>Orta Yara</Turkish>
@@ -641,14 +641,14 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
             <Russian>Только серьезные попадания в жизненно важные органы</Russian>
-            <Japanese>重要器官に大きなダメージを受けた時のみ</Japanese>
+            <Japanese>重要臓器に大きなダメージを受けた時のみ</Japanese>
             <Chinese>只有重要器官之重傷</Chinese>
             <Chinesesimp>只有重要器官受到重创</Chinesesimp>
             <French>Grosses blessures sur organes vitaux</French>
             <Italian>Solo grandi colpi agli organi vitali</Italian>
             <Czech>Pouze zásahy do životně důležitých orgánů</Czech>
             <Polish>Tylko duże trafienia w ważne narządy</Polish>
-            <Portuguese>Apenas danos largos a órgãos vitais</Portuguese>
+            <Portuguese>Apenas danos graves a órgãos vitais</Portuguese>
             <Spanish>Solo grandes heridas en organos vitales</Spanish>
             <Turkish>Sadece hayati organlara büyük vuruşlar</Turkish>
             <German>Nur schwere Treffer an lebenswichtigen Organen</German>
@@ -657,7 +657,7 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
             <English>Sum of trauma</English>
             <Russian>Совокупность травмы</Russian>
-            <Japanese>外傷の数</Japanese>
+            <Japanese>外傷の合計</Japanese>
             <Chinese>外部創傷累計</Chinese>
             <Chinesesimp>创伤总和</Chinesesimp>
             <French>Somme des traumatismes</French>
@@ -672,14 +672,14 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
             <English>Either</English>
             <Russian>Оба</Russian>
-            <Japanese>両方</Japanese>
+            <Japanese>どちらか</Japanese>
             <Chinese>兩者都是</Chinese>
             <Chinesesimp>二者之一</Chinesesimp>
             <French>Les deux</French>
             <Italian>o</Italian>
             <Czech>Kterýkoliv ze dvou</Czech>
             <Polish>Zarówno</Polish>
-            <Portuguese>Ou</Portuguese>
+            <Portuguese>Ambos</Portuguese>
             <Spanish>Ambos</Spanish>
             <Turkish>Ikisinden biri</Turkish>
             <German>Beide</German>
@@ -694,36 +694,44 @@
             <Polish>Oparzenie</Polish>
             <Chinesesimp>热灼伤</Chinesesimp>
             <Korean>화상</Korean>
+            <Spanish>Quemadura térmica</Spanish>
+            <Portuguese>Queimadura Térmica</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
             <English>Minor Thermal Burn</English>
-            <Japanese>小さな熱傷</Japanese>
+            <Japanese>軽度の熱傷</Japanese>
             <French>Légère brûlure thermique</French>
             <Russian>Незначительный термический ожог</Russian>
             <German>Leichte thermische Verbrennung</German>
             <Polish>Pomniejsze oparzenie</Polish>
             <Chinesesimp>轻微热灼伤</Chinesesimp>
             <Korean>작은 화상</Korean>
+            <Spanish>Quemadura térmica menor</Spanish>
+            <Portuguese>Queimadura Térmica Leve</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
             <English>Medium Thermal Burn</English>
-            <Japanese>中くらいの熱傷</Japanese>
+            <Japanese>中度の熱傷</Japanese>
             <French>Brûlure thermique modérée</French>
             <Russian>Средний термический ожог</Russian>
             <German>Mittlere thermische Verbrennung</German>
             <Polish>Średnie oparzenie</Polish>
             <Chinesesimp>中度热灼伤</Chinesesimp>
             <Korean>꽤 큰 화상</Korean>
+            <Spanish>Quemadura térmica media</Spanish>
+            <Portuguese>Queimadura Térmica Média</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
             <English>Major Thermal Burn</English>
-            <Japanese>大きな熱傷</Japanese>
+            <Japanese>重度の熱傷</Japanese>
             <French>Sévère brûlure thermique</French>
             <Russian>Сильный термический ожог</Russian>
             <German>Schwere thermische Verbrennung</German>
             <Polish>Duże oparzenie</Polish>
             <Chinesesimp>重度热灼伤</Chinesesimp>
             <Korean>심각한 화상</Korean>
+            <Spanish>Quemadura térmica severa</Spanish>
+            <Portuguese>Queimadura Térmica Grave</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>
@@ -737,12 +745,13 @@
             <Spanish>Umbral de daño de unidad</Spanish>
             <Chinesesimp>单位伤害阈值</Chinesesimp>
             <Korean>유닛 피해 한계점</Korean>
+            <Portuguese>Limite de Dano em Unidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
             <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
             <German>Legt die Höhe des Schadens fest, den eine Einheit erhalten kann, bevor diese ohnmächtig wird. (0 für Misionsnormalwert)</German>
             <French>Définit la quantité de dégâts que l'unité peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).\n(0 utilise la valeur définie dans la mission.)</French>
-            <Japanese>ユニットが気絶するまで許容できるダメージ値を設定できます。標準: 0</Japanese>
+            <Japanese>ユニットが気絶するまで許容できるダメージ値を設定できます。(ミッション開始時は0)</Japanese>
             <Czech>Určuje kolik poškození může jednotka utrpět než upadne do bezvědomí. (pro použití standardní hodnoty mise zadejte 0)</Czech>
             <Russian>Устанавливает количество урона, которое может получить юнит перед тем, как потерять сознание. (0 для значения миссии)</Russian>
             <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
@@ -750,28 +759,51 @@
             <Spanish>Determina la cantidad de daño que puede recibir una unidad antes de quedar inconsciente (0 para predeterminado de misión)</Spanish>
             <Chinesesimp>设定一个单位在昏迷前所能承受的伤害量。（任务默认为0）</Chinesesimp>
             <Korean>이 유닛이 얼마나 많은 피해를 받아야 기절할 지 정합니다. (0은 미션 기본 설정을 사용합니다)</Korean>
+            <Portuguese>Define a quantidade de dano que uma unidade pode receber antes de ficar inconsciente. (0 para o padrão da missão)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
             <English>Pain Unconscious Chance</English>
             <Russian>Шанс потерять сознание от боли</Russian>
             <Polish>Szansa na nieprzytomność przez ból</Polish>
-            <Japanese>気絶確率</Japanese>
+            <Japanese>痛みによる気絶確率</Japanese>
             <Spanish>Probabilidad de inconsciencia por dolor</Spanish>
             <French>Douleur - Chance d'évanouissement</French>
             <German>Chance für Bewusslosigkeit durch Schmerz</German>
             <Chinesesimp>疼痛昏厥概率</Chinesesimp>
             <Korean>고통으로 인한 기절 확률</Korean>
+            <Portuguese>Chance de Inconsciência por Dor</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
             <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
             <Russian>Шанс, что человек потеряет сознание, когда его боль выше допустимого порога при получении травмы.</Russian>
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
-            <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確率を設定します。</Japanese>
+            <Japanese>ユニットがダメージを受けた時の痛みが許容しきい値を超えていた場合に気絶する確率を設定します。</Japanese>
             <Spanish>La probabilidad de que una persona caiga inconsciente cuando su dolor está por encima del umbral al haber recibido daño.</Spanish>
             <French>La probabilité pour qu'une personne perde connaissance lorsque la douleur ressentie est supérieure à son seuil de tolérance.</French>
             <German>Die Wahrscheinlichkeit, dass eine Person bewusstlos wird, wenn ihre Schmerzen bei einer Verwundung über der Toleranzschwelle liegen.</German>
             <Chinesesimp>当一个人的疼痛超过承受能力的极限时，他陷入昏迷的概率。</Chinesesimp>
             <Korean>고통 한계점을 넘을 시 기절하는 확률을 정합니다.</Korean>
+            <Portuguese>A probabilidade de uma pessoa ficar inconsciente quando sua dor está acima do limite de tolerância ao receber dano.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_DisplayName">
+            <English>Pain Unconscious Threshold</English>
+            <Russian>Порог боли для потери сознания</Russian>
+            <French>Seuil d'inconscience par la douleur.</French>
+            <Japanese>気絶する痛みのしきい値</Japanese>
+            <Polish>Próg Nieprzytomności od Bólu</Polish>
+            <German>Schmerz-Bewusstlosigkeit-Grenze</German>
+            <Korean>고통 기절 한계점</Korean>
+            <Portuguese>Limite de Dor Antes da Inconsciência</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
+            <English>Sets the threshold for severe pain, above which a person can fall unconscious upon receiving damage.</English>
+            <Russian>Устанавливает количество боли от полученной травмы, при котором юнит может потерять сознание.</Russian>
+            <French>Définis le niveau de douleur à partir duquel une personne peut perdre connaissance. Cf PainUnconsciousChance.</French>
+            <Japanese>激しい痛みのしきい値を設定します。このしきい値を超えた状態でダメージを受けると意識を失う可能性があります。</Japanese>
+            <Polish>Ustawia próg silnego bólu, powyżej którego osoba może stracić przytomność po otrzymaniu obrażeń.</Polish>
+            <German>Legt die Grenze für starke Schmerzen fest, oberhalb derer eine Person bei erlittenem Schaden bewusstlos werden kann.</German>
+            <Korean>사람이 데미지를 입었을 때 의식불명 상태가 될 수 있는 심각한 고통의 한계점을 설정합니다.</Korean>
+            <Portuguese>Define o limite para dor severa, acima do qual uma pessoa pode ficar inconsciente ao receber dano.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
@@ -783,6 +815,7 @@
             <German>Tödliche Verletzung - Wahrscheinlichkeit des Todes</German>
             <Chinesesimp>致命伤死亡概率</Chinesesimp>
             <Korean>치명상 사망 확률</Korean>
+            <Portuguese>Chance de Morte por Ferimento Fatal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
@@ -794,6 +827,7 @@
             <German>Die Wahrscheinlichkeit, an einer eigentlich tödlichen Verletzung zu sterben.</German>
             <Chinesesimp>死于致命伤的概率。</Chinesesimp>
             <Korean>치명상으로 인해 사망할 확률을 정합니다.</Korean>
+            <Portuguese>A chance de morrer para um ferimento fatal.</Portuguese>
         </Key>
     </Package>
 </Project>

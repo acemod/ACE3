@@ -1,8 +1,8 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: mharis001
- * Initializes the 3DEN attribute.
+ * Initializes the 3DEN's ace arsenal attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -23,10 +23,8 @@ TRACE_1("Initializing 3DEN attribute",_value);
 // Store working attribute value
 uiNamespace setVariable [QGVAR(attributeValue), _value];
 
-// Add keyDown EH to display
-// Does not work properly when added to controls group
-private _display = ctrlParent _controlsGroup;
-_display displayAddEventHandler ["KeyDown", {call FUNC(attributeKeyDown)}];
+// Add keyDown EH to display; Does not work properly when added to controls group
+(ctrlParent _controlsGroup) displayAddEventHandler ["KeyDown", {call FUNC(attributeKeyDown)}];
 
 // Handle selected mode
 if (_value select 1 > 0) then {

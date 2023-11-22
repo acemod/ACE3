@@ -147,7 +147,7 @@
             <English>Lead Default Color</English>
             <Portuguese>Cor padrão para o líder</Portuguese>
             <Polish>Domyślny kolor lidera</Polish>
-            <Russian>Лид. цвет по-умолчанию</Russian>
+            <Russian>Лид. цвет по умолчанию</Russian>
             <Czech>Výchozí barva velitele</Czech>
             <Italian>Colore Default Caposquadra</Italian>
             <German>Gruppenführer-Standardfarbe</German>
@@ -167,7 +167,7 @@
             <German>Ersatz-Farbwert für Gruppenführer wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
             <Spanish>Color por defecto para líderes cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
             <French>Définit la couleur par défaut pour les chefs de groupe quand il n'y a pas de réglage de groupe. [Module : laisser vide pour ne pas forcer chez les clients.]</French>
-            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
+            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール:空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없는 경우 리더의 예비 색상 값입니다. [모듈: 클라이언트에서 강체하지 않기 위해 공백으로 비워둘 것]</Korean>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的指示颜色。[模块：此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
@@ -177,7 +177,7 @@
             <English>Default Color</English>
             <Portuguese>Cor padrão</Portuguese>
             <Polish>Kolor domyślny</Polish>
-            <Russian>Цвет по-умолчанию</Russian>
+            <Russian>Цвет по умолчанию</Russian>
             <Czech>Výchozí barva</Czech>
             <Italian>Colore Default</Italian>
             <German>Standardfarbe</German>
@@ -198,7 +198,7 @@
             <German>Ersatz-Farbwert wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
             <Spanish>Color por defecto cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
             <French>Définit la couleur par défaut quand il n'y a pas de réglage pour le groupe. [Module : laisser vide pour ne pas forcer chez les clients.]</French>
-            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
+            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール:空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없을 경우의 예비 색상입니다. [모듈: 클라이언트에서 강체하지 않기 위해 공백으로 비워둘 것]</Korean>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的指示颜色。[模块：此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
@@ -275,6 +275,7 @@
             <German>Nur Gesten befreundeter Einheiten zeigen</German>
             <Chinesesimp>仅显示友军指示</Chinesesimp>
             <Korean>아군 신호만 보기</Korean>
+            <Portuguese>Mostrar somente gestos aliados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_description">
             <English>Shows only Gestures from Units that are from the same side or a Friendly side.</English>
@@ -286,6 +287,7 @@
             <German>Nur Gesten von Einheiten der selben oder einer verbündeten Seite zeigen.</German>
             <Chinesesimp>仅显示来自同一阵营或友军的单位的指示。</Chinesesimp>
             <Korean>같은 진영 혹은 아군 진영 인원들만 보이게 합니다.</Korean>
+            <Portuguese>Mostra somente gestos de unidades que são do mesmo lado ou de um lado aliado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_displayName">
             <English>Max range Camera</English>
@@ -297,6 +299,7 @@
             <German>Maximale Kamerareichweite</German>
             <Chinesesimp>摄像机最大范围</Chinesesimp>
             <Korean>카메라와 지도 신호의 최대 거리</Korean>
+            <Portuguese>Distância máxima da câmera</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_description">
             <English>Max range between a Camera and players to show the map gesture indicator</English>
@@ -308,6 +311,7 @@
             <German>Maximale Reichweite, in der eine Kamera das Kartenzeichen der Spieler zeigt</German>
             <Chinesesimp>摄像机和玩家之间的最大范围显示地图指示</Chinesesimp>
             <Korean>카메라와 플레이어간 지도 신호를 볼 수 있는 최대 거리를 정합니다</Korean>
+            <Portuguese>Distância máxima entre uma câmera e jogadores para mostrar o indicador de gestos no mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_displayName">
             <English>Allow Spectator</English>
@@ -319,6 +323,7 @@
             <German>Erlaube Zuschauer</German>
             <Chinesesimp>允许旁观者</Chinesesimp>
             <Korean>관전자 허용</Korean>
+            <Portuguese>Permitir espectador</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_description">
             <English>Allows Spectator to See Map Gestures</English>
@@ -330,6 +335,7 @@
             <German>Erlaube, dass Zuschauer das Kartenzeichen sehen können</German>
             <Chinesesimp>允许旁观者查看地图指示</Chinesesimp>
             <Korean>관전자가 지도 신호를 볼 수 있습니다</Korean>
+            <Portuguese>Permite espectadores verem o indicador de gestos no mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_displayName">
             <English>Allow Curator</English>
@@ -341,6 +347,7 @@
             <German>Erlaube Zeus</German>
             <Chinesesimp>允许宙斯</Chinesesimp>
             <Korean>큐레이터 허용</Korean>
+            <Portuguese>Permitir curador</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_description">
             <English>Allows Curator to See Map Gestures</English>
@@ -352,6 +359,7 @@
             <German>Erlaube, dass Zeus das Kartenzeichen sehen kann</German>
             <Chinesesimp>允许宙斯查看地图指示</Chinesesimp>
             <Korean>큐레이터가 지도 신호를 볼 수 있습니다</Korean>
+            <Portuguese>Permite curadores verem o indicador de gestos no mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_displayName">
             <English>Briefing Mode</English>
@@ -363,6 +371,7 @@
             <German>Briefing-Modus</German>
             <Chinesesimp>简报模式</Chinesesimp>
             <Korean>브리핑 모드</Korean>
+            <Portuguese>Modo de briefing</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_description">
             <English>What player can see what</English>
@@ -374,6 +383,7 @@
             <German>Welcher Spieler kann was sehen</German>
             <Chinesesimp>什么玩家能看到什么</Chinesesimp>
             <Korean>어떤 플레이어가 볼 수 있는지 정합니다</Korean>
+            <Portuguese>O que cada jogador pode ver</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Disabled">
             <English>Disabled</English>
@@ -385,6 +395,7 @@
             <German>Deaktiviert</German>
             <Chinesesimp>禁用</Chinesesimp>
             <Korean>비활성화</Korean>
+            <Portuguese>Desativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Group">
             <English>Group</English>
@@ -424,6 +435,7 @@
             <Polish>Tylko w pobliżu</Polish>
             <Chinesesimp>附近</Chinesesimp>
             <Korean>근처</Korean>
+            <Portuguese>Proximidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_All">
             <English>All</English>

@@ -61,7 +61,7 @@
             <Italian>Metti l'arma nella borsa per armi</Italian>
             <Chinesesimp>将武器放置枪袋</Chinesesimp>
             <Chinese>將武器放置槍袋</Chinese>
-            <Portuguese>Colocar arma na Bosla de Arma</Portuguese>
+            <Portuguese>Colocar arma na Bolsa de Arma</Portuguese>
             <Turkish>Silahını silah çantasına koy</Turkish>
             <Spanish>Poner el arma en la funda</Spanish>
         </Key>
@@ -76,11 +76,12 @@
             <German>Waffe in Waffentasche tauschen</German>
             <Chinesesimp>交换枪袋中的武器</Chinesesimp>
             <Korean>총가방 안에 있는 무기랑 교환하기</Korean>
+            <Portuguese>Trocar arma na Bolsa de Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_DisplayName">
             <English>Enable Weapon Swap</English>
             <Polish>Aktywuj wymianę broni</Polish>
-            <Russian>Включить обмен оружием</Russian>
+            <Russian>Вкл. обмен оружием</Russian>
             <French>Activer l'échange d'arme</French>
             <Japanese>武器交換を有効化</Japanese>
             <Turkish>Silah Değiştirmeyi Etkinleştir</Turkish>
@@ -88,6 +89,7 @@
             <German>Aktiviere Tauschen von Waffen</German>
             <Chinesesimp>启用武器互换</Chinesesimp>
             <Korean>무기 교환 활성화</Korean>
+            <Portuguese>Habilitar Troca de Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_Description">
             <English>Allows interaction to directly swap the primary weapon and stored weapon.</English>
@@ -99,7 +101,8 @@
             <Spanish>Permitir interacción para intercambiar el arma principal y el arma guardada.</Spanish>
             <German>Erlaube den direkten Wechsel von Primärer und verstauter Waffe über das Interaktionsmenü.</German>
             <Chinesesimp>允许互动直接切换主武器和存储武器。</Chinesesimp>
-            <Korean>보관 중인 무기와 주무기와 바로 바꾸는 것을 허용합니다.</Korean>
+            <Korean>보관 중인 무기를 주무기와 바로 바꾸는 것을 허용합니다.</Korean>
+            <Portuguese>Permite interação para trocar a arma primária e a arma armazenada.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>

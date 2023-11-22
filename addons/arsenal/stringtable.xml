@@ -98,7 +98,7 @@
             <Turkish>Kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_noVirtualItems">
-            <English>No virtual item available</English>
+            <English>No virtual items available</English>
             <Spanish>Ningún objeto virtual disponible</Spanish>
             <French>Aucun objet virtuel disponible.</French>
             <German>Kein virtuelles Objekt verfügbar</German>
@@ -149,7 +149,7 @@
             <English>[Shift+Click to save to mission defaults]</English>
             <Spanish>[Shift+Click para guardar equipamiento predefinido</Spanish>
             <German>[Umschalt+Linksklick um als Standard-Missionsausrüstung zu speichern]</German>
-            <Japanese>[Shift + クリック] でミッション標準として保存します</Japanese>
+            <Japanese>[Shift + クリックでミッション標準として保存します]</Japanese>
             <Polish>Shift + Klik aby zapisac jako domyślne dla misji </Polish>
             <Russian>[Shift+Клик, чтобы сохранить в настройках по умолчанию]</Russian>
             <Portuguese>[Shift+Clique para salvar nos padrões da missão]</Portuguese>
@@ -279,7 +279,7 @@
             <French>Équipements prédéfinis</French>
             <German>Standard-Ausrüstungen</German>
             <Polish>Domyślne zestawy</Polish>
-            <Japanese>標準の装備</Japanese>
+            <Japanese>標準装備</Japanese>
             <Italian>Equipaggiamenti standard</Italian>
             <Korean>기본 로드아웃</Korean>
             <Chinese>預設裝備</Chinese>
@@ -295,7 +295,7 @@
             <French>Sets d'équipement mis à disposition par le créateur de mission.</French>
             <German>Ausrüstungen, die durch den Missionsersteller zur Verfügung gestellt worden sind</German>
             <Polish>Zestawy udostępnione przez twórcę misji</Polish>
-            <Japanese>装備はミッション著者によって利用できます</Japanese>
+            <Japanese>ミッション著者によって作成された装備です</Japanese>
             <Italian>Equipaggiamenti resi disponibili dal creatore della missione</Italian>
             <Korean>미션메이커가 허용한 로드아웃</Korean>
             <Chinese>任務作者提供的預設裝備</Chinese>
@@ -359,7 +359,7 @@
             <French>Trier par quantité</French>
             <German>Nach Menge sortieren</German>
             <Polish>Sortuj wg ilości</Polish>
-            <Japanese>量で並び替え</Japanese>
+            <Japanese>数量で並び替え</Japanese>
             <Italian>Ordina per quantitativo</Italian>
             <Korean>갯수 순서로 정렬</Korean>
             <Chinese>以數量排序</Chinese>
@@ -379,6 +379,7 @@
             <Polish>Sortuj po rozmiarze</Polish>
             <Korean>공간 순서로 정렬</Korean>
             <Chinesesimp>以容量排序</Chinesesimp>
+            <Portuguese>Ordenar por capacidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
             <English>Sort by accuracy</English>
@@ -391,6 +392,7 @@
             <Polish>Sortuj po celności</Polish>
             <Korean>정확도 순서로 정렬</Korean>
             <Chinesesimp>以精度排序</Chinesesimp>
+            <Portuguese>Ordenar por precisão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
             <English>Sort by rate of fire</English>
@@ -403,6 +405,7 @@
             <Polish>Sortuj po szybkostrzelności</Polish>
             <Korean>발사속도 순서로 정렬</Korean>
             <Chinesesimp>以射速排序</Chinesesimp>
+            <Portuguese>Ordenar por cadência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
@@ -414,6 +417,7 @@
             <Polish>Sortuj po przybliżeniu</Polish>
             <Korean>배율 순서로 정렬</Korean>
             <Chinesesimp>以放大倍数排序</Chinesesimp>
+            <Portuguese>Ordenar por magnificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagCountText">
             <English>Sort by ammo count</English>
@@ -426,6 +430,7 @@
             <Polish>Sortuj po ilości amunicji</Polish>
             <Korean>총알 갯수 순서롤 정렬</Korean>
             <Chinesesimp>以弹量排序</Chinesesimp>
+            <Portuguese>Ordenar por quantidade de munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
@@ -437,6 +442,7 @@
             <German>Nach ballistischem Schutz sortieren</German>
             <Korean>방탄 성능 순서로 정렬</Korean>
             <Chinesesimp>以防弹性能排序</Chinesesimp>
+            <Portuguese>Ordenar por proteção balística</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
@@ -448,6 +454,7 @@
             <German>Nach Explosionsschutz sortieren</German>
             <Korean>방폭 성능 순서로 정렬</Korean>
             <Chinesesimp>以防爆性能排序</Chinesesimp>
+            <Portuguese>Ordenar por proteção a explosivos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -503,7 +510,7 @@
             <French>La liste des équipements prédéfinis est vide !</French>
             <German>Die Standard-Ausrüstungen-Liste ist leer!</German>
             <Polish>Lista domyślnych zestawów jest pusta!</Polish>
-            <Japanese>標準の装備一欄が空です!</Japanese>
+            <Japanese>標準装備の一覧は空です!</Japanese>
             <Italian>La lista degli equipaggiamenti standard è vuota!</Italian>
             <Korean>기본 로드아웃 목록이 비어있습니다!</Korean>
             <Chinese>沒有預設的裝備清單!</Chinese>
@@ -519,7 +526,7 @@
             <French>Liste des équipements prédéfinis exportée dans le presse-papier.</French>
             <German>Standard-Ausrüstungen-Liste in die Zwischenablage exportiert</German>
             <Polish>Lista domyślnych zestawów została eksportowana do schowka</Polish>
-            <Japanese>標準の装備一欄はクリップボードへエクスポートされました</Japanese>
+            <Japanese>標準装備の一覧をクリップボードへエクスポートしました</Japanese>
             <Italian>La lista degli equipaggiamenti standard è stata esportata negli appunti</Italian>
             <Korean>클립보드에 기본 로드아웃 목록 내보내기</Korean>
             <Chinese>預設的裝備清單已匯出到剪貼簿中</Chinese>
@@ -535,7 +542,7 @@
             <French>Équipement actuel exporté dans le presse-papier.</French>
             <German>Derzeitige Ausrüstung in die Zwischenablage exportiert</German>
             <Polish>Obecny zestaw został eksportowany do schowka</Polish>
-            <Japanese>現在の装備はクリップボードへ出力されました</Japanese>
+            <Japanese>現在の装備をクリップボードへ出力しました</Japanese>
             <Italian>Equipaggiamento corrente esportato negli appunti</Italian>
             <Korean>현재 로드아웃을 클립보드로 내보냈습니다.</Korean>
             <Chinese>當前的裝備已匯出到剪貼簿中</Chinese>
@@ -567,7 +574,7 @@
             <French>Liste des équipements prédéfinis importée depuis le presse-papier.</French>
             <German>Standard-Ausrüstungen-Liste aus der Zwischenablage importiert</German>
             <Polish>Lista domyślnych zestawów została importowana ze schowka</Polish>
-            <Japanese>標準の装備一欄はクリップボードからインポートされました</Japanese>
+            <Japanese>標準装備の一覧をクリップボードからインポートしました</Japanese>
             <Italian>La lista degli equipaggiamenti standard è stata importata dagli appunti</Italian>
             <Korean>클립보드에서 기본 로드아웃 가져오기</Korean>
             <Chinese>預設的裝備清單已從剪貼簿中匯入</Chinese>
@@ -583,7 +590,7 @@
             <French>Set d'équipement importé depuis le presse-papier.</French>
             <German>Ausrüstung aus der Zwischenablage importiert</German>
             <Polish>Zestaw został importowany ze schowka</Polish>
-            <Japanese>装備はクリップボードからインポートされました</Japanese>
+            <Japanese>装備をクリップボードからインポートしました</Japanese>
             <Italian>Equipaggiamento importato dagli appunti</Italian>
             <Korean>클립보드에서 로드아웃을 가져왔습니다.</Korean>
             <Chinese>裝備已從剪貼簿中匯入</Chinese>
@@ -764,7 +771,7 @@
             <Korean>모드 아이콘 허가</Korean>
             <Chinese>啟用模組圖示</Chinese>
             <Chinesesimp>启用模组图示</Chinesesimp>
-            <Russian>Включить иконки модов</Russian>
+            <Russian>Вкл. иконки модов</Russian>
             <Portuguese>Ativar ícones de mods</Portuguese>
             <Czech>Zapnout ikony modů</Czech>
             <Turkish>Mod simgelerini etkinleştir</Turkish>
@@ -775,7 +782,7 @@
             <French>Taille de police des panneaux</French>
             <German>Schrifthöhe für die linke und rechte Liste</German>
             <Polish>Wysokość czcionki</Polish>
-            <Japanese>パネルにあるフォントの高さ</Japanese>
+            <Japanese>パネルのフォントの高さ</Japanese>
             <Italian>Altezza carattere del pannello</Italian>
             <Korean>패널 폰트 높이</Korean>
             <Chinese>面板字體高度</Chinese>
@@ -791,7 +798,7 @@
             <French>Autoriser les équipements prédéfinis</French>
             <German>Erlaubt die Benutzung der Standardausrüstungen</German>
             <Polish>Zezwól na użycie domyślnych zestawów</Polish>
-            <Japanese>標準の装備を許可</Japanese>
+            <Japanese>標準装備を許可</Japanese>
             <Italian>Consenti equipaggiamenti standard</Italian>
             <Korean>기본 로드아웃 허용</Korean>
             <Chinese>允許預設裝備</Chinese>
@@ -807,7 +814,7 @@
             <French>Autoriser le partage des sets d'équipement</French>
             <German>Erlaubt das Teilen von Ausrüstungen</German>
             <Polish>Zezwól na udostępnianie zestawów</Polish>
-            <Japanese>装備の共有を許可</Japanese>
+            <Japanese>装備共有を許可</Japanese>
             <Italian>Consenti condivisione equipaggiamenti</Italian>
             <Korean>로드아웃 공유 허용</Korean>
             <Chinese>允許分享裝備</Chinese>
@@ -902,7 +909,7 @@
             <Spanish>Permitir el uso de la pestaña de equipamientos por defecto</Spanish>
             <French>Active l'onglet "Équipements prédéfinis".</French>
             <Polish>Zezwól na użycie zakładki domyślnych zestawów</Polish>
-            <Japanese>標準の装備タブの使用を許可します</Japanese>
+            <Japanese>標準装備タブの使用を許可します</Japanese>
             <Italian>Consenti l'uso della sezione per gli equipaggiamenti standard</Italian>
             <Korean>기본 로드아웃 탭 사용 허가</Korean>
             <German>Erlaube die Nutzung des Standardausrüstungsreiters</German>
@@ -934,7 +941,7 @@
             <Spanish>Cambiar el tamaño de fuente para el texto de los paneles izquierdo y derecho</Spanish>
             <French>Change la taille de police des panneaux latéraux.</French>
             <Polish>Zmień wysokość czcionki dla tekstu lewego i prawego panelu</Polish>
-            <Japanese>パネルにあるフォントの高さを変更します。</Japanese>
+            <Japanese>パネルのフォントの高さを変更します。</Japanese>
             <Italian>Cambia l'altezza del font per il testo sul pannello sinistro / destro</Italian>
             <Korean>왼쪽 / 오른쪽 패널 텍스트의 글꼴 높이 변경</Korean>
             <German>Ändert die Schriftgröße für die linke/rechte Leiste</German>
@@ -982,7 +989,7 @@
             <Spanish>Importar equipamientos de BI Arsenal hacia el arsenal de ACE</Spanish>
             <French>Importer les sets BI VA dans l'arsenal ACE</French>
             <German>Importiert die BI-VA-Ausrüstungen in das ACE-Arsenal</German>
-            <Japanese>標準の VA 装備から ACE 武器庫へ取り込み</Japanese>
+            <Japanese>バニラ弾薬庫の装備をACE武器庫へインポート</Japanese>
             <Korean>바닐라 로드아웃을 ACE 아스날로 가져오기</Korean>
             <Chinese>匯入BI原廠虛擬軍火庫的裝備到ACE虛擬軍火庫中</Chinese>
             <Chinesesimp>导入 BI 原版虚拟军火库的负载到 ACE 虚拟军火库中</Chinesesimp>
@@ -997,7 +1004,7 @@
             <Spanish>Ninguna unidad de jugador disponible! Coloca una unidad y márcala como "Jugador".</Spanish>
             <French>Aucune unité joueur disponible ! Placez une unité et marquez-la en tant que "joueur".</French>
             <German>Keine Spielereinheit verfügbar. Setze eine Einheit und markiere sie als "Spieler".</German>
-            <Japanese>プレイヤー ユニットがありません!ユニットを設置し"Player"と名付けてください。</Japanese>
+            <Japanese>プレイヤーユニットがありません!ユニットを設置し"プレイヤー"に設定してください。</Japanese>
             <Korean>플레이어 유닛을 사용할 수 없습니다! 유닛을 놓고 "플레이어"라고 표시하십시오.</Korean>
             <Chinese>沒有可用的玩家單位!請擺放一個單位並設定成"玩家"</Chinese>
             <Chinesesimp>没有可用的玩家单位！请摆放一个单位并设定成“玩家”。</Chinesesimp>
@@ -1240,6 +1247,70 @@
             <Turkish>Desteklenmiyor</Turkish>
             <Korean>지원되지 않음</Korean>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionModeGeneric">
+            <English>Vision Mode</English>
+            <German>Sichtmodus</German>
+            <Japanese>ビジョン モード</Japanese>
+            <Italian>Modalità Visiva</Italian>
+            <Chinese>視覺模式</Chinese>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Korean>보기 모드</Korean>
+            <French>Mode de vision</French>
+            <Polish>Tryb Wizji</Polish>
+            <Russian>Режим видения</Russian>
+            <Portuguese>Modo de Visão</Portuguese>
+            <Czech>Režim sledování</Czech>
+            <Turkish>Görüş Modu</Turkish>
+            <Spanish>Modo de visión</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionNormal">
+            <English>Normal</English>
+            <German>Normal</German>
+            <Polish>Normalna</Polish>
+            <Portuguese>Normal</Portuguese>
+            <Russian>Нормальное</Russian>
+            <Czech>Normální</Czech>
+            <Spanish>Normal</Spanish>
+            <Italian>Normale</Italian>
+            <French>Normale</French>
+            <Japanese>通常</Japanese>
+            <Korean>일반</Korean>
+            <Chinesesimp>正常</Chinesesimp>
+            <Chinese>正常</Chinese>
+            <Turkish>Normal</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionNight">
+            <English>Night</English>
+            <German>Nacht</German>
+            <Polish>Noc</Polish>
+            <Portuguese>Visão Norturna</Portuguese>
+            <Russian>Ночное</Russian>
+            <Czech>Noční</Czech>
+            <Spanish>Nocturna</Spanish>
+            <Italian>Notturno</Italian>
+            <French>Nocturne</French>
+            <Japanese>暗視装置</Japanese>
+            <Korean>야간</Korean>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
+            <Turkish>Gece</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_VisionThermal">
+            <English>Thermal</English>
+            <German>Wärme</German>
+            <Polish>Termo</Polish>
+            <Portuguese>Térmica</Portuguese>
+            <Russian>Тепловизор</Russian>
+            <Czech>Termální</Czech>
+            <Spanish>Térmica</Spanish>
+            <Italian>Termico</Italian>
+            <French>Thermique</French>
+            <Japanese>熱源画像</Japanese>
+            <Korean>열상</Korean>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Chinese>熱成像</Chinese>
+            <Turkish>Termal</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <Spanish>Página</Spanish>
@@ -1261,12 +1332,12 @@
             <Spanish>Habilitar las pestañas de caras / voces / insignias</Spanish>
             <German>Aktiviere die Gesichter-, Stimmen- und Abzeichenübersicht</German>
             <French>Activer les onglets visages/voix/insignes</French>
-            <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
+            <Japanese>顔 / 声 / 記章(バッジ)タブを有効化</Japanese>
             <Chinesesimp>启用脸谱/语音/徽章选项</Chinesesimp>
             <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
             <Italian>Abilita volti, voci e insegne</Italian>
             <Polish>Aktywuj zakładki twarz / głos / insygnia</Polish>
-            <Russian>Включить вкладки Лиц / Голосов / Знаков различия</Russian>
+            <Russian>Вкл. вкладки: лица, голоса, эмблемы</Russian>
             <Portuguese>Ativar as abas de rostos / vozes / insígnias</Portuguese>
             <Czech>Povolit záložky s tvářemi, hlasy a insigniemi</Czech>
             <Turkish>Yüzler/sesler/peçler bölmelerini etkinleştir</Turkish>
@@ -1432,7 +1503,7 @@
             <Spanish>Tiempo de vida</Spanish>
             <German>Lebenszeit</German>
             <French>Durée d'expiration</French>
-            <Japanese>有効時間</Japanese>
+            <Japanese>効力持続時間</Japanese>
             <Polish>Czas by żyć</Polish>
             <Italian>Scadenza (TTL)</Italian>
             <Russian>Время действия</Russian>
@@ -1453,6 +1524,7 @@
             <German>Detonationsverzögerung</German>
             <Chinesesimp>引信时间</Chinesesimp>
             <Korean>신관 시간</Korean>
+            <Portuguese>Atraso de detonação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
@@ -1464,15 +1536,139 @@
             <Spanish>Detona mediante impacto</Spanish>
             <Chinesesimp>碰炸引信</Chinesesimp>
             <Korean>충격 신관</Korean>
+            <Portuguese>Detona por impacto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveFaceSetting">
             <English>Save Face</English>
+            <Korean>얼굴 저장</Korean>
+            <Russian>Сохранить лицо</Russian>
+            <Spanish>Guardar Cara</Spanish>
+            <Japanese>顔の保存</Japanese>
+            <Polish>Zapisz Twarz</Polish>
+            <German>Gesicht Speichern</German>
+            <French>Sauvegarder le visage</French>
+            <Portuguese>Salvar Rosto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
+            <Korean>목소리 저장</Korean>
+            <Russian>Сохранить голос</Russian>
+            <Spanish>Guardar Voz</Spanish>
+            <Japanese>声の保存</Japanese>
+            <Polish>Zapisz Głos</Polish>
+            <German>Stimme Speichern</German>
+            <French>Sauvegarder la voix</French>
+            <Portuguese>Salvar Voz</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
+            <Korean>계급장 저장</Korean>
+            <Russian>Сохранить эмблему</Russian>
+            <Spanish>Guardar Insignia</Spanish>
+            <Japanese>記章(バッジ)の保存</Japanese>
+            <Polish>Zapisz Naszywkę</Polish>
+            <German>Insignia Speichern</German>
+            <French>Sauvegarder l'insigne</French>
+            <Portuguese>Salvar Insígnia</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortDescending">
+            <English>Descending</English>
+            <Japanese>降順</Japanese>
+            <Polish>Malejąco</Polish>
+            <German>Absteigend</German>
+            <Korean>내림차순</Korean>
+            <French>Décroissant</French>
+            <Portuguese>Decrescente</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortAscending">
+            <English>Ascending</English>
+            <Japanese>昇順</Japanese>
+            <Polish>Rosnąco</Polish>
+            <German>Aufsteigend</German>
+            <Korean>오름차순</Korean>
+            <French>Croissant</French>
+            <Portuguese>Crescente</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_toolsTab">
+            <English>Tools</English>
+            <Czech>Nástroje</Czech>
+            <German>Werkzeuge</German>
+            <Russian>Инструменты</Russian>
+            <Polish>Narzędzia</Polish>
+            <Italian>Strumenti</Italian>
+            <Spanish>Herramientas</Spanish>
+            <French>Outils</French>
+            <Chinese>工具</Chinese>
+            <Japanese>ツール</Japanese>
+            <Korean>도구</Korean>
+            <Portuguese>Ferramentas</Portuguese>
+            <Chinesesimp>工具</Chinesesimp>
+            <Turkish>Araçlar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statMagCount">
+            <English>Ammo count</English>
+            <Japanese>弾薬数</Japanese>
+            <Polish>Ilość amunicji</Polish>
+            <German>Munitionszahl</German>
+            <Korean>장탄 수</Korean>
+            <French>Nombre de munitions</French>
+            <Portuguese>Quantidade de munição</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statIlluminators">
+            <English>Illuminators</English>
+            <French>Illuminateurs</French>
+            <Korean>조명</Korean>
+            <Portuguese>Iluminadores</Portuguese>
+            <Japanese>イルミネーター</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
+            <English>Default to Favorites</English>
+            <Japanese>お気に入りをデフォルト</Japanese>
+            <Polish>Domyślnie do Ulubionych</Polish>
+            <German>Standardmäßig auf Favoriten eingestellt</German>
+            <Korean>즐겨찾기 기본값</Korean>
+            <French>Favoris par défaut</French>
+            <Portuguese>Favoritos por padrão</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
+            <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
+            <Japanese>ACE Arsenalがデフォルトで全てのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
+            <Polish>Kontroluje, czy ACE Arsenal domyślnie wyświetla wszystkie przedmioty, czy tylko ulubione.</Polish>
+            <German>Steuert, ob das ACE Arsenal standardmäßig alle Gegenstände oder nur Favoriten anzeigt.</German>
+            <Korean>ACE 아스널이 기본적으로 모든 아이템 또는 즐겨찾기를 표시할 지 여부를 조정합니다.</Korean>
+            <French>Contrôle si l'arsenal ACE affiche par défaut tous les éléments ou les favoris.</French>
+            <Portuguese>Controla se o Arsenal ACE exibe por padrão todos os itens ou favoritos.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
+            <English>Favorites Color</English>
+            <Japanese>お気に入りの色</Japanese>
+            <Polish>Kolor Ulubionych</Polish>
+            <German>Favoritenfarbe</German>
+            <Korean>즐겨찾기 색상</Korean>
+            <French>Couleurs favorites</French>
+            <Portuguese>Cor dos favoritos</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
+            <English>Highlight color for favorited items.</English>
+            <Japanese>お気に入りアイテムのハイライト色。</Japanese>
+            <Polish>Kolor podświetlenia ulubionych elementów.</Polish>
+            <German>Hervorhebungsfarbe für Lieblingsgegenstände.</German>
+            <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
+            <French>Met en surbrillance les éléments favoris.</French>
+            <Portuguese>Cor de destaque para itens favoritados.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
+            <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
+            <Japanese>すべてのアイテムの表示とお気に入りの表示を切り替えます。\nアイテムを追加または削除するには、Shift キーを押しながらダブルクリックします。</Japanese>
+            <Polish>Przełączanie między wyświetlaniem wszystkich przedmiotów lub tylko ulubionych. \nKliknij dwukrotnie, przytrzymując Shift, aby dodać lub usunąć przedmiot.</Polish>
+            <German>Wechseln Sie zwischen der Anzeige aller Elemente oder Ihrer Favoriten.\nDoppelklicken Sie bei gedrückter Umschalttaste, um ein Element hinzuzufügen oder zu entfernen.</German>
+            <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
+            <French>Change entre l'affichage de tous les éléments ou de vos favoris.\nDouble-cliquez en maintenant la touche Maj enfoncée pour ajouter ou supprimer un élément.</French>
+            <Portuguese>Alterna entre a exibição de todos os itens ou seus favoritos.\nClique duas vezes enquanto mantém pressionada a tecla Shift para adicionar ou remover um item.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonSearchTooltip">
+            <English>Search\nCTRL + Click to enable live results</English>
+            <Japanese>検索\nCTRL + クリックでライブ結果を有効にします</Japanese>
         </Key>
     </Package>
 </Project>

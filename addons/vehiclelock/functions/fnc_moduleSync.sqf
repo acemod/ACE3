@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Function for sync module.  Assigns keys for all synced vehicles to any players that are synced.

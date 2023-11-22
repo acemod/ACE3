@@ -26,6 +26,7 @@
             <German>NS-Brille (1. Gen., braun)</German>
             <Chinesesimp>夜视仪（一代，棕色）</Chinesesimp>
             <Korean>아투경 (1세대, 갈색)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen1, Marrón)</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_black">
             <English>NV Goggles (Gen1, Black)</English>
@@ -35,7 +36,8 @@
             <Polish>Gogle noktowizyjne (Gen 1, Czarne)</Polish>
             <German>NS-Brille (1. Gen., schwarz)</German>
             <Chinesesimp>夜视仪（一代，黑色）</Chinesesimp>
-            <Korean>아투경 (1세대, 검정색)</Korean>
+            <Korean>아투경 (1세대, 검정)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen1, Negro)</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_green">
             <English>NV Goggles (Gen1, Green)</English>
@@ -46,6 +48,7 @@
             <German>NS-Brille (1. Gen., grün)</German>
             <Chinesesimp>夜视仪（一代，绿色）</Chinesesimp>
             <Korean>아투경 (1세대, 녹색)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen1, Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_brown">
             <English>NV Goggles (Gen2, Brown)</English>
@@ -56,6 +59,7 @@
             <German>NS-Brille (2. Gen., braun)</German>
             <Chinesesimp>夜视仪（二代，棕色）</Chinesesimp>
             <Korean>아투경 (2세대, 갈색)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen2, Marrón)</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_black">
             <English>NV Goggles (Gen2, Black)</English>
@@ -65,7 +69,8 @@
             <Polish>Gogle noktowizyjne (Gen 2, Czarne)</Polish>
             <German>NS-Brille (2. Gen., schwarz)</German>
             <Chinesesimp>夜视仪（二代，黑色）</Chinesesimp>
-            <Korean>아투경 (2세대, 검정색)</Korean>
+            <Korean>아투경 (2세대, 검정)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen2, Negro)</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_green">
             <English>NV Goggles (Gen2, Green)</English>
@@ -76,6 +81,7 @@
             <German>NS-Brille (2. Gen., grün)</German>
             <Chinesesimp>夜视仪（二代，绿色）</Chinesesimp>
             <Korean>아투경 (2세대, 녹색)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen2, Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -100,10 +106,10 @@
             <French>JVN (Gen3, marron)</French>
             <German>NS-Brille (3. Gen., braun)</German>
             <Italian>Occhiali notturni (Gen3, Marroni)</Italian>
-            <Polish>Gogle noktowizyjne (Gen3, brązowe)</Polish>
+            <Polish>Gogle noktowizyjne (Gen3, Brązowe)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, marrons)</Portuguese>
             <Russian>ПНВ (Gen3, Коричневый)</Russian>
-            <Spanish>Gafas de visión nocturna (Gen3, marrón)</Spanish>
+            <Spanish>Gafas de visión nocturna (Gen3, Marrón)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., barna)</Hungarian>
             <Japanese>暗視装置 (第3世代、ブラウン)</Japanese>
             <Korean>야투경 (3세대, 갈색)</Korean>
@@ -111,16 +117,32 @@
             <Chinese>夜視鏡 (三代, 棕色)</Chinese>
             <Turkish>GG Gözlüğü (3. Jen Kahverengi)</Turkish>
         </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen3_brown_WP">
+            <English>NV Goggles (Gen3, Brown, WP)</English>
+            <Japanese>暗視装置 (第3世代、ブラウン)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen3, Brązowe, WP)</Polish>
+            <German>NS-Brille (3. Generation, Braun, WP)</German>
+            <Korean>야투경 (3세대, 갈색, 백색광)</Korean>
+            <French>JVN (Gen3, marron, WP)</French>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_WP_desc">
+            <English>Night Vision Goggles, White Phosphor</English>
+            <Japanese>暗視装置、白色蛍光体</Japanese>
+            <Polish>Gogle noktowizyjne, Biały Fosfor</Polish>
+            <German>Nachtsichtbrille, weißer Phosphor</German>
+            <Korean>백색광 야투경</Korean>
+            <French>Jumelles Vision Nocturne, Phosphore blanc</French>
+        </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green">
             <English>NV Goggles (Gen3, Green)</English>
             <Czech>Noktovizor (Gen3, zelený)</Czech>
             <French>JVN (Gen3, vertes)</French>
             <German>NS-Brille (3. Gen., grün)</German>
             <Italian>Occhiali notturni (Gen3, Verdi)</Italian>
-            <Polish>Gogle noktowizyjne (Gen3, zielone)</Polish>
+            <Polish>Gogle noktowizyjne (Gen3, Zielone)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, verdes)</Portuguese>
             <Russian>ПНВ (Gen3, Зелёный)</Russian>
-            <Spanish>Gafas de visión nocturna (Gen3, verde)</Spanish>
+            <Spanish>Gafas de visión nocturna (Gen3, Verde)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., zöld)</Hungarian>
             <Japanese>暗視装置 (第3世代、グリーン)</Japanese>
             <Korean>야투경 (3세대, 녹색)</Korean>
@@ -128,22 +150,38 @@
             <Chinese>夜視鏡 (三代, 綠色)</Chinese>
             <Turkish>GG Gözlüğü (3. Jen Yeşil)</Turkish>
         </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen3_green_WP">
+            <English>NV Goggles (Gen3, Green, WP)</English>
+            <Japanese>暗視装置 (第3世代、グリーン、白色蛍光)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen3, Zielone, WP)</Polish>
+            <German>NS-Brille (3. Generation, Grün, WP)</German>
+            <Korean>야투경 (3세대, 녹색, 백색광)</Korean>
+            <French>JVN (Gen3, vertes, WP)</French>
+        </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black">
             <English>NV Goggles (Gen3, Black)</English>
             <Czech>Noktovizor (Gen3, černý)</Czech>
             <French>JVN (Gen3, noires)</French>
             <German>NS-Brille (3. Gen., schwarz)</German>
             <Italian>Occhiali notturni (Gen3, Neri)</Italian>
-            <Polish>Gogle noktowizyjne (Gen3, czarne)</Polish>
+            <Polish>Gogle noktowizyjne (Gen3, Czarne)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, pretos)</Portuguese>
             <Russian>ПНВ (Gen3, Чёрный)</Russian>
-            <Spanish>Gafas de visión nocturna (Gen3, negro)</Spanish>
+            <Spanish>Gafas de visión nocturna (Gen3, Negro)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., fekete)</Hungarian>
             <Japanese>暗視装置 (第3世代、ブラック)</Japanese>
             <Korean>야투경 (3세대, 검정색)</Korean>
             <Chinesesimp>夜视仪（三代，黑色）</Chinesesimp>
             <Chinese>夜視鏡 (三代, 黑色)</Chinese>
             <Turkish>GG Gözlüğü (3. Jen Siyah)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen3_black_WP">
+            <English>NV Goggles (Gen3, Black, WP)</English>
+            <Japanese>暗視装置 (第3世代、ブラック、白色蛍光)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen3, Czarne, WP)</Polish>
+            <German>NS-Brille (3. Generation, Schwarz, WP)</German>
+            <Korean>야투경 (3세대, 검정, 백색광)</Korean>
+            <French>JVN (Gen3, noires, WP)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_brown">
             <English>NV Goggles (Gen4, Brown)</English>
@@ -154,6 +192,15 @@
             <German>NS-Brille (4. Gen., braun)</German>
             <Chinesesimp>夜视仪（四代，棕色）</Chinesesimp>
             <Korean>야투경 (4세대, 갈색)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen4, Marrón)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen4_brown_WP">
+            <English>NV Goggles (Gen4, Brown, WP)</English>
+            <Japanese>暗視装置 (第4世代、ブラウン、白色蛍光)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 4, Brązowe, WP)</Polish>
+            <German>NS-Brille (4. Generation, Braun, WP)</German>
+            <Korean>야투경 (4세대, 갈색, 백색광)</Korean>
+            <French>JVN (Gen4, marron, WP)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
             <English>NV Goggles (Gen4, Black)</English>
@@ -163,7 +210,16 @@
             <Polish>Gogle noktowizyjne (Gen 4, Czarne)</Polish>
             <German>NS-Brille (4. Gen., schwarz)</German>
             <Chinesesimp>夜视仪（四代，黑色）</Chinesesimp>
-            <Korean>야투경 (4세대, 검정색)</Korean>
+            <Korean>야투경 (4세대, 검정)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen4, Negro)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen4_black_WP">
+            <English>NV Goggles (Gen4, Black, WP)</English>
+            <Japanese>暗視装置 (第3世代、ブラック、白色蛍光)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 4, Czarne, WP)</Polish>
+            <German>NS-Brille (4. Generation, Schwarz, WP)</German>
+            <Korean>야투경 (4세대, 검정, 백색광)</Korean>
+            <French>JVN (Gen4, noires, WP)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
             <English>NV Goggles (Gen4, Green)</English>
@@ -174,6 +230,15 @@
             <German>NS-Brille (4. Gen., grün)</German>
             <Chinesesimp>夜视仪（四代，绿色）</Chinesesimp>
             <Korean>야투경 (4세대, 녹색)</Korean>
+            <Spanish>Gafas de visión nocturna (Gen4, Verde)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen4_green_WP">
+            <English>NV Goggles (Gen4, Green, WP)</English>
+            <Japanese>暗視装置 (第3世代、グリーン、白色蛍光)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 4, Zielone, WP)</Polish>
+            <German>NS-Brille (4. Generation, Grün, WP)</German>
+            <Korean>야투경 (4세대, 녹색, 백색광)</Korean>
+            <French>JVN (Gen4, vertes, WP)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
             <English>NV Goggles (Wide, Brown)</English>
@@ -184,6 +249,15 @@
             <German>NS-Brille (Weit, braun)</German>
             <Chinesesimp>夜视仪（宽，棕色）</Chinesesimp>
             <Korean>야투경 (넓음, 갈색)</Korean>
+            <Spanish>Gafas de visión nocturna (Panorámicas, Marrón)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Wide_brown_WP">
+            <English>NV Goggles (Wide, Brown, WP)</English>
+            <Japanese>暗視装置 (ワイド、ブラウン、白色蛍光)</Japanese>
+            <Polish>Gogle noktowizyjne (Szerokie, Brązowe, WP)</Polish>
+            <German>NS-Brille (Weit, Braun, WP)</German>
+            <Korean>야투경 (넓음, 갈색, 백색광)</Korean>
+            <French>JVN (Large, marron, WP)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
             <English>NV Goggles (Wide, Black)</English>
@@ -193,7 +267,16 @@
             <Polish>Gogle noktowizyjne (Szerokie, Czarne)</Polish>
             <German>NS-Brille (Weit, schwarz)</German>
             <Chinesesimp>夜视仪（宽，黑色）</Chinesesimp>
-            <Korean>야투경 (넓음, 검정색)</Korean>
+            <Korean>야투경 (넓음, 검정)</Korean>
+            <Spanish>Gafas de visión nocturna (Panorámicas, Negro)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Wide_black_WP">
+            <English>NV Goggles (Wide, Black, WP)</English>
+            <Japanese>暗視装置 (ワイド、ブラック、白色蛍光)</Japanese>
+            <Polish>Gogle noktowizyjne (Szerokie, Czarne, WP)</Polish>
+            <German>NS-Brille (Weit, Schwarz, WP)</German>
+            <Korean>야투경 (넓음, 검정, 백색광)</Korean>
+            <French>JVN (Large, noires, WP)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
             <English>NV Goggles (Wide, Green)</English>
@@ -204,6 +287,15 @@
             <German>NS-Brille (Weit, grün)</German>
             <Chinesesimp>夜视仪（宽，绿色）</Chinesesimp>
             <Korean>야투경 (넓음, 녹색)</Korean>
+            <Spanish>Gafas de visión nocturna (Panorámicas, Verde)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Wide_green_WP">
+            <English>NV Goggles (Wide, Green, WP)</English>
+            <Japanese>暗視装置 (ワイド、グリーン、白色蛍光)</Japanese>
+            <Polish>Gogle noktowizyjne (Szerokie, Zielone, WP)</Polish>
+            <German>NS-Brille (Weit, Grün, WP)</German>
+            <Korean>야투경 (넓음, 녹색, 백색광)</Korean>
+            <French>JVN (Large, vertes, WP)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -381,7 +473,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
-            <Japanese>照準器を覗く時にぼかし</Japanese>
+            <Japanese>照準時のぼかし効果</Japanese>
             <German>Visierunschärfe</German>
             <Chinese>瞄準具模糊程度</Chinese>
             <Chinesesimp>瞄准具模糊程度</Chinesesimp>
@@ -453,6 +545,22 @@
             <Czech>Efekt závěrky z důsledku výšlehu při střelbě</Czech>
             <Spanish>Efecto obturador por los fogonazos de la boca del cañón</Spanish>
             <Korean>총구화염에 의한 셔터효과를 구현합니다</Korean>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVGeneration">
+            <English>Night Vision Generation</English>
+            <Japanese>暗視装置の世代</Japanese>
+            <Polish>Generacja gogli noktowizyjnych</Polish>
+            <German>Nachtsicht-Generation</German>
+            <Korean>야투경 세대</Korean>
+            <French>Génération de jumelles de vision nocturne</French>
+        </Key>
+        <Key ID="STR_ACE_NightVision_statGen">
+            <English>Gen %1</English>
+            <Japanese>第%1世代</Japanese>
+            <Polish>Gen %1</Polish>
+            <German>Gen %1</German>
+            <Korean>%1세대</Korean>
+            <French>Gen %1</French>
         </Key>
     </Package>
 </Project>

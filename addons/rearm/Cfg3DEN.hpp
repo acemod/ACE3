@@ -1,6 +1,6 @@
+#define VANILLA_REARMCARGO (if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
-#define DEFAULT_REARMCARGO GET_NUMBER(configOf _this >> QQGVAR(defaultSupply),-1)
-
+#define DEFAULT_REARMCARGO GET_NUMBER(configOf _this >> 'GVAR(defaultSupply)',VANILLA_REARMCARGO)
 
 class Cfg3DEN {
     class Object {

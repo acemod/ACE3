@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Serializes the medical state of a unit into a string.
@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Serialized state as JSON string
+ * Serialized state as JSON string <STRING>
  *
  * Example:
  * [player] call ace_medical_fnc_serializeState
@@ -33,9 +33,9 @@ private _state = [] call CBA_fnc_createNamespace;
     [VAR_PAIN, 0],
     [VAR_IN_PAIN, false],
     [VAR_PAIN_SUPP, 0],
-    [VAR_OPEN_WOUNDS, []],
-    [VAR_BANDAGED_WOUNDS, []],
-    [VAR_STITCHED_WOUNDS, []],
+    [VAR_OPEN_WOUNDS, createHashMap],
+    [VAR_BANDAGED_WOUNDS, createHashMap],
+    [VAR_STITCHED_WOUNDS, createHashMap],
     [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES],
     // State transition should handle this
     // [VAR_UNCON, false],

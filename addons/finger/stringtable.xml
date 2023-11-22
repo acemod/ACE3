@@ -75,7 +75,7 @@
             <Polish>Określ dystans na jakim można wskazywać coś palcem innym graczom. [domyślnie: 4m] </Polish>
             <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
             <Portuguese>Distância máxima entre jogadores para mostrar o apontamento [padrão: 4 metros]</Portuguese>
-            <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по-умолчанию: 4 метра]</Russian>
+            <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по умолчанию: 4 метра]</Russian>
             <Spanish>Distancia máxima entre los jugadores para mostrar el indicador que señala [por defecto: 4 metros]</Spanish>
             <Czech>Maximální vzdálenost mezi hráči pro ukázání směru [výchozí: 4 metry]</Czech>
             <Italian>Distanza massima tra giocatori per mostrare l'indicatore di puntamento [default: 4 metri]</Italian>
@@ -92,6 +92,10 @@
             <Polish>Współczynnik wielkości wirtualnego znacznika</Polish>
             <Japanese>指さし表記大きさ係数</Japanese>
             <Chinesesimp>屏幕标记大小系数</Chinesesimp>
+            <Russian>Коэф. размера маркера</Russian>
+            <Spanish>Coeficiente del tamaño del marcador visual</Spanish>
+            <French>Coefficient taille des marqueurs visuels</French>
+            <Portuguese>Coeficiente de tamanho do marcador visual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Finger_sizeCoef_description">
             <English>Adjusts the size of the visual marker.</English>
@@ -100,6 +104,10 @@
             <Polish>Dostosowuje rozmiar wirtualnego znacznika.</Polish>
             <Japanese>指さし表記の大きさを調整します。</Japanese>
             <Chinesesimp>调整屏幕上显示的标记大小</Chinesesimp>
+            <Russian>Настраивает размер визуального маркера</Russian>
+            <Spanish>Ajusta el tamaño del marcador visual.</Spanish>
+            <French>Ajuste la taille des marqueurs visuels</French>
+            <Portuguese>Ajusta o tamanho do marcador visual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_displayName">
             <English>Proximity Scaling</English>
@@ -108,6 +116,10 @@
             <Polish>Skalowanie odległościowe</Polish>
             <Japanese>近接性スケーリング</Japanese>
             <Chinesesimp>根据距离缩放</Chinesesimp>
+            <Russian>Масштабирование от дальности</Russian>
+            <Spanish>Escalado de cercanía</Spanish>
+            <French>Mise à l'échelle</French>
+            <Portuguese>Escala por proximidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_description">
             <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
@@ -116,6 +128,10 @@
             <Polish>Skaluje rozmiar wirtualnego znacznika, na podstawie odległości między graczem obserwującym a graczem wskazującym.</Polish>
             <Japanese>見ているプレーヤーと指さししたプレーヤーの距離に基づいて、指さし表記の大きさを調整します。</Japanese>
             <Chinesesimp>根据观察的玩家和在指出方向的的玩家之间的距离调整视觉标记的大小。</Chinesesimp>
+            <Russian>Масштабирует размер визуального маркера в зависимости от дальности от игрока до точки указания.</Russian>
+            <Spanish>Escala el tamaño del marcador visual dependiendo de la distancia entre el jugador observador y el jugador que señala.</Spanish>
+            <French>Modifie la taille du marqueur visuel en fonction de la distance entre le joueur qui observe et le joueur qui pointe.</French>
+            <Portuguese>Redimensiona o tamanho do marcador visual baseado na distância entre o jogador observador e o jogador que aponta.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>

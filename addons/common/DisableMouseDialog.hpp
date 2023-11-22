@@ -1,4 +1,3 @@
-class ctrlMapEmpty;
 class GVAR(DisableMouse_Dialog) {
     idd = -1;
     movingEnable = 0;

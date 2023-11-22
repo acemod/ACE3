@@ -10,6 +10,7 @@ class CfgWeapons {
         picture = "\a3\Weapons_F\acc\Data\UI\icon_optic_tws_ca.paa";
         model = "\A3\weapons_f\acc\acco_tws_F";
         inertia = 0.3;
+        ACE_ScopeHeightAboveRail = 5.52874;
         
         class CBA_ScriptedOptic {
             bodyTexture = QPATHTOF(data\ace_vector_body_co.paa);

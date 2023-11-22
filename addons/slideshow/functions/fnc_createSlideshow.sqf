@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas, DaC
  * Prepares necessary variables and default image.
@@ -8,7 +8,7 @@
  * 1: Controller Objects <ARRAY>
  * 2: Image Paths <ARRAY>
  * 3: Action Names <ARRAY>
- * 4: Slide Duration <NUMBER> (0 disables automatic transitions)
+ * 4: Slide Duration, 0 disables automatic transitions <NUMBER>
  * 5: Set Name <STRING> (default: localized "Slides")
  * 6: Texture Selection <NUMBER> (default: 0)
  *

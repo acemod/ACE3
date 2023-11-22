@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Handle the UI data display.
+ * Handles the UI data display.
  *
  * Arguments:
  * 0: Display <DISPLAY>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [display] call ace_cargo_fnc_onMenuOpen
+ * display call ace_cargo_fnc_onMenuOpen
  *
  * Public: No
  */
@@ -22,37 +22,79 @@ params ["_display"];
 uiNamespace setVariable [QGVAR(menuDisplay), _display];
 
 if (GVAR(interactionParadrop)) then {
-    (_display displayCtrl 12) ctrlSetText (localize LSTRING(paradropButton));
+    (_display displayCtrl 12) ctrlSetText LLSTRING(paradropButton);
 };
 
 [{
+    params ["_vehicle", "_pfhID"];
+
     disableSerialization;
+
     private _display = uiNamespace getVariable QGVAR(menuDisplay);
-    if (isnil "_display") exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+    if (isNil "_display") exitWith {
+        GVAR(interactionVehicle) = nil;
+        GVAR(interactionParadrop) = nil;
+
+        _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
-    if (isNull GVAR(interactionVehicle) || {(([ACE_player, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE) && {(vehicle ACE_player) != GVAR(interactionVehicle)}}) exitWith {
+    // Close menu if in invalid state
+    if (
+        !alive _vehicle ||
+        {locked _vehicle >= 2} ||
+        {!(_vehicle getVariable [QGVAR(hasCargo), true])} || // if the cargo menu could be opened, the vehicle has QGVAR(hasCargo) in its config or the variable is set using FUNC(setSpace)
+        {
+            isNull findDisplay 312 && // if in Zeus, ignore the following checks
+            {([ACE_player, _vehicle] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE} &&
+            {(vehicle ACE_player) != _vehicle}
+        }
+    ) exitWith {
         closeDialog 0;
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+        GVAR(interactionVehicle) = nil;
+        GVAR(interactionParadrop) = nil;
+
+        _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
-    private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
     private _ctrl = _display displayCtrl 100;
     private _label = _display displayCtrl 2;
 
+    // Remove previous entries
     lbClear _ctrl;
+
+    // Display item names
+    private _displayName = "";
+    private _itemSize = 0;
+    private _index = -1;
+    private _damageStr = "0%";
+    private _damage = 0;
+
     {
-        private _class = if (_x isEqualType "") then {_x} else {typeOf _x};
-        private _displayName = [_x, true] call FUNC(getNameItem);
-        if (GVAR(interactionParadrop)) then {
-            _ctrl lbAdd format ["%1 (%2s)", _displayName, GVAR(paradropTimeCoefficent) * ([_class] call FUNC(getSizeItem))];
+        _displayName = [_x, true] call FUNC(getNameItem);
+        _itemSize = _x call FUNC(getSizeItem);
+        _damage = if (_x isEqualType "") then {0} else {damage _x};
+        _damageStr = ((_damage * 100) toFixed 0) + "%";
+
+        if (_itemSize >= 0) then {
+            _index = if (GVAR(interactionParadrop)) then {
+                _ctrl lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, GVAR(paradropTimeCoefficent) * _itemSize]
+            } else {
+                _ctrl lbAdd format ["%1. %2", _forEachIndex + 1, _displayName]
+            };
+
+            private _tooltip = format ["%1\n%2", format [LLSTRING(sizeMenu), _itemSize], format ["%1: %2", localize "str_a3_normaldamage1", _damageStr]];
+            _ctrl lbSetTooltip [_index, _tooltip];
         } else {
-            _ctrl lbAdd _displayName;
+            // If item has a size < 0, it means it's not loadable
+            _index = _ctrl lbAdd _displayName;
+
+            _ctrl lbSetTooltip [_index, LLSTRING(unloadingImpossible)];
+            _ctrl lbSetColor [_index, [1, 0, 0, 1]]; // set text to red
+            _ctrl lbSetSelectColor [_index, [1, 0, 0, 1]];
         };
+    } forEach (_vehicle getVariable [QGVAR(loaded), []]);
 
-        true
-    } count _loaded;
-
-    _label ctrlSetText format[localize LSTRING(labelSpace), [GVAR(interactionVehicle)] call DFUNC(getCargoSpaceLeft)];
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+    _label ctrlSetText format [LLSTRING(labelSpace), (_vehicle call FUNC(getCargoSpaceLeft)) max 0];
+}, 0, GVAR(interactionVehicle)] call CBA_fnc_addPerFrameHandler;

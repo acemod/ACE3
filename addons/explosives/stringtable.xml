@@ -249,7 +249,7 @@
             <Portuguese>M57 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M57</Russian>
             <Japanese>M57 起爆装置</Japanese>
-            <Korean>M57 격발기</Korean>
+            <Korean>격발기 (M57)</Korean>
             <Chinesesimp>M57 引爆装置</Chinesesimp>
             <Chinese>M57 引爆裝置</Chinese>
             <Turkish>M57 Ateşleme Cihazı</Turkish>
@@ -283,7 +283,7 @@
             <Portuguese>M152 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M152</Russian>
             <Japanese>M152 起爆装置</Japanese>
-            <Korean>M152 격발기</Korean>
+            <Korean>격발기 (M152)</Korean>
             <Chinesesimp>M152 引爆装置</Chinesesimp>
             <Chinese>M152 引爆裝置</Chinese>
             <Turkish>M152 Ateşleme Cihazı</Turkish>
@@ -504,7 +504,7 @@
             <Portuguese>Desarmando Explosivo...</Portuguese>
             <Russian>Обезвреживание...</Russian>
             <Japanese>爆発物を無力化しています・・・</Japanese>
-            <Korean>폭발물 해체중...</Korean>
+            <Korean>폭발물 해체 중...</Korean>
             <Chinesesimp>正在拆除爆炸物...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
             <Turkish>Patlayıcı Imha Ediliyor...</Turkish>
@@ -804,7 +804,7 @@
             <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
             <French>Seul un spécialiste peut désamorcer des explosifs.</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
-            <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
+            <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
             <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。標準: 無効化</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
@@ -837,10 +837,10 @@
             <Portuguese>Aumentar o tempo necessário para completar ações por não especialistas? Padrão: Sim</Portuguese>
             <French>Augmente le temps nécessaire au désamorçage pour les unités non spécialisées.</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
-            <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
+            <Russian>Увеличивать время завершения действий для не-специалистов? По умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
             <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
-            <Korean>비전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
+            <Korean>비전문가가 폭발물을 해제 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
         </Key>
@@ -853,7 +853,7 @@
             <Spanish>Explotar al desactivar?</Spanish>
             <French>Explosion au désamorçage</French>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
-            <Russian>Взрыв при разминир.?</Russian>
+            <Russian>Взрыв при разминировании?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
             <Japanese>解除中に爆発</Japanese>
             <Korean>해제 시 폭발합니까?</Korean>
@@ -869,7 +869,7 @@
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
             <French>Certains explosifs exploseront durant le désamorçage. Valeur par défaut : activé.</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
-            <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
+            <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
             <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
             <Korean>특정 폭발물이 해제 시 폭발하게 합니까? 기본설정: 예</Korean>
@@ -933,7 +933,7 @@
             <Portuguese>IED Grande (Urbano, Placa de pressão)</Portuguese>
             <Russian>Большое СВУ (городское, нажимного действия)</Russian>
             <Japanese>大きな IED (市街地用、圧力感知)</Japanese>
-            <Korean>대형 급조폭발물 (시가지, 압력식)</Korean>
+            <Korean>급조폭발물 (대형, 시가지, 압력식)</Korean>
             <Chinesesimp>大型 IED（地表上，压力盘）</Chinesesimp>
             <Chinese>大型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
         </Key>
@@ -948,7 +948,7 @@
             <Portuguese>IED Grande (Enterrado, Placa de pressão)</Portuguese>
             <Russian>Большое СВУ (закопанное, нажимного действия)</Russian>
             <Japanese>大きな IED (埋め込み型、圧力感知)</Japanese>
-            <Korean>대형 급조폭발물 (묻힘, 압력식)</Korean>
+            <Korean>급조폭발물 (대형, 묻힘, 압력식)</Korean>
             <Chinesesimp>大型 IED（地表下，压力盘）</Chinesesimp>
             <Chinese>大型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
         </Key>
@@ -963,7 +963,7 @@
             <Portuguese>IED Pequeno(Urbano, Placa de pressão)</Portuguese>
             <Russian>Малое СВУ (городское, нажимного действия)</Russian>
             <Japanese>小さな IED (市街地用、圧力感知)</Japanese>
-            <Korean>소형 급조폭발물 (시가지, 압력식)</Korean>
+            <Korean>급조폭발물 (소형, 시가지, 압력식)</Korean>
             <Chinesesimp>小型 IED（地表上，压力盘）</Chinesesimp>
             <Chinese>小型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
         </Key>
@@ -978,7 +978,7 @@
             <Portuguese>IED Pequeno (Enterrado, Placa de pressão)</Portuguese>
             <Russian>Малое СВУ (закопанное, нажимного действия)</Russian>
             <Japanese>小さな IED (埋め込み型、圧力感知)</Japanese>
-            <Korean>소형 급조폭발물 (묻힘, 압력식)</Korean>
+            <Korean>급조폭발물 (소형, 묻힘, 압력식)</Korean>
             <Chinesesimp>小型 IED（地表下，压力盘）</Chinesesimp>
             <Chinese>小型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
         </Key>
@@ -994,7 +994,7 @@
             <Italian>Collega a  %1</Italian>
             <Portuguese>Conectar à %1</Portuguese>
             <Japanese>%1 へ接続</Japanese>
-            <Korean>%1에 연결중</Korean>
+            <Korean>%1에 연결 중</Korean>
             <Chinesesimp>连接到%1</Chinesesimp>
             <Chinese>連接到%1</Chinese>
             <Turkish>Bağlandı %1</Turkish>
@@ -1074,6 +1074,7 @@
             <Russian>Сапёр</Russian>
             <Spanish>¿Es EOD?</Spanish>
             <Korean>폭발물 처리반</Korean>
+            <Portuguese>É EOD</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1088,10 +1089,11 @@
             <Russian>Определяет, является ли юнит сапёром.</Russian>
             <Spanish>Controla si la unidad es un especialista en explosivos</Spanish>
             <Korean>유닛이 폭발물 처리반인지 결정합니다</Korean>
+            <Portuguese>Controla se a unidade é um especialista em explosivos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
-            <Russian>Минимальное время</Russian>
+            <Russian>Мин. время</Russian>
             <French>Durée minimale</French>
             <Japanese>最短時間</Japanese>
             <Spanish>Tiempo mínimo</Spanish>
@@ -1099,10 +1101,11 @@
             <German>Minimale Zeit</German>
             <Chinesesimp>最短时间</Chinesesimp>
             <Korean>최소 시간</Korean>
+            <Portuguese>Tempo Mínimo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
-            <Russian>Максимальное время</Russian>
+            <Russian>Макс. время</Russian>
             <French>Durée maximale</French>
             <Japanese>最長時間</Japanese>
             <Spanish>Tiempo máximo</Spanish>
@@ -1110,6 +1113,7 @@
             <German>Maximale Zeit</German>
             <Chinesesimp>最长时间</Chinesesimp>
             <Korean>최대 시간</Korean>
+            <Portuguese>Tempo Máximo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
@@ -1121,6 +1125,7 @@
             <German>Standardmäßige Zeit</German>
             <Chinesesimp>默认时间</Chinesesimp>
             <Korean>기본 시간</Korean>
+            <Portuguese>Tempo Padrão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
@@ -1132,6 +1137,7 @@
             <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
             <Chinesesimp>定时爆炸的最短时间（单位：秒）</Chinesesimp>
             <Korean>초 단위로, 폭발 타이머의 최소 시간을 정합니다</Korean>
+            <Portuguese>Tempo mínimo (em segundos) para o temporizador do explosivo.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
@@ -1143,6 +1149,7 @@
             <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
             <Chinesesimp>定时爆炸的最长时间（单位：秒）</Chinesesimp>
             <Korean>초 단위로, 폭발 타이머의 최대 시간을 정합니다</Korean>
+            <Portuguese>Tempo máximo (em segundos) para o temporizador do explosivo.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
@@ -1154,6 +1161,7 @@
             <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>
             <Chinesesimp>定时爆炸的默认时间（单位：秒）</Chinesesimp>
             <Korean>초 단위로, 기본 폭발 타이머 시간을 정합니다</Korean>
+            <Portuguese>Tempo padrão (em segundos) para o temporizador do explosivo.</Portuguese>
         </Key>
     </Package>
 </Project>

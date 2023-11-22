@@ -35,7 +35,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
             <Spanish>Activar Lanzamiento Avanzado</Spanish>
-            <Russian>Включить улучшенный бросок</Russian>
+            <Russian>Вкл. улучшенный бросок</Russian>
             <Japanese>アドバンスド スローイングを有効化</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
             <German>Aktiviere erweitertes Wurfsystem</German>
@@ -128,7 +128,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
             <Spanish>Habilitar recoger objetos lanzados</Spanish>
-            <Russian>Включить подбор гранат</Russian>
+            <Russian>Вкл. подбор гранат</Russian>
             <Japanese>投てき物の拾い上げを有効化</Japanese>
             <Polish>Zezwól na podnoszenie obiektów miotanych</Polish>
             <German>Aktiviere Aufheben von Wurfobjekten</German>
@@ -158,7 +158,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
             <Spanish>Activar coger objetos lanzables que se enganchan</Spanish>
-            <Russian>Включить подбор прикрепленных гранат</Russian>
+            <Russian>Вкл. подбор прикрепленных гранат</Russian>
             <Japanese>取り付けられた投てき物の拾い上げを有効化</Japanese>
             <Polish>Zezwól na podnoszenie przyczepionych obiektów miotanych</Polish>
             <German>Aktiviere erneute Aufnahme befestigter Wurfobjekte</German>
@@ -289,7 +289,7 @@
             <Italian>(Scorrere) Estendere</Italian>
             <Chinese>(滾輪) 延長</Chinese>
             <Chinesesimp>（滚轮）延长</Chinesesimp>
-            <Portuguese>(Roda do Mouse) Extender</Portuguese>
+            <Portuguese>(Roda do Mouse) Estender</Portuguese>
             <Czech>(Scrollovat) Oddálit</Czech>
             <Turkish>(Tekerlek) Uzat</Turkish>
         </Key>

@@ -79,7 +79,7 @@
             <Chinese>裝填 %1</Chinese>
             <Chinesesimp>装填 %1</Chinesesimp>
             <Turkish>Yükle %1</Turkish>
-            <Korean>%1 싣는중</Korean>
+            <Korean>%1 싣기</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_unloadX">
             <English>Unload %1</English>
@@ -96,7 +96,7 @@
             <Chinese>卸載 %1</Chinese>
             <Chinesesimp>卸载 %1</Chinesesimp>
             <Turkish>Boşalt %1</Turkish>
-            <Korean>%1 내리는중</Korean>
+            <Korean>%1 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
@@ -180,14 +180,22 @@
             <Polish>Magazyn amunicji</Polish>
             <Japanese>弾薬の格納</Japanese>
             <Chinesesimp>弹药存储</Chinesesimp>
+            <Russian>Хранилище боеприпасов</Russian>
+            <Spanish>Almacenamiento de munición</Spanish>
+            <French>Stockage des munitions</French>
+            <Portuguese>Armazenamento de Munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_description">
             <English>Determines whether extra magazines are stored on the ground or inside an ammo box</English>
             <German>Legt fest, ob zusätzliche Magazine auf dem Boden oder in einer Munitionskiste aufbewahrt werden</German>
-            <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을지 결정합니다.</Korean>
+            <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을 지 결정합니다.</Korean>
             <Polish>Decyduje, czy dodatkowe magazynki przechowywane są na ziemi, czy w skrzynce z amunicją.</Polish>
             <Japanese>追加のマガジンを地面に設置するか、弾薬箱の中に保管するかを決定します</Japanese>
             <Chinesesimp>设置多余的弹夹是存放在地面上还是弹药箱内</Chinesesimp>
+            <Russian>Определяет будут ли дополнительные магазины лежать на земле или внутри хранилища</Russian>
+            <Spanish>Determina si los cargadores extra son almacenados en el suelo o en una caja de munición</Spanish>
+            <French>Détermine si les chargeurs supplémentaires sont stockés par terre ou dans une caisse de munitions.</French>
+            <Portuguese>Determina se munições extras são armazenadas no chão ou dentro de uma caixa de munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_weaponHolder">
             <English>Ground</English>
@@ -196,6 +204,10 @@
             <Polish>Ziemia</Polish>
             <Japanese>地面</Japanese>
             <Chinesesimp>地面</Chinesesimp>
+            <Russian>Земля</Russian>
+            <Spanish>Suelo</Spanish>
+            <French>Sol</French>
+            <Portuguese>Solo</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_ammoBox">
             <English>Ammo Box</English>
@@ -204,6 +216,10 @@
             <Polish>Skrzynka amunicyjna</Polish>
             <Japanese>弾薬箱</Japanese>
             <Chinesesimp>弹药箱</Chinesesimp>
+            <Russian>Коробка с боеприпасами</Russian>
+            <Spanish>Caja de munición</Spanish>
+            <French>Caisse de munitions</French>
+            <Portuguese>Caixa de Munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
@@ -233,7 +249,7 @@
             <Polish>Zezwalaj na ładowanie i rozładowywanie magazynków</Polish>
             <Spanish>Permitir la carga y descarga de cargadores</Spanish>
             <Russian>Разрешить загрузку и разгрузку магазинов</Russian>
-            <Korean>탄을 장전하고 빼는걸 가능하게 합니다.</Korean>
+            <Korean>탄을 장전하고 빼는 걸 가능하게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
@@ -247,7 +263,7 @@
             <Czech>Koeficient času interakce</Czech>
             <Polish>Współczynnik czasu interakcji</Polish>
             <Spanish>Coeficiente de tiempo de interacción</Spanish>
-            <Russian>Коэффициент времени взаимодействия</Russian>
+            <Russian>Коэф. времени взаимодействия</Russian>
             <Korean>상호작용 시간 계수</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
@@ -293,7 +309,7 @@
             <Polish>Po rozłożeniu trójnogu zacznij od przeciągania go w określone miejsce</Polish>
             <Spanish>Después de desplegar un trípode, comenzar a arrastrarlo hacia la ubicación precisa</Spanish>
             <Russian>После развертывания начать тащить треногу на другое место</Russian>
-            <Korean>조립 후 위치선정을 위해 배치하지 않고 끌고다닙니다.</Korean>
+            <Korean>조립 후 위치선정을 위해 배치하지 않고 끌고 다닙니다.</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
@@ -459,7 +475,7 @@
             <Czech>[CSW] Statický raketomet Mini-Spike (protitankový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AT)</Turkish>
             <Polish>[CSW] Mini-Spike Przeciwpancerny pocisk rakietowy</Polish>
-            <Russian>[CSW] Станковый Mini-Spike ПТРК</Russian>
+            <Russian>[CSW] Станковый Mini-Spike (ПТРК)</Russian>
             <Korean>[CSW] 거치형 Mini-Spike 발사기 (대전차)</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
@@ -475,7 +491,7 @@
             <Czech>[CSW] Statický raketomet Mini-Spike (protiletadlový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AA)</Turkish>
             <Polish>[CSW] Mini-Spike Przeciwlotniczy pocisk rakietowy</Polish>
-            <Russian>[CSW] Станковый Mini-Spike ЗРК</Russian>
+            <Russian>[CSW] Станковый Mini-Spike (ЗРК)</Russian>
             <Korean>[CSW] 거치형 Mini-Spike 발사기 (대공)</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
@@ -505,6 +521,7 @@
             <German>[CSW] Statisches M2 mit Schild</German>
             <Chinesesimp>[班组] 固定式防盾型 M2 重机枪</Chinesesimp>
             <Korean>[CSW] 거치형 M2 (방패)</Korean>
+            <Portuguese>[CSW] Arma Estática - M2 com Escudo</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
@@ -599,7 +616,7 @@
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (červená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Czerwona)</Polish>
-            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (Красный)</Russian>
+            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (красные)</Russian>
             <Korean>[CSW] 12.7x99mm 예광탄 중기관총 탄띠 (빨강)</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
@@ -615,7 +632,7 @@
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (zelená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Zielona)</Polish>
-            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (Зелёный)</Russian>
+            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (зелёные)</Russian>
             <Korean>[CSW] 12.7x99mm 예광탄 중기관총 탄띠 (초록)</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
@@ -631,7 +648,7 @@
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (žlutá stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Żółta)</Polish>
-            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (Жёлтый)</Russian>
+            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (жёлтые)</Russian>
             <Korean>[CSW] 12.7x99mm 예광탄 중기관총 탄띠 (노랑)</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
@@ -695,7 +712,7 @@
             <Czech>[CSW] 6P57 trojnožka (nízká)</Czech>
             <Turkish>[CSW] 6P57 Deployable Tripod (Low)</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany 6P57 (Niski)</Polish>
-            <Russian>[CSW] 6P67 Развертываемая тренога (Низкая)</Russian>
+            <Russian>[CSW] 6P67 Развертываемая тренога (низкая)</Russian>
             <Korean>[CSW] 6P57 배치형 삼각대 (낮음)</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
@@ -807,7 +824,7 @@
             <Czech>[CSW] M3 trojnožka (nízká)</Czech>
             <Turkish>[CSW] M3 Deployable Tripod (Low)</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany M3 (Niski)</Polish>
-            <Russian>[CSW] M3 Развертываемая тренога (Низкая)</Russian>
+            <Russian>[CSW] M3 Развертываемая тренога (низкая)</Russian>
             <Korean>[CSW] M3 배치형 삼각대 (낮음)</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplateBag_displayName">

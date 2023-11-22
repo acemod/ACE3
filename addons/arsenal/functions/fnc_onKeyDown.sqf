@@ -1,13 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Handles keyboard inputs in arsenal.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Key being pressed <SCALAR>
+ * 1: Key being pressed <NUMBER>
  * 2: Shift state <BOOL>
  * 3: Ctrl state <BOOL>
  * 4: Alt state <BOOL>
@@ -25,12 +25,14 @@ GVAR(shiftState) = _shiftState;
 private _return = true;
 private _loadoutsDisplay = findDisplay IDD_loadouts_display;
 
-if (_loadoutsDisplay isNotEqualTo displayNull) then {
-    if !(GVAR(loadoutsSearchbarFocus)) then {
-        switch true do {
+// If in loadout screen
+if (!isNull _loadoutsDisplay) then {
+    // If loadout search bar isn't focussed
+    if (!GVAR(loadoutsSearchbarFocus)) then {
+        switch (true) do {
             // Close button
             case (_keyPressed == DIK_ESCAPE): {
-                _display closeDisplay 2;
+                _display closeDisplay IDC_CANCEL;
             };
             // Search field
             case (_keyPressed == DIK_F && {_ctrlState}): {
@@ -38,48 +40,37 @@ if (_loadoutsDisplay isNotEqualTo displayNull) then {
             };
         };
     } else {
-        switch true do {
+        // If loadout search bar is focussed
+        switch (true) do {
+            // Close button
             case (_keyPressed == DIK_ESCAPE): {
-                _display closeDisplay 2;
+                _display closeDisplay IDC_CANCEL;
             };
-            case (_keyPressed == DIK_BACKSPACE): {
-                _return = false;
-            };
+            // Search
             case (_keyPressed == DIK_NUMPADENTER);
             case (_keyPressed == DIK_RETURN): {
                 [_loadoutsDisplay, _loadoutsDisplay displayCtrl IDC_loadoutsSearchbar] call FUNC(handleLoadoutsSearchBar);
             };
+            case (_keyPressed == DIK_BACKSPACE);
             case (_keyPressed in [DIK_LEFT, DIK_RIGHT]): {
                 _return = false;
             };
         };
     };
 
-    switch true do {
-        case (_keyPressed == DIK_C && {_ctrlState}): {
-            _return = false;
-        };
-        case (_keyPressed == DIK_V && {_ctrlState}): {
-            _return = false;
-        };
-        case (_keyPressed == DIK_A && {_ctrlState}): {
-            _return = false;
-        };
-        case (_keyPressed == DIK_X && {_ctrlState}): {
-            _return = false;
-        };
+    switch (true) do {
+        case (_keyPressed in [DIK_C, DIK_V, DIK_A, DIK_X] && {_ctrlState});
         case (GVAR(loadoutsPanelFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}): {
             _return = false;
         };
     };
 } else {
-
+    // If in arsenal and no search bar is selected
     if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
-
-        switch true do {
+        switch (true) do {
             // Close button
             case (_keyPressed == DIK_ESCAPE): {
-                _display closeDisplay 2;
+                _display closeDisplay IDC_CANCEL;
             };
             // Hide button
             case (_keyPressed == DIK_BACKSPACE): {
@@ -88,7 +79,7 @@ if (_loadoutsDisplay isNotEqualTo displayNull) then {
             // Export button / export classname
             case (_keyPressed == DIK_C && {_ctrlState}): {
                 if (GVAR(leftTabFocus) || {GVAR(rightTabFocus)} || {GVAR(rightTabLnBFocus)}) then {
-                    switch true do {
+                    switch (true) do {
                         case (GVAR(leftTabFocus)): {
                             private _control = (_display displayCtrl IDC_leftTabContent);
                             _control lbData (lbCurSel _control)
@@ -99,14 +90,14 @@ if (_loadoutsDisplay isNotEqualTo displayNull) then {
                         };
                         case (GVAR(rightTabLnBFocus)): {
                             private _control = (_display displayCtrl IDC_rightTabContentListnBox);
-                            _control lnbData [(lnbCurSelRow _control), 0]
+                            _control lnbData [lnbCurSelRow _control, 0]
                         };
                     } params ["_className"];
 
                     "ace_clipboard" callExtension (_className + ";");
                     "ace_clipboard" callExtension "--COMPLETE--";
 
-                    [_display, localize LSTRING(exportedClassnameText)] call FUNC(message);
+                    [_display, LLSTRING(exportedClassnameText)] call FUNC(message);
                 } else {
                     [_display] call FUNC(buttonExport);
                 };
@@ -115,36 +106,37 @@ if (_loadoutsDisplay isNotEqualTo displayNull) then {
             case (_keyPressed == DIK_V && {_ctrlState}): {
                 [_display] call FUNC(buttonImport);
             };
-            // Search fields
+            // Focus search
             case (_keyPressed == DIK_F && {_ctrlState}): {
                 ctrlSetFocus (_display displayCtrl IDC_leftSearchbar);
             };
             // Switch vision mode
-            case (_keyPressed in (actionkeys "nightvision")): {
+            case (_keyPressed in (actionKeys "nightvision")): {
                 if (isNil QGVAR(visionMode)) then {
                     GVAR(visionMode) = 0;
                 };
+
                 GVAR(visionMode) = (GVAR(visionMode) + 1) % 3;
 
-                switch GVAR(visionMode) do {
-                    //--- Normal
+                switch (GVAR(visionMode)) do {
+                    // Normal
                     case 0: {
-                        camusenvg false;
-                        false setCamUseTi 0;
+                        camUseNVG false;
+                        false setCamUseTI 0;
                     };
-                    //--- NVG
+                    // NVG
                     case 1: {
-                        camusenvg true;
-                        false setCamUseTi 0;
+                        camUseNVG true;
+                        false setCamUseTI 0;
                     };
-                    //--- TI
+                    // TI
                     default {
-                        camusenvg false;
-                        true setCamUseTi 0;
+                        camUseNVG false;
+                        true setCamUseTI 0;
                     };
                 };
 
-                playsound ["RscDisplayCurator_visionMode",true];
+                playSound ["RscDisplayCurator_visionMode", true];
             };
             // Panel up down
             case (_keyPressed in [DIK_UP, DIK_DOWN]): {
@@ -160,38 +152,29 @@ if (_loadoutsDisplay isNotEqualTo displayNull) then {
             };
         };
     } else {
-        switch true do {
+        // If in arsenal and a search bar is selected
+        switch (true) do {
+            // Close button
             case (_keyPressed == DIK_ESCAPE): {
-                _display closeDisplay 2;
+                _display closeDisplay IDC_CANCEL;
             };
-            case (_keyPressed == DIK_BACKSPACE): {
-                _return = false;
-            };
+            // Search
             case (_keyPressed == DIK_NUMPADENTER);
             case (_keyPressed == DIK_RETURN): {
                 if (GVAR(leftSearchbarFocus)) then {
                     [_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
                 };
+
                 if (GVAR(rightSearchbarFocus)) then {
                     [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
                 };
             };
-            case (_keyPressed in [DIK_LEFT, DIK_RIGHT]): {
+            case (_keyPressed in [DIK_LEFT, DIK_RIGHT]);
+            case (_keyPressed == DIK_BACKSPACE);
+            case (_keyPressed in [DIK_C, DIK_V, DIK_A, DIK_X] && {_ctrlState}): {
                 _return = false;
             };
-            case (_keyPressed == DIK_C && {_ctrlState}): {
-                _return = false;
-            };
-            case (_keyPressed == DIK_V && {_ctrlState}): {
-                _return = false;
-            };
-            case (_keyPressed == DIK_A && {_ctrlState}): {
-                _return = false;
-            };
-            case (_keyPressed == DIK_X && {_ctrlState}): {
-                _return = false;
-            };
-            // Search fields
+            // Focus search fields
             case (_keyPressed == DIK_F && {_ctrlState}): {
                 if (GVAR(rightSearchbarFocus)) then {
                     ctrlSetFocus (_display displayCtrl IDC_leftSearchbar);

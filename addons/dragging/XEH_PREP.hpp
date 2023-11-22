@@ -1,8 +1,8 @@
-
 PREP(canCarry);
 PREP(canDrag);
 PREP(canDrop);
 PREP(canDrop_carry);
+PREP(canRun_carry);
 PREP(carryObject);
 PREP(carryObjectPFH);
 PREP(dragObject);
@@ -19,6 +19,10 @@ PREP(handleUnconscious);
 PREP(initObject);
 PREP(initPerson);
 PREP(isObjectOnObject);
+PREP(pauseCarry);
+PREP(pauseDrag);
+PREP(resumeCarry);
+PREP(resumeDrag);
 PREP(setCarryable);
 PREP(setDraggable);
 PREP(startCarry);

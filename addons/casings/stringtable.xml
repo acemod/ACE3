@@ -7,6 +7,11 @@
             <Polish>ACE Łuski</Polish>
             <Korean>ACE 탄피</Korean>
             <Chinesesimp>ACE 弹壳</Chinesesimp>
+            <Russian>ACE Гильзы</Russian>
+            <Spanish>ACE Casquillos</Spanish>
+            <German>ACE Patronenhülsen</German>
+            <French>ACE Douilles</French>
+            <Portuguese>ACE Cartuchos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Casings_displayName">
             <English>Casings Enabled</English>
@@ -14,13 +19,23 @@
             <Polish>Łuski włączone</Polish>
             <Korean>탄피 활성화</Korean>
             <Chinesesimp>开启弹壳生成</Chinesesimp>
+            <Russian>Гильзы включены</Russian>
+            <Spanish>Habilitar Casquillos</Spanish>
+            <German>Patronenhülsen aktiviert</German>
+            <French>Douilles activées</French>
+            <Portuguese>Cartuchos habilitados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Casings_description">
             <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
             <Japanese>永続的な薬莢を有効にする (古い/弱いシステムに対する潜在的なパフォーマンスの影響)</Japanese>
             <Polish>Włącz pozostawanie łusek (MOŻLIWY wpływ na wydajność na starych/słabych komputerach)</Polish>
-            <Korean>영구적으로 남는 탄피를 활성화합니다(오래되고 취약한 시스템에 잠재적인 성능에 영향을 미칩니다.)</Korean>
+            <Korean>영구적으로 남는 탄피를 활성화합니다(오래되거나 저사양에 잠재적인 성능 영향을 줄 수 있음)</Korean>
             <Chinesesimp>开启生成持续存在的弹壳（可能对较老和性能不行的系统有影响）</Chinesesimp>
+            <Russian>Включить постоянные гильзы (ПОТЕНЦИАЛЬНО может повлиять на производительность на старых/слабых системах)</Russian>
+            <Spanish>Habilitar persistencia de casquillos (POTENCIAL impacto en el rendimiento de ordenadores antiguos o no potentes)</Spanish>
+            <German>Persistente Patronenhülsen aktivieren (POTENZIELLE Leistungseinbußen bei alten/schwachen Systemen)</German>
+            <French>Active la persistance des douilles (POTENTIEL impact sur les performances sur les anciens/faibles systèmes)</French>
+            <Portuguese>Habilitar persistência de cartuchos (POTENCIAL impacto no desempenho de sistemas antigos/fracos)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_displayName">
             <English>Maximum casings</English>
@@ -28,6 +43,11 @@
             <Polish>Maksymalna liczba łusek</Polish>
             <Korean>탄피 최대 갯수</Korean>
             <Chinesesimp>最大弹壳量</Chinesesimp>
+            <Russian>Макс. кол-во гильз</Russian>
+            <Spanish>Casquillos máximos</Spanish>
+            <German>Maximale Patronenhülsen</German>
+            <French>Nombre maximum de douilles</French>
+            <Portuguese>Máxima de cartuchos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_description">
             <English>Maximum amount of casings to display</English>
@@ -35,6 +55,11 @@
             <Polish>Maksymalna liczba wyświetlanych łusek</Polish>
             <Korean>표시할 최대 탄피 갯수</Korean>
             <Chinesesimp>显示的最大弹壳数量</Chinesesimp>
+            <Russian>Максимальное количество гильз для отображения</Russian>
+            <Spanish>Máxima cantidad de casquillos para mostrar</Spanish>
+            <German>Maximale Anzahl an Patronenhülsen, die angezeigt werden</German>
+            <French>Nombre maximum de douilles à afficher</French>
+            <Portuguese>Quantidade máxima de cartuchos para exibir</Portuguese>
         </Key>
     </Package>
 </Project>

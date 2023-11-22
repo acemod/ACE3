@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Brett Mayson
+ * Author: Brett Mayson, johnb43
  * Statement to sort items by the mod they belong to.
  *
  * Arguments:
@@ -14,13 +14,4 @@
 
 params ["_config"];
 
-private _dlc = "";
-private _addons = configSourceAddonList _config;
-if (_addons isNotEqualTo []) then {
-    private _mods = configSourceModList (configfile >> "CfgPatches" >> _addons select 0);
-    if (_mods isNotEqualTo []) then {
-        _dlc = _mods select 0;
-    };
-};
-
-modParams [_dlc, ["name"]] param [0, ""]
+(modParams [_config call EFUNC(common,getAddon), ["name"]]) param [0, ""]
