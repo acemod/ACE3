@@ -252,7 +252,7 @@
             <German>Interaktionsdauerkoeffizient</German>
             <Portuguese>Coeficiente de tempo para a interação</Portuguese>
             <French>Coefficient du temps d'interaction</French>
-            <Japanese>インタラクション時間の係数</Japanese>
+            <Japanese>インタラクションの所要時間係数</Japanese>
             <Chinese>互動時間係數</Chinese>
             <Chinesesimp>交互时间系数</Chinesesimp>
             <Italian>Coefficente per il tempo di interazione</Italian>
@@ -267,7 +267,7 @@
             <German>Skaliert die Zeit die benötigt wird um statische Waffen aufzubauen und nachzuladen.</German>
             <Portuguese>Escala o tempo requerido para montar e recarregar armas estáticas.</Portuguese>
             <French>Définit l'échelle de temps nécessaire à l'assemblage et au rechargement des armes statiques.</French>
-            <Japanese>設置型火器の設置と再装填時間を管理できます。</Japanese>
+            <Japanese>設置型火器の設置と再装填の所要時間を管理できます。</Japanese>
             <Chinese>設置組裝及裝填組裝固定型武器</Chinese>
             <Chinesesimp>衡量组装和重新装填固定式武器所需的时间</Chinesesimp>
             <Italian>Tempo necessario per assemblare e ricaricare le armi statiche</Italian>

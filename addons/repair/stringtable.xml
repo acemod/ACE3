@@ -272,7 +272,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_name">
             <English>Full Repair Time Coefficient</English>
-            <Japanese>完全修理時間係数</Japanese>
+            <Japanese>完全修理所要時間係数</Japanese>
             <Polish>Współczynnik Czasu Pełnej Naprawy</Polish>
             <German>Vollständiger Reparaturzeitkoeffizient</German>
             <Korean>전체 수리 시간 계수</Korean>
@@ -280,7 +280,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_description">
             <English>Modifies how long it takes to perform a Full Repair.\nThe repair time is based on the amount of repairs needed for each part, including those normally inaccessible.</English>
-            <Japanese>完全修復にかかる時間を変更します。\n修理時間は、通常アクセスできない部品も含め、各部品に必要な修理量に基づいて決定されます。</Japanese>
+            <Japanese>完全修復に掛かる時間を変更します。\n修理所要時間は、通常アクセスできない部品も含め、各部品に必要な修理量に基づいて決定されます。</Japanese>
             <Polish>Modyfikuje czas potrzebny do wykonania Pełnej Naprawy. Czas naprawy jest oparty na ilości napraw potrzebnych dla każdej części, w tym tych normalnie niedostępnych.</Polish>
             <German>Ändert, wie lange es dauert, eine vollständige Reparatur durchzuführen.\nDie Reparaturzeit basiert auf der Menge der erforderlichen Reparaturen für jedes Teil, einschließlich derjenigen, die normalerweise nicht zugänglich sind.</German>
             <Korean>전체적인 수리를 수행하는 데 걸리는 시간을 수정합니다.\n수리 시간은 일반적으로 접근할 수 없는 부품을 포함하여 각 부품에 필요한 수리 시간을 기준으로 합니다.</Korean>
@@ -2119,7 +2119,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_name">
             <English>Part Repair Time</English>
-            <Japanese>部分修理時間</Japanese>
+            <Japanese>部分修理所要時間</Japanese>
             <Polish>Czas Naprawy Części</Polish>
             <German>Teilreparaturzeit</German>
             <Korean>부품 수리 시간</Korean>
@@ -2127,7 +2127,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_description">
             <English>Time in seconds to complete a repair.</English>
-            <Japanese>修理完了までの時間</Japanese>
+            <Japanese>修理完了までの所要時間</Japanese>
             <Polish>Czas w sekundach do przeprowadzenia naprawy</Polish>
             <German>Zeit in Sekunden, um eine Reparatur abzuschließen.</German>
             <Korean>수리를 완료하는 시간(초 단위)</Korean>
@@ -2135,7 +2135,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_name">
             <English>Wheel Change Time</English>
-            <Japanese>タイヤ交換時間</Japanese>
+            <Japanese>タイヤ交換所要時間</Japanese>
             <Polish>Czas Zmiany Koła</Polish>
             <German>Radwechselzeit</German>
             <Korean>바퀴 교체 시간</Korean>
@@ -2143,7 +2143,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_description">
             <English>Time in seconds to remove or change a wheel.</English>
-            <Japanese>タイヤの取り外しまたは交換にかかる時間。</Japanese>
+            <Japanese>タイヤの取り外しまたは交換に掛かる時間。</Japanese>
             <Polish>Czas w sekundach do zdjęcia lub zmienienia koła.</Polish>
             <German>Zeit in Sekunden, um ein Rad zu entfernen oder zu wechseln.</German>
             <Korean>바퀴를 제거하거나 교체하는 데 걸리는 시간(초 단위)</Korean>
@@ -2167,7 +2167,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_DisplayName">
             <English>Wheel Patch Time</English>
-            <Japanese>タイヤ補修時間</Japanese>
+            <Japanese>タイヤ補修所要時間</Japanese>
             <Polish>Czas Łatania Koła</Polish>
             <German>Zeit um Räder zu flicken</German>
             <Korean>바퀴 수리 시간</Korean>
@@ -2175,7 +2175,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_Description">
             <English>Time it takes to patch a wheel by 5%.</English>
-            <Japanese>タイヤを5%補修するのにかかる時間。</Japanese>
+            <Japanese>タイヤを5%補修するのに掛かる時間。</Japanese>
             <Polish>Czas potrzebny na załatanie koła o 5%.</Polish>
             <German>Zeit, die benötigt wird, um ein Rad um 5 % zu flicken.</German>
             <Korean>바퀴를 5% 수리하는 데 걸리는 시간(초 단위)</Korean>

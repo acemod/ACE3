@@ -23,7 +23,7 @@
             <Italian>Durata per proiettile</Italian>
             <Chinese>每發所需時間</Chinese>
             <Chinesesimp>每发所需时间</Chinesesimp>
-            <Japanese>弾頭毎の所有時間</Japanese>
+            <Japanese>弾頭毎の所要時間</Japanese>
             <Korean>탄알 당 시간</Korean>
             <Polish>Czas na nabój</Polish>
             <Russian>Время на патрон</Russian>
@@ -39,7 +39,7 @@
             <Italian>Durata per caricatore</Italian>
             <Chinese>每匣所需時間</Chinese>
             <Chinesesimp>每匣所需时间</Chinesesimp>
-            <Japanese>弾倉毎の所有時間</Japanese>
+            <Japanese>弾倉毎の所要時間</Japanese>
             <Korean>탄창 당 시간</Korean>
             <Polish>Czas na magazynek</Polish>
             <Russian>Время на магазин</Russian>
@@ -55,7 +55,7 @@
             <Italian>Durata per caricatore a nastro</Italian>
             <Chinese>每彈鍊所需時間</Chinese>
             <Chinesesimp>每弹炼所需时间</Chinesesimp>
-            <Japanese>ベルトリンク毎の所有時間</Japanese>
+            <Japanese>ベルトリンク毎の所要時間</Japanese>
             <Korean>탄띠 당 시간</Korean>
             <Polish>Czas na taśmę</Polish>
             <Russian>Время на звено ленты</Russian>

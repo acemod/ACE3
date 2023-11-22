@@ -206,7 +206,7 @@
             <Czech>Doba trvání snímku</Czech>
             <Italian>Durata Diapositiva</Italian>
             <German>Länge der Diavorführung pro Bild</German>
-            <Japanese>スライドの持続時間</Japanese>
+            <Japanese>スライドの継続時間</Japanese>
             <Korean>슬라이드 지속 시간</Korean>
             <Chinese>幻燈片顯示時間</Chinese>
             <Chinesesimp>幻灯片显示时间</Chinesesimp>
@@ -222,7 +222,7 @@
             <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
             <Italian>Durata di ogni diapositiva. Default: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
-            <Japanese>各スライドの持続時間。 デフォルト: 0 (自動的な切り替えは無効)</Japanese>
+            <Japanese>各スライドの継続時間。 デフォルト: 0 (自動的な切り替えは無効)</Japanese>
             <Korean>매 슬라이드의 지속 시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>

@@ -537,7 +537,7 @@
             <Hungarian>Idő: %1m %2s</Hungarian>
             <Portuguese>Tempo: %1m %2s</Portuguese>
             <Russian>Время: %1m %2c</Russian>
-            <Japanese>設定時間: %1分 %2秒</Japanese>
+            <Japanese>タイマー: %1分 %2秒</Japanese>
             <Korean>시간: %1분 %2초</Korean>
             <Chinesesimp>时间：%1分%2秒</Chinesesimp>
             <Chinese>時間: %1分%2秒</Chinese>
@@ -554,7 +554,7 @@
             <Hungarian>Idő beállítása</Hungarian>
             <Portuguese>Configurar Tempo</Portuguese>
             <Russian>Установить время</Russian>
-            <Japanese>時間を設定</Japanese>
+            <Japanese>タイマーを設定</Japanese>
             <Korean>시간 설정</Korean>
             <Chinesesimp>设定时间</Chinesesimp>
             <Chinese>設定時間</Chinese>
@@ -1093,7 +1093,7 @@
             <English>Minimum Time</English>
             <Russian>Мин. время</Russian>
             <French>Durée minimale</French>
-            <Japanese>最短時間</Japanese>
+            <Japanese>タイマーの最短時間</Japanese>
             <Spanish>Tiempo mínimo</Spanish>
             <Polish>Minimalny czas</Polish>
             <German>Minimale Zeit</German>
@@ -1104,7 +1104,7 @@
             <English>Maximum Time</English>
             <Russian>Макс. время</Russian>
             <French>Durée maximale</French>
-            <Japanese>最長時間</Japanese>
+            <Japanese>タイマーの最長時間</Japanese>
             <Spanish>Tiempo máximo</Spanish>
             <Polish>Maksymalny czas</Polish>
             <German>Maximale Zeit</German>
@@ -1115,7 +1115,7 @@
             <English>Default Time</English>
             <Russian>Стандартное время</Russian>
             <French>Durée par défaut</French>
-            <Japanese>標準時間</Japanese>
+            <Japanese>タイマーの標準時間</Japanese>
             <Spanish>Tiempo por defecto</Spanish>
             <Polish>Domyślny czas</Polish>
             <German>Standardmäßige Zeit</German>

@@ -305,7 +305,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_DisplayName">
             <English>Autoinjector Treatment Time</English>
             <French>Durée d'interaction - Auto-injecteurs</French>
-            <Japanese>注射器の使用時間</Japanese>
+            <Japanese>注射器の所要時間</Japanese>
             <Spanish>Tiempo de tratamiento de autoinyección</Spanish>
             <Russian>Время ввода автоинъектора</Russian>
             <Polish>Czas aplikacji autostrzykawki</Polish>
@@ -328,7 +328,7 @@
             <English>Tourniquet Treatment Time</English>
             <French>Durée d'interaction - Garrots</French>
             <German>Tourniquet-Behandlungszeit</German>
-            <Japanese>止血帯の使用時間</Japanese>
+            <Japanese>止血帯の所要時間</Japanese>
             <Spanish>Tiempo de tratamiento de torniquete</Spanish>
             <Russian>Время наложения/снятия жгута</Russian>
             <Polish>Czas aplikacji stazy</Polish>
@@ -350,7 +350,7 @@
             <English>IV Bag Treatment Time</English>
             <French>Durée d'interaction - IVs</French>
             <German>IV Beutelbehandlungszeit</German>
-            <Japanese>点滴の使用時間</Japanese>
+            <Japanese>点滴の所要時間</Japanese>
             <Spanish>Tiempo de tratamiento de bolsa de IV</Spanish>
             <Russian>Время применения пакета внутривенного переливания</Russian>
             <Polish>Czas aplikacji IV</Polish>
@@ -372,7 +372,7 @@
             <English>Splint Treatment Time</English>
             <French>Durée d'interaction - Attelles</French>
             <German>Schienenbehandlungszeit</German>
-            <Japanese>添え木の使用時間</Japanese>
+            <Japanese>添え木の所要時間</Japanese>
             <Spanish>TIempo de tratamiento de férula</Spanish>
             <Russian>Время наложения шины</Russian>
             <Polish>Czas aplikacji szyny</Polish>
@@ -394,7 +394,7 @@
             <English>Body Bag Use Time</English>
             <French>Durée d'interaction - Housses mortuaires</French>
             <German>Anwendungszeit für Leichensack</German>
-            <Japanese>遺体袋の使用時間</Japanese>
+            <Japanese>遺体袋の所要時間</Japanese>
             <Spanish>TIempo de uso de bolsa para cuerpos</Spanish>
             <Russian>Время использования мешка для трупов</Russian>
             <Polish>Czas użycia worka na ciało</Polish>
@@ -622,7 +622,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
-            <Japanese>PAKの時間係数</Japanese>
+            <Japanese>PAKの所要時間係数</Japanese>
             <French>Coefficient de temps pour la trousse sanitaire</French>
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
             <Portuguese>Coeficiente de Tempo do KPS</Portuguese>
@@ -638,7 +638,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
-            <Japanese>PAKの使用にかかる時間を変更できます。\n総治療時間は最低でも 10 秒間で、この係数と体全体に負ったダメージによって決まります。</Japanese>
+            <Japanese>PAKの使用に掛かる時間を変更できます。\n総治療時間は最低でも 10 秒間で、この係数と体全体に負ったダメージによって決まります。</Japanese>
             <French>Modifie le temps nécessaire à l'application de la trousse sanitaire.\nLa durée est calculée en multipliant ce coefficient par les dommages totaux du patient, avec un minimum de 10 secondes.</French>
             <Russian>Изменяет быстроту применения Аптечки.\nВремя лечения зависит от общего повреждения частей тела, умноженного на данный коэффициент (минимум 10 сек.).</Russian>
             <Portuguese>Modifica quanto tempo o KPS leva para ser aplicado.\nO tempo de tratamento é baseado no total de dano do corpo, multiplicado por esse coeficiente, com um mínimo de 10 segundos.</Portuguese>
@@ -773,7 +773,7 @@
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_DisplayName">
             <English>Wound Stitch Time</English>
             <French>Durée d'interaction - Sutures</French>
-            <Japanese>縫合時間</Japanese>
+            <Japanese>縫合の所要時間</Japanese>
             <Spanish>Tiempo de sutura de herida</Spanish>
             <Russian>Время зашивания ран</Russian>
             <Polish>Czas szycia rany</Polish>
@@ -1204,7 +1204,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
             <French>RCP - Durée d'interaction</French>
-            <Japanese>心肺蘇生(CPR)の治療時間</Japanese>
+            <Japanese>心肺蘇生(CPR)の所要時間</Japanese>
             <Spanish>Tiempo de tratamiento de RCP</Spanish>
             <Russian>Время проведения СЛР</Russian>
             <Polish>Czas potrzebny na wykonanie CPR</Polish>
@@ -1215,7 +1215,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
             <French>Définit le temps nécessaire à la mise en œuvre d'une RCP (en secondes).</French>
-            <Japanese>心肺蘇生(CPR)にかかる時間 (秒) を決定します。</Japanese>
+            <Japanese>心肺蘇生(CPR)に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para realizar RCP en un paciente.</Spanish>
             <Russian>Время, необходимое для проведения сердечно-лёгочной реанимации (СЛР) (в секундах).</Russian>
             <Polish>Czas w sekundach jaki jest potrzebny do wykonania CPR na pacjencie.</Polish>

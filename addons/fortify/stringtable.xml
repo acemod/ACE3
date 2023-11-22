@@ -195,7 +195,7 @@
             <Chinesesimp>时间—成本系数</Chinesesimp>
             <Korean>시간-가격 계수</Korean>
             <German>Zeit-Kosten-Koeffizient</German>
-            <Japanese>時間コスト係数</Japanese>
+            <Japanese>タイム-コスト係数</Japanese>
             <Polish>Współczynnik Czas-Koszt</Polish>
             <Russian>Коэф. время-цена</Russian>
             <Spanish>Coeficiente Tiempo-Coste</Spanish>
@@ -217,7 +217,7 @@
             <Chinesesimp>最短建造时间</Chinesesimp>
             <Korean>최소 건축 시간</Korean>
             <German>Minimale Bauzeit</German>
-            <Japanese>建造に掛かる最小の時間</Japanese>
+            <Japanese>最短建造時間</Japanese>
             <Polish>Minimalny czas budowy</Polish>
             <Russian>Мин. время возведения</Russian>
             <Spanish>Tiempo mínimo de construcción</Spanish>
@@ -228,7 +228,7 @@
             <Chinesesimp>建造任何建筑的最短时间。\nb是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
             <Korean>건축물을 지을 때 걸리는 최소 시간을 계수를 적용하여 계산합니다.</Korean>
             <German>Mindestzeit für den Bau eines beliebigen Bauwerks.\nb in Ax + b, wobei x die Kosten des Objekts sind.</German>
-            <Japanese>建造に掛かる最小の時間。\n計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
+            <Japanese>建造に掛かる最短時間。\n計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
             <Polish>Minimalny czas do zbudowania dowolenj konstrukcji.\nb w Ax + b gdzie x jest kosztem obiektu</Polish>
             <Russian>Минимальное время для возведения любой постройки.\nb в формуле Ax + b, где x - это цена объекта</Russian>
             <Spanish>Tiempo mínimo para construir una estructura.\nb en Ax + b donde x es el coste del objeto</Spanish>
