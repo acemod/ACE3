@@ -38,7 +38,7 @@
             <Japanese>名前を次に変更:&lt;br/&gt;%1</Japanese>
             <French>Renommé en :&lt;br/&gt;%1</French>
             <Russian>Переименовано в:&lt;br/&gt;%1</Russian>
-            <German>Neu Bewaffnet: &lt;br/&gt;%1</German>
+            <German>Neu umbenannt zu: &lt;br/&gt;%1</German>
             <Polish>Nazwa zmieniona na:&lt;br/&gt;%1</Polish>
             <Chinesesimp>重命名为：&lt;br/&gt;%1</Chinesesimp>
             <Korean>%1(으)로 명칭을 바꿈</Korean>
@@ -299,6 +299,16 @@
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
             <Turkish>%1&lt;br/&gt; kargo boşaltılamadı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Cargo_UnloadingImpossible">
+            <English>Can't be unloaded</English>
+            <German>Kann nicht entladen werden</German>
+            <French>Ne peut pas être déchargé</French>
+        </Key>
+        <Key ID="STR_ACE_Cargo_SizeMenu">
+            <English>Cargo Size: %1</English>
+            <German>Frachtgröße: %1</German>
+            <French>Encombrement fret: %1</French>
+        </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
             <Japanese>カスタム名</Japanese>
@@ -371,7 +381,7 @@
             <Turkish>Kargo Boyutu</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
-            <English>The cargo space required to hold this object (-1 for unloadable)</English>
+            <English>The cargo space required to hold this object (-1 for not loadable)</English>
             <German>Frachtraumgröße, welche zum Einladen dieses Objektes benötigt wird (-1 nicht einladbar)</German>
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
             <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>

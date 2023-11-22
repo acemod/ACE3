@@ -40,7 +40,7 @@
             <German>Zeigt den aktuellen Hunger- und Durststatus an.</German>
             <Hungarian>Jelzi az éhínség és a szomjúság állapotát.</Hungarian>
             <Italian>Indica lo stato attuale di fame e sete.</Italian>
-            <Japanese>現在の空腹感と渇きの状態を示します。</Japanese>
+            <Japanese>現在の喉の渇きと空腹度の状態を示します。</Japanese>
             <Korean>굶주림과 갈증 정도를 표시합니다.</Korean>
             <Polish>Wskazuje bieżący status głodu i pragnienia.</Polish>
             <Portuguese>Indica o status atual de fome e sede.</Portuguese>
@@ -103,7 +103,7 @@
             <German>Zeit ohne Wasser</German>
             <Hungarian>Víz nélküli idő</Hungarian>
             <Italian>Tempo senza acqua</Italian>
-            <Japanese>水なしの時間</Japanese>
+            <Japanese>水分無しでの耐久時間</Japanese>
             <Korean>물 없이 생존 가능 시간</Korean>
             <Polish>Czas bez wody</Polish>
             <Portuguese>Tempo sem água</Portuguese>
@@ -120,7 +120,7 @@
             <German>Wie lange sollte eine Einheit ohne Wasser auskommen (Stunden)?</German>
             <Hungarian>Mennyi ideig kell egy egység víz nélkül (óra)</Hungarian>
             <Italian>Mennyi ideig kell egy egység víz nélkül (óra)</Italian>
-            <Japanese>ユニットが水なしでどれくらい時間を過ごすことができるか (一時間単位)</Japanese>
+            <Japanese>ユニットが水分無しでどれくらいの時間耐えられるか (一時間単位)</Japanese>
             <Korean>물을 안 마시고 얼마나 생존할 수 있는지 정합니다 (시간)</Korean>
             <Polish>Jak długo jednostka powinna przetrwać bez wody (godziny)</Polish>
             <Portuguese>Quanto tempo uma unidade pode passar sem água (horas)</Portuguese>
@@ -137,7 +137,7 @@
             <German>Zeit ohne Essen</German>
             <Hungarian>Élelmiszer nélkül</Hungarian>
             <Italian>Tempo senza cibo</Italian>
-            <Japanese>食べ物なしの時間</Japanese>
+            <Japanese>食事抜きでの耐久時間</Japanese>
             <Korean>밥 없이 생존 가능 시간</Korean>
             <Polish>Czas bez jedzenia</Polish>
             <Portuguese>Tempo sem comida</Portuguese>
@@ -154,7 +154,7 @@
             <German>Wie lange sollte eine Einheit ohne Essen gehen können (Stunden)?</German>
             <Hungarian>Mennyi ideig kell egy egység élni nélkül (óra)</Hungarian>
             <Italian>Per quanto tempo un'unità dovrebbe essere in grado di andare senza cibo (ore)</Italian>
-            <Japanese>ユニットが食糧なしでどれくらい時間を過ごすことができるか (一時間単位)</Japanese>
+            <Japanese>ユニットが食事抜きでどれくらいの時間耐えられるか (一時間単位)</Japanese>
             <Korean>밥을 안 먹고 얼마나 생존할 수 있는지 정합니다 (시간)</Korean>
             <Polish>Jak długo jednostka powinna przetrwać bez jedzenia (godziny)</Polish>
             <Portuguese>Quanto tempo uma unidade pode ir sem alimentos (horas)</Portuguese>
@@ -167,7 +167,7 @@
             <German>Durst gestillt</German>
             <Chinese>止渴程度</Chinese>
             <Chinesesimp>解渴程度</Chinesesimp>
-            <Japanese>乾きの満たし</Japanese>
+            <Japanese>喉の渇き度の満たされ量</Japanese>
             <Russian>Утоление жажды</Russian>
             <Polish>Pragnienie zaspokojone</Polish>
             <Turkish>Susuzluk Giderme Katsayısı</Turkish>
@@ -180,7 +180,7 @@
             <German>Koeffizient für die Menge des Dursts, der durch Trinken gestillt wird.</German>
             <Chinese>從飲用中能夠攝取多少水份。</Chinese>
             <Chinesesimp>通过喝水能够补充多少水份。</Chinesesimp>
-            <Japanese>飲むことによって得られる乾きの満たし量の係数を設定します</Japanese>
+            <Japanese>水分補給によって満たされる喉の渇きの量を表す係数。</Japanese>
             <Russian>Коэффициент утоления жажды от питья</Russian>
             <Polish>Współczynnik ilości zaspokojnego pragnienia od picia</Polish>
             <Turkish>Bir şey içince, susuzluğunun ne kadar giderileceğini belirler.</Turkish>
@@ -193,7 +193,7 @@
             <German>Hunger gesättigt</German>
             <Chinese>飽足感</Chinese>
             <Chinesesimp>饱腹感</Chinesesimp>
-            <Japanese>満腹感</Japanese>
+            <Japanese>空腹度の満たされ量</Japanese>
             <Russian>Утоление голода</Russian>
             <Polish>Głód Zaspokojony</Polish>
             <Turkish>Açlık Giderme Katsayısı</Turkish>
@@ -206,7 +206,7 @@
             <German>Koeffizient für die Menge des Hungers, der durch essen gesättigt wird.</German>
             <Chinese>從飲食中獲取多少飽食感。</Chinese>
             <Chinesesimp>通过饮食能够补充多少能量。</Chinesesimp>
-            <Japanese>食べることによって得られる満腹感の量の係数を設定します</Japanese>
+            <Japanese>食事によって満たされる空腹度の量を表す係数。</Japanese>
             <Russian>Коэффициент утоления голода от принятия пищи</Russian>
             <Polish>Współczynnik ilosci zaspokojnego głodu od jedzenia</Polish>
             <Turkish>Bir şey yiyince, açlığın ne kadar giderileceğini belirler.</Turkish>
@@ -219,7 +219,7 @@
             <Russian>Действия с источником воды</Russian>
             <Polish>Akcje przy źrodle wody</Polish>
             <Turkish>Su Içme Animasyonu</Turkish>
-            <Japanese>水源動作</Japanese>
+            <Japanese>水源での動作</Japanese>
             <German>Wasserquellen-Aktionen</German>
             <Chinesesimp>水源动作</Chinesesimp>
             <Korean>물 근처 행동</Korean>
@@ -243,7 +243,7 @@
             <Russian>Только пополнить</Russian>
             <Polish>Tylko napełnij</Polish>
             <Turkish>Sadece içeceği iç</Turkish>
-            <Japanese>汲むだけ</Japanese>
+            <Japanese>水汲みのみ</Japanese>
             <German>Nur Befüllen</German>
             <Chinesesimp>仅限取水</Chinesesimp>
             <Korean>다시 채우기만 가능</Korean>
@@ -255,7 +255,7 @@
             <Russian>Действия с объектами ландшафта</Russian>
             <Polish>Akcje Objektu terenu</Polish>
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
-            <Japanese>マップ オブジェクト動作</Japanese>
+            <Japanese>地形オブジェクトでの動作</Japanese>
             <German>Geländeobjekt-Aktionen</German>
             <Chinesesimp>地形物体动作</Chinesesimp>
             <Korean>지형 물체 상호작용</Korean>
@@ -267,7 +267,7 @@
             <Russian>Включает действия с источниками воды для объектов ландшафта.</Russian>
             <Polish>Umożliwia akcje przy źrodle wody na obiektach terenu.</Polish>
             <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
-            <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
+            <Japanese>地形に存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
             <German>Aktiviert Wasserquellen-Aktionen für Geländeobjekte.</German>
             <Chinesesimp>为地形物体启用水源动作。</Chinesesimp>
             <Korean>지형 물체에서 물을 얻는 게 가능해집니다.</Korean>
@@ -292,7 +292,7 @@
             <German>Bestimmt, ob Durst und Hunger ACE Erweiterte Ausdauer beeinflussen sollen.</German>
             <Chinese>是否讓飲食影響到ACE的進階疲勞。</Chinese>
             <Chinesesimp>是否让饮食影响到 ACE 的进阶疲劳。</Chinesesimp>
-            <Japanese>喉の渇きと空腹感が ACE アドバンスド ファティーグへ与える影響を決定します</Japanese>
+            <Japanese>喉の渇きと空腹度が ACE アドバンスド ファティーグへ与える影響を定義します。</Japanese>
             <Russian>Определяет, будет ли жажда и голод влиять на продвинутую усталость ACE.</Russian>
             <Polish>Kontroluje czy pragnienie i głód mają wpływ na zaawansowane zmęczenie ACE.</Polish>
             <Turkish>Acıkınca veya susayınca kişinin yorulup yorulmayacağını belirler.</Turkish>
@@ -344,7 +344,7 @@
             <German>Farblose Icons</German>
             <Chinese>增減化圖示</Chinese>
             <Chinesesimp>渐化图标</Chinesesimp>
-            <Japanese>ドレイン アイコン</Japanese>
+            <Japanese>レベルゲージアイコン</Japanese>
             <Polish>Ubywające ikony</Polish>
             <Russian>Исчезающие иконки</Russian>
             <Turkish>Içi Boşalan Ikonlar</Turkish>
@@ -370,7 +370,7 @@
             <German>Zeigt automatisch das HUD an, sobald Durst oder Hunger über diesem Level sind.</German>
             <Chinese>在飲食低於多少程度時顯示界面。</Chinese>
             <Chinesesimp>在饮食能量低于多少程度时显示界面。</Chinesesimp>
-            <Japanese>この値以上に空腹感か乾きを感じると自動的に HUD を表示します</Japanese>
+            <Japanese>この値以上に空腹度か喉の渇きを感じると自動的に HUD を表示します</Japanese>
             <Polish>Automatycznie pokaż HUD kiedy pragnienie albo głód przekroczy ten poziom</Polish>
             <Russian>Автоматически отображает иконки при достижении определенных уровней голода и жажды.</Russian>
             <Turkish>Susuzluk veya açlık belli bir seviyenin altına inince otomatik olarak HUD u göster.</Turkish>
@@ -414,7 +414,7 @@
             <Chinese>控制顏色化圖示的透明度。設定為動態使其界面透明度與飲食需求一樣，越透明越需要。</Chinese>
             <Chinesesimp>控制彩色图标 HUD 的透明度。动态设置使 HUD 的透明度随着口渴或饥饿的增加而减弱。</Chinesesimp>
             <Polish>Kontroluje transparentność kolorowych ikon HUD. Dynamiczne ustawienie zmniejsza przejrzystość wraz z zwiększeniem głodu czy pragnienia.</Polish>
-            <Japanese>色付きアイコンの透明度を決定できます。動的に設定されると、喉の渇きや空腹感が増すにつれて、アイコンの透明度を下げます。</Japanese>
+            <Japanese>色付きアイコンの透明度を決定できます。動的に設定されると、空腹度や喉の渇きが増すにつれて、アイコンの透明度を下げます。</Japanese>
             <Russian>Настраивает прозрачность цветных иконок. «Динамическая» делает иконки менее прозрачными при увеличении жажды и голода.</Russian>
             <Turkish>Renkli Simgeler Gösterge Paneli'nin şeffaflığını kontrol eder. Dinamik ayar, susuzluk veya açlık arttıkça HUD'yi daha az şeffaf hale getirir.</Turkish>
             <Korean>색깔 아이콘의 투명도를 조절합니다. 동적 설정의 경우 배고픔이나 목마름이 해결되면 덜 투명하게 바뀝니다.</Korean>
@@ -519,7 +519,7 @@
             <German>Es ist kein Wasser mehr übrig.</German>
             <Chinese>水已經用完了</Chinese>
             <Chinesesimp>水已经喝完了。</Chinesesimp>
-            <Japanese>水はもうありません。</Japanese>
+            <Japanese>水は残っていません。</Japanese>
             <Polish>Nie ma wody</Polish>
             <Russian>Воды больше не осталось</Russian>
             <Turkish>Hiç su kalmadı.</Turkish>
@@ -548,7 +548,7 @@
             <German>Nachfüllung</German>
             <Hungarian>Utántöltés</Hungarian>
             <Italian>Ricarica</Italian>
-            <Japanese>汲む</Japanese>
+            <Japanese>水を汲む</Japanese>
             <Korean>다시 채우기</Korean>
             <Polish>Uzupełnij</Polish>
             <Portuguese>Recarga</Portuguese>
@@ -650,7 +650,7 @@
             <German>Wasserflasche</German>
             <Hungarian>Vizesüveg</Hungarian>
             <Italian>Bottiglia d'acqua</Italian>
-            <Japanese>ウォーターボトル</Japanese>
+            <Japanese>水のペットボトル</Japanese>
             <Korean>물병</Korean>
             <Polish>Butelka wody</Polish>
             <Portuguese>Garrafa de água</Portuguese>
@@ -667,7 +667,7 @@
             <German>Eine Wasserflasche</German>
             <Hungarian>Egy vizes palackot</Hungarian>
             <Italian>Una bottiglia d'acqua</Italian>
-            <Japanese>ウォーター ボトル</Japanese>
+            <Japanese>水入りペットボトル</Japanese>
             <Korean>물병</Korean>
             <Polish>Butelka wody</Polish>
             <Portuguese>Uma garrafa de água</Portuguese>
@@ -684,7 +684,7 @@
             <German>Wasserflasche (Hälfte)</German>
             <Hungarian>Vízpalack (fél)</Hungarian>
             <Italian>Bottiglia d'acqua (metà)</Italian>
-            <Japanese>ウォーター ボトル (半分)</Japanese>
+            <Japanese>水のペットボトル (半分)</Japanese>
             <Korean>물병 (절반)</Korean>
             <Polish>Butelka wody (połowa)</Polish>
             <Portuguese>Garrafa de água (meio)</Portuguese>
@@ -701,7 +701,7 @@
             <German>Eine halbvolle Wasserflasche</German>
             <Hungarian>Fél-teljes vizes palack</Hungarian>
             <Italian>Una mezza bottiglia piena d'acqua</Italian>
-            <Japanese>半分入っているウォーター ボトル</Japanese>
+            <Japanese>半分残っている水入りペットボトル</Japanese>
             <Korean>절반만 차 있는 물병입니다.</Korean>
             <Polish>Pół butelki z wodą</Polish>
             <Portuguese>Uma garrafa de água meia cheia</Portuguese>
@@ -718,7 +718,7 @@
             <German>Wasserflasche (leer)</German>
             <Hungarian>Vízpalack (üres)</Hungarian>
             <Italian>Bottiglia d'acqua (vuota)</Italian>
-            <Japanese>ウォーター ボトル (空)</Japanese>
+            <Japanese>水のペットボトル (空)</Japanese>
             <Korean>물병 (비어 있음)</Korean>
             <Polish>Butelka na wodę (pusta)</Polish>
             <Portuguese>Garrafa de água (vazia)</Portuguese>
@@ -735,7 +735,7 @@
             <German>Eine leere Wasserflasche</German>
             <Hungarian>Egy üres palack</Hungarian>
             <Italian>Una bottiglia d'acqua vuota</Italian>
-            <Japanese>空のウォーター ボトル</Japanese>
+            <Japanese>空のウォーターボトル</Japanese>
             <Korean>빈 물병입니다</Korean>
             <Polish>Pusta butelka wody</Polish>
             <Portuguese>Uma garrafa de água vazia</Portuguese>
@@ -876,7 +876,7 @@
             <German>Red Gull verleiht Flügel</German>
             <Chinese>紅鷹讓你猛虎添翼</Chinese>
             <Chinesesimp>红鹰让你猛虎添翼</Chinesesimp>
-            <Japanese>レッドガル 翼をさずける</Japanese>
+            <Japanese>レッドガル 翼を授ける</Japanese>
             <Polish>Red Gull doda ci skrzydeł</Polish>
             <Russian>Рэд Гулл окрыляет!</Russian>
             <Turkish>Red Gull kanatlandırrrrr</Turkish>
@@ -1173,7 +1173,7 @@
             <German>Eine humanitäre Ration, die dazu bestimmt ist, in Krisenzeiten als Nahrung für eine Person zu dienen</German>
             <Hungarian>Humanitárius eloszlás, amelynek célja az ember élelmezési ellátottsága a válság idején</Hungarian>
             <Italian>Una razione umanitaria destinata a servire come riserva di cibo di una persona durante le crisi</Italian>
-            <Japanese>人道危機を救う為に配布された食料品</Japanese>
+            <Japanese>危機に瀕した人々の供給食としての使用を目的とした人道配給食</Japanese>
             <Korean>재난 상황에 식량으로 쓸 수 있는 인도주의 차원의 배급식량입니다</Korean>
             <Polish>Racja humanitarna, która ma służyć jako żywność dla danej osoby podczas kryzysów</Polish>
             <Portuguese>Uma Ração Humanitária destinada a servir como alimento alimentar de uma pessoa durante as crises</Portuguese>

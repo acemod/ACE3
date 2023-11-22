@@ -394,7 +394,7 @@
             <English>Body Bag Use Time</English>
             <French>Durée d'interaction - Housses mortuaires</French>
             <German>Anwendungszeit für Leichensack</German>
-            <Japanese>死体袋の使用時間</Japanese>
+            <Japanese>遺体袋の使用時間</Japanese>
             <Spanish>TIempo de uso de bolsa para cuerpos</Spanish>
             <Russian>Время использования мешка для трупов</Russian>
             <Polish>Czas użycia worka na ciało</Polish>
@@ -405,7 +405,7 @@
             <English>Time, in seconds, required to put a patient in a body bag.</English>
             <French>Définit le temps nécessaire à la mise en housse d'un corps (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
-            <Japanese>死体袋の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>遺体袋の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para poner a un paciente en una bolsa para cuerpos.</Spanish>
             <Russian>Время, необходимое для того чтобы упаковать труп в мешок (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na spakowanie ciała do worka na ciało.</Polish>
@@ -503,7 +503,7 @@
             <French>Trousse sanitaire autorisée pour</French>
             <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
             <Italian>Consenti Kit di Pronto Soccorso</Italian>
-            <Japanese>個人用応急処置キットの許可</Japanese>
+            <Japanese>PAKの許可</Japanese>
             <Korean>개인응급키트 사용 허가</Korean>
             <Chinesesimp>允许使用个人急救包</Chinesesimp>
             <Chinese>允許使用個人急救包</Chinese>
@@ -511,7 +511,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
-            <Japanese>個人用応急処置キットの使用に訓練レベルを必要とさせます。</Japanese>
+            <Japanese>PAKの使用に訓練レベルを必要とさせます。</Japanese>
             <French>Définit la qualification médicale requise pour utiliser la trousse sanitaire.</French>
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
@@ -536,7 +536,7 @@
             <French>Lieux trousse sanitaire</French>
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
             <Italian>Locazioni Kit Pronto Soccorso</Italian>
-            <Japanese>個人用応急処置キットの使用可能場所</Japanese>
+            <Japanese>PAKの使用可能場所</Japanese>
             <Korean>개인응급키트 사용 장소</Korean>
             <Chinesesimp>个人急救包使用地点</Chinesesimp>
             <Chinese>個人急救包使用地點</Chinese>
@@ -544,7 +544,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
-            <Japanese>個人用応急処置キットが使える場所を決定します。</Japanese>
+            <Japanese>PAKが使える場所を決定します。</Japanese>
             <French>Définit les lieux où l'usage de la trousse sanitaire est autorisé.</French>
             <Russian>Контролирует, где можно использовать Аптечку.</Russian>
             <Portuguese>Controla onde o KPS pode ser utilizado.</Portuguese>
@@ -560,7 +560,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
             <English>Consume PAK</English>
-            <Japanese>個人用応急処置キットの消費</Japanese>
+            <Japanese>PAKの消費</Japanese>
             <French>Trousse sanitaire consommable</French>
             <Russian>Израсходовать Аптечку</Russian>
             <Portuguese>KPS Descartável</Portuguese>
@@ -576,7 +576,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
-            <Japanese>個人用応急処置キットの使用後に消費するかどうかを決定します。</Japanese>
+            <Japanese>PAKの使用後に消費するかどうかを決定します。</Japanese>
             <French>Définit si la trousse sanitaire doit être à usage unique.</French>
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
             <Portuguese>Controla se o KPS deve ser descartado/consumido após o uso.</Portuguese>
@@ -598,7 +598,7 @@
             <Chinesesimp>自我使用急救包</Chinesesimp>
             <French>Utilisation de la trousse sanitaire sur soi-même</French>
             <Polish>Używanie apteczki osobistej na sobie</Polish>
-            <Japanese>個人用応急処置キットの自己使用</Japanese>
+            <Japanese>PAKの自己使用</Japanese>
             <Czech>Samo-použití osobní lékárničky (PAK)</Czech>
             <Russian>Использование аптечки на себе</Russian>
             <Turkish>Kendi PAK Kullanımı</Turkish>
@@ -613,7 +613,7 @@
             <Chinesesimp>启用自身能使用个人急救包。</Chinesesimp>
             <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
             <Polish>Pozwala na użycie apteczki osobistej na sobie</Polish>
-            <Japanese>個人用応急処置キットを使って、自分を治療できるようにします。</Japanese>
+            <Japanese>PAKを使って、自分を治療できるようにします。</Japanese>
             <Czech>Umožňuje použít osobní lékárničku (PAK) na sama sebe.</Czech>
             <Russian>Позволяют использовать аптечку на себе в одиночку.</Russian>
             <Turkish>Kendini iyileştirmek için PAK'ların kullanılmasını sağlar.</Turkish>
@@ -622,7 +622,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
-            <Japanese>個人用応急処置キットの時間係数</Japanese>
+            <Japanese>PAKの時間係数</Japanese>
             <French>Coefficient de temps pour la trousse sanitaire</French>
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
             <Portuguese>Coeficiente de Tempo do KPS</Portuguese>
@@ -638,7 +638,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
-            <Japanese>個人用応急処置キットの使用にかかる時間を変更できます。\n総治療時間は最低でも 10 秒間で、この係数と体全体に負ったダメージによって決まります。</Japanese>
+            <Japanese>PAKの使用にかかる時間を変更できます。\n総治療時間は最低でも 10 秒間で、この係数と体全体に負ったダメージによって決まります。</Japanese>
             <French>Modifie le temps nécessaire à l'application de la trousse sanitaire.\nLa durée est calculée en multipliant ce coefficient par les dommages totaux du patient, avec un minimum de 10 secondes.</French>
             <Russian>Изменяет быстроту применения Аптечки.\nВремя лечения зависит от общего повреждения частей тела, умноженного на данный коэффициент (минимум 10 сек.).</Russian>
             <Portuguese>Modifica quanto tempo o KPS leva para ser aplicado.\nO tempo de tratamento é baseado no total de dano do corpo, multiplicado por esse coeficiente, com um mínimo de 10 segundos.</Portuguese>
@@ -654,7 +654,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
-            <Japanese>手術用キットを許可</Japanese>
+            <Japanese>手術キットを許可</Japanese>
             <French>Trousse chirurgicale autorisée pour</French>
             <Russian>Разрешить Хирургический набор</Russian>
             <Portuguese>Permitir Kit Cirúrgico</Portuguese>
@@ -670,7 +670,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
-            <Japanese>手術用キットの使用に訓練レベルを必要とさせます。</Japanese>
+            <Japanese>手術キットの使用に訓練レベルを必要とさせます。</Japanese>
             <French>Définit la qualification médicale requise pour utiliser la trousse chirurgicale.</French>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
@@ -686,7 +686,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
-            <Japanese>手術用キットの使用可能場所</Japanese>
+            <Japanese>手術キットの使用可能場所</Japanese>
             <French>Lieux trousse chirurgicale</French>
             <Russian>Места использования Хирургического набора</Russian>
             <Portuguese>Locais para Kit Cirúrgico</Portuguese>
@@ -702,7 +702,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
-            <Japanese>手術用キットが使える場所を決定します。</Japanese>
+            <Japanese>手術キットが使える場所を決定します。</Japanese>
             <French>Définit les lieux où l'usage de la trousse chirurgicale est autorisé.</French>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
             <Portuguese>Controle onde o Kit Cirúrgico pode ser utilizado.</Portuguese>
@@ -718,7 +718,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
-            <Japanese>手術用キットの消費</Japanese>
+            <Japanese>手術キットの消費</Japanese>
             <French>Trousse chirurgicale consommable</French>
             <Russian>Израсходовать Хирургический набор</Russian>
             <Portuguese>Kit Cirúrgico Consumível</Portuguese>
@@ -735,7 +735,7 @@
             <English>What should be consumed after use.</English>
             <German>Legt fest, ob etwas nach der Anwendung verwendet werden soll.</German>
             <Spanish>Qué debe ser consumido despues de su uso.</Spanish>
-            <Japanese>手術用キットの使用後に消費するかどうかを決定します。</Japanese>
+            <Japanese>手術キットの使用後に消費するかどうかを決定します。</Japanese>
             <Polish>Co powinno zostać zużyte po zastosowaniu.</Polish>
             <Korean>봉합키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
             <French>Ce qui doit être consommé après l'utilisation.</French>
@@ -759,7 +759,7 @@
             <English>Enables the use of surgical kits to stitch oneself.</English>
             <French>Autorise l'utilisation de la trousse chirugicale sur soi-même.</French>
             <Portuguese>Permite o uso de Kit Cirúrgico em si mesmo.</Portuguese>
-            <Japanese>手術用キットを使い自らを縫合できるようにします。</Japanese>
+            <Japanese>手術キットを使い自らを縫合できるようにします。</Japanese>
             <Chinese>啟用是否能自己使用手術包來縫合自己的傷口。</Chinese>
             <Chinesesimp>启用是否能够使用手术包进行自我缝合。</Chinesesimp>
             <Czech>Umožňuje použití sešívací sady na sebe sama.</Czech>
@@ -825,7 +825,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_DisplayName">
             <English>Allow Unconscious Body Bag</English>
             <French>Housse mortuaire - Autoriser patients inconscients</French>
-            <Japanese>無意識者を死体袋に</Japanese>
+            <Japanese>無意識者を遺体袋に</Japanese>
             <Spanish>Permitir bolsa para cuerpos inconsciente</Spanish>
             <Russian>Разрешить упаковывать пациентов без сознания в мешки для трупов</Russian>
             <Polish>Nieprzytomni w worku na ciało</Polish>
@@ -836,7 +836,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
             <French>Active la possibilité de placer des patients inconscients dans les housses mortuaires.\nAttention : le cas échéant cela provoquera la mort du patient.</French>
-            <Japanese>気絶しているプレイヤーを死体袋へ入れられるかどうかを決定します。</Japanese>
+            <Japanese>気絶しているプレイヤーを遺体袋へ入れられるかどうかを決定します。</Japanese>
             <Spanish>Permitir colocar a un paciente inconsciente en una bolsa para cuerpos.</Spanish>
             <Russian>Разрешает упаковывать пациентов без сознания в мешки для трупов.</Russian>
             <Polish>Zezwalaj na pakowanie nieprzytomnych osób do worka na ciało.</Polish>
@@ -2261,7 +2261,7 @@
             <Italian>Pronto soccorso personale</Italian>
             <Portuguese>Kit De Primeiros Socorros Pessoal</Portuguese>
             <Czech>Osobní lékárnička (PAK)</Czech>
-            <Japanese>個人用応急処置キット</Japanese>
+            <Japanese>個人用治療キット (PAK)</Japanese>
             <Korean>개인응급키트</Korean>
             <Chinesesimp>个人急救包</Chinesesimp>
             <Chinese>個人急救包</Chinese>
@@ -2295,7 +2295,7 @@
             <Portuguese>Kit de primeiros socorros para sutura ou tratamentos avançados</Portuguese>
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných v poli</Czech>
             <Italian>Pronto soccorso personale da campo per mettersi i punti o per trattamenti avanzati.</Italian>
-            <Japanese>戦場で縫合や高度な処置に必要とされる、様々な治療器具が含まれています。</Japanese>
+            <Japanese>個人用治療キット (PAK) は戦場での縫合や高度な処置に必要です</Japanese>
             <Korean>야전에서 봉합 및 고급 조치를 위한 개인응급키트</Korean>
             <Chinesesimp>个人急救包可用于战地缝合手术或进阶伤口系统使用</Chinesesimp>
             <Chinese>個人急救包可用於戰地縫合手術或進階醫療用</Chinese>
@@ -2312,7 +2312,7 @@
             <Portuguese>Usar o kit de primeiros socorros</Portuguese>
             <Czech>Použít osobní lékárničku (PAK)</Czech>
             <Italian>Usa il pronto soccorso personale</Italian>
-            <Japanese>個人用応急処置キットを使う</Japanese>
+            <Japanese>個人用治療キットを使う</Japanese>
             <Korean>개인응급키트 사용</Korean>
             <Chinesesimp>使用个人急救包</Chinesesimp>
             <Chinese>使用個人急救包</Chinese>
@@ -2329,7 +2329,7 @@
             <Italian>Kit chirurgico</Italian>
             <Portuguese>Kit Cirurgico</Portuguese>
             <Czech>Chirurgická sada</Czech>
-            <Japanese>手術用キット</Japanese>
+            <Japanese>手術キット</Japanese>
             <Korean>봉합 키트</Korean>
             <Chinesesimp>手术包</Chinesesimp>
             <Chinese>手術包</Chinese>
@@ -2346,7 +2346,7 @@
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
-            <Japanese>手術用キットは戦場で高度な処置をする為に使われます。</Japanese>
+            <Japanese>手術キットは戦場で高度な処置をする為に使われます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
             <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合</Chinese>
@@ -2363,7 +2363,7 @@
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo.</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
-            <Japanese>手術用キットは戦場で高度な処置をする為に使われます。</Japanese>
+            <Japanese>手術キットは戦場で高度な処置をする為に使われます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
             <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合</Chinese>
@@ -2380,7 +2380,7 @@
             <Hungarian>Sebészeti készlet használata</Hungarian>
             <Czech>Použít chirurgickou sadu</Czech>
             <Portuguese>Usar Kit Cirúrgico</Portuguese>
-            <Japanese>手術用キットを使う</Japanese>
+            <Japanese>手術キットを使う</Japanese>
             <Korean>봉합키트 사용하기</Korean>
             <Chinesesimp>使用手术包</Chinesesimp>
             <Chinese>使用手術包</Chinese>
@@ -2424,7 +2424,7 @@
             <Italian>Sacca per corpi</Italian>
             <Portuguese>Saco para cadáver</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>死体袋</Japanese>
+            <Japanese>遺体袋</Japanese>
             <Korean>시체 운반용 부대</Korean>
             <Chinesesimp>尸袋</Chinesesimp>
             <Chinese>屍袋</Chinese>
@@ -2441,7 +2441,7 @@
             <Italian>Una sacca nera per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>死体袋は死体を入れる為に使います。</Japanese>
+            <Japanese>遺体袋は死体を入れる為に使います。</Japanese>
             <Korean>시체를 운반할 때 쓰는 가방입니다</Korean>
             <Chinesesimp>用于装尸体</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
@@ -2458,7 +2458,7 @@
             <Italian>Una sacca nera per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos.</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>死体袋は死体を入れる為に使います。</Japanese>
+            <Japanese>遺体袋は死体を入れる為に使います。</Japanese>
             <Korean>시체를 운반할 때 쓰는 가방입니다</Korean>
             <Chinesesimp>用于装尸体</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
@@ -4509,7 +4509,7 @@
             <Portuguese>Colocar corpo dentro do saco para cadáver preto</Portuguese>
             <Czech>Umístit tělo do černého pytle na mrtvoly</Czech>
             <Turkish>Vücudu siyah ceset torbasına yerleştir</Turkish>
-            <Japanese>黒い死体袋に入れる</Japanese>
+            <Japanese>遺体袋 (黒) に入れる</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlue">
             <English>Place body in blue bodybag</English>
@@ -4520,7 +4520,7 @@
             <Portuguese>Colocar corpo dentro do saco para cadáver azul</Portuguese>
             <Czech>Umístit tělo do modrého pytle na mrtvoly</Czech>
             <Turkish>Vücudu mavi ceset torbasına yerleştir</Turkish>
-            <Japanese>青い死体袋に入れる</Japanese>
+            <Japanese>遺体袋 (青) に入れる</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagWhite">
             <English>Place body in white bodybag</English>
@@ -4531,7 +4531,7 @@
             <Portuguese>Colocar corpo dentro do saco para cadáver branco</Portuguese>
             <Czech>Umístit tělo do bílého pytle na mrtvoly</Czech>
             <Turkish>Vücudu beyaz ceset torbasına yerleştir</Turkish>
-            <Japanese>白い死体袋に入れる</Japanese>
+            <Japanese>遺体袋 (白) に入れる</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -4544,7 +4544,7 @@
             <Italian>Stai mettendo il corpo nella sacca...</Italian>
             <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
             <Czech>Umisťuji tělo do pytle na mrtvoly...</Czech>
-            <Japanese>死体袋へ入れています・・・</Japanese>
+            <Japanese>遺体袋へ入れています・・・</Japanese>
             <Korean>시체 운반용 부대에 담는 중...</Korean>
             <Chinesesimp>正在将尸体装入尸袋...</Chinesesimp>
             <Chinese>將屍體放入屍袋中...</Chinese>
@@ -4674,7 +4674,7 @@
             <Italian>%1 ha usato Kit Pronto Soccorso Personale</Italian>
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
             <French>%1 a utilisé une trousse sanitaire.</French>
-            <Japanese>%1 は個人用応急処置キットを使った</Japanese>
+            <Japanese>%1 は個人用治療キットを使った</Japanese>
             <Korean>%1 (이)가 개인응급키트를 사용했다</Korean>
             <Chinesesimp>%1 已使用个人急救包</Chinesesimp>
             <Chinese>%1 已使用了個人急救包</Chinese>
@@ -4859,6 +4859,12 @@
             <German>Medizinisches Material</German>
             <Japanese>医療品</Japanese>
             <Spanish>Objetos médicos</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
+            <English>Zeus Treatment Time Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_Description">
+            <English>Multiply all treatment times with this coefficient when in Zeus.</English>
         </Key>
     </Package>
 </Project>

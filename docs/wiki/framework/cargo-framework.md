@@ -21,6 +21,8 @@ class CfgVehicles {
     class yourVehicleBaseClass {
         ace_cargo_space = 4;  // Cargo space your vehicle has
         ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
+        ace_cargo_loadmasterTurrets = {{1}}; // If vehicle inherits from "Air", you can set this attribute.
+                                             // When sitting in the turret paths you define here, you can paradrop cargo items. By default, pilots and co-pilots can paradrop cargo items.
     };
 };
 ```
@@ -50,8 +52,9 @@ class CfgVehicles {
 
 Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
-`ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
-`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Cargo has been Unloaded from vehicle
+`ace_cargoAdded` | [_itemClass, _vehicle, _amount] | Global | Cargo has been added to vehicle
+`ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been loaded into vehicle
+`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Cargo has been unloaded from vehicle
 `ace_cargoRemoved` | [_itemClass, _vehicle, _amountRequested, _amountRemoved] | Global | Cargo has been removed (deleted) from vehicle
 
 ## 3. Editor Attributes
@@ -73,12 +76,12 @@ To disable cargo for a mission object use:
 ### 4.2 Adjusting cargo size of an object
 
 `ace_cargo_fnc_setSize`
-Note that this function can be used to make objects loadable/unloadable (set to `-1` for unloadable).
+Note that this function can be used to make objects loadable/unloadable (set to `-1` to disable cargo interactions).
 
 ```sqf
- * Set the cargo size of any object. Has global effect.
+ * Sets the cargo size of any object. Has global effect.
  * Adds the load action menu if necessary.
- * Negative size makes unloadable.
+ * A negative size disables the object's cargo interactions.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -97,7 +100,7 @@ Note that this function can be used to make objects loadable/unloadable (set to 
 Note that this function can be used to enable/disable a vehicle's cargo space (set to `0` to disable).
 
 ```sqf
- * Set the cargo space of any object. Has global effect.
+ * Sets the cargo space of any object. Has global effect.
  * Adds the cargo action menu if necessary.
  *
  * Arguments:
@@ -113,14 +116,17 @@ Note that this function can be used to enable/disable a vehicle's cargo space (s
 
 ### 4.4 Load cargo into vehicle 
 
-`ace_cargo_fnc_loadItem` (Also callable from cba event `ace_loadCargo`)
-Note first arg can be a in-game object or a classname of an object type.
+`ace_cargo_fnc_loadItem` (Also callable from CBA event `ace_loadCargo`)
+Note first argument can be a in-game object or a classname of an object type.
 
 ```sqf
+ * Load an object into a vehicle.
+ * Objects loaded via classname remain virtual until unloaded.
+ *
  * Arguments:
- * 0: Item <OBJECT or STRING>
- * 1: Vehicle <OBJECT>
- * 2: Ignore interaction distance and stability checks <BOOL>
+ * 0: Item to be loaded <STRING> or <OBJECT>
+ * 1: Holder object (vehicle) <OBJECT>
+ * 2: Ignore interaction distance and stability checks <BOOL> (default: false)
  *
  * Return Value:
  * Object loaded <BOOL>
@@ -131,16 +137,16 @@ Note first arg can be a in-game object or a classname of an object type.
 
 ### 4.5 Unload cargo from vehicle 
 
-`ace_cargo_fnc_unloadItem` (Also callable from cba event `ace_unloadCargo`)
+`ace_cargo_fnc_unloadItem` (Also callable from CBA event `ace_unloadCargo`)
 
 ```sqf
  * Arguments:
- * 0: Item <OBJECT or STRING>
- * 1: Vehicle <OBJECT>
+ * 0: Item to be unloaded <STRING> or <OBJECT>
+ * 1: Holder object (vehicle) <OBJECT>
  * 2: Unloader <OBJECT> (default: objNull)
  *
  * Return Value:
- * Object was unloaded <BOOL>
+ * Object unloaded <BOOL>
  *
  * Example:
  * [object, vehicle] call ace_cargo_fnc_unloadItem
@@ -152,8 +158,8 @@ Note first arg can be a in-game object or a classname of an object type.
 
 ```sqf
  * Arguments:
- * 0: Item <STRING> or <OBJECT>
- * 1: Vehicle <OBJECT>
+ * 0: Item to be removed <STRING> or <OBJECT>
+ * 1: Holder object (vehicle) <OBJECT>
  * 2: Amount <NUMBER> (default: 1)
  *
  * Return Value:
@@ -167,5 +173,5 @@ Note first arg can be a in-game object or a classname of an object type.
 ### 4.7 Disable cargo renaming via script
 
 ```sqf
-cargoBox setVariable ["ace_cargo_noRename", true]
+cargoBox setVariable ["ace_cargo_noRename", true, _disableGlobally]
 ```
