@@ -446,7 +446,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
-            <Japanese>アドレナリンの使用に必要な訓練レベル。</Japanese>
+            <Japanese>アドレナリンの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <French>Définit la qualification médicale requise pour utiliser l'épinéphrine.</French>
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar epinefrina.</Portuguese>
@@ -511,7 +511,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
-            <Japanese>PAKの使用に必要な訓練レベル。</Japanese>
+            <Japanese>PAKの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <French>Définit la qualification médicale requise pour utiliser la trousse sanitaire.</French>
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
@@ -670,7 +670,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
-            <Japanese>手術キットの使用に必要な訓練レベル。</Japanese>
+            <Japanese>手術キットの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <French>Définit la qualification médicale requise pour utiliser la trousse chirurgicale.</French>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
@@ -909,7 +909,7 @@
             <French>Définit la qualification médicale requise pour poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Chinesesimp>静脉输液所需的医疗水平。</Chinesesimp>
-            <Japanese>IV 輸液を行うのに必要な訓練レベル。</Japanese>
+            <Japanese>IV 輸液を行うのに必要な医療スキルのレベルを設定します。</Japanese>
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
             <Russian>Уровень навыка, требуемый для осуществления внутривенного переливания.</Russian>
             <Spanish>Nivel de capacitación requerido para transfusiones de IV.</Spanish>
