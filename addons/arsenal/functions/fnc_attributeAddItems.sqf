@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: mharis001, johnb43
@@ -18,6 +18,8 @@
 
 params ["_controlsGroup"];
 
+forceUnicode 0; // handle non-ANSI characters
+
 private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY);
 private _filter = ctrlText (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR);
 private _configItems = uiNamespace getVariable QGVAR(configItems);
@@ -28,7 +30,7 @@ _attributeValue params ["_attributeItems", "_attributeMode"];
 TRACE_3("Populating list",_category,_filter,_attributeValue);
 if (_filter != "") then {
     _filter = _filter call EFUNC(common,escapeRegex);
-    _filter = ".*?" + (_filter splitString " " joinString ".*?" + ".*?/io");
+    _filter = ".*?" + (_filter splitString " " joinString ".*?") + ".*?/io";
 } else {
     _filter = ".*?/io";
 };
@@ -139,3 +141,6 @@ private _config = _cfgClass;
 
 // Sort alphabetically
 _listbox lnbSort [1, false];
+
+// Reset unicode flag
+forceUnicode -1;

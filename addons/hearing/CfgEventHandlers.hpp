@@ -20,7 +20,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class CAManBase {
         class GVAR(AddEarPlugs) {
-            serverInit = QUOTE( _this call FUNC(addEarPlugs) );
+            serverInit = QUOTE(_this call FUNC(addEarPlugs));
         };
     };
 };

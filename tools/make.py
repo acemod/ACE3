@@ -282,13 +282,22 @@ def pboproject_settings():
     value_exclude = "thumbs.db,*.txt,*.h,*.dep,*.cpp,*.bak,*.png,*.log,*.pew,source,*.tga"
 
     try:
-        k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
+        pbok = mikero_windows_registry(r"pboProject")
+        try:
+            k = winreg.OpenKey(pbok, "Settings", access=winreg.KEY_SET_VALUE)
+        except:
+            print_yellow("WARNING: creating pboProject\Settings reg manually")
+            print_yellow("This should have happened before running make.py")
+            k = winreg.CreateKeyEx(pbok, "Settings", access=winreg.KEY_SET_VALUE)
         winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "wildcard_exclude_from_pbo_normal", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "wildcard_exclude_from_pbo_unbinarised_missions", 0, winreg.REG_SZ, value_exclude)
     except:
         raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
+    finally:
+        winreg.CloseKey(k)
+        winreg.CloseKey(pbok)
 
 
 def color(color):
@@ -480,6 +489,22 @@ def cleanup_optionals(mod):
     except:
         print_error("Cleaning Optionals Failed")
         raise
+
+# mikro tools (before 2023?) don't understand #pragma
+def toggle_config_pragmas(do_restore=False):
+        token_from = "//#pragma-backup-make.py " if do_restore else "#pragma "
+        token_to = "#pragma " if do_restore else "//#pragma-backup-make.py "
+        print_green(f"Checking configs for {token_from}")
+        for root, _dirs, files in os.walk(module_root):
+            for file in files:
+                if file.endswith(".cpp") or file.endswith(".hpp"):
+                    with open(os.path.join(root, file), "r", encoding="utf-8") as f:
+                        content = f.read()
+                    if (not token_from in content): continue
+                    print(f"- Replacing {token_from} in {os.path.join(root, file)}")
+                    content = re.sub(token_from, token_to, content)
+                    with open(os.path.join(root, file), "w", encoding="utf-8") as f:
+                        f.write(content)
 
 
 def purge(dir, pattern, friendlyPattern="files"):
@@ -1124,6 +1149,9 @@ See the make.cfg file for additional build options.
             optional_files = []
             copy_optionals_for_building(optionals_modules,optional_files)
 
+        # hide #pragma from pboProject's sensitive eyes
+        toggle_config_pragmas(False)
+
         # Get list of subdirs in make root.
         dirs = next(os.walk(module_root))[1]
 
@@ -1317,16 +1345,13 @@ See the make.cfg file for additional build options.
                     if os.path.isfile(addonTomlPath):
                         with open(addonTomlPath, "r") as f:
                             tomlFile = f.read()
-                            if "preprocess = false" in tomlFile: 
-                                print_error("'preprocess = false' not supported")
-                                raise
-                            skipPreprocessing = "[preprocess]\nenabled = false" in tomlFile
+                            skipPreprocessing = "pboProject_noBinConfig = true".lower() in tomlFile.lower()
 
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
                     elif skipPreprocessing:
-                        print_green("addon.toml set [preprocess.enabled = false]. Proceeding with non-binerized config build!")
+                        print_green("addon.toml set [pboProject_noBinConfig = true]. Proceeding with non-binerized config build!")
                         cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
                     else:
                         cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
@@ -1464,6 +1489,8 @@ See the make.cfg file for additional build options.
         copy_important_files(module_root_parent,os.path.join(release_dir, project))
         if (os.path.isdir(optionals_root)):
             cleanup_optionals(optionals_modules)
+        #restore #pragma
+        toggle_config_pragmas(True)
         if not version_update:
             restore_version_files()
 

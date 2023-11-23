@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
@@ -44,6 +44,10 @@ if (_active) then {
 
         while {dialog} do {
             closeDialog 0;
+        };
+
+        if (EGVAR(medical,dropWeaponUnconsciousChance) != 0 && {random 1 <= EGVAR(medical,dropWeaponUnconsciousChance)}) then {
+            _unit call EFUNC(common,throwWeapon);
         };
     };
     // Unlock controls for copilot if unit is pilot of aircraft

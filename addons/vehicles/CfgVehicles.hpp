@@ -251,7 +251,7 @@ class CfgVehicles {
     };
 
     // Tanks DLC Rooikat 120
-    class AFV_Wheeled_01_base_F: wheeled_APC_F {
+    class AFV_Wheeled_01_base_F: Wheeled_APC_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"ACE_cannon_120mm_GT12","ACE_LMG_coax_DenelMG4"};

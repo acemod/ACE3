@@ -11,5 +11,7 @@ class CfgPatches {
         authors[] = {"Dystopian"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+        ACE_expectedModDir = "@ACE No Realistic Names";
+        ACE_expectedSteamID = "3053177117";
     };
 };

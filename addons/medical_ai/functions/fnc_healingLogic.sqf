@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, PabstMirror
  * Applies healing to target
@@ -24,7 +24,7 @@ if (_finishTime > 0) exitWith {
     if (CBA_missionTime >= _finishTime) then {
         TRACE_5("treatment finished",_finishTime,_treatmentTarget,_treatmentEvent,_treatmentArgs,_treatmentItem);
         _healer setVariable [QGVAR(currentTreatment), nil];
-        if ((GVAR(requireItems)) && {_treatmentItem != ""}) then {
+        if ((GVAR(requireItems) > 0) && {_treatmentItem != ""}) then {
             ([_healer, _treatmentItem] call FUNC(itemCheck)) params ["_itemOk", "_itemClassname", "_treatmentClass"];
             if (!_itemOk) exitWith { _treatmentEvent = "#fail"; }; // no item after delay
             _healer removeItem _itemClassname;
@@ -70,7 +70,7 @@ switch (true) do {
         _treatmentArgs = [_healer, _target];
         _treatmentTime = 15;
     };
-    case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}
+    case (_isMedic && {GET_BLOOD_VOLUME(_target) < MINIMUM_BLOOD_FOR_STABLE_VITALS}
     && {([_healer, "@iv"] call FUNC(itemCheck)) # 0}): {
         // Check if patient's blood volume + remaining IV volume is enough to allow the patient to wake up
         private _totalIvVolume = 0; //in ml
@@ -79,7 +79,7 @@ switch (true) do {
             _totalIvVolume = _totalIvVolume + _volumeRemaining;
         } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
-        if (GET_BLOOD_VOLUME(_target) + (_totalIvVolume / 1000) > BLOOD_VOLUME_CLASS_2_HEMORRHAGE) exitWith {
+        if (GET_BLOOD_VOLUME(_target) + (_totalIvVolume / 1000) > MINIMUM_BLOOD_FOR_STABLE_VITALS) exitWith {
             _treatmentEvent = "#waitForBlood";
         };
         _treatmentEvent = QEGVAR(medical_treatment,ivBagLocal);

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * PFH while nozzle is in hands.
@@ -96,7 +96,7 @@ TRACE_2("start",_unit,_nozzle);
     getCursorObjectParams params ["_cursorObject", "", "_distance"];
     if (!isNull _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {
         if ([_cursorObject] call FUNC(canConnectNozzle)) then {
-            _hintLMB = localize LSTRING(Connect);
+            _hintLMB = localize ([LSTRING(Connect), LSTRING(ConnectFuelCanister)] select (_nozzle getVariable [QGVAR(jerryCan), false]));
         };
         if ([_unit, _cursorObject] call FUNC(canReturnNozzle)) then {
             _hintRMB = localize LSTRING(Return);

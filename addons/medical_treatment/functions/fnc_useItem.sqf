@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Uses one of the treatment items. Respects the priority defined by the allowSharedEquipment setting.
@@ -19,6 +19,10 @@
  */
 
 params ["_medic", "_patient", "_items"];
+
+if (_medic isEqualTo player && {!isNull findDisplay 312}) exitWith {
+    [_medic, _items select 0]
+};
 
 scopeName "Main";
 

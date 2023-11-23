@@ -10,6 +10,8 @@
             <Chinesesimp>标记旗</Chinesesimp>
             <Russian>Флажки</Russian>
             <Spanish>Banderas de señalizado</Spanish>
+            <French>Drapeaux de marquage</French>
+            <Portuguese>Bandeiras de marcação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
             <English>Place Anywhere</English>
@@ -20,6 +22,8 @@
             <Chinesesimp>随意放置</Chinesesimp>
             <Russian>Размещать где угодно</Russian>
             <Spanish>Colocar en cualquier lugar</Spanish>
+            <French>Placer partout</French>
+            <Portuguese>Colocar em qualquer lugar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
             <English>Place marker flag anywhere regardless of surface.</English>
@@ -29,6 +33,9 @@
             <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
             <Russian>Размещать флажки где угодно вне зависимости от поверхности.</Russian>
             <Spanish>Permitir colocar las banderas de señalizado en cualquier lugar, al margen del tipo de superficie.</Spanish>
+            <German>Platzieren Sie die Markierungsfahne überall, unabhängig von der Oberfläche.</German>
+            <French>Place un drapeau de marquage n'importe où, quelle que soit la surface.</French>
+            <Portuguese>Permite colocar as bandeiras de marcação em qualquer lugar, independente do tipo de superfice</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Marker Flag</English>
@@ -38,6 +45,8 @@
             <Russian>Поставить флажок</Russian>
             <Spanish>Colocar Bandera de señalizado</Spanish>
             <Japanese>マーカーフラッグを置く</Japanese>
+            <French>Placer le drapeau de marquage</French>
+            <Portuguese>Colocar Bandeira de Marcação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
             <English>Adjust height</English>
@@ -47,6 +56,8 @@
             <Russian>Регулировать высоту</Russian>
             <Spanish>Ajustar altura</Spanish>
             <Japanese>高さを調整する</Japanese>
+            <French>Ajuster la hauteur</French>
+            <Portuguese>Ajustar altura</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionCancel">
             <English>Cancel</English>
@@ -90,6 +101,8 @@
             <Chinesesimp>标记旗（白）</Chinesesimp>
             <Russian>Флажок (белый)</Russian>
             <Spanish>Bandera de señalizado (Blanca)</Spanish>
+            <French>Drapeau de marquage (Blanc)</French>
+            <Portuguese>Bandeira de Marcação (Branca)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_black">
             <English>Marker Flag (Black)</English>
@@ -100,6 +113,8 @@
             <Chinesesimp>标记旗（黑）</Chinesesimp>
             <Russian>Флажок (чёрный)</Russian>
             <Spanish>Bandera de señalizado (Negra)</Spanish>
+            <French>Drapeau de marquage (Noir)</French>
+            <Portuguese>Bandeira de Marcação (Preta)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_red">
             <English>Marker Flag (Red)</English>
@@ -110,6 +125,8 @@
             <Chinesesimp>标记旗（红）</Chinesesimp>
             <Russian>Флажок (красный)</Russian>
             <Spanish>Bandera de señalizado (Roja)</Spanish>
+            <French>Drapeau de marquage (Rouge)</French>
+            <Portuguese>Bandeira de Marcação (Vermelha)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_green">
             <English>Marker Flag (Green)</English>
@@ -120,6 +137,8 @@
             <Chinesesimp>标记旗（绿）</Chinesesimp>
             <Russian>Флажок (зелёный)</Russian>
             <Spanish>Bandera de señalizado (Verde)</Spanish>
+            <French>Drapeau de marquage (Vert)</French>
+            <Portuguese>Bandeira de Marcação (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_blue">
             <English>Marker Flag (Blue)</English>
@@ -130,6 +149,8 @@
             <Chinesesimp>标记旗（蓝）</Chinesesimp>
             <Russian>Флажок (синий)</Russian>
             <Spanish>Bandera de señalizado (Azul)</Spanish>
+            <French>Drapeau de marquage (Bleu)</French>
+            <Portuguese>Bandeira de Marcação (Azul)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_yellow">
             <English>Marker Flag (Yellow)</English>
@@ -140,6 +161,8 @@
             <Chinesesimp>标记旗（黄）</Chinesesimp>
             <Russian>Флажок (жёлтый)</Russian>
             <Spanish>Bandera de señalizado (Amarilla)</Spanish>
+            <French>Drapeau de marquage (Jaune)</French>
+            <Portuguese>Bandeira de Marcação (Amarela)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_orange">
             <English>Marker Flag (Orange)</English>
@@ -150,6 +173,8 @@
             <Chinesesimp>标记旗（橙）</Chinesesimp>
             <Russian>Флажок (оранжевый)</Russian>
             <Spanish>Bandera de señalizado (Naranja)</Spanish>
+            <French>Drapeau de marquage (Orange)</French>
+            <Portuguese>Bandeira de Marcação (Laranja)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_purple">
             <English>Marker Flag (Purple)</English>
@@ -160,6 +185,8 @@
             <Chinesesimp>标记旗（紫）</Chinesesimp>
             <Russian>Флажок (фиолетовый)</Russian>
             <Spanish>Bandera de señalizado (Púrpura)</Spanish>
+            <French>Drapeau de marquage (Violet)</French>
+            <Portuguese>Bandeira de Marcação (Roxa)</Portuguese>
         </Key>
     </Package>
 </Project>

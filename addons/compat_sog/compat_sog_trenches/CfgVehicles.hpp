@@ -39,7 +39,7 @@ class CfgVehicles {
                 class ACE_ContinueDiggingTrench {
                     displayName = ECSTRING(trenches,ContinueDiggingTrench);
                     condition = QUOTE([ARR_2(_target,_player)] call EFUNC(trenches,canContinueDiggingTrench));
-                    statement = QUOTE([ARR_2(_target,_player)] call EFUNC(trenches,continueDiggingTrench););
+                    statement = QUOTE([ARR_2(_target,_player)] call EFUNC(trenches,continueDiggingTrench));
                 };
             };
         };

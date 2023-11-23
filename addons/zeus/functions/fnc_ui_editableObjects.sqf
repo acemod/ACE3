@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Fisher, kymckay, mharis001
  * Initializes the "Editable Objects" Zeus module display.

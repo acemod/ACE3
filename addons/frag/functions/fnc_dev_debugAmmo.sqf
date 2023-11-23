@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * call ace_frag_fnc_debugAmmo
+ * call ace_frag_fnc_dev_debugAmmo
  *
  * Public: No
  */

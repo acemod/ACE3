@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 if (hasInterface) then {
 #include "initKeybinds.sqf"
@@ -57,15 +58,33 @@ if (hasInterface) then {
     };
 }] call CBA_fnc_addEventHandler;
 
-["AllVehicles", "init", {
+["Air", "init", {
     params ["_unit"];
     if (hasPilotCamera _unit) then {
+        if (!alive _unit) exitWith {};
+        // some helicopters just have a static downward camera for cargo loading
+        if ((getNumber ((configOf _unit) >> "pilotCamera" >> "controllable")) == 0) exitWith {};
+
         _unit setVariable [QGVAR(hasLaserSpotTracker), true];
         _unit setVariable [QGVAR(laserSpotTrackerOn), false];
-        private _actionOff = ["LSTOff", localize LSTRING(LSTOff), "", {[_this select 0] call FUNC(toggleLST)}, {(_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false]}] call ace_interact_menu_fnc_createAction;
-        [_unit, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
-        private _actionOn = ["LSTOn", localize LSTRING(LSTOn), "", {[_this select 0] call FUNC(toggleLST)}, {!((_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false])}] call ace_interact_menu_fnc_createAction;
-        [_unit, 1, ["ACE_SelfActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
+
+        private _condition = {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            (_player == driver _target)
+            && {(_target getVariable [QGVAR(laserSpotTrackerOn), false])}
+            && {[_player, _target, []] call EFUNC(common,canInteractWith)}
+        };
+        private _actionOff = ["LSTOff", localize LSTRING(LSTOff), "", {[_this select 0] call FUNC(toggleLST)}, _condition] call EFUNC(interact_menu,createAction);
+        [_unit, 1, ["ACE_SelfActions"], _actionOff] call EFUNC(interact_menu,addActionToObject);
+
+        private _condition = {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            (_player == driver _target)
+            && {!(_target getVariable [QGVAR(laserSpotTrackerOn), false])}
+            && {[_player, _target, []] call EFUNC(common,canInteractWith)}
+        };
+        private _actionOn = ["LSTOn", localize LSTRING(LSTOn), "", {[_this select 0] call FUNC(toggleLST)}, _condition] call EFUNC(interact_menu,createAction);
+        [_unit, 1, ["ACE_SelfActions"], _actionOn] call EFUNC(interact_menu,addActionToObject);
     };
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 

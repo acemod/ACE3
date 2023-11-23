@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, phyma
  * Check if the target has an MG equipped with belt system that a unit can link.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: chris579
  * Triggered when a mouse button is pressed on the map.

@@ -573,7 +573,7 @@
             <Portuguese>FV510 Warrior</Portuguese>
             <Hungarian>FV510 Warrior</Hungarian>
             <Italian>FV510 Warrior</Italian>
-            <Japanese>FV510 ウォーリアー</Japanese>
+            <Japanese>FV510 ウォーリア</Japanese>
             <Korean>FV510 워리어 보병전투차</Korean>
             <Chinese>FV510 "戰士"步兵戰車</Chinese>
             <Chinesesimp>FV510 "战士"</Chinesesimp>
@@ -1216,7 +1216,7 @@
             <Portuguese>Ka-60 Kasatka (preto e branco)</Portuguese>
             <Russian>Ka-60 Касатка (чёрно-белый)</Russian>
             <Spanish>Ka-60 Kasatka (blanco y negro)</Spanish>
-            <Japanese>Ka-60 カサートカ (黒 &amp; 白)</Japanese>
+            <Japanese>Ka-60 カサートカ (ブラック &amp; ホワイト)</Japanese>
             <Korean>Ka-60 카사트카 (검정 및 하양)</Korean>
             <Chinese>Ka-60 "逆戟鯨"直升機 (黑&amp;白)</Chinese>
             <Chinesesimp>Ka-60 "虎鲸"（黑白）</Chinesesimp>
@@ -1443,7 +1443,7 @@
             <Portuguese>M18 Granada de fumaça (Verde)</Portuguese>
             <Hungarian>M18 füstgránát (Zöld)</Hungarian>
             <Italian>M18 Granata fumogena (Verde)</Italian>
-            <Japanese>M18 煙幕手榴弾 (緑)</Japanese>
+            <Japanese>M18 発煙手榴弾 (緑)</Japanese>
             <Korean>M18 연막탄 (초록)</Korean>
             <Chinese>M18煙霧彈 (綠色)</Chinese>
             <Chinesesimp>M18 烟雾弹（绿色）</Chinesesimp>
@@ -1494,7 +1494,7 @@
             <Portuguese>M18 Granada de fumaça (Vermelha)</Portuguese>
             <Hungarian>M18 füstgránát (Piros)</Hungarian>
             <Italian>M18 Granata fumogena (Rosso)</Italian>
-            <Japanese>M18 煙幕手榴弾 (赤)</Japanese>
+            <Japanese>M18 発煙手榴弾 (赤)</Japanese>
             <Korean>M18 연막탄 (빨강)</Korean>
             <Chinese>M18煙霧彈 (紅色)</Chinese>
             <Chinesesimp>M18 烟雾弹（红色）</Chinesesimp>
@@ -1579,7 +1579,7 @@
             <Portuguese>PMR-3 Mina antipessoal (armadilha)</Portuguese>
             <Hungarian>PMR-3 botlódrótos gyalogsági akna</Hungarian>
             <Italian>PMR-3 Mine antiuomo</Italian>
-            <Japanese>PMR-3 仕掛け型対人地雷</Japanese>
+            <Japanese>PMR-3 仕掛け線対人地雷</Japanese>
             <Korean>PMR-3 대인인계철선지뢰</Korean>
             <Chinese>PMR-3反人員絆線雷</Chinese>
             <Chinesesimp>PMR-3 反人员绊雷</Chinesesimp>
@@ -2149,7 +2149,7 @@
             <Russian>F2000 (камуфляжный)</Russian>
             <Portuguese>F2000 (Camo)</Portuguese>
             <Italian>F2000 (Camo)</Italian>
-            <Japanese>F2000 (カモフラージュ)</Japanese>
+            <Japanese>F2000 (迷彩)</Japanese>
             <Korean>F2000 (위장)</Korean>
             <Chinese>F2000突擊步槍 (迷彩)</Chinese>
             <Chinesesimp>F2000（迷彩）</Chinesesimp>
@@ -2183,7 +2183,7 @@
             <Russian>F2000 Tactical (камуфляжный)</Russian>
             <Portuguese>F2000 Tactical (Camo)</Portuguese>
             <Italian>F2000 Tactical (Camo)</Italian>
-            <Japanese>F2000 タクティカル (カモフラージュ)</Japanese>
+            <Japanese>F2000 タクティカル (迷彩)</Japanese>
             <Korean>F2000 택티컬 (위장)</Korean>
             <Chinese>F2000戰術型突擊步槍 (迷彩)</Chinese>
             <Chinesesimp>F2000 战术型（迷彩）</Chinesesimp>
@@ -2217,7 +2217,7 @@
             <Russian>F2000 EGLM (камуфляжный)</Russian>
             <Portuguese>F2000 EGLM (Camo)</Portuguese>
             <Italian>F2000 EGLM (Camo)</Italian>
-            <Japanese>F2000 EGLM (カモフラージュ)</Japanese>
+            <Japanese>F2000 EGLM (迷彩)</Japanese>
             <Korean>F2000 EGLM (위장)</Korean>
             <Chinese>F2000突擊步槍 (榴彈—迷彩)</Chinese>
             <Chinesesimp>F2000 ELGM（迷彩）</Chinesesimp>
@@ -2438,7 +2438,7 @@
             <Russian>GM6 Lynx (камуфляжный)</Russian>
             <Portuguese>GM6 Lynx (Camo)</Portuguese>
             <Italian>GM6 Lynx (Camo)</Italian>
-            <Japanese>GM6 リンクス (カモフラージュ)</Japanese>
+            <Japanese>GM6 リンクス (迷彩)</Japanese>
             <Korean>GM6 링스 (위장)</Korean>
             <Chinese>GM6 "天貓"反器材狙擊步槍 (迷彩)</Chinese>
             <Chinesesimp>GM6 "猞猁"（迷彩）</Chinesesimp>
@@ -2472,7 +2472,7 @@
             <Russian>M200 Intervention (камуфляжный)</Russian>
             <Portuguese>M200 Intervention (Camo)</Portuguese>
             <Italian>M200 Intervention (Camo)</Italian>
-            <Japanese>M200 インターベンション (カモフラージュ)</Japanese>
+            <Japanese>M200 インターベンション (迷彩)</Japanese>
             <Korean>M200 인터벤션 (위장)</Korean>
             <Chinese>M200干預型狙擊步槍 (迷彩)</Chinese>
             <Chinesesimp>M200 "干预"（迷彩）</Chinesesimp>
@@ -2540,7 +2540,7 @@
             <Italian>Noreen "Bad News" ULR (Camo)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Terepmintás)</Hungarian>
             <Portuguese>Noreen "Bad News" ULR (Camuflagem)</Portuguese>
-            <Japanese>ノレーン "バッド ニュース" ULR (カモフラージュ)</Japanese>
+            <Japanese>ノレーン "バッド ニュース" ULR (迷彩)</Japanese>
             <Korean>노린 "배드뉴스" ULR (위장)</Korean>
             <Chinese>諾琳"壞消息"極距狙擊步槍 (迷彩)</Chinese>
             <Chinesesimp>诺琳 "坏消息" 极距狙击步枪（迷彩）</Chinesesimp>
@@ -2557,7 +2557,7 @@
             <Italian>Noreen "Bad News" ULR (Sabbia)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Homok)</Hungarian>
             <Portuguese>Noreen "Bad News" ULR (Deserto)</Portuguese>
-            <Japanese>ノレーン "バッド ニュース" ULR (砂地)</Japanese>
+            <Japanese>ノレーン "バッド ニュース" ULR (サンド)</Japanese>
             <Korean>노린 "배드뉴스" ULR (모래)</Korean>
             <Chinese>諾琳"壞消息"極距狙擊步槍 (沙色)</Chinese>
             <Chinesesimp>诺琳 "坏消息" 极距狙击步枪（沙色）</Chinesesimp>
@@ -2642,7 +2642,7 @@
             <Italian>SIG 556 (Camo)</Italian>
             <Hungarian>SIG 556 (Terepmintás)</Hungarian>
             <Portuguese>SIG 556 (Camuflagem)</Portuguese>
-            <Japanese>SIG 556 (カモフラージュ)</Japanese>
+            <Japanese>SIG 556 (迷彩)</Japanese>
             <Korean>시그 556 (위장)</Korean>
             <Chinese>SIG 556精準步槍 (迷彩)</Chinese>
             <Chinesesimp>SIG 556（迷彩）</Chinesesimp>
@@ -2659,7 +2659,7 @@
             <Italian>SIG 556 (Woodland)</Italian>
             <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
             <Portuguese>SIG 556 (Floresta)</Portuguese>
-            <Japanese>SIG 556 (森林)</Japanese>
+            <Japanese>SIG 556 (森林迷彩)</Japanese>
             <Korean>시그 556 (수풀)</Korean>
             <Chinese>SIG 556精準步槍 (森林迷彩)</Chinese>
             <Chinesesimp>SIG 556（森林迷彩）</Chinesesimp>
@@ -2812,7 +2812,7 @@
             <Italian>M14 (Camo)</Italian>
             <Hungarian>M14 (Terepmintás)</Hungarian>
             <Portuguese>M14 (Camuflagem)</Portuguese>
-            <Japanese>M14 (カモフラージュ)</Japanese>
+            <Japanese>M14 (迷彩)</Japanese>
             <Korean>M14 (위장)</Korean>
             <Chinese>M14精準步槍 (迷彩)</Chinese>
             <Chinesesimp>M14（迷彩）</Chinesesimp>
@@ -2914,7 +2914,7 @@
             <Italian>LWMMG (MTP)</Italian>
             <Hungarian>LWMMG (MTP)</Hungarian>
             <Portuguese>LWMMG (MTP)</Portuguese>
-            <Japanese>LWMMG (マルチカモ)</Japanese>
+            <Japanese>LWMMG (MTP)</Japanese>
             <Korean>LWMMG (MTP)</Korean>
             <Chinese>輕量化中型機槍 (多地形迷彩)</Chinese>
             <Chinesesimp>LWMMG（多地形迷彩）</Chinesesimp>
@@ -3303,7 +3303,7 @@
             <Russian>M200 Intervention (тропик)</Russian>
             <Portuguese>M200 Intervention (Trópico)</Portuguese>
             <Italian>M200 Intervention (Tropico)</Italian>
-            <Japanese>M200 インターベンション (熱帯)</Japanese>
+            <Japanese>M200 インターベンション (熱帯迷彩)</Japanese>
             <Korean>M200 인터벤션 (열대)</Korean>
             <Chinese>M200干預型狙擊步槍 (熱帶迷彩)</Chinese>
             <Chinesesimp>M200 "干预"（热带迷彩）</Chinesesimp>
@@ -4324,10 +4324,10 @@
             <English>Burris XTR II (ASP-1 Kir)</English>
             <Polish>Burris XTR II (ASP-1 Kir)</Polish>
             <French>Burris XTR II (ASP-1 Kir)</French>
-            <Japanese>Burris XTR II (ASP-1 Kir)</Japanese>
+            <Japanese>Burris XTR II (ASP-1 キール用)</Japanese>
             <German>Burris XTR II (ASP-1 Kir)</German>
             <Chinesesimp>Burris XTR II（ASP-1 Kir）</Chinesesimp>
-            <Korean>버리스 XTR II (ASP-1 키르)</Korean>
+            <Korean>버리스 XTR II (ASP-1 키르용)</Korean>
             <Russian>Burris XTR II (ASP-1 Kir)</Russian>
             <Spanish>Burris XTR II (ASP-1 Kir)</Spanish>
         </Key>
@@ -4622,7 +4622,7 @@
             <Italian>P90 TR (Camo)</Italian>
             <Hungarian>P90 TR (Terepmintás)</Hungarian>
             <Portuguese>P90 TR (Camuflagem)</Portuguese>
-            <Japanese>P90 TR (カモフラージュ)</Japanese>
+            <Japanese>P90 TR (迷彩)</Japanese>
             <Chinese>P90 TR (迷彩)</Chinese>
             <Chinesesimp>P90 TR（迷彩）</Chinesesimp>
             <Korean>P90 TR (위장)</Korean>
@@ -4690,7 +4690,7 @@
             <Italian>P90 (Camo)</Italian>
             <Hungarian>P90 (Terepmintás)</Hungarian>
             <Portuguese>P90 (Camuflagem)</Portuguese>
-            <Japanese>P90 (カモフラージュ)</Japanese>
+            <Japanese>P90 (迷彩)</Japanese>
             <Chinese>P90 (迷彩)</Chinese>
             <Chinesesimp>P90（迷彩）</Chinesesimp>
             <Korean>P90 (위장)</Korean>
@@ -4758,7 +4758,7 @@
             <Italian>PS90 TR (Camo)</Italian>
             <Hungarian>PS90 TR (Terepmintás)</Hungarian>
             <Portuguese>PS90 TR (Camuflagem)</Portuguese>
-            <Japanese>PS90 TR (カモフラージュ)</Japanese>
+            <Japanese>PS90 TR (迷彩)</Japanese>
             <Chinese>PS90 TR (迷彩)</Chinese>
             <Chinesesimp>PS90 TR（迷彩）</Chinesesimp>
             <Korean>PS90 TR (위장)</Korean>
@@ -4826,7 +4826,7 @@
             <Italian>PS90 (Camo)</Italian>
             <Hungarian>PS90 (Terepmintás)</Hungarian>
             <Portuguese>PS90 (Camuflagem)</Portuguese>
-            <Japanese>PS90 (カモフラージュ)</Japanese>
+            <Japanese>PS90 (迷彩)</Japanese>
             <Chinese>PS90 (迷彩)</Chinese>
             <Chinesesimp>PS90（迷彩）</Chinesesimp>
             <Korean>PS90 (위장)</Korean>
@@ -5151,7 +5151,7 @@
             <Portuguese>Stoner 99 LMG (Preto)</Portuguese>
             <Korean>스토너 99 LMG (검정)</Korean>
             <Chinesesimp>斯通纳 99（黑色）</Chinesesimp>
-            <Japanese>ストーナー 99 LMG(ブラック)</Japanese>
+            <Japanese>ストーナー 99 LMG (ブラック)</Japanese>
             <Turkish>Stoner 99 LMG (Siyah)</Turkish>
             <Hungarian>Stoner 99 Könnyűgéppuska (Fekete)</Hungarian>
         </Key>
@@ -5202,7 +5202,7 @@
             <Portuguese>MSBS Grot (Camo)</Portuguese>
             <Korean>MSBS 그롯 (위장)</Korean>
             <Chinesesimp>MSBS Grot（迷彩）</Chinesesimp>
-            <Japanese>MSBS グロート (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート (迷彩)</Japanese>
             <Turkish>MSBS Grot (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot (Terepmintás)</Hungarian>
         </Key>
@@ -5270,7 +5270,7 @@
             <Portuguese>MSBS Grot GL (Camo)</Portuguese>
             <Korean>MSBS 그롯 GL (위장)</Korean>
             <Chinesesimp>MSBS Grot GPBO-40（迷彩）</Chinesesimp>
-            <Japanese>MSBS グロート GL (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート GL (迷彩)</Japanese>
             <Turkish>MSBS Grot GL (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot GL (Terepmintás)</Hungarian>
         </Key>
@@ -5338,7 +5338,7 @@
             <Portuguese>MSBS Grot MR (Camo)</Portuguese>
             <Korean>MSBS 그롯 MR (위장)</Korean>
             <Chinesesimp>MSBS Grot MR（迷彩）</Chinesesimp>
-            <Japanese>MSBS グロート MR (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート MR (迷彩)</Japanese>
             <Turkish>MSBS Grot MR (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot MR (Terepmintás)</Hungarian>
         </Key>
@@ -5406,7 +5406,7 @@
             <Portuguese>MSBS Grot SG (Camo)</Portuguese>
             <Korean>MSBS 그롯 SG (위장)</Korean>
             <Chinesesimp>MSBS Grot SG（迷彩）</Chinesesimp>
-            <Japanese>MSBS グロート SG (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート SG (迷彩)</Japanese>
             <Turkish>MSBS Grot SG (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot SG (Terepmintás)</Hungarian>
         </Key>

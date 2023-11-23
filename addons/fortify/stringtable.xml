@@ -12,6 +12,8 @@
             <Russian>Фортификация</Russian>
             <Turkish>Inşa Etme</Turkish>
             <Spanish>Fortificar</Spanish>
+            <French>Fortification</French>
+            <Portuguese>Fortificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_FortifyItem_name">
             <English>Fortify Tool</English>
@@ -24,6 +26,8 @@
             <Russian>Инструмент строителя</Russian>
             <Turkish>Inşa Etme Aleti</Turkish>
             <Spanish>Herramienta de Fortificar</Spanish>
+            <French>Outil de fortification</French>
+            <Portuguese>Ferramenta de Fortificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_Budget">
             <English>Budget</English>
@@ -36,6 +40,8 @@
             <Russian>Бюджет</Russian>
             <Turkish>Bütçe</Turkish>
             <Spanish>Presupuesto</Spanish>
+            <French>Budget</French>
+            <Portuguese>Provisão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_addToolItem">
             <English>Auto add fortify item</English>
@@ -48,6 +54,8 @@
             <Russian>Автоматически добавлять Инструмент строителя</Russian>
             <Turkish>Otomatik olarak inşa etme aletini ekle</Turkish>
             <Spanish>Añadir objeto de Fortificar automáticamente</Spanish>
+            <French>Ajout automatique de l'outil de fortification</French>
+            <Portuguese>Adicionar item de fortificação automaticamente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_moduleDescription">
             <English>Initializes the Fortify system, with some basic parameters.&lt;br/&gt;Presets are pulled from configFile and missionConfigFile, see wiki for format.</English>
@@ -59,6 +67,8 @@
             <Chinesesimp>使用一些基本参数初始化设防系统。&lt;br/&gt;预设从 configFile 和 missionConfigFile 中提取，参见 wiki 的格式。</Chinesesimp>
             <Korean>기본 파라미터와 함께 요새화 시스템을 활성화합니다&lt;br/&gt;configFile 과 missionConfigFile에서 프리셋을 뽑아옵니다, 포맷은 위키를 참조하십시오.</Korean>
             <Spanish>Inicializa el sistema deFortificación con los parámetros básicos. .&lt;br/&gt;Los presets son importados de configFile y de missionConfigFile, consultar la wiki para ver el formato.</Spanish>
+            <French>Initialise le système de fortification, avec quelques paramètres de base.&lt;br/&gt;Les presets sont tirés du configFile et du missionConfigFile, consulter le wiki pour les formats.</French>
+            <Portuguese>Inicializa o sistema de fortificação, com alguns parâmetros básicos.&lt;br/&gt;Os presets são retirados do configFile e do missionConfigFile, consulte a wiki para o formato.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_rotate">
             <English>Rotate</English>
@@ -105,6 +115,8 @@
             <Turkish>Inşa Etme : Bölgede Inşa Etmeyi Limitle</Turkish>
             <Korean>요새화: 건설 영역 제한</Korean>
             <Spanish>Fortificar: Limitar área de construcción</Spanish>
+            <French>Fortification : limiter la zone de construction</French>
+            <Portuguese>Fortificação: Limitar área de construção</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingsCategory">
             <English>ACE Fortify</English>
@@ -117,6 +129,8 @@
             <Turkish>ACE Inşa Etme</Turkish>
             <Korean>ACE 요새화</Korean>
             <Spanish>ACE Fortificar</Spanish>
+            <French>ACE Fortification</French>
+            <Portuguese>ACE Fortificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint">
             <English>Show budget updates</English>
@@ -129,6 +143,8 @@
             <Turkish>Bütçe güncellenmelerini göster</Turkish>
             <Korean>비용 업데이트 표시</Korean>
             <Spanish>Mostrar actualizaciones de presupuesto</Spanish>
+            <French>Afficher les changements de budget</French>
+            <Portuguese>Mostrar as atualizações de previsão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc">
             <English>Controls when budget update hints are shown</English>
@@ -141,6 +157,8 @@
             <Turkish>Bütçe güncellenince bilgi verilip verilmeyeceğini kontrol eder.</Turkish>
             <Korean>어떤 행동을 취할 때 비용이 표시되는지를 결정합니다</Korean>
             <Spanish>Controla cuándo los avisos de actualizaciones de presupuesto se muestran</Spanish>
+            <French>Détermine quand les modifications de budget sont affichées</French>
+            <Portuguese>Controla quando as atualizações de previsão são mostradas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintNone">
             <English>Never show</English>
@@ -153,6 +171,8 @@
             <Turkish>Asla Gösterme</Turkish>
             <Korean>안 보여줌</Korean>
             <Spanish>No mostrar nunca</Spanish>
+            <French>Ne jamais afficher</French>
+            <Portuguese>Nunca mostrar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintHasTool">
             <English>Has fortify tool</English>
@@ -165,6 +185,8 @@
             <Turkish>Insa Etme Aleti Olanlara Göster</Turkish>
             <Korean>요새화 도구를 들고 있을 때</Korean>
             <Spanish>Tiene herramienta de Fortificar</Spanish>
+            <French>Dispose d'un outil de fortification</French>
+            <Portuguese>Tem ferramenta de fortificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintEveryone">
             <English>Always show</English>
@@ -177,6 +199,8 @@
             <Turkish>Her Zaman Göster</Turkish>
             <Korean>항상 보여줌</Korean>
             <Spanish>Mostrar siempre</Spanish>
+            <French>Toujours afficher</French>
+            <Portuguese>Sempre mostrar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint_timeCostCoefficient">
             <English>Time-Cost Coefficient</English>
@@ -187,6 +211,8 @@
             <Polish>Współczynnik Czas-Koszt</Polish>
             <Russian>Коэф. время-цена</Russian>
             <Spanish>Coeficiente Tiempo-Coste</Spanish>
+            <French>Coefficient de temps/coût</French>
+            <Portuguese>Coeficiente de Tempo/Custo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeCostCoefficient">
             <English>Coefficient used to determine time to build structure.\nA in Ax + b where x is cost of object</English>
@@ -197,6 +223,8 @@
             <Polish>Współczynnik używany do określenia czasu budowy konstrukcji.\nA w Ax + b gdzie x jest kosztem obiektu</Polish>
             <Russian>Коэффициент используемый для указания времени необходимого для возведения постройки.\nA в формуле Ax + b, где x - это цена объекта</Russian>
             <Spanish>Coeficiente usado para determinar el tiempo de construcción de una estructura.\nA en Ax + b donde x es el coste del objeto</Spanish>
+            <French>Coefficient utilisé pour déterminer le temps de construction d'une structure.\nA dans Ax + b où x est le coût de l'objet.</French>
+            <Portuguese>Coeficiente usado para determinar o tempo para construir uma estrutura.\nA em Ax + b, onde x é o custo do objeto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHint_timeMin">
             <English>Minimum Build Time</English>
@@ -207,6 +235,8 @@
             <Polish>Minimalny czas budowy</Polish>
             <Russian>Мин. время возведения</Russian>
             <Spanish>Tiempo mínimo de construcción</Spanish>
+            <French>Temps de construction minimum</French>
+            <Portuguese>Tempo Mínimo de Construção</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_settingHintDesc_timeMin">
             <English>Minimum time to build any structure.\nb in Ax + b where x is cost of object</English>
@@ -217,6 +247,8 @@
             <Polish>Minimalny czas do zbudowania dowolenj konstrukcji.\nb w Ax + b gdzie x jest kosztem obiektu</Polish>
             <Russian>Минимальное время для возведения любой постройки.\nb в формуле Ax + b, где x - это цена объекта</Russian>
             <Spanish>Tiempo mínimo para construir una estructura.\nb en Ax + b donde x es el coste del objeto</Spanish>
+            <French>Temps minimum pour construire une structure.\nb dans Ax + b où x est le coût de l'objet.</French>
+            <Portuguese>Tempo mínimo para construir uma estrutura.\nb em Ax + b, onde x é o custo do objeto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_progressBarTitle">
             <English>Building</English>
@@ -227,6 +259,8 @@
             <Polish>Budowanie</Polish>
             <Russian>Возведение</Russian>
             <Spanish>Construyendo</Spanish>
+            <French>Construction</French>
+            <Portuguese>Construindo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
@@ -237,6 +271,8 @@
             <Polish>Twórz znaczniki na mapie</Polish>
             <Russian>Создавать маркера на карте</Russian>
             <Spanish>Crear marcadores de mapa</Spanish>
+            <French>Créer des marqueurs sur carte</French>
+            <Portuguese>Criar marcadores de mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
             <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
@@ -247,6 +283,8 @@
             <Polish>Utwórz znaczniki mapy, które wyglądają jak obiekty terenu, gdy umieszczane są statyczne fortyfikacje</Polish>
             <Russian>Создавать маркера от статических фортификаций как от зданий на карте</Russian>
             <Spanish>Crear marcadores de mapa que tienen la apariencia de edificios del terreno cuando las fortificaciones estáticas son colocadas</Spanish>
+            <French>Créer des marqueurs sur carte qui ressemblent à des bâtiments sur le terrain lorsque des fortifications statiques sont placées</French>
+            <Portuguese>Criar marcadores de mapa que parecem edifícios do terreno quando fortificações estáticas são colocadas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapNone">
             <English>Never</English>
@@ -273,6 +311,8 @@
             <Polish>Dla jednostek sojuszniczych wobec stawiającego</Polish>
             <Russian>Для союзников</Russian>
             <Spanish>Para unidades aliadas de quien coloca la fortificación</Spanish>
+            <French>Pour les unités alliées du placeur</French>
+            <Portuguese>Para unidades aliadas do autor da fortificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
             <English>For everyone</English>
@@ -300,6 +340,8 @@
             <Chinesesimp>小型</Chinesesimp>
             <Korean>소형</Korean>
             <Spanish>Pequeña</Spanish>
+            <French>Petit</French>
+            <Portuguese>Pequena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_smallGreen">
             <English>Small (Green)</English>
@@ -311,6 +353,8 @@
             <Chinesesimp>小型（绿色）</Chinesesimp>
             <Korean>소형 (초목)</Korean>
             <Spanish>Pequeña (Verde)</Spanish>
+            <French>Petit (Vert)</French>
+            <Portuguese>Pequena (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_medium">
             <English>Medium</English>
@@ -322,6 +366,8 @@
             <Chinesesimp>中型</Chinesesimp>
             <Korean>중형</Korean>
             <Spanish>Mediana</Spanish>
+            <French>Moyen</French>
+            <Portuguese>Média</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_mediumGreen">
             <English>Medium (Green)</English>
@@ -333,6 +379,8 @@
             <Chinesesimp>中型（绿色）</Chinesesimp>
             <Korean>중형 (초목)</Korean>
             <Spanish>Mediana (Verde)</Spanish>
+            <French>Moyen (Vert)</French>
+            <Portuguese>Média (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_big">
             <English>Big</English>
@@ -344,6 +392,8 @@
             <Chinesesimp>大型</Chinesesimp>
             <Korean>대형</Korean>
             <Spanish>Grande</Spanish>
+            <French>Grand</French>
+            <Portuguese>Grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_bigGreen">
             <English>Big (Green)</English>
@@ -355,6 +405,8 @@
             <Chinesesimp>大型（绿色）</Chinesesimp>
             <Korean>대형 (초목)</Korean>
             <Spanish>Grande (Verde)</Spanish>
+            <French>Grand (Vert)</French>
+            <Portuguese>Grande (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fortify_bigCombo">
             <English>Big (Both)</English>
@@ -366,6 +418,8 @@
             <Chinesesimp>大型（两方）</Chinesesimp>
             <Korean>대형 (둘 다)</Korean>
             <Spanish>Grande (Ambos)</Spanish>
+            <French>Grand (les deux)</French>
+            <Portuguese>Grande (Ambos)</Portuguese>
         </Key>
     </Package>
 </Project>

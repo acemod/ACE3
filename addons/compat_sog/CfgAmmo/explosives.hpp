@@ -10,6 +10,10 @@ class vn_mine_m18_x3_ammo: vn_mine_m18_ammo {
     EGVAR(explosives,explosive) = "vn_mine_m18_x3_ammo_scripted";
 };
 
+class vn_mine_m18_wp_ammo: vn_mine_m18_ammo {
+    EGVAR(explosives,explosive) = "vn_mine_m18_wp_ammo_scripted";
+};
+
 class vn_mine_m16_base;
 class vn_mine_tripwire_m16_02_ammo: vn_mine_m16_base {
     EGVAR(explosives,defuseObjectPosition)[] = {0, -0.01, 0.088};
