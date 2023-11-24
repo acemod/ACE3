@@ -88,7 +88,7 @@ _action = [QGVAR(CheckFuel),
     {},
     [],
     [0,0,0],
-    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction),
+    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add turnOff
