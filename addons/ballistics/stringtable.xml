@@ -13,7 +13,7 @@
             <French>Chevrotine #00</French>
             <Czech>#00 Broky velké</Czech>
             <Polish>#00 Śrut</Polish>
-            <Portuguese>#00 Chumbo</Portuguese>
+            <Portuguese>#00 Chumbo Grosso</Portuguese>
             <Turkish>#00 Irisaçma</Turkish>
             <Russian>#00 Картечь</Russian>
             <Korean>#00 벅샷</Korean>
@@ -29,7 +29,7 @@
             <French>Chevrotine #00</French>
             <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
             <Polish>#00 Śrut</Polish>
-            <Portuguese>#00 Chumbo</Portuguese>
+            <Portuguese>#00 Chumbo Grosso</Portuguese>
             <Turkish>#00 Irisaçma</Turkish>
             <Russian>#00 Картечь</Russian>
             <Korean>#00 벅샷</Korean>
@@ -45,7 +45,7 @@
             <French>Chevrotine #0</French>
             <Czech>#0 Broky velké</Czech>
             <Polish>#0 Śrut</Polish>
-            <Portuguese>#0 Chumbo</Portuguese>
+            <Portuguese>#0 Chumbo Grosso</Portuguese>
             <Turkish>#0 Irisaçma</Turkish>
             <Russian>#0 Картечь</Russian>
             <Korean>#0 벅샷</Korean>
@@ -61,7 +61,7 @@
             <French>Chevrotine #0</French>
             <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
             <Polish>#0 Śrut</Polish>
-            <Portuguese>#0 Chumbo</Portuguese>
+            <Portuguese>#0 Chumbo Grosso</Portuguese>
             <Turkish>#0 Irisaçma</Turkish>
             <Russian>#0 Картечь</Russian>
             <Korean>#0 벅샷</Korean>
@@ -77,7 +77,7 @@
             <French>Chevrotine #1</French>
             <Czech>#1 Broky velké</Czech>
             <Polish>#1 Śrut</Polish>
-            <Portuguese>#1 Chumbo</Portuguese>
+            <Portuguese>#1 Chumbo Grosso</Portuguese>
             <Turkish>#1 Irisaçma</Turkish>
             <Russian>#1 Картечь</Russian>
             <Korean>#1 벅샷</Korean>
@@ -93,7 +93,7 @@
             <French>Chevrotine #1</French>
             <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
             <Polish>#1 Śrut</Polish>
-            <Portuguese>#1 Chumbo</Portuguese>
+            <Portuguese>#1 Chumbo Grosso</Portuguese>
             <Turkish>#1 Irisaçma</Turkish>
             <Russian>#1 Картечь</Russian>
             <Korean>#1 벅샷</Korean>
@@ -109,7 +109,7 @@
             <French>Chevrotine #2</French>
             <Czech>#2 Broky velké</Czech>
             <Polish>#2 Śrut</Polish>
-            <Portuguese>#2 Chumbo</Portuguese>
+            <Portuguese>#2 Chumbo Grosso</Portuguese>
             <Turkish>#2 Irisaçma</Turkish>
             <Russian>#2 Картечь</Russian>
             <Korean>#2 벅샷</Korean>
@@ -125,7 +125,7 @@
             <French>Chevrotine #2</French>
             <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
             <Polish>#2 Śrut</Polish>
-            <Portuguese>#2 Chumbo</Portuguese>
+            <Portuguese>#2 Chumbo Grosso</Portuguese>
             <Turkish>#2 Irisaçma</Turkish>
             <Russian>#2 Картечь</Russian>
             <Korean>#2 벅샷</Korean>
@@ -141,7 +141,7 @@
             <French>Chevrotine #3</French>
             <Czech>#3 Broky velké</Czech>
             <Polish>#3 Śrut</Polish>
-            <Portuguese>#3 Chumbo</Portuguese>
+            <Portuguese>#3 Chumbo Grosso</Portuguese>
             <Turkish>#3 Irisaçma</Turkish>
             <Russian>#3 Картечь</Russian>
             <Korean>#3 벅샷</Korean>
@@ -157,7 +157,7 @@
             <French>Chevrotine #3</French>
             <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
             <Polish>#3 Śrut</Polish>
-            <Portuguese>#3 Chumbo</Portuguese>
+            <Portuguese>#3 Chumbo Grosso</Portuguese>
             <Turkish>#3 Irisaçma</Turkish>
             <Russian>#3 Картечь</Russian>
             <Korean>#3 벅샷</Korean>
@@ -173,7 +173,7 @@
             <French>Chevrotine #4</French>
             <Czech>#4 Broky velké</Czech>
             <Polish>#4 Śrut</Polish>
-            <Portuguese>#4 Chumbo</Portuguese>
+            <Portuguese>#4 Chumbo Grosso</Portuguese>
             <Turkish>#4 Irisaçma</Turkish>
             <Russian>#4 Картечь</Russian>
             <Korean>#4 벅샷</Korean>
@@ -189,7 +189,7 @@
             <French>Chevrotine #4</French>
             <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
             <Polish>#4 Śrut</Polish>
-            <Portuguese>#4 Chumbo</Portuguese>
+            <Portuguese>#4 Chumbo Grosso</Portuguese>
             <Turkish>#4 Irisaçma</Turkish>
             <Russian>#4 Картечь</Russian>
             <Korean>#4 벅샷</Korean>
@@ -208,6 +208,7 @@
             <Turkish>#4 Küçük saçma</Turkish>
             <Russian>#4 Дробь</Russian>
             <Korean>#4 버드샷</Korean>
+            <Portuguese>#4 Chumbo Fino</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
             <English>#4 Birdshot</English>
@@ -223,6 +224,7 @@
             <Turkish>#4 Küçük saçma</Turkish>
             <Russian>#4 Дробь</Russian>
             <Korean>#4 버드샷</Korean>
+            <Portuguese>#4 Chumbo Fino</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
@@ -235,7 +237,7 @@
             <French>2 balles cal. 12 Chevrotine #00</French>
             <Czech>2x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 2 naboje #00 Śrut</Polish>
-            <Portuguese>Chumbo #00 Calibre Doze 2 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #00 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #00 Картечь</Russian>
             <Turkish>12 kalibre 2 mermi #00 İrisaçma</Turkish>
             <Korean>12 게이지 2발 #00 벅샷</Korean>
@@ -251,7 +253,7 @@
             <French>2 balles cal. 12 Chevrotine #0</French>
             <Czech>2x #0 Broky velké (kalibr 8.1 mm)</Czech>
             <Polish>12 Gauge 2 naboje #0 Śrut</Polish>
-            <Portuguese>Chumbo #0 Calibre Doze 2 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #0 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #0 Картечь</Russian>
             <Turkish>12 kalibre 2 mermi #0 İrisaçma</Turkish>
             <Korean>12 게이지 2발 #00 벅샷</Korean>
@@ -267,7 +269,7 @@
             <French>2 balles cal. 12 Chevrotine #1</French>
             <Czech>2x #1 Broky velké (kalibr 7.6 mm)</Czech>
             <Polish>12 Gauge 2 naboje #1 Śrut</Polish>
-            <Portuguese>Chumbo #1 Calibre Doze 2 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #1 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #1 Картечь</Russian>
             <Turkish>12 kalibre 2 mermi #1 İrisaçma</Turkish>
             <Korean>12 게이지 2발 #1 벅샷</Korean>
@@ -283,7 +285,7 @@
             <French>2 balles cal. 12 Chevrotine #2</French>
             <Czech>2x #2 Broky velké (kalibr 6.9 mm)</Czech>
             <Polish>12 Gauge 2 naboje #2 Śrut</Polish>
-            <Portuguese>Chumbo #2 Calibre Doze 2 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #2 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #2 Картечь</Russian>
             <Turkish>12 kalibre 2 mermi #2 İrisaçma</Turkish>
             <Korean>12 게이지 2발 #2 벅샷</Korean>
@@ -299,7 +301,7 @@
             <French>2 balles cal. 12 Chevrotine #3</French>
             <Czech>2x #3 Broky velké (kalibr 6.4 mm)</Czech>
             <Polish>12 Gauge 2 naboje #3 Śrut</Polish>
-            <Portuguese>Chumbo #3 Calibre Doze 2 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #3 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #3 Картечь</Russian>
             <Turkish>12 kalibre 2 mermi #3 İrisaçma</Turkish>
             <Korean>12 게이지 2발 #3 벅샷</Korean>
@@ -315,7 +317,7 @@
             <French>2 balles cal. 12 Chevrotine #4</French>
             <Czech>2x #4 Broky velké (kalibr 6.1 mm)</Czech>
             <Polish>12 Gauge 2 naboje #4 Śrut</Polish>
-            <Portuguese>Chumbo #4 Calibre Doze 2 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #4 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #4 Картечь</Russian>
             <Turkish>12 kalibre 2 mermi #4 İrisaçma</Turkish>
             <Korean>12 게이지 2발 #4 벅샷</Korean>
@@ -331,7 +333,7 @@
             <French>2 balles cal. 12 Grenaille No.4</French>
             <Czech>2x #4 Broky malé (kalibr 3.3 mm)</Czech>
             <Polish>12 Gauge 2 naboje #4 Śrut</Polish>
-            <Portuguese>Chumbo #4 Calibre Doze 2 Tiros</Portuguese>
+            <Portuguese>Chumbo Fino #4 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #4 Дробь</Russian>
             <Turkish>12 kalibre 2 mermi #4 İrisaçma</Turkish>
             <Korean>12 게이지 2발 #4 버드샷</Korean>
@@ -347,7 +349,7 @@
             <French>6 balles cal. 12 Chevrotine #00</French>
             <Czech>6x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 6 naboi #00 Śrut</Polish>
-            <Portuguese>Chumbo #00 Calibre Doze 6 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #00 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #00 Картечь</Russian>
             <Turkish>12 kalibre 6 mermi #00 İrisaçma</Turkish>
             <Korean>12 게이지 6발 #00 벅샷</Korean>
@@ -363,7 +365,7 @@
             <French>6 balles cal. 12 Chevrotine #0</French>
             <Czech>6x #0 Broky velké (kalibr 8.1 mm)</Czech>
             <Polish>12 Gauge 6 naboi #0 Śrut</Polish>
-            <Portuguese>Chumbo #0 Calibre Doze 6 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #0 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #0 Картечь</Russian>
             <Turkish>12 kalibre 6 mermi #0 İrisaçma</Turkish>
             <Korean>12 게이지 6발 #0 벅샷</Korean>
@@ -379,7 +381,7 @@
             <French>6 balles cal. 12 Chevrotine #1</French>
             <Czech>6x #1 Broky velké (kalibr 7.6 mm)</Czech>
             <Polish>12 Gauge 6 naboi #1 Śrut</Polish>
-            <Portuguese>Chumbo #1 Calibre Doze 6 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #1 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #1 Картечь</Russian>
             <Turkish>12 kalibre 6 mermi #1 İrisaçma</Turkish>
             <Korean>12 게이지 6발 #1 벅샷</Korean>
@@ -395,7 +397,7 @@
             <French>6 balles cal. 12 Chevrotine #2</French>
             <Czech>6x #2 Broky velké (kalibr 6.9 mm)</Czech>
             <Polish>12 Gauge 6 naboi #2 Śrut</Polish>
-            <Portuguese>Chumbo #2 Calibre Doze 6 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #2 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #2 Картечь</Russian>
             <Turkish>12 kalibre 6 mermi #2 İrisaçma</Turkish>
             <Korean>12 게이지 6발 #2 벅샷</Korean>
@@ -411,7 +413,7 @@
             <French>6 balles cal. 12 Chevrotine #3</French>
             <Czech>6x #3 Broky velké (kalibr 6.4 mm)</Czech>
             <Polish>12 Gauge 6 naboi #3 Śrut</Polish>
-            <Portuguese>Chumbo #3 Calibre Doze 6 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #3 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #3 Картечь</Russian>
             <Turkish>12 kalibre 6 mermi #3 İrisaçma</Turkish>
             <Korean>12 게이지 6발 #3 벅샷</Korean>
@@ -427,7 +429,7 @@
             <French>6 balles cal. 12 Chevrotine #4</French>
             <Czech>6x #4 Broky velké (kalibr 6.1 mm)</Czech>
             <Polish>12 Gauge 6 naboi #4 Śrut</Polish>
-            <Portuguese>Chumbo #4 Calibre Doze 6 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #4 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #4 Картечь</Russian>
             <Turkish>12 kalibre 6 mermi #4 İrisaçma</Turkish>
             <Korean>12 게이지 6발 #4 벅샷</Korean>
@@ -446,6 +448,7 @@
             <Russian>12 Калибр 6 патр. #4 Дробь</Russian>
             <Turkish>12 kalibre 6 mermi #4 İrisaçma</Turkish>
             <Korean>12 게이지 6발 #4 버드샷</Korean>
+            <Portuguese>Chumbo Fino #4 Calibre Doze 6 Tiros</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
@@ -458,7 +461,7 @@
             <French>15 balles cal. 12 Chevrotine #00</French>
             <Czech>15x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 15 naboi #00 Śrut</Polish>
-            <Portuguese>Chumbo #00 Calibre Doze 15 Tiros</Portuguese>
+            <Portuguese>Chumbo Grosso #00 Calibre Doze 15 Tiros</Portuguese>
             <Russian>12 Калибр 15 патр. #00 Картечь</Russian>
             <Turkish>12 kalibre 15 mermi #00 İrisaçma</Turkish>
             <Korean>12 게이지 15발 #00 벅샷</Korean>
@@ -2827,6 +2830,7 @@
             <Korean>6.5x47mm 30발 사막 탄창 (HPBT Scenar)</Korean>
             <Russian>Магазин из 30-ти 6.5x47 мм Песочный (HPBT Scenar)</Russian>
             <Spanish>Cargador de 30 balas de 6.5x47mm Arena (HPBT Scenar)</Spanish>
+            <Portuguese>Carregador 6.5x47 mm com 30 cartuchos Areia (HPBT Scenar)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_msbs_mag_Name">
             <English>6.5x47 mm 30Rnd Promet Mag (HPBT Scenar)</English>
@@ -2838,6 +2842,7 @@
             <Korean>6.5x47mm 30발 그롯 탄창 (HPBT Scenar)</Korean>
             <Russian>Магазин из 30-ти 6.5x47 мм Promet (HPBT Scenar)</Russian>
             <Spanish>Cargador de 30 balas de 6.5x47mm Promet (HPBT Scenar)</Spanish>
+            <Portuguese>Carregador 6.5x47 mm com 30 cartuchos Promet (HPBT Scenar)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_black_mag_Name">
             <English>6.5x47 mm 30Rnd Black Mag (HPBT Scenar)</English>
@@ -2849,6 +2854,7 @@
             <Korean>6.5x47mm 30발 검정 탄창 (HPBT Scenar)</Korean>
             <Russian>Магазин из 30-ти 6.5x47 мм Чёрный (HPBT Scenar)</Russian>
             <Spanish>Cargador de 30 balas de 6.5x47mm Negro (HPBT Scenar)</Spanish>
+            <Portuguese>Carregador 6.5x47 mm com 30 cartuchos Preto (HPBT Scenar)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_khaki_mag_Name">
             <English>6.5x47 mm 30Rnd Khaki Mag (HPBT Scenar)</English>
@@ -2860,6 +2866,7 @@
             <Korean>6.5x47mm 30발 카키 탄창 (HPBT Scenar)</Korean>
             <Russian>Магазин из 30-ти 6.5x47 мм Хаки (HPBT Scenar)</Russian>
             <Spanish>Cargador de 30 balas de 6.5x47mm Caqui (HPBT Scenar)</Spanish>
+            <Portuguese>Carregador 6.5x47 mm com 30 cartuchos Caqui (HPBT Scenar)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5 mm Lapua</English>
@@ -2922,6 +2929,7 @@
             <Korean>6.5mm 크리드무어 30발 사막 탄창</Korean>
             <Russian>Магазин из 30-ти 6.5 мм Creedmor Песочный</Russian>
             <Spanish>Cargador de 30 balas de 6.5mm Creedmor Arena</Spanish>
+            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmor Areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_msbs_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Promet Mag</English>
@@ -2933,6 +2941,7 @@
             <Korean>6.5mm 크리드무어 30발 프로멧 탄창</Korean>
             <Russian>Магазин из 30-ти 6.5 мм Creedmor Promet</Russian>
             <Spanish>Cargador de 30 balas de 6.5mm Creedmor Promet</Spanish>
+            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmor Promet</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_black_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Black Mag</English>
@@ -2944,6 +2953,7 @@
             <Korean>6.5mm 크리드무어 30발 검정 탄창</Korean>
             <Russian>Магазин из 30-ти 6.5 мм Creedmor Чёрный</Russian>
             <Spanish>Cargador de 30 balas de 6.5mm Creedmor Negro</Spanish>
+            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmor Preto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_khaki_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Khaki Mag</English>
@@ -2955,6 +2965,7 @@
             <Korean>6.5mm 크리드무어 30발 카키 탄창</Korean>
             <Russian>Магазин из 30-ти 6.5 мм Creedmor Хаки</Russian>
             <Spanish>Cargador de 30 balas de 6.5mm Creedmor Caqui</Spanish>
+            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmor Caqui</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5 mm CM</English>
@@ -3518,6 +3529,7 @@
             <German>KI Verwendet</German>
             <Korean>인공지능 사용</Korean>
             <French>Utilisation de l'IA</French>
+            <Portuguese>Utilização por IA</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_illumination">
             <English>Illum</English>
@@ -3526,6 +3538,7 @@
             <German>Leuchtmittel</German>
             <Korean>조명탄</Korean>
             <French>Fusées éclairantes</French>
+            <Portuguese>Sinalizadoras</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_concealment">
             <English>Smoke</English>
@@ -3534,6 +3547,7 @@
             <German>Rauch</German>
             <Korean>연막탄</Korean>
             <French>Fumigènes</French>
+            <Portuguese>Fumígenas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_infantry">
             <English>Inf</English>
@@ -3542,6 +3556,7 @@
             <German>Infanterie</German>
             <Korean>보병</Korean>
             <French>Infanterie</French>
+            <Portuguese>Infantaria</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_lightVehicle">
             <English>Veh</English>
@@ -3550,6 +3565,7 @@
             <German>Fahrzeug</German>
             <Korean>차량</Korean>
             <French>Véhicule</French>
+            <Portuguese>Veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_armor">
             <English>Armor</English>
@@ -3558,6 +3574,7 @@
             <German>Panzerung</German>
             <Korean>기갑</Korean>
             <French>Blindage</French>
+            <Portuguese>Blindagem</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_aircraft">
             <English>Air</English>
@@ -3566,6 +3583,7 @@
             <German>Luft</German>
             <Korean>항공</Korean>
             <French>Aviation</French>
+            <Portuguese>Aeronaves</Portuguese>
         </Key>
     </Package>
 </Project>

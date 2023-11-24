@@ -333,6 +333,7 @@
             <Chinesesimp>小队重命名</Chinesesimp>
             <Korean>그룹 명칭 다시 짓기</Korean>
             <Spanish>Renombrar grupo</Spanish>
+            <Portuguese>Renomear Grupo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
@@ -344,6 +345,7 @@
             <Chinesesimp>该小队名称已被使用</Chinesesimp>
             <Korean>그 명칭은 이미 사용 중 입니다.</Korean>
             <Spanish>Este nombre de grupo ya está siendo usado.</Spanish>
+            <Portuguese>Este nome de grupo já está em uso.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
@@ -355,6 +357,7 @@
             <Chinesesimp>新的小队名：</Chinesesimp>
             <Korean>새 그룹 명칭:</Korean>
             <Spanish>NUEVO NOMBRE DE GRUPO:</Spanish>
+            <Portuguese>NOVO NOME DE GRUPO:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -1250,6 +1253,7 @@
             <German>Befestige %1</German>
             <Chinesesimp>附加 %1</Chinesesimp>
             <Korean>%1 붙이기</Korean>
+            <Portuguese>Fixar %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
             <English>Detach %1</English>
@@ -1261,6 +1265,7 @@
             <German>Löse %1</German>
             <Chinesesimp>拆卸 %1</Chinesesimp>
             <Korean>%1 떼내기</Korean>
+            <Portuguese>Desfixar %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1272,6 +1277,7 @@
             <German>Aktiviert das Befestigen/Lösen von Waffenausätzen an der aktuellen Waffe.</German>
             <Chinesesimp>启用当前武器的附加/拆卸武器配件的动作。</Chinesesimp>
             <Korean>현재 사용하고 있는 무기에서 부착물을 붙이거나 떼냅니다.</Korean>
+            <Portuguese>Ativa as ações de fixar/desfixar acessórios para a arma atual.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
             <English>Allow group rename</English>
@@ -1283,6 +1289,7 @@
             <Chinesesimp>允许小队重命名</Chinesesimp>
             <Korean>그룹 이름 재설정 허가</Korean>
             <Spanish>Permitir renombrar grupo</Spanish>
+            <Portuguese>Permitir renomear grupo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
@@ -1294,6 +1301,7 @@
             <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
             <Korean>그룹 리더가 그룹 이름을 재설정하는 것을 허가합니다.</Korean>
             <Spanish>Permite al lider de un grupo renombrar a su grupo si el nombre no está siendo actualmente usado.</Spanish>
+            <Portuguese>Permite que o líder renomeie seu grupo se o nome não estiver sendo usado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1305,6 +1313,7 @@
             <Chinesesimp>警告：会导致一些物体与其他物体发生碰撞。</Chinesesimp>
             <Korean>주의: 물체끼리 충돌하는 현상이 있을 수 있음.</Korean>
             <Spanish>Advertencia: puede provocar que algunos objetos choquen con otros.</Spanish>
+            <Portuguese>Aviso: pode causar que alguns objetos colidam com outros.</Portuguese>
         </Key>
     </Package>
 </Project>

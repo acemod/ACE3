@@ -188,6 +188,7 @@
             <English>Rested sway factor</English>
             <French>Facteur de balancement au repos</French>
             <Korean>휴식 시 손떨림 정도</Korean>
+            <Portuguese>Fator de balanço de mira em repouso</Portuguese>
             <German>Verwacklungsfaktor, wenn aufgelegt</German>
             <Japanese>静止時の手ぶれ係数</Japanese>
         </Key>
@@ -195,6 +196,7 @@
             <English>Influences the amount of weapon sway while weapon is rested.</English>
             <French>Influence le degré de balancement de l'arme au repos.</French>
             <Korean>무기가 아무런 행동도 하지 않는 동안 무기가 흔들리는 정도를 정합니다.</Korean>
+            <Portuguese>Influencia a quantidade de balanço de mira enquanto a arma está em repouso.</Portuguese>
             <German>Beeinflusst, wie ruhig man die Waffe hält, während sie aufgelegt ist.</German>
             <Japanese>静止している時の武器の手ぶれの量に影響します。</Japanese>
         </Key>
@@ -202,6 +204,7 @@
             <English>Deployed sway factor</English>
             <French>Facteur de balancement déployé</French>
             <Korean>거치 시 손떨림 정도</Korean>
+            <Portuguese>Fator de balanço de mira em posição de tiro</Portuguese>
             <German>Verwacklungsfaktor, wenn Zweibein aufgestellt ist.</German>
             <Japanese>展開時の手ぶれ係数</Japanese>
         </Key>
@@ -209,6 +212,7 @@
             <English>Influences the amount of weapon sway while weapon is deployed.</English>
             <French>Influence le degré de balancement de l'arme déployée.</French>
             <Korean>무기를 거치하는 동안 무기를 흔드는 정도를 정합니다.</Korean>
+            <Portuguese>Influencia a quantidade de balanço de mira enquanto a arma está em posição de tiro.</Portuguese>
             <German>Beeinflusst, wie ruhig man die Waffen hält, während das Zweibein aufgestellt ist.</German>
             <Japanese>武器の展開(Cキー)時の武器の手ぶれの量に影響します。</Japanese>
         </Key>

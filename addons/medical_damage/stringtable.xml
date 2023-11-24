@@ -648,7 +648,7 @@
             <Italian>Solo grandi colpi agli organi vitali</Italian>
             <Czech>Pouze zásahy do životně důležitých orgánů</Czech>
             <Polish>Tylko duże trafienia w ważne narządy</Polish>
-            <Portuguese>Apenas danos largos a órgãos vitais</Portuguese>
+            <Portuguese>Apenas danos graves a órgãos vitais</Portuguese>
             <Spanish>Solo grandes heridas en organos vitales</Spanish>
             <Turkish>Sadece hayati organlara büyük vuruşlar</Turkish>
             <German>Nur schwere Treffer an lebenswichtigen Organen</German>
@@ -679,7 +679,7 @@
             <Italian>o</Italian>
             <Czech>Kterýkoliv ze dvou</Czech>
             <Polish>Zarówno</Polish>
-            <Portuguese>Ou</Portuguese>
+            <Portuguese>Ambos</Portuguese>
             <Spanish>Ambos</Spanish>
             <Turkish>Ikisinden biri</Turkish>
             <German>Beide</German>
@@ -695,6 +695,7 @@
             <Chinesesimp>热灼伤</Chinesesimp>
             <Korean>화상</Korean>
             <Spanish>Quemadura térmica</Spanish>
+            <Portuguese>Queimadura Térmica</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
             <English>Minor Thermal Burn</English>
@@ -706,6 +707,7 @@
             <Chinesesimp>轻微热灼伤</Chinesesimp>
             <Korean>작은 화상</Korean>
             <Spanish>Quemadura térmica menor</Spanish>
+            <Portuguese>Queimadura Térmica Leve</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
             <English>Medium Thermal Burn</English>
@@ -717,6 +719,7 @@
             <Chinesesimp>中度热灼伤</Chinesesimp>
             <Korean>꽤 큰 화상</Korean>
             <Spanish>Quemadura térmica media</Spanish>
+            <Portuguese>Queimadura Térmica Média</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
             <English>Major Thermal Burn</English>
@@ -728,6 +731,7 @@
             <Chinesesimp>重度热灼伤</Chinesesimp>
             <Korean>심각한 화상</Korean>
             <Spanish>Quemadura térmica severa</Spanish>
+            <Portuguese>Queimadura Térmica Grave</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>
@@ -741,6 +745,7 @@
             <Spanish>Umbral de daño de unidad</Spanish>
             <Chinesesimp>单位伤害阈值</Chinesesimp>
             <Korean>유닛 피해 한계점</Korean>
+            <Portuguese>Limite de Dano em Unidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
             <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
@@ -754,6 +759,7 @@
             <Spanish>Determina la cantidad de daño que puede recibir una unidad antes de quedar inconsciente (0 para predeterminado de misión)</Spanish>
             <Chinesesimp>设定一个单位在昏迷前所能承受的伤害量。（任务默认为0）</Chinesesimp>
             <Korean>이 유닛이 얼마나 많은 피해를 받아야 기절할 지 정합니다. (0은 미션 기본 설정을 사용합니다)</Korean>
+            <Portuguese>Define a quantidade de dano que uma unidade pode receber antes de ficar inconsciente. (0 para o padrão da missão)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
             <English>Pain Unconscious Chance</English>
@@ -765,6 +771,7 @@
             <German>Chance für Bewusslosigkeit durch Schmerz</German>
             <Chinesesimp>疼痛昏厥概率</Chinesesimp>
             <Korean>고통으로 인한 기절 확률</Korean>
+            <Portuguese>Chance de Inconsciência por Dor</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
             <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
@@ -776,6 +783,7 @@
             <German>Die Wahrscheinlichkeit, dass eine Person bewusstlos wird, wenn ihre Schmerzen bei einer Verwundung über der Toleranzschwelle liegen.</German>
             <Chinesesimp>当一个人的疼痛超过承受能力的极限时，他陷入昏迷的概率。</Chinesesimp>
             <Korean>고통 한계점을 넘을 시 기절하는 확률을 정합니다.</Korean>
+            <Portuguese>A probabilidade de uma pessoa ficar inconsciente quando sua dor está acima do limite de tolerância ao receber dano.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_DisplayName">
             <English>Pain Unconscious Threshold</English>
@@ -785,6 +793,7 @@
             <Polish>Próg Nieprzytomności od Bólu</Polish>
             <German>Schmerz-Bewusstlosigkeit-Grenze</German>
             <Korean>고통 기절 한계점</Korean>
+            <Portuguese>Limite de Dor Antes da Inconsciência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
             <English>Sets the threshold for severe pain, above which a person can fall unconscious upon receiving damage.</English>
@@ -794,6 +803,7 @@
             <Polish>Ustawia próg silnego bólu, powyżej którego osoba może stracić przytomność po otrzymaniu obrażeń.</Polish>
             <German>Legt die Grenze für starke Schmerzen fest, oberhalb derer eine Person bei erlittenem Schaden bewusstlos werden kann.</German>
             <Korean>사람이 데미지를 입었을 때 의식불명 상태가 될 수 있는 심각한 고통의 한계점을 설정합니다.</Korean>
+            <Portuguese>Define o limite para dor severa, acima do qual uma pessoa pode ficar inconsciente ao receber dano.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
@@ -805,6 +815,7 @@
             <German>Tödliche Verletzung - Wahrscheinlichkeit des Todes</German>
             <Chinesesimp>致命伤死亡概率</Chinesesimp>
             <Korean>치명상 사망 확률</Korean>
+            <Portuguese>Chance de Morte por Ferimento Fatal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
@@ -816,6 +827,7 @@
             <German>Die Wahrscheinlichkeit, an einer eigentlich tödlichen Verletzung zu sterben.</German>
             <Chinesesimp>死于致命伤的概率。</Chinesesimp>
             <Korean>치명상으로 인해 사망할 확률을 정합니다.</Korean>
+            <Portuguese>A chance de morrer para um ferimento fatal.</Portuguese>
         </Key>
     </Package>
 </Project>

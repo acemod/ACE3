@@ -7,7 +7,7 @@
             <Japanese>衛生兵AI</Japanese>
             <Russian>ИИ Медик</Russian>
             <French>Médecine IA</French>
-            <Portuguese>IA Médico</Portuguese>
+            <Portuguese>IA Médica</Portuguese>
             <Chinesesimp>AI 医疗兵</Chinesesimp>
             <Chinese>AI醫療兵</Chinese>
             <Italian>Medico AI</Italian>
@@ -54,6 +54,7 @@
             <German>Erfordere Gegenstände</German>
             <Korean>아이템 필요</Korean>
             <French>Items requis</French>
+            <Portuguese>Exigir Itens</Portuguese>
             <Japanese>アイテムを要求</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_desc">
@@ -62,6 +63,7 @@
             <German>Die KI führt nur dann medizinische Behandlungen durch, wenn sie die erforderlichen Gegenstände in ihrem Inventar hat.</German>
             <Korean>소지품에 필요한 아이템이 있을 경우에만 인공지능이 치료를 진행합니다.</Korean>
             <French>Les IA n'effectueront un traitement médical que si elles ont le matériel nécessaire dans leur inventaire.</French>
+            <Portuguese>A IA só irá realizar tratamento médico se tiver os itens necessários em seu inventário.</Portuguese>
             <Japanese>AIのインベントリに必要なアイテムがある場合にのみ治療を実行します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_autoReplaceItems">
@@ -70,6 +72,7 @@
             <Korean>인공지능 아이템 자동 변환</Korean>
             <French>Conversion automatique des items pour les IA</French>
             <German>Automatische Konvertierung von Gegenständen der KI</German>
+            <Portuguese>Conversão automática de itens para IA</Portuguese>
             <Japanese>AIのアイテムを自動変換</Japanese>
         </Key>
     </Package>

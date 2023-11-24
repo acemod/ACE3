@@ -379,6 +379,7 @@
             <Polish>Sortuj po rozmiarze</Polish>
             <Korean>공간 순서로 정렬</Korean>
             <Chinesesimp>以容量排序</Chinesesimp>
+            <Portuguese>Ordenar por capacidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
             <English>Sort by accuracy</English>
@@ -391,6 +392,7 @@
             <Polish>Sortuj po celności</Polish>
             <Korean>정확도 순서로 정렬</Korean>
             <Chinesesimp>以精度排序</Chinesesimp>
+            <Portuguese>Ordenar por precisão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
             <English>Sort by rate of fire</English>
@@ -403,6 +405,7 @@
             <Polish>Sortuj po szybkostrzelności</Polish>
             <Korean>발사속도 순서로 정렬</Korean>
             <Chinesesimp>以射速排序</Chinesesimp>
+            <Portuguese>Ordenar por cadência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
@@ -414,6 +417,7 @@
             <Polish>Sortuj po przybliżeniu</Polish>
             <Korean>배율 순서로 정렬</Korean>
             <Chinesesimp>以放大倍数排序</Chinesesimp>
+            <Portuguese>Ordenar por magnificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagCountText">
             <English>Sort by ammo count</English>
@@ -426,6 +430,7 @@
             <Polish>Sortuj po ilości amunicji</Polish>
             <Korean>총알 갯수 순서롤 정렬</Korean>
             <Chinesesimp>以弹量排序</Chinesesimp>
+            <Portuguese>Ordenar por quantidade de munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
@@ -437,6 +442,7 @@
             <German>Nach ballistischem Schutz sortieren</German>
             <Korean>방탄 성능 순서로 정렬</Korean>
             <Chinesesimp>以防弹性能排序</Chinesesimp>
+            <Portuguese>Ordenar por proteção balística</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
@@ -448,6 +454,7 @@
             <German>Nach Explosionsschutz sortieren</German>
             <Korean>방폭 성능 순서로 정렬</Korean>
             <Chinesesimp>以防爆性能排序</Chinesesimp>
+            <Portuguese>Ordenar por proteção a explosivos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -1517,6 +1524,7 @@
             <German>Detonationsverzögerung</German>
             <Chinesesimp>引信时间</Chinesesimp>
             <Korean>신관 시간</Korean>
+            <Portuguese>Atraso de detonação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
@@ -1528,6 +1536,7 @@
             <Spanish>Detona mediante impacto</Spanish>
             <Chinesesimp>碰炸引信</Chinesesimp>
             <Korean>충격 신관</Korean>
+            <Portuguese>Detona por impacto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveFaceSetting">
             <English>Save Face</English>
@@ -1538,6 +1547,7 @@
             <Polish>Zapisz Twarz</Polish>
             <German>Gesicht Speichern</German>
             <French>Sauvegarder le visage</French>
+            <Portuguese>Salvar Rosto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
@@ -1548,6 +1558,7 @@
             <Polish>Zapisz Głos</Polish>
             <German>Stimme Speichern</German>
             <French>Sauvegarder la voix</French>
+            <Portuguese>Salvar Voz</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
@@ -1558,6 +1569,7 @@
             <Polish>Zapisz Naszywkę</Polish>
             <German>Insignia Speichern</German>
             <French>Sauvegarder l'insigne</French>
+            <Portuguese>Salvar Insígnia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortDescending">
             <English>Descending</English>
@@ -1566,6 +1578,7 @@
             <German>Absteigend</German>
             <Korean>내림차순</Korean>
             <French>Décroissant</French>
+            <Portuguese>Decrescente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortAscending">
             <English>Ascending</English>
@@ -1574,6 +1587,7 @@
             <German>Aufsteigend</German>
             <Korean>오름차순</Korean>
             <French>Croissant</French>
+            <Portuguese>Crescente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
@@ -1598,11 +1612,13 @@
             <German>Munitionszahl</German>
             <Korean>장탄 수</Korean>
             <French>Nombre de munitions</French>
+            <Portuguese>Quantidade de munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statIlluminators">
             <English>Illuminators</English>
             <French>Illuminateurs</French>
             <Korean>조명</Korean>
+            <Portuguese>Iluminadores</Portuguese>
             <Japanese>イルミネーター</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
@@ -1612,6 +1628,7 @@
             <German>Standardmäßig auf Favoriten eingestellt</German>
             <Korean>즐겨찾기 기본값</Korean>
             <French>Favoris par défaut</French>
+            <Portuguese>Favoritos por padrão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
@@ -1620,6 +1637,7 @@
             <German>Steuert, ob das ACE Arsenal standardmäßig alle Gegenstände oder nur Favoriten anzeigt.</German>
             <Korean>ACE 아스널이 기본적으로 모든 아이템 또는 즐겨찾기를 표시할 지 여부를 조정합니다.</Korean>
             <French>Contrôle si l'arsenal ACE affiche par défaut tous les éléments ou les favoris.</French>
+            <Portuguese>Controla se o Arsenal ACE exibe por padrão todos os itens ou favoritos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
@@ -1628,6 +1646,7 @@
             <German>Favoritenfarbe</German>
             <Korean>즐겨찾기 색상</Korean>
             <French>Couleurs favorites</French>
+            <Portuguese>Cor dos favoritos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
@@ -1636,6 +1655,7 @@
             <German>Hervorhebungsfarbe für Lieblingsgegenstände.</German>
             <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
             <French>Met en surbrillance les éléments favoris.</French>
+            <Portuguese>Cor de destaque para itens favoritados.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
@@ -1644,6 +1664,7 @@
             <German>Wechseln Sie zwischen der Anzeige aller Elemente oder Ihrer Favoriten.\nDoppelklicken Sie bei gedrückter Umschalttaste, um ein Element hinzuzufügen oder zu entfernen.</German>
             <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
             <French>Change entre l'affichage de tous les éléments ou de vos favoris.\nDouble-cliquez en maintenant la touche Maj enfoncée pour ajouter ou supprimer un élément.</French>
+            <Portuguese>Alterna entre a exibição de todos os itens ou seus favoritos.\nClique duas vezes enquanto mantém pressionada a tecla Shift para adicionar ou remover um item.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSearchTooltip">
             <English>Search\nCTRL + Click to enable live results</English>

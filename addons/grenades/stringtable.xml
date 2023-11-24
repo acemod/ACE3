@@ -545,6 +545,7 @@
             <German>Rucksackladung (Werfbar)</German>
             <Chinesesimp>炸药包（可投掷）</Chinesesimp>
             <Korean>폭파 장약 (투척)</Korean>
+            <Portuguese>Sacola Explosiva (Arremessável)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
@@ -556,6 +557,7 @@
             <German>Typ: Ladung &lt;br/&gt;Patronen:1&lt;br/&gt;Benutzt für: Dinge die Sterben müssen</German>
             <Chinesesimp>类型：炸药&lt;br /&gt;数量：1&lt;br /&gt;用于：需要死亡的事物</Chinesesimp>
             <Korean>종류: 장약&lt;br /&gt;갯수: 1&lt;br /&gt;사용처: 죽여야 할 곳에</Korean>
+            <Portuguese>Tipo: Carga&lt;br /&gt;Munições: 1&lt;br /&gt;Utilizada em: Coisas que devem morrer</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
@@ -567,6 +569,7 @@
             <German>Werfbare Rucksackladung. 7 Sekunden Zeitzünder</German>
             <Chinesesimp>一个可投掷的炸药包。7秒定时引信</Chinesesimp>
             <Korean>던질 수 있는 폭파 장약입니다. 던지고 7초 후에 터집니다</Korean>
+            <Portuguese>Uma sacola explosiva que pode ser arremessada. Pavio de 7 segundos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
@@ -578,6 +581,7 @@
             <German>Sprengladung (Werfbar)</German>
             <Chinesesimp>炸药块（可投掷）</Chinesesimp>
             <Korean>폭파 블럭 (투척)</Korean>
+            <Portuguese>Carga Explosiva (Arremessável)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
@@ -589,6 +593,7 @@
             <German>Werfbare Sprengladung. 7 Sekunden Zeitzünder</German>
             <Chinesesimp>一个可投掷的炸药块。7秒定时引信</Chinesesimp>
             <Korean>던질 수 있는 폭파 블럭입니다. 던지고 7초 후에 터집니다</Korean>
+            <Portuguese>Uma carga explosiva que pode ser arremessada. Pavio de 7 segundos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
@@ -600,6 +605,7 @@
             <German>Zündschnur verkürzen</German>
             <Chinesesimp>切换为短引信</Chinesesimp>
             <Korean>단축 신관으로 바꾸기</Korean>
+            <Portuguese>Converter para pavio curto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
@@ -611,6 +617,7 @@
             <German>Kurze Zündschnur entfernen</German>
             <Chinesesimp>去除短引信</Chinesesimp>
             <Korean>단축 신관 제거하기</Korean>
+            <Portuguese>Remover pavio curto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -638,6 +645,7 @@
             <German>Erlaube die Umwandlung von Sprengstoffen</German>
             <Chinesesimp>允许转换炸药</Chinesesimp>
             <Korean>폭발물 변환 가능여부</Korean>
+            <Portuguese>Permitir Conversão de Explosivos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
@@ -649,6 +657,7 @@
             <German>Erlaube die Umwandlung von Sprengstoffen in werfbare Ladungen</German>
             <Chinesesimp>允许将炸药转换为可投掷物</Chinesesimp>
             <Korean>폭발물을 투척무기로 변환할 수 있도록 허용합니다.</Korean>
+            <Portuguese>Permitir conversão de explosivos em arremessáveis</Portuguese>
         </Key>
     </Package>
 </Project>

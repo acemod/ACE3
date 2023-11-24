@@ -127,6 +127,7 @@
             <Spanish>Maglite ML300L</Spanish>
             <Russian>Maglite ML300L</Russian>
             <Korean>매그라이트 ML300L</Korean>
+            <Portuguese>Maglite ML300L</Portuguese>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
             <English>Powerful LED flashlight.</English>
@@ -142,6 +143,7 @@
             <Spanish>Linterna LED potente</Spanish>
             <Russian>Мощный светодиодный фонарь.</Russian>
             <Korean>고휘도 LED 손전등.</Korean>
+            <Portuguese>Potente lanterna LED.</Portuguese>
         </Key>
     </Package>
 </Project>

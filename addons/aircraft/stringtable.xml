@@ -65,6 +65,7 @@
             <Czech>30mm Tříštivo-trhavá zápalná střela</Czech>
             <Russian>30мм Осколочно-Фугасный Зажигательный</Russian>
             <Korean>30mm 고폭소이탄</Korean>
+            <Portuguese>30mm Alto-Explosivo Incendiária</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
             <English>30mm HEI</English>
@@ -79,6 +80,7 @@
             <Czech>30mm HEI</Czech>
             <Russian>30мм ОФЗ</Russian>
             <Korean>30mm HEI</Korean>
+            <Portuguese>30mm AEI</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionAP">
             <English>30mm DU Armor Piercing</English>
@@ -93,6 +95,7 @@
             <Czech>30mm Protipancéřová střela z ochuzeného Uranu</Czech>
             <Russian>30мм ОУ Бронебойный Снаряд</Russian>
             <Korean>30mm 열화우라늄 철갑탄</Korean>
+            <Portuguese>30mm DU Perfurante de Blindagem</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortAP">
             <English>30mm DU AP</English>
@@ -107,6 +110,7 @@
             <Czech>30 mm DU AP</Czech>
             <Russian>30мм ОУ БС</Russian>
             <Korean>30mm DU AP</Korean>
+            <Portuguese>30mm DU AP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM41">
             <English>30mm Combat Mix 4:1 DU:HEI</English>
@@ -121,6 +125,7 @@
             <Czech>30mm Bojový Mix 4:1 DU:HEI</Czech>
             <Russian>30мм Смешанное боепитание 4:1 ОУ:ОФЗ</Russian>
             <Korean>30mm 4:1 열화:고폭소이</Korean>
+            <Portuguese>30mm Mix de Combate 4:1 DU:AEI</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM41">
             <English>30mm CM 4:1</English>

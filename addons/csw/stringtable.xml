@@ -183,6 +183,7 @@
             <Russian>Хранилище боеприпасов</Russian>
             <Spanish>Almacenamiento de munición</Spanish>
             <French>Stockage des munitions</French>
+            <Portuguese>Armazenamento de Munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_description">
             <English>Determines whether extra magazines are stored on the ground or inside an ammo box</English>
@@ -194,6 +195,7 @@
             <Russian>Определяет будут ли дополнительные магазины лежать на земле или внутри хранилища</Russian>
             <Spanish>Determina si los cargadores extra son almacenados en el suelo o en una caja de munición</Spanish>
             <French>Détermine si les chargeurs supplémentaires sont stockés par terre ou dans une caisse de munitions.</French>
+            <Portuguese>Determina se munições extras são armazenadas no chão ou dentro de uma caixa de munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_weaponHolder">
             <English>Ground</English>
@@ -205,6 +207,7 @@
             <Russian>Земля</Russian>
             <Spanish>Suelo</Spanish>
             <French>Sol</French>
+            <Portuguese>Solo</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_ammoBox">
             <English>Ammo Box</English>
@@ -216,6 +219,7 @@
             <Russian>Коробка с боеприпасами</Russian>
             <Spanish>Caja de munición</Spanish>
             <French>Caisse de munitions</French>
+            <Portuguese>Caixa de Munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
@@ -517,6 +521,7 @@
             <German>[CSW] Statisches M2 mit Schild</German>
             <Chinesesimp>[班组] 固定式防盾型 M2 重机枪</Chinesesimp>
             <Korean>[CSW] 거치형 M2 (방패)</Korean>
+            <Portuguese>[CSW] Arma Estática - M2 com Escudo</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>

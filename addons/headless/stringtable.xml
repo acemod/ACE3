@@ -13,6 +13,7 @@
             <Italian>Headless</Italian>
             <Russian>Headless клиент</Russian>
             <Spanish>Headless</Spanish>
+            <Portuguese>Headless</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_ModuleDesc">
             <English>This module allows you to setup automatic transferring of AI to Headless Clients. (Default: No)</English>
@@ -26,6 +27,7 @@
             <Italian>Questo modulo ti consente di impostare il trasferimento automatico delle AI su dei Client Headless. (Default: No)</Italian>
             <Russian>Этот модуль позволяет настроить автоматическую передачу управления ИИ Headless клиентам. (По умолчанию: Откл)</Russian>
             <Spanish>Este modulo permite habilitar la transferencia de IA a los Headless Clients. (Defecto: No)</Spanish>
+            <Portuguese>Este módulo permite configurar a transferência automática de IA para Headless Clients. (Padrão: Não)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_EnabledDesc">
             <English>Enables transferring of AI to Headless Clients.</English>
@@ -39,6 +41,7 @@
             <Italian>Abilita il trasferimento delle AI sugli Headless Client.</Italian>
             <Russian>Передает управление ИИ Headless клиентам.</Russian>
             <Spanish>Habilita la transferencia de IA a los Headless Clients</Spanish>
+            <Portuguese>Ativa a transferência de IA para Headless Clients.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_Delay">
             <English>Delay</English>
@@ -52,6 +55,7 @@
             <Italian>Latenza</Italian>
             <Russian>Задержка</Russian>
             <Spanish>Retardo</Spanish>
+            <Portuguese>Atraso</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_DelayDesc">
             <English>Minimal delay between transfers, in seconds. (Default: 15)</English>
@@ -65,6 +69,7 @@
             <Italian>Latenza minima tra i trasferimenti, in secondi. (Default: 15)</Italian>
             <Russian>Минимальная задержка в секундах между передачами. (По умолчанию: 15)</Russian>
             <Spanish>Retardo mínimo entre transferencias en segundos. (Default: 15)</Spanish>
+            <Portuguese>Atraso mínimo entre transferências, em segundos. (Padrão: 15)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_EndMission">
             <English>End Mission</English>
@@ -78,6 +83,7 @@
             <Polish>Koniec misji</Polish>
             <Russian>Завершать миссию</Russian>
             <Spanish>Finalizar misión</Spanish>
+            <Portuguese>Finalizar Missão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_EndMissionDesc">
             <English>End mission when there are no players connected (same as 'persistent = 0' in server configuration but with Headless Client support).</English>
@@ -91,6 +97,7 @@
             <Polish>Kończy misje kiedy nie ma połączonych graczy(tak samo jak 'persistent = 0' w konfiguracji serwer ale z wsparciem Headless Client</Polish>
             <Russian>Завершает миссию, если нет присоединенных игроков (аналогично 'persistent = 0' в настройках сервера, но с включенной поддержкой Headless клиентов).</Russian>
             <Spanish>Finalizar la misión cuando no hay jugadores conectados (igual que la opción de servidor 'persistent = 0', pero con soporte para Headless Client).</Spanish>
+            <Portuguese>Finaliza a missão quando não há jogadores conectados (o mesmo que 'persistent = 0' na configuração do servidor, mas com suporte para Headless Client).</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_Instant">
             <English>Instant</English>
@@ -104,6 +111,7 @@
             <Polish>Natychmiastowy</Polish>
             <Russian>Мгновенно</Russian>
             <Spanish>Instantáneo</Spanish>
+            <Portuguese>Instantâneo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_Delayed">
             <English>Delayed (60s)</English>
@@ -117,6 +125,7 @@
             <Polish>Opóźniony (60s)</Polish>
             <Russian>С задержкой (60 с)</Russian>
             <Spanish>Retardado (60s)</Spanish>
+            <Portuguese>Atrasado (60s)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_Log">
             <English>Log</English>
@@ -130,6 +139,7 @@
             <Italian>Registra</Italian>
             <Russian>Журнал</Russian>
             <Spanish>Registrar</Spanish>
+            <Portuguese>Registo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_LogDesc">
             <English>Log transfer statistics and Headless Client (dis)connections to RPT. (Default: No)</English>
@@ -143,6 +153,7 @@
             <Italian>Registra le statistiche del trasferimento e delle (dis)connessioni dell'Headless Clienti su RPT. (Default: No)</Italian>
             <Russian>Вести журнал передач и подключений Headless клиентов в файл RPT. (По умолчанию: Откл)</Russian>
             <Spanish>Registrar las estadísticas de transferencia y las (des)conexiones de Headless Client hacia el RPT. (Default: No)</Spanish>
+            <Portuguese>Regista as estatísticas de transferência e as (des)conexões do Headless Client para o RPT. (Padrão: Não)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadout">
             <English>Transfer Loadout</English>
@@ -155,6 +166,7 @@
             <Korean>로드아웃 전송</Korean>
             <Spanish>Transferir equipamiento</Spanish>
             <French>Transfert équipement</French>
+            <Portuguese>Transferir Equipamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutDesc">
             <English>Transfer loadout of units attempts to work around an issue where units appear naked after transferring to a Headless Client.</English>
@@ -167,6 +179,7 @@
             <Korean>헤드리스 클라이언트로 넘어갈 때 유닛이 벌거벗고 있는 상황을 해결하기 위해 로드아웃을 유닛에 전송합니다.</Korean>
             <Spanish>Transferir el equipamiento de unidades intenta solventar el problema por el cual las unidades aparecen desnudas despues de ser transferidas a un Headless Client.</Spanish>
             <French>Transférer l'équipement des unités pour contourner une erreur où les unités apparaissent nues après un transfer vers le Headless Client.</French>
+            <Portuguese>Transferir equipamento de unidades para contornar um problema onde as unidades aparecem nuas após a transferência para um Headless Client.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutCurrent">
             <English>Current Loadout</English>
@@ -179,6 +192,7 @@
             <Korean>현재 로드아웃</Korean>
             <Spanish>Equipamiento actual</Spanish>
             <French>Equipement actuel</French>
+            <Portuguese>Equipamento Atual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutConfig">
             <English>Config Loadout</English>
@@ -191,6 +205,7 @@
             <Korean>로드아웃 설정</Korean>
             <Spanish>Configuración de equipamiento</Spanish>
             <French>Configuration de l'équipement</French>
+            <Portuguese>Configuração do Equipamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_BlacklistEden">
             <English>Headless Blacklist</English>
@@ -204,6 +219,7 @@
             <Polish>Czarna lista Headless</Polish>
             <Russian>Черный список Headless</Russian>
             <Spanish>Lista negra de Headless</Spanish>
+            <Portuguese>Lista Negra Headless</Portuguese>
         </Key>
         <Key ID="STR_ACE_Headless_BlacklistEdenDesc">
             <English>Disables transferring of this AI unit/group to Headless Clients. No effect on player units.</English>
@@ -217,6 +233,7 @@
             <Polish>Wyłącza transfer tych jednostek/grup AI do Headless Clients. Bez efektu na jednostkach gracza.</Polish>
             <Russian>Отключает передачу управления этого юнита/группы Headless клиентам. Не влияет на юниты игроков.</Russian>
             <Spanish>Deshabilita la transferencia de esta unidad/grupo de IA hacia los Headless Clients.Sin efecto sobre unidades de jugadores.</Spanish>
+            <Portuguese>Desativa a transferência desta unidade/grupo de IA para Headless Clients. Sem efeito nas unidades de jogadores.</Portuguese>
         </Key>
     </Package>
 </Project>
