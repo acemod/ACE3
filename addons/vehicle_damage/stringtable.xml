@@ -3,7 +3,7 @@
     <Package name="Vehicle_Damage">
         <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
-            <Japanese>ACE 高度な車両ダメージ</Japanese>
+            <Japanese>ACE アドバンスドビークルダメージ</Japanese>
             <French>ACE Dégâts de véhicule avancés</French>
             <German>ACE Erweiterter Fahrzeugsschaden</German>
             <Polish>ACE Zaawansowany system uszkodzeń pojazdów</Polish>
@@ -14,7 +14,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
-            <Japanese>高度な車両ダメージを有効/無効にする</Japanese>
+            <Japanese>アドバンスドビークルダメージを有効/無効にする</Japanese>
             <French>Active les dégâts de véhicule avancés.</French>
             <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden</German>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia pojazdów</Polish>
@@ -25,7 +25,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
             <English>Enable/Disable advanced car damage (Experimental)</English>
-            <Japanese>高度な車ダメージを有効/無効にする (実験的)</Japanese>
+            <Japanese>アドバンスド車ダメージを有効/無効にする (試験的)</Japanese>
             <French>Active les dégâts avancés sur les voitures (expérimental).</French>
             <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden (Experimentell)</German>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia w samochodach (eksperymentalne)</Polish>
@@ -35,8 +35,8 @@
             <Spanish>Habilita/Deshabilita el daño avanzado de coche (Experimental)</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
-            <English>Enable/Disable advanced Car Damage</English>
-            <Japanese>高度な車ダメージを有効/無効にする</Japanese>
+            <English>Enable/Disable advanced car damage</English>
+            <Japanese>アドバンスド車ダメージを有効/無効にする</Japanese>
             <French>Dégâts de voiture avancés</French>
             <German>Aktiviert/Deaktiviert erweiterten Autoschaden</German>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia w samochodach</Polish>
