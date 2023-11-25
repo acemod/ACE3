@@ -124,7 +124,7 @@
             <Hungarian>Szöveges értesítés kijelzése a fegyver elakadásakor</Hungarian>
             <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
             <Italian>Visualizza testo in caso di inceppamento</Italian>
-            <Japanese>弾詰りを文章で表示</Japanese>
+            <Japanese>弾詰まりを文章で表示</Japanese>
             <Korean>탄걸림의 경우 화면에 표시</Korean>
             <Chinesesimp>在卡弹时显示提示信息</Chinesesimp>
             <Chinese>在卡彈時顯示提示訊息</Chinese>
@@ -140,7 +140,7 @@
             <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
             <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
             <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
-            <Japanese>持っている武器が弾詰りをすると、通知を表示します</Japanese>
+            <Japanese>持っている武器が弾詰まりをすると、通知を表示します</Japanese>
             <Korean>총알이 무기에 걸릴 경우 화면에 알림을 띄웁니다</Korean>
             <Chinesesimp>当武器卡弹时显示提示信息</Chinesesimp>
             <Chinese>當武器卡彈時顯示提示訊息</Chinese>
@@ -254,7 +254,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
             <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
-            <Japanese>プレイヤーが過熱パーティクル エフェクトと分散を見えるようになる距離 (m) を設定します。</Japanese>
+            <Japanese>プレイヤーが過熱パーティクルのエフェクトと分散を見えるようになる距離 (m) を設定します。</Japanese>
             <French>Définit la distance en mètres, jusqu'à laquelle les effets de particules et la dispersion sont visibles.</French>
             <Russian>Дистанция в метрах, с которой видны эффекты частиц и разброса при перегреве.</Russian>
             <German>Der Abstand in Metern vom Spieler, in dem Überhitzungspartikeleffekte und Dispersion sichtbar sind.</German>
@@ -317,7 +317,7 @@
             <Czech>Uvolnit zbraň při přebití</Czech>
             <Portuguese>Desemperrar arma no recarregamento</Portuguese>
             <Russian>Исправлять клин при перезарядке</Russian>
-            <Japanese>再装填による弾詰りの解消</Japanese>
+            <Japanese>再装填による弾詰まり解消</Japanese>
             <Korean>재장전 시 기능고장 해결</Korean>
             <Chinesesimp>重装弹匣以解决卡弹</Chinesesimp>
             <Chinese>重裝彈匣以解決卡彈</Chinese>
@@ -333,7 +333,7 @@
             <Czech>Přebití uvolní zaseknutou zbraň.</Czech>
             <Portuguese>Recarregar desemperra arma.</Portuguese>
             <Russian>Перезарядка устраняет заклинивание оружия.</Russian>
-            <Japanese>再装填により、弾詰りを除去します。</Japanese>
+            <Japanese>再装填により、弾詰まりを除去します。</Japanese>
             <Korean>기능고장이 재장전 시 해결됩니다.</Korean>
             <Chinesesimp>利用重装弹匣来解决卡弹</Chinesesimp>
             <Chinese>利用重裝彈匣來解決卡彈</Chinese>
@@ -341,7 +341,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_displayName">
             <English>Unjam on Barrel Swap</English>
-            <Japanese>銃身交換で弾詰まり解消</Japanese>
+            <Japanese>銃身交換による弾詰まり解消</Japanese>
             <French>Désenrayer l'arme au changement de canon</French>
             <Russian>Замена ствола устраняет клин оружия</Russian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
@@ -371,7 +371,7 @@
             <Czech>Šance, že uvolnění zbraně selže</Czech>
             <Portuguese>Chance de falha de desemperramento</Portuguese>
             <Russian>Шанс неудачи при устранении клина</Russian>
-            <Japanese>弾詰りの除去を失敗する可能性</Japanese>
+            <Japanese>弾詰まりの除去を失敗する可能性</Japanese>
             <Korean>기능고장 해결 시도 실패확률</Korean>
             <Chinesesimp>解决卡弹失败机率</Chinesesimp>
             <Chinese>解決卡彈失敗機率</Chinese>
@@ -395,7 +395,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_displayName">
             <English>Overheating Cookoff Coefficient</English>
-            <Japanese>過熱誘爆係数</Japanese>
+            <Japanese>過熱暴発係数</Japanese>
             <French>Coefficient de l'auto-inflammation</French>
             <Russian>Коэф. возгорания при перегреве</Russian>
             <German>Selbstzündungskoeffizient bei Überhitzung</German>
@@ -406,7 +406,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_description">
             <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
-            <Japanese>過熱によって誘爆が起きる確率係数を設定します。\n高い値では誘爆までに必要な過熱量が増加し、0 で誘爆が無効化されます。</Japanese>
+            <Japanese>過熱によって暴発(コックオフ)が発生する確率の係数を設定します。\n高い値では暴発までに必要な過熱量が増加し、0 で暴発が無効化されます。</Japanese>
             <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment dans la chambre de l'arme.\nPlus la valeur est élevée, plus l'arme doit être chaude pour que les munitions s'auto-inflamment.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
             <Russian>Коэффициент нагрева, при котором возникает возгорание.</Russian>
             <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
@@ -442,7 +442,7 @@
             <Hungarian>Használd a cső kicseréléséhez.</Hungarian>
             <Portuguese>Use para trocar o cano.</Portuguese>
             <Italian>Usata per cambiare la canna.</Italian>
-            <Japanese>予身の交換に使用します。</Japanese>
+            <Japanese>銃身の交換に使用します。</Japanese>
             <Korean>총열을 바꿀 때 사용합니다.</Korean>
             <Chinesesimp>用来更换枪管</Chinesesimp>
             <Chinese>用來更換槍管</Chinese>
@@ -465,7 +465,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_WeaponCookedOff">
             <English>Weapon cooked off!</English>
-            <Japanese>武器が誘爆した!</Japanese>
+            <Japanese>武器が暴発した!</Japanese>
             <French>Auto-inflammation des munitions !</French>
             <Russian>Оружие сдетонировало!</Russian>
             <German>Munition durchgezündet!</German>
@@ -529,7 +529,7 @@
             <Hungarian>Akadás elhárítása</Hungarian>
             <Portuguese>Destravar arma</Portuguese>
             <Italian>Ripulisci l'arma</Italian>
-            <Japanese>弾詰りを除去する</Japanese>
+            <Japanese>弾詰まりを解消する</Japanese>
             <Korean>기능고장 해결</Korean>
             <Chinesesimp>清除卡弹</Chinesesimp>
             <Chinese>清除卡彈</Chinese>
@@ -545,7 +545,7 @@
             <Hungarian>Akadás elhárítva</Hungarian>
             <Portuguese>Arma destravada</Portuguese>
             <Italian>Arma pronta al fuoco</Italian>
-            <Japanese>弾詰りが除去されました</Japanese>
+            <Japanese>弾詰まりが解消した</Japanese>
             <Korean>기능고장 해결됨</Korean>
             <Chinesesimp>卡弹已清除</Chinesesimp>
             <Chinese>卡彈已清除</Chinese>
@@ -560,7 +560,7 @@
             <Czech>Zbraň se nepodařilo uvolnit</Czech>
             <Portuguese>Falha no desemperramento</Portuguese>
             <Russian>Не удалось исправить клин</Russian>
-            <Japanese>弾詰りの除去に失敗しました</Japanese>
+            <Japanese>弾詰まりの解消に失敗した</Japanese>
             <Korean>기능고장 해결 실패</Korean>
             <Chinesesimp>卡弹未能清除</Chinesesimp>
             <Chinese>卡彈未能清除</Chinese>
@@ -624,7 +624,7 @@
             <Portuguese>Conferir temperatura da arma</Portuguese>
             <Italian>Controlla la temperatura della canna</Italian>
             <Russian>Проверить температуру оружия</Russian>
-            <Japanese>武器の温度を測る</Japanese>
+            <Japanese>武器の温度を確認</Japanese>
             <Korean>무기 온도 확인</Korean>
             <Chinesesimp>检查枪管温度</Chinesesimp>
             <Chinese>檢查槍管溫度</Chinese>
@@ -640,7 +640,7 @@
             <Russian>Проверить температуру оружия</Russian>
             <Portuguese>Conferir temperatura</Portuguese>
             <Italian>Controlla la temperatura della canna</Italian>
-            <Japanese>武器の温度を測る</Japanese>
+            <Japanese>武器の温度を確認</Japanese>
             <Korean>무기 온도 확인</Korean>
             <Chinesesimp>检查枪管温度</Chinesesimp>
             <Chinese>檢查槍管溫度</Chinese>
@@ -668,7 +668,7 @@
             <French>Vérifier la température des canons de rechange</French>
             <Russian>Проверить температуру запасных стволов</Russian>
             <Czech>Zkontrolovat teplotu náhradní hlavně</Czech>
-            <Japanese>予備銃身の温度を測る</Japanese>
+            <Japanese>予備銃身の温度を確認</Japanese>
             <Polish>Sprawdź temperaturę zapasowych luf</Polish>
             <German>Temperatur der Wechselläufe prüfen</German>
             <Korean>총열 온도 확인</Korean>
@@ -693,7 +693,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponWithItem">
             <English>Cool weapon with...</English>
-            <Japanese>次で武器を冷ます・・・</Japanese>
+            <Japanese>武器を・・・で冷却</Japanese>
             <French>Refroidir l'arme avec...</French>
             <Russian>Охладить оружие с...</Russian>
             <German>Waffe mit... kühlen</German>
@@ -715,7 +715,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponWithWaterSource">
             <English>Cool weapon in water source.</English>
-            <Japanese>水源で武器を冷ます</Japanese>
+            <Japanese>水源で武器を冷却</Japanese>
             <French>Refroidir l'arme dans la source d'eau.</French>
             <Russian>Охладить оружие в воде.</Russian>
             <German>Kühle Waffe aus Wasserquelle.</German>
@@ -748,7 +748,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponIsCool">
             <English>Weapon is cool enough the water has stopped boiling.</English>
-            <Japanese>武器が冷まりきり、水が沸騰していません。</Japanese>
+            <Japanese>武器が冷え切り、水は沸騰を止めた。</Japanese>
             <French>L'arme est suffisamment froide pour que l'eau ait cessé de bouillir.</French>
             <Russian>Оружие достаточно холодное для прекращения кипения воды.</Russian>
             <German>Waffe ist kalt genug, dass Wasser hat aufgehört zu kochen.</German>
