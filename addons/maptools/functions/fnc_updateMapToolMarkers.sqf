@@ -18,10 +18,12 @@
 params ["_mapCtrl"];
 
 if (GVAR(plottingBoard_Shown) == 0) then {
-    // Hide all board markers when board is put away
+    // Hide all plotting board markers when board is put away
     {
-        _x setMarkerAlpha 0;
-        _y set [4, 0];
+        if (_y select 4 != 0) then {
+            _x setMarkerAlpha 0;
+            _y set [4, 0];
+        };
     } forEach GVAR(plottingBoard_markers);
 };
 
@@ -60,7 +62,7 @@ if (GVAR(plottingBoard_Shown) > 0) then {
         _marker = _x;
         _y params ["_markerPos", "_polyline", "_lastAngle", "_lastBoardPos", "_lastAlpha"];
 
-        // Show all board markers if the board is shown
+        // Show all plotting board markers when the board is shown
         if (_lastAlpha != 1) then {
             _marker setMarkerAlpha 1;
             _y set [4, 1];
@@ -74,7 +76,7 @@ if (GVAR(plottingBoard_Shown) > 0) then {
         _count = count _polyline;
 
         // Rotate all points of polyline
-        if (_count > 0) then {
+        if (_count >= 4) then { // polylines need at least 2 points (2 components per point)
             _rotatedPolyline = [];
 
             for "_i" from 0 to _count - 1 step 2 do {

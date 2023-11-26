@@ -53,3 +53,4 @@ If you are equipped with a vanilla GPS it will be shown on the map. (You don't n
 ### 2.4 Drawing lines
 - You can draw lines on the plotting board.
 - These lines are removed from the map once the plotting board is hidden, but they restored when the plotting board is shown again.
+- These lines are moved along with the plotting board when the plotting board is dragged.

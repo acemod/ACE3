@@ -1,21 +1,21 @@
 #include "..\script_component.hpp"
 /*
- * Author: LorenLuke
+ * Author: LorenLuke, johnb43
  * Handle mouse movement over the map tool.
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- * - 0: Marker Name <STRING>
- * - 1: Chat Channel Number <NUMBER>
- * - 2: Marker Owner <OBJECT>
- * - 3: Local Origin <BOOL>
+ * - 0: Marker name <STRING>
+ * - 1: Chat channel number <NUMBER>
+ * - 2: Marker owner <OBJECT>
+ * - 3: Local origin <BOOL>
  * 1: Deleted <BOOL>
  *
  * Return Value:
- * true if event was handled <BOOL>
+ * True if event was handled <BOOL>
  *
  * Example:
- * [CONTROL, [0, 5]] call ACE_maptools_fnc_handlePlottingBoardMarkers
+ * [CONTROL, [0, 5]] call ace_maptools_fnc_handlePlottingBoardMarkers
  *
  * Public: No
  */
@@ -27,111 +27,187 @@ if (_deleted) exitWith {
     GVAR(plottingBoard_markers) deleteAt _marker;
 };
 
-if (GVAR(plottingBoard_Shown) < 1) exitWith {};
-if (!_local) exitWith {};
+// Do not process non-local or already processed markers, don't check if the plotting board isn't shown
+if (!_local || {GVAR(plottingBoard_Shown) < 1} || {QUOTE(ADDON) in _marker}) exitWith {};
 
+// Check if the channel the marker was made in can be marked on the plotting board
 private _continue = true;
+
 if (isMultiplayer) then {
     switch (GVAR(plottingBoardAllowChannelDrawing)) do {
         case 0: {
             if (_channelNumber != 5) then {_continue = false};
         };
         case 1: {
-            if !(_channelNumber in [3,5]) then {_continue = false};
+            if !(_channelNumber in [3, 5]) then {_continue = false};
         };
     };
 };
+
 if (!_continue) exitWith {};
 
 private _boardPos = GVAR(plottingBoard_pos);
 private _boardAng = GVAR(plottingBoard_acrylicAngle);
 
 private _markerPolyline = markerPolyline _marker;
-private _polylineOnMap = [];
-private _polylineRelative = [];
-private _polylineSubsegmentCount = 1;
+private _count = count _markerPolyline;
 
-if (count _markerPolyline > 0) exitWith {
-    private _polyPos = [_markerPolyline select 0, _markerPolyline select 1];
-    private _difPos = _polyPos vectorDiff _boardPos;
-    private _dist = vectorMagnitude _difPos;
-    private _inside = _dist < PLOTTINGBOARD_DRAWRANGE;
+// Polyine markers (lines)
+if (_count > 0) exitWith {
+    private _startPos = [];
+    private _endPos = [];
+    private _dir = [];
+    private _diffPos = [];
 
-    for "_i" from 0 to (count _markerPolyline - 1) step 2 do {
-        _polyPos = [_markerPolyline select _i, _markerPolyline select (_i + 1)];
-        _difPos = _polyPos vectorDiff _boardPos;
-        _dist = vectorMagnitude _difPos;
-        private _relPos = [[0,0], _difPos, _boardAng] call CBA_fnc_vectRotate2D;
+    private _a = 0;
+    private _b = 0;
+    private _c = 0;
+    private _t1 = nil;
+    private _t2 = nil;
+    private _delta = 0;
 
-        if (_inside != (_dist < PLOTTINGBOARD_DRAWRANGE)) then {
-            private _posPrev = [_markerPolyline select (_i - 2), _markerPolyline select (_i - 1)];
-            private _lerpPos = vectorLinearConversion [
-                _dist,
-                _boardPos distance _posPrev,
-                PLOTTINGBOARD_DRAWRANGE,
-                [_polyPos select 0, _polyPos select 1, 0],
-                [_posPrev select 0, _posPrev select 1, 0],
-                true
-            ];
-            private _lerpPosDif = _lerpPos vectorDiff _boardPos;
-            private _lerpPosRel = [[0,0], _lerpPosDif, _boardAng] call CBA_fnc_vectRotate2D;
+    private _intersectionValid1 = false;
+    private _intersectionValid2 = false;
+    private _intersectPoint1 = [];
+    private _intersectPoint2 = [];
+    private _intersectClose = [];
+    private _intersectFar = [];
 
+    private _polylineIndex = 0;
+    private _markerArray = [[]];
+    private _insideArray = [];
 
-            _polylineRelative pushback (_lerpPosRel select 0);
-            _polylineRelative pushback (_lerpPosRel select 1);
-            _polylineOnMap pushBack (_lerpPos select 0);
-            _polylineOnMap pushBack (_lerpPos select 1);
+    for "_i" from 0 to _count - 1 - 2 step 2 do {
+        _startPos = [_markerPolyline select _i, _markerPolyline select (_i + 1)];
+        _endPos = [_markerPolyline select (_i + 2), _markerPolyline select (_i + 3)];
+        _dir = _endPos vectorDiff _startPos;
+        _diffPos = _startPos vectorDiff _boardPos;
 
-            private _name = format ["%1-%2", _marker, _polylineSubsegmentCount];
-            private _color = getMarkerColor _marker;
-            private _mark = createMarker [_name, [0, 0], _channelNumber, _owner];
-            _name setMarkerColor _color;
+        // Circle-line intersection: Check for intersections between plotting board and current piece of polyline
+        // https://stackoverflow.com/a/1084899
+        _a = _dir vectorDotProduct _dir;
+        _b = 2 * (_diffPos vectorDotProduct _dir);
+        _c = (_diffPos vectorDotProduct _diffPos) - PLOTTINGBOARD_DRAWRANGE^2;
 
-            if (_inside) then {
-                GVAR(plottingBoard_markers) set [_name, [[0,0], +_polylineRelative, _boardAng, +_boardPos]];
+        _delta = _b^2 - 4 * _a * _c;
+
+        // Stretch factors
+        _t1 = nil;
+        _t2 = nil;
+
+        if (_delta > 0) then {
+            _t1 = (-_b + sqrt _delta) / (2 * _a);
+            _t2 = (-_b - sqrt _delta) / (2 * _a);
+
+            // Don't look for intersection points beyond the start or end points
+            if (_t1 < 0 || _t1 > 1) then {
+                _t1 = nil;
             };
-            [
-                {(_this select 0) setMarkerPolyline (_this select 1)},
-                [_name, _polylineOnMap]
-            ] call CBA_fnc_execNextFrame;
 
-            _inside = !_inside;
-            _polylineSubsegmentCount = _polylineSubsegmentCount + 1;
-
-            _polylineRelative = [_lerpPosRel select 0, _lerpPosRel select 1];
-            _polylineOnMap = [_lerpPos select 0, _lerpPos select 1];
+            if (_t2 < 0 || _t2 > 1) then {
+                _t2 = nil;
+            };
         };
 
-        _polylineRelative pushBack (_relPos select 0);
-        _polylineRelative pushBack (_relPos select 1);
-        _polylineOnMap pushback (_polyPos select 0);
-        _polylineOnMap pushback (_polyPos select 1);
+        // The current point is always part of a polyline
+        (_markerArray param [_polylineIndex, []]) append _startPos;
+        _insideArray set [_polylineIndex, vectorMagnitude _diffPos < PLOTTINGBOARD_DRAWRANGE]; // keep track if point is within plotting board
 
+        _intersectionValid1 = !isNil "_t1";
+        _intersectionValid2 = !isNil "_t2";
+
+        // If no valid intersection points, continue
+        if (!_intersectionValid1 && {!_intersectionValid2}) then {
+            continue;
+        };
+
+        // Extremely rare case if the marker is tangential to the plotting board: Ignore
+        if (_intersectionValid1 && {_intersectionValid2} && {_t1 == _t2}) then {
+            continue;
+        };
+
+        if (_intersectionValid1) then {
+            _intersectPoint1 = _startPos vectorAdd (_dir vectorMultiply _t1);
+        };
+
+        if (_intersectionValid2) then {
+            _intersectPoint2 = _startPos vectorAdd (_dir vectorMultiply _t2);
+        };
+
+        // When a marker crosses the plotting board entirely (one straight line through the plotting board)
+        if (_intersectionValid1 && {_intersectionValid2}) then {
+            // Take the closer point first
+            _intersectClose = [_intersectPoint1, _intersectPoint2] select (_t1 > _t2);
+
+            // Finish previous polyline with the last point being the intersection
+            (_markerArray select _polylineIndex) append _intersectClose;
+
+            // Create a new polyline, with the first point being the closest intersection
+            _polylineIndex = _polylineIndex + 1;
+            _markerArray set [_polylineIndex, _intersectClose];
+
+            // Now take the point further away
+            _intersectFar = [_intersectPoint1, _intersectPoint2] select (_t1 < _t2);
+
+            // Make a polyline between the intersection points
+            (_markerArray select _polylineIndex) append _intersectClose;
+            (_markerArray select _polylineIndex) append _intersectFar;
+            _insideArray set [_polylineIndex, true]; // with 2 intersections, this part of the polyline must be inside
+
+            // Create a new polyline, with the first point being the furthest intersection
+            _polylineIndex = _polylineIndex + 1;
+            _markerArray set [_polylineIndex, _intersectFar];
+        } else {
+            // Only 1 intersection (either point 1 or 2, exclusive or)
+            if (_intersectionValid2) then {
+                _intersectPoint1 = _intersectPoint2;
+            };
+
+            // Finish previous polyline with the last point being the intersection
+            (_markerArray select _polylineIndex) append _intersectPoint1;
+
+            // Create a new polyline, with the first point being the intersection
+            _polylineIndex = _polylineIndex + 1;
+            _markerArray set [_polylineIndex, _intersectPoint1];
+        };
     };
 
-    private _name = format ["%1-%2", _marker, _polylineSubsegmentCount];
+    // If there were no polyline intersections and the marker was not on the plotting board, don't create new markers
+    if (_insideArray isEqualTo [false]) exitWith {};
+
     private _color = getMarkerColor _marker;
-    private _mark = createMarker [_name, [0, 0], _channelNumber, _owner];
-    _name setMarkerColor _color;
+    private _name = "";
+    private _polylineRelative = [];
+    private _relPos = [];
 
-    if (_inside) then {
-        GVAR(plottingBoard_markers) set [_name, [[0,0], +_polylineRelative, _boardAng, +_boardPos]];
-    };
-    [
-        {(_this select 0) setMarkerPolyline (_this select 1)},
-        [_name, _polylineOnMap]
-    ] call CBA_fnc_execNextFrame;
+    {
+        _name = format ["%1-%2-%3", _marker, _forEachIndex, QUOTE(ADDON)]; // adding an identifier allow to check if marker was already processed
+        createMarkerLocal [_name, [0, 0], _channelNumber, _owner];
+        _name setMarkerColorLocal _color;
+        _name setMarkerPolyline _x; // global marker broadcast
 
+        // If the marker was on the plotting board, take it's unrotated position and store it
+        if (_insideArray select _forEachIndex) then {
+            _polylineRelative = [];
+
+            for "_i" from 0 to count _x - 1 step 2 do {
+                _relPos = [[0, 0], [_x select _i, _x select (_i + 1)] vectorDiff _boardPos, _boardAng] call CBA_fnc_vectRotate2D;
+                _polylineRelative append _relPos;
+            };
+
+            GVAR(plottingBoard_markers) set [_name, [[0, 0], +_polylineRelative, _boardAng, +_boardPos, 1]];
+        };
+    } forEach _markerArray;
+
+    // Delete original marker
     deleteMarker _marker;
 };
 
-private _markerPos = getMarkerPos _marker;
-private _difPos = _markerPos vectorDiff _boardPos;
-private _dist = vectorMagnitude _difPos;
+// Other markers
+private _diffPos = (getMarkerPos _marker) vectorDiff _boardPos;
 
-private _relPos = [[0,0], _difPos, _boardAng] call CBA_fnc_vectRotate2D;
+if (vectorMagnitude _diffPos < PLOTTINGBOARD_DRAWRANGE) then {
+    private _relPos = [[0, 0], _diffPos, _boardAng] call CBA_fnc_vectRotate2D;
 
-
-if (_dist < PLOTTINGBOARD_DRAWRANGE) then {
-    GVAR(plottingBoard_markers) set [_marker, [_relPos, []]];
+    GVAR(plottingBoard_markers) set [_marker, [_relPos, [], _boardAng, +_boardPos, 1]];
 };

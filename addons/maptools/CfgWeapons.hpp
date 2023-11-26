@@ -14,9 +14,9 @@ class CfgWeapons {
             mass = 1;
         };
     };
-    
+
     class ACE_PlottingBoard: ACE_ItemCore {
-        displayName = "PlottingBoard";
+        displayName = CSTRING(PlottingBoard_Name);
         author = ECSTRING(common,ACETeam);
         descriptionShort = CSTRING(Description);
         model = QPATHTOF(data\ace_MapTools.p3d);
