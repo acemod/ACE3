@@ -12,7 +12,7 @@
  * 1: Deleted <BOOL>
  *
  * Return Value:
- * True if event was handled <BOOL>
+ * If event was handled <BOOL>
  *
  * Example:
  * [CONTROL, [0, 5]] call ace_maptools_fnc_handlePlottingBoardMarkers

@@ -22,7 +22,7 @@ This adds the possibility to draw accurate lines on the map screen.
 This adds map tools that can be used to measure distances between two points or bearings on the map.
 
 ### 1.3 Plotting Board
-This adds a plotting board that can be used to 
+This adds a plotting board that can be used to measure distances between two points or bearings on the map, as well as draw lines on the board which then can be moved and rotated.
 
 ### 1.4 GPS on map
 If you are equipped with a vanilla GPS it will be shown on the map. (You don't need the `Map Tools` item in your inventory for this.)

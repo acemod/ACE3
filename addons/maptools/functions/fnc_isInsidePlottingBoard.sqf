@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: LorenLuke
- * Return true if the position is inside the map marker (to allow dragging).
+ * Return if the position is inside the map marker (to allow dragging).
  *
  * Arguments:
  * 0: x Position (in meters) <NUMBER>
