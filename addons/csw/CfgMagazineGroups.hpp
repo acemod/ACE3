@@ -1,47 +1,47 @@
 class GVAR(groups) {
     // A3 .50 BMG (12.7x99mm)
-    class GVAR(100Rnd_127x99_mag) {
-        500Rnd_127x99_mag = 1;
-        200Rnd_127x99_mag = 1;
-        100Rnd_127x99_mag = 1;
-        rhs_mag_100rnd_127x99_mag = 1;
-        rhs_mag_200rnd_127x99_mag = 1;
-        CUP_100Rnd_127x99_M = 1;
-    };
-    class GVAR(100Rnd_127x99_mag_red) {
-        500Rnd_127x99_mag_Tracer_Red = 1;
-        200Rnd_127x99_mag_Tracer_Red = 1;
-        100Rnd_127x99_mag_Tracer_Red = 1;
-        rhs_mag_100rnd_127x99_mag_Tracer_Red = 1;
-        rhs_mag_200rnd_127x99_mag_Tracer_Red = 1;
-        CUP_100Rnd_TE4_Red_Tracer_127x99_M = 1;
-    };
-    class GVAR(100Rnd_127x99_mag_green) {
-        500Rnd_127x99_mag_Tracer_Green = 1;
-        200Rnd_127x99_mag_Tracer_Green = 1;
-        100Rnd_127x99_mag_Tracer_Green = 1;
-        rhs_mag_100rnd_127x99_mag_Tracer_Green = 1;
-        CUP_100Rnd_TE4_Green_Tracer_127x99_M = 1;
-    };
-    class GVAR(100Rnd_127x99_mag_yellow) {
-        500Rnd_127x99_mag_Tracer_Yellow = 1;
-        200Rnd_127x99_mag_Tracer_Yellow = 1;
-        100Rnd_127x99_mag_Tracer_Yellow = 1;
-        rhs_mag_100rnd_127x99_mag_Tracer_Yellow = 1;
-        CUP_100Rnd_TE4_Yellow_Tracer_127x99_M = 1;
-    };
+    // class GVAR(100Rnd_127x99_mag) {
+    //     500Rnd_127x99_mag = 1;
+    //     200Rnd_127x99_mag = 1;
+    //     100Rnd_127x99_mag = 1;
+    //     rhs_mag_100rnd_127x99_mag = 1;
+    //     rhs_mag_200rnd_127x99_mag = 1;
+    //     CUP_100Rnd_127x99_M = 1;
+    // };
+    // class GVAR(100Rnd_127x99_mag_red) {
+    //     500Rnd_127x99_mag_Tracer_Red = 1;
+    //     200Rnd_127x99_mag_Tracer_Red = 1;
+    //     100Rnd_127x99_mag_Tracer_Red = 1;
+    //     rhs_mag_100rnd_127x99_mag_Tracer_Red = 1;
+    //     rhs_mag_200rnd_127x99_mag_Tracer_Red = 1;
+    //     CUP_100Rnd_TE4_Red_Tracer_127x99_M = 1;
+    // };
+    // class GVAR(100Rnd_127x99_mag_green) {
+    //     500Rnd_127x99_mag_Tracer_Green = 1;
+    //     200Rnd_127x99_mag_Tracer_Green = 1;
+    //     100Rnd_127x99_mag_Tracer_Green = 1;
+    //     rhs_mag_100rnd_127x99_mag_Tracer_Green = 1;
+    //     CUP_100Rnd_TE4_Green_Tracer_127x99_M = 1;
+    // };
+    // class GVAR(100Rnd_127x99_mag_yellow) {
+    //     500Rnd_127x99_mag_Tracer_Yellow = 1;
+    //     200Rnd_127x99_mag_Tracer_Yellow = 1;
+    //     100Rnd_127x99_mag_Tracer_Yellow = 1;
+    //     rhs_mag_100rnd_127x99_mag_Tracer_Yellow = 1;
+    //     CUP_100Rnd_TE4_Yellow_Tracer_127x99_M = 1;
+    // };
 
     // Soviet HMG (12.7x108mm)
-    class GVAR(50Rnd_127x108_mag) {
-        rhs_mag_127x108mm_50 = 1;
-        rhs_mag_127x108mm_100 = 1;
-        rhs_mag_127x108mm_150 = 1;
-        rhs_mag_127x108mm_300 = 1;
-        CUP_150Rnd_127x108_KORD_M = 1;
-        CUP_50Rnd_127x108_KORD_M = 1;
-        CUP_50Rnd_TE3_LRT5_127x107_DSHKM_M = 1; // not sure why cup uses 107 for the DSHKM?
-        CUP_150Rnd_TE3_LRT5_127x107_DSHKM_M = 1;
-    };
+    // class GVAR(50Rnd_127x108_mag) {
+    //     rhs_mag_127x108mm_50 = 1;
+    //     rhs_mag_127x108mm_100 = 1;
+    //     rhs_mag_127x108mm_150 = 1;
+    //     rhs_mag_127x108mm_300 = 1;
+    //     CUP_150Rnd_127x108_KORD_M = 1;
+    //     CUP_50Rnd_127x108_KORD_M = 1;
+    //     CUP_50Rnd_TE3_LRT5_127x107_DSHKM_M = 1; // not sure why cup uses 107 for the DSHKM?
+    //     CUP_150Rnd_TE3_LRT5_127x107_DSHKM_M = 1;
+    // };
 
     // A3 20mm GMG
     class GVAR(20Rnd_20mm_G_belt) {
