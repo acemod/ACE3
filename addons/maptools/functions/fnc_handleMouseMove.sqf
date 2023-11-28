@@ -1,14 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain, LorenLuke
- * Handle mouse movement over the map tool or plotting board.
+ * Handle mouse movement over the map tool and plotting board.
  *
  * Arguments:
  * 0: Map control <CONTROL>
  * 1: Mouse position on screen coordinates <ARRAY>
  *
  * Return Value:
- * true if event was handled <BOOL>
+ * If the event was handled <BOOL>
  *
  * Example:
  * [CONTROL, [0, 5]] call ace_maptools_fnc_handleMouseMove

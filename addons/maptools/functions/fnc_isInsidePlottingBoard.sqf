@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: LorenLuke
- * Return if the position is inside the map marker (to allow dragging).
+ * Return if the position is inside the map marker (to allow dragging) or not.
  *
  * Arguments:
  * 0: x Position (in meters) <NUMBER>
@@ -23,7 +23,7 @@ private _relPos = _this vectorDiff GVAR(plottingBoard_pos);
 private _dist = vectorMagnitude _relPos;
 
 private _isRuler = if (GVAR(plottingBoard_Shown) == 2) then {
-    // If it's within these bounds, it's going to be on the ruler;
+    // If it's within these bounds, it's going to be on the ruler
     if (_dist <= PLOTTINGBOARD_RULERCENTER) exitWith {true};
 
     private _rulerVector = [sin GVAR(plottingBoard_rulerAngle), cos GVAR(plottingBoard_rulerAngle)];
