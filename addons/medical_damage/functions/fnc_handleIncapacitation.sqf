@@ -32,6 +32,13 @@ _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightA
 
 private _damageThreshold = GET_DAMAGE_THRESHOLD(_unit);
 
-if ((_headDamage > _damageThreshold / 2) || {_bodyDamage > _damageThreshold} || {(_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < EGVAR(medical,painUnconsciousChance)}}) then {
-    [QEGVAR(medical,CriticalInjury), _unit] call CBA_fnc_localEvent;
+// [WOG] Added limbs damage handling
+if ((_headDamage > _damageThreshold / 2) ||
+    {_bodyDamage > _damageThreshold} ||
+    {_leftArmDamage > _damageThreshold * 5.3} ||
+    {_rightArmDamage > _damageThreshold * 5.3} ||
+    {_leftLegDamage > _damageThreshold * 5.3} ||
+    {_rightLegDamage > _damageThreshold * 5.3} ||
+    {(_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < EGVAR(medical,painUnconsciousChance)}}) then {
+        [QEGVAR(medical,CriticalInjury), _unit] call CBA_fnc_localEvent;
 };

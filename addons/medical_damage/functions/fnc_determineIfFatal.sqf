@@ -20,7 +20,8 @@
 
 params ["_unit", "_part", "_bodyPartDamage", "_woundDamage"];
 
-if (_part > 1) exitWith { false };
+//[WOG] Allow to check if legs or arms hit is fatal
+//if (_part > 1) exitWith { false };
 
 scopeName "main";
 
@@ -43,7 +44,7 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     private _headThreshhold = 1.25 * _damageThreshold;
     private _bodyThreshhold = 1.5 * _damageThreshold;
 
-    _bodyPartDamage params ["_headDamage", "_bodyDamage"];
+    _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightArmDamage", "_leftLegDamage", "_rightLegDamage"];	
 
     private _vitalDamage = ((_headDamage - _headThreshhold) max 0) + ((_bodyDamage - _bodyThreshhold) max 0);
     private _chanceFatal = 1 - exp -((_vitalDamage/FATAL_SUM_DAMAGE_WEIBULL_L)^FATAL_SUM_DAMAGE_WEIBULL_K);
@@ -51,6 +52,11 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
 
     if (_chanceFatal > random 1) exitWith {
         TRACE_1("determineIfFatal: lethal trauma",_woundDamage);
+        true breakOut "main";
+    };
+
+    if (_leftArmDamage > 7 || _rightArmDamage > 7 || _leftLegDamage > 7 || _rightLegDamage > 7) exitWith {
+        TRACE_5("determineIfFatal: lethal limb trauma",_limbsSumDamage,_leftArmDamage,_rightArmDamage,_leftLegDamage,_rightLegDamage);
         true breakOut "main";
     };
 };
