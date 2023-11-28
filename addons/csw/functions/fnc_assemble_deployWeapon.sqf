@@ -50,6 +50,7 @@
                 [QGVAR(disableVanillaAssembly), [_csw]] call CBA_fnc_globalEvent;
             };
             _csw setDir _tripodDir;
+            _csw setCenterOfMass ((getCenterOfMass _csw) vectorAdd [0,0,-0.3]);
             _csw setPosATL _tripodPos;
             if ((_tripodPos select 2) < 0.5) then {
                 _csw setVectorUp (surfaceNormal _tripodPos);
