@@ -245,6 +245,16 @@
             <Spanish>Construyendo</Spanish>
             <French>Construction</French>
         </Key>
+        <Key ID="STR_ACE_Fortify_removeProgressBarTitle">
+            <English>Demolition</English>
+            <Russian>Снос</Russian>
+            <Spanish>Demolición</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_remove">
+            <English>Remove Object</English>
+            <Russian>Снести объект</Russian>
+            <Spanish>Quitar objeto</Spanish>
+        </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
             <Chinesesimp>创建地图标记</Chinesesimp>
