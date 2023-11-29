@@ -31,7 +31,7 @@ if (_type in _initializedClasses) exitWith {};
 if (_type == "") exitWith {};
 
 // get selections to ignore
-([_vehicle] call FUNC(getSelectionsToIgnore)) params["_selectionsToIgnore", "_dependsArray"];
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore", "_dependsArray"];
 
 // get all hitpoints and selections
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
