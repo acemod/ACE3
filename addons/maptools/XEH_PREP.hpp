@@ -5,5 +5,6 @@ PREP(drawLinesOnRoamer);
 PREP(handleMouseButton);
 PREP(handleMouseMove);
 PREP(isInsideMapTool);
+PREP(mapToolDrawRadiusMarker);
 PREP(openMapGpsUpdate);
 PREP(updateMapToolMarkers);
