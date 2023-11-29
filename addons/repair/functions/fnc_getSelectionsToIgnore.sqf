@@ -20,7 +20,12 @@ params ["_vehicle"];
 private _type = typeOf _vehicle;
 TRACE_2("getSelectionsToIgnore",_vehicle,_type);
 private _initializedClasses = missionNamespace getVariable [QGVAR(hitPointsToIgnoreInitializedClasses), createHashMap];
-if (_type in _initializedClasses) exitWith {_initializedClasses get _type};
+private _initializedDepends = missionNamespace getVariable [QGVAR(dependsHitPointsInitializedClasses), createHashMap];
+if (_type in _initializedClasses) exitWith 
+{
+    TRACE_2("retrieved chached selections",_vehicle,_type);
+    [_initializedClasses get _type, _initializedDepends get _type];
+}; //you return different amount of values each time
 
 private _vehCfg = configOf _vehicle;
 private _hitpointGroups = getArray (_vehCfg >> QGVAR(hitpointGroups));
@@ -154,5 +159,8 @@ private _processedSelections = [];
 
 _initializedClasses set [_type, _indexesToIgnore];
 missionNamespace setVariable [QGVAR(hitPointsToIgnoreInitializedClasses), _initializedClasses];
+
+_initializedDepends set [_type, _dependsArray];
+missionNamespace setVariable [QGVAR(dependsHitPointsInitializedClasses), _initializedDepends];
 
 [_indexesToIgnore, _dependsArray]
