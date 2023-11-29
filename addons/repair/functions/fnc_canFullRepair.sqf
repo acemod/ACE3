@@ -23,12 +23,9 @@ private _return = false;
 private _allHitPointsDamage = getAllHitPointsDamage _target;
 
 if (_allHitPointsDamage isNotEqualTo []) then {
-	if ((_allHitPointsDamage select 2) findIf {_x > 0} != -1) then {
-		_return = true;
-	};
+    _return = ((_allHitPointsDamage select 2) findIf {_x > 0} != -1);
+} else {
+    _return = (damage _target) > 0;
 };
 
 _return
-
-
-
