@@ -20,9 +20,10 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 private _return = false;
+private _allHitPointsDamage = getAllHitPointsDamage _target;
 
-if ((getAllHitPointsDamage _target) isNotEqualTo []) then {
-	if (((getAllHitPointsDamage _target) select 2) findIf {_x > 0} != -1) then {
+if (_allHitPointsDamage isNotEqualTo []) then {
+	if ((_allHitPointsDamage select 2) findIf {_x > 0} != -1) then {
 		_return = true;
 	};
 };
