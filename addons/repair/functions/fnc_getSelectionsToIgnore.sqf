@@ -136,10 +136,11 @@ private _processedSelections = [];
             ERROR_2("[%1] hitpoint [%2] is both a group-parent and a depends and will be unrepairable",_type,_hitpoint);
             ERROR_1("group: %1",_hitpointGroups # _groupIndex);
         };
-        private _dependsParentHitpoint = [_vehCfg >> "HitPoints" >> _hitpoint, "depends"] call BIS_fnc_returnConfigEntry;
+        private _parentHitpoint = getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends");
+        _parentHitpoint = toLower _parentHitpoint;
+        _dependsArray pushBack [_parentHitpoint, _hitpoint];
 
         _indexesToIgnore pushBack _forEachIndex;
-        _dependsArray pushBack [_dependsParentHitpoint, _hitpoint];
         _processedSelections pushBack _selection;
         continue
     };
@@ -156,6 +157,18 @@ private _processedSelections = [];
 
     _processedSelections pushBack _selection;
 } forEach _hitSelections;
+
+// Remove depends hitpoints with ignored parents from ignore list
+{
+    _x params ["_parentHitpoint", "_dependsHitpoint"];
+    private _parentIndex = _hitPoints findIf {_parentHitpoint == _x};
+    private _dependsIndex = _hitPoints findIf {_dependsHitpoint == _x};
+    if (_parentIndex in _indexesToIgnore) then {
+        TRACE_2("Removing depends hitpoint from ignored",_dependsHitpoint,_dependsIndex);
+        private _dependsIgnoreArrayIndex = _indexesToIgnore findIf {_dependsIndex == _x};
+        _indexesToIgnore deleteAt _dependsIgnoreArrayIndex;
+    };
+} forEach _dependsArray;
 
 _initializedClasses set [_type, _indexesToIgnore];
 missionNamespace setVariable [QGVAR(hitPointsToIgnoreInitializedClasses), _initializedClasses];

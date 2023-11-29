@@ -156,12 +156,18 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         _hitPointsAddedStrings = _trackArray select 1;
         _hitPointsAddedAmount = _trackArray select 2;
 
-        // Add name of dependant hitpoints to the parent hitpoint
         { 
+            // Add names of depends hitpoints to the parent hitpoint
             if (_hitpoint == (_x select 0)) then {
                 private _dependsHitpoint = (_x select 1);
                 ([_dependsHitpoint, "%1", _dependsHitpoint, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_dependsText", ""];
                 _text = _text + " / " + _dependsText;
+            };
+            // Add name of parent hitpoint to the depends hitpoint
+            if (_hitpoint == (_x select 1)) then {
+                private _dependsParentHitpoint = (_x select 0);
+                ([_dependsParentHitpoint, "%1", _dependsParentHitpoint, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_dependsParentText", ""];
+                _text = _dependsParentText + " / " + _text;
             };
         } forEach _dependsArray;
 
