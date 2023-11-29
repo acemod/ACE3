@@ -21,8 +21,7 @@ private _type = typeOf _vehicle;
 TRACE_2("getSelectionsToIgnore",_vehicle,_type);
 private _initializedClasses = missionNamespace getVariable [QGVAR(hitPointsToIgnoreInitializedClasses), createHashMap];
 private _initializedDepends = missionNamespace getVariable [QGVAR(dependsHitPointsInitializedClasses), createHashMap];
-if (_type in _initializedClasses) exitWith 
-{
+if (_type in _initializedClasses) exitWith {
     TRACE_2("retrieved chached selections",_vehicle,_type);
     [_initializedClasses get _type, _initializedDepends get _type];
 }; //you return different amount of values each time
