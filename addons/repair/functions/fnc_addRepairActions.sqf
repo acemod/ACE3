@@ -119,7 +119,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
         // Find the action position
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
-        if ("rotor" in _hitpoint) then {
+        if ("rotor" in _hitpoint || "hull" in _hitpoint || "engine" in _hitpoint) then {
             _position = compile format ["_target selectionPosition ['%1', 'HitPoints', 'AveragePoint'];", _selection];
         };
         
