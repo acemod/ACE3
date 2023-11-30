@@ -32,6 +32,8 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
         TRACE_2("Ending Line",GVAR(freedrawing),GVAR(freeDrawingData));
 
         [{
+            if (GVAR(freeDrawingData) isEqualTo []) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData))};
+
             private _allMarkers = allMapMarkers;
 
             if (_allMarkers isEqualTo []) exitWith {};
@@ -43,8 +45,6 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
             TRACE_3("Line Drawn",_markerName,_markerPos,_distanceCheck);
 
             if (_distanceCheck > 1) exitWith {WARNING("Wrong Marker!")};
-
-            if (GVAR(freeDrawingData) isEqualTo []) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData))};
 
             GVAR(freeDrawingData) params ["", "_startStraightPos", "_endStraightPos"];
 

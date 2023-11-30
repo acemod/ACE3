@@ -66,6 +66,9 @@ if (_count == 0) exitWith {
     };
 };
 
+// If the marker is a polyline marker, but doesn't have enough components (happens when you ctrl-left click on the map), ignore
+if (_count <= 4) exitWith {};
+
 // Polyine markers (lines)
 private _startPos = [];
 private _endPos = [];
