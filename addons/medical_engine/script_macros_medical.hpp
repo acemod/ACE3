@@ -64,7 +64,7 @@
 
 // Minimum amount of damage required for penetrating wounds (also minDamage for velocity wounds)
 #define PENETRATION_THRESHOLD EGVAR(medical,const_penetrationThreshold)
-#define PENETRATION_THRESHOLD_DEFAULT 0.35
+#define PENETRATION_THRESHOLD_DEFAULT 0.15
 
 // To be replaced by a proper blood pressure calculation
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD EGVAR(medical,const_bloodLossKnockOutThreshold)
