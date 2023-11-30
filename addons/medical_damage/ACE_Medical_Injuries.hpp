@@ -221,19 +221,21 @@ class ACE_Medical_Injuries {
             };
         };
         class falling {
-            thresholds[] = {{8, 4}, {1, 1}, {0.2, 1}, {0.1, 0.7}, {0, 0.5}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
-            selectionSpecific = 0;
-            class Abrasion {
-                weighting[] = {{0.4, 0}, {0.2, 1}, {0, 0}};
+            thresholds[] = {{8, 4}, {1, 1}, {0.55, 1}, {0.5, 0.7}, {0, 0}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            selectionSpecific = 1;
+            /*class Abrasion {
+                weighting[] = {{0.5, 0}, {0.45, 1}, {0, 0}};
                 sizeMultiplier = 3;
-            };
+            };*/
             class Contusion {
-                weighting[] = {{0.4, 0}, {0.2, 1}};
+                weighting[] = {{0.5, 0}, {0.45, 1}};
                 sizeMultiplier = 3;
+                fractureMultiplier = 3;
             };
             class Crush {
-                weighting[] = {{0.4, 1}, {0.2, 0}};
+                weighting[] = {{0.7, 1}, {0.65, 0}};
                 sizeMultiplier = 1.5;
+                fractureMultiplier = 3;
             };
         };
         class backblast {
