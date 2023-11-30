@@ -43,7 +43,7 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     private _damageThreshold = GET_DAMAGE_THRESHOLD(_unit);
     private _headThreshhold = _damageThreshold / 2;
     private _bodyThreshhold = 1.5 * _damageThreshold;
-    private _limbThreshhold = 4 * _damageThreshold;
+    private _limbThreshold = 4 * _damageThreshold;
 
     _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightArmDamage", "_leftLegDamage", "_rightLegDamage"];	
 
@@ -56,7 +56,7 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
         true breakOut "main";
     };
 
-    if (_leftArmDamage > 7 || _rightArmDamage > 7 || _leftLegDamage > 7 || _rightLegDamage > 7) exitWith {
+    if (_leftArmDamage > _limbThreshold || _rightArmDamage > _limbThreshold || _leftLegDamage > _limbThreshold || _rightLegDamage > _limbThreshold) exitWith {
         TRACE_5("determineIfFatal: lethal limb trauma",_limbsSumDamage,_leftArmDamage,_rightArmDamage,_leftLegDamage,_rightLegDamage);
         true breakOut "main";
     };
