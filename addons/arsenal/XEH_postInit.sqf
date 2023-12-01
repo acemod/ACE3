@@ -18,6 +18,15 @@ GVAR(lastSortDirectionRight) = DESCENDING;
 [QGVAR(removeDefaultLoadout), LINKFUNC(removeDefaultLoadout)] call CBA_fnc_addEventHandler;
 [QGVAR(renameDefaultLoadout), LINKFUNC(renameDefaultLoadout)] call CBA_fnc_addEventHandler;
 
+[QGVAR(refresh), {
+    params ["_object"];
+
+    // If the arsenal is already open, refresh arsenal display
+    if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
+        [true, true] call FUNC(refresh);
+    };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(broadcastFace), {
     params ["_unit", "_face"];
     _unit setFace _face;

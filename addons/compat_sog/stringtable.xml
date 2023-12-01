@@ -10,6 +10,7 @@
             <Chinesesimp>挖掘</Chinesesimp>
             <Russian>Закопать</Russian>
             <Spanish>Enterrarse</Spanish>
+            <Portuguese>Escavar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_HE">
             <English>M49A2 60mm HE</English>
@@ -20,6 +21,7 @@
             <Chinesesimp>M49A2 60 mm 高爆弹</Chinesesimp>
             <Russian>M49A2 60 мм ОФ</Russian>
             <Spanish>M49A2 60mm HE</Spanish>
+            <Portuguese>M49A2 60mm HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_WP">
             <English>M302 60mm WP</English>
@@ -30,6 +32,7 @@
             <Chinesesimp>M302 60 mm 白磷弹</Chinesesimp>
             <Russian>M302 60 мм Фосфорная</Russian>
             <Spanish>M302 60mm WP</Spanish>
+            <Portuguese>M302 60mm WP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_Lume">
             <English>M83 60mm Lume</English>
@@ -40,6 +43,7 @@
             <Chinesesimp>M83 60 mm 照明弹</Chinesesimp>
             <Russian>M83 60 мм Осветительная</Russian>
             <Spanish>M83 60mm Iluminación</Spanish>
+            <Portuguese>M83 60mm Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_HE">
             <English>M374 81mm HE</English>
@@ -50,6 +54,7 @@
             <Chinesesimp>M374 81 mm 高爆弹</Chinesesimp>
             <Russian>M374 81 мм ОФ</Russian>
             <Spanish>M374 81mm HE</Spanish>
+            <Portuguese>M374 81mm HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_WP">
             <English>M375 81mm WP</English>
@@ -60,6 +65,7 @@
             <Chinesesimp>M375 81 mm 白磷弹</Chinesesimp>
             <Russian>M375 81 мм Фосфорная</Russian>
             <Spanish>M375 81mm WP</Spanish>
+            <Portuguese>M375 81mm WP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Lume">
             <English>M301A3 81mm Lume</English>
@@ -70,6 +76,7 @@
             <Chinesesimp>M301A3 81 mm 照明弹</Chinesesimp>
             <Russian>M301A3 81 мм Осветительная</Russian>
             <Spanish>M301A3 81mm Iluminación</Spanish>
+            <Portuguese>M301A3 81mm Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Smoke">
             <English>M57 81mm Smoke</English>
@@ -80,6 +87,7 @@
             <Chinesesimp>M57 81 mm 烟雾弹</Chinesesimp>
             <Russian>M57 81 мм Дымовая</Russian>
             <Spanish>M57 81mm Smoke</Spanish>
+            <Portuguese>M57 81mm Fumígena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_HE">
             <English>O-832D 82mm HE</English>
@@ -90,6 +98,7 @@
             <Chinesesimp>O-832D 82 mm 高爆弹</Chinesesimp>
             <Russian>О-832Д 82 мм ОФ</Russian>
             <Spanish>O-832D 82mm HE</Spanish>
+            <Portuguese>O-832D 82mm HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_WP">
             <English>D-832 82mm WP</English>
@@ -100,6 +109,7 @@
             <Chinesesimp>D-832 82 mm 白磷弹</Chinesesimp>
             <Russian>Д-832 82 мм Фосфорная</Russian>
             <Spanish>D-832 82mm WP</Spanish>
+            <Portuguese>D-832 82mm WP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_Lume">
             <English>S-832S 82mm Lume</English>
@@ -110,6 +120,7 @@
             <Chinesesimp>S-832S 82 mm 照明弹</Chinesesimp>
             <Russian>С-832С 82 мм Осветительная</Russian>
             <Spanish>S-832S 82mm Iluminación</Spanish>
+            <Portuguese>S-832S 82mm Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_HE">
             <English>[ACE] M49A2 60mm HE Box</English>
@@ -120,6 +131,7 @@
             <Chinesesimp>[ACE] M49A2 60 mm 高爆弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка M49A2 60 мм ОФ</Russian>
             <Spanish>[ACE] M49A2 60mm Caja de HE</Spanish>
+            <Portuguese>[ACE] M49A2 60mm Caixa de HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_WP">
             <English>[ACE] M302 60mm WP Box</English>
@@ -130,6 +142,7 @@
             <Chinesesimp>[ACE] M302 60 mm 白磷弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка M302 60 мм Фосфорных</Russian>
             <Spanish>[ACE] M302 60mm Caja de WP</Spanish>
+            <Portuguese>[ACE] M302 60mm Caixa de WP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_Lume">
             <English>[ACE] M83 60mm Lume Box</English>
@@ -140,6 +153,7 @@
             <Chinesesimp>[ACE] M83 60 mm 照明弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка M83 60 мм Осветительных</Russian>
             <Spanish>[ACE] M83 60mm Caja de Iluminación</Spanish>
+            <Portuguese>[ACE] M83 60mm Caixa de Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_HE">
             <English>[ACE] M374 81mm HE Box</English>
@@ -150,6 +164,7 @@
             <Chinesesimp>[ACE] M374 81 mm 高爆弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка M374 81 мм ОФ</Russian>
             <Spanish>[ACE] M374 81mm Caja de HE</Spanish>
+            <Portuguese>[ACE] M374 81mm Caixa de HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_WP">
             <English>[ACE] M375 81mm WP Box</English>
@@ -160,6 +175,7 @@
             <Chinesesimp>[ACE] M375 81 mm 白磷弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка M375 81 мм Фосфорных</Russian>
             <Spanish>[ACE] M375 81mm Caja de WP</Spanish>
+            <Portuguese>[ACE] M375 81mm Caixa de WP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_Lume">
             <English>[ACE] M301A3 81mm Lume Box</English>
@@ -170,6 +186,7 @@
             <Chinesesimp>[ACE] M301A3 81 mm 照明弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка M301A3 81 мм Осветительных</Russian>
             <Spanish>[ACE] M301A3 81mm Caja de Iluminación</Spanish>
+            <Portuguese>[ACE] M301A3 81mm Caixa de Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_Smoke">
             <English>[ACE] M57 81mm Smoke Box</English>
@@ -180,6 +197,7 @@
             <Chinesesimp>[ACE] M57 81 mm 烟雾弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка M57 81 мм Дымовых</Russian>
             <Spanish>[ACE] M57 81mm Caja de Humo</Spanish>
+            <Portuguese>[ACE] M57 81mm Caixa de Fumígena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_HE">
             <English>[ACE] O-832D 82mm HE Box</English>
@@ -190,6 +208,7 @@
             <Chinesesimp>[ACE] O-832D 82 mm 高爆弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка О-832Д 82 мм ОФ</Russian>
             <Spanish>[ACE] O-832D 82mm Caja de HE</Spanish>
+            <Portuguese>[ACE] O-832D 82mm Caixa de HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_WP">
             <English>[ACE] D-832 82mm WP Box</English>
@@ -200,6 +219,7 @@
             <Chinesesimp>[ACE] D-832 82 mm 白磷弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка Д-832 82 мм Фосфорных</Russian>
             <Spanish>[ACE] D-832 82mm Caja de WP</Spanish>
+            <Portuguese>[ACE] D-832 82mm Caixa de WP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_Lume">
             <English>[ACE] S-832S 82mm Lume Box</English>
@@ -210,6 +230,7 @@
             <Chinesesimp>[ACE] S-832S 82 mm 照明弹弹药箱</Chinesesimp>
             <Russian>[ACE] Коробка С-832С 82 мм Осветительных</Russian>
             <Spanish>[ACE] S-832S 82mm Caja de Iluminación</Spanish>
+            <Portuguese>[ACE] S-832S 82mm Caixa de Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderhole">
             <English>Dig Spiderhole</English>
@@ -220,6 +241,7 @@
             <Chinesesimp>挖掘散兵坑</Chinesesimp>
             <Russian>Выкопать паучью дыру</Russian>
             <Spanish>Excavar Agujero de araña</Spanish>
+            <Portuguese>Escavar buraco de aranha</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeAngled">
             <English>Dig Spiderhole (Angled Cover)</English>
@@ -230,6 +252,7 @@
             <Chinesesimp>挖掘带斜盖散兵坑</Chinesesimp>
             <Russian>Выкопать крытую паучью дыру</Russian>
             <Spanish>Excavar Agujero de araña (Cubierta inclinada)</Spanish>
+            <Portuguese>Escavar buraco de aranha (Cobertura inclinada)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeDual">
             <English>Dig Spiderhole (Dual)</English>
@@ -240,6 +263,7 @@
             <Chinesesimp>挖掘双人散兵坑</Chinesesimp>
             <Russian>Выкопать двойную паучью дыру</Russian>
             <Spanish>Excavar Agujero de araña (Doble)</Spanish>
+            <Portuguese>Escavar buraco de aranha (Duplo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M1919A4">
             <English>[CSW] M1919A4 Gun Bag</English>
@@ -250,6 +274,7 @@
             <Chinesesimp>[班组] M1919A4 枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с M1919A4</Russian>
             <Spanish>[CSW] M1919A4 Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para M1919A4</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M1919A6">
             <English>[CSW] M1919A6 Gun Bag</English>
@@ -260,6 +285,7 @@
             <Chinesesimp>[班组] M1919A6 枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с M1919A6</Russian>
             <Spanish>[CSW] M1919A6 Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para M1919A6</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M60">
             <English>[CSW] M60 Gun Bag</English>
@@ -270,6 +296,7 @@
             <Chinesesimp>[班组] M60 枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с M60</Russian>
             <Spanish>[CSW] M60 Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para M60</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_Shield">
             <English>[CSW] DShK (Shield) Gun Bag</English>
@@ -280,6 +307,7 @@
             <Chinesesimp>[班组] DShK（防盾）枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с ДШК (со щитом)</Russian>
             <Spanish>[CSW] DShK (Apantallada) Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para DShK (Escudo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_AA">
             <English>[CSW] DShK (AA) Gun Bag</English>
@@ -290,6 +318,7 @@
             <Chinesesimp>[班组] DShK（高）枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с ДШК (зенитный)</Russian>
             <Spanish>[CSW] DShK (AA) Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para DShK (AA)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_RPD">
             <English>[CSW] RPD Gun Bag</English>
@@ -300,6 +329,7 @@
             <Chinesesimp>[班组] RPD 枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с РПД</Russian>
             <Spanish>[CSW] RPD Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para RPD</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_PK">
             <English>[CSW] PK Gun Bag</English>
@@ -310,6 +340,7 @@
             <Chinesesimp>[班组] PK 枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с ПК</Russian>
             <Spanish>[CSW] PK Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para PK</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_MG42">
             <English>[CSW] MG42 Gun Bag</English>
@@ -320,6 +351,7 @@
             <Chinesesimp>[班组] MG42 枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с MG42</Russian>
             <Spanish>[CSW] MG42 Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para MG42</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_SGM">
             <English>[CSW] SGM Gun Bag</English>
@@ -330,6 +362,7 @@
             <Chinesesimp>[班组] SGM 枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с СГМ</Russian>
             <Spanish>[CSW] SGM Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para SGM</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_SGM_Shield">
             <English>[CSW] SGM (Shield) Gun Bag</English>
@@ -340,6 +373,7 @@
             <Chinesesimp>[班组] SGM（防盾）枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с СГМ (со щитом)</Russian>
             <Spanish>[CSW] SGM (Apantallada) Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para SGM (Escudo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_Mk18">
             <English>[CSW] Mk18 Gun Bag</English>
@@ -350,6 +384,7 @@
             <Chinesesimp>[班组] Mk18 枪袋</Chinesesimp>
             <Russian>[CSW] Сумка с Mk18</Russian>
             <Spanish>[CSW] Mk18 Bolsa para arma</Spanish>
+            <Portuguese>[CSW] Bolsa para Mk18</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M29">
             <English>[CSW] M29 Mortar Tube</English>
@@ -360,6 +395,7 @@
             <Chinesesimp>[班组] M29 迫击炮炮管</Chinesesimp>
             <Russian>[CSW] Сумка с миномётом M29</Russian>
             <Spanish>[CSW] M29 Tubo de Mortero</Spanish>
+            <Portuguese>[CSW] M29 Tubo de Morteiro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M2">
             <English>[CSW] M2 Mortar Tube</English>
@@ -370,6 +406,7 @@
             <Chinesesimp>[班组] M2 迫击炮炮管</Chinesesimp>
             <Russian>[CSW] Сумка с миномётом M2</Russian>
             <Spanish>[CSW] M2 Tubo de mortero</Spanish>
+            <Portuguese>[CSW] M2 Tubo de Morteiro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_Type53">
             <English>[CSW] Type 53 Mortar Tube</English>
@@ -380,6 +417,7 @@
             <Chinesesimp>[班组] 53式迫击炮炮管</Chinesesimp>
             <Russian>[CSW] Сумка с миномётом Type 53</Russian>
             <Spanish>[CSW] Type 53 Tubo de mortero</Spanish>
+            <Portuguese>[CSW] Type 53 Tubo de Morteiro</Portuguese>
         </Key>
     </Package>
 </Project>
