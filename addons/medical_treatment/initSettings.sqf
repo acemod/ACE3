@@ -306,6 +306,14 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(treatmentTimeCoeffZeus),
+    "SLIDER",
+    [LSTRING(TreatmentTimeCoeffZeus_DisplayName), LSTRING(TreatmentTimeCoeffZeus_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 10, 1, 2]
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(allowBodyBagUnconscious),
     "CHECKBOX",
     [LSTRING(AllowBodyBagUnconscious_DisplayName), LSTRING(AllowBodyBagUnconscious_Description)],

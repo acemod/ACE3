@@ -25,7 +25,7 @@
             <Spanish>Médico ACE Interfaz</Spanish>
             <German>ACE-Medicsystem Interface</German>
             <Czech>ACE Zdravotnické Rozhraní</Czech>
-            <Portuguese>ACE Médico Interface</Portuguese>
+            <Portuguese>ACE Interface Médica</Portuguese>
             <French>ACE Médical Interface</French>
             <Italian>ACE Medical Interfaccia</Italian>
             <Korean>ACE 의료 인터페이스</Korean>
@@ -79,6 +79,7 @@
             <Turkish>Epinefrin Uyanma Şansı Artışı</Turkish>
             <Spanish>Aumento de probabilidad de despertarse por epinefrina</Spanish>
             <Korean>에피네프린 사용 시 추가 회복 확률</Korean>
+            <Portuguese>Aumento da Chance de Acordar com Epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>When an unconscious patient has Epinephrine in their system, the time between spontaneous wake up checks is divided by this value.</English>
@@ -121,7 +122,7 @@
             <Italian>Controlla se le ferite aperte o bendate fanno zoppicare una persona.</Italian>
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
             <Polish>Kontroluje, czy otwarte lub zabandażowane rany powodują utykanie jednostki.</Polish>
-            <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
+            <Portuguese>Controla se ferimentos abertos ou atados causam a pessoa a mancar.</Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
             <German>Stellt ein, ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
             <Russian>Контролирует хромоту в случае открытых или забинтованных ран.</Russian>
@@ -185,7 +186,7 @@
             <Italian>Controlla l'effetto dell'utilizzo di stecche per curare le fratture. Quando disabilitato, le lesioni non causano fratture.</Italian>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
             <Polish>Kontroluje efekt użycia szyn do leczenia złamań.\n Po wyłączeniu obrażenia nie powodują złamań.</Polish>
-            <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQuando desabilitado, ferimentos não causam fraturas. </Portuguese>
+            <Portuguese>Controla o efeito de uso de talas para tratar fraturas.\nQuando desabilitado, ferimentos não causam fraturas.</Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
             <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
             <Russian>Управляет эффектом использования шин для лечения переломов.\nПри отключении травмы не вызывают переломов.</Russian>
@@ -197,7 +198,7 @@
             <Russian>Шины полностью лечат перелом</Russian>
             <Japanese>副子で骨折完治</Japanese>
             <French>Les attelles guérissent complètement les fractures</French>
-            <Portuguese>Tala cura fraturas completamente</Portuguese>
+            <Portuguese>Talas curam fraturas completamente</Portuguese>
             <Chinese>固定板完全治癒骨折</Chinese>
             <Chinesesimp>固定板完全治愈骨折</Chinesesimp>
             <Italian>Le gessature curano al massimo le fratture</Italian>
@@ -213,7 +214,7 @@
             <Russian>Шины вылечивают, но не дают бегать</Russian>
             <Japanese>副子で治癒可能、走れないように</Japanese>
             <French>Les attelles guérissent les fractures, mais empêchent de sprinter</French>
-            <Portuguese>Talas curam (mas não consegue correr)</Portuguese>
+            <Portuguese>Talas curam, mas não permitem correr</Portuguese>
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
             <Chinesesimp>固定板能治愈骨折，但无法奔跑</Chinesesimp>
             <Italian>Le gessature curano, ma non puoi correre</Italian>
@@ -235,6 +236,7 @@
             <German>Schiene heilt, aber verhindert Sprinten</German>
             <Korean>부목이 치료는 하지만 빨리 걷지 못함</Korean>
             <Chinesesimp>固定板能治愈骨折，但无法慢跑</Chinesesimp>
+            <Portuguese>Talas curam, mas não permitem trotar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
@@ -248,6 +250,7 @@
             <Spanish>Probabilidad de fractura</Spanish>
             <German>Wahrscheinlichkeit einer Fraktur</German>
             <Korean>골절 확률</Korean>
+            <Portuguese>Chance de Fratura</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
@@ -261,6 +264,7 @@
             <Spanish>La probabilidad de que una herida que pueda provocar una fractura, provoque una fractura.</Spanish>
             <German>Die Wahrscheinlichkeit, dass eine Wunde, die eine Fraktur verursachen würde, tatsächlich zu einer Fraktur führt.</German>
             <Korean>상처를 입을 때 골절에 얼마나 관여할지를 결정합니다.</Korean>
+            <Portuguese>A probabilidade de uma ferida passível de fratura causar uma fratura.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>

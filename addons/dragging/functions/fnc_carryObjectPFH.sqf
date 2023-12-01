@@ -72,13 +72,13 @@ if (_previousHint isEqualType "") exitWith {};
 
 // Mouse hint
 private _hintLMB = LLSTRING(Drop);
-getCursorObjectParams params ["_cursorObject", "", "_distance"];
+private _cursorObject = cursorObject;
 
 if (
     !isNull _cursorObject && {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)} &&
     {
         if (_target isKindOf "CAManBase") then {
-            (_distance <= MAX_LOAD_DISTANCE_MAN) && {[_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat) isNotEqualTo []}
+            (_unit distance _cursorObject <= MAX_LOAD_DISTANCE_MAN) && {[_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat) isNotEqualTo []}
         } else {
             ["ace_cargo"] call EFUNC(common,isModLoaded) &&
             {EGVAR(cargo,enable)} &&
