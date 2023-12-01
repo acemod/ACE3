@@ -49,7 +49,7 @@
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook off</English>
             <Spanish>Habilitar detonación inducida por calor en las cajas de munición</Spanish>
-            <Japanese>弾薬箱に誘爆を有効化</Japanese>
+            <Japanese>弾薬箱の誘爆を有効化</Japanese>
             <German>Durchzündung für Munitionskisten ermöglichen</German>
             <Korean>탄약 상자 쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>

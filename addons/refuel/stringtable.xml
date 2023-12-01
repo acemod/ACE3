@@ -534,7 +534,7 @@
             <Korean>펌프/호스 상호작용 시간</Korean>
             <Russian>Время взаимодействия со шлангом</Russian>
             <Spanish>Tiempo de interacción con la Bomba/Manguera</Spanish>
-            <Japanese>ポンプとホースのインタラクション時間</Japanese>
+            <Japanese>ポンプとホースのインタラクション所要時間</Japanese>
             <Polish>Czas Interakcji z Pompą/Wężem</Polish>
             <German>Interaktionszeit zwischen Pumpe und Schlauch</German>
             <French>Temps d'interaction pompe/tuyau</French>
@@ -545,7 +545,7 @@
             <Korean>연료 재보급 상호작용에 걸리는 시간(초)입니다.</Korean>
             <Russian>Время в секундах, которое занимает взаимодействие со шлангом.</Russian>
             <Spanish>Cuanto tiempo en segundos tardan las interacciones de repostado.</Spanish>
-            <Japanese>燃料補給にかかる時間 (秒)</Japanese>
+            <Japanese>燃料補給に掛かる時間 (秒)</Japanese>
             <Polish>Jak długo powinna trwać interakcja tankowania w sekundach.</Polish>
             <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
             <French>Durée des interactions de ravitaillement en secondes.</French>

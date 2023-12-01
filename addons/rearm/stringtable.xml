@@ -56,7 +56,7 @@
             <Italian>Ammontare Riarmo</Italian>
             <Spanish>Velocidad de rearme</Spanish>
             <French>Quantité à réarmer</French>
-            <Japanese>再武装が可能な量</Japanese>
+            <Japanese>再武装の所要時間</Japanese>
             <Korean>재보급 양</Korean>
             <Chinesesimp>整装所需时间</Chinesesimp>
             <Chinese>整裝所需時間</Chinese>
@@ -71,7 +71,7 @@
             <Italian>Quanto velocemente dovrebbe essere riarmato un veicolo?</Italian>
             <Spanish>Cuán rápido es el proceso de rearme?</Spanish>
             <French>Définit la vitesse à laquelle s'effectue le réarmement.</French>
-            <Japanese>車両を再武装する早さを設定します。</Japanese>
+            <Japanese>車両がどれくらいの早さで再武装されるか?</Japanese>
             <Korean>차량을 얼마나 빨리 재보급 시킵니까?</Korean>
             <Chinesesimp>载具多快会整装完毕？</Chinesesimp>
             <Chinese>載具多快會整裝完畢?</Chinese>
@@ -116,7 +116,7 @@
             <Italian>Ammontare basato sul calibro</Italian>
             <Spanish>Cantidad basada en el calibre</Spanish>
             <French>En fonction du calibre</French>
-            <Japanese>口径に基づいた量</Japanese>
+            <Japanese>口径に基づいて</Japanese>
             <Korean>구경에 따라 수량 설정</Korean>
             <Chinesesimp>基于口径决定所耗时间</Chinesesimp>
             <Chinese>基於口徑決定所耗時間</Chinese>

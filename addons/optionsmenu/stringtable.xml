@@ -147,7 +147,7 @@
             <Hungarian>Jobb felül, lefele</Hungarian>
             <Russian>Справа — сверху вниз</Russian>
             <Italian>In Alto a Destra, verso il Basso</Italian>
-            <Japanese>右上、下側</Japanese>
+            <Japanese>右上、下向</Japanese>
             <Korean>오른쪽 위에서 아래로</Korean>
             <Chinesesimp>右上角，向下</Chinesesimp>
             <Chinese>右上角，向下</Chinese>
@@ -164,7 +164,7 @@
             <Hungarian>Jobb felül, balra</Hungarian>
             <Russian>Сверху — справа налево</Russian>
             <Italian>In Alto a Destra, verso Sinistra</Italian>
-            <Japanese>右上、左詰</Japanese>
+            <Japanese>右上、左向</Japanese>
             <Korean>오른쪽 위에서 왼쪽으로</Korean>
             <Chinesesimp>右上角，向左</Chinesesimp>
             <Chinese>右上角，向左</Chinese>
@@ -181,7 +181,7 @@
             <Hungarian>Bal felül, lefele</Hungarian>
             <Russian>Слева - сверху вниз</Russian>
             <Italian>In Alto a Sinistra, verso il Basso</Italian>
-            <Japanese>左上、下側</Japanese>
+            <Japanese>左上、下向</Japanese>
             <Korean>왼쪽 위에서 아래로</Korean>
             <Chinesesimp>左上角，向下</Chinesesimp>
             <Chinese>左上角，向下</Chinese>
@@ -198,7 +198,7 @@
             <Hungarian>Bal felül, jobbra</Hungarian>
             <Russian>Сверху — слева направо</Russian>
             <Italian>In Alto a Sinistra, verso Destra</Italian>
-            <Japanese>右上、右詰</Japanese>
+            <Japanese>右上、右向</Japanese>
             <Korean>왼쪽 위에서 오른쪽으로</Korean>
             <Chinesesimp>左上角，向右</Chinesesimp>
             <Chinese>左上角，向右</Chinese>

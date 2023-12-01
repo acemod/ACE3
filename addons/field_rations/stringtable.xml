@@ -219,7 +219,7 @@
             <Russian>Действия с источником воды</Russian>
             <Polish>Akcje przy źrodle wody</Polish>
             <Turkish>Su Içme Animasyonu</Turkish>
-            <Japanese>水源での動作</Japanese>
+            <Japanese>水源でのアクション</Japanese>
             <German>Wasserquellen-Aktionen</German>
             <Chinesesimp>水源动作</Chinesesimp>
             <Korean>물 근처 행동</Korean>
@@ -231,7 +231,7 @@
             <Russian>Определяет какие действия будут доступны с источником воды.</Russian>
             <Polish>Kontroluje jakie akcje są dostępne przy źrodle wody.</Polish>
             <Turkish>Su içerken hangi animasyonu yapacağını belirler</Turkish>
-            <Japanese>水源で可能な動作を設定します。</Japanese>
+            <Japanese>水源で可能なアクションを設定します。</Japanese>
             <German>Bestimmt, welche Aktionen an Wasserquellen verfügbar sind.</German>
             <Chinesesimp>控制对水源可用的动作。</Chinesesimp>
             <Korean>물가에서 어떤 행동을 취할지 정합니다</Korean>
@@ -255,7 +255,7 @@
             <Russian>Действия с объектами ландшафта</Russian>
             <Polish>Akcje Objektu terenu</Polish>
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
-            <Japanese>地形オブジェクトでの動作</Japanese>
+            <Japanese>地形オブジェクトでのアクション</Japanese>
             <German>Geländeobjekt-Aktionen</German>
             <Chinesesimp>地形物体动作</Chinesesimp>
             <Korean>지형 물체 상호작용</Korean>
@@ -279,7 +279,7 @@
             <German>Beeinflusst die erweiterte Ausdauer</German>
             <Chinese>與進階疲勞聯動</Chinese>
             <Chinesesimp>与进阶疲劳联动</Chinesesimp>
-            <Japanese>アドバンスド ファティーグへの影響</Japanese>
+            <Japanese>アドバンスド疲労への影響</Japanese>
             <Russian>Влияние на продвинутую усталость</Russian>
             <Polish>Wpływ na zaawansowane zmęczenie</Polish>
             <Turkish>Gelişmiş Yorgunluk</Turkish>
@@ -292,7 +292,7 @@
             <German>Bestimmt, ob Durst und Hunger ACE Erweiterte Ausdauer beeinflussen sollen.</German>
             <Chinese>是否讓飲食影響到ACE的進階疲勞。</Chinese>
             <Chinesesimp>是否让饮食影响到 ACE 的进阶疲劳。</Chinesesimp>
-            <Japanese>喉の渇きと空腹度が ACE アドバンスド ファティーグへ与える影響を定義します。</Japanese>
+            <Japanese>喉の渇きと空腹度が ACE アドバンスド疲労へ与える影響を定義します。</Japanese>
             <Russian>Определяет, будет ли жажда и голод влиять на продвинутую усталость ACE.</Russian>
             <Polish>Kontroluje czy pragnienie i głód mają wpływ na zaawansowane zmęczenie ACE.</Polish>
             <Turkish>Acıkınca veya susayınca kişinin yorulup yorulmayacağını belirler.</Turkish>

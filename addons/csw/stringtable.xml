@@ -58,7 +58,7 @@
             <Portuguese>Entrar</Portuguese>
             <Russian>Войти</Russian>
             <Spanish>Entrar</Spanish>
-            <Japanese>乗る</Japanese>
+            <Japanese>乗り込む</Japanese>
             <Chinese>進入</Chinese>
             <Chinesesimp>进入</Chinesesimp>
             <Turkish>Bin</Turkish>
@@ -118,7 +118,7 @@
             <German>Erweiterter Zusammenbau</German>
             <Portuguese>Montagem Avançada</Portuguese>
             <French>Assemblage avancé</French>
-            <Japanese>アドバンスド設置</Japanese>
+            <Japanese>高度な組み立て</Japanese>
             <Chinese>進階組裝</Chinese>
             <Chinesesimp>高级组装</Chinesesimp>
             <Italian>Montaggio avanzato</Italian>
@@ -133,7 +133,7 @@
             <German>Benutze ACE um unterstützte statische Waffen zu montieren/demontieren. Geladene Munition ist auf ein einzelnes Magazin reduziert.</German>
             <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas. Munição carregada é reduzida para um único carregador.</Portuguese>
             <French>Utilise ACE pour l'assemblage/le désassemblage des armes statiques supportées.\nLes munitions chargées sont réduites à un seul chargeur.</French>
-            <Japanese>対応している設置型火器に ACE3 の設置と解体を使用します。装填済みの弾倉は 1 つの弾倉に減少します。</Japanese>
+            <Japanese>対応している設置型火器に ACE の設置と解体を使用します。装填済みの弾倉は1つの弾倉のみに減少します。</Japanese>
             <Chinese>使用ACE來組裝/拆解固定型武器。上膛的限制為單個彈匣。</Chinese>
             <Chinesesimp>使用 ACE 来组装/拆解固定式武器。限制弹药为一个弹匣。</Chinesesimp>
             <Italian>Utilizzare ace per l'Assemblaggio/smontaggio di armi statiche supportate. Le munizioni cariche sono ridotte ad un solo caricatore.</Italian>
@@ -148,7 +148,7 @@
             <German>Spare extra Munition</German>
             <Portuguese>Economizar munição extra</Portuguese>
             <French>Conserver le surplus de munitions</French>
-            <Japanese>過剰弾薬を保持</Japanese>
+            <Japanese>追加の弾薬を保持</Japanese>
             <Chinese>保存額外彈藥</Chinese>
             <Chinesesimp>保存额外弹药</Chinesesimp>
             <Italian>Risparmiare munizioni extra</Italian>
@@ -163,7 +163,7 @@
             <German>Lager extra Magazine neben der statischen Waffe</German>
             <Portuguese>Carregar munições extras próximo à arma estática</Portuguese>
             <French>Range les chargeurs en surplus auprès de l'arme statique.</French>
-            <Japanese>次の設置型火器用に過剰弾薬を保持します。</Japanese>
+            <Japanese>追加の弾倉を固定火器の横に保管します。</Japanese>
             <Chinese>在固定型武器旁存放額外彈匣</Chinese>
             <Chinesesimp>在固定式武器旁边存放额外的弹匣</Chinesesimp>
             <Italian>Conservare i caricatori extra accanto all'arma statica</Italian>
@@ -178,7 +178,7 @@
             <German>Munitionslager</German>
             <Korean>탄약 보관</Korean>
             <Polish>Magazyn amunicji</Polish>
-            <Japanese>弾薬の格納</Japanese>
+            <Japanese>弾薬の格納場所</Japanese>
             <Chinesesimp>弹药存储</Chinesesimp>
             <Russian>Хранилище боеприпасов</Russian>
             <Spanish>Almacenamiento de munición</Spanish>
@@ -190,7 +190,7 @@
             <German>Legt fest, ob zusätzliche Magazine auf dem Boden oder in einer Munitionskiste aufbewahrt werden</German>
             <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을 지 결정합니다.</Korean>
             <Polish>Decyduje, czy dodatkowe magazynki przechowywane są na ziemi, czy w skrzynce z amunicją.</Polish>
-            <Japanese>追加のマガジンを地面に設置するか、弾薬箱の中に保管するかを決定します</Japanese>
+            <Japanese>追加の弾倉を地面に配置するか、弾薬箱内に保管するかを設定します。</Japanese>
             <Chinesesimp>设置多余的弹夹是存放在地面上还是弹药箱内</Chinesesimp>
             <Russian>Определяет будут ли дополнительные магазины лежать на земле или внутри хранилища</Russian>
             <Spanish>Determina si los cargadores extra son almacenados en el suelo o en una caja de munición</Spanish>
@@ -256,7 +256,7 @@
             <German>Interaktionsdauerkoeffizient</German>
             <Portuguese>Coeficiente de tempo para a interação</Portuguese>
             <French>Coefficient du temps d'interaction</French>
-            <Japanese>インタラクション時間係数</Japanese>
+            <Japanese>インタラクションの所要時間係数</Japanese>
             <Chinese>互動時間係數</Chinese>
             <Chinesesimp>交互时间系数</Chinesesimp>
             <Italian>Coefficente per il tempo di interazione</Italian>
@@ -271,7 +271,7 @@
             <German>Skaliert die Zeit die benötigt wird um statische Waffen aufzubauen und nachzuladen.</German>
             <Portuguese>Escala o tempo requerido para montar e recarregar armas estáticas.</Portuguese>
             <French>Définit l'échelle de temps nécessaire à l'assemblage et au rechargement des armes statiques.</French>
-            <Japanese>設置型火器の設置と再装填時間を管理できます。</Japanese>
+            <Japanese>設置型火器の設置と再装填の所要時間を管理できます。</Japanese>
             <Chinese>設置組裝及裝填組裝固定型武器</Chinese>
             <Chinesesimp>衡量组装和重新装填固定式武器所需的时间</Chinesesimp>
             <Italian>Tempo necessario per assemblare e ricaricare le armi statiche</Italian>
@@ -361,7 +361,7 @@
             <German>Montiere Waffe...</German>
             <Portuguese>Montando Arma...</Portuguese>
             <French>Assemblage de l'arme...</French>
-            <Japanese>火器を設置中です・・・</Japanese>
+            <Japanese>火器を組み立て中です・・・</Japanese>
             <Chinese>組裝武器中...</Chinese>
             <Chinesesimp>正在组装武器...</Chinesesimp>
             <Italian>Montaggio arma...</Italian>
@@ -376,7 +376,7 @@
             <German>Nehme Dreibein auf...</German>
             <Portuguese>Carregando Tripé...</Portuguese>
             <French>Récupération du trépied...</French>
-            <Japanese>三脚を取得中です・・・</Japanese>
+            <Japanese>三脚を回収中・・・</Japanese>
             <Chinese>撿起三腳架...</Chinese>
             <Chinesesimp>捡起三脚架...</Chinesesimp>
             <Italian>Recupero treppiede...</Italian>
@@ -436,7 +436,7 @@
             <German>Aktiviere und lasse diese Waffe leer</German>
             <Portuguese>Ativado e deixar arma vazia</Portuguese>
             <French>Activer et laisser l'arme vide</French>
-            <Japanese>火器有効化し空を維持</Japanese>
+            <Japanese>有効にして火器を空のままにする</Japanese>
             <Chinese>啟用並不裝填武器</Chinese>
             <Chinesesimp>启用并不装填武器</Chinesesimp>
             <Italian>Abilitato e lascia l'arma vuota</Italian>
@@ -609,7 +609,7 @@
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Rot)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Vermelho)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Rouges)</French>
-            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (赤)</Japanese>
+            <Japanese>[CSW] 12.7x99 mm HMG トレーサーベルト (赤)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（紅色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，红）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Italian>
@@ -625,7 +625,7 @@
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Grün)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Verde)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Vertes)</French>
-            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (緑)</Japanese>
+            <Japanese>[CSW] 12.7x99 mm HMG トレーサーベルト (緑)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（綠色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，绿）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Italian>
@@ -641,7 +641,7 @@
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Gelb)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Amarelo)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Jaunes)</French>
-            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (黄)</Japanese>
+            <Japanese>[CSW] 12.7x99 mm HMG トレーサーベルト (黄)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（黃色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，黄）</Chinesesimp>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Italian>
@@ -657,7 +657,7 @@
             <German>[CSW] 20mm Granate GMG-Gurt</German>
             <Portuguese>[CSW] Cinto de Munição - Granada 20mm GMG</Portuguese>
             <French>[CSW] Bande grenades 20 mm GMG</French>
-            <Japanese>[CSW] 20 mm てき弾 GMG ベルト</Japanese>
+            <Japanese>[CSW] 20 mm 擲弾 GMG ベルト</Japanese>
             <Chinese>[CSW]20毫米 榴彈 榴彈機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 20 mm 榴弹发射器弹链</Chinesesimp>
             <Italian>[CSW] 20mm Grenade GMG Belt</Italian>

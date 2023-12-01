@@ -167,7 +167,7 @@
             <Russian>Кровотечение во время остановки сердца</Russian>
             <German>Ausbluten im Herzstillstand</German>
             <French>Saignement durant l'arrêt cardiaque</French>
-            <Japanese>心停止中の失血</Japanese>
+            <Japanese>心停止中の失血死</Japanese>
             <Spanish>Desangrado durante parada cardíaca</Spanish>
             <Polish>Wykrwawienie podczas zatrzymanej akcji serca</Polish>
             <Chinesesimp>心脏骤停期间失血情况</Chinesesimp>
@@ -178,7 +178,7 @@
             <Russian>Определяет, можно ли умереть от потери крови во время остановки сердца, даже если время жизни при остановке сердца еще не истекло.</Russian>
             <German>Legt fest, ob man während des Herzstillstands durch Blutverlust sterben kann, auch wenn die Überlebenszeit im Herzstillstand noch nicht ausgelaufen ist.</German>
             <French>Définit si un joueur en arrêt cardiaque peut mourir par exsanguination, avant que la durée de l'arrêt cardiaque définie ci-dessus ne soit écoulée.</French>
-            <Japanese>心停止時間を超え死亡する前に、失血による心停止で死亡するかどうかを決定します。</Japanese>
+            <Japanese>心停止中の失血によって心停止時間よりも早く死亡するかどうかを制御します。</Japanese>
             <Spanish>COntrola si una persona puede morir en parada cardíaca por causa de pérdida de sangre antes de que se termine el contador de parada cardíaca</Spanish>
             <Polish>Kontroluje czy śmierć osoby może nastąpić poprzez wykrwawienie zanim wyczerpię się Czas Zatrzymania Akcji Serca.</Polish>
             <Chinesesimp>控制单位是否会在心脏骤停时间耗完之前因失血过多而死亡。</Chinesesimp>

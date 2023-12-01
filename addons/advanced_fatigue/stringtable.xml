@@ -7,7 +7,7 @@
             <German>ACE Erweiterte Ausdauer</German>
             <Chinese>ACE 進階疲勞</Chinese>
             <Chinesesimp>ACE 进阶体力</Chinesesimp>
-            <Japanese>ACE アドバンスド ファティーグ</Japanese>
+            <Japanese>ACE アドバンスド疲労</Japanese>
             <Italian>ACE Fatica Avanzata</Italian>
             <Korean>ACE 고급 피로도</Korean>
             <French>ACE Fatigue avancée</French>
@@ -220,7 +220,7 @@
             <English>Enabled</English>
             <Spanish>Activada</Spanish>
             <German>Aktiv</German>
-            <Japanese>アドバンスド ファティーグを有効化</Japanese>
+            <Japanese>有効化</Japanese>
             <Polish>Włączone</Polish>
             <Korean>활성화</Korean>
             <French>Activé</French>
@@ -235,7 +235,7 @@
             <English>Enables/disables Advanced Fatigue.</English>
             <Spanish>Activa/desactiva la fatiga avanzada</Spanish>
             <German>Aktiviert/deaktiviert Advanced Fatigue.</German>
-            <Japanese>アドバンスド ファティーグを有効化します。</Japanese>
+            <Japanese>アドバンスド疲労は高度な疲労管理システムを有効化します。</Japanese>
             <Polish>Włącza/wyłącza zaawansowaną wytrzymałość</Polish>
             <Korean>고급 피로도 활성화/비활성화</Korean>
             <French>Active/Désactive la fatigue avancée.</French>
