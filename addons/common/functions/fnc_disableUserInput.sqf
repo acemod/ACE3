@@ -159,7 +159,7 @@ if (_state) then {
                 _ctrl ctrlSetTooltip localize (["str_3den_attributes_respawn_none_tooltip", "str_disp_int_respawn"] select _respawnEnabled);
             };
 
-            if (_teamSwitch && {teamSwitchEnabled}) then {
+            if (_teamSwitch && teamSwitchEnabled) then {
                 (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
 
                 private _acc = accTime;
