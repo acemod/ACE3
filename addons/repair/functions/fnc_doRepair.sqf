@@ -26,7 +26,7 @@ private _postRepairDamageMin = [_unit, _action isEqualTo "fullRepair"] call FUNC
 
 (getAllHitPointsDamage _vehicle) params ["_allHitPoints"];
 private _hitPointClassname = _allHitPoints select _hitPointIndex;
-private _initializedDepends = missionNamespace getVariable [QGVAR(dependsHitPointsInitializedClasses), createHashMap];
+(GETMVAR(GVAR(ignoredAndDependsInitializedClasses), objNull) get typeOf _vehicle) params ["","_dependsIndexMap"];
 private _repairedHitpoints = [];
 
 // get current hitpoint damage
@@ -36,10 +36,24 @@ private _hitPointCurDamage = _vehicle getHitIndex _hitPointIndex;
 private _hitPointNewDamage = (_hitPointCurDamage - 0.5) max _postRepairDamageMin;
 
 if (_hitPointNewDamage < _hitPointCurDamage) then {
-    // raise event to set the new hitpoint damage
-    TRACE_3("repairing main point", _vehicle, _hitPointIndex, _hitPointNewDamage);
-    [QGVAR(setVehicleHitPointDamage), [_vehicle, _hitPointIndex, _hitPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
-    _hitPointCurDamage = _hitPointNewDamage;
+    private _parentIndex = _dependsIndexMap get _hitPointIndex;
+    if (isNil "_parentIndex") then {
+        // raise event to set the new hitpoint damage
+        TRACE_3("repairing main point", _vehicle, _hitPointIndex, _hitPointNewDamage);
+        [QGVAR(setVehicleHitPointDamage), [_vehicle, _hitPointIndex, _hitPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
+        _hitPointCurDamage = _hitPointNewDamage;
+    } else {
+        // Fix damagable depends hitpoints with ignored parent (current hitpoint gets normalized)
+        private _parentHitpointCurDamage = _vehicle getHitIndex _parentIndex;
+        private _parentHitpointNewDamage = _parentHitpointCurDamage;
+        if (_parentHitpointCurDamage > _postRepairDamageMin) then {
+            _parentHitpointNewDamage = (_parentHitpointCurDamage - 0.5) max _postRepairDamageMin;
+        };
+        _repairedHitpoints pushBack _parentIndex;
+        TRACE_4("Repairing depends and parent", _vehicle, _hitPointIndex, _parentIndex, _parentHitpointNewDamage);
+        [QGVAR(setVehicleHitPointDamage), [_vehicle, _parentIndex, _parentHitpointNewDamage], _vehicle] call CBA_fnc_targetEvent;
+        _hitPointCurDamage = _parentHitpointNewDamage;
+    };
 };
 
 // Get hitpoint groups if available
@@ -56,43 +70,22 @@ if (isArray _hitpointGroupConfig) then {
                 if (_subHitIndex == -1) then {
                     ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_vehicle);
                 } else {
-                    private _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
-                    private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;
-                    if (_subPointNewDamage < _subPointCurDamage) then {
-                        TRACE_3("repairing sub point", _vehicle, _subHitIndex, _subPointNewDamage);
-                        _repairedHitpoints pushBack _subHitIndex;
-                        [QGVAR(setVehicleHitPointDamage), [_vehicle, _subHitIndex, _subPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
+                    if (_subHitIndex in _repairedHitpoints) then {
+                        TRACE_2("Skipping repair, sub hitpoint already fixed in depends",_subHitIndex,_vehicle);
+                    } else {
+                        private _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
+                        private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;
+                        if (_subPointNewDamage < _subPointCurDamage) then {
+                            TRACE_3("repairing sub point", _vehicle, _subHitIndex, _subPointNewDamage);
+                            _repairedHitpoints pushBack _subHitIndex;
+                            [QGVAR(setVehicleHitPointDamage), [_vehicle, _subHitIndex, _subPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
+                        };
                     };
                 };
             } forEach _subHitArray;
         };
     } forEach (getArray _hitpointGroupConfig);
 };
-
-// Fix damagable depends hitpoints with ignored parent
-private _type = typeOf _vehicle;
-private _vehicleDependsArray = _initializedDepends get _type;
-{ 
-    _x params ["_parentHitpoint","_dependsHitpoint"];
-    if (_hitPointClassname == _dependsHitpoint) exitWith {
-        private _dependsIndex = _allHitPoints findIf {_x == _dependsHitpoint};
-        private _parentIndex = _allHitPoints findIf {_x == _parentHitpoint};
-        if (_parentIndex in _repairedHitpoints) then {
-            TRACE_2("Skipping repair, depends parent fixed in hitpoint groups",_parentHitpoint,_vehicle);
-            continue;
-        } else {
-            private _parentHitpointCurDamage = _vehicle getHitIndex _parentIndex;
-            private _parentHitpointNewDamage = (_parentHitpointCurDamage - 0.5) max _postRepairDamageMin;
-            private _dependsHitpointCurDamage = _vehicle getHitIndex _dependsIndex;
-            private _dependsHitpointNewDamage = (_dependsHitpointCurDamage - 0.5) max _postRepairDamageMin;
-            if (_parentHitpointNewDamage < _parentHitpointCurDamage 
-            || _dependsHitpointNewDamage < _dependsHitpointCurDamage) then {
-                TRACE_4("Repairing depends parent", _vehicle, _dependsIndex, _parentIndex, _parentHitpointNewDamage);
-                [QGVAR(setVehicleHitPointDamage), [_vehicle, _parentIndex, _parentHitpointNewDamage], _vehicle] call CBA_fnc_targetEvent;
-            };
-        };
-    };
-} forEach _vehicleDependsArray;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {

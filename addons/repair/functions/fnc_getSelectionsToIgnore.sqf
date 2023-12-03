@@ -19,11 +19,10 @@ params ["_vehicle"];
 
 private _type = typeOf _vehicle;
 TRACE_2("getSelectionsToIgnore",_vehicle,_type);
-private _initializedClasses = missionNamespace getVariable [QGVAR(hitPointsToIgnoreInitializedClasses), createHashMap];
-private _initializedDepends = missionNamespace getVariable [QGVAR(dependsHitPointsInitializedClasses), createHashMap];
+private _initializedClasses = GETMVAR(GVAR(ignoredAndDependsInitializedClasses), createHashMap);
 if (_type in _initializedClasses) exitWith {
-    TRACE_2("retrieved chached selections",_vehicle,_type);
-    [_initializedClasses get _type, _initializedDepends get _type];
+    TRACE_2("retrieved cached selections",_vehicle,_type);
+    _initializedClasses get _type;
 }; //you return different amount of values each time
 
 private _vehCfg = configOf _vehicle;
@@ -35,7 +34,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
 private _indexesToIgnore = [];
-private _dependsArray = [];
+private _dependsIndexMap = createHashMap;
 private _processedSelections = [];
 
 {
@@ -129,17 +128,20 @@ private _processedSelections = [];
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping depends hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
-
-        private _groupIndex = _hitpointGroups findIf {_x # 0 == _hitpoint};
-        if (_groupIndex != -1) then {
-            ERROR_2("[%1] hitpoint [%2] is both a group-parent and a depends and will be unrepairable",_type,_hitpoint);
-            ERROR_1("group: %1",_hitpointGroups # _groupIndex);
-        };
         private _parentHitpoint = getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends");
         _parentHitpoint = toLower _parentHitpoint;
-        _dependsArray pushBack [_parentHitpoint, _hitpoint];
+        private _parentHitpointIndex = _hitPoints findIf {_x == _parentHitpoint};
 
-        _indexesToIgnore pushBack _forEachIndex;
+        if (_parentHitpointIndex != -1) then {
+            _dependsIndexMap set [_forEachIndex, _parentHitpointIndex];
+        } else { // multiple parents or incorrect parent
+            _indexesToIgnore pushBack _forEachIndex; 
+            private _groupIndex = _hitpointGroups findIf {_x # 0 == _hitpoint};
+            if (_groupIndex != -1) then {
+                ERROR_2("[%1] hitpoint [%2] is both a group-parent and an ignored depends and will be unrepairable",_type,_hitpoint);
+                ERROR_1("group: %1",_hitpointGroups # _groupIndex);
+            };
+        };
         _processedSelections pushBack _selection;
         continue
     };
@@ -157,22 +159,7 @@ private _processedSelections = [];
     _processedSelections pushBack _selection;
 } forEach _hitSelections;
 
-// Remove depends hitpoints with ignored parents from ignore list
-{
-    _x params ["_parentHitpoint", "_dependsHitpoint"];
-    private _parentIndex = _hitPoints findIf {_parentHitpoint == _x};
-    private _dependsIndex = _hitPoints findIf {_dependsHitpoint == _x};
-    if (_parentIndex in _indexesToIgnore) then {
-        TRACE_2("Removing depends hitpoint from ignored",_dependsHitpoint,_dependsIndex);
-        private _dependsIgnoreArrayIndex = _indexesToIgnore findIf {_dependsIndex == _x};
-        _indexesToIgnore deleteAt _dependsIgnoreArrayIndex;
-    };
-} forEach _dependsArray;
+_initializedClasses set [_type, [_indexesToIgnore, _dependsIndexMap]];
+SETMVAR(GVAR(ignoredAndDependsInitializedClasses), _initializedClasses);
 
-_initializedClasses set [_type, _indexesToIgnore];
-missionNamespace setVariable [QGVAR(hitPointsToIgnoreInitializedClasses), _initializedClasses];
-
-_initializedDepends set [_type, _dependsArray];
-missionNamespace setVariable [QGVAR(dependsHitPointsInitializedClasses), _initializedDepends];
-
-[_indexesToIgnore, _dependsArray]
+[_indexesToIgnore, _dependsIndexMap]
