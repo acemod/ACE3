@@ -21,47 +21,11 @@ TRACE_2("params",_vehicle, typeOf _vehicle);
 // Can't execute all commands if the vehicle isn't local, exit if that's so
 if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 
-(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []]];
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["", "_dependsIndexMap"];
 
-private _config = configOf _vehicle >> "HitPoints";
-
-private _realHitPoints = [];
-private _dependentHitPoints = [];
-private _dependentHitPointScripts = [];
-
-// Find dependent hitpoints
+// apply normalized damage to all depends hitpoints
 {
-    if ((_x != "") && {isClass (_config >> _x)} && {!(_x in _realHitPoints)}) then {
-        _realHitPoints pushBack _x;
-        if (!((getText (_config >> _x >> "depends")) in ["", "0"])) then {
-            _dependentHitPoints pushBack _x;
-            _dependentHitPointScripts pushBack compile getText (_config >> _x >> "depends");
-        };
-    };
-} forEach _allHitPoints;
-
-TRACE_2("",_realHitPoints,_dependentHitPoints);
-
-// Don't bother setting variables if no depends on vehicle:
-if (_dependentHitPoints isEqualTo []) exitWith {};
-
-
-// Define global variables and save original values
-private _savedGlobals = [["total", total]];
-total = damage _vehicle;
-{
-    _savedGlobals pushBack [_x, missionNamespace getVariable _x];
-    missionNamespace setVariable [_x, _vehicle getHitPointDamage _x];
-} forEach _realHitPoints;
-
-// apply normalized damage to all dependand hitpoints
-{
-    private _damage = call (_dependentHitPointScripts select _forEachIndex);
-    TRACE_2("setting depend hitpoint", _x, _damage);
-    _vehicle setHitPointDamage [_x, _damage];
-} forEach _dependentHitPoints;
-
-// Restore global variables
-{
-    missionNamespace setVariable _x;
-} forEach _savedGlobals;
+    private _damage = _vehicle getHitIndex _y;
+    TRACE_2("setting depends hitpoint", _x, _damage);
+    _vehicle setHitIndex [_x, _damage];
+} forEach _dependsIndexMap;
