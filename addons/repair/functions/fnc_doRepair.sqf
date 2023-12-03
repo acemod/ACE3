@@ -26,7 +26,7 @@ private _postRepairDamageMin = [_unit, _action isEqualTo "fullRepair"] call FUNC
 
 (getAllHitPointsDamage _vehicle) params ["_allHitPoints"];
 private _hitPointClassname = _allHitPoints select _hitPointIndex;
-(GETMVAR(GVAR(ignoredAndDependsInitializedClasses), objNull) get typeOf _vehicle) params ["","_dependsIndexMap"];
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["","_dependsIndexMap"];
 private _repairedHitpoints = [];
 
 // get current hitpoint damage
