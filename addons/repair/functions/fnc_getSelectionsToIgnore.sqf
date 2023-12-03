@@ -69,8 +69,9 @@ private _processedSelections = [];
 
     if (_hitpoint select [0,7] isEqualTo "hitera_" || {_hitpoint select [0,4] isEqualTo "era_"}
     || {_hitpoint select [0,8] isEqualTo "hitslat_"}  || {_hitpoint select [0,5] isEqualTo "slat_"}
-    || {_hitpoint select [0,9] isEqualTo "sideskirt"} || {_hitpoint select [0,6] isEqualTo "armor_"}) then { // skip era/slat/sideskirt/armor
-        TRACE_3("Skipping ERA/Slat/Sideskirt/Armor HitPoint",_hitpoint,_forEachIndex,_selection);
+    || {_hitpoint select [0,9] isEqualTo "sideskirt"} || {_hitpoint select [0,6] isEqualTo "armor_"}
+    || {_hitpoint select [0,3] isEqualTo "mud"}) then { // skip era/slat/sideskirt/armor/mudguards
+        TRACE_3("Skipping ERA/Slat/Sideskirt/Armor/Mudguard HitPoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping ERA/SLAT, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
