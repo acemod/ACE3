@@ -351,7 +351,7 @@
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
             <German>Lautstärke während man Bewusstlos ist</German>
-            <Japanese>気絶時の音量を決定します。</Japanese>
+            <Japanese>無意識状態時の音量を決定します。</Japanese>
             <Chinesesimp>决定处于无意识时的音量</Chinesesimp>
             <Chinese>昏迷時使用耳塞的音量</Chinese>
             <Italian>Volume quando incoscente.</Italian>

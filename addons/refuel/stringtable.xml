@@ -221,7 +221,7 @@
             <Italian>Sono rimasti %1 litri.</Italian>
             <Spanish>Quedan %1 litros.</Spanish>
             <French>Il reste %1 litres.</French>
-            <Japanese>後 %1 リットル残っています。</Japanese>
+            <Japanese>あと %1 リットル残っています。</Japanese>
             <Korean>%1 리터 남음</Korean>
             <Chinesesimp>剩下%1升的燃料。</Chinesesimp>
             <Chinese>剩下%1公升的燃料。</Chinese>
@@ -342,7 +342,7 @@
             <Italian>%1 litri riforniti</Italian>
             <Spanish>%1 lt reabastecido</Spanish>
             <French>%1 litres pompés.</French>
-            <Japanese>%1 リッターを給油しました</Japanese>
+            <Japanese>%1 リットル給油した</Japanese>
             <Korean>%1 리터 재급유됨</Korean>
             <Chinesesimp>已加入%1升的燃料</Chinesesimp>
             <Chinese>已加入%1公升的燃料</Chinese>
@@ -486,7 +486,7 @@
             <Italian>%1 litri sono stati riforniti.</Italian>
             <Spanish>Se reabastecieron %1 lt </Spanish>
             <French>%1 litres ont été pompés.</French>
-            <Japanese>%1 リッターが給油されました。</Japanese>
+            <Japanese>%1 リットル給油されました。</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
             <Chinesesimp>已加入%1升</Chinesesimp>
             <Chinese>已加入%1公升</Chinese>

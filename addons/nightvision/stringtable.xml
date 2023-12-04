@@ -556,7 +556,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_statGen">
             <English>Gen %1</English>
-            <Japanese>第%1世代</Japanese>
+            <Japanese>第 %1 世代</Japanese>
             <Polish>Gen %1</Polish>
             <German>Gen %1</German>
             <Korean>%1세대</Korean>
