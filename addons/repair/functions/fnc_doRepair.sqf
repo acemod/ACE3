@@ -50,7 +50,7 @@ if (_hitPointNewDamage < _hitPointCurDamage) then {
             _parentHitpointNewDamage = (_parentHitpointCurDamage - 0.5) max _postRepairDamageMin;
         };
         _repairedHitpoints pushBack _parentIndex;
-        TRACE_4("Repairing depends and parent", _vehicle, _hitPointIndex, _parentIndex, _parentHitpointNewDamage);
+        TRACE_4("Repairing depends and parent",_vehicle,_hitPointIndex,_parentIndex,_parentHitpointNewDamage);
         [QGVAR(setVehicleHitPointDamage), [_vehicle, _parentIndex, _parentHitpointNewDamage], _vehicle] call CBA_fnc_targetEvent;
         _hitPointCurDamage = _parentHitpointNewDamage;
     };
@@ -76,7 +76,7 @@ if (isArray _hitpointGroupConfig) then {
                         private _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
                         private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;
                         if (_subPointNewDamage < _subPointCurDamage) then {
-                            TRACE_3("repairing sub point", _vehicle, _subHitIndex, _subPointNewDamage);
+                            TRACE_3("repairing sub point",_vehicle,_subHitIndex,_subPointNewDamage);
                             _repairedHitpoints pushBack _subHitIndex;
                             [QGVAR(setVehicleHitPointDamage), [_vehicle, _subHitIndex, _subPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
                         };

@@ -31,7 +31,7 @@ if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 ([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore", "_dependsIndexMap"];
 
 // exit if the hitpoint is not valid
-if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _hitSelections)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
+if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _hitSelections)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2",_hitPointIndex,_vehicle);};
 
 // save structural damage and sum of hitpoint damages
 private _damageOld = damage _vehicle;
@@ -40,7 +40,7 @@ private _realHitPointCount = 0;
 private _hitPointDamageSumOld = 0;
 private _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaired)
 {
-    if (!(_forEachIndex in _selectionsToIgnore) && isNil{_dependsIndexMap get _forEachIndex}) then {
+    if (!(_forEachIndex in _selectionsToIgnore) && !(_forEachIndex in _dependsIndexMap)) then {
         _realHitPointCount = _realHitPointCount + 1;
         _hitPointDamageSumOld = _hitPointDamageSumOld + (_damageValues select _forEachIndex);
         if (_forEachIndex == _hitPointIndex) then {

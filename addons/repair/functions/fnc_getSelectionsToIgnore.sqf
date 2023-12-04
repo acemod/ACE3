@@ -19,7 +19,7 @@ params ["_vehicle"];
 
 private _type = typeOf _vehicle;
 TRACE_2("getSelectionsToIgnore",_vehicle,_type);
-private _initializedClasses = GETMVAR(GVAR(ignoredAndDependsInitializedClasses), createHashMap);
+private _initializedClasses = GETMVAR(GVAR(ignoredAndDependsInitializedClasses),createHashMap);
 if (_type in _initializedClasses) exitWith {
     TRACE_2("retrieved cached selections",_vehicle,_type);
     _initializedClasses get _type;
@@ -161,6 +161,6 @@ private _processedSelections = [];
 } forEach _hitSelections;
 
 _initializedClasses set [_type, [_indexesToIgnore, _dependsIndexMap]];
-SETMVAR(GVAR(ignoredAndDependsInitializedClasses), _initializedClasses);
+SETMVAR(GVAR(ignoredAndDependsInitializedClasses),_initializedClasses);
 
 [_indexesToIgnore, _dependsIndexMap]

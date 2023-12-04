@@ -26,6 +26,6 @@ if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 // apply normalized damage to all depends hitpoints
 {
     private _damage = _vehicle getHitIndex _y;
-    TRACE_2("setting depends hitpoint", _x, _damage);
+    TRACE_2("setting depends hitpoint",_x,_damage);
     _vehicle setHitIndex [_x, _damage];
 } forEach _dependsIndexMap;
