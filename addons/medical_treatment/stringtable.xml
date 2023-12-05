@@ -213,7 +213,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
             <English>After Stitch</English>
-            <Japanese>縫合後</Japanese>
+            <Japanese>縫合した後</Japanese>
             <French>Après suture</French>
             <Russian>После наложения швов</Russian>
             <German>Nach dem Nähen</German>
@@ -272,7 +272,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
-            <Japanese>患者の装備を先に使用</Japanese>
+            <Japanese>患者の装備を優先</Japanese>
             <French>Matériel du patient d'abord</French>
             <Russian>Сначала медикаменты пациента</Russian>
             <Portuguese>Usar do Paciente Primeiro</Portuguese>
@@ -288,7 +288,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
-            <Japanese>救護者の装備を先に使用</Japanese>
+            <Japanese>救護者の装備を優先</Japanese>
             <French>Matériel du médecin d'abord</French>
             <Russian>Сначала медикаменты врача</Russian>
             <Portuguese>Usar do Médico Primeiro</Portuguese>
@@ -305,7 +305,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_DisplayName">
             <English>Autoinjector Treatment Time</English>
             <French>Durée d'interaction - Auto-injecteurs</French>
-            <Japanese>注射器の所要時間</Japanese>
+            <Japanese>自動注射器の所要時間</Japanese>
             <Spanish>Tiempo de tratamiento de autoinyección</Spanish>
             <Russian>Время ввода автоинъектора</Russian>
             <Polish>Czas aplikacji autostrzykawki</Polish>
@@ -316,7 +316,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
             <French>Définit le temps nécessaire à l'administration d'une substance auto-injectable (en secondes).</French>
-            <Japanese>注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>自動注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para administrar medicación utilizando un autoinyectador.</Spanish>
             <Russian>Время, необходимое для введения медикаментов автоинъектором (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny do aplikacji medykamentów za pomocą autostrzykawki.</Polish>
