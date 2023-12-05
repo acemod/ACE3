@@ -4261,7 +4261,7 @@
             <German>Du verbindest %1 (%2)</German>
             <Portuguese>Você aplica bandagem no paciente %1 (%2)</Portuguese>
             <Czech>Obvazuješ %1 (%2)</Czech>
-            <Japanese>%1 (%2) に包帯を使った</Japanese>
+            <Japanese>あなたは %1 (%2) に包帯を使用した</Japanese>
             <Korean>%1 (%2) 붕대를 감았다</Korean>
             <Chinesesimp>你正在使用 %2 包扎 %1</Chinesesimp>
             <Chinese>你正在對 %1 (%2) 包紮繃帶中</Chinese>
@@ -4608,7 +4608,7 @@
             <Italian>%1 ha usato %2</Italian>
             <Portuguese>%1 usou %2</Portuguese>
             <Czech>%1 použil %2</Czech>
-            <Japanese>%1 が%2を使った</Japanese>
+            <Japanese>%1 が%2を使用した</Japanese>
             <Korean>%1 (이)가 %2 을 썼다</Korean>
             <Chinesesimp>%1 已使用 %2</Chinesesimp>
             <Chinese>%1 已使用 %2</Chinese>
@@ -4674,7 +4674,7 @@
             <Italian>%1 ha usato Kit Pronto Soccorso Personale</Italian>
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
             <French>%1 a utilisé une trousse sanitaire.</French>
-            <Japanese>%1 が個人用治療キットを使った</Japanese>
+            <Japanese>%1 が個人用治療キットを使用した</Japanese>
             <Korean>%1 (이)가 개인응급키트를 사용했다</Korean>
             <Chinesesimp>%1 已使用个人急救包</Chinesesimp>
             <Chinese>%1 已使用了個人急救包</Chinese>
