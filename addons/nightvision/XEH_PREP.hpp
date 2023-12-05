@@ -9,5 +9,6 @@ PREP(onVisionModeChanged);
 PREP(pfeh);
 PREP(refreshGoggleType);
 PREP(scaleCtrl);
+PREP(scotopicEffects);
 PREP(setupDisplayEffects);
 PREP(statTextStatement_NVGeneration);

@@ -82,3 +82,11 @@
     true, // default value
     false // isGlobal
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(scotopicEffects), "CHECKBOX",
+    [LSTRING(scotopicEffects_DisplayName), LSTRING(scotopicEffects_description)],
+    localize LSTRING(Category),
+    false, // default value
+    true // isGlobal
+] call CBA_fnc_addSetting;
