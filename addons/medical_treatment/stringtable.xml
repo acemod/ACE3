@@ -4919,11 +4919,13 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
             <English>Zeus Treatment Time Coefficient</English>
             <Italian>Coeff. di tempo per trattamenti Zeus</Italian>
+            <German>Zeit-Koeffizient für Zeus Behandlungen</German>
             <Japanese>Zeus治療時間係数</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_Description">
             <English>Multiply all treatment times with this coefficient when in Zeus.</English>
             <Italian>Moltiplica il tempo di ogni trattamento per questo coefficiente quando si è Zeus.</Italian>
+            <German>Dauer von Behandlungen als Zeus wird mit diesem Koeffizienten multipliziert.</German>
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
         </Key>
     </Package>
