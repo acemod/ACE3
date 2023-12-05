@@ -109,7 +109,7 @@
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
-            <Japanese>%1 個の満装填弾倉 と %2 発の余り弾薬</Japanese>
+            <Japanese>%1個の満装填した弾倉と&lt;br/&gt;余りの%2発を装填した&lt;br/&gt;弾倉を所持しています</Japanese>
             <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
             <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
             <Chinese>%1個滿的彈匣與%2發額外子彈</Chinese>
@@ -160,7 +160,7 @@
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
             <Italian>%1 Pieno(i) e %2 Parziale(i)</Italian>
             <Portuguese>%1 Total e %2 Parcial </Portuguese>
-            <Japanese>%1 個の満装填 と %2 個の部分装填 弾倉</Japanese>
+            <Japanese>%1個の満装填した弾倉と&lt;br/&gt;%2個の部分装填した&lt;br/&gt;弾倉を所持しています</Japanese>
             <Korean>%1 꽉 찼고 %2 부분적으로 참</Korean>
             <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
             <Chinese>%1個滿的與%2個部分的</Chinese>
@@ -180,7 +180,7 @@
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
             <English>Repacking magazines, weapon unloaded</English>
-            <Japanese>弾倉を詰め替えし、 非装填状態です</Japanese>
+            <Japanese>弾倉を詰め替えるため、&lt;br/&gt;武器から弾薬を抜きました</Japanese>
             <French>Remplissage des chargeurs, arme déchargée.</French>
             <Russian>Перепаковка магазинов, оружие разряжено</Russian>
             <German>Magazin umgepackt, Waffe entladen</German>
