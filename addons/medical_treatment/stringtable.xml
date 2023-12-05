@@ -1551,7 +1551,7 @@
             <Italian>Usato per coprire una ferita</Italian>
             <Portuguese>Usado para cobrir um ferimento</Portuguese>
             <Czech>Slouží k překrytí poranění</Czech>
-            <Japanese>傷を覆うために使用</Japanese>
+            <Japanese>傷を覆うために使用される</Japanese>
             <Korean>상처를 덮을 때 씁니다</Korean>
             <Chinesesimp>用于覆盖伤口</Chinesesimp>
             <Chinese>用於覆蓋傷口</Chinese>
@@ -1568,7 +1568,7 @@
             <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale viene applicata su di essa una volta fermata l'emorragia.</Italian>
             <Portuguese>Uma curativo, material específico para cobrir um ferimento que é aplicado assim que o sangramento é estancando.</Portuguese>
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
-            <Japanese>包帯(被覆材)とは、傷口を覆うためもので、傷口の上に貼ると出血を食い止める。</Japanese>
+            <Japanese>包帯(被覆材)、これは傷口を覆うためもので、傷口の上に貼ると出血を食い止める。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
             <Chinesesimp>用于覆盖伤口以防止出血，透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
@@ -1602,7 +1602,7 @@
             <Italian>Usato su ferite medie o larghe per fermare emorragie.</Italian>
             <Portuguese>Usado para o preenchimento de cavidades geradas por ferimentos médios e grandes e estancar o sangramento.</Portuguese>
             <Czech>Používá se k zastavení středních až silnějších krvácení</Czech>
-            <Japanese>中程度から大きな傷の手当てと止血に使用</Japanese>
+            <Japanese>中程度から大きな傷の手当てと止血に使用される</Japanese>
             <Korean>중형 또는 대형 상처를 채우고 출혈을 막기 위해 쓰입니다,</Korean>
             <Chinesesimp>用于包扎中到大型伤口，并防止出血</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血</Chinese>
@@ -1787,7 +1787,7 @@
             <Italian>Usato per combattere il dolore.</Italian>
             <Portuguese>Usado para combater dores moderadas e severas</Portuguese>
             <Czech>Slouží k tlumení středně těžkých a těžkých bolestí</Czech>
-            <Japanese>中等度から重度の痛みに対処するために使用</Japanese>
+            <Japanese>中等度から重度の痛みに対処するために使用される</Japanese>
             <Korean>심한 통증을 완화하는데 쓰입니다</Korean>
             <Chinesesimp>用于削减中度至重度疼痛</Chinesesimp>
             <Chinese>減低中度至重度的疼痛感</Chinese>
@@ -1834,7 +1834,7 @@
             <Czech>Slouží jako protiváha Adrenalinu</Czech>
             <Portuguese>Usado para combater os efeitos da Epinefrina</Portuguese>
             <Russian>Используется для купирования эффектов адреналина</Russian>
-            <Japanese>アドレナリンの作用に対抗するために使用</Japanese>
+            <Japanese>アドレナリンの作用に対抗するために使用される</Japanese>
             <Korean>에피네프린 대응책으로 쓰입니다</Korean>
             <Chinesesimp>用于中和肾上腺素的影响</Chinesesimp>
             <Chinese>用來對付腎上腺素的影響</Chinese>
@@ -1882,7 +1882,7 @@
             <Italian>Usato in situazioni con gas nervino.</Italian>
             <Portuguese>Usado em casos de ataque QBRN</Portuguese>
             <Czech>Používá se v přítomnosti nervových plynů</Czech>
-            <Japanese>核兵器・生物兵器・化学兵器による汚染環境下で使用</Japanese>
+            <Japanese>核兵器・生物兵器・化学兵器による汚染環境下で使用される</Japanese>
             <Korean>화생방 상황에 쓰입니다</Korean>
             <Chinesesimp>使用于核生化污染的情况</Chinesesimp>
             <Chinese>使用於核生化汙染的情況</Chinese>
@@ -1898,7 +1898,7 @@
             <Italian>E' un farmaco usato in ambito militare in scenari con presenza di gas nervino.</Italian>
             <Portuguese>Uma droga usada por militares em casos de ataque QBRN.</Portuguese>
             <Czech>Atropin slouží jako protijed na otravu organofosfátovými insekticidy (diazinon) a nervovými plyny.</Czech>
-            <Japanese>軍が核兵器・生物兵器・化学兵器による汚染環境下で使用する薬物。</Japanese>
+            <Japanese>軍が核兵器・生物兵器・化学兵器による汚染環境下で使用される薬物。</Japanese>
             <Korean>화생방 상황에 쓰이는 군용 약품</Korean>
             <Chinesesimp>军用神经解毒针，用来应付核生化污染的情况。</Chinesesimp>
             <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
@@ -2278,7 +2278,7 @@
             <Italian>Include vario materiale medico per trattamenti avanzati.</Italian>
             <Portuguese>Inclui vários tratamentos materiais para custura e tratamento avançado</Portuguese>
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných</Czech>
-            <Japanese>縫合や高度な処置に必要とされる、様々な治療器具が含まれています。</Japanese>
+            <Japanese>縫合や高度な処置に必要とされる様々な治療器具が含まれている</Japanese>
             <Korean>봉합 및 고급 조치에 필요한 다양한 치료 도구가 있습니다.</Korean>
             <Chinesesimp>包含各种医疗套件，以及进阶伤口系统需要的缝合用品</Chinesesimp>
             <Chinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品</Chinese>
@@ -2346,7 +2346,7 @@
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
-            <Japanese>手術キットは戦場で高度な処置をする為に使われます。</Japanese>
+            <Japanese>手術キットは戦場で高度な処置をする為に用いる</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
             <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合</Chinese>
@@ -2363,7 +2363,7 @@
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo.</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
-            <Japanese>手術キットは戦場で高度な処置をする為に使われます。</Japanese>
+            <Japanese>手術キットは戦場で高度な処置をする為に用いる</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
             <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合</Chinese>
@@ -2441,7 +2441,7 @@
             <Italian>Una sacca nera per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>遺体袋は死体を入れる為に使います。</Japanese>
+            <Japanese>死体のための遺体袋</Japanese>
             <Korean>시체를 운반할 때 쓰는 가방입니다</Korean>
             <Chinesesimp>用于装尸体</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
@@ -2458,7 +2458,7 @@
             <Italian>Una sacca nera per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos.</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>遺体袋は死体を入れる為に使います。</Japanese>
+            <Japanese>死体のための遺体袋</Japanese>
             <Korean>시체를 운반할 때 쓰는 가방입니다</Korean>
             <Chinesesimp>用于装尸体</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
