@@ -42,7 +42,7 @@
             <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
             <German>Dieses Modul erlaubt es, Teile der Benutzeroberfläche (UI) an- oder auszuschalten.</German>
             <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는 것을 가능케 해줍니다.</Korean>
-            <Italian>Questo modulo consente di commutare parti di interfaccia utente visibili.</Italian>
+            <Italian>Questo modulo consente di selezionare quali parti dell'interfaccia utente sono visibili.</Italian>
             <Chinesesimp>此模块允许你调整用户界面的任何一个控件</Chinesesimp>
             <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
             <Czech>Tento modul umožňuje přepínání viditelných částí uživatelského rozhraní.</Czech>
@@ -103,7 +103,7 @@
             <Polish>Radar w pojeździe</Polish>
             <German>Fahrzeugradar</German>
             <Korean>차량 레이더</Korean>
-            <Italian>Rada Veicolo</Italian>
+            <Italian>Radar Veicolo</Italian>
             <Chinesesimp>载具雷达</Chinesesimp>
             <Chinese>載具雷達</Chinese>
             <Spanish>Radar de vehículos</Spanish>
@@ -165,6 +165,7 @@
             <Polish>Znak wodny wersji deweloperskiej</Polish>
             <Japanese>開発ビルドでの透かしマーク</Japanese>
             <German>Wasserzeichen für Entwicklungsversion</German>
+            <Italian>Filigrana per versione in fase di sviluppo</Italian>
             <Chinesesimp>开发建设水印</Chinesesimp>
             <Korean>개발용 빌드 워터마크</Korean>
         </Key>
@@ -194,7 +195,7 @@
             <Polish>Tło nazwy broni</Polish>
             <German>Waffenname Hintergrund</German>
             <Korean>무기 이름 배경</Korean>
-            <Italian>Nome Sfondo Arma</Italian>
+            <Italian>Sfondo Nome Arma</Italian>
             <Chinesesimp>武器名称背景</Chinesesimp>
             <Chinese>武器名稱背景</Chinese>
             <Spanish>Fondo de nombre de arma</Spanish>
@@ -257,7 +258,7 @@
             <Polish>Ilość magazynków</Polish>
             <German>Magazinanzahl</German>
             <Korean>탄창수</Korean>
-            <Italian>Contatore Caricatore</Italian>
+            <Italian>Contatore Caricatori</Italian>
             <Chinesesimp>弹匣数量</Chinesesimp>
             <Chinese>彈匣數量</Chinese>
             <Spanish>Recuento de cargadores</Spanish>
@@ -273,7 +274,7 @@
             <Polish>Typ granatu</Polish>
             <German>Wurfobjekt-Typ</German>
             <Korean>투척물 종류</Korean>
-            <Italian>Tipo Lanciabile</Italian>
+            <Italian>Tipo di Lanciabile</Italian>
             <Chinesesimp>投掷物类型</Chinesesimp>
             <Chinese>投擲物類型</Chinese>
             <Spanish>Tipo arrojable</Spanish>
@@ -320,7 +321,7 @@
             <Polish>Tło dolnej części informacji o broni</Polish>
             <German>Hintergrund der unteren Waffen-Info-Leiste</German>
             <Korean>무기 상세 정보 배경</Korean>
-            <Italian>Informazioni Sfondo Arma Bassa</Italian>
+            <Italian>Sfondo Informazioni Arma Bassa</Italian>
             <Chinesesimp>武器底部信息栏背景</Chinesesimp>
             <Chinese>武器底部資訊欄背景</Chinese>
             <Spanish>Fondo de información inferior de arma</Spanish>
@@ -383,7 +384,7 @@
             <Polish>Tło nazwy broni strzelca</Polish>
             <German>Richtschütze Waffenname Hintergrund</German>
             <Korean>사수 무기 명칭 배경</Korean>
-            <Italian>Nome Sfondo Arma Artigliere</Italian>
+            <Italian>Sfondo Nome Arma Artigliere</Italian>
             <Chinesesimp>炮手武器名称背景</Chinesesimp>
             <Chinese>砲手武器名稱背景</Chinese>
             <Czech>Pozadí jména zbraně vozidla</Czech>
@@ -446,7 +447,7 @@
             <Polish>Ilość magazynków strzelca</Polish>
             <German>Richtschütze Magazinanzahl</German>
             <Korean>사수 탄창 수량</Korean>
-            <Italian>Contatore Caricatore Artigliere</Italian>
+            <Italian>Contatore Caricatori Artigliere</Italian>
             <Chinesesimp>炮手弹匣数量</Chinesesimp>
             <Chinese>砲手彈匣數量</Chinese>
             <Czech>Počet munice zbraně vozidla</Czech>
@@ -477,7 +478,7 @@
             <Polish>Ilość rakiet strzelca</Polish>
             <German>Richtschütze Raketenanzahl</German>
             <Korean>사수 발사체 수량</Korean>
-            <Italian>Contatore Lanciabili Artigliere</Italian>
+            <Italian>Contatore Missili Artigliere</Italian>
             <Chinesesimp>炮手发射物数量</Chinesesimp>
             <Chinese>砲手發射物數量</Chinese>
             <Czech>Počet odpalitelných granátů vozidla</Czech>
@@ -507,7 +508,7 @@
             <Polish>Tło dolnej części informacji o broni strzelca</Polish>
             <German>Hintergrund der unteren Waffen-Info-Leiste (Richtschütze)</German>
             <Korean>사수 무기 상세 정보 배경</Korean>
-            <Italian>Informazioni Sfondo Arma Artigliere Bassa</Italian>
+            <Italian>Sfondo Informazioni Arma Artigliere Bassa</Italian>
             <Chinesesimp>炮手武器底部信息栏背景</Chinesesimp>
             <Chinese>砲手武器底部資訊欄背景</Chinese>
             <Czech>Nižší pozadí panelu s informacemi o zbrani vozidla</Czech>
@@ -539,7 +540,7 @@
             <Polish>Tło nazwy pojazdu</Polish>
             <German>Fahrzeugname Hintergrund</German>
             <Korean>차량 명칭 배경</Korean>
-            <Italian>Nome Sfondo Veicolo</Italian>
+            <Italian>Sfondo Nome Veicolo</Italian>
             <Chinesesimp>载具名称背景</Chinesesimp>
             <Chinese>載具名稱背景</Chinese>
             <Spanish>Fondo del nombre del vehículo</Spanish>
@@ -602,7 +603,7 @@
             <Polish>Uszkodzenia pojazdu</Polish>
             <German>Fahrzeugschaden</German>
             <Korean>차량 피해</Korean>
-            <Italian>Danno Veicolo</Italian>
+            <Italian>Danni Veicolo</Italian>
             <Chinesesimp>载具伤害</Chinesesimp>
             <Chinese>載具傷害</Chinese>
             <Spanish>Daño vehicular</Spanish>
@@ -618,7 +619,7 @@
             <Polish>Tło informacji o pojeździe</Polish>
             <German>Fahrzeug Info Hintergrund</German>
             <Korean>차량 정보 배경</Korean>
-            <Italian>Informazioni Sfondo Veicolo</Italian>
+            <Italian>Sfondo Informazioni Veicolo</Italian>
             <Chinesesimp>载具信息栏背景</Chinesesimp>
             <Chinese>載具資訊欄背景</Chinese>
             <Spanish>Fondo de información del vehículo</Spanish>
@@ -633,7 +634,7 @@
             <Polish>Wymaga informacji o żołnierzu/pojeździe/broni.</Polish>
             <German>Benötigt Soldat/Fahrzeug/Waffe Information.</German>
             <Korean>병사/차량/무기의 정보가 필요합니다.</Korean>
-            <Italian>Richiede informazione Soldato/Veicolo/Arma.</Italian>
+            <Italian>Richiede informazioni Soldato/Veicolo/Arma.</Italian>
             <Chinesesimp>需要士兵/载具/武器的信息。</Chinesesimp>
             <Chinese>需要士兵/載具/武器的資訊.</Chinese>
             <Spanish>Requiere información de Soldado/Vehículo.</Spanish>
@@ -662,7 +663,7 @@
             <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>
             <German>Gesperrte UI-Elemente können nicht modifiziert werden.</German>
             <Korean>강제 사용자 인터페이스는 변경하실 수 없습니다.</Korean>
-            <Italian>Impossibile modificare un elemento forzato d' Interfaccia Utente.</Italian>
+            <Italian>Impossibile modificare un elemento forzato dell'Interfaccia Utente.</Italian>
             <Chinesesimp>无法编辑已被锁定的用户界面控件</Chinesesimp>
             <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
             <Czech>Nelze upravit prvek vynuceného uživatelského rozhraní.</Czech>
@@ -675,6 +676,7 @@
             <French>Indicateur de vitesse de déplacement</French>
             <Russian>Вкл. индикатор скорости передвижения</Russian>
             <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
+            <Italian>Attiva Indicatore di Velocità</Italian>
             <Chinesesimp>启用移动速度指示器</Chinesesimp>
             <Korean>이동 속도 표시기 활성화</Korean>
             <Spanish>Habilitar indicador de velocidad de movimiento</Spanish>
@@ -686,6 +688,7 @@
             <French>Affiche un indicateur permettant de visualiser la vitesse de déplacement du personnage.</French>
             <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
             <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
+            <Italian>Attiva Indicatore di Velocità del Giocatore</Italian>
             <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
             <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화합니다.</Korean>
             <Spanish>Habilita el indicador de velocidad de movimiento para el personaje del jugador.</Spanish>
@@ -700,6 +703,7 @@
             <Spanish>Ocultar el icono de acción por defecto</Spanish>
             <German>Standardaktionssymbol ausblenden</German>
             <French>Masquer l'icône d'action par défaut</French>
+            <Italian>Nascondi Icona dell'Interazione Standard</Italian>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
             <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
@@ -711,6 +715,7 @@
             <Spanish>Oculta el icono que se muestra automáticamente cuando algo se sitúa enfrente del cursor. Requiere reinicio del juego.\nAdvertencia: No elimina la propia acción! Es recomendable desactivar la tecla "Usar acción por defecto" para prevenir interacciones no deseadas.</Spanish>
             <German>Blendet das Symbol aus, das automatisch angezeigt wird, wenn sich etwas vor dem Cursor befindet. Erfordert einen Neustart des Spiels.\nWarnung: Die Aktion selbst wird nicht entfernt! Es empfiehlt sich, die Belegung der Taste 'Standardaktion verwenden' aufzuheben, um unerwünschte Interaktionen zu verhindern.</German>
             <French>Cache l'icône qui s'affiche automatiquement lorsque quelque chose est devant le curseur. Nécessite un redémarrage du jeu.\nAvertissement : l'action n'est pas supprimée ! Il est recommandé d'annuler l'affectation du bouton 'Utiliser l'action par défaut' afin d'éviter des interactions indésirables.</French>
+            <Italian>Nasconde l'icona mostrata in automatico quando qualcosa è davanti al cursore. La modifica richiede un riavvio del gioco.\nAttenzione: Non rimuovere l'azione stessa! È consigliato rimuovere solo il tasto dall'assegnazione 'Usa Azione Standard' per impedire interazioni non volute.</Italian>
         </Key>
     </Package>
 </Project>
