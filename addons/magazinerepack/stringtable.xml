@@ -172,6 +172,7 @@
             <French>Remplir le chargeur engagé</French>
             <Russian>Перепаковать загруженные магазины</Russian>
             <German>Geladene Magazine umpacken</German>
+            <Italian>Riempi caricatori pieni</Italian>
             <Polish>Przepakuj załadowane magazynki</Polish>
             <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
             <Korean>장전된 탄창에 총알 채우는 중</Korean>
@@ -184,6 +185,7 @@
             <French>Remplissage des chargeurs, arme déchargée.</French>
             <Russian>Перепаковка магазинов, оружие разряжено</Russian>
             <German>Magazin umgepackt, Waffe entladen</German>
+            <Italian>Riempendo i caricatori, arma scarica</Italian>
             <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
             <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
             <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
@@ -193,6 +195,7 @@
         <Key ID="STR_ACE_MagazineRepack_repackAnimation">
             <English>Repack Animation</English>
             <German>Animation für Umpacken</German>
+            <Italian>Animazione per il riempimento</Italian>
             <Polish>Animacja przepakowywania</Polish>
             <Korean>탄약 합치기 애니메이션</Korean>
             <Japanese>詰め替え時のアニメーション</Japanese>
