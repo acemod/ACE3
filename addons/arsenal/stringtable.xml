@@ -1633,6 +1633,7 @@
             <English>Illuminators</English>
             <French>Illuminateurs</French>
             <Italian>Illuminanti</Italian>
+            <German>Leuchtmittel</German>
             <Korean>조명</Korean>
             <Portuguese>Iluminadores</Portuguese>
             <Japanese>イルミネーター</Japanese>
@@ -1690,6 +1691,7 @@
         <Key ID="STR_ACE_Arsenal_buttonSearchTooltip">
             <English>Search\nCTRL + Click to enable live results</English>
             <Japanese>検索\nCTRL + クリックでライブ結果を有効にします</Japanese>
+            <German>Suche\nSTRG + Click für live-aktualisierung während man schreibt</German>
             <Italian>Cerca\nCTRL + Click per modificare i risultati mentre scrivi</Italian>
         </Key>
     </Package>
