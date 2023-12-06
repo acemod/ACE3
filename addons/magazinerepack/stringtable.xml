@@ -109,7 +109,7 @@
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
-            <Japanese>%1個の満装填した弾倉と 余りの%2発を装填した弾倉を 所持しています</Japanese>
+            <Japanese>満装填した弾倉%1個と&lt;br/&gt;余り%2発装填した弾倉</Japanese>
             <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
             <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
             <Chinese>%1個滿的彈匣與%2發額外子彈</Chinese>
@@ -126,7 +126,7 @@
             <Hungarian>Újratárazás befejezve</Hungarian>
             <Italian>Caricatori Riempiti</Italian>
             <Portuguese>Preenchimento Completo</Portuguese>
-            <Japanese>詰め替えが完了しました</Japanese>
+            <Japanese>詰替完了し、以下を所持</Japanese>
             <Korean>탄창 채우기 끝남</Korean>
             <Chinesesimp>整理完成</Chinesesimp>
             <Chinese>重整完成</Chinese>
@@ -143,7 +143,7 @@
             <Hungarian>Újratárazás megszakítva</Hungarian>
             <Italian>Riempimento Interrotto</Italian>
             <Portuguese>Preenchimento Interrompido</Portuguese>
-            <Japanese>詰め替えを中断しました</Japanese>
+            <Japanese>詰替中断し、以下を所持</Japanese>
             <Korean>탄창을 채우는 중 방해받음</Korean>
             <Chinesesimp>弹匣整理被打断</Chinesesimp>
             <Chinese>重整被中斷</Chinese>
@@ -160,7 +160,7 @@
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
             <Italian>%1 Pieno(i) e %2 Parziale(i)</Italian>
             <Portuguese>%1 Total e %2 Parcial </Portuguese>
-            <Japanese>%1個の満装填した弾倉と %2個の部分装填した弾倉を 所持しています</Japanese>
+            <Japanese>満装填した弾倉%1個と&lt;br/&gt;部分装填した弾倉%2個</Japanese>
             <Korean>%1 꽉 찼고 %2 부분적으로 참</Korean>
             <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
             <Chinese>%1個滿的與%2個部分的</Chinese>
