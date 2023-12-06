@@ -343,7 +343,7 @@
             <French>Trier par poids</French>
             <German>Nach Gewicht sortieren</German>
             <Polish>Sortuj wg wagi</Polish>
-            <Japanese>重量で並び替え</Japanese>
+            <Japanese>重量順に並び替え</Japanese>
             <Italian>Ordina per peso</Italian>
             <Korean>무게 순서로 정렬</Korean>
             <Chinese>以重量排序</Chinese>
@@ -359,7 +359,7 @@
             <French>Trier par quantité</French>
             <German>Nach Menge sortieren</German>
             <Polish>Sortuj wg ilości</Polish>
-            <Japanese>数量で並び替え</Japanese>
+            <Japanese>数量順に並び替え</Japanese>
             <Italian>Ordina per quantitativo</Italian>
             <Korean>갯수 순서로 정렬</Korean>
             <Chinese>以數量排序</Chinese>
@@ -373,7 +373,7 @@
             <English>Sort by load</English>
             <German>Nach Tragelast sortieren</German>
             <French>Trier par capacité de chargement</French>
-            <Japanese>容量で並び替え</Japanese>
+            <Japanese>容量順に並び替え</Japanese>
             <Spanish>Ordenar por capacidad</Spanish>
             <Russian>Сортировка по вместимости</Russian>
             <Polish>Sortuj po rozmiarze</Polish>
@@ -385,7 +385,7 @@
             <English>Sort by accuracy</English>
             <German>Nach Genauigkeit sortieren</German>
             <French>Trier par précision</French>
-            <Japanese>精度で並び替え</Japanese>
+            <Japanese>精度順に並び替え</Japanese>
             <Turkish>Isabet doğruluğuna göre sırala</Turkish>
             <Spanish>Ordenar por precisión</Spanish>
             <Russian>Сортировка по точности</Russian>
@@ -398,7 +398,7 @@
             <English>Sort by rate of fire</English>
             <German>Nach Schussrate sortieren</German>
             <French>Trier par cadence de tir</French>
-            <Japanese>連射速度で並び替え</Japanese>
+            <Japanese>連射速度順に並び替え</Japanese>
             <Turkish>Atış hızına göre sırala</Turkish>
             <Spanish>Ordenar por cadencia de tiro</Spanish>
             <Russian>Сортировка по темпу стрельбы</Russian>
@@ -411,7 +411,7 @@
             <English>Sort by magnification</English>
             <German>Nach Vergrößerung sortieren</German>
             <French>Trier par grossissement</French>
-            <Japanese>倍率で並び替え</Japanese>
+            <Japanese>倍率順に並び替え</Japanese>
             <Spanish>Ordenar por magnificación</Spanish>
             <Russian>Сортировка по кратности приближения</Russian>
             <Polish>Sortuj po przybliżeniu</Polish>
@@ -423,7 +423,7 @@
             <English>Sort by ammo count</English>
             <German>Nach Munitionszahl sortieren</German>
             <French>Trier par nombre de munitions</French>
-            <Japanese>装弾数で並び替え</Japanese>
+            <Japanese>装弾数順に並び替え</Japanese>
             <Turkish>Mermi sayısına göre sırala</Turkish>
             <Spanish>Ordenar por cantidad de munición</Spanish>
             <Russian>Сортировка по количеству боеприпасов</Russian>
@@ -435,7 +435,7 @@
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
             <French>Trier par protection balistique</French>
-            <Japanese>防弾性能で並び替え</Japanese>
+            <Japanese>防弾性能順に並び替え</Japanese>
             <Spanish>Ordenar por protección balística</Spanish>
             <Russian>Сортировка по баллистической защите</Russian>
             <Polish>Sortuj po ochronie balistycznej</Polish>
@@ -447,7 +447,7 @@
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
             <French>Trier par résistance aux explosifs</French>
-            <Japanese>防爆性能で並び替え</Japanese>
+            <Japanese>防爆性能順に並び替え</Japanese>
             <Spanish>Ordenar por protección de explosivos</Spanish>
             <Russian>Сортировка по защите от взрывов</Russian>
             <Polish>Sortuj po ochronie przeciw wybuchom</Polish>

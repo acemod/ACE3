@@ -21,7 +21,7 @@
             <English>Performance Factor</English>
             <Spanish>Factor de rendimiento</Spanish>
             <German>Leistungsfaktor</German>
-            <Japanese>パフォーマンス因数</Japanese>
+            <Japanese>パフォーマンス係数</Japanese>
             <Polish>Współczynnik wydolności</Polish>
             <Korean>성능 요인</Korean>
             <French>Facteur de performance</French>
@@ -37,7 +37,7 @@
             <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
             <Spanish>Afecta al rendimiento general de todos los jugadores sin opciones personalizadas. Más alto significa mejor</Spanish>
             <German>Beinflusst die Leistungsfähigkeit aller Spieler ohne eigenen Leistungsfaktor. Ein höherer Wert bedeutet bessere Leistung.</German>
-            <Japanese>個別の因数を設定されていない、全てのプレイヤーのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
+            <Japanese>個別の係数を設定されていない、全てのプレイヤーのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
             <Polish>Wpływa na ogólną wydolność organizmu u wszystkich graczy bez ustawionego niestandardowego współczynnika. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 임의로 설정된 값 없이 영향받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Impacte la performance globale de tous les joueurs n'ayant pas de facteur personnalisé.\nPlus la valeur est élevée, plus le joueur est performant.</French>
@@ -67,7 +67,7 @@
             <English>Recovery Factor</English>
             <Spanish>Factor de recuperación</Spanish>
             <German>Erholungsfaktor</German>
-            <Japanese>回復因数</Japanese>
+            <Japanese>回復係数</Japanese>
             <Polish>Współczynnik regeneracji</Polish>
             <Korean>회복 요인</Korean>
             <French>Facteur de récupération</French>
@@ -98,7 +98,7 @@
             <English>Load Factor</English>
             <Spanish>Factor de carga</Spanish>
             <German>Gewichtsfaktor</German>
-            <Japanese>重量因数</Japanese>
+            <Japanese>重量係数</Japanese>
             <Polish>Współczynnik masy ekwipunku</Polish>
             <Korean>부담 요인</Korean>
             <French>Facteur de charge</French>
@@ -128,7 +128,7 @@
             <English>Terrain Gradient Factor</English>
             <Spanish>Factor de inclinación del terreno</Spanish>
             <German>Terrainsteigungsfaktor</German>
-            <Japanese>地形勾配因数</Japanese>
+            <Japanese>地形勾配係数</Japanese>
             <Polish>Współczynnik terenu</Polish>
             <Korean>지형 경사도 요인</Korean>
             <French>Facteur d'inclinaison du terrain</French>
@@ -158,7 +158,7 @@
             <English>Sway factor</English>
             <Spanish>Factor de balanceo de mira</Spanish>
             <German>Verwacklungsfaktor</German>
-            <Japanese>手ぶれ因数</Japanese>
+            <Japanese>手ぶれ係数</Japanese>
             <Chinesesimp>抖动系数</Chinesesimp>
             <Chinese>抖動因素</Chinese>
             <French>Facteur de tremblement</French>
