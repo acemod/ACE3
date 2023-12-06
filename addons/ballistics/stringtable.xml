@@ -8,7 +8,7 @@
             <German>#00 Schrotmunition</German>
             <Chinese>#00 鹿彈</Chinese>
             <Chinesesimp>#00 鹿弹</Chinesesimp>
-            <Italian>#00 Buckshot</Italian>
+            <Italian>#00 Pallettoni</Italian>
             <Japanese>#00 バックショット</Japanese>
             <French>Chevrotine #00</French>
             <Czech>#00 Broky velké</Czech>
@@ -24,7 +24,7 @@
             <German>#00 Schrotmunition</German>
             <Chinese>#00 鹿彈(8.38 mm)</Chinese>
             <Chinesesimp>#00 鹿弹（8.38 mm）</Chinesesimp>
-            <Italian>#00 Buckshot</Italian>
+            <Italian>#00 Pallettoni</Italian>
             <Japanese>#00 バックショット - 直径 8.38 mm粒弾</Japanese>
             <French>Chevrotine #00</French>
             <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
@@ -40,7 +40,7 @@
             <German>#0 Schrotmunition</German>
             <Chinese>#0 鹿彈</Chinese>
             <Chinesesimp>#0 鹿弹</Chinesesimp>
-            <Italian>#0 Buckshot</Italian>
+            <Italian>#0 Pallettoni</Italian>
             <Japanese>#0 バックショット</Japanese>
             <French>Chevrotine #0</French>
             <Czech>#0 Broky velké</Czech>
@@ -56,7 +56,7 @@
             <German>#0 Schrotmunition</German>
             <Chinese>#0 鹿彈</Chinese>
             <Chinesesimp>#0 鹿弹（8.1 mm）</Chinesesimp>
-            <Italian>#0 Buckshot</Italian>
+            <Italian>#0 Pallettoni</Italian>
             <Japanese>#0 バックショット - 直径 8.1 mm粒弾</Japanese>
             <French>Chevrotine #0</French>
             <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
@@ -72,7 +72,7 @@
             <German>#1 Schrotmunition</German>
             <Chinese>#1 鹿彈</Chinese>
             <Chinesesimp>#1 鹿弹</Chinesesimp>
-            <Italian>#1 Buckshot</Italian>
+            <Italian>#1 Pallettoni</Italian>
             <Japanese>#1 バックショット</Japanese>
             <French>Chevrotine #1</French>
             <Czech>#1 Broky velké</Czech>
@@ -88,7 +88,7 @@
             <German>#1 Schrotmunition</German>
             <Chinese>#1 鹿彈</Chinese>
             <Chinesesimp>#1 鹿弹（7.6 mm）</Chinesesimp>
-            <Italian>#1 Buckshot</Italian>
+            <Italian>#1 Pallettoni</Italian>
             <Japanese>#1 バックショット - 直径 7.6 mm粒弾</Japanese>
             <French>Chevrotine #1</French>
             <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
@@ -104,7 +104,7 @@
             <German>#2 Schrotmunition</German>
             <Chinese>#2 鹿彈</Chinese>
             <Chinesesimp>#2 鹿弹</Chinesesimp>
-            <Italian>#2 Buckshot</Italian>
+            <Italian>#2 Pallettoni</Italian>
             <Japanese>#2 バックショット</Japanese>
             <French>Chevrotine #2</French>
             <Czech>#2 Broky velké</Czech>
@@ -120,7 +120,7 @@
             <German>#2 Schrotmunition</German>
             <Chinese>#2 鹿彈</Chinese>
             <Chinesesimp>#2 鹿弹（6.9 mm）</Chinesesimp>
-            <Italian>#2 Buckshot</Italian>
+            <Italian>#2 Pallettoni</Italian>
             <Japanese>#2 バックショット - 直径 6.9 mm粒弾</Japanese>
             <French>Chevrotine #2</French>
             <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
@@ -136,7 +136,7 @@
             <German>#3 Schrotmunition</German>
             <Chinese>#3 鹿彈</Chinese>
             <Chinesesimp>#3 鹿弹</Chinesesimp>
-            <Italian>#3 Buckshot</Italian>
+            <Italian>#3 Pallettoni</Italian>
             <Japanese>#3 バックショット</Japanese>
             <French>Chevrotine #3</French>
             <Czech>#3 Broky velké</Czech>
@@ -152,7 +152,7 @@
             <German>#3 Schrotmunition</German>
             <Chinese>#3 鹿彈</Chinese>
             <Chinesesimp>#3 鹿弹（6.4 mm）</Chinesesimp>
-            <Italian>#3 Buckshot</Italian>
+            <Italian>#3 Pallettoni</Italian>
             <Japanese>#3 バックショット - 直径 6.4 mm粒弾</Japanese>
             <French>Chevrotine #3</French>
             <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
@@ -168,7 +168,7 @@
             <German>#4 Schrotmunition</German>
             <Chinese>#4 鹿彈</Chinese>
             <Chinesesimp>#4 鹿弹</Chinesesimp>
-            <Italian>#4 Buckshot</Italian>
+            <Italian>#4 Pallettoni</Italian>
             <Japanese>#4 バックショット</Japanese>
             <French>Chevrotine #4</French>
             <Czech>#4 Broky velké</Czech>
@@ -184,7 +184,7 @@
             <German>#4 Schrotmunition</German>
             <Chinese>#4 鹿彈</Chinese>
             <Chinesesimp>#4 鹿弹（6.10 mm）</Chinesesimp>
-            <Italian>#4 Buckshot</Italian>
+            <Italian>#4 Pallettoni</Italian>
             <Japanese>#4 バックショット - 直径 6.1 mm粒弾</Japanese>
             <French>Chevrotine #4</French>
             <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
@@ -200,7 +200,7 @@
             <German>#4 Vogelschrot</German>
             <Chinese>#4 鳥彈</Chinese>
             <Chinesesimp>#4 鸟弹</Chinesesimp>
-            <Italian>#4 Birdshot</Italian>
+            <Italian>#4 Pallini</Italian>
             <Japanese>#4 バードショット</Japanese>
             <French>Grenaille No.4</French>
             <Czech>#4 Broky malé</Czech>
@@ -216,7 +216,7 @@
             <German>#4 Vogelschrot</German>
             <Chinese>#4 鳥彈</Chinese>
             <Chinesesimp>#4 鸟弹（3.30 mm）</Chinesesimp>
-            <Italian>#4 Birdshot</Italian>
+            <Italian>#4 Pallini</Italian>
             <Japanese>#4 バードショット - 直径 3.3 mm粒弾</Japanese>
             <French>Grenaille No.4</French>
             <Czech>#4 Broky malé - kalibr 3.3 mm</Czech>
@@ -232,7 +232,7 @@
             <German>12 Gauge 2Schuss #00 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #00 鹿彈</Chinese>
             <Chinesesimp>12铅径 2发 #00 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 2Rnd #00 Buckshot</Italian>
+            <Italian>Calibro 12 2cp #00 Pallettoni</Italian>
             <Japanese>12 ゲージ 2Rnd #00 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #00</French>
             <Czech>2x #00 Broky velké (kalibr 8.38 mm)</Czech>
@@ -248,7 +248,7 @@
             <German>12 Gauge 2Schuss #0 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #0 鹿彈</Chinese>
             <Chinesesimp>12铅径 2发 #0 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 2Rnd #0 Buckshot</Italian>
+            <Italian>Calibro 12 2cp #0 Pallettoni</Italian>
             <Japanese>12 ゲージ 2Rnd #0 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #0</French>
             <Czech>2x #0 Broky velké (kalibr 8.1 mm)</Czech>
@@ -264,7 +264,7 @@
             <German>12 Gauge 2Schuss #1 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #1 鹿彈</Chinese>
             <Chinesesimp>12铅径 2发 #1 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 2Rnd #1 Buckshot</Italian>
+            <Italian>Calibro 12 2cp #1 Pallettoni</Italian>
             <Japanese>12 ゲージ 2Rnd #1 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #1</French>
             <Czech>2x #1 Broky velké (kalibr 7.6 mm)</Czech>
@@ -280,7 +280,7 @@
             <German>12 Gauge 2Schuss #2 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #2 鹿彈</Chinese>
             <Chinesesimp>12铅径 2发 #2 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 2Rnd #2 Buckshot</Italian>
+            <Italian>Calibro 12 2cp #2 Pallettoni</Italian>
             <Japanese>12 ゲージ 2Rnd #2 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #2</French>
             <Czech>2x #2 Broky velké (kalibr 6.9 mm)</Czech>
@@ -296,7 +296,7 @@
             <German>12 Gauge 2Schuss #3 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #3 鹿彈</Chinese>
             <Chinesesimp>12铅径 2发 #3 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 2Rnd #3 Buckshot</Italian>
+            <Italian>Calibro 12 2cp #3 Pallettoni</Italian>
             <Japanese>12 ゲージ 2Rnd #3 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #3</French>
             <Czech>2x #3 Broky velké (kalibr 6.4 mm)</Czech>
@@ -312,7 +312,7 @@
             <German>12 Gauge 2Schuss #4 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #4 鹿彈</Chinese>
             <Chinesesimp>12铅径 2发 #4 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 2Rnd #4 Buckshot</Italian>
+            <Italian>Calibro 12 2cp #4 Pallettoni</Italian>
             <Japanese>12 ゲージ 2Rnd #4 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #4</French>
             <Czech>2x #4 Broky velké (kalibr 6.1 mm)</Czech>
@@ -328,7 +328,7 @@
             <German>12 Gauge 2Schuss #4 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #4 鳥彈</Chinese>
             <Chinesesimp>12铅径 2发 #4 鸟弹</Chinesesimp>
-            <Italian>12 Gauge 2Rnd #4 Birdshot</Italian>
+            <Italian>Calibro 12 2cp #4 Pallini</Italian>
             <Japanese>12 ゲージ 2Rnd #4 バードショット</Japanese>
             <French>2 balles cal. 12 Grenaille No.4</French>
             <Czech>2x #4 Broky malé (kalibr 3.3 mm)</Czech>
@@ -344,7 +344,7 @@
             <German>12 Gauge 6Schuss #00 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #00 鹿彈</Chinese>
             <Chinesesimp>12铅径 6发 #00 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 6Rnd #00 Buckshot</Italian>
+            <Italian>Calibro 12 6cp #00 Pallettoni</Italian>
             <Japanese>12 ゲージ 6Rnd #00 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #00</French>
             <Czech>6x #00 Broky velké (kalibr 8.38 mm)</Czech>
@@ -360,7 +360,7 @@
             <German>12 Gauge 6Schuss #0 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #0 鹿彈</Chinese>
             <Chinesesimp>12铅径 6发 #0 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 6Rnd #0 Buckshot</Italian>
+            <Italian>Calibro 12 6cp #0 Pallettoni</Italian>
             <Japanese>12 ゲージ 6Rnd #0 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #0</French>
             <Czech>6x #0 Broky velké (kalibr 8.1 mm)</Czech>
@@ -376,7 +376,7 @@
             <German>12 Gauge 6Schuss #1 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #1 鹿彈</Chinese>
             <Chinesesimp>12铅径 6发 #1 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 6Rnd #1 Buckshot</Italian>
+            <Italian>Calibro 12 6cp #1 Pallettoni</Italian>
             <Japanese>12 ゲージ 6Rnd #1 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #1</French>
             <Czech>6x #1 Broky velké (kalibr 7.6 mm)</Czech>
@@ -392,7 +392,7 @@
             <German>12 Gauge 6Schuss #2 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #2 鹿彈</Chinese>
             <Chinesesimp>12铅径 6发 #2 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 6Rnd #2 Buckshot</Italian>
+            <Italian>Calibro 12 6cp #2 Pallettoni</Italian>
             <Japanese>12 ゲージ 6Rnd #2 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #2</French>
             <Czech>6x #2 Broky velké (kalibr 6.9 mm)</Czech>
@@ -408,7 +408,7 @@
             <German>12 Gauge 6Schuss #3 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #3 鹿彈</Chinese>
             <Chinesesimp>12铅径 6发 #3 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 6Rnd #3 Buckshot</Italian>
+            <Italian>Calibro 12 6cp #3 Pallettoni</Italian>
             <Japanese>12 ゲージ 6Rnd #3 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #3</French>
             <Czech>6x #3 Broky velké (kalibr 6.4 mm)</Czech>
@@ -424,7 +424,7 @@
             <German>12 Gauge 6Schuss #4 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #4 鹿彈</Chinese>
             <Chinesesimp>12铅径 6发 #4 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 6Rnd #4 Buckshot</Italian>
+            <Italian>Calibro 12 6cp #4 Pallettoni</Italian>
             <Japanese>12 ゲージ 6Rnd #4 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #4</French>
             <Czech>6x #4 Broky velké (kalibr 6.1 mm)</Czech>
@@ -440,7 +440,7 @@
             <German>12 Gauge 6Schuss #4 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #4 鳥彈</Chinese>
             <Chinesesimp>12铅径 6发 #4 鸟弹</Chinesesimp>
-            <Italian>12 Gauge 6Rnd #4 Birdshot</Italian>
+            <Italian>Calibro 12 6cp #4 Pallini</Italian>
             <Japanese>12 ゲージ 6Rnd #4 バードショット</Japanese>
             <French>6 balles cal. 12 Grenaille No.4</French>
             <Czech>6x #4 Broky malé (kalibr 3.3 mm)</Czech>
@@ -456,7 +456,7 @@
             <German>12 Gauge 15Schuss #00 Schrotmunition</German>
             <Chinese>12鉛徑 15發  #00 鹿彈</Chinese>
             <Chinesesimp>12铅径 15发 #00 鹿弹</Chinesesimp>
-            <Italian>12 Gauge 15Rnd #00 Buckshot</Italian>
+            <Italian>Calibro 12 15cp #00 Pallettoni</Italian>
             <Japanese>12 ゲージ 15Rnd #00 バックショット</Japanese>
             <French>15 balles cal. 12 Chevrotine #00</French>
             <Czech>15x #00 Broky velké (kalibr 8.38 mm)</Czech>
@@ -474,7 +474,7 @@
             <Polish>Magazynek 6,5x47 mm 20rd (HPBT Scenar)</Polish>
             <Russian>Магазин из 20-ти 6,5x47 мм (экспансивные Scenar)</Russian>
             <German>6,5x47 mm 20-Patronen-Magazin (HPBT Scenar)</German>
-            <Italian>6.5x47 mm 20Rnd Mag (HPBT Scenar)</Italian>
+            <Italian>6.5x47 mm 20cp Car (HPBT Scenar)</Italian>
             <Czech>6.5x47 mm 20náb. Zásobník (HPBT Scenar)</Czech>
             <Portuguese>Carregador 6.5x47 mm com 20 cartuchos (HPBT Scenar)</Portuguese>
             <Hungarian>6,5x47 mm 20-lövedékes tár (HPBT Scenar)</Hungarian>
@@ -521,7 +521,7 @@
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Name">
             <English>6.5 mm Creedmor 20Rnd Mag</English>
             <Polish>Magazynek 6,5 mm Creedmor 20rd</Polish>
-            <Italian>6.5 mm Creedmor 20Rnd Mag</Italian>
+            <Italian>6.5 mm Creedmor 20cp Car</Italian>
             <Russian>Магазин из 20-ти 6,5 мм Creedmor</Russian>
             <German>6,5 mm Creedmor 20-Patronen-Magazin</German>
             <Spanish>Cargador de 20 balas Creedmor de 6.5 mm</Spanish>
@@ -572,7 +572,7 @@
         <Key ID="STR_ACE_Ballistics_10Rnd_580x42_DBP88_Mag_Name">
             <English>5.8 mm DBP88 10Rnd Mag</English>
             <Polish>Magazynek 5,8 mm DBP88 10rd</Polish>
-            <Italian>5.8 mm DBP88 10Rnd Mag</Italian>
+            <Italian>5.8 mm DBP88 10cp Car</Italian>
             <Russian>Магазин из 10-ти 5,8 мм DBP88</Russian>
             <German>5,8 mm DBP88 10-Patronen-Magazin</German>
             <Spanish>Cargador de 10 balas DBP88 de 5.8 mm</Spanish>
@@ -630,7 +630,7 @@
             <Polish>Magazynek 6,5 mm 30rd Smugacz IR-DIM</Polish>
             <Czech>6.5 mm 30náb. Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis traçantes IR-DIM de 6,5 mm</Portuguese>
-            <Italian>Caricatore 6.5 mm 30Rnd Traccianti IR-DIM</Italian>
+            <Italian>Caricatore 6.5 mm 30cp Traccianti IR-DIM</Italian>
             <Russian>Магазин из 30-ти 6,5 мм ИК-трассирующих</Russian>
             <Japanese>6.5 mm 30Rnd IR-DIM トレーサー ケースレスマガジン</Japanese>
             <Korean>30발 들이 6.5mm IR-DIM 예광탄 탄창</Korean>
@@ -664,7 +664,7 @@
             <Polish>Kaliber: 6,5x39 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: MX/C/M/SW/3GL</Polish>
             <Czech>Ráže: 6.5x39 mm Svítící IR-DIM&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použití u: MX</Czech>
             <Portuguese>Calibre: 6,5x39 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
-            <Italian>Calibro: 6.5x39 mm Traccianti IR-DIM &lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL</Italian>
+            <Italian>Calibro: 6.5x39 mm Tracciante IR-DIM &lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL</Italian>
             <Russian>Калибр: 6,5x39 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
             <Japanese>口径: 6.5x39 mm IR-DIM トレーサー&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: MX/C/M/SW/3GL</Japanese>
             <Korean>구경: 6.5x39mm IR-DIM 예광탄&lt;br/&gt;장탄수: 30&lt;br/&gt;사용처: MX/C/M/SW/3GL</Korean>
@@ -681,7 +681,7 @@
             <Polish>Magazynek 6,5 mm 30rd SD</Polish>
             <Czech>6.5 mm 30náb. SD Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis SD de 6,5 mm</Portuguese>
-            <Italian>Caricatore 6.5 mm 30Rnd Sil.</Italian>
+            <Italian>Caricatore 6.5 mm 30cp Sil.</Italian>
             <Russian>Магазин из 30-ти 6,5 мм дозвуковых</Russian>
             <Japanese>6.5 mm 30Rnd 亜音速弾 マガジン</Japanese>
             <Korean>30발 들이 6.5mm 아음속탄 탄창</Korean>
@@ -732,7 +732,7 @@
             <Polish>Magazynek 6,5 mm 30rd AP</Polish>
             <Czech>6.5 mm 30náb. AP Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis AP de 6,5 mm</Portuguese>
-            <Italian>Caricatore 6.5 mm 30Rnd AP</Italian>
+            <Italian>Caricatore 6.5 mm 30cp AP</Italian>
             <Russian>Магазин из 30-ти 6,5 мм бронебойных</Russian>
             <Japanese>6.5 mm 30Rnd 徹甲弾 マガジン</Japanese>
             <Korean>30발 들이 6.5mm 철갑탄 탄창</Korean>
@@ -784,7 +784,7 @@
             <Polish>Magazynek 6,5 mm 30rd Smugacz IR-DIM</Polish>
             <Czech>6.5 mm 30náb. Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis traçantes IR-DIM de 6,5 mm</Portuguese>
-            <Italian>Caricatore 6.5 mm 30Rnd Traccianti IR-DIM</Italian>
+            <Italian>Caricatore 6.5 mm 30cp Traccianti IR-DIM</Italian>
             <Russian>Магазин из 30-ти 6,5 мм ИК-трассирующих</Russian>
             <Japanese>6.5 mm 30Rnd IR-DIM トレーサー マガジン</Japanese>
             <Korean>30발 들이 6.5mm IR-DIM 예광탄 탄창</Korean>
@@ -835,7 +835,7 @@
             <Polish>Magazynek 6,5 mm 30rd SD</Polish>
             <Czech>6.5 mm 30náb. SD Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis SD de 6,5 mm</Portuguese>
-            <Italian>Caricatore 6.5 mm 30Rnd Sil.</Italian>
+            <Italian>Caricatore 6.5 mm 30cp Sil.</Italian>
             <Russian>Магазин из 30-ти 6,5 мм дозвуковых</Russian>
             <Japanese>6.5 mm 30Rnd 亜音速弾 マガジン</Japanese>
             <Korean>30발 들이 6.5mm 아음속탄 탄창</Korean>
@@ -886,7 +886,7 @@
             <Polish>Magazynek 6,5 mm 30rd AP</Polish>
             <Czech>6.5 mm 30náb. AP Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis AP de 6,5 mm</Portuguese>
-            <Italian>Caricatore 6.5 mm 30Rnd AP</Italian>
+            <Italian>Caricatore 6.5 mm 30cp AP</Italian>
             <Russian>Магазин из 30-ти 6,5 мм бронебойных</Russian>
             <Japanese>6.5 mm 30Rnd 徹甲弾 マガジン</Japanese>
             <Korean>30발 들이 6.5mm 철갑탄 탄창</Korean>
@@ -938,7 +938,7 @@
             <Polish>Magazynek 5,56 mm 30rd Smugacz IR-DIM</Polish>
             <Czech>5.56 mm 30náb. Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis traçantes IR-DIM de 5,56 mm</Portuguese>
-            <Italian>Caricatore 5.56 mm 30rnd Traccianti IR-DIM</Italian>
+            <Italian>Caricatore 5.56 mm 30cp Traccianti IR-DIM</Italian>
             <Russian>Магазин из 30-ти 5,56 мм ИК-трассирующих</Russian>
             <Japanese>5.56mm 30Rnd IR-DIM トレーサー マガジン</Japanese>
             <Korean>30발 들이 5.56mm IR-DIM 예광탄 탄창</Korean>
@@ -972,7 +972,7 @@
             <Polish>Kaliber: 5,56x45 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Polish>
             <Czech>Ráže: 5.56x45 mm Svítící IR-DIM&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použití u: CTAR-21, TAR-21, F2000, RFB SDAR</Czech>
             <Portuguese>Calibre: 5,56x45 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Portuguese>
-            <Italian>Calibro: 5.56x45 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
+            <Italian>Calibro: 5.56x45 mm Tracciante IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
             <Russian>Калибр: 5,56x45 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
             <Japanese>口径: 5.56x45 mm IR-DIM トレーサー&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Japanese>
             <Korean>구경: 5.56x45 mm IR-DIM 예광탄&lt;br/&gt;장탄수: 30&lt;br/&gt;사용처: CTAR-21, TAR-21/GTAR-21 EGLM, F2000/택티컬/EGLM, SDAR</Korean>
@@ -990,7 +990,7 @@
             <Polish>Magazynek 7,62 mm 20rd Smugacz</Polish>
             <Czech>7.62 mm 20náb. Svítící Zásobník</Czech>
             <Portuguese>Carregador de 20 projéteis traçantes de 7,62 mm</Portuguese>
-            <Italian>Caricatore 7.62 mm 20Rnd Traccianti</Italian>
+            <Italian>Caricatore 7.62 mm 20cp Traccianti</Italian>
             <Russian>Магазин из 20-ти 7,62 мм трассирующих</Russian>
             <Japanese>7.62mm 20Rnd マガジン (トレーサー)</Japanese>
             <Korean>20발 들이 7.62mm 예광탄 탄창</Korean>
@@ -1007,7 +1007,7 @@
             <Polish>7,62 mm Smugacz</Polish>
             <Czech>7.62 mm Svítící</Czech>
             <Portuguese>7,62 mm Traçante</Portuguese>
-            <Italian>7.62 mm Traccianti</Italian>
+            <Italian>7.62 mm Tracciante</Italian>
             <Russian>7,62 мм трассирущие</Russian>
             <Japanese>7.62 mm トレーサー</Japanese>
             <Korean>7.62mm 예광탄</Korean>
@@ -1024,7 +1024,7 @@
             <Polish>Kaliber: 7,62x51 mm Smugacz&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51 mm Svítící&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51 mm Traçante&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
-            <Italian>Calibro: 7.62x51 mm Traccianti&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Italian>Calibro: 7.62x51 mm Tracciante&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
             <Russian>Калибр: 7,62x51 мм трассирующие&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
             <Japanese>口径: 7.62x51 mm トレーサー&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
             <Korean>구경: 7.62x51mm 예광탄&lt;br/&gt;장탄수: 20&lt;br/&gt;사용처: Mk.14 Mod 1 EBR</Korean>
@@ -1041,7 +1041,7 @@
             <Polish>Magazynek 7,62 mm 20rd Smugacz IR-DIM</Polish>
             <Czech>7.62 mm 20náb. Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 20 projéteis IR-DIM de 7,62 mm</Portuguese>
-            <Italian>Caricatore 7.62 mm 20rnd Traccianti IR-DIM</Italian>
+            <Italian>Caricatore 7.62 mm 20cp Traccianti IR-DIM</Italian>
             <Russian>Магазин из 20-ти 7,62 мм ИК-трассирующих</Russian>
             <Japanese>7.62mm 20Rnd マガジン (IR-DIM)</Japanese>
             <Korean>20발 들이 7.62mm IR-DIM 예광탄 탄창</Korean>
@@ -1092,7 +1092,7 @@
             <Polish>Magazynek 7,62 mm 20rd SD</Polish>
             <Czech>7.62 mm 20náb. SD Zásobník</Czech>
             <Portuguese>Carregador de 20 projéteis SD de 7,62 mm</Portuguese>
-            <Italian>Caricatore 7.62 mm 20Rnd Sil.</Italian>
+            <Italian>Caricatore 7.62 mm 20cp Sil.</Italian>
             <Russian>Магазин из 20-ти 7,62 мм дозвуковых</Russian>
             <Japanese>7.62mm 20Rnd マガジン (亜音速弾)</Japanese>
             <Korean>20발 들이 7.62mm 아음속탄 탄창</Korean>
@@ -1143,7 +1143,7 @@
             <Polish>Magazynek 7,62 mm 10rd Smugacz</Polish>
             <Czech>7.62 mm 10náb. Svítící Zásobník</Czech>
             <Portuguese>Carregador de 10 projéteis traçantes de 7,62 mm</Portuguese>
-            <Italian>Caricatore 7.62 mm 10Rnd Traccianti</Italian>
+            <Italian>Caricatore 7.62 mm 10cp Traccianti</Italian>
             <Russian>Магазин из 10-ти 7,62 мм трассирующих</Russian>
             <Japanese>7.62mm 10Rnd マガジン (トレーサー)</Japanese>
             <Korean>10발 들이 7.62mm 예광탄 탄창</Korean>
@@ -1160,7 +1160,7 @@
             <Polish>7,62 mm Smugacz</Polish>
             <Czech>7.62 mm Svítící</Czech>
             <Portuguese>7,62 mm Traçante</Portuguese>
-            <Italian>7.62 mm Traccianti</Italian>
+            <Italian>7.62 mm Tracciante</Italian>
             <Russian>7,62 мм трассирущие</Russian>
             <Japanese>7.62 mm トレーサー</Japanese>
             <Korean>7.62mm 예광탄</Korean>
@@ -1177,7 +1177,7 @@
             <Polish>Kaliber: 7,62x51 mm Smugacz&lt;br /&gt;Pociski: 10&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51 mm Svítící&lt;br /&gt;Nábojů: 10&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51 mm Traçante&lt;br /&gt;Projéteis: 10&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
-            <Italian>Calibro: 7.62x51 mm Traccianti&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Italian>Calibro: 7.62x51 mm Tracciante&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Mk18 ABR</Italian>
             <Russian>Калибр: 7,62x51 мм трассирующие&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Mk18 ABR</Russian>
             <Japanese>口径: 7.62x51 mm トレーサー&lt;br /&gt;装填数: 10&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
             <Korean>구경: 7.62x51mm 예광탄&lt;br/&gt;장탄수: 10&lt;br/&gt;사용처: Mk.14 Mod 1 EBR</Korean>
@@ -1194,7 +1194,7 @@
             <Polish>Magazynek 7,62 mm 10rd Smugacz IR-DIM</Polish>
             <Czech>7.62 mm 10náb. Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 10 projéteis IR-DIM de 7,62 mm</Portuguese>
-            <Italian>Caricatore 7.62 mm 10rnd Traccianti IR-DIM</Italian>
+            <Italian>Caricatore 7.62 mm 10cp Traccianti IR-DIM</Italian>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
             <Japanese>7.62mm 10Rnd マガジン (IR-DIM)</Japanese>
             <Korean>10발 들이 7.62mm IR-DIM 예광탄 탄창</Korean>
@@ -1228,7 +1228,7 @@
             <Polish>Kaliber: 7,62x51 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 10&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51 mm Svítící IR-DIM&lt;br /&gt;Nábojů: 10&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 10&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
-            <Italian>Calibro: 7.62x51 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Italian>Calibro: 7.62x51 mm Tracciante IR-DIM&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Mk18 ABR</Italian>
             <Russian>Калибр: 7,62x51 мм ИК-трассирующие&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Mk18 ABR</Russian>
             <Japanese>口径: 7.62x51 mm IR-DIM トレーサー&lt;br /&gt;装填数: 10&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
             <Korean>구경: 7.62x51mm IR-DIM 예광탄&lt;br/&gt;장탄수: 10&lt;br/&gt;사용처: Mk.14 Mod 1 EBR</Korean>
@@ -1245,7 +1245,7 @@
             <Polish>Magazynek 7,62 mm 10rd SD</Polish>
             <Czech>7.62 mm 10náb. SD Zásobník</Czech>
             <Portuguese>Carregador de 10 projéteis SD de 7,62 mm</Portuguese>
-            <Italian>Caricatore 7.62 mm 10Rnd Sil.</Italian>
+            <Italian>Caricatore 7.62 mm 10cp Sil.</Italian>
             <Russian>Магазин из 10-ти 7,62 мм дозвуковых</Russian>
             <Japanese>7.62mm 10Rnd マガジン (亜音速弾)</Japanese>
             <Korean>10발 들이 7.62mm 아음속탄 탄창</Korean>
@@ -1295,7 +1295,7 @@
             <French>Bande .338 NM 130Cps Traçantes</French>
             <Spanish>Cinta de 130 balas trazadoras de .338 NM</Spanish>
             <Russian>Лента из 130-ти .338 NM трассирующих</Russian>
-            <Italian>.338 NM 130Rnd Tracciante Belt</Italian>
+            <Italian>.338 NM 130cp Nastro Tracciante</Italian>
             <Czech>.338 NM 130náb. Svítící Pás </Czech>
             <Portuguese>Cinto de munição .338 NM com 130 cartuchos</Portuguese>
             <Hungarian>.338 NM 130-lövedékes nyomkövető heveder</Hungarian>
@@ -1313,7 +1313,7 @@
             <French>.338 NM Traçante</French>
             <Spanish>.338 NM Trazadora</Spanish>
             <Russian>.338 NM трассирующие</Russian>
-            <Italian>.338 NM 130Rnd Tracciante</Italian>
+            <Italian>.338 NM 130cp Traccianti</Italian>
             <Portuguese>.338 NM Traçante</Portuguese>
             <Hungarian>.338 NM nyomkövető</Hungarian>
             <Japanese>.338 NM トレーサー</Japanese>
@@ -1346,7 +1346,7 @@
             <French>Bande .338 NM 130Cps IR-DIM</French>
             <Spanish>Cinta de 130 balas IR-DIM de .338 NM</Spanish>
             <Russian>Лента из 130-ти .338 NM ИК-трассирующих</Russian>
-            <Italian>.338 NM 130Rnd IR-DIM Belt</Italian>
+            <Italian>.338 NM 130cp Nastro IR-DIM</Italian>
             <Czech>.338 NM 130náb. IR-DIM Pás</Czech>
             <Portuguese>Cinto de munição traçante .338 NM IR-DIM com 130 cartuchos</Portuguese>
             <Hungarian>.338 NM 130-lövedékes infravörös nyomkövető heveder</Hungarian>
@@ -1397,7 +1397,7 @@
             <French>Bande .338 NM 130Cps AP</French>
             <Spanish>Cinta de 130 balas AP de .338 NM</Spanish>
             <Russian>Лента из 130-ти .338 NM бронебойных</Russian>
-            <Italian>.338 NM 130Rnd AP Belt</Italian>
+            <Italian>.338 NM 130cp Nastro AP</Italian>
             <Czech>.338 NM 130náb. AP Pás</Czech>
             <Portuguese>Cinto de munição .338 NM  com 130 cartuchos AP</Portuguese>
             <Hungarian>.338 NM 130-lövedékes páncéltörő heveder</Hungarian>
@@ -1449,7 +1449,7 @@
             <French>Ch. 9,3 mm 10Cps Traçantes</French>
             <Spanish>Cargador de 10 balas trazadoras de 9.3 mm</Spanish>
             <Russian>Магазин из 10-ти 9,3 мм трассирующих</Russian>
-            <Italian>9.3 mm 10Rnd Tracer Mag</Italian>
+            <Italian>9.3 mm 10cp Traccianti</Italian>
             <Czech>9.3 mm 10náb. Svítící Zásobník</Czech>
             <Portuguese>Carregador de 10 cartuchos 9.3 mm traçantes </Portuguese>
             <Hungarian>9,3 mm 10-lövedékes nyomkövető tár</Hungarian>
@@ -1467,7 +1467,7 @@
             <French>9,3 mm Traçante</French>
             <Spanish>9.3 mm Trazadora</Spanish>
             <Russian>9,3 мм трассирующие</Russian>
-            <Italian>9.3 mm Tracer</Italian>
+            <Italian>9.3 mm Tracciante</Italian>
             <Portuguese>9.3 mm Traçante</Portuguese>
             <Hungarian>9,3 mm nyomkövető</Hungarian>
             <Japanese>9.3 mm トレーサー</Japanese>
@@ -1483,7 +1483,7 @@
             <French>Calibre: 9,3x64 mm Traçante&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé avec: Cyrus</French>
             <Spanish>Calibre: 9.3x64 mm trazadora&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Cyrus</Spanish>
             <Russian>Калибр: 9,3x64 мм трассирующие&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Cyrus</Russian>
-            <Italian>Calibro: 9.3x64 mm Tracer&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Cyrus</Italian>
+            <Italian>Calibro: 9.3x64 mm Tracciante&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Cyrus</Italian>
             <Czech>Ráže: 9.3x64 mm Svítící&lt;br /&gt;Nábojů: 10&lt;br /&gt;Použití u: Cyrus</Czech>
             <Portuguese>Calibre: 9.3x64 mm Traçante&lt;br /&gt;Cartuchos: 10&lt;br /&gt;Usado em: Cyrus</Portuguese>
             <Hungarian>Kaliber: 9,3x64 mm nyomkövető&lt;br /&gt;Lövedékek: 10&lt;br /&gt;Használható: Cyrus</Hungarian>
@@ -1500,7 +1500,7 @@
             <French>Ch. 9,3 mm 10Cps Traçantes IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 9.3 mm</Spanish>
             <Russian>Магазин из 10-ти 9,3 мм ИК-трассирующих</Russian>
-            <Italian>9.3 mm 10Rnd Tracciante IR-DIM Mag</Italian>
+            <Italian>9.3 mm 10cp Traccianti IR-DIM</Italian>
             <Czech>9.3 mm 10náb. Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 10 cartuchos 9.3 mm traçantes IR-DIM</Portuguese>
             <Hungarian>9,3 mm 10-lövedékes infravörös nyomkövető tár</Hungarian>
@@ -1552,7 +1552,7 @@
             <French>Bande 9,3 mm 150Cps Traçantes</French>
             <Spanish>Cinta de 150 balas trazadoras de 9.3 mm</Spanish>
             <Russian>Лента из 150-ти 9,3 мм трассирующих</Russian>
-            <Italian>9.3 mm 150Rnd Tracer Belt</Italian>
+            <Italian>9.3 mm 150cp Nastro Tracciante</Italian>
             <Czech>9.3 mm 150náb. Svítící Pás</Czech>
             <Portuguese>Cinto de munição traçante 9.3 mm com 150 cartuchos</Portuguese>
             <Hungarian>9,3 mm 150-lövedékes nyomkövető heveder</Hungarian>
@@ -1603,7 +1603,7 @@
             <French>Bande 9,3 mm 150Cps Traçantes IR-DIM</French>
             <Spanish>Cinta de 150 balas trazadoras IR-DIM de 9.3 mm</Spanish>
             <Russian>Лента из 150-ти 9,3 мм ИК-трассирующих</Russian>
-            <Italian>9.3 mm 150Rnd Tracciante IR-DIM Belt</Italian>
+            <Italian>9.3 mm 150cp Nastro Tracciante IR-DIM</Italian>
             <Czech>9.3 mm 150náb. Svítící IR-DIM Pás</Czech>
             <Portuguese>Cinto de munição traçante 9.3 mm IR-DIM com 150 cartuchos</Portuguese>
             <Hungarian>9,3 mm 150-lövedékes infravörös nyomkövető heveder</Hungarian>
@@ -1654,7 +1654,7 @@
             <French>Bande 9,3 mm 150Cps AP</French>
             <Spanish>Cinta de 150 balas AP de 9.3 mm</Spanish>
             <Russian>Лента из 150-ти 9,3 мм бронебойных</Russian>
-            <Italian>9.3 mm 150Rnd AP Belt</Italian>
+            <Italian>9.3 mm 150cp Nastro AP</Italian>
             <Czech>9.3 mm 150náb. AP Pás</Czech>
             <Portuguese>Cinto de munição 9.3 mm AP com 150 cartuchos</Portuguese>
             <Hungarian>9,3 mm 150-lövedékes páncéltörő heveder</Hungarian>
@@ -1705,7 +1705,7 @@
             <Spanish>Cargador de 16 balas de 9x19 mm</Spanish>
             <Russian>Магазин из 16-ти 9х19 мм</Russian>
             <German>9x19 mm 20-Patronen-Magazin</German>
-            <Italian>9x19 mm 16Rnd Mag</Italian>
+            <Italian>9x19 mm 16cp Car</Italian>
             <Czech>9x19 mm 16náb. Zásobník</Czech>
             <Portuguese>Carregador de 16 cartuchos 9x19 mm</Portuguese>
             <Hungarian>9x19 mm 16-lövedékes tár</Hungarian>
@@ -1739,7 +1739,7 @@
             <Spanish>Cargador de 16 balas de 9x19 mm</Spanish>
             <Russian>Магазин из 16-ти 9х19 мм</Russian>
             <German>9x19 mm 30-Patronen-Magazin</German>
-            <Italian>9x19 mm 30Rnd Mag</Italian>
+            <Italian>9x19 mm 30cp Car</Italian>
             <Czech>9x19 mm 30náb. Zásobník</Czech>
             <Portuguese>Carregador de 16 cartuchos 9x19 mm</Portuguese>
             <Hungarian>9x19 mm 16-lövedékes tár</Hungarian>
@@ -1756,7 +1756,7 @@
             <Spanish>Cargador de 30 balas de 9x19 mm</Spanish>
             <Russian>Магазин из 30-ти 9х19 мм</Russian>
             <German>9x19 mm 30-Patronen-Magazin</German>
-            <Italian>9x19 mm 30Rnd Mag</Italian>
+            <Italian>9x19 mm 30cp Car</Italian>
             <Czech>9x19 mm 30náb. Zásobník</Czech>
             <Portuguese>Carregador de 30 cartuchos 9x19 mm</Portuguese>
             <Hungarian>9x19 mm 30-lövedékes tár</Hungarian>
@@ -1790,7 +1790,7 @@
             <Spanish>Cargador de 30 balas de 9x19 mm</Spanish>
             <Russian>Магазин из 30-ти 9х19 мм</Russian>
             <German>9x19 mm 30-Patronen-Magazin</German>
-            <Italian>9x19 mm 30Rnd Mag</Italian>
+            <Italian>9x19 mm 30cp Car</Italian>
             <Czech>9x19 mm 30náb. Zásobník</Czech>
             <Portuguese>Carregador de 30 cartuchos 9x19 mm</Portuguese>
             <Hungarian>9x19 mm 30-lövedékes tár</Hungarian>
@@ -1807,7 +1807,7 @@
             <Spanish>Cargador de 10 balas trazadoras de 7.62x54 mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм трассирующих</Russian>
             <German>7,62x54 mm 10-Patronen-Magazin Leuchtspur</German>
-            <Italian>7.62x54 mm 10Munizioni Traccianti Mag</Italian>
+            <Italian>7.62x54 mm 10cp Traccianti</Italian>
             <Czech>7.62x54 mm 10náb. Svítící Zásobník</Czech>
             <Portuguese>Carregador com 10 cartuchos 7.62x54 mm Traçante</Portuguese>
             <Hungarian>7,62x54 mm 10-lövedékes nyomkövető tár</Hungarian>
@@ -1824,7 +1824,7 @@
             <Spanish>trazadoras</Spanish>
             <Russian>трассирующих</Russian>
             <German>Leuchtspur</German>
-            <Italian>Traccianti</Italian>
+            <Italian>Tracciante</Italian>
             <Czech>Svítící</Czech>
             <Portuguese>Traçante</Portuguese>
             <Hungarian>nyomkövető</Hungarian>
@@ -1841,7 +1841,7 @@
             <Spanish>Cargador de 10 balas trazadoras de 7.62x54 mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм трассирующих</Russian>
             <German>7,62x54 mm 10-Patronen-Magazin Leuchtspur</German>
-            <Italian>7.62x54 mm 10Munizioni Traccianti Mag</Italian>
+            <Italian>7.62x54 mm 10cp Traccianti</Italian>
             <Czech>7.62x54 mm 10náb. Svítící Zásobník</Czech>
             <Portuguese>Carregador com 10 cartuchos 7.62x54 mm Traçante</Portuguese>
             <Hungarian>7,62x54 mm 10-lövedékes nyomkövető tár</Hungarian>
@@ -1858,7 +1858,7 @@
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5 mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
             <German>6,5 mm 100-Patronen-Magazin IR-DIM Leuchtspur</German>
-            <Italian>6.5 mm 100Munizioni Traccianti IR-DIM Mag</Italian>
+            <Italian>6.5 mm 100cp Traccianti IR-DIM</Italian>
             <Czech>6.5 mm 100náb. Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador com 100 cartuchos 6.5 mm IR-DIM Traçante</Portuguese>
             <Hungarian>6,5 mm 100-lövedékes infravörös nyomkövető tár</Hungarian>
@@ -1892,7 +1892,7 @@
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5 mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
             <German>6,5 mm 100-Patronen-Magazin IR-DIM Leuchtspur&lt;br /&gt;Patronen: 100&lt;br /&gt;Eingesetzt von: MXLSW</German>
-            <Italian>6.5 mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Munizioni: 100&lt;br /&gt;In uso su: MX LSW</Italian>
+            <Italian>6.5 mm 100cp Traccianti IR-DIM Car&lt;br /&gt;Munizioni: 100&lt;br /&gt;In uso su: MX LSW</Italian>
             <Czech>6.5 mm 100náb. Svítící IR-DIM Zásobník&lt;br /&gt;Nábojů: 100&lt;br /&gt;Použití u: MX LSW</Czech>
             <Portuguese>Carregador 6.5 mm 100 Cartuchos Traçantes IR-DIM&lt;br /&gt;Cartuchos: 100&lt;br /&gt;Usado em: MX LSW</Portuguese>
             <Hungarian>6.5 mm 100-lövedékes infravörös nyomkövető tár&lt;br /&gt;Lövedékek: 100&lt;br /&gt;Használható: MX LSW</Hungarian>
@@ -1909,7 +1909,7 @@
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5 mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5 mm 200-Patronen-Gurt IR-DIM Leuchtspur</German>
-            <Italian>6.5 mm 200Rnd Belt Tracer (IR-DIM)</Italian>
+            <Italian>6.5 mm 200cp Nastro Tracciante (IR-DIM)</Italian>
             <Czech>6.5 mm 200náb. Svítící IR-DIM Pás</Czech>
             <Portuguese>Cinto de munição traçante 6.5 mm IR-DIM com 200 cartuchos</Portuguese>
             <Hungarian>6,5 mm 200-lövedékes infravörös nyomkövető heveder</Hungarian>
@@ -1943,7 +1943,7 @@
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5 mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5 mm 200-Patronen-Gurt IR-DIM Leuchtspur&lt;br /&gt;Patronen: 200&lt;br /&gt;Eingesetzt von: Stoner 99 LMG</German>
-            <Italian>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Munizioni: 200&lt;br /&gt;In uso su: Stoner 99 LMG</Italian>
+            <Italian>6.5 mm 200cp Nastro Tracciante (IR-DIM)&lt;br /&gt;Munizioni: 200&lt;br /&gt;In uso su: Stoner 99 LMG</Italian>
             <Czech>6.5 mm 200náb. Svítící IR-DIM Pás&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použití u: Stoner 99 LMG</Czech>
             <Portuguese>Cinto de munição traçante 6.5 mm IR-DIM com 200 cartuchos&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usado em: Stoner 99 LMG</Portuguese>
             <Hungarian>6.5 mm 200-lövedékes infravörös nyomkövető heveder&lt;br /&gt;Lövedékek: 200&lt;br /&gt;Használható: Stoner 99 LMG</Hungarian>
@@ -1960,7 +1960,7 @@
             <Spanish>Cargador de 30 balas de 5.56 mm (Mk262)</Spanish>
             <Russian>Магазин из 30-ти 5.56 мм Mk262</Russian>
             <German>5,56 mm 30-Patronen-Magazin (Mk262)</German>
-            <Italian>5.56 mm 30Rnd Mag (Mk262)</Italian>
+            <Italian>5.56 mm 30cp Car (Mk262)</Italian>
             <Czech>5.56 mm 30náb. Zásobník (Mk262)</Czech>
             <Portuguese>Carregador 5.56 mm com 30 cartuchos (Mk262)</Portuguese>
             <Hungarian>5,56 mm 30-lövedékes tár (Mk262)</Hungarian>
@@ -2011,7 +2011,7 @@
             <Spanish>Cargador de 30 balas de 5.56 mm (Mk318)</Spanish>
             <Russian>Магазин из 30-ти 5.56 мм (Mk318)</Russian>
             <German>5,56 mm 30-Patronen-Magazin (Mk318)</German>
-            <Italian>5.56 mm 30Rnd Mag (Mk318)</Italian>
+            <Italian>5.56 mm 30cp Car (Mk318)</Italian>
             <Czech>5.56 mm 30Rnd Zásobník (Mk318)</Czech>
             <Portuguese>Carregador 5.56 mm com 30 cartuchos (Mk318)</Portuguese>
             <Hungarian>5,56 mm 30-lövedékes tár (Mk318)</Hungarian>
@@ -2062,7 +2062,7 @@
             <Spanish>Cargador de 30 balas de 5.56 mm (M995 AP)</Spanish>
             <Russian>Магазин из 30-ти 5.56 мм (M995 бронебойные)</Russian>
             <German>5,56 mm 30-Patronen-Magazin (M995AP)</German>
-            <Italian>5.56 mm 30Rnd Mag (M995 AP)                 </Italian>
+            <Italian>5.56 mm 30cp Car (M995 AP)</Italian>
             <Czech>5.56 mm 30náb. Zásobník (M995 AP)</Czech>
             <Portuguese>Carregador 5.56 mm com 30 cartuchos (M995 AP)</Portuguese>
             <Hungarian>5,56 mm 30-lövedékes tár (M995 páncéltörő)</Hungarian>
@@ -2113,7 +2113,7 @@
             <Spanish>Cargador de 10 balas de 7.62 mm (M118LR)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (M118LR)</Russian>
             <German>7,62 mm 10-Patronen-Magazin (M118LR)</German>
-            <Italian>7.62 mm 10Rnd Mag (M118LR)</Italian>
+            <Italian>7.62 mm 10cp Car (M118LR)</Italian>
             <Czech>7.62 mm 10náb. Zásobník (M118LR)</Czech>
             <Portuguese>Carregador 7.62 mm com 10 cartuchos (M118LR)</Portuguese>
             <Hungarian>7,62 mm 10-lövedékes tár (M118LR)</Hungarian>
@@ -2164,7 +2164,7 @@
             <Spanish>Cargador de 20 balas de 7.62 mm (M118LR)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (M118LR)</Russian>
             <German>7,62 mm 20-Patronen-Magazin (M118LR)</German>
-            <Italian>7.62 mm 20Rnd Mag (M118LR)</Italian>
+            <Italian>7.62 mm 20cp Car (M118LR)</Italian>
             <Czech>7.62 mm 20náb. Zásobník (M118LR)</Czech>
             <Portuguese>Carregador 7.62 mm com 20 cartuchos (M118LR)</Portuguese>
             <Hungarian>7,62 mm 20-lövedékes tár (M118LR)</Hungarian>
@@ -2215,7 +2215,7 @@
             <Spanish>Cargador de 10 balas de 7.62 mm (Mk316 Mod 0)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (Mk316 Mod 0)</Russian>
             <German>7,62 mm 10-Patronen-Magazin (Mk316 Mod 0)</German>
-            <Italian>7.62 mm 10Rnd Mag (Mk316 Mod 0)</Italian>
+            <Italian>7.62 mm 10cp Car (Mk316 Mod 0)</Italian>
             <Czech>7.62 mm 10náb. Zásobník (Mk316 Mod 0)</Czech>
             <Portuguese>Carregador 7.62 mm com 10 cartuchos (Mk316 Mod 0)</Portuguese>
             <Hungarian>7,62 mm 10-lövedékes tár (Mk316 Mod 0)</Hungarian>
@@ -2266,7 +2266,7 @@
             <Spanish>Cargador de 20 balas de 7.62 mm (Mk316 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk316 Mod 0)</Russian>
             <German>7,62 mm 20-Patronen-Magazin (Mk316 Mod 0)</German>
-            <Italian>7.62 mm 20Rnd Mag (Mk316 Mod 0)</Italian>
+            <Italian>7.62 mm 20cp Car (Mk316 Mod 0)</Italian>
             <Czech>7.62 mm 20náb. Zásobník (Mk316 Mod 0)</Czech>
             <Portuguese>Carregador 7.62 mm com 20 cartuchos (Mk316 Mod 0)</Portuguese>
             <Hungarian>7,62 mm 20-lövedékes tár (Mk316 Mod 0)</Hungarian>
@@ -2317,7 +2317,7 @@
             <Spanish>Cargador de 10 balas de 7.62 mm (Mk319 Mod 0)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (Mk319 Mod 0)</Russian>
             <German>7,62 mm 10-Patronen-Magazin (Mk319 Mod 0)</German>
-            <Italian>7.62 mm 10Rnd Mag (Mk319 Mod 0)</Italian>
+            <Italian>7.62 mm 10cp Car (Mk319 Mod 0)</Italian>
             <Czech>7.62 mm 10náb. Zásobník (Mk319 Mod 0)</Czech>
             <Portuguese>Carregador 7.62 mm com 10 cartuchos (Mk319 Mod 0)</Portuguese>
             <Hungarian>7,62 mm 10-lövedékes tár (Mk319 Mod 0)</Hungarian>
@@ -2368,7 +2368,7 @@
             <Spanish>Cargador de 20 balas de 7.62 mm (Mk319 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk319 Mod 0)</Russian>
             <German>7,62 mm 20-Patronen-Magazin (Mk319 Mod 0)</German>
-            <Italian>7.62 mm 20Rnd Mag (Mk319 Mod 0)</Italian>
+            <Italian>7.62 mm 20cp Car (Mk319 Mod 0)</Italian>
             <Czech>7.62 mm 20náb. Zásobník (Mk319 Mod 0)</Czech>
             <Portuguese>Carregador 7.62 mm com 20 cartuchos (Mk319 Mod 0)</Portuguese>
             <Hungarian>7,62 mm 20-lövedékes tár (Mk319 Mod 0)</Hungarian>
@@ -2419,7 +2419,7 @@
             <Spanish>Cargador de 10 balas de 7.62 mm (M993 AP)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (M993 бронебойные)</Russian>
             <German>7,62 mm 10-Patronen-Magazin (M993 AP)</German>
-            <Italian>7.62 mm 10Rnd Mag (M993 AP)</Italian>
+            <Italian>7.62 mm 10cp Car (M993 AP)</Italian>
             <Czech>7.62 10náb. Zásobník (M993 AP)</Czech>
             <Portuguese>Carregador 7.62 mm com 10 cartuchos (M993 AP)</Portuguese>
             <Hungarian>7,62 mm 10-lövedékes tár (M993 páncéltörő)</Hungarian>
@@ -2470,7 +2470,7 @@
             <Spanish>Cargador de 20 balas de 7.62 mm (M993 AP)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (M993 бронебойные)</Russian>
             <German>7,62 mm 20-Patronen-Magazin (M993 AP)</German>
-            <Italian>7.62 mm 20Rnd Mag (M993 AP)</Italian>
+            <Italian>7.62 mm 20cp Car (M993 AP)</Italian>
             <Czech>7.62 mm 20náb. Zásobník (M993 AP)</Czech>
             <Portuguese>Carregador 7.62 mm com 20 cartuchos (M993 AP)</Portuguese>
             <Hungarian>7,62 mm 20-lövedékes tár (M993 páncéltörő)</Hungarian>
@@ -2521,7 +2521,7 @@
             <Spanish>Cargador de 20 balas de .300 WM (Mk248 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти .300 WM (Mk248 Mod 0)</Russian>
             <German>.300 WM 20-Patronen-Magazin (Mk248 Mod 0)</German>
-            <Italian>.300 WM 20Rnd Mag (Mk248 Mod 0)</Italian>
+            <Italian>.300 WM 20cp Car (Mk248 Mod 0)</Italian>
             <Czech>.300 WM 20náb. Zásobník (Mk248 Mod 0)</Czech>
             <Portuguese>Carregador .300 WM com 20 cartuchos (Mk248 Mod 0)</Portuguese>
             <Hungarian>.300 WM 20-lövedékes tár (Mk248 Mod 0)</Hungarian>
@@ -2572,7 +2572,7 @@
             <Spanish>Cargador de 20 balas de .300 WM (Mk248 Mod 1)</Spanish>
             <Russian>Магазин из 20-ти .300 WM (Mk248 Mod 1)</Russian>
             <German>.300 WM 20-Patronen-Magazin (Mk248 Mod 1)</German>
-            <Italian>.300 WM 20Rnd Mag (Mk248 Mod 1)</Italian>
+            <Italian>.300 WM 20cp Car (Mk248 Mod 1)</Italian>
             <Czech>.300 WM 20náb. Zásobník (Mk248 Mod 1)</Czech>
             <Portuguese>Carregador .300 WM com 20 cartuchos (Mk248 Mod 1)</Portuguese>
             <Hungarian>.300 WM 20-lövedékes tár (Mk248 Mod 1)</Hungarian>
@@ -2623,7 +2623,7 @@
             <Spanish>Cargador de 20 balas de .300 WM (Berger Hybrid OTM)</Spanish>
             <Russian>Магазин из 20-ти .300 WM (Berger Hybrid OTM)</Russian>
             <German>.300 WM 20-Patronen-Magazin (Berger Hybrid OTM)</German>
-            <Italian>.300 WM 20Rnd Mag (Berger Hybrid OTM)</Italian>
+            <Italian>.300 WM 20cp Car (Berger Hybrid OTM)</Italian>
             <Czech>.300 WM 20náb. Zásobník (Berger Hybrid OTM)</Czech>
             <Portuguese>Carregador .300 WM com 20 cartuchos (Berger Hybrid OTM)</Portuguese>
             <Hungarian>.300 WM 20-lövedékes tár (Berger Hybrid OTM)</Hungarian>
@@ -2674,7 +2674,7 @@
             <Spanish>Cargador de 10 balas de .300 WM (Mk248 Mod 0)</Spanish>
             <Russian>Магазин из 10-ти .300 WM (Mk248 Mod 0)</Russian>
             <German>.300 WM 10-Patronen-Magazin (Mk248 Mod 0)</German>
-            <Italian>.300 WM 10Rnd Mag (Mk248 Mod 0)</Italian>
+            <Italian>.300 WM 10cp Car (Mk248 Mod 0)</Italian>
             <Czech>.300 WM 10náb. Zásobník (Mk248 Mod 0)</Czech>
             <Portuguese>Carregador .300 WM com 10 cartuchos (Mk248 Mod 0)</Portuguese>
             <Hungarian>.300 WM 10-lövedékes tár (Mk248 Mod 0)</Hungarian>
@@ -2725,7 +2725,7 @@
             <Spanish>Cargador de 10 balas de .300 WM (Mk248 Mod 1)</Spanish>
             <Russian>Магазин из 10-ти .300 WM (Mk248 Mod 1)</Russian>
             <German>.300 WM 10-Patronen-Magazin (Mk248 Mod 1)</German>
-            <Italian>.300 WM 10Rnd Mag (Mk248 Mod 1)</Italian>
+            <Italian>.300 WM 10cp Car (Mk248 Mod 1)</Italian>
             <Czech>.300 WM 10náb. Zásobník (Mk248 Mod 1)</Czech>
             <Portuguese>Carregador .300 WM com 10 cartuchos (Mk248 Mod 1)</Portuguese>
             <Hungarian>.300 WM 10-lövedékes tár (Mk248 Mod 1)</Hungarian>
@@ -2776,7 +2776,7 @@
             <Spanish>Cargador de 10 balas de .300 WM (Berger Hybrid OTM)</Spanish>
             <Russian>Магазин из 10-ти .300 WM (Berger Hybrid OTM)</Russian>
             <German>.300 WM 10-Patronen-Magazin (Berger Hybrid OTM)</German>
-            <Italian>.300 WM 10Rnd Mag (Berger Hybrid OTM)</Italian>
+            <Italian>.300 WM 10cp Car (Berger Hybrid OTM)</Italian>
             <Czech>.300 WM 10náb. Zásobník (Berger Hybrid OTM)</Czech>
             <Portuguese>Carregador .300 WM com 10 cartuchos (Berger Hybrid OTM)</Portuguese>
             <Hungarian>.300 WM 10-lövedékes tár (Berger Hybrid OTM)</Hungarian>
@@ -2825,6 +2825,7 @@
             <Japanese>6.5x47mm 30Rnd（砂色）マガジン (HPBT Scenar)</Japanese>
             <French>Ch. 6,5x47 mm 30Cps Sable (HPBT Scenar)</French>
             <German>6.5x47 mm 30-Patronen-Magazin Sandfarben (HPBT Scenar)</German>
+            <Italian>6.5x47 mm 30cp Sabbia (HPBT Scenar)</Italian>
             <Polish>Magazynek 6.5x47 mm 30rd Piaskowy (HPBT Scenar)</Polish>
             <Chinesesimp>6.5x47 mm 30发 沙色弹匣（HPBT Scenar）</Chinesesimp>
             <Korean>6.5x47mm 30발 사막 탄창 (HPBT Scenar)</Korean>
@@ -2837,6 +2838,7 @@
             <Japanese>6.5x47 mm 30Rnd Promet マガジン (HPBT Scenar)</Japanese>
             <French>Ch. 6,5x47 mm 30Cps Promet (HPBT Scenar)</French>
             <German>6.5x47 mm 30-Patronen-Magazin für Promet (HPBT Scenar)</German>
+            <Italian>6.5x47 mm 30cp Car Promet (HPBT Scenar)</Italian>
             <Polish>Magazynek 6.5x47 mm 30rd Promet (HPBT Scenar)</Polish>
             <Chinesesimp>6.5x47 mm 30发 Promet 弹匣（HPBT Scenar）</Chinesesimp>
             <Korean>6.5x47mm 30발 그롯 탄창 (HPBT Scenar)</Korean>
@@ -2849,6 +2851,7 @@
             <Japanese>6.5x47mm 30Rnd（黒）マガジン (HPBT Scenar)</Japanese>
             <French>Ch. 6,5x47 mm 30Cps Noir (HPBT Scenar)</French>
             <German>6.5x47 mm 30-Patronen-Magazin Schwarz (HPBT Scenar)</German>
+            <Italian>6.5x47 mm 30cp Car Nero (HPBT Scenar)</Italian>
             <Polish>Magazynek 6.5x47 mm 30rd Czarny (HPBT Scenar)</Polish>
             <Chinesesimp>6.5x47 mm 30发 黑色弹匣（HPBT Scenar）</Chinesesimp>
             <Korean>6.5x47mm 30발 검정 탄창 (HPBT Scenar)</Korean>
@@ -2861,6 +2864,7 @@
             <Japanese>6.5x47mm 30Rnd（カーキ）マガジン (HPBT Scenar)</Japanese>
             <French>Ch. 6,5x47 mm 30Cps Kaki (HPBT Scenar)</French>
             <German>6.5x47 mm 30-Patronen-Magazin Khaki (HPBT Scenar)</German>
+            <Italian>6.5x47 mm 30cp Car Cachi (HPBT Scenar)</Italian>
             <Polish>Magazynek 6.5x47 mm 30rd Khaki (HPBT Scenar)</Polish>
             <Chinesesimp>6.5x47 mm 30发 卡其色弹匣（HPBT Scenar）</Chinesesimp>
             <Korean>6.5x47mm 30발 카키 탄창 (HPBT Scenar)</Korean>
@@ -2924,6 +2928,7 @@
             <Japanese>6.5mm 30Rnd クリードモア（砂色）マガジン</Japanese>
             <French>Ch. 6,5 mm Creedmor 30Cps Sable</French>
             <German>6.5 mm Creedmor 30-Patronen-Magazin Sandfarben</German>
+            <Italian>6.5 mm Creedmor 30cp Car Sabbia</Italian>
             <Polish>Magazynek 6.5 mm Creedmor 30Rnd Piaskowy</Polish>
             <Chinesesimp>6.5 mm 30发 沙色弹匣（Creedmor）</Chinesesimp>
             <Korean>6.5mm 크리드무어 30발 사막 탄창</Korean>
@@ -2936,6 +2941,7 @@
             <Japanese>6.5 mm 30Rnd Promet クリードモア・マガジン</Japanese>
             <French>Ch. 6,5 mm Creedmor 30Cps Promet</French>
             <German>6.5 mm Creedmor 30-Patronen-Magazin für Promet</German>
+            <Italian>6.5 mm Creedmor 30cp Car Promet</Italian>
             <Polish>Magazynek 6.5 mm Creedmor 30Rnd Promet</Polish>
             <Chinesesimp>6.5 mm 30发 Promet 弹匣（Creedmor）</Chinesesimp>
             <Korean>6.5mm 크리드무어 30발 프로멧 탄창</Korean>
@@ -2948,6 +2954,7 @@
             <Japanese>6.5mm 30Rnd クリードモア（黒）マガジン</Japanese>
             <French>Ch. 6,5 mm Creedmor 30Cps Noir</French>
             <German>6.5 mm Creedmor 30-Patronen-Magazin Schwarz</German>
+            <Italian>6.5 mm Creedmor 30cp Car Nero</Italian>
             <Polish>Magazynek 6.5 mm Creedmor 30Rnd Czarny</Polish>
             <Chinesesimp>6.5 mm 30发 黑色弹匣（Creedmor）</Chinesesimp>
             <Korean>6.5mm 크리드무어 30발 검정 탄창</Korean>
@@ -2960,6 +2967,7 @@
             <Japanese>6.5mm 30Rnd クリードモア（カーキ）マガジン</Japanese>
             <French>Ch. 6,5 mm Creedmor 30Cps Kaki</French>
             <German>6.5 mm Creedmor 30-Patronen-Magazin Khaki</German>
+            <Italian>6.5 mm Creedmor 30cp Car Cachi</Italian>
             <Polish>Magazynek 6.5 mm Creedmor 30Rnd Khaki</Polish>
             <Chinesesimp>6.5 mm 30发 卡其色弹匣（Creedmor）</Chinesesimp>
             <Korean>6.5mm 크리드무어 30발 카키 탄창</Korean>
@@ -3025,7 +3033,7 @@
             <Polish>Magazynek .338 LM 10rd (300gr Lapua Scenar)</Polish>
             <Russian>Магазин из 10-ти .338 LM (300 гран Lapua Scenar)</Russian>
             <German>.338 LM 10-Patronen-Magazin (300gr Lapua Scenar)</German>
-            <Italian>.338 LM 10Munizioni Mag (300gr Lapua Scenar)</Italian>
+            <Italian>.338 LM 10cp Car (300gr Lapua Scenar)</Italian>
             <Czech>.338 LM 10náb. Zásobník (300gr Lapua Scenar)</Czech>
             <Portuguese>Carregador .338 LM (300gr Lapua Scenar) com 10 cartuchos </Portuguese>
             <Hungarian>.338 LM 10-lövedékes tár (300gr Lapua Scenar)</Hungarian>
@@ -3076,7 +3084,7 @@
             <Polish>Magazynek .338 LM 10rd (API526)</Polish>
             <Russian>Магазин из 10-ти .338 LM (API526)</Russian>
             <German>.338 LM 10-Patronen-Magazin (API526)</German>
-            <Italian>.338 LM 10Rnd Mag (API526)</Italian>
+            <Italian>.338 LM 10cp Car (API526)</Italian>
             <Czech>.338 LM 10náb. Zásobník (API526)</Czech>
             <Portuguese>Carregador .338 LM (API526) com 10 cartuchos </Portuguese>
             <Hungarian>.338 LM 10-lövedékes tár (API526)</Hungarian>
@@ -3127,7 +3135,7 @@
             <Polish>Magazynek .408 7rd (305gr)</Polish>
             <Russian>Магазин из 7-ти .408 (305gr)</Russian>
             <German>.408 7-Patronen-Magazin (305gr)</German>
-            <Italian>.408 7Rnd Mag (305gr)</Italian>
+            <Italian>.408 7cp Car (305gr)</Italian>
             <Czech>.408 7náb. Zásobník (305gr)</Czech>
             <Portuguese>Carregador .408 (305gr) com 7 cartuchos </Portuguese>
             <Hungarian>.408 7-lövedékes tár (305gr)</Hungarian>
@@ -3178,7 +3186,7 @@
             <Polish>Magazynek 12,7x99 mm 5rd</Polish>
             <Russian>Магазин из 5-ти 12,7x99 мм</Russian>
             <German>12,7x99 mm 5-Patronen-Magazin</German>
-            <Italian>12.7x99 mm 5Rnd Mag</Italian>
+            <Italian>12.7x99 mm 5cp Car</Italian>
             <Czech>12.7x99 mm 5náb. Zásobník</Czech>
             <Portuguese>Carregador 12.7x99 mm com 5 cartuchos </Portuguese>
             <Hungarian>12,7x99 mm 5-lövedékes tár</Hungarian>
@@ -3212,7 +3220,7 @@
             <Polish>Magazynek 12,7x99 mm 10rd</Polish>
             <Russian>Магазин из 10-ти 12,7x99 мм</Russian>
             <German>12,7x99 mm 10-Patronen-Magazin</German>
-            <Italian>12.7x99 mm 10Rnd Mag</Italian>
+            <Italian>12.7x99 mm 10cp Car</Italian>
             <Czech>12.7x99 mm 10náb. Zásobník</Czech>
             <Portuguese>Carregador 12.7x99 mm com 10 cartuchos </Portuguese>
             <Hungarian>12,7x99 mm 10-lövedékes tár</Hungarian>
@@ -3261,7 +3269,7 @@
             <French>Ch. 12,7x99 mm API 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99 mm API</Spanish>
             <Polish>Magazynek 12,7x99 mm API 5rd</Polish>
-            <Italian>12.7x99 mm API 5Rnd Mag</Italian>
+            <Italian>12.7x99 mm API 5cp Car</Italian>
             <Russian>Магазин из 5-ти 12,7x99 мм (бронебойно-зажигательные)</Russian>
             <German>12,7x99 mm 5-Patronen-Magazin (API)</German>
             <Czech>12.7x99 mm API 5náb. Zásobník</Czech>
@@ -3295,7 +3303,7 @@
             <French>Ch. 12,7x99 mm API 10Cps</French>
             <Spanish>Cargador de 10 balas de 12.7x99 mm API</Spanish>
             <Polish>Magazynek 12,7x99 mm API 10rd</Polish>
-            <Italian>12.7x99 mm API 10Rnd Mag</Italian>
+            <Italian>12.7x99 mm API 10cp Car</Italian>
             <Russian>Магазин из 10-ти 12,7x99 мм (бронебойно-зажигательные)</Russian>
             <German>12,7x99 mm 10-Patronen-Magazin (API)</German>
             <Czech>12.7x99 mm API 10náb. Zásobník</Czech>
@@ -3331,7 +3339,7 @@
             <Polish>Magazynek 12,7x99 mm 5rd (AMAX)</Polish>
             <Russian>Магазин из 5-ти 12,7x99 мм (A-MAX)</Russian>
             <German>12,7x99 mm 5-Patronen-Magazin (AMAX)</German>
-            <Italian>12.7x99 mm 5Rnd Mag (AMAX)</Italian>
+            <Italian>12.7x99 mm 5cp Car (AMAX)</Italian>
             <Czech>12.7x99 mm 5náb. Zásobník (AMAX)</Czech>
             <Portuguese>Carregador 12.7x99 mm (AMAX) com 5 cartuchos </Portuguese>
             <Hungarian>12,7x99 mm 5-lövedékes tár (AMAX)</Hungarian>
@@ -3365,7 +3373,7 @@
             <Polish>Magazynek 12,7x99 mm 10rd (AMAX)</Polish>
             <Russian>Магазин из 10-ти 12,7x99 мм (A-MAX)</Russian>
             <German>12,7x99 mm 10-Patronen-Magazin (AMAX)</German>
-            <Italian>12.7x99 mm 10Rnd Mag (AMAX)</Italian>
+            <Italian>12.7x99 mm 10cp Car (AMAX)</Italian>
             <Czech>12.7x99 mm 10náb. Zásobník (AMAX)</Czech>
             <Portuguese>Carregador 12.7x99 mm (AMAX) com 10 cartuchos </Portuguese>
             <Hungarian>12,7x99 mm 10-lövedékes tár (AMAX)</Hungarian>
@@ -3436,7 +3444,7 @@
             <French>[ACE] Caisse de munitions</French>
             <Hungarian>[ACE] Lőszeres láda</Hungarian>
             <Russian>[ACE] Ящик с боеприпасами</Russian>
-            <Italian>[ACE] Cassa munizioni</Italian>
+            <Italian>[ACE] Cassa Munizioni</Italian>
             <Japanese>[ACE] 弾薬物資箱</Japanese>
             <Korean>[ACE] 탄약 보급상자</Korean>
             <Chinese>[ACE] 彈藥補給箱</Chinese>
@@ -3481,7 +3489,7 @@
             <Japanese>弾道係数</Japanese>
             <Chinesesimp>弹道系数</Chinesesimp>
             <Chinese>彈道係數</Chinese>
-            <Italian>Coefficente balistico</Italian>
+            <Italian>Coefficiente balistico</Italian>
             <Polish>Współczynnik balistyczny</Polish>
             <Russian>Баллистический коэффициент</Russian>
             <Portuguese>Coeficiente balístico</Portuguese>
@@ -3513,7 +3521,7 @@
             <Japanese>銃口初速</Japanese>
             <Chinesesimp>枪口初速</Chinesesimp>
             <Chinese>槍口初速</Chinese>
-            <Italian>Velocità iniziale</Italian>
+            <Italian>Velocità alla volata</Italian>
             <Polish>Prędkość wylotowa</Polish>
             <Russian>Начальная скорость</Russian>
             <Portuguese>Velocidade de Saída</Portuguese>
@@ -3527,6 +3535,7 @@
             <Japanese>AIの使用</Japanese>
             <Polish>Wykorzystanie przez AI</Polish>
             <German>KI Verwendet</German>
+            <Italian>Utilizzo IA</Italian>
             <Korean>인공지능 사용</Korean>
             <French>Utilisation de l'IA</French>
             <Portuguese>Utilização por IA</Portuguese>
@@ -3536,6 +3545,7 @@
             <Japanese>照明弾</Japanese>
             <Polish>Flary</Polish>
             <German>Leuchtmittel</German>
+            <Italian>Illuminante</Italian>
             <Korean>조명탄</Korean>
             <French>Fusées éclairantes</French>
             <Portuguese>Sinalizadoras</Portuguese>
@@ -3545,6 +3555,7 @@
             <Japanese>発煙弾</Japanese>
             <Polish>Granaty dymne</Polish>
             <German>Rauch</German>
+            <Italian>Fumogeno</Italian>
             <Korean>연막탄</Korean>
             <French>Fumigènes</French>
             <Portuguese>Fumígenas</Portuguese>
@@ -3554,6 +3565,7 @@
             <Japanese>歩兵</Japanese>
             <Polish>Piechota</Polish>
             <German>Infanterie</German>
+            <Italian>Fanti</Italian>
             <Korean>보병</Korean>
             <French>Infanterie</French>
             <Portuguese>Infantaria</Portuguese>
@@ -3563,6 +3575,7 @@
             <Japanese>車両</Japanese>
             <Polish>Pojazdy</Polish>
             <German>Fahrzeug</German>
+            <Italian>Veicoli</Italian>
             <Korean>차량</Korean>
             <French>Véhicule</French>
             <Portuguese>Veículo</Portuguese>
@@ -3572,6 +3585,7 @@
             <Japanese>機甲</Japanese>
             <Polish>Pojazdy opancerzone</Polish>
             <German>Panzerung</German>
+            <Italian>Blidati</Italian>
             <Korean>기갑</Korean>
             <French>Blindage</French>
             <Portuguese>Blindagem</Portuguese>
@@ -3581,6 +3595,7 @@
             <Japanese>航空</Japanese>
             <Polish>Lotnictwo</Polish>
             <German>Luft</German>
+            <Italian>Velivoli</Italian>
             <Korean>항공</Korean>
             <French>Aviation</French>
             <Portuguese>Aeronaves</Portuguese>
