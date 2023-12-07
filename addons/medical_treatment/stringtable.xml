@@ -3684,7 +3684,7 @@
             <Italian>La pressione sanguigna è assente</Italian>
             <Portuguese>Sem Pressão Arterial</Portuguese>
             <Czech>Nenaměřil si žádný krevní tlak</Czech>
-            <Japanese>あなたは血圧がないことを確認した</Japanese>
+            <Japanese>血圧がないことを確認した</Japanese>
             <Korean>혈압이 잡히지 않습니다</Korean>
             <Chinesesimp>血压为零</Chinesesimp>
             <Chinese>量不到血壓</Chinese>
@@ -4327,7 +4327,7 @@
             <Italian>Controlli le vie respiratorie di %1</Italian>
             <Portuguese>Você entuba o %1</Portuguese>
             <Czech>Ošetřuješ dýchací cesty %1</Czech>
-            <Japanese>あなたは %1 の気道を治療した</Japanese>
+            <Japanese>あなたは %1 の気道を処置した</Japanese>
             <Korean>%1의 기도를 확보했다</Korean>
             <Chinesesimp>你正在治疗 %1 的呼吸道</Chinesesimp>
             <Chinese>你治療 %1 的呼吸道</Chinese>
