@@ -6,7 +6,7 @@
         "P:/"
     ],
     "excludeList": [
-        "*.inc.sqf",
+        ".inc.sqf",
         "\\dev\\",
         "common\\functions\\fnc_dummy.sqf",
         "zeus\\functions\\fnc_zeusAttributes.sqf"

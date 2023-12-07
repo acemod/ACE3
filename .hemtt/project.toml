@@ -22,10 +22,8 @@ git_hash = 0
 [asc]
 enabled = true
 exclude = [
-    "/initsettings.inc.sqf",
-    "/initkeybinds.inc.sqf",
+    ".inc.sqf",
     "/dev/",
-    "medical_ai/statemachine.inc.sqf",
     "common/functions/fnc_dummy.sqf",
     "zeus/functions/fnc_zeusAttributes.sqf",
 ]
