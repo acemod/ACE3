@@ -48,7 +48,7 @@ if (_magIsForCurrentWeapon && {["ace_advanced_ballistics"] call EFUNC(common,isM
     private _barrelLengthTable = getArray (_configAmmo >> "ACE_barrelLengths");
     private _abShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
     if (_abShift != 0) then {
-        _abAdjustText = " [AB]",
+        _abAdjustText = " [AB]";
         _muzzleVelocity = _abShift;
     };
 };

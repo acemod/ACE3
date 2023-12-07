@@ -11,6 +11,6 @@ GVAR(captivityEnabled) = false;
 GVAR(restraints) = keys (uiNamespace getVariable QGVAR(restraints));
 GVAR(blindfolds) = keys (uiNamespace getVariable QGVAR(blindfolds));
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

@@ -104,4 +104,4 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 }] call CBA_fnc_addEventHandler;
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"

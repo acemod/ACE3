@@ -19,8 +19,8 @@
             GVAR(nextEffectsUpdate) = -1;
             (missionNamespace getVariable [QGVAR(firedEHs), []]) params [["_firedPlayerID", -1], ["_firedPlayerVehicleID", -1]];
             TRACE_2("removing fired EHs",_firedPlayerID,_firedPlayerVehicleID);
-            ["ace_firedPlayer", _firedPlayerID] call CBA_fnc_removeEventHandler,
-            ["ace_firedPlayerVehicle", _firedPlayerVehicleID] call CBA_fnc_removeEventHandler,
+            ["ace_firedPlayer", _firedPlayerID] call CBA_fnc_removeEventHandler;
+            ["ace_firedPlayerVehicle", _firedPlayerVehicleID] call CBA_fnc_removeEventHandler;
         } else {
             // Start PFH if scaling was previously set to 0
             if ((currentVisionMode ACE_player == 1) && {!GVAR(running)}) then {

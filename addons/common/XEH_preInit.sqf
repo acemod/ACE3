@@ -78,6 +78,6 @@ isHC = !hasInterface && !isDedicated; // deprecated because no tag
 missionNamespace setVariable ["ACE_isHC", ACE_isHC];
 uiNamespace setVariable ["ACE_isHC", ACE_isHC];
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;
