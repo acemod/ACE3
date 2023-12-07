@@ -157,7 +157,7 @@
             <Chinesesimp>启用宙斯导弹挂架菜单</Chinesesimp>
             <Chinese>啟用派龍架選單給宙斯</Chinese>
             <Italian>Abilita Menù Piloni da Zeus</Italian>
-            <Japanese>Zeus でパイロン メニューを有効化</Japanese>
+            <Japanese>Zeusでパイロン メニューを有効化</Japanese>
             <German>Aktiviert Außenlaststationsmenü im Zeus</German>
             <French>Activer le menu des pylônes (Zeus)</French>
             <Polish>Aktywuj Menu Pylonów dla Zeus'a</Polish>
@@ -172,7 +172,7 @@
             <Chinesesimp>允许启用宙斯模组</Chinesesimp>
             <Chinese>允啟使用宙斯模塊</Chinese>
             <Italian>Abilita l'uso dal modulo di Zeus</Italian>
-            <Japanese>Zeus モジュールでパイロン メニューを利用できます。</Japanese>
+            <Japanese>Zeusモジュールでパイロン メニューを利用できるようにします。</Japanese>
             <German>Aktiviert die Nutzung im Zeus</German>
             <French>Permet l'utilisation des modules Zeus.</French>
             <Polish>Aktywuj wykorzystanie modułu zeus'a.</Polish>
@@ -232,7 +232,7 @@
             <Chinesesimp>宙斯模组的导弹挂架已禁用</Chinesesimp>
             <Chinese>宙斯模塊的派龍架設定已被禁用</Chinese>
             <Italian>Il modulo per configurare i piloni da Zeus è disabilitato</Italian>
-            <Japanese>Zeus のパイロン編集を無効化</Japanese>
+            <Japanese>Zeusのパイロン編集を無効化</Japanese>
             <German>Die Konfiguration für das Außenlaststationen ist im Zeus deaktiviert</German>
             <French>Le module de configuration des pylônes est désactivé pour Zeus.</French>
             <Polish>Konfiguracja modułu pylonów jest wyłączona dla zeus'a</Polish>
