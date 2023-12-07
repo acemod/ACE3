@@ -11,17 +11,13 @@ from sqf.exceptions import SQFParserError
 
 addon_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
-files_to_ignore_lower = [
-    x.lower() for x in []
-]
-
 
 def get_files_to_process(basePath):
     arma_files = []
     for (root, _dirs, files) in os.walk(basePath):
         for file in files:
             if file.endswith(".sqf"):
-                if file.endswith(".inc.sqf") or file.lower() in files_to_ignore_lower:
+                if file.endswith(".inc.sqf"):
                     continue
                 filePath = os.path.join(root, file)
                 arma_files.append(filePath)
