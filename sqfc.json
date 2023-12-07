@@ -7,7 +7,6 @@
     ],
     "excludeList": [
         "*.inc.sqf",
-        "xeh_prep.sqf",
         "\\dev\\",
         "common\\functions\\fnc_dummy.sqf",
         "zeus\\functions\\fnc_zeusAttributes.sqf"
