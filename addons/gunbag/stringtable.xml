@@ -26,7 +26,7 @@
             <Japanese>ガンバッグ (タン)</Japanese>
             <Polish>Torba na broń (jasnobrązowa)</Polish>
             <Korean>총가방 (황갈색)</Korean>
-            <Italian>Borsa per Armi (Tan)</Italian>
+            <Italian>Borsa per Armi (Marroncina)</Italian>
             <Chinesesimp>枪袋（黄褐色）</Chinesesimp>
             <Chinese>槍袋 (黃褐色)</Chinese>
             <Portuguese>Bolsa de Arma (Bege)</Portuguese>
@@ -58,7 +58,7 @@
             <Japanese>ガンバッグへ武器を入れる</Japanese>
             <Polish>Włóż broń do torby</Polish>
             <Korean>무기를 총가방에 넣기</Korean>
-            <Italian>Metti l'arma nella borsa per armi</Italian>
+            <Italian>Metti l'arma nella borsa</Italian>
             <Chinesesimp>将武器放置枪袋</Chinesesimp>
             <Chinese>將武器放置槍袋</Chinese>
             <Portuguese>Colocar arma na Bolsa de Arma</Portuguese>
@@ -74,6 +74,7 @@
             <Turkish>Silah çantasında silah değişimi</Turkish>
             <Spanish>Intercambiar arma en funda de arma</Spanish>
             <German>Waffe in Waffentasche tauschen</German>
+            <Italian>Scambia arma nella borsa</Italian>
             <Chinesesimp>交换枪袋中的武器</Chinesesimp>
             <Korean>총가방 안에 있는 무기랑 교환하기</Korean>
             <Portuguese>Trocar arma na Bolsa de Arma</Portuguese>
@@ -87,6 +88,7 @@
             <Turkish>Silah Değiştirmeyi Etkinleştir</Turkish>
             <Spanish>Habilitar cambio de arma</Spanish>
             <German>Aktiviere Tauschen von Waffen</German>
+            <Italian>Abilita Scambio Arma</Italian>
             <Chinesesimp>启用武器互换</Chinesesimp>
             <Korean>무기 교환 활성화</Korean>
             <Portuguese>Habilitar Troca de Arma</Portuguese>
@@ -100,6 +102,7 @@
             <Turkish>Etkileşimin doğrudan birincil silahı ve depolanan silahı değiştirmesine izin verir.</Turkish>
             <Spanish>Permitir interacción para intercambiar el arma principal y el arma guardada.</Spanish>
             <German>Erlaube den direkten Wechsel von Primärer und verstauter Waffe über das Interaktionsmenü.</German>
+            <Italian>Permetti un'interazione per scambiare l'arma primaria con quella nella borsa.</Italian>
             <Chinesesimp>允许互动直接切换主武器和存储武器。</Chinesesimp>
             <Korean>보관 중인 무기를 주무기와 바로 바꾸는 것을 허용합니다.</Korean>
             <Portuguese>Permite interação para trocar a arma primária e a arma armazenada.</Portuguese>
@@ -113,7 +116,7 @@
             <Japanese>ガンバッグから武器を出す</Japanese>
             <Polish>Wyciągnij broń z torby</Polish>
             <Korean>무기를 총가방에서 꺼내기</Korean>
-            <Italian>Prendi l'arma dalla borsa per armi</Italian>
+            <Italian>Prendi l'arma dalla borsa</Italian>
             <Chinesesimp>将武器拿出枪袋</Chinesesimp>
             <Chinese>將武器拿出槍袋</Chinese>
             <Portuguese>Retirar arma da Bolsa de Arma</Portuguese>
