@@ -3633,7 +3633,7 @@
             <Italian>La pressione sanguigna è bassa</Italian>
             <Portuguese>Pressão Arterial baixa</Portuguese>
             <Czech>Naměřil si nízký krevní tlak</Czech>
-            <Japanese>確認した血圧は 低い です</Japanese>
+            <Japanese>血圧が 低い ことを確認した</Japanese>
             <Korean>혈압이 매우 낮습니다</Korean>
             <Chinesesimp>血压低</Chinesesimp>
             <Chinese>發現到低血壓</Chinese>
@@ -3650,7 +3650,7 @@
             <Italian>La pressione sanguigna è normale</Italian>
             <Portuguese>Pressão Arterial normal</Portuguese>
             <Czech>Naměřil si normální krevní tlak</Czech>
-            <Japanese>確認した血圧は 平常 です</Japanese>
+            <Japanese>血圧が 平常 なことを確認した</Japanese>
             <Korean>혈압이 정상입니다</Korean>
             <Chinesesimp>血压正常</Chinesesimp>
             <Chinese>發現到正常血壓</Chinese>
@@ -3667,7 +3667,7 @@
             <Italian>La pressione sanguigna è alta</Italian>
             <Portuguese>Pressão Arterial Alta</Portuguese>
             <Czech>Naměřil si vysoký krevní tlak</Czech>
-            <Japanese>確認した血圧は 高い です</Japanese>
+            <Japanese>血圧が 高い ことを確認した</Japanese>
             <Korean>혈압이 매우 높습니다</Korean>
             <Chinesesimp>血压高</Chinesesimp>
             <Chinese>發現到高血壓</Chinese>
@@ -3684,7 +3684,7 @@
             <Italian>La pressione sanguigna è assente</Italian>
             <Portuguese>Sem Pressão Arterial</Portuguese>
             <Czech>Nenaměřil si žádný krevní tlak</Czech>
-            <Japanese>血圧がないことを確認した</Japanese>
+            <Japanese>血圧が ない ことを確認した</Japanese>
             <Korean>혈압이 잡히지 않습니다</Korean>
             <Chinesesimp>血压为零</Chinesesimp>
             <Chinese>量不到血壓</Chinese>
@@ -3936,7 +3936,7 @@
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
             <Portuguese>Frequência Cardíaca baixa</Portuguese>
             <Czech>Nahmatal jsi slabý srdeční puls</Czech>
-            <Japanese>確認した心拍は 弱い です</Japanese>
+            <Japanese>心拍が 弱い ことを確認した</Japanese>
             <Korean>약한 맥박입니다</Korean>
             <Chinesesimp>心率微弱</Chinesesimp>
             <Chinese>心跳微弱</Chinese>
@@ -3953,7 +3953,7 @@
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
             <Portuguese>Frequência Cardíaca normal</Portuguese>
             <Czech>Nahmatal jsi silný srdeční puls</Czech>
-            <Japanese>確認した心拍は 強い です</Japanese>
+            <Japanese>心拍が 強い ことを確認した</Japanese>
             <Korean>강한 맥박입니다</Korean>
             <Chinesesimp>心率过快</Chinesesimp>
             <Chinese>心跳過快</Chinese>
@@ -3970,7 +3970,7 @@
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
             <Portuguese>Frequência Cardíaca alta</Portuguese>
             <Czech>Nahmatal jsi normální srdeční puls</Czech>
-            <Japanese>確認した心拍は 平常 です</Japanese>
+            <Japanese>心拍が 平常 なことを確認した</Japanese>
             <Korean>보통 맥박입니다</Korean>
             <Chinesesimp>心率正常</Chinesesimp>
             <Chinese>心跳正常</Chinese>
@@ -3987,7 +3987,7 @@
             <Italian>Hai riscontrato una assenza di battito cardiaco</Italian>
             <Portuguese>Sem Frequência Cardíaca</Portuguese>
             <Czech>Žádný puls</Czech>
-            <Japanese>心拍がないことを確認した</Japanese>
+            <Japanese>心拍が ない ことを確認した</Japanese>
             <Korean>맥박을 찾을 수가 없습니다</Korean>
             <Chinesesimp>无法测得心率</Chinesesimp>
             <Chinese>量不到心跳</Chinese>
