@@ -16,6 +16,7 @@ version:
 
 ### 1.1 Preparing a vehicle for ACE3 cargo
 
+{% raw %}
 ```cpp
 class CfgVehicles {
     class yourVehicleBaseClass {
@@ -26,6 +27,7 @@ class CfgVehicles {
     };
 };
 ```
+{% endraw %}
 
 ### 1.2 Making an object loadable
 
