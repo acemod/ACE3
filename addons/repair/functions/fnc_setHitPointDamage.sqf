@@ -26,9 +26,9 @@ TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 
 // get all hitpoints and selections and damages
-(getAllHitPointsDamage _vehicle) params ["", ["_hitSelections", []], ["_damageValues", []]];
+(getAllHitPointsDamage _vehicle) params ["", "_hitSelections", "_damageValues"];
 
-([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore", "_dependsIndexMap"];
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_indexesToIgnore", "_dependsIndexMap"];
 
 // exit if the hitpoint is not valid
 if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _hitSelections)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2",_hitPointIndex,_vehicle);};
@@ -40,7 +40,7 @@ private _realHitPointCount = 0;
 private _hitPointDamageSumOld = 0;
 private _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaired)
 {
-    if (!(_forEachIndex in _selectionsToIgnore) && !(_forEachIndex in _dependsIndexMap)) then {
+    if (!(_forEachIndex in _indexesToIgnore) && !(_forEachIndex in _dependsIndexMap)) then {
         _realHitPointCount = _realHitPointCount + 1;
         _hitPointDamageSumOld = _hitPointDamageSumOld + (_damageValues select _forEachIndex);
         if (_forEachIndex == _hitPointIndex) then {

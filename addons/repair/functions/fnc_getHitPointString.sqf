@@ -37,7 +37,7 @@ if (_track) then {
 private _text = LSTRING(Hit);
 
 // Remove # prefix
-if ((_hitpoint select [0, 1]) == "#") then { _hitPoint = _hitPoint select [1] };
+if ((_hitPoint select [0, 1]) == "#") then { _hitPoint = _hitPoint select [1] };
 
 // Remove "Hit" from hitpoint name if one exists
 private _toFind = if ((toLower _hitPoint) find "hit" == 0) then {

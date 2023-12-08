@@ -18,8 +18,8 @@
  * Public: Yes
  */
 
-params ["_caller", "_target", "_hitPoint", "_className"];
-TRACE_4("params",_caller,_target,_hitPoint,_className);
+params ["_unit", "_target", "_hitPoint", "_className"];
+TRACE_4("params",_unit,_target,_hitPoint,_className);
 
 private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
@@ -35,10 +35,10 @@ private _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     };
     0;
 };
-if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
+if !([_unit, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
 
 private _items = _config call FUNC(getRepairItems);
-if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
+if (count _items > 0 && {!([_unit, _items] call FUNC(hasItems))}) exitWith {false};
 
 private _return = true;
 if (getText (_config >> "condition") != "") then {
@@ -51,7 +51,7 @@ if (getText (_config >> "condition") != "") then {
     if (_condition isEqualType false) then {
         _return = _condition;
     } else {
-        _return = [_caller, _target, _hitPoint, _className] call _condition;
+        _return = [_unit, _target, _hitPoint, _className] call _condition;
     };
 };
 
@@ -66,8 +66,8 @@ if (!_return) exitWith {false};
 
 private _repairLocations = getArray (_config >> "repairLocations");
 if (!("All" in _repairLocations)) then {
-    private _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
-    private _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
+    private _repairFacility = {([_unit] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
+    private _repairVeh = {([_unit] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
     {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
@@ -91,7 +91,7 @@ if (!_return) exitWith {false};
 //Check that there are required objects nearby
 private _requiredObjects = getArray (_config >> "claimObjects");
 if (_requiredObjects isNotEqualTo []) then {
-    private _objectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
+    private _objectsAvailable = [_unit, 5, _requiredObjects] call FUNC(getClaimObjects);
     if (_objectsAvailable isEqualTo []) then {
             TRACE_2("Missing Required Objects",_requiredObjects,_objectsAvailable);
         _return = false
