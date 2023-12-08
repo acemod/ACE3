@@ -21,7 +21,7 @@
             <English>Semi-automatic command to line of sight (SACLOS)</English>
             <German>Halbautomatische Steuerung über Sichtverbindung (SACLOS)</German>
             <Polish>Semi-automatyczna komenda do pola widzenia</Polish>
-            <Italian>Comando Semi-Automatico via Contatto Visivo(SACLOS)</Italian>
+            <Italian>Comando Semi-Automatico su Contatto Visivo (SACLOS)</Italian>
             <Japanese>半自動指令照準線一致誘導方式 (SACLOS)</Japanese>
             <Russian>Полуавтоматическое командное наведение по линии визирования (SACLOS)</Russian>
             <Portuguese>Comando semi-automático para a linha de visão (SACLOS)</Portuguese>
@@ -37,7 +37,7 @@
             <English>Wire-Guided Missile</English>
             <German>Drahtgelenkte Rakete</German>
             <Polish>Pocisk kierowany przewodowo</Polish>
-            <Italian>Missile filoguidato</Italian>
+            <Italian>Missile Filoguidato</Italian>
             <Japanese>有線誘導ミサイル</Japanese>
             <Russian>Ракета с проводным управлением</Russian>
             <Portuguese>Míssil Guiado por Fio</Portuguese>
@@ -133,7 +133,7 @@
             <English>Wire-Guided Missile (Anti-Personnel)</English>
             <German>Anti Personen Lenkflugkörper</German>
             <Polish>Pocisk kierowany przewodowo (przeciwpiechotny)</Polish>
-            <Italian>Missile filoguidato antiuomo</Italian>
+            <Italian>Missile Filoguidato Antiuomo</Italian>
             <Japanese>有線誘導ミサイル (対人)</Japanese>
             <Russian>Ракета с проводным управлением (Противопехотная)</Russian>
             <Portuguese>Míssil Guiado por Fio (Anti-Pessoal)</Portuguese>
