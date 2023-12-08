@@ -41,7 +41,7 @@
             <Czech>Připravit systém slaňování</Czech>
             <Portuguese>Prepara sistema de descida rápida</Portuguese>
             <Russian>Подготовить канаты</Russian>
-            <Japanese>ファスト ロープのシステムを準備</Japanese>
+            <Japanese>ファストロープ システムを準備</Japanese>
             <Korean>패스트로프 준비</Korean>
             <Chinesesimp>准备快速绳降系统</Chinesesimp>
             <Chinese>準備快速繩降系統</Chinese>
@@ -51,7 +51,7 @@
             <English>Stow fast roping system</English>
             <German>Verstaue "Fast Roping"-System</German>
             <Italian>Arrotola le corde</Italian>
-            <Japanese>ファスト ロープのシステムを収容</Japanese>
+            <Japanese>ファストロープ システムを収容</Japanese>
             <Chinese>收起快速繩降系統</Chinese>
             <Chinesesimp>收起快速绳降系统</Chinesesimp>
             <Korean>패스트로프 시스템 보관</Korean>
@@ -89,7 +89,7 @@
             <Czech>SLANIT</Czech>
             <Portuguese>Descida rápida</Portuguese>
             <Russian>Спуститься по канату</Russian>
-            <Japanese>ファスト ロープをする</Japanese>
+            <Japanese>ファストロープする</Japanese>
             <Korean>패스트로프</Korean>
             <Chinesesimp>快速绳降</Chinesesimp>
             <Chinese>快速繩降</Chinese>
@@ -148,7 +148,7 @@
             <Portuguese>Equipa o helicóptero selecionado com o Fast Rope Insertion Extraction System</Portuguese>
             <French>LAISSER LES UNITÉS UTILISER LA CORDE</French>
             <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
-            <Japanese>ユニットへファスト ロープをさせる</Japanese>
+            <Japanese>ユニットへファストロープをさせる</Japanese>
             <Polish>ZJAZD NA LINACH</Polish>
             <Chinesesimp>让单位快速绳降</Chinesesimp>
             <Chinese>讓單位快速繩降</Chinese>
@@ -289,7 +289,7 @@
             <French>Hélicordage</French>
             <Chinese>快速繩降</Chinese>
             <Chinesesimp>快速索降</Chinesesimp>
-            <Japanese>ファスト ロープ</Japanese>
+            <Japanese>ファストロープ</Japanese>
             <Spanish>Cuerdas rápidas</Spanish>
             <Polish>Zjazd na linach</Polish>
             <Turkish>Halatla Kayma</Turkish>

@@ -12,7 +12,7 @@
             <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
             <Czech>82mm Rangetable</Czech>
             <Italian>Tavola di tiro 82mm</Italian>
-            <Japanese>82mm 射表</Japanese>
+            <Japanese>82mm用 射表</Japanese>
             <Korean>82mm 사거리표</Korean>
             <Chinesesimp>82 mm 迫击炮射表</Chinesesimp>
             <Chinese>82毫米迫擊炮射表</Chinese>
@@ -29,7 +29,7 @@
             <Portuguese>Tabela de distâncias para morteiro Mk6 82mm</Portuguese>
             <Czech>Rangetable pro Mk6 82mm minomet</Czech>
             <Italian>Tavola di tiro per il mortaio calibro 82mm Mk6</Italian>
-            <Japanese>Mk6 82mm 迫撃砲の射表</Japanese>
+            <Japanese>Mk6 82mm迫撃砲専用の射撃表</Japanese>
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
             <Chinesesimp>MK6 82 mm 迫击炮射表</Chinesesimp>
             <Chinese>MK6 82毫米迫擊炮射表</Chinese>
@@ -46,7 +46,7 @@
             <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
             <Czech>Otevřít 82mm Rangetable</Czech>
             <Italian>Apri la tavola di tiro 82mm</Italian>
-            <Japanese>82mm 射表を開く</Japanese>
+            <Japanese>82mm用射表を開く</Japanese>
             <Korean>82mm 사거리표 열기</Korean>
             <Chinesesimp>开启82 mm 迫击炮射表</Chinesesimp>
             <Chinese>開啟82毫米迫擊炮射表</Chinese>
@@ -130,7 +130,7 @@
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
-            <Japanese>プレイヤが射撃すると、空気抵抗モデルと風による影響をあたえます。</Japanese>
+            <Japanese>プレイヤーが射撃すると、空気抵抗モデルと風による影響をあたえます。</Japanese>
             <Korean>플레이어가 사격 시 공기저항과 바람에 영향을 받습니다</Korean>
             <Chinesesimp>设定由玩家射击的迫击炮，将会受到空气阻力与风力的影响</Chinesesimp>
             <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
@@ -146,7 +146,7 @@
             <Hungarian>Mk6 számítógép engedélyezése</Hungarian>
             <Russian>Разрешить компьютер Mk6</Russian>
             <Italian>Consenti Computer Mk6</Italian>
-            <Japanese>Mk6 コンピュータを許可</Japanese>
+            <Japanese>Mk6の砲撃コンピュータを許可</Japanese>
             <Korean>Mk6 탄도계산컴퓨터 허가</Korean>
             <Chinesesimp>允许使用 MK6 弹道计算机</Chinesesimp>
             <Chinese>允許使用MK6射控電腦</Chinese>
@@ -163,7 +163,7 @@
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
-            <Japanese>コンピュータと距離を表示します (空気抵抗を有効化している場合は必ず削除してください)</Japanese>
+            <Japanese>砲撃コンピュータと距離計を表示します (空気抵抗を仕様する場合は必ず無効化する必要があります)</Japanese>
             <Korean>탄도계산컴퓨터와 거리측정기를 보여줍니다(공기저항을 활성화했을 경우 이 항목은 비활성화 되어야 합니다)</Korean>
             <Chinesesimp>显示弹道计算机和测距仪（如果有启用空气阻力功能时，须停用此项功能）</Chinesesimp>
             <Chinese>顯示射控電腦和測距儀 (如果有啟用空氣阻力功能時，須停用此項功能)</Chinese>
@@ -179,7 +179,7 @@
             <Hungarian>Mk6 iránytű engedélyezése</Hungarian>
             <Russian>Разрешить компас Mk6</Russian>
             <Italian>Consenti Bussola Mk6</Italian>
-            <Japanese>Mk6 への方位磁石を有効化</Japanese>
+            <Japanese>Mk6の方位磁石を許可</Japanese>
             <Korean>Mk6 나침반 허용</Korean>
             <Chinesesimp>允许使用 MK6 指南针</Chinesesimp>
             <Chinese>允許使用MK6指北針</Chinese>
@@ -196,7 +196,7 @@
             <Hungarian>Az Mk6 digitális iránytű megjelenítése</Hungarian>
             <Russian>Показывает цифровой компас Mk6</Russian>
             <Italian>Mostra la Bussola Digitale Mk6</Italian>
-            <Japanese>Mk6 のデジタル方位磁石を表示</Japanese>
+            <Japanese>Mk6迫撃砲のデジタル方位磁石を表示します</Japanese>
             <Korean>Mk6 에서 전자 나침반을 보여줍니다</Korean>
             <Chinesesimp>显示 MK6 的电子指南针</Chinesesimp>
             <Chinese>顯示MK6的數位指北針</Chinese>
@@ -212,7 +212,7 @@
             <French>Ce module permet de régler les options du mortier Mk6.</French>
             <Italian>Questo modulo ti consente di impostare i parametri del mortaio Mk6.</Italian>
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
-            <Japanese>Mk6 迫撃砲への設定をできます。</Japanese>
+            <Japanese>このモジュールでは、Mk6 迫撃砲の設定をセットアップできます。</Japanese>
             <Korean>이 모듈은 Mk6 설치 설정을 가능케 합니다.</Korean>
             <Chinesesimp>这个模块允许你设定 MK6 迫击炮的相关功能</Chinesesimp>
             <Chinese>這個模塊允許你設定MK6迫擊砲的相關功能</Chinese>
@@ -321,7 +321,7 @@
             <Czech>Nabít HE</Czech>
             <Portuguese>Carregar HE</Portuguese>
             <Russian>Зарядить фугасный</Russian>
-            <Japanese>りゅう弾を装填</Japanese>
+            <Japanese>榴弾を装填</Japanese>
             <Korean>고폭탄 장전</Korean>
             <Chinesesimp>装载高爆弹</Chinesesimp>
             <Chinese>裝載高爆彈</Chinese>
@@ -369,7 +369,7 @@
             <Czech>Nabít HE (Naváděné)</Czech>
             <Portuguese>Carregar HE Guiada</Portuguese>
             <Russian>Зарядить фугасный управляемый</Russian>
-            <Japanese>誘導りゅう弾を装填</Japanese>
+            <Japanese>誘導榴弾を装填</Japanese>
             <Korean>유도 고폭탄 장전</Korean>
             <Chinesesimp>装载制导高爆弹</Chinesesimp>
             <Chinese>裝載導引高爆彈</Chinese>
@@ -385,7 +385,7 @@
             <Czech>Nabít HE (Naváděné laserem)</Czech>
             <Portuguese>Carregar HE Guiada por Laser</Portuguese>
             <Russian>Зарядить фугасный управляемый по ЛЦУ</Russian>
-            <Japanese>レーザ誘導りゅう弾を装填</Japanese>
+            <Japanese>レーザー誘導榴弾を装填</Japanese>
             <Korean>레이저 유도 고폭탄 장전</Korean>
             <Chinesesimp>装填激光制导高爆弹</Chinesesimp>
             <Chinese>裝載雷射導引高爆彈</Chinese>
@@ -401,7 +401,7 @@
             <Czech>[CSW] 82mm HE náboj</Czech>
             <Portuguese>[CSW] Munição 82mm HE</Portuguese>
             <Russian>[CSW] Фугасный снаряд 82мм</Russian>
-            <Japanese>[CSW] 82mm りゅう弾</Japanese>
+            <Japanese>[CSW] 82mm 榴弾</Japanese>
             <Korean>[CSW] 82mm 고폭탄</Korean>
             <Chinesesimp>[班组] 82 mm 高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米高爆彈</Chinese>
@@ -449,7 +449,7 @@
             <Czech>[CSW] 82mm HE náboj (naváděný)</Czech>
             <Portuguese>[CSW] Munição 82mm HE Guiada</Portuguese>
             <Russian>[CSW] Фугасный снаряд управляемый 82мм</Russian>
-            <Japanese>[CSW] 82mm 誘導りゅう弾</Japanese>
+            <Japanese>[CSW] 82mm 誘導榴弾</Japanese>
             <Korean>[CSW] 82mm 유도 고폭탄</Korean>
             <Chinesesimp>[班组] 82 mm 制导高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米導引高爆彈</Chinese>
@@ -465,7 +465,7 @@
             <Czech>[CSW] 82mm HE náboj (naváděný laserem)</Czech>
             <Portuguese>[CSW] Munição 82mm HE Guiada por Laser </Portuguese>
             <Russian>[CSW] Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
-            <Japanese>[CSW] 82mm レーザ誘導りゅう弾</Japanese>
+            <Japanese>[CSW] 82mm レーザー誘導榴弾</Japanese>
             <Korean>[CSW] 82mm 레이저 유도 고폭탄</Korean>
             <Chinesesimp>[班组] 82 mm 激光制导高爆弹</Chinesesimp>
             <Chinese>[CSW] 82毫米雷射導引高爆彈</Chinese>
@@ -481,7 +481,7 @@
             <Czech>Používá se u minometu Mk6</Czech>
             <Portuguese>Usada no Morteiro MK6</Portuguese>
             <Russian>Использовался в миномете Mk6</Russian>
-            <Japanese>Mk6 mortar で使います</Japanese>
+            <Japanese>Mk6 迫撃砲 で使用</Japanese>
             <Korean>Mk6 박격포에 사용됨</Korean>
             <Chinesesimp>用于 Mk6 迫击炮</Chinesesimp>
             <Chinese>用於Mk6迫擊砲</Chinese>
@@ -496,7 +496,7 @@
             <Czech>[ACE] Bedna s municí (82mm HE)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm HE</Portuguese>
             <Russian>[ACE] Ящик фугасных снарядов 82мм</Russian>
-            <Japanese>[ACE] 82mm りゅう弾入り弾薬箱</Japanese>
+            <Japanese>[ACE] 82mm 榴弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 고폭탄 상자</Korean>
             <Chinesesimp>[ACE] 82 mm 高爆弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米高爆彈藥箱</Chinese>

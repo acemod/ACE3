@@ -88,7 +88,7 @@
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_DisplayName">
             <English>IV Transfusion Flow Rate</English>
             <German>Transfusions Fließrate</German>
-            <Japanese>IV 輸血の流量</Japanese>
+            <Japanese>IV 輸液の流量</Japanese>
             <Russian>Скорость внутривенного переливания</Russian>
             <French>Débit de transfusion IV</French>
             <Portuguese>Velocidade de Transferência de Sangue</Portuguese>
@@ -104,7 +104,7 @@
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
             <German>Wie schnell der Effekt der Transfusion eintritt</German>
-            <Japanese>IV による輸血速度を変更できます</Japanese>
+            <Japanese>IV 輸液パックから輸液が流出する速度を制御します。 IV 輸液バッグの容量変化は次のように計算されます:\n時間間隔(秒) x 点滴速度毎秒(4.1667 mL/秒) x 流量(この係数)</Japanese>
             <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
             <French>Définit la vitesse à laquelle le liquide s'écoule des poches de perfusion.\nLa variation du volume de poche IV est calculée selon la  formule suivante :\n intervalle de temps (s) * variation IV par seconde (4,1667 ml/s) * débit (ce coefficient).</French>
             <Portuguese>Controla o quão rápido fluidos são extraídos de bolsas de IV. A mudança no volume da bolsa d IV é calculado assim:\nIntervalo de tempo (s) * mudança de iv por segundo (4.1667 mL/s) * Velocidade de transferência (esse valor)</Portuguese>

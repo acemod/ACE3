@@ -51,7 +51,7 @@
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
-            <Japanese>メインのインタラクションポイント(タグ)を選択した際に行われる動作。</Japanese>
+            <Japanese>メインのインタラクションポイント(タグ)を選択した際に行われるアクション。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>상호작용 시 표시할 낙서를 고릅니다.</Korean>
@@ -205,7 +205,7 @@
         </Key>
         <Key ID="STR_ACE_Tagging_diamond">
             <English>Diamond</English>
-            <Japanese>ひし形</Japanese>
+            <Japanese>菱形</Japanese>
             <Polish>Diament</Polish>
             <Korean>마름모</Korean>
             <Russian>Алмаз</Russian>

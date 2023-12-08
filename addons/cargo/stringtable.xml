@@ -27,7 +27,7 @@
             <Spanish>Descargar</Spanish>
             <Italian>Scarica</Italian>
             <French>Décharger</French>
-            <Japanese>下ろす</Japanese>
+            <Japanese>降ろす</Japanese>
             <Korean>내리기</Korean>
             <Chinese>卸載</Chinese>
             <Chinesesimp>卸载</Chinesesimp>
@@ -47,7 +47,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
-            <Japanese>カスタム名が削除されました。</Japanese>
+            <Japanese>カスタムネームが削除されました。</Japanese>
             <French>Le nom personnalisé a été supprimé.</French>
             <Russian>Пользовательское название удалено.</Russian>
             <German>Eigener Name wurde gelöscht.</German>
@@ -83,7 +83,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
-            <Japanese>名前変更が可能なオブジェクトに対して、名前変更動作を有効化します。</Japanese>
+            <Japanese>名前変更が可能なオブジェクトに対して、名前変更アクションを有効化します。</Japanese>
             <French>Active la possibilité de donner un nom personnalisé aux objets transportables (si renommables).</French>
             <Russian>Включает переименование для объектов, допускающих переименование.</Russian>
             <German>Aktiviert die Umbenennungs-Aktion für neu benennbare Objekte.</German>
@@ -303,15 +303,17 @@
             <English>Can't be unloaded</English>
             <German>Kann nicht entladen werden</German>
             <French>Ne peut pas être déchargé</French>
+            <Japanese>降ろせません</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
             <German>Frachtgröße: %1</German>
             <French>Encombrement fret: %1</French>
+            <Japanese>カーゴ サイズ: %1</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
-            <Japanese>カスタム名</Japanese>
+            <Japanese>カスタムネーム</Japanese>
             <French>Nom personnalisé</French>
             <German>Eigener Name</German>
             <Polish>Własna nazwa</Polish>
@@ -323,7 +325,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
-            <Japanese>カーゴ欄で使われるカスタム名を設定します。</Japanese>
+            <Japanese>カーゴ一覧で使用されるカスタムネームを設定します。</Japanese>
             <French>Définit un nom de fret personnalisé qui sera visible dans le menu de cargaison.</French>
             <Russian>Установить пользовательское имя груза, используемое в интерфейсе погрузки.</Russian>
             <German>Definiere eigenen Frachtnamen, welcher im Frachtraum genutzt wird.</German>
@@ -384,7 +386,7 @@
             <English>The cargo space required to hold this object (-1 for not loadable)</English>
             <German>Frachtraumgröße, welche zum Einladen dieses Objektes benötigt wird (-1 nicht einladbar)</German>
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
-            <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
+            <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可にします)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
             <Chinesesimp>此货物会占掉多少空间（设定 -1 的话此货物就不能被装载）</Chinesesimp>
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
@@ -428,7 +430,7 @@
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coefficient</English>
             <German>Türlast Zeitfaktor</German>
-            <Japanese>空中投下までの時間係数</Japanese>
+            <Japanese>空中投下の所要時間係数</Japanese>
             <Italian>Coefficente Tempo Lancio Paracadute</Italian>
             <French>Coefficient du temps de paralargage</French>
             <Chinese>空投時間係數</Chinese>
@@ -458,7 +460,7 @@
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
             <German>Ladezeitmultiplikator</German>
-            <Japanese>積載時間の係数</Japanese>
+            <Japanese>積載所要時間係数</Japanese>
             <Polish>Współczynnik czasu załadowania</Polish>
             <Italian>Coefficente Tempo Caricamento</Italian>
             <Russian>Коэф. времени погрузки</Russian>
@@ -473,7 +475,7 @@
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
             <German>Gibt an, wie lange das Laden / Entladen von Gegenständen dauern soll.\nZeit in Sekunden, die mit der Größe des Gegenstandes multipliziert wird.</German>
-            <Japanese>アイテムの積み下ろし作業にかかる時間を編集できます。\nアイテムの大きさにこの値が乗法され、時間 (秒) を変更できます。</Japanese>
+            <Japanese>アイテムのロード/アンロードに掛かる時間を変更します。\n時間 (秒) は、アイテムのサイズにこの値を掛けたものです。</Japanese>
             <Polish>Modyfikuje, jak długo zajmuje załadowywanie/wyładowywanie przedmiotów. \nCzasem, w sekundach, jest wielkość przedmiotu razy jego wartość.</Polish>
             <Italian>Modifica quanto tempo ci impiega a caricare o scaricare gli oggetti.\n Tempo, in secondi, è la dimensione dell'oggetto moltiplicata per questo valore</Italian>
             <Russian>Изменяет время для загрузки/выгрузки предметов. \n Время (сек) - это размер предмета, умноженный на это значение.</Russian>

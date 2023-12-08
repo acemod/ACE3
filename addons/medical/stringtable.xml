@@ -32,7 +32,7 @@
             <Chinesesimp>ACE 医疗 界面</Chinesesimp>
             <Chinese>ACE 醫療系統 介面</Chinese>
             <Turkish>ACE Medikal Arayüz</Turkish>
-            <Japanese>ACE 医療 インターフェイス</Japanese>
+            <Japanese>ACE 医療 インターフェース</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
@@ -179,7 +179,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
-            <Japanese>骨折の治療に副子を使用した際の効果を設定します。\n無効にすると、骨折しません。</Japanese>
+            <Japanese>骨折の治療に添え木を使用した際の効果を設定します。\n無効にすると、骨折しません。</Japanese>
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
             <Chinesesimp>控制是否让固定板能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
             <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
@@ -196,7 +196,7 @@
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
             <Russian>Шины полностью лечат перелом</Russian>
-            <Japanese>副子で骨折完治</Japanese>
+            <Japanese>添え木で骨折完治</Japanese>
             <French>Les attelles guérissent complètement les fractures</French>
             <Portuguese>Talas curam fraturas completamente</Portuguese>
             <Chinese>固定板完全治癒骨折</Chinese>
@@ -212,7 +212,7 @@
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoSprint">
             <English>Splints Heal, but Cannot Sprint</English>
             <Russian>Шины вылечивают, но не дают бегать</Russian>
-            <Japanese>副子で治癒可能、走れないように</Japanese>
+            <Japanese>添え木で治癒可能、走れないように</Japanese>
             <French>Les attelles guérissent les fractures, mais empêchent de sprinter</French>
             <Portuguese>Talas curam, mas não permitem correr</Portuguese>
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
@@ -228,7 +228,7 @@
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoJog">
             <English>Splints Heal, but Cannot Jog</English>
             <French>Les attelles guérissent les fractures, mais empêchent de courir</French>
-            <Japanese>副子で治癒可能、駆け足できないように</Japanese>
+            <Japanese>添え木で治癒可能、駆け足できないように</Japanese>
             <Turkish>Ateller İyileştirir, Ama Koşu Yapamaz</Turkish>
             <Spanish>Las férulas sanan, pero no pueden trotar</Spanish>
             <Russian>Шины вылечивают, но не дают бежать трусцой</Russian>
@@ -294,7 +294,7 @@
             <French>Sélectionne pour quelles unités les soins avancés seront actifs.</French>
             <Hungarian>Kiválasztható, mely egységek számára legyen engedélyezve a fejlett orvosi rendszer</Hungarian>
             <Italian>Seleziona per quali unità verrà abilitato il sistema medico avanzato</Italian>
-            <Japanese>選択されたユニットが、高度な医療が使えるようになります</Japanese>
+            <Japanese>選択されたユニットが、高度な医療システムを使えるようになります</Japanese>
             <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시요.</Korean>
             <Chinesesimp>选择进阶医疗系统影响的物体</Chinesesimp>
             <Chinese>選擇進階醫療系統影響的對象</Chinese>
@@ -413,7 +413,7 @@
             <Russian>Медик</Russian>
             <Spanish>Médico</Spanish>
             <Hungarian>Orvosi</Hungarian>
-            <Japanese>治療</Japanese>
+            <Japanese>医療</Japanese>
             <Korean>의료</Korean>
             <Chinesesimp>医疗设定</Chinesesimp>
             <Chinese>醫療設定</Chinese>

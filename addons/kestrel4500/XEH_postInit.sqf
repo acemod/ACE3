@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"
 
 GVAR(Menus) = ["Date", "Direction", "Wind SPD  m/s", "CROSSWIND m/s", "HEADWIND  m/s", "TEMP       °C", "CHILL      °C", "HUMIDITY    %", "HEAT INDEX °C", "DEW POINT  °C", "WET BULB   °C", "BARO      hPA", "ALTITUDE    m", "DENS ALT    m", "User Screen   1", "User Screen   2"];
 

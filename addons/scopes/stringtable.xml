@@ -170,7 +170,7 @@
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
             <English>Reference temperature</English>
             <German>Bezugstemperatur</German>
-            <Japanese>温度の参照</Japanese>
+            <Japanese>参照温度</Japanese>
             <Korean>기준 온도</Korean>
             <Polish>Referencyjna temperatura</Polish>
             <French>Température de référence</French>
@@ -200,7 +200,7 @@
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_displayName">
             <English>Reference barometric pressure</English>
             <German>Bezugsluftdruck</German>
-            <Japanese>気圧の参照</Japanese>
+            <Japanese>参照気圧</Japanese>
             <Korean>기준 기압</Korean>
             <Polish>Referencyjne ciśnienie barometryczne</Polish>
             <French>Pression barométrique de référence</French>
@@ -230,7 +230,7 @@
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
             <German>Bezugsluftfeuchtigkeit</German>
-            <Japanese>湿度の参照</Japanese>
+            <Japanese>参照湿度</Japanese>
             <Korean>기준 습도</Korean>
             <Polish>Referencyjna wilgotność</Polish>
             <French>Humidité de référence</French>
@@ -260,7 +260,7 @@
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
             <English>Deduce pressure from altitude</English>
             <German>Abgeleiteter Luftdruck von der Höhe</German>
-            <Japanese>高度により圧が減少</Japanese>
+            <Japanese>高度で減圧する</Japanese>
             <Korean>고도에 맞춰 기압 설정</Korean>
             <Polish>Ciśnienie określone na podstawie wysokości</Polish>
             <French>Déterminer la pression selon l'altitude</French>
@@ -275,7 +275,7 @@
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
             <English>Deduce the barometric pressure from the terrain altitude</English>
             <German>Abgeleiteter Luftdruck der Geländeumgebung</German>
-            <Japanese>標高により気圧が減少されます</Japanese>
+            <Japanese>地形高度の標高から気圧を減圧します</Japanese>
             <Korean>주변 고도에 맞춰 기압을 설정합니다</Korean>
             <Polish>Określ ciśnienie barometryczne na podstawie wysokości terenu</Polish>
             <French>Détermine la pression barométrique en fonction de l'altitude du terrain.</French>
@@ -293,7 +293,7 @@
             <Italian>Usa UI precedente</Italian>
             <Chinese>使用舊版介面</Chinese>
             <Chinesesimp>使用旧版界面</Chinesesimp>
-            <Japanese>昔の UI を使用</Japanese>
+            <Japanese>レガシー UI を使用</Japanese>
             <Korean>기존 UI 사용</Korean>
             <Polish>Wykorzystaj legacy UI</Polish>
             <Russian>Использовать устаревший интерфейс</Russian>
@@ -335,7 +335,7 @@
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
             <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
-            <Japanese>標準で使われるライフルスコープ用のゼロイン システムを複製します。</Japanese>
+            <Japanese>バニラ(ゲーム標準)のライフルスコープ用ゼロイン調整システムを複製します。</Japanese>
             <Italian>Replica il sistema di azzeramento vanilla per le ottiche.</Italian>
             <Korean>라이플 스코프용 바닐라 영점조정 시스템을 복제합니다.</Korean>
             <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
@@ -358,7 +358,7 @@
             <Hungarian>Enyhe állítás fel</Hungarian>
             <Portuguese>Pequeno ajuste para cima</Portuguese>
             <Czech>Korekce nahoru (mírně)</Czech>
-            <Japanese>僅かに上へ調節</Japanese>
+            <Japanese>小さく上へ調節</Japanese>
             <Korean>위로 조절</Korean>
             <Chinesesimp>向上微调</Chinesesimp>
             <Chinese>向上微調</Chinese>
@@ -374,7 +374,7 @@
             <Hungarian>Enyhe állítás le</Hungarian>
             <Portuguese>Pequeno ajuste para baixo</Portuguese>
             <Czech>Korekce dolů (mírně)</Czech>
-            <Japanese>僅かに下へ調節</Japanese>
+            <Japanese>小さく下へ調節</Japanese>
             <Korean>아래로 조절</Korean>
             <Chinesesimp>向下微调</Chinesesimp>
             <Chinese>向下微調</Chinese>
@@ -390,7 +390,7 @@
             <Hungarian>Enyhe állítás jobbra</Hungarian>
             <Portuguese>Pequeno ajuste para direita</Portuguese>
             <Czech>Korekce doprava (mírně)</Czech>
-            <Japanese>僅かに右へ調節</Japanese>
+            <Japanese>小さく右へ調節</Japanese>
             <Korean>오른쪽으로 조절</Korean>
             <Chinesesimp>向右微调</Chinesesimp>
             <Chinese>向右微調</Chinese>
@@ -406,7 +406,7 @@
             <Hungarian>Enyhe állítás balra</Hungarian>
             <Portuguese>Pequeno ajuste para esquerda</Portuguese>
             <Czech>Korekce doleva (mírně)</Czech>
-            <Japanese>僅かに左へ調節</Japanese>
+            <Japanese>小さく左へ調節</Japanese>
             <Korean>왼쪽으로 조절</Korean>
             <Chinesesimp>向左微调</Chinesesimp>
             <Chinese>向左微調</Chinese>

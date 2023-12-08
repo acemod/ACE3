@@ -34,7 +34,7 @@
             <German>Notizblock</German>
             <Chinese>筆記本</Chinese>
             <Chinesesimp>笔记本</Chinesesimp>
-            <Japanese>メモ</Japanese>
+            <Japanese>メモ帳</Japanese>
             <Russian>Блокнот</Russian>
             <Polish>Notes</Polish>
             <Turkish>Not Defteri</Turkish>
@@ -48,7 +48,7 @@
             <German>Notizblock - Über die Karte abrufbar</German>
             <Chinese>筆記本 - 可以透過地圖界面來存取</Chinese>
             <Chinesesimp>笔记本—可以透过地图界面访问</Chinesesimp>
-            <Japanese>メモ - マップ画面から確認可能</Japanese>
+            <Japanese>メモ帳 - マップ画面から確認可能</Japanese>
             <Russian>Блокнот - Можно получить доступ с экрана карты</Russian>
             <Polish>Notes - Dostępne z mapy</Polish>
             <Turkish>Not Defteri - Haritadan erişim sağlanabilinir</Turkish>
@@ -76,7 +76,7 @@
             <German>Bedrucktes Dokument - Über die Karte abrufbar</German>
             <Chinese>影印文件 - 可以透過地圖界面來存取</Chinese>
             <Chinesesimp>影印文件—可以透过地图界面访问</Chinesesimp>
-            <Japanese>メモ - マップ画面から確認可能</Japanese>
+            <Japanese>印刷された資料 - マップ画面から確認可能</Japanese>
             <Russian>Распечатанный документ - Можно получить доступ с экрана карты</Russian>
             <Polish>Wydrukowane Dokumenty - Dostępne z mapy</Polish>
             <Turkish>Yazılı Döküman - Haritadan erişim sağlanabilinir</Turkish>

@@ -217,7 +217,7 @@
             <Chinesesimp>这架飞机没有导弹挂架</Chinesesimp>
             <Chinese>這架飛機沒有派龍架</Chinese>
             <Italian>Questo aereo non ha piloni</Italian>
-            <Japanese>航空機にパイロンがありません</Japanese>
+            <Japanese>この航空機にはパイロンがありません</Japanese>
             <German>Dieses Flugzeug hat keine Außenlaststationen</German>
             <French>Cet aéronef n'a pas de pylônes.</French>
             <Polish>Ten pojazd nie posiada pylonów</Polish>
@@ -232,7 +232,7 @@
             <Chinesesimp>宙斯模组的导弹挂架已禁用</Chinesesimp>
             <Chinese>宙斯模塊的派龍架設定已被禁用</Chinese>
             <Italian>Il modulo per configurare i piloni da Zeus è disabilitato</Italian>
-            <Japanese>Zeus のパイロン モジュールを無効化</Japanese>
+            <Japanese>Zeus のパイロン編集を無効化</Japanese>
             <German>Die Konfiguration für das Außenlaststationen ist im Zeus deaktiviert</German>
             <French>Le module de configuration des pylônes est désactivé pour Zeus.</French>
             <Polish>Konfiguracja modułu pylonów jest wyłączona dla zeus'a</Polish>
@@ -274,7 +274,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon">
             <English>Time Per Pylon</English>
-            <Japanese>パイロンへの時間</Japanese>
+            <Japanese>パイロンあたりの所要時間</Japanese>
             <Italian>Tempo Per Pilone</Italian>
             <Chinese>派龍架整補所需時間(個別)</Chinese>
             <Chinesesimp>导弹挂架整装所需时间（个别）</Chinesesimp>
@@ -289,7 +289,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
             <English>The time it takes to replace each pylon (in seconds).</English>
-            <Japanese>各パイロンの置き換えにかかる時間を設定します。(秒)</Japanese>
+            <Japanese>各パイロンの置き換えに掛かる時間を設定します。(秒)</Japanese>
             <Italian>Il tempo che impiega ogni pilone ad essere sostituito (in secondi).</Italian>
             <Chinese>每個派龍架需花多久時間進行整補(單位為秒)</Chinese>
             <Chinesesimp>每个挂架需花多久时间进行整装（单位为秒）。</Chinesesimp>

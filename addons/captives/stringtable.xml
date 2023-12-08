@@ -266,7 +266,7 @@
             <Italian>Metti manette all'unità</Italian>
             <Spanish>Hacer que la unidad esté esposada</Spanish>
             <French>Est menottée</French>
-            <Japanese>ユニットを拘束する</Japanese>
+            <Japanese>ユニットを拘束させる</Japanese>
             <Korean>포박하기</Korean>
             <Chinese>使單位戴上手銬</Chinese>
             <Chinesesimp>使单位戴上手铐</Chinesesimp>
@@ -332,7 +332,7 @@
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
             <Russian>Можно связывать руки союзникам</Russian>
             <Italian>Puoi ammanettare unità alleate</Italian>
-            <Japanese>拘束ユニットを自陣営へ</Japanese>
+            <Japanese>自陣営を拘束可能に</Japanese>
             <Korean>자기편을 포박 할 수 있습니다.</Korean>
             <Chinese>可以銬住同陣營隊友</Chinese>
             <Chinesesimp>可以铐住同阵营队友</Chinesesimp>
@@ -348,7 +348,7 @@
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
             <Russian>Разрешить игрокам арестовывать юнитов своей стороны</Russian>
             <Italian>I giocatori possono ammanettare unità alleate</Italian>
-            <Japanese>プレイヤーが拘束したユニットの陣営を自陣営に変更させます。</Japanese>
+            <Japanese>プレーヤーが自陣営のユニットをケーブルタイで拘束ができるようにします</Japanese>
             <Korean>자기 편에게 케이블 타이를 사용할 수 있게 합니다</Korean>
             <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
             <Chinesesimp>玩家可以使用束线带铐住同阵营队友</Chinesesimp>
@@ -378,7 +378,7 @@
             <Czech>Vyžaduje, aby se hráč nejdříve vzdal, poté může být spoután</Czech>
             <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
             <French>Définit si les joueurs doivent d'abord s'être rendus avant qu'on ne puisse les arrêter.</French>
-            <Japanese>プレイヤーは拘束される前に、投降する必要があります。</Japanese>
+            <Japanese>プレイヤーを拘束する前に、投降を必要とさせます</Japanese>
             <Korean>체포하기 전에 먼저 플레이어가 투항을 해야만 합니다</Korean>
             <Chinese>玩家須先要求目標投降，才可以進行逮捕</Chinese>
             <Chinesesimp>玩家须先要求目标投降，才可以进行俘获</Chinesesimp>
@@ -440,7 +440,7 @@
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
             <Russian>Игроки могут сдаваться после того, как уберут оружие</Russian>
             <Italian>I giocatori possono arrendersi dopo aver messo via le proprie armi</Italian>
-            <Japanese>プレイヤーは武器を収めたあと投降できるようにします。</Japanese>
+            <Japanese>プレイヤーが武器を収めたあとに投降できるようにします</Japanese>
             <Korean>비무장한 플레이어가 투항할 수 있게 합니다</Korean>
             <Chinese>玩家能在收起自己武器後投降</Chinese>
             <Chinesesimp>玩家能在收起自己武器后投降</Chinesesimp>
@@ -464,7 +464,7 @@
             <English>Require AI to surrender before they can be arrested</English>
             <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
             <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
-            <Japanese>AIの拘束はAIが投降している場合に限り可能にします。</Japanese>
+            <Japanese>AIを拘束する前に、投降を必要とさせます</Japanese>
             <Chinese>在逮捕AI之前該AI必須先進入投降狀態</Chinese>
             <Chinesesimp>在俘获 AI 之前该 AI 必须先进入投降状态。</Chinesesimp>
             <Korean>포박하기 전에 먼저 AI가 투항해야만 합니다.</Korean>

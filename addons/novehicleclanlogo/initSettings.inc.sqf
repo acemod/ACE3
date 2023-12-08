@@ -1,4 +1,4 @@
-private _category = [ELSTRING(common,ACEKeybindCategoryVehicles), LSTRING(DisplayName)],;
+private _category = [ELSTRING(common,ACEKeybindCategoryVehicles), LSTRING(DisplayName)];
 
 [
     QGVAR(enabled), "CHECKBOX",
