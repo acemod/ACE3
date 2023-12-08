@@ -22,7 +22,7 @@ class CfgVehicles {
     class yourVehicleBaseClass {
         ace_cargo_space = 4;  // Cargo space your vehicle has
         ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
-        ace_cargo_loadmasterTurrets = {{1}}; // If vehicle inherits from "Air", you can set this attribute.
+        ace_cargo_loadmasterTurrets[] = {{1}}; // If vehicle inherits from "Air", you can set this attribute.
                                              // When sitting in the turret paths you define here, you can paradrop cargo items. By default, pilots and co-pilots can paradrop cargo items.
     };
 };
