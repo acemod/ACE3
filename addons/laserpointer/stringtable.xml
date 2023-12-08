@@ -74,7 +74,7 @@
             <Czech>&lt;t color='#9cf953'&gt;Použití: &lt;/t&gt;Zapnout/vypnout laser</Czech>
             <French>&lt;t color='#9cf953'&gt;Utilisation : &lt;/t&gt;Allumer/Éteindre le laser</French>
             <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS</German>
-            <Italian>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Laser ON/OFF</Italian>
+            <Italian>&lt;t color='#9cf953'&gt;Utilizzo: &lt;/t&gt;Laser ACCESO/SPENTO</Italian>
             <Polish>&lt;t color='#9cf953'&gt;Użyj: &lt;/t&gt;wł./wył. laser</Polish>
             <Portuguese>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Ativar/Desativar laser</Portuguese>
             <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;ВКЛ/ВЫКЛ лазер</Russian>
@@ -126,7 +126,7 @@
             <Polish>Przełącz Laser / Laser IR</Polish>
             <Russian>Изменить режим Лазер / ИК-лазер</Russian>
             <French>Alterner laser/laser IR</French>
-            <Italian>Alterna Laser / IR Laser</Italian>
+            <Italian>Alterna Laser / Laser IR</Italian>
             <Spanish>Cambiar láser / Láser IR</Spanish>
             <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
             <Czech>Přepnout Laser / Infračervený Laser</Czech>
