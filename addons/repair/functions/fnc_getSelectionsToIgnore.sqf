@@ -123,35 +123,34 @@ private _complexDependsMap = createHashMap;
 
     if (!(getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends") in ["", "0"])) then { 
         // Caches depends hitpoints and their parents
-        private _parentHitPoint = toLower (getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends"));
+        private _parentHitPoint = getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends");
         private _parentHitPointIndex = _hitPoints findIf {_x == _parentHitPoint};
 
         if (_parentHitPointIndex != -1) then {
             _dependsIndexMap set [_forEachIndex, _parentHitPointIndex];
             TRACE_3("Depends hitpoint and parent index",_hitPoint,_forEachIndex,_parentHitPoint);
         } else { 
-            // Multiple parents or broken parents
+            // Multiple/Complex parents or broken parents
             _indexesToIgnore pushBack _forEachIndex;
             private _parentHitPoints = _parentHitPoint splitString "+*() ";
+            private _validComplexHitPoint = true;
             {
                 if !(_x regexMatch ".*[a-z]+.*") then {
                     _parentHitPoints deleteAt _forEachIndex;
+                } else {
+                    if !(_x in _hitPoints) then {
+                        _validComplexHitPoint = false;
+                        break;
+                    };
                 };
             } forEachReversed _parentHitPoints;
-            private _validComplexHitPoint = true;
-            {
-                if !(_x in _hitPoints) then {
-                    _validComplexHitPoint = false;
-                    break;
-                };
-            } forEach _parentHitPoints;
 
-            if (_validComplexHitPoint) then {
+            if (_validComplexHitPoint || _parentHitPoint == "total") then {
                 TRACE_3("Skipping depends and setting complex parent",_hitPoint,_forEachIndex,_parentHitPoint);
                 _complexDependsMap set [_forEachIndex, [_parentHitPoint, _parentHitPoints]];
                 _dependsIndexMap set [_forEachIndex, _parentHitPointIndex];
             } else {
-                TRACE_4("Skipping depends with broken complex parent",_hitPoint,_forEachIndex,_parentHitPoint,_parentHitPoints);
+                TRACE_3("Skipping depends with broken complex parent",_hitPoint,_forEachIndex,_parentHitPoint);
                 private _groupIndex = _hitPointGroups findIf {_x # 0 == _hitPoint};
                 if (_groupIndex != -1) then {
                     ERROR_2("[%1] hitpoint [%2] is both a group-parent and an ignored depends and will be unrepairable",_type,_hitPoint);

@@ -27,11 +27,15 @@ if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
     private _damage = _vehicle getHitIndex _y;
     if (_y == -1) then { // handle complex depends parents
         (_complexDependsMap get _x) params ["_parentHitPointScript", "_parentHitPointArray"];
-        {
-            _parentHitPointScript = [_parentHitPointScript, _x, str (_vehicle getHitPointDamage _x)] call CBA_fnc_replace;
-        } forEach _parentHitPointArray;
-        TRACE_1("complex script",_parentHitPointScript);
-        _damage = call compile _parentHitPointScript;
+        if (_parentHitPointScript == "total") then {
+            _damage = damage _vehicle;
+        } else {
+            {
+                _parentHitPointScript = [_parentHitPointScript, _x, str (_vehicle getHitPointDamage _x)] call CBA_fnc_replace;
+            } forEach _parentHitPointArray;
+            TRACE_1("complex script",_parentHitPointScript);
+            _damage = call compile _parentHitPointScript;
+        };
     };
     TRACE_2("setting depends hitpoint",_x,_damage);
     _vehicle setHitIndex [_x, _damage];
