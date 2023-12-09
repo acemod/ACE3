@@ -28,9 +28,7 @@ if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
     if (_y == -1) then { // handle complex depends parents
         (_complexDependsMap get _x) params ["_parentHitPointScript", "_parentHitPointArray"];
         {
-            private _hitPoint = _parentHitPointArray select _forEachIndex;
-            private _hitPointDamage = str (_vehicle getHitPointDamage _hitPoint);
-            _parentHitPointScript = [_parentHitPointScript, _hitPoint, _hitPointDamage] call CBA_fnc_replace;
+            _parentHitPointScript = [_parentHitPointScript, _x, str (_vehicle getHitPointDamage _x)] call CBA_fnc_replace;
         } forEach _parentHitPointArray;
         TRACE_1("complex script",_parentHitPointScript);
         _damage = call compile _parentHitPointScript;

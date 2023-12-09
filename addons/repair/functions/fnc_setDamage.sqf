@@ -24,7 +24,7 @@ TRACE_2("params",_vehicle,_damage);
 if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1",_vehicle);};
 
 // save array with damage values of all hitpoints
-(getAllHitPointsDamage _vehicle) params ["", "", "_damageValues"];
+(getAllHitPointsDamage _vehicle) params ["", "", ["_damageValues", []]];
 
 // set damage of the vehicle
 private _damageDisabled = !isDamageAllowed _vehicle;

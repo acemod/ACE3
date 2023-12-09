@@ -26,7 +26,7 @@ TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 
 // get all hitpoints and selections and damages
-(getAllHitPointsDamage _vehicle) params ["", "_hitSelections", "_damageValues"];
+(getAllHitPointsDamage _vehicle) params ["", ["_hitSelections", []], ["_damageValues", []]];
 
 ([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_indexesToIgnore", "_dependsIndexMap"];
 

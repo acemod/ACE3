@@ -123,8 +123,7 @@ private _complexDependsMap = createHashMap;
 
     if (!(getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends") in ["", "0"])) then { 
         // Caches depends hitpoints and their parents
-        private _parentHitPoint = getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends");
-        _parentHitPoint = toLower _parentHitPoint;
+        private _parentHitPoint = toLower (getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends"));
         private _parentHitPointIndex = _hitPoints findIf {_x == _parentHitPoint};
 
         if (_parentHitPointIndex != -1) then {
@@ -134,13 +133,14 @@ private _complexDependsMap = createHashMap;
             // Multiple parents or broken parents
             _indexesToIgnore pushBack _forEachIndex;
             private _parentHitPoints = _parentHitPoint splitString "+*() ";
-            _parentHitPoints deleteAt (_parentHitPoints findIf {!(_x regexMatch "[a-z]")});
-
+            {
+                if !(_x regexMatch ".*[a-z]+.*") then {
+                    _parentHitPoints deleteAt _forEachIndex;
+                };
+            } forEachReversed _parentHitPoints;
             private _validComplexHitPoint = true;
             {
-                private _currentHitPoint = _x;
-                private _hitPointsCfg = "configName _x == _currentHitPoint" configClasses (_vehCfg >> "HitPoints");
-                if (_hitPointsCfg isEqualTo []) then {
+                if !(_x in _hitPoints) then {
                     _validComplexHitPoint = false;
                     break;
                 };
