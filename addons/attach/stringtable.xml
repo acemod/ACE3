@@ -250,7 +250,7 @@
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
-            <Japanese>%1&lt;br/&gt;を取り付けました</Japanese>
+            <Japanese>%1 を&lt;br/&gt;取り付けました</Japanese>
             <Korean>%1&lt;br/&gt;부착됨</Korean>
             <Chinese>%1&lt;br/&gt;已附掛</Chinese>
             <Chinesesimp>%1&lt;br/&gt;已附挂</Chinesesimp>
@@ -267,7 +267,7 @@
             <Italian>%1&lt;br/&gt;staccata</Italian>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
-            <Japanese>%1&lt;br/&gt;を外しました</Japanese>
+            <Japanese>%1 を&lt;br/&gt;外しました</Japanese>
             <Korean>%1&lt;br/&gt;떼어냄</Korean>
             <Chinese>%1&lt;br/&gt;已取下</Chinese>
             <Chinesesimp>%1&lt;br/&gt;已取下</Chinesesimp>

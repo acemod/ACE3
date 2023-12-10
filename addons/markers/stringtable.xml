@@ -6,7 +6,7 @@
             <Spanish>Escala: %1</Spanish>
             <French>Échelle : %1</French>
             <Russian>Масштаб: %1</Russian>
-            <Japanese>スケール: %1</Japanese>
+            <Japanese>大きさ: %1</Japanese>
             <Polish>Skala: %1</Polish>
             <German>Skalierung: %1</German>
             <Chinesesimp>规模：%1°</Chinesesimp>
@@ -24,7 +24,7 @@
             <Hungarian>Irány: %1°</Hungarian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção %1</Portuguese>
-            <Japanese>方位: %1°</Japanese>
+            <Japanese>方向: %1°</Japanese>
             <Korean>방위: %1°</Korean>
             <Chinesesimp>方位：%1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>
@@ -61,7 +61,7 @@
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
             <German>Erlaube Marker zu bewegen für</German>
-            <Japanese>次ユーザーにマーカー移動を許可</Japanese>
+            <Japanese>マーカー移動を許可するユーザー</Japanese>
             <Korean>마커 이동 허가</Korean>
             <Chinese>誰可以移動標誌</Chinese>
             <Chinesesimp>谁可以移动标识</Chinesesimp>
@@ -189,7 +189,7 @@
             <English>Allow Timestamps</English>
             <Russian>Вкл. отображение времени на метках</Russian>
             <French>Permettre l'horodatage</French>
-            <Japanese>タイムスタンプ許可</Japanese>
+            <Japanese>タイムスタンプの許可</Japanese>
             <Spanish>Permitir marcas de tiempo</Spanish>
             <Polish>Zezwól na znaczniki czasu</Polish>
             <German>Erlaube Zeitstempel</German>
@@ -237,7 +237,7 @@
             <English>Timestamp Format</English>
             <Russian>Формат времени</Russian>
             <French>Horodatage - Format</French>
-            <Japanese>タイムスタンプ形式</Japanese>
+            <Japanese>タイムスタンプの形式</Japanese>
             <Spanish>Formato de marca de tiempo</Spanish>
             <Polish>Format znacznika czasu</Polish>
             <German>Format des Zeitstempels</German>

@@ -63,7 +63,7 @@
             <Polish>Ukryj narzędzia nawigacyjne</Polish>
             <Czech>Schovat pomůcky k mapě</Czech>
             <Russian>Скрыть инструменты</Russian>
-            <Japanese>マップ ツールを隠す</Japanese>
+            <Japanese>マップツールを 隠す</Japanese>
             <Korean>독도용 도구 숨기기</Korean>
             <Chinesesimp>隐藏地图工具</Chinesesimp>
             <Chinese>隱藏地圖工具</Chinese>
@@ -80,7 +80,7 @@
             <Polish>Pokaż normalne narzędzia nawigacyjne</Polish>
             <Czech>Zobrazit pomůcku k mapě (Velkou)</Czech>
             <Russian>Показать инструменты (средн. размер)</Russian>
-            <Japanese>マップ ツールを表示する</Japanese>
+            <Japanese>マップツールを 表示する</Japanese>
             <Korean>보통 독도용 도구로 보기</Korean>
             <Chinesesimp>显示地图工具</Chinesesimp>
             <Chinese>顯示地圖工具</Chinese>
@@ -97,7 +97,7 @@
             <Polish>Pokaż pomniejszone narzędzia nawigacyjne</Polish>
             <Czech>Zobrazit pomůcku k mapě (Malou)</Czech>
             <Russian>Показать инструменты (малый размер)</Russian>
-            <Japanese>小さいマップ ツールを表示する</Japanese>
+            <Japanese>小さい マップツールを 表示する</Japanese>
             <Korean>작은 독도용 도구로 보기</Korean>
             <Chinesesimp>显示小的地图工具</Chinesesimp>
             <Chinese>顯示小的地圖工具</Chinese>
@@ -114,7 +114,7 @@
             <Polish>Wyrównaj linijkę do północy</Polish>
             <Czech>Srovnat pomůcku k mapě na sever</Czech>
             <Russian>Выровнять инструменты на север</Russian>
-            <Japanese>マップ ツールを北に合わせる</Japanese>
+            <Japanese>マップツールを 北に合わせる</Japanese>
             <Korean>독도용 도구를 북쪽으로 정렬</Korean>
             <Chinesesimp>地图工具对准北方</Chinesesimp>
             <Chinese>地圖工具對準北方</Chinese>
@@ -131,7 +131,7 @@
             <Polish>Wyrównaj linijkę do kompasu</Polish>
             <Czech>Srovnat pomůcku k mapě ke kompasu</Czech>
             <Russian>Выровнять инструменты по компасу</Russian>
-            <Japanese>マップ ツールを方位磁石に合わせる</Japanese>
+            <Japanese>マップツールを 方位磁石に合わせる</Japanese>
             <Korean>독도용 도구를 나침반에 정렬</Korean>
             <Chinesesimp>地图工具对准指南针</Chinesesimp>
             <Chinese>地圖工具對準指北針</Chinese>
@@ -182,7 +182,7 @@
             <Russian>Направление: %1°</Russian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção: %1</Portuguese>
-            <Japanese>方位: %1°</Japanese>
+            <Japanese>方向: %1°</Japanese>
             <Korean>방위: %1°</Korean>
             <Chinesesimp>方位：%1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>

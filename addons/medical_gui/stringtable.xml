@@ -815,7 +815,7 @@
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
-            <Japanese>開いた状態の%1が%2個あります</Japanese>
+            <Japanese>開いた状態の %1 が %2 個ある</Japanese>
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
             <Chinesesimp>有 %2 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 開放性傷口</Chinese>
@@ -831,7 +831,7 @@
             <Portuguese>Existe 1 %1 ferimento aberto</Portuguese>
             <Czech>Je zde 1 %1 otevřená rána</Czech>
             <Italian>C'è 1 %1 Ferita Aperta</Italian>
-            <Japanese>開いた状態の%1が1個あります</Japanese>
+            <Japanese>開いた状態の %1 が 1 個ある</Japanese>
             <Korean>여기 %1 크기의 열린 상처가 있다</Korean>
             <Chinesesimp>有 1 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 開放性傷口</Chinese>
@@ -847,7 +847,7 @@
             <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
             <Czech>Je zde částečně %1 otevřená rána</Czech>
             <Italian>C'è 1 parziale %1 Ferita Aperta</Italian>
-            <Japanese>開いた状態の部分的な%1があります</Japanese>
+            <Japanese>開いた状態の 部分的な %1 がある</Japanese>
             <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有未完全处理的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 開放性傷口</Chinese>
@@ -863,7 +863,7 @@
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
             <Czech>Jsou zde %2 %1 ovázané rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Bendate</Italian>
-            <Japanese>包帯を巻いた%1が%2個あります</Japanese>
+            <Japanese>包帯を巻いた %1 が %2 個ある</Japanese>
             <Korean>여기에 붕대를 감은 %2 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有 %2 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 包紮過傷口</Chinese>
@@ -879,7 +879,7 @@
             <Portuguese>Existe 1 ferimento %1 tratado</Portuguese>
             <Czech>Je zde 1 %1 ovázaná rána</Czech>
             <Italian>C'è 1 %1 Ferita Bendata</Italian>
-            <Japanese>包帯を巻いた%1が1個あります</Japanese>
+            <Japanese>包帯を巻いた %1 が 1 個ある</Japanese>
             <Korean>여기에 붕대를 감은 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有 1 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 包紮過傷口</Chinese>
@@ -895,7 +895,7 @@
             <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
             <Czech>Je zde částěčně %1 ovázaná rána</Czech>
             <Italian>C'è 1 parziale %1 Ferita Bendata</Italian>
-            <Japanese>包帯を巻いた部分的な%1があります</Japanese>
+            <Japanese>包帯を巻いた 部分的な %1 がある</Japanese>
             <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有未包扎完全的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 包紮過傷口</Chinese>

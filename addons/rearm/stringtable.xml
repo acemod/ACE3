@@ -245,7 +245,7 @@
             <English>The following ammunition is left:%1</English>
             <German>Folgende Munition ist übrig:%1</German>
             <Italian>Mancano le seguenti:%1</Italian>
-            <Japanese>この弾薬の残りは: %1</Japanese>
+            <Japanese>この弾薬は残り: %1</Japanese>
             <Chinesesimp>以下剩余的弹药：%1</Chinesesimp>
             <Chinese>以下剩餘的彈藥:%1</Chinese>
             <Polish>Pozostała amunicja: %1</Polish>
@@ -327,7 +327,7 @@
             <Italian>Sto prendendo %1 per %2...</Italian>
             <Spanish>Tomando %1 para %2...</Spanish>
             <French>Prise de %1 pour %2...</French>
-            <Japanese>%1 を %2 用として取得中・・・</Japanese>
+            <Japanese>%1 を %2 用に取得中・・・</Japanese>
             <Korean>%2를 위해 %1 가져오는 중...</Korean>
             <Chinesesimp>正在拿取%1给%2...</Chinesesimp>
             <Chinese>拿取%1給%2中...</Chinese>
@@ -419,7 +419,7 @@
             <Italian>Riarmati %1 colpi di %2 su %3</Italian>
             <Spanish>Rearmadas %1 rondas de %2 en %3</Spanish>
             <French>%1 balles réarmées de %2 dans %3.</French>
-            <Japanese>%1発の%2を%3に装填しました</Japanese>
+            <Japanese>%1 発の %2 を %3 に装填しました</Japanese>
             <Korean>%3에 2%의 %1 탄약 재보급</Korean>
             <Chinesesimp>整装了%1发%2到%3上</Chinesesimp>
             <Chinese>整裝了%1發%2到%3上</Chinese>

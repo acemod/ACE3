@@ -190,7 +190,7 @@
             <Korean>휴식 시 손떨림 정도</Korean>
             <Portuguese>Fator de balanço de mira em repouso</Portuguese>
             <German>Verwacklungsfaktor, wenn aufgelegt</German>
-            <Japanese>静止時の手ぶれ係数</Japanese>
+            <Japanese>静止時の手ぶれ因数</Japanese>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RestedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is rested.</English>
@@ -206,7 +206,7 @@
             <Korean>거치 시 손떨림 정도</Korean>
             <Portuguese>Fator de balanço de mira em posição de tiro</Portuguese>
             <German>Verwacklungsfaktor, wenn Zweibein aufgestellt ist.</German>
-            <Japanese>展開時の手ぶれ係数</Japanese>
+            <Japanese>展開時の手ぶれ因数</Japanese>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is deployed.</English>
