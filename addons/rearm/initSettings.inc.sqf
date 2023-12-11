@@ -1,4 +1,4 @@
-private _category = [ELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(DisplayName)];
+private _category = [ELSTRING(main,Category_Logistics), LLSTRING(DisplayName)];
 
 [
     QGVAR(enabled), "CHECKBOX",
