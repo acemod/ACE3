@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * canUseMapTools
@@ -13,17 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 visibleMap &&
 {alive ACE_player} &&
-{
-    scopeName "hasMap";
-    {
-        if (_x isKindOf ["ItemMap", configFile >> "CfgWeapons"]) exitWith {true breakOut "hasMap"};
-    } forEach (assignedItems ACE_player);
-    false
-} &&
-{"ACE_MapTools" in (items ACE_player)} &&
+{"ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems))} &&
 {!GVAR(mapTool_isDragging)} &&
-{!GVAR(mapTool_isRotating)}
+{!GVAR(mapTool_isRotating)} &&
+{getUnitLoadout ACE_player param [9, []] param [0, ""] != ""}

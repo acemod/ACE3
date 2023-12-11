@@ -1,11 +1,11 @@
 class CfgVehicles {
     class ACE_Module;
     class GVAR(moduleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         category = "ACE";
         displayName = CSTRING(moduleSettings_displayName);
         function = QFUNC(moduleSettings);
-        isGlobal = 0;
+        isGlobal = 1;
         isSingular = 1;
         author = ECSTRING(common,ACETeam);
         icon = QPATHTOF(ui\icon_module_map_gestures_ca.paa);

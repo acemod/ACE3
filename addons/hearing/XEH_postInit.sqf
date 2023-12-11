@@ -13,7 +13,7 @@ GVAR(damageCoefficent) = 1;
 GVAR(volumeAttenuation) = 1;
 GVAR(lastPlayerVehicle) = objNull;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_1("settingInit",GVAR(EnableCombatDeafness));
     // Only run PFEH and install event handlers if combat deafness is enabled
     if (!GVAR(EnableCombatDeafness)) exitWith {};
@@ -60,7 +60,7 @@ GVAR(lastPlayerVehicle) = objNull;
         };
         // Don't add a new EH if the unit respawned
         if ((_player getVariable [QGVAR(firedEH), -1]) == -1) then {
-            if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _player) >> "isPlayableLogic")) == 1) exitWith {
+            if ((getNumber (configOf _player >> "isPlayableLogic")) == 1) exitWith {
                 TRACE_1("skipping playable logic",typeOf _player); // VirtualMan_F (placeable logic zeus / spectator)
             };
             private _firedEH = _player addEventHandler ["FiredNear", {call FUNC(firedNear)}];

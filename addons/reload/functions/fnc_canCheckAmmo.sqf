@@ -1,43 +1,34 @@
+#include "..\script_component.hpp"
 /*
- * Author: CAA-Picard
- * Check if the player can check the ammo of the target.
+ * Author: CAA-Picard, johnb43
+ * Check if a unit can check the ammo of the target.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Unit equipped with the weapon <OBJECT>
  *
  * Return Value:
- * Can link belt<BOOL> 
+ * Can check ammo <BOOL>
  *
  * Example:
- * [player, bob] call ace_reload_fnc_canCheckAmmo
+ * [cursorObject] call ace_reload_fnc_canCheckAmmo
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["", "_target"];
+params ["_target"];
 
-// Return true for static weapons if they have been fired once, @todo 1.40 this work-around doesn't work anymore
+// Static weapons
 if (_target isKindOf "StaticWeapon") exitWith {
-    if (currentMagazine _target != "") exitWith {true};
-
-    // no check ammo action on destroyed static weapons
+    // No check ammo action on destroyed static weapons
     if (!alive _target) exitWith {false};
 
-    private _found = false;
+    if (currentMagazine _target != "") exitWith {true};
 
-    {
-        if (_x select 2) exitWith {
-            _found = true;
-        };
-        false
-    } count magazinesAmmoFull _target;
-
-    _found
+    // Check for loaded magazines
+    (magazinesAmmoFull _target) findIf {_x select 2} != -1
 };
 
-// Return false for all other vehicles
+// All other vehicles
 if !(_target isKindOf "CAManBase") exitWith {false};
 
 // For men

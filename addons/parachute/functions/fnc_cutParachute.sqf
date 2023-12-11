@@ -1,21 +1,23 @@
+#include "..\script_component.hpp"
 /*
- * Author: joko // Jonas
- * Cut Parachute and delete Old
+ * Author: joko, Jonas, kymckay
+ * Perform the cut parachute action (move unit out and delete)
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Player <OBJECT>
+ * 1: Parachute <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player] call FUNC(cutParachute);
+ * [player, vehicle player] call ace_parachute_fnc_cutParachute;
  *
  * Public: No
  */
-#include "script_component.hpp"
-params ["_unit"];
-private _vehicle = vehicle _unit;
-_unit action ["GetOut", _vehicle];
-deleteVehicle _vehicle;
-_unit setVariable [QGVAR(chuteIsCut), true, true];
+params ["_unit", "_parachute"];
+TRACE_2("cutParachute", _unit, _parachute);
+
+playSound3d ["A3\Sounds_F\characters\parachute\parachute_landing.wss", _unit];
+_unit action ["GetOut", _parachute];
+deleteVehicle _parachute;

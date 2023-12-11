@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Checks if there is a taggable surface within 2.5m in front of the player.
@@ -14,13 +15,13 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 [_this, {
     params ["_unit"];
 
     // Exit if no required item in inventory
-    if ((GVAR(cachedRequiredItems) arrayIntersect ((items _unit) apply {toLower _x})) isEqualTo []) exitWith {false};
+    if ([_unit, {
+        (keys GVAR(itemActions)) arrayIntersect (_unit call EFUNC(common,uniqueItems)) isEqualTo []
+    }, _unit, QGVAR(checkRequiredItemsCache), 9999, "cba_events_loadoutEvent"] call EFUNC(common,cachedCall)) exitWith {false};
 
     private _startPosASL = eyePos _unit;
     private _cameraPosASL =  AGLToASL positionCameraToWorld [0, 0, 0];
@@ -37,10 +38,15 @@
     // Exit if trying to tag a non static object
     TRACE_1("Obj:",_intersections);
 
-    // Exit if trying to tag a non static object
     if ((!isNull _object) && {
         // If the class is alright, do not exit
         if (_object isKindOf "Static") exitWith {false};
+
+        // Taggable vehicle, do not exit
+        if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true]) 
+        && {getText (configOf _object >> "selectionClan") in selectionNames _object}) exitWith {
+            false
+        };
 
         // If the class is not categorized correctly search the cache
         private _modelName = (getModelInfo _object) select 0;

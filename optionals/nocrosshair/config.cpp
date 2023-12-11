@@ -12,7 +12,9 @@ class CfgPatches {
         authors[] = {"commy2"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+        ACE_expectedModDir = "@ACE No Cross Hair";
+        ACE_expectedSteamID = "2202412481";
     };
 };
 
-#include "CfgInGameUI.hpp"
+#include "CfgWeaponCursors.hpp"

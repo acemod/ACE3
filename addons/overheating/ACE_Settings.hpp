@@ -1,47 +1,41 @@
 class ACE_Settings {
-    class GVAR(displayTextOnJam) {
-        typeName = "BOOL";
-        isClientSettable = 1;
-        value = 1;
-        displayName = CSTRING(DisplayTextOnJam_displayName);
-        description = CSTRING(DisplayTextOnJam_description);
+    class GVAR(enabled) {
+        movedToSQF = 1;
+    };
+    class GVAR(heatCoef) {
+        movedToSQF = 1;
     };
     class GVAR(showParticleEffects) {
-        typeName = "BOOL";
-        isClientSettable = 1;
-        value = 1;
-        displayName = CSTRING(showParticleEffects_displayName);
-        description = CSTRING(showParticleEffects_description);
+        movedToSQF = 1;
     };
     class GVAR(showParticleEffectsForEveryone) {
-        typeName = "BOOL";
-        isClientSettable = 1;
-        value = 0;
-        displayName = CSTRING(showParticleEffectsForEveryone_displayName);
-        description = CSTRING(showParticleEffectsForEveryone_description);
+        movedToSQF = 1;
     };
     class GVAR(overheatingDispersion) {
-        typeName = "BOOL";
-        value = 1;
-        displayName = CSTRING(overheatingDispersion_displayName);
-        description = CSTRING(overheatingDispersion_description);
+        movedToSQF = 1;
     };
-    class GVAR(unJamOnreload) {
-        typeName = "BOOL";
-        value = 0;
-        displayName = CSTRING(unJamOnreload_displayName);
-        description = CSTRING(unJamOnreload_description);
+    class GVAR(particleEffectsAndDispersionDistance) {
+        movedToSQF = 1;
+    };
+    class GVAR(overheatingRateOfFire) {
+        movedToSQF = 1;
+    };
+    class GVAR(displayTextOnJam) {
+        movedToSQF = 1;
+    };
+    class GVAR(jamChanceCoef) {
+        movedToSQF = 1;
+    };
+    class GVAR(unJamOnReload) {
+        movedToSQF = 1;
+    };
+    class GVAR(unJamOnSwapBarrel) {
+        movedToSQF = 1;
     };
     class GVAR(unJamFailChance) {
-        typeName = "SCALAR";
-        value = 0.1;
-        displayName = CSTRING(unJamFailChance_displayName);
-        description = CSTRING(unJamFailChance_description);
+        movedToSQF = 1;
     };
-    class GVAR(enabled) {
-        typeName = "BOOL";
-        value = 1;
-        displayName = CSTRING(enabled_displayName);
-        description = CSTRING(enabled_description);
+    class GVAR(cookoffCoef) {
+        movedToSQF = 1;
     };
 };

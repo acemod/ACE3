@@ -1,9 +1,4 @@
 class CfgVehicles {
-    class All {
-        ACE_NightVision_grain = 0.75;
-        ACE_NightVision_blur = 0.055;
-    };
-
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
@@ -17,7 +12,7 @@ class CfgVehicles {
 
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_ca.paa);
         category = "ACE";

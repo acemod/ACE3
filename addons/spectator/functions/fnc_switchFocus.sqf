@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Function used to switch to next or previous camera focus
  *
  * Arguments:
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _next = param [0, true];
 private _entities = [true] call FUNC(getTargetEntities);

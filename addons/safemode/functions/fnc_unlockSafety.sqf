@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Take weapon of safety lock.
@@ -6,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  * 2: Muzzle <STRING>
+ * 3: Show hint <BOOL>
  *
  * Return Value:
  * None
@@ -15,9 +17,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_unit", "_weapon", "_muzzle"];
+params ["_unit", "_weapon", "_muzzle", ["_hint", true, [true]]];
 
 private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 _safedWeapons deleteAt (_safedWeapons find _weapon);
@@ -30,7 +31,19 @@ if (_safedWeapons isEqualTo []) then {
     _unit setVariable [QGVAR(actionID), -1];
 };
 
+private _laserEnabled = _unit isIRLaserOn _weapon || {_unit isFlashlightOn _weapon};
+
 _unit selectWeapon _muzzle;
+
+if (
+    _laserEnabled
+    && {
+        _muzzle == primaryWeapon _unit // prevent UGL switch
+        || {"" == primaryWeapon _unit} // Arma switches to primary weapon if exists
+    }
+) then {
+    {_unit action [_x, _unit]} forEach ["GunLightOn", "IRLaserOn"];
+};
 
 if (inputAction "nextWeapon" > 0) then {
     // switch to the last mode to roll over to first after the default nextWeapon action
@@ -65,6 +78,8 @@ if (inputAction "nextWeapon" > 0) then {
 // player hud
 [true] call FUNC(setSafeModeVisual);
 
-// show info box
-private _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize LSTRING(TookOffSafety), _picture] call EFUNC(common,displayTextPicture);
+// show info box unless disabled
+if (_hint) then {
+    private _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
+    [localize LSTRING(TookOffSafety), _picture] call EFUNC(common,displayTextPicture);
+};

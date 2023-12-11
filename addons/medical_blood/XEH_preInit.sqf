@@ -6,6 +6,11 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.inc.sqf"
+
+// Damage types which do not cause blood spurts
+GVAR(noBloodDamageTypes) = createHashMapFromArray (call (uiNamespace getVariable QGVAR(noBloodDamageTypes)));
+
 // blood object model namespace
 GVAR(models) = [] call CBA_fnc_createNamespace;
 

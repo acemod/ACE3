@@ -28,7 +28,10 @@ class CfgPatches {
 #include "CfgOptics.hpp"
 
 class ACE_Extensions {
-    extensions[] += {"ace_fcs"};
+    class ace_fcs {
+        windows = 1;
+        client = 1;
+    };
 };
 
 class ACE_Tests {

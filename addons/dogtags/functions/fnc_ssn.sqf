@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Reports a social security number generated from the units name.
  *
  * Arguments:
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name"];
 

@@ -1,0 +1,102 @@
+[
+    // General
+    {
+        "name": "Arsenal",
+        "url": "https://ace3.acemod.org/wiki/feature/arsenal.html"
+    },
+    // Interaction
+    {
+        "name": "AdvancedThrowing",
+        "url": "https://ace3.acemod.org/wiki/feature/advanced-throwing.html"
+    },
+    {
+        "name": "Captives",
+        "url": "https://ace3.acemod.org/wiki/feature/captives.html"
+    },
+    {
+        "name": "Explosives",
+        "url": "https://ace3.acemod.org/wiki/feature/explosives.html"
+    },
+    {
+        "name": "Interaction",
+        "url": "https://ace3.acemod.org/wiki/feature/interaction.html"
+    },
+    {
+        "name": "MapGestures",
+        "url": "https://ace3.acemod.org/wiki/feature/map-gestures.html"
+    },
+    {
+        "name": "Nametags",
+        "url": "https://ace3.acemod.org/wiki/feature/nametags.html"
+    },
+    {
+        "name": "Pylons",
+        "url": "https://ace3.acemod.org/wiki/feature/pylons.html"
+    },
+    {
+        "name": "Refuel",
+        "url": "https://ace3.acemod.org/wiki/feature/refuel.html"
+    },
+    {
+        "name": "Reload",
+        "url": "https://ace3.acemod.org/wiki/feature/reload.html"
+    },
+    {
+        "name": "Repair",
+        "url": "https://ace3.acemod.org/wiki/feature/repair.html"
+    },
+    {
+        "name": "Slideshow",
+        "url": "https://ace3.acemod.org/wiki/feature/slideshow.html"
+    },
+    {
+        "name": "Spectator",
+        "url": "https://ace3.acemod.org/wiki/feature/spectator.html"
+    },
+    // Realism
+    {
+        "name": "AdvancedBallistics",
+        "url": "https://ace3.acemod.org/wiki/feature/advanced-ballistics.html"
+    },
+    {
+        "name": "Hearing",
+        "url": "https://ace3.acemod.org/wiki/feature/hearing.html"
+    },
+    {
+        "name": "MedicalSystem",
+        "url": "https://ace3.acemod.org/wiki/feature/medical-system.html"
+    },
+    {
+        "name": "Overheating",
+        "url": "https://ace3.acemod.org/wiki/feature/overheating.html"
+    },
+    {
+        "name": "Weather",
+        "url": "https://ace3.acemod.org/wiki/feature/weather.html"
+    },
+    // Equipment
+    {
+        "name": "ATragMX",
+        "url": "https://ace3.acemod.org/wiki/feature/atragmx.html"
+    },
+    {
+        "name": "Hellfire",
+        "url": "https://ace3.acemod.org/wiki/feature/hellfire.html"
+    },
+    {
+        "name": "Kestrel4500",
+        "url": "https://ace3.acemod.org/wiki/feature/kestrel4500.html"
+    },
+    {
+        "name": "MapTools",
+        "url": "https://ace3.acemod.org/wiki/feature/maptools.html"
+    },
+    {
+        "name": "MicroDAGR",
+        "url": "https://ace3.acemod.org/wiki/feature/microdagr.html"
+    },
+    {
+        "name": "Nightvision",
+        "url": "https://ace3.acemod.org/wiki/feature/nightvision.html"
+    }
+]

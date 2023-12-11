@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Advanced Fatigue
+component: advanced_fatigue
 description: Human fatigue simulation based on scientific formulas.
 group: feature
 category: realism
@@ -73,7 +74,7 @@ Each pathway has different properties: They store different amounts of ATP and c
 
 #### 2.2.1 Anaerobic Pathway
 
-This pathway is essentially responsible for your short term stamina. It has a very small capacity of ATP available (2300 mmol), which is can provide a lot of ATP very fast (13.3 mmol/s), but also replenished very quickly (56.7 mmol/s). This pathway is pretty much what limits how long you can jog or sprint in one go, which is why we use it as an indicator for the stamina bar.
+This pathway is essentially responsible for your short term stamina. It has a very small capacity of ATP available (2300 mmol), which is can provide a lot of ATP very fast (113.3 mmol/s), but also replenished very quickly (56.7 mmol/s). This pathway is pretty much what limits how long you can jog or sprint in one go, which is why we use it as an indicator for the stamina bar.
 
 
 #### 2.2.2 Aerobic Pathways
@@ -91,9 +92,3 @@ At any time the body consumes a certain amount of ATP - even when not moving. Si
 ### 2.4 ATP Pathway Fatigue
 
 Another factor that comes into play here is pathway fatigue - the pathways themselves can fatigue too! That means, the more ATP the pathways have to provide, the slower they will will be able to, limiting how much ATP can overall be provided by each pathway. If we take into account that the aerobic pathways have provide their ATP first for any consumption, that means that the anaerobic pathway will have to provide more ATP if the aerobic ones are fatigued. This is how the long term fatigue effect is created.
-
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="advanced_fatigue" %}

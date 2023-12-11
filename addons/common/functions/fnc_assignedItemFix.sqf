@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Initialized the assigned item fix.
@@ -13,13 +14,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-ACE_isMapEnabled     = call {private _config = missionConfigFile >> "showMap";     !isNumber _config || {getNumber _config == 1}};  // default value is 1, so do isNumber check first
-ACE_isCompassEnabled = call {private _config = missionConfigFile >> "showCompass"; !isNumber _config || {getNumber _config == 1}};
-ACE_isWatchEnabled   = call {private _config = missionConfigFile >> "showWatch";   !isNumber _config || {getNumber _config == 1}};
-ACE_isRadioEnabled   = call {private _config = missionConfigFile >> "showRadio";   !isNumber _config || {getNumber _config == 1}};
-ACE_isGPSEnabled     = call {private _config = missionConfigFile >> "showGPS";     !isNumber _config || {getNumber _config == 1}};
+ACE_isMapEnabled     = getMissionConfigValue ["showMap", 1] in [true, 1];
+ACE_isCompassEnabled = getMissionConfigValue ["showCompass", 1] in [true, 1];
+ACE_isWatchEnabled   = getMissionConfigValue ["showWatch", 1] in [true, 1];
+ACE_isRadioEnabled   = getMissionConfigValue ["showRadio", 1] in [true, 1];
+ACE_isGPSEnabled     = getMissionConfigValue ["showGPS", 1] in [true, 1];
 
 GVAR(AssignedItems) = [];
 GVAR(AssignedItemsInfo) = [];
@@ -37,11 +37,11 @@ GVAR(AssignedItemsShownItems) = [
     private _assignedItems = getUnitLoadout _unit param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]
 
     GVAR(AssignedItemsShownItems) = [
-        !((_assignedItems select 0) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 0 >> "ACE_hideItemType") != "map"},
-        !((_assignedItems select 3) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 3 >> "ACE_hideItemType") != "compass"},
-        !((_assignedItems select 4) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 4 >> "ACE_hideItemType") != "watch"},
-        !((_assignedItems select 2) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 2 >> "ACE_hideItemType") != "radio"},
-        !((_assignedItems select 1) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 1 >> "ACE_hideItemType") != "gps"}
+        ((_assignedItems select 0) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 0 >> "ACE_hideItemType") != "map"},
+        ((_assignedItems select 3) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 3 >> "ACE_hideItemType") != "compass"},
+        ((_assignedItems select 4) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 4 >> "ACE_hideItemType") != "watch"},
+        ((_assignedItems select 2) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 2 >> "ACE_hideItemType") != "radio"},
+        ((_assignedItems select 1) isNotEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 1 >> "ACE_hideItemType") != "gps"}
     ];
 
     GVAR(AssignedItemsShownItems) params ["_showMap", "_showCompass", "_showWatch", "_showRadio", "_showGPS"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, esteldunedain, Ruthberg
  *
@@ -5,7 +6,6 @@
  * Defines key bindings
  *
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
@@ -13,10 +13,9 @@ GVAR(Optics) = ["", "", ""];
 GVAR(Guns) = ["", "", ""];
 GVAR(canAdjustElevation) = [false, false, false];
 GVAR(canAdjustWindage) = [false, false, false];
-GVAR(boreHeight) = [0, 0, 0];
 GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
 
     if (!GVAR(enabled)) exitWith {};
 
@@ -35,7 +34,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
             private _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
             _layer cutText ["", "PLAIN", 0];
 
-            if !(isNil QGVAR(fadePFH)) then {
+            if (!isNil QGVAR(fadePFH)) then {
                 [GVAR(fadePFH)] call CBA_fnc_removePerFrameHandler;
                 GVAR(fadePFH) = nil;
             };

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Call and propegate a synced event
@@ -15,11 +16,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name", "_args", ["_ttl", 0]];
 
-if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
+if !(_name in GVAR(syncedEvents)) exitWith {
     ERROR_1("Synced event key [%1] not found (syncedEvent).", _name);
     false
 };

@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Function used to get an appropriate icon for provided group. Approximate.
  *
  * Arguments:
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define ICON_PATH(var1) QUOTE(a3\ui_f\data\Map\Markers\NATO\var1)
 
 // Military icons

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Update the map tool markers, position, size, rotation and visibility.
@@ -13,11 +14,17 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_theMap"];
 
-if ((GVAR(mapTool_Shown) == 0) || {!("ACE_MapTools" in items ACE_player)}) exitWith {};
+if ((GVAR(mapTool_Shown) == 0) || {!("ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems)))}) exitWith {};
+
+// open map tools in center of screen when toggled to be shown
+if (GVAR(mapTool_moveToMouse)) then {
+    private _mousePosition = _theMap ctrlMapScreenToWorld getMousePosition;
+    GVAR(mapTool_pos) = _mousePosition;
+    GVAR(mapTool_moveToMouse) = false;  // we only need to do this once	after opening the map tool
+};
 
 private _rotatingTexture = "";
 private _textureWidth = 0;
@@ -34,7 +41,7 @@ if (GVAR(freedrawing)) then {[_theMap, _textureWidth] call FUNC(drawLinesOnRoame
 // Update scale of both parts
 getResolution params ["_resWidth", "_resHeight", "", "", "_aspectRatio"];
 private _scaleX = 32 * _textureWidth * CONSTANT_SCALE * (call FUNC(calculateMapScale));
-private _scaleY = _scaleX * ((_resWidth / _resHeight) / _aspectRatio); //handle bad aspect ratios
+private _scaleY = _scaleX;
 
 // Position of the fixed part
 private _xPos = GVAR(mapTool_pos) select 0;

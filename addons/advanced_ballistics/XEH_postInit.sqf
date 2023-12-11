@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"
 
 GVAR(currentbulletID) = -1;
 
@@ -9,22 +9,9 @@ GVAR(ProtractorStart) = CBA_missionTime;
 GVAR(allBullets) = [];
 GVAR(currentGrid) = 0;
 
-GVAR(extensionAvailable) = true;
-/* @TODO: Remove this until versioning is in sync with cmake/build versioning
-GVAR(extensionVersion) = ("ace_advanced_ballistics" callExtension "version");
-GVAR(extensionAvailable) = (GVAR(extensionVersion) == EXTENSION_REQUIRED_VERSION);
-if (!GVAR(extensionAvailable)) exitWith {
-    if (GVAR(extensionVersion) == "") then {
-        diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is missing";
-    } else {
-        diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is incompatible";
-    };
-};
-*/
-
 if (!hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     //If not enabled, dont't add PFEH
     if (!GVAR(enabled)) exitWith {};
 
@@ -35,10 +22,13 @@ if (!hasInterface) exitWith {};
     ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
     ["ace_firedPlayerNonLocal", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
 
+    // Register Perframe Handler
+    [FUNC(handleFirePFH), GVAR(simulationInterval)] call CBA_fnc_addPerFrameHandler;
+
     //Add warnings for missing compat PBOs (only if AB is on)
     {
         _x params ["_modPBO", "_compatPBO"];
-        if ((isClass (configFile >> "CfgPatches" >> _modPBO)) && {!isClass (configFile >> "CfgPatches" >> _compatPBO)}) then {
+        if ([_modPBO] call EFUNC(common,isModLoaded) && {!([_compatPBO] call EFUNC(common,isModLoaded))}) then {
             WARNING_2("Weapon Mod [%1] missing ace compat pbo [%2] (from @ace\optionals)",_modPBO,_compatPBO);
         };
     } forEach [

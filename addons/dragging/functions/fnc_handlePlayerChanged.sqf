@@ -1,6 +1,7 @@
+#include "..\script_component.hpp"
 /*
  * Author: commy2
- * Handle player changes.
+ * Handles player changes.
  *
  * Arguments:
  * 0: New Player Unit <OBJECT>
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_newPlayer", "_oldPlayer"];
 TRACE_2("params",_newPlayer,_oldPlayer);

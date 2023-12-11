@@ -1,20 +1,19 @@
+#include "..\script_component.hpp"
 /*
  * Author: Rocko and esteldunedain
  * On map draw, updates the effects
  *
  * Arguments:
- * None
+ * 0: Map control <CONTROL>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ACE_map_fnc_updateMapEffects
+ * _mapControl call ACE_map_fnc_updateMapEffects
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_mapCtrl"];
 private _mapScale = ctrlMapScale _mapCtrl;
@@ -22,7 +21,7 @@ private _mapCentre = _mapCtrl ctrlMapScreenToWorld [0.5, 0.5];
 
 if (GVAR(mapIllumination)) then {
     //get nearby lighting
-    private _light = [[ACE_player], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call EFUNC(common,cachedCall);
+    private _light = [ACE_player] call FUNC(determineMapLight);
 
     _light params ["_applyLighting", "_lightLevel"];
 
@@ -35,7 +34,7 @@ if (GVAR(mapShake)) then {
 
     // Only shake map while moving on foot
     private _speed = 0;
-    if (vehicle ACE_player == ACE_player) then {
+    if ((alive ACE_player) && {vehicle ACE_player == ACE_player}) then {
         _speed = vectorMagnitude (velocity ACE_player);
     };
 

@@ -19,6 +19,7 @@ ACE provides four settings to tweak Advanced Fatigue. Adjust these factors depen
 - **Recovery factor:** Do you like looking at the landscape or think breaks are boring? Whatever the case, this influences the length of your stamina breaks.
 - **Load factor:** If you believe a Javelin is the perfect companion for your .50 BMG sniper rifle you probably should tweak this setting.
 - **Terrain factor**: Not everyone is used to mountainous terrain. Tweak this until you feel more at home.
+- **Sway factor**: Influences the amount of weapon sway. Higher means more sway.
 
 Note that while there currently is no restriction on the value of these settings, it's generally recommended to keep them between 0 and 2.
 

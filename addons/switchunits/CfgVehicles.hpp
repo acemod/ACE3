@@ -3,9 +3,9 @@ class CfgVehicles {
     class ACE_ModuleSwitchUnits: ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = CSTRING(Module_DisplayName);
-        function = FUNC(module);
-        scope = 2;
+        displayName = CSTRING(DisplayName);
+        function = QFUNC(module);
+        scope = 1;
         isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_SwitchUnits_ca.paa);
         class Arguments {

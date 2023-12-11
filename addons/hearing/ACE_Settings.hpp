@@ -1,41 +1,20 @@
 class ACE_Settings {
     class GVAR(enableCombatDeafness) {
-        category = CSTRING(Module_DisplayName);
-        value = 1;
-        typeName = "BOOL";
-        displayName = CSTRING(EnableCombatDeafness_DisplayName);
-        description = CSTRING(EnableCombatDeafness_Description);
+        movedToSQF = 1;
     };
     class GVAR(earplugsVolume) {
-        category = CSTRING(Module_DisplayName);
-        value = 0.5;
-        typeName = "SCALAR";
+        movedToSQF = 1;
     };
     class GVAR(unconsciousnessVolume) {
-        category = CSTRING(Module_DisplayName);
-        value = 0.4;
-        typeName = "SCALAR";
+        movedToSQF = 1;
     };
     class GVAR(disableEarRinging) {
-        category = CSTRING(Module_DisplayName);
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(DisableEarRinging_DisplayName);
-        description = CSTRING(DisableEarRinging_Description);
+        movedToSQF = 1;
     };
     class GVAR(enabledForZeusUnits) {
-        category = CSTRING(Module_DisplayName);
-        value = 1;
-        typeName = "BOOL";
-        displayName = CSTRING(enabledForZeusUnits_DisplayName);
-        description = CSTRING(enabledForZeusUnits_Description);
+        movedToSQF = 1;
     };
     class GVAR(autoAddEarplugsToUnits) {
-        category = CSTRING(Module_DisplayName);
-        value = 1;
-        typeName = "BOOL";
-        displayName = CSTRING(autoAddEarplugsToUnits_DisplayName);
-        description = CSTRING(autoAddEarplugsToUnits_Description);
+        movedToSQF = 1;
     };
 };

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: AI (Artificial Intelligence)
+component: ai
 description: Config based changes to AI to ensure compatibility with advanced AI modifications.
 group: feature
 category: realism
@@ -29,7 +30,3 @@ Some weapons had minimum engagement ranges. If you were as close as 2 meters to 
 
 ### 1.4 No scripting
 All changes of ACE3 AI are config based to ensure full compatibility with advanced AI modifications like e.g. "ASR AI 3".
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="ai" %}

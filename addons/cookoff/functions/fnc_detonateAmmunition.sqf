@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Detonates ammunition from a vehicle until no ammo left
@@ -5,8 +6,8 @@
  * Arguments:
  * 0: vehicle <OBJECT>
  * 1: Ammo Array <ARRAY>
- *      0: Magazine Classname <STRING>
- *      1: Ammo Count <NUMBER>
+ * - 0: Magazine Classname <STRING>
+ * - 1: Ammo Count <NUMBER>
  * 2: Total Ammo Count <NUMBER>
  *
  * Return Value:
@@ -17,10 +18,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#define MAX_TIME_BETWEEN_AMMO_DET 25
 
 params ["_vehicle", "_magazines", "_totalAmmo"];
+
+if (GVAR(enable) == 0) exitWith {};
+if !(GVAR(enableAmmoCookoff)) exitWith {};
 
 if (isNull _vehicle) exitWith {}; // vehicle got deleted
 if (_magazines isEqualTo []) exitWith {}; // nothing to detonate anymore
@@ -87,7 +89,7 @@ if (_amountOfMagazines > 0) exitWith {
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1300];
 
         if (random 1 < 0.15) then {
-            [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
+            [_vehicle, _ammo, _speed, true] call _spawnProjectile;
         };
     };
     if (toLower _simType == "shotgrenade") then {

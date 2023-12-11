@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Adds custom tag. Has to be executed on one machine only.
@@ -8,47 +9,51 @@
  * 2: Required Item <STRING>
  * 3: Textures Paths <ARRAY>
  * 4: Icon Path <STRING> (default: "")
+ * 5: Material Paths <ARRAY> (default: [])
+ * 6: Tag Model <STRING> (default: "UserTexture1m_F")
  *
  * Return Value:
- * Sucessfully Added Tag <BOOL>
+ * Successfully Added Tag <BOOL>
  *
  * Example:
  * ["ace_victoryRed", "Victory Red", "ACE_SpraypaintRed", ["path\to\texture1.paa", "path\to\texture2.paa"], "path\to\icon.paa"] call ace_tagging_fnc_addCustomTag
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [
     ["_identifier", "", [""]],
     ["_displayName", "", [""]],
     ["_requiredItem", "", [""]],
     ["_textures", [], [[]]],
-    ["_icon", "", [""]]
+    ["_icon", "", [""]],
+    ["_materials", [], [[]]],
+    ["_tagModel", "UserTexture1m_F", [""]]
 ];
 
 // Verify
 if (_identifier == "") exitWith {
-    ERROR("Failed adding custom tag - missing identifier");
+    ERROR("Failed adding custom tag - missing identifier"); false
 };
 
 if (_displayName == "") exitWith {
-    ERROR_1("Failed adding custom tag: %1 - missing displayName",_identifier);
+    ERROR_1("Failed adding custom tag: %1 - missing displayName",_identifier); false
 };
 
 if (_requiredItem == "") exitWith {
-    ERROR_1("Failed adding custom tag: %1 - missing requiredItem",_identifier);
+    ERROR_1("Failed adding custom tag: %1 - missing requiredItem",_identifier); false
 };
 if (!isClass (configFile >> "CfgWeapons" >> _requiredItem)) exitWith {
-    ERROR_2("Failed adding custom tag: %1 - requiredItem %2 does not exist",_identifier,_requiredItem);
+    ERROR_2("Failed adding custom tag: %1 - requiredItem %2 does not exist",_identifier,_requiredItem); false
 };
 
 if (_textures isEqualTo []) exitWith {
-    ERROR_1("Failed adding custom tag: %1 - missing textures",_identifier);
+    ERROR_1("Failed adding custom tag: %1 - missing textures",_identifier); false
 };
 
 _identifier = [_identifier] call CBA_fnc_removeWhitespace;
-_requiredItem = toLower _requiredItem;
 
 // Add
-[QGVAR(applyCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon]] call CBA_fnc_globalEventJIP;
+[QGVAR(applyCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon, _materials, _tagModel]] call CBA_fnc_globalEventJIP;
+
+true

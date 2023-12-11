@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, commy2
  * Handles explosions.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -41,7 +41,7 @@ if (getText (_config >> "ACE_OverlayCracked") != "") then {
     if (call FUNC(ExternalCamera)) exitWith {};
 
     if (isNull (GLASSDISPLAY)) then {
-        GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false];
+        GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
     };
 
     (GLASSDISPLAY displayCtrl 10650) ctrlSetText getText (_config >> "ACE_OverlayCracked");

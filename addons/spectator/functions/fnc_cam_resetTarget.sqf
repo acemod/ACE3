@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Removes the current camera interest and detaches dummy target.
  *
  * Arguments:
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _camera = GVAR(camera);
 private _dummy = GVAR(camDummy);

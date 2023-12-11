@@ -65,4 +65,22 @@ class CfgVehicles {
             };
         };
     };
+    class Car;
+    class Car_F: Car {
+        class Turrets {
+            class MainTurret;
+        };
+    };
+    class LSV_01_base_F: Car_F {
+        class Turrets: Turrets {};
+    };
+    class LSV_01_AT_base_F: LSV_01_base_F { // Prowler / Polaris DAGOR
+        class Turrets: Turrets {
+            class TopTurret: MainTurret {
+                weapons[] = { QGVAR(Titan_Static) };
+                turretInfoType = "ACE_RscOptics_javelin";
+                gunnerOpticsModel = QPATHTOF(data\reticle_titan.p3d);
+            };
+        };
+    };
 };

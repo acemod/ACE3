@@ -18,14 +18,33 @@ ACE_Modifier = 0;
     _unit doMove _position;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setLampOn), {
-    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
-    {if((_x select 1) == _disabledLampDMG) then {_lamp setHit [_x select 0, 0];};nil} count _hitPointsDamage;
+[QGVAR(flip), {
+    params ["_vehicle"];
+    private _position = getPosATL _vehicle;
+    _vehicle setVectorUp surfaceNormal _position;
+    _vehicle setPosATL _position;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setLampOff), {
-    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
-    {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
+[QGVAR(setLight), {
+    params ["_lamp", "_state"];
+    private _hitpoints = _lamp call EFUNC(common,getReflectorsWithSelections) select 1;
+    {
+        private _damage = _lamp getHit _x;
+        if (_state) then {
+            if (_damage == DISABLED_LAMP_DAMAGE) then {
+                _lamp setHit [_x, 0];
+            };
+        } else {
+            if (_damage < DISABLED_LAMP_DAMAGE) then {
+                _lamp setHit [_x, DISABLED_LAMP_DAMAGE];
+            };
+        };
+    } forEach _hitpoints;
+    _lamp setVariable [QGVAR(isLightOn), _state, true];
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setCollisionLight), {
+    (_this select 0) setCollisionLight (_this select 1);
 }] call CBA_fnc_addEventHandler;
 
 // Zeus action events
@@ -58,9 +77,29 @@ ACE_Modifier = 0;
     };
 }] call CBA_fnc_addEventHandler;
 
+if (isServer) then {
+    [QGVAR(replaceTerrainObject), FUNC(replaceTerrainObject)] call CBA_fnc_addEventHandler;
+};
+
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
+
+[QEGVAR(interact_menu,renderNearbyActions), {
+    if (!GVAR(interactWithTerrainObjects)) exitWith {};
+    {
+        if (
+            isObjectHidden _x // after hiding on server
+            || {_x getVariable [QGVAR(terrainObjectReplaced), false]} // after checking but before hiding
+            || {typeOf _x isNotEqualTo ""}
+        ) then {continue};
+        private _model = getModelInfo _x select 1;
+        private _class = GVAR(replaceTerrainModels) get _model;
+        if (isNil "_class") then {continue};
+        _x setVariable [QGVAR(terrainObjectReplaced), true];
+        [QGVAR(replaceTerrainObject), [_x, _class]] call CBA_fnc_serverEvent;
+    } forEach nearestTerrainObjects [ACE_player, [], 5, false];
+}] call CBA_fnc_addEventHandler;
 
 [QGVAR(tapShoulder), {
     params ["_unit", "_shoulderNum"];
@@ -109,10 +148,34 @@ GVAR(isOpeningDoor) = false;
 ["isNotSwimming", {!(_this call EFUNC(common,isSwimming))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (GVAR(disableNegativeRating)) then {
         player addEventHandler ["HandleRating", {
             (_this select 1) max 0
         }];
     };
 }] call CBA_fnc_addEventHandler;
+
+{
+    [_x, {
+        [QGVAR(clearWeaponAttachmentsActionsCache)] call CBA_fnc_localEvent;
+    }] call CBA_fnc_addPlayerEventHandler;
+} forEach ["loadout", "weapon"];
+
+
+// add "Take _weapon_" action to dropped weapons
+private _action = [
+    // action display name will be overwritten in modifier function
+    QGVAR(takeWeapon), "take", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa",
+    {_player action ["TakeWeapon", _target, weaponCargo _target select 0]},
+    {count weaponCargo _target == 1},
+    nil, nil, nil, nil, nil,
+    {
+        params ["_target", "", "", "_actionData"];
+        _actionData set [1, format [localize "STR_ACTION_TAKE_BAG", getText (configfile >> "CfgWeapons" >> weaponCargo _target select 0 >> "displayName")]];
+    }
+] call EFUNC(interact_menu,createAction);
+
+{
+    [_x, 0, ["ACE_MainActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
+} forEach ["WeaponHolder", "WeaponHolderSimulated"];

@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {"ACE_HuntIR", "ACE_HuntIRBox"};
+        units[] = {"ACE_HuntIR", "ACE_HuntIR_Box", "ACE_Item_HuntIR_monitor"};
         weapons[] = {"ACE_HuntIR_monitor"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
@@ -18,6 +18,7 @@ class CfgPatches {
 #include "CfgCloudlets.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgMagazineWells.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "Dialog.hpp"

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -9,12 +10,10 @@
  * None
  *
  * Example:
- * call ace_frag_fnc_addTack
+ * call ace_frag_fnc_dev_addTrack
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_origin", "_obj", ["_color", [1, 0, 0, 1]]];
 

@@ -1,9 +1,10 @@
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Add a explosive detonation handler.
  * Should be called on all machines.
  * Code needs to return BOOL: true(allowed) / false(blocked)
- * See https://ace3mod.com/wiki/framework/explosives-framework.html for an example.
+ * See https://ace3.acemod.org/wiki/framework/explosives-framework.html for an example.
  *
  * Arguments:
  * 0: Code <CODE>
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_code", {true}, [{}]]];
 

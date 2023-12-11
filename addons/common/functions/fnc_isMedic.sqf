@@ -1,11 +1,12 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Check if a unit is a medic
  *
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Unit is medic <BOOL>
  *
  * Example:
@@ -14,10 +15,8 @@
  * Public: Yes
  */
 
-#include "script_component.hpp"
-
 params ["_unit"];
 
-private _isMedic = _unit getVariable [QEGVAR(medical,medicClass), getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "attendant")];
+private _isMedic = _unit getVariable [QEGVAR(medical,medicClass), getNumber (configOf _unit >> "attendant")];
 
 _isMedic > 0

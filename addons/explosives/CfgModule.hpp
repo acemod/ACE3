@@ -4,7 +4,7 @@ class ACE_ModuleExplosive: ACE_Module {
     category = "ACE";
     displayName = CSTRING(Module_DisplayName);
     function = QFUNC(module);
-    scope = 2;
+    scope = 1;
     isGlobal = 1;
     isSingular = 1;
     icon = QPATHTOF(UI\Icon_Module_Explosives_ca.paa);

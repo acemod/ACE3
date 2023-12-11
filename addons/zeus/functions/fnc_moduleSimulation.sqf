@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: Fisher, SilentSpike
+ * Author: Fisher, kymckay
  * Toggle Simulation on object.
  *
  * Arguments:
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_logic"];
 

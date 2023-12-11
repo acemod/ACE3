@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike, Glowbal
+ * Author: kymckay, Glowbal
  * Assigns a medic role from the medical module to a unit
  *
  * Arguments:
@@ -16,11 +17,9 @@
  * Public: No
  */
 
-#include "script_component.hpp"
+params ["_logic"];
 
-params ["_logic", "_units", "_activated"];
-
-if !(_activated && local _logic) exitWith {};
+if !(local _logic) exitWith {};
 
 if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);

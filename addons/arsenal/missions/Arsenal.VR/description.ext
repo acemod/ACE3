@@ -1,0 +1,17 @@
+#include "script_component.hpp"
+
+dev = "commy2";
+author = ECSTRING(common,ACETeam);
+
+onLoadName = CSTRING(Mission);
+overviewText = CSTRING(Mission_overview);
+overviewPicture = "logo_ca.paa";
+
+briefing = 0;
+debriefing = 0;
+enableDebugConsoleSP = 1;
+
+doneKeys[] = {"BIS_Arsenal.Map_VR_done"};
+onPauseScript[] = {QFUNC(onPause)};
+
+#include "CfgEventHandlers.hpp"

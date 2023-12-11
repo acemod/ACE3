@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Get the vehicle codriver positions.
@@ -13,11 +14,10 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_vehicle", objNull, [objNull]]];
 
-private _config = configFile >> "CfgVehicles" >> _vehicle;
+private _config = configOf _vehicle;
 
 private _cargo = [];
 private _codrivers = getArray (_config >> "cargoIsCoDriver");

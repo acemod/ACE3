@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Compiles tags from ACE_Tags and returns children actions.
@@ -13,34 +14,23 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
 private _actions = [];
 {
-    _x params ["_class", "_displayName", "_requiredItem", "_textures", "_icon"];
-
     _actions pushBack [
         [
-            format ["ACE_ConfigTag_%1", _class],
-            _displayName,
-            _icon,
-            {
-                (_this select 2) params ["_unit", "_class", "_textures"];
-                [_unit, selectRandom _textures] call FUNC(tag);
-                _unit setVariable [QGVAR(lastUsedTag), _class];
-            },
-            {
-                (_this select 2) params ["_unit", "", "", "_requiredItem"];
-                _requiredItem in ((items _unit) apply {toLower _x})
-            },
+            format ["ACE_TagItem_%1", _x],
+            getText (configFile >> "CfgWeapons" >> _x >> "displayName"),
+            getText (configFile >> "CfgWeapons" >> _x >> "picture"),
             {},
-            [_unit, _class, _textures, _requiredItem]
+            {(_this select 2) in (_player call EFUNC(common,uniqueItems))},
+            {},
+            _x
         ] call EFUNC(interact_menu,createAction),
-        [],
+        _y apply { [_x, [], _unit] }, //sub-actions for each individual tag
         _unit
-    ];
-} forEach GVAR(cachedTags);
-
+    ]
+} forEach GVAR(itemActions);
 _actions

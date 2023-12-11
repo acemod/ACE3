@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Flips the surrender state of the unit the module is placed on.
  *
  * Arguments:
@@ -16,11 +17,9 @@
  * Public: No
  */
 
-#include "script_component.hpp"
+params ["_logic"];
 
-params ["_logic", "_units", "_activated"];
-
-if !(_activated && local _logic) exitWith {};
+if !(local _logic) exitWith {};
 
 if (isNil QEFUNC(captives,setSurrendered)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);

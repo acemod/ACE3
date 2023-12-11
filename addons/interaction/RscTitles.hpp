@@ -1,7 +1,3 @@
-
-#define HSPACE 0.5-2.0/16/2
-#define VSPACE 0.5-0.3/9/2
-
 class ACE_Interaction_Button_Base {
     tooltip = "";
     //action = "ACE_Interaction_isMousePressed = true;(findDisplay 1713999) closeDisplay 1;_action = ACE_Interaction_Buttons select ACE_Interaction_SelectedButton;ACE_Interaction_SelectedButton = -1; if (call (_action select 2)) then {call (_action select 1)};";
@@ -17,8 +13,8 @@ class ACE_Interaction_Button_Base {
     style = 2;
     x = 0;
     y = 0;
-    w = 2.0 / 16 * safezoneW;
-    h = 0.3 / 9 * safezoneH;
+    w = "2.0 / 16 * safezoneW";
+    h = "0.3 / 9 * safezoneH";
 
     offsetX = 0.003;
     offsetY = 0.003;
@@ -41,9 +37,11 @@ class ACE_Interaction_Button_Base {
     soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
 };
 
-class RscListbox;
 class IGUIBack;
+class RscListBox;
 class RscText;
+class RscPicture;
+class RscControlsGroupNoScrollbars;
 
 #define X_OFFSET 0.2
 
@@ -59,9 +57,9 @@ class RscACE_SelectAnItem {
             h = 0.71;
             colorBackground[] = {0, 0, 0, 0.2};
         };
-        class header: RscText{
+        class header: RscText {
             idc = 8870;
-            x = X_OFFSET + 0.005;
+            x = QUOTE(X_OFFSET + 0.005);
             y = 0.005;
             w = 0.59;
             h = 0.05;
@@ -69,9 +67,9 @@ class RscACE_SelectAnItem {
             text = "";
         };
         class itemList: RscListBox {
-            onMouseButtonDblClick = "_this call ACE_Interaction_fnc_onSelectMenuDblClick";
+            onMouseButtonDblClick = QUOTE(_this call DFUNC(onSelectMenuDblClick));
             idc = 8866;
-            x = X_OFFSET + 0.005;
+            x = QUOTE(X_OFFSET + 0.005);
             w = 0.59;
             h = 0.54;
             y = 0.06;
@@ -83,7 +81,7 @@ class RscACE_SelectAnItem {
             idc = -1;
             colorBackground[] = {0,0,0,0.5};
             colorBackgroundDisabled[] = {0,0,0,0.5};
-            x = X_OFFSET + 0.005;
+            x = QUOTE(X_OFFSET + 0.005);
             w = 0.15;
             h = 0.1;
             y = 0.605;
@@ -94,7 +92,7 @@ class RscACE_SelectAnItem {
             idc = -1;
             colorBackground[] = {0,0,0,0.5};
             colorBackgroundDisabled[] = {0,0,0,0.5};
-            x = X_OFFSET + 0.445;
+            x = QUOTE(X_OFFSET + 0.445);
             y = 0.605;
             h = 0.1;
             w = 0.15;
@@ -102,13 +100,13 @@ class RscACE_SelectAnItem {
 
         class cancelBtn: ACE_Interaction_Button_Base {
             idc = 8855;
-            x = X_OFFSET + 0.005;
+            x = QUOTE(X_OFFSET + 0.005);
             w = 0.15;
             h = 0.1;
             y = 0.605;
             style = 2;
             text = CSTRING(Back);
-            action = "call ACE_Interaction_fnc_hideMenu;";   //'Default' call ACE_Interaction_fnc_openMenu;    'Default' call ACE_Interaction_fnc_openMenuSelf;
+            action = QUOTE(call DFUNC(hideMenu));   //'Default' call DFUNC(openMenu);    'Default' call DFUNC(openMenuSelf);
             colorBackground[] = {0,0,0,0};
             colorBackgroundDisabled[] = {0,0,0,0};
             colorBackgroundActive[] = {1,1,1,0.2};
@@ -116,13 +114,13 @@ class RscACE_SelectAnItem {
         };
         class approveBtn: ACE_Interaction_Button_Base {
             idc = 8860;
-            x = X_OFFSET + 0.445;
+            x = QUOTE(X_OFFSET + 0.445);
             y = 0.605;
             h = 0.1;
             w = 0.15;
             style = 2;
             text = CSTRING(MakeSelection);
-            action = "call ACE_Interaction_fnc_hideMenu;";
+            action = QUOTE(call DFUNC(hideMenu));
             colorBackground[] = {0,0,0,0};
             colorBackgroundDisabled[] = {0,0,0,0};
             colorBackgroundActive[] = {1,1,1,0.2};
@@ -131,75 +129,78 @@ class RscACE_SelectAnItem {
     };
 };
 
-#define GUI_GRID_W  (0.025)
-#define GUI_GRID_H  (0.04)
-
-class RscPicture;
-class RscInteractionIcon: RscPicture {
-    x = 19.25 * GUI_GRID_W;
-    y = 15.75 * GUI_GRID_H;
-    w = 2*GUI_GRID_H;
-    h = 2*GUI_GRID_H;
-};
-
-class RscInteractionHelperIcon: RscInteractionIcon {
-    x = 20 * GUI_GRID_W;
-    y = 16 * GUI_GRID_H;
-    w = GUI_GRID_H;
-    h = GUI_GRID_H;
-};
-
-class RscInteractionText: RscText{
-    x = 21 * GUI_GRID_W;
-    y = 16 * GUI_GRID_H;
-    w = 24 * GUI_GRID_W;
-    h = 1.5 * GUI_GRID_H;
-};
-class RscInteractionText_right: RscText{
-    style = 1; // right aligned text
-};
-
 class RscTitles {
-    class GVAR(InteractionHelper) {
-        idd = 9930;
+    class GVAR(RscMouseHint) {
+        idd = IDD_MOUSEHINT;
+        fadeIn = 0;
+        fadeOut = 0;
+        duration = 999999;
         enableSimulation = 1;
-        movingEnable = 0;
-        fadeIn=0.5;
-        fadeOut=0.5;
-        duration = 10e10;
-        onLoad = "uiNamespace setVariable ['ACE_Helper_Display', _this select 0];";
-
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(mouseHint),_this select 0)]);
         class controls {
-            class SelectIcon: RscInteractionHelperIcon{
-                idc = 1200;
+            class IconLMB: RscPicture {
+                idc = IDC_MOUSEHINT_LMB;
                 text = QPATHTOF(UI\mouse_left_ca.paa);
-                y = 17.5 * GUI_GRID_H;
+                x = QUOTE(20 * GUI_GRID_W + GUI_GRID_CENTER_X);
+                y = QUOTE(17.5 * GUI_GRID_H);
+                w = QUOTE(GUI_GRID_H);
+                h = QUOTE(GUI_GRID_H);
             };
-            class SelectText: RscInteractionText{
-                idc = 1000;
-                y = 17 * GUI_GRID_H;
-                text = CSTRING(MakeSelection);
+            class TextLMB: RscText {
+                idc = IDC_MOUSEHINT_LMB_TEXT;
+                text = "";
+                x = QUOTE(21.1 * GUI_GRID_W + GUI_GRID_CENTER_X);
+                y = QUOTE(17.45 * GUI_GRID_H);
+                w = QUOTE(24 * GUI_GRID_W);
+                h = QUOTE(GUI_GRID_H);
+                sizeEx = QUOTE(GUI_GRID_H);
             };
-            class GoBackIcon: RscInteractionHelperIcon{
-                idc = 1201;
-                text = QPATHTOF(UI\mouse_right_ca.paa);
-                y = 19.5 * GUI_GRID_H;
-            };
-            class GoBackText: RscInteractionText{
-                idc = 1001;
-                y = 19 * GUI_GRID_H;
-                text = CSTRING(Back);
-            };
-            class ScrollIcon: RscInteractionHelperIcon{
-                idc = 1202;
+            class IconMMB: IconLMB {
+                idc = IDC_MOUSEHINT_MMB;
                 text = QPATHTOF(UI\mouse_scroll_ca.paa);
-                y = 18.5 * GUI_GRID_H;
+                y = QUOTE(18.55 * GUI_GRID_H);
             };
-            class ScrollText: RscInteractionText{
-                idc = 1002;
-                y = 18 * GUI_GRID_H;
-                text = CSTRING(ScrollHint);
+            class TextMMB: TextLMB {
+                idc = IDC_MOUSEHINT_MMB_TEXT;
+                y = QUOTE(18.5 * GUI_GRID_H);
             };
+            class IconRMB: IconLMB {
+                idc = IDC_MOUSEHINT_RMB;
+                text = QPATHTOF(UI\mouse_right_ca.paa);
+                y = QUOTE(19.6 * GUI_GRID_H);
+            };
+            class TextRMB: TextLMB {
+                idc = IDC_MOUSEHINT_RMB_TEXT;
+                y = QUOTE(19.55 * GUI_GRID_H);
+            };
+        };
+    };
+};
+
+class GVAR(RscExtraKey): RscControlsGroupNoScrollbars {
+    idc = IDC_MOUSEHINT_EXTRA;
+    x = 0;
+    y = 0;
+    w = QUOTE(40 * GUI_GRID_W);
+    h = QUOTE(GUI_GRID_H);
+    class controls {
+        class Name: RscText {
+            idc = IDC_MOUSEHINT_EXTRA_NAME;
+            style = 1;
+            x = 0;
+            y = 0;
+            w = QUOTE(21.5 * GUI_GRID_W + GUI_GRID_CENTER_X);
+            h = QUOTE(GUI_GRID_H);
+            sizeEx = QUOTE(GUI_GRID_H);
+            font = "EtelkaMonospaceProBold";
+        };
+        class Text: RscText {
+            idc = IDC_MOUSEHINT_EXTRA_TEXT;
+            x = QUOTE(21.1 * GUI_GRID_W + GUI_GRID_CENTER_X);
+            y = QUOTE(0);
+            w = QUOTE(24 * GUI_GRID_W);
+            h = QUOTE(GUI_GRID_H);
+            sizeEx = QUOTE(GUI_GRID_H);
         };
     };
 };

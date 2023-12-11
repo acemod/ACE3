@@ -1,9 +1,13 @@
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Convert an array of booleans into a number.
  *
  * Arguments:
- * N: Booleans <ARRAY>
+ * 0: Boolean <BOOL>
+ * 1: Boolean <BOOL>
+ * 2: Boolean <BOOL>
+ * ...
  *
  * Return Value:
  * Bitmask <NUMBER>
@@ -13,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 private _result = 0;
 

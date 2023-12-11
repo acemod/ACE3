@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Initializes the modifier key handler.
@@ -10,7 +11,6 @@
  *
  * Public : No
  */
-#include "script_component.hpp"
 
 _this spawn {//
     waitUntil {!isNull findDisplay 46};//

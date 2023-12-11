@@ -1,5 +1,5 @@
 
-class CBA_Extended_EventHandlers;
+class CBA_Extended_EventHandlers_base;
 
 class CfgVehicles {
     class Man;
@@ -12,7 +12,6 @@ class CfgVehicles {
                 statement = QUOTE([ARR_2({_this call FUNC(deploy)},_this)] call CBA_fnc_execNextFrame);
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
-                priority = 4;
                 icon = QPATHTOF(UI\icon_sandbag_ca.paa);
             };
         };
@@ -25,6 +24,9 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(sandbagEmpty_displayName);
         vehicleClass = "Items";
+        editorCategory = "EdCat_Equipment";
+        editorSubcategory = "EdSubcat_InventoryItems";
+        editorPreview = QPATHTOF(data\preview_sandbag.jpg);
         class TransportItems {
             MACRO_ADDITEM(ACE_Sandbag_empty,1);
         };
@@ -47,7 +49,7 @@ class CfgVehicles {
     class ThingX;
     class ACE_SandbagObject: ThingX {
         class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
 
         author = ECSTRING(common,ACETeam);
@@ -79,7 +81,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 selection = "";
                 distance = 5;
-                condition = "true";
+                condition = "(true)";
 
                 class ACE_PickUp {
                     selection = "";
@@ -89,11 +91,14 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };
         };
+
+        editorCategory = "EdCat_Supplies";
+        editorSubcategory = QEGVAR(main,subcategory);
+        editorPreview = QPATHTOF(data\preview_sandbag.jpg);
     };
 
     class ACE_SandbagObject_NoGeo: ACE_SandbagObject {

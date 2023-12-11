@@ -12,7 +12,7 @@
             _logic hideObject true;
 
             if (_logic getVariable [QGVAR(initalized), false]) exitWith {};
-            private _config = (configFile >> "CfgVehicles" >> _logicType);
+            private _config = configOf _logic;
             if !(isClass _config) exitWith {};
 
             private _isGlobal = getNumber (_config >> "isGlobal") > 0;
@@ -39,6 +39,7 @@
             };
 
             if (_isDisposable) then {
+                if (_isGlobal) then {WARNING_1("Deleting Global Module??? [%1]",_logicType);};
                 deleteVehicle _logic;
             };
         };

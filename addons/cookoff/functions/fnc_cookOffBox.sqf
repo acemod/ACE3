@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: KoffeinFlummi, commy2, SilentSpike
+ * Author: KoffeinFlummi, commy2, kymckay
  * Start a cook-off in the given ammo box.
  *
  * Arguments:
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_box"];
 
@@ -21,7 +21,7 @@ if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _box setVariable [QGVAR(isCookingOff), true];
 
 if (local _box) then {
-    [QGVAR(cookOffBox), _box] call CBA_fnc_remoteEvent;
+    [QGVAR(cookOffBox), _box] call CBA_fnc_globalEvent;
 };
 
 [{
@@ -44,11 +44,9 @@ if (local _box) then {
 
         // These functions are smart and do all the cooking off work
         if (local _box) then {
-            if (_box getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
-                if (GVAR(ammoCookoffDuration) == 0) exitWith {};
-                ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
-                [_box, _mags, _total] call FUNC(detonateAmmunition);
-            };
+            if (GVAR(ammoCookoffDuration) == 0) exitWith {};
+            ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
+            [_box, _mags, _total] call FUNC(detonateAmmunition);
 
             // This shit is busy being on fire, magazines aren't accessible/usable
             clearMagazineCargoGlobal _box;

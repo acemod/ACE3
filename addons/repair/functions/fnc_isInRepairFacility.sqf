@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Checks if a unit is in a repair facility.
@@ -9,32 +10,32 @@
  * Is inside a repair facility <BOOL>
  *
  * Example:
- * [unit] call ace_repair_fnc_isInRepairFacility
+ * player call ace_repair_fnc_isInRepairFacility
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
-params ["_object"];
-TRACE_1("params",_object);
+#define CHECK_OBJECTS(var) ((var) findIf _checkObject != -1)
 
-private _position = getPosASL _object;
-private _isInBuilding = false;
-private _repairFacility = [];
+params [["_unit", objNull, [objNull]]];
+TRACE_1("params",_unit);
 
-private _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
-{
-    if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitWith {
-        _isInBuilding = true;
+private _checkObject = {
+    private _config = configOf _x;
+    private _canRepair = getNumber (_config >> QGVAR(canRepair));
+    if (_canRepair == 0) then {
+        _canRepair = getNumber (_config >> "transportRepair");
     };
-} forEach _objects;
 
-if (!_isInBuilding) then {
-    _objects = position _object nearObjects 7.5;
-    {
-        if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitWith {
-            _isInBuilding = true;
-        };
-    } forEach _objects;
+    _x getVariable ["ACE_isRepairFacility", _canRepair > 0] in [1, true] // can be integer or boolean
+    && {!(_x isKindOf "AllVehicles")} // check if it's not repair vehicle
+    && {alive _x}
 };
-_isInBuilding;
+
+private _fnc_check = {
+    private _position = _unit modelToWorldVisual [0, 0, eyePos _unit select 2];
+    CHECK_OBJECTS(lineIntersectsWith [ARR_3(_position, _position vectorAdd [ARR_3(0, 0, 10)], _unit)])
+    || {CHECK_OBJECTS(_unit nearObjects 7.5)}
+};
+
+[[], _fnc_check, _unit, QGVAR(inRepairFacilityCache), IN_REPAIR_FACILITY_CACHE_EXPIRY] call EFUNC(common,cachedCall);

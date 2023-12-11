@@ -1,19 +1,16 @@
 
 class ACE_Settings {
     class GVAR(savePreDeathGear) {
-        displayName = CSTRING(SavePreDeathGear_DisplayName);
-        description = CSTRING(SavePreDeathGear_Description);
-        value = 0;
-        typeName = "BOOL";
+        movedToSQF = 1;
     };
     class GVAR(removeDeadBodiesDisconnected) {
-        displayName = CSTRING(RemoveDeadBodiesDisconnected_DisplayName);
-        description = CSTRING(RemoveDeadBodiesDisconnected_Description);
-        value = 1;
-        typeName = "BOOL";
+        movedToSQF = 1;
     };
-    class GVAR(bodyRemoveTimer) {
-        value = 0;
-        typeName = "SCALAR";
-    };
+    // Not used anywhere???
+    // class GVAR(bodyRemoveTimer) {
+        // category = CSTRING(DisplayName);
+        // displayName = CSTRING(DeadBodyRemoveTimer);
+        // value = 0;
+        // typeName = "SCALAR";
+    // };
 };

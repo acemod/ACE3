@@ -24,4 +24,9 @@ class CfgFactionClasses {
         priority = 2;
         side = 7;
     };
+    class GVAR(Arsenal) {
+        displayName = "ACE Arsenal";
+        priority = 2;
+        side = 7;
+    };
 };

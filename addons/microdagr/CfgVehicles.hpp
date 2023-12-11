@@ -36,8 +36,8 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleMapFill);
-        scope = 2;
-        isGlobal = 0;
+        scope = 1;
+        isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_microDAGR_ca.paa);
         functionPriority = 0;
@@ -71,8 +71,9 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(itemName);
         author = ECSTRING(common,ACETeam);
-        vehicleClass = "Items";
         icon = QPATHTOF(UI\icon_microDAGR.paa);
+        vehicleClass = "Items";
+        model = "\A3\Weapons_f\DummyWeapon.p3d";
         class TransportItems {
             MACRO_ADDITEM(ACE_microDAGR,1);
         };

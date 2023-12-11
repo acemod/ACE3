@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
@@ -19,19 +20,18 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //SEH_s
 if (isServer) then {
     // Find the event name, and shovel out the events to the client
     params ["_eventName", "_client"];
 
-    if !([GVAR(syncedEvents), _eventName] call CBA_fnc_hashHasKey) exitWith {
+    if !(_eventName in GVAR(syncedEvents)) exitWith {
         ERROR_1("Request for synced event - key [%1] not found.", _eventName);
         false
     };
 
-    private _eventEntry = [GVAR(syncedEvents), _eventName] call CBA_fnc_hashGet;
+    private _eventEntry = GVAR(syncedEvents) get _eventName;
     _eventEntry params ["", "_eventLog"];
 
     ["ACEs", [_eventName, _eventLog], _client] call CBA_fnc_targetEvent;

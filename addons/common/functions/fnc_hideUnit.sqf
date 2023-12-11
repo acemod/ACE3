@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike (based on muteUnit)
+ * Author: kymckay (based on muteUnit)
  * Globally hides a unit. This allows the handling of more than one reason to hide an object globally.
  *
  * Arguments:
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_reason"];
 

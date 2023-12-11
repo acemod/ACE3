@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Return action point from path
@@ -8,14 +9,13 @@
  * 1: Path <ARRAY>
  *
  * Return Value:
- * Action node <ARRAY> or <NIL> if not found 
+ * Action node <ARRAY> or <NIL> if not found
  *
  * Example:
  * [actionTree, ["ACE_TapShoulderRight","VulcanPinchAction"]] call ace_interact_menu_fnc_findActionNode;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_actionTreeList", "_parentPath"];
 

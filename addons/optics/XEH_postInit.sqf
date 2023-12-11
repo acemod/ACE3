@@ -13,11 +13,11 @@ GVAR(camera) = objNull;
     };
 }] call CBA_fnc_addEventHandler;
 
-// camera has to be re-created every time another camera is created. Otherwise r2t is either black or transparent. @todo Add popular custom cameras to the event in ACE_common.
-["ace_activeCameraChanged", {
-    params ["", "_isfeatureCameraActive"];
-    TRACE_1("ace_activeCameraChanged",_isfeatureCameraActive);
-    if (!_isfeatureCameraActive) then {
+// camera has to be re-created every time another camera is created. Otherwise r2t is either black or transparent..
+["featureCamera", {
+    params ["_player", "_featureCamera"];
+    TRACE_1("featureCamera",_featureCamera);
+    if (_featureCamera isEqualTo "") then {
         // Destroy the camera, and it will be re-created in the onDrawScope2d helper
         if (!isNull GVAR(camera)) then {
             GVAR(camera) cameraEffect ["TERMINATE", "BACK"];
@@ -25,7 +25,7 @@ GVAR(camera) = objNull;
             TRACE_1("destroying pip camera for restart",GVAR(camera));
         };
     };
-}] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addPlayerEventHandler;
 
 // Register fire event handler
 ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;

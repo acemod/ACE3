@@ -1,9 +1,10 @@
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
- * Disconnect a fuel nozzle.
+ * Disconnects a fuel nozzle and makes unit pick it up.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Unit <OBJECT> (default: objNull)
  * 1: Nozzle <OBJECT>
  *
  * Return Value:
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
@@ -27,4 +27,6 @@ _nozzle setVariable [QGVAR(sink), nil, true];
 _nozzle setVariable [QGVAR(isConnected), false, true];
 [objNull, _nozzle, true] call FUNC(dropNozzle);
 
-[_unit, _nozzle] call FUNC(takeNozzle);
+if (!isNull _unit) then {
+    [_unit, _nozzle] call FUNC(takeNozzle);
+};

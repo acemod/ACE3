@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used to handle mouse down event
  *
  * Expected behaviour:
@@ -20,8 +21,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["", "_button"];
 

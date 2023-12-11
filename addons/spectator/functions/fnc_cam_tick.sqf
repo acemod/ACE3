@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used to perform camera ticks
  *
  * Updates camera position in follow mode
@@ -18,8 +19,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 BEGIN_COUNTER(camTick);
 private _cameraMode = GVAR(camMode);

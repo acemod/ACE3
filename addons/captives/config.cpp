@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {QGVAR(ModuleSettings), QGVAR(ModuleSurrender), QGVAR(ModuleHandcuffed)};
         weapons[] = {"ACE_CableTie"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ACE_Interaction"};
+        requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"commy2", "KoffeinFlummi"};
         url = ECSTRING(main,URL);
@@ -16,6 +16,7 @@ class CfgPatches {
 
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgGlasses.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

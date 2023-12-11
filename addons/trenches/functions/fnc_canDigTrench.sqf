@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg, commy2, esteldunedain
  * Checks if a unit can dig a trench.
@@ -13,10 +14,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
-if !("ACE_EntrenchingTool" in items _unit) exitWith {false};
+if !(_unit call FUNC(hasEntrenchingTool)) exitWith {false};
 
 _unit call EFUNC(common,canDig)

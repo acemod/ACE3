@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Handles integrating the counter respawn template into the spectator UI
  *
  * Should be called from both RscRespawnCounter XEH and spectator init to account for arbitrary order
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define IDC_COUNTER_TITLE 1001
 #define IDC_COUNTER_BACK 1002
 #define IDC_COUNTER_TEXT 1003

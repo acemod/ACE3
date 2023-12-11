@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Adds or removes sides from the selection available to spectate. Local effect.
  *
  * Default selection is [west,east,resistance,civilian]
@@ -16,8 +17,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params [["_addSides",[],[[]]], ["_removeSides",[],[[]]]];
 

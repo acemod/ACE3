@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support and esteldunedain
  * Confirms trench dig
@@ -13,12 +14,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
 // enable running again
 [_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
 
 // remove dig pfh
 [GVAR(digPFH)] call CBA_fnc_removePerFrameHandler;
@@ -37,10 +38,13 @@ if (isNull GVAR(trench)) exitWith {};
 
 deleteVehicle GVAR(trench);
 private _trench = createVehicle [GVAR(trenchClass), [0, 0, 0], [], 0, "NONE"];
+_trench setVariable [QGVAR(progress), 0, true];
 
 GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
 private _basePos = GVAR(trenchPos);
 private _angle = (GVAR(digDirection) + getDir _unit);
+
+[QGVAR(placed), [_unit, _trench]] call CBA_fnc_globalEvent;
 
 // _v1 forward from the player, _v2 to the right, _v3 points away from the ground
 private _v3 = surfaceNormal _basePos;

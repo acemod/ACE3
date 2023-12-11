@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi and esteldunedain
  * Calculates average g-forces and triggers g-effects
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
- #include "script_component.hpp"
 
 // Update the g-forces at constant mission time intervals (taking accTime into account)
 if ((CBA_missionTime - GVAR(lastUpdateTime)) < INTERVAL) exitWith {};
@@ -29,7 +29,7 @@ private _accel = ((_newVel vectorDiff GVAR(oldVel)) vectorMultiply (1 / INTERVAL
 // Cap maximum G's to +- 10 to avoid g-effects when the update is low fps.
 private _currentGForce = (((_accel vectorDotProduct vectorUp (vehicle ACE_player)) / 9.8) max -10) min 10;
 
-GVAR(GForces) set [GVAR(GForces_Index), _currentGForce];
+GVAR(GForces) set [GVAR(GForces_Index), _currentGForce * GVAR(coef)];
 GVAR(GForces_Index) = (GVAR(GForces_Index) + 1) % 30; // 30 = round (AVERAGEDURATION / INTERVAL);
 GVAR(oldVel) = _newVel;
 
@@ -61,7 +61,7 @@ if (_count > 0) then {
 };
 
 private _classCoef = (ACE_player getVariable ["ACE_GForceCoef",
-    getNumber (configFile >> "CfgVehicles" >> (typeOf ACE_player) >> "ACE_GForceCoef")]) max 0.001;
+    getNumber ((configOf ACE_player) >> "ACE_GForceCoef")]) max 0.001;
 private _suitCoef = if ((uniform ACE_player) != "") then {
     (getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef")) max 0.001
 } else {
@@ -71,8 +71,8 @@ private _suitCoef = if ((uniform ACE_player) != "") then {
 private _gBlackOut = MAXVIRTUALG / _classCoef + MAXVIRTUALG / _suitCoef - MAXVIRTUALG;
 
 // Unconsciousness
-if ((_average > _gBlackOut) and {isClass (configFile >> "CfgPatches" >> "ACE_Medical") and {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
-    [ACE_player, true, (10 + floor(random 5))] call EFUNC(medical,setUnconscious);
+if ((_average > _gBlackOut) && {["ACE_Medical"] call EFUNC(common,isModLoaded) && {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
+    [ACE_player, true, (10 + floor(random 5)), true] call EFUNC(medical,setUnconscious);
 };
 
 GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[10,10,0,0,0,0.1,0.5]];
@@ -80,14 +80,14 @@ GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[10,10,0,0,
 if !(ACE_player getVariable ["ACE_isUnconscious", false]) then {
     if (_average > 0.30 * _gBlackOut) then {
         private _strength = ((_average - 0.30 * _gBlackOut) / (0.70 * _gBlackOut)) max 0;
-        GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[2*(1-_strength),2*(1-_strength),0,0,0,0.1,0.5]];
+        GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[2 * (1 - _strength),2 * (1 - _strength),0,0,0,0.1,0.5]];
         addCamShake [_strength, 1, 15];
     } else {
         private _gRedOut = MINVIRTUALG / _classCoef;
 
         if (_average < -0.30 * _gRedOut) then {
             private _strength = ((abs _average - 0.30 * _gRedOut) / (0.70 * _gRedOut)) max 0;
-            GVAR(GForces_CC) ppEffectAdjust [1,1,0,[1,0.2,0.2,1],[0,0,0,0],[1,1,1,1],[2*(1-_strength),2*(1-_strength),0,0,0,0.1,0.5]];
+            GVAR(GForces_CC) ppEffectAdjust [1,1,0,[1,0.2,0.2,1],[0,0,0,0],[1,1,1,1],[2 * (1 - _strength),2 * ( 1 -_strength),0,0,0,0.1,0.5]];
             addCamShake [_strength / 1.5, 1, 15];
         };
     };

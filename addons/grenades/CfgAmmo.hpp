@@ -5,7 +5,7 @@ class CfgAmmo {
         GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\grenades\Grenade_PullPin.wss", 1.5, 1, 10};
         impactGroundSoft[] = {};
     };
-    
+
     class FlareCore;
     class FlareBase: FlareCore {
         intensity = 20000;
@@ -16,6 +16,21 @@ class CfgAmmo {
     class F_40mm_White: FlareBase {
         intensity = 40000;
         flareSize = 12;
+    };
+    class ACE_40mm_Flare_white: F_40mm_White {
+        intensity = 1250000; // vanilla: 10000
+        timeToLive = 45; // vanilla: 25, ace changes to 60 in FlareBase
+        coefGravity = 0.25; // vanilla: undefined (would be 1)
+        // Makes the ammo fall the ground slower (~2 m/s)
+    };
+    class ACE_40mm_Flare_red: ACE_40mm_Flare_white {
+        lightColor[] = {0.5,0.25,0.25,0};
+    };
+    class ACE_40mm_Flare_green: ACE_40mm_Flare_white {
+        lightColor[] = {0.25,0.5,0.25,0};
+    };
+    class ACE_40mm_Flare_ir: ACE_40mm_Flare_white {
+        nvgOnly = 1;
     };
 
     class F_20mm_White: FlareBase {
@@ -105,6 +120,16 @@ class CfgAmmo {
         whistleDist = 0;
     };
 
+    class ACE_G_CTS9: ACE_G_M84 {
+        GVAR(flashbang) = 1;
+        GVAR(flashbangBangs) = 9;
+        GVAR(flashbangInterval) = 0.5;
+        GVAR(flashbangIntervalMaxDeviation) = 0.35;
+        model = QPATHTOF(models\ACE_CTS_9bang_thrown.p3d);
+        explosionTime = 1.5;
+        timeToLive = 10;
+    };
+
     class Chemlight_base: SmokeShell {
         GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\Other\dry4.wss", 3, 2, 10};
         soundImpactHard1[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.8,65};
@@ -145,5 +170,50 @@ class CfgAmmo {
         effectsSmoke = "ACE_Incendiary";
         whistleDist = 0;    // no BIS explosion effects
         whistleOnFire = 0;  // no BIS firing effects
+    };
+
+    class ACE_SatchelCharge_Remote_Ammo_Thrown: Grenade {
+        model = "\A3\Weapons_F\Explosives\satchel";
+        hit = 3000;
+        indirectHit = 3000;
+        indirectHitRange = 5;
+        defaultMagazine = "ACE_SatchelCharge_Remote_Mag_Throwable";
+        multiSoundHit[] = {"soundHit1", 0.5, "soundHit2", 0.5};
+        ExplosionEffects = "MineNondirectionalExplosion";
+        CraterEffects = "MineNondirectionalCrater";
+        whistleDist = 10;
+        SoundSetExplosion[] = {"ClaymoreMine_Exp_SoundSet", "ClaymoreMine_Tail_SoundSet", "Explosion_Debris_SoundSet"};
+        timeToLive = 8;
+        fuseDistance = 0;
+        explosionTime = 7;
+        deflectionSlowDown = 0.1;
+        explosionType = "bomb";
+        ACE_damageType = "explosive";
+        EGVAR(frag,skip) = 1;
+        EGVAR(advanced_throwing,torqueMagnitude) = "(5 + random 20) * selectRandom [1, -1]";
+        GVAR(pullPinSound)[] = {"A3\Sounds_F_Orange\arsenal\explosives\Handling\ExplosiveSatchel_TouchOff_01.wss", 2, 1, 50};
+        class CamShakeExplode {
+            power = 20;
+            duration = 2;
+            frequency = 20;
+            distance = 250;
+        };
+    };
+
+    class ACE_DemoCharge_Remote_Ammo_Thrown: ACE_SatchelCharge_Remote_Ammo_Thrown {
+        model = "\A3\Weapons_F\explosives\c4_charge_small";
+        hit = 500;
+        indirectHit = 500;
+        defaultMagazine = "ACE_DemoCharge_Remote_Mag_Throwable";
+        ExplosionEffects = "MineNondirectionalExplosionSmall";
+        CraterEffects = "MineNondirectionalCraterSmall";
+        whistleDist = 32;
+        SoundSetExplosion[] = {"ExplosiveCharge_Exp_SoundSet", "ExplosiveCharge_Tail_SoundSet", "Explosion_Debris_SoundSet"};
+        class CamShakeExplode {
+            power = 10;
+            duration = 2;
+            frequency = 20;
+            distance = 250;
+        };
     };
 };

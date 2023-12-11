@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Handles synced events being received. Server will log them, and server/client will execute them.
@@ -15,16 +16,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name", "_args", "_ttl"];
 
-if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
+if !(_name in GVAR(syncedEvents)) exitWith {
     ERROR_1("Synced event key [%1] not found (_handleSyncedEvent).", _name);
     false
 };
 
-private _internalData = [GVAR(syncedEvents), _name] call CBA_fnc_hashGet;
+private _internalData = GVAR(syncedEvents) get _name;
 _internalData params ["_eventCode", "_eventLog"];
 
 if (isServer) then {

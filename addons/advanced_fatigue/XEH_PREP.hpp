@@ -3,6 +3,7 @@ PREP(createStaminaBar);
 PREP(getAnimDuty);
 PREP(getMaximumSpeed);
 PREP(getMetabolicCosts);
+PREP(getWeaponInertia);
 PREP(handleEffects);
 PREP(handlePlayerChanged);
 PREP(handleStaminaBar);

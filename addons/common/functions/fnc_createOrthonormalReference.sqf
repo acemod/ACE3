@@ -1,9 +1,10 @@
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Returns a orthonormal system of reference aligned with the supplied vector
  *
  * Arguments:
- * Vector to align the coordinate system with <ARRAY>
+ * 0: Vector to align the coordinate system with <ARRAY>
  *
  * Return Value:
  * 0: Vector Normalized <ARRAY>
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 [_this] params [["_vector", [0,0,1], [[]], 3]];
 

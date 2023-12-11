@@ -1,3 +1,5 @@
+#include "\a3\ui_f\hpp\defineResinclDesign.inc"
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Loads the version info HTML box from main menu
@@ -13,8 +15,6 @@
  *
  * Public: No
  */
-#include "\a3\ui_f\hpp\defineResinclDesign.inc"
-#include "script_component.hpp"
 
 params ["_display"];
 private _controlsGroup = _display displayCtrl IDC_MAIN_INFO;
@@ -51,7 +51,7 @@ if (profileNamespace getVariable [QGVAR(showNewsOnMainMenu), true]) then {
     _versionStr = _versionStr joinString ".";
 
     (_display displayCtrl IDC_MAIN_INFO_CURRENT_VERSION_INFO) ctrlSetText format ["Version: %1", _versionStr];
-    (_display displayCtrl IDC_MAIN_INFO_NEWEST_VERSION_INFO) htmlLoad "https://ace3mod.com/version.html";
+    (_display displayCtrl IDC_MAIN_INFO_NEWEST_VERSION_INFO) htmlLoad "https://ace3.acemod.org/version.html";
 } else {
     _controlsGroup ctrlShow false;
 };

@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Used to update the docked camera buttons
  * Disables unavailable, highlights current
  *
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 // These correspond to the camera mode indices
 #define ENUM_IDCs [IDC_FREE, IDC_FPS, IDC_FOLLOW]

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Commy2 and esteldunedain
  * Make the player check the temperature of his weapon
@@ -11,11 +12,10 @@
  * None
  *
  * Example:
- * [player, currentWeapon player] call ace_overheating_fnc_checkTemperature
+ * [player, player, currentWeapon player] call ace_overheating_fnc_checkTemperature
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_assistant", "_gunner", "_weapon"];
 TRACE_3("params",_assistant,_gunner,_weapon);

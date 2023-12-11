@@ -1,6 +1,6 @@
 class RscControlsGroup;
 class RscText;
-class RangeText: RscText{};
+class RangeText: RscText {};
 class RscPicture;
 class RscOpticsText;
 class RscIGProgress;

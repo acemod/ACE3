@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
- * Author: AACO, SilentSpike
+ * Author: AACO, kymckay
  * Function used to set the camera focus
  *
  * Arguments:
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params [["_newFocus", objNull, [objNull,true]]];
 

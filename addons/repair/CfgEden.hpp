@@ -1,3 +1,9 @@
+#define VANILLA_ISREPAIRVEHICLE (parseNumber (getRepairCargo _this > 0))
+#define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
+
+#define DEFAULT_ISENGINEER ([ARR_2(0,1)] select (_this getUnitTrait 'engineer'))
+#define DEFAULT_ISREPAIRVEHICLE GET_NUMBER(configOf _this >> QQGVAR(canRepair),VANILLA_ISREPAIRVEHICLE)
+
 class ctrlToolbox;
 
 class Cfg3DEN {
@@ -12,7 +18,7 @@ class Cfg3DEN {
             attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel (((_value + 1) min 3) max 0);";
             attributeSave = "(lbCurSel (_this controlsGroupCtrl 100)) - 1";
             class Controls: Controls {
-                class Title: Title{};
+                class Title: Title {};
                 class Value: ctrlToolbox {
                     idc = 100;
                     style = "0x02";
@@ -35,10 +41,10 @@ class Cfg3DEN {
                         property = QUOTE(ace_isEngineer);
                         displayName = CSTRING(AssignEngineerRole_role_DisplayName);
                         tooltip = CSTRING(AssignEngineerRole_role_Description);
-                        expression = "if (_value != -1) then {_this setVariable ['%s',_value, true];}";
+                        expression = QUOTE(if !(_value == DEFAULT_ISENGINEER || {_value == -1}) then {_this setVariable [ARR_3('%s',_value,true)]});
                         typeName = "NUMBER";
                         condition = "objectBrain";
-                        defaultValue = "-1";
+                        defaultValue = QUOTE(DEFAULT_ISENGINEER);
                         control = QGVAR(isEngineerControl);
                     };
                     class ace_isRepairVehicle {
@@ -47,21 +53,33 @@ class Cfg3DEN {
                         control = "CheckboxNumber";
                         displayName = CSTRING(AssignRepairVehicle_role_DisplayName);
                         tooltip = CSTRING(AssignRepairVehicle_role_Description);
-                        expression = "_this setVariable ['%s',_value, true];";
+                        expression = QUOTE(if (_value != DEFAULT_ISREPAIRVEHICLE) then {_this setVariable [ARR_3('%s',_value,true)]});
                         typeName = "NUMBER";
                         condition = "objectVehicle";
-                        defaultValue = 0;
+                        defaultValue = QUOTE(DEFAULT_ISREPAIRVEHICLE);
                     };
-                    class ace_isRepairFacility {
+                    class ace_isRepairFacility: ace_isRepairVehicle {
                         property = QUOTE(ace_isRepairFacility);
-                        value = 0;
-                        control = "CheckboxNumber";
                         displayName = CSTRING(AssignRepairFacility_role_DisplayName);
                         tooltip = CSTRING(AssignRepairFacility_role_Description);
-                        expression = "_this setVariable ['%s',_value, true];";
-                        typeName = "NUMBER";
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";
-                        defaultValue = 0;
+                    };
+                    class GVAR(editorLoadedTracks) {
+                        displayName = CSTRING(editorLoadedTracks);
+                        tooltip = CSTRING(editorLoadedTracks_tooltip);
+                        property = QGVAR(editorLoadedTracks);
+                        control = "Edit";
+                        expression = "_this setVariable ['%s',_value];";
+                        defaultValue = "parseNumber (_this isKindOf 'Tank')"; // must match post init script
+                        validate = "number";
+                        condition = "objectHasInventoryCargo";
+                        typeName = "NUMBER";
+                    };
+                    class GVAR(editorLoadedWheels): GVAR(editorLoadedTracks) {
+                        displayName = CSTRING(editorLoadedWheels);
+                        tooltip = CSTRING(editorLoadedWheels_tooltip);
+                        property = QGVAR(editorLoadedWheels);
+                        defaultValue = "parseNumber (_this isKindOf 'Car')"; // must match post init script
                     };
                 };
             };

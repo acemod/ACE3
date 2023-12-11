@@ -56,11 +56,15 @@ class CfgAmmo {
         ACE_bulletLength = 23.012;  // Bullet Length in mm
         ACE_bulletMass = 4.0176;  // Mass in grams (example is roughly 62 grains)
 
+        // Standard deviation of the muzzle velocity variation in percent
+        // Example: With a muzzle velocity of 850 m/s and a standard deviation of 0.35%, 68% of the shots will be between 847 m/s and 853 m/s
+        ACE_muzzleVelocityVariationSD = 0.35;
+
         // Array of muzzle velocity shifts in m/s with 11 data points from -15 °C to 35 °C
         // Example: At 0°C the shift will be -21.0
         ACE_ammoTempMuzzleVelocityShifts[] = {-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
 
-        //Array of ballistic coefficients (contains one element more than the velocity boundary array)
+        // Array of ballistic coefficients (contains one element more than the velocity boundary array)
         ACE_ballisticCoefficients[] = {0.151};
 
         ACE_velocityBoundaries[] = {};  // Array of velocity boundaries

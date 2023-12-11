@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Modularity And PBO Structure
+title: Modularity and PBO Structure
 description: 
 group: development
 parent: wiki

@@ -1,3 +1,7 @@
+PREP(assignNVG);
+PREP(assignNVGpfh);
+PREP(drawCuratorGarrisonPathing);
 PREP(garrison);
-PREP(unGarrison);
 PREP(garrisonMove);
+PREP(initDisplayCurator);
+PREP(unGarrison);

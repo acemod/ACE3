@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -9,12 +10,10 @@
  * None
  *
  * Example:
- * call ace_frag_fnc_drawTraces
+ * call ace_frag_fnc_dev_drawTraces
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 {
     _x params ["", "", "", "", "_positions", "_color"];

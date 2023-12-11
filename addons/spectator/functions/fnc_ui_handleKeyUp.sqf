@@ -1,5 +1,7 @@
+#include "..\script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Function used to handle key up event
  *
  * Arguments:
@@ -17,9 +19,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
-#include "\A3\ui_f\hpp\defineDIKCodes.inc"
 
 params ["","_key","_shift","_ctrl","_alt"];
 

@@ -1,9 +1,11 @@
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Converts number to binary number
  *
  * Arguments:
- * A number <NUMBER>
+ * 0: A number <NUMBER>
+ * 1: Minumum length of numbers <NUMBER> (default: 1)
  *
  * Return Value:
  * A binary number as string <STRING>
@@ -13,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_number", ["_minLength", 1]];
 

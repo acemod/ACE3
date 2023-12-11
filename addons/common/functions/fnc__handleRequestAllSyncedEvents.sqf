@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Handles a server-side request for synchronization ALL events on JIP to a client.
@@ -13,16 +14,14 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_client"];
 
-[GVAR(syncedEvents), {
-    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
-    _value params ["", "_eventLog"];
-
-    ["ACEs", [_key, _eventLog], _client] call CBA_fnc_targetEvent;
+{
+    //IGNORE_PRIVATE_WARNING ["_x", "_y"];
+    _y params ["", "_eventlog"];
+    ["ACEs", [_x, _eventLog], _client] call CBA_fnc_targetEvent;
     false
-}] call CBA_fnc_hashEachPair;
+} forEach GVAR(syncedEvents);
 
 true

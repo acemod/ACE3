@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Aircraft
+component: aircraft
 description: Aircraft overhaul.
 group: feature
 category: realism
@@ -34,14 +35,7 @@ Pilots and copilots of all helicopters can now eject.
 ### 1.6 Laser marker for Wildcat
 Adds a laser marker to the copilot seat of the Wildcat.
 
-### 1.7 HUD for AH-9
-Adds a HUD to the AH-9 based on the Comanche's HUD.
-
 ## 2. Usage
 
 ### 2.1 Switching flare modes
 Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to switch between flare firing modes (Arma 3 default key bind `countermeasure mode`)
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="aircraft" %}

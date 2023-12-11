@@ -1,8 +1,17 @@
 class ACE_Settings {
     class GVAR(disableNVGsWithSights) {
-        displayName = CSTRING(DisableNVGsWithSights_DisplayName);
-        description = CSTRING(DisableNVGsWithSights_description);
-        typeName = "BOOL";
-        value = 0;
+        movedToSQF = 1;
+    };
+    class GVAR(fogScaling) {
+        movedToSQF = 1;
+    };
+    class GVAR(noiseScaling) {
+        movedToSQF = 1;
+    };
+    class GVAR(effectScaling) {
+        movedToSQF = 1;
+    };
+    class GVAR(aimDownSightsBlur) {
+        movedToSQF = 1;
     };
 };

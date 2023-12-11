@@ -1,0 +1,11 @@
+PREP(effectBleeding);
+PREP(effectBloodVolume);
+PREP(effectBloodVolumeIcon);
+PREP(effectHeartBeat);
+PREP(effectIncapacitated);
+PREP(effectPain);
+PREP(effectUnconscious);
+PREP(handleHUDIndicators);
+PREP(handleEffects);
+PREP(initEffects);
+PREP(playInjuredSound);

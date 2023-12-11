@@ -1,12 +1,7 @@
 ace_trenches
 =================
 
-Adds item 'ACE_entrenchingtool'
+Provides players with the capability of digging trenches.
+
+Adds item 'ACE_EntrenchingTool'
 Adds 2 trenches; Envelope - Small & Envelop - Big
-
-
-## Maintainers
-
-The people responsible for merging changes to this component or answering potential questions.
-
-- [Grey](https://github.com/Grey-Soldierman)

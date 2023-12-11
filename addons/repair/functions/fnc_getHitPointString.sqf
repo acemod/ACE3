@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Finds the localized string of the given hitpoint name or uses default text if none found.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_hitPoint", "_textLocalized", "_textDefault", ["_trackArray", []]];
 
@@ -33,7 +33,11 @@ if (_track) then {
 };
 
 // Prepare first part of the string from stringtable
+//IGNORE_STRING_WARNING(str_ace_repair_hit);
 private _text = LSTRING(Hit);
+
+// Remove # prefix
+if ((_hitpoint select [0, 1]) == "#") then { _hitPoint = _hitPoint select [1] };
 
 // Remove "Hit" from hitpoint name if one exists
 private _toFind = if ((toLower _hitPoint) find "hit" == 0) then {

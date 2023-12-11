@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: voiper
  * Draw nearby lighting and sexy flashlight beams on main map.
@@ -12,12 +13,10 @@
  * None
  *
  * Example:
- * [CONTROL, 5, [5, 4, 6], []] call ACE_map_fnc_simulateMapLights
+ * [CONTROL, 5, [5, 4, 6], []] call ace_map_fnc_simulateMapLight
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_mapCtrl", "_mapScale", "_mapCentre", "_lightLevel"];
 
@@ -42,12 +41,15 @@ _lightLevel params ["_r", "_g", "_b", "_a"];
 private _colourAlpha = (_r + _g + _b) min _a;
 private _shadeAlpha = _a;
 
-private _colourList = [_r, _g, _b];
-_colourList sort false;
-private _maxColour = _colourList select 0;
+private _maxColour = selectMax [_r, _g, _b];
+private _ambientColor = if (_maxColour == 0) then {
+    [1, 1, 1, _colourAlpha];
+} else {
+    [_r / _maxColour, _g / _maxColour, _b / _maxColour, _colourAlpha];
+};
 
 //ambient colour fill
-_mapCtrl drawIcon [format["#(rgb,8,8,3)color(%1,%2,%3,1)", _r / _maxColour, _g / _maxColour, _b / _maxColour], [1,1,1,_colourAlpha], _mapCentre, _screenSize, _screenSize, 0, "", 0];
+_mapCtrl drawIcon ["#(rgb,8,8,3)color(1,1,1,1)", _ambientColor, _mapCentre, _screenSize, _screenSize, 0, "", 0];
 
 if (_flashlight == "") then {
     //ambient shade fill
@@ -56,9 +58,9 @@ if (_flashlight == "") then {
     private _mousePos = GVAR(mousePos);
 
     //flashlight settings
-    private _cfg = (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight");
-    private _size = getNumber (_cfg >> "ACE_Flashlight_Size");
-    private _flashTex = getText (_cfg >> "ACE_Flashlight_Beam");
+    private _cfg = configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight";
+    private _size = [_cfg >> "ACE_Flashlight_Size", "number", DEFAULT_FLASHLIGHT_SIZE] call CBA_fnc_getConfigEntry;
+    private _flashTex = [_cfg >> "ACE_Flashlight_Beam", "text", QPATHTOF(UI\Flashlight_beam_white_ca.paa)] call CBA_fnc_getConfigEntry;
     private _beamSize = (safeZoneW/safeZoneWAbs) * _screenSize / _size;
 
     //after 5x zoom, it's simulated to be fixed (it actually gets bigger relative to zoom)

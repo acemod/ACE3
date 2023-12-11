@@ -20,5 +20,8 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 
 class ACE_Extensions {
-    extensions[] += {"ace_advanced_ballistics"};
+    class ace_advanced_ballistics {
+        windows = 1;
+        client = 1;
+    };
 };

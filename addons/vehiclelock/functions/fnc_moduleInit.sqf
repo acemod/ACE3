@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Function for setup module.  Sets default lockpick strength and default lock state.
@@ -11,13 +12,10 @@
  * None
  *
  * Example:
- * [fromModule] call ACE_VehicleLock_fnc_hasKeyForVehicle;
+ * [fromModule] call ace_vehiclelock_fnc_moduleInit;
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-if (!isServer) exitWith {};
 
 params ["_logic", "_syncedUnits", "_activated"];
 TRACE_3("params",_logic,_syncedUnits,_activated);

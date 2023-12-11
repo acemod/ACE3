@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: Nou
  * Turn a laser designator on.
@@ -6,7 +7,7 @@
  * 0: Emitter <OBJECT>
  * 1: Owner <OBJECT>
  * 2: Method, can be code, which emitter and owner are passed to, a string function name, an array with a position memory point and weapon name, or an array with a position memory point, a vector begining memory point, and vector ending memory point. <STRING><CODE><ARRAY>
- * 3: Wavelength (1550nm is common eye safe) <NUMBER>
+ * 3: Wavelength (1550nm is typical) <NUMBER>
  * 4: Laser code <NUMBER>
  * 5: Beam divergence (in mils off beam center) <NUMBER>
  * 6: Method Args <ANY> (default: nil)
@@ -20,8 +21,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 // params [["_emitter", objNull, [objNull]],["_owner", objNull, [objNull]],["_method", "", ["", {}, []]],["_wavelength", 0, [0]],["_code", 0, [0]],["_beamSpread", 0, [0]],"_methodArgs"];
 
