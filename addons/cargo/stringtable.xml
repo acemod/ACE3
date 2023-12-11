@@ -219,7 +219,7 @@
             <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
-            <Japanese>%1&lt;br/&gt;は&lt;br/&gt;%2へ積み込まれました</Japanese>
+            <Japanese>%1 は&lt;br/&gt;%2 へ&lt;br/&gt;積み込まれました</Japanese>
             <Korean>%1은(는)&lt;br/&gt;%2 에 실림</Korean>
             <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
             <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
@@ -235,7 +235,7 @@
             <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
-            <Japanese>&lt;br/&gt;%1が&lt;br/&gt;%2から降ろされました</Japanese>
+            <Japanese>%1 が&lt;br/&gt;%2 から&lt;br/&gt;降ろされました</Japanese>
             <Korean>%1은(는)&lt;br/&gt;%2에서 내려짐</Korean>
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
@@ -282,7 +282,7 @@
             <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
             <French>%1&lt;br /&gt;n'a pas pu être chargé</French>
-            <Japanese>%1&lt;br/&gt;は積み込めませんでした</Japanese>
+            <Japanese>%1 は&lt;br/&gt;積み込めませんでした</Japanese>
             <Korean>%1을(를) 싣을 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被裝載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被装载</Chinesesimp>
@@ -298,7 +298,7 @@
             <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
             <French>%1&lt;br /&gt;n'a pas pu être déchargé</French>
-            <Japanese>%1&lt;br/&gt;は降ろせませんでした</Japanese>
+            <Japanese>%1 は&lt;br/&gt;降ろせませんでした</Japanese>
             <Korean>%1을(를) 하역할 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>

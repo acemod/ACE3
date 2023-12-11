@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
-            <Japanese>%1&lt;br/&gt;を使った</Japanese>
+            <Japanese>%1 を&lt;br/&gt;使った</Japanese>
             <Polish>%1&lt;br/&gt;Przygotowany</Polish>
             <German>%1&lt;br/&gt;vorbereitet</German>
             <Korean>%1&lt;br/&gt;준비됨</Korean>

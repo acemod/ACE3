@@ -220,7 +220,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
             <English>After Stitch</English>
-            <Japanese>縫合後</Japanese>
+            <Japanese>縫合した後</Japanese>
             <French>Après suture</French>
             <Russian>После наложения швов</Russian>
             <German>Nach dem Nähen</German>
@@ -280,7 +280,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
-            <Japanese>患者の装備を先に使用</Japanese>
+            <Japanese>患者の装備を優先</Japanese>
             <French>Matériel du patient d'abord</French>
             <Russian>Сначала медикаменты пациента</Russian>
             <Portuguese>Usar do Paciente Primeiro</Portuguese>
@@ -296,7 +296,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
-            <Japanese>救護者の装備を先に使用</Japanese>
+            <Japanese>救護者の装備を優先</Japanese>
             <French>Matériel du médecin d'abord</French>
             <Russian>Сначала медикаменты врача</Russian>
             <Portuguese>Usar do Médico Primeiro</Portuguese>
@@ -313,7 +313,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_DisplayName">
             <English>Autoinjector Treatment Time</English>
             <French>Durée d'interaction - Auto-injecteurs</French>
-            <Japanese>注射器の所要時間</Japanese>
+            <Japanese>自動注射器の所要時間</Japanese>
             <Spanish>Tiempo de tratamiento de autoinyección</Spanish>
             <Russian>Время ввода автоинъектора</Russian>
             <Polish>Czas aplikacji autostrzykawki</Polish>
@@ -325,7 +325,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
             <French>Définit le temps nécessaire à l'administration d'une substance auto-injectable (en secondes).</French>
-            <Japanese>注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>自動注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para administrar medicación utilizando un autoinyectador.</Spanish>
             <Russian>Время, необходимое для введения медикаментов автоинъектором (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny do aplikacji medykamentów za pomocą autostrzykawki.</Polish>
@@ -848,7 +848,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_DisplayName">
             <English>Allow Unconscious Body Bag</English>
             <French>Housse mortuaire - Autoriser patients inconscients</French>
-            <Japanese>無意識者を遺体袋に</Japanese>
+            <Japanese>気絶者を遺体袋に</Japanese>
             <Spanish>Permitir bolsa para cuerpos inconsciente</Spanish>
             <Russian>Разрешить упаковывать пациентов без сознания в мешки для трупов</Russian>
             <Polish>Nieprzytomni w worku na ciało</Polish>
@@ -860,7 +860,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
             <French>Active la possibilité de placer des patients inconscients dans les housses mortuaires.\nAttention : le cas échéant cela provoquera la mort du patient.</French>
-            <Japanese>気絶しているプレイヤーを遺体袋へ入れられるかどうかを決定します。</Japanese>
+            <Japanese>無意識状態のプレイヤーを遺体袋へ入れられるかどうかを決定します。</Japanese>
             <Spanish>Permitir colocar a un paciente inconsciente en una bolsa para cuerpos.</Spanish>
             <Russian>Разрешает упаковывать пациентов без сознания в мешки для трупов.</Russian>
             <Polish>Zezwalaj na pakowanie nieprzytomnych osób do worka na ciało.</Polish>
@@ -1591,7 +1591,7 @@
             <Italian>Usato per coprire una ferita</Italian>
             <Portuguese>Usado para cobrir um ferimento</Portuguese>
             <Czech>Slouží k překrytí poranění</Czech>
-            <Japanese>傷を覆うために使用</Japanese>
+            <Japanese>傷を覆うために使用される</Japanese>
             <Korean>상처를 덮을 때 씁니다</Korean>
             <Chinesesimp>用于覆盖伤口</Chinesesimp>
             <Chinese>用於覆蓋傷口</Chinese>
@@ -1608,7 +1608,7 @@
             <Italian>Un bendaggio fatto apposta per coprire una ferita una volta fermata l'emorragia.</Italian>
             <Portuguese>Uma curativo, material específico para cobrir um ferimento que é aplicado assim que o sangramento é estancando.</Portuguese>
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
-            <Japanese>包帯(被覆材)とは、傷口を覆うためもので、傷口の上に貼ると出血を食い止める。</Japanese>
+            <Japanese>包帯(被覆材)、これは傷口を覆うためもので、傷口の上に貼ると出血を食い止める。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
             <Chinesesimp>用于覆盖伤口以防止出血，透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
@@ -1642,7 +1642,7 @@
             <Italian>Usato su ferite medie o grandi per fermare emorragie.</Italian>
             <Portuguese>Usado para o preenchimento de cavidades geradas por ferimentos médios e grandes e estancar o sangramento.</Portuguese>
             <Czech>Používá se k zastavení středních až silnějších krvácení</Czech>
-            <Japanese>中程度から大きな傷の手当てと止血に使用</Japanese>
+            <Japanese>中程度から大きな傷の手当てと止血に使用される</Japanese>
             <Korean>중형 또는 대형 상처를 채우고 출혈을 막기 위해 쓰입니다,</Korean>
             <Chinesesimp>用于包扎中到大型伤口，并防止出血</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血</Chinese>
@@ -1827,7 +1827,7 @@
             <Italian>Usato per combattere il dolore.</Italian>
             <Portuguese>Usado para combater dores moderadas e severas</Portuguese>
             <Czech>Slouží k tlumení středně těžkých a těžkých bolestí</Czech>
-            <Japanese>中等度から重度の痛みに対処するために使用</Japanese>
+            <Japanese>中等度から重度の痛みに対処するために使用される</Japanese>
             <Korean>심한 통증을 완화하는데 쓰입니다</Korean>
             <Chinesesimp>用于削减中度至重度疼痛</Chinesesimp>
             <Chinese>減低中度至重度的疼痛感</Chinese>
@@ -1874,7 +1874,7 @@
             <Czech>Slouží jako protiváha Adrenalinu</Czech>
             <Portuguese>Usado para combater os efeitos da Epinefrina</Portuguese>
             <Russian>Используется для купирования эффектов адреналина</Russian>
-            <Japanese>アドレナリンの作用に対抗するために使用</Japanese>
+            <Japanese>アドレナリンの作用に対抗するために使用される</Japanese>
             <Korean>에피네프린 대응책으로 쓰입니다</Korean>
             <Chinesesimp>用于中和肾上腺素的影响</Chinesesimp>
             <Chinese>用來對付腎上腺素的影響</Chinese>
@@ -1922,7 +1922,7 @@
             <Italian>Usato in situazioni con gas nervino.</Italian>
             <Portuguese>Usado em casos de ataque QBRN</Portuguese>
             <Czech>Používá se v přítomnosti nervových plynů</Czech>
-            <Japanese>核兵器・生物兵器・化学兵器による汚染環境下で使用</Japanese>
+            <Japanese>核・生物・化学兵器(NBC)による汚染環境下で使用される</Japanese>
             <Korean>화생방 상황에 쓰입니다</Korean>
             <Chinesesimp>使用于核生化污染的情况</Chinesesimp>
             <Chinese>使用於核生化汙染的情況</Chinese>
@@ -1938,7 +1938,7 @@
             <Italian>E' un farmaco usato in ambito militare in scenari con presenza di gas nervino.</Italian>
             <Portuguese>Uma droga usada por militares em casos de ataque QBRN.</Portuguese>
             <Czech>Atropin slouží jako protijed na otravu organofosfátovými insekticidy (diazinon) a nervovými plyny.</Czech>
-            <Japanese>軍が核兵器・生物兵器・化学兵器による汚染環境下で使用する薬物。</Japanese>
+            <Japanese>核・生物・化学兵器(NBC)による汚染環境下で軍が使用する薬品。</Japanese>
             <Korean>화생방 상황에 쓰이는 군용 약품</Korean>
             <Chinesesimp>军用神经解毒针，用来应付核生化污染的情况。</Chinesesimp>
             <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
@@ -2318,7 +2318,7 @@
             <Italian>Include vario materiale medico per trattamenti avanzati.</Italian>
             <Portuguese>Inclui vários tratamentos materiais para custura e tratamento avançado</Portuguese>
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných</Czech>
-            <Japanese>縫合や高度な処置に必要とされる、様々な治療器具が含まれています。</Japanese>
+            <Japanese>縫合や高度な処置に必要とされる様々な治療器具が含まれている</Japanese>
             <Korean>봉합 및 고급 조치에 필요한 다양한 치료 도구가 있습니다.</Korean>
             <Chinesesimp>包含各种医疗套件，以及进阶伤口系统需要的缝合用品</Chinesesimp>
             <Chinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品</Chinese>
@@ -2386,7 +2386,7 @@
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
-            <Japanese>手術キットは戦場で高度な処置をする為に使われます。</Japanese>
+            <Japanese>手術キットは戦場で高度な処置をする為に用いる</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
             <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合</Chinese>
@@ -2403,7 +2403,7 @@
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo.</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
-            <Japanese>手術キットは戦場で高度な処置をする為に使われます。</Japanese>
+            <Japanese>手術キットは戦場で高度な処置をする為に用いる</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
             <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合</Chinese>
@@ -2484,7 +2484,7 @@
             <Italian>Una sacca per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>遺体袋は死体を入れる為に使います。</Japanese>
+            <Japanese>死体のための遺体袋</Japanese>
             <Korean>시체를 운반할 때 쓰는 가방입니다</Korean>
             <Chinesesimp>用于装尸体</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
@@ -2501,7 +2501,7 @@
             <Italian>Una sacca per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos.</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>遺体袋は死体を入れる為に使います。</Japanese>
+            <Japanese>死体のための遺体袋</Japanese>
             <Korean>시체를 운반할 때 쓰는 가방입니다</Korean>
             <Chinesesimp>用于装尸体</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
@@ -2670,7 +2670,7 @@
             <Hungarian>Kötözés</Hungarian>
             <Portuguese>Atadura</Portuguese>
             <Russian>Перевязать</Russian>
-            <Japanese>包帯</Japanese>
+            <Japanese>包帯を巻く</Japanese>
             <Korean>붕대</Korean>
             <Chinesesimp>包扎</Chinesesimp>
             <Chinese>繃帶</Chinese>
@@ -3628,7 +3628,7 @@
             <Hungarian>%1 ellenőrizte a vérnyomást: %2</Hungarian>
             <Czech>%1 zkontroloval krevní tlak: %2</Czech>
             <Portuguese>%1 verificou pressão arterial: %2</Portuguese>
-            <Japanese>%1 が測定した血圧: %2</Japanese>
+            <Japanese>%1 が血圧を確認: %2</Japanese>
             <Korean>%1 (이)가 혈압을 측정했습니다: %2</Korean>
             <Chinesesimp>%1 测得血压为 %2</Chinesesimp>
             <Chinese>已由%1確認血壓: %2</Chinese>
@@ -3661,7 +3661,7 @@
             <German>Der Blutdruck liegt bei %2/%3</German>
             <Portuguese>A Pressão Arterial é de %2/%3</Portuguese>
             <Czech>Naměřil si krevní tlak u %2/%3</Czech>
-            <Japanese>血圧は %2/%3</Japanese>
+            <Japanese>計測した血圧数は %2/%3 でした</Japanese>
             <Korean>혈압이 %2/%3 입니다</Korean>
             <Chinesesimp>血压为 %2/%3</Chinesesimp>
             <Chinese>血壓為%2/%3</Chinese>
@@ -3678,7 +3678,7 @@
             <Italian>La pressione sanguigna è bassa</Italian>
             <Portuguese>Pressão Arterial baixa</Portuguese>
             <Czech>Naměřil si nízký krevní tlak</Czech>
-            <Japanese>血圧は低い</Japanese>
+            <Japanese>血圧が 低い ことを確認した</Japanese>
             <Korean>혈압이 매우 낮습니다</Korean>
             <Chinesesimp>血压低</Chinesesimp>
             <Chinese>發現到低血壓</Chinese>
@@ -3695,7 +3695,7 @@
             <Italian>La pressione sanguigna è normale</Italian>
             <Portuguese>Pressão Arterial normal</Portuguese>
             <Czech>Naměřil si normální krevní tlak</Czech>
-            <Japanese>血圧は正常</Japanese>
+            <Japanese>血圧が 正常 なことを確認した</Japanese>
             <Korean>혈압이 정상입니다</Korean>
             <Chinesesimp>血压正常</Chinesesimp>
             <Chinese>發現到正常血壓</Chinese>
@@ -3712,7 +3712,7 @@
             <Italian>La pressione sanguigna è alta</Italian>
             <Portuguese>Pressão Arterial Alta</Portuguese>
             <Czech>Naměřil si vysoký krevní tlak</Czech>
-            <Japanese>血圧は高い</Japanese>
+            <Japanese>血圧が 高い ことを確認した</Japanese>
             <Korean>혈압이 매우 높습니다</Korean>
             <Chinesesimp>血压高</Chinesesimp>
             <Chinese>發現到高血壓</Chinese>
@@ -3729,7 +3729,7 @@
             <Italian>La pressione sanguigna è assente</Italian>
             <Portuguese>Sem Pressão Arterial</Portuguese>
             <Czech>Nenaměřil si žádný krevní tlak</Czech>
-            <Japanese>血圧はありません</Japanese>
+            <Japanese>血圧が ない ことを確認した</Japanese>
             <Korean>혈압이 잡히지 않습니다</Korean>
             <Chinesesimp>血压为零</Chinesesimp>
             <Chinese>量不到血壓</Chinese>
@@ -3746,7 +3746,7 @@
             <Italian>Non puoi misurare la pressione sanguigna</Italian>
             <Portuguese>Você falhou em aferir a Pressão Arterial</Portuguese>
             <Czech>Nedokázal si změřit krevní tlak</Czech>
-            <Japanese>血圧を測るのに失敗した</Japanese>
+            <Japanese>血圧の計測に失敗した</Japanese>
             <Korean>혈압을 측정하는데 실패했습니다</Korean>
             <Chinesesimp>无法测得血压</Chinesesimp>
             <Chinese>檢查血壓的動作失敗</Chinese>
@@ -3881,7 +3881,7 @@
             <Hungarian>%1 ellenőrizte a szívverés-számot: %2</Hungarian>
             <Czech>%1 zkontroloval srdeční tep: %2</Czech>
             <Portuguese>%1 verificou a frequência cardíaca: %2</Portuguese>
-            <Japanese>%1 が測定した心拍数: %2</Japanese>
+            <Japanese>%1 が心拍を確認: %2</Japanese>
             <Korean>%1 (이)가 맥박을 측정했습니다: %2</Korean>
             <Chinesesimp>%1 测得心率为 %2</Chinesesimp>
             <Chinese>已由%1確認心跳: %2</Chinese>
@@ -3965,7 +3965,7 @@
             <Italian>Il battito cardiaco è %2</Italian>
             <Portuguese>A Frequência Cardíaca é de %2</Portuguese>
             <Czech>Nahmatal jsi srdeční tep u %2</Czech>
-            <Japanese>心拍数は %2</Japanese>
+            <Japanese>計測した心拍数は %2 でした</Japanese>
             <Korean>맥박이 %2 입니다</Korean>
             <Chinesesimp>心率为 %2</Chinesesimp>
             <Chinese>心跳為%2</Chinese>
@@ -3981,7 +3981,7 @@
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
             <Portuguese>Frequência Cardíaca baixa</Portuguese>
             <Czech>Nahmatal jsi slabý srdeční puls</Czech>
-            <Japanese>心拍は弱い</Japanese>
+            <Japanese>心拍が 弱い ことを確認した</Japanese>
             <Korean>약한 맥박입니다</Korean>
             <Chinesesimp>心率微弱</Chinesesimp>
             <Chinese>心跳微弱</Chinese>
@@ -3998,7 +3998,7 @@
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
             <Portuguese>Frequência Cardíaca normal</Portuguese>
             <Czech>Nahmatal jsi silný srdeční puls</Czech>
-            <Japanese>心拍は強い</Japanese>
+            <Japanese>心拍が 強い ことを確認した</Japanese>
             <Korean>강한 맥박입니다</Korean>
             <Chinesesimp>心率过快</Chinesesimp>
             <Chinese>心跳過快</Chinese>
@@ -4015,7 +4015,7 @@
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
             <Portuguese>Frequência Cardíaca alta</Portuguese>
             <Czech>Nahmatal jsi normální srdeční puls</Czech>
-            <Japanese>心拍は正常</Japanese>
+            <Japanese>心拍が 正常 なことを確認した</Japanese>
             <Korean>보통 맥박입니다</Korean>
             <Chinesesimp>心率正常</Chinesesimp>
             <Chinese>心跳正常</Chinese>
@@ -4032,7 +4032,7 @@
             <Italian>Hai riscontrato una assenza di battito cardiaco</Italian>
             <Portuguese>Sem Frequência Cardíaca</Portuguese>
             <Czech>Žádný puls</Czech>
-            <Japanese>心拍はありません</Japanese>
+            <Japanese>心拍が ない ことを確認した</Japanese>
             <Korean>맥박을 찾을 수가 없습니다</Korean>
             <Chinesesimp>无法测得心率</Chinesesimp>
             <Chinese>量不到心跳</Chinese>
@@ -4081,7 +4081,7 @@
             <Italian>%1 è cosciente</Italian>
             <Portuguese>%1 está respondendo</Portuguese>
             <Czech>%1 odpovídá</Czech>
-            <Japanese>%1 は反応あり</Japanese>
+            <Japanese>%1 は反応している</Japanese>
             <Korean>%1 은 반응이 있습니다</Korean>
             <Chinesesimp>%1 有反应</Chinesesimp>
             <Chinese>%1 有反應</Chinese>
@@ -4098,7 +4098,7 @@
             <Italian>%1 non risponde</Italian>
             <Portuguese>%1 não está respondendo</Portuguese>
             <Czech>%1 neodpovídá</Czech>
-            <Japanese>%1 の反応なし</Japanese>
+            <Japanese>%1 は反応していない</Japanese>
             <Korean>%1 은 반응이 없습니다</Korean>
             <Chinesesimp>%1 没有反应</Chinesesimp>
             <Chinese>%1 沒有反應</Chinese>
@@ -4108,7 +4108,7 @@
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
             <French>%1 est inconscient, respire par intermittence et convulse.</French>
             <Polish>%1 jest nieresponsywny, ma płytki oddech oraz jest w konwulsjach</Polish>
-            <Japanese>%1 は反応せず、浅い呼吸とけいれんをしている</Japanese>
+            <Japanese>%1 は反応していない、 浅く呻きながら痙攣している</Japanese>
             <German>%1 reagiert nicht, schnappt nach Luft und verkrampft</German>
             <Italian>%1 non risponde, ha convulsioni e prende respiri deboli</Italian>
             <Chinesesimp>%1没有反应，微软的喘着气和抽搐</Chinesesimp>
@@ -4120,7 +4120,7 @@
             <English>%1 is not responsive, motionless and cold</English>
             <French>%1 est inconscient, inanimé et froid.</French>
             <Polish>%1 jest nieresponsywny, nieruchomy oraz zimny</Polish>
-            <Japanese>%1 は反応せず、動かず冷たくなっている</Japanese>
+            <Japanese>%1 は反応していない、 動かず冷たくなっている</Japanese>
             <German>%1 reagiert nicht, ist regungslos und kalt</German>
             <Italian>%1 non risponde, è immobile e freddo</Italian>
             <Chinesesimp>%1没有反应，一动不动，身体冰凉</Chinesesimp>
@@ -4156,7 +4156,7 @@
             <Hungarian>A páciens, %1,&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Hungarian>
             <Czech>Pacient %1&lt;br/&gt;je %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Czech>
             <Portuguese>Paciente %1&lt;br/&gt;é %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Portuguese>
-            <Japanese>患者 %1&lt;br/&gt;は %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Japanese>
+            <Japanese>患者 %1 は&lt;br/&gt;%2している。&lt;br/&gt;%3。&lt;br/&gt;%4。</Japanese>
             <Korean>환자 %1&lt;br/&gt;는 %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Korean>
             <Chinesesimp>伤员 %1 &lt;br/&gt; %2 &lt;br/&gt; %3 &lt;br/&gt; %4</Chinesesimp>
             <Chinese>傷者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinese>
@@ -4206,7 +4206,7 @@
             <Hungarian>Valamennyi vért vesztett</Hungarian>
             <Czech>Ztratil trochu krve</Czech>
             <Portuguese>Ele perdeu um pouco de sangue</Portuguese>
-            <Japanese>患者は出血している</Japanese>
+            <Japanese>彼は出血している</Japanese>
             <Korean>적은 양의 피를 잃었다</Korean>
             <Chinesesimp>他轻微失血</Chinesesimp>
             <Chinese>他流失一些血液</Chinese>
@@ -4223,7 +4223,7 @@
             <Czech>Ztratil hodně krve</Czech>
             <Portuguese>Ele perdeu muito sangue</Portuguese>
             <Italian>Ha perso molto sangue</Italian>
-            <Japanese>患者は大量失血している</Japanese>
+            <Japanese>彼は大量失血している</Japanese>
             <Korean>많은 양의 피를 잃었다</Korean>
             <Chinesesimp>他大量失血</Chinesesimp>
             <Chinese>他流失大量血液</Chinese>
@@ -4240,7 +4240,7 @@
             <Hungarian>Nem vesztett vért</Hungarian>
             <Czech>Neztratil žádnou krev</Czech>
             <Portuguese>Ele não perdeu sangue</Portuguese>
-            <Japanese>患者は失血していない</Japanese>
+            <Japanese>彼は失血していない</Japanese>
             <Korean>피를 잃지 않았다</Korean>
             <Chinesesimp>他没有失血</Chinesesimp>
             <Chinese>他並沒有失血</Chinese>
@@ -4257,7 +4257,7 @@
             <Hungarian>Fájdalmai vannak</Hungarian>
             <Czech>Je v bolestech</Czech>
             <Portuguese>Ele está com dor</Portuguese>
-            <Japanese>患者は痛みを感じている</Japanese>
+            <Japanese>彼は痛みを感じている</Japanese>
             <Korean>통증이 있다</Korean>
             <Chinesesimp>他感到疼痛</Chinesesimp>
             <Chinese>他感到疼痛中</Chinese>
@@ -4274,7 +4274,7 @@
             <Hungarian>Nincsenek fájdalmai</Hungarian>
             <Czech>Nemá žádné bolesti</Czech>
             <Portuguese>Ele não está com dor</Portuguese>
-            <Japanese>患者は痛みを感じていない</Japanese>
+            <Japanese>彼は痛みを感じていない</Japanese>
             <Korean>통증이 없다</Korean>
             <Chinesesimp>他没有感到疼痛</Chinesesimp>
             <Chinese>他沒感到疼痛中</Chinese>
@@ -4308,7 +4308,7 @@
             <German>Du verbindest %1 (%2)</German>
             <Portuguese>Você aplica bandagem no paciente %1 (%2)</Portuguese>
             <Czech>Obvazuješ %1 (%2)</Czech>
-            <Japanese>%1 (%2) に包帯を使った</Japanese>
+            <Japanese>あなたは %1 (%2) に包帯を使用した</Japanese>
             <Korean>%1 (%2) 붕대를 감았다</Korean>
             <Chinesesimp>你正在使用 %2 包扎 %1</Chinesesimp>
             <Chinese>你正在對 %1 (%2) 包紮繃帶中</Chinese>
@@ -4374,7 +4374,7 @@
             <Italian>Controlli le vie respiratorie di %1</Italian>
             <Portuguese>Você entuba o %1</Portuguese>
             <Czech>Ošetřuješ dýchací cesty %1</Czech>
-            <Japanese>あなたは %1 の気道を治療した</Japanese>
+            <Japanese>あなたは %1 の気道を処置した</Japanese>
             <Korean>%1의 기도를 확보했다</Korean>
             <Chinesesimp>你正在治疗 %1 的呼吸道</Chinesesimp>
             <Chinese>你治療 %1 的呼吸道</Chinese>
@@ -4526,7 +4526,7 @@
             <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
-            <Japanese>%1&lt;br/&gt;が&lt;br/&gt;%2へ積み込まれました</Japanese>
+            <Japanese>%1 は&lt;br/&gt;%2 へ&lt;br/&gt;積み込まれました</Japanese>
             <Korean>%1&lt;br/&gt;(은)는&lt;br/&gt;%2 에 실림</Korean>
             <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
             <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
@@ -4542,7 +4542,7 @@
             <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
-            <Japanese>&lt;br/&gt;%1が&lt;br/&gt;%2から降ろされました</Japanese>
+            <Japanese>%1 が&lt;br/&gt;%2 から&lt;br/&gt;降ろされました</Japanese>
             <Korean>%1&lt;br/&gt;(은)는&lt;br/&gt;%2 에서 내려짐</Korean>
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
@@ -4626,7 +4626,7 @@
             <Italian>%1 ha bendato il paziente</Italian>
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
-            <Japanese>%1 は包帯を巻いた</Japanese>
+            <Japanese>%1 が包帯を巻いた</Japanese>
             <Korean>%1 (이)가 붕대를 감아줬다</Korean>
             <Chinesesimp>%1 已包扎伤员</Chinesesimp>
             <Chinese>%1 已包紮傷者</Chinese>
@@ -4641,7 +4641,7 @@
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
             <Spanish>%1 realicó RCP</Spanish>
             <French>%1 a fait une RCP.</French>
-            <Japanese>%1 は心肺蘇生(CPR)をした</Japanese>
+            <Japanese>%1 が心肺蘇生(CPR)を実施</Japanese>
             <Korean>%1 (이)가 심폐소생술을 실시했다</Korean>
             <Chinesesimp>%1 已进行心肺复苏</Chinesesimp>
             <Chinese>%1 已執行心肺復甦術</Chinese>
@@ -4657,7 +4657,7 @@
             <Italian>%1 ha usato %2</Italian>
             <Portuguese>%1 usou %2</Portuguese>
             <Czech>%1 použil %2</Czech>
-            <Japanese>%1 は %2 を使った</Japanese>
+            <Japanese>%1 が%2を使用した</Japanese>
             <Korean>%1 (이)가 %2 을 썼다</Korean>
             <Chinesesimp>%1 已使用 %2</Chinesesimp>
             <Chinese>%1 已使用 %2</Chinese>
@@ -4674,7 +4674,7 @@
             <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
-            <Japanese>%1 はIVを投与した</Japanese>
+            <Japanese>%1 がIVを投与した</Japanese>
             <Korean>%1 (이)가 IV를 실시했다</Korean>
             <Chinesesimp>%1 已进行静脉注射</Chinesesimp>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
@@ -4691,7 +4691,7 @@
             <Italian>%1 ha applicato un laccio emostatico</Italian>
             <Portuguese>%1 aplicou um torniquete</Portuguese>
             <Czech>%1 použil škrtidlo</Czech>
-            <Japanese>%1 は止血帯を巻いた</Japanese>
+            <Japanese>%1 が止血帯を巻いた</Japanese>
             <Korean>%1 (이)가 지혈대를 적용했다</Korean>
             <Chinesesimp>%1 已使用止血带</Chinesesimp>
             <Chinese>%1 已經綁上止血帶</Chinese>
@@ -4705,7 +4705,7 @@
             <Chinese>%1 已套用固定板</Chinese>
             <Italian>%1 ha applicato una gessatura</Italian>
             <Czech>%1 použil dlahu</Czech>
-            <Japanese>%1 は添え木を当てた</Japanese>
+            <Japanese>%1 が添え木を当てた</Japanese>
             <Polish>%1 założył szynę</Polish>
             <Spanish>%1 aplicada una férula</Spanish>
             <German>%1 hat eine Schiene angelegt</German>
@@ -4723,7 +4723,7 @@
             <Italian>%1 ha usato Kit di Pronto Soccorso (PAK)</Italian>
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
             <French>%1 a utilisé une trousse sanitaire.</French>
-            <Japanese>%1 は個人用治療キットを使った</Japanese>
+            <Japanese>%1 が個人用治療キットを使用した</Japanese>
             <Korean>%1 (이)가 개인응급키트를 사용했다</Korean>
             <Chinesesimp>%1 已使用个人急救包</Chinesesimp>
             <Chinese>%1 已使用了個人急救包</Chinese>

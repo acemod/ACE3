@@ -661,7 +661,7 @@
             <Russian>Назначить в Красную группу</Russian>
             <French>Assigner à rouge</French>
             <Italian>Assegna al team rosso</Italian>
-            <Japanese>レッドにする</Japanese>
+            <Japanese>レッドに割り当て</Japanese>
             <Korean>빨강에 등록</Korean>
             <Chinesesimp>指派为红组</Chinesesimp>
             <Chinese>指派為紅組</Chinese>
@@ -678,7 +678,7 @@
             <Russian>Назначить в Зеленую группу</Russian>
             <French>Assigner à vert</French>
             <Italian>Assegna al team verde</Italian>
-            <Japanese>グリーンにする</Japanese>
+            <Japanese>グリーンに割り当て</Japanese>
             <Korean>초록에 등록</Korean>
             <Chinesesimp>指派为绿组</Chinesesimp>
             <Chinese>指派為綠組</Chinese>
@@ -695,7 +695,7 @@
             <Russian>Назначить в Синюю группу</Russian>
             <French>Assigner à bleu</French>
             <Italian>Assegna al team blu</Italian>
-            <Japanese>ブルーにする</Japanese>
+            <Japanese>ブルーに割り当て</Japanese>
             <Korean>파랑에 등록</Korean>
             <Chinesesimp>指派为蓝组</Chinesesimp>
             <Chinese>指派為藍組</Chinese>
@@ -712,7 +712,7 @@
             <Russian>Назначить в Желтую группу</Russian>
             <French>Assigner à jaune</French>
             <Italian>Assegna al team giallo</Italian>
-            <Japanese>イエローにする</Japanese>
+            <Japanese>イエローに割り当て</Japanese>
             <Korean>노랑에 등록</Korean>
             <Chinesesimp>指派为黄组</Chinesesimp>
             <Chinese>指派為黃組</Chinese>
@@ -1193,7 +1193,7 @@
             <Italian>%1 ti ha passato un caricatore %2.</Italian>
             <Spanish>%1 te pasó un cargador %2.</Spanish>
             <French>%1 vous a passé un chargeur de %2.</French>
-            <Japanese>%1 はあなたに %2 弾倉を渡した</Japanese>
+            <Japanese>%1 は あなたに弾倉 %2 を渡した。</Japanese>
             <Korean>%1에게서 %2탄창을 받았다</Korean>
             <Chinesesimp>%1给你%2弹匣</Chinesesimp>
             <Chinese>%1給你%2彈匣</Chinese>

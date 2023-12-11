@@ -45,7 +45,7 @@
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
             <Russian>Позволяет контролировать различные аспекты Зевса.</Russian>
             <Italian>Fornisce controllo su vari aspetti di Zeus.</Italian>
-            <Japanese>Zeus の操作性を様々な側面から強化します。</Japanese>
+            <Japanese>Zeusの操作性を様々な側面から強化します。</Japanese>
             <Korean>제우스에게 다양한 방면의 조작을 제공해줍니다</Korean>
             <Chinesesimp>提供宙斯各个方面的控制权</Chinesesimp>
             <Chinese>提供宙斯各個方面的控制權</Chinese>
@@ -77,7 +77,7 @@
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
-            <Japanese>プレイヤーが Zeus になる際、全体へポップアップ表示を行います。</Japanese>
+            <Japanese>プレイヤーがZeusになる際、全体へポップアップ表示を行います。</Japanese>
             <Korean>플레이어가 제우스가 되면 서버에 알림 팝업이 등장합니다.</Korean>
             <Chinesesimp>当一位玩家被指定为宙斯时显示全局信息</Chinesesimp>
             <Chinese>當一位玩家被指定為宙斯時顯示全域訊息</Chinese>
@@ -110,7 +110,7 @@
             <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
             <Russian>Спавнит орла, который следует за камерой Зевса.</Russian>
             <Italian>Crea un'aquila che segue la videocamera Zeus.</Italian>
-            <Japanese>Zeus カメラを追うイーグルを出現します。</Japanese>
+            <Japanese>Zeusカメラを追いかける鷲を出現させます。</Japanese>
             <Korean>제우스의 카메라를 따라다니는 독수리를 생성합니다.</Korean>
             <Chinesesimp>生成一个老鹰跟着宙斯的摄影机</Chinesesimp>
             <Chinese>生成一個老鷹跟著宙斯的攝影機</Chinese>
@@ -143,7 +143,7 @@
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
             <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
             <Italian>Riproduci rumori di vento quando Zeus controlla un'unità in remoto.</Italian>
-            <Japanese>ユニットが Zeus 遠隔操作になった際、風の音がします。</Japanese>
+            <Japanese>Zeusがユニットを遠隔操作した際、風の音を再生します。</Japanese>
             <Korean>제우스가 유닛을 조작할 때 바람소리가 납니다.</Korean>
             <Chinesesimp>当宙斯开始控制单位时利用风的声音提示</Chinesesimp>
             <Chinese>當宙斯開始控制單位時利用風的聲音提示</Chinese>
@@ -159,7 +159,7 @@
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
             <Russian>Предупреждение об арте</Russian>
             <Italian>Allerta Artiglieria</Italian>
-            <Japanese>砲撃警告</Japanese>
+            <Japanese>砲撃の警告</Japanese>
             <Korean>폭격 경고</Korean>
             <Chinesesimp>武装警告</Chinesesimp>
             <Chinese>武裝警告</Chinese>
@@ -175,7 +175,7 @@
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
             <Italian>Riproduci un messaggio radio quando Zeus usa artiglieria.</Italian>
-            <Japanese>Zeus が砲撃を使う際に、無線で警告を流します。</Japanese>
+            <Japanese>Zeusが砲撃を使う際に、無線で警告を流します。</Japanese>
             <Korean>제우스가 폭격 시 경고 무전을 재생합니다.</Korean>
             <Chinesesimp>当宙斯开始攻击时使用无线电警告</Chinesesimp>
             <Chinese>當宙斯開始攻擊時使用無線電警告</Chinese>
@@ -313,7 +313,7 @@
             <Chinesesimp>添加或删除宙斯的可编辑物体</Chinesesimp>
             <German>Aktiviere oder deaktiviere zu bearbeitende Objekte von Zeus</German>
             <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
-            <Japanese>Zeus から編集可能オブジェクトの追加と削除をする</Japanese>
+            <Japanese>Zeusから編集可能オブジェクトの追加と削除をする</Japanese>
             <Polish>Dodaj lub usuń edytowalne obiekty z Zeus'a</Polish>
             <Russian>Добавить или удалить редактируемые объекты от Зевса</Russian>
             <Portuguese>Adiciona ou remove objetos editáveis do Zeus</Portuguese>

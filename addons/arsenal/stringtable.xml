@@ -343,7 +343,7 @@
             <French>Trier par poids</French>
             <German>Nach Gewicht sortieren</German>
             <Polish>Sortuj wg wagi</Polish>
-            <Japanese>重量で並び替え</Japanese>
+            <Japanese>重量順に並び替え</Japanese>
             <Italian>Ordina per peso</Italian>
             <Korean>무게 순서로 정렬</Korean>
             <Chinese>以重量排序</Chinese>
@@ -360,7 +360,7 @@
             <German>Nach Menge sortieren</German>
             <Polish>Sortuj wg ilości</Polish>
             <Japanese>数量で並び替え</Japanese>
-            <Italian>Ordina per quantità</Italian>
+            <Italian>Ordina per quantitativo</Italian>
             <Korean>갯수 순서로 정렬</Korean>
             <Chinese>以數量排序</Chinese>
             <Chinesesimp>以数量排序</Chinesesimp>
@@ -374,7 +374,7 @@
             <German>Nach Tragelast sortieren</German>
             <French>Trier par capacité de chargement</French>
             <Italian>Ordina per capacità di carico</Italian>
-            <Japanese>容量で並び替え</Japanese>
+            <Japanese>容量順に並び替え</Japanese>
             <Spanish>Ordenar por capacidad</Spanish>
             <Russian>Сортировка по вместимости</Russian>
             <Polish>Sortuj po rozmiarze</Polish>
@@ -387,7 +387,7 @@
             <German>Nach Genauigkeit sortieren</German>
             <French>Trier par précision</French>
             <Italian>Ordina per precisione</Italian>
-            <Japanese>精度で並び替え</Japanese>
+            <Japanese>精度順に並び替え</Japanese>
             <Turkish>Isabet doğruluğuna göre sırala</Turkish>
             <Spanish>Ordenar por precisión</Spanish>
             <Russian>Сортировка по точности</Russian>
@@ -401,7 +401,7 @@
             <German>Nach Schussrate sortieren</German>
             <French>Trier par cadence de tir</French>
             <Italian>Ordina per cadenza di tiro</Italian>
-            <Japanese>連射速度で並び替え</Japanese>
+            <Japanese>連射速度順に並び替え</Japanese>
             <Turkish>Atış hızına göre sırala</Turkish>
             <Spanish>Ordenar por cadencia de tiro</Spanish>
             <Russian>Сортировка по темпу стрельбы</Russian>
@@ -415,7 +415,7 @@
             <German>Nach Vergrößerung sortieren</German>
             <French>Trier par grossissement</French>
             <Italian>Ordina per ingrandimento</Italian>
-            <Japanese>倍率で並び替え</Japanese>
+            <Japanese>倍率順に並び替え</Japanese>
             <Spanish>Ordenar por magnificación</Spanish>
             <Russian>Сортировка по кратности приближения</Russian>
             <Polish>Sortuj po przybliżeniu</Polish>
@@ -428,7 +428,7 @@
             <German>Nach Munitionszahl sortieren</German>
             <French>Trier par nombre de munitions</French>
             <Italian>Ordina per numero di colpi</Italian>
-            <Japanese>装弾数で並び替え</Japanese>
+            <Japanese>装弾数順に並び替え</Japanese>
             <Turkish>Mermi sayısına göre sırala</Turkish>
             <Spanish>Ordenar por cantidad de munición</Spanish>
             <Russian>Сортировка по количеству боеприпасов</Russian>
@@ -440,8 +440,8 @@
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
             <French>Trier par protection balistique</French>
-            <Japanese>防弾性能で並び替え</Japanese>
             <Italian>Ordina per protezione balistica</Italian>
+            <Japanese>防弾性能順に並び替え</Japanese>
             <Spanish>Ordenar por protección balística</Spanish>
             <Russian>Сортировка по баллистической защите</Russian>
             <Polish>Sortuj po ochronie balistycznej</Polish>
@@ -454,7 +454,7 @@
             <English>Sort by explosive protection</English>
             <French>Trier par résistance aux explosifs</French>
             <Italian>Ordina per protezione esplosiva</Italian>
-            <Japanese>防爆性能で並び替え</Japanese>
+            <Japanese>防爆性能順に並び替え</Japanese>
             <Spanish>Ordenar por protección de explosivos</Spanish>
             <Russian>Сортировка по защите от взрывов</Russian>
             <Polish>Sortuj po ochronie przeciw wybuchom</Polish>
@@ -932,7 +932,7 @@
             <Spanish>Mostrar / ocultar iconos de mods en el panel izquierdo</Spanish>
             <French>Affiche/masque les icônes de mod du panneau gauche.</French>
             <Polish>Pokaż / ukryj ikony modów w lewym panelu</Polish>
-            <Japanese>左パネルにある MOD アイコンの表示 / 非表示をします</Japanese>
+            <Japanese>左パネルにあるMODアイコンを表示/非表示します</Japanese>
             <Italian>Mostra / nascondi le icone delle mod dal pannello sinistro</Italian>
             <Korean>왼쪽 패널의 모드 아이콘 표시 / 숨기기</Korean>
             <German>Zeigt/Versteckt Mod-Symbole in der linken Leiste</German>
@@ -948,7 +948,7 @@
             <Spanish>Cambiar el tamaño de fuente para el texto de los paneles izquierdo y derecho</Spanish>
             <French>Change la taille de police des panneaux latéraux.</French>
             <Polish>Zmień wysokość czcionki dla tekstu lewego i prawego panelu</Polish>
-            <Japanese>パネルのフォントの高さを変更します。</Japanese>
+            <Japanese>左右パネル内の文字フォントの高さを変更します。</Japanese>
             <Italian>Cambia l'altezza del font per il testo sul pannello sinistro / destro</Italian>
             <Korean>왼쪽 / 오른쪽 패널 텍스트의 글꼴 높이 변경</Korean>
             <German>Ändert die Schriftgröße für die linke/rechte Leiste</German>
@@ -964,7 +964,7 @@
             <Spanish>Registrar elementos no encontrados o no disponibles en el RPT</Spanish>
             <French>Consigne les objets manquants ou indisponibles dans le RPT.</French>
             <Polish>Rejestruj brakujące / niedostępne przedmioty do pliku RPT</Polish>
-            <Japanese>PRT で欠落 / 利用不可アイテムを記録します</Japanese>
+            <Japanese>PRTに欠落/利用不可アイテムを記録します</Japanese>
             <Italian>Log mancante / oggetto non disponibile nell' RPT</Italian>
             <Korean>RPT에 누락 된 항목 / 사용할 수없는 항목 기록</Korean>
             <German>Fehlende Gegenstände werden in der RPT aufgezeichnet</German>
@@ -1242,7 +1242,7 @@
             <English>Not Supported</English>
             <Spanish>No soportada</Spanish>
             <German>Nicht unterstützt</German>
-            <Japanese>セカンダリに内蔵</Japanese>
+            <Japanese>非対応</Japanese>
             <Polish>Nie wspierane</Polish>
             <Italian>Non supportato</Italian>
             <Russian>Не поддерживается</Russian>
@@ -1296,7 +1296,7 @@
             <Spanish>Nocturna</Spanish>
             <Italian>Notturno</Italian>
             <French>Nocturne</French>
-            <Japanese>暗視装置</Japanese>
+            <Japanese>暗視</Japanese>
             <Korean>야간</Korean>
             <Chinesesimp>夜视</Chinesesimp>
             <Chinese>夜視</Chinese>
@@ -1312,7 +1312,7 @@
             <Spanish>Térmica</Spanish>
             <Italian>Termico</Italian>
             <French>Thermique</French>
-            <Japanese>熱源画像</Japanese>
+            <Japanese>熱画像</Japanese>
             <Korean>열상</Korean>
             <Chinesesimp>热成像</Chinesesimp>
             <Chinese>熱成像</Chinese>
@@ -1339,7 +1339,7 @@
             <Spanish>Habilitar las pestañas de caras / voces / insignias</Spanish>
             <German>Aktiviere die Gesichter-, Stimmen- und Abzeichenübersicht</German>
             <French>Activer les onglets visages/voix/insignes</French>
-            <Japanese>顔 / 声 / 記章(バッジ)タブを有効化</Japanese>
+            <Japanese>顔/声/バッジ(記章)タブを有効化</Japanese>
             <Chinesesimp>启用脸谱/语音/徽章选项</Chinesesimp>
             <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
             <Italian>Abilita volti, voci e insegne</Italian>
@@ -1449,7 +1449,7 @@
             <English>Export current items list as an array for use in scripts</English>
             <Spanish>Exportar la lista actual de objetos como una tabla para su uso en scripts</Spanish>
             <German>Exportiert aktuelle Gegenstände als Array, um es in Scripten zu verwenden</German>
-            <Japanese>スクリプト用に現在のアイテム リストをアレイでエクスポートします</Japanese>
+            <Japanese>スクリプト用に現在のアイテムリストをアレイでエクスポートします</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
             <Polish>Eksportuj obecną listę przedmiotów jako tablicę do wykorzystania w skryptach</Polish>
             <Portuguese>Exportar a lista atual de itens como uma matriz para usar em scripts</Portuguese>
@@ -1495,7 +1495,7 @@
             <Spanish>Añade automáticamente accesorios o cargadores (de la categoría seleccionada) a todas las armas de la lista de objetos</Spanish>
             <German>Es werden automatisch kompatible Aufsätze oder Magazine für alle ausgewählten Waffen hinzugefügt</German>
             <Polish>Automatycznie doda kompatybilne dodatki oraz magazynki (odpowiednio do każdej kategorii) dla wszystkich broni na liście</Polish>
-            <Japanese>現在のアイテム リスト内にある全武器に対応するアタッチメントと弾倉 (選択したカテゴリに基づき) を自動的に追加します</Japanese>
+            <Japanese>現在のアイテムリスト内にある全武器に対応する アタッチメントと弾倉(選択したカテゴリに基づく)を自動的に追加します</Japanese>
             <Russian>Добавляет совместимые приспособления или магазины (в зависимости от выбранной категории) для всего оружия в текущем списке предметов</Russian>
             <Portuguese>Irá automaticamente adicionar acessórios ou carregadores (baseado na categoria selecionada) para todas as armas na lista de itens atual</Portuguese>
             <French>Ajoute automatiquement des accessoires ou des chargeurs compatibles (en fonction de la catégorie sélectionnée), pour toutes les armes de la liste actuelle.</French>
@@ -1577,7 +1577,7 @@
             <Russian>Сохранить эмблему</Russian>
             <Spanish>Guardar Insignia</Spanish>
             <Italian>Salva insegna</Italian>
-            <Japanese>記章(バッジ)の保存</Japanese>
+            <Japanese>バッジ(記章)の保存</Japanese>
             <Polish>Zapisz Naszywkę</Polish>
             <German>Insignia Speichern</German>
             <French>Sauvegarder l'insigne</French>
@@ -1650,7 +1650,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
-            <Japanese>ACE Arsenalが標準で全てのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
+            <Japanese>ACE 武器庫が標準ですべてのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
             <Polish>Kontroluje, czy ACE Arsenal domyślnie wyświetla wszystkie przedmioty, czy tylko ulubione.</Polish>
             <Italian>Controlla se lo stato predefinito dell'arsenale ACE mostra tutti gli oggetti o solo i preferiti.</Italian>
             <German>Steuert, ob das ACE Arsenal standardmäßig alle Gegenstände oder nur Favoriten anzeigt.</German>
@@ -1680,7 +1680,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
-            <Japanese>すべてのアイテムの表示とお気に入りの表示を切り替えます。\nアイテムを追加または削除するには、Shift キーを押しながらダブルクリックします。</Japanese>
+            <Japanese>アイテムをすべて表示するかお気に入りのみを表示するかを切り替えます。\nアイテムをお気に入りに追加または削除するには、Shiftキーを押しながらダブルクリックします。</Japanese>
             <Polish>Przełączanie między wyświetlaniem wszystkich przedmiotów lub tylko ulubionych. \nKliknij dwukrotnie, przytrzymując Shift, aby dodać lub usunąć przedmiot.</Polish>
             <German>Wechseln Sie zwischen der Anzeige aller Elemente oder Ihrer Favoriten.\nDoppelklicken Sie bei gedrückter Umschalttaste, um ein Element hinzuzufügen oder zu entfernen.</German>
             <Italian>Cambia tra mostrare tutti gli oggetti o solo i tuoi preferiti.\nShift + Doppio Click per aggiungere o rimuovere un preferito.</Italian>
@@ -1690,9 +1690,9 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSearchTooltip">
             <English>Search\nCTRL + Click to enable live results</English>
-            <Japanese>検索\nCTRL + クリックでライブ結果を有効にします</Japanese>
             <German>Suche\nSTRG + Click für Live-Aktualisierung während des Schreibens</German>
             <Italian>Cerca\nCTRL + Click per modificare i risultati mentre scrivi</Italian>
+            <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
         </Key>
     </Package>
 </Project>
