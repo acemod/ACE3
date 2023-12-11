@@ -103,22 +103,6 @@
             <Chinese>顯示新聞消息於主選單</Chinese>
             <Turkish>Ana Menü de Haberleri Göster</Turkish>
         </Key>
-        <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
-            <English>ACE Logistics</English>
-            <German>ACE Logistik</German>
-            <Polish>ACE Logistyka</Polish>
-            <Portuguese>ACE Logística</Portuguese>
-            <Russian>ACE Логистика</Russian>
-            <Czech>ACE Logistika</Czech>
-            <Spanish>ACE Logística</Spanish>
-            <Italian>ACE Logistica</Italian>
-            <French>ACE Logistique</French>
-            <Japanese>ACE ロジスティクス</Japanese>
-            <Korean>ACE 보급</Korean>
-            <Chinesesimp>ACE 后勤设定</Chinesesimp>
-            <Chinese>ACE 後勤設定</Chinese>
-            <Turkish>ACE Lojistik</Turkish>
-        </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
             <Polish>Ukryj</Polish>

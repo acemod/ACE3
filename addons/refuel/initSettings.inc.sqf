@@ -1,4 +1,4 @@
-private _category = [ELSTRING(OptionsMenu,CategoryLogistics), "str_state_refuel"];
+private _category = [ELSTRING(main,Category_Logistics), "str_state_refuel"];
 
 [
     QGVAR(rate), "SLIDER",
