@@ -41,7 +41,7 @@ if (EGVAR(medical,fatalDamageSource) in [0, 2]) then {
 if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     // Sum of trauma to critical areas can be fatal (e.g. many small hits)
     private _damageThreshold = GET_DAMAGE_THRESHOLD(_unit);
-    private _headThreshhold = _damageThreshold / 2;
+    private _headThreshhold = _damageThreshold / 4;
     private _bodyThreshhold = 1.5 * _damageThreshold;
     private _limbThreshold = 4 * _damageThreshold;
 

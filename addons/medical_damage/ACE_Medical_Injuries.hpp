@@ -20,6 +20,7 @@ class ACE_Medical_Injuries {
         class Contusion {
             bleeding = 0;
             pain = 0.3;
+            causeFracture = 1;
         };
         // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
         class Crush {
@@ -94,15 +95,15 @@ class ACE_Medical_Injuries {
                 */
             };
             class Contusion {
-                weighting[] = {{0.25, 0}, {0.25, 1}};
+                weighting[] = {{0.35, 0}, {0.35, 1}};
                 // bruises caused by bullets hitting the plate are big
                 sizeMultiplier = 3.2;
-                // tone down the pain a tiny bit to compensate
-                painMultiplier = 0.8;
+                // increase the pain to allow for bruises to actually knock out on repeated hits
+                painMultiplier = 2.2;
             };
             class VelocityWound {
-                // velocity wounds are only in the 0.25-3 range
-                weighting[] = {{3, 0}, {3, 1}, {0.25, 1}, {0.25, 0}};
+                // velocity wounds are only in the 0.35-1.5 range
+                weighting[] = {{1.5, 0}, {1.5, 1}, {0.35, 1}, {0.35, 0}};
                 // velocity wounds will tend to be medium or large
                 sizeMultiplier = 0.9;
             };
@@ -175,54 +176,54 @@ class ACE_Medical_Injuries {
             };
         };
         class vehiclecrash {
-            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}, {0.04, 0}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
             class woundHandlers: woundHandlers {
                 GVAR(vehiclecrash) = QFUNC(woundsHandlerVehiclecrash);
             };
             class Abrasion {
-                weighting[] = {{0.30, 0}, {0.30, 1}};
+                weighting[] = {{0.4, 1}, {0.35, 0}};
             };
             class Avulsion {
-                weighting[] = {{0.01, 1}, {0.01, 0}};
+                weighting[] = {{0.45, 1}, {0.4, 0}};
             };
             class Contusion {
-                weighting[] = {{0.35, 0}, {0.35, 1}};
+                weighting[] = {{0.25, 0}, {0.2, 1}};
+                sizeMultiplier = 2;
             };
             class Crush {
-                weighting[] = {{0.1, 1}, {0.1, 0}};
+                weighting[] = {{0.35, 1}, {0.25, 0}};
             };
-            class Cut {
-                weighting[] = {{0.1, 1}, {0.1, 0}};
+            /*class Cut {
+                weighting[] = {{0.3, 1}, {0.3, 0}};
             };
             class Laceration {
 
-            };
+            };*/
         };
         class collision {
             thresholds[] = {{8, 4}, {1, 1}, {0.3, 1}, {0.15, 0.5}, {0, 0.3}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
-            class Avulsion {
-                weighting[] = {{1, 2}, {0.5, 0.5}, {0.5, 0}};
-            };
             class Abrasion {
-                weighting[] = {{0.4, 0}, {0.2, 1}, {0, 0}};
+                weighting[] = {{0.4, 1}, {0.35, 0}};
+            };
+            class Avulsion {
+                weighting[] = {{0.45, 1}, {0.4, 0}};
             };
             class Contusion {
-                weighting[] = {{0.4, 0}, {0.2, 1}};
+                weighting[] = {{0.4, 0}, {0.35, 1}};
+                sizeMultiplier = 2;
             };
             class Crush {
-                weighting[] = {{0.4, 1}, {0.2, 0}};
+                weighting[] = {{0.4, 1}, {0.35, 0}};
             };
-            class Cut {
+            /*class Cut {
                 weighting[] = {{0.1, 1}, {0.1, 0}};
-            };
-            class Laceration {
-            };
+            };*/
         };
         class falling {
-            thresholds[] = {{8, 4}, {1, 1}, {0.55, 1}, {0.5, 0.7}, {0, 0}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
-            selectionSpecific = 1;
+            thresholds[] = {{8, 4}, {1, 1}, {0.2, 1}, {0.45, 1}, {0.1, 0}, {0, 0}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            selectionSpecific = 0;
             /*class Abrasion {
                 weighting[] = {{0.5, 0}, {0.45, 1}, {0, 0}};
                 sizeMultiplier = 3;
@@ -230,10 +231,9 @@ class ACE_Medical_Injuries {
             class Contusion {
                 weighting[] = {{0.5, 0}, {0.45, 1}};
                 sizeMultiplier = 3;
-                fractureMultiplier = 3;
             };
             class Crush {
-                weighting[] = {{0.7, 1}, {0.65, 0}};
+                weighting[] = {{0.5, 1}, {0.45, 0}};
                 sizeMultiplier = 1.5;
                 fractureMultiplier = 3;
             };
