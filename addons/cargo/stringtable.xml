@@ -310,7 +310,7 @@
             <Italian>Impossibile da scaricare</Italian>
             <French>Ne peut pas être déchargé</French>
             <Japanese>降ろせません</Japanese>
-			<Korean>하역할 수가 없습니다</Korean>
+            <Korean>하역할 수가 없습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
@@ -318,7 +318,7 @@
             <Italian>Dimensione Carico: %1</Italian>
             <French>Encombrement fret: %1</French>
             <Japanese>カーゴ サイズ: %1</Japanese>
-			<Korean>화물 크기: %1</Korean>
+            <Korean>화물 크기: %1</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>

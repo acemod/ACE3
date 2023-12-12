@@ -4557,7 +4557,7 @@
             <Czech>Umístit tělo do černého pytle na mrtvoly</Czech>
             <Turkish>Vücudu siyah ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (黒) に入れる</Japanese>
-			<Korean>시체를 검은 시체가방에 놓기</Korean>
+            <Korean>시체를 검은 시체가방에 놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlue">
             <English>Place body in blue bodybag</English>
@@ -4569,7 +4569,7 @@
             <Czech>Umístit tělo do modrého pytle na mrtvoly</Czech>
             <Turkish>Vücudu mavi ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (青) に入れる</Japanese>
-			<Korean>시체를 파란 시체가방에 놓기</Korean>
+            <Korean>시체를 파란 시체가방에 놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagWhite">
             <English>Place body in white bodybag</English>
@@ -4581,7 +4581,7 @@
             <Czech>Umístit tělo do bílého pytle na mrtvoly</Czech>
             <Turkish>Vücudu beyaz ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (白) に入れる</Japanese>
-			<Korean>시체를 흰 시체가방에 놓기</Korean>
+            <Korean>시체를 흰 시체가방에 놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -4924,14 +4924,14 @@
             <Italian>Coeff. di tempo per trattamenti Zeus</Italian>
             <German>Zeit-Koeffizient für Zeus Behandlungen</German>
             <Japanese>Zeus治療時間係数</Japanese>
-			<Korean>제우스 치료 시간 계수</Korean>
+            <Korean>제우스 치료 시간 계수</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_Description">
             <English>Multiply all treatment times with this coefficient when in Zeus.</English>
             <Italian>Moltiplica il tempo di ogni trattamento per questo coefficiente quando si è Zeus.</Italian>
             <German>Dauer von Behandlungen als Zeus wird mit diesem Koeffizienten multipliziert.</German>
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
-			<Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
+            <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
         </Key>
     </Package>
 </Project>

@@ -500,35 +500,35 @@
             <German>Treibstoffkanister aufheben</German>
             <Italian>Raccogli contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを持つ</Japanese>
-			<Korean>연료통 집어들기</Korean>
+            <Korean>연료통 집어들기</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeFuelCanisterAction">
             <English>Picking fuel canister up...</English>
             <German>Hebe Treibstoffkanister auf...</German>
             <Italian>Raccogliendo contenitore di carburante...</Italian>
             <Japanese>燃料キャニスターを持ち上げています・・・</Japanese>
-			<Korean>연료통 집어드는 중...</Korean>
+            <Korean>연료통 집어드는 중...</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanister">
             <English>Connect fuel canister</English>
             <German>Treibstoffkanister anschließen</German>
             <Italian>Collega contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを接続する</Japanese>
-			<Korean>연료통 꽂기</Korean>
+            <Korean>연료통 꽂기</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanisterAction">
             <English>Connecting fuel canister...</English>
             <German>Schließe Treibstoffkanister an...</German>
             <Italian>Collegando contenitore di carburante...</Italian>
             <Japanese>燃料キャニスターを接続しています・・・</Japanese>
-			<Korean>연료통 꽂는 중...</Korean>
+            <Korean>연료통 꽂는 중...</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_DisconnectFuelCanister">
             <English>Disconnect fuel canister</English>
             <German>Treibstoffkanister lösen</German>
             <Italian>Scollega contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを外します</Japanese>
-			<Korean>연료통 빼기</Korean>
+            <Korean>연료통 빼기</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>
