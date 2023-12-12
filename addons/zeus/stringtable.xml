@@ -1319,6 +1319,7 @@
             <German>Aus Frachtraum ausladen</German>
             <Italian>Scarica dal carico</Italian>
             <Japanese>カーゴから降ろす</Japanese>
+            <Korean>화물 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
@@ -1962,6 +1963,7 @@
             <German>Das Sanitätsmenü ist deaktiviert</German>
             <Italian>Il Menù Medico è disabilitato</Italian>
             <Japanese>医療メニューは無効になっています</Japanese>
+            <Korean>의료 메뉴가 비활성화되었습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
