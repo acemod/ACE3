@@ -1693,6 +1693,7 @@
             <German>Suche\nSTRG + Click für Live-Aktualisierung während des Schreibens</German>
             <Italian>Cerca\nCTRL + Click per modificare i risultati mentre scrivi</Italian>
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
+			<Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
         </Key>
     </Package>
 </Project>
