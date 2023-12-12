@@ -78,7 +78,7 @@
             <French>Bouchons mis</French>
             <Hungarian>Füldugó berakva</Hungarian>
             <Portuguese>Protetores colocados</Portuguese>
-            <Italian>Indossa i tappi auricolari</Italian>
+            <Italian>Tappi auricolari indossati</Italian>
             <Japanese>耳栓を着けました</Japanese>
             <Korean>귀마개 착용</Korean>
             <Chinesesimp>耳塞已塞入</Chinesesimp>
@@ -95,7 +95,7 @@
             <French>Bouchons enlevés</French>
             <Hungarian>Füldugó kivéve</Hungarian>
             <Portuguese>Protetores retirados</Portuguese>
-            <Italian>Levati i tappi auricolari</Italian>
+            <Italian>Tappi auricolari rimossi</Italian>
             <Japanese>耳栓を外しました</Japanese>
             <Korean>귀마개 뺌</Korean>
             <Chinesesimp>耳塞已取出</Chinesesimp>
@@ -128,7 +128,7 @@
             <Czech>Vypnout pískání v uších</Czech>
             <Polish>Wyłącz dzwonienie w uszach</Polish>
             <Hungarian>Fülcsengés letiltása</Hungarian>
-            <Italian>Disabilita i fischi nelle orecchie</Italian>
+            <Italian>Disabilita il fischio nelle orecchie</Italian>
             <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
             <Japanese>耳鳴りを無効化</Japanese>
             <Korean>이명현상 끄기</Korean>
@@ -141,7 +141,7 @@
             <Spanish>Desactiva el efecto de zumbido cuando el jugador recibe daño auditivo.</Spanish>
             <Polish>Usuń szum w uszach przy chwilowej utracie słuchu.</Polish>
             <French>Enlève l'effet d'acouphène lorsqu'un joueur subit des dommages auditifs.</French>
-            <Italian>Quando il giocatore riceve danni all'udito, non fa sentire i fischi nelle orecchie</Italian>
+            <Italian>Quando il giocatore riceve danni all'udito, non far sentire il fischio nelle orecchie</Italian>
             <Portuguese>Remove o efeito de zunido quando o jogador recebe dano na audição</Portuguese>
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
             <Japanese>プレイヤーの聴覚が損傷したときの耳鳴り効果を削除します</Japanese>
@@ -190,7 +190,7 @@
             <Czech>Snižuje schopnost sluchu pokud dojde k jeho poškození hlasitou a blízkou střelbou</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
-            <Italian>Riduci l'abilità uditiva quando il giocatore riceve danno uditivo</Italian>
+            <Italian>Assorda il giocatore quando riceve danni all'udito</Italian>
             <French>Réduit la capacité auditive du joueur lorsqu'il subit des dommages auditifs.</French>
             <Japanese>プレイヤーが聴覚ダメージを受けると聴力が低下します</Japanese>
             <Korean>청력에 손상을 입으면 듣는 소리가 감소합니다.</Korean>
@@ -221,7 +221,7 @@
             <Portuguese>Afeta Zeus CR</Portuguese>
             <Spanish>Efecto Zeus RC</Spanish>
             <Czech>Vliv na Zeus RC</Czech>
-            <Italian>Effetto Zeus RC</Italian>
+            <Italian>Affligge unità Zeus RC</Italian>
             <French>Affecte le CàD Zeus</French>
             <Japanese>Zeus遠隔操作ユニットへの効果</Japanese>
             <Korean>Zeus RC 효과</Korean>
@@ -236,7 +236,7 @@
             <Portuguese>Permite que unidades remotamente controladas pelo Zeus sejam atingidas por danos auditivos.</Portuguese>
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
             <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
-            <Italian>Consenti alle unità controllate in remoto da Zeus di ricevere danni all'udito.</Italian>
+            <Italian>Abilita danni all'udito per unità controllate in remoto da Zeus.</Italian>
             <French>Permet aux unités contrôlées à distance par Zeus de subir des dommages auditifs.</French>
             <Japanese>Zeusにより遠隔操作されたユニットも、聴覚ダメージの効果を受けるようにします。</Japanese>
             <Korean>Zeus가 원격으로 청력손실을 입힐 수 있게 합니다.</Korean>
@@ -265,7 +265,7 @@
             <Russian>Добавляет предмет `ACE_EarPlugs` всем юнитам, которые имеют громкое оружие. Можно отключить при ручной настройке снаряжения.</Russian>
             <Portuguese>Adicionar o item `ACE_EarPlugs` a todas as unidades que tenham armas barulhentas. Pode ser desabilitado com carregamentos customizados.</Portuguese>
             <Czech>Přidat `ACE_EarPlugs` všem jednotkám které mají zbraň. Můžete vypnout, pokud používáte vlastní výbavu.</Czech>
-            <Italian>Aggiungi l'oggetto 'ACE_EarPlugs' a tutte le unità che hanno armi rumorose. Può essere disabilitato se vengono usati loadout personalizzati.</Italian>
+            <Italian>Aggiungi l'oggetto 'ACE_EarPlugs' a tutte le unità che hanno armi/lanciatori rumorosi. Può essere disabilitato se vengono usati loadout personalizzati.</Italian>
             <Spanish>Agregar el item `ACE_EarPlugs`  a todas las unidades equipadas con armas muy ruidosas. Desactivar si quieren utilizarse equipamientos personalizados.</Spanish>
             <French>Ajoute l'objet `Ace_EarPlugs` à toutes les unités ayant des armes bruyantes. Peut être désactivé si de l'équipement personnalisé est utilisé.</French>
             <Japanese>全ユニットへ`ACE_EarPlugs`アイテムを持たせます。これはロードアウトの編集で無効化できます。</Japanese>
@@ -295,7 +295,7 @@
             <Japanese>音量低下</Japanese>
             <Chinesesimp>降低音量</Chinesesimp>
             <Chinese>進低音量</Chinese>
-            <Italian>Volume attenuazione</Italian>
+            <Italian>Attenuazione del volume</Italian>
             <Polish>Tłumienie głośności</Polish>
             <Russian>Глушение звука</Russian>
             <Portuguese>Abafamento de Volume</Portuguese>
@@ -309,7 +309,7 @@
             <Japanese>耳栓時の音量</Japanese>
             <Chinesesimp>耳塞时音量</Chinesesimp>
             <Chinese>耳塞時音量</Chinese>
-            <Italian>Volume tappi per le orecchie</Italian>
+            <Italian>Volume con i Tappi</Italian>
             <Polish>Głośność Stoperów</Polish>
             <Russian>Громкость в берушах</Russian>
             <Portuguese>Volume do Protetor Auricular</Portuguese>

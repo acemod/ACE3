@@ -10,7 +10,7 @@
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
-            <Italian>Mostra sempre il cursore delle autointerazioni</Italian>
+            <Italian>Mostra sempre il cursore per le autointerazioni</Italian>
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
             <Japanese>セルフ インタラクションへ常にカーソルを表示</Japanese>
             <Korean>자기상호작용 시 항상 커서를 보이기</Korean>
@@ -78,7 +78,7 @@
             <Polish>Klawisz własnej interakcji</Polish>
             <French>Touche d'interaction personnelle</French>
             <Hungarian>Saját cselekvő gomb</Hungarian>
-            <Italian>Tasto interazione su se stessi</Italian>
+            <Italian>Tasto autointerazioni</Italian>
             <Portuguese>Tecla de Interação Pessoal</Portuguese>
             <Japanese>セルフ インタラクション キー</Japanese>
             <Korean>자기상호작용 키</Korean>
@@ -95,7 +95,7 @@
             <Polish>Własne akcje</Polish>
             <French>Interaction personnelle</French>
             <Hungarian>Saját cselekvések</Hungarian>
-            <Italian>Interazioni su se stessi</Italian>
+            <Italian>Autointerazioni</Italian>
             <Portuguese>Ações Pessoais</Portuguese>
             <Japanese>自分へのアクション</Japanese>
             <Korean>자기 동작</Korean>
@@ -112,7 +112,7 @@
             <Polish>Akcje pojazdu</Polish>
             <French>Interaction véhicule</French>
             <Hungarian>Járműves cselekvések</Hungarian>
-            <Italian>Interazioni con veicoli</Italian>
+            <Italian>Interazioni su veicoli</Italian>
             <Portuguese>Ações de Veículos</Portuguese>
             <Japanese>車両へのアクション</Japanese>
             <Korean>차량 동작</Korean>
@@ -130,7 +130,7 @@
             <Hungarian>Zeus cselekvések</Hungarian>
             <Portuguese>Ações do Zeus</Portuguese>
             <Russian>Действия Зевса</Russian>
-            <Italian>Azioni Zeus</Italian>
+            <Italian>Interazioni Zeus</Italian>
             <Japanese>Zeusでのアクション</Japanese>
             <Korean>제우스 동작</Korean>
             <Chinesesimp>宙斯操作</Chinesesimp>
@@ -419,7 +419,7 @@
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
-            <Italian>Aggiunge azioni interattive per l'apertura delle porte e piazzamento scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
+            <Italian>Aggiunge interazioni per l'apertura delle porte e piazzamento di scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
             <Japanese>建物にドアを開閉したり梯子を昇降するためのインタラクション アクションを追加します。\n(注: 街中でインタラクション メニューを開く際には特に描画パフォーマンスに影響を及ぼします)</Japanese>
             <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열 경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
             <Chinesesimp>增加互动菜单的功能在可开启的门与建筑物的梯子上。（注意：此功能有可能会降低系统效能，特别是在城镇区更明显）</Chinesesimp>
@@ -449,7 +449,7 @@
             <Russian>Скорость анимации меню взаимодействия</Russian>
             <Portuguese>Velocidade da animação de interação</Portuguese>
             <Czech>Rychlost animace interakce</Czech>
-            <Italian>Velocità Animazioni Interazioni</Italian>
+            <Italian>Velocità di Animazione delle Interazioni</Italian>
             <Spanish>Velocidad de animación del menú de interacción</Spanish>
             <French>Vitesse de l'animation d'interaction</French>
             <Japanese>インタラクションのアニメーション速度</Japanese>
@@ -465,7 +465,7 @@
             <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
             <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, diminuindo a necessidade de esperar para mostrar as ações</Portuguese>
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
-            <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
+            <Italian>Rende le animazioni del Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
             <French>Rend les animations du menu plus rapide, et réduit le temps nécessaire à l'affichage des sous menus d'action.</French>
             <Japanese>メニューのアニメーションを高速化し、サブアクションを表示するためのホバーに必要な時間を短縮します。</Japanese>
@@ -480,7 +480,7 @@
             <Japanese>セレクターの色</Japanese>
             <Chinesesimp>菜单颜色</Chinesesimp>
             <Chinese>選單的顏色</Chinese>
-            <Italian>Controllo Settore</Italian>
+            <Italian>Colore Selettore</Italian>
             <Polish>Kolor wybierającego</Polish>
             <Russian>Цвет селектора</Russian>
             <Portuguese>Cor do Seletor</Portuguese>
@@ -497,6 +497,7 @@
             <Spanish>Consolidar acciones hijo únicas</Spanish>
             <French>Combiner les sous-actions uniques</French>
             <German>Untergeordnete Aktionen zusammenfassen</German>
+            <Italian>Combina sotto-azioni singole</Italian>
             <Polish>Połącz akcje podrzędne</Polish>
             <Chinesesimp>整合子操作</Chinesesimp>
             <Korean>하위 동작 통합</Korean>
@@ -508,6 +509,7 @@
             <Japanese>親アクションと子アクションの一つを統合して表示します。</Japanese>
             <Spanish>Combina acciones padre con una única accion hijo de forma conjunta</Spanish>
             <French>Lorsqu'un menu ne contient qu'une seule sous-action, elle est combinée avec son menu parent.</French>
+            <Italian>Combina interazioni con una sola sotto-azione in una singola interazione.</Italian>
             <German>Übergeordnete Aktionen mit nur einer Unteraktion zusammenfassen.</German>
             <Polish>Gdy menu zawiera tylko jedną akcję podrzędną, łączy ją z akcją nadrzędną.</Polish>
             <Chinesesimp>主操作与子操作集成显示。</Chinesesimp>

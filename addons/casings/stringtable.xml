@@ -6,6 +6,7 @@
             <Japanese>ACE 薬莢</Japanese>
             <Polish>ACE Łuski</Polish>
             <Korean>ACE 탄피</Korean>
+            <Italian>ACE Bossoli</Italian>
             <Chinesesimp>ACE 弹壳</Chinesesimp>
             <Russian>ACE Гильзы</Russian>
             <Spanish>ACE Casquillos</Spanish>
@@ -17,6 +18,7 @@
             <English>Casings Enabled</English>
             <Japanese>薬莢の有効化</Japanese>
             <Polish>Łuski włączone</Polish>
+            <Italian>Abilita Bossoli</Italian>
             <Korean>탄피 활성화</Korean>
             <Chinesesimp>开启弹壳生成</Chinesesimp>
             <Russian>Гильзы включены</Russian>
@@ -34,6 +36,7 @@
             <Russian>Включить постоянные гильзы (ПОТЕНЦИАЛЬНО может повлиять на производительность на старых/слабых системах)</Russian>
             <Spanish>Habilitar persistencia de casquillos (POTENCIAL impacto en el rendimiento de ordenadores antiguos o no potentes)</Spanish>
             <German>Persistente Patronenhülsen aktivieren (POTENZIELLE Leistungseinbußen bei alten/schwachen Systemen)</German>
+            <Italian>Abilita bossoli persistenti (POTENZIALE impatto sulla perfomance su sistemi vecchi/deboli)</Italian>
             <French>Active la persistance des douilles (POTENTIEL impact sur les performances sur les anciens/faibles systèmes)</French>
             <Portuguese>Habilitar persistência de cartuchos (POTENCIAL impacto no desempenho de sistemas antigos/fracos)</Portuguese>
         </Key>
@@ -46,6 +49,7 @@
             <Russian>Макс. кол-во гильз</Russian>
             <Spanish>Casquillos máximos</Spanish>
             <German>Maximale Patronenhülsen</German>
+            <Italian>Numero massimo di bossoli</Italian>
             <French>Nombre maximum de douilles</French>
             <Portuguese>Máxima de cartuchos</Portuguese>
         </Key>
@@ -58,6 +62,7 @@
             <Russian>Максимальное количество гильз для отображения</Russian>
             <Spanish>Máxima cantidad de casquillos para mostrar</Spanish>
             <German>Maximale Anzahl an Patronenhülsen, die angezeigt werden</German>
+            <Italian>Numero massimo di bossoli renderizzati</Italian>
             <French>Nombre maximum de douilles à afficher</French>
             <Portuguese>Quantidade máxima de cartuchos para exibir</Portuguese>
         </Key>

@@ -6,7 +6,7 @@
             <Chinese>AI</Chinese>
             <French>IA</French>
             <Spanish>IA</Spanish>
-            <Italian>AI</Italian>
+            <Italian>IA</Italian>
             <Polish>SI</Polish>
             <Russian>ИИ</Russian>
             <German>KI</German>
@@ -85,6 +85,7 @@
             <English>Auto-Equip NVGs</English>
             <Polish>Automatyczne zakładanie NVG</Polish>
             <German>Automatisch NVGs ausrüsten</German>
+            <Italian>Equipaggia NVG in automatico</Italian>
             <Korean>야투경 자동 창착</Korean>
             <French>Equipement JVN automatique</French>
             <Portuguese>Equipar NVGs automaticamente</Portuguese>
@@ -94,6 +95,7 @@
             <English>Equips NVG in inventory during night time and unequips it during day time.\nDoes not add NVGs to inventory!</English>
             <Polish>Zakłada NVG w nocy i zdejmuje je w ciągu dnia.\nNie dodaje NVG do ekwipunku!</Polish>
             <German>Rüstet NVG nachts aus dem Inventar aus und entfernt es tagsüber.\nFügt keine NVGs zum Inventar hinzu!</German>
+            <Italian>Equipaggia NVG dall'inventario durante la notte, e li mette nell'inventario durante il giorno.\nNon aggiunge NVG all'inventario se non sono presenti.</Italian>
             <Korean>야간에는 야투경을 소지품에 장착하고 주간에는 장착을 해제합니다.\n주의! 소지품에 야투경을 추가하는 것이 아닙니다!</Korean>
             <French>Equipe des JVN pendant la nuit et les déséquipe le jour.\nN'ajoute pas les JVN dans l'intenvaire !</French>
             <Portuguese>Equipa o NVG do inventário durante a noite e desequipa durante o dia.\nNão adiciona NVGs ao inventário!</Portuguese>

@@ -163,7 +163,7 @@
             <French>Serflex</French>
             <Czech>Stahovací pásek</Czech>
             <Portuguese>Algema Plástica</Portuguese>
-            <Italian>Fascietta</Italian>
+            <Italian>Fascetta</Italian>
             <Hungarian>Gyorskötöző</Hungarian>
             <Russian>Кабельная стяжка</Russian>
             <Japanese>ケーブル タイ</Japanese>
@@ -250,7 +250,7 @@
             <French>Synchronise l'unité pour qu'elle se rende.</French>
             <Hungarian>Egység szinkronizálása, hogy kapituláljon.</Hungarian>
             <Russian>Синхронизируйте с юнитами, чтобы заставить их сдаться.</Russian>
-            <Italian>Sincronizza una unità per farla arrendere.</Italian>
+            <Italian>Sincronizza un'unità per farla arrendere.</Italian>
             <Japanese>同期されたユニットを投降させます。</Japanese>
             <Korean>투항시키기 위해 동기화합니다.</Korean>
             <Chinese>同步此模塊到一個單位，使該單位投降</Chinese>
@@ -347,7 +347,7 @@
             <French>Les joueurs peuvent menotter les unités de leur propre camp.</French>
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
             <Russian>Разрешить игрокам арестовывать юнитов своей стороны</Russian>
-            <Italian>I giocatori possono ammanettare unità alleate</Italian>
+            <Italian>I giocatori possono ammanettare unità della tua fazione</Italian>
             <Japanese>プレーヤーが自陣営のユニットをケーブルタイで拘束ができるようにします</Japanese>
             <Korean>자기 편에게 케이블 타이를 사용할 수 있게 합니다</Korean>
             <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
@@ -448,7 +448,7 @@
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
             <German>Benötigt für KI Kapitulation</German>
-            <Italian>Necessita arresa AI</Italian>
+            <Italian>Necessita arresa IA</Italian>
             <Japanese>AIの投降を必要とする</Japanese>
             <Chinese>需要AI先行投降</Chinese>
             <Chinesesimp>需要 AI 先行投降</Chinesesimp>
@@ -463,7 +463,7 @@
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
             <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
-            <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
+            <Italian>Necessita che le IA si arrendano prima di poter essere arrestate</Italian>
             <Japanese>AIを拘束する前に、投降を必要とさせます</Japanese>
             <Chinese>在逮捕AI之前該AI必須先進入投降狀態</Chinese>
             <Chinesesimp>在俘获 AI 之前该 AI 必须先进入投降状态。</Chinesesimp>
@@ -479,7 +479,7 @@
             <English>Sets the unit under the cursor captive.</English>
             <German>Nimmt die Einheit unter dem Cursor fest.</German>
             <Japanese>カーソル先のユニットを拘束</Japanese>
-            <Italian>Imposta l'unità nello stato di prigioniero.</Italian>
+            <Italian>Imposta l'unità puntata come prigioniero.</Italian>
             <Chinese>設置在游標下的單位成俘虜狀態</Chinese>
             <Chinesesimp>设置在光标下的单位成俘虏状态。</Chinesesimp>
             <Korean>커서의 병력을 포박합니다.</Korean>
