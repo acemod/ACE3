@@ -31,6 +31,7 @@ private _bodyPart = "";
 private _allBodyParts = ALL_BODY_PARTS; // micro-optimization here and above, don't recreate this array every time
 
 // hitpoints are randomized, more damage means more wounds in different body parts
+// use a hashmap so we only create one entry in _newDamages per body part
 for "_i" from 1 to (_damageToApply * 6) do {
     _bodyPart = selectRandom _allBodyParts;
     _damageMap set [_bodyPart, (_damageMap getOrDefault [_bodyPart, 0]) + _damageToApply];
