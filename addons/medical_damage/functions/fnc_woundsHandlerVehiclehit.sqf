@@ -28,7 +28,7 @@ private _damageToApply = (abs (_allDamages select 0 select 0));
 
 private _damageMap = createHashMap;
 private _bodyPart = "";
-private _allBodyParts = ALL_BODY_PARTS; // micro-optimization here and above
+private _allBodyParts = ALL_BODY_PARTS; // micro-optimization here and above, don't recreate this array every time
 
 // hitpoints are randomized, more damage means more wounds in different body parts
 for "_i" from 1 to (_damageToApply * 6) do {
