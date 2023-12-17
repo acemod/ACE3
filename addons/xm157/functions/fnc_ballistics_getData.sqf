@@ -24,7 +24,10 @@ private _key = format ["weaponInfoCache-%1-%2-%3",_weaponClass,_magazineClass,_a
 private _weaponInfo = GVAR(data) getOrDefault [_key, []];
 if ((_weaponInfo isEqualTo []) && {_magazineClass != ""}) then {
     TRACE_3("new weapon/mag",_weaponClass,_magazineClass,_ammoClass);
-    private _useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
+    private _useABConfig =(
+        missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] &&
+        {missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]}
+    );
 
     private _zeroRange = 100;
     private _boreHeight = [_unit, 0] call EFUNC(scopes,getBoreHeight);

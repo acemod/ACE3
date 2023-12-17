@@ -37,7 +37,11 @@ if (_magazine isEqualTo "") then {
     };
 
     private _abAdjustText = "";
-    if (["ace_advanced_ballistics"] call EFUNC(common,isModLoaded)) then {
+    private _useABConfig =(
+        missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] &&
+        {missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]}
+    );
+    if (_useABConfig) then {
         private _configAmmo = (configFile >> "CfgAmmo" >> (getText (_configMagazine >> "ammo")));
         private _barrelLength = getNumber (_configWeapon >> "ACE_barrelLength");
         private _muzzleVelocityTable = getArray (_configAmmo >> "ACE_muzzleVelocities");
