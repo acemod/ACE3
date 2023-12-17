@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM), PabstMirror
+ * Author: tcvm, PabstMirror
  * Handles the use of proxy weapons to fix engine-reload times
  *
  * Arguments:
@@ -47,6 +47,9 @@ if !(_proxyWeapon in GVAR(compatibleMagsCache)) then {
     GVAR(compatibleVehicleMagsCache) set [_proxyWeapon, _compatibleMagazines];
     GVAR(compatibleMagsCache) set [_proxyWeapon, (_compatibleMagazines apply {_x call FUNC(getCarryMagazine)}) createHashMapFromArray []];
 };
+
+// Rearm compatibility, prevent reloading entire static and breaking CSW
+_staticWeapon setVariable [QEGVAR(rearm,scriptedLoadout), true, true];
 
 TRACE_2("swapping to proxy weapon",_currentWeapon,_proxyWeapon);
 _vehicle removeWeaponTurret [_currentWeapon, _turret];

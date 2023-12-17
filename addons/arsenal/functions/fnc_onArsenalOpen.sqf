@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -42,6 +42,10 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     };
 };
 
+if (isNil {profileNamespace getVariable QGVAR(saved_loadouts)}) then {
+    profileNamespace setVariable [QGVAR(saved_loadouts), []];
+};
+
 if (isNil QGVAR(virtualItems)) then {
     private _virtualItems = [
         [IDX_VIRT_WEAPONS, createHashMapFromArray [[IDX_VIRT_PRIMARY_WEAPONS, createHashMap], [IDX_VIRT_SECONDARY_WEAPONS, createHashMap], [IDX_VIRT_HANDGUN_WEAPONS, createHashMap]]],
@@ -57,25 +61,10 @@ if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItems) = _virtualItems;
 
     // Flatten out hashmaps for easy checking later
-    private _virtualItemsFlat = +_virtualItems;
-    private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;
-    private _attachments = _virtualItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
-
-    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
-        _virtualItemsFlat merge [_virtualItemsFlat deleteAt _index, true];
-    };
-
-    for "_index" from IDX_VIRT_PRIMARY_WEAPONS to IDX_VIRT_HANDGUN_WEAPONS do {
-        _virtualItemsFlat merge [_weapons deleteAt _index, true];
-    };
-
-    for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
-        _virtualItemsFlat merge [_attachments deleteAt _index, true];
-    };
-
-    GVAR(virtualItemsFlat) = _virtualItemsFlat;
+    call FUNC(updateVirtualItemsFlat);
 };
 
+// Includes items not in the arsenal but equipped on player
 GVAR(virtualItemsFlatAll) = +GVAR(virtualItemsFlat);
 
 GVAR(currentFace) = face GVAR(center);
@@ -94,6 +83,10 @@ GVAR(currentActionPage) = 0;
 
 // Update current item list
 call FUNC(updateCurrentItemsList);
+
+// Setup favorites button text and switch to default mode defined by setting
+[_display, _display displayCtrl IDC_buttonFavorites] call FUNC(buttonFavorites);
+GVAR(favorites) = profileNamespace getVariable [QGVAR(favorites), createHashMap];
 
 // This takes care of unique inventory items and unique equipment (arsenal doesn't have items/equipment whitelisted)
 call FUNC(updateUniqueItemsList);
@@ -212,7 +205,7 @@ if (is3DEN) then {
         _ctrl ctrlCommit 0;
     } forEach [IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia];
 
-    _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
+    private _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 } else {
     GVAR(centerNotPlayer) = GVAR(center) != player;
@@ -237,10 +230,12 @@ GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
 GVAR(leftSearchbarFocus) = false;
 GVAR(rightSearchbarFocus) = false;
+GVAR(liveUpdateSearch) = false;
 GVAR(leftTabFocus) = false;
 GVAR(rightTabFocus) = false;
 GVAR(rightTabLnBFocus) = false;
 GVAR(ignoreFirstSortPanelCall) = false;
+GVAR(refreshing) = false;
 
 {
     private _panel = _display displayCtrl _x;

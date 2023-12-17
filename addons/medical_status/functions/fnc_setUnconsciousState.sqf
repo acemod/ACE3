@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
@@ -28,14 +28,8 @@ _unit setVariable [VAR_UNCON, _active, true];
 // Toggle unit ragdoll state
 [_unit, _active] call EFUNC(medical_engine,setUnconsciousAnim);
 
-// Stop AI firing at unconscious units in most situations (global effect)
-[_unit, "setHidden", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
-
-// Block radio on unconsciousness for compatibility with captive module
-[_unit, "blockRadio", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
-
-// Block speaking on unconsciousness
-[_unit, "blockSpeaking", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
+// Handle hiding from AI and talking blocks.
+[_unit, _active] call FUNC(setStatusEffects);
 
 if (_active) then {
     // Don't bother setting this if not used
@@ -50,6 +44,10 @@ if (_active) then {
 
         while {dialog} do {
             closeDialog 0;
+        };
+
+        if (EGVAR(medical,dropWeaponUnconsciousChance) != 0 && {random 1 <= EGVAR(medical,dropWeaponUnconsciousChance)}) then {
+            _unit call EFUNC(common,throwWeapon);
         };
     };
     // Unlock controls for copilot if unit is pilot of aircraft

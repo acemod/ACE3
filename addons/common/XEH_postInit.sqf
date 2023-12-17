@@ -28,6 +28,8 @@
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["disableWeaponAssembly", false, ["ace_common", "ace_common_lockVehicle", "ace_csw"]] call FUNC(statusEffect_addType);
+["lockInventory", true, []] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -120,6 +122,17 @@
     _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(disableWeaponAssembly), {
+    params ["_object", "_set"];
+    _object enableWeaponDisassembly (_set < 1);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lockInventory), {
+    params ["_object", "_set"];
+    TRACE_2("lockInventory EH",_object,_set);
+    _object lockInventory (_set > 0);
+}] call CBA_fnc_addEventHandler;
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {
@@ -154,10 +167,16 @@ if (isServer) then {
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
     _this lock 2;
+    if ([] isNotEqualTo getArray (configOf _this >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", QGVAR(lockVehicle), true] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
+    if ([] isNotEqualTo getArray (configOf _target >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", QGVAR(lockVehicle), false] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
@@ -477,6 +496,23 @@ GVAR(reloadMutex_lastMagazines) = [];
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 //////////////////////////////////////////////////
+// Start the sway loop
+//////////////////////////////////////////////////
+["CBA_settingsInitialized", {
+    [{
+        // frame after settingsInitialized to ensure all other addons have added their factors
+        if ((GVAR(swayFactorsBaseline) + GVAR(swayFactorsMultiplier)) isNotEqualTo []) then {
+            call FUNC(swayLoop)
+        };
+        // check for pre-3.16 sway factors being added
+        if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {
+            WARNING("ACE_setCustomAimCoef no longer supported - use ace_common_fnc_addSwayFactor");
+            WARNING_1("source: %1",(missionNamespace getVariable "ACE_setCustomAimCoef") apply {_x});
+        };
+    }] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+
+//////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
 //////////////////////////////////////////////////
 
@@ -540,21 +576,30 @@ GVAR(deviceKeyCurrentIndex) = -1;
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
 
 
-["ACE3 Weapons", QGVAR(unloadWeapon), LLSTRING(unloadWeapon), {
-    // Conditions:
-    if !([ACE_player, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
+["ACE3 Weapons", QGVAR(unloadWeapon), LSTRING(unloadWeapon), {
+    private _unit = ACE_player;
 
-    private _currentWeapon = currentWeapon ACE_player;
-    if !(_currentWeapon != primaryWeapon _unit && {_currentWeapon != handgunWeapon _unit} && {_currentWeapon != secondaryWeapon _unit}) exitWith {false};
+    // Conditions
+    if !([_unit, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
 
-    private _currentMuzzle = currentMuzzle ACE_player;
-    private _currentAmmoCount = ACE_player ammo _currentMuzzle;
-    if (_currentAmmoCount < 1) exitWith {false};
+    if !(_unit call CBA_fnc_canUseWeapon) exitWith {false};
 
-    // Statement:
-    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount, false] call FUNC(unloadUnitWeapon);
+    (weaponState _unit) params ["_weapon", "_muzzle", "", "_magazine", "_ammo"];
+
+    // Check if there is any ammo
+    if (_ammo < 1) exitWith {false};
+
+    // Check if the unit has a weapon
+    if (_weapon == "") exitWith {false};
+
+    // Check if the unit has a weapon selected
+    if !(_weapon in [primaryWeapon _unit, handgunWeapon _unit, secondaryWeapon _unit]) exitWith {false};
+
+    // Statement
+    [_unit, _weapon, _muzzle, _magazine, _ammo, false] call FUNC(unloadUnitWeapon);
+
     true
-}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; //ALT + R Key
+}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; // Alt + R
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout"];

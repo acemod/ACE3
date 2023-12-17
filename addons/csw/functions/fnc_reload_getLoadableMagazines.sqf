@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, LinkIsGrim
  * Gets nearby magazines that can be loaded into the CSW

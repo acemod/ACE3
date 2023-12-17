@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Modifies the base interaction point for repair items to show its current damage.

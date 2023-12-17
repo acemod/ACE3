@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Ejects crew from destroyed vehicle.
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * _this call ace_cookoff_fnc_handleDamageEjectIfDestroyed
+ * _this call ace_vehicle_damage_fnc_handleDamageEjectIfDestroyed
  *
  * Public: No
  */

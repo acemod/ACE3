@@ -256,6 +256,8 @@ Example:
 }, {true}]] call ace_arsenal_fnc_addStat;
 ```
 
+If a stat already exists (so same class ID and tab), it will ignore the new addition.
+
 ### 5.3 Removing stats via a function
 
 `ace_arsenal_fnc_removeStat`
@@ -350,7 +352,7 @@ The argument passed to the condition is:
 1   | Stat class ID | String | Required
 2   | Title | String | Required
 3   | Algorithm | Code | Required
-4   | Condition | Code | Optional (default: `true`)
+4   | Condition | Code | Optional (default: `{true}`)
 
 Return Value:
 - Array of sort IDs
@@ -373,6 +375,8 @@ Example:
 
 Sorting method IDs are unique and are generated in the same fashion as the stat IDs (see `5.3 Removing stats via a function`).
 
+If a sorting method already exists (so same class ID and tab), it will ignore the new addition.
+
 ### 6.3 Removing sorting methods via a function
 
 `ace_arsenal_fnc_removeSort`
@@ -391,11 +395,14 @@ The same numbers are used for sorting methods as for stats (see `5.4 Stat tab nu
 
 ## 7. Actions
 
-ACE Arsenal actions are customizable, this will show you how.
+Actions are a way to execute mission/addon-maker defined scripting from a user-interactable control. They can be used to, for example, equip earplugs, modify weapons, or interact with an equipped gunbag directly from the arsenal.
+When an action is executed (i.e. the button is clicked), the action's code is executed, and the arsenal display is refreshed on the following frame to take external changes into account.
+
+For actions involving frame delays or timers, a second call of the `ace_arsenal_fnc_refresh` function may be required.
+
+Since CBA frame functions are deactivated during preInit as of Oct 24th 2023, the refresh function is executed immediatelly after the action code is executed. Take note of this information and the comment below if you'd like your actions to be usable in 3DEN.
 
 ### 7.1 Adding actions via config
-
-Actions use the same tab definitions as stats, found above.
 
 ```cpp
 class ace_arsenal_actions {
@@ -421,6 +428,57 @@ class ace_arsenal_actions {
 };
 ```
 The focused unit object is passed to the condition and statement functions.
+
+### 7.2 Adding actions via scripting
+
+`ace_arsenal_fnc_addAction`
+
+|   | Argument | Type | Optional (default value)
+--- | -------- | ---- | ------------------------
+0   | Tabs to add the sort to | Array of numbers | Required
+1   | Action class ID | String | Required
+2   | Title | String | Required
+3   | Actions | Array of arrays | Required
+4   | Condition | Code | Optional (default: `{true}`)
+5   | Scope editor | Number | Optional (default: `2`)
+
+Return Value:
+- Array of action IDs
+
+Example:
+```sqf
+[[0, 5], "TAG_myActions", "My Actions", [
+    ["text", "Text", {true}, "Text"],
+    ["statement", "Statement", {true}, "", {[_this select 0] call tag_fnc_myTextStatement}],
+    ["button", "Button", {true}, "", {}, {_this call tag_fnc_myAction}]
+]] call ace_arsenal_fnc_addAction;
+```
+
+The example above results in the same actions as in `7.1 Adding actions via config`.
+
+Action IDs are unique and are generated as a string in the following fashion:
+`_rootClassName + "~" + _class + "~" + _tab`
+
+The example above returns:
+`["TAG_myActions~text~0","TAG_myActions~statement~0","TAG_myActions~button~0","TAG_myActions~text~5","TAG_myActions~statement~5","TAG_myActions~button~5"]`
+
+If an action already exists (so same class ID and tab within an action), it will ignore the new addition.
+
+### 7.3 Removing actions via scripting
+
+`ace_arsenal_fnc_removeAction`
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Array of IDs | Array | Required
+
+Action IDs are unique and their generation is explained in `7.2 Adding sorting methods via a function`.
+
+For config added actions the classname is used, for function added ones the string provided is used.
+
+### 7.4 Action tab numbers
+
+The same numbers are used for actions as for stats (see `5.4 Stat tab numbers`).
 
 ## 8. Eventhandlers
 
@@ -448,6 +506,7 @@ All are local.
 | ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+| ace_arsenal_weaponItemChanged | weapon classname (STRING), item classname (STRING), item index (NUMBER, 0-5: muzzle, side, optic, bipod, magazine, underbarrel) | 3.16.0 |
 
 ## 9. Custom sub item categories
 
@@ -488,3 +547,37 @@ private _buttonId = [["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1"], "Flashligh
 [["ACE_Flashlight_XL50"], "better flashlight", "\path\to\a\pictureWithAFlashlight.paa", _buttonId] call ace_arsenal_fnc_addRightPanelButton
 ```
 If an overwritten button is not moved, its items will be added back to Misc. Items.
+
+## 10. Scripting Examples
+
+### 10.1 Getting a list of all virtual items available to an arsenal
+
+```sqf
+private _items = [cursorObject] call ace_arsenal_fnc_getVirtualItems
+systemChat str _items
+```
+
+### 10.2 Blacklist items from all arsenals
+
+The following code can be used to remove items from any arsenal a player opens. Modify the `TAG_my_arsenal_blacklist` variable with a list of classnames you'd like to remove.
+The code will only have effect on clients where it is executed. It can placed in a mission's `initPlayerLocal.sqf` file or any object's init box in the editor. Do not add more than once.
+
+```sqf
+TAG_my_arsenal_blacklist = ["arifle_AK12_F", "LMG_03_F"]; // modify this
+
+["ace_arsenal_displayOpened", {
+    [ace_arsenal_currentBox, TAG_my_arsenal_blacklist] call ace_arsenal_fnc_removeVirtualItems
+}] call CBA_fnc_addEventHandler;
+```
+
+### 10.3 Making items available to all arsenals
+
+Same as above, but instead of `ace_arsenal_fnc_removeVirtualItems`, use `ace_arsenal_fnc_addVirtualItems`.
+
+```sqf
+TAG_my_arsenal_essentials = ["arifle_AK12_F", "LMG_03_F"];
+
+["ace_arsenal_displayOpened", {
+    [ace_arsenal_currentBox, TAG_my_arsenal_essentials] call ace_arsenal_fnc_addVirtualItems
+}] call CBA_fnc_addEventHandler;
+```

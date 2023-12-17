@@ -11,9 +11,9 @@ You are hereby granted to use the ACE3 logos and imagery for promotional purpose
 
 ## 1. Colors
 
-* <i class="icon icon-color icon-color-white"></i> White: `#ffffff, rgb(255, 255, 255)`
-* <i class="icon icon-color icon-color-black"></i> Black: `#000000, rgb(0, 0, 0)`
-* <i class="icon icon-color icon-color-red"></i> Red: `#ba2619, rgb(186, 38, 25)`
+* <i class="color-box color-box-white"></i> White: `#ffffff, rgb(255, 255, 255)`
+* <i class="color-box color-box-black"></i> Black: `#000000, rgb(0, 0, 0)`
+* <i class="color-box color-box-red"></i> Red: `#ba2619, rgb(186, 38, 25)`
 
 
 ## 2. Logo

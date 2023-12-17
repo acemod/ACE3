@@ -1,0 +1,44 @@
+name: HEMTT
+
+on:
+  push:
+    branches:
+    - master
+  pull_request_target:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+    - name: Install Arma 3 Tools
+      uses: arma-actions/arma3-tools@master
+      with:
+        toolsUrl: ${{ secrets.ARMA3_TOOLS_URL }}
+    - name: Checkout the source code
+      uses: actions/checkout@v4
+    - name: Setup HEMTT
+      uses: arma-actions/hemtt@v1
+    - name: Checkout pull request
+      uses: actions/checkout@v4
+      if: ${{ github.event_name == 'pull_request_target' }}
+      with:
+        path: pullrequest
+        ref: 'refs/pull/${{ github.event.number }}/merge'
+    - name: Replace addons with pull request addons
+      if: ${{ github.event_name == 'pull_request_target' }}
+      run: |
+        rm -r addons\
+        rm -r optionals\
+        rm -r include\
+        xcopy /e /h /q pullrequest\addons addons\
+        xcopy /e /h /q pullrequest\optionals optionals\
+        xcopy /e /h /q pullrequest\include include\
+    - name: Run HEMTT build
+      run: hemtt build
+    - name: Rename build folder
+      run: mv .hemttout/build .hemttout/@ace
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ace3-${{ github.sha }}
+        path: .hemttout/@*

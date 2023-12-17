@@ -23,7 +23,7 @@
             <Korean>음량 토글</Korean>
             <Chinesesimp>切换音量</Chinesesimp>
             <Chinese>切換音量</Chinese>
-            <Italian>Attiva Volume</Italian>
+            <Italian>Cambia Volume</Italian>
             <Russian>Переключить громкость</Russian>
             <Polish>Przełącz Głosność</Polish>
             <Turkish>Sesi Aç/Kapat</Turkish>
@@ -37,7 +37,7 @@
             <Korean>토글하여 음량 감소합니다.</Korean>
             <Chinesesimp>切换降低音量。</Chinesesimp>
             <Chinese>切換降低音量。</Chinese>
-            <Italian>Attiva riduzione del volume.</Italian>
+            <Italian>Cambia Riduzione del Volume.</Italian>
             <Russian>Переключает уменьшение громкости</Russian>
             <Polish>Przełącz redukcje głosności</Polish>
             <Turkish>Ses azaltmayı aç / kapat.</Turkish>
@@ -51,7 +51,7 @@
             <Korean>음량 감소됨</Korean>
             <Chinesesimp>降低音量</Chinesesimp>
             <Chinese>降低音量</Chinese>
-            <Italian>Volume diminuito</Italian>
+            <Italian>Volume Abbassato</Italian>
             <Russian>Громкость снижена</Russian>
             <Polish>Zmniejszona głosność</Polish>
             <Turkish>Azaltılmış ses</Turkish>
@@ -65,7 +65,7 @@
             <Korean>음량 복구됨</Korean>
             <Chinesesimp>恢复音量</Chinesesimp>
             <Chinese>回復音量</Chinese>
-            <Italian>Volume ripristinato</Italian>
+            <Italian>Volume Ripristinato</Italian>
             <Russian>Громкость восстановлена</Russian>
             <Polish>Przywrócona głosność</Polish>
             <Spanish>Volumen restaurado</Spanish>
@@ -132,7 +132,7 @@
             <Korean>설정 보기</Korean>
             <Chinesesimp>显示提示</Chinesesimp>
             <Chinese>顯示提示</Chinese>
-            <Italian>Mostra notifiche</Italian>
+            <Italian>Mostra notifica</Italian>
             <Russian>Показывать уведомление</Russian>
             <Polish>Pokaż powiadomienie</Polish>
             <Turkish>Bildirim Göster</Turkish>
@@ -146,7 +146,7 @@
             <Korean>음량이 감소/복구될 때 메시지를 표시합니다.</Korean>
             <Chinesesimp>当正在降低/恢复音量时显示提示。</Chinesesimp>
             <Chinese>當正在降低/回復音量時顯示提示。</Chinese>
-            <Italian>Mostra notifiche mentre si abbassa/ripristina il volume.</Italian>
+            <Italian>Mostra notifiche quando si abbassa/ripristina il volume.</Italian>
             <Russian>Показывать уведомление при уменьшении/восстановлении громкости</Russian>
             <Polish>Pokaż powiadomienie zmniejszając/odnawiając głosność</Polish>
             <Turkish>Ses azaltıldığın da bildirim göster.</Turkish>
@@ -155,12 +155,12 @@
         <Key ID="STR_ACE_Volume_FadeDelay">
             <English>Fade delay</English>
             <German>Ausblendzeit</German>
-            <Japanese>フェードへの遅延</Japanese>
+            <Japanese>フェードの遅延</Japanese>
             <French>Retard fondu</French>
             <Korean>페이드 지연</Korean>
             <Chinesesimp>淡出/入延迟</Chinesesimp>
             <Chinese>淡出/入延遲</Chinese>
-            <Italian>Latenza della dissolvenza</Italian>
+            <Italian>Latenza del cambio volume</Italian>
             <Russian>Задержка затухания</Russian>
             <Polish>Opoznienie wyciszenia</Polish>
             <Spanish>Retardo en disminución gradual</Spanish>
@@ -168,12 +168,12 @@
         <Key ID="STR_ACE_Volume_FadeDelayDescription">
             <English>Time it takes (in seconds) for the sound to fade in/out.</English>
             <German>Zeit, die es benötigt (in Sekunden), für das Geräusch, ein- bzw. auszublenden.</German>
-            <Japanese>音がフェードイン、アウトするまでの時間 (秒) を決定します。</Japanese>
+            <Japanese>音がフェードイン/アウトするまでの時間 (秒) を決定します。</Japanese>
             <French>Temps nécessaire (en secondes) aux sons pour être réduits/rétablis.</French>
             <Korean>페이드 인/아웃 되는데 걸리는 시간(초)</Korean>
             <Chinesesimp>设定音量淡出/入时所需的秒数。</Chinesesimp>
             <Chinese>設定音量淡出/入時所需的秒數。</Chinese>
-            <Italian>Il tempo che impiega (in secondi) il suono a dissolversi entrata/uscita.</Italian>
+            <Italian>Il tempo che impiega (in secondi) il suono a cambiare volume.</Italian>
             <Russian>Время (сек.) для затухания/восстановления звука.</Russian>
             <Polish>Ilość czasu (w sekundach) ile zajmuje wyciszenie/zgłośnienie dźwięku</Polish>
             <Spanish>Tiempo que tarda (en segundos) para que se active o desactive la disminuación gradual del volumen</Spanish>
@@ -186,7 +186,7 @@
             <Korean>감소 시 알림</Korean>
             <Chinesesimp>降低音量时是否提醒</Chinesesimp>
             <Chinese>降低音量時是否提醒</Chinese>
-            <Italian>Sollecita se diminuito</Italian>
+            <Italian>Notifica se diminuito</Italian>
             <Russian>Напоминать о снижении громкости</Russian>
             <Polish>Przypomnij o zmniejszonej głosności dźwięku</Polish>
             <Turkish>Eğer Düşükse Hatırlat</Turkish>
@@ -200,7 +200,7 @@
             <Korean>음량이 감소되면 매 분 마다 알려줍니다</Korean>
             <Chinesesimp>开启后会每分钟警告一次你的音量已被降低。</Chinesesimp>
             <Chinese>開啟後會每分鐘警告一次你的音量已被降低。</Chinese>
-            <Italian>Ti notifica ogni minuto se il tuo volume è basso.</Italian>
+            <Italian>Ti notifica ogni minuto se il tuo volume è abbassato.</Italian>
             <Russian>Ежеминутное напоминание о сниженной громкости</Russian>
             <Polish>Przypomina co minuten o zmniejszonej głosności dźwięku</Polish>
             <Turkish>Eğer ses düşükse her dakika hatırlatır.</Turkish>
@@ -214,7 +214,7 @@
             <Korean>음량 감소 중</Korean>
             <Chinesesimp>降低音量中</Chinesesimp>
             <Chinese>降低音量中</Chinese>
-            <Italian>Il volume è ancora basso</Italian>
+            <Italian>Il volume è ancora abbassato</Italian>
             <Russian>Громкость все еще снижена</Russian>
             <Polish>Dźwięk jest nadal zmniejszony</Polish>
             <Turkish>Ses hala düşük</Turkish>

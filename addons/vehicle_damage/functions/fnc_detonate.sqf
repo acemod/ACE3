@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Detonates vehicle ammo and heavily wounds all inside.
  *
  * Arguments:

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Finds the best vehicle magazines to create from a carryable magazine for a given weapon.

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Initializes CSW to disable weapon disassembling
  *
  * Arguments:
@@ -16,6 +16,9 @@
  */
 
 params ["_vehicle"];
+
+if (isNull _vehicle) exitWith { WARNING_1("%1 became null",_vehicle) };
+
 private _typeOf = typeOf _vehicle;
 private _configOf = configOf _vehicle;
 private _configEnabled = (getNumber (_configOf >> "ace_csw" >> "enabled")) == 1;
@@ -49,8 +52,8 @@ if (_assemblyConfig) then {
         if (!alive _vehicle) exitWith { TRACE_1("dead/deleted",_vehicle); };
         private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]);
         TRACE_2("assemblyConfig present",_vehicle,_assemblyMode);
-        if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode eanbled
-            [QGVAR(disableVanillaAssembly), [_vehicle]] call CBA_fnc_localEvent;
+        if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode enabled
+            [_vehicle, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         };
     }, [_vehicle]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
 };
@@ -88,7 +91,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 
-    if (["ACE_reload"] call EFUNC(common,isModLoaded)) then {
+    if (["ace_reload"] call EFUNC(common,isModLoaded)) then {
         // move reload's check ammo action to the ammo handling point (remove and re-add)
         [_typeOf, 0, ["ACE_MainActions", QEGVAR(reload,CheckAmmo)]] call EFUNC(interact_menu,removeActionFromClass);
         private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);

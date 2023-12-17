@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Text statement for the magazine capacity stat.
@@ -14,6 +14,6 @@
 */
 
 params ["", "_config"];
-TRACE_1("statTextStatement_magCount",_config)
+TRACE_1("statTextStatement_magCount",_config);
 
 getNumber (_config >> "count");

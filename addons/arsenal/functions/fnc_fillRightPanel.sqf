@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Tab control <CONTROL>
+ * 2: Animate panel refresh <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -14,13 +15,13 @@
  * Public: No
 */
 
-params ["_display", "_control"];
+params ["_display", "_control", ["_animate", true]];
 
 // Fade old control background
 if (!isNil QGVAR(currentRightPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentRightPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
-    _previousCtrlBackground ctrlCommit FADE_DELAY;
+    _previousCtrlBackground ctrlCommit ([0, FADE_DELAY] select _animate);
 };
 
 // Show new control background
@@ -28,7 +29,7 @@ private _ctrlIDC = ctrlIDC _control;
 private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
 _ctrlBackground ctrlShow true;
 _ctrlBackground ctrlSetFade 0;
-_ctrlBackground ctrlCommit FADE_DELAY;
+_ctrlBackground ctrlCommit ([0, FADE_DELAY] select _animate);
 
 private _searchbarCtrl = _display displayCtrl IDC_rightSearchbar;
 
@@ -43,8 +44,12 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _rightPanelCache = uiNamespace getVariable QGVAR(rightPanelCache);
 
+private _currentCargo = itemsWithMagazines GVAR(center);
+
 private _fnc_fillRightContainer = {
     params ["_configCategory", "_className", "_hasItemInfo", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
+
+    if (GVAR(favoritesOnly) && {!(_className in _currentCargo)} && {!((toLower _className) in GVAR(favorites))}) exitWith {};
 
     // If item is not in the arsenal, it must be unique
     if (!_isUnique && {!(_className in GVAR(virtualItemsFlat))}) then {
@@ -94,25 +99,24 @@ private _fnc_fillRightContainer = {
     }, true]) params ["_displayName", "_picture", "_mass"];
 
     private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, "0"];
+    _ctrlPanel lnbSetText [[_lbAdd, 1], _displayName];
     _ctrlPanel lnbSetData [[_lbAdd, 0], _className];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
     _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
     _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
+    if ((toLower _className) in GVAR(favorites)) then {
+        _ctrlPanel lnbSetColor [[_lbAdd, 1], FAVORITES_COLOR];
+        _ctrlPanel lnbSetColorRight [[_lbAdd, 1], FAVORITES_COLOR];
+    };
 };
 
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
 private _listnBox = _display displayCtrl IDC_rightTabContentListnBox;
 
-// Reset right panel content
-lbClear _ctrlPanel;
-lbClear _listnBox;
-
-_ctrlPanel lbSetCurSel -1;
-_listnBox lbSetCurSel -1;
-
 // Retrieve compatible items
-private _itemToCheck = "";
+private _isContainer = false;
+private _selectedItem = "";
 private _compatibleItems = [];
 private _compatibleMagsMuzzle = [];
 private _compatibleMagsAll = createHashMap;
@@ -144,12 +148,12 @@ switch (GVAR(currentLeftPanel)) do {
 
         // Check if weapon attachement or magazine
         if (_index != -1) then {
-            _itemToCheck = (GVAR(currentItems) select _currentWeaponItemsIndex) select _index;
+            _selectedItem = (GVAR(currentItems) select _currentWeaponItemsIndex) select _index;
 
             // If weapon attachment, get base weapon; Get compatible items
             if (_index <= 3) then {
                 _compatibleItems = compatibleItems _weapon;
-                _itemToCheck = _itemToCheck call FUNC(baseWeapon);
+                _selectedItem = _selectedItem call FUNC(baseWeapon);
             } else {
                 // Get compatible magazines for primary & secondary muzzle (secondary muzzle is not guaranteed to exist)
                 // Assumption: One weapon can have two muzzles maximum
@@ -161,7 +165,15 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonUniform;
     case IDC_buttonVest;
     case IDC_buttonBackpack: {
-        _ctrlPanel = _listnBox;
+        _isContainer = true;
+
+        // Get the currently selected item in panel
+        private _selectedItemIndex = lnbCurSelRow _listnBox;
+
+        // If something is selected, save it
+        if (_selectedItemIndex != -1) then {
+            _selectedItem = _listnBox lnbData [_selectedItemIndex, 0];
+        };
 
         // This is for the "compatible magazines" tab when a container is open
         if (_ctrlIDC == IDC_buttonMag) then {
@@ -173,11 +185,24 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
+// Reset right panel content
+lbClear _ctrlPanel;
+lnbClear _listnBox;
+
+_ctrlPanel lbSetCurSel -1;
+_listnBox lnbSetCurSelRow -1;
+
+if (_isContainer) then {
+    _ctrlPanel = _listnBox;
+};
+
 // Force a "refresh" animation of the panel
-_ctrlPanel ctrlSetFade 1;
-_ctrlPanel ctrlCommit 0;
-_ctrlPanel ctrlSetFade 0;
-_ctrlPanel ctrlCommit FADE_DELAY;
+if (_animate) then {
+    _ctrlPanel ctrlSetFade 1;
+    _ctrlPanel ctrlCommit 0;
+    _ctrlPanel ctrlSetFade 0;
+    _ctrlPanel ctrlCommit FADE_DELAY;
+};
 
 // Check if the left panel is a weapon. If so, right panel will be compatible items with weapon only
 private _leftPanelState = GVAR(currentLeftPanel) in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon, IDC_buttonBinoculars];
@@ -356,7 +381,7 @@ GVAR(currentRightPanel) = _ctrlIDC;
 [QGVAR(rightPanelFilled), [_display, GVAR(currentLeftPanel), _ctrlIDC]] call CBA_fnc_localEvent;
 
 // Add current items, change progress bar of container load and get relevant container
-if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
+if (_isContainer) then {
     private _containerItems = [];
     private _container = switch (GVAR(currentLeftPanel)) do {
         // Uniform
@@ -403,17 +428,34 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 // Sorting
 [_display, _control, _display displayCtrl IDC_sortRightTab, _display displayCtrl IDC_sortRightTabDirection] call FUNC(fillSort);
 
-// Try to select previously selected item again, otherwise select first item ("Empty")
-if (_itemToCheck != "") then {
-    private _index = 0;
+if (_selectedItem != "") then {
+    if (_isContainer) then {
+        // Try to select previously selected item again, otherwise select nothing
+        private _index = -1;
 
-    for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
-        if ((_ctrlPanel lbData _lbIndex) == _itemToCheck) exitWith {
-            _index = _lbIndex;
+        for "_lbIndex" from 0 to (lnbSize _ctrlPanel select 0) - 1 do {
+            if ((_ctrlPanel lnbData [_lbIndex, 0]) == _selectedItem) exitWith {
+                _index = _lbIndex;
+            };
         };
-    };
 
-    _ctrlPanel lbSetCurSel _index;
+        _ctrlPanel lnbSetCurSelRow _index;
+    } else {
+        // Try to select previously selected item again, otherwise select first item ("Empty")
+        private _index = 0;
+
+        for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
+            if ((_ctrlPanel lbData _lbIndex) == _selectedItem) exitWith {
+                _index = _lbIndex;
+            };
+        };
+
+        _ctrlPanel lbSetCurSel _index;
+    };
 } else {
-    _ctrlPanel lbSetCurSel 0;
+    if (_isContainer) then {
+        _ctrlPanel lnbSetCurSelRow -1; // select nothing
+    } else {
+        _ctrlPanel lbSetCurSel 0; // select "Empty"
+    };
 };

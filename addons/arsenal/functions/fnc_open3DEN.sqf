@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe
  * Replace the 3DEN "edit loadout" menu action.

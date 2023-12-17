@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Handles AI GetIn on an empty CSW
