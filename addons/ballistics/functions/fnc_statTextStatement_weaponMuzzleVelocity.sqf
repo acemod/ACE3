@@ -37,7 +37,7 @@ if (_magazine isEqualTo "") then {
     };
 
     private _abAdjustText = "";
-    private _useABConfig =(
+    private _useABConfig = (
         missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] &&
         {missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]}
     );
