@@ -41,11 +41,11 @@ if (_initSpeedCoef > 0) then {
 };
 
 private _abAdjustText = "";
-private _useABConfig = (
-    missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] &&
-    {missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]}
-);
-if (_magIsForCurrentWeapon && {_useABConfig}) then {
+if (
+    _magIsForCurrentWeapon &&
+    {missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]} &&
+    {missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]} // this can be on while AB is off or vice-versa
+) then {
     private _configAmmo = (configFile >> "CfgAmmo" >> (getText (_configMagazine >> "ammo")));
     private _barrelLength = getNumber (_configWeapon >> "ACE_barrelLength");
     private _muzzleVelocityTable = getArray (_configAmmo >> "ACE_muzzleVelocities");
