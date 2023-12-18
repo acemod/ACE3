@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm, PabstMirror
- * Handles adding ammo to a turret
- * Called from a global event but only runs where turret is local
+ * Author: tcvm, PabstMirror
+ * Handles adding ammo to a turret.
+ * Called from a global event but only runs where turret is local.
  *
  * Arguments:
  * 0: CSW <OBJECT>
@@ -23,13 +23,14 @@
  */
 
 params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived", "_unit"];
+
 private _returnTo = param [6, _unit];
 if (isNull _returnTo) then {
     _returnTo = _vehicle;
 };
 TRACE_7("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_unit,_returnTo);
 
-TRACE_2("",local _vehicle, _vehicle turretLocal _turret);
+TRACE_2("",local _vehicle,_vehicle turretLocal _turret);
 if (!(_vehicle turretLocal _turret)) exitWith {};
 
 ([_vehicle, _turret, _carryMag] call FUNC(reload_canLoadMagazine)) params ["_canAdd", "_loadedMag", "_neededAmmo", "_isBeltLinking"];

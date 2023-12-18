@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror, LinkIsGrim
- * Gets nearby magazines that can be loaded into the CSW
+ * Gets nearby magazines that can be loaded into the CSW.
  *
  * Arguments:
  * 0: CSW <OBJECT>

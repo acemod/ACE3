@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Gets all carry magazines that can be loaded into a CSW, includes weapons added by script
+ * Gets all carry magazines that can be loaded into a CSW, includes weapons added by script.
  *
  * Arguments:
  * 0: CSW <OBJECT>
@@ -16,6 +16,7 @@
  *
  * Public: Yes
  */
+
 params [["_csw", objNull, [objNull]]];
 
 if !((typeOf _csw) in GVAR(initializedStaticTypes)) exitWith {createHashMap};

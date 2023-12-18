@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
- * Checks if the player can get in the CSW
+ * Author: tcvm
+ * Checks if the player can get in the CSW.
  *
  * Arguments:
  * 0: CSW <OBJECT>
@@ -14,6 +14,8 @@
  *
  * Public: No
  */
+
+params ["_vehicle"];
 
 // hide this action if quick mount is enabled
 if ((missionNamespace getVariable [QEGVAR(quickmount,enabled), false]) && {(missionNamespace getVariable [QEGVAR(quickmount,enableMenu), -1]) in [1, 3]}) exitWith {

@@ -1,8 +1,8 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Handles AI magazine switching
- * Magazine must be compatible and available, use ace_csw_fnc_getAvailableAmmo
+ * Handles AI magazine switching.
+ * Magazine must be compatible and available, use ace_csw_fnc_getAvailableAmmo.
  *
  * Arguments:
  * 0: CSW <OBJECT>
@@ -19,6 +19,7 @@
  *
  * Public: Yes
  */
+
 params [["_vehicle", objNull, [objNull]], ["_carryMag", "", [""]], ["_turretPath", [0], [[0]]], ["_instantReload", false, [false]], ["_clearForcedMag", true, [true]]];
 
 if !(alive _vehicle && {!isNull (_vehicle turretUnit _turretPath)} && {!(isNull _vehicle)}) exitWith {false};

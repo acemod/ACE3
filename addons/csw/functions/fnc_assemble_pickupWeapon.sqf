@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
- * Dismounts the weapon from the tripod and drops its backpack beside
+ * Author: tcvm
+ * Dismounts the weapon from the tripod and drops its backpack beside,
  *
  * Arguments:
  * 0: CSW <OBJECT>
@@ -19,10 +19,11 @@
     params ["_vehicle", "_player"];
     TRACE_2("assemble_pickupWeapon",_vehicle,_player);
 
-    private _onDisassembleFunc = getText(configOf _vehicle >> QUOTE(ADDON) >> "disassembleFunc");
-    private _carryWeaponClassname = getText(configOf _vehicle >> QUOTE(ADDON) >> "disassembleWeapon");
-    private _turretClassname = getText(configOf _vehicle >> QUOTE(ADDON) >> "disassembleTurret");
-    private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "pickupTime");
+    private _config = configOf _vehicle >> QUOTE(ADDON);
+    private _onDisassembleFunc = getText (_config >> "disassembleFunc");
+    private _carryWeaponClassname = getText (_config >> "disassembleWeapon");
+    private _turretClassname = getText (_config >> "disassembleTurret");
+    private _pickupTime = getNumber (configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "pickupTime");
     TRACE_4("",typeOf _vehicle,_carryWeaponClassname,_turretClassname,_pickupTime);
     if (!isClass (configFile >> "CfgWeapons" >> _carryWeaponClassname)) exitWith {ERROR_1("bad weapon classname [%1]",_carryWeaponClassname);};
     // Turret classname can equal nothing if the deploy bag is the "whole" weapon. e.g Kornet, Metis, other ATGMs

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror, LinkIsGrim
- * Handles AI reloading
+ * Handles AI reloading.
  *
  * Arguments:
  * 0: CSW <OBJECT>
@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_gunner", ["_instantReload", false], ["_clearForcedMag", false]];
 TRACE_3("AI reload",_vehicle,_gunner,_instantReload);
 

@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Gets compatible magazines to load a CSW from a magazine source
+ * Gets compatible magazines to load a CSW from a magazine source.
  *
  * Arguments:
- * 0: Magazine Source <OBJECT>
+ * 0: Magazine Source <OBJECT> (default: objNull)
  * 1: CSW <OBJECT> (default: objNull)
  *
  * Return Value:
@@ -17,6 +17,7 @@
  *
  * Public: Yes
  */
+
 params [["_source", objNull, [objNull]], ["_csw", objNull, [objNull]]];
 
 if (isNull _source || {isNull _csw}) exitWith {[]};

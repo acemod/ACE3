@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Gets available ammo sources for loading a CSW
+ * Gets available ammo sources for loading a CSW.
  *
  * Arguments:
  * 0: Unit or vehicle attempting to load <OBJECT>
@@ -16,8 +16,10 @@
  *
  * Public: No
  */
+
 [_this, {
     params ["_unit", ["_skipVehicles", false], ["_includeCrew", false]];
+
     private _nearSupplies = (_unit nearSupplies 5) select {
         isNull (group _x) ||
         {!([_x] call EFUNC(common,isPlayer)) && {[side group _unit, side group _x] call BIS_fnc_sideIsFriendly}}

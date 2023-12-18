@@ -1,11 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm, PabstMirror
- * Dumps ammo to container
+ * Dumps ammo to container.
  *
  * Arguments:
  * 0: CSW <OBJECT>
  * 1: Using advanced assembly <BOOL>
+ * 2: Empty weapon <BOOL>
  *
  * Return Value:
  * None
@@ -18,6 +19,7 @@
 
 params ["_vehicle", "_assemblyMode", "_emptyWeapon"];
 TRACE_3("staticWeaponInit_unloadExtraMags",_vehicle,_assemblyMode,_emptyWeapon);
+
 if (!_assemblyMode) exitWith {};
 
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");

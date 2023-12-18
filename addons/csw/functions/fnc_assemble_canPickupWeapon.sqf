@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
- * If the CSW is mounted or in use this will not allow you to dismount the weapon
+ * Author: tcvm
+ * If the CSW is mounted or in use this will not allow you to dismount the weapon.
  *
  * Arguments:
  * 0: CSW <OBJECT>
  *
  * Return Value:
- * Can Dismount <BOOL>
+ * Can dismount weapon <BOOL>
  *
  * Example:
  * [cursorObject] call ace_csw_fnc_assemble_canPickupWeapon

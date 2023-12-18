@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Handles AI GetIn on an empty CSW
+ * Handles AI GetIn on an empty CSW.
  *
  * Arguments:
  * GetIn EH
@@ -11,6 +11,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_role", "_gunner", "_turret"];
 TRACE_3("getInEH:",_vehicle,_role,_gunner);
 

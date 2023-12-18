@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Initializes CSW to disable weapon disassembling
+ * Initializes CSW to disable weapon disassembling.
  *
  * Arguments:
  * 0: CSW <OBJECT>
@@ -21,8 +21,8 @@ if (isNull _vehicle) exitWith { WARNING_1("%1 became null",_vehicle) };
 
 private _typeOf = typeOf _vehicle;
 private _configOf = configOf _vehicle;
-private _configEnabled = (getNumber (_configOf >> "ace_csw" >> "enabled")) == 1;
-private _assemblyConfig = _configEnabled && {(getText (_configOf >> "ace_csw" >> "disassembleWeapon")) != ""};
+private _configEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "enabled")) == 1;
+private _assemblyConfig = _configEnabled && {(getText (_configOf >> QUOTE(ADDON) >> "disassembleWeapon")) != ""};
 TRACE_4("staticWeaponInit",_vehicle,_typeOf,_configEnabled,_assemblyConfig);
 
 if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
@@ -64,7 +64,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     TRACE_1("Adding Actions",_typeOf);
 
     if (_assemblyConfig) then {
-        private _disassembleAction = [QGVAR(disassemble), localize LSTRING(DisassembleCSW_displayName), "", {call FUNC(assemble_pickupWeapon)}, {call FUNC(assemble_canPickupWeapon)}] call EFUNC(interact_menu,createAction);
+        private _disassembleAction = [QGVAR(disassemble), LLSTRING(DisassembleCSW_displayName), "", LINKFUNC(assemble_pickupWeapon), LINKFUNC(assemble_canPickupWeapon)] call EFUNC(interact_menu,createAction);
         [_typeOf, 0, ["ACE_MainActions"], _disassembleAction] call EFUNC(interact_menu,addActionToClass);
     };
 
@@ -76,7 +76,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         if ((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
         [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)
     };
-    private _childenCode = {
+    private _childrenCode = {
         BEGIN_COUNTER(getActions); // can remove for final release
         private _ret = (call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload));
         END_COUNTER(getActions);
@@ -84,17 +84,17 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     };
     if (_configEnabled && {_magazineLocation != ""}) then {
         private _positionCode = compile _magazineLocation;
-        private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
+        private _ammoAction = [QGVAR(magazine), LLSTRING(AmmoHandling_displayName), "", {}, _condition, _childrenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
         _ammoActionPath = [_typeOf, 0, [], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     } else {
-        private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode] call EFUNC(interact_menu,createAction);
+        private _ammoAction = [QGVAR(magazine), LLSTRING(AmmoHandling_displayName), "", {}, _condition, _childrenCode] call EFUNC(interact_menu,createAction);
         _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (["ace_reload"] call EFUNC(common,isModLoaded)) then {
         // move reload's check ammo action to the ammo handling point (remove and re-add)
         [_typeOf, 0, ["ACE_MainActions", QEGVAR(reload,CheckAmmo)]] call EFUNC(interact_menu,removeActionFromClass);
-        private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);
+        private _checkAmmoAction = [QGVAR(checkAmmo), LELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);
         [_typeOf, 0, _ammoActionPath, _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
     };
 };

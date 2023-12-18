@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Unloads and returns magazines from a CSW
+ * Unloads and returns magazines from a CSW.
  *
  * Arguments:
  * 0: CSW <OBJECT> (default: objNull)
@@ -16,6 +16,7 @@
  *
  * Public: Yes
  */
+
 params [["_vehicle", objNull, [objNull]], ["_turretPath", [0], [[0], true]], ["_returnMags", true, [true]]];
 
 if (isNull _vehicle) exitWith {};

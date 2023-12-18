@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Gets available ammo for a CSW
+ * Gets available ammo for a CSW.
  *
  * Arguments:
  * 0: CSW <OBJECT>
@@ -19,6 +19,7 @@
  *
  * Public: Yes
  */
+
 params [["_vehicle", objNull, [objNull]], ["_onlyLoaded", false, [false]], ["_skipVehicles", true, [true]], ["_includeCrew", true, [true]]];
 
 if (isNull _vehicle) exitWith {createHashMap};

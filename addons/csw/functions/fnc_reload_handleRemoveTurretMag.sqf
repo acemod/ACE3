@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
- * Handles removing ammo from a turret
- * Called from a global event but only runs where turret is local
+ * Author: tcvm
+ * Handles removing ammo from a turret.
+ * Called from a global event but only runs where turret is local.
  *
  * Arguments:
  * 0: CSW <OBJECT>

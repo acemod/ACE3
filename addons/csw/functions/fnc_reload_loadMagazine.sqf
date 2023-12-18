@@ -9,6 +9,7 @@
  * 2: Unit Carried Magazine <STRING>
  * 3: Magazine source <OBJECT>
  * 4: Unit doing the action <OBJECT>
+ * 5: Ammo <NUMBER>
  *
  * Return Value:
  * None
@@ -24,7 +25,7 @@ TRACE_6("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit,_ammo);
 
 private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime", 1);
 
-private _displayName = format [localize LSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
+private _displayName = format [LLSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 
 private _onFinish = {
     (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit", "_ammo"];
@@ -38,17 +39,8 @@ private _onFinish = {
     private _nearUnits = _vehicle nearEntities ["CAManBase", 5];
     [QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;
 
-    private _returnTo = _magSource;
-
-    // if we're pulling from a weaponHolder, return the ammo to the unit doing the action
-    // workaround for weaponHolders being recreated with removeSpecificMagazine, magazines will still get dropped if inventory is full
-    // TODO: remove after 2.14
-    if (_magSource isKindOf "WeaponHolder") then {
-        _returnTo = _unit;
-    };
-
     TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_ammo, _unit);
-    [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _ammo, _unit, _returnTo]] call CBA_fnc_globalEvent;
+    [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _ammo, _unit, _magSource]] call CBA_fnc_globalEvent;
 };
 
 [

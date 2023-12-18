@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm, PabstMirror
- * Handles the use of proxy weapons to fix engine-reload times
+ * Handles the use of proxy weapons to fix engine-reload times.
  *
  * Arguments:
  * 0: CSW <OBJECT>
