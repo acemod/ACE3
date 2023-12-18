@@ -15,8 +15,6 @@
  * Public: No
  */
 
-params ["_vehicle"];
-
 // hide this action if quick mount is enabled
 if ((missionNamespace getVariable [QEGVAR(quickmount,enabled), false]) && {(missionNamespace getVariable [QEGVAR(quickmount,enableMenu), -1]) in [1, 3]}) exitWith {
     false
