@@ -54,8 +54,7 @@ GVAR(initializedClasses) = _initializedClasses;
     [QGVAR(draggingContainerClosed), [_object, _owner], _owner] call CBA_fnc_targetEvent;
 }, false] call CBA_fnc_addClassEventHandler;
 
-
-private _icon = [QUOTE(PATHTOF(UI\icons\box_drag.paa)), QUOTE(PATHTOF(UI\icons\person_drag.paa))] select (_object isKindOf "Man");
+private _icon = [QPATHTOF(UI\icons\box_drag.paa), QPATHTOF(UI\icons\person_drag.paa)] select (_object isKindOf "CAManBase");
 
 private _dragAction = [QGVAR(drag), LLSTRING(Drag), _icon, {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}] call EFUNC(interact_menu,createAction);
 private _dropAction = [QGVAR(drop), LLSTRING(Drop), "", {[_player, _target] call FUNC(dropObject)}, {[_player, _target] call FUNC(canDrop)}] call EFUNC(interact_menu,createAction);

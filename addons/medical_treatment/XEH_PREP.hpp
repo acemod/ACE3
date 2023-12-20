@@ -13,6 +13,7 @@ PREP(canStitch);
 PREP(canTreat);
 PREP(canTreatCached);
 PREP(canTreat_holsterCheck);
+PREP(canUnloadUnit);
 PREP(checkBloodPressure);
 PREP(checkBloodPressureLocal);
 PREP(checkPulse);

@@ -50,8 +50,8 @@ if (_assemblyConfig) then {
         if (!alive _staticWeapon) exitWith { TRACE_1("dead/deleted",_staticWeapon); };
         private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 3]);
         TRACE_2("assemblyConfig present",_staticWeapon,_assemblyMode);
-        if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode eanbled
-            [QGVAR(disableVanillaAssembly), [_staticWeapon]] call CBA_fnc_localEvent;
+        if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode enabled
+            [_staticWeapon, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         };
     }, [_staticWeapon]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
 };

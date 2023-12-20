@@ -80,7 +80,7 @@ GVAR(selfInteractionActions) = [];
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
-    [ACE_player, 0] call FUNC(displayPatientInformation);
+    [ACE_player, -1] call FUNC(displayPatientInformation);
     false
 }, {
     if (CBA_missionTime - GVAR(peekLastOpenedOn) > GVAR(peekMedicalInfoReleaseDelay)) then {
