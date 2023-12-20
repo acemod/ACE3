@@ -24,7 +24,7 @@
             <Korean>ACE 조준경 영점조작 활성화</Korean>
             <Polish>Włącz ustawienia celowników optycznych ACE</Polish>
             <French>Activer le réglage ACE des lunettes</French>
-            <Italian>Abilita Regolazione mirino ACE</Italian>
+            <Italian>Abilita Regolazione Mirino ACE</Italian>
             <Chinesesimp>开启 ACE 瞄准镜归零调节</Chinesesimp>
             <Chinese>開啟ACE瞄準鏡歸零調節</Chinese>
             <Russian>Вкл. настройку прицелов ACE</Russian>
@@ -39,7 +39,7 @@
             <Korean>고성능 조준경 조절 나사 활성화</Korean>
             <Polish>Włącz pokrętła regulacyjne </Polish>
             <French>Active les tourelles de réglage des lunettes de visée à fort grossissement.</French>
-            <Italian>Abilita la regolazione delle torrette nei mirini a lunga gittata</Italian>
+            <Italian>Abilita la regolazione delle manopole sui mirini a lunga gittata</Italian>
             <Chinesesimp>开启高倍率瞄准镜归零调节</Chinesesimp>
             <Chinese>開啟高倍率瞄準鏡歸零調節</Chinese>
             <Russian>Включает регулировочные барабанчики ввода поправок на прицелах с высокой кратностью</Russian>
@@ -54,7 +54,7 @@
             <Korean>조절 나사 강제</Korean>
             <Polish>Wymuś użycie pokręteł regulacyjnych</Polish>
             <French>Forcer les tourelles de réglage</French>
-            <Italian>Forza la regolazione delle torrette</Italian>
+            <Italian>Forza la regolazione delle manopole</Italian>
             <Chinesesimp>强制使用归零调节</Chinesesimp>
             <Chinese>強制使用歸零調節</Chinese>
             <Russian>Регулировка ненастроенных прицелов</Russian>
@@ -69,7 +69,7 @@
             <Korean>고성능 조준경의 조절 나사 사용을 강제합니다</Korean>
             <Polish>Wymuś użycie pokręteł regulacyjnych dla celowników o dużym powiększeniu</Polish>
             <French>Force l'utilisation des tourelles de réglage sur les lunettes de visée à fort grossissement.</French>
-            <Italian>Forza l'uso della regolazione nei mirini a lunga gittata</Italian>
+            <Italian>Forza l'uso delle manopole sui mirini a lunga gittata</Italian>
             <Chinesesimp>强制为高倍率瞄准镜开启归零调节</Chinesesimp>
             <Chinese>強制為高倍率瞄準鏡開啟歸零調節</Chinese>
             <Russian>Принудительно использовать барабанчики ввода поправок для ненастроенных прицелов с высокой кратностью</Russian>
@@ -114,7 +114,7 @@
             <Korean>영점거리 덮어쓰기</Korean>
             <Polish>Nadpisuje ustawienie dla zerowego dystansu </Polish>
             <French>Écraser la distance de zérotage</French>
-            <Italian>Sovrascrivi la distanza zero</Italian>
+            <Italian>Sovrascrivi distanza di azzeramento</Italian>
             <Chinesesimp>覆写归零距离</Chinesesimp>
             <Chinese>覆寫歸零距離</Chinese>
             <Russian>Перезаписать дальность пристрелки</Russian>
@@ -129,7 +129,7 @@
             <Korean>기존 고성능 조준경의 영점거리에 'defaultZeroRange'를 덮어씌웁니다</Korean>
             <Polish>Używa 'defaultZeroRange' zamiast ustawionej odległości zerowania dla celowników o duzym przybliżeniu </Polish>
             <French>Utilise le paramètre "Distance de zérotage par défaut" pour remplacer la distance de zérotage des lunettes de visée à fort grossissement.</French>
-            <Italian>Usa le impostazioni di "defaultZeroRange" (Portata Zero Predefinita) per sovrascrivere la portata zero dei mirini a lunga gittata </Italian>
+            <Italian>Usa l'impostazione "defaultZeroRange" (Distanza di Azzeramento Predefinita) per sovrascrivere la distanza di azzeramento dei mirini a lunga gittata </Italian>
             <Chinesesimp>使用'defaultZeroRange'来为高倍率瞄准镜覆写预设归零距离</Chinesesimp>
             <Chinese>使用'defaultZeroRange'來為高倍率瞄準鏡覆寫預設歸零距離</Chinese>
             <Russian>Использует настройку 'defaultZeroRange' для перенастройки дальности пристрелки прицелов с высокой кратностью</Russian>
@@ -144,7 +144,7 @@
             <Korean>기본설정 영점거리</Korean>
             <Polish>Domyślne zerowanie</Polish>
             <French>Distance de zérotage par défaut</French>
-            <Italian>Distanza zero predefinita</Italian>
+            <Italian>Distanza di Azzeramento Predefinita</Italian>
             <Chinesesimp>预设归零距离</Chinesesimp>
             <Chinese>預設歸零距離</Chinese>
             <Russian>Дальность пристрелки по умолчанию</Russian>
@@ -170,7 +170,7 @@
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
             <English>Reference temperature</English>
             <German>Bezugstemperatur</German>
-            <Japanese>温度の参照</Japanese>
+            <Japanese>参照温度</Japanese>
             <Korean>기준 온도</Korean>
             <Polish>Referencyjna temperatura</Polish>
             <French>Température de référence</French>
@@ -200,7 +200,7 @@
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_displayName">
             <English>Reference barometric pressure</English>
             <German>Bezugsluftdruck</German>
-            <Japanese>気圧の参照</Japanese>
+            <Japanese>参照気圧</Japanese>
             <Korean>기준 기압</Korean>
             <Polish>Referencyjne ciśnienie barometryczne</Polish>
             <French>Pression barométrique de référence</French>
@@ -230,7 +230,7 @@
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
             <German>Bezugsluftfeuchtigkeit</German>
-            <Japanese>湿度の参照</Japanese>
+            <Japanese>参照湿度</Japanese>
             <Korean>기준 습도</Korean>
             <Polish>Referencyjna wilgotność</Polish>
             <French>Humidité de référence</French>
@@ -260,11 +260,11 @@
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
             <English>Deduce pressure from altitude</English>
             <German>Abgeleiteter Luftdruck von der Höhe</German>
-            <Japanese>高度により圧が減少</Japanese>
+            <Japanese>高度で減圧する</Japanese>
             <Korean>고도에 맞춰 기압 설정</Korean>
             <Polish>Ciśnienie określone na podstawie wysokości</Polish>
             <French>Déterminer la pression selon l'altitude</French>
-            <Italian>Ricava la pressione dall'altitudine</Italian>
+            <Italian>Stima la pressione dall'altitudine</Italian>
             <Chinesesimp>高度影响大气压力</Chinesesimp>
             <Chinese>高度影響大氣壓力</Chinese>
             <Russian>Просчитать давление из высоты</Russian>
@@ -275,11 +275,11 @@
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
             <English>Deduce the barometric pressure from the terrain altitude</English>
             <German>Abgeleiteter Luftdruck der Geländeumgebung</German>
-            <Japanese>標高により気圧が減少されます</Japanese>
+            <Japanese>地形高度の標高から気圧を減圧します</Japanese>
             <Korean>주변 고도에 맞춰 기압을 설정합니다</Korean>
             <Polish>Określ ciśnienie barometryczne na podstawie wysokości terenu</Polish>
             <French>Détermine la pression barométrique en fonction de l'altitude du terrain.</French>
-            <Italian>Ricava la pressione barometrica dall'altitudine del terreno</Italian>
+            <Italian>Stima la pressione barometrica dall'altitudine del terreno</Italian>
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
             <Russian>Давление определяется по высоте</Russian>
@@ -290,10 +290,10 @@
         <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
             <English>Use legacy UI</English>
             <German>Vorheriges UI verwenden</German>
-            <Italian>Usa UI precedente</Italian>
+            <Italian>Usa UI Vecchio</Italian>
             <Chinese>使用舊版介面</Chinese>
             <Chinesesimp>使用旧版界面</Chinesesimp>
-            <Japanese>昔の UI を使用</Japanese>
+            <Japanese>レガシー UI を使用</Japanese>
             <Korean>기존 UI 사용</Korean>
             <Polish>Wykorzystaj legacy UI</Polish>
             <Russian>Использовать устаревший интерфейс</Russian>
@@ -305,7 +305,7 @@
         <Key ID="STR_ACE_Scopes_useLegacyUI_description">
             <English>Displays elevation and windage with signed numbers</English>
             <German>Anzeige der Absehenverstellungen mit vorzeichenbehafteten Zahlen</German>
-            <Italian>Visualizza l'elevazione e la derivazione con i numeri firmati</Italian>
+            <Italian>Visualizza Alzo e Deriva con numeri firmati</Italian>
             <Chinese>使用帶著標籤的數字顯示歸零遠近與風偏程度</Chinese>
             <Chinesesimp>使用带着标签的数字显示归零远近与风偏程度</Chinesesimp>
             <Japanese>印付きの数字で仰角と横風を表示</Japanese>
@@ -335,7 +335,7 @@
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
             <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
-            <Japanese>標準で使われるライフルスコープ用のゼロイン システムを複製します。</Japanese>
+            <Japanese>バニラ(ゲーム標準)のライフルスコープ用ゼロイン調整システムを複製します。</Japanese>
             <Italian>Replica il sistema di azzeramento vanilla per le ottiche.</Italian>
             <Korean>라이플 스코프용 바닐라 영점조정 시스템을 복제합니다.</Korean>
             <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
@@ -353,12 +353,12 @@
             <Polish>Zerowanie powoli w górę</Polish>
             <Russian>Малая поправка ВВЕРХ</Russian>
             <Spanish>Ajuste menor arriba</Spanish>
-            <Italian>Regola leggermente alzata in alto</Italian>
+            <Italian>Regola Alzo leggermente verso l'alto</Italian>
             <French>Hausse +</French>
             <Hungarian>Enyhe állítás fel</Hungarian>
             <Portuguese>Pequeno ajuste para cima</Portuguese>
             <Czech>Korekce nahoru (mírně)</Czech>
-            <Japanese>僅かに上へ調節</Japanese>
+            <Japanese>小さく上へ調節</Japanese>
             <Korean>위로 조절</Korean>
             <Chinesesimp>向上微调</Chinesesimp>
             <Chinese>向上微調</Chinese>
@@ -369,12 +369,12 @@
             <Polish>Zerowanie powoli w dół</Polish>
             <Russian>Малая поправка ВНИЗ</Russian>
             <Spanish>Ajuste menor abajo</Spanish>
-            <Italian>Regola leggermente alzata in basso</Italian>
+            <Italian>Regola Alzo leggermente verso il basso</Italian>
             <French>Hausse -</French>
             <Hungarian>Enyhe állítás le</Hungarian>
             <Portuguese>Pequeno ajuste para baixo</Portuguese>
             <Czech>Korekce dolů (mírně)</Czech>
-            <Japanese>僅かに下へ調節</Japanese>
+            <Japanese>小さく下へ調節</Japanese>
             <Korean>아래로 조절</Korean>
             <Chinesesimp>向下微调</Chinesesimp>
             <Chinese>向下微調</Chinese>
@@ -385,12 +385,12 @@
             <Polish>Zerowanie powoli w prawo</Polish>
             <Russian>Малая поправка ВПРАВО</Russian>
             <Spanish>Ajuste menor derecha</Spanish>
-            <Italian>Regola leggermente il tiro a destra</Italian>
+            <Italian>Regola Deriva leggermente a destra</Italian>
             <French>Dérive +</French>
             <Hungarian>Enyhe állítás jobbra</Hungarian>
             <Portuguese>Pequeno ajuste para direita</Portuguese>
             <Czech>Korekce doprava (mírně)</Czech>
-            <Japanese>僅かに右へ調節</Japanese>
+            <Japanese>小さく右へ調節</Japanese>
             <Korean>오른쪽으로 조절</Korean>
             <Chinesesimp>向右微调</Chinesesimp>
             <Chinese>向右微調</Chinese>
@@ -401,12 +401,12 @@
             <Polish>Zerowanie powoli w lewo</Polish>
             <Russian>Малая поправка ВЛЕВО</Russian>
             <Spanish>Ajuste menor izquierda</Spanish>
-            <Italian>Regola leggermete il tiro a sinistra</Italian>
+            <Italian>Regola Deriva leggermente a sinistra</Italian>
             <French>Dérive -</French>
             <Hungarian>Enyhe állítás balra</Hungarian>
             <Portuguese>Pequeno ajuste para esquerda</Portuguese>
             <Czech>Korekce doleva (mírně)</Czech>
-            <Japanese>僅かに左へ調節</Japanese>
+            <Japanese>小さく左へ調節</Japanese>
             <Korean>왼쪽으로 조절</Korean>
             <Chinesesimp>向左微调</Chinesesimp>
             <Chinese>向左微調</Chinese>
@@ -433,7 +433,7 @@
             <Polish>Zerowanie w dół</Polish>
             <Russian>Большая поправка ВНИЗ</Russian>
             <Spanish>Ajuste mayor abajo</Spanish>
-            <Italian>Regola l'alzata in basso</Italian>
+            <Italian>Regola Alzo verso il basso</Italian>
             <French>Hausse - - -</French>
             <Hungarian>Nagy állítás le</Hungarian>
             <Portuguese>Ajuste grande para baixo</Portuguese>
@@ -449,7 +449,7 @@
             <Polish>Zerowanie w prawo</Polish>
             <Russian>Большая поправка ВПРАВО</Russian>
             <Spanish>Ajuste mayor derecha</Spanish>
-            <Italian>Regola il tiro a destra</Italian>
+            <Italian>Regola Deriva a destra</Italian>
             <French>Dérive +++</French>
             <Hungarian>Nagy állítás jobbra</Hungarian>
             <Portuguese>Ajuste grande para direita</Portuguese>
@@ -465,7 +465,7 @@
             <Polish>Zerowanie w lewo</Polish>
             <Russian>Большая поправка ВЛЕВО</Russian>
             <Spanish>Ajuste mayor izquierda</Spanish>
-            <Italian>Regola il tiro a sinistra</Italian>
+            <Italian>Regola Deriva a sinistra</Italian>
             <French>Dérive - - -</French>
             <Hungarian>Nagy állítás balra</Hungarian>
             <Portuguese>Ajuste grande para esquerda</Portuguese>
@@ -481,7 +481,7 @@
             <Polish>Ustaw wyzerowanie</Polish>
             <Russian>Установить дальность пристрелки</Russian>
             <Spanish>Establecer ajuste a cero</Spanish>
-            <Italian>Imposta i valori dell'azzeramento</Italian>
+            <Italian>Imposta l'azzeramento</Italian>
             <French>Réglage du zéro</French>
             <Hungarian>Állítások nullázása</Hungarian>
             <Portuguese>Zerar ajuste</Portuguese>
@@ -495,7 +495,7 @@
             <English>Reset zero adjustment</English>
             <German>Nullung zurücksetzen</German>
             <Japanese>ゼロイン調節を初期化</Japanese>
-            <Italian>Resetta i valori dell'azzeramento</Italian>
+            <Italian>Resetta l'azzeramento</Italian>
             <Korean>영점 조정 재설정</Korean>
             <Chinese>重設歸零</Chinese>
             <Chinesesimp>重设归零</Chinesesimp>
@@ -513,7 +513,7 @@
             <Korean>이 모듈은 고성능 조준경에 조준 나사를 이용한 편차 및 고도 조절 기능을 더해줍니다.</Korean>
             <Polish>Ten moduł włącza pokrętła kalibracyjne poprawki na wiatr oraz poprawki wysokości dla celowników o dużym powiększeniu.</Polish>
             <French>Ce module ajoute les tourelles de correction de hausse et de dérive sur les lunettes de visée à fort grossissement.</French>
-            <Italian>Questo modulo aggiunge lo spostamento dell'aria e la regolazione dell'elevazione delle torrette in mirini a lunga gittata</Italian>
+            <Italian>Questo modulo aggiunge lo spostamento dell'aria e la regolazione dell'elevazione delle manopole in mirini a lunga gittata</Italian>
             <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏，距离用的调整纽。</Chinesesimp>
             <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏，距離用的調整紐。</Chinese>
             <Russian>Этот модуль добавляет барабанчики ввода горизонтальных и вертикальных поправок для прицелов с высокой кратностью</Russian>
@@ -541,7 +541,7 @@
             <English>%1L</English>
             <German>%1L</German>
             <French>%1G</French>
-            <Italian>%1L</Italian>
+            <Italian>%1Sx</Italian>
             <Chinese>%1L</Chinese>
             <Chinesesimp>%1L</Chinesesimp>
             <Japanese>%1L</Japanese>
@@ -557,7 +557,7 @@
             <English>%1R</English>
             <German>%1R</German>
             <French>%1D</French>
-            <Italian>%1R</Italian>
+            <Italian>%1Dx</Italian>
             <Chinese>%1R</Chinese>
             <Chinesesimp>%1R</Chinesesimp>
             <Japanese>%1R</Japanese>
@@ -575,7 +575,7 @@
             <Chinese>水平限制</Chinese>
             <Chinesesimp>水平限制</Chinesesimp>
             <Japanese>水平制限</Japanese>
-            <Italian>Limite orrizontale</Italian>
+            <Italian>Limiti orizzontali</Italian>
             <Polish>Limit poziomy</Polish>
             <Russian>Лимит по горизонтали</Russian>
             <Portuguese>Limite Horizontal</Portuguese>
@@ -590,7 +590,7 @@
             <Chinese>垂直限制</Chinese>
             <Chinesesimp>垂直限制</Chinesesimp>
             <Japanese>垂直制限</Japanese>
-            <Italian>Limite verticale</Italian>
+            <Italian>Limiti verticali</Italian>
             <Polish>Limit pionowy</Polish>
             <Russian>Лимит по вертикали</Russian>
             <Portuguese>Limite Vertical</Portuguese>

@@ -6,6 +6,7 @@
             <German>Verstärken</German>
             <Japanese>要塞</Japanese>
             <Korean>요새화</Korean>
+            <Italian>Fortifica</Italian>
             <Chinese>要塞</Chinese>
             <Chinesesimp>设防</Chinesesimp>
             <Polish>Fortyfikowanie</Polish>
@@ -18,6 +19,7 @@
         <Key ID="STR_ACE_Fortify_FortifyItem_name">
             <English>Fortify Tool</English>
             <German>Bauwerkzeug</German>
+            <Italian>Attrezzo di Fortificazione</Italian>
             <Japanese>要塞ツール</Japanese>
             <Korean>요새화 도구</Korean>
             <Chinese>要塞工具</Chinese>
@@ -33,6 +35,7 @@
             <English>Budget</English>
             <German>Budget</German>
             <Japanese>予算</Japanese>
+            <Italian>Budget</Italian>
             <Korean>예산</Korean>
             <Chinese>預算</Chinese>
             <Chinesesimp>预算</Chinesesimp>
@@ -47,6 +50,7 @@
             <English>Auto add fortify item</English>
             <German>Füge das Bauwerkzeug automatisch hinzu</German>
             <Japanese>自動的に要塞ツールを追加</Japanese>
+            <Italian>Auto-aggiungi attrezzo di fortificazione</Italian>
             <Korean>요새화 도구 자동으로 추가</Korean>
             <Chinese>自動增加要塞物品</Chinese>
             <Chinesesimp>自动增加设防物品</Chinesesimp>
@@ -60,6 +64,7 @@
         <Key ID="STR_ACE_Fortify_moduleDescription">
             <English>Initializes the Fortify system, with some basic parameters.&lt;br/&gt;Presets are pulled from configFile and missionConfigFile, see wiki for format.</English>
             <Polish>Inicjalizuje system fortyfikacji, z podstawowymi parametrami.&lt;br/&gt;Domyślne ustawienia są załadowane z configFile oraz missionConfigFile, odwiedź wiki aby znaleźć format</Polish>
+            <Italian>Inizializza il sistema di fortificazione con alcuni parametri di base.&lt;br/&gt;Preset vengono presi da configFile and missionConfigFile, leggi la wiki per il formato richiesto.</Italian>
             <Russian>Инициализирует систему фортификации с некоторыми базовыми параметрами.&lt;br/&gt;Предустановки взяты из configFile и missionConfigFile, формат смотри на wiki.</Russian>
             <Turkish>Inşa etme sistemini bazı temel parametrelerle başlatır. &lt;br/&gt; Ön ayarlar configFile ve missionConfigFile'dan alınır, format için wiki'ye bakın.</Turkish>
             <Japanese>要塞システムを初期設定に戻します。&lt;br/&gt;プリセットは configfile と missionConfigFile から参照されます。詳細は wiki を参照してください。</Japanese>
@@ -109,6 +114,7 @@
             <German>Verstärken: Beschränke Baubereich</German>
             <Japanese>要塞: 構築制限エリア</Japanese>
             <Chinese>要塞: 限制建造區</Chinese>
+            <Italian>Fortificazione: Limita Area</Italian>
             <Chinesesimp>设防：限制建造区</Chinesesimp>
             <Polish>Fortyfikowanie: Limituj strefe budowania</Polish>
             <Russian>Фортификация: Ограничить зону постройки</Russian>
@@ -121,6 +127,7 @@
         <Key ID="STR_ACE_Fortify_settingsCategory">
             <English>ACE Fortify</English>
             <German>ACE Verstärken</German>
+            <Italian>ACE Fortificazione</Italian>
             <Chinese>ACE 要塞</Chinese>
             <Chinesesimp>ACE 设防</Chinesesimp>
             <Japanese>ACE 要塞</Japanese>
@@ -135,6 +142,7 @@
         <Key ID="STR_ACE_Fortify_settingHint">
             <English>Show budget updates</English>
             <German>Zeige Budgetveränderungen</German>
+            <Italian>Mostra aggiornamenti di budget</Italian>
             <Chinese>顯示預算更新</Chinese>
             <Chinesesimp>显示预算更新</Chinesesimp>
             <Japanese>予算の更新を表示</Japanese>
@@ -151,6 +159,7 @@
             <German>Bestimmt wann Budgetveränderungen angezeigt werden</German>
             <Chinese>決定預算變更時是否會顯示提示</Chinese>
             <Chinesesimp>决定预算变更时是否会显示提示</Chinesesimp>
+            <Italian>Controlla se vengono mostrati avvisi di aggiornamento del budget</Italian>
             <Japanese>予算が更新されヒント表示時の操作を決定します</Japanese>
             <Polish>Kontroluje kiedy aktualizacje budżetu są wyświetlane</Polish>
             <Russian>Настраивает сообщения об обновлении бюджета</Russian>
@@ -163,6 +172,7 @@
         <Key ID="STR_ACE_Fortify_settingHintNone">
             <English>Never show</English>
             <German>Niemals anzeigen</German>
+            <Italian>Non mostrare</Italian>
             <Chinese>永不顯示</Chinese>
             <Chinesesimp>永不显示</Chinesesimp>
             <Japanese>非表示</Japanese>
@@ -177,6 +187,7 @@
         <Key ID="STR_ACE_Fortify_settingHintHasTool">
             <English>Has fortify tool</English>
             <German>Hat Bauewerkzeug</German>
+            <Italian>Ha l'attrezzo di fortificazione</Italian>
             <Chinese>有要塞工具</Chinese>
             <Chinesesimp>有设防工具</Chinesesimp>
             <Japanese>要塞ツール所持の時</Japanese>
@@ -191,6 +202,7 @@
         <Key ID="STR_ACE_Fortify_settingHintEveryone">
             <English>Always show</English>
             <German>Immer anzeigen</German>
+            <Italian>Mostra sempre</Italian>
             <Chinese>總是顯示</Chinese>
             <Chinesesimp>总是显示</Chinesesimp>
             <Japanese>常に表示</Japanese>
@@ -207,7 +219,8 @@
             <Chinesesimp>时间—成本系数</Chinesesimp>
             <Korean>시간-가격 계수</Korean>
             <German>Zeit-Kosten-Koeffizient</German>
-            <Japanese>時間コスト係数</Japanese>
+            <Italian>Coefficiente tempo/costo</Italian>
+            <Japanese>タイム-コスト係数</Japanese>
             <Polish>Współczynnik Czas-Koszt</Polish>
             <Russian>Коэф. время-цена</Russian>
             <Spanish>Coeficiente Tiempo-Coste</Spanish>
@@ -219,6 +232,7 @@
             <Chinesesimp>用于确定建造建筑所需时间的系数。\nA是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
             <Korean>건축물을 지을 때 걸리는 시간을 계수를 적용하여 계산합니다.</Korean>
             <German>Koeffizient zur Bestimmung der Bauzeit \nA in Ax + b, wobei x die Kosten des Objekts sind.</German>
+            <Italian>Il coefficiente 'C' che determina il tempo di costruzione.\nTempo Totale = Costo * C + Tempo Minimo</Italian>
             <Japanese>建造する時間を決定するために使用される係数。\n計算式はAx + bです。この係数はAであり、xは建造物のコストです。</Japanese>
             <Polish>Współczynnik używany do określenia czasu budowy konstrukcji.\nA w Ax + b gdzie x jest kosztem obiektu</Polish>
             <Russian>Коэффициент используемый для указания времени необходимого для возведения постройки.\nA в формуле Ax + b, где x - это цена объекта</Russian>
@@ -231,7 +245,8 @@
             <Chinesesimp>最短建造时间</Chinesesimp>
             <Korean>최소 건축 시간</Korean>
             <German>Minimale Bauzeit</German>
-            <Japanese>建造に掛かる最小の時間</Japanese>
+            <Italian>Tempo di costruzione minimo</Italian>
+            <Japanese>最短建造時間</Japanese>
             <Polish>Minimalny czas budowy</Polish>
             <Russian>Мин. время возведения</Russian>
             <Spanish>Tiempo mínimo de construcción</Spanish>
@@ -243,7 +258,8 @@
             <Chinesesimp>建造任何建筑的最短时间。\nb是 Ax+b中的一个参数，其中x是物体的成本</Chinesesimp>
             <Korean>건축물을 지을 때 걸리는 최소 시간을 계수를 적용하여 계산합니다.</Korean>
             <German>Mindestzeit für den Bau eines beliebigen Bauwerks.\nb in Ax + b, wobei x die Kosten des Objekts sind.</German>
-            <Japanese>建造に掛かる最小の時間。\n計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
+            <Italian>Tempo minimo necessario per costruire una qualsiasi fortificazione.\nTempo Totale = Costo * CoefT/C + Tempo Minimo</Italian>
+            <Japanese>建造に掛かる最短時間。\n計算式はAx + bです。この時間はbであり、xは建造物のコストです。</Japanese>
             <Polish>Minimalny czas do zbudowania dowolenj konstrukcji.\nb w Ax + b gdzie x jest kosztem obiektu</Polish>
             <Russian>Минимальное время для возведения любой постройки.\nb в формуле Ax + b, где x - это цена объекта</Russian>
             <Spanish>Tiempo mínimo para construir una estructura.\nb en Ax + b donde x es el coste del objeto</Spanish>
@@ -255,6 +271,7 @@
             <Chinesesimp>建造</Chinesesimp>
             <Korean>건설 중</Korean>
             <German>Bauwerk</German>
+            <Italian>Costruendo</Italian>
             <Japanese>建造</Japanese>
             <Polish>Budowanie</Polish>
             <Russian>Возведение</Russian>
@@ -267,6 +284,7 @@
             <Chinesesimp>创建地图标记</Chinesesimp>
             <Korean>지도에 마커 생성</Korean>
             <German>Kartenmarkierungen erstellen</German>
+            <Italian>Crea marker sulla mappa</Italian>
             <Japanese>マップマーカーを生成する</Japanese>
             <Polish>Twórz znaczniki na mapie</Polish>
             <Russian>Создавать маркера на карте</Russian>
@@ -279,6 +297,7 @@
             <Chinesesimp>在放置静态防御工事时，创建看起来像地形建筑的地图标记</Chinesesimp>
             <Korean>건축물을 건설하고 나서 지도에 마커를 생성합니다</Korean>
             <German>Erstellen von Kartenmarkierungen, die wie Gebäude im Gelände aussehen, wenn statische Befestigungen platziert werden</German>
+            <Italian>Crea marker che appaiono come edifici sulla mappa lì dove vengono costruite fortificazioni</Italian>
             <Japanese>静的な建築物が配置されたときに地形の建物のように見えるマップマーカーを生成します</Japanese>
             <Polish>Utwórz znaczniki mapy, które wyglądają jak obiekty terenu, gdy umieszczane są statyczne fortyfikacje</Polish>
             <Russian>Создавать маркера от статических фортификаций как от зданий на карте</Russian>
@@ -307,6 +326,7 @@
             <Chinesesimp>对放置者友军单位</Chinesesimp>
             <Korean>아군 유닛이 지은 건물만</Korean>
             <German>Für, zum Erbauer, verbündete Einheiten.</German>
+            <Italian>Per unità alleate al costruttore</Italian>
             <Japanese>設置者の友軍に</Japanese>
             <Polish>Dla jednostek sojuszniczych wobec stawiającego</Polish>
             <Russian>Для союзников</Russian>
@@ -336,6 +356,7 @@
             <Russian>Малый</Russian>
             <Turkish>Küçük</Turkish>
             <Japanese>小型</Japanese>
+            <Italian>Piccola</Italian>
             <German>Klein</German>
             <Chinesesimp>小型</Chinesesimp>
             <Korean>소형</Korean>
@@ -350,6 +371,7 @@
             <Turkish>Küçük (Yeşil)</Turkish>
             <Japanese>小型 (グリーン)</Japanese>
             <German>Klein (Grün)</German>
+            <Italian>Piccola (Verde)</Italian>
             <Chinesesimp>小型（绿色）</Chinesesimp>
             <Korean>소형 (초목)</Korean>
             <Spanish>Pequeña (Verde)</Spanish>
@@ -363,6 +385,7 @@
             <Turkish>Orta</Turkish>
             <Japanese>中型</Japanese>
             <German>Mittel</German>
+            <Italian>Media</Italian>
             <Chinesesimp>中型</Chinesesimp>
             <Korean>중형</Korean>
             <Spanish>Mediana</Spanish>
@@ -376,6 +399,7 @@
             <Turkish>Orta (Yeşil)</Turkish>
             <Japanese>中型 (グリーン)</Japanese>
             <German>Mittel (Grün)</German>
+            <Italian>Media (Verde)</Italian>
             <Chinesesimp>中型（绿色）</Chinesesimp>
             <Korean>중형 (초목)</Korean>
             <Spanish>Mediana (Verde)</Spanish>
@@ -388,6 +412,7 @@
             <Russian>Большой</Russian>
             <Turkish>Büyük</Turkish>
             <Japanese>大型</Japanese>
+            <Italian>Grande</Italian>
             <German>Groß</German>
             <Chinesesimp>大型</Chinesesimp>
             <Korean>대형</Korean>
@@ -402,6 +427,7 @@
             <Turkish>Büyük (Yeşil)</Turkish>
             <Japanese>大型 (グリーン)</Japanese>
             <German>Groß (Grün)</German>
+            <Italian>Grande (Verde)</Italian>
             <Chinesesimp>大型（绿色）</Chinesesimp>
             <Korean>대형 (초목)</Korean>
             <Spanish>Grande (Verde)</Spanish>
@@ -415,6 +441,7 @@
             <Turkish>Büyük (İkisi de)</Turkish>
             <Japanese>大型 (両方)</Japanese>
             <German>Groß (Beide)</German>
+            <Italian>Grande (Entrambe)</Italian>
             <Chinesesimp>大型（两方）</Chinesesimp>
             <Korean>대형 (둘 다)</Korean>
             <Spanish>Grande (Ambos)</Spanish>

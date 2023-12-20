@@ -6,9 +6,10 @@
             <Spanish>Escala: %1</Spanish>
             <French>Échelle : %1</French>
             <Russian>Масштаб: %1</Russian>
-            <Japanese>スケール: %1</Japanese>
+            <Japanese>大きさ: %1</Japanese>
             <Polish>Skala: %1</Polish>
             <German>Skalierung: %1</German>
+            <Italian>Scala: %1</Italian>
             <Chinesesimp>规模：%1°</Chinesesimp>
             <Korean>크기: %1</Korean>
             <Portuguese>Escala: %1</Portuguese>
@@ -24,7 +25,7 @@
             <Hungarian>Irány: %1°</Hungarian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção %1</Portuguese>
-            <Japanese>方位: %1°</Japanese>
+            <Japanese>方向: %1°</Japanese>
             <Korean>방위: %1°</Korean>
             <Chinesesimp>方位：%1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>
@@ -37,6 +38,7 @@
             <Japanese>右クリックでリセット</Japanese>
             <Polish>Naciśnij PPM żeby zresetować</Polish>
             <German>Rechte Maustaste zum Zurücksetzen</German>
+            <Italian>Tasto Destro per ripristinare</Italian>
             <Chinesesimp>点击鼠标右键重置</Chinesesimp>
             <Korean>오른쪽 클릭으로 재설정</Korean>
             <Spanish>Click botón derecho para restaurar</Spanish>
@@ -61,7 +63,7 @@
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
             <German>Erlaube Marker zu bewegen für</German>
-            <Japanese>次ユーザーにマーカー移動を許可</Japanese>
+            <Japanese>マーカー移動を許可するユーザー</Japanese>
             <Korean>마커 이동 허가</Korean>
             <Chinese>誰可以移動標誌</Chinese>
             <Chinesesimp>谁可以移动标识</Chinesesimp>
@@ -80,7 +82,7 @@
             <Korean>Alt 키를 누른 상태에서 마커를 움직일 수 있는 플레이어를 제한합니다.</Korean>
             <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
             <Chinesesimp>设定谁可以透过按住 Alt 键来移动标识。</Chinesesimp>
-            <Italian>Limita quali giocatori possono spostare i marcatori mentre premono il tasto Alt.</Italian>
+            <Italian>Limita quali giocatori possono spostare i marcatori premendo il tasto Alt.</Italian>
             <Polish>Ogranicz którzy gracze mogą poruszać znacznikami podczas trzymania przycisku Alt.</Polish>
             <Russian>Устанавливает ограничение на перемещения маркеров игроками при помощи клавиши Alt</Russian>
             <Portuguese>Restringe quais jogadores podem mover os marcadores do mapa enquanto seguram a tecla ALT.</Portuguese>
@@ -189,10 +191,11 @@
             <English>Allow Timestamps</English>
             <Russian>Вкл. отображение времени на метках</Russian>
             <French>Permettre l'horodatage</French>
-            <Japanese>タイムスタンプ許可</Japanese>
+            <Japanese>タイムスタンプの許可</Japanese>
             <Spanish>Permitir marcas de tiempo</Spanish>
             <Polish>Zezwól na znaczniki czasu</Polish>
             <German>Erlaube Zeitstempel</German>
+            <Italian>Permetti marca temporale</Italian>
             <Chinesesimp>允许时间戳</Chinesesimp>
             <Korean>시간 표기 허용</Korean>
             <Portuguese>Permitir Marcação de Tempo</Portuguese>
@@ -205,6 +208,7 @@
             <Spanish>Permitir que las marcas de tiempo sean automáticamente aplicadas a los marcadores</Spanish>
             <Polish>Zezwól na automatyczne stosowanie znaczników czasu do markerów</Polish>
             <German>Ob Zeitstempel automatisch auf Maker angewendet werden sollen.</German>
+            <Italian>Se i giocatori possono scegliere di aggiungere in automatico un marco temporale ai propri marcatori.</Italian>
             <Chinesesimp>是否允许时间戳自动应用于标记</Chinesesimp>
             <Korean>허용 시 마커를 내려놓음과 동시에 시간이 표기됩니다</Korean>
             <Portuguese>Permite que marcações de tempo sejam automaticamente aplicadas aos marcadores</Portuguese>
@@ -217,6 +221,7 @@
             <Spanish>Marca de tiempo</Spanish>
             <Polish>Znacznik czasu</Polish>
             <German>Zeitstempel</German>
+            <Italian>Marca temporale</Italian>
             <Chinesesimp>时间戳</Chinesesimp>
             <Korean>시간 표기</Korean>
             <Portuguese>Marcação de Tempo</Portuguese>
@@ -229,6 +234,7 @@
             <Spanish>Reloj requerido</Spanish>
             <Polish>Wymagany zegarek</Polish>
             <German>Uhr benötigt</German>
+            <Italian>Necessario orologio</Italian>
             <Chinesesimp>需要手表</Chinesesimp>
             <Korean>시계 필요함</Korean>
             <Portuguese>Relógio necessário</Portuguese>
@@ -336,10 +342,11 @@
             <English>Timestamp Format</English>
             <Russian>Формат времени</Russian>
             <French>Horodatage - Format</French>
-            <Japanese>タイムスタンプ形式</Japanese>
+            <Japanese>タイムスタンプの形式</Japanese>
             <Spanish>Formato de marca de tiempo</Spanish>
             <Polish>Format znacznika czasu</Polish>
             <German>Format des Zeitstempels</German>
+            <Italian>Formato della marca temporale</Italian>
             <Chinesesimp>时间戳格式</Chinesesimp>
             <Korean>시간 표기 포맷</Korean>
             <Portuguese>Formato da Marcação de Tempo</Portuguese>
@@ -352,6 +359,7 @@
             <Spanish>Cambia el formato de marca de tiempo</Spanish>
             <Polish>Zmienia format znacznika czasu</Polish>
             <German>Zeitstempel-Format anpassen</German>
+            <Italian>Modifica il formato dell'ora nella marca temporale</Italian>
             <Chinesesimp>更改时间戳格式</Chinesesimp>
             <Korean>시간 표기 포맷을 바꿉니다</Korean>
             <Portuguese>Altera a formatação da marcação de tempo</Portuguese>
@@ -364,6 +372,7 @@
             <Spanish>"HH" - Hora</Spanish>
             <Polish>"HH" - Godziny</Polish>
             <German>"HH" - Stunden</German>
+            <Italian>"HH" - Ore</Italian>
             <Chinesesimp>"HH"—时</Chinesesimp>
             <Korean>"HH" - 시</Korean>
             <Portuguese>HH - Horas</Portuguese>
@@ -376,6 +385,7 @@
             <Spanish>"MM" - Minuto</Spanish>
             <Polish>"MM" - Minuty</Polish>
             <German>"MM" - Minuten</German>
+            <Italian>"MM" - Minuti</Italian>
             <Chinesesimp>"MM"—分</Chinesesimp>
             <Korean>"MM" - 분</Korean>
             <Portuguese>MM - Minutos</Portuguese>
@@ -388,6 +398,7 @@
             <Spanish>"SS" - Segundos</Spanish>
             <Polish>"SS" - Sekundy</Polish>
             <German>"SS" - Sekunden</German>
+            <Italian>"SS" - Secondi</Italian>
             <Chinesesimp>"SS"—秒</Chinesesimp>
             <Korean>"SS" - 초</Korean>
             <Portuguese>SS - Segundos</Portuguese>
@@ -400,6 +411,7 @@
             <Spanish>"MM" - Milisegundos</Spanish>
             <Polish>"MM" - Milisekundy</Polish>
             <German>"MS" - Milisekunden</German>
+            <Italian>"MS" - Millisecondi</Italian>
             <Chinesesimp>"MS"—毫秒</Chinesesimp>
             <Korean>"MS" - 밀리초</Korean>
             <Portuguese>MM - Milisegundos</Portuguese>
@@ -412,6 +424,7 @@
             <Spanish>Formato de hora de marca de tiempo</Spanish>
             <Polish>Format Godzinnych znaczników czasu</Polish>
             <German>Zeitstempel-Stundenformat</German>
+            <Italian>Formato ore delle marche temporali</Italian>
             <Chinesesimp>时间戳小时格式</Chinesesimp>
             <Korean>시간 표기 시간 포맷</Korean>
             <Portuguese>Sistema Horário das Marcações de Tempo</Portuguese>
@@ -424,6 +437,7 @@
             <Spanish>Reloj 24-Horas</Spanish>
             <Polish>Zegar 24-godzinny</Polish>
             <German>24-Stunden</German>
+            <Italian>24-Ore</Italian>
             <Chinesesimp>24小时制</Chinesesimp>
             <Korean>24시간제</Korean>
             <Portuguese>24 Horas</Portuguese>
@@ -436,6 +450,7 @@
             <Spanish>Reloj 12-Horas</Spanish>
             <Polish>Zegar 12-godzinny</Polish>
             <German>12-Stunden</German>
+            <Italian>12-Ore</Italian>
             <Chinesesimp>12小时制</Chinesesimp>
             <Korean>12시간제</Korean>
             <Portuguese>12 Horas</Portuguese>
@@ -448,6 +463,7 @@
             <Spanish>Cambia que la marca de tiempo sea en formato de reloj 24-horas o 12-horas</Spanish>
             <Polish>Zmienia znacznik czasu tak, aby używał formatu 24-godzinnego lub 12-godzinnego</Polish>
             <German>Ändert den Zeitstempel, um entweder das 24-Stunden- oder das 12-Stunden-Format zu verwenden</German>
+            <Italian>Determina se le marche temporali sui marcatori saranno in formato 24-Ore o 12-Ore.</Italian>
             <Chinesesimp>改变时间戳以使用24小时或12小时的时钟格式</Chinesesimp>
             <Korean>시간 표기를 24시간제 혹은 12시간제 에서 골라 표기합니다</Korean>
             <Portuguese>Altera a marcação de tempo para usar o formato de relógio 24-horas ou 12-horas</Portuguese>
