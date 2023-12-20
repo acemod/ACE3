@@ -21,7 +21,7 @@ TRACE_2("canSwapTurretMagazine",_vehicle,_unit);
 
 private _turretPath = _vehicle unitTurret _unit;
 if (_turretPath in [[-1], []]) exitWith {false}; // skip driver / cargo
-if (!(_vehicle turretLocal _turretPath)) exitWith {false}; // just to be safe
+if !(_vehicle turretLocal _turretPath) exitWith {false}; // just to be safe
 
 (weaponState [_vehicle, _turretPath]) params ["_weapon", "_muzzle", "", "_magazine", "_ammoCount"];
 TRACE_5("",_weapon,_muzzle,_magazine,_ammoCount,typeOf _vehicle);
