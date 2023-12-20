@@ -53,8 +53,8 @@ private _fnc_filterLoadout = {
             // Handle arrays
             if (_x isEqualType []) then {
                 _itemArray = _x call _fnc_filterLoadout;
-                // isEqualTypeParams check is used for assignedItems array
-                if ((_itemArray select 0) isEqualTo "" && {!(_itemArray isEqualTypeParams ["","","","","",""])}) then {
+                // If "" is given as a backpack, an error is thrown, therefore, filter out all unavailable/null containers
+                if (count _itemArray == 2 && {(_itemArray select 0) isEqualTo ""} && {(_itemArray select 1) isEqualType []}) then {
                     _itemArray = [];
                 };
                 _itemArray
