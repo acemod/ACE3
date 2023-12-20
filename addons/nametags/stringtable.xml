@@ -28,7 +28,7 @@
             <French>Ce module permet de configurer les options et la distance d'affichage du nom des unités.</French>
             <Hungarian>Ez a modul lehetővé teszi a névcímkék beállításainak testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
-            <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
+            <Italian>Questo modulo ti consente di personalizzare le impostazioni ed la distanza visibile delle Etichette Nomi</Italian>
             <Japanese>このモジュールを使用すると、ネーム タグの設定と範囲を調整できます。</Japanese>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
             <Chinesesimp>这个模块允许您设定名字和显示范围等设定</Chinesesimp>
@@ -144,7 +144,7 @@
             <Polish>Ukryj na brzegach ekranu</Polish>
             <Korean>화면 가장자리에서 사라짐</Korean>
             <French>Estomper sur les bords de l'écran</French>
-            <Italian>Sfocatura nei bordi dello schermo</Italian>
+            <Italian>Sfoca ai bordi dello schermo</Italian>
             <Chinesesimp>在屏幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
             <Russian>Затухание на границе экрана</Russian>
@@ -366,7 +366,7 @@
             <French>Distance au delà de laquelle les noms des joueurs ne sont plus affichés. Valeur par défaut : 5 mètres.</French>
             <Hungarian>Méterben megadott érték a játékosok nevének mutatására. Alapértelmezett: 5</Hungarian>
             <Russian>Дистанция в метрах, на которой отображаются имена игроков. По умолчанию: 5</Russian>
-            <Italian>Distanza in metri a cui sono visibili i nomi giocatori. Default: 5</Italian>
+            <Italian>Distanza in metri entro la quale sono visibili i nomi dei giocatori. Predefinito: 5</Italian>
             <Japanese>プレイヤー名が表示される距離 (メートル)。 デフォルト: 5</Japanese>
             <Korean>플레이어 이름이 표시되는 미터. 기본설정: 5</Korean>
             <Chinesesimp>设定名字在多少距离以内显示。预设：5米</Chinesesimp>
@@ -416,7 +416,7 @@
             <French>Taille du texte et des icônes.</French>
             <Hungarian>Szöveg és ikon méretének skálázása</Hungarian>
             <Russian>Масштабирование размера текста и иконок</Russian>
-            <Italian>Proporzione Dimensioni Testo ed Icone</Italian>
+            <Italian>Proporzione e Dimensioni di Testo ed Icone</Italian>
             <Japanese>文字とアイコンの大きさ</Japanese>
             <Korean>글자와 아이콘 크기 비례합니다</Korean>
             <Chinesesimp>文字和图示大小设定</Chinesesimp>
@@ -467,7 +467,7 @@
             <French>/!\ Module obsolète /!\ - Forcer l'affichage</French>
             <Hungarian>Erőltetett látható</Hungarian>
             <Russian>Обязательно: Показывать</Russian>
-            <Italian>Forza Mostra</Italian>
+            <Italian>Forza Visibili</Italian>
             <Japanese>表示を強制</Japanese>
             <Korean>강제로 표시</Korean>
             <Chinesesimp>强制显示</Chinesesimp>
@@ -484,7 +484,7 @@
             <French>/!\ Module obsolète /!\ - Forcer l'affichage sous le curseur uniquement</French>
             <Hungarian>Erőltetett látható, csak kurzorra</Hungarian>
             <Russian>Обязательно: Только под курсором</Russian>
-            <Italian>Forza Mostra solo su Cursore</Italian>
+            <Italian>Forza Visibili solo su Cursore</Italian>
             <Japanese>カーソルを合わせた時のみ に強制する</Japanese>
             <Korean>커서만 강제로 해당</Korean>
             <Chinesesimp>强制仅显示在准心指到时</Chinesesimp>
@@ -501,7 +501,7 @@
             <French>/!\ Module obsolète /!\ - Forcer l'affichage par appui de touche uniquement</French>
             <Hungarian>Erőltetett látható, csak gombnyomásra</Hungarian>
             <Russian>Обязательно: Только по нажатию клавиши</Russian>
-            <Italian>Forza Mostra solo quando Premi Tasto</Italian>
+            <Italian>Forza Visibili solo quando Premi Tasto</Italian>
             <Japanese>キーを押した時のみ に強制</Japanese>
             <Korean>키를 누를 경우만 강제로 해당</Korean>
             <Chinesesimp>强制仅显示在按按键时</Chinesesimp>
@@ -528,6 +528,7 @@
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_DisplayName">
             <English>Nametag Ambient Brightness Coefficient</English>
             <Russian>Коэф. освещения для меток игроков</Russian>
+            <Italian>Coeff. di Luminosità Ambiente</Italian>
             <Japanese>ネーム タグ 環境明るさ係数</Japanese>
             <French>Coefficient de luminosité ambiante</French>
             <German>Spielernamen Umgebungshelligkeitskoeffizient</German>
@@ -539,6 +540,7 @@
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">
             <English>Adjusts how strongly ambient brightness affects nametag view distance.</English>
             <Russian>Определяет как сильно окружающее освещение влияет на дальность отображения меток игроков.</Russian>
+            <Italian>Definisce quanto fortemente la luminosità dell'ambiente influenza la visibilità delle etichette nomi.</Italian>
             <Japanese>周囲の明るさがネーム タグの表示距離にどの程度強く影響するかを調整します。</Japanese>
             <French>Définit à quel point le manque de lumière ambiante abaisse la distance de visibilité du nom des joueurs.</French>
             <German>Stellt ein, wie stark sich die Umgebungshelligkeit auf die Sichtweite der Spielernamen auswirkt.</German>

@@ -6,7 +6,7 @@
             <German>Artillerieschusstafel</German>
             <Chinese>火炮射程表</Chinese>
             <Chinesesimp>火炮射表</Chinesesimp>
-            <Italian>Tavola balistica per artigliria </Italian>
+            <Italian>Tavola balistica per artiglieria </Italian>
             <Czech>Dělostřelecké tabulky střelby</Czech>
             <Japanese>火砲用 射表</Japanese>
             <Polish>Tabela Strzelnicza</Polish>
@@ -72,7 +72,7 @@
             <German>Artilleriecomputer ausgeschaltet</German>
             <Chinese>停用火炮電腦</Chinese>
             <Chinesesimp>停用弹道计算机</Chinesesimp>
-            <Italian>Computer artiglieria disattivato</Italian>
+            <Italian>Computer balistico disattivato</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače</Czech>
             <Japanese>砲撃コンピュータの無効化</Japanese>
             <Polish>Wyłączony Komputer Artyleryjski</Polish>
@@ -88,7 +88,7 @@
             <German>Deaktiviert die Vanilla-Artilleriecomputer</German>
             <Chinese>停用原本的火炮控制電腦</Chinese>
             <Chinesesimp>禁用游戏自带的弹道计算机</Chinesesimp>
-            <Italian>Disattiva il computer artiglieria vanilla</Italian>
+            <Italian>Disattiva il computer balistico vanilla</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače základní hry</Czech>
             <Japanese>ゲームの砲撃コンピュータを無効化します。</Japanese>
             <Polish>Wyłącza komputer artyleryjski wprowadzony w vanili</Polish>
