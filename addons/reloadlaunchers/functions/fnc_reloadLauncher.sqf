@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, johnb43, drofseh
  * Reload a launcher for the unit who has the launcher.

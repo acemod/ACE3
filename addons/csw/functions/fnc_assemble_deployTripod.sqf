@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author:tcvm
  * Deploys the tripod
@@ -40,8 +40,7 @@
             _cswTripod setVariable [QGVAR(secondaryWeaponMagazine), _secondaryWeaponMagazine];
         };
         if (!GVAR(defaultAssemblyMode)) then {
-            TRACE_1("global disableVanillaAssembly event",_cswTripod); // handles it being assembled when setting is disabled
-            [QGVAR(disableVanillaAssembly), [_cswTripod]] call CBA_fnc_globalEvent;
+            [_cswTripod, "disableWeaponAssembly", "ace_csw", true] call EFUNC(common,statusEffect_set);
         };
 
         private _posATL = _player getRelPos [2, 0];

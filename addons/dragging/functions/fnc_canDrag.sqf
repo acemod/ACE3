@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, Dystopian
  * Checks if unit can drag the object. Doesn't check weight.
@@ -29,7 +29,7 @@ if (_target isKindOf "StaticWeapon") exitWith {
 
 // Units need to be unconscious or limping; Units also need to not be in ragdoll, as that causes desync issues
 if (_target isKindOf "CAManBase") exitWith {
-    !(alive _target != isAwake _target) &&
+    isAwake _target && // not ragdolled
     {lifeState _target == "INCAPACITATED" ||
     {_target getHitPointDamage "HitLegs" >= 0.5}}
 };

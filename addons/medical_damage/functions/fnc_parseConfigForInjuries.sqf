@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Parse the ACE_Medical_Advanced config for all injury types.

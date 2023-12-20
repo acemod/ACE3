@@ -9,12 +9,12 @@ class CBA_Extended_EventHandlers;
             class ACE_ContinueDiggingTrench { \
                 displayName = CSTRING(ContinueDiggingTrench); \
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)); \
-                statement = QUOTE([ARR_2(_target,_player)] call FUNC(continueDiggingTrench);); \
+                statement = QUOTE([ARR_2(_target,_player)] call FUNC(continueDiggingTrench)); \
             }; \
             class ACE_RemoveTrench { \
                 displayName = CSTRING(RemoveEnvelope); \
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canRemoveTrench)); \
-                statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench);); \
+                statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench)); \
             }; \
             class ACE_CamouflageTrench { \
                 displayName = CSTRING(CamouflageTrench); \

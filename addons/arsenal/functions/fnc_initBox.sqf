@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe, johnb43
  * Initialize a box / object for arsenal.
@@ -51,7 +51,10 @@ if (_global && {isMultiplayer} && {isNil {_object getVariable QGVAR(initBoxJIP)}
     ] call EFUNC(interact_menu,createAction);
     [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
-    [_object, _items, false] call FUNC(addVirtualItems);
+    // If items were set globally, do not add items locally
+    if (isNil {_object getVariable QGVAR(virtualItems)}) then {
+        [_object, _items, false] call FUNC(addVirtualItems);
+    };
 
     [QGVAR(boxInitialized), [_object, _items]] call CBA_fnc_localEvent;
 };

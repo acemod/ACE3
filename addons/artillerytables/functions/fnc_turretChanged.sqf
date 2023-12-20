@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Turret changed, determine if we are in the gunner seat of an artillery vehicle.

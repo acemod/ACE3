@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handling of the open wounds & injuries upon the handleDamage eventhandler.

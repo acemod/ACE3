@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Handles various fire objects and determines if local units deserves to get burned.
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [FUNC(fireManagerPFH), 0.25, [_unit]] call CBA_fnc_addPerFrameHandler
+ * [ace_fire_fnc_fireManagerPFH, 0.25, [_unit]] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */

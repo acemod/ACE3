@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Hides the height and velocity display while freefalling or parachuting on higher difficulties.

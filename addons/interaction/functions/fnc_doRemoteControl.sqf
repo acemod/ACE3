@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: kymckay, joko
  *
@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_interaction_fnc_onRemoteControl
+ * call ace_interaction_fnc_doRemoteControl
  *
  * Public: No
  */

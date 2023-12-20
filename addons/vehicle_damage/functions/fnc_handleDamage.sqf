@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Called by "HandleDamage" event handler. Sets up hit array for this frame's damage.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handle playerEH for new changing vehicle, check if it has any viewports and start PFEH
