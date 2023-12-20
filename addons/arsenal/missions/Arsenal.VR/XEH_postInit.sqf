@@ -82,7 +82,7 @@ cba_diagnostic_projectileMaxLines = 10;
         _x hideObject false;
     } forEach allMissionObjects "";
 
-    private _unit = objNull,
+    private _unit = objNull;
 
     // Update VR unit gear
     {

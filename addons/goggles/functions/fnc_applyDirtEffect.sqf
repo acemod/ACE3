@@ -28,7 +28,7 @@ if ([_unit] call FUNC(isGogglesVisible)) then {
     private _dirtImage = getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_OverlayDirt");
 
     if (_dirtImage != "") then {
-        GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 0.1, false];
+        GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 0.1, false, false];
         (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10660) ctrlSetText _dirtImage;
 
         private _effectBrightness = linearConversion [0,1,([] call EFUNC(common,ambientBrightness)),0.25,1];

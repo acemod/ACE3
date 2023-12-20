@@ -52,7 +52,7 @@
 
 if (!hasInterface) exitWith {};
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"
 
 // Reload when default reload keybind is pressed
 addUserActionEventHandler ["ReloadMagazine", "Activate", {

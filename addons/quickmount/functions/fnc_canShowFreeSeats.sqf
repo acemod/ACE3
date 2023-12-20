@@ -32,8 +32,7 @@ GVAR(enabled)
 && {isNull getConnectedUAVUnit _unit}
 && {simulationEnabled _vehicle}
 && {
-    -1 == crew _vehicle findIf {alive _x}
-    || {0.6 <= side group _unit getFriend side group _vehicle}
+    [_unit, _vehicle] call EFUNC(interaction,canInteractWithVehicleCrew)
 }
 && {
     0.3 < vectorUp _vehicle select 2 // moveIn* and GetIn* don't work for flipped vehicles

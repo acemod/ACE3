@@ -15,6 +15,9 @@
  * Public: No
  */
 
+ // If in Zeus, ignore
+ if (!isNull findDisplay 312) exitWith {};
+
 // Find new target to switch to
 private _target = if (
     GVAR(target) == ACE_player
