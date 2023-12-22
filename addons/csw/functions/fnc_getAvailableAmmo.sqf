@@ -10,7 +10,7 @@
  * 3: Include CSW crew <BOOL> (default: true)
  *
  * Return Value:
- * Available Ammo <HashMap>
+ * Available Ammo <HASHMAP>
  *   Magazine classname <STRING>
  *   Total Ammo <NUMBER>
  *

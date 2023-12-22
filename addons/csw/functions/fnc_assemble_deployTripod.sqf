@@ -40,7 +40,7 @@
             _cswTripod setVariable [QGVAR(secondaryWeaponMagazine), _secondaryWeaponMagazine];
         };
         if (!GVAR(defaultAssemblyMode)) then {
-            [_cswTripod, "disableWeaponAssembly", "ace_csw", true] call EFUNC(common,statusEffect_set);
+            [_cswTripod, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         };
 
         private _posATL = _player getRelPos [2, 0];

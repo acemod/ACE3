@@ -7,7 +7,7 @@
  * 0: CSW <OBJECT>
  *
  * Return Value:
- * Compatible Magazines <HashMap>
+ * Compatible Magazines <HASHMAP>
  *   Magazine classname <STRING>
  *   Nothing
  *
@@ -23,7 +23,7 @@ if !((typeOf _csw) in GVAR(initializedStaticTypes)) exitWith {createHashMap};
 
 // fast exit for csw with single weapon, most common scenario
 if (count allTurrets _csw isEqualTo 1 && {count weapons _csw isEqualTo 1}) exitWith {
-    GVAR(compatibleMagsCache) get ((weapons _csw) select 0) // return
+    +(GVAR(compatibleMagsCache) get ((weapons _csw) select 0)) // return
 };
 
 private _weapons = [];
@@ -44,4 +44,4 @@ private _carryMagazines = createHashMap; // hashmap for constant lookup
     _carryMagazines merge [GVAR(compatibleMagsCache) get _weapon, true];
 } forEach _weapons;
 
-_carryMagazines // return
++_carryMagazines // return

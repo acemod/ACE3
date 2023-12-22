@@ -23,7 +23,7 @@ TRACE_4("proxyWeapon",_vehicle,_turret,_needed,_emptyWeapon);
 
 if (_vehicle getVariable [format [QGVAR(proxyHandled_%1), _turret], false]) exitWith { TRACE_1("already handled",typeOf _vehicle); };
 
-private _proxyWeapon = getText (configOf _vehicle >> "ace_csw" >> "proxyWeapon");
+private _proxyWeapon = getText (configOf _vehicle >> QUOTE(ADDON) >> "proxyWeapon");
 
 TRACE_2("",typeOf _vehicle,_proxyWeapon);
 if (_proxyWeapon isEqualTo "") exitWith {};
