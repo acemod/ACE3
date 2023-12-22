@@ -125,6 +125,8 @@ if (_items isEqualType true) then {
 _object setVariable [QGVAR(virtualItems), _cargo, _global];
 
 // If the arsenal is already open, refresh arsenal display
-if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
-    [true, true] call FUNC(refresh);
+if (_global) then {
+    [QGVAR(refresh), _object] call CBA_fnc_globalEvent;
+} else {
+    [QGVAR(refresh), _object] call CBA_fnc_localEvent;
 };

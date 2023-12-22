@@ -49,7 +49,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
         // If something is selected, save it
         if (_selectedItemIndex != -1) then {
-            _selectedItem = _rightPanelCtrl lbText _selectedItemIndex;
+            _selectedItem = _rightPanelCtrl lbData _selectedItemIndex;
         };
 
         private _currentDisplayName = "";
@@ -72,7 +72,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
             // Try to find previously selected item in panel
             for "_lbIndex" from 0 to (lbSize _rightPanelCtrl) - 1 do {
-                if ((_rightPanelCtrl lbText _lbIndex) == _selectedItem) exitWith {
+                if ((_rightPanelCtrl lbData _lbIndex) == _selectedItem) exitWith {
                     _index = _lbIndex;
                 };
             };
@@ -89,7 +89,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
         // If something is selected, save it
         if (_selectedItemIndex != -1) then {
-            _selectedItem = _rightPanelCtrl lnbText [_selectedItemIndex, 1];
+            _selectedItem = _rightPanelCtrl lnbData [_selectedItemIndex, 0];
         };
 
         private _currentDisplayName = "";
@@ -112,7 +112,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
             // Try to find previously selected item in panel
             for "_lbIndex" from 0 to (lnbSize _rightPanelCtrl select 0) - 1 do {
-                if ((_rightPanelCtrl lnbText [_lbIndex, 1]) == _selectedItem) exitWith {
+                if ((_rightPanelCtrl lnbData [_lbIndex, 0]) == _selectedItem) exitWith {
                     _index = _lbIndex;
                 };
             };
@@ -145,7 +145,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     // If something is selected, save it
     if (_selectedItemIndex != -1) then {
-        _selectedItem = _leftPanelCtrl lbText _selectedItemIndex;
+        _selectedItem = _leftPanelCtrl lbData _selectedItemIndex;
     };
 
     private _currentDisplayName = "";
@@ -167,7 +167,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
         private _index = -1;
 
         for "_lbIndex" from 0 to (lbSize _leftPanelCtrl) - 1 do {
-            if ((_leftPanelCtrl lbText _lbIndex) == _selectedItem) exitWith {
+            if ((_leftPanelCtrl lbData _lbIndex) == _selectedItem) exitWith {
                 _index = _lbIndex;
             };
         };

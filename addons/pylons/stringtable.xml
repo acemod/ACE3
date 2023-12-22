@@ -94,7 +94,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>
-            <Japanese>%1 はすでにこの機体へ設定されています!</Japanese>
+            <Japanese>%1 は すでにこの機体へ設定されています!</Japanese>
             <Italian>% sta già configurando questo aereo!</Italian>
             <Chinese>%1已經正在定義此飛機的武裝配置!</Chinese>
             <Chinesesimp>%1已经正在定义此飞机的武器配置！</Chinesesimp>
@@ -109,7 +109,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_ReplacingPylon">
             <English>Replacing pylon %1 out of %2...</English>
-            <Japanese>%2 中 %1 のパイロンを交換しています・・・</Japanese>
+            <Japanese>%2 個中 %1 番目のパイロンを交換しています・・・</Japanese>
             <Italian>Sostituendo pilone %1 al posto di %2...</Italian>
             <Chinese>共有%2個派龍架，正在整補%1號派龍架中...</Chinese>
             <Chinesesimp>共有%2个发射架，正在整装%1号挂架...</Chinesesimp>
@@ -124,7 +124,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_Stopped">
             <English>Stopped at pylon %1!</English>
-            <Japanese>パイロン %1 で中断しました!</Japanese>
+            <Japanese>%1 番目のパイロンで中断しました!</Japanese>
             <Italian>Fermato al pilone %1!</Italian>
             <Chinese>已停止在%1號派龍架!</Chinese>
             <Chinesesimp>已在整装%1号挂架时停止！</Chinesesimp>
@@ -157,7 +157,7 @@
             <Chinesesimp>启用宙斯导弹挂架菜单</Chinesesimp>
             <Chinese>啟用派龍架選單給宙斯</Chinese>
             <Italian>Abilita Menù Piloni da Zeus</Italian>
-            <Japanese>Zeus でパイロン メニューを有効化</Japanese>
+            <Japanese>Zeusでパイロン メニューを有効化</Japanese>
             <German>Aktiviert Außenlaststationsmenü im Zeus</German>
             <French>Activer le menu des pylônes (Zeus)</French>
             <Polish>Aktywuj Menu Pylonów dla Zeus'a</Polish>
@@ -171,8 +171,8 @@
             <English>Enables use of the zeus module.</English>
             <Chinesesimp>允许启用宙斯模组</Chinesesimp>
             <Chinese>允啟使用宙斯模塊</Chinese>
-            <Italian>Abilita l'uso dal modulo di Zeus</Italian>
-            <Japanese>Zeus モジュールでパイロン メニューを利用できます。</Japanese>
+            <Italian>Abilita l'uso del modulo Zeus</Italian>
+            <Japanese>Zeusモジュールでパイロン メニューを利用できるようにします。</Japanese>
             <German>Aktiviert die Nutzung im Zeus</German>
             <French>Permet l'utilisation des modules Zeus.</French>
             <Polish>Aktywuj wykorzystanie modułu zeus'a.</Polish>
@@ -186,7 +186,7 @@
             <English>Enable Pylons Menu from Ammo Trucks</English>
             <Chinesesimp>启用弹药车导弹挂架菜单</Chinesesimp>
             <Chinese>啟用從彈藥卡車使用派龍架選單</Chinese>
-            <Italian>Abilita Menù Piloni da mezzi rifornimento munizioni</Italian>
+            <Italian>Abilita Menù Piloni da mezzi di rifornimento munizioni</Italian>
             <Japanese>弾薬トラックからパイロン メニューを有効化</Japanese>
             <German>Aktiviert Außenlaststationsmenü von Munitionstransportern</German>
             <French>Activer le menu des pylônes (camions de munitions)</French>
@@ -201,7 +201,7 @@
             <English>Enables use of pylons menu from ammo trucks.</English>
             <Chinesesimp>允许在弹药车上启用导弹挂架菜单</Chinesesimp>
             <Chinese>允許從彈藥卡車使用派龍架選單</Chinese>
-            <Italian>Abilita l'uso del Menù Piloni da mezzi rifornimento munizioni</Italian>
+            <Italian>Abilita l'uso del Menù Piloni da mezzi di rifornimento munizioni</Italian>
             <Japanese>弾薬給弾トラックからパイロン メニューを利用できます。</Japanese>
             <German>Aktiviert die Nutzung von Außenlaststationsmenü von Munitionstransportern.</German>
             <French>Permet l'utilisation du menu des pylônes à partir des camions de ravitaillement de munitions.</French>
@@ -217,7 +217,7 @@
             <Chinesesimp>这架飞机没有导弹挂架</Chinesesimp>
             <Chinese>這架飛機沒有派龍架</Chinese>
             <Italian>Questo aereo non ha piloni</Italian>
-            <Japanese>航空機にパイロンがありません</Japanese>
+            <Japanese>この航空機にはパイロンがありません</Japanese>
             <German>Dieses Flugzeug hat keine Außenlaststationen</German>
             <French>Cet aéronef n'a pas de pylônes.</French>
             <Polish>Ten pojazd nie posiada pylonów</Polish>
@@ -231,8 +231,8 @@
             <English>Configure pylons module is disabled for zeus</English>
             <Chinesesimp>宙斯模组的导弹挂架已禁用</Chinesesimp>
             <Chinese>宙斯模塊的派龍架設定已被禁用</Chinese>
-            <Italian>Il modulo per configurare i piloni da Zeus è disabilitato</Italian>
-            <Japanese>Zeus のパイロン モジュールを無効化</Japanese>
+            <Italian>Il modulo Zeus per configurare i piloni è disabilitato</Italian>
+            <Japanese>Zeusのパイロン編集を無効化</Japanese>
             <German>Die Konfiguration für das Außenlaststationen ist im Zeus deaktiviert</German>
             <French>Le module de configuration des pylônes est désactivé pour Zeus.</French>
             <Polish>Konfiguracja modułu pylonów jest wyłączona dla zeus'a</Polish>
@@ -274,7 +274,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon">
             <English>Time Per Pylon</English>
-            <Japanese>パイロンへの時間</Japanese>
+            <Japanese>パイロンあたりの所要時間</Japanese>
             <Italian>Tempo Per Pilone</Italian>
             <Chinese>派龍架整補所需時間(個別)</Chinese>
             <Chinesesimp>导弹挂架整装所需时间（个别）</Chinesesimp>
@@ -289,7 +289,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
             <English>The time it takes to replace each pylon (in seconds).</English>
-            <Japanese>各パイロンの置き換えにかかる時間を設定します。(秒)</Japanese>
+            <Japanese>各パイロンの置き換えに掛かる時間を設定します。(秒)</Japanese>
             <Italian>Il tempo che impiega ogni pilone ad essere sostituito (in secondi).</Italian>
             <Chinese>每個派龍架需花多久時間進行整補(單位為秒)</Chinese>
             <Chinesesimp>每个挂架需花多久时间进行整装（单位为秒）。</Chinesesimp>
@@ -335,7 +335,7 @@
         <Key ID="STR_ACE_Pylons_RequireEngineer">
             <English>Require Engineer</English>
             <Japanese>工兵の必須化</Japanese>
-            <Italian>Necessita Ingegnere</Italian>
+            <Italian>Necessita Geniere</Italian>
             <Chinese>需要工兵</Chinese>
             <Chinesesimp>必须是工兵</Chinesesimp>
             <Korean>정비병 요구</Korean>
@@ -350,7 +350,7 @@
         <Key ID="STR_ACE_Pylons_RequireEngineer_description">
             <English>Require an engineer.</English>
             <Japanese>工兵を必須とします。</Japanese>
-            <Italian>Necessita un ingegnere.</Italian>
+            <Italian>Necessita un Geniere.</Italian>
             <Chinese>需要工兵才能進行彈藥整補</Chinese>
             <Chinesesimp>必须是工兵才能进行弹药整装。</Chinesesimp>
             <Korean>정비병이 필요합니다.</Korean>
@@ -365,7 +365,7 @@
         <Key ID="STR_ACE_Pylons_RequireToolkit">
             <English>Require Toolkit</English>
             <Japanese>ツールキットの必須化</Japanese>
-            <Italian>Necessita Kit Riparazione</Italian>
+            <Italian>Necessita Kit Utensili</Italian>
             <Chinese>需要工具包</Chinese>
             <Chinesesimp>需要工具包</Chinesesimp>
             <Korean>도구모음 요구</Korean>
@@ -380,7 +380,7 @@
         <Key ID="STR_ACE_Pylons_RequireToolkit_description">
             <English>Require a toolkit in inventory.</English>
             <Japanese>インベントリ内にツールキットの存在を必須とします。</Japanese>
-            <Italian>Necessita un kit di riparazione nell'inventario</Italian>
+            <Italian>Necessita un kit utensili nell'inventario</Italian>
             <Chinese>需要工具包才能進行彈藥整補</Chinese>
             <Chinesesimp>需要工具包才能进行弹药整装。</Chinesesimp>
             <Korean>도구모음이 필요합니다.</Korean>

@@ -89,7 +89,7 @@ if (
         {GET_NUMBER(_ammoCfg >> "indirectHit", 0) > 0}
     }
 ) exitwith {
-    TRACE_6("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
+    TRACE_5("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage);
 
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];

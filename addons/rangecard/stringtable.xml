@@ -12,7 +12,7 @@
             <Hungarian>Távolsági kártya</Hungarian>
             <Russian>Таблица поправок</Russian>
             <Italian>Tavola Balistica</Italian>
-            <Japanese>射表</Japanese>
+            <Japanese>レンジカード (射表)</Japanese>
             <Korean>사거리표</Korean>
             <Chinesesimp>射表</Chinesesimp>
             <Chinese>彈道射表</Chinese>
@@ -29,7 +29,7 @@
             <Hungarian>50 MÉTERES lépések - MRAD/MRAD (célzó/lövegek)</Hungarian>
             <Russian>Шаг 50 МЕТРОВ - MRAD/MRAD (сетка/маховички)</Russian>
             <Italian>Incrementi per 50 METRI - MRAD/MRAD (reticolo/torrette)</Italian>
-            <Japanese>50 メートル増やす -- MRAD/MRAD (照準線/砲塔)</Japanese>
+            <Japanese>50 メートル単位 -- MRAD/MRAD (レチクル/タレット)</Japanese>
             <Korean>50 미터 늘리기 -- MRAD/MRAD (조준선/포탑)</Korean>
             <Chinesesimp>50米增量 -- 毫弧度/毫弧度（瞄镜分划线/调整纽）</Chinesesimp>
             <Chinese>50公尺增量 -- 毫弧度/毫弧度 (瞄鏡分劃線/調整紐)</Chinese>
@@ -46,7 +46,7 @@
             <Hungarian>Távolsági kártya kinyitása</Hungarian>
             <Russian>Открыть таблицу поправок</Russian>
             <Italian>Apri Tavola Balistica</Italian>
-            <Japanese>射表を開く</Japanese>
+            <Japanese>レンジカードを開く</Japanese>
             <Korean>사거리표 열기</Korean>
             <Chinesesimp>开启射表</Chinesesimp>
             <Chinese>開啟彈道射表</Chinese>
@@ -63,7 +63,7 @@
             <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
             <Russian>Открыть копию таблицы поправок</Russian>
             <Italian>Apri Copia Tavola Balistica</Italian>
-            <Japanese>複製された射表を開く</Japanese>
+            <Japanese>レンジカードの複製を開く</Japanese>
             <Korean>복제 사거리표 열기</Korean>
             <Chinesesimp>开启射表副本</Chinesesimp>
             <Chinese>開啟彈道射表副本</Chinese>
@@ -80,7 +80,7 @@
             <Hungarian>Távolsági kártya kinyitása</Hungarian>
             <Russian>Открыть таблицу поправок</Russian>
             <Italian>Apri Tavola Balistica</Italian>
-            <Japanese>射表を開く</Japanese>
+            <Japanese>レンジカードを開く</Japanese>
             <Korean>사거리표 열기</Korean>
             <Chinesesimp>开启射表</Chinesesimp>
             <Chinese>開啟彈道射表</Chinese>
@@ -97,7 +97,7 @@
             <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
             <Russian>Открыть копию таблицы поправок</Russian>
             <Italian>Apri Copia Tavola Balistica</Italian>
-            <Japanese>複製された射表を開く</Japanese>
+            <Japanese>レンジカードの複製を開く</Japanese>
             <Korean>복제 사거리표 열기</Korean>
             <Chinesesimp>开启射表副本</Chinesesimp>
             <Chinese>開啟彈道射表副本</Chinese>
@@ -114,7 +114,7 @@
             <Hungarian>Távolsági kártya másolása</Hungarian>
             <Russian>Скопировать таблицу поправок</Russian>
             <Italian>Copia Tavola Balistica</Italian>
-            <Japanese>射表を複製する</Japanese>
+            <Japanese>レンジカードを複製</Japanese>
             <Korean>사거리표 복제</Korean>
             <Chinesesimp>复制射表</Chinesesimp>
             <Chinese>複製彈道射表</Chinese>

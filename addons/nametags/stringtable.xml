@@ -12,7 +12,7 @@
             <Hungarian>Névcímkék</Hungarian>
             <Russian>Имена игроков</Russian>
             <Italian>Etichette Nomi</Italian>
-            <Japanese>名札</Japanese>
+            <Japanese>ネーム タグ</Japanese>
             <Korean>이름표</Korean>
             <Chinesesimp>玩家名称</Chinesesimp>
             <Chinese>玩家名稱</Chinese>
@@ -28,8 +28,8 @@
             <French>Ce module permet de configurer les options et la distance d'affichage du nom des unités.</French>
             <Hungarian>Ez a modul lehetővé teszi a névcímkék beállításainak testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
-            <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
-            <Japanese>これは名札の表示範囲と設定を変更できます。</Japanese>
+            <Italian>Questo modulo ti consente di personalizzare le impostazioni ed la distanza visibile delle Etichette Nomi</Italian>
+            <Japanese>このモジュールを使用すると、ネーム タグの設定と範囲を調整できます。</Japanese>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
             <Chinesesimp>这个模块允许您设定名字和显示范围等设定</Chinesesimp>
             <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
@@ -63,7 +63,7 @@
             <Portuguese>Mostrar nomes de jogadores</Portuguese>
             <Italian>Mostra i nomi dei giocatori</Italian>
             <Russian>Показывать имена игроков (включить имена)</Russian>
-            <Japanese>プレイヤ名を表示</Japanese>
+            <Japanese>プレイヤー名を表示</Japanese>
             <Korean>플레이어 이름 표시</Korean>
             <Chinesesimp>显示玩家名称</Chinesesimp>
             <Chinese>顯示玩家名稱</Chinese>
@@ -80,7 +80,7 @@
             <Hungarian>Mutassa a játékosok nevét és kezelje az aktivációjukat. Alapértelmezett: Engedélyezve</Hungarian>
             <Russian>Показывать имена игроков и установить их активацию. По умолчанию: Включено</Russian>
             <Italian>Mostra nomi giocatori ed imposta la loro attivazione. Default: Abilitato</Italian>
-            <Japanese>プレイヤ名の表示と設定を有効化します。標準: 有効</Japanese>
+            <Japanese>プレイヤー名の表示とそれを有効にする方法を設定します。 デフォルト: 有効</Japanese>
             <Korean>플레이어 이름의 표시와 설정을 활성화합니다. 기본설정: 활성화</Korean>
             <Chinesesimp>显示玩家的名字并设置其启动方式。预设：启用</Chinesesimp>
             <Chinese>顯示玩家的名稱並設置其啟動方式。預設: 啟用</Chinese>
@@ -97,7 +97,7 @@
             <Hungarian>Csak kurzorra</Hungarian>
             <Russian>Только под курсором</Russian>
             <Italian>Solo su Cursore</Italian>
-            <Japanese>カーソルでのみ</Japanese>
+            <Japanese>カーソルを合わせた時</Japanese>
             <Korean>커서만 해당</Korean>
             <Chinesesimp>只有准心指到时</Chinesesimp>
             <Chinese>只有準心指到時</Chinese>
@@ -114,7 +114,7 @@
             <Hungarian>Csak gombnyomásra</Hungarian>
             <Russian>Только по нажатию клавиши</Russian>
             <Italian>Solo quando Premi Tasto</Italian>
-            <Japanese>キー押下のみ</Japanese>
+            <Japanese>キーを押した時のみ</Japanese>
             <Korean>키를 누를 경우만</Korean>
             <Chinesesimp>只有按按键时</Chinesesimp>
             <Chinese>只有按按鍵時</Chinese>
@@ -131,7 +131,7 @@
             <Hungarian>Csak kurzorra és gombnyomásra</Hungarian>
             <Russian>Под курсором или по нажатию клавиши</Russian>
             <Italian>Solo su Cursore e quando Premi Tasto</Italian>
-            <Japanese>カーソルとキー押下のみ</Japanese>
+            <Japanese>カーソルを合わせてキーを押した時のみ</Japanese>
             <Korean>커서와 키를 누를 경우만</Korean>
             <Chinesesimp>只有在准心指到和按按键时</Chinesesimp>
             <Chinese>只有在準心指到和按按鍵時</Chinese>
@@ -140,11 +140,11 @@
         <Key ID="STR_ACE_NameTags_FadeOnBorder">
             <English>Fade on screen border</English>
             <German>Am Bildschirmrand ausblenden</German>
-            <Japanese>画面端では非表示</Japanese>
+            <Japanese>画面端でフェードアウト</Japanese>
             <Polish>Ukryj na brzegach ekranu</Polish>
             <Korean>화면 가장자리에서 사라짐</Korean>
             <French>Estomper sur les bords de l'écran</French>
-            <Italian>Sfocatura nei bordi dello schermo</Italian>
+            <Italian>Sfoca ai bordi dello schermo</Italian>
             <Chinesesimp>在屏幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
             <Russian>Затухание на границе экрана</Russian>
@@ -164,7 +164,7 @@
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показывать звания игроков (при вкл. именах)</Russian>
-            <Japanese>プレイヤの階級を表示 (プレイヤ名が必要)</Japanese>
+            <Japanese>プレイヤーの階級を表示 (プレイヤー名を表示が必要)</Japanese>
             <Korean>플레이어 계급 표시 (플레이어 이름 필요)</Korean>
             <Chinesesimp>显示玩家军阶（玩家必须有设定名字）</Chinesesimp>
             <Chinese>顯示玩家軍階 (玩家必須有設定名稱)</Chinese>
@@ -198,7 +198,7 @@
             <Hungarian>A legénységi adatok mutatása, alapértelmezett esetben a játékos által kiválasztható. Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать информацию об экипаже техники, или по умолчанию, позволяет игрокам выбрать свою настройку. По умолчанию: Не обязывать</Russian>
             <Italian>Mostra informazioni sull'equipaggio del veicolo, oppure consenti di default di lasciare che siano i giocatori a scegliere. Default: Non Forzare</Italian>
-            <Japanese>車両の乗員を表示します。標準ではプレイヤ各々が選べられます。標準: 強制しない</Japanese>
+            <Japanese>車両の乗組員情報を表示するか、デフォルトでのようにプレイヤーが自分で情報を選択できるようにします。 デフォルト: 強制しない</Japanese>
             <Korean>승무원 정보를 표시하거나 플레이어가 직접 고르게 놔둡니다. 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示载具成员信息。在预设的情况下，系统允许玩家自己决定开关此信息。预设：不显示</Chinesesimp>
             <Chinese>顯示載具成員訊息。在預設的情況下，系統允許玩家自己決定開關此訊息。預設: 不顯示</Chinese>
@@ -215,7 +215,7 @@
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
             <Italian>Mostra i nomi delle le unità AI</Italian>
             <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
-            <Japanese>AIユニットの名札を表示</Japanese>
+            <Japanese>AIユニットのネーム タグを表示</Japanese>
             <Korean>인공지능 인원 이름 표시</Korean>
             <Chinesesimp>显示 AI 单位名字</Chinesesimp>
             <Chinese>顯示AI單位名稱</Chinese>
@@ -232,7 +232,7 @@
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать имена и звания дружественных ботов? По умолчанию: Не обязывать</Russian>
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
-            <Japanese>友軍のAIにも名前と階級を表示しますか? 標準: 強制しない</Japanese>
+            <Japanese>友軍のAIにも名前と階級を表示しますか? デフォルト: 強制しない</Japanese>
             <Korean>아군 인공지능의 계급을 표시합니까? 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示友军 AI 的名字和军阶？ 预设：不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>
@@ -265,7 +265,7 @@
             <Russian>Показывать имя командира техники (только если клиент включил отображение имен). По умолчанию: Нет</Russian>
             <French>Affiche les noms pour les commandants de véhicule (uniquement si le client a activé l'affichage des noms).</French>
             <Italian>Mostra il nome sul cursore per il comandante del veicolo (solo se il client ha le Etichette Nomi attive) Default: No</Italian>
-            <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準: 無効</Japanese>
+            <Japanese>カーソルを当てた時、車長のネーム タグを表示します (クライアント側でネーム タグを有効化する必要があります) デフォルト: 無効</Japanese>
             <Korean>차장의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화할 시에만 보입니다) 기본설정: 아니요</Korean>
             <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名字（仅当客户端的名字功能已启用）。预设：关闭</Chinesesimp>
             <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用)。預設: 關閉</Chinese>
@@ -282,7 +282,7 @@
             <Hungarian>"Hanghullámok" mutatása (a nevek mutatása szükséges)</Hungarian>
             <Italian>Mostra movimento audio (insieme ai nomi)</Italian>
             <Portuguese>Mostrar onda sonora (requer nome de jogadores)</Portuguese>
-            <Japanese>音波形を表示 (プレイヤ名が必要)</Japanese>
+            <Japanese>音波形を表示 (プレイヤー名の表示が必要)</Japanese>
             <Korean>음파 표시 (플레이어 이름 필요)</Korean>
             <Chinesesimp>当玩家讲话时，显示声波图案（玩家必须有设定名字）</Chinesesimp>
             <Chinese>當玩家講話時，顯示聲波圖案 (玩家必須有設定名稱)</Chinese>
@@ -299,7 +299,7 @@
             <Hungarian>Hanghullám-effekt a beszélő játékosok feje felett a PTT-gomb lenyomásakor. Ez a beállítás TFAR és ACRE2 alatt működik.</Hungarian>
             <Russian>Эффект звуковой волны над головами говорящих игроков при удерживании кнопки push-to-talk. Эта опция работает также с рациями TFAR и ACRE2.</Russian>
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
-            <Japanese>プレイヤーが PTT キーを押している間は、音波形を表示します。このオプションは TFAR と ACRE2 で動作します。</Japanese>
+            <Japanese>プレイヤーが PTT キーを押している間は、音波形を表示します。 このオプションは TFAR と ACRE2 で動作します。</Japanese>
             <Korean>플레이어가 눌러서 말할 시 머리위에 음파효과를 적용합니다. 이 옵션은 TFAR과 ACRE2가 있을 때만 적용됩니다.</Korean>
             <Chinesesimp>当玩家使用按键发话时，其头上的角色名字旁会显示声波的图案。此功能可搭配 TFAR、ACRE2 等模组使用。</Chinesesimp>
             <Chinese>當玩家使用按鍵發話時，其頭上的角色名稱旁會顯示聲波的圖案。此功能可搭配TFAR、ACRE2等模組使用。</Chinese>
@@ -316,7 +316,7 @@
             <Hungarian>Névcímkék beállításának használata</Hungarian>
             <Russian>Так же, как имена</Russian>
             <Italian>Usa impostazioni Etichette Nomi</Italian>
-            <Japanese>名札の設定</Japanese>
+            <Japanese>ネーム タグの設定</Japanese>
             <Korean>이름표 설정 사용</Korean>
             <Chinesesimp>玩家名称设定</Chinesesimp>
             <Chinese>玩家名稱設定</Chinese>
@@ -333,7 +333,7 @@
             <Hungarian>Mindig minden mutatása</Hungarian>
             <Russian>Всегда показывать</Russian>
             <Italian>Mostra Sempre Tutto</Italian>
-            <Japanese>常に表示する</Japanese>
+            <Japanese>常に全て表示する</Japanese>
             <Korean>항상 모두 표시</Korean>
             <Chinesesimp>永远显示全部</Chinesesimp>
             <Chinese>永遠顯示全部</Chinese>
@@ -350,7 +350,7 @@
             <Hungarian>Játékosok nevének látótávja</Hungarian>
             <Russian>Дистанция отображения имен</Russian>
             <Italian>Distanza Visiva Etichette Nomi</Italian>
-            <Japanese>プレイヤ名が見える範囲</Japanese>
+            <Japanese>プレイヤー名の表示距離</Japanese>
             <Korean>플레이어 이름 표시 거리</Korean>
             <Chinesesimp>玩家名称显示距离</Chinesesimp>
             <Chinese>玩家名稱顯示距離</Chinese>
@@ -366,8 +366,8 @@
             <French>Distance au delà de laquelle les noms des joueurs ne sont plus affichés. Valeur par défaut : 5 mètres.</French>
             <Hungarian>Méterben megadott érték a játékosok nevének mutatására. Alapértelmezett: 5</Hungarian>
             <Russian>Дистанция в метрах, на которой отображаются имена игроков. По умолчанию: 5</Russian>
-            <Italian>Distanza in metri a cui sono visibili i nomi giocatori. Default: 5</Italian>
-            <Japanese>プレイヤの周り何メートルまで名札を表示できます。標準: 5</Japanese>
+            <Italian>Distanza in metri entro la quale sono visibili i nomi dei giocatori. Predefinito: 5</Italian>
+            <Japanese>プレイヤー名が表示される距離 (メートル)。 デフォルト: 5</Japanese>
             <Korean>플레이어 이름이 표시되는 미터. 기본설정: 5</Korean>
             <Chinesesimp>设定名字在多少距离以内显示。预设：5米</Chinesesimp>
             <Chinese>設定名稱在多少距離以內顯示。預設:5公尺</Chinese>
@@ -376,7 +376,7 @@
         <Key ID="STR_ACE_NameTags_PlayerNamesMaxAlpha">
             <English>Player tags transparency</English>
             <German>Spielernamen Transparenz</German>
-            <Japanese>プレイヤー名札の透明度</Japanese>
+            <Japanese>プレイヤーのネーム タグの透明度</Japanese>
             <Chinesesimp>玩家名称标签透明度</Chinesesimp>
             <Chinese>玩家名稱透明度</Chinese>
             <Italian>Trasparenza Etichette Nome</Italian>
@@ -400,7 +400,7 @@
             <Hungarian>Névcímkék mérete</Hungarian>
             <Russian>Размер имен игроков</Russian>
             <Italian>Dimensione Etichette Nome</Italian>
-            <Japanese>名札の大きさ</Japanese>
+            <Japanese>ネーム タグの大きさ</Japanese>
             <Korean>이름표 크기</Korean>
             <Chinesesimp>玩家名称标记大小</Chinesesimp>
             <Chinese>玩家名稱標記大小</Chinese>
@@ -416,7 +416,7 @@
             <French>Taille du texte et des icônes.</French>
             <Hungarian>Szöveg és ikon méretének skálázása</Hungarian>
             <Russian>Масштабирование размера текста и иконок</Russian>
-            <Italian>Proporzione Dimensioni Testo ed Icone</Italian>
+            <Italian>Proporzione e Dimensioni di Testo ed Icone</Italian>
             <Japanese>文字とアイコンの大きさ</Japanese>
             <Korean>글자와 아이콘 크기 비례합니다</Korean>
             <Chinesesimp>文字和图示大小设定</Chinesesimp>
@@ -434,7 +434,7 @@
             <Hungarian>Alap névcímke-szín (csoporton kívüli személyek)</Hungarian>
             <Italian>Colore dei nomi non appartenenti al gruppo</Italian>
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
-            <Japanese>標準の名札の色 (グループメンバー以外)</Japanese>
+            <Japanese>ネーム タグの標準色 (グループメンバー以外)</Japanese>
             <Korean>기본 이름표 색상 (비그룹 멤버)</Korean>
             <Chinesesimp>预设名字颜色（非同小队队友）</Chinesesimp>
             <Chinese>預設名稱顏色 (非同小隊隊友) </Chinese>
@@ -451,7 +451,7 @@
             <Hungarian>Erőltetett rejtett</Hungarian>
             <Russian>Обязательно: Скрывать</Russian>
             <Italian>Forza Nascosto</Italian>
-            <Japanese>強制で非表示</Japanese>
+            <Japanese>非表示を強制</Japanese>
             <Korean>강제로 숨기기</Korean>
             <Chinesesimp>强制隐藏</Chinesesimp>
             <Chinese>強迫隱藏</Chinese>
@@ -467,8 +467,8 @@
             <French>/!\ Module obsolète /!\ - Forcer l'affichage</French>
             <Hungarian>Erőltetett látható</Hungarian>
             <Russian>Обязательно: Показывать</Russian>
-            <Italian>Forza Mostra</Italian>
-            <Japanese>強制で表示</Japanese>
+            <Italian>Forza Visibili</Italian>
+            <Japanese>表示を強制</Japanese>
             <Korean>강제로 표시</Korean>
             <Chinesesimp>强制显示</Chinesesimp>
             <Chinese>強迫顯示</Chinese>
@@ -484,8 +484,8 @@
             <French>/!\ Module obsolète /!\ - Forcer l'affichage sous le curseur uniquement</French>
             <Hungarian>Erőltetett látható, csak kurzorra</Hungarian>
             <Russian>Обязательно: Только под курсором</Russian>
-            <Italian>Forza Mostra solo su Cursore</Italian>
-            <Japanese>カーソルでのみに強制する</Japanese>
+            <Italian>Forza Visibili solo su Cursore</Italian>
+            <Japanese>カーソルを合わせた時のみ に強制する</Japanese>
             <Korean>커서만 강제로 해당</Korean>
             <Chinesesimp>强制仅显示在准心指到时</Chinesesimp>
             <Chinese>強制僅顯示在準心指到時</Chinese>
@@ -501,8 +501,8 @@
             <French>/!\ Module obsolète /!\ - Forcer l'affichage par appui de touche uniquement</French>
             <Hungarian>Erőltetett látható, csak gombnyomásra</Hungarian>
             <Russian>Обязательно: Только по нажатию клавиши</Russian>
-            <Italian>Forza Mostra solo quando Premi Tasto</Italian>
-            <Japanese>キー押下のみに強制する</Japanese>
+            <Italian>Forza Visibili solo quando Premi Tasto</Italian>
+            <Japanese>キーを押した時のみ に強制</Japanese>
             <Korean>키를 누를 경우만 강제로 해당</Korean>
             <Chinesesimp>强制仅显示在按按键时</Chinesesimp>
             <Chinese>強制僅顯示在按按鍵時</Chinese>
@@ -519,7 +519,7 @@
             <Hungarian>Erőltetett látható, csak kurzorra és gombnyomásra</Hungarian>
             <Russian>Обязательно: Под курсором или по нажатию клавиши</Russian>
             <Italian>Forza Mostra solo su Cursore e quando Premi Tasto</Italian>
-            <Japanese>カーソルとキー押下のみに強制する</Japanese>
+            <Japanese>カーソルを合わせてキーを押した時のみ に強制</Japanese>
             <Korean>커서와 키를 누를 경우만 강제로 해당</Korean>
             <Chinesesimp>强制显示在准心指到和按按键时</Chinesesimp>
             <Chinese>強制顯示在準心指到和按按鍵時</Chinese>
@@ -528,7 +528,8 @@
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_DisplayName">
             <English>Nametag Ambient Brightness Coefficient</English>
             <Russian>Коэф. освещения для меток игроков</Russian>
-            <Japanese>環境名札明るさ係数</Japanese>
+            <Italian>Coeff. di Luminosità Ambiente</Italian>
+            <Japanese>ネーム タグ 環境明るさ係数</Japanese>
             <French>Coefficient de luminosité ambiante</French>
             <German>Spielernamen Umgebungshelligkeitskoeffizient</German>
             <Polish>Współczynnik jasności otoczenia </Polish>
@@ -539,7 +540,8 @@
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">
             <English>Adjusts how strongly ambient brightness affects nametag view distance.</English>
             <Russian>Определяет как сильно окружающее освещение влияет на дальность отображения меток игроков.</Russian>
-            <Japanese>環境光の強さによって名札の描画距離を調整します。</Japanese>
+            <Italian>Definisce quanto fortemente la luminosità dell'ambiente influenza la visibilità delle etichette nomi.</Italian>
+            <Japanese>周囲の明るさがネーム タグの表示距離にどの程度強く影響するかを調整します。</Japanese>
             <French>Définit à quel point le manque de lumière ambiante abaisse la distance de visibilité du nom des joueurs.</French>
             <German>Stellt ein, wie stark sich die Umgebungshelligkeit auf die Sichtweite der Spielernamen auswirkt.</German>
             <Polish>Definiuje jak bardzo jasność otoczenia wpływa na zasięg wyświetlania imion postaci.</Polish>

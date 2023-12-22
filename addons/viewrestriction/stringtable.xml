@@ -11,7 +11,7 @@
             <French>Restriction Vue</French>
             <Chinesesimp>人称限制</Chinesesimp>
             <Chinese>視野限制</Chinese>
-            <Italian>Visualizza Restrizione</Italian>
+            <Italian>Restrizione di Visuale</Italian>
             <Russian>Ограничение обзора</Russian>
             <Turkish>Görüntüyü Kısıtla</Turkish>
             <Spanish>Reestricción de Vista</Spanish>
@@ -25,7 +25,7 @@
             <French>La restriction de la vue limite l'usage de la vue à la 1ère/3ème personne globalement ou par type de véhicule.</French>
             <Chinesesimp>人称限制可以设定在全局或是局部状况下能用的人称模式。</Chinesesimp>
             <Chinese>視野限制可以設定在全局或是局部狀況下能用的視野模式。</Chinese>
-            <Italian>Visualizza le impostazioni di restrizione per limitare l'utilizzo di prima e terza persona a livello globale o per tipologia di veicolo.</Italian>
+            <Italian>Impostazioni di restrizione visuale per limitare l'utilizzo di prima e terza persona a livello globale o per tipologia di veicolo.</Italian>
             <Russian>Настройки ограничения обзора при виде от 1-го или 3-го лица. Общие для всех, или Выборочные, в зависимости от техники.</Russian>
             <Turkish>1. veya 3. kişi görünümlerinin kullanımını genel olarak veya araç türüne göre sınırlamak için kısıtlama ayarlarını görüntüleyin.</Turkish>
             <Spanish>Opciones de Reestricción de Vista para limitar el uso de 1º o 3º persona globalmente o según el tipo de vehículo.</Spanish>
@@ -50,7 +50,7 @@
             <Polish>Zmienia tryb globalny. (Domyślnie: Wyłączony)</Polish>
             <German>Globaler Modus. (Standard: Deaktiviert)</German>
             <Hungarian>Globális mód beállítása. Alapértelmeyett: Kikapcsolva</Hungarian>
-            <Japanese>グローバル モードの設定。(標準: 無効)</Japanese>
+            <Japanese>グローバル モードの設定。 (デフォルト: 無効)</Japanese>
             <Korean>전체 모드를 사용합니다. 기본값: 사용 안 함</Korean>
             <French>Mode global. Défaut: Désactivé</French>
             <Chinesesimp>设定全局的人称模式。预设：关闭</Chinesesimp>
@@ -80,7 +80,7 @@
             <Polish>Tryb selektywny piechoty. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
             <German>Selektiver Modus zu Fuß. (Standard: Deaktiviert, Benötigt Modus: Selektiv)</German>
             <Hungarian>Szelektív mód Gyalogosan. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
-            <Japanese>地上でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Japanese>地上でのモードを選択します。 (デフォルト: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>보병 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif hors des véhicules. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
             <Chinesesimp>设定在步行的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
@@ -110,7 +110,7 @@
             <Polish>Tryb selektywny pojazdów. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
             <German>Selektiver Modus in Landfahrzeugen. (Standard: Deaktiviert, Benötigt Modus: Selektiv)</German>
             <Hungarian>Szelektív mód a Szárazföldi Járművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
-            <Japanese>地上車両でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Japanese>地上車両でのモードを選択します。 (デフォルト: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>차량 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif dans les véhicules terrestres. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
             <Chinesesimp>设定在搭乘陆上载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
@@ -140,7 +140,7 @@
             <Polish>Tryb selektywny lotnictwa. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
             <German>Selektiver Modus in Luftfahrzeugen. (Standard: Deaktiviert, Benötigt Modus: Selektiv)</German>
             <Hungarian>Szelektív mód a Légijárművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
-            <Japanese>航空機でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Japanese>航空機でのモードを選択します。 (デフォルト: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>항공기 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif dans les véhicules aériens. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
             <Chinesesimp>设定在搭乘空中载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
@@ -170,7 +170,7 @@
             <Polish>Tryb selektywny jednostek pływających. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
             <German>Selektiver Modus zu Fuß. (Standard: Deaktiviert, Benötigt Modus: Selektiv)</German>
             <Hungarian>Szelektív mód a Vízi Járművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
-            <Japanese>船舶でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Japanese>船舶でのモードを選択します。 (デフォルト: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>함선 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif dans les véhicules marins. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
             <Chinesesimp>设定在搭乘水上载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
@@ -200,12 +200,12 @@
             <Polish>Tryb selektywny UAV. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
             <German>Selektiver Modus in unbemannten Luftfahrzeugen. (Standard: Deaktiviert, Benötigt Modus: Selektiv</German>
             <Hungarian>Szelektív mód a Pilóta Nélküli Légijárművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
-            <Japanese>無人機でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Japanese>無人機でのモードを選択します。 (デフォルト: 無効化 (要求モード: 選択性)</Japanese>
             <Korean>무인기 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
             <French>Mode sélectif dans les drones. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
             <Chinesesimp>设定在搭乘无人载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Chinese>設定在搭乘無人載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
-            <Italian>Modalità selettiva su UAVi. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
+            <Italian>Modalità selettiva su UAV. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
             <Russian>Выборочные установки для беспилотников. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
             <Turkish>IHA araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Spanish>Modo selectivo en VANTs. Defecto: Deshabilitado (Requiere Modo: Selectivo)</Spanish>
@@ -216,6 +216,7 @@
             <German>Deaktiviert</German>
             <Hungarian>Kikapcsolva</Hungarian>
             <Japanese>無効</Japanese>
+            <Italian>Disabilitata</Italian>
             <Korean>사용 안 함</Korean>
             <French>Désactivé</French>
             <Chinesesimp>关闭</Chinesesimp>
@@ -228,6 +229,7 @@
             <English>Forced 1st Person</English>
             <Polish>Wymuś 1. osobę</Polish>
             <German>Erzwungene Egoperspektive</German>
+            <Italian>Prima persona forzata</Italian>
             <Japanese>1人称視点に強制</Japanese>
             <Korean>강제 1인칭</Korean>
             <French>Impose la 1ère personne</French>
@@ -241,6 +243,7 @@
             <English>Forced 3rd Person</English>
             <Polish>Wymuś 3. osobę</Polish>
             <German>Erzwungene Third-Person-Perspektive</German>
+            <Italian>Terza persona forzata</Italian>
             <Japanese>3人称視点に強制</Japanese>
             <Korean>강제 3인칭</Korean>
             <French>Impose la 3ème personne</French>
@@ -254,6 +257,7 @@
             <English>Selective</English>
             <Polish>Selektywny</Polish>
             <German>Selektiv</German>
+            <Italian>Selettiva</Italian>
             <Hungarian>Szelektív</Hungarian>
             <Japanese>選択性</Japanese>
             <Korean>선택</Korean>
@@ -267,8 +271,9 @@
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewName">
             <English>Preserve view for vehicle types</English>
             <German>Behalte die Ansicht bei Fahrzeugtypen bei</German>
+            <Italian>Mantieni visuale per tipo di veicolo</Italian>
             <Russian>Запоминать вид для типов техники</Russian>
-            <Japanese>車両の種類により視点を変更</Japanese>
+            <Japanese>車両の種別により視点を変更</Japanese>
             <Chinese>保留載具的視野模式</Chinese>
             <Chinesesimp>保留载具的人称模式</Chinesesimp>
             <Polish>Zachowaj ustawienie widoku dla pojazdów</Polish>
@@ -280,8 +285,9 @@
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewDesc">
             <English>Switch view on vehicle change to last used in this vehicle type (Requires Mode: Disabled)</English>
             <German>Wechsel die Ansicht bei Fahrzeugwechsel zu der zuletzt genutzen in diesen Fahrzeugtyp. (Benötigt Modus: Ausgeschaltet)</German>
+            <Italian>Cambia la visuale quando si cambia veicolo a quella usata la volta precedente su un veicolo dello stesso tipo (Richiede modalità: Disattivata)</Italian>
             <Russian>Переключать вид при смене техники на последний использованный в данном типе техники (требуется режим: Отключено)</Russian>
-            <Japanese>車両の種類により最後に使用した視点へ切り替え (無効モードでのみ有効)</Japanese>
+            <Japanese>車両変更時の視点をその車両種別で最後に使用したものに切り替えます (要求モード: 無効)</Japanese>
             <Chinese>切換到載具時自動切換到上次最後使用的視野模式(需求模式:關閉)</Chinese>
             <Chinesesimp>切换到载具时自动切换到上次最后使用的人称模式（需求模式：关闭）</Chinesesimp>
             <Polish>Zmień widok podczas zmiany pojazdu na ustawienie widoku z ostatniego używanego pojazdu tego typu (Wymaga Tryb: Wyłączony</Polish>

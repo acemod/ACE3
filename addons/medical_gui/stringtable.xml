@@ -9,7 +9,7 @@
             <Portuguese>GUI</Portuguese>
             <Chinese>界面</Chinese>
             <Chinesesimp>界面</Chinesesimp>
-            <Italian>GUI</Italian>
+            <Italian>Interfaccia Grafica</Italian>
             <Czech>GUI</Czech>
             <Polish>Graficzny Interfejs Użytkownika</Polish>
             <Spanish>Interfaz gráfica</Spanish>
@@ -20,13 +20,13 @@
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
             <English>Enable Medical Actions</English>
             <German>Aktiviere Sanitätsaktionen</German>
-            <Japanese>治療インタラクションの有効化</Japanese>
+            <Japanese>医療インタラクションの有効化</Japanese>
             <Russian>Разрешить Медицинские действия</Russian>
             <French>Activer les actions médicales</French>
             <Portuguese>Ativar Ações Médicas</Portuguese>
             <Chinese>啟用醫療行為</Chinese>
             <Chinesesimp>启用医疗措施</Chinesesimp>
-            <Italian>Attivare azioni mediche</Italian>
+            <Italian>Attiva azioni mediche</Italian>
             <Czech>Povolit zdravotnické akce</Czech>
             <Polish>Włącza opcje medyczne</Polish>
             <Spanish>Habilitar acciones médicas</Spanish>
@@ -42,7 +42,7 @@
             <Portuguese>Ativa as ações médicas para o menu de interação e seleciona seus estilos.</Portuguese>
             <Chinese>為互動選單啟用醫療行為以及選擇其風格。</Chinese>
             <Chinesesimp>为交互式菜单启用医疗操作，并选择其样式。</Chinesesimp>
-            <Italian>Abilita le azioni mediche per il Menu Interazione e seleziona il loro stile.</Italian>
+            <Italian>Abilita le azioni mediche nel Menù Interazioni e scegli il loro stile.</Italian>
             <Czech>Povolit zdravotnické akce pro menu interakcí a vybrat jejich styl.</Czech>
             <Polish>Umożliwia akcje medyczne w menu interakcji i wybiera ich styl.</Polish>
             <Spanish>Habilita acciones médicas para el menú de interacción y selecciona su estilo.</Spanish>
@@ -59,7 +59,7 @@
             <Portuguese>Seleção (3d)</Portuguese>
             <Hungarian>Választékok (3D)</Hungarian>
             <Czech>3D výběr</Czech>
-            <Italian>Selezione (3D)</Italian>
+            <Italian>Selezioni (3D)</Italian>
             <Japanese>選択 (3D)</Japanese>
             <Korean>선택 (3d)</Korean>
             <Chinesesimp>选择（3D）</Chinesesimp>
@@ -86,7 +86,7 @@
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_DisplayName">
             <English>Enable Medical Self Actions</English>
             <German>Medizinische Selbst-Interaktionen anzeigen</German>
-            <Japanese>治療セルフインタラクションの有効化</Japanese>
+            <Japanese>医療セルフインタラクションの有効化</Japanese>
             <Russian>Разрешить Медицинские действия на себе</Russian>
             <French>Activer les actions médicales sur soi-même</French>
             <Portuguese>Ativar ações médicas em si mesmo</Portuguese>
@@ -108,7 +108,7 @@
             <Portuguese>Ativa as ações médicas do menu de interação pessoal.</Portuguese>
             <Chinese>為自我互動選單啟用醫療行為。</Chinese>
             <Chinesesimp>为自我交互菜单启用医疗操作。</Chinesesimp>
-            <Italian>Abilita il menu per le interazioni mediche personali</Italian>
+            <Italian>Abilita il menù per le interazioni mediche personali</Italian>
             <Czech>Povoluje zdravotnické akce v menu vlastních interakcí.</Czech>
             <Polish>Umożliwia działania medyczne w menu własnej interakcji.</Polish>
             <Spanish>Activa las acciones médicas para el menú de interacción personal</Spanish>
@@ -124,7 +124,7 @@
             <Portuguese>Ativar Menu Médico</Portuguese>
             <Chinese>啟用醫療選單</Chinese>
             <Chinesesimp>启用医疗菜单</Chinesesimp>
-            <Italian>Abilita il menu medico</Italian>
+            <Italian>Abilita il menù medico</Italian>
             <Czech>Povolit Zdravotnické menu</Czech>
             <Polish>Włącz Menu Medyczne</Polish>
             <Spanish>Activar menú médico</Spanish>
@@ -140,7 +140,7 @@
             <Portuguese>Ativa o uso do Menu Médico através da Tecla ou Menu de Interação.</Portuguese>
             <Chinese>啟用以互動選單或者按鍵綁定所呼出的高效醫療選單</Chinese>
             <Chinesesimp>通过按键绑定或交互菜单启用医疗菜单。</Chinesesimp>
-            <Italian>Abilita l'uso del Menu Medico attraverso il menu tastiera o il menu di interazione.</Italian>
+            <Italian>Abilita l'uso del Menù Medico attraverso il menù tastiera o il menu di interazione.</Italian>
             <Czech> Povoluje používání Zdravotnického menu klávesovou zkratku nebo skrze menu interakcí.</Czech>
             <Polish>Umożliwia korzystanie z menu medycznego poprzez  skrót lub menu interakcji.</Polish>
             <Spanish>Activa el uso del menú médico a través de la tecla o del menú de interacción</Spanish>
@@ -156,7 +156,7 @@
             <Portuguese>Reabrir Menu Médico</Portuguese>
             <Chinese>醫療選單二度開啟</Chinese>
             <Chinesesimp>重新打开医疗菜单</Chinesesimp>
-            <Italian>Riaprire il menù medico</Italian>
+            <Italian>Riapri il menù medico</Italian>
             <Czech>Znovu otevřít Zdravotnické menu</Czech>
             <Polish>Otwiera ponownie menu medyczne</Polish>
             <Spanish>Reabrir menú médico</Spanish>
@@ -172,7 +172,7 @@
             <Portuguese>Reabrir Menu Médico após um tratamento com sucesso</Portuguese>
             <Chinese>當治療完成後二度打開醫療選單</Chinese>
             <Chinesesimp>治疗成功后，重新打开医疗菜单。</Chinesesimp>
-            <Italian>Riaprire il menu medico dopo il trattamento con successo.</Italian>
+            <Italian>Riapri il menù medico dopo un trattamento eseguito con successo.</Italian>
             <Czech>Otevře Zdravotnické menu po úspěšném dokončení zdravotnické akce.</Czech>
             <Polish>Otwiera ponownie menu medyczne po udanym leczeniu.</Polish>
             <Spanish>Reabrir menú médico después de completar un tratamiento</Spanish>
@@ -188,7 +188,7 @@
             <Portuguese>Distância Máxima</Portuguese>
             <Chinese>最大醫療距離</Chinese>
             <Chinesesimp>最大医疗距离</Chinesesimp>
-            <Italian>Massima distanza</Italian>
+            <Italian>Distanza Massima</Italian>
             <Czech>Maximální vzdálenost</Czech>
             <Polish>Maksymalny dystans</Polish>
             <Spanish>Distancia máxima</Spanish>
@@ -198,13 +198,13 @@
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
             <German>Maximale Entfernung, um das Sanitätsmenü zu öffnen.</German>
-            <Japanese>治療メニューを開いたままにできる最大距離を決定します。</Japanese>
+            <Japanese>医療メニューを開いたままにできる最大距離を決定します。</Japanese>
             <Russian>Максимальное расстояние, с которого можно открыть Медицинское меню.</Russian>
             <French>Définit la distance (en mètres) à partir de laquelle il n'est plus possible d'activer le menu médical pour traiter un patient.</French>
             <Portuguese>A Distância máxima do paciente para que o Menu Médico possa ser aberto.</Portuguese>
             <Chinese>設定距離多遠以內可以對目標使用醫療選單</Chinese>
             <Chinesesimp>设定距离多远以内可以对目标使用医疗菜单</Chinesesimp>
-            <Italian>Distanza massima da cui si può aprire il Menu Medico.</Italian>
+            <Italian>Distanza massima da cui si può aprire il Menù Medico.</Italian>
             <Czech>Maximální vzdálenost ze které je možné otevřít Zdravotnické menu.</Czech>
             <Polish>Maksymalny dystans w którym menu medyczne może zostać otwarte.</Polish>
             <Spanish>Distancia máxima desde el paciente para que el menú pueda ser abierto</Spanish>
@@ -214,7 +214,8 @@
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_DisplayName">
             <English>Show Triage Level in Interaction Menu</English>
             <French>Couleur de triage dans le menu d'interaction</French>
-            <Japanese>インタラクションにトリアージ レベル表示</Japanese>
+            <Italian>Mostra livello di Triage nel Menù d'Interazione</Italian>
+            <Japanese>インタラクションにトリアージ レベルを表示</Japanese>
             <Spanish>Mostrar nivel de triado en menú de interacción</Spanish>
             <Russian>Показывать группу триажа в меню взаимодействий</Russian>
             <Polish>Pokaż poziom Triażu w menu interakcji</Polish>
@@ -225,6 +226,7 @@
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_Description">
             <English>Shows the patient's triage level by changing the color of the main and medical menu actions.</English>
             <French>Modifie la couleur du menu d'interactions et du sous-menu médical en fonction de la fiche de triage du patient.</French>
+            <Italian>Modifica il colore di interazioni e menù medico a seconda del livello di triage.</Italian>
             <Japanese>メニューと医療メニューの色を変更し、患者のトリアージ レベルを表示します。</Japanese>
             <Spanish>Mostrar el nivel de triado en el paciente cambiando el color de acciones de menú principales y médicas </Spanish>
             <Russian>Отображает установленную группу карты медицинской сортировки (триажа), изменяя цвет действий основного и медицинского меню.</Russian>
@@ -244,7 +246,7 @@
             <Russian>Медик</Russian>
             <Spanish>Médico</Spanish>
             <Hungarian>Orvosi</Hungarian>
-            <Japanese>治療</Japanese>
+            <Japanese>医療</Japanese>
             <Korean>치료</Korean>
             <Chinesesimp>医疗</Chinesesimp>
             <Chinese>醫療</Chinese>
@@ -260,7 +262,7 @@
             <Czech>Zdravotnická nabídka</Czech>
             <Italian>Menù Medico</Italian>
             <French>Menu médical</French>
-            <Japanese>治療メニュー</Japanese>
+            <Japanese>医療メニュー</Japanese>
             <Korean>의료 메뉴</Korean>
             <Chinesesimp>医疗菜单</Chinesesimp>
             <Chinese>醫療選單</Chinese>
@@ -276,7 +278,7 @@
             <Czech>Otevřít zdravotnickou nabídku</Czech>
             <Italian>Apri Menù Medico</Italian>
             <French>Ouvir le menu médical</French>
-            <Japanese>治療メニューを開く</Japanese>
+            <Japanese>医療メニューを開く</Japanese>
             <Korean>의료 메뉴 열기</Korean>
             <Chinesesimp>打开医疗菜单</Chinesesimp>
             <Chinese>開起醫療選單</Chinese>
@@ -287,6 +289,7 @@
             <Polish>Podgląd Informacji Medycznych</Polish>
             <Korean>의료 정보 보기</Korean>
             <French>Aperçu des informations médicales</French>
+            <Italian>Sbircia Info Mediche</Italian>
             <German>Medizinische Info anzeigen</German>
             <Japanese>医療情報一時表示</Japanese>
         </Key>
@@ -295,8 +298,9 @@
             <Polish>Czas Trwania Podglądu Medycznego</Polish>
             <Korean>의료 정보 보기 지속 시간</Korean>
             <French>Durée de l'aperçu des informations médicales</French>
+            <Italian>Durata di sbirciamento di info mediche</Italian>
             <German>Dauer zum Anzeigen der medizinischen Info</German>
-            <Japanese>医療情報一時表示の長さ</Japanese>
+            <Japanese>医療情報一時表示の表示時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
             <English>How long the medical info peek remains open after releasing the key.</English>
@@ -304,6 +308,7 @@
             <Korean>키를 놓은 후 의료 정보가 열린 상태로 유지되는 시간입니다.</Korean>
             <French>Durée d'affichage des informations médicales après avoir relâché la touche.</French>
             <German>Wie lange die medizinische Info-Anzeige nach dem Loslassen der Taste geöffnet bleibt.</German>
+            <Italian>Durata di visualizzazione delle Info Mediche dopo aver rilasciato il tasto.</Italian>
             <Japanese>医療情報一時表示キーを放してからどれだけ長く情報表示するか。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
@@ -446,7 +451,7 @@
             <Polish>Pokaż kartę segregacyjną</Polish>
             <Portuguese>Ver cartão de triagem</Portuguese>
             <Czech>Zkontrolovat štítek</Czech>
-            <Italian>Guarda Triage Card</Italian>
+            <Italian>Guarda Scheda Triage</Italian>
             <Japanese>トリアージカードを見る</Japanese>
             <Korean>부상자 카드 보기</Korean>
             <Chinesesimp>查看分诊卡</Chinesesimp>
@@ -478,7 +483,7 @@
             <Polish>Bandaże / Złamania</Polish>
             <Portuguese>Bandagens / Fraturas</Portuguese>
             <Czech>Bandáž / Zlomeniny</Czech>
-            <Italian>Bendaggi/Fratture</Italian>
+            <Italian>Bendaggi / Fratture</Italian>
             <Japanese>包帯 / 骨折</Japanese>
             <Korean>붕대 / 골절</Korean>
             <Chinesesimp>包扎/骨折</Chinesesimp>
@@ -494,7 +499,7 @@
             <Polish>Leki</Polish>
             <Portuguese>Medicação</Portuguese>
             <Czech>Léky</Czech>
-            <Italian>Medicazione</Italian>
+            <Italian>Medicazioni</Italian>
             <Japanese>投薬</Japanese>
             <Korean>약물 치료</Korean>
             <Chinesesimp>药物</Chinesesimp>
@@ -555,6 +560,7 @@
             <Korean>자신으로 전환</Korean>
             <French>Passer à soi-même</French>
             <German>Wechseln zu selbst</German>
+            <Italian>Passa a te stesso</Italian>
             <Japanese>自分に切り替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ToggleToOther">
@@ -563,6 +569,7 @@
             <Korean>대상으로 전환</Korean>
             <French>Passer à la cible</French>
             <German>Wechseln zu Ziel</German>
+            <Italian>Passa al paziente</Italian>
             <Japanese>相手に切り替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Head">
@@ -815,7 +822,7 @@
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
-            <Japanese>開いた状態の%1が%2個あります</Japanese>
+            <Japanese>開いた状態の %1 が %2 個ある</Japanese>
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
             <Chinesesimp>有 %2 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 開放性傷口</Chinese>
@@ -830,8 +837,8 @@
             <Polish>Widzisz 1 otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 %1 ferimento aberto</Portuguese>
             <Czech>Je zde 1 %1 otevřená rána</Czech>
-            <Italian>C'è 1 %1 Ferita Aperta</Italian>
-            <Japanese>開いた状態の%1が1個あります</Japanese>
+            <Italian>C'è una %1 Ferita Aperta</Italian>
+            <Japanese>開いた状態の %1 が 1 個ある</Japanese>
             <Korean>여기 %1 크기의 열린 상처가 있다</Korean>
             <Chinesesimp>有 1 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 開放性傷口</Chinese>
@@ -846,8 +853,8 @@
             <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
             <Czech>Je zde částečně %1 otevřená rána</Czech>
-            <Italian>C'è 1 parziale %1 Ferita Aperta</Italian>
-            <Japanese>開いた状態の部分的な%1があります</Japanese>
+            <Italian>C'è una parziale %1 Ferita Aperta</Italian>
+            <Japanese>開いた状態の 部分的な %1 がある</Japanese>
             <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有未完全处理的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 開放性傷口</Chinese>
@@ -863,7 +870,7 @@
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
             <Czech>Jsou zde %2 %1 ovázané rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Bendate</Italian>
-            <Japanese>包帯を巻いた%1が%2個あります</Japanese>
+            <Japanese>包帯を巻いた %1 が %2 個ある</Japanese>
             <Korean>여기에 붕대를 감은 %2 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有 %2 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 包紮過傷口</Chinese>
@@ -878,8 +885,8 @@
             <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 ferimento %1 tratado</Portuguese>
             <Czech>Je zde 1 %1 ovázaná rána</Czech>
-            <Italian>C'è 1 %1 Ferita Bendata</Italian>
-            <Japanese>包帯を巻いた%1が1個あります</Japanese>
+            <Italian>C'è una %1 Ferita Bendata</Italian>
+            <Japanese>包帯を巻いた %1 が 1 個ある</Japanese>
             <Korean>여기에 붕대를 감은 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有 1 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 包紮過傷口</Chinese>
@@ -894,8 +901,8 @@
             <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
             <Czech>Je zde částěčně %1 ovázaná rána</Czech>
-            <Italian>C'è 1 parziale %1 Ferita Bendata</Italian>
-            <Japanese>包帯を巻いた部分的な%1があります</Japanese>
+            <Italian>C'è una parziale %1 Ferita Bendata</Italian>
+            <Japanese>包帯を巻いた 部分的な %1 がある</Japanese>
             <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有未包扎完全的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 包紮過傷口</Chinese>
@@ -987,6 +994,7 @@
             <Korean>출혈 없음</Korean>
             <French>Pas de saignement</French>
             <German>Keine Blutung</German>
+            <Italian>Nessuna emorragia</Italian>
             <Japanese>出血はしていない</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate1">
@@ -995,6 +1003,7 @@
             <Korean>느린 출혈</Korean>
             <French>Saignement lent</French>
             <German>Langsame Blutung</German>
+            <Italian>Debole emorragia</Italian>
             <Japanese>出血は穏やか</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
@@ -1003,6 +1012,7 @@
             <Korean>중간 출혈</Korean>
             <French>Saignement modéré</French>
             <German>Mäßige Blutung</German>
+            <Italian>Emorraggia moderata</Italian>
             <Japanese>出血はそこそこ速い</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
@@ -1011,6 +1021,7 @@
             <Korean>심한 출혈</Korean>
             <French>Saignement grave</French>
             <German>Schwere Blutung</German>
+            <Italian>Forte emorragia</Italian>
             <Japanese>出血は激しい</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
@@ -1019,6 +1030,7 @@
             <Korean>과다 출혈</Korean>
             <French>Saignement massif</French>
             <German>Massive Blutung</German>
+            <Italian>Gravissima emorragia</Italian>
             <Japanese>出血は酷く多い</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
@@ -1030,7 +1042,7 @@
             <Polish>W bólu</Polish>
             <Portuguese>Com dor</Portuguese>
             <Czech>v bolestech</Czech>
-            <Italian>in Dolore</Italian>
+            <Italian>Dolorante</Italian>
             <Japanese>痛みがある</Japanese>
             <Korean>고통</Korean>
             <Chinesesimp>疼痛中</Chinesesimp>
@@ -1046,7 +1058,7 @@
             <Polish>Stracił dużo krwi</Polish>
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Czech>Ztratil hodně krve</Czech>
-            <Italian>Perso molto Sangue</Italian>
+            <Italian>Ha perso molto Sangue</Italian>
             <Japanese>大量失血した</Japanese>
             <Korean>많은 피를 흘림</Korean>
             <Chinesesimp>失血</Chinesesimp>
@@ -1072,7 +1084,7 @@
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
             <Russian>Наложена шина</Russian>
-            <Japanese>副子を当てている</Japanese>
+            <Japanese>添え木を当てた</Japanese>
             <French>Attelle appliquée</French>
             <Portuguese>Tala Aplicada</Portuguese>
             <Chinese>已使用固定板</Chinese>
@@ -1091,6 +1103,7 @@
             <Korean>피를 잃지 않음</Korean>
             <French>Pas de perte de sang</French>
             <German>Kein Blutverlust</German>
+            <Italian>Nessuna perdita di sangue</Italian>
             <Japanese>失血なし</Japanese>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
@@ -1200,7 +1213,7 @@
             <Czech>Štítek</Czech>
             <French>Fiche de triage</French>
             <Hungarian>Orvosi lap</Hungarian>
-            <Italian>Triage Card</Italian>
+            <Italian>Scheda Triage</Italian>
             <Portuguese>Cartão de Triagem</Portuguese>
             <Japanese>トリアージカード</Japanese>
             <Korean>부상자 분류 카드</Korean>
@@ -1228,6 +1241,7 @@
             <English>Patient Info</English>
             <Polish>Informacje o pacjencie</Polish>
             <French>Informations patient</French>
+            <Italian>Informazioni sul paziente</Italian>
             <Russian>Информация о пациенте</Russian>
             <Chinesesimp>伤员信息</Chinesesimp>
             <Japanese>患者情報</Japanese>
@@ -1239,8 +1253,9 @@
         <Key ID="STR_ACE_Medical_GUI_BloodLossColors">
             <English>Blood Loss Colors</English>
             <Russian>Цвета кровопотери</Russian>
-            <Japanese>失血量カラー</Japanese>
+            <Japanese>失血量の色</Japanese>
             <French>Couleurs des hémorragies</French>
+            <Italian>Colori di emorragie</Italian>
             <German>Farben für Blutverlust</German>
             <Polish>Kolory utraty krwi</Polish>
             <Chinesesimp>失血颜色</Chinesesimp>
@@ -1252,6 +1267,7 @@
             <Russian>Цвета кровопотери, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
             <Japanese>医療 GUI 内で失血量を 10 段階の色で表します。</Japanese>
             <French>Couleurs utilisées pour afficher les hémorragies dans l'interface médicale. Dégradé de 10 couleurs.</French>
+            <Italian>Definisce i 10 gradienti di colori usati per indicare perdite di sangue nel menù medico</Italian>
             <German>Farben für Blutverlust, die in dem Medizinischen Menü verwendet werden. 10-Farben Farbverlauf.</German>
             <Polish>Kolory używane do wyświetlania krwawienia w interfejsie medycznym. Gradient 10 kolorów.</Polish>
             <Chinesesimp>失血颜色，用于医学图形用户界面。10种渐变颜色。</Chinesesimp>
@@ -1261,8 +1277,9 @@
         <Key ID="STR_ACE_Medical_GUI_BloodLossColorX_DisplayName">
             <English>Blood Loss Color %1</English>
             <Russian>Цвет кровопотери %1</Russian>
-            <Japanese>失血量カラー %1</Japanese>
+            <Japanese>失血量の色 %1</Japanese>
             <French>Hémorragies - couleur %1</French>
+            <Italian>Emorragia - colore %1</Italian>
             <German>Blutverlustfarbe %1</German>
             <Polish>Krwawienie - kolor %1</Polish>
             <Chinesesimp>失血颜色 %1</Chinesesimp>
@@ -1272,8 +1289,9 @@
         <Key ID="STR_ACE_Medical_GUI_DamageColors">
             <English>Damage Colors</English>
             <Russian>Цвета урона</Russian>
-            <Japanese>負傷カラー</Japanese>
+            <Japanese>負傷の色</Japanese>
             <French>Couleur des dégâts</French>
+            <Italian>Colori di danni</Italian>
             <German>Farben für Schaden</German>
             <Polish>Kolory obrażeń</Polish>
             <Chinesesimp>负伤颜色</Chinesesimp>
@@ -1285,6 +1303,7 @@
             <Russian>Цвета урона, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
             <Japanese>医療 GUI 内で負傷を 10 段階の色で表します。</Japanese>
             <French>Couleurs utilisées pour afficher les dégâts dans l'interface médicale. Dégradé de 10 couleurs.</French>
+            <Italian>Definisce i 10 gradienti di colori usati per indicare danni nel menù medico</Italian>
             <German>Farben für Schaden, die in dem medizinischen Menü verwendet werden. 10-Farben Farbverlauf.</German>
             <Polish>Kolory używane do wyświetlania obrażeń w interfejsie medycznym. Gradient 10 kolorów.</Polish>
             <Chinesesimp>负伤颜色，用于医学图形用户界面。10种渐变颜色。</Chinesesimp>
@@ -1294,8 +1313,9 @@
         <Key ID="STR_ACE_Medical_GUI_DamageColorX_DisplayName">
             <English>Damage Color %1</English>
             <Russian>Цвет урона %1</Russian>
-            <Japanese>負傷カラー %1</Japanese>
+            <Japanese>負傷の色 %1</Japanese>
             <French>Dégâts - couleur %1</French>
+            <Italian>Danni - colore %1</Italian>
             <German>Schadensfarbe %1</German>
             <Polish>Obrażenia - kolor %1</Polish>
             <Chinesesimp>负伤颜色 %1</Chinesesimp>
@@ -1305,6 +1325,7 @@
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_DisplayName">
             <English>Show Blood Loss</English>
             <German>Blutverlust anzeigen</German>
+            <Italian>Mostra perdita di sangue</Italian>
             <Korean>혈액 손실 표시</Korean>
             <Polish>Pokaż utratę krwi</Polish>
             <Japanese>失血量の表示</Japanese>
@@ -1316,6 +1337,7 @@
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
             <English>Show qualitative blood loss in the injury list.</English>
             <German>Qualitativen Blutverlust in der Verletzungsliste anzeigen.</German>
+            <Italian>Mostra quantità di sangue persa nella lista delle ferite.</Italian>
             <Korean>부상 목록에 혈액 손실량을 표시합니다.</Korean>
             <Polish>Pokaż jakościową utratę krwi na liście ran.</Polish>
             <Japanese>負傷リストに段階的な失血量を表示します。</Japanese>
@@ -1330,8 +1352,9 @@
             <Korean>맞을 시 의료 정보 보기</Korean>
             <Chinesesimp>点击查看医疗信息</Chinesesimp>
             <French>Aperçu des informations médicales lors d'une blessure</French>
+            <Italian>Mostra info mediche se colpito</Italian>
             <German>Zeige medizinische Info beim Treffer an</German>
-            <Japanese>受傷時の医療情報一時表示</Japanese>
+            <Japanese>被弾時の医療情報一時表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
             <English>Temporarily show medical info when injured.</English>
@@ -1339,8 +1362,9 @@
             <Korean>부상을 입었을 때 일시적으로 의료 정보를 표시합니다.</Korean>
             <Chinesesimp>受伤时暂时显示医疗信息。</Chinesesimp>
             <French>Afficher temporairement les informations médicales lors d'une blessure.</French>
+            <Italian>Mostra temporaneamente le info mediche quando si viene feriti.</Italian>
             <German>Bei Verletzungen vorübergehend medizinische Info anzeigen.</German>
-            <Japanese>受傷時に医療情報を一時的に表示します。</Japanese>
+            <Japanese>被弾時に医療情報を一時的に表示します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
             <English>Medical Peek Duration on Hit</English>
@@ -1348,8 +1372,9 @@
             <Korean>맞을 시 의료 정보 보기 지속 시간</Korean>
             <Chinesesimp>击中时的医疗信息显示持续时间</Chinesesimp>
             <French>Durée de l'aperçu des informations médicales lors d'une blessure</French>
+            <Italian>Durata di info mediche quando colpito</Italian>
             <German>Dauer der Anzeige bei einem Treffer.</German>
-            <Japanese>受傷時の医療情報一時表示の長さ</Japanese>
+            <Japanese>被弾時の医療情報一時表示の表示時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
             <English>How long the medical info peek remains open after being injured.</English>
@@ -1357,15 +1382,17 @@
             <Korean>부상을 입은 후에도 의료 정보가 열린 상태로 지속되는 시간입니다.</Korean>
             <Chinesesimp>受伤后医疗信息会开放多长时间?</Chinesesimp>
             <French>Durée de l'affichage des informations médicales lors d'une blessure.</French>
+            <Italian>Quanto tempo verranno visualizzate le info mediche quando si viene feriti.</Italian>
             <German>Wie lange die medizinische Info nach einer Verletzung angezeigt wird.</German>
-            <Japanese>受傷した後に医療情報の一時表示をどれだけ長く表示するか。</Japanese>
+            <Japanese>被弾時の医療情報の一時表示をどれだけ長く表示するか。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
             <Portuguese>Mostrar Traumatismo Sofrido</Portuguese>
-            <Japanese>外傷の表示</Japanese>
+            <Japanese>外傷状態の表示</Japanese>
             <Polish>Pokaż Doznane Urazy</Polish>
             <German>Zeigen Sie das erlittene Trauma</German>
+            <Italian>Mostra trauma sofferto</Italian>
             <Korean>외상 지속 표시</Korean>
             <Chinesesimp>显示遭受的创伤</Chinesesimp>
             <French>Afficher les traumatismes subis</French>
@@ -1373,9 +1400,10 @@
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_Description">
             <English>Show trauma sustained in the injury list.</English>
             <Portuguese>Mostrar traumatismo sofrido na lista de feridas.</Portuguese>
-            <Japanese>負傷リストに外傷を表示する。</Japanese>
+            <Japanese>負傷リストに外傷状態を表示する。</Japanese>
             <Polish>Pokaż odniesione obrażenia na liście obrażeń.</Polish>
             <German>Zeigen Sie das erlittene Trauma in der Verletzungsliste an.</German>
+            <Italian>Mostra il trauma ricevuto nella lista delle ferite.</Italian>
             <Korean>부상 목록에 발생한 외상을 표시합니다.</Korean>
             <Chinesesimp>在伤情表上显示创伤</Chinesesimp>
             <French>Afficher les traumatismes subis dans la liste des blessures.</French>
@@ -1386,8 +1414,9 @@
             <Korean>신체부위 윤곽선 색상</Korean>
             <Chinesesimp>身体部位轮廓颜色</Chinesesimp>
             <French>Couleur des contours des parties du corps</French>
+            <Italian>Colore del contorno di parti del corpo</Italian>
             <German>Umrissfarbe des Körperteils</German>
-            <Japanese>身体部位の輪郭表示カラー</Japanese>
+            <Japanese>身体部位の輪郭表示の色</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_Description">
             <English>Color of outline around selected body part.</English>
@@ -1395,6 +1424,7 @@
             <Korean>선택한 신체부위 주위의 윤곽선 색상입니다.</Korean>
             <Chinesesimp>选定身体部位周围的轮廓颜色。</Chinesesimp>
             <French>Couleur des contours autour des parties du corps sélectionnées.</French>
+            <Italian>Colore del contorno della parte del corpo selezionata.</Italian>
             <German>Farbe des Umrisses um das ausgewählten Körperteil.</German>
             <Japanese>選択した身体部位の輪郭表示の色。</Japanese>
         </Key>
@@ -1404,6 +1434,7 @@
             <Japanese>軽度の外傷</Japanese>
             <Polish>Niewielki Uraz</Polish>
             <German>Kleineres Trauma</German>
+            <Italian>Trauma piccolo</Italian>
             <Korean>약한 외상</Korean>
             <Chinesesimp>轻微创伤</Chinesesimp>
             <French>Traumatisme mineur</French>
@@ -1414,6 +1445,7 @@
             <Japanese>中度の外傷</Japanese>
             <Polish>Poważny Uraz</Polish>
             <German>Großes Trauma</German>
+            <Italian>Trauma grande</Italian>
             <Korean>중간 외상</Korean>
             <Chinesesimp>中度创伤</Chinesesimp>
             <French>Traumatisme majeur</French>
@@ -1424,6 +1456,7 @@
             <Japanese>重度の外傷</Japanese>
             <Polish>Ciężki Uraz</Polish>
             <German>Schweres Trauma</German>
+            <Italian>Trauma severo</Italian>
             <Korean>강한 외상</Korean>
             <Chinesesimp>重度创伤</Chinesesimp>
             <French>Traumatisme grave</French>
@@ -1434,6 +1467,7 @@
             <Japanese>重篤な外傷</Japanese>
             <Polish>Przewlekły Uraz</Polish>
             <German>Chronisches Trauma</German>
+            <Italian>Trauma cronico</Italian>
             <Korean>심각한 외상</Korean>
             <Chinesesimp>慢性创伤</Chinesesimp>
             <French>Traumatisme chronique</French>
@@ -1444,6 +1478,7 @@
             <Korean>좌</Korean>
             <Chinesesimp>L</Chinesesimp>
             <French>G</French>
+            <Italian>Sx</Italian>
             <German>L</German>
             <Japanese>左</Japanese>
         </Key>
@@ -1453,6 +1488,7 @@
             <Korean>우</Korean>
             <Chinesesimp>R</Chinesesimp>
             <French>D</French>
+            <Italian>Dx</Italian>
             <German>R</German>
             <Japanese>右</Japanese>
         </Key>
@@ -1462,8 +1498,9 @@
             <Korean>개: 당신의 소지품</Korean>
             <Chinesesimp>在你的库存中</Chinesesimp>
             <French>dans votre inventaire</French>
+            <Italian>Nel proprio inventario</Italian>
             <German>im Inventar</German>
-            <Japanese>あなたのインベントリ内</Japanese>
+            <Japanese>個あなたが保有</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Patient">
             <English>in patient's inventory</English>
@@ -1471,8 +1508,9 @@
             <Korean>개: 환자의 소지품</Korean>
             <Chinesesimp>在病人库存中</Chinesesimp>
             <French>dans l'inventaire du patient</French>
+            <Italian>Nell'inventario del paziente</Italian>
             <German>im Inventar des Patienten</German>
-            <Japanese>患者のインベントリ内</Japanese>
+            <Japanese>個患者が保有</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
             <English>in vehicle's inventory</English>
@@ -1481,7 +1519,8 @@
             <French>dans l'inventaire du véhicule</French>
             <Korean>개: 차량의 소지품</Korean>
             <German>im Inventar des Fahrzeuges</German>
-            <Japanese>車両のインベントリ内</Japanese>
+            <Italian>Nell'inventario del veicolo</Italian>
+            <Japanese>個車両内に保有</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
             <English>No effect until tourniquet removed</English>
@@ -1489,6 +1528,7 @@
             <French>Aucun effet jusqu'à ce que le garrot soit retiré</French>
             <Korean>지혈대를 제거할 때까지 효과 없음</Korean>
             <German>Keine Wirkung, bis das Tourniquet entfernt wurde</German>
+            <Italian>Nessun effetto fino alla rimozione del laccio emostatico</Italian>
             <Japanese>止血帯を外すまで効果を発揮しません</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
@@ -1497,6 +1537,7 @@
             <French>Afficher l'avertissement du garrot</French>
             <Korean>지혈 경고 표시</Korean>
             <German>Tourniquet-Warnung anzeigen</German>
+            <Italian>Mostra avviso di laccio emostatico</Italian>
             <Japanese>止血帯の警告を表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
@@ -1505,6 +1546,7 @@
             <French>Affiche un avertissement lorsqu'un garrot interfère avec une action médicale.</French>
             <Korean>지혈대가 의료 조치를 방해할 경우 경고 툴팁을 표시합니다.</Korean>
             <German>Zeigt einen Hinweis an, wenn ein Tourniquet eine medizinische Maßnahme beeinträchtigt.</German>
+            <Italian>Mostra un avviso se un laccio emostatico impedisce un trattamento medico.</Italian>
             <Japanese>止血帯が医療行為を妨げる場合には、警告ツールチップを表示します。</Japanese>
         </Key>
     </Package>

@@ -9,6 +9,7 @@
             <Russian>[CSW] BGM-71A TOW</Russian>
             <Spanish>[CSW] BGM-71A TOW</Spanish>
             <German>[CSW] BGM-71A TOW</German>
+            <Italian>[CSW] BGM-71A TOW</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOWB_displayName">
             <English>[CSW] BGM-71B TOW</English>
@@ -18,6 +19,7 @@
             <Russian>[CSW] BGM-71B TOW</Russian>
             <Spanish>[CSW] BGM-71B TOW</Spanish>
             <German>[CSW] BGM-71B TOW</German>
+            <Italian>[CSW] BGM-71B TOW</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_ITOW_displayName">
             <English>[CSW] BGM-71C ITOW</English>
@@ -27,6 +29,7 @@
             <Russian>[CSW] BGM-71C ITOW</Russian>
             <Spanish>[CSW] BGM-71C ITOW</Spanish>
             <German>[CSW] BGM-71C ITOW</German>
+            <Italian>[CSW] BGM-71C ITOW</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2_displayName">
             <English>[CSW] BGM-71D TOW-2</English>
@@ -36,6 +39,7 @@
             <Russian>[CSW] BGM-71D TOW-2</Russian>
             <Spanish>[CSW] BGM-71D TOW-2</Spanish>
             <German>[CSW] BGM-71D TOW-2</German>
+            <Italian>[CSW] BGM-71D TOW-2</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2A_displayName">
             <English>[CSW] BGM-71E TOW-2A</English>
@@ -45,6 +49,7 @@
             <Russian>[CSW] BGM-71E TOW-2A</Russian>
             <Spanish>[CSW] BGM-71E TOW-2A</Spanish>
             <German>[CSW] BGM-71E TOW-2A</German>
+            <Italian>[CSW] BGM-71E TOW-2A</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2b_displayName">
             <English>[CSW] BGM-71F TOW-2B</English>
@@ -54,6 +59,7 @@
             <Russian>[CSW] BGM-71F TOW-2B</Russian>
             <Spanish>[CSW] BGM-71F TOW-2B</Spanish>
             <German>[CSW] BGM-71F TOW-2B</German>
+            <Italian>[CSW] BGM-71F TOW-2B</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2b_aero_displayName">
             <English>[CSW] BGM-71F-3 TOW-2B AERO</English>
@@ -63,15 +69,17 @@
             <Russian>[CSW] BGM-71F-3 TOW-2B AERO</Russian>
             <Spanish>[CSW] BGM-71F-3 TOW-2B AERO</Spanish>
             <German>[CSW] BGM-71F-3 TOW-2B AERO</German>
+            <Italian>[CSW] BGM-71F-3 TOW-2B AERO</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_mag_TOW2bb_displayName">
             <English>[CSW] BGM-71H Bunker Buster</English>
             <Korean>[CSW] BGM-71H 벙커버스터</Korean>
-            <Japanese>[CSW] BGM-71H Bunker Buster</Japanese>
+            <Japanese>[CSW] BGM-71H バンカーバスター</Japanese>
             <Chinesesimp>[班组] BGM-71H “碉堡克星”</Chinesesimp>
             <Russian>[CSW] BGM-71H Bunker Buster</Russian>
             <Spanish>[CSW] BGM-71H Anti-Búnquer</Spanish>
             <German>[CSW] BGM-71H Bunker Buster</German>
+            <Italian>[CSW] BGM-71H Anti-Bunker</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_48Rnd_40mm_MK19_displayName">
             <English>[CSW] Mk. 19 40mm M384 HE</English>
@@ -81,6 +89,7 @@
             <Russian>[CSW] Mk. 19 40 мм M384 HE</Russian>
             <Spanish>[CSW] Mk. 19 40mm M384 HE</Spanish>
             <German>[CSW] Mk. 19 40mm M384 HE</German>
+            <Italian>[CSW] Mk. 19 40mm M384 HE</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_48Rnd_40mm_MK19_M430I_displayName">
             <English>[CSW] Mk. 19 40mm M430I HEDP</English>
@@ -90,6 +99,7 @@
             <Russian>[CSW] Mk. 19 40 мм M430I HEDP</Russian>
             <Spanish>[CSW] Mk. 19 40mm M430I HEDP</Spanish>
             <German>[CSW] Mk. 19 40mm M430I HEDP</German>
+            <Italian>[CSW] Mk. 19 40mm M430I HEDP</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_48Rnd_40mm_MK19_M430A1_displayName">
             <English>[CSW] Mk. 19 40mm M430A1 HEDP</English>
@@ -99,6 +109,7 @@
             <Russian>[CSW] Mk. 19 40 мм M430A1 HEDP</Russian>
             <Spanish>[CSW] Mk. 19 40mm M430A1 HEDP</Spanish>
             <German>[CSW] Mk. 19 40mm M430A1 HEDP</German>
+            <Italian>[CSW] Mk. 19 40mm M430A1 HEDP</Italian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_USF3_CSW_48Rnd_40mm_MK19_M1001_displayName">
             <English>[CSW] Mk. 19 40mm M1001 Canister</English>
@@ -108,6 +119,7 @@
             <Russian>[CSW] Mk. 19 40 мм M1001 Канистровый</Russian>
             <Spanish>[CSW] Mk. 19 40mm M1001 Bote de metralla</Spanish>
             <German>[CSW] Mk. 19 40mm M1001 Kanister</German>
+            <Italian>[CSW] Mk. 19 40mm M1001 Pallettoni</Italian>
         </Key>
     </Package>
 </Project>

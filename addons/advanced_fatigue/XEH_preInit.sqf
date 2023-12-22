@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 GVAR(staminaBarWidth) = 10 * (((safezoneW / safezoneH) min 1.2) / 40);
 GVAR(dutyList) = createHashMap;
