@@ -70,9 +70,13 @@
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateAllOnActive">
             <English>Detonate All on Active Clacker</English>
+            <German>Alle auf Standardzünder zünden</German>
+            <Italian>Detona Tutti sul Detonatore Attivo</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_SetActiveTrigger">
             <English>Set Active Clacker</English>
+            <German>Als Standardzünder Wählen</German>
+            <Italian>Imposta Detonatore Attivo</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
