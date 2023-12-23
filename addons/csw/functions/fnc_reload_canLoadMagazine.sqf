@@ -10,7 +10,7 @@
  * 3: Supplier <OBJECT> (default: objNull)
  *
  * Return Value:
- * [CanLoad <BOOL>, LoadedMag <STRING>, AmmoNeeded <NUMBER>, IsBeltLinking <BOOL>] <ARRAY>
+ * [Can Load <BOOL>, Loaded Mag <STRING>, Ammo Needed <NUMBER>, Is Belt Linking <BOOL>] <ARRAY>
  *
  * Example:
  * [cursorObject, [0], "ACE_csw_100Rnd_127x99_mag_red", player] call ace_csw_fnc_reload_canLoadMagazine
@@ -63,7 +63,7 @@ private _isBeltLinking = false;
             };
             private _maxMagazineAmmo = _desiredAmmo min getNumber (_cfgMagazines >> _xMag >> "count");
             if (_xAmmo >= _maxMagazineAmmo) exitWith {
-                [false, _loadedMag, -6, false] breakOut "main"; // Already at capicity
+                [false, _loadedMag, -6, false] breakOut "main"; // Already at capacity
             };
             _ammoNeeded = _maxMagazineAmmo - _xAmmo;
             _isBeltLinking = true;

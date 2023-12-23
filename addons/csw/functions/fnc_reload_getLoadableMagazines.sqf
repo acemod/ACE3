@@ -10,7 +10,7 @@
  *
  * Return Value:
  * Mags <ARRAY>
- * [Carry Magazine <STRING>, Turret Path <ARRAY>, Load Info <NUMBER>, Magazine Source <OBJECT>]
+ *   [Carry Magazine <STRING>, Turret Path <ARRAY>, Load Info <ARRAY>, Magazine Source <OBJECT>, Unit <OBJECT>, Magazine Ammo <NUMBER>]
  *
  * Example:
  * [cursorObject, player] call ace_csw_fnc_reload_getLoadableMagazines

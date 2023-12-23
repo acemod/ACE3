@@ -39,7 +39,7 @@ private _onFinish = {
     private _nearUnits = _vehicle nearEntities ["CAManBase", 5];
     [QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;
 
-    TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_ammo, _unit);
+    TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_ammo,_unit);
     [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _ammo, _unit, _magSource]] call CBA_fnc_globalEvent;
 };
 
