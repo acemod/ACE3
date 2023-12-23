@@ -52,7 +52,7 @@ private _explosivesList = [];
 
 if (_detonator != "ACE_DeadManSwitch") then {
     // Add action to detonate all explosives tied to the detonator
-    if (count _explosivesList > 0) then {
+    if (count _explosivesList > 1) then {
         _children pushBack [
             [
                 "Explosive_All",
