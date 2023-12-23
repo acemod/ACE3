@@ -50,6 +50,30 @@ private _explosivesList = [];
     };
 } forEach _result;
 
+// If the detonator is not active, is a clacker and has assigned explosives, generate an interaction to make it the active detonator for use with the "trigger all" keybind
+if (
+    _detonator isNotEqualTo GVAR(activeTrigger) &&
+    {_detonator isNotEqualTo "Cellphone"} && 
+    {
+        count(_explosivesList) > 0 ||
+        (_detonator isEqualTo "ACE_DeadManSwitch" && {_unit getVariable [QGVAR(deadmanInvExplosive), ""] != ""})
+    }
+) then {
+    _children pushBack [
+        [
+            GVAR(SetActiveTrigger),
+            localize LSTRING(SetActiveTrigger),
+            "",
+            {GVAR(activeTrigger) = (_this select 2) select 0;},
+            {true},
+            {},
+            [_detonator]
+        ] call EFUNC(interact_menu,createAction),
+        [],
+        _unit
+    ];
+};
+
 if (_detonator != "ACE_DeadManSwitch") then {
     // Add action to detonate all explosives tied to the detonator
     if (count _explosivesList > 1) then {

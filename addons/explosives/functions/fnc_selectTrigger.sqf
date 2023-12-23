@@ -22,6 +22,12 @@ TRACE_3("params",_explosive,_magazine,_trigger);
 
 private _config = ConfigFile >> "ACE_Triggers" >> _trigger;
 
+// Make selected trigger the active one (for keybind) if it's the first to be connected
+private _activeTrigger = GVAR(activeTrigger);
+if (_activeTrigger isEqualTo "" && {_trigger in ["Command", "MK16_Transmitter", "DeadManSwitch"]}) then {
+    GVAR(activeTrigger) = getArray (_config >> "requires") select 0;
+};
+
 // If the onSetup function returns true, it is handled elsewhere
 if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {
     TRACE_2("onSetup returned true",_explosive,_trigger);

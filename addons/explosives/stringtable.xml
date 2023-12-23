@@ -68,6 +68,12 @@
             <Chinese>引爆全部</Chinese>
             <Turkish>Hepsini Patlat</Turkish>
         </Key>
+        <Key ID="STR_ACE_Explosives_DetonateAllOnActive">
+            <English>Detonate All on Active Clacker</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_SetActiveTrigger">
+            <English>Set Active Clacker</English>
+        </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
             <German>Sprengstoffcode: %1</German>
