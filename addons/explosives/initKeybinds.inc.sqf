@@ -3,9 +3,8 @@
 ["ACE Explosives", QGVAR(openCellphone), LLSTRING(cellphone_displayName),
 {
     if (
-        !('ACE_Cellphone' in (items ACE_player)) ||
-        {ACE_player getVariable [QEGVAR(captives,isSurrendering), false]} ||
-        {ACE_player getVariable [QEGVAR(captives,isHandcuffed), false]}
+        !('ACE_Cellphone' in ([ACE_player] call EFUNC(common,uniqueItems))) ||
+        !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))
     ) exitWith {};
     closeDialog 0;
     createDialog 'Rsc_ACE_PhoneInterface';
@@ -16,7 +15,7 @@
 ["ACE Explosives", QGVAR(detonateActiveClacker), LLSTRING(DetonateAllOnActive),
 {
     // Prevent use of keybind while surrendering or captive
-    if (ACE_player getVariable [QEGVAR(captives,isSurrendering), false] || {ACE_player getVariable [QEGVAR(captives,isHandcuffed), false]}) exitWith {};
+    if !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
 
     private _detonator = GVAR(activeTrigger);
     if (_detonator isEqualTo "" || !(_detonator in ([ACE_player] call FUNC(getDetonators)))) exitWith {};
