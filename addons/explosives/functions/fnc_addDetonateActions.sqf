@@ -52,19 +52,19 @@ private _explosivesList = [];
 
 // If the detonator is not active, is a clacker and has assigned explosives, generate an interaction to make it the active detonator for use with the "trigger all" keybind
 if (
-    _detonator isNotEqualTo GVAR(activeTrigger) &&
-    {_detonator isNotEqualTo "Cellphone"} && 
+    _detonator != GVAR(activeTrigger) &&
+    {_detonator != "Cellphone"} && 
     {
-        count(_explosivesList) > 0 ||
-        (_detonator isEqualTo "ACE_DeadManSwitch" && {_unit getVariable [QGVAR(deadmanInvExplosive), ""] != ""})
+        _explosivesList isNotEqualTo [] ||
+        {_detonator == "ACE_DeadManSwitch" && {_unit getVariable [QGVAR(deadmanInvExplosive), ""] != ""}}
     }
 ) then {
     _children pushBack [
         [
-            GVAR(SetActiveTrigger),
-            localize LSTRING(SetActiveTrigger),
+            QGVAR(setActiveTrigger),
+            LLSTRING(SetActiveTrigger),
             "",
-            {GVAR(activeTrigger) = (_this select 2) select 0;},
+            {GVAR(activeTrigger) = (_this select 2) select 0},
             {true},
             {},
             [_detonator]
@@ -80,12 +80,12 @@ if (_detonator != "ACE_DeadManSwitch") then {
         _children pushBack [
             [
                 "Explosive_All",
-                localize LSTRING(DetonateAll),
-                getText(ConfigFile >> "CfgWeapons" >> _detonator >> "picture"),
-                {(_this select 2) call FUNC(detonateExplosiveAll);},
+                LLSTRING(DetonateAll),
+                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                {(_this select 2) call FUNC(detonateExplosiveAll)},
                 {true},
                 {},
-                [_unit,_range,_explosivesList, _detonator]
+                [_unit, _range, _explosivesList, _detonator]
             ] call EFUNC(interact_menu,createAction),
             [],
             _unit
@@ -96,8 +96,8 @@ if (_detonator != "ACE_DeadManSwitch") then {
     _children pushBack [
         [
             "Explosive_All_Deadman",
-            localize LSTRING(DetonateAll),
-            getText(ConfigFile >> "CfgWeapons" >> _detonator >> "picture"),
+            LLSTRING(DetonateAll),
+            getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
             {[_player] call FUNC(onIncapacitated)},
             {true}
         ] call EFUNC(interact_menu,createAction),

@@ -18,19 +18,19 @@
     if !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
 
     private _detonator = GVAR(activeTrigger);
-    if (_detonator isEqualTo "" || !(_detonator in ([ACE_player] call FUNC(getDetonators)))) exitWith {};
+    if (_detonator == "" || !(_detonator in ([ACE_player] call FUNC(getDetonators)))) exitWith {};
 
     // When using a Dead Man's Switch, skip all other logic and just call fnc_onIncapacitated, since it already handles everything that is required to detonate all connected explosives
-    if (_detonator isEqualTo "ACE_DeadManSwitch") exitWith {
+    if (_detonator == "ACE_DeadManSwitch") exitWith {
         [ACE_player] call FUNC(onIncapacitated);
     };
 
-    private _range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
+    private _range = getNumber (configFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
 
     private _explosivesList = [];
     {
-        if (!isNull(_x select 0)) then {
-            private _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
+        if (!isNull (_x select 0)) then {
+            private _required = getArray (configFile >> "ACE_Triggers" >> _x select 4 >> "requires");
             if (_detonator in _required) then {
                 _explosivesList pushBack _x;
             };
