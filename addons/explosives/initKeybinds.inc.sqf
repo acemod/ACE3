@@ -11,7 +11,7 @@
     createDialog 'Rsc_ACE_PhoneInterface';
 },
 {false},
-[DIK_C, [false, true, true]], false, 0] call CBA_fnc_addKeybind; // (CTRL+ALT+C)
+[DIK_C, [false, false, true]], false, 0] call CBA_fnc_addKeybind; // (ALT+C)
 
 ["ACE Explosives", QGVAR(detonateActiveClacker), LLSTRING(DetonateAllOnActive),
 {
@@ -41,4 +41,4 @@
     [ACE_player, _range, _explosivesList, _detonator] call FUNC(detonateExplosiveAll);
 },
 {false},
-[DIK_C, [false, false, true]], false, 0] call CBA_fnc_addKeybind; // (ALT+C)
+[DIK_C, [false, true, true]], false, 0] call CBA_fnc_addKeybind; // (CTRL+ALT+C)
