@@ -78,6 +78,16 @@
             <German>Als Standardzünder Wählen</German>
             <Italian>Imposta Detonatore Attivo</Italian>
         </Key>
+        <Key ID="STR_ACE_Explosives_CycleActiveTrigger">
+            <English>Cycle Active Clacker</English>
+            <German>Standardzünder Wechseln</German>
+            <Italian>Cambia Detonatore Attivo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ActiveTrigger">
+            <English>Active Clacker</English>
+            <German>Standardzünder</German>
+            <Italian>Detonatore Attivo</Italian>
+        </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
             <German>Sprengstoffcode: %1</German>
