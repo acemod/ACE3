@@ -3,11 +3,11 @@
 ["ACE Explosives", QGVAR(openCellphone), LLSTRING(cellphone_displayName),
 {
     if (
-        !('ACE_Cellphone' in ([ACE_player] call EFUNC(common,uniqueItems))) ||
+        !("ACE_Cellphone" in ([ACE_player] call EFUNC(common,uniqueItems))) ||
         !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))
     ) exitWith {};
     closeDialog 0;
-    createDialog 'Rsc_ACE_PhoneInterface';
+    createDialog "Rsc_ACE_PhoneInterface";
 },
 {false},
 [DIK_C, [false, false, true]], false, 0] call CBA_fnc_addKeybind; // (ALT+C)
