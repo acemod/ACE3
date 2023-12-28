@@ -19,7 +19,10 @@
 
 params ["_unit", "_deltaT", "_syncValue"];
 
-if (!GVAR(simulateSpO2)) exitWith {};
+if (!GVAR(simulateSpO2)) exitWith {
+    _unit setVariable [QGVAR(oxygenDemand), 0];
+    _unit setVariable [VAR_SPO2, DEFAULT_SPO2, _syncValue];
+};
 
 #define IDEAL_PPO2 0.255
 
