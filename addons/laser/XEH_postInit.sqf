@@ -2,7 +2,7 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 if (hasInterface) then {
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"
 
     GVAR(pfID) = -1;
 

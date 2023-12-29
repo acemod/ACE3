@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // Define "Constants" variables (both are macros defined in script_macros_medical.hpp, look there for actual variable names)
 if (isNil QUOTE(SPONTANEOUS_WAKE_UP_INTERVAL)) then {SPONTANEOUS_WAKE_UP_INTERVAL = SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT};

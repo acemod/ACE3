@@ -31,6 +31,6 @@
 }] call CBA_fnc_addEventHandler;
 
 #ifdef DEBUG_MODE_FULL
-#include "dev\showShotInfo.sqf"
-#include "dev\checkConfigs.sqf"
+#include "dev\showShotInfo.inc.sqf"
+#include "dev\checkConfigs.inc.sqf"
 #endif

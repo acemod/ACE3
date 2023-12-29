@@ -19,6 +19,6 @@ if (isServer) then {
 
 GVAR(GlobalSkillAI) = [0.5,0.5,0.5,0.5,true,true];
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

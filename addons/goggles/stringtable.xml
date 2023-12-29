@@ -102,7 +102,7 @@
         <Key ID="STR_ACE_Goggles_effects_effectsOnly">
             <English>Effects</English>
             <Russian>эффекты</Russian>
-            <Japanese>効果</Japanese>
+            <Japanese>エフェクト</Japanese>
             <Polish>Efekty</Polish>
             <German>Effekte</German>
             <Korean>효과</Korean>
@@ -118,7 +118,7 @@
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
             <Russian>Тонировка + эффекты</Russian>
-            <Japanese>色彩 + 効果</Japanese>
+            <Japanese>色彩 + エフェクト</Japanese>
             <Polish>Winieta + Efekty</Polish>
             <German>Tönung + Effekte</German>
             <Korean>색조+효과</Korean>

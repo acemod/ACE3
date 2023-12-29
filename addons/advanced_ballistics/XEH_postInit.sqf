@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"
 
 GVAR(currentbulletID) = -1;
 

@@ -28,6 +28,6 @@ private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";
     } forEach _magazines;
 } forEach getArray (_cfgThrow >> "muzzles");
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

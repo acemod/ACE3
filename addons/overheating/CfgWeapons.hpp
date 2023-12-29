@@ -109,7 +109,7 @@ class CfgWeapons {
         descriptionshort = CSTRING(SpareBarrelDescription);
         picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 60;
+            mass = 25;
         };
     };
 };

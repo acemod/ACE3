@@ -27,7 +27,7 @@
             <Spanish>Descargar</Spanish>
             <Italian>Scarica</Italian>
             <French>Décharger</French>
-            <Japanese>下ろす</Japanese>
+            <Japanese>降ろす</Japanese>
             <Korean>내리기</Korean>
             <Chinese>卸載</Chinese>
             <Chinesesimp>卸载</Chinesesimp>
@@ -38,22 +38,26 @@
             <Japanese>名前を次に変更:&lt;br/&gt;%1</Japanese>
             <French>Renommé en :&lt;br/&gt;%1</French>
             <Russian>Переименовано в:&lt;br/&gt;%1</Russian>
-            <German>Neu Bewaffnet: &lt;br/&gt;%1</German>
+            <German>Neu umbenannt zu: &lt;br/&gt;%1</German>
+            <Italian>Rinominato in: &lt;br/&gt;%1</Italian>
             <Polish>Nazwa zmieniona na:&lt;br/&gt;%1</Polish>
             <Chinesesimp>重命名为：&lt;br/&gt;%1</Chinesesimp>
             <Korean>%1(으)로 명칭을 바꿈</Korean>
             <Spanish>Renombrado a:&lt;br/&gt;%1</Spanish>
+            <Portuguese>Renomeado para: &lt;br/&gt;%1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
-            <Japanese>カスタム名が削除されました。</Japanese>
+            <Japanese>カスタムネームが削除されました。</Japanese>
             <French>Le nom personnalisé a été supprimé.</French>
             <Russian>Пользовательское название удалено.</Russian>
             <German>Eigener Name wurde gelöscht.</German>
+            <Italian>Nome personalizzato cancellato.</Italian>
             <Polish>Własna nazwa została usunięta</Polish>
             <Chinesesimp>自定义名称已被清除。</Chinesesimp>
             <Korean>임의로 지은 명칭을 지웠습니다.</Korean>
             <Spanish>El nombre personalizado ha sido borrado.</Spanish>
+            <Portuguese>O nome personalizado foi apagado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
@@ -61,10 +65,12 @@
             <French>Définir un nouveau nom :</French>
             <Russian>Задать новое название:</Russian>
             <German>Neuen Namen setzen:</German>
+            <Italian>Imposta nome personalizzato:</Italian>
             <Polish>Ustaw nową nazwę:</Polish>
             <Chinesesimp>设定新名称：</Chinesesimp>
             <Korean>새로운 명칭 설정:</Korean>
             <Spanish>Establecer nuevo nombre:</Spanish>
+            <Portuguese>Definir novo nome:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
@@ -72,21 +78,25 @@
             <French>Possibilité de renommage</French>
             <Russian>Вкл. возможность переименования</Russian>
             <German>Aktiviere Umbenennungs-Aktion</German>
+            <Italian>Attiva azione di rinomina</Italian>
             <Polish>Włącz możliwość zmiany nazwy</Polish>
             <Chinesesimp>启用重命名动作</Chinesesimp>
             <Korean>새로 명칭 짓기 행동 활성화</Korean>
             <Spanish>Habilitar renombrado</Spanish>
+            <Portuguese>Habilitar ação de renomear</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
-            <Japanese>名前変更が可能なオブジェクトに対して、名前変更動作を有効化します。</Japanese>
+            <Japanese>名前変更が可能なオブジェクトに対して、名前変更アクションを有効化します。</Japanese>
             <French>Active la possibilité de donner un nom personnalisé aux objets transportables (si renommables).</French>
             <Russian>Включает переименование для объектов, допускающих переименование.</Russian>
             <German>Aktiviert die Umbenennungs-Aktion für neu benennbare Objekte.</German>
+            <Italian>Attiva la funzione di rinomina per nuovi oggetti rinominabili.</Italian>
             <Polish>Włącza akcję zmiany nazwy dla obiektów z możliwością zmiany nazwy.</Polish>
             <Chinesesimp>启用可重命名物体的重命名动作。</Chinesesimp>
             <Korean>개체의 명칭을 새로 짓는 것을 허가합니다.</Korean>
             <Spanish>Habilitar renombrado para los objetos renombrables.</Spanish>
+            <Portuguese>Habilita a ação de renomear para objetos renomeáveis.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -96,7 +106,7 @@
             <Russian>Грузовой отсек</Russian>
             <Czech>Náklad</Czech>
             <Spanish>Carga</Spanish>
-            <Italian>Cargo</Italian>
+            <Italian>Carico</Italian>
             <French>Cargaison</French>
             <Japanese>カーゴ</Japanese>
             <Korean>화물</Korean>
@@ -112,7 +122,7 @@
             <Russian>Грузовой отсек</Russian>
             <Czech>Menu nákladu</Czech>
             <Spanish>Menu de carga</Spanish>
-            <Italian>Menù Cargo</Italian>
+            <Italian>Menù del Carico</Italian>
             <French>Menu de cargaison</French>
             <Japanese>カーゴ メニュー</Japanese>
             <Korean>화물 메뉴</Korean>
@@ -128,7 +138,7 @@
             <Russian>Осталось мест: %1</Russian>
             <Czech>Zbývající prostor: %1</Czech>
             <Spanish>Espacio de carga restante: %1</Spanish>
-            <Italian>Spazio cargo rimanente: %1</Italian>
+            <Italian>Spazio di carico rimanente: %1</Italian>
             <French>Espace de chargement restant : %1</French>
             <Japanese>カーゴの空き容量: %1</Japanese>
             <Korean>선적 공간 남음: %1</Korean>
@@ -144,7 +154,7 @@
             <Russian>Вкл. модуль перевозки грузов</Russian>
             <Czech>Povolit náklad</Czech>
             <Spanish>Habilitar carga</Spanish>
-            <Italian>Abilita Cargo</Italian>
+            <Italian>Abilita Carico</Italian>
             <French>Activer la cargaison</French>
             <Japanese>カーゴを有効化</Japanese>
             <Korean>화물 활성화</Korean>
@@ -160,7 +170,7 @@
             <Russian>Включает модуль погрузки и перевозки грузов</Russian>
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
-            <Italian>Abilita il modulo di caricamento in cargo</Italian>
+            <Italian>Abilita il modulo di caricamento nel carico</Italian>
             <French>Active la possibilité de charger du matériel dans un module de fret (véhicule/container).</French>
             <Japanese>カーゴ モジュールで積み込みを有効化</Japanese>
             <Korean>화물 모듈을 활성화합니다</Korean>
@@ -175,7 +185,7 @@
             <Russian>Перевозка грузов</Russian>
             <Czech>Nastavení nákladu</Czech>
             <Spanish>Ajustes de carga</Spanish>
-            <Italian>Impostazioni Cargo</Italian>
+            <Italian>Impostazioni Carico</Italian>
             <French>Paramètres de cargaison</French>
             <Japanese>カーゴ設定</Japanese>
             <Korean>화물 설정</Korean>
@@ -191,7 +201,7 @@
             <Russian>Конфигурирует настройки модуля перевозки грузов</Russian>
             <Spanish>Configure los ajustes del módulo de carga</Spanish>
             <Czech>Konfigurace nákladního modulu</Czech>
-            <Italian>Configura le impostazioni del modulo cargo</Italian>
+            <Italian>Configura le impostazioni del modulo carico</Italian>
             <French>Configure les paramètres du module de cargaison.</French>
             <Japanese>カーゴ モジュールの設定を構成</Japanese>
             <Korean>화물 모듈의 환경 설정을 바꿉니다</Korean>
@@ -209,7 +219,7 @@
             <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
-            <Japanese>%1&lt;br/&gt;は&lt;br/&gt;%2へ積み込まれました</Japanese>
+            <Japanese>%1 は&lt;br/&gt;%2 へ&lt;br/&gt;積み込まれました</Japanese>
             <Korean>%1은(는)&lt;br/&gt;%2 에 실림</Korean>
             <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
             <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
@@ -225,7 +235,7 @@
             <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
-            <Japanese>&lt;br/&gt;%1が&lt;br/&gt;%2から降ろされました</Japanese>
+            <Japanese>%1 が&lt;br/&gt;%2 から&lt;br/&gt;降ろされました</Japanese>
             <Korean>%1은(는)&lt;br/&gt;%2에서 내려짐</Korean>
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
@@ -272,7 +282,7 @@
             <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
             <French>%1&lt;br /&gt;n'a pas pu être chargé</French>
-            <Japanese>%1&lt;br/&gt;は積み込めませんでした</Japanese>
+            <Japanese>%1 は&lt;br/&gt;積み込めませんでした</Japanese>
             <Korean>%1을(를) 싣을 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被裝載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被装载</Chinesesimp>
@@ -288,38 +298,58 @@
             <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
             <French>%1&lt;br /&gt;n'a pas pu être déchargé</French>
-            <Japanese>%1&lt;br/&gt;は降ろせませんでした</Japanese>
+            <Japanese>%1 は&lt;br/&gt;降ろせませんでした</Japanese>
             <Korean>%1을(를) 하역할 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
             <Turkish>%1&lt;br/&gt; kargo boşaltılamadı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Cargo_UnloadingImpossible">
+            <English>Can't be unloaded</English>
+            <German>Kann nicht entladen werden</German>
+            <Italian>Impossibile da scaricare</Italian>
+            <French>Ne peut pas être déchargé</French>
+            <Japanese>降ろせません</Japanese>
+            <Korean>하역할 수가 없습니다</Korean>
+        </Key>
+        <Key ID="STR_ACE_Cargo_SizeMenu">
+            <English>Cargo Size: %1</English>
+            <German>Frachtgröße: %1</German>
+            <Italian>Dimensione Carico: %1</Italian>
+            <French>Encombrement fret: %1</French>
+            <Japanese>カーゴ サイズ: %1</Japanese>
+            <Korean>화물 크기: %1</Korean>
+        </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
-            <Japanese>カスタム名</Japanese>
+            <Japanese>カスタムネーム</Japanese>
             <French>Nom personnalisé</French>
             <German>Eigener Name</German>
+            <Italian>Nome Personalizzato</Italian>
             <Polish>Własna nazwa</Polish>
             <Chinesesimp>自定义名称</Chinesesimp>
             <Korean>임의 명칭</Korean>
             <Russian>Собственное название</Russian>
             <Spanish>Nombre personalizado</Spanish>
+            <Portuguese>Nome personalizado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
-            <Japanese>カーゴ欄で使われるカスタム名を設定します。</Japanese>
+            <Japanese>カーゴ一覧で使用されるカスタムネームを設定します。</Japanese>
             <French>Définit un nom de fret personnalisé qui sera visible dans le menu de cargaison.</French>
             <Russian>Установить пользовательское имя груза, используемое в интерфейсе погрузки.</Russian>
             <German>Definiere eigenen Frachtnamen, welcher im Frachtraum genutzt wird.</German>
+            <Italian>Definisce nome personalizzato, verrà mostrato nel menù del carico.</Italian>
             <Polish>Ustaw własną nazwę ładunku, używaną w menu ładunku.</Polish>
             <Chinesesimp>设置货物界面中使用的一个自定义货物名称。</Chinesesimp>
             <Korean>화물 인터페이스에 쓰일 화물의 명칭을 설정합니다.</Korean>
             <Spanish>Establecer un nombre personalizado de carga en la interfaz de carga.</Spanish>
+            <Portuguese>Defina um nome de carga personalizado usado na interface de carga.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
             <German>Frachtraum</German>
-            <Italian>Spazio Cargo</Italian>
+            <Italian>Spazio di Carico</Italian>
             <Japanese>カーゴ スペース</Japanese>
             <Chinese>貨物空間</Chinese>
             <Chinesesimp>货物空间</Chinesesimp>
@@ -350,7 +380,7 @@
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
             <German>Frachtgröße</German>
-            <Italian>Dimensioni Cargo</Italian>
+            <Italian>Dimensioni nel Carico</Italian>
             <Japanese>カーゴ サイズ</Japanese>
             <Chinese>貨物的大小</Chinese>
             <Chinesesimp>货物的大小</Chinesesimp>
@@ -364,10 +394,10 @@
             <Turkish>Kargo Boyutu</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
-            <English>The cargo space required to hold this object (-1 for unloadable)</English>
+            <English>The cargo space required to hold this object (-1 for not loadable)</English>
             <German>Frachtraumgröße, welche zum Einladen dieses Objektes benötigt wird (-1 nicht einladbar)</German>
-            <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
-            <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
+            <Italian>Lo spazio di carico necessario per contenere questo oggetto (-1 per non caricabile)</Italian>
+            <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可にします)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
             <Chinesesimp>此货物会占掉多少空间（设定 -1 的话此货物就不能被装载）</Chinesesimp>
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
@@ -411,8 +441,8 @@
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coefficient</English>
             <German>Türlast Zeitfaktor</German>
-            <Japanese>空中投下までの時間係数</Japanese>
-            <Italian>Coefficente Tempo Lancio Paracadute</Italian>
+            <Japanese>空中投下の所要時間係数</Japanese>
+            <Italian>Coefficiente Tempo Lancio Aereo</Italian>
             <French>Coefficient du temps de paralargage</French>
             <Chinese>空投時間係數</Chinese>
             <Chinesesimp>空投时间系数</Chinesesimp>
@@ -427,7 +457,7 @@
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
             <German>Beeinflusst die zusätzliche Zeit für Türlastabwürfe.</German>
             <Japanese>カーゴ アイテムを空中投下するまでの時間を変更します。</Japanese>
-            <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
+            <Italian>Modifica quanto tempo viene impiegato per paracadutare oggetti dal carico.</Italian>
             <French>Modifie le temps nécessaire au paralargage d'une cargaison.</French>
             <Chinese>設定空投所需消耗的時間</Chinese>
             <Chinesesimp>设定空投所需消耗的时间。</Chinesesimp>
@@ -441,7 +471,7 @@
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
             <German>Ladezeitmultiplikator</German>
-            <Japanese>積載時間の係数</Japanese>
+            <Japanese>積載所要時間係数</Japanese>
             <Polish>Współczynnik czasu załadowania</Polish>
             <Italian>Coefficente Tempo Caricamento</Italian>
             <Russian>Коэф. времени погрузки</Russian>
@@ -456,9 +486,9 @@
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
             <German>Gibt an, wie lange das Laden / Entladen von Gegenständen dauern soll.\nZeit in Sekunden, die mit der Größe des Gegenstandes multipliziert wird.</German>
-            <Japanese>アイテムの積み下ろし作業にかかる時間を編集できます。\nアイテムの大きさにこの値が乗法され、時間 (秒) を変更できます。</Japanese>
+            <Japanese>アイテムのロード/アンロードに掛かる時間を変更します。\n時間 (秒) は、アイテムのサイズにこの値を掛けたものです。</Japanese>
             <Polish>Modyfikuje, jak długo zajmuje załadowywanie/wyładowywanie przedmiotów. \nCzasem, w sekundach, jest wielkość przedmiotu razy jego wartość.</Polish>
-            <Italian>Modifica quanto tempo ci impiega a caricare o scaricare gli oggetti.\n Tempo, in secondi, è la dimensione dell'oggetto moltiplicata per questo valore</Italian>
+            <Italian>Modifica il tempo impiegato per caricare o scaricare gli oggetti.\nIl tempo, in secondi, equivale alla dimensione dell'oggetto moltiplicata per questo valore</Italian>
             <Russian>Изменяет время для загрузки/выгрузки предметов. \n Время (сек) - это размер предмета, умноженный на это значение.</Russian>
             <Portuguese>Coeficiente de quanto tempo leva para carregar/descarregar itens.\nTempo, em segundos, é o tamanho do objeto multiplicado por esse valor.</Portuguese>
             <French>Modifie le temps nécessaire pour charger/décharger des objets.\nLe temps, en secondes, est calculé en multipliant la taille de l'élément par ce coefficient.</French>
@@ -475,10 +505,12 @@
             <French>Rouvrir le menu de cargaison</French>
             <Russian>Переоткрыть меню погрузки</Russian>
             <German>Frachtmenü erneut öffnen</German>
+            <Italian>Riapri Menù del Carico</Italian>
             <Polish>Ponownie otwórz menu załadunku</Polish>
             <Chinesesimp>重新打开货物菜单</Chinesesimp>
             <Korean>화물 메뉴 다시 열기</Korean>
             <Spanish>Reabrir menú de carga</Spanish>
+            <Portuguese>Reabrir menu de carga</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
             <English>Reopen the Cargo Menu after successful unload.</English>
@@ -487,10 +519,12 @@
             <French>Réouvre le menu de cargaison après un déchargement réussi.</French>
             <Russian>Переоткрыть меню погрузки после успешной выгрузки.</Russian>
             <German>Frachtmenü erneut öffnen, nach erfolgreichen Entladen.</German>
+            <Italian>Riapri il Menù del Carico dopo aver scaricato un oggetto con successo.</Italian>
             <Polish>Ponownie otwórz menu załadunku po udanym wyładowaniu.</Polish>
             <Chinesesimp>成功卸货后，重新打开货物菜单。</Chinesesimp>
             <Korean>화물을 성공적으로 내리고 난 다음 화물 메뉴를 열지 결정합니다.</Korean>
             <Spanish>Reabrir menú de carga despues de una descarga satisfactoria.</Spanish>
+            <Portuguese>Reabre o menu de carga após uma descarga bem sucedida.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload">
             <English>Carry After Unload</English>
@@ -500,7 +534,9 @@
             <Japanese>荷降ろし後の運搬</Japanese>
             <Polish>Niesienie Po Rozładowaniu</Polish>
             <German>Nach dem Entladen tragen</German>
+            <Italian>Trasporta dopo aver Scaricato</Italian>
             <French>Porter après déchargement</French>
+            <Portuguese>Transporte após descarregar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
             <English>Controls whether cargo items are carried or dragged after unloading.</English>
@@ -510,7 +546,9 @@
             <Japanese>荷降ろし後、貨物アイテムを運ぶか引きずるかを制御する。</Japanese>
             <Polish>Kontroluje, czy przedmioty z ładunku są przenoszone lub ciągnięte po ich wyładowaniu.</Polish>
             <German>Steuert, ob Objekte nach dem Entladen getragen oder gezogen werden.</German>
+            <Italian>Determina se un oggetto verrà subito trasportato o trascinato dopo essere stato scaricato.</Italian>
             <French>Active si les éléments de cargaison sont portés ou traînés après le déchargement.</French>
+            <Portuguese>Controla se os itens de carga são carregados ou arrastados após a descarga.</Portuguese>
         </Key>
     </Package>
 </Project>
