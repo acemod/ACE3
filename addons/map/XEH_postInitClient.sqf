@@ -8,7 +8,7 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
-GVAR(flashlights) = [] call CBA_fnc_createNamespace;
+GVAR(flashlights) = createHashMap;
 
 ["CBA_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
@@ -72,9 +72,8 @@ GVAR(hasWatch) = true;
     };
     GVAR(hasWatch) = false;
     {
-        if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
-        false
-    } count (assignedItems _unit);
+        if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true};
+    } forEach (assignedItems _unit);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 

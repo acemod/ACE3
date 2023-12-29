@@ -17,4 +17,4 @@
 
 params [["_faction", "", [""]]];
 
-GVAR(disabledFactions) setVariable [_faction, true];
+GVAR(disabledFactions) set [toLower _faction, true];

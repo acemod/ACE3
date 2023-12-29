@@ -40,6 +40,6 @@
             TRACE_1("Caching Condition",_x);
         } forEach (configProperties [_x >> "conditions"]);
 
-        GVAR(configCache) setVariable [_class, [_idd, _elements, _location, _conditions]];
+        GVAR(configCache) set [_class, [_idd, _elements, _location, _conditions]];
     };
 } forEach ("true" configClasses (configFile >> "ACE_UI"));

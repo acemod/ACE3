@@ -19,7 +19,7 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-private _shouldAdd = GVAR(cacheRoundsTypesToTrack) getVariable _ammo;
+private _shouldAdd = GVAR(cacheRoundsTypesToTrack) get _ammo;
 if (isNil "_shouldAdd") then {
     TRACE_1("no cache for round",_ammo);
 
@@ -40,7 +40,7 @@ if (isNil "_shouldAdd") then {
     };
 
     TRACE_6("Setting Cache",_skip,_explosive,_indirectRange,_force,_fragPower,_shouldAdd);
-    GVAR(cacheRoundsTypesToTrack) setVariable [_ammo, _shouldAdd];
+    GVAR(cacheRoundsTypesToTrack) set [_ammo, _shouldAdd];
 };
 
 if (_shouldAdd) then {

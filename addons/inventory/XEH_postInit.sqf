@@ -8,13 +8,13 @@ if (!hasInterface) exitWith {};
 // but if the item has the same name and picture it at least shouldn't change the filter anyway
 // luckily we don't need private items, so dummy and parent classes are out of the picture
 
-GVAR(ItemKeyNamespace) = [] call CBA_fnc_createNamespace;
+GVAR(ItemKeyNamespace) = createHashMap;
 private _allItems = uiNamespace getVariable [QGVAR(ItemKeyCache), []]; //See XEH_preStart.sqf
 
 // isEqualType is hacking protection as we cannot trust that the cache hasn't been manipulated
 {
     if (_x isEqualType [] && {_x isEqualTypeArray ["", configNull]}) then {
-        GVAR(ItemKeyNamespace) setVariable _x;
+        GVAR(ItemKeyNamespace) set _x;
     };
 } forEach ([[], _allItems] select (_allItems isEqualType []));
 

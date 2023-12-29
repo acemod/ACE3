@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 
-GVAR(hardpointGroupsCache) = [] call CBA_fnc_createNamespace;
 GVAR(configTypesAdded) = [];
-GVAR(magazineNameCache) = [] call CBA_fnc_createNamespace;
+GVAR(magazineNameCache) = createHashMap;
 GVAR(originalMagazineNames) = [];
 
 [QGVAR(initSupplyVehicle), {

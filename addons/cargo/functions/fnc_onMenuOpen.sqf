@@ -50,9 +50,7 @@ if (GVAR(interactionParadrop)) then {
         } else {
             _ctrl lbAdd _displayName;
         };
-
-        true
-    } count _loaded;
+    } forEach _loaded;
 
     _label ctrlSetText format[localize LSTRING(labelSpace), [GVAR(interactionVehicle)] call DFUNC(getCargoSpaceLeft)];
 }, 0, []] call CBA_fnc_addPerFrameHandler;

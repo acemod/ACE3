@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ace_addCargo", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
+["ace_addCargo", LINKFUNC(addCargoItem)] call CBA_fnc_addEventHandler;
 [QGVAR(paradropItem), {
     params ["_item", "_vehicle", ["_showHint", true]];
 
@@ -62,8 +62,8 @@
 }] call CBA_fnc_addEventHandler;
 
 // Private events to handle adding actions globally via public functions
-[QGVAR(initObject), DFUNC(initObject)] call CBA_fnc_addEventHandler;
-[QGVAR(initVehicle), DFUNC(initVehicle)] call CBA_fnc_addEventHandler;
+[QGVAR(initObject), LINKFUNC(initObject)] call CBA_fnc_addEventHandler;
+[QGVAR(initVehicle), LINKFUNC(initVehicle)] call CBA_fnc_addEventHandler;
 
 
 GVAR(vehicleAction) = [

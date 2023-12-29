@@ -2,7 +2,7 @@
 
 if (isServer) then {
     // Cancel dig on hard disconnection. Function is identical to killed
-    addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleKilled)}];
+    addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleKilled)];
 
     // Wrapper for blockTrench_place, on failure send hint back to source
     [QGVAR(layTrenchline), {
@@ -27,11 +27,11 @@ GVAR(digDirection) = 0;
 ["ace_interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call CBA_fnc_addEventHandler;
 
 // Cancel dig on player change. This does work when returning to lobby, but not when hard disconnecting.
-["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
-["loadout", FUNC(handlePlayerInventoryChanged)] call CBA_fnc_addPlayerEventHandler;
+["unit", LINKFUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+["loadout", LINKFUNC(handlePlayerInventoryChanged)] call CBA_fnc_addPlayerEventHandler;
 ["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
 
 // handle waking up dragged unit and falling unconscious while dragging
-["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 
 //@todo Captivity?

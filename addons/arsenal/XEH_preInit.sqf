@@ -30,21 +30,10 @@ PREP_RECOMPILE_END;
     ];
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(statsChangePage), {
-    _this call FUNC(buttonStatsPage);
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(displayStats), {
-    _this call FUNC(handleStats);
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(actionsChangePage), {
-    _this call FUNC(buttonActionsPage);
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(displayActions), {
-    _this call FUNC(handleActions);
-}] call CBA_fnc_addEventHandler;
+[QGVAR(statsChangePage), LINKFUNC(buttonStatsPage)] call CBA_fnc_addEventHandler;
+[QGVAR(displayStats), LINKFUNC(handleStats)] call CBA_fnc_addEventHandler;
+[QGVAR(actionsChangePage), LINKFUNC(buttonActionsPage)] call CBA_fnc_addEventHandler;
+[QGVAR(displayActions), LINKFUNC(handleActions)] call CBA_fnc_addEventHandler;
 
 [QGVAR(actionsToggle), {
     params ["_display", "_showActions"];

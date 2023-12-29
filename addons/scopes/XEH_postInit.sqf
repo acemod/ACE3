@@ -24,7 +24,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
     };
 
     // Check inventory when it changes
-    ["loadout", FUNC(inventoryCheck), true] call CBA_fnc_addPlayerEventHandler;
+    ["loadout", LINKFUNC(inventoryCheck), true] call CBA_fnc_addPlayerEventHandler;
 
     // Instantly hide knobs when scoping in
     ["cameraView", {

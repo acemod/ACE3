@@ -5,4 +5,4 @@
 GVAR(active) = false;
 GVAR(initialised) = false;
 
-[QEGVAR(vector,rangefinderData), {_this call FUNC(sord)}] call CBA_fnc_addEventHandler;
+[QEGVAR(vector,rangefinderData), LINKFUNC(sord)] call CBA_fnc_addEventHandler;

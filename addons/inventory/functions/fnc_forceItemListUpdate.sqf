@@ -26,7 +26,7 @@ if (_filterFunction isEqualType {}) then {
     private _i = 0;
 
     while {_i < lbSize _itemList} do {
-        private _config = GVAR(ItemKeyNamespace) getVariable format ["%1:%2", _itemList lbText _i, _itemList lbPicture _i];
+        private _config = GVAR(ItemKeyNamespace) get format ["%1:%2", _itemList lbText _i, _itemList lbPicture _i];
 
         if (!isNil "_config" && {!(_config call _filterFunction)}) then {
             _itemList lbDelete _i;

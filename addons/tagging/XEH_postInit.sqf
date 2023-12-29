@@ -3,10 +3,10 @@
 
 
 // Cache for static objects
-GVAR(cacheStaticModels) = [false] call CBA_fnc_createNamespace;
+GVAR(cacheStaticModels) = createHashMap;
 private _cacheStaticModels = call (uiNamespace getVariable [QGVAR(cacheStaticModels), {[]}]);
 {
-    GVAR(cacheStaticModels) setVariable [_x, true];
+    GVAR(cacheStaticModels) set [_x, true];
 } forEach _cacheStaticModels;
 
 if (hasInterface) then {
@@ -14,7 +14,7 @@ if (hasInterface) then {
     call FUNC(compileConfigTags);
 
     // Scripted tag adding EH
-    [QGVAR(applyCustomTag), FUNC(applyCustomTag)] call CBA_fnc_addEventHandler;
+    [QGVAR(applyCustomTag), LINKFUNC(applyCustomTag)] call CBA_fnc_addEventHandler;
 
     // Keybind
     ["ACE3 Equipment", QGVAR(quickTag), localize LSTRING(QuickTag), {
@@ -32,4 +32,4 @@ if (!isServer) exitWith {};
 GVAR(testingThread) = false;
 GVAR(tagsToTest) = [];
 
-[QGVAR(createTag), DFUNC(createTag)] call CBA_fnc_addEventHandler;
+[QGVAR(createTag), LINKFUNC(createTag)] call CBA_fnc_addEventHandler;

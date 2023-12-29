@@ -35,7 +35,7 @@ if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
 
 {
     GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-} count [1, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+} forEach [1, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 
 [0, _playerDir] call FUNC(updateMemory);
@@ -43,7 +43,7 @@ if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
 if (GVAR(MinAvgMaxMode) == 1) then {
     {
         GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-    } count [2, 3, 4];
+    } forEach [2, 3, 4];
 
     // Wind SPD
     private _windSpeed = call FUNC(measureWindSpeed);
@@ -74,4 +74,4 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     GVAR(TOTAL) set [4, (GVAR(TOTAL) select 4) + _headwind];
 };
 
-{ _x call FUNC(updateMemory); true } count [[5, _temperature],[6, _chill],[7, _humidity],[8, _heatIndex],[9, _dewPoint],[10, _wetBulb],[11, _barometricPressure],[12, _altitude],[13, _densityAltitude]];
+{ _x call FUNC(updateMemory)} forEach [[5, _temperature],[6, _chill],[7, _humidity],[8, _heatIndex],[9, _dewPoint],[10, _wetBulb],[11, _barometricPressure],[12, _altitude],[13, _densityAltitude]];

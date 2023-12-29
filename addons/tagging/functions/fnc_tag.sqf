@@ -61,7 +61,7 @@ if ((!isNull _object) && {
 
     // If the class is not categorized correctly search the cache
     private _modelName = (getModelInfo _object) select 0;
-    private _isStatic = GVAR(cacheStaticModels) getVariable [_modelName, false];
+    private _isStatic = GVAR(cacheStaticModels) getOrDefault [_modelName, false];
     TRACE_2("Object:",_modelName,_isStatic);
     // If the class in not on the cache, exit
     (!_isStatic)

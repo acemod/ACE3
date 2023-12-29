@@ -34,7 +34,7 @@ _unit setVariable [QGVAR(isUsingSandbag), true];
     // Force physx update
     {
         _x setPosASL (getPosASL _x);
-    } count (_unit nearObjects ["ACE_SandbagObject", 5]);
+    } forEach (_unit nearObjects ["ACE_SandbagObject", 5]);
 
     [_unit, "ACE_Sandbag_empty"] call EFUNC(common,addToInventory);
 }, [_unit, _sandbag], 1.5] call CBA_fnc_waitAndExecute;

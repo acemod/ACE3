@@ -31,8 +31,7 @@
             [GVAR(fireSources), _key] call CBA_fnc_hashRem;
         }] call CBA_fnc_addEventHandler;
 
-        [{ _this call FUNC(fireManagerPFH) }, FIRE_MANAGER_PFH_DELAY, []] call CBA_fnc_addPerFrameHandler;
+        [LINKFUNC(fireManagerPFH), FIRE_MANAGER_PFH_DELAY, []] call CBA_fnc_addPerFrameHandler;
         GVAR(fireSources) = [[], nil] call CBA_fnc_hashCreate;
     };
 }] call CBA_fnc_addEventHandler;
-

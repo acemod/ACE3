@@ -8,6 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
-GVAR(GroupColorCfgMappingNew) = call CBA_fnc_createNamespace;
+GVAR(GroupColorCfgMappingNew) = createHashMap;
 
 ADDON = true;

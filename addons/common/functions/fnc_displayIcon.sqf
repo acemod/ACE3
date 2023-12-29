@@ -53,8 +53,7 @@ private _refresh = {
 
     {
         ctrlDelete _x;
-        false
-    } count _allControls;
+    } forEach _allControls;
 
     _allControls = [];
 
@@ -116,8 +115,7 @@ if (_show) then {
             if (_x select 0 != _iconId) then {
                 _newList pushBack _x;
             };
-            false
-        } count _list;
+        } forEach _list;
 
         missionNamespace setVariable [QGVAR(displayIconList), _newList];
         call _refresh;

@@ -49,9 +49,7 @@ _filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
 
         _index = _filter lbAdd _name;
         _filter lbSetData [_index, _fncName];
-
-        false
-    } count GVAR(customFilters);
+    } forEach GVAR(customFilters);
 
     // readd "All" filter to last position and select it
     _index = _filter lbAdd _nameAll;

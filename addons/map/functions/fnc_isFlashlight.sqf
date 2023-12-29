@@ -17,7 +17,7 @@
 
 params [["_class", "", [""]]];
 
-private _isFlashlight = GVAR(flashlights) getVariable _class;
+private _isFlashlight = GVAR(flashlights) get _class;
 
 if (isNil "_isFlashlight") then {
     private _items = ([_class] + (_class call CBA_fnc_switchableAttachments));
@@ -37,7 +37,7 @@ if (isNil "_isFlashlight") then {
     } != -1;
 
     // cache value
-    GVAR(flashlights) setVariable [_class, _isFlashlight];
+    GVAR(flashlights) set [_class, _isFlashlight];
 };
 
 _isFlashlight // return

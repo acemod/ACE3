@@ -8,15 +8,18 @@ GVAR(ammoEventHandlers) = createHashMap;
 if (!hasInterface) exitWith {};
 
 // Ammo/Magazines look-up hash for correctness of initSpeed
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";
+
 GVAR(ammoMagLookup) = createHashMap;
 {
     {
-        private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
+        private _ammo = getText (_cfgMagazines >> _x >> "ammo");
         if (_ammo != "") then {
             GVAR(ammoMagLookup) set [_ammo, _x];
         };
-    } forEach (getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines"));
-} forEach (getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles"));
+    } forEach (getArray (_cfgThrow >> _x >> "magazines"));
+} forEach (getArray (_cfgThrow >> "muzzles"));
 
 
 // Add keybinds

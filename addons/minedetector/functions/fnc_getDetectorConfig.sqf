@@ -19,7 +19,7 @@ params ["_detectorType"];
 
 if (_detectorType isEqualTo "") exitWith {[]};
 
-private _detectorConfig = GVAR(detectorConfigs) getVariable _detectorType;
+private _detectorConfig = GVAR(detectorConfigs) get _detectorType;
 if (isNil "_detectorConfig") then {
     private _cfgEntry = (configFile >> "ACE_detector" >> "detectors" >> _detectorType);
     if (isClass _cfgEntry) then {
@@ -31,6 +31,6 @@ if (isNil "_detectorConfig") then {
     } else {
         _detectorConfig = [];
     };
-    GVAR(detectorConfigs) setVariable [_detectorType, _detectorConfig];
+    GVAR(detectorConfigs) set [_detectorType, _detectorConfig];
 };
 _detectorConfig

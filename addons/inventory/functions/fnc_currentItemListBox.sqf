@@ -27,7 +27,6 @@ scopeName "main";
     if (ctrlShown _control) then {
         _control breakOut "main";
     };
-    false
-} count [IDC_ITEMLIST_GROUND, IDC_ITEMLIST_SOLDIER, IDC_ITEMLIST_UNIFORM, IDC_ITEMLIST_VEST, IDC_ITEMLIST_BACKPACK];
+} forEach [IDC_ITEMLIST_GROUND, IDC_ITEMLIST_SOLDIER, IDC_ITEMLIST_UNIFORM, IDC_ITEMLIST_VEST, IDC_ITEMLIST_BACKPACK];
 
 controlNull

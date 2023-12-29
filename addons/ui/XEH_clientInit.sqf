@@ -4,11 +4,11 @@
 if (!hasInterface) exitWith {};
 
 // Compile and cache config UI
-GVAR(configCache) = call CBA_fnc_createNamespace;
+GVAR(configCache) = createHashMap;
 call FUNC(compileConfigUI);
 
 // Scripted API namespace
-GVAR(elementsSet) = call CBA_fnc_createNamespace;
+GVAR(elementsSet) = createHashMap;
 
 // Attach all event handlers where UI has to be updated
 ["CBA_settingsInitialized", {
@@ -22,7 +22,7 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
         private _force = [true, false] select (GVAR(allowSelectiveUI));
         {
             [_x, missionNamespace getVariable (format [QGVAR(%1), _x]), false, _force] call FUNC(setAdvancedElement);
-        } forEach (allVariables GVAR(configCache));
+        } forEach (keys GVAR(configCache));
 
         // Execute local event for when it's safe to modify UI through this API
         // infoDisplayChanged can execute multiple times, make sure it only happens once
@@ -41,7 +41,7 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
             [true] call FUNC(setElements);
         } else {
             private _nameNoPrefix = toLower (_name select [7]);
-            private _cachedElement = GVAR(configCache) getVariable _nameNoPrefix;
+            private _cachedElement = GVAR(configCache) get _nameNoPrefix;
             if (!isNil "_cachedElement") then {
                 [_nameNoPrefix, _value, true] call FUNC(setAdvancedElement);
             };
@@ -49,4 +49,4 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
 
-["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
+["unit", LINKFUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;

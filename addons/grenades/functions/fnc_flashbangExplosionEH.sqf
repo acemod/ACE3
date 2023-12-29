@@ -84,7 +84,7 @@ _affected = _affected - [ACE_player];
             }, [_unit]] call CBA_fnc_waitUntilAndExecute;
         };
     };
-} count _affected;
+} forEach _affected;
 
 // Affect local player, independently of distance
 if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {

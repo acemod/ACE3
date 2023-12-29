@@ -35,7 +35,7 @@ GVAR(adjustPFH) = [{
 
     {
         _tripod animate [_x, 1 - GVAR(height)];
-    } count ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
+    } forEach ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
 
 }, 0, [_unit, _tripod]] call CBA_fnc_addPerFrameHandler;
 

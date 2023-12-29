@@ -8,7 +8,7 @@
     TRACE_2("SettingsInitialized eh",GVAR(LockVehicleInventory),GVAR(VehicleStartingLockState));
 
     if (hasInterface && {GVAR(LockVehicleInventory)}) then {
-        ["CAManBase", "InventoryOpened", {_this call FUNC(onOpenInventory)}] call CBA_fnc_addClassEventHandler;
+        ["CAManBase", "InventoryOpened", LINKFUNC(onOpenInventory)] call CBA_fnc_addClassEventHandler;
     };
     if (isServer && {GVAR(VehicleStartingLockState) != -1}) then {
         [{

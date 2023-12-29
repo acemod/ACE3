@@ -19,8 +19,8 @@ if (!hasInterface) exitWith {};
     [] call FUNC(initializeTerrainExtension);
 
     // Register fire event handler
-    ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerNonLocal", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayerNonLocal", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
 
     // Register Perframe Handler
     [FUNC(handleFirePFH), GVAR(simulationInterval)] call CBA_fnc_addPerFrameHandler;
