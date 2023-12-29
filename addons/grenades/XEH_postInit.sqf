@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 
-["ace_flashbangExploded", LINKFUNC(flashbangExplosionEH}] call CBA_fnc_addEventHandler;
+["ace_flashbangExploded", LINKFUNC(flashbangExplosionEH)] call CBA_fnc_addEventHandler;
 
 // Register fired event handlers
 ["ace_firedPlayer", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
