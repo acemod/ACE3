@@ -35,12 +35,12 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
-            <Japanese>%1&lt;br/&gt;を使った</Japanese>
+            <Japanese>%1 を&lt;br/&gt;使った</Japanese>
             <Polish>%1&lt;br/&gt;Przygotowany</Polish>
             <German>%1&lt;br/&gt;vorbereitet</German>
             <Korean>%1&lt;br/&gt;준비됨</Korean>
             <French>%1&lt;br/&gt;prêt</French>
-            <Italian>%1 &lt;br/&gt; Preparata</Italian>
+            <Italian>%1 &lt;br/&gt;Preparata</Italian>
             <Chinese>%1&lt;br/&gt;已使用</Chinese>
             <Chinesesimp>%1&lt;br/&gt;已使用</Chinesesimp>
             <Russian>%1&lt;br/&gt;Приготовлен</Russian>
@@ -56,7 +56,7 @@
             <German>[ACE] Knicklichter</German>
             <Korean>[ACE] 화학조명</Korean>
             <French>[ACE] Cyalumes</French>
-            <Italian>[ACE] Luci chimiche</Italian>
+            <Italian>[ACE] Luci Chimiche</Italian>
             <Chinese>[ACE] 螢光棒</Chinese>
             <Chinesesimp>[ACE] 荧光棒</Chinesesimp>
             <Russian>[ACE] Химсвет</Russian>
@@ -168,7 +168,7 @@
             <German>Knicklicht (rot, hell)</German>
             <Korean>화학조명 (밝은 빨간색)</Korean>
             <French>Cyalume HL (rouge)</French>
-            <Italian>Luce chimica (Hi Rossa)</Italian>
+            <Italian>Luce chimica (Rossa Intensa)</Italian>
             <Chinese>螢光棒 (超亮紅色)</Chinese>
             <Chinesesimp>荧光棒（高亮红色）</Chinesesimp>
             <Russian>Химсвет (ярко-красный)</Russian>
@@ -184,7 +184,7 @@
             <German>Helles, rotes Knicklicht</German>
             <Korean>밝은 빨간색</Korean>
             <French>Lum. rouge HL</French>
-            <Italian>Luce Hi Rossa</Italian>
+            <Italian>Luce Rossa Intensa</Italian>
             <Chinese>超亮紅色光</Chinese>
             <Chinesesimp>高亮红色光</Chinesesimp>
             <Russian>Яркий красный свет</Russian>
@@ -200,7 +200,7 @@
             <German>Typ: Licht - rot, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류: 밝은 빨간색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
             <French>Type : lumière HL (30 minutes) - Rouge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
-            <Italian>Tipo: Luce - Rossa Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Italian>Tipo: Luce - Rossa Intensa (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 超亮紅色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮红色（30分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Russian>Тип: Свет - ярко-красный (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
@@ -216,7 +216,7 @@
             <German>Knicklicht (gelb, hell)</German>
             <Korean>화학조명 (밝은 노란색)</Korean>
             <French>Cyalume HL (jaune)</French>
-            <Italian>Luce chimica (Hi Gialla)</Italian>
+            <Italian>Luce chimica (Gialla Intensa)</Italian>
             <Chinese>螢光棒 (超亮黃色)</Chinese>
             <Chinesesimp>荧光棒（高亮黄色）</Chinesesimp>
             <Russian>Химсвет (ярко-жёлтый)</Russian>
@@ -232,7 +232,7 @@
             <German>Helles, gelbes Knicklicht</German>
             <Korean>밝은 노란색</Korean>
             <French>Lum. jaune HL</French>
-            <Italian>Luce Hi Gialla</Italian>
+            <Italian>Luce Gialla Intensa</Italian>
             <Chinese>超亮黃色光</Chinese>
             <Chinesesimp>高亮黄色光</Chinesesimp>
             <Russian>Яркий жёлтый свет</Russian>
@@ -248,7 +248,7 @@
             <German>Typ: Licht - gelb, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류: 밝은 노란색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
             <French>Type : lumière HL (30 minutes) - Jaune&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
-            <Italian>Tipo: Luce - Gialla Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Italian>Tipo: Luce - Gialla Intensa (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 超亮黃色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮黄色（30分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Russian>Тип: Свет - ярко-жёлтый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
@@ -264,7 +264,7 @@
             <German>Knicklicht (weiß, hell)</German>
             <Korean>화학조명 (밝은 하얀색)</Korean>
             <French>Cyalume HL (blanc)</French>
-            <Italian>Luce chimica (Hi Bianca)</Italian>
+            <Italian>Luce chimica (Bianca Intensa)</Italian>
             <Chinese>螢光棒 (超亮白色)</Chinese>
             <Chinesesimp>荧光棒（高亮白色）</Chinesesimp>
             <Russian>Химсвет (ярко-белый)</Russian>
@@ -280,7 +280,7 @@
             <German>Helles, weißes Knicklicht</German>
             <Korean>밝은 하얀색</Korean>
             <French>Lum. blanche HL</French>
-            <Italian>Luce Hi Bianca</Italian>
+            <Italian>Luce Bianca Intensa</Italian>
             <Chinese>超亮白色光</Chinese>
             <Chinesesimp>高亮白色光</Chinesesimp>
             <Russian>Яркий белый свет</Russian>
@@ -296,7 +296,7 @@
             <German>Typ: Licht - weiß, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류: 밝은 하얀색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
             <French>Type : lumière HL (30 minutes) - Blanche&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
-            <Italian>Tipo: Luce - Bianca Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Italian>Tipo: Luce - Bianca Intensa (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 超亮白色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮白色（30分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Russian>Тип: Свет - ярко-белый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
@@ -311,7 +311,7 @@
             <Japanese>ケミカルライト（高輝度 青）</Japanese>
             <Polish>Świetlik (jaskrawy niebieski)</Polish>
             <German>Knicklicht (Blau, Hell)</German>
-            <Italian>Luce chimica (Hi Blu)</Italian>
+            <Italian>Luce chimica (Blu Intensa)</Italian>
             <Russian>Химсвет (ярко-синий)</Russian>
             <Portuguese>Bastão de Luz (Azul Forte)</Portuguese>
             <Chinese>螢光棒（超亮藍色）</Chinese>
@@ -327,7 +327,7 @@
             <German>Helles, blaues Knicklicht</German>
             <Japanese>青ライト 高輝度</Japanese>
             <Polish>Jaskrawe niebieskie światło</Polish>
-            <Italian>Luce Hi Blu</Italian>
+            <Italian>Luce Blu Intensa</Italian>
             <Russian>Яркий синий свет</Russian>
             <Portuguese>Luz forte azul</Portuguese>
             <Chinese>超亮藍色光</Chinese>
@@ -343,7 +343,7 @@
             <German>Typ: Licht - blau, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Japanese>タイプ: ライト - 高輝度 青 (30分間)&lt;br /&gt;弾薬: 1&lt;br /&gt;使用: 手</Japanese>
             <Polish>Typ: Światło - jaskrawe niebieskie (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <Italian>Tipo: Luce - Hi blu (30 minuti)&lt;br/&gt;Rimanenti:1 &lt;br/&gt;Usata in: Mano</Italian>
+            <Italian>Tipo: Luce - Blu Intensa (30 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Russian>Тип: Свет - ярко-синий (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Azul Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 超亮藍色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
@@ -359,7 +359,7 @@
             <German>Knicklicht (Grün, Hell)</German>
             <Japanese>ケミカルライト（高輝度 緑）</Japanese>
             <Polish>Świetlik (jaskrawy zielony)</Polish>
-            <Italian>Luce chimica (Hi Verde)</Italian>
+            <Italian>Luce chimica (Verde Intensa)</Italian>
             <Russian>Химсвет (ярко-зелёный)</Russian>
             <Portuguese>Bastão de Luz (Verde Forte)</Portuguese>
             <Chinese>螢光棒（超亮綠色）</Chinese>
@@ -375,7 +375,7 @@
             <German>Helles, grünes Knicklicht</German>
             <Japanese>緑ライト 高輝度</Japanese>
             <Polish>Jaskrawe zielone światło</Polish>
-            <Italian>Luce Hi Verde</Italian>
+            <Italian>Luce Verde Intensa</Italian>
             <Russian>Яркий зелёный свет</Russian>
             <Portuguese>Luz forte verde</Portuguese>
             <Chinese>超亮綠色光</Chinese>
@@ -391,7 +391,7 @@
             <German>Typ: Licht - grün, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Japanese>タイプ: ライト - 高輝度 緑 (30分間)&lt;br /&gt;弾薬: 1&lt;br /&gt;使用: 手</Japanese>
             <Polish>Typ: Światło - jaskrawe zielone (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <Italian>Tipo: Luce - Hi verde (30 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Italian>Tipo: Luce - Verde Intensa (30 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Russian>Тип: Свет - ярко-зелёный (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Verde Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 超亮綠色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
@@ -407,7 +407,7 @@
             <German>Knicklicht (Orange, Hell)</German>
             <Japanese>ケミカルライト（超高輝度 橙）</Japanese>
             <Polish>Świetlik (ultra-jaskrawy pomarańczowy)</Polish>
-            <Italian>Luce chimica (Ultra-Hi Arancione)</Italian>
+            <Italian>Luce chimica (Ultra-Intensa Arancione)</Italian>
             <Russian>Химсвет (ультраяркий оранжевый)</Russian>
             <Portuguese>Bastão de Luz (Laranja Ultra Forte)</Portuguese>
             <Chinese>螢光棒（極亮橘色）</Chinese>
@@ -423,7 +423,7 @@
             <German>Helles, orangenes Knicklicht</German>
             <Japanese>橙ライト 超高輝度</Japanese>
             <Polish>Ultra-jaskrawe pomarańczowe światło</Polish>
-            <Italian>Luce Ultra-Hi Arancione</Italian>
+            <Italian>Luce Ultra-Intensa Arancione</Italian>
             <Russian>Ультраяркий оранжевый свет</Russian>
             <Portuguese>Luz ultra forte laranja</Portuguese>
             <Chinese>極亮橘色光</Chinese>
@@ -439,7 +439,7 @@
             <German>Typ: Licht - orange, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Japanese>タイプ: ライト - 超高輝度 橙 (5分間)&lt;br /&gt;弾薬: 1&lt;br /&gt;使用: 手</Japanese>
             <Polish>Typ: Światło - ultra-jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <Italian>Tipo: Luce - Ultra-Hi (5 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Italian>Tipo: Luce - Ultra-Intensa (5 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Russian>Тип: Свет - ультраяркий оранжевый (5 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Laranja Ultra Forte (5 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 極亮橘色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
@@ -520,7 +520,7 @@
             <German>Abschirmung für Knicklichter. Mit Knicklicht kombinieren, um Leselicht zu erhalten.</German>
             <Korean>화학조명을 위한 가림막입니다. 화학조명과 같이 사용하여 읽을 때 씁니다.</Korean>
             <French>Étui pour cyalume. Le combiner avec un cyalume pour obtenir une lampe de lecture.</French>
-            <Italian>Scudo per luci chimiche. Combina con una luce chimica per una luce da lettura.</Italian>
+            <Italian>Scudo per luci chimiche. Combina con una luce chimica per creare una luce da lettura.</Italian>
             <Chinese>螢光棒的保護殼. 與螢光棒結合後可充當閱讀燈</Chinese>
             <Chinesesimp>荧光棒的保护壳。与萤光棒结合后可充当阅读灯。</Chinesesimp>
             <Russian>Защитный контейнер для химсвета. Объедините с химсветом, чтобы подготовить ночник.</Russian>

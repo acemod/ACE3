@@ -543,6 +543,7 @@
             <Spanish>Carga de mochila explosiva (Lanzable)</Spanish>
             <Polish>Pakiet ładunków wybuchowych (Rzucany)</Polish>
             <German>Rucksackladung (Werfbar)</German>
+            <Italian>Carica da Demolizioni (Lanciabile)</Italian>
             <Chinesesimp>炸药包（可投掷）</Chinesesimp>
             <Korean>폭파 장약 (투척)</Korean>
             <Portuguese>Sacola Explosiva (Arremessável)</Portuguese>
@@ -551,6 +552,7 @@
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
             <Russian>Тип: Взрывчатка&lt;br /&gt;Боеприпасы 1&lt;br /&gt;Применение: На предметах, которые должны быть уничтожены</Russian>
             <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : à balancer sur des trucs qui doivent mourir</French>
+            <Italian>Type: Carica&lt;br /&gt;Colpi: 1&lt;br /&gt;Usata su: cose che devono morire</Italian>
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
             <Spanish>Tipo: Carga&lt;br /&gt;Unidades: 1&lt;br /&gt;Usada: Cosas que necesitan morir</Spanish>
             <Polish>Typ: Ładunek&lt;br/&gt;Naboje: 1&lt;br/&gt;Użycie: Na rzeczach które mają zginąć</Polish>
@@ -563,6 +565,7 @@
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
             <Russian>Ранец со взрывчаткой. Детонация через 7 секунд</Russian>
             <French>Charge explosive lançable. Détonation après 7 secondes.</French>
+            <Italian>Una carica da demolizioni lanciabile. Detona dopo 7 secondi fissi</Italian>
             <Japanese>投げられる梱包爆薬。起爆まで7秒の固定時限信管付き。</Japanese>
             <Spanish>Carga de mochila explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
             <Polish>Rzucany pakiet ładunków wybuchowych. 7 sekundowy zapalnik</Polish>
@@ -575,6 +578,7 @@
             <English>Explosive Charge (Throwable)</English>
             <Russian>Заряд со взрывчаткой (метательный)</Russian>
             <French>Charge explosive (lançable)</French>
+            <Italian>Carica Esplosiva (Lanciabile)</Italian>
             <Japanese>爆薬ブロック (投擲仕様)</Japanese>
             <Spanish>Carga explosiva (Lanzable)</Spanish>
             <Polish>Ładunek wybuchowy (Rzucany)</Polish>
@@ -587,6 +591,7 @@
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
             <Russian>Заряд со взрывчаткой. Детонация через 7 секунд</Russian>
             <French>Bloc explosif lançable. Détonation après 7 secondes.</French>
+            <Italian>Una carica esplosiva lanciabile. Detona dopo 7 secondi fissi</Italian>
             <Japanese>投げられる爆薬ブロック。起爆まで7秒の固定時限信管付き。</Japanese>
             <Spanish>Carga explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
             <Polish>Rzucany ładunkek wybuchowy. 7 sekundowy zapalnik</Polish>
@@ -599,6 +604,7 @@
             <English>Convert to short fuse</English>
             <Russian>Применить фитиль</Russian>
             <French>Appliquer une mèche</French>
+            <Italian>Converti a spoletta corta</Italian>
             <Japanese>短信管へ変更</Japanese>
             <Spanish>Convertir a espoleta corta</Spanish>
             <Polish>Konwertuj na krótki zapalnik</Polish>
@@ -611,6 +617,7 @@
             <English>Remove short fuse</English>
             <Russian>Убрать фитиль</Russian>
             <French>Retirer la mèche</French>
+            <Italian>Rimuovi spoletta corta</Italian>
             <Japanese>短信管を削除</Japanese>
             <Spanish>Quitar espoleta corta</Spanish>
             <Polish>Usuń krótki zapalnik</Polish>
@@ -639,6 +646,7 @@
             <English>Allow Explosive Conversion</English>
             <Russian>Разрешить фитили</Russian>
             <French>Autoriser les mèches (charges lançables)</French>
+            <Italian>Abilita conversione a lanciabili</Italian>
             <Japanese>爆発物の変換を許可</Japanese>
             <Spanish>Permitir conversión de explosivos</Spanish>
             <Polish>Pozwól na konwersję ładunków wybuchowych</Polish>
@@ -651,6 +659,7 @@
             <English>Allow converting explosives to throwables</English>
             <Russian>Разрешает преобразовывать взрывчатку в метательные снаряды</Russian>
             <French>Cette option permet de rendre les charges explosives lançables, à la manière des grenades.\nPour celà, ouvrir l'inventaire et double-cliquer sur les charges, afin de leur appliquer une mèche.\nLa mèche peut se retirer en suivant la même procédure.</French>
+            <Italian>Permette la conversione di certi esplosivi piazzabili a esplosivi lanciabili.</Italian>
             <Japanese>このオプションを使用すると、爆発物が手榴弾のように投擲可能になります。\nこれを行うには、インベントリを開いて爆発物をダブルクリックして、爆発物を短信管に変更します。\n信管は同じ手順で取り外すことができます。</Japanese>
             <Spanish>Permitir convertir explosivos a lanzables</Spanish>
             <Polish>Zezwala na konwersje ładunków wybuchowych na rzucane wersje</Polish>

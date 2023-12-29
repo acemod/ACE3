@@ -59,7 +59,7 @@
             <French>Téléportation à la base</French>
             <Portuguese>Teletransportar para a Base</Portuguese>
             <Hungarian>Bázisra teleportálás</Hungarian>
-            <Italian>Teleporta alla base</Italian>
+            <Italian>Teleporta in base</Italian>
             <Japanese>ベースへ移動</Japanese>
             <Korean>기지로 순간이동</Korean>
             <Chinesesimp>传送至基地</Chinesesimp>
@@ -122,7 +122,7 @@
             <Russian>Точка сбора Синих (База)</Russian>
             <Polish>Punkt zbiórki Zachodu (Baza)</Polish>
             <French>Point de ralliement OUEST (Base)</French>
-            <Italian>Rallypoint West (Base)</Italian>
+            <Italian>Rallypoint Ovest (Base)</Italian>
             <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
             <Czech>Bod shromáždění Západ (Základna)</Czech>
             <Portuguese>Ponto de encontro Oeste (Base)</Portuguese>
@@ -138,7 +138,7 @@
             <Russian>Точка сбора Красных (База)</Russian>
             <Polish>Punkt zbiórki Wschodu (Baza)</Polish>
             <French>Point de ralliement EST (Base)</French>
-            <Italian>Rallypoint East (Base)</Italian>
+            <Italian>Rallypoint Est (Base)</Italian>
             <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
             <Czech>Bod shromáždění Východ (Základna)</Czech>
             <Portuguese>Ponto de encontro Leste (Base)</Portuguese>
@@ -154,7 +154,7 @@
             <Russian>Точка сбора Независимых (База)</Russian>
             <Polish>Punkt zbiórki Ruchu oporu (Baza)</Polish>
             <French>Point de ralliement Indépendant (Base)</French>
-            <Italian>Rallypoint Independent (Base)</Italian>
+            <Italian>Rallypoint Indipendenti (Base)</Italian>
             <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
             <Czech>Bod shromáždění Nezávislý (Základna)</Czech>
             <Portuguese>Ponto de encontro Independente (Base)</Portuguese>
@@ -170,7 +170,7 @@
             <Russian>Точка сбора Синих</Russian>
             <Polish>Punkt zbiórki Zachodu</Polish>
             <French>Point de ralliement OUEST</French>
-            <Italian>Rallypoint West</Italian>
+            <Italian>Rallypoint Ovest</Italian>
             <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
             <Czech>Bod shromáždění Západ</Czech>
             <Portuguese>Ponto de encontro Oeste</Portuguese>
@@ -186,7 +186,7 @@
             <Russian>Точка сбора Красных</Russian>
             <Polish>Punkt zbiórki Wschodu</Polish>
             <French>Point de ralliement EST</French>
-            <Italian>Rallypoint East</Italian>
+            <Italian>Rallypoint Est</Italian>
             <Hungarian>Gyülekezőpont, Kelet</Hungarian>
             <Czech>Bod shromáždění Východ</Czech>
             <Portuguese>Ponto de encontro Leste</Portuguese>
@@ -202,7 +202,7 @@
             <Russian>Точка сбора Независимых</Russian>
             <Polish>Punkt zbiórki Ruchu oporu</Polish>
             <French>Point de ralliement Indépendant</French>
-            <Italian>Rallypoint Independent</Italian>
+            <Italian>Rallypoint Indipendenti</Italian>
             <Hungarian>Gyülekezőpont, Független</Hungarian>
             <Czech>Bod shromáždění Nezávislý</Czech>
             <Portuguese>Ponto de encontro Independente</Portuguese>
@@ -365,7 +365,7 @@
             <French>Système de points de ralliement</French>
             <Hungarian>Gyülekezőpont-rendszer</Hungarian>
             <Russian>Система точек сбора</Russian>
-            <Italian>Sistema Punto di Raccolta</Italian>
+            <Italian>Sistema Rallypoint</Italian>
             <Japanese>ラリーポイント システム</Japanese>
             <Korean>집결지 시스템</Korean>
             <Chinesesimp>集合点系统</Chinesesimp>
@@ -378,7 +378,7 @@
             <Czech>Tento modul umožňuje určit místo shromaždiště, kam se mohou jednokty rychle teleportovat ze "základny". Toto vyžaduje vhodné objekty v mapě - základna a vlajka. Oba dva můžete najít v kategorii Prázdné -&gt; ACE Oživení.</Czech>
             <Portuguese>Este módulo permite que você aplique em uma missão "pontos de encontro", que pode rapidamente se teletransportar para a "base". Ele requer colocar objetos apropriados no mapa - base e bandeiras. Ambos estão disponíveis na categoria em branco -&gt; ACE Revival.</Portuguese>
             <Russian>Этот модуль позволяет вам указать место сбора, куда вы можете быстро телепортироваться с "базы". Требуется наличие соответствующих объектов на карте - базы и флага. Они могут быть найдены в категории Пусто -&gt; ACE Возрождения.</Russian>
-            <Italian>Questo modulo ti consente di usare Punti di Raccolta in missione, a cui ti puoi teleportare rapidamente dalla bandiera in base. Richiede il piazzamento di oggetti speciali in mappa - base e bandiera. Entrambi disponibili nella categoria Vuoto -&gt; Respawn ACE</Italian>
+            <Italian>Questo modulo ti consente di usare Rallypoint in missione, a cui ti puoi teleportare rapidamente dalla bandiera in base. Richiede il piazzamento di oggetti speciali in mappa - base e bandiera. Entrambi disponibili nella categoria Vuoto -&gt; ACE Riapparizione</Italian>
             <Spanish>Este módulo permite usar puntos de reunión en la misión, a los que pueden teletransportarse las unidades desde la bandera de base. Requiere colocar objetos especiales en el mapa: las banderas de base y de reunión, ambas disponibles en la categoría Vacio-&gt; Reaparición ACE</Spanish>
             <French>Ce module vous permet d'utiliser des points de ralliement dans les missions, vers lesquels vous pouvez vous téléporter rapidement depuis le drapeau de la base.\nNécessite de placer des objets spéciaux sur la carte - base et drapeau, tous deux disponibles dans la catégorie "Vide -&gt; ACE Réapparition".</French>
             <Japanese>ミッションでベースから素早く移動できるラリーポイントを使えるようにします。ゲーム内に専用オブジェクトとなるベースとフラッグを設置している必要があります。両オブジェクトは Empty 下の ACE リスポーンから設置できます。</Japanese>
@@ -396,7 +396,7 @@
             <French>Déplacer le point de ralliement</French>
             <Hungarian>Gyülekezőpont mozgatása</Hungarian>
             <Russian>Двигать точку сбора</Russian>
-            <Italian>Sposta Punto di Raccolta</Italian>
+            <Italian>Sposta Rallypoint</Italian>
             <Japanese>ラリーポイントを移動</Japanese>
             <Korean>집결지 이동</Korean>
             <Chinesesimp>移动集合点</Chinesesimp>
@@ -412,7 +412,7 @@
             <French>ACE Réapparition</French>
             <Hungarian>ACE Respawn</Hungarian>
             <Russian>ACE Возрождение</Russian>
-            <Italian>Rigenerazione ACE</Italian>
+            <Italian>ACE Riapparizione</Italian>
             <Japanese>ACE リスポーン</Japanese>
             <Korean>ACE 재투입</Korean>
             <Chinesesimp>ACE 重生</Chinesesimp>

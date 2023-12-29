@@ -178,7 +178,7 @@
             <Hungarian>Elsődleges Fegyver Kiválasztása</Hungarian>
             <Czech>Zvolit Hlavní Zbraň</Czech>
             <Portuguese>Selecionar Arma Principal</Portuguese>
-            <Italian>Seleziona Arma Primaria</Italian>
+            <Italian>Seleziona Cannone Primario</Italian>
             <Russian>Выбрать основное оружие</Russian>
             <Japanese>主砲を選択</Japanese>
             <Korean>주포 선택</Korean>
@@ -246,7 +246,7 @@
             <Hungarian>Gránát előkészítése</Hungarian>
             <Russian>Подготовить гранату</Russian>
             <French>Grenade prête</French>
-            <Italian>Granata pronta</Italian>
+            <Italian>Prepara Granata</Italian>
             <Portuguese>Granada pronta</Portuguese>
             <Japanese>手榴弾を準備</Japanese>
             <Korean>투척물 준비</Korean>
@@ -380,7 +380,7 @@
             <Polish>Wystrzel granat dymny</Polish>
             <Hungarian>Füstvető eltüzelése</Hungarian>
             <Russian>Пустить дымовую завесу</Russian>
-            <Italian>Lancia fumogeno</Italian>
+            <Italian>Lancia Cortina Fumogena</Italian>
             <Portuguese>Lançador de fumaça</Portuguese>
             <Japanese>発煙弾を発射</Japanese>
             <Korean>연막발사기 박사</Korean>

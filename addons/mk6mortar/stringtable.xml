@@ -28,7 +28,7 @@
             <Hungarian>Hatótáv-tábla a Mk6 82mm-es mozsárhoz</Hungarian>
             <Portuguese>Tabela de distâncias para morteiro Mk6 82mm</Portuguese>
             <Czech>Rangetable pro Mk6 82mm minomet</Czech>
-            <Italian>Tavola di tiro per il mortaio calibro 82mm Mk6</Italian>
+            <Italian>Tavola di tiro per il mortaio Mk6 di calibro 82mm</Italian>
             <Japanese>Mk6 82mm迫撃砲専用の射撃表</Japanese>
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
             <Chinesesimp>MK6 82 mm 迫击炮射表</Chinesesimp>
@@ -162,7 +162,7 @@
             <French>Affiche l'ordinateur de tir et le télémètre. Cette option doit être DÉSACTIVÉE si la résistance de l'air est activée.</French>
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
-            <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
+            <Italian>Consenti l'utilizzo del Computer Balistico e del Telemetro (questi DEVONO essere disabilitati se vuoi abilitare la resistenza dell'aria)</Italian>
             <Japanese>砲撃コンピュータと距離計を表示します (空気抵抗を仕様する場合は必ず無効化する必要があります)</Japanese>
             <Korean>탄도계산컴퓨터와 거리측정기를 보여줍니다(공기저항을 활성화했을 경우 이 항목은 비활성화 되어야 합니다)</Korean>
             <Chinesesimp>显示弹道计算机和测距仪（如果有启用空气阻力功能时，须停用此项功能）</Chinesesimp>
@@ -195,7 +195,7 @@
             <French>Affiche la boussole numérique du Mk6.</French>
             <Hungarian>Az Mk6 digitális iránytű megjelenítése</Hungarian>
             <Russian>Показывает цифровой компас Mk6</Russian>
-            <Italian>Mostra la Bussola Digitale Mk6</Italian>
+            <Italian>Mostra la Bussola Digitale del Mk6</Italian>
             <Japanese>Mk6迫撃砲のデジタル方位磁石を表示します</Japanese>
             <Korean>Mk6 에서 전자 나침반을 보여줍니다</Korean>
             <Chinesesimp>显示 MK6 的电子指南针</Chinesesimp>
@@ -210,7 +210,7 @@
             <Portuguese>Este módulo permite que você ajuste o morteiro Mk6.</Portuguese>
             <Russian>Модуль настройки миномета Mk6.</Russian>
             <French>Ce module permet de régler les options du mortier Mk6.</French>
-            <Italian>Questo modulo ti consente di impostare i parametri del mortaio Mk6.</Italian>
+            <Italian>Questo modulo ti consente di impostare le impostazioni del mortaio Mk6.</Italian>
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
             <Japanese>このモジュールでは、Mk6 迫撃砲の設定をセットアップできます。</Japanese>
             <Korean>이 모듈은 Mk6 설치 설정을 가능케 합니다.</Korean>
@@ -238,7 +238,7 @@
             <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas. No afecta morteros controlados por IA.</Spanish>
             <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego. Nie dotyczy moździerzy AI.</Polish>
             <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement. N'affecte pas les mortiers IA.</French>
-            <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
+            <Italian>Rimuove i caricatori di colpi dal mortaio. Un operatore dovrà caricare proiettili singoli prima di poter fare fuoco. Non viene applicato su operatori IA.</Italian>
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
             <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжающим. Не влияет на артиллерию ИИ.</Russian>
             <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI迫撃砲へ影響を与えません。</Japanese>
@@ -285,7 +285,7 @@
             <Spanish>Descargando ronda</Spanish>
             <Polish>Rozładowywanie moździerza</Polish>
             <French>Déchargement de l'obus</French>
-            <Italian>Scarica proiettile</Italian>
+            <Italian>Togliendo Proiettile</Italian>
             <Portuguese>Descarregar munição</Portuguese>
             <Russian>Извлечение снаряда</Russian>
             <Japanese>弾薬を除去しています</Japanese>
@@ -301,7 +301,7 @@
             <Spanish>Preparando ronda</Spanish>
             <Polish>Przygotowywanie pocisku</Polish>
             <French>Praparation de l'obus</French>
-            <Italian>Prepara il proiettile</Italian>
+            <Italian>Caricando Proiettile</Italian>
             <Czech>Připavuji náboj</Czech>
             <Portuguese>Preparar munição</Portuguese>
             <Russian>Подготовка снаряда</Russian>
@@ -317,7 +317,7 @@
             <Spanish>Cargar HE</Spanish>
             <Polish>Załaduj pocisk wybuchowy</Polish>
             <French>Charger HE</French>
-            <Italian>Carica proiettile esplosivo ad alto potenziale (HE)</Italian>
+            <Italian>Carica Proiettile Esplosivo (HE)</Italian>
             <Czech>Nabít HE</Czech>
             <Portuguese>Carregar HE</Portuguese>
             <Russian>Зарядить фугасный</Russian>
@@ -333,7 +333,7 @@
             <Spanish>Cargar Humo</Spanish>
             <Polish>Załaduj pocisk dymny</Polish>
             <French>Charger Fumigène</French>
-            <Italian>Carica fumogeno</Italian>
+            <Italian>Carica Proiettile Fumogeno</Italian>
             <Czech>Nabít Dýmovnici</Czech>
             <Portuguese>Carregar Fumaça</Portuguese>
             <Russian>Зарядить дымовой</Russian>
@@ -349,7 +349,7 @@
             <Spanish>Cargar Iluminación</Spanish>
             <Polish>Załaduj pocisk oświetlający</Polish>
             <French>Charger Éclairant</French>
-            <Italian>Carica illuminante</Italian>
+            <Italian>Carica Proiettile Illuminante</Italian>
             <Czech>Nabít Světlici</Czech>
             <Portuguese>Carregar Iluminação</Portuguese>
             <Russian>Зарядить осветительный</Russian>
@@ -365,7 +365,7 @@
             <Spanish>Cagar HE Guiada</Spanish>
             <Polish>Załaduj kierowany pocisk wybuchowy</Polish>
             <French>Charger HE guidé</French>
-            <Italian>Carica HE guidata</Italian>
+            <Italian>Carica Proiettile Esplosivo (HE) Guidato</Italian>
             <Czech>Nabít HE (Naváděné)</Czech>
             <Portuguese>Carregar HE Guiada</Portuguese>
             <Russian>Зарядить фугасный управляемый</Russian>
@@ -381,7 +381,7 @@
             <Spanish>Cargar HE Guiada por Laser</Spanish>
             <Polish>Załaduj laserowo napr. pocisk wybuchowy</Polish>
             <French>Charger HE guidé au laser</French>
-            <Italian>Carica HE a guida laser</Italian>
+            <Italian>Carica Proiettile Esplosivo (HE) Laserguidato</Italian>
             <Czech>Nabít HE (Naváděné laserem)</Czech>
             <Portuguese>Carregar HE Guiada por Laser</Portuguese>
             <Russian>Зарядить фугасный управляемый по ЛЦУ</Russian>
@@ -413,7 +413,7 @@
             <Spanish>[CSW] Ronda 82mm Humo</Spanish>
             <Polish>[CSW] Pocisk dymny kal. 82mm</Polish>
             <French>[CSW] Obus de 82 mm fumigène</French>
-            <Italian>[CSW] Proiettile Fumogeno da 82mm</Italian>
+            <Italian>[CSW] Proiettile da 82mm Fumogeno</Italian>
             <Czech>[CSW] 82mm Kouřový náboj</Czech>
             <Portuguese>[CSW] Munição 82mm Fumaça</Portuguese>
             <Russian>[CSW] Дымовой снаряд 82мм</Russian>
@@ -429,7 +429,7 @@
             <Spanish>[CSW] Ronda 82mm Iluminación</Spanish>
             <Polish>[CSW] Pocisk oświetlający kal. 82mm</Polish>
             <French>[CSW] Obus de 82 mm éclairant</French>
-            <Italian>[CSW] Proiettile illuminante da 82mm</Italian>
+            <Italian>[CSW] Proiettile da 82mm Illuminante</Italian>
             <Czech>[CSW] 82mm Osvětlovací náboj</Czech>
             <Portuguese>[CSW] Munição 82mm Iluminação</Portuguese>
             <Russian>[CSW] Осветительный снаряд 82мм</Russian>
@@ -445,7 +445,7 @@
             <Spanish>[CSW] Ronda 82mm Guiada</Spanish>
             <Polish>[CSW] Kierowany pocisk wybuchowy kal. 82mm</Polish>
             <French>[CSW] Obus de 82 mm HE guidé</French>
-            <Italian>[CSW] Proiettile HE guidato</Italian>
+            <Italian>[CSW] Proiettile da 82mm HE Guidato</Italian>
             <Czech>[CSW] 82mm HE náboj (naváděný)</Czech>
             <Portuguese>[CSW] Munição 82mm HE Guiada</Portuguese>
             <Russian>[CSW] Фугасный снаряд управляемый 82мм</Russian>
@@ -461,7 +461,7 @@
             <Spanish>[CSW] Ronda 82mm Guiada por Laser</Spanish>
             <Polish>[CSW] Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
             <French>[CSW] Obus de 82 mm HE guidé au laser</French>
-            <Italian>[CSW] Proiettile HE a guida laser</Italian>
+            <Italian>[CSW] Proiettile da 82mm HE Laserguidato</Italian>
             <Czech>[CSW] 82mm HE náboj (naváděný laserem)</Czech>
             <Portuguese>[CSW] Munição 82mm HE Guiada por Laser </Portuguese>
             <Russian>[CSW] Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
@@ -492,7 +492,7 @@
             <Spanish>[ACE] Caja de municiones 82mm HE</Spanish>
             <Polish>[ACE] Skrzynka amunicji wybuchowej 82mm</Polish>
             <French>[ACE] Obus de 82 mm HE</French>
-            <Italian>[ACE] Scatola proiettili espolisvi ad alto potenziale (HE) da 82mm</Italian>
+            <Italian>[ACE] Scatola Proiettili Esplosivi (HE) da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm HE)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm HE</Portuguese>
             <Russian>[ACE] Ящик фугасных снарядов 82мм</Russian>
@@ -508,7 +508,7 @@
             <Spanish>[ACE] Caja de municiones 82mm Humo</Spanish>
             <Polish>[ACE] Skrzynka amunicji dymnej 82mm</Polish>
             <French>[ACE] Obus de 82 mm fumigène</French>
-            <Italian>[ACE] Scatola fumogeni da 82mm</Italian>
+            <Italian>[ACE] Scatola Proiettili Fumogeni da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm Dýmovnice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Fumaça</Portuguese>
             <Russian>[ACE] Ящик дымовых снарядов 82мм</Russian>
@@ -524,7 +524,7 @@
             <Spanish>[ACE] Caja de municiones 82mm Iluminacion</Spanish>
             <Polish>[ACE] Skrzynka amunicji oświetlającej 82mm</Polish>
             <French>[ACE] Obus de 82 mm éclairants</French>
-            <Italian>[ACE] Scatola illuminanti da 82mm</Italian>
+            <Italian>[ACE] Scatola Proiettili Illuminanti da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm Světlice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Iluminação</Portuguese>
             <Russian>[ACE] Ящик осветительных снарядов 82мм</Russian>
@@ -540,7 +540,7 @@
             <Spanish>[ACE] Caja de municiones 82mm por defecto</Spanish>
             <Polish>[ACE] Skrzynka amunicji standardowej 82mm</Polish>
             <French>[ACE] Obus de 82 mm par défaut</French>
-            <Italian>[ACE] Scatola proiettili 82mm standard</Italian>
+            <Italian>[ACE] Scatola Proiettili 82mm Misti</Italian>
             <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
             <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>

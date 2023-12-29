@@ -21,7 +21,7 @@
         <Key ID="STR_ACE_MissileGuidance_Desc">
             <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
             <Polish>Zaawansowane namierzanie rakiet, lub ZNR, dostarcza wiele poprawek do systemu namierzania rakiet oraz dodaje nowe tryby strzału. Jest to wymagana opcja dla broni rakietowych.</Polish>
-            <Italian>Guida dei missili avanzata, o AMG, offre diversi miglioramenti alla teleguida di missili. E' anche un sistema necessario per i tipi di armi missile.</Italian>
+            <Italian>Guida dei missili avanzata, o GMA, offre diversi miglioramenti alla teleguida di missili. È anche un sistema necessario per la categoria d'arma dei missili.</Italian>
             <Russian>Продвинутое наведение ракет, или ПНР, обеспечивает множество усовершествований для наведения и стрельбы ракет. Также, это система, необходимая для всех ракетных типов оружия.</Russian>
             <Spanish>El guiado avanzado de misiles, o AMG en sus siglas en inglés, ofrece múltiples mejoras en el fijado y disparo de misiles. Es también un sistema requerido para armas de tipo misil.</Spanish>
             <German>Das Erweiterte Raketenlenksystem, auch ERls genannt, bietet viele Verbesserungen zum Aufschalten und Feuern mittels gelenkter Raketen. </German>
@@ -76,7 +76,7 @@
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR lasergelenkte Rakete</German>
             <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
-            <Italian>Hydra-70 DAGR Missile a Guida Laser</Italian>
+            <Italian>Hydra-70 DAGR Missile Laserguidato</Italian>
             <Portuguese>Míssil guiado a laser Hydra-70 DAGR </Portuguese>
             <Hungarian>Hydra-70 DAGR lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hydra-70 DAGR</Russian>
@@ -93,7 +93,7 @@
             <Polish>Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K</German>
             <Czech>Hellfire II AGM-114K</Czech>
-            <Italian>Missile Hellfire II AGM-114K</Italian>
+            <Italian>Missile AGM-114K Hellfire II</Italian>
             <Portuguese>Míssil Hellfire II AGM-114K</Portuguese>
             <Hungarian>Hellfire II AGM-114K rakéta</Hungarian>
             <Russian>Hellfire II AGM-114K</Russian>
@@ -127,7 +127,7 @@
             <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>
             <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>
-            <Italian>Missile a Guida Laser Hellfire II AGM-114K</Italian>
+            <Italian>Missile Laserguidato AGM-114K Hellfire II</Italian>
             <Portuguese>Míssil guiado a laser Hellfire II AGM-114K</Portuguese>
             <Hungarian>Hellfire II AGM-114K lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hellfire II AGM-114K</Russian>
@@ -196,7 +196,7 @@
             <Polish>Przełącz tryb ognia</Polish>
             <French>Guidage missiles - Changer le mode de tir</French>
             <Hungarian>Tüzelési mód váltása</Hungarian>
-            <Italian>Alterna le modalità di fuoco</Italian>
+            <Italian>Cambia modalità di fuoco</Italian>
             <Spanish>Cambiar modo de disparo</Spanish>
             <Portuguese>Alterar Modo de Disparo</Portuguese>
             <Japanese>発射モードサイクル</Japanese>

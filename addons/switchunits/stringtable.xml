@@ -69,6 +69,7 @@
         <Key ID="STR_ACE_SwitchUnits_EnableSwitchUnits_DisplayName">
             <English>Enable switch side</English>
             <German>Ermögliche Seitenwechsel</German>
+            <Italian>Permetti cambio fazione</Italian>
             <French>Permettre le changement de camp</French>
             <Chinese>啟用陣營切換</Chinese>
             <Chinesesimp>启用阵营切换</Chinesesimp>
