@@ -261,11 +261,12 @@ private _itemInfoType = 0;
                 // Unknown
                 default {
                     // Don't add items that are part of the arsenal
+                    private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
                     if (
-                        !(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS)) &&
-                        {!(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
-                        {!(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
-                        {!(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS))} &&
+                        !(_x in (_attachments get IDX_VIRT_OPTICS_ATTACHMENTS)) &&
+                        {!(_x in (_attachments get IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
+                        {!(_x in (_attachments get IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
+                        {!(_x in (_attachments get IDX_VIRT_BIPOD_ATTACHMENTS))} &&
                         {!(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS))}
                     ) then {
                         (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, nil];
