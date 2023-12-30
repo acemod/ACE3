@@ -39,8 +39,8 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
                 _min = if (_hourOffset < 0) then { _min - GVAR(timestampUTCMinutesOffset) } else { _min + GVAR(timestampUTCMinutesOffset) };
 
                 // Add/remove extra hours from minutes
-            	_hour = _hour + floor (_min / 60);
-            	_min = (_min % 60 + 60) % 60; // ensure that minutes are between 0 and 59 (included)
+                _hour = _hour + floor (_min / 60);
+                _min = (_min % 60 + 60) % 60; // ensure that minutes are between 0 and 59 (included)
             };
 
             [(_hour % 24 + 24) % 24, _min, _sec, _msec] // ensure that hours are between 0 and 23 (included)
