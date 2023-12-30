@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, LinkIsGrim
+ * Author: commy2, LinkIsGrim, Avokadomos
  * When the channel list box is changed.
  *
  * Arguments:
