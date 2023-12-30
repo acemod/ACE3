@@ -418,7 +418,8 @@ if (_isContainer) then {
 
     // Find out how many items of a type there are and update the number displayed
     for "_lbIndex" from 0 to (lnbSize _ctrlPanel select 0) - 1 do {
-        _ctrlPanel lnbSetText [[_lbIndex, 2], str ({_ctrlPanel lnbData [_lbIndex, 0] == _x} count _containerItems)];
+        private _xItem = _ctrlPanel lnbData [_lbIndex, 0];
+        _ctrlPanel lnbSetText [[_lbIndex, 2], str ({_xItem == _x} count _containerItems)];
     };
 
     // Refresh availibility of items based on space remaining in container
