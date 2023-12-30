@@ -39,9 +39,9 @@ private _fnc_filterLoadout = {
                 _nullItemsList pushBack _x;
             } else {
                 // Check if item or its base weapon exist in the arsenal
-                if !(_name in GVAR(virtualItemsFlatAll)) then {
+                if !(_name in GVAR(virtualItemsFlat)) then {
                     _name = _name call FUNC(baseWeapon);
-                    if !(_name in GVAR(virtualItemsFlatAll)) then {
+                    if !(_name in GVAR(virtualItemsFlat)) then {
                         _unavailableItemsList pushBack _name;
                         _name = "";
                     };
