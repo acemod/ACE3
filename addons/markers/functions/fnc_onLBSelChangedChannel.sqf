@@ -18,7 +18,4 @@
 
 params ["_ctrl", "_index"];
 TRACE_2("params",_ctrl,_index);
-
-private _enabledChannels = false call FUNC(getEnabledChannels);
-
 setCurrentChannel (parseNumber (_ctrl lbData _index));
