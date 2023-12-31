@@ -18,9 +18,8 @@
 disableSerialization;
 params ["_display"];
 
-private _index = GVAR(selectedFilterIndex);
 private _itemList = _display call FUNC(currentItemListBox);
-private _filterFunction = missionNamespace getVariable ((_display displayCtrl IDC_FILTERLISTS) lbData _index);
+private _filterFunction = missionNamespace getVariable ((_display displayCtrl IDC_FILTERLISTS) lbData GVAR(selectedFilterIndex));
 
 if (_filterFunction isEqualType {}) then {
     for "_i" from (lbSize _itemList) - 1 to 0 step -1 do {

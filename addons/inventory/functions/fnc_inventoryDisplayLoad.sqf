@@ -70,9 +70,5 @@ _dummyControl ctrlAddEventHandler ["Draw", {
 
     private _itemList = _display call FUNC(currentItemListBox);
 
-    // monitoring is done by setting a lb value. These are unused here and are reset every time the list box updates.
-    if (_itemList lbValue 0 != DUMMY_VALUE) then {
-        _display call FUNC(forceItemListUpdate);
-        _itemList lbSetValue [0, DUMMY_VALUE];
-    };
+    _display call FUNC(forceItemListUpdate);
 }];
