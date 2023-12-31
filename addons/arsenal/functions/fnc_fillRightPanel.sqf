@@ -313,7 +313,7 @@ switch (_ctrlIDC) do {
         // Unknown items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, true, _y, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x, _y, true] call _fnc_fillRightContainer;
             };
         } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS); // if an item is here but in virtual items, it's just in the wrong place
     };
