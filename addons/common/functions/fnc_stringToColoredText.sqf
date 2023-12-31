@@ -18,7 +18,7 @@
 
 params ["_string", "_color"];
 
-_string = format ["%1", _string];
+_string = str _string;
 
 if (_color isEqualType []) then {
     _color = "#" + (

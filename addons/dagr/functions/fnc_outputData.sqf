@@ -65,10 +65,10 @@ GVAR(outputPFH) = [{
     private _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
 
     // Output
-    __gridControl ctrlSetText format ["%1", _dagrGrid];
-    __speedControl ctrlSetText format ["%1", _dagrSpeed];
-    __elevationControl ctrlSetText format ["%1", _dagrElevation];
-    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1 �", _dagrHeading] });
-    __timeControl ctrlSetText format ["%1", _dagrTime];
+    __gridControl ctrlSetText str _dagrGrid;
+    __speedControl ctrlSetText str _dagrSpeed;
+    __elevationControl ctrlSetText str _dagrElevation;
+    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { str _dagrHeading } else { format ["%1 �", _dagrHeading] });
+    __timeControl ctrlSetText str _dagrTime;
 
 }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;
