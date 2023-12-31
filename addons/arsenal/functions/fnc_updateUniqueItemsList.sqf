@@ -126,7 +126,7 @@ private _fnc_uniqueEquipment = {
 } forEach (getUnitLoadout GVAR(center)); // Only need items, not extended loadout
 
 // Get all items from unit
-_items = itemsWithMagazines GVAR(center);
+_items = itemsWithMagazines GVAR(center) + backpacks GVAR(center);
 private _isMagazine = false;
 private _isWeapon = false;
 private _isGrenade = false;
