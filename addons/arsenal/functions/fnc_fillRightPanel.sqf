@@ -80,29 +80,13 @@ private _fnc_fillRightContainer = {
             _itemInfo = isClass (_cfgWeapons >> configName _configPath);
         };
 
-        // Get mass
-        private _mass = if (!_hasItemInfo) then {
-            getNumber (_configPath >> "mass")
-        } else {
-            private _mass = getNumber (_configPath >> "itemInfo" >> "mass");
-
-            if (_mass == 0) then {
-                _mass = getNumber (_configPath >> "WeaponSlotsInfo" >> "mass");
-            };
-
-            _mass
-        };
-
-        _rightPanelCache set [_className, _mass]; // Needed because this provides more accurate weight for FUNC(updateRightPanel)
-
-        [getText (_configPath >> "displayName"), getText (_configPath >> "picture"), _mass]
-    }, true]) params ["_displayName", "_picture", "_mass"];
+        [getText (_configPath >> "displayName"), getText (_configPath >> "picture")]
+    }, true]) params ["_displayName", "_picture"];
 
     private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, "0"];
     _ctrlPanel lnbSetText [[_lbAdd, 1], _displayName];
     _ctrlPanel lnbSetData [[_lbAdd, 0], _className];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
-    _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
     _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
     if ((toLower _className) in GVAR(favorites)) then {
