@@ -311,15 +311,17 @@ switch (_ctrlIDC) do {
         // Unique goggles
         {
             if !(_x in _items) then {
-                ["CfgGlasses", _x, true] call _fnc_fillRightContainer;
+                // _y indicates if an item is truly unique or if it's a non-inventory item in a container (e.g. goggles in backpack)
+                ["CfgGlasses", _x, _y] call _fnc_fillRightContainer;
             };
-        } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES));
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES);
         // Unknown items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, !(_x in GVAR(virtualItemsFlat)), true] call _fnc_fillRightContainer;
+                // _y indicates if an item is truly unique or if it's a non-inventory item in a container (e.g. helmet in backpack)
+                ["CfgWeapons", _x, _y, true] call _fnc_fillRightContainer;
             };
-        } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS)); // if an item is here but in virtual items, it's just in the wrong place
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS); // if an item is here but in virtual items, it's just in the wrong place
     };
     // Custom buttons
     default {
@@ -343,11 +345,11 @@ switch (_ctrlIDC) do {
                     };
                     // Unique goggles
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES)): {
-                        ["CfgGlasses", _x, true] call _fnc_fillRightContainer;
+                        ["CfgGlasses", _x, GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES get _x] call _fnc_fillRightContainer;
                     };
                     // Unknown items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS)): {
-                        ["CfgWeapons", _x, !(_x in GVAR(virtualItemsFlat)), true] call _fnc_fillRightContainer;
+                        ["CfgWeapons", _x, GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS get _x, true] call _fnc_fillRightContainer;
                     };
                 };
             } forEach _items;
