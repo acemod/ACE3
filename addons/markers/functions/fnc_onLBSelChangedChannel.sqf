@@ -18,4 +18,5 @@
 
 params ["_ctrl", "_index"];
 TRACE_2("params",_ctrl,_index);
+
 setCurrentChannel (parseNumber (_ctrl lbData _index));
