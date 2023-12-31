@@ -333,9 +333,9 @@ switch (_ctrlIDC) do {
         // Unknown items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, true, true, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x, true, !(_x in GVAR(virtualItemsFlat)), true] call _fnc_fillRightContainer;
             };
-        } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS));
+        } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS)); // if an item is here but in virtual items, it's just in the wrong place
     };
     // Custom buttons
     default {
@@ -363,7 +363,7 @@ switch (_ctrlIDC) do {
                     };
                     // Unknown items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS)): {
-                        ["CfgWeapons", _x, true, true, true] call _fnc_fillRightContainer;
+                        ["CfgWeapons", _x, true, !(_x in GVAR(virtualItemsFlat)), true] call _fnc_fillRightContainer;
                     };
                 };
             } forEach _items;
