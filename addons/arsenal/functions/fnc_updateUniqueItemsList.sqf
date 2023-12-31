@@ -137,6 +137,9 @@ private _simulationType = "";
 private _configItemInfo = "";
 private _hasItemInfo = false;
 private _itemInfoType = 0;
+private _baseWeapon = "";
+private _weapons = GVAR(virtualItems) get IDX_VIRT_WEAPONS;
+private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
 
 {
     _isMagazine = isClass (_cfgMagazines >> _x);
@@ -191,7 +194,7 @@ private _itemInfoType = 0;
                         {!(_x in (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES))} &&
                         {!(_x in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL))}
                     ) then {
-                        (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, nil];
+                        (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, true];
                     };
                 };
             };
@@ -204,12 +207,13 @@ private _itemInfoType = 0;
             _hasItemInfo = isClass (_configItemInfo);
             _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
             _isMiscItem = _x isKindOf ["CBA_MiscItem", _cfgWeapons];
+            _baseWeapon = _x call FUNC(baseWeapon);
 
             switch (true) do {
                 // Optics
                 case (
-                    !(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS)) &&
-                    {_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS) ||
+                    !(_baseWeapon in (_attachments get IDX_VIRT_OPTICS_ATTACHMENTS)) &&
+                    {_baseWeapon in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS) ||
                     {_hasItemInfo &&
                     {!_isMiscItem} &&
                     {_itemInfoType == TYPE_OPTICS}}}
@@ -218,8 +222,8 @@ private _itemInfoType = 0;
                 };
                 // Flashlights
                 case (
-                    !(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS)) &&
-                    {_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS) ||
+                    !(_baseWeapon in (_attachments get IDX_VIRT_FLASHLIGHT_ATTACHMENTS)) &&
+                    {_baseWeapon in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS) ||
                     {_hasItemInfo &&
                     {!_isMiscItem} &&
                     {_itemInfoType == TYPE_FLASHLIGHT}}}
@@ -228,8 +232,8 @@ private _itemInfoType = 0;
                 };
                 // Muzzle attachments
                 case (
-                    !(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS)) &&
-                    {_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS) ||
+                    !(_baseWeapon in (_attachments get IDX_VIRT_MUZZLE_ATTACHMENTS)) &&
+                    {_baseWeapon in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS) ||
                     {_hasItemInfo &&
                     {!_isMiscItem} &&
                     {_itemInfoType == TYPE_MUZZLE}}}
@@ -238,8 +242,8 @@ private _itemInfoType = 0;
                 };
                 // Bipods
                 case (
-                    !(_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS)) &&
-                    {_x in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS) ||
+                    !(_baseWeapon in (_attachments get IDX_VIRT_BIPOD_ATTACHMENTS)) &&
+                    {_baseWeapon in ((_configItems get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS) ||
                     {_hasItemInfo &&
                     {!_isMiscItem} &&
                     {_itemInfoType == TYPE_BIPOD}}}
@@ -248,7 +252,7 @@ private _itemInfoType = 0;
                 };
                 // Misc. items
                 case (
-                    !(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)) &&
+                    !(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)) && // misc. items don't use 'baseWeapon'
                     {_x in (_configItems get IDX_VIRT_MISC_ITEMS) ||
                     {_hasItemInfo &&
                     {_isMiscItem &&
@@ -260,16 +264,21 @@ private _itemInfoType = 0;
                 };
                 // Unknown
                 default {
-                    // Don't add items that are part of the arsenal
-                    private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
+                    // Don't add attachments or misc. items
                     if (
-                        !(_x in (_attachments get IDX_VIRT_OPTICS_ATTACHMENTS)) &&
-                        {!(_x in (_attachments get IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
-                        {!(_x in (_attachments get IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
-                        {!(_x in (_attachments get IDX_VIRT_BIPOD_ATTACHMENTS))} &&
+                        !(_baseWeapon in (_attachments get IDX_VIRT_OPTICS_ATTACHMENTS)) &&
+                        {!(_baseWeapon in (_attachments get IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
+                        {!(_baseWeapon in (_attachments get IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
+                        {!(_baseWeapon in (_attachments get IDX_VIRT_BIPOD_ATTACHMENTS))} &&
                         {!(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS))}
                     ) then {
-                        (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, nil];
+                        // If item is a weapon (including binos), make it unique
+                        (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x,
+                            _baseWeapon in (_weapons get IDX_VIRT_PRIMARY_WEAPONS) ||
+                            {_baseWeapon in (_weapons get IDX_VIRT_HANDGUN_WEAPONS)} ||
+                            {_baseWeapon in (_weapons get IDX_VIRT_SECONDARY_WEAPONS)} ||
+                            {_baseWeapon in (GVAR(virtualItems) get IDX_VIRT_BINO)}
+                        ];
                     };
                 };
             };
@@ -286,7 +295,7 @@ private _itemInfoType = 0;
         default {
             // Don't add items that are part of the arsenal
             if !(_x in GVAR(virtualItemsFlatAll)) then {
-                (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, nil];
+                (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, true];
             };
         };
     };
