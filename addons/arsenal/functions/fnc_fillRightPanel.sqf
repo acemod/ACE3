@@ -389,8 +389,8 @@ if (_isContainer) then {
             // Update load bar
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadUniform GVAR(center));
 
-            // Get all items from container (excluding container itself)
-            _containerItems = [GVAR(center), 0, 3, 0, 0, false] call EFUNC(common,uniqueUnitItems);
+            // Get all items from container
+            _containerItems = uniformItems GVAR(center);
 
             uniformContainer GVAR(center)
         };
@@ -399,8 +399,8 @@ if (_isContainer) then {
             // Update load bar
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadVest GVAR(center));
 
-            // Get all items from container (excluding container itself)
-            _containerItems = [GVAR(center), 0, 0, 3, 0, false] call EFUNC(common,uniqueUnitItems);
+            // Get all items from container
+            _containerItems = vestItems GVAR(center);
 
             vestContainer GVAR(center)
         };
@@ -409,8 +409,8 @@ if (_isContainer) then {
             // Update load bar
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadBackpack GVAR(center));
 
-            // Get all items from container (excluding container itself)
-            _containerItems = [GVAR(center), 0, 0, 0, 3, false] call EFUNC(common,uniqueUnitItems);
+            // Get all items from container
+            _containerItems = backpackItems GVAR(center);
 
             backpackContainer GVAR(center)
         };
@@ -418,7 +418,8 @@ if (_isContainer) then {
 
     // Find out how many items of a type there are and update the number displayed
     for "_lbIndex" from 0 to (lnbSize _ctrlPanel select 0) - 1 do {
-        _ctrlPanel lnbSetText [[_lbIndex, 2], str (_containerItems getOrDefault [_ctrlPanel lnbData [_lbIndex, 0], 0])];
+        private _xItem = _ctrlPanel lnbData [_lbIndex, 0];
+        _ctrlPanel lnbSetText [[_lbIndex, 2], str ({_xItem == _x} count _containerItems)];
     };
 
     // Refresh availibility of items based on space remaining in container

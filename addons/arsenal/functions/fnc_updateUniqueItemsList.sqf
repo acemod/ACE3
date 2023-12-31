@@ -125,7 +125,8 @@ private _fnc_uniqueEquipment = {
     };
 } forEach (getUnitLoadout GVAR(center)); // Only need items, not extended loadout
 
-
+// Get all items from unit
+_items = itemsWithMagazines GVAR(center);
 private _isMagazine = false;
 private _isWeapon = false;
 private _isGrenade = false;
@@ -184,7 +185,12 @@ private _itemInfoType = 0;
                 // Unknown
                 default {
                     // Don't add items that are part of the arsenal
-                    if !(_x in GVAR(virtualItemsFlatAll)) then {
+                    if (
+                        !(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)) &&
+                        {!(_x in (GVAR(virtualItems) get IDX_VIRT_GRENADES))} &&
+                        {!(_x in (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES))} &&
+                        {!(_x in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL))}
+                    ) then {
                         (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, nil];
                     };
                 };
@@ -255,7 +261,14 @@ private _itemInfoType = 0;
                 // Unknown
                 default {
                     // Don't add items that are part of the arsenal
-                    if !(_x in GVAR(virtualItemsFlatAll)) then {
+                    private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
+                    if (
+                        !(_x in (_attachments get IDX_VIRT_OPTICS_ATTACHMENTS)) &&
+                        {!(_x in (_attachments get IDX_VIRT_FLASHLIGHT_ATTACHMENTS))} &&
+                        {!(_x in (_attachments get IDX_VIRT_MUZZLE_ATTACHMENTS))} &&
+                        {!(_x in (_attachments get IDX_VIRT_BIPOD_ATTACHMENTS))} &&
+                        {!(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS))}
+                    ) then {
                         (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS) set [_x, nil];
                     };
                 };
@@ -277,4 +290,4 @@ private _itemInfoType = 0;
             };
         };
     };
-} forEach (keys ([GVAR(center), 0, 3, 3, 3, false] call EFUNC(common,uniqueUnitItems))); // Get all items from unit
+} forEach (_items arrayIntersect _items);
