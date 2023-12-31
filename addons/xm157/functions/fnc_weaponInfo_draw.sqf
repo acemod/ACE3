@@ -86,7 +86,7 @@ if (_retTex != ctrlText _ctrlScopeReticle) then { _ctrlScopeReticle ctrlSetText 
 private _rangeInfo = _range call {
     if (_range == 0) exitWith { "" };
     if (_range < 0) exitWith { // range error - blink if recent
-        if ((_timeSinceLastInput < 3) && {(floor (4*_timeSinceLastInput)) % 2 == 1}) then { "----" } else { "" };
+        ["", "----"] select ((_timeSinceLastInput < 3) && {(floor (4*_timeSinceLastInput)) % 2 == 1});
     };
     format ["%1 m", _range toFixed 0]
 };
