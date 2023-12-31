@@ -18,7 +18,6 @@
 params ["_control", "_container", "_hasItems"];
 
 private _loadRemaining = maxLoad _container - loadAbs _container;
-private _rightPanelCache = uiNamespace getVariable [QGVAR(rightPanelCache), createHashMap];
 
 private _item = "";
 private _color = [];
