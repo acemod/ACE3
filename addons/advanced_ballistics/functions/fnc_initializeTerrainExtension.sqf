@@ -53,7 +53,7 @@ INFO_2("Starting Terrain Extension [cells: %1] [world: %2]", _gridCells, worldNa
         private _gridCenter = [_x + 25, _y + 25];
         private _gridHeight = round(getTerrainHeightASL _gridCenter);
         private _gridNumObjects = count (_gridCenter nearObjects ["Building", 50]);
-        private _gridSurfaceIsWater = [0, 1] select (surfaceIsWater _gridCenter);
+        private _gridSurfaceIsWater = parseNumber (surfaceIsWater _gridCenter);
         "ace_advanced_ballistics" callExtension format["set:%1:%2:%3", _gridHeight, _gridNumObjects, _gridSurfaceIsWater];
         GVAR(currentGrid) = GVAR(currentGrid) + 1;
         if (GVAR(currentGrid) >= _gridCells) exitWith {};

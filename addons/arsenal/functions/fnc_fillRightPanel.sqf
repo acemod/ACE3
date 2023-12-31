@@ -103,7 +103,7 @@ private _fnc_fillRightContainer = {
     _ctrlPanel lnbSetData [[_lbAdd, 0], _className];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
     _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
-    _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
+    _ctrlPanel lnbSetValue [[_lbAdd, 2], parseNumber _isUnique];
     _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
     if ((toLower _className) in GVAR(favorites)) then {
         _ctrlPanel lnbSetColor [[_lbAdd, 1], FAVORITES_COLOR];

@@ -96,7 +96,7 @@
         _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
     if (["task_force_radio"] call FUNC(isModLoaded)) then {
-        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
+        _object setVariable ["tf_voiceVolume", parseNumber !(_set > 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
