@@ -20,7 +20,7 @@ params ["_vehicle"];
 
 if (0 == getNumber (configOf _vehicle >> QEGVAR(cargo,hasCargo))) exitWith {};
 
-["ACE_rope6", "ACE_rope12"] select (
+private _ropeType = ["ACE_rope6", "ACE_rope12"] select (
     -1 < ["Tank", "Wheeled_APC_F", "Truck_F"] findIf {_vehicle isKindOf _x}
 );
 
