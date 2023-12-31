@@ -21,4 +21,4 @@ TRACE_2("params",_ctrl,_index);
 
 private _enabledChannels = false call FUNC(getEnabledChannels);
 
-setCurrentChannel (_enabledChannels select parseNumber (_ctrl lbData _index));
+setCurrentChannel (parseNumber (_ctrl lbData _index));
