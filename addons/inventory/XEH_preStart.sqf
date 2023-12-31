@@ -17,6 +17,7 @@ uiNamespace setVariable [QGVAR(ItemKeyCache), _allItems apply {
         _picture = _picture select [1];
     };
     if (count _picture > 0 && !(_picture regexMatch ".*?\.paa")) then { // handle missing file extension
+        if (!fileExists (_picture + ".paa")) exitWith {};
         _picture = _picture + ".paa";
     };
 
