@@ -25,7 +25,7 @@ private _filter = _display displayCtrl IDC_FILTERLISTS;
 // the first three indecies are hard coded: 0 - weapons , 1 - magazines, 2 - items
 // all of them show backpacks, because BI
 // all other indecies show everything, so all we have to do is delete stuff we dont like
-_filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
+_filter ctrlAddEventHandler ["LBSelChanged", LINKFUNC(onLBSelChanged)];
 
 // have to add these a frame later, because this event happens before the engine adds the default filters
 [{
