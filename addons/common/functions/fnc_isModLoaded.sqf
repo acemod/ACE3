@@ -17,11 +17,12 @@
 
 params [["_modName", "", [""]]];
 
-private _return = GVAR(isModLoadedCache) get (toLowerANSI _modName);
+private _key = toLowerANSI _modName;
+private _return = GVAR(isModLoadedCache) get _key;
 
 if (isNil "_return") then {
     _return = isClass (configFile >> "CfgPatches" >> _modName);
-    GVAR(isModLoadedCache) set [_modName, _return];
+    GVAR(isModLoadedCache) set [_key, _return];
 };
 
 _return
