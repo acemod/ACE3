@@ -47,7 +47,7 @@ private _rightPanelCache = uiNamespace getVariable QGVAR(rightPanelCache);
 private _currentCargo = itemsWithMagazines GVAR(center);
 
 private _fnc_fillRightContainer = {
-    params ["_configCategory", "_className", "_hasItemInfo", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
+    params ["_configCategory", "_className", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
 
     if (GVAR(favoritesOnly) && {!(_className in _currentCargo)} && {!((toLower _className) in GVAR(favorites))}) exitWith {};
 
@@ -64,7 +64,6 @@ private _fnc_fillRightContainer = {
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
         if (_className in (uiNamespace getVariable QGVAR(magazineMiscItems))) then {
             _configPath = _cfgMagazines >> _className;
-            _hasItemInfo = false;
         };
 
         // If an item with unknown origin is in the arsenal list, try to find it
@@ -75,34 +74,15 @@ private _fnc_fillRightContainer = {
             if (isNull _configPath) then {
                 _configPath = _className call CBA_fnc_getObjectConfig;
             };
-
-            // Check if item is has item info
-            _itemInfo = isClass (_cfgWeapons >> configName _configPath);
         };
 
-        // Get mass
-        private _mass = if (!_hasItemInfo) then {
-            getNumber (_configPath >> "mass")
-        } else {
-            private _mass = getNumber (_configPath >> "itemInfo" >> "mass");
-
-            if (_mass == 0) then {
-                _mass = getNumber (_configPath >> "WeaponSlotsInfo" >> "mass");
-            };
-
-            _mass
-        };
-
-        _rightPanelCache set [_className, _mass]; // Needed because this provides more accurate weight for FUNC(updateRightPanel)
-
-        [getText (_configPath >> "displayName"), getText (_configPath >> "picture"), _mass]
-    }, true]) params ["_displayName", "_picture", "_mass"];
+        [getText (_configPath >> "displayName"), getText (_configPath >> "picture")]
+    }, true]) params ["_displayName", "_picture"];
 
     private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, "0"];
     _ctrlPanel lnbSetText [[_lbAdd, 1], _displayName];
     _ctrlPanel lnbSetData [[_lbAdd, 0], _className];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
-    _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
     _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
     if ((toLower _className) in GVAR(favorites)) then {
@@ -230,11 +210,11 @@ switch (_ctrlIDC) do {
             } forEach _compatibleItems;
         } else {
             {
-                ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x] call _fnc_fillRightContainer;
             } forEach (keys ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _index));
 
             {
-                ["CfgWeapons", _x, true, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
             } forEach (keys ((GVAR(virtualItems) get IDX_VIRT_UNIQUE_ATTACHMENTS) get _index));
         };
     };
@@ -253,44 +233,44 @@ switch (_ctrlIDC) do {
     case IDC_buttonMag: {
         {
             if (_x in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) then {
-                ["CfgMagazines", _x, false] call _fnc_fillRightContainer;
+                ["CfgMagazines", _x] call _fnc_fillRightContainer;
 
                 continue;
             };
 
             if (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL)) then {
-                ["CfgMagazines", _x, false, true] call _fnc_fillRightContainer;
+                ["CfgMagazines", _x, true] call _fnc_fillRightContainer;
             };
         } forEach (keys _compatibleMagsAll);
     };
     // All magazines
     case IDC_buttonMagALL: {
         {
-            ["CfgMagazines", _x, false] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
         {
-            ["CfgMagazines", _x, false, true] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x, true] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL));
     };
     // Grenades
     case IDC_buttonThrow: {
         {
-            ["CfgMagazines", _x, false] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_GRENADES));
 
         {
-            ["CfgMagazines", _x, false, true] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x, true] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GRENADES));
     };
     // Explosives
     case IDC_buttonPut: {
         {
-            ["CfgMagazines", _x, false] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES));
 
         {
-            ["CfgMagazines", _x, false, true] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x, true] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_EXPLOSIVES));
     };
     // Misc. items
@@ -309,31 +289,31 @@ switch (_ctrlIDC) do {
         // "Regular" misc. items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS));
         // Unique items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, true, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS));
         // Unique backpacks
         {
             if !(_x in _items) then {
-                ["CfgVehicles", _x, false, true] call _fnc_fillRightContainer;
+                ["CfgVehicles", _x, true] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_BACKPACKS));
         // Unique goggles
         {
             if !(_x in _items) then {
-                ["CfgGlasses", _x, false, true] call _fnc_fillRightContainer;
+                ["CfgGlasses", _x, true] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES));
         // Unknown items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, true, !(_x in GVAR(virtualItemsFlat)), true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x, !(_x in GVAR(virtualItemsFlat)), true] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS)); // if an item is here but in virtual items, it's just in the wrong place
     };
@@ -347,23 +327,23 @@ switch (_ctrlIDC) do {
                 switch (true) do {
                     // "Regular" misc. items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)): {
-                        ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
+                        ["CfgWeapons", _x] call _fnc_fillRightContainer;
                     };
                     // Unique items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS)): {
-                        ["CfgWeapons", _x, true, true] call _fnc_fillRightContainer;
+                        ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
                     };
                     // Unique backpacks
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_BACKPACKS)): {
-                        ["CfgVehicles", _x, false, true] call _fnc_fillRightContainer;
+                        ["CfgVehicles", _x, true] call _fnc_fillRightContainer;
                     };
                     // Unique goggles
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES)): {
-                        ["CfgGlasses", _x, false, true] call _fnc_fillRightContainer;
+                        ["CfgGlasses", _x, true] call _fnc_fillRightContainer;
                     };
                     // Unknown items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS)): {
-                        ["CfgWeapons", _x, true, !(_x in GVAR(virtualItemsFlat)), true] call _fnc_fillRightContainer;
+                        ["CfgWeapons", _x, !(_x in GVAR(virtualItemsFlat)), true] call _fnc_fillRightContainer;
                     };
                 };
             } forEach _items;
