@@ -44,7 +44,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _rightPanelCache = uiNamespace getVariable QGVAR(rightPanelCache);
 
-private _currentCargo = []; // we only need this if we're checking filtering for favorites
+private _currentCargo = []; // we only need this if we're filtering for favorites
 if (GVAR(favoritesOnly)) then {
     _currentCargo = itemsWithMagazines GVAR(center) + backpacks GVAR(center);
     _currentCargo = _currentCargo arrayIntersect _currentCargo;
