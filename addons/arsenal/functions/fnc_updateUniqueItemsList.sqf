@@ -207,7 +207,12 @@ private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
             _hasItemInfo = isClass (_configItemInfo);
             _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
             _isMiscItem = _x isKindOf ["CBA_MiscItem", _cfgWeapons];
-            _baseWeapon = _x call FUNC(baseWeapon);
+
+            _baseWeapon = if (!_isMiscItem) then {
+                _x call FUNC(baseWeapon)
+            } else {
+                _x
+            };
 
             switch (true) do {
                 // Optics
