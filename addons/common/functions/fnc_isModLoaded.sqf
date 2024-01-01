@@ -18,7 +18,7 @@
 params [["_modName", "", [""]]];
 
 private _key = toLowerANSI _modName;
-private _return = GVAR(isModLoadedCache) get _key;
+GVAR(isModLoadedCache) getOrDefaultCall [_key, {isClass (configFile >> "CfgPatches" >> _key )}, true]
 
 if (isNil "_return") then {
     _return = isClass (configFile >> "CfgPatches" >> _modName);
