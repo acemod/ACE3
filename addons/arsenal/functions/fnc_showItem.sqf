@@ -58,7 +58,7 @@ if (_nextAction != GVAR(currentAction)) then {
     };
 
     if (simulationEnabled GVAR(center)) then {
-        GVAR(center) playActionNow QGVAR(stop);
+        GVAR(center) playActionNow QEGVAR(common,stop);
         GVAR(center) playActionNow _nextAction;
     } else {
         GVAR(center) switchAction _nextAction;
