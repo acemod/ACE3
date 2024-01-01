@@ -1,6 +1,6 @@
+// From ACRE
 class CfgGesturesMale {
     skeletonName = "OFP2_ManSkeleton";
-    class Default;
     class States {
         class GestureNod;
         class GVAR(stop): GestureNod {
@@ -9,19 +9,6 @@ class CfgGesturesMale {
             disableWeaponsLong = 0;
             enableOptics = 1;
             mask = "empty";
-        };
-    };
-};
-
-class CfgMovesBasic {
-    class DefaultDie;
-    class ManActions {
-        GVAR(stop) = QGVAR(stop);
-    };
-    class Actions {
-        class Default;
-        class NoActions: ManActions {
-            GVAR(stop)[] = {QGVAR(stop), "Gesture"};
         };
     };
 };

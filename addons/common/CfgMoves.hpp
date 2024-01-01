@@ -1,4 +1,3 @@
-
 class CfgMovesBasic {
     class Default;
     class Actions {
@@ -12,6 +11,16 @@ class CfgMovesBasic {
         };
         class CivilStandActions: NoActions {
             grabDrag = "AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2";
+        };
+    };
+
+    // From ACRE
+    class ManActions {
+        GVAR(stop) = QGVAR(stop);
+    };
+    class Actions {
+        class NoActions: ManActions {
+            GVAR(stop)[] = {QGVAR(stop), "Gesture"};
         };
     };
 };
