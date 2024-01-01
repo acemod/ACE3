@@ -1,8 +1,15 @@
 class CfgMovesBasic {
     class Default;
+    // From ACRE
+    class ManActions {
+        GVAR(stop) = QGVAR(stop);
+    };
     class Actions {
+        class NoActions: ManActions {
+            GVAR(stop)[] = {QGVAR(stop), "Gesture"};
+        };
+
         // fixes grab animation with equipped pistol
-        class NoActions;
         class PistolStandActions: NoActions {
             grabDrag = "AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2";
         };
@@ -11,16 +18,6 @@ class CfgMovesBasic {
         };
         class CivilStandActions: NoActions {
             grabDrag = "AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2";
-        };
-    };
-
-    // From ACRE
-    class ManActions {
-        GVAR(stop) = QGVAR(stop);
-    };
-    class Actions {
-        class NoActions: ManActions {
-            GVAR(stop)[] = {QGVAR(stop), "Gesture"};
         };
     };
 };
