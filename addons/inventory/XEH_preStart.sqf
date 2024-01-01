@@ -47,7 +47,7 @@ private _grenadeList = createHashMap;
 uiNamespace setVariable [QGVAR(grenadesItemList), compileFinal _grenadeList];
 
 // Generate list of medical items
-private _medicalList = toString {getNumber (_x >> "scope") > 0 && {getNumber (_x >> "ItemInfo" >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT]}} configClasses (configFile >> "CfgWeapons");
+private _medicalList = QUOTE(getNumber (_x >> 'scope') > 0 && {getNumber (_x >> 'ItemInfo' >> 'type') in [ARR_2(TYPE_FIRST_AID_KIT,TYPE_MEDIKIT)]}) configClasses (configFile >> "CfgWeapons");
 
 _medicalList = _medicalList apply {configName _x};
 
