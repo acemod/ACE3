@@ -58,6 +58,7 @@ if (_nextAction != GVAR(currentAction)) then {
         case "PrimaryWeapon": {0};
         case "SecondaryWeapon": {1};
         case "HandGunOn": {2};
+        case "Binoculars": {3};
         default {GVAR(selectedWeaponType)};
     };
 
@@ -69,4 +70,8 @@ if (_nextAction != GVAR(currentAction)) then {
     };
 
     GVAR(currentAction) = _nextAction;
+};
+
+if (!(GVAR(currentAction) in ["Civil", "Salute"])) then {
+    GVAR(center) selectWeapon ([primaryWeapon GVAR(center), secondaryWeapon GVAR(center), handgunWeapon GVAR(center), binocular GVAR(center)] select GVAR(selectedWeaponType)); // select correct weapon, prevents floating weapons
 };
