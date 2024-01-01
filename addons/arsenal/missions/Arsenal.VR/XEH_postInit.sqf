@@ -18,7 +18,7 @@ cba_diagnostic_projectileMaxLines = 10;
                 _this switchMove "amovpercmstpslowwpstdnon";
             };
             case (binocular _this);
-            case (secondaryWEapon _this): {}; // deliberately nothing
+            case (secondaryWeapon _this): {}; // deliberately nothing
             default {
                 _this switchMove "amovpercmstpsnonwnondnon";
             };
