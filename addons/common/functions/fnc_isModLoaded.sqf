@@ -17,12 +17,4 @@
 
 params [["_modName", "", [""]]];
 
-private _key = toLowerANSI _modName;
-GVAR(isModLoadedCache) getOrDefaultCall [_key, {isClass (configFile >> "CfgPatches" >> _key )}, true]
-
-if (isNil "_return") then {
-    _return = isClass (configFile >> "CfgPatches" >> _modName);
-    GVAR(isModLoadedCache) set [_key, _return];
-};
-
-_return
+GVAR(isModLoadedCache) getOrDefaultCall [toLowerANSI _modName, {isClass (configFile >> "CfgPatches" >> _modName)}, true]
