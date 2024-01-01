@@ -60,7 +60,7 @@ if (!hasInterface) exitWith {};
     }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
-    if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+    if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
         [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
             linearConversion [0, 1, (_this getVariable [QEGVAR(medical,pain), 0]), 1, 1.1, true];
         }] call FUNC(addDutyFactor);
@@ -68,7 +68,7 @@ if (!hasInterface) exitWith {};
             linearConversion [6, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 6]), 1, 2, true];
         }] call FUNC(addDutyFactor);
     };
-    if (["ACE_Dragging"] call EFUNC(common,isModLoaded)) then {
+    if (["ace_dragging"] call EFUNC(common,isModLoaded)) then {
         [QEGVAR(dragging,isCarrying), {
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);
