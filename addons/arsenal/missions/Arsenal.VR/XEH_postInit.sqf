@@ -11,6 +11,9 @@ cba_diagnostic_projectileMaxLines = 10;
     // Player pose
     [{
         switch (currentWeapon _this) do {
+            case (""): {
+                _this switchMove "amovpercmstpsnonwnondnon";
+            };
             case (primaryWeapon _this): {
                 _this switchMove "amovpercmstpslowwrfldnon";
             };
@@ -19,9 +22,6 @@ cba_diagnostic_projectileMaxLines = 10;
             };
             case (binocular _this);
             case (secondaryWeapon _this): {}; // deliberately nothing
-            default {
-                _this switchMove "amovpercmstpsnonwnondnon";
-            };
         };
     }, _player] call CBA_fnc_execNextFrame;
 
