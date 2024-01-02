@@ -6,7 +6,7 @@
     true,
     1,
     {
-        if (_this select 1) exitWith {}; // skip if true
+        if (_this) exitWith {}; // skip if true
         {
             _x setVariable [QGVAR(oxygenDemand), 0, true];
             _x setVariable [VAR_SPO2, DEFAULT_SPO2, true];
