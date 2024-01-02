@@ -6,7 +6,7 @@
             <Chinese>9 mm 17 發彈匣</Chinese>
             <French>Mag. 17 balles 9 mm</French>
             <Spanish>Cargador de 17 proyectiles de 9 mm</Spanish>
-            <Italian>Caricatore 17 colpi 9 mm</Italian>
+            <Italian>Caricatore 17cp 9mm</Italian>
             <Polish>17-nab. mag. 9 mm</Polish>
             <Russian>Магазин, 17 патр. 9 мм</Russian>
             <German>17-Schuss-9mm-Magazin</German>
@@ -23,6 +23,7 @@
             <Russian>Магазин, 25 патр. .45 ACP</Russian>
             <French>Mag. 25 balles .45 ACP</French>
             <Spanish>Cargador de 25 proyectiles de .45 ACP</Spanish>
+            <Italian>Caricatore 25cp .45 ACP</Italian>
             <German>25-Schuss-.45-ACP-Magazin</German>
             <Czech>.45 ACP, 25ks zásobník</Czech>
             <Turkish>.45 ACP 25 Merm. Şarjör</Turkish>
@@ -36,10 +37,11 @@
             <Russian>Магазин, 25 патр. .45 ACP (зелёные трассеры)</Russian>
             <French>Mag. 25 traçantes (vertes) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (verde) de .45 ACP</Spanish>
+            <Italian>Caricatore 25cp .45 ACP Traccianti (Verdi)</Italian>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Leuchtspur Grün)</German>
             <Czech>.45 ACP, 25ks zásobník stopovky (zelené)</Czech>
             <Turkish>.45 ACP 25 Merm. İzli (Yeşil) Şarjör</Turkish>
-            <Japanese>.45 ACP 25Rnd 曳光弾 (緑) マガジン</Japanese>
+            <Japanese>.45 ACP 25Rnd トレーサー (緑) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，绿）</Chinesesimp>
             <Korean>.45 ACP 25발 예광탄 (초록) 탄창</Korean>
         </Key>
@@ -49,10 +51,11 @@
             <Russian>Магазин, 25 патр. .45 ACP (красные трассеры)</Russian>
             <French>Mag. 25 traçantes (rouges) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (rojo) de .45 ACP</Spanish>
+            <Italian>Caricatore 25cp .45 ACP Traccianti (Rossi)</Italian>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Leuchtspur Rot)</German>
             <Czech>.45 ACP, 25ks zásobník stopovky (červené)</Czech>
             <Turkish>.45 ACP 25 Merm. İzli (Kırmızı) Şarjör</Turkish>
-            <Japanese>.45 ACP 25Rnd 曳光弾 (赤) マガジン</Japanese>
+            <Japanese>.45 ACP 25Rnd トレーサー (赤) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，红）</Chinesesimp>
             <Korean>.45 ACP 25발 예광탄 (빨강) 탄창</Korean>
         </Key>
@@ -62,10 +65,11 @@
             <Russian>Магазин, 25 патр. .45 ACP (жёлтые трассеры)</Russian>
             <French>Mag. 25 traçantes (jaunes) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (amarillo) de .45 ACP</Spanish>
+            <Italian>Caricatore 25cp .45 ACP Traccianti (Gialli)</Italian>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Nachlade-Leuchtspur Gelb)</German>
             <Czech>.45 ACP, 25ks zásobník stopovky (žluté)</Czech>
             <Turkish>.45 ACP 25 Merm. İzli (Sarı) Şarjör</Turkish>
-            <Japanese>.45 ACP 25Rnd 曳光弾 (黄) マガジン</Japanese>
+            <Japanese>.45 ACP 25Rnd トレーサー (黄) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，黄）</Chinesesimp>
             <Korean>.45 ACP 25발 예광탄 (노랑) 탄창</Korean>
         </Key>
@@ -75,6 +79,7 @@
             <Russian>Магазин, 8 патр. .45 ACP</Russian>
             <French>Mag. 8 balles .45 ACP</French>
             <Spanish>Cargador de 8 proyectiles de .45 ACP</Spanish>
+            <Italian>Caricatore 8cp .45 ACP</Italian>
             <German>8-Schuss-.45-ACP-Magazin</German>
             <Czech>.45 ACP, 8ks zásobník</Czech>
             <Turkish>.45 ACP 8 Merm. Şarjör</Turkish>
@@ -88,6 +93,7 @@
             <Russian>Магазин, 15 патр. .45 ACP</Russian>
             <French>Mag. 15 balles .45 ACP</French>
             <Spanish>Cargador de 15 proyectiles de .45 ACP</Spanish>
+            <Italian>Caricatore 15cp .45 ACP</Italian>
             <German>15-Schuss-.45-ACP-Magazin</German>
             <Czech>.45 ACP, 15ks zásobník</Czech>
             <Turkish>.45 ACP 15 Merm. Şarjör</Turkish>

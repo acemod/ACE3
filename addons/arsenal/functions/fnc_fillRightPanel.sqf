@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Tab control <CONTROL>
- * 2: Animate panel refresh <BOOL>
+ * 2: Animate panel refresh <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -44,10 +44,14 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _rightPanelCache = uiNamespace getVariable QGVAR(rightPanelCache);
 
-private _currentCargo = itemsWithMagazines GVAR(center);
+private _currentCargo = []; // we only need this if we're filtering for favorites
+if (GVAR(favoritesOnly)) then {
+    _currentCargo = itemsWithMagazines GVAR(center) + backpacks GVAR(center);
+    _currentCargo = _currentCargo arrayIntersect _currentCargo;
+};
 
 private _fnc_fillRightContainer = {
-    params ["_configCategory", "_className", "_hasItemInfo", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
+    params ["_configCategory", "_className", ["_isUnique", false, [false]], ["_unknownOrigin", false, [false]]];
 
     if (GVAR(favoritesOnly) && {!(_className in _currentCargo)} && {!((toLower _className) in GVAR(favorites))}) exitWith {};
 
@@ -64,7 +68,6 @@ private _fnc_fillRightContainer = {
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
         if (_className in (uiNamespace getVariable QGVAR(magazineMiscItems))) then {
             _configPath = _cfgMagazines >> _className;
-            _hasItemInfo = false;
         };
 
         // If an item with unknown origin is in the arsenal list, try to find it
@@ -75,34 +78,15 @@ private _fnc_fillRightContainer = {
             if (isNull _configPath) then {
                 _configPath = _className call CBA_fnc_getObjectConfig;
             };
-
-            // Check if item is has item info
-            _itemInfo = isClass (_cfgWeapons >> configName _configPath);
         };
 
-        // Get mass
-        private _mass = if (!_hasItemInfo) then {
-            getNumber (_configPath >> "mass")
-        } else {
-            private _mass = getNumber (_configPath >> "itemInfo" >> "mass");
-
-            if (_mass == 0) then {
-                _mass = getNumber (_configPath >> "WeaponSlotsInfo" >> "mass");
-            };
-
-            _mass
-        };
-
-        _rightPanelCache set [_className, _mass]; // Needed because this provides more accurate weight for FUNC(updateRightPanel)
-
-        [getText (_configPath >> "displayName"), getText (_configPath >> "picture"), _mass]
-    }, true]) params ["_displayName", "_picture", "_mass"];
+        [getText (_configPath >> "displayName"), getText (_configPath >> "picture")]
+    }, true]) params ["_displayName", "_picture"];
 
     private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, "0"];
     _ctrlPanel lnbSetText [[_lbAdd, 1], _displayName];
     _ctrlPanel lnbSetData [[_lbAdd, 0], _className];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
-    _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select _isUnique];
     _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
     if ((toLower _className) in GVAR(favorites)) then {
@@ -114,15 +98,9 @@ private _fnc_fillRightContainer = {
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
 private _listnBox = _display displayCtrl IDC_rightTabContentListnBox;
 
-// Reset right panel content
-lbClear _ctrlPanel;
-lbClear _listnBox;
-
-_ctrlPanel lbSetCurSel -1;
-_listnBox lbSetCurSel -1;
-
 // Retrieve compatible items
-private _itemToCheck = "";
+private _isContainer = false;
+private _selectedItem = "";
 private _compatibleItems = [];
 private _compatibleMagsMuzzle = [];
 private _compatibleMagsAll = createHashMap;
@@ -154,12 +132,12 @@ switch (GVAR(currentLeftPanel)) do {
 
         // Check if weapon attachement or magazine
         if (_index != -1) then {
-            _itemToCheck = (GVAR(currentItems) select _currentWeaponItemsIndex) select _index;
+            _selectedItem = (GVAR(currentItems) select _currentWeaponItemsIndex) select _index;
 
             // If weapon attachment, get base weapon; Get compatible items
             if (_index <= 3) then {
                 _compatibleItems = compatibleItems _weapon;
-                _itemToCheck = _itemToCheck call FUNC(baseWeapon);
+                _selectedItem = _selectedItem call FUNC(baseWeapon);
             } else {
                 // Get compatible magazines for primary & secondary muzzle (secondary muzzle is not guaranteed to exist)
                 // Assumption: One weapon can have two muzzles maximum
@@ -171,7 +149,15 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonUniform;
     case IDC_buttonVest;
     case IDC_buttonBackpack: {
-        _ctrlPanel = _listnBox;
+        _isContainer = true;
+
+        // Get the currently selected item in panel
+        private _selectedItemIndex = lnbCurSelRow _listnBox;
+
+        // If something is selected, save it
+        if (_selectedItemIndex != -1) then {
+            _selectedItem = _listnBox lnbData [_selectedItemIndex, 0];
+        };
 
         // This is for the "compatible magazines" tab when a container is open
         if (_ctrlIDC == IDC_buttonMag) then {
@@ -181,6 +167,17 @@ switch (GVAR(currentLeftPanel)) do {
             } forEach [GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON, GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON, GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON, GVAR(currentItems) select IDX_CURR_BINO];
         };
     };
+};
+
+// Reset right panel content
+lbClear _ctrlPanel;
+lnbClear _listnBox;
+
+_ctrlPanel lbSetCurSel -1;
+_listnBox lnbSetCurSelRow -1;
+
+if (_isContainer) then {
+    _ctrlPanel = _listnBox;
 };
 
 // Force a "refresh" animation of the panel
@@ -217,11 +214,11 @@ switch (_ctrlIDC) do {
             } forEach _compatibleItems;
         } else {
             {
-                ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x] call _fnc_fillRightContainer;
             } forEach (keys ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _index));
 
             {
-                ["CfgWeapons", _x, true, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
             } forEach (keys ((GVAR(virtualItems) get IDX_VIRT_UNIQUE_ATTACHMENTS) get _index));
         };
     };
@@ -240,44 +237,44 @@ switch (_ctrlIDC) do {
     case IDC_buttonMag: {
         {
             if (_x in (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL)) then {
-                ["CfgMagazines", _x, false] call _fnc_fillRightContainer;
+                ["CfgMagazines", _x] call _fnc_fillRightContainer;
 
                 continue;
             };
 
             if (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL)) then {
-                ["CfgMagazines", _x, false, true] call _fnc_fillRightContainer;
+                ["CfgMagazines", _x, true] call _fnc_fillRightContainer;
             };
         } forEach (keys _compatibleMagsAll);
     };
     // All magazines
     case IDC_buttonMagALL: {
         {
-            ["CfgMagazines", _x, false] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
 
         {
-            ["CfgMagazines", _x, false, true] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x, true] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL));
     };
     // Grenades
     case IDC_buttonThrow: {
         {
-            ["CfgMagazines", _x, false] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_GRENADES));
 
         {
-            ["CfgMagazines", _x, false, true] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x, true] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GRENADES));
     };
     // Explosives
     case IDC_buttonPut: {
         {
-            ["CfgMagazines", _x, false] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_EXPLOSIVES));
 
         {
-            ["CfgMagazines", _x, false, true] call _fnc_fillRightContainer;
+            ["CfgMagazines", _x, true] call _fnc_fillRightContainer;
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_EXPLOSIVES));
     };
     // Misc. items
@@ -296,33 +293,35 @@ switch (_ctrlIDC) do {
         // "Regular" misc. items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS));
         // Unique items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, true, true] call _fnc_fillRightContainer;
+                ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS));
         // Unique backpacks
         {
             if !(_x in _items) then {
-                ["CfgVehicles", _x, false, true] call _fnc_fillRightContainer;
+                ["CfgVehicles", _x, true] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_BACKPACKS));
         // Unique goggles
         {
             if !(_x in _items) then {
-                ["CfgGlasses", _x, false, true] call _fnc_fillRightContainer;
+                // _y indicates if an item is truly unique or if it's a non-inventory item in a container (e.g. goggles in backpack)
+                ["CfgGlasses", _x, _y] call _fnc_fillRightContainer;
             };
-        } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES));
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES);
         // Unknown items
         {
             if !(_x in _items) then {
-                ["CfgWeapons", _x, true, true, true] call _fnc_fillRightContainer;
+                // _y indicates if an item is truly unique or if it's a non-inventory item in a container (e.g. helmet in backpack)
+                ["CfgWeapons", _x, _y, true] call _fnc_fillRightContainer;
             };
-        } forEach (keys (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS));
+        } forEach (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS); // if an item is here but in virtual items, it's just in the wrong place
     };
     // Custom buttons
     default {
@@ -334,23 +333,23 @@ switch (_ctrlIDC) do {
                 switch (true) do {
                     // "Regular" misc. items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)): {
-                        ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
+                        ["CfgWeapons", _x] call _fnc_fillRightContainer;
                     };
                     // Unique items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS)): {
-                        ["CfgWeapons", _x, true, true] call _fnc_fillRightContainer;
+                        ["CfgWeapons", _x, true] call _fnc_fillRightContainer;
                     };
                     // Unique backpacks
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_BACKPACKS)): {
-                        ["CfgVehicles", _x, false, true] call _fnc_fillRightContainer;
+                        ["CfgVehicles", _x, true] call _fnc_fillRightContainer;
                     };
                     // Unique goggles
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES)): {
-                        ["CfgGlasses", _x, false, true] call _fnc_fillRightContainer;
+                        ["CfgGlasses", _x, GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES get _x] call _fnc_fillRightContainer;
                     };
                     // Unknown items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS)): {
-                        ["CfgWeapons", _x, true, true, true] call _fnc_fillRightContainer;
+                        ["CfgWeapons", _x, GVAR(virtualItems) get IDX_VIRT_UNIQUE_UNKNOWN_ITEMS get _x, true] call _fnc_fillRightContainer;
                     };
                 };
             } forEach _items;
@@ -368,7 +367,7 @@ GVAR(currentRightPanel) = _ctrlIDC;
 [QGVAR(rightPanelFilled), [_display, GVAR(currentLeftPanel), _ctrlIDC]] call CBA_fnc_localEvent;
 
 // Add current items, change progress bar of container load and get relevant container
-if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
+if (_isContainer) then {
     private _containerItems = [];
     private _container = switch (GVAR(currentLeftPanel)) do {
         // Uniform
@@ -376,8 +375,8 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
             // Update load bar
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadUniform GVAR(center));
 
-            // Get all items from container (excluding container itself)
-            _containerItems = [GVAR(center), 0, 3, 0, 0, false] call EFUNC(common,uniqueUnitItems);
+            // Get all items from container
+            _containerItems = uniformItems GVAR(center);
 
             uniformContainer GVAR(center)
         };
@@ -386,8 +385,8 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
             // Update load bar
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadVest GVAR(center));
 
-            // Get all items from container (excluding container itself)
-            _containerItems = [GVAR(center), 0, 0, 3, 0, false] call EFUNC(common,uniqueUnitItems);
+            // Get all items from container
+            _containerItems = vestItems GVAR(center);
 
             vestContainer GVAR(center)
         };
@@ -396,8 +395,8 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
             // Update load bar
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadBackpack GVAR(center));
 
-            // Get all items from container (excluding container itself)
-            _containerItems = [GVAR(center), 0, 0, 0, 3, false] call EFUNC(common,uniqueUnitItems);
+            // Get all items from container
+            _containerItems = backpackItems GVAR(center);
 
             backpackContainer GVAR(center)
         };
@@ -405,7 +404,8 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 
     // Find out how many items of a type there are and update the number displayed
     for "_lbIndex" from 0 to (lnbSize _ctrlPanel select 0) - 1 do {
-        _ctrlPanel lnbSetText [[_lbIndex, 2], str (_containerItems getOrDefault [_ctrlPanel lnbData [_lbIndex, 0], 0])];
+        private _xItem = _ctrlPanel lnbData [_lbIndex, 0];
+        _ctrlPanel lnbSetText [[_lbIndex, 2], str ({_xItem == _x} count _containerItems)];
     };
 
     // Refresh availibility of items based on space remaining in container
@@ -415,17 +415,34 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 // Sorting
 [_display, _control, _display displayCtrl IDC_sortRightTab, _display displayCtrl IDC_sortRightTabDirection] call FUNC(fillSort);
 
-// Try to select previously selected item again, otherwise select first item ("Empty")
-if (_itemToCheck != "") then {
-    private _index = 0;
+if (_selectedItem != "") then {
+    if (_isContainer) then {
+        // Try to select previously selected item again, otherwise select nothing
+        private _index = -1;
 
-    for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
-        if ((_ctrlPanel lbData _lbIndex) == _itemToCheck) exitWith {
-            _index = _lbIndex;
+        for "_lbIndex" from 0 to (lnbSize _ctrlPanel select 0) - 1 do {
+            if ((_ctrlPanel lnbData [_lbIndex, 0]) == _selectedItem) exitWith {
+                _index = _lbIndex;
+            };
         };
-    };
 
-    _ctrlPanel lbSetCurSel _index;
+        _ctrlPanel lnbSetCurSelRow _index;
+    } else {
+        // Try to select previously selected item again, otherwise select first item ("Empty")
+        private _index = 0;
+
+        for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
+            if ((_ctrlPanel lbData _lbIndex) == _selectedItem) exitWith {
+                _index = _lbIndex;
+            };
+        };
+
+        _ctrlPanel lbSetCurSel _index;
+    };
 } else {
-    _ctrlPanel lbSetCurSel 0;
+    if (_isContainer) then {
+        _ctrlPanel lnbSetCurSelRow -1; // select nothing
+    } else {
+        _ctrlPanel lbSetCurSel 0; // select "Empty"
+    };
 };

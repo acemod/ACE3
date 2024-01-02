@@ -6,9 +6,6 @@ import tomllib
 
 addon_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
-files_to_ignore_lower = [
-    x.lower() for x in ["initSettings.sqf", "initKeybinds.sqf", "XEH_PREP.sqf"]
-]
 sqfvm_exe = os.path.join(addon_base_path, "sqfvm.exe")
 virtual_paths = [
     # would need to add more even more to /include to use it
@@ -24,7 +21,7 @@ def get_files_to_process(basePath):
     for root, _dirs, files in os.walk(os.path.join(addon_base_path, "addons")):
         for file in files:
             if file.endswith(".sqf") or file == "config.cpp":
-                if file.lower() in files_to_ignore_lower:
+                if file.endswith(".inc.sqf"):
                     continue
                 skipPreprocessing = False
                 for addonTomlPath in [os.path.join(root, "addon.toml"), os.path.join(os.path.dirname(root), "addon.toml")]:
@@ -32,7 +29,7 @@ def get_files_to_process(basePath):
                         with open(addonTomlPath, "rb") as f:
                             tomlFile = tomllib.load(f)
                             try:
-                                skipPreprocessing = not tomlFile.get('rapify')['enabled']
+                                skipPreprocessing = tomlFile.get('tools')['sqfvm_skipConfigChecks']
                             except:
                                 pass
                 if file == "config.cpp" and skipPreprocessing:
@@ -42,7 +39,7 @@ def get_files_to_process(basePath):
     return arma_files
 
 
-def process_file(filePath, skipA3Warnings=True):
+def process_file(filePath, skipA3Warnings=True, skipPragmaHemtt=True):
     with open(filePath, "r", encoding="utf-8", errors="ignore") as file:
         content = file.read()
         if content.startswith("//pragma SKIP_COMPILE"):
@@ -71,10 +68,8 @@ def process_file(filePath, skipA3Warnings=True):
             if line.startswith("[ERR]"):
                 fileHasError = True
             if not (
-                skipA3Warnings
-                and line.startswith("[WRN]")
-                and ("a3/" in line)
-                and (("Unexpected IFDEF" in line) or ("defined twice" in line))
+                (skipA3Warnings and line.startswith("[WRN]") and ("a3/" in line) and (("Unexpected IFDEF" in line) or ("defined twice" in line)))
+                or (skipPragmaHemtt and line.startswith("[WRN]") and ("Unknown pragma instruction 'hemtt'" in line))
             ):
                 print("  {}".format(line))
     return fileHasError

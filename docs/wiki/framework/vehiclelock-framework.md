@@ -27,7 +27,7 @@ Sync the module with vehicles and players. Custom keys will be handed to players
 
 ## 3. Scripting
 
-### 3.1 Assing Vehicle Key
+### 3.1 Adding Vehicle Key
 
 `ace_vehiclelock_fnc_addKeyForVehicle`
 

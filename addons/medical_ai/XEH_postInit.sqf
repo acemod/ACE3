@@ -19,6 +19,6 @@
         _unit setVariable [QGVAR(lastSuppressed), CBA_missionTime];
     }] call CBA_fnc_addClassEventHandler;
 
-    #include "stateMachine.sqf"
+    #include "stateMachine.inc.sqf"
 
 }] call CBA_fnc_addEventHandler;

@@ -40,7 +40,7 @@
             <Portuguese>Limite de Dano Crítico da IA</Portuguese>
             <Chinese>AI重擊承受量</Chinese>
             <Chinesesimp>AI 临界伤害阈值</Chinesesimp>
-            <Italian>Soglia dei danni critici dell AI</Italian>
+            <Italian>Soglia dei danni critici dell'IA</Italian>
             <Czech>Kritická míra poškození pro AI</Czech>
             <Polish>Próg Obrażeń Krytycznych AI</Polish>
             <Spanish>Límite de daño crítico de la IA</Spanish>
@@ -55,7 +55,7 @@
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
             <Chinesesimp>设置 AI 在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
-            <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
+            <Italian>Imposta la quantità di danno che un'unità IA può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
             <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności (oraz śmierci gdy "Suma urazów" jest włączona).</Polish>
             <Spanish>Fijar la cantidad de daño que la IA puede recivir antes de caer inconsciente</Spanish>
@@ -116,7 +116,7 @@
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Large">
             <English>Large Scrape</English>
             <German>Großer Kratzer</German>
-            <Italian>Alta Scorticatura</Italian>
+            <Italian>Ampia Scorticatura</Italian>
             <Russian>Большая ссадина</Russian>
             <French>Grande écorchure</French>
             <Polish>Duże draśnięcie</Polish>
@@ -150,7 +150,7 @@
         <Key ID="STR_ACE_Medical_Damage_Avulsion_Minor">
             <English>Minor Avulsion</English>
             <German>Kleine Avulsion</German>
-            <Italian>Minima Avulsione</Italian>
+            <Italian>Piccola Avulsione</Italian>
             <Russian>Малая Авульсия</Russian>
             <French>Petite avulsion</French>
             <Polish>Pomniejsza rana płatowa</Polish>
@@ -184,7 +184,7 @@
         <Key ID="STR_ACE_Medical_Damage_Avulsion_Large">
             <English>Large Avulsion</English>
             <German>Große Avulsion</German>
-            <Italian>Alta Avulsione</Italian>
+            <Italian>Grande Avulsione</Italian>
             <Russian>Большая Авульсия</Russian>
             <French>Grande avulsion</French>
             <Polish>Duża rana płatowa</Polish>
@@ -209,7 +209,7 @@
             <Hungarian>Zúzódás</Hungarian>
             <Portuguese>Contusão</Portuguese>
             <Czech>Modřina</Czech>
-            <Japanese>打ち傷</Japanese>
+            <Japanese>打撲傷</Japanese>
             <Korean>멍</Korean>
             <Chinese>挫傷</Chinese>
             <Turkish>Yara</Turkish>
@@ -218,7 +218,7 @@
         <Key ID="STR_ACE_Medical_Damage_Contusion_Minor">
             <English>Minor Bruise</English>
             <German>Kleine Prellung</German>
-            <Italian>Minima Contusione</Italian>
+            <Italian>Piccola Contusione</Italian>
             <Russian>Слабый ушиб</Russian>
             <French>Petit hématome</French>
             <Polish>Pomniejsze stłuczenie</Polish>
@@ -226,7 +226,7 @@
             <Hungarian>Kis zúzódás</Hungarian>
             <Portuguese>Contusão leve</Portuguese>
             <Czech>Malá modřina</Czech>
-            <Japanese>小さな打ち傷</Japanese>
+            <Japanese>小さな打撲傷</Japanese>
             <Korean>조금 멍듬</Korean>
             <Chinese>小挫傷</Chinese>
             <Turkish>Küçük Yara</Turkish>
@@ -243,7 +243,7 @@
             <Hungarian>Közepes zúzódás</Hungarian>
             <Portuguese>Contusão média</Portuguese>
             <Czech>Středně velká modřina</Czech>
-            <Japanese>中くらいの打ち傷</Japanese>
+            <Japanese>中くらいの打撲傷</Japanese>
             <Korean>꽤 멍듬</Korean>
             <Chinese>中度挫傷</Chinese>
             <Turkish>Orta Yara</Turkish>
@@ -252,7 +252,7 @@
         <Key ID="STR_ACE_Medical_Damage_Contusion_Large">
             <English>Large Bruise</English>
             <German>Große Prellung</German>
-            <Italian>Alta Contusione</Italian>
+            <Italian>Grande Contusione</Italian>
             <Russian>Сильный ушиб</Russian>
             <French>Grand hématome</French>
             <Polish>Duże stłuczenie</Polish>
@@ -286,7 +286,7 @@
         <Key ID="STR_ACE_Medical_Damage_Crush_Minor">
             <English>Minor Crushed Tissue</English>
             <German>Kleine Quetschverletzung</German>
-            <Italian>Minimo Tessuto Schiacciato</Italian>
+            <Italian>Poco Tessuto Schiacciato</Italian>
             <Russian>Слабая компрессионная травма</Russian>
             <French>Tissu légèrement écrasé</French>
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
@@ -320,7 +320,7 @@
         <Key ID="STR_ACE_Medical_Damage_Crush_Large">
             <English>Large Crushed Tissue</English>
             <German>Große Quetschverletzung</German>
-            <Italian>Alto Tessuto Schiacciato</Italian>
+            <Italian>Molto Tessuto Schiacciato</Italian>
             <Russian>Сильная компрессионная травма</Russian>
             <French>Tissu fortement écrasé</French>
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
@@ -473,7 +473,7 @@
         <Key ID="STR_ACE_Medical_Damage_VelocityWound">
             <English>Velocity Wound</English>
             <German>Ballistisches Trauma</German>
-            <Italian>Velocità Ferita</Italian>
+            <Italian>Ferita Balistica</Italian>
             <Russian>Огнестрельная рана</Russian>
             <Polish>Rana postrzałowa</Polish>
             <French>Plaie pénétrante</French>
@@ -490,7 +490,7 @@
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Minor">
             <English>Small Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
-            <Italian>Lenta Velocità Ferita</Italian>
+            <Italian>Piccola Ferita Balistica</Italian>
             <Russian>Малая огнестрельная рана</Russian>
             <Polish>Pomniejsza rana postrzałowa</Polish>
             <Spanish>Herida de bala menor</Spanish>
@@ -507,7 +507,7 @@
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
             <German>Mittleres Ballistisches Trauma</German>
-            <Italian>Media Velocità Ferita</Italian>
+            <Italian>Media Ferita Balistica</Italian>
             <Russian>Средняя огнестрельная рана</Russian>
             <Polish>Średnia rana postrzałowa</Polish>
             <Spanish>Herida de bala media</Spanish>
@@ -524,7 +524,7 @@
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Large">
             <English>Large Velocity Wound</English>
             <German>Großes Ballistisches Trauma</German>
-            <Italian>Alta Velocità Ferita</Italian>
+            <Italian>Grande Ferita Balistica</Italian>
             <Russian>Большая огнестрельная рана</Russian>
             <Polish>Duża rana postrzałowa</Polish>
             <Spanish>Herida de bala severa</Spanish>
@@ -541,7 +541,7 @@
         <Key ID="STR_ACE_Medical_Damage_PunctureWound">
             <English>Puncture Wound</English>
             <German>Stichwunde</German>
-            <Italian>Puntura Ferita</Italian>
+            <Italian>Ferita Perforante</Italian>
             <Russian>Колотая рана</Russian>
             <Polish>Rana kłuta</Polish>
             <French>Blessure par perforation</French>
@@ -558,7 +558,7 @@
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
             <German>Kleine Stichwunde</German>
-            <Italian>Piccola Puntura Ferita</Italian>
+            <Italian>Piccola Ferita Perforante</Italian>
             <Russian>Малая колотая рана</Russian>
             <Polish>Pomniejsza rana kłuta</Polish>
             <Spanish>Herida punzante menor</Spanish>
@@ -575,7 +575,7 @@
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
             <German>Mittlere Stichwunde</German>
-            <Italian>Media Puntura Ferita</Italian>
+            <Italian>Media Ferita Perforante</Italian>
             <Russian>Средняя колотая рана</Russian>
             <Polish>Średnia rana kłuta</Polish>
             <Spanish>Herida punzante media</Spanish>
@@ -592,7 +592,7 @@
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Large">
             <English>Large Puncture Wound</English>
             <German>Große Stichwunde</German>
-            <Italian>Grande Puntura Ferita</Italian>
+            <Italian>Grande Ferita Perforante</Italian>
             <Russian>Большая колотая рана</Russian>
             <Polish>Duża rana kłuta</Polish>
             <Spanish>Herida punzante severa</Spanish>
@@ -609,11 +609,11 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_DisplayName">
             <English>Fatal Damage Source</English>
             <Russian>Причина смертельного урона</Russian>
-            <Japanese>致命傷の原因</Japanese>
+            <Japanese>致命ダメージの原因</Japanese>
             <Chinese>致命傷來源</Chinese>
             <Chinesesimp>致命伤来源</Chinesesimp>
             <French>Cause de blessure mortelle</French>
-            <Italian>Fonte del danno fatale</Italian>
+            <Italian>Fonte di danni letali</Italian>
             <Czech>Zdroj smrtelné škody</Czech>
             <Polish>Źródło obrażeń krytycznych</Polish>
             <Portuguese>Fonte de Dano Fatal</Portuguese>
@@ -625,10 +625,10 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
             <English>Determines what damage can be fatal</English>
             <Russian>Определяет какой урон будет смертельным</Russian>
-            <Japanese>致命傷となるダメージの種類を決定します。</Japanese>
+            <Japanese>致命となるダメージの種類を決定します。</Japanese>
             <Chinese>決定何種傷害為致命</Chinese>
             <Chinesesimp>确定哪些伤害可能是致命的</Chinesesimp>
-            <Italian>Determina quali danni possono essere fatali</Italian>
+            <Italian>Determina quali danni possono essere letali</Italian>
             <French>Détermine le type de blessures pouvant être fatales.</French>
             <Czech>Nastavuje jaké poškození může být smrtelné</Czech>
             <Polish>Określa jakie obrażenia mogą być śmiertelne</Polish>
@@ -641,14 +641,14 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
             <Russian>Только серьезные попадания в жизненно важные органы</Russian>
-            <Japanese>重要臓器に大きなダメージを受けた時のみ</Japanese>
+            <Japanese>重要臓器に大きな被弾があった時のみ</Japanese>
             <Chinese>只有重要器官之重傷</Chinese>
             <Chinesesimp>只有重要器官受到重创</Chinesesimp>
             <French>Grosses blessures sur organes vitaux</French>
             <Italian>Solo grandi colpi agli organi vitali</Italian>
             <Czech>Pouze zásahy do životně důležitých orgánů</Czech>
             <Polish>Tylko duże trafienia w ważne narządy</Polish>
-            <Portuguese>Apenas danos largos a órgãos vitais</Portuguese>
+            <Portuguese>Apenas danos graves a órgãos vitais</Portuguese>
             <Spanish>Solo grandes heridas en organos vitales</Spanish>
             <Turkish>Sadece hayati organlara büyük vuruşlar</Turkish>
             <German>Nur schwere Treffer an lebenswichtigen Organen</German>
@@ -676,10 +676,10 @@
             <Chinese>兩者都是</Chinese>
             <Chinesesimp>二者之一</Chinesesimp>
             <French>Les deux</French>
-            <Italian>o</Italian>
+            <Italian>Entrambi</Italian>
             <Czech>Kterýkoliv ze dvou</Czech>
             <Polish>Zarówno</Polish>
-            <Portuguese>Ou</Portuguese>
+            <Portuguese>Ambos</Portuguese>
             <Spanish>Ambos</Spanish>
             <Turkish>Ikisinden biri</Turkish>
             <German>Beide</German>
@@ -690,49 +690,58 @@
             <Japanese>熱傷</Japanese>
             <French>Brûlure thermique</French>
             <Russian>Термический ожог</Russian>
+            <Italian>Ustione Termica</Italian>
             <German>Thermische Verbrennung</German>
             <Polish>Oparzenie</Polish>
             <Chinesesimp>热灼伤</Chinesesimp>
             <Korean>화상</Korean>
             <Spanish>Quemadura térmica</Spanish>
+            <Portuguese>Queimadura Térmica</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
             <English>Minor Thermal Burn</English>
             <Japanese>軽度の熱傷</Japanese>
             <French>Légère brûlure thermique</French>
+            <Italian>Leggera Ustione Termica</Italian>
             <Russian>Незначительный термический ожог</Russian>
             <German>Leichte thermische Verbrennung</German>
             <Polish>Pomniejsze oparzenie</Polish>
             <Chinesesimp>轻微热灼伤</Chinesesimp>
             <Korean>작은 화상</Korean>
             <Spanish>Quemadura térmica menor</Spanish>
+            <Portuguese>Queimadura Térmica Leve</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
             <English>Medium Thermal Burn</English>
             <Japanese>中度の熱傷</Japanese>
             <French>Brûlure thermique modérée</French>
+            <Italian>Media Ustione Termica</Italian>
             <Russian>Средний термический ожог</Russian>
             <German>Mittlere thermische Verbrennung</German>
             <Polish>Średnie oparzenie</Polish>
             <Chinesesimp>中度热灼伤</Chinesesimp>
             <Korean>꽤 큰 화상</Korean>
             <Spanish>Quemadura térmica media</Spanish>
+            <Portuguese>Queimadura Térmica Média</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
             <English>Major Thermal Burn</English>
             <Japanese>重度の熱傷</Japanese>
             <French>Sévère brûlure thermique</French>
+            <Italian>Severa Ustione Termica</Italian>
             <Russian>Сильный термический ожог</Russian>
             <German>Schwere thermische Verbrennung</German>
             <Polish>Duże oparzenie</Polish>
             <Chinesesimp>重度热灼伤</Chinesesimp>
             <Korean>심각한 화상</Korean>
             <Spanish>Quemadura térmica severa</Spanish>
+            <Portuguese>Queimadura Térmica Grave</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>
             <German>Schwelle für Schaden</German>
             <French>Seuil de dégâts</French>
+            <Italian>Soglia di danni critici</Italian>
             <Japanese>ユニットのダメージしきい値</Japanese>
             <Czech>Práh poškození</Czech>
             <Russian>Порог урона</Russian>
@@ -741,12 +750,14 @@
             <Spanish>Umbral de daño de unidad</Spanish>
             <Chinesesimp>单位伤害阈值</Chinesesimp>
             <Korean>유닛 피해 한계점</Korean>
+            <Portuguese>Limite de Dano em Unidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
             <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
             <German>Legt die Höhe des Schadens fest, den eine Einheit erhalten kann, bevor diese ohnmächtig wird. (0 für Misionsnormalwert)</German>
+            <Italian>Determina il livello di danni sopportabili da un'unità senza svenire. (0 per il valore predefinito dalla missione)</Italian>
             <French>Définit la quantité de dégâts que l'unité peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).\n(0 utilise la valeur définie dans la mission.)</French>
-            <Japanese>ユニットが気絶するまで許容できるダメージ値を設定できます。(ミッション開始時は0)</Japanese>
+            <Japanese>このユニットが気絶するまでに受けられるダメージ量を設定します。 (ミッション標準は0)</Japanese>
             <Czech>Určuje kolik poškození může jednotka utrpět než upadne do bezvědomí. (pro použití standardní hodnoty mise zadejte 0)</Czech>
             <Russian>Устанавливает количество урона, которое может получить юнит перед тем, как потерять сознание. (0 для значения миссии)</Russian>
             <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
@@ -754,21 +765,25 @@
             <Spanish>Determina la cantidad de daño que puede recibir una unidad antes de quedar inconsciente (0 para predeterminado de misión)</Spanish>
             <Chinesesimp>设定一个单位在昏迷前所能承受的伤害量。（任务默认为0）</Chinesesimp>
             <Korean>이 유닛이 얼마나 많은 피해를 받아야 기절할 지 정합니다. (0은 미션 기본 설정을 사용합니다)</Korean>
+            <Portuguese>Define a quantidade de dano que uma unidade pode receber antes de ficar inconsciente. (0 para o padrão da missão)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
             <English>Pain Unconscious Chance</English>
             <Russian>Шанс потерять сознание от боли</Russian>
             <Polish>Szansa na nieprzytomność przez ból</Polish>
+            <Italian>Probabilità Svenimento da Dolore</Italian>
             <Japanese>痛みによる気絶確率</Japanese>
             <Spanish>Probabilidad de inconsciencia por dolor</Spanish>
             <French>Douleur - Chance d'évanouissement</French>
             <German>Chance für Bewusslosigkeit durch Schmerz</German>
             <Chinesesimp>疼痛昏厥概率</Chinesesimp>
             <Korean>고통으로 인한 기절 확률</Korean>
+            <Portuguese>Chance de Inconsciência por Dor</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
             <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
             <Russian>Шанс, что человек потеряет сознание, когда его боль выше допустимого порога при получении травмы.</Russian>
+            <Italian>La probabilità che un'unità perda i sensi quando il suo dolore è sopra la soglia critica ricevendo danni.</Italian>
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
             <Japanese>ユニットがダメージを受けた時の痛みが許容しきい値を超えていた場合に気絶する確率を設定します。</Japanese>
             <Spanish>La probabilidad de que una persona caiga inconsciente cuando su dolor está por encima del umbral al haber recibido daño.</Spanish>
@@ -776,46 +791,55 @@
             <German>Die Wahrscheinlichkeit, dass eine Person bewusstlos wird, wenn ihre Schmerzen bei einer Verwundung über der Toleranzschwelle liegen.</German>
             <Chinesesimp>当一个人的疼痛超过承受能力的极限时，他陷入昏迷的概率。</Chinesesimp>
             <Korean>고통 한계점을 넘을 시 기절하는 확률을 정합니다.</Korean>
+            <Portuguese>A probabilidade de uma pessoa ficar inconsciente quando sua dor está acima do limite de tolerância ao receber dano.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_DisplayName">
             <English>Pain Unconscious Threshold</English>
             <Russian>Порог боли для потери сознания</Russian>
+            <Italian>Soglia Critica di Dolore</Italian>
             <French>Seuil d'inconscience par la douleur.</French>
             <Japanese>気絶する痛みのしきい値</Japanese>
             <Polish>Próg Nieprzytomności od Bólu</Polish>
             <German>Schmerz-Bewusstlosigkeit-Grenze</German>
             <Korean>고통 기절 한계점</Korean>
+            <Portuguese>Limite de Dor Antes da Inconsciência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
             <English>Sets the threshold for severe pain, above which a person can fall unconscious upon receiving damage.</English>
             <Russian>Устанавливает количество боли от полученной травмы, при котором юнит может потерять сознание.</Russian>
+            <Italian>Determina la soglia per forte dolore, al di sopra di cui una persona può svenire se riceve danni.</Italian>
             <French>Définis le niveau de douleur à partir duquel une personne peut perdre connaissance. Cf PainUnconsciousChance.</French>
             <Japanese>激しい痛みのしきい値を設定します。このしきい値を超えた状態でダメージを受けると意識を失う可能性があります。</Japanese>
             <Polish>Ustawia próg silnego bólu, powyżej którego osoba może stracić przytomność po otrzymaniu obrażeń.</Polish>
             <German>Legt die Grenze für starke Schmerzen fest, oberhalb derer eine Person bei erlittenem Schaden bewusstlos werden kann.</German>
             <Korean>사람이 데미지를 입었을 때 의식불명 상태가 될 수 있는 심각한 고통의 한계점을 설정합니다.</Korean>
+            <Portuguese>Define o limite para dor severa, acima do qual uma pessoa pode ficar inconsciente ao receber dano.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
             <Russian>Вероятность смерти от смертельной травмы</Russian>
             <Spanish>Probabilidad de muerte por herida fatal</Spanish>
+            <Italian>Probabilità di morte da ferita letale</Italian>
             <French>Blessure mortelle - Chance de décès</French>
             <Polish>Szana na śmierć przy śmiertelej ranie</Polish>
             <Japanese>致命傷による死亡確率</Japanese>
             <German>Tödliche Verletzung - Wahrscheinlichkeit des Todes</German>
             <Chinesesimp>致命伤死亡概率</Chinesesimp>
             <Korean>치명상 사망 확률</Korean>
+            <Portuguese>Chance de Morte por Ferimento Fatal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
             <Russian>Шанс умереть от смертельной травмы.</Russian>
             <Spanish>La probabilidad de morir a causa de una herida fatal.</Spanish>
+            <Italian>La probabilità che una ferita letale provochi la morte dell'unità.</Italian>
             <French>La probabilité de mourir lors d'une "blessure mortelle".\nUne blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
             <Polish>Szansa na śmierć po otrzymaniu śmiertelnej rany.</Polish>
             <Japanese>致命傷による死亡確率を設定します。</Japanese>
             <German>Die Wahrscheinlichkeit, an einer eigentlich tödlichen Verletzung zu sterben.</German>
             <Chinesesimp>死于致命伤的概率。</Chinesesimp>
             <Korean>치명상으로 인해 사망할 확률을 정합니다.</Korean>
+            <Portuguese>A chance de morrer para um ferimento fatal.</Portuguese>
         </Key>
     </Package>
 </Project>

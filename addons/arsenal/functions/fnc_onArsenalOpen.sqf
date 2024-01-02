@@ -230,6 +230,7 @@ GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
 GVAR(leftSearchbarFocus) = false;
 GVAR(rightSearchbarFocus) = false;
+GVAR(liveUpdateSearch) = false;
 GVAR(leftTabFocus) = false;
 GVAR(rightTabFocus) = false;
 GVAR(rightTabLnBFocus) = false;
@@ -242,7 +243,15 @@ GVAR(refreshing) = false;
     _panel ctrlCommit 0;
 } forEach [IDC_leftTabContent, IDC_rightTabContent, IDC_rightTabContentListnBox];
 
-[_display, _display displayCtrl IDC_buttonPrimaryWeapon] call FUNC(fillLeftPanel);
+// Open left panel for current weapon, do some math
+GVAR(selectedWeaponType) = [primaryWeapon GVAR(center), secondaryWeapon GVAR(center), handgunWeapon GVAR(center), binocular GVAR(center)] find (currentWeapon GVAR(center));
+if (GVAR(selectedWeaponType) == -1) then {
+    GVAR(selectedWeaponType) = 0; // default to primary
+};
+
+private _leftPanelIDC = [IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun, IDC_buttonBinoculars] select GVAR(selectedWeaponType);
+
+[_display, _display displayCtrl _leftPanelIDC] call FUNC(fillLeftPanel);
 
 //--------------- Init camera
 if (isNil QGVAR(cameraPosition)) then {

@@ -239,7 +239,7 @@ class GVAR(actions) {
 
     // - Misc -----------------------------------------------------------------
     class BodyBag: BasicBandage {
-        displayName = CSTRING(PlaceInBodyBag);
+        displayName = CSTRING(PlaceInBodyBagBlack);
         displayNameProgress = CSTRING(PlacingInBodyBag);
         icon = QPATHTOEF(medical_gui,ui\bodybag.paa);
         category = "advanced";
@@ -247,11 +247,19 @@ class GVAR(actions) {
         allowSelfTreatment = 0;
         medicRequired = 0;
         treatmentTime = QGVAR(treatmentTimeBodyBag);
-        items[] = {"ACE_bodyBag", "ACE_bodyBag_blue", "ACE_bodyBag_white"};
+        items[] = {"ACE_bodyBag"};
         condition = QFUNC(canPlaceInBodyBag);
         callbackSuccess = QFUNC(placeInBodyBag);
         consumeItem = 1;
         litter[] = {};
+    };
+    class BodyBagBlue: BodyBag {
+        displayName = CSTRING(PlaceInBodyBagBlue);
+        items[] = {"ACE_bodyBag_blue"};
+    };
+    class BodyBagWhite: BodyBag {
+        displayName = CSTRING(PlaceInBodyBagWhite);
+        items[] = {"ACE_bodyBag_white"};
     };
     class Grave: BodyBag {
         displayName = CSTRING(DigGrave);

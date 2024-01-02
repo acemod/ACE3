@@ -37,7 +37,7 @@
             <Czech>Rozložit</Czech>
             <French>Démonter</French>
             <German>Auseinandernehmen</German>
-            <Italian>Disassemblare</Italian>
+            <Italian>Disassembla</Italian>
             <Polish>Złóż</Polish>
             <Portuguese>Desmontar</Portuguese>
             <Russian>Разобрать</Russian>
@@ -53,12 +53,12 @@
             <Czech>Nastup</Czech>
             <French>Entrer</French>
             <German>Einsteigen</German>
-            <Italian>A bordo</Italian>
+            <Italian>Entra</Italian>
             <Polish>Wsiadać</Polish>
             <Portuguese>Entrar</Portuguese>
             <Russian>Войти</Russian>
             <Spanish>Entrar</Spanish>
-            <Japanese>乗る</Japanese>
+            <Japanese>乗り込む</Japanese>
             <Chinese>進入</Chinese>
             <Chinesesimp>进入</Chinesesimp>
             <Turkish>Bin</Turkish>
@@ -71,7 +71,7 @@
             <Czech>Nabít %1</Czech>
             <French>Charger %1</French>
             <Polish>Załaduj %1</Polish>
-            <Italian>Carico %1</Italian>
+            <Italian>Carica %1</Italian>
             <Russian>Загрузить %1</Russian>
             <Hungarian>Load %1</Hungarian>
             <Portuguese>Carregar %1</Portuguese>
@@ -79,7 +79,7 @@
             <Chinese>裝填 %1</Chinese>
             <Chinesesimp>装填 %1</Chinesesimp>
             <Turkish>Yükle %1</Turkish>
-            <Korean>%1 싣는중</Korean>
+            <Korean>%1 싣기</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_unloadX">
             <English>Unload %1</English>
@@ -96,7 +96,7 @@
             <Chinese>卸載 %1</Chinese>
             <Chinesesimp>卸载 %1</Chinesesimp>
             <Turkish>Boşalt %1</Turkish>
-            <Korean>%1 내리는중</Korean>
+            <Korean>%1 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
@@ -118,7 +118,7 @@
             <German>Erweiterter Zusammenbau</German>
             <Portuguese>Montagem Avançada</Portuguese>
             <French>Assemblage avancé</French>
-            <Japanese>アドバンスド設置</Japanese>
+            <Japanese>高度な組み立て</Japanese>
             <Chinese>進階組裝</Chinese>
             <Chinesesimp>高级组装</Chinesesimp>
             <Italian>Montaggio avanzato</Italian>
@@ -133,10 +133,10 @@
             <German>Benutze ACE um unterstützte statische Waffen zu montieren/demontieren. Geladene Munition ist auf ein einzelnes Magazin reduziert.</German>
             <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas. Munição carregada é reduzida para um único carregador.</Portuguese>
             <French>Utilise ACE pour l'assemblage/le désassemblage des armes statiques supportées.\nLes munitions chargées sont réduites à un seul chargeur.</French>
-            <Japanese>対応している設置型火器に ACE3 の設置と解体を使用します。装填済みの弾倉は 1 つの弾倉に減少します。</Japanese>
+            <Japanese>対応している設置型火器に ACE の設置と解体を使用します。装填済みの弾倉は1つの弾倉のみに減少します。</Japanese>
             <Chinese>使用ACE來組裝/拆解固定型武器。上膛的限制為單個彈匣。</Chinese>
             <Chinesesimp>使用 ACE 来组装/拆解固定式武器。限制弹药为一个弹匣。</Chinesesimp>
-            <Italian>Utilizzare ace per l'Assemblaggio/smontaggio di armi statiche supportate. Le munizioni cariche sono ridotte ad un solo caricatore.</Italian>
+            <Italian>Utilizza ACE per assemblaggio/smontaggio di armi statiche supportate. Le munizioni caricate sono ridotte ad un solo caricatore.</Italian>
             <Czech>Použít ACE pro složení/rozložení podporovaných statických zbraní. Nabitá munice je snížená na jeden zásobník.</Czech>
             <Polish>Użyj ACE do składania/rozkładania broni statycznych. Załadowana amunicja zostaje zredukowana do jednego magazynku.</Polish>
             <Spanish>Usar el ACE para el ensamblado/desamblado de armas estáticas soportadas. La munición cargada es reducida a un sólo cargador</Spanish>
@@ -148,10 +148,10 @@
             <German>Spare extra Munition</German>
             <Portuguese>Economizar munição extra</Portuguese>
             <French>Conserver le surplus de munitions</French>
-            <Japanese>過剰弾薬を保持</Japanese>
+            <Japanese>追加の弾薬を保持</Japanese>
             <Chinese>保存額外彈藥</Chinese>
             <Chinesesimp>保存额外弹药</Chinesesimp>
-            <Italian>Risparmiare munizioni extra</Italian>
+            <Italian>Conserva munizioni extra</Italian>
             <Czech>Uložit munici navíc.</Czech>
             <Polish>Zapisz dodatkową amunicje</Polish>
             <Spanish>Guardar munición extra</Spanish>
@@ -163,10 +163,10 @@
             <German>Lager extra Magazine neben der statischen Waffe</German>
             <Portuguese>Carregar munições extras próximo à arma estática</Portuguese>
             <French>Range les chargeurs en surplus auprès de l'arme statique.</French>
-            <Japanese>次の設置型火器用に過剰弾薬を保持します。</Japanese>
+            <Japanese>追加の弾倉を固定火器の横に保管します。</Japanese>
             <Chinese>在固定型武器旁存放額外彈匣</Chinese>
             <Chinesesimp>在固定式武器旁边存放额外的弹匣</Chinesesimp>
-            <Italian>Conservare i caricatori extra accanto all'arma statica</Italian>
+            <Italian>Conserva i caricatori extra accanto all'arma statica</Italian>
             <Czech>Ukládat munici navíc vedle statické zbraně.</Czech>
             <Polish>Dodatkowe magazynki przechowuj obok broni statycznej</Polish>
             <Spanish>Almacenar cargadores extra junto al arma estática</Spanish>
@@ -176,28 +176,33 @@
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_displayName">
             <English>Ammo Storage</English>
             <German>Munitionslager</German>
+            <Italian>Scorta di munizioni</Italian>
             <Korean>탄약 보관</Korean>
             <Polish>Magazyn amunicji</Polish>
-            <Japanese>弾薬の格納</Japanese>
+            <Japanese>弾薬の格納場所</Japanese>
             <Chinesesimp>弹药存储</Chinesesimp>
             <Russian>Хранилище боеприпасов</Russian>
             <Spanish>Almacenamiento de munición</Spanish>
             <French>Stockage des munitions</French>
+            <Portuguese>Armazenamento de Munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_description">
             <English>Determines whether extra magazines are stored on the ground or inside an ammo box</English>
             <German>Legt fest, ob zusätzliche Magazine auf dem Boden oder in einer Munitionskiste aufbewahrt werden</German>
+            <Italian>Determina se ulteriori caricatori verranno stoccati sul suolo o in una cassa di munizioni.</Italian>
             <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을 지 결정합니다.</Korean>
             <Polish>Decyduje, czy dodatkowe magazynki przechowywane są na ziemi, czy w skrzynce z amunicją.</Polish>
-            <Japanese>追加のマガジンを地面に設置するか、弾薬箱の中に保管するかを決定します</Japanese>
+            <Japanese>追加の弾倉を地面に配置するか、弾薬箱内に保管するかを設定します。</Japanese>
             <Chinesesimp>设置多余的弹夹是存放在地面上还是弹药箱内</Chinesesimp>
             <Russian>Определяет будут ли дополнительные магазины лежать на земле или внутри хранилища</Russian>
             <Spanish>Determina si los cargadores extra son almacenados en el suelo o en una caja de munición</Spanish>
             <French>Détermine si les chargeurs supplémentaires sont stockés par terre ou dans une caisse de munitions.</French>
+            <Portuguese>Determina se munições extras são armazenadas no chão ou dentro de uma caixa de munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_weaponHolder">
             <English>Ground</English>
             <German>Boden</German>
+            <Italian>Suolo</Italian>
             <Korean>지면</Korean>
             <Polish>Ziemia</Polish>
             <Japanese>地面</Japanese>
@@ -205,10 +210,12 @@
             <Russian>Земля</Russian>
             <Spanish>Suelo</Spanish>
             <French>Sol</French>
+            <Portuguese>Solo</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_ammoBox">
             <English>Ammo Box</English>
             <German>Munitionskiste</German>
+            <Italian>Cassa di munizioni</Italian>
             <Korean>탄약 상자</Korean>
             <Polish>Skrzynka amunicyjna</Polish>
             <Japanese>弾薬箱</Japanese>
@@ -216,6 +223,7 @@
             <Russian>Коробка с боеприпасами</Russian>
             <Spanish>Caja de munición</Spanish>
             <French>Caisse de munitions</French>
+            <Portuguese>Caixa de Munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
@@ -240,7 +248,7 @@
             <Japanese>弾薬の装填と除去を許可します。</Japanese>
             <Chinese>允許裝填或卸載彈匣</Chinese>
             <Chinesesimp>允许装卸弹匣</Chinesesimp>
-            <Italian>Permettere il carico e lo scarico dei caricatori</Italian>
+            <Italian>Permetti caricamento e scaricamento delle munizioni</Italian>
             <Czech>Povolit nabíjení a vybíjení zásobníků.</Czech>
             <Polish>Zezwalaj na ładowanie i rozładowywanie magazynków</Polish>
             <Spanish>Permitir la carga y descarga de cargadores</Spanish>
@@ -252,7 +260,7 @@
             <German>Interaktionsdauerkoeffizient</German>
             <Portuguese>Coeficiente de tempo para a interação</Portuguese>
             <French>Coefficient du temps d'interaction</French>
-            <Japanese>インタラクション時間係数</Japanese>
+            <Japanese>インタラクションの所要時間係数</Japanese>
             <Chinese>互動時間係數</Chinese>
             <Chinesesimp>交互时间系数</Chinesesimp>
             <Italian>Coefficente per il tempo di interazione</Italian>
@@ -267,7 +275,7 @@
             <German>Skaliert die Zeit die benötigt wird um statische Waffen aufzubauen und nachzuladen.</German>
             <Portuguese>Escala o tempo requerido para montar e recarregar armas estáticas.</Portuguese>
             <French>Définit l'échelle de temps nécessaire à l'assemblage et au rechargement des armes statiques.</French>
-            <Japanese>設置型火器の設置と再装填時間を管理できます。</Japanese>
+            <Japanese>設置型火器の設置と再装填の所要時間を管理できます。</Japanese>
             <Chinese>設置組裝及裝填組裝固定型武器</Chinese>
             <Chinesesimp>衡量组装和重新装填固定式武器所需的时间</Chinesesimp>
             <Italian>Tempo necessario per assemblare e ricaricare le armi statiche</Italian>
@@ -285,7 +293,7 @@
             <Japanese>設置後に三脚を引きずる</Japanese>
             <Chinese>在佈置三腳架後拖拉</Chinese>
             <Chinesesimp>部署后拖动三脚架</Chinesesimp>
-            <Italian>Trascinare i treppiedi dopo lo schieramento</Italian>
+            <Italian>Trascina i treppiedi dopo il montaggio</Italian>
             <Czech>Tahat trojnožku po položení</Czech>
             <Polish>Przeciągnij statyw po rozmieszczeniu</Polish>
             <Spanish>Arrastrar trípodes despues de desplegarlos</Spanish>
@@ -300,7 +308,7 @@
             <Japanese>三脚を設置後、動かせるよう三脚を引きずるようにします。</Japanese>
             <Chinese>在部署三腳架後，開始拖動它使其在你所要的精準位置</Chinese>
             <Chinesesimp>部署好三脚架后，开始拖动它到一个精确的位置</Chinesesimp>
-            <Italian>Dopo aver posizionato un treppiede, iniziate a trascinarlo in una posizione precisa</Italian>
+            <Italian>Dopo aver montato un treppiede, inizia a trascinarlo su una posizione precisa</Italian>
             <Czech>Po položení trojnožky začít automaticky tahání pro lepší polohu.</Czech>
             <Polish>Po rozłożeniu trójnogu zacznij od przeciągania go w określone miejsce</Polish>
             <Spanish>Después de desplegar un trípode, comenzar a arrastrarlo hacia la ubicación precisa</Spanish>
@@ -315,7 +323,7 @@
             <Japanese>三脚を拾う</Japanese>
             <Chinese>撿起三腳架</Chinese>
             <Chinesesimp>捡起三脚架</Chinesesimp>
-            <Italian>Recupero treppiede</Italian>
+            <Italian>Recupera treppiede</Italian>
             <Czech>Složit trojnožku</Czech>
             <Polish>Podnieś Trójnóg</Polish>
             <Spanish>Recoger trípode</Spanish>
@@ -330,7 +338,7 @@
             <Japanese>火器を乗せる</Japanese>
             <Chinese>裝載武器</Chinese>
             <Chinesesimp>装载武器</Chinesesimp>
-            <Italian>Montare l'arma</Italian>
+            <Italian>Monta l'arma</Italian>
             <Czech>Připevnit zbraň</Czech>
             <Polish>Zamontuj Broń</Polish>
             <Spanish>Montar arma</Spanish>
@@ -357,7 +365,7 @@
             <German>Montiere Waffe...</German>
             <Portuguese>Montando Arma...</Portuguese>
             <French>Assemblage de l'arme...</French>
-            <Japanese>火器を設置中です・・・</Japanese>
+            <Japanese>火器を組み立て中です・・・</Japanese>
             <Chinese>組裝武器中...</Chinese>
             <Chinesesimp>正在组装武器...</Chinesesimp>
             <Italian>Montaggio arma...</Italian>
@@ -372,7 +380,7 @@
             <German>Nehme Dreibein auf...</German>
             <Portuguese>Carregando Tripé...</Portuguese>
             <French>Récupération du trépied...</French>
-            <Japanese>三脚を取得中です・・・</Japanese>
+            <Japanese>三脚を回収中・・・</Japanese>
             <Chinese>撿起三腳架...</Chinese>
             <Chinesesimp>捡起三脚架...</Chinesesimp>
             <Italian>Recupero treppiede...</Italian>
@@ -390,7 +398,7 @@
             <Japanese>三脚を設置中です・・・</Japanese>
             <Chinese>部署三腳架...</Chinese>
             <Chinesesimp>部署三脚架...</Chinesesimp>
-            <Italian>Piazzare treppiede...</Italian>
+            <Italian>Piazzamento treppiede...</Italian>
             <Czech>Pokládám trojnožku...</Czech>
             <Polish>Rozmieszczanie Trójnogu...</Polish>
             <Spanish>Ubicando trípode...</Spanish>
@@ -420,7 +428,7 @@
             <Japanese>この火器で共用火器を有効化します。</Japanese>
             <Chinese>對此武器啟用班組支援能力</Chinese>
             <Chinesesimp>在该武器上启用班组支援能力</Chinesesimp>
-            <Italian>Abilita l'abilità dell'equipaggio su quest'arma</Italian>
+            <Italian>Abilita il servizio da equipaggio su quest'arma</Italian>
             <Czech>Zapne CSW funkce na této zbrani</Czech>
             <Polish>Włącza opcje systemu CSW na tej broni</Polish>
             <Spanish>Habilitar el manejo de uso colectivo para esta arma</Spanish>
@@ -432,10 +440,10 @@
             <German>Aktiviere und lasse diese Waffe leer</German>
             <Portuguese>Ativado e deixar arma vazia</Portuguese>
             <French>Activer et laisser l'arme vide</French>
-            <Japanese>火器有効化し空を維持</Japanese>
+            <Japanese>有効にして火器を空のままにする</Japanese>
             <Chinese>啟用並不裝填武器</Chinese>
             <Chinesesimp>启用并不装填武器</Chinesesimp>
-            <Italian>Abilitato e lascia l'arma vuota</Italian>
+            <Italian>Abilita e lascia l'arma vuota</Italian>
             <Czech>Povolit a nechat zbraň prázdnou</Czech>
             <Polish>Włącz i pozostaw broń pustą</Polish>
             <Spanish>Habilitar y dejar el arma vacía</Spanish>
@@ -467,7 +475,7 @@
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AT)</Japanese>
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對地）</Chinese>
             <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（反坦）</Chinesesimp>
-            <Italian>[CSW] Static Mini-Spike Launcher (AT)</Italian>
+            <Italian>[CSW] Lanciatore Mini-Spike (AT) Statico</Italian>
             <Czech>[CSW] Statický raketomet Mini-Spike (protitankový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AT)</Turkish>
             <Polish>[CSW] Mini-Spike Przeciwpancerny pocisk rakietowy</Polish>
@@ -483,7 +491,7 @@
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AA)</Japanese>
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對空）</Chinese>
             <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（防空）</Chinesesimp>
-            <Italian>[CSW] Static Mini-Spike Launcher (AA)</Italian>
+            <Italian>[CSW] Lanciatore Mini-Spike (AA) Statico</Italian>
             <Czech>[CSW] Statický raketomet Mini-Spike (protiletadlový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AA)</Turkish>
             <Polish>[CSW] Mini-Spike Przeciwlotniczy pocisk rakietowy</Polish>
@@ -499,7 +507,7 @@
             <Japanese>[CSW] 設置型 XM312</Japanese>
             <Chinese>[CSW] 固定型 XM312重機槍</Chinese>
             <Chinesesimp>[班组] 固定式 XM312 重机枪</Chinesesimp>
-            <Italian>[CSW] Static XM312 Gun</Italian>
+            <Italian>[CSW] XM312 Statico</Italian>
             <Czech>[CSW] Statická zbraň XM312</Czech>
             <Turkish>[CSW] Static XM312 Gun</Turkish>
             <Polish>[CSW] Statyczny karabin maszynowy XM312</Polish>
@@ -515,8 +523,10 @@
             <Russian>[CSW] Станковый M2 со щитом</Russian>
             <Japanese>[CSW] 設置型 防盾付き M2</Japanese>
             <German>[CSW] Statisches M2 mit Schild</German>
+            <Italian>[CSW] M2 Statico con Scudo</Italian>
             <Chinesesimp>[班组] 固定式防盾型 M2 重机枪</Chinesesimp>
             <Korean>[CSW] 거치형 M2 (방패)</Korean>
+            <Portuguese>[CSW] Arma Estática - M2 com Escudo</Portuguese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
@@ -527,7 +537,7 @@
             <Japanese>[CSW] 設置型 XM312 (自律型)</Japanese>
             <Chinese>[CSW] 固定型 XM312重機槍（自主型）</Chinese>
             <Chinesesimp>[班组] 固定式 XM312 重机枪（自主）</Chinesesimp>
-            <Italian>[CSW] Static XM312 Gun (Autonomo)</Italian>
+            <Italian>[CSW] XM312 Statico (Autonomo)</Italian>
             <Czech>[CSW] Statická zbraň XM312 (autonomická)</Czech>
             <Turkish>[CSW] Static XM312 Gun (Autonomous)</Turkish>
             <Polish>[CSW] Statyczny karabin maszynowy XM312 (Dron)</Polish>
@@ -543,7 +553,7 @@
             <Japanese>[CSW] 設置型 XM307</Japanese>
             <Chinese>[CSW] 固定型XM307榴彈機槍</Chinese>
             <Chinesesimp>[班组] 固定式 XM307 榴弹发射器</Chinesesimp>
-            <Italian>[CSW] Static XM307 Gun</Italian>
+            <Italian>[CSW] XM307 Statico</Italian>
             <Czech>[CSW] Statická zbraň XM307</Czech>
             <Turkish>[CSW] Static XM307 Gun</Turkish>
             <Polish>[CSW] Statyczny granatnik automatyczny XM307</Polish>
@@ -559,7 +569,7 @@
             <Japanese>[CSW] 設置型 XM307 (自律型)</Japanese>
             <Chinese>[CSW] 固定型 XM307榴彈機槍（自主型）</Chinese>
             <Chinesesimp>[班组] 固定式 XM307 榴弹发射器（自主）</Chinesesimp>
-            <Italian>[CSW] Static XM307 Gun (Autonomo)</Italian>
+            <Italian>[CSW] XM307 Statico (Autonomo)</Italian>
             <Czech>[CSW] Statická zbraň XM307 (autonomická)</Czech>
             <Turkish>[CSW] Static XM307 Gun (Autonomous)</Turkish>
             <Polish>[CSW] Statyczny granatnik automatyczny XM307 (Dron)</Polish>
@@ -575,7 +585,7 @@
             <Japanese>[CSW] 12.7x108 mm HMG ベルト</Japanese>
             <Chinese>[CSW]12.7x108毫米 重機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 12.7x108 mm 重机枪弹链</Chinesesimp>
-            <Italian>[CSW] 12.7x108mm HMG Belt</Italian>
+            <Italian>[CSW] Nastro da HMG 12.7x108mm</Italian>
             <Czech>[CSW] Pás 12.7×108mm pro těžký kulomet</Czech>
             <Turkish>[CSW] 12.7x108mm HMG Belt</Turkish>
             <Polish>[CSW] Taśma 12.7x108mm CKM</Polish>
@@ -591,7 +601,7 @@
             <Japanese>[CSW] 12.7x99 mm HMG ベルト</Japanese>
             <Chinese>[CSW]12.7x99毫米 重機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链</Chinesesimp>
-            <Italian>[CSW] 12.7x99mm HMG Belt</Italian>
+            <Italian>[CSW] Nastro da HMG 12.7x99mm</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet</Czech>
             <Turkish>[CSW] 12.7x99mm HMG Belt</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM</Polish>
@@ -604,10 +614,10 @@
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Rot)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Vermelho)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Rouges)</French>
-            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (赤)</Japanese>
+            <Japanese>[CSW] 12.7x99 mm HMG トレーサーベルト (赤)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（紅色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，红）</Chinesesimp>
-            <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Italian>
+            <Italian>[CSW] Nastro da HMG 12.7x99mm Traccianti (Red)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (červená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Czerwona)</Polish>
@@ -620,10 +630,10 @@
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Grün)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Verde)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Vertes)</French>
-            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (緑)</Japanese>
+            <Japanese>[CSW] 12.7x99 mm HMG トレーサーベルト (緑)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（綠色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，绿）</Chinesesimp>
-            <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Italian>
+            <Italian>[CSW] Nastro da HMG 12.7x99mm Traccianti (Green)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (zelená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Zielona)</Polish>
@@ -636,10 +646,10 @@
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Gelb)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Amarelo)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Jaunes)</French>
-            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (黄)</Japanese>
+            <Japanese>[CSW] 12.7x99 mm HMG トレーサーベルト (黄)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（黃色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，黄）</Chinesesimp>
-            <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Italian>
+            <Italian>[CSW] Nastro da HMG 12.7x99mm Traccianti (Yellow)</Italian>
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (žlutá stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Żółta)</Polish>
@@ -652,10 +662,10 @@
             <German>[CSW] 20mm Granate GMG-Gurt</German>
             <Portuguese>[CSW] Cinto de Munição - Granada 20mm GMG</Portuguese>
             <French>[CSW] Bande grenades 20 mm GMG</French>
-            <Japanese>[CSW] 20 mm てき弾 GMG ベルト</Japanese>
+            <Japanese>[CSW] 20 mm 擲弾 GMG ベルト</Japanese>
             <Chinese>[CSW]20毫米 榴彈 榴彈機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 20 mm 榴弹发射器弹链</Chinesesimp>
-            <Italian>[CSW] 20mm Grenade GMG Belt</Italian>
+            <Italian>[CSW] Nastro di Granate 20mm da GMG</Italian>
             <Czech>[CSW] Pás 20mm granátů pro granátomet</Czech>
             <Turkish>[CSW] 20mm Grenade GMG Belt</Turkish>
             <Polish>[CSW] Taśma 20mm do granatnika</Polish>
@@ -671,7 +681,7 @@
             <Japanese>M3 三脚</Japanese>
             <Chinese>M3 三腳架</Chinese>
             <Chinesesimp>M3 三脚架</Chinesesimp>
-            <Italian>M3 Tripod</Italian>
+            <Italian>Treppiede M3</Italian>
             <Czech>M3 trojnožka</Czech>
             <Turkish>M3 Tripod</Turkish>
             <Polish>Trójnóg M3</Polish>
@@ -687,7 +697,7 @@
             <Japanese>[CSW] 6P57 設置型三脚</Japanese>
             <Chinese>[CSW] 6P57 部署型三腳架</Chinese>
             <Chinesesimp>[班组] 6P57 部署型三脚架</Chinesesimp>
-            <Italian>[CSW] 6P57 Deployable Tripod</Italian>
+            <Italian>[CSW] Treppiede 6P57 piazzabile</Italian>
             <Czech>[CSW] 6P57 trojnožka</Czech>
             <Turkish>[CSW] 6P57 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany 6P57</Polish>
@@ -703,7 +713,7 @@
             <Japanese>[CSW] 6P57 設置型三脚 (低座)</Japanese>
             <Chinese>[CSW] 6P57 部署型（低位）</Chinese>
             <Chinesesimp>[班组] 6P57 部署型（低）</Chinesesimp>
-            <Italian>[CSW] 6P57 Deployable Tripod (Low)</Italian>
+            <Italian>[CSW] Treppiede 6P57 piazzabile (Basso)</Italian>
             <Czech>[CSW] 6P57 trojnožka (nízká)</Czech>
             <Turkish>[CSW] 6P57 Deployable Tripod (Low)</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany 6P57 (Niski)</Polish>
@@ -719,7 +729,7 @@
             <Japanese>[CSW] M220 設置型三脚</Japanese>
             <Chinese>[CSW] M220 部署型三腳架</Chinese>
             <Chinesesimp>[班组] M220 部署型三脚架</Chinesesimp>
-            <Italian>[CSW] M220 Deployable Tripod</Italian>
+            <Italian>[CSW] Treppiede M220 piazzabile</Italian>
             <Czech>[CSW] M220 trojnožka</Czech>
             <Turkish>[CSW] M220 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany M220</Polish>
@@ -735,7 +745,7 @@
             <Japanese>[CSW] SAG-30 設置型三脚</Japanese>
             <Chinese>[CSW] SAG-30 部署型三腳架</Chinese>
             <Chinesesimp>[班组] SAG-30 部署型三脚架</Chinesesimp>
-            <Italian>[CSW] SAG-30 Deployable Tripod</Italian>
+            <Italian>[CSW] Treppiede SAG-30 piazzabile</Italian>
             <Czech>[CSW] SAG-30 trojnožka</Czech>
             <Turkish>[CSW] SAG-30 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany SAG-30</Polish>
@@ -751,7 +761,7 @@
             <Japanese>6P57 三脚</Japanese>
             <Chinese>6P57 三腳架</Chinese>
             <Chinesesimp>6P57 三脚架</Chinesesimp>
-            <Italian>6P57 Tripod</Italian>
+            <Italian>Treppiede 6P57</Italian>
             <Czech>6P57 trojnožka</Czech>
             <Turkish>6P57 Tripod</Turkish>
             <Polish>Trójnóg 6P57</Polish>
@@ -767,7 +777,7 @@
             <Japanese>SAG-30 三脚</Japanese>
             <Chinese>SAG-30 三腳架</Chinese>
             <Chinesesimp>SAG-30 三脚架</Chinesesimp>
-            <Italian>SAG-30 Tripod</Italian>
+            <Italian>Treppiede SAG-30</Italian>
             <Czech>SAG-30 trojnožka</Czech>
             <Turkish>SAG-30 Tripod</Turkish>
             <Polish>Trójnóg SAG-30</Polish>
@@ -783,7 +793,7 @@
             <Japanese>M220 三脚</Japanese>
             <Chinese>M220 三腳架</Chinese>
             <Chinesesimp>M220 三脚架</Chinesesimp>
-            <Italian>M220 Tripod</Italian>
+            <Italian>Treppiede M220</Italian>
             <Czech>M220 trojnožka</Czech>
             <Turkish>M220 Tripod</Turkish>
             <Polish>Trójnóg M220</Polish>
@@ -799,7 +809,7 @@
             <Japanese>[CSW] M3 設置型三脚</Japanese>
             <Chinese>[CSW] M3 部屬型三腳架</Chinese>
             <Chinesesimp>[班组] M3 部属型三脚架</Chinesesimp>
-            <Italian>[CSW] M3 Deployable Tripod</Italian>
+            <Italian>[CSW] Treppiede M3 piazzabile</Italian>
             <Czech>[CSW] M3 trojnožka</Czech>
             <Turkish>[CSW] M3 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany M3</Polish>
@@ -815,7 +825,7 @@
             <Japanese>[CSW] M3 設置型三脚 (低座)</Japanese>
             <Chinese>[CSW] M3 部署型三腳架（低位）</Chinese>
             <Chinesesimp>[班组] M3 部署型三脚架（低）</Chinesesimp>
-            <Italian>[CSW] M3 Deployable Tripod (Low)</Italian>
+            <Italian>[CSW] Treppiede M3 piazzabile (Basso)</Italian>
             <Czech>[CSW] M3 trojnožka (nízká)</Czech>
             <Turkish>[CSW] M3 Deployable Tripod (Low)</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany M3 (Niski)</Polish>
@@ -831,7 +841,7 @@
             <Japanese>[CSW] 迫撃砲基盤</Japanese>
             <Chinese>[CSW] 迫擊炮基座</Chinese>
             <Chinesesimp>[班组] 迫击炮底座</Chinesesimp>
-            <Italian>[CSW] Mortar Baseplate</Italian>
+            <Italian>[CSW] Base di Mortaio</Italian>
             <Czech>[CSW] Podstavec pro minomet</Czech>
             <Turkish>[CSW] Mortar Baseplate</Turkish>
             <Polish>[CSW] Podstawa Moździerza</Polish>
@@ -847,7 +857,7 @@
             <Japanese>迫撃砲基盤</Japanese>
             <Chinese>迫擊炮基座</Chinese>
             <Chinesesimp>迫击炮底座</Chinesesimp>
-            <Italian>Mortar Baseplate</Italian>
+            <Italian>Base di Mortaio</Italian>
             <Czech>Podstavec pro minomet</Czech>
             <Turkish>Mortar Baseplate</Turkish>
             <Polish>Podstawa Moździerza</Polish>
@@ -863,7 +873,7 @@
             <Japanese>[CSW] Mk6 迫撃砲発射筒</Japanese>
             <Chinese>[CSW] Mk6 迫擊炮炮管</Chinese>
             <Chinesesimp>[班组] Mk6 迫击炮管</Chinesesimp>
-            <Italian>[CSW] Mk6 Mortar Tube</Italian>
+            <Italian>[CSW] Tubo di Mortaio Mk6</Italian>
             <Czech>[CSW] Minomet Mk6 hlaveň</Czech>
             <Turkish>[CSW] Mk6 Mortar Tube</Turkish>
             <Polish>[CSW] Rura Moździerza Mk6</Polish>
@@ -879,7 +889,7 @@
             <Japanese>[CSW] M252 発射筒バッグ</Japanese>
             <Chinese>[CSW] M252 炮管袋</Chinese>
             <Chinesesimp>[班组] M252 炮管包</Chinesesimp>
-            <Italian>[CSW] M252 Tube Bag</Italian>
+            <Italian>[CSW] Borsa per Tubo M252</Italian>
             <Czech>[CSW] M252 minometná hlaveň v pouzdře</Czech>
             <Turkish>[CSW] M252 Tube Bag</Turkish>
             <Polish>[CSW] Torba na M252</Polish>
@@ -895,7 +905,7 @@
             <Japanese>[CSW] M2 ガン バッグ</Japanese>
             <Chinese>[CSW] M2槍械袋</Chinese>
             <Chinesesimp>[班组] M2 枪械包</Chinesesimp>
-            <Italian>[CSW] M2 Gun Bag</Italian>
+            <Italian>[CSW] Borsa per Mitra M2</Italian>
             <Czech>[CSW] M2 zbraň v pouzdře</Czech>
             <Turkish>[CSW] M2 Gun Bag</Turkish>
             <Polish>[CSW] Torba na  M2</Polish>
@@ -911,7 +921,7 @@
             <Japanese>[CSW] Mk19 ガン バッグ</Japanese>
             <Chinese>[CSW] Mk19槍械袋</Chinese>
             <Chinesesimp>[班组] Mk19 枪械包</Chinesesimp>
-            <Italian>[CSW] MK19 Gun Bag</Italian>
+            <Italian>[CSW] Borsa per Mitra MK19</Italian>
             <Czech>[CSW] MK19 zbraň v pouzdře</Czech>
             <Turkish>[CSW] MK19 Gun Bag</Turkish>
             <Polish>[CSW] Torba na MK19</Polish>
@@ -927,7 +937,7 @@
             <Japanese>[CSW] BGM-71 TOW ランチャー バッグ</Japanese>
             <Chinese>[CSW] BGM-71 拖式飛彈發射器袋</Chinese>
             <Chinesesimp>[班组] BGM-71 陶式导弹发射器包</Chinesesimp>
-            <Italian>[CSW] BGM-71 TOW Launcher Bag</Italian>
+            <Italian>[CSW] Borsa per Lanciatore BGM-71 TOW</Italian>
             <Czech>[CSW] BGM-71 TOW raketomet v pouzdře</Czech>
             <Turkish>[CSW] BGM-71 TOW Launcher Bag</Turkish>
             <Polish>[CSW] Torba na BGM-71 TOW</Polish>
@@ -943,7 +953,7 @@
             <Japanese>[CSW] DShK ガン バッグ</Japanese>
             <Chinese>[CSW]DShK 槍械袋</Chinese>
             <Chinesesimp>[班组] DShK 枪械包</Chinesesimp>
-            <Italian>[CSW] DSHK Gun Bag</Italian>
+            <Italian>[CSW] Borsa per Mitra DSHK</Italian>
             <Czech>[CSW] DSHK zbraň v pouzdře</Czech>
             <Turkish>[CSW] DSHK Gun Bag</Turkish>
             <Polish>[CSW] Torba na DSzK</Polish>
@@ -959,7 +969,7 @@
             <Japanese>[CSW] 2B14 発射筒バッグ</Japanese>
             <Chinese>[CSW] 2B14 炮管袋</Chinese>
             <Chinesesimp>[班组] 2B14 炮管包</Chinesesimp>
-            <Italian>[CSW] 2B14 Tube Bag</Italian>
+            <Italian>[CSW] Borsa per Tubo 2B14</Italian>
             <Czech>[CSW] 2B14 minometná hlaveň v pouzdře</Czech>
             <Turkish>[CSW] 2B14 Tube Bag</Turkish>
             <Polish>[CSW] Torba na 2B14</Polish>
@@ -975,7 +985,7 @@
             <Japanese>[CSW] NSV ガン バッグ</Japanese>
             <Chinese>[CSW] NSV 槍械袋</Chinese>
             <Chinesesimp>[班组] NSV 枪械包</Chinesesimp>
-            <Italian>[CSW] NSV Gun Bag</Italian>
+            <Italian>[CSW] Borsa per Mitra NSV</Italian>
             <Czech>[CSW] NSV zbraň v pouzdře</Czech>
             <Turkish>[CSW] NSV Gun Bag</Turkish>
             <Polish>[CSW] Torba na NSV</Polish>
@@ -991,7 +1001,7 @@
             <Japanese>[CSW] KORD ガン バッグ</Japanese>
             <Chinese>[CSW] KORD 槍械袋</Chinese>
             <Chinesesimp>[班组] KORD 枪械包</Chinesesimp>
-            <Italian>[CSW] KORD Gun Bag</Italian>
+            <Italian>[CSW] Borsa per Mitra KORD</Italian>
             <Czech>[CSW] KORD zbraň v pouzdře</Czech>
             <Turkish>[CSW] KORD Gun Bag</Turkish>
             <Polish>[CSW] Torba na KORD</Polish>
@@ -1007,7 +1017,7 @@
             <Japanese>[CSW] AGS-30 バッグ</Japanese>
             <Chinese>[CSW] AGS-30 槍械袋</Chinese>
             <Chinesesimp>[班组] AGS-30 枪械包</Chinesesimp>
-            <Italian>[CSW] AGS-30 Gun Bag</Italian>
+            <Italian>[CSW] Borsa per GMG AGS-30</Italian>
             <Czech>[CSW] ASG-30 zbraň v pouzdře</Czech>
             <Turkish>[CSW] AGS-30 Gun Bag</Turkish>
             <Polish>[CSW] Torba na AGS-30</Polish>
@@ -1023,7 +1033,7 @@
             <Japanese>[CSW] 9K115 メティス ランチャー バッグ</Japanese>
             <Chinese>[CSW] 9K115 麥士蒂索人發射器袋</Chinese>
             <Chinesesimp>[班组] 9K115 麦士蒂索人反坦克发射器包</Chinesesimp>
-            <Italian>[CSW] 9K115 Metis Launcher Bag</Italian>
+            <Italian>[CSW] Borsa per Lanciatore 9K115 Metis</Italian>
             <Czech>[CSW] 9K115 Metis raketomet v pouzdře</Czech>
             <Polish>[CSW] Torba na 9K115 Metis</Polish>
             <Turkish>[CSW] 9k115 Metis Launcher Bag</Turkish>
@@ -1039,7 +1049,7 @@
             <Japanese>[CSW] 9M113 コルネット ランチャー バッグ</Japanese>
             <Chinese>[CSW] 9M113 短號發射器</Chinese>
             <Chinesesimp>[班组] 9M113 短号发射器</Chinesesimp>
-            <Italian>[CSW] 9M113 Kornet Launcher</Italian>
+            <Italian>[CSW] Borsa per Lanciatore 9M113 Kornet</Italian>
             <Czech>[CSW] 9M113 Kornet raketomet</Czech>
             <Polish>[CSW] Wyrzutnia 9M113 Kornet</Polish>
             <Turkish>[CSW] 9m113 Kornet Launcher</Turkish>
@@ -1055,7 +1065,7 @@
             <Japanese>SPG-9 三脚</Japanese>
             <Chinese>SPG-9 三腳架</Chinese>
             <Chinesesimp>SPG-9 三脚架</Chinesesimp>
-            <Italian>SPG-9 Tripod</Italian>
+            <Italian>Treppiede SPG-9</Italian>
             <Czech>SPG-9 trojnožka</Czech>
             <Turkish>SPG-9 Tripod</Turkish>
             <Polish>Trójnóg SPG-9</Polish>
@@ -1071,7 +1081,7 @@
             <Japanese>[CSW] SPG-9 設置型三脚</Japanese>
             <Chinese>[CSW] SPG-9 部署型三腳架</Chinese>
             <Chinesesimp>[班组] SPG-9 部署型三脚架</Chinesesimp>
-            <Italian>[CSW] SPG-9 Deployable Tripod</Italian>
+            <Italian>[CSW] Treppiede SPG-9 piazzabile</Italian>
             <Czech>[CSW] SPG-9 trojnožka</Czech>
             <Turkish>[CSW] SPG-9 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg rozkładany SPG-9</Polish>
@@ -1087,7 +1097,7 @@
             <Japanese>[CSW] SPG-9 ランチャー バッグ</Japanese>
             <Chinese>[CSW] SPG-9 發射器袋</Chinese>
             <Chinesesimp>[班组] SPG-9 发射器包</Chinesesimp>
-            <Italian>[CSW] SPG-9 Launcher Bag</Italian>
+            <Italian>[CSW] Borsa per Lanciatore SPG-9</Italian>
             <Czech>[CSW] SPG-9 raketomet v pouzdře</Czech>
             <Turkish>[CSW] SPG-9 Launcher Bag</Turkish>
             <Polish>[CSW] Torba na SPG-9</Polish>
@@ -1103,7 +1113,7 @@
             <Japanese>[CSW] SPG-9M ランチャー バッグ</Japanese>
             <Chinese>[CSW] SPG-9M 發射器袋</Chinese>
             <Chinesesimp>[班组] SPG-9M 发射器包</Chinesesimp>
-            <Italian>[CSW] SPG-9M Launcher Bag</Italian>
+            <Italian>[CSW] Borsa per Lanciatore SPG-9M</Italian>
             <Czech>[CSW] SPG-9M raketomet v pouzdře</Czech>
             <Turkish>[CSW] SPG-9M Launcher Bag</Turkish>
             <Polish>[CSW] Torba na SPG-9M</Polish>

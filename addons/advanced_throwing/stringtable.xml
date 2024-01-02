@@ -5,7 +5,7 @@
             <English>Advanced Throwing</English>
             <Spanish>Lanzamiento Avanzado</Spanish>
             <Russian>Улучшенный бросок гранат</Russian>
-            <Japanese>アドバンスド スローイング</Japanese>
+            <Japanese>アドバンスド投擲</Japanese>
             <Polish>Zaawansowane rzucanie</Polish>
             <German>Erweitertes Wurfsystem</German>
             <Korean>고급 투척</Korean>
@@ -21,7 +21,7 @@
             <English>Allows changing advanced throwing behaviour.</English>
             <Spanish>Permite modificar el comportamiento del lanzamiento avanzado</Spanish>
             <Russian>Позволяет настраивать поведение улучшенного броска гранат.</Russian>
-            <Japanese>アドバンスド スローイングの動作挙動を変更します。</Japanese>
+            <Japanese>アドバンスド投擲は投擲の高度な動作挙動を変更可能にします。</Japanese>
             <Polish>Zezwala na zmianę zachowania zaawansowanego trybu rzucania.</Polish>
             <German>Erlaubt es, das Verhalten des erweiterten Wurfsystems zu ändern.</German>
             <Korean>고급 투척 행위를 허가합니다</Korean>
@@ -36,7 +36,7 @@
             <English>Enable Advanced Throwing</English>
             <Spanish>Activar Lanzamiento Avanzado</Spanish>
             <Russian>Вкл. улучшенный бросок</Russian>
-            <Japanese>アドバンスド スローイングを有効化</Japanese>
+            <Japanese>アドバンスド投擲を有効化</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
             <German>Aktiviere erweitertes Wurfsystem</German>
             <Korean>고급 투척 활성화 </Korean>
@@ -52,7 +52,7 @@
             <English>Enables advanced throwing system.</English>
             <Spanish>Activa el Lanzamiento Avanzado</Spanish>
             <Russian>Включает систему улучшенного броска.</Russian>
-            <Japanese>アドバンスド スローイングを有効化します。</Japanese>
+            <Japanese>アドバンスド投擲は高度な投擲システムを有効化します。</Japanese>
             <Polish>Aktywuje system zaawansowanego rzucania.</Polish>
             <German>Aktiviert das erweiterte Wurfsystem.</German>
             <Korean>고급 투척을 활성화 합니다</Korean>
@@ -68,7 +68,7 @@
             <English>Show Throw Arc</English>
             <Spanish>Mostrar Arco de Lanzamiento</Spanish>
             <Russian>Показать траекторию броска</Russian>
-            <Japanese>投てき軌道を表示</Japanese>
+            <Japanese>投擲軌道を表示</Japanese>
             <Polish>Pokaż trasę lotu</Polish>
             <German>Zeige Wurfbogen</German>
             <Korean>투척 궤적 표시</Korean>
@@ -84,7 +84,7 @@
             <English>Enables visualization of the throw arc (where throwable will fly).</English>
             <Spanish>Activa la visualización del arco de lanzamiento (donde irá el objeto lanzado)</Spanish>
             <Russian>Включает визуализацию траектории броска (как полетит граната).</Russian>
-            <Japanese>投てき軌道 (投てき物がどこに飛ぶか) の表示を有効化します。</Japanese>
+            <Japanese>投擲軌道 (投擲物がどこに飛ぶか) の表示を有効化します。</Japanese>
             <Polish>Wyświetla wizualizację trasy przelotu granatu.</Polish>
             <German>Aktiviert die Visualisierung des Wurfbogens (wohin das Objekt geworfen werden wird).</German>
             <Korean>투척 궤도를 시각화 합니다(투척물이 어디로 갈지)</Korean>
@@ -99,12 +99,12 @@
             <English>Show Throwing Mouse Controls</English>
             <Spanish>Mostrar controles de ratón de lanzamiento</Spanish>
             <Russian>Показывать управление мышью</Russian>
-            <Japanese>投てきのマウス操作を表示</Japanese>
+            <Japanese>投擲のマウス操作を表示</Japanese>
             <Polish>Pokaż podpowiedzi sterowania myszą</Polish>
             <German>Zeige Maussteuerung beim Werfen</German>
             <Korean>마우스 조작 표시</Korean>
             <French>Afficher les contrôles à la souris du lancé</French>
-            <Italian>Mostra Comandi Mouse Lancio</Italian>
+            <Italian>Mostra Comandi Mouse di Lancio</Italian>
             <Chinese>顯示滑鼠投擲控制提示</Chinese>
             <Chinesesimp>显示鼠标投掷控制提示</Chinesesimp>
             <Portuguese>Mostrar os controles de mouse para Arremesso</Portuguese>
@@ -114,7 +114,7 @@
             <English>Enables visual cues for mouse controls when throwable is prepared.</English>
             <Spanish>Activa muestras visuales para los controles del ratón cuando el objeto lanzable está preparado</Spanish>
             <Russian>Включает отображение подсказок по управлению мышью, когда граната подготовлена.</Russian>
-            <Japanese>投てき物を構える時、マウス操作の説明表示を有効化します。</Japanese>
+            <Japanese>投擲物を構える時、マウス操作の説明表示を有効化します。</Japanese>
             <Polish>Wyświetla podpowiedzi sterowania myszą kiedy obiekt miotany jest w ręku.</Polish>
             <German>Aktiviert visuelle Hinweise zur Maussteuerung, wenn ein Objekt zum Werfen vorbereitet wird.</German>
             <Korean>투척물을 준비시 마우스 조작을 시각화해서 보여줍니다</Korean>
@@ -129,12 +129,12 @@
             <English>Enable Throwables Pick Up</English>
             <Spanish>Habilitar recoger objetos lanzados</Spanish>
             <Russian>Вкл. подбор гранат</Russian>
-            <Japanese>投てき物の拾い上げを有効化</Japanese>
+            <Japanese>投擲物の拾い上げを有効化</Japanese>
             <Polish>Zezwól na podnoszenie obiektów miotanych</Polish>
             <German>Aktiviere Aufheben von Wurfobjekten</German>
             <Korean>투척물 줍기 활성화</Korean>
             <French>Permettre le ramassage d'objets lançables</French>
-            <Italian>Abilita Raccogli Oggetti</Italian>
+            <Italian>Abilita Raccolta Lanciabili</Italian>
             <Chinese>啟用可撿取地面投擲物</Chinese>
             <Chinesesimp>启用捡取地面投掷物</Chinesesimp>
             <Portuguese>Permitir pegar arremessáveis</Portuguese>
@@ -144,12 +144,12 @@
             <English>Enables ability to pick up throwables from the ground.</English>
             <Spanish>Activa la habilidad de coger objetos lanzados del suelo</Spanish>
             <Russian>Включает возможность подбирать гранаты с земли.</Russian>
-            <Japanese>地面に落ちている投てき物を拾い上げる機能を有効化します。</Japanese>
+            <Japanese>地面に落ちている投擲物を拾い上げる機能を有効化します。</Japanese>
             <Polish>Umożliwia podnoszenie obiektów miotanych z ziemi.</Polish>
             <German>Aktiviert die Möglichkeit, geworfene Objekte wieder vom Boden aufzuheben.</German>
             <Korean>땅에 떨어진 투척물을 주울 수 있게 해줍니다.</Korean>
             <French>Active la possibilité de ramasser des objets lançables du sol.</French>
-            <Italian>Abilita la possibilità di raccogliere un oggetto lanciabile da terra.</Italian>
+            <Italian>Permette ai giocatori di raccogliere un oggetto lanciabile da terra.</Italian>
             <Chinese>啟用後, 可撿取地面上的投擲物</Chinese>
             <Chinesesimp>启用后，可捡取地面上的投掷物</Chinesesimp>
             <Portuguese>Permite que objetos arremessados sejam pegos do chão. (ACE Menu de Interação)</Portuguese>
@@ -159,12 +159,12 @@
             <English>Enable Attached Throwables Pick Up</English>
             <Spanish>Activar coger objetos lanzables que se enganchan</Spanish>
             <Russian>Вкл. подбор прикрепленных гранат</Russian>
-            <Japanese>取り付けられた投てき物の拾い上げを有効化</Japanese>
+            <Japanese>装着済の投擲物の拾い上げを有効化</Japanese>
             <Polish>Zezwól na podnoszenie przyczepionych obiektów miotanych</Polish>
             <German>Aktiviere erneute Aufnahme befestigter Wurfobjekte</German>
             <Korean>부착 투척물 줍기 활성화</Korean>
             <French>Activer le ramassage d'objets lançables attachés</French>
-            <Italian>Abilita Raccogli Oggetti Lanciabili da altri Oggetti</Italian>
+            <Italian>Abilita Raccolta Lanciabili Attaccati</Italian>
             <Chinese>啟用可撿取附著投擲物</Chinese>
             <Chinesesimp>启用捡取附着投掷物</Chinesesimp>
             <Portuguese>Permitir pegar arremessáveis fixados</Portuguese>
@@ -174,12 +174,12 @@
             <English>Enables ability to pick up throwables from attached objects.</English>
             <Spanish>Activa la habilidad de lanzar objetos enganchados</Spanish>
             <Russian>Включает возможность подбирать гранаты, прикрепленные к объектам.</Russian>
-            <Japanese>取り付けられた投てき物を拾い上げる機能を有効化します。</Japanese>
+            <Japanese>オブジェクトに装着された投擲可能物を拾い上げる機能を有効化します。</Japanese>
             <Polish>Umożliwia podnoszenie obiektów miotanych przyczepionych do innych obiektów.</Polish>
             <German>Aktiviert die Möglichkeit, befestigte Wurfobjekte erneut aufzunehmen.</German>
             <Korean>부착된 투척물을 주울 수 있게 해줍니다.</Korean>
             <French>Active la possibilité de ramasser des objets lançables attachés à d'autres objets.</French>
-            <Italian>Abilita la possibilità di raccogliere gli oggetti lanciabili dagli altri oggetti. </Italian>
+            <Italian>Permette ai giocatori di raccogliere gli oggetti lanciabili da altri oggetti attaccati.</Italian>
             <Chinese>啟用後, 可撿取附著在物件上的投擲物</Chinese>
             <Chinesesimp>启用后，可捡取附着在物体上的投掷物</Chinesesimp>
             <Portuguese>Permite que arremessáveis fixados em objetos sejam pegos.</Portuguese>
@@ -189,12 +189,12 @@
             <English>Prepare/Change Throwable</English>
             <Spanish>Preparar/Cambiar objetos lanzables</Spanish>
             <Russian>Подготовить/заменить гранату</Russian>
-            <Japanese>投てき物の準備/変更</Japanese>
+            <Japanese>投擲物の準備/変更</Japanese>
             <Polish>Przygotuj/zmień ob. miotany</Polish>
             <German>Wurfobjekt vorbereiten/wechseln</German>
             <Korean>투척물 준비/변경</Korean>
             <French>Préparer/Changer d'objet lançable</French>
-            <Italian>Prepara/Cambia Oggetto lanciabile</Italian>
+            <Italian>Prepara/Cambia Oggetto Lanciabile</Italian>
             <Chinese>準備/變更投擲物</Chinese>
             <Chinesesimp>准备/变更投掷物</Chinesesimp>
             <Portuguese>Preparar/Mudar Arremessável</Portuguese>
@@ -204,12 +204,12 @@
             <English>Throwable Drop Mode (Hold)</English>
             <Spanish>Modo soltar objeto lanzable (Mantener pulsado)</Spanish>
             <Russian>Режим броска гранаты (удерживать)</Russian>
-            <Japanese>投てきモード (押している間)</Japanese>
+            <Japanese>投擲モード (押している間)</Japanese>
             <Polish>Tryb upuszczania ob. miotanego (przytrzymaj)</Polish>
             <German>Wurfobjekt Fallmodus (halten)</German>
             <Korean>투척물 떨어뜨리기 모드(꾹눌러서)</Korean>
             <French>Mode de lancé de l'objet (Tenir)</French>
-            <Italian>Modalità Oggetto Gettabile (Mantenere)</Italian>
+            <Italian>Modalità Gettare (Tieni premuto)</Italian>
             <Chinese>投擲模式 (按住)</Chinese>
             <Chinesesimp>投掷模式（按住）</Chinesesimp>
             <Portuguese>Modo de Arremesso (Segurar)</Portuguese>
@@ -219,12 +219,12 @@
             <English>Throwable Drop Mode (Toggle)</English>
             <Spanish>Modo soltar objeto lanzable (interruptor)</Spanish>
             <Russian>Режим броска гранаты (переключить)</Russian>
-            <Japanese>投てきモード (切り替え)</Japanese>
+            <Japanese>投擲モード (切り替え)</Japanese>
             <Polish>Tryb upuszczania ob. miotanego (przełącz)</Polish>
             <German>Wurfobjekt Fallmodus (umschalten)</German>
             <Korean>투척물 떨어뜨리기 모드(토글)</Korean>
             <French>Mode de lancé de l'objet (Basculer)</French>
-            <Italian>Modalità Oggetto lanciabile Gettabile (Interruttore)</Italian>
+            <Italian>Modalità Getta Oggetto (Cambia)</Italian>
             <Chinese>投擲模式 (切換)</Chinese>
             <Chinesesimp>投掷模式（切换）</Chinesesimp>
             <Portuguese>Modo de Arremesso (Alternar)</Portuguese>
@@ -239,7 +239,7 @@
             <German>Scharf gemacht</German>
             <Korean>뇌관 작동</Korean>
             <French>amorcée</French>
-            <Italian>Armato</Italian>
+            <Italian>Innescato</Italian>
             <Chinese>引信開始燃燒</Chinese>
             <Chinesesimp>已开引信</Chinesesimp>
             <Portuguese>Preparado</Portuguese>
@@ -254,7 +254,7 @@
             <German>Werfen</German>
             <Korean>던지기</Korean>
             <French>Lancer</French>
-            <Italian>Lanciare</Italian>
+            <Italian>Lancia</Italian>
             <Chinese>投擲</Chinese>
             <Chinesesimp>投掷</Chinesesimp>
             <Portuguese>Arremessar</Portuguese>
@@ -270,7 +270,7 @@
             <German>(Scrollen) Modus wechseln</German>
             <Korean>(마우스 휠) 모드 변경</Korean>
             <French>(Défilement) Changer de mode</French>
-            <Italian>(Scorrere) Cambio Modalità</Italian>
+            <Italian>(Scorri) Cambia Modalità</Italian>
             <Chinese>(滾輪) 變更模式</Chinese>
             <Chinesesimp>（滚轮）变更模式</Chinesesimp>
             <Portuguese>(Roda do Mouse) Alternar modo</Portuguese>
@@ -286,7 +286,7 @@
             <German>(Scrollen) Erweitern</German>
             <Korean>(마우스 휠) 연장</Korean>
             <French>(Défilement) Étendre</French>
-            <Italian>(Scorrere) Estendere</Italian>
+            <Italian>(Scorri) Estendi</Italian>
             <Chinese>(滾輪) 延長</Chinese>
             <Chinesesimp>（滚轮）延长</Chinesesimp>
             <Portuguese>(Roda do Mouse) Estender</Portuguese>
@@ -302,7 +302,7 @@
             <German>(Klicken) Abkochen</German>
             <Korean>(클릭) 예열</Korean>
             <French>(Clique) Dégoupiller</French>
-            <Italian>(Click) Arma</Italian>
+            <Italian>(Click) Innesca</Italian>
             <Chinese>(點擊) 提早拉開引信</Chinese>
             <Chinesesimp>（点击）提早拉开引信</Chinesesimp>
             <Portuguese>(Clique) Cozinhar</Portuguese>
@@ -313,7 +313,7 @@
             <English>Pick Up</English>
             <Spanish>Coger</Spanish>
             <Russian>Подобрать</Russian>
-            <Japanese>拾い上げる</Japanese>
+            <Japanese>拾う</Japanese>
             <Polish>Podnieś</Polish>
             <German>Aufheben</German>
             <Korean>줍기</Korean>

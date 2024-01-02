@@ -19,20 +19,32 @@ if (isServer) then {
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
 
-        if (!isNull _curator) exitWith {_curator addCuratorEditableObjects [_objects, true]};
+        // If valid object
+        if (_curator isEqualType objNull && {!isNull _curator}) exitWith {_curator addCuratorEditableObjects [_objects, true]};
+
+        // If invalid object (= objNull) or other
+        if !(_curator isEqualType []) then {
+            _curator = allCurators;
+        };
 
         {
             _x addCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
+        } forEach _curator;
     }] call CBA_fnc_addEventHandler;
     [QGVAR(removeObjects), {
         params ["_objects", ["_curator", objNull]];
 
-        if (!isNull _curator) exitWith {_curator removeCuratorEditableObjects [_objects, true]};
+        // If valid object
+        if (_curator isEqualType objNull && {!isNull _curator}) exitWith {_curator removeCuratorEditableObjects [_objects, true]};
+
+        // If invalid object (= objNull) or other
+        if !(_curator isEqualType []) then {
+            _curator = allCurators;
+        };
 
         {
             _x removeCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
+        } forEach _curator;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(createZeus), {

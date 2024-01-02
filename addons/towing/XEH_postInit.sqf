@@ -3,6 +3,7 @@
 ["MouseButtonUp", LINKFUNC(onMouseButtonUp)] call CBA_fnc_addDisplayHandler;
 GVAR(mouseLeft) = false;
 GVAR(mouseRight) = false;
+GVAR(blockFireEHID) = -1;
 
 GVAR(cancel) = false;
 GVAR(canAttach) = false;
@@ -11,4 +12,3 @@ GVAR(canAttach) = false;
     params ["_parent", "_child"];
     _child setTowParent _parent;
 }] call CBA_fnc_addEventHandler;
-

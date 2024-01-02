@@ -6,7 +6,7 @@
             <Italian>Cambia Unità</Italian>
             <Chinese>切換單位</Chinese>
             <Chinesesimp>单位切换</Chinesesimp>
-            <Japanese>ユニット切り替え</Japanese>
+            <Japanese>ユニットを切り替え</Japanese>
             <Korean>유닛 변경</Korean>
             <German>Einheitenwechsel</German>
             <Polish>Przełącz Jednostki</Polish>
@@ -28,7 +28,7 @@
             <Hungarian>Egység átváltva</Hungarian>
             <Italian>Unità cambiata</Italian>
             <Portuguese>Trocado de unidade</Portuguese>
-            <Japanese>ユニットを切り替え</Japanese>
+            <Japanese>切り替えたユニット</Japanese>
             <Chinesesimp>切换单位</Chinesesimp>
             <Chinese>切換單位</Chinese>
             <Korean>유닛 변경됨</Korean>
@@ -69,6 +69,7 @@
         <Key ID="STR_ACE_SwitchUnits_EnableSwitchUnits_DisplayName">
             <English>Enable switch side</English>
             <German>Ermögliche Seitenwechsel</German>
+            <Italian>Permetti cambio fazione</Italian>
             <French>Permettre le changement de camp</French>
             <Chinese>啟用陣營切換</Chinese>
             <Chinesesimp>启用阵营切换</Chinesesimp>
@@ -91,7 +92,7 @@
             <Hungarian>Átváltás BLUFOR-ra?</Hungarian>
             <Russian>На синих?</Russian>
             <Italian>Cambia per BLUFOR?</Italian>
-            <Japanese>同盟軍へ切り替え許可</Japanese>
+            <Japanese>同盟軍へ切り替える?</Japanese>
             <Chinesesimp>切换至蓝方？</Chinesesimp>
             <Chinese>切換至藍方?</Chinese>
             <Korean>청군으로 변경합니까?</Korean>
@@ -108,7 +109,7 @@
             <Hungarian>Nyugat-fakciós egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на синих юнитов?</Russian>
             <Italian>Consenti passaggio ad unità BLUFOR?</Italian>
-            <Japanese>同盟軍側ユニットへ切り替えられるようにします。</Japanese>
+            <Japanese>同盟軍ユニットへの切り替えを許可しますか?</Japanese>
             <Chinesesimp>允许切换至蓝方？</Chinesesimp>
             <Chinese>允許切換至藍方?</Chinese>
             <Korean>청군 인원으로 변경하는 것을 허락합니까?</Korean>
@@ -124,7 +125,7 @@
             <Hungarian>Átváltás OPFOR-ra?</Hungarian>
             <Russian>На красных?</Russian>
             <Italian>Cambia per OPFOR?</Italian>
-            <Japanese>OPFOR軍側へ切り替え許可</Japanese>
+            <Japanese>OPFOR軍へ切り替える?</Japanese>
             <Chinesesimp>切换至红方？</Chinesesimp>
             <Chinese>切換至紅方?</Chinese>
             <Korean>대항군으로 변경합니까?</Korean>
@@ -141,7 +142,7 @@
             <Hungarian>Kelet-fakciós egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на красных юнитов?</Russian>
             <Italian>Consenti passaggio ad unità OPFOR?</Italian>
-            <Japanese>OPFOR軍側ユニットへ切り替えられるようにします。</Japanese>
+            <Japanese>OPFOR軍ユニットへの切り替えを許可しますか?</Japanese>
             <Chinesesimp>允许切换至红方？</Chinesesimp>
             <Chinese>允許切換至紅方?</Chinese>
             <Korean>대항군 인원으로 변경하는 것을 허락합니까?</Korean>
@@ -157,7 +158,7 @@
             <Hungarian>Átváltás INDFOR-ra?</Hungarian>
             <Russian>На независимых?</Russian>
             <Italian>Cambia per INDFOR?</Italian>
-            <Japanese>独立軍へ切り替え許可</Japanese>
+            <Japanese>独立軍へ切り替える?</Japanese>
             <Chinesesimp>切换至独立方？</Chinesesimp>
             <Chinese>切換至獨立方?</Chinese>
             <Korean>무소속군으로 전환합니까?</Korean>
@@ -174,7 +175,7 @@
             <Hungarian>Független egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на независимых юнитов?</Russian>
             <Italian>Consenti passaggio ad unità INDFOR?</Italian>
-            <Japanese>独立軍側ユニットへ切り替えられるようにします。</Japanese>
+            <Japanese>独立軍ユニットへの切り替えを許可しますか?</Japanese>
             <Chinesesimp>允许切换至独立方？</Chinesesimp>
             <Chinese>允許切換至獨立方?</Chinese>
             <Korean>무소속군 인원으로 변경하는 것을 허락합니까?</Korean>
@@ -190,7 +191,7 @@
             <Hungarian>Átváltás civilre?</Hungarian>
             <Russian>На гражданских?</Russian>
             <Italian>Cambia per Civili?</Italian>
-            <Japanese>市民へ切り替え許可</Japanese>
+            <Japanese>市民へ切り替える?</Japanese>
             <Korean>민간인으로 전환합니까?</Korean>
             <Chinesesimp>切换至平民方？</Chinesesimp>
             <Chinese>切換至平民方?</Chinese>
@@ -207,7 +208,7 @@
             <Hungarian>Civil egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на гражданских юнитов?</Russian>
             <Italian>Consenti passaggio ad unità civili?</Italian>
-            <Japanese>市民側ユニットへ切り替えられるようにします。</Japanese>
+            <Japanese>市民ユニットへの切り替えを許可しますか?</Japanese>
             <Korean>민간인으로 변경하는걸 허가합니까?</Korean>
             <Chinesesimp>允许切换至平民方？</Chinesesimp>
             <Chinese>允許切換至平民方?</Chinese>
@@ -239,7 +240,7 @@
             <Hungarian>Engedélyezve legyen-e egy biztonságos zóna az ellenségek körül? A játékosok nem tudnak a biztonságos zónán belüli egységekre váltani.</Hungarian>
             <Russian>Включить безопасную зону вокруг вражеских юнитов? Игроки не могут переключаться на юнитов, находящихся в безопасной зоне.</Russian>
             <Italian>Abilita una zona sicura attorno ad unità nemiche? I giocatori non possono cambiare ad unità dentro la zona sicura.</Italian>
-            <Japanese>敵ユニットから逃れる安全地帯を生成できます。プレイヤーは安全地帯内のユニットへ切り替えできません。</Japanese>
+            <Japanese>敵ユニットの周囲に安全地帯を確保しますか? プレイヤーは安全地帯内のユニットに切り替えることはできません。</Japanese>
             <Korean>적 주위로 안전지대를 활성화합니까? 안전지대 내에서는 플레이어가 인원 전환을 할 수 없습니다.</Korean>
             <Chinesesimp>启用敌方周围安全地带？ 玩家不能切换到安全区内的单位</Chinesesimp>
             <Chinese>啟用敵方周圍安全地帶? 玩家不能切換到安全區內的單位</Chinese>
@@ -271,7 +272,7 @@
             <Hungarian>A biztonságos zóna más csapatból lévő játékosok körül. Alapértelmezett: 100</Hungarian>
             <Russian>Радиус безопасной зоны вокруг ироков из противоположной команды. По умолчанию: 100</Russian>
             <Italian>La zona sicura attorno ai giocatori di un team diverso. Default: 100</Italian>
-            <Japanese>別のチームへのプレイヤーの周囲にある安全地帯の範囲。標準: 100</Japanese>
+            <Japanese>別のチームのプレイヤーの周囲にある安全地帯の範囲。 デフォルト: 100</Japanese>
             <Korean>다른 진영으로 부터의 플레이어 안전 지대. 기본설정: 100</Korean>
             <Chinesesimp>安全区的范围。预设值：100</Chinesesimp>
             <Chinese>安全區的範圍。預設值：100</Chinese>
@@ -286,7 +287,7 @@
             <French>Ce module vous permet de changer de camp en cours de partie.</French>
             <Italian>Questo modulo ti permette di cambiare lato durante la partita.</Italian>
             <Spanish>El módulo permite a las unidades cambiar de bando durante el juego.</Spanish>
-            <Japanese>モジュールはゲームにおいて、陣営の切り替えを有効にします。</Japanese>
+            <Japanese>モジュールを使用すると、ゲーム中に陣営を切り替えることが出来るようになります。</Japanese>
             <Korean>이 모듈은 당신을 게임 중에 진영을 바꿀 수 있게 해줍니다.</Korean>
             <Chinesesimp>此模块允许你在游戏中切换至另一方</Chinesesimp>
             <Chinese>此模塊允許你在遊戲中切換至另一方</Chinese>

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_player, _source] call ace_field_rations_drinkFromSource
+ * [_player, _source] call ace_field_rations_fnc_drinkFromSource
  *
  * Public: No
  */
