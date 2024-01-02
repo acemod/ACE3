@@ -62,8 +62,12 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 
         // fix falling back to unconsciousness animation and disable rotating in that state
         class Unconscious: Default {
-            ConnectTo[] = {};
+            // Prevents AI from moving torso and head when unconscious
+            aiming = "aimingNo";
+            aimingBody = "aimingUpNo";
             head = "headNo";
+
+            ConnectTo[] = {};
             forceAim = 1;
             static = 1;
         };
