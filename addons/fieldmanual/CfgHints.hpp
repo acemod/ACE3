@@ -37,7 +37,7 @@ class CfgHints {
         };
         class ACE_BodyBag: ACE_FieldManual_Base {
             logicalOrder = 2;
-            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_BodyBag' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_BodyBag' call FUNC(getItemName)), MEDICAL_MENU_KEYBIND};
             displayName = "%14";
             displayNameShort = CSTRING(Items_BodyBag_ShortName);
             description = CSTRING(Items_BodyBag_Description);

@@ -278,7 +278,7 @@
             <Japanese>死者を連れ出す</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
-            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Place Body In Bodybag%4.</English>
+            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%13%4] or [%3%15%4] and select %3Place Body In Bodybag%4.</English>
             <Polish>%3Worki na Zwłoki%4 są używane do transportu ciał. Worki mogą być przeciągane i ładowanie do pojazdów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podejdź do martwego ciała.&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz %3Umieść Ciało w Worku na Zwłoki%4.</Polish>
             <Korean>%3시체 운반용 부대%4는 시체를 운반하는 데 사용되며, 차량으로 끌고 가서 적재할 수 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2시체에 접근하십시오.&lt;br/&gt;%2[%3%13%4] 또는 [%3%14%4]를 사용하여 %3시체 운반용 부대에 담기%4를 선택하십시오.</Korean>
             <Portuguese>OS %3Sacos de Cadáver%4 são utilizados para transportar cadáveres. Eles podem ser arrastados e embarcados em veículos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Aproxime-se de um cadáver.&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%14%4] e selecione %3Colocar cadáver dentro do saco%4.</Portuguese>
