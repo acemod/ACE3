@@ -25,7 +25,7 @@ private _filter = _display displayCtrl IDC_FILTERLISTS;
 // the first three indecies are hard coded: 0 - weapons , 1 - magazines, 2 - items
 // all of them show backpacks, because BI
 // all other indecies show everything, so all we have to do is delete stuff we dont like
-_filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
+_filter ctrlAddEventHandler ["LBSelChanged", LINKFUNC(onLBSelChanged)];
 
 // have to add these a frame later, because this event happens before the engine adds the default filters
 [{
@@ -49,9 +49,7 @@ _filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
 
         _index = _filter lbAdd _name;
         _filter lbSetData [_index, _fncName];
-
-        false
-    } count GVAR(customFilters);
+    } forEach GVAR(customFilters);
 
     // readd "All" filter to last position and select it
     _index = _filter lbAdd _nameAll;
@@ -72,9 +70,5 @@ _dummyControl ctrlAddEventHandler ["Draw", {
 
     private _itemList = _display call FUNC(currentItemListBox);
 
-    // monitoring is done by setting a lb value. These are unused here and are reset every time the list box updates.
-    if (_itemList lbValue 0 != DUMMY_VALUE) then {
-        _display call FUNC(forceItemListUpdate);
-        _itemList lbSetValue [0, DUMMY_VALUE];
-    };
+    _display call FUNC(forceItemListUpdate);
 }];
