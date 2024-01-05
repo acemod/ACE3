@@ -79,7 +79,7 @@ if (getAnimSpeedCoef _unit != 1 && {GVAR(setAnimExclusions) isEqualTo []}) then 
     _unit setAnimSpeedCoef 1;
 };
 
-if (!isForcedWalk _unit && _fatigue >= 1) then {
+if (!isForcedWalk _unit && _fatigue >= 1) then { // small checks like these are faster without lazy eval
     [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
     [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 } else {
