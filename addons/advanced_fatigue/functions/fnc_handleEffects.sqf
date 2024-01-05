@@ -64,7 +64,7 @@ if (GVAR(isSwimming)) exitWith {
         _unit setAnimSpeedCoef linearConversion [0.7, 0.9, _fatigue, 1, 0.5, true];
     };
 
-    if (isSprintAllowed _unit && _fatigue > 0.7) then {
+    if (isSprintAllowed _unit && _fatigue > 0.7) then { // small checks like these are faster without lazy eval
         [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
     } else {
         if (!isSprintAllowed _unit && _fatigue < 0.7) then {
