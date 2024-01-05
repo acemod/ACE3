@@ -4,12 +4,14 @@
     [LSTRING(Enabled), LSTRING(Enabled_Description)],
     LSTRING(DisplayName),
     true,
-    true, {
-        if (!_this) then {
+    1,
+    {
+        if (!_this && hasInterface) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
             _staminaBarContainer ctrlSetFade 1;
             _staminaBarContainer ctrlCommit 0;
         };
+
         [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)
     },
     true // Needs mission restart
@@ -21,8 +23,9 @@
     [LSTRING(EnableStaminaBar), LSTRING(EnableStaminaBar_Description)],
     LSTRING(DisplayName),
     true,
-    true, {
-        if (!_this) then {
+    1,
+    {
+        if (!_this && hasInterface) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
             _staminaBarContainer ctrlSetFade 1;
             _staminaBarContainer ctrlCommit 0;
@@ -36,8 +39,9 @@
     [LSTRING(FadeStaminaBar), LSTRING(FadeStaminaBar_Description)],
     LSTRING(DisplayName),
     true,
-    false, {
-        if (!_this && GVAR(enabled) && GVAR(enableStaminaBar)) then {
+    0,
+    {
+        if (!_this && hasInterface && GVAR(enabled) && GVAR(enableStaminaBar)) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
             _staminaBarContainer ctrlSetFade 0;
             _staminaBarContainer ctrlCommit 0;
@@ -50,8 +54,14 @@
     "SLIDER",
     [LSTRING(PerformanceFactor), LSTRING(PerformanceFactor_Description)],
     LSTRING(DisplayName),
-    [0, 5, 1, 1],
-    true
+    [0, 10, 1, 2],
+    1,
+    {
+        // Recalculate values if the setting is changed mid-mission
+        if (GVAR(enabled) && hasInterface && !isNull ACE_player) then {
+            [ACE_player, ACE_player] call FUNC(handlePlayerChanged);
+        };
+    }
 ] call CBA_fnc_addSetting;
 
 [
@@ -59,8 +69,8 @@
     "SLIDER",
     [LSTRING(RecoveryFactor), LSTRING(RecoveryFactor_Description)],
     LSTRING(DisplayName),
-    [0, 5, 1, 1],
-    true
+    [0, 10, 1, 2],
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -68,8 +78,8 @@
     "SLIDER",
     [LSTRING(LoadFactor), LSTRING(LoadFactor_Description)],
     LSTRING(DisplayName),
-    [0, 5, 1, 1],
-    true
+    [0, 5, 1, 2],
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -77,8 +87,8 @@
     "SLIDER",
     [LSTRING(TerrainGradientFactor), LSTRING(TerrainGradientFactor_Description)],
     LSTRING(DisplayName),
-    [0, 5, 1, 1],
-    true
+    [0, 5, 1, 2],
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -86,8 +96,8 @@
     "SLIDER",
     [LSTRING(SwayFactor), LSTRING(SwayFactor_Description)],
     LSTRING(DisplayName),
-    [0, 5, 1, 1],
-    true
+    [0, 5, 1, 2],
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -96,7 +106,7 @@
     [LSTRING(RestedSwayFactor), LSTRING(RestedSwayFactor_Description)],
     LSTRING(DisplayName),
     [0, 5, 1, 2],
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -105,5 +115,5 @@
     [LSTRING(DeployedSwayFactor), LSTRING(DeployedSwayFactor_Description)],
     LSTRING(DisplayName),
     [0, 5, 1, 2],
-    true
+    1
 ] call CBA_fnc_addSetting;

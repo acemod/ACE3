@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut
+ * Author: BaerMitUmlaut, ulteq
  * Main looping function that updates fatigue values.
  *
  * Arguments:
@@ -24,20 +24,22 @@ if (!alive ACE_player) exitWith {
     _staminaBarContainer ctrlCommit 1;
 };
 
+private _velocity = velocity ACE_player;
 private _normal = surfaceNormal (getPosWorld ACE_player);
-private _movementVector = vectorNormalized (velocity ACE_player);
+private _movementVector = vectorNormalized _velocity;
 private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
 private _fwdAngle = asin (_movementVector select 2);
 private _sideAngle = asin (_sideVector select 2);
 
 private _currentWork = REE;
-private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
+private _currentSpeed = (vectorMagnitude _velocity) min 6;
 
 // fix #4481. Diving to the ground is recorded as PRONE stance with running speed velocity. Cap maximum speed to fix.
 if (GVAR(isProne)) then {
     _currentSpeed = _currentSpeed min 1.5;
 };
 
+// Get the current duty
 private _duty = GVAR(animDuty);
 
 {
@@ -50,7 +52,7 @@ private _duty = GVAR(animDuty);
 
 private _terrainGradient = abs _fwdAngle;
 private _terrainFactor = 1;
-private _gearMass = 0 max (((ACE_player getVariable [QEGVAR(movement,totalLoad), loadAbs ACE_player]) / 22.046 - CLOTH_WEIGHT) * GVAR(loadFactor));
+private _gearMass = 0 max (((ACE_player getVariable [QEGVAR(movement,totalLoad), loadAbs ACE_player]) / 22.046 - UNDERWEAR_WEIGHT) * GVAR(loadFactor));
 
 if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround ACE_player || {underwater ACE_player}}) then {
     if (!GVAR(isSwimming)) then {
@@ -98,15 +100,6 @@ GVAR(ae1Reserve) = 0 max (GVAR(ae1Reserve) - _ae1Power / GVAR(aeWattsPerATP));
 GVAR(ae2Reserve) = 0 max (GVAR(ae2Reserve) - _ae2Power / GVAR(aeWattsPerATP));
 GVAR(anReserve)  = 0 max (GVAR(anReserve)  -  _anPower / GVAR(anWattsPerATP));
 
-#ifdef DEBUG_MODE_FULL
-systemChat format ["---- ae2: %1 ----", (GVAR(ae2Reserve) / AE2_MAXRESERVE) toFixed 2];
-systemChat format ["---- an: %1 ----", (GVAR(anReserve) / AN_MAXRESERVE) toFixed 2];
-systemChat format ["---- anFatigue: %1 ----", GVAR(anFatigue) toFixed 2];
-// systemChat format["---- muscleDamage: %1 ----", GVAR(muscleDamage) toFixed 2];
-// systemChat format["---- respiratoryRate: %1 ----", GVAR(respiratoryRate) toFixed 2];
-// systemChat format["---- aePower: %1 ----", _aePathwayPowerFatigued toFixed 1];
-#endif
-
 // Acidosis accumulation
 GVAR(anFatigue)  = GVAR(anFatigue) + _anPower * GVAR(maxPowerFatigueRatio) * 1.1;
 
@@ -116,36 +109,10 @@ GVAR(ae2Reserve) = (GVAR(ae2Reserve) + _oxygen * GVAR(recoveryFactor) * AE2_ATP_
 
 private _aeSurplus = _ae1PathwayPowerFatigued + _ae2PathwayPowerFatigued - _ae1Power - _ae2Power;
 
-// ORIGINAL
-/*
 // Anaerobic ATP reserve recovery
-GVAR(anReserve) = 0 max (GVAR(anReserve) + _aeSurplus / GVAR(VO2MaxPower) * AN_ATP_RECOVERY * GVAR(recoveryFactor) * GVAR(anFatigue)/* ^ 2/) min AN_MAXRESERVE;
+GVAR(anReserve) = 0 max (GVAR(anReserve) + _aeSurplus / GVAR(VO2MaxPower) * AN_ATP_RECOVERY * GVAR(recoveryFactor) * (GVAR(anFatigue) max linearConversion [AN_MAXRESERVE, 0, GVAR(anReserve), 0, 0.75, true]) ^ 2) min AN_MAXRESERVE; // max linearConversion ensures that if GVAR(anFatigue) is very low, it will still regenerate reserves
 // Acidosis recovery
-GVAR(anFatigue) = 0 max (GVAR(anFatigue) - _aeSurplus * GVAR(maxPowerFatigueRatio) * GVAR(recoveryFactor) * GVAR(anFatigue)/* ^ 2/) min 1;
-*/
-
-// GAMEPLAY
-// Anaerobic ATP reserve recovery
-GVAR(anReserve) = 0 max (GVAR(anReserve) + _aeSurplus / GVAR(VO2MaxPower) * AN_ATP_RECOVERY * GVAR(recoveryFactor) * (GVAR(anFatigue) max 0.5)) min AN_MAXRESERVE;
-// Acidosis recovery
-GVAR(anFatigue) = 0 max (GVAR(anFatigue) - _aeSurplus * GVAR(maxPowerFatigueRatio) * GVAR(recoveryFactor) * ((GVAR(anFatigue) max 0.75) ^ 0.25)) min 1;
-
-// Anaerobic power calculation
-_anPower = _anPathwayPowerFatigued * (1 - (GVAR(anFatigue) ^ 2));
-
-// Peak fatigued power calculation
-private _peakPowerFatigued = _aePathwayPowerFatigued + _anPower;
-
-// Movement rate limits
-private _maxRunSpeed = ([_duty, _gearMass, _terrainGradient, _terrainFactor, _aePathwayPowerFatigued] call FUNC(getMaximumSpeed)) - 0.1;
-private _maxSprintSpeed = [_duty, _gearMass, _terrainGradient, _terrainFactor, _peakPowerFatigued] call FUNC(getMaximumSpeed);
-
-#ifdef DEBUG_MODE_FULL
-systemChat format ["---- animSpeedCoef: %1 ----", (getAnimSpeedCoef ACE_player) toFixed 2];
-systemChat format ["---- maxRunSpeed: %1 ----", _maxRunSpeed toFixed 2];
-systemChat format ["---- maxSprintSpeed: %1 ----", _maxSprintSpeed toFixed 2];
-systemChat format ["---- currentSpeed: %1 ----", vectorMagnitude (velocity ACE_player) toFixed 2];
-#endif
+GVAR(anFatigue) = 0 max (GVAR(anFatigue) - _aeSurplus * GVAR(maxPowerFatigueRatio) * GVAR(recoveryFactor) * GVAR(anFatigue) ^ 2) min 1;
 
 // Respiratory rate decrease
 GVAR(respiratoryRate) = GVAR(respiratoryRate) * GVAR(respiratoryBufferDivisor);
@@ -155,7 +122,20 @@ private _aePowerRatio = (GVAR(aePathwayPower) / _aePathwayPowerFatigued) min 2;
 private _respiratorySampleDivisor = 1 / (RESPIRATORY_BUFFER * 4.72 * GVAR(VO2Max));
 GVAR(respiratoryRate) = (GVAR(respiratoryRate) + _currentWork * _respiratorySampleDivisor * _aePowerRatio) min 1;
 
-[ACE_player, GVAR(anFatigue), GVAR(respiratoryRate), _currentSpeed, _maxRunSpeed, _maxSprintSpeed, _fwdAngle, _sideAngle] call FUNC(handleEffects);
+// Calculate a pseudo-perceived fatigue, which is used for effects
+private _aeReservePercentage = (GVAR(ae1Reserve) / AE1_MAXRESERVE + GVAR(ae2Reserve) / AE2_MAXRESERVE) / 2;
+private _anReservePercentage = GVAR(anReserve) / AN_MAXRESERVE;
+private _perceivedFatigue = 1 - (_anReservePercentage min _aeReservePercentage);
+
+#ifdef DEBUG_MODE_FULL
+systemChat format ["---- muscleDamage: %1 ----", GVAR(muscleDamage) toFixed 8];
+systemChat format ["---- ae2: %1 - an: %2 ----", (GVAR(ae2Reserve) / AE2_MAXRESERVE) toFixed 2, (GVAR(anReserve) / AN_MAXRESERVE) toFixed 2];
+systemChat format ["---- anFatigue: %1 - perceivedFatigue: %2 ----", GVAR(anFatigue) toFixed 2, _perceivedFatigue toFixed 2];
+systemChat format ["---- velocity %1 - respiratoryRate: %2 ----", (vectorMagnitude _velocity) toFixed 2, GVAR(respiratoryRate) toFixed 2];
+// systemChat format ["---- aePower: %1 ----", _aePathwayPowerFatigued toFixed 1];
+#endif
+
+[ACE_player, _perceivedFatigue, GVAR(respiratoryRate), GVAR(anReserve) == 0, _fwdAngle, _sideAngle] call FUNC(handleEffects);
 
 if (GVAR(enableStaminaBar)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);

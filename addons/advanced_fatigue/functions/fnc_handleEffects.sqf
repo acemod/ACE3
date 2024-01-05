@@ -1,17 +1,15 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut
+ * Author: BaerMitUmlaut, ulteq
  * Handles any audible, visual and physical effects of fatigue.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Fatigue <NUMBER>
  * 2: Respiratory Rate <NUMBER>
- * 3: Current Speed <NUMBER>
- * 4: Max Run Speed <NUMBER>
- * 5: Max Sprint Speed <NUMBER>
- * 6: Forward Angle <NUMBER>
- * 7: Side Angle <NUMBER>
+ * 3: Overexhausted <BOOL>
+ * 4: Forward Angle <NUMBER>
+ * 5: Side Angle <NUMBER>
  *
  * Return Value:
  * None
@@ -22,7 +20,7 @@
  * Public: No
  */
 
-params ["_unit", "_fatigue", "_respiratoryRate", "_currentSpeed", "_maxRunSpeed", "_maxSprintSpeed", "_fwdAngle", "_sideAngle"];
+params ["_unit", "_fatigue", "_respiratoryRate", "_overexhausted", "_fwdAngle", "_sideAngle"];
 
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
@@ -75,53 +73,29 @@ if (GVAR(isSwimming)) exitWith {
     };
 };
 
-private _animCoef = 1;
-private _currentAnimCoef = getAnimSpeedCoef _unit;
-
-if (_currentSpeed > 0.1) then {
-    if (_currentSpeed > 4 * _currentAnimCoef || _currentSpeed > GVAR(lastSpeed) + 0.8) then {
-        _animCoef = (0.7 max (_currentAnimCoef * ((_maxSprintSpeed / _currentSpeed) ^ 0.5)) min 1);
-    } else {
-        _animCoef = if (isForcedWalk _unit) then {
-            (0.8 max (_currentAnimCoef * ((_maxRunSpeed / _currentSpeed) ^ 0.5)) min 1.2)
-        } else {
-            (0.7 max (_currentAnimCoef * ((_maxRunSpeed / _currentSpeed) ^ 0.5)) min 1)
-        };
-    };
-
-    GVAR(lastSpeed) = _currentSpeed;
+// If other components are setting setAnimSpeedCoef, do not change animSpeedCoef
+if (getAnimSpeedCoef _unit != 1 && {GVAR(setAnimExclusions) isEqualTo []}) then {
+    TRACE_1("reset",getAnimSpeedCoef _unit);
+    _unit setAnimSpeedCoef 1;
 };
 
-if (!isForcedWalk _unit && {_fatigue >= 1 || {_maxRunSpeed < 2.4 && _currentSpeed < 2.5 && _currentAnimCoef < 0.75}}) then {
-    _animCoef = 1.2;
-
+if (!isForcedWalk _unit && _fatigue >= 1) then {
     [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-    [_unit, "blockSprint", QGVAR(forceWalk), true] call EFUNC(common,statusEffect_set);
+    [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 } else {
-    if (isForcedWalk _unit && {_fatigue < 0.9 && _maxRunSpeed > 2.5}) then {
-        if (!isWalking _unit) then {
-            _animCoef = 0.9;
-        };
-
+    if (isForcedWalk _unit && _fatigue < 0.7) then {
         [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-        [_unit, "blockSprint", QGVAR(forceWalk), false] call EFUNC(common,statusEffect_set);
+        [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
     } else {
-        // Forward angle is the slope of the terrain, side angle simulates the unevenness/roughness ofthe terrain
-        if (isSprintAllowed _unit && {abs _fwdAngle > 20 || abs _sideAngle > 20 || {_maxSprintSpeed < 3.5 && _currentAnimCoef < 0.85}}) then {
-            _animCoef = 1;
-
+        // Forward angle is the slope of the terrain, side angle simulates the unevenness/roughness of the terrain
+        if (isSprintAllowed _unit && {_fatigue > 0.7 || abs _fwdAngle > 20 || abs _sideAngle > 20}) then {
             [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         } else {
-            if (!isSprintAllowed _unit && {_fatigue < 0.8} && {abs _fwdAngle < 20 && abs _sideAngle < 20 && _maxSprintSpeed > 4.5}) then {
+            if (!isSprintAllowed _unit && _fatigue < 0.6 && abs _fwdAngle < 20 && abs _sideAngle < 20) then {
                 [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
             };
         };
     };
-};
-
-// If other components are setting setAnimSpeedCoef, do not change animSpeedCoef
-if (GVAR(setAnimExclusions) isEqualTo []) then {
-    _unit setAnimSpeedCoef _animCoef;
 };
 
 _unit setVariable [QGVAR(aimFatigue), _fatigue];

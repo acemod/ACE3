@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut
+ * Author: BaerMitUmlaut, ulteq
  * Calculates the current metabolic costs.
  * Calculation is done according to the Pandolf/Wojtowicz formulas.
  *

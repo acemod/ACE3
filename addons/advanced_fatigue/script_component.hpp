@@ -16,16 +16,18 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#define UNDERWEAR_WEIGHT 3.5
+
 #define ANTPERCENT 0.8
 #define SIM_BODYMASS 70
 #define JOULES_PER_ML_O2 20.9
 #define VO2MAX_STRENGTH 4.1
 #define BIOMECH_EFFICIENCY 0.23
-#define REE 18.83 //((0.5617 * SIM_BODYMASS + 42.57) * BIOMECH_EFFICIENCY)
+#define REE 18.83 // ((0.5617 * SIM_BODYMASS + 42.57) * BIOMECH_EFFICIENCY)
 
 #define RESPIRATORY_BUFFER 60
 
-#define MUSCLE_TEAR_RATE 0.004
+#define MUSCLE_TEAR_RATE 0.00004
 #define MUSCLE_RECOVERY 0.00000386
 
 #define AE1_ATP_RELEASE_RATE 13.3 // mmol

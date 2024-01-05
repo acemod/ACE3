@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut
- * Handles switching units (once on init and afterwards via Zeus).
+ * Author: BaerMitUmlaut, ulteq
+ * Handles switching units (once on init and afterwards via Zeus). Also handles CBA setting change for performance factor.
  *
  * Arguments:
  * 0: New Unit <OBJECT>
@@ -15,14 +15,17 @@
  *
  * Public: No
  */
+
 params ["_newUnit", "_oldUnit"];
+
 TRACE_2("unit changed",_newUnit,_oldUnit);
 
-if !(isNull _oldUnit) then {
+if (!isNull _oldUnit) then {
+    TRACE_1("remove old",_oldUnit getVariable QGVAR(animHandler));
+
     _oldUnit enableStamina true;
     _oldUnit removeEventHandler ["AnimChanged", _oldUnit getVariable [QGVAR(animHandler), -1]];
     _oldUnit setVariable [QGVAR(animHandler), nil];
-    TRACE_1("remove old",_oldUnit getVariable QGVAR(animHandler));
 
     _oldUnit setVariable [QGVAR(ae1Reserve), GVAR(ae1Reserve)];
     _oldUnit setVariable [QGVAR(ae2Reserve), GVAR(ae2Reserve)];
@@ -39,6 +42,7 @@ if (_newUnit getVariable [QGVAR(animHandler), -1] == -1) then {
     private _animHandler = _newUnit addEventHandler ["AnimChanged", {
         GVAR(animDuty) = _this call FUNC(getAnimDuty);
     }];
+
     TRACE_1("add new",_animHandler);
     _newUnit setVariable [QGVAR(animHandler), _animHandler];
 };
@@ -63,13 +67,12 @@ GVAR(ae1PathwayPower) = GVAR(peakPower) / (AE1_ATP_RELEASE_RATE + AE2_ATP_RELEAS
 GVAR(ae2PathwayPower) = GVAR(peakPower) / (AE1_ATP_RELEASE_RATE + AE2_ATP_RELEASE_RATE + AN_ATP_RELEASE_RATE) * AE2_ATP_RELEASE_RATE * ANTPERCENT ^ 1.28 * 1.362;
 GVAR(aePathwayPower)  = GVAR(ae1PathwayPower) + GVAR(ae2PathwayPower);
 GVAR(anPathwayPower)  = GVAR(peakPower) - GVAR(aePathwayPower);
-    
-GVAR(aeWattsPerATP)     = GVAR(ae1PathwayPower) / AE1_ATP_RELEASE_RATE;
-GVAR(anWattsPerATP)     = GVAR(anPathwayPower) / AN_ATP_RELEASE_RATE;
+
+GVAR(aeWattsPerATP)   = GVAR(ae1PathwayPower) / AE1_ATP_RELEASE_RATE;
+GVAR(anWattsPerATP)   = GVAR(anPathwayPower) / AN_ATP_RELEASE_RATE;
 
 GVAR(respiratoryBufferDivisor) = (RESPIRATORY_BUFFER - 1) / RESPIRATORY_BUFFER;
 GVAR(maxPowerFatigueRatio) = 0.057 / GVAR(peakPower);
-GVAR(lastSpeed) = 0;
 
 GVAR(ppeBlackoutLast) = 100;
 GVAR(lastBreath)      = 0;

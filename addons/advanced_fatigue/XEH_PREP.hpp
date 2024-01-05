@@ -1,7 +1,6 @@
 PREP(addDutyFactor);
 PREP(createStaminaBar);
 PREP(getAnimDuty);
-PREP(getMaximumSpeed);
 PREP(getMetabolicCosts);
 PREP(getWeaponInertia);
 PREP(handleEffects);
@@ -10,3 +9,4 @@ PREP(handleStaminaBar);
 PREP(mainLoop);
 PREP(moduleSettings);
 PREP(removeDutyFactor);
+PREP(renderDebugLines);
