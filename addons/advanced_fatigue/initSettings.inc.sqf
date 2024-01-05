@@ -6,7 +6,7 @@
     true,
     1,
     {
-        if (!_this && hasInterface) then {
+        if (!_this) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
             _staminaBarContainer ctrlSetFade 1;
             _staminaBarContainer ctrlCommit 0;
@@ -25,7 +25,7 @@
     true,
     1,
     {
-        if (!_this && hasInterface) then {
+        if (!_this) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
             _staminaBarContainer ctrlSetFade 1;
             _staminaBarContainer ctrlCommit 0;
@@ -41,7 +41,7 @@
     true,
     0,
     {
-        if (!_this && hasInterface && GVAR(enabled) && GVAR(enableStaminaBar)) then {
+        if (!_this && GVAR(enabled) && GVAR(enableStaminaBar)) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
             _staminaBarContainer ctrlSetFade 0;
             _staminaBarContainer ctrlCommit 0;
