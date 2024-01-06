@@ -10,11 +10,14 @@
  * Item should appear in this list? <BOOL>
  *
  * Example:
- * [CONFIG] call ACE_inventory_fnc_filterItems
+ * [CONFIG] call ace_inventory_fnc_filterItems
  *
  * Public: No
  */
 
 params ["_config"];
 
-!(getNumber (_config >> "ItemInfo" >> "type") in [TYPE_UNIFORM, TYPE_VESTS, TYPE_HEADGEAR]) && {!(_this call FUNC(filterBackpacks))}
+!(_this call FUNC(filterMedical)) &&
+{!(_this call FUNC(filterBackpacks))} &&
+{!(_this call FUNC(filterHeadgear))} &&
+{!(getNumber (_config >> "ItemInfo" >> "type") in [TYPE_UNIFORM, TYPE_VEST])}
