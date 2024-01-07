@@ -85,10 +85,10 @@ GVAR(outputPFH) = [{
     });
 
     // Output
-    __gridControl ctrlSetText str _dagrGrid;
+    __gridControl ctrlSetText _dagrGrid;
     __speedControl ctrlSetText str _bearing;
-    __elevationControl ctrlSetText str _dagrGrid2;
+    __elevationControl ctrlSetText _dagrGrid2;
     __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { str _dagrHeading } else { format ["%1°", _dagrHeading] });
-    __timeControl ctrlSetText str _dagrDistance;
+    __timeControl ctrlSetText _dagrDistance;
 
 }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;
