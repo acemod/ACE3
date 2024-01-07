@@ -4,7 +4,7 @@
 class RscInGameUI {
     class ACE_RscOptics_spike {
         idd = 141000;
-        controls[] = { reticle, manualText, GVAR(mapHelper) };
+        controls[] = { "reticle", "manualText", QGVAR(mapHelper) };
         onLoad = QUOTE(with uiNamespace do {ACE_RscOptics_spike = _this select 0;};);
 
         class GVAR(mapHelper): RscMapControl {
@@ -26,7 +26,7 @@ class RscInGameUI {
             colorBackground[] = {0,0,0,0};
             colorText[] = COLOR_WHITE;
             font = "LucidaConsoleB";
-            sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2.2);
+            sizeEx = QUOTE(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2.2);
             enabled = 1;         
             show = 1;
         };

@@ -20,7 +20,7 @@ class RscTitles {
             colorBackground[] = {0,0,0,0};
             colorText[] = COLOR_WHITE;
             font = "LucidaConsoleB";
-            sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2.2);
+            sizeEx = QUOTE(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2.2);
             enabled = 1;         
             show = 1;
         };

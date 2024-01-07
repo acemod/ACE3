@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 if (hasInterface) then { 
-    #include "initKeybinds.sqf"
+    #include "initKeybinds.inc.sqf"
 
     // add camera interactions
     private _switchToCameraAction = ["SwitchToCamera", "Switch To Missile Camera", "", {
