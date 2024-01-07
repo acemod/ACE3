@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Freddo
+ * Author: Freddo, Daniël H.
  * When the confirm button is pressed.
  *
  * Arguments:
@@ -17,12 +17,33 @@
 params ["_buttonOk"];
 
 private _display = ctrlParent _buttonOk;
-private _description = _display displayctrl IDC_INSERT_MARKER;
+private _description = _display displayCtrl IDC_INSERT_MARKER;
 private _aceTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
 
 // handle timestamp
 if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
-    private _time = daytime;
+    // determine marker timestamp based on time settings
+    private _time = switch (GVAR(timestampTimezone)) do {
+        case 1: {
+            systemTime params ["", "", "", "_hour", "_min", "_sec"];
+            _hour + _min/60 + _sec/3600
+        };
+        case 2: {
+            systemTimeUTC params ["", "", "", "_hour", "_min", "_sec"];
+            _hourOffset = round (GVAR(timestampUTCOffset));
+            _hour = _hour + _hourOffset;
+
+            // add or subtract minutes offset based on the negative or positive timezone
+            _min = if (_hourOffset < 0) then { _min - GVAR(timestampUTCMinutesOffset) } else { _min + GVAR(timestampUTCMinutesOffset) };
+
+            // prevent the timestamp from exceeding 24 hours or going below 0 hours
+            _time = ((_hour + _min/60 + _sec/3600) % 24 + 24) % 24;
+            _time
+        };
+        default {
+            dayTime
+        };
+    };
 
     // add timestamp suffix
     private _periodPostfix = "";

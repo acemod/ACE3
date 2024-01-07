@@ -33,6 +33,37 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(timestampTimezone), "LIST",
+    [LSTRING(TimestampTimezone), LSTRING(TimestampTimezoneDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    [
+        [0, 1, 2],
+        [LSTRING(TimestampTimezoneIngameTime), LSTRING(TimestampTimezoneSystemTime), LSTRING(TimestampTimezoneUTCTime)],
+        0
+    ],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(timestampUTCOffset), "SLIDER",
+    [LSTRING(TimestampUTCOffset), LSTRING(TimestampUTCOffsetDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    [-12, 14, 0, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(TimestampUTCMinutesOffset), "LIST",
+    [LSTRING(TimestampUTCMinutesOffset), LSTRING(TimestampUTCMinutesOffsetDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    [
+        [0, 15, 30, 45],
+        [0, 15, 30, 45],
+        0
+    ]
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(timestampHourFormat), "LIST",
     [LSTRING(TimestampHourFormat), LSTRING(TimestampHourFormatDescription)],
     [_categoryName, LLSTRING(Module_DisplayName)],
