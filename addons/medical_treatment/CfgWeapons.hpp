@@ -8,12 +8,14 @@ class CfgWeapons {
 
     class FirstAidKit: ItemCore {
         type = 0;
+        ACE_isMedicalItem = 1;
         class ItemInfo: InventoryFirstAidKitItem_Base_F {
             mass = 4;
         };
     };
     class Medikit: ItemCore {
         type = 0;
+        ACE_isMedicalItem = 1;
         class ItemInfo: MedikitItem {
             mass = 60;
         };
@@ -27,8 +29,9 @@ class CfgWeapons {
         displayName = CSTRING(Bandage_Basic_Display);
         descriptionShort = CSTRING(Bandage_Basic_Desc_Short);
         descriptionUse = CSTRING(Bandage_Basic_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_packingBandage: ACE_ItemCore {
@@ -39,8 +42,9 @@ class CfgWeapons {
         model = QPATHTOF(data\packingbandage.p3d);
         descriptionShort = CSTRING(Packing_Bandage_Desc_Short);
         descriptionUse = CSTRING(Packing_Bandage_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_elasticBandage: ACE_ItemCore {
@@ -51,8 +55,9 @@ class CfgWeapons {
         model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
         descriptionShort = CSTRING(Bandage_Elastic_Desc_Short);
         descriptionUse = CSTRING(Bandage_Elastic_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_tourniquet: ACE_ItemCore {
@@ -63,6 +68,7 @@ class CfgWeapons {
         model = QPATHTOF(data\tourniquet.p3d);
         descriptionShort = CSTRING(Tourniquet_Desc_Short);
         descriptionUse = CSTRING(Tourniquet_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
@@ -74,6 +80,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\splint_ca.paa);
         model = QPATHTOF(data\splint.p3d);
         descriptionShort = CSTRING(splint_Desc_Short);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };
@@ -86,6 +93,7 @@ class CfgWeapons {
         model = QPATHTOF(data\morphine.p3d);
         descriptionShort = CSTRING(Morphine_Desc_Short);
         descriptionUse = CSTRING(Morphine_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
@@ -98,6 +106,7 @@ class CfgWeapons {
         model = QPATHTOF(data\adenosine.p3d);
         descriptionShort = CSTRING(adenosine_Desc_Short);
         descriptionUse = CSTRING(adenosine_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
@@ -110,6 +119,7 @@ class CfgWeapons {
         model = QPATHTOF(data\atropine.p3d);
         descriptionShort = CSTRING(Atropine_Desc_Short);
         descriptionUse = CSTRING(Atropine_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
@@ -122,6 +132,7 @@ class CfgWeapons {
         model = QPATHTOF(data\epinephrine.p3d);
         descriptionShort = CSTRING(Epinephrine_Desc_Short);
         descriptionUse = CSTRING(Epinephrine_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
@@ -137,6 +148,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\plasmaIV_ca.paa);
         descriptionShort = CSTRING(Plasma_IV_Desc_Short);
         descriptionUse = CSTRING(Plasma_IV_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
@@ -167,6 +179,7 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {QPATHTOF(data\IVBag_blood_1000ml_ca.paa)};
         descriptionShort = CSTRING(Blood_IV_Desc_Short);
         descriptionUse = CSTRING(Blood_IV_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
@@ -197,6 +210,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\salineIV_ca.paa);
         descriptionShort = CSTRING(Saline_IV_Desc_Short);
         descriptionUse = CSTRING(Saline_IV_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
@@ -225,8 +239,9 @@ class CfgWeapons {
         picture = QPATHTOF(ui\quickclot_ca.paa);
         descriptionShort = CSTRING(QuikClot_Desc_Short);
         descriptionUse = CSTRING(QuikClot_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_personalAidKit: ACE_ItemCore {
@@ -236,6 +251,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\personal_aid_kit_ca.paa);
         descriptionShort = CSTRING(Aid_Kit_Desc_Short);
         descriptionUse = CSTRING(Aid_Kit_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
@@ -248,20 +264,50 @@ class CfgWeapons {
         picture = QPATHTOF(ui\surgicalKit_ca.paa);
         descriptionShort = CSTRING(SurgicalKit_Desc_Short);
         descriptionUse = CSTRING(SurgicalKit_Desc_Use);
+        ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
+        };
+    };
+    class ACE_suture: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(Suture_Display);
+        model = QPATHTOF(data\suture.p3d);
+        picture = QPATHTOF(ui\suture_ca.paa);
+        descriptionShort = CSTRING(Suture_Desc_Short);
+        descriptionUse = CSTRING(Suture_Desc_Use);
+        ACE_isMedicalItem = 1;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 0.1;
         };
     };
     class ACE_bodyBag: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);
-        displayName= CSTRING(Bodybag_Display);
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0";
         model = QPATHTOF(data\bodybagItem.p3d);
         picture = QPATHTOF(ui\bodybag_ca.paa);
         descriptionShort = CSTRING(Bodybag_Desc_Short);
         descriptionUse = CSTRING(Bodybag_Desc_Use);
+        ACE_isMedicalItem = 1;
+        GVAR(bodyBagObject) = "ACE_bodyBagObject";
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 7;
         };
+    };
+    class ACE_bodyBag_blue: ACE_bodyBag {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_blue_f0";
+        picture = QPATHTOF(ui\bodybag_blue_ca.paa);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_blue_co.paa)};
+        GVAR(bodyBagObject) = "ACE_bodyBagObject_blue";
+    };
+    class ACE_bodyBag_white: ACE_bodyBag {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_white_f0";
+        picture = QPATHTOF(ui\bodybag_white_ca.paa);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_white_co.paa)};
+        GVAR(bodyBagObject) = "ACE_bodyBagObject_white";
     };
 };

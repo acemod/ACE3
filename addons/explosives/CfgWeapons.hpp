@@ -26,6 +26,7 @@ class CfgWeapons {
         GVAR(Range) = 250;
         GVAR(Detonator) = 1;
         GVAR(triggerType) = "Command";
+        ACE_isTool = 1;
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 3;
@@ -46,6 +47,8 @@ class CfgWeapons {
         descriptionShort = CSTRING(DefusalKit_description);
         picture = QPATHTOF(Data\UI\Pliers.paa);
         model = "\A3\Structures_F\Items\Tools\Pliers_F.p3d";
+        ACE_isTool = 1;
+        GVAR(defusalKit) = 1;
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 5;
@@ -62,6 +65,7 @@ class CfgWeapons {
         GVAR(Range) = 100;
         GVAR(Detonator) = 1;
         GVAR(triggerType) = "DeadManSwitch";
+        ACE_isTool = 1;
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 2;
@@ -78,6 +82,7 @@ class CfgWeapons {
         GVAR(Range) = 15000;
         GVAR(Detonator) = 1;
         GVAR(triggerType) = "Cellphone";
+        ACE_isTool = 1;
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 2;

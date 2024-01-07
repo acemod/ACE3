@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Taosenai
  * Adapted By: KoffeinFlummi, commy2

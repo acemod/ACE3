@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Adds a custom filter list to the inventory display.
@@ -12,11 +12,13 @@
  * None
  *
  * Example:
- * ["displayname", "filter"] call ACE_inventory_fnc_addCustomFilter
+ * ["displayname", "filter"] call ace_inventory_fnc_addCustomFilter
  *
  * Public: No
  */
 
-params [["_filterName", "ERROR: No Name", [""]], ["_fncName", "", [""]]];
+params [["_filterName", "", [""]], ["_fncName", "", [""]]];
+
+if (_filterName == "") exitWith {};
 
 GVAR(customFilters) pushBack [_filterName, _fncName];

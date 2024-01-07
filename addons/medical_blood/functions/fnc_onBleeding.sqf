@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Handles periodically creating blood for a bleeding unit.
@@ -35,5 +35,5 @@ if (CBA_missionTime > (_unit getVariable [QGVAR(nextTime), -10])) then {
     _position set [2, 0];
 
     private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss min 3);
-    [_bloodDrop, _position] call FUNC(createBlood);
+    [_bloodDrop, _position, _unit] call FUNC(createBlood);
 };

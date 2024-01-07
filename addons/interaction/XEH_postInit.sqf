@@ -161,3 +161,21 @@ GVAR(isOpeningDoor) = false;
         [QGVAR(clearWeaponAttachmentsActionsCache)] call CBA_fnc_localEvent;
     }] call CBA_fnc_addPlayerEventHandler;
 } forEach ["loadout", "weapon"];
+
+
+// add "Take _weapon_" action to dropped weapons
+private _action = [
+    // action display name will be overwritten in modifier function
+    QGVAR(takeWeapon), "take", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa",
+    {_player action ["TakeWeapon", _target, weaponCargo _target select 0]},
+    {count weaponCargo _target == 1},
+    nil, nil, nil, nil, nil,
+    {
+        params ["_target", "", "", "_actionData"];
+        _actionData set [1, format [localize "STR_ACTION_TAKE_BAG", getText (configfile >> "CfgWeapons" >> weaponCargo _target select 0 >> "displayName")]];
+    }
+] call EFUNC(interact_menu,createAction);
+
+{
+    [_x, 0, ["ACE_MainActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
+} forEach ["WeaponHolder", "WeaponHolderSimulated"];

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * PFEH to handle refreshing effects.
@@ -25,8 +25,8 @@ if (currentVisionMode _unit != 1) exitWith {
     GVAR(PFID) = -1;
     (missionNamespace getVariable [QGVAR(firedEHs), []]) params [["_firedPlayerID", -1], ["_firedPlayerVehicleID", -1]];
     TRACE_2("removing fired EHs",_firedPlayerID,_firedPlayerVehicleID);
-    ["ace_firedPlayer", _firedPlayerID] call CBA_fnc_removeEventHandler,
-    ["ace_firedPlayerVehicle", _firedPlayerVehicleID] call CBA_fnc_removeEventHandler,
+    ["ace_firedPlayer", _firedPlayerID] call CBA_fnc_removeEventHandler;
+    ["ace_firedPlayerVehicle", _firedPlayerVehicleID] call CBA_fnc_removeEventHandler;
 };
 if (EGVAR(common,OldIsCamera)) exitWith {
     if (GVAR(running)) then {
@@ -140,7 +140,7 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // ColorCorrections - Changes brightness, contrast and "green" color of nvg
     // Params: [brightness(0..2), contrast(0..inf), offset(-x..+x), blendArray, colorizeArray, weightArray]
     GVAR(ppeffectColorCorrect) = ppEffectCreate ["ColorCorrections", 2003];
-    GVAR(ppeffectColorCorrect) ppEffectAdjust [_brightFinal, _contrastFinal, 0, [0.0, 0.0, 0.0, 0.0], [1.3, 1.2, 0.0, 0.9], [6, 1, 1, 0.0]];
+    GVAR(ppeffectColorCorrect) ppEffectAdjust [_brightFinal, _contrastFinal, GVAR(nvgOffset), GVAR(nvgBlend), GVAR(nvgColorize), GVAR(nvgWeight)];
     GVAR(ppeffectColorCorrect) ppEffectCommit 0;
     GVAR(ppeffectColorCorrect) ppEffectForceInNVG true;
     GVAR(ppeffectColorCorrect) ppEffectEnable true;

@@ -4,13 +4,13 @@
         <Key ID="STR_ACE_NLAW_trackTarget">
             <English>NLAW Track Target (Hold)</English>
             <German>NLAW Zielverfolgung</German>
-            <Italian>NLAW Traccia Bersaglio (Mantieni)</Italian>
-            <Japanese>NALW 目標の追跡 (押しっぱ)</Japanese>
+            <Italian>NLAW Traccia Bersaglio (Tieni Premuto)</Italian>
+            <Japanese>NLAW 目標追跡 (ホールド)</Japanese>
             <Chinesesimp>NLAW 追踪目标（按住）</Chinesesimp>
             <Chinese>次世代輕型反坦克導彈發射器追蹤目標 (按住)</Chinese>
             <Polish>Śledzenie Celu NLAW (Przytrzymaj)</Polish>
             <Korean>NLAW 목표 추적 (누름유지)</Korean>
-            <Russian>NLAW наведение на цель (Удерживать)</Russian>
+            <Russian>NLAW наведение на цель (удерживать)</Russian>
             <Portuguese>NLAW Rastrear Alvo (Segurar)</Portuguese>
             <French>NLAW suivre la cible (maintenir)</French>
             <Czech>NLAW sledování cíle (držet)</Czech>

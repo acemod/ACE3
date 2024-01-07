@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Process hit by projectile against vehicle and apply appropiate damage to part.
  *
  * Arguments:
@@ -119,28 +119,6 @@ if (_isCar) then {
     _ammoEffectiveness = (_ammoEffectiveness + (_ammoEffectiveness * 0.5)) min 1;
 };
 
-private _injuryChance = 0;
-private _injuryCount = 0;
-switch (_warheadType) do {
-    case WARHEAD_TYPE_AP: {
-        _injuryChance = (_ammoEffectiveness * 2) min 1;
-        _injuryCount = 1 + (_ammoEffectiveness * round random 9);
-    };
-    case WARHEAD_TYPE_HE: {
-        _injuryChance = 0.03 * (1 + _ammoEffectiveness); // spalling injury chance alongside direct hit potential
-        _injuryCount = 2 + (ceil random 3);
-        if (_isCar) then {
-            _injuryChance = 0.8;
-            _injuryCount = 3 max random count crew _vehicle;
-        };
-    };
-    default {
-        _injuryChance = (4 * _ammoEffectiveness) min 1;
-        _injuryCount = 2 + round random 3;
-    };
-};
-_injuryChance = _injuryChance * _penChance;
-
 private _currentVehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
 private _chanceOfDetonation = 0;
 private _explosiveAmmoCount = 0;
@@ -200,8 +178,6 @@ switch (_hitArea) do {
             [_vehicle, _hitIndex, _hitpointName, _nextPartDamage * _penChance] call FUNC(addDamage);
         };
 
-        // slightly lower injury chance since this hit the engine block
-        [_vehicle, _injuryChance, _injuryCount, _injurer, [0.2, 0.2, 0.2, 0.4]] call FUNC(injureOccupants);
         [_vehicle, _chanceOfFire, _cookoffIntensity, _injurer, _hitArea, false] call FUNC(handleCookoff);
     };
     case "hull": {
@@ -219,8 +195,6 @@ switch (_hitArea) do {
             [_vehicle, _hitIndex, _hitpointName, 0.89 * _penChance] call FUNC(addDamage);
             [_vehicle] call FUNC(knockOut);
         };
-
-        [_vehicle, _injuryChance, _injuryCount, _injurer, [1, 0.4, 0.4, 1]] call FUNC(injureOccupants);
 
         private _hash = _vehicle getVariable [QGVAR(hitpointHash), []];
         private _hashKeys = [_hash] call CBA_fnc_hashKeys;
@@ -301,7 +275,6 @@ switch (_hitArea) do {
             _vehicle setVariable [QGVAR(canShoot), false];
         };
 
-        [_vehicle, _injuryChance, _injuryCount, _injurer, [0.5, 1.5, 1.5, 0.8]] call FUNC(injureOccupants);
         [_vehicle, _chanceOfFire, _cookoffIntensity, _injurer, "", true] call FUNC(handleCookoff);
     };
     case "gun": {

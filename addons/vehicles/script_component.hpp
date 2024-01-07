@@ -21,4 +21,5 @@
 #define MOUSE_SCROLL_UP 0xF8
 #define MOUSE_SCROLL_DOWN 0xF9
 
-#define FUEL_FACTOR 0.165    // fuel capacity = range in km * FUEL_FACTOR
+// fuel capacity = range in km * FUEL_FACTOR
+#define FUEL_FACTOR 0.165

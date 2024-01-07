@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Displays the altimeter on screen.
@@ -32,12 +32,12 @@ private _TimeText = _display displayCtrl 1001;
     _args params ["_unit", "_oldHeight", "_prevTime", "_HeightText", "_DecendRate", "_TimeText"];
 
     if !(GVAR(AltimeterActive)) exitWith {
-        _pfhID call CBA_fnc_removePerFrameEventHandler;
+        _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
     if !("ACE_Altimeter" in assignedItems _unit) exitWith {
         call FUNC(hideAltimeter);
-        _pfhID call CBA_fnc_removePerFrameEventHandler;
+        _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
     private _hour = floor daytime;

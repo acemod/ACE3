@@ -1,35 +1,36 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Alganthe
- * Add a stat to ACE Arsenal.
+ * Author: Alganthe, johnb43, LinkIsGrim
+ * Adds a stat to ACE Arsenal.
  *
  * Arguments:
- * 0: Tabs to add the stat to (ARRAY of ARRAYS)
-   * 0.1 Left tab indexes (ARRAY of NUMBERS)
-   * 0.2 Right tab indexes (ARRAY of NUMBERS)
- * 1: Stat class (STRING) (A unique string for each stat)
- * 2: Config entries to pass (ARRAY of STRINGS)
- * 3: Title (STRING)
- * 4: Show bar / show text bools (ARRAY of BOOLS)
-   * 4.1 Show bar (BOOL)
-   * 4.2 Show text (BOOL)
- * 5: Array of statements (ARRAY of ARRAYS)
-   * 5.1 Bar code (CODE)
-   * 5.2 Text code (CODE)
-   * 5.3 Condition code (CODE)
- * 6: Priority (NUMBER) (Optional)
+ * 0: Tabs to add the stat to <ARRAY of ARRAYS>
+ * - 0: Left tab indexes <ARRAY of NUMBERS>
+ * - 1: Right tab indexes <ARRAY of NUMBERS>
+ * 1: Stat class (unique string for each stat) <STRING>
+ * 2: Config entries to pass <ARRAY of STRINGS>
+ * 3: Title <STRING>
+ * 4: Show bar / show text bools <ARRAY of BOOLS>
+ * - 0: Show bar <BOOL> (default: false)
+ * - 1: Show text <BOOL> (default: false)
+ * 5: Array of statements <ARRAY of CODE>
+ * - 0: Bar code <CODE> (default: {})
+ * - 1: Text code <CODE> (default: {})
+ * - 2: Condition code <CODE> (default: {true})
+ * 6: Priority <NUMBER> (default: 0)
  *
  * Return Value:
- * 0: Array of IDs (ARRAY of STRINGS)
+ * 0: Array of IDs <ARRAY of STRINGS>
  *
  * Example:
- * [[[0,1,2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {
-        params ["_statsArray", "_itemCfg"];
-        getNumber (_itemCfg >> _statsArray select 0)
-    }, {true}]] call ACE_arsenal_fnc_addStat
+ * [[[0, 1, 2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {
+ *     params ["_statsArray", "_itemCfg"];
+ *     getNumber (_itemCfg >> _statsArray select 0)
+ * }, {true}]] call ace_arsenal_fnc_addStat
  *
  * Public: Yes
-*/
+ */
+
 params [
     ["_tabs", [[], []], [[]], 2],
     ["_class", "", [""]],
@@ -45,7 +46,10 @@ _tabs params [
     ["_rightTabs", [], [[]]]
 ];
 
-_bools params [["_showBar", false, [false]], ["_showText", false, [false]]];
+_bools params [
+    ["_showBar", false, [false]],
+    ["_showText", false, [false]]
+];
 
 _statements params [
     ["_barStatement", {}, [{}]],
@@ -53,47 +57,68 @@ _statements params [
     ["_condition", {true}, [{}]]
 ];
 
+// Compile stats from config (in case this is called before preInit)
 call FUNC(compileStats);
 
-private _returnArray = [];
+private _return = [];
+private _changes = [];
 
 private _fnc_addToTabs = {
-    params ["_tabsList", "_tabsToAddTo", "_sideString", "_returnIndex"];
+    params ["_tabsList", "_tabsToAddTo", "_tabSide"];
+
+    private _statName = "";
+    private _currentTab = [];
+    private _stat = [];
+
     {
-        private _currentTab = _tabsList select _x;
+        // Make stat name
+        _statName = [_class, _tabSide, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "";
+        _currentTab = _tabsList select _x;
 
-        private _finalID = [_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "";
-
-        if ({{_x select 0  == _finalID} count _x > 0} count _currentTab > 0) then {
-            TRACE_1("A stat with this ID already exists", _finalID);
+        // Find if there is an entry with same ID
+        if (_currentTab findIf {_x select 5 == _statName} != -1) then {
+            TRACE_1("A stat with this ID already exists", _statName);
         } else {
+            _stat = +_finalArray;
+            _stat set [5, _statName];
 
-            private _arrayToSave = +_finalArray;
-            _arrayToSave set [0, _finalID];
-            _returnArray pushBack _finalID;
+            _currentTab pushBack _stat;
 
-            // Add to existing page if there's enough space, otherwise create a new page
-            if ({count _x < 5} count _currentTab > 0) then {
-                {
-                    if (count _x < 5) exitWith {
-                        (_currentTab select _forEachIndex) append [_arrayToSave];
-                    };
-                } foreach _currentTab;
-            } else {
-                _currentTab pushBack [_arrayToSave];
-            };
+            _return pushBack _statName;
+
+            // Store information, so that only tabs that were changed can be sorted again
+            _changes pushBackUnique [_x, _tabSide];
         };
-    } foreach _tabsToAddTo;
+    } forEach _tabsToAddTo;
 };
 
-private _finalArray = ["", _stats, _title, [_showBar, _showText], [_barStatement, _textStatement, _condition], _priority];
+private _finalArray = [_priority, _stats, _title, [_showBar, _showText], [_barStatement, _textStatement, _condition], ""];
 
-if (count _leftTabs > 0) then {
-    [GVAR(statsListLeftPanel), _leftTabs, "L", 0] call _fnc_addToTabs;
+if (_leftTabs isNotEqualTo []) then {
+    [GVAR(statsListLeftPanel), _leftTabs, "L"] call _fnc_addToTabs;
 };
 
-if (count _rightTabs > 0) then {
-    [GVAR(statsListRightPanel), _rightTabs, "R", 1] call _fnc_addToTabs;
+if (_rightTabs isNotEqualTo []) then {
+    [GVAR(statsListRightPanel), _rightTabs, "R"] call _fnc_addToTabs;
 };
 
-_returnArray
+private _stats = [];
+private _tabToChange = [];
+
+// Ensure priority is kept
+{
+    _x params ["_tab", "_tabSide"];
+
+    _tabToChange = if (_tabSide == "R") then {
+        GVAR(statsListRightPanel)
+    } else {
+        GVAR(statsListLeftPanel)
+    };
+
+    _stats = _tabToChange select _tab;
+
+    // Sort by priority
+    _stats sort false;
+} forEach _changes;
+
+_return

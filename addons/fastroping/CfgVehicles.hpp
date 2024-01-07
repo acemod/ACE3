@@ -83,8 +83,8 @@ class CfgVehicles {
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
-                condition = [_player, _target] call FUNC(canFastRope);
-                statement = [_player, _target] call FUNC(fastRope);
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canFastRope));
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(fastRope));
             };
         };
     };
@@ -177,6 +177,7 @@ class CfgVehicles {
         author = "KoffeinFlummi";
         scope = 1;
         model = QPATHTOF(data\helper.p3d);
+        destrType = "DestructNo";
         class ACE_Actions {};
         class Turrets {};
         class TransportItems {};

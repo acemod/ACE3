@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Determines night vision source (player/vehicle) - Updates UI based on type.
@@ -26,7 +26,10 @@ private _hideHex = true;
 private _nvgGen = 3;
 private _blurRadius = -1;
 
-if (alive ACE_player) then {
+// Adds Array of Params / Original ACE3's (ST's) by default. (NVG_GREEN_PRESET)
+private _preset = getArray (configFile >> "CfgWeapons" >> "NVGoggles" >> QGVAR(colorPreset));
+
+if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
     if (((vehicle ACE_player) == ACE_player) || {
         // Test if we are using player's nvg or if sourced from vehicle:
 
@@ -36,31 +39,16 @@ if (alive ACE_player) then {
         if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
         if ([ACE_player] call CBA_fnc_canUseWeapon) exitWith {true}; // FFV
 
-        if (ACE_player == (driver _currentVehicle)) exitWith {
-            !("NVG" in getArray (_vehConfig >> "ViewOptics" >> "visionMode"));
-        };
-        private _result = true;
-        private _turret = ACE_player call CBA_fnc_turretPath;
-        private _turretConfig = [_currentVehicle, _turret] call CBA_fnc_getTurret;
-
-        // Seems to cover things like the offroad technical
-        if ((isNumber (_turretConfig >> "optics")) && {(getNumber (_turretConfig >> "optics")) == 0}) exitWith {true};
-
-        private _turretConfigOpticsIn = _turretConfig >> "OpticsIn";
-        if (isClass _turretConfigOpticsIn) then {
-            for "_index" from 0 to (count _turretConfigOpticsIn - 1) do {
-                if ("NVG" in getArray (_turretConfigOpticsIn select _index >> "visionMode")) exitWith {_result = false};
-            };
-        } else {
-            // No OpticsIn usualy means RCWS, still need to test on more vehicles
-            _result = false;
-        };
-        _result
+        private _turret = _currentVehicle unitTurret ACE_player; // driver is [-1]
+        if (_turret isEqualTo []) exitWith { true };
+        (_currentVehicle currentVisionMode _turret) params ["_turretVisionMode"];
+        _turretVisionMode != 1 // if turret isn't giving nvg, then it must be unit's googles
     }) then {
         if ((cameraView == "GUNNER") && {currentWeapon ACE_player != ""} && {binocular ACE_player == currentWeapon ACE_player}) exitWith {
             TRACE_1("souce: binocular",binocular ACE_player); // Source is from player's binocular (Rangefinder/Vector21bNite)
             private _config = configFile >> "CfgWeapons" >> (binocular ACE_player);
             if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
+            if (isArray (_config >> QGVAR(colorPreset))) then {_preset = getArray (_config >> QGVAR(colorPreset));};
         };
 
         TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope, but no good way to detect that)
@@ -75,7 +63,7 @@ if (alive ACE_player) then {
             if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
         };
         if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
-
+        if (isArray (_config >> QGVAR(colorPreset))) then {_preset = getArray (_config >> QGVAR(colorPreset));};
     } else {
         TRACE_1("source: vehicle - defaults",typeOf vehicle ACE_player);
     };
@@ -86,8 +74,17 @@ systemChat format ["NVG Refresh - Border: %1", _borderImage];
 systemChat format ["EyeCups: %1, HideHex %2, NVGen: %3, BluRadius: %4", _eyeCups, _hideHex, _nvgGen, _blurRadius];
 #endif
 
+// Selection cancelled, params added
+_preset params ["_offset", "_blend", "_colorize", "_weight"];
+
 GVAR(nvgBlurRadius) = _blurRadius;
 GVAR(nvgGeneration) = _nvgGen;
+
+// Additional Global variables for Params transfer & supporting
+GVAR(nvgOffset) = _offset;
+GVAR(nvgBlend) = _blend;
+GVAR(nvgColorize) = _colorize;
+GVAR(nvgWeight) = _weight;
 
 // Setup border and hex image based on NVG config:
 private _scale = (call EFUNC(common,getZoom)) * 1.12513;

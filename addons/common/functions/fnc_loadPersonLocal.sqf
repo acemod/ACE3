@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Load a person, local
@@ -38,6 +38,10 @@ if ((_vehicle emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUncons
     };
     if (!_slotsOpen) then {
         private _cargoSeats = fullCrew [_vehicle, "cargo", true];
+        // FFV cargo seats are empty cargo positions but are not returned by fullCrew "cargo"
+        if (_cargoSeats isEqualTo []) then {
+            _cargoSeats = (fullCrew [_vehicle, "turret", true]) select {_x select 4};
+        };
         if (_reverseFill) then {
             reverse _cargoSeats;
         };

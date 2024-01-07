@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Handles "compatibility" (i.e. override) for BI spectator respawn types 1, 4 & 5
  *
  * Called from the RscDisplayEGSpectator XEH
