@@ -1,4 +1,4 @@
-// by esteldunedain
+// by esteldunedain, LorenLuke
 
 #include "script_component.hpp"
 
@@ -9,11 +9,21 @@ GVAR(mapGpsShow) = true;
 GVAR(mapGpsNextUpdate) = -1;
 
 GVAR(mapTool_Shown) = 0;
-GVAR(mapTool_pos) = [0,0];
+GVAR(mapTool_pos) = [0, 0];
 GVAR(mapTool_angle) = 0;
 GVAR(mapTool_isDragging) = false;
 GVAR(mapTool_isRotating) = false;
 GVAR(mapTool_moveToMouse) = true;  // used to display it in center of screen when opened
+
+GVAR(plottingBoard_Shown) = 0;
+GVAR(plottingBoard_pos) = [0, 0];
+GVAR(plottingBoard_angle) = 0;
+GVAR(plottingBoard_acrylicAngle) = 0;
+GVAR(plottingBoard_rulerAngle) = 0;
+GVAR(plottingBoard_isDragging) = false;
+GVAR(plottingBoard_isRotating) = -1;
+GVAR(plottingBoard_moveToMouse) = true;  // used to display it in center of screen when opened
+GVAR(plottingBoard_markers) = createHashMap;
 
 //Install the event handers for the map tools on the main in-game map
 [{!isNull findDisplay 12},
@@ -32,7 +42,13 @@ GVAR(mapTool_moveToMouse) = true;  // used to display it in center of screen whe
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
+addMissionEventHandler ["MarkerCreated", {
+    [_this, false] call FUNC(handlePlottingBoardMarkers);
+}];
+
+addMissionEventHandler ["MarkerDeleted", {
+    [[_this select 0, -1, objNull, _this select 1], true] call FUNC(handlePlottingBoardMarkers);
+}];
 
 GVAR(freeDrawingData) = [];
 GVAR(freedrawing) = false;
-

@@ -2,52 +2,53 @@
 
 #include "XEH_PREP.hpp"
 
-//item cache, see XEH_postInit.sqf
+// Cache config
+// Items in the inventory display can all use lb data to get their classname (exception: backpacks, handled separately)
 private _allItems = ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgWeapons"));
 _allItems append ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgGlasses"));
-_allItems append ("getNumber (_x >> 'scope') == 2" configClasses (configFile >> "CfgMagazines"));
-_allItems append ("getNumber (_x >> 'scope') > 0 && {getNumber (_x >> 'isBackpack') == 1}" configClasses (configFile >> "CfgVehicles"));
+_allItems append ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMagazines"));
 
-uiNamespace setVariable [QGVAR(ItemKeyCache), _allItems apply {
+uiNamespace setVariable [QGVAR(itemKeyCache), compileFinal ((_allItems apply {configName _x}) createHashMapFromArray _allItems)];
+
+// Backpacks in the inventory display can only be distinguished by their lb names and pictures, lb data returns ""
+_allItems = "getNumber (_x >> 'scope') > 0 && {getNumber (_x >> 'isBackpack') == 1}" configClasses (configFile >> "CfgVehicles");
+
+uiNamespace setVariable [QGVAR(backpackKeyCache), compileFinal createHashMapFromArray (_allItems apply {
     private _displayName = getText (_x >> "displayName");
     private _picture = getText (_x >> "picture");
 
-    // list box seems to delete the leading backslash
-    if (_picture select [0,1] == "\") then {
+    // List box seems to delete the leading backslash
+    if (_picture select [0, 1] == "\") then {
         _picture = _picture select [1];
     };
+    if (count _picture > 0 && !(_picture regexMatch ".*?\.paa")) then { // handle missing file extension
+        if (!fileExists (_picture + ".paa")) exitWith {};
+        _picture = _picture + ".paa";
+    };
 
-    [format ["%1:%2", _displayName, _picture], _x];
-}];
+    // Handle missing file extension, as inventory returns path with extension
+    if (count _picture > 0 && !(_picture regexMatch ".*?\.paa")) then {
+        if (!fileExists (_picture + ".paa")) exitWith {};
+        _picture = _picture + ".paa";
+    };
 
-// generate list of grenades
-private _grenades_ItemList = [];
+    // Listboxes store pictures as lowercase
+    [format ["%1:%2", _displayName, toLower _picture], _x]
+})];
+
+// Generate list of grenades
+private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";
+private _grenadeList = createHashMap;
 
 {
-    _grenades_ItemList append getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines");
-} forEach getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+    _grenadeList insert [true, (getArray (_cfgThrow >> _x >> "magazines")) apply {_x call EFUNC(common,getConfigName)}, []];
+} forEach getArray (_cfgThrow >> "muzzles");
 
-// make list case insensitive
-_grenades_ItemList = _grenades_ItemList apply {toLower _x};
+uiNamespace setVariable [QGVAR(grenadesItemList), compileFinal _grenadeList];
 
-// filter duplicates
-_grenades_ItemList = _grenades_ItemList arrayIntersect _grenades_ItemList;
+// Generate list of medical items
+private _medicalList = QUOTE(getNumber (_x >> 'scope') > 0 && {getNumber (_x >> 'ItemInfo' >> 'type') in [ARR_2(TYPE_FIRST_AID_KIT,TYPE_MEDIKIT)]}) configClasses (configFile >> "CfgWeapons");
 
-uiNamespace setVariable [QGVAR(Grenades_ItemList), _grenades_ItemList];
+_medicalList = _medicalList apply {configName _x};
 
-// generate list of medical items
-private _medical_ItemList = ["FirstAidKit", "Medikit"];
-{
-    _medical_ItemList append getArray (_x >> "items");
-} forEach ("true" configClasses (configFile >> QEGVAR(medical_treatment,Actions)));
-
-// remove all numbers from list
-_medical_ItemList = _medical_ItemList select {_x isEqualType ""};
-
-// make list case insensitive
-_medical_ItemList = _medical_ItemList apply {toLower _x};
-
-// filter duplicates
-_medical_ItemList = _medical_ItemList arrayIntersect _medical_ItemList;
-
-uiNamespace setVariable [QGVAR(Medical_ItemList), _medical_ItemList];
+uiNamespace setVariable [QGVAR(medicalItemList), compileFinal (_medicalList createHashMapFromArray [])];
