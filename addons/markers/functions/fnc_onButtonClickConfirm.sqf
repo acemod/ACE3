@@ -24,7 +24,7 @@ private _aceTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
 // Handle timestamp
 if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
     // Determine marker timestamp based on time settings
-    (switch (GVAR(timestampTimezone)) do {
+    private _time = switch (GVAR(timestampTimezone)) do {
         case 1: {
             systemTime select [3]
         };
@@ -55,7 +55,9 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
 
             [_hour, _min, _sec, _msec]
         };
-    }) params ["_hour", "_min", "_sec", "_msec"];
+    };
+
+    _time params ["_hour", "_min", "_sec", "_msec"];
 
     // Add timestamp suffix
     private _periodPostfix = "";
@@ -94,7 +96,7 @@ if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
         };
     };
 
-    private _time = format [
+    _time = format [
         _format,
         [_hour, 2] call CBA_fnc_formatNumber,
         [_min, 2] call CBA_fnc_formatNumber,
