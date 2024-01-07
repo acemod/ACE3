@@ -37,7 +37,7 @@ class CfgHints {
         };
         class ACE_BodyBag: ACE_FieldManual_Base {
             logicalOrder = 2;
-            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_BodyBag' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_BodyBag' call FUNC(getItemName)), MEDICAL_MENU_KEYBIND};
             displayName = "%14";
             displayNameShort = CSTRING(Items_BodyBag_ShortName);
             description = CSTRING(Items_BodyBag_Description);
@@ -122,7 +122,7 @@ class CfgHints {
         };
         class ACE_FortifyTool: ACE_FieldManual_Base {
             logicalOrder = 13;
-            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_FortifyTool' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Fortify' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_FortifyTool_ShortName);
             description = CSTRING(Items_FortifyTool_Description);

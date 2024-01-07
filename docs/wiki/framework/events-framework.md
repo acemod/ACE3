@@ -67,6 +67,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_captiveStatusChanged` | [_unit, _state(BOOL), _reason ("SetHandcuffed" or "SetSurrendered"), _caller] | Global | Listen | Unit's captivity state changed
 |`ace_captives_setSurrendered` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop surrendering
 |`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed
+|`ace_captives_escortingCaptive` | [_unit, _state(BOOL), _caller] | Local | Listen | Caller starting or stopping escort of unit
 
 ### 2.6 Settings (`ace_common`)
 

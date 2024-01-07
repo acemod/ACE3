@@ -18,6 +18,8 @@ class CfgWeapons {
         baseWeapon = "rhsusf_acc_anpeq15_wmx";
     };
     class rhsusf_acc_M952V: rhsusf_acc_anpeq15_light {
+        rhs_acc_combo = ""; // prevent materializing a PEQ-15 if RHS's attachment switch is called
+        rhs_anpeq15_base = ""; // same deal
         baseWeapon = "rhsusf_acc_M952V";
     };
     class rhsusf_acc_wmx: rhsusf_acc_M952V {
@@ -28,6 +30,12 @@ class CfgWeapons {
     };
     class rhsusf_acc_anpeq15A: acc_pointer_IR {
         baseWeapon = "rhsusf_acc_anpeq15A";
+    };
+    class rhsusf_acc_anpeq15_top: rhsusf_acc_anpeq15A {
+        baseWeapon = "rhsusf_acc_anpeq15_top";
+    };
+    class rhsusf_acc_anpeq15_bk_top: rhsusf_acc_anpeq15_top {
+        baseWeapon = "rhsusf_acc_anpeq15_bk_top";
     };
     class rhsusf_acc_anpeq15side: acc_pointer_IR {
         baseWeapon = "rhsusf_acc_anpeq15side";
