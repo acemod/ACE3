@@ -28,7 +28,7 @@ private _clone = createVehicle [QGVAR(clone), _posATL];
 // Hide unit until it can be moved below terrain
 private _isObjectHidden = isObjectHidden _target;
 
-if (_isObjectHidden) then {
+if (!_isObjectHidden) then {
     [QEGVAR(common,hideObjectGlobal), [_target, true]] call CBA_fnc_serverEvent;
 };
 

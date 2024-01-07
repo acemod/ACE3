@@ -43,7 +43,7 @@ if (!isNull _target) then {
         [{
             params ["_target", "_clone", "_isObjectHidden", "_simulationEnabled"];
 
-            if (_isObjectHidden) then {
+            if (!_isObjectHidden) then {
                 [QEGVAR(common,hideObjectGlobal), [_target, false]] call CBA_fnc_serverEvent;
             };
 
