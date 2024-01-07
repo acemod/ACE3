@@ -29,7 +29,7 @@ if (_target isKindOf "StaticWeapon") exitWith {
 
 // Units need to be unconscious or limping; Units also need to not be in ragdoll, as that causes desync issues
 if (_target isKindOf "CAManBase") exitWith {
-    (isAwake _target != alive _target) && // not ragdolled
+    (isAwake _target == alive _target) && // not ragdolled
     {!(lifeState _target in ["HEALTHY", "INJURED"]) ||
     {_target getHitPointDamage "HitLegs" >= 0.5}}
 };
