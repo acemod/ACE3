@@ -15,3 +15,11 @@ private _category = format ["ACE %1", localize LSTRING(Name)];
     true,
     0
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(plottingBoardAllowChannelDrawing), "LIST",
+    [LSTRING(allowChannelDrawing_displayName), LSTRING(allowChannelDrawing_description)],
+    _category,
+    [[0, 1], [LSTRING(allowDirectCommsOnly), LSTRING(allowDirectGroupComms)], 1],
+    0
+] call CBA_fnc_addSetting;
