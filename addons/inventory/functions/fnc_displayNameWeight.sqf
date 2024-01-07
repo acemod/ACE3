@@ -10,26 +10,27 @@
  * None
  *
  * Example:
- * [DISPLAY] call ACE_movement_fnc_inventoryDisplayLoad
+ * [DISPLAY] call ace_inventory_fnc_displayNameWeight
  *
  * Public: No
  */
 
 params ["_display"];
 
-// forces player name control to display irrespective of isStreamFriendlyUIEnabled
+// Forces player name control to display irrespective of isStreamFriendlyUIEnabled
 (_display displayCtrl 111) ctrlShow true;
 
 private _fnc_update = {
     params ["_display"];
+
     private _control = _display displayCtrl 111;
     private _format = ["%1 - %2 %3 (%4)", "%2 %3 (%4)"] select isStreamFriendlyUIEnabled;
 
     _control ctrlSetText format [_format,
-        [ACE_player, false, true] call EFUNC(common,getName),
-        localize ELSTRING(common,Weight),
-        [ACE_player] call EFUNC(common,getWeight),
-        [ACE_player, true] call EFUNC(common,getWeight)
+        [GVAR(unit), false, true] call EFUNC(common,getName),
+        LELSTRING(common,Weight),
+        GVAR(unit) call EFUNC(common,getWeight),
+        [GVAR(unit), true] call EFUNC(common,getWeight)
     ];
 };
 

@@ -71,7 +71,7 @@ private _suitCoef = if ((uniform ACE_player) != "") then {
 private _gBlackOut = MAXVIRTUALG / _classCoef + MAXVIRTUALG / _suitCoef - MAXVIRTUALG;
 
 // Unconsciousness
-if ((_average > _gBlackOut) && {["ACE_Medical"] call EFUNC(common,isModLoaded) && {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
+if ((_average > _gBlackOut) && {["ace_medical"] call EFUNC(common,isModLoaded) && {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
     [ACE_player, true, (10 + floor(random 5)), true] call EFUNC(medical,setUnconscious);
 };
 
