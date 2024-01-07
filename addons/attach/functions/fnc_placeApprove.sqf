@@ -15,17 +15,18 @@
  * 3: Light Vehicle Classname <STRING>
  * 4: On Attach Text <STRING>
  * 5: Starting Pos of dummy item <ARRAY>
+ * 5: Orientation of model <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * No
+ * None
  *
  * Public: No
  */
 
-params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAttachText", "_startingPosition"];
+params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAttachText", "_startingPosition", "_itemModelOrientation"];
 TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAttachText,_startingPosition);
 
 private _startingOffset = _attachToVehicle worldToModel _startingPosition;
@@ -92,6 +93,19 @@ private _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vector
 _endPosTestOffset set [2, (_startingOffset select 2)];
 private _attachedObject = _itemVehClass createVehicle (getPos _unit);
 _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
+
+// Get wanted orientation if any is set
+_itemModelOrientation params [["_roll", 0], ["_yaw", 90]];
+private _dirAndUp = [[[0,1,0],[0,0,1]], -_yaw, 0, _roll] call BIS_fnc_transformVectorDirAndUp;
+
+// Transform dir and up vector from player model to world, then to model-space of _attachToVehicle
+private _dir = _unit vectorModelToWorldVisual _dirAndUp#0;
+_dir = _attachToVehicle vectorWorldToModelVisual _dir; 
+
+private _up = _unit vectorModelToWorldVisual _dirAndUp#1;
+_up = _attachToVehicle vectorWorldToModelVisual _up;
+
+_attachedObject setVectorDirAndUp [_dir, _up];
 
 //Remove Item from inventory
 _unit removeItem _itemClassname;

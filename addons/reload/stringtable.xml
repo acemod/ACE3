@@ -36,7 +36,7 @@
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelf">
             <English>Always show check ammo self interaction</English>
             <Polish>Zawsze pokazuj interakcję od sprawdzania amunicji</Polish>
-            <Italian>Mostra sempre l'interazione di autocontrollo delle munizioni</Italian>
+            <Italian>Mostra sempre l'autointerazione di controllo delle munizioni</Italian>
             <Czech>Vždy zobrazit kontrolu munice v menu vlastní interakce</Czech>
             <Japanese>セルフ インタラクションへ弾薬確認を常に表示</Japanese>
             <Chinese>總是在自我互動中顯示檢查彈藥動作</Chinese>
@@ -51,7 +51,7 @@
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelfDesc">
             <English>Shows check ammo self interaction even when not in static weapons.</English>
             <Polish>Pokazuje interakcję od sprawdzania amunicji poza bronią statyczną.</Polish>
-            <Italian>Mostra il controllo dell'interazione tra le munizioni anche quando non sono in armi statiche.</Italian>
+            <Italian>Mostra l'autointerazione di controllo delle munizioni anche quando non si è in un'arma statica.</Italian>
             <Czech>Zobrazuje kontrolu munice v menu vlastní interakce i pokud hráč nepoužívá statickou zbraň.</Czech>
             <Japanese>設置型火器を使っていなくても、セルフ インタラクションへ弾薬確認を常に表示します。</Japanese>
             <Chinese>即使不是固定式支援武器也依然在自我互動中顯示檢查彈藥動作</Chinese>
@@ -106,7 +106,7 @@
             <Polish>Podłącz taśmę</Polish>
             <German>Gurt anhängen</German>
             <Hungarian>Töltényheveder összekötése</Hungarian>
-            <Italian>Attacca la tracolla</Italian>
+            <Italian>Combina nastro</Italian>
             <Portuguese>Ligar cintos de munição</Portuguese>
             <Japanese>ベルトを繋げる</Japanese>
             <Korean>탄띠 연결</Korean>
@@ -122,7 +122,7 @@
             <Polish>Podłączanie taśmy...</Polish>
             <German>Gurt anhängen...</German>
             <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
-            <Italian>Attaccando la tracolla...</Italian>
+            <Italian>Combinando nastro...</Italian>
             <Portuguese>Ligando cintos...</Portuguese>
             <Japanese>ベルトを繋げています・・・</Japanese>
             <Korean>탄띠 연결 중...</Korean>
@@ -133,6 +133,7 @@
             <English>Belt was linked</English>
             <French>Bande a été attachée</French>
             <German>Gurt wurde angehängt</German>
+            <Italian>Nastro combinato</Italian>
             <Japanese>ベルトがリンクされた</Japanese>
             <Polish>Taśma została połączona</Polish>
             <Korean>탄띠가 연결되었습니다</Korean>
@@ -141,6 +142,7 @@
             <English>Belt could not be linked</English>
             <French>Bande n'a pas pu être attachée</French>
             <German>Gurt konnte nicht angehängt werden</German>
+            <Italian>Non è stato possibile combinare il nastro</Italian>
             <Japanese>ベルトはリンクされなかった</Japanese>
             <Polish>Taśma nie mogła być połączona</Polish>
             <Korean>탄띠를 연결할 수 없습니다</Korean>

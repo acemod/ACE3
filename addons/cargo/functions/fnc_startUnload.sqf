@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Start unload action.
+ * Starts unloading item selected in the cargo menu.
  *
  * Arguments:
- * None
+ * 0: Unit doing the unloading <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_cargo_fnc_startUnload
+ * player call ace_cargo_fnc_startUnload
  *
  * Public: No
  */
@@ -18,75 +18,105 @@
 disableSerialization;
 
 private _display = uiNamespace getVariable QGVAR(menuDisplay);
+
 if (isNil "_display") exitWith {};
 
 private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
+
 if (_loaded isEqualTo []) exitWith {};
 
-private _ctrl = _display displayCtrl 100;
+// This can be an object or a classname string
+private _item = _loaded param [lbCurSel (_display displayCtrl 100), nil];
 
-private _selected = (lbCurSel _ctrl) max 0;
+if (isNil "_item") exitWith {};
 
-if (count _loaded <= _selected) exitWith {};
-private _item = _loaded select _selected; // This can be an object or a classname string
+params ["_unit"];
 
 if (GVAR(interactionParadrop)) exitWith {
-    // If drop time is 0 don't show a progress bar
-    if (GVAR(paradropTimeCoefficent) == 0) exitWith {
+    // Close the cargo menu
+    closeDialog 0;
+
+    private _duration = GVAR(paradropTimeCoefficent) * (_item call FUNC(getSizeItem));
+
+    // If drop time is 0, don't show a progress bar
+    if (_duration <= 0) exitWith {
         [QGVAR(paradropItem), [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
     };
 
     // Start progress bar - paradrop
-    private _size = [_item] call FUNC(getSizeItem);
-    [
-        GVAR(paradropTimeCoefficent) * _size,
-        [_item, GVAR(interactionVehicle), ACE_player],
+    // Delay execution by a frame, to avoid progress bar stopping prematurely because of the cargo menu still being open
+    [EFUNC(common,progressBar), [
+        _duration,
+        [_item, GVAR(interactionVehicle)],
         {
-            (_this select 0) params ["_item", "_target", "_player"];
-            [QGVAR(paradropItem), [_item, _target]] call CBA_fnc_localEvent;
+            [QGVAR(paradropItem), _this select 0] call CBA_fnc_localEvent;
         },
         {
-            params ["_args", "", "", "_errorCode"]; // show warning if we failed because of flight conditions
-            if (_errorCode == 3) then {
-                _args params ["_item", "_target", "_player"];
-                [localize LSTRING(unlevelFlightWarning)] call EFUNC(common,displayTextStructured);
+            params ["", "", "", "_errorCode"];
+
+            if (_errorCode == 3) then { // show warning if we failed because of flight conditions
+                [LSTRING(unlevelFlightWarning)] call EFUNC(common,displayTextStructured);
             };
         },
-        localize LSTRING(UnloadingItem),
+        LLSTRING(unloadingItem),
         {
-            (_this select 0) params ["_item", "_target", "_player"];
+            (_this select 0) params ["", "_target"];
+
             if ((acos ((vectorUp _target) select 2)) > 30) exitWith {false}; // check flight level
             if (((getPos _target) select 2) < 25) exitWith {false}; // check height
             if ((speed _target) < -5) exitWith {false}; // check reverse
+
             true
         },
-        ["isNotSwimming", "isNotInside"]
-    ] call EFUNC(common,progressBar);
+        ["isNotSwimming", "isNotInside"],
+        false
+    ]] call CBA_fnc_execNextFrame;
 };
 
+// If in zeus
+if (!isNull findDisplay 312) exitWith {
+    // Do not check distance to unit, but do check for valid position
+    if !([_item, GVAR(interactionVehicle), objNull, true] call FUNC(canUnloadItem)) exitWith {
+        [[LSTRING(unloadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
+    };
+
+    // Close the cargo menu
+    closeDialog 1;
+
+    ["ace_unloadCargo", [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
+};
 
 // Start progress bar - normal ground unload
-if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then {
-    private _size = [_item] call FUNC(getSizeItem);
+if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
+    // Close the cargo menu
+    closeDialog 0;
+
+    private _duration = GVAR(loadTimeCoefficient) * (_item call FUNC(getSizeItem));
+
+    // If unload time is 0, don't show a progress bar
+    if (_duration <= 0) exitWith {
+        ["ace_unloadCargo", [_item, GVAR(interactionVehicle), _unit]] call CBA_fnc_localEvent;
+    };
 
     [
-        GVAR(loadTimeCoefficient) * _size,
-        [_item, GVAR(interactionVehicle), ACE_player],
-        {TRACE_1("unload finish",_this); ["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
-        {TRACE_1("unload fail",_this);},
-        localize LSTRING(UnloadingItem),
+        _duration,
+        [_item, GVAR(interactionVehicle), _unit],
         {
-            (_this select 0) params ["_item", "_target", "_player"];
+            TRACE_1("unload finish",_this);
 
-            (alive _target)
-            && {locked _target < 2}
-            && {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
-            && {_item in (_target getVariable [QGVAR(loaded), []])}
+            ["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent;
+        },
+        {
+            TRACE_1("unload fail",_this);
+        },
+        LLSTRING(unloadingItem),
+        {
+            (_this select 0) params ["_item", "_vehicle", "_unit"];
+
+            [_item, _vehicle, _unit, false, true] call FUNC(canUnloadItem) // don't check for a suitable unloading position every frame
         },
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
 } else {
-    private _displayName = [_item, true] call FUNC(getNameItem);
-
-    [[LSTRING(UnloadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
+    [[LSTRING(unloadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
 };

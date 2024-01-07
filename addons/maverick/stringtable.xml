@@ -5,7 +5,7 @@
             <Key ID="STR_ACE_Maverick_l_mag_descr">
                 <English>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</English>
                 <German>AGM-65 Maverick L, lasergelenkte Luft-Boden-Rakete</German>
-                <Italian>AGM-65 Maverick L, Guida Laser Missile Anti-Terra</Italian>
+                <Italian>AGM-65 Maverick L, Missile Aria-Terra Laserguidato</Italian>
                 <Japanese>AGM-65 マーベリック L、レーザー誘導対地ミサイル</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型，雷射導引對地導彈</Chinese>
                 <Chinesesimp>AGM-65"小牛"L型激光制导对地导弹</Chinesesimp>
@@ -70,12 +70,14 @@
                 <English>MAVL</English>
                 <Spanish>MAVL</Spanish>
                 <French>MAVL</French>
+                <Italian>MAVL</Italian>
                 <Russian>MAVL</Russian>
                 <Polish>MAVL</Polish>
                 <Japanese>MAVL</Japanese>
                 <German>MAVL</German>
                 <Korean>MAVL</Korean>
                 <Chinesesimp>MAVL</Chinesesimp>
+                <Portuguese>MAVL</Portuguese>
             </Key>
             <Key ID="STR_ACE_Maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
@@ -84,7 +86,7 @@
                 <Chinese>Kh-25ML，雷射導引對地導彈</Chinese>
                 <Chinesesimp>Kh-25ML，激光制导空地导弹</Chinesesimp>
                 <Japanese>Kh-25ML、レーザー誘導対地ミサイル</Japanese>
-                <Italian>Kh-25ML, a Guida Laser Missile Aria-Terra</Italian>
+                <Italian>Kh-25ML, Missile Aria-Terra Laserguidato</Italian>
                 <Polish>Kh-25ML, Kierowany laserowo pocisk powietrze-ziemia</Polish>
                 <Russian>Х-25МЛ, ракета Воздух-Земля с лазерным наведением</Russian>
                 <Portuguese>Kh-25ML, Míssil Ar para Chão Guiado a Laser</Portuguese>

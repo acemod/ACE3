@@ -61,16 +61,19 @@
             <Polish>30mm Odłamkowo-Burzące - Zapalające</Polish>
             <Turkish>30mm Yüksek Patlayıcı </Turkish>
             <German>30mm Hochexplosiv/Brandladung</German>
-            <Japanese>30mm 焼夷りゅう弾</Japanese>
+            <Italian>30mm Esplosivo/Incendiario</Italian>
+            <Japanese>30mm 焼夷榴弾</Japanese>
             <Czech>30mm Tříštivo-trhavá zápalná střela</Czech>
             <Russian>30мм Осколочно-Фугасный Зажигательный</Russian>
             <Korean>30mm 고폭소이탄</Korean>
+            <Portuguese>30mm Alto-Explosivo Incendiária</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
             <English>30mm HEI</English>
             <Spanish>30mm AEI</Spanish>
             <Chinese>30毫米高爆燃燒</Chinese>
             <Chinesesimp>30mm 高爆燃烧</Chinesesimp>
+            <Italian>30mm HEI</Italian>
             <French>30 mm HEI</French>
             <Polish>30mm OB-Z</Polish>
             <Turkish>30mm HEI</Turkish>
@@ -79,6 +82,7 @@
             <Czech>30mm HEI</Czech>
             <Russian>30мм ОФЗ</Russian>
             <Korean>30mm HEI</Korean>
+            <Portuguese>30mm AEI</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionAP">
             <English>30mm DU Armor Piercing</English>
@@ -86,13 +90,15 @@
             <Chinese>30毫米貧化鈾穿甲彈 </Chinese>
             <Chinesesimp>30 mm 贫铀穿甲</Chinesesimp>
             <French>30 mm UA Armor Piercing</French>
+            <Italian>30mm AP Uranio Impoverito</Italian>
             <Polish>30mm Zubożony Uran - Przebijające</Polish>
             <Turkish>30mm DU Zırh Delici</Turkish>
             <German>30mm abgereichertes panzerbrechendes Uraniumgeschoss</German>
-            <Japanese>30mm DU 徹甲弾</Japanese>
+            <Japanese>30mm 劣化ウラン徹甲弾</Japanese>
             <Czech>30mm Protipancéřová střela z ochuzeného Uranu</Czech>
             <Russian>30мм ОУ Бронебойный Снаряд</Russian>
             <Korean>30mm 열화우라늄 철갑탄</Korean>
+            <Portuguese>30mm DU Perfurante de Blindagem</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortAP">
             <English>30mm DU AP</English>
@@ -100,6 +106,7 @@
             <Chinese>30毫米貧鈾穿甲</Chinese>
             <Chinesesimp>30mm 贫铀穿甲</Chinesesimp>
             <French>30 mm UA AP</French>
+            <Italian>30mm AP-UI</Italian>
             <Polish>30mm ZU-P</Polish>
             <Turkish>30mm DU AP</Turkish>
             <German>30mm DU-PB</German>
@@ -107,6 +114,7 @@
             <Czech>30 mm DU AP</Czech>
             <Russian>30мм ОУ БС</Russian>
             <Korean>30mm DU AP</Korean>
+            <Portuguese>30mm DU AP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM41">
             <English>30mm Combat Mix 4:1 DU:HEI</English>
@@ -114,13 +122,15 @@
             <Chinese>30毫米戰鬥混合彈4:1 穿甲:高爆</Chinese>
             <Chinesesimp>30mm 战斗混合 穿甲/高爆 4:1</Chinesesimp>
             <French>30 mm Mix de Combat 4:1 UA:HEI</French>
+            <Italian>30mm Misto 4:1 UI:HEI</Italian>
             <Polish>30mm Mieszanka bojowa 4:1 ZU:OB-Z</Polish>
             <Turkish>30mm Combat Mix 4:1 DU:HEI</Turkish>
             <German>30mm Kampfmischung 4:1 DU:HEB</German>
-            <Japanese>30mm コンバット ミックス 4:1 DU:HEI</Japanese>
+            <Japanese>30mm コンバット ミックス 4:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
             <Czech>30mm Bojový Mix 4:1 DU:HEI</Czech>
             <Russian>30мм Смешанное боепитание 4:1 ОУ:ОФЗ</Russian>
             <Korean>30mm 4:1 열화:고폭소이</Korean>
+            <Portuguese>30mm Mix de Combate 4:1 DU:AEI</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM41">
             <English>30mm CM 4:1</English>
@@ -128,6 +138,7 @@
             <Chinese>30毫米 穿高混合 4:1</Chinese>
             <Chinesesimp>30mm 穿爆混合 4:1</Chinesesimp>
             <French>30 mm MdC 4:1</French>
+            <Italian>30mm Misto 4:1</Italian>
             <Polish>30mm MB 4:1</Polish>
             <Turkish>30mm CM 4:1</Turkish>
             <German>30mm KM 4:1</German>
@@ -142,10 +153,11 @@
             <Chinese>30毫米戰鬥混合彈5:1 穿甲:高爆</Chinese>
             <Chinesesimp>30 mm 战斗混合 穿甲/高爆 5:1</Chinesesimp>
             <French>30 mm Mix de Combat 5:1 UA:HEI</French>
+            <Italian>30mm Misto 5:1 UI:HEI</Italian>
             <Polish>30mm Mieszanka bojowa 5:1 ZU:OB-Z</Polish>
             <Turkish>30mm Combat Mix 5:1 DU:HEI</Turkish>
             <German>30mm Kampfmischung 5:1 DU:HEB</German>
-            <Japanese>30mm コンバット ミックス 5:1 DU:HEI</Japanese>
+            <Japanese>30mm コンバット ミックス 5:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
             <Czech>30mm Bojový Mix 5:1 DU:HEI</Czech>
             <Russian>30мм Смешанное боепитание 5:1 ОУ:ОФЗ</Russian>
             <Korean>30mm 5:1 열화:고폭소이</Korean>
@@ -156,6 +168,7 @@
             <Chinese>30毫米 穿高混合 5:1</Chinese>
             <Chinesesimp>30mm 穿爆混合 5:1</Chinesesimp>
             <French>30 mm MdC 5:1</French>
+            <Italian>30mm Misto 5:1</Italian>
             <Polish>30mm MB 5:1</Polish>
             <Turkish>30mm CM 5:1</Turkish>
             <German>30mm KM 5:1</German>
