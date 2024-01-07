@@ -1,4 +1,3 @@
-
 class EGVAR(arsenal,stats) {
     class statBase;
     class ACE_allowSwapBarrel: statBase {
