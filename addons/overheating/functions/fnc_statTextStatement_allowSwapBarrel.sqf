@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: drofseh
- * Bolt Type statement.
+ * Barrel Type statement.
  *
  * Arguments:
  * 0: Not used
