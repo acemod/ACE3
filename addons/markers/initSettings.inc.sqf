@@ -79,7 +79,8 @@ private _formatDescription = [
     LLSTRING(TimestampFormatDescription1),
     LLSTRING(TimestampFormatDescription2),
     LLSTRING(TimestampFormatDescription3),
-    LLSTRING(TimestampFormatDescription4)
+    LLSTRING(TimestampFormatDescription4),
+    LLSTRING(TimestampFormatDescription5)
 ] joinString endl;
 
 [
@@ -87,8 +88,8 @@ private _formatDescription = [
     [LSTRING(timestampFormat), _formatDescription],
     [_categoryName, LLSTRING(Module_DisplayName)],
     [
-        ["HH", "HH:MM", "HH:MM:SS", "HH:MM:SS:MM"],
-        ["HH", "HH:MM", "HH:MM:SS", "HH:MM:SS:MM"],
+        ["HH", "HH:MM", "HH:MM:SS", "HH:MM:SS:MM", "HH:MM:SS.mmm"],
+        ["HH", "HH:MM", "HH:MM:SS", "HH:MM:SS:MM", "HH:MM:SS.mmm"],
         1
     ]
 ] call CBA_fnc_addSetting;

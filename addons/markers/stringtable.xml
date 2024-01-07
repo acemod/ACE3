@@ -315,7 +315,7 @@
             <German>Ändere die Zeitverschiebung für den UTC-Zeitstempel</German>
             <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
             <Korean>UTC 타임 스탬프의 시간 오프셋을 변경하십시오</Korean>
-        </Key>        
+        </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffset">
             <English>UTC Minutes Offset</English>
             <Russian>UTC Минутное Смещение</Russian>
@@ -404,17 +404,16 @@
             <Portuguese>SS - Segundos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
-            <English>"MM" - Milliseconds</English>
-            <Russian>"МС" - Миллисекунда</Russian>
-            <French>"MM" - Millisecondes</French>
-            <Japanese>"MM" - ミリ秒</Japanese>
-            <Spanish>"MM" - Milisegundos</Spanish>
-            <Polish>"MM" - Milisekundy</Polish>
-            <German>"MS" - Milisekunden</German>
-            <Italian>"MS" - Millisecondi</Italian>
-            <Chinesesimp>"MS"—毫秒</Chinesesimp>
-            <Korean>"MS" - 밀리초</Korean>
-            <Portuguese>MM - Milisegundos</Portuguese>
+            <English>"MM" - Milliseconds (from 0 to 59)</English>
+            <French>"MM" - Millisecondes (de 0 à 59)</French>
+            <German>"MS" - Milisekunden (von 0 bis 59)</German>
+            <Portuguese>"MS" - Milissegundos (de 0 a 59)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription5">
+            <English>"mmm" - Milliseconds (from 0 to 999)</English>
+            <French>"mmm" - Millisecondes (de 0 à 999)</French>
+            <German>"mmm" - Milisekunden (von 0 bis 999)</German>
+            <Portuguese>"mmm" - Milissegundos (de 0 a 999)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
