@@ -107,10 +107,9 @@ private _transonicStabilityCoef = _ammoConfig select 4;
 private _dragModel = _ammoConfig select 5;
 private _atmosphereModel = _ammoConfig select 8;
 
-private _isABenabled = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
+private _isABenabled = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (_bc != 0);
 private _useBarrelLengthInfluence = (
     _isABenabled &&
-    {_bc != 0} &&
     {missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]}
 );
 private _useAmmoTemperatureInfluence = (
