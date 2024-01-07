@@ -884,5 +884,14 @@
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
             <English>Closed Bolt</English>
         </Key>
+        <Key ID="STR_ACE_Overheating_statBarrelType">
+            <English>Barrel Type</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
+            <English>Non-Removeable</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
+            <English>Quick Change</English>
+        </Key>
     </Package>
 </Project>
