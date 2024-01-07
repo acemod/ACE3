@@ -13,21 +13,33 @@
         </div>
         <div class="large-4 columns">
             <h2>Social Media</h2>
-            <div class="social__icons">
-                <a class="social__icon" href="https://twitter.com/ACE3Mod" target="_blank" rel="noopener" aria-label="ACE3 on Twitter">
-                    <i class="fa fa-twitter fa-2x"></i>
+            <div class="social-icons">
+                <a class="social-icons__icon" href="https://twitter.com/ACE3Mod" target="_blank" rel="noopener" aria-label="ACE3 on X (Twitter)">
+                    <i class="icon icon--2x" aria-hidden="true">
+                        <svg>
+                            <use href="/dist/icons.svg#twitter" />
+                        </svg>
+                    </i>
                 </a>
-                <a class="social__icon" href="https://facebook.com/ACE3Mod" target="_blank" rel="noopener" aria-label="ACE3 on Facebook">
-                    <i class="fa fa-facebook-square fa-2x"></i>
+                <a class="social-icons__icon" href="https://facebook.com/ACE3Mod" target="_blank" rel="noopener" aria-label="ACE3 on Facebook">
+                    <i class="icon icon--2x" aria-hidden="true">
+                        <svg>
+                            <use href="/dist/icons.svg#facebook" />
+                        </svg>
+                    </i>
                 </a>
-                <a class="social__icon" href="https://youtube.com/c/ACE3Mod" target="_blank" rel="noopener" aria-label="ACE3 on YouTube">
-                    <i class="fa fa-youtube fa-2x"></i>
+                <a class="social-icons__icon" href="https://youtube.com/c/ACE3Mod" target="_blank" rel="noopener" aria-label="ACE3 on YouTube">
+                    <i class="icon icon--2x" aria-hidden="true">
+                        <svg>
+                            <use href="/dist/icons.svg#youtube" />
+                        </svg>
+                    </i>
                 </a>
             </div>
         </div>
     </div>
 </footer>
 
-<script src="{{ site.baseurl }}/js/footer.min.js?v={{site.time | date: '%Y%m%d%H'}}"></script>
+<script src="{{ site.baseurl }}/dist/bundle.min.js?v={{site.time | date: '%Y%m%d%H'}}"></script>
 </body>
 </html>

@@ -12,12 +12,6 @@ GVAR(vehicleMagCache) = createHashMap;
 
 
 // Event handlers:
-[QGVAR(disableVanillaAssembly), {
-    params ["_staticWeapon"];
-    TRACE_1("disableVanillaAssembly eh",_staticWeapon);
-    _staticWeapon enableWeaponDisassembly false;
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(addTurretMag), LINKFUNC(reload_handleAddTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(removeTurretMag), LINKFUNC(reload_handleRemoveTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;

@@ -28,6 +28,7 @@ TRACE_2("addRepairActions", _vehicle,_type);
 // do nothing if the class is already initialized
 private _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (_type in _initializedClasses) exitWith {};
+if (_type == "") exitWith {};
 
 // get selections to ignore
 private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);

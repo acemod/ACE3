@@ -16,7 +16,7 @@
  * None
  *
  * Example:
- * [[player, cursorObject], "ACE_bodyBagObject"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave
+ * [[player, cursorObject], "ACE_bodyBagObject_blue"] call ace_medical_treatment_fnc_placeInBodyBagOrGrave
  *
  * Public: No
  */
@@ -63,6 +63,7 @@ if (_restingPlaceClass != "") then {
     _restingPlace = createVehicle [_restingPlaceClass, [0, 0, 0], [], 0, "NONE"];
     _restingPlace setPosASL _position;
     _restingPlace setDir _direction;
+    _restingPlace setVectorUp surfaceNormal _position;
 };
 
 

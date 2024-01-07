@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, LinkIsGrim
+ * Author: commy2, LinkIsGrim, Avokadomos
  * When the channel list box is changed.
  *
  * Arguments:
@@ -19,6 +19,4 @@
 params ["_ctrl", "_index"];
 TRACE_2("params",_ctrl,_index);
 
-private _enabledChannels = false call FUNC(getEnabledChannels);
-
-setCurrentChannel (_enabledChannels select _index);
+setCurrentChannel (parseNumber (_ctrl lbData _index));

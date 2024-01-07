@@ -10,6 +10,11 @@ class GVAR(debug_structuredText): ctrlStructuredText {
 };
 
 class RscTitles {
+    class GVAR(ProgressBar_Display): GVAR(ProgressBar_Dialog) {
+        duration = 1e11; // forever, essentially
+        fadeIn = 0;
+        fadeOut = 0;
+    };
     class GVAR(watchVariableUI) {
         idd = -1;
         onLoad = QUOTE(with uiNameSpace do {GVAR(watchVariableUI) = _this select 0};);

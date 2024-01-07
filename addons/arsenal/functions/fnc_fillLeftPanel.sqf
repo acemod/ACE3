@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Tab control <CONTROL>
+ * 2: Animate panel refresh <BOOL>
  *
  * Return Value:
  * None
@@ -14,28 +15,30 @@
  * Public: No
 */
 
-params ["_display", "_control"];
+params ["_display", "_control", ["_animate", true]];
 
 // Fade old control background
 if (!isNil QGVAR(currentLeftPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLeftPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
-    _previousCtrlBackground ctrlCommit FADE_DELAY;
+    _previousCtrlBackground ctrlCommit ([0, FADE_DELAY] select _animate);
 };
 
 // Show new control background
 private _ctrlIDC = ctrlIDC _control;
 private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
 _ctrlBackground ctrlSetFade 0;
-_ctrlBackground ctrlCommit FADE_DELAY;
+_ctrlBackground ctrlCommit ([0, FADE_DELAY] select _animate);
 
 private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
 
 // Force a "refresh" animation of the panel
-_ctrlPanel ctrlSetFade 1;
-_ctrlPanel ctrlCommit 0;
-_ctrlPanel ctrlSetFade 0;
-_ctrlPanel ctrlCommit FADE_DELAY;
+if (_animate) then {
+    _ctrlPanel ctrlSetFade 1;
+    _ctrlPanel ctrlCommit 0;
+    _ctrlPanel ctrlSetFade 0;
+    _ctrlPanel ctrlCommit FADE_DELAY;
+};
 
 _ctrlPanel lbSetCurSel -1;
 

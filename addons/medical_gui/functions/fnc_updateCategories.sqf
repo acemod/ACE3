@@ -22,6 +22,7 @@ params ["_display"];
 
     private _ctrl = _display displayCtrl _idc;
     private _enable = GVAR(actions) findIf {_category == _x select 1 && {call (_x select 2)}} > -1;
+    if (_category isEqualTo "triage") then {_enable = true};
     _ctrl ctrlEnable _enable;
 
     private _selectedColor = [
@@ -36,6 +37,7 @@ params ["_display"];
     _color set [-1, 0.8]; // Mouseover change
     _ctrl ctrlSetActiveColor _color;
 } forEach [
+    [IDC_TRIAGE, "triage"],
     [IDC_EXAMINE, "examine"],
     [IDC_BANDAGE, "bandage"],
     [IDC_MEDICATION, "medication"],

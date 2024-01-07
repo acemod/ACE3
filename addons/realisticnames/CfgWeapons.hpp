@@ -715,10 +715,10 @@ class CfgWeapons {
         displayName = "UTG Defender 126";
     };
 
-    class optic_hamr: ItemCore {
+    class optic_Hamr: ItemCore {
         displayName = CSTRING(optic_hamr);
     };
-    class optic_Hamr_khk_F: optic_hamr {
+    class optic_Hamr_khk_F: optic_Hamr {
         displayName = CSTRING(optic_hamr_khk);
     };
     class ACE_optic_Hamr_2D: optic_Hamr {

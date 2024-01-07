@@ -24,7 +24,7 @@ if (_finishTime > 0) exitWith {
     if (CBA_missionTime >= _finishTime) then {
         TRACE_5("treatment finished",_finishTime,_treatmentTarget,_treatmentEvent,_treatmentArgs,_treatmentItem);
         _healer setVariable [QGVAR(currentTreatment), nil];
-        if ((GVAR(requireItems)) && {_treatmentItem != ""}) then {
+        if ((GVAR(requireItems) > 0) && {_treatmentItem != ""}) then {
             ([_healer, _treatmentItem] call FUNC(itemCheck)) params ["_itemOk", "_itemClassname", "_treatmentClass"];
             if (!_itemOk) exitWith { _treatmentEvent = "#fail"; }; // no item after delay
             _healer removeItem _itemClassname;
