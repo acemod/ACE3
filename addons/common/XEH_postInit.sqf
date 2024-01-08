@@ -279,7 +279,7 @@ if (isServer) then {
 
                 // Wait for function to broadcast, then kick client
                 [{
-                    ["[ACE] ERROR", "ACE is not present", {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] remoteExecCall [QFUNC(errorMessage), _this];
+                    ["[ACE] ERROR", "ACE is not present or outdated past version 3.X.X", {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] remoteExecCall [QFUNC(errorMessage), _this];
                 }, _owner, 0.5] call CBA_fnc_waitAndExecute;
             };
         }, _this, 3] call CBA_fnc_waitAndExecute;
