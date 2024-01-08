@@ -877,21 +877,27 @@
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType">
             <English>Bolt Type</English>
+			<Korean>노리쇠 방식</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
             <English>Open Bolt</English>
+			<Korean>오픈 볼트</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
             <English>Closed Bolt</English>
+			<Korean>클로즈드 볼트</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType">
             <English>Barrel Type</English>
+			<Korean>총열 방식</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
             <English>Non-Removeable</English>
+			<Korean>제거 불가</Korean>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
             <English>Quick Change</English>
+			<Korean>신속 교체</Korean>
         </Key>
     </Package>
 </Project>
