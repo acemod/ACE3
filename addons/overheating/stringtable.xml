@@ -875,5 +875,23 @@
             <Chinesesimp>备用枪管温度非常热</Chinesesimp>
             <Chinese>備用槍管溫度超級熱</Chinese>
         </Key>
+        <Key ID="STR_ACE_Overheating_statBoltType">
+            <English>Bolt Type</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
+            <English>Open Bolt</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
+            <English>Closed Bolt</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBarrelType">
+            <English>Barrel Type</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
+            <English>Non-Removeable</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
+            <English>Quick Change</English>
+        </Key>
     </Package>
 </Project>
