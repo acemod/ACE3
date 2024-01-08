@@ -55,7 +55,7 @@ private _fnc_check = {
 
     // Compare client and server files and versions
     private _client = profileName;
-    private _missingAddons = [];
+    private _missingAddonsClient = [];
     private _oldVersionsClient = [];
     private _oldVersionsServer = [];
 
@@ -70,7 +70,7 @@ private _fnc_check = {
 
         if (_index == -1) then {
             if (_x != "ace_server") then {
-                _missingAddons pushBack _x;
+                _missingAddonsClient pushBack _x;
             };
         } else {
             _clientVersion = _versions select _index;
@@ -102,14 +102,13 @@ private _fnc_check = {
     private _count = 0;
 
     #define DISPLAY_NUMBER_ADDONS (10 + 1) // +1 to account for header
-
     {
-        params ["_items", "_string"];
+        _x params ["_items", "_string"];
 
         // Check if something is either missing or outdated
-        _missing = _items isNotEqualTo [];
+        private _isMissingItems = _items isNotEqualTo [];
 
-        if (_missing) then {
+        if (_isMissingItems) then {
             // Generate error message
             _errorLog = [format ["[ACE] %1: ERROR %2 addon(s): ", _client, _string]];
 
@@ -122,16 +121,16 @@ private _fnc_check = {
             _count = count _items;
 
             if (_count > DISPLAY_NUMBER_ADDONS) then {
-                _errorMsg = _errorMsg + format ["and %1 more.", _count - DISPLAY_NUMBER_ADDONS];
+                _errorMsg = _errorMsg + format [", and %1 more.", _count - DISPLAY_NUMBER_ADDONS];
             };
 
             // Log and display error messages
             diag_log text _errorLog;
             [QGVAR(serverLog), _errorLog] call CBA_fnc_serverEvent;
-            [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+            [QGVAR(systemChatGlobal), _errorMsg] call CBA_fnc_globalEvent;
         };
 
-        _clientErrors pushBack _missing;
+        _clientErrors pushBack _isMissingItems;
     } forEach [
         [_missingAddonsClient, "client missing"],
         [_missingAddonsServer, "server missing"],
