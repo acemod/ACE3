@@ -270,11 +270,11 @@
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
             <English>Allow Direct Comms Only (Polylines Only)</English>
-            <Japanese>直接チャンネルのみ許可 (折れ線のみ)</Japanese>
+            <Japanese>直接チャンネルのみ許可 (線のみ)</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectGroupComms">
             <English>Allow Direct/Group Comms (Polylines and Group Markers)</English>
-            <Japanese>直接/グループチャンネルを許可 (折れ線とグループマーカー)</Japanese>
+            <Japanese>直接/グループチャンネルを許可 (線とグループマーカー)</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
             <English>Plotting Board</English>
