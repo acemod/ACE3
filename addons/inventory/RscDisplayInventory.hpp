@@ -27,26 +27,26 @@ class RscCombo;
 #define W_MAKEITBIGGA(num) (num * (safeZoneH / 40))
 #define H_MAKEITBIGGA(num) (num * (safeZoneH / 30))
 
-#define X_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)),0)]),X_BIS(num),X_MAKEITBIGGA(num))])
-#define Y_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)),0)]),Y_BIS(num),Y_MAKEITBIGGA(num))])
-#define W_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)),0)]),W_BIS(num),W_MAKEITBIGGA(num))])
-#define H_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)),0)]),H_BIS(num),H_MAKEITBIGGA(num))])
+#define X_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQGVAR(inventoryDisplaySize),0)]),X_BIS(num),X_MAKEITBIGGA(num))])
+#define Y_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQGVAR(inventoryDisplaySize),0)]),Y_BIS(num),Y_MAKEITBIGGA(num))])
+#define W_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQGVAR(inventoryDisplaySize),0)]),W_BIS(num),W_MAKEITBIGGA(num))])
+#define H_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQGVAR(inventoryDisplaySize),0)]),H_BIS(num),H_MAKEITBIGGA(num))])
 
 class RscDisplayInventory {
     class controls {
         class CA_ContainerBackground: RscText {
-            //crate: GroundLoad adjust size
+            // Crate: GroundLoad adjust size
             x = X_PART(1);
             y = Y_PART(1);
             w = W_PART(12);
-            h = H_PART(22.5); //default 23
+            h = H_PART(22.5); // default 23
         };
         class CA_PlayerBackground: RscText {
-            //center player's container: decrease height because of progressbar height decrease
+            // Center player's container: Decrease height because of progressbar height decrease
             x = X_PART(14.6);
             y = Y_PART(2);
             w = W_PART(24.4);
-            h = H_PART(21.5); //default 22
+            h = H_PART(21.5); // default 22
         };
         class TitleBackground: RscText {
             x = X_PART(14.6);
@@ -98,7 +98,7 @@ class RscDisplayInventory {
         };
         class BackgroundSlotPrimaryFlashlight: BackgroundSlotPrimary {
             x = X_PART(30.6);
-            y = Y_PART(9.2); //not sure why different (double check release)
+            y = Y_PART(9.2); // not sure why different (double check release)
             w = W_PART(1.9);
             h = H_PART(2);
         };
@@ -283,11 +283,11 @@ class RscDisplayInventory {
             h = H_PART(1);
         };
         class GroundLoad: RscProgress {
-            //crate: GroundLoad adjust size
+            // Crate: GroundLoad adjust size
             x = X_PART(1.5);
             y = Y_PART(22.5);
             w = W_PART(11);
-            h = H_PART(0.5); //Default 1
+            h = H_PART(0.5); // Default 1
         };
         class SlotPrimary: GroundTab {
             x = X_PART(26.6);
@@ -345,7 +345,7 @@ class RscDisplayInventory {
         };
         class SlotSecondaryUnderBarrel: SlotPrimary {
             x = X_PART(29);
-            y = Y_PART(14.59); //Why is this different? (check release)
+            y = Y_PART(14.59); // Why is this different? (check release)
             w = W_PART(2.3);
             h = H_PART(2);
         };
@@ -518,11 +518,11 @@ class RscDisplayInventory {
             h = H_PART(0.5);
         };
         class TotalLoad: GroundLoad {
-            //center: progressbar height decrease
+            // Center: progressbar height decrease
             x = X_PART(15.1);
             y = Y_PART(22.5);
             w = W_PART(23.4);
-            h = H_PART(0.5); //Default 1
+            h = H_PART(0.5); // default 1
         };
         class ContainerMarker: GroundTab {
             x = X_PART(0);
