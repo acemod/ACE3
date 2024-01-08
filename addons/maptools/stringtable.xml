@@ -290,15 +290,15 @@
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
             <English>To Plotting Board</English>
-            <Japanese>標定盤へ</Japanese>
+            <Japanese>標定盤に</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
             <English>To Plotting Board Acrylic</English>
-            <Japanese>標定盤の アクリル板へ</Japanese>
+            <Japanese>標定盤の アクリル板に</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
             <English>To Plotting Board Ruler</English>
-            <Japanese>標定盤の 定規へ</Japanese>
+            <Japanese>標定盤の 定規に</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
             <English>Wipe all markers off Plotting Board</English>
@@ -314,7 +314,7 @@
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
             <English>Toggle Plotting Board Ruler</English>
-            <Japanese>標定盤の 定規を 切り替え</Japanese>
+            <Japanese>標定盤の 定規を 表示切替</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_AlignTo">
             <English>Align</English>
