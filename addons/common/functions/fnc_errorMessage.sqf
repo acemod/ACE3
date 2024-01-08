@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2, johnb43, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
- * Stops simulation and opens a textbox with error message.
+ * Opens a textbox with an error message.
  *
  * Arguments:
  * 0: Header <STRING>
@@ -17,7 +17,7 @@
  * None
  *
  * Example:
- * ["[ACE] ERROR", text "Test", {findDisplay 46 closeDisplay 0}] call ace_common_fnc_errorMessage
+ * ["[ACE] ERROR", "Test", {findDisplay 46 closeDisplay 0}] call ace_common_fnc_errorMessage
  *
  * Public: No
  */
@@ -38,7 +38,7 @@ if (isNull (call BIS_fnc_displayMission)) exitWith {
         (_this select 0) call FUNC(errorMessage);
         [_this select 1] call CBA_fnc_removePerFrameHandler;
 
-    }, 1, _this] call CBA_fnc_addPerFrameHandler;
+    }, 0.25, _this] call CBA_fnc_addPerFrameHandler;
 };
 
 params ["_textHeader", "_textMessage", ["_onOK", {}, [{}]], ["_onCancel", {}, [{}]], ["_mainDisplay", call BIS_fnc_displayMission, [displayNull]], ["_showButtons", [true, true]]];
@@ -147,16 +147,18 @@ if (!_showCancelButton || {_onCancel isEqualTo {}}) then {
     ctrlSetFocus _ctrlButtonCancel;
 };
 
-_ctrlButtonOK ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 1; true}];
-_ctrlButtonCancel ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 2; true}];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay 1; true}];
+_ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay 2; true}];
 
 // CBA isn't guaranteed to be loaded
-private _ehID = _display displayAddEventHandler ["unload", {
+private _ehID = _display displayAddEventHandler ["Unload", {
     params ["_display", "_exitCode"];
 
-    call ((_display getVariable [QGVAR(errorMessageCode_) + str _thisEventHandler, [{}, {}, {}]]) select _exitCode)
+    call ((_display getVariable [format [QGVAR(errorMessageCode_%1), _thisEventHandler], createHashMap]) getOrDefault [_exitCode, {}]);
 }];
 
-_display setVariable [QGVAR(errorMessageCode_) + str _ehID, [{}, _onOK, _onCancel]];
+// Prevent data from being overwritten
+_display setVariable [format [QGVAR(errorMessageCode_%1), _ehID], compileFinal createHashMapFromArray [[1, compileFinal _onOK], [2, compileFinal _onCancel]]];
 
-_display displayAddEventHandler ["keyDown", {_this select 1 == 1}];
+// Intercept all keystrokes except the esacpe key
+_display displayAddEventHandler ["KeyDown", {_this select 1 == 1}];
