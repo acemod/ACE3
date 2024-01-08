@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 /*
- * Author: Jaynus, NouberNou
+ * Author: Jaynus, NouberNou, Lambda.Tiger
  * Adds a round to the blacklist (will be ignored).
  *
  * Arguments:
@@ -10,12 +10,12 @@
  * None
  *
  * Example:
- * [bullet] call ace_frag_fnc_addBlackList
+ * [projectile] call ace_frag_fnc_addBlackList
  *
  * Public: No
  */
 
-params ["_round"];
+params ["_proj"];
 TRACE_1("addBlackList",_round);
 
-GVAR(blackList) pushBack _round;
+GVAR(shouldFragCache) set [typeOf _ammo, [false, false]];

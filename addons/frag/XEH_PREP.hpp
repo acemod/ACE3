@@ -1,23 +1,33 @@
+// dev
+PREP(dev_fragCalcDump);
 PREP(dev_debugAmmo);
+PREP(dev_trackHitBox);
+PREP(dev_fadeRound);
+PREP(dev_sphereDraw);
+PREP(dev_addRound);
+PREP(dev_trackObj);
+PREP(dev_drawTrace);
+PREP(dev_clearTraces);
+PREP(dev_switchUnitHandle);
 
-PREP(doSpall);
+// Frag
+PREP(addBlackList);
+PREP(initBlackList);
 PREP(fired);
-PREP(frago);
-PREP(spallTrack);
+PREP(submunition);
+PREP(shouldFrag);
+PREP(fragInfo);
+PREP(doFrag);
+PREP(doFragTargeted);
+PREP(doFragRandom);
+
+// Spall
+PREP(shouldSpall);
+PREP(doSpall);
+PREP(doSpallMomentum);
 
 // * Other */
-PREP(addBlackList);
-PREP(dev_addTrack);
-PREP(dev_drawTraces);
-PREP(spallHP);
-PREP(dev_startTracing);
-PREP(dev_stopTracing);
-PREP(dev_trackTrace);
-
-// New tracking mechanisms
-PREP(masterPFH);
-PREP(pfhRound);
-PREP(addPfhRound);
+//PREP(spallHP); Look at me !*!
 
 // Explosive Reflection
 PREP(findReflections);
