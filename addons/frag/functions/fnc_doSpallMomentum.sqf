@@ -94,14 +94,14 @@ private _fragSpawnType = switch (true) do
 private _shotParent = getShotParents _projectile;
 
 //***** Spawn spalled fragments
-private _fragSpawner = createVehicleLocal [_fragSpawnType, ASLToATL _spallPos, [], 0, "CAN_COLLIDE"];
-_fragSpawner setVectorDirandUp [vectorDir _projectile, vectorUp _projectile];
-_fragSpawner setVelocity _lVelUnit;
-_fragSpawner setShotParents _shotParent;
+private _spallSpawner = createVehicleLocal [_fragSpawnType, ASLToATL _spallPos, [], 0, "CAN_COLLIDE"];
+_spallSpawner setVectorDirandUp [vectorDir _projectile, vectorUp _projectile];
+_spallSpawner setVelocity _lVelUnit;
+_spallSpawner setShotParents _shotParent;
 
 #ifdef DEBUG_MODE_FULL
-systemChat ("bSpd: " + str speed _fragSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _deltaMomentum);
-_fragSpawner addEventHandler [
+systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _deltaMomentum);
+_spallSpawner addEventHandler [
     "SubmunitionCreated",
     {
         params ["", "_subProj"];
