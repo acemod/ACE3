@@ -17,6 +17,15 @@
             <Chinesesimp>破片模拟</Chinesesimp>
             <Chinese>模擬碎片</Chinese>
         </Key>
+        <Key ID="STR_ACE_Frag_Frag">
+            <English>Fragmentation</English>
+        </Key>
+        <Key ID="STR_ACE_Frag_Spall">
+            <English>Spalling</English>
+        </Key>
+        <Key ID="STR_ACE_Frag_Reflections">
+            <English>Explosion Reflections</English>
+        </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
             <Polish>Symulacja fragmentacji</Polish>
