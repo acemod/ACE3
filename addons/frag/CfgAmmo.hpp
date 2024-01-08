@@ -19,7 +19,7 @@ class CfgAmmo {
     class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large	), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+        GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
         GVAR(fragCount) = 17500;
         GVAR(metal) = 140000;
         GVAR(charge) = 87000;
