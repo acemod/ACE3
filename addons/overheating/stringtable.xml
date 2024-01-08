@@ -877,21 +877,27 @@
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType">
             <English>Bolt Type</English>
+            <Japanese>遊底(ボルト)形式</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
             <English>Open Bolt</English>
+            <Japanese>オープンボルト</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
             <English>Closed Bolt</English>
+            <Japanese>クローズドボルト</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType">
             <English>Barrel Type</English>
+            <Japanese>銃身形式</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
             <English>Non-Removeable</English>
+            <Japanese>取り外し不可</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
             <English>Quick Change</English>
+            <Japanese>即時交換可</Japanese>
         </Key>
     </Package>
 </Project>
