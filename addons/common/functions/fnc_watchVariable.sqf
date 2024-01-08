@@ -71,10 +71,10 @@ if (isNull _trackedDisplay) then {
                             (_ctrlGroup controlsGroupCtrl 1) ctrlSetStructuredText parseText format ["%1 (<t color='#00FF00'>%2</t>)", _result, _delta];
                         };
                     } else {
-                        (_ctrlGroup controlsGroupCtrl 1) ctrlSetStructuredText parseText str _result;
+                        (_ctrlGroup controlsGroupCtrl 1) ctrlSetStructuredText parseText format ["%1", _result];
                     };
                 } else {
-                    (_ctrlGroup controlsGroupCtrl 1) ctrlSetStructuredText parseText str _result;
+                    (_ctrlGroup controlsGroupCtrl 1) ctrlSetStructuredText parseText format ["%1", _result];
                 };
             };
         } forEach _varArray;
