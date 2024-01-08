@@ -40,6 +40,17 @@ if (_isInRemainsCollector) then {
     removeFromRemainsCollector [_target];
 };
 
+// Make sure clone has the same wound textures as the corpse
+private _targetDamage = damage _target;
+if (_targetDamage != 0) then {
+    _clone setDamage (_targetDamage min 0.99); // Don't kill the clone
+};
+private _relevantHitpoints = ["HitHead", "HitBody", "HitHands", "HitLegs"];
+{
+    private _hitpointDamage = _target getHitPointDamage _x;
+    _clone setHitPointDamage [_x, _hitpointDamage min 0.99];
+} forEach _relevantHitpoints;
+
 // Disable all damage
 _clone allowDamage false;
 _clone setVariable [QGVAR(original), [_target, _isInRemainsCollector, _isObjectHidden], true];
