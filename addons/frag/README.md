@@ -11,3 +11,4 @@ TODO:
 - performance optimization
 - Finish stringtable expansion with additional normal & debug settings
 - cDLC, RHS, CUP compats
+- look at / try to understand explosion reflections
