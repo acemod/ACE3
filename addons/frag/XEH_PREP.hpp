@@ -20,7 +20,7 @@ PREP(addBlackList);
 PREP(initBlackList);
 PREP(submunition);
 PREP(shouldFrag);
-PREP(fragInfo);
+PREP(getFragInfo);
 PREP(doFrag);
 PREP(doFragTargeted);
 PREP(doFragRandom);
