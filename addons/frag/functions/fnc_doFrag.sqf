@@ -19,24 +19,33 @@
  *
  * Public: No
  */
-
 params ["_args", ["_isSubMunit", false, [false]]];
 _args params [
     ["_proj", objNull, [objNull]], 
     ["_posASL", [0,0,0], [[]], [3]], 
     ["_vel", [0,0,0] , [[]], [3]]
 ];
+TRACE_3("",_proj,_posASL,_vel);
+
+private _shotParents = getShotParents _proj;
+private _shotParentVic = _shotParents#0;
+if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] < CBA_missionTime) exitWith {
+	TRACE_1("vehicleTimeExit",_shotParentVic);
+};
+_shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF];
 
 private _timeSince = CBA_missionTime - GVAR(lastFragTime);
-if (isNull _proj || {_posASL isEqualTo [0,0,0] || _timeSince < 0.2}) exitWith {};
+if (isNull _proj || {_posASL isEqualTo [0,0,0] || _timeSince < 0.2}) exitWith {
+	TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
+};
 GVAR(lastFragTime) = CBA_missionTime;
-private _maxFrags = round (linearConversion [0.1, 1.5, _timeSince, MAX_FRAG_COUNT_MIN, MAX_FRAG_COUNT_MAX, true]);
+private _maxFrags = round (linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true]);
+TRACE_3("",_timeSince,CBA_missionTime,_maxFrags);
+
 
 private _ammo = typeOf _proj;
 private _ammoArr = [_ammo] call FUNC(fragInfo);
 _ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
-
-private _shotParents = getShotParents _proj;
 
 private _heightAGL = (ASLToAGL _posASL)#2;
 if (_heightAGL < 0.25) then {
