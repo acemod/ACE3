@@ -15,6 +15,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     false,
     1
 ] call CBA_fnc_addSetting;
+
+
 [
     QGVAR(reflectionsEnabled), "CHECKBOX",
     [LSTRING(EnableReflections), LSTRING(EnableReflections_Desc)],
@@ -30,13 +32,6 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     ["Enable submunition fragmentation", "Enables submunition fragmentation when fragmentation is enabled"],
     [_category, LSTRING(Frag)],
     [[2, 1, 0], ["complex fragementation","simple fragmentation","no fragmentation"], 2]
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(reflectionsEnabled), "CHECKBOX", 
-    "Enable reflections",
-    [_category, LSTRING(Frag)],
-    false
 ] call CBA_fnc_addSetting;
 
 [
