@@ -25,7 +25,7 @@ if ((isNil "_lPosASL") || {!(_lPosASL isEqualTypeArray [0,0,0])}) exitWith {
 };
 
 private _vel = if (alive _projectile) then {
-        _velocity _projectile; 
+        velocity _projectile; 
 } else {
     [0, 0, 0]
 };
