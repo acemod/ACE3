@@ -26,15 +26,15 @@ private _vel = [0, 0, 0];
 private _lVelUnit = vectorNormalized _lVel;
 private _velMod = 1;
 if (alive _projectile) then {
-        _vel = velocity _projectile; 
-        _posASL = getPosASL _projectile; 
-        // Dot product math 
+    _vel = velocity _projectile; 
+    _posASL = getPosASL _projectile; 
+    // Dot product math 
     private _diffAngle = acos (_lVelUnit vectorDotProduct vectorNormalized _vel);
         
     if (abs _diffAngle > 45) then {
             SUB(_velMod, (vectorMagnitude _vel) / (vectorMagnitude _lVel));
     };
-        _projectile setVariable [QGVAR(lastSpallTime), diag_tickTime ];
+    _projectile setVariable [QGVAR(lastSpallTime), diag_tickTime ];
 };
 
 
@@ -46,9 +46,9 @@ if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {};
 // step through
 for "_i" from 1 to 20 do 
 {
-        private _nPos = _spallPos vectorAdd _unitStep;
-        if (!lineIntersects [_spallPos, _nPos]) then {break};
-        _spallPos = +_nPos;
+    private _nPos = _spallPos vectorAdd _unitStep;
+    if (!lineIntersects [_spallPos, _nPos]) then {break};
+    _spallPos = +_nPos;
 };
 #ifdef DEBUG_MODE_FULL
 [_spallPos, "orange"] call FUNC(dev_sphereDraw);
@@ -66,22 +66,8 @@ systemChat ("dV: " + str _dv + ", caliber: " + str _caliber + ", product: " + st
 #endif
 
 if (_explosive > 0) then {
-    // ACE_player sideChat format ["EXPLOSIVE!"];
-    //private _warn = false;
-    private _c = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_frag_CHARGE");
-    if (_c == 0) then {_c = 1}; //; _warn = true;};
-    private _m = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_frag_METAL");
-    if (_m == 0) then {_m = 2;};// _warn = true;};
-    private _k = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_frag_GURNEY_K");
-    if (_k == 0) then {_k = 1 / 2;};// _warn = true;};
-    private _gC = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_frag_GURNEY_C");
-    if (_gC == 0) then {_gC = 2440};// _warn = true;};
-
-    // if (_warn) then {
-        // WARNING_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_roundType); //TODO: turn this off when we get closer to release
-    // };
-
-    _velMod = (((_m / _c) + _k) ^ - (1 / 2)) * _gC * 0.66 * _velMod;
+	private _fragMod =  (_ammo call FUNC(fragInfo))#1;
+    _velMod = _fragMod * _velMod;
 };
 
 // diag_log text format ["SPALL POWER: %1", _spallPolar select 0];
