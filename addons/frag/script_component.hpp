@@ -4,7 +4,7 @@
 
 // #define LOG_FRAG_INFO
 #define DEBUG_MODE_FULL
-#define DISABLE_COMPILE_CACHE
+// #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_FRAG
@@ -18,7 +18,7 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define ACE_FRAG_HOLDOFF 1
-#define ACE_FRAG_SPALL_HOLDOFF 0.1
+#define ACE_FRAG_SPALL_HOLDOFF 0.2
 #define ACE_FRAG_COUNT_MIN 5
 #define ACE_FRAG_COUNT_MAX 50
 #define ACE_FRAG_HITPOINTS  ["spine1","spine2","spine3","head","leftarm","leftarmroll","leftforearm","rightarm","rightarmroll","rightforearm","pelvis","leftupleg","leftuplegroll","leftlegroll","leftfoot","rightupleg","rightuplegroll","rightleg","rightlegroll","rightfoot"]

@@ -26,6 +26,9 @@
         <Key ID="STR_ACE_Frag_Reflections">
             <English>Explosion Reflections</English>
         </Key>
+        <Key ID="STR_ACE_Frag_Debug">
+            <English>Debug</English>
+        </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
             <Polish>Symulacja fragmentacji</Polish>
