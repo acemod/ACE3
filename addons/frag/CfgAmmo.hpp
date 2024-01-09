@@ -1,6 +1,9 @@
 #define BASE_DRAG -0.01
 #define HD_MULT 5
 #define BASE_DRAG_HD (BASE_DRAG * HD_MULT)
+#define ACE_FRAG_RM_EH class EventHandlers {\
+	delete  ADDON;\
+}
 
 class CfgAmmo {
     class B_65x39_Caseless;
@@ -16,6 +19,7 @@ class CfgAmmo {
         typicalSpeed = 800;
         maxSpeed = 1500;
         deflecting = 65;
+		ACE_FRAG_RM_EH;
     };
 
     class GVAR(tiny): GVAR(base) {

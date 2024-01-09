@@ -13,6 +13,7 @@ class GVAR(spawnbase) : B_65x39_Caseless {
     submunitionParentSpeedCoef = 1;
     triggerSpeedCoef[] = {0.75, 1.5};
     triggerTime = 0;
+	ACE_FRAG_RM_EH;
 };
 
 /********************* ***************************/
