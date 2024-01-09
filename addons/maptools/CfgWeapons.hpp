@@ -18,7 +18,7 @@ class CfgWeapons {
     class ACE_PlottingBoard: ACE_ItemCore {
         displayName = CSTRING(PlottingBoard_Name);
         author = ECSTRING(common,ACETeam);
-        descriptionShort = CSTRING(Description);
+        descriptionShort = CSTRING(PlottingBoard_Description);
         model = QPATHTOF(data\ace_MapTools.p3d);
         picture = QPATHTOF(UI\plottingboard_item.paa);
         scope = 2;
