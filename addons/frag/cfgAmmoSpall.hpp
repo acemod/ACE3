@@ -37,14 +37,14 @@ class GVAR(spall_medium) : GVAR(spallBase)
 
 class GVAR(spall_large) : GVAR(spallBase)
 {
-    submunitionAmmo[] = {QGVAR(tiny), 3, QGVAR(tiny_HD), 3, QGVAR(small), 4, QGVAR(small_HD), 4, QGVAR(medium_HD), 5, QGVAR(large), 2, QGVAR(large_HD), 2, QGVAR(huge),1};
+    submunitionAmmo[] = {QGVAR(tiny), 3, QGVAR(tiny_HD), 3, QGVAR(small), 4, QGVAR(small_HD), 4, QGVAR(medium_HD), 5, QGVAR(large), 1, QGVAR(large_HD), 2};
     submunitionConeType[] = {"poissondisccenter", 15};
     submunitionConeAngle = 40;
 };
 
 class GVAR(spall_huge) : GVAR(spallBase)
 {
-    submunitionAmmo[] = {QGVAR(tiny), 3, QGVAR(tiny_HD), 3, QGVAR(small), 4, QGVAR(small_HD), 4, QGVAR(medium_HD), 5, QGVAR(large), 2, QGVAR(large_HD), 2, QGVAR(huge),1};
+    submunitionAmmo[] = {QGVAR(tiny), 3, QGVAR(tiny_HD), 3, QGVAR(small), 4, QGVAR(small_HD), 4, QGVAR(medium), 5, QGVAR(large), 1, QGVAR(large_HD), 2};
     submunitionConeType[] = {"poissondisccenter", 20};
     submunitionConeAngle = 40;
 };
