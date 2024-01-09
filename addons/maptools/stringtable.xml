@@ -37,10 +37,12 @@
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Name">
             <English>Plotting Board</English>
+            <Korean>플로팅 보드</Korean>
             <Japanese>標定盤</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
             <English>The Plotting Board is a map tool designed for use in the directing of short range indirect fires.</English>
+            <Korean>플로팅 보드는 단거리 간접 사격을 지시하는 데 사용하도록 설계된 독도용 도구입니다.</Korean>
             <Japanese>標定盤(プロッティング・ボード)は、短距離の間接射撃の指示に使用するために設計されたマップツールです。</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
@@ -263,58 +265,72 @@
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_displayName">
             <English>Allow Plotting Board Drawing channels</English>
             <Japanese>標定盤への書き込みを許可するチャンネル</Japanese>
+            <Korean>플로팅 보드 그리기 채널 허용</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
             <English>Channels in which plotting board drawing is enabled.</English>
             <Japanese>どのチャンネルで標定盤の書き込みを有効化するか。</Japanese>
+            <Korean>플로팅 보드 그리기가 활성화된 채널입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
             <English>Allow Direct Comms Only (Polylines Only)</English>
             <Japanese>直接チャンネルのみ許可 (線のみ)</Japanese>
+            <Korean>직접교신만 허용 (선 긋기만)</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectGroupComms">
             <English>Allow Direct/Group Comms (Polylines and Group Markers)</English>
             <Japanese>直接/グループチャンネルを許可 (線とグループマーカー)</Japanese>
+            <Korean>직접교신/그룹무전망 허용 (선 긋기와 그룹 마커)</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
             <English>Plotting Board</English>
             <Japanese>標定盤</Japanese>
+            <Korean>플로팅 보드</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardAcrylicLabel">
             <English>Plotting Board Acrylic</English>
             <Japanese>標定盤の アクリル板</Japanese>
+            <Korean>플로팅 보드 (아크릴)</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
             <English>Plotting Board Ruler</English>
             <Japanese>標定盤の 定規</Japanese>
+            <Korean>플로팅 보드 (자)</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
             <English>To Plotting Board</English>
             <Japanese>標定盤に</Japanese>
+            <Korean>플로팅 보드에</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
             <English>To Plotting Board Acrylic</English>
             <Japanese>標定盤の アクリル板に</Japanese>
+            <Korean>플로팅 보드 (아크릴)에</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
             <English>To Plotting Board Ruler</English>
             <Japanese>標定盤の 定規に</Japanese>
+            <Korean>플로팅 보드 (자)에</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
             <English>Wipe all markers off Plotting Board</English>
             <Japanese>標定盤の 全マーカーを 拭き消す</Japanese>
+            <Korean>플로팅 보드에 있는 모든 마커 지우기</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
             <English>Show Plotting Board</English>
             <Japanese>標定盤を 表示</Japanese>
+            <Korean>플로팅 보드 보이기</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_HidePlottingBoard">
             <English>Hide Plotting Board</English>
             <Japanese>標定盤を 隠す</Japanese>
+            <Korean>플로팅 보드 숨기기</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
             <English>Toggle Plotting Board Ruler</English>
             <Japanese>標定盤の 定規を 表示切替</Japanese>
+            <Korean>플로팅 보드 (자) 토글</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_AlignTo">
             <English>Align</English>
@@ -327,6 +343,7 @@
             <Polish>Wyrównaj</Polish>
             <Czech>Srovnat</Czech>
             <Russian>Выровнять</Russian>
+            <Korean>맞춤 기준:</Korean>
             <Japanese>向きを合わせる</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_ToNorthLabel">
@@ -340,6 +357,7 @@
             <Polish>Do północy</Polish>
             <Czech>Na sever</Czech>
             <Russian>На север</Russian>
+            <Korean>북쪽으로</Korean>
             <Japanese>北に</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_ToCompassLabel">
@@ -354,14 +372,17 @@
             <Czech>Ke kompasu</Czech>
             <Russian>По компасу</Russian>
             <Japanese>方位磁石に</Japanese>
+            <Korean>나침반으로</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_ToUpLabel">
             <English>Up</English>
             <Japanese>上に</Japanese>
+            <Korean>위로</Korean>
         </Key>
         <Key ID="STR_ACE_MapTools_ToMapToolLabel">
             <English>To Maptool</English>
             <Japanese>マップツールに</Japanese>
+            <Korean>독도용 도구로</Korean>
         </Key>
     </Package>
 </Project>
