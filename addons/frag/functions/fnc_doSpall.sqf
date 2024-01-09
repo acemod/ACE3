@@ -66,7 +66,7 @@ systemChat ("dV: " + str _dv + ", caliber: " + str _caliber + ", product: " + st
 #endif
 
 if (_explosive > 0) then {
-	private _fragMod =  (_ammo call FUNC(fragInfo))#1;
+	private _fragMod =  (_ammo call FUNC(getFragInfo))#1;
     _velMod = _fragMod * _velMod;
 };
 

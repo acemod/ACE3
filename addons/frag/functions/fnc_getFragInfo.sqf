@@ -16,7 +16,7 @@
  *									 of spherical fragmentation
  *
  * Example:
- * ["B_556x45_Ball"] call ace_frag_fnc_fragInfo;
+ * ["B_556x45_Ball"] call ace_frag_fnc_getFragInfo;
  *
  * Public: No
  */

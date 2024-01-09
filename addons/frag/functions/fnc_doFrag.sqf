@@ -44,7 +44,7 @@ private _maxFrags = round (linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUN
 TRACE_3("",_timeSince,CBA_missionTime,_maxFrags);
 
 
-private _ammoArr = [_ammo] call FUNC(fragInfo);
+private _ammoArr = [_ammo] call FUNC(getFragInfo);
 _ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
 
 private _heightAGL = (ASLToAGL _posASL)#2;

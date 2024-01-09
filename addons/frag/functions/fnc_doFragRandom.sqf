@@ -31,14 +31,13 @@ params [
 ];
 TRACE_5("fnc_doFragRandom", _posASL, _projVel, _heightAGL, _fragType, _fragCnt);
 
-// See CfgAmmo for different frag types
+// See cfgAmmoFragSpawner for different frag types
 private _hMode = switch (true) do {
     case (_heightAGL > 10): {"_top"};
     case (_heightAGL > 5): {"_hi"};
     default {"_mid"};
 };
 
-// Select the cfgAmmo type 
 private _type = if (count _fragType > 0 && 
     				{"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
     QGVAR(def_tiny_)

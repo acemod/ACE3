@@ -51,18 +51,19 @@ private _lVelUnit = vectorNormalized _lVel;
 private _ammo = typeOf _projectile;
 private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
 private _caliber = getNumber (configFile >> "cfgAmmo" >> _ammo >> "caliber"); // !*! optimize this later?
-private _deltaMomentum =  0.4 * _caliber * sqrt( _dV * 0.032 );
+// scaled momentum change made on caliber-mass assumption ~sqrt(2)/20 * caliber ~= mass
+private _deltaMomentum =  0.07071 * _caliber * sqrt( _dV ); 
 
 TRACE_3("found speed",_dV,_caliber,_deltaMomentum);
 
-if (_deltaMomentum < 1) exitWith {
+if (_deltaMomentum < 2) exitWith {
     TRACE_1("lowImpulse",_ammo);
 };
 
 //** start calculating where the spalling should come !*! could be better  **// 
 private _unitStep = _lVelUnit vectorMultiply 0.05;
 private _spallPos = +_lPosASL;
-// exit if we hit the ground
+
 if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
     TRACE_3("terrainIntersect",_lPosASL,_unitStep,_lPosASL);
 }; 
@@ -81,16 +82,15 @@ for "_i" from 1 to 20 do
 [_spallPos, "green"] call FUNC(dev_sphereDraw);
 [_lPosASL vectorAdd _lVelUnit, "orange"] call FUNC(dev_sphereDraw);
 [_lPosASL, "orange"] call FUNC(dev_sphereDraw);
-private _str = GVAR(materialSpallCache) getOrDefault [str _surfaceType, "["];
-_str =_str + str [_dV, _caliber, abs vectorMagnitude (_lPosASL vectorDiff _spallPos)] + ";";
-GVAR(materialSpallCache) set [str _surfaceType, _str];
-if (_deltaMomentum < 2) exitWith {};
 #endif
  
 //***** Passed all other exit withs, performance o'clock */
 GVAR(lastSpallTime) = CBA_missionTime;
 
 //***** Select spalled fragment spawner **//
+
+private _material = [_surfaceType] call FUNC(getMaterialInfo);
+
 private _fragSpawnType = switch (true) do 
 {
     case (_deltaMomentum < 3): { QGVAR(spall_tiny) };
