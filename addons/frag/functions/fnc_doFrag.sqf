@@ -29,7 +29,7 @@ TRACE_3("",_proj,_posASL,_vel);
 
 private _shotParents = getShotParents _proj;
 private _shotParentVic = _shotParents#0;
-if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] < CBA_missionTime) exitWith {
+if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exitWith {
 	TRACE_1("vehicleTimeExit",_shotParentVic);
 };
 _shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF];
