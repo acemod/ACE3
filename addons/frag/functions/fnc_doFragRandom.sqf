@@ -35,13 +35,12 @@ TRACE_5("fnc_doFragRandom", _posASL, _projVel, _heightAGL, _fragType, _fragCnt);
 private _hMode = switch (true) do {
     case (_heightAGL > 10): {"_top"};
     case (_heightAGL > 5): {"_hi"};
-    case (_heightAGL > 1.5): {"_mid"};
     default {"_mid"};
 };
 
 // Select the cfgAmmo type 
 private _type = if (count _fragType > 0 && 
-                                    {"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
+    				{"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
     QGVAR(def_tiny_)
 } else {
     QGVAR(def_small_)
@@ -55,6 +54,7 @@ _fragCnt = switch (true) do {
 
 // Spawn the fragment spawner
 private _fragSpawner = createVehicle [_type + _fragCnt + _hMode, ASLToATL _posASL, [], 0, "CAN_COLLIDE"];
+_fragSpawner setVectorDirandUp [[0,0,1], [1,0,0]];
 _fragSpawner setVelocity _projVel;
 _fragSpawner setShotParents _shotParents;
 
@@ -63,9 +63,9 @@ _fragSpawner setShotParents _shotParents;
     _fragSpawner addEventHandler [
         "SubmunitionCreated",
         {
-            params ["","_proj","_posASL"];
-            [_posASL] call FUNC(dev_sphereDraw);
-            [_proj, "green", true] call FUNC(dev_trackObj);
+            params ["","_subProj"];
+            [_subProj, "green", true] call FUNC(dev_trackObj);
         }
     ];
+    [_posASL] call FUNC(dev_sphereDraw);
 #endif 
