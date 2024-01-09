@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Lambda.Tiger
+ * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function handles creating both random and targeted fragments as well
  * as handling some of the performance optimizations.
  *
@@ -28,6 +28,7 @@ _args params [
 TRACE_3("",_proj,_posASL,_vel);
 
 private _shotParents = getShotParents _proj;
+private _ammo = typeOf _proj;
 private _shotParentVic = _shotParents#0;
 if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exitWith {
 	TRACE_1("vehicleTimeExit",_shotParentVic);
@@ -35,7 +36,7 @@ if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exit
 _shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF];
 
 private _timeSince = CBA_missionTime - GVAR(lastFragTime);
-if (isNull _proj || {_posASL isEqualTo [0,0,0] || _timeSince < 0.2}) exitWith {
+if (_ammo isEqualTo "" || {_posASL isEqualTo [0,0,0] || _timeSince < 0.2}) exitWith {
 	TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
 };
 GVAR(lastFragTime) = CBA_missionTime;
@@ -43,7 +44,6 @@ private _maxFrags = round (linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUN
 TRACE_3("",_timeSince,CBA_missionTime,_maxFrags);
 
 
-private _ammo = typeOf _proj;
 private _ammoArr = [_ammo] call FUNC(fragInfo);
 _ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
 

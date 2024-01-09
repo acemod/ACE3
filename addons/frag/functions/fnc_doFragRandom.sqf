@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Lambda.Tiger
+ * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function creates fragments randomly spreading out from an explosion to
  * a maximum of 15
  * 

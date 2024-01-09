@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Lambda.Tiger
+ * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function creates fragments targeted at specific entities, up to 
  * a configured maximum 
  * 
