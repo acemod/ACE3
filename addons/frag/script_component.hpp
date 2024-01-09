@@ -17,7 +17,8 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define ACE_FRAG_HOLDOFF 1
+#define ACE_FRAG_HOLDOFF 0.2
+#define ACE_FRAG_HOLDOFF_VEHICLE 1
 #define ACE_FRAG_SPALL_HOLDOFF 0.2
 #define ACE_FRAG_COUNT_MIN 5
 #define ACE_FRAG_COUNT_MAX 50

@@ -8,12 +8,7 @@
 class CfgAmmo {
     class B_65x39_Caseless;
 
-	#include "cfgAmmoBaseEH.hpp"
-	#include "cfgAmmoSpall.hpp"
-	#include "cfgAmmoFragAddition.hpp"
-	#include "cfgAmmoFragSpawner.hpp"
-
-    class GVAR(base): B_65x39_Caseless {
+	class GVAR(base): B_65x39_Caseless {
         ACE_damageType = "grenade"; // compatibility with medical_damage, shrapnel should produce grenade wounds
         timeToLive = 4;
         typicalSpeed = 800;
@@ -89,4 +84,9 @@ class CfgAmmo {
         airFriction = QUOTE(BASE_DRAG_HD*0.5);
         caliber = 2.8;
     };
+
+	#include "cfgAmmoBaseEH.hpp"
+	#include "cfgAmmoSpall.hpp"
+	#include "cfgAmmoFragParameters.hpp"
+	#include "cfgAmmoFragSpawner.hpp"
 };

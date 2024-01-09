@@ -7,8 +7,8 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 
-GVAR(materialSpallCache) = createHashMap;
-GVAR(spallRoundCache) = createHashMapFromArray [["", "metal"]];
+GVAR(materialSpallCache) = createHashMapFromArray [["", "metal"]];
+GVAR(spallRoundCache) = createHashMap;
 GVAR(lastSpallTime) = -2;
 
 GVAR(shouldFragCache) = createHashMap;

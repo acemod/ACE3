@@ -15,24 +15,28 @@
  *
  * Public: No
  */
+TRACE_1("",_this);
 params [
 	"_projectile",
 	["_hitObj", objNull],
-	"",
+//	"",
 	["_lPosASL", [0, 0, 0]],
 	["_lVel", [0, 0, 0]],
-	"",
-	"",
-	"",
-	["_surfaceType", ""]
+//	"",
+//	"",
+//	"",
+	["_surfaceType", ""],
+	["_ammo", "", [""]],
+	["_shotParents", [objNull, objNull], [[]]],
+	["_vUp", [0,0,1]]
 ];
 
 if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF) exitWith {
 	TRACE_2("timeExit",CBA_missionTime,GVAR(lastSpallTime));
 };
 
-if (!(isNull _hitObj) && {_hitObj isKindOf "man"}) exitWith {
-	TRACE_1("hitPerson",_hitObj);
+if (isNull _hitObj || {_hitObj isKindOf "man"}) exitWith {
+	TRACE_1("invalidHit",_hitObj);
 };
 
 if (_lPosASL isEqualTo [0,0,0]) exitWith {
@@ -48,7 +52,6 @@ private _lVelUnit = vectorNormalized _lVel;
 
 
 // Find spall speed / fragment
-private _ammo = typeOf _projectile;
 private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
 private _caliber = getNumber (configFile >> "cfgAmmo" >> _ammo >> "caliber"); // !*! optimize this later?
 // scaled momentum change made on caliber-mass assumption ~sqrt(2)/20 * caliber ~= mass
@@ -59,6 +62,9 @@ TRACE_3("found speed",_dV,_caliber,_deltaMomentum);
 if (_deltaMomentum < 2) exitWith {
     TRACE_1("lowImpulse",_ammo);
 };
+
+private _material = [_surfaceType] call FUNC(getMaterialInfo);
+TRACE_1("materialCacheRetrieved",_material);
 
 //** start calculating where the spalling should come !*! could be better  **// 
 private _unitStep = _lVelUnit vectorMultiply 0.05;
@@ -79,9 +85,11 @@ for "_i" from 1 to 20 do
 };
 
 #ifdef DEBUG_MODE_FULL
-[_spallPos, "green"] call FUNC(dev_sphereDraw);
-[_lPosASL vectorAdd _lVelUnit, "orange"] call FUNC(dev_sphereDraw);
-[_lPosASL, "orange"] call FUNC(dev_sphereDraw);
+if GVAR(dbgSphere) then {
+	[_spallPos, "green"] call FUNC(dev_sphereDraw);
+	[_lPosASL vectorAdd _lVelUnit, "orange"] call FUNC(dev_sphereDraw);
+	[_lPosASL, "orange"] call FUNC(dev_sphereDraw);
+};
 #endif
  
 //***** Passed all other exit withs, performance o'clock */
@@ -89,7 +97,6 @@ GVAR(lastSpallTime) = CBA_missionTime;
 
 //***** Select spalled fragment spawner **//
 
-private _material = [_surfaceType] call FUNC(getMaterialInfo);
 
 private _fragSpawnType = switch (true) do 
 {
@@ -100,14 +107,11 @@ private _fragSpawnType = switch (true) do
     default { QGVAR(spall_huge) };
 };
 
-// Shot parent
-private _shotParent = getShotParents _projectile;
-
 //***** Spawn spalled fragments
 private _spallSpawner = createVehicleLocal [_fragSpawnType, ASLToATL _spallPos, [], 0, "CAN_COLLIDE"];
-_spallSpawner setVectorDirandUp [vectorDir _projectile, vectorUp _projectile];
+_spallSpawner setVectorDirandUp [_lVelUnit, _vUp];
 _spallSpawner setVelocity (_lVelUnit vectorMultiply (_dV/2));
-_spallSpawner setShotParents _shotParent;
+_spallSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
 systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _deltaMomentum);

@@ -25,11 +25,40 @@ params ["_surfType"];
 
 private _material = GVAR(materialSpallCache) get _surfType;
 
-if !(isNil "_material") exitWith {_material};
+TRACE_2("materialCache",_surfType,_material);
+if !(isNil "_material") exitWith {
+    _material
+};
 
-private _str = GVAR(materialSpallCache) getOrDefault [str _surfaceType, "["];
-_str =_str + str [_dV, _caliber, abs vectorMagnitude (_lPosASL vectorDiff _spallPos)] + ";";
+if (isClass (configFile >> "CfgSurfaces" >> _surfType)) then {
+    _material = getText (configFile >> "CfgSurfaces" >> _surfType >> "soundEnviron");
+} else { // Messy way when a surface isn't added to cfgSurfaces
+    private _surfFileText = loadFile _surfType;
+    _surfFileText = (tolower _surfFileText) splitString " ;="+ endl;
+    private _idx = _surfFileText find "soundenviron";
+    _material = _surfFileText#(_idx+1);
+    if (_material isEqualTo "empty") then {
+        _idx = _surfFileText find "soundhit";
+        _material = _surfFileText#(_idx+1);
+    };
+};
+TRACE_1("soundFound",_material);
 
-GVAR(materialSpallCache) set [_surfaceType, _material];
+
+_material = switch (true) do {
+    case ("dirt" in _material);
+    case ("grass" in _material): { "ground" };
+    case ("gravel" in _material);
+    case ("rock" in _material): { "rock" };
+    case ("wood" in _material): { "wood" };
+    case ("lino" in _material);
+	case ("building" isEqualTo _material);
+    case ("concrete" in _material): { "concrete" };
+    case ("metal" in _material): { "metal" };
+    default { "ground" };
+};
+
+GVAR(materialSpallCache) set [_surfType, _material];
+TRACE_2("materialCacheSet",_surfType,_material);
 
 _material

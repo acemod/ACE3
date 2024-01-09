@@ -29,6 +29,7 @@ PREP(doFragRandom);
 PREP(shouldSpall);
 PREP(doSpall);
 PREP(doSpallMomentum);
+PREP(getMaterialInfo);
 //PREP(spallHP); Look at me !*!
 
 // Explosive Reflection

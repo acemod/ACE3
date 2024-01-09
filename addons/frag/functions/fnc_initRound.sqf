@@ -15,7 +15,7 @@
  * Public: No
  */
 params [
-	["_projectile", objNull, [objNull]]
+    ["_projectile", objNull, [objNull]]
 ];
 
 private _ammo = typeOf _projectile;
@@ -29,12 +29,21 @@ _shouldFrag params ["_doFrag"];
 if (_doFrag) then {
     // wait for frag damage to kill units before spawning fragments
     _projectile addEventHandler [
-		"Explode",
-		{
+        "Explode",
+        {
+            params ["_proj"];
+            private _shotParents = getShotParents _proj;
+            private _ammo = typeOf _proj;
             if (isServer) then {
-                [FUNC(doFrag), [_this]] call CBA_fnc_execNextFrame;
+                [
+                    FUNC(doFrag),
+                    _this + [_ammo, _shotParents]
+                ] call CBA_fnc_execNextFrame;
             } else {
-                [QGVAR(frag_eh), [_this]] call CBA_fnc_serverEvent;
+                [
+                    QGVAR(frag_eh),
+                    [_this + [_ammo, _shotParents]]
+                ] call CBA_fnc_serverEvent;
             };
         }
     ];
@@ -45,13 +54,26 @@ private _shouldSpall = _ammo call FUNC(shouldSpall);
 
 if (GVAR(spallEnabled) && {_shouldSpall}) then 
 {
-	_projectile addEventHandler [
+    _projectile addEventHandler [
         "HitPart",
         {
+			params ["_proj", "_hitObj", "",
+				"_posASL", "_vel", "", "",
+				"", "surfType"
+			];
+            private _shotPrnt = getShotParents _proj;
+            private _ammo = typeOf _proj;
+			private _vUp = vectorUp _proj;
             if (isServer) then {
-                [LINKFUNC(doSpallMomentum), _this] call CBA_fnc_execNextFrame;
+                [
+                    LINKFUNC(doSpallMomentum),
+                    [_proj, _hitObj, _posASL, _vel, surfType, _shotPrnt, _ammo, _vUp]
+                ] call CBA_fnc_execNextFrame;
             } else {
-                [QGVAR(spall_eh), [_this]] call CBA_fnc_serverEvent;
+                [
+                    QGVAR(spall_eh),
+                    [_proj, _hitObj, _posASL, _vel, surfType, _shotPrnt, _ammo, _vUp]
+                ] call CBA_fnc_serverEvent;
             };
         }
     ];
