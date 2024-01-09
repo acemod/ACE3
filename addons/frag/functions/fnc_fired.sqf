@@ -22,7 +22,7 @@ if (isNil "_ammo" ||
         {_ammo isEqualTo "" || 
         {isNil "_projectile" || 
         {isNull _projectile}}}) exitWith {
-    WARNING("bad ammo or projectile");
+    TRACE_2("bad ammo or projectile",_projectile,_ammo);
 };
 
 /******* _shouldFrag format *****/
@@ -53,8 +53,11 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
 {_projectile addEventHandler [
         "HitPart",
         {
-            [LINKFUNC(doSpallMomentum), _this] call CBA_fnc_execNextFrame;
-            [QGVAR(spall_eh), [_this]] call CBA_fnc_serverEvent;
+            if (isServer) then {
+                [LINKFUNC(doSpallMomentum), _this] call CBA_fnc_execNextFrame;
+            } else {
+                [QGVAR(spall_eh), [_this]] call CBA_fnc_serverEvent;
+            };
         }
     ];
 };
