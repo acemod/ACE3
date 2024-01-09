@@ -1,6 +1,6 @@
 #define ACE_FRAG_ADD_EH class EventHandlers {\
 	class ADDON {\
-		init = QUOTE(_this call FUNC(initRound));\
+		init = QUOTE(_this call FUNC(initRound););\
 	};\
 }
 
@@ -9,7 +9,8 @@ class Bo_Mk82: BombCore {
 	ACE_FRAG_ADD_EH;
 };
 
-class BulletCore;
+// We need this since autocannons generally inherit from BulletBase
+class BulletCore; 
 class BulletBase: BulletCore {
 	ACE_FRAG_ADD_EH;
 };

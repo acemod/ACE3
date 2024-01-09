@@ -17,16 +17,11 @@
 
         // Debug info 
 #ifdef DEBUG_MODE_FULL
-        if (hasInterface && GVAR(debugOptions)) then
-        {	
-        private _h = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
-        missionNamespace setVariable [QGVAR(dev_drawPFEH), _h];
-        ["unit", LINKFUNC(dev_switchUnitHandle), true] call CBA_fnc_addPlayerEventHandler;
-        [objNull, ace_player] call FUNC(dev_switchUnitHandle);
-            ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+        if (hasInterface && GVAR(debugOptions)) then {	
+	        private _h = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
+	        missionNamespace setVariable [QGVAR(dev_drawPFEH), _h];
+	        ["unit", LINKFUNC(dev_switchUnitHandle), true] call CBA_fnc_addPlayerEventHandler;
+	        [objNull, ace_player] call FUNC(dev_switchUnitHandle);
         };
 #endif
 }] call CBA_fnc_addEventHandler;
