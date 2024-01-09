@@ -125,7 +125,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_brown_WP">
             <English>NV Goggles (Gen3, Brown, WP)</English>
-            <Japanese>暗視装置 (第3世代、ブラウン)</Japanese>
+            <Japanese>暗視装置 (第3世代、ブラウン、白色蛍光)</Japanese>
             <Italian>Visore Notturno (Gen3, Marrone, FB)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, Brązowe, WP)</Polish>
             <German>NS-Brille (3. Generation, Braun, WP)</German>
@@ -219,7 +219,7 @@
             <French>JVN (Gen4, noires)</French>
             <Russian>ПНВ (Gen4, Чёрный)</Russian>
             <Italian>Visore Notturno (Gen4, Nero)</Italian>
-            <Japanese>暗視装置 (第3世代、ブラック)</Japanese>
+            <Japanese>暗視装置 (第4世代、ブラック)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 4, Czarne)</Polish>
             <German>NS-Brille (4. Gen., schwarz)</German>
             <Chinesesimp>夜视仪（四代，黑色）</Chinesesimp>
@@ -228,7 +228,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black_WP">
             <English>NV Goggles (Gen4, Black, WP)</English>
-            <Japanese>暗視装置 (第3世代、ブラック、白色蛍光)</Japanese>
+            <Japanese>暗視装置 (第4世代、ブラック、白色蛍光)</Japanese>
             <Italian>Visore Notturno (Gen4, Nero, FB)</Italian>
             <Polish>Gogle noktowizyjne (Gen 4, Czarne, WP)</Polish>
             <German>NS-Brille (4. Generation, Schwarz, WP)</German>
@@ -240,7 +240,7 @@
             <French>JVN (Gen4, vertes)</French>
             <Russian>ПНВ (Gen4, Зелёный)</Russian>
             <Italian>Visore Notturno (Gen4, Verde)</Italian>
-            <Japanese>暗視装置 (第3世代、グリーン)</Japanese>
+            <Japanese>暗視装置 (第4世代、グリーン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 4, Zielone)</Polish>
             <German>NS-Brille (4. Gen., grün)</German>
             <Chinesesimp>夜视仪（四代，绿色）</Chinesesimp>
