@@ -56,8 +56,8 @@ private _fnc_check = {
     // Compare client and server files and versions
     private _client = profileName;
     private _missingAddonsClient = [];
-    private _oldVersionsClient = [];
-    private _oldVersionsServer = [];
+    private _olderVersionsClient = [];
+    private _newerVersionsClient = [];
 
     private _clientVersion = -1;
     private _serverVersion = -1;
@@ -76,21 +76,21 @@ private _fnc_check = {
             _clientVersion = _versions select _index;
 
             if (_clientVersion < _serverVersion) then {
-                _oldVersionsClient pushBack [_x, _clientVersion, _serverVersion];
+                _olderVersionsClient pushBack [_x, _clientVersion, _serverVersion];
             };
 
             if (_clientVersion > _serverVersion) then {
-                _oldVersionsServer pushBack [_x, _clientVersion, _serverVersion];
+                _newerVersionsClient pushBack [_x, _clientVersion, _serverVersion];
             };
         };
     } forEach _serverFiles;
 
     // Find client files which the server doesn't have
-    private _missingAddonsServer = [];
+    private _additionalAddonsClient = [];
 
     {
         if ((_serverFiles find _x) == -1) then {
-            _missingAddonsServer pushBack _x;
+            _additionalAddonsClient pushBack _x;
         };
     } forEach _files;
 
@@ -133,12 +133,12 @@ private _fnc_check = {
         _clientErrors pushBack _isMissingItems;
     } forEach [
         [_missingAddonsClient, "client missing"],
-        [_missingAddonsServer, "server missing"],
-        [_oldVersionsClient, "outdated client"],
-        [_oldVersionsServer, "outdated server"]
+        [_additionalAddonsClient, "client additional"],
+        [_olderVersionsClient, "older client"],
+        [_newerVersionsClient, "newer client"]
     ];
 
-    TRACE_4("",_missingAddonsClient,_missingAddonsServer,_oldVersionsClient,_oldVersionsServer);
+    TRACE_4("",_missingAddonsClient,_additionalAddonsClient,_olderVersionsClient,_newerVersionsClient);
 
     ACE_Version_ClientErrors = _clientErrors;
 

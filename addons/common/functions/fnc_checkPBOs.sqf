@@ -41,31 +41,31 @@ if (!isServer) then {
         [_thisType, _thisId] call CBA_fnc_removeEventHandler;
 
         params ["_clientErrors"];
-        _clientErrors params ["_missingAddonClient", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer"];
+        _clientErrors params ["_missingAddonClient", "_additionalAddonClient", "_olderVersionClient", "_newerVersionClient"];
         _thisArgs params ["_mode"];
 
         // Display error message(s)
-        if (_missingAddonClient || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {
+        if (_missingAddonClient || {_additionalAddonClient} || {_olderVersionClient} || {_newerVersionClient}) then {
             private _errorMsg = "[ACE] Version mismatch:<br/><br/>";
-            private _error = format ["ACE version mismatch: %1: ", profileName];
+            private _error = format ["[ACE] Version mismatch: %1: ", profileName];
 
             if (_missingAddonClient) then {
                 _errorMsg = _errorMsg + "Detected missing addon on client<br/>";
                 _error = _error + "Missing file(s); ";
             };
 
-            if (_missingAddonServer) then {
-                _errorMsg = _errorMsg + "Detected missing addon on server<br/>";
+            if (_additionalAddonClient) then {
+                _errorMsg = _errorMsg + "Detected additional addon on client<br/>";
                 _error = _error + "Additional file(s); ";
             };
 
-            if (_oldVersionClient) then {
-                _errorMsg = _errorMsg + "Detected old client version<br/>";
+            if (_olderVersionClient) then {
+                _errorMsg = _errorMsg + "Detected older client version<br/>";
                 _error = _error + "Older version; ";
             };
 
-            if (_oldVersionServer) then {
-                _errorMsg = _errorMsg + "Detected old server version<br/>";
+            if (_newerVersionClient) then {
+                _errorMsg = _errorMsg + "Detected newer client version<br/>";
                 _error = _error + "Newer version; ";
             };
 
