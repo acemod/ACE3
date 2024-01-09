@@ -7,13 +7,13 @@
             [] call FUNC(initBlackList);
         };
         
-        if (hasInterface) then {
+        /*if (hasInterface) then {
             ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
             ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
         };
 
         ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-        ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;*/
 
         // Debug info 
 #ifdef DEBUG_MODE_FULL

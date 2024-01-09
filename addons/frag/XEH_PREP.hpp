@@ -10,10 +10,13 @@ PREP(dev_drawTrace);
 PREP(dev_clearTraces);
 PREP(dev_switchUnitHandle);
 
+// Base
+PREP(fired);
+PREP(initRound);
+
 // Frag
 PREP(addBlackList);
 PREP(initBlackList);
-PREP(fired);
 PREP(submunition);
 PREP(shouldFrag);
 PREP(fragInfo);
@@ -25,8 +28,6 @@ PREP(doFragRandom);
 PREP(shouldSpall);
 PREP(doSpall);
 PREP(doSpallMomentum);
-
-// * Other */
 //PREP(spallHP); Look at me !*!
 
 // Explosive Reflection
