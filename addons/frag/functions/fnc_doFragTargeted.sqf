@@ -127,7 +127,7 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
 
     // actual target pos for fragment to hit
     if _isPerson then {
-        private _hitPoint =  selectRandom _FRAG_HITPOINTS;
+        private _hitPoint =  selectRandom ACE_FRAG_HITPOINTS;
         private _hitPointPos = _target selectionPosition [_hitPoint, "HitPoints", "AveragePoint"];
         _targetPos = _target modelToWorldWorld _hitPointPos;
     } else {
@@ -156,7 +156,7 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
     _fragObj setVectorDir _vecDir;
     _fragObj setVelocity (_vecDir vectorMultiply _locFragVel);
     _fragObj setShotParents _shotPrnt;
-    #ifdef DEBUG_MODE_DRAWFRAG
+    #ifdef DEBUG_MODE_FULL
     [_fragObj, "purple", true] call FUNC(dev_trackObj);
     [_targetPos, "orange"] call FUNC(dev_sphereDraw);
     #endif

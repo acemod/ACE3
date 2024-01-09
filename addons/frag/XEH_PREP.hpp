@@ -1,4 +1,5 @@
 // dev
+PREP(dev_fired);
 PREP(dev_fragCalcDump);
 PREP(dev_debugAmmo);
 PREP(dev_trackHitBox);

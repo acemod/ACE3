@@ -36,5 +36,5 @@ if (_doSubmunit) then {
 };
 
 #ifdef DEBUG_MODE_FULL
-    [_submunitionProjectile] call UNC(dev_addRound);
+    [_submunitionProjectile] call FUNC(dev_addRound);
 #endif
