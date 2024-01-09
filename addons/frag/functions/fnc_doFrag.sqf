@@ -23,20 +23,20 @@ params ["_args", ["_isSubMunit", false, [false]]];
 _args params [
     ["_proj", objNull, [objNull]], 
     ["_posASL", [0,0,0], [[]], [3]], 
-    ["_vel", [0,0,0] , [[]], [3]]
+    ["_vel", [0,0,0] , [[]], [3]],
+	["_ammo", "", [""]],
+	["_shotParents", [objNull, objNull], [[]]]
 ];
 TRACE_3("",_proj,_posASL,_vel);
 
-private _shotParents = getShotParents _proj;
-private _ammo = typeOf _proj;
 private _shotParentVic = _shotParents#0;
 if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exitWith {
 	TRACE_1("vehicleTimeExit",_shotParentVic);
 };
-_shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF];
+_shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 
 private _timeSince = CBA_missionTime - GVAR(lastFragTime);
-if (_ammo isEqualTo "" || {_posASL isEqualTo [0,0,0] || _timeSince < 0.2}) exitWith {
+if (_ammo isEqualTo "" || {_posASL isEqualTo [0,0,0] || _timeSince < ACE_FRAG_HOLDOFF}) exitWith {
 	TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
 };
 GVAR(lastFragTime) = CBA_missionTime;
