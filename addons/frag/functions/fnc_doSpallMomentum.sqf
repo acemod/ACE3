@@ -15,12 +15,27 @@
  *
  * Public: No
  */
-params ["_projectile", "_hitObj", "", "_lPosASL", "_lVel", "", "", "" ,"_surfaceType"];
+params [
+	"_projectile",
+	["_hitObj", objNull],
+	"",
+	["_lPosASL", [0, 0, 0]],
+	["_lVel", [0, 0, 0]],
+	"",
+	"",
+	"",
+	["_surfaceType", ""]
+];
 
-if (CBA_missionTime - GVAR(lastHitTick) < ACE_FRAG_SPALL_HOLDOFF) exitWith {};
+if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF) exitWith {
+	TRACE_2("timeExit",CBA_missionTime,GVAR(lastSpallTime));
+};
 
-if (_hitObj isNotEqualTo objNull && {_hitObj isKindOf "man"}) exitWith {};
-if ((isNil "_lPosASL") || {!(_lPosASL isEqualTypeArray [0,0,0])}) exitWith {
+if (!(isNull _hitObj) && {_hitObj isKindOf "man"}) exitWith {
+	TRACE_1("hitPerson",_hitObj);
+};
+
+if (_lPosASL isEqualTo [0,0,0]) exitWith {
     TRACE_1("Problem with hitPart data - bad pos",_lPosASL);
 };
 
@@ -54,33 +69,25 @@ if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
 // step through
 for "_i" from 1 to 20 do 
 {
-        private _nPos = _spallPos vectorAdd _unitStep;
-        if (!lineIntersects [_spallPos, _nPos]) then { _spallPos = _nPos; break};
-        _spallPos = +_nPos;
+	private _nPos = _spallPos vectorAdd _unitStep;
+	if (!lineIntersects [_spallPos, _nPos]) then { _spallPos = _nPos vectorAdd _unitStep; break};
+	_spallPos = +_nPos;
 };
 
 #ifdef DEBUG_MODE_FULL
 [_spallPos, "green"] call FUNC(dev_sphereDraw);
 [_lPosASL vectorAdd _lVelUnit, "orange"] call FUNC(dev_sphereDraw);
 [_lPosASL, "orange"] call FUNC(dev_sphereDraw);
-private _str = GVAR(hitLog) getOrDefault [str _surfaceType, "["];
+private _str = GVAR(materialSpallCache) getOrDefault [str _surfaceType, "["];
 _str =_str + str [_dV, _caliber, abs vectorMagnitude (_lPosASL vectorDiff _spallPos)] + ";";
-GVAR(hitLog) set [str _surfaceType, _str];
+GVAR(materialSpallCache) set [str _surfaceType, _str];
 if (_deltaMomentum < 2) exitWith {};
 #endif
-
+ 
 //***** Passed all other exit withs, performance o'clock */
-GVAR(lastHitTick) = CBA_missionTime;
+GVAR(lastSpallTime) = CBA_missionTime;
 
-//***** Select spalled fragments **//
-// diag_log text format ["SPALL POWER: %1", _spallPolar select 0];
-// range of spread 15-40
-// N rounds 				5-15
-// speed from      0.75-1.5
-// range of spread 5-10
-// N rounds 			 3-8
-// speed from      0.75-1.5
-
+//***** Select spalled fragment spawner **//
 private _fragSpawnType = switch (true) do 
 {
     case (_deltaMomentum < 3): { QGVAR(spall_tiny) };
@@ -96,7 +103,7 @@ private _shotParent = getShotParents _projectile;
 //***** Spawn spalled fragments
 private _spallSpawner = createVehicleLocal [_fragSpawnType, ASLToATL _spallPos, [], 0, "CAN_COLLIDE"];
 _spallSpawner setVectorDirandUp [vectorDir _projectile, vectorUp _projectile];
-_spallSpawner setVelocity _lVelUnit;
+_spallSpawner setVelocity (_lVelUnit vectorMultiply (_dV/2));
 _spallSpawner setShotParents _shotParent;
 
 #ifdef DEBUG_MODE_FULL
