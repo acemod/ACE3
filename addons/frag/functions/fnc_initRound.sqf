@@ -14,23 +14,23 @@
  *
  * Public: No
  */
-params ["_projectile"];
+params [
+	["_projectile", objNull, [objNull]]
+];
 
 private _ammo = typeOf _projectile;
-if (isNil "_ammo" || 
-        {_ammo isEqualTo "" || 
-        {isNil "_projectile" || 
-        {isNull _projectile}}}) exitWith {
+if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
     TRACE_2("bad ammo or projectile",_ammo,_projectile);
 };
-
 
 private _shouldFrag = _ammo call FUNC(shouldFrag);
 _shouldFrag params ["_doFrag"]; 
 
 if (_doFrag) then {
     // wait for frag damage to kill units before spawning fragments
-    _projectile addEventHandler ["Explode",	{
+    _projectile addEventHandler [
+		"Explode",
+		{
             if (isServer) then {
                 [FUNC(doFrag), [_this]] call CBA_fnc_execNextFrame;
             } else {
