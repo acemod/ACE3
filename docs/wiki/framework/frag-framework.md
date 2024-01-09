@@ -8,7 +8,7 @@ order: 7
 mod: ace
 version:
   major: 3
-  minor: 0
+  minor: 16
   patch: 0
 ---
 
@@ -26,7 +26,8 @@ The system for the end-developer is easy to use, and only requires minimal resea
 ```cpp
 class CfgAmmo {
     class MyGrenade {
-        ace_frag_enabled = 1;  // Enable fragmentation (0-disabled, 1-enabled)
+        ace_frag_enabled = 1;  // Deprecated
+        ace_frag_fragCount = 1200; // Approximate number of fragments the explosive makes - information below
         ace_frag_metal = 210;  // Amount of metal being fragmented (grams) - information below
         ace_frag_charge = 185;  // Amount of explosive filler (grams) - information below
         ace_frag_gurney_c = 2843;  // Gurney velocity constant for explosive type - information below
@@ -40,13 +41,21 @@ class CfgAmmo {
 
 ### 1.1 Metal amount
 
+`ace_frag_fragCount`
+
+Number of fragments that would be fragmented. This number may be found online or inferred from similar munitions. This affects the to be hit by a fragment and maximum range a fragment may hit a unit. 
+
+Dimensionless value, count of number of fragments.
+
+### 1.2 Metal amount
+
 `ace_frag_metal`
 
-Amount of metal being fragmented (generally taken as the entire weight of the warhead, though in some cases you might want to only include the fragmentation jacket or body.
+Amount of metal being fragmented. Generally taken as the entire weight of the warhead, though in some cases you might want to only include the fragmentation jacket or body.
 
 Dimensionless value, as long as same unit as `ace_frag_charge` (for example `kg/kg` or `g/g` or `lbs/lbs`).
 
-### 1.2 Explosives filler amount
+### 1.3 Explosives filler amount
 
 `ace_frag_charge`
 
@@ -54,7 +63,7 @@ Amount of explosive filler in the warhead. `ace_frag_metal` and `ace_frag_charge
 
 Dimensionless value, as long as same unit as `ace_frag_metal` (for example `kg/kg` or `g/g` or `lbs/lbs`).
 
-### 1.3 Gurney velocity constant
+### 1.4 Gurney velocity constant
 
 `ace_frag_gurney_c`
 
@@ -77,7 +86,7 @@ Tetryl          | 2500 m/s
 TNT             | 2440 m/s
 Tritonal        | 2320 m/s
 
-### 1.4 Gurney shape factor
+### 1.5 Gurney shape factor
 
 `ace_frag_gurney_k`
 
@@ -91,7 +100,7 @@ Plate    | 3/5
 
 There are other configurations but these are the most common. If you are interested in others check out the wikipedia link given above. Most of these will not correctly function in ACE3 though due to additional variables for the equation.
 
-### 1.5 Fragments type
+### 1.6 Fragments type
 
 `ace_frag_classes[]`
 
@@ -112,13 +121,13 @@ There are different types of fragmentation fragments to choose from, and they ca
 
 The tinier the piece of fragmentation the shorter the distance of travel. The `_HD` variants are all even higher drag versions. Grenades generally should use the `_HD` variants. Experimentation here is important.
 
-### 1.6 Ignore fragmentation
+### 1.7 Ignore fragmentation
 
 `ace_frag_skip`
 
 Setting this to `1` will skip fragmentation for ammo of this type. This is useful for things that might cause high network load, such as FFAR rockets, or possibly even 40mm grenades from AGLs. Experimentation under network conditions is required.
 
-### 1.7 Force fragmentation
+### 1.8 Force fragmentation
 
 `ace_frag_force`
 
