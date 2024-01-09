@@ -70,8 +70,11 @@ if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
 for "_i" from 1 to 20 do 
 {
 	private _nPos = _spallPos vectorAdd _unitStep;
-	if (!lineIntersects [_spallPos, _nPos]) then { _spallPos = _nPos vectorAdd _unitStep; break};
-	_spallPos = +_nPos;
+	if (!lineIntersects [_spallPos, _nPos]) then {
+		_spallPos = _nPos vectorAdd _unitStep;
+		break
+	};
+	_spallPos = _nPos;
 };
 
 #ifdef DEBUG_MODE_FULL
