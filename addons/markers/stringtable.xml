@@ -408,14 +408,14 @@
             <French>"MM" - Millisecondes (de 0 à 59)</French>
             <German>"MS" - Milisekunden (von 0 bis 59)</German>
             <Portuguese>"MS" - Milissegundos (de 0 a 59)</Portuguese>
-			<Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
+            <Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription5">
             <English>"mmm" - Milliseconds (from 0 to 999)</English>
             <French>"mmm" - Millisecondes (de 0 à 999)</French>
             <German>"mmm" - Milisekunden (von 0 bis 999)</German>
             <Portuguese>"mmm" - Milissegundos (de 0 a 999)</Portuguese>
-			<Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
+            <Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
