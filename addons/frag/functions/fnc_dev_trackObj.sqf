@@ -16,8 +16,12 @@
  *
  * Public: No
  */
-params ["_obj", ["_color", "blue", [""]], ["_isProj", false, [false]]];
-
+params [
+	"_obj",
+	["_color", "blue", ["blue"]],
+	["_isProj", false, [false]]
+];
+TRACE_4("devDraw",_this,_obj,_color,_isProj);
 /// track round on each frame
 // Create entry in position array from hashmap
 private _pID = getObjectID _obj;

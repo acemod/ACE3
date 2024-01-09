@@ -18,8 +18,8 @@
  */
 params [
     "_proj",
-    ["_addEHs", true, [false]],
-    ["_sidePlayer", true, [false]]
+    ["_addEHs", true, [true]],
+    ["_sidePlayer", true, [true]]
 ];
 
 /// track round on each frame
