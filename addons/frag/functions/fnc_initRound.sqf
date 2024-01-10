@@ -37,12 +37,12 @@ if (_doFrag) then {
             if (isServer) then {
                 [
                     FUNC(doFrag),
-                    [_this + [_ammo, _shotParents]]
+                    _this + [_ammo, _shotParents]
                 ] call CBA_fnc_execNextFrame;
             } else {
                 [
                     QGVAR(frag_eh),
-                    [_this + [_ammo, _shotParents]]
+                    _this + [_ammo, _shotParents]
                 ] call CBA_fnc_serverEvent;
             };
         }
@@ -57,13 +57,13 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
     _projectile addEventHandler [
         "HitPart",
         {
-			params ["_proj", "_hitObj", "",
-				"_posASL", "_vel", "_sNorm", "",
-				"", "_surfType"
-			];
+            params ["_proj", "_hitObj", "",
+                "_posASL", "_vel", "_sNorm", "",
+                "", "_surfType"
+            ];
             private _shotPrnt = getShotParents _proj;
             private _ammo = typeOf _proj;
-			private _vUp = vectorUp _proj;
+            private _vUp = vectorUp _proj;
             if (isServer) then {
                 [
                     LINKFUNC(doSpall),

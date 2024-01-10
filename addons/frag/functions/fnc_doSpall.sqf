@@ -31,16 +31,17 @@ params [
     ["_vUp", [0,0,1]]
 ];
 
-if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF) exitWith {
-    TRACE_2("timeExit",CBA_missionTime,GVAR(lastSpallTime));
+if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF ||
+	_lPosASL isEqualTo [0,0,0] ||
+	{isNull _hitObj || {_hitObj isKindOf "man"}}) exitWith {
+    TRACE_4("time/invldHit",CBA_missionTime,GVAR(lastSpallTime),_hitObj,_lPosASL);
 };
 
-if (isNull _hitObj || {_hitObj isKindOf "man"}) exitWith {
-    TRACE_1("invalidHit",_hitObj);
-};
-
-if (_lPosASL isEqualTo [0,0,0]) exitWith {
-    TRACE_1("Problem with hitPart data - bad pos",_lPosASL);
+private _material = [_surfaceType] call FUNC(getMaterialInfo);
+if (_material isEqualTo "ground") then {
+#ifdef DEBUG_MODE_FULL
+    systemChat "ground spall"; // really shouldn't happen
+#endif
 };
 
 private _vel = if (alive _projectile) then {
@@ -48,7 +49,6 @@ private _vel = if (alive _projectile) then {
 } else {
     [0, 0, 0]
 };
-
 
 // Find spall speed / fragment
 private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
@@ -61,7 +61,6 @@ if (_deltaMomentum < 2) exitWith {
     TRACE_1("lowImpulse",_ammo);
 };
 
-private _material = [_surfaceType] call FUNC(getMaterialInfo);
 
 //** start calculating where the spalling should come !*! could be better  **// 
 private _lVelUnit = vectorNormalized _lVel;
@@ -120,11 +119,8 @@ private _spallSpawner = createVehicleLocal [
 _spallSpawner setVectorDirandUp [_lVelUnit, _vUp];
 _spallSpawner setVelocity (_lVelUnit vectorMultiply (_dV/2));
 _spallSpawner setShotParents _shotParents;
-
+profilerLog "spalled";
 #ifdef DEBUG_MODE_FULL
-if (_material isEqualTo "ground") then {
-    systemChat "ground spall"; // really shouldn't happen
-};
 systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _deltaMomentum);
 #endif
 #ifdef DEBUG_MODE_DRAW
