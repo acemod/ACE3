@@ -54,8 +54,7 @@ private _vel = if (alive _projectile) then {
 private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
 private _caliber = getNumber (configFile >> "cfgAmmo" >> _ammo >> "caliber"); // !*! optimize this later?
 // scaled momentum change made on caliber-mass assumption ~sqrt(2)/20 * caliber ~= mass
-private _deltaMomentum =  0.07071 * _caliber * sqrt( _dV ); 
-
+private _deltaMomentum =  0.0707 * _caliber * sqrt( _dV ); 
 TRACE_3("found speed",_dV,_caliber,_deltaMomentum);
 
 if (_deltaMomentum < 2) exitWith {
@@ -63,7 +62,6 @@ if (_deltaMomentum < 2) exitWith {
 };
 
 private _material = [_surfaceType] call FUNC(getMaterialInfo);
-TRACE_1("materialCacheRetrieved",_material);
 
 //** start calculating where the spalling should come !*! could be better  **// 
 private _lVelUnit = vectorNormalized _lVel;
@@ -102,23 +100,31 @@ GVAR(lastSpallTime) = CBA_missionTime;
 
 //***** Select spalled fragment spawner **//
 
-
-private _fragSpawnType = switch (true) do 
+private _spawnSize = switch (true) do 
 {
-    case (_deltaMomentum < 3): { QGVAR(spall_tiny) };
-    case (_deltaMomentum < 5): { QGVAR(spall_small) };
-    case (_deltaMomentum < 8): { QGVAR(spall_medium) };
-    case (_deltaMomentum < 11): { QGVAR(spall_large) };
-    default { QGVAR(spall_huge) };
+    case (_deltaMomentum < 3): { "_spall_tiny" };
+    case (_deltaMomentum < 5): { "_spall_small" };
+    case (_deltaMomentum < 8): { "_spall_medium" };
+    case (_deltaMomentum < 12): { "_spall_large" };
+    default { "_spall_huge" };
 };
 
 //***** Spawn spalled fragments
-private _spallSpawner = createVehicleLocal [_fragSpawnType, ASLToATL _spallPos, [], 0, "CAN_COLLIDE"];
+private _spallSpawner = createVehicleLocal [
+    QUOTE(ADDON##_) + _material + _spawnSize,
+    ASLToATL _spallPos,
+    [],
+    0,
+    "CAN_COLLIDE"
+];
 _spallSpawner setVectorDirandUp [_lVelUnit, _vUp];
 _spallSpawner setVelocity (_lVelUnit vectorMultiply (_dV/2));
 _spallSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
+if (_material isEqualTo "ground") then {
+    systemChat "ground spall"; // really shouldn't happen
+};
 systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _deltaMomentum);
 _spallSpawner addEventHandler [
     "SubmunitionCreated",
