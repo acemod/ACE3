@@ -24,39 +24,19 @@ params [
 TRACE_4("devDraw",_this,_obj,_color,_isProj);
 /// track round on each frame
 // Create entry in position array from hashmap
-private _pID = getObjectID _obj;
-if (GVAR(fadeRounds)) then
-{
-    private _colorArray = switch (toLower _color) do {
-        case "purple": {[0.8, 0, 0.8, __FADE_INIT]};
-        case "blue":   {[0, 0, 0.8, __FADE_INIT]};
-        case "green":  {[0, 0.8, 0, __FADE_INIT]};
-        case "orange": {[0.8, 0.518, 0, __FADE_INIT]};
-        case "yellow": {[0.8, 0.8, 0, __FADE_INIT] };
-        case "red":    {[0.8, 0, 0, __FADE_INIT]};
-        case "black":  {[1, 1, 1, __FADE_INIT]};
-        case "white":  {[0, 0, 0, __FADE_INIT]};
-        default 			 {[0, 0.8, 0.8, __FADE_INIT]};
-    };
-
-    GVAR(dev_trackLines) set [_pID, [__FADE_INIT, [getposATL _obj], _colorArray]];
-    // add fading factor
-    [LINKFUNC(dev_fadeRound),	__FADE_INTERVAL, [_pID]] call CBA_fnc_addPerFrameHandler;
-} else
-{
-    private _colorArray = switch (toLower _color) do {
-        case "purple": {[0.8, 0, 0.8, 1]};
-        case "blue":   {[0, 0, 0.8, 1]};
-        case "green":  {[0, 0.8, 0, 1]};
-        case "orange": {[0.8, 0.518, 0, 1]};
-        case "yellow": {[0.8, 0.8, 0, 1] };
-        case "red":    {[0.8, 0, 0, 1]};
-        case "black":  {[1, 1, 1, 1]};
-        case "white":  {[0, 0, 0, 1]};
-        default 			 {[0, 0.8, 0.8, 1]};
-    };
-    GVAR(dev_trackLines) set [_pID, [1, [getposATL _obj], _colorArray]];
+private _colorArray = switch (toLower _color) do {
+    case "purple": {[0.8, 0, 0.8, 1]};
+    case "blue":   {[0, 0, 0.8, 1]};
+    case "green":  {[0, 0.8, 0, 1]};
+    case "orange": {[0.8, 0.518, 0, 1]};
+    case "yellow": {[0.8, 0.8, 0, 1] };
+    case "red":    {[0.8, 0, 0, 1]};
+    case "black":  {[1, 1, 1, 1]};
+    case "white":  {[0, 0, 0, 1]};
+    default 			 {[0, 0.8, 0.8, 1]};
 };
+GVAR(dev_trackLines) set [getObjectID _obj, [1, [getposATL _obj], _colorArray]];
+
 // eventhandler to track round and cleanup when round is "dead"
 [
     {

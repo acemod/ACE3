@@ -3,7 +3,6 @@ PREP(dev_fired);
 PREP(dev_fragCalcDump);
 PREP(dev_debugAmmo);
 PREP(dev_trackHitBox);
-PREP(dev_fadeRound);
 PREP(dev_sphereDraw);
 PREP(dev_addRound);
 PREP(dev_trackObj);
@@ -28,9 +27,8 @@ PREP(doFragRandom);
 // Spall
 PREP(shouldSpall);
 PREP(doSpall);
-PREP(doSpallMomentum);
+PREP(doSpall);
 PREP(getMaterialInfo);
-//PREP(spallHP); Look at me !*!
 
 // Explosive Reflection
 PREP(findReflections);

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [BIS_HITPART_EH_ARGS] call ace_frag_fnc_doSpallMomentum;
+ * [BIS_HITPART_EH_ARGS] call ace_frag_fnc_doSpall;
  *
  * Public: No
  */
@@ -54,7 +54,7 @@ private _vel = if (alive _projectile) then {
 private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
 private _caliber = getNumber (configFile >> "cfgAmmo" >> _ammo >> "caliber"); // !*! optimize this later?
 // scaled momentum change made on caliber-mass assumption ~sqrt(2)/20 * caliber ~= mass
-private _deltaMomentum =  0.0707 * _caliber * sqrt( _dV ); 
+private _deltaMomentum =  0.0707 * _caliber * sqrt( _dV ) * GVAR(SpallIntensity); 
 TRACE_3("found speed",_dV,_caliber,_deltaMomentum);
 
 if (_deltaMomentum < 2) exitWith {

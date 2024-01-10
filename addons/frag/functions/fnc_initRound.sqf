@@ -66,7 +66,7 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
 			private _vUp = vectorUp _proj;
             if (isServer) then {
                 [
-                    LINKFUNC(doSpallMomentum),
+                    LINKFUNC(doSpall),
                     [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
                 ] call CBA_fnc_execNextFrame;
             } else {

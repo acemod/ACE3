@@ -52,9 +52,9 @@ if (_heightAGL < 0.25) then {
     _posASL = _posASL vectorAdd [0, 0, 0.25];
 };
 
-// !*! make timesince a gvar?
-TRACE_4("fnc_doFragTargeted IF", _fragRange, _timeSince, GVAR(fragSimComplexity));
-if (_fragRange > 3 && _timeSince > 0.3 && {GVAR(fragSimComplexity) != 1}) then {
+// !*! make holdoff a gvar?
+TRACE_3("fnc_doFragTargeted IF", _fragRange, _timeSince, GVAR(fragSimComplexity));
+if (_fragRange > 3 && _timeSince > ACE_FRAG_HOLDOFF*1.5 && GVAR(fragSimComplexity) != 1) then {
     _maxFrags = _maxFrags - ([_posASL, _fragVel, _fragRange, _maxFrags, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
 

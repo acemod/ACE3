@@ -16,31 +16,15 @@
 
 private _deleteArr = [];
 {
-    private _alpha = _y#0;
     // leave if trace is not to be drawn
-    if (GVAR(dltTrace) && _alpha <= 0) then
-    {
-        _deleteArr pushBack _x;
-        continue;
-    };
-
     if (count (_y#1) > 1) then
-    {	
-        private _color = _y#2;
+    {
         for "_j" from 1 to count (_y#1) - 1 do
         {
-            drawLine3D [_y#1#(_j-1), _y#1#_j, _color];
+            drawLine3D [_y#1#(_j-1), _y#1#_j, _y#2];
         };
     };			
 } forEach GVAR(dev_trackLines);
-
-if (GVAR(dltTrace)) then
-{
-    for "_i" from 0 to count _deleteArr - 1 do
-    {
-        GVAR(dev_trackLines) deleteAt (_deleteArr#_i);
-    };
-};
 
 if (GVAR(drawHitBox)) then {
     
@@ -67,9 +51,4 @@ if (GVAR(drawHitBox)) then {
     {
         GVAR(dev_hitBoxes) deleteAt (_deleteArr#_i);
     };
-};
-
-if (GVAR(frameHint)) then
-{
-    hintsilent str (1/diag_deltaTime);
 };

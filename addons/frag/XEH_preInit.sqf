@@ -18,7 +18,7 @@ GVAR(lastFragTime) = -2;
 
 #include "initSettings.inc.sqf"
 
-#ifdef DEBUG_MODE_FULL
+#ifdef DEBUG_MODE_DRAW
 GVAR(dev_trackLines) = createHashMap;
 GVAR(dev_hitBoxes) = createHashMap;
 GVAR(dev_failedToDelete) = 0;

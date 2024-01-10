@@ -54,7 +54,7 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
         "HitPart",
         {
             if (isServer) then {
-                [LINKFUNC(doSpallMomentum), _this] call CBA_fnc_execNextFrame;
+                [LINKFUNC(doSpall), _this] call CBA_fnc_execNextFrame;
             } else {
                 [QGVAR(spall_eh), [_this]] call CBA_fnc_serverEvent;
             };

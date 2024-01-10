@@ -24,28 +24,12 @@ params [
 
 /// track round on each frame
 // Create entry in position array from hashmap
-private _pID = getObjectID _proj;
-if (GVAR(fadeRounds)) then
+if (_sidePlayer) then
 {
-    if (_sidePlayer) then
-    {
-        GVAR(dev_trackLines) set [_pID, [__FADE_INIT, [getposATL _proj], [0, 0, 1, __FADE_INIT]]];
-    }	else
-    {
-        GVAR(dev_trackLines) set [_pID, [__FADE_INIT, [getposATL _proj], [1, 0.5, 0, __FADE_INIT]]];
-    };
-
-    // add fading factor
-    [LINKFUNC(dev_fadeRound),	__FADE_INTERVAL, [_pID]] call CBA_fnc_addPerFrameHandler;
-} else
+    GVAR(dev_trackLines) set [getObjectID _proj, [1, [getposATL _proj], [0, 0, 1, 1]]];
+}	else
 {
-    if (_sidePlayer) then
-    {
-        GVAR(dev_trackLines) set [_pID, [1, [getposATL _proj], [0, 0, 1, 1]]];
-    }	else
-    {
-        GVAR(dev_trackLines) set [_pID, [1, [getposATL _proj], [1, 0, 0, 1]]];
-    };
+    GVAR(dev_trackLines) set [getObjectID _proj, [1, [getposATL _proj], [1, 0, 0, 1]]];
 };
 // eventhandler to track round and cleanup when round is "dead"
 [
