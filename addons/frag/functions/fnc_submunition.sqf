@@ -19,7 +19,7 @@
  * Public: No
  */
  
-if (!GVAR(enabled) || {GVAR(enSubMunit) == 0}) exitWith {};
+if (!GVAR(enabled) || {GVAR(fragSimComplexity) == 0}) exitWith {};
 // params ["_projectile", "_submunitionProjectile", "_pos", "_velocity"];
 params ["", "_submunitionProjectile"];
 

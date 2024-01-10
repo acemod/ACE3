@@ -43,7 +43,7 @@ if (_doFrag) then {
     ];
 };
 
-if (_doSubmunit && {GVAR(enSubMunit)> 0}) then {
+if (_doSubmunit && {GVAR(fragSimComplexity)> 0}) then {
     _projectile addEventHandler ["SubmunitionCreated", {_this call FUNC(submunition)}];
 };
 

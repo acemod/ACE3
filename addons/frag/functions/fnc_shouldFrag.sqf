@@ -38,7 +38,7 @@ if (_skip == 1  || (_force == 0 && {_explosive < 0.5 || {_indirectHit < 3
     _shouldFrag set [0, false];
 };
 
-if (GVAR(enSubMunit) > 0) then {
+/*if (GVAR(fragSimComplexity) > 1) then {
     private _hasSubmunit = if (isText (configFile >> "cfgAmmo" >> _ammo >> "submunitionAmmo")) then {
         "" isNotEqualTo  getText (configFile >> "cfgAmmo" >> _ammo >> "submunitionAmmo");
     } else
@@ -48,7 +48,7 @@ if (GVAR(enSubMunit) > 0) then {
 
     _shouldFrag set [1, _hasSubmunit];
     TRACE_2("Submunition" ,_ammo, _hasSubmunit);
-};
+};*/
 
 GVAR(shouldFragCache) set [_ammo, _shouldFrag];
 

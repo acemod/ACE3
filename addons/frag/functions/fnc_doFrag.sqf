@@ -5,11 +5,11 @@
  * as handling some of the performance optimizations.
  *
  * Arguments:
- * 0: Array of argumentse
- * 	0.0: projectile that's fragmenting <OBJECT>
- * 	0.1: ASL position of projectile <ARRAY>
- * 	0.2: velocity of projectile <ARRAY>
- * 1: Whether the projectile is a submunition <BOOL>
+ * 0: projectile that's fragmenting <OBJECT>
+ * 1: ASL position of projectile <ARRAY>
+ * 2: velocity of projectile <ARRAY>
+ * 3: projectile cfgAmmo classname <STRING>
+ * 4: getShotParents of projectile at EH <ARRAY>
  * 
  * Return Value:
  * None
@@ -20,8 +20,8 @@
  * Public: No
  */
 TRACE_1("",_this);
-params ["_args", ["_isSubMunit", false, [false]]];
-_args params [
+/*params ["_args", ["_isSubMunit", false, [false]]];
+_args*/ params [
     ["_proj", objNull, [objNull]], 
     ["_posASL", [0,0,0], [[]], [3]], 
     ["_vel", [0,0,0] , [[]], [3]],
@@ -52,14 +52,13 @@ if (_heightAGL < 0.25) then {
     _posASL = _posASL vectorAdd [0, 0, 0.25];
 };
 
-// make timesince a gvar?
-TRACE_4("fnc_doFragTargeted IF", _fragRange, _timeSince, _isSubMunit, GVAR(enSubMunit));
-if (_fragRange > 3 && _timeSince > 0.3 && {!_isSubMunit || {GVAR(enSubMunit) == 2}}) then {
+// !*! make timesince a gvar?
+TRACE_4("fnc_doFragTargeted IF", _fragRange, _timeSince, GVAR(fragSimComplexity));
+if (_fragRange > 3 && _timeSince > 0.3 && {GVAR(fragSimComplexity) == 2}) then {
     _maxFrags = _maxFrags - ([_posASL, _fragVel, _fragRange, _maxFrags, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
 
-// make a gvar?
-if (_timeSince > 0.2 && {GVAR(enSubMunit) != 0}) then {
+if (_timeSince > 0.2 && {GVAR(fragSimComplexity) != 0}) then {
     [_posASL, _vel, _heightAGL, _fragTypes, _maxFrags, _shotParents] call FUNC(doFragRandom);
 };
 

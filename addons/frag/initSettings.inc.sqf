@@ -28,7 +28,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 
 /// !*! TODO: add stringtable entries
 [
-    QGVAR(enSubMunit), "LIST", 
+    QGVAR(fragSimComplexity), "LIST", 
     ["Enable submunition fragmentation", "Enables submunition fragmentation when fragmentation is enabled"],
     [_category, LSTRING(Frag)],
     [[2, 1, 0], ["complex fragementation","simple fragmentation","no fragmentation"], 2]
