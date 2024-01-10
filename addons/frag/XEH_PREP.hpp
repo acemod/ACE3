@@ -27,7 +27,6 @@ PREP(doFragRandom);
 // Spall
 PREP(shouldSpall);
 PREP(doSpall);
-PREP(doSpall);
 PREP(getMaterialInfo);
 
 // Explosive Reflection
