@@ -58,7 +58,7 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
         "HitPart",
         {
 			params ["_proj", "_hitObj", "",
-				"_posASL", "_vel", "", "",
+				"_posASL", "_vel", "_sNorm", "",
 				"", "_surfType"
 			];
             private _shotPrnt = getShotParents _proj;
@@ -67,12 +67,12 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
             if (isServer) then {
                 [
                     LINKFUNC(doSpallMomentum),
-                    [_proj, _hitObj, _posASL, _vel, _surfType, _shotPrnt, _ammo, _vUp]
+                    [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
                 ] call CBA_fnc_execNextFrame;
             } else {
                 [
                     QGVAR(spall_eh),
-                    [_proj, _hitObj, _posASL, _vel, _surfType, _shotPrnt, _ammo, _vUp]
+                    [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
                 ] call CBA_fnc_serverEvent;
             };
         }
