@@ -19,6 +19,7 @@
  *
  * Public: No
  */
+TRACE_1("",_this);
 params ["_args", ["_isSubMunit", false, [false]]];
 _args params [
     ["_proj", objNull, [objNull]], 
@@ -27,7 +28,6 @@ _args params [
 	["_ammo", "", [""]],
 	["_shotParents", [objNull, objNull], [[]]]
 ];
-TRACE_3("",_proj,_posASL,_vel);
 
 private _shotParentVic = _shotParents#0;
 if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exitWith {

@@ -156,7 +156,7 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
     _fragObj setVectorDir _vecDir;
     _fragObj setVelocity (_vecDir vectorMultiply _locFragVel);
     _fragObj setShotParents _shotPrnt;
-    #ifdef DEBUG_MODE_FULL
+    #ifdef DEBUG_MODE_DRAW
     [_fragObj, "purple", true] call FUNC(dev_trackObj);
     [_targetPos, "orange"] call FUNC(dev_sphereDraw);
     #endif
@@ -169,7 +169,6 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
 } forEach _objects;
 #ifdef DEBUG_MODE_FULL
 systemChat ("fragCount cnt: " + str _fragCount);
-TRACE_1("fragCount",_fragCount);
 #endif
-
+TRACE_1("fragCount",_fragCount);
 _fragCount

@@ -59,6 +59,8 @@ _fragSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
     systemChat ("fragging, id: " + getObjectID _proj);
+#endif
+#ifdef DEBUG_MODE_DRAW
     _fragSpawner addEventHandler [
         "SubmunitionCreated",
         {

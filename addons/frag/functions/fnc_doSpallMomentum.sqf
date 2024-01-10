@@ -87,7 +87,7 @@ for "_i" from 1 to 20 do
     _spallPos = _nPos;
 };
 
-#ifdef DEBUG_MODE_FULL
+#ifdef DEBUG_MODE_DRAW
 if GVAR(dbgSphere) then {
     [_spallPos, "green"] call FUNC(dev_sphereDraw);
     [_lPosASL vectorAdd _lVelUnit, "orange"] call FUNC(dev_sphereDraw);
@@ -126,6 +126,8 @@ if (_material isEqualTo "ground") then {
     systemChat "ground spall"; // really shouldn't happen
 };
 systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _deltaMomentum);
+#endif
+#ifdef DEBUG_MODE_DRAW
 _spallSpawner addEventHandler [
     "SubmunitionCreated",
     {

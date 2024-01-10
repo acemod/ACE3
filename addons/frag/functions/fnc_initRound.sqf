@@ -37,7 +37,7 @@ if (_doFrag) then {
             if (isServer) then {
                 [
                     FUNC(doFrag),
-                    _this + [_ammo, _shotParents]
+                    [_this + [_ammo, _shotParents]]
                 ] call CBA_fnc_execNextFrame;
             } else {
                 [

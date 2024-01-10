@@ -50,7 +50,7 @@ for "_i" from 1 to 20 do
     if (!lineIntersects [_spallPos, _nPos]) then {break};
     _spallPos = +_nPos;
 };
-#ifdef DEBUG_MODE_FULL
+#ifdef DEBUG_MODE_DRAW
 [_spallPos, "orange"] call FUNC(dev_sphereDraw);
 [_lPosASL, "orange"] call FUNC(dev_sphereDraw);
 #endif
@@ -85,7 +85,7 @@ _fragSpawner setVectorDirandUp [vectorDir _projectile, vectorUp _projectile];
 _fragSpawner setVelocity (_lVelUnit vectorMultiply _velScalar);
 
 
-#ifdef DEBUG_MODE_FULL
+#ifdef DEBUG_MODE_DRAW
 _fragSpawner addEventHandler [
     "SubmunitionCreated",
     {

@@ -16,7 +16,7 @@
         ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;*/
 
         // Debug info 
-#ifdef DEBUG_MODE_FULL
+#ifdef DEBUG_MODE_DRAW
         if (hasInterface && GVAR(debugOptions)) then {	
 	        private _h = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
 	        missionNamespace setVariable [QGVAR(dev_drawPFEH), _h];

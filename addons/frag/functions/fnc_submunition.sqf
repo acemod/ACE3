@@ -35,6 +35,6 @@ if (_doSubmunit) then {
     _submunitionProjectile addEventHandler ["SubmunitionCreated", {_this call FUNC(submunition)}];
 };
 
-#ifdef DEBUG_MODE_FULL
+#ifdef DEBUG_MODE_DRAW
     [_submunitionProjectile] call FUNC(dev_addRound);
 #endif
