@@ -5,6 +5,7 @@
             [QGVAR(frag_eh), LINKFUNC(doFrag)] call CBA_fnc_addEventHandler;
             [QGVAR(spall_eh), LINKFUNC(doFragMomentum)] call CBA_fnc_addEventHandler;
             [] call FUNC(initBlackList);
+			[] call FUNC(initMaterialCache);
         };
         
         /*if (hasInterface) then {
