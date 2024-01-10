@@ -58,15 +58,17 @@ _fragSpawner setVelocity _projVel;
 _fragSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
-    systemChat ("fragging, id: " + getObjectID _proj);
+systemChat ("fragging, id: " + getObjectID _proj);
 #endif
 #ifdef DEBUG_MODE_DRAW
-    _fragSpawner addEventHandler [
-        "SubmunitionCreated",
-        {
-            params ["","_subProj"];
-            [_subProj, "green", true] call FUNC(dev_trackObj);
-        }
-    ];
-    [_posASL] call FUNC(dev_sphereDraw);
+_fragSpawner addEventHandler [
+    "SubmunitionCreated",
+    {
+        params ["","_subProj"];
+        [_subProj, "green", true] call FUNC(dev_trackObj);
+    }
+];
+if (GVAR(dbgSphere)) then {
+	[_posASL] call FUNC(dev_sphereDraw);
+};
 #endif 

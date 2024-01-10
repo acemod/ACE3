@@ -42,7 +42,7 @@ switch (true) do {
 };
 private _centerPoint = ASLToAGL getPosASL _obj;
 
-if (_addSphere && vehicle _obj isEqualTo _obj) then {
+if (GVAR(dbgSphere) && {_addSphere && {vehicle _obj isEqualTo _obj}}) then {
     private _centerSphere = [getPosASL _obj, "yellow"] call FUNC(dev_sphereDraw);
     _centerSphere disableCollisionWith vehicle _obj;
     _centerSphere attachTo [_obj, _obj worldToModel _centerPoint];

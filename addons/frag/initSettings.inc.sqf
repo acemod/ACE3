@@ -29,20 +29,23 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 /// !*! TODO: add stringtable entries
 [
     QGVAR(fragSimComplexity), "LIST", 
-    ["Enable submunition fragmentation", "Enables submunition fragmentation when fragmentation is enabled"],
+ // [LSTRING(FragMode), LSTRING(FragMode_Desc)]
+    ["Fragmentation mode", "Sets how fragments are generated"],
     [_category, LSTRING(Frag)],
-    [[2, 1, 0], ["complex fragementation","simple fragmentation","no fragmentation"], 2]
+    [[2, 1, 0], ["Targeted & random fragmentation ","Random fragmentation","Unit targeted fragmentation"], 2]
 ] call CBA_fnc_addSetting;
 
 [
     QGVAR(atLeastOne), "CHECKBOX", 
-    "At least one round hit",
+ // [LSTRING(MinFrag), LSTRING(MinFrag_Desc)]
+    ["At least one round hit", "Spawn at least one fragment for units in fragmentation range, up to maximum fragments"],
     [_category, LSTRING(Frag)],
     true
 ] call CBA_fnc_addSetting;
 
 [
     QGVAR(BlackList), "EDITBOX",
+ // [LSTRING(DefBlackList), LSTRING(DefBlackList_Desc)]
     ["Default BlackList", "Array of ammo classnames strings to blackist fragmentation for."],
     [_category, LSTRING(Frag)],
     QUOTE(['B_556x45_Ball'])

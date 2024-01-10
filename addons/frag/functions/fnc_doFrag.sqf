@@ -54,11 +54,11 @@ if (_heightAGL < 0.25) then {
 
 // !*! make timesince a gvar?
 TRACE_4("fnc_doFragTargeted IF", _fragRange, _timeSince, GVAR(fragSimComplexity));
-if (_fragRange > 3 && _timeSince > 0.3 && {GVAR(fragSimComplexity) == 2}) then {
+if (_fragRange > 3 && _timeSince > 0.3 && {GVAR(fragSimComplexity) != 1}) then {
     _maxFrags = _maxFrags - ([_posASL, _fragVel, _fragRange, _maxFrags, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
 
-if (_timeSince > 0.2 && {GVAR(fragSimComplexity) != 0}) then {
+if (_timeSince > 0.2 && {GVAR(fragSimComplexity) > 0}) then {
     [_posASL, _vel, _heightAGL, _fragTypes, _maxFrags, _shotParents] call FUNC(doFragRandom);
 };
 

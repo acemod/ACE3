@@ -51,8 +51,10 @@ for "_i" from 1 to 20 do
     _spallPos = +_nPos;
 };
 #ifdef DEBUG_MODE_DRAW
-[_spallPos, "orange"] call FUNC(dev_sphereDraw);
-[_lPosASL, "orange"] call FUNC(dev_sphereDraw);
+if (GVAR(dbgSphere)) then {
+	[_spallPos, "orange"] call FUNC(dev_sphereDraw);
+	[_lPosASL, "orange"] call FUNC(dev_sphereDraw);
+};
 #endif
 // find last intersect with the object
 

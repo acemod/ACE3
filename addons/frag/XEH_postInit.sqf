@@ -15,7 +15,6 @@
         ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
         ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;*/
 
-        // Debug info 
 #ifdef DEBUG_MODE_DRAW
         if (hasInterface && GVAR(debugOptions)) then {	
 	        private _h = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
