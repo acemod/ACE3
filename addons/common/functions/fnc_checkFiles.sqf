@@ -15,10 +15,10 @@
  * Public: No
  */
 
- // Don't execute in scheduled environment
- if (canSuspend) exitWith {
-     [FUNC(checkFiles), nil] call CBA_fnc_directCall;
- };
+// Don't execute in scheduled environment
+if (canSuspend) exitWith {
+    [FUNC(checkFiles), nil] call CBA_fnc_directCall;
+};
 
 ///////////////
 // Check addons
@@ -41,7 +41,7 @@ if ([_cbaRequiredAr, _cbaVersionAr] call CBA_versioning_fnc_version_compare) the
     ERROR(_errorMsg);
 
     if (hasInterface) then {
-        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] call FUNC(errorMessage);
+        ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
     };
 };
 
@@ -87,7 +87,7 @@ if (_oldAddons isNotEqualTo []) then {
     };
 
     if (hasInterface) then {
-        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] call FUNC(errorMessage);
+        ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
     };
 
     ERROR(_errorMsg);
@@ -141,7 +141,7 @@ if (!isServer && {_platform in ["linux", "osx"]}) then {
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] call FUNC(errorMessage);
+                    ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
                 };
             } else {
                 // Print the current extension version
@@ -185,14 +185,14 @@ if (isMultiplayer) then {
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] call FUNC(errorMessage);
+                    ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
                 };
             };
 
             private _addons = GVAR(clientAddons) - GVAR(serverAddons);
 
             if (_addons isNotEqualTo []) then {
-                private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1. Server modDir: %2", _addons, GVAR(serverSource)];
+                private _errorMsg = format ["Client/Server Addon Mismatch. Client has additional addons: %1. Server modDir: %2", _addons, GVAR(serverSource)];
 
                 // Check ACE install
                 call FUNC(checkFiles_diagnoseACE);
@@ -200,7 +200,7 @@ if (isMultiplayer) then {
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] call FUNC(errorMessage);
+                    ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
                 };
             };
         };

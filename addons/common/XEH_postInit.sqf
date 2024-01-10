@@ -263,33 +263,38 @@ if (_currentVersion != _previousVersion) then {
 
 call FUNC(checkFiles);
 
-// Let the server know that we have ACE loaded
-missionNamespace setVariable [QGVAR(aceLoaded_) + getPlayerUID player, true, 2];
-
 // This handles clients joining that do not have ACE loaded
 if (isServer) then {
     addMissionEventHandler ["PlayerConnected", {
+        params ["", "", "", "", "_owner"];
+
+        private _random = [];
+
+        // Make a random string of length 64
+        for "_i" from 0 to 31 do {
+            _random pushBack selectRandom GVAR(hexArray); // used GVAR(hexArray) because it was easy to use
+        };
+
+        _random = _random joinString "";
+
+        // Add the random suffix, so that it's much harder for the client to predict the function name and put preventive mesures in place
+        private _fncNameCheckAcePresence = format [QFUNC(checkAcePresence_%1), _random];
+        private _fncNameCheckErrorMessage = format [QFUNC(checkErrorMessage_%1), _random];
+
+        // Send functions to the connecting client
+        missionNamespace setVariable [_fncNameCheckAcePresence, /*compile toString */FUNC(checkAcePresence), _owner]; // compile toString removes isFinal status
+        missionNamespace setVariable [_fncNameCheckErrorMessage, /*compile toString */FUNC(checkErrorMessage), _owner];
+
+        // Wait for function to broadcast, then run function on client
         [{
-            params ["", "_uid", "", "", "_owner"];
+            params ["_owner", "_fncNameCheckAcePresence", "_fncNameCheckErrorMessage"];
 
-            // If ACE is not loaded, kick unit
-            if !(missionNamespace getVariable [QGVAR(aceLoaded_) + _uid, false]) then {
-                // Send function to client
-                _owner publicVariableClient QFUNC(errorMessage);
+            _fncNameCheckErrorMessage remoteExecCall [_fncNameCheckAcePresence, _owner];
 
-                // Wait for function to broadcast, then kick client
-                [{
-                    ["[ACE] ERROR", "ACE is not present or outdated past version 3.X.X", {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] remoteExecCall [QFUNC(errorMessage), _this];
-                }, _owner, 0.5] call CBA_fnc_waitAndExecute;
-            };
-        }, _this, 3] call CBA_fnc_waitAndExecute;
-    }];
-
-    addMissionEventHandler ["PlayerDisconnected", {
-        params ["", "_uid"];
-
-        // Reset variable
-        missionNamespace setVariable [QGVAR(aceLoaded_) + _uid, nil];
+            // Delete the functions on the server
+            //missionNamespace setVariable [_fncNameCheckAcePresence, nil];
+            //missionNamespace setVariable [_fncNameCheckErrorMessage, nil];
+        }, [_owner, _fncNameCheckAcePresence, _fncNameCheckErrorMessage], 1] call CBA_fnc_waitAndExecute;
     }];
 };
 

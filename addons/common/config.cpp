@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {"ACE_Box_Misc", "ACE_bananaItem", "ACE_Flag_Black", "ACE_Flag_White"};
         weapons[] = {"ACE_ItemCore", "ACE_FakePrimaryWeapon", "ACE_Banana"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_main","ace_modules"};
+        requiredAddons[] = {"ace_main", "ace_modules"};
         author = CSTRING(ACETeam);
         authors[] = {"KoffeinFlummi"};
         url = ECSTRING(main,URL);

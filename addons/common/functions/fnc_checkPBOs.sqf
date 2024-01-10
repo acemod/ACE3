@@ -94,7 +94,7 @@ if (!isServer) then {
                 [{alive player}, {
                     TRACE_2("Player is alive, showing msg and exiting",time,_this);
                     private _errorMsg = composeText [parseText format ["<t align='center'>%1</t>", _this]];
-                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}, {findDisplay 46 closeDisplay 0}, nil, [true, false]] call FUNC(errorMessage);
+                    ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
                 }, _errorMsg] call CBA_fnc_waitUntilAndExecute;
             };
         };
