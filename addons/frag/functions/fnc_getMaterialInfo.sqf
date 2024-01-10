@@ -48,7 +48,7 @@ _material = switch (true) do {
     case ("rock" in _material): { "rock" };
     case ("wood" in _material): { "wood" };
     case ("lino" in _material);
-	case ("building" isEqualTo _material);
+	case ("building" in _material);
     case ("concrete" in _material): { "concrete" };
     case ("metal" in _material): { "metal" };
     default { "ground" };
