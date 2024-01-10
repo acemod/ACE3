@@ -26,8 +26,6 @@ PREP(canDig);
 PREP(canGetInPosition);
 PREP(canInteractWith);
 PREP(changeProjectileDirection);
-PREP(checkAcePresence);
-PREP(checkErrorMessage);
 PREP(checkFiles);
 PREP(checkFiles_diagnoseACE);
 PREP(checkPBOs);

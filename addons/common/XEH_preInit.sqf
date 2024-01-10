@@ -7,6 +7,11 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+// Let the server know that we have ACE loaded
+if (!isServer) then {
+    missionNamespace setVariable [format [QGVAR(aceLoaded_%1), clientOwner], true, 2];
+};
+
 GVAR(syncedEvents) = createHashMap;
 GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon

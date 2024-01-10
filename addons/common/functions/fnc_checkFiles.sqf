@@ -41,7 +41,7 @@ if ([_cbaRequiredAr, _cbaVersionAr] call CBA_versioning_fnc_version_compare) the
     ERROR(_errorMsg);
 
     if (hasInterface) then {
-        ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
+        ["[ACE] ERROR", _errorMsg] spawn FUNC(errorMessage);
     };
 };
 
@@ -87,7 +87,7 @@ if (_oldAddons isNotEqualTo []) then {
     };
 
     if (hasInterface) then {
-        ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
+        ["[ACE] ERROR", _errorMsg] spawn FUNC(errorMessage);
     };
 
     ERROR(_errorMsg);
@@ -141,7 +141,7 @@ if (!isServer && {_platform in ["linux", "osx"]}) then {
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
+                    ["[ACE] ERROR", _errorMsg] spawn FUNC(errorMessage);
                 };
             } else {
                 // Print the current extension version
@@ -185,7 +185,7 @@ if (isMultiplayer) then {
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
+                    ["[ACE] ERROR", _errorMsg] spawn FUNC(errorMessage);
                 };
             };
 
@@ -200,7 +200,7 @@ if (isMultiplayer) then {
                 ERROR(_errorMsg);
 
                 if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg] call FUNC(checkErrorMessage);
+                    ["[ACE] ERROR", _errorMsg] spawn FUNC(errorMessage);
                 };
             };
         };

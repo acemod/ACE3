@@ -266,38 +266,52 @@ call FUNC(checkFiles);
 // This handles clients joining that do not have ACE loaded
 if (isServer) then {
     addMissionEventHandler ["PlayerConnected", {
-        params ["", "", "", "", "_owner"];
+        params ["", "_uid", "_name", "", "_owner"];
 
         // Don't run on server
         if (_owner == 2) exitWith {};
 
-        private _random = [];
+        INFO_3("Client %1 connected. UID is %2, Client ID is %3",_name,_uid,_owner);
 
-        // Make a random string of length 64
-        for "_i" from 0 to 31 do {
-            _random pushBack selectRandom GVAR(hexArray); // used GVAR(hexArray) because it was easy to use
-        };
-
-        _random = _random joinString "";
-
-        // Add the random suffix, so that it's much harder for the client to predict the function name and put preventive mesures in place
-        private _fncNameCheckAcePresence = format [QFUNC(checkAcePresence_%1), _random];
-        private _fncNameCheckErrorMessage = format [QFUNC(checkErrorMessage_%1), _random];
-
-        // Send functions to the connecting client
-        missionNamespace setVariable [_fncNameCheckAcePresence, /*compile toString */FUNC(checkAcePresence), _owner]; // compile toString removes isFinal status
-        missionNamespace setVariable [_fncNameCheckErrorMessage, /*compile toString */FUNC(checkErrorMessage), _owner];
-
-        // Wait for function to broadcast, then run function on client
         [{
-            params ["_owner", "_fncNameCheckAcePresence", "_fncNameCheckErrorMessage"];
+            params ["", "_uid", "_name", "", "_owner"];
 
-            _fncNameCheckErrorMessage remoteExecCall [_fncNameCheckAcePresence, _owner];
+            // If the player has left, ignore the rest
+            if (allUsers findIf {_userInfo = getUserInfo _x; (_userInfo select 1) == _owner && {(_userInfo select 2) == _uid}} == -1) exitWith {};
 
-            // Delete the functions on the server
-            //missionNamespace setVariable [_fncNameCheckAcePresence, nil];
-            //missionNamespace setVariable [_fncNameCheckErrorMessage, nil];
-        }, [_owner, _fncNameCheckAcePresence, _fncNameCheckErrorMessage], 1] call CBA_fnc_waitAndExecute;
+            // If ACE is not loaded, kick unit
+            if !(missionNamespace getVariable [format [QGVAR(aceLoaded_%1), _owner], false]) then {
+                WARNING_3("Client %1 connected without ACE. UID is %2, Client ID is %3",_name,_uid,_owner);
+
+                private _random = [];
+
+                // Make a random string of length 32
+                for "_i" from 0 to 15 do {
+                    _random pushBack selectRandom GVAR(hexArray); // used GVAR(hexArray) because it was easy to use
+                };
+
+                // Add the random string as a suffix, so that it's much harder for the client to predict the function name and put preventive measures in place
+                private _fncName = format [QFUNC(errorMessage_%1), _random joinString ""];
+
+                // This avoids 'Attempt to delete final function' error spammed in RPT, which happens if a final function is sent directly to the client
+                missionNamespace setVariable [_fncName, FUNC(errorMessage)];
+
+                // Send function to the connecting client
+                _owner publicVariableClient _fncName;
+
+                // Wait for function to broadcast, then run function on client
+                [{
+                    ["[ACE] ERROR", "ACE is not present or outdated past version 3.X.X"] remoteExec _this;
+                }, [_fncName, _owner], 0.5] call CBA_fnc_waitAndExecute;
+            };
+        }, _this, 15] call CBA_fnc_waitAndExecute;
+    }];
+
+    addMissionEventHandler ["PlayerDisconnected", {
+        params ["", "", "", "", "_owner"];
+
+        // Reset variable
+        missionNamespace setVariable [format [QGVAR(aceLoaded_%1), _owner], nil];
     }];
 };
 
