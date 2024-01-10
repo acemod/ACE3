@@ -1,5 +1,6 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: commy2, johnb43, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
  * Opens a textbox with an error message.
@@ -152,8 +153,8 @@ if (!_showCancelButton || {_onCancel isEqualTo {}}) then {
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay IDC_OK; true}];
 _ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay IDC_CANCEL; true}];
 
-// Intercept all keystrokes except the esacpe key
-_display displayAddEventHandler ["KeyDown", {_this select 1 == 1}];
+// Intercept the escape key
+_display displayAddEventHandler ["KeyDown", {_this select 1 == DIK_ESCAPE}];
 
 private _ehID = _display displayAddEventHandler ["Unload", {
     params ["_display", "_exitCode"];

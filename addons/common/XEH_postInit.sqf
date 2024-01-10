@@ -268,6 +268,9 @@ if (isServer) then {
     addMissionEventHandler ["PlayerConnected", {
         params ["", "", "", "", "_owner"];
 
+        // Don't run on server
+        if (_owner == 2) exitWith {};
+
         private _random = [];
 
         // Make a random string of length 64

@@ -1,5 +1,6 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: commy2, johnb43, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
  * Opens a textbox with an error message, used for PBO checking.
@@ -144,30 +145,35 @@ _ctrlButtonCancel ctrlSetText "";
 _ctrlButtonCancel ctrlCommit 0;
 
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay IDC_OK; true}];
-_ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay IDC_CANCEL; true}];
 
-// Intercept all keystrokes except the esacpe key
-_display displayAddEventHandler ["KeyDown", {_this select 1 == 1}];
+// Intercept all keystrokes except the enter keys
+_display displayAddEventHandler ["KeyDown", {!((_this select 1) in [DIK_RETURN, DIK_NUMPADENTER])}];
 
-// If BIS_fnc_guiMessage is called while the display is opened, the "Unload" display EH will be lost and won't fire
+// Close curator and mission displays (because of the message display, it doesn't quit the mission yet)
+findDisplay 312 closeDisplay 0;
+findDisplay 46 closeDisplay 0;
+
 [_display] spawn {
+    // Limitation: This can't close error message boxes (e.g. "No entry")
     disableSerialization;
 
     params ["_display"];
 
-    // Wait until the display has been closed
-    waitUntil {
-        uiSleep 0.25;
+    // This sleep will work when game is paused
+    uiSleep 17.5;
 
-        !isNull _display;
+    // Close display automatically
+    if (!isNull _display) then {
+        _display closeDisplay IDC_OK;
     };
 
-    // Just to be safe
-    endLoadingScreen;
+    uiSleep 2.5;
 
-    // Close curator and mission displays
-    findDisplay 312 closeDisplay 0;
-    findDisplay 46 closeDisplay 0;
+    // Close any other BIS_fnc_guiMessage messages that could be open
+    if (!isNull findDisplay 46) then {
+        uiNamespace setVariable ["BIS_fnc_guiMessage_status", true];
+        findDisplay 46 closeDisplay 0;
+    };
 };
 
 nil
