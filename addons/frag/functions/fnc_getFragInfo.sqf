@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Lambda.Tiger
+ * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function returns fragmentation parameters for a specific
  * ammo type.
  * 

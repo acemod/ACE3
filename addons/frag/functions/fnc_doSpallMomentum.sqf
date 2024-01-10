@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Lambda.Tiger
+ * Author: Jaynus, NouberNou, Lambda.Tiger,
  * This function creates spalling if the hit slowed the speed down enough.
  * 
  * Arguments:
