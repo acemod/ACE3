@@ -1,22 +1,17 @@
 #include "script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function returns fragmentation parameters for a specific
- * ammo type.
+ * This function returns a classification of material type based 
+ * on the surface hit.
  * 
  * Arguments:
- * 0: _ammo <STRING> - cfgAmmo type of ammo to check
+ * 0: surfacetype <STRING> - either a cfgSurfaces path .bisurf filepath 
  * 
  * Return Value:
- * _ammoInfo <ARRAY>
- * 	0: _fragRange - search range for fragments
- * 	1: _fragVel - gurney equation calculated velocity
- * 	2: _fragTypes - array of fragment types
- * 	3: _fragCount - modified frag count used under assumptions 
- *									 of spherical fragmentation
+ * _material <STRING> - Material categories as expanded on in line 43 below
  *
  * Example:
- * ["B_556x45_Ball"] call ace_frag_fnc_getFragInfo;
+ * [_surfaceType] call ace_frag_fnc_getFragInfo;
  *
  * Public: No
  */
@@ -34,7 +29,7 @@ if (isClass (configFile >> "CfgSurfaces" >> _surfType)) then {
     _material = getText (configFile >> "CfgSurfaces" >> _surfType >> "soundEnviron");
 } else { // Messy way when a surface isn't added to cfgSurfaces
     private _surfFileText = loadFile _surfType;
-    _surfFileText = (tolower _surfFileText) splitString " ;="+ endl;
+    _surfFileText = (tolower _surfFileText) splitString " "";="+ endl;
     private _idx = _surfFileText find "soundenviron";
     _material = _surfFileText#(_idx+1);
     if (_material isEqualTo "empty") then {
