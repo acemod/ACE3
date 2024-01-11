@@ -2,19 +2,10 @@
 
 ["CBA_settingsInitialized", {
         if (isServer) then {
-            [QGVAR(frag_eh), LINKFUNC(doFrag)] call CBA_fnc_addEventHandler;
-            [QGVAR(spall_eh), LINKFUNC(doFragMomentum)] call CBA_fnc_addEventHandler;
             [] call FUNC(initBlackList);
             [] call FUNC(initMaterialCache);
         };
         
-        /*if (hasInterface) then {
-            ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-        };
-
-        ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-        ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;*/
 
 #ifdef DEBUG_MODE_DRAW
         if (hasInterface && GVAR(debugOptions)) then {
@@ -26,8 +17,6 @@
 #endif
 }] call CBA_fnc_addEventHandler;
 
-
-// Debug stuff:
 
 #ifdef LOG_FRAG_INFO
 [true, true, 30] call FUNC(dev_debugAmmo);
