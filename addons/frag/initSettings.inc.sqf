@@ -38,7 +38,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     [LSTRING(MinFrag), LSTRING(MinFrag_Desc)],
     [_category, LSTRING(Frag)],
     false,
-	true
+    true
 ] call CBA_fnc_addSetting;
 
 [
