@@ -1,8 +1,3 @@
-class BombCore;
-class Bo_Mk82: BombCore {
-    ACE_FRAG_ADD_EH;
-};
-
 // We need this since autocannons generally inherit from BulletBase
 class BulletCore; 
 class BulletBase: BulletCore {

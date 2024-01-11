@@ -21,7 +21,10 @@ class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
     GVAR(gurney_k) = "1/2";
 };
 
+class BombCore;
 class Bo_Mk82: BombCore {
+    ACE_FRAG_ADD_EH;
+
     GVAR(enabled) = 1;
 
     GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
