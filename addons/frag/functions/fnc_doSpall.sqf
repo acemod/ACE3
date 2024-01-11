@@ -33,7 +33,8 @@ params [
 
 if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF ||
 	_lPosASL isEqualTo [0,0,0] ||
-	{isNull _hitObj || {_hitObj isKindOf "man"}}) exitWith {
+	{isNull _hitObj || {_hitObj isKindOf "man" || 
+	{_ammo isEqualTo ""}}}) exitWith {
     TRACE_4("time/invldHit",CBA_missionTime,GVAR(lastSpallTime),_hitObj,_lPosASL);
 };
 
@@ -75,6 +76,10 @@ if (120 > acos ((vectorNormalized _lVelUnit) vectorDotProduct _sNorm)) then {
 if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
     TRACE_3("terrainIntersect",_lPosASL,_unitStep,_lPosASL);
 }; 
+ 
+//***** Passed all exit withs *****//
+GVAR(lastSpallTime) = CBA_missionTime;
+
 // step through
 for "_i" from 1 to 20 do 
 {
@@ -93,10 +98,6 @@ if GVAR(dbgSphere) then {
     [_lPosASL, "orange"] call FUNC(dev_sphereDraw);
 };
 #endif
- 
-//***** Passed all exit withs *****//
-GVAR(lastSpallTime) = CBA_missionTime;
-
 //***** Select spalled fragment spawner **//
 
 private _spawnSize = switch (true) do 
@@ -109,8 +110,8 @@ private _spawnSize = switch (true) do
 };
 
 //***** Spawn spalled fragments
-private _spallSpawner = createVehicleLocal [
-    QUOTE(ADDON##_) + _material + _spawnSize,
+private _spallSpawner = createVehicle [
+    "ace_frag_" + _material + _spawnSize,
     ASLToATL _spallPos,
     [],
     0,
@@ -119,7 +120,7 @@ private _spallSpawner = createVehicleLocal [
 _spallSpawner setVectorDirandUp [_lVelUnit, _vUp];
 _spallSpawner setVelocity (_lVelUnit vectorMultiply (_dV/2));
 _spallSpawner setShotParents _shotParents;
-profilerLog "spalled";
+
 #ifdef DEBUG_MODE_FULL
 systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _deltaMomentum);
 #endif

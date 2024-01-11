@@ -55,11 +55,10 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 	true
 ] call CBA_fnc_addSetting;
 
-
 [
     QGVAR(SpallIntensity), "SLIDER",
     [LSTRING(SpallIntensity), LSTRING(SpallIntensity_Desc)],
-    [_category, LSTRING(Frag)],
+    [_category, LSTRING(Spall)],
     [0.1, 2, 1, 1],
 	true
 ] call CBA_fnc_addSetting;

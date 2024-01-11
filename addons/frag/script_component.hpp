@@ -18,9 +18,9 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define ACE_FRAG_HOLDOFF 0.2
+#define ACE_FRAG_HOLDOFF 0.25
 #define ACE_FRAG_HOLDOFF_VEHICLE 1
-#define ACE_FRAG_SPALL_HOLDOFF 0.2
+#define ACE_FRAG_SPALL_HOLDOFF 0.25
 #define ACE_FRAG_COUNT_MIN 5
 #define ACE_FRAG_COUNT_MAX 50
 #define ACE_FRAG_HITPOINTS  ["spine1","spine2","spine3","head","leftarm","leftarmroll","leftforearm","rightarm","rightarmroll","rightforearm","pelvis","leftupleg","leftuplegroll","leftlegroll","leftfoot","rightupleg","rightuplegroll","rightleg","rightlegroll","rightfoot"]
@@ -32,4 +32,8 @@
 #define __FADE_INTERVAL 0.1
 #define __FADE_RATE __FADE_INTERVAL/__FADE_TIME/2
 #define __FADE_INIT (__FADE_TIME+__FADE_START)/__FADE_TIME/2
+#endif
+
+#ifndef GLUE
+#define GLUE(g1,g2) g1##g2
 #endif

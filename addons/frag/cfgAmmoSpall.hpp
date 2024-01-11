@@ -133,7 +133,7 @@ class GVAR(metal_spall_small) : GVAR(spallBase) {
     submunitionConeType[] = {"poissondisccenter", 6};
 };
 
-class GVAR(metal_metal_spall_medium) : GVAR(spallBase) {
+class GVAR(metal_spall_medium) : GVAR(spallBase) {
     submunitionAmmo[] = {QGVAR(tiny), 5, QGVAR(small), 4, QGVAR(medium), 2, QGVAR(large), 1};
     submunitionConeType[] = {"poissondisccenter", 8};
 };
