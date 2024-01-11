@@ -38,7 +38,7 @@ class Bo_Mk82: BombCore {
 // ~~~~ Grenades:
 class Grenade;
 class GrenadeHand: Grenade {
-	ACE_FRAG_ADD_EH;
+    ACE_FRAG_ADD_EH;
 
     GVAR(enabled) = 1;
 
@@ -278,6 +278,6 @@ class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
 };
 // Special
 class Default;
-class Laserbeam : Default {
+class Laserbeam: Default {
     GVAR(skip) = 1;
 };
