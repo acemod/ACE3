@@ -27,7 +27,7 @@ params [
 if (_sidePlayer) then
 {
     GVAR(dev_trackLines) set [getObjectID _proj, [1, [getposATL _proj], [0, 0, 1, 1]]];
-}	else
+} else
 {
     GVAR(dev_trackLines) set [getObjectID _proj, [1, [getposATL _proj], [1, 0, 0, 1]]];
 };

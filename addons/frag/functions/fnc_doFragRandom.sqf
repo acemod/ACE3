@@ -39,7 +39,7 @@ private _hMode = switch (true) do {
 };
 
 private _type = if (count _fragType > 0 && 
-    				{"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
+                    {"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
     QGVAR(def_tiny_)
 } else {
     QGVAR(def_small_)
@@ -69,6 +69,6 @@ _fragSpawner addEventHandler [
     }
 ];
 if (GVAR(dbgSphere)) then {
-	[_posASL] call FUNC(dev_sphereDraw);
+    [_posASL] call FUNC(dev_sphereDraw);
 };
 #endif 

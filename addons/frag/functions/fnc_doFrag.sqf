@@ -25,19 +25,19 @@ _args*/ params [
     ["_proj", objNull, [objNull]], 
     ["_posASL", [0,0,0], [[]], [3]], 
     ["_vel", [0,0,0] , [[]], [3]],
-	["_ammo", "", [""]],
-	["_shotParents", [objNull, objNull], [[]]]
+    ["_ammo", "", [""]],
+    ["_shotParents", [objNull, objNull], [[]]]
 ];
 
 private _shotParentVic = _shotParents#0;
 if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exitWith {
-	TRACE_1("vehicleTimeExit",_shotParentVic);
+    TRACE_1("vehicleTimeExit",_shotParentVic);
 };
 _shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 
 private _timeSince = CBA_missionTime - GVAR(lastFragTime);
 if (_ammo isEqualTo "" || {_posASL isEqualTo [0,0,0] || _timeSince < ACE_FRAG_HOLDOFF}) exitWith {
-	TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
+    TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
 };
 GVAR(lastFragTime) = CBA_missionTime;
 private _maxFrags = round (linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true]);
@@ -52,7 +52,6 @@ if (_heightAGL < 0.25) then {
     _posASL = _posASL vectorAdd [0, 0, 0.25];
 };
 
-// !*! make holdoff a gvar?
 TRACE_3("fnc_doFragTargeted IF", _fragRange, _timeSince, GVAR(fragSimComplexity));
 if (_fragRange > 3 && _timeSince > ACE_FRAG_HOLDOFF*1.5 && GVAR(fragSimComplexity) != 1) then {
     _maxFrags = _maxFrags - ([_posASL, _fragVel, _fragRange, _maxFrags, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));

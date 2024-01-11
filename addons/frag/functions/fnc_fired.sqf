@@ -33,7 +33,8 @@ _shouldFrag params ["_doFrag", "_doSubmunit"];
 
 if (_doFrag) then {
     // wait for frag damage to kill units before spawning fragments
-    _projectile addEventHandler ["Explode",	{
+    _projectile addEventHandler ["Explode",
+        {
             if (isServer) then {
                 [FUNC(doFrag), [_this]] call CBA_fnc_execNextFrame;
             } else {

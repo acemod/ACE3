@@ -19,12 +19,12 @@ TRACE_1("",_this);
 params [
     "_projectile",
     ["_hitObj", objNull],
-//	"",
+//    "",
     ["_lPosASL", [0, 0, 0]],
     ["_lVel", [0, 0, 0]],
     ["_sNorm", [0, 0, 0]],
-//	"",
-//	"",
+//    "",
+//    "",
     ["_surfaceType", ""],
     ["_ammo", "", [""]],
     ["_shotParents", [objNull, objNull], [[]]],
@@ -32,9 +32,9 @@ params [
 ];
 
 if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF ||
-	_lPosASL isEqualTo [0,0,0] ||
-	{isNull _hitObj || {_hitObj isKindOf "man" || 
-	{_ammo isEqualTo ""}}}) exitWith {
+    _lPosASL isEqualTo [0,0,0] ||
+    {isNull _hitObj || {_hitObj isKindOf "man" || 
+    {_ammo isEqualTo ""}}}) exitWith {
     TRACE_4("time/invldHit",CBA_missionTime,GVAR(lastSpallTime),_hitObj,_lPosASL);
 };
 
@@ -53,7 +53,7 @@ private _vel = if (alive _projectile) then {
 
 // Find spall speed / fragment
 private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
-private _caliber = getNumber (configFile >> "cfgAmmo" >> _ammo >> "caliber"); // !*! optimize this later?
+private _caliber = getNumber (configFile >> "cfgAmmo" >> _ammo >> "caliber");
 // scaled momentum change made on caliber-mass assumption ~sqrt(2)/20 * caliber ~= mass
 private _deltaMomentum =  0.0707 * _caliber * sqrt( _dV ) * GVAR(SpallIntensity); 
 TRACE_3("found speed",_dV,_caliber,_deltaMomentum);
@@ -63,20 +63,19 @@ if (_deltaMomentum < 2) exitWith {
 };
 
 
-//** start calculating where the spalling should come !*! could be better  **// 
 private _lVelUnit = vectorNormalized _lVel;
 private _unitStep = _lVelUnit vectorMultiply 0.05;
 private _spallPos = +_lPosASL;
-
-
-if (120 > acos ((vectorNormalized _lVelUnit) vectorDotProduct _sNorm)) then {
-    _spallPos = _spallPos vectorAdd (_unitStep vectorMultiply 5);
-};
 
 if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
     TRACE_3("terrainIntersect",_lPosASL,_unitStep,_lPosASL);
 }; 
  
+
+if (120 > acos ((vectorNormalized _lVelUnit) vectorDotProduct _sNorm)) then {
+    _spallPos = _spallPos vectorAdd (_unitStep vectorMultiply 5);
+};
+
 //***** Passed all exit withs *****//
 GVAR(lastSpallTime) = CBA_missionTime;
 

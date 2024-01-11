@@ -31,13 +31,13 @@ _aID = _cVic addAction
 [
     "Reset Lines",
     FUNC(dev_clearTraces),
-    nil,		// arguments
-    1.5,		// priority
-    true,		// showWindow
-    false,		// hideOnUse
-    "",			// shortcut
-    "true",		// condition
-    8			
+    nil,        // arguments
+    1.5,        // priority
+    true,        // showWindow
+    false,        // hideOnUse
+    "",            // shortcut
+    "true",        // condition
+    8            
 ];
 
 missionNamespace getVariable [QGVAR(dev_clearTraceAction), _aID];

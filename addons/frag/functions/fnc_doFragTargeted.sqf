@@ -53,7 +53,7 @@ if (_objects isEqualTo []) exitWith {
 // grab crews and add them in so that targets stay approx. sorted by distance
 {
     private _crew = (crew _x);
-    if (count _crew > 1) then {	
+    if (count _crew > 1) then {    
         private _arr = [_x];
         {
             _arr pushBackUnique _x;
@@ -158,9 +158,9 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
     _fragObj setShotParents _shotPrnt;
     #ifdef DEBUG_MODE_DRAW
     [_fragObj, "purple", true] call FUNC(dev_trackObj);
-	if (GVAR(dbgSphere)) then {
-    	[_targetPos, "orange"] call FUNC(dev_sphereDraw);
-	};
+    if (GVAR(dbgSphere)) then {
+        [_targetPos, "orange"] call FUNC(dev_sphereDraw);
+    };
     #endif
 
     _fragCount = _fragCount + _count;

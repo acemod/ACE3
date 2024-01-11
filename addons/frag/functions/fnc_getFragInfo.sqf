@@ -9,11 +9,11 @@
  * 
  * Return Value:
  * _ammoInfo <ARRAY>
- * 	0: _fragRange - search range for fragments
- * 	1: _fragVel - gurney equation calculated velocity
- * 	2: _fragTypes - array of fragment types
- * 	3: _fragCount - modified frag count used under assumptions 
- *									 of spherical fragmentation
+ *  0: _fragRange - search range for fragments
+ *  1: _fragVel - gurney equation calculated velocity
+ *  2: _fragTypes - array of fragment types
+ *  3: _fragCount - modified frag count used under assumptions 
+ *                                   of spherical fragmentation
  *
  * Example:
  * ["B_556x45_Ball"] call ace_frag_fnc_getFragInfo;
@@ -74,7 +74,7 @@ if (_warn) then {
 // 1: _fragVel - gurney equation calculated velocity
 // 2: _fragTypes - array of fragment types
 // 3: _fragCount - modified frag count used under assumptions 
-//									 of spherical fragmentation
+//                 of spherical fragmentation
 _ammoInfo = [
     sqrt (_fragCount / (4 * pi * 0.005)),
     0.8 * _gC * sqrt (_c / (_m + _c * _k)),

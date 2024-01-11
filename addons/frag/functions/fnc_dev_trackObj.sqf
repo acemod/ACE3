@@ -17,9 +17,9 @@
  * Public: No
  */
 params [
-	"_obj",
-	["_color", "blue", ["blue"]],
-	["_isProj", false, [false]]
+    "_obj",
+    ["_color", "blue", ["blue"]],
+    ["_isProj", false, [false]]
 ];
 TRACE_4("devDraw",_this,_obj,_color,_isProj);
 /// track round on each frame
@@ -33,7 +33,7 @@ private _colorArray = switch (toLower _color) do {
     case "red":    {[0.8, 0, 0, 1]};
     case "black":  {[1, 1, 1, 1]};
     case "white":  {[0, 0, 0, 1]};
-    default 			 {[0, 0.8, 0.8, 1]};
+    default              {[0, 0.8, 0.8, 1]};
 };
 GVAR(dev_trackLines) set [getObjectID _obj, [1, [getposATL _obj], _colorArray]];
 
@@ -93,7 +93,7 @@ _obj addEventHandler [
 ];
 
 // Add deflected eventHandler
-_proj addEventHandler [
+_obj addEventHandler [
     "Deflected",
     {
         params ["_proj", "_posASL"];

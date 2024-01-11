@@ -5,7 +5,7 @@
             [QGVAR(frag_eh), LINKFUNC(doFrag)] call CBA_fnc_addEventHandler;
             [QGVAR(spall_eh), LINKFUNC(doFragMomentum)] call CBA_fnc_addEventHandler;
             [] call FUNC(initBlackList);
-			[] call FUNC(initMaterialCache);
+            [] call FUNC(initMaterialCache);
         };
         
         /*if (hasInterface) then {
@@ -17,11 +17,11 @@
         ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;*/
 
 #ifdef DEBUG_MODE_DRAW
-        if (hasInterface && GVAR(debugOptions)) then {	
-	        private _h = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
-	        missionNamespace setVariable [QGVAR(dev_drawPFEH), _h];
-	        ["unit", LINKFUNC(dev_switchUnitHandle), true] call CBA_fnc_addPlayerEventHandler;
-	        [objNull, ace_player] call FUNC(dev_switchUnitHandle);
+        if (hasInterface && GVAR(debugOptions)) then {
+            private _h = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
+            missionNamespace setVariable [QGVAR(dev_drawPFEH), _h];
+            ["unit", LINKFUNC(dev_switchUnitHandle), true] call CBA_fnc_addPlayerEventHandler;
+            [objNull, ace_player] call FUNC(dev_switchUnitHandle);
         };
 #endif
 }] call CBA_fnc_addEventHandler;

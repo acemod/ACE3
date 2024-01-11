@@ -2,19 +2,19 @@
 #define HD_MULT 5
 #define BASE_DRAG_HD (BASE_DRAG * HD_MULT)
 #define ACE_FRAG_RM_EH class EventHandlers {\
-	delete  ADDON;\
+    delete  ADDON;\
 }
 
 class CfgAmmo {
     class B_65x39_Caseless;
 
-	class GVAR(base): B_65x39_Caseless {
+    class GVAR(base): B_65x39_Caseless {
         ACE_damageType = "grenade"; // compatibility with medical_damage, shrapnel should produce grenade wounds
         timeToLive = 4;
         typicalSpeed = 800;
         maxSpeed = 1500;
         deflecting = 65;
-		ACE_FRAG_RM_EH;
+        ACE_FRAG_RM_EH;
     };
 
     class GVAR(tiny): GVAR(base) {
@@ -85,8 +85,8 @@ class CfgAmmo {
         caliber = 2.8;
     };
 
-	#include "cfgAmmoBaseEH.hpp"
-	#include "cfgAmmoSpall.hpp"
-	#include "cfgAmmoFragParameters.hpp"
-	#include "cfgAmmoFragSpawner.hpp"
+    #include "cfgAmmoBaseEH.hpp"
+    #include "cfgAmmoSpall.hpp"
+    #include "cfgAmmoFragParameters.hpp"
+    #include "cfgAmmoFragSpawner.hpp"
 };

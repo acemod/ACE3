@@ -23,7 +23,7 @@ private _deleteArr = [];
         {
             drawLine3D [_y#1#(_j-1), _y#1#_j, _y#2];
         };
-    };			
+    };
 } forEach GVAR(dev_trackLines);
 
 if (GVAR(drawHitBox)) then {
@@ -41,7 +41,7 @@ if (GVAR(drawHitBox)) then {
         {
             for "_i" from 1 to count _x -1 do
             {
-                drawLine3D [_obj modelToWorld (_pts#(_x#_i)), _obj modelToWorld (_pts#(_x#(_i-1))), _color];				
+                drawLine3D [_obj modelToWorld (_pts#(_x#_i)), _obj modelToWorld (_pts#(_x#(_i-1))), _color];
             };
         } forEach HB_DRAW_ARRS;
 

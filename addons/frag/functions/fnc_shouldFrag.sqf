@@ -9,7 +9,7 @@
  * 
  * Return Value:
  * _shouldFrag <ARRAY>
- * 	0 - Should the specific round fragment
+ *  0 - Should the specific round fragment
  *  1 - Does the munition have a child submunition 
  *
  * Example:

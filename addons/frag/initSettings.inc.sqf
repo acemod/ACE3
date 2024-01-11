@@ -25,7 +25,6 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     1
 ] call CBA_fnc_addSetting;
 
-/// !*! TODO: add stringtable entries
 [
     QGVAR(fragSimComplexity), "LIST", 
      [LSTRING(FragMode), LSTRING(FragMode_Desc)],
@@ -33,7 +32,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     [_category, LSTRING(Frag)],
     [[2, 1, 0], [LSTRING(FragMode_Opt2),LSTRING(FragMode_Opt1),LSTRING(FragMode_Opt0)], 2],
 //    [[2, 1, 0], ["Targeted & random fragmentation","Random fragmentation","Unit targeted fragmentation"], 2],
-	true
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -50,9 +49,9 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 //    ["Fragmentation BlackList", "Array of ammo classnames strings to blackist fragmentation for."],
     [_category, LSTRING(Frag)],
     QUOTE(['B_556x45_Ball']),
-	true,
-	nil,
-	true
+    true,
+    nil,
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -60,5 +59,5 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     [LSTRING(SpallIntensity), LSTRING(SpallIntensity_Desc)],
     [_category, LSTRING(Spall)],
     [0.1, 2, 1, 1],
-	true
+    true
 ] call CBA_fnc_addSetting;

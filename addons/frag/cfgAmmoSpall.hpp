@@ -10,7 +10,7 @@ class GVAR(spallBase) : B_65x39_Caseless {
     triggerSpeedCoef[] = {0.75,1.25};
     deleteParentWhenTriggered = 1;
     submunitionParentSpeedCoef = 1;
-	ACE_FRAG_RM_EH;
+    ACE_FRAG_RM_EH;
 };
 
 
