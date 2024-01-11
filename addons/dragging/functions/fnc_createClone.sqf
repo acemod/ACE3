@@ -72,7 +72,7 @@ _clone setVariable [QGVAR(original), [_target, _isInRemainsCollector, _isObjectH
 
     // Move unit below terrain in order to hide it and remove its inventory access
     _target setPosATL _posATL;
-}, [_target, _posATL], 0.1] call CBA_fnc_waitAndExecute;
+}, [_target, _posATL], 0.25] call CBA_fnc_waitAndExecute;
 
 // Sets the facial expression
 [[QGVAR(cloneCreated), [_target, _clone]] call CBA_fnc_globalEventJIP, _clone] call CBA_fnc_removeGlobalEventJIP;
