@@ -19,12 +19,9 @@ TRACE_1("",_this);
 params [
     "_projectile",
     ["_hitObj", objNull],
-//    "",
     ["_lPosASL", [0, 0, 0]],
     ["_lVel", [0, 0, 0]],
     ["_sNorm", [0, 0, 0]],
-//    "",
-//    "",
     ["_surfaceType", ""],
     ["_ammo", "", [""]],
     ["_shotParents", [objNull, objNull], [[]]],
@@ -70,16 +67,14 @@ private _spallPos = +_lPosASL;
 if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
     TRACE_3("terrainIntersect",_lPosASL,_unitStep,_lPosASL);
 }; 
- 
+// Passed all exitWiths
+GVAR(lastSpallTime) = CBA_missionTime;
 
+// check for less than 30 between norm and projectile (120 of 90 deg offset)
 if (120 > acos ((vectorNormalized _lVelUnit) vectorDotProduct _sNorm)) then {
     _spallPos = _spallPos vectorAdd (_unitStep vectorMultiply 5);
 };
 
-// Passed all exit withs
-GVAR(lastSpallTime) = CBA_missionTime;
-
-// step through
 for "_i" from 1 to 20 do 
 {
     private _nPos = _spallPos vectorAdd _unitStep;
@@ -98,8 +93,6 @@ if GVAR(dbgSphere) then {
 };
 #endif
 
-// Select spalled fragment spawner
-
 private _spawnSize = switch (true) do 
 {
     case (_deltaMomentum < 3): { "_spall_tiny" };
@@ -109,7 +102,6 @@ private _spawnSize = switch (true) do
     default { "_spall_huge" };
 };
 
-// Spawn spalled fragments
 private _spallSpawner = createVehicle [
     "ace_frag_" + _material + _spawnSize,
     ASLToATL _spallPos,

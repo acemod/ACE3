@@ -24,16 +24,14 @@ if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
 };
 
 private _shouldFrag = _ammo call FUNC(shouldFrag);
-_shouldFrag params ["_doFrag"]; 
-
 if (_doFrag) then {
-    // wait for frag damage to kill units before spawning fragments
     _projectile addEventHandler [
         "Explode",
         {
             params ["_proj"];
             private _shotParents = getShotParents _proj;
             private _ammo = typeOf _proj;
+            // wait for frag damage to kill units before spawning fragments
             if (isServer) then {
                 [
                     FUNC(doFrag),
@@ -51,7 +49,6 @@ if (_doFrag) then {
 
 
 private _shouldSpall = _ammo call FUNC(shouldSpall);
-
 if (GVAR(spallEnabled) && {_shouldSpall}) then 
 {
     _projectile addEventHandler [

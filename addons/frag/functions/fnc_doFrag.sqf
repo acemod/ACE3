@@ -20,8 +20,7 @@
  * Public: No
  */
 TRACE_1("",_this);
-/*params ["_args", ["_isSubMunit", false, [false]]];
-_args*/ params [
+params [
     ["_proj", objNull, [objNull]], 
     ["_posASL", [0,0,0], [[]], [3]], 
     ["_vel", [0,0,0] , [[]], [3]],

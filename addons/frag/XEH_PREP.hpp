@@ -11,13 +11,11 @@ PREP(dev_clearTraces);
 PREP(dev_switchUnitHandle);
 
 // Base
-PREP(fired);
 PREP(initRound);
 
 // Frag
 PREP(addBlackList);
 PREP(initBlackList);
-PREP(submunition);
 PREP(shouldFrag);
 PREP(getFragInfo);
 PREP(doFrag);
