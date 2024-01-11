@@ -1,81 +1,78 @@
 #define DEBUG_MODE_FULL
 #include "..\script_component.hpp"
 /*
- * Author: ACE-Team
- *
+ * Author: ACE-Team, Lambda.Tiger
+ * This function will dump every ammo config that would generate ace_frag 
+ * fragements that doesn't have 
  *
  * Arguments:
- * None
+ * 0: Log ammo types that wouldn't normall frag
+ * 1: Force a CSV format
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_frag_fnc_dev_debugAmmo
+ * [] call ace_frag_fnc_dev_debugAmmo
  *
  * Public: No
  */
 
 params [
-    ["_debugMissing", true, [false]],
     ["_debugForce", false, [false]],
-    ["_debugSkippedFragPower", 30, [0]]
+    ["_csvFormat", false, [false]]
 ];
 
 diag_log text format ["~~~~~~~~~~~~~Start [%1]~~~~~~~~~~~~~", _this];
 
-private _allMagsConfigs = configProperties [configFile >> "CfgMagazines", "isClass _x", true];
+private _allAmmoConfigs = configProperties [configFile >> "cfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true];
 private _processedCfgAmmos = [];
 
+if (_csvFormat) then {
+    diag_log text format ["ammo,gurney_c,gurney_m,gurney_k,gurney_gC,_fragTypes,_fragCount"];
+};
+
+private _printCount = 0;
+
 {
-    private _ammo = toLower getText (_x >> "ammo");
+    private _ammo = tolower configName _x;
     if (_ammo != "" && {!(_ammo in _processedCfgAmmos)}) then {
         _processedCfgAmmos pushBack _ammo;
 
         //Ignore mines/bombs
-        if (_ammo isKindOf "TimeBombCore") exitWith {};
+        //if (_ammo isKindOf "TimeBombCore") exitWith {};
 
-        _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
+        private _ammoConfig = _x;
+        private _shoulFrag = [_ammo] call FUNC(shouldFrag);
 
-        //Read configs and test if it would actually cause a frag, using same logic as FUNC(pfhRound)
-        private _skip = getNumber (_ammoConfig >> QGVAR(skip));
-        private _explosive = getNumber (_ammoConfig >> "explosive");
-        private _indirectRange = getNumber (_ammoConfig >> "indirectHitRange");
-        private _force = getNumber (_ammoConfig >> QGVAR(force));
-        private _fragPower = getNumber (_ammoConfig >> "indirecthit") * (sqrt ((getNumber (_ammoConfig >> "indirectHitRange"))));
-
-        private _shouldAdd = (_skip == 0) && {(_force == 1) || {_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}}};
-
-        if (_shouldAdd) then {
-            if (_debugForce && {((getNumber(_ammoConfig >> "hit")) < 5) || {_fragPower < 10}}) then {
-                diag_log text format ["Ammo [%1] from Mag [%2] - Weak but will still frag!", _ammo, configName _x];
-                diag_log text format [" - _force=%1,_fragPower=%2", _force, _fragPower];
-            };
+        if (_shoulFrag || _debugForce) then {
 
             private _warn = false;
-
-            _fragTypes = getArray (_ammoConfig >> QGVAR(CLASSES));
+            private _fragTypes = getArray (_ammoConfig >> QGVAR(CLASSES));
             if (_fragTypes isEqualTo []) then {_warn = true;};
-            _c = getNumber(_ammoConfig >> QGVAR(CHARGE));
+            private _c = getNumber(_ammoConfig >> QGVAR(CHARGE));
             if (_c == 0) then {_warn = true;};
-            _m = getNumber(_ammoConfig >> QGVAR(METAL));
+            private _m = getNumber(_ammoConfig >> QGVAR(METAL));
             if (_m == 0) then {_warn = true;};
-            _k = getNumber(_ammoConfig >> QGVAR(GURNEY_K));
+            private _k = getNumber(_ammoConfig >> QGVAR(GURNEY_K));
             if (_k == 0) then {_warn = true;};
-            _gC = getNumber(_ammoConfig >> QGVAR(GURNEY_C));
+            private _gC = getNumber(_ammoConfig >> QGVAR(GURNEY_C));
             if (_gC == 0) then {_warn = true;};
-
-            if (_debugMissing && {_warn}) then {
-                diag_log text format ["Ammo [%1] from Mag [%2] MISSING frag configs:", _ammo, configName _x];
-                diag_log text format [" - _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5", _c, _m, _k, _gC, _fragTypes];
-            };
-        } else {
-            if ((_fragPower > _debugSkippedFragPower) && {isArray (_ammoConfig >> QGVAR(CLASSES))}) then {
-                diag_log text format ["Ammo [%1] from Mag [%2] has frag configs but will NOT frag:", _ammo, configName _x];
-                diag_log text format ["- skip=%1,explosive=%2,indirectHitRange=%3,force=%4,fragPower=%5", _skip, _explosive, _indirectRange, _force, _fragPower];
+            private _fragCount = getNumber (_ammoConfig >> QGVAR(fragCount));
+            if (_fragCount == 0) then {_fragCount = 200; _warn = true;};
+            
+            if (_warn) then {
+                INC(_printCount);
+                if (_csvFormat) then {
+                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6", _c, _m, _k, _gC, _fragTypes, _fragCount, _ammo];
+                } else {
+                    diag_log text format ["Ammo [%1] MISSING frag configs:", _ammo];
+                    diag_log text format [" _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5,_fragCount=%6", _c, _m, _k, _gC, _fragTypes, _fragCount];
+                };
             };
         };
     };
-} forEach _allMagsConfigs;
+} forEach _allAmmoConfigs;
 
-diag_log text format ["~~~~~~~~~~~~~End [%1-%2]~~~~~~~~~~~~~", count _allMagsConfigs, count _processedCfgAmmos];
+diag_log text format ["~~~~~~~~~~~~~~End [%1-%2]~~~~~~~~~~~~~~", count _allAmmoConfigs, count _processedCfgAmmos];
+diag_log text format ["~~~~~~~~~~~~~~Printed: %1~~~~~~~~~~~", _printCount];
