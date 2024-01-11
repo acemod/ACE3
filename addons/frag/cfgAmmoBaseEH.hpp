@@ -7,7 +7,7 @@ class Bo_Mk82: BombCore {
 class BulletCore; 
 class BulletBase: BulletCore {
     ACE_FRAG_ADD_EH;
-}
+};
 
 class GrenadeCore;
 class GrenadeBase: GrenadeCore {
