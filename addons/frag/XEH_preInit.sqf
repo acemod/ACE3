@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 ADDON = false;
 
@@ -7,7 +7,7 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 
-GVAR(materialSpallCache) = createHashMap;
+GVAR(spallMaterialCache) = createHashMap;
 GVAR(spallRoundCache) = createHashMap;
 GVAR(lastSpallTime) = -2;
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
  * Cleares all dev spheres and traces

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
  * This function adds rounds using their config init EH

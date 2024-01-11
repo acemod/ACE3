@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
  * For performance, we load a bunch of vanilla materials preemptively
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-GVAR(materialSpallCache) = createHashMapFromArray [
+GVAR(spallMaterialCache) = createHashMapFromArray [
     ["a3\data_f\penetration\armour.bisurf","metal"],
     ["a3\data_f\penetration\armour_plate.bisurf","metal"],
     ["a3\data_f\penetration\armour_plate_100mm.bisurf","metal"],

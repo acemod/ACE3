@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
  * Add a colored sphere at a specified point

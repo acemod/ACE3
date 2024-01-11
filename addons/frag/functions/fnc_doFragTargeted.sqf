@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function creates fragments targeted at specific entities, up to 

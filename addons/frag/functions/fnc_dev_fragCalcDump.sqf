@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger, based on fnc_dev_debugAmmo by "ACE-Team"
  * Dumps all ammo types to see if there's any reason to spawn fragments

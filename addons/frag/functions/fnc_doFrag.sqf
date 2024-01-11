@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function handles creating both random and targeted fragments as well

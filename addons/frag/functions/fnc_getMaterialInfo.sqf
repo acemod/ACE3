@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
  * This function returns a classification of material type based 
@@ -18,7 +18,7 @@
 
 params ["_surfType"];
 
-private _material = GVAR(materialSpallCache) get _surfType;
+private _material = GVAR(spallMaterialCache) get _surfType;
 
 TRACE_2("materialCache",_surfType,_material);
 if !(isNil "_material") exitWith {
@@ -52,7 +52,7 @@ _material = switch (true) do {
     default { "ground" };
 };
 
-GVAR(materialSpallCache) set [_surfType, _material];
+GVAR(spallMaterialCache) set [_surfType, _material];
 TRACE_2("materialCacheSet",_surfType,_material);
 
 _material
