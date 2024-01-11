@@ -1,5 +1,4 @@
 class GVAR(spawnbase) : B_65x39_Caseless {
-    access = 2;
     deleteParentWhenTriggered = 1;
     submunitionConeType[] = {"random", 25};
     submunitionAmmo[] = {QGVAR(tiny), 3, QGVAR(tiny_HD), 3, QGVAR(small), 4, QGVAR(small_HD), 4, QGVAR(medium_HD), 5};
@@ -220,7 +219,6 @@ class GVAR(def_small_5_top) : GVAR(def_small_5) {
  * Targeted fragment spawner, for when multiple fragments are spawned (1-3)
  */
 class GVAR(spawnbase_targeted) : GVAR(spawnbase) {
-    access = 2;
     submunitionConeType[] = {"random", 2};
     submunitionConeAngle = 2;
     submunitionInitSpeed = 0;

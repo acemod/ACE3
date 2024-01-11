@@ -1,5 +1,4 @@
 class GVAR(spallBase) : B_65x39_Caseless {
-    access = 3;
     submunitionAmmo[] = {QGVAR(small),4,QGVAR(medium),3,QGVAR(large),2,QGVAR(huge),1};
     submunitionConeType[] = {"random", 20};
     submunitionConeAngle = 40;
