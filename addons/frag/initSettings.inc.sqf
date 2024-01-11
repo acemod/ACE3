@@ -37,7 +37,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     QGVAR(atLeastOne), "CHECKBOX", 
     [LSTRING(MinFrag), LSTRING(MinFrag_Desc)],
     [_category, LSTRING(Frag)],
-    true
+    false,
+	true
 ] call CBA_fnc_addSetting;
 
 [

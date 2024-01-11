@@ -18,6 +18,7 @@ params [
     ["_projectile", objNull, [objNull]]
 ];
 
+
 private _ammo = typeOf _projectile;
 if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
     TRACE_2("bad ammo or projectile",_ammo,_projectile);
@@ -32,17 +33,10 @@ if (_doFrag) then {
             private _shotParents = getShotParents _proj;
             private _ammo = typeOf _proj;
             // wait for frag damage to kill units before spawning fragments
-            if (isServer) then {
-                [
-                    FUNC(doFrag),
-                    _this + [_ammo, _shotParents]
-                ] call CBA_fnc_execNextFrame;
-            } else {
-                [
-                    QGVAR(frag_eh),
-                    _this + [_ammo, _shotParents]
-                ] call CBA_fnc_serverEvent;
-            };
+            [
+                FUNC(doFrag),
+                _this + [_ammo, _shotParents]
+            ] call CBA_fnc_execNextFrame;
         }
     ];
 };
@@ -61,17 +55,10 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
             private _shotPrnt = getShotParents _proj;
             private _ammo = typeOf _proj;
             private _vUp = vectorUp _proj;
-            if (isServer) then {
-                [
-                    LINKFUNC(doSpall),
-                    [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
-                ] call CBA_fnc_execNextFrame;
-            } else {
-                [
-                    QGVAR(spall_eh),
-                    [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
-                ] call CBA_fnc_serverEvent;
-            };
-        }
+            [
+                QGVAR(spall_eh),
+                [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
+            ] call CBA_fnc_serverEvent;
+		};
     ];
 };

@@ -6,7 +6,7 @@
 }
 #define ACE_FRAG_ADD_EH class EventHandlers {\
     class ADDON {\
-        init = QUOTE(_this call FUNC(initRound););\
+        init = QUOTE(if (isServer) then {_this call FUNC(initRound);};);\
     };\
 }
 
