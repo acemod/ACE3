@@ -76,7 +76,7 @@ if (120 > acos ((vectorNormalized _lVelUnit) vectorDotProduct _sNorm)) then {
     _spallPos = _spallPos vectorAdd (_unitStep vectorMultiply 5);
 };
 
-//***** Passed all exit withs *****//
+// Passed all exit withs
 GVAR(lastSpallTime) = CBA_missionTime;
 
 // step through
@@ -97,7 +97,8 @@ if GVAR(dbgSphere) then {
     [_lPosASL, "orange"] call FUNC(dev_sphereDraw);
 };
 #endif
-//***** Select spalled fragment spawner **//
+
+// Select spalled fragment spawner
 
 private _spawnSize = switch (true) do 
 {
@@ -108,7 +109,7 @@ private _spawnSize = switch (true) do
     default { "_spall_huge" };
 };
 
-//***** Spawn spalled fragments
+// Spawn spalled fragments
 private _spallSpawner = createVehicle [
     "ace_frag_" + _material + _spawnSize,
     ASLToATL _spallPos,

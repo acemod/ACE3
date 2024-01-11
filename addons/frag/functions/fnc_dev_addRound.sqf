@@ -22,7 +22,7 @@ params [
     ["_sidePlayer", true, [true]]
 ];
 
-/// track round on each frame
+// track round on each frame
 // Create entry in position array from hashmap
 if (_sidePlayer) then
 {

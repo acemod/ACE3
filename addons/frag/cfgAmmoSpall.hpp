@@ -14,7 +14,9 @@ class GVAR(spallBase) : B_65x39_Caseless {
 };
 
 
-//**** ground ****//
+/*
+ * ground
+ */
 class GVAR(ground_spall_tiny) : GVAR(spallBase) {
     submunitionAmmo[] = {QGVAR(tiny), 9, QGVAR(small), 1};
     submunitionConeType[] = {"poissondisccenter", 4};
@@ -41,7 +43,9 @@ class GVAR(ground_spall_huge) : GVAR(spallBase) {
 };
 
 
-//**** rock ****//
+/*
+ * rock
+ */
 class GVAR(rock_spall_tiny) : GVAR(spallBase) {
     submunitionAmmo[] = {QGVAR(small), 4, QGVAR(medium_HD), 1};
     submunitionConeType[] = {"poissondisccenter", 4};
@@ -68,7 +72,9 @@ class GVAR(rock_spall_huge) : GVAR(spallBase) {
 };
 
 
-//**** wood ****//
+/*
+ * wood
+ */
 class GVAR(wood_spall_tiny) : GVAR(spallBase) {
     submunitionAmmo[] = {QGVAR(tiny), 2, QGVAR(small), 4};
     submunitionConeType[] = {"poissondisccenter", 4};
@@ -95,7 +101,9 @@ class GVAR(wood_spall_huge) : GVAR(spallBase) {
 };
 
 
-//**** concrete ****//
+/*
+ * concrete
+ */
 class GVAR(concrete_spall_tiny) : GVAR(spallBase) {
     submunitionAmmo[] = {QGVAR(tiny), 6, QGVAR(tiny_HD), 3, QGVAR(small), 1};
     submunitionConeType[] = {"poissondisccenter", 4};
@@ -122,7 +130,9 @@ class GVAR(concrete_spall_huge) : GVAR(spallBase) {
 };
 
 
-//**** metal ****//
+/*
+ * metal
+ */
 class GVAR(metal_spall_tiny) : GVAR(spallBase) {
     submunitionAmmo[] = {QGVAR(tiny), 9, QGVAR(small), 1};
     submunitionConeType[] = {"poissondisccenter", 4};

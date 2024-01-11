@@ -22,7 +22,7 @@ params [
     ["_isProj", false, [false]]
 ];
 TRACE_4("devDraw",_this,_obj,_color,_isProj);
-/// track round on each frame
+// track round on each frame
 // Create entry in position array from hashmap
 private _colorArray = switch (toLower _color) do {
     case "purple": {[0.8, 0, 0.8, 1]};

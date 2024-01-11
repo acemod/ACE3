@@ -1,5 +1,3 @@
-// format fragType_spawn_n_range
-/********************* ***************************/
 class GVAR(spawnbase) : B_65x39_Caseless {
     access = 2;
     deleteParentWhenTriggered = 1;
@@ -16,7 +14,9 @@ class GVAR(spawnbase) : B_65x39_Caseless {
     ACE_FRAG_RM_EH;
 };
 
-/********************* ***************************/
+/*
+ * Default frag, spawning 10 fragments
+ */
 class GVAR(def_10) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 10};
 };
@@ -35,8 +35,9 @@ class GVAR(def_10_top) : GVAR(def_10) {
     submunitionConeAngle = 60;
     triggerSpeedCoef[] = {-1.5, -0.75};
 };
-
-/********************* ***************************/
+/*
+ * Default frag, spawning 15 fragments
+ */
 class GVAR(def_15) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 15};
 };
@@ -56,7 +57,9 @@ class GVAR(def_15_top) : GVAR(def_15) {
     triggerSpeedCoef[] = {-1.5, -0.75};
 };
 
-/********************* ***************************/
+/*
+ * Default frag, spawning 5 fragments
+ */
 class GVAR(def_5) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 5};
 };
@@ -76,7 +79,9 @@ class GVAR(def_5_top) : GVAR(def_5) {
     triggerSpeedCoef[] = {-1.5, -0.75};
 };
 
-/********************* ***************************/ 
+/*
+ * Default frag, spawning tiny fragments only
+ */
 class GVAR(def_tiny_15) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 15};
     submunitionAmmo = QGVAR(tiny);
@@ -97,7 +102,9 @@ class GVAR(def_tiny_15_top) : GVAR(def_tiny_15) {
     triggerSpeedCoef[] = {-1.5, -0.75};
 };
 
-/********************* ***************************/ 
+/*
+ * Default frag, spawning 10 tiny fragments only
+ */
 class GVAR(def_tiny_10) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 10};
     submunitionAmmo = QGVAR(tiny);
@@ -118,7 +125,9 @@ class GVAR(def_tiny_10_top) : GVAR(def_tiny_10) {
     triggerSpeedCoef[] = {-1.5, -0.75};
 };
 
-/********************* ***************************/ 
+/*
+ * Default frag, spawning 15 tiny fragments only
+ */
 class GVAR(def_tiny_5) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 5};
     submunitionAmmo = QGVAR(tiny);
@@ -138,7 +147,10 @@ class GVAR(def_tiny_5_top) : GVAR(def_tiny_5) {
     submunitionConeAngle = 60;
     triggerSpeedCoef[] = {-1.5, -0.75};
 };
-/********************* ***************************/ 
+
+/*
+ * Default frag, spawning 15 tiny fragments only
+ */
 class GVAR(def_small_15) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 15};
     submunitionAmmo = QGVAR(small);
@@ -158,7 +170,10 @@ class GVAR(def_small_15_top) : GVAR(def_small_15) {
     submunitionConeAngle = 60;
     triggerSpeedCoef[] = {-1.15, -0.715};
 };
-/********************* ***************************/ 
+
+/*
+ * Default frag, spawning 10 small fragments only
+ */
 class GVAR(def_small_10) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 10};
     submunitionAmmo = QGVAR(small);
@@ -178,7 +193,9 @@ class GVAR(def_small_10_top) : GVAR(def_small_10) {
     submunitionConeAngle = 60;
     triggerSpeedCoef[] = {-1.10, -0.710};
 };
-/********************* ***************************/ 
+/*
+ * Default frag, spawning  small fragments only
+ */
 class GVAR(def_small_5) : GVAR(spawnbase) {
     submunitionConeType[] = {"random", 5};
     submunitionAmmo = QGVAR(small);
@@ -199,7 +216,9 @@ class GVAR(def_small_5_top) : GVAR(def_small_5) {
     triggerSpeedCoef[] = {-1.5, -0.75};
 };
 
-/******************* targeted fragments ********************/
+/*
+ * Targeted fragment spawner, for when multiple fragments are spawned (1-3)
+ */
 class GVAR(spawnbase_targeted) : GVAR(spawnbase) {
     access = 2;
     submunitionConeType[] = {"random", 2};
