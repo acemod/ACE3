@@ -4,6 +4,11 @@
 #define ACE_FRAG_RM_EH class EventHandlers {\
     delete  ADDON;\
 }
+#define ACE_FRAG_ADD_EH class EventHandlers {\
+    class ADDON {\
+        init = QUOTE(_this call FUNC(initRound););\
+    };\
+}
 
 class CfgAmmo {
     class B_65x39_Caseless;

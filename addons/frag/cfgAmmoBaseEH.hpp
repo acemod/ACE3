@@ -1,9 +1,3 @@
-#define ACE_FRAG_ADD_EH class EventHandlers {\
-    class ADDON {\
-        init = QUOTE(_this call FUNC(initRound););\
-    };\
-}
-
 class BombCore;
 class Bo_Mk82: BombCore {
     ACE_FRAG_ADD_EH;
@@ -13,12 +7,7 @@ class Bo_Mk82: BombCore {
 class BulletCore; 
 class BulletBase: BulletCore {
     ACE_FRAG_ADD_EH;
-};
-
-class Grenade;
-class GrenadeHand: Grenade {
-    ACE_FRAG_ADD_EH;
-};
+}
 
 class GrenadeCore;
 class GrenadeBase: GrenadeCore {

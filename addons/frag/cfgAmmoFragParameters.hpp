@@ -1,6 +1,5 @@
 
 // ~~~~ Bombs:
-class ammo_Bomb_LaserGuidedBase;
 class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
     GVAR(enabled) = 1;
 
@@ -21,7 +20,7 @@ class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
     GVAR(gurney_c) = 2320;
     GVAR(gurney_k) = "1/2";
 };
-class BombCore;
+
 class Bo_Mk82: BombCore {
     GVAR(enabled) = 1;
 
@@ -34,9 +33,10 @@ class Bo_Mk82: BombCore {
 };
 
 // ~~~~ Grenades:
-class GrenadeBase;
 class Grenade;
 class GrenadeHand: Grenade {
+	ACE_FRAG_ADD_EH;
+
     GVAR(enabled) = 1;
 
     GVAR(skip) = 0;
@@ -97,7 +97,6 @@ class ACE_G40mm_HE_VOG25P: G_40mm_HE {
 
 
 // ~~~~ RPGs:
-class MissileBase;
 class R_PG32V_F;
 class R_TBG32V_F: R_PG32V_F { // Thermobaric
     GVAR(enabled) = 1;
@@ -152,7 +151,7 @@ class M_AT: M_PG_AT { // DAR (Hydra 70)
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "1/2";
 };
-class RocketBase;
+
 class R_80mm_HE: RocketBase {
     GVAR(skip) = 1;
 };
@@ -204,7 +203,6 @@ class Missile_AA_04_F: MissileBase {
 };
 
 // curator ammo entries
-class ShellBase;
 class Sh_125mm_HEAT;
 class Sh_155mm_AMOS: ShellBase {
     // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
