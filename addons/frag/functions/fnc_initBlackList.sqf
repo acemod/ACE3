@@ -44,7 +44,7 @@ for "_i" from 0 to _items - 1 do {
         continue;
     };
 
-    GVAR(shouldFragCache) set [_convArray#_i, [false, false]];
+    GVAR(shouldFragCache) set [_convArray#_i, false];
 };
 
 

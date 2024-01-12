@@ -18,4 +18,4 @@
 params ["_proj"];
 TRACE_1("addBlackList",_round);
 
-GVAR(shouldFragCache) set [typeOf _ammo, [false, false]];
+GVAR(shouldFragCache) set [typeOf _ammo, false];
