@@ -13,7 +13,7 @@ class B_20mm: BulletBase {
     GVAR(gurney_k) = "1/2";*/
     GVAR(skip) = 1;
 };
-class B_30mm_HE: B_19mm {
+class B_30mm_HE: B_19mm_HE {
     // Used in Gorgon (Pandur II), assuming it's a L21A1 RARDEN, specifically HEI-T due to tracers
     // https://ordtech-industries.com/30x170-mm-ammunition-for-cannons-oerlikon-kcb-hispano-hs831l-l21-rarden/
     GVAR(skip) = 0;
