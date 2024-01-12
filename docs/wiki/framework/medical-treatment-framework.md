@@ -69,7 +69,7 @@ class CfgVehicles {
     };
 };
 ```
-To set a vehicle a vehicle as a Medical Vehicle mid-mission, set the `ace_medical_isMedicalVehicle` variable globally.
+To set a vehicle as a Medical Vehicle mid-mission, set the `ace_medical_isMedicalVehicle` variable globally.
 ```sqf
 // Create an interaction to turn a vehicle into a medical vehicle
 private _statement = {_target setVariable ["ace_medical_isMedicalVehicle", true, true]};
