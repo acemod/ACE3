@@ -1,8 +1,65 @@
+// ~~~~ Autocannons
+class B_19mm_HE: BulletBase {
+    GVAR(skip) = 1;
+};
+class B_20mm: BulletBase {
+    // Used in Weisel/AWC Nyx, which makes it a Rheinmetall Mk 20 Rh-202
+    // http://www.navweaps.com/Weapons/WNGER_20mm-65_mk20.php
+    // total mass of 134g probably not enough to do anything
+    /*GVAR(fragCount) = 20;
+    GVAR(metal) = ;
+    GVAR(charge) = ;
+    GVAR(gurney_c) = ;
+    GVAR(gurney_k) = "1/2";*/
+    GVAR(skip) = 1;
+};
+class B_30mm_HE: B_19mm {
+    // Used in Gorgon (Pandur II), assuming it's a L21A1 RARDEN, specifically HEI-T due to tracers
+    // https://ordtech-industries.com/30x170-mm-ammunition-for-cannons-oerlikon-kcb-hispano-hs831l-l21-rarden/
+    GVAR(skip) = 0;
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(fragCount) = 100;
+    GVAR(metal) = 320;
+    GVAR(charge) = 25;
+    GVAR(gurney_c) = 2547; // Hexal det. velocity / 3
+    GVAR(gurney_k) = "1/2";
+};
+class B_30mm_MP: B_30mm_HE {
+    // Used in Mora (FV510 Warrior), assuming it's a Mk44 Bushmaster II, specifically HEI-T due to tracers
+    // http://www.navweaps.com/Weapons/WNUS_30mm_BushmasterII.php
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(fragCount) = 100; // assumed based on https://www.youtube.com/watch?v=c5SsspD0MeU
+    GVAR(metal) = 388;
+    GVAR(charge) = 56;
+    GVAR(gurney_c) = 2600; // guessed
+    GVAR(gurney_k) = "1/2";
+};
+class B_40mm_GPR: B_30mm_HE {
+    // Based on noted 40mm Autocannons, base ROF, and ammo names, looks to be a CTAS40, specifically GPR-PD-T
+    // https://www.cta-international.com/ammunition/
+    // https://ndiastorage.blob.core.usgovcloudapi.net/ndia/2002/gun/leslie.pdf
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(fragCount) = 250; 
+    GVAR(metal) = 750;
+    GVAR(charge) = 120;
+    GVAR(gurney_c) = 2700; // guessed 
+    GVAR(gurney_k) = "1/2";
+};
+class B_35mm_AA: BulletBase {
+    // Gepard uses an Oerlikon GDF and the AA vehicles mimics it like it
+    // https://en.wikipedia.org/wiki/Oerlikon_GDF#Ammunition
+    // https://www.nammo.com/product/our-products/ammunition/medium-caliber-ammunition/35-mm-series/35-mm-x-228-hei-sd-and-hei-t-sd/
+    GVAR(skip) = 0;
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
+    GVAR(fragCount) = 175;
+    GVAR(metal) = 400;
+    GVAR(charge) = 98;
+    GVAR(gurney_c) = 2700;
+    GVAR(gurney_k) = "1/2";
+};
 
 // ~~~~ Bombs:
 class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
-    GVAR(enabled) = 1;
-
     GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
     GVAR(fragCount) = 17500;
     GVAR(metal) = 140000;
@@ -11,8 +68,6 @@ class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
     GVAR(gurney_k) = "1/2";
 };
 class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
-    GVAR(enabled) = 1;
-
     GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
     GVAR(fragCount) = 17500;
     GVAR(metal) = 140000;
@@ -25,8 +80,6 @@ class BombCore;
 class Bo_Mk82: BombCore {
     ACE_FRAG_ADD_EH;
 
-    GVAR(enabled) = 1;
-
     GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
     GVAR(fragCount) = 17500;
     GVAR(metal) = 140000;
@@ -37,11 +90,12 @@ class Bo_Mk82: BombCore {
 
 // ~~~~ Grenades:
 class Grenade;
+class ACE_FlashlightProxy_White: Grenade {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
 class GrenadeHand: Grenade {
     ACE_FRAG_ADD_EH;
-
-    GVAR(enabled) = 1;
-
     GVAR(skip) = 0;
     GVAR(force) = 1;
     /*
@@ -56,14 +110,15 @@ class GrenadeHand: Grenade {
     GVAR(gurney_k) = "3/5";    // Gurney shape factor, in this case a sphere. See: http://en.wikipedia.org/wiki/Gurney_equations
 };
 class GrenadeHand_stone: GrenadeHand {
+    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 class SmokeShell: GrenadeHand {
+    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 class G_40mm_HE: GrenadeBase {
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
-    GVAR(enabled) = 1;
     GVAR(force) = 1;
 
     GVAR(classes)[] = {QGVAR(small)};
@@ -75,8 +130,6 @@ class G_40mm_HE: GrenadeBase {
 };
 class G_40mm_HEDP: G_40mm_HE {
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
-    GVAR(enabled) = 1;
-
     GVAR(classes)[] = {QGVAR(small_HD)};
     GVAR(fragCount) = 270; // seems to have greater framentation ability, but lower range per source
     GVAR(metal) = 200;
@@ -88,21 +141,64 @@ class G_40mm_HEDP: G_40mm_HE {
 class ACE_G_40mm_HEDP: G_40mm_HEDP {};
 class ACE_G_40mm_HE: G_40mm_HE {};
 class ACE_G_40mm_Practice: ACE_G_40mm_HE {
+    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
     GVAR(force) = 0;
     EGVAR(vehicle_damage,incendiary) = 0;
 };
-// What is this even?
-class ACE_G40mm_HE_VOG25P: G_40mm_HE {
-    GVAR(skip) = 0;
-    GVAR(force) = 1;
+
+// ~~~~ Mines & UXO
+class Drone_explosive_ammo: MineBase {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
 };
 
+class APERSMine_Range_Ammo;
+class UXO1_Ammo_Base_F: APERSMine_Range_Ammo {
+    // https://www.globalsecurity.org/military/systems/munitions/blu-97.htm
+    // https://military-history.fandom.com/wiki/BLU-97/B_Combined_Effects_Bomb
+    GVAR(force) = 0;
+    GVAR(classes)[] = {QGVAR(small), QGVAR(small), QGVAR(medium)};
+    GVAR(fragCount) = 300;
+    GVAR(metal) = 1253;
+    GVAR(charge) = 287;
+    GVAR(gurney_c) = 2900; 
+    GVAR(gurney_k) = "1/2";
+
+};
+class APERSMineDispenser_Mine_Ammo: APERSMine_Range_Ammo {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+class UXO_deploy_base_f: SubmunitionBase {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+class SatchelCharge_Remote_Ammo: PipeBombBase {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+class DemoCharge_Remote_Ammo: PipeBombBase {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+class BombDemine_01_Ammo_F: BombCore {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
 
 // ~~~~ RPGs:
 class R_PG32V_F;
 class R_TBG32V_F: R_PG32V_F { // Thermobaric
-    GVAR(enabled) = 1;
     GVAR(fragCount) = 200; 
     GVAR(metal) = 400;
     GVAR(charge) = 210;
@@ -205,7 +301,28 @@ class Missile_AA_04_F: MissileBase {
     GVAR(skip) = 1;
 };
 
-// curator ammo entries
+// Based on Metis-M missiles 
+class M_Vorona_HEAT: MissileBase {
+    // tandem shaped charges
+    GVAR(skip) = 1;
+};
+class M_Vorona_HE: M_Vorona_HEAT {
+    // All signs point to this being a thermobaric round so low frag count
+    GVAR(skip) = 0;
+    GVAR(fragCount) = 200; 
+    GVAR(metal) = 13800;
+    GVAR(charge) = 4950;
+    GVAR(gurney_c) = 2800;
+    GVAR(gurney_k) = "1/2";
+    GVAR(classes)[] = {QGVAR(tiny)};
+};
+
+class M_NLAW_AT_F: MissileBase {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+/// ~~~~ Shell
 class Sh_125mm_HEAT;
 class Sh_155mm_AMOS: ShellBase {
     // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
@@ -276,8 +393,28 @@ class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
     GVAR(gurney_c) = 2320;
     GVAR(gurney_k) = "1/2";
 };
+class ammo_Penetrator_Base: ShellBase {
+    GVAR(skip) = 1;
+};
+
 // Special
 class Default;
 class Laserbeam: Default {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+class FuelExplosion: Default {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+class HelicopterExploSmall: ShellBase {
+    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
+};
+
+class LightningBolt: ShellBase {
+    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };

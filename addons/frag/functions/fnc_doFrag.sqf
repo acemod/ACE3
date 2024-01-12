@@ -38,13 +38,19 @@ private _timeSince = CBA_missionTime - GVAR(lastFragTime);
 if (_ammo isEqualTo "" || {_posASL isEqualTo [0,0,0] || _timeSince < ACE_FRAG_HOLDOFF}) exitWith {
     TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
 };
-GVAR(lastFragTime) = CBA_missionTime;
-private _maxFrags = round (linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true]);
+private _maxFrags = round linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 TRACE_3("",_timeSince,CBA_missionTime,_maxFrags);
 
 
 private _ammoArr = [_ammo] call FUNC(getFragInfo);
 _ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
+
+if (_modFragCount < 10) then {
+    _maxFrags = _modFragCount*4;
+    GVAR(lastFragTime) = CBA_missionTime - 0.1;
+} else {
+    GVAR(lastFragTime) = CBA_missionTime;
+};
 
 private _heightAGL = (ASLToAGL _posASL)#2;
 if (_heightAGL < 0.25) then {

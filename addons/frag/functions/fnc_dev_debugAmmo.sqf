@@ -3,11 +3,13 @@
 /*
  * Author: ACE-Team, Lambda.Tiger
  * This function will dump every ammo config that would generate ace_frag 
- * fragements that doesn't have 
+ * fragements that could be fired from a weapon
  *
  * Arguments:
  * 0: Log ammo types that wouldn't normall frag
- * 1: Force a CSV format
+ * 1: Only export ammo classes of classes referenced in cfgAmmo 
+ *    and their submunitions.
+ * 2: Force a CSV format
  *
  * Return Value:
  * None
@@ -17,32 +19,54 @@
  *
  * Public: No
  */
-
 params [
     ["_debugForce", false, [false]],
+    ["_onlyShotAmmoTypes", false, [false]],
     ["_csvFormat", false, [false]]
 ];
 
 diag_log text format ["~~~~~~~~~~~~~Start [%1]~~~~~~~~~~~~~", _this];
-
-private _allAmmoConfigs = configProperties [configFile >> "cfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true];
-private _processedCfgAmmos = [];
-
 if (_csvFormat) then {
-    diag_log text format ["ammo,gurney_c,gurney_m,gurney_k,gurney_gC,_fragTypes,_fragCount"];
+    diag_log text format ["ammo,gurney_c,gurney_m,gurney_k,gurney_gC,fragTypes,fragCount,Inheritance"];
 };
 
-private _printCount = 0;
+private _allAmmoConfigs = [];
+if (_onlyShotAmmoTypes) then {
+    private _searchFunc = {
+        params [
+            ["_ammo", "", [""]]
+        ];
+        if (_ammo isEqualTo "" || {_ammo in _allAmmoConfigs}) exitWith {};
+        _allAmmoConfigs pushBack _ammo;
+        private _subMunit = toLower getText (configFile >> "cfgAmmo" >> _ammo >> "submunitionAmmo");
+        if (_subMunit isNotEqualTo "") then {
+            _subMunit = getArray (configFile >> "cfgAmmo" >> _ammo >> "submunitionAmmo");
+            for "_i" from 0 to count _subMunit - 1 do {
+                if (_i mod 2 == 0) then {
+                    [toLower (_subMunit#_i)] call _searchFunc;
+                };
+            };
+        } else {
+            [toLower _subMunit] call _searchFunc;
+        };
+    };
+    private _allMagazineConfigs = configProperties [configFile >> "cfgMagazines", "isClass _x", true];
 
+    {
+        [toLower getText (_x >> "ammo")] call _searchFunc;
+    } forEach _allMagazineConfigs;
+} else {
+    _allAmmoConfigs = configProperties [configFile >> "cfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true] apply {configName _x};
+};
+
+private _processedCfgAmmos = [];
+private _printCount = 0;
 {
-    private _ammo = tolower configName _x;
+    private _ammo = _x;
     if (_ammo != "" && {!(_ammo in _processedCfgAmmos)}) then {
         _processedCfgAmmos pushBack _ammo;
 
-        //Ignore mines/bombs
-        //if (_ammo isKindOf "TimeBombCore") exitWith {};
-
-        private _ammoConfig = _x;
+        private _ammoConfig = (configFile >> "cfgAmmo" >> _ammo);
         private _shoulFrag = [_ammo] call FUNC(shouldFrag);
 
         if (_shoulFrag || _debugForce) then {
@@ -64,7 +88,7 @@ private _printCount = 0;
             if (_warn) then {
                 INC(_printCount);
                 if (_csvFormat) then {
-                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6", _c, _m, _k, _gC, _fragTypes, _fragCount, _ammo];
+                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%8", _c, _m, _k, _gC, _fragTypes, _fragCount, _ammo, [_ammoConfig, true]  call BIS_fnc_returnParents];
                 } else {
                     diag_log text format ["Ammo [%1] MISSING frag configs:", _ammo];
                     diag_log text format [" _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5,_fragCount=%6", _c, _m, _k, _gC, _fragTypes, _fragCount];

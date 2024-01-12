@@ -79,7 +79,7 @@ if (_warn) then {
  *                 of spherical fragmentation
  */
 _ammoInfo = [
-    sqrt (_fragCount / (4 * pi * 0.005)),
+    sqrt (_fragCount / (4 * pi * 0.01)),
     0.8 * _gC * sqrt (_c / (_m + _c * _k)),
     _fragTypes,
     _fragCount / 4 / pi
