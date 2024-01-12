@@ -56,7 +56,7 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
             private _ammo = typeOf _proj;
             private _vUp = vectorUp _proj;
             [
-                QGVAR(spall_eh),
+                GVAR(spall_eh),
                 [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
             ] call CBA_fnc_execNextFrame;
         }
