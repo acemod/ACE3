@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+ TRACE_1("",_this);
 params [
     ["_projectile", objNull, [objNull]]
 ];
@@ -25,7 +26,7 @@ if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
 };
 
 private _shouldFrag = _ammo call FUNC(shouldFrag);
-if (_doFrag) then {
+if (_shouldFrag && GVAR(enabled)) then {
     _projectile addEventHandler [
         "Explode",
         {
