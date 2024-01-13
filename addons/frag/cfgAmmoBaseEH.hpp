@@ -1,5 +1,5 @@
 // We need this since autocannons generally inherit from BulletBase
-class BulletCore; 
+class BulletCore;
 class BulletBase: BulletCore {
     ACE_FRAG_ADD_EH_BASE;
 };

@@ -5,7 +5,7 @@ class GVAR(spallBase): B_65x39_Caseless {
     submunitionDirectionType = "SubmunitionModelDirection";
     triggerTime = 0;
     submunitionInitialOffset[] = {0,0,0};
-    submunitionInitSpeed = 0; 
+    submunitionInitSpeed = 0;
     triggerSpeedCoef[] = {0.75,1.25};
     deleteParentWhenTriggered = 1;
     submunitionParentSpeedCoef = 1;

@@ -52,7 +52,7 @@ class B_40mm_GPR: B_30mm_HE {
     GVAR(fragCount) = 250;
     GVAR(metal) = 750;
     GVAR(charge) = 120;
-    GVAR(gurney_c) = 2700; // guessed 
+    GVAR(gurney_c) = 2700; // guessed
     GVAR(gurney_k) = "1/2";
 };
 class B_35mm_AA: BulletBase {
@@ -405,7 +405,7 @@ class M_SPG9_HE: M_SPG9_HEAT {
 };
 
 
-// https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN18072_TC%203-22x84%20FINAL%20WEB.pdf 
+// https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN18072_TC%203-22x84%20FINAL%20WEB.pdf
 class R_MRAAWS_HEAT_F: RocketBase { // Table A-20. HEAT 751
     GVAR(skip) = 0;
     GVAR(fragCount) = 500;
@@ -443,7 +443,7 @@ class R_230mm_fly: RocketBase {
 class M_PG_AT: MissileBase { // DAGR M247 warhead
     GVAR(skip) = 0;
     GVAR(classes)[] = {QGVAR(tiny), QGVAR(small), QGVAR(small), QGVAR(medium)};
-    GVAR(fragCount) = 700; // guesstimate / provides ~80 m frag range (1% chance to hit) 
+    GVAR(fragCount) = 700; // guesstimate / provides ~80 m frag range (1% chance to hit)
     GVAR(metal) = 3085;
     GVAR(charge) = 910;
     GVAR(gurney_c) = 2700;
@@ -451,7 +451,7 @@ class M_PG_AT: MissileBase { // DAGR M247 warhead
 };
 class M_AT: M_PG_AT { // DAR (Hydra 70) M151 warhead
     GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
-    GVAR(fragCount) = 1200; // guesstimate / provides ~100 m frag range (1% chance to hit) 
+    GVAR(fragCount) = 1200; // guesstimate / provides ~100 m frag range (1% chance to hit)
     GVAR(metal) = 3850;
     GVAR(charge) = 1040;
     GVAR(gurney_c) = 2700;
@@ -463,7 +463,7 @@ class Missile_AGM_02_F: MissileBase {
     GVAR(skip) = 0;
 
     GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
-    GVAR(fragCount) = 1600; // guesstimate / provides ~112 m frag range (1% chance to hit) 
+    GVAR(fragCount) = 1600; // guesstimate / provides ~112 m frag range (1% chance to hit)
     GVAR(metal) = 56250;
     GVAR(charge) = 39000;
     GVAR(gurney_c) = 2700;
@@ -472,7 +472,7 @@ class Missile_AGM_02_F: MissileBase {
 class Rocket_04_HE_F: MissileBase { // Shrieker (Hydra 70)
     GVAR(skip) = 0;
     GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
-    GVAR(fragCount) = 1200; // guesstimate / provides ~100 m frag range (1% chance to hit) 
+    GVAR(fragCount) = 1200; // guesstimate / provides ~100 m frag range (1% chance to hit)
     GVAR(metal) = 3850;
     GVAR(charge) = 1040;
     GVAR(gurney_c) = 2700;
@@ -481,7 +481,7 @@ class Rocket_04_HE_F: MissileBase { // Shrieker (Hydra 70)
 class M_Scalpel_AT: MissileBase { // 9K121 Vikhr
     GVAR(skip) = 0;
     GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium_HD)};
-    GVAR(fragCount) = 800; // guesstimate based on frag jacket, provides ~80 m frag range (1% chance to hit) 
+    GVAR(fragCount) = 800; // guesstimate based on frag jacket, provides ~80 m frag range (1% chance to hit)
     GVAR(metal) = 10000;
     GVAR(charge) = 3000;
     GVAR(gurney_c) = 2700;
@@ -492,7 +492,7 @@ class ACE_Hellfire_AGM114K: M_Scalpel_AT {
     GVAR(skip) = 0;
 
     GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
-    GVAR(fragCount) = 350; // guesstimate based on frag jacket, provides ~50 m frag range (1% chance to hit) 
+    GVAR(fragCount) = 350; // guesstimate based on frag jacket, provides ~50 m frag range (1% chance to hit)
     GVAR(metal) = 8000;
     GVAR(charge) = 2400;
     GVAR(gurney_c) = 2700;
@@ -588,7 +588,7 @@ class M_NLAW_AT_F: MissileBase {
     GVAR(skip) = 1;
 };
 
-/// ~~~~ Shell
+// ~~~~ Shell
 class Sh_125mm_HEAT;
 class Sh_155mm_AMOS: ShellBase {
     // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
