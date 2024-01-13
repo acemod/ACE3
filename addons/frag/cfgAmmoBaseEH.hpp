@@ -22,6 +22,7 @@ class MissileBase: MissileCore {
 class RocketCore;
 class RocketBase: RocketCore {
     ACE_FRAG_ADD_EH;
+    GVAR(skip) = 1;
 };
 
 class ArtilleryRocketCore: RocketCore {
@@ -35,7 +36,7 @@ class ShellBase: ShellCore {
 
 class ShotDeployCore;
 class ShotDeployBase: ShotDeployCore {
-    ACE_FRAG_ADD_EH;
+    GVAR(skip) = 1;
 };
 
 class ShotgunCore;
