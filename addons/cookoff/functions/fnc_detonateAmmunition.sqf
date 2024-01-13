@@ -97,7 +97,9 @@ switch (_simType) do {
         };
         [_vehicle, _ammo, _speed, random 1 < 0.5] call _spawnProjectile;
     };
-    case ("shotrocket"); case ("shotmissile"); case ("shotsubmunitions"): {
+    case ("shotrocket");
+    case ("shotmissile");
+    case ("shotsubmunitions"): {
         if (random 1 < 0.1) then {
             [QGVAR(playCookoffSound), [_vehicle, _simType, 1600]] call CBA_fnc_globalEvent;
             [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
@@ -105,7 +107,8 @@ switch (_simType) do {
             createvehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
         };
     };
-    case ("shotmine"); case ("shotdirectionalbomb"): {
+    case ("shotmine");
+    case ("shotdirectionalbomb"): {
         if (random 1 < 0.5) then {
             // Not all explosives detonate on destruction, some have scripted alternatives
             private _scripted = getNumber (_ammoCfg >> "triggerWhenDestroyed") == 1;

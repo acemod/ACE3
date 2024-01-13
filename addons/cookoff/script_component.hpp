@@ -37,5 +37,3 @@
 
 // Common commander hatch defines for default vehicles
 #define DEFAULT_COMMANDER_HATCHES ["osa_poklop_commander", "hatch_commander_axis"]
-
-#define SPEED_OF_SOUND 343
