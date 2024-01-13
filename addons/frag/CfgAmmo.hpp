@@ -4,7 +4,7 @@
 #define ACE_FRAG_RM_EH class EventHandlers: EventHandlers {\
     delete  ADDON;\
 }
-#define ACE_FRAG_ADD_EH class EventHandlers: EventHandlers {\
+#define ACE_FRAG_ADD_EH class EventHandlers {\
     class ADDON {\
         init = QUOTE(if (isServer) then {_this call FUNC(initRound);};);\
     };\
