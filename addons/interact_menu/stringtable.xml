@@ -10,7 +10,7 @@
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
-            <Italian>Mostra sempre il cursore delle autointerazioni</Italian>
+            <Italian>Mostra sempre il cursore per le autointerazioni</Italian>
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
             <Japanese>セルフ インタラクションへ常にカーソルを表示</Japanese>
             <Korean>자기상호작용 시 항상 커서를 보이기</Korean>
@@ -46,7 +46,7 @@
             <German>Interaktionsmenü in Listen anzeigen</German>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
             <Portuguese>Mostrar menu de interação como listas</Portuguese>
-            <Japanese>インタラクション メニューを一覧表示</Japanese>
+            <Japanese>インタラクションメニューを一覧表示</Japanese>
             <Korean>상호작용메뉴를 리스트화 해서 보이기</Korean>
             <Chinesesimp>以列表方式显示互动表单</Chinesesimp>
             <Chinese>以列表方式顯示互動表單</Chinese>
@@ -78,7 +78,7 @@
             <Polish>Klawisz własnej interakcji</Polish>
             <French>Touche d'interaction personnelle</French>
             <Hungarian>Saját cselekvő gomb</Hungarian>
-            <Italian>Tasto interazione su se stessi</Italian>
+            <Italian>Tasto autointerazioni</Italian>
             <Portuguese>Tecla de Interação Pessoal</Portuguese>
             <Japanese>セルフ インタラクション キー</Japanese>
             <Korean>자기상호작용 키</Korean>
@@ -95,9 +95,9 @@
             <Polish>Własne akcje</Polish>
             <French>Interaction personnelle</French>
             <Hungarian>Saját cselekvések</Hungarian>
-            <Italian>Interazioni su se stessi</Italian>
+            <Italian>Autointerazioni</Italian>
             <Portuguese>Ações Pessoais</Portuguese>
-            <Japanese>自分への動作</Japanese>
+            <Japanese>自分へのアクション</Japanese>
             <Korean>자기 동작</Korean>
             <Chinesesimp>自我动作</Chinesesimp>
             <Chinese>自我動作</Chinese>
@@ -112,9 +112,9 @@
             <Polish>Akcje pojazdu</Polish>
             <French>Interaction véhicule</French>
             <Hungarian>Járműves cselekvések</Hungarian>
-            <Italian>Interazioni con veicoli</Italian>
+            <Italian>Interazioni su veicoli</Italian>
             <Portuguese>Ações de Veículos</Portuguese>
-            <Japanese>車両への動作</Japanese>
+            <Japanese>車両へのアクション</Japanese>
             <Korean>차량 동작</Korean>
             <Chinesesimp>载具动作</Chinesesimp>
             <Chinese>載具動作</Chinese>
@@ -130,8 +130,8 @@
             <Hungarian>Zeus cselekvések</Hungarian>
             <Portuguese>Ações do Zeus</Portuguese>
             <Russian>Действия Зевса</Russian>
-            <Italian>Azioni Zeus</Italian>
-            <Japanese>Zeus への動作</Japanese>
+            <Italian>Interazioni Zeus</Italian>
+            <Japanese>Zeusでのアクション</Japanese>
             <Korean>제우스 동작</Korean>
             <Chinesesimp>宙斯操作</Chinesesimp>
             <Chinese>宙斯操作</Chinese>
@@ -250,7 +250,7 @@
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
             <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
-            <Japanese>メニュー キーを離した時に動作を実行</Japanese>
+            <Japanese>メニュー キーを離した時にアクションを実行</Japanese>
             <Korean>메뉴 키를 놓을 때 행동하기</Korean>
             <Chinesesimp>当放开菜单键后就执行动作</Chinesesimp>
             <Chinese>當放開選單鍵後就執行動作</Chinese>
@@ -335,7 +335,7 @@
             <Hungarian>Cselekvő menü háttere</Hungarian>
             <Russian>Фон меню взаимодействия</Russian>
             <Italian>Sfondo Menù Interazioni</Italian>
-            <Japanese>インタラクション メニューの背景</Japanese>
+            <Japanese>インタラクションメニューの背景</Japanese>
             <Korean>상호작용 메뉴 배경</Korean>
             <Chinesesimp>互动菜单背景</Chinesesimp>
             <Chinese>互動選單背景</Chinese>
@@ -352,7 +352,7 @@
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
-            <Japanese>インタラクション メニューを開いたとき、背景にボケを与えます。</Japanese>
+            <Japanese>インタラクションメニューを開いたとき、背景をぼかします。</Japanese>
             <Korean>상호작용 메뉴가 열릴 시 배경을 흐릿하게 처리합니다.</Korean>
             <Chinesesimp>当互动菜单开启时，模糊背景画面。</Chinesesimp>
             <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
@@ -369,7 +369,7 @@
             <Hungarian>Kép elmosása</Hungarian>
             <Russian>Размытый</Russian>
             <Italian>Sfoca schermo</Italian>
-            <Japanese>ボケ画面</Japanese>
+            <Japanese>背景をぼかす</Japanese>
             <Korean>화면 흐리게</Korean>
             <Chinesesimp>模糊画面</Chinesesimp>
             <Chinese>模糊畫面</Chinese>
@@ -386,7 +386,7 @@
             <Hungarian>Fekete</Hungarian>
             <Russian>Черный</Russian>
             <Italian>Nero</Italian>
-            <Japanese>ブラック</Japanese>
+            <Japanese>背景を黒くする</Japanese>
             <Korean>까맣게</Korean>
             <Chinesesimp>黑色</Chinesesimp>
             <Chinese>黑色</Chinese>
@@ -403,7 +403,7 @@
             <Portuguese>Mostrar ações para edifícios</Portuguese>
             <Russian>Показывать действия для зданий</Russian>
             <Italian>Mostra azioni per edifici</Italian>
-            <Japanese>建物へ動作を表示</Japanese>
+            <Japanese>建物へアクションを表示</Japanese>
             <Korean>건물에 행동을 취함</Korean>
             <Chinesesimp>显示建筑物可用的动作</Chinesesimp>
             <Chinese>顯示建築物可用的動作</Chinese>
@@ -419,8 +419,8 @@
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
-            <Italian>Aggiunge azioni interattive per l'apertura delle porte e piazzamento scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
-            <Japanese>建物にある扉の開閉やはしごの昇降といった動作をインタラクションへ追加します。(街などでインタラクション メニューを開くと動作が低下します)</Japanese>
+            <Italian>Aggiunge interazioni per l'apertura delle porte e piazzamento di scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
+            <Japanese>建物にドアを開閉したり梯子を昇降するためのインタラクション アクションを追加します。\n(注: 街中でインタラクション メニューを開く際には特に描画パフォーマンスに影響を及ぼします)</Japanese>
             <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열 경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
             <Chinesesimp>增加互动菜单的功能在可开启的门与建筑物的梯子上。（注意：此功能有可能会降低系统效能，特别是在城镇区更明显）</Chinesesimp>
             <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上。(注意: 此功能有可能會降低系統效能，特別是在城鎮區更明顯)</Chinese>
@@ -436,7 +436,7 @@
             <Spanish>Menú de interacción</Spanish>
             <Italian>Menù Interazioni</Italian>
             <French>Menu d'interaction</French>
-            <Japanese>インタラクション メニュー</Japanese>
+            <Japanese>インタラクションメニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
             <Chinesesimp>互动菜单</Chinesesimp>
             <Chinese>互動選單</Chinese>
@@ -449,7 +449,7 @@
             <Russian>Скорость анимации меню взаимодействия</Russian>
             <Portuguese>Velocidade da animação de interação</Portuguese>
             <Czech>Rychlost animace interakce</Czech>
-            <Italian>Velocità Animazioni Interazioni</Italian>
+            <Italian>Velocità di Animazione delle Interazioni</Italian>
             <Spanish>Velocidad de animación del menú de interacción</Spanish>
             <French>Vitesse de l'animation d'interaction</French>
             <Japanese>インタラクションのアニメーション速度</Japanese>
@@ -465,10 +465,10 @@
             <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
             <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, diminuindo a necessidade de esperar para mostrar as ações</Portuguese>
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
-            <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
+            <Italian>Rende le animazioni del Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
             <French>Rend les animations du menu plus rapide, et réduit le temps nécessaire à l'affichage des sous menus d'action.</French>
-            <Japanese>ホバーで子アクションを表示した時に出るメニューのアニメーション速度を早くしたり遅くしたりできます</Japanese>
+            <Japanese>メニューのアニメーションを高速化し、サブアクションを表示するためのホバーに必要な時間を短縮します。</Japanese>
             <Chinesesimp>使菜单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
             <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
             <Korean>상호작용을 표시하기 위해 메뉴 애니메이션을 빠르게 만들고 마우스를 가져오는 데 필요한 시간을 줄입니다.</Korean>
@@ -480,7 +480,7 @@
             <Japanese>セレクターの色</Japanese>
             <Chinesesimp>菜单颜色</Chinesesimp>
             <Chinese>選單的顏色</Chinese>
-            <Italian>Controllo Settore</Italian>
+            <Italian>Colore Selettore</Italian>
             <Polish>Kolor wybierającego</Polish>
             <Russian>Цвет селектора</Russian>
             <Portuguese>Cor do Seletor</Portuguese>
@@ -493,24 +493,28 @@
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
             <English>Consolidate single child actions</English>
             <Russian>Объединять ед. дочерные действия</Russian>
-            <Japanese>サブ動作を統合</Japanese>
+            <Japanese>子アクションを統合</Japanese>
             <Spanish>Consolidar acciones hijo únicas</Spanish>
             <French>Combiner les sous-actions uniques</French>
             <German>Untergeordnete Aktionen zusammenfassen</German>
+            <Italian>Combina sotto-azioni singole</Italian>
             <Polish>Połącz akcje podrzędne</Polish>
             <Chinesesimp>整合子操作</Chinesesimp>
             <Korean>하위 동작 통합</Korean>
+            <Portuguese>Consolidar sub-ações únicas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
             <English>Combines parent action with only one child action together.</English>
             <Russian>Объединять родительское действие с единственным дочерним действием в одно.</Russian>
-            <Japanese>メインの動作とサブ動作一つを統合して表示します。</Japanese>
+            <Japanese>親アクションと子アクションの一つを統合して表示します。</Japanese>
             <Spanish>Combina acciones padre con una única accion hijo de forma conjunta</Spanish>
             <French>Lorsqu'un menu ne contient qu'une seule sous-action, elle est combinée avec son menu parent.</French>
+            <Italian>Combina interazioni con una sola sotto-azione in una singola interazione.</Italian>
             <German>Übergeordnete Aktionen mit nur einer Unteraktion zusammenfassen.</German>
             <Polish>Gdy menu zawiera tylko jedną akcję podrzędną, łączy ją z akcją nadrzędną.</Polish>
             <Chinesesimp>主操作与子操作集成显示。</Chinesesimp>
             <Korean>대분류로 나뉜 행동을 한눈에 보여줍니다</Korean>
+            <Portuguese>Quando um menu contém apenas uma subação, ele é combinado com seu menu pai.</Portuguese>
         </Key>
     </Package>
 </Project>

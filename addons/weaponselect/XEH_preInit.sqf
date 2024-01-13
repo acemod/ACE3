@@ -26,6 +26,6 @@ GVAR(GrenadesNonFrag) = [];
     false
 } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

@@ -26,10 +26,12 @@ if ((_itemClassname == "") || {(!_silentScripted) && {!(_this call FUNC(canAttac
 
 private _itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
 private _onAttachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
+private _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> QGVAR(orientation));
 
 if (_itemVehClass == "") then {
     _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
     _onAttachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
+    _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> QGVAR(orientation));
 };
 
 if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
@@ -68,7 +70,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [{
         params ["_args","_idPFH"];
-        _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAttachText","_actionID"];
+        _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAttachText","_actionID", "_itemModelOrientation"];
 
         private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
         if (cameraView == "EXTERNAL") then {
@@ -95,7 +97,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 
             if (GVAR(placeAction) == PLACE_APPROVE) then {
-                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _virtualPos] call FUNC(placeApprove);
+                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _virtualPos, _itemModelOrientation] call FUNC(placeApprove);
             };
         } else {
             //Show the virtual object:
@@ -112,9 +114,13 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
                 private _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
                 private _angle = asin (_dir select 2);
-                private _up = [0, cos _angle, sin _angle];
-                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [[1,0,0], _up];
+
+                // Tranform yaw/roll angle to vector, defaults are pre-#9623 behavior
+                _itemModelOrientation params [["_roll", 0], ["_yaw", 90]];
+                private _dirAndUp = [[[0,1,0], [0,0,1]], _yaw, 0, _roll] call BIS_fnc_transformVectorDirAndUp;
+                private _dirAndUp = [_dirAndUp, 0, _angle, 0] call BIS_fnc_transformVectorDirAndUp;
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp _dirAndUp;
             };
         };
-    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _actionID]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _actionID, _itemModelOrientation]] call CBA_fnc_addPerFrameHandler;
 };

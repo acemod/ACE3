@@ -40,19 +40,21 @@ private _action = [QGVAR(Refuel),
     {},
     [],
     [0, 0, 0],
-    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
+    REFUEL_ACTION_DISTANCE
+] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add pickup
 _action = [QGVAR(PickUpNozzle),
-    localize LSTRING(TakeNozzle),
+    localize LSTRING(TakeFuelCanister),
     QPATHTOF(ui\icon_refuel_interact.paa),
     {[_player, _target] call FUNC(takeNozzle)},
     {[_player, _target] call FUNC(canTakeNozzle)},
     {},
     [],
     [0, 0, 0],
-    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
+    REFUEL_ACTION_DISTANCE
+] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add turnOn
@@ -64,7 +66,8 @@ _action = [QGVAR(TurnOn),
     {},
     [],
     [0, 0, 0],
-    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
+    REFUEL_ACTION_DISTANCE
+] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add turnOn container
@@ -76,7 +79,8 @@ _action = [QGVAR(TurnOn_Container),
     {},
     [],
     [0, 0, 0],
-    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
+    REFUEL_ACTION_DISTANCE
+] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add check fuel
@@ -88,7 +92,8 @@ _action = [QGVAR(CheckFuel),
     {},
     [],
     [0,0,0],
-    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction),
+    REFUEL_ACTION_DISTANCE
+] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add turnOff
@@ -100,17 +105,19 @@ _action = [QGVAR(TurnOff),
     {},
     [],
     [0, 0, 0],
-    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
+    REFUEL_ACTION_DISTANCE
+] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add disconnect
 _action = [QGVAR(Disconnect),
-    localize LSTRING(Disconnect),
+    localize LSTRING(DisconnectFuelCanister),
     QPATHTOF(ui\icon_refuel_interact.paa),
     {[_player, _target] call FUNC(disconnect)},
     {[_player, _target] call FUNC(canDisconnect)},
     {},
     [],
     [0, 0, 0],
-    REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
+    REFUEL_ACTION_DISTANCE
+] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);

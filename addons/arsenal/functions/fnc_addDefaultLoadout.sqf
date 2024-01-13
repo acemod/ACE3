@@ -20,8 +20,9 @@
 
 params [["_name", "", [""]], ["_loadout", [], [[]]], ["_global", false, [false]]];
 
-if (_global) then {
-    [QGVAR(addDefaultLoadout), [_name, _loadout]] call CBA_fnc_remoteEvent;
+if (_global) exitWith {
+    private _eventID = format [QGVAR(loadouts_%1), _name];
+    [QGVAR(addDefaultLoadout), [_name, _loadout], _eventID] call CBA_fnc_globalEventJIP;
 };
 
 private _extendedInfo = createHashMap;

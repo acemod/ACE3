@@ -1,17 +1,17 @@
 #include "..\script_component.hpp"
 /*
- * Author: esteldunedain
+ * Author: esteldunedain, LorenLuke
  * Handle mouse buttons.
  *
  * Arguments:
- * 0: 1 if mouse down down, 0 if mouse button up <Number>
+ * 0: 1 if mouse down down, 0 if mouse button up <NUMBER>
  * 1: Parameters of the mouse button event <ARRAY>
  *
  * Return Value:
- * true if event was handled <BOOL>
+ * True if event was handled <BOOL>
  *
  * Example:
- * [0, [array]] call ACE_maptools_fnc_handleMouseButton
+ * [0, []] call ace_maptools_fnc_handleMouseButton
  *
  * Public: No
  */
@@ -24,20 +24,27 @@ TRACE_2("params",_dir,_params);
 if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
     if (GVAR(freedrawing) && {_dir == 0}) then {
         GVAR(freedrawing) = false;
+
         if (_shiftKey) exitWith {
             TRACE_1("using vanilla straight line",_shiftKey);
         };
+
         TRACE_2("Ending Line",GVAR(freedrawing),GVAR(freeDrawingData));
+
         [{
-            if (allMapMarkers isEqualTo []) exitWith {};
-            private _markerName = allMapMarkers select (count allMapMarkers - 1);
+            if (GVAR(freeDrawingData) isEqualTo []) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData))};
+
+            private _allMarkers = allMapMarkers;
+
+            if (_allMarkers isEqualTo []) exitWith {};
+
+            private _markerName = _allMarkers select -1;
             private _markerPos = getMarkerPos _markerName;
-            private _distanceCheck = _markerPos distance2d GVAR(drawPosStart);
+            private _distanceCheck = _markerPos distance2D GVAR(drawPosStart);
 
             TRACE_3("Line Drawn",_markerName,_markerPos,_distanceCheck);
 
-            if (_distanceCheck > 1) exitWith {WARNING("Wrong Marker!");};
-            if ((count GVAR(freeDrawingData)) != 3) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData));};
+            if (_distanceCheck > 1) exitWith {WARNING("Wrong Marker!")};
 
             GVAR(freeDrawingData) params ["", "_startStraightPos", "_endStraightPos"];
 
@@ -54,16 +61,19 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
             TRACE_2("Starting Line",GVAR(freedrawing),GVAR(drawPosStart));
         } else {
             GVAR(freedrawing) = false;
-            TRACE_1("weird - reseting",GVAR(freedrawing));
+            TRACE_1("weird - resetting",GVAR(freedrawing));
         };
     };
-    false
+
+    false // return
+};
+
+// If it's not a left button event, exit
+if (_button != 0) exitWith {
+    false // return
 };
 
 private _handled = false;
-
-// If it's not a left button event, exit
-if (_button != 0) exitWith {_handled};
 
 // If releasing
 if (_dir != 1) then {
@@ -72,44 +82,98 @@ if (_dir != 1) then {
         GVAR(mapTool_isRotating) = false;
         _handled = true;
     };
+
+    if (GVAR(plottingBoard_isDragging) || GVAR(plottingBoard_isRotating) > -1) then {
+        GVAR(plottingBoard_isDragging) = false;
+        GVAR(plottingBoard_isRotating) = -1;
+        _handled = true;
+    };
 } else {
     // If clicking
-    if !(call FUNC(canUseMapTools)) exitWith {};
+    if (call FUNC(canUseMapTools)) then {
+        GVAR(mapTool_isDragging) = false;
+        GVAR(mapTool_isRotating) = false;
 
-    // Transform mouse screen position to coordinates
-    private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
-    _pos set [count _pos, 0];
+        // If no map tool marker then exit
+        if (GVAR(mapTool_Shown) != 0) then {
+            // Transform mouse screen position to coordinates
+            private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
 
-    GVAR(mapTool_isDragging) = false;
-    GVAR(mapTool_isRotating) = false;
+            // Check if clicking the maptool
+            if (_pos call FUNC(isInsideMapTool)) then {
+                // Store data for dragging
+                GVAR(mapTool_startPos) = +GVAR(mapTool_pos);
+                GVAR(mapTool_startDragPos) = _pos;
 
-    // If no map tool marker then exit
-    if (GVAR(mapTool_Shown) == 0) exitWith {};
+                private _rotateKeyPressed = switch (GVAR(rotateModifierKey)) do {
+                    case 1: {_altKey};
+                    case 2: {_ctrlKey};
+                    case 3: {_shiftKey};
+                    default {false};
+                };
 
-    // Check if clicking the maptool
-    if (_pos call FUNC(isInsideMapTool)) exitWith {
-        // Store data for dragging
-        GVAR(mapTool_startPos) = + GVAR(mapTool_pos);
-        GVAR(mapTool_startDragPos) = + _pos;
+                if (_rotateKeyPressed) then {
+                    // Store data for rotating
+                    GVAR(mapTool_startAngle) = GVAR(mapTool_angle);
 
-        private _rotateKeyPressed = switch (GVAR(rotateModifierKey)) do {
-            case (1): {_altKey};
-            case (2): {_ctrlKey};
-            case (3): {_shiftKey};
-            default {false};
+                    private _pos = GVAR(mapTool_startDragPos) vectorDiff GVAR(mapTool_startPos);
+                    GVAR(mapTool_startDragAngle) = ((_pos select 0) atan2 (_pos select 1) + 360) % 360;
+
+                    // Start rotating
+                    GVAR(mapTool_isRotating) = true;
+                } else {
+                    // Start dragging
+                    GVAR(mapTool_isDragging) = true;
+                };
+
+                _handled = true;
+            };
         };
+    };
 
-        if (_rotateKeyPressed) then {
-            // Store data for rotating
-            GVAR(mapTool_startAngle) = + GVAR(mapTool_angle);
-            GVAR(mapTool_startDragAngle) = (180 + ((GVAR(mapTool_startDragPos) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mapTool_startDragPos) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
-            // Start rotating
-            GVAR(mapTool_isRotating) = true;
-        } else {
-            // Start dragging
-            GVAR(mapTool_isDragging) = true;
+    if (call FUNC(canUsePlottingBoard)) then {
+        GVAR(plottingBoard_isDragging) = false;
+        GVAR(plottingBoard_isRotating) = -1;
+
+        if (GVAR(plottingBoard_Shown) != 0) then {
+            // Transform mouse screen position to coordinates
+            private _pos = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
+            private _click = _pos call FUNC(isInsidePlottingBoard);
+
+            if (_click > -1) then {
+                GVAR(plottingBoard_startPos) = +GVAR(plottingBoard_pos);
+                GVAR(plottingBoard_startDragPos) = _pos;
+
+                private _rotateKeyPressed = switch (GVAR(rotateModifierKey)) do {
+                    case 1: {_altKey};
+                    case 2: {_ctrlKey};
+                    case 3: {_shiftKey};
+                    default {false};
+                };
+
+                if (_rotateKeyPressed) then {
+                    // Store data for rotating
+                    private _ang = switch (_click) do {
+                        case 1: {GVAR(plottingBoard_acrylicAngle)};
+                        case 2: {GVAR(plottingBoard_rulerAngle)};
+                        default {GVAR(plottingBoard_angle)};
+                    };
+
+                    GVAR(plottingBoard_startAngle) = _ang;
+
+                    private _pos = GVAR(plottingBoard_startDragPos) vectorDiff GVAR(plottingBoard_startPos);
+                    GVAR(plottingBoard_startDragAngle) = ((_pos select 0) atan2 (_pos select 1) + 360) % 360;
+
+                    // Start rotating
+                    GVAR(plottingBoard_isRotating) = _click;
+                } else {
+                    // Start dragging
+                    GVAR(plottingBoard_isDragging) = true;
+                };
+
+                _handled = true;
+            };
         };
-        _handled = true;
     };
 };
 

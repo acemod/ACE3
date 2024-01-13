@@ -45,7 +45,7 @@
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
             <Russian>Позволяет контролировать различные аспекты Зевса.</Russian>
             <Italian>Fornisce controllo su vari aspetti di Zeus.</Italian>
-            <Japanese>Zeus の操作性を様々な側面から強化します。</Japanese>
+            <Japanese>Zeusの操作性を様々な側面から強化します。</Japanese>
             <Korean>제우스에게 다양한 방면의 조작을 제공해줍니다</Korean>
             <Chinesesimp>提供宙斯各个方面的控制权</Chinesesimp>
             <Chinese>提供宙斯各個方面的控制權</Chinese>
@@ -61,7 +61,7 @@
             <Hungarian>Felemelkedési üzenetek</Hungarian>
             <Russian>Сообщения о вознесении</Russian>
             <Italian>Messaggi di Ascesa</Italian>
-            <Japanese>転生表示</Japanese>
+            <Japanese>転生の布告</Japanese>
             <Korean>재림 메세지</Korean>
             <Chinesesimp>宙斯上任信息</Chinesesimp>
             <Chinese>宙斯上任訊息</Chinese>
@@ -77,7 +77,7 @@
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
-            <Japanese>プレイヤーが Zeus になる際、全体へポップアップ表示を行います。</Japanese>
+            <Japanese>プレイヤーがZeusになる際、全体へポップアップ表示を行います。</Japanese>
             <Korean>플레이어가 제우스가 되면 서버에 알림 팝업이 등장합니다.</Korean>
             <Chinesesimp>当一位玩家被指定为宙斯时显示全局信息</Chinesesimp>
             <Chinese>當一位玩家被指定為宙斯時顯示全域訊息</Chinese>
@@ -109,8 +109,8 @@
             <French>Crée un aigle qui suit la caméra Zeus.</French>
             <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
             <Russian>Спавнит орла, который следует за камерой Зевса.</Russian>
-            <Italian>Crea un'aquila che segue la camera Zeus.</Italian>
-            <Japanese>Zeus カメラを追うイーグルを出現します。</Japanese>
+            <Italian>Crea un'aquila che segue la videocamera Zeus.</Italian>
+            <Japanese>Zeusカメラを追いかける鷲を出現させます。</Japanese>
             <Korean>제우스의 카메라를 따라다니는 독수리를 생성합니다.</Korean>
             <Chinesesimp>生成一个老鹰跟着宙斯的摄影机</Chinesesimp>
             <Chinese>生成一個老鷹跟著宙斯的攝影機</Chinese>
@@ -142,8 +142,8 @@
             <French>Joue des bruits de vent lorsque Zeus contrôle une unité distante.</French>
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
             <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
-            <Italian>Esegui rumori di vento quando Zeus controlla un'unità in remoto.</Italian>
-            <Japanese>ユニットが Zeus 遠隔操作になった際、風の音がします。</Japanese>
+            <Italian>Riproduci rumori di vento quando Zeus controlla un'unità in remoto.</Italian>
+            <Japanese>Zeusがユニットを遠隔操作した際、風の音を再生します。</Japanese>
             <Korean>제우스가 유닛을 조작할 때 바람소리가 납니다.</Korean>
             <Chinesesimp>当宙斯开始控制单位时利用风的声音提示</Chinesesimp>
             <Chinese>當宙斯開始控制單位時利用風的聲音提示</Chinese>
@@ -158,8 +158,8 @@
             <French>Alerte d'artillerie</French>
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
             <Russian>Предупреждение об арте</Russian>
-            <Italian>Allarme Esplosivi</Italian>
-            <Japanese>砲撃警告</Japanese>
+            <Italian>Allerta Artiglieria</Italian>
+            <Japanese>砲撃の警告</Japanese>
             <Korean>폭격 경고</Korean>
             <Chinesesimp>武装警告</Chinesesimp>
             <Chinese>武裝警告</Chinese>
@@ -174,8 +174,8 @@
             <French>Diffuse un avertissement radio lorsque Zeus utilise de l'artillerie.</French>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
-            <Italian>Riproduci un messaggio radio quando Zeus usa esplosivi.</Italian>
-            <Japanese>Zeus が砲撃を使う際に、無線で警告を流します。</Japanese>
+            <Italian>Riproduci un messaggio radio quando Zeus usa artiglieria.</Italian>
+            <Japanese>Zeusが砲撃を使う際に、無線で警告を流します。</Japanese>
             <Korean>제우스가 폭격 시 경고 무전을 재생합니다.</Korean>
             <Chinesesimp>当宙斯开始攻击时使用无线电警告</Chinesesimp>
             <Chinese>當宙斯開始攻擊時使用無線電警告</Chinese>
@@ -207,7 +207,7 @@
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
             <Russian>Показывает мины союзникам и отмечает их маркерами на карте.</Russian>
             <Italian>Rivela mine ad alleati e piazza marcatori in mappa.</Italian>
-            <Japanese>友軍に地雷と地図へ設置マーカーを表示します。</Japanese>
+            <Japanese>地雷の位置を味方に公開し、マップマーカーを配置します。</Japanese>
             <Korean>아군에게 지도 상의 모든 지뢰를 표시합니다.</Korean>
             <Chinesesimp>地图将标记队友放置的地雷</Chinesesimp>
             <Chinese>地圖將標記隊友放置的地雷</Chinese>
@@ -254,8 +254,8 @@
             <French>Commuter captivité</French>
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
-            <Italian>Attivatore Prigioniero</Italian>
-            <Japanese>捕虜に切り替え</Japanese>
+            <Italian>Imposta Prigioniero</Italian>
+            <Japanese>捕虜状態を切り替え</Japanese>
             <Korean>포로 토글</Korean>
             <Chinesesimp>切换俘虏</Chinesesimp>
             <Chinese>切換俘虜</Chinese>
@@ -266,7 +266,7 @@
             <French>Défendre la zone</French>
             <Russian>Защитить зону</Russian>
             <Czech>Bránit oblast</Czech>
-            <Japanese>防衛範囲</Japanese>
+            <Japanese>エリアの防衛</Japanese>
             <Polish>Broń obszaru</Polish>
             <German>Verteidige Gebiet</German>
             <Korean>지역 방어</Korean>
@@ -313,7 +313,7 @@
             <Chinesesimp>添加或删除宙斯的可编辑物体</Chinesesimp>
             <German>Aktiviere oder deaktiviere zu bearbeitende Objekte von Zeus</German>
             <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
-            <Japanese>Zeus から編集可能オブジェクトの追加と削除をする</Japanese>
+            <Japanese>Zeusから編集可能オブジェクトの追加と削除をする</Japanese>
             <Polish>Dodaj lub usuń edytowalne obiekty z Zeus'a</Polish>
             <Russian>Добавить или удалить редактируемые объекты от Зевса</Russian>
             <Portuguese>Adiciona ou remove objetos editáveis do Zeus</Portuguese>
@@ -361,7 +361,7 @@
             <Korean>모든 큐레이터</Korean>
             <Polish>Wszyscy kuratorzy</Polish>
             <French>Tous les curateurs</French>
-            <Italian>Tutti i Moderatori</Italian>
+            <Italian>Tutti gli Zeus</Italian>
             <Chinesesimp>所有宙斯</Chinesesimp>
             <Chinese>所有編輯者</Chinese>
             <Russian>Все кураторы</Russian>
@@ -372,11 +372,11 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Apply changes to all curators</English>
             <German>Änderungen bei allen Kuratoren aktualisieren</German>
-            <Japanese>全キュレーターへ変更を適用します。</Japanese>
+            <Japanese>全キュレーターへ変更を適用します</Japanese>
             <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
             <French>Applique les changements à tous les curateurs.</French>
-            <Italian>Applica i cambiamenti a tutti i moderatori</Italian>
+            <Italian>Applica i cambiamenti a tutti gli Zeus</Italian>
             <Chinesesimp>确认变更给所有宙斯</Chinesesimp>
             <Chinese>確認變更給所有編輯者</Chinese>
             <Russian>Применить изменения ко всем кураторам</Russian>
@@ -388,7 +388,7 @@
             <English>Additional Objects</English>
             <German>Zusätzliche Objekte</German>
             <Italian>Oggetti aggiuntivi</Italian>
-            <Japanese>オブジェクト増加</Japanese>
+            <Japanese>追加のオブジェクト</Japanese>
             <Polish>Dodatkowe obiekty</Polish>
             <Russian>Доп. объекты</Russian>
             <Portuguese>Objetos adicionais</Portuguese>
@@ -402,8 +402,8 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
             <German>Zusätzliche Objekte unabhängig vom Aufgabenradius einbeziehen</German>
-            <Italian>Oggetti aggiuntivi da includere nell'azione indipendentemente dal Raggio di Attività</Italian>
-            <Japanese>タスク範囲に関係無くオブジェクトを更に増加させます</Japanese>
+            <Italian>Oggetti aggiuntivi da includere nell'azione indipendentemente dal Raggio dell'Incarico</Italian>
+            <Japanese>タスク半径に関係なく次のオブジェクトを編集可能に追加します</Japanese>
             <Polish>Dodatkowe obiekty do uwzględnienia w akcji niezależnie od zasięgu zadania</Polish>
             <Russian>Дополнительные объекты для включения в действие, независимо от радиуса выполнения задачи</Russian>
             <Portuguese>Objetos adicionais para incluir na ação, ignorando a distância da tarefa</Portuguese>
@@ -419,11 +419,11 @@
             <French>Compétence globale de l'IA</French>
             <Russian>Мастерство ботов</Russian>
             <Czech>Globální zkušenosti AI</Czech>
-            <Japanese>総合的AIスキル</Japanese>
+            <Japanese>全体のAIスキル</Japanese>
             <Polish>Globalne umiejętności AI</Polish>
             <German>Globale KI-Fähigkeit</German>
             <Korean>서버 인공지능 실력</Korean>
-            <Italian>Abilità AI Globale</Italian>
+            <Italian>Abilità IA Globale</Italian>
             <Chinesesimp>AI 技巧设定</Chinesesimp>
             <Chinese>AI技巧設定</Chinese>
             <Portuguese>Habilidade Global da IA</Portuguese>
@@ -530,7 +530,7 @@
             <Polish>Rozpoznanie</Polish>
             <German>Aufklärung</German>
             <Korean>탐지</Korean>
-            <Italian>Ricognizione</Italian>
+            <Italian>Individuazione</Italian>
             <Chinesesimp>索敌能力</Chinesesimp>
             <Chinese>索敵能力</Chinese>
             <Portuguese>Detecção</Portuguese>
@@ -575,7 +575,7 @@
             <Polish>Czy AI powinno szukać osłon</Polish>
             <German>Soll KI nach Deckung suchen</German>
             <Korean>인공지능이 엄폐물을 찾아갑니다</Korean>
-            <Italian>Le AI dovrebbero cercare una copertura</Italian>
+            <Italian>Le IA dovrebbero cercare coperture</Italian>
             <Chinesesimp>决定 AI 是否会寻找掩护</Chinesesimp>
             <Chinese>決定AI是否會尋找掩護</Chinese>
             <Portuguese>A IA dever buscar cobertura</Portuguese>
@@ -605,7 +605,7 @@
             <Polish>Czy AI powinno automatycznie przechodzić w tryb walki</Polish>
             <German>Soll KI automatisch in Kampfmodus umschalten</German>
             <Korean>인공지능이 자동적으로 교전 상태에 돌입합니다</Korean>
-            <Italian>Le AI dovrebbero passare in modalità di combattimento automaticamente</Italian>
+            <Italian>Le IA dovrebbero passare in modalità di combattimento automaticamente</Italian>
             <Chinesesimp>决定 AI 是否会自动与敌人交战</Chinesesimp>
             <Chinese>決定AI是否會自動與敵人交戰</Chinese>
             <Portuguese>A IA deveria automaticamente mudar para modo de combate</Portuguese>
@@ -616,7 +616,7 @@
             <French>Camp du groupe</French>
             <Russian>Сторона группы</Russian>
             <Czech>Strana skupiny</Czech>
-            <Japanese>グループ側</Japanese>
+            <Japanese>グループの陣営</Japanese>
             <Polish>Strona grupy</Polish>
             <German>Gruppenseite</German>
             <Korean>진영 측</Korean>
@@ -632,7 +632,7 @@
             <French>Zone de patrouille</French>
             <Russian>Патрулировать зону</Russian>
             <Czech>Oblast hlídkování</Czech>
-            <Japanese>哨戒範囲</Japanese>
+            <Japanese>エリアの哨戒</Japanese>
             <Polish>Patrol obszaru</Polish>
             <German>Patrouillengebiet</German>
             <Korean>정찰 구역</Korean>
@@ -653,8 +653,8 @@
             <French>Commuter capitulation</French>
             <Hungarian>Kapituláló állapot váltása</Hungarian>
             <Russian>Сдавшийся (вкл./выкл.)</Russian>
-            <Italian>Attivatore Resa</Italian>
-            <Japanese>投降として切り替え</Japanese>
+            <Italian>Imposta Resa</Italian>
+            <Japanese>投降状態を切り替え</Japanese>
             <Korean>항복 토글</Korean>
             <Chinesesimp>切换投降</Chinesesimp>
             <Chinese>切換投降</Chinese>
@@ -711,7 +711,7 @@
             <French>Téléporter joueurs</French>
             <Russian>Телепортиваровать игроков</Russian>
             <Czech>Teleportovat hráče</Czech>
-            <Japanese>プレイヤーを移動</Japanese>
+            <Japanese>プレイヤーのテレポート</Japanese>
             <Polish>Teleportuj graczy</Polish>
             <German>Spieler teleportieren</German>
             <Korean>플레이어 순간이동</Korean>
@@ -747,7 +747,7 @@
             <Polish>Teleportuje wybranego gracza na pozycję modułu</Polish>
             <German>Teleportiert ausgewählten Spieler zur Position des Moduls</German>
             <Korean>모듈의 위치로 플레이어 순간이동</Korean>
-            <Italian>Teletrasporta il giocatore selezionato nella posizione del modulo</Italian>
+            <Italian>Teletrasporta il giocatore selezionato sulla posizione del modulo</Italian>
             <Chinesesimp>传送选定的玩家至模块位置</Chinesesimp>
             <Chinese>傳送選定的玩家至模塊位置</Chinese>
             <Portuguese>Teleporta o jogador selecionado para a posição do módulo</Portuguese>
@@ -758,7 +758,7 @@
             <French>Téléporter le groupe</French>
             <Russian>Телепортировать Группу</Russian>
             <Czech>Teleportovat skupinu</Czech>
-            <Japanese>グループを移動</Japanese>
+            <Japanese>グループで移動</Japanese>
             <Polish>Teleport grupy</Polish>
             <German>Gruppe teleportieren</German>
             <Korean>그룹 순간이동</Korean>
@@ -794,8 +794,8 @@
             <French>Commuter état de conscience</French>
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
             <Russian>Без сознания (вкл./выкл.)</Russian>
-            <Italian>Attivatore Incoscienza</Italian>
-            <Japanese>気絶を切り替え</Japanese>
+            <Italian>Imposta Incoscienza</Italian>
+            <Japanese>無意識状態を切り替え</Japanese>
             <Korean>기절 토글</Korean>
             <Chinesesimp>切换昏迷</Chinesesimp>
             <Chinese>切換昏迷</Chinese>
@@ -806,7 +806,7 @@
             <French>Zone de recherche</French>
             <Russian>Обыскать зону</Russian>
             <Czech>Prohledat oblast</Czech>
-            <Japanese>捜索範囲</Japanese>
+            <Japanese>エリアの捜索</Japanese>
             <Polish>Przeszukaj teren</Polish>
             <German>Durchsuche Gebiet</German>
             <Korean>지역 수색</Korean>
@@ -822,11 +822,11 @@
             <French>Chercher un bâtiment proche</French>
             <Russian>Обыскать ближайшие здания</Russian>
             <Czech>Prohledat nejbližší budovu</Czech>
-            <Japanese>近くの建物を捜索します</Japanese>
+            <Japanese>至近の建物を捜索</Japanese>
             <Polish>Przeszukaj najbliższy budynek</Polish>
             <German>Durchsuche nahegelegenes Gebäude</German>
             <Korean>근처 건물 수색</Korean>
-            <Italian>Cerca Edifici nelle Vicinanze</Italian>
+            <Italian>Bonifica Edifici Vicini</Italian>
             <Chinesesimp>搜索附近的建筑物</Chinesesimp>
             <Chinese>搜索附近的建築物</Chinese>
             <Portuguese>Procurar construções próximas</Portuguese>
@@ -857,7 +857,7 @@
             <Spanish>Asignar vehículo médico</Spanish>
             <Italian>Assegna Veicolo Medico</Italian>
             <French>Affecter véhicule sanitaire</French>
-            <Japanese>医療車両として割り当て</Japanese>
+            <Japanese>医療車両に割り当て</Japanese>
             <Korean>의무 차량 임명</Korean>
             <Chinesesimp>指定医疗载具</Chinesesimp>
             <Chinese>指定醫療載具</Chinese>
@@ -872,7 +872,7 @@
             <Spanish>Asignar instalación médica</Spanish>
             <Italian>Assegna Struttura Medica</Italian>
             <French>Affecter installation sanitaire</French>
-            <Japanese>医療施設として割り当て</Japanese>
+            <Japanese>医療施設に割り当て</Japanese>
             <Korean>의무 시설 임명</Korean>
             <Chinesesimp>指定医疗设施</Chinesesimp>
             <Chinese>指定醫療設施</Chinese>
@@ -884,7 +884,7 @@
             <Japanese>シミュレーションを切り替え</Japanese>
             <Korean>재현 토글</Korean>
             <French>Commuter Simulation</French>
-            <Italian>Attivatore Simulazione</Italian>
+            <Italian>Imposta Simulazione</Italian>
             <Chinesesimp>切换模拟</Chinesesimp>
             <Chinese>切換模擬</Chinese>
             <Russian>Переключить симуляцию</Russian>
@@ -919,7 +919,7 @@
             <German>Ersatzkette hinzufügen</German>
             <Spanish>Agregar oruga de repuesto</Spanish>
             <French>Ajouter une chenille de rechange</French>
-            <Japanese>車両へ予備タイヤを追加</Japanese>
+            <Japanese>予備履帯を追加</Japanese>
             <Korean>예비 궤도 추가</Korean>
             <Chinesesimp>增加备用履带</Chinesesimp>
             <Chinese>增加備用履帶</Chinese>
@@ -934,9 +934,9 @@
             <Polish>Używaj tylko na żywych jednostkach</Polish>
             <Russian>Применимо только к живым юнитам</Russian>
             <Hungarian>Csak élő egységeken használni</Hungarian>
-            <Italian>Si può fare solo su persone vive</Italian>
+            <Italian>Si può fare solo su unità vive</Italian>
             <Portuguese>Unidade deve estar viva</Portuguese>
-            <Japanese>ユニットを生存させます</Japanese>
+            <Japanese>ユニットは生きている必要があります</Japanese>
             <Korean>대상이 반드시 살아 있어야 합니다</Korean>
             <Chinesesimp>单位必须是活的</Chinesesimp>
             <Chinese>單位必須是活著</Chinese>
@@ -953,7 +953,7 @@
             <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
             <Italian>Si può usare solo su fanteria a piedi</Italian>
             <Portuguese>Unidade deve ser uma infantaria desmontada</Portuguese>
-            <Japanese>ユニットを歩兵にさせます</Japanese>
+            <Japanese>ユニットは歩兵である必要があります</Japanese>
             <Korean>대상이 반드시 보병이어야 합니다</Korean>
             <Chinesesimp>单位必须是步兵</Chinesesimp>
             <Chinese>單位必須是步兵</Chinese>
@@ -968,7 +968,7 @@
             <Czech>Jednotka musí být budova</Czech>
             <Italian>Si può usare solo su strutture</Italian>
             <French>L'unité doit être une structure.</French>
-            <Japanese>ユニットを構造物とします</Japanese>
+            <Japanese>ユニットは構造物である必要があります</Japanese>
             <Korean>대상이 반드시 건축물이어야 합니다</Korean>
             <Chinesesimp>单位必须是建筑</Chinesesimp>
             <Chinese>單位必須是建築</Chinese>
@@ -983,7 +983,7 @@
             <Czech>Jednotka musí být vozidlo</Czech>
             <Italian>Si può usare solo su veicoli</Italian>
             <French>L'unité doit être un véhicule.</French>
-            <Japanese>ユニットを車両とします</Japanese>
+            <Japanese>ユニットは車両である必要があります</Japanese>
             <Korean>대상이 반드시 차량이어야 합니다</Korean>
             <Chinesesimp>单位必须是载具</Chinesesimp>
             <Chinese>單位必須是載具</Chinese>
@@ -998,7 +998,7 @@
             <German>Einheit muss ein Fahrzeug mit Ladekapazität sein</German>
             <Spanish>La unidad debe ser un vehículo con espacio de carga</Spanish>
             <French>L'unité doit être un véhicule muni d'un espace de stockage.</French>
-            <Japanese>ユニットをカーゴ スペースがある車両にします</Japanese>
+            <Japanese>ユニットはカーゴのある車両である必要があります</Japanese>
             <Korean>대상이 반드시 화물을 실을 수 있는 차량이어야 합니다</Korean>
             <Chinesesimp>单位必须是载具且有载货空间</Chinesesimp>
             <Chinese>單位必須是載具且有載貨空間</Chinese>
@@ -1013,7 +1013,7 @@
             <German>Einheit muss freie Ladekapazität haben</German>
             <Spanish>La unidad debe tener espacio de carga disponible</Spanish>
             <French>L'unité doit avoir de l'espace de chargement disponible.</French>
-            <Japanese>ユニットへカーゴ スペースを与えます</Japanese>
+            <Japanese>ユニットのカーゴには空きがありません</Japanese>
             <Korean>대상의 화물공간이 남아 있어야 합니다</Korean>
             <Chinesesimp>单位必须有剩余的载货空间</Chinesesimp>
             <Chinese>單位必須有剩餘的載貨空間</Chinese>
@@ -1029,7 +1029,7 @@
             <Hungarian>Csak elfogatlan egységeken használni</Hungarian>
             <Russian>Юнит не должен быть пленным</Russian>
             <Italian>L'unità non dev'essere un prigioniero</Italian>
-            <Japanese>ユニットを捕虜にさせません</Japanese>
+            <Japanese>ユニットは捕虜ではない必要があります</Japanese>
             <Korean>대상이 포로면 안됩니다</Korean>
             <Chinesesimp>单位不能被俘虏</Chinesesimp>
             <Chinese>單位不能被俘虜</Chinese>
@@ -1039,7 +1039,7 @@
             <French>L'unité doit appartenir à un camp approprié.</French>
             <Russian>Юнит должен принадлежать соответствующей стороне</Russian>
             <Czech>Jednotka musí patřit k příslušné straně</Czech>
-            <Japanese>ユニットを適切な陣営にします</Japanese>
+            <Japanese>ユニットは適切な陣営である必要があります</Japanese>
             <Polish>Jednostka musi należeć do odpowiedniej strony</Polish>
             <German>Einheit muss einer passenden Seite angehören</German>
             <Korean>대상이 적절한 진영에 속해야 합니다</Korean>
@@ -1054,7 +1054,7 @@
             <French>Le bâtiment le plus proche est trop éloigné.</French>
             <Russian>Ближайшие здания слишком далеко</Russian>
             <Czech>Nejbližší budova je příliš daleko</Czech>
-            <Japanese>近くに建物がありません。</Japanese>
+            <Japanese>一番近い建物まで遠すぎます</Japanese>
             <Polish>Najbliższy budynek jest zbyt daleko</Polish>
             <German>Nächstgelegenes Gebäude ist zu weit entfernt</German>
             <Korean>가장 가까운 건물이 너무 멉니다</Korean>
@@ -1075,7 +1075,7 @@
             <Russian>Ничего не выделено</Russian>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
             <Italian>Piazza su una unità</Italian>
-            <Japanese>ユニットの上に設置</Japanese>
+            <Japanese>ユニットの上に配置する必要があります</Japanese>
             <Korean>대상에 배치하기</Korean>
             <Chinesesimp>放置在一个单位上</Chinesesimp>
             <Chinese>放置在一個單位上</Chinese>
@@ -1092,7 +1092,7 @@
             <Hungarian>Egy jelenleg hiányzó bővítményt igényel</Hungarian>
             <Russian>Требуется аддон, который отсутствует</Russian>
             <Italian>Richiede un addon che non è presente</Italian>
-            <Japanese>要求されたアドオンは存在していません</Japanese>
+            <Japanese>要求されたアドオンがありません</Japanese>
             <Chinesesimp>需要一个不存在的插件</Chinesesimp>
             <Chinese>需要一個不存在的插件</Chinese>
             <Korean>현재 없는 애드온을 필요로 합니다</Korean>
@@ -1100,7 +1100,7 @@
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
             <German>Keiner</German>
-            <Italian>Niente</Italian>
+            <Italian>Nessuno</Italian>
             <Polish>Żadne</Polish>
             <Japanese>なし</Japanese>
             <Russian>Нет</Russian>
@@ -1132,7 +1132,7 @@
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
             <German>Spieler und KI's</German>
-            <Italian>Giocati e AI</Italian>
+            <Italian>Giocatori e IA</Italian>
             <Polish>Gracze i SI</Polish>
             <Japanese>プレイヤーとAI</Japanese>
             <Russian>Игроки и ИИ</Russian>
@@ -1197,7 +1197,7 @@
             <Chinese>選擇要卸載的貨物</Chinese>
             <Chinesesimp>选择要卸载的货物</Chinesesimp>
             <Italian>Scegli il carico da scaricare</Italian>
-            <Japanese>選択したカーゴを降ろす</Japanese>
+            <Japanese>積み荷を選択すると降ろせます</Japanese>
             <Polish>Wybierz ładunek do wyładowania</Polish>
             <Russian>Выберите груз для выгрузки</Russian>
             <Portuguese>Selecione objeto para descarregar</Portuguese>
@@ -1211,7 +1211,7 @@
             <English>Task Radius</English>
             <French>Rayon de la tâche</French>
             <Russian>Радиус задания</Russian>
-            <Japanese>タスク範囲</Japanese>
+            <Japanese>タスク半径</Japanese>
             <Polish>Obszar zadania</Polish>
             <German>Radius der Aufgabe</German>
             <Korean>작업 반경</Korean>
@@ -1226,7 +1226,7 @@
             <English>Radius to perform the task within</English>
             <French>Rayon dans lequel effectuer la tâche.</French>
             <Russian>Радиус выполнения задания</Russian>
-            <Japanese>次の範囲をタスクとして実行</Japanese>
+            <Japanese>タスクを実行される半径</Japanese>
             <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
             <German>Radius, in dem die Aufgabe ausgeführt werden soll</German>
             <Korean>다음 반경 내에서 작업</Korean>
@@ -1246,7 +1246,7 @@
             <Polish>Wpisano nieprawidłowy promień</Polish>
             <German>Ungültiger Radius eingegeben</German>
             <Korean>알 수 없는 반경 입력됨</Korean>
-            <Italian>Raggio Invalido Inserito</Italian>
+            <Italian>Inserito Raggio Invalido</Italian>
             <Chinesesimp>错误的半径值</Chinesesimp>
             <Chinese>錯誤的半徑值</Chinese>
             <Portuguese>Raio inválido inserido</Portuguese>
@@ -1268,11 +1268,11 @@
             <Czech>Krycí palba</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullArsenal_DisplayName">
-            <English>Add Full Arsenal</English>
+            <English>Add Full BI Arsenal</English>
             <German>Füge ganzes Arsenal hinzu</German>
             <French>Ajouter un arsenal complet</French>
-            <Italian>Aggiungi Arsenale Completo</Italian>
-            <Japanese>オブジェクトに完全なアーセナルを追加</Japanese>
+            <Italian>Aggiungi Arsenale BI Completo</Italian>
+            <Japanese>BI 武器庫を追加</Japanese>
             <Chinesesimp>增加完整的虚拟军火库到物体上</Chinesesimp>
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
             <Polish>Dodaj Wirtualny Arsenał</Polish>
@@ -1284,11 +1284,11 @@
             <Spanish>Añadir Arsenal completo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveArsenal_DisplayName">
-            <English>Remove Arsenal</English>
+            <English>Remove BI Arsenal</English>
             <German>Entferne Arsenal</German>
             <French>Retirer un arsenal</French>
-            <Italian>Rimuovi Arsenale</Italian>
-            <Japanese>オブジェクトからアーセナルを削除</Japanese>
+            <Italian>Rimuovi Arsenale BI</Italian>
+            <Japanese>BI 武器庫を削除</Japanese>
             <Chinesesimp>移除物体上的虚拟军火库</Chinesesimp>
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
             <Polish>Usuń Wirtualny Arsenał</Polish>
@@ -1302,8 +1302,8 @@
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
             <German>In Frachtraum laden</German>
-            <Italian>Carica nel Cargo</Italian>
-            <Japanese>カーゴに積み込み</Japanese>
+            <Italian>Carica nel carico</Italian>
+            <Japanese>カーゴへ積載</Japanese>
             <Chinese>裝載到貨物中</Chinese>
             <Chinesesimp>装载到货物中</Chinesesimp>
             <Korean>화물 싣기</Korean>
@@ -1314,11 +1314,18 @@
             <French>Charger dans le véhicule</French>
             <Spanish>Cargar en la carga</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleUnloadFromCargo_DisplayName">
+            <English>Unload from cargo</English>
+            <German>Aus Frachtraum ausladen</German>
+            <Italian>Scarica dal carico</Italian>
+            <Japanese>カーゴから降ろす</Japanese>
+            <Korean>화물 내리기</Korean>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Commuter JVN</French>
-            <Italian>Attiva NVGs</Italian>
+            <Italian>Attiva NVG</Italian>
             <Japanese>暗視装置の切り替え</Japanese>
             <Chinese>切換夜視鏡</Chinese>
             <Chinesesimp>切换夜视仪</Chinesesimp>
@@ -1349,8 +1356,8 @@
             <English>Add or remove NVGs from units</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Ajoute ou retire l'équipement de vision nocturne aux unités.</French>
-            <Italian>Aggiunge o rimuove NVGs alle unità</Italian>
-            <Japanese>ユニットから暗視装置の追加と削除</Japanese>
+            <Italian>Aggiunge o rimuove NVG alle unità</Italian>
+            <Japanese>ユニットの暗視装置を追加または削除します</Japanese>
             <Chinese>增加或移除單位的夜視鏡</Chinese>
             <Chinesesimp>增加或移除单位的夜视仪</Chinesesimp>
             <Korean>야시경 추가/제거</Korean>
@@ -1364,10 +1371,10 @@
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
             <German>Ziel umschalten</German>
-            <Japanese>目標を切り替え</Japanese>
+            <Japanese>切り替えの対象</Japanese>
             <Chinesesimp>切换目标</Chinesesimp>
             <Chinese>切換目標</Chinese>
-            <Italian>Scambia obiettivo</Italian>
+            <Italian>Imposta Bersaglio</Italian>
             <Polish>Przełącz cel</Polish>
             <Russian>Кому переключить</Russian>
             <Portuguese>Alternar alvo</Portuguese>
@@ -1379,10 +1386,10 @@
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
             <German>Betroffene Spieler beim umschalten</German>
-            <Japanese>ユニットは切り替えに影響を受けます</Japanese>
+            <Japanese>切り替えの影響を受ける対象</Japanese>
             <Chinesesimp>被菜单位受切换影响</Chinesesimp>
             <Chinese>受切換所影響的單位</Chinese>
-            <Italian>Unità influenzate dallo scambio</Italian>
+            <Italian>Unità influenzate dall'impostazione</Italian>
             <Polish>Jednostki pod wpływem przełączenia</Polish>
             <Russian>Юниты, к которым применяется переключение</Russian>
             <Portuguese>Unidades afetadas pela alteração</Portuguese>
@@ -1411,7 +1418,7 @@
             <English>Toggle Flashlights</English>
             <German>Ändere Taschenlampen</German>
             <French>Commuter lampes torches</French>
-            <Italian>Attiva torce</Italian>
+            <Italian>Attiva Torce</Italian>
             <Japanese>フラッシュライトの切り替え</Japanese>
             <Chinese>切換手電筒</Chinese>
             <Chinesesimp>切换手电筒</Chinesesimp>
@@ -1427,7 +1434,7 @@
             <English>Flashlights</English>
             <German>Taschenlampe</German>
             <French>Lampes torches</French>
-            <Italian>Torcia</Italian>
+            <Italian>Torce</Italian>
             <Japanese>フラッシュライト</Japanese>
             <Chinese>手電筒</Chinese>
             <Chinesesimp>手电筒</Chinesesimp>
@@ -1443,8 +1450,8 @@
             <English>Add Gear</English>
             <German>Ausrüstung hinzufügen</German>
             <French>Ajouter du matériel</French>
-            <Italian>Aggiungi equipaggiamento</Italian>
-            <Japanese>装備を追加</Japanese>
+            <Italian>Aggiungi Equipaggiamento</Italian>
+            <Japanese>装備の追加</Japanese>
             <Chinese>增加裝備</Chinese>
             <Chinesesimp>增加装备</Chinesesimp>
             <Korean>장비 추가</Korean>
@@ -1459,8 +1466,8 @@
             <English>Garrison Group</English>
             <German>Gebäude besetzen</German>
             <French>Garnir zone</French>
-            <Japanese>歩哨グループ</Japanese>
-            <Italian>Proteggi gruppo</Italian>
+            <Japanese>グループの駐屯</Japanese>
+            <Italian>Barrica Gruppo</Italian>
             <Chinese>佈置駐軍</Chinese>
             <Chinesesimp>布置驻军</Chinesesimp>
             <Korean>그룹 주둔</Korean>
@@ -1490,7 +1497,7 @@
             <German>Gebäude von der höchsten Position zuerst befüllen</German>
             <French>Les bâtiments se remplissent en commençant par le haut.</French>
             <Japanese>建物を最も高い位置から占拠していきます</Japanese>
-            <Italian>Riempi gli edifici dalla posizione più alta prima</Italian>
+            <Italian>Riempi gli edifici prima dalla posizione più alta</Italian>
             <Chinese>從建築物的最高點開始布置衛哨</Chinese>
             <Chinesesimp>从建筑物的最高点开始布置卫哨</Chinesesimp>
             <Korean>건물의 높은 위치부터 먼저 채움</Korean>
@@ -1520,7 +1527,7 @@
             <German>Gleichmäßig befüllen</German>
             <French>Remplissage homogène</French>
             <Japanese>均一に占拠</Japanese>
-            <Italian>Riempimento uguale</Italian>
+            <Italian>Riempimento omogeno</Italian>
             <Chinese>平均分配</Chinese>
             <Chinesesimp>平均分配</Chinesesimp>
             <Korean>평균 채우기</Korean>
@@ -1534,7 +1541,7 @@
             <English>Building by building</English>
             <German>Gebäude nach Gebäude</German>
             <French>Bâtiment par bâtiment</French>
-            <Japanese>建物から建物へ</Japanese>
+            <Japanese>建物ごとに</Japanese>
             <Italian>Edificio per edificio</Italian>
             <Chinese>一棟填滿後再換下一棟</Chinese>
             <Chinesesimp>一栋填满后再换下一栋</Chinesesimp>
@@ -1565,7 +1572,7 @@
             <German>Teleportieren</German>
             <French>Téléporter</French>
             <Japanese>テレポート</Japanese>
-            <Italian>Teletrasporto</Italian>
+            <Italian>Teletrasporta</Italian>
             <Chinese>傳送</Chinese>
             <Chinesesimp>传送</Chinesesimp>
             <Korean>순간이동</Korean>
@@ -1580,8 +1587,8 @@
             <English>Un-garrison Group</English>
             <German>Garnisionsgruppe auflösen</German>
             <French>Dégarnir zone</French>
-            <Japanese>非歩哨グループ</Japanese>
-            <Italian>Non proteggere gruppo</Italian>
+            <Japanese>グループの駐屯解除</Japanese>
+            <Italian>Sbarrica Gruppo</Italian>
             <Chinese>解除駐軍駐守狀態</Chinese>
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>
             <Korean>주둔해제</Korean>
@@ -1600,7 +1607,7 @@
             <German>Keine Spieler gefunden</German>
             <Hungarian>Nincsenek játékosok</Hungarian>
             <Italian>Nessun giocatore trovato</Italian>
-            <Japanese>プレーヤーが見つかりません</Japanese>
+            <Japanese>プレーヤーが見つかりませんでした</Japanese>
             <Korean>플레이어가 없습니다.</Korean>
             <Polish>Nie znaleziono graczy</Polish>
             <Portuguese>Nenhum jogador encontrado</Portuguese>
@@ -1617,7 +1624,7 @@
             <German>Fahrzeug reparieren zuweisen</German>
             <Hungarian>Hozzárendelés javítóműhöz</Hungarian>
             <Italian>Assegna veicolo di riparazione</Italian>
-            <Japanese>修理車両を割り当てる</Japanese>
+            <Japanese>修理車両に割り当て</Japanese>
             <Korean>수리 차량 지정</Korean>
             <Polish>Przydziel pojazd do naprawy</Polish>
             <Portuguese>Definir como veículo de reparo</Portuguese>
@@ -1634,7 +1641,7 @@
             <German>Zuweisen von Reparatureinrichtung</German>
             <Hungarian>Hozzárendelés javításhoz</Hungarian>
             <Italian>Assegna struttura di riparazione</Italian>
-            <Japanese>修理施設を割り当てる</Japanese>
+            <Japanese>修理施設に割り当て</Japanese>
             <Korean>수리 시설 지정</Korean>
             <Polish>Przydziel naprawę</Polish>
             <Portuguese>Definir como oficina de reparo</Portuguese>
@@ -1650,8 +1657,8 @@
             <French>Assigner ingénieur</French>
             <German>Engineer zuweisen</German>
             <Hungarian>Engedélyezze a mérnököt</Hungarian>
-            <Italian>Assign Engineer</Italian>
-            <Japanese>担当エンジニア</Japanese>
+            <Italian>Assegna Geniere</Italian>
+            <Japanese>工兵に割り当て</Japanese>
             <Korean>엔지니어 지정</Korean>
             <Polish>Przydziel inżyniera</Polish>
             <Portuguese>Definir como engenheiro</Portuguese>
@@ -1667,8 +1674,8 @@
             <French>Qualification technique</French>
             <German>Ingenieur Fähigkeit</German>
             <Hungarian>Mérnöki készség</Hungarian>
-            <Italian>Abilità ingegnere</Italian>
-            <Japanese>エンジニアのスキル</Japanese>
+            <Italian>Abilità Geniere</Italian>
+            <Japanese>工兵のスキル</Japanese>
             <Korean>기술자의 기술</Korean>
             <Polish>Umiejętność inżyniera</Polish>
             <Portuguese>Habilidade do engenheiro</Portuguese>
@@ -1685,7 +1692,7 @@
             <German>Vollständige Heilung</German>
             <Hungarian>Teljes gyógyítás</Hungarian>
             <Italian>Guarigione completa</Italian>
-            <Japanese>完全に回復</Japanese>
+            <Japanese>完全回復</Japanese>
             <Korean>완전 치유</Korean>
             <Polish>Pełne uleczenie</Polish>
             <Portuguese>Cura completa</Portuguese>
@@ -1702,7 +1709,7 @@
             <German>Selbstmordattentäter</German>
             <Hungarian>Öngyilkos merénylő</Hungarian>
             <Italian>Kamikaze</Italian>
-            <Japanese>自爆テロ犯</Japanese>
+            <Japanese>自爆兵化</Japanese>
             <Korean>자살 폭탄</Korean>
             <Polish>Samobójca</Polish>
             <Portuguese>Bombardeiro suicida</Portuguese>
@@ -1718,7 +1725,7 @@
             <French>Camp cible</French>
             <German>Aktivierungsseite</German>
             <Hungarian>Aktiválási oldal</Hungarian>
-            <Italian>Lato di attivazione</Italian>
+            <Italian>Fazione Bersaglio</Italian>
             <Japanese>対象陣営</Japanese>
             <Korean>활성화 진영</Korean>
             <Polish>Strona aktywacji</Polish>
@@ -1735,7 +1742,7 @@
             <French>Rayon de déclenchement</French>
             <German>Aktivierungsradius</German>
             <Hungarian>Aktiválási sugár</Hungarian>
-            <Italian>Raggio di attivazione</Italian>
+            <Italian>Raggio di Attivazione</Italian>
             <Japanese>活性化半径</Japanese>
             <Korean>활성화 반경</Korean>
             <Polish>Promień aktywacji</Polish>
@@ -1752,7 +1759,7 @@
             <French>Taille de l'explosion</French>
             <German>Explosionsgröße</German>
             <Hungarian>Robbanásméret</Hungarian>
-            <Italian>Dimensione di esplosione</Italian>
+            <Italian>Dimensione dell'Esplosione</Italian>
             <Japanese>爆発サイズ</Japanese>
             <Korean>폭발 크기</Korean>
             <Polish>Rozmiar wybuchu</Polish>
@@ -1769,7 +1776,7 @@
             <French>Recherche automatique</French>
             <German>Automatische Suche</German>
             <Hungarian>Automatikus keresés</Hungarian>
-            <Italian>Ricerca automatica</Italian>
+            <Italian>Ricerca Automatica</Italian>
             <Japanese>自動誘導</Japanese>
             <Korean>자동 탐색</Korean>
             <Polish>Auto Seek</Polish>
@@ -1786,8 +1793,8 @@
             <French>L'unité essaiera de trouver activement des unités proches appartenant à au camp cible, puis elle se déplacera dans leur direction.\nLa portée de la recherche automatique est basée sur l'aptitude en repérage de l'unité, avec une distance minimale de 100 mètres.</French>
             <German>Die Einheit versucht aktiv, in der Nähe befindliche Einheiten der Aktivierungsseite zu finden und sich dorthin zu bewegen. Der Bereich der automatischen Suche basiert auf der Fähigkeit der Zielentfernung der Einheit mit einer Mindestentfernung von 100 Metern.</German>
             <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
-            <Italian>L'unità cercherà attivamente di trovare e spostarsi verso le unità vicine del lato di attivazione. La gamma di Auto Seek si basa sull'abilità a distanza spot dell'unità con un minimo di 100 metri.</Italian>
-            <Japanese>対象陣営ユニットを見つけて移動しようと積極的に試みます。自動誘導の範囲は、ユニットの索敵能力に基づいており、最低100メートルです。</Japanese>
+            <Italian>L'unità cercherà attivamente di trovare e spostarsi verso unità vicine della fazione bersaglio. La distanza di Ricerca Automatica si basa sull'abilità di identificazione dell'unità, con un minimo di 100 metri.</Italian>
+            <Japanese>対象陣営ユニットを見つけて移動しようと積極的に試みます。自動誘導の半径は、ユニットの索敵能力に基づいており、最低100メートルです。</Japanese>
             <Korean>유닛은 활성화 측의 근접 유닛을 향해 적극적으로 찾아서 이동하려고 시도합니다. 자동 탐색의 범위는 유닛의 색적 거리 스킬을 기준으로 최소 100미터입니다.</Korean>
             <Polish>Jednostka będzie aktywnie próbowała znaleźć i ruszyć w kierunku pobliskich jednostek strony aktywacji. Zasięg Auto Seek opiera się na umiejętności punktowej odległości jednostki z minimum 100 metrów.</Polish>
             <Portuguese>A unidade tentará ativamente encontrar e se mover para as unidades próximas do lado da ativação. O alcance da Auto Seek é baseado na habilidade de distância do ponto da unidade com um mínimo de 100 metros.</Portuguese>
@@ -1803,7 +1810,7 @@
             <German>Die Einheit ist bereits ein Selbstmordattentäter</German>
             <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
             <Italian>L'unità è già un kamikaze</Italian>
-            <Japanese>既に自爆ユニットです</Japanese>
+            <Japanese>ユニットは既に自爆兵です</Japanese>
             <Korean>유닛은 이미 자살 폭탄 테러범입니다.</Korean>
             <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
             <Portuguese>A unidade já é um suicida</Portuguese>
@@ -1817,7 +1824,7 @@
             <Japanese>ACE 武器庫を追加</Japanese>
             <Chinesesimp>添加 ACE 军火库</Chinesesimp>
             <Chinese>增加完整的ACE軍火庫</Chinese>
-            <Italian>Aggiungi l'arsenale ACE completo</Italian>
+            <Italian>Aggiungi Arsenale ACE Completo</Italian>
             <Polish>Dodaj pełny arsenał ACE</Polish>
             <Russian>Добавить полный ACE Арсенал</Russian>
             <Portuguese>Adicionar Arsenal ACE Completo</Portuguese>
@@ -1833,7 +1840,7 @@
             <Japanese>ACE 武器庫を削除</Japanese>
             <Chinesesimp>删除 ACE 军火库</Chinesesimp>
             <Chinese>移除ACE軍火庫</Chinese>
-            <Italian>Rimuovi l'arsenale ACE</Italian>
+            <Italian>Rimuovi Arsenale ACE</Italian>
             <Polish>Usuń arsenał ACE</Polish>
             <Russian>Убрать ACE Арсенал</Russian>
             <Portuguese>Remover Arsenal ACE</Portuguese>
@@ -1847,7 +1854,7 @@
             <English>Create Zeus</English>
             <German>Zeus erstellen</German>
             <Russian>Создать Зевса</Russian>
-            <Japanese>Zeus を作る</Japanese>
+            <Japanese>Zeus を作成</Japanese>
             <Polish>Stwórz Zeus'a</Polish>
             <Italian>Crea Zeus</Italian>
             <Portuguese>Criar Zeus</Portuguese>
@@ -1863,7 +1870,7 @@
             <English>Delete Zeus</English>
             <German>Zeus löschen</German>
             <Russian>Удалить Зевса</Russian>
-            <Japanese>Zeus を消す</Japanese>
+            <Japanese>Zeus を削除</Japanese>
             <Polish>Usuń Zeus'a</Polish>
             <Italian>Cancella Zeus</Italian>
             <Portuguese>Apagar Zeus</Portuguese>
@@ -1900,7 +1907,7 @@
             <Portuguese>Soltar carga de paraquedas</Portuguese>
             <Chinese>空投貨物</Chinese>
             <Chinesesimp>空投货物</Chinesesimp>
-            <Italian>Paradrop Cargo</Italian>
+            <Italian>Paracaduta Carico</Italian>
             <Czech>Výsadek nákladu</Czech>
             <French>Paralargage de cargaison</French>
             <Turkish>Paraşüt Kargosu</Turkish>
@@ -1910,7 +1917,7 @@
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
             <German>Keine Ladung geladen</German>
-            <Japanese>カーゴは未積載</Japanese>
+            <Japanese>カーゴは積載されていません</Japanese>
             <Polish>Niczego nie załadowano do cargo</Polish>
             <Russian>Грузовой отсек пуст</Russian>
             <Portuguese>Nenhuma carga carregada</Portuguese>
@@ -1927,6 +1934,7 @@
             <English>Burn Unit</English>
             <German>Einheit anzünden</German>
             <Chinesesimp>焚烧单位</Chinesesimp>
+            <Italian>Incendia Unità</Italian>
             <Korean>유닛 불로 태우기</Korean>
             <Polish>Podpal Jednostkę</Polish>
             <Japanese>ユニットを燃やす</Japanese>
@@ -1934,12 +1942,37 @@
             <Spanish>Quemar a unidad</Spanish>
             <French>Brûler l'unité</French>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleMedicalMenu_DisplayName">
+            <English>Medical Menu</English>
+            <German>Sanitätsmenü</German>
+            <Polish>Menu medyczne</Polish>
+            <Portuguese>Menu Médico</Portuguese>
+            <Russian>Медицинское меню</Russian>
+            <Spanish>Menú médico</Spanish>
+            <Czech>Zdravotnická nabídka</Czech>
+            <Italian>Menù Medico</Italian>
+            <French>Menu médical</French>
+            <Japanese>医療メニュー</Japanese>
+            <Korean>의료 메뉴</Korean>
+            <Chinesesimp>医疗菜单</Chinesesimp>
+            <Chinese>醫療選單</Chinese>
+            <Turkish>Medikal Menü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_MedicalMenuDisabled">
+            <English>The medical menu is disabled</English>
+            <German>Das Sanitätsmenü ist deaktiviert</German>
+            <Italian>Il Menù Medico è disabilitato</Italian>
+            <Japanese>医療メニューは無効になっています</Japanese>
+            <Korean>의료 메뉴가 비활성화되었습니다</Korean>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
             <Polish>Wykop Okop</Polish>
             <Korean>참호라인 깔기</Korean>
             <French>Poser une tranchée</French>
             <German>Grabenlinie legen</German>
+            <Italian>Piazza Trincea</Italian>
+            <Japanese>塹壕溝線を敷設</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
@@ -1947,6 +1980,8 @@
             <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
             <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
             <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
+            <Italian>+SHIFT per forzare (Può piazzare solo N/S o E/O</Italian>
+            <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
         </Key>
     </Package>
 </Project>

@@ -33,7 +33,7 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     "LIST",
     [LSTRING(SettingFeedbackIconsName), LSTRING(SettingFeedbackIconsDesc)],
     _category,
-    [[0, 1, 2, 3, 4], [ELSTRING(optionsmenu,Hide), ELSTRING(optionsmenu,TopRightDown), ELSTRING(optionsmenu,TopRightLeft), ELSTRING(optionsmenu,TopLeftDown), ELSTRING(optionsmenu,TopLeftRight)], 1],
+    [[0, 1, 2, 3, 4], [LSTRING(Hide), LSTRING(TopRightDown), LSTRING(TopRightLeft), LSTRING(TopLeftDown), LSTRING(TopLeftRight)], 1],
     0
 ] call CBA_fnc_addSetting;
 
@@ -42,7 +42,7 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     "LIST",
     [LSTRING(SettingProgressBarLocationName), LSTRING(SettingProgressBarLocationDesc)],
     _category,
-    [[0, 1], [ELSTRING(optionsmenu,Top), ELSTRING(optionsmenu,Bottom)], 0],
+    [[0, 1], [LSTRING(Top), LSTRING(Bottom)], 0],
     0
 ] call CBA_fnc_addSetting;
 

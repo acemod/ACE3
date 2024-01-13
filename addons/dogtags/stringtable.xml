@@ -6,7 +6,7 @@
             <Polish>Nieśmiertelnik</Polish>
             <Russian>Жетон</Russian>
             <Czech>Identifikační známka</Czech>
-            <Japanese>ドッグ タグ</Japanese>
+            <Japanese>ドッグタグ</Japanese>
             <German>Erkennungsmarke</German>
             <Korean>군번줄</Korean>
             <French>Plaque d'identification</French>
@@ -22,7 +22,7 @@
             <Polish>Sprawdź nieśmiertelnik</Polish>
             <Russian>Проверить жетон</Russian>
             <Czech>Zkontrolovat známku</Czech>
-            <Japanese>ドッグ タグを見る</Japanese>
+            <Japanese>ドッグタグを確認</Japanese>
             <German>Erkennungsmarke prüfen</German>
             <Korean>군번줄 확인</Korean>
             <French>Vérifier la plaque d'identification</French>
@@ -70,7 +70,7 @@
             <Polish>Zabrałeś nieśmiertelnik %1...</Polish>
             <Russian>Жетон снят с %1...</Russian>
             <Czech>Sebral jsem známku od %1...</Czech>
-            <Japanese>%1 からドッグ タグを取っています・・・</Japanese>
+            <Japanese>%1 からドッグタグを取っています・・・</Japanese>
             <German>Erkennungsmarke von %1 genommen...</German>
             <Korean>%1(으)로부터 군번줄을 회수했습니다...</Korean>
             <French>Plaque d'identification prise sur %1...</French>
@@ -86,7 +86,7 @@
             <Polish>Ktoś już zabrał ten nieśmiertelnik...</Polish>
             <Russian>Кто-то уже забрал жетон...</Russian>
             <Czech>Někdo jiný už vzal identifikační známku...</Czech>
-            <Japanese>すでにドッグ タグは取られています・・・</Japanese>
+            <Japanese>すでにドッグタグは取られています・・・</Japanese>
             <German>Jemand anderes hat bereits die Erkennungsmarke genommen...</German>
             <Korean>누군가 이미 군번줄을 회수해갔습니다...</Korean>
             <French>Quelqu'un d'autre a déjà pris la plaque d'identification...</French>
@@ -103,7 +103,7 @@
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
             <Chinesesimp>在画面中显示检查兵籍牌</Chinesesimp>
             <Japanese>確認中のドッグタグを画面上で表示します</Japanese>
-            <Italian>Display su schermo per il controllo delle piastrine</Italian>
+            <Italian>Indicatore su schermo per il controllo delle piastrine</Italian>
             <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
             <Russian>Экран для проверки жетонов</Russian>
             <Portuguese>Tela de Exibição para verificar dogtags</Portuguese>
