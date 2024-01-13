@@ -2,11 +2,11 @@
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger,
  * This function creates spalling if the hit slowed the speed down enough.
- * 
+ *
  * Arguments:
  * Arguments are the same as BI's "HitPart" EH:
  * https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HitPart
- * 
+ *
  * Return Value:
  * None
  *
@@ -30,7 +30,7 @@ params [
 
 if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF ||
     _lPosASL isEqualTo [0,0,0] ||
-    {isNull _hitObj || {_hitObj isKindOf "man" || 
+    {isNull _hitObj || {_hitObj isKindOf "man" ||
     {_ammo isEqualTo ""}}}) exitWith {
     TRACE_4("time/invldHit",CBA_missionTime,GVAR(lastSpallTime),_hitObj,_lPosASL);
 };
@@ -38,12 +38,12 @@ if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF ||
 private _material = [_surfaceType] call FUNC(getMaterialInfo);
 if (_material isEqualTo "ground") then {
 #ifdef DEBUG_MODE_FULL
-    systemChat "ground spall"; // really shouldn't happen
+    systemChat "ground spall";
 #endif
 };
 
 private _vel = if (alive _projectile) then {
-        velocity _projectile; 
+    velocity _projectile;
 } else {
     [0, 0, 0]
 };
@@ -52,7 +52,7 @@ private _vel = if (alive _projectile) then {
 private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
 private _caliber = getNumber (configFile >> "cfgAmmo" >> _ammo >> "caliber");
 // scaled momentum change made on caliber-mass assumption ~sqrt(2)/20 * caliber ~= mass
-private _deltaMomentum =  0.0707 * _caliber * sqrt( _dV ) * GVAR(SpallIntensity); 
+private _deltaMomentum =  0.0707 * _caliber * sqrt( _dV ) * GVAR(SpallIntensity);
 TRACE_3("found speed",_dV,_caliber,_deltaMomentum);
 
 if (_deltaMomentum < 2) exitWith {
@@ -62,20 +62,22 @@ if (_deltaMomentum < 2) exitWith {
 
 private _lVelUnit = vectorNormalized _lVel;
 private _unitStep = _lVelUnit vectorMultiply 0.05;
-private _spallPos = +_lPosASL;
 
 if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
     TRACE_3("terrainIntersect",_lPosASL,_unitStep,_lPosASL);
-}; 
+};
 // Passed all exitWiths
 GVAR(lastSpallTime) = CBA_missionTime;
 
-// check for less than 30 between norm and projectile (120 of 90 deg offset)
-if (120 > acos ((vectorNormalized _lVelUnit) vectorDotProduct _sNorm)) then {
+/*
+ * Improve performance of finding otherside of object on shallow angle
+ * impacts. 120 degrees due to 90 degree offset with _lVelUnit into object.
+ */
+private _spallPos = +_lPosASL;
+if (120 > acos ( _lVelUnit vectorDotProduct _sNorm)) then {
     _spallPos = _spallPos vectorAdd (_unitStep vectorMultiply 5);
 };
-
-for "_i" from 1 to 20 do 
+for "_i" from 1 to 20 do
 {
     private _nPos = _spallPos vectorAdd _unitStep;
     if (!lineIntersects [_spallPos, _nPos]) then {
@@ -93,7 +95,7 @@ if GVAR(dbgSphere) then {
 };
 #endif
 
-private _spawnSize = switch (true) do 
+private _spawnSize = switch (true) do
 {
     case (_deltaMomentum < 3): { "_spall_tiny" };
     case (_deltaMomentum < 5): { "_spall_small" };

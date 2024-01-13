@@ -3,7 +3,7 @@
  * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function creates fragments randomly spreading out from an explosion to
  * a maximum of 15
- * 
+ *
  * Arguments:
  * 0: Position of fragmenting projectile ASL <ARRAY>
  * 1: Velocity of the fragmenting projectile <ARRAY>
@@ -11,7 +11,7 @@
  * 3: Type of fragments to generate
  * 4: Remaining fragment budget <SCALAR>
  * 5: Shot parent <ARRAY>
- * 
+ *
  * Return Value:
  * None
  *
@@ -22,10 +22,10 @@
  */
 
 params [
-    "_posASL", 
-    ["_projVel", [0,0,0]],  
+    "_posASL",
+    ["_projVel", [0,0,0]],
     ["_heightAGL", 2, [123]],
-    ["_fragType", [], [[]]], 
+    ["_fragType", [], [[]]],
     ["_fragCnt", 10, [123]],
     ["_shotPrnt", [objNull, objNull], [[]], [2]]
 ];
@@ -38,7 +38,7 @@ private _hMode = switch (true) do {
     default {"_mid"};
 };
 
-private _type = if (count _fragType > 0 && 
+private _type = if (count _fragType > 0 &&
                     {"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
     QGVAR(def_tiny_)
 } else {
@@ -71,4 +71,4 @@ _fragSpawner addEventHandler [
 if (GVAR(dbgSphere)) then {
     [_posASL] call FUNC(dev_sphereDraw);
 };
-#endif 
+#endif

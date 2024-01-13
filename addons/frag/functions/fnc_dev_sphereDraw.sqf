@@ -16,7 +16,7 @@
  * Public: No
  */
 params [
-    ["_posASL", [0,0,0], [[]], [2,3]],
+    ["_posASL", [0, 0, 0], [[]], [2,3]],
     ["_color", "(1,0,0,0.5)", [""]]
 ];
 
@@ -30,7 +30,7 @@ if (count _posASL < 3) then
 
 if (_color select [0,1] != "(") then
 {
-    switch (toLower _color) do 
+    switch (toLower _color) do
     {
         case "blue": { _color = "(0,0,0.8,0.5)"; };
         case "black": { _color = "(1,1,1,0.5)"; };
@@ -46,7 +46,7 @@ private _clrStr = "#(argb,8,8,3)color" + _color;
 
 private _sphere = "Sign_Sphere25cm_F" createVehicle [1,2,34];
 _sphere setObjectTexture [0, _clrStr];
-_sphere setPosASL _posASL; 
+_sphere setPosASL _posASL;
 GVAR(dev_eventSpheres) pushBack _sphere;
 
 _sphere;

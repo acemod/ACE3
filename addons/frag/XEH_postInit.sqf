@@ -1,11 +1,12 @@
 #include "script_component.hpp"
 
-["CBA_settingsInitialized", {
+[
+    "CBA_settingsInitialized",
+    {
         if (isServer) then {
             [] call FUNC(initBlackList);
             [] call FUNC(initMaterialCache);
         };
-        
 
 #ifdef DEBUG_MODE_DRAW
         if (hasInterface && GVAR(debugOptions)) then {
@@ -15,7 +16,8 @@
             [objNull, ace_player] call FUNC(dev_switchUnitHandle);
         };
 #endif
-}] call CBA_fnc_addEventHandler;
+    }
+] call CBA_fnc_addEventHandler;
 
 
 #ifdef LOG_FRAG_INFO

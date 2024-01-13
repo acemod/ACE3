@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Adds setting defined blacklisted rounds to blacklist 
+ * Adds setting defined blacklisted rounds to blacklist
  *
  * Arguments:
  * Mne
@@ -21,13 +21,14 @@ if (!ADDON) then {
     [FUNC(initBlackList), [], 1] call CBA_fnc_waitAndExecute;
 };
 
-// could improve text parsing
+// could improve text parsing of CBA setting string
 private _convArray = parseSimpleArray GVAR(BlackList);
 
 if (count _convArray == 0 ) exitWith {
     TRACE_1("Empty blacklist", _convArray);
 };
 
+// Add CBA setting blacklist to blacklist and log errors
 private _errors = 0;
 private _items = count _convArray;
 for "_i" from 0 to _items - 1 do {

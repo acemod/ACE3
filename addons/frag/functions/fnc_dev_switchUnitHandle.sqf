@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Handle for debug actions when switching units 
+ * Handle for debug actions when switching units
  *
  * Arguments:
  * 0: Last unit <OBJECT>
@@ -37,7 +37,7 @@ _aID = _cVic addAction
     false,        // hideOnUse
     "",            // shortcut
     "true",        // condition
-    8            
+    8
 ];
 
 missionNamespace getVariable [QGVAR(dev_clearTraceAction), _aID];

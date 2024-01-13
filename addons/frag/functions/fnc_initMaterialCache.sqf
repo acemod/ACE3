@@ -1,11 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * For performance, we load a bunch of vanilla materials preemptively
- * 
+ * For performance, we load a bunch of vanilla materials preemptively into
+ * the spall material cache
+ *
  * Arguments:
  * none
- * 
+ *
  * Return Value:
  * none
  *

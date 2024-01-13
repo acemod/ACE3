@@ -253,7 +253,7 @@
             <Korean>(SP 전용) 임무 / 편집자가 다시 시작해야합니다. SP 게임 모드에서만 파편화 및 탄환파편의 시각적 추적을 가능하게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
-            <English>(Local only) Frag/Spall Debug Tracing</English>
+            <English>(SP only) Frag/Spall Debug Tracing</English>
             <Spanish>(Solo SP) Seguimiento de depuración de Fragmentación/Astillamiento </Spanish>
             <Polish>(Tylko SP) Wizualny debug odł./odpr.</Polish>
             <Czech>(Pouze SP) Debug sledování Frag/Úlomků</Czech>
@@ -269,7 +269,7 @@
             <Chinese>(僅在單人模式) 碎片/剝落除錯追蹤</Chinese>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
-            <English>(Local only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>
+            <English>(SP only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>
             <Spanish>(Solo SP) Requiere un reinicio misión/editor. Permite el seguimiento visual de la fragmentación y astillamientos de los proyectiles en modo SP.</Spanish>
             <Polish>(Tylko SP) Wymaga restartu misji/edytora. Aktywuje wizualne śledzenie odłamków oraz odprysków w trybie gry Single Player.</Polish>
             <German>(nur SP) Splitter-/Explosions-Debugging</German>

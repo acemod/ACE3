@@ -1,14 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function returns a classification of material type based 
+ * This function returns a classification of material type based
  * on the surface hit.
- * 
+ *
  * Arguments:
- * 0: surfacetype <STRING> - either a cfgSurfaces path .bisurf filepath 
- * 
+ * 0: surfacetype <STRING> - either a cfgSurfaces path .bisurf filepath
+ *
  * Return Value:
- * _material <STRING> - Material categories as expanded on in line 43 below
+ * _material <STRING> - Material categories as expanded on in line 44 below
  *
  * Example:
  * [_surfaceType] call ace_frag_fnc_getFragInfo;
@@ -21,12 +21,15 @@ params ["_surfType"];
 private _material = GVAR(spallMaterialCache) get _surfType;
 
 TRACE_2("materialCache",_surfType,_material);
-if !(isNil "_material") exitWith {
+if (!isNil "_material") exitWith {
     _material
 };
-
+// Use 'soundEnviron' or 'soundHit' to extract approx material
 if (isClass (configFile >> "CfgSurfaces" >> _surfType)) then {
     _material = getText (configFile >> "CfgSurfaces" >> _surfType >> "soundEnviron");
+    if (_material isEqualTo "" || {_material isEqualTo "empty"}) then {
+        _material = getText (configFile >> "CfgSurfaces" >> _surfType >> "soundhit");
+    };
 } else { // Messy way when a surface isn't added to cfgSurfaces
     private _surfFileText = tolower preprocessFile _surfType;
     _surfFileText = _surfFileText regexReplace ["[^a-z0-9]", ""];
@@ -37,7 +40,6 @@ if (isClass (configFile >> "CfgSurfaces" >> _surfType)) then {
     _material = _surfFileText select [_idx, 10];
 };
 TRACE_1("materialSubString",_material);
-
 
 _material = switch (true) do {
     case ("dirt" in _material);

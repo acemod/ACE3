@@ -1,7 +1,8 @@
 #include "..\script_component.hpp"
+#define HB_DRAW_ARRS [[3 , 2 , 1 , 5 , 6 , 7 , 3 , 0 , 4 , 5], [0, 1], [2, 6], [7, 4]]
 /*
  * Author: Lambda.Tiger
- * Per frame function to draw all dev traces 
+ * Per frame function to draw all dev traces
  *
  * Arguments:
  * none
@@ -16,7 +17,6 @@
 
 private _deleteArr = [];
 {
-    // leave if trace is not to be drawn
     if (count (_y#1) > 1) then
     {
         for "_j" from 1 to count (_y#1) - 1 do
@@ -27,8 +27,6 @@ private _deleteArr = [];
 } forEach GVAR(dev_trackLines);
 
 if (GVAR(drawHitBox)) then {
-    
-    #define HB_DRAW_ARRS [[3,2,1,5,6,7,3,0,4,5],[0,1],[2,6],[7,4]]
     _deleteArr = [];
     {
         _y params ["_obj", "_pts", "_color"];
@@ -37,7 +35,7 @@ if (GVAR(drawHitBox)) then {
             _deleteArr pushBack _x;
             continue;
         };
-        
+
         {
             for "_i" from 1 to count _x -1 do
             {
@@ -46,7 +44,7 @@ if (GVAR(drawHitBox)) then {
         } forEach HB_DRAW_ARRS;
 
     } forEach GVAR(dev_hitBoxes);
-    
+
     for "_i" from 0 to count _deleteArr - 1 do
     {
         GVAR(dev_hitBoxes) deleteAt (_deleteArr#_i);

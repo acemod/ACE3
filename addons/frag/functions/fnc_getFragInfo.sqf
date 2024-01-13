@@ -3,16 +3,16 @@
  * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function returns fragmentation parameters for a specific
  * ammo type.
- * 
+ *
  * Arguments:
  * 0: _ammo <STRING> - cfgAmmo type of ammo to check
- * 
+ *
  * Return Value:
  * _ammoInfo <ARRAY>
  *  0: _fragRange - search range for fragments
  *  1: _fragVel - gurney equation calculated velocity
  *  2: _fragTypes - array of fragment types
- *  3: _fragCount - modified frag count used under assumptions 
+ *  3: _fragCount - modified frag count used under assumptions
  *                                   of spherical fragmentation
  *
  * Example:
@@ -25,7 +25,7 @@ params ["_ammo"];
 
 private _ammoInfo = GVAR(fragInfoCache) get _ammo;
 
-if !(isNil "_ammoInfo") exitWith {_ammoInfo};
+if (!isNil "_ammoInfo") exitWith {_ammoInfo};
 
 private _fragTypes = [];
 private _warn = false;
@@ -37,7 +37,7 @@ if (isArray (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CLASSES))) then {
 
 /************ Gurney equation notes *****************//*
  * see https://en.wikipedia.org/wiki/Gurney_equations
- * 
+ *
  * GURNEY_K is the constant added to _m/_c
  * GURNEY_C = sqrt(2E)
  *
@@ -71,11 +71,11 @@ if (_warn) then {
 };
 
 /********************** _ammoInfo format *************************//*
- * 0: _fragRange - search range for fragments, calculated with 
+ * 0: _fragRange - search range for fragments, calculated with
  *                  a 0.5% chance to hit as the minimum
  * 1: _fragVel - gurney equation calculated velocity
  * 2: _fragTypes - array of fragment types
- * 3: _fragCount - modified frag count used under assumptions 
+ * 3: _fragCount - modified frag count used under assumptions
  *                 of spherical fragmentation
  */
 _ammoInfo = [

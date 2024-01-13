@@ -24,7 +24,7 @@
 #define ACE_FRAG_COUNT_MIN 5
 #define ACE_FRAG_COUNT_MAX 50
 #define ACE_FRAG_HITPOINTS  ["spine1","spine2","spine3","head","leftarm","leftarmroll","leftforearm","rightarm","rightarmroll","rightforearm","pelvis","leftupleg","leftuplegroll","leftlegroll","leftfoot","rightupleg","rightuplegroll","rightleg","rightlegroll","rightfoot"]
-#define ACE_FRAG_HITPOINTS_WEIGHTS 
+#define ACE_FRAG_HITPOINTS_WEIGHTS
 
 #ifdef DEBUG_MODE_FULL
 #define __FADE_TIME 1

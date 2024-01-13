@@ -1,9 +1,9 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
- * This function creates fragments targeted at specific entities, up to 
- * a configured maximum 
- * 
+ * This function creates fragments targeted at specific entities, up to
+ * a configured maximum
+ *
  * Arguments:
  * 0: Position of fragmenting projectile ASL <ARRAY>
  * 1: Velocity of the fragmenting projectile <ARRAY>
@@ -12,9 +12,9 @@
  * 4: Types of fragments <ARRAY>
  * 5: A modified parameter used to calulate whether a framgent hits <SCALAR>
  * 6: Shot parent <ARRAY>
- * 
+ *
  * Return Value:
- * None
+ * Number of fragments created <SCALAR>
  *
  * Example:
  * [getPosASL _proj, velocity _proj, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragTargeted;
@@ -53,7 +53,7 @@ if (_objects isEqualTo []) exitWith {
 // grab crews and add them in so that targets stay approx. sorted by distance
 {
     private _crew = (crew _x);
-    if (count _crew > 1) then {    
+    if (count _crew > 1) then {
         private _arr = [_x];
         {
             _arr pushBackUnique _x;
@@ -62,23 +62,22 @@ if (_objects isEqualTo []) exitWith {
         _objects set [_forEachIndex, _arr];
     };
 } forEach _objects;
-_objects = flatten _objects; // flatten out sub arrays
+_objects = flatten _objects;
 TRACE_3("Targets found", _posASL, _fragRange, count _objects);
 
 // limit number of fragments per direction (2D) to 10 using _fragArcs
 private _fragArcs = createHashMap;
-private _fragCount = 0; // limit of # of fragments to _maxFrags
-{
+private _fragCount = 0;
+{ // Begin of forEach iterating on _objects
     if (!alive _x) then {continue};
     private _target = _x;
 
     #ifdef DEBUG_MODE_DRAWFRAG
     [_target, false] call FUNC(dev_trackHitBox);
     #endif
-    
-    // Calculate volume and height of target
-    private _vol = 1.5;
-    private _height = 0;
+
+    // Estimate volume and height of target
+    private _height = 0.5;
     private _crossSectionArea = 1;
     private _isPerson = _target isKindOf "CAManBase";
     if (_isPerson) then {
@@ -86,24 +85,24 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
         switch (true) do {
             case (_stance isEqualTo "STAND"): {_height = 1.9; _crossSectionArea = 1.5;};
             case (_stance isEqualTo "CROUCH"): {_height = 1.2; _crossSectionArea = 1;};
-            default {_height = 0.5; _crossSectionArea = 0.75;};
+            default {_crossSectionArea = 0.75;};
         };
     } else {
         private  _boxParams = boundingBoxReal [_target, "FireGeometry"];
         _boxParams params ["_pointA", "_pointB"];
         private _dims = _pointB vectorDiff _pointA;
-        _vol = (_dims#0) * (_dims#1) * (_dims#2);
-        _crossSectionArea = (_dims#1)*(_dims#2);
+        if (_dims#0 * _dims#1 * _dims#2 <= 0.5) then {continue};
+        _crossSectionArea = _dims#1 * _dims#2;
         _height = _dims#2;
     };
-    
-    if (_vol <= 0.5) then {continue}; // too small => exit
+
+
 
 
     private _distance = _target distance _posASL;
-    
+
     // calculate chance to be hit by a fragment
-    private _fragChance = _crossSectionArea*_modFragCount/(_distance^2);
+    private _fragChance = _crossSectionArea * _modFragCount / _distance^2;
     private _count = if (_fragChance > 1) then {
         3 min (floor _fragChance);
     } else {
@@ -111,12 +110,11 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
     };
     if (_count == 0) then {TRACE_2("fragments",_fragChance,_count); continue};
 
-    // Approximate offset to hit including speed & gravity 
+    // Approximate offset to hit including speed & gravity
     private _locFragVel = _fragVel * (1 - random 0.5);
     private _tof = _distance / _locFragVel;
-    private _targetPos = (velocity _target vectorMultiply _tof) vectorAdd [0, 0, 9.81 / 2 * _tof ^ 2];
-    
-    // handle limiting fragments per dewgree arc
+
+    // handle limiting fragments per degree arc
     private _dir = floor (_posASL getDir _target);
     private _fragPerArc = _fragArcs getOrDefault [_dir, 0];
     if (_fragPerArc > 10) then {
@@ -125,13 +123,14 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
         _fragArcs set [_dir, _fragPerArc + _count];
     };
 
-    // actual target pos for fragment to hit
+    // target pos for fragment to hit
+    private _targetPos = (velocity _target vectorMultiply _tof) vectorAdd [0, 0, 9.81 / 2 * _tof ^ 2];
     if _isPerson then {
         private _hitPoint =  selectRandom ACE_FRAG_HITPOINTS;
         private _hitPointPos = _target selectionPosition [_hitPoint, "HitPoints", "AveragePoint"];
-        _targetPos = _target modelToWorldWorld _hitPointPos;
+        _targetPos = _target modelToWorldWorld _hitPointPos vectorAdd _targetPos;
     } else {
-        _targetPos = getPosASL _target vectorAdd [
+        _targetPos = _targetPos vectorAdd getPosASL _target vectorAdd [
             -0.5 + random 1,
             -0.5 + random 1,
             (0.1 + random 0.4) * _height
@@ -147,9 +146,8 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
             default {"_far"};
         });
     };
-    
     TRACE_4("fragments",_fragSpawner,_fragChance,_distance,_locFragVel);
-    
+
     // Create fragment
     private _vecDir = _posASL vectorFromTo _targetPos;
     private _fragObj = createVehicle [_fragSpawner, ASLtoATL _posASL, [], 0, "CAN_COLLIDE"];
@@ -169,8 +167,9 @@ private _fragCount = 0; // limit of # of fragments to _maxFrags
         break
     };
 } forEach _objects;
+
 #ifdef DEBUG_MODE_FULL
 systemChat ("fragCount cnt: " + str _fragCount);
-#endif
 TRACE_1("fragCount",_fragCount);
+#endif
 _fragCount

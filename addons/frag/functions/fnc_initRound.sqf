@@ -5,7 +5,7 @@
 
  * Arguments:
  * 0: _projectile <OBJECT> - The object created
- * 
+ *
  * Return Value:
  * None
  *
@@ -30,7 +30,7 @@ if (_shouldFrag && GVAR(enabled)) then {
     _projectile addEventHandler [
         "Explode",
         {
-            params ["_proj"];
+            params ["_proj", "_posASL"];
             private _shotParents = getShotParents _proj;
             private _ammo = typeOf _proj;
             // wait for frag damage to kill units before spawning fragments
@@ -38,13 +38,16 @@ if (_shouldFrag && GVAR(enabled)) then {
                 FUNC(doFrag),
                 _this + [_ammo, _shotParents]
             ] call CBA_fnc_execNextFrame;
+            if (GVAR(reflectionsEnabled)) then {
+                [_posASL, _ammo] call FUNC(doReflections);
+            };
         }
     ];
 };
 
 
 private _shouldSpall = _ammo call FUNC(shouldSpall);
-if (GVAR(spallEnabled) && {_shouldSpall}) then 
+if (GVAR(spallEnabled) && {_shouldSpall}) then
 {
     _projectile addEventHandler [
         "HitPart",

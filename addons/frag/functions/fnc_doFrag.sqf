@@ -10,7 +10,7 @@
  * 2: velocity of projectile <ARRAY>
  * 3: projectile cfgAmmo classname <STRING>
  * 4: getShotParents of projectile at EH <ARRAY>
- * 
+ *
  * Return Value:
  * None
  *
@@ -21,21 +21,23 @@
  */
 TRACE_1("",_this);
 params [
-    ["_proj", objNull, [objNull]], 
-    ["_posASL", [0,0,0], [[]], [3]], 
-    ["_vel", [0,0,0] , [[]], [3]],
+    ["_proj", objNull, [objNull]],
+    ["_posASL", [0, 0, 0], [[]], [3]],
+    ["_vel", [0, 0, 0] , [[]], [3]],
     ["_ammo", "", [""]],
     ["_shotParents", [objNull, objNull], [[]]]
 ];
 
+// Check for vehicle holdoff timeout
 private _shotParentVic = _shotParents#0;
 if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exitWith {
     TRACE_1("vehicleTimeExit",_shotParentVic);
 };
 _shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 
+// Check normal round timeout and adjust _max frags
 private _timeSince = CBA_missionTime - GVAR(lastFragTime);
-if (_ammo isEqualTo "" || {_posASL isEqualTo [0,0,0] || _timeSince < ACE_FRAG_HOLDOFF}) exitWith {
+if (_ammo isEqualTo "" || {_posASL isEqualTo [0, 0, 0] || _timeSince < ACE_FRAG_HOLDOFF}) exitWith {
     TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
 };
 private _maxFrags = round linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
@@ -44,14 +46,14 @@ TRACE_3("",_timeSince,CBA_missionTime,_maxFrags);
 
 private _ammoArr = [_ammo] call FUNC(getFragInfo);
 _ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
-
+// For low frag rounds limit the # of frags
 if (_modFragCount < 10) then {
     _maxFrags = _modFragCount*4;
     GVAR(lastFragTime) = CBA_missionTime - 0.1;
 } else {
     GVAR(lastFragTime) = CBA_missionTime;
 };
-
+// Offset for ground clearance
 private _heightAGL = (ASLToAGL _posASL)#2;
 if (_heightAGL < 0.25) then {
     _posASL = _posASL vectorAdd [0, 0, 0.25];
@@ -64,8 +66,4 @@ if (_fragRange > 3 && _timeSince > ACE_FRAG_HOLDOFF*1.5 && GVAR(fragSimComplexit
 
 if (_timeSince > 0.2 && {GVAR(fragSimComplexity) > 0}) then {
     [_posASL, _vel, _heightAGL, _fragTypes, _maxFrags, _shotParents] call FUNC(doFragRandom);
-};
-
-if (GVAR(reflectionsEnabled)) then {
-    [_posASL, _shellType] call FUNC(doReflections);
 };

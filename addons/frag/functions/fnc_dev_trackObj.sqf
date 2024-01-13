@@ -22,8 +22,8 @@ params [
     ["_isProj", false, [false]]
 ];
 TRACE_4("devDraw",_this,_obj,_color,_isProj);
-// track round on each frame
-// Create entry in position array from hashmap
+
+// pick color and add it to the array
 private _colorArray = switch (toLower _color) do {
     case "purple": {[0.8, 0, 0.8, 1]};
     case "blue":   {[0, 0, 0.8, 1]};
@@ -47,7 +47,7 @@ GVAR(dev_trackLines) set [getObjectID _obj, [1, [getposATL _obj], _colorArray]];
             [_h] call CBA_fnc_removePerFrameHandler;
         };
         private _arr = GVAR(dev_trackLines) getOrDefault [(getObjectID _obj), -1];
-        
+
         if (typeName _arr isEqualTo "SCALAR") exitWith {
             [_h] call CBA_fnc_removePerFrameHandler;
         };
@@ -61,10 +61,9 @@ GVAR(dev_trackLines) set [getObjectID _obj, [1, [getposATL _obj], _colorArray]];
     [_obj]
 ] call CBA_fnc_addPerFrameHandler;
 
+// Projectile eventhandlers that add spheres and points for more accurate round tracking
 if (!_isProj) exitWith {};
 
-
-// Add hitpart eventHandler 
 _obj addEventHandler [
     "HitPart",
     {
@@ -78,7 +77,6 @@ _obj addEventHandler [
     }
 ];
 
-// Add explode eventHandler
 _obj addEventHandler [
     "Explode",
     {
@@ -92,7 +90,6 @@ _obj addEventHandler [
     }
 ];
 
-// Add deflected eventHandler
 _obj addEventHandler [
     "Deflected",
     {

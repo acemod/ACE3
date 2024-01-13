@@ -8,7 +8,7 @@
  * Arguments:
  * 0: _dispAll <BOOL> - Display rounds that will never frag (power < 5).
  *           Default value false
- * 1: _minFrgPowRng <FLOAT> - minimum range for sqrt power calculation 
+ * 1: _minFrgPowRng <FLOAT> - minimum range for sqrt power calculation
  *
  * Return Value:
  * None
@@ -34,13 +34,13 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
 // Processing ammo types
 {
     private _ammo = toLower configName _x;
-    
+
     if (_ammo == "" || {_ammo in _processedCfgAmmos} ) then {continue};
 
 
     // calculating hit range
     _shouldFrag = [_ammo] call FUNC(shouldFrag);
-    
+
     // Gunery equation
     private _c = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CHARGE));
     if (_c == 0) then {_c = 1;};
@@ -52,7 +52,7 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
     if (_gC == 0) then {_gC = 2440;};
     private _fragCount = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(fragCount));
     if (_fragCount == 0) then {_fragCount = 200;};
-    
+
     private _velocity = 0.8 * _gC * sqrt (_c /(_m + _c * _k));
     // number of shrapnel to send a direction
     private _count = ceil (random (sqrt (_m / 1000)));
@@ -68,7 +68,7 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
         diag_log text format ["    Number frags:       %1", _count];
         INC(_nPrinted);
     };
-    
+
     _processedCfgAmmos pushBack _ammo;
 } forEach _allAmmoConfigs;
 
