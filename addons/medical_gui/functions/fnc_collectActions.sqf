@@ -36,7 +36,7 @@ if ("ace_dragging" call EFUNC(common,isModLoaded)) then {
         {ACE_player != GVAR(target) && {[ACE_player, GVAR(target)] call EFUNC(dragging,canDrag)}},
         {
             GVAR(pendingReopen) = false;
-            [QEGVAR(common,claimSafe), [ACE_player, GVAR(target), true, QEGVAR(dragging,startDrag)]] call CBA_fnc_serverEvent;
+            [ACE_player, GVAR(target)] call EFUNC(dragging,startDrag);
         }
     ];
 
@@ -45,7 +45,7 @@ if ("ace_dragging" call EFUNC(common,isModLoaded)) then {
         {ACE_player != GVAR(target) && {[ACE_player, GVAR(target)] call EFUNC(dragging,canCarry)}},
         {
             GVAR(pendingReopen) = false;
-            [QEGVAR(common,claimSafe), [ACE_player, GVAR(target), true, QEGVAR(dragging,startCarry)]] call CBA_fnc_serverEvent;
+            [ACE_player, GVAR(target)] call EFUNC(dragging,startCarry);
         }
     ];
 };
