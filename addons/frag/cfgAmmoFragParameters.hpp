@@ -112,8 +112,7 @@ class ammo_Bomb_SDB: ammo_Bomb_SmallDiameterBase {
 
 class BombCore;
 class Bo_Mk82: BombCore {
-    ACE_FRAG_ADD_EH;
-
+    ACE_FRAG_ADD_EH_BASE;
     GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
     GVAR(fragCount) = 17500;
     GVAR(metal) = 140000;
@@ -153,11 +152,10 @@ class Mo_cluster_Bomb_03_F: Mo_cluster_Bomb_01_F { // idk, @lambda.tiger on the 
 // ~~~~ Grenades:
 class Grenade;
 class ACE_FlashlightProxy_White: Grenade {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 class GrenadeHand: Grenade {
-    ACE_FRAG_ADD_EH;
+    ACE_FRAG_ADD_EH_BASE;
     GVAR(skip) = 0;
     GVAR(force) = 1;
     /*
@@ -201,7 +199,9 @@ class G_40mm_HEDP: G_40mm_HE {
 };
 
 class ACE_G_40mm_HEDP: G_40mm_HEDP {};
-class ACE_G_40mm_HE: G_40mm_HE {};
+class ACE_G_40mm_HE: G_40mm_HE {
+    class EventHandlers;
+};
 class ACE_G_40mm_Practice: ACE_G_40mm_HE {
     ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
@@ -216,6 +216,7 @@ class ATMine_Range_Ammo: MineBase {
 };
 
 class APERSMine_Range_Ammo: MineBase { // VS-50
+    class EventHandlers: EventHandlers;
     GVAR(skip) = 0;
     GVAR(force) = 0;
     GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
@@ -495,9 +496,11 @@ class ACE_Hellfire_AGM114K: M_Scalpel_AT {
 };
 
 class ammo_Missile_CruiseBase: MissileBase {
+    class EventHandlers: EventHandlers;
     GVAR(skip) = 1;
 };
 class ammo_missile_cruise_01: ammo_Missile_CruiseBase {
+    class EventHandlers: EventHandlers;
     GVAR(skip) = 0;
     GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(large)};
     GVAR(fragCount) = 20000;
