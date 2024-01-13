@@ -23,8 +23,7 @@
     if (isNull _cursorObject || {(_cursorObject distance _player) > 2.6}) exitWith {false};
     if !([_player, _cursorObject] call FUNC(canDrag)) exitWith {false};
 
-    // Try to claim the object
-    [QEGVAR(common,claimSafe), [_unit, _cursorObject, true, QGVAR(startDrag)]] call CBA_fnc_serverEvent;
+    [_player, _cursorObject] call FUNC(startDrag);
 
     false
 }, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
@@ -53,8 +52,7 @@
     if (isNull _cursorObject || {(_cursorObject distance _player) > 2.6}) exitWith {false};
     if !([_player, _cursorObject] call FUNC(canCarry)) exitWith {false};
 
-    // Try to claim the object
-    [QEGVAR(common,claimSafe), [_unit, _cursorObject, true, QGVAR(startCarry)]] call CBA_fnc_serverEvent;
+    [_player, _cursorObject] call FUNC(startCarry);
 
     false
 }, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND

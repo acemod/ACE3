@@ -61,7 +61,7 @@ private _dragAction = [
     LLSTRING(Drag),
     _icon,
     {
-        [QEGVAR(common,claimSafe), [_player, _target, true, QGVAR(startDrag)]] call CBA_fnc_serverEvent;
+        [_player, _target] call FUNC(startDrag)
     }, {
         [_player, _target] call FUNC(canDrag)
 }] call EFUNC(interact_menu,createAction);

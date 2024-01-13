@@ -61,7 +61,7 @@ private _carryAction = [
     LLSTRING(Carry),
     _icon,
     {
-        [QEGVAR(common,claimSafe), [_player, _target, true, QGVAR(startCarry)]] call CBA_fnc_serverEvent;
+        [_player, _target] call FUNC(startCarry)
     }, {
         [_player, _target] call FUNC(canCarry)
 }] call EFUNC(interact_menu,createAction);

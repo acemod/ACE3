@@ -67,8 +67,8 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(startCarry), LINKFUNC(startCarry)] call CBA_fnc_addEventHandler;
-[QGVAR(startDrag), LINKFUNC(startDrag)] call CBA_fnc_addEventHandler;
+[QGVAR(startCarry), LINKFUNC(startCarryLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(startDrag), LINKFUNC(startDragLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(carryingContainerClosed), {
     params ["_container", "_owner"];
