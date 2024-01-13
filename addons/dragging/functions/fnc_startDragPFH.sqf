@@ -32,12 +32,6 @@ if !(_unit getVariable [QGVAR(isDragging), false]) exitWith {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-private _targetOwner = _target getVariable [QEGVAR(common,owner), objNull];
-if (!(_targetOwner) in [objNull, _unit]) exitWith {
-    TRACE_5("different owner",_unit,_target,_owner,_timeOut,CBA_missionTime);
-    _idPFH call CBA_fnc_removePerFrameHandler;
-};
-
 // Same as dragObjectPFH, checks if object is deleted, dead or target moved away from carrier (e.g. weapon disassembled)
 if (!alive _target || {_unit distance _target > 10}) then {
     TRACE_4("dead/distance",_unit,_target,_timeOut,CBA_missionTime);

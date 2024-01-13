@@ -32,20 +32,20 @@ GVAR(actions) = [];
 
 if ("ace_dragging" call EFUNC(common,isModLoaded)) then {
     GVAR(actions) pushBack [
-        localize ELSTRING(dragging,Drag), "drag",
+        LELSTRING(dragging,Drag), "drag",
         {ACE_player != GVAR(target) && {[ACE_player, GVAR(target)] call EFUNC(dragging,canDrag)}},
         {
             GVAR(pendingReopen) = false;
-            [ACE_player, GVAR(target)] call EFUNC(dragging,startDrag);
+            [QEGVAR(common,claimSafe), [ACE_player, GVAR(target), true, QEGVAR(dragging,startDrag)]] call CBA_fnc_serverEvent;
         }
     ];
 
     GVAR(actions) pushBack [
-        localize ELSTRING(dragging,Carry), "drag",
+        LELSTRING(dragging,Carry), "drag",
         {ACE_player != GVAR(target) && {[ACE_player, GVAR(target)] call EFUNC(dragging,canCarry)}},
         {
             GVAR(pendingReopen) = false;
-            [ACE_player, GVAR(target)] call EFUNC(dragging,startCarry);
+            [QEGVAR(common,claimSafe), [ACE_player, GVAR(target), true, QEGVAR(dragging,startCarry)]] call CBA_fnc_serverEvent;
         }
     ];
 };

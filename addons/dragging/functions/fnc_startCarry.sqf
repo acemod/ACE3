@@ -6,18 +6,21 @@
  * Arguments:
  * 0: Unit that should do the carrying <OBJECT>
  * 1: Object to carry <OBJECT>
+ * 2: If object was successfully claimed <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, cursorTarget] call ace_dragging_fnc_startCarry;
+ * [player, cursorTarget, true] call ace_dragging_fnc_startCarry;
  *
  * Public: No
  */
 
-params ["_unit", "_target"];
-TRACE_2("params",_unit,_target);
+params ["_unit", "_target", "_claimed"];
+TRACE_3("params",_unit,_target,_claimed);
+
+if (!_claimed) exitWith {};
 
 // Exempt from weight check if object has override variable set
 private _weight = 0;
@@ -71,9 +74,6 @@ if (_target isKindOf "CAManBase") then {
 };
 
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-
-// Prevent multiple players from accessing the same object
-[_unit, _target, true] call EFUNC(common,claim);
 
 // Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];

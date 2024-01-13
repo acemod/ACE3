@@ -33,11 +33,11 @@ if (!GVAR(carryAfterUnload) || {getNumber (configOf _object >> QGVAR(blockUnload
     TRACE_2("unloadCarryItem-unloaded",_unloader,_object);
 
     if ([_unloader, _object] call EFUNC(dragging,canCarry)) exitWith {
-        [_unloader, _object] call EFUNC(dragging,startCarry);
+        [QEGVAR(common,claimSafe), [_unloader, _object, true, QEGVAR(dragging,startCarry)]] call CBA_fnc_serverEvent;
     };
 
     if ([_unloader, _object] call EFUNC(dragging,canDrag)) exitWith {
-        [_unloader, _object] call EFUNC(dragging,startDrag);
+        [QEGVAR(common,claimSafe), [_unloader, _object, true, QEGVAR(dragging,startDrag)]] call CBA_fnc_serverEvent;
     };
 }, _this, 1, { // Delay is based on how long it will take server event to trigger and take effect
     // Not a hard error if this fails, could have just unloaded to other side of vehicle because of findSafePos

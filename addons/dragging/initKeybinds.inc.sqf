@@ -5,7 +5,7 @@
     if (!alive _player) exitWith {false};
     if !([_player, objNull, ["isNotDragging", "isNotCarrying", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
-    // If we are drag/carrying something right now then just drop it:
+    // If we are dragging/carrying something right now then just drop it
     if (_player getVariable [QGVAR(isDragging), false]) exitWith {
         [_player, _player getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
 
@@ -23,7 +23,8 @@
     if (isNull _cursorObject || {(_cursorObject distance _player) > 2.6}) exitWith {false};
     if !([_player, _cursorObject] call FUNC(canDrag)) exitWith {false};
 
-    [_player, _cursorObject] call FUNC(startDrag);
+    // Try to claim the object
+    [QEGVAR(common,claimSafe), [_unit, _cursorObject, true, QGVAR(startDrag)]] call CBA_fnc_serverEvent;
 
     false
 }, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
@@ -34,7 +35,7 @@
     if (!alive _player) exitWith {false};
     if !([_player, objNull, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
-    // If we are drag/carrying something right now then just drop it:
+    // If we are dragging/carrying something right now then just drop it
     if (_player getVariable [QGVAR(isDragging), false]) exitWith {
         [_player, _player getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
 
@@ -52,7 +53,8 @@
     if (isNull _cursorObject || {(_cursorObject distance _player) > 2.6}) exitWith {false};
     if !([_player, _cursorObject] call FUNC(canCarry)) exitWith {false};
 
-    [_player, _cursorObject] call FUNC(startCarry);
+    // Try to claim the object
+    [QEGVAR(common,claimSafe), [_unit, _cursorObject, true, QGVAR(startCarry)]] call CBA_fnc_serverEvent;
 
     false
 }, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
