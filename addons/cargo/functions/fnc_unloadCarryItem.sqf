@@ -32,8 +32,7 @@ if (!GVAR(carryAfterUnload) || {getNumber (configOf _object >> QGVAR(blockUnload
 
     TRACE_2("unloadCarryItem-unloaded",_unloader,_object);
 
-    if ([_unloader, _object] call EFUNC(dragging,canCarry)) exitWith
-    {
+    if ([_unloader, _object] call EFUNC(dragging,canCarry)) exitWith {
         [_unloader, _object] call EFUNC(dragging,startCarry);
     };
 
