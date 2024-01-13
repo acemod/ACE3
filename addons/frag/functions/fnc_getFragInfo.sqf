@@ -64,7 +64,7 @@ if (_k == 0) then {_k = 0.8; _warn = true;};
 private _gC = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(GURNEY_C));
 if (_gC == 0) then {_gC = 2440; _warn = true;};
 private _fragCount = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(fragCount));
-if (_fragCount == 0) then {_fragCount = 200; _warn = true;};
+if (_fragCount == 0) then {_fragCount = 400; _warn = true;};
 
 if (_warn) then {
     INFO_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_ammo);
@@ -79,7 +79,7 @@ if (_warn) then {
  *                 of spherical fragmentation
  */
 _ammoInfo = [
-    sqrt (_fragCount / (4 * pi * 0.01)),
+    sqrt (_fragCount / (4 * pi * 0.005)),
     0.8 * _gC * sqrt (_c / (_m + _c * _k)),
     _fragTypes,
     _fragCount / 4 / pi

@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
- * Adds a round to the blacklist (will be ignored).
+ * Adds a round type to the blacklist (will be ignored).
  *
  * Arguments:
- * 0: Projectile <OBJECT>
+ * 0: Projectile <OBJECT> or classname <STRING>
  *
  * Return Value:
  * None
@@ -18,4 +18,12 @@
 params ["_proj"];
 TRACE_1("addBlackList",_round);
 
-GVAR(shouldFragCache) set [typeOf _ammo, false];
+switch (typeName _proj) do {
+    case "OBJECT": {
+        GVAR(shouldFragCache) set [typeOf _proj, false];
+    };
+    case "STRING": {
+        GVAR(shouldFragCache) set [_proj, false];
+    };
+    default { };
+};
