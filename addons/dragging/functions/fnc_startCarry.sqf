@@ -18,4 +18,4 @@
 params ["_unit", "_target"];
 
 // Try to claim the object
-[QEGVAR(common,claimSafe), [_unit, _targer, true, QGVAR(startCarry)]] call CBA_fnc_serverEvent;
+[QEGVAR(common,claimSafe), [_unit, _target, true, QGVAR(startCarry)]] call CBA_fnc_serverEvent;
