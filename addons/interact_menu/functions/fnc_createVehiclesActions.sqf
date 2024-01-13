@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Creates child actions for vehicle list.
@@ -21,13 +21,15 @@
 params ["_vehicles", "_statement", "_target"];
 
 _vehicles apply {
-    private _type = typeOf _x;
-    private _name = getText (configFile >> "CfgVehicles" >> _type >> "displayName");
+    private _name = getText ((configOf _x) >> "displayName");
     private _ownerName = [_x, true] call EFUNC(common,getName);
+    private _distanceStr = (ACE_player distance _x) toFixed 1;
     if ("" != _ownerName) then {
-        _name = format ["%1 (%2)", _name, _ownerName];
+        _name = format ["%1 (%2, %3m)", _name, _ownerName, _distanceStr];
+    } else {
+        _name = format ["%1 (%2m)", _name, _distanceStr];
     };
-    private _icon = [_type] call EFUNC(common,getVehicleIcon);
+    private _icon = [_x] call EFUNC(common,getVehicleIcon);
     private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
     [_action, [], _target]
 }

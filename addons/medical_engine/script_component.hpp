@@ -32,6 +32,7 @@
 #define PRIORITY_RIGHT_ARM  (1 + random 1)
 #define PRIORITY_LEFT_LEG   (1 + random 1)
 #define PRIORITY_RIGHT_LEG  (1 + random 1)
+#define PRIORITY_STRUCTURAL 1
 
 // don't change, these reflect hard coded engine behaviour
 #define DAMAGED_MIN_THRESHOLD 0.45

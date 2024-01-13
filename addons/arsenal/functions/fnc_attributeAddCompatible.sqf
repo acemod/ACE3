@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, johnb43
  * Adds compatible attachments or magazines for all weapons in 3DEN attribute.
  *
  * Arguments:
@@ -21,55 +21,63 @@ params ["_controlsGroup"];
 private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY);
 
 // Exit if selected category is not attachments or magazines
-if !(_category in [4, 5, 6, 7, 8]) exitWith {};
+if !(_category in [IDX_CAT_OPTICS_ATTACHMENTS, IDX_CAT_FLASHLIGHT_ATTACHMENTS, IDX_CAT_MUZZLE_ATTACHMENTS, IDX_CAT_BIPOD_ATTACHMENTS, IDX_CAT_ITEMS_ALL]) exitWith {};
 
-private _configItems = +(uiNamespace getVariable [QGVAR(configItems), []]);
+private _configItems = uiNamespace getVariable QGVAR(configItems);
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
 _attributeValue params ["_attributeItems"];
 
 // Get list of all weapons in attribute items
-(_configItems select 0) params ["_primaryWeapons", "_secondaryWeapons", "_handgunWeapons"];
-private _attributeWeapons = _attributeItems select {_x in _primaryWeapons || {_x in _secondaryWeapons} || {_x in _handgunWeapons}};
+private _attributeWeapons = [];
+
+{
+    _attributeWeapons append (_attributeItems arrayIntersect (keys _y));
+} forEach (_configItems get IDX_VIRT_WEAPONS);
+
+private _itemsToAdd = createHashMap;
 
 // Add compatible attachments or magazines to attribute
-private _cfgWeapons = configFile >> "CfgWeapons";
-private _itemsToAdd = [];
+if (_category == IDX_CAT_ITEMS_ALL) then {
+    // Add compatible attachments or magazines to attribute
+    private _compatibleMagazines = createHashMap;
 
-if (_category == 8) then {
-    private _magazineGroups = uiNamespace getVariable QGVAR(magazineGroups);
-    private _cfgMagazines = configFile >> "CfgMagazines";
-
+    // Get all compatible magazines for weapons
     {
-        private _weaponConfig = _cfgWeapons >> _x;
-
-        {
-            private _muzzleConfig = if (_x == "this") then {_weaponConfig} else {_weaponConfig >> _x};
-
-            // Only add existent magazines and ensure correct classname case
-            private _magazines = getArray (_muzzleConfig >> "magazines") select {isClass (_cfgMagazines >> _x)};
-            _magazines = _magazines apply {configName (_cfgMagazines >> _x)};
-            _itemsToAdd append _magazines;
-
-            {
-                _itemsToAdd append (_magazineGroups get (toLower _x));
-            } forEach getArray (_muzzleConfig >> "magazineWell");
-        } forEach getArray (_weaponConfig >> "muzzles");
+        _compatibleMagazines insert [true, compatibleMagazines _x, []];
     } forEach _attributeWeapons;
+
+    // Check if magazines are in configItems
+    {
+        if (_x in (_configItems get IDX_VIRT_ITEMS_ALL)) then {
+            _itemsToAdd set [_x, nil];
+        };
+    } forEach (keys _compatibleMagazines);
 } else {
     private _attachmentCategory = _category - 4;
     private _filter = ["optic", "pointer", "muzzle", "bipod"] select _attachmentCategory;
+    private _compatibleItems = createHashMap;
 
+    // CBA_fnc_compatibleItems returns config case sensitive names
     {
-        _itemsToAdd append ([_x, _filter] call CBA_fnc_compatibleItems);
+        _compatibleItems insert [true, [_x, _filter] call CBA_fnc_compatibleItems, []];
     } forEach _attributeWeapons;
 
-    // Only add items with scope of 2 and ensure correct classname case
-    _itemsToAdd = _itemsToAdd select {getNumber (_cfgWeapons >> _x >> "scope") == 2};
-    _itemsToAdd = _itemsToAdd apply {configName (_cfgWeapons >> _x)};
+    // Check if attachments are in configItems
+    {
+        if (
+            _x in (_configItems get IDX_VIRT_ATTACHMENTS get IDX_VIRT_OPTICS_ATTACHMENTS) ||
+            {_x in (_configItems get IDX_VIRT_ATTACHMENTS get IDX_VIRT_FLASHLIGHT_ATTACHMENTS)} ||
+            {_x in (_configItems get IDX_VIRT_ATTACHMENTS get IDX_VIRT_MUZZLE_ATTACHMENTS)} ||
+            {_x in (_configItems get IDX_VIRT_ATTACHMENTS get IDX_VIRT_BIPOD_ATTACHMENTS)}
+        ) then {
+            _itemsToAdd set [_x, nil];
+        };
+    } forEach (keys _compatibleItems);
 };
 
-_attributeItems append _itemsToAdd;
-_attributeValue set [0, _attributeItems arrayIntersect _attributeItems];
+// Only take items that can be found by default in the arsenal
+_attributeItems insert [-1, keys _itemsToAdd, true];
+_attributeValue set [0, _attributeItems];
 
 // Refresh the list for new items
 [_controlsGroup] call FUNC(attributeAddItems);

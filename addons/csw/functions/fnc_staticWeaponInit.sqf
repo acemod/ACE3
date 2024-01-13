@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: tcvm
  * Initializes weapon to disable weapon disassembling
  *
  * Arguments:
@@ -16,14 +16,17 @@
  */
 
 params ["_staticWeapon"];
+if (isNull _staticWeapon) exitWith { WARNING_1("%1 became null",_staticWeapon) };
 private _typeOf = typeOf _staticWeapon;
-private _configEnabled = (getNumber (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "enabled")) == 1;
-private _assemblyConfig = _configEnabled && {(getText (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "disassembleWeapon")) != ""};
+private _configOf = configOf _staticWeapon;
+private _configEnabled = (getNumber (_configOf >> "ace_csw" >> "enabled")) == 1;
+private _assemblyConfig = _configEnabled && {(getText (_configOf >> "ace_csw" >> "disassembleWeapon")) != ""};
 TRACE_4("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig);
 
 if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
     TRACE_1("adding AI fired handler",_staticWeapon);
     _staticWeapon addEventHandler ["Fired", LINKFUNC(ai_handleFired)];
+    _staticWeapon addEventHandler ["GetIn", LINKFUNC(ai_handleGetIn)]; // handle AI getting inside weapon with no ammo
 };
 
 TRACE_2("",local _staticWeapon,_staticWeapon turretLocal [0]);
@@ -47,8 +50,8 @@ if (_assemblyConfig) then {
         if (!alive _staticWeapon) exitWith { TRACE_1("dead/deleted",_staticWeapon); };
         private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 3]);
         TRACE_2("assemblyConfig present",_staticWeapon,_assemblyMode);
-        if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode eanbled
-            [QGVAR(disableVanillaAssembly), [_staticWeapon]] call CBA_fnc_localEvent;
+        if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode enabled
+            [_staticWeapon, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         };
     }, [_staticWeapon]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
 };
@@ -65,7 +68,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
 
 
     private _ammoActionPath = [];
-    private _magazineLocation = getText (configFile >> "CfgVehicles" >> _typeOf >> QUOTE(ADDON) >> "magazineLocation");
+    private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");
     private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
         if ((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
@@ -86,7 +89,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 
-    if (["ACE_reload"] call EFUNC(common,isModLoaded)) then {
+    if (["ace_reload"] call EFUNC(common,isModLoaded)) then {
         // move reload's check ammo action to the ammo handling point (remove and re-add)
         [_typeOf, 0, ["ACE_MainActions", QEGVAR(reload,CheckAmmo)]] call EFUNC(interact_menu,removeActionFromClass);
         private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);

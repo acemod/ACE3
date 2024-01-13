@@ -11,6 +11,22 @@
 [QGVAR(smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOffBox), FUNC(cookOffBox)] call CBA_fnc_addEventHandler;
 
+// handle cleaning up effects when vehicle is deleted mid-cookoff
+[QGVAR(addCleanupHandlers), {
+    params ["_vehicle"];
+    
+    // Don't add a new EH if cookoff is run multiple times
+    if ((_vehicle getVariable [QGVAR(deletedEH), -1]) == -1) then {
+        private _deletedEH = _vehicle addEventHandler ["Deleted", {
+            params ["_vehicle"];
+            
+            [QGVAR(cleanupEffects), [_vehicle]] call CBA_fnc_localEvent;
+        }];
+    
+        _vehicle setVariable [QGVAR(deletedEH), _deletedEH];
+    };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(cleanupEffects), {
     params ["_vehicle", ["_effects", []]];
 
@@ -37,6 +53,8 @@
     ) then {
         if (GVAR(ammoCookoffDuration) == 0) exitWith {};
         ([_vehicle] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
-        [_vehicle, _mags, _total] call FUNC(detonateAmmunition);
+
+        private _delay = (random MAX_AMMO_DETONATION_START_DELAY) max MIN_AMMO_DETONATION_START_DELAY;
+        [FUNC(detonateAmmunition), [_vehicle, _mags, _total], _delay] call CBA_fnc_waitAndExecute;
     };
 }, nil, ["Man","StaticWeapon"]] call CBA_fnc_addClassEventHandler;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas, vabene1111
  * Sits down the player.
@@ -37,7 +37,7 @@ private _actionID = _player addAction [
 ];
 
 // Read config
-private _configFile = configFile >> "CfgVehicles" >> typeOf _seat;
+private _configFile = configOf _seat;
 private _sitDirection = (getDir _seat) + (_seat getVariable [QXGVAR(sitDirection), getNumber (_configFile >> QXGVAR(sitDirection))]);
 private _sitPositionAll = _seat getVariable [QXGVAR(sitPosition), getArray (_configFile >> QXGVAR(sitPosition))];
 private _multiSitting = (_sitPositionAll select 0) isEqualType [];

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi, mharis001
  * Starts the treatment process.
@@ -54,88 +54,98 @@ private _userAndItem = if (GET_NUMBER_ENTRY(_config >> "consumeItem") == 1) then
 
 _userAndItem params ["_itemUser", "_usedItem"];
 
-// Get treatment animation for the medic
-private _medicAnim = if (_medic isEqualTo _patient) then {
-    getText (_config >> ["animationMedicSelf", "animationMedicSelfProne"] select (stance _medic == "PRONE"));
-} else {
-    getText (_config >> ["animationMedic", "animationMedicProne"] select (stance _medic == "PRONE"));
-};
+private _isInZeus = !isNull findDisplay 312;
 
-_medic setVariable [QGVAR(selectedWeaponOnTreatment), weaponState _medic];
+if (_medic isNotEqualTo player || {!_isInZeus}) then {
+    // Get treatment animation for the medic
+    private _medicAnim = if (_medic isEqualTo _patient) then {
+        getText (_config >> ["animationMedicSelf", "animationMedicSelfProne"] select (stance _medic == "PRONE"));
+    } else {
+        getText (_config >> ["animationMedic", "animationMedicProne"] select (stance _medic == "PRONE"));
+    };
 
-// Adjust animation based on the current weapon of the medic
-private _wpn = ["non", "rfl", "lnr", "pst"] param [["", primaryWeapon _medic, secondaryWeapon _medic, handgunWeapon _medic] find currentWeapon _medic, "non"];
-_medicAnim = [_medicAnim, "[wpn]", _wpn] call CBA_fnc_replace;
+    _medic setVariable [QGVAR(selectedWeaponOnTreatment), weaponState _medic];
 
-// This animation is missing, use alternative
-if (_medicAnim == "AinvPknlMstpSlayWlnrDnon_medic") then {
-    _medicAnim = "AinvPknlMstpSlayWlnrDnon_medicOther";
-};
+    // Adjust animation based on the current weapon of the medic
+    private _wpn = ["non", "rfl", "lnr", "pst"] param [["", primaryWeapon _medic, secondaryWeapon _medic, handgunWeapon _medic] find currentWeapon _medic, "non"];
+    _medicAnim = [_medicAnim, "[wpn]", _wpn] call CBA_fnc_replace;
 
-// Determine the animation length
-private _animDuration = GVAR(animDurations) getVariable _medicAnim;
-if (isNil "_animDuration") then {
-    WARNING_2("animation [%1] for [%2] has no duration defined",_medicAnim,_classname);
-    _animDuration = 10;
-};
+    // This animation is missing, use alternative
+    if (_medicAnim == "AinvPknlMstpSlayWlnrDnon_medic") then {
+        _medicAnim = "AinvPknlMstpSlayWlnrDnon_medicOther";
+    };
 
-// These animations have transitions that take a bit longer...
-if (weaponLowered _medic) then {
-    _animDuration = _animDuration + 0.5;
+    // Determine the animation length
+    private _animDuration = GVAR(animDurations) getVariable _medicAnim;
+    if (isNil "_animDuration") then {
+        WARNING_2("animation [%1] for [%2] has no duration defined",_medicAnim,_classname);
+        _animDuration = 10;
+    };
 
-    // Fix problems with lowered weapon transitions by raising the weapon first
-    if (currentWeapon _medic != "" && {_medicAnim != ""}) then {
-        _medic action ["WeaponInHand", _medic];
+    // These animations have transitions that take a bit longer...
+    if (weaponLowered _medic) then {
+        _animDuration = _animDuration + 0.5;
+
+        // Fix problems with lowered weapon transitions by raising the weapon first
+        if (currentWeapon _medic != "" && {_medicAnim != ""}) then {
+            _medic action ["WeaponInHand", _medic];
+        };
+    };
+
+    if (binocular _medic != "" && {binocular _medic == currentWeapon _medic}) then {
+        _animDuration = _animDuration + 1;
+    };
+
+    // Play treatment animation for medic and determine the ending animation
+    if (vehicle _medic == _medic && {_medicAnim != ""}) then {
+        // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
+        private _animRatio = _animDuration / _treatmentTime;
+        TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);
+
+        // Don't slow down animation too much to prevent it looking funny.
+        if (_animRatio < ANIMATION_SPEED_MIN_COEFFICIENT) then {
+            _animRatio = ANIMATION_SPEED_MIN_COEFFICIENT;
+        };
+
+        // Skip animation enitrely if progress bar too quick.
+        if (_animRatio > ANIMATION_SPEED_MAX_COEFFICIENT) exitWith {};
+
+        [QEGVAR(common,setAnimSpeedCoef), [_medic, _animRatio]] call CBA_fnc_globalEvent;
+
+        // Play animation
+        private _endInAnim = "AmovP[pos]MstpS[stn]W[wpn]Dnon";
+
+        private _pos = ["knl", "pne"] select (stance _medic == "PRONE");
+        private _stn = "non";
+
+        if (_wpn != "non") then {
+            _stn = ["ras", "low"] select (weaponLowered _medic);
+        };
+
+        _endInAnim = [_endInAnim, "[pos]", _pos] call CBA_fnc_replace;
+        _endInAnim = [_endInAnim, "[stn]", _stn] call CBA_fnc_replace;
+        _endInAnim = [_endInAnim, "[wpn]", _wpn] call CBA_fnc_replace;
+
+        [_medic, _medicAnim] call EFUNC(common,doAnimation);
+        [_medic, _endInAnim] call EFUNC(common,doAnimation);
+        _medic setVariable [QGVAR(endInAnim), _endInAnim];
+
+        if (!isNil QEGVAR(advanced_fatigue,setAnimExclusions)) then {
+            EGVAR(advanced_fatigue,setAnimExclusions) pushBack QUOTE(ADDON);
+        };
+    };
+
+    // Play a random treatment sound globally if defined
+    private _soundsConfig = _config >> "sounds";
+
+    if (isArray _soundsConfig) then {
+        (selectRandom (getArray _soundsConfig)) params ["_file", ["_volume", 1], ["_pitch", 1], ["_distance", 10]];
+        playSound3D [_file, objNull, false, getPosASL _medic, _volume, _pitch, _distance];
     };
 };
 
-if (binocular _medic != "" && {binocular _medic == currentWeapon _medic}) then {
-    _animDuration = _animDuration + 1;
-};
-
-// Play treatment animation for medic and determine the ending animation
-if (vehicle _medic == _medic && {_medicAnim != ""}) then {
-    // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
-    private _animRatio = _animDuration / _treatmentTime;
-    TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);
-
-    // Don't slow down animation too much to prevent it looking funny.
-    if (_animRatio < ANIMATION_SPEED_MIN_COEFFICIENT) then {
-        _animRatio = ANIMATION_SPEED_MIN_COEFFICIENT;
-    };
-
-    // Skip animation enitrely if progress bar too quick.
-    if (_animRatio > ANIMATION_SPEED_MAX_COEFFICIENT) exitWith {};
-
-    [QEGVAR(common,setAnimSpeedCoef), [_medic, _animRatio]] call CBA_fnc_globalEvent;
-
-    // Play animation
-    private _endInAnim = "AmovP[pos]MstpS[stn]W[wpn]Dnon";
-
-    private _pos = ["knl", "pne"] select (stance _medic == "PRONE");
-    private _stn = "non";
-
-    if (_wpn != "non") then {
-        _stn = ["ras", "low"] select (weaponLowered _medic);
-    };
-
-    _endInAnim = [_endInAnim, "[pos]", _pos] call CBA_fnc_replace;
-    _endInAnim = [_endInAnim, "[stn]", _stn] call CBA_fnc_replace;
-    _endInAnim = [_endInAnim, "[wpn]", _wpn] call CBA_fnc_replace;
-
-    [_medic, _medicAnim] call EFUNC(common,doAnimation);
-    [_medic, _endInAnim] call EFUNC(common,doAnimation);
-    _medic setVariable [QGVAR(endInAnim), _endInAnim];
-
-    if (!isNil QEGVAR(advanced_fatigue,setAnimExclusions)) then {
-        EGVAR(advanced_fatigue,setAnimExclusions) pushBack QUOTE(ADDON);
-    };
-};
-
-// Play a random treatment sound globally if defined
-if (isArray (_config >> "sounds")) then {
-    selectRandom getArray (_config >> "sounds") params ["_file", ["_volume", 1], ["_pitch", 1], ["_distance", 10]];
-    playSound3D [_file, objNull, false, getPosASL _medic, _volume, _pitch, _distance];
+if (_isInZeus) then {
+    _treatmentTime = _treatmentTime * GVAR(treatmentTimeCoeffZeus);
 };
 
 GET_FUNCTION(_callbackStart,_config >> "callbackStart");
@@ -156,7 +166,7 @@ if (_callbackProgress isEqualTo {}) then {
     FUNC(treatmentFailure),
     getText (_config >> "displayNameProgress"),
     _callbackProgress,
-    ["isNotInside"]
+    ["isNotInside", "isNotSwimming", "isNotInZeus"]
 ] call EFUNC(common,progressBar);
 
 true

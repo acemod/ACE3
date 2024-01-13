@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Updates the vitals. Called from the statemachine's onState functions.
@@ -164,5 +164,8 @@ if (!isPlayer _unit) then {
 #endif
 
 END_COUNTER(Vitals);
+
+//placed outside the counter as 3rd-party code may be called from this event
+[QEGVAR(medical,handleUnitVitals), [_unit, _deltaT]] call CBA_fnc_localEvent;
 
 true

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Makes the player drink directly from the given water source.
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_player, _source] call ace_field_rations_drinkFromSource
+ * [_player, _source] call ace_field_rations_fnc_drinkFromSource
  *
  * Public: No
  */
@@ -63,11 +63,11 @@ private _fnc_condition = {
     [_player, _source] call FUNC(canDrinkFromSource)
 };
 
-private _sourceType = typeOf _source;
-private _progressText = if (_sourceType == "") then {
+private _sourceConfig = configOf _source;
+private _progressText = if (isNull _sourceConfig) then {
     LLSTRING(DrinkingFromSource)
 } else {
-    format [LLSTRING(DrinkingFromX), getText (configFile >> "CfgVehicles" >> _sourceType >> "displayName")]
+    format [LLSTRING(DrinkingFromX), getText (_sourceConfig >> "displayName")]
 };
 
 [

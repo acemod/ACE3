@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: eRazeri and esteldunedain
  * Detach an item from a unit
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_attachToVehicle","_unit"],
+params ["_attachToVehicle","_unit"];
 TRACE_2("params",_attachToVehicle,_unit);
 
 private _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Sets the volume of the game, including third party radio modifications such as TFAR and ACRE.
@@ -31,7 +31,6 @@ if (_setVolume) then {
     2 fadeSound NORMAL_LEVEL;
 
     // TFAR
-    _unit setVariable ["tf_voiceVolume", NORMAL_LEVEL, true];
     _unit setVariable ["tf_globalVolume", NORMAL_LEVEL];
 
     // ACRE2
@@ -42,7 +41,6 @@ if (_setVolume) then {
     2 fadeSound MUTED_LEVEL;
 
     // TFAR
-    _unit setVariable ["tf_voiceVolume", NO_SOUND, true];
     _unit setVariable ["tf_globalVolume", MUTED_LEVEL];
 
     // ACRE2

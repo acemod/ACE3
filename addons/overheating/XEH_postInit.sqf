@@ -92,7 +92,7 @@ if (hasInterface) then {
     [QGVAR(initiateSwapBarrelAssisted), DFUNC(swapBarrel)] call CBA_fnc_addEventHandler;
 
     // Add an action to allow hot weapons to be cooled off in AceX Field Rations water sources
-    if (isClass (configfile >> "CfgPatches" >> "acex_field_rations")) then {
+    if (["acex_field_rations"] call EFUNC(common,isModLoaded)) then {
         [
             {EXGVAR(field_rations,enabled) || CBA_missionTime > 1},
             {

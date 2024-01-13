@@ -4,7 +4,7 @@
 
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
-#define ALL_HITPOINTS ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
+#define ALL_HITPOINTS ["HitHead", "HitChest", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
 
 #define HITPOINT_INDEX_HEAD 0
 #define HITPOINT_INDEX_BODY 1
@@ -54,6 +54,10 @@
 #define BLOOD_VOLUME_CLASS_4_HEMORRHAGE 3.600 // lost more than 40% blood, Class IV Hemorrhage
 #define BLOOD_VOLUME_FATAL 3.0 // Lost more than 50% blood, Unrecoverable
 
+// Minimum blood volume, in liters, for a patient to have the chance to wake up
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsBloodThreshold)
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS_DEFAULT BLOOD_VOLUME_CLASS_2_HEMORRHAGE
+
 // IV Change per second calculation:
 // 250 ml should take 60 seconds to fill. 250 ml / 60 s ~ 4.1667 ml/s.
 #define IV_CHANGE_PER_SECOND 4.1667 // in milliliters per second
@@ -72,9 +76,15 @@
 #define DAMAGE_BLUE_THRESHOLD 0.8
 #define DAMAGE_TOTAL_COLORS 10
 
-// --- pain
-#define PAIN_UNCONSCIOUS EGVAR(medical,const_painUnconscious)
-#define PAIN_UNCONSCIOUS_DEFAULT 0.5
+// Qualitative bleed rate thresholds as a fraction of knock out blood loss
+// Note that half of knock out blood loss is considered unstable, and knock out blood loss is considered critical
+#define BLEED_RATE_SLOW 0.1 // Slow - One fifth of unstable blood loss
+#define BLEED_RATE_MODERATE 0.5 // Moderate - Vitals considered stable
+#define BLEED_RATE_SEVERE 1.0 // Severe - Vitals considered unstable
+// Massive - Vitals considered critical
+
+// Pain above which a unit can go unconscious upon receiving damage
+#define PAIN_UNCONSCIOUS EGVAR(medical,painUnconsciousThreshold)
 
 // Pain fade out time (time it takes until pain is guaranteed to be completly gone)
 #define PAIN_FADE_TIME EGVAR(medical,const_painFadeTime)
@@ -85,7 +95,8 @@
 #define PAIN_SUPPRESSION_FADE_TIME 1800
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
-#define SPONTANEOUS_WAKE_UP_INTERVAL 15
+#define SPONTANEOUS_WAKE_UP_INTERVAL EGVAR(medical,const_wakeUpCheckInterval)
+#define SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT 15
 
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD EGVAR(medical,const_limpingDamageThreshold)
@@ -99,8 +110,8 @@
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 
 // Empty wound data, used for some default return values
-// [classID, bodypartIndex, amountOf, bloodloss, damage]
-#define EMPTY_WOUND [-1, -1, 0, 0, 0]
+// [classID, amountOf, bloodloss, damage]
+#define EMPTY_WOUND [-1, 0, 0, 0]
 
 // Base time to bandage each wound category
 #define BANDAGE_TIME_S 4
@@ -173,9 +184,9 @@
 #define IS_BLEEDING(unit)           (GET_WOUND_BLEEDING(unit) > 0)
 #define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN, false])
 #define IS_UNCONSCIOUS(unit)        (unit getVariable [VAR_UNCON, false])
-#define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, []])
-#define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, []])
-#define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, []])
+#define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, createHashMap])
+#define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, createHashMap])
+#define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, createHashMap])
 #define GET_DAMAGE_THRESHOLD(unit)  (unit getVariable [QEGVAR(medical,damageThreshold), [EGVAR(medical,AIDamageThreshold),EGVAR(medical,playerDamageThreshold)] select (isPlayer unit)])
 
 // The following function calls are defined here just for consistency
