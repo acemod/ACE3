@@ -18,8 +18,9 @@
 }
 
 class CfgAmmo {
-    // break EventHandlers inheritance on purpose to get it out of the frag & spall types
-    class B_65x39_Caseless; 
+    class B_65x39_Caseless: BulletBase {
+        class EventHandlers: EventHandlers;
+    };
 
     class GVAR(base): B_65x39_Caseless {
         ACE_damageType = "grenade"; // compatibility with medical_damage, shrapnel should produce grenade wounds
