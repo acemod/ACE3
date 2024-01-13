@@ -178,9 +178,10 @@ class SmokeShell: GrenadeHand {
     GVAR(skip) = 1;
 };
 class G_40mm_HE: GrenadeBase {
+    class EventHandlers: EventHandlers;
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
-    GVAR(force) = 1;
-
+    GVAR(skip) = 1;
+    GVAR(force) = 0;
     GVAR(classes)[] = {QGVAR(small)};
     GVAR(fragCount) = 800; // guess based on probability hit of 1%
     GVAR(metal) = 200;
@@ -189,6 +190,7 @@ class G_40mm_HE: GrenadeBase {
     GVAR(gurney_k) = "3/5"; // interior fragmenter/charge is a sphere
 };
 class G_40mm_HEDP: G_40mm_HE {
+    class EventHandlers: EventHandlers;
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
     GVAR(classes)[] = {QGVAR(small_HD)};
     GVAR(fragCount) = 270; // seems to have greater framentation ability, but lower range per source
@@ -198,9 +200,11 @@ class G_40mm_HEDP: G_40mm_HE {
     GVAR(gurney_k) = "1/2";
 };
 
-class ACE_G_40mm_HEDP: G_40mm_HEDP {};
+class ACE_G_40mm_HEDP: G_40mm_HEDP {
+    class EventHandlers: EventHandlers;
+};
 class ACE_G_40mm_HE: G_40mm_HE {
-    class EventHandlers;
+    class EventHandlers: EventHandlers;
 };
 class ACE_G_40mm_Practice: ACE_G_40mm_HE {
     ACE_FRAG_RM_EH;
