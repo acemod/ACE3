@@ -37,40 +37,49 @@ if (!isNull _target) then {
         _posASL = _posASL vectorAdd [0, 0, 0.05];
     };
 
+    // Set the unit's direction
+    [QEGVAR(common,setDir), [_target, getDir _unit + 180], _target] call CBA_fnc_targetEvent;
+
     [{
-        params ["_target", "", "", "", "_posASL", "_dir"];
+        params ["_target", "_clone", "_isObjectHidden", "_simulationEnabled", "_posASL"];
 
         // Make sure PhysX is on
         [QEGVAR(common,awake), [_target, true]] call CBA_fnc_globalEvent;
 
-        // Set the unit's direction
-        [QEGVAR(common,setDir), [_target, _dir], _target] call CBA_fnc_targetEvent;
-
         // Bring unit back to clone's position
         _target setPosASL _posASL;
 
-        [{
-            params ["_target", "_clone", "_isObjectHidden", "_simulationEnabled"];
+        // Unhide unit
+        if (!_isObjectHidden) then {
+            [QEGVAR(common,hideObjectGlobal), [_target, false]] call CBA_fnc_serverEvent;
+        };
 
-            if (!_isObjectHidden) then {
-                [QEGVAR(common,hideObjectGlobal), [_target, false]] call CBA_fnc_serverEvent;
-            };
+        // Enable simulation again
+        if (_simulationEnabled) then {
+            [QEGVAR(common,enableSimulationGlobal), [_target, true]] call CBA_fnc_serverEvent;
+        };
 
-            if (_simulationEnabled) then {
-                [QEGVAR(common,enableSimulationGlobal), [_target, true]] call CBA_fnc_serverEvent;
-            };
+        // Detach first to prevent objNull in attachedObjects
+        detach _clone;
+        deleteVehicle _clone;
+    }, [_target, _clone, _isObjectHidden, _simulationEnabled, _posASL], 0.25] call CBA_fnc_waitAndExecute;
 
-            deleteVehicle _clone;
-        }, _this, 0.25] call CBA_fnc_waitAndExecute;
-    }, [_target, _clone, _isObjectHidden, _simulationEnabled, _posASL, getDir _unit + 180], 0.25] call CBA_fnc_waitAndExecute;
+    // Get which curators had this object as editable
+    if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
+        private _objectCurators = _target getVariable [QGVAR(objectCurators), []];
+
+        if (_objectCurators isEqualTo []) exitWith {};
+
+        [QEGVAR(zeus,addObjects), [[_target], _objectCurators]] call CBA_fnc_serverEvent;
+    };
 
     if (_isInRemainsCollector) then {
         addToRemainsCollector [_target];
     };
+} else {
+    // Detach first to prevent objNull in attachedObjects
+    detach _clone;
+    deleteVehicle _clone;
 };
-
-// Detach first to prevent objNull in attachedObjects
-detach _clone;
-deleteVehicle _clone;
 
 _target

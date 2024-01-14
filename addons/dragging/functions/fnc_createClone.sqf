@@ -4,7 +4,8 @@
  * Creates a draggable / carryable clone of a dead unit.
  *
  * Arguments:
- * 0: Dead unit <OBJECT>
+ * 0: Unit dragging/carrying <OBJECT>
+ * 1: Dead unit <OBJECT>
  *
  * Return Value:
  * Cloned unit <OBJECT>
@@ -15,16 +16,18 @@
  * Public: No
  */
 
-params ["_target"];
+params ["_unit", "_target"];
 
-// Get current position of unit, -10 m below surface
-private _posATL = getPosATL _target;
+private _posATL = getPosASL _target;
+
+// Create clone
+private _clone = createVehicle [QGVAR(clone), ASLToAGL _posATL, [], 0, "CAN_COLLIDE"];
+
+// Claim the clone
+[_unit, _clone] call EFUNC(common,claim);
+
+// Move unit -10 m below terrain in order to hide it and remove its inventory access
 _posATL set [2, -10];
-
-private _clone = createVehicle [QGVAR(clone), _posATL];
-
-// Clone loadout
-[_clone, _target call CBA_fnc_getLoadout] call CBA_fnc_setLoadout;
 
 // Hide unit until it can be moved below terrain
 private _isObjectHidden = isObjectHidden _target;
@@ -48,13 +51,15 @@ if (_isInRemainsCollector) then {
 
 // Make sure clone has the same wound textures as the corpse
 private _targetDamage = damage _target;
+
 if (_targetDamage != 0) then {
-    _clone setDamage (_targetDamage min 0.99); // Don't kill the clone
+    _clone setDamage (_targetDamage min 0.99); // don't kill the clone
 };
+
 private _relevantHitpoints = ["HitHead", "HitBody", "HitHands", "HitLegs"];
+
 {
-    private _hitpointDamage = _target getHitPointDamage _x;
-    _clone setHitPointDamage [_x, _hitpointDamage min 0.99];
+    _clone setHitPointDamage [_x, (_target getHitPointDamage _x) min 0.99];
 } forEach _relevantHitpoints;
 
 // Disable all damage
@@ -65,16 +70,38 @@ _clone setVariable [QGVAR(original), [_target, _isInRemainsCollector, _isObjectH
 [QEGVAR(common,awake), [_target, true]] call CBA_fnc_globalEvent;
 
 [{
-    params ["_target", "_posATL"];
+    params ["_clone", "_target", "_posATL"];
+
+    // Remove clone from all zeuses
+    if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
+        [QEGVAR(zeus,removeObjects), [[_clone]]] call CBA_fnc_serverEvent;
+    };
 
     // Make sure PhysX is on
     [QEGVAR(common,awake), [_target, true]] call CBA_fnc_globalEvent;
 
-    // Move unit below terrain in order to hide it and remove its inventory access
-    _target setPosATL _posATL;
-}, [_target, _posATL], 0.25] call CBA_fnc_waitAndExecute;
+    // Clone loadout (sometimes default loadouts are randomised, so overwrite those)
+    [_clone, _target call CBA_fnc_getLoadout] call CBA_fnc_setLoadout;
 
-// Sets the facial expression
-[[QGVAR(cloneCreated), [_target, _clone]] call CBA_fnc_globalEventJIP, _clone] call CBA_fnc_removeGlobalEventJIP;
+    // Sets the facial expression
+    [[QGVAR(cloneCreated), [_target, _clone]] call CBA_fnc_globalEventJIP, _clone] call CBA_fnc_removeGlobalEventJIP;
+
+    // Corpse is desynced, but it doesn't matter here
+    _target setPosATL _posATL;
+
+    // Release claim on corpse
+    [objNull, _target] call EFUNC(common,claim);
+}, [_clone, _target, _posATL], 0.25] call CBA_fnc_waitAndExecute;
+
+// Save which curators had this object as editable
+if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
+    private _objectCurators = objectCurators _target;
+
+    _target setVariable [QGVAR(objectCurators), _objectCurators, true];
+
+    if (_objectCurators isEqualTo []) exitWith {};
+
+    [QEGVAR(zeus,removeObjects), [[_target], _objectCurators]] call CBA_fnc_serverEvent;
+};
 
 _clone

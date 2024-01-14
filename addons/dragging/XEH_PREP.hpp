@@ -28,6 +28,8 @@ PREP(resumeDrag);
 PREP(setCarryable);
 PREP(setDraggable);
 PREP(startCarry);
+PREP(startCarryLocal);
 PREP(startCarryPFH);
 PREP(startDrag);
+PREP(startDragLocal);
 PREP(startDragPFH);
