@@ -12,6 +12,11 @@
     if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
     if (getNumber (configOf _unit >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit);};
 
+    private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
+    if ((_allHitPoints arrayIntersect GVAR(hitpoints)) isNotEqualTo GVAR(hitpoints)) exitWith {
+        ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
+    };
+
     // Calling this function inside curly brackets allows the usage of
     // "exitWith", which would be broken with "HandleDamage" otherwise.
     _unit setVariable [
