@@ -32,6 +32,11 @@ if (_hitPoint isEqualTo "") then {
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 private _newDamage = _damage - _oldDamage;
+
+// _newDamage == 0 happens occasionally for vehiclehit events (see line 80 onwards), just exit early to save some frametime
+// context 4 is engine "bleeding". For us, it's just a duplicate event for #structural which we can ignore without any issues
+if (_context == 4 || _newDamage == 0) exitWith {_oldDamage};
+
 // Get scaled armor value of hitpoint and calculate damage before armor
 // We scale using passThrough to handle explosive-resistant armor properly (#9063)
 // We need realDamage to determine which limb was hit correctly
@@ -78,7 +83,6 @@ if (
 
 // Receiving explosive damage inside a vehicle doesn't trigger for each hitpoint
 // This is the case for mines, explosives, artillery, and catasthrophic vehicle explosions
-// Triggers twice, but that doesn't matter as damage is low
 if (
     _hitPoint isEqualTo "#structural" &&
     {!isNull _vehicle} &&
