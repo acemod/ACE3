@@ -9,6 +9,9 @@
 ["CAManBase", "init", {
     params ["_unit"];
 
+    if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
+    if (getNumber (configOf _unit >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit);};
+
     // Calling this function inside curly brackets allows the usage of
     // "exitWith", which would be broken with "HandleDamage" otherwise.
     _unit setVariable [
