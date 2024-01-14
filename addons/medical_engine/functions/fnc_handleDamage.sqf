@@ -33,7 +33,7 @@ if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), t
 
 private _newDamage = _damage - _oldDamage;
 
-// Happens occasionally for vehiclehit events (see line #80 onwards)
+// Happens occasionally for vehiclehit events (see line 80 onwards)
 // Just exit early to save some frametime
 if (_newDamage == 0) exitWith {_oldDamage};
 
