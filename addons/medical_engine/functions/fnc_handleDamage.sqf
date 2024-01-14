@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "..\script_component.hpp"
 /*
  * Author: commy2, kymckay
@@ -20,8 +21,9 @@ if !(local _unit) exitWith {nil};
 
 // Get missing meta info
 private _oldDamage = 0;
+private _structuralDamage = _context == 0;
 
-if (_hitPoint isEqualTo "") then {
+if (_structuralDamage) then {
     _hitPoint = "#structural";
     _oldDamage = damage _unit;
 } else {
@@ -35,14 +37,17 @@ private _newDamage = _damage - _oldDamage;
 
 // _newDamage == 0 happens occasionally for vehiclehit events (see line 80 onwards), just exit early to save some frametime
 // context 4 is engine "bleeding". For us, it's just a duplicate event for #structural which we can ignore without any issues
-if (_context == 4 || _newDamage == 0) exitWith {_oldDamage};
+if (_context == 4 || _newDamage == 0) exitWith {
+    TRACE_4("Skipping engine bleeding or 0 zero damage",_ammo,_newDamage,_directHit,_context);
+    _oldDamage
+};
 
 // Get scaled armor value of hitpoint and calculate damage before armor
 // We scale using passThrough to handle explosive-resistant armor properly (#9063)
 // We need realDamage to determine which limb was hit correctly
 [_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
 private _realDamage = _newDamage * _armor;
-if (_hitPoint isNotEqualTo "#structural") then {
+if (!_structuralDamage) then {
     private _armorCoef = _armor/_armorScaled;
     private _damageCoef = linearConversion [0, 1, GVAR(damagePassThroughEffect), 1, _armorCoef];
     _newDamage = _newDamage * _damageCoef;
@@ -52,7 +57,7 @@ TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_contex
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // Damage occurs in consistent increments
 if (
-    _hitPoint isEqualTo "#structural" &&
+    _structuralDamage &&
     {getOxygenRemaining _unit <= 0.5} &&
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
@@ -64,14 +69,16 @@ if (
 
 // Faster than (vehicle _unit), also handles dead units
 private _vehicle = objectParent _unit;
+private _inVehicle = !isNull _vehicle;
+private _environmentDamage = _ammo == "";
 
 // Crashing a vehicle doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // It does fire the EH multiple times, but this seems to scale with the intensity of the crash
 if (
-    EGVAR(medical,enableVehicleCrashes) &&
-    {_hitPoint isEqualTo "#structural"} &&
-    {_ammo isEqualTo ""} &&
-    {!isNull _vehicle} &&
+    (EGVAR(medical,enableVehicleCrashes) &&
+    _environmentDamage &&
+    _inVehicle &&
+    _structuralDamage) &&
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
@@ -84,9 +91,9 @@ if (
 // Receiving explosive damage inside a vehicle doesn't trigger for each hitpoint
 // This is the case for mines, explosives, artillery, and catasthrophic vehicle explosions
 if (
-    _hitPoint isEqualTo "#structural" &&
-    {!isNull _vehicle} &&
-    {_ammo isNotEqualTo ""} &&
+    (_structuralDamage &&
+    !_environmentDamage &&
+    _inVehicle) &&
     {
         private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
         GET_NUMBER(_ammoCfg >> "explosive", 0) > 0 ||
@@ -160,7 +167,7 @@ if (_context == 2) then {
 
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them
-    if (_ammo isEqualTo "") then {
+    if (_environmentDamage) then {
         // Any collision with terrain/vehicle/object has a shooter
         // Check this first because burning can happen at any velocity
         if !(isNull _shooter) then {
