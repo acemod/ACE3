@@ -38,7 +38,7 @@ private _newDamage = _damage - _oldDamage;
 // _newDamage == 0 happens occasionally for vehiclehit events (see line 80 onwards), just exit early to save some frametime
 // context 4 is engine "bleeding". For us, it's just a duplicate event for #structural which we can ignore without any issues
 if (_context == 4 || _newDamage == 0) exitWith {
-    TRACE_4("Skipping engine bleeding or 0 zero damage",_ammo,_newDamage,_directHit,_context);
+    TRACE_4("Skipping engine bleeding or zero damage",_ammo,_newDamage,_directHit,_context);
     _oldDamage
 };
 
