@@ -6,28 +6,15 @@
     [_new] call FUNC(updateDamageEffects); // Run on new controlled unit to update QGVAR(aimFracture)
 }, true] call CBA_fnc_addPlayerEventHandler;
 
-
 ["CAManBase", "init", {
     params ["_unit"];
 
-    // Check if last hit point is our dummy.
-    private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
-    reverse _allHitPoints;
-    while {(_allHitPoints param [0, ""]) select [0,1] == "#"} do { WARNING_1("Ignoring Reflector hitpoint %1", _allHitPoints deleteAt 0); };
-
-    if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
-        private _config = configOf _unit;
-        if (getText (_config >> "simulation") == "UAVPilot") exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
-        if (getNumber (_config >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
-        ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
-    } else {
-        // Calling this function inside curly brackets allows the usage of
-        // "exitWith", which would be broken with "HandleDamage" otherwise.
-        _unit setVariable [
-            QEGVAR(medical,HandleDamageEHID),
-            _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
-        ];
-    };
+    // Calling this function inside curly brackets allows the usage of
+    // "exitWith", which would be broken with "HandleDamage" otherwise.
+    _unit setVariable [
+        QEGVAR(medical,HandleDamageEHID),
+        _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+    ];
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
 #ifdef DEBUG_MODE_FULL

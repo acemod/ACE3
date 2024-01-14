@@ -13,7 +13,7 @@
  *
  * Public: No
  */
-params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint"];
+params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint", "_directHit", "_context"];
 
 // HD sometimes triggers for remote units - ignore.
 if !(local _unit) exitWith {nil};
@@ -42,7 +42,7 @@ if (_hitPoint isNotEqualTo "#structural") then {
     private _damageCoef = linearConversion [0, 1, GVAR(damagePassThroughEffect), 1, _armorCoef];
     _newDamage = _newDamage * _damageCoef;
 };
-TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
+TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_context);
 
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // Damage occurs in consistent increments
@@ -99,9 +99,13 @@ if (
     0
 };
 
-// This hitpoint is set to trigger last, evaluate all the stored damage values
-// to determine where wounds are applied
-if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
+// Damages are stored for "ace_hdbracket" event triggered last
+_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
+
+// Ref https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HandleDamage
+// Context 2 means this is the last iteration of HandleDamage, so figure out which hitpoint took the most real damage and send wound event
+// Don't exit, as the last iteration can be one of the hitpoints that we need to keep _oldDamage for
+if (_context == 2) then {
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
@@ -194,16 +198,9 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         QGVAR($HitLeftArm),QGVAR($HitRightArm),QGVAR($HitLeftLeg),QGVAR($HitRightLeg),
         QGVAR($#structural)
     ];
-
-    0
 };
-
-// Damages are stored for "ace_hdbracket" event triggered last
-_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
 
 // Engine damage to these hitpoints controls blood visuals, limping, weapon sway
 // Handled in fnc_damageBodyPart, persist here
-if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {_oldDamage};
-
-// We store our own damage values so engine damage is unnecessary
-0
+// For all other hitpoints, we store our own damage values, so engine damage is unnecessary
+[0, _oldDamage] select (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"])

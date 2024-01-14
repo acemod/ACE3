@@ -47,15 +47,4 @@
     };\
     class HitRightLeg: HitLeftLeg {\
         name = "leg_r";\
-    };\
-    class ACE_HDBracket {\
-        armor = 1;\
-        material = -1;\
-        name = "head";\
-        passThrough = 0;\
-        radius = 1;\
-        explosionShielding = 1;\
-        visual = "";\
-        minimalHit = 0;\
-        depends = "HitHead";\
     }
