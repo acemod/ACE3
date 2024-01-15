@@ -15,15 +15,15 @@
  * Public: No
  */
 
-params ["_proj"];
+params ["_projectile"];
 TRACE_1("addBlackList",_round);
 
-switch (typeName _proj) do {
+switch (typeName _projectile) do {
     case "OBJECT": {
-        GVAR(shouldFragCache) set [typeOf _proj, false];
+        GVAR(shouldFragCache) set [typeOf _projectile, false];
     };
     case "STRING": {
-        GVAR(shouldFragCache) set [_proj, false];
+        GVAR(shouldFragCache) set [_projectile, false];
     };
     default { };
 };

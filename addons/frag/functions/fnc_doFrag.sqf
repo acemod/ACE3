@@ -15,15 +15,15 @@
  * None
  *
  * Example:
- * [[_proj, getPosASL _proj, velocity _proj]] call ace_frag_fnc_doFrag;
+ * [_projectile, getPosASL _projectile, velocity _projectile, typeOf _projectile, getShotParents _projectile] call ace_frag_fnc_doFrag;
  *
  * Public: No
  */
 TRACE_1("begin doFrag",_this);
 params [
-    ["_proj", objNull, [objNull]],
+    "",
     ["_posASL", [0, 0, 0], [[]], [3]],
-    ["_vel", [0, 0, 0] , [[]], [3]],
+    ["_velocity", [0, 0, 0] , [[]], [3]],
     ["_ammo", "", [""]],
     ["_shotParents", [objNull, objNull], [[]]]
 ];
@@ -65,5 +65,5 @@ if (_fragRange > 3 && _timeSince > ACE_FRAG_HOLDOFF*1.5 && GVAR(fragSimComplexit
 };
 
 if (_timeSince > 0.2 && {GVAR(fragSimComplexity) > 0}) then {
-    [_posASL, _vel, _heightAGL, _fragTypes, _maxFrags, _shotParents] call FUNC(doFragRandom);
+    [_posASL, _velocity, _heightAGL, _fragTypes, _maxFrags, _shotParents] call FUNC(doFragRandom);
 };

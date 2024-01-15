@@ -8,28 +8,27 @@
  * 0: Position of fragmenting projectile ASL <ARRAY>
  * 1: Velocity of the fragmenting projectile <ARRAY>
  * 2: Height (AGL) of the fragmenting projectile <SCALAR>
- * 3: Type of fragments to generate
+ * 3: Type of fragments to generate <ARRAY>
  * 4: Remaining fragment budget <SCALAR>
- * 5: Shot parent <ARRAY>
+ * 5: Shot parents <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [getPosASL _proj, velocity _proj, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragRandom;
+ * [getPosASL _proj, 800, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragRandom;
  *
  * Public: No
  */
-
 params [
     "_posASL",
-    ["_projVel", [0,0,0]],
+    ["_fragVelocity", [0,0,0]],
     ["_heightAGL", 2, [123]],
     ["_fragType", [], [[]]],
     ["_fragCnt", 10, [123]],
-    ["_shotPrnt", [objNull, objNull], [[]], [2]]
+    ["_shotParents", [objNull, objNull], [[]], [2]]
 ];
-TRACE_5("fnc_doFragRandom", _posASL, _projVel, _heightAGL, _fragType, _fragCnt);
+TRACE_5("fnc_doFragRandom", _posASL, _fragVelocity, _heightAGL, _fragType, _fragCnt);
 
 // See cfgAmmoFragSpawner for different frag types
 private _hMode = switch (true) do {
@@ -54,7 +53,7 @@ _fragCnt = switch (true) do {
 // Spawn the fragment spawner
 private _fragSpawner = createVehicle [_type + _fragCnt + _hMode, ASLToATL _posASL, [], 0, "CAN_COLLIDE"];
 _fragSpawner setVectorDirandUp [[0,0,1], [1,0,0]];
-_fragSpawner setVelocity _projVel;
+_fragSpawner setVelocity _fragVelocity;
 _fragSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL

@@ -18,21 +18,21 @@
 TRACE_1("doSpall",_this);
 params [
     "_projectile",
-    ["_hitObj", objNull],
-    ["_lPosASL", [0, 0, 0]],
-    ["_lVel", [0, 0, 0]],
-    ["_sNorm", [0, 0, 0]],
+    ["_objectHit", objNull],
+    ["_lastPosASL", [0, 0, 0]],
+    ["_lastVelocity", [0, 0, 0]],
+    ["_surfaceNorm", [0, 0, 0]],
     ["_surfaceType", ""],
     ["_ammo", "", [""]],
     ["_shotParents", [objNull, objNull], [[]]],
-    ["_vUp", [0,0,1]]
+    ["_vectorUp", [0,0,1]]
 ];
 
 if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF ||
-    _lPosASL isEqualTo [0,0,0] ||
-    {isNull _hitObj || {_hitObj isKindOf "man" ||
+    _lastPosASL isEqualTo [0,0,0] ||
+    {isNull _objectHit || {_objectHit isKindOf "man" ||
     {_ammo isEqualTo ""}}}) exitWith {
-    TRACE_4("time/invldHit",CBA_missionTime,GVAR(lastSpallTime),_hitObj,_lPosASL);
+    TRACE_4("time/invldHit",CBA_missionTime,GVAR(lastSpallTime),_objectHit,_lastPosASL);
 };
 
 private _material = [_surfaceType] call FUNC(getMaterialInfo);
@@ -45,21 +45,21 @@ if (_material isEqualTo "ground") then {
 // Find spall speed / fragment info
 [_ammo] call FUNC(getSpallInfo) params ["_caliber", "_explosive", "_indirectHit"];
 private _vel = if (alive _projectile) then {
-    _explosive = 0; // didn't explode
+    _explosive = 0; // didn't explode since it's alive a frame later
     velocity _projectile
 } else {
     [0, 0, 0];
 };
 
-private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
+private _velocityChange = vectorMagnitude _lastVelocity - vectorMagnitude _vel;
 /*
  * This is all fudge factor since real spalling is too complex for calculation.
  * There are two terms. The first is from round impact, taking a quasi scale
  * of sqrt(2)/50 * round caliber * srqt(change in speed). The second term is
  * explosive * indirect hit, for any explosive contribution
  */
-private _spallPower =  (ACE_FRAG_ROUND_COEF * _caliber * sqrt _dV  + _explosive * _indirectHit) * GVAR(spallIntensity);
-TRACE_3("found speed",_dV,_caliber,_spallPower);
+private _spallPower =  (ACE_FRAG_ROUND_COEF * _caliber * sqrt _velocityChange  + _explosive * _indirectHit) * GVAR(spallIntensity);
+TRACE_3("found speed",_velocityChange,_caliber,_spallPower);
 
 
 if (_spallPower < 2) exitWith {
@@ -67,49 +67,49 @@ if (_spallPower < 2) exitWith {
 };
 
 
-private _lVelUnit = vectorNormalized _lVel;
-private _unitStep = _lVelUnit vectorMultiply 0.05;
+private _lastVelocityUnit = vectorNormalized _lastVelocity;
+private _deltaStep = _lastVelocityUnit vectorMultiply 0.05;
 
-if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
-    TRACE_3("terrainIntersect",_lPosASL,_unitStep,_lPosASL);
+if (terrainIntersectASL [_lastPosASL vectorAdd _deltaStep, _lastPosASL]) exitWith {
+    TRACE_2("terrainIntersect",_lastPosASL,_deltaStep);
 };
 
 #ifdef DEBUG_MODE_DRAW
 if GVAR(dbgSphere) then {
-    [_lPosASL vectorAdd _lVelUnit, "orange"] call FUNC(dev_sphereDraw);
-    [_lPosASL, "yellow"] call FUNC(dev_sphereDraw);
+    [_lastPosASL vectorAdd _lastVelocityUnit, "orange"] call FUNC(dev_sphereDraw);
+    [_lastPosASL, "yellow"] call FUNC(dev_sphereDraw);
 };
 #endif
 
 /*
  * Improve performance of finding otherside of object on shallow angle
- * impacts. 120 degrees due to 90 degree offset with _lVelUnit into object.
+ * impacts. 120 degrees due to 90 degree offset with _lastVelocityUnit into object.
  */
-private _spallPos = _lPosASL vectorAdd _unitStep;
-if (120 > acos ( _lVelUnit vectorDotProduct _sNorm)) then {
-    _spallPos = _spallPos vectorAdd (_unitStep vectorMultiply 5);
+private _spallPosASL = _lastPosASL vectorAdd _deltaStep;
+if (120 > acos ( _lastVelocityUnit vectorDotProduct _surfaceNorm)) then {
+    _spallPosASL = _spallPosASL vectorAdd (_deltaStep vectorMultiply 5);
 };
 private _insideObject = true;
 for "_i" from 2 to 21 do
 {
-    private _nPos = _spallPos vectorAdd _unitStep;
-    if (!lineIntersects [_spallPos, _nPos]) then {
-        _spallPos = _nPos vectorAdd (_unitStep vectorMultiply 2);
+    private _nPos = _spallPosASL vectorAdd _deltaStep;
+    if (!lineIntersects [_spallPosASL, _nPos]) then {
+        _spallPosASL = _nPos vectorAdd (_deltaStep vectorMultiply 2);
         _insideObject = false;
         break
     };
-    _spallPos = _nPos;
+    _spallPosASL = _nPos;
 };
 
 if (_insideObject) exitWith {
-    TRACE_3("insideObj",_lPosASL,_spallPos,alive _projectile);
+    TRACE_3("insideObj",_lastPosASL,_spallPosASL,alive _projectile);
 };
 // Passed all exitWiths
 GVAR(lastSpallTime) = CBA_missionTime;
 
 #ifdef DEBUG_MODE_DRAW
 if GVAR(dbgSphere) then {
-    [_spallPos, "green"] call FUNC(dev_sphereDraw);
+    [_spallPosASL, "green"] call FUNC(dev_sphereDraw);
 };
 #endif
 
@@ -124,17 +124,17 @@ private _spawnSize = switch (true) do
 
 private _spallSpawner = createVehicle [
     "ace_frag_" + _material + _spawnSize,
-    ASLToATL _spallPos,
+    ASLToATL _spallPosASL,
     [],
     0,
     "CAN_COLLIDE"
 ];
-_spallSpawner setVectorDirandUp [_lVelUnit, _vUp];
-_spallSpawner setVelocity (_lVelUnit vectorMultiply (_dV/2));
+_spallSpawner setVectorDirandUp [_lastVelocityUnit, _vectorUp];
+_spallSpawner setVelocity (_lastVelocityUnit vectorMultiply (_velocityChange/ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF));
 _spallSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
-systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _spallPower);
+systemChat ("spd: " + str speed _spallSpawner + ", spawner: " + _fragSpawnType + ", spallPow: " + str _spallPower);
 #endif
 #ifdef DEBUG_MODE_DRAW
 _spallSpawner addEventHandler [

@@ -9,11 +9,11 @@
  *
  * Return Value:
  * _ammoInfo <ARRAY>
- *  0: _fragRange - search range for fragments
- *  1: _fragVel - gurney equation calculated velocity
- *  2: _fragTypes - array of fragment types
+ *  0: _fragRange - search range for fragments <SCALAR>
+ *  1: _fragVel - gurney equation calculated velocity <SCALAR>
+ *  2: _fragTypes - array of fragment types <ARRAY>
  *  3: _fragCount - modified frag count used under assumptions
- *                                   of spherical fragmentation
+*                    of spherical fragmentation <SCALAR>
  *
  * Example:
  * ["B_556x45_Ball"] call ace_frag_fnc_getFragInfo;
@@ -38,31 +38,31 @@ if (isArray (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CLASSES))) then {
 /************ Gurney equation notes *****************//*
  * see https://en.wikipedia.org/wiki/Gurney_equations
  *
- * GURNEY_K is the constant added to _m/_c
+ * GURNEY_K is the geometry constant added to _metalMass/_chargeMass
  * GURNEY_C = sqrt(2E)
  *
- * _c = 185; - grams of comp-b
- * _m = 210; - grams of fragmentating metal
- * _k = 3/5; - spherical K factor
- * _gC = 2843; - Gurney constant of comp-b in /ms
+ * _chargeMass = 185; - grams of comp-b
+ * _metalMass = 210; - grams of fragmentating metal
+ * _geometryCoefficient = 3/5; - spherical K factor
+ * _gurneyConstant = 2843; - Gurney constant of comp-b in /ms
  *
- * _c = 429; - grams of tritonal
- * _m = 496; - grams of fragmentating metal
- * _k = 1/2; - cylindrical K factor
- * _gC = 2320; - Gurney constant of tritonal in m/s
+ * _chargeMass = 429; - grams of tritonal
+ * _metalMass = 496; - grams of fragmentating metal
+ * _geometryCoefficient = 1/2; - cylindrical K factor
+ * _gurneyConstant = 2320; - Gurney constant of tritonal in m/s
  * Equation - 0.8 for empirical 80% speed
- * 0.8 * (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
- * or 0.8 * _gC * sqrt (_c /(_m + _c * _k)); (slightly faster to compute)
+ * 0.8 * (((_metalMass / _chargeMass) + _geometryCoefficient) ^ - (1 / 2)) * _gurneyConstant;
+ * or 0.8 * _gurneyConstant * sqrt (_chargeMass /(_metalMass + _chargeMass * _geometryCoefficient)); (slightly faster to compute)
  */
 
-private _c = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CHARGE));
-if (_c == 0) then {_c = 1; _warn = true;};
-private _m = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(METAL));
-if (_m == 0) then {_m = 2; _warn = true;};
-private _k = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(GURNEY_K));
-if (_k == 0) then {_k = 0.8; _warn = true;};
-private _gC = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(GURNEY_C));
-if (_gC == 0) then {_gC = 2440; _warn = true;};
+private _chargeMass = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CHARGE));
+if (_chargeMass == 0) then {_chargeMass = 1; _warn = true;};
+private _metalMass = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(METAL));
+if (_metalMass == 0) then {_metalMass = 2; _warn = true;};
+private _geometryCoefficient = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(GURNEY_K));
+if (_geometryCoefficient == 0) then {_geometryCoefficient = 0.8; _warn = true;};
+private _gurneyConstant = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(GURNEY_C));
+if (_gurneyConstant == 0) then {_gurneyConstant = 2440; _warn = true;};
 private _fragCount = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(fragCount));
 if (_fragCount == 0) then {_fragCount = 400; _warn = true;};
 
@@ -79,8 +79,8 @@ if (_warn) then {
  *                 of spherical fragmentation
  */
 _ammoInfo = [
-    sqrt (_fragCount / (4 * pi * 0.005)),
-    0.8 * _gC * sqrt (_c / (_m + _c * _k)),
+    sqrt (_fragCount / (4 * pi * ACE_FRAG_MIN_FRAG_HIT_CHANCE)),
+    0.8 * _gurneyConstant * sqrt (_chargeMass / (_metalMass + _chargeMass * _geometryCoefficient)),
     _fragTypes,
     _fragCount / 4 / pi
 ];

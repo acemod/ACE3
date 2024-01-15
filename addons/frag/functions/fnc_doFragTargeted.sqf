@@ -24,14 +24,14 @@
 
 params [
     "_posASL",
-    ["_fragVel", 800, [123]],
+    ["_fragVelocity", 800, [123]],
     ["_fragRange", 50, [123]],
     ["_maxFrags",  20, [123]],
     ["_fragTypes", [], [[]]],
     ["_modFragCount", 1, [123]],
-    ["_shotPrnt", [objNull, objNull], [[]], [2]]
+    ["_shotParents", [objNull, objNull], [[]], [2]]
 ];
-TRACE_5("fnc_doFragTargeted", _posASL, _fragRange, _maxFrags, _fragTypes, _modFragCount);
+TRACE_5("fnc_doFragTargeted",_posASL,_fragRange,_maxFrags,_fragTypes,_modFragCount);
 
 if (_fragTypes isEqualTo []) then {
     _fragTypes = [
@@ -45,14 +45,14 @@ if (_fragTypes isEqualTo []) then {
 
 private _objects = (ASLToATL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
-    TRACE_2("No nearby targets", _posASL, _fragRange);
+    TRACE_2("No nearby targets",_posASL,_fragRange);
     0;
 };
 
 
 // grab crews and add them in so that targets stay approx. sorted by distance
 {
-    private _crew = (crew _x);
+    private _crew = crew _x;
     if (count _crew > 1) then {
         private _arr = [_x];
         {
@@ -63,11 +63,11 @@ if (_objects isEqualTo []) exitWith {
     };
 } forEach _objects;
 _objects = flatten _objects;
-TRACE_3("Targets found", _posASL, _fragRange, count _objects);
+TRACE_3("Targets found",_posASL,_fragRange,count _objects);
 
 // limit number of fragments per direction (2D) to 10 using _fragArcs
 private _fragArcs = createHashMap;
-private _fragCount = 0;
+private _totalFragCount = 0;
 { // Begin of forEach iterating on _objects
     if (!alive _x) then {continue};
     private _target = _x;
@@ -103,16 +103,15 @@ private _fragCount = 0;
 
     // calculate chance to be hit by a fragment
     private _fragChance = _crossSectionArea * _modFragCount / _distance^2;
-    private _count = if (_fragChance > 1) then {
+    private _fragCount = if (_fragChance > 1) then {
         3 min (floor _fragChance);
     } else {
         [0, 1] select (GVAR(atLeastOne) || {random 1 < _fragChance});
     };
-    if (_count == 0) then {TRACE_2("fragments",_fragChance,_count); continue};
-
-    // Approximate offset to hit including speed & gravity
-    private _locFragVel = _fragVel * (1 - random 0.5);
-    private _tof = _distance / _locFragVel;
+    if (_fragCount == 0) then {
+        TRACE_2("fragments",_fragChance,_fragCount);
+        continue
+    };
 
     // handle limiting fragments per degree arc
     private _dir = floor (_posASL getDir _target);
@@ -120,11 +119,15 @@ private _fragCount = 0;
     if (_fragPerArc > 10) then {
         continue;
     } else {
-        _fragArcs set [_dir, _fragPerArc + _count];
+        _fragArcs set [_dir, _fragPerArc + _fragCount];
     };
 
+    // Approximate offset to hit including speed & gravity
+    private _locFragVel = _fragVelocity * (1 - random 0.5);
+    private _timeOfFlight = _distance / _locFragVel;
+
     // target pos for fragment to hit
-    private _targetPos = (velocity _target vectorMultiply _tof) vectorAdd [0, 0, 9.81 / 2 * _tof ^ 2];
+    private _targetPos = (velocity _target vectorMultiply _timeOfFlight) vectorAdd [0, 0, ACE_FRAG_HALF_GRAVITY_APPROX * _timeOfFlight ^ 2];
     if _isPerson then {
         private _hitPoint =  selectRandom ACE_FRAG_HITPOINTS;
         private _hitPointPos = _target selectionPosition [_hitPoint, "HitPoints", "AveragePoint"];
@@ -139,8 +142,8 @@ private _fragCount = 0;
 
     // select a fragment / submunition frag spawner
     private _fragSpawner = selectRandom _fragTypes;
-    if (_count > 1) then {
-        _fragSpawner = _fragSpawner + "_spawner_" + str _count + (switch (true) do {
+    if (_fragCount > 1) then {
+        _fragSpawner = _fragSpawner + "_spawner_" + str _fragCount + (switch (true) do {
             case (_distance < 10): {"_short"};
             case (_distance < 20): {"_mid"};
             default {"_far"};
@@ -149,11 +152,11 @@ private _fragCount = 0;
     TRACE_4("fragments",_fragSpawner,_fragChance,_distance,_locFragVel);
 
     // Create fragment
-    private _vecDir = _posASL vectorFromTo _targetPos;
+    private _vectorDir = _posASL vectorFromTo _targetPos;
     private _fragObj = createVehicle [_fragSpawner, ASLtoATL _posASL, [], 0, "CAN_COLLIDE"];
-    _fragObj setVectorDir _vecDir;
-    _fragObj setVelocity (_vecDir vectorMultiply _locFragVel);
-    _fragObj setShotParents _shotPrnt;
+    _fragObj setVectorDir _vectorDir;
+    _fragObj setVelocity (_vectorDir vectorMultiply _locFragVel);
+    _fragObj setShotParents _shotParents;
     #ifdef DEBUG_MODE_DRAW
     [_fragObj, "purple", true] call FUNC(dev_trackObj);
     if (GVAR(dbgSphere)) then {
@@ -161,15 +164,15 @@ private _fragCount = 0;
     };
     #endif
 
-    _fragCount = _fragCount + _count;
-    if (_fragCount >= _maxFrags) then {
-        TRACE_2("maxFrags", _fragCount, _maxFrags);
+    _totalFragCount = _totalFragCount + _fragCount;
+    if (_totalFragCount >= _maxFrags) then {
+        TRACE_2("maxFrags", _totalFragCount, _maxFrags);
         break
     };
 } forEach _objects;
 
 #ifdef DEBUG_MODE_FULL
-systemChat ("fragCount cnt: " + str _fragCount);
-TRACE_1("fragCount",_fragCount);
+systemChat ("fragCount cnt: " + str _totalFragCount);
+TRACE_1("fragCount",_totalFragCount);
 #endif
-_fragCount
+_totalFragCount
