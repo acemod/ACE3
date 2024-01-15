@@ -17,8 +17,7 @@
  */
 params ["_lastUnit", "_currentUnit"];
 
-
-if (_currentUnit isEqualTo objNull || {_lastUnit isEqualTo _currentUnit}) exitWith {};
+if (isNull _currentUnit || {_lastUnit isEqualTo _currentUnit}) exitWith {};
 if (!local _currentUnit) exitWith {
     [
         {local _currentUnit},
