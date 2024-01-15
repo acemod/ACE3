@@ -28,12 +28,12 @@ if (!local _currentUnit) exitWith {
 };
 
 
-private _aID = missionNamespace getVariable [QGVAR(dev_clearTraceAction), -1];
-if (_aID > -1 && {!isNull _lastUnit}) then {
-    _lastUnit removeAction _aID;
+private _actionID = missionNamespace getVariable [QGVAR(dev_clearTraceAction), -1];
+if (_actionID > -1 && {!isNull _lastUnit}) then {
+    _lastUnit removeAction _actionID;
 };
 
-_aID = _currentUnit addAction [
+_actionID = _currentUnit addAction [
     "Reset Lines",
     FUNC(dev_clearTraces),
     nil,
@@ -45,4 +45,4 @@ _aID = _currentUnit addAction [
     8
 ];
 
-missionNamespace getVariable [QGVAR(dev_clearTraceAction), _aID];
+missionNamespace getVariable [QGVAR(dev_clearTraceAction), _actionID];
