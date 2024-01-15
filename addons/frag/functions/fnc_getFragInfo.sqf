@@ -72,8 +72,8 @@ if (_warn) then {
 
 /********************** _ammoInfo format *************************//*
  * 0: _fragRange - search range for fragments, calculated with
- *                  a 0.5% chance to hit as the minimum
- * 1: _fragVel - gurney equation calculated velocity
+ *                  the minimum chance to hit as defined
+ * 1: _fragVelocity - gurney equation calculated velocity
  * 2: _fragTypes - array of fragment types
  * 3: _fragCount - modified frag count used under assumptions
  *                 of spherical fragmentation
