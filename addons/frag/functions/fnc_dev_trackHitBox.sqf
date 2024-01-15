@@ -24,14 +24,14 @@ if (isNull _object) exitWith {};
 
 // Grab the right hitBox
 private _box = [];
-if (_object  isKindOf "CAManBase") then {
+if (_object isKindOf "CAManBase") then {
     if (isNull objectParent _object) then {
         _box = 0 boundingBox _object;
     } else {
-        _box = boundingBoxReal  [_object, "Geometry"];
+        _box = boundingBoxReal [_object, "Geometry"];
     };
 } else {
-    _box = boundingBoxReal  [_object, "FireGeometry"];
+    _box = boundingBoxReal [_object, "FireGeometry"];
 };
 _box params ["_lowP","_upP"];
 

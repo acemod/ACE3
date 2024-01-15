@@ -89,7 +89,7 @@ private _printCount = 0;
             if (_warn) then {
                 INC(_printCount);
                 if (_csvFormat) then {
-                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%8", _c, _m, _k, _gC, _fragTypes, _fragCount, _ammo, [_ammoConfig, true]  call BIS_fnc_returnParents];
+                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%8", _c, _m, _k, _gC, _fragTypes, _fragCount, _ammo, [_ammoConfig, true] call BIS_fnc_returnParents];
                 } else {
                     diag_log text format ["Ammo [%1] MISSING frag configs:", _ammo];
                     diag_log text format [" _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5,_fragCount=%6", _c, _m, _k, _gC, _fragTypes, _fragCount];

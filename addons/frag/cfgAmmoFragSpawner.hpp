@@ -193,7 +193,7 @@ class GVAR(def_small_10_top): GVAR(def_small_10) {
     triggerSpeedCoef[] = {-1.10, -0.710};
 };
 /*
- * Default frag, spawning  small fragments only
+ * Default frag, spawning small fragments only
  */
 class GVAR(def_small_5): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 5};

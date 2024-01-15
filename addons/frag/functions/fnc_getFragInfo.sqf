@@ -30,7 +30,7 @@ if (!isNil "_ammoInfo") exitWith {_ammoInfo};
 private _fragTypes = [];
 private _warn = false;
 if (isArray (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CLASSES))) then {
-    _fragTypes  = getArray (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CLASSES));
+    _fragTypes = getArray (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CLASSES));
 } else {
     _warn = true;
 };

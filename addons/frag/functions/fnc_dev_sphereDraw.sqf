@@ -36,12 +36,12 @@ if (_color select [0,1] != "(") then {
         case "green": { _color = "(0,0.8,0,0.5)"; };
         case "yellow": { _color = "(0.8,0.8,0,0.5)"; };
         case "orange": { _color = "(0.8,0.518,0,0.5)"; };
-        default { _color =  "(0.8,0.8,0,0.5)";};
+        default { _color = "(0.8,0.8,0,0.5)";};
     };
 };
 private _colorString = "#(argb,8,8,3)color" + _color;
 
-private _sphere = createVehicle ["Sign_Sphere25cm_F",  ASLtoATL _posASL, [], 0, "CAN_COLLIDE"];
+private _sphere = createVehicle ["Sign_Sphere25cm_F", ASLtoATL _posASL, [], 0, "CAN_COLLIDE"];
 _sphere setObjectTextureGlobal [0, _colorString];
 GVAR(dev_eventSpheres) pushBack _sphere;
 

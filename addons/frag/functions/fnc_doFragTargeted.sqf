@@ -26,7 +26,7 @@ params [
     "_posASL",
     ["_fragVelocity", 800, [123]],
     ["_fragRange", 50, [123]],
-    ["_maxFrags",  20, [123]],
+    ["_maxFrags", 20, [123]],
     ["_fragTypes", [], [[]]],
     ["_modFragCount", 1, [123]],
     ["_shotParents", [objNull, objNull], [[]], [2]]
@@ -87,7 +87,7 @@ private _totalFragCount = 0;
             default {_crossSectionArea = 0.75;};
         };
     } else {
-        private  _boxParams = boundingBoxReal [_target, "FireGeometry"];
+        private _boxParams = boundingBoxReal [_target, "FireGeometry"];
         _boxParams params ["_pointA", "_pointB"];
         private _dims = _pointB vectorDiff _pointA;
         if (_dims#0 * _dims#1 * _dims#2 <= 0.5) then {continue};

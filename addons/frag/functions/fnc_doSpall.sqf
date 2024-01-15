@@ -37,9 +37,9 @@ if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF ||
 
 private _material = [_surfaceType] call FUNC(getMaterialInfo);
 if (_material isEqualTo "ground") then {
-#ifdef DEBUG_MODE_FULL
+    #ifdef DEBUG_MODE_FULL
     systemChat "ground spall";
-#endif
+    #endif
 };
 
 // Find spall speed / fragment info
@@ -58,7 +58,7 @@ private _velocityChange = vectorMagnitude _lastVelocity - vectorMagnitude _vel;
  * of sqrt(2)/50 * round caliber * srqt(change in speed). The second term is
  * explosive * indirect hit, for any explosive contribution
  */
-private _spallPower =  (ACE_FRAG_ROUND_COEF * _caliber * sqrt _velocityChange  + _explosive * _indirectHit) * GVAR(spallIntensity);
+private _spallPower = (ACE_FRAG_ROUND_COEF * _caliber * sqrt _velocityChange + _explosive * _indirectHit) * GVAR(spallIntensity);
 TRACE_3("found speed",_velocityChange,_caliber,_spallPower);
 
 

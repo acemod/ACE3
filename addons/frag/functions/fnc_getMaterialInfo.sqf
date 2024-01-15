@@ -36,7 +36,7 @@ if (isClass (configFile >> "CfgSurfaces" >> _surfType)) then {
 } else { // Messy way when a surface isn't added to cfgSurfaces
     private _surfFileText = toLowerANSI preprocessFile _surfType;
     _surfFileText = _surfFileText regexReplace ["[^a-z0-9]", ""];
-    private _idx =  ACE_FRAG_SOUNDENVIRON_STR_LEN + (_surfFileText find "soundenviron");
+    private _idx = ACE_FRAG_SOUNDENVIRON_STR_LEN + (_surfFileText find "soundenviron");
     if (_surfFileText select [_idx, 5] isEqualTo "empty") then {
         _idx = ACE_FRAG_SOUNDGIT_STR_LEN + (_surfFileText find "soundhit");
     };

@@ -78,7 +78,7 @@ class CfgAmmo {
     };
 
     class GVAR(large_HD): GVAR(large) {
-        hit =  28;
+        hit = 28;
         indirectHit = 2;
         indirectHitRange = 0.25;
         airFriction = QUOTE(BASE_DRAG_HD*0.65);

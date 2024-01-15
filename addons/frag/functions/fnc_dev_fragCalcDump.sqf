@@ -57,5 +57,5 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
     _processedCfgAmmos pushBack _ammo;
 } forEach _allAmmoConfigs;
 
-diag_log text          "//****************** fragCalcDump End ******************//";
+diag_log text "//****************** fragCalcDump End ******************//";
 diag_log text format ["//********************** printed %1 *********************//", _nPrinted];
