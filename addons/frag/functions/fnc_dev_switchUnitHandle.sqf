@@ -15,20 +15,26 @@
  *
  * Public: No
  */
-params ["_lVic", "_cVic"];
+params ["_lastUnit", "_currentUnit"];
 
 
-if (_cVic isEqualTo objNull || {!local _cVic || _lVic isEqualTo _cVic}) exitWith {};
+if (_currentUnit isEqualTo objNull || {_lastUnit isEqualTo _currentUnit}) exitWith {};
+if (!local _currentUnit) exitWith {
+    [
+        {local _currentUnit},
+        FUNC(dev_switchUnitHandle),
+        _this,
+        5
+    ] call CBA_fnc_waitUntilAndExecute;
+};
 
 
 private _aID = missionNamespace getVariable [QGVAR(dev_clearTraceAction), -1];
-if (_aID > -1 && {_lVic isNotEqualTo objNull}) then
-{
-    _lVic removeAction _aID;
+if (_aID > -1 && {_lastUnit isNotEqualTo objNull}) then {
+    _lastUnit removeAction _aID;
 };
 
-_aID = _cVic addAction
-[
+_aID = _currentUnit addAction [
     "Reset Lines",
     FUNC(dev_clearTraces),
     nil,        // arguments

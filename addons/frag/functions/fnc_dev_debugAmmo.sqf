@@ -9,7 +9,7 @@
  * 0: Log ammo types that wouldn't normall frag
  * 1: Only export ammo classes of classes referenced in cfgAmmo
  *    and their submunitions.
- * 2: Force a CSV format
+ * 2: Force a CSV format on debug print
  *
  * Return Value:
  * None
@@ -20,7 +20,7 @@
  * Public: No
  */
 params [
-    ["_debugForce", false, [false]],
+    ["_logAll", false, [false]],
     ["_onlyShotAmmoTypes", false, [false]],
     ["_csvFormat", false, [false]]
 ];
@@ -33,7 +33,7 @@ if (_csvFormat) then {
 // Gather all configs, either those that could be created from firing or all classes
 private _allAmmoConfigs = [];
 if (_onlyShotAmmoTypes) then {
-    private _searchFunc = {
+    private _configSearchFunc = {
         params [
             ["_ammo", "", [""]]
         ];
@@ -44,17 +44,17 @@ if (_onlyShotAmmoTypes) then {
             _subMunit = getArray (configFile >> "cfgAmmo" >> _ammo >> "submunitionAmmo");
             for "_i" from 0 to count _subMunit - 1 do {
                 if (_i mod 2 == 0) then {
-                    [toLower (_subMunit#_i)] call _searchFunc;
+                    [toLower (_subMunit#_i)] call _configSearchFunc;
                 };
             };
         } else {
-            [toLower _subMunit] call _searchFunc;
+            [toLower _subMunit] call _configSearchFunc;
         };
     };
     private _allMagazineConfigs = configProperties [configFile >> "cfgMagazines", "isClass _x", true];
 
     {
-        [toLower getText (_x >> "ammo")] call _searchFunc;
+        [toLower getText (_x >> "ammo")] call _configSearchFunc;
     } forEach _allMagazineConfigs;
 } else {
     _allAmmoConfigs = configProperties [configFile >> "cfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true] apply {configName _x};
@@ -70,7 +70,7 @@ private _printCount = 0;
         private _ammoConfig = (configFile >> "cfgAmmo" >> _ammo);
         private _shoulFrag = [_ammo] call FUNC(shouldFrag);
 
-        if (_shoulFrag || _debugForce) then {
+        if (_shoulFrag || _logAll) then {
 
             private _warn = false;
             private _fragTypes = getArray (_ammoConfig >> QGVAR(CLASSES));

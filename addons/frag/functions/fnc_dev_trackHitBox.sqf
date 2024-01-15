@@ -4,8 +4,8 @@
  * Add a hitbox outline to an object
  *
  * Arguments:
- * 0: Object to draw hitbox <OBJECT>
- * 1: Add center sphere <BOOL>
+ * 0 <OBJECT>: Object to draw hitbox
+ * 1 <BOOL>: Add sphere at object origin
  *
  * Return Value:
  * None
@@ -16,44 +16,44 @@
  * Public: No
  */
 params [
-    ["_obj", objNull, [objNull]],
-    ["_addSphere", true, [false]]
+    ["_object", objNull, [objNull]],
+    ["_addSphere", true, [turretLocal]]
 ];
 
-if (isNull _obj) exitWith {};
+if (isNull _object) exitWith {};
 
 // Grab the right hitBox
 private _box = [];
-if (_obj  isKindOf "CAManBase") then {
-    if (vehicle _obj == _obj) then {
-        _box = 0 boundingBox _obj;
+if (_object  isKindOf "CAManBase") then {
+    if (isNull objectParent _object) then {
+        _box = 0 boundingBox _object;
     } else {
-        _box = boundingBoxReal  [_obj, "Geometry"];
+        _box = boundingBoxReal  [_object, "Geometry"];
     };
 } else {
-    _box = boundingBoxReal  [_obj, "FireGeometry"];
+    _box = boundingBoxReal  [_object, "FireGeometry"];
 };
 _box params ["_lowP","_upP"];
 
 // adjust with stance
-private _stance = stance _obj;
+private _stance = stance _object;
 switch (true) do {
     case (_stance isEqualTo "STAND"): {_upP set [2, 1.9];};
     case (_stance isEqualTo "CROUCH"): {_upP set [2, 1.3];};
     case (_stance isEqualTo "PRONE"): {_upP set [2, 0.8];};
 };
-private _centerPoint = ASLToAGL getPosASL _obj;
+private _centerPoint = ASLToAGL getPosASL _object;
 
-if (GVAR(dbgSphere) && {_addSphere && {vehicle _obj isEqualTo _obj}}) then {
-    private _centerSphere = [getPosASL _obj, "yellow"] call FUNC(dev_sphereDraw);
-    _centerSphere disableCollisionWith vehicle _obj;
-    _centerSphere attachTo [_obj, _obj worldToModel _centerPoint];
+if (GVAR(dbgSphere) && {_addSphere && {isNull objectParent  _object}}) then {
+    private _centerSphere = [getPosASL _object, "yellow"] call FUNC(dev_sphereDraw);
+    _centerSphere disableCollisionWith vehicle _object;
+    _centerSphere attachTo [_object, _object worldToModel _centerPoint];
 };
 
 // create an optimized outline
 private _p1 = _upP;
 private _p7 = _lowP;
-private _points =[
+private _points = [
     _upP,
     [_p1#0, _p7#1, _p1#2],
     [_p7#0, _p7#1, _p1#2],
@@ -64,10 +64,10 @@ private _points =[
     [_p7#0, _p1#1, _p7#2]
 ];
 
-_color = switch (side _obj) do {
+_color = switch (side _object) do {
     case east: {[1, 0, 0, 1]};
     case resistance: {[0, 1, 0, 1]};
     default {[0, 0, 1, 1]};
 };
 
-GVAR(dev_hitBoxes) set [getObjectID _obj, [_obj, _points, _color]];
+GVAR(dev_hitBoxes) set [getObjectID _object, [_object, _points, _color]];

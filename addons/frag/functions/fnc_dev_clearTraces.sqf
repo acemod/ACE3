@@ -14,11 +14,10 @@
  *
  * Public: No
  */
-GVAR(dev_trackLines) = createHashMap;
-for "_i" from 0 to count GVAR(dev_eventSpheres) - 1 do
-{
+for "_i" from 0 to count GVAR(dev_eventSpheres) - 1 do {
     deleteVehicle (GVAR(dev_eventSpheres)#_i);
 };
-GVAR(dev_eventSpheres) = +[];
+GVAR(dev_eventSpheres) = [];
 
+GVAR(dev_trackLines) = createHashMap;
 GVAR(dev_hitBoxes) = createHashMap;

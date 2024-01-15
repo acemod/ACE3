@@ -1,5 +1,5 @@
 #include "..\script_component.hpp"
-#define HB_DRAW_ARRS [[3 , 2 , 1 , 5 , 6 , 7 , 3 , 0 , 4 , 5], [0, 1], [2, 6], [7, 4]]
+#define HITBOX_DRAW_PATH [[3 , 2 , 1 , 5 , 6 , 7 , 3 , 0 , 4 , 5], [0, 1], [2, 6], [7, 4]]
 /*
  * Author: Lambda.Tiger
  * Per frame function to draw all dev traces
@@ -15,38 +15,33 @@
  * Public: No
  */
 
-private _deleteArr = [];
 {
-    if (count (_y#1) > 1) then
-    {
-        for "_j" from 1 to count (_y#1) - 1 do
-        {
-            drawLine3D [_y#1#(_j-1), _y#1#_j, _y#2];
+    _y params ["_posArray", "_color"]
+    if (count (_posArray) > 1) then {
+        for "_j" from 1 to count _posArray - 1 do {
+            drawLine3D [_posArray#(_j-1), _posArray#_j, _color];
         };
     };
 } forEach GVAR(dev_trackLines);
 
 if (GVAR(drawHitBox)) then {
-    _deleteArr = [];
+    private _deleteArr = [];
     {
-        _y params ["_obj", "_pts", "_color"];
-        if (!alive _obj) then
-        {
+        _y params ["_object", "_boxPoints", "_color"];
+        if (!alive _object) then {
             _deleteArr pushBack _x;
             continue;
         };
 
         {
-            for "_i" from 1 to count _x -1 do
-            {
-                drawLine3D [_obj modelToWorld (_pts#(_x#_i)), _obj modelToWorld (_pts#(_x#(_i-1))), _color];
+            for "_i" from 1 to count _x -1 do {
+                drawLine3D [_object modelToWorld (_boxPoints#(_x#_i)), _object modelToWorld (_boxPoints#(_x#(_i-1))), _color];
             };
-        } forEach HB_DRAW_ARRS;
+        } forEach HITBOX_DRAW_PATH;
 
     } forEach GVAR(dev_hitBoxes);
 
-    for "_i" from 0 to count _deleteArr - 1 do
     {
-        GVAR(dev_hitBoxes) deleteAt (_deleteArr#_i);
-    };
+        GVAR(dev_hitBoxes) deleteAt _x;
+    } forEach _deleteArr;
 };
