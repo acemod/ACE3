@@ -2,12 +2,12 @@
 #include "..\defines.hpp"
 /*
  * Author: Brett Mayson
- * Handles the previous / next page buttons for actions
+ * Handles the previous / next page buttons for actions.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Actions control <CONTROL>
- * 2: Previous or next <BOOL> (false = previous, true = next)
+ * 1: Actions page <CONTROL>
+ * 2: Previous (false) or next (true) page <BOOL>
  *
  * Return Value:
  * None
@@ -23,4 +23,5 @@ if !(ctrlEnabled _control) exitWith {};
 GVAR(currentActionPage) = GVAR(currentActionPage) + ([-1, 1] select _nextPage);
 
 GVAR(actionsInfo) params ["_panelControl", "_curSel", "_itemCfg"];
+
 [QGVAR(displayActions), [_display, _panelControl, _curSel, _itemCfg]] call CBA_fnc_localEvent;
