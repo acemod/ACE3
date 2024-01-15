@@ -1,7 +1,6 @@
 // dev
+#ifdef DEBUG_MODE_DRAW
 PREP(dev_fired);
-PREP(dev_fragCalcDump);
-PREP(dev_debugAmmo);
 PREP(dev_trackHitBox);
 PREP(dev_sphereDraw);
 PREP(dev_addRound);
@@ -9,6 +8,9 @@ PREP(dev_trackObj);
 PREP(dev_drawTrace);
 PREP(dev_clearTraces);
 PREP(dev_switchUnitHandle);
+#endif
+PREP(dev_fragCalcDump);
+PREP(dev_debugAmmo);
 
 // Base
 PREP(initRound);
