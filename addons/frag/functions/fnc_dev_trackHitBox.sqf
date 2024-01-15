@@ -36,11 +36,10 @@ if (_object  isKindOf "CAManBase") then {
 _box params ["_lowP","_upP"];
 
 // adjust with stance
-private _stance = stance _object;
-switch (true) do {
-    case (_stance isEqualTo "STAND"): {_upP set [2, 1.9];};
-    case (_stance isEqualTo "CROUCH"): {_upP set [2, 1.3];};
-    case (_stance isEqualTo "PRONE"): {_upP set [2, 0.8];};
+switch (stance _object) do {
+    case ("STAND"): {_upP set [2, 1.9];};
+    case ("CROUCH"): {_upP set [2, 1.3];};
+    case ("PRONE"): {_upP set [2, 0.8];};
 };
 private _centerPoint = ASLToAGL getPosASL _object;
 

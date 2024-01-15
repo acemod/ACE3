@@ -81,10 +81,9 @@ private _totalFragCount = 0;
     private _crossSectionArea = 1;
     private _isPerson = _target isKindOf "CAManBase";
     if (_isPerson) then {
-        private _stance = stance _target;
-        switch (true) do {
-            case (_stance isEqualTo "STAND"): {_height = 1.9; _crossSectionArea = 1.5;};
-            case (_stance isEqualTo "CROUCH"): {_height = 1.2; _crossSectionArea = 1;};
+        switch (stance _target) do {
+            case ("STAND"): {_height = 1.9; _crossSectionArea = 1.5;};
+            case ("CROUCH"): {_height = 1.2; _crossSectionArea = 1;};
             default {_crossSectionArea = 0.75;};
         };
     } else {
