@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_frag_fnc_addBlackList
+ * call ace_frag_fnc_addBlackList
  *
  * Public: No
  */

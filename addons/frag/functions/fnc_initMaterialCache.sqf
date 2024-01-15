@@ -11,7 +11,7 @@
  * none
  *
  * Example:
- * [] call initMaterialCache;
+ * call initMaterialCache;
  *
  * Public: No
  */

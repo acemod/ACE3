@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [] call ace_frag_fnc_dev_debugAmmo
+ * call ace_frag_fnc_dev_debugAmmo
  *
  * Public: No
  */
