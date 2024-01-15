@@ -24,7 +24,7 @@ params [
 TRACE_4("devDraw",_this,_obj,_color,_isProj);
 
 // pick color and add it to the array
-private _colorArray = switch (toLower _color) do {
+private _colorArray = switch (toLowerANSI _color) do {
     case "purple": {[0.8, 0, 0.8, 1]};
     case "blue":   {[0, 0, 0.8, 1]};
     case "green":  {[0, 0.8, 0, 1]};
