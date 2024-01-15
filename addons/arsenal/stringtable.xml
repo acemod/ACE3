@@ -1223,7 +1223,7 @@
             <Czech>Vedlejší část hledí podporuje</Czech>
             <Korean>보조무기 지원여부</Korean>
         </Key>
-        <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
+        <Key ID="STR_ACE_Arsenal_statVisionMode_intPrim">
             <English>Primary integrated</English>
             <Spanish>Primaria integrada</Spanish>
             <German>Primär Integriert</German>
@@ -1237,6 +1237,12 @@
             <Chinesesimp>主镜内置</Chinesesimp>
             <Czech>Integrováno do hlavní části hledí</Czech>
             <Korean>주무기 내장여부</Korean>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_ti">
+            <English>Thermal integrated</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_intPrimTi">
+            <English>Thermal &amp; Primary integrated</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
