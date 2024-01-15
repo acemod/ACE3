@@ -24,6 +24,7 @@ GVAR(dev_trackLines) = createHashMap;
 GVAR(dev_hitBoxes) = createHashMap;
 GVAR(dev_failedToDelete) = 0;
 GVAR(dev_eventSpheres) = [];
+GVAR(dev_drawPFEH) = -1;
 #include "initSettingsDebug.inc.sqf"
 #endif
 
