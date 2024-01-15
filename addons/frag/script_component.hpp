@@ -3,8 +3,8 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define LOG_FRAG_INFO
-// #define DEBUG_MODE_FULL
-// #define DEBUG_MODE_DRAW
+#define DEBUG_MODE_FULL
+#define DEBUG_MODE_DRAW
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
@@ -25,6 +25,8 @@
 #define ACE_FRAG_COUNT_MAX 50
 #define ACE_FRAG_HITPOINTS  ["spine1","spine2","spine3","head","leftarm","leftarmroll","leftforearm","rightarm","rightarmroll","rightforearm","pelvis","leftupleg","leftuplegroll","leftlegroll","leftfoot","rightupleg","rightuplegroll","rightleg","rightlegroll","rightfoot"]
 #define ACE_FRAG_HITPOINTS_WEIGHTS
+//                          sqrt(2)/50
+#define ACE_FRAG_ROUND_COEF 0.02828427
 
 #ifndef GLUE
 #define GLUE(g1,g2) g1##g2

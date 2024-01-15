@@ -58,9 +58,8 @@ private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
  * of sqrt(2)/50 * round caliber * srqt(change in speed). The second term is
  * explosive * indirect hit, for any explosive contribution
  */
-private _spallPower =  (0.02828 * _caliber * sqrt _dV  + _explosive * _indirectHit) * GVAR(spallIntensity);
+private _spallPower =  (ACE_FRAG_ROUND_COEF * _caliber * sqrt _dV  + _explosive * _indirectHit) * GVAR(spallIntensity);
 TRACE_3("found speed",_dV,_caliber,_spallPower);
-TRACE_3("energy",0.02828*_caliber*sqrt(_dV),_explosive*_indirectHit,0.02828*_caliber*sqrt(_dV)+_explosive*_indirectHit);
 
 
 if (_spallPower < 2) exitWith {
@@ -123,7 +122,7 @@ private _spawnSize = switch (true) do
     default { "_spall_huge" };
 };
 
-/*private _spallSpawner = createVehicle [
+private _spallSpawner = createVehicle [
     "ace_frag_" + _material + _spawnSize,
     ASLToATL _spallPos,
     [],
@@ -132,7 +131,7 @@ private _spawnSize = switch (true) do
 ];
 _spallSpawner setVectorDirandUp [_lVelUnit, _vUp];
 _spallSpawner setVelocity (_lVelUnit vectorMultiply (_dV/2));
-_spallSpawner setShotParents _shotParents;*/
+_spallSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
 systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _spallPower);
