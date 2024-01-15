@@ -6,7 +6,7 @@
  * fragements that could be fired from a weapon
  *
  * Arguments:
- * 0: Log ammo types that wouldn't normall frag
+ * 0: Log ammo types that wouldn't normally frag
  * 1: Only export ammo classes of classes referenced in cfgAmmo
  *    and their submunitions.
  * 2: Force a CSV format
