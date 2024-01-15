@@ -4,7 +4,7 @@
  * Adds setting defined blacklisted rounds to blacklist
  *
  * Arguments:
- * Mne
+ * None
  *
  * Return Value:
  * None
@@ -47,6 +47,5 @@ for "_i" from 0 to _items - 1 do {
 
     GVAR(shouldFragCache) set [_convArray#_i, false];
 };
-
 
 INFO_2("Initialized blacklist. Total items found: %1, number of items failed: %2", _items, _errors);
