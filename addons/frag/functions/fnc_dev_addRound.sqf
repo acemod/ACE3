@@ -29,7 +29,7 @@ if (_isSidePlayer) then {
 } else {
     GVAR(dev_trackLines) set [getObjectID _projectile, [[getposATL _projectile], [1, 0, 0, 1]]];
 };
-// eventhandler to track round and cleanup when round is "dead"
+// event handler to track round and cleanup when round is "dead"
 [
     {
         if (isGamePaused) exitWith {};
@@ -48,7 +48,7 @@ if (_isSidePlayer) then {
 
 if (!_addProjectileEventHandlers) exitWith {};
 
-// Add hitpart eventHandler
+// Add hitPart eventHandler
 _projectile addEventHandler [
     "HitPart",
     {
@@ -61,7 +61,7 @@ _projectile addEventHandler [
     }
 ];
 
-// Add explode eventHandler
+// Add explode event handler
 _projectile addEventHandler [
     "Explode",
     {

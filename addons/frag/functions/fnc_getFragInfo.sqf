@@ -42,12 +42,12 @@ if (isArray (configFile >> "cfgAmmo" >> _ammo >> QGVAR(CLASSES))) then {
  * GURNEY_C = sqrt(2E)
  *
  * _chargeMass = 185; - grams of comp-b
- * _metalMass = 210; - grams of fragmentating metal
+ * _metalMass = 210; - grams of metal are accelerated by explosion
  * _geometryCoefficient = 3/5; - spherical K factor
  * _gurneyConstant = 2843; - Gurney constant of comp-b in /ms
  *
  * _chargeMass = 429; - grams of tritonal
- * _metalMass = 496; - grams of fragmentating metal
+ * _metalMass = 496; - grams of metal are accelerated by explosion
  * _geometryCoefficient = 1/2; - cylindrical K factor
  * _gurneyConstant = 2320; - Gurney constant of tritonal in m/s
  * Equation - 0.8 for empirical 80% speed

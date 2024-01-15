@@ -10,7 +10,7 @@
  * 2: Maximum range of fragments to calculate <SCALAR>
  * 3: Maximum number of fragments to produce <SCALAR>
  * 4: Types of fragments <ARRAY>
- * 5: A modified parameter used to calulate whether a framgent hits <SCALAR>
+ * 5: A modified parameter used to calculate whether a fragment hits <SCALAR>
  * 6: Shot parent <ARRAY>
  *
  * Return Value:

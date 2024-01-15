@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Add a hitbox outline to an object
+ * Add a hit box outline to an object
  *
  * Arguments:
- * 0 Object to draw hitbox <OBJECT>:
+ * 0: Object to draw the hit box of <OBJECT>:
  * 1: Add sphere at object origin <BOOL>
  *
  * Return Value:

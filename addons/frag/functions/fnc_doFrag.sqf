@@ -28,7 +28,7 @@ params [
     ["_shotParents", [objNull, objNull], [[]]]
 ];
 
-// Check for vehicle holdoff timeout
+// Check for vehicle hold-off timeout
 private _shotParentVic = _shotParents#0;
 if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exitWith {
     TRACE_1("vehicleTimeExit",_shotParentVic);

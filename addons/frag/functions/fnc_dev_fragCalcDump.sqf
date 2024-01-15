@@ -3,7 +3,7 @@
  * Author: Lambda.Tiger, based on fnc_dev_debugAmmo by "ACE-Team"
  * Dumps all ammo types to see if there's any reason to spawn fragments
  * given hit power and distance. Good for grasping the values used in
- * shouldFrag to cull non-fragementing rounds
+ * shouldFrag to cull non-fragmenting rounds
  *
  * Arguments:
  * 0: Display rounds that will never frag (power < 5).

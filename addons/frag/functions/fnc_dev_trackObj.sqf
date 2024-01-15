@@ -4,9 +4,9 @@
  * This function adds an object to have it's course tracked (every frame).
  *
  * Arguments:
- * 0: Object to draw hitbox <OBJECT>
+ * 0: Object to draw track OBJECT>
  * 1: Color of trace <STRING>
- * 2: Whether the object is a projectile <BOOL>
+ * 2: Whether the object is a projectile or whether to add projectile EHs <BOOL>
  *
  * Return Value:
  * None
@@ -37,7 +37,7 @@ private _colorArray = switch (toLowerANSI _color) do {
 };
 GVAR(dev_trackLines) set [getObjectID _object, [1, [getposATL _object], _colorArray]];
 
-// eventhandler to track round and cleanup when round is "dead"
+// event handler to track round and cleanup when round is "dead"
 [
     {
         if (isGamePaused) exitWith {};
@@ -58,7 +58,7 @@ GVAR(dev_trackLines) set [getObjectID _object, [1, [getposATL _object], _colorAr
     [_object]
 ] call CBA_fnc_addPerFrameHandler;
 
-// Projectile eventhandlers that add spheres and points for more accurate round tracking
+// Projectile event handlers that add spheres and points for more accurate round tracking
 if (!_isProj) exitWith {};
 
 _object addEventHandler [
