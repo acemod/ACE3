@@ -73,15 +73,15 @@ GVAR(lastSpallTime) = CBA_missionTime;
  * Improve performance of finding otherside of object on shallow angle
  * impacts. 120 degrees due to 90 degree offset with _lVelUnit into object.
  */
-private _spallPos = +_lPosASL;
+private _spallPos = _lPosASL vectorAdd _unitStep;
 if (120 > acos ( _lVelUnit vectorDotProduct _sNorm)) then {
     _spallPos = _spallPos vectorAdd (_unitStep vectorMultiply 5);
 };
-for "_i" from 1 to 20 do
+for "_i" from 2 to 20 do
 {
     private _nPos = _spallPos vectorAdd _unitStep;
     if (!lineIntersects [_spallPos, _nPos]) then {
-        _spallPos = _nPos vectorAdd _unitStep;
+        _spallPos = _nPos vectorAdd (_unitStep vectorMultiply 2);
         break
     };
     _spallPos = _nPos;
