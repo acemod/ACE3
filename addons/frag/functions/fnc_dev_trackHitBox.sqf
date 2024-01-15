@@ -4,8 +4,8 @@
  * Add a hitbox outline to an object
  *
  * Arguments:
- * 0 <OBJECT>: Object to draw hitbox
- * 1 <BOOL>: Add sphere at object origin
+ * 0 Object to draw hitbox <OBJECT>:
+ * 1: Add sphere at object origin <BOOL>
  *
  * Return Value:
  * None

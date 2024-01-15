@@ -4,9 +4,9 @@
  * This function adds an object to have it's course tracked (every frame).
  *
  * Arguments:
- * 0 <OBJECT>: Object to draw hitbox
- * 1 <STRING>: Color of trace
- * 2 <BOOL>: Whether the object is a projectile
+ * 0: Object to draw hitbox <OBJECT>
+ * 1: Color of trace <STRING>
+ * 2: Whether the object is a projectile <BOOL>
  *
  * Return Value:
  * None

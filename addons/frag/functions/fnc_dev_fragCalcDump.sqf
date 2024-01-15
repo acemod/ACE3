@@ -6,9 +6,8 @@
  * shouldFrag to cull non-fragementing rounds
  *
  * Arguments:
- * 0: _logAll <BOOL> - Display rounds that will never frag (power < 5).
- *           Default value false
- * 1: _minFragPower <FLOAT> - minimum range for sqrt power calculation
+ * 0: Display rounds that will never frag (power < 5).
+ *           Default value false <BOOL>
  *
  * Return Value:
  * None
@@ -20,8 +19,7 @@
  */
 
 params [
-    ["_logAll", false, [false]],
-    ["_minFragPower", 35, [123]]
+    ["_logAll", false, [false]]
 ];
 
 
