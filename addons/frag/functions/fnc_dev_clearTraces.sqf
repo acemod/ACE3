@@ -14,9 +14,10 @@
  *
  * Public: No
  */
-for "_i" from 0 to count GVAR(dev_eventSpheres) - 1 do {
-    deleteVehicle (GVAR(dev_eventSpheres)#_i);
-};
+
+{
+    deleteVehicle _x;
+} forEach GVAR(dev_eventSpheres);
 GVAR(dev_eventSpheres) = [];
 
 GVAR(dev_trackLines) = createHashMap;
