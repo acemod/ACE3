@@ -164,10 +164,10 @@ class GrenadeHand: Grenade {
     */
     GVAR(classes)[] = {QGVAR(tiny)};
     GVAR(fragCount) = 1000;
-    GVAR(metal) = 210;       // metal in grams
-    GVAR(charge) = 185;      // explosive in grams
-    GVAR(gurney_c) = 2843;   // Gurney velocity constant for explosive type. See: http://en.wikipedia.org/wiki/Gurney_equations
-    GVAR(gurney_k) = "3/5";  // Gurney shape factor, in this case a sphere. See: http://en.wikipedia.org/wiki/Gurney_equations
+    GVAR(metal) = 210; // metal in grams
+    GVAR(charge) = 185; // explosive in grams
+    GVAR(gurney_c) = 2843; // Gurney velocity constant for explosive type. See: http://en.wikipedia.org/wiki/Gurney_equations
+    GVAR(gurney_k) = "3/5"; // Gurney shape factor, in this case a sphere. See: http://en.wikipedia.org/wiki/Gurney_equations
 };
 class GrenadeHand_stone: GrenadeHand {
     ACE_FRAG_RM_EH;

@@ -128,7 +128,7 @@ private _totalFragCount = 0;
     // target pos for fragment to hit
     private _targetPos = (velocity _target vectorMultiply _timeOfFlight) vectorAdd [0, 0, ACE_FRAG_HALF_GRAVITY_APPROX * _timeOfFlight ^ 2];
     if _isPerson then {
-        private _hitPoint =  selectRandom ACE_FRAG_HITPOINTS;
+        private _hitPoint = selectRandom ACE_FRAG_HITPOINTS;
         private _hitPointPos = _target selectionPosition [_hitPoint, "HitPoints", "AveragePoint"];
         _targetPos = _target modelToWorldWorld _hitPointPos vectorAdd _targetPos;
     } else {
