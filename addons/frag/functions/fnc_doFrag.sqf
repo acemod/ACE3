@@ -19,7 +19,7 @@
  *
  * Public: No
  */
-TRACE_1("",_this);
+TRACE_1("begin doFrag",_this);
 params [
     ["_proj", objNull, [objNull]],
     ["_posASL", [0, 0, 0], [[]], [3]],
@@ -41,7 +41,7 @@ if (_ammo isEqualTo "" || {_posASL isEqualTo [0, 0, 0] || _timeSince < ACE_FRAG_
     TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
 };
 private _maxFrags = round linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
-TRACE_3("",_timeSince,CBA_missionTime,_maxFrags);
+TRACE_3("willFrag",_timeSince,CBA_missionTime,_maxFrags);
 
 
 private _ammoArr = [_ammo] call FUNC(getFragInfo);

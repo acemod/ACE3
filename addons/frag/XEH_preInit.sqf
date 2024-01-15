@@ -8,7 +8,8 @@ PREP_RECOMPILE_END;
 
 
 GVAR(spallMaterialCache) = createHashMap;
-GVAR(spallRoundCache) = createHashMap;
+GVAR(spallInfoCache) = createHashMap;
+GVAR(shouldSpallCache) = createHashMap;
 GVAR(lastSpallTime) = -2;
 
 GVAR(shouldFragCache) = createHashMap;

@@ -9,7 +9,7 @@
         };
 
 #ifdef DEBUG_MODE_DRAW
-        if (hasInterface && GVAR(debugOptions)) then {
+        if (hasInterface) then {
             private _h = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
             missionNamespace setVariable [QGVAR(dev_drawPFEH), _h];
             ["unit", LINKFUNC(dev_switchUnitHandle), true] call CBA_fnc_addPlayerEventHandler;

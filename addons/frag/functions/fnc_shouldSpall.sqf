@@ -18,16 +18,16 @@
 
 params ["_ammo"];
 
-private _shouldSpall = GVAR(spallRoundCache) get _ammo;
+private _shouldSpall = GVAR(shouldSpallCache) get _ammo;
 
 if (!isNil "_shouldSpall") exitWith {_shouldSpall};
 
 private _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber");
 private _explosive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive");
-private _idH = getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange");
+private _indirectHit = getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange");
 
-_shouldSpall = _caliber >= 2.5 || (_explosive > 0 && _idh >= 1);
+_shouldSpall = _caliber * GVAR(spallIntensity) >= 2.5 || (_explosive >= 0.5 && _explosive * _indirectHit * GVAR(spallIntensity) >= 4);
 
-GVAR(spallRoundCache) set [_ammo, _shouldSpall];
+GVAR(shouldSpallCache) set [_ammo, _shouldSpall];
 
 _shouldSpall

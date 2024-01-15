@@ -15,14 +15,14 @@
  * Public: No
  */
 
-TRACE_1("Beginning blacklist init", GVAR(BlackList));
+TRACE_1("Beginning blacklist init", GVAR(blackList));
 
 if (!ADDON) then {
     [FUNC(initBlackList), [], 1] call CBA_fnc_waitAndExecute;
 };
 
 // could improve text parsing of CBA setting string
-private _convArray = parseSimpleArray GVAR(BlackList);
+private _convArray = parseSimpleArray GVAR(blackList);
 
 if (count _convArray == 0 ) exitWith {
     TRACE_1("Empty blacklist", _convArray);

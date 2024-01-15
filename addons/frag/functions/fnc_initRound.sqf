@@ -14,7 +14,7 @@
  *
  * Public: No
  */
- TRACE_1("",_this);
+ TRACE_1("ACE_Frag rndInit",_this);
 params [
     ["_projectile", objNull, [objNull]]
 ];
@@ -59,6 +59,10 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
             private _shotPrnt = getShotParents _proj;
             private _ammo = typeOf _proj;
             private _vUp = vectorUp _proj;
+            /*
+             * Wait a round to see what happens to the round, may result in
+             * multiple hits / slowdowns getting shunted to the first hit
+             */
             [
                 FUNC(doSpall),
                 [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
@@ -66,4 +70,9 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then
         }
     ];
 };
-TRACE_2("exit",_shouldFrag,_shouldSpall);
+#ifdef DEBUG_MODE_DRAW
+if (GVAR(debugOptions) && (_shouldFrag || _shouldSpall)) then {
+    [_projectile, "red", true] call FUNC(dev_trackObj);
+};
+#endif
+TRACE_2("initExit",_shouldFrag,_shouldSpall);
