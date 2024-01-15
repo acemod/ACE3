@@ -25,10 +25,10 @@ params [
     ["_fragVelocity", [0,0,0]],
     ["_heightAGL", 2, [123]],
     ["_fragType", [], [[]]],
-    ["_fragCnt", 10, [123]],
+    ["_maxFragCount", 10, [123]],
     ["_shotParents", [objNull, objNull], [[]], [2]]
 ];
-TRACE_5("fnc_doFragRandom", _posASL, _fragVelocity, _heightAGL, _fragType, _fragCnt);
+TRACE_6("doFragRandom",_posASL,_fragVelocity,_heightAGL,_fragType,_maxFragCount,_shotParents);
 
 // See cfgAmmoFragSpawner for different frag types
 private _hMode = switch (true) do {
@@ -44,14 +44,14 @@ private _type = if (count _fragType > 0 &&
     QGVAR(def_small_)
 };
 
-_fragCnt = switch (true) do {
-    case (_fragCnt <= 5): {"5"};
-    case (_fragCnt <= 10): {"10"};
+_maxFragCount = switch (true) do {
+    case (_maxFragCount <= 5): {"5"};
+    case (_maxFragCount <= 10): {"10"};
     default {"15"};
 };
 
 // Spawn the fragment spawner
-private _fragSpawner = createVehicle [_type + _fragCnt + _hMode, ASLToATL _posASL, [], 0, "CAN_COLLIDE"];
+private _fragSpawner = createVehicle [_type + _maxFragCount + _hMode, ASLToATL _posASL, [], 0, "CAN_COLLIDE"];
 _fragSpawner setVectorDirandUp [[0,0,1], [1,0,0]];
 _fragSpawner setVelocity _fragVelocity;
 _fragSpawner setShotParents _shotParents;

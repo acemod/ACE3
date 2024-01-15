@@ -1,5 +1,5 @@
 #include "..\script_component.hpp"
-#define HITBOX_DRAW_PATH [[3 , 2 , 1 , 5 , 6 , 7 , 3 , 0 , 4 , 5], [0, 1], [2, 6], [7, 4]]
+#define HITBOX_DRAW_PATH [[3, 2, 1, 5, 6, 7, 3, 0, 4, 5], [0, 1], [2, 6], [7, 4]]
 /*
  * Author: Lambda.Tiger
  * Per frame function to draw all dev traces

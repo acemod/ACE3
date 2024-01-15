@@ -36,34 +36,34 @@ if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exit
 _shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 
 // Check normal round timeout and adjust _max frags
-private _timeSince = CBA_missionTime - GVAR(lastFragTime);
-if (_ammo isEqualTo "" || {_posASL isEqualTo [0, 0, 0] || _timeSince < ACE_FRAG_HOLDOFF}) exitWith {
-    TRACE_3("timeExit",_timeSince,CBA_missionTime,GVAR(lastFragTime));
+private _timeSinceLastFrag = CBA_missionTime - GVAR(lastFragTime);
+if (_ammo isEqualTo "" || {_posASL isEqualTo [0, 0, 0] || _timeSinceLastFrag < ACE_FRAG_HOLDOFF}) exitWith {
+    TRACE_3("timeExit",_timeSinceLastFrag,CBA_missionTime,GVAR(lastFragTime));
 };
-private _maxFrags = round linearConversion [0.1, 1.5, _timeSince, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
-TRACE_3("willFrag",_timeSince,CBA_missionTime,_maxFrags);
+private _maxFragCount = round linearConversion [0.1, 1.5, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
+TRACE_3("willFrag",_timeSinceLastFrag,CBA_missionTime,_maxFragCount);
 
 
 private _ammoArr = [_ammo] call FUNC(getFragInfo);
 _ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
-// For low frag rounds limit the # of frags
+// For low frag rounds limit the # of frags created
 if (_modFragCount < 10) then {
-    _maxFrags = _modFragCount*4;
-    GVAR(lastFragTime) = CBA_missionTime - 0.1;
+    _maxFragCount = _modFragCount * ACE_FRAG_LOW_FRAG_COEFF;
+    GVAR(lastFragTime) = CBA_missionTime - ACE_FRAG_LOW_FRAG_HOLDOFF_REDUCTION;
 } else {
     GVAR(lastFragTime) = CBA_missionTime;
 };
 // Offset for ground clearance
-private _heightAGL = (ASLToAGL _posASL)#2;
-if (_heightAGL < 0.25) then {
-    _posASL = _posASL vectorAdd [0, 0, 0.25];
+private _heightATL = (ASLToATL _posASL)#2;
+if (_heightATL < ACE_FRAG_MIN_GROUND_OFFSET) then {
+    _posASL = _posASL vectorAdd [0, 0, ACE_FRAG_MIN_GROUND_OFFSET];
 };
 
-TRACE_3("fnc_doFragTargeted IF", _fragRange, _timeSince, GVAR(fragSimComplexity));
-if (_fragRange > 3 && _timeSince > ACE_FRAG_HOLDOFF*1.5 && GVAR(fragSimComplexity) != 1) then {
-    _maxFrags = _maxFrags - ([_posASL, _fragVel, _fragRange, _maxFrags, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
+TRACE_3("fnc_doFragTargeted IF", _fragRange, _timeSinceLastFrag, GVAR(fragSimComplexity));
+if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
+    _maxFragCount = _maxFragCount - ([_posASL, _fragVel, _fragRange, _maxFragCount, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
 
-if (_timeSince > 0.2 && {GVAR(fragSimComplexity) > 0}) then {
-    [_posASL, _velocity, _heightAGL, _fragTypes, _maxFrags, _shotParents] call FUNC(doFragRandom);
+if (GVAR(fragSimComplexity) > 0) then {
+    [_posASL, _velocity, _heightATL, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
 };

@@ -47,8 +47,7 @@ if (_shouldFrag && GVAR(enabled)) then {
 
 
 private _shouldSpall = _ammo call FUNC(shouldSpall);
-if (GVAR(spallEnabled) && {_shouldSpall}) then
-{
+if (GVAR(spallEnabled) && {_shouldSpall}) then {
     _projectile addEventHandler [
         "HitPart",
         {

@@ -37,12 +37,12 @@ if (_aID > -1 && {_lastUnit isNotEqualTo objNull}) then {
 _aID = _currentUnit addAction [
     "Reset Lines",
     FUNC(dev_clearTraces),
-    nil,        // arguments
-    1.5,        // priority
-    true,        // showWindow
-    false,        // hideOnUse
-    "",            // shortcut
-    "true",        // condition
+    nil,
+    1.5,
+    true,
+    false,
+    "",
+    "true",
     8
 ];
 
