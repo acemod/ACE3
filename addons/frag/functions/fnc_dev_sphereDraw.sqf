@@ -28,7 +28,7 @@ if (count _posASL < 3) then {
 };
 
 if (_color select [0,1] != "(") then {
-    switch (toLower _color) do {
+    switch (toLowerANSI _color) do {
         case "blue": { _color = "(0,0,0.8,0.5)"; };
         case "black": { _color = "(1,1,1,0.5)"; };
         case "white": { _color = "(0,0,0,0.5)"; };

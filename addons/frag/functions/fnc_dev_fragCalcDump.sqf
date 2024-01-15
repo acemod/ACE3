@@ -30,7 +30,7 @@ private _nPrinted = 0;
 
 diag_log text "//****************** fragCalcDump Beg ******************//";
 { // Begin _allAmmoConfigs forEach
-    private _ammo = toLower configName _x;
+    private _ammo = toLowerANSI configName _x;
 
     if (_ammo == "" || {_ammo in _processedCfgAmmos} ) then { continue };
 

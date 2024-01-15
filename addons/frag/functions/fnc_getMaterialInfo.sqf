@@ -31,7 +31,7 @@ if (isClass (configFile >> "CfgSurfaces" >> _surfType)) then {
         _material = getText (configFile >> "CfgSurfaces" >> _surfType >> "soundhit");
     };
 } else { // Messy way when a surface isn't added to cfgSurfaces
-    private _surfFileText = tolower preprocessFile _surfType;
+    private _surfFileText = toLowerANSI preprocessFile _surfType;
     _surfFileText = _surfFileText regexReplace ["[^a-z0-9]", ""];
     private _idx =  12 + (_surfFileText find "soundenviron");
     if (_surfFileText select [_idx, 5] isEqualTo "empty") then {
