@@ -69,6 +69,13 @@ if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
 // Passed all exitWiths
 GVAR(lastSpallTime) = CBA_missionTime;
 
+#ifdef DEBUG_MODE_DRAW
+if GVAR(dbgSphere) then {
+    [_lPosASL vectorAdd _lVelUnit, "orange"] call FUNC(dev_sphereDraw);
+    [_lPosASL, "yellow"] call FUNC(dev_sphereDraw);
+};
+#endif
+
 /*
  * Improve performance of finding otherside of object on shallow angle
  * impacts. 120 degrees due to 90 degree offset with _lVelUnit into object.
@@ -90,8 +97,6 @@ for "_i" from 2 to 20 do
 #ifdef DEBUG_MODE_DRAW
 if GVAR(dbgSphere) then {
     [_spallPos, "green"] call FUNC(dev_sphereDraw);
-    [_lPosASL vectorAdd _lVelUnit, "orange"] call FUNC(dev_sphereDraw);
-    [_lPosASL, "orange"] call FUNC(dev_sphereDraw);
 };
 #endif
 
