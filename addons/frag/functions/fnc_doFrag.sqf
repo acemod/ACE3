@@ -43,7 +43,6 @@ if (_ammo isEqualTo "" || {_posASL isEqualTo [0, 0, 0] || _timeSinceLastFrag < A
 private _maxFragCount = round linearConversion [0.1, 1.5, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 TRACE_3("willFrag",_timeSinceLastFrag,CBA_missionTime,_maxFragCount);
 
-
 private _ammoArr = [_ammo] call FUNC(getFragInfo);
 _ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
 // For low frag rounds limit the # of frags created

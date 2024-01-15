@@ -30,7 +30,7 @@ if (!local _currentUnit) exitWith {
 
 
 private _aID = missionNamespace getVariable [QGVAR(dev_clearTraceAction), -1];
-if (_aID > -1 && {_lastUnit isNotEqualTo objNull}) then {
+if (_aID > -1 && {!isNull _lastUnit}) then {
     _lastUnit removeAction _aID;
 };
 
