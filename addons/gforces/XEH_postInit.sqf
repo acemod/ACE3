@@ -13,7 +13,7 @@ GVAR(playerIsVirtual) = false;
     ["unit", { // Add unit changed EH to check if player is either virtual (logic) or a UAV AI
         params ["_unit"];
         GVAR(playerIsVirtual) = ((getNumber (configOf _unit >> "isPlayableLogic")) == 1) ||
-        {(getText (configOf _unit >> "simulation")) == "UAVPilot"};
+        {unitIsUAV _unit};
         TRACE_3("unit changed",_unit,typeOf _unit,GVAR(playerIsVirtual));
     }, true] call CBA_fnc_addPlayerEventHandler;
 
