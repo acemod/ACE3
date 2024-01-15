@@ -3,10 +3,10 @@
 /*
  * Author: ACE-Team, Lambda.Tiger
  * This function will dump every ammo config that would generate ace_frag
- * fragements that could be fired from a weapon
+ * fragments that could be fired from a weapon
  *
  * Arguments:
- * 0: Log ammo types that wouldn't normall frag <BOOL>
+ * 0: Log ammo types that wouldn't normally frag
  * 1: Only export ammo classes of classes referenced in cfgAmmo
  *    and their submunitions. <BOOL>
  * 2: Force a CSV format on debug print <BOOL>
