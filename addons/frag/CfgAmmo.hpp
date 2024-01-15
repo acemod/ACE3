@@ -19,7 +19,7 @@
 
 class CfgAmmo {
 
-    #include "cfgAmmoBaseEH.hpp"
+    #include "CfgAmmoBaseEH.hpp"
 
     class B_65x39_Caseless: BulletBase {
         class EventHandlers: EventHandlers {};
@@ -101,7 +101,7 @@ class CfgAmmo {
         caliber = 2.8;
     };
 
-    #include "cfgAmmoSpall.hpp"
-    #include "cfgAmmoFragSpawner.hpp"
-    #include "cfgAmmoFragParameters.hpp"
+    #include "CfgAmmoSpall.hpp"
+    #include "CfgAmmoFragSpawner.hpp"
+    #include "CfgAmmoFragParameters.hpp"
 };
