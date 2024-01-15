@@ -33,13 +33,13 @@ if (_isSidePlayer) then {
 [
     {
         if (isGamePaused) exitWith {};
-        params ["_par", "_handle"];
-        _par params ["_projectile"];
+        params ["_params", "_handle"];
+        _params params ["_projectile"];
         if (!alive _projectile) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         private _projectileArray = GVAR(dev_trackLines) getOrDefault [(getObjectID _projectile), -1];
-        if (typeName _projectileArray == "SCALAR") exitWith {};
+        if (_projectileArray isEqualType 0) exitWith {};
         (_projectileArray#0) pushBack getPosATL _projectile;
     },
     0,

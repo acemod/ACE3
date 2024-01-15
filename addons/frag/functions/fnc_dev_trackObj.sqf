@@ -41,14 +41,14 @@ GVAR(dev_trackLines) set [getObjectID _object, [1, [getposATL _object], _colorAr
 [
     {
         if (isGamePaused) exitWith {};
-        params ["_par", "_handle"];
-        _par params ["_object"];
+        params ["_params", "_handle"];
+        _params params ["_object"];
         if (!alive _object) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         private _arr = GVAR(dev_trackLines) getOrDefault [(getObjectID _object), -1];
 
-        if (typeName _arr isEqualTo "SCALAR") exitWith {
+        if (_arr isEqualType 0) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 

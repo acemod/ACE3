@@ -30,11 +30,10 @@ if (count _convArray == 0 ) exitWith {
 
 // Add CBA setting blacklist to blacklist and log errors
 private _errors = 0;
-private _items = count _convArray;
-for "_i" from 0 to _items - 1 do {
-    private _ammo = _convArray#_i;
-    if (typeName _ammo isNotEqualTo "STRING") then {
-        INFO_1("Improper ammo string at index %1", _i);
+forEach {
+    private _ammo = _x;
+    if (!(_ammo isEqualType "")) then {
+        INFO_1("Improper ammo string at index %1", _forEachIndex);
         INC(_errors);
         continue;
     };
@@ -46,6 +45,6 @@ for "_i" from 0 to _items - 1 do {
     };
 
     GVAR(shouldFragCache) set [_convArray#_i, false];
-};
+} forEach ;
 
-INFO_2("Initialized blacklist. Total items found: %1, number of items failed: %2", _items, _errors);
+INFO_2("Initialized blacklist. Total items found: %1, number of items failed: %2", count _convArray, _errors);
