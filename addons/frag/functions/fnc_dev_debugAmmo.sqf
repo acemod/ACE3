@@ -7,7 +7,7 @@
  *
  * Arguments:
  * 0: Log ammo types that wouldn't normally frag
- * 1: Only export ammo classes of classes referenced in cfgAmmo
+ * 1: Only export ammo classes of classes referenced in cfgMagazines
  *    and their submunitions. <BOOL>
  * 2: Force a CSV format on debug print <BOOL>
  *
