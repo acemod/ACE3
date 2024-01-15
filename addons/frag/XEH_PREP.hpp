@@ -26,6 +26,7 @@ PREP(doFragRandom);
 PREP(shouldSpall);
 PREP(doSpall);
 PREP(getMaterialInfo);
+PREP(getSpallInfo);
 PREP(initMaterialCache);
 
 // Explosive Reflection

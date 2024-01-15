@@ -15,7 +15,7 @@
  *
  * Public: No
  */
-TRACE_1("",_this);
+TRACE_1("doSpall",_this);
 params [
     "_projectile",
     ["_hitObj", objNull],
@@ -42,20 +42,28 @@ if (_material isEqualTo "ground") then {
 #endif
 };
 
+// Find spall speed / fragment info
+[_ammo] call FUNC(getSpallInfo) params ["_caliber", "_explosive", "_indirectHit"];
 private _vel = if (alive _projectile) then {
-    velocity _projectile;
+    _explosive = 0; // didn't explode
+    velocity _projectile
 } else {
-    [0, 0, 0]
+    [0, 0, 0];
 };
 
-// Find spall speed / fragment
 private _dV = vectorMagnitude _lVel - vectorMagnitude _vel;
-private _caliber = getNumber (configFile >> "cfgAmmo" >> _ammo >> "caliber");
-// scaled momentum change made on caliber-mass assumption ~sqrt(2)/20 * caliber ~= mass
-private _deltaMomentum =  0.0707 * _caliber * sqrt( _dV ) * GVAR(SpallIntensity);
-TRACE_3("found speed",_dV,_caliber,_deltaMomentum);
+/*
+ * This is all fudge factor since real spalling is too complex for calculation.
+ * There are two terms. The first is from round impact, taking a quasi scale
+ * of sqrt(2)/50 * round caliber * srqt(change in speed). The second term is
+ * explosive * indirect hit, for any explosive contribution
+ */
+private _spallPower =  (0.02828 * _caliber * sqrt _dV  + _explosive * _indirectHit) * GVAR(spallIntensity);
+TRACE_3("found speed",_dV,_caliber,_spallPower);
+TRACE_3("energy",0.02828*_caliber*sqrt(_dV),_explosive*_indirectHit,0.02828*_caliber*sqrt(_dV)+_explosive*_indirectHit);
 
-if (_deltaMomentum < 2) exitWith {
+
+if (_spallPower < 2) exitWith {
     TRACE_1("lowImpulse",_ammo);
 };
 
@@ -66,8 +74,6 @@ private _unitStep = _lVelUnit vectorMultiply 0.05;
 if (terrainIntersectASL [_lPosASL vectorAdd _unitStep, _lPosASL]) exitWith {
     TRACE_3("terrainIntersect",_lPosASL,_unitStep,_lPosASL);
 };
-// Passed all exitWiths
-GVAR(lastSpallTime) = CBA_missionTime;
 
 #ifdef DEBUG_MODE_DRAW
 if GVAR(dbgSphere) then {
@@ -84,15 +90,23 @@ private _spallPos = _lPosASL vectorAdd _unitStep;
 if (120 > acos ( _lVelUnit vectorDotProduct _sNorm)) then {
     _spallPos = _spallPos vectorAdd (_unitStep vectorMultiply 5);
 };
-for "_i" from 2 to 20 do
+private _insideObject = true;
+for "_i" from 2 to 21 do
 {
     private _nPos = _spallPos vectorAdd _unitStep;
     if (!lineIntersects [_spallPos, _nPos]) then {
         _spallPos = _nPos vectorAdd (_unitStep vectorMultiply 2);
+        _insideObject = false;
         break
     };
     _spallPos = _nPos;
 };
+
+if (_insideObject) exitWith {
+    TRACE_3("insideObj",_lPosASL,_spallPos,alive _projectile);
+};
+// Passed all exitWiths
+GVAR(lastSpallTime) = CBA_missionTime;
 
 #ifdef DEBUG_MODE_DRAW
 if GVAR(dbgSphere) then {
@@ -102,14 +116,14 @@ if GVAR(dbgSphere) then {
 
 private _spawnSize = switch (true) do
 {
-    case (_deltaMomentum < 3): { "_spall_tiny" };
-    case (_deltaMomentum < 5): { "_spall_small" };
-    case (_deltaMomentum < 8): { "_spall_medium" };
-    case (_deltaMomentum < 12): { "_spall_large" };
+    case (_spallPower < 3): { "_spall_tiny" };
+    case (_spallPower < 5): { "_spall_small" };
+    case (_spallPower < 8): { "_spall_medium" };
+    case (_spallPower < 12): { "_spall_large" };
     default { "_spall_huge" };
 };
 
-private _spallSpawner = createVehicle [
+/*private _spallSpawner = createVehicle [
     "ace_frag_" + _material + _spawnSize,
     ASLToATL _spallPos,
     [],
@@ -118,10 +132,10 @@ private _spallSpawner = createVehicle [
 ];
 _spallSpawner setVectorDirandUp [_lVelUnit, _vUp];
 _spallSpawner setVelocity (_lVelUnit vectorMultiply (_dV/2));
-_spallSpawner setShotParents _shotParents;
+_spallSpawner setShotParents _shotParents;*/
 
 #ifdef DEBUG_MODE_FULL
-systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _deltaMomentum);
+systemChat ("bSpd: " + str speed _spallSpawner + ", frag: " + _fragSpawnType + ", dm: " + str _spallPower);
 #endif
 #ifdef DEBUG_MODE_DRAW
 _spallSpawner addEventHandler [
