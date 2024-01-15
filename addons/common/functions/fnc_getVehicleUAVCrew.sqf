@@ -17,4 +17,4 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-crew _vehicle select {unitIsUAV _x} // return
+(crew _vehicle) select {unitIsUAV _x} // return
