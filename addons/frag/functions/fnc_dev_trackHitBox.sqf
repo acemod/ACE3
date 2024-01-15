@@ -17,7 +17,7 @@
  */
 params [
     ["_object", objNull, [objNull]],
-    ["_addSphere", true, [turretLocal]]
+    ["_addSphere", true, [true]]
 ];
 
 if (isNull _object) exitWith {};
@@ -44,7 +44,7 @@ switch (true) do {
 };
 private _centerPoint = ASLToAGL getPosASL _object;
 
-if (GVAR(dbgSphere) && {_addSphere && {isNull objectParent  _object}}) then {
+if (GVAR(dbgSphere) && {_addSphere && {isNull objectParent _object}}) then {
     private _centerSphere = [getPosASL _object, "yellow"] call FUNC(dev_sphereDraw);
     _centerSphere disableCollisionWith vehicle _object;
     _centerSphere attachTo [_object, _object worldToModel _centerPoint];
