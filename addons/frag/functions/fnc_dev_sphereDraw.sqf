@@ -44,5 +44,3 @@ private _colorString = "#(argb,8,8,3)color" + _color;
 private _sphere = createVehicle ["Sign_Sphere25cm_F", ASLtoATL _posASL, [], 0, "CAN_COLLIDE"];
 _sphere setObjectTextureGlobal [0, _colorString];
 GVAR(dev_eventSpheres) pushBack _sphere;
-
-_sphere;
