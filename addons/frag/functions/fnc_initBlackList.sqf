@@ -24,7 +24,7 @@ if (!ADDON) then {
 // could improve text parsing of CBA setting string
 private _convArray = parseSimpleArray GVAR(blackList);
 
-if (count _convArray == 0 ) exitWith {
+if (_convArray isEqualTo []) exitWith {
     TRACE_1("Empty blacklist", _convArray);
 };
 

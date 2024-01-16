@@ -39,9 +39,10 @@ if (_onlyShotAmmoTypes) then {
         ];
         if (_ammo isEqualTo "" || {_ammo in _allAmmoConfigs}) exitWith {};
         _allAmmoConfigs pushBack _ammo;
-        private _subMunit = toLowerANSI getText (configFile >> "cfgAmmo" >> _ammo >> "submunitionAmmo");
+        private _ammoConfig = configFile >> "cfgAmmo" >> _ammo;
+        private _subMunit = toLowerANSI getText (_ammoConfig >> "submunitionAmmo");
         if (_subMunit isNotEqualTo "") then {
-            _subMunit = getArray (configFile >> "cfgAmmo" >> _ammo >> "submunitionAmmo");
+            _subMunit = getArray (_ammoConfig >> "submunitionAmmo");
             for "_i" from 0 to count _subMunit - 1 do {
                 if (_i mod 2 == 0) then {
                     [toLowerANSI (_subMunit#_i)] call _configSearchFunc;
@@ -57,7 +58,7 @@ if (_onlyShotAmmoTypes) then {
         [toLowerANSI getText (_x >> "ammo")] call _configSearchFunc;
     } forEach _allMagazineConfigs;
 } else {
-    _allAmmoConfigs = configProperties [configFile >> "cfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true] apply {configName _x};
+    _allAmmoConfigs = configProperties [configFile >> "CfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true] apply {configName _x};
 };
 
 private _processedCfgAmmos = [];
@@ -67,7 +68,7 @@ private _printCount = 0;
     if (_ammo != "" && {!(_ammo in _processedCfgAmmos)}) then {
         _processedCfgAmmos pushBack _ammo;
 
-        private _ammoConfig = (configFile >> "cfgAmmo" >> _ammo);
+        private _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
         private _shoulFrag = [_ammo] call FUNC(shouldFrag);
 
         if (_shoulFrag || _logAll) then {

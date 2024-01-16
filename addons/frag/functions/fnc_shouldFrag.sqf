@@ -24,11 +24,12 @@ if (!isNil "_shouldFrag") exitWith {_shouldFrag};
 
 _shouldFrag = true;
 
-private _skip = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(skip));
-private _force = getNumber (configFile >> "cfgAmmo" >> _ammo >> QGVAR(force));
-private _explosive = getNumber (configFile >> "cfgAmmo" >> _ammo >> "explosive");
-private _indirectHit = getNumber (configFile >> "cfgAmmo" >> _ammo >> "indirectHit");
-private _indirectRange = getNumber (configFile >> "cfgAmmo" >> _ammo >> "indirectHitRange");
+private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
+private _skip = getNumber (_ammoConfig >> QGVAR(skip));
+private _force = getNumber (_ammoConfig >> QGVAR(force));
+private _explosive = getNumber (_ammoConfig >> "explosive");
+private _indirectHit = getNumber (_ammoConfig >> "indirectHit");
+private _indirectRange = getNumber (_ammoConfig >> "indirectHitRange");
 
 if (_skip == 1 || (_force == 0 && {_explosive < 0.5 || {_indirectHit < 3
     || {_indirectRange < 5 && _indirectHit < _indirectRange}}})) then {

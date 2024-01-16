@@ -28,10 +28,11 @@ if (!isNil "_material") exitWith {
     _material
 };
 // Use 'soundEnviron' or 'soundHit' to extract approx material
-if (isClass (configFile >> "CfgSurfaces" >> _surfType)) then {
-    _material = getText (configFile >> "CfgSurfaces" >> _surfType >> "soundEnviron");
+private _surfaceConfig = configFile >> "CfgSurfaces" >> _surfType;
+if (isClass _surfaceConfig) then {
+    _material = getText (_surfaceConfig >> "soundEnviron");
     if (_material isEqualTo "" || {_material isEqualTo "empty"}) then {
-        _material = getText (configFile >> "CfgSurfaces" >> _surfType >> "soundhit");
+        _material = getText (_surfaceConfig >> "soundhit");
     };
 } else { // Messy way when a surface isn't added to cfgSurfaces
     private _surfFileText = toLowerANSI preprocessFile _surfType;
