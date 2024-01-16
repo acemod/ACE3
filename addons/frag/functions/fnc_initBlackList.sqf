@@ -32,7 +32,7 @@ if (_convArray isEqualTo []) exitWith {
 private _errors = 0;
 {
     private _ammo = _x;
-    if (!(_ammo isEqualType "")) then {
+    if !(_ammo isEqualType "") then {
         INFO_1("Improper ammo string at index %1", _forEachIndex);
         INC(_errors);
         continue;
