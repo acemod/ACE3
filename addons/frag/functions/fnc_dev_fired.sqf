@@ -16,4 +16,4 @@
  */
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
-[_projectile, true, ((side _unit) getFriend (side ACE_player)) >= 0.6] call FUNC(dev_addRound);
+[_projectile, true, [side group _unit, side group ACE_player] call BIS_fnc_sideIsFriendly] call FUNC(dev_addRound);
