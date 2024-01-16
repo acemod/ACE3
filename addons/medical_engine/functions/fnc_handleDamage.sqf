@@ -35,7 +35,7 @@ private _newDamage = _damage - _oldDamage;
 
 // Happens occasionally for vehiclehit events (see line 80 onwards)
 // Just exit early to save some frametime
-if (_newDamage == 0) exitWith {_oldDamage};
+if (_newDamage == 0 && {_hitpoint isNotEqualTo "ace_hdbracket"}) exitWith {_oldDamage};
 
 // Get scaled armor value of hitpoint and calculate damage before armor
 // We scale using passThrough to handle explosive-resistant armor properly (#9063)
