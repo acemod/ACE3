@@ -40,8 +40,9 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
         private _fragInfo = [_ammo] call FUNC(getFragInfo);
         _fragInfo params ["_fragRange", "_fragMaxVelocity", "", "_modifiedFragCount"];
         private _fragCount = 4 * pi* _modifiedFragCount;
-        private _indirectHitRange = getNumber (configFile >> "cfgAmmo" >> _ammo >> "indirectHitRange");
-        private _indirectHit = getNumber (configFile >> "cfgAmmo" >> _ammo >> "indirectHit");
+        private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
+        private _indirectHitRange = getNumber (_ammoConfig >> "indirectHitRange");
+        private _indirectHit = getNumber (_ammoConfig >> "indirectHit");
         private _fragPowerSpeedRange = [0.5, 1] vectorMultiply _fragMaxVelocity;
 
         diag_log text format ["Ammo type: %1 | Should frag: %2", _ammo, _shouldFrag];
