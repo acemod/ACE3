@@ -28,12 +28,12 @@ params [
     ["_shotParents", [objNull, objNull], [[]]]
 ];
 
-// Check for vehicle hold-off timeout
+// Don't let a single object cause all fragmentation events
 _shotParents params ["_shotParentVic"];
-if (_shotParentVic getVariable [QGVAR(nextFragTime), -1] > CBA_missionTime) exitWith {
+if (_shotParentVic getVariable [QGVAR(obj_nextFragTime), -1] > CBA_missionTime) exitWith {
     TRACE_1("vehicleTimeExit",_shotParentVic);
 };
-_shotParentVic setVariable [QGVAR(nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
+_shotParentVic setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 
 // Check normal round timeout and adjust _max frags
 private _timeSinceLastFrag = CBA_missionTime - GVAR(lastFragTime);
