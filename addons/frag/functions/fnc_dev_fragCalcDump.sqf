@@ -32,7 +32,9 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
 { // Begin _allAmmoConfigs forEach
     private _ammo = toLowerANSI configName _x;
 
-    if (_ammo == "" || {_ammo in _processedCfgAmmos} ) then { continue };
+    if (_ammo == "" || {_ammo in _processedCfgAmmos} ) then {
+        continue
+    };
 
 
     private _shouldFrag = [_ammo] call FUNC(shouldFrag);

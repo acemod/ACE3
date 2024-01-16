@@ -69,7 +69,9 @@ TRACE_3("Targets found",_posASL,_fragRange,count _objects);
 private _fragArcs = createHashMap;
 private _totalFragCount = 0;
 { // Begin of forEach iterating on _objects
-    if (!alive _x) then {continue};
+    if (!alive _x) then {
+        continue;
+    };
     private _target = _x;
 
     #ifdef DEBUG_MODE_DRAWFRAG
@@ -90,7 +92,9 @@ private _totalFragCount = 0;
         private _boxParams = boundingBoxReal [_target, "FireGeometry"];
         _boxParams params ["_pointA", "_pointB"];
         private _dims = _pointB vectorDiff _pointA;
-        if (_dims#0 * _dims#1 * _dims#2 <= 0.5) then {continue};
+        if (_dims#0 * _dims#1 * _dims#2 <= 0.5) then {
+            continue;
+        };
         _crossSectionArea = _dims#1 * _dims#2;
         _height = _dims#2;
     };
@@ -109,7 +113,7 @@ private _totalFragCount = 0;
     };
     if (_fragCount == 0) then {
         TRACE_2("fragments",_fragChance,_fragCount);
-        continue
+        continue;
     };
 
     // handle limiting fragments per degree arc
@@ -166,7 +170,7 @@ private _totalFragCount = 0;
     _totalFragCount = _totalFragCount + _fragCount;
     if (_totalFragCount >= _maxFrags) then {
         TRACE_2("maxFrags", _totalFragCount, _maxFrags);
-        break
+        break;
     };
 } forEach _objects;
 
