@@ -1,7 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Add a hit box outline to an object
+ * Add a hit box outline to an object, outdated for unit hits as they
+ * use hit-point locations
  *
  * Arguments:
  * 0: Object to draw the hit box of <OBJECT>:
@@ -19,6 +20,7 @@ params [
     ["_object", objNull, [objNull]],
     ["_addSphere", true, [true]]
 ];
+TRACE_2("Adding hitbox",_object,_addSphere);
 
 if (isNull _object) exitWith {};
 
@@ -33,7 +35,7 @@ if (_object isKindOf "CAManBase") then {
 } else {
     _box = boundingBoxReal [_object, "FireGeometry"];
 };
-_box params ["_lowP","_upP"];
+_box params ["_lowP", "_upP"];
 
 // adjust with stance
 switch (stance _object) do {
