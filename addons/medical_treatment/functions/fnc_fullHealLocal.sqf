@@ -64,7 +64,7 @@ _patient setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
 _patient setVariable [VAR_BLOOD_PRESS, [80, 120], true];
 _patient setVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES, true];
 _patient setVariable [VAR_SPO2, DEFAULT_SPO2, true];
-_patient setVariable [VAR_OXYGENDEMAND, 0, true];
+_patient setVariable [VAR_OXYGEN_DEMAND, 0, true];
 
 // IVs
 _patient setVariable [QEGVAR(medical,ivBags), nil, true];

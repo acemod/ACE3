@@ -40,7 +40,7 @@ if (_isRespawn) then {
     _unit setVariable [VAR_CRDC_ARRST, false, true];
     _unit setVariable [VAR_HEMORRHAGE, 0, true];
     _unit setVariable [VAR_SPO2, DEFAULT_SPO2, true];
-    _unit setVariable [VAR_OXYGENDEMAND, 0, true];
+    _unit setVariable [VAR_OXYGEN_DEMAND, 0, true];
 
     // - Pain ---------------------------------------------------------------------
     _unit setVariable [VAR_PAIN, 0, true];

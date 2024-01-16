@@ -155,7 +155,7 @@
 #define VAR_CRDC_ARRST        QEGVAR(medical,inCardiacArrest)
 #define VAR_HEART_RATE        QEGVAR(medical,heartRate)
 #define VAR_SPO2              QEGVAR(medical,spo2)
-#define VAR_OXYGENDEMAND      QEGVAR(medical,oxygenDemand)
+#define VAR_OXYGEN_DEMAND      QEGVAR(medical,oxygenDemand)
 #define VAR_PAIN              QEGVAR(medical,pain)
 #define VAR_PAIN_SUPP         QEGVAR(medical,painSuppress)
 #define VAR_PERIPH_RES        QEGVAR(medical,peripheralResistance)

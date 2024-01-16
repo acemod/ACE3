@@ -8,7 +8,7 @@
     {
         if (_this) exitWith {}; // skip if true
         {
-            _x setVariable [VAR_OXYGENDEMAND, 0, true];
+            _x setVariable [VAR_OXYGEN_DEMAND, 0, true];
             _x setVariable [VAR_SPO2, DEFAULT_SPO2, true];
         } forEach (allUnits select {local _x})
     } // reset oxygen demand on setting change
