@@ -54,7 +54,7 @@ if IN_CRDC_ARRST(_unit) then {
         };
         // Increase HR to compensate for low blood oxygen
         // Increase HR to compensate for higher oxygen demand (e.g. running, recovering from sprint)
-        private _oxygenDemand = _unit getVariable [QGVAR(oxygenDemand), 0];
+        private _oxygenDemand = _unit getVariable [VAR_OXYGENDEMAND, 0];
         _targetHR = _targetHR + ((97 - _spo2) * 2) + (_oxygenDemand * -1000);
         _targetHR = (_targetHR + _hrTargetAdjustment) max 0;
         _hrChange = round(_targetHR - _heartRate) / 2;

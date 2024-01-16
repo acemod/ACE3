@@ -71,5 +71,5 @@ private _rateOfChange = _negativeChange + (_positiveChange * _breathingEffective
 
 private _spo2 = (_current + (_rateOfChange * _deltaT)) max 0 min 100;
 
-_unit setVariable [QGVAR(oxygenDemand), _negativeChange - BASE_OXYGEN_USE];
+_unit setVariable [VAR_OXYGEN_DEMAND, _negativeChange - BASE_OXYGEN_USE];
 _unit setVariable [VAR_SPO2, _spo2, _syncValue];
