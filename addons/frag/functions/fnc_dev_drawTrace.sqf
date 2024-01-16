@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+if (!GVAR(debugOptions)) exitWith {};
 
 {
     _y params ["_posArray", "_color"];

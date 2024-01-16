@@ -15,7 +15,8 @@
  *
  * Public: No
  */
-params ["_lastUnit", "_currentUnit"];
+TRACE_1("switchUnit",_this);
+params ["_currentUnit", "_lastUnit"];
 
 if (isNull _currentUnit || {_lastUnit isEqualTo _currentUnit}) exitWith {};
 if (!local _currentUnit) exitWith {
@@ -34,7 +35,9 @@ if (_actionID > -1 && {!isNull _lastUnit}) then {
 
 _actionID = _currentUnit addAction [
     "Reset Lines",
-    FUNC(dev_clearTraces),
+    {
+        remoteExecCall [QFUNC(dev_clearTraces), 2];
+    },
     nil,
     1.5,
     true,
@@ -44,4 +47,4 @@ _actionID = _currentUnit addAction [
     8
 ];
 
-missionNamespace getVariable [QGVAR(dev_clearTraceAction), _actionID];
+missionNamespace setVariable [QGVAR(dev_clearTraceAction), _actionID];
