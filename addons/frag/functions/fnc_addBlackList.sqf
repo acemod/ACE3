@@ -18,7 +18,6 @@
 params ["_projectile"];
 TRACE_1("addBlackList",_round);
 
-
 if (_projectile isEqualType objNull) then {
     _projectile = typeOf _projectile;
 };

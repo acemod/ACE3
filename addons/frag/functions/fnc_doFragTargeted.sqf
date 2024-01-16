@@ -49,7 +49,6 @@ if (_objects isEqualTo []) exitWith {
     0;
 };
 
-
 // grab crews and add them in so that targets stay approx. sorted by distance
 {
     private _crew = crew _x;
@@ -74,7 +73,7 @@ private _totalFragCount = 0;
     };
     private _target = _x;
 
-    #ifdef DEBUG_MODE_DRAWFRAG
+    #ifdef DEBUG_MODE_DRAW
     [_target, false] call FUNC(dev_trackHitBox);
     #endif
 
@@ -98,9 +97,6 @@ private _totalFragCount = 0;
         _crossSectionArea = _dims#1 * _dims#2;
         _height = _dims#2;
     };
-
-
-
 
     private _distance = _target distance _posASL;
 

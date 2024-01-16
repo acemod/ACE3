@@ -24,7 +24,6 @@
     }
 ] call CBA_fnc_addEventHandler;
 
-
 #ifdef LOG_FRAG_INFO
 [true, true, 30] call FUNC(dev_debugAmmo);
 #endif

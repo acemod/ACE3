@@ -16,7 +16,6 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     1
 ] call CBA_fnc_addSetting;
 
-
 [
     QGVAR(reflectionsEnabled), "CHECKBOX",
     [LSTRING(EnableReflections), LSTRING(EnableReflections_Desc)],

@@ -19,7 +19,6 @@ params [
     ["_projectile", objNull, [objNull]]
 ];
 
-
 private _ammo = typeOf _projectile;
 if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
     TRACE_2("bad ammo or projectile",_ammo,_projectile);
@@ -44,7 +43,6 @@ if (_shouldFrag && GVAR(enabled)) then {
         }
     ];
 };
-
 
 private _shouldSpall = _ammo call FUNC(shouldSpall);
 if (GVAR(spallEnabled) && {_shouldSpall}) then {

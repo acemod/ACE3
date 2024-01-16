@@ -22,7 +22,6 @@ params [
     ["_logAll", false, [false]]
 ];
 
-
 private _allAmmoConfigs = configProperties [configFile >> "cfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true];
 private _processedCfgAmmos = [];
 
@@ -35,7 +34,6 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
     if (_ammo == "" || {_ammo in _processedCfgAmmos} ) then {
         continue
     };
-
 
     private _shouldFrag = [_ammo] call FUNC(shouldFrag);
     if (_nSkip || _logAll) then {

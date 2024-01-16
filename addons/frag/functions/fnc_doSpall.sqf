@@ -61,11 +61,9 @@ private _velocityChange = vectorMagnitude _lastVelocity - vectorMagnitude _vel;
 private _spallPower = (ACE_FRAG_ROUND_COEF * _caliber * sqrt _velocityChange + _explosive * _indirectHit) * GVAR(spallIntensity);
 TRACE_3("found speed",_velocityChange,_caliber,_spallPower);
 
-
 if (_spallPower < 2) exitWith {
     TRACE_1("lowImpulse",_ammo);
 };
-
 
 private _lastVelocityUnit = vectorNormalized _lastVelocity;
 private _deltaStep = _lastVelocityUnit vectorMultiply 0.05;

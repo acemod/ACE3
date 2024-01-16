@@ -27,7 +27,6 @@ if (!local _currentUnit) exitWith {
     ] call CBA_fnc_waitUntilAndExecute;
 };
 
-
 private _actionID = missionNamespace getVariable [QGVAR(dev_clearTraceAction), -1];
 if (_actionID > -1 && {!isNull _lastUnit}) then {
     _lastUnit removeAction _actionID;
