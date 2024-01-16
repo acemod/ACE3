@@ -28,15 +28,15 @@ if (count _posASL < 3) then {
 };
 
 if (_color select [0,1] != "(") then {
-    switch (toLowerANSI _color) do {
-        case "blue": { _color = "(0,0,0.8,0.5)"; };
-        case "black": { _color = "(1,1,1,0.5)"; };
-        case "white": { _color = "(0,0,0,0.5)"; };
-        case "red": { _color = "(0.8,0,0,0.5)"; };
-        case "green": { _color = "(0,0.8,0,0.5)"; };
-        case "yellow": { _color = "(0.8,0.8,0,0.5)"; };
-        case "orange": { _color = "(0.8,0.518,0,0.5)"; };
-        default { _color = "(0.8,0.8,0,0.5)";};
+    _color = switch (toLowerANSI _color) do {
+        case "blue": {"(0,0,0.8,0.5)"};
+        case "black": {"(1,1,1,0.5)"};
+        case "white": {"(0,0,0,0.5)"};
+        case "red": {"(0.8,0,0,0.5)"};
+        case "green": {"(0,0.8,0,0.5)"};
+        case "yellow": {"(0.8,0.8,0,0.5)"};
+        case "orange": {"(0.8,0.518,0,0.5)"};
+        default {"(0.8,0.8,0,0.5)"};
     };
 };
 private _colorString = "#(argb,8,8,3)color" + _color;
