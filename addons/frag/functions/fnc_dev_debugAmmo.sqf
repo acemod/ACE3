@@ -65,7 +65,7 @@ private _processedCfgAmmos = [];
 private _printCount = 0;
 { // Begin forEach to check each ammo type
     private _ammo = _x;
-    if (_ammo != "" && {!(_ammo in _processedCfgAmmos)}) then {
+    if (_ammo isNotEqualTo "" && {!(_ammo in _processedCfgAmmos)}) then {
         _processedCfgAmmos pushBack _ammo;
 
         private _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
