@@ -28,11 +28,11 @@ params [
     ["_vectorUp", [0,0,1]]
 ];
 
-if (CBA_missionTime - GVAR(lastSpallTime) < ACE_FRAG_SPALL_HOLDOFF ||
+if (CBA_missionTime < GVAR(nextSpallAllowTime)||
     _lastPosASL isEqualTo [0,0,0] ||
-    {isNull _objectHit || {_objectHit isKindOf "man" ||
-    {_ammo isEqualTo ""}}}) exitWith {
-    TRACE_4("time/invldHit",CBA_missionTime,GVAR(lastSpallTime),_objectHit,_lastPosASL);
+    {_ammo isEqualTo "" || {!isNull _objectHit &&
+    {objectHit isKindOf "man"}}}) exitWith {
+    TRACE_4("time/invldHit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
 };
 
 private _material = [_surfaceType] call FUNC(getMaterialInfo);
@@ -90,20 +90,20 @@ if (120 > acos ( _lastVelocityUnit vectorDotProduct _surfaceNorm)) then {
 private _insideObject = true;
 for "_i" from 2 to 21 do
 {
-    private _nPos = _spallPosASL vectorAdd _deltaStep;
-    if (!lineIntersects [_spallPosASL, _nPos]) then {
-        _spallPosASL = _nPos vectorAdd (_deltaStep vectorMultiply 2);
+    private _nextPos = _spallPosASL vectorAdd _deltaStep;
+    if (!lineIntersects [_spallPosASL, _nextPos]) then {
+        _spallPosASL = _nextPos vectorAdd (_deltaStep vectorMultiply 2);
         _insideObject = false;
         break
     };
-    _spallPosASL = _nPos;
+    _spallPosASL = _nextPos;
 };
 
 if (_insideObject) exitWith {
     TRACE_3("insideObj",_lastPosASL,_spallPosASL,alive _projectile);
 };
 // Passed all exitWiths
-GVAR(lastSpallTime) = CBA_missionTime;
+GVAR(nextSpallAllowTime) = CBA_missionTime + ACE_FRAG_SPALL_HOLDOFF;
 
 #ifdef DEBUG_MODE_DRAW
 if GVAR(dbgSphere) then {
