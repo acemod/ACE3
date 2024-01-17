@@ -3,7 +3,7 @@
 #define BASE_DRAG_HD (BASE_DRAG * HD_MULT)
 #define ACE_FRAG_RM_EH class EventHandlers: EventHandlers {\
     class ADDON {\
-        init = "";\
+        delete init;\
     };\
 }
 #define ACE_FRAG_ADD_EH_BASE class EventHandlers {\
