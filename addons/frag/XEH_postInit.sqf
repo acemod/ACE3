@@ -6,6 +6,12 @@
         if (isServer) then {
             call FUNC(initBlackList);
             call FUNC(initMaterialCache);
+            [
+                QEGVAR(common,setShotParents),
+                {
+                    (_this#0) setVariable [QGVAR(shotParent), [_this#1, _this#2]];
+                }
+            ] call CBA_fnc_addEventHandler;
         };
 
         #ifdef DEBUG_MODE_DRAW
