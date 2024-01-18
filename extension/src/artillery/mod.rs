@@ -106,8 +106,17 @@ fn command_get_solution(
     let mut y_offset = range_to_hit - y_sim;
     let mut y_correction = -y_offset;
     while (distance + y_offset) - range_to_hit > 1.0 {
-        (x_sim, y_sim, tof) = simulate::shot(
+        let (_, elevation, _) = simulate::find_solution(
             range_to_hit + y_correction,
+            height_of_target,
+            muzzle_velocity,
+            air_friction,
+            high_arc,
+            0.0,
+            FRAC_PI_2,
+        );
+        (x_sim, y_sim, tof) = simulate::shot(
+            elevation,
             muzzle_velocity,
             height_of_target,
             cross_wind,
