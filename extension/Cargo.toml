@@ -19,11 +19,8 @@ rayon = "1.8.1"
 # Clipboard
 clipboard = { version = "0.5.0", optional = true }
 
+[build-dependencies]
+git2 = "0.18.1"
+
 [features]
 default = ["clipboard"]
-
-[profile.release]
-opt-level = "z"
-lto = true
-codegen-units = 1
-strip = true
