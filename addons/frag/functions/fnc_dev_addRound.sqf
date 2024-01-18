@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function adds a round to be traced
+ * This function adds a round to be traced.
  *
  * Arguments:
  * 0: Projectile <OBJECT>
