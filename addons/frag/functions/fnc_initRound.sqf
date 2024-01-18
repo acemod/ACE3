@@ -14,18 +14,20 @@
  *
  * Public: No
  */
- TRACE_1("ACE_Frag rndInit",_this);
+
+TRACE_1("ACE_Frag rndInit",_this);
 params [
     ["_projectile", objNull, [objNull]]
 ];
+
+if !(isServer) exitWith {};
 
 private _ammo = typeOf _projectile;
 if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
     TRACE_2("bad ammo or projectile",_ammo,_projectile);
 };
 
-private _shouldFrag = _ammo call FUNC(shouldFrag);
-if (_shouldFrag && GVAR(enabled)) then {
+if (GVAR(enabled) && {_ammo call FUNC(shouldFrag)}) then {
     _projectile addEventHandler [
         "Explode",
         {
@@ -44,8 +46,7 @@ if (_shouldFrag && GVAR(enabled)) then {
     ];
 };
 
-private _shouldSpall = _ammo call FUNC(shouldSpall);
-if (GVAR(spallEnabled) && {_shouldSpall}) then {
+if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     _projectile addEventHandler [
         "HitPart",
         {
@@ -71,5 +72,9 @@ if (GVAR(spallEnabled) && {_shouldSpall}) then {
 if (GVAR(debugOptions) && (_shouldFrag || _shouldSpall)) then {
     [_projectile, "red", true] call FUNC(dev_trackObj);
 };
+#endif
+#ifdef DEBUG_MODE_FULL
+private _shouldSpall = _ammo call FUNC(shouldSpall);
+private _shouldFrag = _ammo call FUNC(shouldFrag)
 #endif
 TRACE_2("initExit",_shouldFrag,_shouldSpall);
