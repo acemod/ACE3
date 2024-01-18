@@ -17,11 +17,11 @@ GVAR(lastFragTime) = -2;
 
 #include "initSettings.inc.sqf"
 
-#ifdef DEBUG_MODE_DRAW
 GVAR(dev_trackLines) = createHashMap;
 GVAR(dev_hitBoxes) = createHashMap;
 GVAR(dev_eventSpheres) = [];
 GVAR(dev_drawPFEH) = -1;
+#ifdef DEBUG_MODE_DRAW
 #include "initSettingsDebug.inc.sqf"
 #endif
 
