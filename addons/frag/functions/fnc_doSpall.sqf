@@ -26,7 +26,7 @@ params [
     "_surfaceType",
     "_ammo",
     "_shotParents",
-    "_vectorUp",
+    "_vectorUp"
 ];
 
 if (CBA_missionTime < GVAR(nextSpallAllowTime)||

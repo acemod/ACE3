@@ -26,7 +26,7 @@ params [
     "_heightAGL",
     "_fragType",
     "_maxFragCount",
-    "_shotParents",
+    "_shotParents"
 ];
 TRACE_6("doFragRandom",_posASL,_fragVelocity,_heightAGL,_fragType,_maxFragCount,_shotParents);
 

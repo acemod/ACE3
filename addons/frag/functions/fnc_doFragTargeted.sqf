@@ -29,7 +29,7 @@ params [
     "_maxFrags",
     "_fragTypes",
     "_modFragCount",
-    "_shotParents",
+    "_shotParents"
 ];
 TRACE_5("fnc_doFragTargeted",_posASL,_fragRange,_maxFrags,_fragTypes,_modFragCount);
 
