@@ -15,10 +15,28 @@
                 0
             ] call CBA_fnc_addPerFrameHandler;
             [
-                "unit",
-                LINKFUNC(dev_switchUnitHandle),
-                true
-            ] call CBA_fnc_addPlayerEventHandler;
+                "ace_interact_menu_newControllableObject",
+                {
+                    params ["_type"];
+
+                    private _action = [
+                        QGVAR(debugReset),
+                        "Reset ACE Frag traces",
+                        "",
+                        {
+                            remoteExecCall [QFUNC(dev_clearTraces), 2];
+                        },
+                        {true}
+                    ] call EFUNC(interact_menu,createAction);
+                    [
+                        _type,
+                        1,
+                        ["ACE_SelfActions"],
+                        _action,
+                        true
+                    ] call ace_interact_menu_fnc_addActionToClass;
+                }
+            ] call CBA_fnc_addEventHandler;
         };
         #endif
     }

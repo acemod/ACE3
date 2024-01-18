@@ -8,7 +8,6 @@ PREP(dev_fragCalcDump);
 PREP(dev_trackHitBox);
 PREP(dev_trackObj);
 PREP(dev_sphereDraw);
-PREP(dev_switchUnitHandle);
 PREP(doExplosions);
 PREP(doFrag);
 PREP(doFragRandom);
