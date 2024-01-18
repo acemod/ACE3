@@ -63,7 +63,7 @@ private _oldCompats = [];
 } forEach _addons;
 
 if (_oldAddons isNotEqualTo []) then {
-    _oldAddons = _oldAddons apply {"%1.pbo", _x};
+    _oldAddons = _oldAddons apply { format ["%1.pbo", _x] };
     private _errorMsg = "";
     if (count _oldAddons > 3) then {
         _errorMsg = format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3 from %4.<br/>Loaded mods with outdated ACE files: %5", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) -3, _mainVersion, _mainSource, (_oldSources joinString ", ")];

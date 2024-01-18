@@ -49,7 +49,8 @@ private _bulletSpeed = 0;
 private _gravity = [0, sin(_scopeBaseAngle) * -GRAVITY, cos(_scopeBaseAngle) * -GRAVITY];
 private _deltaT = 1 / _simSteps;
 private _speedOfSound = 0;
-if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+private _isABenabled = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
+if (_isABenabled) then {
     _speedOfSound = _temperature call EFUNC(weather,calculateSpeedOfSound);
 };
 
@@ -68,7 +69,7 @@ if (_useABConfig) then {
 };
 
 private _airFrictionCoef = 1;
-if (!_useABConfig && (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
+if (!_useABConfig && _isABenabled) then {
     private _airDensity = [_temperature, _barometricPressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
     _airFrictionCoef = _airDensity / 1.22498;
 };

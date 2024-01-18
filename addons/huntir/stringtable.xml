@@ -29,7 +29,7 @@
             <French>Projectile HuntIR</French>
             <Hungarian>HuntIR lövedék</Hungarian>
             <Portuguese>Cartucho HuntIR</Portuguese>
-            <Japanese>HuntIR 弾頭</Japanese>
+            <Japanese>HuntIR弾</Japanese>
             <Korean>헌트IR 유탄</Korean>
             <Chinesesimp>高空战术摄像头弹药</Chinesesimp>
             <Chinese>高空戰術成像器彈藥</Chinese>
@@ -46,7 +46,7 @@
             <French>Ecran HuntIR</French>
             <Hungarian>HuntIR Monitor</Hungarian>
             <Portuguese>Monitor HuntIR</Portuguese>
-            <Japanese>HuntIR モニタ</Japanese>
+            <Japanese>HuntIR モニター</Japanese>
             <Korean>헌트IR 모니터</Korean>
             <Chinesesimp>高空战术摄像头显示面板</Chinesesimp>
             <Chinese>高空戰術成像器顯示面板</Chinese>
@@ -114,7 +114,7 @@
             <French>Temps d'enregistrement :</French>
             <Hungarian>Felvételi idő:</Hungarian>
             <Portuguese>Tempo de gravação:</Portuguese>
-            <Japanese>録画時間:</Japanese>
+            <Japanese>記録時間:</Japanese>
             <Korean>녹화시간:</Korean>
             <Chinesesimp>记录时间：</Chinesesimp>
             <Chinese>記錄時間:</Chinese>
@@ -194,12 +194,12 @@
             <Spanish>Left/Right - Rotar camara</Spanish>
             <Czech>Levá/Pravá - Rotace kamery</Czech>
             <Russian>Влево/Вправо - Вращать камеру</Russian>
-            <Italian>Left/Right - Ruota telecamera</Italian>
+            <Italian>Sinistra/Destra - Ruota telecamera</Italian>
             <Polish>Lewo/Prawo - obrót kamery w poziomie</Polish>
             <French>Gauche/Droite - Rotation de la caméra</French>
             <Hungarian>Jobb/Bal - Kamera forgatás</Hungarian>
             <Portuguese>Esquerda/Direita - Rotaciona câmera</Portuguese>
-            <Japanese>Left/Right - カメラ回転</Japanese>
+            <Japanese>Left/Right - カメラの回転</Japanese>
             <Korean>좌/우 - 카메라 돌리기</Korean>
             <Chinesesimp>左/右—旋转摄像头</Chinesesimp>
             <Chinese>左/右 - 旋轉攝影機</Chinese>
@@ -211,12 +211,12 @@
             <Spanish>Up/Down - Subir/bajar camara</Spanish>
             <Czech>Nahoru/Dolu - Zvýšít/snížit úhel pohledu kamery</Czech>
             <Russian>Вверх/Вниз - Поднять/опустить камеру</Russian>
-            <Italian>Up/Down - Alza/abbassa telecamera</Italian>
+            <Italian>Su/Giù - Alza/abbassa telecamera</Italian>
             <Polish>Góra/Dół - obrót kamery w pionie</Polish>
             <French>Haut/Bas - Monter/descendre la caméra</French>
             <Hungarian>Fel/Le - Kamera döntése/süllyesztése</Hungarian>
             <Portuguese>Acima/Abaixo - Eleva/Abaixa a câmera</Portuguese>
-            <Japanese>Up/Down - カメラ角度を変更</Japanese>
+            <Japanese>Up/Down - カメラの角度</Japanese>
             <Korean>상/하 카메라 올리기/내리기</Korean>
             <Chinesesimp>上/下—上升/下降摄像头</Chinesesimp>
             <Chinese>上/下 - 上升/下降攝影機</Chinese>
@@ -262,12 +262,12 @@
             <Spanish>Esc - Salir del menú de ayuda</Spanish>
             <Czech>Esc - Ukončit pomoc </Czech>
             <Russian>Esc - Выйти из помощи</Russian>
-            <Italian>Esc - Chiudi aiuto</Italian>
+            <Italian>Esc - Aiuto dal Menù</Italian>
             <Polish>Esc - wyjście z ekranu Pomocy</Polish>
             <French>Esc - Sortir de l'aide</French>
             <Hungarian>Exit - Kilépés a súgóból</Hungarian>
             <Portuguese>Esc - Sai do Ajuda</Portuguese>
-            <Japanese>Esc - ヘルプ終了</Japanese>
+            <Japanese>Esc - ヘルプを閉じる</Japanese>
             <Korean>Esc - 도움말 나가기</Korean>
             <Chinesesimp>Esc—离开帮助</Chinesesimp>
             <Chinese>Esc - 離開幫助</Chinese>

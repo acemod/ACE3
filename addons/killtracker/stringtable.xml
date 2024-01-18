@@ -5,12 +5,14 @@
             <English>ACE Killed Events</English>
             <Japanese>ACE キルトラッカー</Japanese>
             <German>ACE Abgeschossene Ereignisse</German>
+            <Italian>ACE Eventi di Morte</Italian>
             <Polish>ACE Licznik Zabójstw</Polish>
             <Chinesesimp>ACE 击杀事件</Chinesesimp>
             <Korean>ACE 사살 이벤트</Korean>
             <Russian>ACE Счётчик убийств</Russian>
             <Spanish>ACE Eventos de Muertes</Spanish>
             <French>ACE Evénements Morts</French>
+            <Portuguese>ACE Contagem de Abates</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_TotalKills">
             <English>Total Kills:</English>
@@ -19,10 +21,12 @@
             <Turkish>Toplam Öldürme:</Turkish>
             <Japanese>総キル:</Japanese>
             <German>Gesammte Abschüsse:</German>
+            <Italian>Uccisioni Totali:</Italian>
             <Chinesesimp>总击杀数：</Chinesesimp>
             <Korean>총 사살수:</Korean>
             <Spanish>Muertes totales:</Spanish>
             <French>Total de morts :</French>
+            <Portuguese>Abates totais:</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Kill">
             <English>Kill: %1 %2</English>
@@ -31,10 +35,12 @@
             <Turkish>Öldürülen: %1 %2</Turkish>
             <Japanese>キル: %1 %2</Japanese>
             <German>Abschuss: %1 %2</German>
+            <Italian>Uccisione: %1 %2</Italian>
             <Chinesesimp>击杀：%1 %2</Chinesesimp>
             <Korean>사살: %1 %2</Korean>
             <Spanish>Muertes: %1 %2</Spanish>
             <French>Meurtre : %1 %2</French>
+            <Portuguese>Abate: %1 %2</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Killer">
             <English>Killer: %1 %2</English>
@@ -43,10 +49,12 @@
             <Turkish>Öldüren: %1 %2</Turkish>
             <Japanese>キラー: %1 %2</Japanese>
             <German>Täter: %1 %2</German>
+            <Italian>Uccisore: %1 %2</Italian>
             <Chinesesimp>击杀者：%1 %2</Chinesesimp>
             <Korean>사살자: %1 %2</Korean>
             <Spanish>Asesino: %1 %2</Spanish>
             <French>Tueur : %1 %2</French>
+            <Portuguese>Assassino: %1 %2</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Vehicle">
             <English>Vehicle: %1</English>
@@ -54,11 +62,13 @@
             <Polish>Pojazd: %1</Polish>
             <Turkish>Araç :%1</Turkish>
             <Japanese>車両: %1</Japanese>
-            <German>Fahrzeuge %!</German>
+            <German>Fahrzeuge: %1</German>
+            <Italian>Veicoli: %1</Italian>
             <Chinesesimp>载具：%1</Chinesesimp>
             <Korean>차량: %1</Korean>
             <Spanish>Vehículo: %1</Spanish>
             <French>Véhicule : %1</French>
+            <Portuguese>Veículo: %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_FriendlyFire">
             <English>Friendly Fire</English>

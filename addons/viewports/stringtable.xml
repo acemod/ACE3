@@ -6,6 +6,7 @@
             <Japanese>ビューポート</Japanese>
             <Korean>뷰포트</Korean>
             <Chinesesimp>观察口</Chinesesimp>
+            <Italian>Periscopi</Italian>
             <Polish>Wizjery</Polish>
             <Russian>Триплексы</Russian>
             <Spanish>Periscopios</Spanish>
@@ -15,9 +16,10 @@
         <Key ID="STR_ACE_Viewports_setting_enabled_description">
             <English>Allows crew to look through periscopes</English>
             <Polish>Pozwala załodze patrzeć przez peryskop</Polish>
-            <Japanese>乗組員がペリスコープを通して外を見ることができます</Japanese>
+            <Japanese>乗組員がペリスコープを通して外を見ることができるようにします</Japanese>
             <Korean>승무원이 잠망경을 통해 볼 수 있도록 허용합니다</Korean>
             <Chinesesimp>允许乘员通过观察口观察</Chinesesimp>
+            <Italian>Permetti all'equipaggio di guardare attraverso periscopi</Italian>
             <Russian>Разрешить экипажу смотреть сквозь перископ</Russian>
             <Spanish>Permite a la tripulación asomarse a través de los periscopios</Spanish>
             <German>Ermöglicht der Besatzung den Blick durch Periskope</German>

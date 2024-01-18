@@ -46,8 +46,7 @@
             // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
             _csw setVariable [QGVAR(assemblyMode), 2, true]; // Explicitly set advanced assembly mode + unload, and broadcast
             if (!GVAR(defaultAssemblyMode)) then {
-                TRACE_1("global disableVanillaAssembly event",_csw); // handles it being assembled when setting is disabled
-                [QGVAR(disableVanillaAssembly), [_csw]] call CBA_fnc_globalEvent;
+                [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
             };
             _csw setDir _tripodDir;
             _csw setPosATL _tripodPos;
@@ -75,4 +74,3 @@
 
     [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
-

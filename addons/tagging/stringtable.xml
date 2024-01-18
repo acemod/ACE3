@@ -25,7 +25,7 @@
             <German>Konfiguriert, wie das Markieren standardmäßig funktioniert.</German>
             <Korean>태그 시스템의 기본사항을 설정합니다.</Korean>
             <French>Configure le fonctionnement par défaut du système de marquage.</French>
-            <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
+            <Italian>Configura come il sistema di marcamento agirà in maniera predefinita.</Italian>
             <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
             <Chinese>定義噴漆系統預設設定</Chinese>
             <Portuguese>Configura como o sistema de Marcação funcionará como padrão. (Tagging)</Portuguese>
@@ -40,7 +40,7 @@
             <German>Schnelle Markierung (Spraydose)</German>
             <Korean>스프레이 페인트 - 빠른 태그</Korean>
             <French>Peinture en spray - Marquage rapide</French>
-            <Italian>Marcamento Rapido</Italian>
+            <Italian>Marcamento Spray - Rapido</Italian>
             <Chinesesimp>快速喷漆</Chinesesimp>
             <Chinese>快速噴漆</Chinese>
             <Portuguese>Lata de Tinta - Marcação Rápida</Portuguese>
@@ -51,12 +51,12 @@
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
-            <Japanese>メインのインタラクションポイント(タグ)を選択した際に行われる動作。</Japanese>
+            <Japanese>メインのインタラクションポイント(タグ)を選択した際に行われるアクション。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>상호작용 시 표시할 낙서를 고릅니다.</Korean>
             <French>Type de marquage à appliquer sur le point visé.</French>
-            <Italian>Azione eseguita sul punto di interazione dei tag principali.</Italian>
+            <Italian>Azione eseguita sul punto di interazione del tag principale.</Italian>
             <Chinesesimp>直接喷漆在互动菜单瞄准的点上。</Chinesesimp>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
             <Portuguese>Ação executada no ponto principal de marcação</Portuguese>
@@ -87,7 +87,7 @@
             <German>Zufällig X</German>
             <Korean>무작위 X</Korean>
             <French>X aléatoire</French>
-            <Italian>Random X</Italian>
+            <Italian>Randomico X</Italian>
             <Chinesesimp>随机X标记</Chinesesimp>
             <Chinese>隨機X標記</Chinese>
             <Portuguese>Aleatório X</Portuguese>
@@ -103,7 +103,7 @@
             <German>Zufällig</German>
             <Korean>무작위</Korean>
             <French>Aléatoire</French>
-            <Italian>Random</Italian>
+            <Italian>Randomico</Italian>
             <Chinesesimp>随机</Chinesesimp>
             <Chinese>隨機</Chinese>
             <Portuguese>Aleatório</Portuguese>
@@ -151,6 +151,7 @@
             <Russian>Стрелка вверх</Russian>
             <Spanish>Flecha Arriba</Spanish>
             <German>Pfeil Hoch</German>
+            <Italian>Freccia in alto</Italian>
             <French>Flèche du haut</French>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_down">
@@ -161,6 +162,7 @@
             <Russian>Стрелка вниз</Russian>
             <Spanish>Flecha Abajo</Spanish>
             <German>Pfeil Runter</German>
+            <Italian>Freccia in basso</Italian>
             <French>Flèche du bas</French>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_left">
@@ -171,6 +173,7 @@
             <Russian>Стрелка влево</Russian>
             <Spanish>Flecha Izquierda</Spanish>
             <German>Pfeil Links</German>
+            <Italian>Freccia a sinistra</Italian>
             <French>Flèche gauche</French>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_right">
@@ -181,6 +184,7 @@
             <Russian>Стрелка вправо</Russian>
             <Spanish>Flecha Derecha</Spanish>
             <German>Pfeil Rechts</German>
+            <Italian>Freccia a destra</Italian>
             <French>Flèche droite</French>
         </Key>
         <Key ID="STR_ACE_Tagging_circle">
@@ -191,6 +195,7 @@
             <Russian>Круг</Russian>
             <Spanish>Círculo</Spanish>
             <German>Kreis</German>
+            <Italian>Cerchio</Italian>
             <French>Cercle</French>
         </Key>
         <Key ID="STR_ACE_Tagging_cross">
@@ -201,16 +206,18 @@
             <Russian>Перекрестие</Russian>
             <Spanish>Cruz</Spanish>
             <German>Kreuz</German>
+            <Italian>Croce</Italian>
             <French>Croix</French>
         </Key>
         <Key ID="STR_ACE_Tagging_diamond">
             <English>Diamond</English>
-            <Japanese>ひし形</Japanese>
+            <Japanese>菱形</Japanese>
             <Polish>Diament</Polish>
             <Korean>마름모</Korean>
             <Russian>Алмаз</Russian>
             <Spanish>Diamante</Spanish>
             <German>Diamant</German>
+            <Italian>Diamante</Italian>
             <French>Losange</French>
         </Key>
         <Key ID="STR_ACE_Tagging_square">
@@ -221,6 +228,7 @@
             <Russian>Квадрат</Russian>
             <Spanish>Cuadrado</Spanish>
             <German>Quadrat</German>
+            <Italian>Quadrato</Italian>
             <French>Carré</French>
         </Key>
         <Key ID="STR_ACE_Tagging_square_filled">
@@ -231,6 +239,7 @@
             <Russian>Заполненный Квадрат</Russian>
             <Spanish>Cuadrado Lleno</Spanish>
             <German>Gefülltes Quadrat</German>
+            <Italian>Quadrato pieno</Italian>
             <French>Carré rempli</French>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle">
@@ -241,6 +250,7 @@
             <Russian>Треугольник</Russian>
             <Spanish>Triángulo</Spanish>
             <German>Dreieck</German>
+            <Italian>Triangolo</Italian>
             <French>Triangle</French>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle_inverted">
@@ -251,6 +261,7 @@
             <Russian>Обратный треугольник</Russian>
             <Spanish>Triángulo invertido</Spanish>
             <German>Invertiertes Dreieck</German>
+            <Italian>Triangolo capovolto</Italian>
             <French>Triangle inversé</French>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
@@ -263,7 +274,7 @@
             <Czech>Černý sprej</Czech>
             <Portuguese>Spray de tinta preta</Portuguese>
             <Russian>Черный спрей</Russian>
-            <Japanese>ペイントスプレー缶 (黒色)</Japanese>
+            <Japanese>スプレーペイント缶 (黒色)</Japanese>
             <Korean>검정 스프레이</Korean>
             <Chinesesimp>黑色喷漆</Chinesesimp>
             <Chinese>黑色噴漆</Chinese>
@@ -279,7 +290,7 @@
             <Czech>Červený sprej</Czech>
             <Portuguese>Spray de tinta vermelha</Portuguese>
             <Russian>Красный спрей</Russian>
-            <Japanese>ペイントスプレー缶 (赤色)</Japanese>
+            <Japanese>スプレーペイント缶 (赤色)</Japanese>
             <Korean>빨강 스프레이</Korean>
             <Chinesesimp>红色喷漆</Chinesesimp>
             <Chinese>紅色噴漆</Chinese>
@@ -295,7 +306,7 @@
             <Czech>Zelený sprej</Czech>
             <Portuguese>Spray de tinta verde</Portuguese>
             <Russian>Зелёный спрей</Russian>
-            <Japanese>ペイントスプレー缶 (緑色)</Japanese>
+            <Japanese>スプレーペイント缶 (緑色)</Japanese>
             <Korean>초록 스프레이</Korean>
             <Chinesesimp>绿色喷漆</Chinesesimp>
             <Chinese>綠色噴漆</Chinese>
@@ -311,7 +322,7 @@
             <Czech>Modrý sprej</Czech>
             <Portuguese>Spray de tinta azul</Portuguese>
             <Russian>Синий спрей</Russian>
-            <Japanese>ペイントスプレー缶 (青色)</Japanese>
+            <Japanese>スプレーペイント缶 (青色)</Japanese>
             <Korean>파랑 스프레이</Korean>
             <Chinesesimp>蓝色喷漆</Chinesesimp>
             <Chinese>藍色噴漆</Chinese>
@@ -327,7 +338,7 @@
             <Czech>Žlutý sprej</Czech>
             <Portuguese>Spray de tinta amarela</Portuguese>
             <Russian>Желтый спрей</Russian>
-            <Japanese>ペイントスプレー缶 (黄色)</Japanese>
+            <Japanese>スプレーペイント缶 (黄色)</Japanese>
             <Korean>노랑 스프레이</Korean>
             <Chinesesimp>黄色喷漆</Chinesesimp>
             <Chinese>黃色噴漆</Chinese>
@@ -343,7 +354,7 @@
             <Czech>Bílý sprej</Czech>
             <Portuguese>Spray de tinta branca</Portuguese>
             <Russian>Белый спрей</Russian>
-            <Japanese>ペイントスプレー缶 (白色)</Japanese>
+            <Japanese>スプレーペイント缶 (白色)</Japanese>
             <Korean>하양 스프레이</Korean>
             <Chinesesimp>白色喷漆</Chinesesimp>
             <Chinese>白色噴漆</Chinese>
@@ -355,11 +366,11 @@
             <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
             <French>Une bombe de peinture en spray pour tagger les murs.</French>
-            <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
+            <Italian>Una bomboletta spay per applicare marker sui muri.</Italian>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
-            <Japanese>壁にタグを描くためのペイントスプレー缶。</Japanese>
+            <Japanese>壁にタグを描くためのスプレーペイント缶。</Japanese>
             <Korean>벽에 낙서할 수 있는 스프레이캔 입니다.</Korean>
             <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
             <Chinese>噴漆可噴塗在牆壁上</Chinese>
@@ -369,6 +380,7 @@
             <Japanese>車両IDマーキング</Japanese>
             <Polish>Oznaczenie identyfikacyjne pojazdu</Polish>
             <German>Fahrzeug ID Markierung</German>
+            <Italian>Marcatore identificativo sui veicoli</Italian>
             <Korean>차량 ID 마킹</Korean>
             <French>Marquage ID des véhicules</French>
         </Key>
@@ -377,6 +389,7 @@
             <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
             <Polish>Zastępuje tag klanu tekstem z szablonu</Polish>
             <German>Ersetzt das Clan-Tag durch Schablonentext</German>
+            <Italian>Sostituisce l'icona del clan con testo in stampatello</Italian>
             <Korean>클랜 태그를 스텐실 텍스트로 바꿉니다.</Korean>
             <French>Remplace le tag du clan par un texte au pochoir</French>
         </Key>

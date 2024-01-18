@@ -71,7 +71,7 @@
             <Japanese>SU-36/P デイサイト</Japanese>
             <Chinese>SU-36/P 日間瞄具</Chinese>
             <Chinesesimp>SU-36/P 常规瞄具</Chinesesimp>
-            <Italian>SU-36/P Daysight</Italian>
+            <Italian>SU-36/P Mirino Diurno</Italian>
             <Czech>SU-36/P denní puškohled</Czech>
             <Polish>SU-36/P Celownik dzienny</Polish>
             <Turkish>SU-36/P Daysight</Turkish>
@@ -84,10 +84,10 @@
             <German>Ein leichte, billige Visierung for Tageseinsätze. Beinhaltet den Zielsuchcomputer für das ganze System.</German>
             <Portuguese>Uma mira leve e comum utilizada para operações de dia. Contêm o computador de orientação para todo o sistema.</Portuguese>
             <French>Un viseur léger et bon marché utilisé pour les opérations de jour.\nContient l'ordinateur de guidage pour tout le système.</French>
-            <Japanese>昼間時に使用される軽量で、低価格の照準器です。システム全体の誘導コンピュータを備えています。</Japanese>
+            <Japanese>昼間時に使用される軽量で、低価格の照準器。システム全体の誘導コンピュータを備えている。</Japanese>
             <Chinese>一個輕量，便宜適合日間行動使用的廉價瞄具。內含全套制導電腦系統</Chinese>
             <Chinesesimp>一种用于日间作战的轻型廉价瞄准具。包含整个系统的制导计算机</Chinesesimp>
-            <Italian>Una luce,un mirino usato per le operazioni diurne.Contiene il computer di guida per l'intero sistema </Italian>
+            <Italian>Un mirino leggero ed economico usato per le operazioni diurne. Contiene il computer di guida per l'intero sistema.</Italian>
             <Czech>Lehký a levný puškohled pro použití za denního světla. Obsahuje navigační počítač pro celý systém.</Czech>
             <Polish>Lekki, tani celownik używany do działania w trakcie dnia. Zawiera komputer naprowadząjący dla całego systemu</Polish>
             <Russian>Лёгкий дешёвый прицел, используемый для дневных операций. Содержит компьютер для всей системы</Russian>
@@ -102,7 +102,7 @@
             <Japanese>特徴的な飛行特性を持つ、ワイヤ誘導の SACLOS ミサイルです。</Japanese>
             <Chinese>一個有線制導半自動指令型飛彈並有著獨特的飛航動作</Chinese>
             <Chinesesimp>具有独特飞行特性的线导半自动指令型导弹</Chinesesimp>
-            <Italian>Un missile SACLOS  filo-guidato con uniche caratterische di volo </Italian>
+            <Italian>Un missile SACLOS filo-guidato con una caratterisca di volo particolare</Italian>
             <Czech>Drátem naváděná SACLOS raketa s unikátními letovými vlastnostmi</Czech>
             <Polish>Naprowadzany przewodowo rakietowy pocisk SACLOS o unikalnej charakterystyce lotu</Polish>
             <Russian>Ракета SACLOS с проводным наведением с уникальной характеристикой полета</Russian>
