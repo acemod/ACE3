@@ -1,7 +1,8 @@
 private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 
 [
-    QGVAR(enabled), "CHECKBOX",
+    QGVAR(enabled),
+    "CHECKBOX",
     [LSTRING(EnableFrag), LSTRING(EnableFrag_Desc)],
     [_category, LSTRING(Frag)],
     true,
@@ -9,7 +10,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(spallEnabled), "CHECKBOX",
+    QGVAR(spallEnabled),
+    "CHECKBOX",
     [LSTRING(EnableSpall), LSTRING(EnableSpall_Desc)],
     [_category, LSTRING(Spall)],
     false,
@@ -17,7 +19,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(reflectionsEnabled), "CHECKBOX",
+    QGVAR(reflectionsEnabled),
+    "CHECKBOX",
     [LSTRING(EnableReflections), LSTRING(EnableReflections_Desc)],
     [_category, LSTRING(Reflections)],
     false,
@@ -34,7 +37,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(atLeastOne), "CHECKBOX",
+    QGVAR(atLeastOne),
+    "CHECKBOX",
     [LSTRING(MinFrag), LSTRING(MinFrag_Desc)],
     [_category, LSTRING(Frag)],
     false,
@@ -42,7 +46,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(blackList), "EDITBOX",
+    QGVAR(blackList),
+    "EDITBOX",
     [LSTRING(DefBlackList), LSTRING(DefBlackList_Desc)],
     [_category, LSTRING(Frag)],
     QUOTE(['B_556x45_Ball']),
@@ -52,7 +57,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(spallIntensity), "SLIDER",
+    QGVAR(spallIntensity),
+    "SLIDER",
     [LSTRING(SpallIntensity), LSTRING(SpallIntensity_Desc)],
     [_category, LSTRING(Spall)],
     [0.1, 2, 1, 1],
