@@ -17,7 +17,6 @@
 
 TRACE_1("Beginning blacklist init", GVAR(blackList));
 
-
 // could improve text parsing of CBA setting string
 private _convArray = parseSimpleArray GVAR(blackList);
 
