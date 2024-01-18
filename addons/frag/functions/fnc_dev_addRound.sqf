@@ -42,7 +42,7 @@ if (_isSidePlayer) then {
         if (!alive _projectile) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
-        private _projectileArray = GVAR(dev_trackLines) getOrDefault [(getObjectID _projectile), -1];
+        private _projectileArray = GVAR(dev_trackLines) getOrDefault [getObjectID _projectile, -1];
         if (_projectileArray isEqualType 0) exitWith {};
         (_projectileArray#0) pushBack getPosATL _projectile;
     },
