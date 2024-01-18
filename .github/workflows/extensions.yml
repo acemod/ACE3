@@ -4,6 +4,9 @@ on:
   push:
     paths:
     - 'extension/**'
+    - 'Cargo.toml'
+    - 'Cargo.lock'
+    - '.github/workflows/extensions.yml'
 
 jobs:
   lint:
