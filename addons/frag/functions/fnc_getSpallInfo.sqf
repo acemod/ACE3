@@ -25,7 +25,7 @@ private _ammoInfo = GVAR(spallInfoCache) get _ammo;
 
 if (!isNil "_ammoInfo") exitWith {_ammoInfo};
 
-private _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
+private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
 private _caliber = getNumber (_ammoConfig >> "caliber");
 private _explosive = 1 min getNumber (_ammoConfig >> "explosive");
 private _indirectHit = getNumber (_ammoConfig >> "indirectHitRange");
