@@ -1,10 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function adds rounds using their config init EH.
-
+ * This function adds projectile explode and hitPart event handlers and is
+ * intended to be called from an projectile config init event handler.
+ *
  * Arguments:
- * 0: Projectile <OBJECT> - The object created
+ * 0: The projectile to be initialized <OBJECT>
  *
  * Return Value:
  * None
@@ -16,9 +17,7 @@
  */
 
 TRACE_1("ACE_Frag rndInit",_this);
-params [
-    ["_projectile", objNull, [objNull]]
-];
+params ["_projectile"];
 
 if !(isServer) exitWith {};
 
@@ -31,13 +30,13 @@ if (GVAR(enabled) && {_ammo call FUNC(shouldFrag)}) then {
     _projectile addEventHandler [
         "Explode",
         {
-            params ["_proj", "_posASL"];
+            params ["_proj", "_posASL", "_velocity"];
             private _shotParents = getShotParents _proj;
             private _ammo = typeOf _proj;
             // wait for frag damage to kill units before spawning fragments
             [
                 FUNC(doFrag),
-                _this + [_ammo, _shotParents]
+                [_posASL, _velocity, _ammo, _shotParents]
             ] call CBA_fnc_execNextFrame;
             if (GVAR(reflectionsEnabled)) then {
                 [_posASL, _ammo] call FUNC(doReflections);
@@ -73,8 +72,4 @@ if (GVAR(debugOptions) && (_shouldFrag || _shouldSpall)) then {
     [_projectile, "red", true] call FUNC(dev_trackObj);
 };
 #endif
-#ifdef DEBUG_MODE_FULL
-private _shouldSpall = _ammo call FUNC(shouldSpall);
-private _shouldFrag = _ammo call FUNC(shouldFrag)
-#endif
-TRACE_2("initExit",_shouldFrag,_shouldSpall);
+TRACE_1("initExit",_ammo);
