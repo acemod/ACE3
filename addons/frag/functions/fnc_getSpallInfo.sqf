@@ -5,13 +5,13 @@
  * ammo type.
  *
  * Arguments:
- * 0: _ammo <STRING> - cfgAmmo type of ammo to check
+ * 0: _ammo <STRING> - CfgAmmo type of ammo to check
  *
  * Return Value:
  * _ammoInfo <ARRAY>
- *  0: _caliber - search range for fragments <SCALAR>
- *  1: _explosive - whether the round is explosive or not <SCALAR>
- *  2: _indirectHitRange - Indirect hit damage <SCALAR>
+ *  0: _caliber - search range for fragments <NUMBER>
+ *  1: _explosive - whether the round is explosive or not <NUMBER>
+ *  2: _indirectHitRange - Indirect hit damage <NUMBER>
  *
  * Example:
  * ["B_556x45_Ball"] call ace_frag_fnc_getSpallInfo;

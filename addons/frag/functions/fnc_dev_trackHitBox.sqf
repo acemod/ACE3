@@ -5,8 +5,8 @@
  * use hit-point locations.
  *
  * Arguments:
- * 0: Object to draw the hit box of <OBJECT>
- * 1: Add sphere at object origin <BOOL>
+ * 0: Object that should have it's hit box drawn. <OBJECT>
+ * 1: Add sphere at object origin. <BOOL> (Default: true)
  *
  * Return Value:
  * None
@@ -16,6 +16,7 @@
  *
  * Public: No
  */
+
 params [
     ["_object", objNull, [objNull]],
     ["_addSphere", true, [true]]

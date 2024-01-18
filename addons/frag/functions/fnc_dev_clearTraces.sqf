@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Clears all dev spheres and traces
+ * Clears all dev spheres and traces.
  *
  * Arguments:
  * None
