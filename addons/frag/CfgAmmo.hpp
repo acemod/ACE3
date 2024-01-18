@@ -1,6 +1,7 @@
 #define BASE_DRAG -0.01
 #define HD_MULT 5
 #define BASE_DRAG_HD (BASE_DRAG * HD_MULT)
+#define ACE_FRAG_INIT_CODE _this call FUNC(initRound)
 #define ACE_FRAG_RM_EH class EventHandlers: EventHandlers {\
     class ADDON {\
         delete init;\
@@ -8,12 +9,12 @@
 }
 #define ACE_FRAG_ADD_EH_BASE class EventHandlers {\
     class ADDON {\
-        init = QUOTE(if (isServer) then {_this call FUNC(initRound);};);\
+        init = QUOTE(ACE_FRAG_INIT_CODE);\
     };\
 }
 #define ACE_FRAG_ADD_EH class EventHandlers: EventHandlers {\
     class ADDON {\
-        init = QUOTE(if (isServer) then {_this call FUNC(initRound);};);\
+        init = QUOTE(ACE_FRAG_INIT_CODE);\
     };\
 }
 
