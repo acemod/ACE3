@@ -18,6 +18,7 @@
 {
     deleteVehicle _x;
 } forEach GVAR(dev_eventSpheres);
+
 GVAR(dev_eventSpheres) = [];
 
 GVAR(dev_trackLines) = createHashMap;
