@@ -5,12 +5,12 @@
  * a maximum of 15.
  *
  * Arguments:
- * 0: Position of fragmenting projectile ASL <ARRAY>
- * 1: Velocity of the fragmenting projectile <ARRAY>
- * 2: Height (AGL) of the fragmenting projectile <SCALAR>
- * 3: Type of fragments to generate <ARRAY>
- * 4: Remaining fragment budget <SCALAR>
- * 5: Shot parents <ARRAY>
+ * 0: Position of fragmenting projectile ASL. <ARRAY>
+ * 1: Velocity of the fragmenting projectile. <ARRAY>
+ * 2: Height (AGL) of the fragmenting projectile. <NUMBER>
+ * 3: Type of fragments to generate. <ARRAY>
+ * 4: Remaining fragment budget. <NUMBER>
+ * 5: Shot parents. <ARRAY>
  *
  * Return Value:
  * None
@@ -22,15 +22,15 @@
  */
 params [
     "_posASL",
-    ["_fragVelocity", [0,0,0]],
-    ["_heightAGL", 2, [123]],
-    ["_fragType", [], [[]]],
-    ["_maxFragCount", 10, [123]],
-    ["_shotParents", [objNull, objNull], [[]], [2]]
+    "_fragVelocity",
+    "_heightAGL",
+    "_fragType",
+    "_maxFragCount",
+    "_shotParents",
 ];
 TRACE_6("doFragRandom",_posASL,_fragVelocity,_heightAGL,_fragType,_maxFragCount,_shotParents);
 
-// See cfgAmmoFragSpawner for different frag types
+// See CfgAmmoFragSpawner for different frag types
 private _hMode = switch (true) do {
     case (_heightAGL > 10): {"_top"};
     case (_heightAGL > 5): {"_hi"};

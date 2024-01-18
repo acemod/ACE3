@@ -24,12 +24,12 @@
 
 params [
     "_posASL",
-    ["_fragVelocity", 800, [123]],
-    ["_fragRange", 50, [123]],
-    ["_maxFrags", 20, [123]],
-    ["_fragTypes", [], [[]]],
-    ["_modFragCount", 1, [123]],
-    ["_shotParents", [objNull, objNull], [[]], [2]]
+    "_fragVelocity",
+    "_fragRange",
+    "_maxFrags",
+    "_fragTypes",
+    "_modFragCount",
+    "_shotParents",
 ];
 TRACE_5("fnc_doFragTargeted",_posASL,_fragRange,_maxFrags,_fragTypes,_modFragCount);
 
@@ -52,7 +52,7 @@ if (_objects isEqualTo []) exitWith {
 // grab crews and add them in so that targets stay approx. sorted by distance
 {
     private _crew = crew _x;
-    if (count _crew > 1) then {
+    if (_crew isNotEqualTo []) then {
         private _arr = [_x];
         {
             _arr pushBackUnique _x;
@@ -83,8 +83,8 @@ private _totalFragCount = 0;
     private _isPerson = _target isKindOf "CAManBase";
     if (_isPerson) then {
         switch (stance _target) do {
-            case ("STAND"): {_height = 1.9; _crossSectionArea = 1.5;};
-            case ("CROUCH"): {_height = 1.2; _crossSectionArea = 1;};
+            case "STAND": {_height = 1.9; _crossSectionArea = 1.5;};
+            case "CROUCH": {_height = 1.2; _crossSectionArea = 1;};
             default {_crossSectionArea = 0.75;};
         };
     } else {

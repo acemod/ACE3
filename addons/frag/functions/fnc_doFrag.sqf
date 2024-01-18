@@ -5,11 +5,10 @@
  * as handling some of the performance optimizations.
  *
  * Arguments:
- * 0: Projectile that's fragmenting <OBJECT>
- * 1: ASL position of projectile <ARRAY>
- * 2: Velocity of projectile <ARRAY>
- * 3: Projectile cfgAmmo classname <STRING>
- * 4: getShotParents of projectile at EH <ARRAY>
+ * 0: ASL position of projectile. <ARRAY>
+ * 1: Velocity of projectile <ARRAY>
+ * 2: Projectile CfgAmmo classname <STRING>
+ * 3: getShotParents of projectile at EH <ARRAY>
  *
  * Return Value:
  * None
@@ -21,11 +20,10 @@
  */
 TRACE_1("begin doFrag",_this);
 params [
-    "",
-    ["_posASL", [0, 0, 0], [[]], [3]],
-    ["_velocity", [0, 0, 0] , [[]], [3]],
-    ["_ammo", "", [""]],
-    ["_shotParents", [objNull, objNull], [[]]]
+    "_posASL",
+    "_velocity",
+    "_ammo",
+    "_shotParents"
 ];
 
 // Don't let a single object cause all fragmentation events
@@ -37,7 +35,7 @@ _shotParentVic setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_
 
 // Check normal round timeout and adjust _max frags
 private _timeSinceLastFrag = CBA_missionTime - GVAR(lastFragTime);
-if (_ammo isEqualTo "" || {_posASL isEqualTo [0, 0, 0] || _timeSinceLastFrag < ACE_FRAG_HOLDOFF}) exitWith {
+if (_timeSinceLastFrag < ACE_FRAG_HOLDOFF || {_posASL isEqualTo [0, 0, 0] || _ammo isEqualTo ""}) exitWith {
     TRACE_3("timeExit",_timeSinceLastFrag,CBA_missionTime,GVAR(lastFragTime));
 };
 private _maxFragCount = round linearConversion [0.1, 1.5, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];

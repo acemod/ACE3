@@ -15,23 +15,24 @@
  *
  * Public: No
  */
+
 TRACE_1("doSpall",_this);
 params [
     "_projectile",
-    ["_objectHit", objNull],
-    ["_lastPosASL", [0, 0, 0]],
-    ["_lastVelocity", [0, 0, 0]],
-    ["_surfaceNorm", [0, 0, 0]],
-    ["_surfaceType", ""],
-    ["_ammo", "", [""]],
-    ["_shotParents", [objNull, objNull], [[]]],
-    ["_vectorUp", [0,0,1]]
+    "_objectHit",
+    "_lastPosASL",
+    "_lastVelocity",
+    "_surfaceNorm",
+    "_surfaceType",
+    "_ammo",
+    "_shotParents",
+    "_vectorUp",
 ];
 
 if (CBA_missionTime < GVAR(nextSpallAllowTime)||
     _lastPosASL isEqualTo [0,0,0] ||
     {_ammo isEqualTo "" || {!isNull _objectHit &&
-    {objectHit isKindOf "man"}}}) exitWith {
+    {objectHit isKindOf "CAManBase"}}}) exitWith {
     TRACE_4("time/invldHit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
 };
 

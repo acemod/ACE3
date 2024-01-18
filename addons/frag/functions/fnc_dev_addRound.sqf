@@ -23,8 +23,8 @@
 
 params [
     "_projectile",
-    ["_addProjectileEventHandlers", true, [true]],
-    ["_isSidePlayer", true, [true]]
+    ["_addProjectileEventHandlers", true],
+    ["_isSidePlayer", true]
 ];
 
 if (_isSidePlayer) then {
