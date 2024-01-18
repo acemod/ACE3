@@ -25,8 +25,9 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(fragSimComplexity), "LIST",
-     [LSTRING(FragMode), LSTRING(FragMode_Desc)],
+    QGVAR(fragSimComplexity),
+    "LIST",
+    [LSTRING(FragMode), LSTRING(FragMode_Desc)],
     [_category, LSTRING(Frag)],
     [[2, 1, 0], [LSTRING(FragMode_Opt2),LSTRING(FragMode_Opt1),LSTRING(FragMode_Opt0)], 2],
     1
@@ -46,7 +47,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     [_category, LSTRING(Frag)],
     QUOTE(['B_556x45_Ball']),
     1,
-    nil,
+    {},
     true
 ] call CBA_fnc_addSetting;
 

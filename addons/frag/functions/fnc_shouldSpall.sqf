@@ -4,7 +4,7 @@
  * This function checks whether an ammunition type should cause spalling.
  *
  * Arguments:
- * 0: _ammo <STRING> - cfgAmmo type of ammo to check
+ * 0: Type of ammo to check <STRING>
  *
  * Return Value:
  * Whether the round type would spall when hitting an object <BOOL>
