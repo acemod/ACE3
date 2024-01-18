@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LorenLuke
  * Simulates an indirect shot on a target of known height with given drag, wind, and atmospheric conditions

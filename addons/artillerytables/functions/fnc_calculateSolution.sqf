@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LorenLuke
  * Provides fire angle and deflection solutions on a target of set distance and height, including accounting for drag and atmospheric wind conditions.

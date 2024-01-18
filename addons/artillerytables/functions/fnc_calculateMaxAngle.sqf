@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LorenLuke
  * Calculates the best possible angle to shoot farthest based on muzzle velocity and air friction.

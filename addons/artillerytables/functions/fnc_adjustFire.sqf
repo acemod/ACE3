@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LorenLuke
  * Adjusts a target point north and east, and recalculates a solution in air based on atmospheric conditions
