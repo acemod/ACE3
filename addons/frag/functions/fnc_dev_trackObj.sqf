@@ -35,7 +35,7 @@ private _colorArray = switch (toLowerANSI _color) do {
     case "white": {[0, 0, 0, 1]};
     default {[0, 0.8, 0.8, 1]};
 };
-GVAR(dev_trackLines) set [getObjectID _object, [[getposATL _object], _colorArray]];
+GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray]];
 
 // event handler to track round and cleanup when round is "dead"
 [
