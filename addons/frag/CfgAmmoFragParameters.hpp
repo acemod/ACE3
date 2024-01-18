@@ -6,11 +6,6 @@ class B_20mm: BulletBase {
     // Used in Weisel/AWC Nyx, which makes it a Rheinmetall Mk 20 Rh-202
     // http://www.navweaps.com/Weapons/WNGER_20mm-65_mk20.php
     // total mass of 134g probably not enough to do anything
-    /*GVAR(fragCount) = 20;
-    GVAR(metal) = ;
-    GVAR(charge) = ;
-    GVAR(gurney_c) = ;
-    GVAR(gurney_k) = "1/2";*/
     GVAR(skip) = 1;
 };
 class B_30mm_HE: B_19mm_HE {
