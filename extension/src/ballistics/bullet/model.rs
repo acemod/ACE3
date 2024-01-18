@@ -43,6 +43,7 @@ pub struct Bullet {
     pub rng: ChaCha8Rng,
 }
 
+#[allow(clippy::too_many_lines)]
 impl Bullet {
     pub fn simulate(
         &mut self,
@@ -57,9 +58,10 @@ impl Bullet {
         let mut tof = tick_time - self.start_time;
         let delta_time = tick_time - self.last_frame;
 
-        let temperature =
-            Temperature::new_celsius(self.temperature.as_celsius() - 0.0065 * bullet_position.z());
-        let pressure = (1013.25 - 10.0 * self.overcast)
+        let temperature = Temperature::new_celsius(
+            0.0065f64.mul_add(-bullet_position.z(), self.temperature.as_celsius()),
+        );
+        let pressure = 10.0f64.mul_add(-self.overcast, 1013.25)
             * (1.0
                 - (0.0065 * (self.altitude + bullet_position.z()))
                     / 0.0065f64.mul_add(self.altitude, temperature.as_kelvin()))
@@ -93,9 +95,8 @@ impl Bullet {
                     wind_source_obstacles.x(),
                     wind_source_obstacles.y(),
                 );
-                wind_attenuation *= 0.0f64.max(
-                    (height_atl / roughness_length).log10() / (20.0 / roughness_length).log10(),
-                )
+                wind_attenuation *=
+                    0.0f64.max((height_atl / roughness_length).log(20.0 / roughness_length));
             }
 
             wind *= wind_attenuation;
@@ -200,7 +201,9 @@ impl Bullet {
             let lat = self.latitude;
             let accel = Vector3::new(
                 2.0 * EARTH_ANGULAR_SPEED
-                    * (bullet_velocity.y() * lat.sin() - bullet_velocity.z() * lat.cos()),
+                    * bullet_velocity
+                        .y()
+                        .mul_add(lat.sin(), -bullet_velocity.z() * lat.cos()),
                 2.0 * EARTH_ANGULAR_SPEED * -(bullet_velocity.x() * lat.sin()),
                 2.0 * EARTH_ANGULAR_SPEED * (bullet_velocity.x() * lat.cos()),
             );

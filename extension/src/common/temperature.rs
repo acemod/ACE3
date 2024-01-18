@@ -40,19 +40,19 @@ impl FromArma for Temperature {
         }
         match s.chars().next().unwrap() {
             'c' => {
-                let temp = s[1..].parse::<f64>().map_err(|e| format!("{}", e))?;
+                let temp = s[1..].parse::<f64>().map_err(|e| format!("{e}"))?;
                 Ok(Self::new_celsius(temp))
             }
             'f' => {
-                let temp = s[1..].parse::<f64>().map_err(|e| format!("{}", e))?;
+                let temp = s[1..].parse::<f64>().map_err(|e| format!("{e}"))?;
                 Ok(Self::new_fahrenheit(temp))
             }
             'k' => {
-                let temp = s[1..].parse::<f64>().map_err(|e| format!("{}", e))?;
+                let temp = s[1..].parse::<f64>().map_err(|e| format!("{e}"))?;
                 Ok(Self::new_kelvin(temp))
             }
             _ => {
-                let temp = s.parse::<f64>().map_err(|e| format!("{}", e))?;
+                let temp = s.parse::<f64>().map_err(|e| format!("{e}"))?;
                 Ok(Self::new_celsius(temp))
             }
         }

@@ -28,7 +28,7 @@ fn trace_bullet(
         pos_x += vel_x * SIMULATION_STEP * 0.5;
         pos_y += vel_y * SIMULATION_STEP * 0.5;
         vel_x += SIMULATION_STEP * (vel_x * vel_mag * air_friction);
-        vel_y += SIMULATION_STEP * (vel_y * vel_mag * air_friction - GRAVITY);
+        vel_y += SIMULATION_STEP * (vel_y * vel_mag).mul_add(air_friction, -GRAVITY);
         pos_x += vel_x * SIMULATION_STEP * 0.5;
         pos_y += vel_y * SIMULATION_STEP * 0.5;
         if pos_x >= pos_target_x {
@@ -76,6 +76,6 @@ mod tests {
 
     #[test]
     fn test_get_solution() {
-        assert!(get_solution(400.0, 0.0, 28.0, 950.0) - -8.0 < EPSILON)
+        assert!(get_solution(400.0, 0.0, 28.0, 950.0) - -8.0 < EPSILON);
     }
 }

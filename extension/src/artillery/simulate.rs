@@ -58,12 +58,13 @@ pub fn find_solution(
     max_elev: f64,
 ) -> (f64, f64, f64) {
     if air_friction == 0.0 {
-        let radicand = muzzle_velocity.powi(4)
-            - GRAVITY
-                * GRAVITY.mul_add(
-                    range_to_hit.powi(2),
-                    2.0 * height_to_hit * muzzle_velocity.powi(2),
-                );
+        let radicand = GRAVITY.mul_add(
+            -GRAVITY.mul_add(
+                range_to_hit.powi(2),
+                2.0 * height_to_hit * muzzle_velocity.powi(2),
+            ),
+            muzzle_velocity.powi(4),
+        );
         if range_to_hit == 0.0 || radicand < 0.0 {
             return (-1.0, -1.0, -1.0);
         }

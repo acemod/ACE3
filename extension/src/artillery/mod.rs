@@ -52,7 +52,7 @@ fn command_calculate_table(
                         (
                             idx as u32,
                             calc_range_table_line(
-                                range as f64,
+                                f64::from(range),
                                 muzzle_velocity,
                                 air_friction,
                                 high_arc,
@@ -61,7 +61,7 @@ fn command_calculate_table(
                             ),
                         ),
                     ) {
-                        eprintln!("calculate table error: {:?}", e);
+                        eprintln!("calculate table error: {e:?}");
                     }
                 });
         }
@@ -425,7 +425,7 @@ mod tests {
                 true.to_string(),
             ]),
         );
-        println!("{:?}", output);
+        println!("{output:?}");
         let (best, lines): (f64, i8) = FromArma::from_arma(output).unwrap();
         assert!(best - 10_393.560_433_295_957 < EPSILON);
         assert_eq!(lines, 103);
@@ -438,7 +438,7 @@ mod tests {
                     if let Some(Value::Array(data)) = data {
                         if let Value::Array(line) = &data[1] {
                             if line[0] == Value::String(String::from("3500")) {
-                                println!("data: {:?}", line);
+                                println!("data: {line:?}");
                             }
                         }
                     }
@@ -453,7 +453,7 @@ mod tests {
             },
             Duration::from_secs(10),
         );
-        println!("result: {:?}", result);
+        println!("result: {result:?}");
         assert!(result.is_ok());
     }
 }
