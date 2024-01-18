@@ -29,7 +29,7 @@ private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
 private _caliber = getNumber (_ammoConfig >> "caliber");
 private _explosive = 1 min getNumber (_ammoConfig >> "explosive");
 private _indirectHit = getNumber (_ammoConfig >> "indirectHitRange");
-private _ammoInfo = [_caliber, _explosive, _indirectHit];
+_ammoInfo = [_caliber, _explosive, _indirectHit];
 
 GVAR(spallInfoCache) set [_ammo, _ammoInfo];
 
