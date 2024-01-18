@@ -8,7 +8,7 @@
  * on the surface hit.
  *
  * Arguments:
- * 0: surfacetype <STRING> - either a cfgSurfaces path .bisurf filepath
+ * 0: surfacetype <STRING> - either a CfgSurfaces path .bisurf filepath
  *
  * Return Value:
  * _material <STRING> - Material categories as expanded on in line 44 below
@@ -34,7 +34,7 @@ if (isClass _surfaceConfig) then {
     if (_material isEqualTo "" || {_material isEqualTo "empty"}) then {
         _material = getText (_surfaceConfig >> "soundhit");
     };
-} else { // Messy way when a surface isn't added to cfgSurfaces
+} else { // Messy way when a surface isn't added to CfgSurfaces
     private _surfFileText = toLowerANSI preprocessFile _surfType;
     _surfFileText = _surfFileText regexReplace ["[^a-z0-9]", ""];
     private _idx = ACE_FRAG_SOUNDENVIRON_STR_LEN + (_surfFileText find "soundenviron");

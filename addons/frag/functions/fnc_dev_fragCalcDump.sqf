@@ -6,7 +6,7 @@
  * shouldFrag to cull non-fragmenting rounds.
  *
  * Arguments:
- * 0: Display rounds that will never frag (power < 5) <BOOL> (default: false)
+ * 0: Display rounds that will never frag (power < 5). <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -17,11 +17,9 @@
  * Public: No
  */
 
-params [
-    ["_logAll", false, [false]]
-];
+params [["_logAll", false, [false]]];
 
-private _allAmmoConfigs = configProperties [configFile >> "cfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true];
+private _allAmmoConfigs = configProperties [configFile >> "CfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true];
 private _processedCfgAmmos = [];
 
 private _nPrinted = 0;

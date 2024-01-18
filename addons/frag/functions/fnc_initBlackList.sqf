@@ -34,7 +34,7 @@ private _errors = 0;
         continue;
     };
 
-    if (!isClass (configFile >> "cfgAmmo" >> _ammo)) then {
+    if (!isClass (configFile >> "CfgAmmo" >> _ammo)) then {
         INFO_1("Ammo class: %1 does not exist", str _ammo);
         INC(_errors);
         continue;
