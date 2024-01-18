@@ -3,13 +3,13 @@
 /*
  * Author: ACE-Team, Lambda.Tiger
  * This function will dump every ammo config that would generate ace_frag
- * fragments that could be fired from a weapon
+ * fragments that could be fired from a weapon.
  *
  * Arguments:
- * 0: Log ammo types that wouldn't normally frag
- * 1: Only export ammo classes of classes referenced in cfgMagazines
- *    and their submunitions. <BOOL>
- * 2: Force a CSV format on debug print <BOOL>
+ * 0: Log ammo types that wouldn't normally frag. <BOOL> (Default: false)
+ * 1: Only export ammo classes of classes referenced in CfgMagazines and their
+ *    submunitions. <BOOL> (Default: false)
+ * 2: Force a CSV format on debug print. <BOOL> (Default: false)
  *
  * Return Value:
  * None
@@ -19,6 +19,7 @@
  *
  * Public: No
  */
+
 params [
     ["_logAll", false, [false]],
     ["_onlyShotAmmoTypes", false, [false]],
@@ -39,20 +40,20 @@ if (_onlyShotAmmoTypes) then {
         ];
         if (_ammo isEqualTo "" || {_ammo in _allAmmoConfigs}) exitWith {};
         _allAmmoConfigs pushBack _ammo;
-        private _ammoConfig = configFile >> "cfgAmmo" >> _ammo;
-        private _subMunit = toLowerANSI getText (_ammoConfig >> "submunitionAmmo");
-        if (_subMunit isNotEqualTo "") then {
-            _subMunit = getArray (_ammoConfig >> "submunitionAmmo");
-            for "_i" from 0 to count _subMunit - 1 do {
+        private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
+        private _subMunition = toLowerANSI getText (_ammoConfig >> "submunitionAmmo");
+        if (_subMunition isNotEqualTo "") then {
+            _subMunition = getArray (_ammoConfig >> "submunitionAmmo");
+            for "_i" from 0 to count _subMunition - 1 do {
                 if (_i mod 2 == 0) then {
-                    [toLowerANSI (_subMunit#_i)] call _configSearchFunc;
+                    [toLowerANSI (_subMunition#_i)] call _configSearchFunc;
                 };
             };
         } else {
-            [toLowerANSI _subMunit] call _configSearchFunc;
+            [toLowerANSI _subMunition] call _configSearchFunc;
         };
     };
-    private _allMagazineConfigs = configProperties [configFile >> "cfgMagazines", "isClass _x", true];
+    private _allMagazineConfigs = configProperties [configFile >> "CfgMagazines", "isClass _x", true];
 
     {
         [toLowerANSI getText (_x >> "ammo")] call _configSearchFunc;
@@ -68,7 +69,7 @@ private _printCount = 0;
     if (_ammo isNotEqualTo "" && {!(_ammo in _processedCfgAmmos)}) then {
         _processedCfgAmmos pushBack _ammo;
 
-        private _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
+        private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
         private _shoulFrag = [_ammo] call FUNC(shouldFrag);
 
         if (_shoulFrag || _logAll) then {

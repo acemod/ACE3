@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+
 TRACE_1("switchUnit",_this);
 params ["_currentUnit", "_lastUnit"];
 

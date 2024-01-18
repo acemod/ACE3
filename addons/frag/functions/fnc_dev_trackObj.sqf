@@ -16,6 +16,7 @@
  *
  * Public: No
  */
+
 params [
     "_object",
     ["_color", "blue", ["blue"]],
