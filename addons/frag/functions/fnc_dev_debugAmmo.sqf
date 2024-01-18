@@ -40,17 +40,19 @@ if (_onlyShotAmmoTypes) then {
         ];
         if (_ammo isEqualTo "" || {_ammo in _allAmmoConfigs}) exitWith {};
         _allAmmoConfigs pushBack _ammo;
-        private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
-        private _subMunition = toLowerANSI getText (_ammoConfig >> "submunitionAmmo");
-        if (_subMunition isNotEqualTo "") then {
-            _subMunition = getArray (_ammoConfig >> "submunitionAmmo");
+        private _submunitionConfig = configFile >> "CfgAmmo" >> _ammo >> "submunitionAmmo";
+        if (isArray _submunitionConfig) then {
+            private _subMunition = getArray _submunitionConfig;
             for "_i" from 0 to count _subMunition - 1 do {
                 if (_i mod 2 == 0) then {
                     [toLowerANSI (_subMunition#_i)] call _configSearchFunc;
                 };
             };
         } else {
-            [toLowerANSI _subMunition] call _configSearchFunc;
+            private _subMunition = getText _submunitionConfig;
+            if (_subMunition isNotEqualTo "") then {
+                [toLowerANSI _subMunition] call _configSearchFunc;
+            };
         };
     };
     private _allMagazineConfigs = configProperties [configFile >> "CfgMagazines", "isClass _x", true];
@@ -66,7 +68,7 @@ private _processedCfgAmmos = [];
 private _printCount = 0;
 { // Begin forEach to check each ammo type
     private _ammo = _x;
-    if (_ammo isNotEqualTo "" && {!(_ammo in _processedCfgAmmos)}) then {
+    if (_ammo isNotEqualTo "") then {
         _processedCfgAmmos pushBack _ammo;
 
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
