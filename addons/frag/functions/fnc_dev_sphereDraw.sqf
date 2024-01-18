@@ -4,8 +4,8 @@
  * Add a colored sphere at a specified point.
  *
  * Arguments:
- * 0: ASL position to add sphere <ARRAY>
- * 1: Color of sphere <STRING>
+ * 0: ASL position to add sphere. <ARRAY>
+ * 1: Color of sphere. <STRING> (Default: Blue)
  *
  * Return Value:
  * None
@@ -15,17 +15,11 @@
  *
  * Public: No
  */
-params [
-    ["_posASL", [0, 0, 0], [[]], [2,3]],
-    ["_color", "(1,0,0,0.5)", [""]]
-];
 
-if (count _posASL < 3) then {
-    _posASL pushBack 0;
-    _posASL = ASLtoATL _posASL;
-    _posASL set [2, 0];
-    _posASL = ATLtoASL _posASL;
-};
+params [
+    "_posASL",
+    ["_color", "blue", [""]]
+];
 
 if (_color select [0,1] != "(") then {
     _color = switch (toLowerANSI _color) do {
