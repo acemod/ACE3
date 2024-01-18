@@ -1,12 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function adds a round to be traced.
+ * This function initialize projectile tracking of a round so that it's path
+ * can be drawn in debug mode. It may optionally include hit / explode /
+ * deflected event handlers that spawn color coded spheres on each event,
+ * green / red / blue, respectively.
  *
  * Arguments:
- * 0: Projectile <OBJECT>
- * 1: Add projectile event handlers <BOOL>
- * 2: Is the round blue <BOOL>
+ * 0: Projectile to be tracked. <OBJECT>
+ * 1: Add projectile hit/explode/defelceted event handlers. <BOOL>
+ * 2: Is the round fired by a unit on the same side as the player
+ *    true results in blue traces, false in red. <BOOL>
  *
  * Return Value:
  * None
@@ -16,19 +20,19 @@
  *
  * Public: No
  */
+
 params [
     "_projectile",
     ["_addProjectileEventHandlers", true, [true]],
     ["_isSidePlayer", true, [true]]
 ];
 
-// track round on each frame
-// Create entry in position array from hashmap
 if (_isSidePlayer) then {
     GVAR(dev_trackLines) set [getObjectID _projectile, [[getposATL _projectile], [0, 0, 1, 1]]];
 } else {
     GVAR(dev_trackLines) set [getObjectID _projectile, [[getposATL _projectile], [1, 0, 0, 1]]];
 };
+
 // event handler to track round and cleanup when round is "dead"
 [
     {
@@ -48,7 +52,6 @@ if (_isSidePlayer) then {
 
 if (!_addProjectileEventHandlers) exitWith {};
 
-// Add hitPart eventHandler
 _projectile addEventHandler [
     "HitPart",
     {
@@ -61,7 +64,6 @@ _projectile addEventHandler [
     }
 ];
 
-// Add explode event handler
 _projectile addEventHandler [
     "Explode",
     {
@@ -74,7 +76,6 @@ _projectile addEventHandler [
     }
 ];
 
-// Add deflected eventHandler
 _projectile addEventHandler [
     "Deflected",
     {
