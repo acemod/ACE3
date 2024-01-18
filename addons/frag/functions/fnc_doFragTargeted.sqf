@@ -2,19 +2,19 @@
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function creates fragments targeted at specific entities, up to
- * a configured maximum
+ * a configured maximum.
  *
  * Arguments:
  * 0: Position of fragmenting projectile ASL <ARRAY>
  * 1: Velocity of the fragmenting projectile <ARRAY>
- * 2: Maximum range of fragments to calculate <SCALAR>
- * 3: Maximum number of fragments to produce <SCALAR>
+ * 2: Maximum range of fragments to calculate <NUMBER>
+ * 3: Maximum number of fragments to produce <NUMBER>
  * 4: Types of fragments <ARRAY>
- * 5: A modified parameter used to calculate whether a fragment hits <SCALAR>
+ * 5: A modified parameter used to calculate whether a fragment hits <NUMBER>
  * 6: Shot parent <ARRAY>
  *
  * Return Value:
- * Number of fragments created <SCALAR>
+ * Number of fragments created <NUMBER>
  *
  * Example:
  * [getPosASL _proj, velocity _proj, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragTargeted;

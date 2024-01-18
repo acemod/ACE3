@@ -2,7 +2,7 @@
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function creates fragments randomly spreading out from an explosion to
- * a maximum of 15
+ * a maximum of 15.
  *
  * Arguments:
  * 0: Position of fragmenting projectile ASL <ARRAY>

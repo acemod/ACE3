@@ -5,10 +5,10 @@
  * as handling some of the performance optimizations.
  *
  * Arguments:
- * 0: projectile that's fragmenting <OBJECT>
+ * 0: Projectile that's fragmenting <OBJECT>
  * 1: ASL position of projectile <ARRAY>
- * 2: velocity of projectile <ARRAY>
- * 3: projectile cfgAmmo classname <STRING>
+ * 2: Velocity of projectile <ARRAY>
+ * 3: Projectile cfgAmmo classname <STRING>
  * 4: getShotParents of projectile at EH <ARRAY>
  *
  * Return Value:

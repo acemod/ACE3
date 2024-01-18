@@ -2,13 +2,13 @@
 /*
  * Author: Lambda.Tiger
  * This function checks whether an ammunition type should cause fragmentation
- * and whether any submunitions exist
+ * and whether any submunitions exist.
  *
  * Arguments:
- * 0: _ammo <STRING> - cfgAmmo type of ammo to check
+ * 0: Type of ammo to check <STRING>
  *
  * Return Value:
- * _shouldFrag Should the specific round fragment <BOOL>
+ * Should the specific round fragment <BOOL>
  *
  * Example:
  * ["B_556x45_Ball"] call ace_frag_fnc_shouldFrag;

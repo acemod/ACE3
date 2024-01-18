@@ -2,10 +2,10 @@
 /*
  * Author: Lambda.Tiger
  * Add a hit box outline to an object, outdated for unit hits as they
- * use hit-point locations
+ * use hit-point locations.
  *
  * Arguments:
- * 0: Object to draw the hit box of <OBJECT>:
+ * 0: Object to draw the hit box of <OBJECT>
  * 1: Add sphere at object origin <BOOL>
  *
  * Return Value:

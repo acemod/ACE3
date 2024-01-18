@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Adds setting defined blacklisted rounds to blacklist
+ * Adds setting defined blacklisted rounds to blacklist.
  *
  * Arguments:
  * None

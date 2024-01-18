@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Add a colored sphere at a specified point
+ * Add a colored sphere at a specified point.
  *
  * Arguments:
  * 0: ASL position to add sphere <ARRAY>

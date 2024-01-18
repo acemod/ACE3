@@ -2,13 +2,13 @@
 /*
  * Author: Lambda.Tiger
  * For performance, we load a bunch of vanilla materials preemptively into
- * the spall material cache
+ * the spall material cache.
  *
  * Arguments:
- * none
+ * None
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * call initMaterialCache;

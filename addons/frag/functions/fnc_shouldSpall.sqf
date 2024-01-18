@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function checks whether an ammunition type should cause spalling
- *
+ * This function checks whether an ammunition type should cause spalling.
  *
  * Arguments:
  * 0: _ammo <STRING> - cfgAmmo type of ammo to check

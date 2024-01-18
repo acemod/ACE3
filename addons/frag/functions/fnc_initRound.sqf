@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function adds rounds using their config init EH
+ * This function adds rounds using their config init EH.
 
  * Arguments:
- * 0: _projectile <OBJECT> - The object created
+ * 0: Projectile <OBJECT> - The object created
  *
  * Return Value:
  * None
