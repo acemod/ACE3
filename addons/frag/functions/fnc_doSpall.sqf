@@ -52,7 +52,7 @@ private _vel = if (alive _projectile) then {
     [0, 0, 0];
 };
 
-private _velocityChange = vectorMagnitude _lastVelocity - vectorMagnitude _vel;
+private _velocityChange = 0 max (vectorMagnitude _lastVelocity - vectorMagnitude _vel);
 /*
  * This is all fudge factor since real spalling is too complex for calculation.
  * There are two terms. The first is from round impact, taking a quasi scale
