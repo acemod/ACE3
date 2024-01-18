@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_proj] call ace_frag_fnc_initRound;
+ * [_projectile] call ace_frag_fnc_initRound;
  *
  * Public: No
  */
@@ -30,9 +30,9 @@ if (GVAR(enabled) && {_ammo call FUNC(shouldFrag)}) then {
     _projectile addEventHandler [
         "Explode",
         {
-            params ["_proj", "_posASL", "_velocity"];
-            private _shotParents = getShotParents _proj;
-            private _ammo = typeOf _proj;
+            params ["_projectile", "_posASL", "_velocity"];
+            private _shotParents = getShotParents _projectile;
+            private _ammo = typeOf _projectile;
             // wait for frag damage to kill units before spawning fragments
             [
                 FUNC(doFrag),
@@ -49,20 +49,20 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     _projectile addEventHandler [
         "HitPart",
         {
-            params ["_proj", "_hitObj", "",
-                "_posASL", "_vel", "_sNorm", "",
+            params ["_projectile", "_hitObject", "",
+                "_posASL", "_velocity", "_surfNorm", "",
                 "", "_surfType"
             ];
-            private _shotPrnt = getShotParents _proj;
-            private _ammo = typeOf _proj;
-            private _vUp = vectorUp _proj;
+            private _shotParent = getShotParents _projectile;
+            private _ammo = typeOf _projectile;
+            private _vectorUp = vectorUp _projectile;
             /*
              * Wait a round to see what happens to the round, may result in
              * multiple hits / slowdowns getting shunted to the first hit
              */
             [
                 FUNC(doSpall),
-                [_proj, _hitObj, _posASL, _vel, _sNorm, _surfType, _ammo, _shotPrnt, _vUp]
+                [_projectile, _hitObject, _posASL, _velocity, _surfNorm, _surfType, _ammo, _shotParent, _vectorUp]
             ] call CBA_fnc_execNextFrame;
         }
     ];
