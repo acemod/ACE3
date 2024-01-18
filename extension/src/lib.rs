@@ -20,6 +20,10 @@ fn init() -> Extension {
         .group("clipboard", clipboard::group())
         .command("break_line", break_line::break_line)
         .command("fcs", fcs::get_solution)
-        .command("version", || (option_env!("CARGO_MAKE_GIT_HEAD_LAST_COMMIT_HASH")).unwrap_or("UNKNOWN").to_string())
+        .command("version", || {
+            (option_env!("CARGO_MAKE_GIT_HEAD_LAST_COMMIT_HASH"))
+                .unwrap_or("UNKNOWN")
+                .to_string()
+        })
         .finish()
 }
