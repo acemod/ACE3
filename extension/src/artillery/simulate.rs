@@ -53,9 +53,9 @@ pub fn find_solution(
     height_to_hit: f64,
     muzzle_velocity: f64,
     air_friction: f64,
+    high_arc: bool,
     min_elev: f64,
     max_elev: f64,
-    high_arc: bool,
 ) -> (f64, f64, f64) {
     if air_friction == 0.0 {
         let radicand = muzzle_velocity.powi(4)
@@ -149,7 +149,7 @@ mod tests {
     #[test]
     fn find_solution() {
         let (result_distance, current_elevation, result_time) =
-            super::find_solution(1000.0, 0.0, 400.0, -0.00005, -5.0, 80.0, true);
+            super::find_solution(1000.0, 0.0, 400.0, -0.00005, true, -5.0, 80.0);
         assert!(result_distance - 999.628_737_358_452_9 < EPSILON); // old ace: 999.773
         assert!(current_elevation - 1.522_375_345_230_102_5 < EPSILON); // old ace: 1.52238
         assert!(result_time - 69.699_999_999_997_33 < EPSILON); // old ace: 69.7

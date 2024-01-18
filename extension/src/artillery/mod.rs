@@ -1,4 +1,4 @@
-use std::f64::consts::{FRAC_PI_4, PI};
+use std::f64::consts::{FRAC_PI_2, FRAC_PI_4, PI};
 
 use arma_rs::{Context, Group};
 use rayon::prelude::*;
@@ -8,10 +8,15 @@ use crate::common::{Temperature, GRAVITY};
 mod simulate;
 
 pub fn group() -> Group {
-    Group::new().command("calculate_table", calculate_table)
+    Group::new()
+        .command("calculate_table", command_calculate_table)
+        .command("simulate_shot", simulate::shot)
+        .command("fix_max_angle", find_max_angle)
+        .command("simulate_find_solution", simulate::find_solution)
+        .command("get_solution", command_get_solution)
 }
 
-fn calculate_table(
+fn command_calculate_table(
     ctx: Context,
     muzzle_velocity: f64,
     air_friction: f64,
@@ -50,9 +55,9 @@ fn calculate_table(
                                 range as f64,
                                 muzzle_velocity,
                                 air_friction,
+                                high_arc,
                                 min_elev,
                                 max_elev,
-                                high_arc,
                             ),
                         ),
                     ) {
@@ -62,6 +67,60 @@ fn calculate_table(
         }
     });
     (best_distance, ranges_size as u32)
+}
+
+#[allow(clippy::too_many_arguments)]
+fn command_get_solution(
+    range_to_hit: f64,
+    height_of_target: f64,
+    muzzle_velocity: f64,
+    air_friction: f64,
+    high_arc: bool,
+    cross_wind: f64,
+    tail_wind: f64,
+    temperature: f64,
+    air_density: f64,
+) -> (f64, f64, f64) {
+    let (distance, elevation, _) = simulate::find_solution(
+        range_to_hit,
+        height_of_target,
+        muzzle_velocity,
+        air_friction,
+        high_arc,
+        0.0,
+        FRAC_PI_2,
+    );
+    if distance == -1.0 {
+        return (-1.0, -1.0, -1.0);
+    }
+    let (mut x_sim, mut y_sim, mut tof) = simulate::shot(
+        elevation,
+        muzzle_velocity,
+        height_of_target,
+        cross_wind,
+        tail_wind,
+        Temperature::new_celsius(temperature),
+        air_density,
+        air_friction,
+    );
+    let mut y_offset = range_to_hit - y_sim;
+    let mut y_correction = -y_offset;
+    while (distance + y_offset) - range_to_hit > 1.0 {
+        (x_sim, y_sim, tof) = simulate::shot(
+            range_to_hit + y_correction,
+            muzzle_velocity,
+            height_of_target,
+            cross_wind,
+            tail_wind,
+            Temperature::new_celsius(temperature),
+            air_density,
+            air_friction,
+        );
+        y_offset = range_to_hit - y_sim;
+        y_correction -= y_offset;
+    }
+    let angle_correction = (x_sim / y_sim).atan();
+    (elevation, tof, angle_correction)
 }
 
 fn find_max_angle(muzzle_velocity: f64, air_friction: f64) -> (f64, f64) {
@@ -100,18 +159,18 @@ fn calc_range_table_line(
     range_to_hit: f64,
     muzzle_velocity: f64,
     air_friction: f64,
+    high_arc: bool,
     min_elev: f64,
     max_elev: f64,
-    high_arc: bool,
 ) -> Option<Vec<String>> {
     let (actual_distance, line_elevation, line_tof) = simulate::find_solution(
         range_to_hit,
         0.0,
         muzzle_velocity,
         air_friction,
+        high_arc,
         min_elev,
         max_elev,
-        high_arc,
     );
     if line_tof < 0.0 {
         return None;
@@ -121,9 +180,9 @@ fn calc_range_table_line(
         -100.0,
         muzzle_velocity,
         air_friction,
+        high_arc,
         min_elev,
         max_elev,
-        high_arc,
     );
 
     let (dr_elev_adjust, dr_tof_adjust) = if line_height_elevation > 0.0 {
@@ -330,7 +389,7 @@ mod tests {
 
     use arma_rs::{Extension, FromArma, Result, Value};
 
-    use crate::artillery::calculate_table;
+    use crate::artillery::command_calculate_table;
 
     use super::find_max_angle;
 
@@ -344,7 +403,7 @@ mod tests {
     #[test]
     fn range_table_line() {
         let extension = Extension::build()
-            .command("calc", calculate_table)
+            .command("calc", command_calculate_table)
             .finish()
             .testing();
         let (output, code) = extension.call(
