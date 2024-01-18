@@ -4,7 +4,7 @@
  * Adds a round type to the blacklist (will be ignored).
  *
  * Arguments:
- * 0: Projectile <OBJECT> or classname <STRING>
+ * 0: Projectile <OBJECT> or <STRING>
  *
  * Return Value:
  * None
