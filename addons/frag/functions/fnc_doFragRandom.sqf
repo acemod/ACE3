@@ -37,8 +37,7 @@ private _hMode = switch (true) do {
     default {"_mid"};
 };
 
-private _type = if (count _fragType > 0 &&
-                    {"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
+private _type = if (_fragType isNotEqualTo [] && {"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
     QGVAR(def_tiny_)
 } else {
     QGVAR(def_small_)
