@@ -9,6 +9,9 @@
         };
 
         #ifdef DEBUG_MODE_DRAW
+        if (isServer) then {
+            [QGVAR(dev_clearTraces),LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
+        };
         if (hasInterface) then {
             GVAR(dev_drawPFEH) = [
                 LINKFUNC(dev_drawTrace),
@@ -24,7 +27,7 @@
                         "Reset ACE Frag traces",
                         "",
                         {
-                            remoteExecCall [QFUNC(dev_clearTraces), 2];
+                            [QGVAR(dev_clearTraces), []] call CBA_fnc_serverEvent;
                         },
                         {true}
                     ] call EFUNC(interact_menu,createAction);
