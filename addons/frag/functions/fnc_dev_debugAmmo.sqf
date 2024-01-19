@@ -40,25 +40,27 @@ if (_onlyShotAmmoTypes) then {
         ];
         if (_ammo isEqualTo "" || {_ammo in _allAmmoConfigs}) exitWith {};
         _allAmmoConfigs pushBack _ammo;
-        private _submunitionConfig = configFile >> "CfgAmmo" >> _ammo >> "submunitionAmmo";
+        private _cfgAmmoRoot = configFile >> "CfgAmmo";
+        private _submunitionConfig = _cfgAmmoRoot >> _ammo >> "submunitionAmmo";
         if (isArray _submunitionConfig) then {
             private _subMunition = getArray _submunitionConfig;
             for "_i" from 0 to count _subMunition - 1 do {
                 if (_i mod 2 == 0) then {
-                    [toLowerANSI (_subMunition#_i)] call _configSearchFunc;
+                    [configName (_cfgAmmoRoot >> (_subMunition#_i))] call _configSearchFunc;
                 };
             };
         } else {
             private _subMunition = getText _submunitionConfig;
             if (_subMunition isNotEqualTo "") then {
-                [toLowerANSI _subMunition] call _configSearchFunc;
+                [configName (_cfgAmmoRoot >> _subMunition)] call _configSearchFunc;
             };
         };
     };
     private _allMagazineConfigs = configProperties [configFile >> "CfgMagazines", "isClass _x", true];
-
+    private _cfgAmmoCfgPath = configFile >> "CfgAmmo";
     {
-        [toLowerANSI getText (_x >> "ammo")] call _configSearchFunc;
+        private _magAmmo = getText (_x >> "ammo");
+        [configName (_cfgAmmoCfgPath >> _magAmmo)] call _configSearchFunc;
     } forEach _allMagazineConfigs;
 } else {
     _allAmmoConfigs = configProperties [configFile >> "CfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true] apply {configName _x};
