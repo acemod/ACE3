@@ -11,6 +11,7 @@ pub enum AtmosphereModel {
 
 impl FromArma for AtmosphereModel {
     fn from_arma(s: String) -> Result<Self, String> {
+        let s = s.trim_matches('"');
         match s.to_lowercase().as_str() {
             "icao" => Ok(Self::Icao),
             "asm" => Ok(Self::Asm),
@@ -108,6 +109,16 @@ mod tests {
                 crate::ballistics::AtmosphereModel::Icao
             ) - 0.587_784_746_752_856_4
                 < EPSILON // previous ace: 0.580047
+        );
+        assert!(
+            super::calculate_atmospheric_correction(
+                0.263,
+                Temperature::new_celsius(25.3642),
+                1009.61,
+                0.603173,
+                crate::ballistics::AtmosphereModel::Icao
+            ) - 0.275_454_853_636_429_13
+                < EPSILON // previous ace: 0.275444
         );
     }
 
