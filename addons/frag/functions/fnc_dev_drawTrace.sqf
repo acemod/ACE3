@@ -27,11 +27,10 @@ if (!GVAR(debugOptions)) exitWith {};
 } forEach GVAR(dev_trackLines);
 
 if (GVAR(drawHitBox)) then {
-    private _deleteArr = [];
     {
         _y params ["_object", "_boxPoints", "_color"];
         if (!alive _object) then {
-            _deleteArr pushBack _x;
+            GVAR(dev_hitBoxes) deleteAt _x;
             continue;
         };
 
@@ -40,10 +39,5 @@ if (GVAR(drawHitBox)) then {
                 drawLine3D [_object modelToWorld (_boxPoints#(_x#_i)), _object modelToWorld (_boxPoints#(_x#(_i-1))), _color];
             };
         } forEach HITBOX_DRAW_PATH;
-
     } forEach GVAR(dev_hitBoxes);
-
-    {
-        GVAR(dev_hitBoxes) deleteAt _x;
-    } forEach _deleteArr;
 };
