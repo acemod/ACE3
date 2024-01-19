@@ -50,24 +50,20 @@ if (_objects isEqualTo []) exitWith {
 };
 
 // grab crews and add them in so that targets stay approx. sorted by distance
+private _targets = [];
 {
-    private _crew = crew _x;
-    if (_crew isNotEqualTo []) then {
-        private _arr = [_x];
-        {
-            _arr pushBackUnique _x;
-        } forEach _crew;
+    private _crew =  crew _x;
+    _crew pushBackUnique _x;
+    _targets append _crew;
 
-        _objects set [_forEachIndex, _arr];
-    };
 } forEach _objects;
-_objects = flatten _objects;
-TRACE_3("Targets found",_posASL,_fragRange,count _objects);
+
+TRACE_3("Targets found",_posASL,_fragRange,count _targets);
 
 // limit number of fragments per direction (2D) to 10 using _fragArcs
 private _fragArcs = createHashMap;
 private _totalFragCount = 0;
-{ // Begin of forEach iterating on _objects
+{ // Begin of forEach iterating on _targets
     if (!alive _x) then {
         continue;
     };
@@ -168,7 +164,7 @@ private _totalFragCount = 0;
         TRACE_2("maxFrags", _totalFragCount, _maxFrags);
         break;
     };
-} forEach _objects;
+} forEach _targets;
 
 #ifdef DEBUG_MODE_FULL
 systemChat ("fragCount cnt: " + str _totalFragCount);
