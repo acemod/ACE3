@@ -396,7 +396,7 @@ class M_SPG9_HE: M_SPG9_HEAT {
     GVAR(charge) = 655;
     GVAR(gurney_c) = 2800;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(small), QGVAR(medium_HD)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(medium), QGVAR(medium)};
 };
 
 
