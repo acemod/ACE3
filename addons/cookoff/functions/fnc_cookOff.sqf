@@ -36,7 +36,7 @@ _vehicle setVariable [QGVAR(isCookingOff), true, true];
 // limit maximum value of intensity to prevent very long cook-off times
 _intensity = _intensity min _maxIntensity;
 
-private _config = _vehicle call CBA_fnc_getObjectConfig;
+private _config = configOf _vehicle;
 private _positions = getArray (_config >> QGVAR(cookoffSelections)) select {(_vehicle selectionPosition _x) isNotEqualTo [0,0,0]};
 
 if (_positions isEqualTo []) then {

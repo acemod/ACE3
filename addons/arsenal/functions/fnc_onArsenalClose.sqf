@@ -115,12 +115,11 @@ GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
-GVAR(showStats) = nil;
 GVAR(currentStatPage) = nil;
 GVAR(statsInfo) =  nil;
 
-GVAR(showActions) = nil;
 GVAR(currentActionPage) = nil;
+GVAR(actionsInfo) =  nil;
 
 profileNamespace setVariable [QGVAR(favorites), GVAR(favorites)];
 GVAR(favoritesOnly) = nil;
