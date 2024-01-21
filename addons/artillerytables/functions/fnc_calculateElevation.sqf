@@ -21,7 +21,7 @@
  * 2: Time of flight; seconds <NUMBER>
  *
  * Example:
- * [myPos, 0, 200, true, -0.0001, 15, 1.225, 5, -10] call ace_artilleryTables_fnc_simulateShot
+ * [myPos, 0, 200, true, -0.0001, 15, 1.225, 5, -10] call ace_artilleryTables_fnc_calculateElevation
  *
  * Public: No
  */

@@ -12,7 +12,7 @@
  * 2: Furthest Distance; Meters <NUMBER>
  *
  * Example:
- * [200, -0.00006] call ace_artilleryTables_fnc_calculateMuzzleVelocity
+ * [200, -0.00006] call ace_artilleryTables_fnc_calculateMaxAngle
  *
  * Public: No
  */

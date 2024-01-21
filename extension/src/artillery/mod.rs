@@ -11,7 +11,7 @@ pub fn group() -> Group {
     Group::new()
         .command("calculate_table", command_calculate_table)
         .command("simulate_shot", simulate::shot)
-        .command("fix_max_angle", find_max_angle)
+        .command("find_max_angle", find_max_angle)
         .command("simulate_find_solution", simulate::find_solution)
         .command("get_solution", command_get_solution)
 }
