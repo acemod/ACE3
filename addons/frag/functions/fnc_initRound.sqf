@@ -31,7 +31,7 @@ if (GVAR(enabled) && {_ammo call FUNC(shouldFrag)}) then {
         "Explode",
         {
             params ["_projectile", "_posASL", "_velocity"];
-            private _shotParents = getShotParents _projectile;
+            private _shotParents = _projectile getVariable [QGVAR(shotParent), getShotParents _projectile];
             private _ammo = typeOf _projectile;
             // wait for frag damage to kill units before spawning fragments
             [
