@@ -52,7 +52,7 @@ if (_objects isEqualTo []) exitWith {
 // grab crews and add them in so that targets stay approx. sorted by distance
 private _targets = [];
 {
-    private _crew =  crew _x;
+    private _crew = crew _x;
     _crew pushBackUnique _x;
     _targets append _crew;
 
