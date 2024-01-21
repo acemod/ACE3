@@ -33,6 +33,8 @@ private _isRuler = if (GVAR(plottingBoard_Shown) == 2) then {
     if (cos _rulerAng > 0 && {(tan _rulerAng) * _dist < PLOTTINGBOARD_RULERHALFWIDTH}) exitWith {true};
 
     _dist > PLOTTINGBOARD_RULERINNERCIRCLE && {_dist < PLOTTINGBOARD_RULEROUTERCIRCLE && {abs (_rulerAng * DEGTOMILS) < PLOTTINGBOAR_RULEROUTERHALFANGLE}}
+} else {
+    false
 };
 
 if (_isRuler) exitWith {2};

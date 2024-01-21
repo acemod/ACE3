@@ -32,6 +32,4 @@ if (_lambdaLong > DIST_TOP_TO_CENTER_PERC * _textureWidth) exitWith {false};
 // Projection of the relative position over the transversal axis of the map tool
 private _lambdaTransAbs = vectorMagnitude (_relPos vectorDiff (_dirVector vectorMultiply _lambdaLong));
 
-if (_lambdaTransAbs > DIST_LEFT_TO_CENTER_PERC * _textureWidth) exitWith {false};
-
-true
+_lambdaTransAbs <= DIST_LEFT_TO_CENTER_PERC * _textureWidth
