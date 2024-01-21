@@ -50,7 +50,7 @@ private _wheelHitPointSelections = [];
         if ((_wheelBoneNameResized != "") && {_x find _wheelBoneNameResized == 0}) exitWith {  // same as above. Requirement for physx.
             _wheelHitPoint = _hitPoints select _forEachIndex;
             _wheelHitPointSelection = _hitPointSelections select _forEachIndex;
-            TRACE_2("wheel found [Orginal]", _wheelName, _wheelHitPoint);
+            TRACE_2("wheel found [Orginal]",_wheelName,_wheelHitPoint);
         };
     } forEach _hitPointSelections;
 
@@ -83,7 +83,7 @@ private _wheelHitPointSelections = [];
             if (_bestIndex != -1) then {
                 _wheelHitPoint = _hitPoints select _bestIndex;
                 _wheelHitPointSelection = _hitPointSelections select _bestIndex;
-                TRACE_2("wheel found [Backup]", _wheelName, _wheelHitPoint);
+                TRACE_2("wheel found [Backup]",_wheelName,_wheelHitPoint);
             };
         };
     };
