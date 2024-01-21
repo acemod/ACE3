@@ -44,4 +44,4 @@ TRACE_8("callExtension:artillery:simulate_shot",_radAngle,_targetHeight,_muzzleV
 TRACE_1("",_code)
 
 //[xDeviation, yDistance, timeOfFlight]
-_data
+parseSimpleArray _data

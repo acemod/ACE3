@@ -54,7 +54,7 @@ while {abs(_resultDistance - _targetDistance) > 0.5} do {
         "ace" callExtension ["artillery:simulate_find_solution", [_useDistance, _targetHeight, _muzzleVelocity, _airFriction, _higharc, DEFAULT_MIN_ELEV, DEFAULT_MAX_ELEV]]
     ) params ["_data", "_code"];
     TRACE_1("",_code)
-    _data params ["", "_useAngleRad", ""];
+    (parseSimpleArray _data) params ["", "_useAngleRad", ""];
     _useAngle = deg(_useAngleRad) * DEGTOMILS;
 
     private _shotResults = [_useAngle, _targetHeight, _muzzleVelocity, _airFriction, _crossWind, _tailWind, _temperature, _airDensity] call FUNC(simulateShot);
