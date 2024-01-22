@@ -26,4 +26,8 @@ if (alive _patient && {IN_CRDC_ARRST(_patient)}) then {
     [QGVAR(cprLocal), [_medic, _patient], _patient] call CBA_fnc_targetEvent;
 } else {
     TRACE_1("not alive or in cardiac arrest",_patient);
+    if (!alive _patient) then {
+        // See comment in fnc_cprStart
+        _patient setVariable [VAR_HEART_RATE, 0, true];
+    };
 };

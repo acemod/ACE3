@@ -20,3 +20,8 @@ params ["_medic", "_patient"];
 TRACE_2("cprFailure",_medic,_patient);
 
 _patient setVariable [QEGVAR(medical,CPR_provider), objNull, true];
+
+if (alive _patient) exitWith {};
+
+// See comment in fnc_cprStart
+_patient setVariable [VAR_HEART_RATE, 0, true];
