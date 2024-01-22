@@ -23,8 +23,7 @@ if (!alive _vehicle) exitWith {TRACE_1("dead/deleted",alive _vehicle);};
 private _emptyWeapon = _vehicle getVariable [QGVAR(emptyWeapon), false];
 TRACE_1("",_emptyWeapon);
 
-private _configOf = configOf _vehicle;
-private _desiredAmmo = getNumber (_configOf >> QUOTE(ADDON) >> "desiredAmmo"); //
+private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
 if (_emptyWeapon) then {
     _desiredAmmo = 0;
@@ -43,13 +42,7 @@ private _containerMagazineCount = [];
 
     if (_xTurret isEqualTo _turret) then
     {
-        private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
-        if (isNil "_carryMag") then {
-            private _groups = "getNumber (_x >> _xMag) == 1" configClasses (configFile >> QGVAR(groups));
-            _carryMag = configName (_groups param [0, configNull]);
-            GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
-            TRACE_2("setting cache",_xMag,_carryMag);
-        };
+        private _carryMag = _xMag call FUNC(getCarryMagazine);
         if (_carryMag != "") then {
             if ((_desiredAmmo > 0) && {_loadedMagazineInfo isEqualTo []}) then {
                 private _loadedMagAmmo = _desiredAmmo min _xAmmo;
@@ -71,11 +64,13 @@ private _containerMagazineCount = [];
         };
     };
 
-} forEach magazinesAllTurrets _vehicle; //_vehicle magazinesTurret _x
+} forEach (magazinesAllTurrets _vehicle); //_vehicle magazinesTurret _x
 
 
 TRACE_1("Remove all loaded magazines",_magsToRemove);
-{ _vehicle removeMagazinesTurret _x; } forEach _magsToRemove;
+{ 
+    _vehicle removeMagazinesTurret _x;
+} forEach _magsToRemove;
 
 TRACE_1("Re-add the starting mag",_loadedMagazineInfo);
 if (!(_loadedMagazineInfo isEqualTo [])) then {
