@@ -242,9 +242,11 @@
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading %1 into %2...</English>
+            <Spanish>Cargando %1 en %2...</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading %1 from %2...</English>
+            <Spanish>Descargando %1 de %2...</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
