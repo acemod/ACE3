@@ -22,7 +22,7 @@ GVAR(lastSortDirectionRight) = DESCENDING;
     params ["_object"];
 
     // If the arsenal is already open, refresh arsenal display
-    if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
+    if (!isNull GVAR(currentBox) && {GVAR(currentBox) isEqualTo _object}) then {
         [true, true] call FUNC(refresh);
     };
 }] call CBA_fnc_addEventHandler;
