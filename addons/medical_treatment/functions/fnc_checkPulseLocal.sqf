@@ -21,11 +21,15 @@ params ["_medic", "_patient", "_bodyPart"];
 
 private _heartRate = 0;
 
-if (alive _patient && {!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo))}) then {
-    _heartRate = GET_HEART_RATE(_patient);
-    if (!alive _patient and !isNull (_patient getVariable [QEGVAR(medical,CPR_provider), objNull])) then {
-        _heartRate = random [25, 30, 35]; // fake heart rate because they are dead and off state machine
-    }
+if (!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
+    _heartRate = switch (true) do {
+        case (alive _patient): {
+            GET_HEART_RATE(_patient)
+        };
+        case (alive (_patient getVariable [QEGVAR(medical,CPR_provider), objNull])): {
+            random [25, 30, 35] // fake heart rate because patient is dead and off state machine
+        };
+    };
 };
 
 private _heartRateOutput = LSTRING(Check_Pulse_Output_5);
