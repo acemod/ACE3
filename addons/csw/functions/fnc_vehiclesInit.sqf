@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "../script_component.hpp"
  /*
  * Author: [KND]Liquid, Brandon (TCVM)
  * Describe your function
