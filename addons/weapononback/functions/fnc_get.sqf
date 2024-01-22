@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "../script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Returns the weapon on a units back.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "../script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Updates the inventory display by hiding / showing the weapon on the back.

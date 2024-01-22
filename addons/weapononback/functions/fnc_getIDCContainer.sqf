@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "../script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Gets the container associated with the given inventory display IDC.

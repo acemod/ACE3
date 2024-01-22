@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "../script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Adds event handlers when opening the inventory display.

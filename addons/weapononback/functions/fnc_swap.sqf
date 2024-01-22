@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "../script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Swaps primary and weapon on back. Can handle no primary or no weapon on back.
@@ -38,7 +38,7 @@ if !(_newPrimary isEqualTo []) then {
     ACE_player addWeapon _weapon;
 
     // Readd lost magazines
-    if !(count _oldPrimaryMagazine == 0) then {        
+    if !(count _oldPrimaryMagazine == 0) then {
         {
             private _container = _x;
             private _before = _containerMags#_forEachIndex;
