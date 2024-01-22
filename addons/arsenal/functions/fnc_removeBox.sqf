@@ -45,7 +45,7 @@ if (_global && {isMultiplayer} && {!isNil "_id"}) then {
 if (!isNull GVAR(currentBox) && {GVAR(currentBox) isEqualTo _object} && {isNil QGVAR(ignoredVirtualItems)}) then {
     // Delay a frame in case this is running on display open/close
     [{
-        private _display = findDisplay IDD_ace_ace_arsenal;
+        private _display = findDisplay IDD_ace_arsenal;
         if (isNull _display) exitWith {};
 
         [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
