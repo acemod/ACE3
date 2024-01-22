@@ -29,6 +29,7 @@ if (!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
         case (alive (_patient getVariable [QEGVAR(medical,CPR_provider), objNull])): {
             random [25, 30, 35] // fake heart rate because patient is dead and off state machine
         };
+        default { 0 };
     };
 };
 
