@@ -40,8 +40,7 @@
             _cswTripod setVariable [QGVAR(secondaryWeaponMagazine), _secondaryWeaponMagazine];
         };
         if (!GVAR(defaultAssemblyMode)) then {
-            TRACE_1("global disableVanillaAssembly event",_cswTripod); // handles it being assembled when setting is disabled
-            [QGVAR(disableVanillaAssembly), [_cswTripod]] call CBA_fnc_globalEvent;
+            [_cswTripod, "disableWeaponAssembly", "ace_csw", true] call EFUNC(common,statusEffect_set);
         };
 
         private _posATL = _player getRelPos [2, 0];
@@ -54,7 +53,7 @@
         [_player, "PutDown"] call EFUNC(common,doGesture);
 
         // drag after deploying
-        if ((missionNamespace getVariable [QGVAR(dragAfterDeploy), false]) && {["ACE_dragging"] call EFUNC(common,isModLoaded)}) then {
+        if ((missionNamespace getVariable [QGVAR(dragAfterDeploy), false]) && {["ace_dragging"] call EFUNC(common,isModLoaded)}) then {
             if ([_player, _cswTripod] call EFUNC(dragging,canCarry)) then {
                 TRACE_1("starting carry",_cswTripod);
                 [_player, _cswTripod] call EFUNC(dragging,startCarry);

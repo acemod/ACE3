@@ -1,7 +1,8 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f_curator\ui\defineResinclDesign.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
- * Author: commy2
+ * Author: commy2, johnb43
  * Disables key input. ESC can still be pressed to open the menu.
  *
  * Arguments:
@@ -27,7 +28,7 @@ if (_state) then {
     if (!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])) exitWith {};
     if (!isNil QGVAR(disableInputPFH)) exitWith {};
 
-    // end TFAR and ACRE2 radio transmissions
+    // End TFAR and ACRE2 radio transmissions
     call FUNC(endRadioTransmission);
 
     // Close map
@@ -45,13 +46,74 @@ if (_state) then {
         private _map = _display displayCtrl 101;
         _map ctrlMapCursor ["", QGVAR(blank)];
 
+        GVAR(keyboardInputMain) = createHashMap;
+        GVAR(keyboardInputCombo) = createHashMap;
+
         _display displayAddEventHandler ["KeyDown", {
+            // If input is enabled again, ignore
+            if (isNil QGVAR(keyboardInputMain)) exitWith {};
+
             params ["", "_key"];
 
-            if (_key == 1 && {alive player}) then {
-                createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
+            // Get key info; Stored as [isPressed, pressedCount]
+            private _keyPressedInfo = GVAR(keyboardInputMain) getOrDefault [_key, [false, 0], true];
+            _keyPressedInfo params ["_keyPressed", "_keyPressedCount"];
 
+            // For regular keys: If pressed, set to release and remove one key press
+            if (!_keyPressed) then {
+                _keyPressedInfo set [0, true];
+                _keyPressedInfo set [1, _keyPressedCount + 1];
+            };
+
+            // For combo keys, register only if pushed or released (no keypress count)
+            if !(GVAR(keyboardInputCombo) getOrDefault [_key, false]) then {
+                GVAR(keyboardInputCombo) set [_key, true];
+            };
+
+            // Look if keybinds of various actions have been pressed
+            private _action = "";
+            private _comboDikPressed = false;
+            private _return = false;
+
+            // This technique has a limitation: It can't process the Escape key properly (KeyUp EH does not fire)
+            (["TeamSwitch", "CuratorInterface", "ShowMap", "DefaultAction", "Throw", "Chat", "PrevChannel", "NextChannel"] apply {
+                _action = _x;
+
+                {
+                    _x params ["_mainKeyArray", "_comboKeyArray", "_isDoubleTap"];
+                    _mainKeyArray params ["_mainDik", "_mainDevice"];
+
+                    // If keybind doesn't contain key combo, it returns empty array; Therefore, return true
+                    _comboDikPressed = if (_comboKeyArray isEqualTo []) then {
+                        true
+                    } else {
+                        _comboKeyArray params ["_comboDik", "_comboDevice"];
+
+                        _comboDevice == "KEYBOARD" && {GVAR(keyboardInputCombo) getOrDefault [_comboDik, false]}
+                    };
+
+                    // Check if the necessary keys were pressed for a keybind
+                    _return = _comboDikPressed &&
+                        {_mainDevice == "KEYBOARD"} &&
+                        {((GVAR(keyboardInputMain) getOrDefault [_mainDik, [false, 0]]) select 1) > ([0, 1] select _isDoubleTap)}; // check how many times the main key was pressed
+
+                    // Keybind was detected
+                    if (_return) exitWith {
+                        TRACE_1("Action triggered: ",_action);
+                    };
+                } forEach (actionKeysEx _action);
+
+                _return
+            }) params ["_teamSwitch", "_curatorInterface", "_showMap", "_defaultAction", "_throw", "_chat", "_prevChannel", "_nextChannel"];
+
+            // Handle Escape separately because of limitation mentioned above
+            if (_key == DIK_ESCAPE && {alive player}) then {
                 disableSerialization;
+
+                private _isMultiplayer = isMultiplayer;
+                private _is3DENPreview = is3DENPreview;
+
+                createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select _isMultiplayer);
 
                 private _dlg = findDisplay 49;
 
@@ -59,24 +121,45 @@ if (_state) then {
                     (_dlg displayCtrl _index) ctrlEnable false;
                 };
 
-                private _ctrl = _dlg displayctrl 103;
-                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput);)];
-                _ctrl ctrlEnable true;
-                _ctrl ctrlSetText "ABORT";
-                _ctrl ctrlSetTooltip "Abort.";
+                private _ctrl = _dlg displayCtrl 103;
+                _ctrl ctrlSetEventHandler ["ButtonClick", toString {
+                    while {!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])} do {
+                        closeDialog 0
+                    };
 
-                _ctrl = _dlg displayctrl ([104, 1010] select isMultiplayer);
-                if (["ace_medical"] call FUNC(isModLoaded)) then {
-                    _ctrl ctrlSetEventHandler ["buttonClick", 'closeDialog 0; [player, "respawn_button"] call EFUNC(medical_status,setDead); [false] call DFUNC(disableUserInput);'];
-                } else {
-                    _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
-                };
-                _ctrl ctrlEnable ((getMissionConfigValue ["respawnButton", -1]) != 0); // handles 3den attribute or description.ext
-                _ctrl ctrlSetText localize "$str_3den_multiplayer_attributecategory_respawn_displayname";
-                _ctrl ctrlSetTooltip "Respawn.";
+                    failMission "LOSER";
+
+                    [false] call FUNC(disableUserInput);
+                }];
+                _ctrl ctrlEnable true;
+                _ctrl ctrlSetText localize (["str_disp_int_abort", "STR_3DEN_RscDisplayInterrupt_ButtonAbort_3DEN_text"] select (_is3DENPreview && !_isMultiplayer));
+                _ctrl ctrlSetTooltip localize ([
+                    "STR_TOOLTIP_MAIN_ABORT_CAMPAIGN",
+                    "STR_3DEN_RscDisplayInterrupt_ButtonAbort_3DEN_tooltip",
+                    "STR_TOOLTIP_MAIN_ABORT"
+                ] select (([_is3DENPreview, _isMultiplayer] call FUNC(toBitmask)) min 2));
+
+                _ctrl = _dlg displayCtrl ([104, 1010] select _isMultiplayer);
+                _ctrl ctrlSetEventHandler ["ButtonClick", toString {
+                    closeDialog 0;
+
+                    if (["ace_medical"] call FUNC(isModLoaded)) then {
+                        [player, "respawn_button"] call EFUNC(medical_status,setDead);
+                    } else {
+                        player setDamage 1;
+                    };
+
+                    [false] call FUNC(disableUserInput);
+                }];
+
+                private _respawnEnabled = (getMissionConfigValue ["respawnButton", -1]) != 0;
+
+                _ctrl ctrlEnable _respawnEnabled; // handles 3den attribute or description.ext
+                _ctrl ctrlSetText localize "str_disp_int_respawn";
+                _ctrl ctrlSetTooltip localize (["str_3den_attributes_respawn_none_tooltip", "str_disp_int_respawn"] select _respawnEnabled);
             };
 
-            if (_key in actionKeys "TeamSwitch" && {teamSwitchEnabled}) then {
+            if (_teamSwitch && teamSwitchEnabled) then {
                 (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
 
                 private _acc = accTime;
@@ -84,18 +167,20 @@ if (_state) then {
                 setAccTime _acc;
             };
 
-            if (_key in actionKeys "CuratorInterface" && {getAssignedCuratorLogic player in allCurators}) then {
+            if (_curatorInterface && {!isNull getAssignedCuratorLogic player}) then {
                 (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+
                 openCuratorInterface;
             };
 
-            if (_key in actionKeys "ShowMap" && {player getVariable ["ACE_canSwitchUnits", false]}) then {
+            if (_showMap && {player getVariable ["ACE_canSwitchUnits", false]}) then {
                 (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+
                 openMap true;
             };
 
-            if (isServer || {serverCommandAvailable "#kick"}) then {
-                if (!(_key in (actionKeys "DefaultAction" + actionKeys "Throw")) && {_key in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) then {
+            if (isMultiplayer && {isServer || {serverCommandAvailable "#kick"}}) then {
+                if (!(_defaultAction || _throw) && {_chat || _prevChannel || _nextChannel}) then {
                     _key = 0;
                 };
             };
@@ -103,7 +188,41 @@ if (_state) then {
             _key > 0
         }];
 
-        _display displayAddEventHandler ["KeyUp", {true}];
+        _display displayAddEventHandler ["KeyUp", {
+            // If input is enabled again, ignore
+            if (isNil QGVAR(keyboardInputMain)) exitWith {};
+
+            params ["", "_key"];
+
+            // For combo keys: If pressed, release
+            if (GVAR(keyboardInputCombo) getOrDefault [_key, false]) then {
+                GVAR(keyboardInputCombo) deleteAt _key;
+            };
+
+            private _keyPressedInfo = GVAR(keyboardInputMain) getOrDefault [_key, [false, 0]];
+
+            // If pressed, release it
+            if (_keyPressedInfo select 0) then {
+                _keyPressedInfo set [0, false];
+            };
+
+            // Cache keystrokes of regular keys for a small amount of time
+            [{
+                // If input is enabled again, ignore
+                if (isNil QGVAR(keyboardInputMain)) exitWith {};
+
+                params ["_key"];
+
+                private _keyPressedInfo = GVAR(keyboardInputMain) getOrDefault [_key, [false, 0]];
+
+                // Release it
+                _keyPressedInfo set [1, ((_keyPressedInfo select 1) - 1) max 0];
+
+                if (_keyPressedInfo isEqualTo [false, 0]) then {
+                    GVAR(keyboardInputMain) deleteAt _key,
+                };
+            }, _key, 0.5] call CBA_fnc_waitAndExecute;
+        }];
     };
 
     GVAR(disableInputPFH) = [{
@@ -133,4 +252,7 @@ if (_state) then {
     };
 
     (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+
+    GVAR(keyboardInputMain) = nil;
+    GVAR(keyboardInputCombo) = nil;
 };

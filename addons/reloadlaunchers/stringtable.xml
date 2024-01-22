@@ -3,9 +3,10 @@
     <Package name="ReloadLaunchers">
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextName">
             <English>Display notifications for buddy loading</English>
-            <Japanese>バディ装填時の通知表示</Japanese>
+            <Japanese>バディローディング時の通知表示</Japanese>
             <Polish>Wyświetlanie powiadomień o ładowaniu przez asystenta</Polish>
             <German>Buddy Nachlade Nachricht anzeigen</German>
+            <Italian>Mostra avviso di ricarica da parte del coppio</Italian>
             <Korean>동료의 장전에 대한 알림 표시</Korean>
             <French>Affichage de notifications lors d'une rechargement par un ami</French>
         </Key>
@@ -14,6 +15,7 @@
             <Japanese>助手が射手のランチャーを装填した際に通知を表示します。</Japanese>
             <Polish>Wyświetla powiadomienie, gdy asystent ładuje wyrzutnię.</Polish>
             <German>Zeigt Benachrichtigungen an, wenn ein Assistent den Werfer eines Richtschützen lädt.</German>
+            <Italian>Mostra un avviso quando un assistente sta ricaricando il proprio lanciatore.</Italian>
             <Korean>부사수가 사수의 발사기를 장전할 때 알림을 표시합니다.</Korean>
             <French>Affiche une notofication lorsqu'un assistant recharge l'arme du tireur.</French>
         </Key>
@@ -26,7 +28,7 @@
             <Polish>Załaduj wyrzutnię</Polish>
             <French>Charger lanceur</French>
             <Hungarian>Kilövö betöltése</Hungarian>
-            <Italian>Carica lanciamissili</Italian>
+            <Italian>Carica lanciatore</Italian>
             <Portuguese>Recarregar lançador</Portuguese>
             <Japanese>ランチャーを装填</Japanese>
             <Korean>무기 재장전</Korean>
@@ -38,6 +40,7 @@
             <English>%1 is loading your launcher</English>
             <German>%1 lädt deine Panzerabwehr</German>
             <French>%1 charge ton lanceur</French>
+            <Italian>%1 sta caricando il tuo lanciatore</Italian>
             <Japanese>%1 がランチャーを装填しています</Japanese>
             <Polish>%1 ładuje twoją wyrzutnię</Polish>
             <Korean>%1이(가) 당신의 발사기를 장전했습니다.</Korean>
@@ -46,6 +49,7 @@
             <English>%1 stopped loading your launcher</English>
             <German>%1 hat aufgehört, deine Panzerabwehr zu laden</German>
             <French>%1 a arrêté de charger ton lanceur</French>
+            <Italian>%1 ha smesso di caricare il tuo lanciatore</Italian>
             <Japanese>%1 がランチャーの装填を中断しました</Japanese>
             <Polish>%1 przestał ładować twoją wyrzutnię</Polish>
             <Korean>%1이(가) 당신의 발사기 장전을 멈췄습니다.</Korean>
@@ -59,7 +63,7 @@
             <Czech>Nabíjím odpalovač...</Czech>
             <Polish>Ładowanie wyrzutni...</Polish>
             <Hungarian>Kilövő betöltés alatt...</Hungarian>
-            <Italian>Caricando il lanciamissili...</Italian>
+            <Italian>Caricando il lanciatore...</Italian>
             <Portuguese>Recarregando lançador...</Portuguese>
             <Japanese>ランチャーを装填中・・・</Japanese>
             <Korean>무기 재장전 중...</Korean>
@@ -76,7 +80,7 @@
             <Czech>Odpalovač nabit</Czech>
             <Polish>Wyrzutnia załadowana</Polish>
             <Hungarian>Kilövő betöltve</Hungarian>
-            <Italian>Lanciamissili caricato</Italian>
+            <Italian>Lanciatore caricato</Italian>
             <Portuguese>Lançador Carregado</Portuguese>
             <Japanese>ランチャーの装填完了</Japanese>
             <Korean>무기 재장전됨</Korean>
@@ -93,7 +97,7 @@
             <Czech>Nabít %1</Czech>
             <Polish>Załadowano %1</Polish>
             <Hungarian>%1 betöltése</Hungarian>
-            <Italian>Caricato %1</Italian>
+            <Italian>Carica %1</Italian>
             <Portuguese>Recarregar %1</Portuguese>
             <Japanese>%1 を装填します</Japanese>
             <Korean>%1 장전</Korean>
@@ -104,6 +108,7 @@
         <Key ID="STR_ACE_ReloadLaunchers_LauncherNotLoaded">
             <English>Launcher could not be loaded</English>
             <German>Panzerabwehr konnte nicht geladen werden</German>
+            <Italian>Impossibile caricare il lanciatore</Italian>
             <French>Le lanceur n'a pas pu être chargé</French>
             <Japanese>ランチャーを装填できませんでした</Japanese>
             <Polish>Wyrzutnia nie mogła być załadowana</Polish>
@@ -113,8 +118,10 @@
             <English>Buddy Loading</English>
             <Polish>Ładowanie przez Asystenta</Polish>
             <Korean>부사수 장전 중</Korean>
+            <Italian>Caricamento da coppio</Italian>
             <French>Chargement par un ami</French>
             <German>Nachladen durch Kamerad</German>
+            <Japanese>バディローディング</Japanese>
         </Key>
     </Package>
 </Project>

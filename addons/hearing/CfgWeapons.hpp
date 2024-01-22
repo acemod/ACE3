@@ -10,7 +10,7 @@ class CfgWeapons {
         picture = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
         scope = 2;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.1;
         };
     };
 

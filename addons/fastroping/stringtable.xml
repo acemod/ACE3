@@ -22,7 +22,7 @@
             <Polish>Wyposaża kompatybilne helikoptery w zestaw Fast Rope Insertion Extraction System.</Polish>
             <French>Équipe les hélicoptères compatibles avec un FRIES (Fast Rope Insertion Extraction System).</French>
             <Spanish>Equipar helicoptero compatible con un Sistema de Inserción/Extracción Rápida por Cuerda.</Spanish>
-            <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Extraction System</Italian>
+            <Italian>Equipagga elicotteri compatibili con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
             <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам.</Russian>
@@ -41,7 +41,7 @@
             <Czech>Připravit systém slaňování</Czech>
             <Portuguese>Prepara sistema de descida rápida</Portuguese>
             <Russian>Подготовить канаты</Russian>
-            <Japanese>ファスト ロープのシステムを準備</Japanese>
+            <Japanese>ファストロープ システムを準備</Japanese>
             <Korean>패스트로프 준비</Korean>
             <Chinesesimp>准备快速绳降系统</Chinesesimp>
             <Chinese>準備快速繩降系統</Chinese>
@@ -51,7 +51,7 @@
             <English>Stow fast roping system</English>
             <German>Verstaue "Fast Roping"-System</German>
             <Italian>Arrotola le corde</Italian>
-            <Japanese>ファスト ロープのシステムを収容</Japanese>
+            <Japanese>ファストロープ システムを収容</Japanese>
             <Chinese>收起快速繩降系統</Chinese>
             <Chinesesimp>收起快速绳降系统</Chinesesimp>
             <Korean>패스트로프 시스템 보관</Korean>
@@ -89,7 +89,7 @@
             <Czech>SLANIT</Czech>
             <Portuguese>Descida rápida</Portuguese>
             <Russian>Спуститься по канату</Russian>
-            <Japanese>ファスト ロープをする</Japanese>
+            <Japanese>ファストロープする</Japanese>
             <Korean>패스트로프</Korean>
             <Chinesesimp>快速绳降</Chinesesimp>
             <Chinese>快速繩降</Chinese>
@@ -144,11 +144,11 @@
         <Key ID="STR_ACE_Fastroping_Waypoint_Fastrope">
             <English>LET UNITS FAST ROPE</English>
             <German>EINHEITEN ABSEILEN LASSEN</German>
-            <Italian>SCENDI DALLE CORDE</Italian>
+            <Italian>FAI SCENDERE CON FASTROPE</Italian>
             <Portuguese>Equipa o helicóptero selecionado com o Fast Rope Insertion Extraction System</Portuguese>
             <French>LAISSER LES UNITÉS UTILISER LA CORDE</French>
             <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
-            <Japanese>ユニットへファスト ロープをさせる</Japanese>
+            <Japanese>ユニットへファストロープをさせる</Japanese>
             <Polish>ZJAZD NA LINACH</Polish>
             <Chinesesimp>让单位快速绳降</Chinesesimp>
             <Chinese>讓單位快速繩降</Chinese>
@@ -163,7 +163,7 @@
             <Polish>Wysuń linę o długości 3 m.</Polish>
             <Russian>Выпустить 3 м канат</Russian>
             <Portuguese>Jogar cordas (3m)</Portuguese>
-            <Italian>Dispiegamento corde 3m</Italian>
+            <Italian>Dispiega corde da 3m</Italian>
             <Czech>Připravit 3m lana</Czech>
             <Turkish>3m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 3m</Spanish>
@@ -179,7 +179,7 @@
             <Polish>Wysuń linę o długości 6 m.</Polish>
             <Russian>Выпустить 6 м канат</Russian>
             <Portuguese>Jogar cordas (6m)</Portuguese>
-            <Italian>Dispiegamento corde 6m</Italian>
+            <Italian>Dispiega corde da 6m</Italian>
             <Czech>Připravit 6m lana</Czech>
             <Turkish>6m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 6m</Spanish>
@@ -198,7 +198,7 @@
             <Portuguese>Jogar cordas (12m)</Portuguese>
             <Chinese>部屬12公尺長之繩索</Chinese>
             <Chinesesimp>部署12米长的绳索</Chinesesimp>
-            <Italian>Dispiegamento corde 12m</Italian>
+            <Italian>Dispiega corde da 12m</Italian>
             <Czech>Připravit 12m lana</Czech>
             <Turkish>12m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 12m</Spanish>
@@ -214,7 +214,7 @@
             <Portuguese>Jogar cordas (15m)</Portuguese>
             <Chinese>部屬15公尺長之繩索</Chinese>
             <Chinesesimp>部署15米长的绳索</Chinesesimp>
-            <Italian>Dispiegamento corde 15m</Italian>
+            <Italian>Dispiega corde da 15m</Italian>
             <Czech>Připravit 15m lana</Czech>
             <Turkish>15m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 15m</Spanish>
@@ -230,7 +230,7 @@
             <Portuguese>Jogar cordas (18m)</Portuguese>
             <Chinese>部屬18公尺長之繩索</Chinese>
             <Chinesesimp>部署18米长的绳索</Chinesesimp>
-            <Italian>Dispiegamento corde 18m</Italian>
+            <Italian>Dispiega corde da 18m</Italian>
             <Czech>Připravit 18m lana</Czech>
             <Turkish>18m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 18m</Spanish>
@@ -246,7 +246,7 @@
             <Portuguese>Jogar cordas (27m)</Portuguese>
             <Chinese>部屬27公尺長之繩索</Chinese>
             <Chinesesimp>部署27米长的绳索</Chinesesimp>
-            <Italian>Dispiegamento corde 27m</Italian>
+            <Italian>Dispiega corde da 27m</Italian>
             <Czech>Připravit 27m lana</Czech>
             <Turkish>27m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 27m</Spanish>
@@ -262,7 +262,7 @@
             <Portuguese>Jogar cordas (36m)</Portuguese>
             <Chinese>部屬36公尺長之繩索</Chinese>
             <Chinesesimp>部署36米长的绳索</Chinesesimp>
-            <Italian>Dispiegamento corde 36m</Italian>
+            <Italian>Dispiega corde da 36m</Italian>
             <Czech>Připravit 36m lana</Czech>
             <Turkish>36m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 36m</Spanish>
@@ -289,13 +289,14 @@
             <French>Hélicordage</French>
             <Chinese>快速繩降</Chinese>
             <Chinesesimp>快速索降</Chinesesimp>
-            <Japanese>ファスト ロープ</Japanese>
+            <Japanese>ファストロープ</Japanese>
             <Spanish>Cuerdas rápidas</Spanish>
             <Polish>Zjazd na linach</Polish>
             <Turkish>Halatla Kayma</Turkish>
             <Czech>Slaňování</Czech>
             <Russian>Спуск по канату</Russian>
             <German>Schnelles-Abseilen</German>
+            <Italian>Fast Rope</Italian>
             <Korean>패스트로프</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
@@ -319,16 +320,20 @@
             <Polish>Automatycznie Zamontuj FRIES</Polish>
             <Japanese>FRIESの自動装備</Japanese>
             <German>FRIES automatisch ausrüsten</German>
+            <Italian>Auto-Aggiungi FRIES</Italian>
             <Korean>FRIES 로프 자동 장착</Korean>
             <French>Equipement automatique FRIES</French>
+            <Portuguese>Auto-equipar FRIES</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_description">
             <English>Automatically add FRIES to helicopters that support them.</English>
             <Polish>Automatycznie dodawaj FRIES do śmigłowców które je wspierają.</Polish>
             <Japanese>FRIESをサポートするヘリコプターに自動的にFRIESを追加します。</Japanese>
             <German>FRIES automatisch Helikoptern hinzufügen, die es unterstützen</German>
+            <Italian>Aggiunge il sistema FRIES in automatico su elicotteri compatibili.</Italian>
             <Korean>로프를 지원하는 헬기에 자동으로 FRIES 로프를 추가합니다.</Korean>
             <French>Ajoute automatiquement des FRIES aux hélicoptères qui les supportent.</French>
+            <Portuguese>Adiciona automaticamente FRIES a helicópteros que os suportam.</Portuguese>
         </Key>
     </Package>
 </Project>

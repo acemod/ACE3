@@ -3,7 +3,7 @@
     "LIST",
     [LSTRING(fatalDamageSource_DisplayName), LSTRING(fatalDamageSource_Description)],
     [ELSTRING(medical,Category)],
-    [[0, 1, 2], [LSTRING(fatalDamageSource_vitalShotsOnly), LSTRING(fatalDamageSource_trauma), LSTRING(fatalDamageSource_both)], 0],
+    [[0, 1, 2], [LSTRING(fatalDamageSource_vitalShotsOnly), LSTRING(fatalDamageSource_trauma), LSTRING(fatalDamageSource_both)], 2],
     true
 ] call CBA_fnc_addSetting;
 

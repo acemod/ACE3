@@ -227,7 +227,7 @@
             <Polish>Używany do zdalnego detonowania ładunków wybuchowych</Polish>
             <French>Utilisé pour déclencher des explosifs à distance.</French>
             <Czech>Používaný ke vzdálenému odpalování výbušnin</Czech>
-            <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
+            <Italian>Usato per l'innesco a distanza degli esplosivi</Italian>
             <Hungarian>Robbanóanyagok távoli robbantásához való</Hungarian>
             <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
             <Russian>Используется для удаленной детонации СВУ</Russian>
@@ -248,7 +248,7 @@
             <Hungarian>M57 Gyújtóeszköz</Hungarian>
             <Portuguese>M57 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M57</Russian>
-            <Japanese>M57 起爆装置</Japanese>
+            <Japanese>M57 点火装置</Japanese>
             <Korean>격발기 (M57)</Korean>
             <Chinesesimp>M57 引爆装置</Chinesesimp>
             <Chinese>M57 引爆裝置</Chinese>
@@ -261,7 +261,7 @@
             <Polish>Używany do zdalnego detonowania ładunków wybuchowych</Polish>
             <French>Utilisé pour déclencher des explosifs à distance.</French>
             <Czech>Používané ke vzdálenému odpalování výbušnin</Czech>
-            <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
+            <Italian>Usato per l'innesco a distanza degli esplosivi</Italian>
             <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
             <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
             <Russian>Используется для удаленной детонации зарядов</Russian>
@@ -282,7 +282,7 @@
             <Hungarian>M152 Gyújtóeszköz</Hungarian>
             <Portuguese>M152 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M152</Russian>
-            <Japanese>M152 起爆装置</Japanese>
+            <Japanese>M152 点火装置</Japanese>
             <Korean>격발기 (M152)</Korean>
             <Chinesesimp>M152 引爆装置</Chinesesimp>
             <Chinese>M152 引爆裝置</Chinese>
@@ -329,7 +329,7 @@
             <Polish>Umożliwia rozbrajanie ładunków wybuchowych</Polish>
             <French>Outils nécessaires au désamorçage des explosifs.</French>
             <Czech>Dovoluje zneškodňování výbušnin</Czech>
-            <Italian>Consente la disattivazione degli ordigni esplosivi</Italian>
+            <Italian>Consente il disinnesco degli ordigni esplosivi</Italian>
             <Hungarian>Robbanóanyagok hatástalanítását teszi lehetővé</Hungarian>
             <Portuguese>Permite o desarme de explosivos</Portuguese>
             <Russian>Позволяет обезвреживать взрывчатку</Russian>
@@ -346,7 +346,7 @@
             <Polish>Dodaj do szybkiego wybierania</Polish>
             <French>Ajouter à la numérotation rapide</French>
             <Czech>Přidat jako rychlou volbu</Czech>
-            <Italian>Aggiungi alla selezione rapida</Italian>
+            <Italian>Aggiungi alle chiamate rapide</Italian>
             <Hungarian>Hozzáadás a gyorstárcsázóhoz</Hungarian>
             <Portuguese>Adicionar à ligação rápida</Portuguese>
             <Russian>Добавить в быстрый вызов</Russian>
@@ -380,7 +380,7 @@
             <Polish>Wybierz numer</Polish>
             <French>Composer</French>
             <Czech>Vytočit</Czech>
-            <Italian>Composizione numero</Italian>
+            <Italian>Componi numero</Italian>
             <Hungarian>Tárcsázás</Hungarian>
             <Portuguese>Discar</Portuguese>
             <Russian>Hабрать</Russian>
@@ -397,7 +397,7 @@
             <Polish>W górę</Polish>
             <French>Haut</French>
             <Czech>Nahoru</Czech>
-            <Italian>Sopra</Italian>
+            <Italian>Su</Italian>
             <Hungarian>Fel</Hungarian>
             <Portuguese>Cima</Portuguese>
             <Russian>Вызов</Russian>
@@ -414,7 +414,7 @@
             <Polish>W dół</Polish>
             <French>Bas</French>
             <Czech>Dolu</Czech>
-            <Italian>Sotto</Italian>
+            <Italian>Giù</Italian>
             <Hungarian>Le</Hungarian>
             <Portuguese>Baixo</Portuguese>
             <Russian>Сброс</Russian>
@@ -465,7 +465,7 @@
             <Polish>Menu umieszczania</Polish>
             <French>Menu de placement</French>
             <Czech>Menu umístění</Czech>
-            <Italian>Menù di collocamento</Italian>
+            <Italian>Menù di piazzamento</Italian>
             <Hungarian>Elhelyezési menü</Hungarian>
             <Portuguese>Menu de posicionamento</Portuguese>
             <Russian>Меню установки</Russian>
@@ -499,7 +499,7 @@
             <Polish>Rozbrajanie ładunku...</Polish>
             <French>Désamorçage de l'explosif...</French>
             <Czech>Zneškodňuji Výbušninu...</Czech>
-            <Italian>Esposivo in fase di disattivazione...</Italian>
+            <Italian>Disinnescando l'Esplosivo...</Italian>
             <Hungarian>Robbanóanyag hatástalanítása...</Hungarian>
             <Portuguese>Desarmando Explosivo...</Portuguese>
             <Russian>Обезвреживание...</Russian>
@@ -516,7 +516,7 @@
             <Polish>Czasomierz</Polish>
             <French>Minuteur</French>
             <Czech>Časovač</Czech>
-            <Italian>Cronometro</Italian>
+            <Italian>Spoletta a tempo</Italian>
             <Hungarian>Időzítő</Hungarian>
             <Portuguese>Timer</Portuguese>
             <Russian>Таймер</Russian>
@@ -537,7 +537,7 @@
             <Hungarian>Idő: %1m %2s</Hungarian>
             <Portuguese>Tempo: %1m %2s</Portuguese>
             <Russian>Время: %1m %2c</Russian>
-            <Japanese>設定時間: %1分 %2秒</Japanese>
+            <Japanese>タイマー: %1分 %2秒</Japanese>
             <Korean>시간: %1분 %2초</Korean>
             <Chinesesimp>时间：%1分%2秒</Chinesesimp>
             <Chinese>時間: %1分%2秒</Chinese>
@@ -550,11 +550,11 @@
             <Polish>Ustaw czas</Polish>
             <French>Valider la durée</French>
             <Czech>Nastavit čas</Czech>
-            <Italian>Modifica il conto alla rovescia</Italian>
+            <Italian>Imposta tempo della spoletta</Italian>
             <Hungarian>Idő beállítása</Hungarian>
             <Portuguese>Configurar Tempo</Portuguese>
             <Russian>Установить время</Russian>
-            <Japanese>時間を設定</Japanese>
+            <Japanese>タイマーを設定</Japanese>
             <Korean>시간 설정</Korean>
             <Chinesesimp>设定时间</Chinesesimp>
             <Chinese>設定時間</Chinese>
@@ -567,7 +567,7 @@
             <Polish>Wybierz zapalnik</Polish>
             <French>Sélectionner un déclencheur</French>
             <Czech>Zvolit detonátor</Czech>
-            <Italian>Seleziona un attivatore</Italian>
+            <Italian>Seleziona la spoletta</Italian>
             <Hungarian>Gyújtóeszköz kiválasztása</Hungarian>
             <Portuguese>Selecionar um Gatilho</Portuguese>
             <Russian>Выберите детонатор</Russian>
@@ -652,7 +652,7 @@
             <German>Keine Auslöser für %1 vorhanden</German>
             <French>Pas de déclencheur disponible pour %1.</French>
             <Czech>Žádný detonátor k dispozici pro %1</Czech>
-            <Italian>Nessun attivatore disponibile per %1</Italian>
+            <Italian>Nessuna spoletta disponibile per %1</Italian>
             <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
             <Portuguese>Nenhum gatilho disponível para %1</Portuguese>
             <Russian>Нет доступных взрывателей для %1</Russian>
@@ -685,7 +685,7 @@
             <German>Magnetfeldsensor (Bodenangriff)</German>
             <French>Capteur magnétique (par le bas)</French>
             <Czech>Magnetický Senzor (Výbuch ze spoda)</Czech>
-            <Italian>Sensore Magnetico di Prossimità (attacco inferiore)</Italian>
+            <Italian>Sensore Magnetico di Prossimità (attacco dal basso)</Italian>
             <Hungarian>Mágneses mező érzékelő (Bottom Attack)</Hungarian>
             <Portuguese>Influência magnética (ataque inferior)</Portuguese>
             <Russian>Магнитный сенсор (детонация вверх)</Russian>
@@ -738,7 +738,7 @@
             <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
             <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
-            <Japanese>点火装置から遠隔から起爆したい時に使います。</Japanese>
+            <Japanese>放した時に爆発物を遠隔で起爆させるためのデッドマンスイッチ。</Japanese>
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
             <Chinesesimp>当放开按钮时，将会引爆炸弹。</Chinesesimp>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
@@ -789,7 +789,7 @@
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
-            <Japanese>特技兵を必須</Japanese>
+            <Japanese>専門兵特性を必須にするか?</Japanese>
             <Korean>전문가가 필요합니까?</Korean>
             <Chinesesimp>需要专家？</Chinesesimp>
             <Chinese>需要專家?</Chinese>
@@ -805,8 +805,8 @@
             <French>Seul un spécialiste peut désamorcer des explosifs.</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По умолчанию: Нет</Russian>
-            <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
-            <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。標準: 無効化</Japanese>
+            <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Predefinito: No</Italian>
+            <Japanese>爆発物を無効にするために爆発物専門兵の特性を必要としますか? デフォルト: 不要</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要爆破专业兵才能拆除爆炸物？ 预设：否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
@@ -823,7 +823,7 @@
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
-            <Japanese>非特技兵へ足かせ</Japanese>
+            <Japanese>非専門兵にペナルティを与える?</Japanese>
             <Korean>비전문가에게 불이익을 줍니까?</Korean>
             <Chinesesimp>惩罚非专业人士？</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
@@ -838,8 +838,8 @@
             <French>Augmente le temps nécessaire au désamorçage pour les unités non spécialisées.</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По умолчанию: Нет</Russian>
-            <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
-            <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
+            <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Predefinito: Si</Italian>
+            <Japanese>専門兵以外がアクション完了するのに必要な時間を増加しますか? デフォルト: 有効</Japanese>
             <Korean>비전문가가 폭발물을 해제 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
@@ -854,8 +854,8 @@
             <French>Explosion au désamorçage</French>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминировании?</Russian>
-            <Italian>Fai esplodere quando disarmato?</Italian>
-            <Japanese>解除中に爆発</Japanese>
+            <Italian>Detona se disarmati?</Italian>
+            <Japanese>解除中に爆発するか?</Japanese>
             <Korean>해제 시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆？</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
@@ -870,8 +870,8 @@
             <French>Certains explosifs exploseront durant le désamorçage. Valeur par défaut : activé.</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По умолчанию: Да</Russian>
-            <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
-            <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
+            <Italian>Permettere ad alcuni esplosivi di esplodere quando si tenta il disinnesco? Predefinito: Si</Italian>
+            <Japanese>特定の爆発物を解除中に爆発可能にしますか? デフォルト: 有効</Japanese>
             <Korean>특정 폭발물이 해제 시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后，某些爆炸物会在拆除时引爆？ 预设：是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
@@ -887,7 +887,7 @@
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
             <Italian>Questo modulo cambia le impostazioni relative agli esplosivi</Italian>
-            <Japanese>モジュールを調節し爆発物に設定を反映させます。</Japanese>
+            <Japanese>このモジュールは爆発物に関する設定を調整します。</Japanese>
             <Korean>이 모듈은 폭발물에 관한 설정을 수정할 수 있게합니다.</Korean>
             <Chinesesimp>此模块用来调整炸药的相关设定</Chinesesimp>
             <Chinese>此模塊用來調整炸藥的相關設定</Chinese>
@@ -898,7 +898,7 @@
             <German>M6-SLAM-Mine (Bodenangriff)</German>
             <Polish>Mina M6 SLAM (atak od dołu)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Inferior)</Spanish>
-            <Italian>Mina M6 SLAM (base)</Italian>
+            <Italian>Mina M6 SLAM (Da Sotto)</Italian>
             <Czech>M6 SLAM (Útok zespoda)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Inferior)</Portuguese>
             <Russian>Мина M6 SLAM (направлена вверх)</Russian>
@@ -913,7 +913,7 @@
             <German>M6-SLAM-Mine (Seitenangriff)</German>
             <Polish>Mina M6 SLAM (atak od boku)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
-            <Italian>Mina M6 SLAM (Laterale)</Italian>
+            <Italian>Mina M6 SLAM (Dal Lato)</Italian>
             <Czech>M6 SLAM (Útok do strany)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Lateral)</Portuguese>
             <Russian>Мина M6 SLAM (направлена вбок)</Russian>
@@ -928,7 +928,7 @@
             <German>Große USBV (Stadt, Druckplatte)</German>
             <Polish>Duży IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Urbano, Placa de presión)</Spanish>
-            <Italian>IED grande (urbano, a pressione)</Italian>
+            <Italian>IED grande (Urbano, a pressione)</Italian>
             <Czech>IED, Velké (Městské, Nášlapné)</Czech>
             <Portuguese>IED Grande (Urbano, Placa de pressão)</Portuguese>
             <Russian>Большое СВУ (городское, нажимного действия)</Russian>
@@ -943,7 +943,7 @@
             <German>Große USBV (Eingegraben, Druckplatte)</German>
             <Polish>Duży IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Enterrado, Placa de presión)</Spanish>
-            <Italian>IED grande (interrato, a pressione)</Italian>
+            <Italian>IED grande (Interrato, a pressione)</Italian>
             <Czech>IED, Velké (Zakopané, Nášlapné)</Czech>
             <Portuguese>IED Grande (Enterrado, Placa de pressão)</Portuguese>
             <Russian>Большое СВУ (закопанное, нажимного действия)</Russian>
@@ -958,7 +958,7 @@
             <German>Kleine USBV (Stadt, Druckplatte)</German>
             <Polish>Mały IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Urbano, Placa de presión)</Spanish>
-            <Italian>IED piccolo (urbano, a pressione)</Italian>
+            <Italian>IED piccolo (Urbano, a pressione)</Italian>
             <Czech>IED, Malé (Městské, Nášlapné)</Czech>
             <Portuguese>IED Pequeno(Urbano, Placa de pressão)</Portuguese>
             <Russian>Малое СВУ (городское, нажимного действия)</Russian>
@@ -973,7 +973,7 @@
             <German>Kleine USBV (Eingegraben, Druckplatte)</German>
             <Polish>Mały IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Enterrado, Placa de presión)</Spanish>
-            <Italian>IED piccolo (interrato, a pressione)</Italian>
+            <Italian>IED piccolo (Interrato, a pressione)</Italian>
             <Czech>IED, Malé (Zakopané, Nášlapné)</Czech>
             <Portuguese>IED Pequeno (Enterrado, Placa de pressão)</Portuguese>
             <Russian>Малое СВУ (закопанное, нажимного действия)</Russian>
@@ -991,7 +991,7 @@
             <Polish>Podłącz do %1</Polish>
             <French>Connecter %1</French>
             <Hungarian>Csatlakozás %1</Hungarian>
-            <Italian>Collega a  %1</Italian>
+            <Italian>Collega a %1</Italian>
             <Portuguese>Conectar à %1</Portuguese>
             <Japanese>%1 へ接続</Japanese>
             <Korean>%1에 연결 중</Korean>
@@ -1002,12 +1002,12 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Name">
             <English>Tripwire Flare</English>
             <Russian>Сигнальная растяжка</Russian>
-            <Japanese>仕掛け型照明地雷</Japanese>
+            <Japanese>仕掛け線照明地雷</Japanese>
             <Polish>Flara na linkę</Polish>
             <German>Stolperdraht-Leuchtrakete</German>
             <Korean>조명지뢰</Korean>
             <French>Fusée éclairante avec fil piège</French>
-            <Italian>Cavo d'innesco</Italian>
+            <Italian>Bengala a filo d'inciampo</Italian>
             <Chinesesimp>绊线信号弹</Chinesesimp>
             <Chinese>絆線閃光地雷</Chinese>
             <Portuguese>Tripwire (Sinalizador)</Portuguese>
@@ -1017,12 +1017,12 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Description">
             <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
             <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сигнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
-            <Japanese>種類: 仕掛け型照明地雷 - 発動したとき、非致死性の照明を発炎します。&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 地表</Japanese>
+            <Japanese>種類: 仕掛け線照明地雷 - 発動したとき、非致死性の照明を発炎します。&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 地表</Japanese>
             <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
             <German>Typ: Stolperdraht-Leuchtrakete - Schießt bei Auslösung eine nicht-tödliche Leuchtrakete ab.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
             <Korean>종류: 조명지뢰 - 작동시 무해한 조명을 사출합니다.&lt;br /&gt;장탄수: 1&lt;br /&gt;사용처: 지면</Korean>
             <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée.&lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
-            <Italian>Tipo: Cavo d'innesco - Sfocio un abbaglio non letale quanto attivato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
+            <Italian>Tipo: Bengala a cavo d'innesco - Accende un bengala abbagliante non letale quando innescato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
             <Chinesesimp>类型：绊线信号弹—触发后产生非致命性的强光。&lt;br /&gt;发数：1&lt;br /&gt;使用于：地面</Chinesesimp>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
             <Portuguese>Tipo: Flare de Tripwire - Acende um sinalizador não letal quando acionado.&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Chão</Portuguese>
@@ -1064,7 +1064,7 @@
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
             <German>Kampfmittelbeseitigung</German>
-            <Japanese>EOD に</Japanese>
+            <Japanese>EODにする</Japanese>
             <French>Spécialiste en explosifs</French>
             <Chinese>是EOD</Chinese>
             <Chinesesimp>爆破专家</Chinesesimp>
@@ -1074,11 +1074,12 @@
             <Russian>Сапёр</Russian>
             <Spanish>¿Es EOD?</Spanish>
             <Korean>폭발물 처리반</Korean>
+            <Portuguese>É EOD</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
             <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
-            <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
+            <Japanese>ユニットが爆発物専門兵であるかどうかを定義します。</Japanese>
             <French>Définit si l'unité est un spécialiste en explosifs.</French>
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
             <Chinesesimp>控制该单位是否是爆破专家</Chinesesimp>
@@ -1088,39 +1089,46 @@
             <Russian>Определяет, является ли юнит сапёром.</Russian>
             <Spanish>Controla si la unidad es un especialista en explosivos</Spanish>
             <Korean>유닛이 폭발물 처리반인지 결정합니다</Korean>
+            <Portuguese>Controla se a unidade é um especialista em explosivos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
             <Russian>Мин. время</Russian>
             <French>Durée minimale</French>
-            <Japanese>最短時間</Japanese>
+            <Japanese>タイマーの最短時間</Japanese>
             <Spanish>Tiempo mínimo</Spanish>
             <Polish>Minimalny czas</Polish>
             <German>Minimale Zeit</German>
+            <Italian>Tempo Minimo</Italian>
             <Chinesesimp>最短时间</Chinesesimp>
             <Korean>최소 시간</Korean>
+            <Portuguese>Tempo Mínimo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
             <Russian>Макс. время</Russian>
             <French>Durée maximale</French>
-            <Japanese>最長時間</Japanese>
+            <Japanese>タイマーの最長時間</Japanese>
             <Spanish>Tiempo máximo</Spanish>
             <Polish>Maksymalny czas</Polish>
             <German>Maximale Zeit</German>
+            <Italian>Tempo Massimo</Italian>
             <Chinesesimp>最长时间</Chinesesimp>
             <Korean>최대 시간</Korean>
+            <Portuguese>Tempo Máximo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
             <Russian>Стандартное время</Russian>
             <French>Durée par défaut</French>
-            <Japanese>標準時間</Japanese>
+            <Japanese>タイマーの標準時間</Japanese>
             <Spanish>Tiempo por defecto</Spanish>
             <Polish>Domyślny czas</Polish>
             <German>Standardmäßige Zeit</German>
+            <Italian>Tempo Predefinito</Italian>
             <Chinesesimp>默认时间</Chinesesimp>
             <Korean>기본 시간</Korean>
+            <Portuguese>Tempo Padrão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
@@ -1130,8 +1138,10 @@
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Italian>Tempo minimo (in secondi) per le spolette a tempo.</Italian>
             <Chinesesimp>定时爆炸的最短时间（单位：秒）</Chinesesimp>
             <Korean>초 단위로, 폭발 타이머의 최소 시간을 정합니다</Korean>
+            <Portuguese>Tempo mínimo (em segundos) para o temporizador do explosivo.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
@@ -1141,8 +1151,10 @@
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Italian>Tempo massimo (in secondi) per le spolette a tempo.</Italian>
             <Chinesesimp>定时爆炸的最长时间（单位：秒）</Chinesesimp>
             <Korean>초 단위로, 폭발 타이머의 최대 시간을 정합니다</Korean>
+            <Portuguese>Tempo máximo (em segundos) para o temporizador do explosivo.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
@@ -1152,8 +1164,10 @@
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>
+            <Italian>Tempo predefinito (in secondi) per le spolette a tempo.</Italian>
             <Chinesesimp>定时爆炸的默认时间（单位：秒）</Chinesesimp>
             <Korean>초 단위로, 기본 폭발 타이머 시간을 정합니다</Korean>
+            <Portuguese>Tempo padrão (em segundos) para o temporizador do explosivo.</Portuguese>
         </Key>
     </Package>
 </Project>

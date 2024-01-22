@@ -11,7 +11,7 @@
  * Can Drink From Source <BOOL>
  *
  * Example:
- * [_player, _source] call ace_field_rations_canDrinkFromSource
+ * [_player, _source] call ace_field_rations_fnc_canDrinkFromSource
  *
  * Public: No
  */

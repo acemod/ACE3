@@ -12,7 +12,7 @@
             <Spanish>Puntero láser</Spanish>
             <Italian>Puntatore laser</Italian>
             <Portuguese>Laser</Portuguese>
-            <Japanese>レーザ ポインタ</Japanese>
+            <Japanese>レーザー ポインター</Japanese>
             <Korean>레이저 지시기</Korean>
             <Chinesesimp>激光指示器</Chinesesimp>
             <Chinese>雷射指示器</Chinese>
@@ -29,7 +29,7 @@
             <Spanish>Puntero láser (rojo)</Spanish>
             <Italian>Puntatore laser (rosso)</Italian>
             <Portuguese>Laser (vermelho)</Portuguese>
-            <Japanese>レーザ ポインタ (赤)</Japanese>
+            <Japanese>レーザー ポインター (赤)</Japanese>
             <Korean>레이저 지시기 (빨강)</Korean>
             <Chinesesimp>激光指示器（红色）</Chinesesimp>
             <Chinese>雷射指示器 (紅色)</Chinese>
@@ -46,7 +46,7 @@
             <Spanish>Puntero láser (verde)</Spanish>
             <Italian>Puntatore laser (verde)</Italian>
             <Portuguese>Laser (verde)</Portuguese>
-            <Japanese>レーザ ポインタ (緑)</Japanese>
+            <Japanese>レーザー ポインター (緑)</Japanese>
             <Korean>레이저 지시기 (초록)</Korean>
             <Chinesesimp>激光指示器（绿色）</Chinesesimp>
             <Chinese>雷射指示器 (綠色)</Chinese>
@@ -74,13 +74,13 @@
             <Czech>&lt;t color='#9cf953'&gt;Použití: &lt;/t&gt;Zapnout/vypnout laser</Czech>
             <French>&lt;t color='#9cf953'&gt;Utilisation : &lt;/t&gt;Allumer/Éteindre le laser</French>
             <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS</German>
-            <Italian>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Laser ON/OFF</Italian>
+            <Italian>&lt;t color='#9cf953'&gt;Utilizzo: &lt;/t&gt;Laser ACCESO/SPENTO</Italian>
             <Polish>&lt;t color='#9cf953'&gt;Użyj: &lt;/t&gt;wł./wył. laser</Polish>
             <Portuguese>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Ativar/Desativar laser</Portuguese>
             <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;ВКЛ/ВЫКЛ лазер</Russian>
             <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;Encender/Apagar láser</Spanish>
             <Hungarian>&lt;t color='#9cf953'&gt;Használat: &lt;/t&gt;Lézer BE/KI kapcsolása</Hungarian>
-            <Japanese>&lt;t color='#9cf953'&gt;つかう: &lt;/t&gt;レーザの起動/停止</Japanese>
+            <Japanese>&lt;t color='#9cf953'&gt;つかう: &lt;/t&gt;レーザーの起動/停止</Japanese>
             <Korean>&lt;t color='#9cf953'&gt;사용키: &lt;/t&gt;레이저 켜기/끄기</Korean>
             <Chinesesimp>&lt;t color='#9cf953'&gt;使用：&lt;/t&gt;激光开启/关闭</Chinesesimp>
             <Chinese>&lt;t color='#9cf953'&gt;使用: &lt;/t&gt;雷射開啟/關閉</Chinese>
@@ -114,7 +114,7 @@
             <Hungarian>Infravörös Lézer</Hungarian>
             <Czech>IR Laser</Czech>
             <Portuguese>Laser IV</Portuguese>
-            <Japanese>赤外線レーザ</Japanese>
+            <Japanese>赤外線レーザー</Japanese>
             <Korean>적외선 레이저</Korean>
             <Chinesesimp>红外线激光</Chinesesimp>
             <Chinese>紅外線雷射</Chinese>
@@ -126,12 +126,12 @@
             <Polish>Przełącz Laser / Laser IR</Polish>
             <Russian>Изменить режим Лазер / ИК-лазер</Russian>
             <French>Alterner laser/laser IR</French>
-            <Italian>Alterna Laser / IR Laser</Italian>
+            <Italian>Alterna Laser / Laser IR</Italian>
             <Spanish>Cambiar láser / Láser IR</Spanish>
             <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
             <Czech>Přepnout Laser / Infračervený Laser</Czech>
             <Portuguese>Alternar entre Laser / Laser IV</Portuguese>
-            <Japanese>レーザ/赤外線レーザを切り替える</Japanese>
+            <Japanese>レーザー/赤外線レーザーを切り替える</Japanese>
             <Korean>가시광/적외선 레이저 전환</Korean>
             <Chinesesimp>切换激光/红外线激光</Chinesesimp>
             <Chinese>切換雷射/紅外線雷射</Chinese>

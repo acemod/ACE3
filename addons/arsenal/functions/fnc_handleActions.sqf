@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Current panel control <CONTROL>
- * 2: Current panel selection <SCALAR>
+ * 2: Current panel selection <NUMBER>
  * 3: Item config entry <CONFIG>
  *
  * Return Value:
@@ -118,12 +118,14 @@ _actionsCurrentPageCtrl ctrlCommit 0;
             _actionTextCtrl ctrlSetFade 0;
             _actionTextCtrl ctrlCommit 0;
             _actionButtonCtrl ctrlSetFade 1;
+            _actionButtonCtrl ctrlEnable false;
             _actionButtonCtrl ctrlCommit 0;
         };
         default {
             _actionTextCtrl ctrlSetFade 1;
             _actionTextCtrl ctrlCommit 0;
             _actionButtonCtrl ctrlSetFade 1;
+            _actionButtonCtrl ctrlEnable false;
             _actionButtonCtrl ctrlCommit 0;
         };
     };

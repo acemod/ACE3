@@ -20,6 +20,10 @@
 
 params ["_medic", "_patient", "_items"];
 
+if (_medic isEqualTo player && {!isNull findDisplay 312}) exitWith {
+    [_medic, _items select 0]
+};
+
 scopeName "Main";
 
 private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GVAR(allowSharedEquipment);

@@ -31,7 +31,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Bandage_Basic_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_packingBandage: ACE_ItemCore {
@@ -44,7 +44,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Packing_Bandage_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_elasticBandage: ACE_ItemCore {
@@ -57,7 +57,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Bandage_Elastic_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_tourniquet: ACE_ItemCore {
@@ -241,7 +241,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(QuikClot_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_personalAidKit: ACE_ItemCore {
@@ -279,7 +279,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Suture_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.1;
         };
     };
     class ACE_bodyBag: ACE_ItemCore {

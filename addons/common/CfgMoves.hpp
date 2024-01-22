@@ -1,9 +1,15 @@
-
 class CfgMovesBasic {
     class Default;
+    // From ACRE
+    class ManActions {
+        GVAR(stop) = QGVAR(stop);
+    };
     class Actions {
+        class NoActions: ManActions {
+            GVAR(stop)[] = {QGVAR(stop), "Gesture"};
+        };
+
         // fixes grab animation with equipped pistol
-        class NoActions;
         class PistolStandActions: NoActions {
             grabDrag = "AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2";
         };
@@ -62,8 +68,12 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 
         // fix falling back to unconsciousness animation and disable rotating in that state
         class Unconscious: Default {
-            ConnectTo[] = {};
+            // Prevents AI from moving torso and head when unconscious
+            aiming = "aimingNo";
+            aimingBody = "aimingUpNo";
             head = "headNo";
+
+            ConnectTo[] = {};
             forceAim = 1;
             static = 1;
         };
