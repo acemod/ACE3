@@ -12,8 +12,10 @@ pub fn group() -> Group {
 pub static mut MAPS: Option<HashMap<String, Map>> = None;
 pub static mut CURRENT_MAP: Option<String> = None;
 
+/// Initializes a new map, and sets it as the current map
+///
+/// Safety: Arma will only call this from its main thread
 fn init(name: String, size: u32) -> bool {
-    // Safety: this is all single threaded, so no need to lock
     unsafe {
         if MAPS.is_none() {
             MAPS = Some(HashMap::new());
@@ -29,8 +31,10 @@ fn init(name: String, size: u32) -> bool {
     false
 }
 
+/// Sets the height, number of objects, and surface type of a grid square
+///
+/// Safety: Arma will only call this from its main thread
 fn set(grid: u64, height: i64, num_objects: i64, surface_is_water: bool) -> Result<(), String> {
-    // Safety: this is all single threaded, so no need to lock
     unsafe {
         MAPS.as_mut()
             .ok_or_else(|| "Map array not initialized".to_string())?

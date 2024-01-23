@@ -3,7 +3,7 @@ use std::f64::consts::{FRAC_PI_2, FRAC_PI_4, PI};
 use arma_rs::{Context, Group};
 use rayon::prelude::*;
 
-use crate::common::{Temperature, GRAVITY};
+use crate::common::{Height, MuzzleVelocity, Temperature, GRAVITY};
 
 mod simulate;
 
@@ -18,7 +18,7 @@ pub fn group() -> Group {
 
 fn command_calculate_table(
     ctx: Context,
-    muzzle_velocity: f64,
+    muzzle_velocity: MuzzleVelocity,
     air_friction: f64,
     min_elev: f64,
     max_elev: f64,
@@ -72,13 +72,13 @@ fn command_calculate_table(
 #[allow(clippy::too_many_arguments)]
 fn command_get_solution(
     range_to_hit: f64,
-    height_of_target: f64,
-    muzzle_velocity: f64,
+    height_of_target: Height,
+    muzzle_velocity: MuzzleVelocity,
     air_friction: f64,
     high_arc: bool,
     cross_wind: f64,
     tail_wind: f64,
-    temperature: f64,
+    temperature: Temperature,
     air_density: f64,
 ) -> (f64, f64, f64) {
     let (distance, elevation, _) = simulate::find_solution(
@@ -89,19 +89,21 @@ fn command_get_solution(
         high_arc,
         0.0,
         FRAC_PI_2,
+        temperature,
+        air_density,
     );
     if distance == -1.0 {
         return (-1.0, -1.0, -1.0);
     }
     let (mut x_sim, mut y_sim, mut tof) = simulate::shot(
         elevation,
-        muzzle_velocity,
         height_of_target,
+        muzzle_velocity,
+        air_friction,
         cross_wind,
         tail_wind,
-        Temperature::new_celsius(temperature),
+        temperature,
         air_density,
-        air_friction,
     );
     let mut y_offset = range_to_hit - y_sim;
     let mut y_correction = -y_offset;
@@ -114,16 +116,18 @@ fn command_get_solution(
             high_arc,
             0.0,
             FRAC_PI_2,
+            temperature,
+            air_density,
         );
         (x_sim, y_sim, tof) = simulate::shot(
             elevation,
-            muzzle_velocity,
             height_of_target,
+            muzzle_velocity,
+            air_friction,
             cross_wind,
             tail_wind,
-            Temperature::new_celsius(temperature),
+            temperature,
             air_density,
-            air_friction,
         );
         y_offset = range_to_hit - y_sim;
         y_correction -= y_offset;
@@ -132,9 +136,9 @@ fn command_get_solution(
     (elevation, tof, angle_correction)
 }
 
-fn find_max_angle(muzzle_velocity: f64, air_friction: f64) -> (f64, f64) {
+fn find_max_angle(muzzle_velocity: MuzzleVelocity, air_friction: f64) -> (f64, f64) {
     if air_friction == 0.0 {
-        return (FRAC_PI_4, muzzle_velocity * muzzle_velocity / GRAVITY);
+        return (FRAC_PI_4, *muzzle_velocity * *muzzle_velocity / GRAVITY);
     }
 
     let mut best_angle = FRAC_PI_4;
@@ -143,13 +147,13 @@ fn find_max_angle(muzzle_velocity: f64, air_friction: f64) -> (f64, f64) {
     loop {
         let (_, result_distance, _) = simulate::shot(
             test_angle,
+            Height::new(0.0),
             muzzle_velocity,
-            0.0,
+            air_friction,
             0.0,
             0.0,
             Temperature::new_15c(),
             1.0,
-            air_friction,
         );
         if result_distance > best_distance {
             best_angle = test_angle;
@@ -166,7 +170,7 @@ fn find_max_angle(muzzle_velocity: f64, air_friction: f64) -> (f64, f64) {
 
 fn calc_range_table_line(
     range_to_hit: f64,
-    muzzle_velocity: f64,
+    muzzle_velocity: MuzzleVelocity,
     air_friction: f64,
     high_arc: bool,
     min_elev: f64,
@@ -174,24 +178,28 @@ fn calc_range_table_line(
 ) -> Option<Vec<String>> {
     let (actual_distance, line_elevation, line_tof) = simulate::find_solution(
         range_to_hit,
-        0.0,
+        Height::new(0.0),
         muzzle_velocity,
         air_friction,
         high_arc,
         min_elev,
         max_elev,
+        Temperature::new_15c(),
+        1.0,
     );
     if line_tof < 0.0 {
         return None;
     }
     let (_, line_height_elevation, line_height_tof) = simulate::find_solution(
         range_to_hit,
-        -100.0,
+        Height::new(-100.0),
         muzzle_velocity,
         air_friction,
         high_arc,
         min_elev,
         max_elev,
+        Temperature::new_15c(),
+        1.0,
     );
 
     let (dr_elev_adjust, dr_tof_adjust) = if line_height_elevation > 0.0 {
@@ -229,13 +237,13 @@ fn calc_range_table_line(
             {
                 let (x_offset, _, _) = simulate::shot(
                     line_elevation,
+                    Height::new(0.0),
                     muzzle_velocity,
-                    0.0,
+                    air_friction,
                     10.0,
                     0.0,
                     Temperature::new_15c(),
                     1.0,
-                    air_friction,
                 );
                 format!(
                     "{:0width$.1}",
@@ -246,13 +254,13 @@ fn calc_range_table_line(
             {
                 let (_, y_offset, _) = simulate::shot(
                     line_elevation,
+                    Height::new(0.0),
                     muzzle_velocity,
-                    0.0,
+                    air_friction,
                     0.0,
                     -10.0,
                     Temperature::new_15c(),
                     1.0,
-                    air_friction,
                 );
                 let headwind_offset = (actual_distance - y_offset) / 10.0;
                 format!(
@@ -265,13 +273,13 @@ fn calc_range_table_line(
             {
                 let (_, y_offset, _) = simulate::shot(
                     line_elevation,
+                    Height::new(0.0),
                     muzzle_velocity,
-                    0.0,
+                    air_friction,
                     0.0,
                     10.0,
                     Temperature::new_15c(),
                     1.0,
-                    air_friction,
                 );
                 let tailwind_offset = (actual_distance - y_offset) / 10.0;
                 format!(
@@ -284,13 +292,13 @@ fn calc_range_table_line(
             {
                 let (_, y_offset, _) = simulate::shot(
                     line_elevation,
+                    Height::new(0.0),
                     muzzle_velocity,
-                    0.0,
+                    air_friction,
                     0.0,
                     0.0,
                     Temperature::new_celsius(5.0),
                     1.0,
-                    air_friction,
                 );
                 let temp_dec_offset = (actual_distance - y_offset) / 10.0;
                 format!(
@@ -303,13 +311,13 @@ fn calc_range_table_line(
             {
                 let (_, y_offset, _) = simulate::shot(
                     line_elevation,
+                    Height::new(0.0),
                     muzzle_velocity,
-                    0.0,
+                    air_friction,
                     0.0,
                     0.0,
                     Temperature::new_celsius(25.0),
                     1.0,
-                    air_friction,
                 );
                 let temp_inc_offset = (actual_distance - y_offset) / 10.0;
                 format!(
@@ -322,13 +330,13 @@ fn calc_range_table_line(
             {
                 let (_, y_offset, _) = simulate::shot(
                     line_elevation,
+                    Height::new(0.0),
                     muzzle_velocity,
-                    0.0,
+                    air_friction,
                     0.0,
                     0.0,
                     Temperature::new_15c(),
                     0.9,
-                    air_friction,
                 );
                 let air_density_dec_offset = (actual_distance - y_offset) / 10.0;
                 format!(
@@ -345,13 +353,13 @@ fn calc_range_table_line(
             {
                 let (_, y_offset, _) = simulate::shot(
                     line_elevation,
+                    Height::new(0.0),
                     muzzle_velocity,
-                    0.0,
+                    air_friction,
                     0.0,
                     0.0,
                     Temperature::new_15c(),
                     1.1,
-                    air_friction,
                 );
                 let air_density_inc_offset = (actual_distance - y_offset) / 10.0;
                 format!(
@@ -398,13 +406,13 @@ mod tests {
 
     use arma_rs::{Extension, FromArma, Result, Value};
 
-    use crate::artillery::command_calculate_table;
+    use crate::{artillery::command_calculate_table, common::MuzzleVelocity};
 
     use super::find_max_angle;
 
     #[test]
     fn test_find_max_angle() {
-        let (best_angle, best_distance) = find_max_angle(400.0, -0.00005);
+        let (best_angle, best_distance) = find_max_angle(MuzzleVelocity::new(400.0), -0.00005);
         assert!(best_angle - 0.730_420_291_959_627_2 < EPSILON); // old ace: 0.722566
         assert!(best_distance - 10_393.560_433_295_957 < EPSILON); // old ace: 10391.8
     }

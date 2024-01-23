@@ -1,6 +1,6 @@
 use arma_rs::Group;
 
-use crate::common::Temperature;
+use crate::common::{MuzzleVelocity, Temperature};
 
 mod atmosphere;
 mod bullet;
@@ -17,10 +17,8 @@ pub use self::{atmosphere::AtmosphereModel, drag::DragFunction, map::Map};
 
 #[derive(Debug)]
 pub enum BallisticModel {
-    Vanilla(
-        /// Air friction
-        f64,
-    ),
+    /// Air friction
+    Vanilla(f64),
     Advanced(AdvancedBallistics),
 }
 
@@ -108,11 +106,20 @@ fn atmospheric_correction(
     )
 }
 
-fn replicate_vanilla_zero(zero_range: f64, muzzle_velocity: f64, air_friction: f64) -> f64 {
+fn replicate_vanilla_zero(
+    zero_range: f64,
+    muzzle_velocity: MuzzleVelocity,
+    air_friction: f64,
+) -> f64 {
     zero::replicate_vanilla(zero_range, muzzle_velocity, air_friction)
 }
 
-fn zero_vanilla(zero_range: f64, muzzle_velocity: f64, air_friction: f64, bore_height: f64) -> f64 {
+fn zero_vanilla(
+    zero_range: f64,
+    muzzle_velocity: MuzzleVelocity,
+    air_friction: f64,
+    bore_height: f64,
+) -> f64 {
     zero::calculate(
         zero_range,
         muzzle_velocity,
@@ -124,7 +131,7 @@ fn zero_vanilla(zero_range: f64, muzzle_velocity: f64, air_friction: f64, bore_h
 #[allow(clippy::too_many_arguments)]
 fn zero_advanced(
     zero_range: f64,
-    muzzle_velocity: f64,
+    muzzle_velocity: MuzzleVelocity,
     bore_height: f64,
     temperature: Temperature,
     pressure: f64,

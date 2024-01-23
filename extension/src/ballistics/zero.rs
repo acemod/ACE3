@@ -1,12 +1,16 @@
-use crate::common::{Vector3, GRAVITY};
+use crate::common::{MuzzleVelocity, Vector3, GRAVITY};
 
 use super::{drag::calculate_retard, BallisticModel};
 
-pub fn replicate_vanilla(zero_range: f64, muzzle_velocity: f64, air_friction: f64) -> f64 {
+pub fn replicate_vanilla(
+    zero_range: f64,
+    muzzle_velocity: MuzzleVelocity,
+    air_friction: f64,
+) -> f64 {
     let max_delta_time = 0.05;
     let mut time = 0.0;
     let mut current_shot_position = Vector3::default();
-    let mut current_shot_velocity = Vector3::new(muzzle_velocity, 0.0, 0.0);
+    let mut current_shot_velocity = Vector3::new(*muzzle_velocity, 0.0, 0.0);
 
     while time < 8.0 {
         let dist_left = zero_range - current_shot_position.x();
@@ -31,7 +35,7 @@ const SPEED_OF_SOUND_AT_15C: f64 = 340.275;
 
 pub fn calculate(
     zero_range: f64,
-    muzzle_velocity: f64,
+    muzzle_velocity: MuzzleVelocity,
     bore_height: f64,
     ballistic_model: BallisticModel,
 ) -> f64 {
@@ -48,8 +52,8 @@ pub fn calculate(
         let gx = zero_angle.sin() * -GRAVITY;
         let gy = zero_angle.cos() * -GRAVITY;
 
-        let mut vx = zero_angle.cos() * muzzle_velocity;
-        let mut vy = zero_angle.sin() * muzzle_velocity;
+        let mut vx = zero_angle.cos() * *muzzle_velocity;
+        let mut vy = zero_angle.sin() * *muzzle_velocity;
 
         let mut tof = 0.0;
 
@@ -104,22 +108,31 @@ pub fn calculate(
 mod tests {
     use std::f64::EPSILON;
 
-    use crate::ballistics::{
-        AdvancedBallistics, AtmosphereModel, BallisticModel, DragFunction, Temperature,
+    use crate::{
+        ballistics::{
+            AdvancedBallistics, AtmosphereModel, BallisticModel, DragFunction, Temperature,
+        },
+        common::MuzzleVelocity,
     };
 
     #[test]
     fn replicate_vanilla_zero() {
         assert!(
-            super::replicate_vanilla(200.0, 89.0, 0.3) - 0.164_673_237_568_344_37 < EPSILON // old ace: 0.164672
+            super::replicate_vanilla(200.0, MuzzleVelocity::new(89.0), 0.3)
+                - 0.164_673_237_568_344_37
+                < EPSILON // old ace: 0.164672
         );
     }
 
     #[test]
     fn calc_zero_vanilla() {
         assert!(
-            super::calculate(200.0, 89.0, 1.5, BallisticModel::Vanilla(0.3))
-                - 0.132_818_571_102_032_27
+            super::calculate(
+                200.0,
+                MuzzleVelocity::new(89.0),
+                1.5,
+                BallisticModel::Vanilla(0.3)
+            ) - 0.132_818_571_102_032_27
                 < EPSILON // old ace: 0.132818
         );
     }
@@ -129,7 +142,7 @@ mod tests {
         assert!(
             super::calculate(
                 200.0,
-                89.0,
+                MuzzleVelocity::new(89.0),
                 1.5,
                 BallisticModel::Advanced(AdvancedBallistics {
                     ballistic_coefficient: 0.583,

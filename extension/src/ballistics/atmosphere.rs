@@ -21,7 +21,6 @@ impl FromArma for AtmosphereModel {
 }
 
 const ROUGHNESS_LENGTHS: [f64; 10] = [0.0002, 0.0005, 0.0024, 0.03, 0.055, 0.1, 0.2, 0.4, 0.8, 1.6];
-
 pub fn calculate_roughness_length(map: &Map, x: f64, y: f64) -> f64 {
     let grid_x = (x / 50.0).floor() as i64;
     let grid_y = (y / 50.0).floor() as i64;
