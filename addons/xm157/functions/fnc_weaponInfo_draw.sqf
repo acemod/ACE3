@@ -98,7 +98,7 @@ _ctrl ctrlSetText _rangeInfo;
 private _bearingInfo = call {
     private _bearingSetting = GVAR(data) getOrDefault ["bearing_show", 0];
     if ((_bearingSetting == 2) && {_timeSinceLastInput > 2}) exitWith { "" };
-    if ((_bearingSetting == 1)) exitWith { str floor 17.777777 * _weaponDir; }; // (6400 Mils, not MRAD)
+    if ((_bearingSetting == 1)) exitWith { str floor (17.777777 * _weaponDir); }; // (6400 Mils, not MRAD)
     format ["%1°", floor _weaponDir];
 };
 private _ctrl = _display displayCtrl IDC_SCREEN_TEXT_UPPER_LEFT;
