@@ -566,9 +566,10 @@ class ADDON {
         // How long until the maximum effect is reached
         timeTillMaxEffect = 30;
         // How many of this type of medication can be in the system before the patient overdoses?
-        maxDose = 4;
-        // A range of doses past max dose where there is a chance of not overdosing
-        riskDose = 2;
+        maxSafeDose = 4;
+        // The number of doses over maxDose that there is chance to not overdose. Chance decreases as dose gets higher.
+        // Dose 4: Safe | Dose 5 and 6: Possible Overdose | Dose 7: Overdose
+        chanceDoses = 2;
         // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
         onOverDose = "";
         // The viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress. For liquids, it corresponds to the informal concept of "thickness". This value will increase/decrease the viscoty of the blood with the percentage given. Where 100 = max. Using the minus will decrease viscosity
@@ -594,7 +595,6 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 10;
             maxDose = 9;
-            riskDose = 2;
             incompatibleMedication[] = {};
         };
         class Adenosine {
