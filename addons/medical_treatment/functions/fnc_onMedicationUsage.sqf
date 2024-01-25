@@ -19,7 +19,7 @@
  */
 
 params ["_target", "_className", "_maxSafeDose", "_chanceDoses", "_incompatibleMedication"];
-TRACE_4("onMedicationUsage",_target,_className,_maxDosage,_incompatibleMedication);
+TRACE_4("onMedicationUsage",_target,_className,_maxSafeDose,_incompatibleMedication);
 
 private _overdosedMedications = [];
 
