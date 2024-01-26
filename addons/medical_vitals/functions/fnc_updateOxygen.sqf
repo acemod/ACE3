@@ -56,7 +56,7 @@ private _negativeChange = BASE_OXYGEN_USE;
 // Assuming a trained male in midst of peak exercise will have a peak heart rate of ~180 BPM
 // Ref: https://academic.oup.com/bjaed/article-pdf/4/6/185/894114/mkh050.pdf table 2, though we don't take stroke volume change into account
 if (_unit == ACE_player && {missionNamespace getVariable [QEGVAR(advanced_fatigue,enabled), false]}) then {
-    _negativeChange = _negativeChange - ((1 - EGVAR(advanced_fatigue,aeReservePercentage)) * 0.1) - ((1 - EGVAR(advanced_fatigue,anReservePercentage)) * 0.15);
+    _negativeChange = _negativeChange - ((1 - EGVAR(advanced_fatigue,aeReservePercentage)) * 0.1) - ((1 - EGVAR(advanced_fatigue,anReservePercentage)) * 0.05);
 };
 
 // Effectiveness of capturing oxygen
