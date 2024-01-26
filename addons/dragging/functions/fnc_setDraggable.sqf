@@ -56,8 +56,25 @@ GVAR(initializedClasses) = _initializedClasses;
 
 private _icon = [QPATHTOF(UI\icons\box_drag.paa), QPATHTOF(UI\icons\person_drag.paa)] select (_object isKindOf "CAManBase");
 
-private _dragAction = [QGVAR(drag), LLSTRING(Drag), _icon, {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}] call EFUNC(interact_menu,createAction);
-private _dropAction = [QGVAR(drop), LLSTRING(Drop), "", {[_player, _target] call FUNC(dropObject)}, {[_player, _target] call FUNC(canDrop)}] call EFUNC(interact_menu,createAction);
+private _dragAction = [
+    QGVAR(drag),
+    LLSTRING(Drag),
+    _icon,
+    {
+        [_player, _target] call FUNC(startDrag)
+    }, {
+        [_player, _target] call FUNC(canDrag)
+}] call EFUNC(interact_menu,createAction);
+
+private _dropAction = [
+    QGVAR(drop),
+    LLSTRING(Drop),
+    "",
+    {
+        [_player, _target] call FUNC(dropObject);
+    }, {
+        [_player, _target] call FUNC(canDrop)
+}] call EFUNC(interact_menu,createAction);
 
 [_type, 0, ["ACE_MainActions"], _dragAction] call EFUNC(interact_menu,addActionToClass);
 [_type, 0, [], _dropAction] call EFUNC(interact_menu,addActionToClass);

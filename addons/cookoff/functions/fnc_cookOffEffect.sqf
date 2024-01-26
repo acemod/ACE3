@@ -40,7 +40,7 @@ if (isServer) then {
     if (_ring) then {
         private _intensity = 6;
         private _radius = 1.5 * ((boundingBoxReal _obj) select 2);
-        [QEGVAR(fire,addFireSource), [_obj, _radius, _intensity, _obj]] call CBA_fnc_localEvent;
+        [QEGVAR(fire,addFireSource), [_obj, _radius, _intensity, format [QGVAR(%1), hashValue _obj]]] call CBA_fnc_localEvent;
     };
 };
 
@@ -52,7 +52,7 @@ if (isServer) then {
         deleteVehicle _light;
         deleteVehicle _sound;
         if (isServer) then {
-            [QEGVAR(fire,removeFireSource), [_obj]] call CBA_fnc_localEvent;
+            [QEGVAR(fire,removeFireSource), [format [QGVAR(%1), hashValue _obj]]] call CBA_fnc_localEvent;
         };
         [_pfh] call CBA_fnc_removePerFrameHandler;
     };
@@ -198,4 +198,3 @@ if (isServer) then {
     ];
 
 }, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound, _intensity]] call CBA_fnc_addPerFrameHandler;
-
