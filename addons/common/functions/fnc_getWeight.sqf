@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: The Unit (usually the player) <OBJECT>
- * 1: Force a return type <SCALAR, BOOLEAN>
+ * 1: Force a return type <NUMBER, BOOLEAN>
  *
  * Return Value:
  * The return value <NUMBER>
