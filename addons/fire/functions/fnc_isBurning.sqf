@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Check if object is burning.
+ * Check if unit is burning.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
@@ -17,7 +17,4 @@
 
 params [["_unit", objNull, [objNull]]];
 
-_unit getVariable [QGVAR(burning), false] || {
-    GVAR(burningPlants) = GVAR(burningPlants) select {!isNull _x};
-    _unit in GVAR(burningPlants)
-}
+(_unit getVariable [QGVAR(intensity), 0]) > BURN_MIN_INTENSITY

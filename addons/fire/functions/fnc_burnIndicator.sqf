@@ -11,26 +11,29 @@
  * None
  *
  * Example:
- * [player, 4] call ace_fire_fnc_burnIndicator
+ * [player, _pfhID] call ace_fire_fnc_burnIndicator
  *
  * Public: No
  */
 
 params ["_unit", "_pfhHandle"];
 
-if !(IS_UNCONSCIOUS(_unit)) then {
-    private _iteration = _unit getVariable [QGVAR(indicatorIteration), 0];
-    if (_iteration == 0) then {
-        QGVAR(indicatorLayer) cutRsc [QGVAR(onFire1), "PLAIN"];
-        _iteration = 1;
-    } else {
-        QGVAR(indicatorLayer) cutRsc [QGVAR(onFire2), "PLAIN"];
-        _iteration = 0;
-    };
-    _unit setVariable [QGVAR(indicatorIteration), _iteration];
+if (!alive _unit || {!(_unit call FUNC(isBurning))}) exitWith {
+    _pfhHandle call CBA_fnc_removePerFrameHandler;
+
+    _unit setVariable [QGVAR(burnUIPFH), nil];
 };
 
-if (!([_unit] call FUNC(isBurning)) || { !alive _unit }) then {
-    [_pfhHandle] call CBA_fnc_removePerFrameHandler;
-    _unit setVariable [QGVAR(burnUIPFH), -1];
+if !(_unit call EFUNC(common,isAwake)) exitWith {};
+
+private _iteration = _unit getVariable [QGVAR(indicatorIteration), 0];
+
+if (_iteration == 0) then {
+    QGVAR(indicatorLayer) cutRsc [QGVAR(onFire1), "PLAIN"];
+    _iteration = 1;
+} else {
+    QGVAR(indicatorLayer) cutRsc [QGVAR(onFire2), "PLAIN"];
+    _iteration = 0;
 };
+
+_unit setVariable [QGVAR(indicatorIteration), _iteration];
