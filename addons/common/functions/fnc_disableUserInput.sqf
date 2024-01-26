@@ -219,7 +219,7 @@ if (_state) then {
                 _keyPressedInfo set [1, ((_keyPressedInfo select 1) - 1) max 0];
 
                 if (_keyPressedInfo isEqualTo [false, 0]) then {
-                    GVAR(keyboardInputMain) deleteAt _key,
+                    GVAR(keyboardInputMain) deleteAt _key
                 };
             }, _key, 0.5] call CBA_fnc_waitAndExecute;
         }];
