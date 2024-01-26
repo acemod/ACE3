@@ -58,7 +58,7 @@ private _medicationConfig = _defaultConfig >> _classname;
 private _painReduce             = GET_NUMBER(_medicationConfig >> "painReduce",getNumber (_defaultConfig >> "painReduce"));
 private _timeInSystem           = GET_NUMBER(_medicationConfig >> "timeInSystem",getNumber (_defaultConfig >> "timeInSystem"));
 private _timeTillMaxEffect      = GET_NUMBER(_medicationConfig >> "timeTillMaxEffect",getNumber (_defaultConfig >> "timeTillMaxEffect"));
-private _maxSafeDose            = GET_NUMBER(_medicationConfig >> "maxSafeDose",getNumber (_defaultConfig >> "maxSafeDose"));
+private _maxDose                = GET_NUMBER(_medicationConfig >> "maxDose",getNumber (_defaultConfig >> "maxDose"));
 private _chanceDoses            = GET_NUMBER(_medicationConfig >> "chanceDoses",getNumber (_defaultConfig >> "chanceDoses"));
 private _viscosityChange        = GET_NUMBER(_medicationConfig >> "viscosityChange",getNumber (_defaultConfig >> "viscosityChange"));
 private _hrIncreaseLow          = GET_ARRAY(_medicationConfig >> "hrIncreaseLow",getArray (_defaultConfig >> "hrIncreaseLow"));
@@ -76,4 +76,4 @@ TRACE_3("adjustments",_heartRateChange,_painReduce,_viscosityChange);
 [_patient, _className, _timeTillMaxEffect, _timeInSystem, _heartRateChange, _painReduce, _viscosityChange] call EFUNC(medical_status,addMedicationAdjustment);
 
 // Check for medication compatiblity
-[_patient, _className, _maxSafeDose, _chanceDoses, _incompatibleMedication] call FUNC(onMedicationUsage);
+[_patient, _className, _maxDose, _chanceDoses, _incompatibleMedication] call FUNC(onMedicationUsage);

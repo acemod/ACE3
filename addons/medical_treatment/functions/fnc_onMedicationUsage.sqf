@@ -18,15 +18,15 @@
  * Public: No
  */
 
-params ["_target", "_className", "_maxSafeDose", "_chanceDoses", "_incompatibleMedication"];
-TRACE_5("onMedicationUsage",_target,_className,_maxSafeDose,_chanceDoses,_incompatibleMedication);
+params ["_target", "_className", "_maxDose", "_chanceDoses", "_incompatibleMedication"];
+TRACE_5("onMedicationUsage",_target,_className,_maxDose,_chanceDoses,_incompatibleMedication);
 
 private _overdosedMedications = [];
 
 // Check for overdose from current medication
-if (_maxSafeDose > 0) then {
+if (_maxDose > 0) then {
     private _currentDose = [_target, _className] call EFUNC(medical_status,getMedicationCount);
-    if (_currentDose > floor (_maxSafeDose + round(random(_chanceDoses)))) then {
+    if (_currentDose > floor (_maxDose + round(random(_chanceDoses)))) then {
         TRACE_1("exceeded max dose",_currentDose);
         _overdosedMedications pushBackUnique _className;
     };
