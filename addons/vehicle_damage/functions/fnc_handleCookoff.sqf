@@ -23,7 +23,9 @@
 
 params ["_vehicle", "_chanceOfFire", "_intensity", ["_injurer", objNull], ["_hitPart", ""], ["_canRing", false], ["_canJet", true]];
 
-private _alreadyCookingOff = _vehicle getVariable [QGVAR(cookingOff), false];
+private _alreadyCookingOff = _vehicle getVariable [QEGVAR(cookoff,isCookingOff), false];
+
+_chanceOfFire = _chanceOfFire * EGVAR(cookoff,probabilityCoef);
 
 if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     private _configOf = configOf _vehicle;
@@ -45,8 +47,7 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     };
 
     // sending nil for _maxIntensity (9th param) to use default value in ace_cookoff_fnc_cookOff
-    [QEGVAR(cookOff,cookOff), [_vehicle, _intensity, _injurer, _delayWithSmoke, _fireDetonateChance, _detonateAfterCookoff, _source, _canRing, nil, _canJet]] call CBA_fnc_localEvent;
-    _vehicle setVariable [QGVAR(cookingOff), true];
+    [QEGVAR(cookOff,cookOff), [_vehicle, _intensity, _injurer, _delayWithSmoke, _fireDetonateChance, _detonateAfterCookoff, _source, _canRing, nil, _canJet]] call CBA_fnc_serverEvent;
     LOG_4("Cooking-off [%1] with a chance-of-fire [%2] - Delayed Smoke | Detonate after cookoff [%3 | %4]",_vehicle,_chanceOfFire,_delayWithSmoke,_detonateAfterCookoff);
     [_vehicle] spawn FUNC(abandon);
     LOG_1("[%1] is on fire is bailing",_vehicle);

@@ -23,7 +23,7 @@ if (_vehicleAmmo isEqualTo []) then {
     _vehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
 };
 
-([_vehicle] + _vehicleAmmo) call EFUNC(cookoff,detonateAmmunition);
+[QEGVAR(cookoff,detonateAmmunition), [_vehicle] + _vehicleAmmo] call CBA_fnc_serverEvent;
 
 if ((_vehicleAmmo select 1) > 0) then {
     {

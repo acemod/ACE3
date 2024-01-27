@@ -4,48 +4,28 @@
  * Start fire in engine block of a car.
  *
  * Arguments:
- * 0: Vehicle <Object>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * (vehicle player) call ace_cookoff_fnc_engineFire
+ * cursorObject call ace_cookoff_fnc_engineFire
  *
  * Public: No
  */
 
+if (!isServer) exitWith {};
+
 params ["_vehicle"];
 
+// If already smoking, stop
 if (_vehicle getVariable [QGVAR(isEngineSmoking), false]) exitWith {};
+
 _vehicle setVariable [QGVAR(isEngineSmoking), true];
 
-if (local _vehicle) then {
-    [QGVAR(engineFire), _vehicle] call CBA_fnc_globalEvent;
-};
+// Spawn engine fire effects on all connected machines
+private _jipID = [QGVAR(engineFireLocal), [_vehicle, CBA_missionTime + random [ENGINE_FIRE_TIME / 2, ENGINE_FIRE_TIME, ENGINE_FIRE_TIME / 2 * 3]]] call CBA_fnc_globalEventJIP;
+[_jipID, _vehicle] call CBA_fnc_removeGlobalEventJIP;
 
-private _offset = getArray (_vehicle call CBA_fnc_getObjectConfig >> QGVAR(engineSmokeOffset));
-
-if (_offset isEqualTo []) then {
-    _offset = [0,0,0];
-};
-
-private _position = [
-    0,
-    (boundingBoxReal _vehicle select 1 select 1) - 2,
-    (boundingBoxReal _vehicle select 0 select 2) + 2
-] vectorAdd _offset;
-
-private _smoke = "#particlesource" createVehicleLocal [0,0,0];
-_smoke setParticleClass "ObjectDestructionSmoke1_2Smallx";
-_smoke attachTo [_vehicle, _position];
-
-[{
-    (_this select 0) params ["_vehicle", "_smoke", "_time"];
-
-    if (isNull _vehicle || {!alive _vehicle} || {_vehicle getHitPointDamage "HitEngine" < 0.9} || {CBA_missionTime > _time}) then {
-        deleteVehicle _smoke;
-        _vehicle setVariable [QGVAR(isEngineSmoking), false];
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
-    };
-}, 5, [_vehicle, _smoke, CBA_missionTime + 240]] call CBA_fnc_addPerFrameHandler;
+_vehicle setVariable [QGVAR(engineFireJipID), _jipID];
