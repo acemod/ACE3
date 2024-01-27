@@ -85,6 +85,8 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
 
     true // return
 } else {
+    [objNull, _item, true] call EFUNC(common,claim);
+
     [[LSTRING(loadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
 
     // Fix cancelling loading a carried item
