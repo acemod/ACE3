@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Main looping function that updates fatigue values.
@@ -38,7 +38,7 @@ if ((vehicle ACE_player == ACE_player) && {_currentSpeed > 0.1} && {isTouchingGr
 
 // Calculate muscle damage increase
 // Note: Muscle damage recovery is ignored as it takes multiple days
-GVAR(muscleDamage) = GVAR(muscleDamage) + (_currentWork / GVAR(peakPower)) ^ 3.2 * 0.00004;
+GVAR(muscleDamage) = (GVAR(muscleDamage) + (_currentWork / GVAR(peakPower)) ^ 3.2 * 0.00004) min 1;
 private _muscleIntegritySqrt = sqrt (1 - GVAR(muscleDamage));
 
 // Calculate available power

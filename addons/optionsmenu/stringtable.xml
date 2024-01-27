@@ -11,7 +11,7 @@
             <French>Debug vers le presse-papier</French>
             <Hungarian>Debug a vágólapra</Hungarian>
             <Russian>Отладка в буфер обмена</Russian>
-            <Italian>Debug su Blocco Note</Italian>
+            <Italian>Debug negli Appunti</Italian>
             <Japanese>ｸﾘｯﾌﾟﾎﾞｰﾄﾞにﾃﾞﾊﾞｯｸﾞ</Japanese>
             <Korean>클립보드를 디버그하기</Korean>
             <Chinesesimp>复制调试信息至剪贴板</Chinesesimp>
@@ -28,7 +28,7 @@
             <French>Envoie les informations de debug vers le RPT et le presse-papier.</French>
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
             <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
-            <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
+            <Italian>Invia informazioni di debug all'RPT e gli appunti di Windows.</Italian>
             <Japanese>デバッグ情報を RPT とクリップボードに送ります。</Japanese>
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
             <Chinesesimp>复制调试信息至剪贴板与 RPT 报告档中。</Chinesesimp>
@@ -79,7 +79,7 @@
             <French>Nouveautés ACE</French>
             <Hungarian>ACE hírek</Hungarian>
             <Russian>Новости ACE</Russian>
-            <Italian>Novità ACE</Italian>
+            <Italian>ACE Novità</Italian>
             <Japanese>ACE ニュース</Japanese>
             <Korean>ACE 새 소식</Korean>
             <Chinesesimp>ACE 新闻</Chinesesimp>
@@ -96,147 +96,12 @@
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
             <Russian>Показывать новости в главном меню</Russian>
             <Czech>Zobrazit zprávy v hlavním menu</Czech>
-            <Italian>Mostra News nel Menù Princinpale</Italian>
+            <Italian>Mostra novità nel Menù Principale</Italian>
             <Japanese>メイン画面にニュースを表示します</Japanese>
             <Korean>메인메뉴에 새 소식을 표시합니다</Korean>
             <Chinesesimp>显示新闻消息于主菜单</Chinesesimp>
             <Chinese>顯示新聞消息於主選單</Chinese>
             <Turkish>Ana Menü de Haberleri Göster</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
-            <English>ACE Logistics</English>
-            <German>ACE Logistik</German>
-            <Polish>ACE Logistyka</Polish>
-            <Portuguese>ACE Logística</Portuguese>
-            <Russian>ACE Логистика</Russian>
-            <Czech>ACE Logistika</Czech>
-            <Spanish>ACE Logística</Spanish>
-            <Italian>ACE Logistica</Italian>
-            <French>ACE Logistique</French>
-            <Japanese>ACE ロジスティクス</Japanese>
-            <Korean>ACE 보급</Korean>
-            <Chinesesimp>ACE 后勤设定</Chinesesimp>
-            <Chinese>ACE 後勤設定</Chinese>
-            <Turkish>ACE Lojistik</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Hide">
-            <English>Hide</English>
-            <Polish>Ukryj</Polish>
-            <Spanish>Ocultar</Spanish>
-            <German>Verstecken</German>
-            <Czech>Skrýt</Czech>
-            <Portuguese>Ocultar</Portuguese>
-            <French>Cacher</French>
-            <Hungarian>Elrejtés</Hungarian>
-            <Russian>Скрыть</Russian>
-            <Italian>Nascondi</Italian>
-            <Japanese>非表示</Japanese>
-            <Korean>숨기기</Korean>
-            <Chinesesimp>隐藏</Chinesesimp>
-            <Chinese>隱藏</Chinese>
-            <Turkish>Gizle</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TopRightDown">
-            <English>Top right, downwards</English>
-            <Polish>Po prawej u góry, w dół</Polish>
-            <Spanish>Arriba a la derecha, hacia abajo</Spanish>
-            <German>Oben rechts, nach unten</German>
-            <Czech>Vpravo nahoře, dolů</Czech>
-            <Portuguese>Superior direito, para baixo</Portuguese>
-            <French>En haut à droite, vers le bas</French>
-            <Hungarian>Jobb felül, lefele</Hungarian>
-            <Russian>Справа — сверху вниз</Russian>
-            <Italian>In Alto a Destra, verso il Basso</Italian>
-            <Japanese>右上、下側</Japanese>
-            <Korean>오른쪽 위에서 아래로</Korean>
-            <Chinesesimp>右上角，向下</Chinesesimp>
-            <Chinese>右上角，向下</Chinese>
-            <Turkish>Sağ üst, aşağı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
-            <English>Top right, to the left</English>
-            <Polish>Po prawej u góry, do lewej</Polish>
-            <Spanish>Arriba a la derecha, hacia la izquierda</Spanish>
-            <German>Von rechts nach links</German>
-            <Czech>Vpravo nahoře, do leva</Czech>
-            <Portuguese>Superior direito, à esquerda</Portuguese>
-            <French>En haut à droite, vers la gauche</French>
-            <Hungarian>Jobb felül, balra</Hungarian>
-            <Russian>Сверху — справа налево</Russian>
-            <Italian>In Alto a Destra, verso Sinistra</Italian>
-            <Japanese>右上、左詰</Japanese>
-            <Korean>오른쪽 위에서 왼쪽으로</Korean>
-            <Chinesesimp>右上角，向左</Chinesesimp>
-            <Chinese>右上角，向左</Chinese>
-            <Turkish>Sağ üstte, solda</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
-            <English>Top left, downwards</English>
-            <Polish>Po lewej u góry, w dół</Polish>
-            <Spanish>Arriba a la izquierda, hacia abajo</Spanish>
-            <German>Von links, nach unten</German>
-            <Czech>Vlevo nahoře, dolů</Czech>
-            <Portuguese>Superior esquerdo, para baixo</Portuguese>
-            <French>En haut à gauche, vers le bas</French>
-            <Hungarian>Bal felül, lefele</Hungarian>
-            <Russian>Слева - сверху вниз</Russian>
-            <Italian>In Alto a Sinistra, verso il Basso</Italian>
-            <Japanese>左上、下側</Japanese>
-            <Korean>왼쪽 위에서 아래로</Korean>
-            <Chinesesimp>左上角，向下</Chinesesimp>
-            <Chinese>左上角，向下</Chinese>
-            <Turkish>Sol üst, aşağı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
-            <English>Top left, to the right</English>
-            <Polish>Po lewej u góry, do prawej</Polish>
-            <Spanish>Arriba a la izquierda, hacia la derecha</Spanish>
-            <German>Oben links nach rechts</German>
-            <Czech>Vlevo nahoře, do prava</Czech>
-            <Portuguese>Superior esquerdo, para a direita</Portuguese>
-            <French>En haut à gauche, vers la droite</French>
-            <Hungarian>Bal felül, jobbra</Hungarian>
-            <Russian>Сверху — слева направо</Russian>
-            <Italian>In Alto a Sinistra, verso Destra</Italian>
-            <Japanese>右上、右詰</Japanese>
-            <Korean>왼쪽 위에서 오른쪽으로</Korean>
-            <Chinesesimp>左上角，向右</Chinesesimp>
-            <Chinese>左上角，向右</Chinese>
-            <Turkish>Sol üst, sağa</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Top">
-            <English>Top</English>
-            <Polish>Góra</Polish>
-            <Spanish>Arriba</Spanish>
-            <German>Oben</German>
-            <Czech>Nahoře</Czech>
-            <Portuguese>Acima</Portuguese>
-            <French>En haut</French>
-            <Hungarian>Fent</Hungarian>
-            <Russian>Сверху</Russian>
-            <Italian>Alto</Italian>
-            <Japanese>上側</Japanese>
-            <Korean>상단</Korean>
-            <Chinesesimp>上方</Chinesesimp>
-            <Chinese>上方</Chinese>
-            <Turkish>Üst</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Bottom">
-            <English>Bottom</English>
-            <Polish>Dół</Polish>
-            <Spanish>Abajo</Spanish>
-            <German>Unten</German>
-            <Czech>Dole</Czech>
-            <Portuguese>Abaixo</Portuguese>
-            <French>En bas</French>
-            <Hungarian>Alul</Hungarian>
-            <Russian>Снизу</Russian>
-            <Italian>Basso</Italian>
-            <Japanese>下側</Japanese>
-            <Korean>하단</Korean>
-            <Chinesesimp>下方</Chinesesimp>
-            <Chinese>下方</Chinese>
-            <Turkish>Alt</Turkish>
         </Key>
     </Package>
 </Project>

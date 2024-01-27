@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Function used to get an appropriate icon for provided group. Approximate.
  *
  * Arguments:

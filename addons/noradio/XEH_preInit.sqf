@@ -27,4 +27,4 @@ if (hasInterface) then {
     }, true] call CBA_fnc_addPlayerEventHandler;
 };
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"

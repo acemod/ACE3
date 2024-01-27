@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Caches all item classnames used in ACE_Medical_Treatment_Actions
@@ -35,4 +35,4 @@ private _fnc_isMedicalItem = toString {
     _list pushBack (configName _x);
 } forEach (_fnc_isMedicalItem configClasses (configFile >> "CfgMagazines"));
 
-uiNamespace setVariable [QGVAR(treatmentItems), compileFinal str (_list arrayIntersect _list)]
+uiNamespace setVariable [QGVAR(treatmentItems), compileFinal (_list createHashMapFromArray [])]

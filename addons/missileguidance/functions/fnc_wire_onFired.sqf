@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Sets up wireGuided state arrays (called from missileGuidance's onFired).
  *
  * Arguments:

@@ -1,7 +1,7 @@
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscText;
-class RscListbox;
+class RscListBox;
 class RscCombo;
 class RscEdit;
 class RscXSliderH;
@@ -54,8 +54,8 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
 };
 
 class GVAR(RscDefendArea): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscDefendArea))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscDefendArea))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscDefendArea))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscDefendArea))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -72,8 +72,8 @@ class GVAR(RscDefendArea): RscDisplayAttributes {
 };
 
 class GVAR(RscEditableObjects): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscEditableObjects))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscEditableObjects))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscEditableObjects))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscEditableObjects))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -139,8 +139,8 @@ class GVAR(RscEditableObjects): RscDisplayAttributes {
 };
 
 class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGlobalSetSkill))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGlobalSetSkill))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscGlobalSetSkill))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscGlobalSetSkill))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -234,8 +234,8 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
 };
 
 class GVAR(RscGroupSide): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGroupSide))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGroupSide))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscGroupSide))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscGroupSide))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -312,8 +312,8 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
 };
 
 class GVAR(RscPatrolArea): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscPatrolArea))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscPatrolArea))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscPatrolArea))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscPatrolArea))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -330,8 +330,8 @@ class GVAR(RscPatrolArea): RscDisplayAttributes {
 };
 
 class GVAR(RscSearchArea): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSearchArea))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSearchArea))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscSearchArea))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscSearchArea))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -348,8 +348,8 @@ class GVAR(RscSearchArea): RscDisplayAttributes {
 };
 
 class GVAR(RscTeleportPlayers): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscTeleportPlayers))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscTeleportPlayers))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscTeleportPlayers))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscTeleportPlayers))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -373,7 +373,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                             h = QUOTE(H_PART(1));
                             colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class Unit: RscListbox {
+                        class Unit: RscListBox {
                             idc = 16189;
                             x = 0;
                             y = QUOTE(H_PART(1.1));
@@ -475,7 +475,7 @@ class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
 class RscDisplayAttributesVehicle: RscDisplayAttributes {
     class Controls: Controls {
         class Content: Content {
-            class Controls: controls {
+            class controls: controls {
                 class ace_cargo: GVAR(AttributeCargo) { };
             };
         };
@@ -485,7 +485,7 @@ class RscDisplayAttributesVehicle: RscDisplayAttributes {
 class RscDisplayAttributesVehicleEmpty: RscDisplayAttributes {
     class Controls: Controls {
         class Content: Content {
-            class Controls: controls {
+            class controls: controls {
                 class ace_cargo: GVAR(AttributeCargo) { };
             };
         };
@@ -493,8 +493,8 @@ class RscDisplayAttributesVehicleEmpty: RscDisplayAttributes {
 };
 
 class GVAR(RscGarrison): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGarrison))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGarrison))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscGarrison))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscGarrison))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -542,7 +542,7 @@ class GVAR(RscGarrison): RscDisplayAttributes {
                             y = QUOTE(H_PART(2.2));
                             w = QUOTE(W_PART(26));
                         };
-                        class FillingMode: RscListbox {
+                        class FillingMode: RscListBox {
                             idc = 73063;
                             x = 0;
                             y = QUOTE(H_PART(3.2));
@@ -571,8 +571,8 @@ class GVAR(RscGarrison): RscDisplayAttributes {
 };
 
 class GVAR(RscToggleNvg): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscToggleNvg))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscToggleNvg))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscToggleNvg))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscToggleNvg))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -652,8 +652,8 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
 };
 
 class GVAR(RscToggleFlashlight): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscToggleFlashlight))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscToggleFlashlight))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscToggleFlashlight))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscToggleFlashlight))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -741,8 +741,8 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
 };
 
 class GVAR(RscSetEngineer): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSetEngineer))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSetEngineer))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscSetEngineer))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscSetEngineer))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -786,8 +786,8 @@ class GVAR(RscSetEngineer): RscDisplayAttributes {
 };
 
 class GVAR(RscSuicideBomber): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSuicideBomber))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSuicideBomber))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscSuicideBomber))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscSuicideBomber))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};

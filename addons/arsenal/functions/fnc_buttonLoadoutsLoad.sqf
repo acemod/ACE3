@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -38,7 +38,7 @@ private _extendedLoadout = switch (GVAR(currentLoadoutsTab)) do {
 [GVAR(center), _extendedLoadout, true] call CBA_fnc_setLoadout;
 
 // Update current item list and unique items
-call FUNC(refresh);
+[true] call FUNC(refresh);
 
 _extendedLoadout params ["_loadout", "_extendedInfo"];
 

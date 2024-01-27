@@ -1,13 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Checks for carrying conditions. If these are met, the unit will start carrying. Called from ace_dragging_fnc_startCarry.
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- *  0.0: Unit <OBJECT>
- *  0.1: Target <OBJECT>
- *  0.2: Timeout <NUMBER>
+ * - 0: Unit <OBJECT>
+ * - 1: Target <OBJECT>
+ * - 2: Timeout <NUMBER>
  * 1: PFEH Id <NUMBER>
  *
  * Return Value:

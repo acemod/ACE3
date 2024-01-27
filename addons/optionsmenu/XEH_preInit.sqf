@@ -11,6 +11,6 @@ if (hasInterface) then {
     [[format ["ACE %1", localize LSTRING(headBugFix)], localize LSTRING(headBugFixTooltip)], QGVAR(MainMenuHelperHeadBugFix)] call CBA_fnc_addPauseMenuOption;
 };
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

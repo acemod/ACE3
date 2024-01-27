@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: joko // Jonas
  * Handles closing the Medical Menu. Called from onUnload event.

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Knock out vehicle from battle. Destroy all internal hitpoints.
  *
  * Arguments:

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson
  * Patch a wheel that is not on a vehicle

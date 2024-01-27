@@ -54,6 +54,10 @@
 #define BLOOD_VOLUME_CLASS_4_HEMORRHAGE 3.600 // lost more than 40% blood, Class IV Hemorrhage
 #define BLOOD_VOLUME_FATAL 3.0 // Lost more than 50% blood, Unrecoverable
 
+// Minimum blood volume, in liters, for a patient to have the chance to wake up
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsBloodThreshold)
+#define MINIMUM_BLOOD_FOR_STABLE_VITALS_DEFAULT BLOOD_VOLUME_CLASS_2_HEMORRHAGE
+
 // IV Change per second calculation:
 // 250 ml should take 60 seconds to fill. 250 ml / 60 s ~ 4.1667 ml/s.
 #define IV_CHANGE_PER_SECOND 4.1667 // in milliliters per second
@@ -72,9 +76,15 @@
 #define DAMAGE_BLUE_THRESHOLD 0.8
 #define DAMAGE_TOTAL_COLORS 10
 
-// --- pain
-#define PAIN_UNCONSCIOUS EGVAR(medical,const_painUnconscious)
-#define PAIN_UNCONSCIOUS_DEFAULT 0.5
+// Qualitative bleed rate thresholds as a fraction of knock out blood loss
+// Note that half of knock out blood loss is considered unstable, and knock out blood loss is considered critical
+#define BLEED_RATE_SLOW 0.1 // Slow - One fifth of unstable blood loss
+#define BLEED_RATE_MODERATE 0.5 // Moderate - Vitals considered stable
+#define BLEED_RATE_SEVERE 1.0 // Severe - Vitals considered unstable
+// Massive - Vitals considered critical
+
+// Pain above which a unit can go unconscious upon receiving damage
+#define PAIN_UNCONSCIOUS EGVAR(medical,painUnconsciousThreshold)
 
 // Pain fade out time (time it takes until pain is guaranteed to be completly gone)
 #define PAIN_FADE_TIME EGVAR(medical,const_painFadeTime)
@@ -85,7 +95,8 @@
 #define PAIN_SUPPRESSION_FADE_TIME 1800
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
-#define SPONTANEOUS_WAKE_UP_INTERVAL 15
+#define SPONTANEOUS_WAKE_UP_INTERVAL EGVAR(medical,const_wakeUpCheckInterval)
+#define SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT 15
 
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD EGVAR(medical,const_limpingDamageThreshold)

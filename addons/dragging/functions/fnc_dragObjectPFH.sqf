@@ -1,13 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * PFH for dragging an object.
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- *  0.0: Unit <OBJECT>
- *  0.1: Target <OBJECT>
- *  0.2: Start time <NUMBER>
+ * - 0: Unit <OBJECT>
+ * - 1: Target <OBJECT>
+ * - 2: Start time <NUMBER>
  * 1: PFEH Id <NUMBER>
  *
  * Return Value:
@@ -42,6 +42,18 @@ if (!alive _target || {_unit distance _target > 10}) then {
     };
 
     [_unit, _target] call FUNC(dropObject);
+
+    _idPFH call CBA_fnc_removePerFrameHandler;
+};
+
+// Drop static if crew is in it (UAV crew deletion may take a few frames)
+if (_target isKindOf "StaticWeapon" && {(crew _target) isNotEqualTo []} && {!(_target getVariable [QGVAR(isUAV), false])}) then {
+    TRACE_2("static weapon crewed",_unit,_target);
+
+    [_unit, _target] call FUNC(dropObject);
+
+    _unit setVariable [QGVAR(hint), nil];
+    call EFUNC(interaction,hideMouseHint);
 
     _idPFH call CBA_fnc_removePerFrameHandler;
 };

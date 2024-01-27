@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: joko, Jonas, SilentSpike
+ * Author: joko, Jonas, kymckay
  * Perform the cut parachute action (move unit out and delete)
  *
  * Arguments:

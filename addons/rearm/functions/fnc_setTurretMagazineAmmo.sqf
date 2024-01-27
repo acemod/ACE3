@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Tuupertunut
  * Sets the ammo counts of all magazines of given class in turret.

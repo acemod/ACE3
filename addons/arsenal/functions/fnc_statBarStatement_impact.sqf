@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -8,8 +8,8 @@
  * 0: Stats array <ARRAY>
  * 1: Item config path <CONFIG>
  * 2: Args for configExtreme <ARRAY>
- *  2.0: Stats limits <ARRAY of BOOLS>
- *  2.1: Bar limits <ARRAY of NUMBERS>
+ * - 0: Stats limits <ARRAY of BOOLS>
+ * - 1: Bar limits <ARRAY of NUMBERS>
  *
  * Return Value:
  * Number

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -74,7 +74,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
         // Enable delete and renaming button if in 3DEN
         {
-            _x ctrlEnable (is3DEN);
+            _x ctrlEnable (call FUNC(canEditDefaultLoadout));
             _x ctrlCommit 0;
         } forEach [_renameButtonCtrl, _deleteButtonCtrl];
 

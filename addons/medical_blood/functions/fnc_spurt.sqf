@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Sickboy
  * Spurts blood on the ground based on the direction and damage.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Interaction menu opened, search for nearby artillery vehicles.
@@ -46,10 +46,10 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
         } forEach allTurrets _vehicle;
         TRACE_3("",_vehicle,configName _vehicleCfg,_turret);
         if (isNull _turretCfg) exitWith { ERROR_1("no primaryGunner %1",configName _vehicleCfg); };
-        if ((count _turret) != 1) then { WARNING_2("sub turret %1-%2",_typeOf,_turret); };
+        if ((count _turret) != 1) then { WARNING_2("sub turret %1-%2",configName _vehicleCfg,_turret); };
 
         private _weaponsTurret = _vehicle weaponsTurret _turret;
-        if ((count _weaponsTurret) != 1) exitWith { WARNING_1("multiple weapons - %1",_typeOf); };
+        if ((count _weaponsTurret) != 1) exitWith { WARNING_1("multiple weapons - %1",configName _vehicleCfg); };
         private _weapon = _weaponsTurret select 0;
 
         private _turretAnimBody = getText (_turretCfg >> "animationSourceBody");

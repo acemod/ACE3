@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -27,6 +27,7 @@ private _itemIndex = [IDC_buttonMuzzle, IDC_buttonItemAcc, IDC_buttonOptic, IDC_
 switch (_currentItemsIndex) do {
     // Primary weapon
     case IDX_CURR_PRIMARY_WEAPON_ITEMS: {
+        private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select _itemIndex;
         // If removal
         if (_item == "") then {
             private _secondaryMagazine = (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select 5;
@@ -40,11 +41,11 @@ switch (_currentItemsIndex) do {
                 // Add magazine back into primary muzzle
                 GVAR(center) addWeaponItem [primaryWeapon GVAR(center), _secondaryMagazine, true];
             } else {
-                GVAR(center) removePrimaryWeaponItem ((GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select _itemIndex);
+                GVAR(center) removePrimaryWeaponItem _currentItemInSlot;
             };
         } else {
-            // Don't add item if it isn't a different item than what the unit already has
-            if (_item != ((GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS) select _itemIndex)) then {
+            // Don't add item if it isn't a magazine or a different item than what the unit already has
+            if (_itemIndex >= 4 || {_item != _currentItemInSlot}) then {
                 // If magazine, make sure to add to correct muzzle
                 if (_itemIndex >= 4) then {
                     private _weapon = primaryWeapon GVAR(center);
@@ -56,6 +57,9 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [primaryWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_PRIMARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
         GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
@@ -64,6 +68,7 @@ switch (_currentItemsIndex) do {
     };
     // Secondary weapon
     case IDX_CURR_SECONDARY_WEAPON_ITEMS: {
+        private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex;
         private _isDisposable = CBA_disposable_replaceDisposableLauncher && {!isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon GVAR(center))}};
 
         // If removal
@@ -84,11 +89,11 @@ switch (_currentItemsIndex) do {
                 // Add magazine back into primary muzzle
                 GVAR(center) addWeaponItem [secondaryWeapon GVAR(center), _secondaryMagazine, true];
             } else {
-                GVAR(center) removeSecondaryWeaponItem ((GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex);
+                GVAR(center) removeSecondaryWeaponItem _currentItemInSlot;
             };
         } else {
-            // Don't add item if it isn't a different item than what the unit already has
-            if (_item != ((GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex)) then {
+            // Don't add item if it isn't a magazine or a different item than what the unit already has
+            if (_itemIndex >= 4 || {_item != _currentItemInSlot}) then {
                 // If magazine, make sure to add to correct muzzle
                 if (_itemIndex >= 4) then {
                     private _weapon = secondaryWeapon GVAR(center);
@@ -100,6 +105,9 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [secondaryWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         if !(_isDisposable && {_itemIndex >= 4}) then {
             (getUnitLoadout GVAR(center) select IDX_LOADOUT_SECONDARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
@@ -110,6 +118,7 @@ switch (_currentItemsIndex) do {
     };
     // Handgun weapon
     case IDX_CURR_HANDGUN_WEAPON_ITEMS: {
+        private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select _itemIndex;
         if (_item == "") then {
             private _secondaryMagazine = (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select 5;
 
@@ -122,11 +131,11 @@ switch (_currentItemsIndex) do {
                 // Add magazine back into primary muzzle
                 GVAR(center) addWeaponItem [handgunWeapon GVAR(center), _secondaryMagazine, true];
             } else {
-                GVAR(center) removeHandgunItem ((GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select _itemIndex);
+                GVAR(center) removeHandgunItem _currentItemInSlot;
             };
         } else {
-            // Don't add item if it isn't a different item than what the unit already has
-            if (_item != ((GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS) select _itemIndex)) then {
+            // Don't add item if it isn't a magazine or a different item than what the unit already has
+            if (_itemIndex >= 4 || {_item != _currentItemInSlot}) then {
                 // If magazine, make sure to add to correct muzzle
                 if (_itemIndex >= 4) then {
                     private _weapon = handgunWeapon GVAR(center);
@@ -138,22 +147,18 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [handgunWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_HANDGUN_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-
-        // https://feedback.bistudio.com/T173880
-        _primaryMagazine = _primaryMagazine param [0, ""];
-        private _handgunMagazines = handgunMagazine GVAR(center);
-
-        // Delete the first magazine (but keep one if both magazines are the same)
-        _handgunMagazines deleteAt (_handgunMagazines findIf {_x == _primaryMagazine});
-
-        GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _handgunMagazines param [0, ""]]];
+        GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
         [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };
     // Binoculars
     case IDX_CURR_BINO_ITEMS: {
+        private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select _itemIndex;
         if (_item == "") then {
             private _secondaryMagazine = (GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select 5;
 
@@ -166,11 +171,11 @@ switch (_currentItemsIndex) do {
                 // Add magazine back into primary muzzle
                 GVAR(center) addWeaponItem [binocular GVAR(center), _secondaryMagazine, true];
             } else {
-                GVAR(center) removeBinocularItem ((GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select _itemIndex);
+                GVAR(center) removeBinocularItem _currentItemInSlot;
             };
         } else {
-            // Don't add item if it isn't a different item than what the unit already has
-            if (_item != ((GVAR(currentItems) select IDX_CURR_BINO_ITEMS) select _itemIndex)) then {
+            // Don't add item if it isn't a magazine or a different item than what the unit already has
+            if (_itemIndex >= 4 || {_item != _currentItemInSlot}) then {
                 // If magazine, make sure to add to correct muzzle
                 if (_itemIndex >= 4) then {
                     private _weapon = binocular GVAR(center);
@@ -182,17 +187,12 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [binocular GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_BINO) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-
-        // https://feedback.bistudio.com/T173880 (unsure if binocular weapons are affected by this)
-        _primaryMagazine = _primaryMagazine param [0, ""];
-        private _binocularMagazines = binocularMagazine GVAR(center);
-
-        // Delete the first magazine (but keep one if both magazines are the same)
-        _binocularMagazines deleteAt (_binocularMagazines findIf {_x == _primaryMagazine});
-
-        GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _binocularMagazines param [0, ""]]];
+        GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
         [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };

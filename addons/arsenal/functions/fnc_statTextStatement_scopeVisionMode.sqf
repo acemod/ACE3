@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dedmen, johnb43
  * Text statement for the scope Night vision support stat.
@@ -67,7 +67,9 @@ if (!_primaryNVGSupported && {(_opticsModes select {_x select 1}) isEqualTo _opt
     _primaryNVGSupported = true;
 };
 
-if (_primaryNVGIntegrated) exitWith {LLSTRING(statVisionMode_IntPrim)};
+if (_primaryTiIntegrated && _primaryNVGIntegrated) exitWith {LLSTRING(statVisionMode_intPrimTi)};
+if (_primaryTiIntegrated) exitWith {LLSTRING(statVisionMode_ti)};
+if (_primaryNVGIntegrated) exitWith {LLSTRING(statVisionMode_intPrim)};
 if (_primaryNVGSupported) exitWith {LLSTRING(statVisionMode_supPrim)};
 if (_secondaryNVGSupported) exitWith {LLSTRING(statVisionMode_supSec)};
 

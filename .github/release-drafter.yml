@@ -5,6 +5,9 @@ branches:
 name-template: 'Version $NEXT_PATCH_VERSION'
 tag-template: 'v$NEXT_PATCH_VERSION'
 
+sort-by: title # sort alphabetically
+sort-direction: ascending
+
 categories:
   - title: '**ADDED:**'
     labels:
@@ -21,6 +24,10 @@ categories:
     labels:
       - 'kind/cleanup'
       - 'area/compatibility'
+      - 'kind/change'
+  - title: '**SETTINGS:**'
+    labels:
+      - 'kind/setting'
   - title: '**TRANSLATIONS:**'
     labels:
       - 'area/translations'
@@ -39,5 +46,5 @@ template: |
 
 replacers:
   # Category titles
-  - search: '/\#\# (\*\*(ADDED|FIXED|IMPROVED|CHANGED|TRANSLATIONS):\*\*)/g'
+  - search: '/\#\# (\*\*(ADDED|FIXED|IMPROVED|CHANGED|SETTINGS|TRANSLATIONS):\*\*)/g'
     replace: '$1'

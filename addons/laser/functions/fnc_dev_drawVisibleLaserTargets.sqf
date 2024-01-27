@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 /*
  * Author: ACE-Team
@@ -18,7 +18,7 @@
 
 
 // Dev Debug Function
-// Displays lasers and attempts to lock on to codes 1111 and 1112 from a target vehicle's view
+// Displays lasers and attempts to lock on to codes 1111 and 1688 from a target vehicle's view
 // On Screen Debug:
 //     Red - Vanilla Laser Targets
 //     Yellow - Array (vehicle pos/weapon) Laser Targets
@@ -31,14 +31,14 @@ private _testSeekerPosASL = _seekerVehicle modelToWorldVisualWorld [0,0,1];
 private _testSeekerDir = vectorDirVisual _seekerVehicle;
 {
     private _code = _x;
-    private _results = [_testSeekerPosASL, _testSeekerDir, 45, 10000, [1550,1550], _code, _seekerVehicle] call FUNC(seekerFindLaserSpot);
+    private _results = [_testSeekerPosASL, _testSeekerDir, 45, 10000, [ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH], _code, _seekerVehicle] call FUNC(seekerFindLaserSpot);
     private _resultPos = _results select 0;
     if (!isNil "_resultPos") then {
         // Draw lock results
         drawLine3D [ASLtoAGL _testSeekerPosASL, ASLtoAGL _resultPos, [0,0,1,1]];
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [0,0,1,1], (ASLtoAGL _resultPos), 1.5, 1.5, 45, format ["%1 from %2", _code, _results select 1], 0.5, 0.025, "TahomaB"];
     };
-} forEach [1111, 1112]; // Scan at codes 1111 and 1112
+} forEach [ACE_DEFAULT_LASER_CODE, 1688]; // Scan at codes 1111 and 1688
 
 
 // Draw all lasers
