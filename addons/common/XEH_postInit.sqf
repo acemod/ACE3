@@ -283,15 +283,8 @@ if (isServer) then {
             if !(missionNamespace getVariable [format [QGVAR(aceLoaded_%1), _owner], false]) then {
                 WARNING_3("Client %1 connected without ACE. UID is %2, Client ID is %3",_name,_uid,_owner);
 
-                private _random = [];
-
-                // Make a random string of length 32
-                for "_i" from 0 to 15 do {
-                    _random pushBack selectRandom GVAR(hexArray); // used GVAR(hexArray) because it was easy to use
-                };
-
-                // Add the random string as a suffix, so that it's much harder for the client to predict the function name and put preventive measures in place
-                private _fncName = format [QFUNC(errorMessage_%1), _random joinString ""];
+                // Add a UUID as a suffix, so that it's much harder for the client to predict the function name and put preventive measures in place
+                private _fncName = format [QFUNC(errorMessage_%1), call CBA_fnc_createUUID];
 
                 // This avoids 'Attempt to delete final function' error spammed in RPT, which happens if a final function is sent directly to the client
                 missionNamespace setVariable [_fncName, FUNC(errorMessage)];
