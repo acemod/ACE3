@@ -52,10 +52,20 @@ private _ctrl = controlNull;
     IDC_buttonCurrentMag2,
     IDC_iconBackgroundCurrentMag,
     IDC_iconBackgroundCurrentMag2,
+    IDC_statsBox,
     IDC_statsPreviousPage,
     IDC_statsNextPage,
-    IDC_statsCurrentPage
+    IDC_statsCurrentPage,
+    IDC_actionsBox,
+    IDC_actionsPreviousPage,
+    IDC_actionsNextPage,
+    IDC_actionsCurrentPage
 ];
 
-[QGVAR(statsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;
-[QGVAR(actionsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;
+if (!_showToggle) exitWith {};
+
+// When showing the stats/actions again, update them to fit with currently selected item
+GVAR(actionsInfo) params ["_control", "_curSel", "_itemCfg"];
+
+[QGVAR(displayStats), [_display, _control, _curSel, _itemCfg]] call CBA_fnc_localEvent;
+[QGVAR(displayActions), [_display, _control, _curSel, _itemCfg]] call CBA_fnc_localEvent;

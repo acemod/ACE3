@@ -241,36 +241,12 @@
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
-            <English>Loading Cargo</English>
-            <German>Belade</German>
-            <Portuguese>Carregando carga</Portuguese>
-            <Polish>Ładowanie cargo</Polish>
-            <Czech>Nakládám</Czech>
-            <Russian>Погрузка</Russian>
-            <Italian>Caricando</Italian>
-            <Spanish>Cargando</Spanish>
-            <French>Chargement de la cargaison</French>
-            <Japanese>カーゴへ積み込んでいます</Japanese>
-            <Korean>화물 싣기</Korean>
-            <Chinese>裝載貨物中</Chinese>
-            <Chinesesimp>正在装载货物</Chinesesimp>
-            <Turkish>Kargo Yükleniyor</Turkish>
+            <English>Loading %1 into %2...</English>
+            <Spanish>Cargando %1 en %2...</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
-            <English>Unloading Cargo</English>
-            <German>Entlade</German>
-            <Portuguese>Descarregando carga</Portuguese>
-            <Polish>Rozładowywanie cargo</Polish>
-            <Czech>Vykládám</Czech>
-            <Russian>Выгрузка</Russian>
-            <Italian>Scaricando</Italian>
-            <Spanish>Descargando</Spanish>
-            <French>Déchargement de la cargaison</French>
-            <Japanese>カーゴから降ろしています</Japanese>
-            <Korean>화물 내리기</Korean>
-            <Chinese>卸載貨物中</Chinese>
-            <Chinesesimp>正在卸载货物</Chinesesimp>
-            <Turkish>Kargo Boşaltılıyor</Turkish>
+            <English>Unloading %1 from %2...</English>
+            <Spanish>Descargando %1 de %2...</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
