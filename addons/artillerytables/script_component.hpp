@@ -11,8 +11,11 @@
 
 // This is a good fit for most large artillery, but a little low for lighter mortars
 #define DEFAULT_AIR_FRICTION -0.00006
+// Friction from the Mk6 Mortar module
+#define MK6_AIR_FRICTION -0.0001
 
 #define DEGTOMILS 17.7777778
+#define RADTOMILS 1018.59164 //converts from geometric radians (2pi) to 6400 mils;
 
 #define IDC_MODECONTROLGROUP 1000
 #define IDC_CHARGE 1001

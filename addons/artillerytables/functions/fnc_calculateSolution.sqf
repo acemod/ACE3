@@ -26,7 +26,7 @@
  * Public: No
  */
 
-params ["_ownPos", "_targetPos", "_muzzleVelocity", ["_highAngle", true], ["_airFriction", 0], ["_temperature", 15], ["_airDensity", 1.225], ["_windDir", 0], ["_windSpeed", 0]];
+params ["_ownPos", "_targetPos", "_muzzleVelocity", ["_airFriction", 0], ["_highAngle", true], ["_temperature", 15], ["_airDensity", 1.225], ["_windDir", 0], ["_windSpeed", 0]];
 
 //DEFAULT_AIR_FRICTION == -0.00006
 //MK6_82mm_AIR_FRICTION == -0.0001
@@ -34,11 +34,11 @@ params ["_ownPos", "_targetPos", "_muzzleVelocity", ["_highAngle", true], ["_air
 private _relPos = _targetPos vectorDiff _ownPos;
 
 private _targetDir = (_relpos select 0) atan2 (_relPos select 1);
-private _targetDist = sqrt( (_relPos select 0)^2 + (_relpos select 1)^2 );
-private _heightDif = _relPos select 2;
-private _crossWind = sin(_targetDir - _windDir) * _windSpeed;
-private _tailWind = -cos(_targetDir - _windDir) * _windSpeed;
+private _targetDist = sqrt((_relPos select 0)^2 + (_relpos select 1)^2);
+private _heightDiff = _relPos select 2;
+private _windReturns = [_targetDir, _windDir, _windSpeed] call FUNC(calculateWinds);
+_windReturns params ["_crossWind", "_tailWind"];
 
-private _solutionReturns = [_targetDist, _heightDif, _muzzleVelocity, _highAngle, _airFriction, _crossWind, _tailWind, _temperature, _airDensity] call FUNC(calculateElevation);
+private _solutionReturns = [_ownPos distance2D _targetPos, (_targetPos select 2) - (_ownPos select 2), _muzzleVelocity, _airFriction, _highAngle, _temperature, _airDensity, _crossWind, _tailWind] call FUNC(calculateElevation);
 
-_solutionReturns
+[_solutionReturns select 0, _solutionReturns select 1, ((_targetDir * DEGTOMILS) + (_solutionReturns select 2) + 360) % 360]

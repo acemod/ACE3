@@ -26,41 +26,14 @@
  * Public: No
  */
 
-params ["_targetDistance", "_targetHeight", "_muzzleVelocity", ["_highArc", true], ["_airFriction", 0], ["_temperature", 15], ["_airDensity", 1.225], ["_crossWind", 0], ["_tailWind", 0]];
+params ["_targetDistance", "_targetHeight", "_muzzleVelocity", ["_airFriction", 0], ["_highAngle", true], ["_temperature", 15], ["_airDensity", 1.225], ["_crossWind", 0], ["_tailWind", 0]];
 
 //DEFAULT_AIR_FRICTION == -0.00006
 //MK6_82mm_AIR_FRICTION == -0.0001
 
-if (_airFriction != 0) then {
-    _muzzleVelocity = [_muzzleVelocity, _temperature, _atmosphericDensity] call FUNC(calculateMuzzleVelocity);
-};
-private _maxResults = [_muzzleVelocity, _airFriction] call FUNC(calculateMaxAngle);
+private _solutionReturns = parseSimpleArray ("ace_artilleryTables" callExtension ["getSolution", [_targetDistance, _targetHeight, _muzzleVelocity, _airFriction, _highAngle, _crossWind, _tailWind, _temperature, _airDensity/1.225]] select 0);
+if (_solutionReturns isEqualTo [-1, -1, -1]) exitWith {_solutionReturns};
 
-private _testShot = [_maxResults select 0, _targetHeight, _muzzleVelocity, _airFriction, _crossWind, _tailWind, _temperature, _airDensity] call FUNC(simulateShot);
-if (_testShot select 1 < _targetDistance) exitWith {
-    //No way we can hit it so don't bother;
-    [-1, -1, -1]
-};
+_solutionReturns params ["_elevation", "_tof", "_azimuthCorrection"];
 
-private _useDistance = _targetDistance;
-private _useAngle = 0;
-private _resultDistance = 0;
-private _xDeviation = 0;
-private _tof = 0;
-
-while {abs(_resultDistance - _targetDistance) > 0.5} do {
-    private _useAngleRad = parseSimpleArray (("ace_artilleryTables" callExtension ["simulateFindSolution", [_useDistance, _targetHeight, _muzzleVelocity, _airFriction, _higharc]]) select 0) select 1; 
-    _useAngle = deg(_useAngleRad) * DEGTOMILS;
-
-    private _shotResults = [_useAngle, _targetHeight, _muzzleVelocity, _airFriction, _crossWind, _tailWind, _temperature, _airDensity] call FUNC(simulateShot);
-    
-    _xDeviation = _shotResults select 0;
-    _resultDistance = _shotResults select 1;
-    _tof = _shotResults select 2;
-    _useDistance = (2 * _targetDistance) - _resultDistance;
-};
-
-private _angleOffsetDeg = _xDeviation atan2 _resultDistance;
-private _angleOffset = _angleOffsetDeg * DEGTOMILS;
-
-[_useAngle, -_angleOffset, _tof]
+[_elevation * RADTOMILS, _tof, _azimuthCorrection * RADTOMILS]

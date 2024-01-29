@@ -37,7 +37,7 @@ if (_airFriction != 0) then {
 private _atmosphericDensityRatio = _atmosphericDensity / 1.225;
 private _radAngle = rad(_angle / DEGTOMILS);
 
-private _returns = parseSimpleArray (("ace_artilleryTables" callExtension ["simulateShot", [_radAngle, _targetHeight, _muzzleVelocity, _airFriction, _crossWind, _tailWind, _temperature, _atmosphericDensityRatio]]) select 0); 
+private _returns = parseSimpleArray (("ace_artilleryTables" callExtension ["simulateShot", [_radAngle, _targetHeight, _muzzleVelocity, _airFriction, _temperature, _atmosphericDensityRatio, _crossWind, _tailWind]]) select 0); 
 
 //[xDeviation, yDistance, timeOfFlight]
 _returns
