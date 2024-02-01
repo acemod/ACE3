@@ -100,3 +100,13 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     [[0, 1, 2], [LSTRING(None), LSTRING(progressBarInfoPercentage), LSTRING(progressBarInfoTime)], 2],
     0
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(magneticDeclination),
+    "CHECKBOX",
+    ["mag test"], // [LSTRING(magneticDeclination), LSTRING(magneticDeclinationooltip)],
+    format ["ACE %1", localize LSTRING(DisplayName)],
+    false,
+    true,
+    {call FUNC(getMagneticBearingOffset)}
+] call CBA_fnc_addSetting;
