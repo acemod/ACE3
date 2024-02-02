@@ -90,7 +90,7 @@
     // Prevent second ragdoll of uncon units when they're killed
     if (IS_UNCONSCIOUS(_unit) && !isAwake _unit) then {
         _unit enableSimulation false;
-        [{_this enableSimulation true}, _unit] call CBA_fnc_execNextFrame;
+        [{_this enableSimulation true}, _unit, 2] call CBA_fnc_waitAndExecute;
     };
 }] call CBA_fnc_addEventHandler;
 
