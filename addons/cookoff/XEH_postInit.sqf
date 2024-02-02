@@ -62,35 +62,33 @@
 if (hasInterface) then {
     // Plays a sound locally, so that different sounds can be used for various distances
     [QGVAR(playCookoffSound), {
-        params ["_object", "_sound", "_maxDistance"];
+        params ["_object", "_sound"];
 
         if (isNull _object) exitWith {};
 
         private _distance = _object distance (positionCameraToWorld [0, 0, 0]);
 
-        if (_distance > _maxDistance) exitWith {};
-
         TRACE_3("",_object,_sound,_maxDistance);
 
-        _sound = toLower _sound;
-
-        // Submunitions and missiles don't have their own sound files
-        _sound = switch (_sound) do {
-            case "shotmissile": {"shotrocket"};
-            case "shotsubmunitions": {"shotbullet"};
-            default {_sound};
-        };
-
         // 3 classes of distances: close, mid and far, each having different sound files
-        _distance = ([["far", "mid"] select (_distance < 952), "close"] select (_distance < 235));
-        _sound = format [QPATHTOF(sounds\%1\%2_%3.wss), _sound, _distance, floor (random 3) + 1];
+        private _classDistance = ([["far", "mid"] select (_distance < 952), "close"] select (_distance < 235));
+        _sound = format [QGVAR(%1_%2_%3), _sound, _classDistance, floor (random 3) + 1];
 
         TRACE_1("",_sound);
+
+        // Allows other mods to change sounds for cook-off
+        _sound = getArray (configFile >> "CfgSounds" >> _sound >> "sound");
+
+        if (_sound isEqualTo []) exitWith {};
+
+        _sound params ["_sound", "_volume", "_pitch", "_maxDistance"];
+
+        if (_distance > _maxDistance) exitWith {};
 
         // Make sure file exists, so RPT isn't spammed with non-existent entry errors
         if (!fileExists _sound) exitWith {};
 
         // Obeys speed of sound and takes doppler effects into account
-        playSound3D [_sound, objNull, insideBuilding _object >= 0.5, getPosASL _object, 1, 0.9 + (random 0.2), _maxDistance, 0, true];
+        playSound3D [_sound, objNull, insideBuilding _object >= 0.5, getPosASL _object, _volume, _pitch + (random 0.2) - 0.1, _maxDistance, 0, true];
     }] call CBA_fnc_addEventHandler;
 };
