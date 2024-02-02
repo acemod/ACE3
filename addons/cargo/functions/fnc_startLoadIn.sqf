@@ -76,7 +76,7 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
                 [QEGVAR(common,fixFloating), _item, _item] call CBA_fnc_targetEvent;
             };
         },
-        LLSTRING(loadingItem),
+        format [LLSTRING(loadingItem), [_item, true] call FUNC(getNameItem), getText (configOf _vehicle >> "displayName")],
         {
             (_this select 0) call FUNC(canLoadItemIn)
         },

@@ -7,8 +7,8 @@
  * 0: The building(s) nearest this position are used <POSITION>
  * 1: Limit the building search to those type of building <ARRAY>
  * 2: Units that will be garrisoned <ARRAY>
- * 3: Radius to fill building(s) <SCALAR> (default: 50)
- * 4: 0: even filling, 1: building by building, 2: random filling <SCALAR> (default: 0)
+ * 3: Radius to fill building(s) <NUMBER> (default: 50)
+ * 4: 0: even filling, 1: building by building, 2: random filling <NUMBER> (default: 0)
  * 5: True to fill building(s) from top to bottom <BOOL> (default: false) (note: only works with filling mode 0 and 1)
  * 6: Teleport units <BOOL> (default: false)
 
