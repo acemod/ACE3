@@ -39,6 +39,7 @@ if (!_isObjectHidden) then {
     [QEGVAR(common,hideObjectGlobal), [_target, true]] call CBA_fnc_serverEvent;
 };
 
+// Prevents unit from falling when below terrain
 private _simulationEnabled = simulationEnabled _target;
 
 if (_simulationEnabled) then {
@@ -69,23 +70,22 @@ private _relevantHitpoints = ["HitHead", "HitBody", "HitHands", "HitLegs"];
 _clone allowDamage false;
 _clone setVariable [QGVAR(original), [_target, _isInRemainsCollector, _isObjectHidden, _simulationEnabled], true];
 
+[_clone, _target call CBA_fnc_getLoadout] call CBA_fnc_setLoadout;
+
+// Sets the facial expression
+[[QGVAR(cloneCreated), [_target, _clone]] call CBA_fnc_globalEventJIP, _clone] call CBA_fnc_removeGlobalEventJIP;
+
 [{
-    params ["_clone", "_target", "_posATL"];
+    params ["_clone", "_target"];
 
     // Remove clone from all zeuses
     if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
         [QEGVAR(zeus,removeObjects), [[_clone]]] call CBA_fnc_serverEvent;
     };
 
-    // Clone loadout (sometimes default loadouts are randomised, so overwrite those)
-    [_clone, _target call CBA_fnc_getLoadout] call CBA_fnc_setLoadout;
-
-    // Sets the facial expression
-    [[QGVAR(cloneCreated), [_target, _clone]] call CBA_fnc_globalEventJIP, _clone] call CBA_fnc_removeGlobalEventJIP;
-
     // Release claim on corpse
     [objNull, _target] call EFUNC(common,claim);
-}, [_clone, _target, _posATL], 0.25] call CBA_fnc_waitAndExecute;
+}, [_clone, _target], 0.25] call CBA_fnc_waitAndExecute;
 
 // Save which curators had this object as editable
 if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
