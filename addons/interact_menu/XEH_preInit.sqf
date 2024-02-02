@@ -80,6 +80,20 @@ GVAR(inheritedClassesAll) = [];
 GVAR(inheritedActionsMan) = [];
 GVAR(inheritedClassesMan) = [];
 
+// Extended EH doesn't fire for dead units, so add interactions manually
+{
+    private _type = typeOf _x;
+
+    if (GVAR(inheritedClassesMan) pushBackUnique _type == -1) then {
+        continue;
+    };
+
+    {
+        _x params ["_typeNum", "_parentPath", "_action"];
+        [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+    } forEach GVAR(inheritedActionsMan);
+} forEach allDeadMen;
+
 ["All", "InitPost", {
     BEGIN_COUNTER(InitPost);
     params ["_object"];

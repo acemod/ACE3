@@ -29,6 +29,9 @@ private _clone = createVehicle [QGVAR(clone), ASLToAGL _posATL, [], 0, "CAN_COLL
 // Move unit -10 m below terrain in order to hide it and remove its inventory access
 _posATL set [2, -10];
 
+// Corpse is desynced, but it doesn't matter here
+_target setPosATL _posATL;
+
 // Hide unit until it can be moved below terrain
 private _isObjectHidden = isObjectHidden _target;
 
@@ -66,9 +69,6 @@ private _relevantHitpoints = ["HitHead", "HitBody", "HitHands", "HitLegs"];
 _clone allowDamage false;
 _clone setVariable [QGVAR(original), [_target, _isInRemainsCollector, _isObjectHidden, _simulationEnabled], true];
 
-// Turn on PhysX so that the corpse doesn't desync when moved
-[QEGVAR(common,awake), [_target, true]] call CBA_fnc_globalEvent;
-
 [{
     params ["_clone", "_target", "_posATL"];
 
@@ -77,17 +77,11 @@ _clone setVariable [QGVAR(original), [_target, _isInRemainsCollector, _isObjectH
         [QEGVAR(zeus,removeObjects), [[_clone]]] call CBA_fnc_serverEvent;
     };
 
-    // Make sure PhysX is on
-    [QEGVAR(common,awake), [_target, true]] call CBA_fnc_globalEvent;
-
     // Clone loadout (sometimes default loadouts are randomised, so overwrite those)
     [_clone, _target call CBA_fnc_getLoadout] call CBA_fnc_setLoadout;
 
     // Sets the facial expression
     [[QGVAR(cloneCreated), [_target, _clone]] call CBA_fnc_globalEventJIP, _clone] call CBA_fnc_removeGlobalEventJIP;
-
-    // Corpse is desynced, but it doesn't matter here
-    _target setPosATL _posATL;
 
     // Release claim on corpse
     [objNull, _target] call EFUNC(common,claim);

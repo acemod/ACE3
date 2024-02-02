@@ -28,41 +28,33 @@ params ["_unit", "_clone", "_inBuilding"];
 
 // Check if unit was deleted
 if (!isNull _target) then {
-    // Turn on PhysX so that the corpse doesn't desync when moved
-    [QEGVAR(common,awake), [_target, true]] call CBA_fnc_globalEvent;
-
-    private _posASL = getPosASL _clone;
+    private _pos = getPosATL _clone;
 
     if (_inBuilding) then {
-        _posASL = _posASL vectorAdd [0, 0, 0.05];
+        _pos = _pos vectorAdd [0, 0, 0.05];
     };
 
-    // Set the unit's direction
-    [QEGVAR(common,setDir), [_target, getDir _unit + 180], _target] call CBA_fnc_targetEvent;
+    // Make sure position is not underground
+    if (_pos select 2 < 0.05) then {
+        _pos set [2, 0.05];
+    };
 
-    [{
-        params ["_target", "_clone", "_isObjectHidden", "_simulationEnabled", "_posASL"];
+    // Move the unit where it is local
+    [QGVAR(moveCorpse), [_target, getDir _unit + 180, ], _target] call CBA_fnc_targetEvent;
 
-        // Make sure PhysX is on
-        [QEGVAR(common,awake), [_target, true]] call CBA_fnc_globalEvent;
+    // Unhide unit
+    if (!_isObjectHidden) then {
+        [QEGVAR(common,hideObjectGlobal), [_target, false]] call CBA_fnc_serverEvent;
+    };
 
-        // Bring unit back to clone's position
-        _target setPosASL _posASL;
+    // Enable simulation again
+    if (_simulationEnabled) then {
+        [QEGVAR(common,enableSimulationGlobal), [_target, true]] call CBA_fnc_serverEvent;
+    };
 
-        // Unhide unit
-        if (!_isObjectHidden) then {
-            [QEGVAR(common,hideObjectGlobal), [_target, false]] call CBA_fnc_serverEvent;
-        };
-
-        // Enable simulation again
-        if (_simulationEnabled) then {
-            [QEGVAR(common,enableSimulationGlobal), [_target, true]] call CBA_fnc_serverEvent;
-        };
-
-        // Detach first to prevent objNull in attachedObjects
-        detach _clone;
-        deleteVehicle _clone;
-    }, [_target, _clone, _isObjectHidden, _simulationEnabled, _posASL], 0.25] call CBA_fnc_waitAndExecute;
+    // Detach first to prevent objNull in attachedObjects
+    detach _clone;
+    deleteVehicle _clone;
 
     // Get which curators had this object as editable
     if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
