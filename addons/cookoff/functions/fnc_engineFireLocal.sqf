@@ -23,18 +23,32 @@ if (_endTime < CBA_missionTime) exitWith {};
 private _smoke = objNull;
 
 if (hasInterface) then {
-    // Get offset for engine smoke if there is one
-    private _offset = getArray (configOf _vehicle >> QGVAR(engineSmokeOffset));
+    private _hitPoints = getAllHitPointsDamage _vehicle;
 
-    if (_offset isEqualTo []) then {
-        _offset = [0, 0, 0];
+    // Get hitpoint for engine
+    private _index = (_hitPoints select 0) findIf {_x == "hitengine"};
+
+    // Get corresponding selection
+    private _position = if (_index != -1) then {
+        _vehicle selectionPosition [(_hitPoints select 1) select _index, "HitPoints", "AveragePoint"]
+    } else {
+        [0, 0, 0]
     };
 
-    private _position = [
-        0,
-        (boundingBoxReal _vehicle select 1 select 1) - 2,
-        (boundingBoxReal _vehicle select 0 select 2) + 2
-    ] vectorAdd _offset;
+    if (_position isEqualTo [0, 0, 0]) then {
+        // Get offset for engine smoke if there is one
+        private _offset = getArray (configOf _vehicle >> QGVAR(engineSmokeOffset));
+
+        if (_offset isEqualTo []) then {
+            _offset = [0, 0, 0];
+        };
+
+        _position = [
+            0,
+            (boundingBoxReal _vehicle select 1 select 1) - 2,
+            (boundingBoxReal _vehicle select 0 select 2) + 2
+        ] vectorAdd _offset;
+    };
 
     // Spawn smoke
     _smoke = "#particlesource" createVehicleLocal [0, 0, 0];
@@ -50,11 +64,9 @@ if (hasInterface) then {
 
         deleteVehicle _smoke;
 
-        if (isNull _vehicle) exitWith {};
+        if (isNull _vehicle || !isServer) exitWith {};
 
-        if (isServer) then {
-            (_vehicle getVariable [QGVAR(engineFireJipID), ""]) call CBA_fnc_removeGlobalEventJIP;
-        };
+        (_vehicle getVariable [QGVAR(engineFireJipID), ""]) call CBA_fnc_removeGlobalEventJIP;
 
         _vehicle setVariable [QGVAR(isEngineSmoking), false];
     };
