@@ -10,6 +10,7 @@
  * 0: Ammo array <ARRAY>
  * - 0: Magazine classname <STRING>
  * - 1: Ammo count <NUMBER>
+ * - 2: If a projectile should be spawned upon detonation <BOOL>
  * 1: Total ammo count <NUMBER>
  *
  * Example:
