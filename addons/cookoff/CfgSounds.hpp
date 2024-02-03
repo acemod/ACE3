@@ -1,18 +1,18 @@
 #define VOLUME 2
 #define PITCH 1
 
-#define SHOTSOUND(type,dist,N,maxDistance) \
-class GVAR(TRIPLES(type,dist,N)) { \
+#define SHOTSOUND(type,dist,N,maxDistance)\
+class GVAR(TRIPLES(type,dist,N)) {\
     sound[] = {QPATHTOF(sounds\type\DOUBLES(dist,N).wss), VOLUME, PITCH, maxDistance};\
     titles[] = {};\
 }
 
-#define SHOTSOUNDCLASS(type,dist,maxDistance) \
+#define SHOTSOUNDCLASS(type,dist,maxDistance)\
 SHOTSOUND(type,dist,1,maxDistance);\
 SHOTSOUND(type,dist,2,maxDistance);\
 SHOTSOUND(type,dist,3,maxDistance)
 
-#define SHOTSOUNDCLASSTYPE(type,maxDistance) \
+#define SHOTSOUNDCLASSTYPE(type,maxDistance)\
 SHOTSOUNDCLASS(type,close,maxDistance);\
 SHOTSOUNDCLASS(type,mid,maxDistance);\
 SHOTSOUNDCLASS(type,far,maxDistance)
