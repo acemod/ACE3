@@ -119,12 +119,12 @@ if (_isCar) then {
     _ammoEffectiveness = (_ammoEffectiveness + (_ammoEffectiveness * 0.5)) min 1;
 };
 
-private _currentVehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
+private _currentVehicleAmmo = _vehicle call EFUNC(cookoff,getVehicleAmmo);
 private _chanceOfDetonation = 0;
 private _explosiveAmmoCount = 0;
 private _nonExplosiveAmmoCount = 0;
 
-if (count (_currentVehicleAmmo select 0) isNotEqualTo 0) then {
+if ((_currentVehicleAmmo select 1) > 0) then {
     private _magConfig = configFile >> "CfgMagazines";
     private _ammoConfig = configFile >> "CfgAmmo";
     private _countOfExplodableAmmo = 0;
@@ -163,7 +163,7 @@ switch (_hitArea) do {
             _chanceOfFire = 0; // no cookoff for cars
         };
 
-        if ([_vehicle, _chanceToDetonate, _currentVehicleAmmo, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
             [_vehicle] call FUNC(knockOut);
         };
 
@@ -191,7 +191,7 @@ switch (_hitArea) do {
             _chanceOfFire = 0; // no cookoff for cars
         };
 
-        if ([_vehicle, _chanceToDetonate, _currentVehicleAmmo, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
             [_vehicle, _hitIndex, _hitpointName, 0.89 * _penChance] call FUNC(addDamage);
             [_vehicle] call FUNC(knockOut);
         };
@@ -265,7 +265,7 @@ switch (_hitArea) do {
             _chanceOfFire = 0; // no cookoff for cars
         };
 
-        if ([_vehicle, _chanceToDetonate, _currentVehicleAmmo, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
             [_vehicle] call FUNC(knockOut);
         };
 

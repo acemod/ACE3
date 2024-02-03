@@ -1,15 +1,15 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Spawn cook-off effects
+ * Spawn cook-off effects.
  *
  * Arguments:
- * 0: Vehicle <Object>
- * 1: Spawn fire jet <Boolean>
- * 2: Spawn fire ring <Boolean>
- * 3: How long effect will last (Max 20 seconds) <Number>
- * 4: What selection will fire originate from <String>
- * 5: Cookoff intensity value <Number>
+ * 0: Vehicle <OBJECT>
+ * 1: Spawn fire jet <BOOL>
+ * 2: Spawn fire ring <BOOL>
+ * 3: Duration of effect (max 20 seconds) <NUMBER>
+ * 4: What selection will fire originate from <STRING>
+ * 5: Cookoff intensity value <NUMBER>
  *
  * Return Value:
  * None
@@ -20,60 +20,90 @@
  * Public: No
  */
 
-params ["_obj", "_jet", "_ring", "_time", "_fireSelection", "_intensity"];
-private _light = "#lightpoint" createVehicleLocal [0,0,0];
-_light setLightBrightness 5;
-_light setLightAmbient [0.8, 0.6, 0.2];
-_light setLightColor [1, 0.5, 0.2];
-_light lightAttachObject [_obj, [0,0,0]];
-_time = 0 max (_time min 20);
+#define FLAME_SIZE 1.5
+#define FIRE_INTENSITY 6
+
+params ["_vehicle", "_jet", "_ring", "_duration", "_fireSelection", "_intensity"];
+
+// Spawn light
+private _light = objNull;
+
+if (hasInterface) then {
+    _light = "#lightpoint" createVehicleLocal [0, 0, 0];
+    _light setLightBrightness 5;
+    _light setLightAmbient [0.8, 0.6, 0.2];
+    _light setLightColor [1, 0.5, 0.2];
+    _light lightAttachObject [_vehicle, [0, 0, 0]];
+};
+
+_duration = 0 max _duration min 20;
 
 private _sound = objNull;
+private _fireKey = "";
+
 if (isServer) then {
-    // ironically biggest performance hit is this. Creating a new sound source takes up aprox 400 milliseconds.
-    // I dont think there is an alternative that takes into effect distance and whatever, but if you find one please fix!
+    // Spawn sound effect
     if (_jet || _ring) then {
         private _soundName = selectRandomWeighted [QGVAR(Sound_low), 0.1, QGVAR(Sound_mid), 0.25, QGVAR(Sound_high), 0.65];
-        _sound = createSoundSource [_soundName, position _obj, [], 0];
+        _sound = createSoundSource [_soundName, ASLToAGL getPosASL _vehicle, [], 0];
+        _sound attachTo [_vehicle];
     };
 
-    if (_ring) then {
-        private _intensity = 6;
-        private _radius = 1.5 * ((boundingBoxReal _obj) select 2);
-        [QEGVAR(fire,addFireSource), [_obj, _radius, _intensity, format [QGVAR(%1), hashValue _obj]]] call CBA_fnc_localEvent;
+    // Make the ring a source of fire
+    if (_ring && {["ace_fire"] call EFUNC(common,isModLoaded)}) then {
+        _fireKey = format [QGVAR(%1), hashValue _vehicle];
+
+        [QEGVAR(fire,addFireSource), [_vehicle, FLAME_SIZE * ((boundingBoxReal _vehicle) select 2), FIRE_INTENSITY, _fireKey]] call CBA_fnc_localEvent;
     };
 };
 
 [{
-    params ["_args", "_pfh"];
-    _args params ["_obj", "_jet", "_ring", "_time", "_startTime", "_light", "_fireSelection", "_sound", "_intensity"];
+    (_this select 0) params ["_vehicle", "_jet", "_ring", "_duration", "_startTime", "_light", "_fireSelection", "_sound", "_intensity", "_fireKey"];
+
     private _elapsedTime = CBA_missionTime - _startTime;
-    if (_elapsedTime >= _time) exitWith {
+
+    // Clean up effects once effects have finished or vehicle has been deleted
+    if (isNull _vehicle || {_elapsedTime >= _duration}) exitWith {
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
+
         deleteVehicle _light;
-        deleteVehicle _sound;
+
         if (isServer) then {
-            [QEGVAR(fire,removeFireSource), [format [QGVAR(%1), hashValue _obj]]] call CBA_fnc_localEvent;
+            deleteVehicle _sound;
+
+            if (["ace_fire"] call EFUNC(common,isModLoaded)) then {
+                [QEGVAR(fire,removeFireSource), _fireKey] call CBA_fnc_localEvent;
+            };
         };
-        [_pfh] call CBA_fnc_removePerFrameHandler;
-    };
-    private _factor = (1 + (_elapsedTime / 2) min 2);
-    private _flameSize = 1.5;
-
-    if (_elapsedTime > (_time * (3 / 4))) then {
-        _factor = _factor * linearConversion [_time * (3 / 4), _time, _elapsedTime, 1, 0.5];
     };
 
-    _light setLightBrightness 5 * (_factor / 5);
+    private _factor = 1 + (_elapsedTime / 2) min 2;
+
+    if (_elapsedTime > _duration * 3 / 4) then {
+        _factor = _factor * linearConversion [_duration * 3 / 4, _duration, _elapsedTime, 1, 0.5];
+    };
+
+    // Make flame push object into ground to make effect seem more "alive"
+    if (_jet && !isGamePaused && {local _vehicle} && {_vehicle getVariable [QGVAR(nextForceTime), 0] <= CBA_missionTime}) then {
+        private _force = [0, 0, _factor * -(0.5 min random 1.5) * (0.3 min random 1)] vectorMultiply getMass _vehicle;
+        _vehicle addForce [_force, vectorUpVisual _vehicle];
+        _vehicle setVariable [QGVAR(nextForceTime), CBA_missionTime + 0.01]; // this prevents bad behaviour when setAccTime is small
+    };
+
+    // Don't spawn visual effects on machines without interfaces
+    if (!hasInterface) exitWith {};
+
+    _light setLightBrightness _factor;
 
     if (_jet) then {
-        private _particlePosition = (_obj selectionPosition _fireSelection) vectorAdd [-0.1 + random 0.2, -0.1 + random 0.2, 0];
+        private _particlePosition = (_vehicle selectionPosition _fireSelection) vectorAdd [-0.1 + random 0.2, -0.1 + random 0.2, 0];
 
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
             "",
             "Billboard",
             1,
-            (0.1 + (random 0.2)) * _factor,
+            (0.1 + random 0.2) * _factor,
             _particlePosition,
             [0, 0, 15 * (_factor / 2)],
             0,
@@ -87,69 +117,64 @@ if (isServer) then {
             0,
             "",
             "",
-            _obj
+            _vehicle
         ];
-
-        // make flame push object into ground to make effect seem more "alive"
-        if (!isGamePaused && { local _obj }) then {
-            private _force = [0, 0, _factor * -(0.5 min random 1.5) * (0.3 min random 1)] vectorMultiply getMass _obj;
-            _obj addForce [_force, vectorUpVisual _obj];
-        };
     };
 
     if (_ring) then {
-        private _ringOrigin = (_obj selectionPosition _fireSelection) vectorAdd [-0.1 + random 0.2, -0.1 + random 0.2, -1];
+        private _ringOrigin = (_vehicle selectionPosition _fireSelection) vectorAdd [-0.1 + random 0.2, -0.1 + random 0.2, -1];
+
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal",16,2,32],
-            "", "Billboard", 1, (0.1 + (random 0.2)) * _factor,
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
             _ringOrigin,
             [0, 20 * (_factor / 2), 0],
             0, 10, 7.9, 0.075,
-            [1.25 * _factor, _flameSize * _factor],
+            [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _obj
+            [2 + random 1], 1, 0, "", "", _vehicle
         ];
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
-            "", "Billboard", 1, (0.1 + (random 0.2)) * _factor,
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
             _ringOrigin,
             [0, -20 * (_factor / 2), 0],
             0, 10, 7.9, 0.075,
-            [1.25 * _factor, _flameSize * _factor],
+            [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _obj
+            [2 + random 1], 1, 0, "", "", _vehicle
         ];
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
-            "", "Billboard", 1, (0.1 + (random 0.2)) * _factor,
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
             _ringOrigin,
             [20 * (_factor / 2), 0, 0],
             0, 10, 7.9, 0.075,
-            [1.25 * _factor, _flameSize * _factor],
+            [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _obj
+            [2 + random 1], 1, 0, "", "", _vehicle
         ];
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
-            "", "Billboard", 1, (0.1 + (random 0.2)) * _factor,
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
             [-0.1 + random 0.2, -0.1 + random 0.2, -1],
             [-20 * (_factor / 2), 0, 0],
             0, 10, 7.9, 0.075,
-            [1.25 * _factor, _flameSize * _factor],
+            [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _obj
+            [2 + random 1], 1, 0, "", "", _vehicle
         ];
 
         private _dir = 20 * (_factor / 2);
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
-            "", "Billboard", 1, (0.1 + (random 0.2)) * _factor,
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
             _ringOrigin,
             [_dir, _dir, 0],
             0, 10, 7.9, 0.075,
-            [1.25 * _factor, _flameSize * _factor],
+            [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2],[1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _obj
+            [2 + random 1], 1, 0, "", "", _vehicle
         ];
 
         _dir = -20 * (_factor / 2);
@@ -159,9 +184,9 @@ if (isServer) then {
             _ringOrigin,
             [_dir, _dir, 0],
             0, 10, 7.9, 0.075,
-            [1.25 * _factor, _flameSize * _factor],
+            [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2],[1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _obj
+            [2 + random 1], 1, 0, "", "", _vehicle
         ];
 
         _dir = 20 * (_factor / 2);
@@ -171,30 +196,30 @@ if (isServer) then {
             _ringOrigin,
             [_dir, -_dir, 0],
             0, 10, 7.9, 0.075,
-            [1.25 * _factor, _flameSize * _factor],
+            [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _obj
+            [2 + random 1], 1, 0, "", "", _vehicle
         ];
 
         _dir = 20 * (_factor / 2);
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
-            "", "Billboard", 1, (0.1 + (random 0.2)) * _factor,
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
             _ringOrigin,
             [-_dir, _dir, 0],
             0, 10, 7.9, 0.075,
-            [1.25 * _factor, _flameSize * _factor],
+            [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _obj
+            [2 + random 1], 1, 0, "", "", _vehicle
         ];
     };
 
-    (getVehicleTIPars _obj) params ["_tiEngine", "_tiWheels", "_tiWeapon"];
-    _obj setVehicleTIPars [
-        // formula is designed to have the temperature ramp up quickly and then level out
-        (_tiEngine + (_intensity * 0.01))/1.005,
-        (_tiWheels + (_intensity * 0.004))/1.002, // wheels//tracks are further away from burning parts
-        (_tiWeapon + (_intensity * 0.01))/1.005
-    ];
+    (getVehicleTIPars _vehicle) params ["_tiEngine", "_tiWheels", "_tiWeapon"];
 
-}, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound, _intensity]] call CBA_fnc_addPerFrameHandler;
+    // Formula is designed to have the temperature ramp up quickly and then level out
+    _vehicle setVehicleTIPars [
+        (_tiEngine + _intensity * 0.01) / 1.005,
+        (_tiWheels + _intensity * 0.004) / 1.002, // wheels//tracks are further away from burning parts
+        (_tiWeapon + _intensity * 0.01) / 1.005
+    ];
+}, 0, [_vehicle, _jet, _ring, _duration, CBA_missionTime, _light, _fireSelection, _sound, _intensity, _fireKey]] call CBA_fnc_addPerFrameHandler;

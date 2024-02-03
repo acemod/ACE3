@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
- * Handles all incoming damage for boxi
+ * Handles all incoming damage for boxes.
  *
  * Arguments:
  * HandleDamage EH <ARRAY>
  *
  * Return Value:
- * Damage to be inflicted. <NUMBER>
+ * Damage to be inflicted (can be nil) <NUMBER>
  *
  * Example:
  * _this call ace_cookoff_fnc_handleDamageBox
@@ -15,58 +15,60 @@
  * Public: No
  */
 
-params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter"];
+params ["_box", "", "_damage", "_source", "_ammo", "_hitIndex", "_instigator"];
 
-// it's already dead, who cares?
-if (damage _vehicle >= 1) exitWith {};
+if (!local _box) exitWith {};
 
-// If cookoff is disabled exit
-if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] in [0, false]) exitWith {};
+// If it's already dead, ignore
+if (damage _box >= 1) exitWith {};
 
-// get hitpoint name
+// If cookoff for boxes is disabled, exit
+if (!GVAR(enableAmmobox) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
+
+if !(_box getVariable [QGVAR(enableAmmoCookoff), true]) exitWith {};
+
+// Get hitpoint name
 private _hitpoint = "#structural";
 
 if (_hitIndex != -1) then {
-    _hitpoint = toLower ((getAllHitPointsDamage _vehicle param [0, []]) select _hitIndex);
+    _hitpoint = ((getAllHitPointsDamage _box) param [0, []]) select _hitIndex;
 };
 
-// get change in damage
-private _oldDamage = 0;
+if !(_hitpoint == "#structural" && {_damage > 0.5}) exitWith {};
 
-if (_hitpoint isEqualTo "#structural") then {
-    _oldDamage = damage _vehicle;
+// Catch fire when hit by an explosive round
+if (IS_EXPLOSIVE_AMMO(_ammo)) then {
+    [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
 } else {
-    _oldDamage = _vehicle getHitIndex _hitIndex;
-};
-
-if (_hitpoint == "#structural" && _damage > 0.5) then {
-    // Almost always catch fire when hit by an explosive
-    if (IS_EXPLOSIVE_AMMO(_ammo)) then {
-        _vehicle call FUNC(cookOffBox);
+    // Get change in damage
+    private _oldDamage = if (_hitpoint == "#structural") then {
+        damage _box
     } else {
-        // Need magazine to check for tracers
-        private _mag = "";
-        if (_source == _shooter) then {
-            _mag = currentMagazine _source;
-        } else {
-            _mag = _source currentMagazineTurret ([_shooter] call CBA_fnc_turretPath);
-        };
-        private _magCfg = configFile >> "CfgMagazines" >> _mag;
-
-        // Magazine could have changed during flight time (just ignore if so)
-        if (getText (_magCfg >> "ammo") == _ammo) then {
-            // If magazine's tracer density is high enough then low chance for cook off
-            private _tracers = getNumber (_magCfg >> "tracersEvery");
-            if (_tracers >= 1 && {_tracers <= 4}) then {
-                if (random 1 < _oldDamage*0.05) then {
-                    _vehicle call FUNC(cookOffBox);
-                };
-            };
-        };
+        _box getHitIndex _hitIndex
     };
 
-    // prevent destruction, let cook-off handle it if necessary
-    _damage min 0.89
-} else {
-    _damage
+    // There is a small chance of cooking a box off if it's shot by tracer ammo
+    if !(random 1 < _oldDamage * 0.05) exitWith {};
+
+    // Need magazine to check for tracers
+    private _magazine = if (_source == _instigator) then {
+        currentMagazine _source
+    } else {
+        _source currentMagazineTurret (_box unitTurret _instigator)
+    };
+
+    private _configMagazine = configFile >> "CfgMagazines" >> _magazine;
+
+    // Magazine could have changed during flight time (just ignore if so)
+    if (getText (_configMagazine >> "ammo") == _ammo) then {
+        // If magazine's tracer density is high enough then low chance for cook off
+        private _tracers = getNumber (_configMagazine >> "tracersEvery");
+
+        if (_tracers >= 1 && {_tracers <= 4}) then {
+            [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
+        };
+    };
 };
+
+// Prevent destruction, let cook-off handle it if necessary
+_damage min 0.89

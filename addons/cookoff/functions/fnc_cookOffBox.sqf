@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: KoffeinFlummi, commy2, kymckay
+ * Author: KoffeinFlummi, commy2, kymckay, johnb43
  * Start a cook-off in the given ammo box.
  *
  * Arguments:
@@ -10,65 +10,29 @@
  * None
  *
  * Example:
- * [_box] call ace_cookoff_fnc_cookOffBox
+ * cursorObject call ace_cookoff_fnc_cookOffBox
  *
  * Public: No
  */
 
-params ["_box"];
+if (!isServer) exitWith {};
+
+params ["_box", "_killer", "_instigator"];
 
 if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
-_box setVariable [QGVAR(isCookingOff), true];
 
-if (local _box) then {
-    [QGVAR(cookOffBox), _box] call CBA_fnc_globalEvent;
-};
+_box setVariable [QGVAR(isCookingOff), true, true];
 
-[{
-    params ["_box"];
+// Spawn cook-off effects on all connected machines
+private _jipID = [QGVAR(cookOffBoxLocal), [
+    _box,
+    _killer,
+    _instigator,
+    CBA_missionTime,
+    random [IGNITE_TIME / 2, IGNITE_TIME, IGNITE_TIME / 2 * 3], // generate random timers that are global
+    random [SMOKE_TIME / 2, SMOKE_TIME, SMOKE_TIME / 2 * 3]
+]] call CBA_fnc_globalEventJIP;
 
-    // Box will start smoking
-    private _smoke = "#particlesource" createVehicleLocal [0,0,0];
-    _smoke setParticleClass "AmmoSmokeParticles2";
-    _smoke attachTo [_box, [0,0,0]];
+[_jipID, _box] call CBA_fnc_removeGlobalEventJIP;
 
-    private _effects = [_smoke];
-
-    if (isServer) then {
-        private _sound = createSoundSource ["Sound_Fire", position _box, [], 0];
-        _effects pushBack _sound;
-    };
-
-    [{
-        params ["_box", "_effects"];
-
-        // These functions are smart and do all the cooking off work
-        if (local _box) then {
-            if (GVAR(ammoCookoffDuration) == 0) exitWith {};
-            ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
-            [_box, _mags, _total] call FUNC(detonateAmmunition);
-
-            // This shit is busy being on fire, magazines aren't accessible/usable
-            clearMagazineCargoGlobal _box;
-        };
-
-        // Light the fire (also handles lighting)
-        private _fire = "#particlesource" createVehicleLocal [0,0,0];
-        _fire setParticleClass "AmmoBulletCore";
-        _fire attachTo [_box, [0,0,0]];
-
-        _effects pushBack _fire;
-
-        [{
-            params ["_box", "_effects"];
-
-            {
-                deleteVehicle _x;
-            } forEach _effects;
-
-            if (local _box) then {
-                _box setDamage 1;
-            };
-        }, [_box, _effects], COOKOFF_TIME_BOX] call CBA_fnc_waitAndExecute; // TODO: Change so that box is alive until no ammo left, with locality in mind
-    }, [_box, _effects], SMOKE_TIME] call CBA_fnc_waitAndExecute;
-}, _box, IGNITE_TIME] call CBA_fnc_waitAndExecute;
+_box setVariable [QGVAR(jipID), _jipID];
