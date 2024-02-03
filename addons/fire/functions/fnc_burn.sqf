@@ -17,7 +17,7 @@
  * Public: No
  */
 
-if !(EGVAR(common,settingsInitFinished)) exitWith {
+if (!EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(burn), _this];
 };
 
