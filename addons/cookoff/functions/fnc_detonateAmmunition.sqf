@@ -49,6 +49,8 @@ _vehicleAmmo params ["_magazines", "_totalAmmo"];
 if (_magazines isEqualTo [] || {_totalAmmo <= 0}) exitWith {
     [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
 
+    _object setVariable [QGVAR(cookoffMagazines), nil];
+
     if (_destroyWhenFinished) then {
         _object setDamage [1, true, _killer, _instigator];
     };
@@ -65,6 +67,8 @@ if (underwater _object || {
     !(GVAR(enableAmmoCookoff) && {_object getVariable [QGVAR(enableAmmoCookoff), true]})
 }) exitWith {
     [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
+
+    _object setVariable [QGVAR(cookoffMagazines), nil];
 };
 
 // Initial delay allows for a delay for the first time this function runs in its cycle
