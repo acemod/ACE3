@@ -70,14 +70,9 @@ if (_delay >= 0) then {
             _box setVariable [QGVAR(effects), _effects];
         };
 
-        // These functions are smart and do all the cooking off work
+        // Detonate the ammunition
         if (isServer) then {
-            (_box call FUNC(getVehicleAmmo)) params ["_magazines", "_total"];
-
-            [QGVAR(detonateAmmunition), [_box, _magazines, _total, true, _killer, _instigator]] call CBA_fnc_localEvent;
-
-            // This shit is busy being on fire, magazines aren't accessible/usable
-            clearMagazineCargoGlobal _box;
+            [QGVAR(detonateAmmunition), [_box, true, _killer, _instigator]] call CBA_fnc_localEvent;
         };
     }, _this, _delay] call CBA_fnc_waitAndExecute;
 };

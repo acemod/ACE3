@@ -1,33 +1,49 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, johnb43
  * Detonates ammunition from an object (e.g. vehicle or crate) until no ammo is left.
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Magazine array <ARRAY>
- * - 0: Magazine classname <STRING>
- * - 1: Ammo count <NUMBER>
- * 2: Total ammo count <NUMBER>
- * 3: Destroy when finished <BOOL> (default: false)
- * 4: Killer <OBJECT> (default: objNull)
- * 5: Instigator <OBJECT> (default: objNull)
- * 6: Initial delay <NUMBER> (default: 0)
+ * 1: Destroy when finished <BOOL> (default: false)
+ * 2: Killer <OBJECT> (default: objNull)
+ * 3: Instigator <OBJECT> (default: objNull)
+ * 4: Initial delay <NUMBER> (default: 0)
  *
  * Return Value:
  * Nothing Useful
  *
  * Example:
- * [cursorObject, magazinesAmmo vehicle player, 1000] call ace_cookoff_fnc_detonateAmmunition
+ * [cursorObject] call ace_cookoff_fnc_detonateAmmunition
  *
  * Public: No
  */
 
 if (!isServer) exitWith {};
 
-params ["_object", "_magazines", "_totalAmmo", ["_destroyWhenFinished", false], ["_killer", objNull], ["_instigator", objNull], ["_initialDelay", 0]];
+params ["_object", ["_destroyWhenFinished", false], ["_killer", objNull], ["_instigator", objNull], ["_initialDelay", 0]];
 
 if (isNull _object) exitWith {};
+
+private _vehicleAmmo = _object getVariable QGVAR(cookoffMagazines);
+
+if (isNil "_vehicleAmmo") then {
+    _vehicleAmmo = _object call FUNC(getVehicleAmmo);
+
+    _object setVariable [QGVAR(cookoffMagazines), _vehicleAmmo];
+
+    // TODO: When setMagazineTurretAmmo and magazineTurretAmmo are fixed (https://feedback.bistudio.com/T79689),
+    // we can add gradual ammo removal during cook-off
+    if (GVAR(removeAmmoDuringCookoff)) then {
+        clearMagazineCargoGlobal _object;
+
+        {
+            _object removeMagazinesTurret [_x select 0, _x select 1];
+        } forEach (magazinesAllTurrets _object);
+    };
+};
+
+_vehicleAmmo params ["_magazines", "_totalAmmo"];
 
 // If the cook-off has finished, clean up the effects and destroy the object
 if (_magazines isEqualTo [] || {_totalAmmo <= 0}) exitWith {
@@ -53,12 +69,12 @@ if (underwater _object || {
 
 // Initial delay allows for a delay for the first time this function runs in its cycle
 if (_initialDelay > 0) exitWith {
-    [FUNC(detonateAmmunition), [_object, _magazines, _totalAmmo, _destroyWhenFinished, _killer, _instigator], _initialDelay] call CBA_fnc_waitAndExecute;
+    [FUNC(detonateAmmunition), [_object, _destroyWhenFinished, _killer, _instigator], _initialDelay] call CBA_fnc_waitAndExecute;
 };
 
 private _magazineIndex = floor random (count _magazines);
 private _magazine = _magazines select _magazineIndex;
-_magazine params ["_magazineClassname", "_ammoCount"];
+_magazine params ["_magazineClassname", "_ammoCount", "_spawnProjectile"];
 
 // Make sure ammo is at least 0
 _ammoCount = _ammoCount max 0;
@@ -78,8 +94,10 @@ private _timeBetweenAmmoDetonation = ((random 10 / sqrt _totalAmmo) min MAX_TIME
 TRACE_2("",_totalAmmo,_timeBetweenAmmoDetonation);
 _totalAmmo = _totalAmmo - _removed;
 
+_object setVariable [QGVAR(cookoffMagazines), [_magazines, _totalAmmo]];
+
 // Detonate the remaining ammo after a delay
-[FUNC(detonateAmmunition), [_object, _magazines, _totalAmmo, _destroyWhenFinished, _killer, _instigator], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
+[FUNC(detonateAmmunition), [_object, _destroyWhenFinished, _killer, _instigator], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
 
 // Get magazine info, which is used to spawn projectiles
 private _configMagazine = configFile >> "CfgMagazines" >> _magazineClassname;
@@ -87,12 +105,14 @@ private _ammo = getText (_configMagazine >> "ammo");
 private _configAmmo = configFile >> "CfgAmmo" >> _ammo;
 
 private _simType = toLower getText (_configAmmo >> "simulation");
-private _speed = random (getNumber (_configMagazine >> "initSpeed") / 10) max 1;
-
+private _speed = linearConversion [0, 1, random 1, 1, 20, true];
 private _effect2pos = _object selectionPosition "destructionEffect2";
 
 // Spawns the projectiles, making them either fly in random directions or explode
 private _fnc_spawnProjectile = {
+    // If the magazines are inside of the cargo (inventory), don't let their projectiles escape the interior of the vehicle
+    if (!_spawnProjectile) exitWith {};
+
     params ["_object", "_ammo", "_speed", "_flyAway"];
 
     private _spawnPos = _object modelToWorld [-0.2 + random 0.4, -0.2 + random 0.4, random 3];

@@ -67,3 +67,13 @@
     1,
     {[QGVAR(ammoCookoffDuration), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(removeAmmoDuringCookoff),
+    "CHECKBOX",
+    [LSTRING(removeAmmoDuringCookoff_name), LSTRING(removeAmmoDuringCookoff_tooltip)],
+    LSTRING(category_displayName),
+    true,
+    1,
+    {[QGVAR(removeAmmoDuringCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_fnc_addSetting;

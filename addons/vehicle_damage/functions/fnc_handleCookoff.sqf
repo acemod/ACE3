@@ -23,11 +23,12 @@
 
 params ["_vehicle", "_chanceOfFire", "_intensity", ["_injurer", objNull], ["_hitPart", ""], ["_canRing", false], ["_canJet", true]];
 
-private _alreadyCookingOff = _vehicle getVariable [QEGVAR(cookoff,isCookingOff), false];
+// Ignore if the vehicle is already cooking off
+if (_vehicle getVariable [QEGVAR(cookoff,isCookingOff), false]) exitWith {true};
 
 _chanceOfFire = _chanceOfFire * EGVAR(cookoff,probabilityCoef);
 
-if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
+if (_chanceOfFire >= random 1) exitWith {
     private _configOf = configOf _vehicle;
     private _fireDetonateChance = [_configOf >> QGVAR(detonationDuringFireProb), "number", 0] call CBA_fnc_getConfigEntry;
     if (_canRing) then {
@@ -52,21 +53,8 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     [_vehicle] spawn FUNC(abandon);
     LOG_1("[%1] is on fire is bailing",_vehicle);
 
-    // cant setVehicleAmmo 0 here because it removes FFV unit's ammo
-    if (GVAR(removeAmmoDuringCookoff)) then {
-        private _ammo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
-        _ammo params ["_magazines"];
-        TRACE_1("removing magazines",_magazines);
-        {
-            _x params ["_magazine"];
-            _vehicle removeMagazines _magazine;
-        } forEach _magazines;
-    };
     true
 };
-
-// Avoid RPT spam
-if (_alreadyCookingOff) exitWith { true };
 
 LOG_2("[%1] No Cook-off - Chance of fire [%2]",_vehicle,_chanceOfFire);
 false

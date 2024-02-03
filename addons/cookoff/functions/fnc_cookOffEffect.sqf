@@ -84,9 +84,10 @@ if (isServer) then {
     };
 
     // Make flame push object into ground to make effect seem more "alive"
-    if (_jet && !isGamePaused && {local _vehicle}) then {
+    if (_jet && !isGamePaused && {local _vehicle} && {_vehicle getVariable [QGVAR(nextForceTime), 0] <= CBA_missionTime}) then {
         private _force = [0, 0, _factor * -(0.5 min random 1.5) * (0.3 min random 1)] vectorMultiply getMass _vehicle;
         _vehicle addForce [_force, vectorUpVisual _vehicle];
+        _vehicle setVariable [QGVAR(nextForceTime), CBA_missionTime + 0.01]; // this prevents bad behaviour when setAccTime is small
     };
 
     // Don't spawn visual effects on machines without interfaces

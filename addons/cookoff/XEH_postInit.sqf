@@ -73,9 +73,6 @@ if (isServer) then {
     params ["_vehicle", "", "", "_useEffects"];
 
     if (_useEffects && {_vehicle getVariable [QGVAR(enableAmmoCookoff), true]}) then {
-        (_vehicle call FUNC(getVehicleAmmo)) params ["_magazines", "_total"];
-
-        private _delay = (random MAX_AMMO_DETONATION_START_DELAY) max MIN_AMMO_DETONATION_START_DELAY;
-        [QGVAR(detonateAmmunition), [_vehicle, _magazines, _total, false, objNull, objNull, _delay]] call CBA_fnc_serverEvent;
+        [QGVAR(detonateAmmunition), [_vehicle, false, objNull, objNull, (random MAX_AMMO_DETONATION_START_DELAY) max MIN_AMMO_DETONATION_START_DELAY]] call CBA_fnc_serverEvent;
     };
 }, nil, ["CAManBase", "StaticWeapon"]] call CBA_fnc_addClassEventHandler;

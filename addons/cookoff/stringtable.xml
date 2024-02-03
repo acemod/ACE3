@@ -99,5 +99,22 @@
             <French>Contrôle si les véhicules seront toujours détruits après l'auto-inflammation.</French>
             <Portuguese>Define se os veículos serão sempre destruídos após cozinhamento.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_name">
+            <English>Enable ammo removal during cook-off</English>
+            <Japanese>誘爆中の弾薬除去を有効/無効にする</Japanese>
+            <French>Retirer les munitions durant l'auto-inflammation</French>
+            <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
+            <Italian>Abilita rimozione munizioni dopo l'esplosione</Italian>
+            <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
+            <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
+            <Korean>쿡오프시 탄약 제거 활성화/비활성화</Korean>
+            <Russian>Удалять боеприпасы из-за детонации</Russian>
+            <Spanish>Habilita/Deshabilita ka eliminación de munición durante la detonación inducida por calor</Spanish>
+        </Key>
+        <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_tooltip">
+            <English>Removes all ammo during cook-off.</English>
+            <French>Retire des munitions des véhicules durant une auto-inflammation.</French>
+            <German>Entfernt Munition während dem Durchzünden der Munition eines Fahrzeuges.</German>
+        </Key>
     </Package>
 </Project>

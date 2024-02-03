@@ -107,7 +107,7 @@ if (_delayBetweenSmokeAndFire) then {
         };
 
         // Wait until we are ready for the next flame
-        if (CBA_missionTime >= _vehicle getVariable [QGVAR(nextFlame), 0]) then {
+        if (_vehicle getVariable [QGVAR(nextFlame), 0] <= CBA_missionTime) then {
             private _ring = false;
 
             if (_canRing) then {

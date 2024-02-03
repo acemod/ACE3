@@ -41,7 +41,7 @@ private _ammo = "";
             continue;
         };
 
-        _ammoToDetonate pushBack [_magazine, _count];
+        _ammoToDetonate pushBack [_magazine, _count, true];
         _totalAmmo = _totalAmmo + _count;
     };
 } forEach (magazinesAllTurrets [_vehicle, true]);
@@ -51,7 +51,7 @@ private _ammo = "";
     _x params ["_magazine", "_count"];
 
     if (_count > 0 && {!(_magazine call FUNC(isMagazineFlare))}) then {
-        _ammoToDetonate pushBack [_magazine, _count];
+        _ammoToDetonate pushBack [_magazine, _count, false];
         _totalAmmo = _totalAmmo + _count;
     };
 } forEach (magazinesAmmoCargo _vehicle);
@@ -63,13 +63,13 @@ private _configSupply = (getNumber (_configVehicle >> "transportAmmo")) max (get
 if (_vehicle getVariable [QEGVAR(rearm,isSupplyVehicle), _configSupply > 0]) then {
     TRACE_1("transportAmmo vehicle - adding virtual ammo",typeOf _vehicle);
 
-    _ammoToDetonate pushBack ["2000Rnd_65x39_belt", 2000];
+    _ammoToDetonate pushBack ["2000Rnd_65x39_belt", 2000, false];
     _totalAmmo = _totalAmmo + 2000;
 
-    _ammoToDetonate pushBack ["20Rnd_105mm_HEAT_MP", 100];
+    _ammoToDetonate pushBack ["20Rnd_105mm_HEAT_MP", 100, true];
     _totalAmmo = _totalAmmo + 100;
 
-    _ammoToDetonate pushBack ["SatchelCharge_Remote_Mag", 10];
+    _ammoToDetonate pushBack ["SatchelCharge_Remote_Mag", 10, true];
     _totalAmmo = _totalAmmo + 10;
 };
 
