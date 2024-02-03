@@ -4,8 +4,8 @@
  * Return if the position is inside the map marker (to allow dragging) or not.
  *
  * Arguments:
- * 0: x Position (in meters) <NUMBER>
- * 1: y Position (in meters) <NUMBER>
+ * 0: x position (in meters) <NUMBER>
+ * 1: y position (in meters) <NUMBER>
  *
  * Return Value:
  * Where in the plotting board it is <NUMBER>
@@ -30,9 +30,11 @@ private _isRuler = if (GVAR(plottingBoard_Shown) == 2) then {
     private _dirRightVector = [_dirVector select 1, -(_dirVector select 0)];
     private _rulerAng = acos (_rulerVector vectorCos _relPos);
 
-    if (cos _rulerAng > 0 && {tan (_rulerAng) * _dist < PLOTTINGBOARD_RULERHALFWIDTH}) exitWith {true};
+    if (cos _rulerAng > 0 && {(tan _rulerAng) * _dist < PLOTTINGBOARD_RULERHALFWIDTH}) exitWith {true};
 
     _dist > PLOTTINGBOARD_RULERINNERCIRCLE && {_dist < PLOTTINGBOARD_RULEROUTERCIRCLE && {abs (_rulerAng * DEGTOMILS) < PLOTTINGBOAR_RULEROUTERHALFANGLE}}
+} else {
+    false
 };
 
 if (_isRuler) exitWith {2};
