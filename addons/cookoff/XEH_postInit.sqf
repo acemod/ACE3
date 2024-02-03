@@ -71,7 +71,12 @@ if (hasInterface) then {
         TRACE_3("",_object,_sound,_maxDistance);
 
         // 3 classes of distances: close, mid and far, each having different sound files
-        private _classDistance = ([["far", "mid"] select (_distance < 952), "close"] select (_distance < 235));
+        private _classDistance = switch (true) do {
+            case (_distance < DISTANCE_CLOSE): {"close"};
+            case (_distance < DISTANCE_MID): {"mid"};
+            default {"far"};
+        };
+
         _sound = format [QGVAR(%1_%2_%3), _sound, _classDistance, floor (random 3) + 1];
 
         TRACE_1("",_sound);
