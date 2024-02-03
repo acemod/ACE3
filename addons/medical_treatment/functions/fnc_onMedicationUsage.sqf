@@ -7,26 +7,27 @@
  * 0: The patient <OBJECT>
  * 1: Medication Treatment classname <STRING>
  * 2: Max dosage (0 to ignore) <NUMBER>
+ * 3: Max Dose Devatiation <NUMBER>
  * 3: Incompatable medication <ARRAY<STRING>>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "morphine", 4, [["x", 1]]] call ace_medical_treatment_fnc_onMedicationUsage
+ * [player, "morphine", 4, 2, [["x", 1]]] call ace_medical_treatment_fnc_onMedicationUsage
  *
  * Public: No
  */
 
-params ["_target", "_className", "_maxDose", "_chanceDoses", "_incompatibleMedication"];
-TRACE_5("onMedicationUsage",_target,_className,_maxDose,_chanceDoses,_incompatibleMedication);
+params ["_target", "_className", "_maxDose", "_maxDoseDeviation", "_incompatibleMedication"];
+TRACE_5("onMedicationUsage",_target,_className,_maxDose,_maxDoseDeviation,_incompatibleMedication);
 
 private _overdosedMedications = [];
 
 // Check for overdose from current medication
 if (_maxDose > 0) then {
     private _currentDose = [_target, _className] call EFUNC(medical_status,getMedicationCount);
-    if (_currentDose > _maxDose + (floor random _chanceDoses)) then {
+    if (_currentDose > _maxDose + (floor random _maxDoseDeviation)) then {
         TRACE_1("exceeded max dose",_currentDose);
         _overdosedMedications pushBackUnique _className;
     };
