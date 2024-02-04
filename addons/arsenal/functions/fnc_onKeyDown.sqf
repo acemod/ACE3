@@ -94,8 +94,8 @@ if (!isNull _loadoutsDisplay) then {
                         };
                     } params ["_className"];
 
-                    "ace_clipboard" callExtension (_className + ";");
-                    "ace_clipboard" callExtension "--COMPLETE--";
+                    "ace" callExtension ["clipboard:append", [_className]];
+                    "ace" callExtension ["clipboard:complete", []];
 
                     [_display, LLSTRING(exportedClassnameText)] call FUNC(message);
                 } else {
