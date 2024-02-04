@@ -42,7 +42,8 @@ if (_global && {isMultiplayer} && {!isNil "_id"}) then {
 };
 
 // If the arsenal is already open and not ignoring content (see FUNC(openBox)), close arsenal display
-if (!isNull GVAR(currentBox) && {GVAR(currentBox) isEqualTo _object} && {isNil QGVAR(ignoredVirtualItems)}) then {
+// Deliberate == check, fail on objNull
+if (!isNil QGVAR(currentBox) && {GVAR(currentBox) == _object} && {isNil QGVAR(ignoredVirtualItems)}) then {
     // Delay a frame in case this is running on display open/close
     [{
         private _display = findDisplay IDD_ace_arsenal;
