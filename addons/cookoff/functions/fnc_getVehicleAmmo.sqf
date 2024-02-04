@@ -4,7 +4,7 @@
  * Gets all magazines inside of a vehicle.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Object <OBJECT>
  *
  * Return Value:
  * 0: Ammo array <ARRAY>
@@ -19,8 +19,8 @@
  * Public: No
  */
 
-params ["_vehicle"];
-TRACE_1("getVehicleAmmo",_vehicle);
+params ["_object"];
+TRACE_1("getVehicleAmmo",_object);
 
 private _ammoToDetonate = [];
 private _totalAmmo = 0;
@@ -45,7 +45,7 @@ private _ammo = "";
         _ammoToDetonate pushBack [_magazine, _count, true];
         _totalAmmo = _totalAmmo + _count;
     };
-} forEach (magazinesAllTurrets [_vehicle, true]);
+} forEach (magazinesAllTurrets [_object, true]);
 
 // Get ammo from cargo space
 {
@@ -55,14 +55,14 @@ private _ammo = "";
         _ammoToDetonate pushBack [_magazine, _count, false];
         _totalAmmo = _totalAmmo + _count;
     };
-} forEach (magazinesAmmoCargo _vehicle);
+} forEach (magazinesAmmoCargo _object);
 
 // Get ammo from transportAmmo / ace_rearm
-private _configVehicle = configOf _vehicle;
+private _configVehicle = configOf _object;
 private _configSupply = (getNumber (_configVehicle >> "transportAmmo")) max (getNumber (_configVehicle >> QEGVAR(rearm,defaultSupply)));
 
-if (_vehicle getVariable [QEGVAR(rearm,isSupplyVehicle), _configSupply > 0]) then {
-    TRACE_1("transportAmmo vehicle - adding virtual ammo",typeOf _vehicle);
+if (_object getVariable [QEGVAR(rearm,isSupplyVehicle), _configSupply > 0]) then {
+    TRACE_1("transportAmmo vehicle - adding virtual ammo",typeOf _object);
 
     _ammoToDetonate pushBack ["2000Rnd_65x39_belt", 2000, false];
     _totalAmmo = _totalAmmo + 2000;

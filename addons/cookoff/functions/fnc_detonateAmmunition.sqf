@@ -25,12 +25,12 @@ params ["_object", ["_destroyWhenFinished", false], ["_killer", objNull], ["_ins
 
 if (isNull _object) exitWith {};
 
-private _vehicleAmmo = _object getVariable QGVAR(cookoffMagazines);
+private _objectAmmo = _object getVariable QGVAR(cookoffMagazines);
 
-if (isNil "_vehicleAmmo") then {
-    _vehicleAmmo = _object call FUNC(getVehicleAmmo);
+if (isNil "_objectAmmo") then {
+    _objectAmmo = _object call FUNC(getVehicleAmmo);
 
-    _object setVariable [QGVAR(cookoffMagazines), _vehicleAmmo];
+    _object setVariable [QGVAR(cookoffMagazines), _objectAmmo];
 
     // TODO: When setMagazineTurretAmmo and magazineTurretAmmo are fixed (https://feedback.bistudio.com/T79689),
     // we can add gradual ammo removal during cook-off
@@ -43,11 +43,13 @@ if (isNil "_vehicleAmmo") then {
     };
 };
 
-_vehicleAmmo params ["_magazines", "_totalAmmo"];
+_objectAmmo params ["_magazines", "_totalAmmo"];
 
 // If the cook-off has finished, clean up the effects and destroy the object
 if (_magazines isEqualTo [] || {_totalAmmo <= 0}) exitWith {
     [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
+
+    _object setVariable [QGVAR(cookoffMagazines), nil];
 
     if (_destroyWhenFinished) then {
         _object setDamage [1, true, _killer, _instigator];
@@ -65,6 +67,8 @@ if (underwater _object || {
     !(GVAR(enableAmmoCookoff) && {_object getVariable [QGVAR(enableAmmoCookoff), true]})
 }) exitWith {
     [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
+
+    _object setVariable [QGVAR(cookoffMagazines), nil];
 };
 
 // Initial delay allows for a delay for the first time this function runs in its cycle
@@ -136,16 +140,14 @@ private _fnc_spawnProjectile = {
 
 switch (_simType) do {
     case "shotbullet": {
-        private _sound = selectRandom [QPATHTO_R(sounds\light_crack_close.wss), QPATHTO_R(sounds\light_crack_close_filtered.wss), QPATHTO_R(sounds\heavy_crack_close.wss), QPATHTO_R(sounds\heavy_crack_close_filtered.wss)];
-        playSound3D [_sound, objNull, false, getPosASL _object, 2, 1, 1250];
+        [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
         if (random 1 < 0.6) then {
             [_object, _ammo, _speed, true] call _fnc_spawnProjectile;
         };
     };
     case "shotshell": {
-        private _sound = selectRandom [QPATHTO_R(sounds\heavy_crack_close.wss), QPATHTO_R(sounds\heavy_crack_close_filtered.wss)];
-        playSound3D [_sound, objNull, false, getPosASL _object, 2, 1, 1300];
+        [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
         if (random 1 < 0.15) then {
             [_object, _ammo, _speed, true] call _fnc_spawnProjectile;
@@ -162,8 +164,7 @@ switch (_simType) do {
     case "shotmissile";
     case "shotsubmunitions": {
         if (random 1 < 0.1) then {
-            private _sound = selectRandom [QPATHTO_R(sounds\cannon_crack_close.wss), QPATHTO_R(sounds\cannon_crack_close_filtered.wss)];
-            playSound3D [_sound, objNull, false, getPosASL _object, 3, 1, 1600];
+            [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
             [_object, _ammo, _speed, random 1 < 0.3] call _fnc_spawnProjectile;
         } else {
