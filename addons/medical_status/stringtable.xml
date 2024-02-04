@@ -88,13 +88,13 @@
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_DisplayName">
             <English>IV Transfusion Flow Rate</English>
             <German>Transfusions Fließrate</German>
-            <Japanese>IV 輸血の流量</Japanese>
+            <Japanese>IV 輸液の流量</Japanese>
             <Russian>Скорость внутривенного переливания</Russian>
             <French>Débit de transfusion IV</French>
             <Portuguese>Velocidade de Transferência de Sangue</Portuguese>
             <Chinese>點滴輸血流量</Chinese>
             <Chinesesimp>点滴输血流量</Chinesesimp>
-            <Italian>IV Portata della trasfusione</Italian>
+            <Italian>Velocità di trasfusione EV</Italian>
             <Czech>Rychlost IV transfuze </Czech>
             <Polish>Natężenie Przepływu Transfuzji IV</Polish>
             <Spanish>IV Flujo de transfusión</Spanish>
@@ -104,13 +104,13 @@
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
             <German>Wie schnell der Effekt der Transfusion eintritt</German>
-            <Japanese>IV による輸血速度を変更できます</Japanese>
+            <Japanese>IV 輸液パックから輸液が流出する速度を制御します。 IV 輸液バッグの容量変化は次のように計算されます:\n時間間隔(秒) x 点滴速度毎秒(4.1667 mL/秒) x 流量(この係数)</Japanese>
             <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
             <French>Définit la vitesse à laquelle le liquide s'écoule des poches de perfusion.\nLa variation du volume de poche IV est calculée selon la  formule suivante :\n intervalle de temps (s) * variation IV par seconde (4,1667 ml/s) * débit (ce coefficient).</French>
             <Portuguese>Controla o quão rápido fluidos são extraídos de bolsas de IV. A mudança no volume da bolsa d IV é calculado assim:\nIntervalo de tempo (s) * mudança de iv por segundo (4.1667 mL/s) * Velocidade de transferência (esse valor)</Portuguese>
             <Chinese>控制從點滴輸入人體的液體流量多快。點滴的體積更改是以\n時間間隔（單位秒）乘上點滴每秒速度（4.1667毫升/秒）乘上流量（該係數）。</Chinese>
             <Chinesesimp>控制从点滴输入人体的液体流量多快。静脉输液袋容积变化的计算方法是：\n时间间隔（秒）x点滴每秒速度（4.1667毫升/秒）x流量（该系数）。</Chinesesimp>
-            <Italian>Controlla la velocità con cui il fluido esce dalle sacche per flebo. La variazione di volume delle sacche IV è calcolata come:\intervallo di tempo (s) * variazione iv al secondo (4,1667 mL/s) * portata (questo coefficiente).</Italian>
+            <Italian>Determina la velocità con cui il fluido esce dalle sacche per flebo. La variazione di volume delle sacche EV è calcolata come:\intervallo di tempo (s) * variazione EV al secondo (4,1667 mL/s) * velocità (questo coefficiente).</Italian>
             <Czech>Nastavuje jak rychle tekutiny vytékají z IV sáčku. Zbývající objem IV sáčku je vypočítáván následovně:\nčasový interval (s) * změna iv za sekundu (4,1667 mL/s) * rychlost toku (tento koeficient).</Czech>
             <Polish>Kontroluje, jak szybko płyn wypływa z worków IV. Zmiana objętości worka IV jest obliczana jako:\n przedział czasowy * zmiana iv na sekundę (4,1667 mL/s) * natężenie przepływu (ten współczynnik).</Polish>
             <Spanish>Controla la rapidez con que fluye el líquido de las bolsas intravenosas. El cambio de volumen de la bolsa IV se calcula como: \n intervalo (s) de tiempo * cambio iv por segundo (4.1667 mL/s) * velocidad de flujo (este coeficiente).</Spanish>
@@ -121,6 +121,7 @@
             <English>Weapon Drop Chance</English>
             <Polish>Szansa Upuszczenia Broni</Polish>
             <German>Wahrscheinlichkeit, die Waffe fallen zu lassen</German>
+            <Italian>Probabilità di far cadere l'arma</Italian>
             <Korean>무기 떨어뜨릴 확률</Korean>
             <French>Risque de perte d'arme</French>
             <Japanese>武器を落とす確率</Japanese>
@@ -129,6 +130,7 @@
             <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
             <Polish>Szansa na upuszczenie broni przez gracza, przy utracie przytomności. \nNie ma wpływu na AI.</Polish>
             <German>Chance für einen Spieler, seine Waffe fallen zu lassen, wenn er bewusstlos wird.\nHat keine Auswirkung auf die KI.</German>
+            <Italian>Probabilità che un giocatore faccia cadere l'arma attualmente selezionata quando sviene.\nNon ha effetto sulle IA.</Italian>
             <Korean>플레이어가 기절할 때 무기를 떨어뜨릴 확률입니다.\nAI는 영향을 받지 않습니다.</Korean>
             <French>Pourcentage de chances pour un joueur de lâcher son arme lorsqu'il perd connaissance.\nAucun effet sur les IA.</French>
             <Japanese>プレーヤーが意識を失ったときに武器を落とす可能性。\nAI には影響しません。</Japanese>

@@ -58,7 +58,7 @@ if (GVAR(interactionParadrop)) exitWith {
                 [LSTRING(unlevelFlightWarning)] call EFUNC(common,displayTextStructured);
             };
         },
-        LLSTRING(unloadingItem),
+        format [LLSTRING(unloadingItem), [_item, true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
             (_this select 0) params ["", "_target"];
 
@@ -71,6 +71,19 @@ if (GVAR(interactionParadrop)) exitWith {
         ["isNotSwimming", "isNotInside"],
         false
     ]] call CBA_fnc_execNextFrame;
+};
+
+// If in zeus
+if (!isNull findDisplay 312) exitWith {
+    // Do not check distance to unit, but do check for valid position
+    if !([_item, GVAR(interactionVehicle), objNull, true] call FUNC(canUnloadItem)) exitWith {
+        [[LSTRING(unloadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
+    };
+
+    // Close the cargo menu
+    closeDialog 1;
+
+    ["ace_unloadCargo", [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
 };
 
 // Start progress bar - normal ground unload
@@ -96,7 +109,7 @@ if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
         {
             TRACE_1("unload fail",_this);
         },
-        LLSTRING(unloadingItem),
+        format [LLSTRING(unloadingItem), [_item, true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
             (_this select 0) params ["_item", "_vehicle", "_unit"];
 

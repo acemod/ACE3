@@ -52,4 +52,4 @@
 
 if (!hasInterface) exitWith {};
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"

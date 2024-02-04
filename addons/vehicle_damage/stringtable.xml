@@ -3,9 +3,10 @@
     <Package name="Vehicle_Damage">
         <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
-            <Japanese>ACE 拡張車両ダメージ</Japanese>
+            <Japanese>ACE アドバンスドビークルダメージ</Japanese>
             <French>ACE Dégâts de véhicule avancés</French>
             <German>ACE Erweiterter Fahrzeugsschaden</German>
+            <Italian>ACE Danni Veicolo Avanzati</Italian>
             <Polish>ACE Zaawansowany system uszkodzeń pojazdów</Polish>
             <Chinesesimp>ACE 高级载具损坏</Chinesesimp>
             <Korean>ACE 고급 차량 피해</Korean>
@@ -14,9 +15,10 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
-            <Japanese>拡張車両ダメージの使用を設定します。</Japanese>
+            <Japanese>アドバンスドビークルダメージを有効/無効にする</Japanese>
             <French>Active les dégâts de véhicule avancés.</French>
             <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden</German>
+            <Italian>Abilità danni avanzati ai veicoli</Italian>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia pojazdów</Polish>
             <Chinesesimp>启用/禁用高级载具损坏</Chinesesimp>
             <Korean>고급 차량 피해 활성화/비활성화</Korean>
@@ -25,9 +27,10 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
             <English>Enable/Disable advanced car damage (Experimental)</English>
-            <Japanese>拡張車ダメージ (試験的)</Japanese>
+            <Japanese>アドバンスド車ダメージを有効/無効にする (試験的)</Japanese>
             <French>Active les dégâts avancés sur les voitures (expérimental).</French>
             <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden (Experimentell)</German>
+            <Italian>Abilita danni avanzati ai veicoli (sperimentale)</Italian>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia w samochodach (eksperymentalne)</Polish>
             <Chinesesimp>启用/禁用高级车辆损坏（实验性）</Chinesesimp>
             <Korean>고급 차량 피해(실험용) 활성화/비활성화</Korean>
@@ -35,10 +38,11 @@
             <Spanish>Habilita/Deshabilita el daño avanzado de coche (Experimental)</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
-            <English>Enable/Disable advanced Car Damage</English>
-            <Japanese>拡張車ダメージの使用を設定します。</Japanese>
+            <English>Enable/Disable advanced car damage</English>
+            <Japanese>アドバンスド車ダメージを有効/無効にする</Japanese>
             <French>Dégâts de voiture avancés</French>
             <German>Aktiviert/Deaktiviert erweiterten Autoschaden</German>
+            <Italian>Abilita danni avanzati alle macchine</Italian>
             <Polish>Włącz/Wyłącz zaawansowane uszkodzenia w samochodach</Polish>
             <Chinesesimp>启用/禁用高级车辆损坏</Chinesesimp>
             <Korean>고급 차량 피해 활성화/비활성화</Korean>
@@ -47,9 +51,10 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_description">
             <English>Removes all vehicle ammo after cook-off</English>
-            <Japanese>誘爆後は車両から全ての弾薬を削除します。</Japanese>
+            <Japanese>誘爆後に車両から全ての弾薬を削除</Japanese>
             <French>Retire toutes les munitions des véhicules après une auto-inflammation.</French>
             <German>Entfernt die gesamte Munition nach dem Durchzünden der Munition eines Fahrzeuges.</German>
+            <Italian>Rimuove tutte le munizioni dal veicolo dopo l'esplosione delle stesse</Italian>
             <Polish>Usuwa całą amunicję z pojazdu po samozapłonie</Polish>
             <Chinesesimp>殉爆后移除所有车辆弹药</Chinesesimp>
             <Korean>쿡오프 현상 후 차량에서 모든 탄약을 제거합니다.</Korean>
@@ -58,9 +63,10 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_enable">
             <English>Enable/Disable Ammo Removal During Cook-Off</English>
-            <Japanese>誘爆後の弾薬処理</Japanese>
+            <Japanese>誘爆中の弾薬除去を有効/無効にする</Japanese>
             <French>Retirer les munitions durant l'auto-inflammation</French>
             <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
+            <Italian>Abilita rimozione munizioni dopo l'esplosione</Italian>
             <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
             <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
             <Korean>쿡오프시 탄약 제거 활성화/비활성화</Korean>
@@ -71,7 +77,7 @@
             <English>Wreck (Turret)</English>
             <French>Épave (tourelle)</French>
             <Spanish>Restos (torreta)</Spanish>
-            <Italian>Rottami (torretta)</Italian>
+            <Italian>Rottame (Torretta)</Italian>
             <Polish>Wrak (wieżyczka)</Polish>
             <Russian>Обломки (башня)</Russian>
             <German>Wrack (Geschützturm)</German>

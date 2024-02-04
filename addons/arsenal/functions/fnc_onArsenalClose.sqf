@@ -51,13 +51,6 @@ if (is3DEN) then {
     ["ShowInterface", true] call BIS_fnc_3DENInterface;
     GVAR(visionMode) call BIS_fnc_3DENVisionMode;
 } else {
-    // Select correct weapon
-    switch (GVAR(selectedWeaponType)) do {
-        case 0: {GVAR(center) selectWeapon (primaryWeapon GVAR(center))};
-        case 1: {GVAR(center) selectWeapon (secondaryWeapon GVAR(center))};
-        case 2: {GVAR(center) selectWeapon (handgunWeapon GVAR(center))};
-    };
-
     if (!isNull curatorCamera && {ACE_player == player}) then {
         curatorCamera cameraEffect ["Internal", "BACK"];
     } else {
@@ -122,12 +115,11 @@ GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
-GVAR(showStats) = nil;
 GVAR(currentStatPage) = nil;
 GVAR(statsInfo) =  nil;
 
-GVAR(showActions) = nil;
 GVAR(currentActionPage) = nil;
+GVAR(actionsInfo) =  nil;
 
 profileNamespace setVariable [QGVAR(favorites), GVAR(favorites)];
 GVAR(favoritesOnly) = nil;

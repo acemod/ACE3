@@ -95,7 +95,7 @@ if (_useListMenu) then {
     _scaleX = _textSize * 0.17 * 1.1;
     _scaleY = 0.17 * 0.30 * 4/3;
 } else {
-    private _textSize = if (GVAR(textSize) > 2) then {1.3} else {1};
+    private _textSIze = [1, 1.3] select (GVAR(textSize) > 2);
     _scaleX = _textSize * 0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
     _scaleY = _textSize * 0.17 * 4/3 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
 };

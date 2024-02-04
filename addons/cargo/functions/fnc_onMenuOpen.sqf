@@ -44,7 +44,11 @@ if (GVAR(interactionParadrop)) then {
         !alive _vehicle ||
         {locked _vehicle >= 2} ||
         {!(_vehicle getVariable [QGVAR(hasCargo), true])} || // if the cargo menu could be opened, the vehicle has QGVAR(hasCargo) in its config or the variable is set using FUNC(setSpace)
-        {(([ACE_player, _vehicle] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE) && {(vehicle ACE_player) != _vehicle}}
+        {
+            isNull findDisplay 312 && // if in Zeus, ignore the following checks
+            {([ACE_player, _vehicle] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE} &&
+            {(vehicle ACE_player) != _vehicle}
+        }
     ) exitWith {
         closeDialog 0;
 
@@ -64,19 +68,24 @@ if (GVAR(interactionParadrop)) then {
     private _displayName = "";
     private _itemSize = 0;
     private _index = -1;
+    private _damageStr = "0%";
+    private _damage = 0;
 
     {
         _displayName = [_x, true] call FUNC(getNameItem);
         _itemSize = _x call FUNC(getSizeItem);
+        _damage = if (_x isEqualType "") then {0} else {damage _x};
+        _damageStr = ((_damage * 100) toFixed 0) + "%";
 
         if (_itemSize >= 0) then {
             _index = if (GVAR(interactionParadrop)) then {
-                _ctrl lbAdd format ["%1 (%2s)", _displayName, GVAR(paradropTimeCoefficent) * _itemSize]
+                _ctrl lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, GVAR(paradropTimeCoefficent) * _itemSize]
             } else {
-                _ctrl lbAdd _displayName
+                _ctrl lbAdd format ["%1. %2", _forEachIndex + 1, _displayName]
             };
 
-            _ctrl lbSetTooltip [_index, format [LLSTRING(sizeMenu), _itemSize]];
+            private _tooltip = format ["%1\n%2", format [LLSTRING(sizeMenu), _itemSize], format ["%1: %2", localize "str_a3_normaldamage1", _damageStr]];
+            _ctrl lbSetTooltip [_index, _tooltip];
         } else {
             // If item has a size < 0, it means it's not loadable
             _index = _ctrl lbAdd _displayName;
