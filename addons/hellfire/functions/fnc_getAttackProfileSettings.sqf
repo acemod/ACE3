@@ -33,7 +33,7 @@ private _startingStage = if (_configLaunchHeightClear > 0) then {
 } else {
     [
         STAGE_ATTACK_CRUISE,
-        STAGE_SEEK_CRUISE,
+        STAGE_SEEK_CRUISE
     ] select (_seekerTargetPos isEqualTo [0,0,0]);
 };
 
