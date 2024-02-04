@@ -27,6 +27,6 @@ _laserParams params ["_code", "_wavelengthMin", "_wavelengthMax"];
 
 private _laserResult = [(getPosASL _projectile), (velocity _projectile), _seekerAngle, _seekerMaxRange, [_wavelengthMin, _wavelengthMax], _code, _projectile] call EFUNC(laser,seekerFindLaserSpot);
 private _foundTargetPos = _laserResult select 0;
-TRACE_1("Search", _laserResult);
+TRACE_1("Search",_laserResult);
 
 _foundTargetPos;

@@ -24,7 +24,7 @@ if (vehicle _unit != _unit) exitWith {};
 
 // dummy lost hook
 if (isNull _hook) exitWith {
-    TRACE_1("Hook lost, dropping and exiting pfeh",_unit);
+    TRACE_1("Hook lost,dropping and exiting pfeh",_unit);
 
     [_unit, "", 2] call EFUNC(common,doAnimation);
     _unit setVectorUp [0, 0, 1];

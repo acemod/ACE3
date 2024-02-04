@@ -90,7 +90,7 @@ if (!isServer) then {
             if (_mode == 2) then {
                 [{alive player}, { // To be able to show list if using checkAll
                     params ["_text"];
-                    TRACE_2("Player is alive, showing msg and exiting",time,_text);
+                    TRACE_2("Player is alive,showing msg and exiting",time,_text);
                     _text = composeText [parseText format ["<t align='center'>%1</t>", _text]];
                     ["[ACE] ERROR", _text, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 }, [_text]] call CBA_fnc_waitUntilAndExecute;

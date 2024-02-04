@@ -76,7 +76,7 @@ if ((velocity ACE_player) distance [0,0,0] > 0.75 && {cameraView == "GUNNER"} &&
     TRACE_1("exiting gunner because movement",velocity ACE_player);
     ACE_player switchCamera "INTERNAL";
     if (player != ACE_player) then {
-        TRACE_2("Zeus, manually reseting RC after switchCamera",player,ACE_player);
+        TRACE_2("Zeus,manually reseting RC after switchCamera",player,ACE_player);
         player remoteControl ACE_player;
     };
 };
@@ -146,13 +146,13 @@ if (isNull _newTarget) then {
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {
     if ((!isNull _newTarget) && {_currentTarget != _newTarget}) then {
-        TRACE_1("New Target, reseting locking", _newTarget);
+        TRACE_1("New Target,reseting locking",_newTarget);
         _lockStartTime = CBA_missionTime;
         _currentTarget = _newTarget;
     };
 
     if ((CBA_missionTime - _lockStartTime) > __LOCKONTIME) then { // Lock on after 3 seconds
-        TRACE_2("LOCKED!", _currentTarget, _lockStartTime);
+        TRACE_2("LOCKED!",_currentTarget,_lockStartTime);
         __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
         __JavelinIGUITargetingLines ctrlShow true;
 

@@ -17,7 +17,7 @@
 
 params ["_display", "_control", "_nextPage"];
 
-TRACE_1("control enabled", ctrlEnabled _control);
+TRACE_1("control enabled",ctrlEnabled _control);
 if !(ctrlEnabled _control) exitWith {};
 
 GVAR(currentStatPage) = GVAR(currentStatPage) + ([-1, 1] select _nextPage);

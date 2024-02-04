@@ -29,14 +29,14 @@ EGVAR(advanced_ballistics,Protractor) = false;
 GVAR(WindInfo) = true;
 
 
-TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
+TRACE_1("Starting Wind Info PFEH",GVAR(WindInfo));
 
 [{
     disableSerialization;
     params ["", "_pfID"];
 
     if ((!GVAR(WindInfo)) || {!([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {
-        TRACE_1("Ending Wind Info PFEH", GVAR(WindInfo));
+        TRACE_1("Ending Wind Info PFEH",GVAR(WindInfo));
         GVAR(WindInfo) = false;
         (["RscWindIntuitive"] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
         [_pfID] call CBA_fnc_removePerFrameHandler;

@@ -37,7 +37,7 @@ _objects select {
         _isValid = isClass (configFile >> "CfgVehicles" >> _xClassname);
         if (!_isValid) then {WARNING_1("Classname does not exist in CfgVehicles %1",_x);};
     } else {
-        WARNING_1("Bad classname/cost input %1, should be [<STRING>,<NUMBER>]",_x);
+        WARNING_1("Bad classname/cost input %1,should be [<STRING>,<NUMBER>]",_x);
     };
     _isValid
 };

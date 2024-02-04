@@ -142,7 +142,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`",[_x] call FUNC(getName),_dcPlayer,_x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil
@@ -154,7 +154,7 @@ if (isServer) then {
 // Event to log Fix Headbug output
 [QGVAR(headbugFixUsed), {
     params ["_profileName", "_animation"];
-    INFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
+    INFO_2("Headbug Used: Name: %1,Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
@@ -479,7 +479,7 @@ GVAR(reloadMutex_lastMagazines) = [];
             _duration = 6;
         };
 
-        TRACE_2("Reloading, blocking gestures",_weapon,_duration);
+        TRACE_2("Reloading,blocking gestures",_weapon,_duration);
         GVAR(reloadingETA) = CBA_missionTime + _duration;
 
         if (!GVAR(isReloading)) then {

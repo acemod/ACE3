@@ -17,7 +17,7 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
 private _shouldAdd = GVAR(cacheRoundsTypesToTrack) getVariable _ammo;
 if (isNil "_shouldAdd") then {
@@ -35,7 +35,7 @@ if (isNil "_shouldAdd") then {
     if (GVAR(spallEnabled) && {!_shouldAdd}) then {
         private _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber");
         if !(_caliber >= 2.5 || {(_explosive > 0 && {_indirectRange >= 1})}) exitWith {}; // from check in doSpall: line 34
-        TRACE_1("Won't frag, but will spall",_caliber);
+        TRACE_1("Won't frag,but will spall",_caliber);
         _shouldAdd = true;
     };
 
