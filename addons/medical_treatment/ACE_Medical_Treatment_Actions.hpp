@@ -149,7 +149,8 @@ class GVAR(actions) {
         allowedSelections[] = {"Head"};
         medicRequired = 0;
         items[] = {"ACE_painkillers"};
-        treatmentTime = 2.25;
+        treatmentTime = 4;
+        sounds[] = {{QPATHTO_R(sounds\Pills.ogg),1,1,50}};
         litter[] = {{"Land_PainKillers_F"}}; // just use BI's model as litter
     };
 
