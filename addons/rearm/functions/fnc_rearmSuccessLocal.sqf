@@ -54,7 +54,7 @@ private _maxMagazines = [_vehicle, _turretPath, _magazineClass] call FUNC(getMax
 private _ammoCounts = [_vehicle, _turretPath, _magazineClass] call FUNC(getTurretMagazineAmmo);
 TRACE_3("start",_magazineClass,_maxMagazines,_ammoCounts);
 
-private _ammoToAdd = if (GVAR(level) == 2) then {_numRounds} else {_rounds};
+private _ammoToAdd = [_rounds, _numRounds] select (GVAR(level) == 2);
 private _ammoAdded = 0;
 private _arrayModified = false; // skip needing to remove and re-add mags, if we are only adding new ones
 

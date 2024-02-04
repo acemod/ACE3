@@ -60,7 +60,7 @@ if (GVAR(currentApplicationPage) == 1) then {
         _size = 32 * _mapSize;
         {
             _x params ["_wpName", "_wpPos"];
-            private _alpha = if (_forEachIndex == GVAR(currentWaypoint)) then {1} else {0.5};
+            private _alpha = [0.5, 1] select (_forEachIndex == GVAR(currentWaypoint));
             _theMap drawIcon [QUOTE(PATHTO_R(images\icon_mapWaypoints.paa)), [1,1,1,_alpha], _wpPos, _size, _size, 0, '', 0 ];
         } forEach _waypoints;
     };
