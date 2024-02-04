@@ -109,11 +109,10 @@ private _tabToChange = [];
 {
     _x params ["_tab", "_tabSide"];
 
-    _tabToChange = if (_tabSide == "R") then {
+    _tabToChange = [
+        GVAR(statsListLeftPanel),
         GVAR(statsListRightPanel)
-    } else {
-        GVAR(statsListLeftPanel)
-    };
+    ] select (_tabSide == "R");
 
     _stats = _tabToChange select _tab;
 

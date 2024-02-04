@@ -39,7 +39,7 @@ private _logOutput = LSTRING(Check_Pulse_None);
 if (_heartRate > 1) then {
     if (_medic call FUNC(isMedic)) then {
         _heartRateOutput = LSTRING(Check_Pulse_Output_1);
-        _logOutput = format ["%1", round _heartRate];
+        _logOutput = str round _heartRate;
     } else {
         _heartRateOutput = LSTRING(Check_Pulse_Output_2);
         _logOutput = LSTRING(Check_Pulse_Weak);
