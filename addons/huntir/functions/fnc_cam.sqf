@@ -145,7 +145,7 @@ GVAR(no_cams) sort true;
     GVAR(cam) camCommit 0;
 
     ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
-    ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
+    ctrlSetText [2, str (GVAR(cur_cam) + 1)];
     private _cam_time = CBA_missionTime - (GVAR(huntIR) getVariable [QGVAR(startTime), CBA_missionTime]);
     ctrlSetText [3, format["%1 s", round(_cam_time)]];
     private _cam_pos = getPosVisual GVAR(huntIR);

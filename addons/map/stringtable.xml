@@ -60,7 +60,7 @@
             <Czech>Nasvícení mapy pomocí baterky</Czech>
             <Italian>Effetto luminoso sul giocatore</Italian>
             <French>Lueur lampe carte</French>
-            <Japanese>地図をライトで照らす</Japanese>
+            <Japanese>地図用ライトの光放射</Japanese>
             <Korean>지도 조명 발광</Korean>
             <Chinesesimp>增加地图亮度</Chinesesimp>
             <Chinese>增加地圖亮度</Chinese>
@@ -75,7 +75,7 @@
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
             <Czech>Přidat externí záři hráči který používá baterku v mapě?</Czech>
             <Italian>Aggiungi un effetto di luce sul giocatore che sta usando la torcia in mappa, questo è visibile ad altri giocatori.</Italian>
-            <Japanese>プレイヤーが地図をフラッシュライトで照らせられるように設定します。</Japanese>
+            <Japanese>マップ上で懐中電灯を使用しているプレイヤーから辺りへの光放射を追加しますか?</Japanese>
             <Korean>지도에 조명을 사용하는 플레이어에 외부 불빛을 추가합니까?</Korean>
             <Chinesesimp>当玩家打开手电筒时，增加地图亮度。</Chinesesimp>
             <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
@@ -91,7 +91,7 @@
             <Hungarian>Térkép-rázkódás</Hungarian>
             <Russian>Тряска карты</Russian>
             <Italian>Scuotimento della mappa</Italian>
-            <Japanese>地図を揺らす</Japanese>
+            <Japanese>地図の揺れ</Japanese>
             <Korean>지도 흔들림</Korean>
             <Chinesesimp>地图震动</Chinesesimp>
             <Chinese>地圖震動</Chinese>
@@ -108,7 +108,7 @@
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
-            <Japanese>歩いているときは地図を揺らすかかどうかを設定できます。</Japanese>
+            <Japanese>歩いているときに地図を揺らしますか?</Japanese>
             <Korean>걸을 때 지도를 보면 흔들리게 합니까?</Korean>
             <Chinesesimp>走路时打开地图会产生晃动。</Chinesesimp>
             <Chinese>走路時讓地圖有震動的感覺?</Chinese>
@@ -140,7 +140,7 @@
             <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
             <Russian>Ограничить максимальное приближение, доступное на карте?</Russian>
             <Italian>Limita i livelli di zoom disponibili sulla mappa?</Italian>
-            <Japanese>地図上で利用できる拡大倍率を制限できます。</Japanese>
+            <Japanese>地図上で利用できる拡大倍率を制限しますか?</Japanese>
             <Korean>지도 확대에 제한을 둡니까?</Korean>
             <Chinesesimp>限制地图上可允许缩放的倍率？</Chinesesimp>
             <Chinese>限制地圖上可允許縮放的倍率?</Chinese>
@@ -156,7 +156,7 @@
             <Hungarian>Kurzor-koordináták mutatása</Hungarian>
             <Russian>Показывать координаты курсора</Russian>
             <Italian>Mostra coordinate sul cursore</Italian>
-            <Japanese>カーソル先で座標を表示</Japanese>
+            <Japanese>カーソル先の座標を表示</Japanese>
             <Korean>커서에 좌표를 보이기</Korean>
             <Chinesesimp>显示光标的座标</Chinesesimp>
             <Chinese>顯示游標的座標</Chinese>
@@ -172,7 +172,7 @@
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
             <Italian>Mostra il numero della coordinata-griglia sul cursore del mouse in mappa?</Italian>
-            <Japanese>カーソルで合わせた先を地図座標で表示するかどうかを設定できます。</Japanese>
+            <Japanese>カーソルで合わせた先の地図グリッド座標を表示しますか?</Japanese>
             <Korean>지도에서 커서 옆에 좌표가 뜨게 합니까?</Korean>
             <Chinesesimp>显示鼠标光标所在的网格座标？</Chinesesimp>
             <Chinese>顯示滑鼠游標所在的網格座標?</Chinese>
@@ -300,7 +300,7 @@
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
             <Italian>Nascondi marker per gruppi di sole IA?</Italian>
-            <Japanese>'AIのみ'グループのマーカー表示有無を設定できます。</Japanese>
+            <Japanese>'AIのみ'のグループのマーカー表示有無を設定できます。</Japanese>
             <Korean>인공지능만 있는 그룹의 마커를 숨깁니까?</Korean>
             <Chinesesimp>隐藏'AI 小队'的追踪？</Chinesesimp>
             <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>
@@ -379,7 +379,7 @@
             <Czech>NVG</Czech>
             <Spanish>NVG</Spanish>
             <Italian>NVG</Italian>
-            <Japanese>夜間暗視装置</Japanese>
+            <Japanese>暗視装置</Japanese>
             <Korean>야간투시경</Korean>
             <Chinesesimp>夜视仪</Chinesesimp>
             <Chinese>夜視鏡</Chinese>
@@ -491,7 +491,7 @@
             <Italian>Imposta Canale all'Avvio</Italian>
             <Spanish>Setear canal al comenzar</Spanish>
             <French>Définir un canal par défaut</French>
-            <Japanese>開始時のチャンネルを決定</Japanese>
+            <Japanese>開始時のチャンネルを指定</Japanese>
             <Korean>시작시 채널</Korean>
             <Chinesesimp>设定游戏开始时的聊天频道</Chinesesimp>
             <Chinese>設定遊戲開始時的聊天頻道</Chinese>
@@ -506,7 +506,7 @@
             <Italian>Cambia il canale marker iniziale all'avvio della missione</Italian>
             <Spanish>Cambiar el canal de marcadores inicial al comenzar la misión</Spanish>
             <French>Change le canal de communication par défaut au début de la mission.</French>
-            <Japanese>ミッション開始時にあらかじめ設定されているマーカ チャンネルを変更します</Japanese>
+            <Japanese>ミッション開始時に使用されるマーカーチャンネルの指定を変更します</Japanese>
             <Korean>미션 시작시 마커채널을 변경합니다</Korean>
             <Chinesesimp>更改任务启动时的聊天频道</Chinesesimp>
             <Chinese>更改任務啟動時的聊天頻道</Chinese>

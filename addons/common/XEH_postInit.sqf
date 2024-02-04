@@ -29,7 +29,7 @@
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["disableWeaponAssembly", false, ["ace_common", "ace_common_lockVehicle", "ace_csw"]] call FUNC(statusEffect_addType);
-["lockInventory", true, []] call FUNC(statusEffect_addType);
+["lockInventory", true, [], true] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -96,7 +96,7 @@
         _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
     if (["task_force_radio"] call FUNC(isModLoaded)) then {
-        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
+        _object setVariable ["tf_voiceVolume", parseNumber (_set == 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
