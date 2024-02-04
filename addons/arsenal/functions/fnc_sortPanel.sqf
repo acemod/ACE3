@@ -92,7 +92,8 @@ if (_rightSort) then {
             IDC_buttonWatch,
             IDC_buttonFace,
             IDC_buttonVoice,
-            IDC_buttonInsignia
+            IDC_buttonInsignia,
+            IDC_buttonContainer
         ] find GVAR(currentLeftPanel)))
     ]
 } params ["_panel", "_cfgClass", "_sorts"];

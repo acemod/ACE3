@@ -201,8 +201,8 @@ private _fnc_handleStats = {
 
 // Check if in left or right panel
 if (ctrlIDC _control == IDC_leftTabContent) then {
-    // Faces, voices and insigna do not have stats
-    if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia] find GVAR(currentLeftPanel) > -1) then {
+    // Faces, voices, insignia and containers do not have stats
+    if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia, IDC_buttonContainer] find GVAR(currentLeftPanel) > -1) then {
         call _fnc_hideEverything;
     } else {
         [[

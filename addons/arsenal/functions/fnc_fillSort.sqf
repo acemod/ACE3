@@ -106,7 +106,8 @@ private _sorts = if (_rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform
                 IDC_buttonWatch,
                 IDC_buttonFace,
                 IDC_buttonVoice,
-                IDC_buttonInsignia
+                IDC_buttonInsignia,
+                IDC_buttonContainer
             ] find _idc)
         };
     }

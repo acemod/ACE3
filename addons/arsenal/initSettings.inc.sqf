@@ -9,6 +9,15 @@ private _category = LLSTRING(settingCategory);
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(enableInventoryEditing),
+    "CHECKBOX",
+    ["Enable Inventory Editing", "Allows editing the contents of nearby containers' inventory."],
+    _category,
+    true,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(enableModIcons),
     "CHECKBOX",
     [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)],

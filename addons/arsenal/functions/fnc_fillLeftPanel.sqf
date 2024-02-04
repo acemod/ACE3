@@ -233,6 +233,26 @@ private _selectedItem = switch (true) do {
 
                 GVAR(currentInsignia)
             };
+            case IDC_buttonContainer: {
+                private _vehicles = call FUNC(getNearbyInventories);
+                private _displayName = "";
+                private _lbAdd = -1;
+                {
+                    if (["ace_cargo"] call EFUNC(common,isModLoaded)) then {
+                       _displayName = [_x, true] call EFUNC(cargo,getNameItem);
+                    } else {
+                        _displayName = getText (configOf _x >> "displayName");
+                    };
+
+                    _lbAdd = _ctrlPanel lbAdd format ["%1 (%2m)", _displayName, (GVAR(center) distance _x) toFixed 1];
+                    // Since we can't refer to the object directly, we'll use its hashValue instead
+                    _ctrlPanel lbSetData [_lbAdd, hashValue _x];
+                    _ctrlPanel lbSetPicture [_lbAdd, [_x] call EFUNC(common,getVehicleIcon)];
+                    _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, typeOf _x]];
+                } forEach _vehicles;
+
+                GVAR(currentContainer)
+            };
             // Unknown
             default {""};
         };

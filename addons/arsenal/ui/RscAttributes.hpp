@@ -866,6 +866,16 @@ class GVAR(display) {
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Insignia_ca.paa";
                     y = QUOTE(170 * GRID_H);
                 };
+                class iconBackgroundContainer: iconBackgroundPrimaryWeapon {
+                    idc = IDC_iconBackgroundContainer;
+                    y = QUOTE(180 * GRID_H);
+                };
+                class buttonContainer: buttonPrimaryWeapon {
+                    idc = IDC_buttonContainer;
+                    tooltip = "$STR_DN_Vehicles";
+                    text = "\A3\Ui_f\data\Map\VehicleIcons\iconCrateVeh_ca.paa";
+                    y = QUOTE(180 * GRID_H);
+                };
             };
         };
         class iconBackgroundOptic: ctrlStaticBackground {

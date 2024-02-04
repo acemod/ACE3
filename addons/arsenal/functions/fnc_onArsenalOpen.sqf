@@ -70,6 +70,8 @@ GVAR(virtualItemsFlatAll) = +GVAR(virtualItemsFlat);
 GVAR(currentFace) = face GVAR(center);
 GVAR(currentVoice) = speaker GVAR(center);
 GVAR(currentInsignia) = GVAR(center) call BIS_fnc_getUnitInsignia;
+GVAR(currentContainer) = "";
+GVAR(vehicleMap) = createHashMap;
 
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
@@ -251,6 +253,14 @@ if (GVAR(selectedWeaponType) == -1) then {
 private _leftPanelIDC = [IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun, IDC_buttonBinoculars] select GVAR(selectedWeaponType);
 
 [_display, _display displayCtrl _leftPanelIDC] call FUNC(fillLeftPanel);
+
+if !(GVAR(enableInventory)) then {
+    {
+        private _ctrl = _display displayCtrl _x;
+        _ctrl ctrlShow false;
+        _ctrl ctrlEnable false;
+    } forEach [IDC_buttonContainer, IDC_iconBackgroundContainer];
+};
 
 //--------------- Init camera
 if (isNil QGVAR(cameraPosition)) then {

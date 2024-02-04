@@ -49,7 +49,8 @@ private _sortListLeftPanel = [
     [], // Watch 14
     [], // Face 15
     [], // Voice 16
-    []  // Insignia 17
+    [], // Insignia 17
+    []  // Containers 18
 ];
 
 private _sortListRightPanel = [

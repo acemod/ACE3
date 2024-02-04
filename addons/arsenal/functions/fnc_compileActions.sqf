@@ -32,7 +32,8 @@ private _actionList = [
     [], // Watch 14
     [], // Face 15
     [], // Voice 16
-    []  // Insignia 17
+    [], // Insignia 17
+    []  // Containers 18
 ];
 
 private _configGroupEntries = "true" configClasses (configFile >> QGVAR(actions));

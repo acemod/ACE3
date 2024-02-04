@@ -39,6 +39,7 @@ PREP(fillLeftPanel);
 PREP(fillLoadoutsList);
 PREP(fillRightPanel);
 PREP(fillSort);
+PREP(getNearbyInventories);
 PREP(getVirtualItems);
 PREP(handleActions);
 PREP(handleLoadoutsSearchbar);

@@ -692,6 +692,16 @@ switch (GVAR(currentLeftPanel)) do {
             [_display, _control, _curSel, _unitInsigniaConfig] call FUNC(itemInfo);
         };
     };
+    // Container
+    case IDC_buttonContainer: {
+        GVAR(currentContainer) = _item;
+
+        call FUNC(showItem);
+
+        TOGGLE_RIGHT_PANEL_HIDE
+        // call FUNC(openInventoryMenu);
+        [_display, _control, _curSel, configNull] call FUNC(itemInfo);
+    };
 };
 
 (_display displayCtrl IDC_totalWeightText) ctrlSetText (format ["%1 (%2)", GVAR(center) call EFUNC(common,getWeight), [GVAR(center), 1] call EFUNC(common,getWeight)]);

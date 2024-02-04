@@ -113,6 +113,8 @@ GVAR(currentItems) = nil;
 GVAR(currentFace) = nil;
 GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
+GVAR(currentContainer) = nil;
+GVAR(vehicleMap) = nil;
 GVAR(currentAction) = nil;
 
 GVAR(currentStatPage) = nil;

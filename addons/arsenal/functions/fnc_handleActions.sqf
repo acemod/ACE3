@@ -38,7 +38,8 @@ private _panel = [
     IDC_buttonWatch,
     IDC_buttonFace,
     IDC_buttonVoice,
-    IDC_buttonInsignia
+    IDC_buttonInsignia,
+    IDC_buttonContainer
 ] find GVAR(currentLeftPanel);
 
 private _groups = (GVAR(actionList) select _panel) select {
