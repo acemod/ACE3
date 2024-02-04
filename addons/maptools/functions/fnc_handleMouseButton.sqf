@@ -8,7 +8,7 @@
  * 1: Parameters of the mouse button event <ARRAY>
  *
  * Return Value:
- * True if event was handled <BOOL>
+ * None
  *
  * Example:
  * [0, []] call ace_maptools_fnc_handleMouseButton
@@ -80,13 +80,11 @@ if (_dir != 1) then {
     if (GVAR(mapTool_isDragging) || GVAR(mapTool_isRotating)) then {
         GVAR(mapTool_isDragging) = false;
         GVAR(mapTool_isRotating) = false;
-        _handled = true;
     };
 
     if (GVAR(plottingBoard_isDragging) || GVAR(plottingBoard_isRotating) > -1) then {
         GVAR(plottingBoard_isDragging) = false;
         GVAR(plottingBoard_isRotating) = -1;
-        _handled = true;
     };
 } else {
     // If clicking
@@ -125,8 +123,6 @@ if (_dir != 1) then {
                     // Start dragging
                     GVAR(mapTool_isDragging) = true;
                 };
-
-                _handled = true;
             };
         };
     };
@@ -170,11 +166,7 @@ if (_dir != 1) then {
                     // Start dragging
                     GVAR(plottingBoard_isDragging) = true;
                 };
-
-                _handled = true;
             };
         };
     };
 };
-
-_handled

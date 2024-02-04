@@ -196,7 +196,7 @@ private _selectedItem = switch (true) do {
                     _lbAdd = _ctrlPanel lbAdd _displayName;
                     _ctrlPanel lbSetData [_lbAdd, _x];
                     _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _x]];
-                    _ctrlPanel lbSetPictureRight [_lbAdd, _modPicture];
+                    _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIcons)];
                 } forEach (uiNamespace getVariable QGVAR(faceCache));
 
                 GVAR(currentFace)

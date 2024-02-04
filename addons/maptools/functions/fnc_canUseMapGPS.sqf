@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
- * canUseMapGPS
+ * Returns if the GPS on the map can be used.
  *
  * Arguments:
  * None
  *
  * Return Value:
- * Boolean <BOOL>
+ * GPS can be used <BOOL>
  *
  * Example:
- * call ACE_maptools_fnc_canUseMapGPS
+ * call ace_maptools_fnc_canUseMapGPS
  *
  * Public: No
  */
