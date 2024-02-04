@@ -86,7 +86,7 @@ if (hasInterface) then {
 
         private _distance = _object distance (positionCameraToWorld [0, 0, 0]);
 
-        TRACE_3("",_object,_sound,_maxDistance);
+        TRACE_2("",_object,_sound);
 
         // 3 classes of distances: close, mid and far, each having different sound files
         private _classDistance = switch (true) do {
