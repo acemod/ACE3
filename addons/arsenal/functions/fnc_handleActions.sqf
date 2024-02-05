@@ -104,9 +104,9 @@ private _activeCtrls = [];
 
             if (count _activeCtrls > 0) then {
                 (ctrlPosition (_activeCtrls select -1)) params ["", "_lastPosY", "", "_lastPosH"];
-                _actionTextCtrl ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H);
+                _actionButtonCtrl ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H);
             } else {
-                _actionTextCtrl ctrlSetPositionY (6 * GRID_H);
+                _actionButtonCtrl ctrlSetPositionY (6 * GRID_H);
             };
 
             _actionButtonCtrl ctrlAddEventHandler ["ButtonClick", _statement];
