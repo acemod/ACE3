@@ -34,12 +34,12 @@ private _losOkay = false;
 if (_angleOkay) then {
     _losOkay = [_projectile, _target] call FUNC(checkLos);
 };
-TRACE_2("", _angleOkay, _losOkay);
+TRACE_2("",_angleOkay,_losOkay);
 
 // Can't see target, return [0,0,0] and let doSeekerSearch handle it
 if (!_angleOkay || !_losOkay) exitWith {[0,0,0]};
 
-TRACE_2("", _target, _foundTargetPos);
+TRACE_2("",_target,_foundTargetPos);
 // @TODO: Configurable lead for seekers
 private _projectileSpeed = (vectorMagnitude velocity _projectile);
 private _distanceToTarget = (getPosASL _projectile) vectorDistance _foundTargetPos;

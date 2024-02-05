@@ -142,7 +142,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`",[_x] call FUNC(getName),_dcPlayer,_x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil

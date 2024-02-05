@@ -51,7 +51,7 @@ if (_weaponSelect != "") then {
 
 //Unclaim repair objects:
 {
-    TRACE_2("Releasing", _x, (typeOf _x));
+    TRACE_2("Releasing",_x,(typeOf _x));
     [objNull, _x, false] call EFUNC(common,claim);
 } forEach _claimedObjects;
 
