@@ -57,10 +57,10 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
                     missionNamespace setVariable [_varName, []];
                 }] call CBA_fnc_addEventHandler;
             };
+            // Add this cache to the list of the event
+            _cacheList pushBack [_namespace, _uid];
         } forEach _events;
 
-        // Add this cache to the list of the event
-        _cacheList pushBack [_namespace, _uid];
     };
 
 #ifdef DEBUG_MODE_FULL
