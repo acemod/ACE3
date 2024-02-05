@@ -25,20 +25,20 @@ private _fireLight = objNull;
 private _lightFlare = objNull;
 
 if (hasInterface) then {
-    _fireParticle = "#particlesource" createVehicleLocal _unitPos;
+    _fireParticle = createVehicleLocal ["#particlesource", _unitPos, [], 0, "CAN_COLLIDE"];
     _fireParticle attachTo [_unit];
     _fireParticle setDropInterval 0.03;
 
-    _smokeParticle = "#particlesource" createVehicleLocal _unitPos;
+    _smokeParticle = createVehicleLocal ["#particlesource", _unitPos, [], 0, "CAN_COLLIDE"];
 
-    _fireLight = "#lightpoint" createVehicleLocal _unitPos;
+    _fireLight = createVehicleLocal ["#lightpoint", _unitPos, [], 0, "CAN_COLLIDE"];
     _fireLight setLightIntensity 0;
     _fireLight setLightAmbient [0.8, 0.6, 0.2];
     _fireLight setLightColor [1, 0.5, 0.4];
     _fireLight attachTo [_unit];
     _fireLight setLightDayLight false;
 
-    _lightFlare = "#lightpoint" createVehicleLocal _unitPos;
+    _lightFlare = createVehicleLocal ["#lightpoint", _unitPos, [], 0, "CAN_COLLIDE"];
     _lightFlare setLightIntensity 0;
     _lightFlare setLightColor [1, 0.8, 0.8];
     _lightFlare setLightUseFlare true;
