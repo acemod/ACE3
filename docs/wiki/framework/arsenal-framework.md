@@ -420,7 +420,7 @@ class ace_arsenal_actions {
         };
         class statement {
             // Statement output as text
-            textStatement = QUOTE([_this select 0] call tag_fnc_myTextStatement);
+            textStatement = QUOTE([_this select 0] call tag_fnc_myTextStatement); // Return can be string or array of strings. Array entries are displayed on separate lines.
         };
         class button {
             label = "My Action";
