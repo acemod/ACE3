@@ -23,7 +23,11 @@ if (!alive ACE_player) exitWith {
     _staminaBarContainer ctrlCommit 1;
 };
 
-private _oxygen = (ACE_player getVariable [QEGVAR(medical,spo2), 90]) / 100;
+
+private _oxygen = 0.9; // Default AF oxygen saturation
+if (GVAR(medicalLoaded) && {EGVAR(medical_vitals,simulateSpo2)}) then {
+    _oxygen = (ACE_player getVariable [QEGVAR(medical,spo2), 97]) / 100;
+};
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
