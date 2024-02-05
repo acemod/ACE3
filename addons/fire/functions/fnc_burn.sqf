@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
- * Author: tcvm, johnb43
- * Makes object catch fire. Only call from targeted events, is applied globally.
+ * Author: johnb43
+ * Makes a unit catch fire. Only call from targeted events, is applied globally.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Unit <OBJECT>
  * 1: Intensity of fire <NUMBER>
  * 2: Instigator of fire <OBJECT> (default: objNull)
  *
@@ -25,31 +25,35 @@ if (!GVAR(enabled)) exitWith {};
 
 params ["_unit", "_intensity", ["_instigator", objNull]];
 
+if (BURN_MIN_INTENSITY > _intensity) exitWith {};
+
 // Check if unit is remote (objNull is remote)
 if (!local _unit) exitWith {};
 
 // Check if the unit can burn (takes care of spectators and curators)
-if (getNumber (configOf _unit >> "isPlayableLogic") == 1) exitWith {};
+if (getNumber (configOf _unit >> "isPlayableLogic") == 1 || {!(_unit isKindOf "CAManBase")}) exitWith {};
 
-// If unit is invulnerable, don't burn unit
+// If unit is invulnerable, don't burn the unit
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {};
 
-// If unit is already burning, don't burn more
-if (_unit call FUNC(isBurning)) exitWith {};
+private _unitPos = getPosASL _unit;
+
+// Check if unit is in water
+if (surfaceIsWater _unitPos && {(_unitPos select 2) < 1}) exitWith {};
+
+// If unit is already burning, update intensity, but don't add another PFH
+if (_unit call FUNC(isBurning)) exitWith {
+    _unit setVariable [QGVAR(intensity), _intensity, true];
+};
 
 _unit setVariable [QGVAR(intensity), _intensity, true];
 
-// Fire simulation
-private _burnSimulationJipID = [QGVAR(burnSimulation), [_unit, _instigator], format [QGVAR(burnSimulation_%1), hashValue _unit]] call CBA_fnc_globalEventJIP;
+// Fire simulation (objects are handled differently)
+private _burnSimulationJipID = [QGVAR(burnSimulation), [_unit, _instigator]] call CBA_fnc_globalEventJIP;
 [_burnSimulationJipID, _unit] call CBA_fnc_removeGlobalEventJIP;
 
 // Spawn effects for unit
-private _burnEffectsJipID = [QGVAR(burnEffects), _unit, format [QGVAR(burnEffects_%1), hashValue _unit]] call CBA_fnc_globalEventJIP;
+private _burnEffectsJipID = [QGVAR(burnEffects), _unit] call CBA_fnc_globalEventJIP;
 [_burnEffectsJipID, _unit] call CBA_fnc_removeGlobalEventJIP;
 
 _unit setVariable [QGVAR(jipIDs), [_burnSimulationJipID, _burnEffectsJipID], true];
-
-// Play screams and optional weapon dropping
-if (_unit call EFUNC(common,isAwake)) then {
-    [_unit, false] call FUNC(burnReaction);
-};

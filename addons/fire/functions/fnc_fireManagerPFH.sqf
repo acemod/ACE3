@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Handles various fire objects and determines if local units deserves to get burned.
- * Used to handle external burning objects, not used internally because internal methods are more performant.
+ * Handles various objects on fire and determines if units close to objects deserve to get burned.
  *
  * Arguments:
  * 0: Args (not used) <ARRAY>
@@ -12,34 +11,37 @@
  * None
  *
  * Example:
- * [ace_fire_fnc_fireManagerPFH, 0.25] call CBA_fnc_addPerFrameHandler
+ * [[], -1] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */
 
-private _attachedObject = objNull;
-private _sourcePos = [];
 private _distancePercent = 0;
+private _adjustedIntensity = 0;
 
 {
-    _y params ["_source", "_radius", "_intensity", "_condition", "_conditionArgs"];
+    _y params ["_fireLogic", "_radius", "_intensity", "_condition", "_conditionArgs"];
 
     // Remove when condition is no longer valid
     if !(_conditionArgs call _condition) then {
-        GVAR(fireSources) deleteAt _x;
+        (GVAR(fireSources) deleteAt _x) params [["_fireLogic", objNull]];
+
+        detach _fireLogic;
+        deleteVehicle _fireLogic;
 
         continue;
     };
 
-    _attachedObject = attachedTo _source;
-    _sourcePos = ASLtoAGL getPosASL ([_source, _attachedObject] select (!isNull _attachedObject));
-
-    // Burn units close to the fire
+    // Burn units (alive or dead) close to the fire
     {
-        if !(_x call FUNC(isBurning)) then {
-            _distancePercent = 1 - ((_sourcePos distance _x) / _radius);
+        _distancePercent = 1 - ((_fireLogic distance _x) / _radius);
+        _adjustedIntensity = _intensity * _distancePercent;
 
-            [QGVAR(burn), [_x, _intensity * _distancePercent], _x] call CBA_fnc_targetEvent;
+        // Don't burn if intensity is too low
+        if (BURN_MIN_INTENSITY > _adjustedIntensity) then {
+            continue;
         };
-    } forEach (_sourcePos nearEntities ["CAManBase", _radius]);
+
+        [QGVAR(burn), [_x, _adjustedIntensity], _x] call CBA_fnc_targetEvent;
+    } forEach nearestObjects [_fireLogic, ["CAManBase"], _radius];
 } forEach GVAR(fireSources);

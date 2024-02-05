@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm, johnb43
- * Makes object catch fire. Simulates fire intensity over time.
+ * Simulates fire intensity over time on burning units.
  * Arbitrary values to ignite people. Assumed maximum is "10".
  *
  * Arguments:
@@ -29,20 +29,18 @@ _unit setVariable [QGVAR(burnCounter), nil];
 
     private _remote = !local _unit;
 
-    // If unit is local and the fire has died now, the effects need to be cleaned up -> do not stop PFH here
+    // If unit is local and the fire has died out, the effects need to be cleaned up -> do not stop PFH here
     if (isNull _unit || {_remote && {!(_unit call FUNC(isBurning))}}) exitWith {
         _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
     if (_remote) exitWith {};
 
-    private _unitPos = getPosASL _unit;
-
     // If unit is invulnerable or in water or if the fire has died out, stop burning unit
     if (
         !(_unit call FUNC(isBurning)) ||
-        {surfaceIsWater _unitPos && {(_unitPos select 2) < 1}} ||
-        {!(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]})}
+        {!(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]})} ||
+        {private _unitPos = getPosASL _unit; surfaceIsWater _unitPos && {(_unitPos select 2) < 1}}
     ) exitWith {
         // Remove global effects and simulation
         {
@@ -66,17 +64,21 @@ _unit setVariable [QGVAR(burnCounter), nil];
 
     private _intensity = _unit getVariable [QGVAR(intensity), 0];
 
-    // Propagate fire to other units if it's intense
+    // Propagate fire to other units (alive or dead) if it's intense
     if (_intensity >= BURN_THRESHOLD_INTENSE) then {
-        _unitPos = ASLToAGL _unitPos;
+        private _adjustedIntensity = 0;
 
         {
-            if !(_x call FUNC(isBurning)) then {
-                _distancePercent = 1 - ((_unitPos distance _x) / BURN_PROPAGATE_DISTANCE);
+            _distancePercent = 1 - ((_unit distance _x) / BURN_PROPAGATE_DISTANCE);
+            _adjustedIntensity = _intensity * _distancePercent;
 
-                [QGVAR(burn), [_x, _intensity * _distancePercent, _instigator], _x] call CBA_fnc_targetEvent;
+            // Don't burn if intensity is too low
+            if (BURN_MIN_INTENSITY > _adjustedIntensity) then {
+                continue;
             };
-        } forEach (_unitPos nearEntities ["CAManBase", BURN_PROPAGATE_DISTANCE]);
+
+            [QGVAR(burn), [_x, _adjustedIntensity, _instigator], _x] call CBA_fnc_targetEvent;
+        } forEach nearestObjects [_unit, ["CAManBase"], BURN_PROPAGATE_DISTANCE];
     };
 
     // Update intensity/fire reactions

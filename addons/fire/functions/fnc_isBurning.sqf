@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Check if unit is burning.
+ * Check if an object is burning.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Object <OBJECT>
  *
  * Return Value:
  * None
@@ -15,6 +15,6 @@
  * Public: Yes
  */
 
-params [["_unit", objNull, [objNull]]];
+params [["_object", objNull, [objNull]]];
 
-(_unit getVariable [QGVAR(intensity), 0]) > BURN_MIN_INTENSITY
+(_object getVariable [QGVAR(intensity), 0]) > BURN_MIN_INTENSITY

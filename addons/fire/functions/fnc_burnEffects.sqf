@@ -26,7 +26,7 @@ private _lightFlare = objNull;
 
 if (hasInterface) then {
     _fireParticle = "#particlesource" createVehicleLocal _unitPos;
-    _fireParticle attachTo [_unit, [0, 0, 0]];
+    _fireParticle attachTo [_unit];
     _fireParticle setDropInterval 0.03;
 
     _smokeParticle = "#particlesource" createVehicleLocal _unitPos;
@@ -35,7 +35,7 @@ if (hasInterface) then {
     _fireLight setLightIntensity 0;
     _fireLight setLightAmbient [0.8, 0.6, 0.2];
     _fireLight setLightColor [1, 0.5, 0.4];
-    _fireLight attachTo [_unit, [0, 0, 0]];
+    _fireLight attachTo [_unit];
     _fireLight setLightDayLight false;
 
     _lightFlare = "#lightpoint" createVehicleLocal _unitPos;
@@ -128,17 +128,8 @@ if (isServer) then {
         0 // random direction intensity
     ];
 
+    _smokeParticle setDropInterval 0.15;
     _smokeParticle setParticleCircle [0, [0, 0, 0]];
-    _smokeParticle setParticleRandom [
-        0, // life time
-        [0.25, 0.25, 0], // position
-        [0.2, 0.2, 0], // move velocity
-        0, // rotation velocity
-        0.25, // size
-        [0, 0, 0, 0.1], // color
-        0, // random direction period
-        0 // random direction intensity
-    ];
     _smokeParticle setParticleParams [
         ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 7, 48], // sprite sheet values
         "", // animation name
@@ -164,13 +155,21 @@ if (isServer) then {
         "", // before destroy script
         _unit // particle source
     ];
-    _smokeParticle setDropInterval 0.15;
+    _smokeParticle setParticleRandom [
+        0, // life time
+        [0.25, 0.25, 0], // position
+        [0.2, 0.2, 0], // move velocity
+        0, // rotation velocity
+        0.25, // size
+        [0, 0, 0, 0.1], // color
+        0, // random direction period
+        0 // random direction intensity
+    ];
 
     _fireLight setLightBrightness ((_intensity * 3) / 10);
-    _lightFlare setLightBrightness (_intensity / 30);
-
-    private _distanceToUnit = _unit distance ACE_player;
     _fireLight setLightAttenuation [1, 10 max (5 min (10 - _intensity)), 0, 15];
+
+    _lightFlare setLightBrightness (_intensity / 30);
     _lightFlare setLightFlareSize (_intensity * (3 / 4)) * FLARE_SIZE_MODIFIER;
 
     if (!GVAR(enableFlare)) then {
@@ -179,6 +178,7 @@ if (isServer) then {
 
     // Always keep flare visible to perceiving unit as long as it isn't the player
     if (_unit != ACE_player) then {
+        private _distanceToUnit = _unit distance ACE_player;
         private _relativeAttachPoint = [0, 0, 0.3];
 
         if (_distanceToUnit > 1.5) then {

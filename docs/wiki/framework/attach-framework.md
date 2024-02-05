@@ -29,7 +29,7 @@ class CfgVehicles {
         scope = 1; // Should be 1 (private) or 2 (public), scope 0 will cause errors on object creation
         displayName = "New ACE attachable item";
         model = "\path\to\my\model.p3d";
-		vehicleClass = "";
+        vehicleClass = "";
     };
 };
 ```
