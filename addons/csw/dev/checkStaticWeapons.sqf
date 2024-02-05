@@ -7,7 +7,7 @@ INFO("Checking static weapons");
 
 private _staticWeaponConfigs = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(configName _x) isKindOf 'StaticWeapon'}", true];
 private _staticPublic = _staticWeaponConfigs select {(getNumber (_x >> "scope")) == 2};
-INFO_2("Static Weapons [%1] - CSW Enabled [%2]",count _staticPublic, {(getNumber (_x >> "ace_csw" >> "enabled")) == 1} count _staticPublic);
+INFO_2("Static Weapons [%1] - CSW Enabled [%2]",count _staticPublic,{(getNumber (_x >> "ace_csw" >> "enabled")) == 1} count _staticPublic);
 
 INFO("------ Checking static weapons inheritance ------");
 private _explicitBases = [];
