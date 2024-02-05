@@ -124,7 +124,13 @@ private _activeCtrls = [];
             if (isNil "_text") then {
                 _text = "";
             };
-            private _ctrlHeight =  (5 * LINE_COUNT(_text)) * GRID_H;
+            private _ctrlHeight = 0;
+            if (_text isEqualType []) then {
+                _ctrlHeight = 5 * (count _text) * GRID_H;
+                _text = _text joinString endl;
+            } else {
+                _ctrlHeight = 5 * LINE_COUNT(_text) * GRID_H;
+            };
             _actionTextCtrl ctrlSetPositionH _ctrlHeight;
             if (count _activeCtrls > 0) then {
                 (ctrlPosition (_activeCtrls select -1)) params ["", "_lastPosY", "", "_lastPosH"];
