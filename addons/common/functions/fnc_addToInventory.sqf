@@ -166,7 +166,7 @@ switch (_type select 0) do {
 
     default {
         _addedToUnit = false;
-        WARNING_2("Incorrect item type passed to %1,passed: %2",QFUNC(AddToInventory),_type);
+        WARNING_2("Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type);
     };
 };
 

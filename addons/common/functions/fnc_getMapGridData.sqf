@@ -47,7 +47,7 @@ if (toLower _formatX find "a" != -1) then {_letterGrid = true};
 if (toLower _formatY find "a" != -1) then {_letterGrid = true};
 
 if (_letterGrid) exitWith {
-    WARNING_3("Map Grid Warning (%1) - Map uses letter grids [%2,%3]",worldName,_formatX,_formatY);
+    WARNING_3("Map Grid Warning (%1) - Map uses letter grids [%2, %3]",worldName,_formatX,_formatY);
 };
 
 //Start at [0, 500] and move north until we get a change in grid

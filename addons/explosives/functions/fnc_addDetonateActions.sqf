@@ -83,7 +83,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
     //Adds actions for the explosives you can connect to the deadman switch.
     private _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
     if ((_connectedInventoryExplosive != "") && {!(_connectedInventoryExplosive in (magazines _unit))}) then {
-        TRACE_1("set,but missing in inventory",_connectedInventoryExplosive);
+        TRACE_1("set, but missing in inventory",_connectedInventoryExplosive);
         _unit setVariable [QGVAR(deadmanInvExplosive), "", true];
     };
 

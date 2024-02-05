@@ -23,7 +23,7 @@ _intensity = _intensity * INTENSITY_DECREASE_MULT_PAT_DOWN;
 _patient setVariable [QGVAR(intensity), _intensity, true];
 
 if (_intensity > BURN_MIN_INTENSITY) then {
-    TRACE_1("patient still burning,looping",_this);
+    TRACE_1("patient still burning, looping",_this);
 
     if (EGVAR(medical_gui,pendingReopen)) then {
         LOG("temporarily blocking medical menu reopen");

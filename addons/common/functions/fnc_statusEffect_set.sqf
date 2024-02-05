@@ -36,7 +36,7 @@ _ID = toLower _ID;
 private _statusReasons = missionNamespace getVariable [(format [QGVAR(statusEffects_%1), _effectName]), []];
 private _statusIndex = _statusReasons find _ID;
 if (_statusIndex == -1) then {
-    TRACE_2("ID not in global reasons,adding",_statusReasons,_ID);
+    TRACE_2("ID not in global reasons, adding",_statusReasons,_ID);
     _statusIndex = _statusReasons pushBack _ID;
     missionNamespace setVariable [(format [QGVAR(statusEffects_%1), _effectName]), _statusReasons, true];
 };
@@ -47,7 +47,7 @@ TRACE_2("current",_effectVarName,_effectNumber);
 
 if ((_effectNumber == -1) && {!_set}) exitWith {
     //Optimization for modules that always set an ID to false even if never set true
-    TRACE_2("Set False on nil array,exiting",_set,_effectNumber);
+    TRACE_2("Set False on nil array, exiting",_set,_effectNumber);
 };
 
 if (_effectNumber == -1) then {_effectNumber = 0}; //reset (-1/nil) to 0
@@ -56,7 +56,7 @@ if (_effectNumber == -1) then {_effectNumber = 0}; //reset (-1/nil) to 0
 private _effectBoolArray = [_effectNumber, count _statusReasons] call FUNC(binarizeNumber);
 TRACE_2("bitArray",_statusIndex,_effectBoolArray);
 if (_set isEqualTo (_effectBoolArray select _statusIndex)) exitWith {
-    TRACE_2("No Change,exiting",_set,_effectBoolArray select _statusIndex);
+    TRACE_2("No Change, exiting",_set,_effectBoolArray select _statusIndex);
 };
 
 TRACE_2("Setting to new value",_set,_effectBoolArray select _statusIndex);

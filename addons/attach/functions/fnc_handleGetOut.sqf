@@ -27,7 +27,7 @@ if (_attachedList isEqualTo []) exitWith {};
 
 (_attachedList select 0) params ["_xObject", "_xItemName"];
 if (isNull _xObject) then {
-    TRACE_1("null attached when exiting vehicle,scripted reattach",_xItemName);
+    TRACE_1("null attached when exiting vehicle, scripted reattach",_xItemName);
     _unit setVariable [QGVAR(attached), [], true];
     [_unit, _unit, _xItemName, true] call FUNC(attach);
 };
