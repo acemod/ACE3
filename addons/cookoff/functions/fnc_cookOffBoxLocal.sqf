@@ -1,78 +1,53 @@
 #include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2, kymckay, johnb43
- * Start a cook-off in the given ammo box.
+ * Spawns local cook-off effects for ammo boxes.
  *
  * Arguments:
- * 0: Ammo box <OBJECT>
+ * 0: Box <OBJECT>
+ * 1: Killer <OBJECT>
+ * 2: Instigator <OBJECT>
+ * 3: Start time of the cook-off <NUMBER>
+ * 4: Smoke delay <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * cursorObject call ace_cookoff_fnc_cookOffBox
+ * [cursorObject, player, player, CBA_missionTime, 10, 60] call ace_cookoff_fnc_cookOffBoxLocal
  *
  * Public: No
  */
 
-params ["_box", "_killer", "_instigator", "_startTime", "_igniteTime", "_smokeTime"];
+params ["", "", "", "_startTime", "_smokeDelay"];
 
-// Make sure effects are cleaned up if box is deleted
-[QGVAR(addCleanupHandlers), _box] call CBA_fnc_localEvent;
+[{
+    params ["_box", "_killer", "_instigator"];
 
-// These time checks are for JIP players
-private _delay = _startTime - CBA_missionTime + _igniteTime;
+    // Make sure effects are cleaned up if box is deleted
+    [QGVAR(addCleanupHandlers), _box] call CBA_fnc_localEvent;
 
-if (_delay >= 0) then {
-    [{
-        params ["_box"];
+    private _boxPos = ASLToAGL getPosASL _box;
+    private _effects = [];
 
-        private _effects = [];
+    // Box will start smoking
+    if (hasInterface) then {
+        private _smoke = createVehicleLocal ["#particlesource", _boxPos, [], 0, "CAN_COLLIDE"];
+        _smoke setParticleClass "AmmoSmokeParticles2";
+        _smoke attachTo [_box];
 
-        // Box will start smoking
-        if (hasInterface) then {
-            private _smoke = "#particlesource" createVehicleLocal [0, 0, 0];
-            _smoke setParticleClass "AmmoSmokeParticles2";
-            _smoke attachTo [_box, [0, 0, 0]];
+        _effects pushBack _smoke;
+    };
 
-            _effects pushBack _smoke;
-        };
+    if (isServer) then {
+        private _sound = createSoundSource ["Sound_Fire", _boxPos, [], 0];
+        _sound attachTo [_box];
 
-        if (isServer) then {
-            private _sound = createSoundSource ["Sound_Fire", ASLToAGL getPosASL _box, [], 0];
-            _smoke attachTo [_sound];
-
-            _effects pushBack _sound;
-        };
-
-        _box setVariable [QGVAR(effects), _effects];
-    }, _box, _delay] call CBA_fnc_waitAndExecute;
-};
-
-// Smoke happens later
-_delay = _delay + _smokeTime;
-
-if (_delay >= 0) then {
-    // Light the fire (also handles lighting)
-    [{
-        params ["_box", "_killer", "_instigator"];
-
-        if (hasInterface) then {
-            private _fire = "#particlesource" createVehicleLocal [0, 0, 0];
-
-            _fire setParticleClass "AmmoBulletCore";
-            _fire attachTo [_box, [0, 0, 0]];
-
-            private _effects = _box getVariable [QGVAR(effects), []];
-
-            _effects pushBack _fire;
-
-            _box setVariable [QGVAR(effects), _effects];
-        };
+        _effects pushBack _sound;
 
         // Detonate the ammunition
-        if (isServer) then {
-            [QGVAR(detonateAmmunition), [_box, true, _killer, _instigator]] call CBA_fnc_localEvent;
-        };
-    }, _this, _delay] call CBA_fnc_waitAndExecute;
-};
+        [QGVAR(detonateAmmunition), [_box, true, _killer, _instigator, random [DETONATION_DELAY / 2, DETONATION_DELAY, DETONATION_DELAY / 2 * 3]]] call CBA_fnc_localEvent;
+    };
+
+    _box setVariable [QGVAR(effects), _effects];
+}, _this, (_startTime - CBA_missionTime + _smokeDelay) max 0] call CBA_fnc_waitAndExecute; // this delay allows for synchronisation for JIP players

@@ -13,8 +13,8 @@
  * 5: Detonate after cook-off <BOOL> (default: false)
  * 6: Selection for fire source <STRING> (default: "")
  * 7: Can spawn fire ring <BOOL> (default: true)
- * 8: Maximum intensity <NUMBER> (default: MAX_COOKOFF_INTENSITY)
- * 9: Can spawn fire jet <BOOL> (default: true)
+ * 8: Can spawn fire jet <BOOL> (default: true)
+ * 9: Maximum intensity <NUMBER> (default: MAX_COOKOFF_INTENSITY)
  *
  * Return Value:
  * None
@@ -37,8 +37,8 @@ params [
     ["_detonateAfterCookoff", false],
     ["_fireSource", ""],
     ["_canRing", true],
-    ["_maxIntensity", MAX_COOKOFF_INTENSITY, [0]],
-    ["_canJet", true, [true]]
+    ["_canJet", true],
+    ["_maxIntensity", MAX_COOKOFF_INTENSITY]
 ];
 
 // Check if cook-off is disabled on vehicle specifically
@@ -53,6 +53,9 @@ TRACE_8("",_instigator,_delayBetweenSmokeAndFire,_ammoDetonationChance,_detonate
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 
 _vehicle setVariable [QGVAR(isCookingOff), true, true];
+
+// Only required on the server, as the only effect to clean up is to remove the effects from the JIP queue
+[QGVAR(addCleanupHandlers), _vehicle] call CBA_fnc_localEvent;
 
 // Limit maximum value of intensity to prevent very long cook-off times
 _intensity = _intensity min _maxIntensity;
@@ -73,9 +76,12 @@ if (_positions isEqualTo []) then {
     };
 };
 
+// Not guaranteed to be active/used, but reserve it nonetheless
+private _fireJipID = format [QGVAR(cookOffEffect_%1), hashValue _vehicle];
+
 // Spawn smoke
-private _jipID = [QGVAR(smoke), [_vehicle, _positions]] call CBA_fnc_globalEventJIP;
-_vehicle setVariable [QGVAR(jipID), _jipID];
+private _smokeJipID = [QGVAR(smoke), [_vehicle, _positions]] call CBA_fnc_globalEventJIP;
+_vehicle setVariable [QGVAR(jipIDs), [_smokeJipID, _fireJipID]];
 
 // Save intensity for looping purposes
 _vehicle setVariable [QGVAR(intensity), _intensity];
@@ -83,23 +89,23 @@ _vehicle setVariable [QGVAR(intensity), _intensity];
 private _delay = 0;
 
 if (_delayBetweenSmokeAndFire) then {
-    _delay = SMOKE_TIME + random SMOKE_TIME;
+    _delay = random [SMOKE_DELAY, 1.5 * SMOKE_DELAY, 2 * SMOKE_DELAY];
 };
 
 [{
     [{
-        (_this select 0) params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing", "_canJet"];
+        (_this select 0) params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing", "_canJet", "_fireJipID"];
 
         private _intensity = _vehicle getVariable [QGVAR(intensity), 0];
 
         if (isNull _vehicle || {_intensity <= 1} || {GVAR(enable) == 0} || {GVAR(cookoffDuration) == 0}) exitWith {
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
+            (_this select 1) call CBA_fnc_removePerFrameHandler;
 
             // Effects are deleted when vehicle is deleted
             if (isNull _vehicle) exitWith {};
 
-            // Remove effects globally
-            [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
+            // Remove effects on server
+            [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_localEvent;
 
             if (GVAR(destroyVehicleAfterCookoff) || _detonateAfterCookoff) then {
                 _vehicle setDamage [1, true, _instigator, _instigator]; // because it's running on the server, killer and instigator can be set
@@ -118,19 +124,19 @@ if (_delayBetweenSmokeAndFire) then {
                 };
             };
 
-            private _time = linearConversion [0, 10, _intensity, 3, 20] + random COOKOFF_TIME;
+            private _duration = linearConversion [0, 10, _intensity, 3, 20] + random COOKOFF_TIME;
 
             if (_fireSource isEqualTo "") then {
                 _fireSource = selectRandom _positions;
             };
 
-            // As the cook-off effect is max 20s, this is not synced with JIP players
-            [QGVAR(cookOffEffect), [_vehicle, _canJet, _ring, _time, _fireSource, _intensity]] call CBA_fnc_globalEvent;
+            // Sync for JIP players
+            [QGVAR(cookOffEffect), [_vehicle, _canJet, _ring, _fireSource, _intensity, CBA_missionTime, _duration], _fireJipID] call CBA_fnc_globalEventJIP;
 
             _intensity = _intensity - (0.5 max random 1) / GVAR(cookoffDuration);
 
             _vehicle setVariable [QGVAR(intensity), _intensity];
-            _vehicle setVariable [QGVAR(nextFlame), CBA_missionTime + _time + (MIN_TIME_BETWEEN_FLAMES max random MAX_TIME_BETWEEN_FLAMES)];
+            _vehicle setVariable [QGVAR(nextFlame), CBA_missionTime + _duration + (MIN_TIME_BETWEEN_FLAMES max random MAX_TIME_BETWEEN_FLAMES)];
 
             // If there are any crew, burn them
             if (["ace_fire"] call EFUNC(common,isModLoaded)) then {
@@ -150,4 +156,4 @@ if (_delayBetweenSmokeAndFire) then {
             _vehicle setVariable [QGVAR(nextExplosiveDetonation), CBA_missionTime + random 60];
         };
     }, 0.25, _this] call CBA_fnc_addPerFrameHandler;
-}, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing, _canJet], _delay] call CBA_fnc_waitAndExecute;
+}, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing, _canJet, _fireJipID], _delay] call CBA_fnc_waitAndExecute;

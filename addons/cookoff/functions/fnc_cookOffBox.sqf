@@ -5,6 +5,8 @@
  *
  * Arguments:
  * 0: Ammo box <OBJECT>
+ * 1: Killer <OBJECT> (default: objNull)
+ * 2: Instigator <OBJECT> (default: objNull)
  *
  * Return Value:
  * None
@@ -17,7 +19,7 @@
 
 if (!isServer) exitWith {};
 
-params ["_box", "_killer", "_instigator"];
+params ["_box", ["_killer", objNull], ["_instigator", objNull]];
 
 if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
 
@@ -29,10 +31,9 @@ private _jipID = [QGVAR(cookOffBoxLocal), [
     _killer,
     _instigator,
     CBA_missionTime,
-    random [IGNITE_TIME / 2, IGNITE_TIME, IGNITE_TIME / 2 * 3], // generate random timers that are global
-    random [SMOKE_TIME / 2, SMOKE_TIME, SMOKE_TIME / 2 * 3]
+    random [SMOKE_DELAY / 2, SMOKE_DELAY, SMOKE_DELAY / 2 * 3] // generate random timer that is global synced
 ]] call CBA_fnc_globalEventJIP;
 
 [_jipID, _box] call CBA_fnc_removeGlobalEventJIP;
 
-_box setVariable [QGVAR(jipID), _jipID];
+_box setVariable [QGVAR(jipIDs), [_jipID]];

@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 
-[QGVAR(cookOff), LINKFUNC(cookOff)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOffBoxLocal), LINKFUNC(cookOffBoxLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOffEffect), LINKFUNC(cookOffEffect)] call CBA_fnc_addEventHandler;
 [QGVAR(engineFireLocal), LINKFUNC(engineFireLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(smoke), LINKFUNC(smoke)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
+    [QGVAR(cookOff), LINKFUNC(cookOff)] call CBA_fnc_addEventHandler;
     [QGVAR(cookOffBox), LINKFUNC(cookOffBox)] call CBA_fnc_addEventHandler;
     [QGVAR(engineFire), LINKFUNC(engineFire)] call CBA_fnc_addEventHandler;
     [QGVAR(detonateAmmunition), LINKFUNC(detonateAmmunition)] call CBA_fnc_addEventHandler;
@@ -14,9 +14,6 @@ if (isServer) then {
 
 // Handle cleaning up effects when vehicle is deleted mid cook-off
 [QGVAR(addCleanupHandlers), {
-    // No effects on machines without interfaces
-    if (!hasInterface) exitWith {};
-
     params ["_object"];
 
     // Don't add a new EH if cook-off is run multiple times
@@ -30,33 +27,24 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(cleanupEffects), {
-    params ["_object", ["_effects", []]];
+    params ["_object"];
 
     if (isServer) then {
-        // Reset, so that object can cook-off again
+        // Reset, so that the object can cook-off again
         _object setVariable [QGVAR(isCookingOff), nil, true];
 
         // Remove effects from JIP
-        private _jipID = _object getVariable QGVAR(jipID);
+        {
+            _x call CBA_fnc_removeGlobalEventJIP;
+        } forEach (_object getVariable [QGVAR(jipIDs), []]);
 
-        if (isNil "_jipID") exitWith {};
-
-        _jipID call CBA_fnc_removeGlobalEventJIP;
-
-        _object setVariable [QGVAR(jipID), nil];
+        _object setVariable [QGVAR(jipIDs), nil];
     };
 
-    // No effects on machines without interfaces
-    if (!hasInterface) exitWith {};
-
-    // All effects are local
-    _effects append (_object getVariable [QGVAR(effects), []]);
-
-    if (_effects isEqualTo []) exitWith {};
-
+    // All effects are local (apart from sound, which is global, but is handled by server)
     {
         deleteVehicle _x;
-    } forEach _effects;
+    } forEach (_object getVariable [QGVAR(effects), []]);
 
     _object setVariable [QGVAR(effects), nil];
 }] call CBA_fnc_addEventHandler;
