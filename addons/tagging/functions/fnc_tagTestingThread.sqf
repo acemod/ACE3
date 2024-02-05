@@ -27,7 +27,7 @@ GVAR(tagsToTest) = GVAR(tagsToTest) select {
 
     // If there's no intersections
     if (_intersections isEqualTo []) then {
-        TRACE_1("No intersections,deleting:",_tag);
+        TRACE_1("No intersections, deleting:",_tag);
         deleteVehicle _tag;
         false
     } else {

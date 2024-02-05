@@ -72,12 +72,12 @@ GVAR(speedLimitInit) = true;
     if (GVAR(isUAV)) then {
         if (_role == "") then {
             GVAR(isSpeedLimiter) = false;
-            TRACE_1("UAV controller changed,disabling speedlimit",_vehicle);
+            TRACE_1("UAV controller changed, disabling speedlimit",_vehicle);
         };
     } else {
         if (_driver != driver _vehicle || {_role != ""}) then {
             GVAR(isSpeedLimiter) = false;
-            TRACE_3("Vehicle driver changed,disabling speedlimit",_driver,driver _vehicle,_vehicle);
+            TRACE_3("Vehicle driver changed, disabling speedlimit",_driver,driver _vehicle,_vehicle);
         };
     };
 

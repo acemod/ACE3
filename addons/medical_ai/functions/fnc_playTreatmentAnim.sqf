@@ -30,7 +30,7 @@ if (stance _unit == "PRONE") then {
 };
 
 private _anim = getText (configFile >> QEGVAR(medical_treatment,Actions) >> _actionName >> _configProperty);
-if (_anim == "") exitWith { WARNING_2("no anim [%1,%2]",_actionName,_configProperty); };
+if (_anim == "") exitWith { WARNING_2("no anim [%1, %2]",_actionName,_configProperty); };
 
 private _wpn = switch (true) do {
     case ((currentWeapon _unit) == ""): {"non"};

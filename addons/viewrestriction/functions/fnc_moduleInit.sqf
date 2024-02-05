@@ -28,7 +28,7 @@ if (XGVAR(mode) == 3) then {
     [_logic, QXGVAR(modeSelectiveSea), "modeSelectiveSea"] call EFUNC(common,readSettingFromModule);
     //[_logic, QGVAR(modeSelectiveUAV), "modeSelectiveUAV"] call EFUNC(common,readSettingFromModule); // Disabled - Reference comment in FUNC(canChangeCamera)
 
-    INFO_5("View Restriction Module Initialized. Mode: %1 (Foot: %2,Land: %3,Air: %4,Sea: %5)",XGVAR(mode),XGVAR(modeSelectiveFoot),XGVAR(modeSelectiveLand),XGVAR(modeSelectiveAir),XGVAR(modeSelectiveSea));
+    INFO_5("View Restriction Module Initialized. Mode: %1 (Foot: %2, Land: %3, Air: %4, Sea: %5)",XGVAR(mode),XGVAR(modeSelectiveFoot),XGVAR(modeSelectiveLand),XGVAR(modeSelectiveAir),XGVAR(modeSelectiveSea));
 } else {
     INFO_1("View Restriction Module Initialized. Mode: %1",XGVAR(mode));
 };

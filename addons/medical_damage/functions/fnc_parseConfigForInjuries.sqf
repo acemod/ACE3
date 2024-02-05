@@ -38,7 +38,7 @@ private _classID = 0;
     private _details = [_selections, _bleeding, _pain, _causeLimping, _causeFracture];
     GVAR(woundDetails) set [_className, _details];
     GVAR(woundDetails) set [_classID, _details];
-    
+
     GVAR(woundClassNames) pushBack _className;
     {
         GVAR(woundClassNamesComplex) set [10 * _classID + _forEachIndex, format ["%1%2", _className, _x]];
@@ -77,7 +77,7 @@ TRACE_1("Found default wound handlers",count _defaultWoundHandlers);
 
     private _thresholds = GET_ARRAY(_damageTypeSubClassConfig >> "thresholds",_thresholdsDefault);
     private _selectionSpecific = GET_NUMBER(_damageTypeSubClassConfig >> "selectionSpecific",_selectionSpecificDefault);
-    
+
     private _woundHandlers = [];
     if (isClass (_damageTypeSubClassConfig >> "woundHandlers")) then {
         _woundHandlers = [_damageTypeSubClassConfig >> "woundHandlers"] call FUNC(parseWoundHandlersCfg);
@@ -85,7 +85,7 @@ TRACE_1("Found default wound handlers",count _defaultWoundHandlers);
         TRACE_2("Damage type found wound handlers",_className,count _woundHandlers);
     } else {
         _woundHandlers = _defaultWoundHandlers;
-        TRACE_1("Damage type has no wound handlers,using default",_className);
+        TRACE_1("Damage type has no wound handlers, using default",_className);
     };
 
     /*
@@ -122,7 +122,7 @@ TRACE_1("Found default wound handlers",count _defaultWoundHandlers);
             private _fractureMulti = GET_NUMBER(_x >> "fractureMultiplier",1);
             _damageWoundDetails pushBack [_woundType, _weighting, _dmgMulti, _bleedMulti, _sizeMulti, _painMulti, _fractureMulti];
         } else {
-            WARNING_2("Damage type %1 refers to wound %2,but it doesn't exist: skipping.",_className,configName _x);
+            WARNING_2("Damage type %1 refers to wound %2, but it doesn't exist: skipping.",_className,configName _x);
         };
     } forEach configProperties [_damageTypeSubClassConfig, "isClass _x"];
 
