@@ -479,6 +479,7 @@ class GVAR(display) {
                 };
                 class actionsButton1: ctrlButton {
                     idc = IDC_actionsButton1;
+                    onMouseEnter = QUOTE(ctrlSetFocus (_this select 0));
                     fade = 1;
                     text = "";
                     x = QUOTE(1 * GRID_W);
