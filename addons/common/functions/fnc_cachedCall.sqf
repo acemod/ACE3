@@ -60,7 +60,6 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
             // Add this cache to the list of the event
             _cacheList pushBack [_namespace, _uid];
         } forEach _events;
-
     };
 
 #ifdef DEBUG_MODE_FULL
