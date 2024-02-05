@@ -112,7 +112,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_cookoff_cookOff` | [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSource, _canRing, _maxIntensity, _canJet] | Server | Callable | Start vehicle cook-off
 |`ace_cookoff_cookOffBox` | [_box, _killer, _instigator] | Server | Callable | Start ammo box cook-off
-|`ace_cookoff_detonateAmmunition` | [_object, _magazines, _totalAmmo, _destroyWhenFinished, _killer, _instigator, _initialDelay"] | Server | Callable | Start ammo detonation
+|`ace_cookoff_detonateAmmunition` | [_object, _destroyWhenFinished, _killer, _instigator, _initialDelay"] | Server | Callable | Start ammo detonation
 |`ace_cookoff_engineFire` | _vehicle | Server | Callable | Start engine fire
 
 
