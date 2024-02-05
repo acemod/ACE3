@@ -31,9 +31,9 @@ if (_allItems isEqualTo []) then { _allItems = [configName _config] };
                   || {_illum && {([_xCfg >> "Flashlight" >> "irLight", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1}};
 
     private _text = switch (true) do { // shorthand roughly based on PEQ-15
-        case (_laser && _illum): { if (_isIR) then { "IR-DUAL" } else { "VIS-DUAL" } };
-        case (_laser): { if (_isIR) then { "IR-AIM" } else { "VIS-AIM" } }; // AIM
-        case (_illum): { if (_isIR) then { "IR-ILM" } else { "VIS-ILM" } }; // ILLUMIATION
+        case (_laser && _illum): { ["VIS-DUAL", "IR-DUAL"] select _isIR }; // DUAL
+        case (_laser): { ["VIS-AIM", "IR-AIM"] select _isIR }; // AIM
+        case (_illum): { ["VIS-ILM", "IR-ILM"] select _isIR }; // ILLUMIATION
         default { "_" }; // there are some purely cosmetic attachements
     };
     _allModes pushBackUnique _text;

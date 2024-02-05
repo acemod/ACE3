@@ -31,7 +31,7 @@ if (isLocalized _requestMessage) then {
     _requestMessage = format [_requestMessage, [_caller, false, true] call FUNC(getName)];
 };
 
-hint format ["%1", _requestMessage]; // @todo ?
+hint str _requestMessage; // @todo ?
 
 if (!isNil QGVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT)) then {
     terminate GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT);

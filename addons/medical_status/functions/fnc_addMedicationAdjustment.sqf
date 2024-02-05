@@ -7,10 +7,10 @@
  * 0: The Unit <OBJECT>
  * 1: Medication <STRING>
  * 2: Time in system for the adjustment to reach its peak <NUMBER>
- * 3: Duration the adjustment will have an effect <NUMVER>
- * 4: Heart Rate Adjust <NUMVER>
- * 5: Pain Suppress Adjust <NUMVER>
- * 6: Flow Adjust <NUMVER>
+ * 3: Duration the adjustment will have an effect <NUMBER>
+ * 4: Heart Rate Adjust <NUMBER>
+ * 5: Pain Suppress Adjust <NUMBER>
+ * 6: Flow Adjust <NUMBER>
  *
  * Return Value:
  * None

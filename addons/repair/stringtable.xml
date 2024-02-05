@@ -390,7 +390,7 @@
             <Czech>Přidat náhradní díly do vozidla (vyžaduje úložný prostor)?</Czech>
             <Italian>Aggiungi parti di ricambio ai veicoli (richiede spazio nel carico)?</Italian>
             <French>Ajoute des pièces de rechange aux véhicules (nécessite le système de cargaison).</French>
-            <Japanese>車両へ予備部品を追加しますか? (カーゴ コンポーネントが必要)</Japanese>
+            <Japanese>車両へ予備部品を追加しますか? (貨物室が必要)</Japanese>
             <Korean>차량에 예비 부품을 더합니까?(짐칸 요소 필요)</Korean>
             <Chinesesimp>添加载具备件（需相关货物组件）？</Chinesesimp>
             <Chinese>添加載具備件 (需相關貨物組件)?</Chinese>
@@ -1622,7 +1622,7 @@
             <Czech>Přiřaďte opraváresnké vozidlo</Czech>
             <Italian>Assegna Veicolo Riparazioni</Italian>
             <French>Affecter véhicule(s) de réparation</French>
-            <Japanese>修理車両として指定</Japanese>
+            <Japanese>修理車両に割り当て</Japanese>
             <Korean>정비 차량 등록</Korean>
             <Chinesesimp>指定维修载具</Chinesesimp>
             <Chinese>指定維修載具</Chinese>
@@ -1652,7 +1652,7 @@
             <Czech>Seznam vozidel, která budou klasifikována jako opravárenská, oddělit čárkami.</Czech>
             <Italian>Lista di Veicoli che verranno considerati veicoli riparazioni, separati da virgole.</Italian>
             <French>Liste de véhicules qui seront classés comme véhicules de réparation, séparés par des virgules.</French>
-            <Japanese>修理車両に指定される車両のリスト。カンマで区切ります。</Japanese>
+            <Japanese>修理車両に割り当てる車両のリスト。カンマで区切ります。</Japanese>
             <Korean>목록내 차량은 정비 차량으로 분류됩니다. 쉼표로 구분합니다.</Korean>
             <Chinesesimp>载具名单，把载具名称输入在这边即可定义其为维修载具。每个载具使用逗号以做区隔。</Chinesesimp>
             <Chinese>載具名單，把載具名稱輸入在這邊即可定義其為維修載具。每個載具使用逗號以做區隔。</Chinese>
@@ -1667,7 +1667,7 @@
             <Czech>Opravárenské vozidlo</Czech>
             <Italian>È Veicolo Riparazioni</Italian>
             <French>Est un véhicule de réparation</French>
-            <Japanese>修理車両にする</Japanese>
+            <Japanese>修理車両とする</Japanese>
             <Korean>은 정비 차량이다</Korean>
             <Chinesesimp>是维修载具</Chinesesimp>
             <Chinese>是維修載具</Chinese>
@@ -1682,7 +1682,7 @@
             <Czech>Je vozidlo klasifikováno jako opravárenské?</Czech>
             <Italian>Il veicolo è classificato dome veicolo riparazioni?</Italian>
             <French>Définit s'il s'agit d'un véhicule de réparation.</French>
-            <Japanese>車両を修理車両に指定しますか?</Japanese>
+            <Japanese>車両を修理車両として割り当てます</Japanese>
             <Korean>이 차량을 정비 차량으로 분류합니까?</Korean>
             <Chinesesimp>此载具是维修载具吗？</Chinesesimp>
             <Chinese>此載具是維修載具嗎?</Chinese>
@@ -1712,7 +1712,7 @@
             <Czech>Přiřaďte opravárenské zařízení</Czech>
             <Italian>Assegna Struttura Riparazioni</Italian>
             <French>Affecter atelier(s) de réparation</French>
-            <Japanese>修理施設とする</Japanese>
+            <Japanese>修理施設に割り当て</Japanese>
             <Korean>정비 시설 등록</Korean>
             <Chinesesimp>指定维修设施</Chinesesimp>
             <Chinese>指定維修設施</Chinese>
@@ -1742,7 +1742,7 @@
             <Czech>Seznam objektů, které budou klasifikovány jako opravárenské zařízení, oddělit čárkami.</Czech>
             <Italian>Lista di oggetti che verranno classificati come strutture riparazioni, separati da virgole.</Italian>
             <French>Liste d'objets qui seront classés comme ateliers de réparation, séparés par des virgules.</French>
-            <Japanese>修理施設に指定されるオブジェクトのリスト。カンマで区切ります。</Japanese>
+            <Japanese>修理施設に割り当てるオブジェクトのリスト。カンマで区切ります。</Japanese>
             <Korean>목록내 시설은 정비 시설으로 분류됩니다. 쉼표로 구분합니다.</Korean>
             <Chinesesimp>设施名单，把设施名称输入在这边即可定义其为维修设施。每个设施使用逗号以做区隔。</Chinesesimp>
             <Chinese>設施名單，把設施名稱輸入在這邊即可定義其為維修設施。每個設施使用逗號以做區隔。</Chinese>
@@ -1772,7 +1772,7 @@
             <Czech>Je objekt klasifikován jako opravárenské zařízení?</Czech>
             <Italian>L'oggetto è classificato come struttura riparazioni?</Italian>
             <French>Définit l'objet comme étant un atelier de réparation.</French>
-            <Japanese>オブジェクトを修理施設として指定しますか?</Japanese>
+            <Japanese>オブジェクトを修理施設として割り当てます</Japanese>
             <Korean>이 시설을 정비 시설로 분류합니까?</Korean>
             <Chinesesimp>此设施是维修设施吗？</Chinesesimp>
             <Chinese>此設施是維修設施嗎?</Chinese>
@@ -2054,7 +2054,7 @@
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
             <German>Anzahl der Ersatzketten im Laderaum.</German>
-            <Japanese>カーゴ内の予備履帯の数を指定</Japanese>
+            <Japanese>貨物室内の予備履帯の数を指定</Japanese>
             <Italian>Numero dei cingoli di scorta nel carico.</Italian>
             <Chinese>設定載具在貨艙內攜帶的備用履帶數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
@@ -2084,7 +2084,7 @@
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
             <German>Anzahl der Ersatzreifen im Laderaum.</German>
-            <Japanese>カーゴ内の予備タイヤの数を指定</Japanese>
+            <Japanese>貨物室内の予備タイヤの数を指定</Japanese>
             <Italian>Numero delle ruote di scorta nel cargo.</Italian>
             <Chinese>設定載具在貨艙內攜帶的備用輪胎數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>

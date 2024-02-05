@@ -17,7 +17,7 @@
  */
 
 params ["_unit", "_allGear", "_activeWeaponAndMuzzle"];
-TRACE_3("restoreGear",_unit, count _allGear, _activeWeaponAndMuzzle);
+TRACE_3("restoreGear",_unit,count _allGear,_activeWeaponAndMuzzle);
 
 // restore all gear
 if (!isNil "_allGear") then {

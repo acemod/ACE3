@@ -998,7 +998,7 @@
             <German>Einheit muss ein Fahrzeug mit Ladekapazität sein</German>
             <Spanish>La unidad debe ser un vehículo con espacio de carga</Spanish>
             <French>L'unité doit être un véhicule muni d'un espace de stockage.</French>
-            <Japanese>ユニットはカーゴのある車両である必要があります</Japanese>
+            <Japanese>ユニットは貨物室のある車両である必要があります</Japanese>
             <Korean>대상이 반드시 화물을 실을 수 있는 차량이어야 합니다</Korean>
             <Chinesesimp>单位必须是载具且有载货空间</Chinesesimp>
             <Chinese>單位必須是載具且有載貨空間</Chinese>
@@ -1013,7 +1013,7 @@
             <German>Einheit muss freie Ladekapazität haben</German>
             <Spanish>La unidad debe tener espacio de carga disponible</Spanish>
             <French>L'unité doit avoir de l'espace de chargement disponible.</French>
-            <Japanese>ユニットのカーゴには空きがありません</Japanese>
+            <Japanese>ユニットの貨物室に空きが必要です</Japanese>
             <Korean>대상의 화물공간이 남아 있어야 합니다</Korean>
             <Chinesesimp>单位必须有剩余的载货空间</Chinesesimp>
             <Chinese>單位必須有剩餘的載貨空間</Chinese>
@@ -1180,7 +1180,7 @@
             <French>Cargaison :</French>
             <Russian>Груз:</Russian>
             <Czech>Náklad:</Czech>
-            <Japanese>カーゴ:</Japanese>
+            <Japanese>貨物:</Japanese>
             <Polish>Ładunek:</Polish>
             <German>Ladung:</German>
             <Korean>화물:</Korean>
@@ -1303,7 +1303,7 @@
             <English>Load into Cargo</English>
             <German>In Frachtraum laden</German>
             <Italian>Carica nel carico</Italian>
-            <Japanese>カーゴへ積載</Japanese>
+            <Japanese>貨物室へ積載</Japanese>
             <Chinese>裝載到貨物中</Chinese>
             <Chinesesimp>装载到货物中</Chinesesimp>
             <Korean>화물 싣기</Korean>
@@ -1318,7 +1318,7 @@
             <English>Unload from cargo</English>
             <German>Aus Frachtraum ausladen</German>
             <Italian>Scarica dal carico</Italian>
-            <Japanese>カーゴから降ろす</Japanese>
+            <Japanese>貨物室から降ろす</Japanese>
             <Korean>화물 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
@@ -1901,7 +1901,7 @@
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
             <German>Ladung abwerfen (Fallschirm)</German>
-            <Japanese>カーゴを空中投下</Japanese>
+            <Japanese>貨物を空中投下</Japanese>
             <Polish>Zrzut ładunku (cargo)</Polish>
             <Russian>Десантировать груз</Russian>
             <Portuguese>Soltar carga de paraquedas</Portuguese>
@@ -1917,7 +1917,7 @@
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
             <German>Keine Ladung geladen</German>
-            <Japanese>カーゴは積載されていません</Japanese>
+            <Japanese>貨物は積載されていません</Japanese>
             <Polish>Niczego nie załadowano do cargo</Polish>
             <Russian>Грузовой отсек пуст</Russian>
             <Portuguese>Nenhuma carga carregada</Portuguese>
