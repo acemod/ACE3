@@ -25,13 +25,16 @@ GVAR(plottingBoard_isRotating) = -1;
 GVAR(plottingBoard_moveToMouse) = true;  // used to display it in center of screen when opened
 GVAR(plottingBoard_markers) = createHashMap;
 
-//Install the event handers for the map tools on the main in-game map
-[{!isNull findDisplay 12},
-{
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseMoving", {_this call FUNC(handleMouseMove);}];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {call FUNC(updateMapToolMarkers); call FUNC(openMapGpsUpdate);}];
+// Install the event handers for the map tools on the main in-game map
+[{
+    !isNull findDisplay 12
+}, {
+    private _map = (findDisplay 12) displayCtrl 51;
+
+    _map ctrlAddEventHandler ["MouseMoving", LINKFUNC(handleMouseMove)];
+    _map ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
+    _map ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
+    _map ctrlAddEventHandler ["Draw", {call FUNC(updateMapToolMarkers); call FUNC(openMapGpsUpdate);}];
 }, []] call CBA_fnc_waitUntilAndExecute;
 
 ["visibleMap", {

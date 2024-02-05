@@ -30,7 +30,7 @@ if (_deleted) exitWith {
 };
 
 // Do not process non-local or already processed markers, don't check if the plotting board isn't shown
-if (!_local || {GVAR(plottingBoard_Shown) < 1} || {QUOTE(ADDON) in _marker}) exitWith {};
+if (!_local || {GVAR(plottingBoard_Shown) == 0} || {QUOTE(ADDON) in _marker}) exitWith {};
 
 // Check if the channel the marker was made in can be marked on the plotting board
 private _continue = true;

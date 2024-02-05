@@ -64,6 +64,8 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
 
             [objNull, _item, true] call EFUNC(common,claim);
 
+            [[LSTRING(loadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
+
             // Fix cancelling loading a carried item
             if (!isNull attachedTo _item) then {
                 detach _item;
@@ -85,6 +87,9 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
 
     true // return
 } else {
+    // Unlock the object
+    [objNull, _item, true] call EFUNC(common,claim);
+
     [[LSTRING(loadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
 
     // Fix cancelling loading a carried item

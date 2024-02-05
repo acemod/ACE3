@@ -46,11 +46,7 @@ private _fnc_toConfigCase = {
 
                 // If item doesn't exist in config, "" is returned
                 // Just return unaltered item name in that case, so it can be documented as being unavailable
-                if (_name != "") then {
-                    _name
-                } else {
-                    _x
-                };
+                [_x, _name] select (_name != "");
             } else {
                 _x
             };
