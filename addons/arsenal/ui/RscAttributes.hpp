@@ -450,22 +450,22 @@ class GVAR(display) {
             h = QUOTE(55 * GRID_H);
             class controls {
                 class actionsStaticBackground1: ctrlStaticBackground {
-                    idc = -1;
+                    idc = IDC_actionsBackground1;
                     x = QUOTE(0);
                     y = QUOTE(0);
                     w = QUOTE(47 * GRID_W);
-                    h = QUOTE(56 * GRID_H);
+                    h = QUOTE(55 * GRID_H);
                     colorBackground[]={0.1,0.1,0.1,0.5};
                 };
                 class actionsStaticBackground2: ctrlStaticBackground {
-                    idc = -1;
+                    idc = IDC_actionsBackground2;
                     x = QUOTE(0);
                     y = QUOTE(0);
                     w = QUOTE(47 * GRID_W);
                     h = QUOTE(5 * GRID_H);
                     colorBackground[]={0.1,0.1,0.1,0.8};
                 };
-                class actionsText1: RscText {
+                class actionsText1: RscTextMulti {
                     idc = IDC_actionsText1;
                     fade = 1;
                     x = QUOTE(0 * GRID_W);

@@ -30,7 +30,8 @@ params [
     ["_title", "", [""]],
     ["_actions", [], [[]]],
     ["_rootCondition", {true}, [{}]],
-    ["_scopeEditor", 2, [0]]
+    ["_scopeEditor", 2, [0]],
+    ["_updateOnCargoChange", false, [false]]
 ];
 
 // Compile actions from config (in case this is called before preInit)
@@ -118,5 +119,15 @@ private _group = [];
         _tab pushBack [_rootClass, _title, _rootCondition, _group];
     };
 } forEach _tabs;
+
+if (!GVAR(updateActionsOnCargoChange) && _updateOnCargoChange) then {
+    GVAR(updateActionsOnCargoChange) = true;
+    [QGVAR(cargoChanged), {
+        params ["_display"];
+        private _actionInfo = [_display];
+        _actionInfo append GVAR(actionInfo);
+        [QGVAR(displayActions), _actionInfo] call CBA_fnc_localEvent;
+    }] call CBA_fnc_addEventHandler;
+};
 
 _return

@@ -37,6 +37,8 @@ private _actionList = [
 
 private _configGroupEntries = "true" configClasses (configFile >> QGVAR(actions));
 
+GVAR(updateActionsOnCargoChange) = false;
+
 {
     private _scopeEditor = getNumber (_x >> "scopeEditor");
 
@@ -48,6 +50,10 @@ private _configGroupEntries = "true" configClasses (configFile >> QGVAR(actions)
     private _rootDisplayName = getText (_x >> "displayName");
     private _rootCondition = getText (_x >> "condition");
     private _rootTabs = getArray (_x >> "tabs");
+    private _updateOnCargoChanged = getNumber (_x >> "updateOnCargoChanged");
+    if (_updateOnCargoChanged > 0) then {
+        GVAR(updateActionsOnCargoChange) = true;
+    };
 
     if (_rootCondition != "") then {
         _rootCondition = compile _rootCondition;
@@ -103,5 +109,14 @@ private _configGroupEntries = "true" configClasses (configFile >> QGVAR(actions)
         (_actionList select _x) pushBack [_rootClass, _rootDisplayName, _rootCondition, _group];
     } forEach _rootTabs;
 } forEach _configGroupEntries;
+
+if (GVAR(updateActionsOnCargoChange)) then {
+    [QGVAR(cargoChanged), {
+        params ["_display"];
+        private _actionInfo = [_display];
+        _actionInfo append GVAR(actionInfo);
+        [QGVAR(displayActions), _actionInfo] call CBA_fnc_localEvent;
+    }] call CBA_fnc_addEventHandler;
+};
 
 GVAR(actionList) = _actionList;
