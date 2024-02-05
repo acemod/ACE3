@@ -33,7 +33,7 @@ if (_activated && local _logic) then {
     };
 
     if (_error == "") then {
-        if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+        if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
             if (!isPlayer _unit || {player == _unit}) then {
 
                 [{

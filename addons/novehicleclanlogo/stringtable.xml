@@ -9,6 +9,7 @@
             <Spanish>Suprimir logo del clan de los vehículos</Spanish>
             <Japanese>乗り物から部隊ロゴを削除</Japanese>
             <German>Clan-Logo von Fahrzeugen entfernen</German>
+            <Italian>Rimuovi Icone Clan dai veicoli</Italian>
             <French>Retirer les logos de clan des véhicules</French>
         </Key>
         <Key ID="STR_ACE_Novehicleclanlogo_Enabled_Tooltip">
@@ -19,6 +20,7 @@
             <Spanish>Previene que se muestre el logo del clan en los vehículos controlados por jugadores.</Spanish>
             <Japanese>プレイヤーが操作する乗り物に部隊ロゴが表示されないようにする。</Japanese>
             <German>Verhindert, dass das Clan-Logo auf von Spielern kontrollierten Fahrzeugen angezeigt wird.</German>
+            <Italian>Impedisce la visualizzazione di icone clan sui veicoli controllati da giocatori.</Italian>
             <French>Empêche les logos de clan d'être affichés sur les véhicules contrôlés par des joueurs.</French>
         </Key>
     </Package>

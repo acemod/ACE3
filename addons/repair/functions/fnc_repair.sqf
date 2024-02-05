@@ -95,7 +95,7 @@ if (!("All" in _repairLocations)) then {
 private _requiredObjects = getArray (_config >> "claimObjects");
 private _claimObjectsAvailable = [];
 if (_requiredObjects isNotEqualTo []) then {
-    _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
+    _claimObjectsAvailable = [_caller, 5, _requiredObjects, true] call FUNC(getClaimObjects);
     if (_claimObjectsAvailable isEqualTo []) then {
         TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
         _return = false
@@ -107,7 +107,7 @@ if !(_return && alive _target) exitWith {false};
 
 //Claim required objects
 {
-    TRACE_2("Claiming", _x, (typeOf _x));
+    TRACE_2("Claiming",_x,(typeOf _x));
     [_caller, _x, false] call EFUNC(common,claim);
 } forEach _claimObjectsAvailable;
 

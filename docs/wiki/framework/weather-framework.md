@@ -19,3 +19,10 @@ ACE3 Weather extends the existing weather by temperature, humidity and air press
 The additional wind simulation, which is also influenced by the season and the geographical location, can be deactivated if necessary.
 
 Cloud cover, rain and fog can still be set via the mission settings.
+
+
+## 2. Wind Simulation
+
+## 2.1 Temporarily Pause Wind Simulation
+
+When Wind Simulation is enabled at mission start, it can be temporarily disabled by setting `ace_weather_disableWindSimulation = true`. To reenable wind simulation, the variable must either be set to `false` or `nil`.

@@ -63,7 +63,7 @@ private _oldCompats = [];
 } forEach _addons;
 
 if (_oldAddons isNotEqualTo []) then {
-    _oldAddons = _oldAddons apply {"%1.pbo", _x};
+    _oldAddons = _oldAddons apply { format ["%1.pbo", _x] };
     private _errorMsg = "";
     if (count _oldAddons > 3) then {
         _errorMsg = format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3 from %4.<br/>Loaded mods with outdated ACE files: %5", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) -3, _mainVersion, _mainSource, (_oldSources joinString ", ")];
@@ -80,7 +80,7 @@ if (_oldCompats isNotEqualTo []) then {
     _oldCompats = _oldCompats apply {format ["%1 (%2)", _x select 0, _x select 1]};
     [{
         // Lasts for ~10 seconds
-        ERROR_WITH_TITLE_3("The following ACE compatiblity PBOs are outdated", "%1. ACE Main version is %2 from %3.",_this select 0,_this select 1,_this select 2);
+        ERROR_WITH_TITLE_3("The following ACE compatiblity PBOs are outdated","%1. ACE Main version is %2 from %3.",_this select 0,_this select 1,_this select 2);
     }, [_oldCompats, _mainVersion, _mainSource], 1] call CBA_fnc_waitAndExecute;
 };
 

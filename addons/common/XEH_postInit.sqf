@@ -28,7 +28,8 @@
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
-["lockInventory", true, []] call FUNC(statusEffect_addType);
+["disableWeaponAssembly", false, ["ace_common", "ace_common_lockVehicle", "ace_csw"]] call FUNC(statusEffect_addType);
+["lockInventory", true, [], true] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -95,7 +96,7 @@
         _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
     if (["task_force_radio"] call FUNC(isModLoaded)) then {
-        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
+        _object setVariable ["tf_voiceVolume", parseNumber (_set == 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -121,6 +122,11 @@
     _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(disableWeaponAssembly), {
+    params ["_object", "_set"];
+    _object enableWeaponDisassembly (_set < 1);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(lockInventory), {
     params ["_object", "_set"];
     TRACE_2("lockInventory EH",_object,_set);
@@ -136,7 +142,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`",[_x] call FUNC(getName),_dcPlayer,_x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil
@@ -161,10 +167,16 @@ if (isServer) then {
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
     _this lock 2;
+    if ([] isNotEqualTo getArray (configOf _this >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", QGVAR(lockVehicle), true] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
+    if ([] isNotEqualTo getArray (configOf _target >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", QGVAR(lockVehicle), false] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;

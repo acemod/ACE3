@@ -25,7 +25,7 @@ jobs:
         Invoke-WebRequest "$env:RHSUSF_URL" -OutFile rhsusf.zip
         $files = @("arma3.zip", "rhsafrf.zip", "rhsgref.zip", "rhssaf.zip", "rhsusf.zip")
         ForEach ($file in $files) {
-          Extract-7Zip -Path $file -DestinationPath .
+          Expand-7ZipArchive -Path $file -DestinationPath .
           Remove-Item $file
         }
       env:

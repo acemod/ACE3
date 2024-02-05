@@ -16,7 +16,7 @@
  */
 
 params ["_vehicle"];
-TRACE_1("params", _vehicle);
+TRACE_1("params",_vehicle);
 
 private _type = typeOf _vehicle;
 private _config = configOf _vehicle;
@@ -74,13 +74,13 @@ if (_type in GVAR(initializedVehicleClasses)) exitWith {};
 if (_hasCargoConfig) then {
     GVAR(initializedVehicleClasses) pushBack _type;
 
-    TRACE_1("Adding unload cargo action to class", _type);
+    TRACE_1("Adding unload cargo action to class",_type);
 
     [_type, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
 } else {
     _vehicle setVariable [QGVAR(initVehicle), true];
 
-    TRACE_1("Adding unload cargo action to object", _vehicle);
+    TRACE_1("Adding unload cargo action to object",_vehicle);
 
     [_vehicle, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToObject);
 };

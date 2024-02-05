@@ -103,7 +103,7 @@ if (isNil "_eh") then {
     // Maybe its overridden somewhere else, but this makes sure it is the last one
     [{
         params ["_vehicle"];
-        TRACE_1("EH not added yet - added eh now", _vehicle);
+        TRACE_1("EH not added yet - added eh now",_vehicle);
         private _hd = _vehicle addEventHandler ["HandleDamage", { _this call FUNC(handleDamage) }];
         _vehicle setVariable [QGVAR(handleDamage), _hd];
     }, [_vehicle]] call CBA_fnc_execNextFrame;

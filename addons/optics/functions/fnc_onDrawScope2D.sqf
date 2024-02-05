@@ -80,11 +80,11 @@ if (_isPIP) then {
 
 // Calculate lighting
 private _dayOpacity = call EFUNC(common,ambientBrightness);
-private _nightOpacity = [1, 0] select (_dayOpacity == 1);
+private _nightOpacity = parseNumber (_dayOpacity == 1);
 
 // Apply lighting and make layers visible
 (_display displayCtrl 1713001) ctrlSetTextColor [1, 1, 1, 1];
-(_display displayCtrl 1713002) ctrlSetTextColor [1, 1, 1, [0, 1] select (_dayOpacity < 0.5)];
+(_display displayCtrl 1713002) ctrlSetTextColor [1, 1, 1, parseNumber (_dayOpacity < 0.5)];
 (_display displayCtrl 1713005) ctrlSetTextColor [1, 1, 1, _dayOpacity];
 (_display displayCtrl 1713006) ctrlSetTextColor [1, 1, 1, _nightOpacity];
 

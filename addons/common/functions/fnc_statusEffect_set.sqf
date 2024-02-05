@@ -23,7 +23,7 @@ TRACE_4("params",_object,_effectName,_ID,_set);
 
 //Only run this after the settings are initialized
 if !(GVAR(settingsInitFinished)) exitWith {
-    TRACE_1("pushing to runAtSettingsInitialized", _this);
+    TRACE_1("pushing to runAtSettingsInitialized",_this);
     GVAR(runAtSettingsInitialized) pushBack [FUNC(statusEffect_set), _this];
 };
 
