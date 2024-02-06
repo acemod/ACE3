@@ -33,7 +33,7 @@ private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_amountOfMagazines"];
 
 if (_amountOfMagazines < 0) exitWith {
-    ERROR_1("mag with no ammo - %1", _magazine);
+    ERROR_1("mag with no ammo - %1",_magazine);
 };
 private _removed = _amountOfMagazines min floor(1 + random(6 / GVAR(ammoCookoffDuration)));
 

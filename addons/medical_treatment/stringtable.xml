@@ -4933,5 +4933,33 @@
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
             <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_painkillers_Display">
+            <English>Painkillers</English>
+            <Czech>Léky proti bolesti</Czech>
+            <German>Schmerztabellen</German>
+            <Russian>Болеутоляющее</Russian>
+            <Polish>Środki przeciwbólowe</Polish>
+            <Italian>Antidolorifici</Italian>
+            <Spanish>Analgésicos</Spanish>
+            <French>Analgésiques</French>
+            <Chinese>止痛藥</Chinese>
+            <Japanese>鎮痛剤</Japanese>
+            <Korean>진통제</Korean>
+            <Portuguese>Analgésicos</Portuguese>
+            <Chinesesimp>止痛药</Chinesesimp>
+            <Turkish>Ağrı kesici</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Administer_Painkillers">
+            <English>Administer Painkillers</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
+            <English>Administering Painkillers...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
+            <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
+            <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
+        </Key>
     </Package>
 </Project>

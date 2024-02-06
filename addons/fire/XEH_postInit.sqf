@@ -16,7 +16,7 @@
 
 if (isServer) then {
     ["CBA_settingsInitialized", {
-        TRACE_1("settingsInit", GVAR(enabled));
+        TRACE_1("settingsInit",GVAR(enabled));
 
         if (!GVAR(enabled)) exitWith {};
 

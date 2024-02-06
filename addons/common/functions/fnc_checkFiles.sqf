@@ -80,7 +80,7 @@ if (_oldCompats isNotEqualTo []) then {
     _oldCompats = _oldCompats apply {format ["%1 (%2)", _x select 0, _x select 1]};
     [{
         // Lasts for ~10 seconds
-        ERROR_WITH_TITLE_3("The following ACE compatiblity PBOs are outdated", "%1. ACE Main version is %2 from %3.",_this select 0,_this select 1,_this select 2);
+        ERROR_WITH_TITLE_3("The following ACE compatiblity PBOs are outdated","%1. ACE Main version is %2 from %3.",_this select 0,_this select 1,_this select 2);
     }, [_oldCompats, _mainVersion, _mainSource], 1] call CBA_fnc_waitAndExecute;
 };
 

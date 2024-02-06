@@ -32,17 +32,17 @@ if (isNull _object) exitWith {};
             private _eventName = format [QGVAR(%1), _x];
             switch (true) do {
                 case (GVAR(statusEffect_sendJIP) select _forEachIndex): {
-                    TRACE_2("Sending Global JIP Event", _object, _effectNumber);
+                    TRACE_2("Sending Global JIP Event",_object,_effectNumber);
                     private _jipID = format [QGVAR(effect_%1_%2), _eventName, hashValue _object];
                     [_eventName, [_object, _effectNumber], _jipID] call CBA_fnc_globalEventJIP;
                     [_jipID, _object] call CBA_fnc_removeGlobalEventJIP;
                 };
                 case (GVAR(statusEffect_isGlobal) select _forEachIndex): {
-                    TRACE_2("Sending Global Event", _object, _effectNumber);
+                    TRACE_2("Sending Global Event",_object,_effectNumber);
                     [_eventName, [_object, _effectNumber]] call CBA_fnc_globalEvent;
                 };
                 default {
-                    TRACE_2("Sending Target Event", _object, _effectNumber);
+                    TRACE_2("Sending Target Event",_object,_effectNumber);
                     [_eventName, [_object, _effectNumber], _object] call CBA_fnc_targetEvent;
                 };
             };

@@ -77,7 +77,7 @@ private _fnc_addToTabs = {
 
         // Find if there is an entry with same ID
         if (_currentTab findIf {_x select 5 == _statName} != -1) then {
-            TRACE_1("A stat with this ID already exists", _statName);
+            TRACE_1("A stat with this ID already exists",_statName);
         } else {
             _stat = +_finalArray;
             _stat set [5, _statName];

@@ -284,6 +284,16 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bodyBag,1);
         };
     };
+    class ACE_painkillersItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(painkillers_Display);
+        author = "Alganthe";
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_painkillers,1);
+        };
+    };
 
     // Medical supply crates
     class ThingX;
@@ -305,6 +315,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,50);
+            MACRO_ADDITEM(ACE_painkillers,25);
             MACRO_ADDITEM(ACE_morphine,25);
             MACRO_ADDITEM(ACE_epinephrine,25);
             MACRO_ADDITEM(ACE_bloodIV,15);
@@ -352,6 +363,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_elasticBandage,25);
             MACRO_ADDITEM(ACE_tourniquet,15);
             MACRO_ADDITEM(ACE_splint,15);
+            MACRO_ADDITEM(ACE_painkillers,15);
             MACRO_ADDITEM(ACE_morphine,15);
             MACRO_ADDITEM(ACE_adenosine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
