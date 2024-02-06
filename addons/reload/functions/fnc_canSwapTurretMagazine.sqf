@@ -8,7 +8,7 @@
  * 1: Player <OBJECT>
  *
  * Return Value:
- * <BOOL>
+ * Can swap turret magazine <BOOL>
  *
  * Example:
  * [vehicle player, player] call ace_reload_fnc_canSwapTurretMagazine
