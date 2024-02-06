@@ -110,5 +110,4 @@ GVAR(updateActionsOnCargoChange) = false;
     } forEach _rootTabs;
 } forEach _configGroupEntries;
 
-
 GVAR(actionList) = _actionList;
