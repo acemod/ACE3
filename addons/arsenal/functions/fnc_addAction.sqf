@@ -38,13 +38,13 @@ call FUNC(compileActions);
 
 // Skip if not allowed in editor and in editor
 if (is3DEN && {_scopeEditor != 2}) exitWith {
-    TRACE_1("Skipping action because in editor", _rootClass);
+    TRACE_1("Skipping action because in editor",_rootClass);
     []
 };
 
 // Class can't contain ~, because it's used for formatting result
 if ("~" in _rootClass) exitWith {
-    TRACE_1("Classname can't contain '~'", _rootClass);
+    TRACE_1("Classname can't contain '~'",_rootClass);
     []
 };
 
@@ -65,7 +65,7 @@ private _fnc_addToGroup = {
 
         // Don't allow two of the same class
         if (_group findIf {(_x select 0) == _class} != -1) then {
-            TRACE_1("An action with this ID already exists", _class);
+            TRACE_1("An action with this ID already exists",_class);
             continue;
         };
 

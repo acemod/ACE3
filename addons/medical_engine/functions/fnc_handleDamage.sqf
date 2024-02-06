@@ -32,6 +32,11 @@ if (_hitPoint isEqualTo "") then {
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 private _newDamage = _damage - _oldDamage;
+
+// Happens occasionally for vehiclehit events (see line 80 onwards)
+// Just exit early to save some frametime
+if (_newDamage == 0 && {_hitpoint isNotEqualTo "ace_hdbracket"}) exitWith {_oldDamage};
+
 // Get scaled armor value of hitpoint and calculate damage before armor
 // We scale using passThrough to handle explosive-resistant armor properly (#9063)
 // We need realDamage to determine which limb was hit correctly
@@ -85,8 +90,8 @@ if (
     {_ammo isNotEqualTo ""} &&
     {
         private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
-        GET_NUMBER(_ammoCfg >> "explosive", 0) > 0 ||
-        {GET_NUMBER(_ammoCfg >> "indirectHit", 0) > 0}
+        GET_NUMBER(_ammoCfg >> "explosive",0) > 0 ||
+        {GET_NUMBER(_ammoCfg >> "indirectHit",0) > 0}
     }
 ) exitwith {
     TRACE_5("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage);

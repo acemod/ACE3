@@ -4,7 +4,7 @@ if (!hasInterface) exitWith {};
 
 ["CBA_settingsInitialized", {
     //If not enabled, dont't bother adding eventhandler
-    TRACE_1("CBA_settingsInitialized eh", GVAR(enabled));
+    TRACE_1("CBA_settingsInitialized eh",GVAR(enabled));
     if (!GVAR(enabled)) exitWith {};
 
     GVAR(lastFPTime) = -1;

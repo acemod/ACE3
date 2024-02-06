@@ -4,7 +4,7 @@
 if (!hasInterface) exitWith {};
 
 ["ace_settingsInitialized", {
-    TRACE_1("SettingInit", XGVAR(enable));
+    TRACE_1("SettingInit",XGVAR(enable));
 
     // If not enabled, then do not add CanInteractWith Condition or event handlers
     if (!XGVAR(enable)) exitWith {};
