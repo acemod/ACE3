@@ -99,7 +99,7 @@ private _activeCtrls = [];
                 }] call CBA_fnc_execNextFrame;
             }];
 
-            if (count _activeCtrls > 0) then {
+            if (_activeCtrls isNotEqualTo []) then {
                 (ctrlPosition (_activeCtrls select -1)) params ["", "_lastPosY", "", "_lastPosH"];
                 _actionButtonCtrl ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H);
             } else {
@@ -125,7 +125,7 @@ private _activeCtrls = [];
             if (_text isEqualType []) then {
                 _text = _text joinString endl;
             };
-            if (count _activeCtrls > 0) then {
+            if (_activeCtrls isNotEqualTo []) then {
                 (ctrlPosition (_activeCtrls select -1)) params ["", "_lastPosY", "", "_lastPosH"];
                 _actionTextCtrl ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H);
             } else {
