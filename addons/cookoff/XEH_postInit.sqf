@@ -17,13 +17,13 @@ if (isServer) then {
     {
         deleteVehicle _x;
     } forEach ((_this select 0) getVariable [QGVAR(vehicleEffects), []]);
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+}, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
 
 ["ReammoBox_F", "Deleted", {
     {
         deleteVehicle _x;
     } forEach ((_this select 0) getVariable [QGVAR(boxEffects), []]);
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+}, true, [], true] call CBA_fnc_addClassEventHandler;
 
 [QGVAR(cleanupVehicleEffects), {
     params ["_object"];
@@ -45,21 +45,29 @@ if (isServer) then {
     _object setVariable [QGVAR(boxEffects), nil];
 }] call CBA_fnc_addEventHandler;
 
+// Ammo box damage handling
 ["ReammoBox_F", "init", {
     // Calling this function inside curly brackets allows the usage of "exitWith", which would be broken with "HandleDamage" otherwise
     (_this select 0) addEventHandler ["HandleDamage", {_this call FUNC(handleDamageBox)}];
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+}, true, [], true] call CBA_fnc_addClassEventHandler;
 
-// Secondary explosions
+// Vehicle ammo cook-off (secondary explosions)
 ["AllVehicles", "Killed", {
     if (!GVAR(enableAmmoCookoff) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
 
     params ["_vehicle", "", "", "_useEffects"];
 
     if (_useEffects && {_vehicle getVariable [QGVAR(enableAmmoCookoff), true]}) then {
-        [QGVAR(detonateAmmunition), [_vehicle, false, objNull, objNull, (random MAX_AMMO_DETONATION_START_DELAY) max MIN_AMMO_DETONATION_START_DELAY]] call CBA_fnc_serverEvent;
+        // We don't need to pass source and instigator, as vehicle is already dead
+        [QGVAR(detonateAmmunition), [
+            _vehicle,
+            false,
+            objNull,
+            objNull,
+            random [MIN_AMMO_DETONATION_START_DELAY, (MIN_AMMO_DETONATION_START_DELAY + MAX_AMMO_DETONATION_START_DELAY) / 2, MAX_AMMO_DETONATION_START_DELAY]
+        ] call CBA_fnc_serverEvent;
     };
-}, nil, ["CAManBase", "StaticWeapon"]] call CBA_fnc_addClassEventHandler;
+}, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
 
 if (hasInterface) then {
     // Plays a sound locally, so that different sounds can be used for various distances

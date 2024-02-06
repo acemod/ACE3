@@ -43,7 +43,10 @@ params [
     ["_maxIntensity", MAX_COOKOFF_INTENSITY]
 ];
 
+// Make sure it's a vehicle (important, because deleted EH is assigned to AllVehicles only in postInit)
 if !(_vehicle isKindOf "AllVehicles") exitWith {};
+
+if (_vehicle isKindOf "CAManBase" || {_vehicle isKindOf "StaticWeapon"}) exitWith {};
 
 // Check if cook-off is disabled on vehicle specifically
 if !(_vehicle getVariable [QGVAR(enable), true]) exitWith {};
