@@ -61,7 +61,10 @@ addUserActionEventHandler ["ReloadMagazine", "Activate", {
     // If on foot, skip
     if (isNull _vehicle) exitWith {};
 
-    if !([_vehicle, ACE_player] call FUNC(canSwapTurretMagazine)) exitWith {};
+    // weaponState is only updated after 3 frames, so wait to run checks in case we're doing an engine reload at the same time
+    [{
+        if !(_this call FUNC(canSwapTurretMagazine)) exitWith {};
 
-    [_vehicle, ACE_player] call FUNC(swapTurretMagazine);
+        _this call FUNC(swapTurretMagazine);
+    }, [_vehicle, ACE_player], 3] call CBA_fnc_execAfterNFrames;
 }];
