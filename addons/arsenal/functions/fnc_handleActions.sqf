@@ -15,9 +15,6 @@
  *
  * Public: No
 */
-
-#define LINE_COUNT(text) (count (text splitString endl))
-
 params ["_display", "_control", "_curSel", "_itemCfg"];
 
 GVAR(actionsInfo) = [_control, _curSel, _itemCfg];
@@ -125,14 +122,9 @@ private _activeCtrls = [];
             if (isNil "_text") then {
                 _text = "";
             };
-            private _ctrlHeight = 0;
             if (_text isEqualType []) then {
-                _ctrlHeight = 5 * (count _text) * GRID_H;
                 _text = _text joinString endl;
-            } else {
-                _ctrlHeight = 5 * LINE_COUNT(_text) * GRID_H;
             };
-            _actionTextCtrl ctrlSetPositionH _ctrlHeight;
             if (count _activeCtrls > 0) then {
                 (ctrlPosition (_activeCtrls select -1)) params ["", "_lastPosY", "", "_lastPosH"];
                 _actionTextCtrl ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H);
@@ -141,6 +133,7 @@ private _activeCtrls = [];
             };
 
             _actionTextCtrl ctrlSetText _text;
+            _actionTextCtrl ctrlSetPositionH (ctrlTextHeight _actionTextCtrl);
             _actionTextCtrl ctrlSetFade 0;
             _actionTextCtrl ctrlEnable false;
             _actionTextCtrl ctrlCommit 0;
