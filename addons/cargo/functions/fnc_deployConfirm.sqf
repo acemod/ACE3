@@ -42,7 +42,7 @@ if (!isNull GVAR(itemPreviewObject)) then {
         {
             TRACE_1("deploy fail",_this);
         },
-        LLSTRING(unloadingItem),
+        format [LLSTRING(unloadingItem), [GVAR(selectedItem), true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
             (_this select 0) params ["_item", "_vehicle", "_unit"];
 
