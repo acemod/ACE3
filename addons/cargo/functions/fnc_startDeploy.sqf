@@ -15,6 +15,8 @@
  * Public: No
  */
 
+#define SET_MOUSE_HINT(text) ((uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420) ctrlSetText text
+
 // Deny creating preview item as it will destroy player vehicle instantly by collision
 if (GVAR(interactionParadrop)) exitWith {};
 
@@ -54,7 +56,7 @@ _itemPreviewObject enableSimulation false;
 _itemPreviewObject setMass 1e-12;
 
 // Detect radius of zone where collision can damage the player
-private _itemPreviewObjectRadius = 0.2 + ((boundingBoxReal _itemPreviewObject) select 2);
+private _itemPreviewObjectRadius = 1.5 max (0.2 + ((boundingBoxReal [_itemPreviewObject, "FireGeometry"]) select 2));
 
 // Set default values for deployment settings
 GVAR(deployDistance) = _itemPreviewObjectRadius max (([_unit, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) / 2);
@@ -107,17 +109,13 @@ GVAR(deployPFH) = [{
         if (GVAR(canDeploy)) then {
             GVAR(canDeploy) = false;
 
-            _itemPreviewObject hideObject true;
-
-            ((uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420) ctrlSetText LLSTRING(blockedAction);
+             SET_MOUSE_HINT(LLSTRING(blockedAction));
         };
     } else {
         if (!GVAR(canDeploy)) then {
             GVAR(canDeploy) = true;
 
-            _itemPreviewObject hideObject false;
-
-            ((uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420) ctrlSetText LLSTRING(unloadObject);
+            SET_MOUSE_HINT(LLSTRING(unloadObject));
         };
     };
 
