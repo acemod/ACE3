@@ -7,14 +7,15 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Intensity of fire <NUMBER>
- * 2: Instigator <OBJECT> (default: objNull)
- * 3: Delay between smoke and fire enabled <BOOL> (default: true)
- * 4: Ammo detonation chance <NUMBER> (default: 0)
- * 5: Detonate after cook-off <BOOL> (default: false)
- * 6: Selection for fire source <STRING> (default: "")
- * 7: Can spawn fire ring <BOOL> (default: true)
- * 8: Can spawn fire jet <BOOL> (default: true)
- * 9: Maximum intensity <NUMBER> (default: MAX_COOKOFF_INTENSITY)
+ * 2: Source <OBJECT> (default: objNull)
+ * 3: Instigator <OBJECT> (default: objNull)
+ * 4: Delay between smoke and fire enabled <BOOL> (default: true)
+ * 5: Ammo detonation chance <NUMBER> (default: 0)
+ * 6: Detonate after cook-off <BOOL> (default: false)
+ * 7: Selection for fire source <STRING> (default: "")
+ * 8: Can spawn fire ring <BOOL> (default: true)
+ * 9: Can spawn fire jet <BOOL> (default: true)
+ * 10: Maximum intensity <NUMBER> (default: MAX_COOKOFF_INTENSITY)
  *
  * Return Value:
  * None
@@ -31,6 +32,7 @@ if (GVAR(enable) == 0 || {GVAR(cookoffDuration) == 0}) exitWith {};
 params [
     "_vehicle",
     "_intensity",
+    ["_source", objNull],
     ["_instigator", objNull],
     ["_delayBetweenSmokeAndFire", true],
     ["_ammoDetonationChance", 0],
@@ -40,6 +42,8 @@ params [
     ["_canJet", true],
     ["_maxIntensity", MAX_COOKOFF_INTENSITY]
 ];
+
+if !(_vehicle isKindOf "AllVehicles") exitWith {};
 
 // Check if cook-off is disabled on vehicle specifically
 if !(_vehicle getVariable [QGVAR(enable), true]) exitWith {};
@@ -53,9 +57,6 @@ TRACE_8("",_instigator,_delayBetweenSmokeAndFire,_ammoDetonationChance,_detonate
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 
 _vehicle setVariable [QGVAR(isCookingOff), true, true];
-
-// Only required on the server, as the only effect to clean up is to remove the effects from the JIP queue
-[QGVAR(addCleanupHandlers), _vehicle] call CBA_fnc_localEvent;
 
 // Limit maximum value of intensity to prevent very long cook-off times
 _intensity = _intensity min _maxIntensity;
@@ -81,7 +82,6 @@ private _fireJipID = format [QGVAR(cookOffEffect_%1), hashValue _vehicle];
 
 // Spawn smoke
 private _smokeJipID = [QGVAR(smoke), [_vehicle, _positions]] call CBA_fnc_globalEventJIP;
-_vehicle setVariable [QGVAR(jipIDs), [_smokeJipID, _fireJipID]];
 
 // Save intensity for looping purposes
 _vehicle setVariable [QGVAR(intensity), _intensity];
@@ -94,21 +94,25 @@ if (_delayBetweenSmokeAndFire) then {
 
 [{
     [{
-        (_this select 0) params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing", "_canJet", "_fireJipID"];
+        (_this select 0) params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_source", "_instigator", "_fireSource", "_canRing", "_canJet", "_smokeJipID", "_fireJipID"];
 
         private _intensity = _vehicle getVariable [QGVAR(intensity), 0];
 
         if (isNull _vehicle || {_intensity <= 1} || {GVAR(enable) == 0} || {GVAR(cookoffDuration) == 0}) exitWith {
             (_this select 1) call CBA_fnc_removePerFrameHandler;
 
+            // Remove effects from JIP
+            _smokeJipID call CBA_fnc_removeGlobalEventJIP;
+            _fireJipID call CBA_fnc_removeGlobalEventJIP;
+
             // Effects are deleted when vehicle is deleted
             if (isNull _vehicle) exitWith {};
 
-            // Remove effects on server
-            [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_localEvent;
+            // Remove effects
+            [QGVAR(cleanupVehicleEffects), _vehicle] call CBA_fnc_globalEvent;
 
             if (GVAR(destroyVehicleAfterCookoff) || _detonateAfterCookoff) then {
-                _vehicle setDamage [1, true, _instigator, _instigator]; // because it's running on the server, killer and instigator can be set
+                _vehicle setDamage [1, true, _source, _instigator]; // because it's running on the server, killer and instigator can be set
             };
         };
 
@@ -146,7 +150,7 @@ if (_delayBetweenSmokeAndFire) then {
             };
         };
 
-        if (_ammoDetonationChance > random 1 && {CBA_missionTime >= _vehicle getVariable [QGVAR(nextExplosiveDetonation), 0]}) then {
+        if (_ammoDetonationChance > random 1 && {_vehicle getVariable [QGVAR(nextExplosiveDetonation), 0] <= CBA_missionTime}) then {
             if (_fireSource isEqualTo "") then {
                 _fireSource = selectRandom _positions;
             };
@@ -156,4 +160,4 @@ if (_delayBetweenSmokeAndFire) then {
             _vehicle setVariable [QGVAR(nextExplosiveDetonation), CBA_missionTime + random 60];
         };
     }, 0.25, _this] call CBA_fnc_addPerFrameHandler;
-}, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing, _canJet, _fireJipID], _delay] call CBA_fnc_waitAndExecute;
+}, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _source, _instigator, _fireSource, _canRing, _canJet, _smokeJipID, _fireJipID], _delay] call CBA_fnc_waitAndExecute;

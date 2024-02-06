@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Destroy when finished <BOOL> (default: false)
- * 2: Killer <OBJECT> (default: objNull)
+ * 2: Source <OBJECT> (default: objNull)
  * 3: Instigator <OBJECT> (default: objNull)
  * 4: Initial delay <NUMBER> (default: 0)
  *
@@ -21,7 +21,7 @@
 
 if (!isServer) exitWith {};
 
-params ["_object", ["_destroyWhenFinished", false], ["_killer", objNull], ["_instigator", objNull], ["_initialDelay", 0]];
+params ["_object", ["_destroyWhenFinished", false], ["_source", objNull], ["_instigator", objNull], ["_initialDelay", 0]];
 
 if (isNull _object) exitWith {};
 
@@ -47,12 +47,12 @@ _objectAmmo params ["_magazines", "_totalAmmo"];
 
 // If the cook-off has finished, clean up the effects and destroy the object
 if (_magazines isEqualTo [] || {_totalAmmo <= 0}) exitWith {
-    [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
+    [QGVAR(cleanupBoxEffects), _object] call CBA_fnc_globalEvent;
 
     _object setVariable [QGVAR(cookoffMagazines), nil];
 
     if (_destroyWhenFinished) then {
-        _object setDamage [1, true, _killer, _instigator];
+        _object setDamage [1, true, _source, _instigator];
     };
 };
 
@@ -66,14 +66,14 @@ if (underwater _object || {
 
     !(GVAR(enableAmmoCookoff) && {_object getVariable [QGVAR(enableAmmoCookoff), true]})
 }) exitWith {
-    [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
+    [QGVAR(cleanupBoxEffects), _object] call CBA_fnc_globalEvent;
 
     _object setVariable [QGVAR(cookoffMagazines), nil];
 };
 
 // Initial delay allows for a delay for the first time this function runs in its cycle
 if (_initialDelay > 0) exitWith {
-    [FUNC(detonateAmmunition), [_object, _destroyWhenFinished, _killer, _instigator], _initialDelay] call CBA_fnc_waitAndExecute;
+    [FUNC(detonateAmmunition), [_object, _destroyWhenFinished, _source, _instigator], _initialDelay] call CBA_fnc_waitAndExecute;
 };
 
 private _magazineIndex = floor random (count _magazines);
@@ -101,7 +101,7 @@ _totalAmmo = _totalAmmo - _removed;
 _object setVariable [QGVAR(cookoffMagazines), [_magazines, _totalAmmo]];
 
 // Detonate the remaining ammo after a delay
-[FUNC(detonateAmmunition), [_object, _destroyWhenFinished, _killer, _instigator], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
+[FUNC(detonateAmmunition), [_object, _destroyWhenFinished, _source, _instigator], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
 
 // Get magazine info, which is used to spawn projectiles
 private _configMagazine = configFile >> "CfgMagazines" >> _magazineClassname;

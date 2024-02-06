@@ -12,41 +12,37 @@ if (isServer) then {
     [QGVAR(detonateAmmunition), LINKFUNC(detonateAmmunition)] call CBA_fnc_addEventHandler;
 };
 
-// Handle cleaning up effects when vehicle is deleted mid cook-off
-[QGVAR(addCleanupHandlers), {
-    params ["_object"];
-
-    // Don't add a new EH if cook-off is run multiple times
-    if (!isNil {_object getVariable QGVAR(deletedEH)}) exitWith {};
-
-    _object setVariable [QGVAR(deletedEH),
-        _object addEventHandler ["Deleted", {
-            [QGVAR(cleanupEffects), _this select 0] call CBA_fnc_localEvent;
-        }]
-    ];
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(cleanupEffects), {
-    params ["_object"];
-
-    if (isServer) then {
-        // Reset, so that the object can cook-off again
-        _object setVariable [QGVAR(isCookingOff), nil, true];
-
-        // Remove effects from JIP
-        {
-            _x call CBA_fnc_removeGlobalEventJIP;
-        } forEach (_object getVariable [QGVAR(jipIDs), []]);
-
-        _object setVariable [QGVAR(jipIDs), nil];
-    };
-
-    // All effects are local (apart from sound, which is global, but is handled by server)
+// Handle cleaning up effects when objects are deleted mid cook-off
+["AllVehicles", "Deleted", {
     {
         deleteVehicle _x;
-    } forEach (_object getVariable [QGVAR(effects), []]);
+    } forEach ((_this select 0) getVariable [QGVAR(vehicleEffects), []]);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
-    _object setVariable [QGVAR(effects), nil];
+["ReammoBox_F", "Deleted", {
+    {
+        deleteVehicle _x;
+    } forEach ((_this select 0) getVariable [QGVAR(boxEffects), []]);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+[QGVAR(cleanupVehicleEffects), {
+    params ["_object"];
+
+    {
+        deleteVehicle _x;
+    } forEach (_object getVariable [QGVAR(vehicleEffects), []]);
+
+    _object setVariable [QGVAR(vehicleEffects), nil];
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(cleanupBoxEffects), {
+    params ["_object"];
+
+    {
+        deleteVehicle _x;
+    } forEach (_object getVariable [QGVAR(boxEffects), []]);
+
+    _object setVariable [QGVAR(boxEffects), nil];
 }] call CBA_fnc_addEventHandler;
 
 ["ReammoBox_F", "init", {

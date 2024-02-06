@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Box <OBJECT>
- * 1: Killer <OBJECT>
+ * 1: Source <OBJECT>
  * 2: Instigator <OBJECT>
  * 3: Start time of the cook-off <NUMBER>
  * 4: Smoke delay <NUMBER>
@@ -22,10 +22,10 @@
 params ["", "", "", "_startTime", "_smokeDelay"];
 
 [{
-    params ["_box", "_killer", "_instigator"];
+    params ["_box", "_source", "_instigator"];
 
-    // Make sure effects are cleaned up if box is deleted
-    [QGVAR(addCleanupHandlers), _box] call CBA_fnc_localEvent;
+    // If box was deleted before smoke could be spawned, just exit
+    if (isNull _box) exitWith {};
 
     private _boxPos = ASLToAGL getPosASL _box;
     private _effects = [];
@@ -46,8 +46,8 @@ params ["", "", "", "_startTime", "_smokeDelay"];
         _effects pushBack _sound;
 
         // Detonate the ammunition
-        [QGVAR(detonateAmmunition), [_box, true, _killer, _instigator, random [DETONATION_DELAY / 2, DETONATION_DELAY, DETONATION_DELAY / 2 * 3]]] call CBA_fnc_localEvent;
+        [QGVAR(detonateAmmunition), [_box, true, _source, _instigator, random [DETONATION_DELAY / 2, DETONATION_DELAY, DETONATION_DELAY / 2 * 3]]] call CBA_fnc_localEvent;
     };
 
-    _box setVariable [QGVAR(effects), _effects];
+    _box setVariable [QGVAR(boxEffects), _effects];
 }, _this, (_startTime - CBA_missionTime + _smokeDelay) max 0] call CBA_fnc_waitAndExecute; // this delay allows for synchronisation for JIP players

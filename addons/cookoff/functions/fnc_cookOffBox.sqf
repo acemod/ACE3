@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Ammo box <OBJECT>
- * 1: Killer <OBJECT> (default: objNull)
+ * 1: Source <OBJECT> (default: objNull)
  * 2: Instigator <OBJECT> (default: objNull)
  *
  * Return Value:
@@ -19,7 +19,10 @@
 
 if (!isServer) exitWith {};
 
-params ["_box", ["_killer", objNull], ["_instigator", objNull]];
+params ["_box", ["_source", objNull], ["_instigator", objNull]];
+
+// Make sure it's a box
+if !(_box isKindOf "ReammoBox_F") exitWith {};
 
 if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
 
@@ -28,7 +31,7 @@ _box setVariable [QGVAR(isCookingOff), true, true];
 // Spawn cook-off effects on all connected machines
 private _jipID = [QGVAR(cookOffBoxLocal), [
     _box,
-    _killer,
+    _source,
     _instigator,
     CBA_missionTime,
     random [SMOKE_DELAY / 2, SMOKE_DELAY, SMOKE_DELAY / 2 * 3] // generate random timer that is global synced
