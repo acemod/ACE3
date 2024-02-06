@@ -110,13 +110,5 @@ GVAR(updateActionsOnCargoChange) = false;
     } forEach _rootTabs;
 } forEach _configGroupEntries;
 
-if (GVAR(updateActionsOnCargoChange)) then {
-    [QGVAR(cargoChanged), {
-        params ["_display"];
-        private _actionInfo = [_display];
-        _actionInfo append GVAR(actionInfo);
-        [QGVAR(displayActions), _actionInfo] call CBA_fnc_localEvent;
-    }] call CBA_fnc_addEventHandler;
-};
 
 GVAR(actionList) = _actionList;

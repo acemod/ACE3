@@ -121,14 +121,8 @@ private _group = [];
     };
 } forEach _tabs;
 
-if (!GVAR(updateActionsOnCargoChange) && _updateOnCargoChange) then {
+if (_updateOnCargoChange) then {
     GVAR(updateActionsOnCargoChange) = true;
-    [QGVAR(cargoChanged), {
-        params ["_display"];
-        private _actionInfo = [_display];
-        _actionInfo append GVAR(actionInfo);
-        [QGVAR(displayActions), _actionInfo] call CBA_fnc_localEvent;
-    }] call CBA_fnc_addEventHandler;
 };
 
 _return
