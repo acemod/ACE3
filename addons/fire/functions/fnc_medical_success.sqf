@@ -29,7 +29,7 @@ if (_intensity > BURN_MIN_INTENSITY) then {
     TRACE_1("patient still burning, looping",_this);
 
     if (EGVAR(medical_gui,pendingReopen)) then {
-        LOG("temporarily blocking medical menu reopen");
+        TRACE_1("temporarily blocking medical menu reopen",_this);
 
         EGVAR(medical_gui,pendingReopen) = false;
         [{EGVAR(medical_gui,pendingReopen) = true}] call CBA_fnc_execNextFrame;

@@ -59,7 +59,7 @@ if (isServer) then {
             private _hashedKey = hashValue _key;
 
             if (isNil "_hashedKey") exitWith {
-                ERROR_1("Unsupported key type used: %1",_key)
+                ERROR_3("Unsupported key type used: %1 - %2 - %3",_key,typeName _key,typeOf _key);
             };
 
             // To avoid issues, remove existing entries first before overwriting
@@ -76,7 +76,7 @@ if (isServer) then {
             private _hashedKey = hashValue _key;
 
             if (isNil "_hashedKey") exitWith {
-                ERROR_1("Unsupported key type used: %1",_key)
+                ERROR_3("Unsupported key type used: %1 - %2 - %3",_key,typeName _key,typeOf _key);
             };
 
             (GVAR(fireSources) deleteAt _hashedKey) params [["_fireLogic", objNull]];
