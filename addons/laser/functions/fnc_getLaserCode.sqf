@@ -7,7 +7,7 @@
  * 0: Laser source <OBJECT>
  *
  * Return Value:
- * None
+ * Laser code <NUMBER>
  *
  * Example:
  * player call ace_laser_fnc_getLaserCode;
