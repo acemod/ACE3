@@ -64,7 +64,7 @@ if (GVAR(interactionParadrop)) exitWith {
 };
 
 // If in zeus
-if (!isNull findDisplay 312) exitWith {
+if (!isNull curatorCamera) exitWith {
     // Do not check distance to unit, but do check for valid position
     if !([_item, GVAR(interactionVehicle), objNull, true] call FUNC(canUnloadItem)) exitWith {
         [[LSTRING(unloadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
