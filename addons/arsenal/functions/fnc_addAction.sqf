@@ -10,6 +10,7 @@
  * 3: Actions <ARRAY of ARRAYS>
  * 4: Condition <CODE> (default: {true})
  * 5: Scope editor <NUMBER> (default: 2)
+ * 6: Update when cargo content changes <BOOL> (default: false)
  *
  * Return Value:
  * 0: Array of IDs <ARRAY of STRINGS>
