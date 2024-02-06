@@ -58,7 +58,7 @@ if (GVAR(interactionParadrop)) exitWith {
                 [LSTRING(unlevelFlightWarning)] call EFUNC(common,displayTextStructured);
             };
         },
-        LLSTRING(unloadingItem),
+        format [LLSTRING(unloadingItem), [_item, true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
             (_this select 0) params ["", "_target"];
 
@@ -109,7 +109,7 @@ if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
         {
             TRACE_1("unload fail",_this);
         },
-        LLSTRING(unloadingItem),
+        format [LLSTRING(unloadingItem), [_item, true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
             (_this select 0) params ["_item", "_vehicle", "_unit"];
 

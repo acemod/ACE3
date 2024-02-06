@@ -16,7 +16,7 @@
  */
 
 params ["_vehicle"];
-TRACE_1("params", _vehicle);
+TRACE_1("params",_vehicle);
 
 scopeName "main";
 

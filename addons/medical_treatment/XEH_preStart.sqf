@@ -2,4 +2,4 @@
 
 #include "XEH_PREP.hpp"
 
-call FUNC(scanMedicalItems)
+call FUNC(scanMedicalItems);

@@ -6,7 +6,7 @@
             <German>Markierungsfahnen</German>
             <Italian>Bandiere segnaletiche</Italian>
             <Polish>Chorągiewki</Polish>
-            <Japanese>旗マーカー</Japanese>
+            <Japanese>マーカー旗</Japanese>
             <Korean>마킹용 깃발</Korean>
             <Chinesesimp>标记旗</Chinesesimp>
             <Russian>Флажки</Russian>
@@ -48,7 +48,7 @@
             <Korean>마킹용 깃발 꽂기</Korean>
             <Russian>Поставить флажок</Russian>
             <Spanish>Colocar Bandera de señalizado</Spanish>
-            <Japanese>マーカーフラッグを置く</Japanese>
+            <Japanese>マーカー旗 を置く</Japanese>
             <French>Placer le drapeau de marquage</French>
             <Portuguese>Colocar Bandeira de Marcação</Portuguese>
         </Key>
@@ -102,7 +102,7 @@
             <German>Markierungsfahne (Weiß)</German>
             <Italian>Bandiera segnaletica (Bianca)</Italian>
             <Polish>Chorągiewka (Biała)</Polish>
-            <Japanese>旗マーカー (白)</Japanese>
+            <Japanese>マーカー旗 (白)</Japanese>
             <Korean>마킹용 깃발(하양)</Korean>
             <Chinesesimp>标记旗（白）</Chinesesimp>
             <Russian>Флажок (белый)</Russian>
@@ -115,7 +115,7 @@
             <German>Markierungsfahne (Schwarz)</German>
             <Italian>Bandiera segnaletica (Nera)</Italian>
             <Polish>Chorągiewka (Czarna)</Polish>
-            <Japanese>旗マーカー (黒)</Japanese>
+            <Japanese>マーカー旗 (黒)</Japanese>
             <Korean>마킹용 깃발(검정)</Korean>
             <Chinesesimp>标记旗（黑）</Chinesesimp>
             <Russian>Флажок (чёрный)</Russian>
@@ -128,7 +128,7 @@
             <German>Markierungsfahne (Rot)</German>
             <Italian>Bandiera segnaletica (Rossa)</Italian>
             <Polish>Chorągiewka (Czerwona)</Polish>
-            <Japanese>旗マーカー (赤)</Japanese>
+            <Japanese>マーカー旗 (赤)</Japanese>
             <Korean>마킹용 깃발(빨강)</Korean>
             <Chinesesimp>标记旗（红）</Chinesesimp>
             <Russian>Флажок (красный)</Russian>
@@ -141,7 +141,7 @@
             <German>Markierungsfahne (Grün)</German>
             <Italian>Bandiera segnaletica (Verde)</Italian>
             <Polish>Chorągiewka (Zielona)</Polish>
-            <Japanese>旗マーカー (緑)</Japanese>
+            <Japanese>マーカー旗 (緑)</Japanese>
             <Korean>마킹용 깃발(초록)</Korean>
             <Chinesesimp>标记旗（绿）</Chinesesimp>
             <Russian>Флажок (зелёный)</Russian>
@@ -154,7 +154,7 @@
             <German>Markierungsfahne (Blau)</German>
             <Italian>Bandiera segnaletica (Blu)</Italian>
             <Polish>Chorągiewka (Niebieska)</Polish>
-            <Japanese>旗マーカー (青)</Japanese>
+            <Japanese>マーカー旗 (青)</Japanese>
             <Korean>마킹용 깃발(파랑)</Korean>
             <Chinesesimp>标记旗（蓝）</Chinesesimp>
             <Russian>Флажок (синий)</Russian>
@@ -167,7 +167,7 @@
             <German>Markierungsfahne (Gelb)</German>
             <Italian>Bandiera segnaletica (Gialla)</Italian>
             <Polish>Chorągiewka (Żółta)</Polish>
-            <Japanese>旗マーカー (黄)</Japanese>
+            <Japanese>マーカー旗 (黄)</Japanese>
             <Korean>마킹용 깃발(노랑)</Korean>
             <Chinesesimp>标记旗（黄）</Chinesesimp>
             <Russian>Флажок (жёлтый)</Russian>
@@ -180,7 +180,7 @@
             <German>Markierungsfahne (Orange)</German>
             <Italian>Bandiera segnaletica (Arancione)</Italian>
             <Polish>Chorągiewka (Pomarańczowa)</Polish>
-            <Japanese>旗マーカー (橙)</Japanese>
+            <Japanese>マーカー旗 (橙)</Japanese>
             <Korean>마킹용 깃발(주황)</Korean>
             <Chinesesimp>标记旗（橙）</Chinesesimp>
             <Russian>Флажок (оранжевый)</Russian>
@@ -193,7 +193,7 @@
             <German>Markierungsfahne (Lila)</German>
             <Italian>Bandiera segnaletica (Viola)</Italian>
             <Polish>Chorągiewka (Fioletowa)</Polish>
-            <Japanese>旗マーカー (紫)</Japanese>
+            <Japanese>マーカー旗 (紫)</Japanese>
             <Korean>마킹용 깃발(보라)</Korean>
             <Chinesesimp>标记旗（紫）</Chinesesimp>
             <Russian>Флажок (фиолетовый)</Russian>

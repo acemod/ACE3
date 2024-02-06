@@ -18,7 +18,7 @@
  */
 
 if (isNil QGVAR(arguments)) then {
-    TRACE_1("Starting optic draw", _this);
+    TRACE_1("Starting optic draw",_this);
 
     // reset shooter var:
     private _currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
