@@ -24,7 +24,7 @@ params ["_unit"];
 
 if (GVAR(interactionParadrop)) exitWith {
     // Close the cargo menu
-    closeDialog 1;
+    closeDialog 0;
 
     private _duration = GVAR(paradropTimeCoefficent) * (_item call FUNC(getSizeItem));
 
@@ -79,7 +79,7 @@ if (!isNull findDisplay 312) exitWith {
 // Start progress bar - normal ground unload
 if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
     // Close the cargo menu
-    closeDialog 1;
+    closeDialog 0;
 
     private _duration = GVAR(loadTimeCoefficient) * (_item call FUNC(getSizeItem));
 
