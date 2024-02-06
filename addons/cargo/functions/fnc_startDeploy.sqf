@@ -29,7 +29,7 @@ private _item = call FUNC(getSelectedItem);
 if (isNil "_item") exitWith {};
 
 // Close opened cargo menu
-closeDialog 1;
+closeDialog 0;
 
 GVAR(selectedItem) = _item;
 
@@ -62,7 +62,7 @@ GVAR(deployDirection) = 0;
 GVAR(deployHeight) = 0;
 GVAR(canDeploy) = true;
 
-// Pfh that runs while the deployment is in progress
+// PFH that runs while the deployment is in progress
 GVAR(deployPFH) = [{
     (_this select 0) params ["_unit", "_vehicle", "_item", "_itemPreviewObject", "_itemPreviewObjectRadius"];
 
