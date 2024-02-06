@@ -7,15 +7,16 @@
  * 0: Vehicle <OBJECT>
  * 1: Spawn fire jet <BOOL>
  * 2: Spawn fire ring <BOOL>
- * 3: Duration of effect (max 20 seconds) <NUMBER>
- * 4: What selection will fire originate from <STRING>
- * 5: Cookoff intensity value <NUMBER>
+ * 3: What selection fire will originate from <STRING>
+ * 4: Cookoff intensity value <NUMBER>
+ * 5: Start time <NUMBER>
+ * 6: Duration of effect (max 20 seconds) <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [vehicle player, true, false, 15, "commander_turret"] call ace_cookoff_fnc_cookOffEffect
+ * [vehicle player, true, false, "commander_turret", 6, CBA_missionTime, 15] call ace_cookoff_fnc_cookOffEffect
  *
  * Public: No
  */
@@ -23,7 +24,7 @@
 #define FLAME_SIZE 1.5
 #define FIRE_INTENSITY 6
 
-params ["_vehicle", "_jet", "_ring", "_duration", "_fireSelection", "_intensity"];
+params ["_vehicle", "_jet", "_ring", "_fireSelection", "_intensity", "_startTime", "_duration"];
 
 // Spawn light
 private _light = objNull;
@@ -51,20 +52,20 @@ if (isServer) then {
 
     // Make the ring a source of fire
     if (_ring && {["ace_fire"] call EFUNC(common,isModLoaded)}) then {
-        _fireKey = format [QGVAR(%1), hashValue _vehicle];
+        _fireKey = format [QGVAR(cookoffFire_%1), hashValue _vehicle];
 
         [QEGVAR(fire,addFireSource), [_vehicle, FLAME_SIZE * ((boundingBoxReal _vehicle) select 2), FIRE_INTENSITY, _fireKey]] call CBA_fnc_localEvent;
     };
 };
 
 [{
-    (_this select 0) params ["_vehicle", "_jet", "_ring", "_duration", "_startTime", "_light", "_fireSelection", "_sound", "_intensity", "_fireKey"];
+    (_this select 0) params ["_vehicle", "_jet", "_ring", "_startTime", "_duration", "_light", "_fireSelection", "_sound", "_intensity", "_fireKey"];
 
     private _elapsedTime = CBA_missionTime - _startTime;
 
     // Clean up effects once effects have finished or vehicle has been deleted
     if (isNull _vehicle || {_elapsedTime >= _duration}) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        (_this select 1) call CBA_fnc_removePerFrameHandler;
 
         deleteVehicle _light;
 
@@ -222,4 +223,4 @@ if (isServer) then {
         (_tiWheels + _intensity * 0.004) / 1.002, // wheels//tracks are further away from burning parts
         (_tiWeapon + _intensity * 0.01) / 1.005
     ];
-}, 0, [_vehicle, _jet, _ring, _duration, CBA_missionTime, _light, _fireSelection, _sound, _intensity, _fireKey]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_vehicle, _jet, _ring, _startTime, _duration, _light, _fireSelection, _sound, _intensity, _fireKey]] call CBA_fnc_addPerFrameHandler;

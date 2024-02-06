@@ -128,7 +128,7 @@ switch (_fillingType) do {
             } else {
                 private _pos = _building select 0;
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
-                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits, {floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
+                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
                 if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
@@ -177,7 +177,7 @@ switch (_fillingType) do {
             } else {
                 private _pos = _building select 0;
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
-                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits, {floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
+                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
                 if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
@@ -224,7 +224,7 @@ switch (_fillingType) do {
             } else {
                 private _pos = selectRandom _building;
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
-                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits, {floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
+                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
                 if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
@@ -258,7 +258,7 @@ switch (_fillingType) do {
     };
 };
 
-TRACE_1(format [ARR_2("fnc_garrison: while loop ended | %1 units ready to be treated by PFH",count _unitMoveList)], _teleport);
+TRACE_1(format [ARR_2("fnc_garrison: while loop ended | %1 units ready to be treated by PFH",count _unitMoveList)],_teleport);
 
 // Update the unit list and remove duplicate positions and units
 private _garrison_unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
@@ -279,5 +279,5 @@ if (_teleport) then {
     [_unitMoveList] call FUNC(garrisonMove);
 };
 
-TRACE_1(format [ARR_3("fnc_garrison: End | %1 units left | %2 buildings left", count _unitsArray, count _buildingsIndex)], _unitsArray);
+TRACE_1(format [ARR_3("fnc_garrison: End | %1 units left | %2 buildings left",count _unitsArray,count _buildingsIndex)],_unitsArray);
 _unitsArray

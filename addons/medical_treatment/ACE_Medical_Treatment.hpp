@@ -605,10 +605,13 @@ class ADDON {
             incompatibleMedication[] = {};
         };
         class PainKillers {
-            painReduce = 0.1;
-            timeInSystem = 600;
+            painReduce = 0.35;
+            hrIncreaseLow[] = {-5, -10};
+            hrIncreaseNormal[] = {-5, -15};
+            hrIncreaseHigh[] = {-5, -17};
+            timeInSystem = 420;
             timeTillMaxEffect = 60;
-            maxDose = 10;
+            maxDose = 6;
             incompatibleMedication[] = {};
             viscosityChange = 5;
         };

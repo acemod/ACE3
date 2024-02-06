@@ -51,7 +51,7 @@ if (hasInterface) then {
     };
 
     // Spawn smoke
-    _smoke = "#particlesource" createVehicleLocal [0, 0, 0];
+    _smoke = createVehicleLocal ["#particlesource", ASLToAGL getPosASL _vehicle, [], 0, "CAN_COLLIDE"];;
     _smoke setParticleClass "ObjectDestructionSmoke1_2Smallx";
     _smoke attachTo [_vehicle, _position];
 };
@@ -60,14 +60,20 @@ if (hasInterface) then {
     (_this select 0) params ["_vehicle", "_smoke", "_endTime"];
 
     if (!alive _vehicle || {_vehicle getHitPointDamage "HitEngine" < 0.9} || {CBA_missionTime >= _endTime}) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        (_this select 1) call CBA_fnc_removePerFrameHandler;
 
         deleteVehicle _smoke;
 
         if (isNull _vehicle || !isServer) exitWith {};
 
-        (_vehicle getVariable [QGVAR(engineFireJipID), ""]) call CBA_fnc_removeGlobalEventJIP;
+        _vehicle setVariable [QGVAR(isEngineSmoking), nil];
 
-        _vehicle setVariable [QGVAR(isEngineSmoking), false];
+        private _jipID = _vehicle getVariable QGVAR(engineFireJipID);
+
+        if (isNil "_jipID") exitWith {};
+
+        _jipID call CBA_fnc_removeGlobalEventJIP;
+
+        _vehicle setVariable [QGVAR(engineFireJipID), nil];
     };
 }, 5, [_vehicle, _smoke, _endTime]] call CBA_fnc_addPerFrameHandler;

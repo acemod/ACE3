@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Selections for smoke to come out of <ARRAY> (default: [])
+ * 1: Selections for smoke to come out of <ARRAY>
  *
  * Return Value:
  * None
@@ -16,10 +16,7 @@
  * Public: No
  */
 
-params ["_vehicle", ["_positions", []]];
-
-// Make sure effects are cleaned up if vehicle is deleted
-[QGVAR(addCleanupHandlers), _vehicle] call CBA_fnc_localEvent;
+params ["_vehicle", "_positions"];
 
 private _positionBarrelEnd = getText ([_vehicle, [0]] call CBA_fnc_getTurret >> "gunBeg");
 
@@ -44,4 +41,4 @@ private _effects = [_smokeBarrel];
     _effects pushBack _smoke;
 } forEach _positions;
 
-_vehicle setVariable [QGVAR(effects), _effects];
+_vehicle setVariable [QGVAR(vehicleEffects), _effects];

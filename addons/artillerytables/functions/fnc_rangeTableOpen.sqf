@@ -65,7 +65,7 @@ GVAR(magModeData) = [];
 {
     _x params ["_xDisplayNameShort", "_xDisplayName", "_xInitSpeed", "_xAirFriction"];
     if (_allSameCharge) then {
-        _ctrlChargeList lbAdd format ["%1", _xDisplayNameShort];
+        _ctrlChargeList lbAdd _xDisplayNameShort;
         _ctrlChargeList lbSetTooltip [count GVAR(magModeData), format ["%1\n%2 m/s\n%3", _xDisplayName, _xInitSpeed toFixed 1, _xAirFriction]];
         GVAR(magModeData) pushBack [_xInitSpeed, _xAirFriction];
     } else {

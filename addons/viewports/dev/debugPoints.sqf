@@ -22,7 +22,7 @@
 #define IDD_3DEN 313
 
 [] spawn {
-    INFO_2("Pre-Init [is3den %1][3den display: %2]", is3den, !isNull findDisplay IDD_3DEN);
+    INFO_2("Pre-Init [is3den %1][3den display: %2]",is3den,!isNull findDisplay IDD_3DEN);
     if (!is3den) exitWith {};
 
     GVAR(3denIndex) = 0;

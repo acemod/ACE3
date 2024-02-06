@@ -248,7 +248,7 @@ switch (_hitArea) do {
         };
 
         {
-            TRACE_1("doing damage to hitpoint", _x);
+            TRACE_1("doing damage to hitpoint",_x);
             [_vehicle, -1, _x, 1 * _penChance] call FUNC(addDamage);
         } forEach _partKill;
 
@@ -270,7 +270,7 @@ switch (_hitArea) do {
         };
 
         if (0.8 * _ammoEffectiveness > random 1) then {
-            TRACE_1("damaged turret", _ammoEffectiveness * 0.8);
+            TRACE_1("damaged turret",_ammoEffectiveness * 0.8);
             [_vehicle, _hitIndex, _hitpointName, 1 * _penChance] call FUNC(addDamage);
             _vehicle setVariable [QGVAR(canShoot), false];
         };

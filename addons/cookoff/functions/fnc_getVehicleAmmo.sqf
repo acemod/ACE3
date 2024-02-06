@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets all magazines inside of a vehicle.
+ * Gets all magazines inside of an object.
  *
  * Arguments:
  * 0: Object <OBJECT>

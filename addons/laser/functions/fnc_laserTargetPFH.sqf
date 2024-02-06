@@ -26,7 +26,7 @@ GVAR(trackedLaserTargets) = GVAR(trackedLaserTargets) select {
 
         // Turn off the laser in ace_laser
         [_laserUuid] call FUNC(laserOff);
-        TRACE_1("Laser off:", _laserUuid);
+        TRACE_1("Laser off:",_laserUuid);
         false
     } else {
         private _newCode = _owner getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
