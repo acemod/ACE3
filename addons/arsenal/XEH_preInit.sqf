@@ -38,6 +38,8 @@ call FUNC(compileStats);
 
 [QGVAR(cargoChanged), {
     params ["_display"];
+    // Only update actions if necessary, this can get performance-intensive using the arrow keys
+    if (!GVAR(updateActionsOnCargoChange)) exitWith {};
     private _actionInfo = [_display];
     _actionInfo append GVAR(actionInfo);
     [QGVAR(displayActions), _actionInfo] call CBA_fnc_localEvent;
