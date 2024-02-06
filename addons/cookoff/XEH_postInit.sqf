@@ -65,7 +65,7 @@ if (isServer) then {
             objNull,
             objNull,
             random [MIN_AMMO_DETONATION_START_DELAY, (MIN_AMMO_DETONATION_START_DELAY + MAX_AMMO_DETONATION_START_DELAY) / 2, MAX_AMMO_DETONATION_START_DELAY]
-        ] call CBA_fnc_serverEvent;
+        ]] call CBA_fnc_serverEvent;
     };
 }, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
 
