@@ -39,4 +39,4 @@
 ["ACE Explosives", QGVAR(cycleActiveClacker), LLSTRING(CycleActiveTrigger), {
     if !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
     [ACE_player] call FUNC(cycleActiveTrigger);
-}, {false}, [DIK_C, [false, true, false]], false, 0] call CBA_fnc_addKeybind; // (CTRL+C)
+}, {false}, [], false, 0] call CBA_fnc_addKeybind; // (Unbound)
