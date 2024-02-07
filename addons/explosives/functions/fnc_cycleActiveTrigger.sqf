@@ -4,13 +4,13 @@
  * Cycles the "Active Trigger" of a unit and shows a CBA Hint that displays the new Active Trigger.
  *
  * Arguments:
- * 0: Target Unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [ACE_player] call ACE_Explosives_fnc_cycleActiveTrigger;
+ * [ACE_player] call ace_explosives_fnc_cycleActiveTrigger;
  *
  * Public: No
  */

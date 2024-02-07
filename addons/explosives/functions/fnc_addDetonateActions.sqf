@@ -64,7 +64,7 @@ if (
             QGVAR(setActiveTrigger),
             LLSTRING(SetActiveTrigger),
             "",
-            {GVAR(activeTrigger) = (_this select 2) select 0},
+            {GVAR(activeTrigger) = (_this select 2) select 0;},
             {true},
             {},
             [_detonator]
@@ -82,7 +82,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
                 "Explosive_All",
                 LLSTRING(DetonateAll),
                 getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
-                {(_this select 2) call FUNC(detonateExplosiveAll)},
+                {(_this select 2) call FUNC(detonateExplosiveAll);},
                 {true},
                 {},
                 [_unit, _range, _explosivesList, _detonator]
