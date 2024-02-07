@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(deploy) {
                 displayName = CSTRING(PlaceTripod_displayName);
-                condition = QUOTE(call FUNC(assemble_canDeployTripod));
+                condition = QUOTE(call FUNC(canDeployTripod));
                 statement = QUOTE(call FUNC(assemble_deployTripod));
                 exceptions[] = {};
             };
