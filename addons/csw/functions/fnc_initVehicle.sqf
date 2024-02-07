@@ -16,7 +16,11 @@
  */
 
 params ["_vehicle"];
-if (isNull _vehicle) exitWith { WARNING_1("%1 became null",_vehicle); };
+if (!alive _vehicle) exitWith { WARNING_1("%1 not alive",_vehicle); };
+if (!simulationEnabled _vehicle) exitWith {
+    [{simulationEnabled _this}, FUNC(initVehicle), _vehicle] call CBA_fnc_waitUntilAndExecute;
+};
+
 private _typeOf = typeOf _vehicle;
 private _configOf = configOf _vehicle;
 private _configEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "enabled")) == 1;
