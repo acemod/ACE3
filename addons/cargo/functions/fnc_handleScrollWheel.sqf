@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Smith
+ * Author: L-H, commy2, Smith
  * Handles rotation of object to unload.
  *
  * Arguments:
@@ -17,23 +17,42 @@
 
 if (GVAR(deployPFH) == -1) exitWith {false};
 
-params ["_scroll"];
+params ["_scrollAmount"];
 
-// Change direction
-if (CBA_events_control) exitWith {
-    GVAR(deployDirection) = GVAR(deployDirection) + (_scroll * 5);
+private _deployedItem = GVAR(itemPreviewObject);
 
-    true
+if (!CBA_events_control) then {
+    private _unit = ACE_player;
+
+    // Raise/lower
+    // Move deployed item 15 cm per scroll interval
+    _scrollAmount = _scrollAmount * 0.15;
+
+    private _position = getPosASL _deployedItem;
+    private _maxHeight = (_unit modelToWorldVisualWorld [0, 0, 0]) select 2;
+
+    _position set [2, ((_position select 2) + _scrollAmount min (_maxHeight + 1.5)) max _maxHeight];
+
+    // Move up/down object and reattach at current position
+    detach _deployedItem;
+
+    // Uses this method of selecting position because setPosATL did not have immediate effect
+    private _positionChange = _position vectorDiff (getPosASL _deployedItem);
+    private _selectionPosition = _unit worldToModel (ASLtoAGL getPosWorld _deployedItem);
+    _selectionPosition = _selectionPosition vectorAdd _positionChange;
+    _deployedItem attachTo [_unit, _selectionPosition];
+
+    // Reset the deploy direction
+    private _direction = _deployedItem getVariable [QGVAR(deployDirection_temp), 0];
+    _deployedItem setDir _direction;
+} else {
+    // Rotate
+    private _direction = _deployedItem getVariable [QGVAR(deployDirection_temp), 0];
+    _scrollAmount = _scrollAmount * 10;
+    _direction = _direction + _scrollAmount;
+
+    _deployedItem setDir _direction;
+    _deployedItem setVariable [QGVAR(deployDirection_temp), _direction];
 };
-
-// Change height
-if (CBA_events_alt) exitWith {
-    GVAR(deployHeight) = 2 min (-2 max GVAR(deployHeight) + (_scroll * 0.1));
-
-    true
-};
-
-// Change distance
-GVAR(deployDistance) = MAX_LOAD_DISTANCE min (1 max GVAR(deployDistance) + (_scroll * 0.1));
 
 true

@@ -15,12 +15,12 @@
  * Public: No
  */
 
-if (!GVAR(canDeploy) || {GVAR(deployPFH) == -1}) exitWith {};
+if (GVAR(deployPFH) == -1) exitWith {};
 
 params ["_unit"];
 
 // Delete placement dummy and unload real item from cargo at dummy position
-if (!isNull GVAR(itemPreviewObject)) then {
+if (!isNull GVAR(itemPreviewObject) && {[GVAR(selectedItem), GVAR(interactionVehicle), _unit, false, true] call FUNC(canUnloadItem)}) then {
     // Position is AGL for unloading event
     private _position = ASLToAGL getPosASL GVAR(itemPreviewObject);
     private _direction = getDir GVAR(itemPreviewObject);
