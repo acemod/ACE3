@@ -4,12 +4,12 @@
  * Calculates the oxygen density
  *
  * Arguments:
- * 0: temperature - degrees celsius <NUMBER>
- * 1: pressure - hPa <NUMBER>
- * 2: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
+ * 0: Temperature - °C <NUMBER>
+ * 1: Pressure - hPa <NUMBER>
+ * 2: Relative humidity - value between 0.0 and 1.0 <NUMBER>
  *
  * Return Value:
- * density of oxygen - kg * m^(-3) <NUMBER>
+ * Density of oxygen - kg * m^(-3) <NUMBER>
  *
  * Example:
  * [0, 1020] call ace_weather_fnc_calculateOxygenDensity
