@@ -310,4 +310,17 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_white_co.paa)};
         GVAR(bodyBagObject) = "ACE_bodyBagObject_white";
     };
+    class ACE_painkillers: ACE_ItemCore {
+        scope = 2;
+        author = "Alganthe";
+        displayName = CSTRING(painkillers_Display);
+        model = "\A3\Structures_F_EPA\Items\Medical\PainKillers_F.p3d";
+        picture = QPATHTOF(ui\painkillers_ca.paa);
+        descriptionShort = CSTRING(painkillers_Desc_Short);
+        descriptionUse = CSTRING(painkillers_Desc_Use);
+        ACE_isMedicalItem = 1;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
 };

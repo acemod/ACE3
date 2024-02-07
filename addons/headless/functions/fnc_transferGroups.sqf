@@ -132,7 +132,7 @@ private _numTransferredHC3 = 0;
                 };
             };
             default {
-                TRACE_1("No Valid HC to transfer to", _currentHC);
+                TRACE_1("No Valid HC to transfer to",_currentHC);
             };
         };
     };
@@ -140,7 +140,7 @@ private _numTransferredHC3 = 0;
 
 if (XGVAR(log)) then {
     private _numTransferredTotal = _numTransferredHC1 + _numTransferredHC2 + _numTransferredHC3;
-    INFO_4("Groups Transferred: Total: %1 - HC1: %2 - HC2: %3 - HC3: %4", _numTransferredTotal, _numTransferredHC1, _numTransferredHC2, _numTransferredHC3);
+    INFO_4("Groups Transferred: Total: %1 - HC1: %2 - HC2: %3 - HC3: %4",_numTransferredTotal,_numTransferredHC1,_numTransferredHC2,_numTransferredHC3);
 };
 
 // Allow rebalance flag

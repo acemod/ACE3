@@ -18,7 +18,7 @@
 params ["_name"];
 
 if !(_name in GVAR(syncedEvents)) exitWith {
-    ERROR_1("Synced event key [%1] not found (removeSyncedEventHandler).", _name);
+    ERROR_1("Synced event key [%1] not found (removeSyncedEventHandler)",_name);
     false
 };
 

@@ -25,12 +25,12 @@ private _fingerPos = if (_sourceUnit == ACE_player) then {
     _fingerPosPrecise vectorAdd ([random (2 * FP_RANDOMIZATION_X) - FP_RANDOMIZATION_X, random (2 * FP_RANDOMIZATION_X) - FP_RANDOMIZATION_X, random (2 * FP_RANDOMIZATION_Y) - FP_RANDOMIZATION_Y] vectorMultiply _distance)
 };
 
-TRACE_3("incoming finger:", _sourceUnit, _fingerPosPrecise, _fingerPos);
+TRACE_3("incoming finger:",_sourceUnit,_fingerPosPrecise,_fingerPos);
 
 private _data = [diag_tickTime, _fingerPos, ([_sourceUnit, false, true] call EFUNC(common,getName)), _sourceUnit];
 GVAR(fingersHash) set [hashValue _sourceUnit, _data];
 
 if (GVAR(pfeh_id) == -1) then {
     GVAR(pfeh_id) = [DFUNC(perFrameEH), 0, []] call CBA_fnc_addPerFrameHandler;
-    TRACE_1("Started PFEH", GVAR(pfeh_id));
+    TRACE_1("Started PFEH",GVAR(pfeh_id));
 };

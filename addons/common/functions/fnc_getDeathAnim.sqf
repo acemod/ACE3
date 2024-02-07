@@ -27,7 +27,7 @@ if (getNumber (_unitAnimationCfg >> "terminal") == 1) exitWith {_animationState}
 
 private _unitActionsCfg = configFile >> "CfgMovesBasic" >> "Actions" >> getText (_unitAnimationCfg >> "actions");
 
-TRACE_2("Animation/Action", configName _unitAnimationCfg, configName _unitActionsCfg);
+TRACE_2("Animation/Action",configName _unitAnimationCfg,configName _unitActionsCfg);
 
 if (vehicle _unit != _unit) then {
     private _interpolateArray = getArray (_unitAnimationCfg >> "interpolateTo");

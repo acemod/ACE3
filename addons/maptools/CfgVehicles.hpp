@@ -92,7 +92,7 @@ class CfgVehicles {
             };
             class ACE_PlottingBoard {
                 displayName = CSTRING(ShowPlottingBoard);
-                condition = QUOTE(GVAR(plottingBoard_Shown) < 1 && {call FUNC(canUsePlottingBoard)});
+                condition = QUOTE(GVAR(plottingBoard_Shown) == 0 && {call FUNC(canUsePlottingBoard)});
                 statement = QUOTE(GVAR(plottingBoard_Shown) = 1);
                 EXCEPTIONS;
                 showDisabled = 0;
@@ -127,7 +127,7 @@ class CfgVehicles {
                 };
                 class ACE_PlottingBoardAlign {
                     displayName = CSTRING(AlignTo);
-                    condition = QUOTE(GVAR(plottingBoard_Shown) > 0);
+                    condition = QUOTE(GVAR(plottingBoard_Shown) != 0);
                     statement = "";
                     EXCEPTIONS;
                     showDisabled = 0;
@@ -141,7 +141,7 @@ class CfgVehicles {
 
                         class ACE_PlottingBoardAlignBoardMaptool {
                             displayName = CSTRING(ToMapToolLabel);
-                            condition = QUOTE(GVAR(mapTool_Shown) > 0 && GVAR(plottingBoard_angle) != GVAR(mapTool_angle));
+                            condition = QUOTE(GVAR(mapTool_Shown) != 0 && GVAR(plottingBoard_angle) != GVAR(mapTool_angle));
                             statement = QUOTE(GVAR(plottingBoard_angle) = GVAR(mapTool_angle));
                             EXCEPTIONS;
                             showDisabled = 0;
@@ -163,7 +163,7 @@ class CfgVehicles {
 
                         class ACE_PlottingBoardAlignAcrylicMaptool {
                             displayName = CSTRING(ToMapToolLabel);
-                            condition = QUOTE(GVAR(mapTool_Shown) > 0 && GVAR(plottingBoard_acrylicAngle) != GVAR(mapTool_angle));
+                            condition = QUOTE(GVAR(mapTool_Shown) != 0 && GVAR(plottingBoard_acrylicAngle) != GVAR(mapTool_angle));
                             statement = QUOTE(GVAR(plottingBoard_acrylicAngle) = GVAR(mapTool_angle));
                             EXCEPTIONS;
                             showDisabled = 0;
@@ -185,7 +185,7 @@ class CfgVehicles {
 
                         class ACE_PlottingBoardAlignRulerMaptool {
                             displayName = CSTRING(ToMapToolLabel);
-                            condition = QUOTE(GVAR(mapTool_Shown) > 0 && GVAR(plottingBoard_rulerAngle) != GVAR(mapTool_angle));
+                            condition = QUOTE(GVAR(mapTool_Shown) != 0 && GVAR(plottingBoard_rulerAngle) != GVAR(mapTool_angle));
                             statement = QUOTE(GVAR(plottingBoard_rulerAngle) = GVAR(mapTool_angle));
                             EXCEPTIONS;
                             showDisabled = 0;

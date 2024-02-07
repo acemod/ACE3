@@ -22,7 +22,7 @@ params ["_soundClass", "_posASL", "_volume", "_distance"];
 
 private _sound = getArray (configFile >> "CfgSounds" >> _soundClass >> "sound");
 if (_sound isEqualTo []) exitWith {
-    ERROR_1("CfgSounds class [%1] does not exist or contains empty sound array", _soundClass);
+    ERROR_1("CfgSounds class [%1] does not exist or contains empty sound array",_soundClass);
 };
 TRACE_2("sound",_soundClass,_sound);
 
