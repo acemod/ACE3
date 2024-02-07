@@ -23,6 +23,12 @@ if (!alive ACE_player) exitWith {
     _staminaBarContainer ctrlCommit 1;
 };
 
+
+private _oxygen = 0.9; // Default AF oxygen saturation
+if (GVAR(medicalLoaded) && {EGVAR(medical_vitals,simulateSpo2)}) then {
+    _oxygen = (ACE_player getVariable [QEGVAR(medical,spo2), 97]) / 100;
+};
+
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
 
@@ -42,8 +48,8 @@ GVAR(muscleDamage) = (GVAR(muscleDamage) + (_currentWork / GVAR(peakPower)) ^ 3.
 private _muscleIntegritySqrt = sqrt (1 - GVAR(muscleDamage));
 
 // Calculate available power
-private _ae1PathwayPowerFatigued = GVAR(ae1PathwayPower) * sqrt (GVAR(ae1Reserve) / AE1_MAXRESERVE) * OXYGEN * _muscleIntegritySqrt;
-private _ae2PathwayPowerFatigued = GVAR(ae2PathwayPower) * sqrt (GVAR(ae2Reserve) / AE2_MAXRESERVE) * OXYGEN * _muscleIntegritySqrt;
+private _ae1PathwayPowerFatigued = GVAR(ae1PathwayPower) * sqrt (GVAR(ae1Reserve) / AE1_MAXRESERVE) * _oxygen * _muscleIntegritySqrt;
+private _ae2PathwayPowerFatigued = GVAR(ae2PathwayPower) * sqrt (GVAR(ae2Reserve) / AE2_MAXRESERVE) * _oxygen * _muscleIntegritySqrt;
 
 // Calculate how much power is consumed from each reserve
 private _ae1Power = _currentWork min _ae1PathwayPowerFatigued;
@@ -58,8 +64,8 @@ GVAR(anReserve)  = GVAR(anReserve)  -  _anPower / WATTSPERATP;
 GVAR(anFatigue)  = GVAR(anFatigue) + _anPower * (0.057 / GVAR(peakPower)) * 1.1;
 
 // Aerobic ATP reserve recovery
-GVAR(ae1Reserve) = ((GVAR(ae1Reserve) + OXYGEN * 6.60 * (GVAR(ae1PathwayPower) - _ae1Power) / GVAR(ae1PathwayPower) * GVAR(recoveryFactor)) min AE1_MAXRESERVE) max 0;
-GVAR(ae2Reserve) = ((GVAR(ae2Reserve) + OXYGEN * 5.83 * (GVAR(ae2PathwayPower) - _ae2Power) / GVAR(ae2PathwayPower) * GVAR(recoveryFactor)) min AE2_MAXRESERVE) max 0;
+GVAR(ae1Reserve) = ((GVAR(ae1Reserve) + _oxygen * 6.60 * (GVAR(ae1PathwayPower) - _ae1Power) / GVAR(ae1PathwayPower) * GVAR(recoveryFactor)) min AE1_MAXRESERVE) max 0;
+GVAR(ae2Reserve) = ((GVAR(ae2Reserve) + _oxygen * 5.83 * (GVAR(ae2PathwayPower) - _ae2Power) / GVAR(ae2PathwayPower) * GVAR(recoveryFactor)) min AE2_MAXRESERVE) max 0;
 
 // Anaerobic ATP reserver and fatigue recovery
 GVAR(anReserve) = ((GVAR(anReserve)
@@ -70,9 +76,9 @@ GVAR(anFatigue) = ((GVAR(anFatigue)
     - (_ae1PathwayPowerFatigued + _ae2PathwayPowerFatigued - _ae1Power - _ae2Power) * (0.057 / GVAR(peakPower)) * GVAR(anFatigue) ^ 2 * GVAR(recoveryFactor)
 ) min 1) max 0;
 
-private _aeReservePercentage = (GVAR(ae1Reserve) / AE1_MAXRESERVE + GVAR(ae2Reserve) / AE2_MAXRESERVE) / 2;
-private _anReservePercentage = GVAR(anReserve) / AN_MAXRESERVE;
-private _perceivedFatigue = 1 - (_anReservePercentage min _aeReservePercentage);
+GVAR(aeReservePercentage) = (GVAR(ae1Reserve) / AE1_MAXRESERVE + GVAR(ae2Reserve) / AE2_MAXRESERVE) / 2;
+GVAR(anReservePercentage) = GVAR(anReserve) / AN_MAXRESERVE;
+private _perceivedFatigue = 1 - (GVAR(anReservePercentage) min GVAR(aeReservePercentage));
 
 [ACE_player, _perceivedFatigue, _currentSpeed, GVAR(anReserve) == 0] call FUNC(handleEffects);
 
