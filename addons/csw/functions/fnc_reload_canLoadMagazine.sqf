@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
- * Author: PabstMirror &tcvm
- * Tests if unit can load a magazine into a static weapon.
+ * Author: PabstMirror, tcvm
+ * Tests if unit can load a magazine into a CSW.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Carryable Magazine <STRING>
- * 3: Supplier <OBJECT>
+ * 3: Supplier <OBJECT> (default: objNull)
  *
  * Return Value:
- * [CanLoad<BOOL>, LoadedMag<STRING>, AmmoNeeded<NUMBER>, IsBeltLinking<BOOL>]<ARRAY>
+ * [Can Load <BOOL>, Loaded Mag <STRING>, Ammo Needed <NUMBER>, Is Belt Linking <BOOL>] <ARRAY>
  *
  * Example:
  * [cursorObject, [0], "ACE_csw_100Rnd_127x99_mag_red", player] call ace_csw_fnc_reload_canLoadMagazine
@@ -19,21 +19,23 @@
  */
 
 params ["_vehicle", "_turret", "_carryMag", ["_magSource", objNull]];
-// TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource);
+TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource);
 
 private _return = [false, "", -2, false];
 
 // Handle disassembled or deleted
-if (!alive _vehicle) exitWith { _return };
-// Verify holder has carry magazine
-if (
-    (!isNull _magSource) &&
-    {!((_magSource isKindOf "Bag_Base") || {_magSource isKindOf "ContainerSupply"})} && // hacky workaround for magazines within dropped backpacks
-    {
-        ((_vehicle distance _magSource) > 10) ||
-        {((magazineCargo _magSource) findIf {_x == _carryMag}) == -1}
-    }
-) exitWith { _return };
+if !(alive _vehicle) exitWith {TRACE_1("not alive",_vehicle); _return};
+
+scopeName "main";
+
+// objNull as mag source means we can skip these checks: used to just get magazine info to load in turret
+if !(isNull _magSource) then {
+    // Verify holder has carry magazine
+    if !(_carryMag in (magazineCargo _magSource)) exitWith {TRACE_3("no carry mag",_magSource,_carryMag,magazineCargo _magSource); _return breakOut "main"};
+
+    // Verify holder has not moved away from vehicle, with workaround for containers within containers
+    if ((_vehicle distance _magSource) > 5 && {(_vehicle distance (objectParent _magSource)) > 5}) exitWith {TRACE_1("too far",""); _return breakOut "main"};
+};
 
 // solve config lookups
 private _cfgMagazines = configFile >> "CfgMagazines";
@@ -46,7 +48,6 @@ private _ammoNeeded = _desiredAmmo min getNumber (_cfgMagazinesCarryMag >> "coun
 private _loadedMag = "";
 private _isBeltLinking = false;
 
-scopeName "main";
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
     if (_xTurret isEqualTo _turret) then {
@@ -62,7 +63,7 @@ scopeName "main";
             };
             private _maxMagazineAmmo = _desiredAmmo min getNumber (_cfgMagazines >> _xMag >> "count");
             if (_xAmmo >= _maxMagazineAmmo) exitWith {
-                [false, _loadedMag, -6, false] breakOut "main"; // Already at capicity
+                [false, _loadedMag, -6, false] breakOut "main"; // Already at capacity
             };
             _ammoNeeded = _maxMagazineAmmo - _xAmmo;
             _isBeltLinking = true;

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror, Dystopian
- * Gets magazine that the player can carry, suitable to vehicle magazine
+ * Gets magazine that the player can carry, suitable to vehicle magazine.
  *
  * Arguments:
  * 0: Vehicle Magazine <STRING>
@@ -12,10 +12,10 @@
  * Example:
  * "1Rnd_GAT_missiles" call ace_csw_fnc_getCarryMagazine
  *
- * Public: No
+ * Public: Yes
  */
 
-params ["_vehicleMag"];
+params [["_vehicleMag", "", [""]]];
 
 private _carryMag = GVAR(vehicleMagCache) get _vehicleMag;
 if (isNil "_carryMag") then {

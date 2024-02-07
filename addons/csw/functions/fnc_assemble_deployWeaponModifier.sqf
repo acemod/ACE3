@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Modifies interaction for deploying weapon
+ * Modifies interaction for deploying weapon.
  *
  * Arguments:
  * 0: Target <OBJECT>

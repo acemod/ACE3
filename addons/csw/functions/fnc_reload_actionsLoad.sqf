@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets sub actions for what the player can load into the static weapon
+ * Gets sub actions for what the player can load into the CSW.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Player <OBJECT>
  *
  * Return Value:
@@ -23,16 +23,17 @@ private _loadableMagazines = [_vehicle, _player] call FUNC(reload_getLoadableMag
 
 private _statement = {
     params ["_target", "_player", "_params"];
-    _params params ["_carryMag", "_turretPath", "", "_magSource"];
+    _params params ["_carryMag", "_turretPath", "", "_magSource", "", "_ammo"];
 
-    [_target, _turretPath, _carryMag, _magSource, _player] call FUNC(reload_loadMagazine);
+    [_target, _turretPath, _carryMag, _magSource, _player, _ammo] call FUNC(reload_loadMagazine);
 };
 
 private _condition = {
     params ["_target", "_player", "_params"];
     _params params ["_carryMag", "_turretPath", "", "_magSource"];
 
-    ([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0
+    [_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew) &&
+    {([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0}
 };
 
 private _cfgMagazines = configFile >> "CfgMagazines"; // micro-optimization
@@ -44,9 +45,9 @@ private _cfgMagazines = configFile >> "CfgMagazines"; // micro-optimization
     private _displayName = getText (_cfgMagazines >> _carryMag >> "displayName");
     private _picture = getText (_cfgMagazines >> _carryMag >> "picture");
     private _text = if (_isBeltLinking) then {
-        format [localize LSTRING(actionLink), _displayName];
+        format [LLSTRING(actionLink), _displayName];
     } else {
-        format [localize LSTRING(loadX), _displayName];
+        format [LLSTRING(actionLoad), _displayName];
     };
 
     private _action = [format ["load_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, _x] call EFUNC(interact_menu,createAction);

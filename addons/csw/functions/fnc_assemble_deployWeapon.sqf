@@ -1,10 +1,13 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
- * Deploys the current CSW
+ * Author: tcvm
+ * Deploys the current CSW.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Player <OBJECT>
+ * 2: Args <ANY>
+ * 3: Action Data <ARRAY> (default: secondaryWeapon _player)
  *
  * Return Value:
  * None
@@ -17,14 +20,16 @@
 
 [{
     params ["_tripod", "_player", "", "_carryWeaponClassname"];
+
     if (isNil "_carryWeaponClassname") then { _carryWeaponClassname = secondaryWeapon _player };
     TRACE_3("assemble_deployWeapon_carryWeaponClassname",_tripod,_player,_carryWeaponClassname);
 
     private _tripodClassname = typeOf _tripod;
     _player removeWeaponGlobal _carryWeaponClassname;
 
-    private _assembledClassname = getText(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> _tripodClassname);
-    private _deployTime =  getNumber(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
+    private _config = configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
+    private _assembledClassname = getText (_config >> "assembleTo" >> _tripodClassname);
+    private _deployTime =  getNumber (_config >> "deployTime");
     if (!isClass (configFile >> "CfgVehicles" >> _assembledClassname)) exitWith {ERROR_1("bad static classname [%1]",_assembledClassname);};
 
     TRACE_4("",_carryWeaponClassname,_tripodClassname,_assembledClassname,_deployTime);
@@ -72,5 +77,5 @@
         !isNull _tripod;
     };
 
-    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, LLSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
