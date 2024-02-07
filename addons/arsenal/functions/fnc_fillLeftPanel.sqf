@@ -239,14 +239,17 @@ private _selectedItem = switch (true) do {
     };
 };
 
-// When switching tabs, clear searchbox
-if (GVAR(currentLeftPanel) != _ctrlIDC) then {
+// When switching tabs...
+if (isNil {GVAR(currentLeftPanel)} || {GVAR(currentLeftPanel) != _ctrlIDC}) then {
+    GVAR(currentLeftPanel) = _ctrlIDC;
+    // Clear searchbox
     (_display displayCtrl IDC_leftSearchbar) ctrlSetText "";
     (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
+    // Find new filters
+    [_display, _ctrlIDC] call FUNC(fillFilters);
 };
 
 // Trigger event
-GVAR(currentLeftPanel) = _ctrlIDC;
 [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort

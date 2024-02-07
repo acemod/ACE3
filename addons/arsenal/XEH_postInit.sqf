@@ -11,6 +11,7 @@ GVAR(lastSortLeft) = "";
 GVAR(lastSortRight) = "";
 GVAR(lastSortDirectionLeft) = DESCENDING;
 GVAR(lastSortDirectionRight) = DESCENDING;
+GVAR(lastSelectedFilters) = [];
 
 [QGVAR(initBox), LINKFUNC(initBox)] call CBA_fnc_addEventHandler;
 [QGVAR(removeBox), LINKFUNC(removeBox)] call CBA_fnc_addEventHandler;

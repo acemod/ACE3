@@ -170,6 +170,9 @@
 #define IDC_actionsPreviousPage 91
 #define IDC_actionsNextPage 92
 #define IDC_actionsCurrentPage 93
+#define IDC_filtersBox 80
+#define IDC_filtersListBox 81
+#define IDC_filtersAllCheckBox 82
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3

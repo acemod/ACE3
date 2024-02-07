@@ -80,6 +80,8 @@ GVAR(statsInfo) = [true, controlNull, nil, nil];
 GVAR(currentActionPage) = 0;
 GVAR(actionsInfo) = [controlNull, nil, nil];
 
+GVAR(showFilters) = true;
+
 // Update current item list
 call FUNC(updateCurrentItemsList);
 

@@ -275,6 +275,66 @@ class GVAR(display) {
                 };
             };
         };
+        class filtersBox: RscControlsGroupNoScrollbars {
+            idc = IDC_filtersBox;
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
+            y = QUOTE(safeZoneH + safezoneY - 50 * GRID_H);
+            w = QUOTE(47 * GRID_W);
+            h = QUOTE(37 * GRID_H);
+            class controls {
+                class filtersStaticBackground1: ctrlStaticBackground {
+                    idc = -1;
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(47 * GRID_W);
+                    h = QUOTE(56 * GRID_H);
+                    colorBackground[]={0.1,0.1,0.1,0.5};
+                };
+                class filtersStaticBackground2: ctrlStaticBackground {
+                    idc = -1;
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(47 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                    colorBackground[]={0.1,0.1,0.1,0.8};
+                };
+                class filtersTitle: RscText {
+                    idc = -1;
+                    style = ST_CENTER;
+                    x = QUOTE(5 * GRID_W);
+                    w = QUOTE(37 * GRID_W);
+                    colorBackground[]={0,0,0,0};
+                    shadow=2;
+                    sizeEx = QUOTE(5 * GRID_H);
+                    text = CSTRING(filtersTitleText);
+                };
+                class filtersListBox: RscListBox {
+                    idc = IDC_filtersListBox;
+                    style = LB_MULTI + LB_TEXTURES;
+                    x = QUOTE(0);
+                    y = QUOTE(5 * GRID_H);
+                    w = QUOTE(47 * GRID_W);
+                    h = QUOTE(51 * GRID_H);
+                    colorSelect[] = {1,1,1,1};
+                    colorSelect2[] = {1,1,1,1};
+                    colorSelectBackground[] = {1,1,1,0.0};
+                    colorSelectBackground2[] = {1,1,1,0.0};
+                    colorPicture[] = {1,1,1,0.7};
+                    colorPictureSelected[] = {1,1,1,1};
+                    sizeEx = QUOTE(5 * GRID_H);
+                    onLBSelChanged = QUOTE(_this call FUNC(handleFilters));
+                };
+                class filtersAllCheckBox: RscCheckBox {
+                    idc = IDC_filtersAllCheckBox;
+                    onCheckedChanged = QUOTE(_this call FUNC(toggleAllFilters));
+                    x = QUOTE(1.75 * GRID_W);
+                    y = QUOTE(0);
+                    w = QUOTE(5 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                    colorFocused[] = {1,1,1,0.7};
+                };
+            };
+        };
         class statsBox: RscControlsGroupNoScrollbars {
             idc = IDC_statsBox;
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);

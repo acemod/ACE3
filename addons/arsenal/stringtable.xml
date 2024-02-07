@@ -1703,5 +1703,35 @@
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
             <Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
         </Key>
+        <Key ID="STR_ACE_Arsenal_filtersTitleText">
+            <English>Filters</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterARifleText">
+            <English>Rifle / SMG</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterSRifleText">
+            <English>DMR / Sniper rifle</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterMGText">
+            <English>Machine gun</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterHGunText">
+            <English>Handgun</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterMissileText">
+            <English>Guided</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterRocketText">
+            <English>Unguided</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterBagText">
+            <English>Backpack</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterDeployableText">
+            <English>Deployable</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_filterOtherText">
+            <English>Other</English>
+        </Key>
     </Package>
 </Project>
