@@ -19,8 +19,8 @@ params ["_vehicle"];
 if (isNull _vehicle) exitWith { WARNING_1("%1 became null",_vehicle); };
 private _typeOf = typeOf _vehicle;
 private _configOf = configOf _vehicle;
-private _configEnabled = (getNumber (_configOf >> "ace_csw" >> "enabled")) == 1;
-private _assemblyConfig = _configEnabled && {(getText (_configOf >> "ace_csw" >> "disassembleWeapon")) != ""};
+private _configEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "enabled")) == 1;
+private _assemblyConfig = _configEnabled && {(getText (_configOf >> QUOTE(ADDON) >> "disassembleWeapon")) != ""};
 TRACE_4("initVehicle",_vehicle,_typeOf,_configEnabled,_assemblyConfig);
 
 if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
