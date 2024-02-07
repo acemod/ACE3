@@ -68,6 +68,26 @@
             <Chinese>引爆全部</Chinese>
             <Turkish>Hepsini Patlat</Turkish>
         </Key>
+        <Key ID="STR_ACE_Explosives_DetonateAllOnActive">
+            <English>Detonate All on Active Clacker</English>
+            <German>Alle auf Standardzünder zünden</German>
+            <Italian>Detona Tutti sul Detonatore Attivo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_SetActiveTrigger">
+            <English>Set Active Clacker</English>
+            <German>Als Standardzünder wählen</German>
+            <Italian>Imposta Detonatore Attivo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_CycleActiveTrigger">
+            <English>Cycle Active Clacker</English>
+            <German>Standardzünder wechseln</German>
+            <Italian>Cambia Detonatore Attivo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ActiveTrigger">
+            <English>Active Clacker</English>
+            <German>Standardzünder</German>
+            <Italian>Detonatore Attivo</Italian>
+        </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
             <German>Sprengstoffcode: %1</German>
