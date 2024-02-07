@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
+ * Author: tcvm
  * Checks if the player can pick-up the tripod.
  *
  * Arguments:
@@ -19,4 +19,3 @@
 params ["_tripod", "_player"];
 
 ((secondaryWeapon _player) isEqualTo "") && {alive _tripod}
-

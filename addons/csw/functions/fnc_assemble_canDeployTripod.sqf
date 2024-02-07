@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
+ * Author: tcvm
  * Checks if the player can deploy the tripod.
  *
  * Arguments:
@@ -18,4 +18,3 @@
 params ["_player"];
 
 (getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QUOTE(ADDON) >> "type") == "mount")
-
