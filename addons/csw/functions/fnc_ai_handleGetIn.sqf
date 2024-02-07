@@ -11,6 +11,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "", "_gunner"];
 TRACE_2("getInEH:",_vehicle,_gunner);
 

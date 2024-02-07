@@ -69,7 +69,7 @@ private _logAll = false;
 
 {
     //IGNORE_PRIVATE_WARNING ["_x", "_y"];
-    INFO_2("[%1] has no carry varient - Used in %2",_x,_y);
+    INFO_2("[%1] has no carry variant - Used in %2",_x,_y);
 } forEach _hash;
 
 INFO("------ End -------");
