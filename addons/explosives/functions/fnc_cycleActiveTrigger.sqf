@@ -50,9 +50,4 @@ private _triggerConfig = configFile >> "CfgWeapons" >> _activeTrigger;
 private _triggerName = getText (_triggerConfig >> "displayName");
 private _triggerIcon = getText (_triggerConfig >> "picture");
 
-[
-    [format ["%1:", LLSTRING(ActiveTrigger)]],
-    [_triggerName],
-    [_triggerIcon, 1.8],
-    true
-] call CBA_fnc_notify;
+[format ["%1: %2", LLSTRING(ActiveTrigger), _triggerName], _triggerIcon] call EFUNC(common,displayTextPicture);
