@@ -225,6 +225,5 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 Missions by Ruthberg, author of Advanced Ballistics and its tools:
 
-- Arma3 Missions folder: [360 Degree Training Course v1.3](https://mega.nz/file/w0swQZBQ#hfZJVCz-bUjSbVVK7uBAXv48hlX7_A9FKy7g52zkf6I), *[Features](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/)*
-- Eden Editor mission: [360 Degree Training Course Framework](https://mega.nz/file/0lEA2LjJ#g7l4LJnr7mJyGh0ai59RR6ecO_hmkAqFA17zDqF1lCI)
-- Eden Editor mission: [AB Verification ACE VR](https://mega.nz/file/8l9XzbpA#uw3DUOCxGhynJ0TFPZEW3PCTnVbguq95M8n8G5c3MAs)
+- Arma3 Missions folder: [360 Degree Training Course v1.3]({{ site.ace.githubUrl }}/blob/master/extras/ruthberg_missions/360_Degree_Training_Course-Missions.zip), *[Features](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/)*
+- Eden Editor mission: [360 Degree Training Course Framework]({{ site.ace.githubUrl }}/blob/master/extras/ruthberg_missions/360_Degree_Training_Course-Framework.zip)
