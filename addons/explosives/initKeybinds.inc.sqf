@@ -1,15 +1,18 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
-["ACE Explosives", QGVAR(openCellphone), LLSTRING(cellphone_displayName), {
+["ACE3 Equipment", QGVAR(openCellphone), LLSTRING(cellphone_displayName), {
     if (
         !([ACE_player, "ACE_Cellphone"] call EFUNC(common,hasItem)) ||
         !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))
     ) exitWith {};
+
     closeDialog 0;
     createDialog "Rsc_ACE_PhoneInterface";
-}, {false}, [DIK_C, [false, false, true]], false, 0] call CBA_fnc_addKeybind; // (ALT+C)
 
-["ACE Explosives", QGVAR(detonateActiveClacker), LLSTRING(DetonateAllOnActive), {
+    true
+}] call CBA_fnc_addKeybind; // Unbound
+
+["ACE3 Equipment", QGVAR(detonateActiveClacker), LLSTRING(DetonateAllOnActive), {
     // Prevent use of keybind while surrendering or captive
     if !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
 
@@ -34,9 +37,14 @@
     } forEach ([ACE_player] call FUNC(getPlacedExplosives));
 
     [ACE_player, _range, _explosivesList, _detonator] call FUNC(detonateExplosiveAll);
-}, {false}, [DIK_C, [false, true, true]], false, 0] call CBA_fnc_addKeybind; // (CTRL+ALT+C)
 
-["ACE Explosives", QGVAR(cycleActiveClacker), LLSTRING(CycleActiveTrigger), {
+    true
+}] call CBA_fnc_addKeybind; // Unbound
+
+["ACE3 Equipment", QGVAR(cycleActiveClacker), LLSTRING(CycleActiveTrigger), {
     if !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
+
     [ACE_player] call FUNC(cycleActiveTrigger);
-}, {false}, [], false, 0] call CBA_fnc_addKeybind; // (Unbound)
+
+    true
+}] call CBA_fnc_addKeybind; // Unbound
