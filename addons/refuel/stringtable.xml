@@ -553,7 +553,7 @@
             <Russian>Время взаимодействия со шлангом</Russian>
             <Spanish>Tiempo de interacción con la Bomba/Manguera</Spanish>
             <Italian>Tempo di interazione Pompa/Pistola</Italian>
-            <Japanese>ポンプとホースのインタラクション所要時間</Japanese>
+            <Japanese>ポンプ/ホースのインタラクション所要時間</Japanese>
             <Polish>Czas Interakcji z Pompą/Wężem</Polish>
             <German>Interaktionszeit zwischen Pumpe und Schlauch</German>
             <French>Temps d'interaction pompe/tuyau</French>
@@ -574,7 +574,7 @@
             <English>Fuel Cargo Volume</English>
             <German>Tankvolumen</German>
             <Russian>Объем топлива для заправки</Russian>
-            <Japanese>貯油量</Japanese>
+            <Japanese>給油用燃料積載量</Japanese>
             <Italian>Capacità di Carico Carburante</Italian>
             <Chinese>儲油量</Chinese>
             <Chinesesimp>储油量</Chinesesimp>
@@ -591,7 +591,7 @@
             <English>The fuel volume available for refueling (-1 disable, -10 if infinite)</English>
             <German>Das Tankvolumen, welches zum Nachtanken verfügbar ist (-1 deaktiviert, -10 unendlich)</German>
             <Russian>Объем топлива, доступный для заправки других машин (-1 отключить, -10 если неограничен)</Russian>
-            <Japanese>給油用の貯油量を設定できます (-1で無効、-10で無限)</Japanese>
+            <Japanese>給油に使用する燃料の積載量 (-1で補給無効、-10で無限補給)</Japanese>
             <Italian>La capacità di carburante disponibile al rifornimento altrui (-1 disabilita, -10 se infinito)</Italian>
             <Chinese>設定有多少油料可供載具進行加油(-1時關閉，-10為無限油量)</Chinese>
             <Chinesesimp>设定有多少油料可供载具进行加油（-1时关闭，-10为无限油量）</Chinesesimp>

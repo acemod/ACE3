@@ -89,7 +89,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 
-    if (["ACE_reload"] call EFUNC(common,isModLoaded)) then {
+    if (["ace_reload"] call EFUNC(common,isModLoaded)) then {
         // move reload's check ammo action to the ammo handling point (remove and re-add)
         [_typeOf, 0, ["ACE_MainActions", QEGVAR(reload,CheckAmmo)]] call EFUNC(interact_menu,removeActionFromClass);
         private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);

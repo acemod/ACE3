@@ -181,6 +181,7 @@ PREP(statusEffect_resetVariables);
 PREP(statusEffect_respawnEH);
 PREP(statusEffect_sendEffects);
 PREP(statusEffect_set);
+PREP(stopGesture);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(swayLoop);

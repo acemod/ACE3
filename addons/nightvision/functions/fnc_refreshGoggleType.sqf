@@ -51,7 +51,7 @@ if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
             if (isArray (_config >> QGVAR(colorPreset))) then {_preset = getArray (_config >> QGVAR(colorPreset));};
         };
 
-        TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope, but no good way to detect that)
+        TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope,but no good way to detect that)
         private _config = configFile >> "CfgWeapons" >> GVAR(playerHMD);
         if (!isClass _config) exitWith {};
 

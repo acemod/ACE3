@@ -53,8 +53,8 @@ private _TimeText = _display displayCtrl 1001;
     };
 
     _TimeText ctrlSetText (format ["%1:%2", [_hour, 2] call CBA_fnc_formatNumber, [_minute, 2] call CBA_fnc_formatNumber]);
-    _HeightText ctrlSetText (format ["%1", floor _height]);
-    _DecendRate ctrlSetText (format ["%1", _descentRate max 0]);
+    _HeightText ctrlSetText str floor _height;
+    _DecendRate ctrlSetText str (_descentRate max 0);
 
     (_this select 0) set [1, _height];
     (_this select 0) set [2, _curTime];

@@ -53,7 +53,7 @@ if !(isNull _unit) then {
 if (isNull _unit) then {
     (_display displayCtrl 92856) lbDelete 0;
 } else {
-    (_display displayCtrl 92855) lbSetCurSel ([0, 1] select (hmd _unit isNotEqualTo ""));
+    (_display displayCtrl 92855) lbSetCurSel (parseNumber (hmd _unit isNotEqualTo ""));
 };
 
 private _fnc_onUnload = {

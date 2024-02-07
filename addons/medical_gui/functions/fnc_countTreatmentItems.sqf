@@ -38,7 +38,7 @@ if (ACE_player != GVAR(target)) then {
 // Vehicle
 private _medicVehicle = objectParent ACE_player;
 private _patientVehicle = objectParent GVAR(target);
-private _vehicle = if (!isNull _medicVehicle) then {_medicVehicle} else {_patientVehicle};
+private _vehicle = [_patientVehicle, _medicVehicle] select (!isNull _medicVehicle);
 
 if (!isNull _vehicle) then {
     _vehicleCount = 0;

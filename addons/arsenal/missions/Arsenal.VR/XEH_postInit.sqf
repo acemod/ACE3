@@ -10,16 +10,18 @@ cba_diagnostic_projectileMaxLines = 10;
 
     // Player pose
     [{
-        switch (true) do {
-            case (primaryWeapon _this != ""): {
-                _this switchMove "amovpercmstpslowwrfldnon";
-            };
-            case (handgunWeapon _this != ""): {
-                _this switchMove "amovpercmstpslowwpstdnon";
-            };
-            default {
+        switch (currentWeapon _this) do {
+            case (""): {
                 _this switchMove "amovpercmstpsnonwnondnon";
             };
+            case (primaryWeapon _this): {
+                _this switchMove "amovpercmstpslowwrfldnon";
+            };
+            case (handgunWeapon _this): {
+                _this switchMove "amovpercmstpslowwpstdnon";
+            };
+            case (binocular _this);
+            case (secondaryWeapon _this): {}; // deliberately nothing
         };
     }, _player] call CBA_fnc_execNextFrame;
 
@@ -88,6 +90,7 @@ cba_diagnostic_projectileMaxLines = 10;
     {
         _unit = _x;
 
+        removeVest _unit;
         if (vest _player != "") then { _unit addVest vest _player; };
 
         removeBackpack _unit;

@@ -21,4 +21,5 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "CfgCloudlets.hpp"
 #include "CfgSFX.hpp"
+#include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"

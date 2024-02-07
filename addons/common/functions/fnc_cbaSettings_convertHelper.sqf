@@ -22,7 +22,7 @@ private _output = [format ["// CBA Settings [ADDON: %1]:", _addon]];
 
 private _addonSearch = _addon + "_";
 private _addonSearchCount = count _addonSearch;
-TRACE_2("",_addonSearch, _addonSearchCount);
+TRACE_2("",_addonSearch,_addonSearchCount);
 
 private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x) && {((configName _x) select [0, _addonSearchCount]) == _addonSearch}"];
 

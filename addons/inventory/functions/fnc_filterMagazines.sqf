@@ -10,9 +10,9 @@
  * Item should appear in this list? <BOOL>
  *
  * Example:
- * [CONFIG] call ACE_inventory_fnc_filterMagazines
+ * [CONFIG] call ace_inventory_fnc_filterMagazines
  *
  * Public: No
  */
 
-!(_this call FUNC(filterBackpacks)) && {!(_this call FUNC(filterGrenades))}
+!(_this call FUNC(filterGrenades)) && {!(_this call FUNC(filterBackpacks))}

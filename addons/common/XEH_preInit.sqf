@@ -32,6 +32,7 @@ ACE_COUNTERS = [];
 
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
+GVAR(statusEffect_sendJIP) = [];
 
 GVAR(setHearingCapabilityMap) = [];
 

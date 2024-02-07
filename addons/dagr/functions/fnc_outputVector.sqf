@@ -89,8 +89,8 @@ private _dagrDist = str GVAR(LAZDIST) + "m";
 GVAR(vectorGrid) = _dagrGrid;
 
 // OUTPUT
-__gridControl ctrlSetText format ["%1", _dagrGrid];
-__speedControl ctrlSetText format ["%1", _dagrDist];
-__elevationControl ctrlSetText format ["%1", _dagrElevation];
-__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _bearing] } else { format ["%1°", _bearing] });
-__timeControl ctrlSetText format ["%1", _dagrTime];
+__gridControl ctrlSetText _dagrGrid;
+__speedControl ctrlSetText _dagrDist;
+__elevationControl ctrlSetText _dagrElevation;
+__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { str _bearing } else { format ["%1°", _bearing] });
+__timeControl ctrlSetText _dagrTime;

@@ -7,7 +7,8 @@
     {
         if !(_this && {isServer} && {isNil QGVAR(addRopeToVehicleInventory_initialized)}) exitWith {};
         GVAR(addRopeToVehicleInventory_initialized) = true;
-        ["Tank", "initPost", LINKFUNC(addRopeToVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
-        ["Car", "initPost", LINKFUNC(addRopeToVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
+        {
+            [_x, "initPost", LINKFUNC(addRopeToVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
+        } forEach ["Car", "Ship", "Tank"];
     }
 ] call CBA_fnc_addSetting;
