@@ -33,5 +33,5 @@ PREP(reload_handleRemoveTurretMag);
 PREP(reload_handleReturnAmmo);
 PREP(reload_loadMagazine);
 
-PREP(staticWeaponInit);
+PREP(initVehicle);
 PREP(staticWeaponInit_unloadExtraMags);

@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Initializes weapon to disable weapon disassembling
+ * Initializes CSW systems on vehicle
  *
  * Arguments:
- * 0: Weapon <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [weapon] call ace_csw_fnc_staticWeaponInit
+ * cursorObject call ace_csw_fnc_initVehicle
  *
  * Public: No
  */
