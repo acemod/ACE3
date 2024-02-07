@@ -3,6 +3,7 @@ PREP(cookOffBox);
 PREP(cookOffBoxLocal);
 PREP(cookOffEffect);
 PREP(detonateAmmunition);
+PREP(detonateAmmunitionServer);
 PREP(engineFire);
 PREP(engineFireLocal);
 PREP(getVehicleAmmo);
