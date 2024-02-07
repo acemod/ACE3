@@ -15,6 +15,10 @@
  * Public: Yes
  */
 
-params ["_laserSource"];
+params [["_laserSource", objNull, [objNull]]];
+
+if (isNull _laserSource) exitWith {
+    -1
+};
 
 _laserSource getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE]
