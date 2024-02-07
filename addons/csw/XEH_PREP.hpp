@@ -17,7 +17,6 @@ PREP(assemble_pickupTripod);
 PREP(assemble_pickupWeapon);
 
 PREP(canGetIn);
-PREP(getIn);
 
 PREP(getCarryMagazine);
 PREP(proxyWeapon);

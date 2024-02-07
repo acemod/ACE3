@@ -125,10 +125,11 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
+                // Workaround for static weapons' Get In memory point being at the front of the gun
                 class GVAR(getIn) {
                     displayName = CSTRING(GetIn_displayName);
                     condition = QUOTE(call FUNC(canGetIn));
-                    statement = QUOTE(call FUNC(getIn));
+                    statement = QUOTE(_player moveInTurret [ARR_2(_target,[0])]);
                 };
             };
         };
