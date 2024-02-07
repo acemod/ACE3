@@ -562,7 +562,6 @@
             <French>Active si les éléments de cargaison sont portés ou traînés après le déchargement.</French>
             <Portuguese>Controla se os itens de carga são carregados ou arrastados após a descarga.</Portuguese>
         </Key>
-
         <Key ID="STR_ACE_Cargo_enableDeploy">
             <English>Enable deploy</English>
         </Key>
