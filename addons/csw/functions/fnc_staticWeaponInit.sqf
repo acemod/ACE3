@@ -17,6 +17,9 @@
 
 params ["_staticWeapon"];
 if (isNull _staticWeapon) exitWith { WARNING_1("%1 became null",_staticWeapon) };
+if (!simulationEnabled _staticWeapon) exitWith {
+    [{simulationEnabled _this}, FUNC(staticWeaponInit), _staticWeapon] call CBA_fnc_waitUntilAndExecute;
+};
 private _typeOf = typeOf _staticWeapon;
 private _configOf = configOf _staticWeapon;
 private _configEnabled = (getNumber (_configOf >> "ace_csw" >> "enabled")) == 1;
