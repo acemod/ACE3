@@ -54,7 +54,7 @@ switch _mode do {
 				_control = _display displayctrl _idc;
 
 				//--- Admin specific attribute
-				_show = if (getnumber (_cfgControl >> "adminOnly") > 0) then {_enableAdmin} else {true};
+				_show = [true, _enableAdmin] select (getnumber (_cfgControl >> "adminOnly") > 0);
 
 				if ((_allAttributes || {_x == configname _cfgControl} count _attributes > 0) && _show) then {
 					_controlPos = ctrlposition _control;
@@ -75,10 +75,10 @@ switch _mode do {
 
 		_target = missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target",objnull];
 		_name = switch (typename _target) do {
-			case (typename objnull): {gettext (configfile >> "cfgvehicles" >> typeof _target >> "displayname")};
-			case (typename grpnull): {groupid _target};
-			case (typename []): {format ["%1: %3 #%2",groupid (_target select 0),_target select 1,localize "str_a3_cfgmarkers_waypoint_0"]};
-			case (typename ""): {markertext _target};
+			case ("OBJECT"): {gettext (configfile >> "cfgvehicles" >> typeof _target >> "displayname")};
+			case ("GROUP"): {groupid _target};
+			case ("ARRAY"): {format ["%1: %3 #%2",groupid (_target select 0),_target select 1,localize "str_a3_cfgmarkers_waypoint_0"]};
+			case ("STRING"): {markertext _target};
 		};
 		_ctrlTitle ctrlsettext format [ctrltext _ctrlTitle,toupper _name];
 
@@ -115,19 +115,19 @@ switch _mode do {
 			_display = _this select 0;
 			_target = missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target",objnull];
 			switch (typename _target) do {
-				case (typename objnull): {
+				case ("OBJECT"): {
 					_isAlive = alive _target;
 					waituntil {isnull _display || (_isAlive && !alive _target)};
 				};
-				case (typename grpnull): {
+				case ("GROUP"): {
 					waituntil {isnull _display || isnull _target};
 				};
-				case (typename []): {
+				case ("ARRAY"): {
 					_grp = _target select 0;
 					_wpCount = count waypoints _grp;
 					waituntil {isnull _display || (count waypoints _grp != _wpCount)};
 				};
-				case (typename ""): {
+				case ("STRING"): {
 					waituntil {isnull _display || markertype _target == ""};
 				};
 			};

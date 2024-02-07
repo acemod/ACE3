@@ -5,6 +5,9 @@ branches:
 name-template: 'Version $NEXT_PATCH_VERSION'
 tag-template: 'v$NEXT_PATCH_VERSION'
 
+sort-by: title # sort alphabetically
+sort-direction: ascending
+
 categories:
   - title: '**ADDED:**'
     labels:

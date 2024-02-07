@@ -40,13 +40,32 @@ if (_intersections isNotEqualTo []) then {
 
     _intersectionToUse params ["_intersectPosition", "", "_intersectObject"];
 
-    // if we have a target object, we assume we are attaching to the parent. If no target object, we are attaching to child
-    GVAR(canAttach) = (_intersectObject isNotEqualTo _ignoreParent) && { (!isNull _target && { _intersectObject isEqualTo _target }) || { isNull _target && { [_intersectObject] call FUNC(isSuitableSimulation) }}} && { !(_intersectObject getVariable [QGVAR(towing), false]) };
+    GVAR(canAttach) =
+        _intersectObject isNotEqualTo _ignoreParent
+        && {
+            // if we have a target object, we assume we are attaching to the parent. If no target object, we are attaching to child
+            if (!isNull _target) then {
+                _intersectObject isEqualTo _target
+            } else {
+                [_intersectObject] call FUNC(isSuitableSimulation)
+                && { // ignore _intersectObject which has parent != _ignoreParent
+                    private _intersectObjectParent = _intersectObject getVariable [QGVAR(parent), objNull];
+                    isNull _intersectObjectParent || {_intersectObjectParent == _ignoreParent}
+                } && { // arma prevents making rings (ropeAttachTo silently fails)
+                    private _ancestor = _ignoreParent getVariable [QGVAR(parent), objNull];
+                    while {!isNull _ancestor && {_ancestor != _intersectObject}} do {
+                        _ancestor = _ancestor getVariable [QGVAR(parent), objNull];
+                    };
+                    isNull _ancestor
+                }
+            }
+        }
+    ;
 
     if (GVAR(canAttach)) then {
-        TRACE_4("can attach",_target,_intersectObject,_ignoreParent,_ignoreRope);
+        // TRACE_4("can attach",_target,_intersectObject,_ignoreParent,_ignoreRope);
         GVAR(attachHelper) setPosASL _intersectPosition;
-        _hintLMB = localize LSTRING(attach);
+        _hintLMB = LLSTRING(attach);
 
         GVAR(attachHelper) setVariable [QGVAR(object), _intersectObject];
     };
@@ -76,4 +95,3 @@ if (_hint isNotEqualTo (_unit getVariable [QGVAR(hint), []])) then {
     _unit setVariable [QGVAR(hint), _hint];
     _hint call EFUNC(interaction,showMouseHint);
 };
-

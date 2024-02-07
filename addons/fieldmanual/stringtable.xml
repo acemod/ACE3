@@ -278,12 +278,12 @@
             <Japanese>死者を連れ出す</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
-            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Place Body In Bodybag%4.</English>
-            <Polish>%3Worki na Zwłoki%4 są używane do transportu ciał. Worki mogą być przeciągane i ładowanie do pojazdów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podejdź do martwego ciała.&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%14%4] i wybierz %3Umieść Ciało w Worku na Zwłoki%4.</Polish>
-            <Korean>%3시체 운반용 부대%4는 시체를 운반하는 데 사용되며, 차량으로 끌고 가서 적재할 수 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2시체에 접근하십시오.&lt;br/&gt;%2[%3%13%4] 또는 [%3%14%4]를 사용하여 %3시체 운반용 부대에 담기%4를 선택하십시오.</Korean>
-            <Portuguese>OS %3Sacos de Cadáver%4 são utilizados para transportar cadáveres. Eles podem ser arrastados e embarcados em veículos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Aproxime-se de um cadáver.&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%14%4] e selecione %3Colocar cadáver dentro do saco%4.</Portuguese>
-            <Italian>%3Sacche per cadaveri%4 sono usate per trasportare i morti. Possono essere trascinate e caricate su veicoli.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Avvicinati ad un morto.&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona %3Metti il corpo nella sacca per cadaveri%4.</Italian>
-            <Japanese>%3遺体袋%4は、遺体の輸送に使用されます。引きずって車両に積み込むことができます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2遺体に近寄る。&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って%3遺体袋に入れる%4を選択して使用します。</Japanese>
+            <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%13%4] or [%3%15%4] and select %3Place Body In Bodybag%4.</English>
+            <Polish>%3Worki na Zwłoki%4 są używane do transportu ciał. Worki mogą być przeciągane i ładowanie do pojazdów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podejdź do martwego ciała.&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%15%4] i wybierz %3Umieść Ciało w Worku na Zwłoki%4.</Polish>
+            <Korean>%3시체 운반용 부대%4는 시체를 운반하는 데 사용되며, 차량으로 끌고 가서 적재할 수 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2시체에 접근하십시오.&lt;br/&gt;%2[%3%13%4] 또는 [%3%15%4]를 사용하여 %3시체 운반용 부대에 담기%4를 선택하십시오.</Korean>
+            <Portuguese>OS %3Sacos de Cadáver%4 são utilizados para transportar cadáveres. Eles podem ser arrastados e embarcados em veículos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Aproxime-se de um cadáver.&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%15%4] e selecione %3Colocar cadáver dentro do saco%4.</Portuguese>
+            <Italian>%3Sacche per cadaveri%4 sono usate per trasportare i morti. Possono essere trascinate e caricate su veicoli.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Avvicinati ad un morto.&lt;br/&gt;%2Usa [%3%13%4] o [%3%15%4] e seleziona %3Metti il corpo nella sacca per cadaveri%4.</Italian>
+            <Japanese>%3遺体袋%4は、遺体の輸送に使用されます。引きずって車両に積み込むことができます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2遺体に近寄る。&lt;br/&gt;%2[%3%13%4] または [%3%15%4] を使って%3遺体袋に入れる%4を選択して使用します。</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_CableTie_ShortName">
             <English>Take Prisoners</English>
@@ -673,7 +673,7 @@
             <Japanese>要塞を構築する</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_FortifyTool_Description">
-            <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3FortifyTool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
+            <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3Fortify Tool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
             <Polish>%3Narzędzie do fortyfikowania%4 pozwala żołnierzom budować fortyfikacje wybrane przez twórcę misji.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podnieś %3Narzędzie do fortyfikowania%4.&lt;br/&gt;%2Użyj [%3%12%4] i wybierz %3Fortyfikuj%4.&lt;br/&gt;%2Wybierz dostępną fortyfikację i postępuj zgodnie ze wskazówkami na ekranie.</Polish>
             <Italian>L'%3Attrezzo di Fortificazione%4 permette ai soldati di costruire fortificazioni permesse dal creatore della missione.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Raccogli un %3Attrezzo di Fortificazione%4.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Fortifica%4.&lt;br/&gt;%2Seleziona una fortificazione disponibile e segui le indicazioni di piazzamento sullo schermo.</Italian>
             <Korean>%3요새화 도구%4를 사용하면 병사들이 임무 생성자가 제공한 요새를 구축할 수 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3요새화 도구%4를 가지십시오.&lt;br/&gt;%2[%3%12%4]를 사용하고 %3요새화%4를 선택하십시오.&lt;br/&gt;%2사용 가능한 요새를 선택하고 화면의 지시에 따라 배치하십시오.</Korean>

@@ -47,8 +47,8 @@ private _container = switch (GVAR(currentLeftPanel)) do {
             };
         };
 
-        /// Get all items from container (excluding container itself)
-        _containerItems = [GVAR(center), 0, 3, 0, 0, false] call EFUNC(common,uniqueUnitItems);
+        // Get all items from container
+        _containerItems = uniformItems GVAR(center);
 
         // Update currentItems
         GVAR(currentItems) set [IDX_CURR_UNIFORM_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_UNIFORM) param [1, []]];
@@ -75,8 +75,8 @@ private _container = switch (GVAR(currentLeftPanel)) do {
             };
         };
 
-        // Get all items from container (excluding container itself)
-        _containerItems = [GVAR(center), 0, 0, 3, 0, false] call EFUNC(common,uniqueUnitItems);
+        // Get all items from container
+        _containerItems = vestItems GVAR(center);
 
         // Update currentItems
         GVAR(currentItems) set [IDX_CURR_VEST_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_VEST) param [1, []]];
@@ -103,8 +103,8 @@ private _container = switch (GVAR(currentLeftPanel)) do {
             };
         };
 
-        // Get all items from container (excluding container itself)
-        _containerItems = [GVAR(center), 0, 0, 0, 3, false] call EFUNC(common,uniqueUnitItems);
+        // Get all items from container
+        _containerItems = backpackItems GVAR(center);
 
         // Update currentItems
         GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, ((getUnitLoadout GVAR(center)) select IDX_LOADOUT_BACKPACK) param [1, []]];
@@ -117,7 +117,7 @@ private _container = switch (GVAR(currentLeftPanel)) do {
 };
 
 // Find out how many items of that type there are and update the number displayed
-_ctrlList lnbSetText [[_lnbCurSel, 2], str (_containerItems getOrDefault [_item, 0])];
+_ctrlList lnbSetText [[_lnbCurSel, 2], str ({_item == _x} count _containerItems)];
 
 [QGVAR(cargoChanged), [_display, _item, _addOrRemove, GVAR(shiftState)]] call CBA_fnc_localEvent;
 

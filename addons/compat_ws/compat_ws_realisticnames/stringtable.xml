@@ -55,14 +55,14 @@
             <Korean>GLX-160 (육각)</Korean>
             <German>GLX 160 (Hex)</German>
             <Italian>GLX-160 (Hex)</Italian>
-            <Japanese>GLX 160 (ヘックス)</Japanese>
+            <Japanese>GLX 160 (六角形迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_GreenHex_Name">
             <English>GLX 160 (Green Hex)</English>
             <Korean>GLX-160 (초록육각)</Korean>
             <German>GLX 160 (Grün Hex)</German>
             <Italian>GLX-160 (Hex Verde)</Italian>
-            <Japanese>GLX 160 (緑ヘックス)</Japanese>
+            <Japanese>GLX 160 (緑六角形迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Camo_Name">
             <English>GLX 160 (Camo)</English>
@@ -110,14 +110,14 @@
             <Korean>벡터 SS-77 (육각)</Korean>
             <German>Vektor SS-77 (Hex)</German>
             <Italian>Vektor SS-77 (Hex)</Italian>
-            <Japanese>ヴェクター SS-77 (ヘックス)</Japanese>
+            <Japanese>ヴェクター SS-77 (六角形迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_GreenHex_Name">
             <English>Vektor SS-77 (Green Hex)</English>
             <Korean>벡터 SS-77 (초록육각)</Korean>
             <German>Vektor SS-77 (Grün Hex)</German>
             <Italian>Vektor SS-77 (Hex Verde)</Italian>
-            <Japanese>ヴェクター SS-77 (緑ヘックス)</Japanese>
+            <Japanese>ヴェクター SS-77 (緑六角形迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
             <English>Vektor SS-77 (Desert)</English>
