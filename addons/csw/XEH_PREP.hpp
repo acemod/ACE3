@@ -23,7 +23,7 @@ PREP(getCarryMagazine);
 PREP(proxyWeapon);
 
 PREP(getLoadActions);
-PREP(reload_actionsUnload);
+PREP(getUnloadActions);
 PREP(reload_canLoadMagazine);
 PREP(reload_canUnloadMagazine);
 PREP(reload_getLoadableMagazines);
