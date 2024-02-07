@@ -75,12 +75,12 @@
         </Key>
         <Key ID="STR_ACE_Explosives_SetActiveTrigger">
             <English>Set Active Clacker</English>
-            <German>Als Standardzünder Wählen</German>
+            <German>Als Standardzünder wählen</German>
             <Italian>Imposta Detonatore Attivo</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_CycleActiveTrigger">
             <English>Cycle Active Clacker</English>
-            <German>Standardzünder Wechseln</German>
+            <German>Standardzünder wechseln</German>
             <Italian>Cambia Detonatore Attivo</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_ActiveTrigger">
