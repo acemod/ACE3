@@ -1,56 +1,55 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets sub actions for what the player can unload from the static weapon
+ * Gets sub actions for what can be unloaded from the CSW
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Player <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * Actions <ARRAY>
  *
  * Example:
- * [cursorObject, player] call ace_csw_fnc_getUnloadActions
+ * cursorObject call ace_csw_fnc_getUnloadActions
  *
  * Public: No
  */
 
-params ["_vehicle", "_player"];
+params ["_vehicle"];
 
 private _statement = {
-    params ["_target", "_player", "_params"];
-    _params params ["_vehMag", "_turretPath", "_carryMag"];
+    params ["_target", "_player", "_args"];
+    _args params ["_vehMag", "_turretPath", "_carryMag"];
     TRACE_5("starting unload",_target,_turretPath,_player,_carryMag,_vehMag);
 
     private _timeToUnload = 1;
-    if (!isNull(configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime")) then {
-        _timeToUnload = getNumber(configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime");
+    if (!isNull (configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime")) then {
+        _timeToUnload = getNumber (configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime");
     };
 
     [
-    TIME_PROGRESSBAR(_timeToUnload),
-    [_target, _turretPath, _player, _carryMag, _vehMag],
-    {
-        (_this select 0) params ["_target", "_turretPath", "", "_carryMag", "_vehMag"];
-        TRACE_5("unload progressBar finish",_target,_turretPath,_carryMag,_vehMag,_player);
-        [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player]] call CBA_fnc_globalEvent;
-    },
-    {TRACE_1("unload progressBar fail",_this);},
-    format [localize LSTRING(unloadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
-    {(_this select 0) call FUNC(reload_canUnloadMagazine)},
-    ["isNotInside"]
+        TIME_PROGRESSBAR(_timeToUnload),
+        [_target, _turretPath, _player, _carryMag, _vehMag],
+        {
+            (_this select 0) params ["_target", "_turretPath", "", "_carryMag", "_vehMag"];
+            TRACE_5("unload progressBar finish",_target,_turretPath,_carryMag,_vehMag,_player);
+            [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player]] call CBA_fnc_globalEvent;
+        },
+        {TRACE_1("unload progressBar fail",_this);},
+        format [localize LSTRING(unloadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
+        {(_this select 0) call FUNC(reload_canUnloadMagazine)},
+        ["isNotInside"]
     ] call EFUNC(common,progressBar);
 };
 
 private _condition = {
-    params ["_target", "_player", "_params"];
-    _params params ["_vehMag", "_turretPath", "_carryMag"];
+    params ["_target", "_player", "_args"];
+    _args params ["_vehMag", "_turretPath", "_carryMag"];
     [_target, _turretPath, _player, _carryMag, _vehMag] call FUNC(reload_canUnloadMagazine)
 };
 
 private _actions = [];
-private _handeledMagTypes = [];
+private _handledMagTypes = [];
 
 private _cfgMagazines = configFile >> "CfgMagazines";
 
@@ -58,8 +57,8 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
 
-    if ((_xAmmo > 0) && {!(_xMag in _handeledMagTypes)}) then {
-        _handeledMagTypes pushBack _xMag;
+    if ((_xAmmo > 0) && {!(_xMag in _handledMagTypes)}) then {
+        _handledMagTypes pushBack _xMag;
         private _carryMag = _xMag call FUNC(getCarryMagazine);
         if (_carryMag == "") exitWith {};
 
