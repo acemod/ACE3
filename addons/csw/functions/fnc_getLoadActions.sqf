@@ -11,7 +11,7 @@
  * Actions <ARRAY>
  *
  * Example:
- * [cursorObject, player] call ace_csw_fnc_reload_actionsLoad
+ * [cursorObject, player] call ace_csw_fnc_getLoadActions
  *
  * Public: No
  */

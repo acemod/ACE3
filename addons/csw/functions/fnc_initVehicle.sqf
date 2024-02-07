@@ -76,7 +76,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     };
     private _childenCode = {
         BEGIN_COUNTER(getActions); // can remove for final release
-        private _ret = (call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload));
+        private _ret = (call FUNC(getLoadActions)) + (call FUNC(reload_actionsUnload));
         END_COUNTER(getActions);
         _ret
     };
