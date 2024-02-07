@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets sub actions for what the player can load into the static weapon
+ * Gets sub actions for what the unit can load into the CSW
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
- * 1: Player <OBJECT>
+ * 0: Vehicle <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Actions <ARRAY>
@@ -16,27 +16,27 @@
  * Public: No
  */
 
-params ["_vehicle", "_player"];
+params ["_vehicle", "_unit"];
 
-private _actions = [];
-private _loadableMagazines = [_vehicle, _player] call FUNC(reload_getLoadableMagazines);
+private _loadableMagazines = [_vehicle, _unit] call FUNC(reload_getLoadableMagazines);
+if (_loadableMagazines isEqualTo []) exitWith {[]};
 
 private _statement = {
-    params ["_target", "_player", "_params"];
-    _params params ["_carryMag", "_turretPath", "", "_magSource"];
+    params ["_target", "_player", "_args"];
+    _args params ["_carryMag", "_turretPath", "", "_magSource"];
 
     [_target, _turretPath, _carryMag, _magSource, _player] call FUNC(reload_loadMagazine);
 };
 
 private _condition = {
-    params ["_target", "_player", "_params"];
-    _params params ["_carryMag", "_turretPath", "", "_magSource"];
+    params ["_target", "_player", "_args"];
+    _args params ["_carryMag", "_turretPath", "", "_magSource"];
 
     ([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0
 };
 
 private _cfgMagazines = configFile >> "CfgMagazines"; // micro-optimization
-
+private _actions = [];
 {
     _x params ["_carryMag", "", "_loadInfo"];
     _loadInfo params ["", "", "", "_isBeltLinking"];
