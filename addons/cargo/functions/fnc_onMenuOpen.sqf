@@ -26,7 +26,7 @@ if (GVAR(interactionParadrop)) then {
 };
 
 // Disable deploy option if paradropping or in Zeus
-(_display displayCtrl 13) ctrlEnable (!GVAR(interactionParadrop) && {isNull curatorCamera});
+(_display displayCtrl 13) ctrlEnable (GVAR(enableDeploy) && !GVAR(interactionParadrop) && {isNull curatorCamera});
 
 [{
     params ["_vehicle", "_pfhID"];

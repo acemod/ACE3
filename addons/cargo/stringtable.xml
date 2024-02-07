@@ -33,22 +33,8 @@
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
         </Key>
-        <Key ID="STR_ACE_Cargo_placeObject">
-            <English>Place</English>
-            <German>Platzieren</German>
-            <Spanish>Colocar</Spanish>
-            <Polish>Umieść</Polish>
-            <French>Placer</French>
-            <Czech>Položit</Czech>
-            <Italian>Piazza</Italian>
-            <Hungarian>Elhelyezés</Hungarian>
-            <Portuguese>Colocar</Portuguese>
-            <Russian>Установить</Russian>
-            <Japanese>設置</Japanese>
-            <Korean>설치</Korean>
-            <Chinesesimp>放置</Chinesesimp>
-            <Chinese>放置</Chinese>
-            <Turkish>Yerleştir</Turkish>
+        <Key ID="STR_ACE_Cargo_deployObject">
+            <English>Deploy</English>
         </Key>
         <Key ID="STR_ACE_Cargo_ScrollAction">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
@@ -575,6 +561,13 @@
             <Italian>Determina se un oggetto verrà subito trasportato o trascinato dopo essere stato scaricato.</Italian>
             <French>Active si les éléments de cargaison sont portés ou traînés après le déchargement.</French>
             <Portuguese>Controla se os itens de carga são carregados ou arrastados após a descarga.</Portuguese>
+        </Key>
+
+        <Key ID="STR_ACE_Cargo_enableDeploy">
+            <English>Enable deploy</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_enableDeploy_description">
+            <English>Controls whether cargo items can be unloaded via the deploy method.</English>
         </Key>
     </Package>
 </Project>

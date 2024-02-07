@@ -100,7 +100,7 @@ class GVAR(menu) {
             action = QUOTE(ACE_player call FUNC(startUnload));
         };
         class btnPlace: btnUnload {
-            text = CSTRING(placeObject);
+            text = CSTRING(deployObject);
             idc = 13;
             y = "15.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             action = QUOTE(ACE_player call FUNC(startDeploy));
