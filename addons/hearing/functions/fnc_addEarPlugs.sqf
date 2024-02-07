@@ -48,7 +48,7 @@ _caliber = call {
     if (_ammo isKindOf ["RocketBase", (configFile >> "CfgAmmo")]) exitWith { 200 };
     if (_ammo isKindOf ["MissileBase", (configFile >> "CfgAmmo")]) exitWith { 600 };
     if (_ammo isKindOf ["SubmunitionBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
-    if (_caliber <= 0) then { 6.5 } else { _caliber };
+    [_caliber, 6.5] select (_caliber <= 0);
 };
 private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
 

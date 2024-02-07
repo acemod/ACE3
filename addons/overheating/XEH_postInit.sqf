@@ -20,7 +20,7 @@ if (hasInterface) then {
 };
 
 ["CBA_settingsInitialized", {
-    TRACE_1("SettingsInitialized eh", GVAR(enabled));
+    TRACE_1("SettingsInitialized eh",GVAR(enabled));
     if (!GVAR(enabled)) exitWith {};
 
     if (isServer) then {

@@ -50,7 +50,7 @@ if (_canAdd) then {
         // setMagazineTurretAmmo is broken on split locality and if there are multiple magazines of the same class (valid 20/12/2023, Arma 2.14)
         // use setAmmo for now (this may not work for multi turret vehicles)
         private _weapon = (_vehicle weaponsTurret _turret) param [0, ""];
-        TRACE_3("setAmmo",_vehicle,_weapon, _currentAmmo);
+        TRACE_3("setAmmo",_vehicle,_weapon,_currentAmmo);
         _vehicle setAmmo [_weapon, _currentAmmo];
         private _currentAmmo = _vehicle magazineTurretAmmo [_loadedMag, _turret];
         if ((_weapon == "") || {_currentAmmo != _currentAmmo}) then {

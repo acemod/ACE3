@@ -1390,7 +1390,7 @@
             <French>Définit s'il s'agit d'un véhicule sanitaire.</French>
             <Portuguese>Se o objeto será ou não um veículo médico</Portuguese>
             <Russian>Будет ли объект считаться медицинским транспортом.</Russian>
-            <Japanese>対象が医療車両であるかどうか。</Japanese>
+            <Japanese>車両をを医療車両として割り当てます</Japanese>
             <Korean>이 물체는 의료 차량이 됩니다.</Korean>
             <Chinesesimp>是否使该载具为医疗载具？</Chinesesimp>
             <Chinese>是否使該載具為醫療載具?</Chinese>
@@ -1491,7 +1491,7 @@
             <French>Est un véhicule sanitaire</French>
             <Hungarian>Orvosi jármű-e</Hungarian>
             <Italian>È Veicolo Medico</Italian>
-            <Japanese>医療車両に</Japanese>
+            <Japanese>医療車両とする</Japanese>
             <Korean>의료 차량</Korean>
             <Chinesesimp>是医疗载具</Chinesesimp>
             <Chinese>是醫療載具</Chinese>
@@ -1508,7 +1508,7 @@
             <French>Est une installation sanitaire</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
             <Italian>È Struttura Medica</Italian>
-            <Japanese>医療施設に</Japanese>
+            <Japanese>医療施設とする</Japanese>
             <Korean>의료시설</Korean>
             <Chinesesimp>是医疗设施</Chinesesimp>
             <Chinese>是醫療設施</Chinese>
@@ -1525,7 +1525,7 @@
             <French>Définit l'objet comme étant une installation sanitaire.</French>
             <Hungarian>Egy objektum orvosi létesítményként való regisztrálása</Hungarian>
             <Italian>Registra un oggetto come struttura medica</Italian>
-            <Japanese>オブジェクトを医療施設として割り当てる</Japanese>
+            <Japanese>オブジェクトを医療施設として割り当てます</Japanese>
             <Korean>물체를 의료시설로 등록합니다</Korean>
             <Chinesesimp>指定一个物体作为医疗设施</Chinesesimp>
             <Chinese>指定一個物件作為醫療設施</Chinese>
@@ -4932,6 +4932,34 @@
             <German>Dauer von Behandlungen als Zeus wird mit diesem Koeffizienten multipliziert.</German>
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
             <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_painkillers_Display">
+            <English>Painkillers</English>
+            <Czech>Léky proti bolesti</Czech>
+            <German>Schmerztabellen</German>
+            <Russian>Болеутоляющее</Russian>
+            <Polish>Środki przeciwbólowe</Polish>
+            <Italian>Antidolorifici</Italian>
+            <Spanish>Analgésicos</Spanish>
+            <French>Analgésiques</French>
+            <Chinese>止痛藥</Chinese>
+            <Japanese>鎮痛剤</Japanese>
+            <Korean>진통제</Korean>
+            <Portuguese>Analgésicos</Portuguese>
+            <Chinesesimp>止痛药</Chinesesimp>
+            <Turkish>Ağrı kesici</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Administer_Painkillers">
+            <English>Administer Painkillers</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
+            <English>Administering Painkillers...</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
+            <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
+            <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
         </Key>
     </Package>
 </Project>
