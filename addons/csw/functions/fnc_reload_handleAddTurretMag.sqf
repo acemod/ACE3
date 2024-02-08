@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm, PabstMirror
+ * Author: tcvm, PabstMirror
  * Handles adding ammo to a turret
  * Called from a global event but only runs where turret is local
  *
