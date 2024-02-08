@@ -29,8 +29,7 @@ class B_30mm_MP: B_30mm_HE {
     GVAR(gurney_c) = 2600;
     GVAR(gurney_k) = "1/2";
 };
-class Gatling_30mm_HE_Plane_CAS_01_F;
-class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {
+class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
     GVAR(skip) = 0;
     GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
     GVAR(fragCount) = 100;
@@ -39,6 +38,7 @@ class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {
     GVAR(gurney_c) = 2600; // guessed
     GVAR(gurney_k) = "1/2";
 };
+
 class B_40mm_GPR: B_30mm_HE {
     // Based on noted 40mm Autocannons, base ROF, and ammo names, looks to be a CTAS40, specifically GPR-PD-T
     // https://www.cta-international.com/ammunition/
@@ -146,9 +146,6 @@ class Mo_cluster_Bomb_03_F: Mo_cluster_Bomb_01_F { // idk, @lambda.tiger on the 
 
 // ~~~~ Grenades:
 class Grenade;
-class ACE_FlashlightProxy_White: Grenade {
-    GVAR(skip) = 1;
-};
 class GrenadeHand: Grenade {
     ACE_FRAG_ADD_EH_BASE;
     GVAR(skip) = 0;
@@ -175,19 +172,27 @@ class SmokeShell: GrenadeHand {
 class G_40mm_HE: GrenadeBase {
     class EventHandlers: EventHandlers {};
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
-    GVAR(skip) = 1;
+    GVAR(skip) = 0;
     GVAR(force) = 0;
-    GVAR(classes)[] = {QGVAR(small)};
-    GVAR(fragCount) = 800; // guess based on probability hit of 1%
+    GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(small)};
+    GVAR(fragCount) = 600; // guess based on probability hit of 1%
     GVAR(metal) = 200;
     GVAR(charge) = 32;
+    GVAR(gurney_c) = 2700;
+    GVAR(gurney_k) = "3/5"; // interior fragmenter/charge is a sphere
+};
+class G_20mm_HE: G_40mm_HE {
+    GVAR(classes)[] = {QGVAR(tiny)};
+    GVAR(fragCount) = 200; // Halved size & dimensions from 40mm HE
+    GVAR(metal) = 50;
+    GVAR(charge) = 8;
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "3/5"; // interior fragmenter/charge is a sphere
 };
 class G_40mm_HEDP: G_40mm_HE {
     class EventHandlers: EventHandlers {};
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
-    GVAR(classes)[] = {QGVAR(small_HD)};
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small), QGVAR(small_HD)};
     GVAR(fragCount) = 270; // seems to have greater framentation ability, but lower range per source
     GVAR(metal) = 200;
     GVAR(charge) = 45;
@@ -456,13 +461,22 @@ class M_AT: M_PG_AT { // DAR (Hydra 70) M151 warhead
 class Missile_AGM_02_F: MissileBase {
     // Source: http://fas.org/man/dod-101/sys/smart/agm-65.htm
     GVAR(skip) = 0;
-
     GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
-    GVAR(fragCount) = 1600; // guesstimate / provides ~112 m frag range (1% chance to hit)
+    GVAR(fragCount) = 1600;
     GVAR(metal) = 56250;
     GVAR(charge) = 39000;
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "1/2";
+};
+class Missile_AGM_01_F: Missile_AGM_02_F { // Kh-25MTP
+    GVAR(skip) = 0;
+    GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
+    GVAR(fragCount) = 1600;
+    GVAR(metal) = 56250;
+    GVAR(charge) = 39000;
+    GVAR(gurney_c) = 2700;
+    GVAR(gurney_k) = "1/2";
+
 };
 class Rocket_04_HE_F: MissileBase { // Shrieker (Hydra 70)
     GVAR(skip) = 0;
@@ -473,10 +487,19 @@ class Rocket_04_HE_F: MissileBase { // Shrieker (Hydra 70)
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "1/2";
 };
+class Rocket_03_HE_F: Rocket_04_HE_F { // S-8D makes the most sense
+    GVAR(fragCount) = 600; // Thermobaric rounds usually have fewer fragments
+    GVAR(metal) = 1300;
+    GVAR(charge) = 2500;
+    GVAR(gurney_c) = 2300;
+};
+class Rocket_04_AP_F: Rocket_04_HE_F {
+    GVAR(skip) = 1;
+};
 class M_Scalpel_AT: MissileBase { // 9K121 Vikhr
     GVAR(skip) = 0;
     GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium_HD)};
-    GVAR(fragCount) = 800; // guesstimate based on frag jacket, provides ~80 m frag range (1% chance to hit)
+    GVAR(fragCount) = 800; // guesstimate, provides ~80 m frag range (1% chance to hit)
     GVAR(metal) = 10000;
     GVAR(charge) = 3000;
     GVAR(gurney_c) = 2700;
@@ -664,6 +687,10 @@ class ammo_Penetrator_Base: ShellBase {
 };
 
 // ~~~~ Special
+class IRStrobeBase: GrenadeCore {
+    GVAR(skip) = 1;
+};
+
 class Default;
 class Laserbeam: Default {
     GVAR(skip) = 1;
