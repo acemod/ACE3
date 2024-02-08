@@ -104,7 +104,7 @@ private _totalFragCount = 0;
     private _fragCount = if (_fragChance > 1) then {
         3 min (floor _fragChance);
     } else {
-        [0, 1] select (GVAR(atLeastOne) || {random 1 < _fragChance});
+        parseNumber (GVAR(atLeastOne) || {random 1 < _fragChance});
     };
     if (_fragCount == 0) then {
         TRACE_2("fragments",_fragChance,_fragCount);
