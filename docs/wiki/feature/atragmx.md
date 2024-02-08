@@ -63,28 +63,28 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - Update the `Atmsphr` column and `Done`. Requirement: [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html).
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
-- Update the `Target` column and `Done`. Requirement: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
+- Update the `Target` column and `Done`. Requirement: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor](https://ace3.acemod.org/wiki/feature/advanced-ballistics#22-protractor), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
     - `Latitude`: *[ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or Eden Editor's Extended Debug Console: Watch:* `ace_common_maplatitude`.
-    - `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* **[Horus manual p.14]**
-    - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* **[Horus manual p.32]**
-        - *Wind takes into account geographic location, season, time of day, obstacles, altitude and surface roughness: [Wind Profile](https://wind-data.ch/tools/profile.php?lng=en).*
-    - `Wind Direction (clock)`: *Wind Direction is expressed in clock points.[...], wind is always described in terms of where it is coming from.* **[Horus manual p.16]**
-    - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* **[Horus manual p.33]**
-    - `Target Speed`: *Target Speed Assist* **[Horus manual p.21]**
-    - `Target Range (meters)`: *Parameter Limits minimum and maximum values: 25 - 3700 meters.* **[Horus manual p.17]**
+    - `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* [Horus manual p.14]
+    - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* [Horus manual p.32]
+        - Wind takes into account geographic location, season, time of day, obstacles, altitude and surface roughness: [Wind Profile](https://wind-data.ch/tools/profile.php?lng=en).
+    - `Wind Direction (clock)`: *Wind Direction is expressed in clock points.[...], wind is always described in terms of where it is coming from.* [Horus manual p.16]
+    - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* [Horus manual p.33]
+    - `Target Speed`: *Target Speed Assist* [Horus manual p.21]
+    - `Target Range (meters)`: *Parameter Limits minimum and maximum values: 25 - 3700 meters.* [Horus manual p.17]
 - Apply vertical (Page Up and Down keys as default) and horizontal (Left Ctrl + Page Up and Down keys as default) elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
 - Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default).
 
 ### 3.3 Example with Truing tool
 
-> This process is called “Truing Drop”, or simply “Truing”. It involves taking 2 or 3 real flight data points (finding bullet drop at 2 or 3 places along its flight) and feeding it into the calculation parameters. **[Horus manual p.23]**
+> This process is called “Truing Drop”, or simply “Truing”. It involves taking 2 or 3 real flight data points (finding bullet drop at 2 or 3 places along its flight) and feeding it into the calculation parameters. [Horus manual p.23]
 
-> The Truing Drop function is opened from ATrag’s main screen by selecting “Options” [...], then selecting “Truing Drop” from the menu that appears. **[Horus manual p.23]**
+> The Truing Drop function is opened from ATrag’s main screen by selecting “Options” [...], then selecting “Truing Drop” from the menu that appears. [Horus manual p.23]
 
 > With C1, you can also insert the new BC into the C1 table (with the target range value), or you can replace the C1 table with the following values:
 > 1. first entry: Zero Range, original C1.
 > 2. second entry: range at 75% of distance between transonic start and subsonic start, with original C1.
-> 3. third entry: range 200 (y/m) beyond subsonic start, with new calculated C1. **[Horus manual p.24]**
+> 3. third entry: range 200 (y/m) beyond subsonic start, with new calculated C1. [Horus manual p.24]
 
 - Basic example with ammunition 7.62x51mm G7 ballistic coefficient.
     - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
@@ -149,13 +149,13 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ### 3.6 Connecting AtragMx with Vector 21 and DAGR
 
-- Requirement: [Vector]({{ site.baseurl }}/wiki/framework/vector.html) and [DAGR]({{ site.baseurl }}/wiki/framework/dagr.html).
+- Requirement: [Vector]({{ site.baseurl }}/wiki/feature/vector.html) and [DAGR]({{ site.baseurl }}/wiki/feature/dagr.html).
 - Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>.
 - Select `Equipment`.
 - Select `Configure DAGR` and `CONNECT TO` (DOWN and HELP/SEL) `Vector 21`(HELP/SEL).
 - Equip and use the Vector (B key as default).
-- Check target's [slope distance and azimuth]({{ site.baseurl }}/wiki/feature/vector#23-slope-distance-and-azimuth.html) (hold both R and Tab keys as default).
-- Open the [AtragMx properly configured before]({{ site.baseurl }}/wiki/feature/atragmx#32-example-with-m14-and-default-762mm-20rnd-mag.html) according to current rifle and ammunition.
+- Check target's [slope distance and azimuth](https://ace3.acemod.org/wiki/feature/vector#23-slope-distance-and-azimuth) (hold both R and Tab keys as default).
+- Open the [AtragMx properly configured before](#32-example-with-m14-and-default-762mm-20rnd-mag) according to current rifle and ammunition.
 - Open the `Target` column: `Dir of Fire (deg from N)`, `Inclination Angle` and `Target Range (meters)` updated with Vector's values.
 
 ### 3.7 Adding AtragMx Presets
@@ -205,13 +205,13 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 **In position:**
 
 - **Do not update the `Atmsphr` column.** Default ballistic doesn't take into account temperature, pressure and humidity.
-- Update the `Target` column and `Done`. Requirement: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor]({{ site.baseurl }}/wiki/feature/advanced-ballistics#22-protractor.html), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
-    - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* **[Horus manual p.32]**
-        - *Wind takes into account geographic location, season, time of day and obstacles.*
-    - `Wind Direction (clock)`: *Wind Direction is expressed in clock points.[...], wind is always described in terms of where it is coming from.* **[Horus manual p.16]**
-    - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* **[Horus manual p.33]**
-    - `Target Speed`: *Target Speed Assist* **[Horus manual p.21]**
-    - `Target Range (meters)`: *Parameter Limits minimum and maximum values: 25 - 3700 meters.* **[Horus manual p.17]**
+- Update the `Target` column and `Done`. Requirement: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor](https://ace3.acemod.org/wiki/feature/advanced-ballistics#22-protractor), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
+    - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* [Horus manual p.32]
+        - Wind takes into account geographic location, season, time of day and obstacles.
+    - `Wind Direction (clock)`: *Wind Direction is expressed in clock points.[...], wind is always described in terms of where it is coming from.* [Horus manual p.16]
+    - `Inclination Angle`: *The degrees field is marked with a “d” and the cosine field with a “c”.* [Horus manual p.33]
+    - `Target Speed`: *Target Speed Assist* [Horus manual p.21]
+    - `Target Range (meters)`: *Parameter Limits minimum and maximum values: 25 - 3700 meters.* [Horus manual p.17]
 - Apply vertical (Page Up and Down keys as default) and horizontal (Left Ctrl + Page Up and Down keys as default) elevations to the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
 - Hold Breath (Left Shift as default) and Fire (Prim. Mouse. Btn. as default).
 
