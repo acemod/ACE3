@@ -74,7 +74,11 @@ if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround
 };
 
 // Oxygen calculation
-private _oxygen = 1 - 0.131 * GVAR(respiratoryRate) ^ 2;
+private _oxygen = 1 - 0.131 * GVAR(respiratoryRate) ^ 2; // Default AF oxygen saturation
+
+if (GVAR(medicalLoaded) && {EGVAR(medical_vitals,simulateSpo2)}) then {
+    _oxygen = (ACE_player getVariable [QEGVAR(medical,spo2), 97]) / 100;
+};
 
 // Calculate muscle damage increase
 GVAR(muscleDamage) = GVAR(muscleDamage) + (_currentWork / GVAR(peakPower)) ^ 3.2 * MUSCLE_TEAR_RATE;
@@ -123,9 +127,9 @@ private _respiratorySampleDivisor = 1 / (RESPIRATORY_BUFFER * 4.72 * GVAR(VO2Max
 GVAR(respiratoryRate) = (GVAR(respiratoryRate) + _currentWork * _respiratorySampleDivisor * _aePowerRatio) min 1;
 
 // Calculate a pseudo-perceived fatigue, which is used for effects
-private _aeReservePercentage = (GVAR(ae1Reserve) / AE1_MAXRESERVE + GVAR(ae2Reserve) / AE2_MAXRESERVE) / 2;
-private _anReservePercentage = GVAR(anReserve) / AN_MAXRESERVE;
-private _perceivedFatigue = 1 - (_anReservePercentage min _aeReservePercentage);
+GVAR(aeReservePercentage) = (GVAR(ae1Reserve) / AE1_MAXRESERVE + GVAR(ae2Reserve) / AE2_MAXRESERVE) / 2;
+GVAR(anReservePercentage) = GVAR(anReserve) / AN_MAXRESERVE;
+private _perceivedFatigue = 1 - (GVAR(anReservePercentage) min GVAR(aeReservePercentage));
 
 #ifdef DEBUG_MODE_FULL
 systemChat format ["---- muscleDamage: %1 ----", GVAR(muscleDamage) toFixed 8];

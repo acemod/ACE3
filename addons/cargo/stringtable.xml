@@ -33,6 +33,40 @@
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
         </Key>
+        <Key ID="STR_ACE_Cargo_deployObject">
+            <English>Deploy</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_ScrollAction">
+            <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
+            <German>Heben/Senken | (Strg + Scrollen) Drehen</German>
+            <Italian>Alza/Abbassa | (Ctrl + Rotellina) Ruota</Italian>
+            <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
+            <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
+            <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
+            <Russian>Поднять/опустить | (Ctrl + Скролл) Крутить</Russian>
+            <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
+            <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
+            <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
+            <Chinesesimp>抬起/放低 |（Ctrl + 鼠标滚轮）旋转</Chinesesimp>
+            <Korean>높이기/내리기 | (컨트롤 + 스크롤) 회전</Korean>
+            <Portuguese>Subir/Abaixar | (Ctrl + Scroll) Rotacionar</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Cargo_BlockedAction">
+            <English>Blocked</English>
+            <Spanish>Obstruido</Spanish>
+            <Portuguese>Bloqueado</Portuguese>
+            <Russian>Заблокировано</Russian>
+            <Czech>Blokováno</Czech>
+            <Polish>Zablokowany</Polish>
+            <Italian>Bloccato</Italian>
+            <German>Blockiert</German>
+            <French>Bloqué</French>
+            <Japanese>取り付け不可</Japanese>
+            <Korean>막힘</Korean>
+            <Chinesesimp>断开</Chinesesimp>
+            <Chinese>斷開</Chinese>
+            <Turkish>Bloke Edilmiş</Turkish>
+        </Key>
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
             <Japanese>名前を次に変更:&lt;br/&gt;%1</Japanese>
@@ -527,6 +561,12 @@
             <Italian>Determina se un oggetto verrà subito trasportato o trascinato dopo essere stato scaricato.</Italian>
             <French>Active si les éléments de cargaison sont portés ou traînés après le déchargement.</French>
             <Portuguese>Controla se os itens de carga são carregados ou arrastados após a descarga.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Cargo_enableDeploy">
+            <English>Enable deploy</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_enableDeploy_description">
+            <English>Controls whether cargo items can be unloaded via the deploy method.</English>
         </Key>
     </Package>
 </Project>
