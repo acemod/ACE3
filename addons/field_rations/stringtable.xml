@@ -465,7 +465,7 @@
             <Italian>Scorta d'acqua</Italian>
             <Chinese>飲用水補給</Chinese>
             <Chinesesimp>饮用水补给</Chinesesimp>
-            <Japanese>水資源</Japanese>
+            <Japanese>水資源量</Japanese>
             <Russian>Водные ресурсы</Russian>
             <Polish>Źródło wody</Polish>
             <Korean>식수 보급량</Korean>
@@ -478,7 +478,7 @@
             <Italian>La quantità di acqua disponibile per interazioni ACE Razioni da Campo di sorgenti d'acqua (-1 nessuna, -10 infinita)</Italian>
             <Chinese>水源可供補充飲用水的次數（-1為關閉，-10為無限次）。</Chinese>
             <Chinesesimp>水源可供取水的次数（-1为关闭，-10为无限次）。</Chinesesimp>
-            <Japanese>ACE フィールド レーションで利用できる水源の量を設定できます。(-1で無効化、-10で無限)</Japanese>
+            <Japanese>ACE フィールド レーションで利用できる水源の資源量を設定できます。(-1で無効化、-10で無限)</Japanese>
             <Russian>Количество воды, доступной для использования в ACE Полевые рационы. (-1 - отключено, -10 - бесконечно)</Russian>
             <Polish>Ilość wody dostępnej dla Akcji ACE Źródła wody (-1 wyłączone, -10 nieskończone)</Polish>
             <Korean>ACE 전투식량 물 근처 행동에서 얼마나 물을 얻어 갈 수 있는지를 정합니다 (-1은 비활성화, -10은 무한대)</Korean>

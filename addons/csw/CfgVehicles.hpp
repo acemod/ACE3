@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(deploy) {
                 displayName = CSTRING(PlaceTripod_displayName);
-                condition = QUOTE(call FUNC(assemble_canDeployTripod));
+                condition = QUOTE(call FUNC(canDeployTripod));
                 statement = QUOTE(call FUNC(assemble_deployTripod));
                 exceptions[] = {};
             };
@@ -36,7 +36,7 @@ class CfgVehicles {
                 condition = "true";
                 class GVAR(pickUp) {
                     displayName = CSTRING(Pickup_displayName);
-                    condition = QUOTE(call FUNC(assemble_canPickupTripod));
+                    condition = QUOTE(call FUNC(canPickupTripod));
                     statement = QUOTE(call FUNC(assemble_pickupTripod));
                 };
                 class GVAR(mountWeapon) {
@@ -125,10 +125,11 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
+                // Workaround for static weapons' Get In memory point being at the front of the gun
                 class GVAR(getIn) {
                     displayName = CSTRING(GetIn_displayName);
                     condition = QUOTE(call FUNC(canGetIn));
-                    statement = QUOTE(call FUNC(getIn));
+                    statement = QUOTE(_player moveInTurret [ARR_2(_target,[0])]);
                 };
             };
         };

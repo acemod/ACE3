@@ -38,7 +38,7 @@ if (!local _unit) exitWith {
 };
 
 if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {
-    WARNING_2("setUnconscious called with no change [Unit %1] [State [%2]", _unit, _knockOut);
+    WARNING_2("setUnconscious called with no change [Unit %1] [State [%2]",_unit,_knockOut);
     false
 };
 

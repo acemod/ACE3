@@ -25,15 +25,9 @@ if (GVAR(plottingBoard_Shown) == 0) then {
             _y set [4, 0];
         };
     } forEach GVAR(plottingBoard_markers);
-};
+} else {
+    if !([ACE_player, "ACE_PlottingBoard"] call EFUNC(common,hasItem)) exitWith {};
 
-if (((GVAR(mapTool_Shown) == 0) && {GVAR(plottingBoard_Shown) == 0}) || {
-    private _uniqueItems = ACE_player call EFUNC(common,uniqueItems);
-
-    !(("ACE_MapTools" in _uniqueItems) || {"ACE_PlottingBoard" in _uniqueItems})
-}) exitWith {};
-
-if (GVAR(plottingBoard_Shown) > 0) then {
     if (GVAR(plottingBoard_moveToMouse)) then {
         GVAR(plottingBoard_pos) = _mapCtrl ctrlMapScreenToWorld getMousePosition;
         GVAR(plottingBoard_moveToMouse) = false;  // we only need to do this once after opening the map tool
@@ -97,7 +91,7 @@ if (GVAR(plottingBoard_Shown) > 0) then {
     } forEach GVAR(plottingBoard_markers);
 };
 
-if (GVAR(mapTool_Shown) > 0) then {
+if ((GVAR(mapTool_Shown) != 0) && {[ACE_player, "ACE_MapTools"] call EFUNC(common,hasItem)}) then {
     // Open map tools in center of screen when toggled to be shown
     if (GVAR(mapTool_moveToMouse)) then {
         GVAR(mapTool_pos) = _mapCtrl ctrlMapScreenToWorld getMousePosition;

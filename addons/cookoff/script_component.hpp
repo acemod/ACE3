@@ -37,3 +37,6 @@
 
 // Common commander hatch defines for default vehicles
 #define DEFAULT_COMMANDER_HATCHES ["osa_poklop_commander", "hatch_commander_axis"]
+
+#define DISTANCE_CLOSE 235
+#define DISTANCE_MID 952

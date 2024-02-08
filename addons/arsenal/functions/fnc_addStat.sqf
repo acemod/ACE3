@@ -77,7 +77,7 @@ private _fnc_addToTabs = {
 
         // Find if there is an entry with same ID
         if (_currentTab findIf {_x select 5 == _statName} != -1) then {
-            TRACE_1("A stat with this ID already exists", _statName);
+            TRACE_1("A stat with this ID already exists",_statName);
         } else {
             _stat = +_finalArray;
             _stat set [5, _statName];
@@ -109,11 +109,10 @@ private _tabToChange = [];
 {
     _x params ["_tab", "_tabSide"];
 
-    _tabToChange = if (_tabSide == "R") then {
+    _tabToChange = [
+        GVAR(statsListLeftPanel),
         GVAR(statsListRightPanel)
-    } else {
-        GVAR(statsListLeftPanel)
-    };
+    ] select (_tabSide == "R");
 
     _stats = _tabToChange select _tab;
 
