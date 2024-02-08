@@ -26,7 +26,9 @@ params ["_object", ["_destroyWhenFinished", false], ["_source", objNull], ["_ins
 if (isNull _object) exitWith {};
 
 // Don't have an object detonate its ammo twice
-if (!isNil {_object getVariable QGVAR(cookoffMagazines)}) exitWith {};
+if (_object getVariable [QGVAR(isAmmoDetonating), false]) exitWith {};
+
+_object setVariable [QGVAR(isAmmoDetonating), true, true];
 
 _object setVariable [QGVAR(cookoffMagazines), _object call FUNC(getVehicleAmmo)];
 

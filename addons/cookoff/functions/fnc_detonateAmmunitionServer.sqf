@@ -10,7 +10,7 @@
  * 3: Instigator <OBJECT>
  *
  * Return Value:
- * Nothing Useful
+ * None
  *
  * Example:
  * [cursorObject, true, player, player] call ace_cookoff_fnc_detonateAmmunitionServer
@@ -26,19 +26,11 @@ if (isNull _object) exitWith {};
 
 (_object getVariable QGVAR(cookoffMagazines)) params ["_magazines", "_totalAmmo"];
 
-// If the cook-off has finished, clean up the effects and destroy the object
-if (_magazines isEqualTo [] || {_totalAmmo <= 0}) exitWith {
-    [QGVAR(cleanupBoxEffects), _object] call CBA_fnc_globalEvent;
+private _hasFinished = _totalAmmo <= 0 || {_magazines isEqualTo []};
 
-    _object setVariable [QGVAR(cookoffMagazines), nil];
-
-    if (_destroyWhenFinished) then {
-        _object setDamage [1, true, _source, _instigator];
-    };
-};
-
-// If the cook-off is interrupted or disabled, clean up the effects
-if (underwater _object || {
+// If the cook-off has finished or been interrupted, clean up the effects for boxes (no vehicle effects)
+if (_hasFinished ||
+    {underwater _object} || {
     if (GVAR(ammoCookoffDuration) == 0) exitWith {true};
 
     if (_object isKindOf "ReammoBox_F") exitWith {
@@ -47,9 +39,21 @@ if (underwater _object || {
 
     !(GVAR(enableAmmoCookoff) && {_object getVariable [QGVAR(enableAmmoCookoff), true]})
 }) exitWith {
-    [QGVAR(cleanupBoxEffects), _object] call CBA_fnc_globalEvent;
+    if (_object isKindOf "ReammoBox_F") then {
+        [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
 
+        // Reset variable, so the box can cook-off again
+        _object setVariable [QGVAR(isCookingOff), nil, true];
+    };
+
+    // Reset variables, so the object can detonate its ammo again
     _object setVariable [QGVAR(cookoffMagazines), nil];
+    _object setVariable [QGVAR(isAmmoDetonating), nil, true];
+
+    // If done, destroy the object if necessary
+    if (_hasFinished && _destroyWhenFinished) then {
+        _object setDamage [1, true, _source, _instigator];
+    };
 };
 
 private _magazineIndex = floor random (count _magazines);
@@ -75,9 +79,6 @@ TRACE_2("",_totalAmmo,_timeBetweenAmmoDetonation);
 _totalAmmo = _totalAmmo - _removed;
 
 _object setVariable [QGVAR(cookoffMagazines), [_magazines, _totalAmmo]];
-
-// Detonate the remaining ammo after a delay
-[FUNC(detonateAmmunitionServer), [_object, _destroyWhenFinished, _source, _instigator], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
 
 // Get magazine info, which is used to spawn projectiles
 private _configMagazine = configFile >> "CfgMagazines" >> _magazineClassname;
@@ -169,3 +170,6 @@ switch (_simType) do {
         };
     };
 };
+
+// Detonate the remaining ammo after a delay
+[FUNC(detonateAmmunitionServer), [_object, _destroyWhenFinished, _source, _instigator], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;

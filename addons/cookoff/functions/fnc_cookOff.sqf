@@ -112,7 +112,10 @@ if (_delayBetweenSmokeAndFire) then {
             if (isNull _vehicle) exitWith {};
 
             // Remove effects
-            [QGVAR(cleanupVehicleEffects), _vehicle] call CBA_fnc_globalEvent;
+            [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
+
+            // Reset variable, so it can cook-off again
+            _vehicle setVariable [QGVAR(isCookingOff), nil, true];
 
             if (GVAR(destroyVehicleAfterCookoff) || _detonateAfterCookoff) then {
                 _vehicle setDamage [1, true, _source, _instigator]; // because it's running on the server, killer and instigator can be set
