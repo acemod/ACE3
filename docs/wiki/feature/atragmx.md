@@ -63,7 +63,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - Update the `Atmsphr` column and `Done`. Requirement: [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html).
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
-- Update the `Target` column and `Done`. Requirement: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor](https://ace3.acemod.org/wiki/feature/advanced-ballistics#22-protractor), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
+- Update the `Target` column and `Done`. Requirement: [Wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor](https://ace3.acemod.org/wiki/feature/advanced-ballistics#22-protractor), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
     - `Latitude`: *[ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf) or Eden Editor's Extended Debug Console: Watch:* `ace_common_maplatitude`.
     - `Dir of Fire (deg from N)`: *The value is therefore given as the direction of the barrel axis from true north.* [Horus manual p.14]
     - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* [Horus manual p.32]
@@ -205,7 +205,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 **In position:**
 
 - **Do not update the `Atmsphr` column.** Default ballistic doesn't take into account temperature, pressure and humidity.
-- Update the `Target` column and `Done`. Requirement: [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor](https://ace3.acemod.org/wiki/feature/advanced-ballistics#22-protractor), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
+- Update the `Target` column and `Done`. Requirement: [Wind arrow]({{ site.baseurl }}/wiki/feature/weather.html), [Protractor](https://ace3.acemod.org/wiki/feature/advanced-ballistics#22-protractor), [Map Tools]({{ site.baseurl }}/wiki/feature/maptools.html). For advanced tools: [ACE3 Equipment]({{ site.baseurl }}/wiki/feature.html).
     - `Wind speed (m/s)`: *Two wind speed values (low and high) may be entered on the target screen,[...] Lead/Wind2 button on the screen.* [Horus manual p.32]
         - Wind takes into account geographic location, season, time of day and obstacles.
     - `Wind Direction (clock)`: *Wind Direction is expressed in clock points.[...], wind is always described in terms of where it is coming from.* [Horus manual p.16]
