@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Dslyecxi, PabstMirror
+ * Author: Dslyecxi, PabstMirror, LinkIsGrim
  * Refreshes nvg effect if switching NVG goggles.
  *
  * Arguments:
@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [player] call ace_nightvision_fnc_onSlotItemChanged
+ * [player, "ACE_NVG_Wide", 616, true] call ace_nightvision_fnc_onSlotItemChanged
  *
  * Public: No
  */
