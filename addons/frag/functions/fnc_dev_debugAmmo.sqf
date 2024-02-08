@@ -7,9 +7,10 @@
  *
  * Arguments:
  * 0: Log ammo types that wouldn't normally frag. <BOOL> (Default: false)
- * 1: Only export ammo classes of classes referenced in CfgMagazines and their
+ * 1: Only print ammo without ACE_frag entries, inherited or otherwise. <BOOL> (Default: true)
+ * 2: Only export ammo classes of classes referenced in CfgMagazines and their
  *    submunitions. <BOOL> (Default: false)
- * 2: Force a CSV format on debug print. <BOOL> (Default: false)
+ * 3: Force a CSV format on debug print. <BOOL> (Default: false)
  *
  * Return Value:
  * None
@@ -22,13 +23,14 @@
 
 params [
     ["_logAll", false, [false]],
+    ["_printOnlyIncomplete", true, [true]],
     ["_onlyShotAmmoTypes", false, [false]],
     ["_csvFormat", false, [false]]
 ];
 
 diag_log text format ["~~~~~~~~~~~~~Start [%1]~~~~~~~~~~~~~", _this];
 if (_csvFormat) then {
-    diag_log text format ["ammo,gurney_c,gurney_m,gurney_k,gurney_gC,fragTypes,fragCount,Inheritance"];
+    diag_log text format ["ammo,gurney_c,gurney_m,gurney_k,gurney_gC,skip,fragCount,Inheritance"];
 };
 
 // Gather all configs, either those that could be created from firing or all classes
@@ -79,6 +81,7 @@ private _printCount = 0;
         if (_shoulFrag || _logAll) then {
 
             private _warn = false;
+            private _skip = getNumber (_ammoConfig >> QGVAR(skip));
             private _fragTypes = getArray (_ammoConfig >> QGVAR(CLASSES));
             if (_fragTypes isEqualTo []) then {_warn = true;};
             private _c = getNumber(_ammoConfig >> QGVAR(CHARGE));
@@ -92,13 +95,13 @@ private _printCount = 0;
             private _fragCount = getNumber (_ammoConfig >> QGVAR(fragCount));
             if (_fragCount == 0) then {_fragCount = 200; _warn = true;};
 
-            if (_warn) then {
+            if (!_printOnlyIncomplete || {_warn && _skip isNotEqualTo 0}) then {
                 INC(_printCount);
                 if (_csvFormat) then {
-                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%8", _c, _m, _k, _gC, _fragTypes, _fragCount, _ammo, [_ammoConfig, true] call BIS_fnc_returnParents];
+                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%8", _c, _m, _k, _gC, _skip, _fragCount, _ammo, [_ammoConfig, true] call BIS_fnc_returnParents];
                 } else {
                     diag_log text format ["Ammo [%1] MISSING frag configs:", _ammo];
-                    diag_log text format [" _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5,_fragCount=%6", _c, _m, _k, _gC, _fragTypes, _fragCount];
+                    diag_log text format ["_c=%1,_m=%2,_k=%3,_gC=%4,_skip=%5,_fragCount=%6,_fragTypes=%7", _c, _m, _k, _gC, _skip, _fragCount, _fragTypes];
                 };
             };
         };
