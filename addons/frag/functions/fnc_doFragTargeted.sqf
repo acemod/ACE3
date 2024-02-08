@@ -43,6 +43,9 @@ if (_fragTypes isEqualTo []) then {
     ];
 };
 
+// Post 2.18 change - uncomment line 47, remove line 49, 56-62, 70-72, and change lines 64 & 170 from _targetse to _objects
+// private _objects = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange ] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
+
 private _objects = (ASLToATL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_posASL,_fragRange);
@@ -161,7 +164,7 @@ private _totalFragCount = 0;
 
     _totalFragCount = _totalFragCount + _fragCount;
     if (_totalFragCount >= _maxFrags) then {
-        TRACE_2("maxFrags", _totalFragCount, _maxFrags);
+        TRACE_2("maxFrags",_totalFragCount,_maxFrags);
         break;
     };
 } forEach _targets;

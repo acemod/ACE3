@@ -33,7 +33,7 @@ private _indirectRange = getNumber (_ammoConfig >> "indirectHitRange");
 
 if (_skip == 1 || (_force == 0 && {_explosive < 0.5 || {_indirectHit < 3
     || {_indirectRange < 5 && _indirectHit < _indirectRange}}})) then {
-    TRACE_5("No frag",_ammo,_skip, _explosive, _indirectRange, _indirectHit);
+    TRACE_5("No frag",_ammo,_skip,_explosive,_indirectRange,_indirectHit);
     _shouldFrag = false;
 };
 

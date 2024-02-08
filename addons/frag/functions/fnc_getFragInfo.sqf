@@ -98,7 +98,7 @@ if (_warn) then {
  *                 of spherical fragmentation
  */
 _ammoInfo = [
-    sqrt (_fragCount / (4 * pi * ACE_FRAG_MIN_FRAG_HIT_CHANCE)),
+    ACE_FRAG_MAX_FRAG_RANGE max sqrt (_fragCount / (4 * pi * ACE_FRAG_MIN_FRAG_HIT_CHANCE)),
     0.8 * _gurneyConstant * sqrt (_chargeMass / (_metalMass + _chargeMass * _geometryCoefficient)),
     _fragTypes,
     _fragCount / 4 / pi
