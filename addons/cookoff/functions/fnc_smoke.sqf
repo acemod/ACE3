@@ -41,4 +41,4 @@ private _effects = [_smokeBarrel];
     _effects pushBack _smoke;
 } forEach _positions;
 
-_vehicle setVariable [QGVAR(vehicleEffects), _effects];
+_vehicle setVariable [QGVAR(effects), _effects];

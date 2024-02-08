@@ -36,6 +36,15 @@ call FUNC(compileStats);
     EGVAR(common,blockItemReplacement) = false;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(cargoChanged), {
+    params ["_display"];
+    // Only update actions if necessary, this can get performance-intensive using the arrow keys
+    if (!GVAR(updateActionsOnCargoChange)) exitWith {};
+    private _actionInfo = [_display];
+    _actionInfo append GVAR(actionInfo);
+    [QGVAR(displayActions), _actionInfo] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
+
 // Setup Tools tab
 [keys (uiNamespace getVariable [QGVAR(configItemsTools), createHashMap]), LLSTRING(toolsTab), TOOLS_TAB_ICON, -1, true] call FUNC(addRightPanelButton);
 

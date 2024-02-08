@@ -49,5 +49,5 @@ params ["", "", "", "_startTime", "_smokeDelay"];
         [QGVAR(detonateAmmunition), [_box, true, _source, _instigator, random [DETONATION_DELAY / 2, DETONATION_DELAY, DETONATION_DELAY / 2 * 3]]] call CBA_fnc_localEvent;
     };
 
-    _box setVariable [QGVAR(boxEffects), _effects];
+    _box setVariable [QGVAR(effects), _effects];
 }, _this, (_startTime - CBA_missionTime + _smokeDelay) max 0] call CBA_fnc_waitAndExecute; // this delay allows for synchronisation for JIP players

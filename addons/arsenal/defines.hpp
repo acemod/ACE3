@@ -155,6 +155,8 @@
 #define IDC_statsNextPage 53
 #define IDC_statsCurrentPage 54
 #define IDC_actionsBox 90
+#define IDC_actionsBackground1 90010
+#define IDC_actionsBackground2 90011
 #define IDC_actionsText1 9001
 #define IDC_actionsButton1 9002
 #define IDC_actionsText2 9003

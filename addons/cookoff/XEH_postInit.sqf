@@ -16,33 +16,24 @@ if (isServer) then {
 ["AllVehicles", "Deleted", {
     {
         deleteVehicle _x;
-    } forEach ((_this select 0) getVariable [QGVAR(vehicleEffects), []]);
+    } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
 }, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
 
 ["ReammoBox_F", "Deleted", {
     {
         deleteVehicle _x;
-    } forEach ((_this select 0) getVariable [QGVAR(boxEffects), []]);
+    } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
-[QGVAR(cleanupVehicleEffects), {
+// Raised when the flames have subsided or after the ammo of a box has finished cooking off
+[QGVAR(cleanupEffects), {
     params ["_object"];
 
     {
         deleteVehicle _x;
-    } forEach (_object getVariable [QGVAR(vehicleEffects), []]);
+    } forEach (_object getVariable [QGVAR(effects), []]);
 
-    _object setVariable [QGVAR(vehicleEffects), nil];
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(cleanupBoxEffects), {
-    params ["_object"];
-
-    {
-        deleteVehicle _x;
-    } forEach (_object getVariable [QGVAR(boxEffects), []]);
-
-    _object setVariable [QGVAR(boxEffects), nil];
+    _object setVariable [QGVAR(effects), nil];
 }] call CBA_fnc_addEventHandler;
 
 // Ammo box damage handling

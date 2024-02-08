@@ -10,6 +10,7 @@
  * 3: Actions <ARRAY of ARRAYS>
  * 4: Condition <CODE> (default: {true})
  * 5: Scope editor <NUMBER> (default: 2)
+ * 6: Update when cargo content changes <BOOL> (default: false)
  *
  * Return Value:
  * 0: Array of IDs <ARRAY of STRINGS>
@@ -30,7 +31,8 @@ params [
     ["_title", "", [""]],
     ["_actions", [], [[]]],
     ["_rootCondition", {true}, [{}]],
-    ["_scopeEditor", 2, [0]]
+    ["_scopeEditor", 2, [0]],
+    ["_updateOnCargoChange", false, [false]]
 ];
 
 // Compile actions from config (in case this is called before preInit)
@@ -118,5 +120,9 @@ private _group = [];
         _tab pushBack [_rootClass, _title, _rootCondition, _group];
     };
 } forEach _tabs;
+
+if (_updateOnCargoChange) then {
+    GVAR(updateActionsOnCargoChange) = true;
+};
 
 _return

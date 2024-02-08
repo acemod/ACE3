@@ -1,59 +1,63 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Initializes weapon to disable weapon disassembling
+ * Initializes CSW systems on vehicle
  *
  * Arguments:
- * 0: Weapon <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [weapon] call ace_csw_fnc_staticWeaponInit
+ * cursorObject call ace_csw_fnc_initVehicle
  *
  * Public: No
  */
 
-params ["_staticWeapon"];
-if (isNull _staticWeapon) exitWith { WARNING_1("%1 became null",_staticWeapon) };
-private _typeOf = typeOf _staticWeapon;
-private _configOf = configOf _staticWeapon;
-private _configEnabled = (getNumber (_configOf >> "ace_csw" >> "enabled")) == 1;
-private _assemblyConfig = _configEnabled && {(getText (_configOf >> "ace_csw" >> "disassembleWeapon")) != ""};
-TRACE_4("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig);
-
-if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
-    TRACE_1("adding AI fired handler",_staticWeapon);
-    _staticWeapon addEventHandler ["Fired", LINKFUNC(ai_handleFired)];
-    _staticWeapon addEventHandler ["GetIn", LINKFUNC(ai_handleGetIn)]; // handle AI getting inside weapon with no ammo
+params ["_vehicle"];
+if (!alive _vehicle) exitWith { WARNING_1("%1 not alive",_vehicle); };
+if (!simulationEnabled _vehicle) exitWith {
+    [{simulationEnabled _this}, FUNC(initVehicle), _vehicle] call CBA_fnc_waitUntilAndExecute;
 };
 
-TRACE_2("",local _staticWeapon,_staticWeapon turretLocal [0]);
-if (_configEnabled && {_staticWeapon turretLocal [0]}) then { // if turret is local to us, then handle mags/weapon
+private _typeOf = typeOf _vehicle;
+private _configOf = configOf _vehicle;
+private _configEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "enabled")) == 1;
+private _assemblyConfig = _configEnabled && {(getText (_configOf >> QUOTE(ADDON) >> "disassembleWeapon")) != ""};
+TRACE_4("initVehicle",_vehicle,_typeOf,_configEnabled,_assemblyConfig);
+
+if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
+    TRACE_1("adding AI fired handler",_vehicle);
+    _vehicle addEventHandler ["Fired", LINKFUNC(ai_handleFired)];
+    _vehicle addEventHandler ["GetIn", LINKFUNC(ai_handleGetIn)]; // handle AI getting inside weapon with no ammo
+};
+
+TRACE_2("",local _vehicle,_vehicle turretLocal [0]);
+if (_configEnabled && {_vehicle turretLocal [0]}) then { // if turret is local to us, then handle mags/weapon
     [{
-        params ["_staticWeapon"];
-        if (!alive _staticWeapon) exitWith { TRACE_1("dead/deleted",_staticWeapon); };
+        params ["_vehicle"];
+        if (!alive _vehicle) exitWith { TRACE_1("dead/deleted",_vehicle); };
         // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
-        private _assemblyModeIndex = _staticWeapon getVariable [QGVAR(assemblyMode), 3];
+        private _assemblyModeIndex = _vehicle getVariable [QGVAR(assemblyMode), 3];
         private _emptyWeapon = _assemblyModeIndex isEqualTo 2;
         private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select _assemblyModeIndex;
-        TRACE_2("turretLocal",_staticWeapon,_assemblyMode);
-        [_staticWeapon, [0], _assemblyMode, _emptyWeapon] call FUNC(proxyWeapon);
-        [_staticWeapon, _assemblyMode, _emptyWeapon] call FUNC(staticWeaponInit_unloadExtraMags);
-    }, [_staticWeapon]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
+        TRACE_2("turretLocal",_vehicle,_assemblyMode);
+        [_vehicle, [0], _assemblyMode, _emptyWeapon] call FUNC(proxyWeapon);
+        [_vehicle, _assemblyMode, _emptyWeapon] call FUNC(staticWeaponInit_unloadExtraMags);
+    }, [_vehicle]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
 };
 
 if (_assemblyConfig) then {
     [{
-        params ["_staticWeapon"];
-        if (!alive _staticWeapon) exitWith { TRACE_1("dead/deleted",_staticWeapon); };
-        private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 3]);
-        TRACE_2("assemblyConfig present",_staticWeapon,_assemblyMode);
+        params ["_vehicle"];
+        if (!alive _vehicle) exitWith { TRACE_1("dead/deleted",_vehicle); };
+        private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]);
+        TRACE_2("assemblyConfig present",_vehicle,_assemblyMode);
         if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode enabled
-            [_staticWeapon, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+            [_vehicle, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         };
-    }, [_staticWeapon]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
+    }, [_vehicle]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
 };
 
 // Add interactions for players
@@ -76,7 +80,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     };
     private _childenCode = {
         BEGIN_COUNTER(getActions); // can remove for final release
-        private _ret = (call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload));
+        private _ret = (call FUNC(getLoadActions)) + (call FUNC(getUnloadActions));
         END_COUNTER(getActions);
         _ret
     };
