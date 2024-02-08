@@ -129,7 +129,7 @@ private _spallSpawner = createVehicle [
     "CAN_COLLIDE"
 ];
 _spallSpawner setVectorDirandUp [_lastVelocityUnit, _vectorUp];
-_spallSpawner setVelocity (_lastVelocityUnit vectorMultiply (_velocityChange/ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF));
+_spallSpawner setVelocity (_lastVelocityUnit vectorMultiply (_velocityChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF));
 _spallSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL

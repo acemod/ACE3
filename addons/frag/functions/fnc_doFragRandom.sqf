@@ -37,11 +37,7 @@ private _hMode = switch (true) do {
     default {"_mid"};
 };
 
-private _type = if (_fragType isNotEqualTo [] && {"ace_frag_tiny" isEqualTo (_fragType#0)}) then {
-    QGVAR(def_tiny_)
-} else {
-    QGVAR(def_small_)
-};
+private _type = [QGVAR(def_small_), QGVAR(def_tiny_)] select (_fragType isNotEqualTo [] && {"ace_frag_tiny" isEqualTo (_fragType#0)});
 
 _maxFragCount = switch (true) do {
     case (_maxFragCount <= 5): {"5"};

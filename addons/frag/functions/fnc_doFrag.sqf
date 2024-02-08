@@ -38,13 +38,13 @@ private _timeSinceLastFrag = CBA_missionTime - GVAR(lastFragTime);
 if (_timeSinceLastFrag < ACE_FRAG_HOLDOFF || {_posASL isEqualTo [0, 0, 0] || _ammo isEqualTo ""}) exitWith {
     TRACE_3("timeExit",_timeSinceLastFrag,CBA_missionTime,GVAR(lastFragTime));
 };
-private _maxFragCount = round linearConversion [0.1, 1.5, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
+private _maxFragCount = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 TRACE_3("willFrag",_timeSinceLastFrag,CBA_missionTime,_maxFragCount);
 
 private _ammoArr = [_ammo] call FUNC(getFragInfo);
 _ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
 // For low frag rounds limit the # of frags created
-if (_modFragCount < 10) then {
+if (_modFragCount < ACE_FRAG_LOW_FRAG_MOD_COUNT) then {
     _maxFragCount = _modFragCount * ACE_FRAG_LOW_FRAG_COEFF;
     GVAR(lastFragTime) = CBA_missionTime - ACE_FRAG_LOW_FRAG_HOLDOFF_REDUCTION;
 } else {
@@ -53,10 +53,10 @@ if (_modFragCount < 10) then {
 // Offset for ground clearance
 private _heightATL = (ASLToATL _posASL)#2;
 if (_heightATL < ACE_FRAG_MIN_GROUND_OFFSET) then {
-    _posASL = _posASL vectorAdd [0, 0, ACE_FRAG_MIN_GROUND_OFFSET];
+    _posASL = _posASL vectorAdd [0, 0, ACE_FRAG_MIN_GROUND_OFFSET - (0  min _heightATL)];
 };
 
-TRACE_3("fnc_doFragTargeted IF", _fragRange, _timeSinceLastFrag, GVAR(fragSimComplexity));
+TRACE_3("fnc_doFragTargeted IF",_fragRange,_timeSinceLastFrag,GVAR(fragSimComplexity));
 if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
     _maxFragCount = _maxFragCount - ([_posASL, _fragVel, _fragRange, _maxFragCount, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
