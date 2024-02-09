@@ -48,4 +48,11 @@ call FUNC(compileStats);
 // Setup Tools tab
 [keys (uiNamespace getVariable [QGVAR(configItemsTools), createHashMap]), LLSTRING(toolsTab), TOOLS_TAB_ICON, -1, true] call FUNC(addRightPanelButton);
 
+GVAR(insigniaCache) = createHashMap;
+GVAR(insigniaCache) merge [uiNamespace getVariable QGVAR(insigniaCache), true]; // Don't copy directly because the uiNamespace cache is final
+{
+    GVAR(insigniaCache) set [configName _x, true];
+} forEach ("(if (isNumber (_x >> 'scope')) then {getNumber (_x >> 'scope')} else {2}) == 2" configClasses (missionConfigFile >> "CfgUnitInsignia"));
+GVAR(insigniaCache) = compileFinal GVAR(insigniaCache);
+
 ADDON = true;

@@ -9,6 +9,7 @@
  * 1: Classname <STRING>
  * 2: Panel control <CONTROL>
  * 3: Name of the picture entry in that Cfg class <STRING> (default: "picture")
+ * 4: Use missionConfigFile for config path <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -19,7 +20,7 @@
  * Public: Yes
  */
 
-params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
+params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]], ["_useMissionConfig", false, [false]]];
 
 private _skip = GVAR(favoritesOnly) && {!(_className in GVAR(currentItems))} && {!((toLower _className) in GVAR(favorites))};
 if (_skip) then {
@@ -44,7 +45,7 @@ if (_skip) exitWith {};
 // Sanitise key, as it's public; If not in cache, find info and cache it for later use
 ((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_configCategory + _className, {
     // Get classname (config case), display name, picture and DLC
-    private _configPath = configFile >> _configCategory >> _className;
+    private _configPath = ([configFile, missionConfigFile] select _useMissionConfig) >> _configCategory >> _className;
     private _dlcName = _configPath call EFUNC(common,getAddon);
 
     // If _pictureEntryName is empty, then this item has no picture (e.g. faces)
