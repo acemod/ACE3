@@ -1,4 +1,5 @@
 #include "..\script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: johnb43
  * Adds custom action buttons.

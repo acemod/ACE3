@@ -18,5 +18,5 @@ class GVAR(customArsenalButton_Background): ctrlStaticBackground {
 
     colorBackground[] = {0,0,0,1};
     fade = 1;
-    enable = 0;
+    enabled = 0;
 };
