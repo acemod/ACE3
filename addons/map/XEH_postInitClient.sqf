@@ -19,9 +19,9 @@ GVAR(flashlights) = [] call CBA_fnc_createNamespace;
 
             setCurrentChannel GVAR(DefaultChannel);
             if (currentChannel == GVAR(DefaultChannel)) then {
-                // INFO_1("Channel Set - %1", currentChannel);
+                // INFO_1("Channel Set - %1",currentChannel);
             } else {
-                ERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
+                ERROR_2("Failed To Set Channel %1 (is %2)",GVAR(DefaultChannel),currentChannel);
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };

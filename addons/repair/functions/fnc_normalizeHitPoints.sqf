@@ -16,10 +16,10 @@
  */
 
 params ["_vehicle"];
-TRACE_2("params",_vehicle, typeOf _vehicle);
+TRACE_2("params",_vehicle,typeOf _vehicle);
 
 // Can't execute all commands if the vehicle isn't local, exit if that's so
-if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
+if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1",_vehicle);};
 
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []]];
 
@@ -57,7 +57,7 @@ total = damage _vehicle;
 // apply normalized damage to all dependand hitpoints
 {
     private _damage = call (_dependentHitPointScripts select _forEachIndex);
-    TRACE_2("setting depend hitpoint", _x, _damage);
+    TRACE_2("setting depend hitpoint",_x,_damage);
     _vehicle setHitPointDamage [_x, _damage];
 } forEach _dependentHitPoints;
 

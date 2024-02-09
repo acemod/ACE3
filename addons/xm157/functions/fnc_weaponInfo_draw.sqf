@@ -86,7 +86,7 @@ if (_retTex != ctrlText _ctrlScopeReticle) then { _ctrlScopeReticle ctrlSetText 
 private _rangeInfo = _range call {
     if (_range == 0) exitWith { "" };
     if (_range < 0) exitWith { // range error - blink if recent
-        if ((_timeSinceLastInput < 3) && {(floor (4*_timeSinceLastInput)) % 2 == 1}) then { "----" } else { "" };
+        ["", "----"] select ((_timeSinceLastInput < 3) && {(floor (4*_timeSinceLastInput)) % 2 == 1});
     };
     format ["%1 m", _range toFixed 0]
 };
@@ -98,7 +98,7 @@ _ctrl ctrlSetText _rangeInfo;
 private _bearingInfo = call {
     private _bearingSetting = GVAR(data) getOrDefault ["bearing_show", 0];
     if ((_bearingSetting == 2) && {_timeSinceLastInput > 2}) exitWith { "" };
-    if ((_bearingSetting == 1)) exitWith { format ["%1", floor (17.777777 * _weaponDir)]; }; // (6400 Mils, not MRAD)
+    if ((_bearingSetting == 1)) exitWith { str floor (17.777777 * _weaponDir); }; // (6400 Mils, not MRAD)
     format ["%1°", floor _weaponDir];
 };
 private _ctrl = _display displayCtrl IDC_SCREEN_TEXT_UPPER_LEFT;

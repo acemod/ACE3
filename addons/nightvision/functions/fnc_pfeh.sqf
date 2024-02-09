@@ -36,7 +36,7 @@ if (EGVAR(common,OldIsCamera)) exitWith {
     };
 };
 if (!GVAR(running)) then {
-    TRACE_1("Un-Pausing", GVAR(paused));
+    TRACE_1("Un-Pausing",GVAR(paused));
     GVAR(running) = true;
     [true] call FUNC(setupDisplayEffects);
     [] call FUNC(refreshGoggleType);

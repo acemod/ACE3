@@ -60,7 +60,7 @@ if (!hasInterface) exitWith {};
     }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
-    if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+    if (GVAR(medicalLoaded)) then {
         [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
             linearConversion [0, 1, (_this getVariable [QEGVAR(medical,pain), 0]), 1, 1.1, true];
         }] call FUNC(addDutyFactor);

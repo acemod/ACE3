@@ -24,5 +24,5 @@ private _newDamages = _allDamages apply {
     [_x select 0, selectRandom ALL_BODY_PARTS, _x select 2];
 };
 
-TRACE_1("Vehicle crash handled, passing damage", _newDamages);
+TRACE_1("Vehicle crash handled, passing damage",_newDamages);
 [_unit, _newDamages, _typeOfDamage] //return

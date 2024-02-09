@@ -567,8 +567,8 @@ class ADDON {
         timeTillMaxEffect = 30;
         // How many of this type of medication can be in the system before the patient can possibly overdose?
         maxDose = 4;
-        // The number of doses over maxSafeDose where there is a chance to overdose. The chance increases as dose gets higher.  
-        // Example with maxDose = 4 and maxDoseDeviation = 2: Dose 4: Safe | Dose 5 and 6: Possible overdose | Dose 7: Guaranteed overdose  
+        // The number of doses over maxSafeDose where there is a chance to overdose. The chance increases as dose gets higher.
+        // Example with maxDose = 4 and maxDoseDeviation = 2: Dose 4: Safe | Dose 5 and 6: Possible overdose | Dose 7: Guaranteed overdose
         maxDoseDeviation = 2;
         // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
         onOverDose = "";
@@ -608,10 +608,13 @@ class ADDON {
             incompatibleMedication[] = {};
         };
         class PainKillers {
-            painReduce = 0.1;
-            timeInSystem = 600;
+            painReduce = 0.35;
+            hrIncreaseLow[] = {-5, -10};
+            hrIncreaseNormal[] = {-5, -15};
+            hrIncreaseHigh[] = {-5, -17};
+            timeInSystem = 420;
             timeTillMaxEffect = 60;
-            maxDose = 9;
+            maxDose = 5;
             incompatibleMedication[] = {};
             viscosityChange = 5;
         };
