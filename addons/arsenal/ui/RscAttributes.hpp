@@ -690,6 +690,7 @@ class GVAR(display) {
                     idc = IDC_buttonPrimaryWeapon;
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
                     tooltip = "$STR_A3_RscDisplayArsenal_tab_PrimaryWeapon";
+                    onLoad = QUOTE((_this select 0) setVariable [ARR_2(QQGVAR(idx),(ctrlIDC (_this select 0)) call FUNC(idcToIDX))]);
                     onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0),_this select 0)] call FUNC(fillLeftPanel));
                     colorBackground[] = {0,0,0,0.5};
                     x = QUOTE(0 * GRID_W);
