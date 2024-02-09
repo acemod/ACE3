@@ -18,7 +18,7 @@
  * Public: No
 */
 
-#define ITEMS_PER_FRAME 100
+#define ITEMS_PER_FRAME 200
 
 params ["_display", "_control", ["_animate", true], ["_framesToFill", -1], ["_currentFrame", 0]];
 
@@ -62,7 +62,7 @@ if (_currentFrame == 0) then {
 private _idxVirt = _control getVariable QGVAR(idx);
 private _selectedItem = if (
     _idxVirt == IDX_VIRT_BINO ||
-    {_idxVirt != IDX_VIRT_HEADGEAR && (_idxVirt < IDX_VIRT_UNIFORM)}
+    {_idxVirt != IDX_VIRT_HEADGEAR && (_idxVirt < IDX_VIRT_GOGGLES)}
 ) then { // this is everything with a right panel
     private _configParent = ["CfgWeapons", "CfgVehicles"] select (_idxVirt == IDX_VIRT_BACKPACK);
     private _isWeapon = _idxVirt < IDX_VIRT_UNIFORM;
@@ -74,6 +74,7 @@ private _selectedItem = if (
     if (_currentFrame == 0) then {
         _framesToFill = floor ((count _items) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
         _this set [3, _framesToFill];
+        TRACE_1("items to add",count _items);
     };
 
     {
@@ -87,8 +88,10 @@ private _selectedItem = if (
         private _configParent = ["CfgWeapons", "CfgGlasses"] select (_idxVirt == IDX_VIRT_GOGGLES);
         private _items = keys (GVAR(virtualItems) get _idxVirt);
         if (_currentFrame == 0) then {
+            GVAR(currentRightPanel) = nil;
             _framesToFill = floor ((count _items) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
             _this set [3, _framesToFill];
+            TRACE_1("items to add",count _items);
         };
         {
             [_configParent, _x, _ctrlPanel] call FUNC(addListBoxItem);
@@ -108,6 +111,7 @@ if (_idxVirt == -1) then {
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _faces) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
+                TRACE_1("items to add",count _items);
             };
 
             {
@@ -127,6 +131,7 @@ if (_idxVirt == -1) then {
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _voices) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
+                TRACE_1("items to add",count _items);
             };
 
             {
@@ -142,6 +147,7 @@ if (_idxVirt == -1) then {
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _insignias) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
+                TRACE_1("items to add",count _items);
             };
 
             {
@@ -171,6 +177,7 @@ if (_idxVirt == -1) then {
         default {
             _framesToFill = 0;
             _this set [3, _framesToFill];
+            TRACE_1("items to add",count _items);
             ""
         };
     };
