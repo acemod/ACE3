@@ -25,7 +25,7 @@ params ["_display", "_control", ["_animate", true], ["_framesToFill", -1], ["_cu
 private _ctrlIDC = ctrlIDC _control;
 if (
     !isNil QGVAR(currentLeftPanel) &&
-    {(_currentFrame == 0) == (GVAR(currentLeftPanel) == _ctrlIDC)} // either this is a new tab before filling finished, or a switch to the same tab
+    {(_currentFrame != 0) && (GVAR(currentLeftPanel) != _ctrlIDC)} // abort if we switched to a different tab before finishing
 ) exitWith {
     TRACE_1("abort",_currentFrame);
 };
@@ -35,6 +35,7 @@ private _idxVirt = _control getVariable QGVAR(idx);
 
 if (_currentFrame == 0) then {
     TRACE_3("filling left panel",_animate,_ctrlIDC,_framesToFill);
+    _control ctrlEnable false;
     // Fade old control background
     if (!isNil QGVAR(currentLeftPanel)) then {
         private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLeftPanel) - 1);
@@ -90,6 +91,7 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
     if (_currentFrame == 0) then {
         _framesToFill = floor ((count _items) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
         _this set [3, _framesToFill];
+        [{_this ctrlEnable true}, _control, _framesToFill] call CBA_fnc_execAfterNFrames; // prevent the user from switching to the same tab while it's being filled
         TRACE_3("items to add",count _items,_currentItem,_idxVirt);
 
         // Current item gets preferential treatment so we can fill the right panel ASAP
@@ -125,6 +127,7 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _faces) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
+                [{_this ctrlEnable true}, _control, _framesToFill] call CBA_fnc_execAfterNFrames;
                 TRACE_1("items to add",count _faces);
 
                 GVAR(currentFace) call _fnc_addFace;
@@ -144,6 +147,7 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _voices) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
+                [{_this ctrlEnable true}, _control, _framesToFill] call CBA_fnc_execAfterNFrames;
                 TRACE_1("items to add",count _voices);
 
                 ["CfgVoice", GVAR(currentVoice), _ctrlPanel, "icon"] call FUNC(addListBoxItem);
@@ -163,6 +167,7 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _insignias) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
+                [{_this ctrlEnable true}, _control, _framesToFill] call CBA_fnc_execAfterNFrames;
                 TRACE_1("items to add",count _insignias);
 
                 if (GVAR(currentInsignia) != "") then {
@@ -183,6 +188,7 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         // Unknown
         default {
             _framesToFill = 0;
+            _control ctrlEnable true;
             _this set [3, _framesToFill];
             WARNING("Unknown arsenal left panel");
             ""
