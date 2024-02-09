@@ -14,7 +14,7 @@
 */
 params ["_ctrlIDC"];
 
-switch (_ctrlIDC) do {
+private _ret = switch (_ctrlIDC) do {
     case (IDC_buttonPrimaryWeapon): {IDX_VIRT_PRIMARY_WEAPONS};
     case (IDC_buttonHandgun): {IDX_VIRT_HANDGUN_WEAPONS};
     case (IDC_buttonSecondaryWeapon): {IDX_VIRT_SECONDARY_WEAPONS};
@@ -32,3 +32,7 @@ switch (_ctrlIDC) do {
     case (IDC_buttonWatch): {IDX_VIRT_WATCH};
     default {-1};
 };
+
+TRACE_2("idcToIDX",_ctrlIDC,_ret);
+
+_ret

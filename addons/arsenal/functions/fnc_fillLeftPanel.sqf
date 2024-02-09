@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
@@ -22,6 +23,7 @@
 params ["_display", "_control", ["_animate", true], ["_framesToFill", -1], ["_currentFrame", 0]];
 
 private _ctrlIDC = ctrlIDC _control;
+TRACE_4("filling left panel",_animate,_currentFrame,_ctrlIDC,_framesToFill);
 private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
 
 if (_currentFrame == 0) then {
@@ -70,7 +72,8 @@ private _selectedItem = if (
         keys (GVAR(virtualItems) get _idxVirt);
     };
     if (_currentFrame == 0) then {
-        _this set [3, floor ((count _items) / ITEMS_PER_FRAME)]; // floor because we already do something on frame 0
+        _framesToFill = floor ((count _items) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
+        _this set [3, _framesToFill];
     };
 
     {
@@ -84,7 +87,8 @@ private _selectedItem = if (
         private _configParent = ["CfgWeapons", "CfgGlasses"] select (_idxVirt == IDX_VIRT_GOGGLES);
         private _items = keys (GVAR(virtualItems) get _idxVirt);
         if (_currentFrame == 0) then {
-            _this set [3, floor ((count _items) / ITEMS_PER_FRAME)]; // floor because we already do something on frame 0
+            _framesToFill = floor ((count _items) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
+            _this set [3, _framesToFill];
         };
         {
             [_configParent, _x, _ctrlPanel] call FUNC(addListBoxItem);
@@ -92,14 +96,18 @@ private _selectedItem = if (
 
         GVAR(currentItems) select _idxVirt
     };
-    // Special cases
-    switch (_ctrlIDC) do {
+};
+
+// Special cases
+if (_idxVirt == -1) then {
+    _selectedItem = switch (_ctrlIDC) do {
         // Faces
         case IDC_buttonFace: {
             private _lbAdd = -1;
             private _faces = uiNamespace getVariable QGVAR(faceCache);
             if (_currentFrame == 0) then {
-                _this set [3, floor ((count _faces) / ITEMS_PER_FRAME)]; // floor because we already do something on frame 0
+                _framesToFill = floor ((count _faces) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
+                _this set [3, _framesToFill];
             };
 
             {
@@ -109,7 +117,7 @@ private _selectedItem = if (
                 _ctrlPanel lbSetData [_lbAdd, _x];
                 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _x]];
                 _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIcons)];
-            } forEach ((keys _faces) select [_currentFrame * ITEMS_PER_FRAME, ITEMS_PER_FRAME])
+            } forEach ((keys _faces) select [_currentFrame * ITEMS_PER_FRAME, ITEMS_PER_FRAME]);
 
             GVAR(currentFace)
         };
@@ -117,12 +125,13 @@ private _selectedItem = if (
         case IDC_buttonVoice: {
             private _voices = uiNamespace getVariable QGVAR(voiceCache);
             if (_currentFrame == 0) then {
-                _this set [3, floor ((count _voices) / ITEMS_PER_FRAME)]; // floor because we already do something on frame 0
+                _framesToFill = floor ((count _voices) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
+                _this set [3, _framesToFill];
             };
 
             {
                 ["CfgVoice", _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
-            } forEach (_voices select [_currentFrame * ITEMS_PER_FRAME, ITEMS_PER_FRAME]);
+            } forEach ((keys _voices) select [_currentFrame * ITEMS_PER_FRAME, ITEMS_PER_FRAME]);
 
             GVAR(currentVoice)
         };
@@ -131,19 +140,19 @@ private _selectedItem = if (
             // Insignia from config
             private _insignias = uiNamespace getVariable QGVAR(insigniaCache);
             if (_currentFrame == 0) then {
-                _this set [3, floor ((count _insignias) / ITEMS_PER_FRAME)]; // floor because we already do something on frame 0
+                _framesToFill = floor ((count _insignias) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
+                _this set [3, _framesToFill];
             };
 
             {
                 ["CfgUnitInsignia", _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
-            } forEach (_insignias select [_currentFrame * ITEMS_PER_FRAME, ITEMS_PER_FRAME]);
+            } forEach ((keys _insignias) select [_currentFrame * ITEMS_PER_FRAME, ITEMS_PER_FRAME]);
 
             // Insignia from mission file, just do this in a single frame at the end
             if (_currentFrame == _framesToFill) then {
                 private _displayName = "";
                 private _className = "";
                 private _lbAdd = -1;
-
 
                 {
                     _className = configName _x;
@@ -160,7 +169,8 @@ private _selectedItem = if (
         };
         // Unknown
         default {
-            _this set [3, 0];
+            _framesToFill = 0;
+            _this set [3, _framesToFill];
             ""
         };
     };
@@ -181,6 +191,7 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 [_display, _control, _display displayCtrl IDC_sortLeftTab, _display displayCtrl IDC_sortLeftTabDirection] call FUNC(fillSort);
 
 // Try to select previously selected item again, otherwise select first item ("Empty")
+TRACE_1("finalized",_selectedItem,_framesToFill);
 if (_selectedItem != "") then {
     private _index = 0;
 
