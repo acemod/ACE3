@@ -6,8 +6,8 @@
  * Arguments:
  * 0: The patient <OBJECT>
  * 1: Medication Treatment classname <STRING>
- * 2: Max dosage (0 to ignore) <NUMBER>
- * 3: Max Dose Devatiation <NUMBER>
+ * 2: Max dose (0 to ignore) <NUMBER>
+ * 3: Max dose deviation <NUMBER>
  * 3: Incompatable medication <ARRAY<STRING>>
  *
  * Return Value:
