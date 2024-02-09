@@ -18,15 +18,16 @@
  * Public: No
 */
 
-#define ITEMS_PER_FRAME 200
+#define ITEMS_PER_FRAME 250
 
 params ["_display", "_control", ["_animate", true], ["_framesToFill", -1], ["_currentFrame", 0]];
 
 private _ctrlIDC = ctrlIDC _control;
-TRACE_4("filling left panel",_animate,_currentFrame,_ctrlIDC,_framesToFill);
 private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
+private _idxVirt = _control getVariable QGVAR(idx);
 
 if (_currentFrame == 0) then {
+    TRACE_3("filling left panel",_animate,_ctrlIDC,_framesToFill);
     // Fade old control background
     if (!isNil QGVAR(currentLeftPanel)) then {
         private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLeftPanel) - 1);
@@ -56,21 +57,27 @@ if (_currentFrame == 0) then {
         private _addEmpty = _ctrlPanel lbAdd format [" <%1>", localize "str_empty"];
         _ctrlPanel lbSetValue [_addEmpty, -1];
     };
+
+    private _resetRightPanel = (_idxVirt in [-1, IDX_VIRT_HEADGEAR]) || (_idxVirt >= IDX_VIRT_GOGGLES && _idxVirt != IDX_VIRT_BINO);
+    if (_resetRightPanel) then {
+        GVAR(currentRightPanel) = nil;
+    };
 };
 
 // Add items to the listbox
-private _idxVirt = _control getVariable QGVAR(idx);
-private _selectedItem = if (
-    _idxVirt == IDX_VIRT_BINO ||
-    {_idxVirt != IDX_VIRT_HEADGEAR && (_idxVirt < IDX_VIRT_GOGGLES)}
-) then { // this is everything with a right panel
-    private _configParent = ["CfgWeapons", "CfgVehicles"] select (_idxVirt == IDX_VIRT_BACKPACK);
-    private _isWeapon = _idxVirt < IDX_VIRT_UNIFORM;
-    private _items = if (_isWeapon) then {
+private _selectedItem = if (_idxVirt != -1) then { // Items
+    private _configParent = switch (_idxVirt) do {
+        case IDX_VIRT_GOGGLES: {"CfgGlasses"};
+        case IDX_VIRT_BACKPACK: {"CfgVehicles"};
+        default {"CfgWeapons"};
+    };
+
+    private _items = if (_idxVirt < IDX_VIRT_HEADGEAR) then {
         keys ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _idxVirt);
     } else {
         keys (GVAR(virtualItems) get _idxVirt);
     };
+
     if (_currentFrame == 0) then {
         _framesToFill = floor ((count _items) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
         _this set [3, _framesToFill];
@@ -82,28 +89,8 @@ private _selectedItem = if (
     } forEach (_items select [_currentFrame * ITEMS_PER_FRAME, ITEMS_PER_FRAME]);
 
     GVAR(currentItems) select _idxVirt
-} else {
-    // Every other item
-    if (_idxVirt != -1) exitWith {
-        private _configParent = ["CfgWeapons", "CfgGlasses"] select (_idxVirt == IDX_VIRT_GOGGLES);
-        private _items = keys (GVAR(virtualItems) get _idxVirt);
-        if (_currentFrame == 0) then {
-            GVAR(currentRightPanel) = nil;
-            _framesToFill = floor ((count _items) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
-            _this set [3, _framesToFill];
-            TRACE_1("items to add",count _items);
-        };
-        {
-            [_configParent, _x, _ctrlPanel] call FUNC(addListBoxItem);
-        } forEach (_items select [_currentFrame * ITEMS_PER_FRAME, ITEMS_PER_FRAME]);
-
-        GVAR(currentItems) select _idxVirt
-    };
-};
-
-// Special cases
-if (_idxVirt == -1) then {
-    _selectedItem = switch (_ctrlIDC) do {
+} else { // Special cases
+    switch (_ctrlIDC) do {
         // Faces
         case IDC_buttonFace: {
             private _lbAdd = -1;
@@ -111,7 +98,7 @@ if (_idxVirt == -1) then {
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _faces) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
-                TRACE_1("items to add",count _items);
+                TRACE_1("items to add",count _faces);
             };
 
             {
@@ -131,7 +118,7 @@ if (_idxVirt == -1) then {
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _voices) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
-                TRACE_1("items to add",count _items);
+                TRACE_1("items to add",count _voices);
             };
 
             {
@@ -147,7 +134,7 @@ if (_idxVirt == -1) then {
             if (_currentFrame == 0) then {
                 _framesToFill = floor ((count _insignias) / ITEMS_PER_FRAME); // floor because we already do something on frame 0
                 _this set [3, _framesToFill];
-                TRACE_1("items to add",count _items);
+                TRACE_1("items to add",count _insignias);
             };
 
             {
@@ -177,7 +164,7 @@ if (_idxVirt == -1) then {
         default {
             _framesToFill = 0;
             _this set [3, _framesToFill];
-            TRACE_1("items to add",count _items);
+            WARNING("Unknown arsenal left panel");
             ""
         };
     };
