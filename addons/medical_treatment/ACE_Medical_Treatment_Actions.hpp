@@ -141,6 +141,19 @@ class GVAR(actions) {
         litter[] = {{"ACE_MedicalLitter_epinephrine"}};
     };
 
+    // - Generic Medication ---------------------------------------------------
+    class Painkillers: Morphine {
+        displayName = CSTRING(Administer_Painkillers);
+        displayNameProgress = CSTRING(Administering_Painkillers);
+        icon = QPATHTOEF(medical_gui,ui\painkillers.paa);
+        allowedSelections[] = {"Head"};
+        medicRequired = 0;
+        items[] = {"ACE_painkillers"};
+        treatmentTime = 4;
+        sounds[] = {{QPATHTO_R(sounds\Pills.ogg),1,1,50}};
+        litter[] = {{"Land_PainKillers_F"}}; // just use BI's model as litter
+    };
+
     // - IV Bags --------------------------------------------------------------
     class BloodIV: BasicBandage {
         displayName = CSTRING(Actions_Blood4_1000);

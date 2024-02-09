@@ -38,6 +38,8 @@ private _actionList = [
 
 private _configGroupEntries = "true" configClasses (configFile >> QGVAR(actions));
 
+GVAR(updateActionsOnCargoChange) = false;
+
 {
     private _scopeEditor = getNumber (_x >> "scopeEditor");
 
@@ -49,6 +51,10 @@ private _configGroupEntries = "true" configClasses (configFile >> QGVAR(actions)
     private _rootDisplayName = getText (_x >> "displayName");
     private _rootCondition = getText (_x >> "condition");
     private _rootTabs = getArray (_x >> "tabs");
+    private _updateOnCargoChanged = getNumber (_x >> "updateOnCargoChanged");
+    if (_updateOnCargoChanged > 0) then {
+        GVAR(updateActionsOnCargoChange) = true;
+    };
 
     if (_rootCondition != "") then {
         _rootCondition = compile _rootCondition;

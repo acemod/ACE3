@@ -189,7 +189,7 @@ if (_isBurning) exitWith {};
                             if ((_unit isEqualTo vehicle _unit) && (_sdr || ({ 0.05 > random 1 }))) then {
                                 _unit setVariable [QGVAR(stopDropRoll), true];
                                 if !(_sdr) then {
-                                    TRACE_1("stop, drop, roll!", _unit);
+                                    TRACE_1("stop,drop,roll!",_unit);
                                     _unit setUnitPos "DOWN";
                                     doStop _unit;
                                 };
@@ -203,7 +203,7 @@ if (_isBurning) exitWith {};
                                 private _vehicle = vehicle _unit;
 
                                 if (_vehicle != _unit) then {
-                                    TRACE_1("Ejecting", _unit);
+                                    TRACE_1("Ejecting",_unit);
                                     _unit leaveVehicle _vehicle;
                                     unassignVehicle _unit;
                                     _unit action ["eject",_vehicle];
