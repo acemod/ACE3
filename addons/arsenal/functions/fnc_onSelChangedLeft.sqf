@@ -694,13 +694,18 @@ switch (GVAR(currentLeftPanel)) do {
     };
     // Container
     case IDC_buttonContainer: {
+        private _closeDialog = _item == "";
+        private _openDialog = _item != "" && {_item != GVAR(currentContainer) || (!dialog && _item == GVAR(currentContainer))};
+        if (dialog && _openDialog || _closeDialog) then {closeDialog 0};
+        if (_openDialog) then {
+            (GVAR(vehicleMap) get _item) call zen_inventory_fnc_configure; // placeholder
+        };
         GVAR(currentContainer) = _item;
 
         call FUNC(showItem);
 
         TOGGLE_RIGHT_PANEL_HIDE
-        // call FUNC(openInventoryMenu);
-        [_display, _control, _curSel, configNull] call FUNC(itemInfo);
+        [_display, _control, _curSel, configOf (GVAR(vehicleMap) getOrDefault [_item, objNull])] call FUNC(itemInfo);
     };
 };
 
