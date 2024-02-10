@@ -68,13 +68,10 @@ GVAR(idxMap) = createHashMapFromArray [
 ];
 
 // Make new hashmaps for face/voice/insignia so mission makers can disable them
-// Merge instead of copying so we don't inherit final status
-GVAR(faceCache) = createHashMap;
-GVAR(faceCache) merge [uiNamespace getVariable QGVAR(faceCache), true];
-GVAR(voiceCache) = createHashMap;
-GVAR(voiceCache) merge [uiNamespace getVariable QGVAR(voiceCache), true];
-GVAR(insigniaCache) = createHashMap;
-GVAR(insigniaCache) merge [uiNamespace getVariable QGVAR(insigniaCache), true];
+// Copies of hashmaps aren't final
+GVAR(faceCache) = +(uiNamespace getVariable QGVAR(faceCache));
+GVAR(voiceCache) = +(uiNamespace getVariable QGVAR(voiceCache));
+GVAR(insigniaCache) = +(uiNamespace getVariable QGVAR(insigniaCache));
 
 // Get mission/campaign insignias
 // BIS_fnc_setUnitInsignia will look in mission config, then campaign, then global config last, so overwrite accordingly
