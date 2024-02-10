@@ -43,7 +43,7 @@ if (_skip) then {
 if (_skip) exitWith {};
 
 // Sanitise key, as it's public; If not in cache, find info and cache it for later use
-((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_configCategory + _className, {
+((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [format ["%1%2%3", _configCategory, _className, _configRoot], {
     // Get classname (config case), display name, picture and DLC
     private _configPath = ([configFile, campaignConfigFile, missionConfigFile] select _configRoot) >> _configCategory >> _className;
     private _dlcName = _configPath call EFUNC(common,getAddon);
