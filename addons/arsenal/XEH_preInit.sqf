@@ -76,13 +76,6 @@ GVAR(voiceCache) merge [uiNamespace getVariable QGVAR(voiceCache), true];
 GVAR(insigniaCache) = createHashMap;
 GVAR(insigniaCache) merge [uiNamespace getVariable QGVAR(insigniaCache), true];
 
-{
-    private _varName = format [QGVAR(%1), _x];
-    SETMVAR(_varName,createHashMap);
-    GETMVAR(_varName,createHashMap) merge
-    (missionNamespace getVariable _varName) merge [uiNamespace getVariable _varName, true];
-} forEach ["voiceCache", "faceCache", "insigniaCache"];
-
 // Get mission/campaign insignias
 // BIS_fnc_setUnitInsignia will look in mission config, then campaign, then global config last, so overwrite accordingly
 private _insigniaCondition = toString {
