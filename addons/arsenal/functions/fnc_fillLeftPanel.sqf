@@ -117,7 +117,7 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         };
         // Unknown
         default {
-            WARNING("Unknown arsenal left panel");
+            WARNING_1("Unknown arsenal left panel with IDC %1, update ace_arsenal_idxMap and relevant macros if adding a new tab",_ctrlIDC);
             ""
         };
     };
