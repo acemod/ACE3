@@ -87,6 +87,8 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         // Faces
         case IDC_buttonFace: {
             private _lbAdd = -1; // micro-optimization
+            // Faces need to be added like this because their config path is
+            // configFile >> "CfgFaces" >> face category >> className
             {
                 _y params ["_displayName", "_modPicture"];
                 _lbAdd = _ctrlPanel lbAdd _displayName;
