@@ -40,7 +40,7 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     private _detonateAfterCookoff = (_fireDetonateChance / 4) > random 1;
 
     private _source = "";
-    if (toLower _hitPart isEqualTo "engine") then {
+    if (toLowerANSI _hitPart isEqualTo "engine") then {
         _source = ["hit_engine_point", "HitPoints"];
     };
 

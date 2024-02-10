@@ -38,7 +38,7 @@ TRACE_2("start",_unit,_nozzle);
         alive _unit
         && {"" isEqualTo currentWeapon _unit || {_unit call EFUNC(common,isSwimming)}}
         && {[_unit, objNull, [INTERACT_EXCEPTIONS, "notOnMap"]] call EFUNC(common,canInteractWith)}
-        && {"unconscious" isNotEqualTo toLower animationState _unit}
+        && {"unconscious" isNotEqualTo toLowerANSI animationState _unit}
         && {!(_unit getVariable ["ACE_isUnconscious", false])}
     ) exitWith {
         TRACE_3("stop dead/weapon/interact/uncon",_unit,alive _unit,currentWeapon _unit);

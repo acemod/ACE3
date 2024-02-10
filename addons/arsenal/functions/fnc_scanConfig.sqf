@@ -287,6 +287,6 @@ private _baseWeaponCache = uiNamespace getVariable QGVAR(baseWeaponNameCache);
 {
     private _baseAttachment = configName (_cfgWeapons >> getText (_x >> "rhs_optic_base"));
     if (_baseAttachment != "") then {
-        _baseWeaponCache set [toLower configName _x, _baseAttachment];
+        _baseWeaponCache set [toLowerANSI configName _x, _baseAttachment];
     };
 } forEach ("getText (_x >> 'rhs_optic_base') != ''" configClasses _cfgWeapons);

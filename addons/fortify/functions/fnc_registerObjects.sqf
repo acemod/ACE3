@@ -30,7 +30,7 @@ if (_side isEqualTo sideUnknown) exitWith {ERROR_1("Bad Side %1",_this);};
 
 _objects select {
     private _isValid = _x params [["_xClassname", "", [""]], ["_xCost", 0, [0]]];
-    private _category = toLower (_x param [2, "", [""]]);
+    private _category = toLowerANSI (_x param [2, "", [""]]);
     if (_category != "") then { _x set [2, _category]; };
 
     if (_isValid) then {

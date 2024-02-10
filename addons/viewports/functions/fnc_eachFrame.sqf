@@ -52,8 +52,8 @@ if (cba_events_control) then {
         #endif
         if (
             (_viewAngle < _newIndexAngle)
-            && {(_compartments isEqualTo []) || {(toLower _comparment) in _compartments}}
-            && {(_roles isEqualTo []) || {(toLower _role) in _roles}}
+            && {(_compartments isEqualTo []) || {(toLowerANSI _comparment) in _compartments}}
+            && {(_roles isEqualTo []) || {(toLowerANSI _role) in _roles}}
             && {(vectorMagnitude _viewDiff) < _maxDistance}
         ) then {
             _newIndex = _forEachIndex;

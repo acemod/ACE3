@@ -39,7 +39,7 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 };
 
 if (_reason != "") then {
-    _reason = toLower _reason;
+    _reason = toLowerANSI _reason;
     if (_mask isEqualTo []) then {
         TRACE_2("Removing",_reason,_mask);
         GVAR(showHudHash) deleteAt _reason;
