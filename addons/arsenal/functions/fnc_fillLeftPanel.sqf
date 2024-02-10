@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, johnb43
+ * Author: Alganthe, johnb43, LinkIsGrim
  * Fills left panel.
  *
  * Arguments:
