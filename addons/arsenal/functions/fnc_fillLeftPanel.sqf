@@ -57,8 +57,8 @@ if !(_ctrlIDC in [IDC_buttonFace, IDC_buttonVoice]) then {
     _ctrlPanel lbSetValue [_addEmpty, -1];
 };
 
-// Don't reset the current right panel for weapons and binos
-if !(_idxVirt in [IDX_VIRT_PRIMARY_WEAPONS, IDX_VIRT_SECONDARY_WEAPONS, IDX_VIRT_HANDGUN_WEAPONS, IDX_VIRT_BINO]) then {
+// Don't reset the current right panel for weapons, binos and containers
+if !(_idxVirt in [IDX_VIRT_PRIMARY_WEAPONS, IDX_VIRT_SECONDARY_WEAPONS, IDX_VIRT_HANDGUN_WEAPONS, IDX_VIRT_BINO, IDX_VIRT_UNIFORM, IDX_VIRT_VEST, IDX_VIRT_BACKPACK]) then {
     GVAR(currentRightPanel) = nil;
 };
 GVAR(currentLeftPanel) = _ctrlIDC;
