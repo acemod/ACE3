@@ -19,7 +19,7 @@ private _extendedInfo = createHashMap;
 
 // Check if the provided loadout is a CBA extended loadout
 if (count _loadout == 2) then {
-    _extendedInfo = _loadout select 1;
+    _extendedInfo = +(_loadout select 1); // Copy the hashmap to prevent events from modifiyng the profileNamespace extendedInfo
     _loadout = _loadout select 0;
 };
 
@@ -69,5 +69,8 @@ private _fnc_filterLoadout = {
 // Convert loadout to config case and replace null/unavailable items
 // Loadout might come from a different modpack, which might have different config naming
 _loadout = _loadout call _fnc_filterLoadout;
+
+// Raise event for 3rd party: mostly for handling extended info
+[QGVAR(loadoutVerified), [_loadout, _extendedInfo]] call CBA_fnc_localEvent;
 
 [[_loadout, _extendedInfo], _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _unavailableItemsList]
