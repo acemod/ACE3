@@ -1,12 +1,16 @@
 #include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, johnb43
- * Fill loadouts list.
+ * Author: Alganthe, johnb43, LinkIsGrim
+ * Fill loadouts list over multiple frames. LOADOUTS_PER_FRAME macro does what it says on the tin.
+ * Should only ever be called by display load (with optional params as default) and by itself.
+ * Listen to ace_arsenal_loadoutsListFilled event if you need to iterate over the loadouts list.
  *
  * Arguments:
  * 0: Loadouts display <DISPLAY>
  * 1: Tab control <CONTROL>
+ * 2: Current frame filling loadouts list <NUMBER> (default: 0)
+ * 3: Frames necessary to fill loadouts list <NUMBER> (default: -1)
  *
  * Return Value:
  * None
@@ -14,29 +18,46 @@
  * Public: No
 */
 
-params ["_display", "_control"];
+// Can just be modified directly, no further setup needed
+#define LOADOUTS_PER_FRAME 10
 
-(_display displayCtrl IDC_textEditBox) ctrlSetText "";
+params ["_display", "_control", ["_currentFrame", 0], ["_framesToFill", -1]];
+
+if (isNull _display) exitWith {
+    TRACE_2("display closed, aborting",_currentFrame,_framesToFill);
+};
 
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
+if (_currentFrame == 0) then {
+    (_display displayCtrl IDC_textEditBox) ctrlSetText "";
 
-// Force a "refresh" animation of the panel
-_contentPanelCtrl ctrlSetFade 1;
-_contentPanelCtrl ctrlCommit 0;
-_contentPanelCtrl ctrlSetFade 0;
-_contentPanelCtrl ctrlCommit FADE_DELAY;
+    // Force a "refresh" animation of the panel
+    _contentPanelCtrl ctrlSetFade 1;
+    _contentPanelCtrl ctrlCommit 0;
+    _contentPanelCtrl ctrlSetFade 0;
+    _contentPanelCtrl ctrlCommit FADE_DELAY;
 
-_contentPanelCtrl lnbSetCurSelRow -1;
-lnbClear _contentPanelCtrl;
+    _contentPanelCtrl lnbSetCurSelRow -1;
+    lnbClear _contentPanelCtrl;
+};
 
 private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
-private _cfgWeapons = configFile >> "CfgWeapons";
+private _cfgWeapons = configFile >> "CfgWeapons"; // Used by ADD_LOADOUTS_LIST_PICTURES macro, do not remove
 private _newRow = -1;
 
 if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     private _loadoutNameAndTab = "";
     private _loadoutCachedInfo = "";
     private _sharingEnabled = GVAR(allowSharedLoadouts) && {isMultiplayer};
+    private _loadouts = [
+        profileNamespace getVariable [QGVAR(saved_loadouts), []],
+        GVAR(defaultLoadoutsList)
+    ] select (ctrlIDC _control == IDC_buttonDefaultLoadouts);
+    if (_currentFrame == 0) then {
+        _framesToFill = floor ((count _loadouts) / LOADOUTS_PER_FRAME);
+        TRACE_2("filling loadouts list",_currentFrame,_framesToFill);
+        _this set [3, _framesToFill];
+    };
 
     // Add all loadouts to loadout list
     {
@@ -70,7 +91,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         };
 
         _loadoutCachedInfo params ["_extendedLoadout", "_nullItemsList", "_unavailableItemsList"];
-        _extendedLoadout params ["_loadout"];
+        _extendedLoadout params ["_loadout"]; // Used by ADD_LOADOUTS_LIST_PICTURES macro, do not remove
 
         _newRow = _contentPanelCtrl lnbAddRow ["", _loadoutName];
 
@@ -90,10 +111,16 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _contentPanelCtrl lnbSetPicture [[_newRow, 0], QPATHTOF(data\iconPublic.paa)];
             _contentPanelCtrl lnbSetValue [[_newRow, 0], 1];
         };
-    } forEach ([profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
+    } forEach (_loadouts select [_currentFrame * LOADOUTS_PER_FRAME, LOADOUTS_PER_FRAME]);
 } else {
     private _allPlayerNames = allPlayers apply {name _x};
+    private _loadouts = _sharedLoadoutsVars apply {GVAR(sharedLoadoutsNamespace) getVariable _x};
     private _loadoutVar = "";
+    if (_currentFrame == 0) then {
+        _framesToFill = floor ((count _loadouts) / LOADOUTS_PER_FRAME);
+        TRACE_2("filling loadouts list",_currentFrame,_framesToFill);
+        _this set [3, _framesToFill];
+    };
 
     {
         _x params ["_playerName", "_loadoutName", "_loadoutData"];
@@ -108,7 +135,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
         } else {
             ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsList", "_unavailableItemsList"];
-            _extendedLoadout params ["_loadout"];
+            _extendedLoadout params ["_loadout"]; // Used by ADD_LOADOUTS_LIST_PICTURES macro, do not remove
 
             _contentPanelCtrl lnbSetColumnsPos [0, 0.15, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
             _newRow = _contentPanelCtrl lnbAddRow [_playerName, _loadoutName];
@@ -126,8 +153,14 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
                 };
             };
         };
-    } forEach (_sharedLoadoutsVars apply {GVAR(sharedLoadoutsNamespace) getVariable _x});
+    } forEach (_loadouts select [_currentFrame * LOADOUTS_PER_FRAME, LOADOUTS_PER_FRAME]);
 };
+
+if (_currentFrame != _framesToFill) exitWith {
+    _this set [2, _currentFrame + 1];
+    [FUNC(fillLoadoutsList), _this] call CBA_fnc_execNextFrame;
+};
+TRACE_3("finished",_currentFrame,_framesToFill,lnbSize _contentPanelCtrl);
 
 [QGVAR(loadoutsListFilled), [_display, _control]] call CBA_fnc_localEvent;
 

@@ -1,4 +1,5 @@
 #include "..\script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Brett Mayson
  * Create the internal actions arrays when needed for the first time.

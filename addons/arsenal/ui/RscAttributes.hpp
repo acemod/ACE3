@@ -467,7 +467,6 @@ class GVAR(display) {
                 };
                 class actionsText1: RscTextMulti {
                     idc = IDC_actionsText1;
-                    fade = 1;
                     x = QUOTE(0 * GRID_W);
                     y = QUOTE(5 * GRID_H);
                     w = QUOTE(45 * GRID_W);
@@ -479,8 +478,6 @@ class GVAR(display) {
                 };
                 class actionsButton1: ctrlButton {
                     idc = IDC_actionsButton1;
-                    onMouseEnter = QUOTE(ctrlSetFocus (_this select 0));
-                    fade = 1;
                     text = "";
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(6 * GRID_H);
