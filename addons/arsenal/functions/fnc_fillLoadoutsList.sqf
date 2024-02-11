@@ -2,7 +2,9 @@
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43, LinkIsGrim
- * Fill loadouts list.
+ * Fill loadouts list over multiple frames. LOADOUTS_PER_FRAME macro does what it says on the tin.
+ * Should only ever be called by display load (with optional params as default) and by itself.
+ * Listen to ace_arsenal_loadoutsListFilled event if you need to iterate over the loadouts list.
  *
  * Arguments:
  * 0: Loadouts display <DISPLAY>
@@ -16,6 +18,7 @@
  * Public: No
 */
 
+// Can just be modified directly, no further setup needed
 #define LOADOUTS_PER_FRAME 10
 
 params ["_display", "_control", ["_currentFrame", 0], ["_framesToFill", -1]];
