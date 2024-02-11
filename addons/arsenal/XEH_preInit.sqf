@@ -77,7 +77,7 @@ GVAR(insigniaCache) = +(uiNamespace getVariable QGVAR(insigniaCache));
 // BIS_fnc_setUnitInsignia will look in mission config, then campaign, then global config last, so overwrite accordingly
 private _insigniaCondition = toString {
     if (isNumber (_x >> "scope")) then {
-        getNumber (_x >> "scope") == 2;
+        getNumber (_x >> "scope") == 2
     } else {
         true
     };
