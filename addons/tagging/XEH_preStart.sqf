@@ -12,7 +12,7 @@ private _vehicleClasses = "(configName _x) isKindOf 'Static'" configClasses (con
     private _model = getText (_x >> "model");
     if (_model != "") then {
         private _array = _model splitString "\";
-        _cacheStaticModels pushBackUnique toLowerANSI (_array select ((count _array) - 1));
+        _cacheStaticModels pushBackUnique toLowerANSI (_array select -1);
     };
 } forEach _vehicleClasses;
 
