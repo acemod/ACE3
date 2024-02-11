@@ -489,3 +489,6 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "CfgVehicles" >> (_loadout select IDX_LOADOUT_BACKPACK) select 0 >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (_cfgWeapons >> _loadout select IDX_LOADOUT_HEADGEAR >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "CfgGlasses" >> _loadout select IDX_LOADOUT_GOGGLES >> "picture")];
+
+#define ACTION_TYPE_TEXT 0
+#define ACTION_TYPE_BUTTON 1
