@@ -43,7 +43,7 @@ PREP_RECOMPILE_END;
             INFO_1("removing [%1] from loadout",_x);
             _gunbagInfo set [_forEachIndex, _defaultValue];
         };
-    } forEach _gunbagInfo;
+    } forEach (_gunbagInfo select [1]); // weapon was verified above
 }] call CBA_fnc_addEventHandler;
 
 ["CBA_loadoutSet", {
