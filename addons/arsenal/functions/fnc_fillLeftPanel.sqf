@@ -72,9 +72,9 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
     };
 
     private _items = if (_idxVirt < IDX_VIRT_HEADGEAR) then {
-        keys ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _idxVirt);
+        keys ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _idxVirt)
     } else {
-        keys (GVAR(virtualItems) get _idxVirt);
+        keys (GVAR(virtualItems) get _idxVirt)
     };
 
     {
