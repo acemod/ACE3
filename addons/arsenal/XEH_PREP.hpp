@@ -48,6 +48,7 @@ PREP(handleSearchbar);
 PREP(handleSearchInputChanged);
 PREP(handleSearchModeToggle);
 PREP(handleStats);
+PREP(idcToIDX);
 PREP(initBox);
 PREP(itemInfo);
 PREP(loadoutsChangeTab);
