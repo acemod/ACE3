@@ -41,7 +41,7 @@ PREP_RECOMPILE_END;
         private _defaultValue = ["", []] select {_x isEqualType []};
         if (_class != "" && {!(_class in EGVAR(arsenal,virtualItemsFlat))}) then {
             INFO_1("removing [%1] from loadout",_x);
-            _gunbagInfo set [_forEachIndex, _defaultValue];
+            _gunbagInfo set [_forEachIndex + 1, _defaultValue];
         };
     } forEach (_gunbagInfo select [1]); // weapon was verified above
 }] call CBA_fnc_addEventHandler;
