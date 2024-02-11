@@ -111,7 +111,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _contentPanelCtrl lnbSetPicture [[_newRow, 0], QPATHTOF(data\iconPublic.paa)];
             _contentPanelCtrl lnbSetValue [[_newRow, 0], 1];
         };
-    } forEach (_loadouts select [_currentFrame * LOADOUTS_PER_FRAME, LOADOUTS_PER_FRAME]);
+    } forEach (_loadouts select [_currentFrame * LOADOUTS_PER_FRAME, [LOADOUTS_PER_FRAME, count _loadouts] select is3DEN]);
 } else {
     private _allPlayerNames = allPlayers apply {name _x};
     private _loadouts = _sharedLoadoutsVars apply {GVAR(sharedLoadoutsNamespace) getVariable _x};
@@ -153,10 +153,10 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
                 };
             };
         };
-    } forEach (_loadouts select [_currentFrame * LOADOUTS_PER_FRAME, LOADOUTS_PER_FRAME]);
+    } forEach (_loadouts select [_currentFrame * LOADOUTS_PER_FRAME, [LOADOUTS_PER_FRAME, count _loadouts] select is3DEN]);
 };
 
-if (_currentFrame != _framesToFill) exitWith {
+if (!is3DEN && _currentFrame != _framesToFill) exitWith {
     _this set [2, _currentFrame + 1];
     [FUNC(fillLoadoutsList), _this] call CBA_fnc_execNextFrame;
 };
