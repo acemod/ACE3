@@ -110,8 +110,8 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         // Insignia
         case IDC_buttonInsignia: {
             {
-                ["CfgUnitInsignia", _x, _ctrlPanel, "texture", _insignias get _x] call FUNC(addListBoxItem);
-            } forEach (keys GVAR(insigniaCache));
+                ["CfgUnitInsignia", _x, _ctrlPanel, "texture", _y] call FUNC(addListBoxItem);
+            } forEach GVAR(insigniaCache);
 
             GVAR(currentInsignia)
         };
