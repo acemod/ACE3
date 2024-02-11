@@ -270,6 +270,7 @@
 #define IDX_VIRT_UNIQUE_UNKNOWN_ITEMS 25
 
 // Indexes of current items array
+// Should match IDX_VIRT_X macros for any left panel tabs
 #define IDX_CURR_PRIMARY_WEAPON 0
 #define IDX_CURR_SECONDARY_WEAPON 1
 #define IDX_CURR_HANDGUN_WEAPON 2
