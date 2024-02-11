@@ -29,8 +29,10 @@ if !(_box getVariable [QGVAR(enableAmmoCookoff), true]) exitWith {};
 
 if !(_hitPoint == "" && {_damage > 0.5}) exitWith {}; // "" means structural damage
 
-// Catch fire when hit by an explosive round
-if (IS_EXPLOSIVE_AMMO(_ammo)) then {
+private _ammoConfig = _ammo call CBA_fnc_getObjectConfig;
+
+// Catch fire when hit by an explosive or incendiary round
+if ((getNumber (_ammoConfig >> "explosive") >= 0.5) || {getNumber (_ammoConfig >> QEGVAR(vehicle_damage,incendiary)) > random 1}) then {
     [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
 } else {
     // There is a small chance of cooking a box off if it's shot by tracer ammo
