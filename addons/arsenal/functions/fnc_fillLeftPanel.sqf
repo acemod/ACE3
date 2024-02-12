@@ -113,6 +113,21 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
                 ["CfgUnitInsignia", _x, _ctrlPanel, "texture", _y] call FUNC(addListBoxItem);
             } forEach GVAR(insigniaCache);
 
+            // If the current insignia is not in the arsenal, add it manually
+            if (GVAR(currentInsignia) != "" && {!(GVAR(currentInsignia) in GVAR(insigniaCache))}) then {
+                // Check for correct config: First mission, then campaign and finally regular config
+                // Ref fnc_addListBoxItem, 0/nil = configFile, 1 = campaignConfigFile, 2 = missionConfigFile
+                private _index = 3;
+
+                {
+                    _index = _index - 1;
+
+                    if (!isNull (_x >> "CfgUnitInsignia" >> GVAR(currentInsignia))) exitWith {};
+                } forEach [missionConfigFile, campaignConfigFile, configFile];
+
+                ["CfgUnitInsignia", GVAR(currentInsignia), _ctrlPanel, "texture", _index] call FUNC(addListBoxItem);
+            };
+
             GVAR(currentInsignia)
         };
         // Unknown

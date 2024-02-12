@@ -91,5 +91,4 @@ private _insigniaCondition = toString {
     GVAR(insigniaCache) set [_x, 2];
 } forEach (_insigniaCondition configClasses (missionConfigFile >> "CfgUnitInsignia"));
 
-
 ADDON = true;
