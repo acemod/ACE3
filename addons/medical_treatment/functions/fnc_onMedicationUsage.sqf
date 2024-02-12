@@ -27,6 +27,11 @@ private _overdosedMedications = [];
 // Check for overdose from current medication
 if (_maxDose > 0) then {
     private _currentDose = [_target, _className] call EFUNC(medical_status,getMedicationCount);
+    // Because both {floor random 0} and {floor random 1} return 0
+    if (_maxDoseDeviation > 0) then {
+        _maxDoseDeviation = _maxDoseDeviation + 1;
+    };
+
     if (_currentDose > _maxDose + (floor random _maxDoseDeviation)) then {
         TRACE_1("exceeded max dose",_currentDose);
         _overdosedMedications pushBackUnique _className;
