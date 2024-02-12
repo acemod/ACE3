@@ -81,7 +81,6 @@ if (isServer) then {
 
             (GVAR(fireSources) deleteAt _hashedKey) params [["_fireLogic", objNull]];
 
-            // Deleting the object will automatically remove any particles (if there are any)
             detach _fireLogic;
             deleteVehicle _fireLogic;
         }] call CBA_fnc_addEventHandler;
