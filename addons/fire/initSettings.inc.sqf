@@ -1,5 +1,6 @@
 [
-    QGVAR(enabled), "CHECKBOX",
+    QGVAR(enabled),
+    "CHECKBOX",
     [ELSTRING(common,Enabled), LSTRING(Setting_Description)],
     LSTRING(Category_DisplayName),
     true,
@@ -9,17 +10,18 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(enableFlare), "CHECKBOX",
+    QGVAR(enableFlare),
+    "CHECKBOX",
     [LSTRING(Setting_FlareEnable), LSTRING(Setting_FlareDescription)],
     LSTRING(Category_DisplayName),
     false,
     1,
-    {[QGVAR(flareEnabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    {[QGVAR(flareEnabled), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(dropWeapon), "LIST",
+    QGVAR(dropWeapon),
+    "LIST",
     [LSTRING(Setting_DropWeapon), LSTRING(Setting_DropWeapon_Description)],
     LSTRING(Category_DisplayName),
     [
@@ -31,7 +33,8 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(enableScreams), "CHECKBOX",
+    QGVAR(enableScreams),
+    "CHECKBOX",
     [LSTRING(Setting_EnableScreams), LSTRING(Setting_EnableScreams_Description)],
     LSTRING(Category_DisplayName),
     true

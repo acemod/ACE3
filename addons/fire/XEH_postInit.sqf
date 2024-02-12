@@ -14,77 +14,77 @@
     _source say3D _scream;
 }] call CBA_fnc_addEventHandler;
 
-if (isServer) then {
-    ["CBA_settingsInitialized", {
-        TRACE_1("settingsInit",GVAR(enabled));
+if (!isServer) exitWith {};
 
-        if (!GVAR(enabled)) exitWith {};
+["CBA_settingsInitialized", {
+    TRACE_1("settingsInit",GVAR(enabled));
 
-        GVAR(fireSources) = createHashMap;
+    if (!GVAR(enabled)) exitWith {};
 
-        [QGVAR(addFireSource), {
-            params [
-                ["_source", objNull, [objNull, []]],
-                ["_radius", 0, [0]],
-                ["_intensity", 0, [0]],
-                ["_key", ""],
-                ["_condition", {true}],
-                ["_conditionArgs", []]
-            ];
+    GVAR(fireSources) = createHashMap;
 
-            private _isObject = _source isEqualType objNull;
+    [QGVAR(addFireSource), {
+        params [
+            ["_source", objNull, [objNull, []]],
+            ["_radius", 0, [0]],
+            ["_intensity", 0, [0]],
+            ["_key", ""],
+            ["_condition", {true}],
+            ["_conditionArgs", []]
+        ];
 
-            // Check if the source is valid
-            if !(_isObject || {_source isEqualTypeParams [0, 0, 0]}) exitWith {};
+        private _isObject = _source isEqualType objNull;
 
-            if (_isObject && {isNull _source}) exitWith {};
-            if (_radius == 0 || _intensity == 0) exitWith {};
-            if (_key isEqualTo "") exitWith {}; // key can be many types
+        // Check if the source is valid
+        if !(_isObject || {_source isEqualTypeParams [0, 0, 0]}) exitWith {};
 
-            // If a position is passed, create a static object at said position
-            private _sourcePos = if (_isObject) then {
-                getPosATL _source
-            } else {
-                ASLToATL _source
-            };
+        if (_isObject && {isNull _source}) exitWith {};
+        if (_radius == 0 || _intensity == 0) exitWith {};
+        if (_key isEqualTo "") exitWith {}; // key can be many types
 
-            private _fireLogic = createVehicle [QGVAR(logic), _sourcePos, [], 0, "CAN_COLLIDE"];
+        // If a position is passed, create a static object at said position
+        private _sourcePos = if (_isObject) then {
+            getPosATL _source
+        } else {
+            ASLToATL _source
+        };
 
-            // If an object was passed, attach logic to the object
-            if (_isObject) then {
-                _fireLogic attachTo [_source];
-            };
+        private _fireLogic = createVehicle [QGVAR(logic), _sourcePos, [], 0, "CAN_COLLIDE"];
 
-            // hashValue supports more types than hashmaps do by default, but not all (e.g. locations)
-            private _hashedKey = hashValue _key;
+        // If an object was passed, attach logic to the object
+        if (_isObject) then {
+            _fireLogic attachTo [_source];
+        };
 
-            if (isNil "_hashedKey") exitWith {
-                ERROR_3("Unsupported key type used: %1 - %2 - %3",_key,typeName _key,typeOf _key);
-            };
+        // hashValue supports more types than hashmaps do by default, but not all (e.g. locations)
+        private _hashedKey = hashValue _key;
 
-            // To avoid issues, remove existing entries first before overwriting
-            if (_hashedKey in GVAR(fireSources)) then {
-                [QGVAR(removeFireSource), _key] call CBA_fnc_localEvent;
-            };
+        if (isNil "_hashedKey") exitWith {
+            ERROR_3("Unsupported key type used: %1 - %2 - %3",_key,typeName _key,typeOf _key);
+        };
 
-            GVAR(fireSources) set [_hashedKey, [_fireLogic, _radius, _intensity, _condition, _conditionArgs]];
-        }] call CBA_fnc_addEventHandler;
+        // To avoid issues, remove existing entries first before overwriting
+        if (_hashedKey in GVAR(fireSources)) then {
+            [QGVAR(removeFireSource), _key] call CBA_fnc_localEvent;
+        };
 
-        [QGVAR(removeFireSource), {
-            params ["_key"];
-
-            private _hashedKey = hashValue _key;
-
-            if (isNil "_hashedKey") exitWith {
-                ERROR_3("Unsupported key type used: %1 - %2 - %3",_key,typeName _key,typeOf _key);
-            };
-
-            (GVAR(fireSources) deleteAt _hashedKey) params [["_fireLogic", objNull]];
-
-            detach _fireLogic;
-            deleteVehicle _fireLogic;
-        }] call CBA_fnc_addEventHandler;
-
-        [LINKFUNC(fireManagerPFH), FIRE_MANAGER_PFH_DELAY, []] call CBA_fnc_addPerFrameHandler;
+        GVAR(fireSources) set [_hashedKey, [_fireLogic, _radius, _intensity, _condition, _conditionArgs]];
     }] call CBA_fnc_addEventHandler;
-};
+
+    [QGVAR(removeFireSource), {
+        params ["_key"];
+
+        private _hashedKey = hashValue _key;
+
+        if (isNil "_hashedKey") exitWith {
+            ERROR_3("Unsupported key type used: %1 - %2 - %3",_key,typeName _key,typeOf _key);
+        };
+
+        (GVAR(fireSources) deleteAt _hashedKey) params [["_fireLogic", objNull]];
+
+        detach _fireLogic;
+        deleteVehicle _fireLogic;
+    }] call CBA_fnc_addEventHandler;
+
+    [LINKFUNC(fireManagerPFH), FIRE_MANAGER_PFH_DELAY, []] call CBA_fnc_addPerFrameHandler;
+}] call CBA_fnc_addEventHandler;
