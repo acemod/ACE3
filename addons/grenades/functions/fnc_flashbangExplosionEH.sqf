@@ -164,6 +164,6 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     private _flinch    = (_minFlinch + random (_maxFlinch - _minFlinch)) * selectRandom [-1, 1];
     ACE_player setDir (getDir ACE_player + _flinch);
 
-    [QVAR(flashbangedPlayer), [_strength, _grenadePosASL]] call CBA_fnc_localEvent;
+    [QGVAR(flashbangedPlayer), [_strength, _grenadePosASL]] call CBA_fnc_localEvent;
 };
 true
