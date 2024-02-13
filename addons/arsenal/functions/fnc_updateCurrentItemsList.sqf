@@ -68,7 +68,7 @@ private _indexCurrentItems = -1;
                 _backpack = [_backpack, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
             };
             GVAR(currentItems) set [IDX_CURR_BACKPACK, _backpack];
-            GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, _x param [1, []]];
+            GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, _items];
         };
         // Helmet
         case IDX_LOADOUT_HEADGEAR: {
