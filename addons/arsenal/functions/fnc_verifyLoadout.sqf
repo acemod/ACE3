@@ -74,7 +74,7 @@ _loadout = _loadout call _fnc_filterLoadout;
 {
     private _class = _extendedInfo getOrDefault [_x, ""];
     private _cache = missionNamespace getVariable (_x + "Cache");
-    if !(_class != "" && {_class in _cache}) then {
+    if (_class != "" && {!(_class in _cache)}) then {
         _missingExtendedInfo pushBack [_x, _class];
         _extendedInfo deleteAt _x;
     };

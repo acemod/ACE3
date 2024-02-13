@@ -78,9 +78,9 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
                 private _printComponent = "ACE_Arsenal - Loadout:";
                 private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
                 private _printUnavailableItemsList = ["Unavailable items:", str _unavailableItemsList] joinString " ";
-                private _printMissingExtendedInfo = ["Missing Extended Loadout:", str _missingExtendedInfo] joinString " ";
+                private _printMissingExtendedInfo = ["Missing extended loadout:", str _missingExtendedInfo] joinString " ";
 
-                diag_log text (format ["%1%6    %2%6    %3%6    %4    %5", _printComponent, "Name: " + _loadoutName, _printNullItemsList, _printUnavailableItemsList, _printMissingExtendedInfo, endl]);
+                diag_log text (format ["%1%6    %2%6    %3%6    %4%6    %5", _printComponent, "Name: " + _loadoutName, _printNullItemsList, _printUnavailableItemsList, _printMissingExtendedInfo, endl]);
             };
         };
 
