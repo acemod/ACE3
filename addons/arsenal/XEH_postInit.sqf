@@ -139,7 +139,7 @@ GVAR(lastSortDirectionRight) = DESCENDING;
 
     // Set voice if enabled
     if (GVAR(loadoutsSaveVoice)) then {
-        _extendedInfo set [QGVAR(voice), speaker _unit];
+        _extendedInfo set [QGVAR(voice), (speaker _unit) call EFUNC(common,getConfigName)];
     };
 
     // Set insignia if enabled
