@@ -1,9 +1,9 @@
 [
     QGVAR(enable),
-    "LIST",
+    "CHECKBOX",
     [LSTRING(enable_name), LSTRING(enable_tooltip)],
     LSTRING(category_displayName),
-    [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", ELSTRING(common,playerOnly), ELSTRING(common,playersAndAI)], 2],
+    true,
     1,
     {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;

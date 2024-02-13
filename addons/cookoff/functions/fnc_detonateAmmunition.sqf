@@ -25,6 +25,15 @@ params ["_object", ["_destroyWhenFinished", false], ["_source", objNull], ["_ins
 
 if (isNull _object) exitWith {};
 
+// Check if the object can cook its ammo off
+if (
+    underwater _object ||
+    {private _posASL = getPosWorld _object; surfaceIsWater _posASL && {(_posASL select 2) < 0}} || // underwater is not very reliable, so use model center instead
+    {GVAR(ammoCookoffDuration) == 0} ||
+    {!([GVAR(enableAmmoCookoff), GVAR(enableAmmobox)] select (_object isKindOf "ReammoBox_F"))} ||
+    {!(_object getVariable [QGVAR(enableAmmoCookoff), true])}
+}) exitWith {};
+
 // Don't have an object detonate its ammo twice
 if (_object getVariable [QGVAR(isAmmoDetonating), false]) exitWith {};
 

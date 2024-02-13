@@ -17,10 +17,10 @@
             <Czech>ACE Vznícení munice</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
-            <English>Enable vehicle cook-off</English>
+            <English>Enable vehicle cook-off effects</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_tooltip">
-            <English>Enables vehicle cook-off effects (fire and sound).</English>
+            <English>Enables vehicle cook-off effects (fire and fire sound, but doesn't include ammunition detonations).</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook-off</English>
