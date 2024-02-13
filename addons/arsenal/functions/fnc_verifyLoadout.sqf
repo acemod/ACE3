@@ -88,4 +88,4 @@ _loadout = _loadout call _fnc_filterLoadout;
 // Raise event for 3rd party: mostly for handling extended info
 [QGVAR(loadoutVerified), [_loadout, _extendedInfo, _nullItemsList, _unavailableItemsList, _missingExtendedInfo]] call CBA_fnc_localEvent;
 
-[[_loadout, _extendedInfo], _nullItemsList, _unavailableItemsList, _missingExtendedInfo]
+[[_loadout, _extendedInfo], _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _unavailableItemsList, _missingExtendedInfo]
