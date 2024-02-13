@@ -36,10 +36,10 @@ if (getNumber (configOf _unit >> "isPlayableLogic") == 1 || {!(_unit isKindOf "C
 // If unit is invulnerable, don't burn the unit
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {};
 
-private _unitPos = getPosASL _unit;
+private _eyePos = eyePos _unit;
 
-// Check if unit is in water
-if (surfaceIsWater _unitPos && {(_unitPos select 2) < 1}) exitWith {};
+// Check if unit is mostly submerged in water
+if (surfaceIsWater _eyePos && {(_eyePos select 2) < 0.1}) exitWith {};
 
 // If unit is already burning, update intensity, but don't add another PFH
 if (_unit call FUNC(isBurning)) exitWith {

@@ -40,7 +40,7 @@ _unit setVariable [QGVAR(burnCounter), nil];
     if (
         !(_unit call FUNC(isBurning)) ||
         {!(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]})} ||
-        {private _unitPos = getPosASL _unit; surfaceIsWater _unitPos && {(_unitPos select 2) < 1}}
+        {private _eyePos = eyePos _unit; surfaceIsWater _eyePos && {(_eyePos select 2) < 0.1}}
     ) exitWith {
         // Remove global effects and simulation
         {
