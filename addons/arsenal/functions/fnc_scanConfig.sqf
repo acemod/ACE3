@@ -309,8 +309,8 @@ private _isScriptedOptic = toString {
 
 // Compatibility: Override baseWeapon for CBA Scripted Attachments
 private _isScriptedAttachment = toString {
-    isText (_x >> "MRT_SwitchItemNextClass") ||
-    {isText (_x >> "MRT_SwitchItemPrevClass")}
+    getText (_x >> "MRT_SwitchItemNextClass") != "" ||
+    {getText (_x >> "MRT_SwitchItemPrevClass") != ""}
 };
 
 {

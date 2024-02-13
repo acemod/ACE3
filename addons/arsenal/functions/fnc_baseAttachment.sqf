@@ -2,6 +2,7 @@
 /*
  * Author: Jonpas, LinkIsGrim
  * Returns base attachment for CBA scripted attachment
+ * Adapted from CBA_fnc_switchableAttachments
  *
  * Arguments:
  * 0: Attachment <STRING>
@@ -10,25 +11,42 @@
  * Base attachment <STRING>
  *
  * Example:
- * "CUP_optic_Elcan_SpecterDR_black_PIP" call ace_arsenal_fnc_baseAttachment
+ * "ACE_acc_pointer_green_IR" call ace_arsenal_fnc_baseAttachment
  *
  * Public: Yes
  */
 
 params [["_item", "", [""]]];
 
-private _nextCfg = configFile >> "CfgWeapons" >> _item;
-private _switchEntry = ["MRT_SwitchItemPrevClass", "MRT_SwitchItemNextClass"] select (isText (_nextCfg >> "MRT_SwitchItemNextClass"));
+TRACE_1("looking up base attachment",_item);
 
-while {getNumber (_nextCfg >> "scope") < 2} do {
-    _nextCfg = configFile >> "CfgWeapons" >> (getText (_nextCfg >> _switchEntry));
+private _switchableClasses = [];
 
-    _switchEntry = ["MRT_SwitchItemPrevClass", "MRT_SwitchItemNextClass"] select (isText (_nextCfg >> "MRT_SwitchItemNextClass"));
-};
+private _cfgWeapons = configfile >> "CfgWeapons";
+private _config = _cfgWeapons >> _item;
+_item = configName _config;
 
-TRACE_2("Found class",_item,configName _nextCfg);
-if (getNumber (_nextCfg >> "scope") == 2) then {
-    _item = configName _nextCfg;
-};
+
+while {
+    _config = _cfgWeapons >> getText (_config >> "MRT_SwitchItemNextClass");
+    isClass _config && {_switchableClasses pushBackUnique configName _config != -1}
+} do {};
+
+_config = _cfgWeapons >> _item;
+private _backward = [];
+while {
+    _config = _cfgWeapons >> getText (_config >> "MRT_SwitchItemPrevClass");
+    isClass _config && {_backward pushBackUnique configName _config != -1}
+} do {};
+
+_switchableClasses append _backward;
+_switchableClasses = _switchableClasses arrayIntersect _switchableClasses;
+
+{
+    if (getNumber (_cfgWeapons >> _x >> "scope") == 2) exitWith {
+        TRACE_2("found class",_item,_x);
+        _item = _x;
+    };
+} forEach _switchableClasses;
 
 _item
