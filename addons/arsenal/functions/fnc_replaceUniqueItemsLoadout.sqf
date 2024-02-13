@@ -92,7 +92,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                         };
                         // Misc. items have 2 entries: Name and amount
                         case (_x isEqualTypeArray ["", 0]): {
-                            _x params ["_item", "_arg"];
+                            _x params ["_item"];
 
                             if (_item != "") then {
                                 _uniqueBaseCfgText = (getText (_cfgWeapons >> _item >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
