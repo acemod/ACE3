@@ -74,6 +74,8 @@ _loadout = _loadout call _fnc_filterLoadout;
 {
     private _class = _extendedInfo getOrDefault [_x, ""];
     private _cache = missionNamespace getVariable (_x + "Cache");
+
+    // Previously voices were stored in lower case (speaker command returns lower case), so this is to make old loadouts compatible
     if (_class != "" && {_x == QGVAR(voice)}) then {
         _class = _class call EFUNC(common,getConfigName);
     };
@@ -83,7 +85,10 @@ _loadout = _loadout call _fnc_filterLoadout;
     };
 } forEach [QGVAR(insignia), QGVAR(face), QGVAR(voice)];
 
+_nullItemsList = _nullItemsList arrayIntersect _nullItemsList;
+_unavailableItemsList = _unavailableItemsList arrayIntersect _unavailableItemsList;
+
 // Raise event for 3rd party: mostly for handling extended info
 [QGVAR(loadoutVerified), [_loadout, _extendedInfo, _nullItemsList, _unavailableItemsList, _missingExtendedInfo]] call CBA_fnc_localEvent;
 
-[[_loadout, _extendedInfo], _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _unavailableItemsList, _missingExtendedInfo]
+[[_loadout, _extendedInfo], _nullItemsList, _unavailableItemsList, _missingExtendedInfo]
