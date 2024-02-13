@@ -232,7 +232,7 @@ private _faceCategory = "";
 
 // Get all voices
 private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configfile >> "CfgVoice" >> "NoVoice"];
-_voiceCache = _voiceCache apply {configName _x};
+_voiceCache = _voiceCache apply {toLowerANSI configName _x};
 
 // Get all insignia
 private _insigniaCache = "(if (isNumber (_x >> 'scope')) then {getNumber (_x >> 'scope')} else {2}) == 2" configClasses (configFile >> "CfgUnitInsignia");
