@@ -32,7 +32,7 @@ if (
     {GVAR(ammoCookoffDuration) == 0} ||
     {!([GVAR(enableAmmoCookoff), GVAR(enableAmmobox)] select (_object isKindOf "ReammoBox_F"))} ||
     {!(_object getVariable [QGVAR(enableAmmoCookoff), true])}
-}) exitWith {};
+) exitWith {};
 
 // Don't have an object detonate its ammo twice
 if (_object getVariable [QGVAR(isAmmoDetonating), false]) exitWith {};

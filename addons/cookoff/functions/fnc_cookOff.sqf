@@ -108,7 +108,7 @@ if (_delayBetweenSmokeAndFire) then {
             {_intensity <= 1} ||
             {GVAR(cookoffDuration) == 0} ||
             {underwater _vehicle} ||
-            {private _posASL = getPosWorld _vehicle; surfaceIsWater _posASL && {(_posASL select 2) < 0})}
+            {private _posASL = getPosWorld _vehicle; surfaceIsWater _posASL && {(_posASL select 2) < 0}}
         ) exitWith {
             (_this select 1) call CBA_fnc_removePerFrameHandler;
 
