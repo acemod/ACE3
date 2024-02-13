@@ -108,24 +108,16 @@ GVAR(lastSortDirectionRight) = DESCENDING;
     private _face = _extendedInfo getOrDefault [QGVAR(face), ""];
 
     if (_face != "") then {
-        if (isMultiplayer) then {
-            private _id = [QGVAR(broadcastFace), [_unit, _face], QGVAR(centerFace_) + netId _unit] call CBA_fnc_globalEventJIP;
-            [_id, _unit] call CBA_fnc_removeGlobalEventJIP;
-        } else {
-            _unit setFace _face;
-        };
+        private _id = [QGVAR(broadcastFace), [_unit, _face], QGVAR(centerFace_) + hashValue _unit] call CBA_fnc_globalEventJIP;
+        [_id, _unit] call CBA_fnc_removeGlobalEventJIP;
     };
 
     // Set voice
     private _voice = _extendedInfo getOrDefault [QGVAR(voice), ""];
 
     if (_voice != "") then {
-        if (isMultiplayer) then {
-            private _id = [QGVAR(broadcastVoice), [_unit, _voice], QGVAR(centerVoice_) + netId _unit] call CBA_fnc_globalEventJIP;
-            [_id, _unit] call CBA_fnc_removeGlobalEventJIP;
-        } else {
-            _unit setSpeaker _voice;
-        };
+        private _id = [QGVAR(broadcastVoice), [_unit, _voice], QGVAR(centerVoice_) + hashValue _unit] call CBA_fnc_globalEventJIP;
+        [_id, _unit] call CBA_fnc_removeGlobalEventJIP;
     };
 
     // Set insignia
@@ -147,7 +139,7 @@ GVAR(lastSortDirectionRight) = DESCENDING;
 
     // Set voice if enabled
     if (GVAR(loadoutsSaveVoice)) then {
-        _extendedInfo set [QGVAR(voice), speaker _unit];
+        _extendedInfo set [QGVAR(voice), (speaker _unit) call EFUNC(common,getConfigName)];
     };
 
     // Set insignia if enabled

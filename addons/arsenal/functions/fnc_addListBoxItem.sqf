@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Config category, must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice" or "CfgUnitInsignia" <STRING>
- * 1: Classname <STRING>
+ * 1: Classname (must be in config case) <STRING>
  * 2: Panel control <CONTROL>
  * 3: Name of the picture entry in that Cfg class <STRING> (default: "picture")
  * 4: Config root <NUMBER> (default: 0 -> configFile)
@@ -42,7 +42,7 @@ if (_skip) then {
 
 if (_skip) exitWith {};
 
-// Sanitise key, as it's public; If not in cache, find info and cache it for later use
+// If not in cache, find info and cache it for later use
 ((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_configCategory + _className + str _configRoot, {
     // Get classname (config case), display name, picture and DLC
     private _configPath = ([configFile, campaignConfigFile, missionConfigFile] select _configRoot) >> _configCategory >> _className;
