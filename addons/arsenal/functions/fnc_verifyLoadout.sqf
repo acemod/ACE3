@@ -27,6 +27,7 @@ private _name = "";
 private _itemArray = [];
 private _nullItemsList = [];
 private _unavailableItemsList = [];
+private _missingExtendedInfo = [];
 
 // Search for all items and check their availability
 private _fnc_filterLoadout = {
@@ -70,7 +71,16 @@ private _fnc_filterLoadout = {
 // Loadout might come from a different modpack, which might have different config naming
 _loadout = _loadout call _fnc_filterLoadout;
 
-// Raise event for 3rd party: mostly for handling extended info
-[QGVAR(loadoutVerified), [_loadout, _extendedInfo]] call CBA_fnc_localEvent;
+{
+    private _class = _extendedInfo getOrDefault [_x, ""];
+    private _cache = missionNamespace getVariable (_x + "Cache");
+    if !(_class != "" && {_class in _cache}) then {
+        _missingExtendedInfo pushBack [_x, _class];
+        _extendedInfo deleteAt _x;
+    };
+} forEach [QGVAR(insignia), QGVAR(face), QGVAR(voice)];
 
-[[_loadout, _extendedInfo], _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _unavailableItemsList]
+// Raise event for 3rd party: mostly for handling extended info
+[QGVAR(loadoutVerified), [_loadout, _extendedInfo, _nullItemsList, _unavailableItemsList, _missingExtendedInfo]] call CBA_fnc_localEvent;
+
+[[_loadout, _extendedInfo], _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _unavailableItemsList, _missingExtendedInfo]

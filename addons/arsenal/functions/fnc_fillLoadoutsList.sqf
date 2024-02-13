@@ -71,15 +71,16 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _loadoutCachedInfo = [_loadoutData] call FUNC(verifyLoadout);
             _contentPanelCtrl setVariable [_loadoutNameAndTab, _loadoutCachedInfo];
 
-            _loadoutCachedInfo params ["", "_nullItemsList", "_unavailableItemsList"];
+            _loadoutCachedInfo params ["", "_nullItemsList", "_unavailableItemsList", "_missingExtendedInfo"];
 
             // Log missing / nil items to RPT (only once per arsenal session)
-            if (GVAR(EnableRPTLog) && {(_nullItemsList isNotEqualTo []) || {_unavailableItemsList isNotEqualTo []}}) then {
+            if (GVAR(EnableRPTLog) && {(_nullItemsList isNotEqualTo []) || {_unavailableItemsList isNotEqualTo [] || {_missingExtendedInfo isNotEqualTo []}}}) then {
                 private _printComponent = "ACE_Arsenal - Loadout:";
                 private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
                 private _printUnavailableItemsList = ["Unavailable items:", str _unavailableItemsList] joinString " ";
+                private _printMissingExtendedInfo = ["Missing Extended Loadout:", str _missingExtendedInfo] joinString " ";
 
-                diag_log text (format ["%1%5    %2%5    %3%5    %4", _printComponent, "Name: " + _loadoutName, _printNullItemsList, _printUnavailableItemsList, endl]);
+                diag_log text (format ["%1%6    %2%6    %3%6    %4    %5", _printComponent, "Name: " + _loadoutName, _printNullItemsList, _printUnavailableItemsList, _printMissingExtendedInfo, endl]);
             };
         };
 
