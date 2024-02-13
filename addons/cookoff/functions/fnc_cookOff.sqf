@@ -50,7 +50,7 @@ if (_vehicle isKindOf "CAManBase" || {_vehicle isKindOf "StaticWeapon"}) exitWit
 
 // If under water, ignore
 // underwater is not very reliable, so use model center instead
-if (underwater _vehicle || {private _posASL = getPosWorld _vehicle; surfaceIsWater _posASL && {(_posASL select 2) < 0}) exitWith {};
+if (underwater _vehicle || {private _posASL = getPosWorld _vehicle; surfaceIsWater _posASL && {(_posASL select 2) < 0}}) exitWith {};
 
 // Check if cook-off is disabled on vehicle specifically
 if !(_vehicle getVariable [QGVAR(enable), true]) exitWith {};
