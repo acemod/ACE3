@@ -26,7 +26,6 @@ private _cfgWeapons = configfile >> "CfgWeapons";
 private _config = _cfgWeapons >> _item;
 _item = configName _config;
 
-
 while {
     _config = _cfgWeapons >> getText (_config >> "MRT_SwitchItemNextClass");
     isClass _config && {_switchableClasses pushBackUnique configName _config != -1}
