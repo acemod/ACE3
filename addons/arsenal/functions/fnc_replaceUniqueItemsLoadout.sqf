@@ -79,13 +79,23 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                 {
                     switch (true) do {
                         // Containers have 2 entries: Name and isBackpack
-                        case (_x isEqualTypeArray ["", false]);
+                        case (_x isEqualTypeArray ["", false]): {
+                            _x params ["_item", "_isBackpack"];
+                            _uniqueBaseCfgText = (getText (([_cfgWeapons, _cfgVehicles] select _arg) >> _item >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+                            if (_uniqueBaseCfgText != "") then {
+                                _x set [0, _uniqueBaseCfgText];
+                            } else {
+                                if (_arg) then {
+                                    _x set [0, [_x, "CfgVehicles"] call CBA_fnc_getNonPresetClass];
+                                };
+                            };
+                        };
                         // Misc. items have 2 entries: Name and amount
                         case (_x isEqualTypeArray ["", 0]): {
                             _x params ["_item", "_arg"];
 
                             if (_item != "") then {
-                                _uniqueBaseCfgText = (getText ([_cfgWeapons, _cfgVehicles] select ((_arg isEqualType false) && {_arg}) >> _item >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+                                _uniqueBaseCfgText = (getText (_cfgWeapons >> _item >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
 
                                 if (_uniqueBaseCfgText != "") then {
                                     _x set [0, _uniqueBaseCfgText];

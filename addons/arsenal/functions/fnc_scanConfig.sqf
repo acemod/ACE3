@@ -302,7 +302,7 @@ private _isScriptedOptic = toString {
     private _xClass = toLowerANSI configName _x;
     private _baseOptic = _xClass call FUNC(baseOptic);
     if (_baseOptic != "" && {_baseOptic != _xClass}) then {
-        TRACE_2("updating baseWeapon for optic %1, new base %2",_xClass,_baseOptic);
+        TRACE_2("updating baseOptic",_xClass,_baseOptic);
         _baseWeaponCache set [_xClass, _baseOptic];
     };
 } forEach (_isScriptedOptic configClasses _cfgWeapons);
@@ -317,7 +317,7 @@ private _isScriptedAttachment = toString {
     private _xClass = toLowerANSI configName _x;
     private _baseAttachment = _xClass call FUNC(baseAttachment);
     if (_baseAttachment != "" && {_baseAttachment != _xClass}) then {
-        TRACE_2("updating baseWeapon for attachment %1, new base %2",_xClass,_baseAttachment);
+        TRACE_2("updating baseAttachment",_xClass,_baseAttachment);
         _baseWeaponCache set [_xClass, _baseAttachment];
     };
 } forEach (_isScriptedAttachment configClasses _cfgWeapons);
