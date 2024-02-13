@@ -567,7 +567,7 @@ class ADDON {
         timeTillMaxEffect = 30;
         // How many of this type of medication can be in the system before the patient can possibly overdose?
         maxDose = 4;
-        // The number of doses over maxSafeDose where there is a chance to overdose. The chance increases as dose gets higher.
+        // The number of doses over maxDose where there is a chance to overdose.
         // Example with maxDose = 4 and maxDoseDeviation = 2: Dose 4: Safe | Dose 5 and 6: Possible overdose | Dose 7: Guaranteed overdose
         maxDoseDeviation = 2;
         // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
