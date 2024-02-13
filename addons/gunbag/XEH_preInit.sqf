@@ -26,17 +26,30 @@ PREP_RECOMPILE_END;
     }, _this] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addClassEventHandler;
 
+[QEGVAR(arsenal,loadoutVerified), {
+    params ["_loadout", "_extendedInfo"];
+    private _gunbagInfo = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
+    if (_gunbagInfo isEqualTo []) exitWith {};
+
+    private _weapon = (_gunbagInfo select 0) call EFUNC(arsenal,baseWeapon);
+    if !(_weapon in EGVAR(arsenal,virtualItemsFlat)) exitWith {
+        INFO_1("removing [%1] from loadout",_gunbagInfo);
+        _extendedInfo deleteAt QGVAR(gunbagWeapon);
+    };
+    {
+        private _class = _x param [0, ""];
+        private _defaultValue = ["", []] select {_x isEqualType []};
+        if (_class != "" && {!(_class in EGVAR(arsenal,virtualItemsFlat))}) then {
+            INFO_1("removing [%1] from loadout",_x);
+            _gunbagInfo set [_forEachIndex + 1, _defaultValue];
+        };
+    } forEach (_gunbagInfo select [1]); // weapon was verified above
+}] call CBA_fnc_addEventHandler;
+
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout", "_extendedInfo"];
     private _gunbagWeapon = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
     if (_gunbagWeapon isNotEqualTo []) then {
-        if (!isNil QEGVAR(arsenal,virtualItemsFlatAll)) then {
-            private _weapon = (_gunbagWeapon select 0) call EFUNC(arsenal,baseWeapon);
-            if !(_weapon in EGVAR(arsenal,virtualItemsFlatAll)) then {
-                INFO_1("removing [%1] from loadout",_gunbagWeapon);
-                _gunbagWeapon = [];
-            };
-        };
         (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon), _gunbagWeapon, true];
     };
 }] call CBA_fnc_addEventHandler;
