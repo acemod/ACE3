@@ -11,7 +11,7 @@ class Cfg3DEN {
                         expression = QUOTE(if (!_value) then {_this setVariable [ARR_3('%s',_value,true)]});
                         typeName = "BOOL";
                         condition = "objectVehicle";
-                        defaultValue = QUOTE(GETMVAR(QGVAR(enable),true)]);
+                        defaultValue = QUOTE(GETMVAR(QGVAR(enable),true));
                     };
                     class GVAR(enableAmmoCookoff) {
                         property = QGVAR(enableAmmoCookoff);
