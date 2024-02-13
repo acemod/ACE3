@@ -86,6 +86,7 @@ _loadout = _loadout call _fnc_filterLoadout;
 } forEach [QGVAR(insignia), QGVAR(face), QGVAR(voice)];
 
 // Raise event for 3rd party: mostly for handling extended info
+// Pass all items, including duplicates
 [QGVAR(loadoutVerified), [_loadout, _extendedInfo, _nullItemsList, _unavailableItemsList, _missingExtendedInfo]] call CBA_fnc_localEvent;
 
 [[_loadout, _extendedInfo], _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _unavailableItemsList, _missingExtendedInfo]
