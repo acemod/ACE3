@@ -85,9 +85,6 @@ _loadout = _loadout call _fnc_filterLoadout;
     };
 } forEach [QGVAR(insignia), QGVAR(face), QGVAR(voice)];
 
-_nullItemsList = _nullItemsList arrayIntersect _nullItemsList;
-_unavailableItemsList = _unavailableItemsList arrayIntersect _unavailableItemsList;
-
 // Raise event for 3rd party: mostly for handling extended info
 [QGVAR(loadoutVerified), [_loadout, _extendedInfo, _nullItemsList, _unavailableItemsList, _missingExtendedInfo]] call CBA_fnc_localEvent;
 
