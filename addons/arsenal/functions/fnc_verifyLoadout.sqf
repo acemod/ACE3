@@ -42,8 +42,14 @@ private _fnc_filterLoadout = {
                 if !(_name in GVAR(virtualItemsFlat)) then {
                     _name = _name call FUNC(baseWeapon);
                     if !(_name in GVAR(virtualItemsFlat)) then {
-                        _unavailableItemsList pushBack _name;
-                        _name = "";
+                        // This could be a backpack
+                        private _temp = [_name, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+                        if (_temp == "") then { // It's not
+                            _unavailableItemsList pushBack _name;
+                            _name = "";
+                        } else {
+                            _name = _temp;
+                        };
                     };
                 };
             };
