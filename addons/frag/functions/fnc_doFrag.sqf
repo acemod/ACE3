@@ -53,7 +53,7 @@ if (_modFragCount < ACE_FRAG_LOW_FRAG_MOD_COUNT) then {
 // Offset for ground clearance
 private _heightATL = (ASLToATL _posASL)#2;
 if (_heightATL < ACE_FRAG_MIN_GROUND_OFFSET) then {
-    _posASL = _posASL vectorAdd [0, 0, ACE_FRAG_MIN_GROUND_OFFSET - (0  min _heightATL)];
+    _posASL = _posASL vectorAdd [0, 0, ACE_FRAG_MIN_GROUND_OFFSET - (0 min _heightATL)];
 };
 
 TRACE_3("fnc_doFragTargeted IF",_fragRange,_timeSinceLastFrag,GVAR(fragSimComplexity));
