@@ -37,6 +37,7 @@ if (
     {!([GVAR(enableAmmoCookoff), GVAR(enableAmmobox)] select (_object isKindOf "ReammoBox_F"))} ||
     {!(_object getVariable [QGVAR(enableAmmoCookoff), true])}
 ) exitWith {
+    // Box cook-off fire ends after the ammo has detonated (vehicle cook-off fire does not depend on the ammo detonation)
     if (_object isKindOf "ReammoBox_F") then {
         [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
 

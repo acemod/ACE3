@@ -1,11 +1,11 @@
 [
-    QGVAR(enable),
+    QGVAR(enableFire),
     "CHECKBOX",
-    [LSTRING(enable_name), LSTRING(enable_tooltip)],
+    [LSTRING(enableFire_name), LSTRING(enableFire_tooltip)],
     LSTRING(category_displayName),
     true,
     1,
-    {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(enableFire), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [

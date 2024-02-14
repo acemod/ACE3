@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: johnb43
- * Starts ammunition detonating from an object.
+ * Starts detonating ammunition from an object (e.g. vehicle or crate).
  *
  * Arguments:
  * 0: Object <OBJECT>

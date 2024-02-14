@@ -16,65 +16,23 @@
             <Portuguese>ACE Cook off</Portuguese>
             <Czech>ACE Vznícení munice</Czech>
         </Key>
-        <Key ID="STR_ACE_CookOff_enable_name">
-            <English>Enable vehicle cook-off effects</English>
+        <Key ID="STR_ACE_CookOff_enableFire_name">
+            <English>Enable vehicle cook-off fire</English>
         </Key>
-        <Key ID="STR_ACE_CookOff_enable_tooltip">
-            <English>Enables vehicle cook-off effects (fire and fire sound, but doesn't include ammunition detonations).</English>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
-            <English>Enable ammo box cook-off</English>
-            <Spanish>Habilitar detonación inducida por calor en las cajas de munición</Spanish>
-            <Japanese>弾薬箱の誘爆を有効化</Japanese>
-            <German>Durchzündung für Munitionskisten ermöglichen</German>
-            <Korean>탄약 상자 쿡오프 현상 활성화</Korean>
-            <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>
-            <French>Auto-inflammation des caisses de munitions</French>
-            <Italian>Abilita esplosione casse munizioni</Italian>
-            <Chinese>開啟彈藥箱殉爆效果</Chinese>
-            <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
-            <Russian>Разрешить детонацию ящиков с боеприпасами</Russian>
-            <Portuguese>Permitir cozinhar caixas de munição</Portuguese>
-            <Czech>Povolit vynícení munice v krabicích</Czech>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
-            <English>Enables cooking off of ammo boxes.</English>
-            <Spanish>Habilita la detonación inducida por calor en las cajas de munición</Spanish>
-            <Japanese>弾薬箱が誘爆するようになります。</Japanese>
-            <German>Ermöglicht Durchzündung von Munitionskisten.</German>
-            <Korean>탄약 상자에 쿡오프 현상을 적용합니다.</Korean>
-            <Polish>Aktywuje samozapłon skrzyń z amunicją</Polish>
-            <French>Permet l'auto-inflammation des caisses de munitions.</French>
-            <Italian>Abilita l'esplosione di casse di munizioni distrutte.</Italian>
-            <Chinese>開啟彈藥箱殉爆效果</Chinese>
-            <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
-            <Russian>Активирует детонацию ящиков с боеприпасами</Russian>
-            <Portuguese>Permitir que caixas de munição cozinhem.</Portuguese>
-            <Czech>Zapíná vznícení munice v krabicích.</Czech>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
-            <English>Enable vehicle ammo cook-off</English>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
-            <English>Enables cooking off of vehicle ammunition. Fires ammunition projectiles while vehicle has ammunition remaining.</English>
+        <Key ID="STR_ACE_CookOff_enableFire_tooltip">
+            <English>Enables vehicle cook-off fire effects.\nThis does NOT include ammunition detonations.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_cookoffDuration_name">
-            <English>Vehicle cook-off duration multiplier</English>
+            <English>Vehicle cook-off fire duration multiplier</English>
         </Key>
         <Key ID="STR_ACE_CookOff_cookoffDuration_tooltip">
-            <English>Multiplier for how long vehicle cook-off lasts.\nSetting to 0 will disable cookoff.</English>
-        </Key>
-        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
-            <English>Ammo cook-off duration multiplier</English>
-        </Key>
-        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
-            <English>Multiplier for how long ammunition cook-off lasts, for both vehicles and ammo boxes.\nSetting to 0 will disable ammo cookoff.</English>
+            <English>Multiplier for how long vehicle cook-off fire lasts.\nSetting to 0 will disable vehicle cook-off fire.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
-            <English>Vehicle cook-off probability multiplier</English>
+            <English>Vehicle cook-off fire probability multiplier</English>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
-            <English>Multiplier for vehicle cook-off probability. Higher value results in higher cook-off probability.\nSetting to 0 will disable cookoff.</English>
+            <English>Multiplier for vehicle cook-off fire probability. Higher value results in higher cook-off probability.\nSetting to 0 will disable vehicle cook-off fire.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
             <English>Destroy vehicles after cook-off</English>
@@ -98,6 +56,36 @@
             <Korean>쿡오프 후 차량이 항상 파괴되는지 여부를 조정합니다.</Korean>
             <French>Contrôle si les véhicules seront toujours détruits après l'auto-inflammation.</French>
             <Portuguese>Define se os veículos serão sempre destruídos após cozinhamento.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
+            <English>Enable vehicle ammo cook-off</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
+            <English>Enables cooking off of vehicle ammunition. Fires ammunition projectiles while vehicle has ammunition remaining.\nThis does NOT include fire effects.</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
+            <English>Enable ammo box cook-off</English>
+            <Spanish>Habilitar detonación inducida por calor en las cajas de munición</Spanish>
+            <Japanese>弾薬箱の誘爆を有効化</Japanese>
+            <German>Durchzündung für Munitionskisten ermöglichen</German>
+            <Korean>탄약 상자 쿡오프 현상 활성화</Korean>
+            <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>
+            <French>Auto-inflammation des caisses de munitions</French>
+            <Italian>Abilita esplosione casse munizioni</Italian>
+            <Chinese>開啟彈藥箱殉爆效果</Chinese>
+            <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
+            <Russian>Разрешить детонацию ящиков с боеприпасами</Russian>
+            <Portuguese>Permitir cozinhar caixas de munição</Portuguese>
+            <Czech>Povolit vynícení munice v krabicích</Czech>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
+            <English>Enables cooking off of ammo boxes.\nThis does NOT include fire effects.</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
+            <English>Ammo cook-off duration multiplier</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
+            <English>Multiplier for how long ammunition cook-off lasts, for both vehicles and ammo boxes.\nSetting to 0 will disable ammo cook-off for both vehicles and ammo boxes.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_name">
             <English>Enable ammo removal during cook-off</English>

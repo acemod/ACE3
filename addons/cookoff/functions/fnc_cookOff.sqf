@@ -27,7 +27,7 @@
  */
 
 if (!isServer) exitWith {};
-if (!GVAR(enable) || {GVAR(cookoffDuration) == 0}) exitWith {};
+if (!GVAR(enableFire) || {GVAR(cookoffDuration) == 0}) exitWith {};
 
 params [
     "_vehicle",
@@ -53,7 +53,7 @@ if (_vehicle isKindOf "CAManBase" || {_vehicle isKindOf "StaticWeapon"}) exitWit
 if (underwater _vehicle || {private _posASL = getPosWorld _vehicle; surfaceIsWater _posASL && {(_posASL select 2) < 0}}) exitWith {};
 
 // Check if cook-off is disabled on vehicle specifically
-if !(_vehicle getVariable [QGVAR(enable), true]) exitWith {};
+if !(_vehicle getVariable [QGVAR(enable), true]) exitWith {}; // QGVAR(enable) is API
 
 TRACE_2("cooking off",_vehicle,_intensity);
 TRACE_9("",_source,_instigator,_delayBetweenSmokeAndFire,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing,_canJet,_maxIntensity);
@@ -104,7 +104,8 @@ if (_delayBetweenSmokeAndFire) then {
 
         if (
             isNull _vehicle ||
-            !GVAR(enable) ||
+            !GVAR(enableFire) ||
+            {!(_vehicle getVariable [QGVAR(enable), true])} || // QGVAR(enable) is API
             {_intensity <= 1} ||
             {GVAR(cookoffDuration) == 0} ||
             {underwater _vehicle} ||

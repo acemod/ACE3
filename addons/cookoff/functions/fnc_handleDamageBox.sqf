@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: KoffeinFlummi, commy2
+ * Author: KoffeinFlummi, commy2, johnb43
  * Handles all incoming damage for boxes.
  *
  * Arguments:
