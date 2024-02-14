@@ -81,20 +81,20 @@ private _printCount = 0;
 
             private _warn = false;
             private _skip = getNumber (_ammoConfig >> QGVAR(skip));
-            private _fragTypes = getArray (_ammoConfig >> QGVAR(CLASSES));
+            private _fragTypes = getArray (_ammoConfig >> QGVAR(classes));
             if (_fragTypes isEqualTo []) then {_warn = true;};
-            private _c = getNumber(_ammoConfig >> QGVAR(CHARGE));
+            private _c = getNumber (_ammoConfig >> QGVAR(charge));
             if (_c == 0) then {_warn = true;};
-            private _m = getNumber(_ammoConfig >> QGVAR(METAL));
+            private _m = getNumber (_ammoConfig >> QGVAR(metal));
             if (_m == 0) then {_warn = true;};
-            private _k = getNumber(_ammoConfig >> QGVAR(GURNEY_K));
+            private _k = getNumber (_ammoConfig >> QGVAR(gurney_k));
             if (_k == 0) then {_warn = true;};
-            private _gC = getNumber(_ammoConfig >> QGVAR(GURNEY_C));
+            private _gC = getNumber (_ammoConfig >> QGVAR(gurney_c));
             if (_gC == 0) then {_warn = true;};
             private _fragCount = getNumber (_ammoConfig >> QGVAR(fragCount));
             if (_fragCount == 0) then {_fragCount = 200; _warn = true;};
 
-            if (!_printOnlyIncomplete || {_warn && _skip isNotEqualTo 0}) then {
+            if (!_printOnlyIncomplete || {_warn && _skip != 0}) then {
                 INC(_printCount);
                 if (_csvFormat) then {
                     diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%8", _c, _m, _k, _gC, _skip, _fragCount, _ammo, [_ammoConfig, true] call BIS_fnc_returnParents];

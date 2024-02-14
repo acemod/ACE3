@@ -33,11 +33,11 @@ if (CBA_missionTime < GVAR(nextSpallAllowTime)||
     _lastPosASL isEqualTo [0,0,0] ||
     {_ammo isEqualTo "" || {!isNull _objectHit &&
     {objectHit isKindOf "CAManBase"}}}) exitWith {
-    TRACE_4("time/invldHit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
+    TRACE_4("time/invalidHit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
 };
 
 private _material = [_surfaceType] call FUNC(getMaterialInfo);
-if (_material isEqualTo "ground") then {
+if (_material == "ground") then {
     #ifdef DEBUG_MODE_FULL
     systemChat "ground spall";
     #endif
@@ -49,7 +49,7 @@ private _vel = if (alive _projectile) then {
     _explosive = 0; // didn't explode since it's alive a frame later
     velocity _projectile
 } else {
-    [0, 0, 0];
+    [0, 0, 0]
 };
 
 private _velocityChange = 0 max (vectorMagnitude _lastVelocity - vectorMagnitude _vel);
@@ -85,7 +85,7 @@ if GVAR(dbgSphere) then {
  * impacts. 120 degrees due to 90 degree offset with _lastVelocityUnit into object.
  */
 private _spallPosASL = _lastPosASL vectorAdd _deltaStep;
-if (120 > acos ( _lastVelocityUnit vectorDotProduct _surfaceNorm)) then {
+if (120 > acos (_lastVelocityUnit vectorDotProduct _surfaceNorm)) then {
     _spallPosASL = _spallPosASL vectorAdd (_deltaStep vectorMultiply 5);
 };
 private _insideObject = true;

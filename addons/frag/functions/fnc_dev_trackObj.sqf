@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function adds an object to have it's course tracked (every frame).
+ * This function adds an object to have its course tracked (every frame).
  *
  * Arguments:
  * 0: Object to draw track OBJECT>
@@ -42,21 +42,22 @@ GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray
 [
     {
         if (isGamePaused) exitWith {};
-        params ["_params", "_handle"];
-        _params params ["_object"];
+        params ["_object", "_handle"];
+
         if (!alive _object) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
-        private _arr = GVAR(dev_trackLines) getOrDefault [(getObjectID _object), -1];
+        
+        private objectArray = GVAR(dev_trackLines) get (getObjectID _object);
 
-        if (_arr isEqualType 0) exitWith {
+        if (isNil "_objectArray") exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
-        (_arr#0) pushBack getPosATL _object;
+        (objectArray#0) pushBack getPosATL _object;
     },
     0,
-    [_object]
+    _object
 ] call CBA_fnc_addPerFrameHandler;
 
 // Projectile event handlers that add spheres and points for more accurate round tracking

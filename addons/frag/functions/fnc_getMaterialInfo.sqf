@@ -31,7 +31,7 @@ if (!isNil "_material") exitWith {
 private _surfaceConfig = configFile >> "CfgSurfaces" >> _surfType;
 if (isClass _surfaceConfig) then {
     _material = getText (_surfaceConfig >> "soundEnviron");
-    if (_material isEqualTo "" || {_material isEqualTo "empty"}) then {
+    if (_material == "" || {_material == "empty"}) then {
         _material = getText (_surfaceConfig >> "soundhit");
     };
 } else { // Messy way when a surface isn't added to CfgSurfaces

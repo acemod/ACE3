@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [_projectile, getPosASL _projectile, velocity _projectile, typeOf _projectile, getShotParents _projectile] call ace_frag_fnc_doFrag;
+ * [getPosASL _projectile, velocity _projectile, typeOf _projectile, getShotParents _projectile] call ace_frag_fnc_doFrag;
  *
  * Public: No
  */

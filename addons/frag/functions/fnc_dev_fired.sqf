@@ -7,7 +7,7 @@
  * Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * None
+ * Nothing Useful
  *
  * Example:
  * [clientFiredBIS-XEH] call ace_frag_fnc_fired

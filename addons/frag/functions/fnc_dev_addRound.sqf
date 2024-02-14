@@ -13,7 +13,7 @@
  *    true results in blue traces, false in red. <BOOL>
  *
  * Return Value:
- * None
+ * Nothing Useful
  *
  * Example:
  * [_projectile, false, false] call ace_frag_dev_addRound;
@@ -28,9 +28,9 @@ params [
 ];
 
 if (_isSidePlayer) then {
-    GVAR(dev_trackLines) set [getObjectID _projectile, [[getposATL _projectile], [0, 0, 1, 1]]];
+    GVAR(dev_trackLines) set [getObjectID _projectile, [[getPosATL _projectile], [0, 0, 1, 1]]];
 } else {
-    GVAR(dev_trackLines) set [getObjectID _projectile, [[getposATL _projectile], [1, 0, 0, 1]]];
+    GVAR(dev_trackLines) set [getObjectID _projectile, [[getPosATL _projectile], [1, 0, 0, 1]]];
 };
 
 // event handler to track round and cleanup when round is "dead"

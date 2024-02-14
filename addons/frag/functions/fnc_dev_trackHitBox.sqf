@@ -48,7 +48,7 @@ private _centerPoint = ASLToAGL getPosASL _object;
 
 if (GVAR(dbgSphere) && {_addSphere && {isNull objectParent _object}}) then {
     private _centerSphere = [getPosASL _object, "yellow"] call FUNC(dev_sphereDraw);
-    _centerSphere disableCollisionWith vehicle _object;
+    _centerSphere disableCollisionWith _object;
     _centerSphere attachTo [_object, _object worldToModel _centerPoint];
 };
 
@@ -66,7 +66,7 @@ private _points = [
     [_p7#0, _p1#1, _p7#2]
 ];
 
-_color = switch (side _object) do {
+private _color = switch (side _object) do {
     case east: {[1, 0, 0, 1]};
     case resistance: {[0, 1, 0, 1]};
     default {[0, 0, 1, 1]};

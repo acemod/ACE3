@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [unit0, player] call ace_frag_fnc_dev_switchUnitHandle;
+ * [getPosASL player, "blue"] call ace_frag_fnc_dev_sphereDraw;
  *
  * Public: No
  */

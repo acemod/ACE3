@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [false, 10] call ace_frag_fnc_fragoCalcDump
+ * false call ace_frag_fnc_dev_fragCalcDump
  *
  * Public: No
  */
@@ -28,15 +28,15 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
 { // Begin _allAmmoConfigs forEach
     private _ammo = configName _x;
 
-    if (_ammo isEqualTo "" || {_ammo in _processedCfgAmmos} ) then {
+    if (_ammo isEqualTo "" || {_ammo in _processedCfgAmmos}) then {
         continue
     };
 
     private _shouldFrag = [_ammo] call FUNC(shouldFrag);
-    if (_nSkip || _logAll) then {
+    if (_shouldFrag || _logAll) then {
         private _fragInfo = [_ammo] call FUNC(getFragInfo);
         _fragInfo params ["_fragRange", "_fragMaxVelocity", "", "_modifiedFragCount"];
-        private _fragCount = 4 * pi* _modifiedFragCount;
+        private _fragCount = 4 * pi * _modifiedFragCount;
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
         private _indirectHitRange = getNumber (_ammoConfig >> "indirectHitRange");
         private _indirectHit = getNumber (_ammoConfig >> "indirectHit");

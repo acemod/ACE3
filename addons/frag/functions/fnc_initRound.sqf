@@ -68,7 +68,7 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     ];
 };
 #ifdef DEBUG_MODE_DRAW
-if (GVAR(debugOptions) && (_shouldFrag || _shouldSpall)) then {
+if (GVAR(debugOptions) && {_ammo call FUNC(shouldFrag) || {_ammo call FUNC(shouldSpall)}}) then {
     [_projectile, "red", true] call FUNC(dev_trackObj);
 };
 #endif

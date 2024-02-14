@@ -49,7 +49,7 @@ if (_fragTypes isEqualTo []) then {
 private _objects = (ASLToATL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_posASL,_fragRange);
-    0;
+    0
 };
 
 // grab crews and add them in so that targets stay approx. sorted by distance
@@ -126,12 +126,12 @@ private _totalFragCount = 0;
 
     // target pos for fragment to hit
     private _targetPos = (velocity _target vectorMultiply _timeOfFlight) vectorAdd [0, 0, ACE_FRAG_HALF_GRAVITY_APPROX * _timeOfFlight ^ 2];
-    if _isPerson then {
+    _targetPos = if (_isPerson) then {
         private _hitPoint = selectRandom ACE_FRAG_HITPOINTS;
         private _hitPointPos = _target selectionPosition [_hitPoint, "HitPoints", "AveragePoint"];
-        _targetPos = _target modelToWorldWorld _hitPointPos vectorAdd _targetPos;
+        _target modelToWorldWorld _hitPointPos vectorAdd _targetPos;
     } else {
-        _targetPos = _targetPos vectorAdd getPosASL _target vectorAdd [
+        _targetPos vectorAdd getPosASL _target vectorAdd [
             -0.5 + random 1,
             -0.5 + random 1,
             (0.1 + random 0.4) * _height
