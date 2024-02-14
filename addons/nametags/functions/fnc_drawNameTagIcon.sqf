@@ -42,7 +42,7 @@ _fnc_parameters = {
 
         default {
             private _targetFaction = _target getVariable [QGVAR(faction), faction _target];
-            private _customRankIcons = GVAR(factionRanks) get _targetFaction;
+            private _customRankIcons = GVAR(factionRanks) get (toLowerANSI _targetFaction);
 
             if (!isNil "_customRankIcons") then {
                 _customRankIcons param [ALL_RANKS find rank _target, ""] // return

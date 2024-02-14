@@ -16,7 +16,7 @@ GVAR(deployDirection) = 0;
 
 // Cancel deploy on player change. This does work when returning to lobby, but not when hard disconnecting.
 ["unit", LINKFUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
-["loadout", {_this call FUNC(handlePlayerInventoryChanged)}] call CBA_fnc_addPlayerEventHandler;
+["loadout", LINKFUNC(handlePlayerInventoryChanged)] call CBA_fnc_addPlayerEventHandler;
 ["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
 
 // handle waking up dragged unit and falling unconscious while dragging

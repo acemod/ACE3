@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-[QGVAR(burn), FUNC(burn)] call CBA_fnc_addEventHandler;
+[QGVAR(burn), LINKFUNC(burn)] call CBA_fnc_addEventHandler;
 [QGVAR(playScream), {
     params ["_scream", "_source"];
     // only play sound if enabled in settings

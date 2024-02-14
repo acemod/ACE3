@@ -33,6 +33,6 @@ TRACE_2("setFactionRankIcons",_faction,_icons);
 
 if !(_faction != "" && {_icons isEqualTypeAll ""}) exitWith {false};
 
-GVAR(factionRanks) set [_faction, _icons];
+GVAR(factionRanks) set [toLowerANSI _faction, _icons];
 
 true

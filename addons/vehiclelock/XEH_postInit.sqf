@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
 //Add Event Handlers
-[QGVAR(setupCustomKey), {_this call FUNC(serverSetupCustomKeyEH)}] call CBA_fnc_addEventHandler;
-[QGVAR(setVehicleLock), {_this call FUNC(setVehicleLockEH)}] call CBA_fnc_addEventHandler;
+[QGVAR(setupCustomKey), LINKFUNC(serverSetupCustomKeyEH)] call CBA_fnc_addEventHandler;
+[QGVAR(setVehicleLock), LINKFUNC(setVehicleLockEH)] call CBA_fnc_addEventHandler;
 
 ["CBA_settingsInitialized", {
     TRACE_2("SettingsInitialized eh",GVAR(LockVehicleInventory),GVAR(VehicleStartingLockState));

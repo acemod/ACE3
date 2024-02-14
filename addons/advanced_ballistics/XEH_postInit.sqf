@@ -23,7 +23,7 @@ if (!hasInterface) exitWith {};
     ["ace_firedPlayerNonLocal", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
 
     // Register Perframe Handler
-    [FUNC(handleFirePFH), GVAR(simulationInterval)] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(handleFirePFH), GVAR(simulationInterval)] call CBA_fnc_addPerFrameHandler;
 
     //Add warnings for missing compat PBOs (only if AB is on)
     {

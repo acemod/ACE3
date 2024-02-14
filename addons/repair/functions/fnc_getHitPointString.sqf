@@ -20,7 +20,7 @@
  */
 
 params ["_hitPoint", "_textLocalized", "_textDefault", ["_trackArray", []]];
-_trackArray params [["_trackNames", []], ["_trackStrings", []], ["_trackAmount", []]]
+_trackArray params [["_trackNames", []], ["_trackStrings", []], ["_trackAmount", []]];
 
 private _track = _trackArray isNotEqualTo [];
 

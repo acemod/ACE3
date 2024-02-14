@@ -17,4 +17,4 @@
 
 params [["_faction", "", [""]]];
 
-GVAR(disabledFactions) set [toLower _faction, true];
+GVAR(disabledFactions) set [toLowerANSI _faction, true];

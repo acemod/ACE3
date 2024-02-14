@@ -54,7 +54,7 @@ if (hasInterface) then {
     };
 
     // Register fire event handler
-    ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
     // Only add eh to non local players if dispersion is enabled
     if (GVAR(overheatingDispersion) || {GVAR(showParticleEffectsForEveryone)}) then {
         ["ace_firedPlayerNonLocal", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;

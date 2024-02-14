@@ -3,7 +3,7 @@
 [QGVAR(deployRopes), LINKFUNC(deployRopes)] call CBA_fnc_addEventHandler;
 
 [QGVAR(startFastRope), {
-    [FUNC(fastRopeServerPFH), 0, _this] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(fastRopeServerPFH), 0, _this] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
 // Keybinds

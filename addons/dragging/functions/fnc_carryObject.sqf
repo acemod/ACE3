@@ -67,7 +67,7 @@ if (_UAVCrew isNotEqualTo []) then {
 };
 
 // Check everything
-[FUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // Reset current dragging height
 GVAR(currentHeightChange) = 0;

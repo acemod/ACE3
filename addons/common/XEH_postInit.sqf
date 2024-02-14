@@ -242,7 +242,7 @@ if (!isServer) then {
 ["ACEs", LINKFUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
 
 

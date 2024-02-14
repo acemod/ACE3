@@ -16,7 +16,7 @@
     } forEach _sections;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(unGarrison), FUNC(unGarrison)] call CBA_fnc_addEventHandler;
+[QGVAR(unGarrison), LINKFUNC(unGarrison)] call CBA_fnc_addEventHandler;
 
 [QGVAR(doMove), {
     params ["_unitsArray"];
