@@ -10,7 +10,7 @@
 }] call CBA_fnc_addEventHandler;
 
 ["ace_settingsInitialized", {
-    TRACE_1("settingsInit", GVAR(enabled));
+    TRACE_1("settingsInit",GVAR(enabled));
     if (!GVAR(enabled)) exitWith {};
 
     if (isServer) then {

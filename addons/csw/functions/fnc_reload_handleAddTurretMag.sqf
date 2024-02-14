@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm, PabstMirror
+ * Author: tcvm, PabstMirror
  * Handles adding ammo to a turret
  * Called from a global event but only runs where turret is local
  *
@@ -24,7 +24,7 @@
 params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived", ["_returnTo", _magSource]];
 TRACE_6("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_returnTo);
 
-TRACE_2("",local _vehicle, _vehicle turretLocal _turret);
+TRACE_2("",local _vehicle,_vehicle turretLocal _turret);
 if (!(_vehicle turretLocal _turret)) exitWith {};
 
 ([_vehicle, _turret, _carryMag] call FUNC(reload_canLoadMagazine)) params ["_canAdd", "_loadedMag", "_neededAmmo", "_isBeltLinking"];
@@ -43,10 +43,10 @@ if (_canAdd) then {
 
         // setMagazineTurretAmmo is broken on split locality, use setAmmo for now (this may not work for multi turret vehicles)
         private _weapon = (_vehicle weaponsTurret _turret) param [0, ""];
-        TRACE_3("setAmmo",_vehicle,_weapon, _currentAmmo);
+        TRACE_3("setAmmo",_vehicle,_weapon,_currentAmmo);
         _vehicle setAmmo [_weapon, _currentAmmo];
         private _currentAmmo = _vehicle magazineTurretAmmo [_loadedMag, _turret];
-        if ((_weapon == "") || {_currentAmmo != _currentAmmo}) then { ERROR_1("failed to setAmmo - %1", _this); };
+        if ((_weapon == "") || {_currentAmmo != _currentAmmo}) then { ERROR_1("failed to setAmmo - %1",_this); };
     } else {
         if (_loadedMag != "") then {
             TRACE_1("Removing emtpy mag",_loadedMag);

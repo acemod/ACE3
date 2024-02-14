@@ -28,9 +28,6 @@ exclude = [
     "zeus/functions/fnc_zeusAttributes.sqf",
 ]
 
-[hemtt.config]
-preset = "Hemtt"
-
 [hemtt.launch]
 workshop = [
     "450814997", # CBA_A3

@@ -16,7 +16,7 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
-TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile);
+TRACE_7("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 if ((!GVAR(running))
     || {!GVAR(shutterEffects)}
@@ -55,7 +55,7 @@ _visibleFire = _visibleFireCoef * _visibleFire;
 if (_ammo isKindOf "BulletBase") then {
     _visibleFire = _visibleFire min 5; // Prevent every shot from triggering with HMG
 };
-TRACE_1("final", _visibleFire);
+TRACE_1("final",_visibleFire);
 
 if (_visibleFire <= 1.5) exitWith {};
 if ((random (linearConversion [1, 4, GVAR(nvgGeneration), 10, 20])) > _visibleFire) exitWith {};

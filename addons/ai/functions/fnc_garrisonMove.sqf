@@ -81,13 +81,13 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                         [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;
                     };
 
-                    LOG(format [ARR_2("garrisonMove PFH: unit in position | %1 units left", count _unitMoveList)]);
+                    LOG(format [ARR_2("garrisonMove PFH: unit in position | %1 units left",count _unitMoveList)]);
                 };
 
                 // Check if unit is alive or even existing
                 if (!alive _unit || {_unit getVariable [QGVAR(garrisoned), false]}) then {
                     _unitMoveList deleteAt (_unitMoveList find _x);
-                    LOG(format [ARR_2("garrisonMove PFH: unit dead, deleted or garrisoned via TP | %1 units left", count _unitMoveList)]);
+                    LOG(format [ARR_2("garrisonMove PFH: unit dead, deleted or garrisoned via TP | %1 units left",count _unitMoveList)]);
 
                 } else {
                     private _unitPos = getPos _unit;

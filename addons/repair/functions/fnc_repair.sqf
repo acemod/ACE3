@@ -107,7 +107,7 @@ if !(_return && alive _target) exitWith {false};
 
 //Claim required objects
 {
-    TRACE_2("Claiming", _x, (typeOf _x));
+    TRACE_2("Claiming",_x,(typeOf _x));
     [_caller, _x, false] call EFUNC(common,claim);
 } forEach _claimObjectsAvailable;
 

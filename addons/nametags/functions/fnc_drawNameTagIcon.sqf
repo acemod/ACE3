@@ -21,7 +21,7 @@
  * Public: No
  */
 
-TRACE_1("drawName:", _this);
+TRACE_1("drawName:",_this);
 
 params ["", "_target", "", "_heightOffset"];
 

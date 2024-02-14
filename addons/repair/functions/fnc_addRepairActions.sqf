@@ -23,7 +23,7 @@ if !(hasInterface && {GVAR(enabled)}) exitWith {};
 
 params ["_vehicle"];
 private _type = typeOf _vehicle;
-TRACE_2("addRepairActions", _vehicle,_type);
+TRACE_2("addRepairActions",_vehicle,_type);
 
 // do nothing if the class is already initialized
 private _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);

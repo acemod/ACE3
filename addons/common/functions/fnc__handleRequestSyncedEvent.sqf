@@ -27,7 +27,7 @@ if (isServer) then {
     params ["_eventName", "_client"];
 
     if !(_eventName in GVAR(syncedEvents)) exitWith {
-        ERROR_1("Request for synced event - key [%1] not found.", _eventName);
+        ERROR_1("Request for synced event - key [%1] not found.",_eventName);
         false
     };
 

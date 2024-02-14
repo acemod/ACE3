@@ -27,7 +27,9 @@ params ["_object", "_firer", "_distance", "_weapon", "", "", "_ammo"];
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_distance > 50) exitWith {};
 
-private _vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttenuation)};
+private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (
+    (ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}
+);
 private _distance = 1 max _distance;
 
 private _silencer = switch (_weapon) do {
@@ -78,7 +80,7 @@ if (isNil "_loudness") then {
             if (_ammo isKindOf ["RocketBase", (configFile >> "CfgAmmo")]) exitWith { 200 };
             if (_ammo isKindOf ["MissileBase", (configFile >> "CfgAmmo")]) exitWith { 600 };
             if (_ammo isKindOf ["SubmunitionBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
-            if (_caliber <= 0) then { 6.5 } else { _caliber };
+            [_caliber, 6.5] select (_caliber <= 0)
         };
 
         _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;

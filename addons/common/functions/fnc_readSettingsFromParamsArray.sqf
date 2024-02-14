@@ -32,7 +32,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
 
         // Check if the variable is already defined
         if (isNil _settingName) exitWith {
-            ERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting", _settingName);
+            ERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting",_settingName);
         };
 
         // The setting is not forced, so update the value
@@ -52,7 +52,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
         };
 
         if (!_validValue) exitWith {
-            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_settingType);
+            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]",_settingName,_settingValue,_settingType);
         };
 
         if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {

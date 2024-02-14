@@ -63,6 +63,7 @@ _affected = _affected - [ACE_player];
         if (_flashReactionDebounce < CBA_missionTime) then {
             // Not used interally but could be useful for other mods
             _unit setVariable [QGVAR(flashStrength), _strength, true];
+            [QGVAR(flashbangedAI), [_unit, _strength, _grenadePosASL]] call CBA_fnc_localEvent;
             {
                 _unit setSkill [_x, (_unit skill _x) / 50];
             } forEach SUBSKILLS;
@@ -110,14 +111,14 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     _strength = _strength * _losCoefficient;
 
     // Add ace_hearing ear ringing sound effect
-    if (["ACE_Hearing"] call EFUNC(common,isModLoaded) && {_strength > 0 && {EGVAR(hearing,damageCoefficent) > 0.25}}) then {
+    if (["ace_hearing"] call EFUNC(common,isModLoaded) && {_strength > 0 && {EGVAR(hearing,damageCoefficent) > 0.25}}) then {
         private _earringingStrength = 40 * _strength;
         [_earringingStrength] call EFUNC(hearing,earRinging);
         TRACE_1("Earringing Strength",_earringingStrength);
     };
 
     // add ace_medical pain effect:
-    if (["ACE_Medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1}) then {
+    if (["ace_medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1}) then {
         [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
     };
 
@@ -162,5 +163,7 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     private _maxFlinch = linearConversion [0.2, 1, _strength, 0, 95, true];
     private _flinch    = (_minFlinch + random (_maxFlinch - _minFlinch)) * selectRandom [-1, 1];
     ACE_player setDir (getDir ACE_player + _flinch);
+
+    [QGVAR(flashbangedPlayer), [_strength, _grenadePosASL]] call CBA_fnc_localEvent;
 };
 true
