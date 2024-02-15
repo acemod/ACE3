@@ -66,8 +66,8 @@ if (_spallPower < 2) exitWith {
     TRACE_1("lowImpulse",_ammo);
 };
 
-private _lastVelocityUnit = vectorNormalized _lastVelocity;
-private _deltaStep = _lastVelocityUnit vectorMultiply 0.05;
+private _lastVelocityNorm = vectorNormalized _lastVelocity;
+private _deltaStep = _lastVelocityNorm vectorMultiply 0.05;
 
 if (terrainIntersectASL [_lastPosASL vectorAdd _deltaStep, _lastPosASL]) exitWith {
     TRACE_2("terrainIntersect",_lastPosASL,_deltaStep);
@@ -75,17 +75,17 @@ if (terrainIntersectASL [_lastPosASL vectorAdd _deltaStep, _lastPosASL]) exitWit
 
 #ifdef DEBUG_MODE_DRAW
 if GVAR(dbgSphere) then {
-    [_lastPosASL vectorAdd _lastVelocityUnit, "orange"] call FUNC(dev_sphereDraw);
+    [_lastPosASL vectorAdd _lastVelocityNorm, "orange"] call FUNC(dev_sphereDraw);
     [_lastPosASL, "yellow"] call FUNC(dev_sphereDraw);
 };
 #endif
 
 /*
  * Improve performance of finding otherside of object on shallow angle
- * impacts. 120 degrees due to 90 degree offset with _lastVelocityUnit into object.
+ * impacts. 120 degrees due to 90 degree offset with _lastVelocityNorm into object.
  */
 private _spallPosASL = _lastPosASL vectorAdd _deltaStep;
-if (120 > acos (_lastVelocityUnit vectorDotProduct _surfaceNorm)) then {
+if (120 > acos (_lastVelocityNorm vectorDotProduct _surfaceNorm)) then {
     _spallPosASL = _spallPosASL vectorAdd (_deltaStep vectorMultiply 5);
 };
 private _insideObject = true;
@@ -128,8 +128,8 @@ private _spallSpawner = createVehicle [
     0,
     "CAN_COLLIDE"
 ];
-_spallSpawner setVectorDirandUp [_lastVelocityUnit, _vectorUp];
-_spallSpawner setVelocity (_lastVelocityUnit vectorMultiply (_velocityChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF));
+_spallSpawner setVectorDirandUp [_lastVelocityNorm, _vectorUp];
+_spallSpawner setVelocity (_lastVelocityNorm vectorMultiply (_velocityChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF));
 _spallSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
