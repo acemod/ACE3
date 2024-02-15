@@ -18,7 +18,7 @@
  */
 
 params [
-    "_object",
+    ["_object", objNull, [objNull]],
     ["_color", "blue", ["blue"]],
     ["_isProj", false, [false]]
 ];
@@ -47,7 +47,7 @@ GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray
         if (!alive _object) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
-        
+
         private objectArray = GVAR(dev_trackLines) get (getObjectID _object);
 
         if (isNil "_objectArray") exitWith {

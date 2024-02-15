@@ -21,6 +21,9 @@
  *
  * Public: No
  */
+#define ACE_FRAG_DEFAULT_HEIGHT 0.5
+#define ACE_FRAG_DEFAULT_CROSS_AREA 0.75
+#define ACE_FRAG_MIN_TARGET_AREA 0.5
 
 params [
     "_posASL",
@@ -77,20 +80,25 @@ private _totalFragCount = 0;
     #endif
 
     // Estimate volume and height of target
-    private _height = 0.5;
-    private _crossSectionArea = 1;
+    private _height = ACE_FRAG_DEFAULT_HEIGHT;
+    private _crossSectionArea = ACE_FRAG_DEFAULT_CROSS_AREA;
     private _isPerson = _target isKindOf "CAManBase";
     if (_isPerson) then {
         switch (stance _target) do {
-            case "STAND": {_height = 1.9; _crossSectionArea = 1.5;};
-            case "CROUCH": {_height = 1.2; _crossSectionArea = 1;};
-            default {_crossSectionArea = 0.75;};
+            case "STAND": {
+                _height = 1.9;
+                _crossSectionArea = 1.5;
+            };
+            case "CROUCH": {
+                _height = 1.2;
+                _crossSectionArea = 1;
+            };
         };
     } else {
         private _boxParams = boundingBoxReal [_target, "FireGeometry"];
         _boxParams params ["_pointA", "_pointB"];
         private _dims = _pointB vectorDiff _pointA;
-        if (_dims#0 * _dims#1 * _dims#2 <= 0.5) then {
+        if (_dims#0 * _dims#1 * _dims#2 <= ACE_FRAG_MIN_TARGET_AREA) then {
             continue;
         };
         _crossSectionArea = _dims#1 * _dims#2;
