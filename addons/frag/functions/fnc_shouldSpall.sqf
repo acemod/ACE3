@@ -26,7 +26,7 @@ private _caliber = getNumber (_ammoConfig >> "caliber");
 private _explosive = getNumber (_ammoConfig >> "explosive");
 private _indirectHit = getNumber (_ammoConfig >> "indirectHitRange");
 
-_shouldSpall = _caliber * GVAR(spallIntensity) >= 2.5 || (_explosive >= 0.5 && _explosive * _indirectHit * GVAR(spallIntensity) >= 4);
+_shouldSpall = _caliber * GVAR(spallIntensity) >= 2.5 || (_explosive >= 0.5 && {_explosive * _indirectHit * GVAR(spallIntensity) >= 4});
 
 GVAR(shouldSpallCache) set [_ammo, _shouldSpall];
 
