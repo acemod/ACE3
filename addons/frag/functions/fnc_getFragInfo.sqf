@@ -28,11 +28,11 @@ if (!isNil "_ammoInfo") exitWith {_ammoInfo};
 
 private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
 private _fragTypes = [];
-private _warn = false;
+private _notify = false;
 if (isArray (_ammoConfig >> QGVAR(classes))) then {
     _fragTypes = getArray (_ammoConfig >> QGVAR(classes));
 } else {
-    _warn = true;
+    _notify = true;
 };
 
 /************ Gurney equation notes *****************//*
@@ -58,34 +58,34 @@ if (isArray (_ammoConfig >> QGVAR(classes))) then {
 private _chargeMass = getNumber (_ammoConfig >> QGVAR(CHARGE));
 if (_chargeMass == 0) then {
     _chargeMass = 1;
-    _warn = true;
+    _notify = true;
 };
 
 private _metalMass = getNumber (_ammoConfig >> QGVAR(METAL));
 if (_metalMass == 0) then {
     _metalMass = 2;
-    _warn = true;
+    _notify = true;
 };
 
 private _geometryCoefficient = getNumber (_ammoConfig >> QGVAR(GURNEY_K));
 if (_geometryCoefficient == 0) then {
     _geometryCoefficient = 0.8;
-    _warn = true;
+    _notify = true;
 };
 
 private _gurneyConstant = getNumber (_ammoConfig >> QGVAR(GURNEY_C));
 if (_gurneyConstant == 0) then {
     _gurneyConstant = 2440;
-    _warn = true;
+    _notify = true;
 };
 
 private _fragCount = getNumber (_ammoConfig >> QGVAR(fragCount));
 if (_fragCount == 0) then {
     _fragCount = 400;
-    _warn = true;
+    _notify = true;
 };
 
-if (_warn) then {
+if (_notify) then {
     INFO_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_ammo);
 };
 

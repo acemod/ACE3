@@ -79,25 +79,25 @@ private _printCount = 0;
 
         if (_shoulFrag || _logAll) then {
 
-            private _warn = false;
+            private _print = false;
             private _skip = getNumber (_ammoConfig >> QGVAR(skip));
             private _fragTypes = getArray (_ammoConfig >> QGVAR(classes));
-            if (_fragTypes isEqualTo []) then {_warn = true;};
+            if (_fragTypes isEqualTo []) then {_print = true;};
             private _c = getNumber (_ammoConfig >> QGVAR(charge));
-            if (_c == 0) then {_warn = true;};
+            if (_c == 0) then {_print = true;};
             private _m = getNumber (_ammoConfig >> QGVAR(metal));
-            if (_m == 0) then {_warn = true;};
+            if (_m == 0) then {_print = true;};
             private _k = getNumber (_ammoConfig >> QGVAR(gurney_k));
-            if (_k == 0) then {_warn = true;};
+            if (_k == 0) then {_print = true;};
             private _gC = getNumber (_ammoConfig >> QGVAR(gurney_c));
-            if (_gC == 0) then {_warn = true;};
+            if (_gC == 0) then {_print = true;};
             private _fragCount = getNumber (_ammoConfig >> QGVAR(fragCount));
-            if (_fragCount == 0) then {_fragCount = 200; _warn = true;};
+            if (_fragCount == 0) then {_fragCount = 200; _print = true;};
 
-            if (!_printOnlyIncomplete || {_warn && _skip != 0}) then {
+            if (!_printOnlyIncomplete || {_print && _skip != 0}) then {
                 INC(_printCount);
                 if (_csvFormat) then {
-                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%8", _c, _m, _k, _gC, _skip, _fragCount, _ammo, [_ammoConfig, true] call BIS_fnc_returnParents];
+                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%9,%8", _c, _m, _k, _gC, _skip, _fragCount, _ammo, [_ammoConfig, true] call BIS_fnc_returnParents, _shouldFrag];
                 } else {
                     diag_log text format ["Ammo [%1] MISSING frag configs:", _ammo];
                     diag_log text format ["_c=%1,_m=%2,_k=%3,_gC=%4,_skip=%5,_fragCount=%6,_fragTypes=%7", _c, _m, _k, _gC, _skip, _fragCount, _fragTypes];
