@@ -4,12 +4,13 @@
  * Per frame function to draw all dev traces.
  *
  * Arguments:
- * none
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
+ * call ace_frag_fnc_dev_drawTrace;
  *
  * Public: No
  */
