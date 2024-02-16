@@ -24,7 +24,6 @@ params [
 ];
 TRACE_3("devDraw",_object,_color,_isProj);
 
-
 // pick color and add it to the array
 private _colorArray = switch (toLowerANSI _color) do {
     case "purple": {[0.8, 0, 0.8, 1]};
@@ -49,7 +48,7 @@ GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
-        private objectArray = GVAR(dev_trackLines) get (getObjectID _object);
+        private _objectArray = GVAR(dev_trackLines) get (getObjectID _object);
 
         if (isNil "_objectArray") exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
