@@ -1,4 +1,3 @@
-PREP(addBlackList);
 PREP(dev_addRound);
 PREP(dev_clearTraces);
 PREP(dev_debugAmmo);
@@ -18,7 +17,6 @@ PREP(findReflections);
 PREP(getMaterialInfo);
 PREP(getSpallInfo);
 PREP(getFragInfo);
-PREP(initBlackList);
 PREP(initMaterialCache);
 PREP(initRound);
 PREP(shouldFrag);

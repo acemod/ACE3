@@ -46,17 +46,6 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(blackList),
-    "EDITBOX",
-    [LSTRING(DefBlackList), LSTRING(DefBlackList_Desc)],
-    [_category, LSTRING(Frag)],
-    QUOTE(['B_556x45_Ball']),
-    1,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(spallIntensity),
     "SLIDER",
     [LSTRING(SpallIntensity), LSTRING(SpallIntensity_Desc)],
