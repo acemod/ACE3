@@ -4,9 +4,9 @@
  * This function adds an object to have its course tracked (every frame).
  *
  * Arguments:
- * 0: Object to draw track OBJECT>
- * 1: Color of trace <STRING>
- * 2: Whether the object is a projectile or whether to add projectile EHs <BOOL>
+ * 0: Object to draw track OBJECT> (default: "objNull")
+ * 1: Color of trace <STRING> (default: "blue")
+ * 2: Whether the object is a projectile or whether to add projectile EHs <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -18,11 +18,12 @@
  */
 
 params [
-    ["_object", objNull, [objNull]],
-    ["_color", "blue", ["blue"]],
-    ["_isProj", false, [false]]
+    ["_object", objNull],
+    ["_color", "blue"],
+    ["_isProj", false]
 ];
 TRACE_3("devDraw",_object,_color,_isProj);
+
 
 // pick color and add it to the array
 private _colorArray = switch (toLowerANSI _color) do {
@@ -41,7 +42,7 @@ GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray
 // event handler to track round and cleanup when round is "dead"
 [
     {
-        if (isGamePaused) exitWith {};
+        if (isGamePaused || setAccTime == 0) exitWith {};
         params ["_object", "_handle"];
 
         if (!alive _object) exitWith {

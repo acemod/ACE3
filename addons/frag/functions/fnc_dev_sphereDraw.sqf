@@ -4,22 +4,21 @@
  * Add a colored sphere at a specified point.
  *
  * Arguments:
- * 0: ASL position to add sphere. <ARRAY>
- * 1: Color of sphere. <STRING> (Default: Blue)
+ * 0: Position (posASL) to add sphere <ARRAY>
+ * 1: Color of sphere <STRING> (default: "blue")
  *
  * Return Value:
  * None
  *
  * Example:
- * [getPosASL player, "blue"] call ace_frag_fnc_dev_sphereDraw;
+ * [getPosASL player, "red"] call ace_frag_fnc_dev_sphereDraw;
  *
  * Public: No
  */
 
-params [
-    "_posASL",
-    ["_color", "blue", [""]]
-];
+params ["_posASL", ["_color", "blue"]];
+
+if (!isServer) exitWith {};
 
 if (_color select [0,1] != "(") then {
     _color = switch (toLowerANSI _color) do {

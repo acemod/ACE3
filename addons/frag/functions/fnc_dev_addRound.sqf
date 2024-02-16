@@ -7,10 +7,9 @@
  * green / red / blue, respectively.
  *
  * Arguments:
- * 0: Projectile to be tracked. <OBJECT>
- * 1: Add projectile hit/explode/defelceted event handlers. <BOOL>
- * 2: Is the round fired by a unit on the same side as the player
- *    true results in blue traces, false in red. <BOOL>
+ * 0: Projectile to be tracked <OBJECT>
+ * 1: Add projectile hit/explode/defelceted event handlers <BOOL> (default: true)
+ * 2: Should the round track be blue. True results in blue traces, false in red <BOOL> (default: true)
  *
  * Return Value:
  * Nothing Useful
@@ -24,10 +23,10 @@
 params [
     "_projectile",
     ["_addProjectileEventHandlers", true],
-    ["_isSidePlayer", true]
+    ["_isTraceBlue", true]
 ];
 
-if (_isSidePlayer) then {
+if (_isTraceBlue) then {
     GVAR(dev_trackLines) set [getObjectID _projectile, [[getPosATL _projectile], [0, 0, 1, 1]]];
 } else {
     GVAR(dev_trackLines) set [getObjectID _projectile, [[getPosATL _projectile], [1, 0, 0, 1]]];
@@ -38,17 +37,17 @@ if (_isSidePlayer) then {
     {
         if (isGamePaused) exitWith {};
         params ["_projectile", "_handle"];
-        
+
         if (!alive _projectile) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
-        
+
         private _projectileArray = GVAR(dev_trackLines) get (getObjectID _projectile);
-        
+
         if (isNil "_projectileArray") exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
-        
+
         (_projectileArray#0) pushBack getPosATL _projectile;
     },
     0,

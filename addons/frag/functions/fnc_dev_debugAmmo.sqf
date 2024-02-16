@@ -5,11 +5,11 @@
  * fragments that could be fired from a weapon.
  *
  * Arguments:
- * 0: Log ammo types that wouldn't normally frag. <BOOL> (Default: false)
- * 1: Only print ammo without ACE_frag entries, inherited or otherwise. <BOOL> (Default: true)
+ * 0: Log ammo types that wouldn't normally frag <BOOL> (default: false)
+ * 1: Only print ammo without ACE_frag entries, inherited or otherwise <BOOL> (default: true)
  * 2: Only export ammo classes of classes referenced in CfgMagazines and their
- *    submunitions. <BOOL> (Default: false)
- * 3: Force a CSV format on debug print. <BOOL> (Default: false)
+ *    submunitions <BOOL> (default: false)
+ * 3: Force a CSV format on debug print. <BOOL> (default: false)
  *
  * Return Value:
  * None

@@ -1,12 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Add a hit box outline to an object, outdated for unit hits as they
- * use hit-point locations.
+ * Add a hit box outline to an object.
  *
  * Arguments:
- * 0: Object that should have it's hit box drawn. <OBJECT>
- * 1: Add sphere at object origin. <BOOL> (Default: true)
+ * 0: Object that should have it's hit box drawn <OBJECT> (default: objNull)
+ * 1: Add sphere at object origin <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -18,8 +17,8 @@
  */
 
 params [
-    ["_object", objNull, [objNull]],
-    ["_addSphere", true, [true]]
+    ["_object", objNull],
+    ["_addSphere", true]
 ];
 TRACE_2("Adding hitbox",_object,_addSphere);
 
@@ -46,7 +45,7 @@ switch (stance _object) do {
 };
 private _centerPoint = ASLToAGL getPosASL _object;
 
-if (GVAR(dbgSphere) && {_addSphere && {isNull objectParent _object}}) then {
+if (GVAR(dbgSphere) && _addSphere && {isNull objectParent _object}) then {
     private _centerSphere = [getPosASL _object, "yellow"] call FUNC(dev_sphereDraw);
     _centerSphere disableCollisionWith _object;
     _centerSphere attachTo [_object, _object worldToModel _centerPoint];
@@ -67,9 +66,9 @@ private _points = [
 ];
 
 private _color = switch (side _object) do {
-    case east: {[1, 0, 0, 1]};
-    case resistance: {[0, 1, 0, 1]};
-    default {[0, 0, 1, 1]};
+    case east: {[0.8, 0, 0, 1]};
+    case resistance: {[0, 0.8, 0, 1]};
+    default {[0, 0, 0.8, 1]};
 };
 
 GVAR(dev_hitBoxes) set [getObjectID _object, [_object, _points, _color]];
