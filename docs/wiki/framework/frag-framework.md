@@ -9,7 +9,7 @@ mod: ace
 version:
   major: 3
   minor: 16
-  patch: 0
+  patch: 4
 ---
 
 ## 1. Overview
@@ -39,11 +39,13 @@ class CfgAmmo {
 };
 ```
 
-### 1.1 Metal amount
+### 1.1 Fragment count
 
 `ace_frag_fragCount`
 
-Number of fragments that would be fragmented. This number may be found online or inferred from similar munitions. This affects the to be hit by a fragment and maximum range a fragment may hit a unit. 
+Maximum number of fragments that the real munition would create. Frag count affects the chance to be hit by a fragment and maximum range a fragment may hit a unit. Frag count may be found online, inferred from similar munitions, or derived based on desired hit distance. For a desired distance, the frag count ($$N_{frag}$$) is given by,
+$$N_{frag} = 4\pi\cdot P_{hit,min}\cdot distance_{max}^2 = 0.02\pi\cdot distance_{max}^2$$
+where $$P_{hit,min}$$ is the configured minimum considered chance to hit of 0.5%. Therefore, when calculating frag count for a frag grenade with a wounding radius of 15 meters, calculating for a distancce of 80 meter may be desired instead.
 
 Dimensionless value, count of number of fragments.
 
@@ -53,21 +55,21 @@ Dimensionless value, count of number of fragments.
 
 Amount of metal being fragmented. Generally taken as the entire weight of the warhead, though in some cases you might want to only include the fragmentation jacket or body.
 
-Dimensionless value, as long as same unit as `ace_frag_charge` (for example `kg/kg` or `g/g` or `lbs/lbs`).
+As long as the units match `ace_frag_charge`, the total mass of fragmenting metal given in any unit of mass (i.e., both use `kg`, `g`, or `lbs`).
 
 ### 1.3 Explosives filler amount
 
 `ace_frag_charge`
 
-Amount of explosive filler in the warhead. `ace_frag_metal` and `ace_frag_charge` are dimensionless values, as long as they are both in the same unit (for example kg/kg g/g lbs/lbs).
+Mass of explosive filler in the warhead. This may include any detonation/igntion charges, but usually such charges are relatively small.
 
-Dimensionless value, as long as same unit as `ace_frag_metal` (for example `kg/kg` or `g/g` or `lbs/lbs`).
+As long as the units match `ace_frag_metal`, the total mass of explosive filler given in any unit of mass (i.e., both use `kg`, `g`, or `lbs`).
 
 ### 1.4 Gurney velocity constant
 
 `ace_frag_gurney_c`
 
-Gurney constant for explosive force. You can find a list of common explosive types below. If you can not find it here, or want more accurate numbers, just google the type of explosive and Gurney constant and you can find substantial information. This is **not** the detonation velocity of the explosive, do not confuse them!
+Gurney constant for explosive force. You can find a list of common explosive types below. If you can not find it here, or want more accurate numbers, just google the type of explosive and Gurney constant and you can find substantial information. This is **not** the detonation velocityof the explosive, do not confuse them†!
 
 Type            | Speed
 --------------- | --------
@@ -85,6 +87,8 @@ RDX             | 2830 m/s
 Tetryl          | 2500 m/s
 TNT             | 2440 m/s
 Tritonal        | 2320 m/s
+
+†A rule of thumb from literature is that the Gurney constant is given as 0.338 times the detonation velocity.
 
 ### 1.5 Gurney shape factor
 
@@ -119,7 +123,7 @@ There are different types of fragmentation fragments to choose from, and they ca
 | ACE_frag_huge
 | ACE_frag_huge_HD
 
-The tinier the piece of fragmentation the shorter the distance of travel. The `_HD` variants are all even higher drag versions. Grenades generally should use the `_HD` variants. Experimentation here is important.
+Tinier fragments do less damage, and generally correlate to lower mass fragments. The `_HD` variants are all higher drag versions. Higher drag version are useful for fragments that are irregular or would not fly very far. Experimentation here is important.
 
 ### 1.7 Ignore fragmentation
 
@@ -131,4 +135,4 @@ Setting this to `1` will skip fragmentation for ammo of this type. This is usefu
 
 `ace_frag_force`
 
-Settings this to `1` will force the fragmentation system to use frag on this ammo, ignoring internal qualifications based on hit values.
+Settings this to `1` will force the fragmentation for this ammo type, ignoring internal hit value based qualifications.
