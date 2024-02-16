@@ -95,7 +95,7 @@
             <Czech>Sledovat AI zabité hráči</Czech>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_Description">
-            <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing</English>
+            <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing.</English>
             <Czech>Udává zdali se zabité AI budou ukazovat v kill trackeru v průběhu debriefingu po misi</Czech>
         </Key>
     </Package>
