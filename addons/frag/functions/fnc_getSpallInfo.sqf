@@ -1,17 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function returns spalling parameters for a specific
- * ammo type.
+ * This function returns spalling parameters for a specific ammo type.
  *
  * Arguments:
- * 0: _ammo <STRING> - CfgAmmo type of ammo to check
+ * 0: Ammo classname <STRING>
  *
  * Return Value:
  * _ammoInfo <ARRAY>
- *  0: _caliber - search range for fragments <NUMBER>
- *  1: _explosive - whether the round is explosive or not <NUMBER>
- *  2: _indirectHitRange - Indirect hit damage <NUMBER>
+ *  0: Caliber <NUMBER>
+ *  1: What part of the hit damage is from ballistic vs explosive energy (1 for all explosive) <NUMBER>
+ *  2: Indirect hit damage <NUMBER>
  *
  * Example:
  * ["B_556x45_Ball"] call ace_frag_fnc_getSpallInfo;

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger,
- * This function creates spalling if the hit slowed the speed down enough.
+ * This function creates spalling if the hit slowed the projectile speed down enough.
  *
  * Arguments:
  * Arguments are the same as BI's "HitPart" EH:
@@ -15,24 +15,16 @@
  *
  * Public: No
  */
+#define GLUE(g1,g2) g1##g2
 
 TRACE_1("doSpall",_this);
-params [
-    "_projectile",
-    "_objectHit",
-    "_lastPosASL",
-    "_lastVelocity",
-    "_surfaceNorm",
-    "_surfaceType",
-    "_ammo",
-    "_shotParents",
-    "_vectorUp"
-];
+params ["_projectile", "_objectHit", "_lastPosASL", "_lastVelocity", "_surfaceNorm", "_surfaceType", "_ammo", "_shotParents", "_vectorUp"];
 
-if (CBA_missionTime < GVAR(nextSpallAllowTime)||
-    _lastPosASL isEqualTo [0,0,0] ||
-    {_ammo isEqualTo "" || {!isNull _objectHit &&
-    {objectHit isKindOf "CAManBase"}}}) exitWith {
+if (CBA_missionTime < GVAR(nextSpallAllowTime) ||
+    {isNull _objectHit} ||
+    {_lastPosASL isEqualTo [0,0,0]} ||
+    {_ammo isEqualTo ""} ||
+    {_objectHit isKindOf "CAManBase"}) exitWith {
     TRACE_4("time/invalidHit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
 };
 
@@ -114,15 +106,15 @@ if GVAR(dbgSphere) then {
 
 private _spawnSize = switch (true) do
 {
-    case (_spallPower < 3): { "_spall_tiny" };
-    case (_spallPower < 5): { "_spall_small" };
-    case (_spallPower < 8): { "_spall_medium" };
-    case (_spallPower < 12): { "_spall_large" };
-    default { "_spall_huge" };
+    case (_spallPower < 3): {"_spall_tiny"};
+    case (_spallPower < 5): {"_spall_small"};
+    case (_spallPower < 8): {"_spall_medium"};
+    case (_spallPower < 12): {"_spall_large"} ;
+    default {"_spall_huge"};
 };
 
 private _spallSpawner = createVehicle [
-    "ace_frag_" + _material + _spawnSize,
+    QUOTE(GLUE(ADDON,_)) + _material + _spawnSize,
     ASLToATL _spallPosASL,
     [],
     0,

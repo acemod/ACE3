@@ -1,16 +1,15 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
- * This function creates fragments randomly spreading out from an explosion to
- * a maximum of 15.
+ * This function creates fragments randomly spreading out from an explosion to a maximum of 15.
  *
  * Arguments:
- * 0: Position of fragmenting projectile ASL. <ARRAY>
- * 1: Velocity of the fragmenting projectile. <ARRAY>
- * 2: Height (AGL) of the fragmenting projectile. <NUMBER>
- * 3: Type of fragments to generate. <ARRAY>
- * 4: Remaining fragment budget. <NUMBER>
- * 5: Shot parents. <ARRAY>
+ * 0: Position (posASL) of fragmenting projectile <ARRAY>
+ * 1: Velocity of the fragmenting projectile <ARRAY>
+ * 2: Height (AGL) of the fragmenting projectile <NUMBER>
+ * 3: Type of fragments to generate <ARRAY>
+ * 4: Remaining fragment budget <NUMBER>
+ * 5: Shot parents <ARRAY>
  *
  * Return Value:
  * None
@@ -20,14 +19,7 @@
  *
  * Public: No
  */
-params [
-    "_posASL",
-    "_fragVelocity",
-    "_heightAGL",
-    "_fragType",
-    "_maxFragCount",
-    "_shotParents"
-];
+params ["_posASL", "_fragVelocity", "_heightAGL", "_fragType", "_maxFragCount", "_shotParents"];
 TRACE_6("doFragRandom",_posASL,_fragVelocity,_heightAGL,_fragType,_maxFragCount,_shotParents);
 
 // See CfgAmmoFragSpawner for different frag types

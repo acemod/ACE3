@@ -1,11 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
- * This function handles creating both random and targeted fragments as well
- * as handling some of the performance optimizations.
+ * This function handles creating both random and targeted fragments as well as handling some of the performance optimizations.
  *
  * Arguments:
- * 0: ASL position of projectile. <ARRAY>
+ * 0: Position (posASL) of projectile <ARRAY>
  * 1: Velocity of projectile <ARRAY>
  * 2: Projectile CfgAmmo classname <STRING>
  * 3: getShotParents of projectile at EH <ARRAY>
@@ -19,12 +18,7 @@
  * Public: No
  */
 TRACE_1("begin doFrag",_this);
-params [
-    "_posASL",
-    "_velocity",
-    "_ammo",
-    "_shotParents"
-];
+params ["_posASL", "_velocity", "_ammo", "_shotParents"];
 
 // Don't let a single object cause all fragmentation events
 _shotParents params ["_shotParentVic"];
@@ -35,7 +29,7 @@ _shotParentVic setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_
 
 // Check normal round timeout and adjust _max frags
 private _timeSinceLastFrag = CBA_missionTime - GVAR(lastFragTime);
-if (_timeSinceLastFrag < ACE_FRAG_HOLDOFF || {_posASL isEqualTo [0, 0, 0] || _ammo isEqualTo ""}) exitWith {
+if (_timeSinceLastFrag < ACE_FRAG_HOLDOFF || {_posASL isEqualTo [0, 0, 0]} || {_ammo isEqualTo ""}) exitWith {
     TRACE_3("timeExit",_timeSinceLastFrag,CBA_missionTime,GVAR(lastFragTime));
 };
 private _maxFragCount = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];

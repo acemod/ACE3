@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
- * This function creates fragments targeted at specific entities, up to
- * a configured maximum.
+ * This function creates fragments targeted at specific entities, up to _maxFrags.
  *
  * Arguments:
  * 0: Position of fragmenting projectile ASL <ARRAY>
@@ -25,15 +24,7 @@
 #define ACE_FRAG_DEFAULT_CROSS_AREA 0.75
 #define ACE_FRAG_MIN_TARGET_AREA 0.5
 
-params [
-    "_posASL",
-    "_fragVelocity",
-    "_fragRange",
-    "_maxFrags",
-    "_fragTypes",
-    "_modFragCount",
-    "_shotParents"
-];
+params [ "_posASL", "_fragVelocity", "_fragRange", "_maxFrags", "_fragTypes", "_modFragCount", "_shotParents"];
 TRACE_5("fnc_doFragTargeted",_posASL,_fragRange,_maxFrags,_fragTypes,_modFragCount);
 
 if (_fragTypes isEqualTo []) then {

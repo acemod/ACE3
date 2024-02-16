@@ -19,7 +19,7 @@
 TRACE_1("ACE_Frag rndInit",_this);
 params ["_projectile"];
 
-if !(isServer) exitWith {};
+if (!isServer) exitWith {};
 
 private _ammo = typeOf _projectile;
 if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
@@ -49,15 +49,12 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     _projectile addEventHandler [
         "HitPart",
         {
-            params ["_projectile", "_hitObject", "",
-                "_posASL", "_velocity", "_surfNorm", "",
-                "", "_surfType"
-            ];
+            params ["_projectile", "_hitObject", "", "_posASL", "_velocity", "_surfNorm", "", "", "_surfType"];
             private _shotParent = getShotParents _projectile;
             private _ammo = typeOf _projectile;
             private _vectorUp = vectorUp _projectile;
             /*
-             * Wait a round to see what happens to the round, may result in
+             * Wait a frame to see what happens to the round, may result in
              * multiple hits / slowdowns getting shunted to the first hit
              */
             [

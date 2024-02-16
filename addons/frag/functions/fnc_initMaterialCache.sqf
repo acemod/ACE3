@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * For performance, we load a bunch of vanilla materials preemptively into
- * the spall material cache.
+ * For performance, we load a bunch of vanilla materials preemptively into the spall material cache.
  *
  * Arguments:
  * None
@@ -11,7 +10,7 @@
  * None
  *
  * Example:
- * call initMaterialCache;
+ * call ace_frag_fnc_initMaterialCache;
  *
  * Public: No
  */

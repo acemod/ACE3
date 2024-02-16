@@ -41,7 +41,7 @@ GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray
 // event handler to track round and cleanup when round is "dead"
 [
     {
-        if (isGamePaused || setAccTime == 0) exitWith {};
+        if (isGamePaused || accTime == 0) exitWith {};
         params ["_object", "_handle"];
 
         if (!alive _object) exitWith {

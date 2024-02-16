@@ -1,23 +1,22 @@
 #include "..\script_component.hpp"
-#define ACE_FRAG_SOUNDENVIRON_STR_LEN 12
-#define ACE_FRAG_SOUNDGIT_STR_LEN 8
-#define ACE_FRAG_MATERIAL_SEARCH_LEN 10
 /*
  * Author: Lambda.Tiger
- * This function returns a classification of material type based
- * on the surface hit.
+ * This function returns a classification of material type based on the surface hit.
  *
  * Arguments:
- * 0: surfacetype <STRING> - either a CfgSurfaces path .bisurf filepath
+ * 0: Surface type given as either a CfgSurfaces path or .bisurf filepath, same format as "HitPart" projectile parameter <STRING>
  *
  * Return Value:
- * _material <STRING> - Material categories as expanded on in line 44 below
+ * Material categories as expanded on in line 44 below <STRING>
  *
  * Example:
  * [_surfaceType] call ace_frag_fnc_getFragInfo;
  *
  * Public: No
  */
+#define ACE_FRAG_SOUNDENVIRON_STR_LEN 12
+#define ACE_FRAG_SOUNDGIT_STR_LEN 8
+#define ACE_FRAG_MATERIAL_SEARCH_LEN 10
 
 params ["_surfType"];
 
