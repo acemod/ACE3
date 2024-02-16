@@ -15,9 +15,10 @@
         };
 
         #ifdef DEBUG_MODE_DRAW
-        [QGVAR(dev_clearTraces),LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
+        [QGVAR(dev_clearTraces), LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
 
-        if (!isServer && hasInterface) then {
+        if (!hasInterface) exitWith {};
+        if (!isServer) then {
             ["ace_firedPlayer", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
             ["ace_firedPlayerNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
             ["ace_firedNonPlayer", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
@@ -25,33 +26,31 @@
             ["ace_firedPlayerVehicleNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
             ["ace_firedNonPlayerVehicle", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
         };
-        if (hasInterface) then {
-            GVAR(dev_drawPFEH) = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
-            [
-                "ace_interact_menu_newControllableObject",
-                {
-                    params ["_type"];
+        GVAR(dev_drawPFEH) = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
+        [
+            "ace_interact_menu_newControllableObject",
+            {
+                params ["_type"];
 
-                    private _action = [
-                        QGVAR(debugReset),
-                        "Reset ACE Frag traces",
-                        "",
-                        {
-                            [QGVAR(dev_clearTraces), []] call CBA_fnc_remoteEvent;
-                            call FUNC(dev_clearTraces);
-                        },
-                        {true}
-                    ] call EFUNC(interact_menu,createAction);
-                    [
-                        _type,
-                        1,
-                        ["ACE_SelfActions"],
-                        _action,
-                        true
-                    ] call ace_interact_menu_fnc_addActionToClass;
-                }
-            ] call CBA_fnc_addEventHandler;
-        };
+                private _action = [
+                    QGVAR(debugReset),
+                    "Reset ACE Frag traces",
+                    "",
+                    {
+                        [QGVAR(dev_clearTraces), []] call CBA_fnc_remoteEvent;
+                        call FUNC(dev_clearTraces);
+                    },
+                    {true}
+                ] call EFUNC(interact_menu,createAction);
+                [
+                    _type,
+                    1,
+                    ["ACE_SelfActions"],
+                    _action,
+                    true
+                ] call ace_interact_menu_fnc_addActionToClass;
+            }
+        ] call CBA_fnc_addEventHandler;
         #endif
     }
 ] call CBA_fnc_addEventHandler;
