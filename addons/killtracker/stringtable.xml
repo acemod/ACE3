@@ -91,12 +91,12 @@
             <Turkish>Dost Atışı</Turkish>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_DisplayName">
-            <English>Track kills of AIs</English>
-            <Czech>Sledovat zabití AI</Czech>
+            <English>Track AI units killed by player</English>
+            <Czech>Sledovat AI zabité hráči</Czech>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_Description">
-            <English>Defines if killed AIs will be shown in the KillTracker during mission debriefing</English>
-            <Czech>Udává zdali se zabité AI budou ukazovat v KillTrackeru v průběhu debriefingu po misi</Czech>
+            <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing</English>
+            <Czech>Udává zdali se zabité AI budou ukazovat v kill trackeru v průběhu debriefingu po misi</Czech>
         </Key>
     </Package>
 </Project>

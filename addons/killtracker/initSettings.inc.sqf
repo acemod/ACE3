@@ -4,7 +4,7 @@
     [LSTRING(TrackAI_DisplayName), LSTRING(TrackAI_Description)],
     LSTRING(Category),
     true,
-    true,
+    1,
     {},
-    true
+    false
 ] call CBA_fnc_addSetting;
