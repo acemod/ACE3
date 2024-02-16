@@ -144,12 +144,6 @@
         <Key ID="STR_ACE_Frag_MinFrag_Desc">
             <English>For each unit a fragment could be shot towards, create it. This setting has no effect when "Random fragmentation" is selected.</English>
         </Key>
-        <Key ID="STR_ACE_Frag_DefBlackList">
-            <English>BlackListed Ammo Classnames</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_DefBlackList_Desc">
-            <English>Comma seperated cfgAmmo classnames to always skip. Loaded at mission start.</English>
-        </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity">
             <English>Spalling Intensity</English>
         </Key>

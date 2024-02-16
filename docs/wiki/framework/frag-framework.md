@@ -69,7 +69,7 @@ As long as the units match `ace_frag_metal`, the total mass of explosive filler 
 
 `ace_frag_gurney_c`
 
-The Gurney constant for explosive force. You can find a list of common explosive types below. If you can not find it here, or want more accurate numbers, just google the type of explosive and Gurney constant and you can find substantial information. This is **not** the detonation velocityof the explosive, do not confuse them†!
+The Gurney constant for explosive force. You can find a list of common explosive types below. If you can not find it here, or want more accurate numbers, just google the type of explosive and Gurney constant and you can find substantial information. This is **not** the detonation velocity of the explosive, do not confuse them†!
 
 Type            | Speed
 --------------- | --------
