@@ -15,14 +15,18 @@
         };
 
         #ifdef DEBUG_MODE_DRAW
-        if (isServer) then {
-            [QGVAR(dev_clearTraces),LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
+        [QGVAR(dev_clearTraces),LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
+
+        if (!isServer && hasInterface) then {
+            ["ace_firedPlayer", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
+            ["ace_firedPlayerNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
+            ["ace_firedNonPlayer", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
+            ["ace_firedPlayerVehicle", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
+            ["ace_firedPlayerVehicleNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
+            ["ace_firedNonPlayerVehicle", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
         };
         if (hasInterface) then {
-            GVAR(dev_drawPFEH) = [
-                LINKFUNC(dev_drawTrace),
-                0
-            ] call CBA_fnc_addPerFrameHandler;
+            GVAR(dev_drawPFEH) = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
             [
                 "ace_interact_menu_newControllableObject",
                 {
@@ -33,7 +37,8 @@
                         "Reset ACE Frag traces",
                         "",
                         {
-                            [QGVAR(dev_clearTraces), []] call CBA_fnc_serverEvent;
+                            [QGVAR(dev_clearTraces), []] call CBA_fnc_remoteEvent;
+                            call FUNC(dev_clearTraces);
                         },
                         {true}
                     ] call EFUNC(interact_menu,createAction);
