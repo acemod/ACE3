@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="KillTracker">
+        <Key ID="STR_ACE_KillTracker_Category">
+            <English>ACE Kill Tracker</English>
+            <Czech>ACE Kill Tracker</Czech>
+        </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
             <Japanese>ACE キルトラッカー</Japanese>
@@ -85,6 +89,14 @@
             <Chinesesimp>友军误击</Chinesesimp>
             <Japanese>同士討ち</Japanese>
             <Turkish>Dost Atışı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_TrackAI_DisplayName">
+            <English>Track kills of AIs</English>
+            <Czech>Sledovat zabití AI</Czech>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_TrackAI_Description">
+            <English>Defines if killed AIs will be shown in the KillTracker during mission debriefing</English>
+            <Czech>Udává zdali se zabité AI budou ukazovat v KillTrackeru v průběhu debriefingu po misi</Czech>
         </Key>
     </Package>
 </Project>
