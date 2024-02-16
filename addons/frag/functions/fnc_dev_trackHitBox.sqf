@@ -25,23 +25,23 @@ TRACE_2("Adding hitbox",_object,_addSphere);
 if (isNull _object) exitWith {};
 
 // Grab the right hitBox
-private _box = [];
+private _boundingBox = [];
 if (_object isKindOf "CAManBase") then {
     if (isNull objectParent _object) then {
-        _box = 0 boundingBox _object;
+        _boundingBox = 0 boundingBox _object;
     } else {
-        _box = boundingBoxReal [_object, "Geometry"];
+        _boundingBox = boundingBoxReal [_object, "Geometry"];
     };
 } else {
-    _box = boundingBoxReal [_object, "FireGeometry"];
+    _boundingBox = boundingBoxReal [_object, "FireGeometry"];
 };
-_box params ["_lowP", "_upP"];
+_boundingBox params ["_lowerPoint", "_upperPoint"];
 
 // adjust with stance
 switch (stance _object) do {
-    case "STAND": {_upP set [2, 1.9];};
-    case "CROUCH": {_upP set [2, 1.3];};
-    case "PRONE": {_upP set [2, 0.8];};
+    case "STAND": {_upperPoint set [2, 1.9];};
+    case "CROUCH": {_upperPoint set [2, 1.3];};
+    case "PRONE": {_upperPoint set [2, 0.8];};
 };
 private _centerPoint = ASLToAGL getPosASL _object;
 
@@ -52,17 +52,19 @@ if (GVAR(dbgSphere) && _addSphere && {isNull objectParent _object}) then {
 };
 
 // create an optimized outline
-private _p1 = _upP;
-private _p7 = _lowP;
+_upperPoint params ["_x1","_y1","_z1"];
+_lowerPoint params ["_x2","_y2","_z2"];
+private _p1 = _upperPoint;
+private _p7 = _lowerPoint;
 private _points = [
-    _upP,
-    [_p1#0, _p7#1, _p1#2],
-    [_p7#0, _p7#1, _p1#2],
-    [_p7#0, _p1#1, _p1#2],
-    [_p1#0, _p1#1, _p7#2],
-    [_p1#0, _p7#1, _p7#2],
-    _lowP,
-    [_p7#0, _p1#1, _p7#2]
+    _upperPoint,
+    [_x1, _y2, _z1],
+    [_x2, _y2, _z1],
+    [_x2, _y1, _z1],
+    [_x1, _y1, _z2],
+    [_x1, _y2, _z2],
+    _lowerPoint,
+    [_x2, _y1, _z2]
 ];
 
 private _color = switch (side _object) do {
