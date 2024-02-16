@@ -9,11 +9,11 @@ PREP_RECOMPILE_END;
 GVAR(spallMaterialCache) = createHashMap;
 GVAR(spallInfoCache) = createHashMap;
 GVAR(shouldSpallCache) = createHashMap;
-GVAR(nextSpallAllowTime) = -2;
+GVAR(nextSpallAllowTime) = -1;
 
 GVAR(shouldFragCache) = createHashMap;
 GVAR(fragInfoCache) = createHashMap;
-GVAR(lastFragTime) = -2;
+GVAR(lastFragTime) = -1;
 
 #include "initSettings.inc.sqf"
 
