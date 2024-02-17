@@ -35,7 +35,7 @@ if (_isTraceBlue) then {
 // event handler to track round and cleanup when round is "dead"
 [
     {
-        if (isGamePaused) exitWith {};
+        if (isGamePaused || accTime == 0) exitWith {};
         params ["_projectile", "_handle"];
 
         if (!alive _projectile) exitWith {
