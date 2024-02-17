@@ -54,7 +54,7 @@ GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
-        (objectArray#0) pushBack getPosATL _object;
+        (_objectArray#0) pushBack getPosATL _object;
     },
     0,
     _object
