@@ -21,7 +21,6 @@ TRACE_1("doSpall",_this);
 params ["_projectile", "_objectHit", "_lastPosASL", "_lastVelocity", "_surfaceNorm", "_surfaceType", "_ammo", "_shotParents", "_vectorUp"];
 
 if (CBA_missionTime < GVAR(nextSpallAllowTime) ||
-    {isNull _objectHit} ||
     {_lastPosASL isEqualTo [0,0,0]} ||
     {_ammo isEqualTo ""} ||
     {_objectHit isKindOf "CAManBase"}) exitWith {
