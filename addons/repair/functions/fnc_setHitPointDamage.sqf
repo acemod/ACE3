@@ -23,13 +23,13 @@ params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", false]]
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
 // can't execute all commands if the vehicle isn't local. exit here.
-if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
+if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1",_vehicle);};
 
 // get all hitpoints and selections and damages
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // exit if the hitpoint is not valid
-if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
+if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2",_hitPointIndex,_vehicle);};
 
 // save structural damage and sum of hitpoint damages
 

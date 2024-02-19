@@ -15,3 +15,17 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_SCRIPT(XEH_postInit));
     };
 };
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            killed = QUOTE((_this select 0) call FUNC(handleDeployInterrupt));
+        };
+    };
+};
+
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayMission {
+        ADDON = QUOTE(_this call COMPILE_SCRIPT(XEH_missionDisplayLoad));
+    };
+};

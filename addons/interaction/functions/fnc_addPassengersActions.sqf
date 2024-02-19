@@ -43,7 +43,7 @@ private _icon = "";
 
     _actions pushBack [
         [
-            format ["%1", _unit],
+            str _unit,
             [_unit, true] call EFUNC(common,getName),
             [_icon, "#FFFFFF"],
             {

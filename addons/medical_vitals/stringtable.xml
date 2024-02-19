@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Medical_Vitals">
+        <Key ID="STR_ACE_Medical_Vitals_SubCategory">
+            <English>Vitals</English>
+            <Portuguese>Vitais</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_DisplayName">
+            <English>Enable SpO2 Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_Description">
+            <English>Enables oxygen saturation simulation, providing variable heart rate and oxygen demand based on physical activity and altitude. Required for Airway Management.</English>
+        </Key>
+    </Package>
+</Project>

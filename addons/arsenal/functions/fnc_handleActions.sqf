@@ -15,7 +15,6 @@
  *
  * Public: No
 */
-
 params ["_display", "_control", "_curSel", "_itemCfg"];
 
 GVAR(actionsInfo) = [_control, _curSel, _itemCfg];
@@ -46,13 +45,12 @@ private _groups = (GVAR(actionList) select _panel) select {
 };
 
 private _show = _groups isNotEqualTo [];
-private _ctrl = _display displayCtrl IDC_actionsBox;
-_ctrl ctrlShow _show;
-_ctrl ctrlCommit 0.15;
+private _actionsBoxCtrl = _display displayCtrl IDC_actionsBox;
+_actionsBoxCtrl ctrlShow _show;
+_actionsBoxCtrl ctrlCommit FADE_DELAY;
 
 if (!_show) exitWith {};
 
-private _actionsBoxCtrl = _display displayCtrl IDC_actionsBox;
 private _actionsCurrentPageCtrl = _display displayCtrl IDC_actionsCurrentPage;
 
 private _currentPage = GVAR(currentActionPage);
@@ -79,33 +77,29 @@ private _items = _group select 3 select {
 };
 
 _actionsCurrentPageCtrl ctrlSetText (_group select 1);
-_actionsCurrentPageCtrl ctrlSetFade 0;
 _actionsCurrentPageCtrl ctrlShow true;
 _actionsCurrentPageCtrl ctrlCommit 0;
 
+private _activeCtrls = [];
 {
     _x params ["", "_type", "_label", "_statement"];
 
-    private _idc = 9001 + _forEachIndex * 2;
-    private _actionTextCtrl = _display displayCtrl _idc;
-    private _actionButtonCtrl = _display displayCtrl (_idc + 1);
+    private _idc = IDC_actionsText1 + _type + _forEachIndex * 2;
+    private _actionCtrl = _display displayCtrl _idc;
 
     switch (_type) do {
         case ACTION_TYPE_BUTTON: {
-            _actionButtonCtrl ctrlRemoveAllEventHandlers "ButtonClick";
-            _actionButtonCtrl ctrlAddEventHandler ["ButtonClick", {
+            _actionCtrl ctrlRemoveAllEventHandlers "ButtonClick";
+            _actionCtrl ctrlAddEventHandler ["ButtonClick", {
                 if (is3DEN) exitWith {[true] call FUNC(refresh)};
                 [{
                     [true] call FUNC(refresh);
                 }] call CBA_fnc_execNextFrame;
             }];
-            _actionButtonCtrl ctrlAddEventHandler ["ButtonClick", _statement];
-            _actionButtonCtrl ctrlSetText _label;
-            _actionButtonCtrl ctrlSetFade 0;
-            _actionButtonCtrl ctrlEnable true;
-            _actionButtonCtrl ctrlCommit 0;
-            _actionTextCtrl ctrlSetFade 1;
-            _actionTextCtrl ctrlCommit 0;
+
+            _actionCtrl ctrlAddEventHandler ["ButtonClick", _statement];
+            _actionCtrl ctrlSetText _label;
+            _actionCtrl ctrlEnable true;
         };
         case ACTION_TYPE_TEXT: {
             private _text = call _statement;
@@ -113,38 +107,43 @@ _actionsCurrentPageCtrl ctrlCommit 0;
             if (isNil "_text") then {
                 _text = "";
             };
+            if (_text isEqualType []) then {
+                _text = _text joinString endl;
+            };
 
-            _actionTextCtrl ctrlSetText _text;
-            _actionTextCtrl ctrlSetFade 0;
-            _actionTextCtrl ctrlCommit 0;
-            _actionButtonCtrl ctrlSetFade 1;
-            _actionButtonCtrl ctrlEnable false;
-            _actionButtonCtrl ctrlCommit 0;
-        };
-        default {
-            _actionTextCtrl ctrlSetFade 1;
-            _actionTextCtrl ctrlCommit 0;
-            _actionButtonCtrl ctrlSetFade 1;
-            _actionButtonCtrl ctrlEnable false;
-            _actionButtonCtrl ctrlCommit 0;
+            _actionCtrl ctrlSetText _text;
+            _actionCtrl ctrlSetPositionH (ctrlTextHeight _actionCtrl);
+            _actionCtrl ctrlEnable false;
         };
     };
+
+    if (_activeCtrls isNotEqualTo []) then {
+        (ctrlPosition (_activeCtrls select -1)) params ["", "_lastPosY", "", "_lastPosH"];
+        _actionCtrl ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H);
+    } else {
+        _actionCtrl ctrlSetPositionY ((5 + _type) * GRID_H);
+    };
+
+    _actionCtrl ctrlShow true;
+    _actionCtrl ctrlCommit 0;
+    _activeCtrls pushBack _actionCtrl;
 } forEach _items;
 
-private _actionCount = count _items;
-
 {
-    private _idc = 9001 + _x * 2;
-    private _actionTextCtrl = _display displayCtrl _idc;
-    private _actionButtonCtrl = _display displayCtrl (_idc + 1);
+    private _idc = ctrlIDC _x;
+    if (_idc < IDC_actionsText1 || _idc > IDC_actionsButton5) then {continue};
 
-    _actionTextCtrl ctrlSetFade 1;
-    _actionTextCtrl ctrlCommit 0;
-    _actionButtonCtrl ctrlSetFade 1;
-    _actionButtonCtrl ctrlCommit 0;
-} forEach ([0, 1, 2, 3, 4] select [_actionCount, 5]);
+    _x ctrlShow false;
+    _x ctrlEnable false;
+    _x ctrlSetPositionY 0;
+    _x ctrlCommit 0;
+} forEach ((allControls _actionsBoxCtrl) select {!(_x in _activeCtrls)});
 
-private _pos = ctrlPosition _actionsBoxCtrl;
-_pos set [3, ([11, (5 * _actionCount) + 6] select (_actionCount > 0)) * GRID_H];
-_actionsBoxCtrl ctrlSetPosition _pos;
+(ctrlPosition (_activeCtrls select -1)) params ["", "_lastPosY", "", "_lastPosH"];
+private _actionsBoxHeight = _lastPosY + _lastPosH + GRID_H;
+_actionsBoxCtrl ctrlSetPositionH _actionsBoxHeight;
 _actionsBoxCtrl ctrlCommit 0;
+
+private _background = _display displayCtrl IDC_actionsBackground1;
+_background ctrlSetPositionH _actionsBoxHeight;
+_background ctrlCommit 0;
