@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * 
+ * Returns magnetic heading (0..360)
  *
  * Arguments:
  * 0: Object or Bearing <OBJECT><NUMBER>
@@ -17,5 +17,7 @@
 
 params [["_source", ace_player, [objNull, 0]]];
 
-(missionNamespace getVariable [QGVAR(magneticDeclinationOffset), 0]) + 
-(if (_source isEqualType 0) then { _source } else { getDir _source })
+[
+    (if (_source isEqualType 0) then { _source } else { getDir _source })
+    + (missionNamespace getVariable [QGVAR(magneticDeclinationOffset), 0])
+] call CBA_fnc_simplifyAngle;

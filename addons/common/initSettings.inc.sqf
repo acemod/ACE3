@@ -104,7 +104,7 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
 [
     QGVAR(magneticDeclination),
     "CHECKBOX",
-    ["mag test"], // [LSTRING(magneticDeclination), LSTRING(magneticDeclinationooltip)],
+    [LSTRING(magneticDeclination), LSTRING(magneticDeclinationooltip)],
     format ["ACE %1", localize LSTRING(DisplayName)],
     false,
     true,
