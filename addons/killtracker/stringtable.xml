@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_KillTracker_Category">
             <English>ACE Kill Tracker</English>
             <Czech>ACE Kill Tracker</Czech>
+            <Russian>ACE Отслеживание убийств</Russian>
         </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
@@ -93,10 +94,12 @@
         <Key ID="STR_ACE_KillTracker_TrackAI_DisplayName">
             <English>Track AI units killed by player</English>
             <Czech>Sledovat AI zabité hráči</Czech>
+            <Russian>Отслеживание юнитов ИИ, убитых игроком</Russian>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_Description">
             <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing.</English>
             <Czech>Udává zdali se zabité AI budou ukazovat v kill trackeru v průběhu debriefingu po misi.</Czech>
+            <Russian>Определяет, убит ИИ, как будет показано в трекере убийств во время разбора миссии.</Russian>
         </Key>
     </Package>
 </Project>
