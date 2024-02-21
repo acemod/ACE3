@@ -137,6 +137,7 @@
             <Japanese>ベルトがリンクされた</Japanese>
             <Polish>Taśma została połączona</Polish>
             <Korean>탄띠가 연결되었습니다</Korean>
+            <Russian>Ремень был пристегнут</Russian>
         </Key>
         <Key ID="STR_ACE_Reload_BeltNotLinked">
             <English>Belt could not be linked</English>
@@ -146,6 +147,7 @@
             <Japanese>ベルトはリンクされなかった</Japanese>
             <Polish>Taśma nie mogła być połączona</Polish>
             <Korean>탄띠를 연결할 수 없습니다</Korean>
+            <Russian>Ремень не удалось пристегнуть</Russian>
         </Key>
     </Package>
 </Project>

@@ -383,6 +383,7 @@
             <Italian>Marcatore identificativo sui veicoli</Italian>
             <Korean>차량 ID 마킹</Korean>
             <French>Marquage ID des véhicules</French>
+            <Russian>Идентификационная маркировка транспортного средства</Russian>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
             <English>Replaces clan tag with stenciled text</English>
@@ -392,6 +393,7 @@
             <Italian>Sostituisce l'icona del clan con testo in stampatello</Italian>
             <Korean>클랜 태그를 스텐실 텍스트로 바꿉니다.</Korean>
             <French>Remplace le tag du clan par un texte au pochoir</French>
+            <Russian>Заменяет тег клана трафаретным текстом</Russian>
         </Key>
     </Package>
 </Project>

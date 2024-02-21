@@ -1320,6 +1320,7 @@
             <Italian>Scarica dal carico</Italian>
             <Japanese>貨物室から降ろす</Japanese>
             <Korean>화물 내리기</Korean>
+            <Russian>Выгрузить из отсека</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
@@ -1964,6 +1965,7 @@
             <Italian>Il Menù Medico è disabilitato</Italian>
             <Japanese>医療メニューは無効になっています</Japanese>
             <Korean>의료 메뉴가 비활성화되었습니다</Korean>
+            <Russian>Медицинское меню отключено</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
@@ -1973,6 +1975,7 @@
             <German>Grabenlinie legen</German>
             <Italian>Piazza Trincea</Italian>
             <Japanese>塹壕溝線を敷設</Japanese>
+            <Russian>Проложить траншею</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
@@ -1982,6 +1985,7 @@
             <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
             <Italian>+SHIFT per forzare (Può piazzare solo N/S o E/O</Italian>
             <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
+            <Russian>+SHIFT на принудительное (может укладываться только на Север/Юг или Восток/Запад)</Russian>
         </Key>
     </Package>
 </Project>

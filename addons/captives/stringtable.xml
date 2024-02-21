@@ -145,6 +145,7 @@
             <Polish>Załóż opaskę na oczy</Polish>
             <Korean>포로 눈 가리기</Korean>
             <Japanese>目隠しをする</Japanese>
+            <Russian>Завязать глаза пленному</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_RemoveBlindfoldCaptive">
             <English>Remove blindfold</English>
@@ -154,6 +155,7 @@
             <Polish>Zdejmij opaskę z oczu</Polish>
             <Korean>눈가리개 풀기</Korean>
             <Japanese>目隠しを外す</Japanese>
+            <Russian>Снять повязку с глаз</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>

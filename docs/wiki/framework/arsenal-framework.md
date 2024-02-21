@@ -511,6 +511,7 @@ All are local.
 | ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+| ace_arsenal_loadoutVerified | loadout data (ARRAY), loadout CBA extended data (HASHMAP), null items (ARRAY), unavailable items (ARRAY), unavailable extended data (ARRAY) | 3.17.0 |
 | ace_arsenal_weaponItemChanged | weapon classname (STRING), item classname (STRING), item index (NUMBER, 0-5: muzzle, side, optic, bipod, magazine, underbarrel) | 3.16.0 |
 
 ## 9. Custom sub item categories
