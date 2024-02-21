@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Per frame function to draw all dev traces.
+ * This function draws all development traces and is intended to be called on each frame.
  *
  * Arguments:
  * None

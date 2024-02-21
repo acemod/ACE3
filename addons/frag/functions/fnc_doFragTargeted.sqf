@@ -37,7 +37,7 @@ if (_fragTypes isEqualTo []) then {
     ];
 };
 
-// Post 2.18 change - uncomment line 47, remove line 49, 56-62, 70-72, and change lines 64 & 170 from _targetse to _objects
+// Post 2.18 change - uncomment line 41, remove line 43, 50-55, 63-65, and change lines 57 & 168 from _targetse to _objects
 // private _objects = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange ] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
 
 private _objects = (ASLToATL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
@@ -52,7 +52,6 @@ private _targets = [];
     private _crew = crew _x;
     _crew pushBackUnique _x;
     _targets append _crew;
-
 } forEach _objects;
 
 TRACE_3("Targets found",_posASL,_fragRange,count _targets);
