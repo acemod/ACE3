@@ -35,6 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_deployObject">
             <English>Deploy</English>
+            <Russian>Разместить</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_ScrollAction">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
@@ -278,11 +279,13 @@
             <English>Loading %1 into %2...</English>
             <Spanish>Cargando %1 en %2...</Spanish>
             <Japanese>%1 を %2 に積み込んでいます・・・</Japanese>
+            <Russian>Загружаем %1 в %2...</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading %1 from %2...</English>
             <Spanish>Descargando %1 de %2...</Spanish>
             <Japanese>%1 を %2 から降ろしています・・・</Japanese>
+            <Russian>Выгружаем %1 из %2...</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -323,6 +326,7 @@
             <French>Ne peut pas être déchargé</French>
             <Japanese>荷降ろし不可能です</Japanese>
             <Korean>하역할 수가 없습니다</Korean>
+            <Russian>Не может быть выгружен</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
@@ -331,6 +335,7 @@
             <French>Encombrement fret: %1</French>
             <Japanese>貨物のサイズ: %1</Japanese>
             <Korean>화물 크기: %1</Korean>
+            <Russian>Размер груза: %1</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
@@ -564,9 +569,11 @@
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy">
             <English>Enable deploy</English>
+            <Russian>Включить размещение</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy_description">
             <English>Controls whether cargo items can be unloaded via the deploy method.</English>
+            <Russian>Определяет, можно ли выгружать грузы с помощью метода размещения.</Russian>
         </Key>
     </Package>
 </Project>
