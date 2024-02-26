@@ -1,4 +1,3 @@
-class BulletBase;
 class SubmunitionBase;
 class BulletCore;
 class SPE_Bullet_Vehicle_base;
