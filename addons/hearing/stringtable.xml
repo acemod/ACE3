@@ -364,7 +364,7 @@
             <Korean>기절 시 볼륨입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Hearing_PutOrRemoveEarplugs">
-            <English>Puts/takes out earplugs</English>
+            <English>Put/take out earplugs</English>
         </Key>
     </Package>
 </Project>
