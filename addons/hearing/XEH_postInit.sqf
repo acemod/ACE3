@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.inc.sqf"
-
 if (!hasInterface) exitWith {};
+
+#include "initKeybinds.inc.sqf"
 
 GVAR(cacheAmmoLoudness) = call CBA_fnc_createNamespace;
 
