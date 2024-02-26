@@ -1,5 +1,3 @@
-class SubmunitionBase;
-class BulletCore;
 class SPE_Bullet_Vehicle_base;
 
 class SPE_B_127x99_Mixed: SubmunitionBase {
