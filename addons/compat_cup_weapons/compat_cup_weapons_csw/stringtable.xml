@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_CUP_Weapons_CSW">
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_AGS30_displayName">
+            <English>[CSW] AGS30 Belt</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_MK19_displayName">
+            <English>[CSW] MK19 Belt</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW_displayName">
+            <English>[CSW] TOW Tube</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW2_displayName">
+            <English>[CSW] TOW2 Tube</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_PG9_displayName">
+            <English>[CSW] PG-9 Round</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_OG9_displayName">
+            <English>[CSW] OG-9 Round</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M1HE_displayName">
+            <English>[CSW] M1 HE</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M84Smoke_displayName">
+            <English>[CSW] M84 Smoke</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M60A2_displayName">
+            <English>[CSW] M60A2 WP</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M67AT_displayName">
+            <English>[CSW] M67 AT Laser Guided</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M314Illum_displayName">
+            <English>[CSW] M314 Illumination</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_3OF56_displayName">
+            <English>[CSW] 3OF56 HE</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_3OF69M_displayName">
+            <English>[CSW] 3OF69M Laser Guided</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmWP_displayName">
+            <English>[CSW] 122mm WP</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmSmoke_displayName">
+            <English>[CSW] D-462 Smoke</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmIllum_displayName">
+            <English>[CSW] S-463 Illumination</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmAT_displayName">
+            <English>[CSW] BK-6M HEAT</English>
+        </Key>
+    </Package>
+</Project>
