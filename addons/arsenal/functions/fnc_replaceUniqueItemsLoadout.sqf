@@ -73,6 +73,10 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 
                 if (_uniqueBaseCfgText != "") then {
                     (_x select 0) set [0, _uniqueBaseCfgText];
+                } else {
+                    if (_forEachIndex == IDX_LOADOUT_BACKPACK) then {
+                        (_x select 0) set [0, [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass];
+                    };
                 };
 
                 // Check if container has items that need replacing with a defined base
