@@ -564,6 +564,7 @@ class GVAR(display) {
             colorSelect[] = {1,1,1,1};
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
+            colorTextRight[] = {0.5, 0.5, 0.5, 0};
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
             onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
@@ -594,6 +595,7 @@ class GVAR(display) {
             colorSelect[] = {1,1,1,1};
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
+            colorTextRight[] = {0.5, 0.5, 0.5, 0};
             columns[] = {0.07, 0.15, 0.75};
             idcLeft = IDC_arrowMinus;
             idcRIght = IDC_arrowPlus;
