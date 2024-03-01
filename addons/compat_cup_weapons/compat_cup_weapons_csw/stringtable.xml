@@ -3,11 +3,11 @@
     <Package name="Compat_CUP_Weapons_CSW">
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_AGS30_displayName">
             <English>[CSW] AGS30 Belt</English>
-            <Japanese>[CSW] AGS30 弾帯</Japanese>
+            <Japanese>[CSW] AGS30 ベルト</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_MK19_displayName">
             <English>[CSW] MK19 Belt</English>
-            <Japanese>[CSW] Mk19 弾帯</Japanese>
+            <Japanese>[CSW] Mk19 ベルト</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW_displayName">
             <English>[CSW] TOW Tube</English>
