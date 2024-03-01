@@ -94,7 +94,7 @@
             <German>Standardzünder</German>
             <Italian>Detonatore Attivo</Italian>
             <Russian>Активный детонатор</Russian>
-            <Japanese>選択済みの点火装置</Japanese>
+            <Japanese>選択中の点火装置</Japanese>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>

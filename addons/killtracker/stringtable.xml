@@ -102,7 +102,7 @@
             <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing.</English>
             <Czech>Udává zdali se zabité AI budou ukazovat v kill trackeru v průběhu debriefingu po misi.</Czech>
             <Russian>Определяет, убит ИИ, как будет показано в трекере убийств во время разбора миссии.</Russian>
-            <Japanese>ミッションデブリーフィングのキルトラッカーにで殺害されたAIが表示されるかどうかを定義します。</Japanese>
+            <Japanese>ミッションデブリーフィングのキルトラッカーに殺害されたAIが表示されるかどうかを定義します。</Japanese>
         </Key>
     </Package>
 </Project>
