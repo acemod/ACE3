@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+
 #define GLUE(g1,g2) g1##g2
 
 TRACE_1("doSpall",_this);

@@ -1,4 +1,4 @@
-private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
+private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
 
 [
     QGVAR(debugOptions),

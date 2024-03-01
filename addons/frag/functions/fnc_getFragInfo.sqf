@@ -54,25 +54,25 @@ if (isArray (_ammoConfig >> QGVAR(classes))) then {
  * or 0.8 * _gurneyConstant * sqrt (_chargeMass /(_metalMass + _chargeMass * _geometryCoefficient)); (slightly faster to compute)
  */
 
-private _chargeMass = getNumber (_ammoConfig >> QGVAR(CHARGE));
+private _chargeMass = getNumber (_ammoConfig >> QGVAR(charge));
 if (_chargeMass == 0) then {
     _chargeMass = 1;
     _notifyMissingEntries = true;
 };
 
-private _metalMass = getNumber (_ammoConfig >> QGVAR(METAL));
+private _metalMass = getNumber (_ammoConfig >> QGVAR(metal));
 if (_metalMass == 0) then {
     _metalMass = 2;
     _notifyMissingEntries = true;
 };
 
-private _geometryCoefficient = getNumber (_ammoConfig >> QGVAR(GURNEY_K));
+private _geometryCoefficient = getNumber (_ammoConfig >> QGVAR(gurney_k));
 if (_geometryCoefficient == 0) then {
     _geometryCoefficient = 0.8;
     _notifyMissingEntries = true;
 };
 
-private _gurneyConstant = getNumber (_ammoConfig >> QGVAR(GURNEY_C));
+private _gurneyConstant = getNumber (_ammoConfig >> QGVAR(gurney_c));
 if (_gurneyConstant == 0) then {
     _gurneyConstant = 2440;
     _notifyMissingEntries = true;

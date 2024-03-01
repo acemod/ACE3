@@ -4,7 +4,7 @@
  * This function adds an object to have its course tracked (every frame).
  *
  * Arguments:
- * 0: Object to draw track OBJECT> (default: "objNull")
+ * 0: Object to draw track <OBJECT> (default: objNull)
  * 1: Color of trace <STRING> (default: "blue")
  * 2: Whether the object is a projectile or whether to add projectile EHs <BOOL> (default: false)
  *

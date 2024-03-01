@@ -10,10 +10,11 @@
  * Material categories as expanded on in line 44 below <STRING>
  *
  * Example:
- * [_surfaceType] call ace_frag_fnc_getFragInfo;
+ * [_surfaceType] call ace_frag_fnc_getMaterialInfo;
  *
  * Public: No
  */
+
 #define ACE_FRAG_SOUNDENVIRON_STR_LEN 12
 #define ACE_FRAG_SOUNDGIT_STR_LEN 8
 #define ACE_FRAG_MATERIAL_SEARCH_LEN 10
