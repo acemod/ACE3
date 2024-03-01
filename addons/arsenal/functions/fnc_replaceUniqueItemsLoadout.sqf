@@ -72,10 +72,10 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                 _uniqueBaseCfgText = (getText ([_cfgWeapons, _cfgVehicles] select (_forEachIndex == IDX_LOADOUT_BACKPACK) >> _containerClass >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
 
                 if (_uniqueBaseCfgText != "") then {
-                    (_x select 0) set [0, _uniqueBaseCfgText];
+                    _x set [0, _uniqueBaseCfgText];
                 } else {
                     if (_forEachIndex == IDX_LOADOUT_BACKPACK) then {
-                        (_x select 0) set [0, [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass];
+                        _x set [0, [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass];
                     };
                 };
 
