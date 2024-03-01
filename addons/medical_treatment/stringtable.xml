@@ -4977,18 +4977,22 @@
         <Key ID="STR_ACE_Medical_Treatment_Administer_Painkillers">
             <English>Administer Painkillers</English>
             <Russian>Вводите обезболивающие</Russian>
+            <Japanese>鎮痛剤を投与</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
             <Russian>Ввод обезболивающего...</Russian>
+            <Japanese>鎮痛剤を投与しています・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
             <Russian>Безрецептурный анальгетик, используемый для борьбы с легкими и умеренными болевыми ощущениями.</Russian>
+            <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
             <Russian>Безрецептурный анальгетик, используемый для борьбы с легкими и умеренными болевыми ощущениями.</Russian>
+            <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
         </Key>
     </Package>
 </Project>
