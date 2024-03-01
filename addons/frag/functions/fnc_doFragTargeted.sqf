@@ -20,6 +20,7 @@
  *
  * Public: No
  */
+
 #define ACE_FRAG_DEFAULT_HEIGHT 0.5
 #define ACE_FRAG_DEFAULT_CROSS_AREA 0.75
 #define ACE_FRAG_MIN_TARGET_AREA 0.5
@@ -37,10 +38,10 @@ if (_fragTypes isEqualTo []) then {
     ];
 };
 
-// Post 2.18 change - uncomment line 41, remove line 43, 50-55, 63-65, and change lines 57 & 168 from _targetse to _objects
-// private _objects = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange ] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
+// Post 2.18 change - uncomment line 41, remove line 43, 50-55, 64-66, and change lines 57 & 169 from _targets to _objects
+// private _objects = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
 
-private _objects = (ASLToATL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
+private _objects = (ASLToAGL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_posASL,_fragRange);
     0
@@ -60,7 +61,8 @@ TRACE_3("Targets found",_posASL,_fragRange,count _targets);
 private _fragArcs = createHashMap;
 private _totalFragCount = 0;
 { // Begin of forEach iterating on _targets
-    if (!alive _x) then {
+    // Ignore dead units, curators and spectators
+    if (!alive _x || {getNumber ((configOf _x) >> "isPlayableLogic") == 1}) then {
         continue;
     };
     private _target = _x;
