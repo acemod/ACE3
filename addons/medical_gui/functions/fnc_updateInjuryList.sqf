@@ -89,14 +89,14 @@ private _plasma = 0;
     _totalIvVolume = _totalIvVolume + _volumeRemaining;
 } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
-if (_totalIvVolume >= 1) then {
-    if (_saline > 1) then {
+if (_totalIvVolume > 0) then {
+    if (_saline > 0) then {
         _entries pushBack [format [localize ELSTRING(medical_treatment,receivingSalineIvVolume), floor _saline], [1, 1, 1, 1]];
     };
-    if (_blood > 1) then {
+    if (_blood > 0) then {
         _entries pushBack [format [localize ELSTRING(medical_treatment,receivingBloodIvVolume), floor _blood], [1, 1, 1, 1]];
     };
-    if (_plasma > 1) then {
+    if (_plasma > 0) then {
         _entries pushBack [format [localize ELSTRING(medical_treatment,receivingPlamsaIvVolume), floor _plasma], [1, 1, 1, 1]];
     };
 } else {
