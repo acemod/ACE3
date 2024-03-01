@@ -42,12 +42,31 @@ private _vehicle = [_patientVehicle, _medicVehicle] select (!isNull _medicVehicl
 
 if (!isNull _vehicle) then {
     _vehicleCount = 0;
-    (getItemCargo _vehicle) params ["_itemTypes", "_itemCounts"];
+    private _magazineItems = [];
+    private _itemItems = [];
     {
-        private _item = _x;
-        private _index = _itemTypes find _item;
-        _vehicleCount = _vehicleCount + (_itemCounts param [_index, 0]);
+        if ((_x call BIS_fnc_itemType) select 0 isEqualTo "Magazine") then {
+            _magazineItems pushBack _x;
+        } else {
+            _itemItems pushBack _x;
+        };
     } forEach _items;
+    if (_magazineItems isNotEqualTo []) then {
+        (getMagazineCargo _vehicle) params ["_itemTypes", "_itemCounts"];
+        {
+            private _item = _x;
+            private _index = _itemTypes find _item;
+            _vehicleCount = _vehicleCount + (_itemCounts param [_index, 0]);
+        } forEach _magazineItems;
+    };
+    if (_itemItems isNotEqualTo []) then {
+        (getItemCargo _vehicle) params ["_itemTypes", "_itemCounts"];
+        {
+            private _item = _x;
+            private _index = _itemTypes find _item;
+            _vehicleCount = _vehicleCount + (_itemCounts param [_index, 0]);
+        } forEach _itemItems;
+    };
 };
 
 [_medicCount, _patientCount, _vehicleCount]
