@@ -1357,6 +1357,21 @@
             <Spanish>Mostrar la pérdida de sangre cualitativa en la lista de heridas.</Spanish>
             <French>Afficher la quantité de sang perdue</French>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_showBleeding_DisplayName">
+            <English>Show Bleeding State</English>
+            <Spanish>Mostrar estado de sangrado</Spanish>
+            <German>Blutungsstatus anzeigen</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_showBleeding_Description">
+            <English>Display if the patient is bleeding, optionally with rate</English>
+            <Spanish>Mostrar si el paciente está sangrando, opcionalmente con tasa</Spanish>
+            <German>Zeigt an, dass der Patient blutet, optional mit Rate</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_ShowBleeding_Rate">
+            <English>Show Bleeding Rate</English>
+            <Spanish>Mostrar tasa de sangrado</Spanish>
+            <German>Blutungsrate anzeigen</German>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
             <English>Peek Medical Info on Hit</English>
             <Polish>Podgląd Informacji Medycznych po Zranieniu</Polish>
