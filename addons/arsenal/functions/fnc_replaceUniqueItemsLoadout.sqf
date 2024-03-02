@@ -25,7 +25,6 @@ if (count _loadout == 2) then {
 
 if (count _loadout != 10) exitWith {[]};
 
-private _weapon = "";
 private _weaponsInfo = [];
 private _uniqueBaseCfgText = "";
 private _cfgWeapons = configFile >> "CfgWeapons";
@@ -43,7 +42,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 
             // Check weapon & weapon attachments
             {
-                // Magazines
+                // Magazines in weapons have 2 entries: Name and ammo count
                 if (_forEachIndex in [4, 5]) then {
                     _x params [["_magazine", ""], "_count"];
 
@@ -69,13 +68,27 @@ private _cfgVehicles = configFile >> "CfgVehicles";
             _x params [["_containerClass", ""], ["_items", []]];
 
             if (_containerClass != "") then {
-                _uniqueBaseCfgText = (getText ([_cfgWeapons, _cfgVehicles] select (_forEachIndex == IDX_LOADOUT_BACKPACK) >> _containerClass >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+                if (_forEachIndex == IDX_LOADOUT_BACKPACK) then {
+                    // Check for non-preset first
+                    _uniqueBaseCfgText = [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
 
-                if (_uniqueBaseCfgText != "") then {
-                    _x set [0, _uniqueBaseCfgText];
+                    if (_uniqueBaseCfgText != "") then {
+                        _containerClass = _uniqueBaseCfgText;
+                    };
+
+                    // Check if non-preset backpack has a unique base
+                    _uniqueBaseCfgText = (getText (_cfgVehicles >> _containerClass >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+
+                    if (_uniqueBaseCfgText != "") then {
+                        _containerClass = _uniqueBaseCfgText;
+                    };
+
+                    _x set [0, _containerClass];
                 } else {
-                    if (_forEachIndex == IDX_LOADOUT_BACKPACK) then {
-                        _x set [0, [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass];
+                    _uniqueBaseCfgText = (getText (_cfgWeapons >> _containerClass >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+
+                    if (_uniqueBaseCfgText != "") then {
+                        _x set [0, _uniqueBaseCfgText];
                     };
                 };
 
@@ -84,16 +97,30 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                     switch (true) do {
                         // Containers have 2 entries: Name and isBackpack
                         case (_x isEqualTypeArray ["", false]): {
-                            _x params ["_item", "_isBackpack"];
+                            _x params ["_containerClass", "_isBackpack"];
 
-                            if (_item != "") then {
-                                _uniqueBaseCfgText = (getText (([_cfgWeapons, _cfgVehicles] select _isBackpack) >> _item >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+                            if (_containerClass != "") then {
+                                if (_isBackpack) then {
+                                    // Check for non-preset first
+                                    _uniqueBaseCfgText = [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
 
-                                if (_uniqueBaseCfgText != "") then {
-                                    _x set [0, _uniqueBaseCfgText];
+                                    if (_uniqueBaseCfgText != "") then {
+                                        _containerClass = _uniqueBaseCfgText;
+                                    };
+
+                                    // Check if non-preset backpack has a unique base
+                                    _uniqueBaseCfgText = (getText (_cfgVehicles >> _containerClass >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+
+                                    if (_uniqueBaseCfgText != "") then {
+                                        _containerClass = _uniqueBaseCfgText;
+                                    };
+
+                                    _x set [0, _containerClass];
                                 } else {
-                                    if (_isBackpack) then {
-                                        _x set [0, [_item, "CfgVehicles"] call CBA_fnc_getNonPresetClass];
+                                    _uniqueBaseCfgText = (getText (_cfgWeapons >> _containerClass >> QGVAR(uniqueBase))) call EFUNC(common,getConfigName);
+
+                                    if (_uniqueBaseCfgText != "") then {
+                                        _x set [0, _uniqueBaseCfgText];
                                     };
                                 };
                             };
@@ -112,7 +139,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                         };
                         // Weapons have 2 entries: Weapon info array and amount
                         case (_x isEqualTypeArray [[], 0]): {
-                            _weaponsInfo = _x select 0;
+                            _x params ["_weaponsInfo"];
 
                             // Check weapon & weapon attachments
                             {
