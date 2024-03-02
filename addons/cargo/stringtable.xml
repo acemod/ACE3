@@ -36,6 +36,7 @@
         <Key ID="STR_ACE_Cargo_deployObject">
             <English>Deploy</English>
             <Russian>Разместить</Russian>
+            <Japanese>配置する</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_ScrollAction">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
@@ -62,7 +63,7 @@
             <Italian>Bloccato</Italian>
             <German>Blockiert</German>
             <French>Bloqué</French>
-            <Japanese>取り付け不可</Japanese>
+            <Japanese>配置不可</Japanese>
             <Korean>막힘</Korean>
             <Chinesesimp>断开</Chinesesimp>
             <Chinese>斷開</Chinese>
@@ -570,10 +571,12 @@
         <Key ID="STR_ACE_Cargo_enableDeploy">
             <English>Enable deploy</English>
             <Russian>Включить размещение</Russian>
+            <Japanese>配置機能を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy_description">
             <English>Controls whether cargo items can be unloaded via the deploy method.</English>
             <Russian>Определяет, можно ли выгружать грузы с помощью метода размещения.</Russian>
+            <Japanese>配置機能を介して貨物アイテムを降ろすことが出来るかどうかを制御します。</Japanese>
         </Key>
     </Package>
 </Project>
