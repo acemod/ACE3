@@ -127,7 +127,7 @@
             <English>Simulation Mode</English>
         </Key>
         <Key ID="STR_ACE_Frag_FragMode_Desc">
-            <English>Create a combination of random and/or unit targeted fragments</English>
+            <English>Sets the fragmentation simulation mode, which can be targeted, random or both.</English>
         </Key>
         <Key ID="STR_ACE_Frag_FragMode_Opt0">
             <English>Unit targeted fragmentation</English>
@@ -142,13 +142,13 @@
             <English>Disable Fragment Misses</English>
         </Key>
         <Key ID="STR_ACE_Frag_MinFrag_Desc">
-            <English>For each unit a fragment could be shot towards, create it. This setting has no effect when "Random fragmentation" is selected.</English>
+            <English>Create a fragment for each unit that a fragment could be shot towards. This setting has no effect when "Random fragmentation" is selected.</English>
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity">
             <English>Spalling Intensity</English>
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
-            <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degredation</English>
+            <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
@@ -220,7 +220,7 @@
             <English>Draw Hitboxes</English>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
-            <English>Draw hitboxes on objects added using ace_frag_fnc_dev_trackHitBox.</English>
+            <English>Draw hitboxes on objects that were hit.</English>
         </Key>
     </Package>
 </Project>

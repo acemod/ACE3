@@ -46,7 +46,7 @@
                     ["ACE_SelfActions"],
                     _action,
                     true
-                ] call ace_interact_menu_fnc_addActionToClass;
+                ] call EFUNC(interact_menu,addActionToClass);
             }
         ] call CBA_fnc_addEventHandler;
         #endif

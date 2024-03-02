@@ -40,7 +40,6 @@ if (_fragTypes isEqualTo []) then {
 
 // Post 2.18 change - uncomment line 41, remove line 43, 50-55, 64-66, and change lines 57 & 169 from _targets to _objects
 // private _objects = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
-
 private _objects = (ASLToAGL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_posASL,_fragRange);
