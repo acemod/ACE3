@@ -13,10 +13,7 @@ private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
     "CHECKBOX",
     [LSTRING(HitSphereEnable), LSTRING(HitSphereEnable_Desc)],
     [_category, LSTRING(Debug)],
-    false,
-    0,
-    {},
-    true
+    false
 ] call CBA_fnc_addSetting;
 
 [

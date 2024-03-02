@@ -14,6 +14,8 @@
         };
 
         #ifdef DEBUG_MODE_DRAW
+        [QGVAR(dev_clearTraces), LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
+
         if (!hasInterface) exitWith {};
         if (!isServer) then {
             ["ace_firedPlayer", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
@@ -34,9 +36,9 @@
                     "Reset ACE Frag traces",
                     "",
                     {
-                        call FUNC(dev_clearTraces);
+                        [QGVAR(dev_clearTraces), []] call CBA_fnc_globalEvent;
                     },
-                    {true}
+                    {GVAR(dev_trackLines) isNotEqualTo createHashMap}
                 ] call EFUNC(interact_menu,createAction);
                 [
                     _type,
