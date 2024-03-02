@@ -97,7 +97,7 @@ if (_totalIvVolume > 0) then {
         _entries pushBack [format [localize ELSTRING(medical_treatment,receivingBloodIvVolume), floor _blood], [1, 1, 1, 1]];
     };
     if (_plasma > 0) then {
-        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingPlamsaIvVolume), floor _plasma], [1, 1, 1, 1]];
+        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingPlasmaIvVolume), floor _plasma], [1, 1, 1, 1]];
     };
 } else {
     _entries pushBack [localize ELSTRING(medical_treatment,Status_NoIv), _nonissueColor];
