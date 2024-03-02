@@ -20,7 +20,7 @@ if (!GVAR(debugOptions)) exitWith {};
 
 {
     _y params ["_posArray", "_color"];
-    if (count (_posArray) > 1) then {
+    if (count _posArray > 1) then {
         for "_j" from 1 to count _posArray - 1 do {
             drawLine3D [_posArray#(_j-1), _posArray#_j, _color];
         };

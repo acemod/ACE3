@@ -21,14 +21,14 @@ params [["_logAll", false, [false]]];
 private _allAmmoConfigs = configProperties [configFile >> "CfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true];
 private _processedCfgAmmos = [];
 
-private _nPrinted = 0;
+private _numberPrinted = 0;
 
 diag_log text "//****************** fragCalcDump Beg ******************//";
 { // Begin _allAmmoConfigs forEach
     private _ammo = configName _x;
 
     if (_ammo isEqualTo "" || {_ammo in _processedCfgAmmos}) then {
-        continue
+        continue;
     };
 
     private _shouldFrag = [_ammo] call FUNC(shouldFrag);
@@ -48,11 +48,11 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
         diag_log text format ["    Frag range:         %1", _fragRange];
         diag_log text format ["    Frag speed range:   %1", _fragPowerSpeedRange];
         diag_log text format ["    Number frags:       %1", _fragCount];
-        INC(_nPrinted);
+        INC(_numberPrinted);
     };
 
     _processedCfgAmmos pushBack _ammo;
 } forEach _allAmmoConfigs;
 
 diag_log text "//****************** fragCalcDump End ******************//";
-diag_log text format ["//********************** printed %1 *********************//", _nPrinted];
+diag_log text format ["//********************** printed %1 *********************//", _numberPrinted];
