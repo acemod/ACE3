@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Dedmen
+ * Author: Dedmen, Blue
  * Return how many items of type _itemType the player has in his containers (Uniform, Vest, Backpack)
  * Doesn't count assignedItems, weapons, weapon attachments, magazines in weapons
  *
@@ -20,10 +20,19 @@
 params ["_unit", "_itemType"];
 
 private _countItemsInContainer = {
-    (getItemCargo _this) params ["_itemTypes", "_itemCounts"];
+    params ["_itemType", "_container"];
 
-    private _index = _itemTypes find _itemType;
-    _itemCounts param [_index, 0]
+    if ((_itemType call BIS_fnc_itemType) select 0 isEqualTo "Magazine") then {
+        (getMagazineCargo _container) params ["_itemTypes", "_itemCounts"];
+
+        private _index = _itemTypes find _itemType;
+        _itemCounts param [_index, 0]
+    } else {
+        (getItemCargo _container) params ["_itemTypes", "_itemCounts"];
+
+        private _index = _itemTypes find _itemType;
+        _itemCounts param [_index, 0]
+    };
 };
 
 ((uniformContainer _unit) call _countItemsInContainer) +
