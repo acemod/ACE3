@@ -56,23 +56,23 @@ class CfgWeapons {
 
     // White Phosphor NVGs
     class CUP_NVG_PVS14_WP: CUP_NVG_PVS14 {
-        displayName = "AN/PVS-14 (WP)";
+        displayName = SUBCSTRING(CUP_NVG_PVS14_WP);
         NVG_WP_PRESET;
     };
     class CUP_NVG_PVS15_black_WP: CUP_NVG_PVS15_black {
-        displayName = "AN/PVS-15 (Black, WP)";
+        displayName = SUBCSTRING(CUP_NVG_PVS15_black_WP);
         NVG_WP_PRESET;
     };
     class CUP_NVG_PVS15_green_WP: CUP_NVG_PVS15_green {
-        displayName = "AN/PVS-15 (Green, WP)";
+        displayName = SUBCSTRING(CUP_NVG_PVS15_green_WP);
         NVG_WP_PRESET;
     };
     class CUP_NVG_PVS15_tan_WP: CUP_NVG_PVS15_tan {
-        displayName = "AN/PVS-15 (Tan, WP)";
+        displayName = SUBCSTRING(CUP_NVG_PVS15_tan_WP);
         NVG_WP_PRESET;
     };
     class CUP_NVG_PVS15_winter_WP: CUP_NVG_PVS15_winter {
-        displayName = "AN/PVS-15 (Winter, WP)";
+        displayName = SUBCSTRING(CUP_NVG_PVS15_winter_WP);
         NVG_WP_PRESET;
     };
 
@@ -100,19 +100,19 @@ class CfgWeapons {
 
     // White Phosphor NVGs
     class CUP_NVG_GPNVG_black_WP: CUP_NVG_GPNVG_black {
-        displayName = "GPNVG (Black, WP)";
+        displayName = SUBCSTRING(CUP_NVG_GPNVG_black_WP);
         NVG_WP_PRESET;
     };
     class CUP_NVG_GPNVG_tan_WP: CUP_NVG_GPNVG_tan {
-        displayName = "GPNVG (Tan, WP)";
+        displayName = SUBCSTRING(CUP_NVG_GPNVG_tan_WP);
         NVG_WP_PRESET;
     };
     class CUP_GPNVG_green_WP: CUP_NVG_GPNVG_green {
-        displayName = "GPNVG (Green, WP)";
+        displayName = SUBCSTRING(CUP_GPNVG_green_WP);
         NVG_WP_PRESET;
     };
     class CUP_GPNVG_winter_WP: CUP_NVG_GPNVG_winter {
-        displayName = "GPNVG (Winter, WP)";
+        displayName = SUBCSTRING(CUP_GPNVG_winter_WP);
         NVG_WP_PRESET;
     };
 };
