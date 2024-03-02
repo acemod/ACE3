@@ -35,6 +35,6 @@ private _countItemsInContainer = {
     };
 };
 
-((uniformContainer _unit) call _countItemsInContainer) +
-((vestContainer _unit) call _countItemsInContainer) +
-((backpackContainer _unit) call _countItemsInContainer)
+([_itemType, uniformContainer _unit] call _countItemsInContainer) +
+([_itemType, vestContainer _unit] call _countItemsInContainer) +
+([_itemType, backpackContainer _unit] call _countItemsInContainer)
