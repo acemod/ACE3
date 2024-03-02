@@ -95,7 +95,7 @@ if (_state) then {
                     // Check if the necessary keys were pressed for a keybind
                     _return = _comboDikPressed &&
                         {_mainDevice == "KEYBOARD"} &&
-                        {((GVAR(keyboardInputMain) getOrDefault [_mainDik, [false, 0]]) select 1) > ([0, 1] select _isDoubleTap)}; // check how many times the main key was pressed
+                        {((GVAR(keyboardInputMain) getOrDefault [_mainDik, [false, 0]]) select 1) > (parseNumber _isDoubleTap)}; // check how many times the main key was pressed
 
                     // Keybind was detected
                     if (_return) exitWith {
@@ -219,7 +219,7 @@ if (_state) then {
                 _keyPressedInfo set [1, ((_keyPressedInfo select 1) - 1) max 0];
 
                 if (_keyPressedInfo isEqualTo [false, 0]) then {
-                    GVAR(keyboardInputMain) deleteAt _key,
+                    GVAR(keyboardInputMain) deleteAt _key;
                 };
             }, _key, 0.5] call CBA_fnc_waitAndExecute;
         }];

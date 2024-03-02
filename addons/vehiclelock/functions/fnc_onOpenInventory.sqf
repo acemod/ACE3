@@ -37,10 +37,10 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
         !isNull (findDisplay 602)
     },
     {
-        TRACE_1("car display open: closing", _this);
+        TRACE_1("car display open: closing",_this);
         (findDisplay 602) closeDisplay 0;
         [{
-            TRACE_1("Opening Player Inventory", _this);
+            TRACE_1("Opening Player Inventory",_this);
             ACE_player action ["Gear", objNull];
         }, []] call CBA_fnc_execNextFrame;
     }, []] call CBA_fnc_waitUntilAndExecute;

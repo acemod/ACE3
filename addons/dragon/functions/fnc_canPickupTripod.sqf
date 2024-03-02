@@ -21,5 +21,4 @@ params ["_target", "_unit"];
 && {!alive (gunner _target)}
 && {!(_target getVariable [QGVAR(fired), false])}
 && {!(_target getVariable [QGVAR(sightAttached), ((typeOf _target) == QGVAR(staticAssembled))])}
-&& EFUNC(csw,assemble_canPickupTripod)
-
+&& EFUNC(csw,canPickupTripod)

@@ -17,6 +17,6 @@
 
 visibleMap &&
 {alive ACE_player} &&
-{[ACE_player, "ACE_PlottingBoard"] call EFUNC(common,hasItem)} &&
 {!GVAR(plottingBoard_isDragging)} &&
-{GVAR(plottingBoard_isRotating) == -1}
+{GVAR(plottingBoard_isRotating) == -1} &&
+{[ACE_player, "ACE_PlottingBoard"] call EFUNC(common,hasItem)}

@@ -15,18 +15,8 @@
  * Public: No
  */
 
-disableSerialization;
-
-private _display = uiNamespace getVariable QGVAR(menuDisplay);
-
-if (isNil "_display") exitWith {};
-
-private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
-
-if (_loaded isEqualTo []) exitWith {};
-
 // This can be an object or a classname string
-private _item = _loaded param [lbCurSel (_display displayCtrl 100), nil];
+private _item = call FUNC(getSelectedItem);
 
 if (isNil "_item") exitWith {};
 
@@ -60,11 +50,11 @@ if (GVAR(interactionParadrop)) exitWith {
         },
         format [LLSTRING(unloadingItem), [_item, true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
-            (_this select 0) params ["", "_target"];
+            (_this select 0) params ["", "_vehicle"];
 
-            if ((acos ((vectorUp _target) select 2)) > 30) exitWith {false}; // check flight level
-            if (((getPos _target) select 2) < 25) exitWith {false}; // check height
-            if ((speed _target) < -5) exitWith {false}; // check reverse
+            if ((acos ((vectorUp _vehicle) select 2)) > 30) exitWith {false}; // check flight level
+            if (((getPos _vehicle) select 2) < 25) exitWith {false}; // check height
+            if ((speed _vehicle) < -5) exitWith {false}; // check reverse
 
             true
         },
@@ -74,7 +64,7 @@ if (GVAR(interactionParadrop)) exitWith {
 };
 
 // If in zeus
-if (!isNull findDisplay 312) exitWith {
+if (!isNull curatorCamera) exitWith {
     // Do not check distance to unit, but do check for valid position
     if !([_item, GVAR(interactionVehicle), objNull, true] call FUNC(canUnloadItem)) exitWith {
         [[LSTRING(unloadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);

@@ -57,6 +57,7 @@
             <French>Items requis</French>
             <Portuguese>Exigir Itens</Portuguese>
             <Japanese>アイテムを要求</Japanese>
+            <Russian>Требуемые предметы</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_desc">
             <English>AI will only perform medical treatment if they have the necessary items in their inventory.</English>
@@ -67,6 +68,7 @@
             <French>Les IA n'effectueront un traitement médical que si elles ont le matériel nécessaire dans leur inventaire.</French>
             <Portuguese>A IA só irá realizar tratamento médico se tiver os itens necessários em seu inventário.</Portuguese>
             <Japanese>AIのインベントリに必要なアイテムがある場合にのみ治療を実行します。</Japanese>
+            <Russian>Искусственный интеллект будет оказывать медицинскую помощь только в том случае, если в его инвентаре есть необходимые предметы.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_autoReplaceItems">
             <English>Auto Convert Items for AI</English>
@@ -77,6 +79,7 @@
             <Italian>Conversione automatica di risorse mediche per IA</Italian>
             <Portuguese>Conversão automática de itens para IA</Portuguese>
             <Japanese>AIのアイテムを自動変換</Japanese>
+            <Russian>Автоматическое преобразование элементов для ИИ</Russian>
         </Key>
     </Package>
 </Project>

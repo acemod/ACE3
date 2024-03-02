@@ -90,7 +90,7 @@ if (GVAR(showWind2)) then {
 
 _elevationAbs = Round(_elevationAbs * 100) / 100;
 if (_elevationAbs > 0) then {
-    ctrlSetText [400, format["%1", abs(_elevationAbs)]];
+    ctrlSetText [400, str abs _elevationAbs];
 } else {
     if (_elevationAbs < 0) then {
         ctrlSetText [400, format["%1D", abs(_elevationAbs)]];
@@ -100,7 +100,7 @@ if (_elevationAbs > 0) then {
 };
 _elevationRel = Round(_elevationRel * 100) / 100;
 if (_elevationRel > 0) then {
-    ctrlSetText [401, format["%1", abs(_elevationRel)]];
+    ctrlSetText [401, str abs _elevationRel];
 } else {
     if (_elevationRel < 0) then {
         ctrlSetText [401, format["%1D", abs(_elevationRel)]];
@@ -110,7 +110,7 @@ if (_elevationRel > 0) then {
 };
 _elevationCur = Round(_elevationCur * 100) / 100;
 if (_elevationCur > 0) then {
-    ctrlSetText [402, format["%1", abs(_elevationCur)]];
+    ctrlSetText [402, str abs _elevationCur];
 } else {
     if (_elevationCur < 0) then {
         ctrlSetText [402, format["%1D", abs(_elevationCur)]];
