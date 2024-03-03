@@ -45,7 +45,7 @@ if (!isNull _vehicle) then {
     private _magazineItems = [];
     private _itemItems = [];
     {
-        if (isClass (configFile >> "CfgMagazines" >> _itemType)) then {
+        if (isClass (configFile >> "CfgMagazines" >> _x)) then {
             _magazineItems pushBack _x;
         } else {
             _itemItems pushBack _x;
