@@ -19,9 +19,6 @@ class GVAR(spawnbase): B_65x39_Caseless {
 class GVAR(def_10): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 10};
 };
-class GVAR(def_10_lo): GVAR(def_10) {
-    submunitionConeAngle = 85;
-};
 class GVAR(def_10_mid): GVAR(def_10) {
     submunitionConeAngle = 85;
     triggerSpeedCoef[] = {-1.5, 1.5};
@@ -39,9 +36,6 @@ class GVAR(def_10_top): GVAR(def_10) {
  */
 class GVAR(def_15): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 15};
-};
-class GVAR(def_15_lo): GVAR(def_15) {
-    submunitionConeAngle = 85;
 };
 class GVAR(def_15_mid): GVAR(def_15) {
     submunitionConeAngle = 85;
@@ -61,9 +55,6 @@ class GVAR(def_15_top): GVAR(def_15) {
  */
 class GVAR(def_5): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 5};
-};
-class GVAR(def_5_lo): GVAR(def_5) {
-    submunitionConeAngle = 85;
 };
 class GVAR(def_5_mid): GVAR(def_5) {
     submunitionConeAngle = 85;
@@ -85,9 +76,6 @@ class GVAR(def_tiny_15): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 15};
     submunitionAmmo = QGVAR(tiny);
 };
-class GVAR(def_tiny_15_lo): GVAR(def_tiny_15) {
-    submunitionConeAngle = 85;
-};
 class GVAR(def_tiny_15_mid): GVAR(def_tiny_15) {
     submunitionConeAngle = 85;
     triggerSpeedCoef[] = {-1.5, 1.5};
@@ -107,9 +95,6 @@ class GVAR(def_tiny_15_top): GVAR(def_tiny_15) {
 class GVAR(def_tiny_10): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 10};
     submunitionAmmo = QGVAR(tiny);
-};
-class GVAR(def_tiny_10_lo): GVAR(def_tiny_10) {
-    submunitionConeAngle = 85;
 };
 class GVAR(def_tiny_10_mid): GVAR(def_tiny_10) {
     submunitionConeAngle = 85;
@@ -131,9 +116,6 @@ class GVAR(def_tiny_5): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 5};
     submunitionAmmo = QGVAR(tiny);
 };
-class GVAR(def_tiny_5_lo): GVAR(def_tiny_5) {
-    submunitionConeAngle = 85;
-};
 class GVAR(def_tiny_5_mid): GVAR(def_tiny_5) {
     submunitionConeAngle = 85;
     triggerSpeedCoef[] = {-1.5, 1.5};
@@ -153,9 +135,6 @@ class GVAR(def_tiny_5_top): GVAR(def_tiny_5) {
 class GVAR(def_small_15): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 15};
     submunitionAmmo = QGVAR(small);
-};
-class GVAR(def_small_15_lo): GVAR(def_small_15) {
-    submunitionConeAngle = 815;
 };
 class GVAR(def_small_15_mid): GVAR(def_small_15) {
     submunitionConeAngle = 815;
@@ -177,9 +156,6 @@ class GVAR(def_small_10): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 10};
     submunitionAmmo = QGVAR(small);
 };
-class GVAR(def_small_10_lo): GVAR(def_small_10) {
-    submunitionConeAngle = 810;
-};
 class GVAR(def_small_10_mid): GVAR(def_small_10) {
     submunitionConeAngle = 810;
     triggerSpeedCoef[] = {-1.10, 1.10};
@@ -198,9 +174,6 @@ class GVAR(def_small_10_top): GVAR(def_small_10) {
 class GVAR(def_small_5): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 5};
     submunitionAmmo = QGVAR(small);
-};
-class GVAR(def_small_5_lo): GVAR(def_small_5) {
-    submunitionConeAngle = 85;
 };
 class GVAR(def_small_5_mid): GVAR(def_small_5) {
     submunitionConeAngle = 85;
