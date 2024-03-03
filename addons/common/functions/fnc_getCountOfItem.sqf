@@ -22,7 +22,7 @@ params ["_unit", "_itemType"];
 private _countItemsInContainer = {
     params ["_itemType", "_container"];
 
-    if ((_itemType call BIS_fnc_itemType) select 0 isEqualTo "Magazine") then {
+    if (isClass (configFile >> "CfgMagazines" >> _itemType)) then {
         (getMagazineCargo _container) params ["_itemTypes", "_itemCounts"];
 
         private _index = _itemTypes find _itemType;

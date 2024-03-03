@@ -45,7 +45,7 @@ if (!isNull _vehicle) then {
     private _magazineItems = [];
     private _itemItems = [];
     {
-        if ((_x call BIS_fnc_itemType) select 0 isEqualTo "Magazine") then {
+        if (isClass (configFile >> "CfgMagazines" >> _itemType)) then {
             _magazineItems pushBack _x;
         } else {
             _itemItems pushBack _x;
