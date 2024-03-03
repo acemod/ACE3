@@ -138,6 +138,7 @@ ACE Arsenal uses 2 existing config entries to sort and display items.
 
 - `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in `CfgWeapons`.
 - `ACE_isUnique`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
+- `ACE_asItem`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Items. Used for magazines that are not meant to be used in a weapon, such as Painkillers.
 
 ### 3.2 New config entries
 
@@ -159,7 +160,7 @@ ACE Medical Treatment and ACE Field Rations also add their own sub-categories, i
 - `ACE_isMedicalItem`: Items with this property set to `1` will be sorted to the ACE Medical Tab.
 - `ACE_isFieldRationItem`: Items with this property set to `1` will be sorted to the ACE Field Rations Tab.
 
-Only Misc. Items will be checked for these properties. Magazines must have ACE_isUnique property.
+Only Misc. Items will be checked for these properties. Magazines must have ACE_isUnique or ACE_asItem property.
 
 ## 4. Default loadouts
 

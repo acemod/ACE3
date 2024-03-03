@@ -29,17 +29,28 @@ scopeName "Main";
 private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GVAR(allowSharedEquipment);
 
 {
-    private _unit      = _x;
+    private _unit = _x;
     private _unitVehicle = objectParent _unit;
-    private _unitItems = _x call EFUNC(common,uniqueItems);
+    private _unitItems = [_x, 0] call EFUNC(common,uniqueItems);
+    private _unitMagazines = [_x, 2] call EFUNC(common,uniqueItems);
 
     {
-        if (!isNull _unitVehicle && {_x in (itemCargo _unitVehicle)}) then {
-            _unitVehicle addItemCargoGlobal [_x, -1];
-            [_unit, _x] breakOut "Main";
+        if (!isNull _unitVehicle) then {
+            if (_x in (itemCargo _unitVehicle)) then {
+                _unitVehicle addItemCargoGlobal [_x, -1];
+                [_unit, _x] breakOut "Main";
+            };
+            if (_x in ((magazinesAmmoCargo _unitVehicle) apply { _x select 0 })) then {
+                [_unitVehicle, _x] call EFUNC(common,adjustMagazineAmmo);
+                [_unit, _x] breakOut "Main";
+            };
         };
         if (_x in _unitItems) then {
             _unit removeItem _x;
+            [_unit, _x] breakOut "Main";
+        };
+        if (_x in _unitMagazines) then {
+            [_unit, _x] call EFUNC(common,adjustMagazineAmmo);
             [_unit, _x] breakOut "Main";
         };
     } forEach _items;
