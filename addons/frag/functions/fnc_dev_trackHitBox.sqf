@@ -47,7 +47,6 @@ private _centerPoint = ASLToAGL getPosASL _object;
 
 if (GVAR(dbgSphere) && _addSphere && {isNull objectParent _object}) then {
     private _centerSphere = [getPosASL _object, "yellow"] call FUNC(dev_sphereDraw);
-    _centerSphere disableCollisionWith _object;
     _centerSphere attachTo [_object, _object worldToModel _centerPoint];
 };
 
