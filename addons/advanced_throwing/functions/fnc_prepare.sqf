@@ -19,7 +19,10 @@ params ["_unit"];
 TRACE_1("params",_unit);
 
 // Temporarily enable wind info, to aid in throwing smoke grenades effectively
-if (GVAR(enableTempWindInfo) && {!EGVAR(weather,WindInfo)}) then {
+if (
+    GVAR(enableTempWindInfo) && 
+    {!(missionNamespace getVariable [QEGVAR(weather,WindInfo), false])}
+) then {
     [] call EFUNC(weather,displayWindInfo);
     GVAR(tempWindInfo) = true;
 };
