@@ -40,9 +40,11 @@
 #define ACE_FRAG_LOW_FRAG_HOLDOFF_REDUCTION 4
 // Max frag distance - correlates to a a fragCount of 20k & hit chance of 0.5%
 #define ACE_FRAG_MAX_FRAG_RANGE 565
+// 4*pi/360 = 0.034906585
+#define ACE_FRAG_FRAGS_PER_ARC_CONSTANT 0.03491
 
 // Spall values
 #define ACE_FRAG_SPALL_HOLDOFF 0.25
 #define ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF 0.5
 // sqrt(2)/50
-#define ACE_FRAG_ROUND_COEF 0.02828427
+#define ACE_FRAG_SPALL_CALIBER_COEF 0.02828427

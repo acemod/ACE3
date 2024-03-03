@@ -17,9 +17,8 @@
  */
 
 TRACE_1("ACE_Frag rndInit",_this);
-params ["_projectile"];
-
 if (!isServer) exitWith {};
+params ["_projectile"];
 
 private _ammo = typeOf _projectile;
 if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
