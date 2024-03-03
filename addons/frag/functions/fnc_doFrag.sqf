@@ -22,22 +22,21 @@ TRACE_1("begin doFrag",_this);
 params ["_posASL", "_velocity", "_ammo", "_shotParents"];
 
 // Don't let a single object cause all fragmentation events
-_shotParents params ["_shotParentVic"];
-if (_shotParentVic getVariable [QGVAR(obj_nextFragTime), -1] > CBA_missionTime) exitWith {
-    TRACE_1("vehicleTimeExit",_shotParentVic);
+_shotParents params ["_shotParentVehicles"];
+if (_shotParentVehicles getVariable [QGVAR(obj_nextFragTime), -1] > CBA_missionTime) exitWith {
+    TRACE_1("vehicleTimeExit",_shotParentVehicles);
 };
-_shotParentVic setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 
 // Check normal round timeout and adjust _max frags
 private _timeSinceLastFrag = CBA_missionTime - GVAR(lastFragTime);
 if (_timeSinceLastFrag < ACE_FRAG_HOLDOFF || {_posASL isEqualTo [0, 0, 0]} || {_ammo isEqualTo ""}) exitWith {
     TRACE_3("timeExit",_timeSinceLastFrag,CBA_missionTime,GVAR(lastFragTime));
 };
-private _maxFragCount = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 TRACE_3("willFrag",_timeSinceLastFrag,CBA_missionTime,_maxFragCount);
+_shotParentVehicles setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
+private _maxFragCount = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 
-private _ammoArr = [_ammo] call FUNC(getFragInfo);
-_ammoArr params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
+[_ammo] call FUNC(getFragInfo) params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
 // For low frag rounds limit the # of frags created
 if (_modFragCount < ACE_FRAG_LOW_FRAG_MOD_COUNT) then {
     _maxFragCount = _modFragCount * ACE_FRAG_LOW_FRAG_COEFF;
@@ -51,7 +50,7 @@ if (_heightATL < ACE_FRAG_MIN_GROUND_OFFSET) then {
     _posASL = _posASL vectorAdd [0, 0, ACE_FRAG_MIN_GROUND_OFFSET - (0 min _heightATL)];
 };
 
-TRACE_3("fnc_doFragTargeted IF",_fragRange,_timeSinceLastFrag,GVAR(fragSimComplexity));
+TRACE_3("doFrag choices",_maxFragCount,_fragRange,GVAR(fragSimComplexity));
 if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
     _maxFragCount = _maxFragCount - ([_posASL, _fragVel, _fragRange, _maxFragCount, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
