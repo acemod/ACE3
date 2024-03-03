@@ -2,7 +2,7 @@
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger
  * This function creates fragments randomly spreading out from an explosion.
- * This function will spawn 5, 10, or 15 fragments depending on the
+ * This function will spawn 5, 10, or 15 fragments.
  *
  * Arguments:
  * 0: Position (posASL) of fragmenting projectile <ARRAY>
