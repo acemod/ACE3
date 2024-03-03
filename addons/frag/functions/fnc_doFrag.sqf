@@ -22,9 +22,9 @@ TRACE_1("begin doFrag",_this);
 params ["_posASL", "_velocity", "_ammo", "_shotParents"];
 
 // Don't let a single object cause all fragmentation events
-_shotParents params ["_shotParentVehicles"];
-if (_shotParentVehicles getVariable [QGVAR(obj_nextFragTime), -1] > CBA_missionTime) exitWith {
-    TRACE_1("vehicleTimeExit",_shotParentVehicles);
+_shotParents params ["_shotParentVehicle"];
+if (_shotParentVehicle getVariable [QGVAR(obj_nextFragTime), -1] > CBA_missionTime) exitWith {
+    TRACE_1("vehicleTimeExit",_shotParentVehicle);
 };
 
 // Check normal round timeout and adjust _max frags
@@ -33,7 +33,7 @@ if (_timeSinceLastFrag < ACE_FRAG_HOLDOFF || {_posASL isEqualTo [0, 0, 0]} || {_
     TRACE_3("timeExit",_timeSinceLastFrag,CBA_missionTime,GVAR(lastFragTime));
 };
 TRACE_3("willFrag",_timeSinceLastFrag,CBA_missionTime,_maxFragCount);
-_shotParentVehicles setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
+_shotParentVehicle setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 private _maxFragCount = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 
 [_ammo] call FUNC(getFragInfo) params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];

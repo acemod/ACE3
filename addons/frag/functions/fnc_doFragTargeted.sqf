@@ -171,7 +171,7 @@ private _totalFragCount = 0;
 } forEach _targets;
 
 #ifdef DEBUG_MODE_FULL
-systemChat ("targeted frag  count: " + str _totalFragCount);
+systemChat ("targeted frag count: " + str _totalFragCount);
 TRACE_1("targeted frag count",_totalFragCount);
 #endif
 _totalFragCount

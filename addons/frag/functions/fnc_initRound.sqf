@@ -49,6 +49,8 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
         "HitPart",
         {
             params ["_projectile", "_hitObject", "", "_posASL", "_velocity", "_surfNorm", "", "", "_surfType"];
+            // starting v2.18 it may be faster to use the instigator parameter, the same as the second entry shotParents, to recreate _shotParent
+            // The "explode" EH does not get the same parameter
             private _shotParent = getShotParents _projectile;
             private _ammo = typeOf _projectile;
             private _vectorUp = vectorUp _projectile;
