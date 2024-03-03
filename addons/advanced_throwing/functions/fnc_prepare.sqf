@@ -18,6 +18,12 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
+// Temporarily enable wind info, to aid in throwing smoke grenades effectively
+if (!EGVAR(weather,WindInfo)) then {
+    [] call EFUNC(weather,displayWindInfo);
+    GVAR(tempWindInfo) = true;
+};
+
 // Select next throwable if one already in hand
 if (_unit getVariable [QGVAR(inHand), false]) exitWith {
     TRACE_1("inHand",_unit);

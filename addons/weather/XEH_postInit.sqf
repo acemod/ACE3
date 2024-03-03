@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 GVAR(WindInfo) = false;
+
 ["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKeyToggle),
 {
     // Conditions: canInteract
