@@ -29,7 +29,7 @@ private _fnc_checkItems = {
     private _unitVehicle = objectParent _unit;
     if (!isNull _unitVehicle) then {
         _unitItems append (itemCargo _unitVehicle);
-        _unitItems append ((magazinesAmmoCargo _unitVehicle) apply { _x select 0 });
+        _unitItems append (magazineCargo _unitVehicle);
     };
     _items findIf {_x in _unitItems} != -1
 };
