@@ -17,7 +17,7 @@
  *
  * Public: No
  */
-
+#define ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM 3
 TRACE_1("begin doFrag",_this);
 params ["_posASL", "_velocity", "_ammo", "_shotParents"];
 
@@ -56,6 +56,6 @@ if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
     _maxFragCount = _maxFragCount - ([_posASL, _fragVel, _fragRange, _maxFragCount, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
 
-if (GVAR(fragSimComplexity) > 0) then {
+if (GVAR(fragSimComplexity) > 0 && _maxFragCount >= ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM) then {
     [_posASL, _velocity, _heightATL, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
 };
