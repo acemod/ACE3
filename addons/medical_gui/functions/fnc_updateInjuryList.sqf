@@ -26,6 +26,7 @@ private _nonissueColor = [1, 1, 1, 0.33];
 if (IS_BLEEDING(_target)) then {
     switch (GVAR(showBleeding)) do {
         case 1: {
+        //  Just show whether the unit is bleeding at all
             _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
         };
         case 2: {
