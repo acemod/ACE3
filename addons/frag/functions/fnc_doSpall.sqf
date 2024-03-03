@@ -17,19 +17,19 @@
  */
 
 #define GLUE(g1,g2) g1##g2
-
 TRACE_1("doSpall",_this);
+if (CBA_missionTime < GVAR(nextSpallAllowTime)) exitWith {
+    TRACE_2("time exit",CBA_missionTime,GVAR(nextSpallAllowTime));
+};
 params ["_projectile", "_objectHit", "_lastPosASL", "_lastVelocity", "_surfaceNorm", "_surfaceType", "_ammo", "_shotParents", "_vectorUp"];
 
-if (CBA_missionTime < GVAR(nextSpallAllowTime) ||
-    {_lastPosASL isEqualTo [0,0,0]} ||
-    {_ammo isEqualTo ""} ||
+if (_ammo == "" ||
     {_objectHit isKindOf "CAManBase"}) exitWith {
-    TRACE_4("time/invalidHit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
+    TRACE_4("invalid round or hit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
 };
 
 private _material = [_surfaceType] call FUNC(getMaterialInfo);
-if (_material == "ground") then {
+if (_material == "ground") exitWith {
     #ifdef DEBUG_MODE_FULL
     systemChat "ground spall";
     #endif
@@ -44,15 +44,15 @@ private _vel = if (alive _projectile) then {
     [0, 0, 0]
 };
 
-private _velocityChange = 0 max (vectorMagnitude _lastVelocity - vectorMagnitude _vel);
+private _speedChange = 0 max (vectorMagnitude _lastVelocity - vectorMagnitude _vel);
 /*
  * This is all fudge factor since real spalling is too complex for calculation.
  * There are two terms. The first is from round impact, taking a quasi scale
  * of sqrt(2)/50 * round caliber * srqt(change in speed). The second term is
  * explosive * indirect hit, for any explosive contribution
  */
-private _spallPower = (ACE_FRAG_ROUND_COEF * _caliber * sqrt _velocityChange + _explosive * _indirectHit) * GVAR(spallIntensity);
-TRACE_3("found speed",_velocityChange,_caliber,_spallPower);
+private _spallPower = (ACE_FRAG_SPALL_CALIBER_COEF * _caliber * sqrt _speedChange + _explosive * _indirectHit) * GVAR(spallIntensity);
+TRACE_3("found speed",_speedChange,_caliber,_spallPower);
 
 if (_spallPower < 2) exitWith {
     TRACE_1("lowImpulse",_ammo);
@@ -121,7 +121,7 @@ private _spallSpawner = createVehicle [
     "CAN_COLLIDE"
 ];
 _spallSpawner setVectorDirandUp [_lastVelocityNorm, _vectorUp];
-_spallSpawner setVelocity (_lastVelocityNorm vectorMultiply (_velocityChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF));
+_spallSpawner setVelocityModelSpace [0, _speedChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF, 0];
 _spallSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
