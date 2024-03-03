@@ -16,7 +16,7 @@
  */
 
 #define ACE_FRAG_SOUNDENVIRON_STR_LEN 12
-#define ACE_FRAG_SOUNDGIT_STR_LEN 8
+#define ACE_FRAG_SOUNDHIT_STR_LEN 8
 #define ACE_FRAG_MATERIAL_SEARCH_LEN 10
 
 params ["_surfType"];
@@ -24,9 +24,7 @@ params ["_surfType"];
 private _material = GVAR(spallMaterialCache) get _surfType;
 
 TRACE_2("materialCache",_surfType,_material);
-if (!isNil "_material") exitWith {
-    _material
-};
+if (!isNil "_material") exitWith {_material};
 // Use 'soundEnviron' or 'soundHit' to extract approx material
 private _surfaceConfig = configFile >> "CfgSurfaces" >> _surfType;
 if (isClass _surfaceConfig) then {
@@ -39,7 +37,7 @@ if (isClass _surfaceConfig) then {
     _surfFileText = _surfFileText regexReplace ["[^a-z0-9]", ""];
     private _idx = ACE_FRAG_SOUNDENVIRON_STR_LEN + (_surfFileText find "soundenviron");
     if (_surfFileText select [_idx, 5] isEqualTo "empty") then {
-        _idx = ACE_FRAG_SOUNDGIT_STR_LEN + (_surfFileText find "soundhit");
+        _idx = ACE_FRAG_SOUNDHIT_STR_LEN + (_surfFileText find "soundhit");
     };
     _material = _surfFileText select [_idx, ACE_FRAG_MATERIAL_SEARCH_LEN];
 };

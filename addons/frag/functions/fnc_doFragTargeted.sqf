@@ -38,8 +38,8 @@ if (_fragTypes isEqualTo []) then {
     ];
 };
 
-// Post 2.18 change - uncomment line 41, remove line 43, 50-55, 64-66, and change lines 57 & 169 from _targets to _objects
-// private _objects = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
+// Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
+// private _targets = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
 private _objects = (ASLToAGL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_posASL,_fragRange);
@@ -56,12 +56,14 @@ private _targets = [];
 
 TRACE_3("Targets found",_posASL,_fragRange,count _targets);
 
-// limit number of fragments per direction (2D) to 10 using _fragArcs
+// limit number of fragments per direction (2D) to _fragsPerFragArc using _fragArcs
 private _fragArcs = createHashMap;
+private _fragsPerFragArc = _modFragCount * ACE_FRAG_FRAGS_PER_ARC_CONSTANT;
 private _totalFragCount = 0;
 { // Begin of forEach iterating on _targets
     // Ignore dead units, curators and spectators
     if (!alive _x || {getNumber ((configOf _x) >> "isPlayableLogic") == 1}) then {
+        TRACE_1("dead or logic",_x);
         continue;
     };
     private _target = _x;
@@ -106,14 +108,14 @@ private _totalFragCount = 0;
         parseNumber (GVAR(atLeastOne) || {random 1 < _fragChance});
     };
     if (_fragCount == 0) then {
-        TRACE_2("fragments",_fragChance,_fragCount);
+        TRACE_2("no fragments",_fragChance,_fragCount);
         continue;
     };
 
     // handle limiting fragments per degree arc
     private _dir = floor (_posASL getDir _target);
     private _fragPerArc = _fragArcs getOrDefault [_dir, 0];
-    if (_fragPerArc > 10) then {
+    if (_fragPerArc > _fragsPerFragArc) then {
         continue;
     } else {
         _fragArcs set [_dir, _fragPerArc + _fragCount];
@@ -169,7 +171,7 @@ private _totalFragCount = 0;
 } forEach _targets;
 
 #ifdef DEBUG_MODE_FULL
-systemChat ("fragCount cnt: " + str _totalFragCount);
-TRACE_1("fragCount",_totalFragCount);
+systemChat ("targeted frag  count: " + str _totalFragCount);
+TRACE_1("targeted frag count",_totalFragCount);
 #endif
 _totalFragCount

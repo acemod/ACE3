@@ -46,7 +46,7 @@ _fragSpawner setVelocity _fragVelocity;
 _fragSpawner setShotParents _shotParents;
 
 #ifdef DEBUG_MODE_FULL
-systemChat ("fragging, id: " + getObjectID _proj);
+systemChat ("frag random objectID: " + getObjectID _proj);
 #endif
 #ifdef DEBUG_MODE_DRAW
 _fragSpawner addEventHandler [
