@@ -23,10 +23,10 @@ _args params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_us
 
 // Return used item to user (if used)
 if (!isNull _itemUser) then {
-    if !(((_usedItem call BIS_fnc_itemType) select 0) isEqualTo "Magazine") then {
-        [_itemUser, _usedItem] call EFUNC(common,addToInventory);
-    } else {
+    if (isClass (configFile >> "CfgMagazines" >> _usedItem)) then {
         [_itemUser, _usedItem, 1] call EFUNC(common,adjustMagazineAmmo);
+    } else {
+        [_itemUser, _usedItem] call EFUNC(common,addToInventory);
     };
 };
 
