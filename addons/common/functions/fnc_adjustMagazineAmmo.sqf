@@ -19,29 +19,42 @@
 
 params ["_unit", "_item", ["_count", -1]];
 
-private _lowestCount = 999;
-private _lowestIndex = 0;
-
 if (_unit isKindOf "CAManBase") then {
-    private _magazines = [];
-    {
+    // get matching non-loaded mags
+    private _magazines = (magazinesAmmoFull _unit) select {(_x select 0) == _item && _x select 2 == false};
+    // use items in uniform first, then vest, then backpack
+    _magazines = _magazines apply {
         _x params ["_class", "_ammo", "_loaded", "", "_location"];
-        if (_class == _item && !_loaded) then {
-            _magazines pushBack _x;
-            if (_ammo < _lowestCount) then {
-                _lowestCount = _ammo;
-                _lowestIndex = count _magazines - 1;
+        [_class, _ammo, switch (_location) do {
+            case "Uniform": {
+                0
             };
-        };
-    } forEach (magazinesAmmoFull _unit);
-    if (_magazines isEqualTo []) exitWith {};
+            case "Vest": {
+                1
+            };
+            case "Backpack": {
+                2
+            };
+        }]
+    };
+    _magazines sort true;
     _unit removeMagazines _item;
-    (_magazines select _lowestIndex) params ["_class", "_ammo", "_loaded", "", "_location"];
-    _magazines set [_lowestIndex, [_class, _ammo + _count, _loaded, "", /* tolower _location - no command, will always go to first empty container */ ""]];
+    (_magazines select 0) params ["_class", "_ammo", "_location"];
+    _magazines set [0, [_class, _ammo + _count, _location]];
     {
-        _x params ["_class", "_ammo", "_loaded", "", "_location"];
+        _x params ["_class", "_ammo", "_location"];
         if (_ammo > 0) then {
-            [_unit, _class, _location, _ammo] call FUNC(addToInventory);
+            switch (_location) do {
+                case 0: {
+                    uniformContainer _unit
+                };
+                case 1: {
+                    vestContainer _unit
+                };
+                case 2: {
+                    backpackContainer _unit
+                };
+            } addMagazineAmmoCargo [_class, 1, _ammo];
         };
     } forEach _magazines;
     _ammo + _count <= 0
