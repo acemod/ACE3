@@ -160,7 +160,7 @@ ACE Medical Treatment and ACE Field Rations also add their own sub-categories, i
 - `ACE_isMedicalItem`: Items with this property set to `1` will be sorted to the ACE Medical Tab.
 - `ACE_isFieldRationItem`: Items with this property set to `1` will be sorted to the ACE Field Rations Tab.
 
-Only Misc. Items will be checked for these properties. Magazines must have ACE_isUnique or ACE_asItem property.
+Only Misc. Items will be checked for these properties. Magazines must have `ACE_isUnique` or `ACE_asItem` property.
 
 ## 4. Default loadouts
 
