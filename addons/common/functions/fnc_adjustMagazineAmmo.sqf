@@ -6,13 +6,13 @@
  * Arguments:
  * 0: Vehicle or Unit <OBJECT>
  * 1: Item <STRING>
- * 2: Count <NUMBER>
+ * 2: Count <NUMBER> (default: -1)
  *
  * Return Value:
  * Empty mag <BOOLEAN> - true if the magazine is empty after the ammo is consumed
  *
  * Example:
- * [player, "30Rnd_556x45_Stanag", 1] call ace_commone_fnc_adjustMagazineAmmo;
+ * [player, "30Rnd_556x45_Stanag", 1] call ace_common_fnc_adjustMagazineAmmo;
  *
  * Public: No
  */
