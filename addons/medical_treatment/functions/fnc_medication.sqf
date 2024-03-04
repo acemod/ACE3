@@ -23,7 +23,7 @@
 params ["_medic", "_patient", "_bodyPart", "_classname", "", "_usedItem"];
 
 [_patient, _usedItem] call FUNC(addToTriageCard);
-private _cfg = ["CfgWeapons", "CfgMagazines"] select (_usedItem call BIS_fnc_itemType select 0 isEqualTo "Magazine");
+private _cfg = ["CfgWeapons", "CfgMagazines"] select (isClass (configFile >> "CfgMagazines" >> _usedItem));
 [_patient, "activity", LSTRING(Activity_usedItem), [[_medic, false, true] call EFUNC(common,getName), getText (configFile >> _cfg >> _usedItem >> "displayName")]] call FUNC(addToLog);
 
 [QGVAR(medicationLocal), [_patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;
