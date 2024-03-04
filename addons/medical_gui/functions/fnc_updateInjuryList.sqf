@@ -145,6 +145,8 @@ if (_selectionN == -1) exitWith {
     _ctrl lbSetCurSel -1;
 };
 
+[QGVAR(updateInjuryListGeneral), [_ctrl, _target, _selectionN, _entries]] call CBA_fnc_localEvent;
+
 _entries pushBack ["", [1, 1, 1, 1]];
 
 // Add selected body part name
@@ -213,6 +215,8 @@ switch (GET_FRACTURES(_target) select _selectionN) do {
     };
 };
 
+[QGVAR(updateInjuryListPart), [_ctrl, _target, _selectionN, _entries, _bodyPartName]] call CBA_fnc_localEvent;
+
 // Add entries for open, bandaged, and stitched wounds
 private _woundEntries = [];
 
@@ -244,6 +248,8 @@ private _fnc_processWounds = {
 [GET_OPEN_WOUNDS(_target), "%1", [1, 1, 1, 1]] call _fnc_processWounds;
 [GET_BANDAGED_WOUNDS(_target), "[B] %1", [0.88, 0.7, 0.65, 1]] call _fnc_processWounds;
 [GET_STITCHED_WOUNDS(_target), "[S] %1", [0.7, 0.7, 0.7, 1]] call _fnc_processWounds;
+
+[QGVAR(updateInjuryListWounds), [_ctrl, _target, _selectionN, _woundEntries, _bodyPartName]] call CBA_fnc_localEvent;
 
 // Handle no wound entries
 if (_woundEntries isEqualTo []) then {
