@@ -10,6 +10,7 @@
             <French>DBAL-A3 (rouge)</French>
             <Portuguese>DBAL-A3 (vermelho)</Portuguese>
             <Japanese>DBAL-A3 (赤)</Japanese>
+            <Russian>DBAL-A3 (красный)</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_Green">
             <English>DBAL-A3 (green)</English>
@@ -20,6 +21,7 @@
             <French>DBAL-A3 (vert)</French>
             <Portuguese>DBAL-A3 (verde)</Portuguese>
             <Japanese>DBAL-A3 (緑)</Japanese>
+            <Russian>DBAL-A3 (зеленый)</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF&lt;br&gt;Double click to switch mode</English>
@@ -30,6 +32,7 @@
             <French>&lt;t color='#9cf953'&gt;Utilisation: &lt;/t&gt;Allumer/Eteindre le laser&lt;br&gt;Double clic pour changer de mode</French>
             <Portuguese>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Ligar/Desligar Laser&lt;br&gt;Duplo clique para mudar o modo</Portuguese>
             <Japanese>&lt;t color='#9cf953'&gt;使用方法: &lt;/t&gt;レーザーのオン/オフ切り替え&lt;br&gt;ダブルクリックでモード切り替え</Japanese>
+            <Russian>&lt;t color='#9cf953'&gt;Использование: &lt;/t&gt;Включение / выключение лазера &lt;br&gt;Двойной щелчок для переключения режима</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionShort">
             <English>Dual Beam Aiming Laser</English>
@@ -40,6 +43,7 @@
             <French>Viseur laser à double faisceau</French>
             <Portuguese>Laser de Pontaria de Duplo Feixe</Portuguese>
             <Japanese>複合ビーム照準レーザー</Japanese>
+            <Russian>Двухлучевой прицельный лазер</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_VisiblePointer">
             <English>Visible Laser</English>
@@ -50,6 +54,7 @@
             <French>Laser visible</French>
             <Portuguese>Laser Visível</Portuguese>
             <Japanese>可視光レーザー</Japanese>
+            <Russian>Видимый лазер</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRPointer">
             <English>IR Laser</English>
@@ -60,6 +65,7 @@
             <French>Laser IR</French>
             <Portuguese>Laser IR</Portuguese>
             <Japanese>IRレーザー</Japanese>
+            <Russian>ИК-лазер</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRIlluminator">
             <English>IR Illuminator</English>
@@ -70,6 +76,7 @@
             <French>Illuminateur IR</French>
             <Portuguese>Iluminador IR</Portuguese>
             <Japanese>IRイルミネーター</Japanese>
+            <Russian>ИК-осветитель</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRDual">
             <English>IR Laser and Illuminator</English>
@@ -80,6 +87,7 @@
             <French>Illuminateur et laser IR</French>
             <Portuguese>Laser e Iluminador IR</Portuguese>
             <Japanese>IRレーザーとイルミネーター</Japanese>
+            <Russian>ИК-лазер и осветитель</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Wide">
             <English>Wide Beam</English>
@@ -90,6 +98,7 @@
             <French>Faisceau large</French>
             <Portuguese>Feixe Largo</Portuguese>
             <Japanese>広角ビーム</Japanese>
+            <Russian>Широкий луч</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Medium">
             <English>Medium Beam</English>
@@ -100,6 +109,7 @@
             <French>Faisceau moyen</French>
             <Portuguese>Feixe Médio</Portuguese>
             <Japanese>標準ビーム</Japanese>
+            <Russian>Средний луч</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Narrow">
             <English>Narrow Beam</English>
@@ -110,6 +120,7 @@
             <French>Faisceau étroit</French>
             <Portuguese>Feixe Estreito</Portuguese>
             <Japanese>狭角ビーム</Japanese>
+            <Russian>Узкий луч</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Light ON/OFF&lt;br&gt;Double click to switch mode</English>
@@ -120,6 +131,7 @@
             <French>&lt;t color='#9cf953'&gt;Utilisation: &lt;/t&gt;Allumer/Eteindre la lumière&lt;br&gt;Double clic pour changer de mode</French>
             <Portuguese>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Ligar/Desligar Iluminador&lt;br&gt;Duplo clique para mudar o modo</Portuguese>
             <Japanese>&lt;t color='#9cf953'&gt;使用方法: &lt;/t&gt;ライトのオン/オフ&lt;br&gt;ダブルクリックでモード切り替え</Japanese>
+            <Russian>&lt;t color='#9cf953'&gt;Использование: &lt;/t&gt;Включение / выключение освещения &lt;br&gt;Двойной щелчок для переключения режима</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionShort">
             <English>Special Purpose IR LED Illuminator</English>
@@ -130,6 +142,7 @@
             <French>Illuminateur LED IR à usage spécial</French>
             <Portuguese>Iluminador LED IR de Uso Especial</Portuguese>
             <Japanese>特殊用途のIR LEDイルミネーター</Japanese>
+            <Russian>ИК-светодиодный осветитель специального назначения</Russian>
         </Key>
         <Key ID="STR_ACE_IRLight_MomentarySwitch">
             <English>Illuminator / Laser Momentary Switch</English>
@@ -140,6 +153,7 @@
             <French>Commutateur temporaire illuminateur/laser</French>
             <Portuguese>Interruptor Momentâneo Iluminador/Laser</Portuguese>
             <Japanese>イルミネーター/レーザーモーメンタリースイッチ</Japanese>
+            <Russian>Мгновенный переключатель осветителя/лазера</Russian>
         </Key>
     </Package>
 </Project>
