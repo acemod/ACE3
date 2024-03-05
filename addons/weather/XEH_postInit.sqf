@@ -6,6 +6,7 @@ GVAR(WindInfo) = false;
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotDragging", "isNotCarrying", "isNotSitting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !(isNull objectParent ACE_player || {objectParent ACE_player isKindOf "StaticWeapon"}) exitWith {false};
 
     // Statement
     [] call FUNC(displayWindInfo);
@@ -17,6 +18,7 @@ GVAR(WindInfo) = false;
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotDragging", "isNotCarrying", "isNotSitting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !(isNull objectParent ACE_player || {objectParent ACE_player isKindOf "StaticWeapon"}) exitWith {false};
 
     // Statement
     [] call FUNC(displayWindInfo);
