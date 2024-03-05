@@ -44,11 +44,6 @@ if (_modFragCount < ACE_FRAG_LOW_FRAG_MOD_COUNT) then {
 } else {
     GVAR(lastFragTime) = CBA_missionTime;
 };
-// Offset for ground clearance
-private _heightATL = (ASLToATL _posASL)#2;
-if (_heightATL < ACE_FRAG_MIN_GROUND_OFFSET) then {
-    _posASL = _posASL vectorAdd [0, 0, ACE_FRAG_MIN_GROUND_OFFSET - (0 min _heightATL)];
-};
 
 TRACE_3("doFrag choices",_maxFragCount,_fragRange,GVAR(fragSimComplexity));
 if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
@@ -56,5 +51,5 @@ if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
 };
 
 if (GVAR(fragSimComplexity) > 0 && _maxFragCount >= ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM) then {
-    [_posASL, _velocity, _heightATL, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
+    [_posASL, _velocity, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
 };
