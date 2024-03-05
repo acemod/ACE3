@@ -19,6 +19,7 @@
  * Public: No
  */
 
+_this set [4, _this param [4, 1]]; // set default Bandage effectiveness coefficient
 [QGVAR(bandaged), _this] call CBA_fnc_localEvent; // Raise event with reference so mods can modify this
 
 params ["_medic", "_patient", "_bodyPart", "_classname", ["_bandageEffectiveness", 1]];
