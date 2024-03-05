@@ -28,7 +28,7 @@ TRACE_3("registerObjects",_side,_budget,_objects);
 
 if (_side isEqualTo sideUnknown) exitWith {ERROR_1("Bad Side %1",_this);};
 
-_objects select {
+_objects = _objects select {
     private _isValid = _x params [["_xClassname", "", [""]], ["_xCost", 0, [0]]];
     private _category = toLower (_x param [2, "", [""]]);
     if (_category != "") then { _x set [2, _category]; };

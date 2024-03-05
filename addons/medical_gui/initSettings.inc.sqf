@@ -128,6 +128,15 @@ private _categoryColors = [ELSTRING(medical,Interface_Category), format ["| %1 |
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(showBleeding),
+    "LIST",
+    [LSTRING(showBleeding_DisplayName), LSTRING(showBleeding_Description)],
+    [ELSTRING(medical,Interface_Category), LSTRING(SubCategory)],
+    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(ShowBleeding_Rate)], 2],
+    true // isGlobal
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(bodyPartOutlineColor),
     "COLOR",
     [LSTRING(bodyPartOutlineColor_DisplayName), LSTRING(bodyPartOutlineColor_Description)],

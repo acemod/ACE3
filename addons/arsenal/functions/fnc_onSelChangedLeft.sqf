@@ -683,14 +683,19 @@ switch (GVAR(currentLeftPanel)) do {
 
         TOGGLE_RIGHT_PANEL_HIDE
 
-        private _unitInsigniaConfig = configFile >> "CfgUnitInsignia" >> _item;
+        // Check for correct config: First mission, then campaign and finally regular config
+        private _itemCfg = missionConfigFile >> "CfgUnitInsignia" >> _item;
+
+        if (isNull _itemCfg) then {
+            _itemCfg = campaignConfigFile >> "CfgUnitInsignia" >> _item;
+        };
+
+        if (isNull _itemCfg) then {
+            _itemCfg = configFile >> "CfgUnitInsignia" >> _item;
+        };
 
         // Display new items's info on the bottom right
-        if (isNull _unitInsigniaConfig) then {
-            [_display, _control, _curSel, missionConfigFile >> "CfgUnitInsignia" >> _item] call FUNC(itemInfo);
-        } else {
-            [_display, _control, _curSel, _unitInsigniaConfig] call FUNC(itemInfo);
-        };
+        [_display, _control, _curSel, _itemCfg] call FUNC(itemInfo);
     };
 };
 

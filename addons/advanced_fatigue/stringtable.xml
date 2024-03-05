@@ -192,6 +192,7 @@
             <German>Verwacklungsfaktor, wenn aufgelegt</German>
             <Italian>Fattore di Oscillazione Appoggiato</Italian>
             <Japanese>静止時の手ぶれ係数</Japanese>
+            <Russian>Коэффициент колебания в состоянии покоя</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RestedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is rested.</English>
@@ -201,6 +202,7 @@
             <German>Beeinflusst, wie ruhig man die Waffe hält, während sie aufgelegt ist.</German>
             <Italian>Determina la quantità di oscillazione dell'arma quando questa è appoggiata.</Italian>
             <Japanese>静止している時の武器の手ぶれの量に影響します。</Japanese>
+            <Russian>Влияет на величину колебания оружия в состоянии покоя.</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor">
             <English>Deployed sway factor</English>
@@ -210,6 +212,7 @@
             <German>Verwacklungsfaktor, wenn Zweibein aufgestellt ist.</German>
             <Italian>Fattore di Oscillazione su Bipode</Italian>
             <Japanese>展開時の手ぶれ係数</Japanese>
+            <Russian>Коэффициент колебания при развертывании</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is deployed.</English>
@@ -219,6 +222,7 @@
             <German>Beeinflusst, wie ruhig man die Waffen hält, während das Zweibein aufgestellt ist.</German>
             <Italian>Determina la quantità di oscillazione dell'arma quando questa è stabilizzata usando il bipode.</Italian>
             <Japanese>武器の展開(Cキー)時の武器の手ぶれの量に影響します。</Japanese>
+            <Russian>Влияет на величину колебания оружия при его развертывании.</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
