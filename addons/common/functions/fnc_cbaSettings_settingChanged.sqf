@@ -23,7 +23,7 @@ TRACE_2("",_settingName,_newValue);
 
 ["ace_settingChanged", [_settingName, _newValue]] call CBA_fnc_localEvent;
 
-if (!((toLowerANSI _settingName) in CBA_settings_needRestart)) exitWith {};
+if (!((toLower _settingName) in CBA_settings_needRestart)) exitWith {};
 if (_canBeChanged) exitWith {WARNING_1("update cba setting [%1] to use correct Need Restart param",_settingName);};
 if (!GVAR(settingsInitFinished)) exitWith {}; // Ignore changed event before CBA_settingsInitialized
 
