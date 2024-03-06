@@ -57,6 +57,8 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
+#include "initKeybinds.inc.sqf"
+
 GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;

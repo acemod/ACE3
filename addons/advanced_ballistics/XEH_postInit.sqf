@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.inc.sqf"
-
 GVAR(currentbulletID) = -1;
 
 GVAR(Protractor) = false;
@@ -10,6 +8,8 @@ GVAR(allBullets) = [];
 GVAR(currentGrid) = 0;
 
 if (!hasInterface) exitWith {};
+
+#include "initKeybinds.inc.sqf"
 
 ["CBA_settingsInitialized", {
     //If not enabled, dont't add PFEH
