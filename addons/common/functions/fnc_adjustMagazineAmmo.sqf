@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle or Unit <OBJECT>
  * 1: Item <STRING>
- * 2: Count <NUMBER> (default: -1)
+ * 2: Ammo to add <NUMBER> (default: -1)
  *
  * Return Value:
  * Empty mag <BOOLEAN> - true if the magazine is empty after the ammo is consumed
