@@ -33,25 +33,27 @@ private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GV
     private _unitVehicle = objectParent _unit;
     private _unitItems = [_x, 0] call EFUNC(common,uniqueItems);
     private _unitMagazines = [_x, 2] call EFUNC(common,uniqueItems);
+    private _vehicleItems = itemCargo _unitVehicle; // [] for objNull
+    private _vehicleMagazines = magazineCargo _unitVehicle; // same
 
     {
-        if (!isNull _unitVehicle) then {
-            if (_x in (itemCargo _unitVehicle)) then {
+        switch (true) do {
+            case (_x in _vehicleItems): {
                 _unitVehicle addItemCargoGlobal [_x, -1];
                 [_unit, _x] breakOut "Main";
             };
-            if (_x in ((magazinesAmmoCargo _unitVehicle) apply { _x select 0 })) then {
+            case (_x in _vehicleMagazines): {
                 [_unitVehicle, _x] call EFUNC(common,adjustMagazineAmmo);
                 [_unit, _x] breakOut "Main";
             };
-        };
-        if (_x in _unitItems) then {
-            _unit removeItem _x;
-            [_unit, _x] breakOut "Main";
-        };
-        if (_x in _unitMagazines) then {
-            [_unit, _x] call EFUNC(common,adjustMagazineAmmo);
-            [_unit, _x] breakOut "Main";
+            case (_x in _unitItems): {
+                _unit removeItem _x;
+                [_unit, _x] breakOut "Main";
+            };
+            case (_x in _unitMagazines): {
+                [_unit, _x] call EFUNC(common,adjustMagazineAmmo);
+                [_unit, _x] breakOut "Main";
+            };
         };
     } forEach _items;
 } forEach _useOrder;
