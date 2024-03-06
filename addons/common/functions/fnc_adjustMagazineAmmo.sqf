@@ -17,60 +17,53 @@
  * Public: No
  */
 
-params ["_unit", "_item", ["_count", -1]];
+params ["_unit", "_magazine", ["_count", -1]];
 
-if (_unit isKindOf "CAManBase") then {
-    // get matching non-loaded mags
-    private _magazines = (magazinesAmmoFull _unit) select {(_x select 0) == _item && _x select 2 == false};
-    // use items in uniform first, then vest, then backpack
-    _magazines = _magazines apply {
-        _x params ["_class", "_ammo", "_loaded", "", "_location"];
-        [_class, _ammo, switch (_location) do {
-            case "Uniform": {
-                0
-            };
-            case "Vest": {
-                1
-            };
-            case "Backpack": {
-                2
-            };
-        }]
-    };
-    _magazines sort true;
-    _unit removeMagazines _item;
-    (_magazines select 0) params ["_class", "_ammo", "_location"];
-    _magazines set [0, [_class, _ammo + _count, _location]];
-    {
-        _x params ["_class", "_ammo", "_location"];
-        if (_ammo > 0) then {
-            switch (_location) do {
-                case 0: {
-                    uniformContainer _unit
-                };
-                case 1: {
-                    vestContainer _unit
-                };
-                case 2: {
-                    backpackContainer _unit
-                };
-            } addMagazineAmmoCargo [_class, 1, _ammo];
-        };
-    } forEach _magazines;
-    _ammo + _count <= 0
+private _containers = if (_unit isKindOf "CAManBase") then {
+    [uniformContainer _unit, vestContainer _unit, backpackContainer _unit]
 } else {
-    private _cargoMags = magazinesAmmoCargo _unit;
-    private _itemIndex = _cargoMags findIf {_x select 0 isEqualTo _item};
-    if (_itemIndex == -1) exitWith {};
-    clearMagazineCargoGlobal _unit;
-    {
-        if (_forEachIndex == _itemIndex) then {
-            if (((_x select 1) + _count) > 0) then {
-                _unit addMagazineAmmoCargo [_x select 0, 1, ((_x select 1) + _count)];
-            };
-        } else {
-            _unit addMagazineAmmoCargo [_x select 0, 1, _x select 1];
-        };
-    } forEach _cargoMags;
-    ((_cargoMags select _itemIndex) select 1) + _count <= 0
+    [_unit]
 };
+
+scopeName "main";
+
+private _container = objNull;
+private _magazinesContainer = [];
+private _newAmmoCount = 0;
+
+{
+    _container = _x;
+
+    // Get all magazines of _magazine type
+    _magazinesContainer = (magazinesAmmoCargo _container) select {_x select 0 == _magazine};
+
+    // If there are none, skip to next container
+    if (_magazinesContainer isEqualTo []) then {
+        continue;
+    };
+
+    // Get the ammo count
+    _magazinesContainer = _magazinesContainer apply {_x select 1};
+
+    // Sort, smallest first
+    _magazinesContainer sort true;
+
+    {
+        _newAmmoCount = _x + _count;
+
+        if (_newAmmoCount >= 0) exitWith {
+            _container addMagazineAmmoCargo [_magazine, -1, _x];
+
+            private _emptyMag = _newAmmoCount == 0;
+
+            // Only add magazine back if it's not empty
+            if (!_emptyMag) then {
+                _container addMagazineAmmoCargo [_magazine, 1, _newAmmoCount];
+            };
+
+            _emptyMag breakOut "main";
+        };
+    } forEach _magazinesContainer;
+} forEach _containers;
+
+false
