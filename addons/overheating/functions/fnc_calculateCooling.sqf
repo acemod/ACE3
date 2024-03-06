@@ -45,7 +45,7 @@ if (ACE_player call EFUNC(common,isSwimming)) then {
 };
 
 //Increase convection cooling for open bolt type guns
-if (_boltType == 0) then {_convectionRate = _convectionRate * 1.1};
+if (_boltType == 0) then {_convectionRate = _convectionRate * OPEN_BOLT_ADDITIONAL_CONVECTION};
 
 TRACE_4("cooling",_temperature,_totalTime,_barrelMass,_barrelSurface);
 
