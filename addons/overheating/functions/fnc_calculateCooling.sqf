@@ -7,6 +7,7 @@
  * 0: Initial temperature <NUMBER>
  * 1: Barrel mass <NUMBER>
  * 2: Time interval  <NUMBER>
+ * 3: Bolt type  <NUMBER>
  *
  * Return Value:
  * Final temperature <NUMBER>
@@ -17,7 +18,7 @@
  * Public: No
  */
 
-params ["_temperature", "_barrelMass", "_totalTime"];
+params ["_temperature", "_barrelMass", "_totalTime", "_boltType"];
 
 // The lowest temperature a weapon can reach is the ambient air temperature.
 private _ambientTemperature = ambientTemperature select 0;
@@ -42,6 +43,9 @@ if (ACE_player call EFUNC(common,isSwimming)) then {
     // this will give a convection rate between 25 (no wind or rain) and 125 (max rain and >=50 m/s wind)
     _convectionRate = _convectionRate * ((linearConversion [0,1,rain,1,5,true] + (5 min (vectorMagnitude wind / 10))) / 2);
 };
+
+//Increase convection cooling for open bolt type guns
+if (_boltType == 0) then {_convectionRate = _convectionRate * OPEN_BOLT_ADDITIONAL_CONVECTION};
 
 TRACE_4("cooling",_temperature,_totalTime,_barrelMass,_barrelSurface);
 
