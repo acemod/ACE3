@@ -112,13 +112,13 @@ switch (_type select 0) do {
 
             switch (_container) do {
                 case "vest": {
-                    _unit addItemToVest _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
+                    (vestContainer _unit) addMagazineAmmoCargo [_classname, 1, _ammoCount];
                 };
                 case "backpack": {
-                    _unit addItemToBackpack _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
+                    (backpackContainer _unit) addMagazineAmmoCargo [_classname, 1, _ammoCount];
                 };
                 case "uniform": {
-                    _unit addItemToUniform _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
+                    (uniformContainer _unit) addMagazineAmmoCargo [_classname, 1, _ammoCount];
                 };
                 default {
                     _unit addMagazine [_classname, _ammoCount];
@@ -130,7 +130,7 @@ switch (_type select 0) do {
             private _pos = _unit modelToWorldVisual [0,1,0.05];
 
             _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addMagazineCargoGlobal [_classname, 1/*_ammoCount*/]; //@todo Bug! This isn't really the ammo, but magazine count. No such command.
+            _unit addMagazineAmmoCargo [_classname, 1, _ammoCount];
             _unit setPosATL _pos;
         };
     };

@@ -68,7 +68,7 @@ if (isNil QGVAR(virtualItems)) then {
 GVAR(virtualItemsFlatAll) = +GVAR(virtualItemsFlat);
 
 GVAR(currentFace) = face GVAR(center);
-GVAR(currentVoice) = speaker GVAR(center);
+GVAR(currentVoice) = (speaker GVAR(center)) call EFUNC(common,getConfigName);
 GVAR(currentInsignia) = GVAR(center) call BIS_fnc_getUnitInsignia;
 
 GVAR(currentAction) = "Stand";

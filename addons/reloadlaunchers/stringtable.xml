@@ -9,6 +9,7 @@
             <Italian>Mostra avviso di ricarica da parte del coppio</Italian>
             <Korean>동료의 장전에 대한 알림 표시</Korean>
             <French>Affichage de notifications lors d'une rechargement par un ami</French>
+            <Russian>Отображает уведомления о загрузке помощника</Russian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextDesc">
             <English>Displays notifications when an assistant loads a gunner's launcher.</English>
@@ -18,6 +19,7 @@
             <Italian>Mostra un avviso quando un assistente sta ricaricando il proprio lanciatore.</Italian>
             <Korean>부사수가 사수의 발사기를 장전할 때 알림을 표시합니다.</Korean>
             <French>Affiche une notofication lorsqu'un assistant recharge l'arme du tireur.</French>
+            <Russian>Отображает уведомления, когда помощник загружает пусковую установку стрелка.</Russian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
             <English>Load launcher</English>
@@ -44,6 +46,7 @@
             <Japanese>%1 がランチャーを装填しています</Japanese>
             <Polish>%1 ładuje twoją wyrzutnię</Polish>
             <Korean>%1이(가) 당신의 발사기를 장전했습니다.</Korean>
+            <Russian>%1 загружает Вашу установку</Russian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingAborted">
             <English>%1 stopped loading your launcher</English>
@@ -53,6 +56,7 @@
             <Japanese>%1 がランチャーの装填を中断しました</Japanese>
             <Polish>%1 przestał ładować twoją wyrzutnię</Polish>
             <Korean>%1이(가) 당신의 발사기 장전을 멈췄습니다.</Korean>
+            <Russian>%1 прекратил загружать Вашу установку</Russian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>
@@ -113,6 +117,7 @@
             <Japanese>ランチャーを装填できませんでした</Japanese>
             <Polish>Wyrzutnia nie mogła być załadowana</Polish>
             <Korean>발사기를 장전할 수 없습니다.</Korean>
+            <Russian>Не удалось загрузить пусковую установку</Russian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_featureDescription">
             <English>Buddy Loading</English>
@@ -122,6 +127,7 @@
             <French>Chargement par un ami</French>
             <German>Nachladen durch Kamerad</German>
             <Japanese>バディローディング</Japanese>
+            <Russian>Перезарядка помощником</Russian>
         </Key>
     </Package>
 </Project>
