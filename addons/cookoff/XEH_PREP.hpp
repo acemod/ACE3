@@ -1,10 +1,12 @@
-
-PREP(handleDamageBox);
-PREP(engineFire);
 PREP(cookOff);
-PREP(smoke);
-PREP(cookOffEffect);
 PREP(cookOffBox);
+PREP(cookOffBoxLocal);
+PREP(cookOffEffect);
 PREP(detonateAmmunition);
+PREP(detonateAmmunitionServer);
+PREP(engineFire);
+PREP(engineFireLocal);
 PREP(getVehicleAmmo);
+PREP(handleDamageBox);
 PREP(isMagazineFlare);
+PREP(smoke);

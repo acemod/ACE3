@@ -1,74 +1,46 @@
 #include "..\script_component.hpp"
 /*
- * Author: KoffeinFlummi, commy2, kymckay
+ * Author: KoffeinFlummi, commy2, kymckay, johnb43
  * Start a cook-off in the given ammo box.
  *
  * Arguments:
  * 0: Ammo box <OBJECT>
+ * 1: Source <OBJECT> (default: objNull)
+ * 2: Instigator <OBJECT> (default: objNull)
  *
  * Return Value:
  * None
  *
  * Example:
- * [_box] call ace_cookoff_fnc_cookOffBox
+ * cursorObject call ace_cookoff_fnc_cookOffBox
  *
  * Public: No
  */
 
-params ["_box"];
+if (!isServer) exitWith {};
+if (!GVAR(enableAmmobox) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
 
+params ["_box", ["_source", objNull], ["_instigator", objNull]];
+
+// Make sure it's a box (important, because deleted EH is assigned to ReammoBox_F only in postInit)
+if !(_box isKindOf "ReammoBox_F") exitWith {};
+
+if !(_box getVariable [QGVAR(enableAmmoCookoff), true]) exitWith {};
+
+// Allow only 1 cook-off per box at a time
 if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
-_box setVariable [QGVAR(isCookingOff), true];
 
-if (local _box) then {
-    [QGVAR(cookOffBox), _box] call CBA_fnc_globalEvent;
-};
+_box setVariable [QGVAR(isCookingOff), true, true];
 
-[{
-    params ["_box"];
+// Spawn cook-off effects on all connected machines
+private _jipID = [QGVAR(cookOffBoxLocal), [
+    _box,
+    _source,
+    _instigator,
+    CBA_missionTime,
+    random [SMOKE_DELAY / 2, SMOKE_DELAY, SMOKE_DELAY / 2 * 3] // generate random timer that is global synced
+]] call CBA_fnc_globalEventJIP;
 
-    // Box will start smoking
-    private _smoke = "#particlesource" createVehicleLocal [0,0,0];
-    _smoke setParticleClass "AmmoSmokeParticles2";
-    _smoke attachTo [_box, [0,0,0]];
+[_jipID, _box] call CBA_fnc_removeGlobalEventJIP;
 
-    private _effects = [_smoke];
-
-    if (isServer) then {
-        private _sound = createSoundSource ["Sound_Fire", position _box, [], 0];
-        _effects pushBack _sound;
-    };
-
-    [{
-        params ["_box", "_effects"];
-
-        // These functions are smart and do all the cooking off work
-        if (local _box) then {
-            if (GVAR(ammoCookoffDuration) == 0) exitWith {};
-            ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
-            [_box, _mags, _total] call FUNC(detonateAmmunition);
-
-            // This shit is busy being on fire, magazines aren't accessible/usable
-            clearMagazineCargoGlobal _box;
-        };
-
-        // Light the fire (also handles lighting)
-        private _fire = "#particlesource" createVehicleLocal [0,0,0];
-        _fire setParticleClass "AmmoBulletCore";
-        _fire attachTo [_box, [0,0,0]];
-
-        _effects pushBack _fire;
-
-        [{
-            params ["_box", "_effects"];
-
-            {
-                deleteVehicle _x;
-            } forEach _effects;
-
-            if (local _box) then {
-                _box setDamage 1;
-            };
-        }, [_box, _effects], COOKOFF_TIME_BOX] call CBA_fnc_waitAndExecute; // TODO: Change so that box is alive until no ammo left, with locality in mind
-    }, [_box, _effects], SMOKE_TIME] call CBA_fnc_waitAndExecute;
-}, _box, IGNITE_TIME] call CBA_fnc_waitAndExecute;
+_box setVariable [QGVAR(jipIDs), [_jipID]];
