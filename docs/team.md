@@ -11,6 +11,8 @@ This page lists all current maintainers for the ACE3 projects with their areas o
 
 This lists all the maintainers responsible for project management and the overall direction of the ACE3 project.
 
+- [BaerMitUmlaut](https://github.com/BaerMitUmlaut){:target="_blank"}
+  - Scripting, Config
 - [bux](https://github.com/bux){:target="_blank"}
   - Scripting, Testing
 - [Felix Wiegand](https://github.com/koffeinflummi){:target="_blank"}
@@ -23,13 +25,13 @@ This lists all the maintainers responsible for project management and the overal
   - Coding, Modeling, Performance, SME
 - [PabstMirror](https://github.com/PabstMirror){:target="_blank"}
   - Scripting, Config
+- [veteran29](https://github.com/veteran29){:target="_blank"}
+  - Scripting, Config
 - [ViperMaul](https://github.com/vipermaul){:target="_blank"}
   - Project management
 
 ## Core Maintainers
 
-- [BaerMitUmlaut](https://github.com/BaerMitUmlaut){:target="_blank"}
-  - Scripting, Config
 - [commy2](https://github.com/commy2){:target="_blank"}
   - Scripting, Config
 - [esteldunedain](https://github.com/esteldunedain){:target="_blank"}
@@ -65,7 +67,6 @@ This lists all the maintainers responsible for project management and the overal
 - [TheMagnetar](https://github.com/TheMagnetar){:target="_blank"}
   - Scripting
 - tpM
-- [veteran29](https://github.com/veteran29){:target="_blank"}
 
 ## Moderators
 
