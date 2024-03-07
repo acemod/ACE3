@@ -19,7 +19,7 @@
 params [["_vehicle", objNull, [objNull]], ["_weapon", "", [""]]];
 
 // on foot
-if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle || {toLower _weapon in ["throw", "put"]}}) exitWith {gunner _vehicle};
+if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle || {toLowerANSI _weapon in ["throw", "put"]}}) exitWith {gunner _vehicle};
 
 // inside vehicle
 private _gunner = objNull;
