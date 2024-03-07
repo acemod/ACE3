@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Katalam, Blue, Brett Mayson
+ * Author: Katalam, Blue, Brett Mayson, johnb43
  * Handle adjusting a magazine's ammo
  *
  * Arguments:
