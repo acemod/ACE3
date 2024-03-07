@@ -71,6 +71,7 @@ This lists all the maintainers responsible for project management and the overal
 
 - [drofseh](https://github.com/Drofseh){:target="_blank"}
 - [MikeMF](https://github.com/Mike-MF){:target="_blank"}
+- [MiszczuZPolski](https://github.com/MiszczuZPolski){:target="_blank"}
 
 ## Contributors
 
