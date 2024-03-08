@@ -6,6 +6,7 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+BaerMitUmlaut
 Brett Mayson
 bux578 <github@jonathandavid.de>
 commy2
@@ -25,6 +26,7 @@ Kieran
 kymckay
 mharis001 <mhariszakar@gmail.com>
 MikeMF
+MiszczuZPolski
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
 Ruthberg <ulteq@web.de>
@@ -56,7 +58,6 @@ Arcanum417 <lubos.len@gmail.com>
 Arkhir <wonsz666@gmail.com >
 ARV187 aka Spark23
 Asgar Serran <piechottaf@web.de>
-BaerMitUmlaut
 Bamse <bamsis@gmail.com>
 Barman75
 Bla1337

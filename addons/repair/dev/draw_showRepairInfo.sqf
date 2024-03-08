@@ -20,7 +20,7 @@ addMissionEventHandler ["Draw3D", {
         private _hitpoint = _hitPoints select _forEachIndex;
 
         if ((_selection != "") && {_hitPoint != ""}) then {
-            if (((toLower _hitPoint) find "glass") != -1) exitWith {};
+            if ("glass" in (toLowerANSI _hitPoint)) exitWith {};
 
             private _info = "";
             private _color = [1,0,0,1];

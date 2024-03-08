@@ -68,7 +68,7 @@ private _wheelHitPointSelections = [];
             {
                 if (_x != "") then {
                      //Filter out things that definitly aren't wheeels (#3759)
-                    if ((toLower (_hitPoints select _forEachIndex)) in ["hitengine", "hitfuel", "hitbody"]) exitWith {TRACE_1("filter",_x)};
+                    if ((toLowerANSI (_hitPoints select _forEachIndex)) in ["hitengine", "hitfuel", "hitbody"]) exitWith {TRACE_1("filter",_x)};
                     private _xPos = _vehicle selectionPosition _x;
                     if (_xPos isEqualTo [0,0,0]) exitWith {};
                     private _xDist = _wheelCenterPos distance _xPos;

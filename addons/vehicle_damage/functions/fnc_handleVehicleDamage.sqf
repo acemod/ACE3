@@ -34,7 +34,7 @@ if !(alive _vehicle) exitWith {
     true
 };
 
-_hitPoint = toLower _hitPoint;
+_hitPoint = toLowerANSI _hitPoint;
 private _hitpointHash = _vehicle getVariable [QGVAR(hitpointHash), []];
 private _type = if (_hitpointHash isEqualTo []) then {
     "exit"

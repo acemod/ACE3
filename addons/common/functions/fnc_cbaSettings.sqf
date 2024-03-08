@@ -104,7 +104,7 @@ TRACE_1("Reading settings from missionConfigFile",_countOptions);
 for "_index" from 0 to (_countOptions - 1) do {
     private _optionEntry = _missionSettingsConfig select _index;
     private _settingName = configName _optionEntry;
-    if ((toLower _settingName) in GVAR(cbaSettings_forcedSettings)) then {
+    if ((toLowerANSI _settingName) in GVAR(cbaSettings_forcedSettings)) then {
         WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",_varName);
     } else {
         if ((isNil _settingName) && {(getNumber (_settingsConfig >> _settingName >> "movedToSQF")) == 0}) then {
