@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _worldName = toLower worldName;
+private _worldName = toLowerANSI worldName;
 TRACE_1("getting map data",_worldName);
 
 // Set default values

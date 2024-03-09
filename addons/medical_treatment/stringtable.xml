@@ -3570,21 +3570,53 @@
             <Chinese>軍用止血帶</Chinese>
             <Turkish>Turnike [CAT]</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_receivingIvVolume">
-            <English>Receiving IV [%1ml]</English>
-            <German>Erhalte IV [%1ml]</German>
-            <Spanish>Recibiendo IV [%1ml]</Spanish>
-            <Russian>Принимается переливание [%1 мл]</Russian>
-            <Polish>Otrzymywanie IV [pozostało %1ml]</Polish>
-            <French>Transfusion : [%1 ml]</French>
-            <Czech>Přijímání transfúze [%1ml]</Czech>
-            <Hungarian>Infúzióra kötve [%1ml]</Hungarian>
-            <Italian>Ricevendo EV [%1ml]</Italian>
-            <Portuguese>Recebendo IV [%1ml]</Portuguese>
-            <Japanese>IV [%1ml] を投与中</Japanese>
-            <Korean>IV로 [%1ml] 수혈중</Korean>
-            <Chinesesimp>正在接受静脉注射 [%1毫升]</Chinesesimp>
-            <Chinese>接收靜脈注射液中 [%1毫升]</Chinese>
+        <Key ID="STR_ACE_Medical_Treatment_receivingSalineIvVolume">
+            <English>Receiving Saline IV [%1ml]</English>
+            <German>Erhalte Saline IV [%1ml]</German>
+            <Spanish>Recibiendo Salina IV [%1ml]</Spanish>
+            <Russian>Принимается солевой раствор IV [%1 мл]</Russian>
+            <Polish>Otrzymywanie soli IV [%1ml]</Polish>
+            <French>Transfusion de sérum salé : [%1 ml]</French>
+            <Czech>Přijímání soli IV [%1ml]</Czech>
+            <Hungarian>Saline Infúzióra kötve [%1ml]</Hungarian>
+            <Italian>Ricevendo Salina EV [%1ml]</Italian>
+            <Portuguese>Recebendo Salina IV [%1ml]</Portuguese>
+            <Japanese>生理食塩水 IV [%1ml] を投与中</Japanese>
+            <Korean>생리식염수 IV로 [%1ml] 수혈중</Korean>
+            <Chinesesimp>正在接受生理盐水静脉注射 [%1毫升]</Chinesesimp>
+            <Chinese>接收生理鹽水靜脈注射液中 [%1毫升]</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_receivingBloodIvVolume">
+            <English>Receiving Blood IV [%1ml]</English>
+            <German>Erhalte Blut IV [%1ml]</German>
+            <Spanish>Recibiendo Sangre IV [%1ml]</Spanish>
+            <Russian>Принимается кровь IV [%1 мл]</Russian>
+            <Polish>Otrzymywanie krwi IV [%1ml]</Polish>
+            <French>Transfusion de sang : [%1 ml]</French>
+            <Czech>Přijímání krve IV [%1ml]</Czech>
+            <Hungarian>Vér Infúzióra kötve [%1ml]</Hungarian>
+            <Italian>Ricevendo Sangue EV [%1ml]</Italian>
+            <Portuguese>Recebendo Sangue IV [%1ml]</Portuguese>
+            <Japanese>血液 IV [%1ml] を投与中</Japanese>
+            <Korean>혈액 IV로 [%1ml] 수혈중</Korean>
+            <Chinesesimp>正在接受血液静脉注射 [%1毫升]</Chinesesimp>
+            <Chinese>接收血液靜脈注射液中 [%1毫升]</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_receivingPlasmaIvVolume">
+            <English>Receiving Plasma IV [%1ml]</English>
+            <German>Erhalte Plasma IV [%1ml]</German>
+            <Spanish>Recibiendo Plasma IV [%1ml]</Spanish>
+            <Russian>Принимается плазма IV [%1 мл]</Russian>
+            <Polish>Otrzymywanie plazmy IV [%1ml]</Polish>
+            <French>Transfusion de plasma : [%1 ml]</French>
+            <Czech>Přijímání plazmy IV [%1ml]</Czech>
+            <Hungarian>Plazma Infúzióra kötve [%1ml]</Hungarian>
+            <Italian>Ricevendo Plasma EV [%1ml]</Italian>
+            <Portuguese>Recebendo Plasma IV [%1ml]</Portuguese>
+            <Japanese>プラズマ IV [%1ml] を投与中</Japanese>
+            <Korean>혈장 IV로 [%1ml] 수혈중</Korean>
+            <Chinesesimp>正在接受血浆静脉注射 [%1毫升]</Chinesesimp>
+            <Chinese>接收血漿靜脈注射液中 [%1毫升]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoIv">
             <English>No IV</English>
@@ -4977,18 +5009,22 @@
         <Key ID="STR_ACE_Medical_Treatment_Administer_Painkillers">
             <English>Administer Painkillers</English>
             <Russian>Вводите обезболивающие</Russian>
+            <Japanese>鎮痛剤を投与</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
             <Russian>Ввод обезболивающего...</Russian>
+            <Japanese>鎮痛剤を投与しています・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
             <Russian>Безрецептурный анальгетик, используемый для борьбы с легкими и умеренными болевыми ощущениями.</Russian>
+            <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
             <Russian>Безрецептурный анальгетик, используемый для борьбы с легкими и умеренными болевыми ощущениями.</Russian>
+            <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
         </Key>
     </Package>
 </Project>

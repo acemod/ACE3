@@ -20,7 +20,7 @@
 
 params ["_patient", "_bodyPart", "_bandage", ["_bandageEffectiveness", 1]];
 TRACE_4("bandageLocal",_patient,_bodyPart,_bandage,_bandageEffectiveness);
-_bodyPart = toLower _bodyPart;
+_bodyPart = toLowerANSI _bodyPart;
 
 private _openWounds = GET_OPEN_WOUNDS(_patient);
 private _woundsOnPart = _openWounds getOrDefault [_bodyPart, []];

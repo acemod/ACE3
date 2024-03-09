@@ -17,7 +17,7 @@
 
 params ["_fence"];
 
-private _fenceModel = toLower ((getModelInfo _fence)#0);
+private _fenceModel = toLowerANSI ((getModelInfo _fence)#0);
 
 // If fence cannot be replaced with destroyed model, just knock it over
 if !(_fenceModel in GVAR(replacements)) exitWith {

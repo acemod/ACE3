@@ -21,8 +21,9 @@ params ["_display"];
     _x params ["_idc", "_category"];
 
     private _ctrl = _display displayCtrl _idc;
-    private _enable = GVAR(actions) findIf {_category == _x select 1 && {call (_x select 2)}} > -1;
-    if (_category isEqualTo "triage") then {_enable = true};
+    private _enable = if (_category == "triage") then { true } else {
+        GVAR(actions) findIf {_category == _x select 1 && {call (_x select 2)}} > -1
+    };
     _ctrl ctrlEnable _enable;
 
     private _selectedColor = [
