@@ -44,7 +44,7 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
 
     private _cbaIsGlobal = (!_isClientSettable) || _isForced;
     private _warnIfChangedMidMission = _cbaIsGlobal && {(getNumber (_config >> "canBeChanged")) == 0};
-    if (_isForced) then {GVAR(cbaSettings_forcedSettings) pushBack (toLower _varName);};
+    if (_isForced) then {GVAR(cbaSettings_forcedSettings) pushBack (toLowerANSI _varName);};
 
     // Basic handling of setting types CBA doesn't support:
     if (_typeName == "ARRAY") exitWith {

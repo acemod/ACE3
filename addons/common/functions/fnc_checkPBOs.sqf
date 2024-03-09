@@ -25,7 +25,7 @@ params ["_mode", ["_checkAll", false], ["_whitelist", "", [""]]];
 TRACE_3("params",_mode,_checkAll,_whitelist);
 
 //lowercase and convert whiteList String into array of strings:
-_whitelist = toLower _whitelist;
+_whitelist = toLowerANSI _whitelist;
 _whitelist = _whitelist splitString "[,""']";
 TRACE_1("Array",_whitelist);
 

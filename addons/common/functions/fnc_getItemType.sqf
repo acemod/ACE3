@@ -67,7 +67,7 @@ switch (true) do {
     case (_type == TYPE_UNIFORM): {["item", "uniform"]};
 
     case (_type == TYPE_BINOCULAR_AND_NVG): {
-        switch (toLower _simulation) do {
+        switch (toLowerANSI _simulation) do {
             case ("weapon"): {["weapon", "binocular"]};
             case ("binocular"): {["weapon", "binocular"]};
             case ("nvgoggles"): {["item", "nvgoggles"]};
@@ -78,7 +78,7 @@ switch (true) do {
 
     case (_type == TYPE_WEAPON_VEHICLE): {["weapon", "vehicle"]};
     case (_type == TYPE_ITEM): {
-        switch (toLower _simulation) do {
+        switch (toLowerANSI _simulation) do {
             case ("itemmap"): {["item", "map"]};
             case ("itemgps"): {["item", "gps"]};
             case ("itemradio"): {["item", "radio"]};
