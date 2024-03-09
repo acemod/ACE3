@@ -1361,6 +1361,7 @@
             <English>Show Bleeding State</English>
             <Spanish>Mostrar estado de sangrado</Spanish>
             <German>Blutungsstatus anzeigen</German>
+            <Italian>Mostra stato di sanguinamento</Italian>
             <Portuguese>Mostrar estado de sangramento</Portuguese>
             <Japanese>出血状態の表示</Japanese>
         </Key>
@@ -1368,6 +1369,7 @@
             <English>Display if the patient is bleeding, optionally with rate</English>
             <Spanish>Mostrar si el paciente está sangrando, opcionalmente con tasa</Spanish>
             <German>Zeigt an, dass der Patient blutet, optional mit Rate</German>
+            <Italian>Mostra se il paziente sta sanguinando, opzionalmente con rateo</Italian>
             <Portuguese>Mostrar se o paciente está sangrando, opcionalmente com taxa</Portuguese>
             <Japanese>患者が出血しているかどうかを表示します。オプションで出血速度も表示します</Japanese>
         </Key>
@@ -1375,6 +1377,7 @@
             <English>Show Bleeding Rate</English>
             <Spanish>Mostrar tasa de sangrado</Spanish>
             <German>Blutungsrate anzeigen</German>
+            <Italian>Mostra rateo di sanguinamento</Italian>
             <Portuguese>Mostrar taxa de sangramento</Portuguese>
             <Japanese>出血速度の表示</Japanese>
         </Key>
