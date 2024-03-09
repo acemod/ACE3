@@ -23,4 +23,4 @@ if (!isNull (_config >> "ItemInfo" >> "containerClass")) then { // Uniform/Vest
 private _load = getNumber (_config >> (_stats # 0));
 
 if (_load <= 0) exitWith { LELSTRING(common,none) };
-format ["%1kg (%2lb)", ((_load * 0.1 * (1 / 2.2046) * 100) / 100) toFixed 2, ((_load * 0.1 * 100) / 100) toFixed 2]
+format ["%1kg (%2lb)", (_load * 0.1 * (1 / 2.2046)) toFixed 2, (_load * 0.1) toFixed 2]
