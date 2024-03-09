@@ -44,7 +44,7 @@
             <Italian>Influenza la prestazione generale di tutti i giocatori smuniti di un fattore personalizzato. Maggiore significa migliore.</Italian>
             <Chinese>影響所有玩家的體力表現，值越高代表體力越好</Chinese>
             <Chinesesimp>影响所有玩家的体力表现，值越高代表体力越好</Chinesesimp>
-            <Russian>Влияет на общую производительность игроков, у которых не задано персональное значение.</Russian>
+            <Russian>Влияет на общую производительность игроков, у которых не задано персональное значение. Чем выше, тем лучше.</Russian>
             <Portuguese>Influencia na performance geral de todos os jogadores sem nenhum fator personalizado. Quanto maior, melhor.</Portuguese>
             <Czech>Ovlivňuje celkový výkon všech hráčů bez vlastního faktoru. Vyšší znamená lépe.</Czech>
         </Key>
@@ -59,7 +59,7 @@
             <Italian>Influenza la prestazione personalizzata di questa unità. Maggiore significa migliore.</Italian>
             <Chinese>影響這個單位的體力表現，值越高代表體力越好</Chinese>
             <Chinesesimp>影响这个单位的体力表现，值越高代表体力越好</Chinesesimp>
-            <Russian>Влияет на общую производительность юнита.</Russian>
+            <Russian>Влияет на общую производительность юнита.Чем выше, тем лучше.</Russian>
             <Portuguese>Influencia na performance geral dessa unidade. Quanto maior, melhor.</Portuguese>
             <Czech>Ovlivňuje celkový výkon této jednotky. Vyšší znamená lépe.</Czech>
         </Key>
@@ -192,7 +192,7 @@
             <German>Verwacklungsfaktor, wenn aufgelegt</German>
             <Italian>Fattore di Oscillazione Appoggiato</Italian>
             <Japanese>静止時の手ぶれ係数</Japanese>
-            <Russian>Коэффициент колебания в состоянии покоя</Russian>
+            <Russian>Коэффициент колебания прицела в состоянии покоя</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RestedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is rested.</English>
@@ -202,7 +202,7 @@
             <German>Beeinflusst, wie ruhig man die Waffe hält, während sie aufgelegt ist.</German>
             <Italian>Determina la quantità di oscillazione dell'arma quando questa è appoggiata.</Italian>
             <Japanese>静止している時の武器の手ぶれの量に影響します。</Japanese>
-            <Russian>Влияет на величину колебания оружия в состоянии покоя.</Russian>
+            <Russian>Влияет на величину колебания прицела оружия в состоянии покоя.</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor">
             <English>Deployed sway factor</English>
@@ -212,7 +212,7 @@
             <German>Verwacklungsfaktor, wenn Zweibein aufgestellt ist.</German>
             <Italian>Fattore di Oscillazione su Bipode</Italian>
             <Japanese>展開時の手ぶれ係数</Japanese>
-            <Russian>Коэффициент колебания при развертывании</Russian>
+            <Russian>Коэффициент колебания прицела при развертывании</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_DeployedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is deployed.</English>
@@ -222,7 +222,7 @@
             <German>Beeinflusst, wie ruhig man die Waffen hält, während das Zweibein aufgestellt ist.</German>
             <Italian>Determina la quantità di oscillazione dell'arma quando questa è stabilizzata usando il bipode.</Italian>
             <Japanese>武器の展開(Cキー)時の武器の手ぶれの量に影響します。</Japanese>
-            <Russian>Влияет на величину колебания оружия при его развертывании.</Russian>
+            <Russian>Влияет на величину колебания прицела оружия при его развертывании.</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
@@ -250,7 +250,7 @@
             <Italian>Abilita/Disabilita la Fatica Avanzata.</Italian>
             <Chinese>啟用/關閉進階體力.</Chinese>
             <Chinesesimp>启用/关闭进阶体力。</Chinesesimp>
-            <Russian>Включает / Отключает Продвинутую усталость</Russian>
+            <Russian>Включает/отключает Продвинутую усталость</Russian>
             <Portuguese>Ativa/Desativa Fadiga Avançada.</Portuguese>
             <Czech>Aktivuje / deaktivuje Pokročilou únavu.</Czech>
         </Key>

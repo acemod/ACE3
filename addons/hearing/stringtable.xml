@@ -366,6 +366,7 @@
         <Key ID="STR_ACE_Hearing_PutOrRemoveEarplugs">
             <English>Put/take out earplugs</English>
             <Japanese>耳栓を着け外す</Japanese>
+            <Russian>Вставить/вынуть беруши</Russian>
         </Key>
     </Package>
 </Project>

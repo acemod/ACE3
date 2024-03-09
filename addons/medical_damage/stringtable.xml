@@ -20,7 +20,7 @@
             <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
             <Japanese>プレイヤーが気絶するまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
-            <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
+            <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание (и умирает, если включена функция "Сумма травм").</Russian>
             <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
             <Chinesesimp>设置玩家在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
@@ -51,7 +51,7 @@
             <English>Sets the amount of damage an AI unit can receive before going unconscious (or dying when "Sum of Trauma" is enabled).</English>
             <Japanese>AIが気絶するまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
-            <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
+            <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание (или умирает, когда включена функция "Сумма травм")..</Russian>
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
             <Chinesesimp>设置 AI 在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>

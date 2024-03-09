@@ -268,13 +268,13 @@
             <English>Allow Plotting Board Drawing channels</English>
             <Japanese>標定盤への書き込みを許可するチャンネル</Japanese>
             <Korean>플로팅 보드 그리기 채널 허용</Korean>
-            <Russian>Разрешить создание каналов для рисования на графической плате</Russian>
+            <Russian>Разрешить создание каналов на миллиметровой доске.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
             <English>Channels in which plotting board drawing is enabled.</English>
             <Japanese>どのチャンネルで標定盤の書き込みを有効化するか。</Japanese>
             <Korean>플로팅 보드 그리기가 활성화된 채널입니다.</Korean>
-            <Russian>Каналы, в которых включено рисование на графической плате.</Russian>
+            <Russian>Каналы, в которых включено рисование на миллиметровой доске.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
             <English>Allow Direct Comms Only (Polylines Only)</English>
@@ -292,61 +292,61 @@
             <English>Plotting Board</English>
             <Japanese>標定盤</Japanese>
             <Korean>플로팅 보드</Korean>
-            <Russian>Графическая доска</Russian>
+            <Russian>Миллиметровая доска</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardAcrylicLabel">
             <English>Plotting Board Acrylic</English>
             <Japanese>標定盤の アクリル板</Japanese>
             <Korean>플로팅 보드 (아크릴)</Korean>
-            <Russian>Графическая доска акрилловая</Russian>
+            <Russian>Миллиметровая доска акрилловая</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
             <English>Plotting Board Ruler</English>
             <Japanese>標定盤の 定規</Japanese>
             <Korean>플로팅 보드 (자)</Korean>
-            <Russian>Линейка для черчения на доске</Russian>
+            <Russian>Линейка для миллиметровой доски</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
             <English>To Plotting Board</English>
             <Japanese>標定盤に</Japanese>
             <Korean>플로팅 보드에</Korean>
-            <Russian>К чертежной доске</Russian>
+            <Russian>К миллиметровой доске.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
             <English>To Plotting Board Acrylic</English>
             <Japanese>標定盤の アクリル板に</Japanese>
             <Korean>플로팅 보드 (아크릴)에</Korean>
-            <Russian>К чертежной доске акрилловой</Russian>
+            <Russian>К миллиметровой доске акрилловой</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
             <English>To Plotting Board Ruler</English>
             <Japanese>標定盤の 定規に</Japanese>
             <Korean>플로팅 보드 (자)에</Korean>
-            <Russian>К линейке для построения чертежной доски</Russian>
+            <Russian>К линейке миллиметровой доски.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
             <English>Wipe all markers off Plotting Board</English>
             <Japanese>標定盤の 全マーカーを 拭き消す</Japanese>
             <Korean>플로팅 보드에 있는 모든 마커 지우기</Korean>
-            <Russian>Сотрите все маркеры с доски для черчения</Russian>
+            <Russian>Сотрите все маркеры с миллиметровой доски.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
             <English>Show Plotting Board</English>
             <Japanese>標定盤を 表示</Japanese>
             <Korean>플로팅 보드 보이기</Korean>
-            <Russian>Скрыть графическую доску</Russian>
+            <Russian>Показать миллиметровую доску.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_HidePlottingBoard">
             <English>Hide Plotting Board</English>
             <Japanese>標定盤を 隠す</Japanese>
             <Korean>플로팅 보드 숨기기</Korean>
-            <Russian>Переключение линейки для построения графической доски</Russian>
+            <Russian>Скрыть миллиметровую доску.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
             <English>Toggle Plotting Board Ruler</English>
             <Japanese>標定盤の 定規を 表示切替</Japanese>
             <Korean>플로팅 보드 (자) 토글</Korean>
-            <Russian>Переключение линейки для построения графической доски</Russian>
+            <Russian>Переключить линейку миллиметровой доски.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_AlignTo">
             <English>Align</English>
