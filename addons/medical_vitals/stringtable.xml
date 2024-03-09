@@ -4,12 +4,18 @@
         <Key ID="STR_ACE_Medical_Vitals_SubCategory">
             <English>Vitals</English>
             <Portuguese>Vitais</Portuguese>
+            <Russian>Жизненно важные органы</Russian>
+            <Japanese>バイタル</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_DisplayName">
             <English>Enable SpO2 Simulation</English>
+            <Russian>Включить имитацию SpO2</Russian>
+            <Japanese>SpO2シミュレーションを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_Description">
             <English>Enables oxygen saturation simulation, providing variable heart rate and oxygen demand based on physical activity and altitude. Required for Airway Management.</English>
+            <Russian>Позволяет имитировать насыщение кислородом, обеспечивая переменную частоту сердечных сокращений и потребность в кислороде в зависимости от физической активности и высоты над уровнем моря. Требуется для управления дыхательными путями.</Russian>
+            <Japanese>酸素飽和度シミュレーションを有効にし、身体活動や標高に基づいて変動する心拍数と酸素要求量の機能を提供します。 気道管理に必要です。</Japanese>
         </Key>
     </Package>
 </Project>

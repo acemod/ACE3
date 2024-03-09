@@ -362,7 +362,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
-        switch (toLower _position) do {
+        switch (toLowerANSI _position) do {
             case (""): {
                 _UAV = objNull; // set to objNull if not actively controlling
             };

@@ -17,13 +17,13 @@
  *
  * Public: No
  */
- 
+
 params ["_vehicle", "_group", "_type", "_value"];
 TRACE_4("droneModifyWaypoint",_vehicle,_group,_type,_value);
 
 private _index = (currentWaypoint _group) min count waypoints _group;
 private _waypoint = [_group, _index];
-switch (toLower _type) do {
+switch (toLowerANSI _type) do {
     case ("height"): {
         private _pos = waypointPosition _waypoint;
         _pos set [2, _value];

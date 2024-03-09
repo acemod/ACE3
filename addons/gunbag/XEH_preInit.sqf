@@ -27,23 +27,34 @@ PREP_RECOMPILE_END;
 }] call CBA_fnc_addClassEventHandler;
 
 [QEGVAR(arsenal,loadoutVerified), {
-    params ["_loadout", "_extendedInfo"];
+    params ["_loadout", "_extendedInfo", "", "", "_missingExtendedInfo"];
     private _gunbagInfo = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
     if (_gunbagInfo isEqualTo []) exitWith {};
 
     private _weapon = (_gunbagInfo select 0) call EFUNC(arsenal,baseWeapon);
     if !(_weapon in EGVAR(arsenal,virtualItemsFlat)) exitWith {
-        INFO_1("removing [%1] from loadout",_gunbagInfo);
+        _missingExtendedInfo pushBack [QGVAR(gunbagWeapon), _weapon];
         _extendedInfo deleteAt QGVAR(gunbagWeapon);
     };
+    private _missingItems = [];
+    private _attachments = _gunbagInfo select 1;
+    {
+        if (_x != "" && {!(_x call EFUNC(arsenal,baseWeapon) in EGVAR(arsenal,virtualItemsFlat))}) then {
+            _missingItems pushBack _x;
+            _attachments set [_forEachIndex, ""];
+        };
+    } forEach _attachments;
+    private _magazines = _gunbagInfo select 2;
     {
         private _class = _x param [0, ""];
-        private _defaultValue = ["", []] select {_x isEqualType []};
         if (_class != "" && {!(_class in EGVAR(arsenal,virtualItemsFlat))}) then {
-            INFO_1("removing [%1] from loadout",_x);
-            _gunbagInfo set [_forEachIndex + 1, _defaultValue];
+            _missingItems pushBack _class;
+            _magazines set [_forEachIndex, ["", 0]];
         };
-    } forEach (_gunbagInfo select [1]); // weapon was verified above
+    } forEach _magazines;
+    if (_missingItems isNotEqualTo []) then {
+        _missingExtendedInfo pushBack [QGVAR(gunbagWeapon), _missingItems];
+    };
 }] call CBA_fnc_addEventHandler;
 
 ["CBA_loadoutSet", {

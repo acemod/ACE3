@@ -56,6 +56,7 @@
             <Korean>쿡오프 후 차량이 항상 파괴되는지 여부를 조정합니다.</Korean>
             <French>Contrôle si les véhicules seront toujours détruits après l'auto-inflammation.</French>
             <Portuguese>Define se os veículos serão sempre destruídos após cozinhamento.</Portuguese>
+            <Russian>Определяет, всегда ли транспортные средства будут уничтожаться после детонации.</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable vehicle ammo cook-off</English>

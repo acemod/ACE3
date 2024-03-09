@@ -16,6 +16,8 @@ PREP(attributeKeyDown);
 PREP(attributeLoad);
 PREP(attributeMode);
 PREP(attributeSelect);
+PREP(baseAttachment);
+PREP(baseOptic);
 PREP(baseWeapon);
 PREP(buttonActionsPage);
 PREP(buttonCargo);

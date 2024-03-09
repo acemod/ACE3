@@ -58,6 +58,7 @@
             <Polish>Prędkość Tankowania Ładunku</Polish>
             <German>Frachtflussrate</German>
             <French>Vitesse de ravitaillement</French>
+            <Russian>Скорость заполнения груза</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
             <English>How fast should a fuel source's tank be filled?</English>
@@ -68,6 +69,7 @@
             <Polish>Jak szybko zbiornik paliwa powinien być napełniany?</Polish>
             <German>Wie schnell sollte der Tank einer Kraftstoffquelle gefüllt werden?</German>
             <French>A quelle vitesse le réservoir de carburant doit-il être rempli ?</French>
+            <Russian>Как быстро должен заполняться бак источника топлива?</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
@@ -318,6 +320,7 @@
             <Japanese>給油を始める (コンテナ)</Japanese>
             <Polish>Rozpocznij tankowanie (zbiornik)</Polish>
             <French>Commencer le ravitaillement (container)</French>
+            <Russian>Начать заправку топливом (контейнер)</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
@@ -501,6 +504,7 @@
             <Italian>Raccogli contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを持つ</Japanese>
             <Korean>연료통 집어들기</Korean>
+            <Russian>Взять канистру с топливом</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeFuelCanisterAction">
             <English>Picking fuel canister up...</English>
@@ -508,6 +512,7 @@
             <Italian>Raccogliendo contenitore di carburante...</Italian>
             <Japanese>燃料キャニスターを持ち上げています・・・</Japanese>
             <Korean>연료통 집어드는 중...</Korean>
+            <Russian>Поднимаю канистру с топливом...</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanister">
             <English>Connect fuel canister</English>
@@ -515,6 +520,7 @@
             <Italian>Collega contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを接続する</Japanese>
             <Korean>연료통 꽂기</Korean>
+            <Russian>Подсоединить канистру с топливом</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanisterAction">
             <English>Connecting fuel canister...</English>
@@ -522,6 +528,7 @@
             <Italian>Collegando contenitore di carburante...</Italian>
             <Japanese>燃料キャニスターを接続しています・・・</Japanese>
             <Korean>연료통 꽂는 중...</Korean>
+            <Russian>Подсоединение топливной канистры...</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_DisconnectFuelCanister">
             <English>Disconnect fuel canister</English>
@@ -529,6 +536,7 @@
             <Italian>Scollega contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを外します</Japanese>
             <Korean>연료통 빼기</Korean>
+            <Russian>Отсоединить канистру с топливом</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>

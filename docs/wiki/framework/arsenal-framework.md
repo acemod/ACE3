@@ -136,7 +136,7 @@ Examples:
 
 ACE Arsenal uses 2 existing config entries to sort and display items.
 
-- `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in `CfgWeapons`.
+- `baseWeapon`: Class name that is used to display an item in the arsenal, used for weapon/attachment variants that are not normally shown to the player (AI variants, PIP optics, and so on). This property can be applied to any weapon or weapon attachment in `CfgWeapons`. Items using CBA or RHS' Scripted Optics systems, or CBA Switchable Attachments do not need this property explictly set, and will automatically use their player-accessible class.
 - `ACE_isUnique`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
 
 ### 3.2 New config entries
@@ -511,7 +511,7 @@ All are local.
 | ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
-| ace_arsenal_loadoutVerified | loadout data (ARRAY), loadout CBA extended data (HASHMAP) | 3.17.0 |
+| ace_arsenal_loadoutVerified | loadout data (ARRAY), loadout CBA extended data (HASHMAP), null items (ARRAY), unavailable items (ARRAY), unavailable extended data (ARRAY) | 3.17.0 |
 | ace_arsenal_weaponItemChanged | weapon classname (STRING), item classname (STRING), item index (NUMBER, 0-5: muzzle, side, optic, bipod, magazine, underbarrel) | 3.16.0 |
 
 ## 9. Custom sub item categories
