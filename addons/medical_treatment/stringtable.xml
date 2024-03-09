@@ -70,7 +70,7 @@
             <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
             <Polish>Włączone i pozwala zdiagnozować Śmierć/Zatrzymanie Akcji Serca</Polish>
             <Japanese>有効 &amp; 死亡/心停止状態を診断可能</Japanese>
-            <Russian>Включено &amp; Может диагностировать смерть/остановку сердца</Russian>
+            <Russian>Включено и может диагностировать смерть/остановку сердца</Russian>
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren</German>
             <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停</Chinesesimp>
             <Korean>활성화 및 사망/심정지 진찰가능</Korean>
@@ -775,7 +775,7 @@
             <Czech>Samo-zašívání</Czech>
             <Polish>Zszywanie własnych ran</Polish>
             <German>Selbstnähen</German>
-            <Russian>Зашивание своей раны</Russian>
+            <Russian>Зашитие своей раны</Russian>
             <Spanish>Auto cosido</Spanish>
             <Korean>봉합키트 자가 사용</Korean>
         </Key>
@@ -4603,7 +4603,7 @@
             <Turkish>Vücudu siyah ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (黒) に入れる</Japanese>
             <Korean>시체를 검은 시체가방에 놓기</Korean>
-            <Russian>Положите тело в черный мешок для тела</Russian>
+            <Russian>Положить тело в черный мешок для тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlue">
             <English>Place body in blue bodybag</English>
@@ -4616,7 +4616,7 @@
             <Turkish>Vücudu mavi ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (青) に入れる</Japanese>
             <Korean>시체를 파란 시체가방에 놓기</Korean>
-            <Russian>Положите тело в синий мешок для тела</Russian>
+            <Russian>Положить тело в синий мешок для тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagWhite">
             <English>Place body in white bodybag</English>
@@ -4629,7 +4629,7 @@
             <Turkish>Vücudu beyaz ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (白) に入れる</Japanese>
             <Korean>시체를 흰 시체가방에 놓기</Korean>
-            <Russian>Положите тело в белый мешок для тела</Russian>
+            <Russian>Положить тело в белый мешок для тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -4666,7 +4666,7 @@
             <German>Grab für Leichnam ausheben ...</German>
             <Italian>Scavando tomba per cadavere...</Italian>
             <Japanese>墓を掘っています</Japanese>
-            <Russian>Рою могилу для тела...</Russian>
+            <Russian>Рытьё могилы для тела...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -4837,7 +4837,7 @@
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
-            <Russian>Исцелять полностью перебинтованные части тела</Russian>
+            <Russian>Исцелить полностью перебинтованные части тела</Russian>
             <Portuguese>Curar membros totalmente enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura hitpoints completamente bendati</Italian>
@@ -4928,7 +4928,7 @@
             <French>Pansement de plaies multiples</French>
             <Italian>Srotolamento Bendaggi</Italian>
             <Japanese>包帯の繰り越し</Japanese>
-            <Russian>Переворачивание бинта</Russian>
+            <Russian>Перевязка множественных ран</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
@@ -4938,7 +4938,7 @@
             <French>Si activé, les bandages peuvent fermer plusieurs types de blessures sur la même partie du corps.\nPanser de multiples blessures modifiera la durée d'application en conséquence.</French>
             <Italian>Se attivo, un singolo bendaggio potrà chiudere più ferite sulla stessa parte del corpo.\nBendare più ferite di conseguenza richiederà più tempo.</Italian>
             <Japanese>有効にすると、体の同じ部分にある別の種類の傷を一つの包帯で閉じることができます。\n複数の傷に包帯を巻くと、それに応じて包帯時間が変動します。</Japanese>
-            <Russian>Если эта функция включена, бинты могут закрывать различные типы ран на одной и той же части тела.n\При перевязке нескольких повреждений время перевязки будет увеличено соответствующим образом.</Russian>
+            <Russian>Если эта функция включена, бинты могут закрывать различные типы ран на одной и той же части тела.\nПри перевязке нескольких повреждений время перевязки будет увеличено соответствующим образом.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
             <English>Bandage Effectiveness Coefficient</English>
@@ -5008,12 +5008,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administer_Painkillers">
             <English>Administer Painkillers</English>
-            <Russian>Вводите обезболивающие</Russian>
+            <Russian>Испол-ть обезболивающие</Russian>
             <Japanese>鎮痛剤を投与</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
-            <Russian>Ввод обезболивающего...</Russian>
+            <Russian>Использование обезболивающего...</Russian>
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
