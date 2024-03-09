@@ -35,6 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_deployObject">
             <English>Deploy</English>
+            <Italian>Piazza</Italian>
             <Russian>Разместить</Russian>
             <Japanese>配置する</Japanese>
         </Key>
@@ -279,12 +280,14 @@
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading %1 into %2...</English>
             <Spanish>Cargando %1 en %2...</Spanish>
+            <Italian>Caricando %1 in %2...</Italian>
             <Japanese>%1 を %2 に積み込んでいます・・・</Japanese>
             <Russian>Загружаем %1 в %2...</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading %1 from %2...</English>
             <Spanish>Descargando %1 de %2...</Spanish>
+            <Italian>Scaricando %1 da %2...</Italian>
             <Japanese>%1 を %2 から降ろしています・・・</Japanese>
             <Russian>Выгружаем %1 из %2...</Russian>
         </Key>
@@ -570,11 +573,13 @@
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy">
             <English>Enable deploy</English>
+            <Italian>Abilita Piazzamento</Italian>
             <Russian>Включить размещение</Russian>
             <Japanese>配置機能を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy_description">
             <English>Controls whether cargo items can be unloaded via the deploy method.</English>
+            <Italian>Determina se oggetti in carico possono essere scaricati e piazzati direttamente.</Italian>
             <Russian>Определяет, можно ли выгружать грузы с помощью метода размещения.</Russian>
             <Japanese>配置機能を介して貨物アイテムを降ろすことが出来るかどうかを制御します。</Japanese>
         </Key>
