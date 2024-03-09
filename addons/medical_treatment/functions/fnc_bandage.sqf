@@ -22,7 +22,7 @@
 _this set [4, _this param [4, 1]]; // set default Bandage effectiveness coefficient
 [QGVAR(bandaged), _this] call CBA_fnc_localEvent; // Raise event with reference so mods can modify this
 
-params ["_medic", "_patient", "_bodyPart", "_classname", ["_bandageEffectiveness", 1]];
+params ["_medic", "_patient", "_bodyPart", "_classname", "_bandageEffectiveness"];
 
 [_patient, "activity", LSTRING(Activity_bandagedPatient), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
