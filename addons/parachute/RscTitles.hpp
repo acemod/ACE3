@@ -42,7 +42,7 @@ class RscTitles {
                 text = "00:00:00";
                 x = "0.202094 * safezoneW + safezoneX";
                 y = "0.819 * safezoneH + safezoneY";
-                w = "0.0350375 * safezoneW";
+                w = "0.0380375 * safezoneW";
                 h = "0.022 * safezoneH";
                 colorText[] = {0,0,0,1};
             };
