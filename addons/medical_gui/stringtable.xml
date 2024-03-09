@@ -217,7 +217,7 @@
             <Italian>Mostra livello di Triage nel Menù d'Interazione</Italian>
             <Japanese>インタラクションにトリアージ レベルを表示</Japanese>
             <Spanish>Mostrar nivel de triado en menú de interacción</Spanish>
-            <Russian>Показывать группу триажа в меню взаимодействий</Russian>
+            <Russian>Показать уровень триажа в меню взаимодействия</Russian>
             <Polish>Pokaż poziom Triażu w menu interakcji</Polish>
             <German>Zeige Triage-Einstufung im Interaktionsmenü</German>
             <Chinesesimp>在交互式菜单中显示分诊级别</Chinesesimp>
@@ -292,7 +292,7 @@
             <Italian>Sbircia Info Mediche</Italian>
             <German>Medizinische Info anzeigen</German>
             <Japanese>医療情報一時表示</Japanese>
-            <Russian>Просмотрите медицинскую информацию</Russian>
+            <Russian>Просмотр медицинской информации</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
             <English>Medical Peek Duration</English>
@@ -1041,7 +1041,7 @@
             <German>Massive Blutung</German>
             <Italian>Gravissima emorragia</Italian>
             <Japanese>出血は酷く多い</Japanese>
-            <Russian>Сильное кровотечение</Russian>
+            <Russian>Огромное кровотечение</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
@@ -1390,7 +1390,7 @@
             <Italian>Mostra info mediche se colpito</Italian>
             <German>Zeige medizinische Info beim Treffer an</German>
             <Japanese>被弾時の医療情報一時表示</Japanese>
-            <Russian>Просмотрите медицинскую информацию о попадании</Russian>
+            <Russian>Показать медицинскую информацию о попадании</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
             <English>Temporarily show medical info when injured.</English>

@@ -325,7 +325,7 @@
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffset">
             <English>UTC Minutes Offset</English>
-            <Russian>UTC Минутное Смещение</Russian>
+            <Russian>UTC Минутное смещение</Russian>
             <French>Décalage des minutes UTC</French>
             <Japanese>UTC分オフセット</Japanese>
             <Spanish>Desplazamiento de minutos UTC</Spanish>
