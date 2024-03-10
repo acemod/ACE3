@@ -6,10 +6,10 @@
  * Arguments:
  * 0: Vehicle or Unit <OBJECT>
  * 1: Item <STRING>
- * 2: Ammo to add <NUMBER> (default: -1)
+ * 2: Ammo to adjust by <NUMBER> (default: -1)
  *
  * Return Value:
- * Empty mag <BOOLEAN> - true if the magazine is empty after the ammo is consumed
+ * How much the ammo was adjusted by <NUMBER>
  *
  * Example:
  * [player, "30Rnd_556x45_Stanag", 1] call ace_common_fnc_adjustMagazineAmmo;
@@ -19,6 +19,8 @@
 
 params ["_unit", "_magazine", ["_count", -1]];
 
+if (_count == 0) exitWith {};
+
 private _containers = if (_unit isKindOf "CAManBase") then {
     [uniformContainer _unit, vestContainer _unit, backpackContainer _unit]
 } else {
@@ -27,9 +29,12 @@ private _containers = if (_unit isKindOf "CAManBase") then {
 
 scopeName "main";
 
+private _originalCount = _count;
 private _container = objNull;
 private _magazinesContainer = [];
 private _newAmmoCount = 0;
+private _removeAmmo = _count < 0;
+private _maxMagazineAmmo = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
 
 {
     _container = _x;
@@ -37,33 +42,70 @@ private _newAmmoCount = 0;
     // Get all magazines of _magazine type
     _magazinesContainer = (magazinesAmmoCargo _container) select {_x select 0 == _magazine};
 
+    // Get the ammo count, filter out magazines with 0 ammo
+    _magazinesContainer = (_magazinesContainer apply {_x select 1}) select {_x != 0};
+
     // If there are none, skip to next container
     if (_magazinesContainer isEqualTo []) then {
         continue;
     };
 
-    // Get the ammo count
-    _magazinesContainer = _magazinesContainer apply {_x select 1};
+    // Sort, smallest first when removing, largest first when adding
+    _magazinesContainer sort _removeAmmo;
 
-    // Sort, smallest first
-    _magazinesContainer sort true;
+    if (_removeAmmo) then {
+        {
+            _count = _x + _count;
 
-    {
-        _newAmmoCount = _x + _count;
-
-        if (_newAmmoCount >= 0) exitWith {
             _container addMagazineAmmoCargo [_magazine, -1, _x];
 
-            private _emptyMag = _newAmmoCount == 0;
+            if (_count >= 0) then {
+                // Only add magazine back if it's not empty
+                if (_count != 0) then {
+                    _container addMagazineAmmoCargo [_magazine, 1, _count];
+                };
 
-            // Only add magazine back if it's not empty
-            if (!_emptyMag) then {
+                _originalCount breakOut "main";
+            };
+        } forEach _magazinesContainer;
+    } else {
+        // This loop only fills up partially filled magazines
+        {
+            if (_x == _maxMagazineAmmo) then {
+                continue;
+            };
+
+            // Fill the magazine to either its max or until all ammo has been added
+            _newAmmoCount = (_x + _count) min _maxMagazineAmmo;
+
+            if (_newAmmoCount <= _maxMagazineAmmo) then {
+                _container addMagazineAmmoCargo [_magazine, -1, _x];
                 _container addMagazineAmmoCargo [_magazine, 1, _newAmmoCount];
             };
 
-            _emptyMag breakOut "main";
-        };
-    } forEach _magazinesContainer;
+            // Remove the ammo that was added
+            _count = _count - (_newAmmoCount - _x);
+
+            if (_count <= 0) then {
+                _originalCount breakOut "main";
+            };
+        } forEach _magazinesContainer;
+    };
 } forEach _containers;
 
-false
+// If there is still remaining ammo to add, try add it after having iterated through all containers
+if (!_removeAmmo && _count > 0) then {
+    {
+        while {_count > 0 && {_x canAdd [_magazine, 1/* 2.18 , true*/]}} do {
+            _x addMagazineAmmoCargo [_magazine, 1, _count];
+
+            _count = _count - _maxMagazineAmmo;
+        };
+    } forEach _containers;
+
+    if (_count <= 0) then {
+        _originalCount breakOut "main";
+    };
+};
+
+_originalCount - _count
