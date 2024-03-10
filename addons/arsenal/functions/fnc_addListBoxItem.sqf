@@ -22,7 +22,7 @@
 
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]], ["_configRoot", 0, [0]]];
 
-private _skip = GVAR(favoritesOnly) && {!(_className in GVAR(currentItems))} && {!((toLower _className) in GVAR(favorites))};
+private _skip = GVAR(favoritesOnly) && {!(_className in GVAR(currentItems))} && {!((toLowerANSI _className) in GVAR(favorites))};
 if (_skip) then {
     switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonPrimaryWeapon: {
@@ -58,7 +58,7 @@ _ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
 _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIcons)];
 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
 
-if ((toLower _className) in GVAR(favorites)) then {
+if ((toLowerANSI _className) in GVAR(favorites)) then {
     _ctrlPanel lbSetColor [_lbAdd, FAVORITES_COLOR];
     _ctrlPanel lbSetSelectColor [_lbAdd, FAVORITES_COLOR];
 };

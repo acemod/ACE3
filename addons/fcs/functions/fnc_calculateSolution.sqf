@@ -48,10 +48,10 @@ private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurret
             } count _muzzles;
 
             // Fix the `in` operator being case sensitive and BI fucking up the spelling of their own classnames
-            private _weaponMagazinesCheck = _weaponMagazines apply {toLower _x};
+            private _weaponMagazinesCheck = _weaponMagazines apply {toLowerANSI _x};
 
             // Another BIS fix: ShotBullet simulation uses weapon initSpeed, others ignore it
-            if (toLower _magazine in _weaponMagazinesCheck && {_bulletSimulation == "shotBullet"}) exitWith {
+            if (toLowerANSI _magazine in _weaponMagazinesCheck && {_bulletSimulation == "shotBullet"}) exitWith {
                 private _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
 
                 if (_initSpeedCoef < 0) then {
