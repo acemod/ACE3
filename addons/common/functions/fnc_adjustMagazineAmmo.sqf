@@ -89,7 +89,7 @@ private _maxMagazineAmmo = getNumber (configFile >> "CfgMagazines" >> _magazine 
             if (_count <= 0) then {
                 _originalCount breakOut "main";
             };
-        } forEach _magazinesContainer;
+        } forEach (_magazinesContainer select {_x < _maxMagazineAmmo});
     };
 } forEach _containers;
 
