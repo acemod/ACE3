@@ -298,7 +298,7 @@ class GVAR(display) {
                     h = QUOTE(5 * GRID_H);
                     colorBackground[] = {0.1,0.1,0.1,0.8};
                 };
-                class statsTitle1: RscText {
+                class statsTitle1: RscStructuredText {
                     idc = IDC_statsTitle1;
                     fade = 1;
                     x = QUOTE(0 * GRID_W);
@@ -307,7 +307,7 @@ class GVAR(display) {
                     h = QUOTE(5 * GRID_H);
                     colorBackground[] = {0,0,0,0};
                     colorText[] = {0.7,0.7,0.7,1};
-                    sizeEx = QUOTE(5 * GRID_H);
+                    size = QUOTE(5 * GRID_H);
                     text = "";
                 };
                 class statsBackground1: ctrlStaticBackground {
@@ -331,7 +331,7 @@ class GVAR(display) {
                     w = QUOTE(45 * GRID_W);
                     h = QUOTE(4 * GRID_H);
                 };
-                class statsText1: RscText {
+                class statsText1: RscStructuredText {
                     idc = IDC_statsText1;
                     shadow = 0;
                     fade = 1;
@@ -341,7 +341,7 @@ class GVAR(display) {
                     y = QUOTE(10 * GRID_H);
                     w = QUOTE(45 * GRID_W);
                     h = QUOTE(4 * GRID_H);
-                    sizeEx = QUOTE(5 * GRID_H);
+                    size = QUOTE(5 * GRID_H);
                     text = "";
                 };
                 class statsTitle2: statsTitle1 {

@@ -124,7 +124,7 @@ private _fnc_handleStats = {
         _statsTextCtrl = _display displayCtrl (_statsTitleIDC + 3);
 
         _statsCount = _statsCount + 1;
-        _statsTitleCtrl ctrlSetText _title;
+        _statsTitleCtrl ctrlSetStructuredText parseText _title;
         _statsTitleCtrl ctrlSetFade 0;
 
         // Handle bars
@@ -145,7 +145,7 @@ private _fnc_handleStats = {
                 _textStatementResult = str _textStatementResult;
             };
 
-            _statsTextCtrl ctrlSetText _textStatementResult;
+            _statsTextCtrl ctrlSetStructuredText parseText _textStatementResult;
             _statsTextCtrl ctrlSetTextColor ([[1, 1, 1, 1], [0, 0, 0, 1]] select (_showBar));
             _statsTextCtrl ctrlSetFade 0;
         } else {
