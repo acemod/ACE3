@@ -71,10 +71,6 @@ private _maxMagazineAmmo = getNumber (configFile >> "CfgMagazines" >> _magazine 
     } else {
         // This loop only fills up partially filled magazines
         {
-            if (_x == _maxMagazineAmmo) then {
-                continue;
-            };
-
             // Fill the magazine to either its max or until all ammo has been added
             _newAmmoCount = (_x + _count) min _maxMagazineAmmo;
 
