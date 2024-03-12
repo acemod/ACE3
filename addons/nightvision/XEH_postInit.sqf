@@ -32,7 +32,28 @@ GVAR(isUsingMagnification) = false;
     ["turret", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
     ["ACE_controlledUAV", LINKFUNC(refreshGoggleType)] call CBA_fnc_addEventHandler;
 
-    ["CAManBase", "SlotItemChanged", LINKFUNC(onSlotItemChanged)] call CBA_fnc_addClassEventHandler;
+    ["unit", {
+        params ["_newPlayer", "_oldPlayer"];
+
+        private _ehID = _oldPlayer getVariable QGVAR(ehID);
+
+        if (!isNil "_ehID") then {
+            _oldPlayer removeEventHandler ["SlotItemChanged", _ehID];
+
+            _oldPlayer setVariable [QGVAR(ehID), nil];
+        };
+
+        _ehID = _newPlayer getVariable QGVAR(ehID);
+
+        if (isNil "_ehID") then {
+            // Call manually to update existing value
+            [] call FUNC(refreshGoggleType);
+
+            _ehID = _newPlayer addEventHandler ["SlotItemChanged", LINKFUNC(onSlotItemChanged)];
+
+            _newPlayer setVariable [QGVAR(ehID), _ehID];
+        };
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
     // handle only brightness if effects are disabled
     GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];

@@ -19,9 +19,10 @@
  */
 
 params ["_unit", "_item", "_slot", "_assign"];
-TRACE_4("onSlotItemChange",_unit,_item,_slot,_assign);
+TRACE_4("onSlotItemChanged",_unit,_item,_slot,_assign);
 
-if (_unit != ACE_player || _slot != TYPE_HMD) exitWith {};
+if (_slot != TYPE_HMD) exitWith {};
+
 if (!_assign) exitWith {
     GVAR(playerHMD) = "";
 };
