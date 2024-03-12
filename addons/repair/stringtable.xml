@@ -2225,7 +2225,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
             <English>Maximum damage to which a wheel can be patched.\n0% means all damage can be repaired.</English>
-            <Japanese>タイヤを補修できる最大の度合い。</Japanese>
+            <Japanese>タイヤを補修できる最大の度合い。/n 0% は、すべてのダメージが修復可能であることを意味します</Japanese>
             <Polish>Maksymalny poziom, do którego koło może zostać załatane.\n0% oznacza że każde uszkodzenia mogą być naprawione.</Polish>
             <Italian>Livello di integrità massimo di una ruota rattoppata.</Italian>
             <German>Maximales Level, bis zu dem ein Rad geflickt werden kann.\n0% bedeutet, dass das Rad vollständig repariert werden kann.</German>
