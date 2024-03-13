@@ -1829,14 +1829,19 @@
             <Turkish>Alt</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_QTEInput">
-            <English>Command (Hold CTRL down)</English>
-            
+            <English>Command</English>
         </Key>
         <Key ID="STR_ACE_Common_QTEAccepted">
             <English>Accepted</English>  
         </Key>
         <Key ID="STR_ACE_Common_QTECancelled">
             <English>Command Cancelled</English>  
+        </Key>
+        <Key ID="STR_ACE_Common_QTEHoldKey">
+            <English>Hold Down Key</English>  
+        </Key>
+        <Key ID="STR_ACE_Common_QTEInputKeys">
+            <English>Input Keys</English>  
         </Key>
     </Package>
 </Project>

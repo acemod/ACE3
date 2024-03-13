@@ -100,3 +100,21 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     [[0, 1, 2], [LSTRING(None), LSTRING(progressBarInfoPercentage), LSTRING(progressBarInfoTime)], 2],
     0
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(QTEHoldKey),
+    "LIST",
+    localize LSTRING(QTEHoldKey),
+    "ACE QTE",
+    [["Ctrl", "Alt", "Shift"], ["Ctrl", "Alt", "Shift"], 0],
+    0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(QTEInputKeys),
+    "LIST",
+     localize LSTRING(QTEInputKeys),
+    "ACE QTE",
+    [["Arrows", "WASD", "IJKL", "Numpad"], ["Arrows", "WASD", "IJKL", "Numpad"], 0],
+    0
+] call CBA_fnc_addSetting;
