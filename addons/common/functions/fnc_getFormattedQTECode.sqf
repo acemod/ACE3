@@ -15,5 +15,5 @@
  */
 
 params ["_code"];
-_val = _code joinString "     "; // Arma doesn't know how to space ↑ so we need loads of spaces between
-_val;
+
+_code joinString "     " // Arma doesn't know how to space ↑ so we need loads of spaces between
