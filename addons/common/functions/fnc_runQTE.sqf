@@ -1,5 +1,5 @@
 #include "..\script_component.hpp"
-#include "\a3\ui_f\hpp\definedikcodes.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: john681611
  * Runs a Quick time Event.
