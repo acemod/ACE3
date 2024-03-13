@@ -31,7 +31,7 @@ GVAR(QTEMaxDistance) = _max_distance;
 GVAR(QTECode) = _keyCode;
 GVAR(QTEHistory) = [];
 
-hint format ["%1: \n %2", localize LSTRING(QTEInput), [GVAR(QTECode)] call FUNC(getFormattedQTECode)];
+hint format ["%1: \n %2", LLSTRING(QTEInput), [GVAR(QTECode)] call FUNC(getFormattedQTECode)];
 
 findDisplay 46 displayAddEventHandler ["KeyUp", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
