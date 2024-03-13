@@ -94,7 +94,7 @@ findDisplay 46 displayAddEventHandler ["KeyUp", {
         _override;
     };
 
-    if (!(GVAR(QTEHistory) isEqualTo (GVAR(QTECode) select [0, count GVAR(QTEHistory)]))) then {
+    if !(GVAR(QTEHistory) isEqualTo (GVAR(QTECode) select [0, count GVAR(QTEHistory)])) then {
         GVAR(QTEHistory) = [];
     };
 
