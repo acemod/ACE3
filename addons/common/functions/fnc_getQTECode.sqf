@@ -14,9 +14,14 @@
  * Public: Yes
  */
 
-params ["_len"];
-_code = [];
-for "_i" from 0 to _len do {
+params [["_length", 0, [0]];
+
+if (_length <= 0) exitWith {[]};
+
+private _code = [];
+
+for "_i" from 0 to _length do {
     _code pushBack (selectRandom ["↑", "↓", "→", "←"]);
 };
-_code;
+
+_code
