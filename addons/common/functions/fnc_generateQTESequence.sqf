@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: john681611
- * Generates a Quick time Event code (= a random sequence of arrow characters of a given length).
+ * Generates a Quick Time Event seqence (= a random sequence of arrow characters of a given length).
  *
  * Arguments:
  * 0: Code length <NUMBER>
@@ -15,7 +15,7 @@
  * Public: Yes
  */
 
-params [["_length", 0, [0]];
+params [["_length", 0, [0]]];
 
 if (_length <= 0) exitWith {[]};
 

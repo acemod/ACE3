@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: john681611
  * Formats QTE code into something displayable.
@@ -9,7 +10,7 @@
  * Formatted QTE Code <STRING>
  *
  * Example:
- * [["↑", "↓", "→", "←"]] call ace_common_fnc_getFormattedQTECode
+ * [["↑", "↓", "→", "←"]] call ace_common_fnc_getFormattedQTESeqence
  *
  * Public: Yes
  */
