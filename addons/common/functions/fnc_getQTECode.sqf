@@ -6,7 +6,7 @@
  * 0: Code length <NUMBER>
  *
  * Return Value:
- * QTE Code eg: ["↑", "↑", "↓", "→", "←"] <ARRAY>
+ * Array of arrow characters <ARRAY>
  *
  * Example:
  * 5 call ace_common_fnc_getQTECode
