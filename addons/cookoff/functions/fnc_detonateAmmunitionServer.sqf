@@ -29,16 +29,15 @@ if (isNull _object) exitWith {};
 private _hasFinished = _totalAmmo <= 0 || {_magazines isEqualTo []};
 
 // If the cook-off has finished or been interrupted, clean up the effects for boxes (no vehicle effects)
-if (_hasFinished ||
-    {underwater _object} || {
-    if (GVAR(ammoCookoffDuration) == 0) exitWith {true};
-
-    if (_object isKindOf "ReammoBox_F") exitWith {
-        !(GVAR(enableAmmobox) && {_object getVariable [QGVAR(enableAmmoCookoff), true]})
-    };
-
-    !(GVAR(enableAmmoCookoff) && {_object getVariable [QGVAR(enableAmmoCookoff), true]})
-}) exitWith {
+if (
+    _hasFinished ||
+    {underwater _object} ||
+    {private _posASL = getPosWorld _object; surfaceIsWater _posASL && {(_posASL select 2) < 0}} || // underwater is not very reliable, so use model center instead
+    {GVAR(ammoCookoffDuration) == 0} ||
+    {!([GVAR(enableAmmoCookoff), GVAR(enableAmmobox)] select (_object isKindOf "ReammoBox_F"))} ||
+    {!(_object getVariable [QGVAR(enableAmmoCookoff), true])}
+) exitWith {
+    // Box cook-off fire ends after the ammo has detonated (vehicle cook-off fire does not depend on the ammo detonation)
     if (_object isKindOf "ReammoBox_F") then {
         [QGVAR(cleanupEffects), _object] call CBA_fnc_globalEvent;
 

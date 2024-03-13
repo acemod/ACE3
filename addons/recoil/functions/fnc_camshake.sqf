@@ -24,7 +24,7 @@ TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_veh
 #define BASE_FREQ 13
 #define RECOIL_COEF 40
 
-if (toLower _weapon in ["throw", "put"]) exitWith {};
+if (toLowerANSI _weapon in ["throw", "put"]) exitWith {};
 
 private _powerMod = ([0, -0.1, -0.1, 0, -0.2] select (["STAND", "CROUCH", "PRONE", "UNDEFINED", ""] find stance _unit)) + ([0, -1, 0, -1] select (["INTERNAL", "EXTERNAL", "GUNNER", "GROUP"] find cameraView));
 

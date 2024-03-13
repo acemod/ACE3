@@ -12,9 +12,9 @@ version:
   patch: 0
 ---
 
-## 1. Disabling cook-off for individual vehicles
+## 1. Disabling cook-off fire for individual vehicles
 
-Cook-off can be disabled for a specific vehicle. "Cook-off" refers to the fire effects (visual & sounds) that happen when a vehicle is cooking off:
+Cook-off fire can be disabled for a specific vehicle (does not affect ammo cook-off):
 
 ```
 _vehicle setVariable ["ace_cookoff_enable", false, true];
@@ -24,7 +24,7 @@ Mission settings will always apply however, so you can't enable cook-off on a ve
 
 ## 2. Disabling ammunition cook-off for individual vehicles and boxes
 
-Ammunition cook-off can be disabled for a specific vehicle or box. "Ammunition cook-off" refers to the ammunition exploding in a burning vehicle:
+Ammunition cook-off can be disabled for a specific vehicle or box (does not affect cook-off fire):
 
 ```
 _vehicleOrBox setVariable ["ace_cookoff_enableAmmoCookoff", false, true];
