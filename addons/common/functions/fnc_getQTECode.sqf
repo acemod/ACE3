@@ -1,9 +1,9 @@
 /*
  * Author: john681611
- * Generates a Quick time Event code.
+ * Generates a Quick time Event code (= a random sequence of arrow characters of a given length).
  *
  * Arguments:
- * 0: CodeLength <NUMBER>
+ * 0: Code length <NUMBER>
  *
  * Return Value:
  * QTE Code eg: ["↑", "↑", "↓", "→", "←"] <ARRAY>
