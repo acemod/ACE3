@@ -21,6 +21,9 @@
  * Public: Yes
  */
 
+if (!GVAR(settingsInitFinished)) exitWith { // only run this after the settings are initialized
+    GVAR(runAtSettingsInitialized) pushBack [FUNC(runQTE), _this];
+};
 params ["_object", "_command", "_command_params", "_command_exec_code", "_keyCode", ["_max_distance", 10]];
 
 GVAR(QTEVeh) = _veh;
