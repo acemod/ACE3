@@ -62,7 +62,7 @@ findDisplay 46 displayAddEventHandler ["KeyUp", {
         _override;
     };
 
-    if ((GVAR(QTEHoldKey) isEqualTo "Ctrl" and !_ctrl) ||
+    if ((GVAR(QTEHoldKey) == "Ctrl" && !_ctrl) ||
     (GVAR(QTEHoldKey) isEqualTo "Shift" and !_shift) ||
     (GVAR(QTEHoldKey) isEqualTo "Alt" and !_alt)) exitWith {
         GVAR(QTEHistory) = [];
