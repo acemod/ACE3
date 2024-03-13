@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: john681611
  * Generates a Quick time Event code (= a random sequence of arrow characters of a given length).
