@@ -10,7 +10,7 @@
  * Array of arrow characters <ARRAY>
  *
  * Example:
- * 5 call ace_common_fnc_getQTECode
+ * 5 call ace_common_fnc_generateQTESequence
  *
  * Public: Yes
  */

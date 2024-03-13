@@ -17,11 +17,11 @@
  * None
  *
  * Example:
- * [car, [], {Hint "Finished!"}, {hint "Failure!"}, ["↑", "↓", "→", "←"]] call ace_common_fnc_runQTE
+ * [car, [], { hint "Finished!" }, { hint "Failure!" }, ["↑", "↓", "→", "←"]] call ace_common_fnc_runQTE
  *
  * Public: Yes
  */
- 
+
 params ["_object", "_args", "_onFinish", "_onFail", "_qte_seqence", ["_max_distance", 10], ["_timeout", 30]];
 
 if (!GVAR(settingsInitFinished)) exitWith {
@@ -73,13 +73,13 @@ private _start_time = CBA_missionTime;
 
     private _inputKeys = [DIK_UP, DIK_DOWN, DIK_LEFT, DIK_RIGHT];
     switch (GVAR(QTEInputKeys)) do {
-        case "WASD": {
+        case 1: {
             _inputKeys = [DIK_W, DIK_S, DIK_A, DIK_D];
         };
-        case "IJKL": {
+        case 2: {
             _inputKeys = [DIK_I, DIK_K, DIK_J, DIK_L];
         };
-        case "NUMPAD": {
+        case 3: {
             _inputKeys = [DIK_NUMPAD8, DIK_NUMPAD2, DIK_NUMPAD4, DIK_NUMPAD6];
         };
         default {
@@ -89,9 +89,9 @@ private _start_time = CBA_missionTime;
 
     if !(_key in _inputKeys) exitWith {};
 
-    if ((GVAR(QTEHoldKey) == "Ctrl" && !_ctrl) ||
-    (GVAR(QTEHoldKey) == "Shift" &&!_shift) ||
-    (GVAR(QTEHoldKey) == "Alt" &&!_alt)) exitWith {
+    if ((GVAR(QTEHoldKey) == 0 && !_ctrl) ||
+    (GVAR(QTEHoldKey) == 1 &&!_alt) ||
+    (GVAR(QTEHoldKey) == 2 &&!_shift)) exitWith {
         GVAR(QTEHistory) = [];
         hintSilent format ["%1: \n %2 \n %3", LLSTRING(QTEInput), [_qte_seqence] call FUNC(getFormattedQTESequence), [GVAR(QTEHistory)] call FUNC(getFormattedQTESequence)];
     };

@@ -104,17 +104,17 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
 [
     QGVAR(QTEHoldKey),
     "LIST",
-    localize LSTRING(QTEHoldKey),
+    LLSTRING(QTEHoldKey),
     "ACE QTE",
-    [["Ctrl", "Alt", "Shift"], ["Ctrl", "Alt", "Shift"], 0],
+    [[0, 1, 2], [localize "STR_dik_control", localize "STR_dik_alt", localize "STR_dik_shift"], 0],
     0
 ] call CBA_fnc_addSetting;
 
 [
     QGVAR(QTEInputKeys),
     "LIST",
-     localize LSTRING(QTEInputKeys),
+    LLSTRING(QTEInputKeys),
     "ACE QTE",
-    [["Arrows", "WASD", "IJKL", "Numpad"], ["Arrows", "WASD", "IJKL", "Numpad"], 0],
+    [[0, 1, 2, 3], [LLSTRING(QTEInputArrows), LLSTRING(QTEInputWASD), LLSTRING(QTEInputIJKL), LLSTRING(QTENumpad)], 0],
     0
 ] call CBA_fnc_addSetting;

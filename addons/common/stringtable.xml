@@ -1843,5 +1843,17 @@
         <Key ID="STR_ACE_Common_QTEInputKeys">
             <English>Input Keys</English>  
         </Key>
+        <Key ID="STR_ACE_Common_QTEInputArrows">
+            <English>Arrows</English>  
+        </Key>
+        <Key ID="STR_ACE_Common_QTEInputWASD">
+            <English>WASD</English>  
+        </Key>
+        <Key ID="STR_ACE_Common_QTEInputIJKL">
+            <English>IJKL</English>  
+        </Key>
+        <Key ID="STR_ACE_Common_QTENumpad">
+            <English>Numpad</English>  
+        </Key>
     </Package>
 </Project>

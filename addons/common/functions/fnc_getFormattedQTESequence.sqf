@@ -10,7 +10,7 @@
  * Formatted QTE Code <STRING>
  *
  * Example:
- * [["↑", "↓", "→", "←"]] call ace_common_fnc_getFormattedQTESeqence
+ * [["↑", "↓", "→", "←"]] call ace_common_fnc_getFormattedQTESequence
  *
  * Public: Yes
  */
