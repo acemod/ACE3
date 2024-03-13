@@ -75,9 +75,9 @@ private _printCount = 0;
         _processedCfgAmmos pushBack _ammo;
 
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
-        private _shoulFrag = [_ammo] call FUNC(shouldFrag);
+        private _shouldFrag = [_ammo] call FUNC(shouldFrag);
 
-        if (_shoulFrag || _logAll) then {
+        if (_shouldFrag || _logAll) then {
 
             private _print = false;
             private _skip = getNumber (_ammoConfig >> QGVAR(skip));
