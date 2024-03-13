@@ -54,17 +54,13 @@ if (!isNull _vehicle) then {
     if (_magazineItems isNotEqualTo []) then {
         (getMagazineCargo _vehicle) params ["_itemTypes", "_itemCounts"];
         {
-            private _item = _x;
-            private _index = _itemTypes find _item;
-            _vehicleCount = _vehicleCount + (_itemCounts param [_index, 0]);
+            _vehicleCount = _vehicleCount + (_itemCounts param [_itemTypes find _x, 0]);
         } forEach _magazineItems;
     };
     if (_itemItems isNotEqualTo []) then {
         (getItemCargo _vehicle) params ["_itemTypes", "_itemCounts"];
         {
-            private _item = _x;
-            private _index = _itemTypes find _item;
-            _vehicleCount = _vehicleCount + (_itemCounts param [_index, 0]);
+            _vehicleCount = _vehicleCount + (_itemCounts param [_itemTypes find _x, 0]);
         } forEach _itemItems;
     };
 };

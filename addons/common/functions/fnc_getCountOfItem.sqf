@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Dedmen, Blue
+ * Author: Dedmen, Blue, johnb43
  * Return how many items of type _itemType the player has in his containers (Uniform, Vest, Backpack)
  * Doesn't count assignedItems, weapons, weapon attachments, magazines in weapons
  *

@@ -14,7 +14,7 @@
  * Items <ARRAY>
  *
  * Example:
- * [player, 2] call ace_common_fnc_getUniqueItems
+ * [player, 2] call ace_common_fnc_uniqueItems
  *
  * Public: No
  */
@@ -44,13 +44,13 @@ if (_target isEqualTo ACE_player) then {
 
     switch (_includeMagazines) do {
         case 0: {
-            GVAR(uniqueItemsCache) select 0;
+            GVAR(uniqueItemsCache) select 0
         };
         case 1: {
-            (GVAR(uniqueItemsCache) select 1) + (GVAR(uniqueItemsCache) select 0);
+            (GVAR(uniqueItemsCache) select 1) + (GVAR(uniqueItemsCache) select 0)
         };
         case 2: {
-            GVAR(uniqueItemsCache) select 1;
+            GVAR(uniqueItemsCache) select 1
         };
     };
 } else {
@@ -71,13 +71,13 @@ if (_target isEqualTo ACE_player) then {
         private _items = call _fnc_getItems;
         switch (_includeMagazines) do {
             case 0: {
-                _items select 0;
+                _items select 0
             };
             case 1: {
-                (_items select 1) + (_items select 0);
+                (_items select 1) + (_items select 0)
             };
             case 2: {
-                _items select 1;
+                _items select 1
             };
         };
     };
