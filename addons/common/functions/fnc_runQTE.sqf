@@ -21,7 +21,7 @@
  * Public: Yes
  */
 
-params ["_veh", "_command", "_command_params", "_command_exec_code", "_keyCode", ["_max_distance", 10]];
+params ["_object", "_command", "_command_params", "_command_exec_code", "_keyCode", ["_max_distance", 10]];
 
 GVAR(QTEVeh) = _veh;
 GVAR(QTECommand) = _command;
