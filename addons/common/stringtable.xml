@@ -1828,5 +1828,15 @@
             <Chinese>下方</Chinese>
             <Turkish>Alt</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_QTEInput">
+            <English>Command (Hold CTRL down)</English>
+            
+        </Key>
+        <Key ID="STR_ACE_Common_QTEAccepted">
+            <English>Accepted</English>  
+        </Key>
+        <Key ID="STR_ACE_Common_QTECancelled">
+            <English>Command Cancelled</English>  
+        </Key>
     </Package>
 </Project>
