@@ -17,9 +17,11 @@
  *
  * Public: No
  */
+
 #define ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM 3
-TRACE_1("begin doFrag",_this);
+
 params ["_posASL", "_velocity", "_ammo", "_shotParents"];
+TRACE_4("doFrag",_posASL,_velocity,_ammo,_shotParents);
 
 // Don't let a single object cause all fragmentation events
 _shotParents params ["_shotParentVehicle"];

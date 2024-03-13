@@ -17,14 +17,15 @@
  */
 
 #define GLUE(g1,g2) g1##g2
-TRACE_1("doSpall",_this);
+
 if (CBA_missionTime < GVAR(nextSpallAllowTime)) exitWith {
     TRACE_2("time exit",CBA_missionTime,GVAR(nextSpallAllowTime));
 };
-params ["_projectile", "_objectHit", "_lastPosASL", "_lastVelocity", "_surfaceNorm", "_surfaceType", "_ammo", "_shotParents", "_vectorUp"];
 
-if (_ammo == "" ||
-    {_objectHit isKindOf "CAManBase"}) exitWith {
+params ["_projectile", "_objectHit", "_lastPosASL", "_lastVelocity", "_surfaceNorm", "_surfaceType", "_ammo", "_shotParents", "_vectorUp"];
+TRACE_9("doSpall",_projectile,_objectHit,_lastPosASL,_lastVelocity,_surfaceNorm,_surfaceType,_ammo,_shotParents,_vectorUp);
+
+if (_ammo == "" || {_objectHit isKindOf "CAManBase"}) exitWith {
     TRACE_4("invalid round or hit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
 };
 
