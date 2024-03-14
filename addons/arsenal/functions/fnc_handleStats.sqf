@@ -141,8 +141,12 @@ private _fnc_handleStats = {
         if (_showText) then {
             _textStatementResult = [_configEntry, _itemCfg] call _textStatement;
 
-            if !(_textStatementResult isEqualtype "") then {
-                _textStatementResult = str _textStatementResult;
+            if (_textStatementResult isEqualType []) then {
+                _textStatementResult = _textStatementResult joinString endl;
+            } else {
+                if !(_textStatementResult isEqualtype "") then {
+                    _textStatementResult = str _textStatementResult;
+                };
             };
 
             _statsTextCtrl ctrlSetText _textStatementResult;

@@ -331,7 +331,7 @@ class GVAR(display) {
                     w = QUOTE(45 * GRID_W);
                     h = QUOTE(4 * GRID_H);
                 };
-                class statsText1: RscText {
+                class statsText1: RscTextMulti {
                     idc = IDC_statsText1;
                     shadow = 0;
                     fade = 1;
