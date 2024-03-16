@@ -19,7 +19,7 @@
 
 params ["_unit", "_magazine", ["_count", -1]];
 
-if (_count == 0) exitWith {};
+if (_count == 0) exitWith {0};
 
 private _containers = if (_unit isKindOf "CAManBase") then {
     [uniformContainer _unit, vestContainer _unit, backpackContainer _unit]
