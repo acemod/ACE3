@@ -24,14 +24,12 @@ params ["_target", ["_includeMagazines", 0]];
 private _fnc_getItems = {
     private _items = [];
 
-    private _inventoryItems = [];
-
-    _inventoryItems append ((getItemCargo uniformContainer _target) select 0);
+    private _inventoryItems = (getItemCargo uniformContainer _target) select 0;
     _inventoryItems append ((getItemCargo vestContainer _target) select 0);
     _inventoryItems append ((getItemCargo backpackContainer _target) select 0);
 
     _items set [0, _inventoryItems];
-    _items set [1, (magazines _target)];
+    _items set [1, magazines _target];
 
     _items arrayIntersect _items
 };
@@ -54,21 +52,9 @@ if (_target isEqualTo ACE_player) then {
         };
     };
 } else {
-    if (_isVehicle) then {
-        private _items = switch (_includeMagazines) do {
-            case 0: {
-                itemCargo _target
-            };
-            case 1: {
-                (magazineCargo _target) + (itemCargo _target)
-            };
-            case 2: {
-                magazineCargo _target
-            };
-        };
-        _items arrayIntersect _items
-    } else {
+    if (_target isKindOf "CAManBase") then {
         private _items = call _fnc_getItems;
+
         switch (_includeMagazines) do {
             case 0: {
                 _items select 0
@@ -80,5 +66,19 @@ if (_target isEqualTo ACE_player) then {
                 _items select 1
             };
         };
+    } else {
+        private _items = switch (_includeMagazines) do {
+            case 0: {
+                itemCargo _target
+            };
+            case 1: {
+                (magazineCargo _target) + (itemCargo _target)
+            };
+            case 2: {
+                magazineCargo _target
+            };
+        };
+
+        _items arrayIntersect _items
     };
 };
