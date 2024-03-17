@@ -46,7 +46,7 @@ if (_target isKindOf "CAManBase") then {
         _primaryWeapon = "ACE_FakePrimaryWeapon";
     };
 
-    // Select primary, otherwise the drag animation actions don't work
+    // Select primary, otherwise the carry animation actions don't work
     _unit selectWeapon _primaryWeapon;
 
     // Move a bit closer and adjust direction when trying to pick up a person

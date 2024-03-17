@@ -62,12 +62,7 @@ if (_UAVCrew isNotEqualTo []) then {
     {
         _target deleteVehicleCrew _x;
     } forEach _UAVCrew;
-
-    _target setVariable [QGVAR(isUAV), true, true];
 };
 
 // Check everything
 [FUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-
-// Reset current dragging height
-GVAR(currentHeightChange) = 0;

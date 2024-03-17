@@ -87,7 +87,7 @@ if !(_target isKindOf "CAManBase") then {
 };
 
 // Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
-if (_target getVariable [QGVAR(isUAV), false]) then {
+if (unitIsUAV _target) then {
     [{
         params ["_target"];
         if (!alive _target) exitWith {};
