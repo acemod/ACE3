@@ -1,19 +1,9 @@
 #include "script_component.hpp"
 
+#ifdef DEBUG_MODE_DRAW
 [
     "CBA_settingsInitialized",
     {
-        if (isServer) then {
-            call FUNC(initMaterialCache);
-            [
-                QEGVAR(common,setShotParents),
-                {
-                    (_this#0) setVariable [QGVAR(shotParent), [_this#1, _this#2]];
-                }
-            ] call CBA_fnc_addEventHandler;
-        };
-
-        #ifdef DEBUG_MODE_DRAW
         [QGVAR(dev_clearTraces), LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
 
         if (!hasInterface) exitWith {};
@@ -49,9 +39,9 @@
                 ] call EFUNC(interact_menu,addActionToClass);
             }
         ] call CBA_fnc_addEventHandler;
-        #endif
     }
 ] call CBA_fnc_addEventHandler;
+#endif
 
 #ifdef LOG_FRAG_INFO
 [true, true, 30] call FUNC(dev_debugAmmo);
