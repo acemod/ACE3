@@ -68,7 +68,7 @@ if (_metalMass == 0) then {
 
 private _geometryCoefficient = getNumber (_ammoConfig >> QGVAR(gurney_k));
 if (_geometryCoefficient == 0) then {
-    _geometryCoefficient = 0.8;
+    _geometryCoefficient = 0.5;
     _notifyMissingEntries = true;
 };
 
@@ -80,7 +80,7 @@ if (_gurneyConstant == 0) then {
 
 private _fragCount = getNumber (_ammoConfig >> QGVAR(fragCount));
 if (_fragCount == 0) then {
-    _fragCount = 400;
+    _fragCount = 250;
     _notifyMissingEntries = true;
 };
 
@@ -96,7 +96,7 @@ if (_notifyMissingEntries) then {
  */
 _ammoInfo = [
     ACE_FRAG_MAX_FRAG_RANGE max sqrt (_fragCount / (4 * pi * ACE_FRAG_MIN_FRAG_HIT_CHANCE)),
-    0.8 * _gurneyConstant * sqrt (_chargeMass / (_metalMass + _chargeMass * _geometryCoefficient)),
+    ACE_FRAG_IMPERIC_VELOCITY_CONSTANT * _gurneyConstant * sqrt (_chargeMass / (_metalMass + _chargeMass * _geometryCoefficient)),
     _fragTypes,
     _fragCount / 4 / pi
 ];

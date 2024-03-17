@@ -32,6 +32,7 @@
 #define ACE_FRAG_HALF_GRAVITY_APPROX 4.905
 // Lowest chance to hit of 0.5%
 #define ACE_FRAG_MIN_FRAG_HIT_CHANCE 0.005
+#define ACE_FRAG_IMPERIC_VELOCITY_CONSTANT 0.8
 // Make frag hold-off time shortger for low frag
 // value of 150/4/pi ~= 11.93662
 #define ACE_FRAG_LOW_FRAG_MOD_COUNT 11.93662
