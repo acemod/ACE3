@@ -145,11 +145,11 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
 
         //PARTIALRECOVERY - start decreasing effect over time
         [{
-            params ["_strength"];
+            params ["_strength", "_blend"];
 
-            GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
+            GVAR(flashbangPPEffectCC) ppEffectAdjust [1, 1, 0, _blend, [0,0,0,1], [0,0,0,0]];
             GVAR(flashbangPPEffectCC) ppEffectCommit (10 * _strength);
-        }, [_strength], 7 * _strength] call CBA_fnc_waitAndExecute;
+        }, [_strength, _blend], 7 * _strength] call CBA_fnc_waitAndExecute;
 
         //FULLRECOVERY - end effect
         [{
