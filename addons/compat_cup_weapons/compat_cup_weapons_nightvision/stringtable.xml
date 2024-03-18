@@ -67,7 +67,7 @@
             <French>GPNVG (marron clair, WP)</French>
             <Russian>GPNVG (Желтовато-коричневый, БФ)</Russian>
         </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_GPNVG_green_WP">
+        <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_NVG_GPNVG_green_WP">
             <English>GPNVG (Green, WP)</English>
             <Japanese>GPNVG (ブラック、白色蛍光)</Japanese>
             <Italian>GPNVG (Nero, FB)</Italian>
@@ -77,7 +77,7 @@
             <French>GPNVG (noires, WP)</French>
             <Russian>GPNVG (Зелёный, БФ)</Russian>
         </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_GPNVG_winter_WP">
+        <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_NVG_GPNVG_winter_WP">
             <English>GPNVG (Winter, WP)</English>
             <Japanese>GPNVG (冬季迷彩, WP)</Japanese>
             <Korean>GPNVG (설상, WP)</Korean>
