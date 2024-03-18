@@ -314,7 +314,7 @@
             <Spanish>Lugares de reparación completa</Spanish>
             <Italian>Luoghi Riparazione Completa</Italian>
             <French>Endroits pour réparation complète</French>
-            <Japanese>完全修理できる場所</Japanese>
+            <Japanese>完全修理可能な場所</Japanese>
             <Korean>완전수리 구역</Korean>
             <Chinesesimp>完整维修地点</Chinesesimp>
             <Chinese>完整維修地點</Chinese>
@@ -2225,7 +2225,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
             <English>Maximum damage to which a wheel can be patched.\n0% means all damage can be repaired.</English>
-            <Japanese>タイヤを補修できる最大の度合い。/n 0% は、すべてのダメージが修復可能であることを意味します</Japanese>
+            <Japanese>タイヤをのダメージ補修できる最大の度合い。/n 0%は、すべてのダメージが修復可能であることを意味します。</Japanese>
             <Polish>Maksymalny poziom, do którego koło może zostać załatane.\n0% oznacza że każde uszkodzenia mogą być naprawione.</Polish>
             <Italian>Livello di integrità massimo di una ruota rattoppata.</Italian>
             <German>Maximales Level, bis zu dem ein Rad geflickt werden kann.\n0% bedeutet, dass das Rad vollständig repariert werden kann.</German>
@@ -2235,7 +2235,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
             <English>Wheel Patch Location</English>
-            <Japanese>タイヤ補修場所</Japanese>
+            <Japanese>タイヤ補修可能な場所</Japanese>
             <Polish>Miejsce Łatania Koła</Polish>
             <Italian>Luoghi rattoppamento ruote</Italian>
             <German>Räder Flick Ort</German>
@@ -2245,7 +2245,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
             <English>Where the wheel can be patched.</English>
-            <Japanese>タイヤを補修できる場所。</Japanese>
+            <Japanese>タイヤを補修することが出来る場所。</Japanese>
             <Polish>Gdzie można załatać koło.</Polish>
             <Italian>In quali luoghi è possibile rattoppare una ruota?</Italian>
             <German>Wo das Rad geflickt werden kann.</German>
