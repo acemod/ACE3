@@ -3,8 +3,8 @@
 [QGVAR(burn), FUNC(burn)] call CBA_fnc_addEventHandler;
 [QGVAR(playScream), {
     params ["_scream", "_source"];
-    // only play sound if enabled in settings
-    if (GVAR(enableScreams)) then {
+    // only play sound if enabled in settings and enabled for the unit
+    if (GVAR(enableScreams) and {_source getVariable [QGVAR(enableScreams), true]}) then {
         _source say3D _scream;
     };
 }] call CBA_fnc_addEventHandler;
@@ -35,4 +35,3 @@
         GVAR(fireSources) = [[], nil] call CBA_fnc_hashCreate;
     };
 }] call CBA_fnc_addEventHandler;
-
