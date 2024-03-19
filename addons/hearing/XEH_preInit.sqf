@@ -8,8 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-[QGVAR(updateVolume), LINKFUNC(updateVolume)] call CBA_fnc_addEventHandler;
-
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout", "_extendedInfo"];
     if (_extendedInfo getOrDefault ["ace_earplugs", false]) then {
