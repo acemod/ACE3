@@ -30,7 +30,7 @@ private _cswCarryMagazines = [];
 private _vehicleActions = [];
 {
     private _vehicle = _x;
-    private _displayName = getText(configOf _vehicle >> "displayName");
+    private _displayName = getText (configOf _vehicle >> "displayName");
     private _distanceStr = (ACE_player distance _vehicle) toFixed 1;
     private _actionName = format ["%1 (%2m)", _displayName, _distanceStr];
     // Array of magazines that can be rearmed in the vehicle
