@@ -50,11 +50,8 @@ private _perframeCheck = {
 [
     _totalTime,
     [_unit, _side, _typeOf, _posASL, _vectorDir, _vectorUp, _cost],
-    QGVAR(deployFinished), {
-        _this#0 params ["_unit", "", "_typeOf", "", "", "", "_cost"];
-        [QGVAR(deployCanceled), _this] call CBA_fnc_localEvent;
-        [QGVAR(onDeployStop), [_unit, _typeOf, _cost]] call CBA_fnc_localEvent;
-    },
+    QGVAR(deployFinished),
+    QGVAR(deployCanceled),
     LLSTRING(progressBarTitle),
     _perframeCheck
 ] call EFUNC(common,progressBar);
