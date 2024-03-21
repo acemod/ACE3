@@ -41,7 +41,7 @@ Use `CBA_fnc_serverEvent` to use the following features. Events are defined only
 
 ## 2. Variables
 
-Screams can be disabled for an individual unit by setting the `ace_fire_enableScreams` variable on the unit, which should be synced across machines.
+Screams can be disabled for an individual unit by setting the `ace_fire_enableScreams` variable on the unit, which can be synced across machines.
 
 ```sqf
 _unit setVariable ["ace_fire_enableScreams", false, true];
