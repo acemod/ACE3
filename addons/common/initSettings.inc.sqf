@@ -100,3 +100,30 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     [[0, 1, 2], [LSTRING(None), LSTRING(progressBarInfoPercentage), LSTRING(progressBarInfoTime)], 2],
     0
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(swayFactor),
+    "SLIDER",
+    [LSTRING(SwayFactor), LSTRING(SwayFactor_Description)],
+    [format ["ACE %1", LLSTRING(DisplayName)], LSTRING(sway)],
+    [0, 5, 1, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(restedSwayFactor),
+    "SLIDER",
+    [LSTRING(RestedSwayFactor), LSTRING(RestedSwayFactor_Description)],
+    [format ["ACE %1", LLSTRING(DisplayName)], LSTRING(sway)],
+    [0, 5, 1, 2],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(deployedSwayFactor),
+    "SLIDER",
+    [LSTRING(DeployedSwayFactor), LSTRING(DeployedSwayFactor_Description)],
+    [format ["ACE %1", LLSTRING(DisplayName)], LSTRING(sway)],
+    [0, 5, 1, 2],
+    true
+] call CBA_fnc_addSetting;
