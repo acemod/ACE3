@@ -47,7 +47,7 @@ private _mouseClickID = [_player, "DefaultAction", {GVAR(isPlacing) == PLACE_WAI
 
 [{
     params ["_args", "_pfID"];
-    _args params ["_unit", "_object", "_cost", "_mouseClickID"];
+    _args params ["_unit", "_object", "_cost", "_mouseClickID", "_side"];
 
     if (_unit != ACE_player || {isNull _object} || {!([_unit, _object, []] call EFUNC(common,canInteractWith))} || {!([_unit, _cost] call FUNC(canFortify))}) then {
         GVAR(isPlacing) = PLACE_CANCEL;
@@ -70,6 +70,7 @@ private _mouseClickID = [_player, "DefaultAction", {GVAR(isPlacing) == PLACE_WAI
             [_unit, _object] call FUNC(deployConfirm);
         } else {
             TRACE_1("deleting object",_object);
+            [QGVAR(deployCanceled), [_unit, _side, typeOf _object, getPosASL _object, vectorDir _object, vectorUp _object]] call CBA_fnc_localEvent;
             deleteVehicle _object;
         };
     };
@@ -95,4 +96,4 @@ private _mouseClickID = [_player, "DefaultAction", {GVAR(isPlacing) == PLACE_WAI
     #ifdef DEBUG_MODE_FULL
     hintSilent format ["Rotation:\nX: %1\nY: %2\nZ: %3", GVAR(objectRotationX), GVAR(objectRotationY), GVAR(objectRotationZ)];
     #endif
-}, 0, [_player, _object, _cost, _mouseClickID]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_player, _object, _cost, _mouseClickID, _side]] call CBA_fnc_addPerFrameHandler;
