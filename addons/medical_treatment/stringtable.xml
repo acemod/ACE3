@@ -957,7 +957,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
             <English>Locations IV Transfusion</English>
-            <Japanese>IV 輸液の場所制限</Japanese>
+            <Japanese>IV輸液の可能な場所</Japanese>
             <Spanish>Ubicación para transfusiones IV</Spanish>
             <French>Lieux perfusions IV</French>
             <Russian>Места введения пакетов внутривенного переливания</Russian>
