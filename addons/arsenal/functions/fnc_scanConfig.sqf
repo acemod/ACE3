@@ -160,7 +160,7 @@ private _magazineMiscItems = createHashMap;
 
 {
     _magazineMiscItems set [configName _x, nil];
-} forEach ((toString {getNumber (_x >> "ACE_isUnique") == 1}) configClasses _cfgMagazines);
+} forEach ((toString {getNumber (_x >> "ACE_isUnique") == 1 || getNumber (_x >> "ACE_asItem") == 1}) configClasses _cfgMagazines);
 
 // Remove invalid/non-existent entries
 _grenadeList deleteAt "";
