@@ -32,7 +32,7 @@ if (isNull _object) exitWith {TRACE_1("null",_object);};
 [_object, true] call FUNC(statusEffect_resetVariables); //Check for mismatch, and set object ref
 
 //check ID case and set globally if not already set:
-_ID = toLower _ID;
+_ID = toLowerANSI _ID;
 private _statusReasons = missionNamespace getVariable [(format [QGVAR(statusEffects_%1), _effectName]), []];
 private _statusIndex = _statusReasons find _ID;
 if (_statusIndex == -1) then {

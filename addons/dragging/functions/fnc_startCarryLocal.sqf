@@ -31,6 +31,9 @@ if !(_target getVariable [QGVAR(ignoreWeightCarry), false]) then {
 
 // Exit if object weight is over global var value
 if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
+    // Release claim on object
+    [objNull, _target, true] call EFUNC(common,claim);
+
     [LLSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 

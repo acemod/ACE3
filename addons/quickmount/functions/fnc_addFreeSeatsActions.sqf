@@ -159,7 +159,7 @@ private _cargoNumber = -1;
         };
     } else {
         private ["_name", "_icon", "_statement", "_params"];
-        switch (toLower _role) do {
+        switch (toLowerANSI _role) do {
             case "driver": {
                 if (
                     lockedDriver _vehicle

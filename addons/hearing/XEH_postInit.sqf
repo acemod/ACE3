@@ -23,6 +23,8 @@ GVAR(lastPlayerVehicle) = objNull;
     // Spawn volume updating process
     [LINKFUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
 
+    [QGVAR(updateVolume), LINKFUNC(updateVolume)] call CBA_fnc_addEventHandler;
+
     // Update veh attunation when player veh changes
     ["vehicle", {
         params ["_player", "_vehicle"];
