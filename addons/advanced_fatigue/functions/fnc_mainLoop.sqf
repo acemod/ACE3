@@ -17,7 +17,7 @@
 
 // Dead people don't breathe, will also handle null (map intros)
 if (!alive ACE_player) exitWith {
-    [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
+    [LINKFUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
 
     private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
     _staminaBarContainer ctrlSetFade 1;
@@ -139,10 +139,10 @@ systemChat format ["---- velocity %1 - respiratoryRate: %2 ----", (vectorMagnitu
 // systemChat format ["---- aePower: %1 ----", _aePathwayPowerFatigued toFixed 1];
 #endif
 
-[ACE_player, _perceivedFatigue, GVAR(respiratoryRate), GVAR(anReserve) == 0, _fwdAngle, _sideAngle] call FUNC(handleEffects);
+[ACE_player, _perceivedFatigue, GVAR(anReserve) == 0, _fwdAngle, _sideAngle] call FUNC(handleEffects);
 
 if (GVAR(enableStaminaBar)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);
 };
 
-[FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
+[LINKFUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;

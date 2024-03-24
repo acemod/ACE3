@@ -6,10 +6,9 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Fatigue <NUMBER>
- * 2: Respiratory Rate <NUMBER>
- * 3: Overexhausted <BOOL>
- * 4: Forward Angle <NUMBER>
- * 5: Side Angle <NUMBER>
+ * 2: Overexhausted <BOOL>
+ * 3: Forward Angle <NUMBER>
+ * 4: Side Angle <NUMBER>
  *
  * Return Value:
  * None
@@ -20,19 +19,19 @@
  * Public: No
  */
 
-params ["_unit", "_fatigue", "_respiratoryRate", "_overexhausted", "_fwdAngle", "_sideAngle"];
+params ["_unit", "_fatigue", "_overexhausted", "_fwdAngle", "_sideAngle"];
 
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
 
-if (_respiratoryRate > 0.4 && {GVAR(lastBreath) > (_respiratoryRate * -10 + 9)} && {!underwater _unit}) then {
+if (_fatigue > 0.4 && {GVAR(lastBreath) > (_fatigue * -10 + 9)} && {!underwater _unit}) then {
     if (!isGameFocused) exitWith {};
 
     switch (true) do {
-        case (_respiratoryRate < 0.6): {
+        case (_fatigue < 0.6): {
             playSound (QGVAR(breathLow) + str (floor random 6));
         };
-        case (_respiratoryRate < 0.85): {
+        case (_fatigue < 0.85): {
             playSound (QGVAR(breathMid) + str (floor random 6));
         };
         default {
