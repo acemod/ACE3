@@ -1832,7 +1832,7 @@
             <English>Sway</English>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway">
-            <English>Enable Sway</English>
+            <English>Enable ACE Sway</English>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway_Description">
             <English>Enables weapon sway influenced by stance, fatigue and medical condition.</English>
