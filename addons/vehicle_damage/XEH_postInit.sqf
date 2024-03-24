@@ -25,6 +25,8 @@
             _unit setSpeedMode "FULL";
         }] call CBA_fnc_addEventHandler;
 
+        GVAR(vehicleClassesHitPointHash) = createHashMap;
+
         ["Tank", "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
 
         // Wheeled_APC_F inherits from Car

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: tcvm
+ * Author: tcvm, johnb43
  * Adds the event handler to a vehicle.
  *
  * Arguments:
@@ -25,7 +25,9 @@ if (!GVAR(enabled)) exitWith {
     #endif
 };
 
-if (!isNil {_vehicle getVariable QGVAR(hitPointHash)}) exitWith {};
+private _typeOf = typeOf _vehicle;
+
+if (_typeOf in GVAR(vehicleClassesHitPointHash)) exitWith {};
 
 private _hitPointHash = createHashMap;
 private _vehicleConfig = configOf _vehicle;
@@ -118,7 +120,7 @@ TRACE_1("hitpoint alias",_hitPointAliases);
 _hitPointsConfig call _iterateThroughConfig;
 _turretConfig call _iterateThroughConfig;
 
-_vehicle setVariable [QGVAR(hitPointHash), _hitPointHash];
+GVAR(vehicleClassesHitPointHash) set [_typeOf, _hitPointHash];
 
 _vehicle allowCrewInImmobile true;
 

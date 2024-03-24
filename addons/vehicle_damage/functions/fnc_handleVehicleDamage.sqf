@@ -40,16 +40,8 @@ if (!alive _vehicle) exitWith {
 };
 
 _hitPoint = toLowerANSI _hitPoint;
-private _hitPointHash = _vehicle getVariable [QGVAR(hitPointHash), createHashMap];
-private _type = if (_hitPointHash isEqualTo createHashMap) then {
-    "exit"
-} else {
-    (_hitPointHash getOrDefault [_hitPoint, []]) select 0
-};
-
-if (isNil "_type") then {
-    _type = "exit";
-};
+private _hitPointHash = GVAR(vehicleClassesHitPointHash) getOrDefault [typeOf _vehicle, createHashMap];
+private _type = (_hitPointHash getOrDefault [_hitPoint, []]) select 0;
 
 // Generic structural damage will be transfered into hull damage for simulation's sake
 private _structural = false;
@@ -64,7 +56,7 @@ if (_selection == "") then {
     _newDamage = abs _newDamage;
 };
 
-if (_type == "exit") exitWith {
+if (isNil "_type") exitWith {
     TRACE_1("No relevant hitpoints hit [%1]. Exiting",_hitPoint);
 
     true

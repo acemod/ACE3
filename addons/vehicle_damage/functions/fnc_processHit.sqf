@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: tcvm
+ * Author: tcvm, johnb43
  * Process hit by projectile against vehicle and apply appropiate damage to part.
  *
  * Arguments:
@@ -47,12 +47,12 @@ if (_newDamage >= 15) exitWith {
 
 private _projectileConfig = _projectile call CBA_fnc_getObjectConfig;
 
-private _warheadTypeStr = getText (_projectileConfig >> "warheadName");
-private _warheadType = ["HE", "AP", "HEAT", "TandemHEAT"] find _warheadTypeStr; // numerical index for warhead type for quicker checks. Numbers defined in script_macros.hpp
+private _warheadTypeStr = toLowerANSI getText (_projectileConfig >> "warheadName");
+private _warheadType = ["he", "ap", "heat", "tandemheat"] find _warheadTypeStr; // numerical index for warhead type for quicker checks. Numbers defined in script_macros.hpp
 
 private _incendiary = [_projectileConfig >> QGVAR(incendiary), "NUMBER", [0.3, 0.1, 1, 1, 0] select _warheadType] call CBA_fnc_getConfigEntry;
 
-private _hitPointHash = _vehicle getVariable [QGVAR(hitPointHash), createHashMap];
+private _hitPointHash = GVAR(vehicleClassesHitPointHash) getOrDefault [typeOf _vehicle, createHashMap];
 (_hitPointHash getOrDefault [_hitPoint, []]) params ["_hitArea", "_minDamage"];
 
 private _projectileExplosive = [_projectileConfig >> "explosive", "NUMBER", 0] call CBA_fnc_getConfigEntry;

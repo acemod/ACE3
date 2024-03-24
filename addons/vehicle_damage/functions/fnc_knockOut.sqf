@@ -32,4 +32,4 @@ params ["_vehicle"];
             };
         };
     };
-} forEach (_vehicle getVariable [QGVAR(hitPointHash), createHashMap]);
+} forEach (GVAR(vehicleClassesHitPointHash) getOrDefault [typeOf _vehicle, createHashMap]);
