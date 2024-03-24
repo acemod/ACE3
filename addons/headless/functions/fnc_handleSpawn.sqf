@@ -22,7 +22,7 @@ TRACE_1("Spawn",_object);
 if (!(_object in allUnits) || {isPlayer _object}) exitWith {};
 
 // Exit and blacklist if of blacklist type
-if ({_object isKindOf _x} count GVAR(blacklistType) > 0) exitWith {
+if (GVAR(blacklistType) findIf {_object isKindOf _x} != -1) exitWith {
     _object setVariable [QXGVAR(blacklist), true];
 };
 
