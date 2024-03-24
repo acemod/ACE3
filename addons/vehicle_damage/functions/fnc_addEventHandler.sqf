@@ -25,6 +25,24 @@ if (!GVAR(enabled)) exitWith {
     #endif
 };
 
+if (!isNil {_vehicle getVariable QGVAR(handleDamage)}) exitWith {};
+
+_vehicle allowCrewInImmobile true;
+
+// No clue why, but for some reason this needs to be exec'd next frame or else it isn't the last event handler in the system.
+// Maybe its overridden somewhere else, but this makes sure it is the last one
+[{
+    params ["_vehicle"];
+
+    if (!isNil {_vehicle getVariable QGVAR(handleDamage)}) exitWith {};
+
+    TRACE_1("EH not added yet - added eh now",_vehicle);
+
+    _vehicle setVariable [QGVAR(hitHash), createHashMap];
+
+    _vehicle setVariable [QGVAR(handleDamage), _vehicle addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]];
+}, _vehicle] call CBA_fnc_execNextFrame;
+
 private _typeOf = typeOf _vehicle;
 
 if (_typeOf in GVAR(vehicleClassesHitPointHash)) exitWith {};
@@ -121,17 +139,3 @@ _hitPointsConfig call _iterateThroughConfig;
 _turretConfig call _iterateThroughConfig;
 
 GVAR(vehicleClassesHitPointHash) set [_typeOf, _hitPointHash];
-
-_vehicle allowCrewInImmobile true;
-
-// No clue why, but for some reason this needs to exec'd next frame or else it isnt the last event handler in the system.
-// Maybe its overridden somewhere else, but this makes sure it is the last one
-[{
-    params ["_vehicle"];
-
-    TRACE_1("EH not added yet - added eh now",_vehicle);
-
-    _vehicle setVariable [QGVAR(hitHash), createHashMap];
-
-    _vehicle setVariable [QGVAR(handleDamage), _vehicle addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]];
-}, _vehicle] call CBA_fnc_execNextFrame;
