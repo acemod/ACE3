@@ -69,7 +69,7 @@ if (!isNull _target &&
         {
             _x params ["_unit", "_role", "_cargoIndex", "_turretPath"];
             if ((isNull _unit) || {!alive _unit}) then {
-                private _effectiveRole = toLower _role;
+                private _effectiveRole = toLowerANSI _role;
 
                 if ((_effectiveRole in ["driver", "gunner"]) && {unitIsUAV _target}) exitWith {}; // Ignoring UAV Driver/Gunner
                 if ((_effectiveRole == "driver") && {(getNumber (configOf _target >> "hasDriver")) == 0}) exitWith {}; // Ignoring Non Driver (static weapons)

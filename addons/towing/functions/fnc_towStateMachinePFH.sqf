@@ -51,7 +51,7 @@ private _exitCondition = !(
         || {getPosASLW _unit select 2 < -1.5} // walking-to-swimming animation in wetsuit lasts for 3 seconds
     } &&
     { [_unit, objNull, [INTERACTION_EXCEPTIONS]] call EFUNC(common,canInteractWith) } &&
-    { "unconscious" isNotEqualTo toLower animationState _unit } &&
+    { "unconscious" isNotEqualTo toLowerANSI animationState _unit } &&
     { !(_unit getVariable ["ACE_isUnconscious", false]) } &&
     { ACE_player == _unit }
 );

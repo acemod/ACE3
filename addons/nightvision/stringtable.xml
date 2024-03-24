@@ -131,6 +131,7 @@
             <German>NS-Brille (3. Generation, Braun, WP)</German>
             <Korean>야투경 (3세대, 갈색, 백색광)</Korean>
             <French>JVN (Gen3, marron, WP)</French>
+            <Russian>ПНВ (Gen3, Коричневый, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_WP_desc">
             <English>Night Vision Goggles, White Phosphor</English>
@@ -140,6 +141,7 @@
             <German>Nachtsichtbrille, weißer Phosphor</German>
             <Korean>백색광 야투경</Korean>
             <French>Jumelles Vision Nocturne, Phosphore blanc</French>
+            <Russian>Очки ночного видения, белый фосфор</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green">
             <English>NV Goggles (Gen3, Green)</English>
@@ -166,6 +168,7 @@
             <German>NS-Brille (3. Generation, Grün, WP)</German>
             <Korean>야투경 (3세대, 녹색, 백색광)</Korean>
             <French>JVN (Gen3, vertes, WP)</French>
+            <Russian>ПНВ (Gen3, Зелёный, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black">
             <English>NV Goggles (Gen3, Black)</English>
@@ -192,6 +195,7 @@
             <German>NS-Brille (3. Generation, Schwarz, WP)</German>
             <Korean>야투경 (3세대, 검정, 백색광)</Korean>
             <French>JVN (Gen3, noires, WP)</French>
+            <Russian>ПНВ (Gen3, Чёрный, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_brown">
             <English>NV Goggles (Gen4, Brown)</English>
@@ -213,6 +217,7 @@
             <German>NS-Brille (4. Generation, Braun, WP)</German>
             <Korean>야투경 (4세대, 갈색, 백색광)</Korean>
             <French>JVN (Gen4, marron, WP)</French>
+            <Russian>ПНВ (Gen4, Коричневый, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
             <English>NV Goggles (Gen4, Black)</English>
@@ -234,6 +239,7 @@
             <German>NS-Brille (4. Generation, Schwarz, WP)</German>
             <Korean>야투경 (4세대, 검정, 백색광)</Korean>
             <French>JVN (Gen4, noires, WP)</French>
+            <Russian>ПНВ (Gen4, Чёрный, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
             <English>NV Goggles (Gen4, Green)</English>
@@ -255,6 +261,7 @@
             <German>NS-Brille (4. Generation, Grün, WP)</German>
             <Korean>야투경 (4세대, 녹색, 백색광)</Korean>
             <French>JVN (Gen4, vertes, WP)</French>
+            <Russian>ПНВ (Gen4, Зелёный, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
             <English>NV Goggles (Wide, Brown)</English>
@@ -276,6 +283,7 @@
             <German>NS-Brille (Weit, Braun, WP)</German>
             <Korean>야투경 (넓음, 갈색, 백색광)</Korean>
             <French>JVN (Large, marron, WP)</French>
+            <Russian>ПНВ (Широкий, Коричневый, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
             <English>NV Goggles (Wide, Black)</English>
@@ -297,6 +305,7 @@
             <German>NS-Brille (Weit, Schwarz, WP)</German>
             <Korean>야투경 (넓음, 검정, 백색광)</Korean>
             <French>JVN (Large, noires, WP)</French>
+            <Russian>ПНВ (Широкий, Чёрный, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
             <English>NV Goggles (Wide, Green)</English>
@@ -318,6 +327,7 @@
             <German>NS-Brille (Weit, Grün, WP)</German>
             <Korean>야투경 (넓음, 녹색, 백색광)</Korean>
             <French>JVN (Large, vertes, WP)</French>
+            <Russian>ПНВ (Широкий, Зелёный, БФ)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -576,6 +586,7 @@
             <German>Nachtsicht-Generation</German>
             <Korean>야투경 세대</Korean>
             <French>Génération de jumelles de vision nocturne</French>
+            <Russian>Генерация ночного видения</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_statGen">
             <English>Gen %1</English>
@@ -585,6 +596,7 @@
             <German>Gen %1</German>
             <Korean>%1세대</Korean>
             <French>Gen %1</French>
+            <Russian>Генерация %1</Russian>
         </Key>
     </Package>
 </Project>

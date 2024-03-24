@@ -1,10 +1,11 @@
-class cfgMagazines {
+class CfgMagazines {
     class 8Rnd_82mm_Mo_shells;
     class ACE_1Rnd_82mm_Mo_HE: 8Rnd_82mm_Mo_shells {
         count = 1;
         scope = 2;
         scopeCurator = 2;
         EGVAR(arsenal,hide) = -1;
+        type = 256;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_HE_displayName);
         displayNameShort = "";
@@ -19,6 +20,7 @@ class cfgMagazines {
         scope = 2;
         scopeCurator = 2;
         EGVAR(arsenal,hide) = -1;
+        type = 256;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_Smoke_displayName);
         displayNameShort = "";
@@ -33,6 +35,7 @@ class cfgMagazines {
         scope = 2;
         scopeCurator = 2;
         EGVAR(arsenal,hide) = -1;
+        type = 256;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_Illum_displayName);
         displayNameShort = "";
@@ -47,6 +50,7 @@ class cfgMagazines {
         scope = 2;
         scopeCurator = 2;
         EGVAR(arsenal,hide) = -1;
+        type = 256;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_HE_Guided_displayName);
         displayNameShort = "";
@@ -61,6 +65,7 @@ class cfgMagazines {
         scope = 2;
         scopeCurator = 2;
         EGVAR(arsenal,hide) = -1;
+        type = 256;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_HE_LaserGuided_displayName);
         displayNameShort = "";

@@ -166,6 +166,7 @@
             <Korean>가벼운 개체 들고 달리기 허용</Korean>
             <French>Autoriser la course avec des objets légers</French>
             <Portuguese>Permitir corrida com objetos leves</Portuguese>
+            <Russian>Позволяет работать с легкими объектами</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_allowRunWithLightweight_Description">
             <English>Allow the player to run when carrying lightweight objects.</English>
@@ -176,6 +177,7 @@
             <Korean>가벼운 개체를 들고 다닐 때 플레이어가 뛸 수 있도록 허용합니다.</Korean>
             <French>Autorise le joueur à courir lorsqu'il porte un objet léger.</French>
             <Portuguese>Permite ao jogador correr enquanto carrega objetos leves.</Portuguese>
+            <Russian>Разрешите игроку бегать при переноске легких предметов.</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_skipContainerWeight_DisplayName">
             <English>Skip Object Weight</English>
@@ -186,6 +188,7 @@
             <Korean>개체 무게 무시</Korean>
             <French>Ignorer le poids de l'objet</French>
             <Portuguese>Ignorar Peso do Objeto</Portuguese>
+            <Russian>Игнорировать вес объекта</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_skipContainerWeight_Description">
             <English>Determines whether object's weight is added onto weight calculations.</English>
@@ -196,6 +199,7 @@
             <Korean>무게 계산에 개체의 무게를 추가할 지 여부를 결정합니다.</Korean>
             <French>Défini si le poids d'un objet est ajouté aux calculs du poids.</French>
             <Portuguese>Determina se o peso do objeto é adicionado aos cálculos de peso.</Portuguese>
+            <Russian>Определяет, добавляется ли вес объекта при расчете веса.</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_weightCoefficient_DisplayName">
             <English>Max Weight Coefficient</English>
@@ -205,6 +209,7 @@
             <Portuguese>Coeficiente Máximo de Peso</Portuguese>
             <German>Maximaler Gewichtskoeffizient</German>
             <Japanese>最大重量係数</Japanese>
+            <Russian>Максимальный коэффициент веса</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_weightCoefficient_Description">
             <English>Modifies weight limit calculations. Set to 0 to ignore.</English>
@@ -214,6 +219,7 @@
             <Portuguese>Modifica os cálculos do limite de peso. Defina como 0 para ignorar.</Portuguese>
             <German>Ändert die Berechnung der Gewichtsbegrenzung. Zum Ignorieren auf 0 setzen.</German>
             <Japanese>重量制限の計算を変更します。 無視するには 0 に設定します。</Japanese>
+            <Russian>Изменяет расчеты предельного веса. Установите значение 0 для игнорирования.</Russian>
         </Key>
     </Package>
 </Project>

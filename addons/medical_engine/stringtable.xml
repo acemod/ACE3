@@ -36,6 +36,7 @@
             <Italian>Fattore di Trapasso Armatura</Italian>
             <Portuguese>Efeito de Penetração de Blindagem</Portuguese>
             <Japanese>装甲貫通効果</Japanese>
+            <Russian>Эффект сквозного прохождения брони</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_description">
             <English>Controls effect of armor 'passThrough' on final damage. Makes high armor values, like ones used in GL rigs, less effective.\nUse 0% for pre 3.16.0 armor behavior.\nOnly touch this if you know what you're doing!</English>
@@ -46,6 +47,7 @@
             <Italian>Determina l'effetto di danni sul corpo che 'trapassano' l'armatura. Rende alti valori di protezione, come quelli su corpetti GL, meno efficaci.\nUtilizza 0% per il comportamento prima di v3.16.0.\nModifica questo valore solo se sai cosa stai facendo!</Italian>
             <Portuguese>Controla o efeito de penetração (passThrough) da blindagem no dano final. Torna valores de blindagem altos, como os usados em coletes GL, menos eficazes.\nUse 0% para o comportamento de blindagem anterior à versão 3.16.0.\nSó mexa nisso se souber o que está fazendo!</Portuguese>
             <Japanese>ボディアーマーの'passThrough'値が最終的な身体ダメージに与える影響を調整します。擲弾兵リグで使用されるような高い装甲値では効果が低くなります。\n3.16.0以前の挙動にするには0%にしてください。\nこれが何かわからない場合は変更しないことをお勧めします。</Japanese>
+            <Russian>Контролирует эффект `passThrough` при нанесении конечного урона. Делает высокие значения брони, подобные тем, которые используются в GL rigs, менее эффективными.\nИспользуйте 0% для поведения брони до версии 3.16.0.n\Прикасайтесь к этому, только если знаете, что делаете!</Russian>
         </Key>
     </Package>
 </Project>

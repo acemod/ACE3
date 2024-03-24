@@ -247,6 +247,7 @@
             <Spanish>Zona horaria</Spanish>
             <Polish>Strefa czasowa</Polish>
             <German>Zeitzone</German>
+            <Italian>Fuso orario</Italian>
             <Chinesesimp>时区</Chinesesimp>
             <Korean>시간대</Korean>
         </Key>
@@ -258,6 +259,7 @@
             <Spanish>Cambie la zona horaria para la marca de tiempo</Spanish>
             <Polish>Zmień strefę czasową dla znaczników czasu</Polish>
             <German>Ändern Sie die Zeitzone für den Zeitstempel</German>
+            <Italian>Modifica il fuso orario per la marca temporale</Italian>
             <Chinesesimp>更改时间戳的时区</Chinesesimp>
             <Korean>타임스탬프의 시간대를 변경하십시오</Korean>
         </Key>
@@ -269,6 +271,7 @@
             <Spanish>Hora del juego</Spanish>
             <Polish>Czas gry</Polish>
             <German>Ingame-Zeit</German>
+            <Italian>Ora del gioco</Italian>
             <Chinesesimp>游戏内时间</Chinesesimp>
             <Korean>게임 시간</Korean>
         </Key>
@@ -280,6 +283,7 @@
             <Spanish>Hora del sistema</Spanish>
             <Polish>Czas systemowy</Polish>
             <German>Systemzeit</German>
+            <Italian>Ora del sistema</Italian>
             <Chinesesimp>系统时间</Chinesesimp>
             <Korean>시스템 시간</Korean>
         </Key>
@@ -291,6 +295,7 @@
             <Spanish>Hora UTC</Spanish>
             <Polish>Czas UTC</Polish>
             <German>UTC-Zeit</German>
+            <Italian>Tempo-UTC</Italian>
             <Chinesesimp>UTC时间</Chinesesimp>
             <Korean>UTC 시간</Korean>
         </Key>
@@ -302,6 +307,7 @@
             <Spanish>Desplazamiento UTC</Spanish>
             <Polish>Przesunięcie UTC</Polish>
             <German>UTC-Verschiebung</German>
+            <Italian>Deviazione-UTC</Italian>
             <Chinesesimp>UTC偏移量</Chinesesimp>
             <Korean>UTC 오프셋</Korean>
         </Key>
@@ -313,17 +319,19 @@
             <Spanish>Cambiar el desplazamiento horario para la marca de tiempo UTC</Spanish>
             <Polish>Zmień przesunięcie czasu dla sygnatury czasowej UTC</Polish>
             <German>Ändere die Zeitverschiebung für den UTC-Zeitstempel</German>
+            <Italian>Modifica la deviazione della marca temporale UTC.</Italian>
             <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
             <Korean>UTC 타임 스탬프의 시간 오프셋을 변경하십시오</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffset">
             <English>UTC Minutes Offset</English>
-            <Russian>UTC Минутное Смещение</Russian>
+            <Russian>UTC Минутное смещение</Russian>
             <French>Décalage des minutes UTC</French>
             <Japanese>UTC分オフセット</Japanese>
             <Spanish>Desplazamiento de minutos UTC</Spanish>
             <Polish>Przesunięcie minut UTC</Polish>
             <German>UTC-Minutenversatz</German>
+            <Italian>Deviazione Minuti UTC</Italian>
             <Chinesesimp>UTC分钟偏移量</Chinesesimp>
             <Korean>UTC 분 오프셋</Korean>
         </Key>
@@ -335,6 +343,7 @@
             <Spanish>Cambiar el desplazamiento de minutos para la marca de tiempo UTC</Spanish>
             <Polish>Zmień przesunięcie minut dla sygnatury czasowej UTC</Polish>
             <German>Ändere den Minutenversatz für den UTC-Zeitstempel</German>
+            <Italian>Modifica la deviazione dei minuti della marca temporale UTC.</Italian>
             <Chinesesimp>更改UTC时间戳的分钟偏移量</Chinesesimp>
             <Korean>UTC 타임 스탬프의 분 오프셋을 변경하십시오</Korean>
         </Key>
@@ -407,17 +416,21 @@
             <English>"MM" - Milliseconds (from 0 to 59)</English>
             <French>"MM" - Millisecondes (de 0 à 59)</French>
             <German>"MS" - Milisekunden (von 0 bis 59)</German>
+            <Italian>"MS" - Millisecondi (da 0 a 59)</Italian>
             <Portuguese>"MS" - Milissegundos (de 0 a 59)</Portuguese>
             <Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
             <Japanese>"MM" - ミリ秒 (0から59)</Japanese>
+            <Russian>"ММ" - миллисекунды (от 0 до 59)</Russian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription5">
             <English>"mmm" - Milliseconds (from 0 to 999)</English>
             <French>"mmm" - Millisecondes (de 0 à 999)</French>
             <German>"mmm" - Milisekunden (von 0 bis 999)</German>
+            <Italian>"mmm" - Millisecondi (da 0 a 999)</Italian>
             <Portuguese>"mmm" - Milissegundos (de 0 a 999)</Portuguese>
             <Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
             <Japanese>"mmm" - ミリ秒 (0から599)</Japanese>
+            <Russian>"ммм" - миллисекунды (от 0 до 999)</Russian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>

@@ -95,7 +95,7 @@ if (_state) then {
                     // Check if the necessary keys were pressed for a keybind
                     _return = _comboDikPressed &&
                         {_mainDevice == "KEYBOARD"} &&
-                        {((GVAR(keyboardInputMain) getOrDefault [_mainDik, [false, 0]]) select 1) > ([0, 1] select _isDoubleTap)}; // check how many times the main key was pressed
+                        {((GVAR(keyboardInputMain) getOrDefault [_mainDik, [false, 0]]) select 1) > (parseNumber _isDoubleTap)}; // check how many times the main key was pressed
 
                     // Keybind was detected
                     if (_return) exitWith {

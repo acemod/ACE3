@@ -5,13 +5,13 @@
 [QGVAR(burnObjectEffects), LINKFUNC(burnObjectEffects)] call CBA_fnc_addEventHandler;
 [QGVAR(burnSimulation), LINKFUNC(burnSimulation)] call CBA_fnc_addEventHandler;
 
-// Only play sound if enabled in settings
 [QGVAR(playScream), {
-    if (!GVAR(enableScreams)) exitWith {};
-
     params ["_scream", "_source"];
 
-    _source say3D _scream;
+    // Only play sound if enabled in settings and enabled for the unit
+    if (GVAR(enableScreams) && {_source getVariable [QGVAR(enableScreams), true]}) then {
+        _source say3D _scream;
+    };
 }] call CBA_fnc_addEventHandler;
 
 if (!isServer) exitWith {};

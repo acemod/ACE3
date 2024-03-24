@@ -25,6 +25,9 @@ if (GVAR(interactionParadrop)) then {
     (_display displayCtrl 12) ctrlSetText LLSTRING(paradropButton);
 };
 
+// Disable deploy option if paradropping or in Zeus
+(_display displayCtrl 13) ctrlEnable (GVAR(enableDeploy) && !GVAR(interactionParadrop) && {isNull curatorCamera});
+
 [{
     params ["_vehicle", "_pfhID"];
 
@@ -33,7 +36,6 @@ if (GVAR(interactionParadrop)) then {
     private _display = uiNamespace getVariable QGVAR(menuDisplay);
 
     if (isNil "_display") exitWith {
-        GVAR(interactionVehicle) = nil;
         GVAR(interactionParadrop) = nil;
 
         _pfhID call CBA_fnc_removePerFrameHandler;
@@ -41,18 +43,18 @@ if (GVAR(interactionParadrop)) then {
 
     // Close menu if in invalid state
     if (
-        !alive _vehicle ||
+        !alive ACE_player ||
+        {!alive _vehicle} ||
         {locked _vehicle >= 2} ||
         {!(_vehicle getVariable [QGVAR(hasCargo), true])} || // if the cargo menu could be opened, the vehicle has QGVAR(hasCargo) in its config or the variable is set using FUNC(setSpace)
         {
-            isNull findDisplay 312 && // if in Zeus, ignore the following checks
+            isNull curatorCamera && // if in Zeus, ignore the checks that follow
             {([ACE_player, _vehicle] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE} &&
             {(vehicle ACE_player) != _vehicle}
         }
     ) exitWith {
         closeDialog 0;
 
-        GVAR(interactionVehicle) = nil;
         GVAR(interactionParadrop) = nil;
 
         _pfhID call CBA_fnc_removePerFrameHandler;

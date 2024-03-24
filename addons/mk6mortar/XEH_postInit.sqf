@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 if (hasInterface) then {
+    #include "initKeybinds.inc.sqf"
     ["ace_infoDisplayChanged", FUNC(turretDisplayLoaded)] call CBA_fnc_addEventHandler;
 };
 
