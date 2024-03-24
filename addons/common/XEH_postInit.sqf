@@ -263,51 +263,6 @@ if (_currentVersion != _previousVersion) then {
 
 call FUNC(checkFiles);
 
-// This handles clients joining that do not have ACE loaded
-if (isServer) then {
-    addMissionEventHandler ["PlayerConnected", {
-        params ["", "_uid", "_name", "", "_owner"];
-
-        // Don't run on server
-        if (_owner == 2) exitWith {};
-
-        INFO_3("Client %1 connected. UID is %2, Client ID is %3",_name,_uid,_owner);
-
-        [{
-            params ["", "_uid", "_name", "", "_owner"];
-
-            // If the player has left, ignore the rest
-            if (allUsers findIf {_userInfo = getUserInfo _x; (_userInfo select 1) == _owner && {(_userInfo select 2) == _uid}} == -1) exitWith {};
-
-            // If ACE is not loaded, kick unit
-            if !(missionNamespace getVariable [format [QGVAR(aceLoaded_%1), _owner], false]) then {
-                WARNING_3("Client %1 connected without ACE. UID is %2, Client ID is %3",_name,_uid,_owner);
-
-                // Add a UUID as a suffix, so that it's much harder for the client to predict the function name and put preventive measures in place
-                private _fncName = format [QFUNC(errorMessage_%1), call CBA_fnc_createUUID];
-
-                // This avoids 'Attempt to delete final function' error spammed in RPT, which happens if a final function is sent directly to the client
-                missionNamespace setVariable [_fncName, FUNC(errorMessage)];
-
-                // Send function to the connecting client
-                _owner publicVariableClient _fncName;
-
-                // Wait for function to broadcast, then run function on client
-                [{
-                    ["[ACE] ERROR", "ACE is not present or outdated past version 3.X.X"] remoteExec _this;
-                }, [_fncName, _owner], 0.5] call CBA_fnc_waitAndExecute;
-            };
-        }, _this, 15] call CBA_fnc_waitAndExecute;
-    }];
-
-    addMissionEventHandler ["PlayerDisconnected", {
-        params ["", "", "", "", "_owner"];
-
-        // Reset variable
-        missionNamespace setVariable [format [QGVAR(aceLoaded_%1), _owner], nil];
-    }];
-};
-
 //////////////////////////////////////////////////
 // Set up ace_settingsInitialized eventhandler
 //////////////////////////////////////////////////
