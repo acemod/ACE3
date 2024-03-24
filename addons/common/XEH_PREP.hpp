@@ -13,6 +13,7 @@ PREP(addLineToDebugDraw);
 PREP(addSwayFactor);
 PREP(addToInventory);
 PREP(addWeapon);
+PREP(adjustMagazineAmmo);
 PREP(assignedItemFix);
 PREP(assignObjectsInList);
 PREP(ambientBrightness);

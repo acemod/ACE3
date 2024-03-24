@@ -40,7 +40,7 @@ if (!alive _target || {_unit distance _target > 10}) exitWith {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Timeout: Do nothing, quit. CBA_missionTime, because anim length is linked to ingame time
+// Timeout: Drop target. CBA_missionTime, because anim length is linked to ingame time
 if (CBA_missionTime > _timeOut) exitWith {
     TRACE_4("timeout",_unit,_target,_timeOut,CBA_missionTime);
     _idPFH call CBA_fnc_removePerFrameHandler;
