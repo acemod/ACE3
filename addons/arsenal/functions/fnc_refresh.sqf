@@ -25,6 +25,11 @@ if (canSuspend) exitWith {
     [{_this call FUNC(refresh)}, _this] call CBA_fnc_directCall;
 };
 
+private _display = findDisplay IDD_ace_arsenal;
+
+// Exit quietly if no display found
+if (isNull _display) exitWith {};
+
 if (_updateItems) then {
     // Update current item list
     call FUNC(updateCurrentItemsList);
@@ -64,7 +69,5 @@ if (!_animate) then {
     GVAR(refreshing) = true;
     [{GVAR(refreshing) = false}, nil, 3] call CBA_fnc_execAfterNFrames;
 };
-
-private _display = findDisplay IDD_ace_arsenal;
 
 [_display, _display displayCtrl GVAR(currentLeftPanel), _animate] call FUNC(fillLeftPanel);

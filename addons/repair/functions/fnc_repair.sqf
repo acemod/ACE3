@@ -107,7 +107,7 @@ if !(_return && alive _target) exitWith {false};
 
 //Claim required objects
 {
-    TRACE_2("Claiming", _x, (typeOf _x));
+    TRACE_2("Claiming",_x,(typeOf _x));
     [_caller, _x, false] call EFUNC(common,claim);
 } forEach _claimObjectsAvailable;
 
@@ -172,7 +172,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         } else {
             _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
         };
-        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLower _callerAnim];
+        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLowerANSI _callerAnim];
         [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
 };

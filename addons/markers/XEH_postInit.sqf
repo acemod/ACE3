@@ -32,7 +32,7 @@ GVAR(userPlacedMarkers) = [];
 
         if (_index < 0) exitWith {
             if (!isMultiplayer) exitWith {};
-            WARNING_1("Could not find data for %1", _marker);
+            WARNING_1("Could not find data for %1",_marker);
         };
 
         private _data = GVAR(allMapMarkersProperties) select _index;

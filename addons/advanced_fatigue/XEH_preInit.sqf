@@ -13,5 +13,6 @@ GVAR(dutyList) = createHashMap;
 GVAR(setAnimExclusions) = [];
 GVAR(inertia) = 0;
 GVAR(inertiaCache) = createHashMap;
+GVAR(medicalLoaded) = ["ace_medical"] call EFUNC(common,isModLoaded);
 
 ADDON = true;

@@ -93,7 +93,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 1: { // Direction
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = format["%1", format["%1 %2", GVAR(Directions) select GVAR(Direction), round(_playerDir)]];
+                _textCenterBig = format["%1 %2", GVAR(Directions) select GVAR(Direction), round(_playerDir)];
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";

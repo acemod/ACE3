@@ -32,16 +32,22 @@ params [
 
         private _source = _object;
         private _nozzle = _object;
-        if (typeOf _object isEqualTo QGVAR(fuelNozzle) || {_object getVariable [QGVAR(jerryCan), false]}) then { // func is called on muzzle either connected or on ground
+        if (typeOf _object isEqualTo QGVAR(fuelNozzle) || {_object getVariable [QGVAR(jerryCan), false]}) then { // func is called on nozzle either connected or on ground
             _source = _nozzle getVariable QGVAR(source);
             if (_nozzle getVariable [QGVAR(jerryCan), false]) then {
                 _nozzle attachTo [_unit, [0,1,0], "pelvis"];
             } else {
                 _nozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
             };
+
+            // Don't allow other players to take nozzle
+            [_unit, _nozzle] call EFUNC(common,claim);
         } else { // func is called on fuel truck
             _nozzle = QGVAR(fuelNozzle) createVehicle [0,0,0];
             _nozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
+
+            // Don't allow other players to take nozzle
+            [_unit, _nozzle] call EFUNC(common,claim);
 
             private _ropeTarget = _source;
             if !(_source isKindOf "AllVehicles") then {

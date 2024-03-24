@@ -55,8 +55,8 @@ if (_target isKindOf "CAManBase") then {
         TRACE_4("timeout",_unit,_target,_timeOut,CBA_missionTime);
         _idPFH call CBA_fnc_removePerFrameHandler;
 
-        private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
-        [_unit, _draggedObject] call FUNC(dropObject_carry);
+        private _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
+        [_unit, _carriedObject] call FUNC(dropObject_carry);
     };
 
     // Wait for the unit to stand up

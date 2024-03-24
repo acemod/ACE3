@@ -96,7 +96,7 @@
         _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
     if (["task_force_radio"] call FUNC(isModLoaded)) then {
-        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
+        _object setVariable ["tf_voiceVolume", parseNumber (_set == 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -142,7 +142,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`",[_x] call FUNC(getName),_dcPlayer,_x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil
@@ -405,7 +405,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
-        switch (toLower _position) do {
+        switch (toLowerANSI _position) do {
             case (""): {
                 _UAV = objNull; // set to objNull if not actively controlling
             };

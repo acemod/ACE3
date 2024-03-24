@@ -1,5 +1,9 @@
 class CfgMovesBasic {
-    class Default;
+    // Idle affects legs when weapon switching - fixes units sliding when holstering weapons
+    class Default {
+        idle = "";
+    };
+
     // From ACRE
     class ManActions {
         GVAR(stop) = QGVAR(stop);
