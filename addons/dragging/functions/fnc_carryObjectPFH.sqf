@@ -74,7 +74,7 @@ if (_unit getHitPointDamage "HitLegs" >= 0.5) exitWith {
 };
 
 // Drop static if crew is in it (UAV crew deletion may take a few frames)
-if (_target isKindOf "StaticWeapon" && {!(unitIsUAV _target)} && {(crew _target) isNotEqualTo []}) exitWith {
+if (_target isKindOf "StaticWeapon" && {!(_target getVariable [QGVAR(isUAV), false])} && {(crew _target) isNotEqualTo []}) exitWith {
     TRACE_2("static weapon crewed",_unit,_target);
 
     [_unit, _target] call FUNC(dropObject_carry);

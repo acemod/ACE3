@@ -62,6 +62,8 @@ if (_UAVCrew isNotEqualTo []) then {
     {
         _target deleteVehicleCrew _x;
     } forEach _UAVCrew;
+
+    _target setVariable [QGVAR(isUAV), true, true];
 };
 
 // Check everything
