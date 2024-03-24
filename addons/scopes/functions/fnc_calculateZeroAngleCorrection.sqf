@@ -8,8 +8,8 @@
  * 1: New Zero range <NUMBER>
  * 2: Bore height <NUMBER>
  * 3: Weapon <OBJECT>
- * 4: Ammo <CLASS>
- * 5: Magazine <CLASS>
+ * 4: Ammo <STRING>
+ * 5: Magazine <STRING>
  * 6: Advanced Ballistics enabled? <BOOL>
  *
  * Return Value:
