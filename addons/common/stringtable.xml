@@ -1828,8 +1828,14 @@
             <Chinese>下方</Chinese>
             <Turkish>Alt</Turkish>
         </Key>
-        <Key ID="STR_ACE_Common_Sway">
+        <Key ID="STR_ACE_Common_subcategory_sway">
             <English>Sway</English>
+        </Key>
+        <Key ID="STR_ACE_Common_EnableSway">
+            <English>Enable Sway</English>
+        </Key>
+        <Key ID="STR_ACE_Common_EnableSway_Description">
+            <English>Enables weapon sway influenced by stance, fatigue and medical condition.</English>
         </Key>
         <Key ID="STR_ACE_Common_SwayFactor">
             <English>Sway factor</English>

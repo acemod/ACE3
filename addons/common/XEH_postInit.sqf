@@ -515,8 +515,8 @@ GVAR(reloadMutex_lastMagazines) = [];
 
     [{
         // frame after settingsInitialized to ensure all other addons have added their factors
-        if ((GVAR(swayFactorsBaseline) + GVAR(swayFactorsMultiplier)) isNotEqualTo []) then {
-            call FUNC(swayLoop)
+        if (GVAR(enableSway)) then {
+            call FUNC(swayLoop);
         };
         // check for pre-3.16 sway factors being added
         if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {
