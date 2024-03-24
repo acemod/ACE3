@@ -4,26 +4,26 @@
  * Handles AI spawn and requests a rebalance if applicable.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [object] call ace_headless_fnc_handleSpawn
+ * [cursorObject] call ace_headless_fnc_handleSpawn
  *
  * Public: No
  */
 
-params ["_object"];
-TRACE_1("Spawn",_object);
+params ["_unit"];
+TRACE_1("Spawn",_unit);
 
-// Exit if HC transferring disabled or object not a unit (including unit inside vehicle) or is player
-if (!(_object in allUnits) || {isPlayer _object}) exitWith {};
+// Exit if unit is player
+if (isPlayer _unit) exitWith {};
 
-// Exit and blacklist if of blacklist type
-if (GVAR(blacklistType) findIf {_object isKindOf _x} != -1) exitWith {
-    _object setVariable [QXGVAR(blacklist), true];
+// Exit and blacklist if unit is UAV
+if (unitIsUAV _unit) exitWith {
+    _unit setVariable [QXGVAR(blacklist), true];
 };
 
 // Rebalance

@@ -17,7 +17,7 @@
  */
 
 params ["_object"];
-TRACE_1("HandleDisconnect",_this);
+TRACE_1("HandleDisconnect",_object);
 
 // Exit if not HC
 if !(_object in GVAR(headlessClients)) exitWith {
