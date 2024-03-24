@@ -1835,7 +1835,7 @@
             <English>Enable ACE Sway</English>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway_Description">
-            <English>Enables weapon sway influenced by sway factors, stance, fatigue and medical condition.\nDisabling this setting will defer sway to vanilla or other mods.</English>
+            <English>Enables weapon sway influenced by sway factors, such as stance, fatigue and medical condition.\nDisabling this setting will defer sway to vanilla or other mods.</English>
         </Key>
         <Key ID="STR_ACE_Common_SwayFactor">
             <English>Sway factor</English>
