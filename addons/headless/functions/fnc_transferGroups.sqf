@@ -79,8 +79,8 @@ private _numTransferredHC3 = 0;
                 _transfer = false;
             };
 
-            // No transfer if player in this group
-            if (isPlayer _x) exitWith {
+            // No transfer if player or UAV in this group
+            if (isPlayer _x || {unitIsUAV _x}) exitWith {
                 _transfer = false;
             };
 
@@ -89,8 +89,10 @@ private _numTransferredHC3 = 0;
                 _transfer = false;
             };
 
+            private _vehicle = vehicle _x;
+
             // No transfer if vehicle unit is in or crew in that vehicle is blacklisted
-            if (vehicle _x != _x && {(vehicle _x) getVariable [QXGVAR(blacklist), false]}) exitWith {
+            if (_vehicle != _x && {_vehicle getVariable [QXGVAR(blacklist), false] || {unitIsUAV _vehicle}}) exitWith {
                 _transfer = false;
             };
 

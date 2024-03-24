@@ -18,13 +18,8 @@
 params ["_unit"];
 TRACE_1("Spawn",_unit);
 
-// Exit if unit is player
-if (isPlayer _unit) exitWith {};
-
-// Exit and blacklist if unit is UAV
-if (unitIsUAV _unit) exitWith {
-    _unit setVariable [QXGVAR(blacklist), true];
-};
+// Exit if unit is player or UAV crew
+if (isPlayer _unit || {unitIsUAV _unit}) exitWith {};
 
 // Rebalance
 [false] call FUNC(rebalance);
