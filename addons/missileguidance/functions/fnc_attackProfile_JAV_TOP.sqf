@@ -39,7 +39,7 @@ private _distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;
 private _distanceToShooter = _projectilePos vectorDistance _shooterPos;
 private _distanceShooterToTarget = _shooterPos vectorDistance _seekerTargetPos;
 
-TRACE_2("", _distanceToTarget, _distanceToShooter);
+TRACE_2("",_distanceToTarget,_distanceToShooter);
 
 // Add height depending on distance for compensate
 private _returnTargetPos = _seekerTargetPos;
@@ -58,7 +58,7 @@ switch( (_attackProfileStateParams select 0) ) do {
         private _cruisAlt = 140;
         if (_distanceShooterToTarget < 1250) then {
             _cruisAlt = 140 * (_distanceShooterToTarget/1250);
-            TRACE_1("_cruisAlt", _cruisAlt);
+            TRACE_1("_cruisAlt",_cruisAlt);
         };
         if ( ((ASLToAGL _projectilePos) select 2) - ((ASLToAGL _seekerTargetPos) select 2) >= _cruisAlt) then {
             if (_cruisAlt < 140) then {
@@ -72,7 +72,7 @@ switch( (_attackProfileStateParams select 0) ) do {
     };
     case STAGE_COAST: {
         TRACE_1("STAGE_COAST","");
-        TRACE_1("", ((ASLToAGL _projectilePos) select 2) - (( ASLToAGL _seekerTargetPos) select 2) );
+        TRACE_1("",((ASLToAGL _projectilePos) select 2) - (( ASLToAGL _seekerTargetPos) select 2));
         if (_distanceToTarget < ( ((ASLToAGL _projectilePos) select 2) - (( ASLToAGL _seekerTargetPos) select 2) ) * 2) then {
             _attackProfileStateParams set [0, STAGE_TERMINAL];
         } else {
@@ -86,5 +86,5 @@ switch( (_attackProfileStateParams select 0) ) do {
     };
 };
 
-TRACE_1("Adjusted target position", _returnTargetPos);
+TRACE_1("Adjusted target position",_returnTargetPos);
 _returnTargetPos;

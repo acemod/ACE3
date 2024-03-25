@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: johnb43
- * Removes user input affecting dragging.
+ * Removes user input affecting carrying.
  *
  * Arguments:
  * 0: Unit <OBJECT>

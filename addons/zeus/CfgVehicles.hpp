@@ -191,6 +191,13 @@ class CfgVehicles {
         function = QFUNC(moduleLoadIntoCargo);
         icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
     };
+    class GVAR(moduleUnloadFromCargo): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleUnloadFromCargo_DisplayName);
+        function = QFUNC(moduleUnloadFromCargo);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
+    };
     class GVAR(moduleCargoParadrop): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);

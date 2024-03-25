@@ -192,6 +192,9 @@ class FunctionFile:
                 if arg_default is None:
                     arg_default = ""
 
+                if ("SCALAR" in arg_types or "NUMVER" in arg_types):
+                    self.feedback("Bad Arg Type \"{}\"".format(arg_types), 1)
+
                 arguments.append([arg_index, arg_name, arg_types, arg_default, arg_notes])
             else:
                 # Notes about the above argument won't start with an index

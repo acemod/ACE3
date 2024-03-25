@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_IntelItems_Category">
             <English>ACE Intel Items</English>
             <German>ACE Aufklärungsgegenstände</German>
+            <Italian>ACE Oggetti Intel</Italian>
             <Chinese>ACE 情報物品</Chinese>
             <Chinesesimp>ACE 情报物品</Chinesesimp>
             <Japanese>ACE 機密アイテム</Japanese>
@@ -13,10 +14,12 @@
             <Korean>ACE 정보 아이템</Korean>
             <Spanish>ACE Objetos de Inteligencia</Spanish>
             <French>ACE Objets de Renseignements</French>
+            <Portuguese>ACE Itens de Inteligência</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_DisplayName">
             <English>Intel Items</English>
             <German>Aufklärungsgegenstände</German>
+            <Italian>Oggetti Intel</Italian>
             <Chinese>情報物品</Chinese>
             <Chinesesimp>情报物品</Chinesesimp>
             <Japanese>機密アイテム</Japanese>
@@ -26,36 +29,42 @@
             <Korean>정보 아이템</Korean>
             <Spanish>Objetos de Inteligencia</Spanish>
             <French>Objets de Renseignements</French>
+            <Portuguese>Itens de Inteligência</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_DisplayName">
             <English>Notepad</English>
             <German>Notizblock</German>
+            <Italian>Blocco Note</Italian>
             <Chinese>筆記本</Chinese>
             <Chinesesimp>笔记本</Chinesesimp>
-            <Japanese>メモ</Japanese>
+            <Japanese>メモ帳</Japanese>
             <Russian>Блокнот</Russian>
             <Polish>Notes</Polish>
             <Turkish>Not Defteri</Turkish>
             <Korean>노트패드</Korean>
             <Spanish>Bloc de notas</Spanish>
             <French>Bloc-notes</French>
+            <Portuguese>Bloco de Notas</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_Description">
             <English>Notepad - Can access from the map screen</English>
             <German>Notizblock - Über die Karte abrufbar</German>
+            <Italian>Blocco Note - Accessibile dalla mappa</Italian>
             <Chinese>筆記本 - 可以透過地圖界面來存取</Chinese>
             <Chinesesimp>笔记本—可以透过地图界面访问</Chinesesimp>
-            <Japanese>メモ - マップ画面から確認可能</Japanese>
+            <Japanese>メモ帳 - マップ画面から確認可能</Japanese>
             <Russian>Блокнот - Можно получить доступ с экрана карты</Russian>
             <Polish>Notes - Dostępne z mapy</Polish>
             <Turkish>Not Defteri - Haritadan erişim sağlanabilinir</Turkish>
             <Korean>노트패드 - 지도에서 확인 가능합니다</Korean>
             <Spanish>Block de notas - Puede accederse desde la pantalla de mapa</Spanish>
             <French>Bloc-note - Consultable depuis la carte</French>
+            <Portuguese>Bloco de Notas - Pode ser acessado a partir da tela de mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_Document_DisplayName">
             <English>Document</English>
             <German>Dokument</German>
+            <Italian>Documento</Italian>
             <Chinese>文件</Chinese>
             <Chinesesimp>文件</Chinesesimp>
             <Japanese>資料</Japanese>
@@ -65,23 +74,27 @@
             <Korean>문서</Korean>
             <Spanish>Documento</Spanish>
             <French>Document</French>
+            <Portuguese>Documento</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_Document_Description">
             <English>Printed Document - Can access from the map screen</English>
             <German>Bedrucktes Dokument - Über die Karte abrufbar</German>
+            <Italian>Documento stampato - Accessibile dalla mappa</Italian>
             <Chinese>影印文件 - 可以透過地圖界面來存取</Chinese>
             <Chinesesimp>影印文件—可以透过地图界面访问</Chinesesimp>
-            <Japanese>メモ - マップ画面から確認可能</Japanese>
+            <Japanese>印刷された資料 - マップ画面から確認可能</Japanese>
             <Russian>Распечатанный документ - Можно получить доступ с экрана карты</Russian>
             <Polish>Wydrukowane Dokumenty - Dostępne z mapy</Polish>
             <Turkish>Yazılı Döküman - Haritadan erişim sağlanabilinir</Turkish>
             <Korean>문서들 - 지도에서 확인 가능합니다</Korean>
             <Spanish>Documento Impreso - Puede accederse desde la pantalla de mapa</Spanish>
             <French>Document imprimé - Consultable depuis la carte</French>
+            <Portuguese>Documento Impresso - Pode ser acessado a partir da tela de mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_DisplayName">
             <English>Photo</English>
             <German>Foto</German>
+            <Italian>Foto</Italian>
             <Chinese>相片</Chinese>
             <Chinesesimp>照片</Chinesesimp>
             <Japanese>写真</Japanese>
@@ -91,10 +104,12 @@
             <Korean>사진</Korean>
             <Spanish>Fotografía</Spanish>
             <French>Photo</French>
+            <Portuguese>Fotografia</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_Description">
             <English>Photo - Can access from the map screen</English>
             <German>Foto - Über die Karte abrufbar</German>
+            <Italian>Foto - Accessibile dalla mappa</Italian>
             <Chinese>相片  - 可以透過地圖界面來存取</Chinese>
             <Chinesesimp>照片—可以透过地图界面访问</Chinesesimp>
             <Japanese>写真 - マップ画面から確認可能</Japanese>
@@ -104,6 +119,7 @@
             <Korean>사진 - 지도에서 확인 가능합니다</Korean>
             <Spanish>Fotografía - Puede accederse desde la pantalla de mapa</Spanish>
             <French>Photo - Consultable depuis la carte</French>
+            <Portuguese>Fotografia - Pode ser acessada a partir da tela de mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_Text">
             <English>Text</English>
@@ -124,6 +140,7 @@
         <Key ID="STR_ACE_IntelItems_Photo_Filename">
             <English>Photo Filename</English>
             <German>Foto-Dateiname</German>
+            <Italian>Nome File della Foto</Italian>
             <Chinese>相片名稱</Chinese>
             <Chinesesimp>照片文件名</Chinesesimp>
             <Japanese>写真名</Japanese>
@@ -133,13 +150,14 @@
             <Korean>사진명</Korean>
             <Spanish>Nombre de fichero de la Fotografía</Spanish>
             <French>Nom du fichier photo</French>
+            <Portuguese>Nome do Arquivo da Fotografia</Portuguese>
         </Key>
         <Key ID="STR_ACE_IntelItems_Pickup">
             <English>Pick Up</English>
             <Czech>Vyzvednout</Czech>
             <French>Ramasser</French>
             <German>Aufnehmen</German>
-            <Italian>Prelevare</Italian>
+            <Italian>Raccogli</Italian>
             <Polish>Podnieś</Polish>
             <Portuguese>Pegar</Portuguese>
             <Russian>Подобрать</Russian>

@@ -27,7 +27,7 @@ if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] in [0, false]) exitWith {
 private _hitpoint = "#structural";
 
 if (_hitIndex != -1) then {
-    _hitpoint = toLower ((getAllHitPointsDamage _vehicle param [0, []]) select _hitIndex);
+    _hitpoint = toLowerANSI ((getAllHitPointsDamage _vehicle param [0, []]) select _hitIndex);
 };
 
 // get change in damage

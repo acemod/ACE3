@@ -7,7 +7,7 @@
             <Italian>Spettatore</Italian>
             <Chinese>旁觀者</Chinese>
             <Chinesesimp>旁观者</Chinesesimp>
-            <Japanese>スペクテイター</Japanese>
+            <Japanese>観戦者</Japanese>
             <Korean>관전자</Korean>
             <French>Spectateur</French>
             <Polish>Obserwator</Polish>
@@ -20,8 +20,8 @@
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
             <German>ACE Zuschauer</German>
-            <Japanese>ACE スペクテイター</Japanese>
-            <Italian>Spettatore ACE</Italian>
+            <Japanese>ACE 観戦者</Japanese>
+            <Italian>ACE Spettatore</Italian>
             <French>ACE Spectateur</French>
             <Chinesesimp>ACE 旁观者</Chinesesimp>
             <Chinese>ACE 旁觀者</Chinese>
@@ -41,9 +41,9 @@
             <Russian>Определяют, как система спектатора будет функционировать по умолчанию.</Russian>
             <Spanish>Configurar cómo el sistema de espectador funcionará por defecto.</Spanish>
             <Czech>Konfigurovat výchozí nastavení pozorovatele</Czech>
-            <Italian>Configura come il sistema spettatore si comporterà di default.</Italian>
+            <Italian>Configura come il sistema spettatore si comporterà di base.</Italian>
             <French>Configure le fonctionnement par défaut du système spectateur.</French>
-            <Japanese>スペクテイター システムが標準でどのように動作するか設定できます。</Japanese>
+            <Japanese>観戦者システムが標準でどのように動作するか設定できます。</Japanese>
             <Korean>어떻게 관전자 시스템이 기본적으로 작동되는지 설정합니다</Korean>
             <Chinesesimp>设定旁观者系统相关配置</Chinesesimp>
             <Chinese>設定旁觀者系統相關配置</Chinese>
@@ -52,7 +52,7 @@
             <English>AI Enabled</English>
             <German>KI Sichtbarkeit</German>
             <Japanese>AIにも有効化</Japanese>
-            <Italian>AI Abilitate</Italian>
+            <Italian>IA Abilitate</Italian>
             <Chinese>可觀察AI</Chinese>
             <Chinesesimp>可观察 AI</Chinesesimp>
             <Korean>AI 활성</Korean>
@@ -67,8 +67,8 @@
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
             <German>Macht KI-Einheiten den Zuschauern sichtbar</German>
-            <Japanese>スペクテイターでAI視点を可能に</Japanese>
-            <Italian>Permette la visibilità delle AI in spettatore</Italian>
+            <Japanese>観戦者でAI視点を可能に</Japanese>
+            <Italian>Rende le IA visibili come spettatore</Italian>
             <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
             <Chinesesimp>开启此功能后可在观察者模式下观察 AI 单位。</Chinesesimp>
             <Korean>관전자가 AI를 관전할 수 있습니다.</Korean>
@@ -87,7 +87,7 @@
             <Russian>Режимы камеры</Russian>
             <Czech>Módy kamery</Czech>
             <Spanish>Modos de cámara</Spanish>
-            <Italian>Modalità camera</Italian>
+            <Italian>Modalità Videocamera</Italian>
             <French>Modes de caméra</French>
             <Japanese>カメラ モード</Japanese>
             <Korean>카메라 모드</Korean>
@@ -103,7 +103,7 @@
             <Russian>Режимы камеры, которые могут быть использованы</Russian>
             <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
             <Czech>Módy kamery které mohou být použity.</Czech>
-            <Italian>Modalità che la camera può utilizzare.</Italian>
+            <Italian>Modalità utilizzabili dalla videocamera spettatore.</Italian>
             <French>Modes de caméra pouvant être utilisés.</French>
             <Japanese>カメラ モードを設定できます。</Japanese>
             <Korean>사용할 수 있는 카메라 모드들입니다</Korean>
@@ -228,7 +228,7 @@
             <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
             <Chinesesimp>摄影机能追随目标的最大距离</Chinesesimp>
-            <Italian>Distanza massima che la telecamera seguente può percorrere dall'obiettivo</Italian>
+            <Italian>Distanza massima che la telecamera seguente può allontanarsi dall'obiettivo</Italian>
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
             <Polish>Maksymalna odległość na jakiej kamera może podążać od celu</Polish>
@@ -302,13 +302,13 @@
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
-            <German>Wärme</German>
+            <German>Wärmebild</German>
             <Polish>Termo</Polish>
             <Portuguese>Térmica</Portuguese>
             <Russian>Тепловизор</Russian>
             <Czech>Termální</Czech>
             <Spanish>Térmica</Spanish>
-            <Italian>Termico</Italian>
+            <Italian>Termica</Italian>
             <French>Thermique</French>
             <Japanese>熱源画像</Japanese>
             <Korean>열상</Korean>
@@ -400,7 +400,7 @@
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
             <German>Langsam</German>
-            <Japanese>速度低下</Japanese>
+            <Japanese>速度を下げる</Japanese>
             <Italian>Bassa Velocità</Italian>
             <Chinese>慢速度</Chinese>
             <Chinesesimp>慢速度</Chinesesimp>

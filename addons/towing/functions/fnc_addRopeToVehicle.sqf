@@ -20,8 +20,8 @@ params ["_vehicle"];
 
 if (0 == getNumber (configOf _vehicle >> QEGVAR(cargo,hasCargo))) exitWith {};
 
-private _ropeType = if (
+private _ropeType = ["ACE_rope6", "ACE_rope12"] select (
     -1 < ["Tank", "Wheeled_APC_F", "Truck_F"] findIf {_vehicle isKindOf _x}
-) then {"ACE_rope12"} else {"ACE_rope6"};
+);
 
 _vehicle addItemCargoGlobal [_ropeType, 1];

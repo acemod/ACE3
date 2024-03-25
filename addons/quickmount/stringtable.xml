@@ -98,7 +98,7 @@
         <Key ID="STR_ACE_QuickMount_DistanceDescription">
             <English>Maximum distance to check for vehicles.</English>
             <German>Maximale Entfernung zu Fahrzeugen</German>
-            <Italian>Distanza massima per controllare i veicoli.</Italian>
+            <Italian>Distanza massima da controllare per presenza di veicoli.</Italian>
             <Japanese>車両を検知できる最大距離を設定します。</Japanese>
             <Chinesesimp>最大可检查载具的距离。</Chinesesimp>
             <Chinese>最大可檢查載具的距離</Chinese>
