@@ -38,7 +38,8 @@ private _magToPassIndex = 0;
 
 //remove the magazine from _player and add it to _target
 _magToPass params ["_magToPassClassName", "_magToPassAmmoCount"];
-[_player, _magToPassClassName, _magToPassAmmoCount] call CBA_fnc_removeMagazine;
+// Exit if failed to remove specific magazine
+if !([_player, _magToPassClassName, _magToPassAmmoCount] call EFUNC(common,removeSpecificMagazine)) exitWith {};
 
 if (_animate) then {[_player, "PutDown"] call EFUNC(common,doGesture)};
 
