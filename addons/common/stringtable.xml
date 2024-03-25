@@ -1877,7 +1877,7 @@
             <Portuguese>Fator de balanço de mira em repouso</Portuguese>
             <German>Verwacklungsfaktor, wenn aufgelegt</German>
             <Italian>Fattore di Oscillazione Appoggiato</Italian>
-            <Japanese>依託時の手ぶれ係数</Japanese>
+            <Japanese>静止依託時の手ぶれ係数</Japanese>
             <Russian>Коэффициент колебания прицела в состоянии покоя</Russian>
         </Key>
         <Key ID="STR_ACE_Common_RestedSwayFactor_Description">
@@ -1887,7 +1887,7 @@
             <Portuguese>Influencia a quantidade de balanço de mira enquanto a arma está em repouso.</Portuguese>
             <German>Beeinflusst, wie ruhig man die Waffe hält, während sie aufgelegt ist.</German>
             <Italian>Determina la quantità di oscillazione dell'arma quando questa è appoggiata.</Italian>
-            <Japanese>依託している時の武器の手ぶれの大きさに影響します。</Japanese>
+            <Japanese>静止し壁などに依託している時の武器の手ぶれの大きさに影響します。</Japanese>
             <Russian>Влияет на величину колебания прицела оружия в состоянии покоя.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_DeployedSwayFactor">
