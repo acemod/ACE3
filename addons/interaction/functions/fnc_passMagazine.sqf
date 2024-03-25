@@ -37,7 +37,6 @@ private _magToPassIndex = 0;
 } foreach _filteredMags;
 
 //remove the magazine from _player and add it to _target
-//_player plays animation if _animate is true
 _magToPass params ["_magToPassClassName", "_magToPassAmmoCount"];
 [_player, _magToPassClassName, _magToPassAmmoCount] call CBA_fnc_removeMagazine;
 
