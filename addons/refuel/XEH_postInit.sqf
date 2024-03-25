@@ -4,12 +4,15 @@ if (!GVAR(enabled)) exitWith {};
 ["All", "InitPost", {
     params ["_vehicle"];
     if (getFuelCargo _vehicle <= 0) exitWith {};
+    TRACE_1("initPost",_vehicle);
 
     if (local _vehicle) then {
         _vehicle setFuelCargo 0;
+        LOG("initPost setFuelCargo");
     };
     if (-1 == _vehicle getVariable [QGVAR(HDEHID), -1]) then {
         _vehicle setVariable [QGVAR(HDEHID), _vehicle addEventHandler ["HandleDamage", LINKFUNC(handleDamage)]];
+        LOG("initPost add HDEH");
     };
 }, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
 
@@ -41,8 +44,12 @@ if (isArray _cfgPositions) then {
     // placed in editor static objects don't trigger init but synchronize fuel cargo
     // placed in editor vehicles both trigger init and synchronize fuel cargo
     {
-        if (0 < getFuelCargo _x) then {
-            if (local _x) then {_x setFuelCargo 0;};
+        if (getFuelCargo _x > 0) then {
+            TRACE_1("allMissionObjects",_x);
+            if (local _x) then {
+                _x setFuelCargo 0;
+                LOG("allMissionObjects setFuelCargo");
+            };
             _x setVariable [QGVAR(HDEHID), _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)]];
         };
     } forEach allMissionObjects "";
@@ -52,7 +59,7 @@ if (isArray _cfgPositions) then {
     private _halfWorldSize = worldSize / 2;
     private _worldCenter = [_halfWorldSize, _halfWorldSize];
     _halfWorldSize = _halfWorldSize * sqrt 2;
-    private _refuelMissionObjects = allMissionObjects "" select {0 < getFuelCargo _x};
+    private _refuelMissionObjects = allMissionObjects "" select {getFuelCargo _x > 0};
     private _baseStaticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseStatic));
 
     {
