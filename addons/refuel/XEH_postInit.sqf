@@ -17,9 +17,6 @@ if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
 };
 
-private _cacheRefuelClasses = call (uiNamespace getVariable [QGVAR(cacheRefuelClasses), {[[],[],[]]}]);
-_cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_baseStaticClasses", [], [[]]], ["_baseDynamicClasses", [], [[]]]];
-
 private _cfgPositions = configFile >> QGVAR(positions) >> worldName;
 if (isArray _cfgPositions) then {
     {
@@ -52,9 +49,12 @@ if (isArray _cfgPositions) then {
 } else {
     // here are both terrain and editor static objects
     WARNING_2("World %1: %2 is not configured; can load slower",worldName,QGVAR(positions));
-    private _worldSize = worldSize;
-    private _worldCenter = [_worldSize / 2, _worldSize / 2];
+    private _halfWorldSize = worldSize / 2;
+    private _worldCenter = [_halfWorldSize, _halfWorldSize];
+    _halfWorldSize = _halfWorldSize * sqrt 2;
     private _refuelMissionObjects = allMissionObjects "" select {0 < getFuelCargo _x};
+    private _baseStaticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseStatic));
+
     {
         {
             _x setFuelCargo 0;
@@ -62,7 +62,7 @@ if (isArray _cfgPositions) then {
             if (isServer && {!(_x in _refuelMissionObjects)}) then {
                 _x setVariable [QGVAR(isTerrainPump), true];
             };
-        } forEach (_worldCenter nearObjects [_x, _worldSize]);
+        } forEach (_worldCenter nearObjects [_x, _halfWorldSize]);
     } forEach _baseStaticClasses;
 };
 
@@ -128,6 +128,9 @@ GVAR(actions) = [
         REFUEL_ACTION_DISTANCE
     ] call EFUNC(interact_menu,createAction)
 ];
+
+private _staticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesStatic));
+private _baseDynamicClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseDynamic));
 
 // init menu for config refuel vehicles
 {

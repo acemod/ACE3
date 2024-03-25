@@ -6,6 +6,7 @@
 private _staticClasses = [];
 private _baseStaticClasses = [];
 private _baseDynamicClasses = [];
+private _cacheRefuelCargo = createHashMap;
 
 {
     private _transportFuel = getNumber (_x >> "transportFuel");
@@ -34,10 +35,13 @@ private _baseDynamicClasses = [];
             };
         };
         if (_isPublic) then {
-            uiNamespace setVariable [format [QGVAR(cacheRefuelCargo_%1), _sourceClass], compileFinal str _fuelCargo];
+            _cacheRefuelCargo set [_sourceClass, _fuelCargo];
         };
     };
-} forEach ('true' configClasses (configFile >> "CfgVehicles"));
+} forEach ("true" configClasses (configFile >> "CfgVehicles"));
 
-TRACE_3("compiled",count _staticClasses,count _baseStaticClasses,count _baseDynamicClasses);
-uiNamespace setVariable [QGVAR(cacheRefuelClasses), compileFinal str [_staticClasses, _baseStaticClasses, _baseDynamicClasses]];
+TRACE_3("found",count _staticClasses,count _baseStaticClasses,count _baseDynamicClasses);
+uiNamespace setVariable [QGVAR(cacheRefuelClassesStatic), compileFinal (_staticClasses createHashMapFromArray [])];
+uiNamespace setVariable [QGVAR(cacheRefuelClassesBaseStatic), compileFinal (_baseStaticClasses createHashMapFromArray [])];
+uiNamespace setVariable [QGVAR(cacheRefuelClassesBaseDynamic), compileFinal (_baseDynamicClasses createHashMapFromArray [])];
+uiNamespace setVariable [QGVAR(cacheRefuelCargo), compileFinal _cacheRefuelCargo];

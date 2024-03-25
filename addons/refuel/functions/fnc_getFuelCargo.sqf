@@ -17,4 +17,4 @@
 
 params ["_source"];
 
-call (uiNamespace getVariable [format [QGVAR(cacheRefuelCargo_%1), typeOf _source], {REFUEL_DISABLED_FUEL}])
+(uiNamespace getVariable QGVAR(cacheRefuelCargo)) getOrDefault [typeOf _source, REFUEL_DISABLED_FUEL]

@@ -7,31 +7,41 @@ private _basePumps = [];
 private _totalCount = 0;
 private _posCount = 0;
 private _message = "";
-private _worldSize = worldSize;
-private _worldCenter = [_worldSize / 2, _worldSize / 2];
+private _halfWorldSize = worldSize / 2;
+private _worldCenter = [_halfWorldSize, _halfWorldSize];
+_halfWorldSize = _halfWorldSize * sqrt 2;
 
-private _baseStaticClasses = call (uiNamespace getVariable QGVAR(cacheRefuelClasses)) select 1;
+private _baseStaticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseStatic));
+private _class = "";
+private _objects = [];
+private _positions = [];
+private _object = objNull;
+private _pos = [];
 
 {
-    private _class = _x;
-    private _objects = _worldCenter nearObjects [_class, _worldSize];
-    if !(_objects isEqualTo []) then {
-        ADD(_totalCount,count _objects);
-        private _positions = [];
-        {
-            private _object = _x;
-            private _pos = ASLToAGL getPosASL _object;
-            if (-1 < _positions findIf {60 > _x distance _pos && {20 < _x distance _pos}}) then {
-                _message = "INCREASE DISTANCE " + str _pos;
-            };
-            if (-1 == _positions findIf {20 > _x distance _pos}) then {
-                _positions pushBack (_pos apply {parseNumber (_x call CBA_fnc_formatNumber)});
-                INC(_posCount);
-            };
-        } forEach _objects;
-        _basePumps pushBack [_class, _positions];
+    _class = _x;
+    _objects = _worldCenter nearObjects [_class, _halfWorldSize];
+    if (_objects isEqualTo []) then {
+        continue;
     };
+    ADD(_totalCount,count _objects);
+    _positions = [];
+    {
+        _object = _x;
+        _pos = ASLToAGL getPosASL _object;
+        if (-1 < _positions findIf {60 > _x distance _pos && {20 < _x distance _pos}}) then {
+            _message = "INCREASE DISTANCE " + str _pos;
+        };
+        if (-1 == _positions findIf {20 > _x distance _pos}) then {
+            _positions pushBack (_pos apply {round _x});
+            INC(_posCount);
+        };
+    } forEach _objects;
+    _positions sort true; // sort positions by smallest first
+    _basePumps pushBack [_class, _positions];
 } forEach _baseStaticClasses;
+
+_basePumps sort true; // sort pump classes alphabetically
 
 // check final array as it's calculated in postInit
 private _checkCount = 0;
@@ -41,31 +51,34 @@ private _checkCount = 0;
         _checkCount = _checkCount + count (_x nearObjects [_class, 30]);
     } forEach _positions;
 } forEach _basePumps;
-if (_checkCount < _totalCount) then {
+if (_checkCount != _totalCount) then {
     _message = "WRONG COUNT " + str _checkCount;
 };
 
 // export text
 private _nl = toString [10];
-private _output = format ["    %1[] = { /*  %2  */", worldName, getText (configfile >> "CfgWorlds" >> worldName >> "description")];
+private _multipleBasePumps = 1 < count _basePumps;
+private _output = [format ["    %1[] = { /*  %2  */", worldName, getText (configfile >> "CfgWorlds" >> worldName >> "description")]];
 {
-    if (_forEachIndex > 0) then {_output = _output + ","};
+    if (_forEachIndex > 0) then {_output pushBack ","};
     _x params ["_class", "_positions"];
-    if (1 < count _basePumps) then {
-        ADD(_output,_nl + "        ");
+    if (_multipleBasePumps) then {
+        _output pushBack (_nl + "        ");
     } else {
-        ADD(_output," ");
+        _output pushBack " ";
     };
-    _output = _output + format ["{""%1"", {", _class];
+    _output pushBack format ["{""%1"", {", _class];
     {
-        if (_forEachIndex > 0) then {_output = _output + ","};
-        _output = _output + format ["{%1,%2,%3}", _x#0, _x#1, _x#2];
+        if (_forEachIndex > 0) then {_output pushBack ","};
+        _output pushBack format ["{%1,%2,%3}", _x#0, _x#1, _x#2];
     } forEach _positions;
-    ADD(_output,"}}");
+    _output pushBack "}}";
 } forEach _basePumps;
-if (1 < count _basePumps) then {ADD(_output,_nl + "    ")};
-if (_basePumps isEqualTo []) then {ADD(_output," ")};
-ADD(_output,"};" + _nl);
+if (_multipleBasePumps) then {_output pushBack (_nl + "    ")};
+if (_basePumps isEqualTo []) then {_output pushBack " "};
+_output pushBack ("};" + _nl);
+
+_output = _output joinString "";
 
 copyToClipboard _output;
 [_totalCount, _posCount, _message, _output]
