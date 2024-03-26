@@ -28,7 +28,7 @@ private _cfgBase = configFile >> "CfgNonAIVehicles";
     };
 } forEach (_nonAIVehicleClasses select {(configName _x) isKindOf ["Bridge_base_F", _cfgBase]});
 
-uiNamespace setVariable [QGVAR(cacheStaticModels), compileFinal str _cacheStaticModels];
+uiNamespace setVariable [QGVAR(cacheStaticModels), compileFinal (_cacheStaticModels createHashMapFromArray [])];
 TRACE_1("compiled",count _cacheStaticModels);
 
 // force preload of stencil texture to avoid error popup

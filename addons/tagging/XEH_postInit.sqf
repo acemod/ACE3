@@ -1,14 +1,6 @@
 // by esteldunedain
 #include "script_component.hpp"
 
-
-// Cache for static objects
-GVAR(cacheStaticModels) = createHashMap;
-private _cacheStaticModels = call (uiNamespace getVariable [QGVAR(cacheStaticModels), {[]}]);
-{
-    GVAR(cacheStaticModels) set [_x, true];
-} forEach _cacheStaticModels;
-
 if (hasInterface) then {
     // Compile and cache config tags
     call FUNC(compileConfigTags);
