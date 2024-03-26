@@ -44,7 +44,5 @@ private _groups = [];
 
 // Try to move AI back to server
 if (_blacklist && _transferToServer) then {
-    {
-        _x setGroupOwner 2;
-    } forEach (_groups arrayIntersect _groups);
+    [QGVAR(transferGroupsToServer), [_groups arrayIntersect _groups]] call CBA_fnc_serverEvent;
 };
