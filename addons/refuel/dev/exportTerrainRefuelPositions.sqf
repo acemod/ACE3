@@ -1,4 +1,4 @@
-// call compile preprocessFileLineNumbers "z\ace\addons\refuel\dev\exportTerrainRefuelPositions.sqf"
+// call compileScript ["z\ace\addons\refuel\dev\exportTerrainRefuelPositions.sqf"]
 // can be run in Eden Editor console
 
 #include "\z\ace\addons\refuel\script_component.hpp"
