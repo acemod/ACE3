@@ -185,6 +185,16 @@
             <Portuguese>Permite que arremessáveis fixados em objetos sejam pegos.</Portuguese>
             <Czech>Zapíná schopnost zvednutí předmětů z objektů ke kterým jsou připnuté.</Czech>
         </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_EnableTempWindInfo_DisplayName">
+            <English>Show Temporary Wind Info</English>
+            <German>Zeige temporäre Windinformationen</German>
+            <Italian>Mostra informazioni sul vento temporaneamente</Italian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_EnableTempWindInfo_Description">
+            <English>Temporarily display Wind Info while throwing, to aid in placing smoke grenades effectively.</English>
+            <German>Zeige während des werfens Windinformationen an, um Rauchgranaten effektiver zu platzieren.</German>
+            <Italian>Mostra le informazioni sul vento durante il lancio di granate, facilitando il piazzamento ottimale di fumogeni.</Italian>
+        </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>
             <Spanish>Preparar/Cambiar objetos lanzables</Spanish>
