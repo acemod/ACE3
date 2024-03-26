@@ -29,6 +29,7 @@
 #define TO_COMPARTMENT_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
 
 // if unit isn't moved to new seat in TAKEN_SEAT_TIMEOUT, we move him back to his seat
+#pragma hemtt suppress pw3_padded_arg file
 #define WAIT_IN_OR_MOVE_BACK \
     [ARR_5( \
         {!isNull objectParent (_this select 0)}, \
@@ -158,7 +159,7 @@ private _cargoNumber = -1;
         };
     } else {
         private ["_name", "_icon", "_statement", "_params"];
-        switch (toLower _role) do {
+        switch (toLowerANSI _role) do {
             case "driver": {
                 if (
                     lockedDriver _vehicle

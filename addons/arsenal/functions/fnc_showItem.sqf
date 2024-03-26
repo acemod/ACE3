@@ -15,6 +15,10 @@
 
 if (GVAR(centerNotPlayer)) exitWith {};
 
+if (EGVAR(common,isReloading)) exitWith { // if player is reloading then wait until it's done so we don't send magazines to the shadow realm
+    [{!EGVAR(common,isReloading)}, FUNC(showItem)] call CBA_fnc_waitUntilAndExecute;
+};
+
 // Determine action to play based on current category selection
 private _nextAction = switch (GVAR(currentLeftPanel)) do {
     // Primary weapon
@@ -54,14 +58,20 @@ if (_nextAction != GVAR(currentAction)) then {
         case "PrimaryWeapon": {0};
         case "SecondaryWeapon": {1};
         case "HandGunOn": {2};
+        case "Binoculars": {3};
         default {GVAR(selectedWeaponType)};
     };
 
     if (simulationEnabled GVAR(center)) then {
+        GVAR(center) call EFUNC(common,stopGesture); // reset gesture state (if arsenal is opened on animation transition, animations played whilst in the arsenal break)
         GVAR(center) playActionNow _nextAction;
     } else {
         GVAR(center) switchAction _nextAction;
     };
 
     GVAR(currentAction) = _nextAction;
+};
+
+if (!(GVAR(currentAction) in ["Civil", "Salute"])) then {
+    GVAR(center) selectWeapon ([primaryWeapon GVAR(center), secondaryWeapon GVAR(center), handgunWeapon GVAR(center), binocular GVAR(center)] select GVAR(selectedWeaponType)); // select correct weapon, prevents floating weapons
 };

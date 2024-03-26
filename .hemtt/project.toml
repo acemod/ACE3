@@ -18,20 +18,15 @@ include = [
 [version]
 git_hash = 0
 
+# Unused in HEMTT v1.11 or higher, kept for backwards compatibility
 [asc]
 enabled = true
 exclude = [
-    "/initsettings.sqf",
-    "/initkeybinds.sqf",
-    "/xeh_prep.sqf",
+    ".inc.sqf",
     "/dev/",
-    "medical_ai/statemachine.sqf",
     "common/functions/fnc_dummy.sqf",
     "zeus/functions/fnc_zeusAttributes.sqf",
 ]
-
-[hemtt.config]
-preset = "Hemtt"
 
 [hemtt.launch]
 workshop = [

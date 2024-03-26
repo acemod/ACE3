@@ -10,31 +10,38 @@
  * None
  *
  * Example:
- * [DISPLAY] call ACE_inventory_fnc_forceitemListUpdate
+ * [DISPLAY] call ace_inventory_fnc_forceItemListUpdate
  *
  * Public: No
  */
 
 disableSerialization;
+
 params ["_display"];
 
-private _index = GVAR(selectedFilterIndex);
+// Get the appropriate filter
+private _filterFunction = missionNamespace getVariable [(_display displayCtrl IDC_FILTERLISTS) lbData GVAR(selectedFilterIndex), ""];
+
+if !(_filterFunction isEqualType {}) exitWith {};
+
 private _itemList = _display call FUNC(currentItemListBox);
-private _filterFunction = missionNamespace getVariable ((_display displayCtrl IDC_FILTERLISTS) lbData _index);
+private _itemKeyCache = uiNamespace getVariable QGVAR(itemKeyCache);
+private _backpackKeyCache = uiNamespace getVariable QGVAR(backpackKeyCache);
+private _config = configNull;
 
-if (_filterFunction isEqualType {}) then {
-    private _i = 0;
+for "_i" from (lbSize _itemList) to 0 step -1 do {
+    // All items have their classnames in lbData, except backpacks
+    _className = _itemList lbData _i;
 
-    while {_i < lbSize _itemList} do {
-        private _config = GVAR(ItemKeyNamespace) getVariable format ["%1:%2", _itemList lbText _i, _itemList lbPicture _i];
+    _config = if (_className != "") then {
+        _itemKeyCache get _className
+    } else {
+        // Backpack are gotten with their display name and inventory icon
+        _backpackKeyCache get format ["%1:%2", _itemList lbText _i, _itemList lbPicture _i]
+    };
 
-        if (!isNil "_config" && {!(_config call _filterFunction)}) then {
-            _itemList lbDelete _i;
-
-            // in case the filter function returns nil. Otherwise could lock up the game.
-            _i = _i - 1;
-        };
-
-        _i = _i + 1;
+    // If item is valid and doesn't match the current filter, remove it
+    if (!isNil "_config" && {!(_config call _filterFunction)}) then {
+        _itemList lbDelete _i;
     };
 };

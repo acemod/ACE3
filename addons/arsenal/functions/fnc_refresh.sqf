@@ -25,6 +25,11 @@ if (canSuspend) exitWith {
     [{_this call FUNC(refresh)}, _this] call CBA_fnc_directCall;
 };
 
+private _display = findDisplay IDD_ace_arsenal;
+
+// Exit quietly if no display found
+if (isNull _display) exitWith {};
+
 if (_updateItems) then {
     // Update current item list
     call FUNC(updateCurrentItemsList);
@@ -42,7 +47,8 @@ if (is3DEN) then {
     _animate = true; // CBA frame functions are disabled during preInit
 };
 
-if (isNil "_virtualItems") exitWith {
+// Do not close an arsenal if it was opened with ignoring the existing content (see FUNC(openBox))
+if (isNil "_virtualItems" && {isNil QGVAR(ignoredVirtualItems)}) exitWith {
     [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
     // Delay a frame in case this is running on display open
     [{(findDisplay IDD_ace_arsenal) closeDisplay 0}] call CBA_fnc_execNextFrame;
@@ -63,7 +69,5 @@ if (!_animate) then {
     GVAR(refreshing) = true;
     [{GVAR(refreshing) = false}, nil, 3] call CBA_fnc_execAfterNFrames;
 };
-
-private _display = findDisplay IDD_ace_arsenal;
 
 [_display, _display displayCtrl GVAR(currentLeftPanel), _animate] call FUNC(fillLeftPanel);

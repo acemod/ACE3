@@ -54,10 +54,27 @@ GVAR(initializedClasses_carry) = _initializedClasses;
     [QGVAR(carryingContainerClosed), [_object, _owner], _owner] call CBA_fnc_targetEvent;
 }, false] call CBA_fnc_addClassEventHandler;
 
-private _icon = [QUOTE(PATHTOF(UI\icons\box_carry.paa)), QUOTE(PATHTOF(UI\icons\person_carry.paa))] select (_object isKindOf "Man");
+private _icon = [QPATHTOF(UI\icons\box_carry.paa), QPATHTOF(UI\icons\person_carry.paa)] select (_object isKindOf "CAManBase");
 
-private _carryAction = [QGVAR(carry), LLSTRING(Carry), _icon, {[_player, _target] call FUNC(startCarry)}, {[_player, _target] call FUNC(canCarry)}] call EFUNC(interact_menu,createAction);
-private _dropAction = [QGVAR(drop_carry), LLSTRING(Drop), "", {[_player, _target] call FUNC(dropObject_carry)}, {[_player, _target] call FUNC(canDrop_carry)}] call EFUNC(interact_menu,createAction);
+private _carryAction = [
+    QGVAR(carry),
+    LLSTRING(Carry),
+    _icon,
+    {
+        [_player, _target] call FUNC(startCarry)
+    }, {
+        [_player, _target] call FUNC(canCarry)
+}] call EFUNC(interact_menu,createAction);
+
+private _dropAction = [
+    QGVAR(drop_carry),
+    LLSTRING(Drop),
+    "",
+    {
+        [_player, _target] call FUNC(dropObject_carry)
+    }, {
+        [_player, _target] call FUNC(canDrop_carry)
+}] call EFUNC(interact_menu,createAction);
 
 [_type, 0, ["ACE_MainActions"], _carryAction] call EFUNC(interact_menu,addActionToClass);
 [_type, 0, [], _dropAction] call EFUNC(interact_menu,addActionToClass);

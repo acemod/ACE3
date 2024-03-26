@@ -19,7 +19,7 @@
 if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
-if (!(["ACE_Medical"] call EFUNC(common,isModLoaded))) exitWith {
+if (!(["ace_medical"] call EFUNC(common,isModLoaded))) exitWith {
     WARNING("No ACE-Medical");
     XGVAR(outputText) = "No ACE-Medical";
 };
@@ -136,7 +136,9 @@ GVAR(killCount) = 0;
                 _unitName = format ["*AI* - %1", getText ((configOf _unit) >> "displayName")];
             };
         };
-        TRACE_3("send kill event",_killer,_unitName,_killInfo);
-        [QGVAR(kill), [_unitName, _killInfo], _killer] call CBA_fnc_targetEvent;
+        if (_unitIsPlayer || GVAR(trackAI)) then {
+            TRACE_3("send kill event",_killer,_unitName,_killInfo);
+            [QGVAR(kill), [_unitName, _killInfo], _killer] call CBA_fnc_targetEvent;
+        };
     };
 }] call CBA_fnc_addEventHandler;

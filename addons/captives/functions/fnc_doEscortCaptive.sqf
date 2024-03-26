@@ -50,9 +50,14 @@ if (_state) then {
             detach _target;
             _unit removeAction _actionID;
             _unit setVariable [QGVAR(escortedUnit), objNull, true];
+
+            // Public event
+            [QGVAR(escortingCaptive), [_target, false, _unit]] call CBA_fnc_localEvent;
         };
     }, 0, [_unit, _target, _actionID]] call CBA_fnc_addPerFrameHandler;
 
+    // Public event
+    [QGVAR(escortingCaptive), [_target, true, _unit]] call CBA_fnc_localEvent;
 } else {
     _unit setVariable [QGVAR(isEscorting), false, true];
     _unit setVariable [QGVAR(escortedUnit), objNull, true];

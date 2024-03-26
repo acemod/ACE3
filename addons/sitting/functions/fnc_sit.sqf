@@ -92,7 +92,7 @@ private _seatDistOrig = (getPosASL _player) distance _seat;
     // Remove PFH if not sitting any more
     if (isNil {_player getVariable QGVAR(sittingStatus)}) exitWith {
         [_pfhId] call CBA_fnc_removePerFrameHandler;
-        TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(sittingStatus), false)]);
+        TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(sittingStatus),false)]);
     };
 
     //  Stand up if chair gets deleted or moved
