@@ -74,10 +74,8 @@ private _environmentDamage = _ammo == "";
 // Crashing a vehicle doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // It does fire the EH multiple times, but this seems to scale with the intensity of the crash
 if (
-    (EGVAR(medical,enableVehicleCrashes) &&
-    _environmentDamage &&
-    _inVehicle &&
-    _structuralDamage) &&
+    EGVAR(medical,enableVehicleCrashes) &&
+    {_environmentDamage && _inVehicle && _structuralDamage} &&
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
