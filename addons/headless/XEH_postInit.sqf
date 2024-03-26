@@ -10,6 +10,23 @@
             };
             // Add disconnect EH
             addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
+
+            // If CBA's loadout validation is enabled, warn users
+            if (XGVAR(transferLoadout) > 0 && {(missionNamespace getVariable ["CBA_network_loadoutValidation", 0]) isEqualTo 2}) then {
+                WARNING("CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled");
+                [QEGVAR(common,displayTextStructured), ["CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled", 4]] call CBA_fnc_globalEvent;
+            };
+
+            ["CBA_SettingChanged", {
+                params ["_setting", "_value"];
+
+                if (_setting != "CBA_network_loadoutValidation") exitWith {};
+
+                if (XGVAR(transferLoadout) > 0 && {_value isEqualTo 2}) then {
+                    WARNING("CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled");
+                    [QEGVAR(common,displayTextStructured), ["CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled", 4]] call CBA_fnc_globalEvent;
+                };
+            }] call CBA_fnc_addEventHandler;
         } else {
             // Register HC (this part happens on HC only)
             [QXGVAR(headlessClientJoined), [player]] call CBA_fnc_globalEvent; // Global event for API purposes
