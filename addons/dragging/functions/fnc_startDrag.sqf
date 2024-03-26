@@ -11,10 +11,11 @@
  * None
  *
  * Example:
- * [player, cursorTarget] call ace_dragging_fnc_startDrag
+ * [player, cursorTarget] call ace_dragging_fnc_startDrag;
  *
  * Public: No
  */
+
 params ["_unit", "_target"];
 
 // Try to claim the object

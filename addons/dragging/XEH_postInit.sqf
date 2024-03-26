@@ -20,6 +20,11 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     GVAR(maxWeightCarryRun) = 50;
 };
 
+// Extended EH doesn't fire for dead units, so add interactions manually
+{
+    _x call FUNC(initPerson);
+} forEach allDeadMen;
+
 ["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
 
@@ -53,6 +58,29 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 
 // Handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
+
+// Handle local effect commands for clones
+[QGVAR(cloneCreated), {
+    params ["_unit", "_clone"];
+
+    _clone setFace face _unit;
+    _clone setMimic "unconscious";
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(moveCorpse), {
+    params ["_corpse", "_dir", "_pos"];
+
+    // Set direction before position
+    _corpse setDir _dir;
+
+    // Bring corpse back to clone's position
+    _corpse setPosATL _pos;
+
+    // Sync the corpse
+    [QEGVAR(common,awake), [_corpse, true]] call CBA_fnc_globalEvent;
+    [QEGVAR(common,awake), [_corpse, false]] call CBA_fnc_globalEvent;
+    [QEGVAR(common,awake), [_corpse, true]] call CBA_fnc_globalEvent;
+}] call CBA_fnc_addEventHandler;
 
 // Display event handler
 ["MouseZChanged", {(_this select 1) call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
