@@ -33,7 +33,6 @@ private _crew = [];
             _crew pushBack (_x select 0);
         };
     };
-    false
-} count fullCrew _vehicle;
+} forEach fullCrew _vehicle;
 
 _crew

@@ -80,7 +80,7 @@ if (_UAVCrew isNotEqualTo []) then {
 };
 
 // Check everything
-[FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // Fixes not being able to move when in combat pace
 [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);

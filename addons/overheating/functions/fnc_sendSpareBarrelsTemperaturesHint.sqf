@@ -32,7 +32,7 @@ if (_weaponBarrelClass == "") then {
 };
 private _allBarrels = [_unit, _weaponBarrelClass] call CBA_fnc_getMagazineIndex;
 TRACE_1("_allBarrels",_allBarrels);
-if ((count _allBarrels) < 1) exitWith {};
+if (_allBarrels isEqualTo []) exitWith {};
 
 // Determine the temp of each barrel
 private _temps = [];

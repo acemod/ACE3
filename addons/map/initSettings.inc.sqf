@@ -71,7 +71,7 @@
 
         if (GVAR(BFT_Enabled) && {isNil QGVAR(BFT_markers)}) then {
             GVAR(BFT_markers) = [];
-            [FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
+            [LINKFUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
         };
     },
     false

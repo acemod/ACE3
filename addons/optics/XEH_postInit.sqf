@@ -28,4 +28,4 @@ GVAR(camera) = objNull;
 }] call CBA_fnc_addPlayerEventHandler;
 
 // Register fire event handler
-["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+["ace_firedPlayer", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;

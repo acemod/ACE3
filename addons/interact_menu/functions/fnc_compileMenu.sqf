@@ -114,8 +114,7 @@ private _recurseFnc = {
                     ];
             _actions pushBack _entry;
         };
-        nil
-    } count (configProperties [_actionsCfg, "isClass _x", true]);
+    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 

@@ -84,7 +84,7 @@ _unit setVariable [QGVAR(isCarrying), true, true];
 // Required for aborting animation
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
-[FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
 
 // Disable collisions by setting the PhysX mass to almost zero
 private _mass = getMass _target;

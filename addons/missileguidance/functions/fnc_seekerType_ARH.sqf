@@ -72,7 +72,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         };
         _nearestObjects = _nearestObjects select { !isNull _x };
         // Select closest object to the expected position to be the current radar target
-        if ((count _nearestObjects) <= 0) exitWith {
+        if (_nearestObjects isEqualTo []) exitWith {
             _projectile setMissileTarget objNull;
             _searchPos
         };
@@ -117,4 +117,3 @@ if !(isNull _target) then {
 
 _launchParams set [0, _target];
 _expectedTargetPos
-

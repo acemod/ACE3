@@ -44,7 +44,7 @@ if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWi
 };
 
 private _items = _config call FUNC(getRepairItems);
-if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
+if (_items isNotEqualTo [] && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
 private _return = true;
 if (getText (_config >> "condition") != "") then {

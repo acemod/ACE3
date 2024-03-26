@@ -100,7 +100,7 @@ private _barrelLength = _weaponConfig select 2;
 private _muzzleVelocity = 0;
 
 private _bc = 0;
-if (count (_ammoConfig select 6) > 0) then {
+if ((_ammoConfig select 6) isNotEqualTo []) then {
     _bc = (_ammoConfig select 6) select 0;
 };
 private _transonicStabilityCoef = _ammoConfig select 4;

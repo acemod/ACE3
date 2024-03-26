@@ -19,7 +19,7 @@
  */
 params ["_input", "_points", ["_randomRound", false]];
 
-if (count _points < 1) exitWith {
+if (_points isEqualTo []) exitWith {
     //TODO: sensible default/error value
     0
 };

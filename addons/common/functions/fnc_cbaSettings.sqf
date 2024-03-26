@@ -66,8 +66,7 @@ GVAR(settingsMovedToSQF) = [];
     INFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
     {
         (_x select 1) call (_x select 0);
-        false
-    } count GVAR(runAtSettingsInitialized);
+    } forEach GVAR(runAtSettingsInitialized);
     GVAR(runAtSettingsInitialized) = nil; //cleanup
 
     #ifdef DEBUG_MODE_FULL

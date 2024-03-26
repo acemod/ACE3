@@ -32,7 +32,7 @@ private _detonators = [_unit] call FUNC(getDetonators);
     if !(_x in _detonators) exitWith{
         _hasRequired = false;
     };
-} count _requiredItems;
+} forEach _requiredItems;
 
 private _code = "";
 while {true} do {

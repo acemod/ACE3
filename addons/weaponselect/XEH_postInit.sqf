@@ -210,4 +210,4 @@ if (!hasInterface) exitWith {};
 [0, [false, false, false]]] call CBA_fnc_addKeybind;
 
 // Register fire event handler
-["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedPlayer", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;

@@ -42,7 +42,7 @@ private _sendFingerToPlayers = [];
 private _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
 {
     _nearbyMen append (crew _x);
-} count (ACE_player nearObjects ["StaticWeapon", (GVAR(maxRange) + 2)]);
+} forEach (ACE_player nearObjects ["StaticWeapon", (GVAR(maxRange) + 2)]);
 {
     if ((((eyePos _x) vectorDistance _playerEyePosASL) < GVAR(maxRange)) &&
             {alive _x} &&
@@ -53,8 +53,7 @@ private _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]
 
         _sendFingerToPlayers pushBack _x;
     };
-    true
-} count _nearbyMen;
+} forEach _nearbyMen;
 
 TRACE_1("sending finger to",_sendFingerToPlayers);
 

@@ -41,5 +41,4 @@ if (_list isEqualType "") then {
             };
         };
     };
-    false
-} count _list;
+} forEach _list;

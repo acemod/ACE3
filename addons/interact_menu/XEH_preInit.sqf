@@ -10,7 +10,7 @@ PREP_RECOMPILE_END;
 
 if (!hasInterface) exitWith { ADDON = true; };
 
-["All", "init", {_this call FUNC(compileMenu)}] call CBA_fnc_addClassEventHandler;
+["All", "init", LINKFUNC(compileMenu)] call CBA_fnc_addClassEventHandler;
 
 GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
 GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;

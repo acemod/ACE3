@@ -41,7 +41,7 @@ if (_objectViewDistanceCoeff isEqualType 0) then {
 } else {
     if (isNil QGVAR(fovBasedPFHminimalViewDistance)) then {
         GVAR(fovBasedPFHminimalViewDistance) = getObjectViewDistance select 0; // Minimal view distance holder and PFH isRunning variable
-        [FUNC(setFovBasedOvdPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+        [LINKFUNC(setFovBasedOvdPFH), 0, []] call CBA_fnc_addPerFrameHandler;
     };
 };
 

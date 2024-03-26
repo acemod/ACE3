@@ -77,8 +77,7 @@ GVAR(no_cams) sort true;
         if (((getPosVisual _x) select 2) > 20 && {!(_x in GVAR(no_cams))} && {_x getHitPointDamage "HitCamera" < 0.25}) then {
             GVAR(no_cams) pushBack _x;
         };
-        true
-    } count GVAR(nearHuntIRs);
+    } forEach GVAR(nearHuntIRs);
     {
         if (((getPosVisual _x) select 2) <= 20 || {!(_x in GVAR(nearHuntIRs))} || {_x getHitPointDamage "HitCamera" >= 0.25}) then {
             GVAR(no_cams) deleteAt _forEachIndex;

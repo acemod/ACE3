@@ -34,9 +34,9 @@ if (!hasInterface) exitWith {};
 }, {false}, [24, [false, false, false]], false] call CBA_fnc_addKeybind;
 
 // Handle reserve chute based on current backpack (fires when parachute opens too)
-["loadout", FUNC(handleReserve), true] call CBA_fnc_addPlayerEventHandler;
+["loadout", LINKFUNC(handleReserve), true] call CBA_fnc_addPlayerEventHandler;
 
 // Don't show vanilla speed and height when in expert mode
-["ace_infoDisplayChanged", {_this call FUNC(handleInfoDisplayChanged)}] call CBA_fnc_addEventHandler;
+["ace_infoDisplayChanged", LINKFUNC(handleInfoDisplayChanged)] call CBA_fnc_addEventHandler;
 
-["vehicle", {_this call FUNC(handleFailureChance)}] call CBA_fnc_addPlayerEventHandler;
+["vehicle", LINKFUNC(handleFailureChance)] call CBA_fnc_addPlayerEventHandler;

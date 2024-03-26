@@ -22,11 +22,10 @@ params ["_unit", "_target"];
 
 [_unit, "GestureGo"] call EFUNC(common,doGesture);
 
-private _chance = [0.5, 0.8] select (count weapons _unit > 0);
+private _chance = [0.5, 0.8] select (weapons _unit isNotEqualTo []);
 
 {
-    if (count weapons _x == 0 && {random 1 < _chance}) then {
+    if (weapons _x isEqualTo [] && {random 1 < _chance}) then {
         [QGVAR(getDown), [_x], [_x]] call CBA_fnc_targetEvent;
     };
-    false
-} count (_target nearEntities ["Civilian", SEND_RADIUS]);
+} forEach (_target nearEntities ["Civilian", SEND_RADIUS]);

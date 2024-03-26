@@ -55,5 +55,5 @@ TRACE_1("",GVAR(trackedLaserTargets));
 
 if (GVAR(pfehID) == -1) then {
     TRACE_1("starting pfeh",count GVAR(trackedLaserTargets));
-    GVAR(pfehID) = [DFUNC(laserTargetPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+    GVAR(pfehID) = [LINKFUNC(laserTargetPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 };

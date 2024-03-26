@@ -25,8 +25,7 @@ if (_unit isKindOf "CAManBase") then {
 } else {
     {
         _return = _return + ({_x == _magazine} count magazines _x);
-        false
-    } count crew _unit;
+    } forEach crew _unit;
 
     (getMagazineCargo _unit) params [["_magNames", []], ["_magCount", []]];
     {

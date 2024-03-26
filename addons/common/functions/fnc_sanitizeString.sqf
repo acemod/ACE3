@@ -47,7 +47,6 @@ private _array = [];
             _array pushBack _x;
         };
     };
-    false
-} count toArray _string;
+} forEach toArray _string;
 
 toString _array // return

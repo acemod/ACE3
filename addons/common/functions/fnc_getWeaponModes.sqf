@@ -29,7 +29,6 @@ private _modes = [];
     if (_x == "this") then {
         _modes pushBack _weapon;
     };
-    false
-} count getArray (_config >> "modes");
+} forEach getArray (_config >> "modes");
 
 _modes

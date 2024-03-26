@@ -26,7 +26,7 @@ params ["_unit", "_ladder"];
 
 {
     _ladder animate [_x, 0];
-} count __ANIMS;
+} forEach __ANIMS;
 
 [_unit, "amovpercmstpslowwrfldnon_player_idlesteady03", 2] call EFUNC(common,doAnimation);
 
@@ -35,7 +35,7 @@ _ladder attachTo [_unit, [0, 0.75, 0], ""]; // Position ladder in front of playe
 _ladder animate ["rotate", 0];
 {
     _ladder animate [_x, 1];
-} count ["extract_1", "extract_2", "extract_3"]; // Extract ladder at head height (extract_3)
+} forEach ["extract_1", "extract_2", "extract_3"]; // Extract ladder at head height (extract_3)
 
 GVAR(ladder) = _ladder;
 GVAR(cancelTime) = CBA_missionTime + 1; // Workaround to prevent accidental canceling

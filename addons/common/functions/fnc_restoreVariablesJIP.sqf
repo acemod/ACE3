@@ -24,6 +24,5 @@ _respawnVariables pushBack "ACE_PersistentFunctions";
 
 {
     _unit setVariable [_x, _unit getVariable _x, true];
-    false
-} count _respawnVariables;
+} forEach _respawnVariables;
 nil

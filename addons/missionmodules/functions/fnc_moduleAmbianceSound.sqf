@@ -55,11 +55,9 @@ private _missionRoot = str missionConfigFile select [0, count str missionConfigF
             ERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
         };
     };
+} forEach _splittedList;
 
-    false
-} count _splittedList;
-
-if (count _ambianceSounds == 0) exitWith {};
+if (_ambianceSounds isEqualTo []) exitWith {};
 {
     if ((_x find ".") == -1) then {
         _ambianceSounds set [_forEachIndex, _x + ".wss"];
@@ -82,7 +80,7 @@ TRACE_1("",_ambianceSounds);
         private _allUnits = if (isMultiplayer) then {playableUnits} else {[ACE_player]};
 
         // Check if there are enough players to even start playing this sound.
-        if (count _allUnits > 0) then {
+        if (_allUnits isNotEqualTo []) then {
             // find the position from which we are going to play this sound from.
             private _newPosASL = if (_followPlayers) then {
                 // Select a target unit at random.

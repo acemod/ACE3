@@ -24,7 +24,6 @@ private _explosive = [];
     if ((_x select 1) == _code) exitWith {
         _explosive = _x;
     };
-    false
-} count GVAR(CellphoneIEDs);
+} forEach GVAR(CellphoneIEDs);
 
 _explosive

@@ -34,8 +34,7 @@ if (IS_ARRAY(_var)) then {
 
         {
             [_x, _depth] call FUNC(dumpArray);
-            false
-        } count _var;
+        } forEach _var;
 
         diag_log text format ["%1],", _pad];
     };

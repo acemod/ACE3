@@ -24,7 +24,7 @@
             };
             if (_applyCorrections == 1) then {
                 TRACE_2("adding firedEH",_vehicle,configName _vehicleCfg);
-                _vehicle addEventHandler ["Fired", {call FUNC(firedEH)}];
+                _vehicle addEventHandler ["Fired", {_this call FUNC(firedEH)}];
             };
         }, true, [], true] call CBA_fnc_addClassEventHandler;
     };

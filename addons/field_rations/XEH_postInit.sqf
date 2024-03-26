@@ -96,7 +96,7 @@ if !(hasInterface) exitWith {};
     ] call CBA_fnc_addItemContextMenuOption;
 
     // Add water source helpers when interaction menu is opened
-    ["ace_interactMenuOpened", {call FUNC(addWaterSourceInteractions)}] call CBA_fnc_addEventHandler;
+    ["ace_interactMenuOpened", LINKFUNC(addWaterSourceInteractions)] call CBA_fnc_addEventHandler;
 
     // Add status modifiers
     if (["ace_medical"] call EFUNC(common,isModLoaded)) then {

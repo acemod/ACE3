@@ -50,8 +50,7 @@ if (_unit isKindOf "CAManBase") then {
             _gunner = _unit turretUnit _x;
             _turret = _x;
         };
-        false
-    } count allTurrets [_unit, true];
+    } forEach allTurrets [_unit, true];
     // Ensure that at least the pilot is returned if there is no gunner
     if (isManualFire _unit && {isNull _gunner}) then {
         _gunner = effectiveCommander _unit;

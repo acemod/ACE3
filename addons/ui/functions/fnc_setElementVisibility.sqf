@@ -32,12 +32,11 @@ if (_source == "" || {_element == ""}) exitWith {
 _element = toLowerANSI _element;
 
 // Verify element is bound
-private _cachedElement = GVAR(configCache) getVariable _element;
-if (isNil "_cachedElement") exitWith {
+if !(_element in GVAR(configCache)) exitWith {
     WARNING_2("Element '%1' does not exist - modification by '%2' failed.",_element,_source);
 };
 
-private _setElement = GVAR(elementsSet) getVariable _element;
+private _setElement = GVAR(elementsSet) get _element;
 private _return = false;
 
 if (isNil "_setElement") then {
@@ -45,7 +44,7 @@ if (isNil "_setElement") then {
     private _success = [_element, _show, false, true] call FUNC(setAdvancedElement);
 
     if (_success) then {
-        GVAR(elementsSet) setVariable [_element, [_source, _show]];
+        GVAR(elementsSet) set [_element, [_source, _show]];
         _return = true;
     };
 } else {
@@ -57,7 +56,7 @@ if (isNil "_setElement") then {
         };
     } else {
         TRACE_3("Unsetting element",_sourceSet,_element,_show);
-        GVAR(elementsSet) setVariable [_element, nil];
+        GVAR(elementsSet) set [_element, nil];
 
         [_element, _show, false, true] call FUNC(setAdvancedElement);
         _return = true;

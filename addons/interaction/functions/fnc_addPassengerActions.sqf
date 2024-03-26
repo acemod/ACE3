@@ -33,7 +33,6 @@ private _actions = [];
     _x params ["_actionData", "_children"];
 
     _actions pushBack [_actionData, _children, _unit];
-    false
-} count (_actionTrees select 0 select 1);
+} forEach (_actionTrees select 0 select 1);
 
 _actions

@@ -18,7 +18,7 @@
 params ["_className"];
 TRACE_1("getMagazineName",_className);
 
-private _magName = GVAR(magazineNameCache) getVariable _className;
+private _magName = GVAR(magazineNameCache) get _className;
 if (isNil "_magName") then {
     private _displayName = getText(configFile >> "CfgMagazines" >> _className >> "displayName");
     if (_displayName == "") then {
@@ -28,21 +28,21 @@ if (isNil "_magName") then {
 
     if ((_displayName select [0,6]) == "[CSW] ") then { _displayName = _displayName select [6]; };
 
-    GVAR(magazineNameCache) setVariable [_className, _displayName];
+    GVAR(magazineNameCache) set [_className, _displayName];
     GVAR(originalMagazineNames) pushBack _displayName;
     TRACE_2("Adding to cache",_className,_displayName);
 
     // go through all existing cache entries and update if there now are duplicates
     {
-        private _xMagName = GVAR(magazineNameCache) getVariable _x;
+        private _xMagName = GVAR(magazineNameCache) get _x;
         if ((_xMagName == _displayName) && {({_xMagName == _x} count GVAR(originalMagazineNames)) > 1}) then {
             private _xMagName = format ["%1: %2", _displayName, getText(configFile >> "CfgMagazines" >> _x >> "displayNameShort")];
-            GVAR(magazineNameCache) setVariable [_x, _xMagName];
+            GVAR(magazineNameCache) set [_x, _xMagName];
             TRACE_2("Using unique name",_x,_xMagName);
         };
-    } forEach (allVariables GVAR(magazineNameCache));
+    } forEach (keys GVAR(magazineNameCache));
 
-    _magName = GVAR(magazineNameCache) getVariable _className;
+    _magName = GVAR(magazineNameCache) get _className;
 };
 
 _magName

@@ -28,8 +28,7 @@ if (isNil QGVAR(LSD_Vehicles)) then {
     if (_hSCount > 0) then {
         GVAR(LSD_Vehicles) pushBack [_x, _hSCount];
     };
-    nil
-} count _units;
+} forEach _units;
 
 if (isNil QGVAR(LSD_Colors)) then {
     GVAR(LSD_Colors) = [
@@ -51,8 +50,7 @@ if (isNil QGVAR(LSD_PFH)) then {
             for "_i" from 0 to (_hSCount - 1) do {
                 _vehicle setObjectTexture [_i, GVAR(LSD_Colors) select _index];
             };
-            nil
-        } count GVAR(LSD_Vehicles);
+        } forEach GVAR(LSD_Vehicles);
 
         _index = ((_index + 1) % 7) mod count GVAR(LSD_Colors);
         (_this select 0) set [0, _index];

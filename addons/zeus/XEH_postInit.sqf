@@ -3,7 +3,7 @@
 #define IDD_DISPLAY3DEN 313
 
 // Global skill module PVs values for persistence, just listen for the PV
-QGVAR(GlobalSkillAI) addPublicVariableEventHandler FUNC(moduleGlobalSetSkill);
+QGVAR(GlobalSkillAI) addPublicVariableEventHandler LINKFUNC(moduleGlobalSetSkill);
 
 [QGVAR(moveToRespawnPosition), BIS_fnc_moveToRespawnPosition] call CBA_fnc_addEventHandler;
 [QGVAR(moduleDefendArea), CBA_fnc_taskDefend] call CBA_fnc_addEventHandler;

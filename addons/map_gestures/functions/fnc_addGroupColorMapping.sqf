@@ -28,4 +28,4 @@ if (_group == "") exitWith {ERROR("Group ID is blank, which is not valid.")};
 if (!([_leadColor] call FUNC(isValidColorArray))) exitWith {ERROR("leadColor is not a valid color array.")};
 if (!([_unitColor] call FUNC(isValidColorArray))) exitWith {ERROR("color is not a valid color array.")};
 
-GVAR(GroupColorCfgMappingNew) setVariable [_group, [_leadColor, _unitColor]];
+GVAR(GroupColorCfgMappingNew) set [_group, [_leadColor, _unitColor]];

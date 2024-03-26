@@ -38,8 +38,7 @@ private _enemiesInVehicle = false;   //Possible Side Restriction
 
 {
     if (side _unit getFriend side _x < 0.6) exitWith {_enemiesInVehicle = true};
-    false
-} count crew _vehicle;
+} forEach crew _vehicle;
 
 switch (_position) do {
     case "driver" : {

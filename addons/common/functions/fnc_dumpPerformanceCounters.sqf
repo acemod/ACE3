@@ -25,8 +25,7 @@ if (!isNil "ACE_PFH_COUNTER") then {
         private _isActive = ["ACTIVE", "REMOVED"] select isNil {CBA_common_PFHhandles select (_pfh select 0)};
 
         diag_log text format ["Registered PFH: id=%1 [%2, delay %3], %4:%5", _pfh select 0, _isActive, _parameters select 1, _pfh select 1, _pfh select 2];
-        false
-    } count ACE_PFH_COUNTER;
+    } forEach ACE_PFH_COUNTER;
 };
 
 diag_log text format ["ACE COUNTER RESULTS"];
@@ -61,8 +60,7 @@ diag_log text format ["-------------------------------------------"];
     } else {
         diag_log text format ["%1: No results", _counterEntry select 0];
     };
-    false
-} count ACE_COUNTERS;
+} forEach ACE_COUNTERS;
 
 /*
 // Dump PFH Trackers

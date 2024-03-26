@@ -27,7 +27,7 @@
         };
     };
 }] call CBA_fnc_addEventHandler;
-[QGVAR(startDefuse), FUNC(startDefuse)] call CBA_fnc_addEventHandler;
+[QGVAR(startDefuse), LINKFUNC(startDefuse)] call CBA_fnc_addEventHandler;
 
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)

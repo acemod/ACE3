@@ -50,7 +50,7 @@ if (isServer) then {
     // Default images on whiteboards (first image)
     {
         _x setObjectTextureGlobal [_selection, _images select 0];
-    } count _objects;
+    } forEach _objects;
 };
 
 // Number of slideshows (multiple modules support)
@@ -89,8 +89,7 @@ if (_duration == 0) then {
             2
         ] call EFUNC(interact_menu,createAction);
         [_x, 0, ["ACE_MainActions"], _slidesAction] call EFUNC(interact_menu,addActionToObject);
-        nil
-    } count _controllers;
+    } forEach _controllers;
 } else {
     if !(isServer) exitWith {};
 

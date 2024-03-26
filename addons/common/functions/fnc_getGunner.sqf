@@ -28,8 +28,7 @@ private _gunner = objNull;
     if (_weapon in (_vehicle weaponsTurret _x)) exitWith {
         _gunner = _vehicle turretUnit _x;
     };
-    false
-} count allTurrets [_vehicle, true];
+} forEach allTurrets [_vehicle, true];
 
 // ensure that at least the pilot is returned if there is no gunner
 if (isManualFire _vehicle && {isNull _gunner}) then {
