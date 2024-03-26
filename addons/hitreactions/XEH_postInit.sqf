@@ -6,8 +6,8 @@
     params ["", "", "", "", "", "", "_projectile"];
 
     _projectile addEventHandler ["HitPart", {
-        params ["", "", "", "_pos", "", "", "_components", "", "_surfaceType"];
-        [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
+        params ["", "_hitEntity", "", "_pos", "", "", "_components", "", "_surfaceType"];
+        [_surfaceType, _components, _pos, _hitEntity] call FUNC(checkWeaponDrop);
     }];
 }] call CBA_fnc_addEventHandler;
 
@@ -17,8 +17,8 @@
     params ["", "", "", "", "", "", "_projectile"];
 
     _projectile addEventHandler ["HitPart", {
-        params ["", "", "", "_pos", "", "", "_components", "", "_surfaceType"];
-        [_surfaceType, _components, _pos] call FUNC(checkWeaponDrop);
+        params ["", "_hitEntity", "", "_pos", "", "", "_components", "", "_surfaceType"];
+        [_surfaceType, _components, _pos, _hitEntity] call FUNC(checkWeaponDrop);
     }];
 }] call CBA_fnc_addEventHandler;
 

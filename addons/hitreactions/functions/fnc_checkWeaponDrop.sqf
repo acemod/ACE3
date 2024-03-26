@@ -12,12 +12,12 @@
  * None
  *
  * Example:
- * ["", [], [1, 1, 1]] call ace_hitreactions_fnc_checkWeaponDrop
+ * ["", [], [1, 1, 1], player] call ace_hitreactions_fnc_checkWeaponDrop
  *
  * Public: No
  */
 
-params ["_surfaceType", "_components", "_position"];
+params ["_surfaceType", "_components", "_position", "_hitEntity"];
 
 private _roll = random 1;
 private _passedArm = _roll < GVAR(weaponDropChanceArmHit);
@@ -28,9 +28,12 @@ private _didHitGun = _surfaceType isEqualTo "" && _components isEqualTo [];  // 
 
 if !(_didHitArm && _passedArm || _didHitGun && _passedGun) exitWith {};
 
-private _unit = nearestObject [_position, "CAManBase"];
-private _weapon = currentWeapon _unit;
+if (isNull _hitEntity) then {
+    _hitEntity = nearestObject [_position, "CAManBase"];
+};
+
+private _weapon = currentWeapon _hitEntity;
 
 if (_weapon in GVAR(undroppableGuns)) exitWith {};
 
-[QGVAR(dropGun), _unit, _unit] call CBA_fnc_targetEvent;
+[QGVAR(dropGun), _hitEntity, _hitEntity] call CBA_fnc_targetEvent;
