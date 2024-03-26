@@ -29,11 +29,10 @@ if (_source == "" || {_element == ""}) exitWith {
     WARNING("Source or Element may not be empty strings!");
 };
 
-_element = toLower _element;
+_element = toLowerANSI _element;
 
 // Verify element is bound
-private _cachedElement = GVAR(configCache) get _element;
-if (isNil "_cachedElement") exitWith {
+if !(_element in GVAR(configCache)) exitWith {
     WARNING_2("Element '%1' does not exist - modification by '%2' failed.",_element,_source);
 };
 

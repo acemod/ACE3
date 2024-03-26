@@ -23,7 +23,7 @@ if (!hasInterface) exitWith {};
 
     if (!XGVAR(lowerInVehicles)) exitWith {};
 
-    if (vehicle _unit != _unit) then {
+    if (!isNull objectParent _unit) then {
         call FUNC(lowerVolume);
     } else {
         call FUNC(restoreVolume);

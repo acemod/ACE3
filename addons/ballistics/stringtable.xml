@@ -3539,6 +3539,7 @@
             <Korean>인공지능 사용</Korean>
             <French>Utilisation de l'IA</French>
             <Portuguese>Utilização por IA</Portuguese>
+            <Russian>Использование ИИ</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_illumination">
             <English>Illum</English>
@@ -3549,6 +3550,7 @@
             <Korean>조명탄</Korean>
             <French>Fusées éclairantes</French>
             <Portuguese>Sinalizadoras</Portuguese>
+            <Russian>Осветители</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_concealment">
             <English>Smoke</English>
@@ -3559,6 +3561,7 @@
             <Korean>연막탄</Korean>
             <French>Fumigènes</French>
             <Portuguese>Fumígenas</Portuguese>
+            <Russian>Дым</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_infantry">
             <English>Inf</English>
@@ -3569,6 +3572,7 @@
             <Korean>보병</Korean>
             <French>Infanterie</French>
             <Portuguese>Infantaria</Portuguese>
+            <Russian>Пехота</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_lightVehicle">
             <English>Veh</English>
@@ -3579,6 +3583,7 @@
             <Korean>차량</Korean>
             <French>Véhicule</French>
             <Portuguese>Veículo</Portuguese>
+            <Russian>Техника</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_armor">
             <English>Armor</English>
@@ -3589,6 +3594,7 @@
             <Korean>기갑</Korean>
             <French>Blindage</French>
             <Portuguese>Blindagem</Portuguese>
+            <Russian>Бронетехника</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_aircraft">
             <English>Air</English>
@@ -3599,6 +3605,7 @@
             <Korean>항공</Korean>
             <French>Aviation</French>
             <Portuguese>Aeronaves</Portuguese>
+            <Russian>Авиация</Russian>
         </Key>
     </Package>
 </Project>

@@ -877,33 +877,45 @@
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType">
             <English>Bolt Type</English>
+            <Italian>Tipo di otturatore</Italian>
             <Japanese>遊底(ボルト)形式</Japanese>
             <Korean>노리쇠 방식</Korean>
+            <Russian>Тип болта</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
             <English>Open Bolt</English>
+            <Italian>Otturatore Aperto</Italian>
             <Japanese>オープンボルト</Japanese>
             <Korean>오픈 볼트</Korean>
+            <Russian>Открыть болт</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
             <English>Closed Bolt</English>
+            <Italian>Otturatore Chiuso</Italian>
             <Japanese>クローズドボルト</Japanese>
             <Korean>클로즈드 볼트</Korean>
+            <Russian>Закрыть болт</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType">
             <English>Barrel Type</English>
+            <Italian>Tipo di Canna</Italian>
             <Japanese>銃身形式</Japanese>
             <Korean>총열 방식</Korean>
+            <Russian>Тип ствола</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
             <English>Non-Removeable</English>
+            <Italian>Non-Rimovibile</Italian>
             <Japanese>取り外し不可</Japanese>
             <Korean>제거 불가</Korean>
+            <Russian>Несъемный</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
             <English>Quick Change</English>
+            <Italian>Cambio Rapido</Italian>
             <Japanese>即時交換可</Japanese>
             <Korean>신속 교체</Korean>
+            <Russian>Быстросъемный</Russian>
         </Key>
     </Package>
 </Project>

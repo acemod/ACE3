@@ -360,7 +360,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
-        switch (toLower _position) do {
+        switch (toLowerANSI _position) do {
             case (""): {
                 _UAV = objNull; // set to objNull if not actively controlling
             };
@@ -498,10 +498,24 @@ GVAR(reloadMutex_lastMagazines) = [];
 // Start the sway loop
 //////////////////////////////////////////////////
 ["CBA_settingsInitialized", {
+    ["multiplier", {
+        switch (true) do {
+            case (isWeaponRested ACE_player): {
+                GVAR(swayFactor) * GVAR(restedSwayFactor)
+            };
+            case (isWeaponDeployed ACE_player): {
+                GVAR(swayFactor) * GVAR(deployedSwayFactor)
+            };
+            default {
+                GVAR(swayFactor)
+            };
+        };
+    }, QUOTE(ADDON)] call FUNC(addSwayFactor);
+
     [{
         // frame after settingsInitialized to ensure all other addons have added their factors
-        if ((GVAR(swayFactorsBaseline) + GVAR(swayFactorsMultiplier)) isNotEqualTo []) then {
-            call FUNC(swayLoop)
+        if (GVAR(enableSway)) then {
+            call FUNC(swayLoop);
         };
         // check for pre-3.16 sway factors being added
         if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {

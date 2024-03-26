@@ -47,7 +47,7 @@ PREP_RECOMPILE_END;
     private _magazines = _gunbagInfo select 2;
     {
         private _class = _x param [0, ""];
-        if !(_class != "" && {_class in EGVAR(arsenal,virtualItemsFlat)}) then {
+        if (_class != "" && {!(_class in EGVAR(arsenal,virtualItemsFlat))}) then {
             _missingItems pushBack _class;
             _magazines set [_forEachIndex, ["", 0]];
         };

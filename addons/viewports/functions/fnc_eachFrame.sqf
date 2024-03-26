@@ -36,7 +36,7 @@ if (cba_events_control) then {
         _shownIndex = -1;
     };
 
-    ([_player] call FUNC(getSeatInfo)) params ["_role", "", "", "_comparment"];
+    ([_player] call FUNC(getSeatInfo)) params ["_role", "", "", "_compartment"];
 
     private _newIndexAngle = 45; // Controls the max angle
     private _eyesPosASL = AGLtoASL (positionCameraToWorld [0, 0, 0]);
@@ -52,8 +52,8 @@ if (cba_events_control) then {
         #endif
         if (
             (_viewAngle < _newIndexAngle)
-            && {(_compartments isEqualTo []) || {(toLower _comparment) in _compartments}}
-            && {(_roles isEqualTo []) || {(toLower _role) in _roles}}
+            && {(_compartments isEqualTo []) || {(toLowerANSI _compartment) in _compartments}}
+            && {(_roles isEqualTo []) || {(toLowerANSI _role) in _roles}}
             && {(vectorMagnitude _viewDiff) < _maxDistance}
         ) then {
             _newIndex = _forEachIndex;

@@ -63,8 +63,12 @@ private _indexCurrentItems = -1;
         };
         // Backpack
         case IDX_LOADOUT_BACKPACK: {
-            GVAR(currentItems) set [IDX_CURR_BACKPACK, _x param [0, ""]];
-            GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, _x param [1, []]];
+            _x params [["_backpack", ""], ["_items", []]];
+            if (_backpack != "") then {
+                _backpack = [_backpack, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+            };
+            GVAR(currentItems) set [IDX_CURR_BACKPACK, _backpack];
+            GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, _items];
         };
         // Helmet
         case IDX_LOADOUT_HEADGEAR: {

@@ -172,7 +172,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         } else {
             _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
         };
-        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLower _callerAnim];
+        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLowerANSI _callerAnim];
         [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
 };

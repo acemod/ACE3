@@ -7,6 +7,9 @@ GVAR(ammoEventHandlers) = createHashMap;
 // Exit on HC
 if (!hasInterface) exitWith {};
 
+// Temporary Wind Info indication
+GVAR(tempWindInfo) = false;
+
 // Ammo/Magazines look-up hash for correctness of initSpeed
 private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";

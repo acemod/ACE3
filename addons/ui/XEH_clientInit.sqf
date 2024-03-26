@@ -40,9 +40,8 @@ GVAR(elementsSet) = createHashMap;
         if (_name in ELEMENTS_BASIC) then {
             [true] call FUNC(setElements);
         } else {
-            private _nameNoPrefix = toLower (_name select [7]);
-            private _cachedElement = GVAR(configCache) get _nameNoPrefix;
-            if (!isNil "_cachedElement") then {
+            private _nameNoPrefix = toLowerANSI (_name select [7]);
+            if (_nameNoPrefix in GVAR(configCache)) then {
                 [_nameNoPrefix, _value, true] call FUNC(setAdvancedElement);
             };
         };
