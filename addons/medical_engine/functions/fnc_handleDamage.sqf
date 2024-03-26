@@ -105,7 +105,7 @@ if (
     0
 };
 
-// Damages are stored for "ace_hdbracket" event triggered last
+// Damages are stored for last iteration of the HandleDamage event (_context == 2)
 _unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
 
 // Ref https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HandleDamage
