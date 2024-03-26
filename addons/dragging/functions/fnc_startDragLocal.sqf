@@ -40,7 +40,7 @@ if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
 private _primaryWeapon = primaryWeapon _unit;
 
 // Add a primary weapon if the unit has none
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     if (_primaryWeapon == "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
         _primaryWeapon = "ACE_FakePrimaryWeapon";
