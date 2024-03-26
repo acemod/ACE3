@@ -26,7 +26,7 @@ private _passedGun = _roll < GVAR(weaponDropChanceGunHit);
 private _didHitArm = _components findAny GVAR(armComponents) != -1;
 private _didHitGun = _surfaceType isEqualTo "" && _components isEqualTo [];  // for potential edge cases
 
-if !(_didHitArm && _passedArm || _didHitGun && _passedGun) exitWith {};
+if !((_didHitArm && _passedArm) || (_didHitGun && _passedGun)) exitWith {};
 
 if (isNull _hitEntity) then {
     _hitEntity = nearestObject [_position, "CAManBase"];
