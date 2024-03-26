@@ -14,7 +14,7 @@ private _cacheRefuelCargo = createHashMap;
     if (_fuelCargo > 0 || {_fuelCargo == REFUEL_INFINITE_FUEL}) then {
         private _sourceClass = configName _x;
         private _noXEH = !isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init");
-        private _isPublic = 2 == getNumber (_x >> "scope");
+        private _isPublic = getNumber (_x >> "scope") == 2;
         // check if we can use actions with inheritance
         if (
             _noXEH // addActionToClass relies on XEH init
@@ -25,12 +25,12 @@ private _cacheRefuelCargo = createHashMap;
                     WARNING_3("Class %1: %2 [%3] needs XEH",_sourceClass,configName inheritsFrom _x,configSourceMod _x);
                 };
                 _staticClasses pushBack _sourceClass;
-                if (-1 == _baseStaticClasses findIf {_sourceClass isKindOf _x}) then {
+                if (_baseStaticClasses findIf {_sourceClass isKindOf _x} == -1) then {
                     _baseStaticClasses pushBack _sourceClass;
                 };
             };
         } else {
-            if (-1 == _baseDynamicClasses findIf {_sourceClass isKindOf _x}) then {
+            if (_baseDynamicClasses findIf {_sourceClass isKindOf _x} == -1) then {
                 _baseDynamicClasses pushBack _sourceClass;
             };
         };

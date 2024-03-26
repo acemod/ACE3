@@ -11,8 +11,8 @@ class Cfg3DEN {
                         tooltip = CSTRING(fuelCargo_edenDesc);
                         property = QGVAR(fuelCargo);
                         control = "EditShort";
-                        expression = QUOTE(if (_value != (_this call DFUNC(getFuelCargo))) then {[ARR_2(_this,_value)] call DFUNC(makeSource)});
-                        defaultValue = QUOTE(_this call DFUNC(getFuelCargo));
+                        expression = QUOTE(if (_value != (_this call FUNC(getFuelCargo))) then {[ARR_2(_this,_value)] call FUNC(makeSource)});
+                        defaultValue = QUOTE(_this call FUNC(getFuelCargo));
                         validate = "number";
                         condition = "(1-objectBrain)*(1-objectAgent)";
                         typeName = "NUMBER";
