@@ -78,10 +78,10 @@ if (!isNull curatorCamera) then {
 
 // Make face and voice selection JIP compatible; 3DEN doesn't need this though
 if (isMultiplayer && {!is3DEN}) then {
-    private _id = [QGVAR(broadcastFace), [GVAR(center), GVAR(currentFace)], QGVAR(centerFace_) + netId GVAR(center)] call CBA_fnc_globalEventJIP;
+    private _id = [QGVAR(broadcastFace), [GVAR(center), GVAR(currentFace)], QGVAR(centerFace_) + hashValue GVAR(center)] call CBA_fnc_globalEventJIP;
     [_id, GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
 
-    _id = [QGVAR(broadcastVoice), [GVAR(center), GVAR(currentVoice)], QGVAR(centerVoice_) + netId GVAR(center)] call CBA_fnc_globalEventJIP;
+    _id = [QGVAR(broadcastVoice), [GVAR(center), GVAR(currentVoice)], QGVAR(centerVoice_) + hashValue GVAR(center)] call CBA_fnc_globalEventJIP;
     [_id, GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
 };
 
@@ -115,12 +115,11 @@ GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
-GVAR(showStats) = nil;
 GVAR(currentStatPage) = nil;
 GVAR(statsInfo) =  nil;
 
-GVAR(showActions) = nil;
 GVAR(currentActionPage) = nil;
+GVAR(actionsInfo) =  nil;
 
 profileNamespace setVariable [QGVAR(favorites), GVAR(favorites)];
 GVAR(favoritesOnly) = nil;

@@ -68,18 +68,17 @@ if (isNil QGVAR(virtualItems)) then {
 GVAR(virtualItemsFlatAll) = +GVAR(virtualItemsFlat);
 
 GVAR(currentFace) = face GVAR(center);
-GVAR(currentVoice) = speaker GVAR(center);
+GVAR(currentVoice) = (speaker GVAR(center)) call EFUNC(common,getConfigName);
 GVAR(currentInsignia) = GVAR(center) call BIS_fnc_getUnitInsignia;
 
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
-GVAR(showStats) = true;
 GVAR(currentStatPage) = 0;
 GVAR(statsInfo) = [true, controlNull, nil, nil];
 
-GVAR(showActions) = true;
 GVAR(currentActionPage) = 0;
+GVAR(actionsInfo) = [controlNull, nil, nil];
 
 // Update current item list
 call FUNC(updateCurrentItemsList);

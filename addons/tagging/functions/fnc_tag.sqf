@@ -45,7 +45,7 @@ if (_intersections isEqualTo []) exitWith {
 };
 
 (_intersections select 0) params ["_touchingPoint", "_surfaceNormal", "", "_object"];
-TRACE_3("",_touchingPoint, _surfaceNormal, _object);
+TRACE_3("",_touchingPoint,_surfaceNormal,_object);
 
 // Exit if trying to tag a non static object
 if ((!isNull _object) && {
@@ -93,7 +93,7 @@ private _vectorDirAndUp = if (abs (_v1 select 2) < 0.94) then {
     [_v1, _v3]
 };
 
-TRACE_3("Reference:", _v1, _v2, _v3);
+TRACE_3("Reference:",_v1,_v2,_v3);
 
 private _fnc_isOk = {
     params ["_rx", "_ry"];

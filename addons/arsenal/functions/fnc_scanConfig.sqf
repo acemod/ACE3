@@ -160,7 +160,7 @@ private _magazineMiscItems = createHashMap;
 
 {
     _magazineMiscItems set [configName _x, nil];
-} forEach ((toString {getNumber (_x >> "ACE_isUnique") == 1}) configClasses _cfgMagazines);
+} forEach ((toString {getNumber (_x >> "ACE_isUnique") == 1 || getNumber (_x >> "ACE_asItem") == 1}) configClasses _cfgMagazines);
 
 // Remove invalid/non-existent entries
 _grenadeList deleteAt "";
@@ -282,11 +282,42 @@ uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), compileFinal _launchers]
 uiNamespace setVariable [QGVAR(configItemsTools), compileFinal _toolList];
 
 // Compatibility: Override baseWeapon for RHS optics
-// No good way to do this via script for other attachments, needs manual compat
+// No good way to do this via script for other RHS attachments, needs manual compat
 private _baseWeaponCache = uiNamespace getVariable QGVAR(baseWeaponNameCache);
 {
     private _baseAttachment = configName (_cfgWeapons >> getText (_x >> "rhs_optic_base"));
     if (_baseAttachment != "") then {
-        _baseWeaponCache set [toLower configName _x, _baseAttachment];
+        _baseWeaponCache set [toLowerANSI configName _x, _baseAttachment];
     };
 } forEach ("getText (_x >> 'rhs_optic_base') != ''" configClasses _cfgWeapons);
+
+// Compatibility: Override baseWeapon for CBA Scripted Optics
+// Adapted from https://github.com/Theseus-Aegis/Mods/blob/master/addons/armory/functions/fnc_getBaseVariant.sqf
+private _isScriptedOptic = toString {
+    isClass (_x >> "CBA_ScriptedOptic") ||
+    {(getText (_x >> "weaponInfoType")) regexMatch "CBA_scriptedOptic.*?"}
+};
+
+{
+    private _xClass = toLowerANSI configName _x;
+    private _baseOptic = _xClass call FUNC(baseOptic);
+    if (_baseOptic != "" && {_baseOptic != _xClass}) then {
+        TRACE_2("updating baseOptic",_xClass,_baseOptic);
+        _baseWeaponCache set [_xClass, _baseOptic];
+    };
+} forEach (_isScriptedOptic configClasses _cfgWeapons);
+
+// Compatibility: Override baseWeapon for CBA Scripted Attachments
+private _isScriptedAttachment = toString {
+    getText (_x >> "MRT_SwitchItemNextClass") != "" ||
+    {getText (_x >> "MRT_SwitchItemPrevClass") != ""}
+};
+
+{
+    private _xClass = toLowerANSI configName _x;
+    private _baseAttachment = _xClass call FUNC(baseAttachment);
+    if (_baseAttachment != "" && {_baseAttachment != _xClass}) then {
+        TRACE_2("updating baseAttachment",_xClass,_baseAttachment);
+        _baseWeaponCache set [_xClass, _baseAttachment];
+    };
+} forEach (_isScriptedAttachment configClasses _cfgWeapons);

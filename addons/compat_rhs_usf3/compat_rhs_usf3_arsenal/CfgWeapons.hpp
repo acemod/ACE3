@@ -3,6 +3,9 @@ class CfgWeapons {
     class acc_pointer_IR;
     class rhsusf_acc_anpeq15: acc_pointer_IR {
         baseWeapon = "rhsusf_acc_anpeq15";
+        MRT_SwitchItemHintText = ""; // prevent false info for illuminator stat
+        MRT_SwitchItemNextClass = "";
+        MRT_SwitchItemPrevClass = "";
     };
     class rhsusf_acc_anpeq15_bk: rhsusf_acc_anpeq15 {
         baseWeapon = "rhsusf_acc_anpeq15_bk";
@@ -28,8 +31,12 @@ class CfgWeapons {
     class rhsusf_acc_wmx_bk: rhsusf_acc_M952V {
         baseWeapon = "rhsusf_acc_wmx_bk";
     };
+
     class rhsusf_acc_anpeq15A: acc_pointer_IR {
         baseWeapon = "rhsusf_acc_anpeq15A";
+        MRT_SwitchItemHintText = ""; // prevent false info for illuminator stat
+        MRT_SwitchItemNextClass = "";
+        MRT_SwitchItemPrevClass = "";
     };
     class rhsusf_acc_anpeq15_top: rhsusf_acc_anpeq15A {
         baseWeapon = "rhsusf_acc_anpeq15_top";
@@ -37,8 +44,12 @@ class CfgWeapons {
     class rhsusf_acc_anpeq15_bk_top: rhsusf_acc_anpeq15_top {
         baseWeapon = "rhsusf_acc_anpeq15_bk_top";
     };
+
     class rhsusf_acc_anpeq15side: acc_pointer_IR {
         baseWeapon = "rhsusf_acc_anpeq15side";
+        MRT_SwitchItemHintText = ""; // prevent false info for illuminator stat
+        MRT_SwitchItemNextClass = "";
+        MRT_SwitchItemPrevClass = "";
     };
     class rhsusf_acc_anpeq15side_bk: rhsusf_acc_anpeq15side {
         baseWeapon = "rhsusf_acc_anpeq15side_bk";

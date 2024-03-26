@@ -96,8 +96,8 @@ if (
     _inVehicle) &&
     {
         private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
-        GET_NUMBER(_ammoCfg >> "explosive", 0) > 0 ||
-        {GET_NUMBER(_ammoCfg >> "indirectHit", 0) > 0}
+        GET_NUMBER(_ammoCfg >> "explosive",0) > 0 ||
+        {GET_NUMBER(_ammoCfg >> "indirectHit",0) > 0}
     }
 ) exitwith {
     TRACE_5("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage);

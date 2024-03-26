@@ -136,7 +136,7 @@ GVAR(isOpeningDoor) = false;
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
     //Tap whichever shoulder is closest
-    private _shoulderNum = [0, 1] select (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
+    private _shoulderNum = parseNumber (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
 
     // Statement
     [ACE_player, cursorTarget, _shoulderNum] call FUNC(tapShoulder);

@@ -20,7 +20,7 @@
 params ["_unit", "_target", "_claimed"];
 TRACE_3("params",_unit,_target,_claimed);
 
-if (!_claimed) exitWith {};
+if (!_claimed) exitWith { WARNING_1("already claimed %1",_this) };
 
 // Exempt from weight check if object has override variable set
 private _weight = 0;
@@ -31,13 +31,16 @@ if !(_target getVariable [QGVAR(ignoreWeightDrag), false]) then {
 
 // Exit if object weight is over global var value
 if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
+    // Release claim on object
+    [objNull, _target, true] call EFUNC(common,claim);
+
     [LLSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 private _primaryWeapon = primaryWeapon _unit;
 
 // Add a primary weapon if the unit has none
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     if (_primaryWeapon == "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
         _primaryWeapon = "ACE_FakePrimaryWeapon";

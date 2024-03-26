@@ -24,4 +24,3 @@
 #define TOW_STATE_ATTACH 2
 #define TOW_STATE_CANCEL 3
 #define TOW_STATE_CLEANUP 4
-

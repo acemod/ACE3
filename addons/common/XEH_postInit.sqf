@@ -29,7 +29,7 @@
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["disableWeaponAssembly", false, ["ace_common", "ace_common_lockVehicle", "ace_csw"]] call FUNC(statusEffect_addType);
-["lockInventory", true, []] call FUNC(statusEffect_addType);
+["lockInventory", true, [], true] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -96,7 +96,7 @@
         _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
     if (["task_force_radio"] call FUNC(isModLoaded)) then {
-        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
+        _object setVariable ["tf_voiceVolume", parseNumber (_set == 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -142,7 +142,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`",[_x] call FUNC(getName),_dcPlayer,_x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil
@@ -361,7 +361,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
-        switch (toLower _position) do {
+        switch (toLowerANSI _position) do {
             case (""): {
                 _UAV = objNull; // set to objNull if not actively controlling
             };
@@ -499,10 +499,24 @@ GVAR(reloadMutex_lastMagazines) = [];
 // Start the sway loop
 //////////////////////////////////////////////////
 ["CBA_settingsInitialized", {
+    ["multiplier", {
+        switch (true) do {
+            case (isWeaponRested ACE_player): {
+                GVAR(swayFactor) * GVAR(restedSwayFactor)
+            };
+            case (isWeaponDeployed ACE_player): {
+                GVAR(swayFactor) * GVAR(deployedSwayFactor)
+            };
+            default {
+                GVAR(swayFactor)
+            };
+        };
+    }, QUOTE(ADDON)] call FUNC(addSwayFactor);
+
     [{
         // frame after settingsInitialized to ensure all other addons have added their factors
-        if ((GVAR(swayFactorsBaseline) + GVAR(swayFactorsMultiplier)) isNotEqualTo []) then {
-            call FUNC(swayLoop)
+        if (GVAR(enableSway)) then {
+            call FUNC(swayLoop);
         };
         // check for pre-3.16 sway factors being added
         if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {

@@ -5,10 +5,11 @@
  *
  * Arguments:
  * 0: Map control <CONTROL>
- * 1: Mouse position on screen coordinates <ARRAY>
+ * 1: Mouse x position <NUMBER>
+ * 2: Mouse y position <NUMBER>
  *
  * Return Value:
- * If the event was handled <BOOL>
+ * None
  *
  * Example:
  * [CONTROL, [0, 5]] call ace_maptools_fnc_handleMouseMove
@@ -24,9 +25,7 @@ if (isNull ACE_player || {
     private _uniqueItems = ACE_player call EFUNC(common,uniqueItems);
 
     !(("ACE_MapTools" in _uniqueItems) || {"ACE_PlottingBoard" in _uniqueItems})
-}) exitWith {
-    false
-};
+}) exitWith {};
 
 // If map tools not shown, then exit
 if (GVAR(mapTool_Shown) == 0 && {GVAR(plottingBoard_Shown) == 0}) exitWith {false};
@@ -36,8 +35,6 @@ private _mousePosition = _mapCtrl ctrlMapScreenToWorld [_mousePosX, _mousePosY];
 // Map tools - translation
 if (GVAR(mapTool_isDragging)) exitWith {
     GVAR(mapTool_pos) = GVAR(mapTool_startPos) vectorAdd _mousePosition vectorDiff GVAR(mapTool_startDragPos);
-
-    true
 };
 
 // Map tools - rotation
@@ -47,15 +44,11 @@ if (GVAR(mapTool_isRotating)) exitWith {
     private _angle = (_pos select 0) atan2 (_pos select 1);
 
     GVAR(mapTool_angle) = ((GVAR(mapTool_startAngle) + _angle - GVAR(mapTool_startDragAngle)) % 360 + 360) % 360;
-
-    true
 };
 
 // Plotting board - translation
 if (GVAR(plottingBoard_isDragging)) exitWith {
     GVAR(plottingBoard_pos) = GVAR(plottingBoard_startPos) vectorAdd _mousePosition vectorDiff GVAR(plottingBoard_startDragPos);
-
-    true
 };
 
 // Plotting board - rotation
@@ -70,8 +63,4 @@ if (GVAR(plottingBoard_isRotating) > -1) exitWith {
         case 1: {GVAR(plottingBoard_acrylicAngle) = _returnAngle};
         case 2: {GVAR(plottingBoard_rulerAngle) = _returnAngle};
     };
-
-    true
 };
-
-false

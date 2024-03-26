@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
+ * Author: tcvm
  * Picks up the tripod and adds it to the player launcher slot
  *
  * Arguments:
@@ -44,4 +44,3 @@
     TRACE_3("",_pickupTime,typeOf _tripod,_tripodClassname);
     [TIME_PROGRESSBAR(_pickupTime), [_tripod, _player, _tripodClassname], _onFinish, {}, localize LSTRING(PickupTripod_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
-

@@ -49,18 +49,43 @@ private _explosivesList = [];
         };
     };
 } forEach _result;
-if (_detonator != "ACE_DeadManSwitch") then {
-    // Add action to detonate all explosives tied to the detonator
-    if (count _explosivesList > 0) then {
-        _children pushBack [
+
+// If the detonator is not active, is a clacker and has assigned explosives, generate an interaction to make it the active detonator for use with the "trigger all" keybind
+if (
+    _detonator != GVAR(activeTrigger) &&
+    {_detonator != "Cellphone"} && 
+    {
+        _explosivesList isNotEqualTo [] ||
+        {_detonator == "ACE_DeadManSwitch" && {_unit getVariable [QGVAR(deadmanInvExplosive), ""] != ""}}
+    }
+) then {
+    _children pushBack [
         [
-            "Explosive_All",
-            localize LSTRING(DetonateAll),
-            getText(ConfigFile >> "CfgWeapons" >> _detonator >> "picture"),
-            {(_this select 2) call FUNC(detonateExplosiveAll);},
+            QGVAR(setActiveTrigger),
+            LLSTRING(SetActiveTrigger),
+            "",
+            {GVAR(activeTrigger) = (_this select 2) select 0;},
             {true},
             {},
-            [_unit,_range,_explosivesList, _detonator]
+            [_detonator]
+        ] call EFUNC(interact_menu,createAction),
+        [],
+        _unit
+    ];
+};
+
+if (_detonator != "ACE_DeadManSwitch") then {
+    // Add action to detonate all explosives tied to the detonator
+    if (count _explosivesList > 1) then {
+        _children pushBack [
+            [
+                "Explosive_All",
+                LLSTRING(DetonateAll),
+                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                {(_this select 2) call FUNC(detonateExplosiveAll);},
+                {true},
+                {},
+                [_unit, _range, _explosivesList, _detonator]
             ] call EFUNC(interact_menu,createAction),
             [],
             _unit
@@ -69,15 +94,15 @@ if (_detonator != "ACE_DeadManSwitch") then {
 } else {
     //Add action to detonate all explosives (including the inventory explosive):
     _children pushBack [
-    [
-    "Explosive_All_Deadman",
-    localize LSTRING(DetonateAll),
-    getText(ConfigFile >> "CfgWeapons" >> _detonator >> "picture"),
-    {[_player] call FUNC(onIncapacitated)},
-    {true}
-    ] call EFUNC(interact_menu,createAction),
-    [],
-    _unit
+        [
+            "Explosive_All_Deadman",
+            LLSTRING(DetonateAll),
+            getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+            {[_player] call FUNC(onIncapacitated)},
+            {true}
+        ] call EFUNC(interact_menu,createAction),
+        [],
+        _unit
     ];
 
     //Adds actions for the explosives you can connect to the deadman switch.
@@ -89,7 +114,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
 
     _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
     if (_connectedInventoryExplosive != "") then {
-        //Add the disconect action
+        //Add the disconnect action
         private _magConfig = configFile >> "CfgMagazines" >> _connectedInventoryExplosive;
         private _name = if ((getText (_magConfig >> "displayNameShort")) != "") then {
             getText (_magConfig >> "displayNameShort")
@@ -99,17 +124,20 @@ if (_detonator != "ACE_DeadManSwitch") then {
         private _picture = getText (_magConfig >> "picture");
 
         _children pushBack [
-        ([
-        "Deadman_disconnect",
-        format ["%1 %2", localize "str_disp_disconnect", _name],
-        _picture,
-        {
-            params ["_player"];
-            TRACE_1("clear",_player);
-            _player setVariable [QGVAR(deadmanInvExplosive), "", true];
-        },
-        {true}
-        ] call EFUNC(interact_menu,createAction)), [], _unit];
+            ([
+                "Deadman_disconnect",
+                format ["%1 %2", localize "str_disp_disconnect", _name],
+                _picture,
+                {
+                    params ["_player"];
+                    TRACE_1("clear",_player);
+                    _player setVariable [QGVAR(deadmanInvExplosive), "", true];
+                },
+                {true}
+            ] call EFUNC(interact_menu,createAction)),
+            [],
+            _unit
+        ];
 
     } else {
         //Add all magazines that would work with the deadman switch

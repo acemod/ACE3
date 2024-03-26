@@ -63,10 +63,10 @@ private _east = (abs (_ax - _bx)) >= (abs (_ay - _by));
 private _origin2D = [];
 private _length = 0;
 if (_east) then {
-    _origin2D = if (_ax < _bx) then { _start2d } else { _end2d };
+    _origin2D = [_end2d, _start2d] select (_ax < _bx);
     _length = (abs (_ax - _bx)) / _cellsize;
 } else {
-    _origin2D = if (_ay < _by) then { _start2d } else { _end2d };
+    _origin2D = [_end2d, _start2d] select (_ay < _by);
     _length = (abs (_ay - _by)) / _cellsize;
 };
 TRACE_3("",_east,_origin2D,_length);
