@@ -57,7 +57,7 @@ GVAR(releaseActionID) = [0xF1, [false, false, false], {
 ["", LLSTRING(Drop)] call EFUNC(interaction,showMouseHint);
 
 // Block firing
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     _unit setVariable [QGVAR(blockFire), [
         _unit, "DefaultAction",
         {true},
@@ -70,6 +70,7 @@ if !(GVAR(dragAndFire)) then {
 
 // Prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+
 if (_UAVCrew isNotEqualTo []) then {
     {
         _target deleteVehicleCrew _x;
@@ -80,9 +81,6 @@ if (_UAVCrew isNotEqualTo []) then {
 
 // Check everything
 [FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-
-// Reset current dragging height.
-GVAR(currentHeightChange) = 0;
 
 // Fixes not being able to move when in combat pace
 [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
