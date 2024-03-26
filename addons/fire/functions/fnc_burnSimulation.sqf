@@ -97,7 +97,7 @@ _unit setVariable [QGVAR(burnCounter), nil];
                     _unit setVariable [QGVAR(stopDropRoll), true];
 
                     if (!_sdr) then {
-                        TRACE_1("stop, drop, roll!", _unit);
+                        TRACE_1("stop, drop, roll!",_unit);
 
                         _unit setUnitPos "DOWN";
                         doStop _unit;
@@ -112,7 +112,7 @@ _unit setVariable [QGVAR(burnCounter), nil];
                 } else {
                     // Make the unit leave the vehicle
                     if (_vehicle != _unit) then {
-                        TRACE_1("Ejecting", _unit);
+                        TRACE_1("Ejecting",_unit);
 
                         _unit leaveVehicle _vehicle;
                         unassignVehicle _unit;
