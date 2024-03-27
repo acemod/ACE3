@@ -87,6 +87,7 @@ PREP(getName);
 PREP(getNumberMagazinesIn);
 PREP(getPitchBankYaw);
 PREP(getPylonTurret);
+PREP(getReloadAction);
 PREP(getSettingData);
 PREP(getStaminaBarControl);
 PREP(getTargetAzimuthAndInclination);

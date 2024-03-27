@@ -15,6 +15,8 @@ GVAR(blockItemReplacement) = false;
 
 // Cache for FUNC(isModLoaded)
 GVAR(isModLoadedCache) = createHashMap;
+// Cache for FUNC(getReloadAction)
+GVAR(reloadActionsCache) = createHashMap;
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
