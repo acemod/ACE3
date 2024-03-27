@@ -11,18 +11,11 @@
             // Add disconnect EH
             addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
 
-            [QGVAR(transferGroupsToServer), {
-                params ["_groups"];
-
-                // Filter out any invalid entries
-                GVAR(headlessClients) = GVAR(headlessClients) select {!isNull _x};
-
-                private _idsHC = GVAR(headlessClients) apply {owner _x};
+            [QGVAR(transferGroupsToOwner), {
+                params ["_groups", "_owner"];
 
                 {
-                    if (groupOwner _x in _idsHC) then {
-                        _x setGroupOwner 2;
-                    };
+                    _x setGroupOwner _owner;
                 } forEach _groups;
             }] call CBA_fnc_addEventHandler;
         } else {
